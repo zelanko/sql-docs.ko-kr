@@ -10,9 +10,11 @@ items:
   - name: 도구 및 응용 프로그램
     href: tools-and-applications-used-in-analysis-services.md
   - name: 클라이언트 라이브러리(데이터 공급자)
-    href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+    href: instances/data-providers-used-for-analysis-services-connections.md
   - name: 테이블 형식 및 다차원 솔루션 비교
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: Analysis Services 기능 및 태스크
+    href: analysis-services-features-and-tasks.md
   - name: SQL Server 버전에서 지원하는 Analysis Services 기능
     href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
   - name: 이전 버전과 호환성(SQL Server 2016 Analysis Services)
@@ -216,12 +218,16 @@ items:
     href: ../analysis-services/data-mining/data-mining-ssas.md
   - name: SharePoint용 PowerPivot
     href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  - name: Analysis Services 인스턴스 모니터
+    href: instances/monitor-an-analysis-services-instance.md
   - name: 서버 관리
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: 추적 이벤트
     href: ../analysis-services/trace-events/analysis-services-trace-events.md
 - name: 개발자
   items:
+  - name: Analysis Services 개발자 설명서
+    href: analysis-services-developer-documentation.md
   - name: 호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
@@ -249,6 +255,11 @@ items:
     href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
   - name: Analysis Services 스크립팅 언어(XMLA용 ASSL)
     href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+  - name: 데이터 마이닝 프로그래밍
+    href: data-mining-programming.md
+    items:
+    - name: 데이터 마이닝 프로그래밍 - OLE DB
+      href: data-mining-programming-ole-db.md
 - name: 샘플
   items:
   - name: Analysis Services 샘플
@@ -271,9 +282,9 @@ items:
     href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
   - name: XMLA(XML for Analysis)
     href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
-ms.openlocfilehash: 52e7b7a3fbf8958687305751b93ab04939dcc4a1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: 94648fae78dfe48ac8768407ae80d913c6d39bc7
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899303"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534045"

@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649382"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "43077307"
 >  PolyBase는 SQL Server 2016(또는 그 이상), Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에서만 지원됩니다. Elastic Database 쿼리는 Azure SQL Database v12 이상에서만 지원됩니다.  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 외부 테이블을 사용하여 Hadoop 클러스터나 Azure Blob 저장소에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob 저장소 PolyBase 외부 테이블에 저장된 데이터에 액세스합니다. [Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)에 대한 외부 테이블을 만드는 데에도 사용할 수 있습니다.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 외부 테이블을 사용하여 Hadoop 클러스터나 Azure Blob Storage에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob Storage PolyBase 외부 테이블에 저장된 데이터에 액세스합니다. [Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)에 대한 외부 테이블을 만드는 데에도 사용할 수 있습니다.  
   
  외부 테이블을 사용하여 다음을 수행합니다.  
   
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE을 통해 하나 이상의 열 정의를 사용할 수 있습니다. CREATE EXTERNAL TABLE과 CREATE TABLE 모두 열을 정의하는 데 같은 구문을 사용합니다. 이에 대한 예외는 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없다는 것입니다. 열 정의 및 해당 데이터 형식에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [Azure SQL Database에 대한 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)을 참조하세요.  
   
- 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.  
+ 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다. 다른 외부 데이터 원본의 데이터 형식 매핑 방법에 대한 자세한 내용은 [PolyBase를 사용하는 형식 매핑](../../relational-databases/polybase/polybase-type-mapping.md)을 참조하세요.  
   
- 외부 데이터 원본의 파일을 참조하는 외부 테이블의 경우 열 및 형식 정의는 외부 파일의 정확한 스키마에 매핑해야 합니다. Hadoop/Hive에 저장된 데이터를 참조하는 데이터 형식을 정의하는 경우 SQL과 Hive 데이터 형식 간에 다음 매핑을 사용하고 그로부터 선택할 때 형식을 SQL 데이터 형식으로 캐스팅합니다. 형식은 달리 명시하지 않은 한 Hive의 모든 버전을 포함합니다.
-
-> [!NOTE]  
->  SQL Server는 어떤 변환에서도 Hive _무한대_ 데이터 값을 지원하지 않습니다. PolyBase는 데이터 형식 변환 오류가 있으면 실패합니다.
-
-
-|SQL 데이터 형식|.NET 데이터 형식|Hive 데이터 형식|Hadoop/Java 데이터 형식|주석|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|부호 없는 숫자의 경우만.|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|ssNoversion|Int32|ssNoversion|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|Boolean|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|단일|FLOAT|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|SMALLMONEY|Decimal|double|DoubleWritable||  
-|NCHAR|String<br /><br /> Char[]|string|text||  
-|NVARCHAR|String<br /><br /> Char[]|string|텍스트 모드||  
-|char|String<br /><br /> Char[]|string|텍스트 모드||  
-|varchar|String<br /><br /> Char[]|string|텍스트 모드||  
-|BINARY|Byte[]|BINARY|BytesWritable|Hive 0.8 이상에 적용됩니다.|  
-|varbinary|Byte[]|BINARY|BytesWritable|Hive 0.8 이상에 적용됩니다.|  
-|날짜|DateTime|TIMESTAMP|TimestampWritable||  
-|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
-|Datetime2|DateTime|TIMESTAMP|TimestampWritable||  
-|DATETIME|DateTime|TIMESTAMP|TimestampWritable||  
-|Time|TimeSpan|TIMESTAMP|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|Hive 0.11 이상에 적용됩니다.|  
   
  LOCATION =  '*folder_or_filepath*'  
  Hadoop 또는 Azure Blob Storage의 실제 데이터에 대한 폴더 또는 파일 경로 및 파일 이름을 지정합니다. 위치는 루트 폴더에서 시작하며, 루트 폴더는 외부 데이터 원본에 지정된 데이터 위치입니다.  

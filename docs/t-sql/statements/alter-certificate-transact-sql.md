@@ -5,9 +5,7 @@ ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CERTIFICATE_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - ALTER CERTIFICATE statement
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d73be79f224a4d95e7c397b55ee1441d5d0cdd9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1e83bc2c83f654ae82ed5a84c33f5801c5a06549
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781341"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -73,13 +70,13 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  데이터베이스에서 인증서를 식별하는 고유한 이름입니다.  
   
- FILE **='***path_to_private_key***'**  
+ FILE **='**_path\_to\_private\_key_**'**  
  개인 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. 이 매개 변수는 로컬 경로이거나 네트워크 위치에 대한 UNC 경로가 될 수 있습니다. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트 내에서 액세스할 수 있습니다. 이 옵션을 사용할 경우 지정한 파일에 대한 액세스 권한이 서비스 계정에 있는지 확인해야 합니다.  
   
- DECRYPTION BY PASSWORD **='***key_password***'**  
+ DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  개인 키를 해독하는 데 필요한 암호를 지정합니다.  
   
- ENCRYPTION BY PASSWORD **='***password***'**  
+ ENCRYPTION BY PASSWORD **='**_password_**'**  
  데이터베이스에서 인증서의 개인 키를 암호화하는 데 사용되는 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
  REMOVE PRIVATE KEY  

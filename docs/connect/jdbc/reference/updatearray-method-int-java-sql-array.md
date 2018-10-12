@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateArray (int, java.sql.Array)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80491fd2fe637dae26860e2b6b02dd06fe5fc04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bdd281ed4e122e6710b2f82693aa9975505916b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679701"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>updateArray 메서드(int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  열 인덱스가 지정 된 배열 개체와 지정된 된 열을 업데이트 합니다.  
+  열 인덱스가 지정된 경우 지정된 열을 Array 개체로 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,11 +48,11 @@ public void updateArray(int columnIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateArray 메서드는 java.sql.ResultSet 인터페이스의 updateArray 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateArray 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateArray 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

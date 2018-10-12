@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37ddfc40c4037174dde0967b2ae9687ee47c03cd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c7d801e08c7426b0dda2bfe08d791a384d22a880
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845771"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,9 +72,9 @@ ms.locfileid: "42775661"
   
 4.  응답을 정의하려는 경고를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  *alert_name***경고 속성** 대화 상자의 **페이지 선택**에서 **응답**을 선택합니다.  
+5.  _alert\_name_**경고 속성** 대화 상자의 **페이지 선택**에서 **응답**을 선택합니다.  
   
-6.  **작업 실행** 확인란을 선택하고 **작업 실행** 확인란 아래의 목록에서 경고가 발생할 때 실행할 작업을 선택합니다. **새 작업**을 클릭하여 새 작업을 만듭니다. **작업 보기**를 클릭하면 해당 작업에 대한 자세한 내용을 확인할 수 있습니다. **새 작업** 및 **작업 속성***job_name* 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [작업 만들기](../../ssms/agent/create-a-job.md) 및 [작업 보기](../../ssms/agent/view-a-job.md)를 참조하세요.  
+6.  **작업 실행** 확인란을 선택하고 **작업 실행** 확인란 아래의 목록에서 경고가 발생할 때 실행할 작업을 선택합니다. **새 작업**을 클릭하여 새 작업을 만듭니다. **작업 보기**를 클릭하면 해당 작업에 대한 자세한 내용을 확인할 수 있습니다. **새 작업** 및 **작업 속성**_job\_name_ 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [작업 만들기](../../ssms/agent/create-a-job.md) 및 [작업 보기](../../ssms/agent/view-a-job.md)를 참조하세요.  
   
 7.  경고가 활성화될 때 운영자에게 알리려면 **운영자에게 알림** 확인란을 선택합니다. **운영자 목록**에서 운영자에게 알림을 보낼 방법으로 **전자 메일**, **호출기**또는 **Net Send**중 하나 이상을 선택합니다. **새 운영자**를 클릭하여 새 운영자를 만들 수 있습니다. **운영자 보기**를 클릭하면 운영자에 대한 자세한 정보를 볼 수 있습니다. **새 운영자** 및 **운영자 속성 보기** 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [Create an Operator](../../ssms/agent/create-an-operator.md) 및 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)를 참조하세요.  
   
@@ -92,7 +88,7 @@ ms.locfileid: "42775661"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- adds an e-mail notification for Test Alert.  

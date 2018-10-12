@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677937"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -74,7 +71,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -726,7 +723,7 @@ RESTORE DATABASE Sales
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -855,7 +852,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > 이 보기에는 두 개의 복원 요청이 표시될 수 있습니다. 하나는 클라이언트가 보낸 원래 RESTORE 문이고, 다른 하나는 클라이언트 연결에 실패하더라도 실행되는 백그라운드 RESTORE 문입니다.
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -867,13 +864,13 @@ WHERE r.command = 'RESTORE DATABASE'
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+>   <th><strong><em>* Parallel<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
+# <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
 
 
 데이터베이스 백업에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 어플라이언스로 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 사용자 데이터베이스를 복원합니다. 데이터베이스는 이전에 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/backup-transact-sql.md) 명령으로 만든 백업에서 복원됩니다. 백업 및 복원 작업을 사용하여 재해 복구 계획을 작성하거나 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 이동합니다.  

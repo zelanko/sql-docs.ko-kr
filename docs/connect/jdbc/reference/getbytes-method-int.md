@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBytes (int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35ff885422bcadf2c28b03a032f8412443a3a2ef
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 041866ac999d8a91487d0e68e2ac77a66724ad32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658741"
 ---
 # <a name="getbytes-method-int"></a>getBytes 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +49,7 @@ public byte[] getBytes(int index)
 ## <a name="remarks"></a>Remarks  
  이전 버전의 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 SQLServerCallableStatement.getBytes를 사용하여 바이트 배열과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime2** 또는 **datetimeoffset** 간에 값을 변환할 수 있었습니다. 이제 이 메서드와 이러한 데이터 형식을 함께 사용하면 변환이 지원되지 않음을 나타내는 예외가 발생합니다.  
   
- 이 getBytes 메서드는 java.sql.CallableStatement 인터페이스의 getBytes 메서드에 의해 지정 됩니다.  
+ 이 getBytes 메서드는 java.sql.CallableStatement 인터페이스의 getBytes 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getBytes 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   

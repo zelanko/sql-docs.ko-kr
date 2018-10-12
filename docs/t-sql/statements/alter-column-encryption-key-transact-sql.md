@@ -1,13 +1,11 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af850156a7600acde614849c897bbb69df0dfa1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839531"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,15 +57,21 @@ ALTER COLUMN ENCRYPTION KEY key_name
  값을 암호화하는 데 사용되는 암호화 알고리즘의 이름입니다. 시스템 공급자에 대한 알고리즘은 **RSA_OAEP**이어야 합니다. 이 인수는 열 암호화 키 값을 삭제할 때에는 유효하지 않습니다.  
   
  *varbinary_literal*  
- 지정된 마스터 암호화 키로 암호화된 CEK BLOB입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 이 인수는 열 암호화 키 값을 삭제할 때에는 유효하지 않습니다.  
+ 지정된 마스터 암호화 키로 암호화된 CEK BLOB입니다. 이 인수는 열 암호화 키 값을 삭제할 때에는 유효하지 않습니다.  
   
 > [!WARNING]  
 >  이 문의 일반 텍스트 CEK 값은 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키가 회전할 필요가 있는 경우(지금의 열 마스터 키는 새 열 마스터 키로 교체해야 합니다) 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가할 수 있습니다. 이렇게 하면 클라이언트 응용 프로그램이 열 암호화 키로 암호화된 데이터에 액세스할 수 있게 하는 동시에 새 열 마스터 키가 클라이언트 응용 프로그램에 사용할 수 있게 됩니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 응용 프로그램에서 Always Encrypted 기반 드라이버는 민감한 데이터에 액세스하기 위해 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용할 수 있습니다. Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다. 암호화된 값은 열 마스터 키를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 생성돼야 합니다.  
-  
- 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
+ 일반적으로 열 암호화 키는 단 하나의 암호화된 값으로 만들어집니다. 열 마스터 키가 회전할 필요가 있는 경우(지금의 열 마스터 키는 새 열 마스터 키로 교체해야 합니다) 새 열 마스터 키로 암호화된 열 암호화 키의 새 값을 추가할 수 있습니다. 이 워크플로를 사용하면 클라이언트 응용 프로그램이 열 암호화 키로 암호화된 데이터에 액세스할 수 있게 하는 동시에 새 열 마스터 키가 클라이언트 응용 프로그램에 사용할 수 있게 됩니다. 새 마스터 키에 액세스 권한이 없는 클라이언트 응용 프로그램에서 Always Encrypted 기반 드라이버는 민감한 데이터에 액세스하기 위해 이전 열 마스터 키로 암호화된 열 암호화 키 값을 사용할 수 있습니다. Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍스트 값을 요구합니다. 암호화된 값은 열 마스터 키를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 생성돼야 합니다.  
+
+ 다음과 같은 이유로 열 마스터 키가 순환됩니다.
+- 준수 규정에 따라 키를 주기적으로 순환해야 합니다.
+- 열 마스터 키가 손상되면 및 보안상의 이유로 순환해야 합니다.
+- 열 암호화 키를 서버 쪽에서 보안 Enclave와 공유하도록 설정하거나 공유를 해제하기 위해 순환해야 합니다. 예를 들어, 현재 열 마스터 키가 Enclave 계산을 지원하지 않고(ENCLAVE_COMPUTATIONS 속성으로 정의되지 않음) 열 마스터 키가 암호화하는 열 암호화 키로 보호되는 열에서 Enclave 계산을 사용하도록 설정하려면 ENCLAVE_COMPUTATIONS 속성을 사용하여 열 마스터 키를 새 키로 바꾸어야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+
+
+열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
 ## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 **ALTER ANY COLUMN ENCRYPTION KEY** 권한이 필요합니다.  

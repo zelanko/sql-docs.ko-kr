@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48fb0b5800e405e5a544c4c02bf2bfb232b29075
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 07cbe87febd0d926b963934ddb3b37316e47ee8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840111"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.locfileid: "42774826"
   
 ### <a name="Restrictions"></a>제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 삭제할 때 프록시가 활성 작업 단계를 참조하지 않는지 확인합니다. 프록시를 참조하는 작업 단계를 확인하려면 프록시를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 *proxy_name***프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택합니다. 프록시를 삭제한 경우 **개체 삭제** 대화 상자에서 해당 프록시를 사용하는 모든 작업 단계를 재할당할 수 있는 옵션이 제공됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 삭제할 때 프록시가 활성 작업 단계를 참조하지 않는지 확인합니다. 프록시를 참조하는 작업 단계를 확인하려면 프록시를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 _proxy\_name_**프록시 계정 속성** 대화 상자에서 **참조** 페이지를 선택합니다. 프록시를 삭제한 경우 **개체 삭제** 대화 상자에서 해당 프록시를 사용하는 모든 작업 단계를 재할당할 수 있는 옵션이 제공됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다. 자격 증명에 지정된 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터에 대한 "일괄 작업으로 로그온" 권한이 있어야 합니다.  
   

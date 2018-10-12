@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797361"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 SQL Server 단위 테스트를 실행할 수 있습니다. 데이터베이스를 배포하도록 단위 테스트를 구성하고, 테스트 데이터를 생성하고, 선택한 테스트를 실행할 수 있습니다. Team Foundation Build에 익숙하지 않으면 이 항목의 절차를 수행하기 전에 다음 정보를 검토하십시오.  
@@ -118,7 +115,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 3.  **app.config의 복사본**으로 표시된 파일을 마우스 오른쪽 단추로 클릭하고 이름 바꾸기를 클릭합니다.  
   
-4.  *BuildComputer***.sqlunitttest.config**를 입력하고 Enter 키를 누릅니다. 여기서 *BuildComputer*는 빌드 에이전트가 실행되는 컴퓨터의 이름입니다.  
+4.  _BuildComputer_**.sqlunitttest.config**를 입력하고 Enter 키를 누릅니다. 여기서 *BuildComputer*는 빌드 에이전트가 실행되는 컴퓨터의 이름입니다.  
   
 5.  *BuildComputer*.sqlunitttest.config를 두 번 클릭합니다.  
   
@@ -277,7 +274,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 1.  팀 탐색기에서 팀 프로젝트 노드와 빌드 노드를 차례로 확장하고 실행하려는 빌드 정의를 마우스 오른쪽 단추로 클릭한 다음 새 빌드 큐 대기를 클릭합니다.  
   
-    **빌드 {***TeamProjectName***} 큐에 대기** 대화 상자에 기존의 모든 빌드 유형 목록이 표시됩니다.  
+    **빌드 {**_TeamProjectName_**} 큐에 대기** 대화 상자에 기존의 모든 빌드 유형 목록이 표시됩니다.  
   
 2.  필요에 따라 **빌드 정의**에서 새 빌드 정의를 클릭합니다.  
   

@@ -1,13 +1,11 @@
 ---
-title: getUDTs 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getUDTs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getUDTs
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f371dd21d1f64004d9e04c6e021ce6c67c269081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614916"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32841998"
   특정 스키마에 정의된 사용자 정의 형식에 대한 설명을 검색합니다.  
   
 > [!NOTE]  
->  와이 메서드는 현재 지원 되지 않습니다 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]합니다. 이 메서드를 사용할 경우 항상 빈 결과 집합이 반환됩니다.  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 현재 이 메서드가 지원되지 않습니다. 이 메서드를 사용할 경우 항상 빈 결과 집합이 반환됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,17 +44,17 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
 #### <a name="parameters"></a>매개 변수  
  *catalog*  
   
- A **문자열** 카탈로그 이름이 들어 있는입니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다.  
   
  *schemaPattern*  
   
- A **문자열** 스키마 이름 패턴이 들어 있는입니다.  
+ 스키마 이름 패턴이 들어 있는 **문자열**입니다.  
   
  *typeNamePattern*  
   
- A **문자열** 형식 이름 패턴이 들어 있는입니다.  
+ 형식 이름 패턴이 들어 있는 **String**입니다.  
   
- *형식*  
+ *types*  
   
  포함할 데이터 형식이 들어 있는 int의 배열입니다. Null은 모든 형식이 포함되어야 함을 나타냅니다.  
   
@@ -67,10 +64,10 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 getUDTs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getUDTs 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 getUDTs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getUDTs 메서드에 의해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

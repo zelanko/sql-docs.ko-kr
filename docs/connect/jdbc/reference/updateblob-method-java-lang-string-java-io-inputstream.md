@@ -1,25 +1,22 @@
 ---
-title: updateBlob 메서드 (java.lang.String, java.io.InputStream) | Microsoft Docs
+title: updateBlob 메서드(java.lang.String, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e5e562a0db39b0c65e69207906fde628a46a872
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3d669f4a675953b38bf0a14b4c3358c86f7f87b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637431"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream"></a>updateBlob 메서드(java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +34,7 @@ public void updateBlob(java.lang.String columnLabel,
 #### <a name="parameters"></a>매개 변수  
  *columnLabel*  
   
- A **문자열** 열 레이블이 들어 있는입니다.  
+ 열 레이블이 포함된 **문자열**입니다.  
   
  *inputStream*  
   
@@ -46,11 +43,11 @@ public void updateBlob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateBlob 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

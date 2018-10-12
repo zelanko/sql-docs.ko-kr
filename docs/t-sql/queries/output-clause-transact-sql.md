@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e433b736a9c129eb5a43ebf8bf1ffb7d653527d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629251"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다(예: INSERTED**.***column_name*).  
+ 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다(예: INSERTED **.**_column\_name_).  
   
  $action  
  MERGE 문에만 사용할 수 있습니다. 해당 행에서 수행된 작업에 따라 각 행에 대해 'INSERT', 'UPDATE' 또는 'DELETE' 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다.  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
+ OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  

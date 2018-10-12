@@ -1,13 +1,11 @@
 ---
-title: getArray 메서드 (SQLServerCallableStatement) | Microsoft Docs
+title: getArray 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getArray
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c21cb48c-a45f-491c-a7cd-4e82d1e178d4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c2689a845d4eecdc097b022cfa1ee8f16c8639c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a7880e687e24defababcb94ba2ec4a813609f8eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623901"
 ---
 # <a name="getarray-method-sqlservercallablestatement"></a>getArray 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Array 개체와 지정된 된 매개 변수의 값을 검색합니다.  
+  지정된 매개 변수의 값을 Array 개체로 검색합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[getArray (int)](../../../connect/jdbc/reference/getarray-method-int.md)|매개 변수 인덱스가 지정 된 배열 개체로 지정된 된 매개 변수의 값을 검색 합니다.|  
-|[getArray (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string.md)|매개 변수 이름이 지정 된 배열 개체로 지정된 된 매개 변수의 값을 검색 합니다.|  
+|[getArray(int)](../../../connect/jdbc/reference/getarray-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Array 개체로 검색합니다.|  
+|[getArray(java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 Array 개체로 검색합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

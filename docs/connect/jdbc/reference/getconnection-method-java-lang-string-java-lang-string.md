@@ -1,13 +1,11 @@
 ---
-title: getConnection 메서드 (java.lang.String, java.lang.String) | Microsoft Docs
+title: getConnection 메서드(java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getConnection (java.lang.String, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb33640c75d98fa065c6388458aaffc3067c3126
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f72babc3375c0720807322520a9761cb49e05919
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677467"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 데이터와 연결을 설정 하려고 원본 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 지정 된 사용자 이름 및 암호를 사용 하 여 개체를 나타냅니다.  
+  지정된 사용자 이름 및 암호를 사용하여 이 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체가 나타내는 데이터 원본과의 연결을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,28 +39,28 @@ public java.sql.Connection getConnection(java.lang.String username,
 #### <a name="parameters"></a>매개 변수  
  *username*  
   
- A **문자열** 사용자 이름이 들어 있는입니다.  
+ 사용자 이름을 포함하는 **문자열**입니다.  
   
  *password*  
   
- A **문자열** 암호가 포함 된 합니다.  
+ 암호가 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
+ [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getConnection 메서드는 javax.sql.DataSource 인터페이스의 getConnection 메서드에 의해 지정 됩니다.  
   
- Null이 아닌 사용자 이름이 나 암호를 사용 하 여 메서드 호출의 getConnection SQLServerConnection 개체를 초기화할 때 SQLServerDataSource 클래스에 설정 된 사용자 이름 및 암호 속성을 대체 됩니다. 예를 들어 호출자가 호출 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 및 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 에서 데이터 원본 및 다음 호출 getConnection 및 공급 장치 null이 아닌 사용자 이름 또는 null이 아닌 암호, 사용자 이름 및 암호 설정 하 여 setUser 및 setPassword 사용자 이름 및 암호 getConnection에 전달 하 여 대체 됩니다.  
+ Null이 아닌 사용자 이름이 나 암호를 사용 하 여 메서드 호출의 getConnection SQLServerConnection 개체를 초기화할 때 SQLServerDataSource 클래스에 설정 된 사용자 이름 및 암호 속성을 대체 됩니다. 예를 들어 호출자가 데이터 원본에 대해 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 및 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)를 호출한 다음, getConnection을 호출하고 null이 아닌 사용자 이름이나 null이 아닌 암호를 제공하면 setUser 및 setPassword로 설정된 사용자 이름과 암호는 getConnection에 전달된 사용자 이름 및 암호로 대체됩니다.  
   
 > [!NOTE]  
->  사용자 이름 및 암호에 대 한 호출을 사용 하 여 URL 내부에서 설정 되는 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드가 경우 변경 되지 것입니다.  
+>  [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드를 호출하여 URL 내부에서 설정된 사용자 이름 및 암호는 이 경우에도 변경되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [getConnection 메서드 &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
+## <a name="see-also"></a>참고 항목  
+ [getConnection 메서드(SQLServerDataSource)](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

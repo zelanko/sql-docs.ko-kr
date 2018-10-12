@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724301"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "42785659"
   
 **SQL Server용 Microsoft JDBC Driver 7.0**  
 
-  JDBC Driver 6.2에는 각 설치 패기지에 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar**의 두 JAR 클래스 라이브러리가 포함되어 있습니다.
+  JDBC Driver 7.0에는 설치 패키지 각각에 **mssql-jdbc-7.0.0.jre8.jar** 및 **mssql-jdbc-7.0.0.jre10.jar**이라는 두 개의 JAR 클래스 라이브러리가 포함되어 있습니다.
 
   JDBC Driver 7.0은 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 8.0 및 10.0에 대해서만 테스트되었습니다.
   
@@ -68,7 +65,7 @@ ms.locfileid: "42785659"
   
 **SQL Server용 Microsoft JDBC Driver 6.4:**  
 
-  JDBC Driver 6.2에는 각 설치 패기지에 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar**의 두 JAR 클래스 라이브러리가 포함되어 있습니다.
+  JDBC Driver 6.4에는 설치 패키지 각각에 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** 및 **mssql-jdbc-6.4.0.jre9.jar**이라는 세 개의 JAR 클래스 라이브러리가 포함되어 있습니다.
 
   JDBC Driver 6.4는 모든 주요 Sun 동등 Java 가상 머신에서 사용 가능하고 지원되지만 Sun JRE 7.0, 8.0 및 9.0에 대해서만 테스트되었습니다.
   

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssbdiagnose
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed7803b276159de71bd609dae4742401f04bc120
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621617"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,10 +181,10 @@ WHERE database_id = DB_ID();
  **-ID**  
  지정된 대화 요소의 런타임 모니터링을 요청합니다. **-ID** 는 여러 번 지정할 수 있습니다.  
   
- 대화 핸들을 지정할 경우 연결된 대화 끝점과 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 끝점에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 끝점에 대한 이벤트가 모두 보고됩니다.  
+ 대화 핸들을 지정할 경우 연결된 대화 엔드포인트와 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 엔드포인트에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 엔드포인트에 대한 이벤트가 모두 보고됩니다.  
   
  *conversation_handle*  
- 응용 프로그램에 있는 대화 끝점을 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 끝점에 고유하기 때문에 시작자 끝점과 대상 끝점은 서로 다른 대화 핸들을 갖습니다.  
+ 응용 프로그램에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
   
  대화 핸들은 *@dialog_handle* 문의 **@dialog_handle** 매개 변수와 **conversation_handle** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 응용 프로그램에 반환됩니다.  
   
@@ -202,7 +198,7 @@ WHERE database_id = DB_ID();
  대화 그룹 ID는 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_group_id** 열에서 보고됩니다.  
   
  *conversation_id*  
- 대화를 식별하는 고유 식별자입니다. 대화의 시작자 끝점과 대상 끝점은 둘 다 동일한 대화 ID를 사용합니다.  
+ 대화를 식별하는 고유 식별자입니다. 대화의 시작자 엔드포인트와 대상 엔드포인트는 둘 다 동일한 대화 ID를 사용합니다.  
   
  대화 ID는 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_id** 열에서 보고됩니다.  
   
@@ -250,7 +246,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
- 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+ 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **-S** *database_name*  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  
@@ -284,11 +280,11 @@ WHERE database_id = DB_ID();
   
 -   **-NEW** 와 **-ID** 를 둘 다 지정하지 않을 경우 목록에 연결 옵션에 지정된 모든 데이터베이스에 있는 대화가 모두 포함됩니다.  
   
--   **-NEW** 를 지정할 경우 **ssbdiagnose** 는 **ssbdiagnose** 가 실행된 후 시작되는 첫 번째 대화의 요소를 포함합니다. 여기에는 대상 대화 끝점과 시작자 대화 끝점 둘 다에 대한 대화 ID와 대화 핸들이 포함됩니다.  
+-   **-NEW** 를 지정할 경우 **ssbdiagnose** 는 **ssbdiagnose** 가 실행된 후 시작되는 첫 번째 대화의 요소를 포함합니다. 여기에는 대상 대화 엔드포인트와 시작자 대화 엔드포인트 둘 다에 대한 대화 ID와 대화 핸들이 포함됩니다.  
   
 -   대화 핸들을 사용하여 **-ID** 가 지정된 경우에는 해당 핸들만 목록에 포함됩니다.  
   
--   대화 ID를 사용하여 **-ID** 가 지정된 경우에는 두 대화 끝점 모두에 대한 대화 ID와 핸들이 목록에 추가됩니다.  
+-   대화 ID를 사용하여 **-ID** 가 지정된 경우에는 두 대화 엔드포인트 모두에 대한 대화 ID와 핸들이 목록에 추가됩니다.  
   
 -   대화 그룹 ID를 사용하여 **-ID** 가 지정된 경우에는 그룹에 있는 모든 대화 ID와 대화 핸들이 목록에 추가됩니다.  
   

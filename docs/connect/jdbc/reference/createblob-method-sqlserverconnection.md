@@ -1,25 +1,22 @@
 ---
-title: createBlob 메서드 (SQLServerConnection) | Microsoft Docs
+title: createBlob 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fbc542cabb471763cd7e533f83cf36e625ef68f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f44e82be9711ed118ab755f5f45359d6281642d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619162"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public java.sql.Blob createBlob()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 createBlob 메서드는 java.sql.Connection 인터페이스의 createBlob 메서드에 의해 지정 됩니다.  
   
- 이 메서드 대신 사용할 [SQLServerBlob 생성자 &#40;SQLServerConnection, 바이트&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)합니다.  
+ 이 메서드는 필요 하지 [SQLServerBlob 생성자 &#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

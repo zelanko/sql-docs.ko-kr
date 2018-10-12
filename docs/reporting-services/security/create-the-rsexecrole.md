@@ -4,19 +4,18 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a91961482cf5020ca2085086004a9f71c2cb1369
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d6f483fc1a8a21823f2d80c61be971dc04cf5412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623864"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
@@ -226,6 +225,38 @@ ms.locfileid: "43267045"
 14. **보고서 관리자 URL**을 클릭합니다.  
   
 15. 링크를 클릭하여 보고서 관리자를 엽니다. 보고서 서버 데이터베이스의 보고서 서버 항목이 표시되어야 합니다.  
+
+## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>T-SQL을 사용하여 RSExecRole 역할 및 권한 만들기
+다음 T-SQL 스크립트를 사용하여 시스템 데이터베이스에서 역할을 만들고 적용 가능한 권한을 부여할 수 있습니다.
+```sql
+USE master;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.xp_sqlagent_enum_jobs TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_is_starting TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_notify TO [RSExecRole];
+GO
+USE msdb;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.sp_add_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobserver TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobstep TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_delete_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_verify_job_identifiers TO [RSExecRole];
+GRANT SELECT ON dbo.syscategories TO [RSExecRole];
+GRANT SELECT ON dbo.sysjobs TO [RSExecRole];
+GO
+```
 
 ## <a name="next-steps"></a>다음 단계
 

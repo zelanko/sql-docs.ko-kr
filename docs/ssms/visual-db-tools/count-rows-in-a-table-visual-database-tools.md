@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - number of values
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 829b3dc894e3976aef20a239f30ed33af9ac27fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0c049d11cf1e7a7a1d3fa4654756652b242183f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759981"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "33048810"
   
 2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법 추가** 를 선택합니다. [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
   
-3.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 **\&#42; (모든 열)** 를 선택합니다.  
+3.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 **&#42; (모든 열)** 을 선택합니다.  
   
     쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
@@ -61,9 +57,9 @@ ms.locfileid: "33048810"
   
 2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법 추가** 를 선택합니다. 쿼리 및 뷰 디자이너에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
   
-3.  테이블이나 테이블 구조 개체를 나타내는 사각형에서 **\&#42;(모든 열)** 을 선택합니다.  
+3.  테이블이나 테이블 구조 개체를 나타내는 사각형에서 **&#42;(모든 열)** 을 선택합니다.  
   
-    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
+    쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
 4.  검색하려는 데이터 열을 추가한 다음 **출력** 열의 확인란 선택을 취소합니다.  
   

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
+ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38069974"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488298"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
 
@@ -29,6 +29,12 @@ ms.locfileid: "38069974"
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+```
+
+이전 주 복제본이 복구되면 주 역할도 복구되는 것으로 가정됩니다. 이전 주 복제본이 보조 역할로 전환되도록 하려면 이전 주 복제본에 대해 다음 명령을 실행합니다.
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
 
 ### <a name="manual-failover-without-data-loss"></a>데이터가 손실되지 않는 수동 장애 조치(Failover)

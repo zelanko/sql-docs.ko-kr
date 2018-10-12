@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 94fc874de4136d2eb078711b135a291425b6ddb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682547"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +34,7 @@ bool PDOStatement::closeCursor();
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
 ## <a name="remarks"></a>Remarks  
-MultipleActiveResultSets 연결 옵션이 false로 설정될 때 closeCursor에 효과가 있습니다.  MultipleActiveResultSets 연결 옵션에 대한 자세한 내용은 [방법: MARS](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)Multiple Active Resultsets를 사용하지 않도록 설정을 참조하세요.  
+MultipleActiveResultSets 연결 옵션이 false로 설정될 때 closeCursor에 효과가 있습니다.  MultipleActiveResultSets 연결 옵션에 대한 자세한 내용은 [방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)을 참조하세요.  
   
 closeCursor를 호출하지 않고 문 핸들을 null로 설정할 수도 있습니다.  
   

@@ -1,13 +1,11 @@
 ---
-title: getColumnPrivileges 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getColumnPrivileges 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getColumnPrivileges
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 792b09cc57fbfb1438c6c4e9d372beb6547635d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697781"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

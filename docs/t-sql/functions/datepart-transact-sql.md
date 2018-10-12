@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f9b488375cbedcb9790ab954cf9ce9109c0b303
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ab79910472860ed7986621c095a4ccc939a2b3af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058942"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596651"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +107,7 @@ DATEPART ( datepart , date )
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|45|  
-|**weekday, dw**|@shouldalert|  
+|**weekday, dw**|1|  
 |**hour, hh**|12|  
 |**minute, n**|15|  
 |**second, ss, s**|32|  
@@ -122,7 +119,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week 및 weekday datepart 인수
 **week**(**wk**, **ww**) 또는 **weekday**(**dw**) *datepart*의 경우 `DATEPART` 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)로 설정된 값에 따라 달라집니다.
   
-모든 해의 1월 1일은 **week***datepart*의 시작 값을 정의합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+모든 해의 1월 1일은 **week**_datepart_의 시작 값을 정의합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 DATEPART(**wk**, '1월 1일, *xxx*x') = 1
 
@@ -142,12 +139,12 @@ SET DATEFIRST 7 -- (일요일)
   
 |SET DATEFIRST<br /><br /> 인수(argument)|week<br /><br /> 반환|weekday<br /><br /> 반환|  
 |---|---|---|
-|@shouldalert|16|6|  
+|1|16|6|  
 |2|17|5|  
 |3|17|4|  
 |4|17|3|  
 |5|17|2|  
-|6|17|@shouldalert|  
+|6|17|1|  
 |7|16|7|  
   
 ## <a name="year-month-and-day-datepart-arguments"></a>year, month 및 day datepart 인수  

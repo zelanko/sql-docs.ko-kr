@@ -3,10 +3,8 @@ title: 서비스 마스터 키 백업 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
@@ -14,18 +12,18 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: d5c8455e24d892be9a12d2ade2a8d2f88d0b97b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856931"
 ---
 # <a name="back-up-the-service-master-key"></a>서비스 마스터 키 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 서비스 마스터 키를 백업하는 방법에 대해 설명합니다. 서비스 마스터 키는 암호화 계층의 루트입니다. 이 키는 안전한 오프 사이트 위치에 백업 및 저장해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  
+  이 문서에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 서비스 마스터 키를 백업하는 방법에 대해 설명합니다. 서비스 마스터 키는 암호화 계층의 루트입니다. 이 키는 안전한 오프 사이트 위치에 백업 및 저장해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  
   
- **항목 내용**  
+ **문서 내용**  
   
 -   **시작하기 전 주의 사항:**  
   
@@ -58,7 +56,7 @@ ms.locfileid: "37237713"
   
 3.  백업 키의 복사본을 저장하기 위해 이동식 백업 미디어를 가져옵니다.  
   
-4.  키의 백업을 만들 NTFS 디렉터리를 식별합니다. 다음 단계에서 지정하는 파일을 만들 위치인 이 디렉터리는 매우 제한적인 ACL(액세스 제한 목록)로 보호되어야 합니다.  
+4.  키의 백업을 만들 NTFS 디렉터리를 식별합니다. 다음 단계에서 지정하는 파일을 만들 위치에 해당하는 이 디렉터리는 매우 제한적인 ACL(액세스 제한 목록)로 보호되어야 합니다.  
   
 5.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating statistics
@@ -16,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 080d04d2a83602cb19001b5ee16665bdcf7c672c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788481"
 ---
 # <a name="update-statistics"></a>통계 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +60,7 @@ ms.locfileid: "43094993"
   
 5.  업데이트하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 –***statistics_name* 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택한 다음 **확인**을 클릭합니다.  
+6.  **통계 속성 –**_statistics\_name_ 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택한 다음, **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -72,7 +70,7 @@ ms.locfileid: "43094993"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -88,7 +86,7 @@ ms.locfileid: "43094993"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -106,7 +104,7 @@ ms.locfileid: "43094993"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;   

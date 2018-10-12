@@ -1,34 +1,31 @@
 ---
-title: 검색할 날짜 및 시간 형식을 문자열로 SQLSRV 드라이버를 사용 하 여 | Microsoft Docs
+title: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ad28ed5316f0be403f63af2acd7e4090faa75a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686991"
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 기능은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 버전 1.1에서 추가되었으며 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 대해 SQLSRV 드라이버를 사용할 때만 유효합니다. PDO_SQLSRV 드라이버에서 ReturnDatesAsStrings 연결 옵션을 사용하면 오류가 발생합니다.  
   
-날짜 및 시간 형식을 검색할 수 있습니다 (**datetime**, **날짜**, **시간**, **datetime2**, 및 **datetimeoffset**) 연결 문자열에서 옵션을 지정 하 여 문자열로 합니다.  
+연결 문자열에서 옵션을 지정하여 날짜 및 시간 형식(**datetime**, **date**, **time**, **datetime2** 및 **datetimeoffset**)을 문자열로 검색할 수 있습니다.  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>날짜 및 시간 형식을 문자열로 검색하려면  
   
@@ -59,7 +56,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 연결 된 경우에 문자열을 검색할 때 u t F-8을 지정 하 여 문자열로 날짜를 검색할 수 있습니다 `"ReturnDatesAsStrings" => false`합니다.  
+다음 예제에서는 `"ReturnDatesAsStrings" => false`로 연결이 생성된 경우에도 문자열을 검색할 때 UTF-8을 지정하여 문자열로 날짜를 검색할 수 있음을 보여줍니다.  
   
 ```  
 <?php  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 u t F-8을 지정 하 여 문자열로 날짜를 검색 하는 방법을 보여 줍니다. 및 `"ReturnDatesAsStrings" => true` 연결 문자열에 있습니다.  
+다음 예제에서는 연결 문자열에서 UTF-8 및 `"ReturnDatesAsStrings" => true`를 지정하여 날짜를 문자열로 검색하는 방법을 보여줍니다.  
   
 ```  
 <?php  
@@ -169,6 +166,6 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
   

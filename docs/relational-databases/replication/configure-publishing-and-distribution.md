@@ -1,30 +1,26 @@
 ---
 title: 게시 및 배포 구성 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7314f0938cc7ef97ad87a6777f9717d33cd2905a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832091"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ ms.locfileid: "39087815"
 
 2. 게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다.
 
-   SQL Database Managed Instance(미리 보기)의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
+   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
 
 3. 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행합니다. 이때 `@dbname`에 게시할 데이터베이스를 지정하고 `@optname`에 복제 유형을 지정하며 `@value`에 `true` 값을 지정합니다.
 
@@ -83,7 +79,7 @@ ms.locfileid: "39087815"
 
 2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
 
-   SQL Database Managed Instance(미리 보기)의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
+   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
 
 3. master 데이터베이스의 게시자에서 [sp_adddistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)를 실행합니다. 이때 `@password`에 1단계에서 사용한 강력한 암호를 지정합니다. 이 암호는 배포자에 연결할 때 게시자에서 사용됩니다.
 

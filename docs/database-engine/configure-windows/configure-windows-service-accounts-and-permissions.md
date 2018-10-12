@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694999"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ ms.locfileid: "43348574"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**PolyBase 엔진 및 DMS**| **서비스로 로그온** (SeServiceLogonRight)  |   
 |**실행 패드:**|**서비스로 로그온** (SeServiceLogonRight) <br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br />**트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br />**프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|     
-|**R 서비스:** **SQLRUserGroup**  |**로컬 로그온 허용** |   
+|**R Services:** **SQLRUserGroup**(SQL 2016 및 2017)  |**로컬 로그온 허용** |   
+|**Machine Learning** '**모든 응용 프로그램 패키지’ [AppContainer]**(SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
 
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 인스턴스에서 사용할 수 없습니다.  
   

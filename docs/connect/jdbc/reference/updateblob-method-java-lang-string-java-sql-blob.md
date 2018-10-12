@@ -1,13 +1,11 @@
 ---
-title: updateBlob 메서드 (java.lang.String, java.sql.Blob) | Microsoft Docs
+title: updateBlob 메서드(java.lang.String, java.sql.Blob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBlob (java.lang.String, java.sql.Blob)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e089cd8ccbaf2b70c9c81f266dda8ded9edc02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 81d089b7a0cd2d052be6df55791559f4a45aa1b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674092"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>updateBlob 메서드(java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,11 +48,11 @@ public void updateBlob(java.lang.String columnName,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateBlob 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

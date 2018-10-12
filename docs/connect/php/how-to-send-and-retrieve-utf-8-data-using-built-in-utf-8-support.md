@@ -1,29 +1,26 @@
 ---
-title: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색'
+title: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633941"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +37,10 @@ PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성�
   
     연결 옵션의 일부로 문자 집합을 지정하는 경우 드라이버는 다른 연결 옵션 문자열이 동일한 문자 집합을 사용한다고 가정합니다. 서버 이름 및 쿼리 문자열도 동일한 문자 집합을 사용한다고 가정합니다.  
   
-CharacterSet**에 UTF-8 또는 SQLSRV_ENC_CHAR을 전달할 수 있습니다(SQLSRV_ENC_BINARY는 전달할 수 없음). 기본 인코딩은 SQLSRV_ENC_CHAR입니다.  
+**CharacterSet**에 UTF-8 또는 SQLSRV_ENC_CHAR을 전달할 수 있습니다(그러나 SQLSRV_ENC_BINARY는 전달할 수 없음). 기본 인코딩은 SQLSRV_ENC_CHAR입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 nvarcahr(3850)** 형식입니다. 또한 서버에 데이터를 보내기 전에 PHP utf8_encode** 함수를 사용하여 UTF-8 인코딩으로 변환됩니다. 이는 예시용으로만 수행됩니다. 실제 응용 프로그램 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
+다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 **nvarchar(3850)** 형식입니다. 또한 서버에 데이터를 보내기 전에 PHP **utf8_encode** 함수를 사용하여 UTF-8 인코딩으로 변환됩니다. 이는 예시용으로만 수행됩니다. 실제 응용 프로그램 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
   
 이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치되어 있다고 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   

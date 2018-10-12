@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760341"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |설정|char(*n*) NOT NULL 또는 binary(*n*) NOT NULL|char(*n*) NULL 또는 binary(*n*) NULL|varchar(*n*) 또는 varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING이 ON일 때는 **char(***n***)** 또는 **binary(***n***)** NOT NUL과 동일한 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘리지 않습니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘리지 않습니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.|  
+|ON|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING이 ON일 때는 **char(**_n_**)** 또는 **binary(**_n_**)** NOT NULL과 동일한 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘리지 않습니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘리지 않습니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.|  
 |OFF|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING 옵션이 OFF일 때 **varchar** 또는 **varbinary**의 경우와 같은 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘립니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘립니다.|  
   
 > [!NOTE]  

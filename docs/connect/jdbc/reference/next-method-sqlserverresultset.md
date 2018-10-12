@@ -1,13 +1,11 @@
 ---
-title: next 메서드 (SQLServerResultSet) | Microsoft Docs
+title: next 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.next
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa878b809af8dab927877f8af0db3d54a6a3eb30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702847"
 ---
-# <a name="next-method-sqlserverresultset"></a>next 메서드 (SQLServerResultSet)
+# <a name="next-method-sqlserverresultset"></a>next 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   커서를 현재 위치에서 한 행 아래로 이동합니다.  
@@ -39,19 +36,19 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** 새 현재 행이 유효 합니다. **false** 처리할 행이 더 이상 없는 경우.  
+ **true** 을 새 현재 행이 유효 합니다. **false** 처리할 행이 더 이상 없으면입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 다음이 메서드는 java.sql.ResultSet 인터페이스에는 다음 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 next 메서드는 java.sql.ResultSet 인터페이스의 next 메서드에 의해 지정됩니다.  
   
- 처음에는 결과 집합 커서가 첫 번째 행 앞에 놓입니다. 다음 방법으로 첫 번째 호출이 첫 번째 행을 현재 행으로 만듭니다, 그리고 두 번째 호출 하면 두 번째 행이 현재 행 및 등입니다.  
+ 처음에는 결과 집합 커서가 첫 번째 행 앞에 놓입니다. next 메서드를 처음으로 호출하면 첫 번째 행이 현재 행이 되고 두 번째로 이 메서드를 호출하면 두 번째 행이 현재 행이 되는 방식으로 처리됩니다.  
   
- 입력된 스트림을 현재 행에 대 한 열려 있으면 다음 방법에 대 한 호출은 암시적으로 닫습니다. 에 대 한 경고 체인이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체는 새 행을 읽을 때 삭제 됩니다.  
+ 현재 행에 대해 입력 스트림이 열려 있는 경우 next 메서드를 호출하면 해당 스트림이 암시적으로 닫힙니다. 새 행을 읽을 때는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 대한 경고 체인이 지워집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845011"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>결과 삽입 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +78,11 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     > 쿼리 및 뷰 디자이너에서는 업데이트 가능한 테이블과 뷰를 미리 확인할 수 없습니다. 따라서 **결과 삽입의 대상 테이블 선택** 대화 상자의 **테이블 이름** 목록에는 쿼리하려는 데이터 연결에 사용 가능한 모든 테이블과 뷰가 표시됩니다. 여기에는 행을 복사해 넣을 수 없는 테이블이나 뷰도 포함됩니다.  
   
-4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 행 전체를 복사하려면 **\&#42; (모든 열)** 를 선택합니다.  
+4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 행 전체를 복사하려면 **&#42;(모든 열)** 를 선택합니다.  
   
     사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
-5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 행 전체를 복사하는 경우 *tablename.\&#42;* 를 선택합니다. 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
+5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 행 전체를 복사하는 경우 *tablename.&#42;* 를 선택합니다. 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
   
 6.  행을 특정 순서에 따라 복사하려면 정렬 순서를 지정합니다. 자세한 내용은 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)를 참조하세요.  
   

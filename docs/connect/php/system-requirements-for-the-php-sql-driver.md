@@ -1,27 +1,24 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
+title: Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603803"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

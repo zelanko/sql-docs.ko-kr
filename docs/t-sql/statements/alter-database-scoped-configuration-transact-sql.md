@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741231"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ WHEN_SUPPORTED
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+***적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 일반적으로 resumable에 지원되는 작업에만 적용됩니다. 
 
@@ -242,7 +239,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- ALTER DATABASE SCOPED CONFIGURATION은 SQL Server 2016부터 시작하는 Azure SQL Database 및 SQL Server의 새로운 기능입니다. 이는 데이터베이스 스키마에 영향을 주고, 스키마의 내보내기(데이터와 함께 또는 데이터 없이)를 이전 버전의 SQL Server(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])로 가져올 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 또는 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.  
+ ALTER DATABASE SCOPED CONFIGURATION은 SQL Server 2016부터 시작하는 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 SQL Server의 새로운 기능입니다. 이는 데이터베이스 스키마에 영향을 주고, 스키마의 내보내기(데이터와 함께 또는 데이터 없이)를 이전 버전의 SQL Server(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])로 가져올 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 또는 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +247,7 @@ WHEN_SUPPORTED
 
 **ELEVATE_RESUMABLE**
 
-이 옵션은 WITH(ONLINE= 구문)를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
-
+이 옵션은 WITH(RESUMABLE= 구문)를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
   
 ## <a name="metadata"></a>메타데이터  
 
@@ -356,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>9.  ELEVATE_ONLINE 설정 
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 및 (공개 미리 보기 기능으로)
  
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.  tsqlCopy 
 
@@ -366,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>10. ELEVATE_RESUMABLE 설정 
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 이 예에서는 ELEVEATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.  tsqlCopy 
 
@@ -401,8 +397,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>자세한 정보  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [데이터베이스 및 파일 카탈로그 뷰](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [서버 구성 옵션](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

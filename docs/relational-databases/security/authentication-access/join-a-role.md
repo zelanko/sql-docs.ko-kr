@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bfd4050ba971d74532f9a8b8adc6abbfae57c5
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699361"
 ---
 # <a name="join-a-role"></a>역할 조인
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +79,9 @@ ms.locfileid: "43118135"
   
 4.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **서버 역할 속성 –***server_role_name* 대화 상자의 **멤버** 페이지에서 **추가**를 클릭합니다.  
+5.  **서버 역할 속성 –**_server\_role\_name_ 대화 상자의 **멤버** 페이지에서 **추가**를 클릭합니다.  
   
-6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭한 다음 **개체 찾아보기** 대화 상자에서 사용 가능한 개체를 선택합니다. **확인**을 클릭하여 **서버 역할 속성 –***server_role_name* 대화 상자로 돌아갑니다.  
+6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭한 다음 **개체 찾아보기** 대화 상자에서 사용 가능한 개체를 선택합니다. **확인**을 클릭하여 **서버 역할 속성 –**_server\_role\_name_ 대화 상자로 돌아갑니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -104,9 +101,9 @@ ms.locfileid: "43118135"
   
 7.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-8.  **데이터베이스 역할 속성 –***database_role_name* 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+8.  **데이터베이스 역할 속성 –**_database\_role\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   
-9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭한 다음 **개체 찾아보기** 대화 상자에서 사용 가능한 개체를 선택합니다. **확인**을 클릭하여 **데이터베이스 역할 속성 –***database_role_name* 대화 상자로 돌아갑니다.  
+9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭한 다음 **개체 찾아보기** 대화 상자에서 사용 가능한 개체를 선택합니다. **확인**을 클릭하여 **데이터베이스 역할 속성 –**_database\_role\_name_ 대화 상자로 돌아갑니다.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

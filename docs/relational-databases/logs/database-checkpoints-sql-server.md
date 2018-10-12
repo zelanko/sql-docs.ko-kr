@@ -4,10 +4,8 @@ ms.date: 09/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9acf52409d656c7b1acdb37011427288c451aae
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096785"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673389"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,8 +47,8 @@ ms.locfileid: "43096785"
   
 |속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|설명|  
 |----------|----------------------------------|-----------------|  
-|자동|EXEC sp_configure **'** 복구 간격 **','***초***'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
-|간접|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
+|자동|EXEC sp_configure **'** 복구 간격 **',**_초'_**'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
+|간접|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
 |수동|CHECKPOINT[*checkpoint_duration*]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
 |내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅숏 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
   

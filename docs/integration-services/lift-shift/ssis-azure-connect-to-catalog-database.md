@@ -1,23 +1,22 @@
 ---
 title: Azure에서 SSIS 카탈로그(SSISDB)에 연결 | Microsoft Docs
 description: Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결하는 데 필요한 연결 정보를 찾습니다.
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698121"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그(SSISDB)에 연결
 
@@ -30,7 +29,7 @@ Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결
 > 이번에는 Azure Data Factory에서 Azure-SSIS Integration Runtime을 만드는 작업과 독립적으로 Azure SQL Database에서 SSISDB 카탈로그 데이터베이스를 만들 수 없습니다. Azure-SSIS IR은 Azure에서 SSIS 패키지를 실행하는 런타임 환경입니다. 프로세스의 연습은 [Azure에서 SSIS 패키지 배포 및 실행](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)을 참조합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
-시작하기 전에 SSMS(SQL Server Management Studio) 버전 17.2 이상이 설치되어 있는지 확인합니다. SSISDB 카탈로그 데이터베이스가 SQL Database 관리되는 인스턴스(미리 보기)에서 호스트될 경우 SSMS 버전이 17.6 이상인지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
+시작하기 전에 SSMS(SQL Server Management Studio) 버전 17.2 이상이 설치되어 있는지 확인합니다. SSISDB 카탈로그 데이터베이스가 SQL Database Managed Instance에서 호스트될 경우 SSMS 버전이 17.6 이상인지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal에서 연결 정보 가져오기
 1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.

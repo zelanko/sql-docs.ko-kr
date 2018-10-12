@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644851"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-*date*의 경우 `DATEDIFF_BIG`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 문자열 리터럴 값은 **datetime**을 확인해야 합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. `DATEDIFF_BIG`은 *startdate*에서 *enddate*를 뺍니다. 모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
+*date*의 경우 `DATEDIFF_BIG`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 문자열 리터럴 값은 **datetime**을 확인해야 합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. `DATEDIFF_BIG`는 *enddate*에서 *startdate*를 뺍니다. 모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 *enddate*  
 *startdate*를 참조하세요.
@@ -92,7 +89,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 지정된 startdate와 enddate 사이에 지정된 datepart 경계의 수(부호 있는 큰 정수 값으로)를 반환합니다.
 -   각 특정 *datepart* 및 해당 *datepart*에 대한 약어는 동일한 값을 반환합니다.  
   
-**bigint**에 대한 범위를 벗어난 반환 값의 경우(-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) `DATEDIFF_BIG`에서 오류를 반환합니다. **밀리초**의 경우 *startdate*와 *enddate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **초**의 경우 최대 차이는 68년입니다.
+**bigint**에 대한 범위를 벗어난 반환 값의 경우(-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) `DATEDIFF_BIG`에서 오류를 반환합니다. **밀리초**의 경우 *enddate*와 *startdate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **초**의 경우 최대 차이는 68년입니다.
   
 *startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart*가 시간 *datepart*가 아니면 `DATEDIFF_BIG`는 0을 반환합니다.
   
@@ -121,7 +118,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-SELECT <list>, WHERE, HAVING, GROUP BY 및 ORDER BY 절에서 `DATEDIFF_BIG`을 사용합니다.
+SELECT, WHERE, HAVING, GROUP BY 및 ORDER BY 절에서 `DATEDIFF_BIG`를 <list>사용합니다.
   
 `DATEDIFF_BIG`는 문자열 리터럴을 **datetime2** 형식으로 암시적으로 캐스팅합니다. 즉 `DATEDIFF_BIG`는 데이터가 문자열로 전달될 때 형식 YDM을 지원하지 않습니다. YDM 형식을 사용하려면 문자열을 **datetime** 또는 **smalldatetime** 형식으로 명시적으로 캐스팅해야 합니다.
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d99c22f795ff37487a220851b0828e952b192cd
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659780"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +72,7 @@ ms.locfileid: "43118451"
   
 3.  **서버 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 서버 역할...** 을 선택합니다.  
   
-4.  **새 서버 역할 –***server_role_name* 대화 상자의 **일반** 페이지에서 **서버 역할 이름** 상자에 새 서버 역할 이름을 입력합니다.  
+4.  **새 서버 역할 –**_server\_role\_name_ 대화 상자의 **일반** 페이지에서 **서버 역할 이름** 상자에 새 서버 역할 이름을 입력합니다.  
   
 5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
   

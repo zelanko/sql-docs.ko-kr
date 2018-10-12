@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613088"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -114,7 +112,7 @@ SQLWCHAR 데이터는 UTF-16LE(Little Endian)이어야 합니다.
 
 입력된 매개 변수를 바인딩하는 경우이 데이터 손실을 방지 하려면 유니코드 SQL 문자 형식 SQL_NVARCHAR 등을 지정 합니다. 이 경우 드라이버는 인코딩을 u t F-16이 고 모든 유니코드 문자를 나타낼 수 있는 클라이언트에서 변환 합니다. 또한 대상 열 또는 매개 변수는 서버의 수도 있어야 유니코드 형식 (**nchar**, **nvarchar**하십시오 **ntext**) 인코딩을 사용 하 여 데이터 정렬/을 수 있는 하나 또는 원본 데이터의 모든 문자를 나타냅니다. 출력 매개 변수를 사용 하 여 데이터 손실 방지, 유니코드 SQL 유형과 유니코드 C 형식 (SQL_C_WCHAR), u t F-16으로 데이터를 반환 하는 드라이버를 일으키는 지정 또는 좁은 C를 입력 하 고 인코딩을 클라이언트 (이 경우 항상 u t F-8을 사용 하 여 가능한) 원본 데이터의 모든 문자를 나타낼 수 확인
 
-데이터 정렬 및 인코딩에 대 한 자세한 내용은 참조 하세요. [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)합니다.
+데이터 정렬 및 인코딩에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
 가지 Windows 및 Linux 및 macOS iconv 라이브러리의 여러 버전 간의 몇 가지 인코딩 변환 차이점이 있습니다. 텍스트 데이터를 코드 페이지 1255 (히브리어)를 유니코드로 변환 하면 다르게 동작 하는 하나의 코드 포인트 (0xca)가 합니다. Windows,이 문자 변환 하면 0x05BA의 utf-16 코드 포인트입니다. MacOS 및 Linux libiconv 버전 1.15 이전의 변환 하면 0x00CA 합니다. Big5/CP950의 2003 버전을 지원 하지 않는 iconv 라이브러리를 사용 하 여 Linux에서 (라는 `BIG5-2003`), 해당 수정 버전을 사용 하 여 추가 문자는 올바르게 변환 하지 않습니다. 코드 페이지 932 (일본어, Shift JIS), 원래 인코딩 표준에 정의 된 문자 디코딩 결과일 수도 다릅니다. 예를 들어, 0x80 바이트 Windows에서 u+0080 변환 하지만 Linux iconv 버전에 따라 macOS에서 U + 30FB 될 수 있습니다.
 

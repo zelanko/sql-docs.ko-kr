@@ -5,9 +5,7 @@ ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
@@ -22,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1798e29c07dbeb14d20e6e6c80df342c60222cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840087"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -178,7 +176,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQL Server vNext(15.x) ~ 현재 버전), SQL Database.|DATABASE|CONTROL SERVER|
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQL Server 2019(15.x) ~ 현재 버전), SQL Database.|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -235,11 +233,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE SCOPED CREDENTIAL|REFERENCES|RF|DATABASE|REFERENCES|
 |DATABASE SCOPED CREDENTIAL|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
-|ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
-|ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|엔드포인트|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
+|엔드포인트|CONNECT|CO|SERVER|CONTROL SERVER|  
+|엔드포인트|CONTROL|CL|SERVER|CONTROL SERVER|  
+|엔드포인트|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|엔드포인트|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  

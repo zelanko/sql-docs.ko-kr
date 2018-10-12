@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613131"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
   
- \< class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER**가 될 수 있습니다. 사용 권한은 또한 **SERVER*** class_type*에 부여될 수 있지만, 그런 사용 권한에는 **SERVER**가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE**는 지정되지 않습니다. *class_type*이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT**로 간주됩니다.  
+ \< class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER**가 될 수 있습니다. 사용 권한은 **SERVER**_class\_type_에도 부여될 수 있지만, 해당 사용 권한에는 **SERVER**가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE**는 지정되지 않습니다. *class_type*이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT**로 간주됩니다.  
   
  *securable*  
  사용 권한을 부여, 거부 또는 취소 할 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자의 이름입니다. 개체 이름은 [Transact-SQL 구문 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)에서 설명된 세 부분 명명 규칙을 사용하여 지정할 수 있습니다.  
@@ -247,7 +244,7 @@ REVOKE
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
  다음 목록에서는 기본 사용 권한을 설명합니다.  

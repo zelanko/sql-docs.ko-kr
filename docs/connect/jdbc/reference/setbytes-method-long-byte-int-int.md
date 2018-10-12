@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBytes (long.byte[], int, int)
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b18005c16cd62358eb5f269504fc9d80eadb6de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713431"
 ---
-# <a name="setbytes-method-long-byte-int-int"></a>setBytes 메서드 (long, byte, int, int)
+# <a name="setbytes-method-long-byte-int-int"></a>setBytes 메서드(long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   지정된 바이트 배열의 전체 또는 일부 내용을 지정된 시작 위치, 오프셋 및 길이에 따라 BLOB에 쓴 다음 쓴 바이트 수를 반환합니다.  
@@ -46,30 +43,30 @@ public int setBytes(long pos,
   
  BLOB에 데이터를 쓰기 시작할 위치(1부터 시작)입니다.  
   
- *바이트*  
+ *bytes*  
   
  BLOB에 쓸 바이트의 배열입니다.  
   
  *offset*  
   
- 바이트 오프셋 배열에서 데이터를 읽기 시작할 위치의 **바이트** 배열입니다.  
+ **byte** 배열에서 데이터를 읽기 시작할 위치의 오프셋입니다.  
   
  *len*  
   
  바이트 배열에서 BLOB으로 읽어 올 바이트 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **int** 쓴 바이트 수가 들어 있는입니다.  
+ 작성한 바이트 수가 들어 있는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>주의  
- 이 setBytes 메서드는 java.sql.Blob 인터페이스의 setBytes 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 setBytes 메서드는 java.sql.Blob 인터페이스의 setBytes 메서드에 의해 지정됩니다.  
   
- 데이터는 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 바이트가 추가되고, 위치+2 이상(또는 0 이하)의 값을 전달하면 위치 오류가 발생합니다. 길이가 0 인 전달 **바이트** 배열 바이트 작성 된 0이 반환 됩니다.  
+ 데이터는 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 바이트가 추가되고, 위치+2 이상(또는 0 이하)의 값을 전달하면 위치 오류가 발생합니다. 길이가 0인 **byte** 배열을 전달하면 작성된 바이트가 없으므로 0이 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [setBytes 메서드 &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 멤버](../../../connect/jdbc/reference/sqlserverblob-members.md)   

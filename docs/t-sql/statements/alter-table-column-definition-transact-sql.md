@@ -1,13 +1,11 @@
 ---
 title: column_definition(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664051"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **결정적 암호화** 는 지정된 일반 텍스트 값에 대해 항상 동일한 암호화된 값을 생성하는 방법을 사용합니다. 결정적 암호화를 사용하면 암호화된 값을 기반으로 같음 비교를 이용한 검색, 그룹화 및 같음 조인을 이용한 조인이 가능하지만, 권한이 없는 사용자가 암호화된 열의 패턴을 검사하여 암호화된 값에 관한 정보를 추측할 수도 있습니다. 결정적으로 암호화된 열의 두 테이블 조인은 두 열이 모두 같은 열 암호화 키를 사용하여 암호화된 경우에만 가능합니다. 결정적 암호화에서는 문자 열에 대해 binary2 정렬 순서를 적용하는 열 데이터 정렬을 사용해야 합니다.  
   
- **임의 암호화** 는 예측하기 어려운 방식으로 데이터를 암호화하는 방법을 사용합니다. 임의 암호화는 더 안전하지만 암호화된 열에 대한 같음 검색, 그룹화 및 조인을 할 수 없게 됩니다. 임의 암호화를 이용한 열은 인덱싱할 수 없습니다.  
+ **임의 암호화** 는 예측하기 어려운 방식으로 데이터를 암호화하는 방법을 사용합니다. 임의 암호화는 좀 더 안전하지만 SQL Server 인스턴스가 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 지원하지 않으면, 암호화된 열에서 계산 및 인덱싱을 수행할 수 없습니다.
   
- 검색 매개 변수 또는 그룹화 매개 변수(예: 정부 ID 번호)가 될 열에 결정적 암호화를 사용합니다. 다른 레코드와 함께 그룹화되지 않거나 테이블을 조인하는 데 사용되고 관심이 있는 암호화된 열을 포함한 행을 찾는 데에는 다른 열(거래 번호 등)을 사용하기 때문에 검색되지 않는 데이터(예: 신용 카드 번호)에 임의 암호화를 사용합니다.  
+ Always Encrypted(보안 Enclave를 사용하지 않음)를 사용할 경우 매개 변수 또는 그룹화 매개 변수(예: 정부 ID 번호)를 사용하여 검색할 열에 대해 결정적 암호화를 사용합니다. 다른 레코드와 함께 그룹화되지 않거나 테이블을 조인하는 데 사용되고 관심이 있는 암호화된 열을 포함한 행을 찾는 데에는 다른 열(거래 번호 등)을 사용하기 때문에 검색되지 않는 데이터(예: 신용 카드 번호)에 임의 암호화를 사용합니다.  
+
+ 보안 Enclave에서 Always Encrypted를 사용할 경우 임의 암호화가 권장되는 암호화 유형입니다.  
   
  열은 한정 데이터 형식이어야 합니다.  
   

@@ -1,31 +1,28 @@
 ---
-title: Microsoft JDBC Driver for SQL Server | Microsoft Docs
+title: SQL Server용 Microsoft JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e5a25cf3d51ff54e650de30b654887b3f949119
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831918"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611041"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-지속적인된 노력의 상호 운용성, Microsoft SQL Server 및 Azure SQL 데이터베이스와 함께 사용할 데이터베이스 JDBC (Java Connectivity) 드라이버를 제공합니다. 이 드라이버는 추가 비용 없이 사용할 수 있으며 모든 Java 응용 프로그램, 응용 프로그램 서버 또는 Java 사용 애플릿에서의 Java 데이터베이스 연결을 제공합니다. 이 드라이버는 표준 JDBC API(응용 프로그램 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
+상호 운용성을 지원하기 위한 지속적인 노력의 일환으로 Microsoft는 SQL Server, Azure SQL Database에서 사용할 수 있는 JDBC(Java Database Connectivity) 드라이버를 제공합니다. 이 드라이버는 추가 비용 없이 사용할 수 있으며 모든 Java 응용 프로그램, 응용 프로그램 서버 또는 Java 사용 애플릿에서의 Java 데이터베이스 연결을 제공합니다. 이 드라이버는 표준 JDBC API(응용 프로그램 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
 
 Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 주요 응용 프로그램 서버에 대해 테스트되었습니다.
   
@@ -35,25 +32,25 @@ Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 �
 * [3단계: Java를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>설명서  
-* [시작 하기](getting-started-with-the-jdbc-driver.md)
+* [시작](getting-started-with-the-jdbc-driver.md)
 * [개요](overview-of-the-jdbc-driver.md)  
 * [프로그래밍 가이드](programming-guide-for-jdbc-sql-driver.md)
 * [보안](securing-jdbc-driver-applications.md)  
 * [성능 및 안정성](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [문제 해결](diagnosing-problems-with-the-jdbc-driver.md)
 * [코드 샘플](sample-jdbc-driver-applications.md) 
-* [법률 및 규정 준수](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [준수 및 법적 고 지](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>커뮤니티
 [추가 JDBC 드라이버 정보 찾기](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>다운로드
-[SQL Server 용 Microsoft JDBC Driver를 다운로드](download-microsoft-jdbc-driver-for-sql-server.md) -한 Maven 프로젝트 등에 대 한 추가 정보입니다.
+[SQL Server 용 Microsoft JDBC Driver 다운로드](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 프로젝트 등에 대 한 추가 정보가 있습니다.
   
 ## <a name="samples"></a>샘플  
 * [샘플 JDBC 드라이버 응용 프로그램](sample-jdbc-driver-applications.md)  
-* [Windows에서 Java를 통해 시작](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Java macOS on 시작](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Ubuntu Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL)의 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server (SLES)의 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Windows에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [MacOS에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ubuntu에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL)에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise server (SLES)는 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

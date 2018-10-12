@@ -1,0 +1,126 @@
+---
+title: Teradata의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
+ms.custom: ''
+ms.date: 09/24/2018
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: polybase
+ms.topic: conceptual
+author: Abiola
+ms.author: aboke
+manager: craigg
+monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4038f6ee6be90e3c6cf11a3b7c70ec9576e6ee8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818861"
+---
+# <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata의 외부 데이터에 액세스하도록 PolyBase 구성
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+이 문서에서는 SQL Server 인스턴스에서 PolyBase를 사용하여 Teradata에서 외부 데이터를 쿼리하는 방법을 설명합니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.md)를 참조하세요. 설치 문서에서는 필수 구성 요소를 설명합니다.
+
+Teradatan에서 polybase를 사용하려면 VC++ 재배포 가능 패키지가 필요합니다. 
+ 
+## <a name="configure-an-external-table"></a>외부 테이블 구성
+
+Teradata 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다. 이 섹션에서는 이러한 외부 테이블을 만들기 위한 샘플 코드를 제공합니다. 
+ 
+외부 테이블 열에 대한 통계를 만드는 것이 좋습니다. 특히 최적의 쿼리 성능을 위해서는 조인, 필터 및 집계에 사용되는 외부 테이블 열에 대한 통계가 중요합니다.
+
+이 섹션에서는 다음 개체를 만듭니다.
+
+- CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL) 
+- CREATE EXTERNAL DATA SOURCE(Transact-SQL) 
+- CREATE EXTERNAL FILE FORMAT(Transact-SQL) 
+- CREATE EXTERNAL TABLE(Transact-SQL) 
+- CREATE STATISTICS(Transact-SQL)
+
+
+1. 데이터베이스에 마스터 키를 만듭니다. 이 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
+
+     ```sql
+     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+     ```
+
+1. 데이터베이스 범위 자격 증명을 만듭니다.
+ 
+     ```sql
+     /*  specify credentials to external data source
+      *  IDENTITY: user name for external source.  
+     *  SECRET: password for external source.
+     */
+     CREATE DATABASE SCOPED CREDENTIAL TeradataCredentials 
+     WITH IDENTITY = 'username', Secret = 'password'
+     ```
+
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. Teradata의 외부 데이터 원본 위치 및 자격 증명을 지정합니다.
+
+     ```sql
+      /*  LOCATION: Server DNS name or IP address.
+     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+     *  CREDENTIAL: the database scoped credential, created above.
+     */  
+     CREATE EXTERNAL DATA SOURCE TeradataInstance
+     WITH ( 
+     LOCATION = '<vendor>://<server>[:<port>]',
+     -- PUSHDOWN = ON | OFF,
+       CREDENTIAL = TeradataCredentials
+     );
+     ```
+
+1. 외부 데이터에 대한 스키마 만들기
+
+     ```sql
+     CREATE SCHEMA teradata;
+     GO
+     ```
+
+1.  외부 Teradata 시스템에 저장된 데이터를 나타내는 외부 테이블을 만듭니다. [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+ 
+     ```sql
+     /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
+      *  DATA_SOURCE: the external data source, created above.
+      */
+     CREATE EXTERNAL TABLE teradata.lineitem(
+      L_ORDERKEY INT NOT NULL,
+      L_PARTKEY INT NOT NULL,
+     L_SUPPKEY INT NOT NULL,
+     L_LINENUMBER INT NOT NULL,
+     L_QUANTITY DECIMAL(15,2) NOT NULL,
+     L_EXTENDEDPRICE DECIMAL(15,2) NOT NULL,
+     L_DISCOUNT DECIMAL(15,2) NOT NULL,
+     L_TAX DECIMAL(15,2) NOT NULL,
+     L_RETURNFLAG CHAR NOT NULL,
+     L_LINESTATUS CHAR NOT NULL,
+     L_SHIPDATE DATE NOT NULL,
+     L_COMMITDATE DATE NOT NULL,
+     L_RECEIPTDATE DATE NOT NULL,
+     L_SHIPINSTRUCT CHAR(25) NOT NULL,
+     L_SHIPMODE CHAR(10) NOT NULL,
+     L_COMMENT VARCHAR(44) NOT NULL
+     )
+     WITH (
+     LOCATION='tpch.lineitem',
+     DATA_SOURCE=TeradataInstance
+     );
+     ```
+
+1. 최적화된 성능을 위해 외부 테이블에 대해 통계를 만듭니다.
+
+     ```sql
+      CREATE STATISTICS LineitemOrderKeyStatistics ON teradata.lineitem(L_ORDERKEY) WITH FULLSCAN; 
+      ```
+
+
+
+## <a name="next-steps"></a>다음 단계
+
+PolyBase에 대한 자세한 내용은 [SQL Server PolyBase 개요](polybase-guide.md)를 참조하세요.

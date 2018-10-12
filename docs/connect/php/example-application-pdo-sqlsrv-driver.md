@@ -5,54 +5,51 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651981"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>예제 응용 프로그램 (PDO_SQLSRV 드라이버)
+# <a name="example-application-pdosqlsrv-driver"></a>예제 응용 프로그램(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks 제품 검토 예제 응용 프로그램은 웹 응용 프로그램의 PDO_SQLSRV 드라이버를 사용 하 여 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다. 이 응용 프로그램을 사용하면 사용자가 키워드를 입력하여 제품을 검색하고, 선택한 제품에 대한 검토를 보거나 쓰고, 선택한 제품에 대한 이미지를 업로드할 수 있습니다.  
+AdventureWorks 제품 검토 예제 응용 프로그램은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 PDO_SQLSRV 드라이버를 사용하는 웹 응용 프로그램입니다. 이 응용 프로그램을 사용하면 사용자가 키워드를 입력하여 제품을 검색하고, 선택한 제품에 대한 검토를 보거나 쓰고, 선택한 제품에 대한 이미지를 업로드할 수 있습니다.  
   
 ### <a name="running-the-example-application"></a>예제 응용 프로그램 실행  
   
-1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 참조 하세요. [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  응용 프로그램을 시작 하 여 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
+4.  시작 하 여 응용 프로그램을 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 응용 프로그램을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 참조 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
  -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
--   SQL Server 2005 또는 SQL Server 2008와는 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결 된 로컬 컴퓨터에 설치 합니다.  
+-   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
   
 ## <a name="demonstrates"></a>데모  
 AdventureWorks 제품 검토 예제 응용 프로그램은 다음을 보여 줍니다.  
   
 -   Windows 인증을 사용하여 SQL Server에 대한 연결을 여는 방법  
--   준비 및 매개 변수가 있는 쿼리를 실행 하는 방법.  
--   데이터를 검색 하는 방법.  
+-   준비 및 매개 변수가 있는 쿼리를 실행 하는 방법입니다.  
+-   데이터를 검색 하는 방법입니다.  
 -   오류를 확인하는 방법  
   
 ## <a name="example"></a>예제  
 AdventureWorks 제품 검토 예제 응용 프로그램은 데이터베이스에서 이름에 사용자가 입력한 문자열이 있는 제품에 대한 정보를 반환합니다. 반환된 제품 목록에서 사용자는 검토와 이미지를 보고, 이미지를 업로드하고, 선택한 제품에 대한 검토를 쓸 수 있습니다.  
   
-다음 코드 adventureworks_demo_pdo.php 라는 파일에 저장 합니다.  
+adventureworks_demo_pdo.php 파일에 다음 코드를 추가합니다.  
   
 ```  
 <!--=============  
@@ -458,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>예제  
 photo.php 스크립트는 지정된 **ProductID**에 대한 제품 사진을 반환합니다. 이 스크립트는 adventureworks_demo.php 스크립트에서 호출됩니다.  
   
-다음 코드 photo_pdo.php 라는 파일에 저장 합니다.  
+photo_pdo.php 파일에 다음 코드를 추가합니다.  
   
 ```  
 <?php  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)
 
 [함수 실행 비교](../../connect/php/comparing-execution-functions.md)

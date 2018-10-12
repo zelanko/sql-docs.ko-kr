@@ -5,9 +5,7 @@ ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2983be97fa3d0f3ab33ed00fc98e48d155396912
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650971"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,11 +89,11 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
   
 -   인덱스를 만들 때 `IGNORE_DUP_KEY` 옵션은 끄기(기본 설정)로 설정되어야 합니다.    
   
--   테이블은 뷰 정의에서 *schema ***.*** tablename* 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.    
+-   테이블은 뷰 정의에서 _schema_**.**_tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.    
   
 -   뷰에서 참조하는 사용자 정의 함수는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.    
   
--   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 *\<schema>***.***\<function>* 으로 참조되어야 합니다.   
+-   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 _\<schema\>_**.**_\<function\>_ 으로 참조되어야 합니다.   
   
 -   사용자 정의 함수의 데이터 액세스 속성은 `NO SQL`이어야 하고 외부 액세스 속성은 `NO`여야 합니다.   
   
@@ -170,7 +167,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 예에서는 뷰를 만들고 이 뷰에 인덱스를 만듭니다. 인덱싱된 뷰를 사용하는 두 개의 쿼리가 포함되어 있습니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다. 예에서는 뷰를 만들고 이 뷰에 인덱스를 만듭니다. 인덱싱된 뷰를 사용하는 두 개의 쿼리가 포함되어 있습니다.  
   
     ```sql  
     USE AdventureWorks2012;  

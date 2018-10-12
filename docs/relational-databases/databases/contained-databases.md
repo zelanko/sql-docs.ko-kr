@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24e5cc8b801a80b754b7aaed9ab72b69ae9e93fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849193"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.locfileid: "43107976"
   
      권한이 있는 Windows 사용자 및 권한이 있는 Windows 그룹의 멤버는 데이터베이스에 직접 연결할 수 있으며 **master** 데이터베이스의 로그인이 필요하지 않습니다. 데이터베이스는 Windows에 의한 인증을 신뢰합니다.  
   
- **master** 데이터베이스의 로그인을 기반으로 하는 사용자는 포함된 데이터베이스에 대한 액세스 권한을 부여받을 수 있지만 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 종속성이 생깁니다. 따라서 로그인을 기반으로 하는 사용자를 만드는 경우 부분적으로 포함된 데이터베이스에 대한 설명을 참조하십시오.  
+ **master** 데이터베이스의 로그인을 기반으로 하는 사용자는 포함된 데이터베이스에 대한 액세스 권한을 부여받을 수 있지만 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 종속성이 생깁니다. 따라서 로그인을 기준으로 사용자를 만들려면 부분 포함이 필요합니다.
   
 > [!IMPORTANT]  
 >  부분적으로 포함된 데이터베이스를 사용하도록 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 제어 권한이 데이터베이스 소유자에게 위임됩니다. 자세한 내용은 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)를 참조하세요.  

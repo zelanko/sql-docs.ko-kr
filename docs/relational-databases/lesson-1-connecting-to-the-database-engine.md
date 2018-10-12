@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f22fc4b12c38b751eb3559d3a94071d0692d6531
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3a28a9a1670f4d6b8ca64d9ed2aaf683b1af0636
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850091"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ ms.locfileid: "43019762"
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 *<computer_name>***\\***<instance_name>,*(예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
+3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 _\<computer_name\>_**\\**_\<instance_name\>_(예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

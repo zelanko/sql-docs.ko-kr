@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643851"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +39,7 @@ SQL Server 데이터 형식을 지정하려면 데이터를 삽입하거나 업�
   
 3.  쿼리를 준비하거나 실행할 때 사용되는 *$params* 배열을 생성합니다. 또한 *$params* 배열의 각 요소는 SQL Server 데이터 형식을 지정할 때 배열이어야 합니다.  
   
-4.  *$params* 배열의 각 하위 배열에서 네 번째 매개 변수로 적절한 **SQLSRV_SQLTYPE_\*** 상수를 사용하여 원하는 SQL Server 데이터 형식을 지정합니다. **SQLSRV_SQLTYPE_\*** 상수의 전체 목록은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 SQLTYPE 섹션을 참조하세요. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
+4.  *$params* 배열의 각 하위 배열에서 네 번째 매개 변수로 적절한 **SQLSRV_SQLTYPE_&#42;** 상수를 사용하여 원하는 SQL Server 데이터 형식을 지정합니다. **SQLSRV_SQLTYPE_&#42;** 상수의 전체 목록은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 SQLTYPE 섹션을 참조하세요. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
   
     ```  
     $employeeId = 5;  

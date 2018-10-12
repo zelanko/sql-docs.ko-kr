@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 52e7bd927c8b3df503b335b522ca8b3444f5f5fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830911"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40405674"
     -   [장애 조치(Failover) 발생 시 보고서 서버 동작](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 .NET framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .NET Framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 이전 버전에  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
@@ -121,7 +118,7 @@ ms.locfileid: "40405674"
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 보고서 서버 데이터베이스 및 가용성 그룹  
- Reporting Services는 보고서 서버 데이터베이스에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 있어서 제한적인 지원을 제공합니다. 보고서 서버 데이터베이스를 AG에서 복제본의 일부로 구성할 수 있지만 장애 조치(Failover)가 발생했을 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 가 보고서 서버 데이터베이스에 대해 다른 복제본을 자동으로 사용하지는 않습니다. 보고서 서버 데이터베이스와 함께 MultiSubnetFailover 사용은 지원되지 않습니다.  
+ Reporting Services 및 Power BI Report Server는 보고서 서버 데이터베이스에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하는 데 있어서 제한적인 지원을 제공합니다. 보고서 서버 데이터베이스를 AG에서 복제본의 일부로 구성할 수 있지만 장애 조치(Failover)가 발생했을 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 가 보고서 서버 데이터베이스에 대해 다른 복제본을 자동으로 사용하지는 않습니다. 보고서 서버 데이터베이스와 함께 MultiSubnetFailover 사용은 지원되지 않습니다.  
   
  장애 조치(Failover) 및 복구를 완료하기 위해서는 작업을 수동으로 수행하거나 사용자 지정 자동화 스크립트를 사용해야 합니다. 이러한 작업을 완료할 때까지는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(Failover) 후 보고서 서버의 일부 기능이 올바르게 작동하지 않을 수 있습니다.  
   

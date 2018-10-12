@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1edb9d9834489b1bb1626009deacc6a6a82a6eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fbbf4c1f23740bdce710f137e8dad26a4346b5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653442"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +67,7 @@ WHERE country = 'UK'
   
     다른 데이터베이스에 대상 테이블을 만들려면 대상 데이터베이스의 이름, 소유자(필요한 경우) 및 테이블의 이름을 포함하는 정규화된 테이블 이름을 지정합니다.  
   
-4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가(Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사하려면 **\&#42; (모든 열)** 를 선택합니다.  
+4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가(Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사하려면 **&#42;(모든 열)** 를 선택합니다.  
   
     사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   

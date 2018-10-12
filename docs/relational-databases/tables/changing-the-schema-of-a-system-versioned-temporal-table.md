@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679481"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 스키마 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   **ALTER TABLE** 작업 중 시스템은 두 테이블에 스키마 잠금을 유지합니다.  
   
--   지정된 스키마 변경은 적절한 방식으로 기록 테이블에 전파됩니다(변경 유형에 따라).  
+-   지정된 스키마 변경은 적절하게 기록 테이블에 전파됩니다(변경 유형에 따라).  
   
 -   Null을 허용하지 않는 열을 추가하거나 Null을 허용하지 않게 되도록 기존 열을 변경하는 경우 기존 행에 대한 기본값을 지정해야 합니다. 시스템은 동일한 값으로 추가 기본값을 생성하고 기록 테이블에 적용합니다. **DEFAULT** 를 비어 있지 않은 테이블에 추가하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 이외의 모든 버전에서 데이터 작업의 크기입니다(메타데이터 작업임).  
   

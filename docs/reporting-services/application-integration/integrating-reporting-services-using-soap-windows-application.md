@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775047"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP를 사용하여 Reporting Services 통합 - Windows 응용 프로그램
   Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. 서비스를 호출하는 코드를 작성하기만 하면 Windows 응용 프로그램에서 웹 서비스에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 웹 서비스의 속성 및 메서드를 표시하고 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 응용 프로그램을 만들 수 있는 프록시 클래스를 생성할 수 있습니다.  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  하지만 SOAP API의 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용하면 보고서를 렌더링하여 프로그래밍 방식으로 다양한 출력 형식으로 저장할 수 있습니다. 이 점을 사용자 개입이 필요한 URL 액세스에 비해 이점으로 손꼽을 수 있습니다. SOAP API <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용하여 보고서를 렌더링하는 경우 지원되는 모든 출력 형식으로 렌더링할 수 있습니다.  
   
- 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]에 포함되어 무료로 배포 가능한 ReportViewer 컨트롤을 사용할 수도 있습니다. ReportViewer 컨트롤을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용자 지정 응용 프로그램에 쉽게 포함시킬 수 있습니다. ReportViewer 컨트롤은 사전 디자인을 갖추어 완전히 제작된 보고서를 응용 프로그램 기능 집합의 일부로 제공하려는 개발자에게 적합합니다. 예를 들어 웹 사이트 관리 응용 프로그램에 회사 웹 사이트에서의 클릭 동향 분석을 보여 주는 보고서를 포함할 수 있습니다. 응용 프로그램에 컨트롤을 포함하는 것은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 구성 요소를 응용 프로그램 배포에 포함하는 대신 사용할 수 있는 간소화된 방법입니다. 이러한 컨트롤은 보고서 기능을 제공하며 단, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공되는 보고서 제작, 게시, 배포 및 배달에 대한 추가 지원은 없습니다.  
+ 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]에 포함되어 체험용으로 배포 가능한 보고서 뷰어 컨트롤을 사용할 수도 있습니다. 보고서 뷰어 컨트롤을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용자 지정 응용 프로그램에 쉽게 포함시킬 수 있습니다. 보고서 뷰어 컨트롤은 사전 디자인을 갖추어 완전히 제작된 보고서를 응용 프로그램 기능 집합의 일부로 제공하려는 개발자에게 적합합니다. 예를 들어 웹 사이트 관리 응용 프로그램에 회사 웹 사이트에서의 클릭 동향 분석을 보여 주는 보고서를 포함할 수 있습니다. 응용 프로그램에 컨트롤을 포함하는 것은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 구성 요소를 응용 프로그램 배포에 포함하는 대신 사용할 수 있는 간소화된 방법입니다. 이러한 컨트롤은 보고서 기능을 제공하며 단, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공되는 보고서 제작, 게시, 배포 및 배달에 대한 추가 지원은 없습니다.  
   
- ReportViewer 컨트롤에는 기능이 풍부한 Windows 클라이언트 응용 프로그램용과 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용의 두 가지 버전이 있습니다. 이러한 컨트롤은 로컬 처리 및 원격 처리 모드를 모두 지원합니다. 로컬 처리 모드의 경우 응용 프로그램은 보고서 정의 및 데이터 집합을 제공하고 보고서 처리를 시작합니다. 원격 처리 모드의 경우에는 데이터 검색 및 보고서 처리는 보고서 서버에서 수행되며 컨트롤은 표시 및 보고서 탐색에 사용됩니다. 이 모델에서는 데스크톱에서 엔터프라이즈 수준까지 확장될 수 있는 기능이 풍부한 응용 프로그램을 구축할 수 있습니다.  
+ 보고서 뷰어 컨트롤에는 기능이 풍부한 Windows 클라이언트 응용 프로그램용과 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용의 두 가지 버전이 있습니다. 이러한 컨트롤은 로컬 처리 및 원격 처리 모드를 모두 지원합니다. 로컬 처리 모드의 경우 응용 프로그램은 보고서 정의 및 데이터 집합을 제공하고 보고서 처리를 시작합니다. 원격 처리 모드의 경우에는 데이터 검색 및 보고서 처리는 보고서 서버에서 수행되며 컨트롤은 표시 및 보고서 탐색에 사용됩니다. 이 모델에서는 데스크톱에서 엔터프라이즈 수준까지 확장될 수 있는 기능이 풍부한 응용 프로그램을 구축할 수 있습니다.  
   
- ReportViewer 컨트롤은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 온라인 도움말에 설명되어 있습니다. 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 제품 설명서를 참조하십시오.  
+ 보고서 뷰어 컨트롤은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 온라인 도움말에 설명되어 있습니다. 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 제품 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

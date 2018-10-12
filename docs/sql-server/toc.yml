@@ -7,6 +7,8 @@ items:
     href: what-s-new-in-sql-server-2016.md
   - name: SQL Server 2017의 새로운 기능
     href: what-s-new-in-sql-server-2017.md
+  - name: SQL Server 2019의 새로운 기능
+    href: what-s-new-in-sql-server-ver15.md
   - name: SQL Server 2016의 버전 및 지원하는 기능
     href: editions-and-components-of-sql-server-2016.md
   - name: SQL Server 2017의 버전과 지원하는 기능
@@ -21,6 +23,8 @@ items:
     href: sql-server-customer-feedback.md
 - name: 릴리스 정보
   items:
+  - name: SQL Server 2019 참고
+    href: sql-server-ver15-release-notes.md
   - name: SQL Server 2017 참고
     href: sql-server-2017-release-notes.md
   - name: SQL Server 2016 참고
@@ -107,9 +111,9 @@ items:
       href: partner-dev-sql-server.md
   - name: 도움말 뷰어에서의 로컬 콘텐츠
     href: sql-server-help-installation.md
-ms.openlocfilehash: 7240a64139ace201d03a158abad3af87e42ef9b5
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: 3400436c56e6405ad70d0df32e417da111f95078
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899463"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713485"

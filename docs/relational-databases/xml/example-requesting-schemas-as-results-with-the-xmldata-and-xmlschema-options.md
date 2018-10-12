@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3da4c5ab6d1286c908a0f39807d1a3dc7e9017b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1ed788e3ae49ae227c904221a2998dba7908f8f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633401"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임스페이스 식별자는 **Schema*n***으로 구성됩니다. 여기서 ***n***은 정수입니다.  
+>  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임스페이스 식별자는 **Schema**_**n**_ 으로 구성됩니다. 여기서 _**n**_ 은 정수입니다.  
   
  `XMLSCHEMA` 옵션을 지정하면 결과에 대해 XSD 스키마를 요청할 수 있습니다.  
   

@@ -1,0 +1,1 @@
+<Token>**적용 대상:** ![예](media/yes.png)SQL Server(2008부터) ![예](media/yes.png)Azure SQL Database(Managed Instance만 해당) ![예](media/no.png)Azure SQL Data Warehouse ![예](media/yes.png)병렬 데이터 웨어하우스 </Token>

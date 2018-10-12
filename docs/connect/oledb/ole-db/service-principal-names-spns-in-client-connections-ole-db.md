@@ -5,21 +5,18 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6e8108127c3a25cb3a040cefbf782d7d0f2a2681
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1e00183ef3558cbad211fabeb063a81f25d5f29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702231"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "43024406"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. SPN 및 Kerberos 인증에 대한 자세한 내용은 [클라이언트 연결의 서비스 보안 주체 이름&#40;SPN&#41; 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)을 참조하십시오. 샘플을 보려면 [통합 Kerberos 인증 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)합니다.  
+  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. 클라이언트 응용 프로그램에서 SPN에 대한 자세한 내용은 [클라이언트 연결에서 SPN(서비스 사용자 이름) 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)을 참조하세요. 샘플을 보려면 [통합 Kerberos 인증 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)합니다.  
   
 ## <a name="provider-initialization-string-keywords"></a>공급자 초기화 문자열 키워드  
  다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 응용 프로그램에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  

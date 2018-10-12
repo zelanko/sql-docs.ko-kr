@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66debf981b1a55dab1fb3b1b864782145d0c1f7f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703811"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +99,8 @@ ms.locfileid: "40411844"
 16. 복사 일정은 **복사 작업** 의 **일정**상자에 나열됩니다. 설치 일정을 사용자 지정하려면 **일정** 을 클릭한 다음 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정을 조정합니다. 이 일정은 백업 일정과 비슷해야 합니다.  
   
 17. **트랜잭션 로그 복원** 탭의 **백업 복원 시 데이터베이스 상태**에서 **복구 안 함 모드** 또는 **대기 모드** 옵션을 선택합니다.  
+    > [!IMPORTANT]  
+    > **대기 모드**는 기본 및 보조 서버의 버전이 동일한 경우에 사용할 수 있는 유일한 옵션입니다. 보조 서버의 주 버전이 주 서버 버전보다 높은 경우 **복구 안 함 모드**가 허용됩니다.
   
 18. **대기 모드** 옵션을 선택한 경우 복원 작업을 진행하는 동안 보조 데이터베이스에서 사용자와의 연결을 끊을지 여부를 선택합니다.  
   

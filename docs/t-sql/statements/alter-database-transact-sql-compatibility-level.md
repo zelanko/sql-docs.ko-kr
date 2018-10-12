@@ -5,9 +5,7 @@ ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666601"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
   
 |Product|데이터베이스 엔진 버전|호환성 수준 지정|지원되는 호환성 수준 값|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
-|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
+|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 논리 서버|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
@@ -170,7 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>호환성 수준 140과 수준 150 사이의 차이  
 이 섹션에서는 호환성 수준 150으로 정의된 새로운 동작에 대해 설명합니다.
 
-데이터베이스 호환성 수준 150은 현재 Azure SQL Database에 대한 비공개 미리 보기에 포함됩니다.  이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.  
+데이터베이스 호환성 수준 150은 현재 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 비공개 미리 보기에 포함됩니다. 이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.     
+
+데이터베이스 호환성 수준 150에서 사용하도록 설정된 쿼리 처리 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md)을 참조하세요.     
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>호환성 수준 130과 수준 140 사이의 차이  
 이 섹션에서는 호환성 수준 140으로 도입된 새로운 동작에 대해 설명합니다.

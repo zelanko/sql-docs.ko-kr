@@ -4,17 +4,16 @@ ms.date: 08/31/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: ''
 ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a89c64e6762c2dad2ad9085b27754b3920ffb917
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728801"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 변경 로그
 
@@ -23,6 +22,12 @@ ms.locfileid: "43381251"
 이 문서에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 변경 내용에 대해 설명합니다. 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+
+### <a name="version-140600906-released-september-12-2018"></a>버전 14.0.600.906, 릴리스: 2018년 9월 12일
+
+다음 버그가 수정되었습니다.
+
+- 사용자 지정 인증이 올바른 쿠키 정보를 반환하지 않음
 
 ### <a name="version-140600892-released-august-31-2018"></a>버전 14.0.600.892, 릴리스: 2018년 8월 31일
 

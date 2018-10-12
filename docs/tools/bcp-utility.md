@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: bcp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -29,17 +26,16 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 222
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 80ada2fdcdcb4f8515515e2205e57b4b008a1a08
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600531"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,10 +93,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 </pre></td></tr></table>  
   
 ## <a name="arguments"></a>인수  
- ***data_file***<a name="data_file"></a>  
+ _**data\_file**_<a name="data_file"></a>  
  데이터 파일의 전체 경로입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 데이터를 대량으로 가져오는 경우 데이터 파일에는 지정한 테이블 또는 뷰로 복사할 데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 데이터를 대량으로 내보내는 경우 데이터 파일에는 테이블 또는 뷰에서 복사한 데이터가 포함됩니다. 데이터 파일 경로는 1에서 255자까지 포함할 수 있습니다. 데이터 파일에는 최대 2^63 - 1개의 행이 포함될 수 있습니다.  
   
- ***database_name***<a name="db_name"></a>  
+ _**database\_name**_<a name="db_name"></a>  
  지정한 테이블 또는 뷰가 있는 데이터베이스의 이름입니다. 이 인수를 지정하지 않으면 사용자의 기본 데이터베이스를 사용합니다.  
   
  **d-** 를 사용하여 데이터베이스 이름을 명시적으로 지정할 수도 있습니다.  
@@ -116,28 +112,28 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   **format**<a name="format"></a> 은 **-n**, **-c**, **-w**, **-N**등의 지정된 옵션과 테이블 또는 뷰 구분 기호를 기준으로 서식 파일을 만듭니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
   
- ***owner***<a name="schema"></a>  
+ _**owner**_<a name="schema"></a>  
  테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner* 를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 오류 메시지를 반환하고 작업이 취소됩니다.  
   
-**"** ***query*** **"**<a name="query"></a>는 결과 집합을 반환하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리입니다. 쿼리에서 여러 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 파일에 복사되고 그 다음 결과 집합은 무시됩니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다. 쿼리에서 데이터를 대량 복사할 때는**queryout** 도 지정해야 합니다.  
+**"** _**query**_ **"**<a name="query"></a> 결과 집합을 반환하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리입니다. 쿼리에서 여러 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 파일에 복사되고 그 다음 결과 집합은 무시됩니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다. 쿼리에서 데이터를 대량 복사할 때는**queryout** 도 지정해야 합니다.  
   
  쿼리는 bcp 문을 실행하기 전에 저장 프로시저 내에서 참조되는 모든 테이블이 존재하는 한 저장 프로시저를 참조할 수 있습니다. 예를 들어 저장 프로시저가 임시 테이블을 생성하면 이 임시 테이블을 런타임에만 사용할 수 있고 문 실행 시에는 사용할 수 없기 때문에 **bcp** 문이 실패합니다. 이 경우 테이블에 저장 프로시저 결과를 삽입한 다음 **bcp** 를 사용하여 테이블에서 데이터 파일로 데이터를 복사할 수 있습니다.  
   
- ***table_name***<a name="tbl_name"></a>  
+ _**table\_name**_<a name="tbl_name"></a>  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 데이터를 가져올 때(**in**)는 대상 테이블의 이름이고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보낼 때(**out**)는 원본 테이블의 이름입니다.  
   
- ***view_name***<a name="vw_name"></a>   
+ _**view\_name**_<a name="vw_name"></a>   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 데이터를 복사할 때(**in**)는 대상 뷰의 이름이고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 복사할 때(**out**)는 원본 뷰의 이름입니다. 모든 열이 같은 테이블을 참조하는 뷰만 대상 뷰로 사용할 수 있습니다. 뷰에 데이터를 복사하는 경우의 제한 사항에 대한 자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)를 참조하세요.  
   
- **-a** ***packet_size***<a name="a"></a>  
+ **-a** _**packet\_size**_<a name="a"></a>  
  서버에서 전송되거나 서버로 전송되는 네트워크 패킷당 바이트 수를 지정합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 또는 **sp_configure** 시스템 저장 프로시저를 사용하여 서버 구성 옵션을 설정할 수 있습니다. 그러나 이 옵션을 사용하여 서버 구성 옵션을 개별적으로 재정의할 수 있습니다. *packet_size* 는 4096 ~ 65535바이트일 수 있고 기본값은 4096입니다.  
   
  패킷 크기가 커지면 대량 복사 작업의 성능이 향상될 수 있습니다. 더 큰 패킷을 요청했는데 허용되지 않으면 기본값이 사용됩니다. **bcp** 유틸리티가 생성하는 성능 통계에는 사용되는 패킷의 크기가 나타납니다.  
   
- **-b** ***batch_size***<a name="b"></a>  
+ **-b** _**batch\_size**_<a name="b"></a>  
  가져온 데이터의 일괄 처리당 행 수를 지정합니다. 각 일괄 처리는 커밋되기 전에 전체 일괄 처리를 가져오는 별도의 트랜잭션으로 가져오고 기록합니다. 기본적으로 데이터 파일의 모든 행은 하나의 일괄 처리로 가져옵니다. 여러 일괄 처리에 행을 분산시키려면 데이터 파일의 행 수보다 작은 *batch_size* 를 지정합니다. 일괄 처리에 대한 트랜잭션이 실패하면 현재 일괄 처리에서 삽입한 내용만 롤백됩니다. 커밋된 트랜잭션으로 이미 가져온 일괄 처리는 나중에 발생한 오류의 영향을 받지 않습니다.  
   
- 이 옵션을 **-h "** ROWS_PER_BATCH **=***bb***"** 옵션과 함께 사용하지 마세요.  
+ 이 옵션을 **-h"** ROWS_PER_BATCH **=**_bb_**"** 옵션과 함께 사용하지 마세요.  
  
  **-c**<a name="c"></a>  
  문자 데이터 형식을 사용하여 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **char** 을 저장소 유형으로 사용하고 접두사를 사용하지 않으며 **\t** (탭 문자)를 필드 구분 기호로 사용하고 **\r\n** (줄 바꿈 문자)을 행 종결자로 사용합니다. **-c**는 **-w**와 호환되지 않습니다.  
@@ -157,10 +153,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 변환이 일어나지 않으므로 가장 빠른 옵션입니다.|  
 |*code_page*|850과 같은 특정 코드 페이지 번호입니다.<br /><br /> 버전 13([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다. 버전 13부터 UTF-8 인코딩을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이전 버전으로 가져올 수 있습니다.|  
   
- **-d** ***database_name***<a name="d"></a>   
+ **-d** _**database\_name**_<a name="d"></a>   
  연결할 데이터베이스를 지정합니다. bcp.exe는 기본적으로 사용자의 기본 데이터베이스에 연결됩니다. **-d** *database_name*과 세 부분으로 구성된 이름(bcp.exe에 첫 번째 매개 변수로 전달되는 *database_name.schema.table*)을 지정하면 오류가 발생하는데 이는 데이터베이스 이름을 두 번 지정할 수 없기 때문입니다. *database_name*이 하이픈(-)이나 슬래시(/)로 시작하면 **-d**와 데이터베이스 이름 사이에 공백을 포함하지 마세요.  
   
- **-e** ***err_file***<a name="e"></a>  
+ **-e**  _**err\_파일**_<a name="e"></a>  
  **bcp** 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다. **bcp** 명령의 오류 메시지는 사용자의 워크스테이션에 나타납니다. 이 옵션을 사용하지 않으면 오류 파일이 생성되지 않습니다.  
   
  *err_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-e** 와 *err_file* 값 사이에 공백을 포함하지 마세요.  
@@ -172,7 +168,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-E** 옵션을 사용하려면 특별한 권한이 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "[주의](#remarks)"를 참조하세요.  
    
- **-f** ***format_file***<a name="f"></a>  
+ **-f** _**format\_file**_<a name="f"></a>  
  서식 파일의 전체 경로를 지정합니다. 다음과 같이 이 옵션의 의미는 해당 환경에 따라 다릅니다.  
   
 -   **format** 옵션과 함께 **-f** 를 사용하는 경우 지정한 테이블 또는 뷰에 대해 지정한 *format_file* 이 만들어집니다. XML 서식 파일을 만들려면 **-x** 옵션도 지정합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요.  
@@ -184,7 +180,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  *format_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-f** 와 *format_file* 값 사이에 공백을 포함하지 마세요.  
   
-**-F** ***first_row***<a name="F"></a>  
+**-F** _**first\_row**_<a name="F"></a>  
  테이블에서 내보내거나 데이터 파일에서 가져올 첫 번째 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 총 행 수보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 첫 번째 행입니다.  
   
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F** *first_row* 는 1부터 시작합니다.  
@@ -228,15 +224,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     ```
 
   
-**-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> Specifies the hint or hints to be used during a bulk import of data into a table or view.  
+**-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
-* **ORDER**(***column*[ASC | DESC] [**,**...*n*]**)**  
+* **ORDER**(**_column_[ASC | DESC] [**,**..._n_]**)**  
 데이터 파일에 있는 데이터의 정렬 순서입니다. 가져올 데이터를 테이블의 클러스터형 인덱스(있는 경우)에 따라 정렬하면 대량 가져오기 성능이 향상됩니다. 데이터 파일을 클러스터형 인덱스 키와 다른 순서로 정렬하거나 테이블에 클러스터형 인덱스가 없으면 ORDER 절이 무시됩니다. 지정한 열 이름은 대상 테이블에서 올바른 열 이름이어야 합니다. 기본적으로 **bcp** 는 데이터 파일이 정렬되지 않은 것으로 간주합니다. 대량 가져오기 작업을 최적화하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 가져온 데이터가 정렬되어 있는지도 확인합니다.  
   
-* **ROWS_PER_BATCH** **=** ***bb***  
+* **ROWS_PER_BATCH** **=** _**bb**_  
 일괄 처리당 데이터 행 수( *bb*)입니다. **-b** 를 지정하지 않은 경우에 사용되며 전체 데이터 파일을 단일 트랜잭션으로 서버에 보냅니다. 서버는 *bb*값에 따라 대량 로드를 최적화합니다. 기본적으로 ROWS_PER_BATCH는 알 수 없습니다.  
   
-* **KILOBYTES_PER_BATCH** **=** ***cc***  
+* **KILOBYTES_PER_BATCH** **=** _**cc**_  
 일괄 처리당 데이터의 대략적인 KB 단위 크기( *cc*)입니다. 기본적으로 KILOBYTES_PER_BATCH는 알 수 없습니다.  
   
 * **TABLOCK**  
@@ -264,7 +260,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 * **FIRE_TRIGGERS**  
 **in** 인수와 함께 지정하면 대량 복사 작업 중에 대상 테이블에 정의한 삽입 트리거가 실행됩니다. FIRE_TRIGGERS를 지정하지 않으면 삽입 트리거가 실행되지 않습니다. FIRE_TRIGGERS는 **out**, **queryout**및 **format** 인수에 대해 무시됩니다.  
   
- **-i** ***input_file***<a name="i"></a>  
+ **-i** _**input\_file**_<a name="i"></a>  
  대화형 모드(**-n**, **-c**, **-w**또는 **-N** 을 지정하지 않음)를 사용하여 대량 복사를 수행할 때 각 데이터 필드에 대한 명령 프롬프트 질문의 응답이 포함된 응답 파일의 이름을 지정합니다.  
   
  *input_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-i** 와 *input_file* 값 사이에 공백을 포함하지 마세요.  
@@ -272,15 +268,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-k**<a name="k"></a>  
  작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
- **-K** ***application_intent***<a name="K"></a>   
+ **-K** _**application\_intent**_<a name="K"></a>   
  서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
- **-L** ***last_row***<a name="L"></a>  
+ **-L** _**last\_row**_<a name="L"></a>  
  테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 마지막 행 번호보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  
   
  *last_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다.  
   
-**-m** ***max_errors***<a name="m"></a>  
+**-m** _**max\_errors**_<a name="m"></a>  
 **bcp** 작업이 취소되는 최대 구문 오류 발생 횟수를 지정합니다. 구문 오류란 대상 데이터 형식으로의 데이터 변환 오류를 나타냅니다. 총 *max_errors* 수에는 제약 조건 위반과 같이 서버에서만 검색할 수 있는 오류는 제외됩니다.  
   
  **bcp** 유틸리티가 복사할 수 없는 행은 무시되며 오류가 하나 발생한 것으로 간주됩니다. 이 옵션을 지정하지 않은 경우의 기본값은 10입니다.  
@@ -302,12 +298,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  이 경고는 무시해도 됩니다. **-N** 대신 **-n**을 사용하여 이 경고를 해결할 수 있습니다.  
   
- **-o** ***output_file***<a name="o"></a>  
+ **-o**  _**출력\_파일**_<a name="o"></a>  
  명령 프롬프트에서 리디렉션된 출력을 받는 파일의 이름을 지정합니다.  
   
  *output_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-o** 와 *output_file* 값 사이에 공백을 포함하지 마세요.  
   
- **-P** ***password***<a name="P"></a>  
+ **-P** _**password**_<a name="P"></a>  
  로그인 ID의 암호를 지정합니다. 이 옵션을 사용하지 않으면 **bcp** 명령을 실행하는 동안 암호를 묻는 메시지가 표시됩니다. 암호를 입력하지 않고 명령 프롬프트의 마지막에 이 옵션을 사용하면 **bcp** 는 기본 암호 NULL을 사용합니다.  
   
 > [!IMPORTANT]
@@ -326,7 +322,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [주의](#remarks)를 참조하세요.  
   
- **-r** ***row_term***<a name="r"></a>  
+ **-r**  _**행\_용어**_<a name="r"></a>  
  행 종결자를 지정합니다. 기본값은 **\n** (줄 바꿈 문자)입니다. 기본 행 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
  bcp.exe 명령에서 16진수 표기법으로 행 종료 문자를 지정하는 경우 값은 0x00에서 잘립니다. 예를 들어 0x410041을 지정하면 0x41이 사용됩니다.  
@@ -336,9 +332,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다. 기본적으로 국가별 설정은 무시됩니다.  
   
- **-S** ***server_name*** [\\***instance_name***]<a name="S"></a> 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다.  
+ **-S** _**server\_name**_ [\\_**instance\_name**_]<a name="S"></a> 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다.  
   
- **-t** ***field_term***<a name="t"></a>  
+ **-t**  _**필드\_용어**_<a name="t"></a>  
  필드 종결자를 지정합니다. 기본값은 **\t** (탭 문자)입니다. 기본 필드 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
  bcp.exe 명령에서 16진수 표기법으로 필드 종결자를 지정하는 경우 값은 0x00에서 잘립니다. 예를 들어 0x410041을 지정하면 0x41이 사용됩니다.  
@@ -351,7 +347,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!IMPORTANT]
 > **bcp** 유틸리티에서 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 **사용자 이름** 과 *암호* 를 조합하여 사용하는 대신 *-T* 옵션(트러스트된 연결)을 사용합니다. **bcp** 유틸리티가 SQL Database 또는 SQL Data Warehouse에 연결할 때 Windows 인증 또는 Azure Active Directory 인증을 사용이 지원되지 않습니다. **-U** 및 **-P** 옵션을 사용하세요. 
   
- **-P** ***login_id***<a name="U"></a>  
+ **-U** _**login\_id**_<a name="U"></a>  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  
   
 > [!IMPORTANT]

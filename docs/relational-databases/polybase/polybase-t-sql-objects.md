@@ -1,13 +1,11 @@
 ---
-title: PolyBase T-SQL 개체 | Microsoft 문서
+title: PolyBase Transact-SQL 참조 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: polybase
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
@@ -15,41 +13,45 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2c8dd55adf32bb835113073c79fcfcc00003371
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0e50ec09c8986e042aa687363732c0c49b2bc883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734681"
 ---
-# <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 개체
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  PolyBase를 사용하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다.  
+# <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 참조
+
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+PolyBase를 사용하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다.  
   
- [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
- [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
- [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+[CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
- [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+[CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
- [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
- 
+[CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
+
 > [!NOTE]
->  SQL Server 2016의 PolyBase는 Windows 사용자만 지원합니다. SQL 사용자를 사용하여 PolyBase 외부 테이블을 쿼리하려고 하면 쿼리에 실패합니다.
+> SQL Server 2016의 PolyBase는 Windows 사용자만 지원합니다. SQL 사용자를 사용하여 PolyBase 외부 테이블을 쿼리하려고 하면 쿼리에 실패합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항  
- PolyBase를 구성합니다. [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.  
+
+PolyBase를 구성합니다. [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.  
   
 ## <a name="create-external-tables-for-hadoop"></a>Hadoop에 대한 외부 테이블 만들기
+
 적용 대상: SQL Server(2016부터), 병렬 데이터 웨어하우스
-  
- **1. 데이터베이스 범위 자격 증명 만들기**  
-  
- 이 단계는 Kerberos 보안 Hadoop 클러스터에만 필요합니다.  
-  
-```sql  
+
+**1. 데이터베이스 범위 자격 증명 만들기**
+
+이 단계는 Kerberos 보안 Hadoop 클러스터에만 필요합니다.  
+
+```sql
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
   
@@ -61,11 +63,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL HadoopUser1   
 WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
-  
-```  
-  
- **2. 외부 데이터 원본 만들기**  
-  
+```
+
+**2. 외부 데이터 원본 만들기**
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -78,11 +79,10 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
         RESOURCE_MANAGER_LOCATION = '10.xxx.xx.xxx:xxxx',   
         CREDENTIAL = HadoopUser1      
 );  
-  
-```  
-  
- **3. 외부 파일 형식 만들기**  
-  
+```
+
+**3. 외부 파일 형식 만들기**
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -93,9 +93,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. 외부 테이블 만들기**  
-  
+
+**4. 외부 테이블 만들기**  
+
 ```sql  
 -- Create an external table pointing to data stored in Hadoop.  
 -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -111,22 +111,20 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = MyHadoopCluster,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. 통계 만들기**  
-  
+
+**5. 통계 만들기**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
-  
 ```  
-  
-## <a name="create-external-tables-for-azure-blob-storage"></a>Azure blob 저장소에 대한 외부 테이블 만들기  
+
+## <a name="create-external-tables-for-azure-blob-storage"></a>Azure Blob Storage에 대한 외부 테이블 만들기  
 적용 대상: SQL Server(2016부터), Azure SQL Data Warehouse, 병렬 데이터 웨어하우스
 
- **1. 데이터베이스 범위 자격 증명 만들기**  
-  
+**1. 데이터베이스 범위 자격 증명 만들기**  
+
 ```sql  
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
@@ -139,11 +137,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential   
 WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';  
-  
 ```  
-  
- **2. 외부 데이터 원본 만들기**  
-  
+
+**2. 외부 데이터 원본 만들기**  
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION:  Azure account storage account name and blob container name.  
@@ -156,9 +153,9 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 );  
   
 ```  
-  
- **3. 외부 파일 형식 만들기**  
-  
+
+**3. 외부 파일 형식 만들기**  
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -169,9 +166,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. 외부 테이블 만들기**  
-  
+
+**4. 외부 테이블 만들기**  
+
 ```sql  
 -- Create an external table pointing to data stored in Azure storage.  
 -- LOCATION: path to a file or directory that contains the data (relative to the blob container).  
@@ -188,23 +185,22 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = AzureStorage,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. 통계 만들기**  
-  
+
+**5. 통계 만들기**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
- 
+
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store의 외부 테이블 만들기
 적용 대상: Azure SQL Data Warehouse
 
 자세한 내용은 [Azure Data Lake Store를 사용하여 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
- 
- **1. 데이터베이스 범위 자격 증명 만들기**   
+
+**1. 데이터베이스 범위 자격 증명 만들기**   
 
 ```sql
 -- Create a Database Master Key.
@@ -224,9 +220,9 @@ WITH
     ,SECRET = '<key>'
 ;
 ```  
-  
- **2. 외부 데이터 원본 만들기**  
-  
+
+**2. 외부 데이터 원본 만들기**  
+
 ```sql  
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
 -- LOCATION: Provide Azure storage account name and blob container name.
@@ -239,9 +235,9 @@ WITH (
     CREDENTIAL = AzureStorageCredential
 );
 ```  
-  
- **3. 외부 파일 형식 만들기**  
-  
+
+**3. 외부 파일 형식 만들기**  
+
 ```sql  
 -- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
 -- STRING_DELIMITER: Specifies the field terminator for data of type string in the text-delimited file.
@@ -258,9 +254,9 @@ WITH
                     )
 );
 ```  
-  
- **4. 외부 테이블 만들기**  
-  
+
+**4. 외부 테이블 만들기**  
+
 ```sql  
 -- LOCATION: Folder under the ADLS root folder.
 -- DATA_SOURCE: Specifies which Data Source Object to use.
@@ -284,18 +280,16 @@ WITH
 )
 ;
 ```  
-  
- **5. 통계 만들기**  
-  
-```sql     
+
+**5. 통계 만들기**
+
+```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
 ## <a name="next-steps"></a>다음 단계  
- 쿼리의 예제를 보려면 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.  
+쿼리의 예제를 보려면 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
- [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+[PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
+[PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)

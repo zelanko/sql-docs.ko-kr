@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d24ea0f9548968723aa195211e268d97bde9788
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643411"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -236,7 +233,7 @@ RETURNS return_data_type
   
 -   현재 데이터베이스의 **dbo** 스키마  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  매개 변수의 기본값입니다. *기본* 값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 함수를 실행할 수 있습니다.  
   
 > [!NOTE]  
@@ -258,11 +255,11 @@ RETURNS return_data_type
  스칼라 함수가 스칼라 값을 반환하도록 지정합니다.  
   
  TABLE  
- 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@***local_variables*만 테이블 반환 함수에 전달할 수 있습니다.  
+ 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@**_local\_variables_만 테이블 반환 함수에 전달할 수 있습니다.  
   
  인라인 테이블 반환 함수에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
   
- 다중 문 테이블 반환 함수에서 **@***return_variable*은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@***return_variable*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
+ 다중 문 테이블 반환 함수에서 **@**_return\_variable_은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@**_return\_variable_은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
   
  *select-stmt*  
  인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
@@ -278,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서는 미리보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   

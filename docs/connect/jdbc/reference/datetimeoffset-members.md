@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1167a063aa942deb1fb8ecbde8bc36165b8c336
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: be2a66c779714902ae33ef25dcdf23b8797ee274
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669441"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에 의해 노출 되는 멤버가 나와 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 클래스입니다.  
+  다음 표에는 [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
  없음  
@@ -34,15 +31,15 @@ ms.locfileid: "32829698"
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[CompareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|비교 하 여 **DateTimeOffset** 개체를 다른 **DateTimeOffset** GMT 기준 시간에 기반 하는 개체입니다.|  
-|[같음](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|비교 하 여 **DateTimeOffset** 개체를 다른 **개체**합니다.|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|이 gmt 기준 분 단위에서 오프셋을 반환 **DateTimeOffset** 개체입니다.|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|이 표시 된 시간이에서 반환 **DateTimeOffset** 개체는 java.sql.Timestamp으로 합니다.|  
-|[해시 코드](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|개체의 해시 코드 값을 반환합니다.|  
-|[ToString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|문자열 표현을 반환 된 **DateTimeOffset** 개체입니다.|  
-|[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|만듭니다는 **DateTimeOffset** GMT에서 특정 오프셋의 시점을 나타내는 개체입니다.|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|비교 **DateTimeOffset** 개체를 다른 **DateTimeOffset** 개체 GMT 기준 시간에 기반 합니다.|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|비교 **DateTimeOffset** 개체를 다른 **개체**합니다.|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Gmt를 기준으로이 분에서 오프셋을 반환 **DateTimeOffset** 개체입니다.|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|이 나타내는 시간에서 반환 **DateTimeOffset** 는 java.sql.Timestamp 개체로 합니다.|  
+|[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|개체의 해시 코드 값을 반환합니다.|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|문자열 표현을 반환 합니다 **DateTimeOffset** 개체입니다.|  
+|[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|GMT를 기준으로 특정 오프셋의 시점을 나타내는 **DateTimeOffset** 개체를 만듭니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  
   
@@ -50,7 +47,7 @@ ms.locfileid: "32829698"
 |---------------------------|-------------|  
 |class java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: isClosed 메서드 (SQLServerConnection) | Microsoft Docs
+title: isClosed 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.isClosed
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94028c26ce5f2a7d43db72f9874e37dc68ec6877
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 508b3d1fe22ff58e91865204d6b74822ba6f5763
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647633"
 ---
-# <a name="isclosed-method-sqlserverconnection"></a>isClosed 메서드 (SQLServerConnection)
+# <a name="isclosed-method-sqlserverconnection"></a>isClosed 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  나타냅니다 여부이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체가 잠겨 있습니다.  
+  이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체가 닫혔는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +41,12 @@ public boolean isClosed()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 isClosed 메서드는 java.sql.Connection 인터페이스의 isClosed 메서드에 의해 지정 됩니다.  
   
- 호출된 된 SQLServerConnection 개체의 상태를 확인 합니다. 경우 연결이 닫힐는 [닫습니다](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) , 메서드가 호출 된 또는 치명적인 오류가 발생 한 경우. 이 메서드는 반환 **true** 만를 호출 하면 close 메서드가 호출 된 후입니다.  
+ 호출된 된 SQLServerConnection 개체의 상태를 확인합니다. 개체에서 [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) 메서드가 호출되었거나 치명적인 오류가 발생했으면 연결이 닫혀 있습니다. 이 메서드는 close 메서드가 호출된 후에 호출되는 경우에만 **true**를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

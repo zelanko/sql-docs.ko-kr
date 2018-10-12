@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653453"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +28,9 @@ ms.locfileid: "38041011"
 **SQL Server를 사용해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> 이제 SQL Server 2019 미리 보기를 사용할 수 있습니다. 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)을 참조하세요.
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 일반 공급 릴리스(2017년 10월)
 ### <a name="database-engine"></a>데이터베이스 엔진
@@ -122,7 +123,7 @@ ms.locfileid: "38041011"
 - **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 응용 프로그램을 수정하려면 다음 단계를 수행합니다.
 
    1. **프로그램 추가/제거**로 이동합니다.
-   2. *Microsoft SQL Server vNext T-SQL 언어 서비스 CTP2.1*을 찾아 마우스 오른쪽 단추로 클릭한 다음 **제거**를 선택합니다.
+   2. *Microsoft SQL Server 2019 T-SQL 언어 서비스 CTP2.1*을 찾아 마우스 오른쪽 단추로 클릭한 다음, **제거**를 선택합니다.
    3. 구성 요소를 제거한 후 중단된 응용 프로그램을 복구하거나 적절한 버전의 *TSqlLanguageService.MSI*를 다시 설치합니다.
 
    이 해결 방법에서는 이러한 어셈블리의 v14 버전을 제거하므로 v14 버전에 종속된 응용 프로그램이 더 이상 작동하지 않습니다. 이러한 어셈블리가 필요한 경우에는 2016 병렬 설치 없이 별도로 설치해야 합니다.

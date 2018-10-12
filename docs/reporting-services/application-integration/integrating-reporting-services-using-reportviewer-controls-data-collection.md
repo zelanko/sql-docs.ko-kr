@@ -1,36 +1,36 @@
 ---
 title: ReportViewer 컨트롤 2016에서 데이터 수집 | Microsoft Docs
-ms.date: 09/06/2016
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 782888c9946fd09d9c711a6eda2a8f77fd18c3ba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 68e5a4c9789a6c0485433a3199d8d6a03c2a90d5
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864341"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
-기본적으로 ReportViewer 컨트롤은 Microsoft에서 고객이 컨트롤을 사용하는 방식을 더 잘 이해할 수 있도록 익명의 사용 정보를 수집합니다. 고객이 Viewer Control을 배포하고 사용하는 방법을 더 잘 이해하도록 함으로써 향후 개발 시 고객에게 최고의 가치를 제공하는 개선에 초점을 맞출 수 있습니다.
 
-Microsoft SQL Server 2016 릴리스, 기타 제품 및 서비스에 대한 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [개인정보처리방침]((http://go.microsoft.com/fwlink/?LinkID=868444))을 참조하세요.
+고객이 제품을 사용하는 방식을 보다 잘 이해하기 위해 컨트롤에서 익명의 사용 현황 데이터가 수집됩니다. 사용 현황 데이터는 향후에 고객에게 가장 적합한 개선 방향으로 개발이 진행되도록 하는 데 도움이 됩니다.
 
-## <a name="opting-out-of-telemetry"></a>원격 분석 옵트아웃
+Microsoft SQL Server 및 보고서 뷰어의 데이터 수집 및 사용 사례는 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)에 설명되어 있습니다.
 
-"EnableTelemetry"를 통해 원격 분석을 프로그래밍 방식으로 해제할 수 있습니다. 컨트롤을 호스팅하는 .aspx 페이지를 편집하여 이 작업을 수행할 수 있습니다.
+## <a name="opting-out-of-data-collection"></a>데이터 수집 옵트아웃(opt out)
+
+사용 현황 데이터의 수집을 ```EnableTelemetry``` 속성을 통해 사용하지 않도록 설정할 수 있습니다.
 
 ```
-\<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
-\</rsweb:ReportViewer>
+<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
+</rsweb:ReportViewer>
 ```
 
-또는 호스팅 페이지의 Page_Load 호출과 같이 컨트롤이 렌더링되기 전에 실제로 수행할 수 있습니다.
+또는 컨트롤이 렌더링되기 전에 실제로 설정할 수 있습니다.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -40,8 +40,8 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## <a name="see-also"></a>관련 항목:
 
-[WebForms ReportViewer 컨트롤 사용](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[ReportViewer 컨트롤을 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
+[WebForms 보고서 뷰어 컨트롤 사용](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
+[보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 
 

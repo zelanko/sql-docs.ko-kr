@@ -5,9 +5,7 @@ ms.date: 10/25/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RANK
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - ranking rows
 - RANK function [Transact-SQL]
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c648bbba537b998e94cab65e14af0051eae697ab
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: aa1dc96a026a08aa66218f0a30ca580fb524e9d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653479"
 ---
 # <a name="rank-transact-sql"></a>RANK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +48,8 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>인수  
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. OVER 절의 \<rows 또는 range 절>은 RANK 함수에 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. OVER 절의 \<rows 또는 range 절/>은 RANK 함수에 지정할 수 없습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  

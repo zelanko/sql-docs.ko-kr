@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44b9d4acd20051477779edd721089340114c7fb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34c2bd981869095df9cb4b4e79c383a9c58fd479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716817"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ expression & expression
 ## <a name="remarks"></a>Remarks  
  **&** 비트 연산자는 두 식 간에 비트 논리 AND를 수행하고 양쪽 식에서 해당 비트를 취합니다. 결과의 비트는 입력 식에 있는 양쪽 비트(확인 중인 현재 비트)의 값이 1이면 1로 설정되고 그렇지 않으면 0으로 설정됩니다.  
   
- 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint***식*이 **int**로 변환됩니다.  
+ 왼쪽과 오른쪽 식의 정수 데이터 형식이 서로 다르면(예: 왼쪽 *식*은 **smallint**이고 오른쪽 *식*은 **int**임) 더 작은 데이터 형식의 인수가 더 큰 데이터 형식으로 변환됩니다. 이 경우에 **smallint**_식_이 **int**로 변환됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 값을 저장하기 위해 **int** 데이터 형식을 사용하여 테이블을 만들고 두 값을 한 행에 삽입하는 방법을 보여 줍니다.  

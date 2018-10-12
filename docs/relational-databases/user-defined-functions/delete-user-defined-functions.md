@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: udf
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8bbadd1b4405f770adf31b96403100e72dd6898
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d02dd4a286321a6d5b2334f5cedcb06926f245fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652271"
 ---
 # <a name="delete-user-defined-functions"></a>사용자 정의 함수 삭제
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +71,7 @@ ms.locfileid: "43111598"
 5.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시**를 클릭하여 *function_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
+    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _function\_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -85,7 +81,7 @@ ms.locfileid: "43111598"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- creates function called “Sales.ufn_SalesByStore”  

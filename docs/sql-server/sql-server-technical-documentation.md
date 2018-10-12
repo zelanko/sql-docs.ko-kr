@@ -3,10 +3,8 @@ title: SQL Server 설명서 | Microsoft Docs
 ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
@@ -23,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42776109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857312"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,26 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 ::: moniker range="= sqlallproducts-allversions"
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
+|[SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 릴리스 정보](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014** 설명서는 [여기](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)에서 사용할 수 있습니다.
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|새로운 기능  | 릴리스 정보  |
+|---------|---------|
+|[SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 릴리스 정보](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> 이제 SQL Server 2019 미리 보기를 사용할 수 있습니다. 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)을 참조하세요.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

@@ -1,0 +1,950 @@
+---
+title: 보안 Enclave를 사용한 Always Encrypted 구성 | Microsoft Docs
+ms.custom: ''
+ms.date: 09/24/2018
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
+ms.reviewer: ''
+ms.technology: security
+ms.topic: conceptual
+author: jaszymas
+ms.author: jaszymas
+manager: craigg
+monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712475"
+---
+# <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+[보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 기존 [Always Encrypted](always-encrypted-database-engine.md) 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다.
+
+보안 Enclave를 사용한 Always Encrypted를 설정하려면 다음 워크플로를 사용합니다.
+
+1. HGS(호스트 보호 서비스) 증명을 구성합니다.
+2. SQL Server 컴퓨터에 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]를 설치합니다.
+3. 클라이언트/개발 컴퓨터에 도구를 설치합니다.
+4. SQL Server 인스턴스에서 Enclave 형식을 구성합니다.
+5. Enclave 사용 키를 프로비전합니다.
+6. 중요한 데이터가 포함된 열을 암호화합니다.
+ 
+
+
+## <a name="configure-your-environment"></a>환경 구성
+
+Always Encrypted에서 보안 Enclave를 사용하려면 작업 환경에 Windows Server 2019 Preview, SSMS(SQL Server Management Studio) 18.0(미리 보기), .NET Framework 및 기타 여러 구성 요소가 필요합니다. 다음 섹션에서는 세부 정보와 필수 구성 요소를 다운로드하기 위한 링크를 제공합니다.
+
+### <a name="sql-server-computer-requirements"></a>SQL Server 컴퓨터 요구 사항
+
+SQL Server를 실행하는 컴퓨터에는 다음 운영 체제 및 SQL Server 버전이 필요합니다.
+
+*SQL Server*:
+
+- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 이상
+
+*Windows*:
+
+- Windows 10 Enterprise, 버전 1809
+- Windows Server DataCenter(반기 채널), 버전 1809
+- Windows Server 2019 DataCenter
+
+> [!IMPORTANT]
+> SQL Server 컴퓨터는 HGS로 증명된 보호된 호스트로 구성되어야 합니다. TPM 증명은 프로덕션 환경을 위한 권장되는 Enclave 증명 방법으로, 가상 머신이 아닌 물리적 컴퓨터에서 SQL Server를 실행해야 합니다. 가상 머신은 사전 프로덕션 환경에만 적합합니다.
+
+### <a name="hgs-computer-requirements"></a>HGS 컴퓨터 요구 사항
+
+단일 HGS 컴퓨터만으로 테스트 및 프로토타입 생성에 충분합니다. 프로덕션 환경에서는 3대의 컴퓨터가 있는 Windows 장애 조치(Failover) 클러스터가 강력히 권장됩니다.
+
+Windows HGS(호스트 보호 서비스)는 SQL Server와 동일한 컴퓨터가 아닌 별도 HGS 컴퓨터에 설치해야 합니다. HGS 컴퓨터 요구 사항 및 설정에 대한 자세한 내용은 [SQL Server에서 Always Encrypted를 위한 호스트 보호 서비스 설정](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)을 참조하세요.
+
+
+### <a name="determine-your-attestation-service-url"></a>증명 서비스 URL 확인
+
+증명 서비스 URL을 확인하려면 다음과 같이 도구 및 응용 프로그램을 구성해야 합니다.
+
+1. 관리자 권한으로 SQL Server 컴퓨터에 로그온합니다.
+2. 관리자 권한으로 PowerShell을 실행합니다.
+3. [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration)을 실행합니다.
+4. AttestationServerURL 속성을 기록해 둔 후 저장합니다. `http://x.x.x.x/Attestation`과 같아야 합니다.
+
+
+### <a name="install-tools"></a>도구 설치
+
+클라이언트/개발 컴퓨터에 다음 도구를 설치합니다.
+
+1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
+2. [SSMS 18.0 이상](../../../ssms/download-sql-server-management-studio-ssms.md)
+3. [SQL Server PowerShell 모듈](../../../powershell/download-sql-server-ps-module.md) 버전 21.5 이상
+4. [Visual Studio(2017 이상 권장)](https://visualstudio.microsoft.com/downloads/)
+5. [.NET Framework 4.7.2용 개발자 팩](https://www.microsoft.com/net/download/visual-studio-sdks)
+6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 패키지](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), 버전 2.2.0 이상
+7. [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet 패키지](https://www.nuget.org/packages?q=Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders)
+
+NuGet 패키지는 보안 Enclave에서 Always Encrypted를 사용하여 응용 프로그램을 개발하기 위해 Visual Studio 프로젝트에서 사용하도록 고안되었습니다. 첫 번째 패키지는 Azure Key Vault에 열 마스터 키를 저장하는 경우에만 필요합니다. 자세한 내용은 [응용 프로그램 개발](#develop-applications-issuing-rich-queries-in-visual-studio)을 참조하세요.
+
+### <a name="configure-a-secure-enclave"></a>보안 Enclave 구성
+
+클라이언트/개발 컴퓨터에서 다음을 수행합니다.
+
+1. SSMS를 열고 AD(Active Directory) 관리자 권한으로 SQL Server 인스턴스에 연결합니다.
+2. 보안 Enclave를 사용한 Always Encrypted가 인스턴스에서 지원되는지 확인하려면 다음 쿼리를 실행합니다.
+
+   ```sql
+   SELECT [name], [value], [value_in_use] FROM sys.configurations
+   WHERE [name] = 'column encryption enclave type'
+   ```
+
+    쿼리는 다음과 같은 행을 반환해야 합니다.  
+
+    | NAME                           | value | value_in_use |
+    | ------------------------------ | ----- | -------------|
+    | 열 암호화 Enclave 형식 | 0     | 0            |
+
+3. 보안 Enclave 형식을 VBS Enclave로 구성합니다.
+
+   ```sql
+   EXEC sys.sp_configure 'column encryption enclave type', 1
+   RECONFIGURE
+   ```
+
+4. 이전 변경 내용을 적용하려면 SQL Server 인스턴스를 다시 시작합니다. 개체 탐색기에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택하여 SSMS에서 해당 인스턴스를 다시 시작합니다. 인스턴스가 다시 시작되면 다시 연결합니다.
+
+5. 이제 다음 쿼리를 실행하여 보안 Enclave가 로드되는지 확인합니다.
+
+   ```sql
+   SELECT [name], [value], [value_in_use] FROM sys.configurations
+   WHERE [name] = 'column encryption enclave type'
+   ```   
+
+    쿼리는 다음과 같은 행을 반환해야 합니다.  
+
+    | NAME                           | value | value_in_use |
+    | ------------------------------ | ----- | -------------- |
+    | 열 암호화 Enclave 형식 | 1     | 1              |
+
+6. 암호화된 열에 대해 리치 계산을 사용하도록 설정하려면 다음 쿼리를 실행합니다.
+
+   ```sql
+   DBCC traceon(127,-1)
+   ```
+
+    > [!NOTE]
+    > 리치 계산은 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 기본적으로 사용되지 않도록 설정됩니다. SQL Server 인스턴스를 다시 시작한 후에 매번 위의 문을 사용하여 리치 계산을 사용하도록 설정해야 합니다.
+
+## <a name="provision-enclave-enabled-keys"></a>Enclave 사용 키 프로비전
+
+Enclave 사용 키를 도입해도 [Always Encrypted의 키 프로비전 키 및 키 관리 워크플로](overview-of-key-management-for-always-encrypted.md)는 기본적으로 달라지지 않습니다. 유일한 변경 내용은 열 마스터 키 프로비전 워크플로에서 나타납니다. 이제 해당 키를 Enclave 사용 키로 표시할 수 있습니다(기본적으로 열 마스터 키는 Enclave 사용 키가 아님). 새 열 마스터 키를 Enclave 사용 키로 지정하면(SSMS 또는 PowerShell 사용) 다음 상황이 발생합니다.
+
+- 데이터베이스의 열 마스터 키 메타데이터에 있는 **ENCLAVE_COMPUTATIONS** 속성이 설정됩니다.
+- 열 마스터 키 속성 값(**ENCLAVE_COMPUTATIONS**의 설정 포함)이 디지털로 서명됩니다. 이 도구는 실제 열 마스터 키를 사용하여 생성된 서명을 메타데이터에 추가합니다. 이 서명의 용도는 악의적인 DBA 및 컴퓨터 관리자가 **ENCLAVE_COMPUTATIONS** 설정을 변조하지 못하게 하는 것입니다. SQL 클라이언트 드라이버는 Enclave 사용을 허용하기 전에 서명을 확인합니다. 이를 통해 보안 관리자는 Enclave 내에서 계산될 수 있는 열 데이터를 제어할 수 있습니다.
+
+열 마스터 키의 **ENCLAVE_COMPUTATIONS** 속성은 변경할 수 없습니다. 따라서 키가 프로비전된 후에 변경할 수 없습니다. 하지만 [열 마스터 키 순환](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key) 프로세스를 통해 열 마스터 키를 원래 값과는 다른 **ENCLAVE_COMPUTATIONS** 속성 값을 갖는 새 키로 바꿀 수 있습니다. **ENCLAVE_COMPUTATIONS** 속성에 대한 자세한 내용은 [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요.
+
+Enclave 사용 열 암호화 키를 프로비전하려면 열 암호화 키를 암호화하는 열 마스터 키가 Enclave 사용 키인지 확인해야 합니다.
+
+현재 Enclave 사용 키 프로비전에는 다음과 같은 제한 사항이 적용됩니다.
+
+- Enclave 사용 **열 마스터 키는 Windows 인증서 저장소 또는 Azure Key Vault에 저장해야 합니다**. Enclave 사용 열 마스터 키를 다른 유형의 키 저장소(하드웨어 보안 모듈 또는 사용자 지정 키 저장소)에 저장할 수 없습니다.
+
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**SSMS(SQL Server Management Studio)를 사용하여 Enclave 사용 키 프로비전**
+
+다음 단계는 Enclave 사용 키를 만듭니다(SSMS 18.0 이상 필요).
+
+1. SSMS를 사용하여 데이터베이스에 연결합니다.
+2. **개체 탐색기**에서 데이터베이스를 확장하고 **보안** > **Always Encrypted 키**로 이동합니다.
+3. 새 Enclave 사용 열 마스터 키를 프로비전합니다.
+
+    1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 마스터 키...** 를 선택합니다.
+    2. 열 마스터 키 이름을 선택합니다.
+    3. **Windows 인증서 저장소(현재 사용자 또는 로컬 컴퓨터)** 또는 **Azure Key Vault**를 선택해야 합니다.
+    4. **Enclave 계산 허용**을 선택합니다.
+    5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
+    6. 키가 이미 있는 경우 선택하고, 없는 경우 양식의 지침에 따라 새 키를 만듭니다.
+    7. **확인**을 클릭합니다.
+
+        ![Enclave 계산 허용](./media/always-encrypted-enclaves/allow-enclave-computations.png)
+
+4. 새 Enclave 사용 열 암호화 키를 만듭니다.
+
+    1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 암호화 키**를 선택합니다.
+    2. 새 열 암호화 키의 이름을 입력합니다.
+    3. **열 마스터 키** 드롭다운에서 이전 단계에서 만든 열 마스터 키를 선택합니다.
+    4. **확인**을 클릭합니다.
+
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>**PowerShell을 사용하여 Enclave 사용 키 프로비전**
+
+다음 섹션에서는 Enclave 사용 키를 프로비전하기 위한 샘플 PowerShell 스크립트를 제공합니다. 보안 Enclave를 사용한 Always Encrypted 관련(신규) 단계는 강조 표시됩니다. PowerShell을 사용한 키 프로비전에 대한 자세한 내용은(보안 Enclave를 사용한 Always Encrypted에만 국한되지 않는) [PowerShell을 사용하여 Always Encrypted 키 구성](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)을 참조하세요.
+
+**Enclave 사용 키 프로비전 - Windows 인증서 저장소**
+
+클라이언트/개발 컴퓨터에서 Windows PowerShell ISE를 열고 다음 스크립트를 실행합니다.
+
+유의해야 할 중요한 사항은 [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet에서 `-AllowEnclaveComputations` 매개 변수를 사용해야 한다는 것입니다.
+
+```powershell
+# Create a column master key in Windows Certificate Store.
+$cert = New-SelfSignedCertificate -Subject "\<Subject Name\>" -CertStoreLocation Cert:CurrentUser\\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage DataEncipherment -KeySpec KeyExchange
+
+# Import the SqlServer module.
+Import-Module "SqlServer"
+
+# Connect to your database. Provide the server/db name. Modify the connection string, if needed.
+$serverName = "<server name>"
+$databaseName = "<database name>"
+$connStr = "Data Source = " + $serverName + "; Initial Catalog = " + $databaseName + "; Integrated Security = true"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# Create a SqlColumnMasterKeySettings object for your column master key
+# using the -AllowEnclaveComputations parameter.
+$cmkSettings = New-SqlCertificateStoreColumnMasterKeySettings -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint -AllowEnclaveComputations
+
+# Create column master key metadata in the database.
+$cmkName = "<column master key name in the database>"
+New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySettings $cmkSettings
+
+# Generate a column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.
+$cekName = "<column encryption key name in the database>"
+New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
+```
+
+
+### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Enclave 사용 키 프로비전 - Azure Key Vault
+
+클라이언트/개발 컴퓨터에서 Windows PowerShell ISE를 열고 다음 스크립트를 실행합니다.
+
+**1단계: Azure Key Vault에서 열 마스터 키 프로비전**
+
+이 작업은 Azure Portal을 사용하여 수행할 수도 있습니다. 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
+
+
+```powershell
+Import-Module AzureRM
+Connect-AzureRmAccount
+
+# User values
+$SubscriptionId = "<Azure SubscriptionId>"
+$resourceGroup = "<resource group name>"
+$azureLocation = "<datacenter location>"
+$akvName = "<key vault name>"
+$akvKeyName = "<key name>"
+
+# Set the context to the specified subscription.
+$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+
+# Create a new resource group - skip, if your desired group already exists.
+New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+
+# Create a new key vault - skip if your vault already exists.
+New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+
+# Grant yourself permissions needed to create and use the column master key.
+Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+
+# Create a column master key in Azure Key Vault.
+$akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
+```
+
+**2단계: 데이터베이스에서 열 마스터 키 메타데이터 만들기, 열 암호화 키 만들기 및 데이터베이스에 열 암호화 키 메타데이터 만들기**
+
+
+```powershell
+# Import the SqlServer module.
+Import-Module "SqlServer" -Version
+
+# Connect to your database. Provide the server and db name. If needed, modify the connection string.
+$serverName = "<server name>"
+$databaseName = "<database name>"
+$connStr = "Data Source = " + $serverName + "; Initial Catalog = " + $databaseName + "; Integrated Security = true"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# Authenticate to Azure before calling New-SqlAzureKeyVaultColumnMasterKeySettings,
+# because -AllowEnclaveComputations causes a call to Azure Key Vault
+# to generate the signature of the column master key.
+Add-SqlAzureAuthenticationContext -Interactive
+
+# Create a SqlColumnMasterKeySettings object for your column master key.
+$cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.ID -AllowEnclaveComputations
+
+# Create column master key metadata in the database.
+$cmkName = "<column master key name in the database>"
+New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySettings $cmkSettings
+
+# Generate a column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.
+$cekName = "<column encryption key name in the database>"
+New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
+```
+
+
+## <a name="identify-enclave-enabled-keys-and-columns"></a>Enclave 사용 키 및 열 식별
+
+데이터베이스에 구성된 열 마스터 키를 나열하려면 [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md) 카탈로그 뷰를 쿼리할 수 있습니다(예: SSMS에서). 새 **allow_enclave_computations** 열이 뷰에 추가되었습니다. 열 마스터 키가 Enclave 사용 키인지 여부를 나타냅니다.
+
+```sql
+SELECT name, allow_enclave_computations
+FROM sys.column_master_keys
+```
+
+Enclave 사용 열 암호화 키로 암호화된 열 암호화 키(즉, Enclave 사용 키)를 확인하려면 [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 및 [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md)를 조인해야 합니다.
+
+
+```sql
+SELECT cek.name AS [cek_name]
+, cmk.name AS [cmk_name]
+, cmk.allow_enclave_computations
+FROM sys.column_master_keys cmk
+JOIN sys.column_encryption_key_values cekv
+   ON cmk.column_master_key_id = cekv.column_master_key_id
+JOIN sys.column_encryption_keys cek
+   ON cekv.column_encryption_key_id = cek.column_encryption_key_id
+```
+
+Enclave 사용 열(Enclave 사용 열 암호화 키로 암호화된 열)을 확인하려면 다음 쿼리를 사용합니다.
+
+```sql
+SELECT c.name AS column_name
+, cek.name AS cek_name
+, cmk.name AS [cmk_name]
+, cmk.allow_enclave_computations
+from sys.columns c
+JOIN sys.column_encryption_keys cek 
+ON c.column_encryption_key_id = cek.column_encryption_key_id 
+JOIN sys.column_encryption_key_values cekv 
+ON cekv.column_encryption_key_id = cek.column_encryption_key_id 
+JOIN sys.column_master_keys cmk 
+ON cmk.column_master_key_id = cekv.column_master_key_id
+```
+
+
+## <a name="manage-collations"></a>데이터 정렬 관리
+
+초기 릴리스 이래로 Always Encrypted에는 데이터 정렬 사용과 관련해서 제한이 있었습니다. 즉, BIN2 이외의 데이터 정렬이 결정적 암호화를 사용하여 암호화된 문자열 열에서 허용되지 않습니다. 이 제한 사항은 Enclave 사용 문자열 열에도 적용됩니다.
+
+BIN2 이외의 데이터 정렬은 임의 암호화 및 Enclave 사용 열 암호화 키로 암호화된 문자열 열에서 허용됩니다. 그러나 이러한 열에 사용할 수 있는 유일한 새 기능은 바로 암호화입니다. 리치 계산(패턴 일치, 비교 연산)을 사용하도록 설정하려면 열에 BIN2 데이터 정렬을 사용해야 합니다.
+
+아래 표에서는 암호화 유형 및 데이터 정렬 순서에 따라 Enclave 사용 문자열 열에 대한 기능을 요약해서 설명합니다.
+
+| **데이터 정렬 순서** | **결정적 암호화** | **임의 암호화**                 |
+| ------------------------ | ---------------------------- | ----------------------------------------- |
+| **BIN2 이외**             | 지원되지 않음                | 바로 암호화                       |
+| **BIN2**                 | 같음 비교          | 바로 암호화 및 리치 계산 |
+
+### <a name="determining-and-changing-collations"></a>데이터 정렬 설정 및 변경
+
+SQL Server에서 데이터 정렬은 서버, 데이터베이스 또는 열 수준에서 설정할 수 있습니다. 현재 데이터 정렬을 확인하고 서버, 데이터베이스 또는 열 수준에서 데이터 정렬을 변경하는 방법에 대한 일반 지침은 [데이터 정렬 및 유니코드 지원](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)을 참조하세요.
+
+**비유니코드 문자열 열에 대한 특수 고려 사항**:
+
+SQL 클라이언트 드라이버의 제한 사항(Always Encrypted와 관련되지 않음)으로 인해 다음과 같은 추가 제한 사항이 비유니코드(ASCII) 문자열 열에 적용됩니다. 비유니코드(char, varchar) 문자열 열의 데이터베이스 데이터 정렬을 덮어쓴 경우 열 데이터 정렬이 데이터베이스 데이터 정렬과 동일한 코드 페이지를 사용하는지 확인해야 합니다.
+데이터 정렬과 해당 코드 페이지 식별자를 나열하려면 다음 쿼리를 사용합니다.
+
+```sql
+SELECT [Name]
+   , [Description]
+   , [CodePage] = COLLATIONPROPERTY([Name], 'CodePage')
+FROM ::fn_helpcollations()
+```
+
+예를 들어 Chinese_Traditional_Stroke_Order_100_CI_AI_WS 및 Chinese_Traditional_Stroke_Order_100_BIN2는 동일한 코드 페이지(950)를 갖지만 Chinese_Traditional_Stroke_Order_100_CI_AI_WS 및 Latin1_General_100_BIN2은 다른 코드 페이지를 갖습니다(각각 950과 1252). 위 제한이 유니코드(nchar, nvarchar) 문자열 열에는 적용되지 않습니다. 따라서 이 문제를 해결하려면 새 암호화 열에 유니코드 데이터 형식을 설정하거나, 기존 열을 암호화하기 전에 유니코드 형식을 만들거나 해당 형식을 유니코드 형식으로 변경할 수 있습니다.
+
+
+## <a name="create-a-new-table-with-enclave-enabled-columns"></a>Enclave 사용 열을 사용하여 새 테이블 만들기
+
+[CREATE TABLE(Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql) 문을 사용하여 암호화된 열로 새 테이블을 만들 수 있습니다. 보안 Enclave를 사용한 Always Encrypted는 이 문의 구문을 변경하지 않습니다.
+
+1. SSMS를 사용하여 데이터베이스에 연결하고 쿼리 창을 엽니다.
+   
+     > [!NOTE]
+     > 이 작업을 위해 연결 문자열에서 Always Encrypted를 사용하도록 설정할 필요는 없습니다.
+
+2. 쿼리 창에서 암호화할 각 열의 [열 정의](https://docs.microsoft.com/sql/t-sql/statements/alter-table-column-definition-transact-sql)에 ENCRYPTED WITH 절을 지정하고 CREATE TABLE 문을 실행하여 새 테이블을 만듭니다. 열을 Enclave 사용 열로 지정하려면 Enclave 사용 열 암호화 키를 지정해야 합니다. 데이터베이스의 기본 데이터 정렬이 BIN2 데이터 정렬이 아닌 경우에도 문자열 열에 대해 BIN2 데이터 정렬을 지정해야 할 수 있습니다. 자세한 내용은 데이터 정렬 설정 섹션을 참조하세요.
+
+### <a name="example"></a>예제
+
+아래 문은 2개의 암호화 열인 SSN 및 Salary를 사용하여 새 테이블을 만듭니다. CEK1을 Enclave 사용 열 암호화 키로 가정하면 열이 임의 암호화를 사용하므로 SQL Server 엔진은 두 열의 바로 암호화 및 리치 계산을 둘 다 지원합니다. 이 문은 UNICODE SSN 열에 대해 Latin1 \_General\_BIN2 데이터 정렬을 설정합니다. 이 설정은 기본 데이터베이스 데이터 정렬이 BIN2 Latin1 이외의 데이터 정렬이라고 가정할 때 필요합니다.
+
+```sql
+CREATE TABLE [dbo].[Employees]
+(
+    [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+    [SSN] [char](11) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    [FirstName] [nvarchar](50) NOT NULL,
+    [LastName] [nvarchar](50) NOT NULL,
+    [Salary] [int] ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
+[EmployeeID] ASC
+)
+) ON [PRIMARY]
+GO
+```
+
+
+## <a name="add-a-new-enclave-enabled-column-to-an-existing-table"></a>기존 테이블에 새 Enclave 사용 열 추가
+
+[ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) / ADD문을 사용하여 기존 테이블에 암호화된 새 열을 추가할 수 있습니다. 보안 Enclave를 사용한 Always Encrypted는 이 문의 구문을 변경하지 않습니다.
+
+1. SSMS를 사용하여 데이터베이스에 연결하고 쿼리 창을 엽니다.
+    
+   이 작업을 위해 연결 문자열에서 Always Encrypted를 사용하도록 설정할 필요는 없습니다.
+
+2. 쿼리 창에서 [열 정의](https://docs.microsoft.com/sql/t-sql/statements/alter-table-column-definition-transact-sql)에 ENCRYPTED WITH 절을 지정하고 Enclave 사용 열 암호화 키를 사용하여 ADD 절을 통해 ALTER TABLE 문을 실행합니다. 새 열이 문자열 열이고 데이터베이스의 기본 데이터 정렬이 BIN2 데이터 정렬이 아닌 경우에도 BIN2 데이터 정렬을 지정해야 할 수 있습니다. 자세한 내용은 데이터 정렬 설정 섹션을 참조하세요.
+
+### <a name="example"></a>예제
+
+CEK1이 Enclave 사용 열 암호화 키라는 전제 하에, 아래 문은 리치 쿼리와 바로 암호화(열이 임의 암호화를 사용하므로)를 둘 다 지원하는 BirthDate라는 암호화된 새 열을 추가합니다.
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ADD [BirthDate] [Date] ENCRYPTED WITH (
+COLUMN_ENCRYPTION_KEY = [CEK1],
+ENCRYPTION_TYPE = Randomized,
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
+```
+
+
+## <a name="prepare-an-ssms-query-window-with-always-encrypted-enabled"></a>Always Encrypted가 사용되는 SSMS 쿼리 창 준비
+
+Enclave 계산을 사용하도록 설정하는 데 필요한 연결 매개 변수를 추가하려면
+
+1. SSMS를 엽니다.
+2. 서버에 연결 대화 상자에서 서버 이름과 데이터베이스 이름을 지정한 후 **옵션**을 클릭합니다. **Always Encrypted** 탭으로 이동한 후 **Always Encrypted 사용**을 선택하고 Enclave 증명 URL을 지정합니다.
+    
+    ![열 암호화 설정](./media/always-encrypted-enclaves/column-encryption-setting.png)
+
+3. 연결을 클릭합니다.
+4. 새 쿼리 창을 엽니다.
+
+또는 쿼리 창이 이미 열려 있는 경우 다음 방법에 따라 Always Encrypted를 사용하도록 해당 데이터베이스 연결을 업데이트할 수 있습니다.
+
+1. 기존 조회 창에서 아무 위치나 마우스 오른쪽 단추로 클릭합니다.
+2. 연결 \> 연결 변경을 선택합니다.
+3. **옵션**을 클릭합니다. **Always Encrypted** 탭으로 이동한 후 **Always Encrypted 사용**을 선택하고 Enclave 증명 URL을 지정합니다.
+4. 연결을 클릭합니다.
+
+
+## <a name="work-with-encrypted-columns"></a>암호화된 열 사용
+
+### <a name="encrypt-an-existing-plaintext-column-in-place"></a>기존 일반 텍스트 열 바로 암호화
+
+Enclave 사용 열 암호화 키를 사용할 경우 [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) / ALTER COLUMN 문을 사용하여 기존 일반 텍스트 열을 바로 암호화할 수 있습니다.
+
+Enclave 사용 키가 아닌 키를 사용하여 열을 암호화하려면 SSMS의 Always Encrypted 마법사 또는 SqlServer PowerShell 모듈의 Set-SqlColumnEncryption cmdlet과 같은 클라이언트 쪽 도구를 사용해야 합니다. 자세한 내용은 다음을 참조하세요.
+
+- [Always Encrypted 마법사](always-encrypted-wizard.md)
+- [PowerShell을 사용하여 열 암호화 구성](configure-column-encryption-using-powershell.md)
+
+
+### <a name="prerequisites"></a>사전 요구 사항
+
+- 기존 열이 암호화되지 않았습니다.
+- Enclave 사용 키를 프로비전했습니다.
+- 열 마스터 키에 액세스할 수 있습니다.
+
+#### <a name="steps"></a>단계
+
+1. 데이터베이스 연결에서 Always Encrypted 및 Enclave 계산을 사용하도록 설정하여 SSMS 쿼리 창을 준비합니다. 자세한 내용은 [Always Encrypted가 사용되는 SSMS 쿼리 창 준비](#prepare-an-ssms-query-window-with-always-encrypted-enabled)를 참조하세요.
+2. 쿼리 창에서 ENCRYPTED WITH 절에 Enclave 사용 열 암호화 키를 지정하여 ALTER COLUMN 절을 통해 ALTER TABLE 문을 실행합니다. 열이 문자열 열(예: char, varchar, nchar, nvarchar)인 경우에도 데이터 정렬을 BIN2 데이터 정렬로 변경해야 할 수 있습니다. 자세한 내용은 데이터 정렬 설정 섹션을 참조하세요.
+    
+    > [!NOTE]
+    > 열 마스터 키가 Azure Key Vault에 저장된 경우 Azure에 로그인하라는 메시지가 표시될 수 있습니다.
+
+3. (선택 사항) [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 통해 계획 캐시를 지워 암호화한 열의 쿼리 계획이 첫 번째 쿼리 실행에서 다시 생성되도록 합니다.
+  
+    > [!NOTE]
+    > 영향을 받는 쿼리 계획을 캐시에서 제거하지 않으면 암호화 후 첫 번째 쿼리 실행이 실패할 수 있습니다.
+
+    > [!NOTE]
+    > 이로 인해 쿼리 성능이 일시적으로 저하될 수 있으므로 DBCC FREEPROCCACHE를 사용하여 계획 캐시를 신중하게 지웁니다. 캐시를 지울 때 나타나는 부정적인 영향을 최소화하기 위해 영향을 받는 쿼리 계획만 선택적으로 제거할 수 있습니다.
+
+4.  (선택 사항) [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)을 호출하여 열 암호화로 무효화되었을 수 있는 각 모듈(저장 프로시저, 함수, 뷰, 트리거)의 매개 변수에 대한 메타데이터를 업데이트합니다.
+
+#### <a name="example"></a>예제
+
+아래 예제에서는 다음을 가정합니다.
+
+  - CEK1은 Enclave 사용 열 암호화 키입니다.
+
+  - SSN 열은 일반 텍스트이며 현재 Latin1, BIN2 이외의 데이터 정렬(예: Latin1\_General\_CI\_AI\_KS\_WS)을 사용하고 있습니다.
+
+이 문은 임의 암호화 및 Enclave 사용 열 암호화 키를 사용하여 SSN 열을 암호화합니다. 또한 기본 데이터베이스 데이터 정렬을 해당(동일한 코드 페이지) BIN2 데이터 정렬로 덮어씁니다.
+
+이 작업은 온라인으로 수행됩니다(ONLINE = ON). 또한 테이블 스키마 변경의 영향을 받는 쿼리 계획을 다시 만드는 **DBCC FREEPROCCACHE** 호출도 진행됩니다.
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ALTER COLUMN [SSN] [char] COLLATE Latin1_General_BIN2
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+WITH
+(ONLINE = ON)
+GO
+DBCC FREEPROCCACHE
+GO
+```
+
+
+### <a name="make-an-existing-encrypted-column-enclave-enabled"></a>기존의 암호화된 열을 Enclave 사용 열로 지정
+
+Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설정하는 여러 가지 방법이 있습니다. 어떤 방법을 선택하는지는 다음과 같은 몇 가지 요인에 따라 다릅니다.
+
+- **범위/세분성:** 열 하위 집합 또는 지정된 열 마스터 키로 보호되는 모든 열의 Enclave 기능을 사용하도록 설정하고 싶나요?
+- **데이터 크기:** Enclave 사용 열로 지정하려는 열이 포함된 테이블의 크기는 얼마나 되나요?
+- 열의 암호화 유형을 변경하고 싶나요? 임의 암호화만 리치 계산(패턴 일치, 비교 연산자)을 지원한다는 점에 유의합니다. 결정적 암호화를 사용하여 열을 암호화한 경우에도 임의 암호화로 다시 암호화하여 Enclave의 전체 기능을 잠금 해제해야 합니다.
+
+다음은 기존 열에 Enclave를 사용하도록 설정하는 세 가지 방법입니다.
+
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>옵션 1: 열 마스터 키를 순환하여 Enclave 사용 열 마스터 키로 바꿉니다.
+  
+- 장점:
+  - 데이터를 다시 암호화하지 않으므로 일반적으로 가장 빠른 방법입니다. 많은 양의 데이터를 포함하는 열에 권장되는 방식입니다. 모든 열을 제공하는 경우 리치 계산을 사용하도록 설정하고, 결정적 암호화를 이미 사용하고 있어야 하므로 다시 암호화할 필요가 없습니다.
+  - 여러 열의 Enclave 기능을 대규모로 사용하도록 설정할 수 있습니다. 이 방식은 원래의 열 마스터 키와 관련된 모든 열 암호화 키 및 암호화된 모든 열을 Enclave 사용 방식으로 지정하기 때문입니다.
+  
+- 단점:
+  - 암호화 유형을 결정적 암호화에서 임의 암호화로 변경하도록 지원하지 않으므로, 확실히 암호화된 열의 바로 암호화를 잠금 해제한 상태에서 리치 계산을 사용하도록 설정하지 않습니다.
+  - 지정된 열 마스터 키와 연결된 일부 열만 선택적으로 변환할 수 없습니다.
+  - 키 관리 오버헤드가 발생하므로, 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 응용 프로그램에서 사용하도록 해야 합니다.  
+
+
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>옵션 2: 이 방법은 1) 열 마스터 키 순환(옵션 1과 같음) 및 2) 임의 암호화를 사용하여 확실히 암호화된 열의 하위 집합 다시 암호화의 두 단계를 수행하여 해당 열에 대해 리치 계산을 사용하도록 설정합니다.
+  
+- 장점:
+  - 데이터를 바로 암호화하므로, 대량의 데이터를 포함하는 열을 확실히 암호화하기 위해 리치 쿼리를 사용하도록 설정하는 데 권장되는 방법입니다. 1단계는 결정적 암호화를 사용하여 열의 바로 암호화를 잠금 해제하므로 2단계를 바로 수행할 수 있습니다.
+  - 여러 열의 Enclave 기능을 대규모로 사용하도록 설정할 수 있습니다.
+  
+- 단점:
+  - 지정된 열 마스터 키와 연결된 일부 열만 선택적으로 변환할 수 없습니다.
+  - 키 관리 오버헤드가 발생하므로, 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 응용 프로그램에서 사용하도록 해야 합니다.
+
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>옵션 3: 클라이언트 쪽에서 새 Enclave 사용 열 암호화 키 및 임의 암호화(필요한 경우)를 사용하여 선택한 열을 다시 암호화
+  
+- 장점 - 이 방법에는 다음이 적용됩니다.
+  - 하나의 열 또는 소규모 열 하위 집합에 대해 Enclave 기능을 선택적으로 사용하도록 설정할 수 있습니다.
+  - 명확하게 암호화된 열의 리치 계산을 한 단계로 사용하도록 설정할 수 있습니다.
+  - 새 열 마스터 키를 만들 필요가 없으므로 응용 프로그램에 미치는 영향이 좀 더 미미합니다.
+  
+- 단점:
+  - 다시 암호화하기 위해 열을 포함하는 테이블의 전체 내용을 데이터베이스 외부로 이동해야 하므로 소규모 테이블에만 권장됩니다. 
+
+자세한 내용은 다음 섹션을 참조하십시오.
+  - [열 마스터 키를 순환하여 열을 Enclave 사용 열로 지정](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
+  - [열 바로 다시 암호화](#re-encrypt-columns-in-place)
+  - [클라이언트 쪽에서 열 다시 암호화](#re-encrypt-columns-on-the-client-side)
+
+### <a name="make-columns-enclave-enabled-by-rotating-their-column-master-key"></a>열 마스터 키를 순환하여 열을 Enclave 사용 열로 지정
+
+열 마스터 키 순환은 기존 열 마스터 키를 새 열 마스터 키로 대체하는 프로세스입니다. 이 방식에서는 이전 열 마스터 키와 관련된 열 암호화 키를 새 열 마스터 키로 다시 암호화합니다. 이 워크플로는 Always Encrypted의 초기 릴리스 이래로, 규정 준수 또는 보안상의 이유(기존 열 마스터 키가 손상된 경우)로 열 마스터 키 대체를 지원하기 위해 사용되었습니다.
+
+Enclave를 사용한 Always Encrypted는 열 마스터 키 순환 워크플로를 사용하는 새로운 이유가 되고 있습니다. 이전 열 마스터 키가 Enclave 사용 키가 아니고, 새 열 마스터 키가 enclave 사용 키라고 가정하면 순환 프로세스는 결과적으로 열 마스터 키와 관련된 모든 열 암호화 키를 Enclave 사용 키로 만듭니다. 열 마스터 키 순환은 데이터를 다시 암호화하지는 않으므로 기존 열의 Enclave 기능을 사용하도록 설정하기 위한 권장 프로세스입니다.
+
+열 마스터 키를 순환해도 영향을 받는 열의 암호화 유형은 달라지지 않습니다. 따라서 확실히 암호화된 열의 바로 암호화만 잠금 해제할 수 있습니다. 결정적 암호화를 사용하여 열의 리치 계산을 잠금 해제하려면, 열 마스터 키를 순환한 후 다시 암호화해야 합니다(바로).
+
+또한 리치 계산을 잠금 해제하기 위해 임의 암호화를 사용하여 문자열 열의 데이터 정렬을 BIN2 데이터 정렬로 변경해야 할 수도 있습니다. 자세한 내용은 데이터 정렬 설정 섹션을 참조하세요.
+
+열 마스터 키 순환 프로세스는 관련 키가 Enclave 사용 키인지에 관계없이 동일합니다. 열 마스터 키를 순환하는 방법에 대한 자세한 내용은 다음 문서에 나와 있습니다.
+
+- [SSMS를 사용하여 열 마스터 키 순환](configure-always-encrypted-using-sql-server-management-studio.md)
+- [PowerShell을 사용하여 열 마스터 키 순환](rotate-always-encrypted-keys-using-powershell.md)하기
+
+사용자 편의를 위해 열 마스터 키 순환을 위한 샘플 PowerShell 스크립트가 아래에 제공됩니다.
+
+#### <a name="pre-requisites"></a>필수 구성 요소
+
+- 새 Enclave 사용 열 마스터 키를 프로비전했습니다.
+- 이전 및 새 열 마스터 키에 액세스할 수 있습니다.
+- 이전 열 마스터 키로 보호되는 모든 문자열 열은 BIN2 데이터 정렬을 사용합니다. (참고: 또는 열 마스터 키 순환 후 문자열 열의 데이터 정렬을 변경할 수 있습니다.)
+
+#### <a name="steps"></a>단계
+
+Windows PowerShell ISE에 다음 스크립트를 붙여넣고 \<자리 표시자\>를 고유한 값으로 바꿉니다.
+
+
+```powershell
+# Import the SqlServer module.
+Import-Module "SqlServer"
+
+# Connect to your database. Modify server/db name or/and the connection string, if needed.
+$serverName = "<server name>"
+$databaseName = "<database name>"
+$connStr = "Data Source = " + $serverName + "; Initial Catalog = " +
+$databaseName + "; Integrated Security = true"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# Set the names of the old/current column master key and the new/target enclave-enabled column master key. (Change the names, if needed).
+$oldCmkName = "<old column master key name>"
+$newCmkName = "<new column master key name>"
+
+# Authenticate to Azure. Needed only of either column master key is stored in Azure Key Vault.
+Add-SqlAzureAuthenticationContext -Interactive
+
+# Initiate the rotation from the current column master key to the new column master key.
+Invoke-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName
+-TargetColumnMasterKeyName $newCmkName -InputObject $database
+
+# Complete the rotation of the old column master key.
+Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName
+$oldCmkName -InputObject $database
+
+# Remove the old column master key metadata.
+Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
+```
+
+
+### <a name="re-encrypt-columns-in-place"></a>열 바로 다시 암호화 
+
+열을 Enclave 사용 열로 지정한 후에 다음 작업을 바로 수행할 수 있습니다(Enclave 내부에서 데이터베이스 외부로 데이터를 이동할 필요 없음).
+
+- 열 암호화 키 순환(새 키로 대체). 경우에 따라 주기적인 키 순환을 요구하는 준수 규정을 충족하기 위해 또는 보안상의 이유로(열 암호화 키가 손상된 경우) 필요합니다.
+- 암호화 유형을 결정적 암호화에서 임의 암호화로 변경(예를 들어 열의 리치 계산을 잠금 해제하기 위해)
+
+#### <a name="prerequisites"></a>사전 요구 사항
+
+- Enclave 사용 열 암호화 키를 사용하여 열을 암호화했습니다.
+- 새 Enclave 사용 열 암호화 키를 프로비전했습니다(현재 Enclave 사용 열 암호화 키를 대체하려는 경우 열 보호).
+- 열 마스터 키에 액세스할 수 있습니다.
+
+#### <a name="steps"></a>단계
+
+1. 데이터베이스 연결에서 Always Encrypted 및 Enclave 계산을 사용하도록 설정하여 SSMS 쿼리 창을 준비합니다. 자세한 내용은 [Always Encrypted가 사용되는 SSMS 쿼리 창 준비](#prepare-an-ssms-query-window-with-always-encrypted-enabled)를 참조하세요.
+
+2. 쿼리 창에서 ENCRYPTED WITH 절에 다음을 지정하여 ALTER COLUMN 절을 통해 [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) 문을 실행합니다.
+    
+    1. 현재 키를 순환하는 경우 새 Enclave 사용 열 암호화 키의 이름. 열 암호화 키를 변경하지 않는 경우 현재 키의 이름을 지정해야 합니다.
+    
+    2. 암호화 유형을 변경하는 경우 새 암호화 유형. 암호화 유형을 변경하지 않는 경우 현재 암호화 유형을 지정해야 합니다.
+        
+       다시 암호화하려는 열이 기본 데이터베이스 데이터 정렬과는 다른 데이터 정렬(BIN2)을 사용하는 경우 COLLATE 구를 포함하고 열 정의에 열 데이터 정렬을 지정해야 합니다(데이터 정렬을 동일하게 유지).
+        
+       > [!NOTE]
+       > 열 마스터 키가 Azure Key Vault에 저장된 경우 Azure에 로그인하라는 메시지가 표시될 수 있습니다.
+
+3. (선택 사항) [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 통해 계획 캐시를 지워 다시 암호화한 열의 쿼리 계획이 첫 번째 쿼리 실행에서 다시 생성되도록 합니다.
+    
+    영향을 받는 쿼리 계획을 캐시에서 제거하지 않으면 다시 암호화 후 첫 번째 쿼리 실행이 실패할 수 있습니다.
+    
+    > [!NOTE]
+    > 이로 인해 쿼리 성능이 일시적으로 저하될 수 있으므로 DBCC FREEPROCCACHE를 사용하여 계획 캐시를 신중하게 지웁니다. 캐시를 지울 때 나타나는 부정적인 영향을 최소화하기 위해 영향을 받는 쿼리 계획만 선택적으로 제거할 수 있습니다. 자세한 내용은 [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx)를 참조하세요.
+
+4. (선택 사항) [sp_refresh_parameter_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql)을 호출하여 열 다시 암호화로 무효화되었을 수 있는 각 모듈(저장 프로시저, 함수, 뷰, 트리거)의 매개 변수에 대한 메타데이터를 업데이트합니다.
+
+#### <a name="examples"></a>예
+
+현재, CEK1이라는 Enclave 사용 열 암호화 키 및 결정적 암호화를 사용하여 SSN 열을 암호화하며 열 수준에서 설정된 현재 데이터 정렬이 Latin1\_General\_BIN2인 경우 아래 문은 임의 암호화 및 동일한 키를 사용하여 열을 다시 암호화합니다.
+
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1]
+, ENCRYPTION_TYPE = Randomized
+, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+GO
+DBCC FREEPROCCACHE
+GO
+```
+
+
+현재, CEK1이라는 Enclave 사용 열 암호화 키 및 결정적 암호화를 사용하여 SSN 열을 암호화하며 기본 데이터베이스 데이터 정렬이 BIN2 데이터 정렬이면(또한 열 수준에서 설정되지 않음) 아래 문은 CEK2라는 새 Enclave 사용 키로 열을 다시 암호화합니다(암호화 유형을 변경하지 않음).
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ALTER COLUMN [SSN] [char](11) 
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK2]
+, ENCRYPTION\_TYPE = Deterministic
+, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+GO
+DBCC FREEPROCCACHE
+GO
+```
+
+현재, CEK1이라는 Enclave 사용 열 암호화 키 및 결정적 암호화를 사용하여 SSN 열을 암호화하며 기본 데이터베이스 데이터 정렬이 BIN2 데이터 정렬이면(또한 열 수준에서 설정되지 않음) 아래 문은 새 Enclave 사용 키 및 임의 암호화로 열을 다시 암호화합니다. 또한 이 작업은 온라인 모드에서 수행됩니다.
+
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ALTER COLUMN [SSN] [char](11) 
+ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1]
+, ENCRYPTION_TYPE = Randomized
+, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL 
+WITH (ONLINE = ON)
+GO
+DBCC FREEPROCCACHE
+GO
+```
+
+
+### <a name="re-encrypt-columns-on-the-client-side"></a>클라이언트 쪽에서 열 다시 암호화 
+
+열을 다시 암호화(및 암호화 또는 암호 해독)하는 레거시 방법은 Always Encrypted 마법사 또는 PowerShell과 같은 클라이언트 쪽 도구를 사용합니다. 일반적으로 이 방법은 열(다시 암호화할)을 포함하는 테이블이 작고, 새 Enclave 사용 키로 열을 다시 암호화한 후 암호화 유형을 (결정적에서 임의로) 변경하려는 경우를 제외하고는 권장되지 않습니다.
+
+임의 암호화를 사용하여 열을 다시 암호화하는 경우 해당 데이터 정렬을 BIN2 데이터 정렬로 변경하여(다시 암호화 이전 또는 이후) 리치 계산의 잠금을 해제해야 할 수 있습니다. 자세한 내용은 데이터 정렬 설정 섹션을 참조하세요.
+
+자세한 내용은 다음을 참조하세요.
+
+  - SSMS를 사용하여 열 암호화 키 순환: <https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-wizard>
+  - PowerShell을 사용하여 열 암호화 키 순환: <https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-column-encryption-using-powershell>
+
+### <a name="decrypt-a-column-in-place"></a>열 바로 암호 해독
+
+Enclave 사용 열 암호화 키로 열을 암호화할 경우 ALTER TABLE 문을 사용하여 바로 암호 해독(일반 텍스트 열로 변환)할 수 있습니다. 또한 이 작업은 온라인 모드에서 수행됩니다.
+
+#### <a name="prerequisites"></a>사전 요구 사항
+
+- Enclave 사용 열 암호화 키를 사용하여 열을 암호화했습니다.
+- 열 마스터 키에 액세스할 수 있습니다.
+
+
+
+#### <a name="steps"></a>단계
+
+1.  데이터베이스 연결에서 Always Encrypted 및 Enclave 계산을 사용하도록 설정하여 SSMS 쿼리 창을 준비합니다. 자세한 내용은 [Always Encrypted가 사용되는 SSMS 쿼리 창 준비](#prepare-an-ssms-query-window-with-always-encrypted-enabled)를 참조하세요.
+
+2.  쿼리 창에서 ENCRYPTED WITH 절을 사용하지 **않고** 원하는 열 구성을 지정하여 ALTER COLUMN 절을 통해 [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) 문을 실행합니다.
+    
+    > [!NOTE]
+    > 열 마스터 키가 Azure Key Vault에 저장된 경우 Azure에 로그인하라는 메시지가 표시될 수 있습니다.
+
+3.  (선택 사항) [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 통해 계획 캐시를 지워 암호 해독한 열의 쿼리 계획이 첫 번째 쿼리 실행에서 다시 생성되도록 합니다.
+    
+    > [!NOTE]
+    > 영향을 받는 쿼리 계획을 캐시에서 제거하지 않으면 암호 해독 후 첫 번째 쿼리 실행이 실패할 수 있습니다.
+    
+    > [!NOTE]
+    > 이로 인해 쿼리 성능이 일시적으로 저하될 수 있으므로 DBCC FREEPROCCACHE를 사용하여 계획 캐시를 신중하게 지웁니다. 캐시를 지울 때 나타나는 부정적인 영향을 최소화하기 위해 영향을 받는 쿼리 계획만 선택적으로 제거할 수 있습니다. 자세한 내용은 [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 참조하세요.
+
+4.  (선택 사항) [sp\_refresh\_parameter\_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql)을 호출하여 열 암호 해독으로 무효화되었을 수 있는 각 모듈(저장 프로시저, 함수, 뷰, 트리거)의 매개 변수에 대한 메타데이터를 업데이트합니다.
+
+#### <a name="example"></a>예제
+
+SSN 열을 암호화하며, 열 수준에서 설정된 현재 데이터 정렬이 Latin1\_General\_BIN2라고 가정할 경우 아래 문은 열을 암호 해독(및 데이터 정렬을 변경하지 않고 유지)합니다. 또는 데이터 정렬을 BIN2 이외의 데이터 정렬로 변경하도록 선택할 수도 있습니다.
+
+
+```sql
+ALTER TABLE [dbo].[Employees]
+ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
+WITH (ONLINE = ON)
+GO
+DBCC FREEPROCCACHE
+GO
+```
+
+
+## <a name="issue-rich-queries-against-encrypted-columns-using-ssms"></a>SSMS를 사용하여 암호화된 열에 대해 리치 쿼리 실행
+
+Enclave 사용 열에 리치 쿼리를 사용하는 가장 빠른 방법은 SSMS 쿼리 창에서 Always Encrypted에 대한 매개 변수화를 설정하는 것입니다. SSMS의 이 유용한 기능에 대한 자세한 내용은 다음을 참조하세요.
+
+- [Always Encrypted에 대한 매개 변수화 - SSMS를 사용하여 삽입, 업데이트 및 암호화된 열 기준 필터링](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [암호화된 열 쿼리](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
+
+
+
+### <a name="prerequisites"></a>사전 요구 사항
+
+- 쿼리할 열은 Enclave 사용 열입니다.
+- 열 마스터 키에 액세스할 수 있습니다.
+
+### <a name="steps"></a>단계
+
+1.  데이터베이스 연결에서 Always Encrypted 및 Enclave 계산을 사용하도록 설정하여 SSMS 쿼리 창을 준비합니다. 자세한 내용은 [Always Encrypted가 사용되는 SSMS 쿼리 창 준비](#prepare-an-ssms-query-window-with-always-encrypted-enabled)를 참조하세요.
+
+2.  Always Encrypted에 대해 매개 변수화 사용
+    
+    1.  SSMS의 주 메뉴에서 **쿼리**를 선택합니다.
+    2.  **쿼리 옵션...** 을 선택합니다.
+    3.  **실행** > **고급**으로 이동합니다.
+    4.  Always Encrypted에 대해 매개 변수화 사용을 선택하거나 선택 취소합니다.
+    5.  확인을 클릭합니다.
+
+3.  암호화된 열에 리치 계산을 사용하여 쿼리를 작성하고 실행합니다. 쿼리에서 암호화된 열을 대상으로 하는 각 값에 대해 Transact-SQL 변수를 선언해야 합니다. 변수는 인라인 초기화를 사용해야 합니다(SET 문을 통해 설정할 수 없음).
+    
+    > [!NOTE]
+    > 열 마스터 키가 Azure Key Vault에 저장된 경우 Azure에 로그인하라는 메시지가 표시될 수 있습니다.
+
+### <a name="example"></a>예제
+
+이 예제에서는 데이터베이스가 다음 문을 사용하여 만든 테이블을 포함한다고 가정합니다.
+
+```sql
+CREATE TABLE [dbo].[Employees]
+(
+    [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+    [SSN] [char](11) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    [FirstName] [nvarchar](50) NOT NULL,
+    [LastName] [nvarchar](50) NOT NULL,
+    [Salary] [int] ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
+[EmployeeID] ASC
+)
+) ON [PRIMARY]
+GO
+```
+
+
+CEK1은 Enclave 사용 열 암호화 키입니다.
+
+해당 테이블에 대해 매개 변수화 지침을 준수하는 쿼리 예제는 다음과 같습니다.
+
+
+```sql
+DECLARE @SSNPattern CHAR(11) = '%1111%'
+DECLARE @MinSalary INT = 1000
+SELECT *
+FROM [dbo].[Employees]
+WHERE SSN LIKE @SSNPattern
+    AND [Salary] >= @MinSalary;
+GO;
+```
+
+
+## <a name="develop-applications-issuing-rich-queries-in-visual-studio"></a>Visual Studio에서 리치 쿼리를 실행하는 응용 프로그램 개발
+
+### <a name="set-up-your-you-visual-studio-project"></a>Visual Studio 프로젝트 설정
+
+.NET Framework 응용 프로그램에서 보안 Enclave를 사용한 Always Encrypted를 사용하려면 .NET Framework 4.7.2에서 응용 프로그램을 빌드하고 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet에 통합해야 합니다. 또한 열 마스터 키를 Azure Key Vault에 저장하는 경우에도 응용 프로그램을 Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 버전 2.2.0 이상에 통합해야 합니다. 
+
+1. Visual Studio를 엽니다.
+2. 새 Visual C\# 프로젝트를 만들거나 기존 프로젝트를 엽니다.
+3. 프로젝트가 .NET Framework 4.7.2 이상을 대상으로 하는지 확인합니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 속성을 선택한 후 대상 프레임워크를 .NET Framework 4.7.2로 설정합니다.
+
+4. **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔**로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
+
+  ```powershell
+  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease 
+  ```
+
+5. 열 마스터 키를 저장하는 데 Azure Key Vault를 사용하는 경우 **도구** (주 메뉴) > **NuGet 패키지 관리자** > **패키지 관리자 콘솔**로 이동하여 다음 NuGet 패키지를 설치합니다. 패키지 관리자 콘솔에서 다음 코드를 실행합니다.
+
+  ```powershell
+  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 2.2.0
+  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
+  ```
+
+6. 프로젝트를 선택하고 설치를 클릭합니다.
+7. 프로젝트에서 구성 파일(예: App.config 또는 Web.config)을 엽니다.
+8. \<구성\> 섹션을 찾습니다. \<구성\> 섹션에서 \<configSections\> 섹션을 찾습니다. \<configSections\> 내에 다음 섹션을 추가합니다.
+
+  ```
+  <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
+  ```
+
+9. 구성 섹션 내의 \<configSections\> 아래에서 Intel SGX Enclave를 증명하고 상호 작용하는 데 사용할 Enclave 공급자를 지정하는 다음 섹션을 추가합니다.
+
+  ```
+  \<SqlColumnEncryptionEnclaveProviders\>
+      \<providers\>
+      \<add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,   Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
+      \</SqlColumnEncryptionEnclaveProviders\>
+  ```
+ 
+
+### <a name="develop-and-test-your-app"></a>앱 개발 및 테스트 
+
+Always Encrypted 및 Enclave 계산을 사용하려면 응용 프로그램이 연결 문자열`Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation`(여기서 xxxx는 ip, 도메인 등일 수 있음)에 다음 2가지 키워드를 사용하여 데이터베이스에 연결해야 합니다.
+
+또한 응용 프로그램은 Always Encrypted를 사용하여 응용 프로그램에 적용되는 일반 지침을 준수해야 합니다. 예를 들어, 응용 프로그램은 응용 프로그램 쿼리에서 참조되는 데이터베이스 열과 관련된 열 마스터 키에 액세스할 수 있어야 합니다.
+
+Always Encrypted를 사용하여 .NET Framework 응용 프로그램을 개발하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+
+- [.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발](develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [Always Encrypted: SQL Database의 중요한 데이터 보호 및 Azure Key Vault에 암호화 키 저장](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+
+#### <a name="example"></a>예제
+
+아래 코드는 다음 스키마를 사용하여 테이블에 대해 LIKE 쿼리를 실행하는 C\# 콘솔 앱의 간단한 예제입니다.
+
+```sql
+CREATE TABLE [dbo].[Employees]
+(
+    [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+    [SSN] [char](11) ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    [FirstName] [nvarchar](50) NOT NULL,
+    [LastName] [nvarchar](50) NOT NULL,
+    [Salary] [int] ENCRYPTED WITH (
+        COLUMN_ENCRYPTION_KEY = [CEK1],
+        ENCRYPTION_TYPE = Randomized,
+        ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+    CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
+[EmployeeID] ASC
+)
+) ON [PRIMARY]
+GO
+```
+
+CEK1은 Enclave 사용 열 암호화 키로 간주됩니다.
+
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+namespace ConsoleApp1
+{
+   class Program
+   {
+      static void Main(string\[\] args)
+   {
+
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+
+using (SqlConnection connection = new SqlConnection(connectionString))
+{
+   connection.Open();
+   
+   SqlCommand cmd = connection.CreateCommand();
+   cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
+   
+   SqlParameter paramSSNPattern = cmd.CreateParameter();
+   
+   paramSSNPattern.ParameterName = @"@SSNPattern";
+   paramSSNPattern.DbType = DbType.AnsiStringFixedLength;
+   paramSSNPattern.Direction = ParameterDirection.Input;
+   paramSSNPattern.Value = "%1111";
+   paramSSNPattern.Size = 11;
+   
+   cmd.Parameters.Add(paramSSNPattern);
+   
+   SqlParameter MinSalary = cmd.CreateParameter();
+   
+   MinSalary.ParameterName = @"@MinSalary";
+   MinSalary.DbType = DbType.Int32;
+   MinSalary.Direction = ParameterDirection.Input;
+   MinSalary.Value = 900;
+   
+   cmd.Parameters.Add(MinSalary);
+   cmd.ExecuteNonQuery();
+   
+   SqlDataReader reader = cmd.ExecuteReader();
+   while (reader.Read())
+   
+   {
+     Console.WriteLine(reader);
+     Console.WriteLine(reader\[0\] + ", " + reader\[1\] + ", " + reader\[2\] + ", " + reader\[3\]);
+   }
+
+   Console.ReadKey();
+
+   }
+  }
+ }
+}
+```

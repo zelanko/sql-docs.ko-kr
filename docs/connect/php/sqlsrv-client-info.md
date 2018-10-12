@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710451"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,21 +44,21 @@ sqlsrv_client_info( resource $conn)
   
 **SQL Server 버전 3.2 및 3.1용 PHP**:  
   
-|Key|Description|  
+|Key|설명|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL(ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 버전(xx.yy)|  
-|DriverVer|ODBC Driver 11 for SQL Server DLL 버전:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.2 또는 3.1)|  
-|ExtensionVer|php_sqlsrv.dll 버전:<br /><br />3.2.xxxx.x (에 대 한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.2)<br /><br />3.1.xxxx.x (에 대 한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.1)|  
+|DriverVer|ODBC Driver 11 for SQL Server DLL 버전:<br /><br />xx.yy.zzzz([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.2 또는 3.1)|  
+|ExtensionVer|php_sqlsrv.dll 버전:<br /><br />3.2.xxxx.x([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.2)<br /><br />3.1.xxxx.x([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 3.1)|  
   
 **SQL Server 3.0 및 2.0 버전용 PHP**:  
   
-|Key|Description|  
+|Key|설명|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10 합니다. DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
+|DriverDllName|SQLNCLI10.DLL([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
 |DriverODBCVer|ODBC 버전(xx.yy)|  
-|DriverVer|다음은 SQL Server Native Client DLL 버전입니다.<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
-|ExtensionVer|php_sqlsrv.dll 버전:<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
+|DriverVer|다음은 SQL Server Native Client DLL 버전입니다.<br /><br />10.50.xxx([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
+|ExtensionVer|php_sqlsrv.dll 버전:<br /><br />2.0.xxxx.x([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 2.0)|  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 명령줄에서 예제가 실행될 때 콘솔에 클라이언트 정보를 씁니다. 이 예제에서는 SQL Server가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

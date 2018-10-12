@@ -5,32 +5,29 @@ ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7c962e1506de5de3b0f7b982a1047f37ca5bd00e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ca462fb27e854b31ffd5096b256dc711e2d965c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699731"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
   
- Windows Azure Blob 저장소 서비스를 사용하는 SQL Server 백업 및 복원 작업에 대한 자세한 내용은 다음을 참조하십시오.  
+ Windows Azure Blob Storage 서비스를 사용하는 SQL Server 백업 및 복원 작업에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>백업 관리  
  다음은 백업 관리 시 일반적으로 권장되는 사항입니다.  
@@ -49,18 +46,18 @@ ms.locfileid: "32920708"
   
 ## <a name="handling-large-files"></a>큰 파일 처리  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 저장소 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. Azure [저장소에 대한 SLA](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 에서는 Blob에 대해 고려 가능한 최대 처리 시간을 제공합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob Storage 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. Azure [저장소에 대한 SLA](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 에서는 Blob에 대해 고려 가능한 최대 처리 시간을 제공합니다.  
   
 -   특히 큰 파일을 백업할 때 [백업 관리](##managing-backups) 섹션에서 권장하는 대로 `WITH COMPRESSION` 옵션을 사용해야 합니다.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>URL 백업 또는 복원 문제 해결  
  다음은 Windows Azure Blob 스토리지 서비스로 백업하고 복원할 때 발생하는 문제를 해결하는 몇 가지 빠른 방법입니다.  
   
- 지원되지 않는 옵션이나 제한 사항으로 인한 오류 발생을 방지하려면 제한 사항 목록과 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 문서의 BACKUP 및 RESTORE 명령 지원 정보를 검토하세요.  
+ 지원되지 않는 옵션이나 제한 사항으로 인한 오류 발생을 방지하려면 제한 사항 목록과 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 문서의 BACKUP 및 RESTORE 명령 지원 정보를 검토하세요.  
   
  **인증 오류:**  
   
--   `WITH CREDENTIAL`은 Windows Azure Blob 저장소 서비스로 백업하거나 복원하는 데 필요한 새로운 옵션입니다. 자격 증명과 관련하여 다음과 같은 오류가 발생할 수 있습니다.  
+-   `WITH CREDENTIAL`은 Windows Azure Blob Storage 서비스로 백업하거나 복원하는 데 필요한 새로운 옵션입니다. 자격 증명과 관련하여 다음과 같은 오류가 발생할 수 있습니다.  
   
      **BACKUP** 또는 **RESTORE** 명령에 지정된 자격 증명이 없습니다. 이 문제를 방지하려면 백업 문에 자격 증명이 없는 경우 자격 증명을 만드는 T-SQL 문을 포함합니다. 다음은 사용 가능한 예입니다.  
   
@@ -93,7 +90,24 @@ ms.locfileid: "32920708"
         -   **VERIFYONLY**  
   
     -   Windows 이벤트 로그의 응용 프로그램에서 이름이 `SQLBackupToUrl`인 로그를 검토하여 정보를 찾을 수도 있습니다.  
+
+    -   큰 데이터베이스를 백업하는 경우 COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE 및 여러 URL 인수를 고려합니다.  [Azure Blob Storage로 VLDB 백업](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)을 참조하세요.
   
+        ```
+        Msg 3202, Level 16, State 1, Line 1
+        Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+        Msg 3013, Level 16, State 1, Line 1
+        BACKUP DATABASE is terminating abnormally.
+        ```
+
+        ```sql  
+        BACKUP DATABASE TestDb
+        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+        ```  
+
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5  

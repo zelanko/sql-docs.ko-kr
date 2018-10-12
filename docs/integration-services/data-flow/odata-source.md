@@ -1,13 +1,11 @@
 ---
 title: OData 원본 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692131"
 ---
 # <a name="odata-source"></a>OData 원본
-SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다. 구성 요소는 OData v3 및 v4 프로토콜을 지원합니다.  
+SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다.
+
+## <a name="supported-protocols-and-data-formats"></a>지원되는 프로토콜 및 데이터 형식
+
+구성 요소는 OData v3 및 v4 프로토콜을 지원합니다.  
   
 -   OData V3 프로토콜의 경우 구성 요소는 ATOM 및 JSON 데이터 형식을 지원합니다.  
   
 -   OData V4 프로토콜의 경우 구성 요소는 JSON 데이터 형식을 지원합니다.  
 
+## <a name="supported-data-sources"></a>지원되는 데이터 원본
+
 OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 -   Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online
 -   SharePoint 목록 SharePoint 서버의 모든 목록을 보려면 다음 URL을 사용합니다. http://\<server>/_vti_bin/ListData.svc SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](http://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.
 
-> [!NOTE]
+## <a name="supported-data-types"></a>지원되는 데이터 형식
+
+OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string 및 TimeSpan을 지원합니다.
+
+데이터 원본에 있는 열의 데이터 형식을 검색하려면 `http://<OData feed endpoint>/$metadata` 페이지를 확인입니다.
+
+> [!IMPORTANT]
 > OData 원본 구성 요소는 SharePoint 목록에서 다중 선택 항목과 같은 복합 형식을 지원하지 않습니다.
 
 ## <a name="odata-format-and-performance"></a>OData 형식 및 성능
@@ -98,7 +107,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 ## <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 원본 열의 목록을 표시합니다. 목록의 확인란을 사용하여 페이지의 아래쪽에 있는 테이블에 열을 추가하거나 제거할 수 있습니다. 선택한 열이 출력에 추가됩니다.  
   
@@ -111,7 +120,7 @@ OData 원본에는 다음 데이터 원본에 대한 지원이 포함됩니다.
 ## <a name="odata-source-editor-error-output-page"></a>OData 원본 편집기(오류 출력 페이지)
   **OData 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

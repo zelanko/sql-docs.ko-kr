@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - audits [SQL Server], viewing logs
@@ -17,12 +15,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d40461b7f97456493017852adc7749fd78c4911
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b05de4a591964336b9d54ff3319086f818d6231f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650241"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 감사 로그 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "43033746"
   
 2.  **감사** 폴더를 확장합니다.  
   
-3.  보려는 감사 로그를 마우스 오른쪽 단추로 클릭하고 **감사 로그 보기**를 선택합니다. 그러면 **로그 파일 뷰어 –***server_name* 대화 상자가 열립니다. 자세한 내용은 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)을 참조하세요.  
+3.  보려는 감사 로그를 마우스 오른쪽 단추로 클릭하고 **감사 로그 보기**를 선택합니다. 그러면 **로그 파일 뷰어 –**_server\_name_ 대화 상자가 열립니다. 자세한 내용은 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)을 참조하세요.  
   
 4.  완료되면 **닫기**를 클릭합니다.  
   

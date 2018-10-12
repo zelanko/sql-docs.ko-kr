@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: linked-servers
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76c1666b70f7df6b5aa0939dd469be444d865ed7
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: 3a6b69707626c67ae1d96f305a46bf5b0fd09317
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618057"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ ms.locfileid: "39349991"
   
 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 연결된 서버를 정의할 수 있습니다. 개체 탐색기에서 **서버 개체**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 선택하고 **연결된 서버**를 선택합니다. 연결된 서버 이름을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택하면 연결된 서버 정의를 삭제할 수 있습니다.  
   
- 연결된 서버에 대해 분산 쿼리를 실행할 경우 각 데이터 원본에서 쿼리할 정식 이름인, 네 부분으로 된 테이블 이름이 포함됩니다. 네 부분으로 된 이 이름은 *linked_server_name.catalog ***.*** schema ***.*** object_name* 형식이어야 합니다.  
+ 연결된 서버에 대해 분산 쿼리를 실행할 경우 각 데이터 원본에서 쿼리할 정식 이름인, 네 부분으로 된 테이블 이름이 포함됩니다. 네 부분으로 된 이 이름은 _linked\_server\_name.catalog_**.**_schema_**.**_object\_name_ 형식이어야 합니다.  
   
 > [!NOTE]  
 > 연결된 서버는 이 서버가 정의된 서버의 포인트 백(루프백)에 정의될 수 있습니다. 단일 서버 네트워크에서 분산 쿼리를 사용하는 응용 프로그램을 테스트할 때 루프백 서버를 유용하게 사용할 수 있습니다. 루프백 연결된 서버는 테스트를 위한 것이며 분산 트랜잭션과 같은 많은 작업에 지원되지 않습니다.  

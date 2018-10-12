@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d998ff74480ffebf0f77dd1deacd9efe2e305f9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703211"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ ms.locfileid: "43069071"
   
 4.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
   
-5.  *****table_name에서 열 선택* 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+5.  _table\_name_**에서 열 선택** 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -119,7 +116,7 @@ ms.locfileid: "43069071"
   
 9. **닫기**를 클릭합니다.  
   
-10. **파일** 메뉴에서 **Save***table_name*을 클릭합니다.  
+10. **파일** 메뉴에서 _table\_name_ **저장**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -129,7 +126,7 @@ ms.locfileid: "43069071"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

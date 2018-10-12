@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e2e0ad779b9299538e99d16b6f91c6b668bebfe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bff2fbab16e2f087e0e670e91185aad7b817d3a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724593"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>테이블의 종속성 보기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "43099600"
   
 2.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
-3.  **개체 종속성***\<개체 이름>* 대화 상자에서 *\<개체 이름>* **에 종속된 개체** 또는  *****\<개체 이름>*** 이 종속된 개체**를 선택합니다.  
+3.  **개체 종속성**_\<개체 이름\>_ 대화 상자에서 _\<개체 이름\>_**에 종속된 개체** 또는 _\<개체 이름\>_**이(가) 종속된** **개체**를 선택합니다.  
   
 4.  **종속성** 표에서 개체를 선택합니다. 개체 유형(예: "트리거" 또는 "저장 프로시저")이 **유형** 상자에 표시됩니다.  
   

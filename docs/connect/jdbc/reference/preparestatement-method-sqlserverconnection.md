@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareStatement
@@ -15,34 +13,33 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9f99b81a54919febf8e6672149e4e56a0e02b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5c3f1085c240940394ff02c61415fac2f689d4f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643041"
 ---
-# <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement 메서드 (SQLServerConnection)
+# <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 보내는 개체를 데이터베이스에 대 한 SQL 문을 매개 변수화 합니다.  
+  데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[prepareStatement (java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 보내는 개체를 데이터베이스에 대 한 SQL 문을 매개 변수화 합니다.|  
-|[prepareStatement (java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 보내는 개체를 매개 변수가 있는 SQL 문을 데이터베이스에 있으며 자동 생성 키를 검색할 수 있는 기능입니다.|  
-|[prepareStatement (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 보내는 개체를 데이터베이스에 대 한 SQL 문을 매개 변수화 하 고 특정 배열로 지정 된 자동 생성 키의 경우 수를 합니다.|  
-|[prepareStatement (java.lang.String, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 생성 하는 개체 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 형식 및 동시성을 사용 하 여 개체입니다.|  
-|[prepareStatement (java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 생성 하는 개체 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 형식, 동시성 및 유지 기능을 사용 하 여 개체입니다.|  
-|[prepareStatement (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-java-lang-string.md)|만듭니다는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 보내는 개체를 데이터베이스에 대 한 SQL 문을 매개 변수화 합니다.|  
+|[prepareStatement(java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
+|[prepareStatement(java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만들며, 자동 생성 키를 검색할 수 있습니다.|  
+|[prepareStatement(java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만들며, 특정 배열로 지정된 자동 생성 키를 검색할 수 있습니다.|  
+|[prepareStatement(java.lang.String, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int.md)|지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
+|[prepareStatement(java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|지정된 형식, 동시성 및 유지 기능을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
+|[prepareStatement(java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-java-lang-string.md)|데이터베이스로 매개 변수가 있는 SQL 문을 보내기 위한 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 만듭니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

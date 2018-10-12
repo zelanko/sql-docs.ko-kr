@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188140965c0040f8454156555b71adbd2fe89ce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0b9dad3c76b8ffec130e41ab147a81439167de86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699897"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에 의해 노출 되는 멤버가 나와 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 클래스입니다.  
+  다음 표에는 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
  없음  
@@ -37,13 +34,13 @@ ms.locfileid: "32851068"
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체에서 이벤트가 발생할 때 알림을 받이 됩니다 있도록 지정된 된 이벤트 수신기를 등록 합니다.|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체가 나타내는 실제 연결을 닫습니다.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체가 나타내는 실제 연결에 대 한 개체 핸들을 만듭니다.|  
-|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|검색 한 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 이의 참여를 관리 하는 트랜잭션 관리자는 사용 하 여 개체 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 분산 트랜잭션에서 개체입니다.|  
-|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 지정된 된 이벤트 수신기를 제거 합니다.|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 지정된 이벤트 수신기를 등록하여 이 Connection 개체에서 이벤트가 발생할 때 해당 수신기가 알림을 받도록 합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 이 Connection 개체가 나타내는 실제 연결을 닫습니다.|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 이 Connection 개체가 나타내는 실제 연결에 대한 개체 핸들을 만듭니다.|  
+|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|트랜잭션 관리자가 분산 트랜잭션에서 이 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 개체의 참여를 관리하는 데 사용할 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체를 검색합니다.|  
+|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)에서 상속되며, 지정된 이벤트 수신기를 제거합니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  
   
@@ -53,7 +50,7 @@ ms.locfileid: "32851068"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |javax.sql.PooledConnection|addConnectionEventListener, close, getConnection, removeConnectionEventListener|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerXAConnection 클래스](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)  
   
   

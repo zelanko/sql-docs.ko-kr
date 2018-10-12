@@ -5,25 +5,22 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864301"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -602,7 +599,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
 > -   Always On 가용성 그룹에 SSISDB를 추가한 *후* **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.  
 
 > [!NOTE]
-> 이 절차에 대한 자세한 내용은 SQL Server MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016에 대한 AG에 SSISDB 추가](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016에 대한 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> 1단계: Integration Services 카탈로그 만들기  
   

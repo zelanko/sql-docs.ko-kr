@@ -5,23 +5,20 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 517ebaea849cad131742211f68dc1ac9fe0f9731
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597987"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "42784288"
   
 2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver 다운로드가 `msodbcsql-11.0.2270.0.tar.gz`라는 파일을 배치한 디렉터리로 이동합니다. Linux 버전과 일치하는 \*.tar.gz 파일이 있는지 확인합니다. 파일을 추출하려면 **tar xvzf msodbcsql-11.0.2270.0.tar.gz** 명령을 실행합니다.  
 
-3.  `msodbcsql-11.0.2270.0` 디렉터리로 변경하면 `build_dm.sh`install.sh라는 파일이 나타납니다. 실행할 수 있습니다 `build_dm.sh` unixODBC 드라이버 관리자를 설치 합니다.
+3.  `msodbcsql-11.0.2270.0` 디렉터리로 변경하면 `build_dm.sh`라는 파일이 나타납니다. 실행할 수 있습니다 `build_dm.sh` unixODBC 드라이버 관리자를 설치 합니다.
 
 4.  사용 가능한 옵션 목록을 보려면 **./build_dm.sh --help** 명령을 실행합니다.  
   

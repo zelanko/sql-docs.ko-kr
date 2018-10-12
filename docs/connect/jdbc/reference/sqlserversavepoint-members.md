@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d347f887ff171553f519a08753470c59c12ebde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632761"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에 의해 노출 되는 멤버가 나와 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스입니다.  
+  다음 표에는 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|새 인스턴스를 초기화는 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스 지정 된 연결 및 이름에 기반 합니다.|  
+|[SQLServerSavepoint(SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|지정된 연결 및 이름에 따라 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
 ## <a name="fields"></a>필드  
  없음  
@@ -40,7 +37,7 @@ ms.locfileid: "32848798"
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|저장점 레이블의 이름을 가져옵니다.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|저장점의 ID를 가져옵니다.|  
@@ -53,7 +50,7 @@ ms.locfileid: "32848798"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerSavepoint 클래스](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

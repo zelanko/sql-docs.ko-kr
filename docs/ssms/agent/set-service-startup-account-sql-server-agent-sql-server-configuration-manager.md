@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 041143d7b55876386e3384060e0da2b340646b76
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1acdb92933bfaaf73b68fa4101dd882d14f0dca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764431"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,9 +78,9 @@ ms.locfileid: "42775906"
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 서비스**를 선택합니다.  
   
-6.  세부 정보 창에서 **SQL Server 에이전트***(server_name)* 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name*은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성**을 선택합니다.  
+6.  세부 정보 창에서 **SQL Server 에이전트**_(server\_name)_ 를 마우스 오른쪽 단추로 클릭합니다. 여기서 *server_name*은 서비스 시작 계정을 변경하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스의 이름입니다. 그런 다음, **속성**을 선택합니다.  
   
-7.  **SQL Server 에이전트***(server_name)* **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
+7.  **SQL Server 에이전트**_(server\_name)_ **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
   
     -   **기본 제공 계정**: 로컬 서버의 리소스만 작업에 필요한 경우 이 옵션을 선택합니다. Windows 기본 제공 계정 유형을 선택하는 방법은 [SQL Server 에이전트 서비스에 대한 계정 선택](http://msdn.microsoft.com/library/ms191543.aspx)을 참조하세요.  
   

@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719261"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 ## <a name="performance"></a>성능
  압축 파일을 사용할 때는 항상 외부 데이터 원본과 SQL Server 간에 전송되는 데이터가 더 적다는 점과, 데이터 압축 및 압축 풀기를 위한 CPU 사용량이 증대한다는 점 사이의 상호 절충이 따릅니다.
   
- Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 계산 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 현재 릴리스의 데이터 Reader 프로세스의 최대 수는 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
+ Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 계산 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 최대 데이터 Reader 프로세스 수는 노드당 20개 Reader에 해당하는 Azure SQL Data Warehouse Gen2를 제외하고 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   

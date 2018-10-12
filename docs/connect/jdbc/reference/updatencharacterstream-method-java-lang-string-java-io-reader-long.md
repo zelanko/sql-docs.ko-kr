@@ -1,25 +1,22 @@
 ---
-title: updateNCharacterStream 메서드 문자열 판독기-긴) | Microsoft Docs
+title: updateNCharacterStream 메서드 문자열 판독기-long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35b39fda419644e0c9d7c424d3909dddac91fff4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1ca23d9813cbcdeb73aa67b1036b6dcc4aabe82a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687766"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +35,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>매개 변수  
  *columnLabel*  
   
- A **문자열** 열 레이블이 들어 있는입니다.  
+ 열 레이블이 포함된 **문자열**입니다.  
   
- *판독기*  
+ *reader*  
   
  판독기 개체입니다.  
   
@@ -51,17 +48,17 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 updateNCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 updateNCharacterStream 메서드에 의해 지정 됩니다.  
   
- 이 메서드는 판독기 개체를 유니코드 문자를 전달 **nchar**, **nvarchar (max)**, **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 선택한 판독기 개체에서 유니코드 문자를 전달 **nchar**를 **nvarchar (max)** 를 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
- 스트림의 길이에 지정 된 것 보다 다른 경우는 *길이* 매개 변수를 JDBC 드라이버는 경우 예외를 throw 행이 업데이트 되거나 삽입 합니다.  
+ 스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   
- 스트림의 길이 알 수 없으면는 *길이* 드라이버의 길이 상관 없이 스트림을 수락 해야 함을 나타내려면 매개 변수를-1로 설정할 수 있습니다. Sqljdbc4.jar을 JDBC 4.0 메서드를 사용 하면 권장 [updateNCharacterStream 메서드 &#40;java.lang.String, java.io.Reader&#41; ](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md) 응용 프로그램에서 길이 스트림에서 열을 업데이트 하려고 할 때 알 수 없는 합니다.  
+ 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 응용 프로그램에서 길이를 알 수 없는 스트림의 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [updateNCharacterStream 메서드(java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)를 사용하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [updateNCharacterStream 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>참고 항목  
+ [updateNCharacterStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

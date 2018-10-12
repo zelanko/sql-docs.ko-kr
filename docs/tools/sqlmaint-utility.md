@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlmaint
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625191"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +82,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+ **-S** *server_name*[ **\\**_instance\_name_]  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
  **-U** *login_ID*  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
@@ -209,8 +205,7 @@ dbname_log_yyyymmddhhmm.BAK
  디스크 백업의 경우 백업을 만든 후 시간 간격이 \<*time_period*>를 초과하면 백업 디렉터리에 있는 모든 백업 파일을 삭제하도록 지정합니다.  
   
  **-CrBkSubDir**  
- 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. 
-  **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
+ 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
   
  **backup_path**  
  디스크 백업의 경우 기본 백업 디렉터리에 백업 파일을 만들도록 지정합니다. 둘 다 지정한 경우**UseDefDir** 이 *backup_path* 보다 우선 적용됩니다. 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설정을 사용하는 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup입니다.  

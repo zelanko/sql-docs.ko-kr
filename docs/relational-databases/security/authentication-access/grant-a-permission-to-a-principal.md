@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 12
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c62a0eb58db1a57d68ca1e43980f23a799fe277f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787181"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43118090"
   
 4.  저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  *저장 프로시저 속성 –***stored_procedure_name* 대화 상자에서 페이지를 선택하고 **사용 권한**을 선택합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
+5.  **저장 프로시저 속성 –**_stored\_procedure\_name_ 대화 상자에서 페이지를 선택하고 **사용 권한**을 선택합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -83,7 +80,7 @@ ms.locfileid: "43118090"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

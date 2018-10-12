@@ -1,11 +1,10 @@
 ---
 title: 온라인 인덱스 작업에 대한 지침 | Microsoft 문서
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b37a9c192d17275deb4d37ac244f45ad402f8b4b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8b2947f9e9d3a6ba075bfe1a87d5f76cdbcb84c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731011"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43059675"
 -   테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
   
 -   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
-- 예기치 않은 오류, 데이터베이스 장애 조치(failover) Ehsms **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
+- 예기치 않은 오류, 데이터베이스 장애 조치(failover) 또는 **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요. 
 
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -94,7 +91,7 @@ ms.locfileid: "43059675"
 ## <a name="resumable-index-considerations"></a>다시 시작 가능한 인덱스 고려 사항
 
 > [!NOTE]
-> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터)(인덱스 다시 작성만 해당) 및 SQL Database(비클러스터형 인덱스 만들기 및 인덱스 다시 작성)에 적용됩니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md)(현재 SQL Database 공개 미리 보기로만 제공됨) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요. 
+> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터)(인덱스 다시 작성만 해당) 및 SQL Database(인덱스 만들기 및 인덱스 다시 작성)에 적용됩니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md)(현재 SQL Database 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]의 공개 미리 보기에 제공됨) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요. 
 
 다시 시작 가능한 온라인 인덱스 만들기 또는 다시 작성을 수행할 경우 다음 지침이 적용됩니다.
 -   인덱스 유지 관리 기간의 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 만들기 및 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
@@ -118,7 +115,7 @@ ms.locfileid: "43059675"
 ## <a name="online-default-options"></a>온라인 기본 옵션 
 
 > [!IMPORTANT]
-> 이러한 옵션은 공개 미리 보기 상태입니다.
+> 이러한 옵션은 SQL Database 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]의 공개 미리 보기로 제공됩니다.
 
 ELEVATE_ONLINE 또는 ELEVATE_RESUMABLE 데이터베이스 범위 구성 옵션을 설정하여 데이터베이스 수준에서 online 또는 resumable에 대한 기본 옵션을 설정할 수 있습니다. 이러한 기본 옵션을 통해 실수로 데이터베이스 테이블을 오프라인으로 전환하는 작업을 수행하는 것을 방지할 수 있습니다. 두 옵션 모두 엔진이 특정 작업의 권한을 자동으로 online 또는 resumable 실행으로 상승시키도록 합니다.  
 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 명령을 사용하여 옵션을 FAIL_UNSUPPORTED, WHEN_SUPPORTED 또는 OFF 중 하나로 설정할 수 있습니다. online 및 resumable에 대해 다른 값을 설정할 수 있습니다. 
@@ -129,12 +126,9 @@ ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 online 및 resumable 구문을 각각 �
 > ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 XML 인덱스 작업에 적용되지 않습니다. 
  
 ## <a name="related-content"></a>관련 내용  
- [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

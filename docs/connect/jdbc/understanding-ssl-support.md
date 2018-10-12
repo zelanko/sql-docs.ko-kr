@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697421"
 ---
 # <a name="understanding-ssl-support"></a>SSL 지원 이해
 
@@ -82,7 +79,7 @@ SSL 핸드셰이크 중 서버는 공개 키 인증서를 클라이언트로 보
   
 - 주체의 CN(일반 이름) 또는 인증서의 SAN(주체 대체 이름)에 있는 DNS 이름은 연결 문자열 또는 **hostNameInCertificate** 속성 값(지정된 경우)에 지정된 **serverName** 값과 정확히 일치합니다.  
   
-- DNS 이름은 와일드카드 문자를 포함할 수 있습니다. 그러나 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 와일드카드 일치를 지원하지 않습니다. 즉, abc.com은 *.com과 일치하지 않지만 \*.com은 \*.com과 일치합니다.  
+- DNS 이름은 와일드카드 문자를 포함할 수 있습니다. 그러나 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 와일드카드 일치를 지원하지 않습니다. 즉, abc.com은 \*.com과 일치하지 않지만 \*.com은 \*.com과 일치합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDriver.getPropertyInfo
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2b08a3ffe01bda19b25e2164078d89f3e68a741
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 889f530496dd5fa975822702282cc78b99197318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624851"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +39,9 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
 #### <a name="parameters"></a>매개 변수  
  *Url*  
   
- A **문자열** 데이터베이스에 연결 하는 데 사용 되는 URL을 포함 하는 값입니다.  
+ 데이터베이스에 연결하는 데 사용되는 URL이 들어 있는 **String** 값입니다.  
   
- *정보*  
+ *Info*  
   
  속성 값 쌍(처음 사용할 때는 null)의 목록입니다.  
   
@@ -54,10 +51,10 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getPropertyInfo 메서드는 java.sql.Driver 인터페이스의 getPropertyInfo 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDriver 메서드](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver 멤버](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver 클래스](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

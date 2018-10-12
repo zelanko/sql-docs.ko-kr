@@ -1,13 +1,11 @@
 ---
-title: relative 메서드 (SQLServerResultSet) | Microsoft Docs
+title: relative 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.relative
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ede86bd361d4ca496eb4d99cd7b01b1e7a7ee886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04f353734f6053808972c5cb977658e512222ddb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637131"
 ---
-# <a name="relative-method-sqlserverresultset"></a>relative 메서드 (SQLServerResultSet)
+# <a name="relative-method-sqlserverresultset"></a>relative 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   현재 행을 기준으로 지정된 행 수만큼 커서를 양의 방향 또는 음의 방향으로 이동합니다.  
@@ -41,22 +38,22 @@ public boolean relative(int nRows)
 #### <a name="parameters"></a>매개 변수  
  *nRows*  
   
- **int** 이동할 행 수를 나타내는입니다.  
+ 이동할 행 수를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **true 이면** 커서가 행에 있는 경우. 그렇지 않으면 **false**입니다.  
+ 커서가 행에 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 상대이 메서드는 java.sql.ResultSet 인터페이스의 상대 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 상대 메서드는 java.sql.ResultSet 인터페이스의 상대 메서드에 의해 지정 됩니다.  
   
- 결과 집합의 첫 번째 또는 마지막 행을 지나 이동하려고 하면 커서가 첫 번째 행의 앞이나 마지막 행의 뒤에 놓입니다. 호출 `relative(0)` 유효 하지만 커서 위치가 변경 되지 않습니다.  
+ 결과 집합의 첫 번째 또는 마지막 행을 지나 이동하려고 하면 커서가 첫 번째 행의 앞이나 마지막 행의 뒤에 놓입니다. `relative(0)`를 호출할 수는 있지만 이 경우 커서 위치가 변경되지 않습니다.  
   
- 메서드를 호출 하면 `relative(1)` 는 호출 하는 [다음](../../../connect/jdbc/reference/next-method-sqlserverresultset.md) 메서드. 메서드를 호출 하면 `relative(-1)` 는 호출 하는 [이전](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md) 메서드.  
+ `relative(1)` 메서드를 호출하는 것은 [next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md) 메서드를 호출하는 것과 같습니다. `relative(-1)` 메서드를 호출하는 것은 [previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md) 메서드를 호출하는 것과 같습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

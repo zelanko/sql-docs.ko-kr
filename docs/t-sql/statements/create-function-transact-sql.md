@@ -5,9 +5,7 @@ ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864291"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -341,7 +338,7 @@ RETURNS return_data_type
  *select_stmt*  
  인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
   
- ORDER (\<order_clause>) 테이블 반환 함수에서 결과가 반환되는 순서를 지정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "정렬 순서 사용에 대한 지침" 섹션을 참조하세요.  
+ ORDER (\<order_clause>) 테이블 반환 함수에서 결과가 반환되는 순서를 지정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 “[CLR 테이블 반환 함수에서 정렬 순서 사용](#using-sort-order-in-clr-table-valued-functions)” 섹션을 참조하세요.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -658,7 +655,7 @@ RETURNS return_data_type
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|사용자 정의 함수에 정의된 매개 변수에 대한 정보를 표시합니다.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|함수에서 참조하는 기본 개체를 표시합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 CREATE FUNCTION 권한과 함수가 생성되는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604235"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-결과 집합의 다음 행을 읽기에 사용할 수 있습니다. 사용 하 여 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 행의 필드를 읽을 수 있습니다.  
+결과 집합의 다음 행을 읽기에 사용할 수 있습니다. [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)를 사용하여 행의 필드를 읽습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > 결과를 검색하려면 문이 실행되어야 합니다. 문 실행에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)를 참조하세요.  
   
-*행* [선택 사항]: 스크롤 가능 커서를 사용 하는 결과 집합에서 액세스할 행을 지정 하는 다음 값 중 하나:  
+*row* [선택 사항]: 다음 값 중 하나로, 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다.  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.  
   
-*오프셋* [선택 사항]: 검색할 행을 지정 하려면 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE 함께 사용 합니다. 결과 집합의 첫 번째 레코드는 0입니다.  
+*offset* [선택 사항]: 검색할 행을 지정하는 데 SQLSRV_SCROLL_ABSOLUTE 및 SQLSRV_SCROLL_RELATIVE와 함께 사용됩니다. 결과 집합의 첫 번째 레코드는 0입니다.  
   
 ## <a name="return-value"></a>반환 값  
 결과 집합의 다음 행을 성공적으로 검색하면 **true** 가 반환됩니다. 결과 집합에 더 이상 결과가 없으면 **null** 이 반환됩니다. 오류가 발생한 경우 **false** 가 반환됩니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 **sqlsrv_fetch** 를 사용하여 제품 검토 및 검토자 이름이 포함된 데이터 행을 검색합니다. 결과 집합에서 데이터를 검색할 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 사용 됩니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 **sqlsrv_fetch** 를 사용하여 제품 검토 및 검토자 이름이 포함된 데이터 행을 검색합니다. 결과 집합에서 데이터를 검색하려면 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)가 사용됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  
@@ -126,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  

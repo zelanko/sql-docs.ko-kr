@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777971"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +150,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
   
- @shouldalert  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 파일 그룹 이름으로 "default"를 지원합니다.  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. 인덱싱된 뷰나 비클러스터형 인덱스에는 MOVE TO를 사용할 수 없습니다. 파티션 구성표 또는 파일 그룹을 지정하지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파티션 구성표 또는 파일 그룹에 위치합니다.  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  인덱싱된 뷰의 클러스터형 인덱스를 삭제하면 해당 뷰의 모든 비클러스터형 인덱스와 자동 생성된 통계가 자동으로 삭제됩니다. 수동으로 생성된 통계는 삭제되지 않습니다.  
   
- *table_or_view_name ***.*** index_name* 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
+ _table\_or\_view\_name_**.**_index\_name_ 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
   
  128개 이상의 익스텐트를 가진 인덱스가 삭제되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 트랜잭션이 커밋될 때까지 실제 페이지 할당 취소 및 관련 잠금을 연기합니다.  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 클러스터형 인덱스가 OFFLINE으로 삭제되면 클러스터형 인덱스의 상위 수준만 제거되므로 작업이 상당히 빠르게 수행됩니다. 클러스터형 인덱스를 ONLINE으로 삭제하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 1단계와 2단계에서 한 번씩, 총 두 번에 걸쳐 힙을 다시 작성합니다. 데이터 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
 ## <a name="xml-indexes"></a>XML 인덱스  
- XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 *table_or_view_name ***.*** index_name* 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
+ XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 _table\_or\_view\_name_**.**_index\_name_ 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   
 ## <a name="spatial-indexes"></a>공간 인덱스  
- 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.***index_name*을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
+ 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.**_index\_name_을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

@@ -1,12 +1,10 @@
 ---
 title: CREATE EXTERNAL RESOURCE POOL(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 09/11/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -23,22 +21,21 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-ms.openlocfilehash: 7e4ae3239332c004ad6ceda624b641b7bf7603be
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c74b693bb813970aa795837b568af66a04847c61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805561"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] ~ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 외부 프로세스에 대한 리소스를 정의하는 데 사용된 외부 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리 및 CPU)의 하위 집합을 나타냅니다. 데이터베이스 관리자는 리소스 관리자를 사용하여 서버 리소스를 최대 64개의 리소스 풀에 배치할 수 있습니다.
 
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 
-+ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]에서 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]의 경우 외부 풀은 SQL Server 2016에 나열된 R 프로세스뿐 아니라 `python.exe`, `BxlServer.exe` 및 이들에 의해 생성된 다른 프로세스를 제어합니다.
++ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]에 있는 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]의 경우 외부 풀은 `rterm.exe`, `python.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

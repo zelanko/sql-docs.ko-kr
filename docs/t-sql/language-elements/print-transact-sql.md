@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PRINT_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eaf2160f9655c4988e42c0ca0a1df3ef8ff17e0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073216"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705801"
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +49,7 @@ PRINT msg_str | @local_variable | string_expr
  문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.  
   
  **@** *local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@***local_variable*은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야합니다.  
+ 유효한 문자 데이터 형식의 변수입니다. **@**_local\_variable_은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  

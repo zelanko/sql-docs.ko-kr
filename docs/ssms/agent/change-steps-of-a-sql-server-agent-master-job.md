@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0909562fb69695b3efde0663bc0afa48178c4358
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 41fcde697bcdaa0334ed364c7c12cd9d3e8481d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733691"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +63,13 @@ ms.locfileid: "42775993"
   
 4.  단계를 수정하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성-***job_name* 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
+5.  **작업 속성 –**_job\_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
   
-6.  **편집**을 클릭하여 **작업 단계 속성 –***job_step_name* 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
+6.  **편집**을 클릭하여 **작업 단계 속성 –**_job\_step\_name_ 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
-8.  **작업 속성-***job_name* 대화 상자에서 **확인**을 클릭합니다.  
+8.  **작업 속성 –**_job\_name_ 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL 사용  
   
@@ -83,7 +79,7 @@ ms.locfileid: "42775993"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- changes the number of retry attempts for the first step

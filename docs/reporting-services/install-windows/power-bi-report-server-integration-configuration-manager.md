@@ -1,22 +1,18 @@
 ---
 title: Power BI 보고서 서버 통합(구성 관리자) | Microsoft Docs
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759431"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
@@ -55,6 +51,9 @@ ms.locfileid: "43277799"
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 페이지를 선택합니다.
 
 2. **Power BI에 등록**을 선택합니다.
+
+    >[!Note]
+    > 포트 443이 차단되지 않았는지 확인합니다.
 
 3. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로그인 대화 상자에서 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에 로그인하는 데 사용할 자격 증명을 입력합니다.
 

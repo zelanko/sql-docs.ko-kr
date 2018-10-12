@@ -2,13 +2,11 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_TSQL
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: 2842601d89be8efcd3851fd34610ee8ed5981c0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43321253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675991"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -65,7 +62,7 @@ ms.locfileid: "43321253"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL 병렬<br />데이터 웨어하우스](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
 
 # <a name="sql-server"></a>SQL Server
@@ -359,7 +356,7 @@ CREATE DATABASE database_snapshot_name
  *logical_file_name*  
  파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다. *Logical_file_name*은 데이터베이스에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다.  
   
- FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }  
  운영 체제(물리적) 파일 이름을 지정합니다.  
   
  **'** *os_file_name* **'**  
@@ -444,7 +441,7 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  새 데이터베이스 스냅숏의 이름입니다. 데이터베이스 스냅숏 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name*은 최대 128자까지 가능합니다.  
   
- ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
+ ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]  
  데이터베이스 스냅숏을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅숏이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅숏에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅숏에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.  
   
  NAME, FILENAME 및 각 값에 대한 내용은 해당하는 \<filespec> 값의 설명을 참조하십시오.  
@@ -887,7 +884,7 @@ GO
 >   <th><strong><em>* SQL Database<br />논리 서버 *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -914,14 +911,16 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' } 
+  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }
 ```  
@@ -935,8 +934,10 @@ CREATE DATABASE database_name
       {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
         | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
    ]  
 [;] 
@@ -964,14 +965,16 @@ CATALOG_COLLATION
  
 데이터베이스의 서비스 계층을 지정합니다. 
 
-- 논리 서버의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은: '기본', '표준', '프리미엄', 'GeneralPurpose' 및 'BusinessCritical'입니다. ‘Premiumrs’에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요.
-- Managed Instance의 데이터베이스: 사용 가능한 값은 ‘GeneralPurpose’입니다.
+논리 서버의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은 ‘기본’, ‘표준’, ‘프리미엄’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다. 
   
 EDITION이 지정되고 MAXSIZE는 지정되지 않은 경우, MAXSIZE는 버전에서 지원되는 가장 제한적인 크기로 설정됩니다.  
   
 MAXSIZE
 
 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지정된 EDITION(서비스 계층)에 대해 유효해야 합니다. 지원되는 MAXSIZE 값 및 서비스 계층의 기본값(D)은 다음과 같습니다.
+
+> [!NOTE]
+> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 저장소를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
 
 **논리 서버의 단일 및 풀링된 데이터베이스에 대한 DTU 기반 모델입니다.**
 
@@ -1026,7 +1029,7 @@ DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 
 |최대 데이터 크기(GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
 vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본값은 32GB입니다. vCore 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
-  
+
 **Managed Instance의 데이터베이스에 대한 vCore 기반 모델입니다.**
 
 **범용 서비스 계층 - 4세대 계산 플랫폼**
@@ -1047,19 +1050,20 @@ SERVICE_OBJECTIVE
 
 - **논리 서버의 단일 및 풀링된 데이터베이스의 경우**
 
-  성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`입니다. 
-
+  - 성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`입니다. 
+ - **하이퍼스케일 서비스 계층에 있는 논리 서버의 단일 데이터베이스** 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다. 
+ 
 - **Managed Instance의 데이터베이스의 경우**
 
   성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`입니다. 
 
-서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)을 참조하세요. 지정된 SERVICE_OBJECTIVE를 EDITION에서 지원하지 않는 경우 오류가 표시됩니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요. 
+서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)을 참조하세요. 지정된 SERVICE_OBJECTIVE를 EDITION에서 지원하지 않는 경우 오류가 표시됩니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 메일 별칭(premium-rs@microsoft.com)을 사용하세요. 
   
 ELASTIC_POOL(name = \<elastic_pool_name>)
  
-**적용 대상:** 단일 및 풀링된 데이터베이스만.
+**적용 대상:** 단일 및 풀링된 데이터베이스만. 하이퍼스케일 서비스 계층의 데이터베이스에는 적용되지 않습니다.
 
-탄력적 데이터베이스 풀에서 새 데이터베이스를 만들려면 데이터베이스의 SERVICE_OBJECTIVE를 ELASTIC_POOL로 설정하고 풀의 이름을 제공합니다. 자세한 내용은 [SQL Database 탄력적 데이터베이스 풀 만들기 및 관리(미리보기)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)를 참조하세요.  
+탄력적 데이터베이스 풀에서 새 데이터베이스를 만들려면 데이터베이스의 SERVICE_OBJECTIVE를 ELASTIC_POOL로 설정하고 풀의 이름을 제공합니다. 자세한 내용은 [SQL Database 탄력적 풀 만들기 및 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)를 참조하세요.  
   
 AS COPY OF [source_server_name.]source_database_name
 
@@ -1221,7 +1225,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -1305,7 +1309,7 @@ CREATE DATABASE TestDB1;
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -1413,7 +1417,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [DROP DATEBASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1429,13 +1433,13 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+>   <th><strong><em>* Parallel<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
+# <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 

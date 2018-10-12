@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4624b3444c41fee413429ebd729d7f05512a02f8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808509"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47441757"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,10 @@ ms.locfileid: "43808509"
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
 ###  <a name="Permissions"></a> Permissions  
- DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.  
+ DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.
+ 
+Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 특정 테이블에 대해 VIEW DEFINITION 및 SELECT 권한을 부여해야 합니다.
+
   
 ##  <a name="UsingDeployDACWizard"></a> 데이터 계층 응용 프로그램 내보내기 마법사 사용  
  **마법사를 사용하여 DAC를 내보내려면**  

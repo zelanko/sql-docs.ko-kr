@@ -56,6 +56,11 @@ items:
 - name: 항상 암호화
   href: always-encrypted-database-engine.md
   items:
+  - name: 보안 Enclave를 사용한 Always Encrypted
+    href: always-encrypted-enclaves.md
+    items:
+    - name: 보안 Enclave를 사용한 Always Encrypted 구성
+      href: configure-always-encrypted-enclaves.md
   - name: 상시 암호화 마법사
     href: always-encrypted-wizard.md
   - name: 상시 암호화를 위한 키 관리 개요
@@ -83,9 +88,9 @@ items:
     href: always-encrypted-cryptography.md
   - name: 상시 암호화로 보호되는 중요한 데이터 마이그레이션
     href: migrate-sensitive-data-protected-by-always-encrypted.md
-ms.openlocfilehash: 4d6219ec9932717897d1ddd559e73e96c8a45c16
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ccb3f918e75b02d71ee1b83558ef72a86a961e2e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40427350"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713595"

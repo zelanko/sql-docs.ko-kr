@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623831"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |스레드 스택 메모리|아니오|아니오|
 |Windows에서 직접 할당|아니오|아니오|
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 ***Total Server Memory(KB)*** 값이 이미 max server memory에 지정된 ***Target Server Memory(KB)*** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
 이 할당이 수행되는 즉시 *리소스 모니터* 백그라운드 작업은 모든 메모리 소비자에게 할당된 메모리를 해제하도록 신호를 보내기 시작하고 *Target Server Memory(KB)* 사양 이하의 *Total Server Memory(KB)*  값을 아래에 가져오려 합니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 사용량이 최대 서버 메모리 설정을 잠시 초과할 수 있습니다. 이 경우 *Total Server Memory(KB)* 성능 카운터 읽기가 max server memory 및 *Target Server Memory(KB)* 설정을 초과합니다.
 
@@ -111,7 +107,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
 이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **Multi-Page Allocator(MPA)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **Direct Windows 할당(DWA)** 으로 사용하기 위해 프로세스 가상 주소 공간(VAS)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
-이러한 할당을 위해 예약된 가상 주소 공간은 ***memory_to_reserve*** 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
+이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 새 "임의 크기" 페이지 할당자는 8KB보다 큰 할당을 처리하기 때문에 *memory_to_reserve* 값은 다중 페이지 할당을 포함하지 않습니다. 이 변경 사항을 제외하고 나머지는 이 구성 옵션과 함께 동일하게 유지됩니다.
 

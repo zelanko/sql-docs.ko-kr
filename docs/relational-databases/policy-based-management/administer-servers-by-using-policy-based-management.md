@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28f9302f9849a24fd980d40e6576ac695c6c1b20
-ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
+ms.openlocfilehash: 0d19ad0bba4792ab4fc088957570e532fec0c61e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43694676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601888"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,14 +116,14 @@ ms.locfileid: "43694676"
  - [정책 기반 관리 패싯 작업](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
  - [정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
-  
- ## <a name="examples"></a>예
+
+## <a name="see-also"></a>관련 항목:  
  
- - [Off By Default 정책 만들기](lesson-1-1-create-the-off-by-default-policy.md)
- - [Off By Default 정책을 실행하도록 서버 구성](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
+ - [자습서: Off By Default 정책 만들기 및 적용](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [자습서: 명명 표준 정책 만들기 및 적용](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
  
- ## <a name="see-also"></a>관련 항목:  
+
  
- [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

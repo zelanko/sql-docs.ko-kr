@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a5dc723d735436bde18b813a8716b054779971
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8216e6c9adbb2154a1e416510b989db252572cb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690581"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +39,7 @@ array PDO::errorInfo();
   
 -   드라이버별 오류 메시지입니다.  
   
-오류가 없거나 SQLSTATE가 설정 되지 않은 경우 드라이버 관련 필드는 NULL입니다.  
+오류가 없거나 SQLSTATE가 설정되지 않은 경우 드라이버 관련 필드는 NULL입니다.  
   
 ## <a name="remarks"></a>Remarks  
 PDO::errorInfo는 데이터베이스에서 직접 수행된 작업에 대한 오류 정보만 검색합니다. PDO::prepare 또는 PDO::query를 사용하여 PDOStatement 인스턴스가 만들어질 때 PDOStatement::errorInfo를 사용합니다.  
@@ -50,7 +47,7 @@ PDO::errorInfo는 데이터베이스에서 직접 수행된 작업에 대한 오
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  
-이 예제에서는 열 이름의 철자가 (`Cityx` 대신 `City`), 오류가 보고 됩니다.  
+이 예제에서는 열 이름의 철자가 잘못되어(`City`가 아닌 `Cityx`) 오류가 발생하므로 보고됩니다.  
   
 ```  
 <?php  
@@ -64,7 +61,7 @@ print_r ($conn->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

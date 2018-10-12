@@ -1,13 +1,11 @@
 ---
-title: setXopenStates 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setXopenStates 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setXopenStates
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355fb7a9ede35edd70084ad11d9c9c838f03e8a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 65fde7feacb27f8c3b7fb2d809de4f75bc7e899c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695871"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>setXopenStates 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  설정 된 **부울** SQL 상태를 XOPEN 규격 상태로 변환할을 사용할 수 있는지를 나타내는 값입니다.  
+  SQL 상태를 XOPEN 규격 상태로 변환할 수 있는지 여부를 나타내는 **부울** 값을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,12 +38,12 @@ public void setXopenStates(boolean xopenStates)
 #### <a name="parameters"></a>매개 변수  
  *xopenStates*  
   
- **true 이면** SQL 상태를 XOPEN 규격 상태로 변환할 경우. 그렇지 않으면 **false**입니다.  
+ SQL 상태를 XOPEN 규격 상태로 변환할 수 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>주의  
- XopenStates 속성이로 설정 되어 있으면 **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] SQL 상태를 XOPEN 규격 상태로 변환 합니다. 기본값은 **false**, JDBC 드라이버가 SQL 99 상태 코드를 생성 하에 이르게 됩니다. XopenStates 설정 되어 있지 않으면는 [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) 메서드는 기본값인을 반환 **false**합니다.  
+## <a name="remarks"></a>Remarks  
+ xopenStates 속성이 **true**로 설정되어 있으면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 SQL 상태를 XOPEN 규격 상태로 변환합니다. 기본값은 **false**이며 JDBC 드라이버에서 SQL 99 상태 코드를 생성하도록 합니다. xopenStates 속성이 설정되어 있지 않으면 [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) 메서드는 기본값인 **false**를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

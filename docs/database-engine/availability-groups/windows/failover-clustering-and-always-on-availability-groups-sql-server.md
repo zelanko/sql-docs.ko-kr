@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864311"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40406731"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 개념에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
- **항목 내용:**  
-  
--   [Windows Server 장애 조치(Failover) 클러스터링](#WSFC)  
-  
--   [SQL Server 장애 조치(Failover) 클러스터링](#SQLServerFC)  
-  
--   [가용성 그룹과 WSFC 장애 조치(Failover) 클러스터 관리자 사용에 대한 제한 사항](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터링 및 가용성 그룹  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 배포하려면 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터가 필요합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하도록 설정하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 WSFC 노드에 있고 WSFC 클러스터 및 노드가 온라인 상태여야 합니다. 또한 지정된 가용성 그룹의 각 가용성 복제본은 동일한 WSFC 클러스터의 서로 다른 노드에 있어야 합니다. 유일한 예외는 다른 WSFC 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있는 경우입니다.  
@@ -114,7 +104,10 @@ ms.locfileid: "40406731"
   
 -   가능한 소유자 및 기본 설정 소유자와 같은 가용성 그룹 속성을 변경하지 마세요. 이러한 속성은 가용성 그룹에 의해 자동으로 설정됩니다.  
   
--   장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 다른 노드로 옮기거나 가용성 그룹을 장애 조치(Failover)을 수행하지 마세요. 장애 조치(Failover) 클러스터 관리자에서는 가용성 복제본의 동기화 상태를 인식하지 못하기 때문에 이로 인해 작동 중지 시간이 길어질 수 있습니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용해야 합니다.  
+-   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 다른 노드로 옮기거나 가용성 그룹을 장애 조치(Failover)을 수행하지 마세요.** 장애 조치(Failover) 클러스터 관리자에서는 가용성 복제본의 동기화 상태를 인식하지 못하기 때문에 이로 인해 작동 중지 시간이 길어질 수 있습니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용해야 합니다.  
+
+  >[!WARNING]
+  > 장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 호스트하는 *장애 조치(Failover) 클러스터 인스턴스*를 동일한 가용성 그룹의 복제본을 *이미* 호스트하는 노드로 이동하면 가용성 그룹의 복제본이 손실되어 대상 노드에서 온라인 상태가 될 수 없습니다. 장애 조치(Failover) 클러스터의 단일 노드는 동일한 가용성 그룹의 복제본 2개 이상을 호스트할 수 없습니다. 이러한 결과가 나타나는 방식 및 복구 방법에 대한 자세한 내용은 블로그 [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)(복제본이 가용성 그룹에서 예기치 않게 손실되는 경우)를 참조하세요. 
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   

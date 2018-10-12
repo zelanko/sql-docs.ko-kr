@@ -1,13 +1,11 @@
 ---
-title: length 메서드 (SQLServerClob) | Microsoft Docs
+title: length 메서드(SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.length
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 063de39874211a5974572bd5075dfd29a5ce640e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3ce5ba3e79e340677718b24bf6cd540c203000b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655001"
 ---
 # <a name="length-method-sqlserverclob"></a>length 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,10 +41,10 @@ public long length()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 길이 메서드는 java.sql.Clob 인터페이스의 길이 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 멤버](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 클래스](../../../connect/jdbc/reference/sqlserverclob-class.md)  

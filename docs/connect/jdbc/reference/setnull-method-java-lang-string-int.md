@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setNull (java.lang.String, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3182264f2980ab0005ccbdea3b7d24404bb6ebd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 10e19b094ff82c5e0d71aed0031ac5f119e18b40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667871"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull 메서드(java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,20 +39,20 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>매개 변수  
  *sCol*  
   
- A **문자열** 매개 변수 이름이 들어 있는입니다.  
+ 매개 변수 이름이 들어 있는 **문자열**입니다.  
   
- *n 유형*  
+ *n 형식*  
   
  java.sql.Types에 의해 정의된 JDBC 형식 코드입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 setNull 메서드는 java.sql.CallableStatement 인터페이스의 setNull 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 setNull 메서드는 java.sql.CallableStatement 인터페이스의 setNull 메서드에 의해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [setNull 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [setNull 메서드(SQLServerCallableStatement)](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

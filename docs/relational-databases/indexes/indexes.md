@@ -5,24 +5,21 @@ ms.date: 12/21/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e30951b56cc0296b8028ab2c49463db9ef822a10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770361"
 ---
 # <a name="indexes"></a>인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +43,15 @@ ms.locfileid: "43060376"
 |전체 텍스트|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft 전체 텍스트 검색 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 문자열 데이터에서의 복잡한 단어 검색을 효율적으로 지원합니다.|[전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## <a name="related-content"></a>관련 내용  
- [SQL Server 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md) [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
- [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)  
- [인덱스 및 제약 조건 활성화](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
- [인덱스 이름 바꾸기](../../relational-databases/indexes/rename-indexes.md)  
- [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)  
- [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
- [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
- [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
- [페이지 및 익스텐트 아키텍처 지침](../../relational-databases/pages-and-extents-architecture-guide.md) [클러스터형 및 비클러스터형 인덱스 설명](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
-  
+ [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)      
+ [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)     
+ [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)     
+ [인덱스 및 제약 조건 사용](../../relational-databases/indexes/enable-indexes-and-constraints.md)    
+ [인덱스 이름 바꾸기](../../relational-databases/indexes/rename-indexes.md)     
+ [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)     
+ [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)     
+ [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)     
+ [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)     
+ [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)     
+ [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   

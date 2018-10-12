@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768581"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +57,9 @@ ms.locfileid: "32867268"
   
     -   **병렬 처리에 대한 비용 임계값** 옵션이 1로 설정되어 있습니다.  
   
- 논리적 프로세서는 운영 체제가 태스크를 전달하거나 스레드 컨텍스트를 실행할 수 있도록 허용하는 프로세서 하드웨어의 기본 단위입니다. 각 논리적 프로세서는 한 번에 하나만 스레드 컨텍스트를 실행할 수 있습니다. 프로세서 코어는 명령을 암호 해독하고 실행할 수 있는 기능을 제공하는 회로입니다. 프로세서 코어에는 하나 이상의 논리적 프로세서가 포함될 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하면 시스템의 CPU 정보를 가져올 수 있습니다.  
+논리적 프로세서는 운영 체제가 태스크를 전달하거나 스레드 컨텍스트를 실행할 수 있도록 허용하는 프로세서 하드웨어의 기본 단위입니다. 각 논리적 프로세서는 한 번에 하나만 스레드 컨텍스트를 실행할 수 있습니다. 프로세서 코어는 명령을 암호 해독하고 실행할 수 있는 기능을 제공하는 회로입니다. 프로세서 코어에는 하나 이상의 논리적 프로세서가 포함될 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하면 시스템의 CPU 정보를 가져올 수 있습니다.  
   
-```  
+```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
 cpu_count AS logicalCPUs   
 FROM sys.dm_os_sys_info  
@@ -72,9 +69,9 @@ FROM sys.dm_os_sys_info
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
--   경우에 따라 쿼리 비용 계획이 현재 **병렬 처리에 대한 비용 임계값** 값보다 작아도 병렬 계획을 선택할 수 있습니다. 이는 먼저 제공되는 비용 평가에 따라 병렬 계획 또는 직렬 계획을 사용할 것인지를 결정해야 전체 최적화가 완료되기 때문입니다.  
+-   경우에 따라 쿼리 비용 계획이 현재 **병렬 처리에 대한 비용 임계값** 값보다 작아도 병렬 계획을 선택할 수 있습니다. 이는 최적화 프로세스의 초반에 제공되는 비용 평가에 따라 병렬 계획 또는 직렬 계획을 사용할 것인지를 결정해야 전체 최적화가 완료되기 때문입니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)를 참조하세요.  
 
--   이전 버전과의 호환성을 위해 기본값인 5가 유지되는 반면 현재 시스템에는 높은 값이 적절합니다. SQL Server 전문가 버전은 대부분 응용 프로그램의 성능을 최적화하기 위해 25 또는 50 값을 시작점으로 사용하고 다른 값을 사용하여 응용 프로그램 테스트를 수행할 것을 제안합니다.
+-   기본값인 5가 대부분의 시스템에 적합하지만 다른 값이 적절할 수도 있습니다. 필요에 따라 더 높거나 더 낮은 값으로 응용 프로그램 테스트를 수행하여 응용 프로그램 성능을 최적화합니다.
   
 ###  <a name="Security"></a> 보안  
   
@@ -99,7 +96,7 @@ FROM sys.dm_os_sys_info
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `cost threshold for parallelism` 옵션의 값을 `10`(으)로 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `cost threshold for parallelism` 옵션의 값을 `10`(으)로 설정하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

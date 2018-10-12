@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLONEDATABASE
@@ -37,16 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-caps.latest.revision: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 00c1d492b8fd4b2315d825c2b74bac701781e9bd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666681"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +110,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> columnstore 인덱스가 있는 경우 [복제 데이터베이스에서 columnstore 인덱스로 쿼리를 조정할 때 고려 사항](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)을 참조하여 **DBCC CLONEDATABASE** 명령을 실행하기 전에 columnstore 인덱스 통계를 업데이트하세요.
+> columnstore 인덱스가 있는 경우 [복제 데이터베이스에서 columnstore 인덱스로 쿼리를 조정할 때 고려 사항](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)을 참조하여 **DBCC CLONEDATABASE** 명령을 실행하기 전에 columnstore 인덱스 통계를 업데이트하세요.  SQL Server 2019부터 **DBCC CLONEDATABASE** 명령이 이 정보를 자동으로 수집하므로 위 문서에 설명된 수동 단계가 더 이상 필요하지 않습니다.
 
 복제된 데이터베이스의 데이터 보안과 관련된 자세한 내용은 [복제 된 데이터베이스의 데이터 보안 이해](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/)를 참조하세요.
 
@@ -175,7 +171,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
 
 ## <a name="error-log-messages"></a>오류 로그 메시지

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672101"
 ---
 # <a name="create-statistics"></a>통계 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070846"
   
 4.  **통계** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 통계...** 를 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **일반** 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  
@@ -117,12 +115,12 @@ ms.locfileid: "43070846"
      **이 열에 대한 통계 업데이트**  
      대화 상자를 닫을 때 통계를 업데이트하려면 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **필터** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계**_table\_name_ 대화 상자의**필터** 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
      필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들어 IPv4 주소를 사용하는 경우 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+5.  **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   
      **열 선택** 대화 상자에 표시되는 속성은 다음과 같습니다. 이 정보는 읽기 전용입니다.  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070846"
   
 6.  **열 선택** 대화 상자에서 통계를 만들려는 각 열의 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
-7.  **테이블에 대한 새 통계***table_name* 대화 상자에서 **확인**을 클릭합니다.  
+7.  **테이블에 대한 새 통계**_table\_name_ 대화 상자에서 **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -153,7 +151,7 @@ ms.locfileid: "43070846"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

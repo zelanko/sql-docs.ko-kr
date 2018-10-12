@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLAUDIT.FILTER.F1
@@ -20,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 71af9860ae7af711c9c8e1cac4132f0046d8e01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845411"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +97,7 @@ ms.locfileid: "43023218"
      **감사 대상** 이 파일인 경우 감사 데이터를 쓸 폴더의 위치를 지정합니다.  
   
      **줄임표(...)**  
-     **폴더 찾기 –***server_name* 대화 상자를 열어 파일 경로를 지정하거나 감사 파일이 기록된 폴더를 만듭니다.  
+     **폴더 찾기 –**_server\_name_ 대화 상자를 열어 파일 경로를 지정하거나 감사 파일이 기록된 폴더를 만듭니다.  
   
      **감사 파일의 최대 제한:**  
      **최대 롤오버 파일**  
@@ -166,7 +164,7 @@ ms.locfileid: "43023218"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
@@ -180,7 +178,7 @@ ms.locfileid: "43023218"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  

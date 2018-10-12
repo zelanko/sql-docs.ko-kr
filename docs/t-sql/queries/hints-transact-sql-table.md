@@ -5,9 +5,7 @@ ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -36,16 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713371"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 설명 부분을 참조하세요.  
   
-INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 INDEX = 구문은 단일 인덱스 값을 지정하며 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
   
 클러스터형 인덱스가 있는 경우에는 INDEX(0)이 클러스터형 인덱스 검색을 강제 실행하고 INDEX(1)이 클러스터형 인덱스 검색 또는 찾기를 강제 실행합니다. 클러스터형 인덱스가 없는 경우 INDEX(0)은 테이블 검색을 강제 실행하고 INDEX(1)은 오류로 해석됩니다.  
@@ -183,7 +180,7 @@ BULK 옵션이 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)와
   
 INSERT ... SELECT * FROM OPENROWSET (BULK ...) 문에서 이 힌트를 사용하는 예제는 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
-FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
 쿼리 최적화 프로그램이 테이블 또는 뷰의 데이터에 대한 액세스 경로로 Index Seek 연산만 사용하도록 지정합니다. 
 
 > [!NOTE]

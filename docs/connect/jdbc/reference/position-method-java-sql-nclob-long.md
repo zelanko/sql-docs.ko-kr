@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21299de3fa9eb6a8c9d02691c2cdfc326de68765
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bf58493fcf9e4f8a5f55baecc2b38114dc6a5a31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611621"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 메서드(java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  검색 된 문자 위치 지정 된 **NClob** 개체 *searchstr* 이 나타납니다 **NClob** 개체입니다.  
+  문자 위치를 검색 합니다. 지정 된 **NClob** 개체 *searchstr* 이 표시 됩니다 **NClob** 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,10 +46,10 @@ long position(java.sql.NClob searchstr,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 위치 메서드 java.sql.NClob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [position 메서드 &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 멤버](../../../connect/jdbc/reference/sqlservernclob-members.md)   

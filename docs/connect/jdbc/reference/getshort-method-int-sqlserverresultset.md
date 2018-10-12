@@ -1,13 +1,11 @@
 ---
-title: getShort 메서드 (int) (SQLServerResultSet) | Microsoft Docs
+title: getShort 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getShort (int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78f37af4ff69b6a4a4040981d0787e398c6d635c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 06c132bf4300f6ee696c18604c973191d8d86a08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622571"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

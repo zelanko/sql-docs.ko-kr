@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4eef7eee4073a2c1b10633c043aec1b452c2d5a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564051"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690667"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -115,7 +112,19 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## <a name="arguments"></a>인수  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+
+일부 옵션은 모든 데이터베이스 엔진 버전에서 사용하지 못할 수 있습니다. 다음 표에서는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE 인덱스에 옵션이 도입된 버전을 보여 줍니다.
+
+|옵션| CLUSTERED | NONCLUSTERED |
+|---|---|---|
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE 절 | 해당 사항 없음 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+
+모든 옵션을 Azure SQL Database에서 사용할 수 있습니다.
+
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
 모든 데이터가 압축되고 열로 저장되는 클러스터형 columnstore 인덱스를 만듭니다. 인덱스에 테이블의 모든 열이 포함되고 전체 테이블이 저장됩니다. 기존 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 클러스터형 columnstore 인덱스로 변환됩니다. 테이블이 클러스터형 columnstore 인덱스로 이미 저장된 경우 기존 인덱스가 삭제되고 다시 작성됩니다.  
   
 *index_name*  
@@ -126,13 +135,16 @@ CREATE CLUSTERED COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다.  
   
-의 모든 멘션을  
-DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON은 기존 클러스터형 columnstore 인덱스를 삭제하고 새로운 columnstore 인덱스를 생성하도록 지정합니다.  
-
+#### <a name="with-options"></a>WITH 옵션  
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+   `DROP_EXISTING = ON`은 기존 인덱스를 삭제하고 새로운 columnstore 인덱스를 생성하도록 지정합니다.  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    기본값인 DROP_EXISTING = OFF는 인덱스 이름이 기존 이름과 동일할 것으로 예상합니다. 지정된 인덱스 이름이 이미 존재하는 경우 오류가 발생합니다.  
   
-MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    인덱스 작업 기간 동안 기존의 최대 병렬 처리 수준 서버 구성을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
    *max_degree_of_parallelism* 값은 다음 중 하나일 수 있습니다.  
@@ -140,27 +152,44 @@ MAXDOP = *max_degree_of_parallelism*
    - \>1 - 병렬 인덱스 작업에 사용되는 최대 프로세서 수를 현재 시스템 작업에 따라 지정된 수 또는 더 적은 수로 제한합니다. 예를 들어, MAXDOP = 4인 경우 사용되는 프로세서 수는 4개 이하가 됩니다.  
    - 0(기본값) - 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 및 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
  
-COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
-
+###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    디스크 기반 테이블의 경우 *지연*은 CLOSED 상태의 델타 rowgroup이 SQL Server에서 압축된 rowgroup으로 압축할 수 있게 될 때까지 델타 rowgroup에 남아 있어야 하는 최소 분 수를 지정합니다. 디스크 기반 테이블은 개별 행에 대한 삽입 및 업데이트 시간을 추적하지 않으므로 SQL Server가 CLOSED 상태의 델타 rowgroup에 지연을 적용합니다.  
    기본값은 0분입니다.  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    COMPRESSION_DELAY 사용 시기에 관한 권장 사항은 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
-지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.   
-COLUMNSTORE  
-   COLUMNSTORE는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
+##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.   
+- `COLUMNSTORE`는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
+- `COLUMNSTORE_ARCHIVE`는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 저장소 크기를 줄여야 하고 저장 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
   
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 저장소 크기를 줄여야 하고 저장 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
-  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
 
-ON  
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]
+- `ON`은 인덱스 새 복사본이 작성되는 동안 columnstore 인덱스가 온라인 상태를 유지하고 있으며 사용할 수 있음을 지정합니다.
+- `OFF`는 새 사본이 작성되는 동안 인덱스를 사용할 수 없도록 지정합니다.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
+```
+
+#### <a name="on-options"></a>ON 옵션 
    ON 옵션으로 파티션 구성표, 특정 파일 그룹, 기본 파일 그룹 등의 데이터 저장소 옵션을 지정할 수 있습니다. ON 옵션을 지정하지 않으면 기존 테이블의 파일 그룹 설정이나 설정 파티션이 인덱스에 사용됩니다.  
   
    *partition_scheme_name* **(** *column_name* **)**  
@@ -176,7 +205,7 @@ ON
   
    "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. QUOTED_IDENTIFIER는 기본적으로 ON입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### <a name="create-nonclustered-columnstore-index"></a>CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 힙 또는 클러스터형 인덱스로 저장된 rowstore 테이블에 메모리 내 비 클러스터형 columnstore 인덱스를 만듭니다. 인덱스는 필터링된 조건을 가질 수 있으며 기본 테이블의 모든 열을 포함할 필요가 없습니다. Columnstore 인덱스에 데이터 복사본을 저장할 충분한 공간이 필요합니다. 업데이트가 가능하며 기본 테이블이 변경될 때 업데이트됩니다. 클러스터형 인덱스에 대한 비 클러스터형 columnstore 인덱스는 실시간 분석이 가능합니다.  
   
 *index_name*  
@@ -189,12 +218,13 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    인덱스를 포함할 테이블의 1, 2 또는 3 부분 이름을 지정합니다.  
 
-WITH DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 옵션
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON 기존 인덱스가 삭제되고 다시 작성됩니다. 지정된 인덱스 이름은 현재 존재하는 인덱스 이름과 같아야 합니다. 그러나 인덱스 정의는 수정할 수 있습니다. 예를 들어, 다른 열 또는 인덱스 옵션을 지정할 수 있습니다.
   
    DROP_EXISTING = OFF 지정된 인덱스 이름이 이미 존재하는 경우 오류가 표시됩니다. 인덱스 유형은 DROP_EXISTING을 사용하여 변경할 수 없습니다. 이전 버전과 호환되는 구문에서 WITH DROP_EXISTING은 WITH DROP_EXISTING = ON과 같습니다.  
 
-MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    인덱스 작업 기간 동안 [max degree of parallelism 서버 구성 옵션 ](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
    *max_degree_of_parallelism* 값은 다음 중 하나일 수 있습니다.  
@@ -207,29 +237,26 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  병렬 인덱스 작업은 일부 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-ONLINE = [ON | OFF]   
-   적용 대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], 비클러스터형 columnstore 인덱스에서만 사용할 수 있습니다.
-ON은 인덱스 새 복사본이 작성되는 동안 비 클러스터형 columnstore 인덱스가 온라인 상태를 유지하고 있으며 사용할 수 있음을 지정합니다.
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
+- `ON`은 인덱스 새 복사본이 작성되는 동안 columnstore 인덱스가 온라인 상태를 유지하고 있으며 사용할 수 있음을 지정합니다.
+- `OFF`는 새 사본이 작성되는 동안 인덱스를 사용할 수 없도록 지정합니다. 비 클러스터형 인덱스에서 기본 테이블은 사용 가능하게 그대로 유지되고 비 클러스터형 columnstore 인덱스는 새 인덱스가 완료될 때까지 쿼리를 충족시키는 데 사용되지 않습니다. 
 
-   OFF는 새 사본이 작성되는 동안 인덱스을 사용할 수 없도록 지정합니다. 이것은 비 클러스터형 인덱스 전용이므로 기본 테이블은 사용 가능하게 그대로 유지되고 비 클러스터형 columnstore 인덱스는 새 인덱스가 완료될 때까지 쿼리를 충족시키는 데 사용되지 않습니다. 
+```sql
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+```
 
-COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
-  
+##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 저장소 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트 할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 저장소에 마이그레이션되고 닫힌 것으로 표시됩니다.  
   
-DATA_COMPRESSION  
-   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.  
-COLUMNSTORE  
-   적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
-  
-COLUMNSTORE_ARCHIVE  
-   적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
-클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
+###### <a name="datacompression"></a>DATA_COMPRESSION  
+   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
+   
+- `COLUMNSTORE` - 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
+- `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-WHERE \<filter_expression> [ AND \<filter_expression> ] 적용 대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    필터 조건자라고 하며 인덱스에 어떤 열을 포함할지 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필터링된 인덱스의 데이터 행에 대한 필터링된 통계를 만듭니다.  
   
@@ -242,7 +269,7 @@ WHERE \<filter_expression> [ AND \<filter_expression> ] 적용 대상: [!INCLUDE
    
    필터링된 인덱스에 대한 지침은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요.  
   
-ON  
+#### <a name="on-options"></a>ON 옵션  
    이러한 옵션은 인덱스를 만들 파일 그룹을 지정합니다.  
   
 *partition_scheme_name* **(** *column_name* **)**  
@@ -416,7 +443,7 @@ GO
   
  비클러스터형 인덱스를 삭제하려면 columnstore 인덱스를 만들기 전에 DROP INDEX 문을 사용합니다. DROP EXISTING 옵션은 변환중인 클러스터형 인덱스만 삭제합니다. 비클러스터형 인덱스는 삭제하지 않습니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 이 예에서는 columnstore 인덱스을 만들기 전에 이전 릴리스에서 어떻게 비클러스터형 인덱스를 삭제해야 하는지 보여줍니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 이 예에서는 columnstore 인덱스를 만들기 전에 이전 릴리스에서 어떻게 비클러스터형 인덱스를 삭제해야 하는지 보여줍니다.  
   
 ```sql  
 --Create the table for use with this example.  
@@ -676,7 +703,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>3. 클러스터형 Columnstore 인덱스의 이름 바꾸기  
  클러스터형 columnstore 인덱스의 이름을 변경하려면 기존 클러스터형 columnstore 인덱스를 삭제한 다음, 새 이름으로 인덱스를 다시 만듭니다.  
   
- 작은 테이블 또는 빈 테이블에서만 이 작업을 수행하는 것이 좋습니다. 대규모 클러스터형 columnstore 인덱스을 삭제하고 다른 이름으로 다시 작성하려면 시간이 오래 걸립니다.  
+ 작은 테이블 또는 빈 테이블에서만 이 작업을 수행하는 것이 좋습니다. 대규모 클러스터형 columnstore 인덱스를 삭제하고 다른 이름으로 다시 작성하려면 시간이 오래 걸립니다.  
   
  이전 예제에서의 cci_xDimProduct 클러스터형 columnstore 인덱스를 사용하여 이 예제는 cci_xDimProduct 클러스터형 columnstore 인덱스를 삭제한 다음, mycci_xDimProduct라는 이름으로 클러스터형 columnstore 인덱스를 다시 생성합니다.  
   

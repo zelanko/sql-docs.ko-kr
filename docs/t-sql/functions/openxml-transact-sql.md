@@ -5,9 +5,7 @@ ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618591"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,10 +59,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**2**|**요소 중심** 매핑을 사용합니다. XML_ATTRIBUTES와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
 |**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서 이 플래그는 소비된 데이터를 오버플로 속성인 **\@mp:xmltext**로 복사할 수 없음을 나타냅니다.|  
   
- *SchemaDeclaration*  
- *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...] 형식의 스키마 정의입니다.  
+ _SchemaDeclaration_  
+ _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...] 형식의 스키마 정의입니다.  
   
- *ColName*  
+ _ColName_  
  행 집합의 열 이름입니다.  
   
  *ColType*  

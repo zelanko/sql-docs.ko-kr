@@ -1,13 +1,11 @@
 ---
 title: table_constraint(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -16,16 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ed7329979efebd35e9979fe0ea37e3651149a12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607911"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,6 +49,12 @@ ms.locfileid: "39106729"
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ NOT FOR REPLICATION ]   
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE NO ACTION]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -83,13 +86,13 @@ ms.locfileid: "39106729"
  [ **ASC** | DESC ]  
  테이블 제약 조건에 사용되는 열의 정렬 순서를 지정합니다. 기본값은 ASC입니다.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 인덱스 데이터를 저장하는 데 사용되는 각 인덱스 페이지를 채우는 정도를 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다.  
   
 > [!IMPORTANT]  
 >  현재 WITH FILLFACTOR = *fillfactor*가 PRIMARY KEY 또는 UNIQUE 제약 조건에 적용되는 유일한 인덱스 옵션으로 기술되어 있는 것은 이전 버전과의 호환성을 위한 것이며 이후 릴리스에서는 이런 식으로 기술되지 않을 것입니다. ALTER TABLE의 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 절에 다른 인덱스 옵션을 지정할 수 있습니다.  
   
- ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
+ ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  제약 조건에 대해 만들어진 인덱스의 저장 위치를 지정합니다. *partition_scheme_name*을 지정하면 인덱스가 분할되고 파티션이 *partition_scheme_name*으로 지정된 파일 그룹에 매핑됩니다. *filegroup*을 지정하면 명명된 파일 그룹에 인덱스가 생성됩니다. **"** default **"** 를 지정하거나, ON을 지정하지 않으면 테이블이 있는 동일한 파일 그룹에 인덱스가 생성됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클러스터형 인덱스를 추가할 때 ON을 지정하면 클러스터형 인덱스가 생성될 때 전체 테이블이 지정한 파일 그룹으로 이동됩니다.  
@@ -159,7 +162,9 @@ ms.locfileid: "39106729"
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  FOREIGN KEY 제약 조건 및 CHECK 제약 조건에 대해 지정할 수 있습니다. 제약 조건에 대해 이 절을 지정하면 복제 에이전트가 삽입, 업데이트 또는 삭제 작업을 수행할 때 해당 제약 조건이 강제로 적용되지 않습니다.  
-  
+
+ CONNECTION은 에지 제약 조건이 부여된 노드 테이블 쌍의 연결을 허용하도록 지정합니다.  
+ 
  DEFAULT  
  열에 대한 기본값을 지정합니다. DEFAULT 정의를 사용하여 기존 데이터 행에 새 열의 값을 제공할 수 있습니다. **timestamp** 데이터 형식, IDENTITY 속성, 기존 DEFAULT 정의 또는 바인딩된 기본값을 가진 열에는 DEFAULT 정의를 추가할 수 없습니다. 기존 기본값이 있는 열은 새 기본값을 추가하기 전에 기존 기본값을 삭제해야 합니다. 사용자 정의 형식 열에 대해 기본값을 지정할 경우 *constant_expression*에서 해당 사용자 정의 형식으로 암시적으로 변환할 수 있어야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다.  
   

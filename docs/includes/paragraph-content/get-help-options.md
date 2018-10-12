@@ -4,6 +4,7 @@
 - [설치 및 업그레이드 -  MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL - MSDN 포럼](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [SQL Server 보안 - MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [DBA Stack Exchange(tag sql-server) - SQL Server 질문](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [스택 오버플로(tag sql-server) - SQL 개발에 관한 몇 가지 질문 포함](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)

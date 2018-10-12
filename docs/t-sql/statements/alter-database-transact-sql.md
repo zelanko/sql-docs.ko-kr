@@ -1,12 +1,10 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
@@ -29,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 2bb68aae23e0d36ff09ff673eae3d45f1082fec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "42802572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825381"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL) 
 
@@ -53,7 +51,7 @@ ms.locfileid: "42802572"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL 병렬<br />데이터 웨어하우스](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -290,7 +288,7 @@ GO
 >   <th><strong><em>* SQL Database<br />논리 서버 *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -335,7 +333,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical'} 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) } 
@@ -355,8 +353,10 @@ ALTER DATABASE { database_name | CURRENT }
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       }
 
 <option_spec> ::= 
@@ -397,7 +397,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
 
 데이터베이스의 서비스 계층을 변경합니다. 
 
@@ -412,8 +412,11 @@ ALTER DATABASE current
 
 MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
 
-데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 다음 표에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서비스 계층에 대해 지원되는 MAXSIZE 값 및 기본값(D)을 보여 줍니다.  
-  
+데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 
+
+> [!NOTE]
+> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 저장소를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
+
 **DTU 기반 모델**
 
 |**MAXSIZE**|**기본**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
@@ -484,17 +487,23 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`입니다.  
+성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다.  
 
-서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요. 
+서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 메일 별칭(premium-rs@microsoft.com)을 사용하세요. 
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 
 탄력적 풀에 기존 데이터베이스를 추가하려면 데이터베이스의 SERVICE_OBJECTIVE를 ELASTIC_POOL로 설정하고 탄력적 풀의 이름을 입력합니다. 동일한 서버 내의 다른 탄력적 풀에 데이터베이스를 변경하려면 이 옵션을 사용할 수도 있습니다. 자세한 내용은 [SQL Database 탄력적 풀 만들기 및 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)를 참조하세요. 탄력적 풀에서 데이터베이스를 제거하려면 ALTER DATABASE를 사용하여 SERVICE_OBJECTIVE를 단일 데이터베이스 성능 수준으로 설정합니다.  
 
+> [!NOTE]
+> 하이퍼스케일 서비스 계층의 데이터베이스는 탄력적 풀에 추가할 수 없습니다.
+
 ADD SECONDARY ON SERVER \<partner_server_name>  
 
 파트너 서버에 동일한 이름의 지역 복제 보조 데이터베이스를 만들고, 지역 복제 주 데이터베이스에 로컬 데이터베이스를 만들고, 주 데이터베이스에서 새 보조 데이터베이스에 데이터를 비동기적으로 복제하기 시작합니다. 동일한 이름의 데이터베이스가 보조 데이터베이스에 이미 있으면 명령이 실패합니다. 이 명령은 주가 되는 로컬 데이터베이스를 호스팅하는 서버의 master 데이터베이스에서 실행됩니다.  
+
+> [!IMPORTANT]
+> 하이퍼스케일 서비스 계층은 현재 지역에서 복제를 지원하지 않습니다.
   
 WITH ALLOW_CONNECTIONS { **ALL** | NO }  
 
@@ -654,7 +663,7 @@ ALTER DATABASE db1 FAILOVER
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -790,7 +799,7 @@ ALTER DATABASE WideWorldImporters
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><strong><em>*SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 병렬<br />데이터 웨어하우스</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
 > </tr>
 > </table>
 
@@ -903,7 +912,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -919,13 +928,13 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />논리 서버</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL 병렬<br />데이터 웨어하우스 *</em></strong></th>
+>   <th><strong><em>* Parallel<br />데이터 웨어하우스 *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 병렬 데이터 웨어하우스
+# <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
 
 ## <a name="overview"></a>개요
 

@@ -1,13 +1,11 @@
 ---
 title: CREATE COLUMN MASTER KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609611"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,14 +40,19 @@ ms.locfileid: "37993135"
   데이터베이스에 열 마스터 키 메타데이터 개체를 만듭니다. 열 마스터 키 메타데이터 항목은 외부 키 저장소에 저장된 키를 나타내며 [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능을 사용할 때 열 암호화 키를 보호(암호화)하는 데 사용됩니다. 여러 열 마스터 키는 보안 향상을 위해 해당 키를 정기적으로 변경하고 키 회전을 허용합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 PowerShell에서 개체 탐색기를 사용하여 키 저장소의 열 마스터 키 및 데이터베이스에서 해당 메타데이터 개체를 만들 수 입니다. 자세한 정보는 [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> Enclave 사용 키를 만들려면(ENCLAVE_COMPUTATIONS 사용) [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)가 필요합니다.
+
 ## <a name="syntax"></a>구문  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  
@@ -153,10 +155,12 @@ CREATE COLUMN MASTER KEY key_name
      *KeyUrl*  
      Azure Key Vault의 키의 URL
 
+ENCLAVE_COMPUTATIONS  
+열 마스터 키를 Eclave 사용 키로 지정합니다. 즉, 이 열 마스터 키로 암호화된 모든 열 암호화 키를 서버 쪽 보안 Enclave와 공유하고 Enclave 내의 계산에 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
-예:
- 
-`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
+ *signature*  
+이진 리터럴은 *키 경로* 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다(이 서명은 ENCLAVE_COMPUTATIONS이 지정되었는지 여부를 반영함). 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 지원 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 응용 프로그램에 오류를 반환할 수 있습니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -170,7 +174,7 @@ CREATE COLUMN MASTER KEY key_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-column-master-key"></a>1. 열 마스터 키 만들기  
- MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스 하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+ MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -190,7 +194,7 @@ WITH (
 );  
 ```  
   
- 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 응용 프로그램에 대한 Azure Key Vault에 저장된 열 마스터 키 만들기.  
+ 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 응용 프로그램에 대한 Azure Key Vault에 저장된 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -200,7 +204,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- 사용자 지정 열 마스터 키 저장소에 저장된 CMK 만들기.  
+ 사용자 지정 열 마스터 키 저장소에 저장된 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -208,6 +212,28 @@ WITH (
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
+```  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>2. Enclave 사용 열 마스터 키 만들기  
+ MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스하려면 인증서 저장소에 저장되는 Enclave 사용 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
+     KEY_PATH = 'Current User/Personal/f2260f28d909d21c642a3d8e0b45a830e79a1420'  
+     ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020542419990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );  
+```  
+  
+ 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 응용 프로그램에 대한 Azure Key Vault에 저장된 Enclave 사용 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+    KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
+    KEY_PATH = N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700');
+    ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020582413990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );
 ```  
   
 ## <a name="see-also"></a>참고 항목

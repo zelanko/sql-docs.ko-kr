@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - queries [SQL Server], columns
 - adding columns
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd6082b4014766a783b4ecfa35638972ab2ff0a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db9e0371282532c2ef70db963dfbb48b45cafa02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641461"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>쿼리에 열 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "33050056"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>하나의 테이블 또는 테이블 반환 개체에 대한 열 전체를 추가하려면  
   
--   **다이어그램 창**에서 **\&#42;(모든 열)** 옆에 있는 확인란을 선택합니다.  
+-   **다이어그램 창**에서 **&#42;(모든 열)** 옆에 있는 확인란을 선택합니다.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>모든 테이블 및 테이블 구조 개체에 대한 열 전체를 추가하려면  
   

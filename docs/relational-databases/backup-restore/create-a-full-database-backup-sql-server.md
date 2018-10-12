@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348484"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782421"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +197,7 @@ ms.locfileid: "43348484"
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Azure Blob Storage 서비스에 백업**
 #### <a name="common-steps"></a>**공통 단계**  
-아래 세 가지 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
+아래 세 가지 예제에서는 Microsoft Azure Blob Storage 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
 2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
@@ -266,7 +263,7 @@ ms.locfileid: "43348484"
     |옵션|설명|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
+    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
@@ -279,10 +276,10 @@ ms.locfileid: "43348484"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
          백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.  
   
     -   기본 백업 세트 WITH 옵션  
@@ -291,7 +288,7 @@ ms.locfileid: "43348484"
   
          또는 백업 미디어의 형식을 지정하기 위해 FORMAT 옵션을 사용합니다.  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
          미디어를 처음 사용하거나 기존의 모든 데이터를 덮어쓰려고 하는 경우 FORMAT 절을 사용합니다. 필요에 따라 새 미디어에 미디어 이름과 설명을 지정합니다.  
   
         > [!IMPORTANT]  

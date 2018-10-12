@@ -5,9 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6924a66746699e429ef2cd45d1692ced5c9bf44d
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630361"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,9 +165,9 @@ ms.locfileid: "43118540"
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 **특정 개체...**, **유형의 모든 개체...** 또는 **서버***server_name*옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 **특정 개체...**, **선택한 유형의 모든 개체...** 또는 **서버**_server\_name_ 옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **참고:** **서버***server_name*을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
+    > **참고:** **서버**_server\_name_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
 3.  **특정 개체...** 를 선택한 경우:  
   

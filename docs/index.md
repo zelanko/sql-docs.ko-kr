@@ -3,132 +3,417 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL 문서 | Microsoft 문서
 description: SQL에 대한 자세한 정보
-ms.date: 09/01/2018
-author: craigg-msft
-ms.author: craigg
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: install
-ms.openlocfilehash: 20861197abd978fc6598d9290fffa5b0059f8153
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+author: barbkess
+ms.author: barbkess
+ms.topic: hub-page
+ms.technology:
+- database-engine
+ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232547"
 ---
 <div id="main" class="v2">
     <div class="container">
-        <h1>SQL 설명서</h1>
+        <ul class="cardsY panelContent featuredContent">
+            <li>
+                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-sql-server.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/get-azure-sql-vm.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">SQL Server를 사용하여 Azure VM 가져오기</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/sql/ssms/download-sql-server-management-studio-ssms">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-ssms.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">SQL Server Management Studio 다운로드</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 class="screenReader">Microsoft SQL 설명서</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#main"></a>
-                <ul id="main">
+                <a href="#sqlserver">SQL Server</a>
+                <ul id="sqlserver">
                     <li>
-                        <a href="#databases">데이터베이스</a>
-                        <ul id="databases" class="cardsL">
+                        <a href="#sqlserver"></a>
+                        <ul id="sqlserver" class="cardsL cols cols3">
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/windows.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>Windows의 SQL Server</h3>
+                                              <ul class="noBullet">
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>온-프레미스</strong></a></li>
+                                              <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>Azure VM에서 실행</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>새로운 기능</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/azure.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>SQL as an Azure Service</h3>
+                                              <ul class="noBullet">
+                                                  <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL Database</strong></a></li>
+                                                  <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="media/index/linux.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Linux의 SQL Server</h3>
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview/"><strong>온-프레미스</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/quickstart-install-connect-clouds/"><strong>Azure VM에서 실행</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-whats-new/"><strong>새로운 기능</strong></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="fullSpan">
-                                <div class="container intro">
-                                    <p>데이터 센터 또는 Azure에서 SQL 데이터베이스를 사용하여 관계형 데이터를 관리하고, 기계 학습 및 분석을 사용하여 SQL 데이터에 대한 정보를 얻습니다. </p>
-                                </div>
+                                <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
+                                    <li>
+                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/install-or-upgrade.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>설치 또는 업그레이드</h3>
+                                                          <p>SQL Server와 연결된 서비스를 설치 및 업그레이드하는 방법을 자세히 설명하는 설명서를 시작하세요.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>비즈니스 연속성</h3>
+                                                          <p><b>고가용성, 재해 복구, Always On 가용성 그룹, Always On 장애 조치(Failover) 클러스터 인스턴스, 데이터베이스 미러링, 백업 및 복원</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/secure-sql-server.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>보안</h3>
+                                                          <p><b>권한, 액세스 관리, Always Encrypted, TDE, SSL</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/manage-monitor-tune.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>관리, 모니터링 및 튜닝</h3>
+                                                          <p><b>유지 관리 계획, SQL 프로파일러, 자동 튜닝, 메모리 내 OLTP, 파티션, 통계, 인덱스, 카디널리티 추정 </b>  </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/load-move-data.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>데이터 마이그레이션, 로드 및 이동</h3>
+                                                          <p><b>Migration Assistant, Integration Services, 가져오기 내보내기 마법사, 복제 </b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/database-design/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/database-design.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>데이터베이스 디자인</h3>
+                                                          <p><b>Filestream, Filetable, 공간 데이터, 뷰, 트리거, 그래프, 시퀀스 번호, 저장 프로시저, 변경 내용 추적 </b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/query-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/query-data.svg" alt="" /> 
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>쿼리 데이터</h3>
+                                                          <p><b>커서, 동의어, 스크립팅, 조인, 사용자 정의 함수, 전체 텍스트 검색 </b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/learn-sql.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>SQL Server에 대해 알아보기</h3>
+                                                          <p>일련의 가이드 및 자습서를 사용하여 SQL Server의 아키텍처 내부 요소에 대해 알아봅니다. </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                </ul>
                             </li>
-                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">데이터베이스</h3>
-                                                <h4>SQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Azure SQL Database</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL 데이터 웨어하우스</a></li>                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
-                                                    <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">이전 SQL Server 버전(2005 - 2012)</a></li>
-                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">분석 플랫폼 시스템 - 병렬 데이터 웨어하우스</a><li>
-                                                </ul>
-                                                <h4>Windows 또는 Linux에서 실행</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview">Linux의 SQL Server</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/linux/">Linux 가상 컴퓨터</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/windows/">Windows 가상 컴퓨터</a></li>
-                                                </ul>
-                                                <h4>오픈 소스 SQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/postgresql/">PostgreSQL용 Azure 데이터베이스</a></li>
-                                                    <li><a class="barLink" href="/azure/mysql/">MySQL용 Azure 데이터베이스</a></li>
-                                                </ul>
-                                                <h4>NoSQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/cosmos-db/">Cosmos DB</a></li>
-                                                </ul>
-                                            </div>
-                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">개발</h3>
-                                                <h4>디자인</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">클라이언트 응용 프로그램을 사용하여 연결</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/database-features">관계형 데이터베이스 개념</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/security">SQL 보안</a></li>
-                                                </ul>
-                                                <h4>Tools</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio<sup>미리 보기</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
-                                                    <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT(SQL Server Data Tools)</a></li>
-                                                    <li><a class="barLink" href="/sql/tools/overview-sql-tools">모든 SQL 도구 보기</a></li>
-                                                </ul>
-                                                <h4>참조</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMV</a></li>
-                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
-                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
-                                                </ul>
-                                                <h4>샘플</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">GitHub의 코드 샘플</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">Wide World Importers DB</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">AdventureWorks DB</a></li>
-                                                </ul>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>디자인</h3>
+                                                        <ul class="noBullet">
+                                                          <li><a class="barLink" href="/sql/relational-databases/database-features/">관계형 데이터베이스 개념</a></li>
+                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">온-프레미스의 클라이언트 응용 프로그램에 연결</a></li>
+                                                            <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB 연결 라이브러리</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB 응용 프로그램</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">데이터 분석</h3>
-                                                <h4>분석</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services(2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server 컴퓨터 학습 서비스</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server(독립 실행형)</a></li>
-                                                </ul>
-                                                <h4>보고</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services(2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI 서비스</a></li>
-                                                </ul>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Tools</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
+                                                            <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 
+                                                            <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT(SQL Server Data Tools)</a></li>
+                                                            <li><a class="barLink" href="/sql/tools/overview-sql-tools">기타 SQL 도구</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                    <div class="cardText">
+                                                        <h3>참조</h3>
+                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMV</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                </ul></td>
+                                                <td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL(T-SQL)</a></li>
+                                                     <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">데이터베이스 예제</a></li>
+                                                     <li><a class="barLink" href="/previous-versions/sql/">보관된 콘텐츠(SQL2005-2012)</a></li>
+                                                </ul></td></tr></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>보고</h3>
+                                                        <ul class="noBullet">
+                                                             <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">PowerBI 서비스</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI 보고서 서버</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>데이터 분석</h3>
+                                                        <ul class="noBullet">
+                                                        <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>AI 및 Machine Learning</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
+                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -136,4 +421,27 @@ ms.locfileid: "44343128"
             </li>
         </ul>
     </div>
-</div>
+<div class="container centered pageFooter">
+        <h2>Microsoft에 연락하기</h2>
+        <ul class="links">
+           <li>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL 설명서에 참여하세요. </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL 문서 피드백 </a>
+            </li>
+           <li>
+                <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> 블로그 </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/sqldocs" data-linktype="external"> Twitter </a>
+            </li>
+            <li>
+                <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc" data-linktype="external"> MSDN 포럼 </a>
+            </li>
+            <li>
+                <a href="https://feedback.azure.com/forums/908035-sql-server" data-linktype="external"> User Voice </a>
+            </li>
+        </ul>
+    </div>
+

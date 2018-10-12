@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01dc0e49f381efa0e080f216ccf3943252239d1d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724741"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "43075255"
   
     -   ADO, OLE DB 및 ODBC 응용 프로그램은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
   
-         **{ ts'** yyyy**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** 예: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
+         **{ ts'** yyyy**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
   
          **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** 예: **{ d'** 1998**-** 09**-** 24 **'}**  
   

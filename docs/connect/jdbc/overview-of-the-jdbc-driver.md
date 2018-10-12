@@ -5,26 +5,23 @@ ms.date: 01/18/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6233c2cb8058de96a180914f93bf185f03ccaab
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597141"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  SQL Server용 Microsoft JDBC Driver 6.0(Preview)은 SQL Server 2016(Preview), SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 Azure SQL Database에 대한 강력한 데이터 액세스를 제공하는 유형 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.  
+  SQL Server용 Microsoft JDBC Driver는 SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 Azure SQL Database에 대한 강력한 데이터 액세스를 제공하는 유형 4 JDBC(Java Database Connectivity) 4.2 규격 드라이버입니다.  
   
  이 섹션의 항목에서는 JDBC 드라이버를 사용하기 위한 시스템 요구 사항, JDBC 드라이버의 사용 방법 및 자세한 내용을 확인할 수 있는 위치를 비롯하여 JDBC 드라이버의 일반적인 개요를 제공합니다.  
   

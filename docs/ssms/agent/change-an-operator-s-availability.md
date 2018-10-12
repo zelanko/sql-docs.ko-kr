@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10362775f63812fdf058fdd79b183af4b3d95403
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: d2fc718a0f03261268652a221d356b7b5bb3b23a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42775519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732101"
 ---
 # <a name="change-an-operator39s-availability"></a>운영자의 응답 가능 여부 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ ms.locfileid: "42775519"
   
 4.  사용하거나 사용하지 않도록 설정할 운영자를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **일반** 탭을 클릭합니다.  
   
-5.  *operator_name***속성** 대화 상자에서 **사용** 확인란을 선택하거나 선택을 취소합니다.  
+5.  _operator\_name_**속성** 대화 상자에서 **사용** 확인란을 선택하거나 선택을 취소합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -86,7 +82,7 @@ ms.locfileid: "42775519"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     -- disables the 'François Ajenstat' operator  

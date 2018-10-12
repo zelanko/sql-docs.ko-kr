@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23377ab94d14be40be698089aea48b71b1ed906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784461"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +58,9 @@ ms.locfileid: "32866258"
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-2.  **일반 설정** 노드를 클릭합니다.  
+2.  **고급** 탭을 클릭합니다.  
   
-3.  **사용자의 기본 언어** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시스템 메시지를 표시하는 데 사용할 언어를 선택합니다.  
+3.  **기본 언어** 상자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시스템 메시지를 표시하는 데 사용할 언어를 선택합니다.  
   
      기본 언어는 한국어(Korean)입니다.  
   
@@ -75,7 +72,7 @@ ms.locfileid: "32866258"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `default language` 옵션을 프랑스어(`2`)로 구성하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 사용하여 `default language` 옵션을 프랑스어(`2`)로 구성하는 방법을 보여 줍니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  

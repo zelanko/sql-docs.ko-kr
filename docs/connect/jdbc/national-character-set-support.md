@@ -5,41 +5,38 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0dcdb844c017a708d607570263717f2eaa56a39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0767cdbd57a481ebe82993f3be4ae3e8e1738c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683201"
 ---
 # <a name="national-character-set-support"></a>국가별 문자 집합 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC 드라이버에서는 이제 JDBC 4.0 API를 지원하며 새로운 국가별 문자 집합 변환 API 메서드를 제공합니다. 이 지원에 대 한 새로운 setter, getter 및 updater 메서드를 포함 **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, 및 **NCLOB** JDBC 형식입니다.  
+  JDBC 드라이버에서는 이제 JDBC 4.0 API를 지원하며 새로운 국가별 문자 집합 변환 API 메서드를 제공합니다. 이 지원에 대 한 새로운 setter, getter 및 updater 메서드를 포함 **NCHAR**, **NVARCHAR**합니다 **LONGNVARCHAR**, 및 **NCLOB** JDBC 형식입니다.  
   
  다음은 국가별 문자 집합 변환을 지원하는 새로운 getter, setter 및 updater 메서드 목록입니다.  
   
--   [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md): [setNString](../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md), [setNCharacterStream](../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md), [setNClob](../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)합니다.  
+-   [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md): [setNString](../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md), [setNCharacterStream](../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md), [setNClob](../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)  
   
--   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md): [getNClob](../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md), [getNString](../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md), [getNCharacterStream](../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md), [setNString](../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md), [setNCharacterStream](../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md), [setNClob](../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)합니다.  
+-   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md): [getNClob](../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md), [getNString](../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md), [getNCharacterStream](../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md), [setNString](../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md), [setNCharacterStream](../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md), [setNClob](../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)  
   
--   [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md): [getNClob](../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md), [getNString](../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md), [getNCharacterStream](../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md), [updateNClob](../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md), [updateNString](../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md), [updateNCharacterStream](../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)합니다.  
+-   [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md): [getNClob](../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md), [getNString](../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md), [getNCharacterStream](../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md), [updateNClob](../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md), [updateNString](../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md), [updateNCharacterStream](../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)  
   
 > [!NOTE]  
 >  응용 프로그램에서 이러한 메서드를 사용하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다.  
   
- 문자열 매개 변수를 서버에 유니코드 형식으로 보내려면 응용 프로그램은 새 JDBC 4.0 국가별 문자 메서드를 사용 하거나 해야 설정 또는 **sendStringParametersAsUnicode** 연결 속성을 "**true**" 비 국가별 문자 메서드를 사용 하는 경우. 가능한 한 새 JDBC 4.0 국가별 문자 메서드를 사용하는 것이 좋습니다. 에 대 한 자세한 내용은 **sendStringParametersAsUnicode** 연결 속성 참조 [연결 속성을 설정할](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ 문자열 매개 변수를 유니코드 형식으로 서버에 보내기 위해 응용 프로그램은 새 JDBC 4.0 국가별 문자 메서드를 사용하거나 국가별 문자 메서드 이외의 메서드를 사용하는 경우 **sendStringParametersAsUnicode** 연결 속성을 "**true**"로 설정해야 합니다. 가능한 한 새 JDBC 4.0 국가별 문자 메서드를 사용하는 것이 좋습니다. 에 대 한 자세한 내용은 합니다 **sendStringParametersAsUnicode** 연결 속성을 참조 하세요 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

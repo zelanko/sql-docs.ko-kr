@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f1d3d24d71f8764274de465d55ebae950a5f9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad4ee3752b321803b4d2c3e05bbf317775e859e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695851"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에 의해 노출 되는 멤버가 나와 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스입니다.  
+  다음 표에는 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
  없음  
@@ -37,11 +34,11 @@ ms.locfileid: "32847078"
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|지정 된 이벤트 수신기를 등록 하 여이 이벤트가 발생할 때 알림을 받이 됩니다 있도록 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체입니다.|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|실제 연결을 닫습니다이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는입니다.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|실제 연결에 대 한 개체 핸들을 만듭니다이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는입니다.|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|지정된 이벤트 수신기를 등록하여 이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체에서 이벤트가 발생할 때 해당 수신기가 알림을 받도록 합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는 실제 연결을 닫습니다.|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는 실제 연결에 대한 개체 핸들을 만듭니다.|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|지정된 이벤트 수신기를 제거합니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  
@@ -50,7 +47,7 @@ ms.locfileid: "32847078"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerPooledConnection 클래스](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   

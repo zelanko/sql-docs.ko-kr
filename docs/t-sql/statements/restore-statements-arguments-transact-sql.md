@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9dc5fcb6f7cb550d890d621f36fc79714c34edf
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746031"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ ms.locfileid: "40008885"
   
  자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
- { *database_name* | **@***database_name_var*}  
+ { _database\_name_ | **@**_database\_name\_var_}  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 로그나 전체 데이터베이스가 복원되는 데이터베이스입니다. 변수(**@***database_name_var*)로 제공된 경우, 이 이름은 문자열 상수(**@***database_name_var* = *database*_* name*)나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 로그나 전체 데이터베이스가 복원되는 데이터베이스입니다. 변수(**@**_database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수(**@**_database\_name\_var_ = *database*\_*name*)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -84,10 +81,10 @@ ms.locfileid: "40008885"
   
 -   백업에 주 파일 그룹이 포함되고 부분 복원이 수행되고 있는 경우. 이런 경우에는 로그가 백업 세트에서 자동으로 복원되기 때문에 복원 로그가 필요하지 않습니다.  
   
-FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_var*}  
+FILE **=** { *logical_file_name_in_backup*| **@**_logical\_file\_name\_in\_backup\_var_}  
  데이터베이스 복원에 포함할 파일의 이름을 지정합니다.  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
  데이터베이스 복원에 포함할 파일 그룹의 이름을 지정합니다.  
   
  **참고** FILEGROUP은 지정한 파일 그룹이 읽기 전용이고 부분 복원인 경우 즉, WITH PARTIAL이 사용되는 경우에만 단순 복구 모델에서 사용할 수 있습니다. 복원되지 않은 읽기/쓰기 파일 그룹은 존재하지 않는 것으로 표시되므로 결과 데이터베이스로 복원할 수 없습니다.  
@@ -95,7 +92,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  모든 읽기/쓰기 파일 그룹을 선택합니다. 이 옵션은 읽기/쓰기 파일 그룹 다음에 복원할 읽기 전용 파일 그룹이 읽기 전용 파일 그룹 앞에 있는 경우에 특히 유용합니다.  
   
-PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
+PAGE = **'**_file_**:**_page* [ **,**...*n* ]**'**  
  전체 복구 모델 또는 대량 로그 복구 모델을 사용하는 데이터베이스에만 지원되는 페이지 복원의 페이지 목록을 지정합니다. 값은 다음과 같습니다.  
   
 PAGE  
@@ -130,9 +127,11 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 
   
  \<backup_device>::= 다음과 같이 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* } 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 장치의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@***logical_backup_device_name_var*)로 제공한 경우 백업 장치 이름은 문자열 상수(**@***logical_backup_device_name_var* = *logical_backup_device_name*)나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
+ 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 장치의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@**_logical\_backup\_device\_name\_var_)로 제공한 경우 백업 장치 이름은 문자열 상수(**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 백업을 명명된 디스크 또는 테이프 장치에서 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@***physical_backup_device_name_var*)로 지정한 경우 장치 이름은 문자열 상수(**@***physical_backup_device_name_var* = '* physcial_backup_device_name*')나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 장치 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
@@ -155,7 +154,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 
 \<database_snapshot>::=  
 **지원 문:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT **=***database_snapshot_name*  
+DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
  데이터베이스를 *database_snapshot_name*으로 지정한 데이터베이스 스냅숏으로 되돌립니다. DATABASE_SNAPSHOT 옵션은 전체 데이터베이스 복원에만 사용할 수 있습니다. 되돌리기 작업에서는 데이터베이스 스냅숏이 전체 데이터베이스 백업을 대신합니다.  
   
  되돌리기 작업을 수행하려면 지정한 데이터베이스 스냅숏이 데이터베이스에서 유일한 스냅숏이어야 합니다. 되돌리기 작업 중에 데이터베이스 스냅숏과 대상 데이터베이스는 둘 다 `In restore`로 표시됩니다. 자세한 내용은 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)의 "주의" 섹션을 참조하세요.  
@@ -201,7 +200,7 @@ DATABASE_SNAPSHOT **=***database_snapshot_name*
   
  경우에 따라 RESTORE WITH NORECOVERY 옵션은 데이터베이스와 일치되도록 롤포워드 세트를 충분히 롤포워드합니다. 이런 경우 예상대로 롤백은 발생하지 않고 데이터는 오프라인 상태로 유지됩니다. 그러나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에는 RECOVERY 옵션을 사용하여 롤포워드 세트를 복구할 수 있다는 정보 메시지가 표시됩니다.  
   
-STANDBY **=***standby_file_name*  
+STANDBY **=**_standby\_file\_name_  
  복구 결과를 취소할 수 있는 대기 파일을 지정합니다. STANDBY 옵션은 부분 복원을 포함하는 오프라인 복원에 사용할 수 있으며 온라인 복원에는 사용할 수 없습니다. 온라인 복원 작업에 STANDBY 옵션을 지정하려고 하면 복원 작업이 실패하게 됩니다. 데이터베이스 업그레이드가 필요한 경우에도 STANDBY를 사용할 수 없습니다.  
   
  대기 파일은 RESTORE WITH STANDBY의 실행 취소 패스 중에 수정된 페이지에 대한 "쓰기 시 복사" 기존 이미지를 유지하는 데 사용됩니다. 대기 파일을 사용하면 트랜잭션 로그 복원 시 읽기 전용 액세스를 위해 데이터베이스를 가져와 대기 중인 서버 상태나 로그 복원 시 데이터베이스를 검사하는 데 유용한 특수한 복원 상태에 사용할 수 있습니다. RESTORE WITH STANDBY 작업이 완료되면 다음 RESTORE 작업에 의해 실행 취소 파일이 자동으로 삭제됩니다. 다음 RESTORE 작업이 수행되기 전에 이 대기 파일을 수동으로 삭제하면 전체 데이터베이스를 다시 복원해야 합니다. 데이터베이스가 STANDBY 상태에 있으면 다른 데이터베이스 파일과 마찬가지로 주의 깊게 이 대기 파일을 처리해야 합니다. 다른 데이터베이스 파일과 달리 이 파일은 활성 복원 작업 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해서만 열려 있습니다.  
@@ -226,7 +225,7 @@ LOADHISTORY
 ##### <a name="restore-operation-options"></a>복원 작업 옵션  
  이러한 옵션은 복원 작업의 동작에 영향을 줍니다.  
   
-MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ ...*n* ]  
+MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  *logical_file_name_in_backup*에 논리적 이름이 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하여 제거하도록 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.  
@@ -286,7 +285,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>백업 세트 옵션  
  이러한 옵션은 복원할 백업이 포함된 백업 세트에서 작동합니다.  
   
-FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 없습니다.  
@@ -294,9 +293,9 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  지정하지 않으면 기본값은 **1**입니다. 단, 미디어 세트의 모든 백업 세트가 처리되는 RESTORE HEADERONLY의 경우는 제외됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 세트 지정"을 참조하십시오.  
   
 > [!IMPORTANT]  
->  이 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }.  
+>  이 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
- PASSWORD  **=** { *password* | **@***password_variable* }  
+ PASSWORD  **=** { *password* | **@**_password\_variable_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  백업 세트에 대한 암호를 제공합니다. 백업 세트 암호는 문자열입니다.  
@@ -312,7 +311,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="media-set-options"></a>미디어 세트 옵션  
  이러한 옵션은 전체 미디어 세트에서 작동합니다.  
   
- MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
+ MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  미디어에 대한 이름을 지정합니다. 제공된 미디어 이름은 백업 볼륨의 미디어 이름과 일치해야 합니다. 그렇지 않으면 복원 작업이 종료됩니다. RESTORE 문에서 미디어 이름을 지정하지 않을 경우에는 백업 볼륨의 미디어 이름과 일치하는지 확인하지 않습니다.  
@@ -320,7 +319,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  백업과 복원 작업에서 미디어 이름을 항상 사용하면 복원 작업을 위해 선택한 미디어에 대한 추가 안정성 검사를 제공합니다.  
   
- MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
+ MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  미디어 세트에 대한 암호를 제공합니다. 미디어 세트 암호는 문자열입니다.  
@@ -333,7 +332,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  이 암호는 미디어 세트에 대한 보호 수준이 낮습니다. 자세한 내용은 관련 문에 대한 "사용 권한" 섹션을 참조하십시오.  
   
- BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+ BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  물리적 블록 크기(바이트)를 지정합니다. 지원되는 크기는 512, 1024, 2048, 4096, 8192, 16384, 32768 및 65536(64KB) 바이트입니다. 테이프 장치의 기본값은 65536이고 그렇지 않은 경우에는 512입니다. 일반적으로 RESTORE에서 장치에 적합한 블록 크기를 자동으로 선택하기 때문에 이 옵션은 필요하지 않습니다. 명시적으로 지정된 블록 크기는 자동 선택된 블록 크기보다 우선 적용됩니다.  
@@ -346,14 +345,14 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="data-transfer-options"></a>데이터 전송 옵션  
  이 옵션을 사용하면 백업 장치로부터의 데이터 전송을 최적화할 수 있습니다.  
   
- BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  복원 작업에 사용되는 I/O 버퍼의 총 수를 지정합니다. 임의의 양의 정수를 지정할 수 있지만 버퍼 수가 많으면 Sqlservr.exe 프로세스의 부적절한 가상 주소 공간으로 인해 "메모리가 부족합니다"라는 오류가 발생할 수 있습니다.  
   
- 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다: *buffercount***\**** maxtransfersize*.  
+ 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다. _buffercount_**\**_maxtransfersize_.  
   
- MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+ MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  백업 미디어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.  
@@ -498,8 +497,8 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT **=** { **'***datetime***'** | **@***datetime_var* }  
- 데이터베이스가 *datetime* 또는 **@***datetime_var* 매개 변수에 지정된 날짜 및 시간의 상태로 복원되도록 지정합니다. 날짜 및 시간 지정에 대한 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
+ STOPAT **=** { **'**_datetime_**'** | **@**_datetime\_var* }  
+ 데이터베이스가 *datetime* 또는 **@**_datetime\_var_ 매개 변수에 지정된 날짜 및 시간의 상태로 복원되도록 지정합니다. 날짜 및 시간 지정에 대한 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   
  STOPAT에 사용되는 변수는 **varchar**, **char**, **smalldatetime** 또는 **datetime** 데이터 형식으로 지정해야 합니다. 지정한 날짜와 시간 전에 작성된 트랜잭션 로그 레코드만 데이터베이스에 적용됩니다.  
   
@@ -508,7 +507,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   
- STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  지정된 복구 지점으로의 복구를 지정합니다. 지정된 트랜잭션은 복구에 포함되지만 트랜잭션이 실제로 생성될 때 원래 커밋된 경우에만 커밋됩니다.  
   
  RESTORE DATABASE 및 RESTORE LOG는 모두 *lsn_number* 매개 변수를 지원합니다. 이 매개 변수는 로그 시퀀스 번호를 지정합니다.  
@@ -522,7 +521,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  자세한 내용은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구 &#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 및 [로그 시퀀스 번호로 복구 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)를 참조하세요.  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  지정된 복구 지점까지의 복구를 지정합니다. 지정된 트랜잭션은 복구에 포함되지 않으며 WITH RECOVERY가 사용될 때 롤백됩니다.  
   
  RESTORE DATABASE 및 RESTORE LOG는 모두 *lsn_number* 매개 변수를 지원합니다. 이 매개 변수는 로그 시퀀스 번호를 지정합니다.  
@@ -561,7 +560,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  복원할 백업 세트를 지정하는 옵션은 다음과 같습니다.  
   
- FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
   
  여기서 *backup_set_file_number*는 미디어 세트에서의 백업 위치를 나타냅니다. *backup_set_file_number*가 1(FILE = 1)인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내며 *backup_set_file_number*가 2(FILE = 2)인 경우는 두 번째 백업 세트를 나타내는 식입니다.  
   
@@ -575,7 +574,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |RESTORE VERIFYONLY|기본 *backup_set_file_number*는 1입니다.|  
   
 > [!NOTE]  
->  백업 세트를 지정하기 위한 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }.  
+>  백업 세트를 지정하기 위한 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
 ## <a name="summary-of-support-for-with-options"></a>WITH 옵션 지원에 대한 요약  
  다음 WITH 옵션은 RESTORE 문에서만 지원됩니다. BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER 및 { STOPAT | STOPATMARK | STOPBEFOREMARK }  
@@ -599,7 +598,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |STATS|√|—|—|—|—|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> FILE **=***backup_set_file_number*, 이는 {FILE | FILEGROUP}과 다릅니다.  
+ <sup>1</sup> FILE **=**_backup\_set\_file\_number_. 이는 {FILE | FILEGROUP}과 다릅니다.  
   
 ## <a name="permissions"></a>Permissions  
  사용 권한에 대한 자세한 내용은 다음 항목을 참조하십시오.  

@@ -6,25 +6,22 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a5f5a6eda29264baee432a1b8c8b17dee8f6ae
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: edad80b1e0172073f6be494519d2ae68f3a1dc90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855141"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
-SQL Server 단위 테스트에서 하나 이상의 Transact\-SQL 테스트 스크립트가 실행됩니다. 결과는 Transact\-SQL 스크립트와 오류를 반환하고 테스트를 실패 처리하는 데 사용되는 THROW 또는 RAISERROR 내에서 평가할 수 있으며, 결과를 평가하기 위한 테스트 조건을 테스트에 정의할 수 있습니다. 테스트는 [SqlExecutionResult](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 클래스의 인스턴스를 반환합니다. 이 클래스의 인스턴스에는 하나 이상의 데이터 집합, 실행 시간 및 스크립트의 영향을 받는 행이 포함됩니다. 이러한 모든 정보는 스크립트를 실행하는 동안 수집됩니다. 이러한 결과는 테스트 조건을 사용하여 평가될 수 있습니다. SQL Server Data Tools에서는 미리 정의된 테스트 조건의 집합을 제공합니다. 사용자 지정 조건을 작성하고 사용할 수도 있습니다. [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)을 참조하세요.  
+SQL Server 단위 테스트에서 하나 이상의 Transact\-SQL 테스트 스크립트가 실행됩니다. 결과는 Transact\-SQL 스크립트와 오류를 반환하고 테스트를 실패 처리하는 데 사용되는 THROW 또는 RAISERROR 내에서 평가할 수 있으며, 결과를 평가하기 위한 테스트 조건을 테스트에 정의할 수 있습니다. 테스트는 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 클래스의 인스턴스를 반환합니다. 이 클래스의 인스턴스에는 하나 이상의 데이터 집합, 실행 시간 및 스크립트의 영향을 받는 행이 포함됩니다. 이러한 모든 정보는 스크립트를 실행하는 동안 수집됩니다. 이러한 결과는 테스트 조건을 사용하여 평가될 수 있습니다. SQL Server Data Tools에서는 미리 정의된 테스트 조건의 집합을 제공합니다. 사용자 지정 조건을 작성하고 사용할 수도 있습니다. [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)을 참조하세요.  
   
 ## <a name="predefined-test-conditions"></a>미리 정의된 테스트 조건  
 다음 표에서는 SQL Server 단위 테스트 디자이너에서 테스트 조건 창을 사용하여 추가할 수 있는 미리 정의된 테스트 조건을 보여 줍니다.  

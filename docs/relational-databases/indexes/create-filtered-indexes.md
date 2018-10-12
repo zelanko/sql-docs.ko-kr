@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603251"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065470"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   뷰에서 필터링된 인덱스를 만들 수 없습니다. 그러나 쿼리 최적화 프로그램에는 뷰에서 참조되는 테이블에 정의되는 필터링된 인덱스에 성능상 이점이 있습니다. 쿼리 최적화 프로그램에서는 쿼리 결과가 수정될 경우 뷰에서 선택하는 쿼리에 대한 필터링된 인덱스를 검토합니다.  
+-   뷰에서 필터링된 인덱스를 만들 수 없습니다. 그러나 쿼리 최적화 프로그램에는 뷰에서 참조되는 테이블에 정의되는 필터링된 인덱스에 성능상 이점이 있습니다. 쿼리 최적화 프로그램에서는 쿼리 결과가 수정될 경우 뷰에서 선택하는 쿼리에 대한 필터링된 인덱스를 검토합니다.
+
+-   필터 식에서 액세스하는 열이 CLR 데이터 형식인 경우 테이블에서 필터링된 인덱스를 만들 수 없습니다.
   
 -   필터링된 인덱스에는 인덱싱된 뷰에 비해 다음과 같은 이점이 있습니다.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065470"
   
 6.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
   
-7.  *****table_name에서 열 선택* 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  _table\_name**_ 에서 열 선택** 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "43065470"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -178,7 +177,7 @@ ms.locfileid: "43065470"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;  

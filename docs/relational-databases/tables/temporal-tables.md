@@ -5,22 +5,19 @@ ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171beb8274ab12235b435c7c7fc4a2eab048bb5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856721"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
   
 ## <a name="how-do-i-query-temporal-data"></a>임시 데이터를 쿼리하는 방법  
- **SELECT** 문의 **FROM***\<table>* 절에는 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
+ **SELECT** 문 **FROM**_\<table\>_ 절은 5개의 temporal 특정 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -146,13 +143,13 @@ SELECT * FROM Employee
 |식|행 한정|설명|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
-|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|<end_date_time> 끝점으로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** 설명과 같습니다.|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 엔드포인트로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 엔드포인트로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
+|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|&lt;end_date_time&gt; 엔드포인트로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** &lt;start_date_time&gt;**TO** 설명과 같습니다.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.|  
 |**ALL**|모든 행|현재 테이블 및 기록 테이블에 속하는 행의 합집합을 반환합니다.|  
   
 > [!NOTE]  
->  필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM***\<table>* 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
+>  필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM**_\<table\>_ 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

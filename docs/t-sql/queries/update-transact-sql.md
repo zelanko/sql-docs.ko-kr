@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776971"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  공통 테이블 식은 SELECT, INSERT, DELETE 및 CREATE VIEW 문에서도 사용됩니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  업데이트할 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다.  
   
  INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다.  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  하나 이상의 인수를 사용하는 *udt_column_name*의 비정적 공용 변경자(mutator) 메서드입니다.  
   
- **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  *column_name* 값의 섹션이 수정되도록 지정합니다. *expression*은 *column_name*의 *@Offset*에서 시작하는 *@Length* 단위를 대체합니다. **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 의 열만 이 절을 사용하여 지정될 수 있습니다. *column_name*은 NULL일 수 없으며 테이블 이름 또는 테이블 별칭으로 정규화될 수 없습니다.  
   
  *expression*은 *column_name*에 복사된 값입니다. *expression*은 *column_name* 형식으로 평가되거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다. *expression*을 NULL로 설정하면 *@Length*가 무시되고 *column_name*의 값이 지정된 *@Offset*에서 잘립니다.  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *변수*  
  *expression*에서 반환된 값으로 설정한 선언된 변수입니다.  
   
- SET **@***variable* = *column* = *expression*은 열과 동일한 값으로 변수를 설정합니다. 이것은 변수를 이미 업데이트한 열 값으로 설정하는 SET **@***variable* = *column*, *column* = *expression*과는 다릅니다.  
+ SET **@**_variable_ = *column* = *expression*은 열과 동일한 값으로 변수를 설정합니다. 이것은 변수를 이미 업데이트한 열 값으로 설정하는 SET **@**_variable_ = _column_, _column_ = _expression_과는 다릅니다.  
   
  \<OUTPUT_Clause>  
  UPDATE 작업의 일부로서 업데이트된 데이터 또는 이를 바탕으로 한 식을 반환합니다. OUTPUT 절은 원격 테이블 또는 뷰를 대상으로 하는 어떤 DML 문에서도 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
@@ -334,7 +331,7 @@ GO
 >  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
- **.** WRITE(*expression***,** *@Offset ***,***@Length*) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.** WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.** WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 UPDATE 문이 다음 중 한 가지 동작을 유발할 때 부분 업데이트를 전체 업데이트로 변환합니다.  
 -   분할된 뷰 또는 테이블의 키 열을 변경합니다.  
@@ -346,7 +343,7 @@ GO
   
 최상의 성능을 위해 8,040바이트의 배수인 청크 크기로 데이터를 삽입 또는 업데이트하는 것이 좋습니다.  
   
-**.** WRITE 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.***column_name*의 이전 이미지 또는 **inserted.***column_name*의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
+**.** WRITE 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.**_column\_name_의 이전 이미지 또는 **inserted.**_column\_name_의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
   
 다른 문자 또는 binary 데이터 형식에 대해 **.** WRITE의 기능과 동일한 결과를 얻으려면 [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)를 사용합니다.  
   

@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a36885f-83f3-44af-85f0-2b849dfd20d4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9012b1c6a38bd7ab2a9778c39b85f2cd8f5246c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e3fed9b33aa1261bbc68befdbac8b8d962e1787c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612012"
 ---
 # <a name="sqlserverresultsetmetadata-class"></a>SQLServerResultSetMetaData 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   결과 집합에 포함된 열의 메타데이터를 나타냅니다.  
   
- **패키지에 대 한** com.microsoft.sqlserver.jdbc  
+ **패키지:** com.microsoft.sqlserver.jdbc  
   
  **확장:** java.lang.Object  
   
@@ -39,7 +36,7 @@ ms.locfileid: "32846268"
 public final class SQLServerResultSetMetaData  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 멤버](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

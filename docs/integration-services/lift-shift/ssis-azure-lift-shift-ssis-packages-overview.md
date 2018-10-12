@@ -1,26 +1,25 @@
 ---
 title: Azure에서 SSIS 패키지 배포 및 실행 | Microsoft Docs
 description: SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Microsoft Azure 클라우드로 이동할 수 있는 방법을 알아봅니다.
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829680"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
-이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다. SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 SQL Database Managed Instance(미리 보기) 또는 Azure SQL Database의 SSIS 카탈로그(SSISDB)에서 SSIS 프로젝트와 패키지를 배포, 실행 및 관리합니다.
+이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다. SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 SQL Database Managed Instance 또는 Azure SQL Database의 SSIS 카탈로그(SSISDB)에서 SSIS 프로젝트와 패키지를 배포, 실행 및 관리합니다.
 
 ## <a name="benefits"></a>이점
 온-프레미스 SSIS 워크로드를 Azure로 이동하면 다음과 같은 잠재적 이점이 있습니다.
@@ -36,7 +35,7 @@ ms.locfileid: "39482664"
 | 위치 | 저장소 | 런타임 | 확장성 |
 |---|---|---|---|
 | 온-프레미스 | SQL Server | SQL Server에서 호스팅하는 SSIS 런타임 | SSIS Scale Out(SQL Server 2017 이상)<br/><br/>사용자 지정 솔루션(이전 버전의 SQL Server) |
-| Azure | SQL Database 또는 SQL Database Managed Instance(미리 보기)에서 | Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime | Azure-SSIS Integration Runtime의 옵션 크기 조정 |
+| Azure | SQL Database 또는 SQL Database Managed Instance | Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime | Azure-SSIS Integration Runtime의 옵션 크기 조정 |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Azure에서 SSIS 프로비전

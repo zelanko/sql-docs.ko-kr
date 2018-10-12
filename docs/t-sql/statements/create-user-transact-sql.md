@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618091"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다. *user_name*은 **sysname**입니다. 최대 128자까지 지정할 수 있습니다. Windows 보안 주체 기반 사용자를 만드는 경우 다른 사용자 이름을 지정하지 않으면 Windows 보안 주체 이름이 사용자 이름이 됩니다.  
   
  LOGIN *login_name*  
- 데이터베이스 사용자를 만들 로그인을 지정합니다. *login_name*은 서버에서 유효한 로그인이어야 합니다. Windows 보안 주체(사용자 또는 그룹)를 기반으로 하는 로그인이거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인일 수 있습니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스에 들어가면 이 로그인은 만들 데이터베이스 사용자의 이름과 ID를 획득합니다. Windows 보안 주체에서 매핑된 로그인을 만들 때는 **[***\<domainName>***\\***\<loginName>***]** 형식을 사용하세요. 예제는 [구문 요약](#SyntaxSummary)을 참조하세요.  
+ 데이터베이스 사용자를 만들 로그인을 지정합니다. *login_name*은 서버에서 유효한 로그인이어야 합니다. Windows 보안 주체(사용자 또는 그룹)를 기반으로 하는 로그인이거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인일 수 있습니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스에 들어가면 이 로그인은 만들 데이터베이스 사용자의 이름과 ID를 획득합니다. Windows 보안 주체에서 매핑된 로그인을 만들 때는 **[**_\<domainName\>_**\\**_\<loginName\>_**]** 형식을 사용하세요. 예제는 [구문 요약](#SyntaxSummary)을 참조하세요.  
   
  CREATE USER 문이 SQL 일괄 처리의 유일한 문인 경우 Microsoft Azure SQL Database는 WITH LOGIN 절을 지원합니다. CREATE USER 문이 SQL 일괄 처리의 유일한 문이 아니거나 동적 SQL에서 실행되는 경우 WITH LOGIN 절이 지원되지 않습니다.  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마를 지정합니다.  
   
  '*windows_principal*'  
- 데이터베이스 사용자를 만들 Windows 보안 주체를 지정합니다. *windows_principal*은 Windows 사용자 또는 Windows 그룹일 수 있습니다. *windows_principal*에 로그인이 없어도 사용자가 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 *windows_principal*에 로그인이 없는 경우 Windows 보안 주체가 로그인이 있는 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인증하거나, 연결 문자열에서 포함된 데이터베이스를 초기 카탈로그로 지정해야 합니다. Windows 보안 주체에서 사용자를 만들 때는 **[***\<domainName>***\\***\<loginName>***]** 형식을 사용하세요. 예제는 [구문 요약](#SyntaxSummary)을 참조하세요. Active Directory 사용자에 기반한 사용자는 21자 미만의 이름으로 제한됩니다.    
+ 데이터베이스 사용자를 만들 Windows 보안 주체를 지정합니다. *windows_principal*은 Windows 사용자 또는 Windows 그룹일 수 있습니다. *windows_principal*에 로그인이 없어도 사용자가 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 *windows_principal*에 로그인이 없는 경우 Windows 보안 주체가 로그인이 있는 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인증하거나, 연결 문자열에서 포함된 데이터베이스를 초기 카탈로그로 지정해야 합니다. Windows 보안 주체에서 사용자를 만들 때는 **[**_\<domainName\>_**\\**_\<loginName\>_**]** 형식을 사용하세요. 예제는 [구문 요약](#SyntaxSummary)을 참조하세요. Active Directory 사용자에 기반한 사용자는 21자 미만의 이름으로 제한됩니다.    
   
  '*Azure_Active_Directory_principal*'  
  **적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]  

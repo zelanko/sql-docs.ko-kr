@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777731"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ CLUSTERED
  *column*  
  인덱스의 기준이 되는 열입니다. 지정된 열에 있는 결합된 값에 복합 인덱스를 만들려면 두 개 이상의 열 이름을 지정합니다. 복합 인덱스에 포함할 열을 *table_or_view_name* 다음의 괄호 안에 정렬 우선 순위 순서대로 나열합니다.  
   
- 단일 복합 인덱스 키에 최대 32개의 열을 결합할 수 있으며 복합 인덱스 키의 모든 열은 동일한 테이블 또는 뷰에 있어야 합니다. 결합된 인덱스 값의 최대 허용 크기는 클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트입니다. 한도는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전의 경우 16열 및 900바이트입니다.  
+ 단일 복합 인덱스 키에 최대 32개의 열을 결합할 수 있으며 복합 인덱스 키의 모든 열은 동일한 테이블 또는 뷰에 있어야 합니다. 결합된 인덱스 값의 최대 허용 크기는 클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트입니다. 한도는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전의 경우 16열 및 900바이트입니다.  
   
  큰 개체(LOB) 데이터 형식 **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** 또는 **image**인 열은 인덱스의 키 열로 지정할 수 없습니다. 또한 CREATE INDEX 문에 참조되지 않은 경우에도 뷰 정의에 **ntext**, **text** 또는 **image** 열을 포함할 수 없습니다.  
   
@@ -253,7 +250,7 @@ CLUSTERED
  [ **ASC** | DESC ]  
  특정 인덱스 열의 정렬 방향을 오름차순 또는 내림차순으로 지정합니다. 기본값은 ASC입니다.  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  비클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하도록 지정합니다. 비클러스터형 인덱스는 고유하거나 고유하지 않을 수 있습니다.  
   
  열 이름을 INCLUDE 목록에 반복 사용할 수 없으며 키 열과 키가 아닌 열로 동시에 사용할 수 없습니다. 클러스터형 인덱스가 테이블에 정의되어 있으면 비클러스터형 인덱스는 항상 클러스터형 인덱스 열을 포함합니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.  
@@ -337,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 개체는 클러스터형 columnstore 인덱스와 함께 저장된 테이블일 수 있습니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 세 부분으로 구성된 이름 형식(*database_name***.**[* schema_name *]**.***object_name*)을 지원합니다. 단, *database_name*이 현재 데이터베이스이거나 *database_name*이 tempdb이고 *object_name*이 #으로 시작해야 합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 세 부분으로 구성된 이름 형식(_database\_name_**.**[*schema_name*]**.**_object\_name_)을 지원합니다. 단, *database_name*이 현재 데이터베이스이거나 *database_name*이 tempdb이고 *object_name*이 #으로 시작해야 합니다.  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  인덱스를 만들 때 사용할 옵션을 지정합니다.  
   
@@ -358,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  이전 버전과 호환되는 구문에서 WITH PAD_INDEX는 WITH PAD_INDEX = ON과 같습니다.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 *fillfactor*가 100이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
@@ -465,7 +462,7 @@ ONLINE = { ON | **OFF** }
  
 RESUMABLE **=** { ON | **OFF**}
 
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
  온라인 인덱스 작업이 다시 시작될 수 있는지 여부를 지정합니다.
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**는] **RESUMABLE = ON** 상태에서만 사용됩니다(**ONLINE = ON** 필요).
  
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로) 
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값). 
 
@@ -522,7 +519,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
   
- @shouldalert  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  XML 인덱스에 대한 자세한 내용은 [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md) 및 [XML 인덱스 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   
 ## <a name="index-key-size"></a>인덱스 키 크기  
- 인덱스 키의 최대 크기는 클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트입니다. ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전의 한도는 항상 900바이트였습니다.) 인덱스가 만들어질 때 바이트 한도를 초과하는 **varchar** 열의 기존 데이터가 한도를 초과하지 않는 경우 인덱스를 만들 수 있습니다. 그러나 전체 크기가 한도를 초과하는 열에 대한 이후 삽입 작업이나 업데이트 동작은 실패합니다. 클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 **varchar** 열을 포함할 수 없습니다. **varchar** 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다.  
+ 인덱스 키의 최대 크기는 클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트입니다. ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전의 한도는 항상 900바이트였습니다.) 인덱스가 만들어질 때 바이트 한도를 초과하는 **varchar** 열의 기존 데이터가 한도를 초과하지 않는 경우 인덱스를 만들 수 있습니다. 그러나 전체 크기가 한도를 초과하는 열에 대한 이후 삽입 작업이나 업데이트 동작은 실패합니다. 클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 **varchar** 열을 포함할 수 없습니다. **varchar** 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다.  
   
  비클러스터형 인덱스는 인덱스의 리프 수준에 키가 아닌 열을 포함할 수 있습니다. 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 이러한 열을 고려하지 않습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>인덱스 옵션 지정  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새 인덱스 옵션이 추가되었으며 옵션 지정 방법도 수정되었습니다. 이전 버전과 호환되는 구문에서 WITH *option_name*은 WITH **(** \<option_name> **= ON )** 과 같습니다. 인덱스 옵션을 설정하면 다음 규칙이 적용됩니다. 
   
--   새 인덱스 옵션은 WITH (***option_name* = ON | OFF**)를 사용해서만 지정할 수 있습니다.  
+-   새 인덱스 옵션은 WITH (**_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.  
 -   옵션은 동일한 문에 이전 버전과 호환되는 구문 및 새 구문 모두를 사용하여 지정할 수 없습니다. 예를 들어 WITH (**DROP_EXISTING, ONLINE = ON**)을 지정하면 문이 실패합니다.  
 -   XML 인덱스를 만들 때 WITH(***option_name*= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
 
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 다음 지침은 다시 시작 가능한 인덱스 작업에 적용됩니다.
 
@@ -731,14 +728,12 @@ INSERT INTO t1 VALUES (1, 0);
 - 다시 시작 가능한 인덱스의 원래 CREATE INDEX 문을 다시 실행하면 일시 중지된 인덱스 작성 작업이 자동으로 다시 시작됩니다.
 - 다시 시작 가능한 인덱스의 경우 SORT_IN_TEMPDB=ON 옵션이 지원되지 않습니다. 
 - RESUMABLE=ON 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin TRAN … COMMIT 블록에 포함될 수 없음).
-- 인덱스 작성/다시 작성을 다시 시작/중단하려면 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 구문을 사용합니다.
+- 인덱스 만들기/다시 작성을 다시 시작/중단하려면 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 구문을 사용합니다.
 
 > [!NOTE]
 > DDL 명령은 완료, 일시 중지 또는 실패할 때까지 실행됩니다. 명령이 일시 중지된 경우 작업이 일시 중지되었고 인덱스 만들기가 완료되지 않았음을 알려 주는 오류가 발생합니다. 현재 인덱스 상태에 대한 더 자세한 내용은 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)에서 가져올 수 있습니다. 이전과 마찬가지로 실패의 경우 오류도 발생합니다. 
 
-인덱스 만들기가 다시 시작 가능한 작업으로 실행되도록 지정하려면 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)를 참조하세요. 공개 미리 보기의 경우 이 뷰의 다음 열은 0으로 설정됩니다.
-- total_execution_time
-- percent_complete 및 page_count
+인덱스 만들기가 다시 시작 가능한 작업으로 실행되도록 지정하려면 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)를 참조하세요. 
 
 **리소스** 다시 시작 가능한 온라인 인덱스 만들기 작업에는 다음 리소스가 필요합니다.
 - 인덱스가 일시 중지될 시간을 포함하여 작성 중인 인덱스를 유지하기 위해 필요한 추가 공간
@@ -748,17 +743,12 @@ INSERT INTO t1 VALUES (1, 0);
 
 **현재 기능 제한 사항**
 
-> [!IMPORTANT]
-> **다시 시작 가능한 온라인 인덱스 만들기**는 현재 비클러스터형 인덱스에만 지원됩니다.
-
 다음 기능은 다시 시작 가능한 인덱스 만들기 작업에 사용할 수 없습니다.
-- 다시 시작 가능한 인덱스 만들기는 공개 미리 보기의 클러스터형 인덱스에 지원되지 않음
 - 다시 시작 가능한 온라인 인덱스 만들기 작업이 일시 중지된 후에는 MAXDOP의 초기 값을 변경할 수 없음
-- DROP EXISTING 절이 지원되지 않음
 - 다음을 포함하는 인덱스 만들기 
  - Computed 또는 TIMESTAMP 열을 키 열로 포함
  - 다시 시작 가능한 인덱스 만들기용으로 LOB 열을 포함된 열로 포함
-- 필터링된 인덱스
+ - 필터링된 인덱스
  
 ## <a name="row-and-page-locks-options"></a>행 및 페이지 잠금 옵션  
  ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행, 페이지 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>13. 다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단
 
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>14. 기본 구문  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

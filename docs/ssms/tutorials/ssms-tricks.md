@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864391"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
@@ -83,12 +82,19 @@ ms.locfileid: "40020677"
 7. **데이터베이스 변경** 명령을 제외한 모든 항목을 강조 표시한 다음, **주석** 단추를 선택합니다.
 
     ![모든 항목 주석 처리](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > 텍스트 주석 처리에 대한 바로 가기 키는 **CTRL+K, CTRL+C**입니다. 
 
 8. 텍스트의 **데이터베이스 변경** 부분을 강조 표시한 다음, **주석 처리 제거** 단추를 선택하여 주석 처리를 제거합니다.
 
     ![텍스트 주석 처리 제거](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > 텍스트 주석 처리 해제에 대한 바로 가기 키는 **CTRL+K, CTRL+U**입니다. 
+    
 9. **실행**을 선택하여 텍스트의 주석 처리가 제거된 부분을 실행합니다. 
+
 
 ## <a name="indent-your-text"></a>텍스트 들여쓰기
 도구 모음의 들여쓰기 단추를 사용하여 텍스트의 들여쓰거나 내어쓸 수 있습니다. 

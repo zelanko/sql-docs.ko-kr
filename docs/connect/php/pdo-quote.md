@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eaf86787fb87824363745b565050ec9facde093d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705361"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +33,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>매개 변수  
 $*string*: 따옴표로 묶을 문자열입니다.  
   
-$parameter*type*: 데이터 형식을 나타내는 선택적 정수 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
+$parameter*type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
   
 ## <a name="return-value"></a>반환 값  
 SQL 문에 전달할 수 있는 따옴표로 묶은 문자열이고, 실패하면 false입니다.  

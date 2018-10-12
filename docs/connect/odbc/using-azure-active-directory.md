@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635011"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983679"
 ## <a name="purpose"></a>용도
 
 Azure Active Directory에서 페더레이션된 id를 사용 하 여 사용자 이름/암호, Azure Active Directory 액세스 토큰, 또는 Windows를 사용 하 여 Microsoft ODBC Driver for SQL Server 버전 13.1 이상가 ODBC 응용 프로그램을 SQL Azure 인스턴스에 연결할 수 있습니다. 통합 인증 (_Windows 드라이버만_). ODBC 드라이버 버전 13.1 토큰 인증은 Azure Active Directory 액세스 _만 Windows_합니다. ODBC 드라이버 버전 17 및 위의 모든 플랫폼 (Windows, Linux 및 Mac)에서이 인증을 지원 합니다. 새 Azure Active Directory 대화형 인증 로그인 ID를 사용 하 여 Windows에 대 한 ODBC 드라이버 버전 17.1 도입 되었습니다. 이러한 모든 새 DSN 및 연결 문자열 키워드 및 연결 특성을 사용 하 여 수행 됩니다.
+
+> [!NOTE]
+> Linux 및 macOS에서 ODBC 드라이버는 Active Directory Federation Services를 지원 하지 않습니다. Linux에서 Azure Active Directory 사용자 이름/암호 인증을 사용 하는 또는 macOS 클라이언트와 Active Directory 구성에 페더레이션 서비스를 포함 하는 경우 인증이 실패할 수 있습니다.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>새롭거나 수정 된 DSN 및 연결 문자열 키워드
 
@@ -65,7 +65,7 @@ DSN 설정 및 드라이버의 Ui 연결을 Azure AD를 사용 하 여 인증을
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
-`Authentication=ActiveDirectoryInteractive` SQL Azure Azure Active Directory 대화형 인증
+`Authentication=ActiveDirectoryInteractive` SQL Azure에 대한 Azure Active Directory 대화형 인증 지원
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 

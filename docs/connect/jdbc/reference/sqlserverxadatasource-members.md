@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d496016fc323bd0fc6616a019c9c3a4668b384d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672331"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,7 +74,7 @@ ms.locfileid: "42787465"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 데이터베이스에서 잠금 시간 초과가 보고되기 전까지 대기하는 시간(밀리초)을 나타내는 **int** 값을 설정합니다.|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 이 DataSource 개체에서 연결을 시도하는 동안 대기하는 시간(초)을 설정합니다.|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 모든 로깅 및 추적 메시지에 사용할 문자 출력 스트림을 설정합니다.|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(에서 상속 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md))의 값을 설정 합니다 **multiSubnetFailover** 연결 속성입니다.|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 **multiSubnetFailover** 연결 속성의 값을 설정합니다.|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 데 사용할 암호를 설정합니다.|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와의 통신에 사용할 포트 번호를 설정합니다.|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 이 DataSource 개체를 사용하여 만들어진 모든 결과 집합에 사용되는 기본 커서 유형을 설정합니다.|  

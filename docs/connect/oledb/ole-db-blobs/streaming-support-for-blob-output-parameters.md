@@ -5,30 +5,27 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0f948a401faade8624976d23d304e3f157633854
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 70befe255703441e9eea8e837f0787a756eb5bab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635281"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  
+  이 문서에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  
   
  IMultipleResults::GetResult 실행 중 출력 매개 변수에서 차단되어 DB_E_OBJECTOPEN 반환 값을 받을 수 있습니다. 호출자는 보류 중인 blob 매개 변수가 있는지 확인한 후 매개 변수를 완전히 읽거나 해제해야 합니다.  
   
