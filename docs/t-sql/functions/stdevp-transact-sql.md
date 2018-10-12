@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3a9fd1f56654c4de6af6a2185708c401a35e21a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5abf73c1229b2148c2683e140f3e51bc3d1d4f42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080978"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,20 +38,12 @@ ms.locfileid: "47677903"
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-STDEVP ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 -- Aggregate Function Syntax   
 STDEVP ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax   
-STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>인수  

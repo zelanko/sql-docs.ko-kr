@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f99f95cdec92be900e86e3b08317b77dd5dbce2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742281"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874261"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -37,7 +37,6 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
 
 - CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE(Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT(Transact-SQL) 
 - CREATE EXTERNAL TABLE(Transact-SQL) 
 - CREATE STATISTICS(Transact-SQL) .
 
@@ -61,16 +60,17 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다. SQL Server의 외부 데이터 원본 위치 및 자격 증명을 지정합니다.
 
      ```sql
-     /*  LOCATION: Server DNS name or IP address.
-     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE SqlServerInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-     CREDENTIAL = SqlServerCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE SQLServerInstance
+    WITH ( 
+    LOCATION = sqlserver://SqlServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = TeradataCredentials
+    );
+
      ```
 
 1. 외부 데이터에 대한 스키마 만들기

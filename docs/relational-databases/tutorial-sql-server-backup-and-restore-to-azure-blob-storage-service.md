@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 729ec5fc4a811c1c201059ad58086712f6d16f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33c2bd47bae8bede7fa71e1654627c123e7cdbc
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685387"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874321"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Azure Portal을 열어 둔 상태로, 자격 증명을 만드는 데 필요한 �
 
   ```sql
   CREATE CREDENTIAL mycredential   
-  WITH IDENTITY= 'mystorageaccount', -- this is the name of the storage account you specified when creating a storage account   
+  WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
   ```
 1. 자격 증명을 만들기 위한 문을 실행합니다. 
@@ -89,8 +89,8 @@ Azure Portal을 열어 둔 상태로, 자격 증명을 만드는 데 필요한 �
 1. 다음 예제를 복사하여 쿼리 창에 붙여넣고 필요한 대로 수정합니다. 
 
  ```sql
- BACKUP DATABASE[AdventureWorks2016] 
- TO URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2016.bak' 
+ BACKUP DATABASE [AdventureWorks2016] 
+ TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
  WITH CREDENTIAL = 'mycredential';
  /* name of the credential you created in the previous step */ 
@@ -108,7 +108,7 @@ Azure Portal을 열어 둔 상태로, 자격 증명을 만드는 데 필요한 �
 
  ```sql
  RESTORE DATABASE AdventureWorks2016 
- FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak' 
+ FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  WITH CREDENTIAL = 'mycredential',
  STATS = 5 -- use this to see monitor the progress
  GO
@@ -117,6 +117,6 @@ Azure Portal을 열어 둔 상태로, 자격 증명을 만드는 데 필요한 �
 ## <a name="see-also"></a>관련 항목: 
 다음은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업에 Azure Blob Storage 서비스를 사용할 때 개념 및 모범 사례를 이해하기 위한 권장 참조 항목입니다.  
   
--   [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+-   [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
