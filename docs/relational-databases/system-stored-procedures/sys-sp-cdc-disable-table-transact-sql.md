@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810311"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169173"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@source_schema=** ] **'***source_schema***'**  
+ [  **@source_schema=** ] **'**_소스\_스키마_**'**  
  원본 테이블이 포함된 스키마의 이름입니다. *source_schema* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_schema* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@source_name=** ] **'***source_name***'**  
+ [  **@source_name=** ] **'**_소스\_이름_**'**  
  변경 데이터 캡처가 비활성화되는 원본 테이블의 이름입니다. *source_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  *source_name* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** 모든 **'**  
+ [  **@capture_instance=** ] **'**_캡처\_인스턴스_**'** | **'** 모든 **'**  
  지정된 원본 테이블에 대해 비활성화할 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
  모든 캡처 인스턴스에 대해 정의 된 '모두'를 지정 하면 *source_name* 비활성화 됩니다.  

@@ -19,12 +19,12 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856971"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072138"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47856971"
 |filename|**nvarchar(256)**|서비스 실행 파일의 경로 및 파일 이름입니다. null일 수 없습니다.|  
 |is_clustered|**nvarchar(1)**|서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다. null일 수 없습니다.|  
 |cluster_nodename|**nvarchar(256)**|서비스가 설치된 클러스터 노드의 이름입니다. Null을 허용합니다.|
-|instant_file_initialization_enabled|**nvarchar(1)**|즉시 파일 초기화에 대 한 사용 되는지 여부를 지정 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스입니다.<br /><br />Y = 서비스에 대 한 인스턴트 파일 초기화가 사용 합니다.<br /><br />N = 서비스용 인스턴트 파일 초기화는 사용 하지 않도록 설정 합니다.<br /><br /> Null을 허용합니다.<br /><br /> **참고:** SQL Server 에이전트와 같은 다른 서비스에 적용 되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1)**|즉시 파일 초기화에 대 한 사용 되는지 여부를 지정 된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스입니다.<br /><br />Y = 서비스에 대 한 인스턴트 파일 초기화가 사용 합니다.<br /><br />N = 서비스용 인스턴트 파일 초기화는 사용 하지 않도록 설정 합니다.<br /><br /> Null을 허용합니다.<br /><br /> **참고:** SQL Server 에이전트와 같은 다른 서비스에 적용 되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>보안  
   

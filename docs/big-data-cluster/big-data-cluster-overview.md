@@ -7,14 +7,14 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: cf13ea198a5a40a5d67d41fea2f8f9b9b3b5434d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796415"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085059"
 ---
-# <a name="what-is-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터 란?
+# <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
 
 부터 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server 빅 데이터 클러스터를 사용 하면 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS Docker 컨테이너의 확장 가능한 클러스터를 배포 합니다. 이러한 구성 요소를 읽고, 쓰고, TRANSACT-SQL 또는 Spark의 빅 데이터를 처리할 수 있도록 나란히 실행 됩니다. SQL Server 빅 데이터 클러스터를 사용 하면 쉽게 결합 하 고 대규모 빅 데이터를 사용 하 여 높은 가치의 관계형 데이터를 분석할 수 있습니다.
 

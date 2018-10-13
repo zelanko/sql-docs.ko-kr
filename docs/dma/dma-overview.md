@@ -15,16 +15,16 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 38642f129d61f906e4856946a19f6dca8f11da6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770801"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100372"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 
-데이터 마이그레이션 길잡이 (DMA)를 사용 하면 새 버전의 SQL Server 또는 Azure SQL Database에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드 하도록 도와줍니다. DMA는 성능 및 안정성 향상 대상 환경에 대 한 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
+Data Migration Assistant (DMA)를 사용 하면 새 버전의 SQL Server 또는 Azure SQL Database에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드 합니다. DMA는 성능 및 안정성 향상 대상 환경에 대 한 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
 
 > [!NOTE] 
 > 대규모 마이그레이션의 (측면에서 번호 및 데이터베이스의 크기)를 사용 하는 권장 합니다 [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview)는 대규모 데이터베이스를 마이그레이션할 수 있습니다.
@@ -35,7 +35,7 @@ ms.locfileid: "47770801"
 
   - 마이그레이션 차단 문제: 호환성 문제는 블록 마이그레이션할 온-프레미스 SQL Server 데이터베이스를 Azure SQL 데이터베이스를 검색 합니다. DMA는 해당 문제를 해결 하기 위한 권장 사항을 제공 합니다.
 
-  - 부분적으로 지원 되거나 지원 되지 않는 기능: 현재 원본 SQL Server 인스턴스에 사용 되는 부분적으로 지원 되거나 지원 되지 않는 기능을 검색 합니다. DMA는 마이그레이션 프로젝트에 통합할 수 있도록 포괄적인 Azure 및 완화 단계에서 사용 가능한 대체 방법 권장 사항 집합을 제공 합니다.
+  - 부분적으로 지원 되거나 지원 되지 않는 기능: 현재 원본 SQL Server 인스턴스에 사용 되는 부분적으로 지원 되거나 지원 되지 않는 기능을 검색 합니다. DMA는 마이그레이션 프로젝트에 통합할 수 있습니다 있도록 포괄적인 Azure 및 완화 단계에서 사용 가능한 대체 방법 권장 사항 집합을 제공 합니다.
 
 - 온-프레미스 SQL server 업그레이드에 영향을 줄 수 있는 문제를 검색 합니다. 이러한 호환성 문제를 설명 하 고 다음 범주로 구성 됩니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "47770801"
   - 보안
   - 저장소
 
-- 온-프레미스에서 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure 가상 컴퓨터 (VM)에서 호스팅되는 최신 SQL Server 인스턴스를 온-프레미스 SQL Server 인스턴스를 마이그레이션하십시오. VPN 또는 기타 기술을 사용 하 여 Azure VM은 액세스할 수 있습니다. 마이그레이션 워크플로 사용 하면 다음 구성 요소를 마이그레이션할 수 있습니다.
+- 온-프레미스 SQL Server 인스턴스를 온-프레미스에서 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure 가상 컴퓨터 (VM)에서 호스팅되는 최신 SQL Server 인스턴스로 마이그레이션하십시오. VPN 또는 기타 기술을 사용 하 여 Azure VM은 액세스할 수 있습니다. 마이그레이션 워크플로 사용 하면 다음 구성 요소를 마이그레이션할 수 있습니다.
 
   - 데이터베이스의 스키마
   - 데이터 및 사용자

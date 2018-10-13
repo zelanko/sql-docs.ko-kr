@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169338"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 열 수 있는이 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 입력 하 여 `dtexecui` 명령 프롬프트를 사용 하 여 패키지를 실행 하지 않아도 됩니다 합니다 **DTExec** 명령 프롬프트 도구입니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48217433"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>명령 프롬프트에서 패키지 실행 유틸리티를 열려면  
   
--   명령 프롬프트 창에서 실행 `dtexecui`합니다.  
+-   명령 프롬프트 창에서 `dtexecui`를 실행합니다.  
   
  다음 섹션에서는 **패키지 실행 유틸리티** 대화 상자의 페이지에 대해 설명합니다.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217433"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="logging-page"></a>로깅 페이지  
- **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER***classid* 옵션이 추가됩니다.  
+ **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER**_classid_ 옵션이 추가됩니다.  
   
 ### <a name="options"></a>변수  
  **로그 공급자**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217433"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="set-values-page"></a>값 설정 페이지  
- **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET***propertypath;value* 옵션이 추가됩니다.  
+ **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET**_propertypath;value_ 옵션이 추가됩니다.  
   
 ### <a name="options"></a>변수  
  **속성 경로**  

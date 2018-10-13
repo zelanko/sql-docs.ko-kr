@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 776b4390c78a6bd228989b94dd76d4a269f94126
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818061"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878106"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>SQL Server Always On 가용성 그룹에서 Kubernetes 클러스터 배포
 
@@ -39,7 +39,7 @@ Kubernetes에 배포 포함 연산자를 SQL Server, SQL Server 컨테이너 및
   >모든 유형의 Kubernetes 클러스터를 사용할 수 있습니다. Azure Kubernetes Service (AKS)에서 Kubernetes 클러스터를 만들려면, 참조 [AKS 클러스터 만들기](http://docs.microsoft.com/azure/aks/create-cluster)합니다.
   > 다음 스크립트는 Azure에서 4 개 노드 Kubernetes 클러스터를 만듭니다.
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
   >```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>연산자, SQL Server 컨테이너 및 부하 분산 서비스를 배포 합니다.

@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217953"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119329"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48217953"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서는 게시되는 파일에 대한 최대 제한을 적용하여 서버에 대한 서비스 거부 공격 위협을 줄입니다. 상한값을 늘리면 이 제한에 따른 보호 기능이 손상됩니다. 따라서 추가 보안 위험을 능가하는 이점이 있다는 확신이 있는 경우에만 이 값을 늘리십시오.  
   
- `maxRequestLength` 요소에 대해 설정하는 값은 적용하려는 실제 크기 제한보다 커야 합니다. 모든 매개 변수가 SOAP Envelope에 캡슐화되고 Base64 인코딩이 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 및 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드의 Definition 매개 변수와 같은 특정 매개 변수에 적용된 후 발생하는 HTTP 요청 크기의 불가피한 증가를 수용하기 위해 더 큰 값을 설정해야 합니다. Base64 인코딩은 원래 데이터의 크기를 33% 정도 증가시킵니다. 결과적으로 지정 하는 값에 대 한는 `maxRequestLength` 요소에서 실제로 사용 가능한 항목 크기 보다 33% 정도 해야 합니다. 예를 들어 `maxRequestLength`의 값으로 64MB를 지정하는 경우, 실제로 보고서 서버에 게시되는 보고서 파일의 최대 크기를 48MB 정도로 예상할 수 있습니다.  
+ `maxRequestLength` 요소에 대해 설정하는 값은 적용하려는 실제 크기 제한보다 커야 합니다. 모든 매개 변수가 SOAP Envelope에 캡슐화되고 Base64 인코딩이 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 및 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드의 Definition 매개 변수와 같은 특정 매개 변수에 적용된 후 발생하는 HTTP 요청 크기의 불가피한 증가를 수용하기 위해 더 큰 값을 설정해야 합니다. Base64 인코딩은 원래 데이터의 크기를 33% 정도 증가시킵니다. 따라서 `maxRequestLength` 요소에 대해 지정하는 값은 실제로 사용 가능한 항목 크기보다 33% 정도 커야 합니다. 예를 들어 `maxRequestLength`의 값으로 64MB를 지정하는 경우, 실제로 보고서 서버에 게시되는 보고서 파일의 최대 크기를 48MB 정도로 예상할 수 있습니다.  
   
 ## <a name="report-size-in-memory"></a>메모리의 보고서 크기  
  보고서를 실행하면 보고서 크기는 출력 스트림 크기와 보고서에 반환된 데이터 양을 더한 크기가 됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 렌더링되는 보고서의 크기에 대한 최대 제한을 적용하지 않습니다. 최대 크기 제한은 시스템 메모리에 따라 결정됩니다. 기본적으로 보고서 서버에서는 보고서를 렌더링할 때 사용 가능한 구성 메모리를 모두 사용하지만 구성 설정을 지정하여 메모리 임계값과 메모리 관리 정책을 지정할 수 있습니다. 자세한 내용은 [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -60,7 +60,7 @@ ms.locfileid: "48217953"
   
  기본적으로 **reportserver** 및 **reportservertempdb** 데이터베이스는 모두 자동 증가로 설정되어 있습니다. 데이터베이스 크기는 자동으로 늘어날 수는 있지만 자동으로 줄어들지는 않습니다. 스냅숏을 삭제했기 때문에 **reportserver** 데이터베이스 크기가 너무 큰 경우에는 이 데이터베이스 크기를 직접 줄여서 디스크 공간을 복구해야 합니다. 마찬가지로 **reportservertempdb** 가 크기가 아주 큰 대화형 보고 기능을 사용할 수 있을 만큼 커진 경우에는 사용자가 크기를 줄일 때까지 이 설정으로 디스크 공간 할당이 유지됩니다.  
   
- 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용하고 있는 공간을 측정합니다. 이 문에서는 사용자가 기본 데이터베이스 이름을 사용하고 있다고 가정합니다.  
+ 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용 되는 공간의 크기를 측정 (문을 기본 데이터베이스 이름을 사용 한다고 가정 하는 데 사용):  
   
 ```  
 USE ReportServer  
@@ -82,7 +82,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
- [보고서 서버 데이터베이스를 &#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)   
  [큰 보고서 처리](process-large-reports.md)  
   
   

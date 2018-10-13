@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171183"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905763"
 ---
 # <a name="general-properties"></a>일반 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -61,7 +61,7 @@ ms.locfileid: "48171183"
  Analysis Services 대화 상자에서 파일을 저장하고 열고 찾을 때 검색할 수 있는 폴더를 쉼표로 구분된 목록으로 지정하는 문자열 속성입니다. Analysis Services 서비스 계정은 목록에 추가되는 모든 폴더에 대해 읽기 및 쓰기 권한을 가지고 있어야 합니다.  
   
  `BackupDir`  
- 백업 명령의 일부로 경로가 지정되지 않은 이벤트의 경우 기본적으로 백업 파일이 저장되는 디렉터리 이름을 식별하는 문자열 속성입니다.  
+ 백업 명령의 일부로 경로가 지정 되지 이벤트에 기본적으로 백업 파일을 저장할 디렉터리의 이름을 식별 하는 문자열 속성입니다.  
   
  `CollationName`  
  서버 데이터 정렬을 식별하는 문자열 속성입니다. 자세한 내용은 [언어 및 데이터 정렬&#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)을 참조하세요.  
@@ -77,12 +77,12 @@ ms.locfileid: "48171183"
  `CoordinatorCancelCount`  
  내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오.  
   
- `CoordinatorCancelCount` 테이블 형식 서버 모드에서는 무시 됩니다.  
+ 테이블 형식 서버 모드에서는 `CoordinatorCancelCount`가 무시됩니다.  
   
  `CoordinatorExecutionMode`  
  서버에서 시도하는 작업 처리 및 쿼리를 포함한 최대 병렬 작업 수를 정의하는 부호 있는 32비트 정수 속성입니다. 0으로 설정하면 내부 알고리즘에 따라 서버에서 작업 수를 결정합니다. 양수 값은 최대 작업 수의 합계를 나타냅니다. 음수 값은 부호를 반대로 하여 프로세서당 최대 작업 수를 나타냅니다.  
   
- `CoordinatorExecutionMode` 테이블 형식 서버 모드에서는 무시 됩니다.  
+ 테이블 형식 서버 모드에서는 `CoordinatorExecutionMode`가 무시됩니다.  
   
  이 속성의 기본값은 -4로 프로세서당 4개의 병렬 작업으로 서버가 제한됩니다. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48171183"
  이 속성의 기본값은 3600(초)입니다.  
   
  `ExternalConnectionTimeout`  
- 관계형 데이터 원본 및 외부 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 포함하여 외부 서버에 대한 연결을 만들기 위한 제한 시간(초)을 정의하는 정수 속성입니다. 연결 제한 시간이 연결 문자열에 지정된 경우 이 속성은 무시됩니다.  
+ 관계형 데이터 원본 및 외부 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 포함하여 외부 서버에 연결을 만들기 위한 제한 시간(초)을 정의하는 정수 속성입니다. 연결 제한 시간이 연결 문자열에 지정된 경우 이 속성은 무시됩니다.  
   
  이 속성의 기본값은 60(초)입니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171183"
  이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` 그리고 큐브 처리 명령과 쓰기 저장 작업에 적용 됩니다.  
+>  `ForceCommitTimeout`은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
   
  `IdleConnectionTimeout`  
  비활성 상태의 연결에 대한 제한 시간(초)을 지정하는 정수 속성입니다.  

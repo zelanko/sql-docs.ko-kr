@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063449"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120360"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 기본 키와 외래 키가 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
@@ -32,14 +32,14 @@ ms.locfileid: "48063449"
   
  [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
- [관련 작업](../tables/primary-and-foreign-key-constraints.md#Tasks)  
+ [관련 태스크](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
 ##  <a name="PKeys"></a> 기본 키 제약 조건  
  테이블에는 일반적으로 테이블의 각 행을 고유하게 식별하는 값을 가진 열 또는 열 조합이 포함되어 있습니다. 이러한 열이나 열 조합은 테이블의 PK(기본 키)라고 하며 테이블에 엔터티 무결성을 적용합니다. 기본 키 제약 조건은 데이터의 고유성을 보장하므로 자주 ID 열에 정의됩니다.  
   
  테이블에 대해 기본 키 제약 조건을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기본 키 열에 대해 고유 인덱스를 자동으로 만들어 데이터 고유성을 적용합니다. 또한 쿼리에서 기본 키가 사용되는 경우 이 인덱스를 사용하여 데이터에 빠르게 액세스할 수 있습니다. 기본 키 제약 조건이 두 개 이상의 열에 정의되는 경우 한 열에 중복된 값이 있을 수 있지만 기본 키 제약 조건 정의에 있는 모든 열의 값 조합은 각각 고유해야 합니다.  
   
- 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID** 와 **VendorID**의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
+ 다음 그림에서와 같이 **Purchasing.ProductVendor** 테이블의 **ProductID** 및 **VendorID** 열은 이 테이블에 대한 복합 기본 키 제약 조건을 구성합니다. 그 결과 **ProductVendor** 테이블의 모든 열에서 **ProductID**와 **VendorID**의 조합은 고유합니다. 따라서 중복 행을 삽입할 수 없습니다.  
   
  ![복합 PRIMARY KEY 제약 조건](../../database-engine/media/fund04.gif "복합 PRIMARY KEY 제약 조건")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063449"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 오류가 발생하며 부모 테이블의 행에 대한 삭제 또는 업데이트 동작이 롤백됩니다.  
   
  CASCADE  
- 부모 테이블에서 해당 행이 업데이트되거나 삭제될 때 참조 테이블에서도 해당 행이 업데이트 또는 삭제됩니다. 경우에 CASCADE를 지정할 수 없습니다는 `timestamp` 열이 외래 키 또는 참조 되는 키의 일부입니다. INSTEAD OF DELETE 트리거가 있는 테이블에는 ON DELETE CASCADE를 지정할 수 없습니다. INSTEAD OF UPDATE 트리거가 있는 테이블에 대해서는 ON UPDATE CASCADE를 지정할 수 없습니다.  
+ 부모 테이블에서 해당 행이 업데이트되거나 삭제될 때 참조 테이블에서도 해당 행이 업데이트 또는 삭제됩니다. `timestamp` 열이 외래 키 또는 참조되는 키의 일부인 경우에는 CASCADE를 지정할 수 없습니다. INSTEAD OF DELETE 트리거가 있는 테이블에는 ON DELETE CASCADE를 지정할 수 없습니다. INSTEAD OF UPDATE 트리거가 있는 테이블에 대해서는 ON UPDATE CASCADE를 지정할 수 없습니다.  
   
  SET NULL  
  부모 테이블에서 행을 업데이트하거나 삭제하면 해당 외래 키를 구성하는 모든 값이 NULL로 설정됩니다. 이 제약 조건을 실행하려면 외래 키 열이 Null을 허용해야 합니다. INSTEAD OF UPDATE 트리거가 있는 테이블에 대해서는 지정할 수 없습니다.  

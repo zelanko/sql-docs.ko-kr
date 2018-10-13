@@ -8,12 +8,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f007549021fc246d943929f73a763e6343c5641a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715412"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878156"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019에 SQL Server Machine Learning Services 설치의 차이점  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ AppContainers 이동의 일부로, 가지 AppContainer Sid에 따라 새 방화�
 
 ## <a name="implied-authentication"></a>암시적 인증
 
-추가 구성은 여전히 필요 이전 처럼 *묵시적된 인증* 신뢰할 수 있는 인증을 사용 하 여 데이터 또는 리소스를 검색 하는 SQL Server에 다시 연결 하는 스크립트나 코드에 있는 경우에서. 추가 구성에 대 한 데이터베이스 로그인을 만들어야 **SQLRUserGroup**, 유일한 멤버를 가진 여러 작업자 계정 대신 단일 SQL Server 실행 패드 서비스 계정이 됩니다. 이 태스크에 대 한 자세한 내용은 참조 하세요. [SQLRUserGroup을 데이터베이스 사용자로 추가](../r/add-sqlrusergroup-to-database.md)합니다.
+추가 구성은 여전히 필요 이전 처럼 *묵시적된 인증* 신뢰할 수 있는 인증을 사용 하 여 데이터 또는 리소스를 검색 하는 SQL Server에 다시 연결 하는 스크립트나 코드에 있는 경우에서. 추가 구성에 대 한 데이터베이스 로그인을 만들어야 **SQLRUserGroup**, 유일한 멤버를 가진 여러 작업자 계정 대신 단일 SQL Server 실행 패드 서비스 계정이 됩니다. 이 태스크에 대 한 자세한 내용은 참조 하세요. [SQLRUserGroup을 데이터베이스 사용자로 추가](../security/add-sqlrusergroup-to-database.md)합니다.
 
 
 ## <a name="symbolic-link-created-by-setup"></a>설치 프로그램에서 생성 하는 기호화 된 링크

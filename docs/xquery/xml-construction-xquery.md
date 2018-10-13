@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814381"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119901"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814381"
   
     -   합니다 \<기능 > 요소에 세 명의 요소 노드 자식을 \<색 >, \<가중치 >, 및 \<보증 >. 이러한 노드마다 텍스트 노드 자식이 한 개씩 있으며 값은 각각 Red, 25, 2 years parts and labor입니다.  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  결과 XML은 다음과 같습니다.  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  이 예와 같이 상수 식에서 요소를 생성하는 것도 유용하지만 XQuery 언어 기능의 진정한 강점은 데이터베이스에서 동적으로 데이터를 추출하는 XML을 생성하는 기능입니다. 중괄호를 사용하여 쿼리 식을 지정할 수 있습니다. 결과 XML에서 식이 해당 값으로 바뀝니다. 예를 들어 다음 쿼리에서는 자식 요소(<`e`>)가 하나 있는 <`NewRoot`> 요소를 생성합니다. 요소의 값이 <`e`> 중괄호 ("{...} 안에 경로 식을 지정 하 여 계산 됩니다 }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  다음은 결과입니다.  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  다음 쿼리는 이전 쿼리와 비슷합니다. 그러나 중괄호 안의 식을 지정 합니다 **data ()** 의 원자성 값을 검색 하는 함수는 <`root`> 요소 생성 된 요소에 할당 <`e`>.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  다음은 결과입니다.  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  컨텍스트 전환 토큰 대신 중괄호를 텍스트 일부로 사용하려면 다음 예와 같이 중괄호를 "}}" 또는 "{{"로 이스케이프할 수 있습니다.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  다음은 결과입니다.  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  다음 쿼리는 직접 요소 생성자를 사용하여 요소를 생성하는 또 다른 예입니다. 또한 중괄호 안의 식을 실행하여 <`FirstLocation`> 요소의 값을 구합니다. 쿼리 식은 Production.ProductModel 테이블의 Instructions 열에서 첫 번째 업무 센터 위치의 제조 단계를 반환합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  다음은 결과입니다.  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>XML 생성의 요소 내용  
  다음 예에서는 직접 요소 생성자를 사용하여 요소 내용을 생성할 경우 식의 동작을 보여 줍니다. 다음 예에서는 직접 요소 생성자가 식 하나를 지정합니다. 이 식에서는 결과 XML에 텍스트 노드 하나가 생성됩니다.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  결과에서와 같이 인접한 원자성 값 사이에 공백이 추가되고 식 계산 결과로 생성된 원자성 값 시퀀스가 텍스트 노드에 추가됩니다. 생성된 요소에는 자식 요소 한 개가 있습니다. 이 노드는 결과에 표시된 값을 포함하는 텍스트 노드입니다.  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  하나의 식 대신 텍스트 노드 3개를 생성하는 별도의 식 3개를 지정할 경우 결과 XML에서는 인접한 텍스트 노드가 연결을 통해 텍스트 노드 하나로 병합됩니다.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  생성된 요소 노드에는 자식 한 개가 있습니다. 이 노드는 결과에 표시된 값을 포함하는 텍스트 노드입니다.  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>특성 생성  
  직접 요소 생성자를 사용하여 요소를 생성할 때 이 예에서와 같이 XML 유형 구문을 사용하여 요소의 특성을 지정할 수도 있습니다.  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  결과 XML은 다음과 같습니다.  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  다음 예제에서는 **data ()** 함수가 엄격 하 게 필요 하지 않습니다. 특성에 식 값을 할당 하는 때문 **data ()** 지정한 식의 형식화 된 값을 검색 하는 암시적으로 적용 됩니다.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  다음은 결과입니다.  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  다음은 LocationID 및 SetupHrs 특성 생성을 위해 식이 지정되는 또 다른 예입니다. Instruction 열의 XML에 대해 이러한 식이 계산됩니다. 식의 형식화된 값이 특성에 할당됩니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   다중 또는 혼합(문자열 및 XQuery 식) 특성 식은 지원되지 않습니다. 예를 들어 다음 쿼리에서와 같이 `Item`이 상수이고 쿼리 식을 계산하여 값 `5`를 구하는 XML을 생성합니다.  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      상수 문자열을 식({/x})과 함께 사용하지만 지원되지 않으므로 다음 쿼리에서는 오류를 반환합니다.  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   원자성 값 두 개를 연결하여 특성 값을 만듭니다. 이 원자성 값은 원자성 값 사이에 공백이 있는 특성 값으로 직렬화됩니다.  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          다음은 결과입니다.  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   사용 된 [concat 함수](../xquery/functions-on-string-values-concat.md) 두 문자열 인수를 결과 특성 값을 연결 하려면:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          다음은 결과입니다.  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   여러 개의 식을 특성 값으로 사용할 수 없습니다. 예를 들어 다음 쿼리는 오류를 반환합니다.  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   다른 유형의 시퀀스는 지원되지 않습니다. 다음 예와 같이 다른 유형의 시퀀스를 특성 값으로 할당하면 오류가 반환됩니다. 이 예제에서는, 유형이 다른 시퀀스, 문자열 "Item" 요소에 <`x`>에서 특성 값으로 지정 됩니다.  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      적용 하는 경우는 **data ()** 함수를 식의 원자성 값을 검색 하므로 쿼리가 작동 한다 `/x`, 문자열 연결 되 합니다. 다음은 원자성 값의 시퀀스입니다.  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      다음은 결과입니다.  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   특성 노드 순서는 정적 유형 확인 중이 아니라 직렬화 중에 적용됩니다. 예를 들어 다음 쿼리는 특성 노드가 아닌 노드 뒤에 특성을 추가하려고 시도하기 때문에 실패합니다.  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>네임스페이스 선언 특성을 사용하여 네임스페이스 추가  
  다음 예에서는 <`a`> 요소의 생성에 네임스페이스 선언 특성을 사용하여 기본 네임스페이스를 선언합니다. 자식 요소 <`b`>의 생성은 부모 요소에 선언된 기본 네임스페이스 선언을 취소합니다.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  다음은 결과입니다.  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  네임스페이스에 접두사를 할당할 수 있습니다. 접두사는 <`a`> 요소 생성에 지정됩니다.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  다음은 결과입니다.  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  XML 생성에서 기본 네임스페이스를 선언하지 않아도 되지만 네임스페이스 접두사는 선언해야 합니다. <`b`> 요소 생성에 지정한 대로 접두사를 선언해야 하므로 다음 쿼리에서는 오류를 반환합니다.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  새로 생성된 네임스페이스는 쿼리 안에서 사용할 수 있습니다. 예를 들어 다음 쿼리에서는 <`FirstLocation`> 요소를 생성할 때 네임스페이스를 선언하고 LocationID 및 SetupHrs 특성 값에 대한 식에 접두사를 지정합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  이 방법으로 네임스페이스 접두사를 새로 만들면 이 접두사에 대한 기존의 네임스페이스 선언이 무시됩니다. 예를 들어 <`FirstLocation`> 요소의 네임스페이스 선언은 쿼리 프롤로그에 있는 네임스페이스 선언 `AWMI="http://someURI"`를 무시합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>프롤로그를 사용하여 네임스페이스 추가  
  이 예에서는 생성된 XML에 네임스페이스를 추가하는 방법을 보여 줍니다. 기본 네임스페이스는 쿼리 프롤로그에 선언됩니다.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  <`b`> 요소를 생성할 때 빈 문자열이 값으로 사용되어 네임스페이스 선언 특성이 지정됩니다. 그러면 부모에 선언된 기본 네임스페이스를 선언하지 않습니다.  
   
-```  
-This is the result:  
+
+다음은 결과입니다.  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  다음 예에서는 XML 생성의 공백 처리를 보여 줍니다.  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  다음은 결과입니다.  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  다음 쿼리에서 생성된 XML에는 요소, 특성 두 개, 주석 및 처리 명령이 포함됩니다. 시퀀스를 생성 중이므로 <`FirstLocation`> 앞에 쉼표를 사용합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  요소 및 특성 노드의 경우 이러한 키워드 다음에 노드 이름과 식이 중괄호 안에 포함되어 해당 노드의 내용을 생성합니다. 다음 예에서는 이 XML을 생성합니다.  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  다음은 계산된 생성자를 사용하여 XML을 생성하는 쿼리입니다.  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  노드 내용을 생성하는 식은 쿼리 식을 지정할 수 있습니다.  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  다음 예제에서는 Instructions 열에 저장 된 XML 제조 지침에서 생성 된 노드 내용을 가져옵니다 합니다 **xml** ProductModel 테이블의 데이터 형식입니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

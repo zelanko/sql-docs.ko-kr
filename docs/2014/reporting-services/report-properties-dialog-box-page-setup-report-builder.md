@@ -13,15 +13,15 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207383"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905083"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>보고서 속성 대화 상자, 페이지 설정(보고서 작성기)
-  **보고서 속성** 대화 상자에서 **페이지 설정**을 선택하여 전체 보고서에 대한 페이지 옵션을 설정할 수 있습니다.  
+  선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  
   
 ## <a name="options"></a>변수  
  **인치**  

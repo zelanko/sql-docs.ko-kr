@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057553"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120100"
 ---
 # <a name="user-defined-type-requirements"></a>사용자 정의 형식 요구 사항
   사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 설계 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48057553"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- 위의 필드 유형으로 구성된 값 유형은 `Native` 형식(예: Visual C#의 `structs` 또는 Visual Basic의 `Structures`)에 사용하기에 적합합니다. 예를 들어 `Native` 직렬화 형식을 사용하여 지정한 UDT에 마찬가지로 `Native` 형식을 사용하여 지정한 다른 UDT 필드가 포함될 수 있습니다. UDT 정의가 이보다 복잡하며 위 목록에 없는 데이터 형식을 포함할 경우 대신 `UserDefined` 직렬화 형식을 지정해야 합니다.  
+ 위 형식의 필드의 구성 된 값 형식에 적합 `Native` 형식으로 `structs` Visual C#에서는 (또는 `Structures` Visual basic에서으로). 예를 들어 `Native` 직렬화 형식을 사용하여 지정한 UDT에 마찬가지로 `Native` 형식을 사용하여 지정한 다른 UDT 필드가 포함될 수 있습니다. UDT 정의가 이보다 복잡하며 위 목록에 없는 데이터 형식을 포함할 경우 대신 `UserDefined` 직렬화 형식을 지정해야 합니다.  
   
  `Native` 형식은 다음 요구 사항을 충족해야 합니다.  
   

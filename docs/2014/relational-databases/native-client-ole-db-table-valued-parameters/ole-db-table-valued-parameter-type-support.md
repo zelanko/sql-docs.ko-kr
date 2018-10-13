@@ -12,12 +12,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef0667c28d87deb6c714a91bbe3605792c51c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133153"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085269"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 테이블 반환 매개 변수 형식 지원
   이 항목에서는 테이블 반환 매개 변수에 대한 OLE DB 형식 지원에 대해 설명합니다.  
@@ -57,7 +57,7 @@ CoType RowsetTVP
  테이블 반환 매개 변수를 지 원하는 OLE DB 메서드에 대 한 자세한 내용은 [OLE DB Table-Valued 매개 변수 형식 지원 &#40;메서드&#41;](ole-db-table-valued-parameter-type-support-methods.md)합니다.  
   
 ## <a name="properties"></a>속성  
- 에 대 한 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 원하는 대해서 [OLE DB Table-Valued 매개 변수 형식 지원 &#40;속성&#41;](ole-db-table-valued-parameter-type-support-properties.md)합니다.  
+ 테이블 반환 매개 변수를 지 원하는 OLE DB 속성에 대 한 정보를 참조 하세요 [OLE DB Table-Valued 매개 변수 형식 지원 &#40;속성&#41;](ole-db-table-valued-parameter-type-support-properties.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 반환 매개 변수&#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   

@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074659"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905817"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "48074659"
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   전역으로 사용 하지 않는 [& UserID] 개인 데이터를 보호 합니다. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [Secure Reports and Resources](../security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

@@ -13,15 +13,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057693"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072187"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
-  계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 계산 열의 식을 지정할 수 있습니다.  
+  계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. 계산 된 열에 대 한 식을 지정할 수 있습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.  
   
  **항목 내용**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48057693"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Limitations"></a> 제한 사항  
   
@@ -56,14 +56,14 @@ ms.locfileid: "48057693"
   
 1.  **개체 탐색기**에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열**을 선택합니다.  
   
-2.  열 이름을 입력하고 기본 데이터 형식 `nchar`(10)을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 `money` 형식 열과 `int` 형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 `money` 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)를 참조하세요.  
+2.  열 이름을 입력하고 기본 데이터 형식 `nchar`(10)을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 `money` 형식 열과 `int` 형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 `money` 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)를 참조하세요.  
   
 3.  **열 속성** 탭에서 **계산 열 사양** 속성을 확장합니다.  
   
 4.  **(수식)** 자식 속성에서 오른쪽에 있는 표 형태 셀에 현재 열의 식을 입력합니다. 예를 들어 `SalesTotal` 열에 입력한 수식이 `SubTotal+TaxAmt+Freight`일 경우 이 수식은 테이블의 각 행에 대해 이 열에 값을 추가합니다.  
   
     > [!IMPORTANT]  
-    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 형식의 열에 대 한 `nvarchar` 형식의 열을 사용 하 여 결합 됩니다 `int`, 정수 형식으로 변환 해야 `nvarchar` 이 수식에 표시 된 것 처럼 `('Prod'+CONVERT(nvarchar(23),ProductID))`합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
+    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 `nvarchar` 형식 열을 `int` 형식 열과 결합할 경우 `('Prod'+CONVERT(nvarchar(23),ProductID))` 수식에 표시된 대로 정수 형식을 `nvarchar`으로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
 5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.  
   

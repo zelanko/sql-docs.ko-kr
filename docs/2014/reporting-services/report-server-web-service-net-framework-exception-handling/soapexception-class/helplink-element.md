@@ -15,17 +15,17 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 39db57e1c1acb0a63c6054b4be2975e05502dd91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e938b75bce51aa89952b7cb13cb4fd52434386c
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104633"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168873"
 ---
 # <a name="helplink-element"></a>HelpLink 요소
   **Detail** 속성의 **HelpLink** 요소는 보고서 서버에서 생성되는 URL 문자열입니다. 이 URL은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원에서 관리되는 웹 페이지를 대상으로 하며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 특정 오류에 대한 추가 도움말 및 기술 자료 문서를 제공합니다. URL의 구문은 다음과 같습니다.  
   
- **http://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ **http://** www.microsoft.com**/** 제품**/** ee**/** transform.aspx **? EvtSrc**=_값_**& EvtID**=_값_**& ProdName** = _값_**& 제품 버전**=_값_  
   
  다음 표는 **HelpLink** URL의 인수를 나열합니다.  
   

@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792561"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072087"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>프로젝트 설정(동기화)(MySQLToSQL)
 동기화 **프로젝트 설정** SQL Server 데이터베이스 개체를 사용 하 여 MySQL 데이터베이스 개체는 동기화 하는 방법을 구성할 수 있습니다.  
@@ -63,7 +63,7 @@ SSMA에서 개체 변경 될 때 동기화 대화 상자에서 기본값을 지�
 ##### <a name="action-when-local-object-metadata-is-missing"></a>로컬 개체 메타 데이터가 누락 된 경우 작업  
 로컬 메타 데이터를 사용할 수 없는 경우 동기화 대화 상자에서 기본값을 지정 합니다.  
   
--   선택 하는 경우 **데이터베이스에서 새로 고침**, 조건이 충족 되 면 SSMA SSMA 메타 데이터를 데이터베이스 정의 로드 됩니다.  
+-   선택 하는 경우 **데이터베이스에서 새로 고침**, 조건이 충족 되 면 SSMA 메타 데이터를 데이터베이스 정의 로드 됩니다.  
   
 -   선택 하는 경우 **Skip**, SSMA 새로 고침 작업을 수행 하지 것입니다  
   

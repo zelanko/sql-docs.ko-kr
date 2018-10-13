@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085533"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120480"
 ---
 # <a name="glossary"></a>용어 설명
   
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085533"
 |rsconfig 유틸리티|서버 연결 관리 도구입니다.|  
 |rsconfig.exe|서버 연결 관리 도구입니다.|  
 |규칙 발생(rule firing)|응용 프로그램 정의 파일에 정의된 응용 프로그램 규칙(이벤트 기록 규칙, 구독 이벤트 규칙 및 구독 예약 규칙) 중 하나를 실행하는 프로세스입니다.|  
-|런어웨이 쿼리(runaway query)|실행 시간이 너무 길어져서 차단 문제가 발생할 수 있는 쿼리입니다. 런어웨이 쿼리는 일반적으로 쿼리 사용 또는 잠금 제한 시간을 사용하지 않습니다.|  
+|런어웨이 쿼리(runaway query)|실행 시간이 너무 길어져서 차단 문제가 발생할 수 있는 쿼리입니다. 런어웨이 쿼리는 일반적으로 쿼리 또는 잠금 시간 초과가 사용 하지 마세요.|  
 |런타임 오류(run-time error)|컴파일러 또는 다른 감독 프로그램에서 설명된 대로 프로그램이 실행되는 동안 발생하는 소프트웨어 오류입니다.|  
 |안전한 코드(safe code)|운영 체제에 의해 직접 실행되지 않고 공용 언어 런타임 환경에 의해 실행되는 코드입니다. 관리 코드 응용 프로그램은 자동 가비지 수집, 런타임 형식 검사 및 보안 지원 등과 같은 공용 언어 런타임 서비스를 얻습니다. 이러한 서비스는 관리 코드 응용 프로그램의 일관된 플랫폼 및 언어에 독립적인 동작을 제공하는 데 도움이 됩니다.|  
 |샘플링(Sampling)|모집단 또는 데이터 집합의 일부를 관측하거나 분석하여 모집단 또는 관심 데이터 집합에 대한 전반적인 유추 정보를 생성하는 통계적 프로세스입니다.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085533"
 |스마트 카드 프로필(smart card profile)|스마트 카드 기반 인증서 템플릿만 포함하는 프로필 템플릿을 사용하여 요청이 수행될 때 만들어지는 CLM(Certificate Lifecycle Manager) 프로필입니다.|  
 |스마트 카드 판독기(smart card reader)|컴퓨터에 설치된 장치로, 향상된 보안 기능을 위해 스마트 카드를 사용할 수 있도록 합니다.|  
 |스마트 카드 셀프 서비스 컨트롤(Smart Card Self Service Control)|클라이언트 컴퓨터에 설치된 소프트웨어로, 클라이언트 컴퓨터에서 스마트 카드로의 연결을 제공하여 최종 사용자와 관리자가 스마트 카드를 관리할 수 있도록 합니다.|  
-|스마트 카드 차단 해제(smart card unblocking)|PIN(개인 식별 번호) 시도 카운터를 다시 설정하기 위해 관리자 자격 증명으로 스마트 카드를 바인딩하는 동작입니다.|  
+|스마트 카드 차단 해제(smart card unblocking)|카운터를 시도 하는 개인 식별 번호 (PIN)를 다시 설정 하려면 관리자 자격 증명으로 스마트 카드를 바인딩하는 동작입니다.|  
 |SMO|COM 또는 OLE 자동화 응용 프로그램에 SQL Server 관리 통합을 지원하는 응용 프로그래밍 인터페이스입니다.|  
 |SMTP|메시지 전송 에이전트 간의 전자 메일 교환을 제어하는 TCP/IP 프로토콜 집합의 멤버입니다.|  
 |스냅인(snap-in)|MMC(Microsoft Management Console)에서 지원하는 콘솔에 추가할 수 있는 도구의 유형입니다. 독립 실행형 스냅인은 단독으로 추가할 수 있으며, 확장 스냅인은 다른 스냅인의 기능을 확장하기 위해서만 추가할 수 있습니다.|  

@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833361"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119660"
 ---
 # <a name="aggregate-functions---avg"></a>집계 함수 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

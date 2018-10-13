@@ -18,12 +18,12 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 408c33be421c0dc6792ee5ad76f69e6aa2f05423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df4b8f9b3c6c2a0a4e8aee3e6ff67998d3bef353
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642131"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120020"
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47642131"
 ### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>1. 제품에 대한 두 번째 작업 센터 위치에서 제조 단계 검색  
  특정 제품 모델에 대해 다음 쿼리는 두 번째 작업 센터 위치에서 제조 프로세스에 있는 작업 센터 위치의 시퀀스에 따라 제조 단계를 검색합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     <ManuStep ProdModelID = "{sql:column("Production.ProductModel.ProductModelID")}"  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>2. 제품 제조의 두 번째 작업 센터 위치에서 사용되는 모든 자재 및 도구 찾기  
  특정 제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 두 번째 작업 센터 위치에서 사용되는 도구와 자재를 검색합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <Location>  
@@ -123,7 +123,7 @@ where ProductModelID=7
   
  다음은 결과입니다.  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
           MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -141,7 +141,7 @@ where ProductModelID=7
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>3. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
  특정 제품 모델에 대해 다음 쿼리는 제품 모델 카탈로그에 있는 <`Features`> 요소로부터 처음 두 개의 기능 설명을 검색합니다.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <ProductModel ProductModelID= "{ data( (/p1:ProductDescription/@ProductModelID)[1] ) }"  
@@ -165,7 +165,7 @@ where ProductModelID=19
   
  다음은 결과입니다.  
   
-```  
+```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
  <p1:Warranty   
   xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -185,7 +185,7 @@ where ProductModelID=19
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>4. 제품 제조 프로세스의 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구 찾기  
  제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구를 반환합니다. 에 저장 된 제조 지침에 대해 쿼리가 지정 됩니다 합니다 **지침** 열을 **Production.ProductModel** 테이블입니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    for $Inst in (//AWMI:root/AWMI:Location)[1]  
@@ -208,7 +208,7 @@ where ProductModelID=7
   
  다음은 결과입니다.  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -221,7 +221,7 @@ where ProductModelID=7
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>5. 특정 제품 제조의 첫 번째 작업 센터 위치에서 마지막 두 개의 제조 단계 찾기  
  쿼리에서 사용 합니다 **last ()** 마지막 두 제조 단계 검색을 위한 함수입니다.  
   
-```  
+```sql
 SELECT Instructions.query('   
 declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
@@ -238,7 +238,7 @@ where ProductModelID=7
   
  다음은 결과입니다.  
   
-```  
+```xml
 <LastTwoManuSteps>  
    <Last-1Step>When finished, inspect the forms for defects per   
                Inspection Specification .</Last-1Step>  

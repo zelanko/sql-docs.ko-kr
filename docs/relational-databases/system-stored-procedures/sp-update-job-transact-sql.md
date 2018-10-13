@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651561"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119690"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  업데이트할 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**합니다.  
   
  [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name*됩니다 **nvarchar (128)** 합니다.  
+ 작업의 이름입니다. *job_name* 됩니다 **nvarchar (128)** 합니다.  
   
 > **참고:** 중 하나 *job_id* 하거나 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@new_name =**] **'***new_name***'**  
- 작업의 새 이름입니다. *new_name*됩니다 **nvarchar (128)** 합니다.  
+ 작업의 새 이름입니다. *new_name* 됩니다 **nvarchar (128)** 합니다.  
   
  [ **@enabled =**] *enabled*  
- 작업이 사용 되는지 여부를 지정 합니다 (**1**) 또는 사용 안 함 (**0**). *사용 하도록 설정*됩니다 **tinyint**합니다.  
+ 작업이 사용 되는지 여부를 지정 합니다 (**1**) 또는 사용 안 함 (**0**). *사용 하도록 설정* 됩니다 **tinyint**합니다.  
   
  [ **@description =**] **'***description***'**  
  작업에 대한 설명입니다. *설명을* 됩니다 **nvarchar(512)** 합니다.  
   
  [ **@start_step_id =**] *step_id*  
- 작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*됩니다 **int**합니다.  
+ 작업을 실행하기 위한 첫 단계의 ID입니다. *step_id* 됩니다 **int**합니다.  
   
  [ **@category_name =**] **'***category***'**  
- 작업 범주입니다. *범주*됩니다 **nvarchar (128)** 합니다.  
+ 작업 범주입니다. *범주* 됩니다 **nvarchar (128)** 합니다.  
   
  [ **@owner_login_name =**] **'***login***'**  
- 작업을 소유하는 로그인의 이름입니다. *로그인*됩니다 **nvarchar (128)** 의 구성원만 합니다 **sysadmin** 고정된 서버 역할 작업 소유권을 변경할 수 있습니다.  
+ 작업을 소유하는 로그인의 이름입니다. *로그인* 됩니다 **nvarchar (128)** 의 구성원만 합니다 **sysadmin** 고정된 서버 역할 작업 소유권을 변경할 수 있습니다.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Microsoft Windows 응용 프로그램 로그에 이 작업에 대한 항목을 저장하는 시기를 지정합니다. *eventlog_level*됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  해당 작업이 완료되었을 때 네트워크 메시지를 보낼 시기를 지정합니다. *netsend_level*됩니다 **int**합니다. *netsend_level*과 같은 값을 사용 하 여 *eventlog_level*합니다.  
   
  [ **@notify_level_page =**] *page_level*  
- 해당 작업이 완료될 때 페이지를 보낼 시기를 지정합니다. *page_level*됩니다 **int**합니다. *page_level*과 같은 값을 사용 하 여 *eventlog_level*합니다.  
+ 해당 작업이 완료될 때 페이지를 보낼 시기를 지정합니다. *page_level* 됩니다 **int**합니다. *page_level*과 같은 값을 사용 하 여 *eventlog_level*합니다.  
   
  [ **@notify_email_operator_name =**] **'***operator_name***'**  
  받을 전자 메일은 때 운영자의 이름을 *email_level* 에 도달 합니다. *email_name* 됩니다 **nvarchar (128)** 합니다.  

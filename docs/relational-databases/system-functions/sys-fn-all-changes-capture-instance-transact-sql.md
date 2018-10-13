@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761737"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072057"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     있는 cdc.capture_instance_CT 변경 테이블의 행만 연결된 된 커밋 시간이 end_time 결과에 포함 된 보다 덜 엄격 하 게 설정 했습니다.  
+     연결된 커밋 시간이 end_time 이전인 cdc.capture_instance_CT 변경 테이블의 행만 결과 집합에 포함됩니다.  
   
  이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 상위 엔드포인트에 대응됩니다.  
   

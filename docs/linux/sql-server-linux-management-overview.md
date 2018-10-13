@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: e3b76a386598b7439d9cb2ffbad738d86b1b9183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788251"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874299"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux의 SQL Server 관리에 적합 한 도구 선택
 
@@ -31,9 +31,9 @@ Linux의 SQL Server를 관리 하는 방법은 여러 가지가 있습니다. �
 
 거의 모든 클라이언트 도구에서 수행할 수 있는 TRANSACT-SQL 문을 사용 하 여 수행할 수도 있습니다. SQL Server에서 제공 [동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) SQL Server의 구성과 상태를 쿼리 하는 합니다. 이 밖에도 [TRANSACT-SQL 명령을](../t-sql/language-reference.md) 데이터베이스 관리 작업에 대 한 합니다. SQL Server에 연결 하 고 예를 들어 TRANSACT-SQL 쿼리 실행을 지 원하는 클라이언트 도구에서 이러한 명령을 실행할 수 있습니다 [sqlcmd](sql-server-linux-setup-tools.md) 하거나 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
 
-## <a name="azure-data-studio-preview"></a>Azure Data Studio (미리 보기)
+## <a name="azure-data-studio"></a>Azure Data Studio
 
-새 Azure Data Studio (미리 보기)는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio (미리 보기)](../azure-data-studio/what-is.md)합니다.
+새 Azure Data Studio는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)합니다.
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows에서 SQL Server Management Studio
 

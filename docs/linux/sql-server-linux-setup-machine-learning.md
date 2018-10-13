@@ -4,18 +4,18 @@ description: 이 문서에서는 Red Hat 및 Ubuntu에서 SQL Server Machine Lea
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 8433f705b41782c61950cb74f76f694d61cd548d
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782362"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100454"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 Machine Learning 서비스 (R, Python, Java) linux 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "48782362"
 
 SQL Server Linux 소스 리포지토리에서 R, Python 및 Java 확장 패키지 위치는입니다. 이미 구성한 경우 데이터베이스 엔진에 대 한 소스 리포지토리에 설치, mssql-mlservices 동일한 리포지토리 등록을 사용 하 여 패키지 설치 명령을 실행할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 + Linux 운영 체제 여야 [SQL Server에서 지 원하는](sql-server-linux-release-notes-2019.md#supported-platforms), 온-프레미스에서 또는 Docker 컨테이너에서 실행 중입니다.
 
@@ -41,34 +41,68 @@ SQL Server Linux 소스 리포지토리에서 R, Python 및 Java 확장 패키�
 
 <a name="mro"></a>
 
-### <a name="microsoft-r-open-mro"></a>Microsoft R Open (MRO)
+### <a name="microsoft-r-open-mro-installation"></a>Microsoft R Open (MRO) 설치
 
 Microsoft의 기본 배포 R의 RevoScaleR, MicrosoftML, 및 Machine Learning 서비스를 사용 하 여 설치 된 다른 R 패키지를 사용 하 여 필수 구성 요소 이며
 
-다음 명령을 제공 MRO 리포지토리를 등록 합니다. 등록 후 다른 R 패키지를 설치 하기 위한 명령이 하면 패키지가 종속성으로 MRO 자동으로 포함 됩니다.
+필요한 버전이 MRO 3.4.4를 보여 줍니다.
 
-#### <a name="on-ubuntu"></a>Ubuntu에서
+MRO를 설치 하려면 다음 두 가지 방법 중 하나를 선택 합니다.
+
++ MRAN에서 MRO tarball을 다운로드 하 고, 압축을 풉니다 install.sh 스크립트를 실행 합니다. 따르면 합니다 [MRAN에 대 한 설치 지침](https://mran.microsoft.com/releases/3.4.4) 이 방법을 사용 하려는 경우.
+
++ 또는 등록 된 **packages.microsoft.com** MRO 배포로 구성 된 세 개의 패키지를 설치 하려면 아래 설명 된 대로 리포지토리: microsoft r-오픈 mro, microsoft-r-오픈-mkl, 및 microsoft-r-오픈-foreachiterators 합니다. 
+
+다음 명령을 제공 MRO 리포지토리를 등록 합니다. 등록 후, r 등과 같이 mssql-mlservices-mml-다른 R 패키지를 설치 하기 위한 명령이 하면 패키지 종속성으로 MRO 자동으로 포함 됩니다.
+
+#### <a name="mro-on-ubuntu"></a>Ubuntu에서 MRO
 
 ```bash
+# Install as root
+sudo su
+
+# Optionally, if your system does not have the https apt transport option
+apt-get install apt-transport-https
+
+# Add the **azure-cli** repo to your apt sources list
+AZ_REPO=$(lsb_release -cs)
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 18.04 if you want that version
+# This example specifies 16.04. Replace with 14.04 if you want that version
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
 ```
 
-#### <a name="on-rhel"></a>RHEL에서
+#### <a name="mro-on-rhel"></a>RHEL에서 MRO
 
 ```bash
+# Import the Microsoft repository key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local `azure-cli` repository
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+
 # Set the location of the package repo at the "prod" directory
+# The following command is for version 7.x
+# For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
-#### <a name="on-suse"></a>SUSE에
+#### <a name="mro-on-suse"></a>SUSE에서 MRO
 
 ```bash
-# Set the location of the package repo
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system:
+zypper update
 ```
 
 ## <a name="package-list"></a>패키지 목록
@@ -80,7 +114,7 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 |mssql-서버-확장성  | All | 확장성 프레임 워크를 R, Python 또는 Java 코드를 실행 하는 데 사용 합니다. |
 |mssql-서버-확장성-java | Java | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
 | microsoft openmpi  | Python, R | Linux에서 병렬화 Revo * 라이브러리에서 사용 되는 인터페이스를 전달 하는 메시지입니다. |
-| microsoft r 열기 | R | 오픈 소스 배포는 R입니다. |
+| [microsoft-r-오픈 *](#mro) | R | R의 오픈 소스 배포는 세 가지 패키지로 구성 됩니다. |
 | mssql-mlservices-python | Python | Anaconda 및 Python의 오픈 소스 배포 합니다. |
 |mssql mlservices-mlm py  | Python | 전체 설치 합니다. Revoscalepy, microsoftml, 미리 학습 된 모델 이미지 기능화 (featurization) 및 텍스트 감정 분석을 위해 제공 합니다.| 
 |mssql mlservices-mml py  | Python | 부분 설치 합니다. Revoscalepy를 microsoftml를 제공합니다. <br/>미리 학습 된 모델에서 제외 됩니다. | 
@@ -133,14 +167,15 @@ sudo yum install mssql-server-extensibility-java
 > [!Tip]
 > 실행 가능한 경우 `apt-get update` 설치 하기 전에 시스템에서 패키지를 새로 고쳐야 합니다. 또한 Ubuntu의 docker 이미지 일부 https apt 전송 옵션이 없을 수 있습니다. 설치를 사용 하 여 `apt-get install apt-transport-https`입니다.
 
-### <a name="prerequisite-for-1804"></a>18.04에 대 한 필수 구성 요소
+<!---
+### Prerequisite for 18.04
 
-Ubuntu 18.04에서 mssql mlservices R 라이브러리를 실행 하려면 **libpng12** Linux 커널에서에 보관 합니다. 이 패키지는가 표준 배포에 포함 되지 않게 하 고 수동으로 설치 해야 합니다. 이 라이브러리를 가져오려면 다음 명령을 실행 합니다.
+Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
-```
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+```--->
 
 ### <a name="example-1----full-installation"></a>예제 1-전체 설치 
 

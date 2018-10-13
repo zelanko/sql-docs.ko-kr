@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215553"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072027"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]가 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215553"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 먼저 업그레이드 관리자를 실행하는 것이 좋습니다. 업그레이드 관리자는 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 사용되는 새로운 패키지 형식으로 마이그레이션하는 경우 발생할 수 있는 문제를 보고합니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
   
 > [!NOTE]  
->  DTS(데이터 변환 서비스) 패키지의 마이그레이션 또는 실행은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]릴리스에서 더 이상 지원되지 않습니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
+>  마이그레이션 또는 실행 Data Transformation Services (dts)도 지원 되지 않습니다 현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]합니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
 >   
 >  -   DTS 런타임  
 > -   DTS API  

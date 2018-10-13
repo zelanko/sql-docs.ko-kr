@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123753"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120370"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn 대시보드 사용(SQL Server Management Studio)
   데이터베이스 관리자는 AlwaysOn 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹과 해당 가용성 복제본 및 데이터베이스의 상태 개요를 확인할 수 있습니다. AlwaysOn 대시보드의 일반적인 용도는 다음과 같습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48123753"
   
  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  가용성 그룹의 주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  

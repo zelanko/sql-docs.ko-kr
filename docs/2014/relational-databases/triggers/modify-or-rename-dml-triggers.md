@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200883"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084972"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>DML 트리거 수정 또는 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 DML 트리거를 수정하거나 이름을 바꾸는 방법에 대해 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48200883"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48200883"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   트리거의 이름을 바꿀 때 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 저장 프로시저를 사용하지 않는 것이 좋습니다. 개체 이름의 일부를 변경하면 스크립트나 저장 프로시저가 작동되지 않을 수 있습니다. 트리거의 이름을 변경해도 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 카탈로그 뷰의 definition 열에 있는 해당 개체 이름은 변경되지 않습니다. 대신 트리거를 삭제하고 다시 만드는 것이 좋습니다.  
+-   트리거의 이름을 바꿀 때 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 저장 프로시저를 사용하지 않는 것이 좋습니다. 개체 이름의 일부를 변경하면 스크립트나 저장 프로시저가 작동되지 않을 수 있습니다. 트리거의 이름을 변경해도 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 카탈로그 뷰의 definition 열에 있는 해당 개체 이름은 변경되지 않습니다. 삭제 대신 트리거를 다시 만들어야 하는 것이 좋습니다.  
   
 -   DML 트리거가 참조하는 개체의 이름을 변경하면 트리거 텍스트에 새 개체 이름이 반영되도록 트리거를 수정해야 합니다. 따라서 개체 이름을 바꾸기 전에 먼저 개체의 종속성을 표시하여 영향을 받는 트리거가 있는지 확인해야 합니다.  
   

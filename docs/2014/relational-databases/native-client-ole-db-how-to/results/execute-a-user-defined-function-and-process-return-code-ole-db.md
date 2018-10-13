@@ -12,12 +12,12 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b54049542c08042a3edbca8310af9c16f9c62d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b81207ab9d633bf8e110b3e3ed0c29e70a3b5b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172253"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084943"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>사용자 정의 함수 실행 및 반환 코드 처리(OLE DB)
   이 예에서는 사용자 정의 함수를 실행하고 반환 코드를 인쇄합니다. 이 예제는 IA64에서 지원되지 않습니다.  
@@ -264,7 +264,7 @@ int main() {
   
    if (FAILED(pIDBInitialize->Uninitialize()))  
       // Uninitialize is not required, but it fails if an interface  
-      // has not not been released.  This can be used for debugging.  
+      // has not been released.  This can be used for debugging.  
       cout << "Problem uninitializing\n";  
   
    pIDBInitialize->Release();  

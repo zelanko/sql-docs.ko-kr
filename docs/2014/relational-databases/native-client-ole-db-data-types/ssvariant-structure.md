@@ -14,12 +14,12 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f60e644d5896fd25ce57df3326a980b9681ea714
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101323"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085105"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
   sqlncli.h에 정의되어 있는 `SSVARIANT` 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 공급자의 DBTYPE_SQLVARIANT 값에 해당합니다.  
@@ -55,22 +55,22 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |멤버|OLE DB 유형 표시기|OLE DB C 데이터 형식|vt 값|주석|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||`SSVARIANT` 구조에 포함된 값 유형을 지정합니다.|  
-|bTinyIntVal|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|지원 합니다 `tinyint` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|sShortIntVal|DBTYPE_I2|`SHORT`|`VT_SS_I2`|지원 합니다 `smallint` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|lIntVal|DBTYPE_I4|`LONG`|`VT_SS_I4`|지원 합니다 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|llBigIntVal|DBTYPE_I8|`LARGE_INTEGER`|`VT_SS_I8`|지원 합니다 `bigint` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|fltRealVal|DBTYPE_R4|`float`|`VT_SS_R4`|지원 합니다 `real` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|dblFloatVal|DBTYPE_R8|`double`|`VT_SS_R8`|지원 합니다 `float` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
+|bTinyIntVal|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|`tinyint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|sShortIntVal|DBTYPE_I2|`SHORT`|`VT_SS_I2`|`smallint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|lIntVal|DBTYPE_I4|`LONG`|`VT_SS_I4`|`int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|llBigIntVal|DBTYPE_I8|`LARGE_INTEGER`|`VT_SS_I8`|`bigint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|fltRealVal|DBTYPE_R4|`float`|`VT_SS_R4`|`real`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|dblFloatVal|DBTYPE_R8|`double`|`VT_SS_R8`|`float`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
 |cyMoneyVal|DBTYPE_CY|`LARGE_INTEGER`|**VT_SS_MONEY VT_SS_SMALLMONEY**|지원 합니다 `money` 하 고 **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|fBitVal|DBTYPE_BOOL|`VARIANT_BOOL`|`VT_SS_BIT`|지원 합니다 `bit` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|rgbGuidVal|DBTYPE_GUID|`GUID`|`VT_SS_GUID`|지원 합니다 `uniqueidentifier` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|numNumericVal|DBTYPE_NUMERIC|`DB_NUMERIC`|`VT_SS_NUMERIC`|지원 합니다 `numeric` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|지원 합니다 `date` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|지원 합니다 `smalldatetime`, `datetime`, 및 `datetime2` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.|  
-|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|지원 합니다 `time` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tTime2Val* 값입니다.|  
-|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|지원 합니다 `datetime2` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tsDataTimeVal* 값입니다.|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|지원 합니다 `datetimeoffset` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tsoDateTimeOffsetVal* 값입니다.|  
-|NCharVal|해당하는 OLE DB 유형 표시기 없음|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|지원 합니다 `nchar` 하 고 **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`) 문자열에 대 한 실제 길이 지정 *pwchNCharVal* 지점입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (`SHORT`) 문자열에 대 한 최대 길이 지정 *pwchNCharVal* 지점입니다.<br /><br /> *pwchNCharVal* (`WCHAR` \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *rgbReserved*를 *dwReserved*, 및 *pwchReserved*합니다.|  
+|fBitVal|DBTYPE_BOOL|`VARIANT_BOOL`|`VT_SS_BIT`|`bit`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|rgbGuidVal|DBTYPE_GUID|`GUID`|`VT_SS_GUID`|`uniqueidentifier`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|numNumericVal|DBTYPE_NUMERIC|`DB_NUMERIC`|`VT_SS_NUMERIC`|`numeric`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|dDateVal|DBTYPE_DATE|`DBDATE`|`VT_SS_DATE`|`date`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|tsDateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2`|`smalldatetime`, `datetime`, 및 `datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.|  
+|Time2Val|DBTYPE_DBTIME2|`DBTIME2`|`VT_SS_TIME2`|`time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tTime2Val* (`DBTIME2`)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tTime2Val* 값입니다.|  
+|DateTimeVal|DBTYPE_DBTIMESTAMP|`DBTIMESTAMP`|`VT_SS_DATETIME2`|`datetime2`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tsDataTimeVal* 값입니다.|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|`DBTIMESTAMPOFFSET`|`VT_SS_DATETIMEOFFSET`|`datetimeoffset`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *tsoDateTimeOffsetVal* (`DBTIMESTAMPOFFSET`)<br /><br /> *bScale* (`BYTE`)에 대 한 소수 자릿수를 지정 *tsoDateTimeOffsetVal* 값입니다.|  
+|NCharVal|해당하는 OLE DB 유형 표시기 없음|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|지원 합니다 `nchar` 하 고 **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`)는 문자열에 대 한 실제 길이 지정 *pwchNCharVal* 지점입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (`SHORT`) 하는 문자열의 최대 길이 지정 *pwchNCharVal* 지점입니다.<br /><br /> *pwchNCharVal* (`WCHAR` \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *rgbReserved*를 *dwReserved*, 및 *pwchReserved*합니다.|  
 |CharVal|해당하는 OLE DB 유형 표시기 없음|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|지원 합니다 `char` 하 고 **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`)는 문자열에 대 한 실제 길이 지정 *pchCharVal* 지점입니다. 이 값은 0으로 끝나지 않습니다.<br /><br /> *sMaxLength* (`SHORT`) 하는 문자열의 최대 길이 지정 *pchCharVal* 지점입니다.<br /><br /> *pchCharVal* (`CHAR` \*) 문자열에 대 한 포인터입니다.<br /><br /> 사용되지 않은 멤버:<br /><br /> *rgbReserved*하십시오 *dwReserved*, 및 *pwchReserved*합니다.|  
 |BinaryVal|해당하는 OLE DB 유형 표시기 없음|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|지원 합니다 `binary` 하 고 **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> 포함되는 멤버는 다음과 같습니다.<br /><br /> *sActualLength* (`SHORT`)는 데이터에 대 한 실제 길이 지정 *prgbBinaryVal* 지점입니다.<br /><br /> *sMaxLength* (`SHORT`)는 데이터에 대 한 최대 길이 지정 *prgbBinaryVal* 지점입니다.<br /><br /> *prgbBinaryVal* (`BYTE` \*) 이진 데이터에 대 한 포인터입니다.<br /><br /> 사용 되지 않은 멤버: *dwReserved*합니다.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  

@@ -7,18 +7,18 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827334"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878016"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
 
 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 노트북을 시작 하는 방법을 보여 줍니다. 또한 고유한 전자 필기장 제작을 시작 하는 방법 및 클러스터에 대 한 작업을 제출 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Notebook을 사용 하려면 다음 필수 구성 요소를 설치 해야 합니다.
 
@@ -76,6 +76,9 @@ Azure Data Studio (미리 보기)를 입력 **F1** > **새 연결**, SQL Server 
 연결할 커널에 대 한 컨텍스트를 제공 하는 연결을 선택 합니다. SQL Server 빅 데이터 클러스터 끝점에 연결 하는 해당 끝점은 클러스터의 기본 연결을 선택이 됩니다.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> 기본적으로 Spark 응용 프로그램 1 드라이버 및 연결 되는 약 8.5GB 메모리의 3 개 실행자를 사용 하 여 구성 됩니다. 여러 spark 세션을 실행 하는 것이 좋습니다 최소 32GB의 메모리가 있는 클러스터의 각 서버에 대 한 (예를 들어, AKS 환경에서 사용해 **Standard_D8_v3** 32GB의 메모리가 있는 VM 크기).
 
 ## <a name="hello-world-in-the-different-contexts"></a>다양 한 상황에서 hello world
 

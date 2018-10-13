@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147573"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085519"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
   데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
@@ -265,13 +265,13 @@ ms.locfileid: "48147573"
 8.  스크립트 개발 환경과 스크립트 태스크 편집기를 차례로 닫습니다.  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
- 앞의 절차는 파일에서 데이터 프로파일링 태스크의 출력을 로드하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
+ 이전 절차에는 파일에서 데이터 프로 파일링 태스크의 출력을 로드 하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
   
--   호출을 `LoadXml` 메서드를 `XmlDocument` 클래스 대신는 `Load` 메서드.  
+-   `LoadXml` 메서드 대신 `XmlDocument` 클래스의 `Load` 메서드를 호출합니다.  
   
--   스크립트 태스크 편집기에서 추가 작업의 프로필 출력이 포함 된 패키지 변수의 이름을 `ReadOnlyVariables` 목록입니다.  
+-   스크립트 태스크 편집기에서 프로필 출력이 포함된 패키지 변수의 이름을 태스크의 `ReadOnlyVariables` 목록에 추가합니다.  
   
--   변수의 문자열 값을 전달 합니다 `LoadXML` 메서드를 다음 코드 예제에 표시 된 대로 합니다. 이 예에서는 프로필 출력이 포함된 패키지 변수의 이름으로 "ProfileOutput"을 사용합니다.  
+-   다음 코드 예와 같이 변수의 문자열 값을 `LoadXML` 메서드에 전달합니다. 이 예에서는 프로필 출력이 포함된 패키지 변수의 이름으로 "ProfileOutput"을 사용합니다.  
   
     ```vb  
     Dim outputString As String  
@@ -329,7 +329,7 @@ ms.locfileid: "48147573"
 7.  워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 설정](data-profiling-task.md)   
- [데이터 프로필 뷰어](data-profile-viewer.md)  
+ [데이터 프로파일링 태스크 설정](data-profiling-task.md)   
+ [데이터 프로필 뷰어(Data Profile Viewer)](data-profile-viewer.md)  
   
   

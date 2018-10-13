@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782372"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085289"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker 사용 하 여 빠른 시작: 실행 SQL Server 컨테이너 이미지
 
@@ -41,7 +41,7 @@ ms.locfileid: "48782372"
 
 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다. 이 빠른 시작에서 SQL Server 사용에 중점 **linux** 이미지입니다. Windows 이미지는 다루지 않지만, [mssql-server-windows-developer Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)에서 자세히 알아볼 수 있습니다.
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 사전 요구 사항
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 - 최소 2GB의 디스크 공간
@@ -213,7 +213,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a name="change-the-sa-password"></a>SA 암호 변경
+## <a id="sapassword"></a> SA 암호 변경
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

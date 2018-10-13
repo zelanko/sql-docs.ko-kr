@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796211"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851888"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값이 **트랜잭션**, 기본 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
   
  [ @LockTimeout=] '*값*'  
- 잠금 제한 시간 값(밀리초)입니다. 기본값은 반환한 값과 동일 하 게@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 잠금 요청이 대기하지 않고 오류를 반환하도록 하려면 0을 지정하세요.  
+ 잠금 제한 시간 값(밀리초)입니다. 기본값은 반환한 값과 동일 하 게@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 경우 잠금 요청을 대기 하는 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
   
  [ @DbPrincipal=] '*database_principal*'  
  데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수의 호출자의 멤버 여야 합니다 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할을 성공적으로 함수를 호출 합니다. 기본값은 public입니다.  

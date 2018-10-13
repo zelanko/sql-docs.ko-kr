@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185033"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120030"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 연결 알고리즘으로 추천 엔진에 유용합니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 제품을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다. 시장 바구니 분석의 예제를 보려면 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 데이터 마이닝 자습서에서입니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185033"
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
   
 ## <a name="performance"></a>성능  
- 항목 집합을 만들고 상관 관계 수를 계산하는 프로세스는 시간이 많이 걸릴 수 있습니다. 하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘이 최적화 기술을 공간을 절약 하 고 처리 속도를 사용 하 여 성능 문제는 다음과 같은 조건에서 발생할 수 있는 유의 해야 합니다.  
+ 항목 집합을 만들고 상관 관계 수를 계산하는 프로세스는 시간이 많이 걸릴 수 있습니다. 하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘이 최적화 기술을 공간을 절약 하 고 처리 속도를 사용 하 여 성능 문제는 다음과 같은 조건에서 발생할 수 있습니다는 유의 해야 합니다.  
   
 -   개별 항목을 많이 포함하여 데이터 집합이 클 경우  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48185033"
 -   데이터 마이닝 차원의 생성을 지원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [마이닝 모델 콘텐츠 연결 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)   
  [연결 모델 쿼리 예제](association-model-query-examples.md)  
   

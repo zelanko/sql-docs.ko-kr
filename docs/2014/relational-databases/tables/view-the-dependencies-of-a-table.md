@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 313d128d0323c8400828e43c7d80f94614950ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080843"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169123"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>테이블의 종속성 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블 종속성을 볼 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48080843"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48080843"
   
 2.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
-3.  **개체 종속성***\<개체 이름>* 대화 상자에서 *\<개체 이름>* **에 종속된 개체** 또는  *****\<개체 이름>*** 이 종속된 개체**를 선택합니다.  
+3.  **개체 종속성**_\<개체 이름>_ 대화 상자에서 *\<개체 이름>***에 종속된 개체** 또는 _\<개체 이름>_**이(가) 종속된** **개체**를 선택합니다.  
   
 4.  **종속성** 표에서 개체를 선택합니다. 개체 유형(예: "트리거" 또는 "저장 프로시저")이 **유형** 상자에 표시됩니다.  
   

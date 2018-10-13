@@ -11,23 +11,23 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101463"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119210"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
   이 항목에서는 DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   DQS를 설치할 때 제공한 데이터베이스 마스터 키에 대한 암호를 알고 있어야 합니다.  
+-   알고 있거나 DQS 서버 설치 중에 제공한 데이터베이스 마스터 키에 대 한 암호를 기억 합니다.  
   
--   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면에서 작업 하는 방법에 대 한 자세한 내용은 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)합니다.  
+-   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면을 사용하는 방법은 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)을 참조하세요.  
   
 -   DQS 서버에 로그온한 사용자가 없는지 확인합니다.  
   

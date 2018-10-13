@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705881"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072067"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 하는 경우 **sp_describe_first_result_set** 반환은 빈 결과 집합을 일괄 처리 실행은 아니요 결과 집합을 반환 합니다.  
   
- 이 보장은 서버의 관련 스키마 변경 사항이 없는 것으로 가정합니다. 서버의 관련 스키마 변경 내용을 임시 테이블 만들기를 포함 하지 않거나 테이블 사이 일괄 처리의 변수는 **sp_describe_first_result_set** 라고 하 고 결과 집합 중 반환 되는 시간 2. 일괄 처리에서 변경 하는 스키마를 포함 하 여 실행  
+ 이 보장은 서버의 관련 스키마 변경이 없다는 가정 합니다. 서버의 관련 스키마 변경 내용을 임시 테이블 만들기를 포함 하지 않거나 테이블 사이 일괄 처리의 변수는 **sp_describe_first_result_set** 라고 하 고 결과 집합 중 반환 되는 시간 2. 일괄 처리에서 변경 하는 스키마를 포함 하 여 실행  
   
  **sp_describe_first_result_set** 다음 경우 중 하나에서 오류를 반환 합니다.  
   

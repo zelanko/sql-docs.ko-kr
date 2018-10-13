@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7237a4023bf9ad67f0050951b60b1ee33db4a53f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740612"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119598"
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
 
 
-  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. 에 대 한 자세한 내용은 존재에 대 한 참조 [MDX의 주요 개념 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)합니다.  
+  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. 에 대 한 자동에 대 한 자세한 내용은 참조 하세요 [9a43-81a1af7eb36c"&gt;key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)합니다.  
   
- 경우 선택적 \<측정값 그룹 이름 > 함수는 지정 된 측정값 그룹의 팩트 테이블의 행을 연결 하는 튜플 및 두 번째 집합에서 하나 이상의 튜플과 함께 존재 하는 튜플을 반환 제공 됩니다.  
+ 경우 선택적 \<측정값 그룹 이름 >을 제공 하면 하나 이상의 튜플의 갖는 튜플에 존재 하는 두 번째 집합에서 지정 된 측정값 그룹의 팩트 테이블의 행을 연결 된 있는 튜플을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,9 +42,9 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
   
 ## <a name="remarks"></a>Remarks  
   
-1.  Null 값을 포함 하는 측정값이 포함 된 측정값 그룹 행에 영향을 **Exists** MeasureGroupName 인수가 지정 된 경우. 이 Exists 폼과 Nonempty 함수 간에는 다음과 같은 차이가 있습니다. 이 측정값의 NullProcessing 속성이 Preserve로 설정된 경우 큐브의 해당 부분에 대해 쿼리가 실행되면 측정값은 Null 값을 표시합니다. NonEmpty는 항상 Null 측정값이 있는 집합에서 튜플을 제거하는 반면, MeasureGroupName 인수를 사용하는 Exists는 측정값이 Null인 경우에도 연결된 측정값 그룹이 있는 튜플을 필터링하지 않습니다.  
+1.  Null 값을 포함 하는 측정값을 사용 하 여 측정값 그룹 행에 기여 **Exists** MeasureGroupName 인수가 지정 된 경우. Exists의이 폼과 Nonempty 함수 간의 차이입니다:이 측정값의 NullProcessing 속성이 Preserve로이 경우 측정값; 큐브의 해당 부분에 대해 쿼리를 실행할 때 Null 값이 표시 됩니다 비어 있지 않은 MeasureGroupName 인수를 사용 하는 Exists 측정 값이 null 인 경우에 연관 된 측정값 그룹 행이 있는 튜플을 필터링 하지 것입니다 하지만 Null 측정값이 있는 집합에서 튜플을 제거 항상 됩니다.  
   
-2.  경우 *MeasureGroupName* 매개 변수는 사용, 참조 된 측정값 그룹에 측정값을 볼 수 있는지 여부를; 참조 된 측정값 그룹에 측정값이 없으면 볼 수 없는 경우 EXISTS는 항상 빈 집합을의 값에 관계 없이 반환 결과에 따라 달라 집니다 *Set_Expression1* 및 *Set_Expression2*합니다.  
+2.  하는 경우 *MeasureGroupName* 매개 변수는 사용, 참조 된 측정값 그룹에 측정값을 볼 수 있는지 여부를; 참조 된 측정값 그룹에 측정값이 없으면 표시 경우 EXISTS는 항상 반환 결과에 따라 달라 집니다는 빈 집합의 값에 관계 없이 *Set_Expression1* 하 고 *Set_Expression2*합니다.  
   
 ## <a name="examples"></a>예  
  캘리포니아에 거주하는 고객  
@@ -94,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [비어 있지 않은 &#40;MDX&#41;](../mdx/nonempty-mdx.md)   

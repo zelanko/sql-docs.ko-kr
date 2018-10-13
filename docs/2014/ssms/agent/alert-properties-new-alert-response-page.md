@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217883"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906223"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>경고 속성-새 경고 (응답 페이지)
   이 페이지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 응답으로 실행할 작업을 지정하거나 알림을 받을 운영자 목록을 가져올 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48217883"
  새 운영자를 만드는 데 사용할 수 있는 **새 운영자** 대화 상자를 표시합니다.  
   
  **운영자 보기**  
- 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. **운영자 속성** 대화 상자에서 운영자 속성을 확인 및 수정할 수 있습니다.  
+ 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. 볼 수 있습니다에서 연산자 속성을 수정 합니다 **운영자 속성** 대화 상자.  
   
 ## <a name="see-also"></a>관련 항목  
  [Alerts](alerts.md)   

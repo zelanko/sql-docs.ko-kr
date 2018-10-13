@@ -18,12 +18,12 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf13e60a25e4368b9e7877b7515aad17e3755071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748339"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085141"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 지웁니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 다음을 반환 **레코드 집합** 일련의 명령을 통해 이동 하 여 합니다.  
@@ -40,7 +40,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>매개 변수  
  *RecordsAffected*  
- (선택 사항) A **긴** 하려는 변수 공급자를 현재 작업을 받는 레코드 수를 반환 합니다.  
+ 선택 사항입니다. A **긴** 하려는 변수 공급자를 현재 작업을 받는 레코드 수를 반환 합니다.  
   
 > [!NOTE]
 >  이 매개 변수는 작업에서 영향을 받는 레코드 수를 반환 합니다만 생성 하는 데 사용 되는 select 문에서 레코드 수를 반환 하지 않는 합니다 **레코드 집합**합니다.  
@@ -56,7 +56,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
  입력 하 여 복합 문에서 둘 이상의 명령에 대 한 매개 변수를 전달 하는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션 또는 원본 배열을 전달 함으로써 **열려** 또는 **Execute** 호출 매개 변수를 명령 계열의 각 명령의 동일한 순서로 컬렉션 또는 배열 이어야 합니다. 출력 매개 변수 값을 읽기 전에 모든 결과 읽기를 완료 해야 합니다.  
   
- OLE DB 공급자는 복합 문이 각 명령이 실행 되는 시기를 결정 합니다. 합니다 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 예를 들어, 복합 문은 받으면 일괄 처리에서 모든 명령을 실행 합니다. 결과 **레코드 집합** 를 호출할 때 반환 하기만 하면 됩니다 **NextRecordset**합니다.  
+ OLE DB 공급자는 복합 문 내의 각 명령이 실행 되는 시기를 결정 합니다. 합니다 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 예를 들어, 복합 문은 받으면 일괄 처리에서 모든 명령을 실행 합니다. 결과 **레코드 집합** 를 호출할 때 반환 하기만 하면 됩니다 **NextRecordset**합니다.  
   
  그러나 다른 공급자 NextRecordset 호출 된 후에 문에서 다음 명령을 실행할 수 있습니다. 이러한 공급자의 명시적으로 닫으면 합니다 **레코드 집합** 전체 명령문을 단계별로 실행 하기 전에 개체 ADO 나머지 명령은 실행 하지 않습니다.  
   

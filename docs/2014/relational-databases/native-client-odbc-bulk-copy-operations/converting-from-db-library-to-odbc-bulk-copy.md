@@ -16,12 +16,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80d0b21a54e8249007d961cd6eb26e4334fb361a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176623"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169387"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
   Db-library 대량 복사 프로그램을 odbc로 변환 되므로 쉽게 대량 복사 함수에서 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 Db-library 대량 복사 함수에서 다음과 같은 예외가 비슷합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48176623"
   
 -   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 호출 해야 합니다; Native Client ODBC 드라이버는 Db-library 메시지 및 오류 처리기를 지원 하지 않습니다 **SQLGetDiagRec** 오류 및 ODBC 대량 복사 함수에서 발생 하는 메시지를 가져오려고 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
   
--   Db-library 지정 된 값 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수는 ODBC 다르게 해석 됩니다 **bcp_bind * cbData* 매개 변수입니다.  
+-   Db-library 지정 된 값 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수는 ODBC 다르게 해석 됩니다 **bcp_bind**_cbData_매개 변수입니다.  
   
     |나타내는 조건|Db-library *varlen* 값|ODBC *cbData* 값|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "48176623"
   
      DB-라이브러리에는 *varlen* 값이-1 이면 가변 길이 데이터를 제공 되는 odbc *cbData* NULL 값만 제공 되는 의미로 해석 됩니다. 모든 Db-library 변경 *varlen* SQL_VARLEN_DATA-1과와 사양 *varlen* 사양 0은 모두 SQL_NULL_DATA로 합니다.  
   
--   Db-library  **bcp_colfmt * file_collen* 및 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 같은 문제가 있는 **bcp_bind * varlen*하 고 *cbData* 위에서 언급 한 매개 변수입니다. 모든 Db-library 변경 *file_collen* SQL_VARLEN_DATA-1과와 사양 *file_collen* 사양 0은 모두 SQL_NULL_DATA로 합니다.  
+-   Db-library **bcp\_colfmt**_파일\_collen_ 및 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* 있어야 합니다 으로 동일한 문제가 합니다 **bcp_bind**_varlen_ 하 고 *cbData* 위에서 언급 한 매개 변수입니다. 모든 Db-library 변경 *file_collen* SQL_VARLEN_DATA-1과와 사양 *file_collen* 사양 0은 모두 SQL_NULL_DATA로 합니다.  
   
 -   합니다 *iValue* ODBC의 매개 변수 [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 함수는 void 포인터입니다. Db-library에서 *iValue* 는 정수 였습니다. ODBC에 대 한 값을 캐스팅 *iValue* void * 합니다.  
   

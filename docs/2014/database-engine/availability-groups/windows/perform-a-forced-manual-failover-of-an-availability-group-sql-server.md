@@ -15,15 +15,15 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177796"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120340"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 강제 수동 장애 조치(Failover) 수행(SQL Server)
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법에 대해 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법에 대해 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
   
  강제 장애 조치(failover) 후 가용성 그룹이 장애 조치된 장애 조치failover) 대상은 새로운 주 복제본이 됩니다. 남은 보조 복제본에 있는 보조 데이터베이스는 일시 중지되기 때문에 수동으로 다시 시작해야 합니다. 이전의 주 복제본을 사용할 수 있게 되면 이 복제본은 보조 역할로 전환됩니다. 따라서 이전의 주 데이터베이스는 보조 데이터베이스가 되고 SUSPENDED 상태로 전환됩니다. 지정된 보조 데이터베이스를 다시 시작하기 전에 해당 데이터베이스에서 손실된 데이터를 복구할 수도 있습니다. 그러나 보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 지정된 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48177796"
 >  강제 장애 조치(failover)를 위한 필수 조건 및 권장 사항에 대한 자세한 내용과 강제 장애 조치(failover)를 사용하여 치명적인 오류에서 복구하는 예제 시나리오는 이 항목의 뒷부분에 나오는 [예제 시나리오: 강제 장애 조치(Failover)를 사용하여 치명적인 오류 복구](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)를 참조하세요.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177796"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **강제 장애 조치(failover)를 수행하려면(데이터가 손실될 수 있음)**  
   
-1.  장애 조치해야 할 가용성 그룹에서 역할이 SECONDARY 또는 RESOLVING인 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
+1.  역할이 장애 조치 해야 할 가용성 그룹에서 SECONDARY 또는 RESOLVING 상태인 복제본을 호스팅하는 서버 인스턴스에 연결 합니다.  
   
 2.  다음과 같은 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 문을 사용합니다.  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177796"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **강제 장애 조치(failover)를 수행하려면(데이터가 손실될 수 있음)**  
   
-1.  장애 조치해야 할 가용성 그룹에서 역할이 SECONDARY 또는 RESOLVING인 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`).  
+1.  디렉터리를 변경 (`cd`) 역할이 장애 조치 해야 할 가용성 그룹에서 SECONDARY 또는 RESOLVING 상태인 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
   
 2.  다음 형식 중 하나로 `Switch-SqlAvailabilityGroup` Cmdlet을 `AllowDataLoss` 매개 변수와 함께 사용합니다.  
   
     -   `-AllowDataLoss`  
   
-         기본적으로 `-AllowDataLoss` 매개 변수를 사용하면 `Switch-SqlAvailabilityGroup`에서 강제 장에 조치를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속 하려면 입력 `Y`입력, 작업을 취소 하려면 `N`합니다.  
+         기본적으로 `-AllowDataLoss` 매개 변수를 사용하면 `Switch-SqlAvailabilityGroup`에서 강제 장에 조치를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속하려면 `Y`를 입력하고, 작업을 취소하려면 `N`을 입력합니다.  
   
-         다음 예제에서는 `MyAg` 이라는 서버 인스턴스의 보조 복제본으로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. 이 작업을 확인하라는 메시지가 나타납니다.  
+         다음 예에서는 `MyAg`이라는 서버 인스턴스의 보조 복제본으로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. 이 작업을 확인하라는 메시지가 나타납니다.  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,7 +169,7 @@ ms.locfileid: "48177796"
   
     -   **-AllowDataLoss-Force**  
   
-         확인하지 않고 강제 장애 조치(failover)를 시작하려면 `-AllowDataLoss` 및 `-Force` 매개 변수를 모두 지정합니다. 이 작업은 명령을 스크립트에 포함시키고 사용자 상호 작용 없이 명령을 실행하려는 경우에 유용합니다.  그러나 사용 하 여는 `-Force` 강제 장애 조치는 가용성 그룹에 참여 하는 데이터베이스에서 데이터가 손실 될 수 있으므로 주의 해야 옵션입니다.  
+         확인하지 않고 강제 장애 조치(failover)를 시작하려면 `-AllowDataLoss` 및 `-Force` 매개 변수를 모두 지정합니다. 이 작업은 명령을 스크립트에 포함시키고 사용자 상호 작용 없이 명령을 실행하려는 경우에 유용합니다.  그러나 강제 장애 조치(failover)를 수행하면 가용성 그룹에 참여하는 데이터베이스에서 데이터가 손실될 수 있으므로 `-Force` 옵션은 주의해서 사용해야 합니다.  
   
          다음 예제에서는 `MyAg` 이라는 서버 인스턴스로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. `-Force` 옵션을 사용하면 이 작업의 확인 메시지가 표시되지 않습니다.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177796"
         ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 3.  가용성 그룹을 강제로 장애 조치한 후 필요한 후속 단계를 완료합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [후속 작업: 강제 장애 조치(Failover) 후 필수 태스크](#FollowUp)를 참조하세요.  
   

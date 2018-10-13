@@ -10,12 +10,12 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791771"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071767"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>프로젝트 설정 (동기화) (DB2ToSQL)
 [동기화] 페이지의 **프로젝트 설정** 대화 상자에는 어떻게 SSMA 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저를 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -57,7 +57,7 @@ SSMA에서 개체 변경 될 때 동기화 대화 상자에서 기본값을 지�
 **로컬 개체 메타 데이터가 누락 된 경우 작업**  
 로컬 메타 데이터를 사용할 수 없는 경우 동기화 대화 상자에서 기본값을 지정 합니다. 기본 설정 값이 **데이터베이스에서 새로 고침**합니다.  
   
--   선택 하는 경우 **데이터베이스에서 새로 고침**, 조건이 충족 되 면 SSMA SSMA 메타 데이터를 데이터베이스 정의 로드 됩니다.  
+-   선택 하는 경우 **데이터베이스에서 새로 고침**, 조건이 충족 되 면 SSMA 메타 데이터를 데이터베이스 정의 로드 됩니다.  
   
 -   선택 하는 경우 **Skip**, SSMA 새로 고침 작업을 수행 하지 것입니다.  
   

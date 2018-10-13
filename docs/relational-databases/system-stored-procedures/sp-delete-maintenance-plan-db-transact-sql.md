@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fb8d48b03d49f63775a165217d60f8df2e9279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169064"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_계획\_id_**'**  
  유지 관리 계획 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**합니다.  
   
- [ **@db_name =**] **'***database_name***'**  
+ [  **@db_name =**] **'**_database\_이름_**'**  
  유지 관리 계획에서 삭제할 데이터베이스 이름을 지정합니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

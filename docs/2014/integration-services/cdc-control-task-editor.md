@@ -13,12 +13,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89062160d4836596dacaf9df88c0e87feb383129
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201303"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072167"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 제어 태스크 편집기
   **CDC 제어 태스크 편집기** 대화 상자를 사용하여 CDC 제어 태스크를 구성할 수 있습니다. CDC 제어 태스크 구성에는 CDC 데이터베이스, CDC 태스크 작업 및 상태 관리 정보에 대한 연결을 정의하는 작업이 포함됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48201303"
   
      **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 끝 표시 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
   
--   **CDC 시작 표시**: 이 작업은 스냅숏 데이터베이스 또는 정지 데이터베이스에서 초기 로드를 수행할 때 사용됩니다. 이 작업은 초기 로드 패키지 내의 어느 지점에서나 호출됩니다. 이 작업에는 스냅숏 LSN이거나 스냅숏 LSN이 자동으로 파생될 스냅숏 데이터베이스의 이름이거나 비워 둘 수 있는 매개 변수가 허용됩니다. 매개 변수를 비워둘 경우 현재 데이터베이스 LSN이 변경 내용 처리 패키지의 시작 LSN으로 사용됩니다.  
+-   **CDC 시작 표시**:이 작업은 스냅숏 데이터베이스 또는 정지 데이터베이스에서 초기 로드를 수행할 때 사용 됩니다. 이 작업은 초기 로드 패키지 내의 어느 지점에서나 호출됩니다. 이 작업에는 스냅숏 LSN이거나 스냅숏 LSN이 자동으로 파생될 스냅숏 데이터베이스의 이름이거나 비워 둘 수 있는 매개 변수가 허용됩니다. 매개 변수를 비워둘 경우 현재 데이터베이스 LSN이 변경 내용 처리 패키지의 시작 LSN으로 사용됩니다.  
   
      이 작업은 초기 로드 시작/끝 표시 작업 대신 사용됩니다.  
   

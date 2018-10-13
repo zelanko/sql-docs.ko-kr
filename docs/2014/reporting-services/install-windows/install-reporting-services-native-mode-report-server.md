@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02cdf6e739ff0feb8c60bec5b9bf3bc4a87ffb7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065693"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851868"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령줄에서 설치할 수 있습니다. 설치 마법사에서 1) 파일을 설치하고 기본 설정을 사용하여 서버를 구성하거나 2) 파일을 설치하고 설치 마법사에서 서버가 구성되지 않도록 선택할 수 있습니다. 이 항목에서는 설치 프로그램이 보고서 서버 인스턴스를 설치하고 구성하는 *기본 모드용 기본 구성* 을 검토합니다. 설치가 완료되면 보고서 서버가 실행되어 사용할 수 있는 상태가 됩니다. 기본 모드 보고서 서버는 독립 실행형 응용 프로그램 서버로 실행됩니다. 기본 모드가 기본 서버 모드입니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48065693"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령줄 유틸리티(rsconfig.exe, rskeymgmt.exe 및 rs.exe)  
   
- 이 옵션에 적용 되지 않습니다 공유 기능 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 지정 해야 합니다 별도 항목으로 설치 하려는 경우.  
+ 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 공유 기능에는 적용되지 않습니다. 이러한 공유 기능을 설치하려면 별도의 항목으로 지정해야 합니다.  
   
  기본 모드 보고서 서버 설치에 대해 구성되는 항목은 다음과 같습니다.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "48065693"
   
 -   설치 프로그램은 기본값을 사용하여 보고서 서버 데이터베이스를 만들 수 있어야 합니다. 기본값은 **ReportServer** 및 **ReportServerTempDB**입니다. 이전에 설치한 기존 데이터베이스가 있는 경우 보고서 서버를 기본 모드용 기본 구성으로 구성할 수 없으므로 설치 프로그램이 차단됩니다. 설치 프로그램의 차단을 해제하려면 데이터베이스의 이름을 바꾸거나 데이터베이스를 이동 또는 삭제해야 합니다.  
   
- 컴퓨터가 기본 설치에 대한 모든 요구 사항에 맞지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 파일만 모드로 설치한 다음 설치가 완료된 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 구성해야 합니다.  
+ 컴퓨터가 기본 설치에 대한 모든 요구 사항에 맞지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 파일만 모드로 설치한 다음 설치가 완료된 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 구성해야 합니다.  
   
- 기본 설치를 진행할 목적으로만 컴퓨터를 다시 구성하지 마십시오. 그럴 경우 상당한 작업 시간이 필요하므로 결과적으로 이 설치 옵션이 제공하는 시간 절약이라는 이점이 없어집니다. 가장 좋은 해결 방법은 설치 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일만 모드에서 다음 특정 값을 사용 하도록 보고서 서버를 구성 합니다.  
+ 기본 설치를 진행할 목적으로만 컴퓨터를 다시 구성하지 마십시오. 그럴 경우 상당한 작업 시간이 필요하므로 결과적으로 이 설치 옵션이 제공하는 시간 절약이라는 이점이 없어집니다. 가장 좋은 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 파일만 모드로 설치한 다음 특정 값을 사용하도록 보고서 서버를 구성하는 것입니다.  
   
 ##  <a name="bkmk_defaultURLreservations"></a> 기본 URL 예약  
  URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.  
@@ -121,11 +121,11 @@ ms.locfileid: "48065693"
   
     -   **Reporting Services - 기본**  
   
-    -   **관리 도구 - 기본**. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 이 기본 구성 옵션을 선택하면 보고서 서버가 작동하지만 나중에 구성 옵션을 변경할 수 있습니다. ' 내 보고서 '와 같은 일부 옵션을 통해 관리 됩니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **관리 도구 - 기본**. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 기본 구성 옵션은 작동 하는 보고서 서버 되지만 나중에 구성 옵션을 변경 하는 것이 좋습니다. '내 보고서'와 같은 일부 옵션은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 통해 관리됩니다.  
   
      ![기능 선택에서 SSRS 기본 모드 선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "기능 선택에서 SSRS 기본 모드 선택")  
   
-3.  사용 하려는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능을 그 다음에 **서버 구성** SQL Server 에이전트에 대 한 구성 되었는지 확인 하려는 페이지 **자동** 시작 유형.  
+3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능을 사용하려는 경우 **서버 구성** 페이지에서 SQL Server 에이전트가 **자동** 설치 유형에 대해 구성되어 있는지 확인할 수 있습니다.  
   
 4.  **Reporting Services 구성** 페이지에서 **설치 및 구성**을 선택합니다.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "48065693"
   
     -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 열고 보고서 서버에 연결할 수 있는지 확인합니다.  
   
-    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 관리자에 연결합니다. 예를 들어 `http://loclahost/Reports`입니다.  
+    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리자에 연결합니다. 예를 들어 `http://loclahost/Reports`입니다.  
   
-    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예를 들어  `http://loclahost/ReportServer`  
+    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예:  `http://loclahost/ReportServer`  
   
  자세한 내용은 다음 두 항목의 기본 섹션을 참조하세요.  
   
@@ -158,10 +158,10 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
+ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [파일만 설치&#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [기본 모드 보고서 서버에서 SSL 연결 구성](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   

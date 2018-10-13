@@ -1,28 +1,33 @@
 ---
 title: T-SQL (SQL Server Machine Learning)에서 "Hello World" 기본 R 코드 실행 빠른 시작 | Microsoft Docs
-description: SQL Server에서 R 스크립트에 대 한이 빠른 시작에서는 hello world 연습을 사용 하 여 시스템 저장 프로시저 sp_execute_external_script의 기본 사항을 알아봅니다.
+description: SQL Server에서 R 스크립트에 대 한 빠른 시작입니다. Sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 hello world 연습에서 R 스크립트를 호출 하는 기본 사항을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086886"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878086"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>SQL Server의 빠른 시작: "Hello world" R 스크립트 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server에 있는 SQL Server 데이터에 대 한 데이터베이스 내 분석에 대 한 R 언어 기능 지원이 포함 됩니다. 대규모로 예측 분석을 위한 오픈 소스 R 함수, 타사 패키지 및 Microsoft R의 기본 패키지를 사용할 수 있습니다.
+SQL Server에 있는 SQL Server 데이터에 대 한 데이터 과학 분석에 대 한 R 언어 지원이 포함 됩니다. R 스크립트와 같은 오픈 소스 R 함수, 타사 R 라이브러리 또는 기본 제공 Microsoft R 라이브러리의 구성할 수 있습니다 [RevoScaleR](../r/revoscaler-overview.md) 규모에서 예측 분석에 대 한 합니다. 
 
-이 빠른 시작에 알아봅니다 "Hello World" R을 실행 하 여 주요 개념 소개를 사용 하 여 inT SQL 스크립트를 **sp_execute_external_script** 시스템 저장 프로시저입니다. 저장된 프로시저를 통해 R 스크립트 실행이 됩니다. 사용할 수 있습니다는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 저장된 프로시저 및 R 전달이 빠른이 시작에서 설명한 것 처럼 입력된 매개 변수로 스크립트 또는에서 R 스크립트를 래핑하는 [사용자 지정 저장 프로시저](sqldev-in-database-r-for-sql-developers.md)합니다. 
+다음 방법 중 하나를 사용 하 여 저장된 프로시저를 통해 스크립트 실행이 됩니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
++ 기본 제공 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 저장 프로시저에서 R 스크립트를 입력된 매개 변수로 전달 합니다.
++ R 스크립트를 래핑하는 [사용자 지정 저장 프로시저](sqldev-in-database-r-for-sql-developers.md) 만든 합니다.
+
+이 빠른 시작에 알아봅니다 "Hello World" R을 실행 하 여 주요 개념 소개를 사용 하 여 inT SQL 스크립트를 **sp_execute_external_script** 시스템 저장 프로시저입니다. 
+
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 연습에서는 이미 설치 되어 다음 중 하나를 사용 하 여 SQL Server 인스턴스에 대 한 액세스를 필요 합니다.
 
@@ -33,7 +38,7 @@ SQL Server에 있는 SQL Server 데이터에 대 한 데이터베이스 내 분�
 
 + SQL 쿼리를 실행 하는 데 사용 되는 도구입니다. SQL Server 데이터베이스에 연결 하 고 T-SQL 코드를 실행할 수 있는 모든 응용 프로그램을 사용할 수 있습니다. SQL 전문가라면 SQL Server Management Studio(SSMS) 또는 Visual Studio를 사용할 수 있습니다.
 
-이 자습서에서는 SQL Server내에서 R을 실행하는 것이 얼마나 쉬운지 보여주기 위해 새로운 **Visual Studio Code용 mssql 확장**을 사용했습니다. VS Code는 Windows, Linux, macOS에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 SQL 쿼리를 실행하기 위한 가벼운 확장입니다. Visual Studio Code를 다운로드하려면 [Download and install Visual Studio Code](https://code.visualstudio.com/Download)(Visual Studio Code 다운로드 및 설치)를 참조하세요. 추가할 합니다 **mssql** 확장을이 문서를 참조 하세요: [Visual Studio Code 용 mssql 확장 사용](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
+이 빠른 시작에서는 SQL Server 내에서 R을 실행 하려면 얼마나 쉬운지 표시할 했습니다 새 **Visual Studio Code 용 mssql 확장**합니다. VS Code는 Windows, Linux, macOS에서 실행할 수 있는 무료 개발 환경입니다. **mssql** 확장은 SQL 쿼리를 실행하기 위한 가벼운 확장입니다. Visual Studio Code를 다운로드하려면 [Download and install Visual Studio Code](https://code.visualstudio.com/Download)(Visual Studio Code 다운로드 및 설치)를 참조하세요. 추가할 합니다 **mssql** 확장을이 문서를 참조 하세요: [Visual Studio Code 용 mssql 확장 사용](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>데이터베이스에 연결하고 Hello World 테스트 스크립트 실행
 

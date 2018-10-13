@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597062"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119090"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47597062"
   
  각 <`Location`> 요소에는 자체 특성 집합과 하나의 <`step`> 자식 요소가 있습니다. 이 <`step`> 자식 요소는 작업 센터 위치의 첫 번째 제조 단계입니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>2. AdditionalContactInfo 열에서 모든 전화 번호 찾기  
  다음 쿼리는 <`telephoneNumber`> 요소에 대한 전체 계층을 검색하여 특정 고객 연락처의 추가 전화 번호를 검색합니다. <`telephoneNumber`> 요소는 계층의 아무 곳에나 표시될 수 있기 때문에 이 쿼리는 검색 시 하위 항목과 자체 연산자(//)를 사용합니다.  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  다음은 결과입니다.  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  

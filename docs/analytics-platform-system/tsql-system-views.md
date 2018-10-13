@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395771"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906143"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 Parallel Data Warehouse에 대 한 시스템 뷰
 시스템 보기에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -133,7 +133,7 @@ ms.locfileid: "40395771"
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 사용할 수 있는 SQL Server Dmv
 병렬 데이터 웨어하우스를 다양 한 SQL Server 동적 관리 뷰 (Dmv)를 노출합니다. 병렬 데이터 웨어하우스에서 쿼리할 때 이러한 보기는 배포판에서 실행 되는 SQL Server 데이터베이스의 상태를 보고 합니다.
 
-각이 DMV에 pdw_node_id 라는 특정 열을 있습니다. 이 계산 노드에 대 한 식별자입니다. 
+각이 DMV에 pdw_node_id 라는 특정 열을 있습니다. 계산 노드에 대 한 식별자입니다. 
 
 > [!NOTE]
 > 이러한 뷰를 사용 하려면 다음 표에 나와 있는 것 처럼 'pdw_nodes_' 이름에 삽입 합니다.

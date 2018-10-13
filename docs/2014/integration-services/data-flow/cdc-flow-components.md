@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195633"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120141"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48195633"
 -   Windows Server 2008 R2 64비트(x64)  
   
 ### <a name="running-the-installation-program"></a>설치 프로그램 실행  
- 설치 마법사를 실행 하기 전에 해야 합니다 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 닫혀 있습니다. 그런 다음 설치 마법사의 지시를 따릅니다.  
+ 설치 마법사를 실행하기 전에 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 가 닫혀 있는지 확인합니다. 그런 다음 설치 마법사의 지시를 따릅니다.  
   
 ### <a name="restart-ssis"></a>SSIS 다시 시작  
  CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]에서 패키지를 개발할 때 구성 요소가 제대로 작동하도록 하려면 SSIS 서비스를 다시 시작해야 합니다.  
@@ -68,10 +68,10 @@ ms.locfileid: "48195633"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Microsoft CDC 구성 요소 제거  
  제거 마법사를 사용하여 CDC 원본, CDC 분할자 또는 CDC 제어 태스크를 제거할 수 있습니다. 구성 요소를 제거하기 전에 다음을 확인해야 합니다.  
   
- 사용 중인 경우를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 패키지 개발용으로 있는지 확인 합니다 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 제거 마법사를 실행 하기 전에 종료 됩니다.  
+ 패키지를 개발하는 데 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 를 사용하고 있는 경우 제거 마법사를 실행하기 전에 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 가 닫혀 있는지 확인합니다.  
   
 ## <a name="benefits"></a>이점  
- CDC 구성 요소에 대 한 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 구성 요소는 SSIS 개발자가 변경 데이터를 처리 하는 SSIS 패키지를 쉽게 빌드할 수 있습니다. 이러한 구성 요소를 사용하면 SSIS 개발자가 CDC를 처리하는 기능이 향상되고 CDC 패키지의 복잡성이 줄어듭니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 구성 요소용 CDC 구성 요소를 사용하면 SSIS 개발자가 변경 데이터를 처리하는 SSIS 패키지를 쉽게 빌드할 수 있습니다. 이러한 구성 요소를 사용하면 SSIS 개발자가 CDC를 처리하는 기능이 향상되고 CDC 패키지의 복잡성이 줄어듭니다.  
   
  SSIS CDC 구성 요소는 복제, 데이터 웨어하우스 로드, OLAP에 대한 느린 변경 차원 업데이트, 변경 내용 감사 또는 가능한 추가적인 용도를 위해 추가로 처리할 수 있는 쉬운 방법으로 변경 데이터를 제공하는 데 사용됩니다. 사용되는 추가 처리 유형은 SSIS 개발자에 의해 결정됩니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195633"
   
  ![Trickle Feed 처리 패키지 제어 흐름](../media/tricklefeedprocessing.gif "Trickle Feed 처리 패키지 제어 흐름")  
   
- 이렇게 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 두 CDC 제어 태스크 및 데이터 흐름 태스크를 제어 흐름 포함 되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
+ 이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제어 흐름에는 CDC 제어 태스크 및 데이터 흐름 태스크라는 두 가지 태스크가 포함되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
   
  CDC 제어 태스크를 사용하는 방법은 [CDC Control Task](../control-flow/cdc-control-task.md) 및 [CDC Control Task Editor](../cdc-control-task-editor.md)를 참조하십시오.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48195633"
   
  [CDC 원본](cdc-source.md)  
   
- [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [CDC 원본 편집기 &#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
+ [CDC 원본 편집기&#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
   
- [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
+ [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
   
  CDC 분할자에 대한 자세한 내용은 다음을 참조하십시오.  
   

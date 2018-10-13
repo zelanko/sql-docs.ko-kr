@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 6899f45231a0e77c529ba7b416a4a30f6a7955b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853431"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085469"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
 
@@ -35,7 +35,7 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
 
 개념 정보를 참조 하세요 [SQL Server 장애 조치 클러스터 인스턴스 (FCI) linux](sql-server-linux-shared-disk-cluster-concepts.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 저장소에 대 한 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
 

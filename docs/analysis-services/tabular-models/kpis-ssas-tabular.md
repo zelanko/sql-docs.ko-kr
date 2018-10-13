@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043727"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906433"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서 *KPI* (핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 문서에서는 테이블 형식 모델 작성자 테이블 형식 모델의 Kpi에 대 한 기본적인 이해를 제공 합니다.  
+  테이블 형식 모델에서 *KPI* (핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 문서에서는 테이블 형식 모델 작성자는 테이블 형식 모델에서 Kpi는 이해를 제공합니다.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 목표를 평가하기 위한 정량 측정값입니다. KPI는 주로 시간에 따라 평가됩니다. 예를 들어 조직의 영업부에서는 KPI를 사용하여 월별 예상 매출 총 이익 대비 매출 총 이익을 계산할 수 있습니다. 회계부에서는 월별 수익 대비 지출을 계산하여 비용을 평가하고, 인사부에서는 분기별 직원 전직률을 계산할 수 있습니다. 각각은 KPI의 예에 해당합니다. 경영진은 비즈니스 성과표에 그룹화된 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 정확한 요약 정보를 얻거나 추세를 확인합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "34043727"
 ##  <a name="bkmk_example"></a> 예제  
  Adventure Works의 영업 관리자는 영업 직원이 특정 기간(년) 동안 자신의 판매 할당량을 달성하고 있는지 여부를 빠르게 표시하는 데 사용할 수 있는 피벗 테이블을 만들려고 합니다. 각 영업 직원에 대해 실제 판매액(달러)과 판매 할당액(달러)이 표시되고 각 영업 직원이 현재 자신의 판매 할당액을 달성했는지 그 이하 또는 이상인지를 보여 주는 간단한 그래픽이 표시되는 피벗 테이블을 만들려고 합니다. 또한 데이터를 연도별로 분류할 수 있도록 하려고 합니다.  
   
- 이렇게 하기 위해 영업 관리자는 조직의 BI 솔루션 개발자의 도움을 받아 AdventureWorks 테이블 형식 모델에 Sales KPI를 추가합니다. 영업 관리자는은 데이터 원본으로 Adventure Works 테이블 형식 모델에 연결 하 고 필드 (측정값 및 KPI) 및 영업 사원이 자신의 할당액을 달성 하는지 여부를 분석 하는 슬라이서를 피벗 테이블을 만들 Excel을 사용 합니다.  
+ 이렇게 하기 위해 영업 관리자는 조직의 BI 솔루션 개발자의 도움을 받아 AdventureWorks 테이블 형식 모델에 Sales KPI를 추가합니다. 영업 관리자는 사용 하 여 Excel 데이터 소스로 Adventure Works 테이블 형식 모델에 연결 하 고 필드 (측정값 및 KPI)와 영업 자신의 할당액을 달성 여부를 분석 하는 슬라이서를 사용 하 여 피벗 테이블을 만듭니다.  
   
  모델에서 FactResellerSales 테이블의 SalesAmount 열에는 각 영업 직원의 실제 판매액(달러)을 보여 주는 측정값이 만들어집니다. 이 측정값은 KPI의 기본 값을 정의합니다.  
   
@@ -69,14 +69,14 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  핵심 성과 지표 대화 상자를 보려면 테이블에 대한 측정값 표에서 기준 값으로 사용되는 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. 측정값이 기준 값으로 KPI에 확장된 후에는 KPI와 관련된 측정값을 식별하는 아이콘이 측정값 표의 측정값 이름 옆에 나타납니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  
 |[KPI 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|기본 측정값, 대상 측정값 및 상태 임계값을 사용하여 KPI를 만드는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+## <a name="see-also"></a>관련 항목  
+ [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

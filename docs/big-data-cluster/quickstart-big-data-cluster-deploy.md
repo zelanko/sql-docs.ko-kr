@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120460"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터 배포
 
@@ -20,7 +20,7 @@ ms.locfileid: "48817991"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 빠른 시작이에서는 이미 v1.10의 최소 버전을 사용 하 여 AKS 클러스터를 구성한 필요 합니다. 자세한 내용은 참조는 [AKS에 배포](deploy-on-aks.md) 가이드입니다.
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Windows 또는 Linux/macOS 클라이언트 사용 하는지에 따라 달라 집니다 약간 빅 데이터 클러스터를 배포 하는 데 필요한 환경 변수를 설정 합니다.  사용 중인 운영 체제에 따라 아래 단계를 선택 합니다.
 
-> [!IMPORTANT]
-> 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
->
-> 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `‘` 문자입니다.
+계속 하기 전에 다음 중요 한 지침을 note:
 
-[!IMPORTANT]
-합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
-
-
-> [!NOTE]
-> CTP 2.0 릴리스에 대 한 기본 포트를 변경 하지 마세요.
+- 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
+- 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `‘` 문자입니다.
+- CTP 2.0 릴리스에 대 한 기본 포트를 변경 하지 마세요.
+- 합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
 
 다음 환경 변수를 초기화 합니다.  빅 데이터 클러스터를 배포 하는 데 필요 합니다.
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > 제한 된 공개 미리 보기 동안 SQL Server에 대 한 빅 데이터 클러스터 이미지 다운로드를 위해 Docker 자격 증명은 Microsoft에서 각 고객에 게 제공 됩니다. 액세스를 요청 하려면 등록 [여기](https://aka.ms/eapsignup), SQL Server 빅 데이터 클러스터를 시도 하려면 관심을 가져를 지정 합니다.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터를 배포 합니다.
+## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터를 배포 합니다.
 
 Kubernetes 클러스터에서 SQL Server 2019 CTP 2.0 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스할 때 보안 경고가 나타납니다. 향후 릴리스에서 자체 서명 된 인증서를 제공 하는 기능을 제공 합니다 했습니다.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>SQL Server 마스터 인스턴스와 SQL Server 빅 데이터 클러스터 HDFS/Spark 끝점에 연결
+## <a name="connect-to-the-big-data-cluster"></a>빅 데이터 클러스터에 연결
 
 배포 스크립트를 성공적으로 완료 된 후에 SQL Server 마스터 인스턴스와 아래 설명 된 단계를 사용 하 여 Spark/HDFS 끝점의 IP 주소를 얻을 수 있습니다. 모든 클러스터 끝점도 쉽게 참조할 수 있도록에 대 한 클러스터 관리 포털에서 서비스 끝점 섹션에 표시 됩니다.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-검색할 합니다 **EXTERNAL-IP** 서비스에 할당 되는 값입니다. 에 대 한 IP 주소를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 합니다 `service-master-pool-lb` 31433 포트 (예:  **\<ip 주소\>31433,**) 및에 대 한 외부 IP를 사용 하 여 SQL Server 빅 데이터 클러스터 끝점에는 `service-security-lb` 서비스입니다.   빅 데이터 클러스터 끝점을 통해 Knox 작업이 HDFS와 상호 작용 하 고 Spark 제출 하는 되는 위치입니다.
+검색할 합니다 **EXTERNAL-IP** 서비스에 할당 되는 값입니다. 에 대 한 IP 주소를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 합니다 `service-master-pool-lb` 31433 포트 (예:  **\<ip 주소\>31433,**) 및에 대 한 외부 IP를 사용 하 여 SQL Server 빅 데이터 클러스터 끝점에는 `service-security-lb` 서비스입니다.   빅 데이터 클러스터 끝점은 HDFS와 상호 작용 하 고 Knox 통해 Spark 작업을 제출할 수 있는 됩니다.
 
-# <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
 SQL Server 빅 데이터 클러스터를 배포 했으므로 새 기능 중 일부를 사용해 보세요.
 

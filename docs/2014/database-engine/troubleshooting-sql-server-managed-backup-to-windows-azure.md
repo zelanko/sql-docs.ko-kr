@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121753"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120070"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 작업 중 발생할 수 있는 오류를 해결하는 데 사용할 수 있는 태스크 및 도구에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48121753"
   
 1.  **오류 설정 또는 구성 시 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     오류: "... 저장소 URL에 액세스 실패 올바른 SQL 자격 증명을 제공... " :이 고 SQL 자격 증명을 참조 하는 다른 유사한 오류가 나타날 수 있습니다.  이 경우 제공한 SQL 자격 증명의 이름과, 저장소 계정 이름 및 저장소 액세스 키 등 SQL 자격 증명에 저장된 정보를 검토하고 정보가 최신이고 올바른지 확인하십시오.  
+     오류: "... 저장소 URL에 액세스 실패 올바른 SQL 자격 증명을 제공... " :이 고 SQL 자격 증명을 참조 하는 다른 유사한 오류가 나타날 수 있습니다.  이러한 경우에 이름 제공한 SQL 자격 증명 및 SQL 자격 증명-storage 계정 이름 및 저장소 액세스 키를 저장 된 정보를 검토 하 고 현재 및 유효 해야 합니다.  
   
      오류: "... 시스템 데이터베이스 이므로... 데이터베이스를 구성할 수 없습니다": 사용 하도록 설정 하려는 경우이 오류가 나타납니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 시스템 데이터베이스에 대 한 합니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 시스템 데이터베이스 백업을 지원하지 않습니다.  시스템 데이터베이스에 대한 백업을 구성하려면 유지 관리 계획 등 다른 SQL Server 백업 기술을 사용하십시오.  
   

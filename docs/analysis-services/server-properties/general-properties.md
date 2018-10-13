@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033341"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906213"
 ---
 # <a name="general-properties"></a>일반 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033341"
  Analysis Services 대화 상자에서 파일을 저장하고 열고 찾을 때 검색할 수 있는 폴더를 쉼표로 구분된 목록으로 지정하는 문자열 속성입니다. Analysis Services 서비스 계정은 목록에 추가되는 모든 폴더에 대해 읽기 및 쓰기 권한을 가지고 있어야 합니다.  
   
  **BackupDir**  
- 백업 명령의 일부로 경로가 지정되지 않은 이벤트의 경우 기본적으로 백업 파일이 저장되는 디렉터리 이름을 식별하는 문자열 속성입니다.  
+ 백업 명령의 일부로 경로가 지정 되지 이벤트에 기본적으로 백업 파일을 저장할 디렉터리의 이름을 식별 하는 문자열 속성입니다.  
   
  **CollationName**  
  서버 데이터 정렬을 식별하는 문자열 속성입니다. 자세한 내용은 [언어 및 데이터 정렬&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)을 참조하세요.  
@@ -100,7 +100,7 @@ ms.locfileid: "38033341"
  이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
->  **ForceCommitTimeout**은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
+>  **ForceCommitTimeout** 은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
   
  **IdleConnectionTimeout**  
  비활성 상태의 연결에 대한 제한 시간(초)을 지정하는 정수 속성입니다.  

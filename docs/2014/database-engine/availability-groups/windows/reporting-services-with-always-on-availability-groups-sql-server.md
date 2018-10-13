@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222593"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120220"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Reporting Services(SQL Server)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "48222593"
 > [!NOTE]  
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
 >   
->  -   보고서 서버 데이터베이스가 수신한 것과 동일한 최근 업데이트가 아직 수신되지 않은 콘텐츠 데이터베이스의 복사본을 복원 또는 장애 조치(Failover)해야 하는 경우  
+>  -   복원 또는 동일한 최근 받지 않은 콘텐츠 데이터베이스의 복사본으로 장애 조치를 업데이트 하는 보고서 서버 데이터베이스를 받았습니다.  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 동기화 프로세스에서 콘텐츠 데이터베이스 및 보고서 서버 데이터베이스에 있는 항목 목록 간에 불일치가 발견된 경우  
 > -   동기화 프로세스로 콘텐츠 데이터베이스에 있는 항목이 삭제되거나 업데이트되는 경우  
   

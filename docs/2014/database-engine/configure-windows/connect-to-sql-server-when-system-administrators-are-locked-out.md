@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119790"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
   이 항목에서는 시스템 관리자로서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 대한 액세스 권한을 다시 얻을 수 있는 방법에 대해 설명합니다. 시스템 관리자는 다음 중 한 가지 이유로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한을 상실할 수 있습니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "48171993"
 5.  에 **시작 매개 변수** 탭을 **시작 매개 변수를 지정** 상자에 입력 `-m` 클릭 하 고 `Add`합니다. 클릭합니다.  
   
     > [!NOTE]  
-    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 **고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 기존 매개 변수를 변경하지 않도록 주의하십시오. 맨 끝에 추가 a new parameter `;-m` 클릭 하 고 `OK`입니다. 클릭합니다.  
+    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 기존 매개 변수를 변경하지 않도록 주의하십시오. 맨 끝에 새 매개 변수 `;-m`(세미콜론, 대시 및 소문자 m)을 추가하고 `OK`을 클릭합니다.  
   
 6.  클릭 `OK`, 메시지를 다시 시작 후에 서버 이름을 마우스 오른쪽 단추로 클릭 하 고 클릭 하 고 **다시 시작**합니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 다시 시작한 후에 서버는 단일 사용자 모드가 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중이지 않는지 확인합니다. 시작된 경우 사용자의 유일한 연결을 사용합니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 다시 시작한 후에 서버는 단일 사용자 모드가 됩니다. 했는지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 되지 않습니다. 시작된 경우 사용자의 유일한 연결을 사용합니다.  
   
 8.  Windows 8 시작 화면에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]아이콘을 마우스 오른쪽 단추로 클릭합니다. 화면 아래쪽에서 **관리자 권한으로 실행**을 선택합니다. SSMS에 관리자 자격 증명이 전달됩니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171993"
 11. 에 **시작 매개 변수** 탭의 **기존 매개 변수** 상자에서 `-m` 클릭 하 고 `Remove`합니다.  
   
     > [!NOTE]  
-    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 **고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 제거 된 `;-m` 는 이전에 추가 하 고 클릭 `OK`합니다.  
+    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 제거 된 `;-m` 는 이전에 추가 하 고 클릭 `OK`합니다.  
   
 12. 서버를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
   

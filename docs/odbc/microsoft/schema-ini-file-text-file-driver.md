@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713211"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169223"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 스키마 정보 파일을 사용 하 여 텍스트 파일의 형식이 결정 됩니다. 스키마 정보 파일을 항상 Schema.ini 라는 이며 항상 텍스트 데이터 원본 동일한 디렉터리에 유지 됩니다. 스키마 정보 파일을 파일, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성의 일반 형식에 대 한 정보를 사용 하 여 IISAM을 제공합니다. Schema.ini 파일은 항상 고정 길이 데이터에 액세스 하기 위한 필수입니다. 날짜/시간, 통화 또는 10 진수 데이터 또는 테이블의 데이터를 처리 하 여 더 많은 제어를 하려는 경우 텍스트 테이블에 포함 된 경우에 Schema.ini 파일을 사용 해야 합니다.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 열 번호를 사용 하 여 테이블의 필드를 지정 하는 다음 항목 (**Col * * * n*) 문자 구분 된 파일에 대 한 선택 사항이 며 고정 길이 파일에 대 한 필수 옵션입니다. 이 예제에서는 두 개의 필드, 10 자 CustomerNumber 텍스트 필드 및 30 자 CustomerName 텍스트 필드에 대 한 Schema.ini 항목을 보여 줍니다.  
+ 열 번호를 사용 하 여 테이블의 필드를 지정 하는 다음 항목 (**Col**_n_) 문자 구분 된 파일에 대 한 선택 사항이 며 고정 길이 파일에 대 한 필수 옵션입니다. 이 예제에서는 두 개의 필드, 10 자 CustomerNumber 텍스트 필드 및 30 자 CustomerName 텍스트 필드에 대 한 Schema.ini 항목을 보여 줍니다.  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 구문의 **Col * * * n* 됩니다.  
+ 구문의 **Col**_n_ 됩니다.  
   
 ```  
   

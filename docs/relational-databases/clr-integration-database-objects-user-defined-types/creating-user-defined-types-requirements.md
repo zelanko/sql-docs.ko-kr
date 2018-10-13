@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697122"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119751"
 ---
 # <a name="creating-user-defined-types---requirements"></a>사용자 정의 형식 만들기 - 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697122"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- 값 유형은 위 형식의 필드로 구성 됩니다에 대 한 적합 한 후보가 **네이티브** 형식으로 **구조체** Visual C#에서는 (또는 **구조** 에서으로 Visual Basic)입니다. UDT를 사용 하 여 지정 하는 예를 들어 합니다 **네이티브** serialization 형식을 사용 하 여 지정한 다른 UDT 필드가 포함 될 수 있습니다 합니다 **네이티브** 형식. 경우 UDT 정의가 이보다 복잡 하며 위의 목록에 없는 데이터 형식이 포함 된, 지정 해야 합니다 **UserDefined** serialization 형식을 대신 합니다.  
+ 위 형식의 필드의 구성 된 값 형식에 적합 **네이티브** 형식으로 **구조체** Visual C#에서는 (또는 **구조** 에서으로 Visual Basic)입니다. UDT를 사용 하 여 지정 하는 예를 들어 합니다 **네이티브** serialization 형식을 사용 하 여 지정한 다른 UDT 필드가 포함 될 수 있습니다 합니다 **네이티브** 형식. 경우 UDT 정의가 이보다 복잡 하며 위의 목록에 없는 데이터 형식이 포함 된, 지정 해야 합니다 **UserDefined** serialization 형식을 대신 합니다.  
   
  합니다 **네이티브** 형식에는 다음 요구 사항:  
   

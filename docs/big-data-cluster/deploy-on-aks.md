@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796762"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877936"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0에 대 한 Azure Kubernetes Service를 구성 합니다.
 
@@ -22,9 +22,12 @@ Azure Kubernetes Service (AKS)를 사용 하면 간단 하 게 생성, 구성 �
 
 이 문서에서는 Azure CLI를 사용 하 여 AKS에서 Kubernetes를 배포 하는 단계를 설명 합니다. Azure 구독이 없으면 시작 하기 전에 무료 계정을 만듭니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-- AKS environment에 대 한 최소 VM 요구 사항 Standard_DS3_V2 최소 크기인 (마스터) 외에도 두 개 이상의 에이전트 Vm으로 됩니다. VM 당 필요한 최소 리소스는 4 Cpu 및 14GB 메모리입니다.
+- AKS environment에 대 한 최소 VM 요구 사항인 두 개 이상의 에이전트 Vm (마스터에 추가 된) 최소 크기인 [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)합니다. VM 당 필요한 최소 리소스는 4 Cpu 및 14GB 메모리입니다.
+  
+   > [!NOTE]
+   > 최소 크기는 빅 데이터 작업 또는 여러 Spark 응용 프로그램을 실행 하려는 경우 [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), VM 당 필요한 최소 리소스는 cpu가 8 개 및 32GB의 메모리가 및 합니다.
 
 - 이 섹션에서는 여야 합니다. Azure CLI 버전 2.0.4 실행 이상. 설치 또는 업그레이드를 참조 해야 하는 경우 [Azure CLI 2.0 설치](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)합니다. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
@@ -80,7 +83,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
     --kubernetes-version 1.10.7
     ```
 
-    늘리거나 추가 하 여 기본 에이전트 수를 줄일 수 있습니다 `--node-count <n>` az aks 만들려면 명령을 여기서 `<n>` 하려는 에이전트 노드 수입니다.
+    늘리거나 변경 하 여 기본 에이전트 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 하려는 에이전트 노드 수입니다.
 
     몇 분 후 명령이 완료 되 고 클러스터에 대 한 JSON 형식 정보를 반환 합니다.
 

@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31c73e25042df50fba9c1702e7834565c0284fbd
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae175665c2a62caa2d3b7b845c68fefebcfd4c32
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740902"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071665"
 ---
 # <a name="comparison-operators"></a>비교 연산자
 
 
   스칼라 데이터와 함께 비교 연산자를 사용합니다. 어떤 MDX 식에서든 비교 연산자를 사용할 수 있습니다.  
   
- 조건을를 확인 하려면를 사용할 수도 있습니다 MDX 문과 같은 MDX 함수에서 비교 연산자 [IIf](../mdx/iif-mdx.md) 함수입니다. 하지만 어떤 조건을 확인하려고 비교 연산자를 사용하는 경우 그 조건을 기준으로 데이터를 변경하려 하기 전에 적절한 권한을 가져야 합니다. 실제 데이터에 대한 액세스 권한을 가지고 그 데이터를 쿼리할 수 있는 사용자는 추가 쿼리에 비교 연산자를 사용할 수 있습니다. 하지만 이러한 액세스 권한을 가지고 있다고 해서 모든 사용자가 데이터를 변경할 수 있는 적절한 권한을 가지고 있다든가 가지고 있어야 한다는 의미는 아닙니다. 또한 데이터 무결성을 유지하기 위해 데이터를 쿼리하고 변경할 수 있는 사람의 수를 제한합니다.  
+ MDX 문 및 MDX와 같은 함수에서 비교 연산자를 이용할 수 조건을 검사할 [IIf](../mdx/iif-mdx.md) 함수입니다. 하지만 어떤 조건을 확인하려고 비교 연산자를 사용하는 경우 그 조건을 기준으로 데이터를 변경하려 하기 전에 적절한 권한을 가져야 합니다. 실제 데이터에 대한 액세스 권한을 가지고 그 데이터를 쿼리할 수 있는 사용자는 추가 쿼리에 비교 연산자를 사용할 수 있습니다. 하지만 이러한 액세스 권한을 가지고 있다고 해서 모든 사용자가 데이터를 변경할 수 있는 적절한 권한을 가지고 있다든가 가지고 있어야 한다는 의미는 아닙니다. 또한 데이터 무결성을 유지하기 위해 데이터를 쿼리하고 변경할 수 있는 사람의 수를 제한합니다.  
   
  비교 연산자는 부울 데이터 형식으로 계산되어 테스트 조건의 결과에 따라 TRUE 또는 FALSE를 반환합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34740902"
 |[<>(같지 않음)](../mdx/not-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수와 같지 않으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
 |[>(보다 큼)](../mdx/greater-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 큰 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
 |[>=(크거나 같음)](../mdx/greater-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 크거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
-|[<(보다 작음)](../mdx/less-than-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
+|[<(보다 작음)](../mdx/less-than-mdx.md)|왼쪽된 인수가 오른쪽 인수; 보다 작은 값이 있으면 null이 아닌 인수의 경우 TRUE를 반환 그렇지 않으면 FALSE입니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
 |[<=(작거나 같음)](../mdx/less-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

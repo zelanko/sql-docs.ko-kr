@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180053"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085399"
 ---
 # <a name="drillthrough-on-mining-models"></a>마이닝 모델에서의 드릴스루
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "48180053"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 데이터를 작성하는 데 사용된 사례로 드릴스루하거나 마이닝 구조의 사례로 드릴스루할 수 있습니다.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>모델 사례로 드릴스루 및 구조로 드릴스루  
- **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다. 예를 들어 고객 연락처 정보를 사용할 수 있지만 클러스터링 모델에서 분석에 이 정보를 사용하지 않을 경우, 드릴스루를 사용하면 모델에서 해당 정보에 액세스할 수 있습니다.  
+ **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다. 예를 들어 고객 연락처 정보가 없습니다 사용은 클러스터링 모델에서 분석에 대 한 드릴스루를 사용 하 여 데이터를 사용할 수, 하는 경우에 수 얻게 모델에서 해당 정보에 액세스 합니다.  
   
  반면 **구조 데이터로 드릴스루** 하는 기능은 모델에서 사용할 수 없었던 정보에 액세스하기 위한 것입니다. 예를 들어 데이터 형식이 호환되지 않거나 데이터가 분석에 유용하지 않아서 일부 구조 열이 모델에서 제외되는 경우도 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48180053"
 |Microsoft Naïve Bayes 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
 |Microsoft 신경망 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
 |Microsoft 로지스틱 회귀 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 선형 회귀 알고리즘|지원됩니다.<br /><br /> 그러나 이므로 모델은 단일 노드인 `All`에 드릴스루 시 모델에 대 한 모든 학습 사례가 반환 됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
+|Microsoft 선형 회귀 알고리즘|지원됩니다.<br /><br /> 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
 |Microsoft 시계열 알고리즘|지원됩니다.<br /><br /> 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> Microsoft 시계열 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝 속성&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용하는 것이 좋습니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
@@ -64,6 +64,6 @@ ms.locfileid: "48180053"
 |마이닝 모델 마법사에서 드릴스루 사용|[마법사 완료&#40;데이터 마이닝 마법사&#41;](../completing-the-wizard-data-mining-wizard.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 구조에 대한 드릴스루](drillthrough-on-mining-structures.md)  
+ [마이닝 구조에서의 드릴스루](drillthrough-on-mining-structures.md)  
   
   

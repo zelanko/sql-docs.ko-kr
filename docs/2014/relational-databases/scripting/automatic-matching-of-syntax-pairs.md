@@ -14,12 +14,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 174918e72602acaef4ec4f505fb387e78ab04d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085363"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085119"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>구문 쌍의 자동 일치 기능
   구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  
@@ -70,6 +70,6 @@ ms.locfileid: "48085363"
 -   특성의 여는 따옴표 및 닫는 따옴표  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX 및 DMX 편집기의 괄호 짝 맞추기  
- MDX(Multi-Dimensional Expressions) 및 DMX(Data Mining Expressions) 편집기에서는 함수의 괄호 짝을 자동으로 맞춥니다.  
+ MDX (Multi-Dimensional Expressions) 및 식 DMX (Data Mining) 편집기에는 자동으로 함수에서 괄호 쌍과 일치 합니다.  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a845e4b4ce7cfa17a3f618501e2f270ca63dfea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10102e3c726a3703a3a9f3aa953171fb4a5dd79b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641491"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119281"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 연산자
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47641491"
   
  쿼리를 사용 합니다 **=** 비교 연산자입니다. 오른쪽에 있는 시퀀스의 각 노드에 **=** 연산자 왼쪽에 있는 시퀀스의 각 노드와 비교 됩니다. 노드 비교는 노드가 일치 하면 **TRUE**합니다. 그런 다음 int로 변환되고 1과 비교되어 쿼리가 고객 ID를 반환합니다.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
@@ -62,7 +62,7 @@ WHERE  AdditionalContactInfo.value('
 ### <a name="b-using-a-numeric-operator"></a>2. 숫자 연산자 사용  
  이 쿼리의 + 연산자는 단일 항목에 적용되기 때문에 값 연산자입니다. 예를 들어 쿼리에 의해 반환되는 로트 크기에 값 1이 추가됩니다.  
   
-```  
+```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
  AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
@@ -82,7 +82,7 @@ where ProductModelID=7
 ### <a name="c-using-a-value-operator"></a>3. 값 연산자 사용  
  다음 쿼리는 그림 크기가 "small"인 제품 모델에 대한 <`Picture`> 요소를 검색합니다.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  

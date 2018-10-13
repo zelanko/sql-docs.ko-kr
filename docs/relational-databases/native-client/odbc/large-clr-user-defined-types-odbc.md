@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb82c69119fd899410bb1fd8f24be65cc07dac4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852551"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072217"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "47852551"
  이 섹션에서는 큰 CLR UDT를 지원하는 SQL Server Native Client ODBC 함수의 변경 내용에 대해 설명합니다.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 결과 열 값은 이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에서 설명한 것처럼 SQL에서 C 데이터 형식으로 변환됩니다.  
+ UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT에 필요한 값은 다음과 같습니다.  
@@ -201,13 +201,13 @@ ms.locfileid: "47852551"
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 결과 열 값은 이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에서 설명한 것처럼 SQL에서 C 데이터 형식으로 변환됩니다.  
+ UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 결과 열 값은 이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에서 설명한 것처럼 SQL에서 C 데이터 형식으로 변환됩니다.  
+ UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 결과 열 값은 이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에서 설명한 것처럼 SQL에서 C 데이터 형식으로 변환됩니다.  
+ UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  새 형식과 함께 사용할 수 있는 설명자 필드는 이 항목의 앞부분에 있는 "매개 변수의 설명자 필드" 및 "결과의 설명자 필드" 섹션에 설명되어 있습니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "47852551"
  UDT에 대해 반환되는 값은 이 항목의 앞부분에 있는 "SQLColumns 및 SQLProcedureColumns가 반환하는 열 메타데이터(카탈로그 메타데이터)" 섹션에 설명되어 있습니다.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT 매개 변수 값은 이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에서 설명한 것처럼 C에서 SQL 데이터 형식으로 변환됩니다.  
+ UDT 매개 변수 값은 C에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 SQL 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  새 형식과 함께 사용할 수 있는 설명자 필드는 이 항목의 앞부분에 있는 "매개 변수의 설명자 필드" 및 "결과의 설명자 필드" 섹션에 설명되어 있습니다.  

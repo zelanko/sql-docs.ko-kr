@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ccb9267242dbe3a44350efd1762c45bc6bbccbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140706"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906413"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48140706"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에 있는 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장된 데이터를 프로파일링하고 잠재적인 데이터 품질 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
->  이 항목에서는 데이터 프로파일링 태스크의 기능 및 요구 사항에 대해서만 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](data-profiling-task-and-viewer.md)섹션을 참조하세요.  
+>  이 항목에만 기능 및 데이터 프로 파일링 태스크의 요구 사항을 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](data-profiling-task-and-viewer.md)섹션을 참조하세요.  
   
 ## <a name="requirements-and-limitations"></a>요구 사항 및 제한 사항  
  데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 데이터만 사용할 수 있습니다. 이 태스크는 타사 또는 파일 기반 데이터 원본에서는 작동하지 않습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48140706"
 |열 길이 분포 프로필|선택한 열에 있는 문자열 값의 모든 고유 길이, 그리고 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 문자로 이루어진 미국 주 코드의 열을 프로파일링하여 두 문자보다 긴 값을 검색할 수 있습니다.|  
 |열 Null 비율 프로필|선택한 열의 Null 값 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 열에 포함된 지나치게 높은 null 값 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 우편 번호 열을 프로파일링하여 허용 불가능한 수준의 누락된 코드 비율을 검색할 수 있습니다.|  
 |열 패턴 프로필|문자열 열의 지정된 값 비율을 포괄하는 정규식 집합을 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별할 수 있습니다. 또한 이 프로필은 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안해 줍니다. 예를 들어 미국 우편 번호 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 발견된다면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.|  
-|열 통계 프로필|최소, 최대, 평균 및 숫자 열에 최소 표준 편차, 최대값과 같은 통계를 보고 `datetime` 열입니다.<br /><br /> 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
+|열 통계 프로필|숫자 열의 최소값, 최대값, 평균, 표준 편차 및 `datetime` 열의 최소값, 최대값과 같은 통계를 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
 |열 값 분포 프로필|선택한 열에 있는 모든 고유 값, 그리고 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수도 있습니다.<br /><br /> 이 프로필을 사용하면 열에 포함된 잘못된 수의 고유 값과 같은 데이터의 문제를 식별할 수 있습니다. 예를 들어 미국의 주를 포함하는 열을 프로파일링하여 50개를 초과하는 고유 값을 검색할 수 있습니다.|  
   
  다음의 3개 프로필은 여러 열 또는 열과 테이블 간의 관계를 분석합니다.  
@@ -76,12 +76,12 @@ ms.locfileid: "48140706"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|숫자 형식 또는 `datetime` 형식(`mean` 열에 대해 `stddev` 및 `datetime`는 안 됨)|  
 |ColumnNullRatioProfile|모든 열**|  
-|ColumnValueDistributionProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
-|ColumnLengthDistributionProfile|열의 `char` 형식|  
-|ColumnPatternProfile|열의 `char` 형식|  
-|CandidateKeyProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
-|FunctionalDependencyProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
-|InclusionProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
+|ColumnValueDistributionProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|ColumnLengthDistributionProfile|`char` 형식의 열|  
+|ColumnPatternProfile|`char` 형식의 열|  
+|CandidateKeyProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|FunctionalDependencyProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
+|InclusionProfile|`integer` 형식, `char` 형식 및 `datetime` 형식의 열|  
   
  \* 위의 표에서 유효한 데이터 형식에는 `integer`, `char`를 `datetime`, 및 `numeric` 유형은 특정 데이터 형식:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48140706"
   
  날짜 및 시간 형식에는 `datetime`, `smalldatetime` 및 `timestamp`가 포함됩니다.  
   
- 숫자 형식 포함 `integer` 형식 (제외 하 고 `bit`), `money`, `smallmoney`, `decimal`를 `float`, `real`, 및 `numeric`합니다.  
+ 숫자 형식에는 `integer` 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`이 포함됩니다.  
   
  \*\* `image`를 `text`, `XML`를 `udt`, 및 `variant` 형식은 열 Null 비율 프로필 이외의 프로필에 대 한 지원 되지 않습니다.  
   
@@ -139,20 +139,20 @@ ms.locfileid: "48140706"
  [프로필 요청 페이지](data-profiling-task-editor-profile-requests-page.md)  
  **프로필 요청** 페이지에서는 데이터 원본을 지정하고 계산할 데이터 프로필을 선택 및 구성할 수 있습니다. 구성 가능한 여러 프로필에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [후보 키 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [열 길이 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 Null 비율 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [열 패턴 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [열 통계 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [열 통계 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [열 값 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [함수 종속성 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [함수 종속성 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [값 포함 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

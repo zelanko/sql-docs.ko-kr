@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162243"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120120"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
   데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48162243"
 ### <a name="alert-name"></a>경고 이름  
  기본적으로 경고 정의의 이름은 보고서와 동일합니다. 경고 이름은 보다 의미 있는 이름으로 변경할 수 있습니다. 이렇게 하면 업데이트 또는 삭제 등을 수행할 경고를 식별하여 경고를 보다 쉽게 관리할 수 있습니다.  
   
- 경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 하 고 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
+ 경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
 ### <a name="rules-and-clauses"></a>규칙 및 절  
  데이터 변경 범위 및 경고 규칙에 따라 경고를 발생시키는 데이터 변경 사항이 정의됩니다. 데이터 변경 범위는 다음과 같습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "48162243"
  메일 생성 방법은 [Reporting Services 데이터 경고](../ssms/agent/alerts.md)를 참조하세요.  
   
 ##  <a name="CreateAlert"></a> 데이터 경고 정의 만들기  
- SharePoint 항목 보기 및 경고 만들기 권한이 부여된 경우 보기 권한이 있는 모든 보고서에 대해 데이터 경고 정의를 만들 수 있습니다. 단, 해당 보고서에 저장된 자격 증명이 사용되거나 자격 증명이 아예 사용되지 않아야 합니다. SharePoint 라이브러리에서 보고서를 실행합니다. 데이터 경고 디자이너에서 사용할 수 있는 데이터는 보고서에서 제공됩니다. 보고서에 매개 변수가 있는 경우 관심이 있는 데이터가 보고서에 표시될 수 있도록 다른 매개 변수 값을 사용하여 보고서를 실행해야 할 수 있습니다. 보고서를 연 후 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭하여 데이터 경고 디자이너를 엽니다. 다음 그림은 데이터 경고 디자이너를 여는 방법을 보여 줍니다.  
+ SharePoint 항목 보기 및 경고 만들기 권한이 부여된 경우 보기 권한이 있는 모든 보고서에 대해 데이터 경고 정의를 만들 수 있습니다. 단, 해당 보고서에 저장된 자격 증명이 사용되거나 자격 증명이 아예 사용되지 않아야 합니다. SharePoint 라이브러리에서 보고서를 실행합니다. 데이터 경고 디자이너에서 사용할 수 있는 데이터는 보고서에서 제공됩니다. 다른 매개 변수 값을 사용 하 여 데이터를 확인 하 여 보고서를 실행 해야 보고서 매개 변수가 있는 경우 보고서에 표시 되는 데 관심이 있다고 합니다. 보고서를 연 후 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭하여 데이터 경고 디자이너를 엽니다. 다음 그림은 데이터 경고 디자이너를 여는 방법을 보여 줍니다.  
   
  ![SharePoint 라이브러리에서 경고 디자이너 열기](media/rs-openalertdesigneriw.gif "SharePoint 라이브러리에서 경고 디자이너 열기")  
   
@@ -198,7 +198,7 @@ ms.locfileid: "48162243"
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 관련 작업  
+##  <a name="HowTo"></a> 관련 태스크  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
   
 -   [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)  
@@ -208,6 +208,6 @@ ms.locfileid: "48162243"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)   
- [경고 담당자용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
+ [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

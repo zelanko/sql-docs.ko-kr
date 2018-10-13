@@ -2,7 +2,7 @@
 title: Azure 데이터 Studio SQL Server 2019 확장 (미리 보기) | Microsoft Docs
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131233"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168802"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -24,23 +24,31 @@ SQL Server 2019 확장 (미리 보기) 새로운 기능과 도구를 지 원하�
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기) 설치
 
-다운로드 하 고 SQL Server 2019 확장 (미리 보기)을 설치 합니다.
+SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 연결된.vsix 파일을 설치 합니다.
 
-  |플랫폼|다운로드|릴리스 날짜|
-  |:---|:---|:---|
-  |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 년 9 월 24 일|
-  |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 년 9 월 24 일 |
-  |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 년 9 월 24 일 |
+1. SQL Server 2019 확장 (미리 보기).vsix 파일을 로컬 디렉터리로 다운로드:
 
+   |플랫폼|다운로드|릴리스 날짜|
+   |:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 년 9 월 24 일|
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 년 9 월 24 일 |
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 년 9 월 24 일 |
 
-Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다. 선택할 **예** 나타나면 설치를 확인 하 고 성공적으로 설치 하는 알림을 기다립니다.
+1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
-선택 **다시 로드** (처음 확장을 설치 하면 필수)에 확장을 사용 하도록 설정 합니다.
+1. 선택할 **예** 나타나면 설치를 확인 하 고 설치 성공 했다는 알림을 기다립니다.
 
+1. 선택 **다시 로드** (처음 확장을 설치 하면 필수)에 확장을 사용 하도록 설정 합니다.
+
+1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 빅 데이터 클러스터 지원
 
 * 클릭 **연결 추가** 에 *개체 탐색기* 선택한 **SQL Server 빅 데이터 클러스터** 연결 유형으로 합니다.
+
+   > [!TIP]
+   > 표시 되지 않으면 합니다 **SQL Server 빅 데이터 클러스터** 연결 형식으로 Azure 데이터 Studio 다시 시작 합니다.
+
 * 호스트 이름 또는 IP 주소 클러스터 끝점 및 사용자 이름 및 연결 하는 데 사용 되는 암호를 입력 합니다.
 * 필요에 따라에 친숙 한 표시 이름을 포함 합니다 **이름을** 필드입니다.
 * 클릭 **Connect** 일반적인 작업을 시작할 수 있습니다 및 대시보드에서 찾아보기 **HDFS** 개체 탐색기 및 여기에서 상황에 맞는 작업을 실행된 합니다.

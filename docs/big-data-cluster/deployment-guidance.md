@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818071"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877896"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server에 대 한 빅 데이터 클러스터를 배포 하는 방법
 
@@ -24,11 +24,12 @@ Kubernetes 클러스터에 docker 컨테이너로 SQL Server에 대 한 빅 데�
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Kubernetes prerequisistes
+## <a id="prereqs"></a> Kubernetes 클러스터 필수 구성 요소
 
 SQL Server에 대 한 빅 데이터 클러스터 Kubernetes에 대 한, 서버 및 클라이언트에 대 한 최소 v1.10 버전이 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다.  최신 버전의 minikube 및 AKS는 1.10 이상. AKS에 대 한 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
 
-또한 클라이언트/서버 Kubernetes 버전 즉 기울이기는 + /-1 부 버전은 지원 합니다. Kubernetes 설명서 상태는 "클라이언트 마스터에서 둘 이상의 부 버전 불일치 해야 하지만 마스터 최대 1 개 부 버전에서 발생할 수 있습니다. 예를 들어 v1.3 마스터 v1.1, v1.2 및 v1.3 노드를 사용 하 여 작동 및 v1.2, v1.3, 및 v1.4 클라이언트를 사용 해야 합니다. " 자세한 내용은 [지원 되는 버전 및 구성 요소 기울이기 Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)합니다.
+> [!NOTE]
+> 클라이언트와 서버가 Kubernetes 버전 + 1 또는-1 부 버전 되도록 참고 합니다. 자세한 내용은 [지원 되는 버전 및 구성 요소 기울이기 Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)합니다.
 
 ## <a id="kubernetes"></a> Kubernetes 클러스터 설치
 
@@ -49,11 +50,11 @@ SQL Server에 대 한 빅 데이터 클러스터 Kubernetes에 대 한, 서버 �
 
 ## <a id="deploy"></a> SQL Server에 대 한 빅 데이터 클러스터 배포
 
-Kubernetes 클러스터를 구성한 후에 SQL Server에 대 한 빅 데이터 클러스터에 대 한 배포를 사용 하 여 진행할 수 있습니다. 개발/테스트 환경에 대 한 모든 기본 구성 사용 하는 Aris 클러스터를 배포 하려면이 문서의 지침을 따릅니다.
+Kubernetes 클러스터를 구성한 후에 SQL Server에 대 한 빅 데이터 클러스터에 대 한 배포를 사용 하 여 진행할 수 있습니다. 개발/테스트 환경에 대 한 모든 기본 구성 사용 하 여 빅 데이터 클러스터를 배포 하려면이 문서의 지침을 따릅니다.
 
-[빠른 시작: SQL Server Aris Kubernetes에 배포](quickstart-big-data-cluster-deploy.md)
+[빠른 시작: SQL Server 빅 데이터에서 kubernetes 클러스터 배포](quickstart-big-data-cluster-deploy.md)
 
-워크 로드 요구 사항에 따라 Aris 구성에 맞게 하려는 경우 다음 일련의 지침을 따릅니다.
+워크 로드 요구 사항에 따라 빅 데이터 클러스터 구성을 사용자 지정할 수 하려는 경우 다음 일련의 지침을 따릅니다.
 
 ## <a name="verify-kubernetes-configuration"></a>Kubernetes 구성 확인
 

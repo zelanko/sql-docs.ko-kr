@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984495"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906503"
 ---
 # <a name="dax-in-tabular-models"></a>테이블 형식 모델의 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -146,7 +146,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Date 테이블의 Date 열을 지정합니다. 열은 괄호로 묶입니다.|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 함수는 분기의 시작 날짜를 반환합니다.|  
-|`LASTDATE`|LASTDATE 함수는 분기의 마지막 날짜를 반환합니다.|  
+|`LASTDATE`|LASTDATE 함수는 분기의 마지막 날짜를 반환 합니다.|  
 |`'Date'`|Date 테이블을 지정합니다.|  
 |`[Date]`|Date 테이블의 Date 열을 지정합니다.|  
 |`,`||  
@@ -389,9 +389,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [DAX 리소스 센터](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 에는 DAX에 대한 내부 및 외부 정보와 뛰어난 비즈니스 인텔리전스 전문가들이 제공한 다양한 DAX 솔루션이 포함되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Analysis Expressions (DAX) 참조](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [계산된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
+ [DAX(Data Analysis Expressions) 참조](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [지원되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  

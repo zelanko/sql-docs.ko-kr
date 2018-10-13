@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119877"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
   이 작업에서는 컴퓨터 기반 정리 결과를 검토하고 공급자 데이터에서 대화형 정리를 수행할 수도 있습니다. 참조 [대화형 정리 단계](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) 대 한 자세한 내용은 합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48163503"
   
     1.  있음을 **A. Datum Corp.** 로 수정 됩니다 **A. Datum Corporation** 하며 **이유** 로 설정 된 **용어 기반 관계입니다. A. datum Corporation** 은 지식 검색 프로세스 중에 검색 되었기 때문에 DQS에 알려진된 도메인 값입니다. DQS는 따라서 **100% 확신** 이 수정에 대 한 합니다.  
   
-    2.  에 **Lazy Country Storex** 로 수정 됩니다 **Lazy Country Store**, **신뢰도 수준** 로 설정 되어 **100%**, 및 합니다  **이유** 로 설정 된 **도메인 값**합니다. 설정한 지식 검색 프로세스 중 **Lazy Country Storex** 를 사용 하 여 오류로 **Lazy Country Store** 으로 **수정**이므로 DQS는 **100% 확신할** 이 수정 하는 방법에 대 한 합니다.  
+    2.  있음을 **Lazy Country Storex** 로 수정 됩니다 **Lazy Country Store**를 **신뢰도** 로 설정 되어 **100%**, 및를 **원인** 로 설정 되어 **도메인 값**합니다. 설정한 지식 검색 프로세스 중 **Lazy Country Storex** 를 사용 하 여 오류로 **Lazy Country Store** 으로 **수정**이므로 DQS는 **100% 확신할** 이 수정 하는 방법에 대 한 합니다.  
   
     3.  DQS는 목록의 다른 값을 사용 하 여 친숙 한 이지만 사용 하 여 이러한 값에 대 한 수정 합니다 **맞춤법 검사기** 하 고 적절 한 수정 사항을 제안 합니다. Dqs **100%** 신뢰도 수준 이지만 이러한 수정에 대 한 확신은 신뢰도 DQS 제안 된 수정에 대 한 임계값 수준인 80%를 초과 합니다.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393310"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100384"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System의 워크 로드 관리
 
@@ -60,7 +60,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |리소스 클래스|중요도 요청 합니다.|최대 메모리 사용 *|동시성 슬롯 수 (최대 32 =)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|기본|보통|400MB|@shouldalert|기본적으로 각 로그인에는 적은 양의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인은 리소스 클래스에 추가 되 면 새 클래스는 우선 합니다. 모든 리소스 클래스에서 로그인을 삭제 하면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
+|기본|보통|400MB|1|기본적으로 각 로그인에는 적은 양의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인은 리소스 클래스에 추가 되 면 새 클래스는 우선 합니다. 모든 리소스 클래스에서 로그인을 삭제 하면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
 |MediumRC|보통|1200 MB|3|중간 리소스 클래스를 필요로 할 수 있는 요청 예제:<br /><br />크게는 CTAS 작업 해시 조인 합니다.<br /><br />더 많은 메모리를 디스크에 캐시 하지 않도록 해야 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10 ~ 15 개 열이 있는 작은 테이블에 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |Largerc|높음|2.8 GB|7|큰 리소스 클래스를 필요로 할 수 있는 요청 예제:<br /><br />큰 해시 조인 또는 큰 ORDER BY 또는 GROUP BY 절 등 많은 집계를 포함 하는 매우 큰 CTAS 작업입니다.<br /><br />해시 조인 등의 작업 또는 ORDER BY 또는 GROUP BY 절 등 집계에 대 한 매우 많은 양의 메모리를 필요로 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10 ~ 15 개 열이 있는 작은 테이블에 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |xlargerc|높음|8.4 GB|22|초대형 리소스 클래스는 런타임에 초대형 리소스 소비를 필요할 수 있는 요청입니다.|  
@@ -107,7 +107,7 @@ SQL Server PDW에 제출 되는 6 큰 요청 및 10 개의 기본 요청을 제�
   
 SQL Server PDW 문이 실행 되기 전에 요청에 필요한 동시성 슬롯을 가져오려고 시도 합니다. 충분 한 동시성 슬롯을 획득할 수 없으면 SQL Server PDW 요청의 실행 대기 상태로 이동 합니다. 요청에 이미 할당 된 모든 리소스 시스템은 시스템에 다시 반환 됩니다.  
   
-대부분의 SQL 문에 항상 기본 리소스 할당을 사용 해야 하 고 리소스 클래스에 의해 제어 되지 않습니다. 예를 들어 CREATE LOGIN만 적은 양의 리소스를 하며 CREATE LOGIN을 호출 하는 로그인의 멤버인 경우에 기본 리소스를 할당 되는 리소스 클래스입니다.  예를 들어 Anna가 largerc 리소스 클래스의 멤버인 경우 CREATE LOGIN 문의 제출 그녀는 CREATE LOGIN 문에 리소스의 기본 수를 사용 하 여 실행 됩니다.  
+대부분의 SQL 문에 항상 기본 리소스 할당을 사용 해야 하 고 리소스 클래스에 의해 제어 되지 않습니다. 예를 들어 CREATE LOGIN만 적은 양의 리소스를 하며 CREATE LOGIN을 호출 하는 로그인을 사용 하면 리소스 클래스의 멤버인 경우에 기본 리소스를 할당 됩니다.  예를 들어 Anna가 largerc 리소스 클래스의 멤버인 경우 CREATE LOGIN 문의 제출 그녀는 CREATE LOGIN 문에 리소스의 기본 수를 사용 하 여 실행 됩니다.  
   
 SQL 문 및 리소스 클래스에 의해 제어 되는 작업:  
   

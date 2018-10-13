@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104623"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906063"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI(SSAS 테이블 형식)
   테이블 형식 모델에서 *KPI*(핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |항목|Description|  
 |-----------|-----------------|  
-|[Kpi 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)|기본 측정값, 대상 측정값 및 상태 임계값을 사용하여 KPI를 만드는 방법을 설명합니다.|  
+|[KPI 만들기 및 관리&#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)|기본 측정값, 대상 측정값 및 상태 임계값을 사용하여 KPI를 만드는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)  
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)  
   
   

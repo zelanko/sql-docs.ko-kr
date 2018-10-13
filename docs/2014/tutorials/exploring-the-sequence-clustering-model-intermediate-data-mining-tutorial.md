@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213883"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085479"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델 탐색(중급 데이터 마이닝 자습서)
   만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에: **클러스터 다이어그램**, **클러스터 프로필**하십시오 **클러스터 특징**,  **ClusterDiscrimination**, 및 **상태 전환**합니다. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48213883"
   
 2.  선택 **Cycling Cap** 에 **상태** 목록입니다.  
   
-     다이어그램이 업데이트되어 각 클러스터에서 선택된 제품의 집중 정보가 표시됩니다. 음영이 가장 짙은 클러스터에는 가장 높은 밀도의 자전거 모자가 포함되어 있습니다. 모든 입력 열의 임의 상태를 사용하도록 음영 변수를 변경할 수 있습니다.  
+     다이어그램이 업데이트되어 각 클러스터에서 선택된 제품의 집중 정보가 표시됩니다. 음영이 가장 짙은 클러스터에는 가장 높은 밀도의 자전거 모자가 포함되어 있습니다. 모든 입력 열의 모든 상태를 사용 하도록 음영 변수를 변경할 수 있습니다.  
   
 3.  에 **음영 변수** 목록에서 **채우기**합니다.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48213883"
  [관련된 된 시퀀스 클러스터링 모델 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Microsoft 시퀀스 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

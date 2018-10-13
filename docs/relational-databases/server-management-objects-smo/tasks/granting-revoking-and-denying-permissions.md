@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03157c206368bcb66afc7848dce74f9eb504e424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4368a362b3644ea15313698ed54578ff7bb62da4
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648661"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852018"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47648661"
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -116,7 +116,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Visual C#에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -196,7 +196,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>PowerShell에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  

@@ -7,23 +7,23 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 1f20f2adc916a456e4a1975804fac1640ee95f69
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818051"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100344"
 ---
 # <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0에 대 한 Minikube 구성
 
 Minikube는 쉽게 데스크톱 이나 랩톱 같은 단일 컴퓨터에서 Kubernetes를 실행 하는 도구입니다. Minikube VM 내에서 단일 노드 Kubernetes 클러스터에서 실행 Kubernetes 사용해 또는를 사용 하 여 개발 하려는 사용자에 대 한 노트북 일상적인 됩니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Minikube 클러스터 SQL Server 2019 CTP 2.0에 대 한 SQL 빅 데이터 클러스터 구성에서를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
 
    > [!TIP] 
-   > 컴퓨터에 메모리가 부족 한 다음 클러스터 구성을 수정는 3 개의 인스턴스가 만들어집니다: 하나의 마스터 인스턴스와 두 개의 계산 인스턴스.
+   > 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#define-environment-variables) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
 
 - 컴퓨터의 BIOS에서 VT x 또는 amd-v 가상화를 활성화 되어야 합니다.
 

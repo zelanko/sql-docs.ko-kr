@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802471"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169346"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>주석  
  합니다 *lpszDriver* 인수는 키워드 / 값 쌍의 형태로 특성 목록입니다. 각 쌍을 null 바이트를 사용 하 여 종료 됩니다 하 고 전체 목록을 null 바이트를 사용 하 여 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 이 목록의 형식은 아래와 같습니다.  
   
- *드라이버 desc* **\\**0Driver**=***드라이버-DLL-filename***\\**0 [설치 **= ***설치-DLL-filename***\\**0]  
+ _드라이버 desc_ **\\**0Driver**=**_드라이버-DLL-filename_ **\\**0 [설치**=**_설치-DLL-filename_<b>\\</b>0]  
   
- [*드라이버-attr-keyword1***=*** value1 ***\\**0] [* 드라이버-attr-keyword2***=*** value2 ***\\**0]... **\\**0  
+ [_드라이버-attr-keyword1_**=**_value1_<b>\\</b>0] [_드라이버-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  \0 null 바이트를 인지 하는 위치 및 *드라이버-attr-keywordn* 모든 드라이버 특성 키워드입니다. 키워드는 지정된 된 순서 대로 나타나야 합니다. 예를 들어, 가정 서식 있는 텍스트 파일에 대 한 드라이버를 별도 드라이버 설치 Dll 및.csv 및.txt 확장명을 가진 파일을 사용할 수 있습니다. 합니다 *lpszDriver* 이 드라이버에 대 한 인수는 다음과 같을 수 있습니다.  
   

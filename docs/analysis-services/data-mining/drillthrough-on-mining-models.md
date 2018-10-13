@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2abd3430c1882148cd564c973ecf5824f3a55d4a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ccb3e36739043684f2a86a082dd04ab749a0b031
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014810"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085439"
 ---
 # <a name="drillthrough-on-mining-models"></a>마이닝 모델에서의 드릴스루
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]사례 데이터로 드릴스루에 대 한 두 가지 옵션을 제공 합니다. 데이터를 작성하는 데 사용된 사례로 드릴스루하거나 마이닝 구조의 사례로 드릴스루할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 데이터를 작성하는 데 사용된 사례로 드릴스루하거나 마이닝 구조의 사례로 드릴스루할 수 있습니다.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>모델 사례로 드릴스루 및 구조로 드릴스루  
- **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다. 예를 들어 고객 연락처 정보를 사용할 수 있지만 클러스터링 모델에서 분석에 이 정보를 사용하지 않을 경우, 드릴스루를 사용하면 모델에서 해당 정보에 액세스할 수 있습니다.  
+ **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다. 예를 들어 고객 연락처 정보가 없습니다 사용은 클러스터링 모델에서 분석에 대 한 드릴스루를 사용 하 여 데이터를 사용할 수, 하는 경우에 수 얻게 모델에서 해당 정보에 액세스 합니다.  
   
  반면 **구조 데이터로 드릴스루** 하는 기능은 모델에서 사용할 수 없었던 정보에 액세스하기 위한 것입니다. 예를 들어 데이터 형식이 호환되지 않거나 데이터가 분석에 유용하지 않아서 일부 구조 열이 모델에서 제외되는 경우도 있습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34014810"
 |특정 모델 유형에 대한 드릴스루 쿼리의 예 참조|[데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)|  
 |마이닝 모델 마법사에서 드릴스루 사용|[마법사 완료&#40;데이터 마이닝 마법사&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)|  
   
-## <a name="see-also"></a>관련 항목:  
- [마이닝 구조에서 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+## <a name="see-also"></a>관련 항목  
+ [마이닝 구조에서의 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

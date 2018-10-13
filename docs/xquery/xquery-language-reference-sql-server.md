@@ -18,12 +18,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b0b66722189a42b4bd5f157900815a96a716f49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840697"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119531"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 언어 참조(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47840697"
   
  변수 또는 열에 저장 된 XML 인스턴스를 쿼리할 **xml** 사용 하는 유형, 합니다 [xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md). 예를 들어 변수를 선언할 수 있습니다 **xml** 입력 하 고 사용 하 여 쿼리 하는 **query ()** 메서드를 **xml** 데이터 형식입니다.  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +46,7 @@ SELECT @x.query('/ROOT/a')
   
  다음 예제에서는 쿼리는 Instructions 열에 대해 지정 됩니다 **xml** AdventureWorks 데이터베이스의 ProductModel 테이블의 형식입니다.  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

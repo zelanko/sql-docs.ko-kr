@@ -11,15 +11,15 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195923"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120386"
 ---
 # <a name="modify-the-trace-results-view"></a>추적 결과 보기 수정
-  이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  
+  이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  
   
 1.  [열 추가 또는 제거](#AddRemoveColumns)  
   
@@ -228,7 +228,7 @@ ms.locfileid: "48195923"
   
     -   **테이블 열**. 추적 창에 표시되는 모든 열을 검색하려면 이 옵션을 사용합니다.  
   
-    -   **자세히**. **확장 이벤트에서 찾기** 대화 상자를 열기 전에 선택한 추적 창의 모든 열(승격된 열 및 승격되지 않은 열)을 검색하려면 이 옵션을 사용합니다.  
+    -   **자세히**. 열기 전에 선택한 추적 창의 모든 열 (승격 및 승격 되지 않은)을 검색 하려면이 옵션을 사용 합니다 **확장 이벤트에서 찾기** 대화 상자.  
   
     -   **\<이벤트 열 이름 >** 합니다. 드롭다운 목록의 특정 이벤트 열에서 검색하려면 이 옵션을 사용합니다.  
   

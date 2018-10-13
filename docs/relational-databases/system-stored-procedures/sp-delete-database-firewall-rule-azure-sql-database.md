@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6625f410f28adafffa364e87f83c9cdbdacb03dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4afb4873f05c1ee2a0c0f55c443070bfbf760706
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668948"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168921"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name =**] **'***이름***'**  
+ [ **@name =**] **'**_이름_**'**  
  제거할 데이터베이스 수준 방화벽 설정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** 이며 기본값은 없습니다. 유니코드 식별자 `N` 사항임 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다. 
   
 ## <a name="permissions"></a>사용 권한  

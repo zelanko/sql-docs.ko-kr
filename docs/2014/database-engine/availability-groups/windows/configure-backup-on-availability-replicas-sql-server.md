@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073013"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085339"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48073013"
   
 
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48073013"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
+    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 을 참조하세요.  
   
 6.  **복제본 백업 우선 순위** 표를 사용하여 가용성 복제본의 백업 우선 순위를 변경할 수 있습니다. 이 표는 가용성 그룹에 대한 복제본을 호스팅하는 각 서버 인스턴스의 현재 백업 우선 순위를 표시합니다. 표 열은 다음과 같습니다.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "48073013"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 복제본에 백업을 구성하려면**  
   
-1.  기본 설정 (`cd`) 주 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
+1.  기본값(`cd`)을 주 복제본을 호스팅하는 서버 인스턴스로 설정합니다.  
   
 2.  필요한 경우 추가하거나 수정할 각 가용성 복제본의 백업 우선 순위를 구성합니다. 이 우선 순위는 어느 복제본이 가용성 그룹의 데이터베이스에서 자동 백업 요청을 지원해야 하는지를 결정하기 위해(우선 순위가 가장 높은 복제본이 선택됨) 주 복제본을 호스팅하는 서버 인스턴스가 사용합니다. 이 우선 순위는 1부터 100까지의 임의의 숫자일 수 있습니다. 우선 순위 0은 백업 요청 지원을 위한 후보로 해당 복제본을 고려하지 않아야 함을 나타냅니다.  기본 설정은 50입니다.  
   
      가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 두 경우 모두 지정 합니다 `BackupPriority` *n* 매개 변수를 여기서 *n* 0에서 100 사이의 값입니다.  
   
-     다음 명령은 가용성 복제본의 백업 우선 순위를 설정 하는 예를 들어 `MyReplica` 에 `60`입니다.  
+     예를 들어 다음 명령은 가용성 복제본 `MyReplica`의 백업 우선 순위를 `60`으로 설정합니다.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073013"
   
 3.  필요한 경우 만들거나 수정하는 가용성 그룹에 대해 자동화된 백업 기본 설정을 구성합니다. 이 기본 설정은 백업을 수행할 위치를 선택할 때 백업 작업에서 주 복제본을 평가하는 방식을 나타냅니다. 기본 설정은 보조 복제본을 사용하는 것입니다.  
   
-     가용성 그룹을 만드는 경우 `New-SqlAvailabilityGroup` cmdlet을 사용합니다. 기존 가용성 그룹을 수정할 때 사용 된 `Set-SqlAvailabilityGroup` cmdlet. 두 경우 모두에서 지정 된 `AutomatedBackupPreference` 매개 변수입니다.  
+     가용성 그룹을 만드는 경우 `New-SqlAvailabilityGroup` cmdlet을 사용합니다. 기존 가용성 그룹을 수정하는 경우 `Set-SqlAvailabilityGroup` cmdlet을 사용합니다. 두 경우 모두 `AutomatedBackupPreference` 매개 변수를 지정합니다.  
   
      각 항목이 나타내는 의미는 다음과 같습니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073013"
     ```  
   
 > [!NOTE]  
->  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+>  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

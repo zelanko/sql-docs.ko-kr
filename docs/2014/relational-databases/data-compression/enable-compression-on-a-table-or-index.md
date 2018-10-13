@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108583"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906443"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에 압축 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블이나 인덱스에 압축을 사용하는 방법에 대해 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48108583"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48108583"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 먼저 `sys.indexes` 카탈로그 뷰를 쿼리하여 `index_id` 테이블에 있는 각 인덱스의 이름 및 `Production.TransactionHistory` 를 반환합니다. 그런 다음 `sp_estimate_data_compression_savings` 저장 프로시저를 실행하여 PAGE 압축 설정을 사용할 경우의 지정한 인덱스 ID에 대한 예상 크기를 반환합니다. 마지막으로 PAGE 압축을 지정하여 인덱스 ID 2(`IX_TransactionHistory_ProductID`)를 다시 작성합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 먼저 `sys.indexes` 카탈로그 뷰를 쿼리하여 `index_id` 테이블에 있는 각 인덱스의 이름 및 `Production.TransactionHistory` 를 반환합니다. 저장된 프로시저를 실행 한 다음 `sp_estimate_data_compression_savings` 페이지 압축 설정을 사용할 경우 지정 된 인덱스 ID의 예상된 크기를 반환 합니다. 마지막으로 PAGE 압축을 지정하여 인덱스 ID 2(`IX_TransactionHistory_ProductID`)를 다시 작성합니다.  
   
     ```  
     USE AdventureWorks2012;   

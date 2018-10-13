@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745751"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851848"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -103,7 +103,7 @@ ms.locfileid: "47745751"
 
 1. **Linux의 SQL Server 같은 호스트의 여러 인스턴스를 지원 합니까?**
 
-   여러 고유 인스턴스를 호스트에서 여러 컨테이너를 실행 하는 것이 좋습니다. 각 컨테이너는 다른 포트에서 수신 대기 해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너를 실행할](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)합니다.
+   여러 고유 인스턴스를 호스트에서 여러 컨테이너를 실행 하는 것이 좋습니다. Docker를 사용 하 여 쉽게 이루어집니다 있지만 각 컨테이너에서 다른 포트에서 수신 대기 해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너를 실행할](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)합니다.
 
 1. **Active Directory 인증이 Linux에서 지원 되나요?**
 

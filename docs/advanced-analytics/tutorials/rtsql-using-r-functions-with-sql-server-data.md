@@ -3,17 +3,17 @@ title: SQL Server 데이터 (SQL Server Machine Learning)를 사용 하 여 R을
 description: 이 빠른 시작에서는 SQL Server 데이터를 사용 하는 R 함수를 작성 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 877c7ffd5cb67479eed0e2239cbe90d366934515
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086675"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878166"
 ---
 # <a name="quickstart-using-r-functions-with-sql-server-data"></a>빠른 시작: R 함수를 사용 하 여 SQL Server 데이터를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "39086675"
 
 이 빠른 시작에서는 R 수학를 포함할 수 있습니다 및 저장 프로시저를 SQL Server 유틸리티 함수입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이전 빠른 시작에서는 [Hello World R 및 SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
 

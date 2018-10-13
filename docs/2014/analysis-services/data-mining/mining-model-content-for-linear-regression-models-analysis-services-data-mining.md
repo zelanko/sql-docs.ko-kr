@@ -15,18 +15,18 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120040"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 대해 마이닝 모델 콘텐츠를 일반적인 설명은 참조 하세요. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>선형 회귀 모델의 구조 이해  
- 선형 회귀 모델의 구조는 매우 단순합니다. 각 모델에는 모델과 해당 메타데이터를 나타내는 단일 부모 노드와 예측 가능한 각 특성의 회귀 수식이 포함된 회귀 트리 노드(NODE_TYPE = 25)가 있습니다.  
+ 선형 회귀 모델의 구조는 매우 단순합니다. 각 모델에 모델 및 해당 메타 데이터를 나타내는 단일 부모 노드와 및 회귀 트리 노드 (NODE_TYPE = 25) 각 예측 가능한 특성의 회귀 수식이 들어 있는입니다.  
   
  ![선형 회귀 모델의 구조](../media/modelcontentstructure-linreg.gif "선형 회귀 모델의 구조")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48200983"
 ## <a name="model-content-for-a-linear-regression-model"></a>선형 회귀 모델에 대한 모델 콘텐츠  
  이 섹션에서는 선형 회귀와 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다.  
   
- 스키마 행 집합의 범용 열에 대 한 정보를 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  
+ 스키마 행 집합의 범용 열에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
  MODEL_CATALOG  
  모델이 저장되는 데이터베이스의 이름입니다.  
@@ -188,7 +188,7 @@ ms.locfileid: "48200983"
  따라서 평균 연령이 45세라고 간주하면 회귀 수식의 절편(VALUETYPE = 11)은 평균 수입을 알려 줍니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
  [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)  

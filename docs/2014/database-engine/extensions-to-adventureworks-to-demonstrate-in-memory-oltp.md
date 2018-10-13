@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192193"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120390"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
 ## <a name="overview"></a>개요  
- 이 샘플에서는 새 소개 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 참가 하는 기능을의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 새 메모리 최적화 테이블 및 고유 하 게 컴파일된 저장된 프로시저를 보여주며의 성능 이점을 설명 하는 데 사용 될 수 [!INCLUDE[hek_2](../includes/hek-2-md.md)]입니다.  
+ 이 예제에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]의 일부인 새로운 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기능을 소개합니다. 이 예제는 새로운 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 보여주며, [!INCLUDE[hek_2](../includes/hek-2-md.md)]의 성능 이점을 설명하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  SQL Server 2016에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/en-US/library/mt465764.aspx)을 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "48192193"
   
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer 또는 Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer 또는 Enterprise Edition  
   
 -   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 하드웨어에 대 한 일반 지침은 [!INCLUDE[hek_2](../includes/hek-2-md.md)], 다음 블로그 게시물을 참조 하세요.[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48192193"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  샘플 스크립트를 다운로드 합니다. '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql'에서 [SQL Server 2014 RTM 메모리 내 OLTP 샘플](http://go.microsoft.com/fwlink/?LinkID=396372) 로컬 폴더에 있습니다.  
+5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SQL Server 2014 RTM 메모리 내 OLTP 예제 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 에 있는 예제 스크립트 ‘ [RTM](http://go.microsoft.com/fwlink/?LinkID=396372) Sample.sql’을 로컬 폴더에 다운로드합니다.  
   
 6.  '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 스크립트의 ‘checkpoint_files_location’ 변수 값을 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일의 대상 위치를 가리키도록 변경합니다. 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192193"
   
 -   *계산 열* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
   
--   *Foreign key 제약 조건을* 메모리 최적화 테이블에 대 한 지원 되지 않습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다. 이 테이블의 데이터에 대한 참조 무결성은 다음 스크립트를 사용하여 dbo.usp_ValidateIntegrity 저장 프로시저를 통해 확인될 수 있습니다.  
+-   *FOREIGN KEY 제약 조건* 은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 메모리 최적화 테이블에 지원되지 않습니다. 또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다. 이 테이블의 데이터에 대한 참조 무결성은 다음 스크립트를 사용하여 dbo.usp_ValidateIntegrity 저장 프로시저를 통해 확인될 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192193"
   
 -   *별칭 UDT* - 원래 테이블은 시스템 데이터 형식 bit와 동일한 사용자 정의 데이터 형식 dbo.Flag를 사용합니다. 마이그레이션된 테이블은 bit 데이터 형식을 대신 사용합니다.  
   
--   *BIN2 데이터 정렬을* -Name 및 ProductNumber 열을 인덱스 키에 포함 되어 있고 BIN2 데이터 정렬이 있어야 하므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
+-   *BIN2 데이터 정렬* - Name 및 ProductNumber 열이 인덱스 키에 포함되어 있으므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 BIN2 데이터 정렬을 사용해야 합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 총 6.5GB 정도의 데이터를 확인할 수 있습니다. SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 인덱스 크기는 판매 주문을 삽입하기 전의 인덱스 크기와 동일합니다. 인덱스 크기는 두 테이블 모두 해시 인덱스를 사용하고 해시 인덱스가 고정되어 있기 때문에 변경되지 않았습니다.  
+ 총 6.5GB 정도의 데이터를 확인할 수 있습니다. 테이블 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 인덱스의 크기는 판매 주문을 삽입 하기 전에 인덱스의 크기와 동일 인지 확인 합니다. 인덱스 크기는 두 테이블 모두 해시 인덱스를 사용하고 해시 인덱스가 고정되어 있기 때문에 변경되지 않았습니다.  
   
 #### <a name="after-demo-reset"></a>데모를 다시 설정한 후  
  저장 프로시저 Demo.usp_DemoReset을 사용하여 데모를 다시 설정할 수 있습니다. 이 프로시저는 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 데이터를 삭제하고 원래 테이블 SalesOrderHeader 및 SalesOrderDetail의 데이터로 초기값을 다시 설정합니다.  

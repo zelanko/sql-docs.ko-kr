@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 79525e1127bdef20c85e1098b040de5d5eb7a60e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739471"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085489"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
@@ -39,7 +39,7 @@ ms.locfileid: "47739471"
 
 다음 섹션에서는 장애 조치 클러스터 솔루션을 설정 하는 단계를 안내 합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 NFS 서버를 구성 하려면 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -387,7 +387,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
     pcsd: active/enabled
    ```
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 * [부터 클러스터](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
 

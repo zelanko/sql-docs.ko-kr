@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152042"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120210"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "48152042"
     > [!NOTE]  
     >  **SQL Server** 인스턴스가 기본 인스턴스인 경우 **SQL Server**인스턴스를 호스팅하는 컴퓨터의 이름을 입력합니다. **SQL Server** 가 명명된 인스턴스인 경우 **Accounting\SQLExpress**와 같이 컴퓨터의 이름과 인스턴스의 이름을 입력합니다.  
   
-3.  **서버 유형** 영역에서 연결된 서버가 **SQL Server** 의 다른 인스턴스임을 나타낼 수 있도록 **SQL Server**를 선택합니다.  
+3.  에 **서버 유형** 영역에서 **SQL Server** 연결된 된 서버 인스턴스의 다른 임을 나타내려면 **SQL Server**합니다.  
   
 4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결** 을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48152042"
      공급자에 대해 수준 0 OLE DB 인터페이스만 호출됩니다.  
   
      **Inprocess 허용**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공급자가 in-process 서버로 인스턴스화될 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하는 것이 기본 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하면 공급자 오류로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스를 보호할 수 있습니다. 외부 공급자 인스턴스가 만들어질 때 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 처리, 업데이트 또는 삽입 긴 열 참조 (`text`, `ntext`, 또는 `image`) 허용 되지 않습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공급자가 in-process 서버로 인스턴스화될 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하는 것이 기본 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하면 공급자 오류로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스를 보호할 수 있습니다. 공급자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 인스턴스화되면 긴 열(`text`, `ntext` 또는 `image`)을 참조하는 업데이트나 삽입은 허용되지 않습니다.  
   
      **트랜잭션되지 않은 업데이트**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **ITransactionLocal** 을 사용할 수 없는 경우에도 업데이트를 허용합니다. 이 옵션을 사용하면 공급자가 트랜잭션을 지원하지 않으므로 공급자에 대한 업데이트를 복구할 수 없습니다.  

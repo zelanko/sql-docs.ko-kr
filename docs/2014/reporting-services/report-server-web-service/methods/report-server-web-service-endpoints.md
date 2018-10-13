@@ -18,18 +18,18 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d658c424acd5491acbd86cdcdd01905f12a6479a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085543"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119990"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
   보고서 서버 웹 서비스는 보고서 서버 관리 및 보고서의 실행과 탐색을 위한 엔드포인트를 다수 제공합니다.  
   
 ## <a name="the-management-endpoints"></a>관리 엔드포인트  
- 보고서 서버에서 개체 관리를 위해 사용할 수 있는 세 가지 엔드포인트에는 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010>이 있습니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용되며, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용됩니다. <xref:ReportService2010> 엔드포인트는 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버의 개체를 관리할 수 있습니다.  
+ 보고서 서버에서 개체 관리를 위해 사용할 수 있는 세 가지 엔드포인트에는 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010>이 있습니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용되며, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용됩니다. 합니다 <xref:ReportService2010> 끝점의 기능을 병합 <xref:ReportService2005> 고 <xref:ReportService2006> 기본 모드 또는 SharePoint 통합된 모드로 구성 된 보고서 서버의 개체를 관리할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  보고서 서버가 SharePoint 통합 모드로 구성된 경우 <xref:ReportService2005> API는 `rsOperationNotSupportedSharePointMode` 오류를 반환합니다. 보고서 서버가 기본 모드로 구성된 경우 <xref:ReportService2006> API는 `rsOperationNotSupportedNativeMode` 오류를 반환합니다. 마찬가지로 <xref:ReportService2010>의 모드별 API를 잘못된 모드에 사용하면 API에서 해당 오류를 반환합니다.  

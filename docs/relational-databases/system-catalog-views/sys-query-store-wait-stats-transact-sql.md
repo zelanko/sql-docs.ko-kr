@@ -16,18 +16,19 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: AndrejsAnt
-ms.author: AndrejsAnt
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4972618d10d6d9e0f03a6211423fc1cd8628eeb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169143"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   쿼리에 대 한 대기 정보에 대 한 정보를 포함합니다.  
@@ -37,19 +38,20 @@ ms.locfileid: "47640511"
 |**wait_stats_id**|**bigint**|Plan_id, runtime_stats_interval_id, execution_type 및 wait_category 대기 통계를 나타내는 행의 식별자입니다. 이 지난 런타임 통계 간격 동안만 고유 합니다. 현재 활성 간격 execution_type 및 wait_category 나타내는 대기 범주를 나타내는 실행 형식과 plan_id에서 참조 하는 계획에 대 한 대기 통계를 나타내는 여러 행 있을 수 있습니다. 일반적으로 행이 하나씩 나타냅니다 플러시 되도록 대기 통계를 디스크에 다른 (s) 메모리 내 상태를 나타냅니다. 따라서 간격에 대 한 실제 상태를 가져오려는 해야 집계 메트릭 plan_id, runtime_stats_interval_id, execution_type 및 wait_category 그룹화 합니다. |  
 |**plan_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)합니다.|  
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)합니다.|  
-|**wait_category**|**tinyint**|아래 테이블을 사용 하 여 대기 유형을 분류 되며 대기 시간 집계 한 다음 이러한 대기 범주. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.|
-|**wait_category_desc**|**nvarchar(128)**|대기 범주 필드에 대 한 텍스트 설명에 대 한 아래 표를 검토 하세요.|
+|**wait_category**|**tinyint**|아래 테이블을 사용 하 여 대기 유형을 분류 되며 대기 시간 집계 한 다음 이러한 대기 범주. 대기 범주 마다 문제를 해결 하지만 유사한 문제 해결 환경의 형식을 동일한 범주 잠재 고객에서 대기 하는 다른 후속 분석 하며 완료 하려면 누락 된 부분에는 또한 대기에 영향을 받는 쿼리를 제공 합니다 대부분의 조사 했습니다.|
+|**wait_category_desc**|**nvarchar(128)**|대기 범주 필드의 텍스트 설명에 대 한 아래 표를 검토 합니다.|
 |**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0 – 일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
 |**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0 – 일반<br /><br /> 3 – 중단<br /><br /> 4-예외|  
-|**total_query_wait_time_ms**|**bigint**|총 CPU 집계 간격 내에서 쿼리 계획을 위한 대기 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
+|**total_query_wait_time_ms**|**bigint**|총 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
 |**avg_query_wait_time_ms**|**float**|평균 대기 시간 (밀리초 단위로 보고 됨)는 집계 간격 및 대기 범주 내에서 실행 당 쿼리 계획에 대 한입니다.|
 |**last_query_wait_time_ms**|**bigint**|마지막으로 집계 간격 내에서 쿼리 계획에 대 한 기간 대기 및 대기 범주 (밀리초 단위로 보고 됨).|
-|**min_query_wait_time_ms**|**bigint**|최소 CPU 집계 간격 내에서 쿼리 계획을 위한 대기 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
-|**max_query_wait_time_ms**|**bigint**|최대 CPU 집계 간격 내에서 쿼리 계획을 위한 대기 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
-|**stdev_query_wait_time_ms**|**float**|쿼리는 집계 간격 내에서 쿼리 계획에 대 한 표준 편차 기간 대기 및 대기 범주 (밀리초 단위로 보고 됨).|
+|**min_query_wait_time_ms**|**bigint**|최소 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
+|**max_query_wait_time_ms**|**bigint**|최대 'CPU 대기' 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` 쿼리에 대 한 표준 편차 기간 집계 간격 내에서 계획 하 고 대기 범주 (밀리초 단위로 보고 됨).|
 
- ## <a name="wait-categories-mapping-table"></a>대기 범주 테이블 매핑  
-  *"%"를 와일드 카드로 사용 됩니다.*
+## <a name="wait-categories-mapping-table"></a>대기 범주 테이블 매핑
+
+"%"를 와일드 카드로 사용 됩니다.
   
 |정수 값|대기 범주|대기 형식 범주에 포함 됩니다.|  
 |-----------------|---------------|-----------------|  
@@ -78,21 +80,20 @@ ms.locfileid: "47640511"
 |**22**|**복제**|SE_REPL_ REPL_ %, %, %HADR_ **(하지만 하지 HADR_THROTTLE_LOG_RATE_GOVERNOR)**, REPLICA_WRITES FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM PWAIT_HADR_ %|
 |**23**|**로그 Rate Governor**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
-***컴파일** 대기 범주는 현재 지원 되지 않습니다. 
+**컴파일** 대기 범주는 현재 지원 되지 않습니다.
 
-  
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>사용 권한
+
  필요 합니다 **VIEW DATABASE STATE** 권한.  
   
-## <a name="see-also"></a>관련 항목  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [쿼리 저장소 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>관련 항목
+
+- [sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [쿼리 저장소 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

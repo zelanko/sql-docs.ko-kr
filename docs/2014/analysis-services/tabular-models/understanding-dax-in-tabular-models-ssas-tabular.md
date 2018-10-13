@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136023"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906383"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델의 DAX 이해(SSAS 테이블 형식)
   DAX(Data Analysis Expressions)는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 통합 문서 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에서 사용자 지정 계산을 만드는 데 사용되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "48136023"
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다.  
   
- 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)을 참조하세요.  
+ 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX 데이터 형식  
  다양한 데이터 형식을 지원하는 여러 데이터 원본의 데이터를 모델로 가져올 수 있습니다. 데이터를 모델로 가져올 때 데이터는 테이블 형식 모델 데이터 형식 중 하나로 변환됩니다. 계산에서 모델 데이터를 사용하면 해당 데이터는 계산 출력 및 지속을 위해 DAX 데이터 형식으로 변환됩니다. DAX 수식을 만들면 수식에 사용된 조건이 자동으로 반환되는 값 데이터 형식을 결정합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "48136023"
   
 -   둘 이상의 식을 결합하여 단일 결과를 반환하는 논리 연산자  
   
- DAX 수식에서 사용 되는 연산자에 대 한 자세한 내용은 [PowerPivot의 DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)합니다.  
+ DAX 수식에서 사용되는 연산자에 대한 자세한 내용은 [DAX Operator Reference for PowerPivot](https://msdn.microsoft.com/library/ee634237(v=sql.120).aspx)를 참조하십시오.  
   
 ##  <a name="bkmk_DAX_Formulas"></a> DAX 수식  
  DAX 수식은 계산 열 및 측정값에서 계산을 만들고 행 수준 필터를 사용하여 데이터를 보호하는데 필수적입니다. 계산 열 및 측정값에 대한 수식을 만들려면 모델 디자이너 창의 맨 위에 있는 수식 입력줄을 사용합니다. 행 필터에 대한 수식을 만들려면 역할 관리자 대화 상자를 사용합니다. 이 섹션의 내용은 DAX 수식의 기본 사항에 대한 이해를 돕기 위한 것입니다.  
@@ -182,7 +182,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Date 테이블의 Date 열을 지정합니다. 열은 괄호로 묶입니다.|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 함수는 분기의 시작 날짜를 반환합니다.|  
-|`LASTDATE`|LASTDATE 함수는 분기의 마지막 날짜를 반환합니다.|  
+|`LASTDATE`|LASTDATE 함수는 분기의 마지막 날짜를 반환 합니다.|  
 |`'Date'`|Date 테이블을 지정합니다.|  
 |`[Date]`|Date 테이블의 Date 열을 지정합니다.|  
 |`,`||  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   DAX 함수에는 다양한 *시간 인텔리전스* 함수가 포함되어 있습니다. 이러한 함수를 통해 날짜 범위를 정의하거나 선택하고 이러한 날짜 또는 범위를 기반으로 동적 계산을 수행할 수 있습니다. 예를 들어 병렬 기간에 대한 합계를 비교할 수 있습니다.  
   
 ### <a name="date-and-time-functions"></a>날짜 및 시간 함수  
- DAX의 날짜 및 시간 함수는 Microsoft Excel의 날짜 및 시간 함수와 비슷합니다. 그러나 DAX 함수는 기반을 `datetime` Microsoft SQL Server에서 사용 되는 데이터 형식입니다. 자세한 내용은 [날짜 및 시간 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)합니다.  
+ DAX의 날짜 및 시간 함수는 Microsoft Excel의 날짜 및 시간 함수와 비슷합니다. 하지만 DAX 함수는 Microsoft SQL Server에서 사용되는 `datetime` 데이터 형식을 기반으로 합니다. 자세한 내용은 [날짜 및 시간 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)합니다.  
   
 ### <a name="filter-functions"></a>필터 함수  
  DAX의 필터 함수를 사용하면 특정 데이터 형식을 반환하고, 관련 테이블의 값을 조회하고, 관련 값을 기준으로 필터링할 수 있습니다. 조회 함수는 데이터베이스와 같이 테이블 및 관계를 사용하여 작동됩니다. 필터링 함수를 사용하면 데이터 컨텍스트를 조작하여 동적 계산을 만들 수 있습니다. 자세한 내용은 [필터 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)합니다.  
@@ -332,7 +332,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>수식의 컨텍스트 예  
   
-1.  합니다 [RELATED 함수](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) 함수는 관련 열의 값을 포함 하도록 현재 행의 컨텍스트를 확장 합니다. 이 함수를 사용하여 조회를 수행할 수 있습니다. 이 항목의 예에서는 필터링과 행 컨텍스트의 상호 작용을 보여 줍니다.  
+1.  [RELATED Function](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) 함수는 관련 열의 값을 포함하도록 현재 행의 컨텍스트를 확장합니다. 이 함수를 사용하여 조회를 수행할 수 있습니다. 이 항목의 예에서는 필터링과 행 컨텍스트의 상호 작용을 보여 줍니다.  
   
 2.  합니다 [필터 함수](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) 함수를 사용 하 여 현재 컨텍스트에 포함 시킬 행을 지정할 수 있습니다. 또한 이 항목의 예에서는 집계를 수행하는 다른 함수에 필터를 포함하는 방법을 보여 줍니다.  
   
@@ -417,16 +417,16 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> 추가 리소스  
  [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
   
- 합니다 [Analysis Services 및 PowerPivot 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 에 대 한 정보, 팁, 뉴스 및 알림을 제공 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 및 PowerPivot입니다.  
+ [Analysis Services 및 PowerPivot 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 및 PowerPivot에 대한 정보, 팁, 뉴스 및 알림을 제공합니다.  
   
  [DAX 리소스 센터](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 에는 DAX에 대한 내부 및 외부 정보와 뛰어난 비즈니스 인텔리전스 전문가들이 제공한 다양한 DAX 솔루션이 포함되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Data Analysis Expressions &#40;DAX&#41; 참조](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [계산 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
- [Kpi &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
+ [계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
+ [KPI&#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](data-sources-supported-ssas-tabular.md)  
   
   

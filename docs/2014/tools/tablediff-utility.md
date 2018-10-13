@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147937"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169403"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
   **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -77,8 +77,8 @@ ms.locfileid: "48147937"
  [ **-?** ]  
  지원되는 매개 변수 목록을 반환합니다.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *source_server_name***\\***instance_name*을 지정합니다.  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ 원본 서버의 이름입니다. 지정할 _소스\_server\_이름_ 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 지정할 _소스\_server\_이름_**\\**_인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  원본 데이터베이스의 이름입니다.  
@@ -101,8 +101,8 @@ ms.locfileid: "48147937"
  **-sourcelocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *destination_server_name***\\***instance_name*을 지정합니다.  
+ **-destinationserver** *destination_server_name*[**\\**_인스턴스\_이름_]  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 지정할 _대상\_server\_이름_**\\**_인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  대상 데이터베이스의 이름입니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48147937"
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 대상 테이블이 잠깁니다.  
   
  **-b** *large_object_bytes*  
- 포함 하는 큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`합니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
+ 큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. 이 데이터 형식에는 `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`가 포함됩니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
   
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "48147937"
 ## <a name="remarks"></a>Remarks  
  **이외 서버에서는** tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
   
- 사용 하 여 테이블 `sql_variant` 데이터 형식 열이 지원 되지 않습니다.  
+ 데이터 형식이 `sql_variant`인 열이 있는 테이블은 지원되지 않습니다.  
   
  기본적으로 **tablediff** 유틸리티는 원본 열과 대상 열 간에 다음 데이터 형식 매핑을 지원합니다.  
   

@@ -15,15 +15,15 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd0656f0ced52eb7888cac49e108392c333de435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 385485f06760c099610d3450e6a27db8fdd68c4a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119860"
 ---
 # <a name="miscellaneous-files"></a>기타 파일
-  프로젝트의 외부에 있는 파일을 *기타 파일*이라고 합니다. 솔루션이 열려 있는 경우 프로젝트와 연관된 기타 파일을 열고 수정할 수 있습니다. 파일 확장명이 프로젝트 코드 편집기와 연결되지 않은 경우 파일은 기타 파일로 분류됩니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트에서는 .txt 또는 .mdx 확장명을 가진 파일이 기타 파일로 간주됩니다. MDX 프로젝트에서는 .txt 또는 .sql 확장명을 가진 파일이 기타 파일로 간주됩니다. 참조 파일 확장명을 코드 편집기와 연결할 [연결 파일 확장명을 코드 편집기에](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)입니다.  
+  프로젝트의 외부에 있는 파일 이라고 *기타 파일*합니다. 솔루션이 열려 있는 경우 프로젝트와 연관된 기타 파일을 열고 수정할 수 있습니다. 파일 확장명이 프로젝트 코드 편집기와 연결되지 않은 경우 파일은 기타 파일로 분류됩니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트에서는 .txt 또는 .mdx 확장명을 가진 파일이 기타 파일로 간주됩니다. MDX 프로젝트에서는 .txt 또는 .sql 확장명을 가진 파일이 기타 파일로 간주됩니다. 참조 파일 확장명을 코드 편집기와 연결할 [연결 파일 확장명을 코드 편집기에](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)입니다.  
   
  기타 파일을 프로젝트에 추가하는 것이 유용한 이유에는 여러 가지가 있습니다. 인식된 스크립트일 필요는 없지만 솔루션 개발에 필수적인 파일이 존재할 수 있습니다. 개발 참고 또는 지침, 데이터 파일, 코드 클립 등을 일반적인 예로 들 수 있습니다.  
   

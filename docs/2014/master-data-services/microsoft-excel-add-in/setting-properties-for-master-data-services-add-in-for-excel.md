@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 50b08b56a203a5a7e9be2e53dee9eab607dcac9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d3b122b7a458bad7522c766559e1d775b31ef7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154803"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905935"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
   Excel용 Master Data Services 추가 기능 설정은 MDS에서 Excel 추가 기능으로 데이터가 로드되는 방법 및 Excel 추가 기능에서 MDS로 데이터가 게시되는 방법을 결정합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48154803"
 |탭 및 섹션|설정|Description|  
 |설정: 게시|게시할 때 **게시 및 주석** 대화 상자 표시|**게시** 를 클릭한 후 모든 변경 내용에 대한 단일 주석을 입력하거나 각 변경 내용에 대한 개별 주석을 입력할 수 있도록 **게시 및 주석**대화 상자를 표시하려면 선택합니다.<br /><br /> **게시 및 주석** 대화 상자를 표시하지 않고 게시 프로세스가 시작되도록 지정하려면 선택을 취소합니다. 이 경우 주석을 입력할 수 없습니다.|  
 |설정: 버전|버전 선택|Excel 추가 기능으로 로드할 마스터 데이터의 버전을 선택합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **없음** 은 기본 버전을 설정하지 않습니다.<br /><br /> **내림차순** 은 가장 오래된 버전을 기본값으로 설정하고, **오름차순** 은 최신 버전을 기본값으로 설정합니다.|  
-|설정: 로깅|자세한 로깅 설정|MDS에서 Excel 추가 기능으로 마스터 데이터를 로드하는 프로세스에 대한 로깅을 설정하여 서비스의 모든 명령에 대한 결과가 기록되도록 합니다.|  
+|설정: 로깅|자세한 로깅 설정|서비스에서 모든 명령의 결과가 기록 되는 MDS에서 Excel 추가 기능을, 마스터 데이터를 로드 하는 프로세스에 대 한 로깅을 사용 합니다.|  
 |설정: 일괄 처리 크기|로드할 셀 수|MDS 서버에서 Excel로 로드되는 일괄 처리에서 로드할 셀 수(1,000개 단위)를 나타내는 숫자를 선택합니다. 기본값은 50,000셀입니다.|  
 |설정: 일괄 처리 크기|게시할 셀 수|Excel에서 서버로 반환되는 일괄 처리에서 게시할 셀 수(1,000개 단위)를 나타내는 숫자를 선택합니다. 기본값은 50,000셀입니다.|  
 |설정: 수신 허용 목록에 추가된 서버|모두 지우기|연결된 바로 가기 쿼리 파일이 열릴 때 안전한 것으로 지정된 연결 목록을 지우려면 클릭합니다.|  

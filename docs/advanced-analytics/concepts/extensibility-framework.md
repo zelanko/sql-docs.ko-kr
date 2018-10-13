@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fae8beb4f865c537f00fa8b58a01cafe09541d71
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892918"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878186"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,6 +47,8 @@ SQL Server와 R 및 Python으로 개발 하는 동안 이동 데이터 과학 �
   ![구성 요소 아키텍처](../media/generic-architecture.png "구성 요소 아키텍처")
 
 구성 요소에 포함 된 **실행 패드** 언어별 시작 관리자 (R 또는 Python), 언어 및 인터프리터 및 라이브러리를 로드 하기 위한 라이브러리 관련 논리를 호출 하는 데 사용 되는 서비스입니다. 시작 관리자를 실행 하는 언어 시간 및 소유 된 모듈을 로드합니다. 예를 들어 코드에서 RevoScaleR 함수를 포함 하는 경우 RevoScaleR 인터프리터를 로드 합니다. **BxlServer** 하 고 **SQL Satellite** SQL Server를 사용 하 여 통신 및 데이터 전송을 관리 합니다.
+
+<a name="launchpad"></a>
 
 ## <a name="launchpad"></a>실행 패드
 

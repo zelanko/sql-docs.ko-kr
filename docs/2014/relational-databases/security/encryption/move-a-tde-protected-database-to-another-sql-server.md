@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132943"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072277"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
-  이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하기 위한 단계를 설명합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 `master` 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
+  이 항목에서는 투명 한 데이터 암호화 (TDE)를 사용 하 여 데이터베이스를 보호 하 고 다음의 다른 인스턴스로 데이터베이스를 이동 하는 방법을 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 `master` 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
   
  **항목 내용**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48132943"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132943"
   
 -   필요 `CREATE CERTIFICATE` 에 대 한 권한이 `master` DEK를 보호 하는 인증서를 만들려는 데이터베이스입니다.  
   
--   필요 `CONTROL DATABASE` 암호화 된 데이터베이스에 대 한 권한 및 `VIEW DEFINITION` 인증서 또는 데이터베이스 암호화 키를 암호화 하는 데 사용 되는 비대칭 키에 대 한 권한이 있습니다.  
+-   암호화된 데이터베이스에 대한 `CONTROL DATABASE` 권한과 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 `VIEW DEFINITION` 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 만들려면  
   
@@ -84,10 +84,10 @@ ms.locfileid: "48132943"
      **데이터베이스 암호화 관리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **암호화 알고리즘**  
-     데이터베이스 암호화에 사용할 알고리즘을 표시하거나 설정합니다. `AES128` 기본 알고리즘입니다. 이 필드는 비워 둘 수 없습니다. 암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)을 참조하세요.  
+     데이터베이스 암호화에 사용할 알고리즘을 표시하거나 설정합니다. 기본 알고리즘은 `AES128`입니다. 이 필드는 비워 둘 수 없습니다. 암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)을 참조하세요.  
   
      **서버 인증서 사용**  
-     인증서로 암호화의 보안을 유지하도록 설정합니다. 목록에서 하나를 선택합니다. 서버 인증서에 대한 `VIEW DEFINITION` 권한이 없으면 이 목록은 비어 있습니다. 암호화의 인증서 방법을 선택한 경우에는 이 값을 비워 둘 수 없습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
+     인증서로 암호화의 보안을 유지하도록 설정합니다. 목록에서 하나를 선택합니다. 서버 인증서에 대한 `VIEW DEFINITION` 권한이 없으면 이 목록은 비어 있습니다. 암호화의 인증서 방법을 선택한 경우에는 이 값을 비워 둘 수 없습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하세요.  
   
      **서버 비대칭 키 사용**  
      비대칭 키로 암호화의 보안을 유지하도록 설정합니다. 사용 가능한 비대칭 키만 표시됩니다. EKM 모듈에서 보호하는 비대칭 키만 TDE를 사용하여 데이터베이스를 암호화할 수 있습니다.  

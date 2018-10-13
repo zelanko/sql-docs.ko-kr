@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627711"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119890"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  쿼리는 다음 형식의 XML을 생성합니다.  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,7 +67,7 @@ sql:column("columnName")
   
 -   쿼리를 보다 유용 하 게 하도록 합니다 **ProductModelName** 특성 값에서 가져온 합니다 **CatalogDescription** 열의 **xml 형식**합니다. 모든 제품 모델에 대해 XML 제품 모델 카탈로그 정보가 저장되지는 않으므로 `if` 문을 사용하여 값이 있는 경우에만 해당 값을 검색합니다.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  다음 쿼리는 제품의 특정 정보가 포함된 XML을 생성합니다. 이 정보에는 ProductID, ProductName, ProductPrice와 가능한 경우 특정 제품 모델 ProductModelID=19에 해당하는 모든 제품의 ProductModelName이 포함됩니다. XML에 할당 됩니다 합니다 @x 변수 **xml** 형식입니다.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

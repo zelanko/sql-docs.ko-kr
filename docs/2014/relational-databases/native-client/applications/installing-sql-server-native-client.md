@@ -21,15 +21,15 @@ ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0847b289498372d74d565f1fafdd7d97f3d0c133
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d2d63945b2dd2268f6c8f9447a4e1c2a641f451
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138103"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071783"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0을 설치할 때 설치 됩니다 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]합니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client는 없습니다. 자세한 내용은 [What's New in SQL Server Native Client](../sql-server-native-client.md)합니다. sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server Native Client의 최신 버전을 다운로드 하려면로 이동 [Microsoft® SQL Server® 2012 SP2 기능 팩](http://www.microsoft.com/en-us/download/details.aspx?id=43339)합니다. 이전 버전의 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 컴퓨터의 SQL Server 2012 설치도 되어 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0에는 이전 버전와 함께 설치 됩니다.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]을(를) 설치할 때 설치됩니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client는 없습니다. 자세한 내용은 [What's New in SQL Server Native Client](../sql-server-native-client.md)합니다. sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server Native Client의 최신 버전을 다운로드 하려면로 이동 [Microsoft® SQL Server® 2012 SP2 기능 팩](http://www.microsoft.com/en-us/download/details.aspx?id=43339)합니다. SQL Server 2012 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 컴퓨터에 설치되어 있으면 이전 버전과 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0이 설치됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 파일(sqlncli11.dll, sqlnclir11.rll 및 s11ch_sqlncli.chm)은 다음 위치에 설치됩니다.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "48138103"
   
  `%PROGRAMFILES%\Microsoft SQL Server\110\SDK`  
   
- 설치 하는 것 외에도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 일부로 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에서 찾을 수 있는 sqlncli.msi 라는 재배포 가능 설치 프로그램은 또한는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 디스크의 다음 위치: `%CD%\Setup\`.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치의 일부로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치하는 방법 이외에 sqlncli.msi라는 재배포 가능 설치 프로그램을 사용할 수도 있습니다. sqlncli.msi는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 디스크의 다음 위치에 있습니다. `%CD%\Setup\`  
   
  sqlncli.msi를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포할 수 있습니다. 응용 프로그램을 배포할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치해야 할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](http://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](http://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
   
  x64 및 Itanium 버전의 sqlncli.msi가 32비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 설치합니다. 응용 프로그램을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   
- sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하여 개발된 응용 프로그램을 실행하는 데 필요한 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소를 사용 하 여 개발 된 응용 프로그램을 실행 하는 데 파일이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

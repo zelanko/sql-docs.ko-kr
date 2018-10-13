@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812109"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168798"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_작업이\_형식_**'**  
  추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** NULL 일 수 없습니다. 유효한 입력은 **'캡처'** 하 고 **'정리'** 합니다.  
   
  [  **@start_job=** ] *start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@maxscans** ] **= * max_scans*  
+ [ **@maxscans** ] **=** _max\_검색_  
  로그에서 모든 행을 추출하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
   
  *max_scan* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@continuous** ] **= * 연속*  
+ [ **@continuous** ] **=** _연속_  
  캡처 작업을 계속 실행(1)할지, 아니면 한 번만 실행(0)할지를 나타냅니다. *지속적인* 됩니다 **비트** 이며 기본값은 1입니다.  
   
  때 *지속적인* = 1, 합니다 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) 작업 로그를 검색 하 고 최대 처리 (*max_trans* \* *max_scans*) 트랜잭션입니다. 에 지정 된 초 기다립니다 *polling_interval* 다음 로그 검색을 시작 하기 전에 합니다.  
@@ -74,17 +74,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *연속* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@pollinginterval** ] **= * polling_interval*  
+ [ **@pollinginterval** ] **=** _폴링\_간격_  
  로그 검색 주기 사이의 시간(초)입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 5입니다.  
   
  *polling_interval* 는 캡처에만 사용할 경우 작업을 *연속* 1로 설정 됩니다. 지정된 경우 값은 음수가 아니어야 하고 24시간을 초과할 수 없습니다. 값 0이 지정된 경우 로그 검색 간에 대기 시간이 없습니다.  
   
- [ **@retention** ] **= * 보존*  
+ [ **@retention** ] **=** _보존_  
  변경 테이블에 변경 데이터 행이 보관되는 시간(분)입니다. *보존* 됩니다 **bigint** 기본값은 4320 (72 시간)를 사용 하 여 합니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *보존* 정리 작업에 대해서만 유효 합니다.  
   
- [  **@threshold =** ] **'***delete_threshold***'**  
+ [  **@threshold =** ] **'**_삭제\_임계값_**'**  
  정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 됩니다 **bigint** 이며 기본값은 5000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -98,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  정리 및 캡처 작업은 기본적으로 만들어지므로 이 저장 프로시저는 작업이 명시적으로 삭제되어 다시 만들어야 하는 경우에만 필요합니다.  
   
- 작업의 이름은 **cdc. ***데이터베이스 _ < 이름 >***_cleanup** 하거나 **cdc. ***데이터베이스 _ < 이름 >***_capture로 지정**, 여기서 *< database_name >* 현재 데이터베이스의 이름입니다. 동일한 이름 가진 작업이 이미 있는 이름을 마침표를 사용 하 여 추가 됩니다 (**합니다.**) 뒤에 고유 식별자, 예를 들어: **cdc. AdventureWorks_capture 합니다. A1ACBDED-13FC-428C-8302-10100EF74F52**합니다.  
+ 작업의 이름은 **cdc.**  _\<데이터베이스\_이름\>_**\_정리** 나 **cdc.**  _\<데이터베이스\_이름\>_**\_캡처**여기서 *< database_name >* 이름 현재 데이터베이스입니다. 동일한 이름 가진 작업이 이미 있는 이름을 마침표를 사용 하 여 추가 됩니다 (**합니다.**) 뒤에 고유 식별자, 예를 들어: **cdc. AdventureWorks_capture 합니다. A1ACBDED-13FC-428C-8302-10100EF74F52**합니다.  
   
  정리 또는 캡처 작업의 현재 구성을 보려면 사용 하 여 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)합니다. 작업의 구성을 변경 하려면 사용 하 여 [하면 sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)합니다.  
   

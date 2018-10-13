@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761971"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168863"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [**@message_id =** ] *message_number*  
  변경할 메시지의 오류 번호 **sys.messages**합니다. *message_number* 됩니다 **int** 이며 기본값은 없습니다.  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [  **@parameter =** ] **'**_작성\_하\_로그_'  
  와 함께 사용 됩니다 **@parameter_value** 메시지를 쓸 수 임을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *write_to_log* 됩니다 **sysname** 이며 기본값은 없습니다. *write_to_log* WITH_LOG 또는 NULL로 설정 해야 합니다. 하는 경우 *write_to_log* WITH_LOG 또는 NULL이 고 값으로 설정 됩니다 **@parameter_value** 됩니다 **true**, Windows 응용 프로그램 로그에 메시지가 기록 됩니다. 하는 경우 *write_to_log* WITH_LOG 또는 NULL 값을 설정할지 **@parameter_value** 됩니다 **false**, 메시지는 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 될 수 있습니다 오류 발생 방식에 따라 기록 합니다. 하는 경우 *write_to_log* 지정 된 값 **@parameter_value** 도 지정 해야 합니다.  
   
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
- [ **@parameter_value =** ]**'***value*'  
+ [  **@parameter_value =** ]**'**_값_'  
  와 함께 사용 됩니다 **@parameter** 쓸 오류 임을 나타내려면는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *값* 됩니다 **varchar(5)**, 기본값은 없습니다. 하는 경우 **true**, 오류가 항상 Windows 응용 프로그램 로그에 기록 됩니다. 하는 경우 **false**, 오류는 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 오류 발생 방식에 따라 기록 될 수 있습니다. 하는 경우 *값* 를 지정 하면 *write_to_log* 에 대 한 **@parameter** 도 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

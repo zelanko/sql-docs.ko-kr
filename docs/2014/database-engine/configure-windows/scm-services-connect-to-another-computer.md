@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4851fd039e73ce81602f17fd35af2f725b775d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125073"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072097"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>다른 컴퓨터에 연결(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 응용 프로그램 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48125073"
   
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.  
   
-11. **창** 메뉴에서 **콘솔 루트**를 클릭하여 첫 번째 창으로 전환한 다음 창을 삭제합니다.  
+11. 에 **창을** 메뉴에서 클릭 **콘솔 루트**하는 첫 번째 창으로 다시 전환 하 고 창을 삭제 합니다.  
   
 12. 에 **파일** 메뉴에서 클릭 **다른 이름으로 저장**, 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 하 고는 `.msc` 파일 확장명입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
   

@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1eb00a83a33bea0f45a31ed157ea0b8c39ee4566
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066976"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851826"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
   포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 이 항목은 포함된 데이터베이스 모델을 사용할 때와 기존의 로그인/사용자 모델 및 Windows 또는 서버 수준 방화벽 규칙을 사용할 때를 비교하여 그 차이점과 장점을 검토합니다. 특정 시나리오의 경우, 관리 효율성 또는 응용 프로그램 비즈니스 논리는 여전히 기존의 로그인/사용자 모델 및 서버 수준 방화벽 규칙을 사용해야 할 수도 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48066976"
  중요한 원칙은 로그인(master 데이터베이스에 포함된)과 사용자(사용자 데이터베이스에 포함된)가 반드시 존재해야 하며 서로 관련되어 있어야 한다는 것입니다. 이는 사용자 데이터베이스에 대한 연결이 master 데이터베이스의 로그인에 종속성을 갖고 있으며 이것은 데이터베이스가 다른 호스팅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버로 이동될 수 있는 역량을 제한합니다. 또한, 어떠한 이유로든 master 데이터베이스에 대한 연결을 사용할 수 없으면(예: 장애 조치(failover)가 진행 중인 경우) 전반적으로 연결 시간이 증가하거나 연결 시간이 초과될 수 있습니다. 따라서 연결 확장성을 줄어들 수 있습니다.  
   
 ## <a name="contained-database-user-model"></a>포함된 데이터베이스 사용자 모델  
- 포함된 데이터베이스 사용자 모델에서 master 데이터베이스의 로그인은 존재하지 않습니다. 대신 인증 프로세스가 사용자 데이터베이스에서 일어나며 사용자 데이터베이스에 포함된 데이터베이스 사용자는 master 데이터베이스에 연관된 로그인을 갖지 않습니다. 포함된 데이터베이스 사용자 모델은 Windows 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의) 모두를 지원합니다. 포함된 데이터베이스 사용자로 연결하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인증 프로세스를 관리할 책임이 있는 데이터베이스를 알 수 있도록 연결 문자열은 사용자 데이터베이스에 대한 매개 변수를 항상 포함해야 합니다. 포함된 데이터베이스 사용자의 활동은 데이터베이스 인증으로 제한되기 때문에 포함된 데이터베이스 사용자로 연결하는 경우 데이터베이스 사용자 계정은 반드시 사용자가 필요로 하는 각각의 데이터베이스에 독립적으로 생성되어야 합니다. 데이터베이스를 변경하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 새 연결을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 포함된 데이터베이스 사용자는 동일한 사용자가 다른 데이터베이스에 존재하면 데이터베이스를 변경할 수 있습니다.  
+ 포함된 데이터베이스 사용자 모델에서 master 데이터베이스의 로그인은 존재하지 않습니다. 대신 인증 프로세스가 사용자 데이터베이스에서 일어나며 사용자 데이터베이스에 포함된 데이터베이스 사용자는 master 데이터베이스에 연관된 로그인을 갖지 않습니다. 포함된 데이터베이스 사용자 모델은 Windows 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의) 모두를 지원합니다. 포함된 데이터베이스 사용자로 연결하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 인증 프로세스를 관리할 책임이 있는 데이터베이스를 알 수 있도록 연결 문자열은 사용자 데이터베이스에 대한 매개 변수를 항상 포함해야 합니다. 포함된 데이터베이스 사용자의 활동은 데이터베이스 인증으로 제한되기 때문에 포함된 데이터베이스 사용자로 연결하는 경우 데이터베이스 사용자 계정은 반드시 사용자가 필요로 하는 각각의 데이터베이스에 독립적으로 생성되어야 합니다. 데이터베이스를 변경하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 새 연결을 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 포함된 데이터베이스 사용자는 동일한 사용자가 다른 데이터베이스에 존재하면 데이터베이스를 변경할 수 있습니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우, 기존 모델에서 포함된 데이터베이스 사용자 모델로 전환 시 연결 문자열에 대한 변경이 필요치 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결은 데이터베이스 이름이 (이미 존재하지 않는 경우) 연결 문자열에 반드시 추가되어야 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48066976"
  Windows 방화벽 규칙은 모든 연결에 적용되며 로그인(기존 모델 연결) 및 포함된 데이터베이스 사용자에 동일한 효력을 갖습니다. Windows 방화벽에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을(를) 참조하세요.  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 은 여러 수준 연결(로그인) 및 데이터베이스 수준 연결(포함된 데이터베이스 사용자)에 대해 별도의 방화벽 규칙을 허용합니다. 사용자 데이터베이스에 연결할 때 첫 번째 데이터베이스 방화벽 규칙이 확인됩니다. 데이터베이스에 액세스를 허용하는 규칙이 없는 경우, 서버 수준 방화벽 규칙이 확인되고 논리 서버 master 데이터베이스에 대한 액세스가 필요합니다. 포함된 데이터베이스 사용자와 결합된 데이터베이스 수준 방화벽 규칙은 연결 시 서버의 master 데이터베이스에 액세스할 필요가 없고 향상된 연결 확장성을 제공합니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 여러 수준 연결(로그인) 및 데이터베이스 수준 연결(포함된 데이터베이스 사용자)에 대해 별도의 방화벽 규칙을 허용합니다. 사용자 데이터베이스에 연결할 때 첫 번째 데이터베이스 방화벽 규칙이 확인됩니다. 데이터베이스에 액세스를 허용하는 규칙이 없는 경우, 서버 수준 방화벽 규칙이 확인되고 논리 서버 master 데이터베이스에 대한 액세스가 필요합니다. 포함된 데이터베이스 사용자와 결합된 데이터베이스 수준 방화벽 규칙은 연결 시 서버의 master 데이터베이스에 액세스할 필요가 없고 향상된 연결 확장성을 제공합니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽 규칙에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

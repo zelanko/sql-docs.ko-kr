@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019400"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120183"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>선형 회귀 모델의 구조 이해  
- 선형 회귀 모델의 구조는 매우 단순합니다. 각 모델에는 모델과 해당 메타데이터를 나타내는 단일 부모 노드와 예측 가능한 각 특성의 회귀 수식이 포함된 회귀 트리 노드(NODE_TYPE = 25)가 있습니다.  
+ 선형 회귀 모델의 구조는 매우 단순합니다. 각 모델에 모델 및 해당 메타 데이터를 나타내는 단일 부모 노드와 및 회귀 트리 노드 (NODE_TYPE = 25) 각 예측 가능한 특성의 회귀 수식이 들어 있는입니다.  
   
  ![선형 회귀 모델의 구조](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "선형 회귀 모델의 구조")  
   
@@ -134,7 +134,7 @@ ms.locfileid: "34019400"
  MSOLAP_NODE_SHORT_CAPTION  
  표시용 레이블입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하여 모델을 만드는 경우 데이터 마이닝 엔진은 의사 결정 트리 모델의 특수한 인스턴스를 만들고 단일 노드의 모든 학습 데이트를 포함하도록 트리를 제한하는 매개 변수를 제공합니다. 모든 연속 입력은 잠재적인 회귀 변수로 플래그가 지정되고 계산되지만 최종 모델에서는 데이터에 맞는 회귀 변수만 회귀 변수로 유지됩니다. 분석에서는 각 회귀 변수에 대해 회귀 수식이 하나씩 생성되거나 회귀 수식이 전혀 생성되지 않습니다.  
   
  **Microsoft 트리 뷰어**의 **(All)** 노드를 클릭하여 [마이닝 범례](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)에서 전체 회귀 수식을 볼 수 있습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "34019400"
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1.|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -182,8 +182,8 @@ ms.locfileid: "34019400"
   
  따라서 평균 연령이 45세라고 간주하면 회귀 수식의 절편(VALUETYPE = 11)은 평균 수입을 알려 줍니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>관련 항목  
+ [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  

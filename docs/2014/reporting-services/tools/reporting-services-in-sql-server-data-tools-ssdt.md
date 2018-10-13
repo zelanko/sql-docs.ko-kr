@@ -13,17 +13,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122383"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906303"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 비즈니스 인텔리전스 솔루션 관련 기능이 향상 된 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함되어 있습니다.  
   
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]를 사용하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 및 보고서 관련 항목을 위한 솔루션 및 프로젝트를 만들고 관리할 수 있습니다. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 보고서 디자이너 제작 환경을 제공 합니다. 보고서 디자이너에서 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하며 배포할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 를 사용하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 및 보고서 관련 항목을 위한 솔루션 및 프로젝트를 만들고 관리할 수 있습니다. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]는 보고서 디자이너 제작 환경을 제공합니다. 보고서 디자이너에서 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하며 배포할 수 있습니다.  
   
  이 항목에서는 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48122383"
 ##  <a name="bkmk_ReportServerProjects"></a> 보고서 서버 프로젝트  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 설치하면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 다음 프로젝트 템플릿을 사용할 수 있습니다.  
   
--   **보고서 서버 프로젝트** 보고서 서버 프로젝트를 선택하면 보고서 디자이너가 열립니다. 보고서 서버 프로젝트는 설치 하 여 비즈니스 인텔리전스 프로젝트 템플릿으로 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 에서 사용할 수 있는 합니다 **새 프로젝트** 대화 상자. 자세한 내용은 [보고서 프로젝트에 새 보고서 또는 기존 보고서 추가&#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md)를 참조하세요. 보고서 서버 프로젝트 속성은 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 프로젝트의 모든 보고서 및 모든 공유 데이터 원본에 적용됩니다. 이러한 속성에는 보고서 서버의 URL과 보고서 및 공유 데이터 원본의 폴더 이름이 포함됩니다. **프로젝트 속성 페이지** 대화 상자를 사용하여 현재 속성 값을 볼 수 있습니다. 이 대화 상자를 열려면 합니다 **프로젝트** 메뉴에서 클릭  *\<프로젝트 이름 >* **속성**합니다.  
+-   **보고서 서버 프로젝트** 보고서 서버 프로젝트를 선택하면 보고서 디자이너가 열립니다. 보고서 서버 프로젝트는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 에 의해 설치되며 **새 프로젝트** 대화 상자에서 사용할 수 있는 비즈니스 인텔리전스 프로젝트 템플릿입니다. 자세한 내용은 [보고서 프로젝트에 새 보고서 또는 기존 보고서 추가&#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md)를 참조하세요. 보고서 서버 프로젝트 속성은 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 프로젝트의 모든 보고서 및 모든 공유 데이터 원본에 적용됩니다. 이러한 속성에는 보고서 서버의 URL과 보고서 및 공유 데이터 원본의 폴더 이름이 포함됩니다. **프로젝트 속성 페이지** 대화 상자를 사용하여 현재 속성 값을 볼 수 있습니다. 이 대화 상자를 열려면 합니다 **프로젝트** 메뉴에서 클릭  *\<프로젝트 이름 >* **속성**합니다.  
   
 -   **보고서 서버 프로젝트 마법사** 보고서 서버 마법사 프로젝트를 선택하면 보고서 서버 프로젝트가 자동으로 만들어지고 보고서 마법사가 열립니다. 마법사에서는 각 페이지의 지침을 따라 데이터 원본에 대한 연결 문자열을 만들고, 데이터 원본 자격 증명을 설정하고, 쿼리를 디자인하고, 테이블 또는 행렬 데이터 영역을 추가하고, 보고서 데이터 및 그룹을 지정하고, 글꼴 및 색 스타일을 선택하고, 보고서 서버에 보고서를 게시하고, 보고서를 로컬에서 미리 보는 방법으로 보고서를 만들 수 있습니다. 마법사로 보고서를 만든 후에는 보고서 서버 프로젝트의 보고서 디자이너를 사용하여 보고서 데이터 및 보고서 디자이너를 변경할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122383"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
- 보고서 디자이너는 두 가지 뷰를 지원합니다. **디자인** 은 보고서 데이터 및 보고서 레이아웃을 정의하기 위한 뷰이고 **미리 보기** 는 보고서의 렌더링된 뷰를 표시하기 위한 뷰입니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
+ 보고서 디자이너는 두 가지 보기를 지원: **디자인** 보고서 데이터 및 보고서 레이아웃을 정의 하 고 **미리 보기** 보고서의 렌더링 된 보기를 표시 합니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
   
 ###  <a name="bkmk_ReportDataPane"></a> 보고서 데이터 창  
  보고서 데이터 창에는 기본 제공 필드, 데이터 원본, 데이터 집합, 필드 컬렉션, 보고서 매개 변수 및 이미지가 표시됩니다.  
@@ -252,7 +252,7 @@ ms.locfileid: "48122383"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> 원본 제어  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. 옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로이 폴더는 \<드라이브 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject에 있습니다. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
@@ -268,7 +268,7 @@ ms.locfileid: "48122383"
   
 -   디버그 또는 릴리스와 같은 구성 속성 집합 중 최소한 하나 이상  
   
- 자세한 내용은 [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md)합니다.  
+ 자세한 내용은 [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md)을 참조하세요.  
   
  명령줄에서 보고서 서버 프로젝트에 대해 다음 옵션을 지정할 수 있습니다.  
   
@@ -326,7 +326,7 @@ ms.locfileid: "48122383"
 ## <a name="see-also"></a>관련 항목  
  [솔루션 탐색기](../../ssms/solution/solution-explorer.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
- [보고서 정의 언어&#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [RDL(Report Definition Language)&#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

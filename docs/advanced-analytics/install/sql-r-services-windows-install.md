@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229933"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878126"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,86 +188,22 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 명령을 실행할 때 오류가 발생 하면이 섹션의 추가 구성 단계를 검토 합니다. 서비스 또는 데이터베이스에 추가 적절 한 구성을 확인 해야 합니다.
 
-추가 변경 해야 하는 일반적인 시나리오에는 다음이 포함 됩니다.
+인스턴스 수준에서 추가 구성이 포함 될 수 있습니다.
 
-* [인바운드 연결에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server Machine Learning Services에 대 한 방화벽 구성](../../advanced-analytics/security/firewall-configuration.md)
 * [추가 네트워크 프로토콜을 사용 하도록 설정](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결을 사용 하도록 설정](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [원격 사용자에 게 기본 제공 권한 확장](#bkmk_configureAccounts)
-* [외부 스크립트를 실행 하는 권한 부여](#bkmk_AllowLogon)
-* [개별 데이터베이스에 액세스 권한 부여](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+데이터베이스에서 다음 구성을 업데이트 해야 합니다.
+
+* [SQL Server Machine Learning Services 하도록 사용자 권한 부여](../../advanced-analytics/security/user-permission.md)
+* [SQLRUserGroup을 데이터베이스 사용자로 추가](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > 나열 된 모든 변경 내용이 필요 하 고 none 필요할 수 있습니다. 요구 사항 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 추가 문제 해결 팁을 여기서 확인할 수 있습니다: [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>실행 패드 계정 그룹에 대 한 암시적된 인증 사용
-
-설치 중의 보안 토큰으로 태스크를 실행 하는 것에 대 한 일부 새로운 Windows 사용자 계정은 만들어집니다는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스입니다. 사용자가 외부 클라이언트에서 R 스크립트를 보내면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용 가능한 작업자 계정을 활성화 하 고 호출 하는 사용자의 id로 매핑합니다 사용자를 대신 하 여 R 스크립트를 실행 합니다. 데이터베이스 엔진의이 새로운 서비스 보안 이라는 외부 스크립트 실행을 지원 *묵시적된 인증*합니다.
-
-이러한 계정은 Windows 사용자 그룹에 볼 수 있습니다 **SQLRUserGroup**합니다. 기본적으로 R을 실행 충분히 보다 더 많은 작업은 일반적으로 20 개의 작업자 계정이 생성 됩니다.
-
-그러나 원격 데이터 과학 클라이언트에서 R 스크립트를 실행 해야 하 고 Windows 인증을 사용 하는 경우 권한을 부여 해야 이러한 작업자 계정에 로그인 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 귀하를 대신해 인스턴스.
-
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **보안**을 확장하고 **로그인**을 마우스 오른쪽 단추로 클릭한 다음 **새 로그인**을 선택합니다.
-2. 에 **로그인-신규** 대화 상자에서 **검색**합니다.
-3. 선택 합니다 **개체 유형** 하 고 **그룹** 확인란을 선택한 다른 모든 확인란의 선택을 취소 합니다.
-4. 클릭 **Advanced**를 클릭 한 다음 확인 하 고 현재 컴퓨터를 검색할 위치 인지 확인 **지금 찾기**합니다.
-5. 그룹 계정 하나부터 찾을 때까지 서버에서 목록 스크롤하여 `SQLRUserGroup`합니다.
-    
-    + 에 대 한 실행 패드 서비스와 연결 된 그룹의 이름을 합니다 _기본 인스턴스_ 것은 항상 **SQLRUserGroup**합니다. 기본 인스턴스에 대해서만이 계정을 선택 합니다.
-    + 사용 중인 경우는 _명명 된 인스턴스로_, 인스턴스 이름이 기본 이름에 추가 됩니다 `SQLRUserGroup`합니다. 따라서 인스턴스 이름이 "MLTEST" 인 경우이 인스턴스에 대 한 기본 사용자 그룹 이름을 것 **SQLRUserGroupMLTest**합니다.
-5. 클릭 **확인** 를 고급 검색 대화 상자를 닫고 인스턴스에 대 한 올바른 계정을 선택 했는지 확인 합니다. 각 인스턴스는 자체 실행 패드 서비스에만 및 해당 서비스에 대해 만든 그룹에 사용할 수 있습니다.
-6. 클릭 **확인** 한 번 더 클릭 하 여 닫습니다 합니다 **사용자 또는 그룹 선택** 대화 상자.
-7. 에 **로그인-신규** 대화 상자, 클릭 **확인**합니다. 기본적으로 로그인은 **public** 역할에 할당되며 데이터베이스 엔진에 연결할 수 있는 권한이 있습니다.
-
-<a name="bkmk_AllowLogon"></a>
-
-### <a name="give-users-permission-to-run-external-scripts"></a>외부 스크립트를 실행 하도록 사용자 권한 부여
-
-> [!NOTE]
-> SQL Server 계산 컨텍스트에서 R 스크립트를 실행 하는 것에 대 한 SQL 로그인을 사용 하는 경우이 단계가 필요 하지 않습니다.
-
-설치한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고유한 경우 일반적으로 실행 하는 스크립트 관리자 또는 데이터베이스 소유자는 최소한 다양 한 작업, 데이터베이스 및 새 패키지를 설치 하는 기능에 대 한 모든 데이터에 대 한 암시적 권한이 있으므로 반복 합니다.
-
-그러나 엔터프라이즈 시나리오에서 SQL 로그인을 사용 하 여 데이터베이스에 액세스 하는 사용자를 포함 한 대부분의 사용자 없습니다 이러한 권한. 따라서 R 스크립트를 실행할 각 사용자에 대 한 외부 스크립트를 사용 하는 각 데이터베이스에서 스크립트를 실행 하는 사용자 권한을 부여 해야 합니다.
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> 설치와 관련된 도움이 필요하세요? 모든 단계를 실행했는지 확인하고 싶으세요? 설치 상태를 확인 하 고 추가 단계를 실행 하려면 이러한 사용자 지정 보고서를 사용 합니다. 
-> 
-> [사용자 지정 보고서를 사용 하 여 Machine Learning Services 모니터링](../r/monitor-r-services-using-custom-reports-in-management-studio.md)합니다.
-
-<a name="permissions-db"></a>
-
-###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>에 사용자에 게 읽기, 쓰기 또는 DDL 권한이 데이터베이스에 제공 합니다.
-
-R 실행에 사용 되는 사용자 계정 수 필요 다른 데이터베이스에서 데이터를 읽을를 결과 저장할 새 테이블 만들고 테이블로 데이터를 작성 합니다. 따라서 R 스크립트를 실행 하는 각 사용자에 대 한 사용자 데이터베이스에서 적절 한 권한이 있는지를 확인 합니다. *db_datareader*를 *db_datawriter*, 또는 *db_ddladmin*.
-
-예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 *RSamples* 데이터베이스에서 T-SQL 쿼리를 실행할 수 있는 권한을 SQL 로그인 *MySQLLogin* 에 부여합니다. 이 문을 실행하려면 SQL 로그인이 서버의 보안 컨텍스트에 이미 있어야 합니다.
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-각 역할에 포함 된 사용 권한에 대 한 자세한 내용은 참조 하세요. [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)입니다.
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>데이터 과학 클라이언트의 인스턴스에 대한 ODBC 데이터 원본 만들기
-
-데이터 과학 클라이언트 컴퓨터에서 R 솔루션을 만들고 SQL Server 컴퓨터에 계산 컨텍스트로 사용 하 여 코드를 실행 해야 하는 경우에 SQL 로그인 또는 통합된 Windows 인증을 사용할 수 있습니다.
-
-* SQL 로그인의 경우: 데이터를 읽을 데이터베이스에 대한 적절한 권한이 로그인에 있는지 확인합니다. 추가 하 여 이렇게 수 있습니다 *연결할* 및 *선택* 권한 또는 로그인을 추가 하 여 합니다 *db_datareader* 역할입니다. 개체를 만들어야 하는 로그인에 대 한 추가 *DDL_admin* 권한. 테이블에 데이터를 저장 해야 하는 로그인에 대 한 로그인을 추가 합니다 *db_datawriter* 역할입니다.
-
-* Windows 인증을 위해: 인스턴스 이름 및 기타 연결 정보를 지정 하는 데이터 과학 클라이언트에서 ODBC 데이터 소스를 구성 해야 할 수 있습니다. 자세한 내용은 [ODBC 데이터 원본 관리자](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)합니다.
 
 ## <a name="suggested-optimizations"></a>제안 된 최적화
 
@@ -275,7 +211,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>더 많은 작업자 계정을 추가 합니다.
 
-R을 많이 사용할 수 있습니다 하는 것이 생각 또는 스크립트를 실행할 동시에 많은 사용자가 예상 하는 경우 실행 패드 서비스에 할당 된 작업자 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에 대 한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
+R을 많이 사용할 수 있습니다 하는 것이 생각 또는 스크립트를 실행할 동시에 많은 사용자가 예상 하는 경우 실행 패드 서비스에 할당 된 작업자 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services에 대 한 사용자 계정 풀 수정](../administration/modify-user-account-pool.md)합니다.
 
 <a name="bkmk_optimize"></a>
 
@@ -289,7 +225,7 @@ Machine learning 작업 우선 순위와 정보를 적절 하 게 되도록 SQL 
   
 - 데이터베이스에 대해 예약 된 메모리 양을 변경 하려면 [서버 메모리 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)합니다.
   
-- 가 시작할 수 있는 R 계정의 수를 변경 하려면 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]를 참조 하세요 [machine learning 위한 사용자 계정 풀 수정](../r/modify-the-user-account-pool-for-sql-server-r-services.md)합니다.
+- 가 시작할 수 있는 R 계정의 수를 변경 하려면 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]를 참조 하세요 [machine learning 위한 사용자 계정 풀 수정](../administration/modify-user-account-pool.md)합니다.
 
 동적 관리 뷰 (Dmv) 및 확장 이벤트 뿐만 아니라 Windows 이벤트 모니터링을 R에서 사용 되는 서버 리소스를 관리할 수 있도록 Standard Edition을 사용 하는 리소스 관리자가 없는 경우 사용할 수 있습니다. 자세한 내용은 [모니터링 및 R Services를 관리](../r/managing-and-monitoring-r-solutions.md)합니다.
 

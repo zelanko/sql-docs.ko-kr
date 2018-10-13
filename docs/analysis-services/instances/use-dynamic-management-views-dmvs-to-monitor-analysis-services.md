@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178329"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906403"
 ---
 # <a name="dynamic-management-views-dmvs"></a>동적 관리 뷰(DMV) 
 
@@ -58,7 +58,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 
 ## <a name="examples-and-scenarios"></a>예제 및 시나리오
 
-DMV 쿼리를 사용하면 서비스 세션 및 연결에 대한 정보를 확인할 수 있으며 특정 시점에 CPU나 메모리를 가장 많이 사용하는 개체가 어떤 것인지 파악할 수 있습니다. 예를 들어:
+DMV 쿼리를 사용하면 서비스 세션 및 연결에 대한 정보를 확인할 수 있으며 특정 시점에 CPU나 메모리를 가장 많이 사용하는 개체가 어떤 것인지 파악할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
   
  `Select * from $System.discover_object_activity`  
 이 쿼리를 마지막으로 시작한 이후의 개체 작업에 대해 보고 합니다. 
@@ -210,4 +210,4 @@ DMV를 지정된 된 행 집합에 대해 사용할 수 없는 경우 서버 오
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|현재 세션 범위 집합을 포함 하 여 데이터베이스에 설명 된 모든 집합에 설명 합니다.|  
 
 > [!NOTE]
-> 저장소 Dmv에 설명 된 스키마 행 집합에 있지 않은 프로토콜입니다.
+> 저장소 Dmv 프로토콜에 설명 된 스키마 행 집합을 필요는 없습니다.

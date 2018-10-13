@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128873"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072327"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
   지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "48128873"
   
  지도 또는 지도 계층을 추가하고 보고서를 미리 본 후 마법사에서 설정하는 지도 및 지도 계층 옵션을 변경할 수 있습니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
- 지도 대 한 자세한 내용은 참조 하세요. [맵 &#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)를 참조하세요.  
+ 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)를 참조하세요.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48128873"
 > [!NOTE]  
 >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하십시오. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
- 지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 참조하세요.  
+ 지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다.  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>*.shp 파일과 지원 파일 *\<filename>*.dbf가 포함됩니다.  
@@ -198,7 +198,7 @@ ms.locfileid: "48128873"
   
  타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
   
- 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 참조 하세요. [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 "계획" 지도에 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 .  
+ 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 참조 하세요. [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 "지도 계획"에서 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 합니다.  
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48128873"
   
  **분석 지도** 는 각 지도 요소에 대한 하나 이상의 분석 데이터 집계의 상대적 값을 나타냅니다. 예를 들어 표식 크기로 상점 판매량을 나타내고, 표식 색으로 제품 범주의 수익 범위를 나타내고, 표식 유형으로 가장 많이 판매되는 제품을 나타냅니다.  
   
- 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)를 참조하세요.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   

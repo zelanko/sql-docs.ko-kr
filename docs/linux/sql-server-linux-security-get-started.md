@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786971"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906233"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -67,7 +67,7 @@ Larry 로그인 자세한 로그인을 만들 수는 이제 만들어 사용자 
 
 ## <a name="granting-access-with-least-privileges"></a>최소 권한으로 액세스 권한 부여
 
-사용자-데이터베이스에 연결할 첫 번째 사용자는 관리자 및 데이터베이스 소유자 계정이 됩니다. 그러나 이러한 사용자가 모든는 데이터베이스에서 사용할 수 있는 권한입니다. 이것은 자세한 사용 권한 보다 대부분의 사용자에 게 있어야 합니다. 
+사용자-데이터베이스에 연결할 첫 번째 사용자는 관리자 및 데이터베이스 소유자 계정이 됩니다. 그러나 이러한 사용자 데이터베이스에서 사용할 수 있는 모든 권한을 가집니다. 이것은 자세한 사용 권한 보다 대부분의 사용자에 게 있어야 합니다. 
 
 바로 시작 하는, 하는 경우 기본 제공을 사용 하 여 사용 권한의 몇 가지 일반적인 범주를 할당할 수 있습니다 *고정 데이터베이스 역할*입니다. 예를 들어를 `db_datareader` 고정된 데이터베이스 역할을 데이터베이스의 모든 테이블을 읽을 수 있지만 변경 하지 않습니다. 사용 하 여 고정된 데이터베이스 역할의 멤버 자격을 부여 합니다 [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 문입니다. 다음 예제에서는 사용자를 추가 `Jerry` 에 `db_datareader` 고정된 데이터베이스 역할.   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-자세한 내용은 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md)합니다.
+자세한 내용은 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.
 
 
 ## <a name="next-steps"></a>다음 단계

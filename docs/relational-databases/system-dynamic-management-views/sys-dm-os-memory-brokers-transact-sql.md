@@ -19,12 +19,12 @@ ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc48ab35ce0a2897b0167fd8609c21f46926966a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802901"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906353"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47802901"
 |**predicted_allocations_kb**|**bigint**|Broker에서 할당된 메모리의 예상 양입니다. 이 값은 메모리 양 패턴에 기반합니다.|  
 |**target_allocations_kb**|**bigint**|현재 설정 및 메모리 사용량 패턴에 따라 제안되는 할당된 메모리 양(KB)입니다. 이 Broker는 이 수만큼 증가하거나 축소해야 합니다.|  
 |**future_allocations_kb**|**bigint**|다음 몇 초 동안 완료되는 예상 할당 수(LB)입니다.|  
-|**overall_limit_kb**|**bigint**|Broker가 할당할 수 있는 최대 메모리 양(KB)입니다.|  
+|**overall_limit_kb**|**bigint**|최대 메모리 (kb) 브로커에서 할당할 수 있는 양입니다.|  
 |**last_notification**|**nvarchar(60)**|현재 설정 및 사용량 패턴에 따라 권장되는 메모리 사용량입니다. 유효한 값은 다음과 같습니다.<br /><br /> 증가<br /><br /> 축소<br /><br /> 안정|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   

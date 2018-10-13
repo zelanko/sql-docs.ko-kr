@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108194"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120230"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>IIS(인터넷 정보 서비스) 8.0에서 Analysis Services에 대한 HTTP 액세스 구성
   이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 엔드포인트를 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "48108194"
 |서로 다른 컴퓨터의 IIS와 Analysis Services 비교|이 토폴로지의 경우 웹 서버에 Analysis Services OLE DB 공급자를 설치해야 합니다. 또한 원격 컴퓨터에서 Analysis Services 인스턴스의 위치를 지정하도록 msmdpump.ini 파일을 편집해야 합니다.<br /><br /> 이 토폴로지는 이중 홉 인증 단계를 추가합니다. 즉, 자격 증명이 클라이언트에서 웹 서버로 진행되고 다시 백 엔드 Analysis Services 서버로 진행됩니다. Windows 자격 증명 및 NTLM을 사용하는 경우 NTLM에서 두 번째 서버로의 클라이언트 자격 증명 위임을 허용하지 않으므로 오류가 발생합니다. 가장 일반적인 솔루션은 SSL(Secure Sockets Layer)과 함께 기본 인증을 사용하는 것이지만 MSMDPUMP 가상 디렉터리에 액세스할 때 사용자가 사용자 이름과 암호를 입력해야 합니다. 더 간단한 방법은 사용자가 자연스러운 방식으로 Analysis Services에 액세스할 수 있도록 Kerberos를 사용하도록 설정하고 Analysis Services 제한된 위임을 구성하는 것입니다. 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 를 참조하세요.<br /><br /> Windows 방화벽에서 차단 해제할 포트를 고려합니다. IIS의 웹 응용 프로그램 및 원격 서버의 Analysis Services에 대한 액세스를 허용하도록 두 서버 모두에서 포트를 차단 해제해야 합니다.|  
 |클라이언트 연결이 신뢰할 수 없는 도메인 또는 엑스트라넷 연결에서 시작됩니다.|신뢰할 수 없는 도메인에서 시작된 클라이언트 연결의 경우 인증 제한 사항이 더 많아집니다. 기본적으로 Analysis Services는 사용자가 서버와 같은 도메인에 있도록 요구하는 Windows 통합 인증을 사용합니다. 도메인 외부에서 IIS에 연결하는 엑스트라넷 사용자가 있는 경우 서버가 기본 설정을 사용하도록 구성되면 해당 사용자에게 연결 오류가 발생합니다.<br /><br /> 해결 방법으로 도메인 자격 증명을 사용하여 VPN을 통해 엑스트라넷 사용자를 연결할 수 있습니다. 하지만 IIS 웹 사이트에서 기본 인증과 SSL을 사용하도록 설정하는 것이 더 나을 수 있습니다.|  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
  이 문서의 지침에서는 IIS가 이미 구성되어 있고 Analysis Services가 이미 설치되어 있다고 가정합니다. Windows Server 2012에는 시스템에서 사용하도록 설정할 수 있는 서버 역할로 IIS 8.x가 포함되어 있습니다.  
   
  **IIS 8.0의 추가 구성**  
@@ -130,7 +130,7 @@ ms.locfileid: "48108194"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 2단계: IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기  
- 다음으로 응용 프로그램 풀과 펌프에 대한 엔드포인트를 만듭니다.  
+ 다음으로 응용 프로그램 풀과 PUMP에 대한 엔드포인트를 만듭니다.  
   
 #### <a name="create-an-application-pool"></a>응용 프로그램 풀 만들기  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48108194"
 |Windows 인증|가장 또는 위임을 통해 Analysis Services 데이터를 요청하는 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> Kerberos 제한 위임이 사용될 경우 사용 권한이 필요한 유일한 계정은 액세스를 요청하는 Windows 사용자 및 그룹 계정입니다. 응용 프로그램 풀 ID에 필요한 권한은 없습니다.|  
 |기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 `EffectiveUserName`을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 클릭 &#124; **속성** &#124; **Security** &#124; **추가**. 응용 프로그램 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
- 사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)를 참조하세요.  
+ 사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(영문)을 참조하세요.  
   
 ##  <a name="bkmk_test"></a> 6단계: 구성 테스트  
  MSMDPUMP의 연결 문자열 구문은 MSMDPUMP.dll 파일에 대한 URL입니다.  
@@ -300,9 +300,9 @@ ms.locfileid: "48108194"
   
 ## <a name="see-also"></a>관련 항목  
  [포럼 게시물(msmdpump 및 기본 인증을 사용한 http 액세스)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS 인증 방법](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [IIS 7에서 SSL 설정 하는 방법](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [IIS 7에서 SSL을 설정하는 방법](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

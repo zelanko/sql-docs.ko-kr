@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144423"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071847"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
   데이터 경고 디자이너에서 데이터 경고 정의를 만들 수 있습니다. 경고 정의를 저장한 후 데이터 경고 디자이너에서 해당 정의를 다시 열어 편집한 후 다시 저장할 수 있습니다. 경고 정의 편집에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md) 및 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "48144423"
   
      경고 정의의 기본 이름은 보고서 이름입니다. 경고 정의 이름을 반드시 고유한 이름으로 지정해야 하는 것은 아니지만 이렇게 하지 않으면 나중에 데이터 경고 관리자에서 경고 목록을 볼 때 경고 정의를 구분하기가 어려울 수 있습니다. 따라서 경고 정의에 의미 있고 고유한 이름을 사용하는 것이 좋습니다.  
   
-6.  필요에 따라 기본 데이터 옵션을 **데이터 피드의 데이터가 다음을 포함함** 에서 **데이터 피드의 데이터가 다음을 포함하지 않음**으로 변경합니다.  
+6.  필요에 따라 기본 데이터 옵션을 변경 **데이터 피드의 데이터가** 하 **데이터 피드의 데이터가**합니다.  
   
 7.  **규칙 추가**를 클릭합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144423"
      기본적으로 경고 메시지에는 중지 날짜가 없습니다.  
   
     > [!NOTE]  
-    >  경고 메시지를 중지해도 경고 정의는 삭제되지 않습니다. 경고 메시지를 중지한 후 시작 날짜와 중지 날짜를 업데이트하여 해당 메시지를 다시 시작할 수 있습니다. 경고 정의 삭제에 대 한 자세한 내용은 [내 데이터 경고 관리 데이터 경고 관리자에서](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
+    >  경고 메시지를 중지해도 경고 정의는 삭제되지 않습니다. 경고 메시지를 중지한 후 시작 날짜와 중지 날짜를 업데이트하여 해당 메시지를 다시 시작할 수 있습니다. 경고 정의 삭제에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
 18. 필요에 따라 **결과가 변경될 때만 메시지 보내기** 확인란의 선택을 취소합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48144423"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)   
- [데이터 경고 관리자 용 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 담당자를 위한 데이터 경고 관리자입니다.](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842681"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169356"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842681"
 |**retry_attempts**|**int**|단계가 실패했을 때 재시도하는 횟수입니다.|  
 |**retry_interval**|**int**|재시도 간에 대기하는 시간입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
-|**output_file_name**|**nvarchar(200)**|일 때 단계의 출력 파일의 이름을 저장 되 **하위 시스템** 이 TSQL, PowerShell 또는 **CmdExec * * * 합니다.*|  
+|**output_file_name**|**nvarchar(200)**|일 때 단계의 출력 파일의 이름을 저장 되 **하위 시스템** 이 TSQL, PowerShell, 또는 **CmdExec**_합니다._|  
 |**last_run_outcome**|**int**|작업 단계의 이전 실행 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|작업 단계의 마지막 실행에서 재시도한 횟수입니다.|  

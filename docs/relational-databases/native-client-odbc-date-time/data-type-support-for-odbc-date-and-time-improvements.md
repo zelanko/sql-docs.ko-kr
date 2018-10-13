@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b7fc0de4bf58368e888f3d7a73d07808df49211
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a910fcac656bc70e974da5c3601288b1659bb57
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851453"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851820"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +138,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 경우는 **timezone_hour** 가 음수 이면 합니다 **timezone_minute** 음수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 이 양수인 경우 합니다 **timezone_minute** 양수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 0 이면 s**timezone_minute** -59에서 + 59 까지의 모든 값을 가질 수 있습니다.  
+ 경우는 **timezone_hour** 가 음수 이면 합니다 **timezone_minute** 음수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 이 양수인 경우 합니다 **timezone_minute** 양수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 0 이면 합니다 **timezone_minute** -59에서 + 59 까지의 모든 값을 가질 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

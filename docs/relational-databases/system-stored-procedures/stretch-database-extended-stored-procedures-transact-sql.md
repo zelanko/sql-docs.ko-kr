@@ -14,12 +14,12 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f96a07b6106667a06c492a368799994849cae10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704809"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905745"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 확장 저장된 프로시저 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47704809"
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
  원격 Azure 테이블에 저장 된 일괄 처리 ID를 사용 하 여 가장 최근에 마이그레이션된 데이터에 대 한 SQL Server 스트레치 사용 테이블에 저장 된 일괄 처리 ID를 조정 합니다. 
  
-[sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) 원격 Azure 테이블의 열에 있는 열으로 조정 된 SQL Server 스트레치 사용 테이블입니다.
+[sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) 스트레치 사용 SQL Server 테이블의 열에는 원격 Azure 테이블의 열을 조정 합니다.
  
  [sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) 원격 테이블의 인덱스를 조정 하는 스키마 작업 큐입니다.
  

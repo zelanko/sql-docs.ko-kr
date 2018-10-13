@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132113"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906493"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 마법사를 사용하거나 명령 프롬프트에서 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터로 업그레이드할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48132113"
   
  명령 프롬프트에 사용할 예제 구문에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [장애 조치(Failover) 클러스터링을 설치하기 전에](../install/before-installing-failover-clustering.md)  
@@ -44,19 +44,19 @@ ms.locfileid: "48132113"
   
 -   설치 프로그램에서는 클러스터링된 운영 체제에 .NET Framework 4.0을 설치합니다. 작동 중단 시간을 최소화하려면 설치 프로그램을 실행하기 전에 .NET Framework 4.0을 설치하는 것이 좋습니다.  
   
--   Visual Studio 구성 요소를 올바르게 설치할 수 있도록 되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 업데이트를 설치 해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 이 업데이트가 있는지 여부를 확인한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 계속하기 전에 업데이트를 다운로드하여 설치해야 합니다. 하는 동안 중단을 방지 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 다운로드 하 고 실행 하기 전에 업데이트를 설치할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 아래 설명 된 대로 설치 (또는 Windows Update에서 사용 가능한.NET 3.5 SP1에 대 한 모든 업데이트를 설치 합니다.):  
+-   Visual Studio 구성 요소가 올바르게 설치될 수 있도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 업데이트를 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 이 업데이트가 있는지 여부를 확인한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 계속하기 전에 업데이트를 다운로드하여 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 중 작업이 중단되는 것을 방지하려면 아래에 설명된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 실행하기 전에 업데이트를 다운로드하여 설치할 수 있습니다(또는 Windows Update에서 사용 가능한 .NET 3.5 SP1의 모든 업데이트 설치).  
   
-     설치 하는 경우 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Widows Server 2008 SP2 운영 체제가 설치 된 컴퓨터에서 필요한 업데이트를 가져올 수 있습니다 [여기](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     설치 하는 경우 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Windows Server 2008 SP2 운영 체제가 설치 된 컴퓨터에서 필요한 업데이트를 가져올 수 있습니다 [여기](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
-     [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 또는 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 운영 체제가 설치된 컴퓨터에 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]를 설치하는 경우 이 업데이트가 포함되어 있습니다.  
+     [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 또는 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 운영 체제가 설치된 컴퓨터에 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 를 설치하는 경우 이 업데이트가 포함되어 있습니다.  
   
--   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][릴리스 정보](http://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
+-   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][릴리스 정보](http://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
   
 -   로컬로 설치하는 경우 관리자로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
--   인스턴스를 업그레이드 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치 클러스터를 업그레이드 중인 인스턴스에 장애 조치 클러스터 여야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터로 업그레이드하려면 업그레이드되는 인스턴스가 장애 조치(Failover) 클러스터여야 합니다.  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터로 이동하려면 새 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터를 설치한 다음 데이터베이스 복사 마법사를 사용하여 독립 실행형 인스턴스의 사용자 데이터베이스를 마이그레이션합니다. 자세한 내용은 [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 독립 실행형 인스턴스를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터로 이동하려면 새 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터를 설치한 다음 데이터베이스 복사 마법사를 사용하여 독립 실행형 인스턴스의 사용자 데이터베이스를 마이그레이션합니다. 자세한 내용은 [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
   
 ## <a name="rolling-upgrades"></a>롤링 업그레이드  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]로 업그레이드하려면 패시브 노드부터 시작하여 장애 조치(Failover) 클러스터 노드 각각에서 한 번에 하나씩 업그레이드 동작으로 설치 프로그램을 실행해야 합니다. 업그레이드된 각 노드는 장애 조치 클러스터의 가능한 소유자 노드에서 제외됩니다. 예기치 않은 장애 조치(Failover)의 경우 업그레이드된 노드는 클러스터 리소스 그룹 소유권이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 업그레이드된 노드로 이동하기 전까지는 장애 조치(Failover)에 참여하지 않습니다.  
@@ -67,12 +67,12 @@ ms.locfileid: "48132113"
   
  업그레이드 프로세스 중에 클러스터 노드의 장애 조치(Failover) 동작을 제어하려면 명령 프롬프트에서 업그레이드 작업을 실행하고 /FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   
- **참고** 단일 노드 장애 조치 클러스터의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 그룹을 오프 라인입니다.  
+ **참고** 단일 노드 장애 조치(Failover) 클러스터가 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 그룹을 오프라인 상태로 전환합니다.  
   
 ## <a name="considerations-when-upgrading-from-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드할 경우 고려해야 할 사항  
  클러스터 보안 정책에 대해 도메인 그룹을 지정한 경우 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]에서 서비스 SID를 지정할 수 없습니다. 서비스 SID를 사용하려면 병렬 업그레이드를 수행해야 합니다.  
   
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 업그레이드하도록 선택하면 전체 텍스트 검색이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 설치되어 있는지 여부와 상관없이 이 기능이 설치에 포함됩니다.  
+ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 을 업그레이드하도록 선택하면 전체 텍스트 검색이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 설치되어 있는지 여부와 상관없이 이 기능이 설치에 포함됩니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 전체 텍스트 검색을 사용한 경우 사용 가능한 옵션과 상관없이 설치 프로그램을 통해 전체 텍스트 검색 카탈로그가 다시 작성됩니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48132113"
   
      **인스턴스 ID** - 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 확인란을 선택하고 값을 입력합니다. 기본값을 재정의하는 경우, 모든 장애 조치 클러스터 노드에서 업그레이드할 인스턴스에 대해 동일한 인스턴스 ID를 지정해야 합니다. 업그레이드된 인스턴스에 대한 인스턴스 ID는 다수의 노드에서 일치해야 합니다.  
   
-     **감지 된 인스턴스 및 기능** -인스턴스의 표 형식으로 표시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 중인 설치 프로그램을 실행 중인 컴퓨터에 있는 합니다. 계속하려면**다음**을 클릭합니다.  
+     **감지된 인스턴스 및 기능** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 계속하려면**다음**을 클릭합니다.  
   
 11. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산한 후 설치 프로그램을 실행 중인 컴퓨터에서 사용 가능한 디스크 공간과 실제로 필요한 디스크 공간의 크기를 비교하여 보여 줍니다.  
   
@@ -157,13 +157,13 @@ ms.locfileid: "48132113"
   
 #### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드하려면(기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터가 다중 서브넷 클러스터가 아닌 경우)  
   
-1.  에 설명 된 1-24 단계를 수행 합니다 [SQL Server 장애 조치 클러스터로 업그레이드](#UpgradeSteps) 클러스터를 업그레이드 하려면 위의 섹션 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]합니다.  
+1.  위 [SQL Server 장애 조치(Failover) 클러스터를 업그레이드하려면](#UpgradeSteps) 섹션에 설명된 1-24 단계를 수행하여 클러스터를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]로 업그레이드합니다.  
   
-2.  AddNode 설치 동작을 사용하여 다른 서브넷에 있는 노드를 추가하고 **클러스터 네트워크 구성** 페이지에서 IP 주소 리소스 종속성을 OR로 설정합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
+2.  AddNode 설치 동작을 사용하여 다른 서브넷에 있는 노드를 추가하고 **클러스터 네트워크 구성** 페이지에서 IP 주소 리소스 종속성을 OR로 설정합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하세요.  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>현재 V-LAN 확장을 사용하는 다중 서브넷 클러스터를 업그레이드하려면  
   
-1.  에 설명 된 1-24 단계를 수행 합니다 [SQL Server 장애 조치 클러스터로 업그레이드](#UpgradeSteps) 클러스터를 업그레이드 하려면 위의 섹션 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]합니다.  
+1.  위 [SQL Server 장애 조치(Failover) 클러스터를 업그레이드하려면](#UpgradeSteps) 섹션에 설명된 1-24 단계를 수행하여 클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드합니다.  
   
 2.  네트워크 설정을 변경하여 원격 노드를 다른 서브넷으로 이동합니다.  
   
