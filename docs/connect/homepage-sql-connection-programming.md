@@ -5,18 +5,17 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633801"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL server 프로그래밍 하는 클라이언트에 대 한 홈 페이지
 
@@ -270,7 +269,7 @@ Ruby를 사용 하 여 SQL 서버와 상호 작용할 수 있습니다. Ruby 설
 
 |||
 | :-- | :-- |
-| [Ruby 사용 하 여 SQL에 연결 하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
+| [Ruby를 사용하여 SQL에 연결하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
 | [Azure SQL database: Ruby 쿼리를 사용 하 여](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예입니다. |
 | [SQL Server를 사용 하 여 MacOS에서 Ruby 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
