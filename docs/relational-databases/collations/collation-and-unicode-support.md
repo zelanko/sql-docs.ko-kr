@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 이는 데이터 비교의 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
     
 ##  <a name="Unicode_Defn"></a> 유니코드 지원    
-유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. 
+유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이전의 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**) 동작이 달라지지 않습니다.   
