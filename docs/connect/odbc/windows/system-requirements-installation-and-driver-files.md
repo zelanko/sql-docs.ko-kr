@@ -11,19 +11,19 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716571"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084931"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 및 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 대한 연결을 지원합니다.  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]및 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 대한 연결을 지원합니다.  
   
-Windows 기반 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 하나 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 버전이 있는 컴퓨터에도 설치할 수 있습니다.  
+Windows 기반 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 버전이 하나 이상 있는 컴퓨터에도 설치할 수 있습니다.  
   
 ODBC Driver 13 및 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 위의 외에도 SQL Server 2016을 지원 합니다. 
 
@@ -53,8 +53,8 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 - [Windows 기반 Microsoft SQL Server용 ODBC Driver 13 다운로드](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Windows 기반 Microsoft SQL Server용 ODBC Driver 11을 다운로드합니다](https://www.microsoft.com/download/details.aspx?id=36434). 
 
-[!NOTE]
-이러한 드라이버 17.1.0.1 했거나 아래 설치에 대 한 것이 좋습니다 최신 버전의 드라이버를 설치 하기 전에 수동으로 제거할 수
+> [!NOTE]
+> 이러한 드라이버 17.1.0.1 했거나 아래 설치에 대 한 것이 좋습니다 최신 버전의 드라이버를 설치 하기 전에 수동으로 제거할 수
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 설치된 상태에서 설치될 수 있습니다.  
 

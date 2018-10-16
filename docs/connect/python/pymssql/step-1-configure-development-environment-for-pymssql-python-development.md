@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787451"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905806"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>1단계: pymssql Python 개발을 위한 개발 환경 구성
 SQL Server 용 Python Driver를 사용 하 여 응용 프로그램을 개발 하기 위해 개발 환경 필수 구성 요소를 사용 하 여 구성 해야 합니다.    
@@ -32,7 +32,7 @@ c. Python 런타임을 설치 msi 다운로드 한 번 실행
   
 2. **Pymssql 모듈을 다운로드** 에서 [여기](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    올바른 whl 파일을 선택 했는지 확인 하십시오.  예를 들어: 64 비트 컴퓨터에서 Python 2.7을 사용 하는 경우 선택: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl 합니다. 에 배치할.whl 파일 다운로드 한 후의 c:/python27 폴더입니다.  
+    올바른 whl 파일을 선택 했는지 확인 하십시오.  예를 들어: 64 비트 컴퓨터에서 Python 2.7을 사용 하는 경우 선택: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl 합니다. 다운로드 한 후 c:/python27 폴더에 넣습니다.whl 파일을 표시 합니다.  
       
 3. **Cmd.exe를 열으십시오**  
   
