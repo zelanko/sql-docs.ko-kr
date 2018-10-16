@@ -22,12 +22,12 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 54a0f54da0050828766749f7df09e7ffc7869640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a45b7b7ebcc9e6c9e3110dc7c0fa3439a0af10
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169243"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  대칭 키를 암호화하는 데 사용되는 인증서를 지정합니다. 이 인증서는 데이터베이스에 이미 있어야 합니다.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  대칭 키를 암호화하는 데 사용되는 암호를 지정합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  

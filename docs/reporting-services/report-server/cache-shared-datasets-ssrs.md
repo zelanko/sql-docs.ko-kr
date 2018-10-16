@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 536e0a5e46c6d0650c68ddc41f492365895b31c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617421"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905657"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 집합 캐시(SSRS)
   공유 데이터 집합에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 집합 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 집합을 처음 사용할 때 또는 일정을 지정하여 공유 데이터 집합이 캐시되도록 구성할 수 있습니다.  

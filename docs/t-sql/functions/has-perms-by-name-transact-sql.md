@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749499"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169213"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 이름을 나타내는 **sysname** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[***sub name***]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'***sub name***'** 을 사용하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[**_sub name_**]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'**_sub name_**'** 을 사용하세요.  
   
  *sub-securable_class*  
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  

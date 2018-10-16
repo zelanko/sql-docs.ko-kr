@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840001"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906519"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>1. SELECT 목록에 정의된 단일 열 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 결과 집합을 정렬합니다. 특정 정렬 순서를 지정하지 않으므로 기본값(오름차순)이 사용됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>2. SELECT 목록에 정의되지 않은 열 지정  
  다음 예에서는 SELECT 목록에 없지만 FROM 절에 지정된 테이블에 정의되어 있는 열을 기준으로 결과 집합을 정렬합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>3. 별칭을 정렬 열로 지정  
  다음 예에서는 열 별칭 `SchemaName`을 정렬 순서 열로 지정합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>4. 식을 정렬 열로 지정  
  다음 예에서는 식을 정렬 열로 사용합니다. 이 식은 DATEPART 함수를 사용하여 직원이 고용된 연도별로 결과 집합을 정렬하도록 정의됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>1. 내림차순 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 내림차순으로 결과 집합을 정렬합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>2. 오름차순 지정  
  다음 예에서는 `Name` 열을 기준으로 오름차순으로 결과 집합을 정렬합니다. 문자가 숫자순이 아니라 사전순으로 정렬됩니다. 즉, 10이 2보다 먼저 옵니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>3. 오름차순과 내림차순 둘 다 지정  
  다음 예에서는 두 열을 기준으로 결과 집합을 정렬합니다. 쿼리 결과 집합은 먼저 `FirstName` 열을 기준으로 오름차순으로 정렬된 다음 `LastName` 열을 기준으로 내림차순으로 정렬됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> 데이터 정렬 지정  
  다음 예에서는 ORDER BY 절에서 데이터 정렬을 지정할 경우 쿼리 결과가 반환되는 순서가 어떻게 변경되는지를 보여 줍니다. 대/소문자 및 액센트를 구분하지 않는 데이터 정렬을 사용하여 정의된 열이 포함된 테이블이 만들어집니다. 다양한 대/소문자와 악센트가 있는 값을 삽입했습니다. ORDER BY 절에서 데이터 정렬을 지정하지 않았으므로 첫 번째 쿼리는 열의 데이터 정렬을 사용하여 값을 정렬합니다. 두 번째 쿼리에서는 ORDER BY 절에 대/소문자 구분 및 악센트 구분 데이터 정렬을 지정했으므로 행이 반환되는 순서가 변경됩니다.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> 조건부 순서 지정  
  다음 예제에서는 ORDER BY 절에 CASE 식을 사용하여 지정된 열 값에 따라 행의 정렬 순서를 조건부로 결정합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> 순위 함수에 ORDER BY 사용  
  다음 예에서는 순위 함수 ROW_NUMBER, RANK, DENSE_RANK 및 NTILE에 ORDER BY 절을 사용합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 정수 상수를 OFFSET 및 FETCH 절의 값으로 지정합니다. 첫 번째 쿼리는 `DepartmentID` 열을 기준으로 정렬된 모든 행을 반환합니다. 이 쿼리에서 반환된 결과를 다음에 나오는 두 쿼리의 결과와 비교해 보세요. 다음 쿼리에서는 `OFFSET 5 ROWS` 절을 사용하여 처음 5개 행을 건너뛰고 나머지 행을 모두 반환합니다. 마지막 쿼리에서는 `OFFSET 0 ROWS` 절을 사용하여 첫 번째 행에서 시작한 다음 `FETCH NEXT 10 ROWS ONLY`를 사용하여 반환되는 행을 정렬된 결과 집합의 10개 행으로 제한합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>2. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 변수 `@StartingRowNumber` 및 `@FetchRows`를 선언하고 이러한 변수를 OFFSET 및 FETCH 절에 지정합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>3. 식을 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 `@StartingRowNumber - 1` 식을 사용하여 OFFSET 값을 지정하고, `@EndingRowNumber - @StartingRowNumber + 1` 식을 사용하여 FETCH 값을 지정합니다. 또한 OPTIMIZE FOR 쿼리 힌트를 지정합니다. 이 힌트는 쿼리가 컴파일되고 최적화될 때 지역 변수에 대해 특정 값을 제공하는 데 사용될 수 있습니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>4. 상수 스칼라 하위 쿼리를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 상수 스칼라 하위 쿼리를 사용하여 FETCH 절의 값을 정의합니다. 이 하위 쿼리는 `PageSize` 테이블의 `dbo.AppSettings` 열에서 단일 값을 반환합니다.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>5. 단일 트랜잭션에서 여러 쿼리 실행  
  다음 예에서는 쿼리의 모든 요청에서 안정적인 결과가 반환되도록 페이징 솔루션을 구현하는 한 가지 방법을 보여 줍니다. 쿼리는 스냅숏 격리 수준을 사용하여 단일 트랜잭션에서 실행되며, ORDER BY 절에 지정된 열이 열의 고유성을 보장합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> UNION, EXCEPT 및 INTERSECT가 포함된 ORDER BY 사용  
  쿼리에서 UNION, EXCEPT 또는 INTERSECT 연산자를 사용하는 경우 문의 끝 부분에 ORDER BY 절을 지정해야 하며 조합된 쿼리 결과가 정렬됩니다. 다음 예에서는 빨간색 또는 노란색 제품을 모두 반환하고 이 조합된 목록을 `ListPrice` 열을 기준으로 정렬합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 결과 집합을 숫자 `EmployeeKey` 열을 기준으로 오름차순으로 정렬하는 방법을 보여 줍니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  다음 예제에서는 결과 집합을 숫자 `EmployeeKey` 열을 기준으로 내림차순으로 정렬합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  다음 예제에서는 결과 집합을 `LastName` 열을 기준으로 정렬합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  다음 예제에서는 두 열을 기준으로 정렬합니다. 이 쿼리는 먼저 `FirstName` 열을 기준으로 오름차순으로 정렬한 다음, 공통 `FirstName` 값을 `LastName` 열을 기준으로 내림차순으로 정렬합니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
