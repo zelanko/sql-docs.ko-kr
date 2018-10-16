@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cf4f93dfb52177e59e1a283b13236a6a029725c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654203"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,7 +344,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 |기능|SQL Server Integration Services|SQL Server 호환성 수준 100 이상|SQL Server 2008 이상(호환성 수준 90).|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 집계|WITH CUBE 또는 WITH ROLLUP에 대해 지원되지 않습니다.|WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE 또는 ROLLUP에 대해 지원됩니다.|호환성 수준 100과 같습니다.|  
-|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(***arg1***,***...argN***)** 또는 **dbo.rollup(***arg1***,**...*argN***)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (***arg1***,**...argN **)** 또는 **dbo.rollup(** arg1 **,***...argN***)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> "'cube'&#124;'rollup' 키워드 근처의 구문이 잘못되었습니다."라는 오류 메시지가 반환됩니다.<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (***arg1***,***...argN*) 또는 **dbo.rollup(***arg1***,***...argN***)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(**_arg1_**,**_...argN_**)** 또는 **dbo.rollup(**_arg1_**,**..._argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (**_arg1_**,**...argN **)** 또는 **dbo.rollup(** arg1 **,**_...argN_**)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> "'cube'&#124;'rollup' 키워드 근처의 구문이 잘못되었습니다."라는 오류 메시지가 반환됩니다.<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (**_arg1_**,**_...argN_) 또는 **dbo.rollup(**_arg1_**,**_...argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|지원되지 않음|지원됨|지원됨|  
 |CUBE|지원되지 않음|지원됨|지원되지 않음|  
 |ROLLUP|지원되지 않음|지원됨|지원되지 않음|  

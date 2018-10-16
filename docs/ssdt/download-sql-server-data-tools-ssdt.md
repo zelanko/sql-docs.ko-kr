@@ -1,29 +1,25 @@
 ---
 title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - ssdt 설치, ssdt 다운로드, 최신 ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 907b8a7d11bbd7889f3796d3f56633caec22a529
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736611"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,18 +44,20 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.8) 다운로드](https://go.microsoft.com/fwlink/?linkid=2014060) 
+[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.8.1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2024393) 
 
 > [!IMPORTANT]
-> - Visual Studio 2017용 SSDT(15.8)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - Visual Studio 2017용 SSDT(15.8.1)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - Windows 10 1803에 SSDT를 설치하고 SSIS를 설치하도록 선택하면 시스템이 예기치 않게 다시 부팅될 수 있습니다. 설치 관리자를 다시 시작하고 다시 부팅한 후 설치를 계속할 수 있습니다.
+> - SSDT 15.8.1은 현재 Windows 7 SP1을 지원하지 않으므로 Windows 7 SP1을 사용 중인 경우 15.8.0을 계속 사용하세요.
 
 
 
 **버전 정보**  
   
-릴리스 번호: 15.8  
-빌드 번호: 14.0.16174.0  
-릴리스 날짜: 2018년 9월 5일  
+릴리스 번호: 15.8.1  
+빌드 번호: 14.0.16179.0  
+릴리스 날짜: 2018년 9월 27일  
 
 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
 
@@ -69,21 +67,41 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.  
 
-[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
-[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
-[일본어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
-[한국어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
+[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
+[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
+[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
+[프랑스어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
+[독일어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
+[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
+[일본어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
+[한국어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
+[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
+[러시아어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
+[스페인어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
 
 
+## <a name="offline-install"></a>오프라인 설치
 
+인터넷에 연결되어 있지 않은 경우 SSDT를 설치하려면 이 섹션의 단계를 따르세요. 자세한 내용은 [Visual Studio 2017의 네트워크 설치 만들기](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio)를 참조하세요.
 
+먼저 온라인 상태에서 다음 단계를 완료하세요.
+
+1. [SSDT 독립 실행형 설치 관리자를 다운로드](#ssdt-for-vs-2017-standalone-installer)합니다.
+2. [vs_sql.exe를 다운로드](https://aka.ms/vs/15/release/vs_sql.exe)합니다.
+3. 여전히 온라인 상태에서 다음 명령 중 하나를 실행하여 오프라인 설치에 필요한 모든 파일을 다운로드합니다. `--layout` 옵션이 핵심입니다. <filepath>를 파일을 저장할 실제 경로로 바꿉니다.
+
+   1.   특정 언어의 경우 `vs_sql.exe --layout c:\<filepath> --lang en-us` 로캘을 전달합니다(단일 언어는 1GB 이하).  
+   2. 모든 언어의 경우 `--lang` 인수를 생략한 `vs_sql.exe --layout c:\<filepath>` 형태를 사용합니다(모든 언어는 3.9GB 이하).
+
+이전 단계를 완료한 후 오프라인 상태에서 다음 작업을 완료할 수 있습니다.
+
+1. SSDT 페이로드 폴더로 VS2017 페이로드를 복사합니다. 두 폴더의 모든 파일이 단일 레이아웃 폴더에 결합되도록 합니다.
+2. `vs_setup.exe --NoWeb`을 실행하여 VS2017 Shell 및 SQL Server Data Project를 설치합니다.
+3. `SSDT-Setup-ENU.exe /install`을 실행하고 SSIS/SSRS/SSAS를 선택합니다.
+
+   - 무인 설치의 경우 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`를 실행합니다.  
+
+사용 가능한 옵션을 보려면 `SSDT-Setup-ENU.exe /help`를 실행하세요.
 
 ## <a name="supported-sql-versions"></a>지원되는 SQL 버전
   
