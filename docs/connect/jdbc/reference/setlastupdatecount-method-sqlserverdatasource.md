@@ -16,12 +16,12 @@ ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69efe861e21596be3dd222ffc6dd582560ff983c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3369fbc84cb16ed0f9b587ed20fe7fe368d11b02
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623851"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084917"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>setLastUpdateCount 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

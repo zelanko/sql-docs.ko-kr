@@ -8,18 +8,18 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854395"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072337"
 ---
 ## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정
 
 키워드 **ApplicationIntent** 연결 문자열에 지정할 수 있습니다. 할당 가능한 값은 **ReadWrite** 하거나 **ReadOnly**합니다. 기본값은 **ReadWrite**합니다.
 
-때 **ApplicationIntent = ReadOnly**, 클라이언트는 연결할 때 읽기 작업을 요청 합니다. 서버 연결 시 및 시 의도 적용 한 **사용 하 여** 문을 데이터베이스.
+때 **ApplicationIntent = ReadOnly**, 클라이언트는 연결할 때 읽기 작업을 요청합니다. 서버 연결 시 및 시 의도 적용 한 **사용 하 여** 문을 데이터베이스.
 
 **ApplicationIntent** 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
 
@@ -54,5 +54,5 @@ ms.locfileid: "37854395"
 
 각 연결이 여러 개를 사용 하 여 읽기 전용 라우팅을 일부만 동일한 읽기 전용 복제본에 연결할 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청이 동일한 읽기 전용 복제본에 연결할 수 있는지 확인할 수 있습니다. 확인 하 여이 동일성 *되지* 가용성 그룹 수신기에 전달 합니다 **서버** 연결 문자열 키워드. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.
 
-읽기 전용 라우팅을 주 복제본에 연결할 때 보다 더 오래 걸릴 수 있습니다. 대기 시간이 긴 이유는 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음, 가장 잘 읽을 수 있는 보조 복제본을 찾기 때문입니다. 이러한 여러 staps 인해 30 초 이상으로 사용자 로그인 제한 시간을 늘려야 합니다.
+읽기 전용 라우팅을 주 복제본에 연결할 때 보다 더 오래 걸릴 수 있습니다. 대기 시간이 긴 이유는 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음, 가장 잘 읽을 수 있는 보조 복제본을 찾기 때문입니다. 이러한 여러 staps 인해 30 초 이상 로그인 시간 제한을 늘려야 합니다.
 

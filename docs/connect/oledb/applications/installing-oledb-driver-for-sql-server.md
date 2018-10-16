@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f47573e6ecc1e7aa4770c8d1ae34768e09720d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800661"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071669"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
