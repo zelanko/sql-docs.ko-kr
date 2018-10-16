@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817081"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906273"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   **NO_BROWSETABLE** 옵션을 사용하여 찾아보기 모드를 설정하려면 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행해야 합니다.  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  SampleDB 데이터베이스에서 c1이라는 단일 열을 각각 포함하는 tleft 테이블과 tright 테이블을 만듭니다. tleft 테이블의 c1 열에 대한 고유 인덱스를 정의하고, Null 값을 허용하도록 해당 열을 설정합니다. 이렇게 하려면 해당하는 쿼리 창에서 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  tleft 테이블과 tright 테이블에 여러 값을 삽입합니다. tleft 테이블에 Null 값을 삽입합니다. 이렇게 하려면 쿼리 창에서 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  **NO_BROWSETABLE** 옵션을 켭니다. 이렇게 하려면 쿼리 창에서 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  SELECT 쿼리에서 외부 조인 문을 사용하여 tleft 테이블 및 tright 테이블의 데이터에 액세스합니다. tleft 테이블이 외부 조인 문의 내부에 있는지 확인합니다. 이렇게 하려면 쿼리 창에서 다음과 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  다음 예에서는 `FOR XML AUTO`를 `TYPE` 및 `XMLSCHEMA` 옵션을 사용하여 지정합니다. `TYPE` 옵션으로 인해 결과 집합은 **xml** 형식으로 클라이언트에 반환됩니다. `XMLSCHEMA` 옵션은 반환되는 XML 데이터에 인라인 XSD 스키마가 포함되도록 지정하며 `ELEMENTS` 옵션은 XML 결과가 요소 중심이 되도록 지정합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

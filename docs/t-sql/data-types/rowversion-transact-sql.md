@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4591593408a6cbafb2f6a64b790403fd72cb97b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efa562211bbd32633d149796162b67141e0c174e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807061"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085320"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myValue;  
+    AND RV = myRv;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -100,7 +100,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue`는 마지막으로 행을 읽은 시간을 나타내는 행에 대한 **rowversion** 열 값입니다. 이 값은 실제 **rowversion** 값으로 바꾸어야 합니다. 예를 들어 실제 **rowversion** 값은 0x00000000000007D3입니다.
+`myRv`는 마지막으로 행을 읽은 시간을 나타내는 행에 대한 **rowversion** 열 값입니다. 이 값은 실제 **rowversion** 값으로 바꾸어야 합니다. 예를 들어 실제 **rowversion** 값은 0x00000000000007D3입니다.
   
 또한 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 트랜잭션에 삽입할 수도 있습니다. 트랜잭션 범위 내에서 `@t` 변수를 쿼리하면 `myKey` 테이블을 다시 쿼리하지 않고도 테이블의 업데이트된 `MyTes` 열을 검색할 수 있습니다.
   
@@ -119,7 +119,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myValue;  
+    AND TS = myTS;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

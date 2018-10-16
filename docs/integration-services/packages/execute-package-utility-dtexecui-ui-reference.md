@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669431"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169113"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
@@ -283,7 +283,7 @@ ms.locfileid: "47669431"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="logging-page"></a>로깅 페이지  
- **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER***classid* 옵션이 추가됩니다.  
+ **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER**_classid_ 옵션이 추가됩니다.  
   
 ### <a name="options"></a>Options  
  **로그 공급자**  
@@ -302,7 +302,7 @@ ms.locfileid: "47669431"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="set-values-page"></a>값 설정 페이지  
- **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET***propertypath;value* 옵션이 추가됩니다.  
+ **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET**_propertypath;value_ 옵션이 추가됩니다.  
   
 ### <a name="options"></a>Options  
  **속성 경로**  
