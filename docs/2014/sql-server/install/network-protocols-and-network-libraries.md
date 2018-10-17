@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65ae022fe3445663837b1aaf01204a382ddcdc72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056335"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
   서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  
@@ -70,12 +67,12 @@ ms.locfileid: "37175112"
   
 -   로컬 영역 연결 속성에서 **인터넷 프로토콜(TCP/IP) 속성** 대화 상자를 사용하여 **Microsoft 네트워크용 파일 및 프린터 공유** 및 **Microsoft 네트워크용 클라이언트**를 제거합니다.  
   
-## <a name="endpoints"></a>끝점  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*끝점*으로 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 끝점 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 끝점에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 끝점의 카탈로그 뷰에서 가져와야 하는 끝점 ID가 사용됩니다.  
+## <a name="endpoints"></a>엔드포인트  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*엔드포인트*로 표시됩니다. ph x="1" /&gt; 엔드포인트에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 엔드포인트 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 엔드포인트에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 엔드포인트의 카탈로그 뷰에서 가져와야 하는 엔드포인트 ID가 사용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 지원되는 모든 네트워크 프로토콜뿐만 아니라 관리자 전용 연결에 대해서도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점을 만듭니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 지원되는 모든 네트워크 프로토콜뿐만 아니라 관리자 전용 연결에 대해서도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트를 만듭니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 프로그램에서 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 끝점은 다음과 같습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 프로그램에서 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔드포인트는 다음과 같습니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 로컬 컴퓨터  
   
@@ -83,7 +80,7 @@ ms.locfileid: "37175112"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 기본 TCP  
   
- 끝점에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [끝점 카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)를 참조하세요.  
+ 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하세요.  
   

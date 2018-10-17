@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157933"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37214733"
   
  사용할 서버의 이름을 찾으려면 브라우저를 열고 보고서를 게시할 SharePoint 라이브러리를 찾습니다. 서버 이름은 프로토콜 접두사 바로 뒤에 표시됩니다(예: http:*//servername*).  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 끝점은 사용할 수 없습니다. 프록시 끝점에는 포트 번호가 포함됩니다(예: http:*//servername:8080/reportserver*).  
+ ph x="1" /&gt; URL 프록시 엔드포인트는 사용할 수 없습니다. 프록시 엔드포인트에는 포트 번호가 포함됩니다(예: http:*//servername:8080/reportserver*).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
  보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: http://*servername/site* 또는 http://*servername/site/subsite*).  

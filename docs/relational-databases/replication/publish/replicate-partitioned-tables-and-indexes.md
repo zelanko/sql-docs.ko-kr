@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], partitioned tables
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f80982effcb6102f8f55be8a7a9814d716c79
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: aface984e9cc370ed906ab5abef65ac6f4bb6bd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787261"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +43,9 @@ ms.locfileid: "37358695"
   
 -   다음 저장 프로시저 중 하나의 *schema_option* 매개 변수를 사용합니다.  
   
-    -   트랜잭션 복제의 경우[sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) f또는 transactional replication  
+    -   트랜잭션 복제의 경우[sp_addarticle](../../../relational-databases/system-st또는ed-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle](../../../relational-databases/system-st또는ed-procedures/sp-changearticle-transact-sql.md) f또는 transactional replication  
   
-    -   병합 복제의 경우[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)또는 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) f또는 merge replication  
+    -   병합 복제의 경우[sp_addmergearticle](../../../relational-databases/system-st또는ed-procedures/sp-addmergearticle-transact-sql.md) 또는 [sp_changemergearticle](../../../relational-databases/system-st또는ed-procedures/sp-changemergearticle-transact-sql.md) f또는 merge replication  
   
      위의 표에 나온 개체를 복사하려면 적절한 스키마 옵션 값을 지정합니다. 스키마 옵션을 지정하는 방법은 [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md)을 참조하십시오.  
   

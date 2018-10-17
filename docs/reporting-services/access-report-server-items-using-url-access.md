@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48b0df64244d5428b019625647d312448277d5bc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 901f2a276e1b09befa2fc10e01003456e4cfe7e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795461"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
   이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다. 이 매개 변수 문자열을 실제로 추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  

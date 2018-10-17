@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.makemanaged.agentaccount.F1
@@ -22,20 +19,19 @@ f1_keywords:
 helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebe062a78caf3a0589afaef68b7cde988b8bcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8915f2135e8d5b1d05a841b4cf004979437acea2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831151"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
+  ph x="1" /&gt; 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
  이 릴리스에서 UCP 및 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
   
@@ -187,7 +183,7 @@ ms.locfileid: "32948218"
   
  데이터 수집 프로세스는 즉시 시작되지만 최대 30분이 지나야 유틸리티 탐색기 내용 창의 대시보드와 뷰포인트에 데이터가 표시되기 시작합니다. 데이터 수집은 15분마다 한 번씩 수행됩니다. 데이터를 새로 고치려면 **유틸리티 탐색기 탐색** 창의 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새로 고침**을 선택하거나 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 마우스 오른쪽 단추로 클릭한 다음 **새로 고침**을 선택합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 인스턴스를 제거하려면 **유틸리티 탐색기 탐색** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
+ ph x="1" /&gt; 유틸리티에서 관리되는 인스턴스를 제거하려면 **유틸리티 탐색기 탐색** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
   
 ##  <a name="PowerShell_enroll"></a> PowerShell을 사용하여 SQL Server 인스턴스 등록  
  다음 예를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록할 수 있습니다.  

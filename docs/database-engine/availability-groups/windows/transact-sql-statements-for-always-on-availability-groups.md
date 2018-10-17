@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a483026bde8d7b70ab380ac9426370c4fff98db
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9711abe965e293824da78bf0d956311679fc7c9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771427"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +40,9 @@ ms.locfileid: "34771199"
 -   [AVAILABILITY GROUP TRANSACT-SQL 문에 대한 제한 사항](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 은 데이터베이스 미러링 끝점(서버 인스턴스에 없는 경우)을 만듭니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 끝점이 필요합니다.  
+ [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 은 데이터베이스 미러링 엔드포인트(서버 인스턴스에 없는 경우)를 만듭니다. ph x="1" /&gt; 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
   
- 끝점을 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 끝점을 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
+ 엔드포인트를 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트를 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md) 은 새 가용성 그룹을 만들고 선택적으로 가용성 그룹 수신기를 만듭니다. 최소한 초기 주 복제본이 될 로컬 서버 인스턴스는 지정해야 합니다. 선택적으로 최대 네 개의 보조 복제본을 지정할 수도 있습니다.  

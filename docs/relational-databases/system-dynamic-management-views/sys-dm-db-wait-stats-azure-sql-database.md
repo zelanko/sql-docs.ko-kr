@@ -5,10 +5,7 @@ ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 01fd39cccc2872e1ebbc87340f5290dc9690e093
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628161"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -102,13 +98,13 @@ ms.locfileid: "38051407"
 |BACKUPIO|백업 태스크가 데이터를 기다리거나 데이터를 저장할 버퍼를 기다리는 경우에 발생합니다. 이 유형은 태스크가 테이프 탑재를 기다리는 경우 외에는 일반적이지 않습니다.|  
 |BACKUPTHREAD|태스크가 백업 작업이 완료될 때까지 대기하는 경우에 발생합니다. 대기 시간은 몇 분에서 몇 시간까지 걸릴 수 있습니다. 대기 중인 태스크가 I/O 프로세스에 위치하면 문제가 있는 것이 아닙니다.|  
 |BAD_PAGE_PROCESS|백그라운드의 주의 대상 페이지 로거가 5초보다 긴 간격으로 실행되는 것을 방지하려는 경우에 발생합니다. 주의 대상 페이지가 너무 많으면 로거가 자주 실행됩니다.|  
-|BROKER_CONNECTION_RECEIVE_TASK|연결 끝점에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 끝점에 대한 수신 액세스는 직렬화됩니다.|  
-|BROKER_ENDPOINT_STATE_MUTEX|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 연결 끝점의 상태에 액세스하려는 경합이 있는 경우에 발생합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.|  
+|BROKER_CONNECTION_RECEIVE_TASK|연결 엔드포인트에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 엔드포인트에 대한 수신 액세스는 직렬화됩니다.|  
+|BROKER_ENDPOINT_STATE_MUTEX|ph x="1" /&gt; 연결 엔드포인트의 상태에 액세스하려는 경합이 있는 경우에 발생합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.|  
 |BROKER_EVENTHANDLER|태스크가 [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 기본 이벤트 처리기에서 대기하는 경우에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_INIT|각 활성 데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 초기화하는 경우에 발생합니다. 자주 발생하면 안 됩니다.|  
 |BROKER_MASTERSTART|태스크가 [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 기본 이벤트 처리기가 시작될 때까지 대기하는 경우에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_RECEIVE_WAITFOR|RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 받을 준비가 된 메시지가 없는 경우에 주로 발생합니다.|  
-|BROKER_REGISTERALLENDPOINTS|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 연결 끝점의 초기화 중에 발생합니다. 매우 짧게 발생해야 합니다.|  
+|BROKER_REGISTERALLENDPOINTS|ph x="1" /&gt; 연결 엔드포인트의 초기화 중에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_SERVICE|대상 서비스와 연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대상 목록이 업데이트되거나 우선 순위가 다시 매겨지는 경우에 발생합니다.|  
 |BROKER_SHUTDOWN|계획된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 종료 시 발생합니다. 가능하면 매우 짧게 발생해야 합니다.|  
 |BROKER_TASK_STOP|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐 태스크 처리기가 태스크를 종료하려고 하는 경우에 발생합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.|  
@@ -179,7 +175,7 @@ ms.locfileid: "38051407"
 |FT_RESTART_CRAWL|임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.|  
 |FULLTEXT GATHERER|전체 텍스트 작업을 동기화하는 경우에 발생합니다.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|HTTP_ENUMERATION|시스템 시작 시에 HTTP를 시작할 HTTP 끝점을 열거하기 위해 발생합니다.|  
+|HTTP_ENUMERATION|시스템 시작 시에 HTTP를 시작할 HTTP 엔드포인트를 열거하기 위해 발생합니다.|  
 |HTTP_START|연결이 HTTP 초기화가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |IMPPROV_IOWAIT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

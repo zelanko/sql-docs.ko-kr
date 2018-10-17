@@ -4,30 +4,26 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.utility.remove.f1
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1929acc2088d3cdaaa866788a74d9880845226c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 566ba4bae69b90b0ea17006b2bb1b1735a827e75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632891"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하십시오. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
+  ph x="1" /&gt; 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
   
 > [!IMPORTANT]  
 >  이 절차를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하기 전에 제거할 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 SQL Server 에이전트 서비스가 실행 중인지 확인하십시오.  
@@ -43,11 +39,11 @@ ms.locfileid: "32943928"
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>SQL Server 유틸리티에서 수동으로 SQL Server의 관리되는 인스턴스 제거  
  이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
   
- PowerShell을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하십시오. 이 스크립트는 다음 작업을 수행합니다.  
+ PowerShell을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 스크립트는 다음 작업을 수행합니다.  
   
 -   서버 인스턴스 이름으로 UCP를 얻습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거합니다.  
+-   ph x="1" /&gt; 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스를 제거합니다.  
   
 ```  
 # Get Ucp connection  
@@ -70,7 +66,7 @@ $ManagedInstance.Remove($InstanceConnection);
 select @@SERVERNAME AS instance_name  
 ```  
   
- 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 UCP에서 완전하게 제거됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 데이터를 다음번 새로 고치면 목록 뷰에 해당 인스턴스가 표시되지 않습니다. 이 상태는 SSMS 사용자 인터페이스를 통해 관리되는 인터페이스 제거 작업을 성공적으로 수행한 것과 동일합니다.  
+ 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 UCP에서 완전하게 제거됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 데이터를 다음번 새로 고치면 목록 뷰에 해당 인스턴스가 표시되지 않습니다. 이 상태는 SSMS 사용자 인터페이스를 통해 관리되는 인스턴스 제거 작업을 성공적으로 수행한 것과 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   

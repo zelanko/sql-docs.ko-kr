@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -21,30 +18,29 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30fc710837c06d61788b330bfe0c603748e3d6a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bd5d38c0541a6e56b73cf5da321844eaa94fd5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702551"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
  유틸리티 제어 지점을 만드는 방법은 [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 추가하는 방법은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)을 참조하세요.  
  
   
 ### <a name="uielement-list"></a>UIElement 목록  
  관리되는 인스턴스 상태  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 상태는 유틸리티 탐색기 내용 창에서 왼쪽에 표시됩니다.  
+ ph x="1" /&gt; 의 관리되는 인스턴스 상태는 유틸리티 탐색기 내용 창에서 왼쪽에 표시됩니다.  
   
  관리되는 인스턴스 상태 매개 변수는 다음과 같습니다.  
   
@@ -68,14 +64,14 @@ ms.locfileid: "32947898"
   
  각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 관리되는 인스턴스가 해당되는지 표시됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램에 대한 필터링된 뷰를 만들려면 유틸리티 대시보드에서 해당 슬라이딩 표시기 옆에 있는 사용 범주 링크를 클릭합니다. 예를 들어 **유틸리티 탐색기 내용** 창에서 **초과 사용 인스턴스 CPU** 를 클릭할 경우, SSMS에서는 현재 정책 설정을 기반으로 CPU가 초과 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대한 필터링된 목록 뷰를 만듭니다.  
+ ph x="1" /&gt; 의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램에 대한 필터링된 뷰를 만들려면 유틸리티 대시보드에서 해당 슬라이딩 표시기 옆에 있는 사용 범주 링크를 클릭합니다. 예를 들어 **유틸리티 탐색기 내용** 창에서 **초과 사용 인스턴스 CPU**를 클릭할 경우, SSMS에서는 현재 정책 설정을 기반으로 CPU가 초과 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대한 필터링된 목록 뷰를 만듭니다.  
   
  사용 범주 링크를 클릭할 때 유틸리티 탐색기 탐색 창의 해당 노드에 **(필터링됨)** 이 추가됩니다. 즉, **관리되는 인스턴스** 레이블이 **관리되는 인스턴스(필터링됨)** 로 바뀝니다. 필터 설정을 보려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 설정**을 클릭합니다. 필터 설정을 지우려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 제거**를 클릭합니다.  
   
- 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
+ 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보&amp;#40;SQL Server 유틸리티&amp;#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
   
  유틸리티 요약  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 수와 데이터 계층 응용 프로그램의 수를 표시합니다.  
+ ph x="1" /&gt; 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 수와 데이터 계층 응용 프로그램의 수를 표시합니다.  
   
  데이터 계층 응용 프로그램 상태  
  데이터 계층 응용 프로그램의 상태는 유틸리티 탐색기 내용 창에서 오른쪽에 표시됩니다.  
@@ -263,7 +259,7 @@ ms.locfileid: "32947898"
 -   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 [datetime(TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 항목을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 [datetimeoffset(TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 항목을 참조하세요.
 
 ## <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
- 유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]개별 인스턴스의 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 저장소 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
+ 유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 저장소 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
   
 ### <a name="uielement-list"></a>UIElement 목록  
  목록 뷰  

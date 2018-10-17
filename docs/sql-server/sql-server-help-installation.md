@@ -5,23 +5,17 @@ ms.date: 12/15/2017
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
-- SQL Server 2016
-- SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b6b7287694779a3eaf120879120796c56b2dc413
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699911"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
@@ -177,7 +171,7 @@ Visual Studio에서 설치된 도움말을 보려면:
 
 **SSMS 17.x에서 SQL Server 온라인 도움말을 보려면**
 
-- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
+- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/ https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
 
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

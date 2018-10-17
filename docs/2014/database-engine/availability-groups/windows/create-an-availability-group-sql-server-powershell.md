@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65663e51d915b86a796bb98126c9efeebf74bf14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8de3870fa115bf8d47917c5855a386e78214b644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211223"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>가용성 그룹 만들기(SQL Server PowerShell)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 PowerShell cmdlet을 사용하여 AlwaysOn 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
@@ -50,7 +47,7 @@ ms.locfileid: "37273509"
   
 |태스크|PowerShell cmdlet(사용 가능한 경우) 또는 Transact-SQL 문|태스크를 수행할 위치**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 끝점 만들기|`New-SqlHadrEndPoint`|데이터베이스 미러링 끝점이 없는 각 서버 인스턴스에서 실행합니다.<br /><br /> 참고: 기존 데이터베이스 미러링 끝점을 변경 하려면 사용 `Set-SqlHadrEndpoint`합니다.|  
+|ph x="1" /&gt; 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|`New-SqlHadrEndPoint`|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br /> 참고: 기존 데이터베이스 미러링 끝점을 변경 하려면 사용 `Set-SqlHadrEndpoint`합니다.|  
 |가용성 그룹 만들기|먼저 `New-SqlAvailabilityReplica` cmdlet과 `-AsTemplate` 매개 변수를 사용하여 가용성 그룹에 포함할 두 개의 각 가용성 복제본에 대한 메모리 내 가용성 복제본 개체를 만듭니다.<br /><br /> 그런 다음 사용 하 여 가용성 그룹을 만듭니다는 `New-SqlAvailabilityGroup` cmdlet 및 가용성 복제본 개체를 참조 합니다.|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|`Join-SqlAvailabilityGroup`|보조 복제본을 호스팅할 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|`Backup-SqlDatabase` 및 `Restore-SqlDatabase`|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> `NoRecovery` 복원 매개 변수를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다. 또한 주 복제본을 호스팅하는 컴퓨터와 대상 보조 복제본을 호스팅하는 컴퓨터의 파일 경로가 다른 경우 `RelocateFile` 복원 매개 변수를 사용합니다.|  
@@ -89,7 +86,7 @@ ms.locfileid: "37273509"
 8.  필요에 따라 Windows를 사용 하 여 `dir` 명령을 새 가용성 그룹의 내용을 확인 합니다.  
   
 > [!NOTE]  
->  서버 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이 다른 도메인 사용자 계정으로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 끝점에 이 로그인 CONNECT 권한을 부여합니다.  
+>  서버 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이 다른 도메인 사용자 계정으로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 엔드포인트에 이 로그인 CONNECT 권한을 부여합니다.  
   
 ##  <a name="ExampleConfigureGroup"></a> 예: PowerShell을 사용하여 가용성 그룹 만들기  
  다음 PowerShell 예에서는 가용성 복제본 두 개와 가용성 데이터베이스 한 개가 포함된 `MyAG` 라는 단순한 가용성 그룹을 만들고 구성합니다. 예:  
@@ -184,7 +181,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [자동 장애 조치 (AlwaysOn 가용성 그룹)에 대 한 상태 제어 유연한 장애 조치 정책 구성](configure-flexible-automatic-failover-policy.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -245,7 +242,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

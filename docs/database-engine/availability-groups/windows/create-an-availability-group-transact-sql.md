@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46c652e4dd13d48121fc76eda7743840892aef00
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 20abc6ef6fc7bbdcc71f67ab68d4507f619a7dc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770481"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>가용성 그룹 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ ms.locfileid: "34769769"
   
 |태스크|Transact-SQL 문|태스크를 수행할 위치**\***|  
 |----------|----------------------------------|---------------------------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 끝점 만들기|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|데이터베이스 미러링 끝점이 없는 각 서버 인스턴스에서 실행합니다.|  
+|ph x="1" /&gt; 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹 만들기|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|보조 복제본을 호스트하는 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 및 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다.|  
@@ -89,7 +86,7 @@ ms.locfileid: "34769769"
 5.  모든 새 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> 예: Windows 인증을 사용하는 가용성 그룹 구성  
- 이 예에서 만드는 예제 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 구성 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 설정하고, 가용성 그룹과 해당 보조 데이터베이스를 만들고 구성합니다.  
+ 이 예에서 만드는 예제 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 구성 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 설정하고, 가용성 그룹과 해당 보조 데이터베이스를 만들고 구성합니다.  
   
  이 예에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -149,7 +146,7 @@ ms.locfileid: "34769769"
 |주|`COMPUTER01`|`AgHostInstance`|  
 |보조|`COMPUTER02`|기본 인스턴스입니다.|  
   
-1.  가용성 그룹을 만들 서버 인스턴스( *에 있는* 라는 인스턴스)에 `AgHostInstance` dbm_endpoint `COMPUTER01`라는 데이터베이스 미러링 끝점을 만듭니다. 이 끝점은 포트 7022를 사용합니다. 가용성 그룹을 만드는 서버 인스턴스는 주 복제본을 호스팅합니다.  
+1.  가용성 그룹을 만들 서버 인스턴스( *에 있는* 라는 인스턴스)에 `AgHostInstance` dbm_endpoint `COMPUTER01`라는 데이터베이스 미러링 엔드포인트를 만듭니다. 이 엔드포인트는 포트 7022를 사용합니다. 가용성 그룹을 만드는 서버 인스턴스는 주 복제본을 호스팅합니다.  
   
     ```  
     -- Create endpoint on server instance that hosts the primary replica:  
@@ -161,7 +158,7 @@ ms.locfileid: "34769769"
   
     ```  
   
-2.  보조 복제본을 호스트할 서버 인스턴스( *에 있는 기본 서버 인스턴스)에* dbm_endpoint `COMPUTER02`라는 끝점을 만듭니다. 이 끝점은 포트 5022를 사용합니다.  
+2.  보조 복제본을 호스트할 서버 인스턴스( *에 있는 기본 서버 인스턴스)에* dbm_endpoint `COMPUTER02`라는 엔드포인트를 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
   
     ```  
     -- Create endpoint on server instance that hosts the secondary replica:   
@@ -176,9 +173,9 @@ ms.locfileid: "34769769"
 3.  > [!NOTE]  
     >  가용성 복제본을 호스팅할 서버 인스턴스의 서비스 계정이 동일한 도메인 계정으로 실행되는 경우에는 이 단계가 필요하지 않습니다. 이 단계를 생략하고 다음 단계로 직접 이동합니다.  
   
-     서버 인스턴스의 서비스 계정이 다른 도메인 사용자로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 끝점에 액세스할 수 있는 권한을 이 로그인에 부여합니다.  
+     서버 인스턴스의 서비스 계정이 다른 도메인 사용자로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 엔드포인트에 액세스할 수 있는 권한을 이 로그인에 부여합니다.  
   
-     다음 코드 예에서는 로그인을 만들고 이 로그인에 끝점에 대한 사용 권한을 부여하기 위한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. 여기에서 원격 서버 인스턴스의 도메인 계정은 *domain_name*\\*user_name*으로 표시됩니다.  
+     다음 코드 예에서는 로그인을 만들고 이 로그인에 엔드포인트에 대한 사용 권한을 부여하기 위한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. 여기에서 원격 서버 인스턴스의 도메인 계정은 *domain_name*\\*user_name*으로 표시됩니다.  
   
     ```  
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -319,17 +316,17 @@ ms.locfileid: "34769769"
 |\\\\*FILESERVER*\\*SQLbackups*|가상의 백업 공유입니다.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1의 백업 파일입니다.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb2.bak*|MyDb2의 백업 파일입니다.|  
-|*7022*|각 데이터베이스 미러링 끝점에 할당된 포트 번호입니다.|  
+|*7022*|각 데이터베이스 미러링 엔드포인트에 할당된 포트 번호입니다.|  
 |*COMPUTER01\AgHostInstance*|초기 주 복제본을 호스팅하는 서버 인스턴스입니다.|  
 |*COMPUTER02*|초기 보조 복제본을 호스팅하는 서버 인스턴스입니다. 이 인스턴스는 `COMPUTER02`의 기본 서버 인스턴스입니다.|  
-|*에 있는*|각 데이터베이스 미러링 끝점에 지정된 이름입니다.|  
+|*에 있는*|각 데이터베이스 미러링 엔드포인트에 지정된 이름입니다.|  
 |*MyDb1*|예제 가용성 그룹의 이름입니다.|  
 |*MyDb1*|첫 번째 예제 데이터베이스의 이름입니다.|  
 |*MyDb2*|두 번째 예제 데이터베이스의 이름입니다.|  
 |*DOMAIN1\user1*|초기 주 복제본을 호스팅할 서버 인스턴스의 서비스 계정입니다.|  
 |*DOMAIN2\user2*|초기 보조 복제본을 호스팅할 서버 인스턴스의 서비스 계정입니다.|  
-|TCP://*COMPUTER01.Adventure-Works.com*:*7022*|COMPUTER01에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 AgHostInstance 인스턴스의 끝점 URL입니다.|  
-|TCP://*COMPUTER02.Adventure-Works.com*:*5022*|COMPUTER02에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스의 끝점 URL입니다.|  
+|TCP://*COMPUTER01.Adventure-Works.com*:*7022*|COMPUTER01에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 AgHostInstance 인스턴스의 엔드포인트 URL입니다.|  
+|TCP://*COMPUTER02.Adventure-Works.com*:*5022*|COMPUTER02에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스의 엔드포인트 URL입니다.|  
   
 > [!NOTE]  
 >  가용성 그룹을 만드는 다른 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드 샘플을 보려면 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)을 참조하세요.  
@@ -478,7 +475,7 @@ GO
   
 -   [유연한 장애 조치(failover) 정책을 구성하여 자동 장애 조치(failover)의 상태 제어&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -510,15 +507,15 @@ GO
   
 -   [Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
- **데이터베이스 미러링 끝점을 구성하려면**  
+ **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Always On 가용성 그룹 구성 문제를 해결하려면**  
   
@@ -551,7 +548,7 @@ GO
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

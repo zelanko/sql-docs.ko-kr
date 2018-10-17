@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -22,20 +19,19 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 216599247aed33659c65f0b04293eff88a3d3692
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bec83e5fc33fe49541d234eafaae4c474e47b452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638897"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 응용 프로그램을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 각 인스턴스와 각 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 속하며 단일 UCP로 관리됩니다.  
+  엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 응용 프로그램을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이며 단일 UCP에 의해 관리됩니다.  
   
  UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
@@ -68,7 +64,7 @@ ms.locfileid: "32947548"
   
  이 릴리스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
   
--   UCP가 대/소문자를 구분하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스트되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 역시 대/소문자를 구분하도록 설정하는 것이 좋습니다.  
+-   UCP가 대/소문자를 구분하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 역시 대/소문자를 구분하도록 설정하는 것이 좋습니다.  
   
 -   FILESTREAM 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 모니터링에서 지원되지 않습니다.  
   
@@ -96,11 +92,11 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  UCP가 제거된 SQL Server 인스턴스에 유틸리티 이외의 데이터 컬렉션 집합이 있는 경우 sysutility_mdw 데이터베이스는 이 프로시저로 삭제되지 않습니다. 이런 경우 UCP를 다시 만들기 전에 sysutility_mdw 데이터베이스를 수동으로 삭제해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 각 인스턴스와 각 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 속하며 단일 UCP로 관리됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
+ 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이며 단일 UCP에 의해 관리됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
  UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 중심 원리 지점입니다. UCP를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램에서 수집된 구성 및 성능 데이터를 볼 수 있으며 일반적인 용량 계획 작업을 수행할 수 있습니다. UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록 및 제거하기 위한 시작 지점입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록하면 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 계층 응용 프로그램의 리소스 상태를 모니터링하여 통합 기회를 식별하고 리소스 병목 현상을 격리할 수 있습니다. 자세한 내용은 [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)을 참조하세요.  
+ ph x="1" /&gt; 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록하면 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 계층 응용 프로그램의 리소스 상태를 모니터링하여 통합 기회를 식별하고 리소스 병목 현상을 격리할 수 있습니다. 자세한 내용은 [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 이외의 컬렉션 집합과 함께 사용하는 것이 가능합니다. 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이면 다른 컬렉션 집합으로 모니터링할 수 있습니다. 그러나 관리되는 인스턴스의 모든 컬렉션 집합은 해당 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 관리 데이터 웨어하우스로 업로드합니다. 자세한 내용은 [같은 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 집합을 실행하기 위한 고려 사항](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) 및 [유틸리티 제어 지점 데이터 웨어하우스 구성&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)을 참조하세요.  
@@ -221,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  대시보드를 표시하려면 SSMS 메뉴에서 **보기** 를 클릭하고 **유틸리티 탐색기 내용** 을 선택합니다. 데이터를 새로 고치려면 유틸리티 탐색기 창에서 유틸리티 이름을 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 추가 인스턴스를 등록하는 방법에 대한 자세한 내용은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 인스턴스인 UCP를 제거하려면 **유틸리티 탐색기** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 추가 인스턴스를 등록하는 방법에 대한 자세한 내용은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)를 참조하세요. ph x="1" /&gt; 유틸리티에서 관리되는 인스턴스인 UCP를 제거하려면 **유틸리티 탐색기** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
   
 ##  <a name="PowerShell_create_UCP"></a> PowerShell을 사용하여 유틸리티 제어 지점 만들기  
  다음 예를 사용하여 새 유틸리티 제어 지점을 만들 수 있습니다.  
