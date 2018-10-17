@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646191"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100544"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 다음 표에는 오류 메시지 번호와 sys.messages 카탈로그 뷰의 오류 메시지 텍스트에 해당하는 설명이 나와 있습니다. 
@@ -846,7 +846,7 @@ ms.locfileid: "47646191"
 |   1732    |   16  |   아니오  |   스파스 열 집합 ‘%.*ls’을(를) 테이블 ‘%.* ls’에 만들 수 없습니다. 테이블에 두 개 이상의 스파스 열 집합이 있을 수 없기 때문입니다. 한 개의 열만 COLUMN_SET FOR ALL_SPARSE_COLUMNS로 지정되도록 문을 수정하십시오.   |
 |   1733    |   16  |   아니오  |   스파스 열 집합 ‘%.*ls’을(를) 테이블 ‘%.* ls’에 만들 수 없습니다. 스파스 열 집합은 Null 허용 XML 열이어야 하기 때문입니다.다. Null 값을 허용하도록 열 정의를 수정하십시오.  |
 |   1734    |   16  |   아니오  |   스파스 열 집합 ‘%.*ls’을(를) 테이블 ‘%.* ls’에 만들 수 없습니다. 해당 테이블에 이미 하나 이상의 스파스 열이 포함되어 있기 때문입니다. 테이블에 스파스 열이 있는 경우 해당 테이블에 스파스 열 집합을 추가할 수 없습니다.   |
-|   1736    |   16  |   아니오  |   열 ‘%.*ls’(테이블 ‘%.* ls’에 있음)은(는) 스파스 열 집합이므로 CHECK 제약 조건 또는 계산 열 정의에서 참조할 수 없습니다. 스파스 열 집합은 CHECK 제약 조건 또는 계산 열 정의에서 참조할 수 없습니다. |
+|   1736    |   16  |   아니오  |   열 ‘%.*ls’(테이블 ‘%.* ls’에 있음)은(는) 스파스 열 집합이므로 CHECK 제약 조건 또는 계산 열 정의에서 참조할 수 없습니다. 스파스 열 집합은 CHECK 제약 조건 또는 계산 열 정의에서 참조할 수 없습니다.   |
 |   1738    |   10  |   아니오  |   테이블에 계산되지 않은 열 없이 열 집합 열만 사용하여 테이블 '%.*ls'을(를) 만들 수 없습니다.    |
 |   1750    |   10  |   아니오  |   제약 조건을 만들 수 없습니다. 이전 오류를 참조하십시오.   |
 |   1752    |   16  |   아니오  |   열 ‘%.*ls’(테이블 ‘%.* ls’에 있음)은(는) 기본 제약 조건 생성에 유효하지 않습니다.   |
