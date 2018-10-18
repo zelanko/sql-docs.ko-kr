@@ -5,9 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767161"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
