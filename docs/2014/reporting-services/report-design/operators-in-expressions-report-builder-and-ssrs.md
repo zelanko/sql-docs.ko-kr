@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79ad4c19b0f6b3dff91def701611b0a20d66a34d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049813"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>식의 연산자(보고서 작성기 및 SSRS)
   연산자는 식에서 한 개 이상의 항목에 적용되는 동작을 나타내는 기호입니다. 식에서 지원되는 연산자의 범주는 산술 연산자, 비교 연산자, 연결 연산자, 논리 또는 비트 연산자, 비트 시프트 연산자입니다.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218983"
 |>=|크거나 같음|  
 |=|같음|  
 |<>|같지 않음|  
-|Like|특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다.<br /><br /> 목록 문자를 와일드 카드로 사용할 수 있는:<br /><br /> **%**: 문자열 0 개 이상의 문자입니다.<br /><br /> **_**: 단일 문자입니다.<br /><br /> **[ ]**: 지정된 된 범위 내 문자 (예를 들어, [a-f]) 또는 설정 (예: [aeiou]).<br /><br /> **[^]** : 단일 문자 지정 된 범위 내에 있지 (예를 들어 [^ a-f])을 가져오거나 설정 (예를 들어 [^ aeiou]).|  
+|Like|특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다.<br /><br /> 목록 문자를 와일드 카드로 사용할 수 있는:<br /><br /> **%**: 문자열 0 개 이상의 문자입니다.<br /><br /> **_**: 단일 문자입니다.<br /><br /> **[]**: 지정된 된 범위 내 문자 (예를 들어, [a-f]) 또는 설정 (예: [aeiou]).<br /><br /> **[^]** : 단일 문자 지정 된 범위 내에 있지 (예를 들어 [^ a-f])을 가져오거나 설정 (예를 들어 [^ aeiou]).|  
 |Is|두 개체 참조를 비교합니다.|  
   
 ### <a name="string-concatenation"></a>문자열 연결  

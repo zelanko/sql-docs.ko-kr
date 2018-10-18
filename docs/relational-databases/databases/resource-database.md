@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - mssqlsystemresource.mdf file
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-caps.latest.revision: 71
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63ca94faeb9a60c61fd18d92388d472a2d1ffb53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e55ca626161e046f1833744da972e4b7420ff21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32926718"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748501"
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +45,14 @@ ms.locfileid: "32926718"
 ## <a name="accessing-the-resource-database"></a>Resource 데이터베이스 액세스  
  Resource 데이터베이스는 Microsoft CSS(고객 지원 서비스) 전문가가 직접 수정하거나 전문가의 지도를 받아 수정해야 합니다. Resource 데이터베이스의 ID는 항상 32767입니다. Resource 데이터베이스와 관련된 다른 중요한 값은 버전 번호 및 데이터베이스가 마지막으로 업데이트된 시간입니다.  
   
- **** Resource **데이터베이스의 버전 번호를 확인하려면 다음 문을 사용합니다.**  
+ Resource **데이터베이스의 버전 번호를 확인하려면 다음 문을 사용합니다.******  
   
 ```  
 SELECT SERVERPROPERTY('ResourceVersion');  
 GO  
 ```  
   
- **** Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다.**  
+ Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다.******  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  
