@@ -13,12 +13,12 @@ ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58ee2ac11e86481c57da79d84bc75507c273b829
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e018e33ffa76fb162fd2020ba8ff043f295aa16
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702524"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461929"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.periods (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "47702524"
   
 |열 머리글|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|period_type|**sysname**|기간 이름|  
-|period_type_desc|**tinyint**|기간 유형을 나타내는 숫자 값입니다.<br /><br /> 1 = 시스템 시간 기간|  
-|object_id|**nvarchar(60)**|열 형식에 대 한 텍스트 설명.<br /><br /> SYSTEM_TIME_PERIOD|  
+|NAME|**sysname**|기간 이름|  
+|period_type|**tinyint**|기간 유형을 나타내는 숫자 값입니다.<br /><br /> 1 = 시스템 시간 기간|  
+|period_type_desc|**nvarchar(60)**|열 형식에 대 한 텍스트 설명.<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|Period_type 열이 포함 된 테이블의 id|  
 |start_column_id|**int**|낮은 기간 경계를 정의 하는 열 id|  
 |end_column_id|**int**|상위 기간 경계를 정의 하는 열의 id|  

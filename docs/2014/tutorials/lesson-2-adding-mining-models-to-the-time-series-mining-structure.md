@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158433"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461949"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>2단원: 시계열 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 방금 만든 마이닝 구조에 새 마이닝 모델을 추가 합니다 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)합니다.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 문  
- 기존 마이닝 구조에 새 마이닝 모델을 추가 하려면 사용 하 여 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 기존 마이닝 구조에 새 마이닝 모델을 추가 하려면 사용 합니다 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -96,7 +96,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 시계열 마이닝 모델을 추가하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX** 쿼리 편집기와 비어 있는 새 쿼리를 열려면 합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
   
 2.  ALTER MINING STRUCTURE 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   

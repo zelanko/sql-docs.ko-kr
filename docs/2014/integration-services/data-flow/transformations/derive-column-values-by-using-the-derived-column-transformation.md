@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054320"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460298"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -60,11 +60,11 @@ ms.locfileid: "48054320"
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파생된 열 변환](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 데이터 형식](../integration-services-data-types.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   
- [데이터 흐름 태스크] ((.. /.. /control-flow/data-flow-task.md)   
+ [데이터 흐름 태스크](../../control-flow/data-flow-task.md)   
  [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)  
   
   

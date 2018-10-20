@@ -4,22 +4,22 @@ description: Azure Data Studio를 사용 하 여 데이터베이스를 백업 �
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b687c05e591e78b836a18c192828cca4fe7f97fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038985"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355914"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>백업 및 복원을 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-이 자습서에서는 사용 하는 방법을 알아봅니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에:
+이 자습서에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용법을 알아봅니다.
 > [!div class="checklist"]
 > * 데이터베이스 백업 
 > * 백업 상태를 보려면
@@ -29,7 +29,7 @@ ms.locfileid: "48038985"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 자습서에서는 SQL Server *TutorialDB*합니다. 만들려면 합니다 *TutorialDB* 데이터베이스, 다음 빠른 시작 중 하나를 수행 합니다.
+이 자습서에서는 SQL Server *TutorialDB*합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
 - [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 

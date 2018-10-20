@@ -1,21 +1,21 @@
 ---
-title: T-SQL 함수 (SQL Server 기계 학습)를 사용 하 여 4 합니다 데이터 기능 단원 | Microsoft Docs
-description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
+title: T-SQL 함수 (SQL Server Machine Learning)를 사용 하 여 2 서로 데이터 기능 단원 | Microsoft Docs
+description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249546"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462099"
 ---
-# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>4 단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2 단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -123,8 +123,8 @@ ms.locfileid: "35249546"
 
 ## <a name="next-lesson"></a>다음 단원
 
-[5 단원: T-SQL을 사용하여 모델 학습 및 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[3 단원: 학습 및 T-SQL을 사용 하는 모델 저장](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[3 단원: 탐색 하 고 R 및 저장된 프로시저를 사용 하 여 데이터를 시각화 합니다.](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[1 단원: 데이터 탐색 및 시각화는 R 및 저장된 프로시저를 사용 하 여](sqldev-explore-and-visualize-the-data.md)

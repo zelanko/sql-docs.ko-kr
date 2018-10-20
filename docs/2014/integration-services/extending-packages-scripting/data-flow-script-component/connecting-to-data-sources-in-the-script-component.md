@@ -14,17 +14,17 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44f21359f5d35661115582ffc76a00365d2fe8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215863"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460648"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>스크립트 구성 요소에서 데이터 원본에 연결
   연결 관리자는 특정 유형의 데이터 원본에 연결하는 데 필요한 정보를 캡슐화하고 저장하는 편리한 단위입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
- **스크립트 변환 편집기**의 **연결 관리자** 페이지에서 **추가** 및 **제거** 단추를 클릭하여 원본 또는 대상 구성 요소의 사용자 지정 스크립트에서 기존 연결 관리자에 액세스할 수 있게 할 수 있습니다. 그러나 데이터를 로드하거나 저장하고 데이터 원본에 대한 연결을 열고 닫는 사용자 지정 코드는 개발자가 직접 작성해야 합니다. 에 대 한 자세한 내용은 합니다 **연결 관리자** 페이지를 **스크립트 변환 편집기**, [스크립트 구성 요소 스크립트 구성 요소 편집기에서 구성]을 참조 하십시오 (( configuring-the-script-component-in-the-script-component-editor.md) 및 [스크립트 변환 편집기 &#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)합니다.  
+ **스크립트 변환 편집기**의 **연결 관리자** 페이지에서 **추가** 및 **제거** 단추를 클릭하여 원본 또는 대상 구성 요소의 사용자 지정 스크립트에서 기존 연결 관리자에 액세스할 수 있게 할 수 있습니다. 그러나 데이터를 로드하거나 저장하고 데이터 원본에 대한 연결을 열고 닫는 사용자 지정 코드는 개발자가 직접 작성해야 합니다. **스크립트 변환 편집기**의 **연결 관리자** 페이지에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md) 및 [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)를 참조하세요.  
   
  스크립트 구성 요소에서는 각 연결 관리자에 대해 해당 연결 관리자와 동일한 이름을 갖는 강력한 형식의 접근자가 있는 `Connections` 컬렉션 클래스를 `ComponentWrapper` 프로젝트 항목에 만듭니다. 이 컬렉션은 `Connections` 클래스의 `ScriptMain` 속성을 통해 제공됩니다. 접근자 속성은 해당 연결 관리자에 대한 참조를 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>의 인스턴스로 반환합니다. 예를 들어 대화 상자의 연결 관리자 페이지에서 `MyADONETConnection`이라는 연결 관리자를 추가한 경우 스크립트에서 다음 코드를 추가하여 해당 연결 관리자에 대한 참조를 가져올 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48215863"
   
  스크립트 구성 요소에 연결 관리자를 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 원본 만들기](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 대상 만들기](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)를 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)   

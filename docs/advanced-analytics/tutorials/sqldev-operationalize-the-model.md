@@ -1,21 +1,21 @@
 ---
-title: R 모델 (SQL Server Machine Learning)를 사용 하 여 6 예측 가능한 결과 단원 | Microsoft Docs
+title: R 모델 (SQL Server Machine Learning)를 사용 하 여 4 개의 예측 가능한 결과 단원 | Microsoft Docs
 description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798573"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462129"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>6 단원: 저장된 프로시저에 R 모델을 사용 하는 잠재적인 결과 예측 합니다.
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>4 단원: 저장된 프로시저에 R 모델을 사용 하는 잠재적인 결과 예측 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -200,4 +200,4 @@ GO
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[5단원: T-SQL을 사용한 R 모델 학습 및 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[3 단원: 학습 및 T-SQL을 사용 하 여 R 모델 저장](sqldev-train-and-save-a-model-using-t-sql.md)

@@ -11,24 +11,24 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107483"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461979"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>2단원: Market Basket 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 두 개의 마이닝 모델 추가에서 만든 Market Basket 마이닝 구조를 [1 단원: Market Basket 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)합니다. 이러한 마이닝 모델을 사용하여 예측을 만들 수 있습니다.  
   
- 사용 하 여 두 개의 마이닝 모델에 고객에 게 동시에 구입 하는 경향이 있는 제품 유형을 예측을 만들려는 합니다 [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) 및에 대 한 서로 다른 두 값을 *MINIMUM_PROBABILTY* 매개 변수입니다.  
+ 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측하기 위해 [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) 및 *MINIMUM_PROBABILTY* 매개 변수에 대한 서로 다른 두 값을 사용하여 두 개의 마이닝 모델을 만듭니다.  
   
- *MINIMUM_PROBABILTY* 되는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 하 규칙을 포함 해야 하는 최소 확률을 지정 하 여 마이닝 모델이 포함할 규칙 수를 결정 하는 데 도움이 되는 연결 알고리즘 매개 변수입니다. 예를 들어 이 값을 0.4로 설정하면 규칙에서 설명하는 제품 조합의 발생 확률이 40% 이상인 경우에만 규칙을 생성할 수 있도록 지정합니다.  
+ *MINIMUM_PROBABILTY* 는 규칙에 있어야 할 최소 확률을 지정하여 마이닝 모델이 포함할 규칙 수를 결정하는 데 도움이 되는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘 매개 변수입니다. 예를 들어 이 값을 0.4로 설정하면 규칙에서 설명하는 제품 조합의 발생 확률이 40% 이상인 경우에만 규칙을 생성할 수 있도록 지정합니다.  
   
  *MINIMUM_PROBABILTY* 매개 변수 변경의 결과는 이후 단원에서 볼 수 있습니다.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 문  
- 마이닝 구조에 중첩된 테이블이 포함 된 마이닝 모델을 추가 하려면 사용을 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 구조에 중첩된 테이블이 포함 된 마이닝 모델을 추가 하려면 사용 합니다 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -107,7 +107,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>연결 마이닝 모델을 추가하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -201,7 +201,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>연결 마이닝 모델을 추가하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   

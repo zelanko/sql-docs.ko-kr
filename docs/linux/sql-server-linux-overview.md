@@ -4,18 +4,18 @@ description: 이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 8b8ee30d255382981a65a661ed0a080e39e4577a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b887225908896ce15dfaae0443c22eb535e209
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617111"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419308"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 

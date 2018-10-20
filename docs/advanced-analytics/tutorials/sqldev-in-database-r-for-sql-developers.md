@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724307"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461889"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>자습서: SQL Server에서 R을 사용 하 여 데이터베이스 내 분석에 알아봅니다
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,18 +32,18 @@ SQL 프로그래머를 위한이 자습서에서는 실습을 빌드하고 배�
 
 그러나 솔루션을 만든 후에는 익숙한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 쉽게 배포할 수 있습니다.
 
-- [1 단원: NYC Taxi 데이터 설정](../tutorials/sqldev-download-the-sample-data.md)
+- [NYC Taxi 데이터베이스 설정](demo-data-nyctaxi-in-sql.md)
 
-- [2 단원: 탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화 하는 1 단원:](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [3 단원: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [2 단원: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
   
-- [4 단원: 학습 및 함수 및 저장된 프로시저를 사용 하 여 R 모델 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [3 단원: 학습 및 함수 및 저장된 프로시저를 사용 하 여 R 모델 저장](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [5 단원: 래핑 R 코드 운영 화를 위한 저장된 프로시저에서](../tutorials/sqldev-operationalize-the-model.md)합니다. 
+- [4 단원: 래핑 R 코드 운영 화를 위한 저장된 프로시저에서](../tutorials/sqldev-operationalize-the-model.md)합니다. 
   모델을 데이터베이스에 저장한 후 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 예측을 위해 모델을 호출합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 자습서에는 데이터베이스 및 테이블 만들기, 데이터를 가져오는 SQL 쿼리를 작성 등 기본적인 데이터베이스 작업 지식이 있다고 가정 합니다. R. 알고 가정 하지 않습니다. 따라서 모든 R 코드가 제공 됩니다. 숙련 된 SQL 프로그래머는 제공 된 PowerShell 스크립트를 GitHub에서 샘플 데이터를 사용할 수 하 고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이 예제를 완료 합니다. 
 
@@ -60,4 +60,4 @@ SQL 프로그래머를 위한이 자습서에서는 실습을 빌드하고 배�
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [1 단원: 샘플 데이터 다운로드](../tutorials/sqldev-download-the-sample-data.md)
+> [NYC Taxi 데이터베이스 설정](demo-data-nyctaxi-in-sql.md)

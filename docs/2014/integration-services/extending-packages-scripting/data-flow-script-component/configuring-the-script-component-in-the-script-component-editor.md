@@ -19,12 +19,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116693"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461034"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
   스크립트 구성 요소에서 사용자 지정 코드를 작성하려면, 먼저 만들려는 데이터 흐름 구성 요소의 유형(원본, 변환 또는 대상)을 선택한 다음, **스크립트 변환 편집기**에서 구성 요소의 메타데이터 및 속성을 구성해야 합니다.  
@@ -105,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` 속성의 부울 값은 구성 요소에서 디자인 타임에 외부 데이터 원본에 대한 유효성 검사를 수행해야 하는지 아니면 런타임까지 유효성 검사를 연기해야 하는지를 지정합니다. 기본적으로 이 속성의 값은 `True`입니다. 즉, 디자인 타임과 런타임 모두에 외부 메타데이터의 유효성이 검사됩니다. 디자인 타임에 외부 데이터 원본을 사용할 수 없는 경우 이 속성의 값을 `False`로 설정할 수 있습니다. 예를 들어 패키지가 원본을 다운로드하거나 런타임에만 대상을 만드는 경우가 이러한 경우에 해당합니다.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 및 ReadWriteVariables 속성  
- 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 구성 요소 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 변수는 코드에서 자동으로 생성된 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 Component]((using-variables-in-the-script-component.md)에서 변수를 사용 하 여을 참조 하세요.  
+ 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 구성 요소 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 변수는 코드에서 자동으로 생성된 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 구성 요소에서 변수 사용](using-variables-in-the-script-component.md)을 참조하세요.  
   
 > [!NOTE]  
 >  변수 이름은 대소문자를 구분합니다.  
@@ -114,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  스크립트 구성 요소에 대한 프로그래밍 언어로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 선택할 수 있습니다.  
   
 #### <a name="edit-script-button"></a>스크립트 편집 단추  
- **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE가 열립니다. 자세한 내용은 [코딩 및 디버깅 스크립트 Component]((coding-and-debugging-the-script-component.md)을 참조 하세요.  
+ **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE가 열립니다. 자세한 내용은 [스크립트 구성 요소 코딩 및 디버깅](coding-and-debugging-the-script-component.md)을 참조하세요.  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>스크립트 변환 편집기의 연결 관리자 페이지  
  **스크립트 변환 편집기**의 **연결 관리자** 페이지에서는 사용자 지정 스크립트에 사용할 연결 관리자를 추가하거나 제거합니다. 일반적으로 원본 또는 대상 구성 요소를 만들 때는 연결 관리자를 참조해야 합니다.  
@@ -126,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 자세한 내용은 [스크립트 Component]((connecting-to-data-sources-in-the-script-component.md)에서 데이터 원본에 연결을 참조 하세요. 합니다.  
+ 자세한 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [코딩 and Debugging the Script Component] ((coding-and-debugging-the-script-component.md)  
+ [스크립트 구성 요소 코딩 및 디버깅](coding-and-debugging-the-script-component.md)  
   
   

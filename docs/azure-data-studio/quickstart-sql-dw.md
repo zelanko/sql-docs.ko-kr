@@ -4,18 +4,18 @@ description: 이 빠른 시작에서는 Azure 데이터 Studio를 사용 하 여
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fa71292e0b850f765f03f9f11c97d3b26c40a45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039081"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355734"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL Data Warehouse에서 데이터를 쿼리 합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "48039081"
 ## <a name="prerequisites"></a>필수 구성 요소
 이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 Azure SQL data warehouse를 합니다.
 
-- [설치할 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)를 설치합니다.
 
 SQL data warehouse에 아직 없는 경우 [SQL Data Warehouse 만들기](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)합니다.
 

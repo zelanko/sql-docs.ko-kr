@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802597"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390865"
 ---
 # <a name="sql-samples"></a>SQL 샘플
 
@@ -51,3 +51,13 @@ AdventureWorks 데이터베이스에서 사용할 수는 [SQL Server Samples](ht
 - [SQL Server 2014 이상 AdventureWorks 다운로드](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)합니다. 2012 릴리스에 대 한.bak 파일을 포함합니다.
 - [SQL Server 2012 용 AdventureWorks 다운로드](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)합니다.
 - [SQL Server 2008 r2 용 AdventureWorks 다운로드](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)합니다.
+
+## <a name="azure-samples-and-templates"></a>Azure 샘플 및 템플릿
+Github의.NET, Java, Python, Node.js, PHP 및 Ruby에 사용할 수 있는 다양 한 Microsoft Azure 코드 샘플 및 예제 있습니다. 또한 Azure Resource Manager를 사용 하는 선언적 템플릿을 사용 하 여 응용 프로그램을 프로 비전 할 수 있습니다. 단일 템플릿에서 여러 서비스와 해당 종속성을 배포할 수 있습니다. 동일한 템플릿을 사용 하 여 반복 해 서 응용 프로그램 수명 주기의 모든 단계 중에 응용 프로그램을 배포 합니다.
+
+- [Azure 샘플](https://github.com/Azure-Samples)
+- [Azure 빠른 시작 템플릿](https://azure.microsoft.com/resources/templates/)
+
+
+
+

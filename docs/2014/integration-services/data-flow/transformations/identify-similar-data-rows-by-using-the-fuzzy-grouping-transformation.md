@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131763"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460288"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131763"
 20. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [유사 항목 그룹화 변환](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   
- [데이터 흐름 태스크] ((.. /.. /control-flow/data-flow-task.md)  
+ [데이터 흐름 태스크](../../control-flow/data-flow-task.md)  
   
   

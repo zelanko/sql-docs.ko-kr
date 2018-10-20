@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f93bf921236676b40a9d6917af38ca3ca88ff5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644111"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411150"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |패리티 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다. 데 내부적으로 VLF 내에서 로그의 끝을 확인 합니다.|
 |vlf_first_lsn|**nvarchar(48)** |[LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 에서 첫 번째 로그 레코드는 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
 |vlf_create_lsn|**nvarchar(48)** |[LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 로그의 만든를 기록 합니다 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
+|vlf_encryptor_thumbprint|**varbinary(20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> VLF를 사용 하 여 암호화 됩니다 VLF의 암호기의 손도장을 표시 [투명 한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)이 고, 그렇지 않으면 NULL입니다. |
 
 ## <a name="remarks"></a>Remarks
 합니다 `sys.dm_db_log_info` 동적 관리 함수를 대체 합니다 `DBCC LOGINFO` 문입니다.    

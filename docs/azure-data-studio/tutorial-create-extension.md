@@ -4,18 +4,18 @@ description: 이 자습서에는 Azure Data Studio에 대 한 확장을 만드�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 9124ced20d5b10bbb60cbfbda6b3e4c9a52a3a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039041"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356554"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>자습서: Azure Data Studio 확장 만들기
 
@@ -30,7 +30,7 @@ ms.locfileid: "48039041"
 > * 확장 패키지
 > * 확장 프로그램을 marketplace에 게시
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공 되므로 Azure Data Studio 확장 Visual Studio Code를 사용 하 여 빌드됩니다. 시작 하려면 다음 구성 요소가 필요 합니다.
 

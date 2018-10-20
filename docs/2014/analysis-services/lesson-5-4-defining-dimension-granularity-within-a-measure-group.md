@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083883"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460928"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>측정값 그룹의 차원 세분성 정의
   사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
@@ -221,11 +221,11 @@ ms.locfileid: "48083883"
      ![Sales Quota 측정값 그룹 차원이 올바르게 구분 되어](../../2014/tutorials/media/l5-granularity-7.gif "Sales Quota 측정값 그룹의 차원이 올바르게 구분 되어")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6 단원: 계산 정의] ((단원-6-정의-calculations.md)  
+ [6단원: 계산 정의](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [일반 관계 및 일반 관계 속성 정의](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [데이터 원본 뷰 디자이너의 다이어그램 작업 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

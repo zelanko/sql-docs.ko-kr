@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: a88269ff6b55aa473c48cfa0937e926770bbaff1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724317"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462109"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발에 대 한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ R을 사용할 데이터베이스 계정에 다음 권한을 구성하도록 데
 
 ## <a name="4---test-connections"></a>4-테스트 연결
 
-에 대 한 SQL Server를 사용할 수 있어야 합니다 [원격 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) 하며 사용자 로그인 등 데이터베이스에 연결할 권한이 있어야 합니다. 다음 단계는 데모 데이터베이스를 전제로 [NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md) 및 Windows 인증입니다.
+에 대 한 SQL Server를 사용할 수 있어야 합니다 [원격 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) 하며 사용자 로그인 등 데이터베이스에 연결할 권한이 있어야 합니다. 다음 단계는 데모 데이터베이스를 전제로 [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) 및 Windows 인증입니다.
 
  확인 단계에서는 원격 서버에 대 한 연결을 확인 하려면 RevoScaleR을 기본 제공 도구를 사용 합니다.
 

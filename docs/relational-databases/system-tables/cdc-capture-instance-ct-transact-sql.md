@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621031"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336252"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47621031"
 3.  새 데이터 형식을 지정하여 원본 테이블을 변경합니다. 데이터 형식 변경이 변경 테이블로 성공적으로 전파됩니다.  
   
 ## <a name="data-manipulation-language-modifications"></a>데이터 조작 언어 수정  
- 변경 데이터 캡처가 활성화된 원본 테이블에서 삽입, 업데이트 및 삭제 작업을 수행하면 데이터베이스 트랜잭션 로그에 이러한 DML 작업에 대한 레코드가 기록됩니다. 변경 데이터 캡처 프로세스는 트랜잭션 로그에서 이러한 변경 내용에 대한 정보를 검색하고 변경 테이블에 하나 또는 두 개의 행을 추가하여 변경 내용을 기록합니다. 일반적으로 변경 테이블 항목의 커밋은 단일 항목이 아니라 변경 내용 그룹에 대해 수행되어야 하지만 항목은 원본 테이블에 커밋된 순서와 동일하게 변경 테이블 추가됩니다.  
+ 변경 데이터 캡처가 활성화된 원본 테이블에서 삽입, 업데이트 및 삭제 작업을 수행하면 데이터베이스 트랜잭션 로그에 이러한 DML 작업에 대한 레코드가 기록됩니다. 변경 데이터 캡처 프로세스가 트랜잭션 로그에서 이러한 변경에 대 한 정보를 검색 및 변경 내용을 기록할 변경 테이블에 하나 또는 두 개의 행을 추가 합니다. 일반적으로 변경 테이블 항목의 커밋은 단일 항목이 아니라 변경 내용 그룹에 대해 수행되어야 하지만 항목은 원본 테이블에 커밋된 순서와 동일하게 변경 테이블 추가됩니다.  
   
  변경 테이블 항목 내에서 **__ $start_lsn** 열은 커밋 LSN을 원본 테이블에 대 한 변경 내용과 연결 된 기록 데 하며 **__ $seqval 열** 순서 내에서 변경 하는 데 사용 됩니다 해당 트랜잭션입니다. 이러한 메타데이터 열은 원본 변경 내용의 커밋 순서가 유지되도록 하는 데 사용될 수 있습니다. 캡처 프로세스가 해당 변경 정보를 트랜잭션 로그에서 가져오기 때문에 변경 테이블 항목은 해당 원본 테이블 변경 내용과 동기적으로 나타나지 않습니다. 대신 캡처 프로세스가 트랜잭션 로그에서 관련 변경 항목을 처리한 후 해당 변경 내용이 비동기적으로 나타납니다.  
   

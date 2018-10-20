@@ -1,46 +1,40 @@
 ---
-title: T-SQL을 사용 하 여 Python 실행 | Microsoft Docs
+title: SQL Server에서 T-SQL을 사용 하 여 Python 실행 | Microsoft Docs
+description: Python 통합이 사용 되는 SQL Server 데이터베이스 엔진 인스턴스에서 T-SQL 및 저장된 프로시저를 사용 하 여 Python 코드를 실행 하는 것에 대 한 기본 사항을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b4a6035996ce457cb2e58aef5d1c7498ad9f826
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878026"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461919"
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL을 사용하여 Python 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 자습서에서는 SQL Server 2017에서 Python 코드를 실행 하는 방법을 설명 합니다. SQL Server와 Python 간에 데이터를 이동 하는 과정을 안내 하 고 저장된 프로시저에서 잘 구성 된 Python 코드를 래핑하는 방법에 설명 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 을 빌드, 학습 및 기계 학습 모델을 사용 하 여 sql 서버입니다.
+이 문서에서는 SQL Server 2017에서 Python 코드를 실행 하는 방법을 설명 합니다. SQL Server 및 Python 간 데이터 이동의 기본 사항을 안내 합니다: 요구 사항, 데이터 구조, 입력 및 출력 합니다. 저장된 프로시저에서 잘 구성 된 Python 코드를 래핑하는 방법도 설명 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 을 빌드, 학습 및 SQL Server에서 기계 학습 모델을 사용 합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서를 완료 하려면 먼저 SQL Server 2017을 설치 하 고에 설명 된 대로 인스턴스에서 Machine Learning 서비스를 사용 하도록 설정 [설치 SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다. 
+이 연습에서 예제 코드를 실행 하려면 먼저 SQL Server 2017을 설치 하 고에 설명 된 대로 인스턴스에서 Machine Learning 서비스를 사용 하도록 설정 [설치 SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다. 
 
 또한 설치 해야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다. 또는 서버 및 데이터베이스에 연결 하는 T-SQL 쿼리 또는 저장된 프로시저를 실행 하기만 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있습니다.
 
-설치를 완료 한 후 저장된 프로시저의 컨텍스트에서 Python 코드를 실행 하는 방법을 알아보려면이 자습서를 반환 합니다. 
+환경 준비 되 면 저장된 프로시저의 컨텍스트에서 Python 코드를 실행 하는 방법을 알아보려면이 페이지를 반환 합니다. 
 
-## <a name="overview"></a>개요
+## <a name="verify-python-exists"></a>Python 있는지 확인
 
-이 자습서는 4 단원:
+다음 단계는 Python 사용 하도록 설정 하는 SQL Server 실행 패드 서비스가 실행 중인지 확인 합니다.
 
-+ SQL Server 및 Python 간 데이터 이동의 기본 사항: 기본 요구 사항, 데이터 구조, 입력 및 출력에 알아봅니다.
-+ 저장된 프로시저를 사용 하 여 샘플 데이터를 로드 하는 등 간단한 Python 작업에 대 한 연습입니다.
-+ Python 기계 학습 모델을 만들려면 저장된 프로시저를 사용 하 고 모델에서 점수를 생성 합니다.
-+ SQL Server를 사용 하 여 원격 클라이언트에서 Python을 실행 하려면 사용자는 선택적 단원 합니다 _계산 컨텍스트_합니다. 모델을 빌드하는 코드를 포함 합니다. 그러나 Python 환경 및 Python tools를 사용 하 여 어느 정도 알고 이미 있다고 필요 합니다.
+1. Python 통합 데이터베이스 엔진 인스턴스에 설치 되어 있는지 확인 합니다. 찾아야 **python.exe** 라는 폴더에 **PYTHON_SERVICES** C:\Program Files\Microsoft SQL Server\MSSQL14에서. MSSQLSERVER\. SQL Server Python 코드를 실행 하는 데 사용 하는 Python 실행 파일입니다.
 
-SQL Server 2017로 특정 추가 Python 예제는 다음과 같습니다: [SQL Server Python 자습서](../tutorials/sql-server-python-tutorials.md)
-
-## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Python 사용 하도록 설정 하 고 실행 패드 실행 중인지 확인
-
-1. Management studio에서이 문을 실행 하는 서비스가 설정 되어 있는지 확인 합니다.
+2. 외부 스크립트 사용 되는지 여부를 확인 합니다. Management studio에서 다음 문을 실행 합니다.
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -48,9 +42,9 @@ SQL Server 2017로 특정 추가 Python 예제는 다음과 같습니다: [SQL S
 
     하는 경우 **run_value** 는 1, machine learning 기능을 설치 및 사용 준비 합니다.
 
-    오류의 일반적인 원인은 SQL Server 및 Python 간 통신을 관리 하는 실행 패드가 중지 되었음이 됩니다. Windows를 사용 하 여 실행 패드 상태를 볼 수 있습니다 **Services** 패널 또는 SQL Server 구성 관리자를 열면 됩니다. 서비스가 중지 된 경우 다시 시작 합니다.
+    오류의 일반적인 원인은 합니다 [SQL Server 실행 패드 서비스](../concepts/extensibility-framework.md#launchpad), 중지 되었습니다. SQL Server 및 Python 간 통신을 관리 하는 합니다. Windows를 사용 하 여 실행 패드 상태를 볼 수 있습니다 **Services** 패널 또는 SQL Server 구성 관리자를 열면 됩니다. 서비스가 중지 된 경우 다시 시작 합니다.
 
-2. 그런 다음 Python 런타임 SQL Server를 사용 하 여 통신 작업을 확인 합니다. 이렇게 하려면 새 열 **쿼리** SQL Server Management studio에서 창에 Python 설치 된 인스턴스에 연결 합니다.
+3. Python 런타임에서 작업 하 고 SQL Server와의 통신을 확인 합니다. 이렇게 하려면 새 열 **쿼리** SQL Server Management studio에서 창에 Python 설치 된 인스턴스에 연결 합니다.
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
@@ -74,10 +68,11 @@ SQL Server 2017로 특정 추가 Python 예제는 다음과 같습니다: [SQL S
 
 두 가지 방법으로 SQL Server에서 Python 코드를 실행할 수 있습니다.
 
-+ 시스템 저장 프로시저의 인수로 서 Python 스크립트를 추가 **sp_execute_external_script**
-+ 원격 Python 클라이언트에서 SQL Server에 연결 하 고 SQL Server 계산 컨텍스트로 사용 하 여 코드를 실행 합니다. 그러려면 [revoscalepy](../python/what-is-revoscalepy.md)합니다.
++ 시스템 저장 프로시저의 인수로 서 Python 스크립트를 추가 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
 
-이 자습서의 기본 목표는 저장된 프로시저에서 Python을 사용할 수 있도록 방법은입니다.
++ [원격 Python 클라이언트](../python/setup-python-client-tools-sql.md)SQL Server에 연결한 후 SQL Server 계산 컨텍스트로 사용 하 여 코드를 실행 합니다. 그러려면 [revoscalepy](../python/what-is-revoscalepy.md)합니다.
+
+다음 연습에서는 첫 번째 상호 작용 모델에 포커스가: 저장된 프로시저에 Python 코드를 전달 하는 방법입니다.
 
 1. 데이터는 SQL Server와 Python 간에 앞뒤로 전달 하는 방법을 확인 하려면 몇 가지 간단한 코드를 실행 합니다.
 
@@ -108,40 +103,42 @@ SQL Server 2017로 특정 추가 Python 예제는 다음과 같습니다: [SQL S
 
 + 내의 모든 항목을 `@script` 인수는 유효한 Python 코드 여야 합니다. 
 + 코드는 들여쓰기, 변수 이름 등 관련 된 모든 Pythonic 규칙을 따라야 합니다. 오류가 발생 하는 경우 공백 및 대/소문자를 확인 합니다.
-+ 기본적으로 로드 되지 않은 모든 라이브러리를 사용 하는 경우 로드 하는 데 스크립트의 시작 부분에 import 문을 사용 해야 합니다. 
-+ 라이브러리에 이미 설치 되어 있지 않으면, 중지 및 여기에 설명 된 대로 SQL Server 외부 Python 패키지 설치: [SQL Server에 새로운 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
++ 기본적으로 로드 되지 않은 모든 라이브러리를 사용 하는 경우 로드 하는 데 스크립트의 시작 부분에 import 문을 사용 해야 합니다. SQL Server는 여러 제품 관련 라이브러리를 추가합니다. 자세한 내용은 [Python 라이브러리](../python/python-libraries-and-data-types.md)합니다.
++ 라이브러리에 이미 설치 되어 있지 않으면를 중지 하 고 여기에 설명 된 대로 SQL Server 외부 Python 패키지 설치: [SQL Server에 새로운 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="inputs-and-outputs"></a>입/출력
 
-기본적으로 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 형식의 유효한 SQL 쿼리를 제공 하는 일반적으로 단일 입력된 dataset을 수락 합니다. 다른 유형의 입력 SQL 변수로 전달할 수 있습니다: 예를 들어, 전달할 수 있습니다 학습된 된 모델을 변수로 같은 serialization 함수를 사용 하 여 [pickle](https://docs.python.org/3.0/library/pickle.html) 또는 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) 에서 모델을 작성 하는 이진 형식입니다.
+기본적으로 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 형식의 유효한 SQL 쿼리를 제공 하는 일반적으로 단일 입력된 dataset을 수락 합니다. 
 
-저장된 프로시저가 반환 단일 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) 데이터 프레임으로 출력 합니다. 그러나 변수로 스칼라 및 모델을 출력할 수 있습니다. 예를 들어 이진 변수 학습된 된 모델 출력 하 고 테이블에 해당 모델을 작성 하는 T-SQL INSERT 문을 전달할 수 있습니다. 이진 형식의 그림 또는 스칼라를 생성할 수도 있습니다 (날짜 및 시간을 같은 개별 값을 시간 경과 됨 모델을 학습 등).
+다른 유형의 입력 SQL 변수로 전달할 수 있습니다: 예를 들어, 전달할 수 있습니다 학습된 된 모델을 변수로 같은 serialization 함수를 사용 하 여 [pickle](https://docs.python.org/3.0/library/pickle.html) 또는 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) 에서 모델을 작성 하는 이진 형식입니다.
 
-지금은 살펴보겠습니다 기본값 입력 및 출력 변수 `InputDataSet` 고 `OutputDataSet`입니다. 
+저장된 프로시저가 반환 단일 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) 데이터 프레임 출력으로 하지만 스칼라 및 변수로 모델을 출력할 수도 있습니다. 예를 들어 이진 변수 학습된 된 모델 출력 하 고 테이블에 해당 모델을 작성 하는 T-SQL INSERT 문을 전달할 수 있습니다. 이진 형식의 그림 또는 스칼라를 생성할 수도 있습니다 (날짜 및 시간을 같은 개별 값을 시간 경과 됨 모델을 학습 등).
+
+지금은 살펴보겠습니다 기본값 sp_execute_external_script의 입력 및 출력 변수: `InputDataSet` 고 `OutputDataSet`입니다. 
 
 1. 몇 가지 계산을 수행 하 고 결과 출력에 다음 코드를 실행 합니다.
 
-        ```sql
-        execute sp_execute_external_script 
-        @language = N'Python', 
-        @script = N'
-        a = 1
-        b = 2
-        c = a/b
-        print(c)
-        OutputDataSet = c
-        '
-        WITH RESULT SETS ((ResultValue float))
-        ```
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    OutputDataSet = c
+    '
+    WITH RESULT SETS ((ResultValue float))
+    ```
 
 2. Python 코드는 스칼라를 데이터 프레임을 생성 하기 때문에 오류를 가져와야 합니다.
 
-        **Results**
+    **결과**
 
-        ```text
-        line 43, in transform
-            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
-        ```
+    ```text
+    line 43, in transform
+        raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+    ```
 
 3. 지금 확인해 전달 하는 경우 테이블 형식 데이터 집합에서 python, 기본 입력된 변수를 사용 하 여 `InputDataSet`입니다. 
 
@@ -382,4 +379,4 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
 
 ## <a name="next-steps"></a>다음 단계
 
-[SQL 저장 프로시저에서 Python 코드를 줄 바꿈](wrap-python-in-tsql-stored-procedure.md)
+[Iris 데모 데이터 집합 설정](demo-data-iris-in-sql.md)

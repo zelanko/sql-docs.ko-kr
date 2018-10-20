@@ -4,18 +4,18 @@ description: 이 자습서에는 사용자 지정 정보 위젯 빌드하고 Azu
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d14c8d9e4a17782464e13b380334c85c9ee1036c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039097"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356344"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 빌드 사용자 지정 정보 위젯
 
@@ -30,7 +30,7 @@ ms.locfileid: "48039097"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 자습서에서는 SQL Server 또는 Azure SQL Database *TutorialDB*합니다. 만들려면 합니다 *TutorialDB* 데이터베이스, 다음 빠른 시작 중 하나를 수행 합니다.
+이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
 - [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)

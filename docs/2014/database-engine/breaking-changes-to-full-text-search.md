@@ -15,12 +15,12 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122403"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460698"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>전체 텍스트 검색의 주요 변경 내용
   이 항목에서는 전체 텍스트 검색의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -59,6 +59,6 @@ ms.locfileid: "48122403"
   
 ## <a name="see-also"></a>관련 항목  
  [전체 텍스트 검색의 동작 변경](../relational-databases/search/full-text-search.md)   
- [전체 텍스트 검색] ((.. / relational-databases/search/full-text-search.md)  
+ [전체 텍스트 검색](../relational-databases/search/full-text-search.md)  
   
   

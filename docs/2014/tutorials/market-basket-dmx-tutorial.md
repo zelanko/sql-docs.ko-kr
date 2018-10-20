@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210933"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461909"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 동시에 구입되는 경향이 있는 제품을 설명하는 예측을 만들 수 있습니다.  
@@ -42,14 +42,14 @@ ms.locfileid: "48210933"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기  
   
- DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 제공하는 쿼리 언어입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘은 함께 구입할 가능성이 있는 제품을 예측할 수 있는 모델을 만듭니다.  
+ DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘은 함께 구입할 가능성이 있는 제품을 예측할 수 있는 모델을 만듭니다.  
   
  이 자습서의 목표는 사용자 지정 응용 프로그램에서 사용할 DMX 쿼리를 제공하는 것입니다.  
   
  **자세한 내용은:** [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>마이닝 구조 및 마이닝 모델  
- DMX 문을 만들려면 먼저 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 마이닝 모델 생성 시 사용하는 주요 개체를 이해하는 것이 중요합니다. 합니다 *마이닝 구조* 마이닝 모델이 생성 된 데이터 도메인을 정의 하는 데이터 구조입니다. 단일 마이닝 구조에는 여러 개 포함할 수 있습니다 *마이닝 모델* 는 같은 도메인을 공유 합니다. 마이닝 모델은 마이닝 구조로 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다.  
+ DMX 문을 만들려면 먼저 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 마이닝 모델 생성 시 사용하는 주요 개체를 이해하는 것이 중요합니다. 합니다 *마이닝 구조* 마이닝 모델이 생성 된 데이터 도메인을 정의 하는 데이터 구조입니다. 단일 마이닝 구조에는 여러 개 포함할 수 있습니다 *마이닝 모델* 는 같은 도메인을 공유 합니다. 마이닝 모델은 마이닝 구조로 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다.  
   
  마이닝 구조의 빌드 블록은 데이터 원본에 포함된 데이터를 설명하는 마이닝 구조 열입니다. 이러한 열에는 데이터 형식, 내용 유형, 데이터 배포 방법 등의 정보가 포함됩니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48210933"
   
  단일 마이닝 구조에 마이닝 모델을 두 개 이상 추가하는 이유에는 여러 가지가 있습니다. 예를 들어 서로 다른 알고리즘을 사용하는 여러 마이닝 모델을 만들어 이 중 가장 적합한 모델이 무엇인지 알아볼 수 있습니다. 또는 사용하는 알고리즘은 동일하지만 매개 변수 설정이 다른 마이닝 모델을 여러 개 만들어 최적의 매개 변수 설정을 찾을 수 있습니다.  
   
- 자세한 내용은 참조 하세요. [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ 자세한 내용은 [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)합니다.  
   
  이 자습서에서는 여러 마이닝 모델을 포함하는 마이닝 구조를 만들 것이므로 두 번째 방법을 사용합니다.  
   
@@ -116,6 +116,6 @@ ms.locfileid: "48210933"
 ## <a name="see-also"></a>관련 항목  
  [Bike Buyer DMX 자습서](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

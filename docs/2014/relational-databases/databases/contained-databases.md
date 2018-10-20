@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129793"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461078"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
   *포함된 데이터베이스* 는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 격리된 데이터베이스입니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 인스턴스에서 데이터베이스를 격리하는 방법은 네 가지가 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48129793"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경은 포함 정보를 보고하며 그에 따라 조치를 취할 수 있습니다.  
   
- 메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. 부분 포함을 사용 하 여 사용할 수는 `CREATE DATABASE` 하 고 `ALTER DATABASE` 문 또는 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)을 참조하십시오.  
+ 메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. `CREATE DATABASE` 및 `ALTER DATABASE` 문을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 부분 포함을 사용하도록 설정할 수 있습니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)을 참조하십시오.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129793"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>AlwaysOn을 사용하는 포함된 데이터베이스 사용자의 이점  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 관련성을 줄이면 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용할 때 장애 조치 중에 부분적으로 포함된 데이터베이스가 유용할 수 있습니다.  
   
- 포함된 사용자를 만들면 사용자가 포함된 데이터베이스에 직접 연결할 수 있습니다. 이 기능은 AlwaysOn 솔루션과 같은 고가용성 및 재해 복구 시나리오에서 매우 중요한 기능입니다. 사용자가 포함된 사용자인 경우 장애 조치(failover) 시 보조 복제본을 호스팅하는 인스턴스에 대한 로그인을 만들지 않고도 보조 복제본에 연결할 수 있습니다. 이는 즉각적인 이점을 제공합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 하 고 [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ 포함된 사용자를 만들면 사용자가 포함된 데이터베이스에 직접 연결할 수 있습니다. 이 기능은 AlwaysOn 솔루션과 같은 고가용성 및 재해 복구 시나리오에서 매우 중요한 기능입니다. 사용자가 포함된 사용자인 경우 장애 조치(failover) 시 보조 복제본을 호스팅하는 인스턴스에 대한 로그인을 만들지 않고도 보조 복제본에 연결할 수 있습니다. 이는 즉각적인 이점을 제공합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 및 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 ### <a name="initial-database-development"></a>초기 데이터베이스 개발  
  개발자는 새 데이터베이스가 배포될 위치를 알지 못할 수 있으므로 데이터베이스에 대한 배포 환경의 영향을 제한하면 개발자의 작업이 더 쉬워질 수 있습니다. 포함되지 않은 모델에서 개발자는 새 데이터베이스 및 프로그램에 대해 가능한 환경적 영향을 고려해야 합니다. 하지만 개발자는 부분적으로 포함된 데이터베이스를 사용하여 데이터베이스에 대한 인스턴스 수준의 영향과 인스턴스 수준에서 개발자가 고려해야 할 요소를 검색할 수 있습니다.  

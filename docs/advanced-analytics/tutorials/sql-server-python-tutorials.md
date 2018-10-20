@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541675c22ddbe347f67119d8cba82f75955382e6
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877987"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383338"
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,29 +56,6 @@ ms.locfileid: "48877987"
 + [고객 수행 Python 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     Kmeans 알고리즘을 사용 하 여 고객의 감독 되지 않은 클러스터링을 수행 하는 방법에 알아봅니다.
-
-## <a name="bkmk_Prerequisites"></a>필수 구성 요소
-
-이러한 자습서를 사용 하려면 SQL Server 2017 있어야 하며 명시적으로 설치 하 고 Machine Learning Services (In-database) 기능을 사용 하도록 설정 해야 합니다. 
-
-SQL Server 2017은 R 및 Python 언어를 지원 하지만 둘 다를 설치 하거나 기본으로 사용 하도록 설정 합니다. Python을 실행는 확장성 프레임 워크를 사용할 수 있으며, Python 설치를 언어로 선택 해야 합니다. 
-
-### <a name="post-installation-configuration-tips"></a>설치 후 구성 팁
-
-SQL Server 설치 프로그램을 실행 한 후 Python 및 SQL Server 통신 하는지 확인 하기 위한 몇 가지 추가 단계를 수행 해야 합니다.
-
-+ 실행 하 여 외부 스크립트 실행 기능을 사용 하도록 설정 `sp_configure 'external scripts enabled', 1`합니다.
-+ 서버를 다시 시작합니다. 
-+ 엽니다는 **Services** 실행 패드 시작 되었는지 여부를 확인 하는 패널입니다. 
-+ 외부 런타임을 호출 하는 서비스에 필요한 권한이 있는지 확인 합니다. 자세한 내용은 [묵시적된 인증을 사용](../security/add-sqlrusergroup-to-database.md)합니다.
-+ SQL Server에 대 한 방화벽에서 포트를 열고 필요한 네트워크 프로토콜을 사용 하도록 설정 합니다.
-+ 사용자의 SQL 로그인 또는 Windows 사용자 계정에 데이터를 읽고이 샘플에 필요한 모든 데이터베이스 개체를 만드는 서버에 연결 하는 데 필요한 권한이 있는지 확인 합니다.
-
-몇 가지 일반적인 문제에 대 한이 문서를 참조 하세요. [Machine Learning Services 문제 해결](../machine-learning-troubleshooting-faq.md)
-
-### <a name="resource-management"></a>리소스 관리
-
-동일한 컴퓨터에 R 및 Python 모두 설치할 수는 있지만 둘 다 실행 데 상당히 많은 리소스가 필요할 수 있습니다. "Out of memory" 오류가 발생 하거나 주 서버의 용도 machine learning 작업을 실행 하는 경우 데이터베이스 엔진에 할당 된 메모리의 양을 줄일 수 있습니다. 자세한 내용은 [관리 및 모니터링에서 SQL Server Python](../python/managing-and-monitoring-python-solutions.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

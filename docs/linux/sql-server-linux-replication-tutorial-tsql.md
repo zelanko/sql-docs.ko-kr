@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669311"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390835"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL을 사용 하 여 복제를 구성 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 2 개의 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 합니다. 게시자 및 배포자 동일한 인스턴스에 되며 구독자는 별도 인스턴스에서 됩니다.
+이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 두 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 합니다. 게시자 및 배포자 동일한 인스턴스에 되며 구독자는 별도 인스턴스에서 됩니다.
 
 > [!div class="checklist"]
 > * Linux의 SQL Server 복제 에이전트를 사용 하도록 설정
@@ -35,10 +35,10 @@ ms.locfileid: "47669311"
 
 모든 복제 구성을 사용 하 여 구성할 수 있습니다 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 자습서를 완료 하려면 해야 합니다.
 
-- Linux에서 SQL Server의 최신 버전을 사용 하 여 SQL Server의 2 인스턴스
+- Linux에서 SQL Server의 최신 버전을 사용 하 여 SQL Server의 두 인스턴스
 - 쿼리를 실행할 T-SQL SQLCMD 또는 SSMS와 같은 복제를 설정 하는 도구
 
   참조 [SSMS를 사용 하 여 Linux의 SQL Server 관리](./sql-server-linux-manage-ssms.md)합니다.
@@ -50,15 +50,6 @@ ms.locfileid: "47669311"
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. 인스턴스를 구성할 SQL Server 복제 실행에 대 한 다음 저장된 프로시저를 SQL Server 복제에 참여 하 고 각 CTP1.5 인스턴스의 msdb 데이터베이스에서.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. 예제 데이터베이스 및 테이블 게시자 만들기 예제 데이터베이스 및 게시에 대 한 아티클로 할 테이블을 만듭니다.
@@ -282,7 +273,7 @@ ms.locfileid: "47669311"
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 2 개의 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 했습니다.
+이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 두 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 합니다.
 
 > [!div class="checklist"]
 > * Linux의 SQL Server 복제 에이전트를 사용 하도록 설정

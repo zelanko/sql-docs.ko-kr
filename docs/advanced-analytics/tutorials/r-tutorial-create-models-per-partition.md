@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232567"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462009"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,7 +34,7 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
 > * 각 파티션에 모델을 학습 만들고 데이터베이스에서 개체를 저장 합니다.
 > * 해당 목적을 위해 예약 하는 샘플 데이터를 사용 하 여 각 파티션 모델을 통해 팁 결과의 확률을 예측 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
  
 이 자습서를 완료 하려면 다음이 필요 합니다.
 
@@ -42,7 +42,7 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
 
 + 쿼리 실행, 같은 T-SQL에 대 한 도구 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 할 수 있습니다 [다운로드 하 고 복원](sqldev-download-the-sample-data.md) 로컬 데이터베이스 엔진 인스턴스로. 파일 크기는 약 90입니다.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 할 수 있습니다 [다운로드 하 고 복원](demo-data-nyctaxi-in-sql.md) 로컬 데이터베이스 엔진 인스턴스로. 파일 크기는 약 90입니다.
 
 + SQL Server 2019 미리 보기 데이터베이스 엔진 인스턴스, Machine Learning Services 및 R 통합 합니다.
 
@@ -64,7 +64,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>데이터베이스에 연결
 
-Management Studio를 시작 하 고 데이터베이스 엔진 인스턴스에 연결 합니다. 개체 탐색기에서 확인 합니다 [NYCTaxi_Sample 데이터베이스](sqldev-download-the-sample-data.md) 존재 합니다. 
+Management Studio를 시작 하 고 데이터베이스 엔진 인스턴스에 연결 합니다. 개체 탐색기에서 확인 합니다 [NYCTaxi_Sample 데이터베이스](demo-data-nyctaxi-in-sql.md) 존재 합니다. 
 
 ## <a name="create-calculatedistance"></a>CalculateDistance 만들기
 

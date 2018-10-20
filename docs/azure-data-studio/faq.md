@@ -4,18 +4,18 @@ description: 질문과 대답 (FAQ) Azure Data Studio에 대 한입니다.
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8e1178ba2b28ddf2e7db3fc381b15f01ecd428b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039137"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356354"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 자주 묻는 질문(FAQ)
 

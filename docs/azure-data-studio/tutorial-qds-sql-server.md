@@ -4,18 +4,18 @@ description: 이 자습서에는 5 개의 가장 느린 쿼리 샘플 위젯을 
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 839f72a83d45f49004f0bbfb876baadbeaafdeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039129"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356244"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: *5개의 가장 느린 쿼리* 샘플 위젯을 데이터베이스 대시보드에 추가하기
 
@@ -31,7 +31,7 @@ ms.locfileid: "48039129"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서에서는 SQL Server 또는 Azure SQL Database *TutorialDB*합니다. 만들려면 합니다 *TutorialDB* 데이터베이스, 다음 빠른 시작 중 하나를 수행 합니다.
+이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
 - [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)

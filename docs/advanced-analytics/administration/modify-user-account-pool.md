@@ -3,17 +3,17 @@ title: SQL Server Machine Learning 서비스에서 동시 실행 외부 스크�
 description: SQL Server Machine Learning Services의 크기를 조정 하는 사용자 계정 풀 수정 하는 방법.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 598c303d6b0e3ef334ddb9b03d2c5d9c21401395
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881504"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419438"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 외부 스크립트의 동시 실행 크기 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

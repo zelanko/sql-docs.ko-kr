@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 288348e1b18e5a20ec2b9890bfc54f613230436e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655217"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383738"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -48,7 +48,7 @@ ms.locfileid: "47655217"
 
 5. [가용성 그룹에 클러스터 리소스로 추가](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 종단 간 시나리오를 완료 하려면 세 개의 머신을 세 개의 노드 클러스터를 배포 해야 합니다. 다음 단계에는 이러한 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "47655217"
 
 1. 보조 복제본으로 주 및 기타 노드로 노드 하나를 지정 합니다. 이 가이드 전체에서 이러한 용어를 사용 합니다.
 
-1. 클러스터의 일부가 될 노드를 서로 통신할 수 있는지 확인 합니다.
+1. 클러스터의 일부가 될 예정인 노드가 서로 통신할 수 있는지 확인 합니다.
 
    다음 예제에서는 `/etc/hosts` SLES1, 그 다음에 SLES2, 및 SLES3 라는 세 개의 노드를 추가 합니다.
 

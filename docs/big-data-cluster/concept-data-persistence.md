@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796650"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460578"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796650"
 SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. (풀) 어떤 용도로 사용 하는 저장소 클래스를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 pod에 대 한 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다.
 
 > [!NOTE]
+
 > CTP 2.0의 경우만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 ## <a name="deployment-settings"></a>배포 설정
@@ -36,11 +37,20 @@ SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 �
 
 ## <a name="aks-storage-classes"></a>AKS 저장소 클래스
 
-AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **기본** 하 고 **premium storage** 에 동적 프로 비 저 너와 함께 합니다. 그 중 하나를 지정할 수도 있고 사용 하도록 설정 하는 영구 저장소를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 사용자 고유의 저장소 클래스를 만들 수 있습니다.
+AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **기본** 하 고 **관리 되는 프리미엄** 에 동적 프로 비 저 너와 함께 합니다. 그 중 하나를 지정할 수도 있고 사용 하도록 설정 하는 영구 저장소를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 사용자 고유의 저장소 클래스를 만들 수 있습니다.
 
 ## <a name="minikube-storage-class"></a>Minikube 저장소 클래스
 
-Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다.
+Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. 사실은 Minikube를에서 USE_PERSISTENT_VOLUME = true (기본값), 기본값 다르기 때문에 STORAGE_CLASS_NAME 환경 변수의 기본값 재정의 해야 합니다. 값을 설정 합니다 `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+또는 Minikube에서 영구적 볼륨을 사용 하 여 무시할 수 있습니다.
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ export STORAGE_SIZE=10Gi
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

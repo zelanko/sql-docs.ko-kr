@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134733"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460368"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "48134733"
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Union All 변환](union-all-transformation.md)   
+ [Union All Transformation](union-all-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   
- [데이터 흐름 태스크] ((.. /.. /control-flow/data-flow-task.md)  
+ [데이터 흐름 태스크](../../control-flow/data-flow-task.md)  
   
   

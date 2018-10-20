@@ -9,12 +9,12 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 1e154ccfca46430f4ab96e620ac450e3c213313d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796395"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460868"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
 
@@ -201,5 +201,5 @@ Spark 기록 서버에 다음과 같은 알려진된 문제가 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* [HDInsight에서 Spark 클러스터용 리소스 관리](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [Spark 설정 구성](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [HDInsight에서 Spark 클러스터용 리소스 관리](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Spark 설정 구성](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

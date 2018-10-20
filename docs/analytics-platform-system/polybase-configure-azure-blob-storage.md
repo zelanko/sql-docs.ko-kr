@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450367"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460636"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage에서 외부 데이터에 액세스 하는 PolyBase를 구성 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "47450367"
 > [!NOTE]
 > AP는 현재 지원 표준 범용 v1 로컬 중복 (LRS) Azure Blob storage.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
  - 구독에서 azure Blob 저장소입니다.
  - Azure Blob storage에서 만든 컨테이너입니다.
@@ -32,7 +32,7 @@ ms.locfileid: "47450367"
 
 먼저, Azure Blob storage를 사용 하는 AP를 구성 합니다.
 
-1. 실행할 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop 연결' Azure Blob 저장소 공급자를 설정 합니다. 값 공급자에 대 한 참조 하세요 [PolyBase 연결 구성](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)합니다.
+1. 실행할 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop 연결' Azure Blob 저장소 공급자를 설정 합니다. 공급자의 값을 찾으려면 [PolyBase 연결 구성](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.
 
    ```sql  
    -- Values map to various external data sources.  
@@ -47,11 +47,11 @@ ms.locfileid: "47450367"
 
 2. AP 지역에서 서비스 상태 페이지를 사용 하 여 다시 시작 [구성 관리자 어플라이언스](launch-the-configuration-manager.md)합니다.
   
-## <a name="configure-an-external-table"></a>외부 테이블을 구성 합니다.
+## <a name="configure-an-external-table"></a>외부 테이블 구성
 
-Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용 하는 외부 테이블을 정의 해야 합니다. 다음 단계를 외부 테이블을 구성 하는 방법에 설명 합니다.
+Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용 하는 외부 테이블을 정의 해야 합니다. 다음 단계에서는 외부 테이블을 구성하는 방법을 설명합니다.
 
-1. 데이터베이스 마스터 키를 만듭니다. 자격 증명 비밀을 암호화 해야 합니다.
+1. 데이터베이스에 마스터 키를 만듭니다. 자격 증명 비밀을 암호화 해야 합니다.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 사용 하 여 외부 데이터 원본 만들기 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
    );  
    ```
 
-1. 사용 하 여 외부 파일 형식 만들기 [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)합니다.
+1. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)을 사용하여 외부 파일 형식을 만듭니다.
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. 사용 하 여 Azure storage에 저장 된 데이터를 가리키는 외부 테이블을 만듭니다 [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)합니다. 이 예제에서는 외부 데이터는 차량 센서 데이터를 포함합니다.
+1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 Azure Storage에 저장된 데이터를 가리키는 외부 테이블을 만듭니다. 이 예제에서는 외부 데이터는 차량 센서 데이터를 포함합니다.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
    );  
    ```
 
-1. 외부 테이블에서 통계를 만듭니다.
+1. 외부 테이블에 대한 통계를 만듭니다.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +117,10 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
 세 가지 함수가 PolyBase에 적합합니다.  
   
 - 외부 테이블에 대 한 임시 쿼리 합니다.  
-- 데이터를 가져오는 중입니다.  
-- 데이터를 내보내는 중입니다.  
+- 데이터 가져오기  
+- 데이터 내보내기  
 
-다음 쿼리는 가상의 차량 센서 데이터를 사용 하 여 예제를 제공합니다.
+다음 쿼리는 가상 차량 센서 데이터를 포함하는 예제를 제공합니다.
 
 ### <a name="ad-hoc-queries"></a>임시 쿼리  
 
@@ -179,7 +179,5 @@ SQL Server Data Tools, 외부 테이블을 별도 폴더에 표시 됩니다 **�
 
 ## <a name="next-steps"></a>다음 단계
 
-다음 문서에서 PolyBase를 모니터링 및 사용 방법 살펴보기
-
-[PolyBase 사용 하 여 형식 매핑을](../relational-databases/polybase/polybase-type-mapping.md)합니다.  
+PolyBase에 대 한 자세한 내용은 참조는 [PolyBase 란?](../relational-databases/polybase/polybase-guide.md)합니다. 
 

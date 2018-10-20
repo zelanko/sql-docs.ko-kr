@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877896"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460658"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server에 대 한 빅 데이터 클러스터를 배포 하는 방법
 
@@ -47,6 +47,9 @@ SQL Server에 대 한 빅 데이터 클러스터 Kubernetes에 대 한, 서버 �
 
    - [Minikube를 구성 합니다.](deploy-on-minikube.md)
    - [Azure Kubernetes Service에서 Kubernetes 구성](deploy-on-aks.md)
+   
+> [!TIP]
+> AKS와 SQL Server 빅 데이터 클러스터를 배포 하는 샘플 python 스크립트를 참조 하세요 [빅 데이터 클러스터 Azure Kubernetes Service (AKS)에서 SQL Server 배포](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)합니다.
 
 ## <a id="deploy"></a> SQL Server에 대 한 빅 데이터 클러스터 배포
 
@@ -108,8 +111,8 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 | **CONTROLLER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 클러스터 관리자의 암호입니다. |
 | **KNOX_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | Knox 사용자에 대 한 암호입니다. |
 | **MSSQL_SA_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 마스터 SQL 인스턴스 SA 사용자의 암호입니다. |
-| **USE_PERSISTENT_VOLUME** | 아니요 | true | `true` Kubernetes 영구적 볼륨을 사용 하려면 pod 저장소에 대 한 클레임입니다.  `false` pod 저장소에 대 한 임시 호스트 저장소를 사용 하 합니다. 참조를 [데이터 지 속성](concept-data-persistence.md) 자세한 세부 정보에 대 한 항목입니다. |
-| **STORAGE_CLASS_NAME** | 아니요 | 기본 | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true` 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다. 참조를 [데이터 지 속성](concept-data-persistence.md) 자세한 세부 정보에 대 한 항목입니다. |
+| **USE_PERSISTENT_VOLUME** | 아니요 | true | `true` Kubernetes 영구적 볼륨을 사용 하려면 pod 저장소에 대 한 클레임입니다.  `false` pod 저장소에 대 한 임시 호스트 저장소를 사용 하 합니다. 참조를 [데이터 지 속성](concept-data-persistence.md) 자세한 세부 정보에 대 한 항목입니다. 빅 데이터 클러스터 minikube를 SQL Server 및 USE_PERSISTENT_VOLUME를 배포 하는 경우 = true를 설정 해야 값 `STORAGE_CLASS_NAME=standard`합니다. |
+| **STORAGE_CLASS_NAME** | 아니요 | 기본 | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true` 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다. 참조를 [데이터 지 속성](concept-data-persistence.md) 자세한 세부 정보에 대 한 항목입니다. SQL Server minikube의 빅 데이터 클러스터를 배포 하는 경우 기본 저장소 클래스 이름이 다릅니다 및 설정 하 여 재정의 해야 `STORAGE_CLASS_NAME=standard`합니다. |
 | **MASTER_SQL_PORT** | 아니요 | 31433 | 마스터 SQL 인스턴스는 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
 | **KNOX_PORT** | 아니요 | 30443 | Apache Knox 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
 | **GRAFANA_PORT** | 아니요 | 30888 | 응용 프로그램 모니터링 Grafana 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
@@ -122,7 +125,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 >1. 온-프레미스 클러스터의 kubeadm, 환경 변수 값을 사용 하 여 빌드한 `CLUSTER_PLATFORM` 는 `kubernetes`합니다. 또한, USE_PERSISTENT_STORAGE = true 인 경우 Kubernetes 저장소 클래스를 사전 프로 비전 하 고는 STORAGE_CLASS_NAME를 사용 하 여 통과 해야 합니다.
 >1. 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 원하는 MSSQL_SA_PASSWORD를 설정할 수 있습니다 하지만 해야 충분히 복잡 하지 사용 하는 `!`, `&` 또는 `‘` 문자입니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
 >1. 클러스터의 이름에는 소문자 영숫자 문자만 공백 없이 이어야 합니다. 클러스터와 동일한 이름 가진 네임 스페이스의 클러스터에 대 한 모든 Kubernetes 아티팩트 (컨테이너, pod, 상태 집합, 서비스)를 만들 수는 지정 된 이름입니다.
->1. 합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
+>1. 합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
 
 Windows 또는 Linux 클라이언트를 사용 하는 여부에 따라 달라 집니다 클러스터 Aris 배포에 필요한 환경 변수를 설정 합니다.  사용 중인 운영 체제에 따라 아래 단계를 선택 합니다.
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+Minikube를에서 경우 USE_PERSISTENT_VOLUME = true (기본값) 이면 오른쪽 STORAGE_CLASS_NAME 환경 변수의 기본값도 해야 합니다.
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+또는 minikube에서 영구적 볼륨을 사용 하 여 비호환에 수행할 수 있습니다.
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 다음 환경 변수를 초기화 합니다.
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+Minikube를에서 경우 USE_PERSISTENT_VOLUME = true (기본값) 이면 오른쪽 STORAGE_CLASS_NAME 환경 변수의 기본값도 해야 합니다.
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+또는 minikube에서 영구적 볼륨을 사용 하 여 비호환에 수행할 수 있습니다.
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>SQL Server에 대 한 빅 데이터 클러스터 배포
 
 클러스터 만들기 API Kubernetes 네임 스페이스를 초기화 하 고 네임 스페이스에 모든 응용 프로그램 pod를 배포에 사용 됩니다. Kubernetes 클러스터에서 SQL Server에 대 한 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.

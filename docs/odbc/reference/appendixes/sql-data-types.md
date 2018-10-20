@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3325422169064c1e55ca7ce6d94da19a64392b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707977"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324596"
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버는 연결 된 DBMS를 정의 하는 SQL 데이터 형식만 제공 합니다. 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL ODBC 정의한 SQL 유형 식별자 형식과 호출을 통해 반환 되는 드라이버 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자를 매핑하는 방법 **SQLGetTypeInfo**합니다. 데이터 형식의 열과 호출을 통해 매개 변수를 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**를 **SQLColumns**하십시오 **SQLDescribeCol**, **SQLDescribeParam**하십시오 **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
@@ -46,20 +46,20 @@ ms.locfileid: "47707977"
 |SQL_DECIMAL|10 진수 (*p*하십시오*s*)|부호 있는 정확한 숫자 값 정밀도를 가진 이상 *p* 및 확장 *s입니다.* (최대 전체 자릿수는 드라이버에서 정의 된.) (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|숫자 (*p*하십시오*s*)|부호 있는 정확한 숫자 값은 전체 자릿수가 *p* 및 크기 조정 *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|전체 자릿수 5 인 정확한 숫자 값 이며 배율 0 (서명: –32,768 < = *n* < = 32,767, 부호 없음: 0 < = *n* < = 65,535) [3].|  
-_INTEGER|INTEGER|전체 자릿수 10 인 정확한 숫자 값 이며 배율 0 (서명: – 2 [31] < = *n* < = 2 [31] – 1, 부호 없음: 0 < = *n* < = 2 [32] – 1) [3].|  
+|SQL_INTEGER|INTEGER|전체 자릿수 10 인 정확한 숫자 값 이며 배율 0 (서명: – 2 [31] < = *n* < = 2 [31] – 1, 부호 없음: 0 < = *n* < = 2 [32] – 1) [3].|  
 |SQL_REAL|real|부호 있는 숫자 값 이진 정밀도 24 (0 또는 절대값 10 [–38] 10[38]) 하 합니다.|  
 |SQL_FLOAT|FLOAT (*p*)|부호 있는 숫자 값의 이진 정밀도 사용 하 여 최소한 *p*합니다. (최대 전체 자릿수는 드라이버에서 정의 된.) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|부호 있는 숫자 값을 이진 정밀도 53 (0 또는 절대값 10 [–308] 10[308]) 하 합니다.|  
 |SQL_BIT|BIT|단일 비트 이진 데이터입니다. [8]|  
 |SQL_TINYINT|TINYINT|전체 자릿수가 3 인 정확한 숫자 값 이며 배율 0 (서명:-128 < = *n* < = 127, 부호 없음: 0 < = *n* < = 255) [3].|  
-_BIGINT|bigint|전체 자릿수 19 (부호 있는 경우)를 사용 하 여 숫자 값 또는 20 (부호 없음) 하는 경우 정확한 이며 배율 0 (서명: – 2 [63] < = *n* < = 2 [63] – 1, 부호 없음: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_BIGINT|bigint|전체 자릿수 19 (부호 있는 경우)를 사용 하 여 숫자 값 또는 20 (부호 없음) 하는 경우 정확한 이며 배율 0 (서명: – 2 [63] < = *n* < = 2 [63] – 1, 부호 없음: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|이진 (*n*)|고정 길이의 이진 데이터 *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|가변 길이 이진 데이터의 최대 길이 *n*합니다. 최대는 사용자가 설정 됩니다. [9]|  
 |SQL_LONGVARBINARY|LONG VARBINARY|가변 길이 이진 데이터입니다. 최대 길이 데이터 소스에 따라 다릅니다. [9]|  
 |SQL_TYPE_DATE [6]|DATE|연도, 월 및 날짜 필드를 일반 달력의 규칙을 준수 합니다. (참조 [일반 달력의 제약 조건](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)이 부록의 뒷부분에 나오는.)|  
 |SQL_TYPE_TIME [6]|시간 (*p*)|시간, 분 및 00부터 59까지 분 00 ~ 23 사이의 유효한 값의 시간에 대 한 유효한 값 및 00-61 초에 대 한 유효한 값을 사용 하 여 두 번째 필드입니다. 전체 자릿수 *p* 초 전체 자릿수를 나타냅니다.|  
 |SQL_TYPE_TIMESTAMP [6]|타임 스탬프 (*p*)|연도, 월, 일, 시간, 분 및 날짜 및 시간 데이터 형식에 대해 정의 된 유효한 값을 사용 하 여 두 번째 필드입니다.|  
-_TYPE_UTCDATETIME|UTCDATETIME|연도, 월, 일, 시, 분, 초, utchour, 및 utcminute 필드입니다. Utchour 및 utcminute 필드에는 전체 자릿수가 1/10 (마이크로초)입니다.|  
+|SQL_TYPE_UTCDATETIME|UTCDATETIME|연도, 월, 일, 시, 분, 초, utchour, 및 utcminute 필드입니다. Utchour 및 utcminute 필드에는 전체 자릿수가 1/10 (마이크로초)입니다.|  
 |SQL_TYPE_UTCTIME|UTCTIME|시간, 분, 초, utchour, 및 utcminute 필드입니다. Utchour 및 utcminute 필드에는 1/10 마이크로초 전체 자릿수가...|  
 |SQL_INTERVAL_MONTH [7]|간격이 월 (*p*)|두 날짜; 사이의 개월 수 *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_YEAR [7]|INTERVAL YEAR (*p*)|두 날짜 사이의 연도 수 *p* 전체 자릿수를 유도 하는 간격입니다.|  
@@ -68,12 +68,12 @@ _TYPE_UTCDATETIME|UTCDATETIME|연도, 월, 일, 시, 분, 초, utchour, 및 utcm
 |SQL_INTERVAL_HOUR [7]|간격 시간 (*p*)|두 시간의 날짜/시간입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_MINUTE [7]|간격이 분 (*p*)|날짜/시간 간 시간 (분) 수입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_SECOND [7]|간격 두 번째 (*p*하십시오*q*)|날짜/시간 간 시간 (초) 수입니다. *p* 선행 정밀도 간격 및 *q* 간격 초 전체 자릿수입니다.|  
-_INTERVAL_DAY_TO_HOUR [7]|간격 일 (*p*) 시간|두 날짜/시간의 날짜/시간입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
+|SQL_INTERVAL_DAY_TO_HOUR [7]|간격 일 (*p*) 시간|두 날짜/시간의 날짜/시간입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_DAY_TO_MINUTE [7]|간격 일 (*p*) 분|두 분/일/시간 날짜/시간입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_DAY_TO_SECOND [7]|간격 일 (*p*) 두 번째 (*q*)|일/시간/분/시간 (초) 두 날짜/시간입니다. *p* 선행 정밀도 간격 및 *q* 간격 초 전체 자릿수입니다.|  
 |SQL_INTERVAL_HOUR_TO_MINUTE [7]|간격 시간 (*p*) 분|시간/시간 (분) 두 날짜/시간입니다. *p* 전체 자릿수를 유도 하는 간격입니다.|  
 |SQL_INTERVAL_HOUR_TO_SECOND [7]|간격 시간 (*p*) 두 번째 (*q*)|시간/분/시간 (초) 두 날짜/시간입니다. *p* 선행 정밀도 간격 및 *q* 간격 초 전체 자릿수입니다.|  
-_INTERVAL_MINUTE_TO_SECOND [7]|간격이 분 (*p*) 두 번째 (*q*)|분/시간 (초) 두 날짜/시간입니다. *p* 선행 정밀도 간격 및 *q* 간격 초 전체 자릿수입니다.|  
+|SQL_INTERVAL_MINUTE_TO_SECOND [7]|간격이 분 (*p*) 두 번째 (*q*)|분/시간 (초) 두 날짜/시간입니다. *p* 선행 정밀도 간격 및 *q* 간격 초 전체 자릿수입니다.|  
 |SQL_GUID|GUID|고정된 길이 GUID입니다.|  
   
  [1]이를 호출 하 여 DATA_TYPE 열에 반환 값은 **SQLGetTypeInfo**합니다.  

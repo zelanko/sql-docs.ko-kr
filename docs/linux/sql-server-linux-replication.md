@@ -4,7 +4,7 @@ description: 이 문서에서는 Linux의 SQL Server 복제를 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734131"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390845"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제
 
@@ -34,7 +34,7 @@ SQL Server 인스턴스의 모든 복제 역할에 참여할 수 있습니다.
 * 배포자
 * 구독자
 
-복제 스키마를 혼합 하 고 운영 체제 플랫폼과 일치 수 있습니다. 예를 들어 복제 스키마 linux 게시자 및 배포자에 대 한에 SQL Server 인스턴스를 사용할 수 있으며 구독자는 Windows의 SQL Server의 인스턴스를 포함할 수 있습니다.
+복제 스키마를 혼합 하 고 운영 체제 플랫폼과 일치 수 있습니다. 예를 들어 복제 스키마는 게시자 및 배포자에 대해 Linux의 SQL Server의 인스턴스를 포함할 수 있습니다 및 Windows 뿐만 아니라 Linux의 SQL Server의 인스턴스를 포함 하는 구독자입니다.
 
 Linux의 SQL Server 인스턴스에서 모든 유형의 복제에 참여할 수 있습니다.
 
@@ -62,6 +62,7 @@ Linux의 SQL Server 인스턴스에서 모든 유형의 복제에 참여할 수 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 다음과 같은 기능을 지원 하지 않습니다.
 
 * 즉시 업데이트 구독자
+* Oracle 게시
 
 ## <a name="next-steps"></a>다음 단계
 

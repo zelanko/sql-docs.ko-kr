@@ -4,17 +4,17 @@ description: 이 문서에서는 Linux에서 실행 되는 SQL Server에 대 한
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851848"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419358"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -69,6 +69,22 @@ ms.locfileid: "48851848"
 1. **Linux의 SQL Server의 무인된 설치를 수행할 수 있습니까?**
 
    예 무인된 설치의 논의 참조 하세요 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md#unattended)합니다. 에 대 한 샘플 스크립트를 참조 하세요 [Red Hat](sample-unattended-install-redhat.md)를 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), 및 [Ubuntu](sample-unattended-install-ubuntu.md)합니다. 또한 검토할 수 있습니다 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) SQL Server 고객 자문 팀에서 만든 합니다.
+
+1. **어떤 버전의 SQL Server 선택 해야 하나요 이미 구매한 경우?**
+
+   Mssql-conf를 실행 하는 경우 이러한 옵션 제공 됩니다.  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   기업 계약의 일부로 볼륨 라이선스를 통해 또는 MSDN 구독을 통해 라이선스를 얻은 경우 4 ~ 7 선택 해야 합니다. 소매 채널을 통해 Standard edition을 구매한 경우에 8을 선택 해야 합니다. 
+
 
 ## <a name="tools"></a>Tools
 

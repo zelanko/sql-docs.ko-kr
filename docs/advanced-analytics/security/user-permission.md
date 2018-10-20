@@ -3,54 +3,26 @@ title: SQL Server Machine Learning Services 하도록 사용자 권한 부여 | 
 description: SQL Server Machine Learning Services 하도록 사용자 권한 부여 방법입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ad5c3fa3bf94bb88041c9ec81773b2a26013e517
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100334"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419068"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 하도록 사용자 권한 부여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 사용자 SQL Server Machine Learning Services에서 외부 스크립트를 실행 하 여 읽기, 쓰기 또는 데이터 정의 언어 (DDL) 데이터베이스 권한을 제공 하는 권한을 제공할 수 하는 방법을 설명 합니다.
 
-SQL Server 로그인 또는 Windows 사용자 계정을 사용 하는 SQL Server 데이터 또는 SQL Server 계산 컨텍스트를 사용 하 여 실행 되는 외부 스크립트를 실행 하려면 필요 합니다.
+자세한 내용은의 사용 권한 섹션을 참조 하세요 [확장성 프레임 워크에 대 한 보안 개요](../../advanced-analytics/concepts/security.md#permissions)합니다.
 
-로그인 또는 사용자 계정을 식별 하는 *보안 주체*, 여러 수준의 외부 스크립트 요구 사항에 따라 액세스 해야 할 수 있는 사용자:
-
-+ 외부 스크립트는 사용할 수 있는 데이터베이스에 액세스할 수 있는 권한입니다.
-+ 테이블과 같은 보안된 개체에서 데이터를 읽을 권한입니다.
-+ 모델 또는 점수 매기기 결과 같은 테이블에 새 데이터를 쓸 수 있습니다.
-+ 테이블과 같은 새 개체를 만들 수는 저장 프로시저 외부 스크립트를 사용 하거나 사용자 지정 함수를 사용 하 여 R 또는 Python 작업 합니다.
-+ SQL Server 컴퓨터의 새 패키지를 설치 하거나 사용자 그룹에 제공 하는 패키지를 사용 하 여 권한입니다.
-
-따라서 SQL Server를 사용 하 여 실행 컨텍스트로 외부 스크립트를 실행 하는 각 사용자 데이터베이스의 사용자를 매핑해야 합니다. SQL Server 보안 사용 권한 집합을 관리 및 이러한 역할에 사용자를 할당 하지 않고 개별적으로 설정 된 사용자 권한 역할을 만드는 쉽습니다.
-
-사용자는 외부 스크립트에서 데이터베이스 또는 access 데이터베이스 개체 및 데이터를 실행 해야 할 경우 외부 도구에서 R 또는 Python을 사용 하는 사용자도 로그인 또는 데이터베이스에서 계정에 매핑해야 합니다. 동일한 권한은 외부 스크립트의 원격 데이터 과학 클라이언트에서 전송 또는 T-SQL 저장 프로시저를 사용 하 여 시작 여부 필요 합니다.
-
-SQL Server에서 해당 코드를 실행 하려는 고 예를 들어, 로컬 컴퓨터에서 실행 되는 외부 스크립트를 만든를 가정 합니다. 다음 조건이 충족되는지 확인해야 합니다.
-
-+ 데이터베이스에서 원격 연결을 허용합니다.
-+ SQL 로그인 또는 데이터베이스 액세스에 사용 된 Windows 계정 인스턴스 수준에서 SQL Server에 추가 되었습니다.
-+ SQL 로그인 또는 Windows 사용자를 외부 스크립트를 실행할 권한이 있어야 합니다. 일반적으로 이 권한은 데이터베이스 관리자만 추가할 수 있습니다.
-+ SQL 로그인 또는 Window 사용자는 이러한 작업의 외부 스크립트를 수행 하는 각 데이터베이스에서 적절 한 권한이 있는 사용자로 추가 되어야 합니다.
-  + 데이터를 검색합니다.
-  + 데이터 쓰기 또는 업데이트 합니다.
-  + 테이블 또는 저장된 프로시저 등의 새 개체를 만드는 중입니다.
-
-로그인 또는 Windows 사용자 계정을 프로 비전 하 고 필요한 권한이 부여, 있습니다 수 외부 스크립트를 SQL Server에서 실행 R에서 데이터 원본 개체를 사용 하 여 또는 **revoscalepy** Python 또는 저장을 호출 하 여 라이브러리 외부 스크립트를 포함 하는 프로시저입니다.
-
-외부 스크립트를 SQL Server에서 시작 될 때마다 데이터베이스 엔진 보안 작업을 시작한 사용자 또는 보안 개체에 대 한 로그인의 매핑을 관리 사용자의 보안 컨텍스트를 가져옵니다.
-
-따라서 연결 문자열의 일부로 원격 클라이언트에서 시작 되는 모든 외부 스크립트의 로그인 또는 사용자 정보를 지정 해야 합니다.
-
-<a name="permissions-external-script"></a> 
+<a name="permissions-external-script"></a>
 
 ## <a name="permission-to-run-scripts"></a>스크립트를 실행할 수 있는 권한
 
@@ -61,7 +33,7 @@ SQL Server에서 해당 코드를 실행 하려는 고 예를 들어, 로컬 컴
 ```SQL
 USE <database_name>
 GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]

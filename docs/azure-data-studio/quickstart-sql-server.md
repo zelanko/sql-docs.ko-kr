@@ -4,18 +4,18 @@ description: 이 빠른 시작에서 Azure Data Studio를 사용하여 SQL Serve
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2bc05fd234fd8e3e81add26bd0166e0aa40ce34b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039057"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356094"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 SQL Server에 연결하고 쿼리
 이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.

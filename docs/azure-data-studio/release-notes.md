@@ -4,22 +4,36 @@ description: Azure Data Studio 릴리스 정보
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072307"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411200"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 릴리스 정보
 
-**[다운로드 9 월 *일반 공급* 릴리스 (GA).](download.md)**
+**[10 월 릴리스를 다운로드 하십시오!](download.md)**
+
+## <a name="october-2018-october-release"></a>2018 년 10 월 (10 월 릴리스)
+
+릴리스 날짜: 2018 년 10 월 18 일  
+버전: 1.1.3
+
+- Azure SQL Database를 이동할 Azure 리소스 탐색기를 소개 합니다.
+- 개체 탐색기와 쿼리 편집기에 해당 하는 연결의 견고성을 향상
+- SQL 에이전트 확장 향상 된 기능
+- 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>버그 수정
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="september-2018-september-ga-release"></a>2018 년 9 월 (9 월 GA 릴리스)
 

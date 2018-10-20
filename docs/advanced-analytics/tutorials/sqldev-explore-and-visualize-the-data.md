@@ -1,21 +1,21 @@
 ---
-title: 단원 3 탐색 및 R 및 T-SQL (SQL Server Machine Learning)를 사용 하 여 데이터 시각화 | Microsoft Docs
+title: 단원 1 탐색 및 R 및 T-SQL (SQL Server Machine Learning)를 사용 하 여 데이터 시각화 | Microsoft Docs
 description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798591"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461989"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 데이터를 탐색하고 시각화하기
+# <a name="lesson-1-explore-and-visualize-the-data"></a>1 단원: 데이터 탐색 및 시각화를
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -279,8 +279,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>다음 단원
 
-[3 단원: T-SQL을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
+[2 단원: T-SQL을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[1 단원: NYC Taxi 데이터 설정](sqldev-download-the-sample-data.md)
+[NYC Taxi 데이터 설정](demo-data-nyctaxi-in-sql.md)

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878106"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460468"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>SQL Server Always On 가용성 그룹에서 Kubernetes 클러스터 배포
 
@@ -109,7 +109,7 @@ Kubernetes에 배포 포함 연산자를 SQL Server, SQL Server 컨테이너 및
 
 ### <a name="monitor-the-deployment"></a>배포 모니터링
 
-사용할 수 있습니다 [Azure Kubernetes Service (AKS)를 사용 하 여 Kubernetes 대시보드](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) 배포를 모니터링 하려면.
+사용할 수 있습니다 [Azure Kubernetes Service (AKS)를 사용 하 여 Kubernetes 대시보드](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) 배포를 모니터링 하려면.
 
 사용 하 여 `az aks browse` 대시보드를 시작 합니다. 
 

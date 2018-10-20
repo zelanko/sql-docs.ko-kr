@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8935d641c8c3fa6da58b5f7c2d8b5560664a6486
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039153"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355885"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>기능을 확장 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198693"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461018"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>전체 텍스트 검색의 동작 변경
   이 항목에서는 전체 텍스트 검색의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "48198693"
      전체 텍스트 엔진은 FILESTREAM BLOB의 내용을 인덱싱합니다. 이미지와 같은 인덱싱 파일은 유용하지 않을 수도 있습니다. FILESTREAM BLOB이 업데이트되면 인덱스가 다시 작성됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [전체 텍스트 검색] ((.. / relational-databases/search/full-text-search.md)   
+ [전체 텍스트 검색](../relational-databases/search/full-text-search.md)   
  [전체 텍스트 Search 이전 버전과 호환성](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)   
  [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)  

@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services에 대 한 방화벽 구성 | Micros
 description: SQL Server Machine Learning Services에 대 한 방화벽을 구성 하는 방법입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d8a24ca6348054041ca1d8a0f4d0c352dc5bdabd
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881516"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419058"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 방화벽 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "48881516"
 
 ## <a name="default-firewall-rules"></a>기본 방화벽 규칙
 
-기본적으로 SQL Server 설치 프로그램을 방화벽 규칙을 만들어 아웃 바운드 연결을 해제 합니다. 
+기본적으로 SQL Server 설치 프로그램을 방화벽 규칙을 만들어 아웃 바운드 연결을 해제 합니다.
 
-SQL Server 2016 및 2017에서는 이러한 규칙이 설치에 대 한 아웃 바운드 규칙이 만들어진 로컬 사용자 계정에 기반한 **SQLRUserGroup** 해당 멤버에 대 한 네트워크 액세스를 거부 하는 (각 작업자 계정으로 제시 된 로컬 원칙 적용 규칙입니다.
+SQL Server 2016 및 2017에서는 이러한 규칙이 설치에 대 한 아웃 바운드 규칙이 만들어진 로컬 사용자 계정에 기반한 **SQLRUserGroup** 해당 멤버에 대 한 네트워크 액세스를 거부 하는 (각 작업자 계정으로 제시 된 로컬 원칙 적용 규칙입니다. SQLRUserGroup에 대 한 자세한 내용은 참조 하세요. [SQL Server Machine Learning Services의 확장성 프레임 워크에 대 한 보안 개요](../../advanced-analytics/concepts/security.md#sqlrusergroup)합니다.
 
 SQL Server 2019 AppContainers, 이동의 일부로 가지 AppContainer Sid에 따라 새 방화벽 규칙: SQL Server 설치 프로그램을 만들어 각각 20 AppContainers에 대 한 합니다. 방화벽 규칙 이름에 대 한 명명 규칙이 **SQL Server 인스턴스 MSSQLSERVER의에서 AppContainer 00에 대 한 네트워크 액세스를 차단**, 여기서 00입니다 (00-20 기본적으로)을 AppContainer 및 SQL의 이름인 MSSQLSERVER 서버 인스턴스입니다.
 

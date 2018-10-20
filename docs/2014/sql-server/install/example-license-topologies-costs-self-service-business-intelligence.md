@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091403"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462059"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>SQL Server 2014 셀프 서비스 비즈니스 인텔리전스에 대한 예제 라이선스 토폴로지 및 비용
-  이 항목에서는 선택에 대 한 고급 고려 사항 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence 버전 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. 이 항목에는 몇 가지 샘플 온-프레미스 Microsoft 셀프 서비스 BI(Business Intelligence) 토폴로지가 포함되어 있습니다. 그 예에는 비용과 성능 간에 균형을 최적화하는 데 사용할 수 있는 버전과 라이선스가 포함됩니다. 토폴로지, 서버 수 및 라이선스 비용은 **예제로만**제공됩니다. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 Microsoft SharePoint 2013은 라이선스 방식에 몇 가지 변경을 도입하여 서버, 사용자 및 장치를 라이선스 하는 방식에 더 많은 옵션을 제공합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 라이선스는 동일한 Business Intelligence 관련 시나리오를 지원합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence 버전 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전을 선택하기 위한 고려 사항에 대해 간략하게 설명합니다. 이 항목에는 몇 가지 샘플 온-프레미스 Microsoft 셀프 서비스 BI(Business Intelligence) 토폴로지가 포함되어 있습니다. 그 예에는 비용과 성능 간에 균형을 최적화하는 데 사용할 수 있는 버전과 라이선스가 포함됩니다. 토폴로지, 서버 수 및 라이선스 비용은 **예제로만**제공됩니다. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 Microsoft SharePoint 2013은 라이선스 방식에 몇 가지 변경을 도입하여 서버, 사용자 및 장치를 라이선스 하는 방식에 더 많은 옵션을 제공합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 라이선스는 동일한 Business Intelligence 관련 시나리오를 지원합니다.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 Business Intelligence 버전에서 사용 가능하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에 대한 코어 라이선스로 제공됩니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091403"
   
 -   브라우저의 대화형 PowerPivot 통합 문서.  
   
--   대화형 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] SharePoint의 보고서입니다.  
+-   SharePoint의 대화형 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091403"
 |Business Intelligence|**(예)** $8592 + CAL당 $199|해당 사항 없음|  
 |표준|**(아니요)**|**(아니요)**|  
   
- 샘플에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 라이선스 가격을 참조 하십시오.  
+ 샘플 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 라이선스 가격에 대한 자세한 내용은 다음을 참조하세요.  
   
 -   [가상 환경에 대 한 라이선싱](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)합니다.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091403"
   
  샘플 배포는 모두 인트라넷 환경이므로 SharePoint CAL 라이선스가 필요합니다.  
   
--   [SharePoint 라이선스 전체 목록](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)합니다.  
+-   [SharePoint 라이선스 전체 목록](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)합니다.  
   
--   [SharePoint를 구입 하는 방법](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx)합니다.  
+-   [SharePoint를 구입 하는 방법](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx)합니다.  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 계층 토폴로지 별도의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버  
  이 예제는 800명 이하의 사용자로 구성된 경우 SharePoint 응용 프로그램 서버 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에서 SQL Server BI 버전을 사용하는 것이 가장 저렴하다고 설명합니다. 하지만 사용자가 800명 이상인 경우에는 SQL Server 엔터프라이즈 버전이 보다 저렴합니다. 코어 라이선스는 사용자 수와 별개이므로 코어 및 CAL 라이선스 비용과 사용자 수 증가를 비교하는 경우 비용 임계값 지점이 발생합니다. 엔터프라이즈 버전 이상의 임계값 지점부터는 가장 저렴한 솔루션입니다. 비용 임계값을 결정하려면 라이선스를 부여할 코어 수와 라이선스를 부여할 최종 사용자 또는 최종 장치 CAL 수를 기반으로 비용을 비교합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "48091403"
   
 -   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]은 별도의 서버(3)에서 실행됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 2013 용 SharePoint 팜 외부의 실행 및 성능 향상 SharePoint 설치가 포함 되지 않은 서버에 설치할 수 있습니다.  
   
--   데이터베이스 역할(4)에서는 SQL Server 엔터프라이즈 버전을 사용하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능, AlwaysOn Availability Groups를 사용할 수 있습니다.  
+-   데이터베이스 역할(4)에서는 SQL Server 엔터프라이즈 버전을 사용하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능, AlwaysOn Availability Groups를 사용할 수 있습니다.  
   
  ![bi_license_3tiers_and_ASseparate](../../../2014/sql-server/install/media/bi-license-3tiers-and-asseparate.gif "bi_license_3tiers_and_ASseparate")  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48091403"
   
 -   팜 외부의 (2) 실행 PowerPivot 모드의 analysis Services 하지만 PowerPivot 중인지 **동일한 물리적** 다른 응용 프로그램 역할의 서버.  
   
--   데이터베이스 역할 (3) SQL Server Enterprise에서는 있도록는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능, AlwaysOn Availability Groups를 사용할 수 있습니다.  
+-   데이터베이스 역할(3)에서는 SQL Server 엔터프라이즈 버전을 사용하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능, AlwaysOn Availability Groups를 사용할 수 있습니다.  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

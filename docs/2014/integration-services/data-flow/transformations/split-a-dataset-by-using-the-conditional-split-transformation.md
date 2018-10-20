@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184733"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460339"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>조건부 분할 변환을 사용하여 데이터 집합 분할
   조건부 분할 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -61,11 +61,11 @@ ms.locfileid: "48184733"
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [조건부 분할 변환](conditional-split-transformation.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   
  [Integration Services 데이터 형식](../integration-services-data-types.md)   
- [데이터 흐름 태스크] ((.. /.. /control-flow/data-flow-task.md)   
+ [데이터 흐름 태스크](../../control-flow/data-flow-task.md)   
  [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)  
   
   

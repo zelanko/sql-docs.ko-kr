@@ -23,12 +23,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c25b5b564f0fbe69d2559ae0c7c57d262c6646e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecec815644ab8650503f4a5f6c8ea3f4af5f10a2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177523"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460888"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "48177523"
   
 -   `BufferWrapper` 프로젝트 항목에서 상속 된 클래스를 포함 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 각 입력 및 출력에서 구성에 대 한 합니다 **입 / 출력** 페이지를 **스크립트 변환 편집기**합니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.  
   
- 이러한 개체, 메서드 및 속성을 사용 하는 방법에 대 한 내용은 참조 [스크립트 구성 요소 개체 Model]((understanding-the-script-component-object-model.md) 이해 합니다. 특정 유형의 스크립트 구성 요소에서 이러한 클래스의 메서드와 속성을 사용하는 방법에 대한 자세한 내용은 [추가 스크립트 구성 요소 예제](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md) 섹션을 참조하세요. 예 항목에는 전체 코드 예제도 들어 있습니다.  
+ 이러한 개체, 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소 개체 모델 이해](understanding-the-script-component-object-model.md)를 참조하세요. 특정 유형의 스크립트 구성 요소에서 이러한 클래스의 메서드와 속성을 사용하는 방법에 대한 자세한 내용은 [추가 스크립트 구성 요소 예제](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md) 섹션을 참조하세요. 예 항목에는 전체 코드 예제도 들어 있습니다.  
   
  스크립트 구성 요소를 변환으로 구성하면 `ScriptMain` 프로젝트 항목에 다음 자동 생성 코드가 들어갑니다. 코드 템플릿은 또한 스크립트 구성 요소에 대한 개요와 SSIS 개체(예: 변수, 이벤트 및 연결)를 검색 및 조작하는 방법에 대한 추가 정보를 제공합니다.  
   
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 **진행률** 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.  
   
--   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 참조 [스크립트 Component]((logging-in-the-script-component.md) 로그인 합니다.  
+-   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 [스크립트 구성 요소의 로깅](logging-in-the-script-component.md)을 참조하세요.  
   
  데이터를 대상에 저장하지 않고 원본 또는 변형으로 구성된 스크립트 구성 요소의 출력을 검사하려는 경우, [행 개수 변환](../../data-flow/transformations/row-count-transformation.md)을 사용하여 데이터 흐름을 중지하고 데이터 뷰어를 스크립트 구성 요소의 출력에 연결할 수 있습니다. 데이터 뷰어에 대한 자세한 내용은 [데이터 흐름 디버깅](../../troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
@@ -210,7 +210,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661)  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)  

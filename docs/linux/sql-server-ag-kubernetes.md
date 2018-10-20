@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251967"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356454"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 always On 가용성 그룹
 
@@ -70,7 +70,7 @@ StatfulSet 포함 되어 있습니다.
 
 * mssql-ha-감독자 컨테이너
 
-연산자, HA 감독자 및 SQL Server에 대 한 코드를 호출 하는 Docker 이미지에 패키지 됩니다 `mcr.microsoft.com/mssql/ha`합니다. 이진 파일에 다음이 이미지에 포함 되어 있습니다.
+연산자, HA 감독자 및 SQL Server에 대 한 코드를 호출 하는 Docker 이미지에 패키지 됩니다 `mcr.microsoft.com/mssql/ha`합니다. 이 이미지는 다음 이진 파일이 포함 되어 있습니다.
 
 * `mssql-operator`
 

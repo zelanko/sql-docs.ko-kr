@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076023"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460668"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
   [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트에 세 개의 프로젝트 항목이 있습니다.  
@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   **\<inputbuffer>_ProcessInputRow**를 재정의하여 각 입력 행의 데이터를 전달할 때 처리합니다.  
   
--   입력 행을 반복하면서 추가 작업을 수행해야 하는 경우에만 **\<inputbuffer>_ProcessInput**을 재정의합니다. 예를 들어 모든 행이 처리된 후 다른 동작을 수행하려면 `EndOfRowset`을 테스트해야 합니다. 행 처리를 수행하려면 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
+-   입력 행을 반복하면서 추가 작업을 수행해야 하는 경우에만 **\<inputbuffer>_ProcessInput**을 재정의합니다. 예를 들어 모든 행이 처리된 후 다른 동작을 수행하려면 `EndOfRowset`을 테스트해야 합니다. 행 처리를 수행하려면 \<** inputbuffer>_ProcessInputRow를 호출합니다.  
   
 -   출력을 닫기 전에 출력에 대한 작업을 수행해야 하는 경우 `FinishOutputs`를 재정의합니다.  
   
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [스크립트 구성 요소에는 스크립트 구성 요소 편집기] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)   
  [코딩 and Debugging the Script Component] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

@@ -4,18 +4,18 @@ description: 이 빠른 시작에서는 Azure 데이터 Studio를 사용 하 여
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 00ed5c02e423e5d51fd6f0ee3aabfc73a752e403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1d39e8ebd3d986825141b1acadd0ebc782083a6
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039025"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356044"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 를 연결 하 여 Azure SQL database 쿼리
 
@@ -25,7 +25,7 @@ ms.locfileid: "48039025"
 
 이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 Azure SQL server입니다.
 
-- [설치할 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)를 설치합니다.
 
 Azure SQL server를 아직 없는 경우 다음 Azure SQL Database 빠른 시작 (서버 이름 및 로그인 자격 증명 기억!) 중 하나를 완료 합니다.
 

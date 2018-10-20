@@ -5,23 +5,23 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 17bb33ddc366196d21f45a0dd6ec895c5ceaef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039161"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460621"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 가져오기 확장 (미리 보기)
 
 SQL Server 가져오기 확장 (미리 보기)는 SQL 테이블에.csv 및.txt 파일을 변환합니다. 이 마법사는 라고 하는 Microsoft Research 프레임 워크를 활용 [Program Synthesis using 예제 (PROSE)](https://microsoft.github.io/prose/) 지능적으로 최소한의 사용자 입력을 사용 하 여 파일 구문 분석 합니다. 이 데이터 랭 글 링을 위한 강력한 프레임 워크 이며 Microsoft Excel에서 채우기 플래시를 구동 하는 동일한 기술을
 
-이 기능은 SSMS 버전에 대 한 자세한 내용은 읽어보세요 [이 문서에서는](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard)합니다.
+이 기능은 SSMS 버전에 대 한 자세한 내용은 읽어보세요 [이 문서에서는](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)합니다.
 
 
 ## <a name="install-the-sql-server-import-extension"></a>SQL Server 가져오기 확장 설치

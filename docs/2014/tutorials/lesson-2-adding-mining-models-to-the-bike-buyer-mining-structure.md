@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222613"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462049"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 사용자가 만든 Bike Buyer 마이닝 구조에 두 개의 마이닝 모델 추가 합니다 [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)합니다. 이러한 마이닝 모델을 추가하면 한 모델을 사용하여 데이터를 탐색하고 다른 모델을 사용하여 예측을 만들 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48222613"
  잠재 고객이 자전거를 구입할 가능성이 있는지 여부를 예측을 기반으로 마이닝 모델을 만들게 됩니다 합니다 [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)합니다. 이 알고리즘에서는 각 잠재 고객과 관련된 정보를 조사하여 해당 고객이 자전거를 구입할 지 여부를 예측하는 데 유용한 특징을 찾아냅니다. 그런 다음 이전 자전거 구매자의 특징 값과 새 잠재 고객의 특징 값을 비교하여 새 잠재 고객이 자전거를 구입할 가능성이 있는지 여부를 확인합니다.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 문  
- 마이닝 구조에 마이닝 모델을 추가 하려면 사용 하 여 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 구조에 마이닝 모델을 추가 하려면 사용 합니다 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -103,7 +103,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>의사 결정 트리 마이닝 모델을 추가하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX** 쿼리 편집기와 비어 있는 새 쿼리를 열려면 합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX** 를 클릭하여 쿼리 편집기와 비어 있는 새 쿼리를 엽니다.  
   
 2.  ALTER MINING STRUCTURE 문의 일반적인 예를 빈 쿼리에 복사합니다.  
   

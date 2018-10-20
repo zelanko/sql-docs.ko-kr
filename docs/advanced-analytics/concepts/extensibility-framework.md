@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services의 확장성 아키텍처 | Microsof
 description: 관계형 데이터에서 R 및 Python 스크립트를 실행 하는 것에 대 한 이중 아키텍처를 사용 하 여 SQL Server 데이터베이스 엔진의 경우 외부 코드 지원 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878186"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419221"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SQL Server와 R 및 Python으로 개발 하는 동안 이동 데이터 과학 �
 
 ## <a name="launchpad"></a>실행 패드
 
-SQL Server 신뢰할 수 있는 실행 패드 서비스를 관리 하 고 전체 텍스트 인덱싱 및 쿼리 서비스가 전체 텍스트 쿼리를 처리 하는 것에 대 한 별도 호스트를 실행 하는 방식과 유사 하 게 외부 스크립트를 실행 하는 경우 실행 패드 서비스는 Microsoft에서 게시 또는 성능 및 리소스 관리에 대 한 요구 사항을 충족으로 Microsoft에 의해 인증 된만 신뢰할 수 있는 시작 관리자를 시작할 수 있습니다.
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 관리 하 고 전체 텍스트 인덱싱 및 쿼리 서비스가 전체 텍스트 쿼리를 처리 하는 것에 대 한 별도 호스트를 실행 하는 방식과 유사 하 게 외부 스크립트를 실행 하는 서비스입니다. 실행 패드 서비스는 Microsoft에서 게시 또는 성능 및 리소스 관리에 대 한 요구 사항을 충족으로 Microsoft에 의해 인증 된만 신뢰할 수 있는 시작 관리자를 시작할 수 있습니다.
 
 | 신뢰할 수 있는 시작 관리자 | 확장명 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ SQL Server 신뢰할 수 있는 실행 패드 서비스를 관리 하 고 전체
 | Python 3.5에 대 한 Pythonlauncher.dll | [Python 확장](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 자체 사용자 계정으로 실행됩니다. 실행 패드를 실행 하는 계정을 변경 하면 경우에 관련 파일에 변경 내용이 기록 되도록 되도록 SQL Server 구성 관리자를 사용 하 여 수행 해야 합니다.
+
+별도 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] SQL Server Machine Learning Services를 추가한 각 데이터베이스 엔진 인스턴스에 대 한 서비스가 만들어집니다. 하나의 실행 패드는 실행 패드 서비스 각각에 대 한 외부 스크립트 지원 사용 하 여 여러 인스턴스가 있는 경우 해야 하므로 각 데이터베이스 엔진 인스턴스에 대 한 서비스입니다. 데이터베이스 엔진 인스턴스를 위해 만든 실행 패드 서비스에 바인딩됩니다. 저장된 프로시저의 외부 스크립트의 T-SQL 결과 동일한 인스턴스에 대해 만든 실행 패드 서비스를 호출 합니다. SQL Server 서비스에 대 한 모든 호출 합니다.
 
 지원 되는 특정 언어로 작업을 실행 하려면 실행 패드 보안된 작업자 계정 풀에서 가져옵니다 하 고 외부 런타임에서 관리 하는 위성 프로세스를 시작 합니다. 각 위성 프로세스는 실행 패드의 사용자 계정을 상속 하 고 스크립트 실행 기간에 대 한 해당 작업자 계정을 사용 합니다. 스크립트 병렬 프로세스를 사용 하는 경우 동일한, 단일 작업자 계정으로 생성 됩니다.
 

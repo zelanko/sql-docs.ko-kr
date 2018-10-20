@@ -5,18 +5,18 @@ ms.custom: tools|sos
 ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168802"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411170"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -28,11 +28,11 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 1. SQL Server 2019 확장 (미리 보기).vsix 파일을 로컬 디렉터리로 다운로드:
 
-   |플랫폼|다운로드|릴리스 날짜|
-   |:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 년 9 월 24 일|
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 년 9 월 24 일 |
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 년 9 월 24 일 |
+   |플랫폼|다운로드|릴리스 날짜|버전
+   |:---|:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|2018 년 10 월 18 일|0.7.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|2018 년 10 월 18 일 |0.7.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|2018 년 10 월 18 일 |0.7.2
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -41,6 +41,18 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 1. 선택 **다시 로드** (처음 확장을 설치 하면 필수)에 확장을 사용 하도록 설정 합니다.
 
 1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
+
+## <a name="release-notes-v072"></a>릴리스 정보 (v0.7.2)
+* Azure 리소스 탐색기는 이제 Azure Data Studio에 기본 제공 하 고이 확장에서 제거 되었습니다. 이에 대 한 피드백을 주셔서 감사 합니다!
+* Markdown 셀 수를 사용 하 여 notebook의 성능이 향상 되었습니다.
+* Notebook에서 자동 크기 조정 코드 셀입니다. 셀 도구 모음에 따라 최소 크기를 아직이 있습니다.
+* Notebook 종속성을 설치 하는 경우 사용자를 게 알립니다. Windows에서 특히이 걸릴 수 있습니다 시간이 있도록 알림을 이제 작업 보기에 표시 됩니다.
+* Notebook 종속성을 다시 설치를 지원 합니다. 사용자 이미 닫혀 Azure Data Studio만 설치 하는 경우에 유용 합니다.
+* Notebook 셀 실행 취소를 지원 합니다.
+* 외부 데이터 만들기 마법사를 사용 하는 경우 향상 된 안정성, 특히 연결 오류가 발생 한 경우.
+* Polybase 사용 또는 대상 서버에서 실행 되는 경우에 외부 데이터 만들기 마법사의 사용을 차단 합니다.
+* 맞춤법 및 SQL Server 2019 및 외부 데이터 만들기와 관련 된 픽스를 명명 합니다.
+* Azure Data Studio 디버그 콘솔에서 많은 오류를 제거 합니다.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 빅 데이터 클러스터 지원
 
@@ -70,16 +82,6 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 * 원격으로 실행 하는 경우 연결할 SQL Server 빅 데이터 클러스터 끝점을 선택 (필요 없는 Python 3를 사용 하 여 로컬 개발에 대 한).
 * Notebook 헤더의 단추를 통해 코드 또는 markdown 셀을 추가 합니다. 각 셀의 왼쪽에 휴지통 아이콘을 사용 하 여 셀을 제거 합니다.
 * 코드 셀에 대 한 재생 단추를 사용 하 여 셀을 실행 하 고 markdown 편집 간을 전환 눈 모양 아이콘을 사용 하 여 미리 보기
-
-
-## <a name="azure-resource-explorer"></a>Azure 리소스 탐색기
-
-* Azure에 로그인 하려면 Azure Data Studio의 왼쪽 아래에서에서 사용자 아이콘을 클릭 하 고 대화 상자를 Azure에 로그인을 수행 합니다.
-* 로그인 한 후 삼각가 중 Azure 아이콘의 왼쪽된 막대의 Azure 데이터 Studio를 클릭 하 고 구독과 연결 된 SQL 리소스를 표시할 트리를 확장 합니다.
-* 마우스 오른쪽 단추로 클릭 하거나 연결 대화 상자를 열려면 SQL Server 나 SQL database에 있는 플러그 아이콘을 클릭 합니다. 연결 리소스는 Azure 데이터 Studio 개체 탐색기를 추가 하 여 암호를 입력 합니다.
-
-자세한 내용은 참조 하세요 [Azure Resource Explorer](azure-resource-explorer.md)합니다.
-
 
 ## <a name="polybase-create-external-table-wizard"></a>Polybase 외부 테이블 마법사 만들기
 
