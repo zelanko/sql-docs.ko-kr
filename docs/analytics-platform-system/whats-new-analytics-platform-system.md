@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289314"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461108"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.1"></a>
-## <a name="aps-cu71"></a>AP CU7.1
+## <a name="aps-cu71"></a>APS CU7.1
 릴리스 날짜-2018 년 7 월
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>동시성 슬롯 (동작 변경 내용)를 사용 하지 않는 DBCC 명령
-AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 와 같은 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)합니다. 다음이 명령을 사용 하는 이전에 [동시성 슬롯](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) 사용자 쿼리의 로드/실행 될 수 있는 수를 줄입니다. `DBCC` 명령은 전반적인 쿼리 실행 성능을 향상 시킵니다 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐의 이제 실행 됩니다.
+AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 와 같은 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)합니다. 다음이 명령을 사용 하는 이전에 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) 사용자 쿼리의 로드/실행 될 수 있는 수를 줄입니다. `DBCC` 명령은 전반적인 쿼리 실행 성능을 향상 시킵니다 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐의 이제 실행 됩니다.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>카탈로그 개체를 사용 하 여 일부 메타 데이터 호출을 대체합니다.
 카탈로그 개체를 사용 하 여 SMO를 사용 하는 대신 호출 메타 데이터에 대 한 성능 향상을 AP에서 주었습니다. CU7.1에서 시작 하며, 이러한 메타 데이터 호출의 일부 이제 카탈로그 개체 기본적으로 사용 합니다. 이 동작을 해제할 수 있습니다 [기능 스위치가](appliance-feature-switch.md) 메타 데이터 쿼리를 사용 하 여 고객에 게 문제가 발생 하는 경우.
@@ -40,7 +40,7 @@ AP CU7.1를 사용 하 여 SQL Server 2016 SP2 CU2를 업그레이드 했습니�
 
 
 <a name="h2-aps-au7"></a>
-## <a name="aps-au7"></a>AP AU7
+## <a name="aps-au7"></a>APS AU7
 릴리스 날짜-2018 년 5 월
 
 APS 2016은 AU7로 업그레이드 하는 필수 구성 요소입니다. 다음은 AP AU7의 새로운 기능입니다.

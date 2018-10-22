@@ -4,22 +4,22 @@ description: 이 자습서는 Azure Data Studio 데이터베이스 대시보드�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3c71ee636eead33ab1beefed8ddeb72135c2828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038977"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355994"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: 테이블 공간 사용량 정보 위젯 사용한 샘플 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-이 자습서는 데이터베이스의 모든 테이블에 대 한 공간 사용량에 대 한에 요약 뷰를 제공, 데이터베이스 대시보드의 정보 위젯을 사용 하도록 설정 하는 방법에 설명 합니다. 이 자습서에 대해 알아봅니다 방법:
+이 자습서는 데이터베이스의 모든 테이블에 대 한 공간 사용량에 대 한에 요약 뷰를 제공, 데이터베이스 대시보드의 정보 위젯을 사용 하도록 설정 하는 방법에 설명 합니다. 이 자습에서 배울 내용:
 
 > [!div class="checklist"]
 > * 기본 제공 정보 위젯 예제를 사용 하는 정보 위젯 신속 하 게 설정
@@ -28,7 +28,7 @@ ms.locfileid: "48038977"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 자습서에서는 SQL Server 또는 Azure SQL Database *TutorialDB*합니다. 만들려면 합니다 *TutorialDB* 데이터베이스, 다음 빠른 시작 중 하나를 수행 합니다.
+이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
 - [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
