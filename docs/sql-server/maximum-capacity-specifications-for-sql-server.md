@@ -21,16 +21,15 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764387"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383613"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 최대 용량 사양](maximum-capacity-specifications-for-sql-server.md)을 참조하세요.
 
   다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 수가 지정되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "47764387"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |DAC당 데이터베이스 수||1|  
 |DAC당 개체 수*||데이터베이스의 개체 수 또는 사용 가능한 메모리로 제한|  

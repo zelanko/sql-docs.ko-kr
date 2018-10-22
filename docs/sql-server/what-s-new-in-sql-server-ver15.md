@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678271"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461118"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
@@ -75,7 +75,7 @@ CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](..\includes\
 - [보안](#security)
   - SQL Server 구성 관리자의 인증서 관리
 
-- [도구](#tools)
+- [Tools](#tools)
   - SSMS(SQL Server Management Studio) 18.0(미리 보기)
   - Azure Data Studio
 
@@ -233,7 +233,7 @@ CTP 2.0에서는 다음과 같은 [!INCLUDE[ssdeNoVersion](../includes/ssdenover
 또한 [감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그에 `data_sensitivity_information`라는 새 필드를 포함하도록 개선되었습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. 자세한 내용과 예제를 보려면 [민감도 분류 추가](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.
 
 >[!NOTE]
->감사를 사용하도록 설정하는 방법은 변경되지 않았습니다. 감사 레코드에는 `data_sensitivity_information`라는 새 필드가 있습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. [중요한 데이터에 대한 액세스 감사](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)를 참조하세요.
+>감사를 사용하도록 설정하는 방법은 변경되지 않았습니다. 감사 레코드에는 `data_sensitivity_information`라는 새 필드가 있습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. [중요한 데이터에 대한 액세스 감사](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)를 참조하세요.
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>영구 메모리 장치에 대한 확장 지원
 

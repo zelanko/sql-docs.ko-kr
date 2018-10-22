@@ -1,7 +1,7 @@
 ---
 title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736611"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419200"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,6 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 > [!IMPORTANT]
 > - Visual Studio 2017용 SSDT(15.8.1)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
 > - Windows 10 1803에 SSDT를 설치하고 SSIS를 설치하도록 선택하면 시스템이 예기치 않게 다시 부팅될 수 있습니다. 설치 관리자를 다시 시작하고 다시 부팅한 후 설치를 계속할 수 있습니다.
-> - SSDT 15.8.1은 현재 Windows 7 SP1을 지원하지 않으므로 Windows 7 SP1을 사용 중인 경우 15.8.0을 계속 사용하세요.
 
 
 
