@@ -18,16 +18,14 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1009081d8b5d4f6c9054149b73bfe8966602a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681653"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383308"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
-
- > 이전 버전의 SQL Server와 관련된 내용은 [SSIS 자습서: 간단한 ETL 패키지 만들기](ssis-how-to-create-an-etl-package.md)를 참조하세요.
 
 이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 간단한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법을 배웁니다. 사용자가 만든 패키지는 플랫 파일로부터 데이터를 가져와서 데이터 형식을 바꾼 다음 바뀐 데이터를 팩트 테이블에 삽입합니다. 다음 단원에서는 패키지를 확장하여 루핑, 패키지 구성, 로깅 및 오류 흐름을 보여 줍니다.  
   

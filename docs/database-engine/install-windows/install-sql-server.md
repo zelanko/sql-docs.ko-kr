@@ -15,19 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d704ef10542ab2ef4b9ef2669dc49d8beb2b5226
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687811"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383328"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server 2014 설치](install-sql-server.md)를 참조하세요.
-
  [!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 응용 프로그램으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
 
 ## <a name="installation-details"></a>설치 세부 정보
