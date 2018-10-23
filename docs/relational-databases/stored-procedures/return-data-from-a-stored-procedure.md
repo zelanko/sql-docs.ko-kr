@@ -14,16 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bad9832f2341b6c3a739a01ce8a9bed586b34a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662381"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383768"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 이전 버전의 SQL Server와 관련된 콘텐츠 [저장 프로시저에서 데이터 반환](return-data-from-a-stored-procedure.md)을 참조하세요.
 
   데이터를 프로시저에서 호출 프로그램으로 반환하는 세 가지 방법은 결과 집합, 출력 매개 변수 및 반환 코드입니다. 이 항목은 세 가지 방법에 대한 자세한 정보를 제공합니다.  
   

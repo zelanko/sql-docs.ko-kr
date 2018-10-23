@@ -11,12 +11,12 @@ ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e4d62dc5f846126fec15730543f888e90f4dca91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18c3cb997d08182908b1817ffa1301121159daa8
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745201"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461969"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ Go
 ```  
 Use msdb;  
 Go  
-EXEC managed_backup. sp_backup_master_switch @new_state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
   
 ```  

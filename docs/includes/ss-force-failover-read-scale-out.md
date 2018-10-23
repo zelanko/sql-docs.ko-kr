@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
-ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
+ms.openlocfilehash: 87fce17db46dc590fbffe0bae0b27c17bd54320e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488298"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49476293"
 ---
 각 가용성 그룹에는 하나의 주 복제본만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 가용성 그룹에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 가용성 그룹에서 장애 조치(failover) 프로세스는 수동입니다. 
 
@@ -91,4 +91,4 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```  
 
    > [!NOTE] 
-   > 가용성 그룹 사용을 삭제하려면 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)을 사용합니다. NONE 또는 EXTERNAL 클러스터 형식을 사용하여 만든 가용성 그룹의 경우 가용성 그룹의 일부인 모든 복제본에서 명령을 실행합니다.
+   > 가용성 그룹 사용을 삭제하려면 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)을 사용합니다. NONE 또는 EXTERNAL 클러스터 형식을 사용하여 만든 가용성 그룹의 경우 가용성 그룹의 일부인 모든 복제본에서 명령을 실행합니다.

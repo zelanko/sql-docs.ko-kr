@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600531"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383848"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [bcp 유틸리티](bcp-utility.md)를 참조하세요.
 
  > Bcp 유틸리티의 최신 버전을 참조 하세요. [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>2. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
-다음 예에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 **out** 옵션에 대해 설명합니다.
+다음 예에서는 **테이블의** out `WideWorldImporters.Warehouse.StockItemTransactions` 옵션에 대해 설명합니다.
 
 - **기본**  
 이 예에서는 `StockItemTransactions_character.bcp` 라는 데이터 파일을 만들고 **문자** 형식을 사용하여 테이블 데이터를 파일에 복사합니다.
@@ -559,7 +557,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>4. 파일에서 테이블로 데이터 복사  
-다음 예제는 위에서 만든 파일을 사용하여 `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 테이블의 **in** 옵션에 대해 설명합니다.
+다음 예제는 위에서 만든 파일을 사용하여 **테이블의** in `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 옵션에 대해 설명합니다.
   
 - **Basic**  
 이 예에서는 이전에 만든 `StockItemTransactions_character.bcp` 데이터 파일을 사용합니다.

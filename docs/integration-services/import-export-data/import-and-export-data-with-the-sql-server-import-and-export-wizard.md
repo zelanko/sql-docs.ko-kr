@@ -24,16 +24,14 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3327f4026d7830c28e6651ff596741093146d95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60d4bf5487a2d6e851103d6cfd71bfc69af9036f
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782193"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383778"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
-
- > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server 가져오기 및 내보내기 마법사 실행](start-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사하는 간단한 방법입니다. 이 개요에서는 마법사에서 원본 및 대상으로 사용할 수 있는 데이터 원본과 마법사를 실행하는 데 필요한 권한에 대해 설명합니다.
 

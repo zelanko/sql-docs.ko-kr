@@ -11,16 +11,14 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608451"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384078"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
-
- > 이전 버전의 SQL Server와 관련된 내용은 [1단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)를 참조하세요.
 
 이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  
   
@@ -30,7 +28,7 @@ ms.locfileid: "47608451"
 ## <a name="understanding-the-package-requirements"></a>패키지 요구 사항 이해  
 이 자습서를 사용하려면 Microsoft SQL Server Data Tools가 필요합니다.  
   
-SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
+SQL Server Data Tools 설치 방법에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/data/hh297027)를 참조하세요.  
   
 패키지를 만들기 전에 원본 데이터와 대상 양쪽에 사용되는 형식을 제대로 알아야 합니다. 이러한 데이터 형식을 모두 파악하면 원본 데이터를 대상에 매핑하는 데 필요한 변환을 정의할 수 있습니다.  
   

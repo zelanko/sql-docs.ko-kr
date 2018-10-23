@@ -15,17 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 110d60fa0f94f5c66ba59e2d8068d6eb0084df28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820041"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383918"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [클러스터형 및 비클러스터형 인덱스 설명](clustered-and-nonclustered-indexes-described.md)합니다.
 
   인덱스는 테이블이나 뷰와 관련된 디스크상 구조로서 테이블이나 뷰의 행 검색 속도를 향상시킵니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 이러한 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 구조(B-트리)에 저장됩니다.  
   

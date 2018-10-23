@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603803"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461128"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47603803"
 
 ## <a name="odbc-driver"></a>ODBC 드라이버
 
-PHP가 실행 중인 컴퓨터의 올바른 버전의 Microsoft ODBC Driver for SQL Server 필요 합니다. 지원 되는 모든 버전의 지원 되는 플랫폼에 대 한 드라이버를 다운로드할 수 있습니다 [이 페이지](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)합니다.
+PHP가 실행 중인 컴퓨터의 올바른 버전의 Microsoft ODBC Driver for SQL Server 필요 합니다. 지원 되는 모든 버전의 지원 되는 플랫폼에 대 한 드라이버를 다운로드할 수 있습니다 [이 페이지](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)합니다.
 
 Windows 버전의 64 비트 버전 Windows의 드라이버를 다운로드 하는 경우 ODBC 64 비트 설치 관리자는 32 비트 및 64 비트 ODBC 드라이버를 설치 합니다. Windows의 32 비트 버전을 사용 하는 경우 x86 ODBC를 사용 하 여 설치 합니다. 비 Windows 플랫폼에서 64 비트 버전의 드라이버를 사용할 수 있습니다.
 

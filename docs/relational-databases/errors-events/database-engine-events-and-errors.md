@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100544"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384178"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 다음 표에는 오류 메시지 번호와 sys.messages 카탈로그 뷰의 오류 메시지 텍스트에 해당하는 설명이 나와 있습니다. 
@@ -1290,6 +1290,7 @@ ms.locfileid: "49100544"
 |   2597    |   10  |   아니오  |   추적 플래그 %d을(를) 무시합니다. 이 플래그는 잘못된 추적 플래그이거나 서버 시작 중에만 지정할 수 있는 추적 플래그입니다.    |
 |   2599    |   16  |   아니오  |   테이블 "%.*ls"의 행 내부 텍스트로 전환할 수 없습니다.  |
 |   2601    |   14  |   아니오  |   개체 ‘%.*ls’(고유 인덱스가 ‘%.* ls’임)에 중복 키 행을 삽입할 수 없습니다.    |
+|   2628    |   16  |   아니오  |   문자열이나 이진 데이터는 테이블 '%.*ls', 열 '%.* ls'에서 잘립니다. 잘린 값: '%.*ls'.|
 |   2627    |   14  |   아니오  |   %ls 제약 조건 ‘%.*ls’을(를) 위반했습니다. 개체 '%.* ls'에 중복 키를 삽입할 수 없습니다. |
 |   2701    |   10  |   아니오  |   tempdb의 개체를 참조하여 데이터베이스 이름 '%.*ls'이(가) 무시되었습니다.    |
 |   2702    |   16  |   아니오  |   데이터베이스 '%.*ls'이(가) 없습니다.    |

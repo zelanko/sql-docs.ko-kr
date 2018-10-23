@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842011"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460548"
 ---
 # <a name="using-spatial-datatypes"></a>공간 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-공간 데이터 형식 (Geometry 및 Geography)은 JDBC 드라이버 미리 보기 릴리스에서 6.5.0부터 지원 됩니다. 공간 데이터는 현재 저장된 프로시저, 테이블 반환 매개 변수 (TVP), BulkCopy, 및 상시 암호화를 사용 하 여 지원 되지 않습니다. 이 페이지는 다양 한 Geometry 및 Geography 데이터 형식의 경우 JDBC 드라이버를 사용 하 여 사용 하 여 표시 됩니다. 공간 데이터 형식에 대 한 개요를 확인 [공간 데이터 형식 개요](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview) 페이지입니다.
+공간 데이터 형식 (Geometry 및 Geography)은 JDBC 드라이버 미리 보기 릴리스에서 6.5.0부터 지원 됩니다. 공간 데이터는 현재 저장된 프로시저, 테이블 반환 매개 변수 (TVP), BulkCopy, 및 상시 암호화를 사용 하 여 지원 되지 않습니다. 이 페이지는 다양 한 Geometry 및 Geography 데이터 형식의 경우 JDBC 드라이버를 사용 하 여 사용 하 여 표시 됩니다. 공간 데이터 형식에 대 한 개요를 확인 [공간 데이터 형식 개요](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) 페이지입니다.
 
 ## <a name="creating-a-geometry--geography-object"></a>만들 기 하 도형 / 지리 개체
 
