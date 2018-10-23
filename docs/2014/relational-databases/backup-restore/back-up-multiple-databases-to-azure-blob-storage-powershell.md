@@ -30,7 +30,7 @@ ms.locfileid: "48064293"
  데이터베이스를 복원하는 데 사용됩니다.  
   
  New-SqlCredential  
- 이 cmdlet은 Windows Azure 저장소에 대한 SQL Server 백업에 사용할 SQL 자격 증명을 만드는 데 사용됩니다. 자격 증명과 SQL Server 백업 및 복원에서 자격 증명의 사용에 대한 자세한 내용은 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+ 이 cmdlet은 Windows Azure 저장소에 대한 SQL Server 백업에 사용할 SQL 자격 증명을 만드는 데 사용됩니다. 자격 증명과 SQL Server 백업 및 복원에서 자격 증명의 사용에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
   
  Get-SqlCredential  
  이 cmdlet은 자격 증명 개체와 해당 속성을 검색하는 데 사용됩니다.  
