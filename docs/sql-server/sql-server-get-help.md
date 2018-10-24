@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b3e6d4e898e00682a67084d70b6706af3951fa4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336376"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384098"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,10 +77,9 @@ SQL 팀에게 연결할 수 있는 여러 소셜 미디어가 있습니다.
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL 문서 콘텐츠에 대한 피드백을 제공하려면
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL 문서 콘텐츠에 대한 피드백을 제공하려면 
-
-### <a name="editing-content"></a>콘텐츠 편집
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![콘텐츠 편집](../includes/media/edit-topic-pencil.png) 콘텐츠 편집
 문서에 잘못된 내용이 있나요? 콘텐츠를 직접 편집할 수 있다는 것을 알고 계시나요? 이렇게 하면 문서가 더 이상 개선되지 않지만 페이지에 공헌자로 기입됩니다. [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)에서 자세한 정보를 확인합니다. 
 
 ### <a name="surveys"></a>설문 조사

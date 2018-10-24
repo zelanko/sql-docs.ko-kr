@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906473"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461158"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1055,7 +1055,7 @@ GO
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Microsoft Azure SQL Database에 대한 전역 임시 테이블 문제 해결 
 
-tempdb 문제 해결에 대해서는 [tempdb의 부족한 디스크 공간 문제 해결](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))을 참조하세요. 
+tempdb 문제 해결에 대해서는 [tempdb의 부족한 디스크 공간 문제 해결](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))을 참조하세요. 
 
 > [!NOTE]
 > 서버 관리자만 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 문제 해결 DMV에 액세스할 수 있습니다.

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d25cc0a5c4ae6bf549c5d6ac497017c06d555727
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ee5d96f3cc8f73b500643cf405982b242e347a74
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100474"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461058"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -431,7 +431,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>예제: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>7. Azure Data Lake Store를 참조하는 외부 데이터 원본 만들기
-Azure Data Lake Store 연결은 ADLS URI 및 Azure Acitve directory 응용 프로그램의 서비스 원칙을 기반으로 합니다. 이 응용 프로그램을 만들기 위한 문서는 [Active Directory를 사용하여 Data Lake 저장소 인증](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)에서 찾을 수 있습니다.
+Azure Data Lake Store 연결은 ADLS URI 및 Azure Acitve directory 응용 프로그램의 서비스 원칙을 기반으로 합니다. 이 응용 프로그램을 만들기 위한 문서는 [Active Directory를 사용하여 Data Lake 저장소 인증](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)에서 찾을 수 있습니다.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.

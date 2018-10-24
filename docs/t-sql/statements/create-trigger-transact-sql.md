@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120440"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411210"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ SELECT * FROM deleted;
 이는 다음 T-SQL 코드 조각을 사용하여 수행할 수 있으며, 각 DML 트리거의 시작에 표시되어야 합니다.
 
 ```sql
-IF (@@ROWCOUNT_BIG = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 ```
   
