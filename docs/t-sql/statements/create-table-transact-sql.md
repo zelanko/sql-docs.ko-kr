@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171895"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906473"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  관련 FILESTREAM 토픽은 [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  열의 데이터 형식과 열이 속한 스키마를 지정합니다. 디스크 기반 테이블의 데이터 형식은 다음 중 하나일 수 있습니다.  
   
 -   시스템 데이터 형식입니다.  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  시스템이 지정된 datetime2 열을 사용하여 레코드가 유효한 시작 시간 또는 레코드가 유효한 종료 시간을 기록하도록 지정합니다. 열은 NOT NULL로 지정해야 합니다. 이들을 NULL로 지정하려고 하면 시스템 오류가 발생합니다. 기간 열에 NOT NULL을 명시적으로 지정하지 않으면 시스템은 기본적으로 해당 열을 NOT NULL로 정의합니다. PERIOD FOR SYSTEM_TIME 및 WITH SYSTEM_VERSIONING = ON 인수와 함께 이 인수를 사용하여 테이블에 대한 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
   
- 기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM***`<table>`* 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.  
+ 기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM**_`<table>`_ 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  비클러스터형 columnstore 인덱스는 클러스터형 columnstore 인덱스로 저장 및 관리됩니다. 이는 열이 제한될 수 있고 테이블에 보조 인덱스로 존재하기 때문에 비클러스터형 columnstore 인덱스라고 부릅니다.  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _파티션\_구성표\_이름_**(**_열\_이름_**)**  
  분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.  
   
 > [!NOTE]  
@@ -569,9 +567,11 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **결정적 암호화** 는 지정된 일반 텍스트 값에 대해 항상 동일한 암호화된 값을 생성하는 방법을 사용합니다. 결정적 암호화를 사용하면 암호화된 값을 기반으로 같음 비교를 이용한 검색, 그룹화 및 같음 조인을 이용한 조인이 가능하지만, 권한이 없는 사용자가 암호화된 열의 패턴을 검사하여 암호화된 값에 관한 정보를 추측할 수도 있습니다. 결정적으로 암호화된 열의 두 테이블 조인은 두 열이 모두 같은 열 암호화 키를 사용하여 암호화된 경우에만 가능합니다. 결정적 암호화에서는 문자 열에 대해 binary2 정렬 순서를 적용하는 열 데이터 정렬을 사용해야 합니다.  
   
- **임의 암호화** 는 예측하기 어려운 방식으로 데이터를 암호화하는 방법을 사용합니다. 임의 암호화는 더 안전하지만 암호화된 열에 대한 같음 검색, 그룹화 및 조인을 할 수 없게 됩니다. 임의 암호화를 이용한 열은 인덱싱할 수 없습니다.  
+ **임의 암호화** 는 예측하기 어려운 방식으로 데이터를 암호화하는 방법을 사용합니다. 임의 암호화는 좀 더 안전하지만 SQL Server 인스턴스가 보안 Enclave를 사용한 Always Encrypted를 지원하지 않으면, 암호화된 열에서 계산 및 인덱싱을 수행할 수 없습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
   
- 검색 매개 변수 또는 그룹화 매개 변수(예: 정부 ID 번호)가 될 열에 결정적 암호화를 사용합니다. 다른 레코드와 함께 그룹화되지 않거나 테이블을 조인하는 데 사용되고 관심이 있는 암호화된 열을 포함한 행을 찾는 데에는 다른 열(거래 번호 등)을 사용하기 때문에 검색되지 않는 데이터(예: 신용 카드 번호)에 임의 암호화를 사용합니다.  
+ Always Encrypted(보안 Enclave를 사용하지 않음)를 사용할 경우 매개 변수 또는 그룹화 매개 변수(예: 정부 ID 번호)를 사용하여 검색할 열에 대해 결정적 암호화를 사용합니다. 다른 레코드와 함께 그룹화되지 않거나 테이블을 조인하는 데 사용되고 관심이 있는 암호화된 열을 포함한 행을 찾는 데에는 다른 열(거래 번호 등)을 사용하기 때문에 검색되지 않는 데이터(예: 신용 카드 번호)에 임의 암호화를 사용합니다.
+
+ 보안 Enclave에서 Always Encrypted를 사용할 경우 임의 암호화가 권장되는 암호화 유형입니다.
   
  열은 한정 데이터 형식이어야 합니다.  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  열에 있는 데이터에 대한 참조 무결성을 제공하는 제약 조건입니다. FOREIGN KEY 제약 조건을 지정하려면 열의 각 값이 참조된 테이블의 참조된 해당 열에 있어야 합니다. FOREIGN KEY 제약 조건은 참조되는 테이블의 PRIMARY KEY 또는 UNIQUE 제약 조건 열이나 참조되는 테이블의 UNIQUE INDEX에서 참조되는 열만 참조할 수 있습니다. 계산 열의 외래 키 또한 PERSISTED로 표시되어야 합니다.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  FOREIGN KEY 제약 조건이 참조하는 테이블과 그 테이블이 속한 스키마의 이름입니다.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  분할된 테이블의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표의 이름입니다. 파티션 구성표는 데이터베이스 내에 있어야 합니다.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  분할된 테이블의 분할 기준 열을 지정합니다. 열은 *partition_scheme_name*에서 사용하는 파티션 함수에 지정된 열과 데이터 형식, 길이 및 전체 자릿수에서 일치해야 합니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다.  
   
 > [!IMPORTANT]  
 >  분할된 테이블 및 ALTER TABLE...SWITCH 작업의 원본이나 대상인 분할되지 않은 테이블의 분할 열에 NOT NULL을 지정하는 것이 좋습니다. 이렇게 하면 분할 열의 CHECK 제약 조건에서 Null 값을 확인하지 않아도 됩니다.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 정도를 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  ON이면 FILLFACTOR로 지정한 사용 가능한 공간의 비율을 인덱스의 중간 수준 페이지에 적용합니다. OFF이거나 FILLFACTOR 값을 지정하지 않으면 중간 페이지의 키 집합을 고려하여 인덱스가 가질 수 있는 최대 크기의 행을 최소한 하나만큼 저장할 공간을 남기고 용량 한계에 가깝게 중간 수준 페이지를 채웁니다. 기본값은 OFF입니다.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  인덱스를 만들거나 변경할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  

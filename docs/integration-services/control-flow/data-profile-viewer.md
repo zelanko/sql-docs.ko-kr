@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733931"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905993"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
   데이터 프로파일링 프로세스의 다음 단계는 데이터 프로필을 보고 분석하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필을 볼 수 있습니다. 데이터 프로파일링 태스크를 설정하고 실행하는 방법은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요.  
@@ -170,7 +170,7 @@ ms.locfileid: "47733931"
  **Value**  
  프로파일링된 열에서 찾은 고유 값을 표시합니다.  
   
- **개수**  
+ **Count**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행 수를 표시합니다.  
   
  **백분율**  
@@ -189,7 +189,7 @@ ms.locfileid: "47733931"
  **\<column1>, \<column2>, 등**  
  프로파일링된 열에서 찾은 중복 값을 표시합니다.  
   
- **개수**  
+ **Count**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>프로필 유형 = 함수 종속성 프로필  
@@ -240,6 +240,6 @@ ms.locfileid: "47733931"
  **\<column1>, \<column2>, 등**  
  상위 집합 열에서 찾지 못한 하위 집합 열의 값을 표시합니다.  
   
- **개수**  
+ **Count**  
  지정된 열에 첫 번째 열에 표시된 값이 있는 행 수를 표시합니다.  
   

@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa8fce2f2579f792abc78b8837e4a33e090f806e
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620431"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100484"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,15 @@ BULK INSERT
  **'** *data_file* **'**  
  지정한 테이블이나 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.   
  
- *data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. `\\SystemX\DiskZ\Sales\update.txt`)을 입력합니다.   
+ *data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들어 다음과 같이 사용할 수 있습니다.   
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
+```
+
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다. 이 경우 **data_source_name** 옵션을 지정해야 합니다.
 
 > [!IMPORTANT]
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
@@ -104,7 +110,13 @@ BULK INSERT
 **'** *data_source_name* **'**   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 가져올 파일의 Azure Blob Storage 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.    
-  
+ 
+```sql
+BULK INSERT Sales.Orders
+FROM 'data/orders.dat'
+WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
+```
+
  BATCHSIZE **=***batch_size*  
  일괄 처리에 포함될 행 수를 지정합니다. 모든 일괄 처리는 하나의 트랜잭션으로 서버에 복사됩니다. 이 작업이 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 일괄 처리에 대한 트랜잭션을 커밋하거나 롤백합니다. 기본적으로 지정된 데이터 파일의 모든 데이터는 하나의 일괄 처리입니다. 성능 고려 사항에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
@@ -123,6 +135,12 @@ BULK INSERT
   
  CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  데이터 파일에서 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127**보다 크거나 **32**보다 작은 **char**, **varchar**또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.  
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat'
+WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
+```
 
 > [!IMPORTANT]
 > CODEPAGE는 Linux에서 지원되는 옵션이 아닙니다.
@@ -215,6 +233,12 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 FORMAT **=** 'CSV'   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준을 준수하는 쉼표로 구분된 값 파일을 지정합니다.
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
+WITH ( FORMAT='CSV');
+```
 
 FIELDQUOTE **=** 'field_quote'   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -425,11 +449,15 @@ WITH
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>5. CSV 파일에서 데이터 가져오기   
-다음 예제에서는 CSV 파일을 지정하는 방법을 보여 줍니다.   
-```
+다음 예제는 헤더(첫 행)를 건너뛰고 `;`를 필드 종결자로, `0x0a`를 행 종결자로 사용하여 CSV 파일을 지정하는 방법을 보여 줍니다. 
+```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
-WITH (FORMAT = 'CSV'); 
+WITH (FORMAT = 'CSV',
+      FIRSTROW=2,
+      FIELDQUOTE = '\',
+      FIELDTERMINATOR = ';', 
+      ROWTERMINATOR = '0x0a'); 
 ```
 
 > [!IMPORTANT]
@@ -440,10 +468,23 @@ WITH (FORMAT = 'CSV');
 다음 예제에서는 외부 데이터 원본으로 구성된 Azure Blob Storage 위치의 csv 파일에서 데이터를 로드하는 방법을 보여 줍니다. 이를 위해 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다.    
 
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ 
+ -- NOTE: Make sure that you don't have a leading ? in SAS token, and
+ -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+ -- that expiration period is valid (all dates are in UTC time)
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
-WITH (DATA_SOURCE = 'MyAzureInvoices',
-     FORMAT = 'CSV'); 
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage'); 
 ```
 
 > [!IMPORTANT]
@@ -454,7 +495,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 
 ```sql
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
+FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV',
      ERRORFILE = 'MyErrorFile',

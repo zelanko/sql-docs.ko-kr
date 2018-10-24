@@ -16,12 +16,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b14b806557049480816e0823a3253c26af1a8cd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57f76c157edf70e99ebd8b2b8917d460c83397aa
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703971"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071797"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703971"
   
 -   **데이터베이스 메일 공용 프로필을 만드는 데 사용되는 도구:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
  프로필에 대한 데이터베이스 메일 계정을 하나 이상 만듭니다. 데이터베이스 메일 계정을 만드는 방법은 [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)를 참조하세요.  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*기본 프로필 상태* '  
   
-     여기서 *@profile_name* 은 프로필의 이름이고 *@principal_name* 은 이 프로필이 공용 프로필임을 나타내며, *@is_default* 는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
+     여기서 *@profile_name*은 프로필의 이름이고 *@principal_name*은 이 프로필이 공용 프로필임을 나타내며, *@is_default*는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
   
  다음 예에서는 데이터베이스 메일 계정을 만들고, 데이터베이스 메일 개인 프로필을 만든 다음 프로필에 계정을 추가하며, 프로필에 대한 공개 액세스 권한을 부여합니다.  
   

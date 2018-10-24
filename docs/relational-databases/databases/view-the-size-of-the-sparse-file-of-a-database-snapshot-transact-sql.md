@@ -20,12 +20,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53849f61b723d3881716a4ef24e3f0054871eaf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323560bbca3b4914dd9f72bad6f781973d3a34e7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606609"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119711"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 스파스 파일의 크기 보기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47606609"
 > [!NOTE]  
 >  스파스 파일은 64KB씩 증분되므로 디스크상의 스파스 파일 크기는 항상 64KB의 배수입니다.  
   
- 스냅숏의 각 스파스 파일이 현재 디스크에서 사용 중인 바이트 수를 확인하려면 **sys.dm_io_virtual_file_stats** 동적 관리 뷰의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][size_on_disk_bytes](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 열을 쿼리합니다.  
+ 스냅숏의 각 스파스 파일이 현재 디스크에서 사용 중인 바이트 수를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 동적 관리 뷰의 **size_on_disk_bytes** 열을 쿼리합니다.  
   
  스파스 파일이 사용하는 디스크 공간을 보려면 Microsoft Windows에서 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 **디스크 할당 크기** 값을 봅니다.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741511"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906483"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
 
@@ -197,7 +197,7 @@ ms.locfileid: "47741511"
   
 8.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-9. **LinkText** 열의 **Total** 셀을 선택한 다음 Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **Product** 열의 빈 셀과 `[Sum(Sales)]` Sales **열의** 셀을 선택합니다.  
+9. **LinkText** 열의 **전체** 셀을 선택한 다음, Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **제품** 열의 빈 셀과 **판매** 열의 `[Sum(Sales)]` 셀을 선택합니다.  
   
 11. 이 세 개의 셀을 선택한 상태에서 이 셀 중 하나를 마우스 오른쪽 단추로 클릭한 다음 **행 삭제**를 클릭합니다.  
 

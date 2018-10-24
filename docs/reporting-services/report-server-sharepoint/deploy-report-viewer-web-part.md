@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769011"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085179"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
@@ -27,7 +27,8 @@ ms.locfileid: "47769011"
 ## <a name="requirements"></a>요구 사항
 
 > [!IMPORTANT]
-> 현재 Reporting Services SharePoint 통합 모드를 이미 구성한 경우에는 이 웹 파트를 설치할 수 없습니다.
+> 버전 “15.X.X.X”로 시작하면 ReportViewerWebPart를 기존 Reporting Services SharePoint 통합 모드 공유 서비스 응용 프로그램과 나란히 설치할 수 있습니다.
+> 이 .wsp 솔루션 업데이트를 통해 새 파일과 이전 솔루션은 취소하고 Uninstall-SPSolution 및 Install-SPSolution cmdlet을 각각 사용하여 새 .wsp를 다시 배포해야 합니다.
 >
 
 **SharePoint Server 버전 지원:**

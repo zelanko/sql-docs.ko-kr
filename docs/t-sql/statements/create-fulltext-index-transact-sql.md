@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670279"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169293"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,11 +91,11 @@ CREATE FULLTEXT INDEX ON table_name
   
  *language_term*이 지정되면 언어가 **char**, **nchar**, **varchar**, **nvarchar**, **text** 및 **ntext**에 저장된 인덱스 데이터에 사용될 것입니다. 이 언어는 열에 대한 전체 텍스트 조건자의 일부로 *language_term*을 지정하지 않을 경우 쿼리할 때 기본 언어로 사용됩니다.  
   
- 문자열로 지정하는 경우 *language_term*은 syslanguages 시스템 테이블의 별칭 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정하는 경우 *language_term*은 syslanguages 시스템 테이블의 별칭 열 값에 해당합니다. 문자열은 **‘**_language\_term_**’** 과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
  값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 유니코드로 변환합니다.  
   
- 단어 분리기 및 형태소 분석기와 같은 리소스는 *language_term*으로 지정된 언어에 사용해야 합니다. 이러한 리소스가 지정된 언어를 지원하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  
+ 단어 분리기 및 형태소 분석기와 같은 리소스는 *language_term*으로 지정된 언어에 사용해야 합니다. 이러한 리소스가 지정된 언어를 지원하지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 오류를 반환합니다.  
   
  sp_configure 저장 프로시저를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 전체 텍스트 언어에 대한 정보에 액세스할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
   
@@ -184,7 +184,7 @@ CREATE FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>1. 고유 인덱스, 전체 텍스트 카탈로그 및 전체 텍스트 인덱스 만들기  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 `JobCandidateID` 테이블에 있는 `HumanResources.JobCandidate` 열에 대해 고유 인덱스를 만듭니다. 그런 다음 기본 전체 텍스트 카탈로그 `ft`를 만듭니다. 마지막으로 `Resume` 카탈로그 및 시스템 중지 목록을 사용하여 `ft` 열에 대한 전체 텍스트 인덱스를 만듭니다.  
+ 다음 예에서는 `JobCandidateID` 예제 데이터베이스의 `HumanResources.JobCandidate` 테이블에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 대해 고유 인덱스를 만듭니다. 그런 다음 기본 전체 텍스트 카탈로그 `ft`를 만듭니다. 마지막으로 `Resume` 카탈로그 및 시스템 중지 목록을 사용하여 `ft` 열에 대한 전체 텍스트 인덱스를 만듭니다.  
   
 ```  
 CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  

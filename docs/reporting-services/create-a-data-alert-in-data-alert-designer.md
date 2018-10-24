@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64f8ccd8f1cfcc2ea9c72d31b62382a6937ccfa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 845a120f1fe8b4bc56b8cac835251b062cade112
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817846"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072199"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
 
@@ -59,7 +59,7 @@ ms.locfileid: "47817846"
   
      경고 정의의 기본 이름은 보고서 이름입니다. 경고 정의 이름을 반드시 고유한 이름으로 지정해야 하는 것은 아니지만 이렇게 하지 않으면 나중에 데이터 경고 관리자에서 경고 목록을 볼 때 경고 정의를 구분하기가 어려울 수 있습니다. 따라서 경고 정의에 의미 있고 고유한 이름을 사용하는 것이 좋습니다.  
   
-6.  필요에 따라 기본 데이터 옵션을 **데이터 피드의 데이터가 다음을 포함함** 에서 **데이터 피드의 데이터가 다음을 포함하지 않음**으로 변경합니다.  
+6.  필요에 따라 기본 데이터 옵션을 **데이터 피드의 데이터가 다음을 포함함**에서 **데이터 피드의 데이터가 다음을 포함하지 않음**으로 변경합니다.  
   
 7.  **규칙 추가**를 클릭합니다.  
   

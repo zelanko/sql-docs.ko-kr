@@ -11,12 +11,12 @@ ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e856bfbbcb8cba527d1f34f0f7bc99afadc023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792881"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336102"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 데이터베이스 개체를 평가하는 단위 테스트를 작성하려면 먼저 테스트 프로젝트를 만들어야 합니다. 이 프로젝트에는 SQL Server 단위 테스트가 포함되지만 다른 유형의 테스트도 포함될 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47792881"
   
 -   솔루션에 테스트 프로젝트를 추가합니다. 테스트 프로젝트에는 표준 단위 테스트(삭제 가능)가 포함됩니다. 이 프로젝트에는 사용자가 추가해야 하는 SQL Server 단위 테스트 클래스가 포함되지 않습니다.  
   
--   **테스트** 메뉴에서 새 SQL Server 단위 테스트를 추가합니다. 단위 테스트를 추가하면 SQL Server Data Tools에서 테스트 프로젝트도 만듭니다(요청한 경우). 이 프로젝트에는 SQL Server 단위 테스트 클래스가 포함되어 있습니다. SQL Server 단위 테스트의 테스트 클래스에는 하나 이상의 SQL Server 단위 테스트가 포함되어 있습니다.  
+-   **테스트** 메뉴에서 새 SQL Server 단위 테스트를 추가합니다. 단위 테스트를 추가하면 SQL Server Data Tools에서 테스트 프로젝트도 만듭니다(요청한 경우). 이 프로젝트에는 SQL Server 단위 테스트 클래스가 포함되어 있습니다. SQL Server 단위 테스트 클래스에는 하나 이상의 SQL Server 단위 테스트가 포함되어 있습니다.  
   
 -   SQL Server 개체 탐색기에 열려 있는 프로젝트에서 저장 프로시저, 함수 또는 트리거를 토대로 단위 테스트를 만듭니다. 단위 테스트를 만들면 SQL Server Data Tools에서 테스트 프로젝트도 만듭니다(요청한 경우). 이 프로젝트에는 SQL Server 단위 테스트 클래스가 포함되어 있습니다. SQL Server 테스트 클래스에는 하나 이상의 단위 테스트가 포함되어 있습니다.  
   

@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710711"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906533"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1198,7 +1198,7 @@ BEGIN TRANSACTION
   
  데이터베이스에 새로 큰 값이 추가될 때 조각당 최대 8040바이트의 데이터가 할당됩니다. 이전 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 조각당 최대 8080바이트의 `ntext`, `text` 또는 `image` 데이터를 저장했습니다.  
   
- 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 데이터베이스를 업그레이드한 경우에는 행 버전 관리 정보를 저장할 공간을 만들기 위해 기존 `ntext`, `text` 및 `image` LOB(Large Object) 데이터가 업데이트되지 않습니다. 그러나 LOB 데이터가 처음 수정될 때는 버전 관리 정보를 저장할 수 있도록 데이터가 동적으로 업그레이드됩니다. 이는 행 버전이 생성되지 않은 경우에도 마찬가지입니다. LOB 데이터가 업그레이드된 후에는 조각당 저장되는 최대 바이트 수가 8080바이트에서 8040바이트로 줄어듭니다. 업그레이드 프로세스에서는 LOB 값을 삭제하고 동일한 값을 다시 삽입합니다. 1바이트만 수정되더라도 LOB 데이터가 업그레이드됩니다. 이 작업은 각 `ntext`, `text` 또는 `image` 열에 대해 한 번 수행되지만 LOB 데이터의 크기에 따라 각 작업 수행 시 대량의 페이지 할당 및 I/O 작업이 발생할 수 있습니다. 수정 내용 전체가 로깅되는 경우에는 대량의 로깅 작업이 발생할 수도 있습니다. 데이터베이스 복구 모드를 FULL로 설정하지 않으면 WRITETEXT와 UPDATETEXT 작업에서 최소한의 정보만 로깅합니다.  
+ 이전 버전의 `ntext`에서 `text`로 데이터베이스를 업그레이드한 경우에는 행 버전 관리 정보를 저장할 공간을 만들기 위해 기존 `image`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] LOB(Large Object) 데이터가 업데이트되지 않습니다. 그러나 LOB 데이터가 처음 수정될 때는 버전 관리 정보를 저장할 수 있도록 데이터가 동적으로 업그레이드됩니다. 이는 행 버전이 생성되지 않은 경우에도 마찬가지입니다. LOB 데이터가 업그레이드된 후에는 조각당 저장되는 최대 바이트 수가 8080바이트에서 8040바이트로 줄어듭니다. 업그레이드 프로세스에서는 LOB 값을 삭제하고 동일한 값을 다시 삽입합니다. 1바이트만 수정되더라도 LOB 데이터가 업그레이드됩니다. 이 작업은 각 `ntext`, `text` 또는 `image` 열에 대해 한 번 수행되지만 LOB 데이터의 크기에 따라 각 작업 수행 시 대량의 페이지 할당 및 I/O 작업이 발생할 수 있습니다. 수정 내용 전체가 로깅되는 경우에는 대량의 로깅 작업이 발생할 수도 있습니다. 데이터베이스 복구 모드를 FULL로 설정하지 않으면 WRITETEXT와 UPDATETEXT 작업에서 최소한의 정보만 로깅합니다.  
   
  `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)` 데이터 형식은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 사용할 수 없으므로 업그레이드 문제가 발생하지 않습니다.  
   

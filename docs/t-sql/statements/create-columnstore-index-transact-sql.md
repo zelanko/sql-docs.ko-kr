@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690667"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336302"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -443,7 +443,7 @@ GO
   
  비클러스터형 인덱스를 삭제하려면 columnstore 인덱스를 만들기 전에 DROP INDEX 문을 사용합니다. DROP EXISTING 옵션은 변환중인 클러스터형 인덱스만 삭제합니다. 비클러스터형 인덱스는 삭제하지 않습니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 이 예에서는 columnstore 인덱스를 만들기 전에 이전 릴리스에서 어떻게 비클러스터형 인덱스를 삭제해야 하는지 보여줍니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 이 예에서는 columnstore 인덱스을 만들기 전에 이전 릴리스에서 어떻게 비클러스터형 인덱스를 삭제해야 하는지 보여줍니다.  
   
 ```sql  
 --Create the table for use with this example.  
@@ -703,7 +703,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>3. 클러스터형 Columnstore 인덱스의 이름 바꾸기  
  클러스터형 columnstore 인덱스의 이름을 변경하려면 기존 클러스터형 columnstore 인덱스를 삭제한 다음, 새 이름으로 인덱스를 다시 만듭니다.  
   
- 작은 테이블 또는 빈 테이블에서만 이 작업을 수행하는 것이 좋습니다. 대규모 클러스터형 columnstore 인덱스를 삭제하고 다른 이름으로 다시 작성하려면 시간이 오래 걸립니다.  
+ 작은 테이블 또는 빈 테이블에서만 이 작업을 수행하는 것이 좋습니다. 대규모 클러스터형 columnstore 인덱스을 삭제하고 다른 이름으로 다시 작성하려면 시간이 오래 걸립니다.  
   
  이전 예제에서의 cci_xDimProduct 클러스터형 columnstore 인덱스를 사용하여 이 예제는 cci_xDimProduct 클러스터형 columnstore 인덱스를 삭제한 다음, mycci_xDimProduct라는 이름으로 클러스터형 columnstore 인덱스를 다시 생성합니다.  
   

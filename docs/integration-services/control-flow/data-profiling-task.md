@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ac981cca7d12705589f0e913656a5149cd3a3ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac2b973c867e8c5edc4cd8b7eb42ecfee6b3fe0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652450"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906293"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47652450"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에 있는 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장된 데이터를 프로파일링하고 잠재적인 데이터 품질 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
->  이 항목에서는 데이터 프로파일링 태스크의 기능 및 요구 사항에 대해서만 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](../../integration-services/control-flow/data-profiling-task-and-viewer.md)섹션을 참조하세요.  
+>  이 항목에서는 데이터 프로파일링 작업의 기능 및 요구 사항에 대해서만 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](../../integration-services/control-flow/data-profiling-task-and-viewer.md)섹션을 참조하세요.  
   
 ## <a name="requirements-and-limitations"></a>요구 사항 및 제한 사항  
  데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 데이터만 사용할 수 있습니다. 이 태스크는 타사 또는 파일 기반 데이터 원본에서는 작동하지 않습니다.  

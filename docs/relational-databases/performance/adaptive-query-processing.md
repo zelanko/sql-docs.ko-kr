@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851421"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324636"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>메모리 부여 피드백, 리소스 관리자 및 쿼리 힌트
 부여되는 실제 메모리는 리소스 관리자 또는 쿼리 힌트에 따른 쿼리 메모리 제한을 준수합니다.
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 메모리 부여 피드백 비활성화
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 일괄 처리 모드 메모리 부여 피드백 비활성화
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 메모리 부여 피드백을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory는 이전 쿼리 실행에서 부여된 메모리를 KB(킬�
 
 > [!NOTE]
 > 공개 미리 보기 행 모드 메모리 부여 피드백 계획 특성은 버전 17.9 이상의 SQL Server Management Studio 그래픽 쿼리 실행 계획에서 표시됩니다. 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 행 모드 메모리 부여 피드백 비활성화
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 행 모드 메모리 부여 피드백을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 행 모드 메모리 부여 피드백을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+또한 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK을 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
+
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
 일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.

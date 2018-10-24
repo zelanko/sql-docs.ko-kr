@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821187"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905137"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
 
@@ -60,7 +60,7 @@ ms.locfileid: "47821187"
   
 2. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.
   
-3. 서버 구성 페이지에서 SQL Server PolyBase에 대한 **도메인 계정** PQTH4A\PolybaseUser 및 SQL Server PolyBase 데이터 이동 서비스를 사용합니다.
+3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 **도메인 계정** PQTH4A\PolybaseUser를 사용합니다.
   
 4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다.
   

@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625521"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120010"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625521"
     > [!NOTE]  
     >  **SQL Server** 인스턴스가 기본 인스턴스인 경우 **SQL Server**인스턴스를 호스팅하는 컴퓨터의 이름을 입력합니다. **SQL Server** 가 명명된 인스턴스인 경우 **Accounting\SQLExpress**와 같이 컴퓨터의 이름과 인스턴스의 이름을 입력합니다.  
   
-3.  **서버 유형** 영역에서 연결된 서버가 **SQL Server** 의 다른 인스턴스임을 나타낼 수 있도록 **SQL Server**를 선택합니다.  
+3.  **서버 유형** 영역에서 연결된 서버가 **SQL Server**의 다른 인스턴스임을 나타내도록 **SQL Server**를 선택합니다.  
   
 4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결** 을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
   

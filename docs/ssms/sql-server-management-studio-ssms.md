@@ -1,11 +1,9 @@
 ---
 title: SSMS(SQL Server Management Studio) | Microsoft 문서
-ms.date: 02/02/2017
+ms.date: 10/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: ssms
+ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssms.viewhelp.f1
@@ -15,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0944f50125ba0619c3339c1e0a35ff9488f6634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0594446d70ff739ec670645d8d28e12680ec84
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761121"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336082"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +31,6 @@ ms.locfileid: "47761121"
  - [**SQL Server 2016 Developer 다운로드**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
  - [**Visual Studio 다운로드**](https://www.visualstudio.com/downloads/)
 
-  
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
 |설명|구성 요소|  
@@ -44,7 +41,16 @@ ms.locfileid: "47761121"
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에 포함된 비주얼 디자인 도구를 사용하는 방법입니다.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기(SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
+## <a name="support-policy-for-ssms"></a>SSMS에 대한 정책 지원
+
+- SSMS 17.0부터는 SQL 도구 팀이 [Microsoft 최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)을 채택했습니다.
+- 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요.
+- 추가 정보는 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계  
 [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [자습서: Transact-SQL 문 작성](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

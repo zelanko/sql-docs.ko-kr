@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 지능형 쿼리 처리 | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 지능형 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35306ebbde5586401f78f368334634f0fadfe7a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753971"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072253"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ SQL Server 2012는 분석 워크로드를 가속화하기 위한 새로운 기�
 1.  워크로드의 중요한 부분이 분석 쿼리로 구성되어 있습니다(일반적으로 수십만 개 이상의 행을 처리하는 조인 또는 집계와 같은 연산자를 사용하는 쿼리). **및**
 2.  워크로드가 CPU에 따라 제한됩니다(I/O에서 병목 상태가 나타나면 가능한 경우 columnstore 인덱스를 고려하는 것이 바람직함). **및**
 3.  columnstore 인덱스를 만들면 워크로드의 트랜잭션 부분에 너무 많은 오버헤드가 추가됩니다. **또는** 응용 프로그램이 columnstore 인덱스가 아직 지원되지 않는 기능에 의존하므로 columnstore 인덱스를 만드는 작업이 실현 가능하지 않습니다.
+
+> [!NOTE]
+> rowstore의 일괄 처리 모드는 CPU 사용량을 줄이는 것으로만 도움을 줄 수 있습니다. 병목 현상이 IO와 관련되고 데이터가 아직 캐시(“콜드” 캐시)되지 않은 경우 rowstore의 일괄 처리 모드는 경과된 시간을 개선하지 않습니다. 마찬가지로 컴퓨터에 모든 데이터를 캐시할 메모리가 충분하지 않은 경우 성능이 저하될 가능성이 높습니다.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>rowstore의 일괄 처리 모드 변경 내용
 호환성 수준 150으로 전환하는 것 외에, 후보 워크로드의 rowstore에서 일괄 처리 모드를 사용하도록 설정하기 위해 사용자가 수행해야 하는 변경 작업은 없습니다.

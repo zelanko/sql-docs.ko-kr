@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842882"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119941"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "47842882"
   
  기본적으로 **reportserver** 및 **reportservertempdb** 데이터베이스는 모두 자동 증가로 설정되어 있습니다. 데이터베이스 크기는 자동으로 늘어날 수는 있지만 자동으로 줄어들지는 않습니다. 스냅숏을 삭제했기 때문에 **reportserver** 데이터베이스 크기가 너무 큰 경우에는 이 데이터베이스 크기를 직접 줄여서 디스크 공간을 복구해야 합니다. 마찬가지로 **reportservertempdb** 가 크기가 아주 큰 대화형 보고 기능을 사용할 수 있을 만큼 커진 경우에는 사용자가 크기를 줄일 때까지 이 설정으로 디스크 공간 할당이 유지됩니다.  
   
- 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용하고 있는 공간을 측정합니다. 이 문에서는 사용자가 기본 데이터베이스 이름을 사용하고 있다고 가정합니다.  
+ 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용하고 있는 공간 양을 측정합니다. 이 문에서는 사용자가 기본 데이터베이스 이름을 사용하고 있다고 가정합니다.  
   
 ```  
 USE ReportServer  

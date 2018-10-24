@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 743496bde8f92203232c76ee9dddfc19d98be8d3
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816963"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100504"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
   
 -   사용자 정의 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 암시적 또는 명시적 변환이 지원되는 경우 해당 형식의 값을 제공합니다. 다음 예에서는 문자열에서 명시적으로 변환하여 사용자 정의 형식 `Point`의 열에 값을 삽입하는 방법을 보여줍니다.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
   
 -   사용자 정의 형식의 값을 반환하는 사용자 정의 함수를 호출합니다. 다음 예에서는 사용자 정의 함수 `CreateNewPoint()`를 사용하여 사용자 정의 형식 `Point`의 새 값을 만들고 이 값을 `Cities` 테이블에 삽입합니다.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 #### <a name="a-inserting-a-single-row-of-data"></a>1. 단일 데이터 행 삽입  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 한 행을 삽입합니다. 이 테이블의 열은 `UnitMeasureCode`, `Name` 및 `ModifiedDate`입니다. 모든 열에 대한 값이 제공되고 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다 *.*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>2. 여러 데이터 행 삽입  
  다음 예에서는 [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용하여 단일 INSERT 문으로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 세 개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>3. 테이블 열과 순서가 다른 데이터 삽입  
  다음 예에서는 열 목록을 사용하여 각 열에 삽입되는 값을 명시적으로 지정합니다. [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 열 순서는 `UnitMeasureCode`, `Name`, `ModifiedDate`이지만 *column_list*에는 열이 이 순서대로 나열되어 있지 않습니다.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>4. 기본값을 갖는 열이 포함된 테이블에 데이터 삽입  
  다음 예에서는 자동으로 값을 생성하거나 기본값을 갖는 열이 있는 테이블에 행을 삽입하는 방법을 보여 줍니다. `Column_1`은 `column_2`에 삽입된 값과 문자열을 연결하여 자동으로 값을 생성하는 계산 열입니다. `Column_2`는 기본 제약 조건으로 정의됩니다. 이 열에 값이 지정되지 않으면 기본값이 사용됩니다. `Column_3`은 고유한 증분 이진수를 생성하는 **rowversion** 데이터 형식으로 정의됩니다. `Column_4`는 값을 자동으로 생성하지 않습니다. 이 열의 값이 지정되지 않으면 NULL이 삽입됩니다. INSERT 문은 전체 열이 아니라 일부 열의 값을 포함하는 행을 삽입합니다. 마지막 INSERT 문에는 열이 지정되지 않고 DEFAULT VALUES 절을 사용하여 기본값만 삽입됩니다.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>5. ID 열이 있는 테이블에 데이터 삽입  
  다음 예에서는 ID 열에 데이터를 삽입하는 다양한 방법을 보여 줍니다. 처음 두 INSERT 문은 새 행에 대해 ID 값을 생성할 수 있도록 합니다. 세 번째 INSERT 문은 SET IDENTITY_INSERT 문으로 열의 IDENTITY 속성을 재정의하고 ID 열에 명시적 값을 삽입합니다.  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>6. NEWID()를 사용하여 uniqueidentifier 열에 데이터 삽입  
  다음 예에서는 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 함수를 사용하여 `column_2`의 GUID를 가져옵니다. 두 번째 `INSERT` 문에서 볼 수 있듯이 ID 열과 달리 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 데이터 형식의 열에 대해서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 자동으로 생성하지 않습니다.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>7. 사용자 정의 형식 열에 데이터 삽입  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `PointValue` 테이블의 `Points` 열에 세 개의 행을 삽입합니다. 이 열은 [CLR UDT(사용자 정의 형식)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)를 사용합니다. `Point` 데이터 형식은 UDT 속성으로 노출되는 X 및 Y 정수 값으로 구성됩니다. CAST 또는 CONVERT 함수를 사용하여 쉼표로 구분된 X 및 Y 값을 `Point` 형식으로 캐스팅해야 합니다. 처음 두 명령문은 CONVERT 함수를 사용하여 문자열 값을`Point` 형식으로 변환하고 세 번째 명령문은 CAST 함수를 사용합니다. 자세한 내용은 [UDT 데이터 조작](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)을 참조하세요.  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  첫 번째 INSERT 문은 SELECT 문을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 원본 테이블(`Employee`, `SalesPerson` 및 `Person`)에서 데이터를 파생시키고 결과 집합을 `EmployeeSales` 테이블에 저장합니다. 두 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 포함하는 저장 프로시저를 호출하고 세 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 리터럴 문자열로 참조합니다.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>9. WITH 공통 테이블 식을 사용하여 삽입할 데이터 정의  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `NewEmployee` 테이블을 만듭니다. 공통 테이블 식(`EmployeeTemp`)은 하나 이상의 테이블에서 `NewEmployee` 테이블에 삽입할 행을 정의합니다. INSERT 문은 공통 테이블 식의 열을 참조합니다.  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>10. TOP을 사용하여 원본 테이블에서 삽입되는 데이터 제한  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 테이블에서 가져온 임의의 직원 상위 5명에 대한 이름 및 연간 매출 데이터를 삽입합니다. INSERT 문은 `SELECT` 문에서 반환되는 행 중 5개를 선택합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. SELECT 문의 ORDER BY 절은 상위 5명의 직원을 결정하는 데 사용되지 않습니다.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  TOP을 사용하여 시간 순서로 행을 삽입해야 할 경우 다음 예와 같이 하위 SELECT 문에서 ORDER BY 절과 함께 TOP을 사용해야 합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. 이제 임의의 행이 아니라 ORDER BY 절의 결과에 따라 상위 5명의 직원이 삽입됩니다.  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>11. 뷰를 지정하여 데이터 삽입  
  다음 예에서는 뷰 이름을 대상 개체로 지정하지만 새 행이 기본 테이블에 삽입됩니다. `INSERT` 문의 값 순서는 뷰의 열 순서와 일치해야 합니다. 자세한 내용은 [뷰를 통해 데이터 수정](../../relational-databases/views/modify-data-through-a-view.md)을 참조하세요.  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>12. 테이블 변수에 데이터 삽입  
  다음 예는 테이블 변수를 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 대상 개체로 지정합니다.  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>17. 최소 로깅으로 힙에 데이터 삽입  
  다음 예에서는 새 테이블(힙)을 만들고 최소 로깅을 사용하여 다른 테이블의 데이터를 새 테이블에 삽입합니다. 여기에서는 `AdventureWorks2012` 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용하기 위해 행 삽입 전에 `AdventureWorks2012` 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 INSERT INTO…SELECT 문 다음에 FULL로 다시 설정됩니다. 또한 대상 테이블 `Sales.SalesHistory`에 대해 TABLOCK 힌트가 지정됩니다. 이렇게 하면 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **적용 대상**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>20. INSERT 문에 OUTPUT 사용  
  다음 예에서는 `ScrapReason` 테이블에 행을 삽입하고 `OUTPUT` 절을 사용하여 문의 결과를 `@MyTableVar` 테이블 변수에 반환합니다. `ScrapReasonID` 열은 `IDENTITY` 속성으로 정의되었으므로 해당 열에 대한 `INSERT` 문에 값이 지정되지 않습니다. 그러나 해당 열에 대해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성한 값은 `OUTPUT` 열의 `INSERTED.ScrapReasonID` 절에서 반환됩니다.  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>21. ID 열 및 계산 열에 OUTPUT 사용  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 INSERT 문에 SELECT 문을 사용하여 이 테이블에 여러 개의 행을 삽입한 후 원본 테이블에서 데이터를 검색합니다. `EmployeeSales` 테이블에는 ID 열(`EmployeeID`)과 계산 열(`ProjectedSales`)이 포함되어 있습니다. 이러한 값은 삽입 작업 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되므로 `@MyTableVar`에 이러한 열을 정의할 수 없습니다.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>22. OUTPUT 절에서 반환된 데이터 삽입  
  다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하여 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 `Quantity` 테이블의 `ProductInventory` 열을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `SalesOrderDetail` 테이블에서 처리되는 순서대로 매일 업데이트하고 또한 재고가 0이 되는 제품의 행을 삭제합니다. 이 예에서는 삭제된 행을 캡처한 후 다른 `ZeroInventory` 테이블에 삽입하여 재고가 없는 제품을 추적합니다.  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. SELECT 옵션을 사용하여 데이터 삽입  
  다음 예에서는 SELECT 옵션으로 INSERT 문을 사용하여 여러 행의 데이터를 삽입하는 방법을 보여줍니다. 첫 번째 `INSERT` 문은 `SELECT` 문을 직접 사용하여 원본 테이블에서 데이터를 검색한 다음, 결과 집합을 `EmployeeTitles` 테이블에 저장합니다.  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. INSERT 문으로 레이블 지정  
  다음 예에서는 INSERT 문에 레이블을 사용하는 방법을 보여줍니다.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. INSERT 문에 레이블 및 쿼리 힌트 사용  
  이 쿼리는 INSERT 문에 레이블 및 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

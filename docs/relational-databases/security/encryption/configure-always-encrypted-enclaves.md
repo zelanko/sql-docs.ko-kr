@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712475"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307127"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ ms.locfileid: "47712475"
 4. SQL Server 인스턴스에서 Enclave 형식을 구성합니다.
 5. Enclave 사용 키를 프로비전합니다.
 6. 중요한 데이터가 포함된 열을 암호화합니다.
- 
 
+>[!NOTE]
+>테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작하기](../tutorial-getting-started-with-always-encrypted-enclaves.md)를 참조하세요.
 
 ## <a name="configure-your-environment"></a>환경 구성
 
@@ -78,7 +79,7 @@ Windows HGS(호스트 보호 서비스)는 SQL Server와 동일한 컴퓨터가 
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 이상](../../../ssms/download-sql-server-management-studio-ssms.md)
-3. [SQL Server PowerShell 모듈](../../../powershell/download-sql-server-ps-module.md) 버전 21.5 이상
+3. [SQL Server PowerShell 모듈](../../../powershell/download-sql-server-ps-module.md) 버전 21.1 이상
 4. [Visual Studio(2017 이상 권장)](https://visualstudio.microsoft.com/downloads/)
 5. [.NET Framework 4.7.2용 개발자 팩](https://www.microsoft.com/net/download/visual-studio-sdks)
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 패키지](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), 버전 2.2.0 이상

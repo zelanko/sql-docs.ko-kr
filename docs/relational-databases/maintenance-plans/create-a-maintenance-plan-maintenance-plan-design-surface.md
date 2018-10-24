@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687121"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168927"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47687121"
   
 -   [유지 관리 계획 디자인 화면을 사용하여 유지 관리 계획 만들기](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47687121"
   
         1.  **텍스트 파일 보고서 생성**을 선택하는 경우 **새 파일 만들기** 또는 **파일에 추가**를 선택합니다.  
   
-        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(…)** 를 클릭하고 **폴더 찾기 –***server_name* 또는 **데이터베이스 파일 찾기 –***server_name* 대화 상자에서 폴더나 파일 이름의 경로를 선택합니다.  
+        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(…)** 를 클릭하고 **폴더 찾기 –**_server\_name_ 또는 **데이터베이스 파일 찾기 –**_server\_name_ 대화 상자에서 폴더 또는 파일 이름의 경로를 선택합니다.  
   
         3.  **전자 메일 받는 사람에게 보고서 보내기**를 선택하는 경우 **에이전트 운영자** 목록에서 전자 메일로 보낼 보고서의 받는 사람을 선택합니다.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687121"
   
 12. 로그 파일 뷰어에서 이 결과를 보려면 **개체 탐색기**에서 **유지 관리 계획** 폴더 또는 특정 유지 관리 계획을 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 선택합니다.  
   
-     다음 옵션은 **로그 파일 뷰어 –***server_name* 대화 상자에서 사용할 수 있습니다.  
+     다음 옵션은 **로그 파일 뷰어 –**_server\_name_ 대화 상자에서 사용할 수 있습니다.  
   
      **로그 로드**  
      로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  
@@ -256,7 +256,7 @@ ms.locfileid: "47687121"
      **로그 파일 요약**  
      이 정보 창에는 로그 파일 필터링에 대한 요약이 표시됩니다. 파일을 필터링하지 않은 경우 **적용된 필터 없음**이 표시됩니다. 로그에 필터를 적용한 경우에는 **로그 항목 필터링 조건:** \<필터 조건>이 표시됩니다.  
   
-     **날짜**  
+     **Date**  
      이벤트의 날짜를 표시합니다.  
   
      **원본**  

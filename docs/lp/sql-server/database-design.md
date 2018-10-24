@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 설명서
-description: Microsoft Azure cloud service를 사용하여 강력한 응용 프로그램을 빌드하고 관리하는 방법을 알아봅니다. 설명서, 예제 코드, 자습서 등을 가져옵니다.
+title: SQL Server 데이터베이스 디자인
+description: 비즈니스 요구 사항에 가장 적합한 데이터베이스를 디자인하는 데 도움이 되는 SQL Server의 기능을 찾습니다.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4e87c2ff5408394b3723083739c5fde0b5e5a771
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 3cae88b1597cc02fc87eeccc2300b7a1451d84bc
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797848"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336282"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -395,10 +395,16 @@ ms.locfileid: "48797848"
         <h2>Microsoft에 연락하기</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> SQL 설명서에 참여하세요. </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 참여 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> SQL 문서 피드백 </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 도움말 보기 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 피드백 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 설문 조사 </a> 
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> 블로그 </a>
@@ -414,4 +420,3 @@ ms.locfileid: "48797848"
             </li>
         </ul>
     </div>
-

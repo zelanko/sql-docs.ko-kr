@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120240"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47821991"
   
      [가용성 그룹의 추가 수신기 만들기(선택 사항)](#CreateAdditionalListener)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="DoesListenerExist"></a> 이 가용성 그룹에 대한 수신기가 이미 존재합니까?  
  **가용성 그룹에 대한 수신기가 이미 존재하는지 확인하려면**  
@@ -303,7 +303,7 @@ ms.locfileid: "47821991"
   
 -   **MultiSubnetFailover** 를 true로 설정하지 않는 연결 문자열  
   
-     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 **RegisterAllProvidersIP** 를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결할 필요가 없고 **MultiSubnetFailover** 속성을 사용할 수 없는 레거시 클라이언트가 있을 경우 **RegisterAllProvidersIP** 를 0으로 변경하는 것이 좋습니다.  
+     `RegisterAllProvidersIP = 1`일 때는 연결 문자열이 `MultiSubnetFailover = True`를 사용하지 않는 클라이언트에서 연결 대기 시간이 길어집니다. 이는 이러한 클라이언트가 모든 IP에 순차적으로 연결을 시도하기 때문에 발생합니다. 반면에 **RegisterAllProvidersIP** 를 0으로 변경하면 활성 IP 주소가 WSFC 클러스터의 클라이언트 액세스 지점에 등록되기 때문에 레거시 클라이언트에 대한 대기 시간이 줄어듭니다. 따라서 가용성 그룹 수신기에 연결해야 하고 **MultiSubnetFailover** 속성을 사용할 수 없는 레거시 클라이언트가 있을 경우 **RegisterAllProvidersIP**를 0으로 변경하는 것이 좋습니다.  
   
     > [!IMPORTANT]  
     >  WSFC 클러스터(장애 조치(Failover) 클러스터 관리자 GUI)를 통해 가용성 그룹 수신기를 만들면 기본적으로 **RegisterAllProvidersIP** 는 0(false)으로 설정됩니다.  

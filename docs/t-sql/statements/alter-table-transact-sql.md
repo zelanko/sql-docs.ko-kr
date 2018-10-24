@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171875"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085539"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 >  
 > 기본 키 제약 조건에 포함된 열은 **NOT NULL**에서 **NULL**로 변경할 수 없습니다.  
   
-수정하는 열이 `ENCRYPTED WITH`를 사용하여 암호화된 경우 데이터 형식을 호환되는 데이터 형식으로 변경할 수 있지만(예를 들어 INT에서 BIGINT로) 암호화 설정은 변경할 수 없습니다.  
+Always Encrypted를 사용할 때(보안 Enclave를 사용하지 않고), 수정하는 열이 ‘ENCRYPTED WITH’를 사용하여 암호화된 경우 데이터 형식을 호환되는 데이터 형식으로 변경할 수 있지만(예를 들어 INT에서 BIGINT로) 암호화 설정은 변경할 수 없습니다.  
+
+Always Encrypted를 보안 Enclave와 함께 사용하는 경우 열을 보호하는 열 암호화 키(및 키를 변경하는 경우에는 새 열 암호화 키)에서 Enclave 계산(Enclave 지원 열 마스터 키로 암호화됨)을 지원하는 경우에만 암호화 설정을 변경할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.  
   
  *column_name*  
  변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 최대 128자까지 가능합니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **timestamp** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **timestamp**가 이름으로 사용됩니다.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  변경된 열의 새 데이터 형식 또는 추가된 열의 데이터 형식입니다. 분할된 테이블의 기존 열에 *type_name*을 지정할 수 없습니다. *type_name*은 다음 중 하나일 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  이 인수와 함께 SET SYSTEM_VERSIONING 인수를 사용할 경우 기존 테이블에서 시스템 버전 관리를 수행할 수 있습니다. 자세한 내용은 [Temporal 테이블](../../relational-databases/tables/temporal-tables.md) 및 [Azure SQL Database에서 Temporal 테이블 시작하기](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)를 참조하세요.  
   
- [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>* 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
+ [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM**_\<table/>_ 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
   
 DROP  
 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건을 삭제하거나 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제하도록 지정합니다.  
@@ -716,7 +715,7 @@ COLUMN *column_name*
 > [!NOTE]  
 > 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **“** default **”** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 이동할 위치를 지정합니다. 테이블이 새 위치로 이동됩니다. 이 옵션은 클러스터형 인덱스를 만드는 제약 조건에만 적용됩니다.  
@@ -753,7 +752,7 @@ COLUMN *column_name*
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 업데이트된 변경 내용 추적 열을 추적하는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  다음 방법 중 하나를 사용하여 데이터 블록을 전환합니다.  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>4. 열 암호화  
+ 다음 예는 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 사용하여 열을 암호화하는 방법을 보여 줍니다. 
+
+먼저 암호화된 열이 없는 테이블이 만들어집니다.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ 그런 다음 열 'C2'는 CEK1이라는 열 암호화 키 및 임의 암호화로 암호화됩니다. 아래 문을 수행하려면:
+- 열 암호화 키는 Enclave가 가능해야 합니다. 이는 Enclave 컴퓨팅이 가능한 열 마스터 키로 암호화해야 한다는 의미입니다.
+- 대상 SQL Server 인스턴스는 보안 Enclave를 사용한 Always Encrypted를 지원해야 합니다.
+- 이 문은 보안 Enclave를 사용한 Always Encrypted에 대한 연결 설정에 대해 발행되어야 하며 지원되는 클라이언트 드라이버를 사용해야 합니다.
+- 호출 응용 프로그램은 CEK1을 보호하는 열 마스터 키에 액세스할 수 있어야 합니다.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> 테이블 정의 변경  
  이 섹션의 예에서는 테이블 정의를 변경하는 방법을 보여 줍니다.  

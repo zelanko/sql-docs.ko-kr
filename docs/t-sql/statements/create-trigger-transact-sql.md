@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120440"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>DML 트리거 최적화
  트랜잭션(묵시적, 또는 그 외)에서 작업을 트리거하고, 열려 있는 동안 리소스를 잠급니다. 트랜잭션이 확인(COMMIT 사용)되거나 거부(ROLLBACK 사용)될 때까지 잠금 상태가 유지됩니다. 트리거 실행 기간이 길수록 다른 프로세스가 차단될 가능성이 높아집니다. 따라서 가능하면 해당 기간을 줄이는 방법으로 트리거를 작성해야 합니다. 이 작업을 수행하는 한 가지 방법은 DML 문이 0개 행을 변경할 때 트리거를 해제하는 것입니다. 
 
-행을 변경하지 않는 명령에 대해 트리거를 해제하려면 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql) 시스템 변수를 사용합니다. 
+행을 변경하지 않는 명령에 대해 트리거를 해제하려면 [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md) 시스템 변수를 사용합니다. 
 
 이는 다음 T-SQL 코드 조각을 사용하여 수행할 수 있으며, 각 DML 트리거의 시작에 표시되어야 합니다.
 

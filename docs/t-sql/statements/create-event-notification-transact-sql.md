@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629151"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169273"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  이벤트 알림이 삭제될 때까지 대화는 열려 있습니다. 특정 오류로 인해 대화가 일찍 닫힐 수 있습니다. 일부 또는 전체 대화를 명시적으로 종료하면 대상 서비스가 더 이상 메시지를 받지 못할 수 있습니다.  
   
- { **'***broker_instance_specifier***'** | **'current database'** }  
+ { **‘**_broker\_instance\_specifier_**’** | **‘current database’** }  
  *broker_service*가 확인되는 Service Broker 인스턴스를 지정합니다. **sys.databases** 카탈로그 뷰의 **service_broker_guid** 열을 쿼리하면 특정 Service Broker 값을 얻을 수 있습니다. 현재 데이터베이스의 Service Broker 인스턴스를 지정하려면 **'current database'** 를 사용합니다. **'current database'** 는 대/소문자를 구분하지 않는 문자열 리터럴입니다.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  다음의 예 1과 예 2에서 `TO SERVICE 'NotifyService'` 절의 GUID('8140a771-3c4b-4479-8ac0-81008ab17984')는 예가 구성된 컴퓨터에만 해당됩니다. 예를 들어 이 GUID는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 GUID입니다.  
 >   
->  이러한 예를 복사하고 실행하려면 이 GUID를 사용자의 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 맞게 바꿔야 합니다. 위의 인수 섹션에서 설명한 것처럼 sys.databases 카탈로그 뷰의 service_broker_guid 열을 쿼리하면 **'***broker_instance_specifier***'** 를 얻을 수 있습니다.  
+>  이러한 예를 복사하고 실행하려면 이 GUID를 사용자의 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 맞게 바꿔야 합니다. 위의 인수 섹션에서 설명한 것처럼 sys.databases 카탈로그 뷰의 service_broker_guid 열을 쿼리하여 **‘**_broker\_instance\_specifier_**’** 를 얻을 수 있습니다.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>1. 서버에 한정되는 이벤트 알림 생성  
  다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 대상 서비스를 설정하는 데 필요한 개체를 만듭니다. 대상 서비스는 이벤트 알림용 시작 서비스의 메시지 유형과 계약을 참조합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 `Object_Created` 추적 이벤트가 발생할 때마다 알림을 보내는 대상 서비스에서 이벤트 알림이 생성됩니다.  

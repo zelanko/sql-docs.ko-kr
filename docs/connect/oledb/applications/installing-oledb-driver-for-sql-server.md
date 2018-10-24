@@ -1,5 +1,5 @@
 ---
-title: SQL Server용 Microsoft OLE DB 드라이버 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버 설치 | Microsoft Docs
 description: 설치 하 고 SQL Server 용 OLE DB 드라이버를 제거 합니다.
 ms.custom: ''
 ms.date: 06/12/2018

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c2acade2ac4e0a4def5bc136d0faa5a11c4815a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99689619610e3237d9c57627229ba3eb3f1f62e1
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795301"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905749"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 

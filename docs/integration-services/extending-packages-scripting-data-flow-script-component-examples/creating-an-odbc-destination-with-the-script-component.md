@@ -1,7 +1,7 @@
 ---
 title: 스크립트 구성 요소를 사용하여 ODBC 대상 만들기 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816267"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100444"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 일반적으로 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC를 사용하여 ODBC 대상에 데이터를 저장합니다. 그러나 단일 패키지에서 사용할 임시 ODBC 대상을 만들 수도 있습니다. 이 임시 ODBC 대상을 만들려면 다음 예와 같이 스크립트 구성 요소를 사용합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "47816267"
   
 -   **OdbcCommand**에는 위치 매개 변수가 필요합니다. 매개 변수의 위치는 명령 텍스트에서 물음표(?)로 표시됩니다. (반면 **SqlCommand**에는 명명된 매개 변수가 필요합니다.)  
   
- 이 예에서는 **AdventureWorks** 예제 데이터베이스의 **Person.Address** 테이블을 사용하고, 이 테이블의 첫 번째 열인 **int*AddressID*** 열과 네 번째 열인 **nvarchar(30)City** 열을 데이터 흐름을 통해 전달합니다. 동일한 데이터가 [특정 유형의 스크립트 구성 요소 개발](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) 항목의 원본, 변환 및 대상 예제에도 사용됩니다.  
+ 이 예에서는 **AdventureWorks** 예제 데이터베이스의 **Person.Address** 테이블을 사용하고, 이 테이블의 첫 번째 열인 **int _AddressID_** 와 네 번째 열인 **nvarchar(30) _City_** 열을 데이터 흐름을 통해 전달합니다. 동일한 데이터가 [특정 유형의 스크립트 구성 요소 개발](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) 항목의 원본, 변환 및 대상 예제에도 사용됩니다.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816267"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc4737358afc94629578b4b9a0bfa1031d075cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2b22a5a728ab5ca1e6f8ac5d06296ec338a869
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667793"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120050"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47667793"
   
 6.  **확인**을 클릭하고 다시 시작 메시지가 나타나면 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 다시 시작한 후에 서버는 단일 사용자 모드가 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중이지 않는지 확인합니다. 시작된 경우 사용자의 유일한 연결을 사용합니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 다시 시작한 후에 서버는 단일 사용자 모드가 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않은지 확인합니다. 시작된 경우 사용자의 유일한 연결을 사용합니다.  
   
 8.  Windows 8 시작 화면에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]아이콘을 마우스 오른쪽 단추로 클릭합니다. 화면 아래쪽에서 **관리자 권한으로 실행**을 선택합니다. SSMS에 관리자 자격 증명이 전달됩니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: 테이블(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839761"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100464"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ SELECT select_list INTO table_variable;
 테이블 변수 지연 컴파일은 **다시 컴파일 빈도를 늘리지 않습니다**.  대신 초기 컴파일이 발생하는 위치를 이동합니다. 결과 캐시된 플랜은 초기 지연 컴파일 테이블 변수 행 개수를 기반으로 생성됩니다. 플랜이 제거되거나 다시 컴파일될 때까지 캐시된 플랜은 연속 쿼리에서 다시 사용됩니다. 
 
 초기 플랜 컴파일에 사용되는 테이블 변수 행 개수가 고정된 행 개수 추측과 상당히 다른 일반적인 값을 나타내는 경우, 다운스트림 작업에 도움이 됩니다.  테이블 변수 행 개수가 실행 간에 크게 달라지는 경우, 이 기능으로 성능이 향상되지 않을 수 있습니다.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 테이블 변수 지연 컴파일 비활성화
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 테이블 변수 지연 컴파일을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 테이블 변수 지연 컴파일을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 테이블 변수 지연 컴파일을 다시 활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+DISABLE_DEFERRED_COMPILATION_TV를 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 테이블 변수 지연 컴파일을 비활성화할 수도 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>예  

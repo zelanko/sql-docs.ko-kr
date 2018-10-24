@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c15426e44ef6897cb5763d3c98f2a214298298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814094"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307117"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -140,3 +140,7 @@ Enclave 사용 열은 Enclave 사용 열 암호화 키로 암호화한 데이터
 ## <a name="known-issues"></a>알려진 문제
 
 - 비유니코드(char, varchar) 문자열 열에 대해 리치 계산을 수행하려면 BIN2 데이터 정렬이 데이터베이스 수준에서 설정되어야 합니다. [데이터 정렬 관리](configure-always-encrypted-enclaves.md#manage-collations)에서 비유니코드 문자열 열에 대한 특별 고려 사항을 참조하세요.
+
+## <a name="next-steps"></a>Next Steps
+
+- 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용해 보세요. [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작하기](../tutorial-getting-started-with-always-encrypted-enclaves.md)를 참조하세요.

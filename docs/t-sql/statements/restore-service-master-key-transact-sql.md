@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5353a53c8a7082d4f23c62fa48bc03bcbd27e0b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde847ead524e78c02aaad0544c0fec18ebe5c2f
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607901"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169093"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>인수  
- FILE **='***path_to_file***'**  
+ FILE **=‘**_path\_to\_file_**’**  
  저장된 서비스 마스터 키에 대해 파일 이름을 포함한 전체 경로를 지정합니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  파일에서 가져올 서비스 마스터 키의 암호를 해독하는 데 필요한 암호를 지정합니다.  
   
  FORCE  
