@@ -26,7 +26,7 @@ ms.locfileid: "48200033"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 장치에서 백업을 복원하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  Windows Azure Blob 저장소 서비스로 SQL Server 백업하는 방법에 대한 자세한 내용은 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+>  Windows Azure Blob 저장소 서비스로 SQL Server 백업하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
   
  **항목 내용**  
   
