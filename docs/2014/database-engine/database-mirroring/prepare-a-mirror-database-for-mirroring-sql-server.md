@@ -31,7 +31,7 @@ ms.locfileid: "48130083"
   
 ###  <a name="Requirements"></a> 요구 사항  
   
--   주 서버와 미러 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되고 있어야 합니다. 미러 서버에 상위 버전의 SQL Server가 있을 수 있지만 이 구성은 세심하게 계획된 업그레이드 프로세스 중에만 권장됩니다. 이 구성에서 자동 장애 조치(failover)가 발생할 수 있습니다. 이 경우 데이터를 하위 버전의 SQL Server로 옮길 수 없으므로 데이터 이동이 자동으로 중지됩니다. 자세한 내용은 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)을 참조하세요.  
+-   주 서버와 미러 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되고 있어야 합니다. 미러 서버에 상위 버전의 SQL Server가 있을 수 있지만 이 구성은 세심하게 계획된 업그레이드 프로세스 중에만 권장됩니다. 이 구성에서 자동 장애 조치(failover)가 발생할 수 있습니다. 이 경우 데이터를 하위 버전의 SQL Server로 옮길 수 없으므로 데이터 이동이 자동으로 중지됩니다. 자세한 내용은 [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화](upgrading-mirrored-instances.md)을 참조하세요.  
   
 -   주 서버와 미러 서버 인스턴스가 같은 에디션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되고 있어야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   

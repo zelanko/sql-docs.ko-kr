@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11534581d2c9dfab36aa8b3a75d6f425f11a67d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776511"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336222"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG(-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +40,12 @@ ms.locfileid: "47776511"
 ## <a name="syntax"></a>구문  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )  
-   [ OVER ( [ partition_by_clause ] [ order_by_clause ] ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
   
 -- Analytic Function Syntax  
-COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -64,10 +56,10 @@ DISTINCT
 `COUNT_BIG`이 Null이 아닌 고유한 값의 수를 반환하도록 지정합니다.
   
 *expression*  
-모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT_BIG`이 식에서 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
+모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `COUNT_BIG`은 집계 함수 또는 하위 쿼리를 지원하지 않습니다.
   
 *\**  
-`COUNT_BIG`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT_BIG(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT_BIG(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT_BIG(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. 각 행은 개별적으로 계산되며 Null 값을 가진 행도 포함됩니다.
+`COUNT_BIG`이 반환할 총 테이블 행 개수를 결정하는 모든 행을 계산해야 한다고 지정합니다. `COUNT_BIG(*)`에는 매개 변수가 없으며 DISTINCT의 사용을 지원하지 않습니다. `COUNT_BIG(*)`은 특정 열에 대한 정보를 사용하지 않도록 정의되어 있으므로 *expression* 매개 변수가 필요하지 않습니다. `COUNT_BIG(*)`은 지정한 테이블에서 행의 수를 반환하고 중복 행을 유지합니다. Null 값을 포함하는 행을 포함하여 각 행을 개별적으로 계산합니다.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
 *partition_by_clause*는 `FROM` 절이 생성한 결과 집합을 `COUNT_BIG` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
@@ -82,7 +74,7 @@ COUNT_BIG(ALL *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Nul
   
 COUNT_BIG(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 고유 값의 수를 반환합니다.
   
-COUNT_BIG은 OVER 및 ORDER BY 절 ***없이*** 사용되는 경우 결정적 함수이고, OVER 및 ORDER BY 절과 ***함께*** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+COUNT_BIG은 OVER 및 ORDER BY 절 ***없이*** 사용되는 경우 결정적 함수이고, COUNT_BIG은 OVER 및 ORDER BY 절과 ‘함께’ 사용되는 경우 비결정적 함수입니다.**** 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
 예제는 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)을 참조하세요.
