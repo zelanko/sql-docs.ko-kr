@@ -120,7 +120,7 @@ ms.locfileid: "48141843"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 자세한 예는 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
+ 자세한 예는 [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
   
  추가 예제는 [Reporting Services 스크립트 파일 실행](run-a-reporting-services-script-file.md)을 참조하세요.  
   
@@ -130,7 +130,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  이 스크립트는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 코드로 작성하여 파일 이름 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장해야 합니다. **rs** 유틸리티를 사용하여 스크립트를 디버깅할 수 없습니다. 스크립트를 디버깅하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 코드를 실행하세요.  
   
 > [!TIP]  
->  자세한 예는 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
+>  자세한 예는 [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 스크립트 파일 실행](run-a-reporting-services-script-file.md)   
