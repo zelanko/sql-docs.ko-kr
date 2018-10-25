@@ -1,5 +1,5 @@
 ---
-title: getColumns 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: isReadOnly 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public boolean isReadOnly()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 데이터베이스가 읽기 전용 모드이면 이고, 그렇지 않으면 **false**입니다.  
+ 데이터베이스가 읽기 전용 모드이면 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

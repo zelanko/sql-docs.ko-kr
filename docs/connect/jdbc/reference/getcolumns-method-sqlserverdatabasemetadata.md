@@ -62,7 +62,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getTables 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTables 메서드에 의해 지정됩니다.  
+ 이 getColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getColumns 메서드에 의해 지정됩니다.  
   
  getColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   

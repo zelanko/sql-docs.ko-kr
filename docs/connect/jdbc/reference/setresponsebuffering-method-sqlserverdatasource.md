@@ -38,12 +38,12 @@ public void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>매개 변수  
  *value*  
   
- 버퍼링 및 스트리밍 모드가 들어 있는 입니다. 유효한 모드는 대/소문자를 구분하지 않는 문자열  또는 일 수 있습니다.  
+ 버퍼링 및 스트리밍 모드가 들어 있는 **String**입니다. 유효한 모드는 대/소문자를 구분하지 않는 문자열 **full** 또는 **adaptive**일 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
- 값은 런타임에 서버의 전체 결과를 읽도록 지정합니다.  
+ **full** 값은 런타임에 서버의 전체 결과를 읽도록 지정합니다.  
   
- 값은 필요할 때 가능한 최소한의 데이터를 버퍼링하도록 지정합니다. 값은 기본 버퍼링 모드입니다.  
+ **adaptive** 값은 필요할 때 가능한 최소한의 데이터를 버퍼링하도록 지정합니다. **adaptive** 값은 기본 버퍼링 모드입니다.  
   
  응답 버퍼링 모드를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 선택 버퍼링](../../../connect/jdbc/using-adaptive-buffering.md)합니다.  
   

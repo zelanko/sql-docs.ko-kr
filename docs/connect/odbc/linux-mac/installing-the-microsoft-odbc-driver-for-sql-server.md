@@ -507,7 +507,7 @@ Linux 및 MacOS에서 ODBC 드라이버는 다음 구성 요소가 구성 됩니
 
 |구성 요소|설명|  
 |---------------|-----------------|  
-|libmsodbcsql-17입니다. X.so.X.X 또는 libmsodbcsql 13입니다. X.so.X.X|드라이버 기능이 모두 포함된 동적 라이브러리(`so`) 파일입니다. 이 파일에 설치 됩니다 `/opt/microsoft/msodbcsql17/lib64/` 드라이버 17 고 `/opt/microsoft/msodbcsql/lib64/` Driver 13에 대 한 합니다.|  
+|libmsodbcsql-17입니다. X.so.X.X 또는 libmsodbcsql 13입니다. X.so.X.X|드라이버 기능이 모두 포함된 공유 개체(`so`) 동적 라이브러리 파일입니다. 이 파일에 설치 됩니다 `/opt/microsoft/msodbcsql17/lib64/` 드라이버 17 고 `/opt/microsoft/msodbcsql/lib64/` Driver 13에 대 한 합니다.|  
 |`msodbcsqlr17.rll` 또는 `msodbcsqlr13.rll`|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 설치 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는에 설치 됩니다 `/opt/microsoft/msodbcsql17/include/` 드라이버 17 고 `/opt/microsoft/msodbcsql/include/` Driver 13에 대 한 합니다. |
 |LICENSE.txt|최종 사용자 사용권 계약의 약관을 포함 하는 텍스트 파일입니다. 이 파일에 위치한 `/usr/share/doc/msodbcsql17/` 드라이버 17 고 `/usr/share/doc/msodbcsql/` Driver 13에 대 한 합니다.|

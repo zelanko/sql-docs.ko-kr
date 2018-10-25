@@ -1,15 +1,12 @@
 ---
 title: sqlcmd 유틸리티 | Microsoft 문서
 ms.custom: ''
-ms.date: 07/27/2017
+ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlcmd
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -28,22 +25,22 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 318ce145febf62b282c96560be91cc08b7de9ea8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
-ms.translationtype: MTE75
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787111"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252120"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 및 하위 [sqlcmd 유틸리티](sqlcmd-utility.md)합니다.
+ > SQL Server 2014 및 하위 [sqlcmd 유틸리티](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+)합니다.
 
  > Sqlcmd를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
@@ -128,7 +125,7 @@ sqlcmd
 ## <a name="command-line-options"></a>명령줄 옵션  
  **로그인 관련 옵션**  
   **-A**  
- DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결할 때 SQL server 관리자 여야 합니다. DAC는 Azure Active Directory 관리자를 사용할 수 없는 경우
+ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결할 때 SQL server 관리자 여야 합니다. DAC는 Azure Active Directory 관리자가 제공 되지 않습니다.
   
  **-C**  
  이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
@@ -140,7 +137,7 @@ sqlcmd
  서버에 연결을 시도할 때 ODBC 드라이버에 대한 **sqlcmd** 로그인 시간 제한(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDLOGINTIMEOUT을 설정합니다. 기본 **sqlcmd** 로그인 제한 시간은 8초입니다. **-G** 옵션을 사용하여 SQL 데이터베이스 또는 SQL 데이터 웨어하우스에 연결하고 Azure Active Directory를 사용하여 인증하는 경우 최소 30초의 시간 제한 값이 권장됩니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.
   
  **-E**  
- 사용자 이름과 암호를 사용하는 대신 트러스트된 연결을 사용하여 SQL Server에 로그온합니다. **-E** 를 지정하지 않으면 **sqlcmd** 는 기본적으로 트러스트된 연결 옵션을 사용합니다.  
+ 사용자 이름과 암호를 사용하는 대신 트러스트된 연결을 사용하여 SQL Server에 로그인합니다. **-E** 를 지정하지 않으면 **sqlcmd** 는 기본적으로 트러스트된 연결 옵션을 사용합니다.  
   
  **-E** 옵션은 SQLCMDPASSWORD 등의 가능한 사용자 이름 및 암호 환경 변수 설정을 무시합니다. **-E** 옵션과 함께 **-U** 옵션 또는 **-P** 옵션을 사용하면 오류 메시지가 생성됩니다.  
 
@@ -151,7 +148,8 @@ sqlcmd
  이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다.
 
 > [!IMPORTANT]
-> **-G** 옵션은 Azure SQL 데이터베이스 및 Azure 데이터 웨어하우스에만 적용됩니다. 
+> **-G** 옵션은 Azure SQL 데이터베이스 및 Azure 데이터 웨어하우스에만 적용됩니다.
+> AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다. 
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
@@ -168,7 +166,8 @@ sqlcmd
 
 - **Azure Active Directory 통합** 
  
-   Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호없이 **-G** 옵션을 제공합니다. 
+   Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다.
+   *AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다*합니다.
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
@@ -230,14 +229,14 @@ sqlcmd
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-S** [*프로토콜*:]*server*[**\\***instance_name*] [**, * **포트*]  
+ **-S** [*프로토콜*:]*server*[**\\**_인스턴스\_이름_] [**,**  _포트_]  
  연결할 SQL Server 인스턴스를 지정합니다. **sqlcmd** 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 해당 서버 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 SQL Server 인스턴스에 연결하려면 *server_name* [ **\\***instance_name* ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 **sqlcmd** 가 로컬 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 해당 서버 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 SQL Server 인스턴스에 연결하려면 *server_name* [ **\\**_instance\_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 **sqlcmd** 가 로컬 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.  
   
- **sqlcmd**를 시작할 때 *server_name* [ **\\***instance_name* ]을 지정하지 않으면 SQL Server에서 SQLCMDSERVER 환경 변수를 확인하고 사용합니다.  
+ **sqlcmd**를 시작할 때 *server_name* [ **\\**_instance\_name_ ]을 지정하지 않으면 SQL Server에서 SQLCMDSERVER 환경 변수를 확인하고 사용합니다.  
   
 > [!NOTE]  
 >  OSQLSERVER 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDSERVER 환경 변수는 OSQLSERVER 환경 변수보다 우선 적용됩니다. 따라서 **sqlcmd** 와 **osql** 을 문제 없이 함께 사용할 수 있으며 이전 스크립트를 계속 사용할 수 있습니다.  
@@ -263,7 +262,7 @@ sqlcmd
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **입/출력 옵션**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Windows 코드 페이지를 지정하는 숫자 값입니다.  
   
  코드 페이지 변환 규칙은 다음과 같습니다.  
@@ -278,7 +277,7 @@ sqlcmd
   
  명령 프롬프트에서 **chcp** 를 입력하여 Cmd.exe의 코드 페이지를 확인합니다.  
   
- **-i** *input_file*[**, * * * input_file2*...]  
+ **-i** *input_file*[**하십시오**_입력\_file2_...]  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. 순서대로 읽고 처리할 파일을 여러 개 지정할 수 있습니다. 파일 이름 사이에 공백을 넣지 마십시오. 먼저**sqlcmd** 는 지정한 모든 파일이 있는지 확인합니다. 하나 이상의 파일이 없을 경우 **sqlcmd** 가 종료됩니다. -i 옵션과 -Q/-q 옵션은 함께 사용할 수 없습니다.  
   
  경로 예는 다음과 같습니다.  
@@ -291,7 +290,7 @@ sqlcmd
   
  공백이 포함된 파일 경로는 따옴표로 묶어야 합니다.  
   
- 이 옵션은 두 번 이상 사용할 수 있습니다. **-i***input_file* **-I***I input_file.*  
+ 이 옵션은 두 번 이상 사용할 수 있습니다. **-i**_input\_file_ **-I**_I input_file._  
   
  **-o** *output_file*  
  **sqlcmd**에서 출력을 받는 파일을 식별합니다.  
@@ -323,7 +322,7 @@ sqlcmd
  **-I**  
  SET QUOTED_IDENTIFIER 연결 옵션을 ON으로 설정합니다. 기본적으로 OFF로 설정되어 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- **-q"** *cmdline query* **"**  
+ **-q "** *cmdline query* **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행하지만 쿼리 실행이 완료되더라도 **sqlcmd** 가 종료되지는 않습니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다. 다음 예와 같이 쿼리를 따옴표로 묶습니다.  
   
  명령 프롬프트에서 다음을 입력합니다.  
@@ -335,9 +334,9 @@ sqlcmd
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 문서의 뒷부분에서 설명합니다.  
   
- **-Q"** *cmdline query* **"**  
+ **-Q "** *cmdline query* **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행한 다음 바로 **sqlcmd**를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
   
  다음 예와 같이 쿼리를 따옴표로 묶습니다.  
@@ -351,7 +350,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  쿼리에 GO 종결자를 사용하지 마십시오.  
   
- 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b** 에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+ 이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 문서의 뒷부분에서 설명합니다.  
   
  **-t** *query_timeout*  
  명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *query**time_out*은 1에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
@@ -360,7 +359,7 @@ sqlcmd
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 ***var***=**"***values***"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
+ **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_=**"**_values_**"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -371,7 +370,7 @@ sqlcmd
   
  **형식 지정 옵션**  
   **-h** *headers*  
- 열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDHEADERS를 설정합니다. 머리글을 출력하지 않으려면 **-1** 을 사용합니다. 잘못된 값을 지정할 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
+ 열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDHEADERS를 설정합니다. 머리글을 출력하지 않으려면 **-1**을 사용합니다. 잘못된 값을 지정할 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  **-k** [**1** | **2**]  
  출력에서 탭이나 줄 바꿈 문자와 같은 모든 제어 문자를 제거합니다. 이 매개 변수는 데이터를 반환할 때 열 서식은 유지됩니다. 1을 지정하면 제어 문자가 단일 공백으로 바뀝니다. 2를 지정하면 연속된 제어 문자가 단일 공백으로 바뀝니다. **-k** 는 **-k1**과 같습니다.  
@@ -497,7 +496,7 @@ sqlcmd
   
  여러 결과가 반환된 경우 **sqlcmd** 는 일괄 처리의 각 결과 집합 사이에 빈 줄을 출력합니다. 또한, 실행되는 문에 적용되지 않을 때는 `<x> rows affected` 메시지가 나타나지 않습니다.  
   
- 대화형으로 **sqlcmd** 를 사용하려면 명령 프롬프트에 이 항목의 위에서 설명한 하나 이상의 옵션과 함께 **sqlcmd** 를 입력합니다. 자세한 내용은 [sqlcmd 유틸리티 사용](~/relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ 대화형으로 **sqlcmd**를 사용하려면 명령 프롬프트에 이 문서의 위에서 설명한 하나 이상의 옵션과 함께 **sqlcmd**를 입력합니다. 자세한 내용은 [sqlcmd 유틸리티 사용](~/relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **-L**, **-Q**, **-Z** 또는 **-i** 옵션으로 인해 **sqlcmd** 는 실행 후 종료됩니다.  
@@ -541,7 +540,7 @@ sqlcmd
 |SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | R/W | "" |  
   
- SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDSERVER는 **:Connect** 가 사용될 때 설정됩니다.  
+ SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDSERVER는 **:Connect**가 사용될 때 설정됩니다.  
   
  R은 값이 프로그램 초기화 시 한 번만 설정될 수 있음을 나타냅니다.  
   
@@ -567,7 +566,7 @@ sqlcmd
 -   GO를 제외한 모든 **sqlcmd** 명령에는 접두사로 콜론(:)을 붙여야 합니다.  
   
     > [!IMPORTANT]  
-    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이도 인식됩니다. 이러한 명령은 [**:**]으로 표시됩니다.  
+    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이, [**:**] 형식으로 표시되어 인식됩니다.
   
 -   **sqlcmd** 명령은 줄 시작 부분에 나타난 경우에만 인식됩니다.  
   
@@ -592,7 +591,7 @@ sqlcmd
  문 캐시 내용을 출력합니다.  
   
  **변수**  
-  **: Setvar** \< **var**> [ **"***값***"** ]  
+  **: Setvar** \< **var**> [ **"**_값_**"** ]  
  **sqlcmd** 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
@@ -624,7 +623,7 @@ sqlcmd
   
  **출력 명령**  
   **:Error**   
- ***\<***  *filename*  ***>|* STDERR|STDOUT**  
+ _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
  *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
   
  *file name*  
@@ -648,12 +647,12 @@ sqlcmd
   
  **exit** 옵션을 사용하면 해당 오류 값이 표시되고 **sqlcmd** 가 종료됩니다.  
   
- **ignore** 옵션을 사용하면 **sqlcmd** 는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력됩니다.  
+ **ignore** 옵션을 사용하면 **sqlcmd** 는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력 됩니다.  
   
  [**:**] **QUIT**  
  **sqlcmd** 가 종료되도록 합니다.  
   
- [**:**] **EXIT**[ **(***statement***)** ]  
+ [**:**] **EXIT**[ **(**_statement_**)** ]  
  SELECT 문의 결과를 **sqlcmd**의 반환 값으로 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
  `:EXIT(query)`  
@@ -703,12 +702,12 @@ sqlcmd
   
  **기타 명령**  
   **:r \<** *filename* **>**  
- **\<***filename***>** 에 지정된 파일에서 추가 Transact-SQL 문과 **sqlcmd** 명령을 명령문 캐시로 구문 분석합니다.  
+ **\<**_filename_**>** 으로 지정된 파일의 추가 Transact-SQL 문과 **sqlcmd** 명령을 명령문 캐시로 구문 분석합니다.  
   
  파일에 Transact-SQL 문이 포함되어 있고 뒤에 **GO**가 오지 않을 경우 **:r** 뒤에 오는 줄에 **GO**를 입력해야 합니다.  
   
 > [!NOTE]  
->  **\<** *filename* **>** 은 **sqlcmd**가 실행된 시작 디렉터리를 기준으로 상대적으로 읽혀집니다.  
+>  **\<** *filename* **>** 은 **sqlcmd** 가 실행된 시작 디렉터리를 기준으로 상대적으로 읽혀집니다.  
   
  일괄 처리 종결자가 나타난 후 이 파일이 읽혀지고 실행됩니다. 여러 **:r** 명령을 실행할 수 있습니다. 이 파일에는 모든 유형의 **sqlcmd** 명령이 포함될 수 있으며 그 예로 일괄 처리 종결자 **GO**를 들 수 있습니다.  
   
@@ -718,7 +717,7 @@ sqlcmd
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -732,7 +731,7 @@ sqlcmd
   
  *timeout* 을 지정하지 않으면 기본적으로 SQLCMDLOGINTIMEOUT 변수 값이 사용됩니다.  
   
- 옵션이나 환경 변수로 *user_name* 만 지정하면 사용자에게 암호를 입력하라는 메시지가 표시됩니다. 이는 SQLCMDUSER 또는 SQLCMDPASSWORD 환경 변수를 설정한 경우 해당되지 않습니다. 옵션이나 환경 변수를 지정하지 않을 경우 로그인하는 데 Windows 인증 모드가 사용됩니다. 예를 들어 통합 보안을 사용하여 `instance1`, SQL Server의 인스턴스인 `myserver`에 연결하려면 다음을 사용합니다.  
+ 옵션이나 환경 변수로 *user_name* 만 지정하면 사용자에게 암호를 입력하라는 메시지가 표시됩니다. SQLCMDUSER 또는 SQLCMDPASSWORD 환경 변수를 설정한 경우 사용자에게 메시지가 표시되지 않습니다. 옵션이나 환경 변수를 지정하지 않을 경우 로그인하는 데 Windows 인증 모드가 사용됩니다. 예를 들어 통합 보안을 사용하여 SQL Server `myserver`의 인스턴스인 `instance1`에 연결하려면 다음 명령을 사용합니다.  
   
  `:connect myserver\instance1`  
   
@@ -753,7 +752,7 @@ sqlcmd
 >  **sqlcmd** 를 실행 중인 컴퓨터에서 명령이 실행됩니다.  
   
  **:XML** [**ON** | **OFF**]  
- 자세한 내용은 이 항목의 [XML 출력 형식](#OutputXML) 및 [JSON 출력 형식](#OutputJSON) 을 참조하세요.  
+ 자세한 내용은 이 문서의 [XML 출력 형식](#OutputXML) 및 [JSON 출력 형식](#OutputJSON)을 참조하세요.  
   
  **:Help**  
  **sqlcmd** 명령과 각 명령에 대한 간단한 설명을 표시합니다.  
@@ -761,9 +760,9 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 파일 이름  
  **sqlcmd** 입력 파일은 **-i** 옵션 또는 **:r** 명령을 사용하여 지정할 수 있습니다. 출력 파일은 **-o** 옵션 또는 **:Error**, **:Out** 및 **:Perftrace** 명령을 사용하여 지정할 수 있습니다. 다음은 이러한 파일 작업에 대한 지침입니다.  
   
--   **:Error**, **:Out** 및 **:Perftrace** 는 별도의 **\<***filename***>** 을 사용해야 합니다. 동일한 **\<***filename***>** 을 사용하면 명령의 입력이 섞일 수 있습니다.  
+-   **:Error**, **:Out** 및 **:Perftrace**는 별도의 **\<**_filename_**>** 을 사용해야 합니다. 동일한 **\<**_filename_**>** 을 사용하면 명령의 입력이 섞일 수 있습니다.  
   
--   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 **sqlcmd** 에서 호출할 경우 이 파일에 :out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
+-   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 **sqlcmd** 에서 호출할 경우 이 파일에 :Out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   
 -   올바른 파일 경로의 예는 `C:\<filename>`, `\\<Server>\<Share$>\<filename>` , `"C:\Some Folder\<file name>"`입니다. 경로에 공백이 있을 경우 따옴표를 사용합니다.  
   
@@ -773,7 +772,7 @@ sqlcmd
 
 **sqlcmd**는 서버에서 보낸 모든 정보 메시지를 출력합니다. 다음 예에서는 Transact-SQL 문을 실행한 후 정보 메시지가 출력됩니다.
   
-명령 프롬프트에서 다음을 입력합니다.
+명령 프롬프트에서 다음 명령을 입력합니다.
 
 `sqlcmd`
   
@@ -790,7 +789,7 @@ Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'�
   
  이 줄 다음에는 대시 문자로 이루어진 구분선이 삽입됩니다. 다음은 출력의 예입니다.  
   
- **sqlcmd**를 시작합니다. **sqlcmd** 명령 프롬프트에서 다음을 입력합니다.  
+ **sqlcmd**를 시작합니다. **sqlcmd** 명령 프롬프트에서 다음 쿼리를 입력합니다.  
   
  `USE AdventureWorks2012;`  
   
@@ -836,7 +835,7 @@ Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'�
   
  XML 모드를 해제하려면 `:XML OFF`명령을 사용합니다.  
   
- 자세한 내용은 이 항목의 [XML 출력 형식](#OutputXML) 을 참조하세요.  
+ 자세한 내용은 이 문서의 [XML 출력 형식](#OutputXML)을 참조하세요.  
 
 ### <a name="using-azure-active-directory-authentication"></a>Azure Active Directory 인증 사용  
 Azure Active Directory 인증 사용 예제:

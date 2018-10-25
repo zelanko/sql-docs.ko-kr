@@ -27,8 +27,8 @@ ms.locfileid: "47740451"
   
 |속성|설명|  
 |----------|-----------------|  
-|[getCharacterStream 메서드()(SQLServerNClob)](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|검색 된 **NCLOB** 데이터를 **판독기** 개체 또는 문자 스트림으로.|  
-|[getCharacterStream 메서드 &#40;long, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|데이터를 검색하여 지정된 위치 및 길이의 문자 스트림 또는  개체로 반환합니다.|  
+|[getCharacterStream 메서드 &#40;&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|검색 된 **NCLOB** 데이터를 **판독기** 개체 또는 문자 스트림으로.|  
+|[getCharacterStream 메서드 &#40;long, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|**NCLOB** 데이터를 지정된 위치 및 길이의 문자 스트림 또는 **판독기** 개체로 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

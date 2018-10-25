@@ -1,5 +1,5 @@
 ---
-title: wasNull 메서드(SQLServerResultSet) | Microsoft Docs
+title: getType 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 다음 값 중 하나에 해당되는 현재 커서 유형을 나타내는 int입니다.  
+ 다음 값 중 하나에 해당되는 현재 커서 유형을 나타내는 **int**입니다.  
   
  ResultSet.TYPE_FORWARD_ONLY  
   
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getTime 메서드는 java.sql.ResultSet 인터페이스의 getTime 메서드에 의해 지정됩니다.  
+ 이 getType 메서드는 java.sql.ResultSet 인터페이스의 getType 메서드에 의해 지정됩니다.  
   
  이 메서드는 실제 커서 유형을 결정하는 데 사용할 수 있습니다. 응용 프로그램에서 TYPE_FORWARD_ONLY를 선택하거나 기본 커서 유형을 사용한 경우에는 TYPE_FORWARD_ONLY가 반환됩니다.  
   

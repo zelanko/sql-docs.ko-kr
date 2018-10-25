@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getSQLStateType 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 다음 값 중 하나에 해당되는 SQLSTATE 형식을 나타내는 입니다.  
+ 다음 값 중 하나에 해당되는 SQLSTATE 형식을 나타내는 **int**입니다.  
   
 -   Java Runtime environment 버전 5.0: 경우 합니다 **xopenStates** 연결 속성이로 설정 된 **true**,이 메서드가 반환 DatabaseMetaData.sqlStateXOpen 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL99 합니다.  
   

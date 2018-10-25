@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setFetchDirection
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e52228afe441935952815a0070403ad9fe9be12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3c6e0080f4d94b0d792c1994695c590fd4fed66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812341"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>setFetchDirection 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  제공 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 는 결과 집합 행을 처리할 방향에 관한 힌트입니다.  
+  결과 집합 행을 처리할 방향에 관한 힌트를 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 제공합니다.  
   
 > [!NOTE]  
 >  JDBC 드라이버에서는 현재 이 메서드를 통해 제공되는 힌트가 무시됩니다.  
@@ -44,7 +41,7 @@ public final void setFetchDirection(int nDir)
 #### <a name="parameters"></a>매개 변수  
  *nDir*  
   
- **int** 행 처리는 다음 값 중 하나일 수 있는 방향을 나타내는입니다.  
+ 다음 값 중 하나에 해당되는 행 처리 방향을 나타내는 **int**입니다.  
   
  FETCH_FORWARD  
   
@@ -55,10 +52,10 @@ public final void setFetchDirection(int nDir)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 setFetchDirection 메서드는 java.sql.Statement 인터페이스의 setFetchDirection 메서드로 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 클래스](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

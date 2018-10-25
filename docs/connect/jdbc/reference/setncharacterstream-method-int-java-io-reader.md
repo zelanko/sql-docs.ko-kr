@@ -21,7 +21,7 @@ ms.locfileid: "47771321"
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 메서드(int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 java.io.Reader 개체로 설정합니다.  
+  지정된 매개 변수를 지정된 Reader 개체로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  *value*  
   
- 매개 변수 값이 들어 있는  개체입니다.  
+ 매개 변수 값이 들어 있는 Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +49,7 @@ public final void setNCharacterStream(int parameterIndex,
  에 대 한이 메서드를 사용할지 **NCHAR**, **NVARCHAR**를 **NTEXT**, 및 **XML** 데이터 형식입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setCharacterStream 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
+ [setNCharacterStream 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

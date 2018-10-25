@@ -36,7 +36,7 @@ public int getColumnCount()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 열 수를 나타내는 int입니다.  
+ 열 수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

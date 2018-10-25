@@ -1,5 +1,5 @@
 ---
-title: getWorkstationID 메서드(SQLServerDataSource) | Microsoft Docs
+title: setWorkstationID 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,12 +36,12 @@ public void setWorkstationID(java.lang.String workstationID)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- workstationID  
+ *workstationID*  
   
  클라이언트 컴퓨터 이름이 포함된 **문자열**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- workstationID는 클라이언트 컴퓨터 또는 워크스테이션의 이름입니다. WorkstationID 속성이 설정하지 않으면 기본값 InetAddress.getLocalHost().getHostName() 메서드를 호출하여 생성됩니다. GetHostName 빈 값을 반환할 경우 getHostAddress().toString() 메서드 호출됩니다.  
+ workstationID는 클라이언트 컴퓨터 또는 워크스테이션의 이름입니다. workstationID 속성이 설정되지 않으면 기본값은 InetAddress.getLocalHost().getHostName() 메서드를 호출하여 생성됩니다. getHostName이 빈 값을 반환하면 getHostAddress().toString() 메서드가 호출됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -40,7 +40,7 @@ ms.locfileid: "47771427"
 -   [AVAILABILITY GROUP TRANSACT-SQL 문에 대한 제한 사항](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 은 데이터베이스 미러링 엔드포인트(서버 인스턴스에 없는 경우)를 만듭니다. ph x="1" /&gt; 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
+ [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 은 데이터베이스 미러링 엔드포인트(서버 인스턴스에 없는 경우)를 만듭니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
   
  엔드포인트를 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트를 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47771427"
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) 은 지정된 가용성 그룹과 모든 복제본을 제거합니다. DROP AVAILABILITY GROUP은 WSFC 장애 조치(failover) 클러스터의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 노드에서 실행될 수 있습니다.  
   
-##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
+##  <a name="Restrictions"></a> AVAILABILITY GROUP TRANSACT-SQL 문에 대한 제한 사항  
  CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP 및 DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 다음과 같은 제한 사항이 있습니다.  
   
 -   DROP AVAILABILITY GROUP을 제외하고 이러한 문을 실행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 HADR 서비스를 사용하도록 설정해야 합니다. 자세한 내용은 [Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.  

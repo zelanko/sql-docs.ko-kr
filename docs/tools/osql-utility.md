@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847479"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ **-S** _server\_이름_[ **\\** _인스턴스\_이름_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
  **-H** *wksta_name*  
  워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
- **osql**을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(***user***)** 또는 **osqlserver=(***server***)** 를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
+ **osql**을 시작할 때 사용자 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 환경 변수를 검사한 후 사용합니다. 예를 들어 **osqluser=(**_user_**)** 또는 **osqlserver=(**_server_**)** 를 사용합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
   
  **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의**Windows 계정에 기반합니다.  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  가능하면 **-E**옵션(신뢰할 수 있는 연결)을 사용합니다.  
   
- **osql**을 대화형으로 사용하면 **:r***file_name*을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
+ **osql**을 대화형으로 사용하면 **:r**_file\_name_을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
   
 > [!NOTE]  
 >  **osql**을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  일괄 처리를 실행한 다음 종료하며 값을 반환하지 않습니다.  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  쿼리를 포함한 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  

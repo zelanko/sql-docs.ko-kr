@@ -1,5 +1,5 @@
 ---
-title: SQL Server용 Microsoft OLE DB 드라이버 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버를 사용하는 경우 | Microsoft Docs
 description: SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
 ms.custom: ''
 ms.date: 06/14/2018

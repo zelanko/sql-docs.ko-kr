@@ -26,7 +26,7 @@ ms.locfileid: "47784191"
 # <a name="updateobject-method-int-javalangobject"></a>updateObject 메서드(int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  열 이름이 지정된 경우 지정된 열을 **Object** 값으로 업데이트합니다.  
+  열 인덱스가 지정된 경우 지정된 열을 **Object** 값으로 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   

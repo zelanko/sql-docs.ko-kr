@@ -25,9 +25,9 @@ ms.locfileid: "47798211"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- 확장: SQLServerClob  
+ **확장:** SQLServerClob  
   
- 구현: java.sql.NClob  
+ **구현:** java.sql.NClob  
   
 ## <a name="syntax"></a>구문  
   

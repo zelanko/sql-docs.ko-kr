@@ -1,5 +1,5 @@
 ---
-title: setTime 메서드(SQLServerPreparedStatement) | Microsoft Docs
+title: setBytes 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -49,7 +49,7 @@ public final void setBytes(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setBytes 메서드는 java.sql.CallableStatement 인터페이스의 setBytes 메서드에 의해 지정됩니다.  
+ 이 setByte 메서드는 java.sql.PreparedStatement 인터페이스의 setByte 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

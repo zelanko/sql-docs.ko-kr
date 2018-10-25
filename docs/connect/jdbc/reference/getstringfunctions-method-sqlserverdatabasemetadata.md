@@ -1,5 +1,5 @@
 ---
-title: getColumns 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getStringFunctions 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47801851"
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 데이터베이스와 함께 사용할 수 있는 시스템 함수의 쉼표로 구분된 목록을 검색합니다.  
+  이 데이터베이스와 함께 사용할 수 있는 **String** 함수의 쉼표로 구분된 목록을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

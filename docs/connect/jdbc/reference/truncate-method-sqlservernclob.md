@@ -21,7 +21,7 @@ ms.locfileid: "47800971"
 # <a name="truncate-method-sqlservernclob"></a>truncate 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Clob을 지정된 길이로 자릅니다.  
+  **NCLOB**를 지정된 길이로 자릅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ public void truncate(long len)
 #### <a name="parameters"></a>매개 변수  
  *len*  
   
- 값을 자른 결과 값의 길이(문자 수)입니다.  
+ **NCLOB** 값을 자른 결과 값의 길이(문자 수)입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

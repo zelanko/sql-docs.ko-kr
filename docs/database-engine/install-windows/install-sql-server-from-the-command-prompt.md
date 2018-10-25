@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 172c7c1bfd6cf312ddf47d8d6e6eb8b34052a67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784451"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852098"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -273,8 +273,8 @@ ms.locfileid: "47784451"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
-|Python/Machine Learning Services(데이터베이스 내)|MPYCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning 서버(독립 실행형)에서 Python 지원 기능에 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 Python 구성 요소를 설치하는 경우에 사용됩니다.|  
-|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning 서버(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
+|Python/Machine Learning Services(데이터베이스 내)|MPYCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Python 지원 기능에 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 Python 구성 요소를 설치하는 경우에 사용됩니다.|  
+|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 

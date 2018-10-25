@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerParameterMetaData.getParameterClassName
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96ad9ab21829c19ee3e4b915287ad4e5d19a271b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fcbcac8f48c47f2144127ecd2aa41a5402bf6f38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818167"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  에 해당 인스턴스로 전달 되어야 하는 Java 클래스의 정규화 된 이름을 검색는 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 의 메서드는 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스입니다.  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 메서드에 인스턴스가 전달되는 Java 클래스의 정규화된 이름을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,18 +38,18 @@ public java.lang.String getParameterClassName(int param)
 #### <a name="parameters"></a>매개 변수  
  *param*  
   
- **int** 매개 변수 인덱스를 나타내는입니다.  
+ 매개 변수 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 정규화 된 클래스 이름이 들어 있는입니다.  
+ 정규화된 클래스 이름이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getParameterClassName 메서드는 java.sql.ParameterMetaData 인터페이스의 getParameterClassName 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerParameterMetaData 메서드](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData 멤버](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData 클래스](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

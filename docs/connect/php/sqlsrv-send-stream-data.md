@@ -28,7 +28,7 @@ ms.locfileid: "47790611"
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-매개 변수 스트림에서 서버로 데이터를 보냅니다. sqlsrv_send_stream_data**에 대한 각 호출에서 최대 8킬로바이트(8K)의 데이터를 전송합니다.  
+매개 변수 스트림에서 서버로 데이터를 보냅니다. **sqlsrv_send_stream_data**에 대한 각 호출에서 최대 8킬로바이트(8K)의 데이터를 전송합니다.  
   
 > [!NOTE]  
 > 기본적으로 쿼리가 실행될 때 모든 스트림 데이터를 서버에 보냅니다. 이 기본 동작이 변경되지 않은 경우 스트림 데이터를 서버에 보내기 위해 **sqlsrv_send_stream_data** 를 사용할 필요가 없습니다. 기본 동작 변경에 대한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)의 매개 변수 섹션을 참조하세요.  

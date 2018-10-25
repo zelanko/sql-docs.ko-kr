@@ -36,7 +36,7 @@ public void setDisableStatementPooling(boolean disableStatementPooling)
 ```  
 
 #### <a name="parameters"></a>매개 변수  
- disableStatementPooling  
+ *disableStatementPooling*  
   
  새 값을 **disableStatementPooling** 연결 속성입니다.  
  

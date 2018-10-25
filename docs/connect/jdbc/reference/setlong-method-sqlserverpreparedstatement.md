@@ -1,5 +1,5 @@
 ---
-title: setTime 메서드(SQLServerPreparedStatement) | Microsoft Docs
+title: setLong 메서드(SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47804901"
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 java 값으로 설정합니다.  
+  지정된 매개 변수를 지정된 **long** 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ public final void setLong(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setTime 메서드는 java.sql.PreparedStatement 인터페이스의 setTime 메서드에 의해 지정됩니다.  
+ 이 setLong 메서드는 java.sql.PreparedStatement 인터페이스의 setLong 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

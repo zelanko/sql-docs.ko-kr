@@ -36,7 +36,7 @@ public boolean nullsAreSortedAtStart()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- NULL 값이 처음에 정렬되면 이고, 그렇지 않으면 **false**입니다.  
+ 처음에 정렬되면 **true**이고, 그러지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

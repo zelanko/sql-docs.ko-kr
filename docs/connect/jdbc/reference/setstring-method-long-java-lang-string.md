@@ -26,7 +26,7 @@ ms.locfileid: "47839111"
 # <a name="setstring-method-long-javalangstring"></a>setString 메서드(long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 String을 CLOB의 지정된 위치부터 씁니다.  
+  지정된 위치부터 시작하여 지정된 **문자열**을 CLOB에 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ public int setString(long pos,
   
  *s*  
   
- CLOB에 쓸 문자열입니다.  
+ CLOB에 쓸 **String**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  쓴 문자 수입니다.  

@@ -21,7 +21,7 @@ ms.locfileid: "47756591"
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 SQLSRV 드라이버 API 이름은 **sqlsrv**입니다. 모든 **sqlsrv** 함수는 **sqlsrv** 로 시작하고 뒤에 동사 또는 명사가 옵니다. 뒤에 동사가 오는 함수가 일부 작업을 수행하고 뒤에 명사가 오는 함수는 특정 형식의 메타데이터를 반환합니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 의 SQLSRV 드라이버 API 이름은 **sqlsrv**입니다. 모든 **sqlsrv** 함수는 **sqlsrv_** 로 시작하고 뒤에 동사 또는 명사가 옵니다. 뒤에 동사가 오는 함수가 일부 작업을 수행하고 뒤에 명사가 오는 함수는 특정 형식의 메타데이터를 반환합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.  

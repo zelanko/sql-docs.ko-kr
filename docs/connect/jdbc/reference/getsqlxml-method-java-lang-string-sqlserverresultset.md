@@ -1,5 +1,5 @@
 ---
-title: getInt 메서드(java.lang.String)(SQLServerResultSet) | Microsoft Docs
+title: getSQLXML 메서드(java.lang.String)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -42,10 +42,10 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getString 메서드는 java.sql.ResultSet 인터페이스의 getString 메서드에 의해 지정됩니다.  
+ 이 getSQLXML 메서드는 java.sql.ResultSet 인터페이스의 getSQLXML 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [updateSQLXML 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
+ [getSQLXML 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

@@ -41,7 +41,7 @@ public boolean isReadOnly(int column)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 열이 읽기 전용이면 이고, 그렇지 않으면 **false**입니다.  
+ 열이 읽기 전용이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

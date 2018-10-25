@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785661"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878116"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,6 +128,7 @@ SQL Server EULA당 인터넷 기반 서비스를 제공하는 데 필요한 데�
 - 서버 구성 데이터(예: sp_configure)
 - 기능 구성 데이터
 - 이벤트 이름 및 오류 코드
+- 하드웨어 설정 및 식별(예: OEM 제조업체)
 
 Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정한 응용 프로그램 이름 값을 검사합니다. (예: Sharepoint 또는 타사 패키지 프로그램 및 사용량 데이터가 활성화되면 Microsoft에 전송되는 시스템 메타데이터에 이 정보가 포함됩니다.) 고객은 시스템 메타데이터 필드에서 최종 사용자 식별 가능 정보와 같은 개인 데이터를 배치하거나 이러한 필드에서 개인 데이터를 저장하도록 디자인된 응용 프로그램을 만들지 않아야 합니다. 
 

@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788083"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에 의해 노출 되는 멤버가 나와 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스입니다.  
+  다음 표에는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
  없음  
@@ -34,25 +31,25 @@ ms.locfileid: "32853248"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls, attributeNullable, attributeNullableUnknown, bestRowNotPseudo, bestRowPseudo, bestRowSession, bestRowTemporary, bestRowTransaction, bestRowUnknown, columnNoNulls, columnNullable, columnNullableUnknown, importedKeyCascade, importedKeyInitiallyDeferred, importedKeyInitiallyImmediate, importedKeyNoAction, importedKeyNotDeferrable, importedKeyRestrict, importedKeySetDefault, importedKeySetNull, procedureColumnIn, procedureColumnInOut, procedureColumnOut, procedureColumnResult, procedureColumnReturn, procedureColumnUnknown, procedureNoNulls, procedureNoResult, procedureNullable, procedureNullableUnknown, procedureResultUnknown, procedureReturnsResult, sqlStateSQL, sqlStateSQL99, sqlStateXOpen, tableIndexClustered, tableIndexHashed, tableIndexOther, tableIndexStatistic, typeNoNulls, typeNullable, typeNullableUnknown, typePredBasic, typePredChar, typePredNone, typeSearchable, versionColumnNotPseudo, versionColumnPseudo, versionColumnUnknown|  
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|현재 사용자에 게 반환한 모든 프로시저를 호출할 수 있는 권한이 있는지 여부를 검색 된 [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) 메서드.|  
-|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|현재 사용자에 의해 반환 된 모든 테이블을 사용할 수 있는 권한이 있는지 여부를 검색 된 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) SELECT 문에서 메서드.|  
+|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) 메서드에서 반환된 모든 프로시저를 호출할 수 있는 권한이 현재 사용자에게 있는지 여부를 검색합니다.|  
+|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|SELECT 문의 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) 메서드에서 반환된 모든 테이블을 사용할 수 있는 권한이 현재 사용자에게 있는지 여부를 검색합니다.|  
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|자동 커밋이 사용되며 예외가 발생할 때 JDBC 드라이버에서 유지 가능한 결과 집합을 포함하여 열려 있는 모든 결과 집합을 닫는지 여부를 나타냅니다.|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|트랜잭션 내의 데이터 정의 문이 트랜잭션을 강제로 커밋하는지 여부를 검색합니다.|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 트랜잭션 내의 데이터 정의 문을 무시하는지 여부를 검색합니다.|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|표시 되는 행의 삭제 여부를 검색을 호출 하 여 검색할 수는 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.|  
-|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|검색의 반환 값에 대 한 여부는 [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 메서드에 SQL 데이터 형식 LONGVARCHAR 및 longvarbinary가 포함 되어 있습니다.|  
-|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|지정된 스키마 및 카탈로그에서 사용할 수 있는 사용자 정의 형식에 대해 지정된 형식의 지정된 특성에 대한 설명을 검색합니다.|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.|  
+|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 메서드의 반환 값에 SQL 데이터 형식 LONGVARCHAR 및 LONGVARBINARY가 포함되는지 여부를 검색합니다.|  
+|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|지정된 스키마 및 카탈로그에서 사용할 수 있는 사용자 정의 형식에 대해 지정된 형식의 지정된 특성에 대한 설명을 검색합니다.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|테이블의 열 중 행을 고유하게 식별하는 최적의 열 집합에 대한 설명을 검색합니다.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|연결된 서버에서 사용할 수 있는 카탈로그 이름을 검색합니다.|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|검색 된 **문자열** 이 데이터베이스가 카탈로그 및 테이블 이름 사이 구분 기호로 사용 하는 합니다.|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 카탈로그 및 테이블 이름 사이에 구분 기호로 사용하는 **문자열**을 검색합니다.|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|데이터베이스 공급업체에서 "카탈로그"에 사용하는 기본 용어를 검색합니다.|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|드라이버에서 지원하는 클라이언트 정보 속성의 목록을 검색합니다.|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|테이블의 열에 대한 액세스 권한 설명을 검색합니다.|  
@@ -72,7 +69,7 @@ ms.locfileid: "32853248"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|따옴표가 없는 식별자 이름에서 사용할 수 있는 모든 추가 문자(예: a-z, A-Z, 0-9 및 _ 이외의 문자)를 검색합니다.|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|시스템 및 사용자 함수에 대한 설명을 검색합니다.|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|지정된 카탈로그의 시스템 또는 사용자 함수 매개 변수와 반환 형식에 대한 설명을 검색합니다.|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|검색 된 **문자열** SQL 식별자를 따옴표로 사용 되는 합니다.|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|SQL 식별자를 쿼리하는 데 사용되는 **문자열**을 검색합니다.|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|테이블의 외래 키 열에서 참조하는 기본 키 열에 대한 설명을 검색합니다.|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|지정된 테이블의 인덱스 및 통계에 대한 설명을 검색합니다.|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|이 드라이버의 주 JDBC 버전 번호를 검색합니다.|  
@@ -106,10 +103,10 @@ ms.locfileid: "32853248"
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|SQL RowId 데이터 형식이 지원되는지 여부를 나타내는 상태를 반환합니다. 이 데이터 형식이 지원되는 경우 이 메서드는 RowId 개체가 유효한 상태로 있는 수명을 반환합니다.|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 "스키마"에 사용하는 기본 용어를 검색합니다.|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|검색 된 **문자열** 와일드 카드 문자를 이스케이프를 사용할 수 있는 합니다.|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|와일드카드 문자를 이스케이프하는 데 사용할 수 있는 **문자열**을 검색합니다.|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 SQL 키워드 중 SQL92 키워드와 중복되지 않는 모든 키워드의 쉼표로 구분된 목록을 검색합니다.|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|SQLException.getSQLState 메서드에서 반환된 SQLSTATE가 X/Open(현재는 Open Group이라고 함), SQL CLI, SQL99(JDBC 3.0) 또는 SQL:2003(JDBC 4.0) 중 무엇인지를 나타냅니다.|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|쉼표로 구분 된 목록을 검색 **문자열** 이 데이터베이스와 함께 사용할 수 있는 함수입니다.|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|이 데이터베이스와 함께 사용할 수 있는 **String** 함수의 쉼표로 구분된 목록을 검색합니다.|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 특정 스키마에 정의된 테이블 계층 구조에 대한 설명을 검색합니다.|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 특정 스키마에 정의된 사용자 정의 형식 계층 구조에 대한 설명을 검색합니다.|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|이 데이터베이스와 함께 사용할 수 있는 시스템 함수의 쉼표로 구분된 목록을 검색합니다.|  
@@ -117,12 +114,12 @@ ms.locfileid: "32853248"
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|지정된 카탈로그, 스키마 또는 테이블 이름 패턴에 사용할 수 있는 테이블에 대한 설명을 검색합니다.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 사용할 수 있는 테이블 형식을 검색합니다.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|이 데이터베이스와 함께 사용할 수 있는 시간 및 날짜 함수의 쉼표로 구분된 목록을 검색합니다.|  
-|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 지원하는 모든 표준 SQL 형식에 대한 설명을 검색합니다.|  
+|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 지원하는 모든 표준 SQL 형식에 대한 설명을 검색합니다.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|특정 스키마에 정의된 사용자 정의 형식에 대한 설명을 검색합니다.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 URL을 검색합니다.|  
-|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|이 데이터베이스에 알려진 사용자 이름을 검색합니다.|  
+|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|이 데이터베이스에 알려진 사용자 이름을 검색합니다.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|테이블에서 행 값이 업데이트될 때 자동으로 업데이트되는 열에 대한 설명을 검색합니다.|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|메서드를 호출 하 여 표시 된 행 삽입을 검색할 수 아닌지 검색 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|카탈로그가 정규화된 테이블 이름의 처음에 나타나는지 여부를 검색합니다.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|이 데이터베이스가 읽기 전용 모드에 있는지 여부를 검색합니다.|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|LOB에 대한 업데이트가 복사본에서 수행되는지 아니면 LOB에 직접 수행되는지를 나타냅니다.|  
@@ -174,8 +171,8 @@ ms.locfileid: "32853248"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 ODBC 최소 SQL 문법을 지원하는지 여부를 검색합니다.|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 따옴표로 묶이지 않고 대/소문자가 혼합된 SQL 식별자를 대/소문자가 구분되지 않는 것으로 처리하고 대/소문자가 혼합된 형식으로 저장하는지 여부를 검색합니다.|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 따옴표로 묶이고 대/소문자가 혼합된 SQL 식별자를 대/소문자가 구분되지 않는 것으로 처리하고 대/소문자가 혼합된 형식으로 저장하는지 여부를 검색합니다.|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|여러 개 있을 수 있는지 여부를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 에서 반환 된 개체는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 동시에 개체입니다.|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 가져오는 여러 지원 하는지 여부를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 에서 한 번 호출 하는 개체는 [실행](../../../connect/jdbc/reference/execute-method.md) 의 메서드는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)클래스입니다.|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체에서 동시에 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 반환될 수 있는지 여부를 검색합니다.|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 [execute](../../../connect/jdbc/reference/execute-method.md) 메서드를 한 번 호출하여 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 가져올 수 있는지 여부를 검색합니다.|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 여러 개의 트랜잭션이 서로 다른 연결에서 동시에 열려 있을 수 있는지 여부를 검색합니다.|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 호출 가능한 문의 명명된 매개 변수를 지원하는지 여부를 검색합니다.|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 열을 Null을 허용하지 않는 열로 정의할 수 있는지 여부를 검색합니다.|  
@@ -209,7 +206,7 @@ ms.locfileid: "32853248"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 트랜잭션을 지원하는지 여부를 검색합니다.|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 SQL UNION을 지원하는지 여부를 검색합니다.|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 SQL UNION ALL을 지원하는지 여부를 검색합니다.|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|검색을 호출 하 여 표시 되는 행 업데이트를 검색할 수 여부는 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 업데이트를 검색할 수 있는지 여부를 검색합니다.|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 각 테이블에 대해 개별 파일을 사용하는지 여부를 검색합니다.|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 테이블을 로컬 파일에 저장하는지 여부를 검색합니다.|  
   
@@ -220,7 +217,7 @@ ms.locfileid: "32853248"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

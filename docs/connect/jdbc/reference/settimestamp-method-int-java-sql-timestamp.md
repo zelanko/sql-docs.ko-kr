@@ -1,5 +1,5 @@
 ---
-title: updateTimestamp 메서드(int, java.sql.Timestamp) | Microsoft Docs
+title: setTimestamp 메서드(int, java.sql.Timestamp) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -49,7 +49,7 @@ public final void setTimestamp(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setTime 메서드는 java.sql.PreparedStatement 인터페이스의 setTime 메서드에 의해 지정됩니다.  
+ 이 setTimestamp 메서드는 java.sql.PreparedStatement 인터페이스의 setTimestamp 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setTimestamp 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   

@@ -1,5 +1,5 @@
 ---
-title: updateNClob 메서드(java.lang.String, java.io.Reader) | Microsoft Docs
+title: setClob 메서드(java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47798737"
 # <a name="setclob-method-javalangstring-javaioreader"></a>setClob 메서드(java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 java.io.Reader 개체로 설정합니다.  
+  지정된 매개 변수를 지정된 Reader 개체로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,10 +44,10 @@ public final void setClob(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setTime 메서드는 java.sql.CallableStatement 인터페이스의 setTime 메서드에 의해 지정됩니다.  
+ 이 setClob 메서드는 java.sql.CallableStatement 인터페이스의 setClob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
+ [setClob 메서드(SQLServerCallableStatement)](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

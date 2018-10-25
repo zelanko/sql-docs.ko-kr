@@ -1,5 +1,5 @@
 ---
-title: getServerName 메서드(SQLServerDataSource) | Microsoft Docs
+title: setDescription 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -38,7 +38,7 @@ public void setDescription(java.lang.String description)
 #### <a name="parameters"></a>매개 변수  
  *description*  
   
- 설명이 포함된 문자열입니다.  
+ 설명이 포함된 **String**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

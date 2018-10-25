@@ -36,7 +36,7 @@ public int getJDBCMinorVersion()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 부 JDBC 버전을 나타내는 int입니다.  
+ 부 JDBC 버전을 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

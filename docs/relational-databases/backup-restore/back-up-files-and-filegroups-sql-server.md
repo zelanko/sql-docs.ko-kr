@@ -17,12 +17,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a549581378924fc499dfc3725095fa308b881f52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e99ded8423879fe62393d3e8c3731780b305eaad
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698001"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851923"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "47698001"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...* f* ]  
+     { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
@@ -140,10 +140,10 @@ ms.locfileid: "47698001"
     |옵션|설명|  
     |------------|-----------------|  
     |*database*|트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다.|  
-    |FILE **=***logical_file_name*|파일 백업에 포함할 파일의 논리적 이름을 지정합니다.|  
-    |FILEGROUP **=***logical_filegroup_name*|파일 백업에 포함할 파일 그룹의 논리적 이름을 지정합니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.|  
+    |FILE _=_*logical_file_name*|파일 백업에 포함할 파일의 논리적 이름을 지정합니다.|  
+    |FILEGROUP _=_*logical_filegroup_name*|파일 백업에 포함할 파일 그룹의 논리적 이름을 지정합니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.|  
     |[ **,**...*f* ]|여러 개의 파일 및 파일 그룹을 지정할 수 있음을 나타내는 자리 표시자입니다. 이때 파일 또는 파일 그룹의 수는 제한이 없습니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
+    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 DIFFERENTIAL과 같은 하나 이상의 추가 옵션을 지정합니다.<br /><br /> 참고: 차등 파일 백업에는 기반으로 전체 파일 백업이 필요합니다. 자세한 내용은 [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)를 참조하세요.|  
   
 2.  전체 복구 모델에서는 트랜잭션 로그도 백업해야 합니다. 전체 파일 백업의 전체 세트를 사용하여 데이터베이스를 복원하려면 첫 번째 파일 백업을 시작할 때부터 모든 파일 백업을 포함할 정도의 충분한 로그 백업이 있어야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
@@ -197,9 +197,9 @@ GO
   
 1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **Files** 를 지정합니다. 또한 다음 매개 변수 중 하나를 지정합니다.  
   
-    -   특정 파일을 백업하려면 **-DatabaseFile***String* 매개 변수를 지정합니다. 여기서 *String*은 백업할 하나 이상의 데이터베이스 파일입니다.  
+    -   특정 파일을 백업하려면 _-DatabaseFile_*String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일입니다.  
   
-    -   지정된 파일 그룹의 모든 파일을 백업하려면 **-DatabaseFileGroup***String* 매개 변수를 지정합니다. 여기서 *String*은 하나 이상의 백업할 데이터베이스 파일 그룹입니다.  
+    -   지정된 파일 그룹의 모든 파일을 백업하려면 _-DatabaseFileGroup_*String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일 그룹입니다.  
   
      다음 예에서는 `MyDB` 데이터베이스의 보조 파일 그룹 'FileGroup1' 및 'FileGroup2'에 있는 모든 파일의 전체 파일 백업을 만듭니다. 백업은 서버 인스턴스 `Computer\Instance`의 기본 백업 위치에 만들어집니다.  
   

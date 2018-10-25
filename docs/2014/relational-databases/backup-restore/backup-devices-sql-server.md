@@ -210,7 +210,7 @@ GO
  테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 RESTORE REWINDONLY FROM TAPE **=***backup_device_name* 명령을 사용할 수 있습니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service 사용  
- Windows Azure Blob 저장소 서비스에 SQL Server 백업을 작성할 수 있습니다.  Windows Azure Blob 저장소 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+ Windows Azure Blob 저장소 서비스에 SQL Server 백업을 작성할 수 있습니다.  Windows Azure Blob 저장소 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
   
 ##  <a name="LogicalBackupDevice"></a> 논리적 백업 장치를 사용 하 여  
  *논리적 백업 장치* 는 특정 물리적 백업 장치(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 장치를 사용하면 해당 물리적 백업 장치를 참조할 때 간접 참조를 사용할 수 있습니다.  

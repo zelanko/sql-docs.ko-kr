@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838621"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798602"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>1. WHERE 절 없이 DELETE 사용  
  다음 예에서는 삭제되는 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 모든 행을 삭제합니다.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2. WHERE 절을 사용하여 행 집합 삭제  
  다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  다음 예서는 보다 복잡한 WHERE 절을 보여 줍니다. WHERE 절은 삭제할 행을 확인하기 위해 충족해야 하는 두 가지 조건을 정의합니다. `StandardCost` 열의 값은 `12.00` 에서 `14.00` 사이여야 하고, `SellEndDate` 열의 값은 Null이어야 합니다. 또한 이 예에서는 **@@ROWCOUNT** 함수 값을 인쇄하여 삭제된 행 수를 반환합니다.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>3. 커서를 사용하여 삭제할 행 확인  
  다음 예에서는 `my_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>4. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
  다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPerson` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>5. TOP를 사용하여 삭제되는 행 수 제한  
  DELETE 문에 TOP(*n*) 절을 사용하면 *n*개의 행을 임의로 선택하여 삭제 작업이 수행됩니다. 다음 예에서는 `20` 데이터베이스의 `PurchaseOrderDetail` 테이블에서 기한이 2006년 7월 1일 이전인 행 중 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]개의 행을 임의로 선택하여 삭제합니다.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  TOP을 사용하여 시간 순서로 행을 삭제해야 하는 경우에는 하위 SELECT 문에서 ORDER BY를 지정하는 방식으로 TOP을 사용해야 합니다. 다음 쿼리는 `PurchaseOrderDetail` 테이블에서 기한이 가장 빠른 10개의 행을 삭제합니다. 10개의 행만 삭제하기 위해 하위 SELECT  문에서 지정한 열(`PurchaseOrderID`)은 테이블의 기본 키입니다. 하위 SELECT 문에 키가 아닌 열을 사용하면 지정한 열에 중복 값이 있을 경우 10개가 넘는 행이 삭제될 수 있습니다.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>6. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>7. OPENQUERY 함수를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>8. OPENDATASOURCE 함수를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>9. DELETE에 OUTPUT 절 사용  
  다음 예에서는 `DELETE` 문의 결과를 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블 변수로 저장하는 방법을 보여 줍니다.  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>10. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
  다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>11. 테이블에서 행을 삭제합니다.  
  다음 예에서는 삭제될 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `Table1` 테이블에서 모든 행을 삭제합니다.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>12. 테이블에서 행 집합을 DELETE합니다.  
  다음 예에서는 `Table1` 테이블에서 `StandardCost` 열에 1000.00보다 큰 값을 가진 모든 행을 삭제합니다.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>13. DELETE 문과 함께 LABEL 사용  
  다음 예제에서는 DELETE 문과 함께 레이블을 사용합니다.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
  이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  

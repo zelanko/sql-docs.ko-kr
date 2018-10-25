@@ -1,5 +1,5 @@
 ---
-title: getSchemaTerm 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getSchemas 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.locfileid: "47811731"
   
 |속성|설명|  
 |----------|-----------------|  
-|[getSchemas 메서드()](../../../connect/jdbc/reference/getschemas-method.md)|현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
+|[getSchemas 메서드 &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
 |[getSchemas 메서드 &#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|지정된 카탈로그 이름 및 스키마 이름을 사용하여 현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

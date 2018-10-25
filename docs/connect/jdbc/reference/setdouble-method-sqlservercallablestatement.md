@@ -1,5 +1,5 @@
 ---
-title: setTime 메서드(SQLServerCallableStatement) | Microsoft Docs
+title: setDouble 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47839171"
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 날짜 값으로 설정합니다.  
+  지정된 매개 변수를 지정된 **double** 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ public void setDouble(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setURL 메서드는 java.sql.CallableStatement 인터페이스의 setURL 메서드에 의해 지정됩니다.  
+ 이 setDouble 메서드는 java.sql.CallableStatement 인터페이스의 setDouble 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

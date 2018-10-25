@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730327"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>매개 변수  
  *catalog*  
   
- A **문자열** 카탈로그 이름이 들어 있는입니다.  
+ 카탈로그 이름이 포함하는 **문자열**입니다.  
   
  *schema*  
   
- A **문자열** 스키마 이름이 들어 있는입니다.  
+ 스키마 이름을 포함하는 **문자열**입니다.  
   
  *table*  
   
- A **문자열** 테이블 이름이 들어 있는입니다.  
+ 테이블 이름이 들어 있는 **문자열**입니다.  
   
  *범위*  
   
- **int** 관심 있는 범위를 나타내는입니다. 값에는 다음이 포함될 수 있습니다.  
+ 관심 있는 범위를 나타내는 **int**입니다. 값에는 다음이 포함될 수 있습니다.  
   
  bestRowTemporary(0)  
   
@@ -65,9 +62,9 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession(2)  
   
- *Null 허용*  
+ *nullable*  
   
- **true 이면** null 허용 열을 포함 하도록 합니다. 그렇지 않으면 **false**입니다.  
+ Null 허용 열을 포함하려면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
@@ -75,24 +72,24 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 getBestRowIdentifier 메서드는 java.sql.DatabaseMetaData 인터페이스의 getBestRowIdentifier 메서드에 의해 지정 됩니다.  
   
- GetBestRowIdentifier 메서드에 의해 반환 된 결과 집합에는 다음 정보가 포함 됩니다.  
+ getBestRowIdentifier 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|이름|유형|Description|  
+|속성|형식|설명|  
 |----------|----------|-----------------|  
 |SCOPE|short|반환된 결과의 범위입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> bestRowTemporary(0)<br /><br /> bestRowTransaction(1)<br /><br /> bestRowSession(2)|  
-|COLUMN_NAME|문자열|열 이름입니다.|  
+|COLUMN_NAME|String|열 이름입니다.|  
 |DATA_TYPE|short|java.sql.Types의 SQL 데이터 형식입니다.|  
-|TYPE_NAME|문자열|데이터 형식의 이름입니다.|  
-|COLUMN_SIZE|int|열의 전체 자릿수입니다.|  
-|BUFFER_LENGTH|int|버퍼 길이입니다.|  
+|TYPE_NAME|String|데이터 형식의 이름입니다.|  
+|COLUMN_SIZE|ssNoversion|열의 전체 자릿수입니다.|  
+|BUFFER_LENGTH|ssNoversion|버퍼 길이입니다.|  
 |DECIMAL_DIGITS|short|열의 소수 자릿수입니다.|  
 |PSEUDO_COLUMN|short|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> bestRowUnknown(0)<br /><br /> bestRowNotPseudo(1)<br /><br /> bestRowPseudo(2)|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 getBestRowIdentifier 메서드를 사용 하 여 Person.Contact 테이블에 대 한 최상의 행 식별자에 대 한 정보를 반환 하는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
+ 다음 예제에서는 getBestRowIdentifier 메서드를 사용하여 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 예제 데이터베이스의 Person.Contact 테이블에 가장 적합한 행 식별자에 대한 정보를 반환하는 방법을 보여 줍니다.  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  
@@ -117,7 +114,7 @@ public static void executeGetBestRowIdentifier(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 클래스](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756568"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Azure SQL Database Managed Instance에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= ‘**_os\_파일\_경로_**’**  
  감사 내역의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_최대\_크기_  
  감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 **MB**, **GB**, **TB**가 나오는 정수이거나 **UNLIMITED**여야 합니다. *max_size*에 대해 지정할 수 있는 최소 크기는 2**MB**이고 최대 크기는 2,147,483,647**TB**입니다. **UNLIMITED**를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 **UNLIMITED**입니다.  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  파일 시스템에 보관할 최대 파일 수를 지정합니다. MAX_ROLLOVER_FILES=0으로 설정하면 롤오버 파일이 무제한으로 만들어집니다. 기본값은 0입니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
  MAX_FILES =*integer*  
@@ -101,7 +98,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  이 옵션은 디스크의 파일을 MAXSIZE 값으로 미리 할당하며, MAXSIZE가 UNLIMITED가 아닌 경우에만 적용됩니다. 기본값은 OFF입니다.  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  감사 동작이 강제 처리되기 전까지 허용되는 시간(밀리초)을 지정합니다. 값이 0인 경우 동기 배달을 나타냅니다. 설정 가능한 최소 쿼리 지연 값은 1000입니다. 이 값은 1초에 해당하며 기본값입니다. 최대값은 2,147,483,647로 2,147,483.647초 또는 24일, 20시간, 31분, 23.647초에 해당합니다. 잘못된 수를 지정하면 MSG_INVALID_QUEUE_DELAY 오류가 발생합니다.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

@@ -1,5 +1,5 @@
 ---
-title: getString 메서드 (SQLServerCallableStatement) | Microsoft Docs
+title: setNString 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47833911"
 # <a name="setnstring-method-sqlservercallablestatement"></a>setNString 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된  개체로 설정합니다.  
+  지정된 매개 변수를 지정된 String 개체로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 #### <a name="parameters"></a>매개 변수  
  *parameterName*  
   
- 매개 변수 이름을 나타내는 입니다.  
+ 매개 변수 이름을 나타내는 **문자열**입니다.  
   
  *value*  
   
@@ -45,7 +45,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 ## <a name="remarks"></a>Remarks  
  에 대 한이 메서드를 사용할지 **NCHAR**, **NVARCHAR**를 **NTEXT**, 및 **XML** 데이터 형식입니다.  
   
- 이 getString 메서드는 java.sql.CallableStatement 인터페이스의 getString 메서드에 의해 지정됩니다.  
+ 이 setNString 메서드는 java.sql.CallableStatement 인터페이스의 setNString 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

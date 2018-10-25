@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getUserName 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ public java.lang.String getUserName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getURL 메서드는 java.sql.DatabaseMetaData 인터페이스의 getURL 메서드에 의해 지정됩니다.  
+ 이 getUserName 메서드는 java.sql.DatabaseMetaData 인터페이스의 getUserName 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

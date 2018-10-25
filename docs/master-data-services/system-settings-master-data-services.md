@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801701"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874371"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801701"
 |-----------------------------------|--------------------|-----------------|  
 |**새 비즈니스 규칙 증가값**|**BusinessRuleDefaultPriorityIncrement**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **시스템 관리** 기능 영역에서 각 비즈니스 규칙의 우선 순위가 증가되는 단위입니다. 기본값은 **10**입니다.|  
 |**비즈니스 규칙을 적용할 멤버 수**|**BusinessRuleRealtimeMemberCount**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 비즈니스 규칙을 적용할 최대 멤버 수입니다. [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 비즈니스 규칙을 적용할 활성 워크시트에 있는 최대 멤버 수입니다. 기본값은 **10000**입니다.|  
+|**비즈니스 규칙 사용자 스크립트 실행 첫 번째**|**BusinessRuleUserScriptExecuteFirst**|일반적으로, 비즈니스 규칙 작업은 “기본값”, “값 변경”, “유효성 검사”, “외부 작업”, “사용자 정의 작업 스크립트” 순서로 실행됩니다. 이 설정을 **1**로 변경되면 “사용자 정의 작업 스크립트”가 비즈니스 규칙 작업 실행의 첫 번째 단계가 됩니다. 이 설정은 숨겨진 설정입니다. 기본값은 **0**입니다.|  
   
  자세한 내용은 [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)을 참조하세요.  
   

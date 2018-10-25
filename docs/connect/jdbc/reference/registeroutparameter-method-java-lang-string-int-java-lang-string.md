@@ -46,7 +46,7 @@ public void registerOutParameter(java.lang.String s,
   
  java.sql.Types에 정의된 JDBC 형식 코드입니다.  
   
- S1  
+ *s1*  
   
  정규화된 SQL 형식 이름이 들어 있는 **문자열**입니다.  
   

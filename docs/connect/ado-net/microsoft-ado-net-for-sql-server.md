@@ -5,25 +5,22 @@ ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765533"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[ADO.NET를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[ADO.NET을 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. System.Data.SqlClient 네임스페이스를 사용하여 SQL Server 또는 다른 공급업체의 공급자에 액세스하여 해당 저장소에 액세스할 수 있습니다. System.Data.Odbc 또는 System.Data.Oledb를 사용하면 다른 데이터 액세스 기술을 사용하여 .NET 언어에서 데이터에 액세스할 수 있습니다. 클라이언트 응용 프로그램에서 오프라인 데이터 캐시가 필요할 때는 System.Data.Dataset을 사용합니다. 이것은 웹 서비스에서 유용할 수 있는 로컬 지속성 및 XML 기능도 제공합니다.  
   
@@ -36,16 +33,16 @@ ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. Sys
 ## <a name="documentation"></a>설명서  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server 및 ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [System.Data.SqlClient 네임스페이스](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>커뮤니티  
 * [ADO.NET 관리 공급자 포럼](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
 * [ADO.NET DataSet 포럼](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
-## <a name="more-samples"></a>추가 예제  
+## <a name="more-samples"></a>다른 샘플  
 * [ADO.NET 코드 예제](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Windows에서.NET Framework 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [MacOS에서.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Ubuntu.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL)에서.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [MacOS에서.NET Core를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Ubuntu에서.NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL)에.NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

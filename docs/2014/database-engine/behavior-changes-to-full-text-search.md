@@ -33,7 +33,7 @@ ms.locfileid: "49461018"
 ### <a name="new-word-breakers-and-stemmers-installed"></a>새 단어 분리기 및 형태소 분석기 설치됨  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 전체 텍스트 검색 및 의미 체계 검색에서 사용되는 모든 단어 분리기 및 형태소 분석기를 업데이트합니다. 인덱스 내용과 쿼리 결과 사이에 일관성을 유지하기 위해 기존 전체 텍스트 인덱스를 다시 채우는 것이 좋습니다.  
   
-1.  영어에 대한 새로운 단어 분리기가 있습니다. 이전 동작을 유지해야 하는 경우 [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하십시오.  
+1.  영어에 대한 새로운 단어 분리기가 있습니다. 이전 동작을 유지해야 하는 경우 [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하십시오.  
   
 2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이전 릴리스에 포함된 덴마크어, 폴란드어 및 터키어에 대한 타사 단어 분리기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 구성 요소로 대체되었습니다. 새 구성 요소는 기본적으로 활성화됩니다.  
   

@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_SQLSERVERSESSION property
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 77960d1a5b38ef9ae66fe2705f38f10a739daa2a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864161"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "43031734"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리를 지원하기 위해 SQL Server용 OLE DB 드라이버 **IDBSchemaRowset** 인터페이스는 연결된 서버에서 메타데이터를 반환합니다.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 스키마 행 집합 출력을 카탈로그별로 제한하면 SQL Server용 OLE DB 드라이버에서 연결된 서버와 카탈로그 이름이 포함된 두 부분으로 이루어진 이름을 인식합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 *linked_server ***.*** catalog*로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 스키마 행 집합 출력을 카탈로그별로 제한하면 SQL Server용 OLE DB 드라이버에서 연결된 서버와 카탈로그 이름이 포함된 두 부분으로 이루어진 이름을 인식합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 _linked\_server_**.**_catalog_로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  
@@ -49,8 +46,8 @@ ms.locfileid: "43031734"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  스키마 행 집합을 연결된 서버의 모든 카탈로그로 제한하려면 구문 *linked_server*(여기서 마침표 구분 기호가 이름 사양에 포함됨)를 사용합니다. 이 구문은 카탈로그 이름 제한에 NULL을 지정하는 것과 같으며 연결된 서버가 카탈로그를 지원하지 않는 데이터 원본을 나타내는 경우에도 사용됩니다.  
-  
+>  스키마 행 집합을 연결된 서버의 모든 카탈로그로 제한하려면 구문 *linked_server*(여기서 밑줄 구분 기호가 이름 사양에 포함됨)를 사용합니다. 이 구문은 카탈로그 이름 제한에 NULL을 지정하는 것과 같으며 연결된 서버가 카탈로그를 지원하지 않는 데이터 원본을 나타내는 경우에도 사용됩니다.  
+ 
  SQL Server용 OLE DB 드라이버는 연결된 서버로 등록된 OLE DB 데이터 원본 목록을 반환하는 스키마 행 집합 LINKEDSERVERS를 정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  

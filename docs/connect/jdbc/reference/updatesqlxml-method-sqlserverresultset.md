@@ -1,5 +1,5 @@
 ---
-title: updateString 메서드(SQLServerResultSet) | Microsoft Docs
+title: updateSQLXML 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -27,8 +27,8 @@ ms.locfileid: "47805051"
   
 |속성|설명|  
 |----------|-----------------|  
-|[updateSQLXML 메서드(int, java.sql.SQLXML)](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  
-|[updateSQLXML 메서드(java.lang.String, java.sql.SQLXML)](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  
+|[updateSQLXML 메서드 &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  
+|[updateSQLXML 메서드 &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|지정된 열을 **SQLXML** 값으로 업데이트합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

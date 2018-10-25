@@ -1,5 +1,5 @@
 ---
-title: getTime 메서드(int)(SQLServerResultSet) | Microsoft Docs
+title: getFloat 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47810661"
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 **float**로 검색합니다.  
+  이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열 인덱스의 값을 Java 프로그래밍 언어의 **float**로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,9 +47,9 @@ public float getFloat(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getInt 메서드는 java.sql.ResultSet 인터페이스의 getInt 메서드에 의해 지정됩니다.  
+ 이 getFloat 메서드는 java.sql.ResultSet 인터페이스의 getFloat 메서드에 의해 지정됩니다.  
   
- 이 메서드는 Java정확성이 유지되는 모든 숫자 기반 형식을 반환합니다.  
+ 이 메서드는 Java **float** 정확성이 유지되는 모든 숫자 기반 형식을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getFloat 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   

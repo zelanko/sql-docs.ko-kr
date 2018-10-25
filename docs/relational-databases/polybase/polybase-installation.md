@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01182a581f231ffed82be26698e8e50bf82df9e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842551"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874361"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -68,6 +68,8 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
 2. **설치**를 클릭한 후 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 클릭합니다.  
    
 3. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.  
+
+ ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
 4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 SQL Server PolyBase 데이터 이동 서비스를 구성하여 동일한 계정 하에서 실행합니다.  
    
@@ -89,7 +91,9 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
+  > **중요!**
+  >
+  > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
 
 ::: moniker-end
 
@@ -156,11 +160,16 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> PolyBase 사용
 
-SQL Server 2019 CTP 2.0부터 다음 Transact-SQL 명령을 사용하여 설치 후에 PolyBase를 사용하도록 설정해야 합니다.
+
+설치를 완료하면 Polybase를 사용하여 해당 기능에 액세스할 수 있습니다. SQL Server 2019 CTP 2.0에 연결하는 경우 다음 Transact-SQL 명령을 사용하여 설치 후에 PolyBase를 사용하도록 설정해야 합니다.
+
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
+RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
+그런 다음, 인스턴스를 **다시 시작**해야 합니다. 
+
 
 ::: moniker-end
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 속성(로그온 탭) | Microsoft Docs
+title: 보고서 서버 속성(로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

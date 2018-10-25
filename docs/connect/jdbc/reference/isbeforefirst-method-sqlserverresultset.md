@@ -1,5 +1,5 @@
 ---
-title: beforeFirst 메서드(SQLServerResultSet) | Microsoft Docs
+title: isBeforeFirst 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ public boolean isBeforeFirst()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 beforeFirst 메서드는 java.sql.ResultSet 인터페이스의 beforeFirst 메서드에 의해 지정됩니다.  
+ 이 isBeforeFirst 메서드는 java.sql.ResultSet 인터페이스의 isBeforeFirst 메서드에 의해 지정됩니다.  
   
  이 메서드를 정방향 전용의 읽기 전용 커서를 비롯한 동적 커서와 함께 사용할 경우 selectMethod 연결 속성이 "cursor"로 설정되어 있으면 예외가 발생합니다.  
   

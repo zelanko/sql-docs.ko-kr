@@ -1,5 +1,5 @@
 ---
-title: setObject 메서드(SQLServerCallableStatement) | Microsoft Docs
+title: getDateTimeOffset 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

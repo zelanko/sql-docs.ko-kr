@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838501"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ OPENROWSET
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 가장 빠른 옵션입니다.|  
-|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|  
+|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **&#42;&#42; 중요 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|  
   
  ERRORFILE ='*file_name*'  
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  
@@ -235,7 +232,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
   
  원격 OLE DB 데이터 원본에 액세스할 때 트러스트된 연결의 로그인 ID는 클라이언트가 쿼리 중인 서버에 연결되어 있는 서버에서 자동으로 위임되지 않습니다. 이 경우 인증 위임을 구성해야 합니다.  
   
- OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 *catalog* 및 *schema*에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 *schema ***.*** object* 형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는 *catalog ***.*** schema ***.*** object* 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
+ OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 _catalog_ 및 _schema_에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 _schema_**.**_object_형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는_catalog_**.**_schema_**.**_object_ 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
   
  `OPENROWSET`는 변수를 인수로 받아들이지 않습니다.  
   

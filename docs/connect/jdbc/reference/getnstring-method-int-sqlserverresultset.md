@@ -1,5 +1,5 @@
 ---
-title: getString 메서드(int)(SQLServerResultSet) | Microsoft Docs
+title: getNString 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47828521"
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열의 값을 SQLXML 개체로 검색합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열의 값을 String 개체로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ public java.lang.String getNString(int columnIndex)
  값을 검색 하려면이 메서드를 사용할 수는 **nvarchar**를 **nchar**를 **nvarchar (max)** 를 **ntext**, 또는 **xml** 이 현재 행에서 열 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getString 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
+ [getNString 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

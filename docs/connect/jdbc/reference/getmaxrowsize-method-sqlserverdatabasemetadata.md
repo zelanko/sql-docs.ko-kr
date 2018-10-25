@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getMaxRowSize 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public int getMaxRowSize()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 허용되는 최대 바이트 수를 나타내는 int입니다.  
+ 허용되는 최대 바이트 수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

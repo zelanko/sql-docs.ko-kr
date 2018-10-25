@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,138 +60,143 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: c92b931c8c55fbaeeb5e2ec839025fddc5ae231e
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085539"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636502"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  열과 제약 조건을 변경, 추가 또는 삭제하거나 파티션을 재할당하고 다시 작성하거나 제약 조건과 트리거를 설정 또는 해제하여 테이블 정의를 수정합니다.  
+  열과 제약 조건을 변경, 추가 또는 삭제하거나 파티션을 재할당하고 다시 작성하거나 제약 조건과 트리거를 설정 또는 해제하여 테이블 정의를 수정합니다.
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>구문  
-  
-```  
--- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
-  
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-{   
-    ALTER COLUMN column_name   
-    {   
-        [ type_schema_name. ] type_name   
-            [ (   
-                {   
-                   precision [ , scale ]   
-                 | max   
-                 | xml_schema_collection   
-                }   
-            ) ]   
-        [ COLLATE collation_name ]   
+구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
+
+> [!IMPORTANT]
+> 디스크 기반 테이블과 메모리 최적화 테이블의 ALTER TABLE 구문은 서로 다릅니다. 다음 링크를 사용하여 테이블 형식의 적절한 구문 블록 및 적절한 구문 예제로 바로 이동합니다.
+> - 디스크 기반 테이블:
+>    - [구문](#syntax-for-disk-based-tables)
+>    - [예](#Example_Top)
+> - 메모리 액세스에 최적화된 테이블
+>   - [구문](#syntax-for-memory-optimized-tables)
+>   - [예](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+
+## <a name="syntax-for-disk-based-tables"></a>디스크 기반 테이블의 구문  
+
+``` 
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+{
+    ALTER COLUMN column_name
+    {
+        [ type_schema_name. ] type_name
+            [ (
+                {
+                   precision [ , scale ]
+                 | max
+                 | xml_schema_collection
+                }
+            ) ]
+        [ COLLATE collation_name ]
         [ NULL | NOT NULL ] [ SPARSE ]  
-      | { ADD | DROP }   
+      | { ADD | DROP }
           { ROWGUIDCOL | PERSISTED | NOT FOR REPLICATION | SPARSE | HIDDEN }  
       | { ADD | DROP } MASKED [ WITH ( FUNCTION = ' mask_function ') ]  
-    }   
+    }
     [ WITH ( ONLINE = ON | OFF ) ]  
     | [ WITH { CHECK | NOCHECK } ]  
   
-    | ADD   
-    {   
+    | ADD
+    {
         <column_definition>  
       | <computed_column_definition>  
-      | <table_constraint>   
-      | <column_set_definition> 
+      | <table_constraint>
+      | <column_set_definition>
     } [ ,...n ]  
-      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
-                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
-                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-         ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START
+                [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+                system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+        ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-       
-    | DROP   
+    | DROP
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
-         {   
-              constraint_name   
-              [ WITH   
-               ( <drop_clustered_constraint_option> [ ,...n ] )   
-              ]   
+         {
+              constraint_name
+              [ WITH
+               ( <drop_clustered_constraint_option> [ ,...n ] )
+              ]
           } [ ,...n ]  
           | COLUMN  [ IF EXISTS ]  
           {  
-              column_name   
+              column_name
           } [ ,...n ]  
           | PERIOD FOR SYSTEM_TIME  
      } [ ,...n ]  
-    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
-        { ALL | constraint_name [ ,...n ] }   
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT
+        { ALL | constraint_name [ ,...n ] }
   
-    | { ENABLE | DISABLE } TRIGGER   
+    | { ENABLE | DISABLE } TRIGGER
         { ALL | trigger_name [ ,...n ] }  
   
-    | { ENABLE | DISABLE } CHANGE_TRACKING   
+    | { ENABLE | DISABLE } CHANGE_TRACKING
         [ WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } ) ]  
   
     | SWITCH [ PARTITION source_partition_number_expression ]  
-        TO target_table   
+        TO target_table
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
-    
-    | SET   
+
+    | SET
         (  
-            [ FILESTREAM_ON =   
+            [ FILESTREAM_ON =
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]  
-            | SYSTEM_VERSIONING =   
-                  {   
-                      OFF   
-                  | ON   
-                      [ ( HISTORY_TABLE = schema_name . history_table_name   
-                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
-                          [, HISTORY_RETENTION_PERIOD = 
-                          { 
-                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                 | MONTH | MONTHS | YEAR | YEARS } 
-                          } 
+            | SYSTEM_VERSIONING =
+                  {
+                      OFF
+                  | ON
+                      [ ( HISTORY_TABLE = schema_name . history_table_name
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
+                          [, HISTORY_RETENTION_PERIOD =
+                          {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }
                           ]  
                         )  
                       ]  
                   }  
           )  
-      
-    | REBUILD   
+
+    | REBUILD
       [ [PARTITION = ALL]  
-        [ WITH ( <rebuild_option> [ ,...n ] ) ]   
-      | [ PARTITION = partition_number   
+        [ WITH ( <rebuild_option> [ ,...n ] ) ]
+      | [ PARTITION = partition_number
            [ WITH ( <single_partition_rebuild_option> [ ,...n ] ) ]  
         ]  
       ]  
   
     | <table_option>  
-  
     | <filetable_option>  
-  
     | <stretch_configuration>  
 }  
 [ ; ]  
   
 -- ALTER TABLE options  
   
-<column_set_definition> ::=   
+<column_set_definition> ::=
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
 
-<drop_clustered_constraint_option> ::=    
-    {   
+<drop_clustered_constraint_option> ::=
+    {
         MAXDOP = max_degree_of_parallelism  
       | ONLINE = { ON | OFF }  
-      | MOVE TO   
+      | MOVE TO
          { partition_scheme_name ( column_name ) | filegroup | "default" }  
     }  
 <table_option> ::=  
@@ -208,7 +213,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 <stretch_configuration> ::=  
     {  
       SET (  
-        REMOTE_DATA_ARCHIVE   
+        REMOTE_DATA_ARCHIVE
         {  
             = ON (  <table_stretch_options>  )  
           | = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED )  
@@ -236,11 +241,11 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ], 
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
-```  
-  
-```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
-  
+```
+
+## <a name="syntax-for-memory-optimized-tables"></a>메모리 최적화 테이블의 구문  
+
+```
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
     ALTER COLUMN column_name   
@@ -617,14 +622,14 @@ ALTER INDEX *index_name* *index_name*의 버킷 수가 변경되도록 지정합
   
 ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에만 지원됩니다.    
 
-> [!NOTE]
-> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
+> [!IMPORTANT]
+> ALTER TABLE 문을 사용하지 않을 경우 [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) 및 [PAD_INDEX](alter-table-index-option-transact-sql.md) 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다.
 
 ADD  
 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건이 추가되도록 지정하거나 시스템이 시스템 버전 관리에 사용할 열을 지정합니다. 메모리 최적화 테이블의 경우 인덱스를 추가할 수 있습니다.
 
-> [!NOTE]
-> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
+> [!IMPORTANT]
+> ALTER TABLE 문을 사용하지 않을 경우 [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) 및 [PAD_INDEX](alter-table-index-option-transact-sql.md) 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다.
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
@@ -649,8 +654,8 @@ INDEX *index_name* 테이블에서 *index_name*이 제거되도록 지정합니�
   
 ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에만 지원됩니다.    
 
-> [!NOTE]
-> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
+> [!IMPORTANT]
+> ALTER TABLE 문을 사용하지 않을 경우 [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) 및 [PAD_INDEX](alter-table-index-option-transact-sql.md) 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다.
       
 COLUMN *column_name*  
 테이블에서 *constraint_name* 또는 *column_name*이 제거되도록 지정합니다. 여러 열을 나열할 수 있습니다.  
@@ -1076,7 +1081,8 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
   
 이 문제를 해결하려면 네 부분으로 구성된 접두사를 사용하지 않아야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
  ALTER TABLE 권한은 ALTER TABLE SWITCH 문과 관련된 두 테이블에 모두 적용됩니다. 전환된 데이터는 모두 대상 테이블의 보안을 상속합니다.  
@@ -1085,7 +1091,7 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
   
  테이블의 행을 업데이트하는 열을 추가하려면 테이블에 대한 **UPDATE** 권한이 있어야 합니다. 예를 들어 테이블이 비어 있지 않은 경우 **NOT NULL** 열을 기본값으로 추가하거나 ID 열을 추가합니다.  
   
-##  <a name="Example_Top"></a> 예  
+## <a name="Example_Top"></a> 예
   
 |범주|중요한 구문 요소|  
 |--------------|------------------------------|  
@@ -1095,10 +1101,12 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
 |[테이블 정의 변경](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 변경 내용 추적|  
 |[제약 조건 및 트리거 해제/설정](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
-###  <a name="add"></a>열 및 제약 조건 추가  
+### <a name="add"></a>열 및 제약 조건 추가
+  
  이 섹션의 예에서는 테이블에 열 및 제약 조건을 추가하는 방법을 보여 줍니다.  
   
-#### <a name="a-adding-a-new-column"></a>1. 새 열 추가  
+#### <a name="a-adding-a-new-column"></a>1. 새 열 추가
+
  다음 예에서는 Null 값을 허용하고 DEFAULT 정의를 통해 제공된 값이 없는 열을 추가합니다. 새 열의 각 행 값은 `NULL`입니다.  
   
 ```sql  

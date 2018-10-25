@@ -1,5 +1,5 @@
 ---
-title: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
+title: '3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

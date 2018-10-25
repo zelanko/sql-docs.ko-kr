@@ -58,10 +58,16 @@ items:
       href: tutorials/rtsql-working-with-inputs-and-outputs.md
     - name: 데이터 형식 및 개체 처리
       href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: R 함수 사용
+      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: 예측 모델 만들기
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: 모델에서 예측 및 그리기
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: 저장 프로시저에서 Python 래핑
+      href: tutorials/wrap-python-in-tsql-stored-procedure.md
 - name: 자습서
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -139,8 +145,6 @@ items:
     - name: T-SQL을 사용하여 Python 실행
       href: tutorials/run-python-using-t-sql.md
       items:
-      - name: 저장 프로시저에서 Python 래핑
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
       - name: SQL Server의 Python 모델에서 학습 및 점수 매기기
         href: tutorials/train-score-using-python-in-tsql.md
       - name: SQL Server 계산 컨텍스트에서 revoscalepy를 사용하여 모델 만들기
@@ -172,37 +176,37 @@ items:
     href: concepts/extension-r.md
   - name: Python 확장
     href: concepts/extension-python.md
+  - name: 보안
+    href: concepts/security.md
 - name: 방법 가이드
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: 패키지 관리
     items:
-    - name: 패키지 관리
+    - name: 기본 패키지
+      href: r/installing-and-managing-r-packages.md
+    - name: 패키지 정보 가져오기
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: 새 Python 패키지 설치
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: 새 R 패키지 설치
+      href: r/install-additional-r-packages-on-sql-server.md
       items:
-      - name: 기본 패키지
-        href: r/installing-and-managing-r-packages.md
-      - name: 패키지 정보 가져오기
-        href: r/determine-which-packages-are-installed-on-sql-server.md
-      - name: 새 Python 패키지 설치
-        href: python/install-additional-python-packages-on-sql-server.md
-      - name: 새 R 패키지 설치
-        href: r/install-additional-r-packages-on-sql-server.md
+      - name: R 패키지 관리자 사용
+        href: r/use-r-package-managers-on-sql-server.md
+      - name: T-SQL 사용
+        href: r/install-r-packages-tsql.md
+      - name: RevoScaleR 사용
+        href: r/use-revoscaler-to-manage-r-packages.md
         items:
-        - name: R 패키지 관리자 사용
-          href: r/use-r-package-managers-on-sql-server.md
-        - name: T-SQL 사용
-          href: r/install-r-packages-tsql.md
-        - name: RevoScaleR 사용
-          href: r/use-revoscaler-to-manage-r-packages.md
-          items:
-          - name: 원격 R 패키지 관리 사용
-            href: r/r-package-how-to-enable-or-disable.md
-          - name: R 패키지 동기화
-            href: r/package-install-uninstall-and-sync.md
-        - name: miniCRAN 리포지토리 만들기
-          href: r/create-a-local-package-repository-using-minicran.md
-        - name: R 패키지 사용 팁
-          href: r/packages-installed-in-user-libraries.md
+        - name: 원격 R 패키지 관리 사용
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: R 패키지 동기화
+          href: r/package-install-uninstall-and-sync.md
+      - name: miniCRAN 리포지토리 만들기
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: R 패키지 사용 팁
+        href: r/packages-installed-in-user-libraries.md
   - name: 데이터 탐색 및 모델링
     items:
     - name: R 라이브러리 및 데이터 형식
@@ -243,44 +247,34 @@ items:
       href: r/using-r-code-profiling-functions.md
   - name: 보안
     items:
-    - name: 보안 고려 사항
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: R에 대한 보안
-      href: r/security-overview-sql-server-r.md
-    - name: Python에 대한 보안
-      href: python/security-overview-sql-server-python-services.md
-    - name: SQL Server 실행 패드 계정
-      href: general/sql-server-launchpad-service-account.md
-    - name: SQLRUserGroup 수정
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: 사용자에게 사용 권한 제공
+      href: security/user-permission.md
+    - name: 실행 패드 구성
+      href: security/sql-server-launchpad-service-account.md
+    - name: 방화벽 구성
+      href: security/firewall-configuration.md
     - name: SQLRUserGroup을 데이터베이스 사용자로 추가
-      href: r/add-sqlrusergroup-to-database.md
+      href: security/add-sqlrusergroup-to-database.md
   - name: 관리
     items:
-    - name: R 구성 및 관리
-      href: r/configuration-sql-server-r-services.md
-    - name: Machine Learning Services의 고급 구성 옵션
-      href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: 웹 서비스를 사용하여 모델 배포 및 사용
-      href: operationalization-with-mrsdeploy.md
-    - name: 솔루션 관리 및 모니터링
+    - name: 통합 관리
       href: r/managing-and-monitoring-r-solutions.md
-    - name: Machine Learning Services를 위한 리소스 거버넌스
-      href: r/resource-governance-for-r-services.md
-    - name: 기계 학습을 위한 리소스 풀 만들기
-      href: r/how-to-create-a-resource-pool-for-r.md
-    - name: Machine Learning Services를 위한 확장 이벤트
-      href: r/extended-events-for-sql-server-r-services.md
-    - name: PREDICT 문 모니터링에 대한 확장 이벤트
-      href: xe-event-predict-tsql.md
-    - name: Machine Learning Services용 DMV
-      href: r/dmvs-for-sql-server-r-services.md
-    - name: Python용 DMV
-      href: python/dmvs-for-python.md
-    - name: R 코드 프로파일링 함수 사용
-      href: r/using-r-code-profiling-functions.md
-    - name: Management Studio에서 사용자 지정 보고서를 사용하여 Machine Learning Services 모니터링
+    - name: SSMS 보고서를 사용한 모니터링
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: 스크립트 실행 확장
+      href: administration/modify-user-account-pool.md
+    - name: 리소스 관리 거버넌스
+      href: administration/resource-governance.md
+    - name: 리소스 풀 만들기
+      href: administration/how-to-create-a-resource-pool.md
+    - name: 확장 이벤트
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: 확장 이벤트 PREDICT T-SQL
+      href: xe-event-predict-tsql.md
+    - name: DMV(데이터 관리 뷰)
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: R 코드 프로파일링 함수
+      href: r/using-r-code-profiling-functions.md
 - name: 참조
   href: r/machine-learning-services-r-reference.md
   items:
@@ -332,9 +326,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: a260cd92015fbbf8864f24ee1091fff86e892a00
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713705"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169235"

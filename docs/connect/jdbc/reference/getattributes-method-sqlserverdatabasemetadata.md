@@ -1,5 +1,5 @@
 ---
-title: getProcedures 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getAttributes 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -52,11 +52,11 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  *typeNamePattern*  
   
- 테이블 이름 패턴이 들어 있는 **문자열**입니다.  
+ 형식 이름 패턴이 들어 있는 **String**입니다.  
   
  *attributePattern*  
   
- 특성 이름 패턴이 들어 있는 입니다.  
+ 특성 이름 패턴이 들어 있는 **String**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  

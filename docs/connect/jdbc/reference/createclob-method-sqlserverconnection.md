@@ -1,5 +1,5 @@
 ---
-title: createSQLXML 메서드(SQLServerConnection) | Microsoft Docs
+title: createClob 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47830571"
 # <a name="createclob-method-sqlserverconnection"></a>createClob 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  데이터가 없는  개체를 만듭니다.  
+  데이터가 없는 Clob 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

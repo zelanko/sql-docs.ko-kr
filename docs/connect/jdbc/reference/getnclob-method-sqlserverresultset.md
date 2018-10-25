@@ -1,5 +1,5 @@
 ---
-title: updateBlob 메서드(SQLServerResultSet) | Microsoft Docs
+title: getNClob 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

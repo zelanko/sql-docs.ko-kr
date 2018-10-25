@@ -1,5 +1,5 @@
 ---
-title: getInstanceName 메서드(SQLServerDataSource) | Microsoft Docs
+title: setDatabaseName 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,9 +36,9 @@ public void setDatabaseName(java.lang.String databaseName)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *DatabaseName*  
+ *databaseName*  
   
- 데이터베이스 이름을 포함하는 ** 값입니다.  
+ 데이터베이스 이름을 포함하는 **String**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

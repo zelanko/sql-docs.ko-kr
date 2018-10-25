@@ -1,13 +1,11 @@
 ---
-title: prepareCall 메서드 (java.lang.String, int, int, int) | Microsoft Docs
+title: prepareCall 메서드(java.lang.String, int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareCall (java.lang.String, int, int, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38096cff33910d311b1bc73e7c65e20c1cd4c9c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6691a88bf3012d05893c705c8ee6330d101e18fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830703"
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>prepareCall 메서드(java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  만듭니다는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 생성 하는 개체 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 형식, 동시성 및 유지 기능을 사용 하 여 개체입니다.  
+  지정된 형식, 동시성 및 유지 기능을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,11 +41,11 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### <a name="parameters"></a>매개 변수  
  *sql*  
   
- A **문자열** SQL 문을 포함 합니다.  
+ SQL 문이 포함된 **String**입니다.  
   
- *n 유형*  
+ *n 형식*  
   
- **int** 결과 집합 유형을 나타내는입니다.  
+ 결과 집합 유형을 나타내는 **int**입니다.  
   
  *nConcur*  
   
@@ -56,7 +53,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
   
  *nHold*  
   
- **int** 결과 집합 유지 기능을 나타내는입니다.  
+ 결과 집합 유지 기능을 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  CallableStatement 개체입니다.  
@@ -64,11 +61,11 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 prepareCall 메서드는 java.sql.Connection 인터페이스의 prepareCall 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [prepareCall 메서드 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
+## <a name="see-also"></a>참고 항목  
+ [prepareCall 메서드&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

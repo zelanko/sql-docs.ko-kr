@@ -1,13 +1,11 @@
 ---
-title: getURL 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getURL 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getURL
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a506fbfd0c35ae57d2d027724b4d671092398de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a0f4a7e90ee115470715cf7474a4d05be7a86158
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755941"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +36,15 @@ public java.lang.String getURL()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** URL이 들어 있는입니다.  
+ URL을 포함하는 **문자열**입니다.  
   
-## <a name="remarks"></a>주의  
- 보안상의 이유로 하는 암호에 제공 되는 URL에는 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드. 이는 타사 Java 응용 프로그램 서버가 URL 속성에 설정된 값을 데이터 원본 구성 사용자 인터페이스에 표시하는 경우가 매우 많기 때문입니다. 대신를 사용 하 여는 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 암호 값을 설정 하는 메서드. 데이터 원본에 설정된 암호는 Java 응용 프로그램 서버가 구성 사용자 인터페이스에 표시하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ 보안을 강화하려면 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드에 제공되는 URL에 암호를 포함하지 말아야 합니다. 이는 타사 Java 응용 프로그램 서버가 URL 속성에 설정된 값을 데이터 원본 구성 사용자 인터페이스에 표시하는 경우가 매우 많기 때문입니다. 대신 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 메서드를 사용하여 암호 값을 설정하세요. 데이터 원본에 설정된 암호는 Java 응용 프로그램 서버가 구성 사용자 인터페이스에 표시하지 않습니다.  
   
 > [!NOTE]  
->  GetURL setURL 메서드에 getURL 메서드를 호출 하기 전에 호출 하지 않으면의 기본 값을 반환 "jdbc:sqlserver: / /"입니다.  
+>  getURL 메서드를 호출하기 전에 setURL 메서드를 호출하지 않은 경우 getURL은 기본값인 “jdbc:sqlserver://”를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

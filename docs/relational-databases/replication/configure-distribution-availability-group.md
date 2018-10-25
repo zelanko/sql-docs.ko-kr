@@ -1,7 +1,7 @@
 ---
 title: 가용성 그룹에서 SQL Server 배포 데이터베이스 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615382"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48818001"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
 이 문서에서는 AG(Always On) 가용성 그룹에서 SQL Server 복제 배포 데이터베이스를 설정하는 방법에 대해 설명합니다.
 
-SQL Server 2017 CU 6에서는 다음 메커니즘을 통해 AG에서 복제 배포 데이터베이스를 지원합니다.
+SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 통해 AG에서 복제 배포 데이터베이스를 지원합니다.
 
 - 배포 데이터베이스 AG에 수신기가 있어야 합니다. 게시자가 배포자를 추가할 때는 수신기 이름을 배포자의 이름으로 사용합니다.
 - 수신기 이름을 배포자의 이름으로 사용하여 복제 작업을 만듭니다.
@@ -190,13 +190,15 @@ SQL Server 2017 CU 6에서는 다음 메커니즘을 통해 AG에서 복제 배�
    sp_adddistributiondb 'distribution'
    ```
 
-1. DIST3에서 다음을 실행합니다. 
+4. DIST3에서 다음을 실행합니다. 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    `@working_directory` 값은 DIST1 및 DIST2에 대해 지정 된 것과 동일해야 합니다.
+
+4. DIST3에서는 구독자에 대한 연결된 서버를 다시 만들어야 합니다.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>배포 데이터베이스 AG에서 복제본 제거
 

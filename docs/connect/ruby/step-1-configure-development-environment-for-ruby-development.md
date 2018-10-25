@@ -1,5 +1,5 @@
 ---
-title: '1단계: PHP 개발을 위한 개발 환경 구성 | Microsoft Docs'
+title: '1단계: Ruby 개발을 위한 개발 환경 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -58,7 +58,7 @@ c. 파일을 추출 하려면 [확인]을 및 다음 추출""를 클릭 합니�
 > gem inst tiny_tds
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
+## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
 1. **터미널 열기**  
   

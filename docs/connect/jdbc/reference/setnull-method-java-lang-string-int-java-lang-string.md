@@ -1,5 +1,5 @@
 ---
-title: setNull 메서드(java.lang.String, int, java.lang.String)
+title: setNull 메서드(java.lang.String, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -40,7 +40,7 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>매개 변수  
  *sCol*  
   
- 매개 변수 이름이 들어 있는 String입니다.  
+ 매개 변수 이름이 들어 있는 **String**입니다.  
   
  *n 형식*  
   
@@ -48,16 +48,16 @@ public void setNull(java.lang.String sCol,
   
  *sTypeName*  
   
- 설정할 매개 변수의 정규화된 이름을 나타내는 String입니다.  
+ 설정할 매개 변수의 정규화된 이름을 나타내는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setURL 메서드는 java.sql.CallableStatement 인터페이스의 setURL 메서드에 의해 지정됩니다.  
+ 이 setNull 메서드는 java.sql.CallableStatement 인터페이스의 setNull 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+ [setNull 메서드(SQLServerCallableStatement)](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

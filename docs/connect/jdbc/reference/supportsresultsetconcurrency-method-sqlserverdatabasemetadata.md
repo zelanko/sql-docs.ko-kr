@@ -59,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- 동시성  
+ *동시성*  
   
- 결과 집합 동시성 수준을 나타내는 int이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
+ 결과 집합 동시성 수준을 나타내는 **int**이며, java.sql.ResultSet 또는 SQLServerResultSet에 정의된 다음 값 중 하나일 수 있습니다.  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 형식  
  CONCUR_READ_ONLY  

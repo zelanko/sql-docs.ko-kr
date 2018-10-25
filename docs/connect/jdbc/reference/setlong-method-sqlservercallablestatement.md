@@ -1,5 +1,5 @@
 ---
-title: setTime 메서드(SQLServerCallableStatement) | Microsoft Docs
+title: setLong 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47846911"
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 java 값으로 설정합니다.  
+  지정된 매개 변수를 지정된 **long** 값으로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ public void setLong(java.lang.String sCol,
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
- -l  
+ *l*  
   
  A **긴** 값입니다.  
   
@@ -49,7 +49,7 @@ public void setLong(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getLong 메서드는 java.sql.CallableStatement 인터페이스의 getLong 메서드에 의해 지정됩니다.  
+ 이 setLong 메서드는 java.sql.CallableStatement 인터페이스의 setLong 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

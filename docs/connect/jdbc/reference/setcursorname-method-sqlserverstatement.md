@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 메서드(SQLServerStatement) | Microsoft Docs
+title: setCursorName 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -41,7 +41,7 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>매개 변수  
  *name*  
   
- 커서 이름이 들어 있는 입니다.  
+ 커서 이름이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

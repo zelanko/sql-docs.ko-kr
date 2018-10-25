@@ -1,5 +1,5 @@
 ---
-title: wasNull 메서드(SQLServerResultSet) | Microsoft Docs
+title: last 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ public boolean last()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이  메서드는 java.sql.ResultSet 인터페이스의  메서드에 의해 지정됩니다.  
+ 이 last 메서드는 java.sql.ResultSet 인터페이스의 last 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

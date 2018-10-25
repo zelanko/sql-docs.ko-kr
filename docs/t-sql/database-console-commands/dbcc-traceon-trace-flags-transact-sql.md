@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 78a904579a0ee2664bc9d4146fb353c9aae99ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d40b573506d188fb3190de1ac5fe849eaa59ea10
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843769"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852048"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "47843769"
 |**9476**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델에서 기본 포함(Base Containment) 가정 대신 단순 포함(Simple Containment) 가정을 사용하여 계획을 생성하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/3189675)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리| 
 |**9481**|데이터베이스 호환성 수준에 관계없이 쿼리 최적화 프로그램 카디널리티 추정 모델을 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전으로 설정할 수 있도록 합니다. 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 LEGACY_CARDINALITY_ESTIMATION 옵션을 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|  
 |**9485**|DBCC SHOW_STATISTICS에 대해 SELECT 권한을 해제합니다.<br /><br />**범위**: 전역만|
-|**9488**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델을 사용하는 경우 테이블 반환 함수에 대한 고정 추정값을 기본값인 1([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 이전 버전의 쿼리 최적화 프로그램 카디널리티 추정 모델에서의 기본값에 해당)로 설정합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|
+|**9488**|<a name="9488"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델을 사용하는 경우 테이블 반환 함수에 대한 고정 추정값을 기본값인 1([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 이전 버전의 쿼리 최적화 프로그램 카디널리티 추정 모델에서의 기본값에 해당)로 설정합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**9495**|INSERT...SELECT 작업에 대한 삽입 중에 병렬 처리를 사용하지 않도록 설정하고, 사용자 및 임시 테이블 모두에 적용됩니다. 자세한 내용은 [Microsoft 지원 문서](http://support.microsoft.com/kb/3180087)를 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9567**|자동 시드 중에 Always On 가용성 그룹에 대한 데이터 스트림 압축을 사용하도록 설정합니다. 압축은 자동 시드 중에 전송 시간을 크게 줄일 수 있으며 프로세서에 대한 로드를 늘려줍니다. 자세한 내용은 [Always On 가용성 그룹 자동 초기화](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) 및 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션|
 |**9591**|Always On 가용성 그룹에서 로그 블록 압축을 사용하지 않도록 설정합니다. 로그 블록 압축은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 동기 및 비동기 복제본 모두에 사용되는 기본 동작입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 압축은 비동기 복제에서만 사용됩니다. <br /><br />**범위**: 전역 또는 세션|

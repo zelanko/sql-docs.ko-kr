@@ -23,7 +23,7 @@ ms.locfileid: "47772607"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 항목에서는 스파스 열에 대 한 SQL Server 지원에 대 한 OLE DB 드라이버에 대 한 정보를 제공합니다. 스파스 열에 대한 자세한 내용은 [SQL Server용 OLE DB 드라이버의 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)을 참조하세요. [열 및 스파스 열의 카탈로그 메타데이터&#40;OLE DB&#41; 표시](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+  이 항목에서는 스파스 열에 대 한 SQL Server 지원에 대 한 OLE DB 드라이버에 대 한 정보를 제공합니다. 스파스 열에 대한 자세한 내용은 [SQL Server용 OLE DB 드라이버의 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)을 참조하세요. 샘플은 [열 및 스파스 열의 카탈로그 메타데이터 표시 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)를 참조하세요.  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 문 메타데이터  
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터 새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET을 사용할 수 있습니다. 이 값은 **column_set** 값인 열에 대해 설정해야 합니다. DBCOLUMNFLAGS 플래그를 통해 검색할 수 있습니다 합니다 *dwFlags* icolumnsrowset:: Getcolumnsrowset에서 반환 된 행 집합의 DBCOLUMN_FLAGS 열과 icolumnsinfo:: Getcolumnsinfo의 매개 변수입니다.  

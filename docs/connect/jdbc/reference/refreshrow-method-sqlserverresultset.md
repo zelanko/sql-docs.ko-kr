@@ -1,13 +1,11 @@
 ---
-title: refreshRow 메서드 (SQLServerResultSet) | Microsoft Docs
+title: refreshRow 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.refreshRow
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50d89d95b5aecdd3ae430b278d83ab2222cde7d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 19bd400492ba8ce8547f48b83b2f94544bd28a2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812622"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +38,16 @@ public void refreshRow()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 refreshRow 메서드는 java.sql.ResultSet 인터페이스의 refreshRow 메서드에 의해 지정 됩니다.  
   
  커서가 삽입 행에 있는 경우에는 이 메서드를 호출할 수 없습니다.  
   
- 응용 프로그램에서는 이 메서드를 통해 데이터베이스에서 행을 다시 인출하도록 JDBC 드라이버에 명시적으로 지정할 수 있습니다. 응용 프로그램은이 메서드를 호출 해야 할 수 있습니다 때는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 캐싱 또는 데이터베이스에서 행의 최신 값을 사전 인출 합니다. 인출 크기가 1보다 크면 JDBC 드라이버에서는 실제로 여러 개의 행을 동시에 새로 고칠 수 있습니다.  
+ 응용 프로그램에서는 이 메서드를 통해 데이터베이스에서 행을 다시 인출하도록 JDBC 드라이버에 명시적으로 지정할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]가 캐싱 또는 사전 인출 중일 때 응용 프로그램에서 이 메서드를 호출하여 데이터베이스의 최신 행 값을 가져와야 할 수 있습니다. 인출 크기가 1보다 크면 JDBC 드라이버에서는 실제로 여러 개의 행을 동시에 새로 고칠 수 있습니다.  
   
- 모든 값은 트랜잭션 격리 수준과 커서 민감도에 따라 다시 인출됩니다. 이 메서드 호출 하기 전에 updater 메서드를 호출한 후 호출 되 면는 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 행에 대해 업데이트가 손실 됩니다. 이 메서드를 자주 호출하면 성능이 저하될 수 있습니다.  
+ 모든 값은 트랜잭션 격리 수준과 커서 민감도에 따라 다시 인출됩니다. updater 메서드를 호출한 후 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 호출하기 전에 이 메서드를 호출하면 행에 대한 업데이트 내용을 잃게 됩니다. 이 메서드를 자주 호출하면 성능이 저하될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

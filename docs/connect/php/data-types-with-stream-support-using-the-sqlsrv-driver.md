@@ -1,5 +1,5 @@
 ---
-title: SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원
+title: SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원| Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

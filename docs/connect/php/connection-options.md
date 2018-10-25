@@ -64,7 +64,7 @@ ms.locfileid: "47727491"
 
 3. *암호화* 를 사용하도록 설정하면 데이터를 암호화하는 데 필요한 계산 오버헤드로 인해 일부 응용 프로그램의 성능에 영향을 줄 수 있습니다.  
 
-4. 연결할 *UID* 와 *PWD* 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 연결될 때 둘 다 설정되어야 합니다.  
+4. 연결할 *UID*와 *PWD* 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 연결될 때 둘 다 설정되어야 합니다.  
 
 지원되는 많은 키가 ODBC 연결 문자열 특성입니다. ODBC 연결 문자열에 대한 정보는 [SQL Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.
 

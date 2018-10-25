@@ -21,7 +21,7 @@ ms.locfileid: "47834131"
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString 메서드(int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 열 레이블을 사용하여 지정된 열을 **String** 값으로 업데이트합니다.  
+  지정된 열 인덱스를 사용하여 지정된 열을 **문자열** 값으로 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   

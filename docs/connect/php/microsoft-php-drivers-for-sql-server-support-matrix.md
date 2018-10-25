@@ -23,7 +23,7 @@ ms.locfileid: "47728701"
   이 페이지에는 Microsoft PHP Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책이 포함되어 있습니다.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP 드라이버 지원 수명 주기 매트릭스 및 정책
- MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. JDBC Driver 버전 3.0, 4.x, 6.x 및 7.x는 드라이버 릴리스 날짜로부터 5년 동안 일반 지원을 제공합니다. 일반 지원은 [Microsoft 지원 수명 주기 웹 사이트](https://support.microsoft.com/lifecycle)에 정의되어 있습니다.
+ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주기와 관련해서 투명하고 예측 가능한 정보를 제공합니다. PHP Driver 버전 3.x, 4.x 및 5.x는 드라이버 릴리스 날짜로부터 5년 동안 일반 지원을 제공합니다. 일반 지원은 [Microsoft 지원 수명 주기 웹 사이트](https://support.microsoft.com/lifecycle)에 정의되어 있습니다.
 
  확장 및 사용자 지정 지원 옵션은 Microsoft PHP Driver에는 사용할 수 없습니다.
 

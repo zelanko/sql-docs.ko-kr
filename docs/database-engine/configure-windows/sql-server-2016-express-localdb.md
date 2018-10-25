@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608611"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851788"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
  
  ## <a name="try-it-out"></a>사용해 보세요! 
   
--   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. 
+-   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하는 경우 **Visual Studio 설치 관리자**를 통해 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. **Visual Studio 설치 관리자**에서 **.NET 데스크톱 개발** 워크로드의 일부로 또는 개별 구성 요소로서 SQL Server Express LocalDB를 설치할 수 있습니다.
+
+   > [!TIP]
+   > 또한 LocalDB를 Visual Studio 2017의 일부로 설치할 수도 있습니다. Visual Studio 설치 중에 SQL Server Express LocalDB를 포함하는 **.NET 데스크톱 개발** 워크로드를 선택합니다.
   
 -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** 는 항상 사용자 보안 컨텍스트에서 실행됩니다. 즉, **LocalDB** 는 로컬 Administrator 그룹의 자격 증명으로는 실행되지 않습니다. 즉, **LocalDB** 인스턴스에서 사용하는 모든 데이터베이스 파일은 로컬 Administrators 그룹의 멤버 자격을 고려하지 않고 소유 사용자의 Windows 계정을 사용하여 액세스할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SqlLocalDB 유틸리티](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB 유틸리티](../../tools/sqllocaldb-utility.md)

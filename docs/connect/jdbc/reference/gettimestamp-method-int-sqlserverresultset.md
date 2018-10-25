@@ -1,5 +1,5 @@
 ---
-title: getTime 메서드(int)(SQLServerResultSet) | Microsoft Docs
+title: getTimestamp 메서드(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -47,7 +47,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getTime 메서드는 java.sql.ResultSet 인터페이스의 getTime 메서드에 의해 지정됩니다.  
+ 이 getTimestamp 메서드는 java.sql.ResultSet 인터페이스의 getTimestamp 메서드에 의해 지정됩니다.  
   
  이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 및 smalldatetime 열에서만 값을 반환합니다.  
   

@@ -50,7 +50,7 @@ ms.locfileid: "48048533"
   
  마찬가지로 동일한 xevent 일치 하지 않는 형식의 사용을 감지할 수 있습니다 `hekaton_slow_parameter_passing`를 사용 하 여 `reason=parameter_conversion`입니다.  
   
- 메모리 최적화 테이블을 사용할 때 많은 시나리오에서 재시도 논리를 구현해야 하며 몇 가지 기능 제한에 대한 문제를 해결해야 하기 때문에 래퍼에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만들어야 할 수 있습니다. 예를 보려면 [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](memory-optimized-tables.md)을 참조하세요.  
+ 메모리 최적화 테이블을 사용할 때 많은 시나리오에서 재시도 논리를 구현해야 하며 몇 가지 기능 제한에 대한 문제를 해결해야 하기 때문에 래퍼에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만들어야 할 수 있습니다. 예를 보려면 [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](memory-optimized-tables.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  

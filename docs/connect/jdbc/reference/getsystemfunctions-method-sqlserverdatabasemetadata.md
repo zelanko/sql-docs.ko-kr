@@ -1,5 +1,5 @@
 ---
-title: getColumns 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
+title: getSystemFunctions 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public java.lang.String getSystemFunctions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 시스템 함수의 목록이 들어 있는 String입니다.  
+ 시스템 함수의 목록이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

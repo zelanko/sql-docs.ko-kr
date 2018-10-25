@@ -52,7 +52,7 @@ public byte getByte(java.lang.String columnName)
  이 메서드는 tinyint 및 bit와 같이 바이트 값을 안전하게 반환할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에서만 지원됩니다. 다른 모든 데이터 형식에서는 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getBytes 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   
+ [getByte 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

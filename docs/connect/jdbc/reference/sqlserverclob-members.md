@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81a9bb20fe94cdd1c51c6ed2fcaad3bf2704793
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b77219ffbd397b830e1706a84ce5b7ae00aaa6e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736721"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  다음 표에서에서 노출 하는 멤버는 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 클래스입니다.  
+  다음 표에는 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 클래스에 의해 노출되는 멤버가 나와 있습니다.  
   
 ## <a name="constructors"></a>생성자  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|SQLServerClob 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -41,9 +38,9 @@ ms.locfileid: "32846798"
   
 ## <a name="methods"></a>메서드  
   
-|이름|Description|  
+|속성|설명|  
 |----------|-----------------|  
-|[무료](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|이 메서드는 CLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
+|[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|이 메서드는 CLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Clob을 ASCII 스트림으로 구체화합니다.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)|Clob 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlserverclob.md)|지정된 시작 위치 및 복사할 문자 수에 따라 Clob에서 지정된 부분 문자열의 복사본을 반환합니다.|  
@@ -60,7 +57,7 @@ ms.locfileid: "32846798"
 |--------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerClob 클래스](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

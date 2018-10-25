@@ -21,7 +21,7 @@ ms.locfileid: "47742971"
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이  개체가 나타내는  값의 지정된 위치에서부터 ASCII 문자를 쓰는 데 사용할 스트림을 검색합니다.  
+  지정된 위치에서부터 ASCII 문자를 이 **java.sql.NClob** 개체가 나타내는 **NCLOB** 값에 쓰는 데 사용할 스트림을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,10 +33,10 @@ public java.io.OutputStream setAsciiStream(long pos)
 #### <a name="parameters"></a>매개 변수  
  *pos*  
   
- 개체에 쓰기 시작할 위치이며, 첫 번째 위치는 1입니다.  
+ **NCLOB** 개체에 쓰기 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
 ## <a name="return-value"></a>반환 값  
- ASCII로 인코딩된 문자를 쓸 수 있는 스트림을 나타내는  개체입니다.  
+ ASCII로 인코드된 문자를 쓸 수 있는 스트림을 나타내는 OutputStream 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

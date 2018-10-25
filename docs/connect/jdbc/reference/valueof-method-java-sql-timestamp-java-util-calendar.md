@@ -21,7 +21,7 @@ ms.locfileid: "47742741"
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 메서드(java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 java.sql.Timestamp 값과 분 단위 오프셋을 나타내는 값을 사용하여 GMT를 기준으로 특정 오프셋의 시점을 나타내는 **DateTimeOffset** 개체를 만듭니다.  
+  오프섹을 나타내는 java.sql.Timestamp 값과 java.util.Calendar 값이 지정된 경우 GMT를 기준으로 특정 오프셋의 시점을 나타내는 **DateTimeOffset** 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

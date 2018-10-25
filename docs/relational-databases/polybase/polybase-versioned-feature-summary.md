@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848281"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874351"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -36,8 +36,8 @@ SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약�
 |Hadoop으로 데이터 내보내기  |예|아니요|아니요| 예|
 |HDInsight 쿼리, HDInsight에서 가져오기, HDInsight로 내보내기 |아니요|아니요|아니요|아니요
 |Hadoop으로 쿼리 계산 푸시다운|예|아니요|아니요|예|  
-|Azure Blob Storage에서 데이터 가져오기|예|아니요|예|예| 
-|Azure Blob Storage로 데이터 내보내기|예|아니요|예|예|  
+|Azure Blob 저장소에서 데이터 가져오기|예|아니요|예|예| 
+|Azure Blob 저장소로 데이터 내보내기|예|아니요|예|예|  
 |Azure Data Lake Store에서 데이터 가져오기|아니요|아니요|예|아니요|    
 |Azure Data Lake Store에서 데이터 내보내기|아니요|아니요|예|아니요|
 |Microsoft의 BI 도구에서 PolyBase 쿼리 실행|예|아니요|예|예|   
@@ -80,12 +80,10 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 - [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+- 통합 인증은 지원되지 않습니다. 지금은 사용자 이름 및 암호만 지원됩니다.  
+- 기본적으로 암호화를 사용하도록 설정합니다. 암호화를 사용하지 않도록 설정하려면 ...해야 합니다.
+- [형식 매핑 제한 사항](polybase-type-mapping.md)
 
-- TBD: 행 너비
-- TBD: 형식 매핑
-- TBD: 인증
-- TBD: 데이터 정렬 
-- TBD: 푸시다운  
 
 ## <a name="security-and-authentication"></a>보안 및 인증 
 

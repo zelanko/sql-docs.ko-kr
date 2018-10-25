@@ -1,5 +1,5 @@
 ---
-title: SQL Server용 Microsoft OLE DB 드라이버 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버의 구성 요소 | Microsoft Docs
 description: SQL Server용 OLE DB 드라이버의 구성 요소
 ms.custom: ''
 ms.date: 06/12/2018

@@ -1,5 +1,5 @@
 ---
-title: wasNull 메서드(SQLServerResultSet) | Microsoft Docs
+title: isLast 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ public boolean isLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getInt 메서드는 java.sql.ResultSet 인터페이스의 getInt 메서드에 의해 지정됩니다.  
+ 이 isLast 메서드는 java.sql.ResultSet 인터페이스의 isLast 메서드에 의해 지정됩니다.  
   
  이 메서드를 정방향 및 동적 커서와 함께 사용하면 예외가 발생합니다.  
   

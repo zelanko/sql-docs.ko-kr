@@ -113,7 +113,7 @@ ms.locfileid: "47770901"
   
 8.  보고서 서버를 다시 시작하여 현재 열려 있는 모든 세션을 지웁니다.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> 보고서 서버에 연결할 때 Kerberos 인증 오류 해결  
  Negotiate 또는 Kerberos 인증용으로 구성된 보고서 서버에서 Kerberos 인증 오류가 발생하면 보고서 서버에 대한 클라이언트 연결이 실패합니다. Kerberos 인증 오류는 다음과 같은 경우 발생합니다.  
   
 -   보고서 서버 서비스가 Windows 도메인 사용자 계정으로 실행되는데 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않은 경우  

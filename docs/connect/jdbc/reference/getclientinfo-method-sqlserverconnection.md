@@ -27,8 +27,8 @@ ms.locfileid: "47837691"
   
 |속성|설명|  
 |----------|-----------------|  
-|[getClientInfo 메서드()](../../../connect/jdbc/reference/getclientinfo-method.md)|JDBC 드라이버에서 지원되는 각 클라이언트 정보 속성의 이름 및 현재 값이 들어 있는 목록을 검색합니다.|  
-|[getClientInfo 메서드(java.lang.String)](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|지정된 클라이언트 정보 속성의 값을 검색합니다.|  
+|[getClientInfo 메서드 &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|JDBC 드라이버에서 지원되는 각 클라이언트 정보 속성의 이름 및 현재 값이 들어 있는 목록을 검색합니다.|  
+|[getClientInfo 메서드 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|지정된 클라이언트 정보 속성의 값을 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

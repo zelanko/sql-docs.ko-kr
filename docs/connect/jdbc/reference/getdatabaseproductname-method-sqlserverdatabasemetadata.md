@@ -36,7 +36,7 @@ public java.lang.String getDatabaseProductName()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 데이터베이스 제품 이름이 들어 있는 String입니다.  
+ 데이터베이스 제품 이름이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

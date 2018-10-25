@@ -1,5 +1,5 @@
 ---
-title: getServerName 메서드(SQLServerDataSource) | Microsoft Docs
+title: getDescription 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ public java.lang.String getDescription()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 데이터 원본 설명이 들어 있는 String이며, 값이 설정되어 있지 않은 경우 null입니다.  
+ 데이터 원본 설명이 들어 있는 **String**이며, 값이 설정되어 있지 않은 경우 null입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

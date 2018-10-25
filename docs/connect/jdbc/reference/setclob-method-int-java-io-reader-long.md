@@ -21,7 +21,7 @@ ms.locfileid: "47818831"
 # <a name="setclob-method-int-javaioreader-long"></a>setClob 메서드(int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 매개 변수를 지정된 문자 길이의 지정된  개체로 설정합니다.  
+  지정된 매개 변수를 지정된 문자 길이의 지정된 Reader 개체로 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,16 +43,16 @@ public final void setClob(int parameterIndex,
   
  *length*  
   
- 매개 변수 값의 문자 수를 나타내는 입니다.  
+ 매개 변수 값의 문자 수를 나타내는 **long**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 setTime 메서드는 java.sql.PreparedStatement 인터페이스의 setTime 메서드에 의해 지정됩니다.  
+ 이 setClob 메서드는 java.sql.PreparedStatement 인터페이스의 setClob 메서드에 의해 지정됩니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [setTime 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
+ [setClob 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

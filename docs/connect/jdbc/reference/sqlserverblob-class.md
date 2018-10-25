@@ -32,7 +32,7 @@ ms.locfileid: "47812261"
   
  **확장:** java.lang.Object  
   
- 구현: java.sql.Blob, java.io.Serializable  
+ **구현:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>구문  
   

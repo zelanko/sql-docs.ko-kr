@@ -5,28 +5,25 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70c2c0f9316384d831af7d7ce317d16bdc3c41a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759952"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>방법: Windows 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 SQL Server에 연결합니다. 이 대부분의 시나리오에서 웹 서버의 프로세스 id 또는 스레드 id (웹 서버에서 가장 사용) 하는 경우는 최종 사용자의 id가 아닌 서버에 연결 하는 데 사용 되는 의미를 확인 하는 것이 유용 합니다.  
+기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 SQL Server에 연결합니다. 대부분의 시나리오에서 이는 서버에 연결하기 위해 최종 사용자의 ID가 아닌 웹 서버의 프로세스 ID 또는 스레드 ID(웹 서버가 가장을 사용하는 경우)가 사용된다는 것을 의미합니다.  
   
 Windows 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고려해야 합니다.  
   
@@ -48,7 +45,7 @@ Windows 인증이 실제 옵션이 아니면 [How to: Connect Using SQL Server A
 ## <a name="example"></a>예제  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 SQLSRV 드라이버를 사용하는 경우 다음 예제에서는 Windows 인증을 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 연결이 설정된 후 데이터베이스에 액세스하는 사용자의 로그인에 대해 서버가 쿼리됩니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  
@@ -108,7 +105,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
@@ -123,5 +120,5 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 
 [사용자와 스키마 분리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Grant 개체 사용 권한 (Transact SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[개체 권한 부여(Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

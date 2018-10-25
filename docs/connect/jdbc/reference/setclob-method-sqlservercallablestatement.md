@@ -1,5 +1,5 @@
 ---
-title: setTime 메서드(SQLServerCallableStatement) | Microsoft Docs
+title: setClob 메서드(SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -27,9 +27,9 @@ ms.locfileid: "47732571"
   
 |속성|설명|  
 |----------|-----------------|  
-|[setClob 메서드(java.lang.String, java.sql.Clob)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|지정된 매개 변수를 지정된  개체로 설정합니다.|  
-|[setClob 메서드(java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|지정된 매개 변수를 지정된 java.io.Reader 개체로 설정합니다.|  
-|[setClob 메서드(java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|지정된 매개 변수를 지정된 문자 길이의 지정된  개체로 설정합니다.|  
+|[setClob 메서드 &#40;java.lang.String, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|지정된 매개 변수를 지정된 Clob 개체로 설정합니다.|  
+|[setClob 메서드 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|지정된 매개 변수를 지정된 Reader 개체로 설정합니다.|  
+|[setClob 메서드 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|지정된 매개 변수를 지정된 문자 길이의 지정된 Reader 개체로 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

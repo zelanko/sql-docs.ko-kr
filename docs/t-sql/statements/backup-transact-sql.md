@@ -1,7 +1,7 @@
 ---
 title: BACKUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d35448aeeaba9815fbbc983bcb59e01d3e930476
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760991"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252210"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -68,23 +68,14 @@ SQL 데이터베이스를 백업합니다.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하여 데이터베이스 백업을 만들거나 데이터베이스의 파일 하나 이상 또는 파일 그룹을 백업하여 파일 백업(BACKUP DATABASE)을 만듭니다. 또한 전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스의 트랜잭션 로그를 백업하여 로그 백업(BACKUP LOG)을 만듭니다. 
   
@@ -309,7 +300,7 @@ Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사�
   
 FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
 
-Azure Blob Storage 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
+Azure Blob 저장소 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
     
 DIFFERENTIAL  
 
@@ -787,7 +778,7 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 - 6. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  
 - G  [기존 미러된 미디어 세트에 백업](#existing_mirrored_media_set)  
 - 8. [새 미디어 세트에 압축된 백업 만들기](#creating_compressed_backup_new_media_set)  
-- 9. [Microsoft Azure Blob Storage 서비스에 백업](#url)  
+- 9. [Microsoft Azure Blob 저장소 서비스에 백업](#url)  
   
 > [!NOTE]  
 > 백업 방법 도움말 항목에 추가적인 예가 포함되어 있습니다. 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
@@ -916,8 +907,8 @@ WITH
    COMPRESSION;  
 ```  
 
-###  <a name="url"></a> I. Microsoft Azure Blob Storage 서비스에 백업 
-이 예에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
+###  <a name="url"></a> I. Microsoft Azure Blob 저장소 서비스에 백업 
+이 예에서는 Microsoft Azure Blob 저장소 서비스에 `Sales`의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
 ```sql  
 BACKUP DATABASE Sales
@@ -946,23 +937,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance*</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />데이터 웨어하우스</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Azure SQL Database 관리되는 인스턴스에 배치/호스트되는 SQL 데이터베이스를 백업합니다. SQL Database [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 사용하면 자동으로 백업되고 사용자가 전체 데이터베이스 `COPY_ONLY` 백업을 만들 수 있습니다. 차등, 로그 및 파일 스냅숏 백업은 지원되지 않습니다.  
 
@@ -1163,23 +1145,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* Parallel<br />데이터 웨어하우스 *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* 병렬<br />데이터 웨어하우스 \*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
+## <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스의 백업을 만들고 사용자 지정 네트워크 위치에 어플라이언스의 백업을 저장합니다. 재해 복구를 하거나 하나의 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사하려면 [RESTORE DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/restore-statements-transact-sql.md)와 함께 이 명령문을 사용합니다.  
   

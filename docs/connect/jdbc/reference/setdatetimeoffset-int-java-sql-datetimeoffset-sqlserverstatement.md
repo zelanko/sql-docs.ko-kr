@@ -35,7 +35,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
   
  설정할 열의 인덱스입니다.  
   
- *DateTimeOffset*  
+ *dateTimeOffset*  
   
  DateTimeOffset 개체입니다.  
   
@@ -54,7 +54,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |datetime2|"YYYY-MM-DD hh:mm:ss[.nnnnnnn]"만 삽입 가능|  
   
 ## <a name="see-also"></a>참고 항목  
- [updateDateTimeOffset&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
+ [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 클래스](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

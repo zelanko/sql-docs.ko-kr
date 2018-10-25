@@ -21,7 +21,7 @@ ms.locfileid: "47857201"
 # <a name="converting-data-types"></a>데이터 형식 변환
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 데이터를 보내거나 데이터를 검색할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 통해 데이터 형식을 지정할 수 있습니다. 데이터 형식을 지정하는 것은 선택 사항입니다. 데이터 형식이 지정되지 않으면 기본 형식이 사용됩니다. 이 섹션의 항목은 데이터 형식을 지정하는 방법을 설명하고 기본 데이터 형식에 대한 세부 정보를 제공합니다.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 데이터를 보내거나 데이터를 검색할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 통해 데이터 형식을 지정할 수 있습니다. 데이터 형식을 지정하는 것은 선택 사항입니다. 데이터 형식이 지정되지 않으면 기본 형식이 사용됩니다. 이 섹션의 항목은 데이터 형식을 지정하는 방법을 설명하고 기본 데이터 형식에 대한 세부 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

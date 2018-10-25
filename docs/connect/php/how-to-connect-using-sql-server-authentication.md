@@ -1,27 +1,24 @@
 ---
-title: '방법: SQL Server 인증을 사용 하 여 연결 | Microsoft Docs'
+title: '방법: SQL Server 인증을 사용하여 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca3084ccdabf2ecd0f5be9ca707fb5f5f3387f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731801"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>방법: SQL Server 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ SQL Server 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 �
   
 -   SQL Server 혼합 모드 인증이 서버에서 사용하도록 설정되어 있어야 합니다.  
   
--   사용자 ID와 암호 (*UID* 및 *PWD* SQLSRV 드라이버에서 연결 특성) 연결을 설정 하려고 할 때 설정 해야 합니다. 사용자 ID 및 암호가 유효한 SQL Server 사용자 및 암호에 매핑되어야 합니다.  
+-   연결을 설정하려고 시도할 때 사용자 ID 및 암호(SQLSRV 드라이버의 *UID* 및 *PWD* 연결 특성)가 설정되어 있어야 합니다. 사용자 ID 및 암호가 유효한 SQL Server 사용자 및 암호에 매핑되어야 합니다.  
   
 > [!NOTE]  
 > 닫는 중괄호(})가 포함된 암호는 두 번째 닫는 중괄호로 이스케이프되어야 합니다. 예를 들어 SQL Server 암호가 "pass}word"인 경우 *PWD* 연결 특성의 값이 "pass}}word"로 설정되어야 합니다.  
@@ -54,9 +51,9 @@ SQL Server 인증을 사용하여 SQL Server에 연결할 때 다음 예방 조�
 > 연결을 설정할 때 사용자 ID 및 암호 외에 연결 특성을 설정할 수 있습니다. 지원되는 연결 특성의 전체 목록은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 SQL Server 인증이 포함된 SQLSRV 드라이버를 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 필요한 값 *UID* 및 *PWD* 응용 프로그램별 텍스트 파일에서 연결 특성 가져옵니다 *uid.txt* 및 *pwd.txt*에 *C:\AppData* 디렉터리입니다. 연결이 설정된 후 사용자 로그인을 확인하기 위해 서버가 쿼리됩니다.  
+다음 예제에서는 SQL Server 인증이 포함된 SQLSRV 드라이버를 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 필수 *UID* 및 *PWD* 연결 특성 값을 *C:\AppData* 디렉터리의 응용 프로그램 관련 텍스트 파일인 *uid.txt* 및 *pwd.txt*에서 가져옵니다. 연결이 설정된 후 사용자 로그인을 확인하기 위해 서버가 쿼리됩니다.  
   
-이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
+이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   
 ```  
 <?php  
@@ -133,14 +130,14 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[SUSER_SNAME (Transact SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+[SUSER_SNAME(Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
 [방법: SQL Server 로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)
 
@@ -150,5 +147,5 @@ sqlsrv_close( $conn);
 
 [사용자와 스키마 분리](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Grant 개체 사용 권한 (Transact SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[개체 권한 부여(Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

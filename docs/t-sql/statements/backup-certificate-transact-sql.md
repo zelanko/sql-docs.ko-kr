@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -28,16 +28,16 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aada31cd31c60c4c0a4cc23ea90f057c0b64f312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bf65c24924d7e585131d90d01c42cf551ae4997d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755987"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798563"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   인증서를 파일로 내보냅니다.  
   
@@ -59,7 +59,7 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -76,10 +76,6 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *path_to_private_key_file*  
  개인 키를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 기본 경로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더입니다.  
 
-> [!IMPORTANT]
-> Azure SQL Database는 파일에 인증서 백업을 지원하지 않습니다.
-
-  
  *encryption_password*  
  키를 백업 파일에 작성하기 전에 개인 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다.  
   

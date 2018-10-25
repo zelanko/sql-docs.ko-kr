@@ -36,7 +36,7 @@ public boolean dataDefinitionCausesTransactionCommit()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- DDL 문이 강제로 커밋하면 이고, 그렇지 않으면 **false**입니다.  
+ DDL 문이 강제로 커밋하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

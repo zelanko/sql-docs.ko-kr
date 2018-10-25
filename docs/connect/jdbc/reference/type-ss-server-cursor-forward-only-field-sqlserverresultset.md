@@ -36,7 +36,7 @@ public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>필드 값  
- **int** 값 1006입니다.  
+ **int** 값 2004입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -5,9 +5,7 @@ ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804858"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 메서드(java.lang.String)
 
@@ -39,20 +36,20 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>매개 변수
 *sql*
 
-A **문자열** SQL 문이 들어 있는입니다.
+SQL 문이 포함된 **문자열**입니다.
 
 ## <a name="return-value"></a>반환 값
-**int** DDL 문을 사용 하는 경우 0, 영향을 받는 행의 수를 나타내는입니다.
+영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.
 
 ## <a name="exceptions"></a>예외
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정 됩니다.
 
-이 메서드를 호출 개체가 만들어질 때 SQLServerPreparedStatement 개체에 대 한 SQL 문이 지정 된 후 예외가 발생 합니다.
+SQLServerPreparedStatement 개체에 대한 SQL 문은 개체가 만들어질 때 지정되므로 이 메서드를 호출하면 예외가 발생합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [executeUpdate 메서드 &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 

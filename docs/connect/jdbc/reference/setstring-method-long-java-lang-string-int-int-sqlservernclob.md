@@ -21,7 +21,7 @@ ms.locfileid: "47810731"
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString 메서드(long, java.lang.String, int, int)(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 오프셋 및 길이에 따라 의 지정된 위치에서부터 지정된 문자열을 씁니다.  
+  지정된 오프셋 및 길이에 따라 NCLOB의 지정된 위치에서부터 지정된 문자열을 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +36,15 @@ int setString(long pos,
 #### <a name="parameters"></a>매개 변수  
  *pos*  
   
- 값에 쓰기 시작할 위치이며, 첫 번째 위치는 1입니다.  
+ **NCLOB**에 쓰기 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
- *STR*  
+ *str*  
   
- CLOB에 쓸 문자열입니다.  
+ **NCLOB**에 쓸 문자열입니다.  
   
  *offset*  
   
- 쓸 문자를 읽기 시작할 의 오프셋입니다.  
+ 쓸 문자를 읽기 시작할 *str*의 오프셋입니다.  
   
  *len*  
   

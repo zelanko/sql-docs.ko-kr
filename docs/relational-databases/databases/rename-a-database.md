@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 이름 바꾸기 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/20/2017
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,83 +16,103 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b040059f7ad2fd1b58998e2b29279b4125374076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6b97d2d670754f8205ffe269883d6791f605f5b
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232537"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스의 이름을 바꾸는 방법에 대해 설명합니다. 데이터베이스 이름에는 식별자 규칙에서 허용하는 모든 문자를 사용할 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 사용자 정의 데이터베이스 또는 Azure SQL Database의 이름을 바꾸는 방법을 설명합니다. 데이터베이스 이름에는 식별자 규칙에서 허용하는 모든 문자를 사용할 수 있습니다.  
   
- **항목 내용**  
+## <a name="in-this-topic"></a>항목 내용
   
--   **시작하기 전 주의 사항:**  
+- 시작하기 전 주의 사항:  
   
-     [제한 사항](#Restrictions)  
+     [제한 사항](#limitations-and-restrictions)  
   
-     [보안](#Security)  
+     [보안](#security)  
   
--   **데이터베이스의 이름을 바꾸려면:**  
+- 데이터베이스의 이름을 바꾸려면:  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
   
-     [Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#rename-a-database-using-transact-sql)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
-> Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 문을 사용합니다. Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
+> Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항
   
-###  <a name="Restrictions"></a> 제한 사항  
+### <a name="limitations-and-restrictions"></a>제한 사항  
   
--   시스템 데이터베이스 이름은 바꿀 수 없습니다.  
+- 시스템 데이터베이스 이름은 바꿀 수 없습니다.
+- 다른 사용자가 데이터베이스에 액세스하는 동안에는 데이터베이스 이름을 바꿀 수 없습니다. 
+  - SQL Server에서는 단일 사용자 모드로 데이터베이스를 설정하여 열려 있는 모든 연결을 닫을 수 있습니다. 자세한 내용은 [단일 사용자 모드로 데이터베이스 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)을 참조하세요.
+  - Azure SQL Database에서는 이름을 바꿀 데이터베이스에 연결된 사용자가 없는지 확인해야 합니다.
   
-###  <a name="Security"></a> 보안  
+### <a name="security"></a>보안  
   
-####  <a name="Permissions"></a> Permissions  
- 데이터베이스에 대한 ALTER 권한이 필요합니다.  
+#### <a name="permissions"></a>Permissions
+
+데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+## <a name="rename-a-database-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 이름 바꾸기
+
+다음 단계를 수행하면 SQL Server Management Studio를 사용하여 SQL Server 또는 Azure SQL Database의 이름을 바꿀 수 있습니다.
   
-#### <a name="to-rename-a-database"></a>데이터베이스 이름을 바꾸려면  
+1. **개체 탐색기**에서 SQL 인스턴스에 연결합니다.  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+2. 데이터베이스에 대한 열린 연결이 없는지 확인하세요. SQL Server를 사용하는 경우 [데이터베이스를 단일 사용자 모드로 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)하여 열려 있는 모든 연결을 닫고 데이터베이스 이름을 변경하는 동안 다른 사용자가 연결하지 못하도록 할 수 있습니다.  
   
-2.  데이터베이스를 사용하고 있지 않는지 확인하고 [데이터베이스를 단일 사용자 모드로 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)합니다.  
+3. 개체 탐색기에서 **데이터베이스**를 확장하고, 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **이름 바꾸기**를 클릭합니다.  
   
-3.  **데이터베이스**를 확장하고 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
+4. 새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
   
-4.  새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
+## <a name="rename-a-database-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스 이름 변경하기  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>SQL Server 데이터베이스를 단일 사용자 모드로 전환하여 이름을 바꾸려면
+
+데이터베이스를 단일 사용자 모드로 설정하는 단계를 포함해 다음 단계를 수행하여 SQL Server Management Studio에서 T-SQL을 사용하여 SQL Server 데이터베이스의 이름을 바꿉니다. 그런 다음, 데이터베이스를 다시 다중 사용자 모드로 변경합니다.
   
-#### <a name="to-rename-a-database"></a>데이터베이스 이름을 바꾸려면  
+1. 인스턴스의 `master` 데이터베이스에 연결합니다.  
+2. 쿼리 창을 엽니다.  
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
+   ```sql
+   USE master;  
+   GO  
+   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+   GO
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   GO  
+   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER
+   GO
+   ```  
+
+### <a name="to-rename-an-azure-sql-database-database"></a>Azure SQL Database 데이터베이스의 이름을 바꾸려면
+
+다음 단계를 수행하여 SQL Server Management Studio에서 T-SQL을 사용하여 Azure SQL Database의 이름을 바꿉니다.
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+1. 인스턴스의 `master` 데이터베이스에 연결합니다.  
+2. 쿼리 창을 엽니다.
+3. 데이터베이스를 사용 중인 사용자가 없는지 확인합니다.
+4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `MyTestDatabase` 데이터베이스의 이름을 `MyTestDatabaseCopy`로 변경합니다.
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `AdventureWorks2012` 데이터베이스의 이름을 `Northwind`로 변경합니다.  
+   ```sql
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ```  
+
+## <a name="backup-after-renaming-a-database"></a>데이터베이스의 이름을 바꾼 후 백업  
+
+SQL Server에서 데이터베이스의 이름을 바꾼 후 `master` 데이터베이스를 백업합니다. Azure SQL Database에서는 백업이 자동으로 발생하므로 수동으로 백업할 필요가 없습니다.  
   
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-Modify Name = Northwind ;  
-GO  
-```  
-  
-###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스의 이름을 바꾼 후  
- 데이터베이스 이름을 바꾼 후 **master** 데이터베이스를 백업합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+- [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  

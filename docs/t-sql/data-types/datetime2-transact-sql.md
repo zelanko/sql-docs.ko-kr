@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed5b430bfdd6f24e0942c72b4ce8d0cfce40d672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627001"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782332"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-**datetime**에서 변환되는 경우 날짜 및 시간이 복사됩니다.  소수 부분 자릿수는 7자리로 확장됩니다.  다음 예에서는 `datetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.
+**datetime**에서 변환되는 경우 날짜 및 시간이 복사됩니다. 소수 부분 자릿수는 7자리로 확장됩니다. 다음 예에서는 `datetime` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +157,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> 위의 예에 나와 있는 것처럼 데이터베이스 호환성 수준 130에서 datetime과 datetime2 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4010261)를 참조하세요.
+
 ### <a name="converting-string-literals-to-datetime2"></a>문자열 리터럴을 datetime2로 변환  
 문자열에 포함된 모든 부분의 형식이 올바른 경우 문자열 리터럴에서 날짜/시간 유형으로 변환할 수 있습니다. 그렇지 않으면 런타임 오류가 발생합니다. 날짜/시간 유형에서 문자열 리터럴로의 암시적 변환 또는 명시적 변환에 스타일을 지정하지 않은 경우 현재 세션의 기본 형식이 지정됩니다. 다음 표에서는 문자열 리터럴을 **datetime2** 데이터 형식으로 변환하는 규칙을 보여 줍니다.
   

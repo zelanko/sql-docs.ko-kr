@@ -1,5 +1,5 @@
 ---
-title: beforeFirst 메서드(SQLServerResultSet) | Microsoft Docs
+title: first 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -36,13 +36,13 @@ public boolean first()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 커서가 첫 번째 행으로 이동되면 이고, 그렇지 않으면 **false**입니다.  
+ 커서가 첫 번째 행으로 이동되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getInt 메서드는 java.sql.ResultSet 인터페이스의 getInt 메서드에 의해 지정됩니다.  
+ 이 first 메서드는 java.sql.ResultSet 인터페이스의 first 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

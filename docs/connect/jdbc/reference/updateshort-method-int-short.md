@@ -26,7 +26,7 @@ ms.locfileid: "47771516"
 # <a name="updateshort-method-int-short"></a>updateShort 메서드(int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  열 이름이 지정된 경우 지정된 열을 **short** 값으로 업데이트합니다.  
+  열 인덱스가 지정된 경우 지정된 열을 **short** 값으로 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ public void updateShort(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getShort 메서드는 java.sql.ResultSet 인터페이스의 getShort 메서드에 의해 지정됩니다.  
+ 이 updateShort 메서드는 java.sql.ResultSet 인터페이스의 updateShort 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateShort 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   

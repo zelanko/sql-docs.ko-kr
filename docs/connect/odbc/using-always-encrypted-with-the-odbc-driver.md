@@ -1,25 +1,20 @@
 ---
 title: SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828271"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. 드라이버는 자동으로 검색 하 고 암호화 된 열을 대상의 SSN 및 날짜 매개 변수의 값을 암호화 합니다. 이렇게 하면 응용 프로그램에 투명하게 암호화할 수 있습니다.
 
-- 암호화 된 열을 포함 하 여 데이터베이스 열에 삽입 된 값이 바인딩된 매개 변수로 전달 됩니다 (참조 [SQLBindParameter 함수](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입 된 값 쿼리 문에 포함 된 리터럴로 전달 하는 경우 드라이버는 암호화 하거나, 쿼리에서 리터럴을 처리 하려고 시도 하지 않습니다 때문에 쿼리가 실패 합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
+- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다([SQLBindParameter Function](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx) 참조). 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입 된 값 쿼리 문에 포함 된 리터럴로 전달 하는 경우 드라이버는 암호화 하거나, 쿼리에서 리터럴을 처리 하려고 시도 하지 않습니다 때문에 쿼리가 실패 합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 
 - SSN 열에 삽입 하는 매개 변수의 SQL 형식에 매핑되는 SQL_CHAR로 되어는 **char** SQL Server 데이터 형식 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). 매개 변수의 형식에 매핑되는 SQL_WCHAR 설정 되었는지 여부 **nchar**, 상시 암호화에서는 암호화 된 char 값을 암호화 된 nchar 값에서 서버 쪽 변환을 지원 하지 않으므로 쿼리가 실패 합니다. 참조 [ODBC 프로그래머 참조-부록 d: 데이터 형식](https://msdn.microsoft.com/library/ms713607.aspx) 데이터 형식 매핑에 대 한 정보에 대 한 합니다.
 
@@ -144,9 +139,9 @@ CREATE TABLE [dbo].[Patients](
 
 다음 예제에서는 암호화된 값을 기준으로 데이터를 필터링하고 암호화된 열에서 일반 텍스트 데이터를 검색하는 방법을 보여 줍니다. 다음에 유의하세요.
 
-- 전달할 SQLBindParameter를 사용 하 여 드라이버를 투명 하 게 암호화할 수 서버로 보내기 전에 되도록 해야 SSN 열에서 필터링 하려면 WHERE 절에 사용 되는 값입니다.
+- 해당 드라이버가 서버로 전달하기 전에 투명하게 암호화할 수 있도록 SQLBindParameter 매개 변수를 사용하여 SSN 열에서 필터링하기 위해 WHERE 절에 사용되는 값을 전달해야 합니다.
 
-- 드라이버가 SSN 및 BirthDate 열에서 검색 한 데이터를 투명 하 게 암호 해독 하므로 프로그램에서 인쇄 하는 모든 값, 일반 텍스트로 됩니다.
+- 이 드라이버는 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄한 모든 값은 일반 텍스트로 표시됩니다.
 
 > [!NOTE]
 > 쿼리는 결정적 암호화 하는 경우에 암호화 된 열에서 같음 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
@@ -247,13 +242,13 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>지원되지 않는 데이터 형식 변환 오류
 
-상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지 하려면 SQLBindParameter 암호화 된 열을 대상으로 하는 매개 변수를 사용 하 여 사용 하는 경우 다음 사항을 관찰 해야 있는지 확인 합니다.
+상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 지원되는 형식 변환의 자세한 목록은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. 데이터 형식 변환 오류를 방지 하려면 SQLBindParameter 암호화 된 열을 대상으로 하는 매개 변수를 사용 하 여 사용 하는 경우 다음 사항을 관찰 해야 있는지 확인 합니다.
 
 - 매개 변수의 SQL 형식을 동일 하거나 대상 열의 형식과 동일 하거나 열의 형식 변환이 SQL 유형에 서 지원 합니다.
 
 - SQL Server 데이터 형식이 `decimal` 및 `numeric`인 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다.
 
-- 대상 열을 수정하는 쿼리에서 SQL Server 데이터 형식이 `datetime2`, `datetimeoffset`또는 `time`인 열을 대상으로 하는 매개 변수의 정밀도가 대상 열의 정밀도보다 크지 않아야 합니다.  
+- 대상 열을 수정하는 쿼리에서 SQL Server 데이터 형식이 `datetime2`, `datetimeoffset` 또는 `time`인 열을 대상으로 하는 매개 변수의 정밀도가 대상 열의 정밀도보다 크지 않아야 합니다.  
 
 ##### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>암호화된 값 대신 일반 텍스트를 전달하여 발생하는 오류
 
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 다른 ODBC 응용 프로그램은 변경 하지는 CMK 저장소 AKV를 사용 해야 합니다.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자를 사용 하 여
+### <a name="using-the-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 
 라는 Windows 인증서 저장소에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함 하는 Windows의 SQL Server 용 ODBC 드라이버 `MSSQL_CERTIFICATE_STORE`합니다. (이 공급자는 macOS 또는 Linux에서 사용할 수 있습니다.) 이 공급자를 사용 하 여 CMK 클라이언트 컴퓨터에 로컬로 저장 되어 이며 응용 프로그램에서 추가 구성 없이 드라이버와 함께 사용 하는 데 필요한 합니다. 그러나 응용 프로그램 저장소에 인증서 및 개인 키에 액세스할 수 있어야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)을 참조하세요.
 
@@ -574,7 +569,7 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 
 |속성|설명|  
 |----------|-----------------|  
-|`ColumnEncryption`|허용 되는 값은 `Enabled` / `Disabled`합니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` -연결에 Always Encrypted 기능을 사용 하지 않도록 설정 합니다. <br><br>기본값은 `Disabled`입니다.|  
+|`ColumnEncryption`|허용 되는 값은 `Enabled` / `Disabled`합니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다. <br><br>기본값은 `Disabled`입니다.|  
 |`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`,`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword`, 유효한 Azure Active Directory 사용자 계정 이름으로이 값을 설정 합니다. <br>때 `KeyStoreAuthetication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID 설정 |
 |`KeyStoreSecret` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword` 이 값을 해당 사용자 이름의 암호를 설정 합니다. <br>때 `KeyStoreAuthentication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID와 연결 된 응용 프로그램 암호 설정|

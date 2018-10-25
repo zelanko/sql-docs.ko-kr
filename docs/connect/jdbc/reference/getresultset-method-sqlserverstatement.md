@@ -36,13 +36,13 @@ public final java.sql.ResultSet getResultSet()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 결과 집합 개체입니다.  
+ ResultSet 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getResultSet 메서드는 java.sql.Statement 인터페이스의 getResultSet 메서드에 의해 지정 됩니다.  
+ 이 getResultSet 메서드는 java.sql.Statement 인터페이스의 getResultSet 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -59,7 +59,7 @@ public boolean othersDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>반환 값  
- 삭제 내용이 표시되면 이고, 그렇지 않으면 **false**입니다.  
+ 삭제 내용이 표시되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

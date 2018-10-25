@@ -1,5 +1,5 @@
 ---
-title: SQL Server용 Microsoft OLE DB 드라이버 | Microsoft Docs
+title: 릴리스 정보(SQL Server용 OLE DB 드라이버)| Microsoft Docs
 ms.date: 07/03/2018
 ms.prod: sql
 ms.technology: connectivity

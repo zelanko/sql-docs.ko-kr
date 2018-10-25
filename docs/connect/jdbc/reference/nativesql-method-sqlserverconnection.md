@@ -1,5 +1,5 @@
 ---
-title: createSQLXML 메서드(SQLServerConnection) | Microsoft Docs
+title: nativeSQL 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -41,10 +41,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>매개 변수  
  *sql*  
   
- $**: SQL 문이 포함된 문자열입니다.  
+ SQL 문이 포함된 **String**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 변환된 SQL 문이 들어 있는 입니다.  
+ 변환된 SQL 문이 들어 있는 **String**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

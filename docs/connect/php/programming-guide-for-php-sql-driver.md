@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776501"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "37992795"
 |[데이터 형식 변환](../../connect/php/converting-data-types.md)|데이터 형식을 지정하고 기본 데이터 형식에 대한 세부 정보를 제공하는 방법을 다룹니다.|  
 |[오류 및 경고 처리](../../connect/php/handling-errors-and-warnings.md)|오류 및 경고를 처리하는 방법을 다룹니다.|  
 |[작업 로깅](../../connect/php/logging-activity.md)|오류 및 경고를 로깅하는 방법에 대한 정보를 제공합니다.|  
-|[Using Always Encrypted with Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|상시 암호화 기능을 사용 하 여 PHP 드라이버에 대 한 정보를 제공 합니다.|  
+|[Microsoft Drivers for PHP for SQL Server와 함께 Always Encrypted 사용](../../connect/php/using-always-encrypted-php-drivers.md)|상시 암호화 기능을 사용 하 여 PHP 드라이버에 대 한 정보를 제공 합니다.|  
 |[보안 고려 사항 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|응용 프로그램을 개발, 배포 및 실행하기 위한 보안 고려 사항을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

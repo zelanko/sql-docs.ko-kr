@@ -36,7 +36,7 @@ public boolean dataDefinitionIgnoredInTransactions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 트랜잭션 내에서 DDL 문이 무시되면 이고, 그렇지 않으면 **false**입니다.  
+ 트랜잭션 내에서 DDL 문이 무시되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -30,7 +30,7 @@ public void setAuthenticationScheme(String authenticationScheme);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- authenticationScheme  
+ *authenticationScheme*  
   
  값은 **"JavaKerberos"** 와 기본값 **"NativeAuthentication"** 합니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.  
   

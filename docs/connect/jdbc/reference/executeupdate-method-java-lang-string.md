@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String, int[])
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e116268305f78d9a70435728a84d2989dc1c82b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ff53657ab4e5bd99fb41cc2c01ce18add3e78b46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785691"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 메서드(java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 SQL 문 및 신호 실행 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 지정된 된 배열에 표시 되는 자동 생성 키 수 있도록 검색에 사용할 수 있습니다.  
+  지정된 SQL 문을 실행하고 지정된 배열에 표시된 자동 생성 키를 검색에 사용해야 하는지 여부를 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,18 +46,18 @@ public final int executeUpdate(java.lang.String sql,
  자동 생성 키의 열 인덱스를 사용할 수 있도록 해야 하는지 여부를 나타내는 int의 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **int** DDL 문을 사용 하는 경우 0, 영향을 받는 행의 수를 나타내는입니다.  
+ 영향을 받는 행 수를 나타내는 **int**이며, DDL 문을 사용하는 경우에는 0입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 executeUpdate 메서드는 java.sql.Statement 인터페이스의 executeUpdate 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 executeUpdate 메서드는 java.sql.Statement 인터페이스의 executeUpdate 메서드에 의해 지정됩니다.  
   
  업데이트 횟수가 1보다 크거나 둘 이상의 결과 집합을 생성하는 저장 프로시저 결과를 실행하는 경우 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 메서드를 사용하여 저장 프로시저를 실행합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [executeUpdate 메서드 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+## <a name="see-also"></a>참고 항목  
+ [executeUpdate 메서드&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 클래스](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

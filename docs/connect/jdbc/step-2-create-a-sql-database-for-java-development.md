@@ -1,5 +1,5 @@
 ---
-title: '2단계: PHP 개발을 위한 SQL 데이터베이스 만들기 | Microsoft Docs'
+title: '2단계: Java 개발을 위한 SQL 데이터베이스 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: free 메서드(SQLServerClob) | Microsoft Docs
+title: free 메서드(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -34,7 +34,7 @@ public void free()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 무료 메서드는 java.sql.Clob 인터페이스의 무료 메서드에 의해 지정됩니다.  
+ 이 무료 메서드는 java.sql.NClob 인터페이스의 무료 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

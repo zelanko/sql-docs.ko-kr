@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789861"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851878"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47789861"
 > [!IMPORTANT]  
 >  지정된 입력 집합에 대해 항상 같은 결과 집합을 반환하는 식은 결정적입니다. **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성은 *computed_column_expression* 이 결정적인지 여부를 보고합니다.  
   
- *computed_column_expression* 은 결정적이어야 합니다. *computed_column_expression* 은 다음 조건 중 하나 이상이 충족되는 경우 결정적입니다.  
+ *computed_column_expression* 은 결정적이어야 합니다. *computed_column_expression*은 다음과 같은 모든 조건이 충족되는 경우 결정적입니다.  
   
 -   식에서 참조하는 모든 함수가 결정적이고 정확합니다. 이러한 함수에는 사용자 정의 함수와 기본 제공 함수가 포함됩니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요. 계산 열이 PERSISTED일 경우 함수가 정확하지 않을 수 있습니다. 자세한 내용은 이 항목의 뒤에 나오는 [지속형 계산 열에 인덱스 만들기](#BKMK_persisted) 를 참조하십시오.  
   

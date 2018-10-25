@@ -1,5 +1,5 @@
 ---
-title: updateDate 메서드(java.lang.String, java.sql.Date)
+title: updateDate 메서드(java.lang.String, java.sql.Date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -49,7 +49,7 @@ public void updateDate(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getDate 메서드는 java.sql.ResultSet 인터페이스의 getDate 메서드에 의해 지정됩니다.  
+ 이 updateDate 메서드는 java.sql.ResultSet 인터페이스의 updateDate 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateDate 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   

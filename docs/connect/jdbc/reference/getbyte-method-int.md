@@ -26,7 +26,7 @@ ms.locfileid: "47734647"
 # <a name="getbyte-method-int"></a>getByte 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 검색하여값으로 반환합니다.  
+  매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 **byte** 값으로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,10 +47,10 @@ public byte getByte(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getDate 메서드는 java.sql.CallableStatement 인터페이스의 getDate 메서드에 의해 지정됩니다.  
+ 이 getByte 메서드는 java.sql.CallableStatement 인터페이스의 getByte 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getDate 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [getByte 메서드(SQLServerCallableStatement)](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

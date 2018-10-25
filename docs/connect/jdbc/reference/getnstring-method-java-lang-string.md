@@ -42,10 +42,10 @@ public final java.lang.String getNString(java.lang.String parameterName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getString 메서드는 java.sql.CallableStatement 인터페이스의 getString 메서드에 의해 지정됩니다.  
+ 이 getNString 메서드는 java.sql.CallableStatement 인터페이스의 getNString 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getString 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)   
+ [getNString 메서드(SQLServerCallableStatement)](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 메서드](../../../connect/jdbc/reference/sqlservercallablestatement-methods.md)  
   
   
