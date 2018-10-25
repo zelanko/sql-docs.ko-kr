@@ -51,7 +51,7 @@ ms.locfileid: "48164793"
 -   각각 주 서버와 미러 서버인 두 파트너가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다. 미러링 모니터 서버(있는 경우)는 데이터베이스 미러링을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 버전에서 실행할 수 있습니다.  
   
     > [!NOTE]  
-    >  미러링 세션의 파트너인 서버 인스턴스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)을 참조하세요.  
+    >  미러링 세션의 파트너인 서버 인스턴스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화](upgrading-mirrored-instances.md)을 참조하세요.  
   
 -   이 데이터베이스는 전체 복구 모델을 사용해야 합니다. 단순 복구 모델 및 대량 로그 복구 모델에서는 데이터베이스 미러링이 지원되지 않습니다. 따라서 대량 작업이 미러링된 데이터베이스에 대해 항상 전체 로깅됩니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   

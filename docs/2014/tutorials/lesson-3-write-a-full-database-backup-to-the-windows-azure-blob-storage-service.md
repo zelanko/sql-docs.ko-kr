@@ -45,6 +45,6 @@ ms.locfileid: "48172273"
 5.  개체 탐색기에서 Azure 저장소에 연결합니다. 컨테이너 및 새로 만든 백업 파일을 찾아봅니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [Lesson 4: Perform a Restore From a Full Database Backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)입니다.  
+ [4단원: 전체 데이터베이스 백업에서 복원 수행](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)입니다.  
   
   
