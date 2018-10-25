@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8f0b9a18627da1e7d407b396686cb756ca5a4b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852115"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461038"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -311,6 +311,6 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 ## <a name="next-steps"></a>Next Steps
 다른 사용 사례에 대한 내용은 [보안 Enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요. 다음을 수행해 볼 수도 있습니다.
 
-- [TPM 증명 구성](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [HGS 인스턴스에 대해 HTTPS 구성](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [TPM 증명 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [HGS 인스턴스에 대해 HTTPS 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - 암호화된 열에 대해 리치 쿼리를 실행하는 응용 프로그램 개발

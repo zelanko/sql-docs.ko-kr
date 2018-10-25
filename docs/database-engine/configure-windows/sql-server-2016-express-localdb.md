@@ -17,16 +17,15 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: adc3db5b6930cbbc9e3af95aaa2a1245bb40c25a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851788"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383938"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server 2014 Express LocalDB(영문)](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)를 참조하세요.
 
 Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 기능입니다. SQL Server 2016 Express with Advanced Services에서 사용할 수 있습니다.  
 

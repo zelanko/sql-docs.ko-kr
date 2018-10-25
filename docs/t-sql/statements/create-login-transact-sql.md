@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252110"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461088"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -326,7 +326,7 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT]((../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
   
@@ -444,7 +444,7 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT]((../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
   
