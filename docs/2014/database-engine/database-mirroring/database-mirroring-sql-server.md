@@ -152,7 +152,7 @@ ms.locfileid: "48154943"
  자세한 내용은 이 항목의 뒷부분에 나오는 [역할 전환](#RoleSwitching)을 참조하세요.  
   
 > [!NOTE]  
->  새 미러링 세션을 설정하거나 기존 미러링 구성에 미러링 모니터 서버를 추가하려면 관련된 모든 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다. 그러나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전으로 업그레이드하면 관련된 인스턴스의 버전이 다를 수 있습니다. 자세한 내용은 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)을 참조하세요.  
+>  새 미러링 세션을 설정하거나 기존 미러링 구성에 미러링 모니터 서버를 추가하려면 관련된 모든 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다. 그러나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전으로 업그레이드하면 관련된 인스턴스의 버전이 다를 수 있습니다. 자세한 내용은 [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화](upgrading-mirrored-instances.md)을 참조하세요.  
   
 ####  <a name="TxnSafety"></a> 트랜잭션 보안 및 운영 모드  
  트랜잭션 보안 설정에 따라 동기 또는 비동기 운영 모드가 결정됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 만 사용하여 데이터베이스 미러링을 구성하는 경우 운영 모드를 선택할 때 자동으로 트랜잭션 보안 설정이 구성됩니다.  
