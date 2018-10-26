@@ -175,7 +175,7 @@ ms.locfileid: "47607911"
  테이블 수준 DEFAULT 정의와 관련된 열을 지정합니다.  
   
  WITH VALUES  
- 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
+ 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [온라인 작업으로 null 열을 추가하지 않음](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
 관련 열이 추가되지 않을 때 이 작업이 사용되면 아무런 영향을 주지 않습니다. 
   
  CHECK  
