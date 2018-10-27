@@ -15,12 +15,12 @@ ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b739300fc07addfc5fc61904526e157a04680960
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eba304a7e525b9466787ad1314acd52c4368f9a2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094045"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144808"
 ---
 # <a name="plugin-algorithms"></a>플러그 인 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48094045"
  `IDMAlgorithmFactory`  
  알고리즘 인터페이스를 구현하는 개체의 인스턴스를 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 알고리즘-메타데이터 인터페이스에 액세스할 수 있도록 합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이러한 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 사용하는 플러그 인 알고리즘이 데이터 마이닝용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 사양을 지원해야 하지만 사양의 데이터 마이닝 옵션을 모두 지원하지 않아도 됩니다. [MINING_SERVICES](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md) 스키마 행 집합을 사용하여 알고리즘의 기능을 확인할 수 있습니다. 이러한 스키마 행 집합은 각 플러그 인 알고리즘 공급자에 대한 데이터 마이닝 지원 옵션을 나열합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이러한 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 사용하는 플러그 인 알고리즘이 데이터 마이닝용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 사양을 지원해야 하지만 사양의 데이터 마이닝 옵션을 모두 지원하지 않아도 됩니다. [MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset) 스키마 행 집합을 사용하여 알고리즘의 기능을 확인할 수 있습니다. 이러한 스키마 행 집합은 각 플러그 인 알고리즘 공급자에 대한 데이터 마이닝 지원 옵션을 나열합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 새 알고리즘을 사용하려면 먼저 해당 알고리즘을 등록해야 합니다. 알고리즘을 등록하려면 알고리즘을 포함할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 .ini 파일에 다음 정보를 추가합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48094045"
  `</ConfigurationSettings>`  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [DMSCHEMA_MINING_SERVICES 행 집합](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)  
   
   

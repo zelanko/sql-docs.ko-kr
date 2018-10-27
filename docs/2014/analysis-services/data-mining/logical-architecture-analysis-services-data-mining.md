@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166253"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144868"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
   데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48166253"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  데이터 마이닝 구조는 마이닝 모델이 생성된 데이터 도메인을 정의하는 논리적 데이터 컨테이너입니다. 단일 마이닝 구조가 여러 마이닝 모델을 지원할 수 있습니다.  
   
- 데이터 마이닝 솔루션에서 데이터를 사용해야 할 경우 Analysis Services에서는 원본의 데이터를 읽고 집계와 그 밖의 정보에 대한 캐시를 생성합니다. 기본적으로 이 캐시는 추가 모델을 지원하는 데 학습 데이터를 다시 사용할 수 있도록 유지됩니다. 캐시를 삭제 해야 할 경우 변경 합니다 `CacheMode` 속성 값을 마이닝 구조 개체에서 `ClearAfterProcessing`합니다. 자세한 내용은 [AMO 데이터 마이닝 클래스](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)를 참조하세요.  
+ 데이터 마이닝 솔루션에서 데이터를 사용해야 할 경우 Analysis Services에서는 원본의 데이터를 읽고 집계와 그 밖의 정보에 대한 캐시를 생성합니다. 기본적으로 이 캐시는 추가 모델을 지원하는 데 학습 데이터를 다시 사용할 수 있도록 유지됩니다. 캐시를 삭제하려면 마이닝 구조 개체의 `CacheMode` 속성을 `ClearAfterProcessing` 값으로 변경합니다. 자세한 내용은 [AMO 데이터 마이닝 클래스](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)를 참조하세요.  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 에서는 데이터를 학습 데이터 집합과 테스트 데이터 집합으로 분리하는 기능도 제공하므로 임의로 선택된 대표 데이터 집합에 대해 마이닝 모델을 테스트할 수 있습니다. 구조 캐시의 데이터는 실제 별도로 저장되는 것이 아니라 해당 특정 사례가 학습에 사용되는지, 테스트에 사용되는지를 나타내는 속성으로 표시됩니다. 캐시를 삭제한 경우에는 해당 정보를 검색할 수 없습니다.  
   
@@ -83,18 +83,18 @@ ms.locfileid: "48166253"
  자세한 내용은 [다차원 모델 어셈블리 관리](../multidimensional-models/multidimensional-model-assemblies-management.md)를 참조하세요.  
   
  **사용자 지정 저장 프로시저**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 저장된 프로시저를 사용한 데이터 마이닝 개체 작업 사용을 지원 합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 저장 프로시저를 사용한 데이터 마이닝 개체 작업을 지원합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
   
  [저장 프로시저 정의](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  교차 유효성 검사를 수행하는 데 사용할 수 있는 저장 프로시저는 다음과 같습니다.  
   
- [데이터 마이닝 저장 프로시저 &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [데이터 마이닝 저장 프로시저&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝에 내부적으로 사용되는 많은 시스템 저장 프로시저가 포함되어 있습니다. 시스템 저장 프로시저는 내부적으로 사용되지만 유용한 바로 가기를 지정할 수 있습니다. Microsoft는 이러한 저장 프로시저를 필요에 따라 변경할 권리가 있습니다. 따라서 프로덕션 환경에서 사용하려는 경우 DMX, AMO 또는 XMLA를 사용하여 쿼리를 만드는 것이 좋습니다.  
   
  **사용자 지정 플러그 인 알고리즘**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용자 고유의 알고리즘을 만들고 다음 서버 인스턴스에 새 데이터 마이닝 서비스로 알고리즘을 추가 하기 위한 메커니즘을 제공 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 사용자 고유의 알고리즘을 만들어 서버 인스턴스에 새 데이터 마이닝 서비스로 추가할 수 있는 메커니즘을 제공합니다.  
   
  Analysis Services에서는 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 새 알고리즘을 구현하는 방법에 대한 자세한 내용은 [Plugin Algorithms](plugin-algorithms.md)을 참조하십시오.  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166253"
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델 개체 처리](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

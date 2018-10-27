@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a786279915b38abb93941d7485f2b8c3a3413d6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9741a81c10a71623f6e336795bb47ae199ee13d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017410"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146958"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "34017410"
   
      현재 인스턴스에서 사용할 수 있는 모든 행 집합에 대한 행 집합 이름 및 행 집합 열이 포함된 스키마 행 집합 목록이 **결과** 창에 반환됩니다.  
   
-2.  에 **쿼리** 창 뒤에 커서를 배치  **\<제한 목록 >** 하 고 enter 키를 눌러 새 줄을 추가 합니다.  
+2.  에 **쿼리** 창 뒤에 커서  **\<제한 목록 >** 하 고 enter 키를 눌러 새 줄을 추가 합니다.  
   
-3.  형식 빈 줄에 커서를 놓고  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  입력 하 고 빈 줄에 커서를 놓고  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      제한에 대한 전체 섹션은 다음과 같아야 합니다.  
   
@@ -96,8 +96,8 @@ ms.locfileid: "34017410"
   
      결과 창에 지정한 모델의 값과 함께 스키마 정의가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>관련 항목  
+ [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

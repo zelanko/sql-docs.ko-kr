@@ -2,7 +2,7 @@
 title: 업그레이드 온-프레미스 SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 SQL Server | Microsoft Docs
 description: Azure Vm의 SQL Server 또는 SQL Server의 이후 버전으로는 온-프레미스 SQL Server를 업그레이드 하려면 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833131"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643841"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 온-프레미스 SQL Server 업그레이드
 
@@ -81,7 +81,7 @@ Data Migration Assistant는 Azure Vm 또는 Azure SQL Database에서 SQL Server 
 
 5. **다음**을 선택합니다.
 
-Data Migration Assistant 수행 유효성 검사 데이터 및 로그 파일 위치에서 백업 폴더입니다. 모든 유효성 검사에 실패 하는 경우 옵션을 수정 하세요. 선택한 후 **다음**합니다.
+Data Migration Assistant는 백업 폴더, 데이터 및 로그 파일 위치에서 유효성 검사를 수행합니다. 모든 유효성 검사에 실패 하는 경우 옵션을 수정 하 고 선택한 **다음**합니다.
 
 ## <a name="select-logins"></a>로그인 선택
 

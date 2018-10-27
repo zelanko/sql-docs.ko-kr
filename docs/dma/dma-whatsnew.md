@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant (SQL Server)의 새로운 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655661"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643951"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 이 문서는 각 릴리스에 추가의 도우미 DMA (Data Migration)를 나열합니다.
+
+## <a name="dma-v41"></a>DMA v4.1
+DMA v4.1 릴리스의 종합적인 평가의 온-프레미스 SQL Server 데이터베이스를 Azure SQL Database Managed Instance로 마이그레이션에 대 한 지원을 소개 합니다.
+
+평가 워크플로 사용 하면 Azure SQL Database Managed Instance로 마이그레이션에 영향을 줄 수 있는 다음 문제를 감지 합니다.
+
+- **지원 되지 않는 또는 부분적으로 지원 되는 기능**합니다. DMA 사용에서 중이거나 부분적으로 지원 되는 대상 Azure SQL Database Managed Instance에 지원 되지 않는 기능에 대 한 원본 SQL Server 데이터베이스를 평가 합니다. 이 도구는 포괄적인 마이그레이션 프로젝트를 계획 하는 경우 고객 계정에이 정보를 취할 수 있도록 단계를 완화 하 고 Azure에서의 사용 가능한 대체 방법 권장 사항 집합이 제공 합니다.
+
+- **호환성 문제**합니다. DMA는 또한 다음과 같은 영역에 관련 된 호환성 문제를 식별 합니다.
+
+    - 주요 변경 내용: 특정 스키마 개체를 데이터베이스에서 대상 데이터베이스로 마이그레이션 기능을 중단 될 수 있습니다.  데이터베이스 마이그레이션 후 이러한 스키마 개체를 수정 하는 것이 좋습니다.
+    - 동작 변경 내용: 스키마 개체를 보고 하려면 계속 될 수 있지만 성능 저하가 예를 들어 다른 동작을 그러지 않을 것입니다.
+    - 정보 제공 용 이므로 문제: 이러한 개체 마이그레이션 영향을 주지 것입니다 하지만 SQL Server를 해제 하는 기능에서 사용 되지 않을 수 있습니다.
+
+사용 하 여 평가 완료 한 후 우리 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) Azure SQL Database Managed Instance로 SQL Server 데이터베이스의 마이그레이션을 수행 하려면 (DMS).  DMS 둘 다를 지 원하는 [오프 라인](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (1 회) 및 [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) Azure SQL Database Managed Instance로 마이그레이션 (최소한의 가동 중지 시간) 데이터베이스입니다.
 
 ## <a name="dma-v40"></a>DMA v4.0
 DMA v4.0 릴리스의 데이터베이스를 호스팅하는 컴퓨터에서 수집 된 성능 카운터에 따라 Azure SQL 데이터베이스 SKU를 권장 되는 최소를 식별할 수 있는 Azure SQL 데이터베이스 SKU 권장 사항 기능을 소개 합니다. 이 기능은 월별 예상된 비용 뿐만 아니라 계층, 계산 수준 및 최대 데이터 크기, 가격 책정에 관련 된 권장 사항을 제공 합니다. 또한 대량에서 Azure에 모든 데이터베이스를 프로 비전 하는 기능을 제공 합니다.
@@ -35,7 +50,7 @@ DMA v4.0 릴리스의 데이터베이스를 호스팅하는 컴퓨터에서 수�
 ## <a name="dma-v36"></a>DMA v3.6의 경우
 DMA v3.6 릴리스의에서는 가장 일반적인 마이그레이션 블 로커의 영향을 받는 스키마 개체에 대 한 "자동 수정"을 소개 합니다.
 
-이 릴리스에서 다음 마이그레이션 차단에 대 한 자동 문제 해결을 제공 하 고 동작 문제를 변경 합니다.
+이 릴리스에서 다음 마이그레이션 차단에 대 한 자동 복구를 제공 하 고 동작 문제를 변경 합니다.
 - 정규화 되지 않은 조인 구문을 사용 하는 스키마 개체입니다.
 - 레거시 RAISEERROR 문을 사용 하는 스키마 개체입니다.
 - 정수 리터럴 여 순서를 사용 하는 SQL 문입니다.

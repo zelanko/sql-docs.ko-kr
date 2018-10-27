@@ -23,17 +23,17 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117823"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145668"
 ---
 # <a name="processing-objects-xmla"></a>개체 처리(XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 처리가 단계 또는 일련의 단계를 전환 하는 데이터를 비즈니스 분석용 정보로 합니다. 처리 방법은 개체 유형에 따라 달라지지만 처리는 항상 데이터를 정보로 변환하는 과정의 일부입니다.  
   
- 프로세스에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 사용할 수는 [프로세스](../xmla/xml-elements-commands/process-element-xmla.md) 명령입니다. `Process` 명령이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 처리할 수 있는 개체는 다음과 같습니다.  
+ 프로세스에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 사용할 수는 [프로세스](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) 명령입니다. `Process` 명령이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 처리할 수 있는 개체는 다음과 같습니다.  
   
 -   큐브  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48117823"
  `Process` 명령에는 개체 처리를 제어하기 위해 설정할 수 있는 다양한 속성이 있습니다. 제어할 수 있는 `Process` 명령의 속성으로는 처리량, 처리할 개체, 아웃오브 라인 바인딩 사용 여부, 오류 해결 방법 및 쓰기 저장(writeback) 테이블 관리 방법이 있습니다.  
   
 ## <a name="specifying-processing-options"></a>처리 옵션 지정  
- 합니다 [형식](../xmla/xml-elements-properties/type-element-xmla.md) 의 속성을 `Process` 명령 개체를 처리할 때 사용할 처리 옵션을 지정 합니다. 처리 옵션에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
+ 합니다 [형식](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) 의 속성을 `Process` 명령 개체를 처리할 때 사용할 처리 옵션을 지정 합니다. 처리 옵션에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
  다음 표에서는 `Type` 속성에 대한 상수와 각 상수를 사용하여 처리할 수 있는 다양한 개체를 보여 줍니다.  
   
@@ -72,14 +72,14 @@ ms.locfileid: "48117823"
  처리에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 참조 하세요 [다차원 모델 개체 처리](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
 ## <a name="specifying-objects-to-be-processed"></a>처리할 개체 지정  
- [개체](../xmla/xml-elements-properties/object-element-xmla.md) 의 속성을 `Process` 명령을 처리할 개체의 개체 식별자를 포함 합니다. `Process` 명령에는 한 개체만 지정할 수 있지만 개체를 처리할 때 모든 자식 개체도 처리됩니다. 예를 들어 큐브의 측정값 그룹을 처리하면 해당 측정 그룹의 모든 파티션이 처리되고, 데이터베이스를 처리하면 데이터베이스에 포함된 큐브, 차원 및 마이닝 구조 등의 모든 개체가 처리됩니다.  
+ [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 의 속성을 `Process` 명령을 처리할 개체의 개체 식별자를 포함 합니다. `Process` 명령에는 한 개체만 지정할 수 있지만 개체를 처리할 때 모든 자식 개체도 처리됩니다. 예를 들어 큐브의 측정값 그룹을 처리하면 해당 측정 그룹의 모든 파티션이 처리되고, 데이터베이스를 처리하면 데이터베이스에 포함된 큐브, 차원 및 마이닝 구조 등의 모든 개체가 처리됩니다.  
   
  `ProcessAffectedObjects` 명령의 `Process` 특성을 true로 설정하면 지정된 개체 처리 작업의 영향을 받는 관련 개체도 모두 처리됩니다. 예를 들어 차원을 사용 하 여 증분 업데이트 되는 *ProcessUpdate* 처리 옵션을 `Process` 명령을 추가 또는 삭제 되는 멤버로 인해 집계가 무효화 된 파티션의 이기도 처리 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 경우 `ProcessAffectedObjects` 설정을 true로 합니다. 이 경우 단일 `Process` 명령이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 여러 개체를 처리할 수 있지만 `Process` 명령에 지정된 단일 개체 이외에 추가로 처리되어야 하는 개체는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 결정합니다.  
   
  하지만 `Process` 명령 내에서 `Batch` 명령을 여러 개 사용하면 차원과 같은 여러 개체를 동시에 처리할 수 있습니다. 일괄 처리 작업을 수행하면 `ProcessAffectedObjects` 특성을 사용할 때보다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 수행되는 개체의 순차 및 병렬 처리를 보다 세부적으로 제어할 수 있으며 대규모 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 처리 방법을 조정할 수 있습니다. 일괄 처리 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하세요. [일괄 처리 작업 수행 &#40;XMLA&#41;](performing-batch-operations-xmla.md)합니다.  
   
 ## <a name="specifying-out-of-line-bindings"></a>아웃오브 라인 바인딩 지정  
- 경우는 `Process` 명령이 포함 되어 있지는 `Batch` 명령인 있습니다에서 아웃오브 라인 바인딩을 선택적으로 지정할 수는 [바인딩](../xmla/xml-elements-properties/bindings-element-xmla.md), [DataSource](../xmla/xml-elements-properties/source-element-xmla.md), 및 [DataSourceView ](../xmla/xml-elements-properties/datasourceview-element-xmla.md) 의 속성을 `Process` 처리할 개체에 대 한 명령입니다. 아웃오브 라인 바인딩은 `Process` 명령이 실행되는 동안에만 바인딩이 존재하는 데이터 원본, 데이터 원본 뷰 및 기타 개체에 대한 참조로, 처리되는 개체에 연결된 기존 바인딩을 모두 재정의합니다. 아웃오브 라인 바인딩을 지정하지 않으면 처리할 개체에 현재 연결되어 있는 바인딩이 사용됩니다.  
+ 경우는 `Process` 명령이 포함 되어 있지는 `Batch` 명령인 있습니다에서 아웃오브 라인 바인딩을 선택적으로 지정할 수는 [바인딩](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla), [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla), 및 [DataSourceView ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) 의 속성을 `Process` 처리할 개체에 대 한 명령입니다. 아웃오브 라인 바인딩은 `Process` 명령이 실행되는 동안에만 바인딩이 존재하는 데이터 원본, 데이터 원본 뷰 및 기타 개체에 대한 참조로, 처리되는 개체에 연결된 기존 바인딩을 모두 재정의합니다. 아웃오브 라인 바인딩을 지정하지 않으면 처리할 개체에 현재 연결되어 있는 바인딩이 사용됩니다.  
   
  아웃오브 라인 바인딩은 다음과 같은 경우에 사용됩니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48117823"
  XML for Analysis (XMLA) 사용 하 여 파티션을 병합 하는 방법에 대 한 자세한 내용은 참조 하세요. [파티션 병합 &#40;XMLA&#41;](merging-partitions-xmla.md)합니다.  
   
 ## <a name="handling-processing-errors"></a>처리 오류 해결  
- 합니다 [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) 의 속성을 `Process` 명령을 사용 하면 개체를 처리 하는 동안 발생 한 오류를 처리 하는 방법을 지정할 수 있습니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 차원을 처리하는 동안 키 특성의 키 열에 중복 값이 있는 경우 특성 키는 고유해야 하므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 중복 레코드를 삭제합니다. 기반으로 합니다 [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) 속성을 `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 수:  
+ 합니다 [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) 의 속성을 `Process` 명령을 사용 하면 개체를 처리 하는 동안 발생 한 오류를 처리 하는 방법을 지정할 수 있습니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 차원을 처리하는 동안 키 특성의 키 열에 중복 값이 있는 경우 특성 키는 고유해야 하므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 중복 레코드를 삭제합니다. 기반으로 합니다 [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) 속성을 `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 수:  
   
 -   오류를 무시하고 차원을 계속 처리합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48117823"
  `ErrorConfiguration` 명령을 실행하는 동안 `Process`에서 옵션을 제공하는 유사한 경우가 많이 있습니다.  
   
 ## <a name="managing-writeback-tables"></a>쓰기 저장(writeback) 테이블 관리  
- `Process` 명령을 실행하는 동안 아직 완전히 처리되지 않은 쓰기 가능한 파티션이나 그러한 파티션에 대한 큐브 또는 측정값 그룹이 발생한다면 해당 파티션에 대한 쓰기 저장(writeback) 테이블이 아직 존재하지 않는 것일 수 있습니다. [WritebackTableCreation](../xmla/xml-elements-properties/writebacktablecreation-element-xmla.md) 속성을는 `Process` 명령은 확인 여부를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 쓰기 저장 테이블을 만들어야 합니다.  
+ `Process` 명령을 실행하는 동안 아직 완전히 처리되지 않은 쓰기 가능한 파티션이나 그러한 파티션에 대한 큐브 또는 측정값 그룹이 발생한다면 해당 파티션에 대한 쓰기 저장(writeback) 테이블이 아직 존재하지 않는 것일 수 있습니다. [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla) 속성을는 `Process` 명령은 확인 여부를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 쓰기 저장 테이블을 만들어야 합니다.  
   
 ## <a name="examples"></a>예  
   

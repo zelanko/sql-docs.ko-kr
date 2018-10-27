@@ -1,6 +1,6 @@
 ---
-title: SQL Server에 대 한 Iris 데모 데이터 집합 | Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: SQL Server Python 및 R 자습서 아이리스 데모 데이터 집합 | Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463053"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806673"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>SQL Server에 대 한 Iris 데모 데이터
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서 아이리스 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 연습에 대 한 테이블을 포함 하는 SQL Server 데이터베이스를 준비 합니다 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set) 및 모델 저장소. 아이리스 데이터는 SQL Server로 설치 하는 R 및 Python 배포에 포함 됩니다. SQL Server에 대 한 machine learning 자습서에서 사용 됩니다. 
+이 연습에서는 데이터를 저장 하는 SQL Server 데이터베이스를 만들 합니다 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set) 모델과 동일한 데이터를 기반으로 합니다. 아이리스 데이터는 SQL Server로 설치 하는 R 및 Python 배포판에 포함 되 고 SQL Server machine learning 자습서에 사용 됩니다. 
 
 이 연습을 완료 하려면 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 또는 T-SQL 쿼리를 실행할 수 있는 다른 도구입니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "49463053"
 
 +  [Python 모델을 학습 및 점수 매기기에 대 한 SQL Server에서 사용](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>데이터베이스 및 테이블 준비
+## <a name="create-the-database"></a>데이터베이스 만들기
 
 1. SQL Server Management Studio를 시작 하 고 새 **쿼리** 창입니다.  
 
@@ -139,7 +139,7 @@ R 또는 Python에서 기본 제공 아이리스 데이터를 가져올 수 있�
     > 저장된 프로시저를 수정 하려면 나중에 필요가 없습니다를 삭제 하 고 다시 만듭니다. 사용 된 [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) 문입니다. 
 
 
-## <a name="query-data-for-verification"></a>확인에 대 한 데이터를 쿼리 합니다.
+## <a name="query-the-data"></a>데이터를 쿼리 합니다.
 
 유효성 검사 단계로, 데이터가 업로드 되었는지 확인 하는 쿼리를 실행 합니다.
 

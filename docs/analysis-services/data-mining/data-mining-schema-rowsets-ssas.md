@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f29f8578fad9fe1f9ed50bf23a5aba80e14c560a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017730"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144289"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>데이터 마이닝 스키마 행 집합(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)을 참조하십시오.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)을 참조하십시오.  
   
 > [!NOTE]  
 >  XMLA를 사용하여 데이터 마이닝 스키마 행 집합을 쿼리할 수도 있습니다. SQL Server Management Studio에서 이 작업을 수행하는 방법에 대한 자세한 내용은 [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)를 참조하세요.  

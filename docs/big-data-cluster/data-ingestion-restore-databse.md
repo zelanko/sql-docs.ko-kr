@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e921948cb5dcd0bda52ed9ebcc07c8a2496611ff
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d772ba3ad5c40437ca819ae7992a717057c066bb
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051035"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스를 복원 합니다.
 
@@ -108,4 +108,4 @@ GO
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 개요를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터 란?](big-data-cluster-overview.md)
+- [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)

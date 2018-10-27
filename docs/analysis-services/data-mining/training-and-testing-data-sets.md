@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018246"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145618"
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -98,11 +98,11 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |모델의 필터가 학습 및 테스트 데이터 집합과 상호 작용하는 방법에 대해 설명합니다.|[마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
 |학습 및 테스트 데이터를 사용하는 방법에 따라 교차 유효성 검사에 미치는 영향에 대해 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|마이닝 구조에서 학습 및 테스트 집합을 사용하는 프로그래밍 인터페이스에 대한 정보를 제공합니다.|[AMO 개념 및 개체 모델](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 요소&#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|홀드아웃 집합을 만들기 위한 DMX 구문을 제공합니다.|[만들기 마이닝 구조 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|학습 및 테스트 집합에서 사례에 대한 정보를 검색합니다.|[데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|마이닝 구조에서 학습 및 테스트 집합을 사용하는 프로그래밍 인터페이스에 대한 정보를 제공합니다.|[AMO 개념 및 개체 모델](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|홀드아웃 집합을 만들기 위한 DMX 구문을 제공합니다.|[CREATE MINING STRUCTURE&#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|학습 및 테스트 집합에서 사례에 대한 정보를 검색합니다.|[데이터 마이닝 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   
  [데이터 마이닝 개념](../../analysis-services/data-mining/data-mining-concepts.md)   
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   

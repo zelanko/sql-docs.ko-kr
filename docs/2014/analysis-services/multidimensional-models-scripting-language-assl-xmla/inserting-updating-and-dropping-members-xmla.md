@@ -21,15 +21,15 @@ ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d035cf5891c12857fcdcbc2da7df2304eb10dcdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1c30b916d910b93b53ae10a9eefaa19d45c957a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171493"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148028"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
-  사용할 수는 [삽입](../xmla/xml-elements-commands/insert-element-xmla.md)를 [업데이트](../xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) 명령은 xml에서 for Analysis (XMLA) 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 하세요. [쓰기 가능한 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
+  사용할 수는 [삽입](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)를 [업데이트](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), 및 [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) 명령은 xml에서 for Analysis (XMLA) 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 하세요. [쓰기 가능한 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
   
 ## <a name="inserting-new-members"></a>새 멤버 삽입  
  `Insert` 명령은 쓰기 가능 차원에서 지정된 특성에 새 멤버를 삽입합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "48171493"
   
  `Insert` 명령에서는 다음과 같은 두 개의 속성만 사용합니다.  
   
--   합니다 [개체](../xmla/xml-elements-properties/object-element-xmla.md) 멤버를 삽입할에 차원에 대 한 개체 참조를 포함 하는 속성입니다. 개체 참조는 차원에 대한 데이터베이스 식별자, 큐브 식별자 및 차원 식별자를 포함합니다.  
+-   합니다 [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 멤버를 삽입할에 차원에 대 한 개체 참조를 포함 하는 속성입니다. 개체 참조는 차원에 대한 데이터베이스 식별자, 큐브 식별자 및 차원 식별자를 포함합니다.  
   
--   합니다 [특성](../xmla/xml-elements-properties/attributes-element-xmla.md) 속성을 하나 이상 포함 [특성](../xmla/xml-elements-properties/attribute-element-xmla.md) 멤버를 삽입할에 특성을 식별 하는 요소입니다. 각 `Attribute` 요소는 특성을 식별하며 식별된 특성에 추가할 단일 멤버의 이름, 값, 번역, 단항 연산자, 사용자 지정 롤업, 사용자 지정 롤업 속성 및 건너뛴 수준을 제공합니다.  
+-   합니다 [특성](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) 속성을 하나 이상 포함 [특성](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) 멤버를 삽입할에 특성을 식별 하는 요소입니다. 각 `Attribute` 요소는 특성을 식별하며 식별된 특성에 추가할 단일 멤버의 이름, 값, 번역, 단항 연산자, 사용자 지정 롤업, 사용자 지정 롤업 속성 및 건너뛴 수준을 제공합니다.  
   
     > [!NOTE]  
     >  `Attribute` 요소의 모든 속성이 포함되어야 합니다. 그렇지 않으면 오류가 발생할 수 있습니다.  
@@ -77,13 +77,13 @@ ms.locfileid: "48171493"
     > [!NOTE]  
     >  `Attribute` 요소의 모든 속성이 포함되어야 합니다. 그렇지 않으면 오류가 발생할 수 있습니다.  
   
--   [여기서](../xmla/xml-elements-properties/where-element-xmla.md) 속성을 하나 이상 포함 `Attribute` 멤버를 업데이트할에 특성을 제한 하는 요소입니다. `Where` 속성은 `Update` 명령을 멤버의 특정 인스턴스로 제한하는 데 유용하게 사용됩니다. 경우는 `Where` 속성이 지정 되지 않은, 지정된 된 멤버의 모든 인스턴스가 업데이트 됩니다. 예를 들어, 세 명의 고객에 대한 도시 이름을 Redmond에서 Bellevue로 변경하려고 합니다. 도시 이름을 변경하려면 변경해야 하는 City 특성의 멤버에 대해 Customer 특성의 세 멤버를 식별하는 `Where` 속성을 제공해야 합니다. 이 `Where` 속성을 제공하지 않으면 `Update` 명령 실행 후에 도시 이름이 현재 Redmond로 되어 있는 모든 고객의 도시 이름이 Bellevue로 변경됩니다.  
+-   [여기서](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) 속성을 하나 이상 포함 `Attribute` 멤버를 업데이트할에 특성을 제한 하는 요소입니다. `Where` 속성은 `Update` 명령을 멤버의 특정 인스턴스로 제한하는 데 유용하게 사용됩니다. 경우는 `Where` 속성이 지정 되지 않은, 지정된 된 멤버의 모든 인스턴스가 업데이트 됩니다. 예를 들어, 세 명의 고객에 대한 도시 이름을 Redmond에서 Bellevue로 변경하려고 합니다. 도시 이름을 변경하려면 변경해야 하는 City 특성의 멤버에 대해 Customer 특성의 세 멤버를 식별하는 `Where` 속성을 제공해야 합니다. 이 `Where` 속성을 제공하지 않으면 `Update` 명령 실행 후에 도시 이름이 현재 Redmond로 되어 있는 모든 고객의 도시 이름이 Bellevue로 변경됩니다.  
   
     > [!NOTE]  
     >  `Update` 명령에서는 새 멤버를 제외하고 `Where` 절에 포함되지 않은 특성의 특성 키 값만을 업데이트할 수 있습니다. 예를 들어, 고객을 업데이트하는 경우 도시 이름을 업데이트할 수 없습니다. 이렇게 하지 않으면 모든 고객의 도시 이름이 변경됩니다.  
   
 ### <a name="updating-members-in-parent-attributes"></a>부모 특성의 멤버 업데이트  
- 부모 특성을 지원 하 여 `Update` 명령에 선택적 [MoveWithDescendants](../xmla/xml-elements-properties/movewithdescendants-element-xmla.md)위해 속성입니다. `MoveWithDescendants` 속성을 true로 설정하면 부모 멤버의 식별자가 변경될 때 부모 멤버의 하위 항목도 부모 멤버와 함께 이동합니다. 이 값을 false로 설정한 경우 부모 멤버를 이동하면 해당 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
+ 부모 특성을 지원 하 여 `Update` 명령에 선택적 [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)위해 속성입니다. `MoveWithDescendants` 속성을 true로 설정하면 부모 멤버의 식별자가 변경될 때 부모 멤버의 하위 항목도 부모 멤버와 함께 이동합니다. 이 값을 false로 설정한 경우 부모 멤버를 이동하면 해당 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
   
  부모 특성의 멤버를 업데이트할 때 `Update` 명령은 다른 특성의 멤버를 업데이트할 수 없습니다.  
   
@@ -106,16 +106,16 @@ ms.locfileid: "48171493"
     >  `Attribute` 명령에 포함된 `Drop` 요소는 `AttributeName` 및 `Keys` 속성만을 포함해야 합니다. 그렇지 않으면 오류가 발생할 수 있습니다.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>부모 특성의 멤버 삭제  
- 설정 된 [DeleteWithDescendants](../xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) 속성은 부모 멤버를 사용 하 여도 부모 멤버의 하위 항목을 삭제 해야 함을 나타냅니다. 이 값을 false로 설정한 경우에는 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
+ 설정 된 [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) 속성은 부모 멤버를 사용 하 여도 부모 멤버의 하위 항목을 삭제 해야 함을 나타냅니다. 이 값을 false로 설정한 경우에는 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
   
 > [!IMPORTANT]  
 >  부모 멤버와 해당 하위 항목을 모두 삭제하려면 부모 멤버에 대한 삭제 권한만 있으면 됩니다. 하위 항목에 대한 삭제 권한은 필요하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Drop 요소 &#40;XMLA&#41;](../xmla/xml-elements-commands/drop-element-xmla.md)   
- [요소를 삽입 &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 요소 &#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
- [개체 정의 및 식별 &#40;XMLA&#41;](../xmla/xml-elements-objects.md)   
+ [Drop 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [요소를 삽입 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Update 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [개체 정의 및 식별 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [Analysis Services에서 XMLA를 사용하여 개발](developing-with-xmla-in-analysis-services.md)  
   
   

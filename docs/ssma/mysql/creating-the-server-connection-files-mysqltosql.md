@@ -13,12 +13,12 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf218f229ad8f97e1bdcda086f19bd7517896873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd954964af9c2495311423620c95af621021a5b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608621"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099245"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>서버 연결 파일 만들기(MySQLToSQL)
 스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
@@ -92,5 +92,5 @@ ms.locfileid: "47608621"
 운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (MySQL)를 실행합니다.](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[SSMA 콘솔 (MySQL)를 실행합니다.](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

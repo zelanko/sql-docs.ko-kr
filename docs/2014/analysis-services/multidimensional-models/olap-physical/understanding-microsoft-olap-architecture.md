@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084483"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145048"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
   다음 항목을 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스를 더 잘 이해하고 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현하는 방법을 계획할 수 있습니다.  
@@ -41,11 +41,11 @@ ms.locfileid: "48084483"
  [기타...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **프로그래밍 아키텍처**  
- [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [ADOMD.NET을 사용하여 개발](../adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **국가별 고려 사항**  
  [Analysis Services 다차원에 대 한 세계화 시나리오](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

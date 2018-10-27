@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017460"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099723"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   다차원 및 데이터 마이닝(기본값), SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 테이블 형식이라는 세 가지 서버 모드 중 하나에 Analysis Services를 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
   
- 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 [비교 테이블 형식 및 다차원 솔루션 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
+ 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 하세요. [비교 테이블 형식 및 다차원 솔루션 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
   
  설치한 서버 모드를 사용하지 않으려면 소프트웨어를 제거한 후 다시 설치하여 원하는 모드를 선택해야 합니다. 또는 여러 인스턴스에서 서로 다른 모드를 실행하도록 동일한 컴퓨터에 Analysis Services의 다른 인스턴스를 설치할 수 있습니다.  
   
@@ -40,21 +40,21 @@ ms.locfileid: "34017460"
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|이 값은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 저장소를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
-|1.|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 서버에서 더 이상 실행되지 않습니다.|  
+|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 저장소를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|1|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 서버에서 더 이상 실행되지 않습니다.|  
 |2|메모리 내 저장소나 DirectQuery 저장소를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   
  각 모드는 다른 모드와 함께 사용할 수 없습니다. 테이블 형식 모드용으로 구성된 서버는 큐브 및 차원이 포함된 기본 Analysis Services 데이터베이스를 실행할 수 없습니다. 기본 컴퓨터 하드웨어에서 지원하는 경우 같은 컴퓨터에 Analysis Services 인스턴스를 여러 개 설치하고 각 인스턴스가 다른 배포 모드를 사용하도록 구성할 수 있습니다. Analysis Services는 리소스를 많이 사용하는 응용 프로그램이므로 고성능 서버인 경우에만 한 시스템에 여러 개의 인스턴스를 배포하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [다차원 및 데이터 마이닝 모드에서 Analysis Services 설치](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [SharePoint 2010용 Power Pivot 설치](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

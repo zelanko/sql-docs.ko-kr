@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100325"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
   
-이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
+이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>메모리 내 모드와 DirectQuery 모드 간의 차이점  
@@ -92,7 +92,7 @@ DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datet
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
 **문자열에서 부울이 아닌 다른 값으로 캐스팅**  
-문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
+문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
   
 **숫자에서 문자열로의 캐스팅이 허용되지 않음**  
 예: `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ DirectQuery 모드에서는 반환되는 문자의 대/소문자가 항상 데�
   
 기본적으로는 대/소문자를 구분하지 않지만 악센트는 구분하는 Latin1_General 데이터 정렬이 사용됩니다. 따라서 소문자, 대문자 또는 대/소문자로 된 텍스트 문자열 인스턴스가 여러 개 있는 경우 모든 인스턴스가 동일한 문자열로 간주되어 첫 번째 문자열 인스턴스만 인덱스에 저장됩니다. 저장된 문자열에 대해 작동하는 모든 텍스트 함수는 인덱싱된 형태의 지정된 부분을 검색합니다. 따라서 위의 수식 예에서는 전체 열에 대해 첫 번째 인스턴스를 입력으로 사용하여 동일한 값이 반환됩니다.  
   
-[테이블 형식 모델의 문자열 저장소 및 데이터 정렬](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[테이블 형식 모델의 문자열 저장소 및 데이터 정렬](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 이 동작은 RIGHT, MID 등의 다른 텍스트 함수에도 적용됩니다.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>참고자료  
-[DirectQuery 모드(SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 모드(SSAS 테이블 형식)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

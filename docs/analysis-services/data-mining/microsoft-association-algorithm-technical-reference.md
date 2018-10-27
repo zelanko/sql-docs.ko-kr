@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017390"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145908"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017390"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다는 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 또는 AMO를 사용 하 여 컬렉션의 [MiningModels 요소 &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA의 합니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다는 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 또는 AMO를 사용 하 여 컬렉션을 [MiningModels 요소 &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA의 합니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
   
 > [!NOTE]  
 >  DMX 문을 사용하여 기존 모델의 매개 변수를 변경할 수 없습니다. 따라서 모델을 만들 때 DMX CREATE MODEL 또는 ALTER STRUCTURE… ADD MODEL에 매개 변수를 지정해야 합니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "34017390"
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘과 함께 사용할 수 있는 모델링 플래그는 다음과 같습니다.  
   
- NOT  NULL  
+ NOT NULL  
  열에 null이 포함될 수 없음을 나타냅니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 모델 학습 중 null 값을 발견할 경우 오류가 발생합니다.  
   
  마이닝 구조 열에 적용됩니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "34017390"
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델의 콘텐츠 형식에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |예측 가능한 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
@@ -151,9 +151,9 @@ ms.locfileid: "34017390"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)   
- [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

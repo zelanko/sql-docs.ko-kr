@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216653"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145878"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>로컬 큐브(Analysis Services - 다차원 데이터)
   로컬 큐브를 만들거나 업데이트하거나 삭제하려면 ASSL 스크립트나 AMO 프로그램을 작성하여 실행해야 합니다.  
@@ -40,8 +40,8 @@ ms.locfileid: "48216653"
   
 |로컬 큐브 데이터의 원본|생성 방법|  
 |------------------------------------|---------------------|  
-|서버 기반 큐브|CREATE GLOBAL CUBE 문은 사용할 수 있습니다 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ASSL (Scripting Language) 스크립트를 만들고 서버 기반 큐브에서 큐브를 채우는 합니다. 자세한 내용은 [GLOBAL CUBE Statement 만들기 &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) 하거나 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|관계형 데이터 원본|ASSL 스크립트를 사용하여 OLE DB 관계형 데이터베이스에서 큐브를 만들고 채웁니다. ASSL을 사용하여 로컬 큐브를 만들려면 로컬 큐브 파일(*.cub)에 연결하고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대해 ASSL 스크립트를 실행하는 것과 같은 방식으로 ASSL 스크립트를 실행하여 서버 큐브를 만듭니다. 자세한 내용은 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)합니다.|  
+|서버 기반 큐브|CREATE GLOBAL CUBE 문은 사용할 수 있습니다 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ASSL (Scripting Language) 스크립트를 만들고 서버 기반 큐브에서 큐브를 채우는 합니다. 자세한 내용은 [GLOBAL CUBE Statement 만들기 &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) 하거나 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|관계형 데이터 원본|ASSL 스크립트를 사용하여 OLE DB 관계형 데이터베이스에서 큐브를 만들고 채웁니다. ASSL을 사용하여 로컬 큐브를 만들려면 로컬 큐브 파일(*.cub)에 연결하고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대해 ASSL 스크립트를 실행하는 것과 같은 방식으로 ASSL 스크립트를 실행하여 서버 큐브를 만듭니다. 자세한 내용은 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)합니다.|  
   
  REFRESH CUBE 문을 사용하여 로컬 큐브를 다시 생성하고 해당 데이터를 업데이트할 수 있습니다. 자세한 내용은 [CUBE 문은 새로 고침 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48216653"
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE GLOBAL CUBE 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [REFRESH CUBE 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

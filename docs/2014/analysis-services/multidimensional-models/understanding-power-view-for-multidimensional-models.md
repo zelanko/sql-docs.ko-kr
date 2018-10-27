@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169013"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148078"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 Microsoft SQL Server 2014의 다차원 모델용 Power View 기능에 대해 설명하고, 조직에서 다차원 모델용 Power View를 구현하려고 하는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48169013"
   
  ![파워 뷰 다차원 모델 아키텍처용](../media/daxmd-architecture.gif "파워 뷰 다차원 모델 아키텍처용")  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  **서버 요구 사항**  
   
 -   다차원 모드에서 실행하는 Analysis Service와 SQL Server 2014 Enterprise 또는 Business Intelligence Edition.  
@@ -92,7 +92,7 @@ ms.locfileid: "48169013"
   
  **variant로서의 측정값**  
   
- ![파워 뷰의 집계할 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 계층")  
+ ![파워 뷰의 집계할 수 없는 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
 ### <a name="implicit-measures"></a>암시적 측정값  
  테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델의 경우에는 차원 특성 데이터가 다른 방식으로 저장되므로 암시적 측정값을 쿼리하는 데 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "48169013"
   
  **파워 뷰의 집계할 수 없는 계층**  
   
- ![파워 뷰의 집계할 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 계층")  
+ ![파워 뷰의 집계할 수 없는 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
 ## <a name="images"></a>이미지  
  파워 뷰에서는 이미지를 렌더링할 수 있습니다. 다차원 모델에서 파워 뷰에 이미지를 제공하는 방법 중 하나는 이미지의 URL(Uniform Resource Locator)을 포함하는 열을 표시하는 것입니다. 이 릴리스의 Analysis Services에서는 ImageURL 형식으로 차원 특성의 태그를 지정할 수 있습니다. 그런 다음 이 데이터 형식이 테이블 형식 메타데이터에 포함되어 파워 뷰에 제공됩니다. 그러면 파워 뷰는 시각화 내에서 URL에 지정된 이미지를 다운로드하여 표시할 수 있습니다.  
@@ -226,7 +226,7 @@ ms.locfileid: "48169013"
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   
- 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
+ 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
   
 ## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  

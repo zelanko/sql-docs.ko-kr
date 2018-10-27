@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084683"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146428"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
   동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -53,7 +53,7 @@ ms.locfileid: "48084683"
  대상 개체 유형을 선택한 후 **대상 개체**에서 지정된 유형의 큐브 개체를 선택합니다.  
   
  **조건(옵션)**  
- 부울 값으로 확인되는 선택적 MDX(Multidimensional Expression) 식을 지정합니다. 값이 `True`, 지정된 된 대상에서 동작이 수행 됩니다. 값이 `False`된 동작이 수행 되지 않습니다.  
+ 부울 값으로 확인되는 선택적 MDX(Multidimensional Expression) 식을 지정합니다. 값이 `True`이면 지정된 대상에서 동작이 수행됩니다. 값이 `False`이면 동작이 수행되지 않습니다.  
   
  **동작 내용**  
  동작의 유형을 선택합니다. 다음 표에는 사용 가능한 유형이 요약되어 있습니다.  
@@ -77,10 +77,10 @@ ms.locfileid: "48084683"
 |**응용 프로그램**|동작의 응용 프로그램을 나타냅니다.|  
 |**설명**|동작에 대한 설명입니다.|  
 |**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 이면 지정할 `True` 에 대 한 **캡션이 MDX 인지**합니다.|  
-|**True**|지정할 `True` 캡션이 MDX 이면 또는 `False` 없는 경우.|  
+|**True**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
   
 > [!NOTE]  
->  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) 및 [AMO OLAP 고급 개체 프로그래밍](analysis-management-objects/programming-amo-olap-advanced-objects.md)을 참조하세요.  
+>  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 및 [AMO OLAP 고급 개체 프로그래밍](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)을 참조하세요.  
   
 ## <a name="creating-a-reporting-action"></a>보고 동작 만들기  
  보고서 서버는 URL 기반 보고서 요청에 응답합니다. 보고 동작을 만들려면 **큐브** 메뉴에서 **새 보고 작업**을 클릭합니다. 보고 동작에 다음 옵션을 사용할 수 있습니다.  

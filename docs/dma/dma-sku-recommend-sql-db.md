@@ -2,7 +2,7 @@
 title: (Data Migration Assistant) 온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인 | Microsoft Docs
 description: 온-프레미스 데이터베이스에 대 한 Azure SQL 데이터베이스 SKU 오른쪽을 확인 하려면 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684451"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644001"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -36,7 +36,7 @@ ms.locfileid: "47684451"
 
 다음 지침을 통해 Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 Data Migration Assistant를 사용 하 여 azure에 연결된 된 데이터베이스를 프로 비전 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이미 있는 경우이 도구를 닫고 설치를 닫은 다음 다시 및 도구를 업그레이드 하 라는 메시지가 나타납니다.
 
@@ -141,7 +141,7 @@ TSV 출력 파일에는 다음 그림에 표시 된 열 포함 됩니다.
 - **MetricValue** -Azure SQL Database SKU를 권장 합니다.
 - **SQLMiEquivalentCores** -Azure SQL Database Managed Instance에 대 한 이동 하려는 경우 코어 수에 대 한이 값을 사용할 수 있습니다.
 - **IsTierRecommended** -각 계층에 대 한 최소 SKU 권장 사항을 확인 합니다. 그런 다음 데이터베이스에 대 한 적합 한 계층을 결정 하는 추론 적용 합니다. 
-- **ExclusionReasons** -이 값은 계층에 권장 되는 경우 비어 있습니다. 권장 되지 않는 각 계층에서 발견 되지 않았습니다 이유는 이유 제공 됩니다.
+- **ExclusionReasons** -이 값은 계층에 권장 되는 경우 비어 있습니다. 권장 되지 않습니다는 각 계층에 대 한 선택 되지 않은 이유는 이유 제공 합니다.
 - **AppliedRules** -적용 된 규칙의 약식 표기 합니다.
 
 권장된 값은 온-프레미스 데이터베이스 비슷합니다 성공률을 사용 하 여 Azure에서 실행 하 여 쿼리 하는 데 필요한 최소 SKU입니다. 예를 들어, 최소 권장 되는 SKU는 표준 계층 S4 경우 S3을 선택 하 고 아래 됩니다 쿼리 제한 시간 초과로 인해 또는 실행 되지 않습니다.

@@ -1,5 +1,5 @@
 ---
-title: 계산 멤버를 하위 Select 및 하위 큐브 | Microsoft Docs
+title: 계산 멤버를 하위 Select 및 하위 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023830"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145318"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   계산 멤버는 값을 런타임 시 식에서 계산하는 차원 멤버이며 하위 SELECT 및 하위 큐브에서 사용하여 보다 정확하게 쿼리의 cubespace를 정의할 수 있습니다.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>하위 공간에서 계산 멤버 사용  
- **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROPMSMDSUBQUERIES** 속성 [XMLA 속성 지원 &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)하위 큐브 또는 하위 select에 동작이 나 허용 되는 계산된 멤버 또는 계산된 집합을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
+ 합니다 **하위 쿼리** 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROPMSMDSUBQUERIES** 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)하위 큐브 또는 하위 select 동작이 나 허용 계산 멤버나 계산된 집합을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
   
  SubQueries 속성은 다음 값을 허용합니다.  
   
 |||  
 |-|-|  
-|값|설명|  
+|값|Description|  
 |0|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지 않습니다.<br /><br /> 계산 멤버가 참조된 경우 하위 SELECT 또는 하위 큐브를 평가할 때 오류가 발생합니다.|  
 |1|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되지만 상위 항목 멤버는 반환 하위 공간에 포함되지 않습니다.|  
 |2|계산 멤버는 하위 SELECT 또는 하위 큐브에서 허용되고 상위 항목 멤버는 반환 하위 공간에 포함됩니다. 또한 혼합 세분성이 계산 멤버 선택에서 허용됩니다.|  
@@ -119,12 +119,12 @@ Where [Measures].[Reseller Sales Amount]
   
  위 결과에서 [All Geographies], [United States], [Oregon] 및 [Washington]에 대한 집계 값은 &[Portland]&[OR] 및 &[Spokane]&[WA]의 하위 항목에 대한 집계에서 제공됩니다. 계산 멤버에서는 아무 것도 제공되지 않습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
  전역 또는 세션 계산 멤버만 하위 SELECT 또는 하위 큐브 식에서 허용됩니다. MDX 식에 쿼리 계산 멤버가 있으면 하위 SELECT 또는 하위 큐브 식이 평가될 때 오류가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [쿼리의 하위 select](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [지원 되는 XMLA 속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [쿼리의 하위 SELECT](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
+ [지원되는 XMLA 속성&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

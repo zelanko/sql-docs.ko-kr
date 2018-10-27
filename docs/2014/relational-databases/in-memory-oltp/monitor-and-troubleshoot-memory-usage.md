@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bca6dcb1287918901f3bfb11a8e33e9c8917e84
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100074"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
@@ -170,7 +170,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/en-us/99b8a95f-d04b-4edb-a764-17b95581d071)를 참조하세요.  
+ 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)를 참조하세요.  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>내부 시스템 구조의 메모리 사용  
  메모리는 트랜잭션 구조, 데이터 및 델타 파일 버퍼, 가비지 수집 구조 등의 시스템 개체에서도 사용합니다. 이러한 시스템 개체에서 사용하는 메모리는 여기 표시된 대로 `sys.dm_xtp_system_memory_consumers` 를 쿼리하여 확인할 수 있습니다.  

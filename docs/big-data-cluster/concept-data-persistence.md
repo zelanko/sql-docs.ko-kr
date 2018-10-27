@@ -1,18 +1,18 @@
 ---
 title: SQL Server 빅 데이터에서 kubernetes 클러스터를 사용 하 여 데이터 지 속성 | Microsoft Docs
-description: ''
+description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속성의 작동 방식에 대해 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460578"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050839"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -31,7 +31,7 @@ SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 �
 배포 하는 동안 영구 저장소를 사용 하려면 구성 합니다 **USE_PERSISTENT_VOLUME** 하 고 **STORAGE_CLASS_NAME** 실행 하기 전에 환경 변수 `mssqlctl create cluster` 명령입니다. **USE_PERSISTENT_VOLUME** 로 설정 된 `true` 기본적으로 합니다. 기본값을 무시 하 고 설정할 수 있습니다 `false` 및 SQL Server 빅 데이터 클러스터 emptyDir 탑재를 사용 하는 예제의 경우. 
 
 > [!WARNING]
-> 영구 저장소 없이 작동 하지 않는 클러스터에 발생할 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다.
+> 영구 저장소 없이 실행 된 테스트 환경에서 작업할 수 있지만 작동 하지 않는 클러스터 될 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다.
 
 도 제공 해야 플래그를 true로 설정 하면 **STORAGE_CLASS_NAME** 배포 시 매개 변수로 합니다.
 
@@ -41,20 +41,25 @@ AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.micros
 
 ## <a name="minikube-storage-class"></a>Minikube 저장소 클래스
 
-Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. 사실은 Minikube를에서 USE_PERSISTENT_VOLUME = true (기본값), 기본값 다르기 때문에 STORAGE_CLASS_NAME 환경 변수의 기본값 재정의 해야 합니다. 값을 설정 합니다 `standard`: 
-```
+Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. 경우 minikube를에 유의 `USE_PERSISTENT_VOLUME=true` (기본값)를 재정의 해야에 대 한 기본값을 **STORAGE_CLASS_NAME** 환경 변수 기본값 다르기 때문입니다. 값을 설정 합니다 `standard`: 
+
+Windows에서 다음 명령을 사용 합니다.
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-또는 Minikube에서 영구적 볼륨을 사용 하 여 무시할 수 있습니다.
-```
-SET USE_PERSISTENT_VOLUME=false
+Linux에서 다음 명령을 사용 합니다.
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+Minikube에서 영구적 볼륨을 사용 하 여 설정 하 여 무시할 수 또는 `USE_PERSISTENT_VOLUME=false`합니다.
 
 ## <a name="kubeadm"></a>Kubeadm
 
-기본 제공 저장소 클래스를 사용 하 여 Kubeadm 가져오지 않습니다 따라서 스크립트 영구적 볼륨 및 로컬 저장소를 사용 하 여 저장소 클래스를 설정 하 여 만든 또는 [루크](https://github.com/rook/rook) 저장소입니다.
+기본 제공 저장소 클래스를 사용 하 여 Kubeadm 제공 되지 않습니다. 사용자 고유의 영구적 볼륨 및 저장소 클래스와 같은 로컬 저장소 또는 기본 프로 비 저 너 프로그램을 사용 하 여 만들 수 있습니다 [루크](https://github.com/rook/rook)합니다. 설정한 경우에 **STORAGE_CLASS_NAME** 구성한 저장소 클래스입니다. 설정할 수 있습니다 `USE_PERSISTENT_VOLUME=false` 테스트 환경에서의 이전 경고를 확인 하지만 합니다 **배포 설정** 이 문서의 섹션입니다.  
 
 ## <a name="on-premises-cluster"></a>온-프레미스 클러스터
 
@@ -75,7 +80,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-SQL Server에 대 한 빅 데이터 클러스터에 대 한 영구 저장소를 설정 하기 위해 환경 변수를 관련 된 포괄적인 목록은 다음과 같습니다.
+SQL Server 빅 데이터 클러스터에 대 한 영구 저장소를 설정 하기 위해 환경 변수를 관련 된 포괄적인 목록은 다음과 같습니다.
 
 | 환경 변수 | 기본값 | Description |
 |---|---|---|

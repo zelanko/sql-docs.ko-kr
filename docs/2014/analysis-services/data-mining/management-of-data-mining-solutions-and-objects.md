@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164293"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147578"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48164293"
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터 마이닝 개체 이동](moving-data-mining-objects.md)  
   
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [데이터 마이닝 모니터링 하려면 SQL Server Profiler를 사용 하 여 &#40;Analysis Services-데이터 마이닝&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [SQL Server Profiler를 사용하여 데이터 마이닝 모니터링&#40;Analysis Services - 데이터 마이닝&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>데이터 마이닝 개체 위치  
  처리된 마이닝 구조 및 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 저장됩니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "48164293"
   
 -   [마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+-   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
   
--   [알고리즘 매개 변수 보기 또는 변경](view-or-change-algorithm-parameters.md)  
+-   [알고리즘 매개 변수 확인 또는 변경](view-or-change-algorithm-parameters.md)  
   
  일반적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 도구로 활용하여 새 프로젝트를 개발한 후 기존 프로젝트에 추가한 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]와 같은 도구를 사용하여 배포된 프로젝트와 개체를 관리합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164293"
 > [!WARNING]  
 >  이름 또는 설명과 같은 메타데이터를 변경하는 작업을 비롯하여 마이닝 구조 또는 마이닝 모델을 변경하는 모든 작업을 수행한 후에는 구조나 모델을 다시 처리해야 합니다.  
   
- 데이터 마이닝 프로젝트 또는 개체를 만드는 데 사용 된 솔루션 파일을가 없는 경우 Analysis Services 가져오기 마법사를 사용 하 여 서버에서 기존 프로젝트를 가져와서, 개체를 수정한을 사용 하 여 다시 배포는 `Incremental` 옵션입니다. 자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
+ 데이터 마이닝 프로젝트 또는 개체를 만드는 데 사용된 솔루션 파일이 없는 경우 Analysis Services 가져오기 마법사를 사용하여 서버에서 기존 프로젝트를 가져와서 개체를 수정한 다음 `Incremental` 옵션을 사용하여 다시 배포할 수 있습니다. 자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 데이터 마이닝 개체 관리  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 마이닝 구조 및 마이닝 모델을 스크립팅, 처리 또는 삭제할 수 있습니다. 개체 탐색기를 사용하여 제한된 속성 집합만 볼 수 있지만 **DMX 쿼리** 창을 열고 마이닝 구조를 선택하면 마이닝 모델에 대한 추가 메타데이터를 볼 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164293"
 ### <a name="analysis-management-objects-amo"></a>AMO(Analysis Management Objects)  
  AMO(Analysis Management Objects)는 XMLA의 최상위에 작성되며 데이터 마이닝 개체를 완전히 제어할 수 있게 하는 개체 모델입니다. AMO를 사용하여 마이닝 구조와 마이닝 모델을 생성, 배포 및 모니터링할 수 있습니다.  
   
--   [AMO 개념 및 개체 모델](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 개념 및 개체 모델](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164293"
 ### <a name="data-mining-extensions-dmx"></a>DMX(Data Mining Extensions)  
  DMX(Data Mining Extensions)를 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADOMD.Net 등의 다른 명령 인터페이스와 함께 사용하여 마이닝 구조와 마이닝 모델을 생성, 삭제 및 쿼리할 수 있습니다.  
   
--   [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](/sql/dmx/dmx-statements-data-definition)  
+-   [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](/sql/dmx/dmx-statements-data-definition)  
   
  **제한 사항:** 일부 속성은 DMX를 사용하여 변경할 수 없습니다.  
   

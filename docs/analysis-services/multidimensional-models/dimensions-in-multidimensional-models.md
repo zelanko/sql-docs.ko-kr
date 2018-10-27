@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cdae19df652c081290f04d6227a394aa6d90676f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f5f58f5c771d176cedf332e51a33c354bbaf652c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027240"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145448"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>다차원 모델의 차원
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34027240"
  큐브를 만들 때 데이터베이스에 이미 있는 차원을 새 큐브에 추가할 수도 있습니다. 이러한 차원은 다른 큐브에 대해 또는 차원 마법사를 통해 이전에 정의된 것일 수 있습니다. 데이터베이스 차원을 정의한 후에는 차원 디자이너에서 해당 데이터베이스 차원을 수정하고 구성할 수 있습니다. 그리고 큐브 디자이너에서 제한된 범위까지 큐브 차원을 사용자 지정할 수 있습니다.  
   
 > [!NOTE]  
->  또한 XMLA 또는 AMO(Analysis Management Objects)를 사용하여 차원, 특성 및 계층을 프로그래밍 방식으로 디자인하고 구성할 수 있습니다. 자세한 내용은 [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) 및 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
+>  또한 XMLA 또는 AMO(Analysis Management Objects)를 사용하여 차원, 특성 및 계층을 프로그래밍 방식으로 디자인하고 구성할 수 있습니다. 자세한 내용은 [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) 및 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  
@@ -48,10 +48,10 @@ ms.locfileid: "34027240"
  [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  차원 디자이너를 사용하여 차원 특성의 사용자 정의 계층을 정의, 수정 및 구성하는 방법에 대해 설명합니다.  
   
- [비즈니스 인텔리전스 마법사를 사용 하 여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  비즈니스 인텔리전스 마법사를 사용하여 데이터베이스 차원을 향상시키는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

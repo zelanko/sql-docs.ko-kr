@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025740"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146176"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 멤버 속성-기본 멤버 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34025740"
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하는 상황에 맞지 않는 기본 속성에 대해 설명합니다.  
   
 > [!NOTE]  
->  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. **MEMBERS** 스키마 행 집합에 대한 자세한 내용은 [MDSCHEMA_MEMBERS 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)을 참조하세요.  
+>  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. **MEMBERS** 스키마 행 집합에 대한 자세한 내용은 [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)을 참조하세요.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -203,17 +203,17 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [PeriodsToDate&#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [자식 &#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize & #40; Mdx& #41;](../../../mdx/hierarchize-mdx.md)   
- [Count & #40; 설정 & #41; & #40; Mdx& #41;](../../../mdx/count-set-mdx.md)   
- [필터 & #40; Mdx& #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40; Mdx& #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40; Mdx& #41;](../../../mdx/drilldownlevel-mdx.md)   
- [속성 & #40; Mdx& #41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Children&#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize&#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [개수&#40;Set&#41;&#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [필터&#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers&#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel&#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [속성&#40;MDX&#41;](../../../mdx/properties-mdx.md)   
+ [PrevMember&#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
+ [멤버 속성 사용&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 함수 참조&#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 718b51025b8cd62fbf61290430cc203e9d5b0c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171263"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146175"
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
   이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
@@ -67,14 +67,14 @@ ms.locfileid: "48171263"
 |**Encrypt Password**|로컬 암호가 로컬 큐브를 암호화하는 데 사용될지 여부를 지정합니다. 유효한 값은 True 또는 False입니다. 기본값은 False입니다. |  
 |`Encryption Password`|암호화된 로컬 큐브를 해독하는 데 사용되는 암호입니다. 기본값은 비어 있습니다. 이 값은 사용자가 명시적으로 설정해야 합니다. |  
 |`Impersonation Level`|클라이언트를 가장할 때 서버에서 사용할 수 있는 가장 수준을 나타냅니다. 유효한 값은 다음과 같습니다.<br /><br /> **익명**: 클라이언트가 서버에 익명입니다. 서버 프로세스가 클라이언트에 대한 정보를 얻을 수 없고 클라이언트를 가장할 수 없습니다.<br /><br /> **식별**: 서버 프로세스가 클라이언트 id를 가져올 수 있습니다. 서버가 권한 부여를 위해 클라이언트 ID를 가장할 수 있지만 시스템 개체에는 클라이언트로 액세스할 수 없습니다.<br /><br /> **가장**:이 값은 기본값입니다. 클라이언트 ID를 가장할 수 있지만 연결이 설정된 경우에만 가능하며 일부 호출에서는 가장할 수 없습니다.<br /><br /> **대리자**: 서버 프로세스가 클라이언트를 대신해 동작 하는 동안 클라이언트 보안 컨텍스트를 가장할 수 있습니다. 서버 프로세스는 또한 클라이언트를 대신해 동작하는 동안 다른 서버로 보내는 호출을 만들 수 있습니다.|  
-|`Integrated Security`|호출자의 Windows ID는 Analysis Services에 연결하는 데 사용됩니다. 유효한 값은 공백, SSPI 및 BASIC입니다.<br /><br /> `Integrated Security`=`SSPI` NTLM, Kerberos 또는 익명 인증을 허용 하는 TCP 연결에 대 한 기본값입니다. 공백은 HTTP 연결에 대한 기본값입니다.<br /><br /> 사용 하는 경우 `SSPI`, `ProtectionLevel` 중 하나를 설정 해야 합니다: `Connect`를 `PktIntegrity`, `PktPrivacy`합니다.|  
+|`Integrated Security`|호출자의 Windows ID는 Analysis Services에 연결하는 데 사용됩니다. 유효한 값은 공백, SSPI 및 BASIC입니다.<br /><br /> `Integrated Security`=`SSPI` NTLM, Kerberos 또는 익명 인증을 허용 하는 TCP 연결에 대 한 기본값입니다. 공백은 HTTP 연결에 대한 기본값입니다.<br /><br /> `SSPI`를 사용하는 경우 `ProtectionLevel`은 `Connect`, `PktIntegrity`, `PktPrivacy` 중 하나로 설정되어야 합니다. |  
 |`Persist Encrypted`|클라이언트 응용 프로그램에서 데이터 원본 개체에 암호화된 형태로 암호와 같은 중요한 인증 정보를 유지해야 하는 경우 이 속성을 설정합니다.  기본적으로 인증 정보는 유지되지 않습니다.|  
 |`Persist Security Info`|유효한 값은 True 및 False입니다. True로 설정되면 연결이 설정된 후 연결 문자열에서 이전에 지정된 사용자 ID 또는 암호와 같은 보안 정보를 연결에서 가져올 수 있습니다. 기본값은 False입니다.|  
-|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다.  유효한 값은<br /><br /> `None` 을 참조하세요. 인증되지 않은 연결이나 익명 연결입니다.  서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다. <br /><br /> `Connect` 을 참조하세요. 인증된 연결입니다.  클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity` 을 참조하세요. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다. <br /><br /> `PktPrivacy` 을 참조하세요. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
+|`ProtectionLevel`|연결에서 사용되는 보안 수준을 결정합니다.  유효한 값은<br /><br /> `None` 을 참조하세요. 인증되지 않은 연결이나 익명 연결입니다.  서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다. <br /><br /> `Connect` 을 참조하세요. 인증된 연결입니다.  클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br /><br /> `PktIntegrity` 을 참조하세요. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다. <br /><br /> `PktPrivacy` 을 참조하세요. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> <br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)를 참조하세요.|  
 |`Roles`|해당 역할이 제공하는 사용 권한을 사용하여 서버 또는 데이터베이스에 연결할 미리 정의된 역할의 쉼표로 구분된 목록을 지정합니다. 이 속성을 생략하면 모든 역할이 사용되고 유효 사용 권한은 모든 역할의 조합이 됩니다. 이 속성을 빈 값으로 설정하면(예: Roles=’ ‘) 클라이언트 연결에 역할 멤버 자격이 없습니다.<br /><br /> 이 속성을 사용하는 관리자는 역할이 제공하는 사용 권한을 사용하여 연결됩니다.  일부 명령은 역할이 충분한 사용 권한을 제공하지 않는 경우 실패할 수도 있습니다. |  
 |`SSPI`|`Integrated Security`가 `SSPI`로 설정된 경우 클라이언트 인증에 사용할 보안 패키지를 명시적으로 지정합니다.  SSPI는 여러 패키지를 지원하지만 이 속성을 사용하여 특정 패키지를 지정할 수 있습니다. 유효한 값은 Negotiate, Kerberos, NTLM 및 Anonymous User입니다. 이 속성이 설정되지 않으면 모든 패키지를 연결에 사용할 수 있습니다.|  
 |`Use Encryption for Data`|데이터 전송을 암호화합니다.  유효한 값은 True 및 False입니다.|  
-|`User ID`=..., `Password`=|`User ID` 및 `Password` 함께 사용 됩니다. Analysis Services는 이러한 자격 증명을 통해 지정된 사용자 ID를 가장합니다.  Analysis Services 연결에서 서버가 HTTP 액세스에 대해 구성되어 있고 IIS 가상 디렉터리에 대해 통합 보안 대신 기본 인증을 지정한 경우에만 명령줄에 자격 증명을 입력할 수 있습니다.<br /><br /> 사용자 이름 및 암호는 Windows ID(로컬 또는 도메인 사용자 계정)의 자격 증명이어야 합니다.  `User ID`에는 공백이 포함되어 있습니다.  이 속성에 대 한 다른 별칭을 포함 `UserName` (공백 없음) 및 `UID`합니다. 에 대 한 별칭 `Password` 는 `PWD`합니다.|  
+|`User ID`=..., `Password`=|`User ID` 및 `Password`는 함께 사용됩니다. Analysis Services는 이러한 자격 증명을 통해 지정된 사용자 ID를 가장합니다.  Analysis Services 연결에서 서버가 HTTP 액세스에 대해 구성되어 있고 IIS 가상 디렉터리에 대해 통합 보안 대신 기본 인증을 지정한 경우에만 명령줄에 자격 증명을 입력할 수 있습니다.<br /><br /> 사용자 이름 및 암호는 Windows ID(로컬 또는 도메인 사용자 계정)의 자격 증명이어야 합니다.  `User ID`에는 공백이 포함되어 있습니다.  이 속성의 다른 별칭에는 `UserName`(공백 없음) 및 `UID`가 포함됩니다.  `Password`의 별칭은 `PWD`입니다. |  
   
 ##  <a name="bkmk_special"></a> 특수한 용도의 매개 변수  
  이 섹션에서는 나머지 연결 문자열 매개 변수에 대해 설명합니다. 이러한 매개 변수는 응용 프로그램에 필요한 특정 연결 동작을 보장하는 데 사용됩니다.  
@@ -83,11 +83,11 @@ ms.locfileid: "48171263"
   
 |속성|Description|  
 |--------------|-----------------|  
-|`Application Name`|연결과 관련된 응용 프로그램의 이름을 설정합니다.  이 값은 추적 이벤트를 모니터링할 때 유용할 수 있으며 특히 동일한 데이터베이스에 액세스하는 여러 응용 프로그램이 있는 경우에 유용합니다. 예를 들어 연결 문자열에 Application Name=’test’를 추가하면 다음 스크린샷에 표시된 대로 ’test’가 SQL Server Profiler 추적에 나타납니다.<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 이 속성의 별칭에 포함 `sspropinitAppName`, `AppName`합니다. 자세한 내용은 [SQL Server에 연결할 때 Application Name 매개 변수 사용](http://go.microsoft.com/fwlink/?LinkId=301699)을 참조하십시오.|  
+|`Application Name`|연결과 관련된 응용 프로그램의 이름을 설정합니다.  이 값은 추적 이벤트를 모니터링할 때 유용할 수 있으며 특히 동일한 데이터베이스에 액세스하는 여러 응용 프로그램이 있는 경우에 유용합니다. 예를 들어 연결 문자열에 Application Name=’test’를 추가하면 다음 스크린샷에 표시된 대로 ’test’가 SQL Server Profiler 추적에 나타납니다.<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 이 속성의 별칭에는 `sspropinitAppName` 및 `AppName`이 포함됩니다.  자세한 내용은 [SQL Server에 연결할 때 Application Name 매개 변수 사용](http://go.microsoft.com/fwlink/?LinkId=301699)을 참조하십시오.|  
 |`AutoSyncPeriod`|클라이언트 및 서버 캐시 동기화의 빈도(밀리초)를 설정합니다. ADOMD.NET은 최소 메모리 오버헤드가 있는 자주 사용되는 개체에 대한 클라이언트 캐싱을 제공합니다. 이는 서버와의 왕복 횟수를 줄이는 데 도움이 됩니다. 기본값은 10000밀리초(또는 10초)입니다.  null 또는 0으로 설정되면 자동 동기화가 해제됩니다. |  
 |`Character Encoding`|문자가 요청에 대해 인코딩되는 방법을 정의합니다. 유효한 값은 Default 또는 UTF-8(Default와 UTF-8은 동일함) 및 UTF-16입니다.|  
 |`CompareCaseSensitiveStringFlags`|지정한 로캘에 대한 대/소문자를 구분하는 문자열 비교를 조정합니다. 이 속성 설정에 대한 자세한 내용은 [CompareCaseSensitiveStringFlags 속성](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)을 참조하십시오.|  
-|`Compression Level`|경우 `TransportCompression` 이 XPRESS 인 얼마나 압축을 사용 하는 제어 압축 수준을 설정할 수 있습니다. 유효한 값은 0에서 9까지입니다. 0은 최소 압축을 의미하고 0는 최대 압축을 의미합니다.  압축이 증가하면 성능이 저하됩니다. 기본값은 0입니다.|  
+|`Compression Level`|`TransportCompression`이 XPRESS인 경우 압축 수준을 설정하여 압축이 사용되는 정도를 제어할 수 있습니다.  유효한 값은 0에서 9까지입니다. 0은 최소 압축을 의미하고 0는 최대 압축을 의미합니다.  압축이 증가하면 성능이 저하됩니다. 기본값은 0입니다.|  
 |`Connect Timeout`|시간 제한이 초과되기 전에 클라이언트가 연결을 시도하는 최대 시간(초 단위)을 결정합니다.  연결이 이 기간 내에 성공하지 않으면 클라이언트가 연결 시도를 중지하고 오류를 생성합니다. |  
 |`MDX Compatibility`|이 속성의 용도는 MDX 쿼리를 발행하는 응용 프로그램에 대해 일관성 있는 MDX 동작의 집합을 보장하는 것입니다.  MDX 쿼리를 사용하여 Analysis Services에 연결된 피벗 테이블을 채우고 계산하는 Excel에서는 이 속성을 1로 설정하여 비정형 계층의 자리 표시자 멤버가 피벗 테이블에 표시되도록 합니다. 유효한 값에는 0, 1, 2이 포함됩니다.<br /><br /> 0과 1은 자리 표시자 멤버를 노출하고 2는 노출하지 않습니다. 비어 있으면 0으로 간주됩니다. |  
 |`MDX Missing Member Mode=Error`|MDX 문에서 누락된 멤버를 무시할 것인지 여부를 나타냅니다. 유효한 값은 Default, Error 및 Ignore입니다. Default는 서버에서 정의된 값을 사용합니다. Error는 멤버가 없는 경우 오류를 생성합니다. Ignore는 누락된 값이 무시되도록 지정합니다.|  
@@ -95,10 +95,10 @@ ms.locfileid: "48171263"
 |`Packet Size`|512에서 32,767까지의 네트워크 패킷 크기(바이트)입니다. 기본 네트워크 패킷 크기는 4096입니다. |  
 |`Protocol Format`|서버에 전송된 XML의 형식을 설정합니다. 유효한 값은 Default, XML 또는 Binary입니다. 프로토콜은 XMLA입니다. XML이 압축된 형식(기본값), 원시 XML 또는 이진 형식으로 전송되도록 지정할 수 있습니다. 이진 형식은 XML 요소 및 특성을 인코딩하여 더 작게 만듭니다. 압축은 요청 및 응답의 크기를 더 줄이는 소유 형식입니다. 압축 및 이진 형식은 데이터 전송 요청 및 응답의 속도를 높이는 데 사용됩니다.<br /><br /> 이진 또는 압축 형식을 사용하는 경우 연결에서 클라이언트 라이브러리를 사용해야 합니다. OLE DB 공급자는 이진 또는 압축 형식으로 요청과 응답을 지정할 수 있습니다. AMO 및 ADOMD.NET은 텍스트로 요청의 형식을 지정하지만 이진 또는 압축 형식의 응답을 받아들입니다. <br /><br /> 이 연결 문자열 속성은 `EnableBinaryXML` 및 `EnableCompression` 서버 구성 설정과 동일합니다. |  
 |`Real Time Olap`|캐싱을 우회하여 모든 파티션이 쿼리 알림을 수신 대기하도록 이 속성을 설정합니다. 기본적으로 이 속성은 설정되지 않습니다. |  
-|`Safety Options`|사용자 정의 함수 및 동작에 대한 안전 수준을 설정합니다.  유효한 값은 0, 1, 2입니다.  Excel 연결에서 이 속성은 Safety Options=2입니다. 이 옵션에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>을 참조하세요.|  
+|`Safety Options`|사용자 정의 함수 및 동작에 대한 안전 수준을 설정합니다.  유효한 값은 0, 1, 2입니다.  Excel 연결에서 이 속성은 Safety Options=2입니다. 이 옵션에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>에서 찾을 수 있습니다. |  
 |`SQLQueryMode`|SQL 쿼리에 계산이 포함되는지 여부를 지정합니다. 유효한 값은 Data, Calculated, IncludeEmpty입니다. Data는 계산이 허용되지 않음을 의미합니다. Calculated는 계산을 허용합니다. IncludeEmpty는 계산과 빈 행이 쿼리 결과에 반환될 수 있도록 합니다.|  
 |`Timeout`|오류를 생성하기 전에 클라이언트 라이브러리가 명령이 완료될 때까지 기다리는 시간(밀리초)을 지정합니다. |  
-|`Transport Compression`|압축이 `Protocol Format` 속성을 통해 지정된 경우 클라이언트 및 서버 통신이 압축되는 방법을 정의합니다.  유효한 값은 Default, None, Compressed 및 `gzip`입니다.  Default는 TCP의 경우 압축하지 않고 HTTP의 경우 `gzip`입니다.  None은 압축이 사용되지 않음을 나타냅니다.  Compressed는 XPRESS 압축을 사용합니다(SQL Server 2008 이상). `gzip` 이 경우 HTTP 요청, HTTP 연결에 대 한 유효한 포함 Accept-encoding만 =는 gzip 합니다.|  
+|`Transport Compression`|압축이 `Protocol Format` 속성을 통해 지정된 경우 클라이언트 및 서버 통신이 압축되는 방법을 정의합니다.  유효한 값은 Default, None, Compressed 및 `gzip`입니다.  Default는 TCP의 경우 압축하지 않고 HTTP의 경우 `gzip`입니다.  None은 압축이 사용되지 않음을 나타냅니다.  Compressed는 XPRESS 압축을 사용합니다(SQL Server 2008 이상). `gzip`은 HTTP 연결에만 유효합니다. 이 경우 HTTP 요청에는 Accept-Encoding=gzip이 포함됩니다.|  
 |`UseExistingFile`|로컬 큐브에 연결할 때 사용됩니다.  이 속성은 로컬 큐브를 덮어쓸지 여부를 지정합니다. 유효한 값은 True 또는 False입니다. True로 설정되면 큐브 파일이 있어야 합니다. 기존 파일은 연결의 대상입니다. False로 설정되면 큐브 파일을 덮어씁니다.|  
 |`VisualMode`|차원 보안이 적용될 때 멤버가 집계되는 방법을 제어하려면 이 속성을 설정합니다.<br /><br /> 모든 사용자가 볼 수 있는 큐브 데이터의 경우 값 합계에 포함된 모든 값이 표시되기 때문에 모든 멤버를 집계하는 것이 합리적입니다. 그러나 사용자 ID를 기준으로 차원을 필터링하거나 제한하는 경우 모든 멤버에 대한 값 합계를 표시하면(제한된 값과 허용된 값을 단일한 값 합계로 결합하면) 혼란을 주거나 공개되어야 하는 것보다 많은 정보를 표시할 수도 있습니다.<br /><br /> 차원 보안이 적용될 때 멤버가 집계되는 방법을 지정하려는 경우 허용되는 값만 집계에서 사용하려면 이 속성을 True로 설정하고 제한된 값을 값 합계에서 제외하려면 False로 설정합니다. <br /><br /> 연결 문자열에서 설정될 때 이 값은 큐브 또는 큐브 뷰 수준에 적용됩니다. 모델 내에서는 보다 세부적인 수준에서 보이는 값 합계를 제어할 수 있습니다.<br /><br /> 유효한 값은 0, 1, 2입니다.<br /><br /> 기본값은 0입니다.  현재 기본 동작은 사용자에게서 숨겨진 값이 집계에 포함되는 2입니다.<br /><br /> 1은 값 합계에서 숨겨진 값을 제외합니다. Excel의 경우 이 값이 기본값입니다. <br /><br /> 2는 숨겨진 값을 값 합계에 포함합니다. 이 값은 서버에서 기본값입니다. <br /><br /> <br /><br /> 이 속성의 별칭에는 `Visual Total` 또는 `Default MDX Visual Mode`가 포함됩니다. |  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48171263"
   
  **msmdpump.dll에 대한 http(s) 연결**  
   
- `Data Source=<URL>`, 여기서 URL은 msmdpump.dll이 들어 있는 가상 IIS 폴더의 HTTP 또는 HTTPS 주소입니다.  자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
+ `Data Source=<URL>`, 여기서 URL은 msmdpump.dll이 들어 있는 가상 IIS 폴더의 HTTP 또는 HTTPS 주소입니다.  자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하십시오.  
   
  **PowerPivot 통합 문서 (.xlsx,.xlsb 또는.xlsm 파일)에 대 한 http (s) 연결**  
   

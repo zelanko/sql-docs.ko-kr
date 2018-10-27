@@ -2,7 +2,7 @@
 title: Data Migration Assistant를 사용 하 여 SQL Server 로그인 마이그레이션 | Microsoft Docs
 description: Data Migration Assistant를 사용 하 여 SQL Server 로그인을 마이그레이션하는 방법을 알아봅니다
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836941"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643811"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 로그인 마이그레이션
 
@@ -44,7 +44,7 @@ ms.locfileid: "47836941"
 
 - 로그인 마이그레이션의 일부로 Data Migration Assistant는 권한을 할당 대상 SQL Server에서 보안 개체에 원본 SQL Server에 있는 합니다. 
 
-  로그인에 이미 있는 경우 대상 SQL Server, Data Migration Assistant 보안 개체에 할당 된 사용 권한만 마이그레이션되고 다시 전체 로그인을 만들지 않습니다.
+  로그인에 이미 있는 경우 대상 SQL Server, Data Migration Assistant 보안 개체에 할당 된 사용 권한만 마이그레이션되고 전체 로그인을 다시 만드는 없습니다.
 
 - Data Migration Assistant를 가장 하기 위해 노력 로그인이 대상 서버에 이미 있는 경우 데이터베이스 사용자에 게 해당 로그인에 매핑합니다.
 

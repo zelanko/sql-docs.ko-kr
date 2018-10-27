@@ -1,22 +1,22 @@
 ---
-title: SQL Server 2019 CTP 2.0 배포용 Minikube 구성 | Microsoft Docs
-description: ''
+title: SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성 | Microsoft Docs
+description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Minikube를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050785"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0에 대 한 Minikube 구성
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성
 
-Minikube는 쉽게 데스크톱 이나 랩톱 같은 단일 컴퓨터에서 Kubernetes를 실행 하는 도구입니다. Minikube VM 내에서 단일 노드 Kubernetes 클러스터에서 실행 Kubernetes 사용해 또는를 사용 하 여 개발 하려는 사용자에 대 한 노트북 일상적인 됩니다. 
+이 문서에서는 구성 하는 방법 설명 **minikube** SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 단일 컴퓨터에서. Minikube는 쉽게 데스크톱 이나 랩톱 같은 단일 컴퓨터에서 Kubernetes를 실행 하는 도구입니다. Minikube VM 내에서 단일 노드 Kubernetes 클러스터에서 실행 Kubernetes 사용해 또는를 사용 하 여 개발 하려는 사용자에 대 한 노트북 일상적인 됩니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서의 단계 Minikube 클러스터를 구성 합니다. SQL Server 2019 CTP 2.0 클러스터에 배포 하려면 다음 단계가입니다.
+이 문서의 단계 Minikube 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
 [SQL Server 2019 CTP 2.0 Kubernetes에 배포](deployment-guidance.md#deploy)

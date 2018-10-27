@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9f96b5a919a898f987892fb517ed9687b1d2498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022520"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146298"
 ---
 # <a name="database-storage-location"></a>데이터베이스 저장소 위치
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "34022520"
 > [!IMPORTANT]  
 >  **Alter** 명령을 사용하여 데이터베이스 저장소 위치를 변경해서는 안 됩니다. 대신 **Detach**/**Attach** 데이터베이스 명령 시퀀스를 사용하는 것이 좋습니다( [Analysis Services 데이터베이스 이동](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md), [Analysis Services 데이터베이스 연결 및 분리](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)참조).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Analysis Services 데이터베이스 연결 및 분리](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Analysis Services 데이터베이스 이동](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [DbStorageLocation 요소](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [요소 & #40; 만들기 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach 요소](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [요소 & #40; 동기화 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

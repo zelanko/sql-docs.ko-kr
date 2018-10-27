@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8789efdd287964cc0c2db29fc128f11685df9898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715531"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991196"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스를 복원 합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "47715531"
 > * 보고 데이터베이스를 수정 하려면 TRANSACT-SQL 문을 실행 합니다.
 > * 수정 된 데이터베이스를 백업 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 * 최소 2GB의 디스크 공간

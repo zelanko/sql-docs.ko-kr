@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aab7c06903f334ee0b24907cb4189b56d620b49a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903fd6b9af4bc363f5f37ea353ab9ddeb93e347c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099417"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 관리(OracleToSQL)
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -127,5 +127,5 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (Oracle)를 실행합니다.](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[SSMA 콘솔 (Oracle)를 실행합니다.](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

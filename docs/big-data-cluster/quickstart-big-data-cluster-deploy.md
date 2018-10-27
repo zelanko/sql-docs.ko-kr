@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050995"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터 배포
 
@@ -26,9 +26,9 @@ AKS에서 개발/테스트 환경에 적합 한 기본 구성에서는 SQL Serve
 
 SQL Server 빅 데이터 클러스터를 설치 하는 명령을 실행 하는 데 사용할 컴퓨터에 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)합니다. SQL Server 빅 데이터 클러스터에 kubernetes, 서버 및 클라이언트 (kubectl)에 대 한 1.10 이상이 필요합니다. Kubectl을 설치 하려면 [kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. 
 
-설치 합니다 `mssqlctl` CLI 도구는 SQL Server 빅 데이터를 관리 하려면 클라이언트 컴퓨터에서 클러스터를 먼저 설치 해야 합니다 [Python](https://www.python.org/downloads/) 최소 버전 v3.0 및 [pip3](https://pip.pypa.io/en/stable/installing/)합니다. `pip` 다운로드 하는 3.4 이상의 Python 버전을 사용 하는 경우 이미 설치 되어 [python.org](https://www.python.org/)합니다.
+설치 하는 **mssqlctl** CLI 도구는 SQL Server 빅 데이터를 관리 하는 클라이언트 컴퓨터에서 클러스터를 먼저 설치 해야 [Python](https://www.python.org/downloads/) 최소 버전 v3.0 및 [pip3](https://pip.pypa.io/en/stable/installing/)합니다. `pip` 다운로드 하는 3.4 이상의 Python 버전을 사용 하는 경우 이미 설치 되어 [python.org](https://www.python.org/)합니다.
 
-Python 설치를 사용할 수 없는 경우는 `requests` 패키지를 설치한 `requests` 사용 하 여 `python -m pip install requests`입니다. 이미 있는 경우는 `requests` 패키지를 사용 하 여 최신 버전으로 업그레이드 `python -m pip install requests --upgrade`합니다.
+Python 설치를 사용할 수 없는 경우는 `requests` 패키지를 설치한 `requests` 사용 하 여 `python -m pip install requests` (사용 하 여 `python3` Linux에서 이러한 명령에 대 한). 이미 있는 경우는 `requests` 패키지를 사용 하 여 최신 버전으로 업그레이드 `python -m pip install requests --upgrade`합니다.
 
 ## <a name="verify-aks-configuration"></a>AKS 구성 확인
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Mssqlctl CLI 관리 도구 설치
 
-설치를 알아보려면 아래 명령의 실행 `mssqlctl` 클라이언트 컴퓨터에 도구입니다. Windows 및 Linux 클라이언트에서 명령이 작동 하지만 Windows에서 관리자 권한으로 실행 되는 cmd 창에서 실행 되는지 또는 앞에 접두사를 사용 하 여 `sudo` on Linux:
+설치를 알아보려면 아래 명령의 실행 **mssqlctl** 클라이언트 컴퓨터에 도구입니다. Windows 및 Linux 클라이언트에서 명령이 작동 하지만 Windows에서 관리자 권한으로 실행 되는 cmd 창에서 실행 되는지 또는 앞에 접두사를 사용 하 여 `sudo` on Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> 하는 경우 **mssqlctl** 올바르게 설치, 문서의 필수 구성 요소 단계를 검토 하지 않습니다 [mssqlctl 설치](deployment-guidance.md#mssqlctl)합니다.
 
 ## <a name="define-environment-variables"></a>환경 변수를 정의 합니다.
 
@@ -103,7 +106,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
 > [!NOTE]
-> 제한 된 공개 미리 보기 동안 SQL Server에 대 한 빅 데이터 클러스터 이미지 다운로드를 위해 Docker 자격 증명은 Microsoft에서 각 고객에 게 제공 됩니다. 액세스를 요청 하려면 등록 [여기](https://aka.ms/eapsignup), SQL Server 빅 데이터 클러스터를 시도 하려면 관심을 가져를 지정 합니다.
+> 제한 된 공개 미리 보기 중 SQL Server 빅 데이터 클러스터 이미지 다운로드를 위해 Docker 자격 증명은 Microsoft에서 각 고객에 게 제공 됩니다. 액세스를 요청 하려면 등록 [여기](https://aka.ms/eapsignup), SQL Server 빅 데이터 클러스터를 시도 하려면 관심을 가져를 지정 합니다.
 
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터를 배포 합니다.
 

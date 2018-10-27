@@ -1,18 +1,18 @@
 ---
 title: 인스턴스를 마스터 SQL Server 빅 데이터 클러스터 란? | Microsoft Docs
-description: ''
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 마스터 인스턴스를 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796610"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051065"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>마스터 인스턴스를 클러스터 SQL Server 빅 데이터 란?
 
@@ -65,4 +65,4 @@ SQL Server 2019 빅 데이터 클러스터를 사용 하면 더에 엔터프라�
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 개요를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터 란?](big-data-cluster-overview.md)
+- [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)

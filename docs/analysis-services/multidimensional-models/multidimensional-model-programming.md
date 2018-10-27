@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7f34826746fa18cd0e741a5a904f0375a25ed68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026520"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147798"
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,20 +23,20 @@ ms.locfileid: "34026520"
 ## <a name="in-this-section"></a>섹션 내용  
  [Microsoft OLAP 아키텍처 이해](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [ADOMD.NET을 사용 하 여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [분석 관리 개체 & #40;를 사용 하 여 개발 AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [스크립팅 언어 & #40; Analysis Services를 사용 하 여 개발 ASSL & #41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [OLAP 기능 확장](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   
  [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1050-1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
+## <a name="see-also"></a>관련 항목  
+ [테이블 형식 모델 프로그래밍 호환성 수준 1050 ~ 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [데이터 마이닝 프로그래밍](../../analysis-services/data-mining-programming.md)  
   
   

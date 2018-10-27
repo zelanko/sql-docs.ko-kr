@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b95231d3065a07339bd5b4817bb614d97a9a91ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 616cc1e633d6683283d62d6fb3b3434780d9a919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034791"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147248"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "38034791"
  이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
   
  *AS_event*  
- 노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md) 를 참조하세요.  
+ 노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 를 참조하세요.  
   
  *data_filename*  
  이벤트 데이터가 포함된 파일의 이름입니다. 추적을 반복적으로 보내는 경우 데이터를 덮어쓰지 않도록 이름 뒤에 타임스탬프가 추가됩니다.  

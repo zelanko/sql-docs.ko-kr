@@ -19,17 +19,17 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110533"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148238"
 ---
 # <a name="data-mining-query-interfaces"></a>데이터 마이닝 쿼리 인터페이스
   데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 기반으로 합니다. 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 예측 및 모델링 태스크에 DMX를 사용합니다. 또한 모델을 처리할 때 생성된 패턴과 통계를 검색할 수 있습니다.  
   
- DMX를 사용하는 예측 쿼리의 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 쿼리 구문과 유사합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 모두 DMX 예측 쿼리 작성에 도움이 되는 도구를 제공합니다.  
+ DMX를 사용하는 예측 쿼리의 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 쿼리 구문과 유사합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 모두 DMX 예측 쿼리 작성에 도움이 되는 도구를 제공합니다.  
   
  이 항목에서는 DMX를 사용하여 데이터 마이닝 쿼리를 만들고 실행하는 데 사용할 수 있는 인터페이스를 설명합니다.  
   
@@ -87,16 +87,16 @@ ms.locfileid: "48110533"
   
  하지만 XMLA는 Analysis Service 서버와의 모든 상호 작용에 대한 기본 메시지 형식을 구성합니다. XMLA 메시지 내에서 쿼리는 DMX를 기반으로 하는 예측 쿼리를 전송하는지, 내용 쿼리를 전송하는지 또는 데이터 마이닝 스키마 행 집합을 사용하여 모델 메타데이터를 검색하는 쿼리를 전송하는지에 따라 다르게 표현됩니다.  
   
--   **예측 쿼리** 및 다른 모든 DMX 문의 텍스트는 XMLA [Command 요소&#40;XMLA&#41;](../xmla/xml-elements-properties/command-element-xmla.md) 요소의 [Statement 요소&#40;XMLA&#41;](../xmla/xml-elements-commands/statement-element-xmla.md) 요소 내에 텍스트로 배치된 DMX 쿼리와 함께 [Execute 메서드&#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md) 메서드를 사용하여 XMLA로 전송됩니다.  
+-   **예측 쿼리** 및 다른 모든 DMX 문의 텍스트는 XMLA [Command 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla) 요소의 [Statement 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 요소 내에 텍스트로 배치된 DMX 쿼리와 함께 [Execute 메서드&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드를 사용하여 XMLA로 전송됩니다.  
   
--   클러스터 수, 의사 결정 트리에 사용된 특성, 모델이 마지막으로 처리된 날짜, 모델을 만들 때 사용된 알고리즘 매개 변수와 같은 **모델 콘텐츠** 및 **모델 메타데이터**를 검색하려면 [Discover 메서드&#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md) 메서드를 사용하고 [RequestType 요소&#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md) 머리글에서 데이터 마이닝 스키마 행 집합 중 하나를 지정할 수 있습니다. 쿼리의 범위를 좁히려면 [RestrictionList 요소&#40;XMLA&#41;](../xmla/xml-elements-properties/restrictionlist-element-xmla.md) 요소 내에 제한 사항으로 조건을 입력합니다.  
+-   클러스터 수, 의사 결정 트리에 사용된 특성, 모델이 마지막으로 처리된 날짜, 모델을 만들 때 사용된 알고리즘 매개 변수와 같은 **모델 콘텐츠** 및 **모델 메타데이터**를 검색하려면 [Discover 메서드&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 메서드를 사용하고 [RequestType 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) 머리글에서 데이터 마이닝 스키마 행 집합 중 하나를 지정할 수 있습니다. 쿼리의 범위를 좁히려면 [RestrictionList 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) 요소 내에 제한 사항으로 조건을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
  [데이터 마이닝 솔루션](data-mining-solutions.md)   
  [DMX Select 문 이해](/sql/dmx/understanding-the-dmx-select-statement)   
- [구조 및 사용법 DMX 예측 쿼리](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [예측 쿼리 작성기를 사용 하 여 예측 쿼리 만들기](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [SQL Server Management Studio에서 DMX 쿼리 만들기](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

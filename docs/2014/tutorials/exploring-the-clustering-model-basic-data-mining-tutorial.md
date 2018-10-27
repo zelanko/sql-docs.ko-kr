@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147773"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146745"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>클러스터링 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 경우 비슷한 특징을 가진 클러스터로 그룹화 하는 클러스터링 알고리즘입니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147773"
  사용 하 여 합니다 **클러스터 특징** 탭을 검사할 수 있습니다 자세히 클러스터를 구성 하는 특성입니다. 클러스터 프로필 탭에서 모든 클러스터의 특징을 비교하는 대신 한 번에 하나의 클러스터를 탐색할 수 있습니다. 예를 들어, 선택 하는 경우 **Bike Buyers High** 에서 합니다 **클러스터** 목록에서이 클러스터의 고객 특징을 볼 수 있습니다. 클러스터 프로필 뷰어와 다르게 표시되지만 결과는 동일합니다.  
   
 > [!NOTE]  
->  초기 값을 설정 하지 않으면 **holdoutseed**, 결과 모델을 처리할 때마다 달라 집니다. 자세한 내용은 참조 하세요. [HoldoutSeed 요소](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  초기 값을 설정 하지 않으면 **holdoutseed**, 결과 모델을 처리할 때마다 달라 집니다. 자세한 내용은 참조 하세요. [HoldoutSeed 요소](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

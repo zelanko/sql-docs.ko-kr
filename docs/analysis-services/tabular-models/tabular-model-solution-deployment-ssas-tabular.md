@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6468af40ea6c146f8eeaa3be5d0e4740dcc484dd
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d913c16e2d81f016095cb7d60711177b5ae12ea4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145978"
 ---
 # <a name="tabular-model-solution-deployment"></a>테이블 형식 모델 솔루션 배포 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "48906522"
 |메서드|Description|링크|  
 |------------|-----------------|----------|  
 |**SQL Server Data Tools의 배포 명령**|배포 명령은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 제작 환경에서 테이블 형식 모델 프로젝트를 배포하는 간단하고 직관적인 방법을 제공합니다.<br /><br /> **주의** 프로덕션 서버를 배포 하려면이 메서드를 사용 수 해야 합니다. 이 메서드를 사용 하 여 덮어쓸 수 있습니다 특정 속성에는 이미 배포 된 모델을 기존 예를 들어, 스크립트 또는 SSMS를 사용 하 여 속성을 수정 하는 경우.|[SQL Server Data Tools에서 배포](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**AMO(Analysis Management Objects) 자동화**|AMO는 솔루션 배포에 사용할 수 있는 명령을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 전체 명령 집합을 프로그래밍 방식으로 사용할 수 있는 인터페이스를 개발자에게 제공합니다. 솔루션 배포를 위한 방법으로 AMO 자동화는 가장 유연한 방법이지만 프로그래밍이 필요합니다.  AMO를 사용하는 경우의 주요 이점은 SQL Server 에이전트와 AMO 응용 프로그램을 함께 사용하여 미리 설정된 일정에 따라 배포를 실행할 수 있다는 것입니다.|[AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**AMO(Analysis Management Objects) 자동화**|AMO는 솔루션 배포에 사용할 수 있는 명령을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 전체 명령 집합을 프로그래밍 방식으로 사용할 수 있는 인터페이스를 개발자에게 제공합니다. 솔루션 배포를 위한 방법으로 AMO 자동화는 가장 유연한 방법이지만 프로그래밍이 필요합니다.  AMO를 사용하는 경우의 주요 이점은 SQL Server 에이전트와 AMO 응용 프로그램을 함께 사용하여 미리 설정된 일정에 따라 배포를 실행할 수 있다는 것입니다.|[AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
 |**XMLA**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 메타데이터의 XMLA 스크립트를 생성하고 다른 서버에서 이 스크립트를 실행하여 초기 데이터베이스를 다시 만듭니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포 프로세스를 정의하고 코드화한 다음 XMLA 스크립트로 저장하여 XMLA 스크립트를 쉽게 만들 수 있습니다. XMLA 스크립트를 파일로 저장한 후에는 쉽게 일정에 따라 스크립트를 실행하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 직접 연결하는 응용 프로그램에 스크립트를 포함할 수 있습니다.<br /><br /> SQL Server 에이전트를 사용하여 미리 설정된 기준에 따라 XMLA 스크립트를 실행할 수도 있지만 XMLA 스크립트에는 AMO만큼의 융통성은 없습니다. AMO는 전체적인 범위의 관리 명령을 호스팅하여 가장 폭넓은 기능을 제공합니다.|[XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**배포 마법사**|배포 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 생성된 XMLA 출력 파일로 프로젝트의 메타데이터를 대상 서버에 배포합니다. 배포 마법사를 사용하면 프로젝트 빌드의 출력 디렉터리에 생성되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파일을 사용하여 직접 배포할 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사의 주요 이점은 편리함입니다. XMLA 스크립트를 나중에 사용하기 위해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 저장하는 것처럼 배포 마법사 스크립트를 저장할 수 있습니다. 배포 마법사는 대화형으로 실행하거나 배포 유틸리티를 통해 명령 프롬프트에서 실행할 수 있습니다.|[배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**배포 유틸리티**|배포 유틸리티를 사용하여 명령 프롬프트에서 Analysis Services 배포 엔진을 시작할 수 있습니다.|[배포 유틸리티를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  

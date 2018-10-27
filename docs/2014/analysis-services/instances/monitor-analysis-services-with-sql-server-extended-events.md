@@ -11,12 +11,12 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5716541be57191cd6bb3e6e6399a354889b2cf58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179673"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144908"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
   사용 하 여 추적 기능을 제공 하는 analysis Services [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48179673"
  이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
   
  *AS_event*  
- 노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](../trace-events/analysis-services-trace-events.md) 를 참조하세요.  
+ 노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 를 참조하세요.  
   
  *data_filename*  
  이벤트 데이터가 포함된 파일의 이름입니다. 추적을 반복적으로 보내는 경우 데이터를 덮어쓰지 않도록 이름 뒤에 타임스탬프가 추가됩니다.  

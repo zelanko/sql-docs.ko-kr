@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171423"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147348"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>4단원: Bike Buyer 마이닝 모델 찾아보기
   이 단원에서는 사용할지는 [SELECT (DMX)](/sql/dmx/select-dmx) 문을에서는 의사 결정 트리 및 클러스터링 마이닝 모델에서 만든 [2 단원: 예측마이닝구조에마이닝모델추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- 마이닝 모델에 포함된 열은 마이닝 구조에서 정의한 열이 아니라 알고리즘에서 찾은 경향 및 패턴을 설명하는 특정 열 집합입니다. 이러한 마이닝 모델 열에 설명 되어는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) 스키마 행 집합입니다. 예를 들어 내용 스키마 행 집합의 MODEL_NAME 열에는 마이닝 모델의 이름이 포함되어 있습니다. 클러스터링 마이닝 모델의 경우 NODE_CAPTION 열에는 각 클러스터의 이름이 포함되어 있으며 NODE_DESCRIPTION 열에는 각 클러스터의 특징에 대한 설명이 포함되어 있습니다. SELECT를 사용 하 여 이러한 열을 찾아보면 \<모델 >. DMX에서 콘텐츠 문입니다. 이 문을 사용하여 마이닝 모델 생성에 사용된 데이터도 탐색할 수 있습니다. 이 문을 사용하려면 마이닝 구조에 드릴스루를 설정해야 합니다. 문에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
+ 마이닝 모델에 포함된 열은 마이닝 구조에서 정의한 열이 아니라 알고리즘에서 찾은 경향 및 패턴을 설명하는 특정 열 집합입니다. 이러한 마이닝 모델 열에 설명 되어는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) 스키마 행 집합입니다. 예를 들어 내용 스키마 행 집합의 MODEL_NAME 열에는 마이닝 모델의 이름이 포함되어 있습니다. 클러스터링 마이닝 모델의 경우 NODE_CAPTION 열에는 각 클러스터의 이름이 포함되어 있으며 NODE_DESCRIPTION 열에는 각 클러스터의 특징에 대한 설명이 포함되어 있습니다. SELECT를 사용 하 여 이러한 열을 찾아보면 \<모델 >. DMX에서 콘텐츠 문입니다. 이 문을 사용하여 마이닝 모델 생성에 사용된 데이터도 탐색할 수 있습니다. 이 문을 사용하려면 마이닝 구조에 드릴스루를 설정해야 합니다. 문에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
   
  또한 SELECT DISTINCT 문을 사용하여 불연속 열의 모든 상태를 반환할 수 있습니다. 예를 들어 Gender 열에서 이 작업을 수행하면 쿼리는 `male` 및 `female`을 반환합니다.  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- 마이닝 모델 이름 옆에 있는 .CONTENT 절은 해당 마이닝 모델에서 내용을 반환함을 지정합니다. 마이닝 모델에 포함 된 열에 대 한 자세한 내용은 참조 하세요. [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
+ 마이닝 모델 이름 옆에 있는 .CONTENT 절은 해당 마이닝 모델에서 내용을 반환함을 지정합니다. 마이닝 모델에 포함 된 열에 대 한 자세한 내용은 참조 하세요. [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)합니다.  
   
  필요에 따라 코드의 마지막 줄을 사용하여 문에서 반환한 결과를 필터링할 수 있습니다.  
   
@@ -68,7 +68,7 @@ WHERE NODE_SUPPORT > 100
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>클러스터링 마이닝 모델의 내용을 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     바꿀 수도 있습니다 * 목록이 포함 된 열 중 하나는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
+     바꿀 수도 있습니다 * 목록이 포함 된 열 중 하나는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)합니다.  
   
 4.  다음 내용을  
   
@@ -143,7 +143,7 @@ WHERE IsInNode('<node id>')
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>마이닝 모델의 학습에 사용된 사례를 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -210,7 +210,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>불연속 열의 상태를 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   

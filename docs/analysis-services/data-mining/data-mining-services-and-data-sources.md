@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 서비스 및 데이터 원본을 | Microsoft Docs
+title: 데이터 마이닝 서비스 및 데이터 원본 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016590"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145888"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34016590"
  서버를 튜닝하고 클라이언트 사용에 대한 보안을 제어하는 속성도 설정할 수 있습니다. 자세한 내용은 [Feature Properties](../../analysis-services/server-properties/feature-properties.md)을 참조하세요.  
   
 > [!NOTE]  
->  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+>  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
  다음 개체 모델을 사용하여 Analysis Services 데이터베이스에 대한 연결을 만들고 데이터 마이닝 개체 작업을 수행할 수 있습니다.  
@@ -117,14 +117,14 @@ ms.locfileid: "34016590"
   
  프로시저가 데이터 집합을 반환하면 클라이언트는 데이터 집합 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
   
- 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)를 참조하십시오.  
+ 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)를 참조하십시오.  
   
 > [!NOTE]  
 >  저장 프로시저는 데이터 서버 개체의 보안을 변경하는 데 사용할 수 없습니다. 저장 프로시저를 실행하면 모든 서버 개체에 대한 액세스를 확인하기 위해 사용자의 현재 컨텍스트가 사용됩니다. 따라서 사용자에게는 액세스하는 데이터베이스 개체에 대해 적절한 사용 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [물리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

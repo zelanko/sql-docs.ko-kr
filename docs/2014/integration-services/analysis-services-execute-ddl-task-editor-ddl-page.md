@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bee729056f1654e265e7e37d92dcfd0015381f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119922"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146859"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services DDL 실행 태스크 편집기(DDL 페이지)
   **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **DDL** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결을 지정하고 DDL(데이터 정의 언어) 문의 원본에 대한 정보를 제공할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48119922"
  **원본**  
  목록에서 파일 연결을 선택하거나 \<**새 연결...**>을 클릭한 다음 **파일 연결 관리자** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
- **관련 항목** [파일 연결 관리자](connection-manager/file-connection-manager.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 변수  
  **원본**  
@@ -62,10 +62,10 @@ ms.locfileid: "48119922"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services DDL 실행 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services DDL 실행 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)   
  [제어 흐름](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41; 참조](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

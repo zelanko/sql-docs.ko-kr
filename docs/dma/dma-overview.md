@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)의 개요 | Microsoft Docs
 description: 다른 SQL Server 또는 Azure 데이터베이스에 SQL Server 데이터베이스를 마이그레이션하기 위해 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643861"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 
@@ -77,9 +77,7 @@ DMA는 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 �
 - SQL Server 2016
 - Windows 및 Linux의 SQL Server 2017
 - Azure SQL 데이터베이스
-
-> [!NOTE] 
-> DMA 현재 지원 하지 않습니다 Azure SQL Database Managed Instance를 대상으로 합니다.
+- Azure SQL Database Managed Instance
 
 ## <a name="installation"></a>설치
 

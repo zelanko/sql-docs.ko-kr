@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ec2aebbb202aadf69ccb9ab2c214d878aa0d9d9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022890"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147168"
 ---
 # <a name="database-readwritemodes"></a>ReadWriteMode 데이터베이스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34022890"
   
 |읽기 전용 모드|제한되는 작업|  
 |-------------------|---------------------------|  
-|XML/A 명령<br /><br /> <br /><br /> 참고: 다음 명령 중 하나를 실행하면 오류가 발생합니다.|**만들기**<br /><br /> **Alter**<br /><br /> **Delete**<br /><br /> **처리**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **복원**<br /><br /> **동기화**<br /><br /> **Insert**<br /><br /> **업데이트**<br /><br /> **Drop**<br /><br /> <br /><br /> 참고: 읽기 전용으로 설정된 데이터베이스에서는 셀 쓰기 저장이 가능하지만 변경 내용을 커밋할 수 없습니다.|  
+|XML/A 명령<br /><br /> <br /><br /> 참고: 다음 명령 중 하나를 실행하면 오류가 발생합니다.|**만들기**<br /><br /> **Alter**<br /><br /> **Delete**<br /><br /> **처리**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **복원**<br /><br /> **동기화**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 참고: 읽기 전용으로 설정된 데이터베이스에서는 셀 쓰기 저장이 가능하지만 변경 내용을 커밋할 수 없습니다.|  
 |MDX 문<br /><br /> <br /><br /> 참고: 다음 문 중 하나를 실행하면 오류가 발생합니다.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 참고: 피벗 테이블 그룹화 기능은 **CREATE SESSION CUBE** 명령을 사용하여 내부적으로 구현되므로 Excel 사용자는 이 기능을 사용할 수 없습니다.|  
 |DMX 문<br /><br /> <br /><br /> 참고: 다음 문 중 하나를 실행하면 오류가 발생합니다.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |백그라운드 작업|데이터베이스를 수정하는 백그라운드 작업은 사용할 수 없습니다. 여기에는 지연 처리, 자동 관리 캐싱 등이 포함됩니다.|  
@@ -42,11 +42,11 @@ ms.locfileid: "34022890"
 > [!NOTE]  
 >  읽기 전용 데이터베이스에서 로컬 큐브를 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 데이터베이스 연결 및 분리](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Analysis Services 데이터베이스 이동](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Detach 요소](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach 요소](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Detach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

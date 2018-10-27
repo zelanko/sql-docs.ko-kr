@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348644"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147960"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  이 항목에서는 개체 명명 규칙과 함께 개체 이름 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트에 사용할 수 없는 예약어 및 예약 문자에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  
   
 ##  <a name="bkmk_Names"></a> 명명 규칙  
  모든 개체에는 부모 컬렉션 범위 내에 고유해야 하는 **Name** 및 **ID** 속성이 있습니다. 예를 들어 두 차원은 각각이 다른 데이터베이스에 상주하는 한 같은 이름을 가질 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "43348644"
   
 |Object|유효하지 않은 문자|  
 |------------|------------------------|  
-|**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 참조 [명명 규칙 (Windows)](/windows/desktop/DNS/naming-conventions) 세부 정보에 대 한 합니다.|  
+|**Server**|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](/windows/desktop/DNS/naming-conventions) 을 참조하십시오.|  
 |**DataSource**|: / \ * &#124; ? "() {} <>|  
 |**Level** 또는 **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = {} < >|  
 |**Dimension** 또는 **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<, >|  
@@ -88,6 +88,6 @@ ms.locfileid: "43348644"
 ## <a name="see-also"></a>관련 항목  
  [MDX 예약어](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services에서의 번역 지원](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis 호환성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis 호환성 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300501"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147458"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34300501"
   
  **다차원 모델용 파워 뷰 아키텍처**  
   
- ![Power View를 다차원 모델 아키텍처용](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View를 다차원 모델 아키텍처용")  
+ ![파워 뷰 다차원 모델 아키텍처용](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "파워 뷰 다차원 모델 아키텍처용")  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  **서버 요구 사항**  
@@ -56,9 +56,9 @@ ms.locfileid: "34300501"
 |다차원 개체|테이블 형식 개체|  
 |-----------------------------|--------------------|  
 |Cube|Model|  
-|큐브 차원|테이블|  
-|차원 특성(키, 이름)|열|  
-|측정값 그룹|테이블|  
+|큐브 차원|Table|  
+|차원 특성(키, 이름)|Column|  
+|측정값 그룹|Table|  
 |측정값|이름|  
 |측정값 그룹이 없는 측정값|Measures라는 테이블의 내부|  
 |측정값 그룹 큐브 차원 관계|관계|  
@@ -76,7 +76,7 @@ ms.locfileid: "34300501"
   
  **파워 뷰 필드 목록의 측정값 그룹**  
   
- ![필드 목록 Power View에서](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "필드 Power View의 목록")  
+ ![필드 목록에서 Power View](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "Power View에서 목록 필드")  
   
  측정값 그룹 내의 측정값은 측정값으로 나타납니다. 연결된 측정값 그룹이 없는 계산 측정값이 있을 경우 이러한 측정값은 Measures라는 특수 테이블에 그룹화됩니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34300501"
   
  **측정값 그룹의 측정값 및 KPI**  
   
- ![Power View 필드 목록의 측정값 그룹](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
+ ![파워 뷰 필드 목록의 측정값 그룹과](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
   
 ### <a name="measures-as-variants"></a>variant로서의 측정값  
  다차원 모델의 측정값은 variant입니다. 즉, 이 측정값은 강력한 형식이 아니며 다른 데이터 형식일 수 있습니다. 예를 들어 아래 이미지에서 Financial Reporting 테이블의 Amount 측정값은 기본적으로 통화 데이터 형식이지만, 문자열 데이터 형식인 "Statistical Accounts"의 부분합에 대해 문자열 값 "NA"도 가집니다. 파워 뷰에서는 일부 측정값을 variant로 인식하고 다른 시각화 유형으로 올바른 값 및 서식을 표시합니다.  
@@ -94,14 +94,14 @@ ms.locfileid: "34300501"
  ![파워 뷰의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
 ### <a name="implicit-measures"></a>암시적 측정값  
- 테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델에 대 한 암시적 측정값을 쿼리 차원 특성 데이터가 다르게 저장 되기 때문에 오래를 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
+ 테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델에 대 한 암시적 측정값을 쿼리 차원 특성 데이터가 다르게 저장 되기 때문에 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>차원, 특성 및 계층  
  큐브 차원은 테이블 형식 메타데이터에서 테이블로 표시됩니다. 파워 뷰 필드 목록에서 차원 특성은 표시 폴더 내에 열로 표시됩니다.  Customer 차원의 Birth Date 특성과 같이 AttributeHierarchyEnabled 속성이 false로 설정된 차원 특성이나 AttributeHierarchyVisible 속성이 false로 설정된 차원 특성은 파워 뷰 필드 목록에 표시되지 않습니다. 여러 수준 계층 또는 사용자 계층(예: Customer 차원의 Customer Geography)은 파워 뷰 필드 목록에서 계층으로 표시됩니다. 차원 특성의 숨겨진 UnknownMember는 DAX 쿼리와 파워 뷰에서는 표시됩니다.  
   
  **SSDT(SQL Server Data Tools) 및 파워 뷰 필드 목록의 차원, 특성 및 계층**  
   
- ![SSDT 및 Power View 필드 목록의 차원](../../analysis-services/multidimensional-models/media/daxmd-ssdt-dimensions.gif "SSDT 및 Power View 필드 목록의 차원")  
+ ![SSDT 및 파워 뷰 필드 목록의 차원을](../../analysis-services/multidimensional-models/media/daxmd-ssdt-dimensions.gif "SSDT 및 파워 뷰 필드 목록의 차원")  
   
 ### <a name="dimension-attribute-type"></a>차원 특성 유형  
  다차원 모델에서는 차원 특성을 특정 차원 특성 유형과 연결할 수 있습니다. 아래 이미지에서는 City, State-Province, Country 및 Postal Code 차원 특성에 지리 유형이 연결된 Geography 차원을 보여 줍니다. 이러한 차원 특성은 테이블 형식 메타데이터에 표시됩니다. 파워 뷰에서는 메타데이터를 인식하므로 사용자가 지도 시각화를 만들 수 있습니다. 이는 파워 뷰 필드 목록에서 Geography 테이블의 City, Country, Postal Code 및 State-Province 열 옆에 지도 아이콘으로 표시됩니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "34300501"
   
  **SSDT의 ImageURL 차원 특성 유형**  
   
- ![차원 특성 속성](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "차원 특성 속성")  
+ ![특성 속성을 차원](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "차원 특성 속성")  
   
 ## <a name="parent-child-hierarchies"></a>부모-자식 계층  
  다차원 모델은 부모-자식 계층을 지원하며 이 계층은 테이블 형식 메타데이터에 계층으로 표시됩니다. 부모-자식 계층의 각 수준은 숨겨진 열로 제공됩니다. 부모-자식 차원의 키 특성은 테이블 형식 메타데이터에 표시되지 않습니다.  
@@ -174,7 +174,7 @@ ms.locfileid: "34300501"
   
  **고정된 필터**  
   
- ![필터 고정](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "필터를 고정 합니다.")  
+ ![필터 고정](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "필터 고정")  
   
 ## <a name="unsupported-features"></a>지원되지 않는 기능  
  **Excel 2013의 파워 뷰** - 다차원 모델에 연결하거나 다차원 모델에 대한 보고서를 만들 수 없습니다. 그러나 **Excel 2016의 파워 뷰** 에서는 다차원 모델에 연결하거나 다차원 모델용 보고서를 만들 수 없습니다. 자세한 내용을 확인하려면 [Excel 2016의 파워 뷰 및 OLAP](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)를 참조하세요.  
@@ -217,15 +217,15 @@ ms.locfileid: "34300501"
   
  DISCOVER_CSDL_METADATA 요청에는 다음과 같은 제한이 있습니다.  
   
-|이름|필수임|Description|  
+|이름|필수|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|예|카탈로그\데이터베이스 이름입니다.|  
+|CATALOG_NAME|사용자 계정 컨트롤|카탈로그\데이터베이스 이름입니다.|  
 |PERSPECTIVE_NAME|큐브에 둘 이상의 큐브 뷰가 포함된 경우 필수, 큐브가 하나뿐이고 기본 큐브 뷰가 있는 경우 선택적|다차원 데이터베이스의 큐브 이름 또는 큐브 뷰 이름입니다.|  
-|VERSION|예|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
+|VERSION|사용자 계정 컨트롤|클라이언트가 요청한 CSDL 버전입니다. 다차원 기능 및 구문은 버전 2.0에서 지원됩니다.|  
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   
- 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
+ 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
   
 ## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  

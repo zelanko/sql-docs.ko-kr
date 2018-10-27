@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042361"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145988"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services의 새로운 기능
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) 로컬 서버 작업 및 서버 상태에 대 한 정보를 반환 하는 SQL Server Profiler에서 쿼리 됩니다.
 이 릴리스에 향상 된 기능이 [동적 관리 뷰](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) 1200 및 1400 호환성 수준의 테이블 형식 모델에 대 한 합니다.
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) 이제 테이블 형식 1200 및 1400 모델에서 작동 합니다. 테이블 형식 1400 모델 M 파티션, M 식 및 구조화 된 데이터 원본 간의 종속성을 보여 줍니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)합니다.
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset) 이제 테이블 형식 1200 및 1400 모델에서 작동 합니다. 테이블 형식 1400 모델 M 파티션, M 식 및 구조화 된 데이터 원본 간의 종속성을 보여 줍니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)합니다.
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) 향상 측정값 차원에 표시할 다양 한 클라이언트 도구에서 사용 되는이 DMV에 대 한 포함 됩니다. 예를 들어 Excel 피벗 테이블에서 탐색 기능 간 드릴 선택한 측정값을 관련 된 차원에 사용자를 수 있습니다. 이 릴리스에서 잘못 된 값이 표시 된 이전에 카디널리티 열을 수정 합니다.
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) 향상 측정값 차원에 표시할 다양 한 클라이언트 도구에서 사용 되는이 DMV에 대 한 포함 됩니다. 예를 들어 Excel 피벗 테이블에서 탐색 기능 간 드릴 선택한 측정값을 관련 된 차원에 사용자를 수 있습니다. 이 릴리스에서 잘못 된 값이 표시 된 이전에 카디널리티 열을 수정 합니다.
 
 ## <a name="dax-enhancements"></a>향상된 DAX 기능
 이 릴리스에서 새 DAX 함수 및 기능에 대 한 지원. 를 활용 하려면 최신 버전의 SSDT 사용 해야 합니다. 자세한 내용은 참조 하세요 [새 DAX 함수](https://msdn.microsoft.com/library/mt704075.aspx)합니다.

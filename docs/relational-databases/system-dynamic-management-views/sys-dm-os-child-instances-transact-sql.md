@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71fc55f996a58fc8ed353405fa9e5fdc9ad845f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69269e2934589841c42825f21494932b5306dd2d
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751091"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099284"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47751091"
  동적 관리 뷰에 대 한 자세한 내용은 참조 하십시오 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비관리자 용 사용자 인스턴스](http://msdn.microsoft.com/en-us/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [비관리자 용 사용자 인스턴스](http://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
   
   
 

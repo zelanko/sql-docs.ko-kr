@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099274"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>데이터 마이닝 알고리즘(SQL Server 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능은 다음과 같은 데이터 마이닝 알고리즘을 사용하여 분석 모델을 만드는 작업을 지원합니다. 모든 알고리즘은 잘 알려진 시스템 학습 방법을 기반으로 하며 Microsoft Research에서 구현되었습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48161563"
 |Microsoft 의사 결정 트리 알고리즘|다양한 데이터 요소 간의 이전에 알려지지 않은 관계를 식별하여 결정에 더 많은 정보를 제공하거나, 특정 결과로 이끄는 요소를 찾습니다.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Microsoft 선형 회귀 알고리즘|숫자 결과에 영향을 주는 요소를 설명하는 수식을 찾습니다.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Microsoft 로지스틱 회귀 알고리즘|이진 결과에 영향을 주는 요소를 식별하고 이러한 요소를 사용하여 결과에 영향을 주는 방법을 파악합니다.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Microsoft Naïve Bayes 알고리즘|데이터에서 관계를 탐색하고 결과와 가장 밀접히 연관된 관계를 찾습니다.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Microsoft Naïve Bayes 알고리즘|데이터에서 관계를 탐색하고 결과와 가장 밀접히 연관된 관계를 찾습니다.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Microsoft 신경망 알고리즘|여러 입력과 여러 출력 간의 숨겨진 관계를 찾습니다. 탐색이나 예측에 사용합니다.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Microsoft 시계열 알고리즘|기록 데이터를 사용하여 미래 가치를 예측합니다.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

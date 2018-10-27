@@ -1,5 +1,5 @@
 ---
-title: 차원 (Analysis Services)에 대 한 권한을 부여 | Microsoft Docs
+title: 차원 (Analysis Services)에 대 한 권한 부여 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022580"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147728"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,18 +53,18 @@ ms.locfileid: "34022580"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
   
-2.  에 **차원** 로 차원 설정 창에서 변경 \<큐브-이름 > **큐브 차원**합니다.  
+2.  에 **차원** 차원 설정 창에서 변경 \<큐브-이름 > **큐브 차원**합니다.  
   
      기본적으로 권한은 해당 데이터베이스 차원에서 상속됩니다. **상속** 확인란 선택을 취소하여 **읽기** 에서 **읽기/쓰기**로 사용 권한을 변경합니다. **읽기/쓰기**를 사용하기 전에 앞의 섹션에 나와 있는 참고 사항을 읽어보시기 바랍니다.  
   
 > [!IMPORTANT]  
->  AMO(Analysis Management Object)를 사용하여 데이터베이스 역할의 사용 권한을 구성하면 큐브의 DimensionPermission 특성에 있는 큐브 차원에 대한 모든 참조가 데이터베이스의 DimensionPermission 특성으로부터 사용 권한 상속을 분리합니다. AMO에 대한 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
+>  AMO(Analysis Management Object)를 사용하여 데이터베이스 역할의 사용 권한을 구성하면 큐브의 DimensionPermission 특성에 있는 큐브 차원에 대한 모든 참조가 데이터베이스의 DimensionPermission 특성으로부터 사용 권한 상속을 분리합니다. AMO에 대한 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터 & #40;에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

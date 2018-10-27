@@ -14,12 +14,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118473"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146308"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48118473"
   
 -   SQL Server 프로파일러를 사용하여 처리 모니터링  
   
--   AMO를 사용하여 사용자 지정 솔루션 프로그래밍. 자세한 내용은 [Programming AMO OLAP Basic Objects](analysis-management-objects/programming-amo-olap-basic-objects.md)을 참조하세요.  
+-   AMO를 사용하여 사용자 지정 솔루션 프로그래밍. 자세한 내용은 [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)을 참조하세요.  
   
  처리는 다양하게 구성 가능한 작업으로, 개체 수준에서 전체 처리가 발생하는지 증분 처리가 발생하는지 결정하는 일련의 처리 옵션으로 제어됩니다. 처리 옵션 및 개체에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) 및 [Analysis Services 개체 처리](processing-analysis-services-objects.md)를 참조하세요.  
   

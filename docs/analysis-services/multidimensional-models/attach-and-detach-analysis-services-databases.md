@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7779a0ecac1a8a5d1e53b186e5b221477e20bdf9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020270"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144858"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services 데이터베이스 연결 및 분리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "34020270"
 > [!IMPORTANT]  
 >  **Attach** 명령을 실행하려면 서버 관리자 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 데이터베이스 이동](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Readwritemode 데이터베이스](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach 요소](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach 요소](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [ReadWriteMode 데이터베이스](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Detach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e579d8090300e205e99807f8016be066f557b6fb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8662339e7f3b0d77b48ad480317bc7558d0801e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022230"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147498"
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   측정값에는 해당 측정값의 작동 방법을 정의하고 측정값의 표시 방법을 제어하는 데 사용할 수 있는 속성이 있습니다.  
   
- 큐브 또는 측정값을 만들거나 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 속성을 설정할 수 있습니다. 또한 MDX 또는 AMO를 사용하여 프로그래밍 방식으로 속성을 설정할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER 문&#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) 또는 [AMO OLAP 기본 개체 프로그래밍](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)을 참조하세요.  
+ 큐브 또는 측정값을 만들거나 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 속성을 설정할 수 있습니다. 또한 MDX 또는 AMO를 사용하여 프로그래밍 방식으로 속성을 설정할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER 문&#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md) 또는 [AMO OLAP 기본 개체 프로그래밍](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)을 참조하세요.  
   
 ## <a name="measure-properties"></a>측정값 속성  
  측정값은 해당 속성이 측정값 수준에서 무시되는 경우를 제외하고 자신이 속한 측정값 그룹에서 특정 속성을 상속합니다. 측정값 속성은 측정값이 집계되는 방법, 측정값의 데이터 형식, 사용자에게 표시되는 이름, 측정값이 나타날 표시 폴더, 측정값의 형식 문자열, 측정값 식, 기본 원본 열 및 사용자에 대한 표시 유형을 결정합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "34022230"
 |**원본**|필수 사항입니다. 측정값이 바인딩되는 데이터 원본 뷰의 열을 지정합니다. [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)을 참조하세요.|  
 |**Visible**|클라이언트 응용 프로그램에서 측정값의 표시 유형을 결정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [측정값 그룹 속성 구성](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [측정값 수정](../../analysis-services/lesson-3-1-modifying-measures.md)  
   

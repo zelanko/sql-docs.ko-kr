@@ -15,12 +15,12 @@ ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abbc415f86eed4433fc6dc41b474515e2b801ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05aee754db65811d450fb06e0e433cb4b207c372
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177499"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145628"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 서버 개체 아키텍처
   ADOMD.NET 서버 개체는 사용자 정의 함수 (Udf) 또는 저장된 프로시저를 만드는 데 사용할 수 있는 도우미 개체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
@@ -42,6 +42,6 @@ ADOMD.NET 개체 모델
 |MDX 언어의 6가지 기본 유형 간의 암시적 변환 및 캐스트 지원|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> 개체는 다음 형식 간의 암시적 변환 및 캐스트를 제공합니다.<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-스칼라 또는 값 형식|  
   
 ## <a name="see-also"></a>관련 항목  
- [ADOMD.NET 서버 프로그래밍](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

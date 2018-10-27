@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fa39b3e6e0bce7596ea38c6aa049fd7e942a08d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018590"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145529"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34018590"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  데이터 마이닝 구조는 마이닝 모델이 생성된 데이터 도메인을 정의하는 논리적 데이터 컨테이너입니다. 단일 마이닝 구조가 여러 마이닝 모델을 지원할 수 있습니다.  
   
- 데이터 마이닝 솔루션에서 데이터를 사용해야 할 경우 Analysis Services에서는 원본의 데이터를 읽고 집계와 그 밖의 정보에 대한 캐시를 생성합니다. 기본적으로 이 캐시는 추가 모델을 지원하는 데 학습 데이터를 다시 사용할 수 있도록 유지됩니다. 캐시를 삭제하려면 마이닝 구조 개체의 **CacheMode** 속성을 **ClearAfterProcessing**값으로 변경합니다. 자세한 내용은 [AMO 데이터 마이닝 클래스](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)를 참조하세요.  
+ 데이터 마이닝 솔루션에서 데이터를 사용해야 할 경우 Analysis Services에서는 원본의 데이터를 읽고 집계와 그 밖의 정보에 대한 캐시를 생성합니다. 기본적으로 이 캐시는 추가 모델을 지원하는 데 학습 데이터를 다시 사용할 수 있도록 유지됩니다. 캐시를 삭제하려면 마이닝 구조 개체의 **CacheMode** 속성을 **ClearAfterProcessing**값으로 변경합니다. 자세한 내용은 [AMO 데이터 마이닝 클래스](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)를 참조하세요.  
   
- 또한 analysis Services 데이터의 대표, 임의로 선택 된 집합에 마이닝 모델을 테스트할 수 있도록 데이터를 학습 집합과 테스트 데이터 집합으로 분리 하는 기능을 제공 합니다. 구조 캐시의 데이터는 실제 별도로 저장되는 것이 아니라 해당 특정 사례가 학습에 사용되는지, 테스트에 사용되는지를 나타내는 속성으로 표시됩니다. 캐시를 삭제한 경우에는 해당 정보를 검색할 수 없습니다.  
+ 또한 analysis Services에 대해 대표 임의로 선택 된 데이터의 마이닝 모델을 테스트할 수 있도록 데이터를 학습 집합과 테스트 데이터 집합으로 분리 하는 기능을 제공 합니다. 구조 캐시의 데이터는 실제 별도로 저장되는 것이 아니라 해당 특정 사례가 학습에 사용되는지, 테스트에 사용되는지를 나타내는 속성으로 표시됩니다. 캐시를 삭제한 경우에는 해당 정보를 검색할 수 없습니다.  
   
  자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "34018590"
  자세한 내용은 [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)를 참조하세요.  
   
  **사용자 지정 저장 프로시저**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 데이터 마이닝 개체를 사용 하는 저장된 프로시저 사용을 지원 합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 저장 프로시저를 사용한 데이터 마이닝 개체 작업을 지원합니다. 사용자 고유의 저장 프로시저를 만들어 기능을 확장하거나 예측 쿼리 및 내용 쿼리에서 반환된 데이터를 쉽게 사용할 수 있습니다.  
   
- [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [저장 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  교차 유효성 검사를 수행하는 데 사용할 수 있는 저장 프로시저는 다음과 같습니다.  
   
@@ -92,15 +92,15 @@ ms.locfileid: "34018590"
  또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝에 내부적으로 사용되는 많은 시스템 저장 프로시저가 포함되어 있습니다. 시스템 저장 프로시저는 내부적으로 사용되지만 유용한 바로 가기를 지정할 수 있습니다. Microsoft는 이러한 저장 프로시저를 필요에 따라 변경할 권리가 있습니다. 따라서 프로덕션 환경에서 사용하려는 경우 DMX, AMO 또는 XMLA를 사용하여 쿼리를 만드는 것이 좋습니다.  
   
  **사용자 지정 플러그 인 알고리즘**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용자 고유의 알고리즘을 만들고 다음 서버 인스턴스에 새 데이터 마이닝 서비스 알고리즘을 추가 하기 위한 메커니즘을 제공 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 사용자 고유의 알고리즘을 만들어 서버 인스턴스에 새 데이터 마이닝 서비스로 추가할 수 있는 메커니즘을 제공합니다.  
   
  Analysis Services에서는 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 새 알고리즘을 구현하는 방법에 대한 자세한 내용은 [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md)을 참조하십시오.  
   
  새 알고리즘을 사용하려면 먼저 각각의 새 알고리즘을 등록해야 합니다. 알고리즘을 등록하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스의 .ini 파일에 알고리즘의 필수 메타데이터를 추가하면 됩니다. 새 알고리즘을 사용할 각 인스턴스에 정보를 추가해야 합니다. 알고리즘을 추가한 후에는 인스턴스를 다시 시작하고 MINING_SERVICES 스키마 행 집합을 사용하여 알고리즘에서 지원하는 옵션 및 공급자를 비롯한 새 알고리즘을 볼 수 있습니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Data Mining Extensions & #40; DMX & #41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d1553189b3d25da5394ea2f5f32a411134206b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b262fce9cf83295e8fd06a7abdce1999cc8a95d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207649"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147048"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 분석 서버 스크립트 프로젝트를 만들어 개발, 관리 및 원본 제어를 위해 관련 스크립트를 그룹화할 수 있습니다. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  
@@ -58,10 +58,10 @@ ms.locfileid: "48207649"
  새 MDX, DMX 또는 XMLA 스크립트를 분석 서버 스크립트 프로젝트에 추가하는 경우 템플릿 탐색기를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 템플릿을 찾을 수 있습니다. 이러한 템플릿은 지정한 동작을 수행하는 방법을 보여 주는 미리 정의된 스크립트 또는 문의 모음입니다. 템플릿 탐색기는 **보기** 메뉴에서 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 템플릿을 포함합니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 모델을 만들 SQL Server Data Tools를 사용 하 여 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Multidimensional Expression &#40;MDX&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

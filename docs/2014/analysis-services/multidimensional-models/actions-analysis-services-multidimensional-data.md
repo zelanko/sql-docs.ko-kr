@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193663"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146591"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
   동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
@@ -33,13 +33,13 @@ ms.locfileid: "48193663"
   
 -   동작이 발생하는 큐브에서 선택된 섹션과 연관된 동작 요소(URL, HTML, DataSet, RowSet 및 기타 요소)를 반환하는 표준 동작  
   
- ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 동작을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](adomd-net/developing-with-adomd-net.md)을 참조하세요.  
+ ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 동작을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)을 참조하세요.  
   
  단순 <xref:Microsoft.AnalysisServices.Action> 개체는 기본 정보, 동작이 발생하는 대상, 동작 범위를 제한하는 조건 및 유형으로 구성되어 있습니다. 기본 정보에는 동작의 이름, 동작에 대한 설명, 동작에 제안된 캡션 등이 포함됩니다.  
   
  대상은 큐브에서 동작이 발생하는 실제 위치로, 대상 유형과 대상 개체로 구성됩니다. 대상 유형은 큐브에서 동작을 활성화할 개체의 종류를 나타냅니다. 대상 유형은 수준 멤버, 셀, 계층, 계층 멤버 등일 수 있습니다. 대상 개체는 대상 유형의 특정 개체로, 대상 유형이 개체이면 대상 개체는 큐브에 정의된 계층 중 하나입니다.  
   
- 조건은 `Boolean` 동작 이벤트에서 평가 되는 MDX 식입니다. 조건이 평가 되는 경우 `true`, 동작이 실행 되 고 다음입니다. 그렇지 않으면 동작이 실행되지 않습니다.  
+ 조건은 동작 이벤트에서 평가되는 `Boolean` MDX 식입니다. 조건이 `true`로 평가되면 동작이 실행되고, 그렇지 않으면 동작이 실행되지 않습니다.  
   
  유형은 실행할 동작의 종류입니다. <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
   

@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090973"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145898"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48090973"
 -   `AllowAdHocOpenRowsetQueries` 서버 메모리 공간에 직접 로드 되는 OLE DB 공급자에 대 한 임시 액세스를 제어 합니다.  
   
     > [!IMPORTANT]  
-    >  보안을 강화하려면 이 속성을 `false`로 설정하는 것이 좋습니다. 기본값은 `false`입니다. 그러나이 경우에 속성이 `false`, 사용자는 계속 단일 쿼리를 만들고 및 허용 된 데이터 원본에 대해 OPENQUERY를 사용할 수 있습니다.  
+    >  보안을 강화하려면 이 속성을 `false`로 설정하는 것이 좋습니다. 기본값은 `false`입니다. 단, 이 속성이 `false`로 설정되는 경우에도 사용자는 계속 단일 쿼리를 만들고 허용된 데이터 원본에 대해 OPENQUERY를 사용할 수 있습니다.  
   
 -   **AllowedProvidersInOpenRowset** 임시 액세스가 설정된 경우 공급자를 지정합니다. 쉼표로 구분된 ProgID 목록을 입력하여 여러 공급자를 지정할 수 있습니다.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090973"
   
  프로시저가 데이터 집합을 반환하면 클라이언트는 데이터 집합 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
   
- 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)를 참조하십시오.  
+ 서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)를 참조하십시오.  
   
 > [!NOTE]  
 >  저장 프로시저는 데이터 서버 개체의 보안을 변경하는 데 사용할 수 없습니다. 저장 프로시저를 실행하면 모든 서버 개체에 대한 액세스를 확인하기 위해 사용자의 현재 컨텍스트가 사용됩니다. 따라서 사용자에게는 액세스하는 데이터베이스 개체에 대해 적절한 사용 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [물리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [물리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)   
  [데이터 마이닝 솔루션 및 개체 관리](management-of-data-mining-solutions-and-objects.md)  
   
   

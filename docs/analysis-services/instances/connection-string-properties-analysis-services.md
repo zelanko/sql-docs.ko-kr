@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563849"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148168"
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "45563849"
 |**통합 보안**|호출자의 Windows ID는 Analysis Services에 연결하는 데 사용됩니다. 유효한 값은 공백, SSPI 및 BASIC입니다.<br /><br /> **Integrated Security**=**SSPI** 는 NTLM, Kerberos 또는 익명 인증을 허용하는 TCP 연결에 대한 기본값입니다. 공백은 HTTP 연결에 대한 기본값입니다.<br /><br /> **SSPI**를 사용하는 경우 **ProtectionLevel** 은 **Connect**, **PktIntegrity**, **PktPrivacy**중 하나로 설정되어야 합니다.|  
 |**Persist Encrypted**|클라이언트 응용 프로그램에서 데이터 원본 개체에 암호화된 형태로 암호와 같은 중요한 인증 정보를 유지해야 하는 경우 이 속성을 설정합니다. 기본적으로 인증 정보는 유지되지 않습니다.|  
 |**Persist Security Info**|유효한 값은 True 및 False입니다. True로 설정되면 연결이 설정된 후 연결 문자열에서 이전에 지정된 사용자 ID 또는 암호와 같은 보안 정보를 연결에서 가져올 수 있습니다. 기본값은 False입니다.|  
-|**보호 수준**|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은<br /><br /> -   **None**. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br />-   **Connect**. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br />-   **Pkt Integrity**. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br />-   **Pkt Privacy**. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)를 참조하세요.|  
+|**보호 수준**|연결에서 사용되는 보안 수준을 결정합니다. 유효한 값은<br /><br /> -   **None**. 인증되지 않은 연결이나 익명 연결입니다. 서버에 전송되는 데이터에 대한 인증을 수행하지 않습니다.<br />-   **Connect**. 인증된 연결입니다. 클라이언트가 서버와 관계를 설정하는 경우에만 인증합니다.<br />-   **Pkt Integrity**. 암호화된 연결입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았는지 확인합니다.<br />-   **Pkt Privacy**. XMLA에만 지원되는 서명된 암호화입니다. 모든 데이터가 클라이언트에서 수신되었고 전송 중에 변경되지 않았으며 암호화를 통해 데이터의 개인 정보를 보호하는지 확인합니다.<br /><br /> 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)를 참조하세요.|  
 |**Roles**|해당 역할이 제공하는 사용 권한을 사용하여 서버 또는 데이터베이스에 연결할 미리 정의된 역할의 쉼표로 구분된 목록을 지정합니다. 이 속성을 생략하면 모든 역할이 사용되고 유효 사용 권한은 모든 역할의 조합이 됩니다. 이 속성을 빈 값으로 설정하면(예: Roles=’ ‘) 클라이언트 연결에 역할 멤버 자격이 없습니다.<br /><br /> 이 속성을 사용하는 관리자는 역할이 제공하는 사용 권한을 사용하여 연결됩니다.  일부 명령은 역할이 충분한 사용 권한을 제공하지 않는 경우 실패할 수도 있습니다.|  
 |**SSPI**|**Integrated Security** 가 **SSPI**로 설정된 경우 클라이언트 인증에 사용할 보안 패키지를 명시적으로 지정합니다. SSPI는 여러 패키지를 지원하지만 이 속성을 사용하여 특정 패키지를 지정할 수 있습니다. 유효한 값은 Negotiate, Kerberos, NTLM 및 Anonymous User입니다. 이 속성이 설정되지 않으면 모든 패키지를 연결에 사용할 수 있습니다.|  
 |**Use Encryption for Data**|데이터 전송을 암호화합니다. 유효한 값은 True 및 False입니다.|  
@@ -153,11 +153,11 @@ ms.locfileid: "45563849"
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서(.xlsx, .xlsb 또는 .xlsm 파일)에 대한 http(s) 연결**  
   
- `Data Source=<URL>`, 여기서 URL은 SharePoint 라이브러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 SharePoint 경로입니다. `Data Source=http://localhost/Shared Documents/Sales.xlsx`) 을 입력합니다.  
+ `Data Source=<URL>`, 여기서 URL은 SharePoint 라이브러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 SharePoint 경로입니다. 예를 들어 `Data Source=http://localhost/Shared Documents/Sales.xlsx` .  
   
  **BI 의미 체계 모델 연결 파일에 대한 http(s) 연결**  
   
- `Data Source=<URL>` , 여기서 URL은 .bism 파일에 대한 SharePoint 경로입니다. `Data Source=http://localhost/Shared Documents/Sales.bism`) 을 입력합니다.  
+ `Data Source=<URL>` , 여기서 URL은 .bism 파일에 대한 SharePoint 경로입니다. 예를 들어 `Data Source=http://localhost/Shared Documents/Sales.bism` .  
   
  **포함된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 연결**  
   

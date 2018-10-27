@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981186"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148138"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "38981186"
 5.  내의 텍스트를 두 번 클릭 합니다 \<파일 > 요소입니다. .abf 파일 확장명을 포함하여 백업 파일의 이름을 입력합니다. 기본 백업 위치를 사용하지 않는 경우 전체 파일 경로를 지정합니다. 자세한 내용은 [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)를 참조하세요.  
   
 ##  <a name="bkmk_schemarowset"></a> XMLA 템플릿을 사용하여 스키마 행 집합 쿼리 생성  
- **템플릿 탐색기** 에는 스키마 행 집합 쿼리용 템플릿이 하나만 있습니다. 이 템플릿을 사용하려면 필수 요소, 제한으로 사용할 수 있는 열 등 사용하고자 하는 개별 스키마 행 집합의 요구 사항에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Analysis Services 스키마 행 집합](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)을 참조하세요.  
+ **템플릿 탐색기** 에는 스키마 행 집합 쿼리용 템플릿이 하나만 있습니다. 이 템플릿을 사용하려면 필수 요소, 제한으로 사용할 수 있는 열 등 사용하고자 하는 개별 스키마 행 집합의 요구 사항에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)을 참조하세요.  
   
  대부분의 스키마 행 집합은 간단한 표현을 위해 DMV(동적 관리 뷰)로도 표시된다는 점에 유의하십시오. 해당 DMV를 사용하면 Transact-SQL 구문과 비슷한 구문을 사용하여 스키마 행 집합을 쿼리할 수 있습니다. 예를 들어 다음 쿼리는 동일한 결과를 하나는 XML 형식으로, 다른 하나는 테이블 형식으로 반환합니다. DMV에 대한 자세한 내용은 [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)을 참조하세요.  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **템플릿 탐색기**를 열고 **스키마 행 집합 검색**템플릿을 비어 있는 쿼리 창으로 끌어옵니다.  
   
-3.  템플릿에서 대체 합니다 [RequestType 요소 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 요소를 다음 텍스트로: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  템플릿에서 대체 합니다 [RequestType 요소 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) 요소를 다음 텍스트로: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **실행**을 클릭합니다.  
   
@@ -216,7 +216,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## <a name="see-also"></a>관련 항목  
  [MDX&#40;Multidimensional Expression&#41; 참조](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;XMLA 용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

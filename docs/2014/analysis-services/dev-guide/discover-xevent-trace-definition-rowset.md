@@ -12,12 +12,12 @@ ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc223ec3ef09b791772a42134f2c71c73245507a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a60cce6d752dd6f44c3d94d209557a80cdca863
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171213"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147488"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 행 집합
   서버에서 현재 활성 상태인 XEvent 추적에 대한 정보를 제공합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48171213"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열을 포함 합니다.  
+ `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열이 포함되어 있습니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "48171213"
  이 스키마 행 집합은 정렬되지 않습니다.  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET을 사용하여 행 집합 반환  
- ADOMD.NET 및 스키마 행 집합을 사용하여 메타데이터를 검색할 때 GUID 또는 문자열을 사용하여 GetSchemaDataSet 메서드의 스키마 행 집합 개체를 참조할 수 있습니다. 자세한 내용은 [Working with Schema Rowsets in ADOMD.NET](../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md)을 참조하세요.  
+ ADOMD.NET 및 스키마 행 집합을 사용하여 메타데이터를 검색할 때 GUID 또는 문자열을 사용하여 GetSchemaDataSet 메서드의 스키마 행 집합 개체를 참조할 수 있습니다. 자세한 내용은 [Working with Schema Rowsets in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets)을 참조하세요.  
   
  다음 표에서는 이 행 집합을 식별하는 GUID와 문자열 값을 제공합니다.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48171213"
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>관련 항목  
- [XML for Analysis 스키마 행 집합](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
  [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; 모니터는 분석 서비스](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; 모니터는 분석 서비스](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d09ea9167e26c61c5c78671da5dcf782a9cfa86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ffb254ded921b4300e0f948c4e6b645bdd18ff3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200563"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147768"
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 응용 프로그램을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
@@ -25,17 +25,17 @@ ms.locfileid: "48200563"
 ## <a name="in-this-section"></a>섹션 내용  
  [Microsoft OLAP 아키텍처 이해](olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [ADOMD.NET을 사용하여 개발](adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Analysis Services에서 XMLA를 사용하여 개발](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [OLAP 기능 확장](extending-olap/extending-olap-functionality.md)  
   
- [Analysis Services OLE DB Provider &#40;Analysis Services-다차원 데이터&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+ [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 형식 모델 프로그래밍](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   

@@ -2,7 +2,7 @@
 title: Data Migration Assistant 통합된 평가 보고서를 Power BI (SQL Server)를 사용 하 여 분석 | Microsoft Docs
 description: 가져온 했으며 SQL Server에 통합 하는 데이터 마이그레이션 평가 보고서를 분석 하려면 Power BI를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832241"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643971"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Power BI를 사용 하 여 Data Migration Assistant에서 만든 통합된 평가 보고서 분석
 
@@ -129,7 +129,7 @@ Power BI에서 데이터 원본을 변경 하 여 사용자 환경에 맞게 이
 
 ![Azure SQL DB 지원 되지 않는 기능 보고서](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-이 보고서에 대 한 지 원하는 기능을 강조 표시는 주어진 **데이터베이스** 대상 Azure SQL Database (V12) 경우입니다.
+이 보고서를 강조 표시 기능에 대 한 지원 되지 않습니다는 주어진 **데이터베이스** 대상 Azure SQL Database (V12) 경우입니다.
 
 깔때기형 차트 데이터베이스 이름과 값으로 필터링 하 여 지원 되지 않는 기능 세부 정보를 볼 수 있습니다. 개체가 영향을 받고 문제를 해결 하기 위한 권장 사항 세부 정보에 포함 됩니다.
 

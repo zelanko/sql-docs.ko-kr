@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049334"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148378"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>기본 멤버 속성(MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
   
- 기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 `ID`, `KEY`, `KEYx` 및 `NAME`이 있습니다. 위치 정보를 같은 반환할 수도 있습니다 `LEVEL_NUMBER` 또는 `PARENT_UNIQUE_NAME`, 특히 합니다.  
+ 기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 `ID`, `KEY`, `KEYx` 및 `NAME`이 있습니다. 특히 `LEVEL_NUMBER` 또는 `PARENT_UNIQUE_NAME`과 같은 위치 정보를 반환할 수도 있습니다.  
   
  쿼리 작성 방법 및 쿼리 실행에 사용하는 클라이언트 응용 프로그램에 따라 결과 집합에 멤버 속성이 표시될 수도 있고 그렇지 않을 수도 있습니다. 쿼리 테스트 또는 실행에 SQL Server Management Studio를 사용하는 경우 결과 집합에서 멤버를 두 번 클릭하여 각 멤버의 기본 속성 값이 표시된 멤버 속성 대화 상자를 열 수 있습니다.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "48049334"
  상황에 맞는 멤버 속성  
  이 유형의 멤버 속성은 특정 계층 또는 수준의 컨텍스트에서 사용해야 하고 지정한 차원 또는 수준의 각 멤버에 대한 값을 제공합니다.  
   
- 다음 예제에 대 한 경로 포함 하는 방법을 확인 합니다 `KEY` 속성: `MEMBER [Measures].[Parent Member Key] AS [Product].[Product Categories].CurrentMember.Parent.PROPERTIES("KEY")`합니다.  
+ 다음 예를 보면 `KEY` 속성의 경로가 포함되어 있습니다. `MEMBER [Measures].[Parent Member Key] AS [Product].[Product Categories].CurrentMember.Parent.PROPERTIES("KEY")`  
   
  상황에 맞지 않는 멤버 속성  
  이 유형의 멤버 속성은 특정 차원 또는 수준의 컨텍스트에서 사용할 수 없고 한 축의 모든 멤버에 대한 값을 반환합니다.  
   
- 상황에 맞지 않는 속성은 독립적이며 경로 정보를 포함하지 않습니다. 차원이 나 수준이 지정 하지 되어 `PARENT_UNIQUE_NAME` 다음 예제에서: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ 상황에 맞지 않는 속성은 독립적이며 경로 정보를 포함하지 않습니다. 다음 예에서는 `PARENT_UNIQUE_NAME`에 대해 차원이나 수준이 지정되어 있지 않습니다. `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  기본 멤버 속성이 상황에 맞든 맞지 않든 상관없이 다음의 사용 규칙이 적용됩니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48049334"
 |--------------|-----------------|  
 |`ID`|내부적으로 유지 관리되는 멤버 ID입니다.|  
 |`Key`|원본 데이터 형식에서 멤버 키의 값입니다. MEMBER_KEY는 이전 버전과의 호환성을 위해 제공됩니다.  비복합 키의 경우 MEMBER_KEY 값이 KEY0과 동일하고 복합 키의 경우 MEMBER_KEY 속성이 Null입니다.|  
-|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 키가 복합이 아닌 경우 KEY0은 `Key`합니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
+|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
 |`Name`|멤버의 이름입니다.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>상황에 맞는 속성에 대한 PROPERTIES 구문  
@@ -88,7 +88,7 @@ ms.locfileid: "48049334"
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하는 상황에 맞지 않는 기본 속성에 대해 설명합니다.  
   
 > [!NOTE]  
->  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. 에 대 한 자세한 내용은 합니다 `MEMBERS` 스키마 행 집합 참조 [MDSCHEMA_MEMBERS 행 집합](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)합니다.  
+>  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. 에 대 한 자세한 내용은 합니다 `MEMBERS` 스키마 행 집합 참조 [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -101,14 +101,14 @@ ms.locfileid: "48049334"
 |`HIERARCHY_UNIQUE_NAME`|계층의 고유한 이름입니다. 멤버가 둘 이상의 계층에 속한 경우 멤버가 속한 각 계층마다 하나의 행이 있습니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |`IS_DATAMEMBER`|멤버가 데이터 멤버인지 여부를 나타내는 부울입니다.|  
 |`IS_PLACEHOLDERMEMBER`|멤버가 자리 표시자인지 여부를 나타내는 부울입니다.|  
-|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 키가 복합이 아닌 경우 KEY0은 `Key`합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
+|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
 |`LCID` *X*|로캘 ID 16진수 값으로 멤버 캡션을 변환한 값이며 *x* 는 로캘 ID 10진수 값(예: 영어-캐나다의 경우 LCID1009)입니다. 데이터 원본에 바인딩된 캡션 열이 변환에 있는 경우에만 이 값을 사용할 수 있습니다.|  
 |`LEVEL_NUMBER`|계층 루트에서 멤버까지의 거리입니다. 루트 수준은 0입니다.|  
 |`LEVEL_UNIQUE_NAME`|이 멤버가 속한 수준의 고유한 이름입니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |`MEMBER_CAPTION`|멤버에 연결된 레이블 또는 캡션입니다. 캡션은 주로 표시용으로 사용합니다. 캡션이 없는 경우 쿼리는 `MEMBER_NAME`을 반환합니다.|  
 |`MEMBER_KEY`|원본 데이터 형식에서 멤버 키의 값입니다. MEMBER_KEY는 이전 버전과의 호환성을 위해 제공됩니다.  비복합 키의 경우 MEMBER_KEY 값이 KEY0과 동일하고 복합 키의 경우 MEMBER_KEY 속성이 Null입니다.|  
 |`MEMBER_NAME`|멤버의 이름입니다.|  
-|`MEMBER_TYPE`|멤버의 유형입니다. 이 속성 값은 다음 중 하나일 수 있습니다. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA가 MDMEMBER_TYPE_MEASURE보다 우선합니다. 따라서 Measures 차원에 수식 (계산된) 멤버가 있으면는 `MEMBER_TYPE` 계산된 멤버에 대 한 속성은 MDMEMBER_TYPE_FORMULA입니다.|  
+|`MEMBER_TYPE`|멤버의 유형입니다. 이 속성 값은 다음 중 하나일 수 있습니다. <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA가 MDMEMBER_TYPE_MEASURE보다 우선합니다. 따라서 Measures 차원에 수식(계산) 멤버가 있는 경우 계산 멤버에 대한 `MEMBER_TYPE` 속성은 MDMEMBER_TYPE_FORMULA입니다.|  
 |`MEMBER_UNIQUE_NAME`|멤버의 고유한 이름입니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |`MEMBER_VALUE`|원본 형식으로 된 멤버의 값입니다.|  
 |`PARENT_COUNT`|이 멤버에 있는 부모 수입니다.|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049334"
 |`UNIQUE_NAME`|멤버의 정규화된 이름으로, [dimension].[level].[key6.] 형식입니다.|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>상황에 맞지 않는 속성에 대한 PROPERTIES 구문  
- 다음 구문을 사용 하 여 맞지 상황에 맞지 않는 기본 멤버 속성을 지정 하는 데는 `PROPERTIES` 키워드:  
+ 다음 구문을 사용하여 `PROPERTIES` 키워드를 사용하는 상황에 맞지 않는 기본 멤버 속성을 지정할 수 있습니다.  
   
  `DIMENSION PROPERTIES Property`  
   
  이 구문에서는 차원이나 수준별로 속성을 정규화할 수 없습니다. 상황에 맞지 않는 기본 멤버 속성이 축의 모든 멤버에 적용되므로 속성을 정규화할 수 없습니다.  
   
- 예를 들어 지정 하는 MDX 문을 `DESCRIPTION` 내장 멤버 속성은 다음 구문을 사용 해야 합니다.  
+ 예를 들어 `DESCRIPTION` 기본 멤버 속성을 지정하는 MDX 문의 구문은 다음과 같습니다.  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -207,16 +207,16 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [자식 &#40;MDX&#41;](/sql/mdx/children-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Count &#40;설정&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [필터 &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [속성 &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [멤버 속성을 사용 하 여 &#40;MDX&#41;](mdx-member-properties.md)   
- [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [PeriodsToDate&#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
+ [Children&#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize&#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [개수&#40;Set&#41;&#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [필터&#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [AddCalculatedMembers&#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
+ [DrilldownLevel&#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
+ [속성&#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [PrevMember&#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
+ [멤버 속성 사용&#40;MDX&#41;](mdx-member-properties.md)   
+ [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

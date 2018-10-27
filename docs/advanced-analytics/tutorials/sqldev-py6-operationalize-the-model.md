@@ -1,5 +1,5 @@
 ---
-title: 6 단계에는 SQL Server를 사용 하 여 Python 모델 운영 화 | Microsoft Docs
+title: SQL Server를 사용 하 여 Python 모델 운영 화 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888959"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806813"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>6 단계: SQL Server를 사용 하 여 Python 모델 운영 화
+# <a name="operationalize-the-python-model-using-sql-server"></a>SQL Server를 사용 하 여 Python 모델 운영 화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 자습서에 일부 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
@@ -361,7 +361,7 @@ SQL Server 2017의 시험판 버전을 사용 하 여 Python Services를 설치�
 
 ## <a name="previous-step"></a>이전 단계
 
-[5 단계: 학습 및 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[학습 및 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>참고자료
 

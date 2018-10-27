@@ -14,28 +14,28 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063393"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147850"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
-  이 항목에서는 개체 명명 규칙과 함께 개체 이름 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트에 사용할 수 없는 예약어 및 예약 문자에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  
   
 ##  <a name="bkmk_Names"></a> 명명 규칙  
- 모든 개체에는 부모 컬렉션의 범위 내에서 고유해야 하는 `Name` 및 `ID` 속성이 있습니다. 예를 들어 두 차원은 각각이 다른 데이터베이스에 상주하는 한 같은 이름을 가질 수 있습니다.  
+ 모든 개체에는 부모 컬렉션 범위 내에 고유해야 하는 `Name` 및 `ID` 속성이 있습니다. 예를 들어 두 차원은 각각이 다른 데이터베이스에 상주하는 한 같은 이름을 가질 수 있습니다.  
   
- 이름을 수동으로 지정할 수 있지만 개체가 생성될 때 일반적으로 `ID`가 자동으로 만들어집니다. 모델을 만들었으면 `ID`를 변경해서는 안 됩니다. 모델에서 모든 개체 참조는 `ID`를 기반으로 합니다. 따라서 `ID`를 변경하면 모델이 쉽게 손상될 수 있습니다.  
+ 이름을 수동으로 지정할 수 있지만 `ID`는 개체를 만들 때 일반적으로 자동 생성됩니다. 모델을 만들기 시작했으면 `ID`를 변경해서는 안 됩니다. 모델 전반의 모든 개체 참조는 `ID`를 기반으로 합니다. 따라서 `ID`를 변경하면 모델이 쉽게 손상될 수 있습니다.  
   
- `DataSource` 및 `DataSourceView` 개체에는 명명 규칙에 대해 주목할 만한 예외가 있습니다. `DataSource` ID를 현재 데이터베이스에 대한 참조로 단일 점(.)으로 설정할 수 있지만 고유하지 않습니다. 두 번째 예외는 `DataSourceView`로, .NET Framework의 `DataSet` 개체에 정의된 명명 규칙을 준수합니다. 여기서 `Name`은 식별자로 사용됩니다.  
+ `DataSource` 및 `DataSourceView` 개체에는 명명 규칙에 대해 주목할 만한 예외가 있습니다. `DataSource` ID를 현재 데이터베이스에 대한 참조로 단일 점(.)으로 설정할 수 있지만 고유하지 않습니다. 두 번째 예외는 `DataSourceView`로써 .NET Framework의 `DataSet` 개체에 정의된 명명 규칙을 준수합니다. 여기서 `Name`은 식별자로 사용됩니다.  
   
- 다음은 `Name` 및 `ID` 속성에 적용되는 추가 규칙입니다.  
+ 다음 규칙은 `Name` 및 `ID` 속성에 적용됩니다.  
   
 -   이름은 대/소문자를 구분하지 않습니다. 같은 데이터베이스에 이름이 “sales”와 “Sales”인 큐브가 동시에 있을 수 없습니다.  
   
--   이름 내에 공백을 포함할 수 있더라도 개체 이름에 선행 또는 후행 공백을 사용할 수 없습니다. 선행 공백과 후행 공백은 암시적으로 잘립니다. 개체의 `Name` 및 `ID` 모두에 적용됩니다.  
+-   이름 내에 공백을 포함할 수 있더라도 개체 이름에 선행 또는 후행 공백을 사용할 수 없습니다. 선행 공백과 후행 공백은 암시적으로 잘립니다. 이는 개체의 `Name` 및 `ID`에 모두 적용됩니다.  
   
 -   최대 문자 수는 100자입니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063393"
   
 |Object|유효하지 않은 문자|  
 |------------|------------------------|  
-|`Server`|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 참조 [명명 규칙 (Windows)](/windows/desktop/DNS/naming-conventions) 세부 정보에 대 한 합니다.|  
+|`Server`|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](/windows/desktop/DNS/naming-conventions) 을 참조하십시오.|  
 |`DataSource`|: / \ * &#124; ? "() {} <>|  
 |`Level` 또는 `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` 또는 `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<, >|  
@@ -92,6 +92,6 @@ ms.locfileid: "48063393"
 ## <a name="see-also"></a>관련 항목  
  [MDX 예약어](/sql/mdx/mdx-reserved-words)   
  [번역 &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis 호환성 &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis 호환성 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

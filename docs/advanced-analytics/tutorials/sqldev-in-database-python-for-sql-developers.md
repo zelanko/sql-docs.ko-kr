@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461859"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806763"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위한 데이터베이스 내 Python 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 
 모든 작업을 수행할 수 있습니다 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 익숙한 환경에서 저장 프로시저 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [1단계: 샘플 데이터 다운로드](demo-data-nyctaxi-in-sql.md)
 
-    로컬 컴퓨터에 샘플 데이터 집합 및 모든 스크립트 파일을 다운로드 합니다.
-
-- [2단계: PowerShell을 사용하여 SQL Server로 데이터 가져오기](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    지정 된 인스턴스에 데이터베이스 및 테이블을 만들고 테이블에 샘플 데이터를 로드 하는 PowerShell 스크립트를 실행 합니다.
-
-- [3 단계: 탐색 및 Python을 사용 하 여 데이터 시각화](sqldev-py3-explore-and-visualize-the-data.md)
+- [Python을 사용 하 여 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
 
     기본 데이터 탐색 및 시각화에서 Python 호출 하 여 수행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다.
 
-- [4 단계: t-sql로 Python을 사용 하 여 데이터 기능 만들기](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [T-sql로 Python을 사용 하 여 데이터 기능 만들기](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     사용자 정의 SQL 함수를 사용하여 새 데이터 특성을 만듭니다.
   
-- [5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     빌드 및 저장된 프로시저에서 Python을 사용 하 여 기계 학습 모델을 저장 합니다.
   
     이 연습에는; 이진 분류 작업을 수행 하는 방법을 보여 줍니다. 또한 다중 클래스 분류 또는 회귀 모델을 작성 하는 데이터를 사용할 수 있습니다.
 
   
--  [6 단계: Python 모델 운영 화](sqldev-py6-operationalize-the-model.md)
+-  [ Python 모델 운영 화](sqldev-py6-operationalize-the-model.md)
 
     모델 데이터베이스에 저장 된 후 모델을 사용 하 여 예측에 대 한 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.
 

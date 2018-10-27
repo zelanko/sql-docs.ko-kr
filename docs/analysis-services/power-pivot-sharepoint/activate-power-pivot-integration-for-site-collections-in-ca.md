@@ -1,5 +1,5 @@
 ---
-title: CA에서 사이트 모음에 대 한 파워 피벗 통합 활성화 | Microsoft Docs
+title: CA에서 사이트 모음에 대해 파워 피벗 통합 활성화 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026120"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100064"
 ---
-# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>CA에서 사이트 모음에 대 한 파워 피벗 통합 활성화
+# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>CA에서 사이트 모음에 대해 파워 피벗 통합 활성화
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   기존 팜 설치 옵션을 사용하여 SQL Server SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치하는 경우 특정 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34026120"
   
 1.  SharePoint  사이트에서 **사이트 작업**을 클릭합니다.  
   
-     기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, http://를 입력 하 여 SharePoint 사이트를 액세스할 종종 수\<컴퓨터 이름 > 루트 사이트 모음을 열려면 합니다.  
+     기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, http://를 입력 하 여 SharePoint 사이트를 자주 액세스할 수는\<컴퓨터 이름 >를 루트 사이트 모음을 엽니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "34026120"
   
 6.  각 사이트를 열고 **사이트 작업**을 클릭하여 추가 사이트 모음에 대해 위 단계를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [초기 구성 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
- [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [초기 구성(SharePoint용 PowerPivot)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
+ [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

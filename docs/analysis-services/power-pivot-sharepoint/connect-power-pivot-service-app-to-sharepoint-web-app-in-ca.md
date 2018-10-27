@@ -1,5 +1,5 @@
 ---
-title: CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결 | Microsoft Docs
+title: CA에서 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4699746404fcc7e5f4384f2ce9871232d9aa44a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024150"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098976"
 ---
-# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결
+# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA에서 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   팜의 여러 SharePoint 웹 응용 프로그램에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 해당 응용 프로그램을 추가합니다.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "34024150"
   
 6.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [초기 구성 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
+ [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   

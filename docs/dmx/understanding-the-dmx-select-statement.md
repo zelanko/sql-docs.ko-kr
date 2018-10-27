@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042051"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144838"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX Select 문 이해
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "38042051"
   
 |쿼리 유형|Description|  
 |----------------|-----------------|  
-|SELECT FROM [NATURAL] PREDICTION JOIN|마이닝 모델의 열을 내부 데이터 원본의 열에 조인하여 만든 예측을 반환합니다.<br /><br /> 이 쿼리 유형에 대한 도메인은 모델의 예측 가능한 열과 입력 데이터 원본의 열입니다.<br /><br /> [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [예측 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
-|SELECT FROM  *\<모델 >*|마이닝 모델만을 기준으로 예측 가능한 열에서 가능성이 가장 높은 상태를 반환합니다. 이 쿼리 유형을 사용하면 더 간단하게 빈 예측 조인을 사용하여 예측을 만들 수 있습니다.<br /><br /> 이 쿼리 유형의 도메인은 모델의 예측 가능한 열입니다.<br /><br /> [SELECT FROM &#60;모델&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [예측 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM [NATURAL] PREDICTION JOIN|마이닝 모델의 열을 내부 데이터 원본의 열에 조인하여 만든 예측을 반환합니다.<br /><br /> 이 쿼리 유형에 대한 도메인은 모델의 예측 가능한 열과 입력 데이터 원본의 열입니다.<br /><br /> [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [예측 쿼리&#40;데이터 마이닝&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|SELECT FROM  *\<모델 >*|마이닝 모델만을 기준으로 예측 가능한 열에서 가능성이 가장 높은 상태를 반환합니다. 이 쿼리 유형을 사용하면 더 간단하게 빈 예측 조인을 사용하여 예측을 만들 수 있습니다.<br /><br /> 이 쿼리 유형의 도메인은 모델의 예측 가능한 열입니다.<br /><br /> [SELECT FROM &#60;모델&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [예측 쿼리&#40;데이터 마이닝&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
   
  [Select 유형으로 이동](#Select_Types)  
   
@@ -73,10 +73,10 @@ ms.locfileid: "38042051"
   
 |쿼리 유형|Description|  
 |----------------|-----------------|  
-|SELECT DISTINCT FROM  *\<모델 >*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM  *\<모델 >* 합니다. 콘텐츠|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT DISTINCT FROM  *\<모델 >*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT FROM  *\<모델 >* 합니다. 콘텐츠|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<모델 >* 합니다. DIMENSION_CONTENT|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM  *\<모델 >* 합니다. PMML|이 기능을 지원하는 알고리즘에 대한 마이닝 모델의 PMML(Predictive Model Markup Language) 표현을 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 PMML 스키마 행 집합입니다.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM  *\<모델 >* 합니다. PMML|이 기능을 지원하는 알고리즘에 대한 마이닝 모델의 PMML(Predictive Model Markup Language) 표현을 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 PMML 스키마 행 집합입니다.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Select 유형으로 이동](#Select_Types)  
   
@@ -96,12 +96,12 @@ ms.locfileid: "38042051"
 |----------------|-----------------|  
 |SELECT FROM  *\<모델 >* 합니다. 경우|마이닝 모델의 학습에 사용된 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX를 사용하여 드릴스루 쿼리 만들기](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<모델 >* 합니다. SAMPLE_CASES|마이닝 모델 학습에 사용된 대표 사례인 샘플 사례를 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM  *\<구조 >* 합니다. 경우|일부 상세 정보가 마이닝 모델 학습에 사용되지 않은 경우에도 기본 마이닝 구조에서 자세한 데이터 행을 반환합니다.<br /><br /> [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)<br /><br /> [드릴스루 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM  *\<구조 >* 합니다. 경우|일부 상세 정보가 마이닝 모델 학습에 사용되지 않은 경우에도 기본 마이닝 구조에서 자세한 데이터 행을 반환합니다.<br /><br /> [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)<br /><br /> [드릴스루 쿼리&#40;데이터 마이닝&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Select 유형으로 이동](#Select_Types)  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   

@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142453"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145853"
 ---
 # <a name="merging-partitions-xmla"></a>파티션 병합(XMLA)
-  파티션이 같은 집계 디자인 및 구조에 있는 경우 사용 하 여 파티션을 병합할 수 있습니다 합니다 [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XMLA (XML for Analysis) 명령을 합니다. 파티션 병합은 파티션을 관리할 때 수행하는 중요한 동작으로, 특히 날짜별로 파티션된 기록 데이터가 들어 있는 파티션을 관리하는 데 유용합니다.  
+  파티션이 같은 집계 디자인 및 구조에 있는 경우 사용 하 여 파티션을 병합할 수 있습니다 합니다 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XMLA (XML for Analysis) 명령을 합니다. 파티션 병합은 파티션을 관리할 때 수행하는 중요한 동작으로, 특히 날짜별로 파티션된 기록 데이터가 들어 있는 파티션을 관리하는 데 유용합니다.  
   
  예를 들어, 재무 큐브에서 다음과 같은 파티션 2개를 사용할 수 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142453"
  두 파티션에 사용된 저장소 설정은 서로 다르지만 집계 디자인은 같습니다. 연말에 기록 데이터를 연도별로 처리하는 방식으로 큐브를 처리하는 대신 `MergePartitions` 명령을 사용하여 올해의 파티션을 작년의 파티션에 병합할 수 있습니다. 이렇게 하면 많은 시간이 소요될 수 있는 전체 큐브 처리 작업을 수행하지 않고도 집계 데이터를 유지할 수 있습니다.  
   
 ## <a name="specifying-partitions-to-merge"></a>병합할 파티션 지정  
- 경우는 `MergePartitions` 명령 실행에 지정 된 원본 파티션에 저장 된 집계 데이터를 [소스](../xmla/xml-elements-properties/source-element-xmla.md) 속성에 지정 된 대상 파티션에 추가 됩니다는 [대상](../xmla/xml-elements-properties/target-element-xmla.md) 속성입니다.  
+ 경우는 `MergePartitions` 명령 실행에 지정 된 원본 파티션에 저장 된 집계 데이터를 [소스](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) 속성에 지정 된 대상 파티션에 추가 됩니다는 [대상](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) 속성입니다.  
   
 > [!NOTE]  
 >  `Source` 속성은 둘 이상의 파티션 개체 참조를 가질 수 있지만 `Target` 속성은 그럴 수 없습니다.  

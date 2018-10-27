@@ -15,12 +15,12 @@ ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22cbeffa7a313c043467c8ff95074ac7ed87b500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224d920ab8a349409a9dd5b25eb87c3a1aa0e626
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140234"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147388"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 서버 프로그래밍
   ADOMD.NET의 ADOMD.NET 서버 구성 요소는 `Microsoft.AnalysisServices.AdomdServer` 네임스페이스(msmgdsrv.dll) 안에 있습니다. 이러한 서버 구성 요소를 사용 하 여 사용자 지정 MDX (Multidimensional Expressions) 함수 및 인스턴스에서 실행 되는 저장된 프로시저를 만듭니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 서버 개체는 큐브 및 마이닝 모델을 쿼리하고 지정된 컨텍스트에서 식을 평가하는 기능을 제공합니다. 사용자 지정 함수 및 저장 프로시저를 만들면 실행 속도가 빨라지고 중앙 집중식 배포가 가능하며 관리가 용이해집니다.  
@@ -29,12 +29,12 @@ ms.locfileid: "48140234"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[ADOMD.NET Server 기능](adomd-net-server-functionality.md)|ADOMD.NET 서버 개체의 사용 방법을 설명합니다.|  
-|[ADOMD.NET 서버 개체 아키텍처](adomd-net-server-object-architecture.md)|ADOMD.NET 서버 개체의 개체 아키텍처를 설명합니다.|  
-|[사용자 정의 함수 및 저장 프로시저](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|사용자 정의 함수 또는 저장 프로시저를 만드는 과정을 안내합니다.|  
+|[ADOMD.NET Server 기능](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|ADOMD.NET 서버 개체의 사용 방법을 설명합니다.|  
+|[ADOMD.NET 서버 개체 아키텍처](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|ADOMD.NET 서버 개체의 개체 아키텍처를 설명합니다.|  
+|[사용자 정의 함수 및 저장 프로시저](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|사용자 정의 함수 또는 저장 프로시저를 만드는 과정을 안내합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [ADOMD.NET 클라이언트 프로그래밍](../multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
- [ADOMD.NET을 사용하여 개발](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET 클라이언트 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   

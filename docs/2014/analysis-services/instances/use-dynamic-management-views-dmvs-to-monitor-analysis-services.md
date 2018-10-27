@@ -11,17 +11,17 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cbb873693a80b284e263594bfbcd4cb2046b216
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079803"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148126"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
   
- 사용할 대부분의 DMV 쿼리에서 `SELECT` 문 및 `$System` 스키마는 XML/A 스키마 행 집합을 사용 하 여 합니다.  
+ 대부분의 DMV 쿼리에서는 `SELECT` 문 및 `$System` 스키마를 XML/A 스키마 행 집합과 함께 사용합니다.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -103,69 +103,69 @@ ORDER BY TABLE_NAME ASC
   
 |행 집합|Description|  
 |------------|-----------------|  
-|[DBSCHEMA_CATALOGS 행 집합](../schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|현재 연결의 Analysis Services 데이터베이스 목록을 반환합니다.|  
-|[DBSCHEMA_COLUMNS 행 집합](../schema-rowsets/ole-db/dbschema-columns-rowset.md)|현재 데이터베이스에 있는 모든 열 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  
-|[DBSCHEMA_PROVIDER_TYPES 행 집합](../schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|OLE DB 데이터 공급자가 지원하는 기본 데이터 형식에 대한 속성을 반환합니다.|  
-|[DBSCHEMA_TABLES 행 집합](../schema-rowsets/ole-db/dbschema-tables-rowset.md)|현재 데이터베이스에 있는 모든 테이블 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  
-|[DISCOVER_CALC_DEPENDENCY 행 집합](../schema-rowsets/xml/discover-calc-dependency-rowset.md)|모델에 사용된 열과 테이블 중 다른 열과 테이블에 종속된 열과 테이블 목록을 반환합니다.|  
-|[DISCOVER_COMMAND_OBJECTS 행 집합](../schema-rowsets/xml/discover-command-objects-rowset.md)|참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
-|[DISCOVER_COMMANDS 행 집합](../schema-rowsets/xml/discover-commands-rowset.md)|현재 실행 중인 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
-|[DISCOVER_CONNECTIONS 행 집합](../schema-rowsets/xml/discover-connections-rowset.md)|Analysis Services에 대해 열려 있는 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
-|[DISCOVER_CSDL_METADATA 행 집합](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)|테이블 형식 모델에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
-|[DISCOVER_DB_CONNECTIONS 행 집합](../schema-rowsets/xml/discover-db-connections-rowset.md)|Analysis Services에서 외부 데이터 원본으로의 열린 연결(예: 처리하는 동안 또는 가져오는 동안)에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
-|[DISCOVER_DIMENSION_STAT 행 집합](../schema-rowsets/xml/discover-dimension-stat-rowset.md)|모델 유형에 따라 차원의 특성 또는 테이블의 열을 반환합니다.|  
-|[DISCOVER_ENUMERATORS 행 집합](../schema-rowsets/xml/discover-enumerators-rowset.md)|특정 데이터 원본에 대해 지원되는 열거자에 대한 메타데이터를 반환합니다.|  
-|[DISCOVER_INSTANCES 행 집합](../schema-rowsets/ole-db-olap/discover-instances-rowset.md)|지정한 인스턴스에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
-|[DISCOVER_JOBS 행 집합](../schema-rowsets/xml/discover-jobs-rowset.md)|현재 작업에 대한 정보를 반환합니다.|  
-|[DISCOVER_KEYWORDS 행 집합 &#40;XMLA&#41;](../schema-rowsets/xml/discover-keywords-rowset-xmla.md)|예약된 키워드 목록을 반환합니다.|  
-|[DISCOVER_LITERALS 행 집합](../schema-rowsets/xml/discover-literals-rowset.md)|XMLA에서 지원되는 데이터 형식 및 값을 포함하여 리터럴 목록을 반환합니다.|  
-|[DISCOVER_LOCKS 행 집합](../schema-rowsets/xml/discover-locks-rowset.md)|특정 시점에 사용된 잠금의 스냅숏을 반환합니다.|  
-|[DISCOVER_MEMORYGRANT 행 집합](../schema-rowsets/xml/discover-memorygrant-rowset.md)|시작할 때 Analysis Services에서 할당한 메모리에 대한 정보를 반환합니다.|  
-|[DISCOVER_MEMORYUSAGE 행 집합](../schema-rowsets/xml/discover-memoryusage-rowset.md)|특정 개체별로 메모리 사용량을 보여 줍니다.|  
-|[DISCOVER_OBJECT_ACTIVITY 행 집합](../schema-rowsets/xml/discover-object-activity-rowset.md)|서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다.|  
-|[DISCOVER_OBJECT_MEMORY_USAGE 행 집합](../schema-rowsets/xml/discover-object-memory-usage-rowset.md)|개체의 메모리 사용량에 대해 보고합니다.|  
-|[DISCOVER_PARTITION_DIMENSION_STAT 행 집합](../schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|차원의 특성에 대한 정보를 제공합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
-|[DISCOVER_PARTITION_STAT 행 집합](../schema-rowsets/xml/discover-partition-stat-rowset.md)|차원, 테이블 또는 측정값 그룹의 파티션에 대한 정보를 제공합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
-|[DISCOVER_PERFORMANCE_COUNTERS 행 집합](../schema-rowsets/xml/discover-performance-counters-rowset.md)|성능 카운터에 사용되는 열을 나열합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
-|[DISCOVER_PROPERTIES 행 집합](../schema-rowsets/xml/discover-properties-rowset.md)|지정한 데이터 원본에 대해 XMLA에서 지원하는 속성에 대한 정보를 반환합니다.|  
-|[DISCOVER_SCHEMA_ROWSETS 행 집합](../schema-rowsets/xml/discover-schema-rowsets-rowset.md)|XMLA에서 지원하는 모든 열거 값에 대한 이름, 제한, 설명 및 기타 정보를 반환합니다.|  
-|[DISCOVER_SESSIONS 행 집합](../schema-rowsets/xml/discover-sessions-rowset.md)|세션 사용자 및 기간을 포함하여 활성 세션에 대해 보고합니다.|  
-|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합](../schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 및 세그먼트 수준 정보를 제공합니다.|  
-|[DISCOVER_STORAGE_TABLE_COLUMNS 행 집합](../schema-rowsets/xml/discover-storage-table-columns-rowset.md)|클라이언트가 테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 할당을 확인할 수 있도록 합니다.|  
-|[DISCOVER_STORAGE_TABLES 행 집합](../schema-rowsets/xml/discover-storage-tables-rowset.md)|테이블 형식 모델 데이터베이스에서 모델 저장소로 사용되는 테이블에 대한 정보를 반환합니다.|  
-|[DISCOVER_TRACE_COLUMNS 행 집합](../schema-rowsets/xml/discover-trace-columns-rowset.md)|추적에 사용할 수 있는 열에 대한 XML 설명을 반환합니다.|  
-|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 행 집합](../schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|공급자의 이름 및 버전 정보를 반환합니다.|  
-|[DISCOVER_TRACE_EVENT_CATEGORIES 행 집합](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|사용 가능한 범주 목록을 반환합니다.|  
-|[DISCOVER_TRACES 행 집합](../schema-rowsets/xml/discover-traces-rowset.md)|현재 연결에서 현재 실행 중인 추적 목록을 반환합니다.|  
-|[DISCOVER_TRANSACTIONS 행 집합](../schema-rowsets/xml/discover-transactions-rowset.md)|현재 연결에서 현재 실행 중인 트랜잭션 목록을 반환합니다.|  
+|[DBSCHEMA_CATALOGS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|현재 연결의 Analysis Services 데이터베이스 목록을 반환합니다.|  
+|[DBSCHEMA_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|현재 데이터베이스에 있는 모든 열 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  
+|[DBSCHEMA_PROVIDER_TYPES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|OLE DB 데이터 공급자가 지원하는 기본 데이터 형식에 대한 속성을 반환합니다.|  
+|[DBSCHEMA_TABLES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|현재 데이터베이스에 있는 모든 테이블 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  
+|[DISCOVER_CALC_DEPENDENCY 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|모델에 사용된 열과 테이블 중 다른 열과 테이블에 종속된 열과 테이블 목록을 반환합니다.|  
+|[DISCOVER_COMMAND_OBJECTS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
+|[DISCOVER_COMMANDS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|현재 실행 중인 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
+|[DISCOVER_CONNECTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Analysis Services에 대해 열려 있는 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
+|[DISCOVER_CSDL_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|테이블 형식 모델에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
+|[DISCOVER_DB_CONNECTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Analysis Services에서 외부 데이터 원본으로의 열린 연결(예: 처리하는 동안 또는 가져오는 동안)에 대한 리소스 사용량 및 작업 정보를 제공합니다.|  
+|[DISCOVER_DIMENSION_STAT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-dimension-stat-rowset)|모델 유형에 따라 차원의 특성 또는 테이블의 열을 반환합니다.|  
+|[DISCOVER_ENUMERATORS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|특정 데이터 원본에 대해 지원되는 열거자에 대한 메타데이터를 반환합니다.|  
+|[DISCOVER_INSTANCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|지정한 인스턴스에 대한 정보를 반환합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
+|[DISCOVER_JOBS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|현재 작업에 대한 정보를 반환합니다.|  
+|[DISCOVER_KEYWORDS 행 집합&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|예약된 키워드 목록을 반환합니다.|  
+|[DISCOVER_LITERALS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|XMLA에서 지원되는 데이터 형식 및 값을 포함하여 리터럴 목록을 반환합니다.|  
+|[DISCOVER_LOCKS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|특정 시점에 사용된 잠금의 스냅숏을 반환합니다.|  
+|[DISCOVER_MEMORYGRANT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|시작할 때 Analysis Services에서 할당한 메모리에 대한 정보를 반환합니다.|  
+|[DISCOVER_MEMORYUSAGE 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|특정 개체별로 메모리 사용량을 보여 줍니다.|  
+|[DISCOVER_OBJECT_ACTIVITY 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다.|  
+|[DISCOVER_OBJECT_MEMORY_USAGE 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-memory-usage-rowset)|개체의 메모리 사용량에 대해 보고합니다.|  
+|[DISCOVER_PARTITION_DIMENSION_STAT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-dimension-stat-rowset)|차원의 특성에 대한 정보를 제공합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
+|[DISCOVER_PARTITION_STAT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|차원, 테이블 또는 측정값 그룹의 파티션에 대한 정보를 제공합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
+|[DISCOVER_PERFORMANCE_COUNTERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|성능 카운터에 사용되는 열을 나열합니다.<br /><br /> SYSTEMRESTRICTSCHEMA 및 추가 매개 변수가 필요합니다.|  
+|[DISCOVER_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|지정한 데이터 원본에 대해 XMLA에서 지원하는 속성에 대한 정보를 반환합니다.|  
+|[DISCOVER_SCHEMA_ROWSETS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|XMLA에서 지원하는 모든 열거 값에 대한 이름, 제한, 설명 및 기타 정보를 반환합니다.|  
+|[DISCOVER_SESSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|세션 사용자 및 기간을 포함하여 활성 세션에 대해 보고합니다.|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 및 세그먼트 수준 정보를 제공합니다.|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|클라이언트가 테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 할당을 확인할 수 있도록 합니다.|  
+|[DISCOVER_STORAGE_TABLES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|테이블 형식 모델 데이터베이스에서 모델 저장소로 사용되는 테이블에 대한 정보를 반환합니다.|  
+|[DISCOVER_TRACE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|추적에 사용할 수 있는 열에 대한 XML 설명을 반환합니다.|  
+|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|공급자의 이름 및 버전 정보를 반환합니다.|  
+|[DISCOVER_TRACE_EVENT_CATEGORIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|사용 가능한 범주 목록을 반환합니다.|  
+|[DISCOVER_TRACES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|현재 연결에서 현재 실행 중인 추적 목록을 반환합니다.|  
+|[DISCOVER_TRANSACTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|현재 연결에서 현재 실행 중인 트랜잭션 목록을 반환합니다.|  
 |[DISCOVER_XEVENT_TRACE_DEFINITION 행 집합](../dev-guide/discover-xevent-trace-definition-rowset.md)|현재 연결에서 현재 실행 중인 이벤트 추적 목록을 반환합니다.|  
-|[DMSCHEMA_MINING_COLUMNS 행 집합](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|현재 연결에서 사용할 수 있는 모든 마이닝 모델의 개별 열을 나열합니다.|  
-|[DMSCHEMA_MINING_FUNCTIONS 행 집합](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|서버의 데이터 마이닝 알고리즘이 지원하는 함수 목록을 반환합니다.|  
-|[DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|현재 모델을 설명하는 열로 구성된 행 집합을 반환합니다.|  
-|[DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](../schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|현재 모델을 설명하는 열로 구성된 행 집합을 PMML 형식으로 반환합니다.|  
-|[DMSCHEMA_MINING_MODEL_XML 행 집합](../schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|현재 모델을 설명하는 열로 구성된 행 집합을 PMML 형식으로 반환합니다.|  
-|[DMSCHEMA_MINING_MODELS 행 집합](../schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|현재 데이터베이스에 있는 마이닝 모델 목록을 반환합니다.|  
-|[DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합](../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|서버의 알고리즘에 대한 매개 변수 목록을 반환합니다.|  
-|[DMSCHEMA_MINING_SERVICES 행 집합](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|서버에서 사용할 수 있는 데이터 마이닝 알고리즘의 목록을 제공합니다.|  
-|[DMSCHEMA_MINING_STRUCTURE_COLUMNS 행 집합](../schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|현재 연결에서 사용할 수 있는 모든 마이닝 모델의 모든 열을 반환합니다.|  
-|[DMSCHEMA_MINING_STRUCTURES 행 집합](../schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|현재 연결에서 사용할 수 있는 마이닝 구조를 나열합니다.|  
-|[MDSCHEMA_CUBES 행 집합](../schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|현재 데이터베이스에 정의된 큐브에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_DIMENSIONS 행 집합](../schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|현재 데이터베이스에 정의된 차원에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_FUNCTIONS 행 집합](../schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|데이터베이스에 연결된 클라이언트 응용 프로그램에 사용할 수 있는 함수 목록을 반환합니다.|  
-|[MDSCHEMA_HIERARCHIES 행 집합](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|현재 데이터베이스에 정의된 계층에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_INPUT_DATASOURCES 행 집합](../schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|현재 데이터베이스에 정의된 데이터 원본 개체에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_KPIS 행 집합](../schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|현재 데이터베이스에 정의된 KPI에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_LEVELS 행 집합](../schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|현재 데이터베이스에 정의된 계층 내 수준에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 행 집합](../schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|측정값 그룹의 차원을 나열합니다.|  
-|[MDSCHEMA_MEASUREGROUPS 행 집합](../schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|현재 연결의 측정값 그룹 목록을 반환합니다.|  
-|[MDSCHEMA_MEASURES 행 집합](../schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|현재 연결의 측정값 목록을 반환합니다.|  
-|[MDSCHEMA_MEMBERS 행 집합](../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|현재 연결의 모든 멤버 목록을 데이터베이스, 큐브 및 차원별로 정렬하여 반환합니다.|  
-|[MDSCHEMA_PROPERTIES 행 집합](../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|속성 유형, 데이터 형식 및 기타 메타데이터와 함께 각 속성의 정규화된 이름을 반환합니다.|  
-|[MDSCHEMA_SETS 행 집합](../schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|현재 연결에 정의된 집합 목록을 반환합니다.|  
+|[DMSCHEMA_MINING_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|현재 연결에서 사용할 수 있는 모든 마이닝 모델의 개별 열을 나열합니다.|  
+|[DMSCHEMA_MINING_FUNCTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|서버의 데이터 마이닝 알고리즘이 지원하는 함수 목록을 반환합니다.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|현재 모델을 설명하는 열로 구성된 행 집합을 반환합니다.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|현재 모델을 설명하는 열로 구성된 행 집합을 PMML 형식으로 반환합니다.|  
+|[DMSCHEMA_MINING_MODEL_XML 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset)|현재 모델을 설명하는 열로 구성된 행 집합을 PMML 형식으로 반환합니다.|  
+|[DMSCHEMA_MINING_MODELS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-models-rowset)|현재 데이터베이스에 있는 마이닝 모델 목록을 반환합니다.|  
+|[DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset)|서버의 알고리즘에 대한 매개 변수 목록을 반환합니다.|  
+|[DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)|서버에서 사용할 수 있는 데이터 마이닝 알고리즘의 목록을 제공합니다.|  
+|[DMSCHEMA_MINING_STRUCTURE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset)|현재 연결에서 사용할 수 있는 모든 마이닝 모델의 모든 열을 반환합니다.|  
+|[DMSCHEMA_MINING_STRUCTURES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|현재 연결에서 사용할 수 있는 마이닝 구조를 나열합니다.|  
+|[MDSCHEMA_CUBES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|현재 데이터베이스에 정의된 큐브에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_DIMENSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|현재 데이터베이스에 정의된 차원에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_FUNCTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|데이터베이스에 연결된 클라이언트 응용 프로그램에 사용할 수 있는 함수 목록을 반환합니다.|  
+|[MDSCHEMA_HIERARCHIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|현재 데이터베이스에 정의된 계층에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|현재 데이터베이스에 정의된 데이터 원본 개체에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_KPIS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|현재 데이터베이스에 정의된 KPI에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_LEVELS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|현재 데이터베이스에 정의된 계층 내 수준에 대한 정보를 반환합니다.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|측정값 그룹의 차원을 나열합니다.|  
+|[MDSCHEMA_MEASUREGROUPS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|현재 연결의 측정값 그룹 목록을 반환합니다.|  
+|[MDSCHEMA_MEASURES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|현재 연결의 측정값 목록을 반환합니다.|  
+|[MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|현재 연결의 모든 멤버 목록을 데이터베이스, 큐브 및 차원별로 정렬하여 반환합니다.|  
+|[MDSCHEMA_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|속성 유형, 데이터 형식 및 기타 메타데이터와 함께 각 속성의 정규화된 이름을 반환합니다.|  
+|[MDSCHEMA_SETS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|현재 연결에 정의된 집합 목록을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [새 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [제한 된 행 집합 및 Dmv에 대 한 새 SYSTEMRESTRICTEDSCHEMA 함수](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [제한된 행 집합 및 DMV에 대한 새 SYSTEMRESTRICTEDSCHEMA 함수](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

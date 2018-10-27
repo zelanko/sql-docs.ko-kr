@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115713"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099522"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115713"
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
-     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
+     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115713"
 -   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">** 인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [HTML로 렌더링 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

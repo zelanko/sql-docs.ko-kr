@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216543"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148198"
 ---
 # <a name="database-storage-location"></a>데이터베이스 저장소 위치
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 저장소 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `DbStorageLocation` 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 장치에 지정할 수 있습니다.  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 데이터베이스 속성  
- 합니다 `DbStorageLocation` 폴더를 지정 하는 데이터베이스 속성 위치 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 만들고 모든 데이터베이스 데이터 및 메타 데이터 파일을 관리 합니다. 모든 메타 데이터 파일에 저장 되는 `DbStorageLocation` 폴더를 서버 데이터 폴더에 저장 된 데이터베이스 메타 데이터 파일은 예외적으로 합니다. 값을 설정 하는 경우 두 가지 중요 한 고려 사항이 `DbStorageLocation` 데이터베이스 속성:  
+ `DbStorageLocation` 데이터베이스 속성은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 모든 데이터베이스 데이터 및 메타데이터 파일을 만들고 관리할 폴더를 지정합니다. 모든 메타데이터 파일은 `DbStorageLocation` 폴더에 저장되지만 데이터베이스 메타데이터 파일은 예외적으로 서버 데이터 폴더에 저장됩니다. `DbStorageLocation` 데이터베이스 속성 값을 설정할 때 고려해야 할 두 가지 사항을 반드시 고려해야 합니다.  
   
--   `DbStorageLocation` 데이터베이스 속성을 기존 UNC 폴더 경로나 빈 문자열로 설정 해야 합니다. 서버 데이터 폴더에 대한 기본값은 빈 문자열입니다. 이 폴더가 없는 경우 `Create`, `Attach` 또는 `Alter` 명령을 실행하면 오류가 발생합니다.  
+-   `DbStorageLocation` 데이터베이스 속성을 기존 UNC 폴더 경로나 빈 문자열로 설정해야 합니다. 서버 데이터 폴더에 대한 기본값은 빈 문자열입니다. 이 폴더가 없는 경우 `Create`, `Attach` 또는 `Alter` 명령을 실행하면 오류가 발생합니다.  
   
--   `DbStorageLocation` 데이터베이스 속성이 서버 데이터 폴더나 해당 하위 폴더 중 하나를 가리키도록 설정할 수 없습니다. 위치가 서버 데이터 폴더나 해당 하위 폴더 중 하나를 가리키는 경우 `Create`, `Attach` 또는 `Alter` 명령을 실행하면 오류가 발생합니다.  
+-   서버 데이터 폴더나 해당 하위 폴더 중 하나를 가리키도록 `DbStorageLocation` 데이터베이스 속성을 설정할 수 없습니다. 위치가 서버 데이터 폴더나 해당 하위 폴더 중 하나를 가리키는 경우 `Create`, `Attach` 또는 `Alter` 명령을 실행하면 오류가 발생합니다.  
   
 > [!IMPORTANT]  
 >  SAN(저장 영역 네트워크), iSCSI 기반 네트워크 또는 로컬로 연결된 디스크를 사용하도록 UNC 경로를 설정하는 것이 좋습니다. 네트워크 공유나 대기 시간이 긴 원격 저장소 솔루션에 대한 UNC 경로를 사용하면 설치가 지원되지 않습니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "48216543"
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md)   
- [DbStorageLocation 요소](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [요소를 만들 &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach 요소](../xmla/xml-elements-commands/attach-element.md)   
- [Synchronize 요소 &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

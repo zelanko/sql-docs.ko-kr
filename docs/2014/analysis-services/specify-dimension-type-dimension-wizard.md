@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155863"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145588"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>차원 유형 지정(차원 마법사)
   **차원 유형 지정** 페이지를 사용하여 차원 유형을 정의하고 선택한 차원 유형과 관련된 특수 특성 유형을 차원에 추가할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48155863"
  차원에 특성 유형을 포함하려면 선택합니다.  
   
  **특성 유형**  
- **차원 유형**에서 선택한 차원 유형과 관련된 특성 유형을 표시합니다. 특성 유형에 대한 자세한 내용은 [Type 요소&#40;DimensionAttribute&#41;&#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md)를 참조하세요.  
+ **차원 유형**에서 선택한 차원 유형과 관련된 특성 유형을 표시합니다. 특성 유형에 대한 자세한 내용은 [Type 요소&#40;DimensionAttribute&#41;&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)를 참조하세요.  
   
  **차원 특성**  
  차원 마법사에서 **특성 유형**에 표시된 특수 특성 유형을 할당할 차원 특성을 선택합니다.  

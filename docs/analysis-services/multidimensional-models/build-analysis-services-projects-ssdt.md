@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18c906c7dea3b57b2760a7bb5f44e69834906e6a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022997"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147274"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 빌드(SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,12 +50,12 @@ ms.locfileid: "34022997"
 |-----------------------------|-----------------|  
 |\<구성 이름 > \LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 마지막으로 빌드된 시간을 식별하는 타임스탬프 및 해시 코드를 포함합니다.|  
   
- 이러한 XML 파일에 포함 되어 있지 않습니다 \<만들기 > 및 \<Alter > 태그는 배포 중에 생성 됩니다.  
+ 이러한 XML 파일을 포함 하지 않습니다 \<만들기 > 및 \<Alter > 태그가 배포 중에 생성 됩니다.  
   
  참조된 어셈블리(표준 시스템 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 어셈블리 제외)도 출력 디렉터리로 복사됩니다. 솔루션의 다른 프로젝트를 참조하는 경우 적절한 프로젝트 구성과 프로젝트 참조에 의해 설정된 빌드 종속성을 사용하여 해당 프로젝트가 먼저 빌드된 다음 프로젝트 출력 폴더로 복사됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+## <a name="see-also"></a>관련 항목  
+ [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs
+title: 도구 및 접근 방법 처리 (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027320"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147738"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027320"
   
 -   SQL Server 프로파일러를 사용하여 처리 모니터링  
   
--   AMO를 사용하여 사용자 지정 솔루션 프로그래밍. 자세한 내용은 [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)을 참조하세요.  
+-   AMO를 사용하여 사용자 지정 솔루션 프로그래밍. 자세한 내용은 [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)을 참조하세요.  
   
  처리는 다양하게 구성 가능한 작업으로, 개체 수준에서 전체 처리가 발생하는지 증분 처리가 발생하는지 결정하는 일련의 처리 옵션으로 제어됩니다. 처리 옵션 및 개체에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 및 [Analysis Services 개체 처리](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 처리, 테이블 또는 파티션 &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 및 [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)합니다.  
+>  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터베이스, 테이블 또는 파티션 처리 &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 하 고 [데이터를 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34027320"
   
 3.  태스크를 편집하여 데이터베이스에 대한 연결, 처리할 개체 및 처리 옵션을 지정합니다. 이 태스크의 구현 방법은 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

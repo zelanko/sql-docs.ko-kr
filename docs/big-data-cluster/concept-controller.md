@@ -1,18 +1,18 @@
 ---
 title: SQL Server 빅 데이터 클러스터 컨트롤러 란? | Microsoft Docs
-description: ''
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 컨트롤러를 설명 합니다.
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050875"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>SQL Server 빅 데이터 클러스터 컨트롤러 란?
 
@@ -69,4 +69,4 @@ Controller 서비스가 실행 되 면 클러스터 관리자 배포 진행률�
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

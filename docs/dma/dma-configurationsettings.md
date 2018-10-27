@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)에 대 한 설정 구성 | Microsoft Docs
 description: 구성 파일의 값을 업데이트 하 여 Data Migration Assistant에 대 한 설정을 구성 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755581"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643821"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
 Dma.exe.config 파일에서 구성 값을 설정 하 여 Data Migration Assistant의 특정 동작을 미세 조정할 수 있습니다. 이 문서에서는 키 구성 값을 설명 합니다.
 
-Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸리티에 대 한 컴퓨터에서 다음 폴더에 dma.exe.config 파일을 찾을 수 있습니다.
+Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸리티를 컴퓨터에 다음 폴더에 dma.exe.config 파일을 찾을 수 있습니다.
 
 - 데스크톱 응용 프로그램
 
@@ -40,9 +40,9 @@ Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸�
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>병렬로 평가 하는 데이터베이스 수
 
-Data Migration Assistant는 동시에 여러 데이터베이스를 평가합니다. 평가 하는 동안 Data Migration Assistant 추출 데이터 계층 응용 프로그램 (dacpac) 데이터베이스 스키마를 이해 합니다. 이 작업 병렬로 동일한 서버의 여러 데이터베이스를 평가 하는 경우 제한 시간을 수 있습니다. 
+Data Migration Assistant는 동시에 여러 데이터베이스를 평가합니다. 평가 하는 동안 Data Migration Assistant 추출 데이터 계층 응용 프로그램 (dacpac) 데이터베이스 스키마를 이해 합니다. 이 작업 동일한 서버의 여러 데이터베이스 병렬로 평가 되는 경우 시간 초과 될 수 있습니다. 
 
-Data Migration Assistant v2.0부터,이 수 있습니다 제어는 parallelDatabases 구성 값을 설정 하 여 합니다. 기본값은 8입니다.
+Data Migration Assistant v2.0부터이 제어할 수 있습니다는 parallelDatabases 구성 값을 설정 하 여 합니다. 기본값은 8입니다.
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Data Migration Assistant 마이그레이션합니다 동시에 여러 데이터�
 
 - commandTimeout
 
-   IDbCommand.CommandTimeout 속성을 설정 하는이 *초*합니다. (기본값 = 60)
+   이 매개 변수 집합에 IDbCommand.CommandTimeout 속성 *초*합니다. (기본값 = 60)
 
 - databaseLockTimeout
 
-   같습니다 [잠금을 설정\_제한 시간 초과\_기간 ](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
+   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   사용 하도록 SQL 연결 풀 연결 횟수입니다. (기본값 = 8)
+  이 매개 변수를 사용 하도록 SQL 연결 풀 연결 수를 설정 합니다. (기본값 = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 권장 임계값
 

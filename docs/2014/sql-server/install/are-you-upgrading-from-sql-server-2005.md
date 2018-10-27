@@ -11,12 +11,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e211d3c6d787cc57f8f64378bac34659b3a6545c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099664"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
   SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "48133223"
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [SQL Server 2005 지원 종료](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [SQL Server 2005에서에서 SQL Server 2016으로 업그레이드](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [SQL Server 2005에서에서 SQL Server 2016으로 업그레이드](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016090"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145998"
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  ### <a name="powershell-for-tabular-models"></a>테이블 형식 모델에 대한 PowerShell    
  이번 릴리스에서는 호환성 수준 1200의 테이블 형식 모델에 대한 PowerShell 기능이 향상되었습니다. 적용되는 모든 cmdlet과 테이블 형식 모드 관련 cmdlet인 [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 및 [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)을 사용할 수 있습니다.    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 스크립팅 데이터베이스 작업    
- 이제 [최신 SSMS(SQL Server Management Studio)](http://msdn.microsoft.com/library/mt238290.aspx)에서 스크립트는 Create, Alter, Delete, Backup, Restore, Attach, Detach를 비롯한 데이터베이스 명령에 사용됩니다. 출력은 JSON의 TMSL(Tabular Model Scripting Language)입니다. 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)를 참조하세요.    
+ 이제 [최신 SSMS(SQL Server Management Studio)](http://msdn.microsoft.com/library/mt238290.aspx)에서 스크립트는 Create, Alter, Delete, Backup, Restore, Attach, Detach를 비롯한 데이터베이스 명령에 사용됩니다. 출력은 JSON의 TMSL(Tabular Model Scripting Language)입니다. 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)를 참조하세요.    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크    
  이제[Analysis Services 실행 DDL 태스크](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 에서도 TMSL(Tabular Model Scripting Language) 명령을 허용합니다.     
  ### <a name="ssas-powershell-cmdlet"></a>SSAS PowerShell cmdlet    
@@ -103,7 +103,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS에서 TMSL(Tabular Model Scripting Language) 지원    
   [최신 버전의 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)를 사용하여 테이블 형식 1200 모델에 대한 대부분의 관리 태스크를 자동화하는 스크립트를 만들 수 있습니다. 현재 모든 수준의 Process 및 데이터베이스 수준의 CREATE, ALTER, DELETE 작업을 스크립팅할 수 있습니다.    
     
- TMSL이 **model**, **table**, **relationship** 등의 네이티브 설명자를 사용하여 테이블 형식 메타데이터를 설명한다는 점을 제외하고 기능상, TMSL은 다차원 개체 정의를 제공하는 XMLA ASSL 확장에 해당합니다. 스키마에 대한 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)를 참조하세요.    
+ TMSL이 **model**, **table**, **relationship** 등의 네이티브 설명자를 사용하여 테이블 형식 메타데이터를 설명한다는 점을 제외하고 기능상, TMSL은 다차원 개체 정의를 제공하는 XMLA ASSL 확장에 해당합니다. 스키마에 대한 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)를 참조하세요.    
     
  테이블 형식 모델에 대해 생성된 JSON 기반 스크립트가 다음과 같이 표시될 수 있습니다.    
     
@@ -121,7 +121,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 }    
 ```    
 
-페이로드는 위에 표시된 예제처럼 최소화되거나 전체 개체 정의 집합으로 세밀하게 장식될 수 있는 JSON 문서입니다. [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)에서는 구문에 대해 설명합니다.
+페이로드는 위에 표시된 예제처럼 최소화되거나 전체 개체 정의 집합으로 세밀하게 장식될 수 있는 JSON 문서입니다. [TMSL&#40;Tabular Model Scripting Language&#41; 참조](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)에서는 구문에 대해 설명합니다.
 
 데이터베이스 수준에서 CREATE, ALTER 및 DELETE 명령은 TMSL 스크립트를 친숙한 XMLA 창에 출력합니다.  이 릴리스에서는 Process와 같은 기타 명령도 스크립팅할 수 있습니다. 이후 릴리스에서 다른 많은 작업에 대한 스크립트 지원이 추가될 수 있습니다.    
 

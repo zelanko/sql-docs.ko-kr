@@ -14,12 +14,12 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c077da81b20444a71b28a2f604cdb7cc485de123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129474"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147678"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 빌드(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 Visual Studio에서 프로그래밍 개체를 빌드하는 것과 유사한 방식으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드할 수 있습니다. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48129474"
  참조된 어셈블리(표준 시스템 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 어셈블리 제외)도 출력 디렉터리로 복사됩니다. 솔루션의 다른 프로젝트를 참조하는 경우 적절한 프로젝트 구성과 프로젝트 참조에 의해 설정된 빌드 종속성을 사용하여 해당 프로젝트가 먼저 빌드된 다음 프로젝트 출력 폴더로 복사됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 다차원 모델 (Analysis Services)의 번역 | Microsoft Docs
+title: 번역 (Analysis Services) 다차원 모델의 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026680"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147078"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>다차원 모델의 번역(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026680"
   
 4.  임의 필드를 마우스 오른쪽 단추로 클릭하고 **데이터 탐색**을 선택합니다. 각 멤버의 영어, 스페인어, 프랑스어 번역이 표시됩니다.  
   
- 날짜, 시간 및 통화에 대한 형식은 번역을 통해 구현되지 않습니다. 클라이언트의 로캘을 기반으로 문화 관련 형식을 동적으로 제공하려면 통화 변환 마법사와 **FormatString** 속성을 사용합니다. 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 및 [FormatString 요소&#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md)를 참조하세요.  
+ 날짜, 시간 및 통화에 대한 형식은 번역을 통해 구현되지 않습니다. 클라이언트의 로캘을 기반으로 문화 관련 형식을 동적으로 제공하려면 통화 변환 마법사와 **FormatString** 속성을 사용합니다. 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 및 [FormatString 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)를 참조하세요.  
   
  Analysis Services 자습서의[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 에서는 번역 만들기 및 테스트를 위한 절차를 순서대로 안내합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026680"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>차원 및 특성에 번역 추가  
  데이터베이스 차원, 특성, 계층 구조 및 계층 구조 내 수준에 번역을 추가할 수 있습니다.  
@@ -117,8 +117,8 @@ ms.locfileid: "34026680"
   
 -   다른 모든 지정한 언어 식별자의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 지정한 언어 식별자의 주 언어를 추출하고 이 언어에 가장 일치하는 Windows 언어 식별자를 검색합니다. 가장 일치하는 언어 식별자의 번역이 없거나 지정한 언어 식별자가 주 언어에 가장 일치하면 기본 언어가 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services의 세계화 시나리오](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [언어 및 데이터 정렬 &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [언어 및 데이터 정렬&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델에 내용 쿼리 만들기 | Microsoft Docs
+title: 마이닝 모델에 내용 쿼리를 만드는 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019970"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145078"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34019970"
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 모델의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
-5.  줄에서는 마이닝 모델의 이름을 입력 `FROM` [*\<마이닝 모델, 이름, MyModel >*]`.CONTENT`합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
+5.  줄에 마이닝 모델의 이름을 입력 `FROM` [*\<마이닝 모델, 이름, MyModel >*]`.CONTENT`합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
   
      이름을 입력하기가 불편하면 **개체 탐색기** 에서 마이닝 모델을 선택하고 템플릿에 끌어다 놓으면 됩니다.  
   
-6.  줄에 `SELECT` *\<select 목록, expr list \* >*, 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
+6.  줄에서 `SELECT` *\<선택 목록, expr list \* >*, 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
   
-     마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+     마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
   
 7.  필요에 따라 템플릿의 WHERE 절에 조건을 입력하여 특정 노드 또는 값으로 반환되는 행을 제한할 수 있습니다.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019970"
      결과 창에 모델의 콘텐츠가 표시됩니다.  
   
     > [!NOTE]  
-    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS 쿼리를 사용합니다. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)를 참조하십시오.  
+    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS 쿼리를 사용합니다. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+## <a name="see-also"></a>관련 항목  
+ [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

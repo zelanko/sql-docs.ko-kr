@@ -14,12 +14,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1da9ecf9ec7278b91e16a6c91a95aa09473ca023
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100124"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 날짜를 특성 값으로 입력할 수 있게 하려면 날짜 특성을 만듭니다.  
@@ -27,12 +27,12 @@ ms.locfileid: "48083743"
 > [!NOTE]  
 >  이 특성을 DateTime이라고 하지만 시간 값이 지원되지 않습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   해당 특성을 만들 엔터티가 있어야 합니다. 자세한 내용은 [엔터티 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)를 참조하세요.  
   
@@ -87,12 +87,12 @@ ms.locfileid: "48083743"
   
  mdm.tblList 표에 위 값이 있는 행을 입력하면 입력 마스크 목록 상자에서 "dd/MM/yyyy hh:mm:ss tt" 마스크를 사용할 수 있습니다. 그러면 해당 엔터티를 선택하여 MDS 탐색기에서 엔터티의 datetime 특성 열에 날짜 및 시간을 표시할 수 있습니다.  
   
- 입력 마스크는 사용자 지정 .NET DateTime 형식 문자열입니다. 자세한 내용은 [사용자 지정 날짜 및 시간 형식 문자열](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)을 참조하세요.  
+ 입력 마스크는 사용자 지정 .NET DateTime 형식 문자열입니다. 자세한 내용은 [사용자 지정 날짜 및 시간 형식 문자열](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [파일 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

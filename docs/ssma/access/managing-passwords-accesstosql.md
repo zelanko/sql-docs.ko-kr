@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099854"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 (AccessToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -122,5 +122,5 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

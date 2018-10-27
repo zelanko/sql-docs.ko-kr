@@ -1,5 +1,5 @@
 ---
-title: Actions (Analysis Services-다차원 데이터) | Microsoft Docs
+title: Actions (Analysis Services-Multidimensional Data) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020490"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146368"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020490"
   
 -   동작이 발생하는 큐브에서 선택된 섹션과 연관된 동작 요소(URL, HTML, DataSet, RowSet 및 기타 요소)를 반환하는 표준 동작  
   
- ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 동작을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)을 참조하세요.  
+ ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 동작을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)을 참조하세요.  
   
  단순 <xref:Microsoft.AnalysisServices.Action> 개체는 기본 정보, 동작이 발생하는 대상, 동작 범위를 제한하는 조건 및 유형으로 구성되어 있습니다. 기본 정보에는 동작의 이름, 동작에 대한 설명, 동작에 제안된 캡션 등이 포함됩니다.  
   
@@ -53,19 +53,19 @@ ms.locfileid: "34020490"
 |동작 유형|Description|  
 |-----------------|-----------------|  
 |명령줄|명령 프롬프트에서 명령을 실행합니다.|  
-|데이터 집합|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
+|Dataset|데이터 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
 |드릴스루|행 집합을 반환하기 위해 클라이언트가 실행하는 드릴스루 문을 식으로 반환합니다.|  
 |Html|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
 |보고서|매개 변수가 있는 URL 기반 요청을 보고서 서버로 전송하고 보고서를 클라이언트 응용 프로그램으로 반환합니다.|  
 |행 집합|행 집합을 클라이언트 응용 프로그램으로 반환합니다.|  
-|문|OLE DB 명령을 실행합니다.|  
+|인수를 제거합니다.|OLE DB 명령을 실행합니다.|  
 |URL|동적 웹 페이지를 인터넷 브라우저로 표시합니다.|  
   
 ## <a name="resolving-and-executing-actions"></a>동작 확인 및 실행  
  업무용 사용자가 명령 개체가 정의된 개체에 액세스하면 해당 동작과 연관된 문이 자동으로 확인되므로 클라이언트 응용 프로그램에서 해당 문을 사용할 수 있지만 작업이 자동으로 실행되지는 않습니다. 동작을 시작하는 클라이언트별 작업을 업무용 사용자가 수행할 때만 작업이 실행됩니다. 예를 들어 업무용 사용자가 특정 멤버나 셀을 마우스 오른쪽 단추로 클릭하는 경우 클라이언트 응용 프로그램에서 동작 목록을 팝업 메뉴로 표시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 동작](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

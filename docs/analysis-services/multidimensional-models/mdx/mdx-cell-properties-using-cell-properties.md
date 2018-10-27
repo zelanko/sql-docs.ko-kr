@@ -1,5 +1,5 @@
 ---
-title: 셀 속성 사용 (MDX) | Microsoft Docs
+title: Cell Properties (MDX)를 사용 하 여 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023430"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145308"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>셀 속성을 사용 하 여 MDX 셀 속성-
+# <a name="mdx-cell-properties---using-cell-properties"></a>MDX 셀 속성-셀 속성 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  
   
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   마이닝 모델, 간접 또는 데이터 마이닝 차원에서는 업데이트가 지원되지 않으므로 셀을 업데이트할 수 없습니다.|  
 |**VALUE**|형식이 지정되지 않은 셀 값입니다.|  
   
- **CELL_ORDINAL**, **FORMATTED_VALUE**및 **VALUE** 셀 속성만 필수입니다. 모든 셀 속성(기본 또는 공급자별)은 해당 데이터 형식 및 공급자 지원을 포함해 **PROPERTIES** 스키마 행 집합에 정의되어 있습니다. **PROPERTIES** 스키마 행 집합에 대한 자세한 내용은 [MDSCHEMA_PROPERTIES 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)을 참조하세요.  
+ **CELL_ORDINAL**, **FORMATTED_VALUE**및 **VALUE** 셀 속성만 필수입니다. 모든 셀 속성(기본 또는 공급자별)은 해당 데이터 형식 및 공급자 지원을 포함해 **PROPERTIES** 스키마 행 집합에 정의되어 있습니다. **PROPERTIES** 스키마 행 집합에 대한 자세한 내용은 [MDSCHEMA_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)을 참조하세요.  
   
  기본적으로 **CELL PROPERTIES** 키워드가 사용되지 않는 경우 **VALUE**, **FORMATTED_VALUE**및 **CELL_ORDINAL** 셀 속성이 순서대로 반환됩니다. **CELL PROPERTIES** 키워드를 사용하면 키워드로 명시적으로 지정한 셀 속성만 반환됩니다.  
   
@@ -100,7 +100,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

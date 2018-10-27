@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062811"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146238"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* 는 서버 id와 메서드 호출 간에 클라이언트의 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 유지 하지 않는 id와 컨텍스트를 클라이언트의 메서드 호출을 완료 하는 조건입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062811"
   
 -   단일 세션 컨텍스트에서 여러 명령을 실행할 수 있습니다.  
   
--   XMLA 컨텍스트의 트랜잭션은 대 한 지원은 함께 전송 되는 공급자별 명령을 통해 합니다 [Execute](../xmla/xml-elements-methods-execute.md) 메서드.  
+-   XMLA 컨텍스트의 트랜잭션은 대 한 지원은 함께 전송 되는 공급자별 명령을 통해 합니다 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드.  
   
  XMLA에는 느슨하게 연결된 환경에서 잠금을 구현하기 위해 DAV(Distributed Authoring and Versioning) 프로토콜에서 사용하는 방법과 비슷한 모드로 웹 환경에서 세션을 지원하는 방법이 정의되어 있습니다. 이 구현은 공급자가 제한 시간, 연결 오류 등의 여러 가지 이유로 세션을 만료시킬 수 있다는 점에서 DAV와 같습니다. 세션이 지원되는 경우 웹 서비스는 다시 시작해야 하는 중단된 명령 집합을 인식하고 처리할 수 있어야 합니다.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6a4ad929c866658ce241f33ddd2a5326dc78e19
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099336"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34039788"
   
  시간 인텔리전스 함수를 사용할 때는 다음 규칙이 적용 됩니다.  
   
--   DAX 시간 인텔리전스 함수를 사용할 때는 팩트 테이블에서 datetime 열을 지정 하지 않습니다. 항상 날짜 데이터 형식의 datetime 열 하나 이상과 고유 값이 포함된 별도의 날짜 테이블을 모델에 만드십시오.  
+-   DAX 시간 인텔리전스 함수를 사용할 때는 팩트 테이블에서 날짜/시간 열을 지정 하지 않습니다. 항상 날짜 데이터 형식의 datetime 열 하나 이상과 고유 값이 포함된 별도의 날짜 테이블을 모델에 만드십시오.  
   
 -   날짜 테이블에 연속 날짜 범위가 있는지 확인하십시오.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "34039788"
   
 2.  **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
   
-3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 예를 들어:  
+3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
-    |날짜|  
+    |Date|  
     |----------|  
     |2010/7/1 오전 12:00:00|  
     |2010/7/2 오전 12:00:00|  
@@ -50,8 +50,8 @@ ms.locfileid: "34039788"
   
 4.  필요한 경우 팩트 테이블과 날짜 테이블 간에 관계를 만듭니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계산](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [시간 인텔리전스 함수 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [시간 인텔리전스 함수 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

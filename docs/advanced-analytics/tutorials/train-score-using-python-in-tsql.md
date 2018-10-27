@@ -1,28 +1,43 @@
 ---
-title: Python 모델을 학습 및 예측에 대 한 SQL Server에서 사용 | Microsoft Docs
-description: 만들고 클래식 아이리스 데이터 집합 및 Python을 사용 하 여 모델을 학습 합니다. SQL server에 모델을 저장 하 고를 사용 하 여 예측된 결과 생성 합니다.
+title: 학습 및 저장된 프로시저를 사용 하 여 예측에 대 한 SQL Server의 Python 모델 | Microsoft Docs
+description: 만들기, 학습 및 클래식 붓 꽃 데이터 집합을 사용 하 여 Python 모델을 사용 하려면 SQL Server 저장 프로시저에서 Python 코드를 포함 합니다. SQL server에 학습된 된 모델을 저장 하 고를 사용 하 여 예측된 결과 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/18/2018
+ms.date: 10/23/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099874"
 ---
-# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>Python 모델을 학습 및 점수 매기기에 대 한 SQL Server에서 사용
+# <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 Python 연습 만들기, 교육 및 모델을 사용 하 여 SQL server에서에 대 한 일반적인 패턴에 알아봅니다. 이 연습에서는 두 개의 저장된 프로시저를 만듭니다. 첫 번째 꽃 특징을 기반으로 아이리스 종류를 예측 하는 것은 순진한 Bayes 모델을 생성 합니다. 두 번째 절차는 점수 매기기입니다. 예측 집합을 출력 하는 첫 번째 절차에서 생성 된 모델을 호출 합니다. 이 연습을 단계별로 실행 하 여 기본 SQL Server 데이터베이스 엔진 인스턴스에서 실행 중인 Python 코드에는 기본적인 기술을 배웁니다.
+이 연습에서는 추가 하면 SQL Server를 사용 하 여 Python 통합을 보여 줍니다 합니다 [Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md) 데이터베이스 엔진 인스턴스에 대 한 기능입니다. 이러한 상황에서 내에서 Python 코드를 래핑할 수 있습니다는 [저장 프로시저](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) 프로덕션 워크 로드에 대 한 스크립트를 운영 합니다. 저장된 프로시저에서 코드를 포함 하는 기능에는 디자인, 테스트 및 데이터 과학 및 machine learning 작업을 관리 하는 방법에 실질적인 이점이 있습니다. 사용자는 스크립트 및 모델 SQL Server에 연결할 수 있는 모든 응용 프로그램에 액세스할 수 있습니다.
 
-이 연습에서 사용 하는 샘플 데이터를 [Iris 데이터 집합](demo-data-iris-in-sql.md) 에 **irissql** 데이터베이스입니다.
+이 Python 연습에서는 만들고 두 개의 저장된 프로시저를 실행 합니다. 첫 번째 클래식 아이리스 꽃 데이터 집합을 사용 하 고 꽃 특징을 기반으로 아이리스 종류를 예측 하는 것은 순진한 Bayes 모델을 생성 합니다. 두 번째 절차는 점수 매기기입니다. 예측 집합을 출력 하는 첫 번째 절차에서 생성 된 모델을 호출 합니다. 저장된 프로시저에서 코드를 배치 하 여 작업은 포함 된, 재사용 가능한 및 호출 가능 다른 저장된 프로시저 및 클라이언트 응용 프로그램입니다. 
 
-## <a name="create-a-model-using-a-sproc"></a>저장 프로시저를 사용 하 여 모델 만들기
+이 자습서를 완료 하 여 배웁니다.
+
+> [!div class="checklist"]
+> * 저장된 프로시저에서 Python 코드를 포함 하는 방법
+> * 저장된 프로시저에 입력을 통해 코드에 대 한 입력을 전달 하는 방법
+> * 모델을 운영할 저장된 프로시저를 사용 하는 방법
+
+## <a name="prerequisites"></a>필수 구성 요소
+
+이 연습에서 사용 하는 샘플 데이터를 [ **irissql** ](demo-data-iris-in-sql.md) 데이터베이스입니다.
+
+또한 T-SQL 편집기를 같은 필요 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)합니다.
+
+## <a name="create-a-stored-procedure-that-generates-models"></a>모델을 생성 하는 저장된 프로시저 만들기
+
+SQL Server 개발에서 일반적인 패턴으로 고유한 저장된 프로시저 프로그래밍 작업을 구성 하는 것입니다. 이 단계에서는 결과 예측에 대 한 모델을 생성 하는 저장된 프로시저를 만들게 됩니다. 
 
 1. 에 열린 Management studio에서 새 쿼리 창이 연결 된 **irissql** 데이터베이스. 
 
@@ -31,9 +46,15 @@ ms.locfileid: "49461839"
     GO
     ```
 
-2. 빌드 및 모델을 학습 하는 저장된 프로시저를 만들려면 새 쿼리 창에서 다음 코드를 실행 합니다. SQL Server에서 다시 사용할 수 있도록 저장 된 모델을 바이트 스트림으로 직렬화 되 고 데이터베이스 테이블에 varbinary (max) 열에 저장 합니다. 모델을 만든 후 학습, 직렬화 되 고 데이터베이스에 저장 된 호출 될 수 나 워크 로드를 평가 시 예측 T-SQL 함수에 다른 프로시저에서.
+2. 새 저장된 프로시저를 만드는 다음 코드를 복사 합니다. 
 
-   이 코드는 scikit 원시 Bayes 알고리즘을 제공 하 고 모델을 serialize 할 pickle을 사용 합니다. 모델에서 열의 0부터 4 까지의 데이터를에서 사용 하 여 학습 됩니다 합니다 **iris_data** 테이블입니다. 프로시저의 두 번째 부분에 표시 하는 매개 변수를 데이터 입력을 명확히 하 고 모델 출력 합니다. 
+   를 실행 하는 경우이 프로시저 호출 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) Python 세션을 시작 합니다. 
+   
+   Python 코드에 필요한 입력이 저장된 프로시저에 입력된 매개 변수로 전달 됩니다. 출력은 Python을 기반으로 학습된 된 모델을 됩니다 **scikit-알아봅니다** 기계 학습 알고리즘에 대 한 라이브러리입니다. 
+
+   이 코드를 사용 [ **pickle** ](https://docs.python.org/2/library/pickle.html) 모델을 serialize 합니다. 모델에서 열의 0부터 4 까지의 데이터를에서 사용 하 여 학습 됩니다 합니다 **iris_data** 테이블입니다. 
+   
+   프로시저의 두 번째 부분에 표시 하는 매개 변수를 데이터 입력을 명확히 하 고 모델 출력 합니다. 가능한 만큼 입력 명확 하 게 정의 하는 저장된 프로시저에서 실행 되는 Python 코드 한 저장된 프로시저 입력 및 출력 런타임에 전달에 매핑되는 출력 합니다. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -54,13 +75,17 @@ ms.locfileid: "49461839"
     GO
     ```
 
-3. 저장된 프로시저가 있는지 확인 합니다. 이전 단계에서 T-SQL 스크립트가 오류 없이 실행 하는 경우 새 저장 프로시저 호출 **generate_iris_model** 만들어지고에 추가 합니다 **irissql** 데이터베이스입니다. Management Studio에서 저장된 프로시저를 찾을 수 있습니다 **개체 탐색기**아래에 있는 **프로그래밍**합니다.
+3. 저장된 프로시저가 있는지 확인 합니다. 
 
-## <a name="execute-the-sproc-to-create-and-train-models"></a>모델을 학습 하는 저장 프로시저를 실행 합니다.
+   이전 단계에서 T-SQL 스크립트가 오류 없이 실행 하는 경우 새 저장 프로시저 호출 **generate_iris_model** 만들어지고에 추가 합니다 **irissql** 데이터베이스입니다. Management Studio에서 저장된 프로시저를 찾을 수 있습니다 **개체 탐색기**아래에 있는 **프로그래밍**합니다.
 
-1. 저장된 프로시저를 만든 후에 실행 하려면 아래 다음 코드를 실행 합니다. 저장된 프로시저를 실행 하는 것에 대 한 특정 문이 `EXEC` 다섯 번째 줄에 있습니다.
+## <a name="execute-the-procedure-to-create-and-train-models"></a>만들고 모델을 학습 하는 절차를 실행 합니다.
 
-   이 스크립트는 동일한 이름 ("Naive Bayes") 확보 하기 위해 새로 만든 동일한 절차를 다시 실행 하 여 기존 모델을 삭제 합니다. 모델 삭제 하지 않고 오류 개체가 이미 있다는 발생 합니다. 
+이 단계에서 출력으로 학습 하 고 직렬화 된 모델을 만드는 포함된 된 코드를 실행 하는 절차를 실행 합니다. SQL Server에서 다시 사용할 수 있도록 저장 된 모델을 바이트 스트림으로 직렬화 되 고 데이터베이스 테이블에 varbinary (max) 열에 저장 합니다. 모델 생성, 학습, serialize 되어 데이터베이스에 저장, 되 면 호출 될 수 또는 다른 프로시저에서 합니다 [예측 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 워크 로드를 평가 시 함수입니다.
+
+1. 프로시저를 실행한 다음 코드를 복사 합니다. 저장된 프로시저를 실행 하는 것에 대 한 특정 문이 `EXEC` 다섯 번째 줄에 있습니다.
+
+   이 스크립트는 동일한 이름 ("Naive Bayes") 확보 하기 위해 새로 만든 동일한 절차를 다시 실행 하 여 기존 모델을 삭제 합니다. 모델 삭제 하지 않고 오류 개체가 이미 있다는 발생 합니다. 모델 이라고 하는 테이블에 저장 됩니다 **iris_models**를 만들 때 프로 비전 합니다 **irissql** 데이터베이스입니다.
 
     ```sql
     DECLARE @model varbinary(max);
@@ -82,7 +107,7 @@ ms.locfileid: "49461839"
     | 1 | Naive Bayes     | 
 
 
-## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>만들기 및 예측을 생성 하는 것에 대 한 저장 된 프로시저를 실행 합니다.
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>만들기 및 예측을 생성 하는 것에 대 한 저장된 프로시저를 실행 합니다.
 
 만들어, 학습 한 모델을 저장, 했으므로 다음 단계로 이동 합니다: 예측을 생성 하는 저장된 프로시저를 만들고 있습니다. Python을 시작 하 고 마지막 연습에서 생성 하 고 그런 다음이 점수를 매길 데이터 입력을 제공 하는 직렬화 된 모델을 로드 하는 Python 스크립트에 전달 하려면 sp_execute_external_script를 호출 하 여이 작업을 합니다.
 
@@ -128,13 +153,14 @@ ms.locfileid: "49461839"
 
 ## <a name="conclusion"></a>결론
 
-이 연습에서는 다른 작업을 각 저장된 프로시저는 시스템 저장 프로시저를 사용 하는 위치에 대 한 저장된 프로시저를 만드는 방법을 배웠습니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python 프로세스를 시작 합니다. Python 프로세스에 대 한 입력 매개 변수로 sp_execute_external 스크립트에 전달 됩니다. Python 스크립트 자체 및 SQL Server 데이터베이스에서 데이터 변수를 모두 입력으로 전달 됩니다.
+이 연습에서는 다른 작업을 각 저장된 프로시저는 시스템 저장 프로시저를 사용 하는 위치에 저장된 프로시저를 만드는 방법을 배웠습니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python 프로세스를 시작 합니다. Python 프로세스에 대 한 입력 매개 변수로 sp_execute_external 스크립트에 전달 됩니다. Python 스크립트 자체 및 SQL Server 데이터베이스에서 데이터 변수를 모두 입력으로 전달 됩니다.
 
-Python에서 작업에 사용 하는 경우 데이터를 로드, 일부 요약 및 그래프를 만드는 다음 모델 학습 및 코드 250 동일한 줄에 모두 몇 가지 점수를 생성에 익숙한 수 있습니다. 이 문서에서는 작업의 경우 별도 절차가을 구성 하 여 일반적인 접근 방식에서 다릅니다. 이 방법은 여러 수준에서 유용합니다.
+다양 한 작업을 처리 하는 일체 스크립트를 작성 하는 데 사용 되는 몇 가지 Python 개발자를 위한 구성 작업의 경우 별도 절차가에 울 수 있지만 불필요 한 합니다. 하지만 학습 및 점수 매기기는 다양 한 사용 사례가 있습니다. 구분 하 여 다른 일정 및 작업에 사용 권한 범위에서 각 작업을 넣을 수 있습니다.
 
-이점 중 하나는 매개 변수를 사용 하 여 수정할 수 있는 반복 가능한 단계로 프로세스를 분리할 수 있습니다. 가능한 만큼 명확 하 게 입력 및 출력 저장된 프로시저 입력에 매핑되는 런타임에 전달 될 수 있는 출력을 정의 하는 저장된 프로시저에서 실행 되는 Python 코드를 원하는 합니다. 이 연습에서는 (이 예제의 "Naive Bayes" 명명 된) 모델을 만드는 Python 코드는 점수 매기기 프로세스에서 모델을 호출 하는 두 번째 저장된 프로시저에 대 한 입력으로 전달 됩니다.
+마찬가지로, 리소스 거 버 넌 스, 병렬 처리와 같은 또는 알고리즘을 사용 하 여 스크립트를 작성 하 여 SQL Server의 리소스 기능도 활용할 수 있습니다 [revoscalepy](../python/what-is-revoscalepy.md) 하거나 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 는 스트리밍 및 병렬 실행을 지원 합니다. 학습 및 점수 매기기를 분리 하 여 특정 워크 로드에 대 한 최적화 대상으로 지정할 수 있습니다.
 
-두 번째 장점은 하 여 학습 하 고, 리소스 거 버 넌 스, 병렬 처리와 같은 SQL Server의 기능을 활용 하 여 또는 알고리즘을 사용 하 여 프로세스를 점수 매기기을 최적화할 수 있습니다 [revoscalepy](../python/what-is-revoscalepy.md) 또는 [MicrosoftML ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 스트리밍을 지원 하 고 병렬 실행 합니다. 학습 및 점수 매기기를 분리 하 여 특정 워크 로드에 대 한 최적화 대상으로 지정할 수 있습니다.
+최종 혜택은 프로세스 매개 변수를 사용 하 여 수정할 수 있도록 합니다. 이 연습에서는 (이 예제의 "Naive Bayes" 이라는) 모델을 생성 하는 Python 코드는 점수 매기기 프로세스에서 모델을 호출 하는 두 번째 저장된 프로시저에 대 한 입력으로 전달 되었습니다. 이 연습에서는 하나의 모델을 사용 하지만 어떻게 모델 점수 매기기 작업에서 매개 변수화 없게 스크립트 유용한 상상할 수 있습니다.
+
 
 ## <a name="next-steps"></a>다음 단계
 

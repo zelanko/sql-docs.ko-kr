@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025370"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145918"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025370"
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
   
- 원본 및 대상 서버는 동일한 버전 및 서비스 팩이 설치 해야 합니다. 모델 메타 데이터 동기화도 되어 있으므로 빌드 호환성을 보장 하려면 두 서버 모두에 대 한 번호 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 참조 [버전 및 SQL Server 2016에 대 한 지원 되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)합니다.  
+ 원본 및 대상 서버는 동일한 버전 및 서비스 팩 이어야 합니다. 모델 메타 데이터 동기화도 되어 있으므로 빌드 호환성을 위해 두 서버 모두에 대 한 번호 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 참조 하세요. [버전 및 SQL Server 2016에 대 한 지원 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)합니다.  
   
  서버 배포 모드는 각 서버에서 동일해야 합니다. 동기화할 데이터베이스가 다차원인 경우 원본 서버와 대상 서버가 다차원 서버 모드에 대해 구성되어야 합니다. 배포 모드에 대한 자세한 내용은 [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하십시오.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "34025370"
 ## <a name="next-steps"></a>다음 단계  
  역할 또는 멤버 자격을 동기화하지 않은 경우 지금 대상 데이터베이스에 대한 사용자 액세스 권한을 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Synchronize 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [XMLA를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [배포 마법사를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+## <a name="see-also"></a>관련 항목  
+ [Synchronize 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

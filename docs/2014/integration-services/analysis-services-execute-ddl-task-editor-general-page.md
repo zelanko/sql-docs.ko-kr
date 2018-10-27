@@ -15,12 +15,12 @@ ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362839a835436f68bf22158228f18f1b3c291abb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 272240e73be28bcfe29b21b86d4d7b4e59d99f46
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146733"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148308"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services DDL 실행 태스크 편집기(일반 페이지)
   **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 실행 태스크를 명명 및 설명할 수 있습니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "48146733"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services DDL 실행 태스크 편집기 &#40;DDL 페이지&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Analysis Services DDL 실행 태스크 편집기&#40;DDL 페이지&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [식 페이지](expressions/expressions-page.md)   
  [제어 흐름](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis &#40;XMLA&#41; 참조](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

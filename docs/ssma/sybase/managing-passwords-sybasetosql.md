@@ -14,12 +14,12 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44d322b0be32c362aba34b243a643bbe7bcd10fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a05a0eee4dc8f36b74ca707a6dc18e57389280
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099214"
 ---
 # <a name="managing-passwords-sybasetosql"></a>암호 관리(SybaseToSQL)
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -132,5 +132,5 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (Sybase) 실행](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[SSMA 콘솔 (Sybase) 실행](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

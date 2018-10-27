@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143803"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146753"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 XMLA 스크립트, DMX 또는 MDX 쿼리를 빠르게 만들고, 큐브 또는 테이블 형식 모델에 KPI를 만들고, 백업 및 복원 작업을 스크립팅하고, 기타 여러 태스크를 수행하는 데 사용할 수 있는 다양한 템플릿을 제공합니다. 템플릿은 **의** 템플릿 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 있습니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "48143803"
 5.  내의 텍스트를 두 번 클릭 합니다 \<파일 > 요소입니다. .abf 파일 확장명을 포함하여 백업 파일의 이름을 입력합니다. 기본 백업 위치를 사용하지 않는 경우 전체 파일 경로를 지정합니다. 자세한 내용은 [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)를 참조하세요.  
   
 ##  <a name="bkmk_schemarowset"></a> XMLA 템플릿을 사용하여 스키마 행 집합 쿼리 생성  
- **템플릿 탐색기** 에는 스키마 행 집합 쿼리용 템플릿이 하나만 있습니다. 이 템플릿을 사용하려면 필수 요소, 제한으로 사용할 수 있는 열 등 사용하고자 하는 개별 스키마 행 집합의 요구 사항에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Analysis Services 스키마 행 집합](../schema-rowsets/analysis-services-schema-rowsets.md)을 참조하세요.  
+ **템플릿 탐색기** 에는 스키마 행 집합 쿼리용 템플릿이 하나만 있습니다. 이 템플릿을 사용하려면 필수 요소, 제한으로 사용할 수 있는 열 등 사용하고자 하는 개별 스키마 행 집합의 요구 사항에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)을 참조하세요.  
   
  대부분의 스키마 행 집합은 간단한 표현을 위해 DMV(동적 관리 뷰)로도 표시된다는 점에 유의하십시오. 해당 DMV를 사용하면 Transact-SQL 구문과 비슷한 구문을 사용하여 스키마 행 집합을 쿼리할 수 있습니다. 예를 들어 다음 쿼리는 동일한 결과를 하나는 XML 형식으로, 다른 하나는 테이블 형식으로 반환합니다. DMV에 대한 자세한 내용은 [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)을 참조하세요.  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **템플릿 탐색기**를 열고 **스키마 행 집합 검색**템플릿을 비어 있는 쿼리 창으로 끌어옵니다.  
   
-3.  템플릿에서 대체 합니다 [RequestType 요소 &#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) 요소를 다음 텍스트로: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  템플릿에서 대체 합니다 [RequestType 요소 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) 요소를 다음 텍스트로: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **실행**을 클릭합니다.  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Nested Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다  *\<모델 >* 예측 쿼리에서 열에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 NATURAL PREDICTION JOIN 절 와 이름이 같은 마이닝 모델의 열 이름과 일치 하는 마이닝 모델의 중첩 열 UNION 문을 사용 하 여 만든 중첩된 테이블의 값 집합 포함 되어 있습니다.|  
 ||Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다 \<모델 > NATURAL PREDICTION JOIN 문을 예측 쿼리에서 열에 일치 하는 열에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 마이닝 모델입니다.|  
 ||Stored Procedure Call|DMX CALL 문을 사용하여 저장 프로시저를 호출하는 방법을 보여 줍니다.|  
-|MDX\Expressions|Moving Average-Fixed|MDX를 사용 하는 방법을 보여 줍니다 `ParallelPeriod` 고 `CurrentMember` 고정된 된 수의 시간 차원에서 계층에 포함 된 기간 동안의 측정값 이동 평균을 제공 하는 계산된 측정값을 만드는 일반적인 순서로 정렬 된 집합을 사용 하는 함수입니다.|  
-||Moving Average-Variable|MDX를 사용 하는 방법을 보여 줍니다 `CASE` 내에 있는 문의 `Avg` 다양 한 시간 차원의 계층에에서 포함 된 기간 동안의 측정값 이동 평균을 제공 하는 계산된 측정값을 만드는 함수입니다.|  
+|MDX\Expressions|Moving Average-Fixed|일반적인 순서로 정렬된 집합과 함께 MDX `ParallelPeriod` 및 `CurrentMember` 함수를 사용하여 시간 차원의 계층에 포함된 고정 기간 동안의 측정값 이동 평균을 제공하는 계산 측정값을 만드는 방법을 보여 줍니다.|  
+||Moving Average-Variable|`CASE` 함수 내에서 MDX `Avg` 문을 사용하여 시간 차원의 계층에 포함된 가변 기간 동안의 측정값 이동 평균을 제공하는 계산 측정값을 만드는 방법을 보여 줍니다.|  
 ||Periods to Date|계산 멤버에서 MDX `PeriodsToDate` 함수를 사용하는 방법을 보여 줍니다.|  
-||Ratio to Parent|MDX를 사용 하는 방법을 보여 줍니다 `Parent` 지정한 계층에서 부모 멤버의 각 자식에 대 한 측정값의 비율을 나타내는 계산된 측정값을 만드는 함수입니다.|  
+||Ratio to Parent|MDX `Parent` 함수를 사용하여 지정한 계층에 있는 부모 멤버의 각 자식에 대한 측정값의 비율을 나타내는 계산 측정값을 만드는 방법을 보여 줍니다.|  
 ||Ratio to Total|All 멤버를 사용하여 지정한 계층에 있는 각 멤버에 대한 측정값의 비율을 나타내는 계산 측정값을 만드는 방법을 보여 줍니다.|  
 |MDX\Queries|기본 쿼리|MDX 쿼리 생성에 사용할 수 있는 기본 MDX SELECT 문을 보여 줍니다.|  
-||KPI Query|MDX를 사용 하는 방법을 보여 줍니다 `KPIValue` 및 `KPIGoal` 함수를 MDX 쿼리에서 핵심 성과 지표 (KPI) 정보를 검색 합니다.|  
+||KPI Query|MDX `KPIValue` 및 `KPIGoal` 함수를 사용하여 MDX 쿼리에서 KPI(핵심 성과 지표) 정보를 검색하는 방법을 보여 줍니다.|  
 ||Sub-select Query|다른 SELECT 문으로 정의한 하위 큐브에서 정보를 검색하는 MDX SELECT 문을 만드는 방법을 보여 줍니다.|  
 ||With Calculated Member|SELECT 문에 MDX WITH 절을 사용하여 MDX 쿼리에 대한 계산 멤버를 정의하는 방법을 보여 줍니다.|  
 ||With Named Set|SELECT 문에 MDX WITH 절을 사용하여 MDX 쿼리에 대한 명명된 집합을 정의하는 방법을 보여 줍니다.|  
-|XMLA\Management|백업|XMLA를 사용 하는 방법을 보여 줍니다 `Backup` 명령을 백업 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 파일에 있습니다.|  
-||취소|XMLA를 사용 하는 방법을 보여 줍니다 `Cancel` 명령을 (관리자 또는 서버 관리자 이외의 사용자 인 경우)에 대 한 현재 세션에서 실행 중인 모든 작업 취소, 데이터베이스 (관리자 인 경우) 또는 인스턴스 (서버 관리자 용입니다.)|  
+|XMLA\Management|백업|XMLA `Backup` 명령을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 파일에 백업하는 방법을 보여 줍니다.|  
+||취소|XMLA `Cancel` 명령을 사용하여 현재 세션(관리자 또는 서버 관리자 이외의 사용자인 경우), 데이터베이스(관리자인 경우) 또는 인스턴스(서버 관리자인 경우)에서 실행 중인 작업을 모두 취소하는 방법을 보여 줍니다.|  
 ||Create Remote Partition Database|ASSL([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 데이터베이스 요소와 함께 XMLA `Create` 명령을 사용하여 원격 파티션 저장을 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 원본을 만드는 방법을 보여 줍니다.|  
-||DELETE|XMLA를 사용 하는 방법을 보여 줍니다 `Delete` 기존 삭제 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다.|  
+||DELETE|XMLA `Delete` 명령을 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 삭제하는 방법을 보여 줍니다.|  
 ||Process Dimension|XMLA `Batch` 명령을 `Parallel` 요소 및 `Process` 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 차원 특성을 업데이트하는 방법을 보여 줍니다.|  
-||Process Partition|XMLA를 사용 하는 방법을 보여 줍니다 `Batch` 명령과 결합 하 고는 `Parallel` 요소 및 `Process` 명령을 병렬 일괄 처리 작업을 사용 하 여 파티션을 완전히 처리 합니다.|  
-||복원|XMLA를 사용 하는 방법을 보여 줍니다 `Restore` 복원 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기존 백업 파일에서 데이터베이스입니다.|  
-||동기화|XMLA를 사용 하는 방법을 보여 줍니다 `Synchronize` 다른 동기화 하는 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SkipMembership 옵션을 사용 하 여 SynchronizeSecurity 태그에 대 한 데이터베이스입니다.|  
+||Process Partition|XMLA `Batch` 명령을 `Parallel` 요소 및 `Process` 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 파티션을 완전히 처리하는 방법을 보여 줍니다.|  
+||복원|XMLA `Restore` 명령을 사용하여 기존 백업 파일에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원하는 방법을 보여 줍니다.|  
+||동기화|XMLA `Synchronize` 명령을 사용하여 SynchronizeSecurity 태그에 대한 SkipMembership 옵션으로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 동기화하는 방법을 보여 줍니다.|  
 |XMLA\Schema Rowsets|스키마 행 집합 검색|XMLA `Discover` 메서드를 사용하여 DISCOVER_SCHEMA_ROWSETS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-|XMLA\Server Status|Connections|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
-||에서|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
-||위치|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` 위치 백업 파일의 경로 지정 하며 DISCOVER_LOCATIONS 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
+|XMLA\Server Status|Connections|XMLA `Discover` 메서드를 사용하여 DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||에서|XMLA `Discover` 메서드를 사용하여 DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||위치|XMLA `Discover` 메서드를 사용하여 위치 백업 파일의 경로를 지정하며 DISCOVER_LOCATIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||잠금|XMLA `Discover` 메서드를 사용하여 DISCOVER_LOCKS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||Memory Grant|XMLA `Discover` 메서드를 사용하여 DISCOVER_MEMORYGRANT 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||성능 카운터|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` DISCOVER_PERFORMANCE_COUNTERS 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
+||성능 카운터|XMLA `Discover` 메서드를 사용하여 DISCOVER_PERFORMANCE_COUNTERS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||세션|XMLA `Discover` 메서드를 사용하여 DISCOVER_SESSIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||Traces|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
-||트랜잭션|XMLA를 사용 하는 방법을 보여 줍니다 `Discover` DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색 하는 방법입니다.|  
+||Traces|XMLA `Discover` 메서드를 사용하여 DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||트랜잭션|XMLA `Discover` 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Multidimensional Expression &#40;MDX&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

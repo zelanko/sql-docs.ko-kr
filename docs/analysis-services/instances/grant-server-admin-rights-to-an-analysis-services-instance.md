@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36760098"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145678"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Analysis Services 인스턴스에 서버 관리 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "36760098"
   
  기본적으로 로컬 관리자 그룹의 멤버는 Analysis Server에서 관리 권한도 부여 받습니다. 로컬 그룹은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할의 멤버 자격을 명시적으로 부여 받지는 않지만 로컬 관리자는 데이터베이스를 만들고 사용자 및 사용 권한을 추가하고 시스템 관리자에게 허용된 기타 모든 작업을 수행할 수 있습니다. 관리자 권한의 암시적 부여는 구성이 가능하고, **BuiltinAdminsAreServerAdmins** 서버 속성에 의해 결정되며 기본적으로 **true** 로 설정되어 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 속성을 변경할 수 있습니다. 자세한 내용은 [Security Properties](../../analysis-services/server-properties/security-properties.md)을 참조하세요.  
   
- 설치 후에는 역할 멤버 자격을 수정하여 서비스에 대한 모든 권한이 필요한 사용자를 더 추가할 수 있습니다. AMO(Analysis Management Objects)를 사용하여 서버 역할을 관리할 수도 있습니다. 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
+ 설치 후에는 역할 멤버 자격을 수정하여 서비스에 대한 모든 권한이 필요한 사용자를 더 추가할 수 있습니다. AMO(Analysis Management Objects)를 사용하여 서버 역할을 관리할 수도 있습니다. 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 및 서버, 데이터베이스 및 개체 수준에서 쿼리를 점점 더 세분화 된 역할의 진행을 제공 합니다. 이러한 역할을 사용하는 방법에 대한 자세한 내용은 [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)을 참조하세요.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 서버, 데이터베이스 및 개체 수준에서 처리하고 쿼리할 수 있는 상세 역할로 점차적으로 이동하는 기능을 제공합니다. 이러한 역할을 사용하는 방법에 대한 자세한 내용은 [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)을 참조하세요.  
   
 ## <a name="modify-server-role-membership"></a>서버 역할 멤버 자격 수정  
   

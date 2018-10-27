@@ -15,15 +15,15 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178203"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147878"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
-  경우가 때를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자 (dba)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경 하려고 합니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경해야 하는 경우가 종종 있습니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
   
  데이터베이스 모드는 여러 가지 방법으로 전환할 수 있습니다. 이 문서에서는 다음과 같은 일반적인 시나리오에 대해 설명합니다.  
   
@@ -172,10 +172,10 @@ ms.locfileid: "48178203"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [데이터베이스 저장소 위치](database-storage-location.md)   
- [Readwritemode 데이터베이스](database-readwritemodes.md)   
- [Attach 요소](../xmla/xml-elements-commands/attach-element.md)   
- [Detach 요소](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 요소](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 요소](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [ReadWriteMode 데이터베이스](database-readwritemodes.md)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

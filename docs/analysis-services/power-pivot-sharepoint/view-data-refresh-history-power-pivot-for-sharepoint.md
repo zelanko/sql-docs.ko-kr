@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099684"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34028654"
   
  [기록 정보 사용](#pageelements)  
   
-##  <a name="prereq"></a> 필수 구성 요소  
+##  <a name="prereq"></a> 사전 요구 사항  
  데이터 새로 고침 기록을 보려면 참가 권한 이상의 권한이 있어야 합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서에서 데이터 새로 고침을 사용하도록 설정하고 예약해야 합니다. 데이터 새로 고침을 예약하지 않은 경우 기록 정보 대신 예약 정의 페이지가 표시됩니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "34028654"
 |Time|데이터 새로 고침이 시작된 시간부터 완료된 시간까지의 누적 시간을 제공합니다.|  
 |상태|새로 고침 작업이 성공 또는 실패했는지를 나타내는 기록 레코드를 제공합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [일정 데이터 새로 고침 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [데이터 새로 고침 예약(SharePoint용 Power Pivot)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot 데이터 새로 고침](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

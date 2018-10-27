@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99072a36fe65679dbf81aa0ba3f4efdb3b487533
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014350"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144778"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services 서버에서 사용자와 세션 연결 끊기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "34014350"
   
  아주 드물게는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 연결과 관련된 모든 세션 및 SPID를 추적할 수 없는 경우(예: HTTP 시나리오에서 여러 개의 세션이 열려 있는 경우) 이 연결을 닫지 않습니다.  
   
- 이 항목에서 참조하는 XMLA에 대한 자세한 내용은 [Execute 메서드&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) 및 [Cancel 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)를 참조하세요.  
+ 이 항목에서 참조하는 XMLA에 대한 자세한 내용은 [Execute 메서드&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 및 [Cancel 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [관리 연결 및 세션 & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+## <a name="see-also"></a>관련 항목  
+ [연결 및 세션 관리&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [BeginSession 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [EndSession 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Session 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

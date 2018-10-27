@@ -11,17 +11,17 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173103"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146068"
 ---
 # <a name="remote-processing-analysis-services"></a>원격 처리(Analysis Services)
   원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대해 예약된 처리 또는 무인 모드 처리를 실행할 수 있습니다. 여기서 처리 요청은 한 컴퓨터에서 시작되지만 동일한 네트워크상의 다른 컴퓨터에서 실행됩니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   각 컴퓨터에서 서로 다른 버전의 SQL Server를 실행하는 경우 클라이언트 라이브러리는 모델을 처리하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 버전과 일치해야 합니다. 예를 들어 처리가 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 수행되는 경우 요청이 시작되는 컴퓨터에는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에 해당하는 클라이언트 라이브러리가 있어야 합니다. [Analysis Services 연결에 사용되는 데이터 공급자](../instances/data-providers-used-for-analysis-services-connections.md)를 참조하세요.  
   
@@ -92,10 +92,10 @@ ms.locfileid: "48173103"
 2.  마지막 단계로, 정의하는 일정으로 실행되도록 작업을 수정하고 작업을 관리하는 데 필요한 경고 또는 알림을 추가합니다. 또한 처리 스크립트를 구체화하거나 개체를 독립적으로 처리하기 위해 작업에 여러 단계를 만들 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트 구성 요소](../../ssms/agent/sql-server-agent.md#Components)   
- [SQL Server 에이전트를 사용 하 여 SSAS 관리 태스크 예약](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [일괄 처리 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)   
- [개체 처리 &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [개체 처리&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

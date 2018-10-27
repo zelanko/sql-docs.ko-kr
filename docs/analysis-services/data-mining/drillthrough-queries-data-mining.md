@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018300"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148018"
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34018300"
 ##  <a name="bkmk_DMX"></a> DMX를 사용하여 드릴스루 쿼리 만들기  
  모델 또는 구조에 대한 사용 권한을 가지고 있는 경우 DMX 쿼리를 만들어 사례 데이터로 드릴스루할 수 있습니다. DMX에서 드릴스루 쿼리를 만들기 위한 구문의 예를 보려면 다음 항목을 참조하십시오.  
   
- [DMX를 사용 하 여 드릴스루 쿼리 만들기](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
+ [DMX를 사용하여 드릴스루 쿼리 만들기](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
   
 ##  <a name="bkmk_Considerations"></a> 드릴스루 사용 시의 고려 사항  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34018300"
 -   드릴스루가 마이닝 구조에서는 허용되지 않지만 마이닝 모델에서는 허용되는 경우 마이닝 구조가 아닌 모델 사례에서만 정보를 볼 수 있습니다.  
   
 ###  <a name="bkmk_Security"></a> 드릴스루의 보안 문제  
- 모델의 구조 사례로 드릴스루하려는 경우 마이닝 구조와 마이닝 모델 모두에서 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 속성이 **True**로 설정되어 있는지 확인해야 합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 디자이너&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)를 참조하세요. 다음을 참조하십시오.  
+ 모델의 구조 사례로 드릴스루하려는 경우 마이닝 구조와 마이닝 모델 모두에서 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 속성이 **True**로 설정되어 있는지 확인해야 합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 디자이너&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)를 참조하세요. 다음을 참조하십시오.  
   
  드릴스루 권한은 구조와 모델에 개별적으로 설정됩니다. 모델 사용 권한이 있으면 구조에 대한 사용 권한이 없는 경우에도 모델에서 드릴스루할 수 있습니다. 구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34018300"
 |----------|----------|  
 |데이터 마이닝 디자이너의 드릴스루 사용을 설명하는 절차|[마이닝 모델에서 사례 데이터로 드릴스루](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |드릴스루를 허용하도록 기존 마이닝 모델 변경|[마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[만들기 마이닝 구조 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[CREATE MINING STRUCTURE&#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   

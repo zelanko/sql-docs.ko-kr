@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5386b47f246483763066e7dc7a17721c5929113e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019760"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148148"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
+  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 엔드포인트를 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
   
 -   클라이언트 액세스가 인터넷 또는 엑스트라넷 연결을 통해 이루어집니다(설정할 수 있는 포트에 대한 제한 사항 있음)  
   
@@ -30,16 +30,16 @@ ms.locfileid: "34019760"
   
 -   Windows 통합 보안 인증이 아닌 다른 인증 방법이 필요합니다. 특히 HTTP 액세스에 대한 Analysis Services를 구성할 때 익명 연결과 기본 인증을 사용할 수 있습니다. 다이제스트, 폼 및 ASP.NET 인증은 지원되지 않습니다. HTTP 액세스를 사용하도록 설정하는 기본 이유 중 하나가 바로 기본 인증을 사용하기 위한 것입니다. 자세한 내용은 [Microsoft BI 인증 및 ID 위임](http://go.microsoft.com/fwlink/?LinkId=286576)(영문)을 참조하세요.  
   
- 지원되는 모든 Analysis Services 버전 또는 에디션에 대한 HTTP 액세스를 구성하여 테이블 형식 모드 또는 다차원 모드로 실행되도록 할 수 있습니다. 로컬 큐브는 예외입니다. HTTP 끝점을 통해 로컬 큐브에 연결할 수는 없습니다.  
+ 지원되는 모든 Analysis Services 버전 또는 에디션에 대한 HTTP 액세스를 구성하여 테이블 형식 모드 또는 다차원 모드로 실행되도록 할 수 있습니다. 로컬 큐브는 예외입니다. HTTP 엔드포인트를 통해 로컬 큐브에 연결할 수는 없습니다.  
   
- HTTP 액세스 설정은 설치 후 작업입니다. HTTP 액세스를 위해 Analysis Services를 구성하려면 Analysis Services가 이미 설치되어 있어야 합니다. Analysis Services 관리자는 HTTP 액세스를 허용하기 위해 먼저 Windows 계정에 사용 권한을 부여해야 합니다. 또한 서버를 구성하기 전에 설치가 유효한지 검사하여 완전히 작동하는지 확인하는 것이 좋습니다. HTTP 액세스를 구성한 후에는 TCP/IP를 통해 HTTP 끝점과 서버의 일반 네트워크 이름을 모두 사용할 수 있습니다. HTTP 액세스를 설정한다고 해서 다른 데이터 액세스 방법을 사용할 수 없는 것은 아닙니다.  
+ HTTP 액세스 설정은 설치 후 작업입니다. HTTP 액세스를 위해 Analysis Services를 구성하려면 Analysis Services가 이미 설치되어 있어야 합니다. Analysis Services 관리자는 HTTP 액세스를 허용하기 위해 먼저 Windows 계정에 사용 권한을 부여해야 합니다. 또한 서버를 구성하기 전에 설치가 유효한지 검사하여 완전히 작동하는지 확인하는 것이 좋습니다. HTTP 액세스를 구성한 후에는 TCP/IP를 통해 HTTP 엔드포인트와 서버의 일반 네트워크 이름을 모두 사용할 수 있습니다. HTTP 액세스를 설정한다고 해서 다른 데이터 액세스 방법을 사용할 수 없는 것은 아닙니다.  
   
  MSMDPUMP 구성을 계속 진행할 때 client-to-IIS, IIS-to-SSAS의 두 가지 연결을 고려할 수 있습니다. 이 문서의 지침은 IIS-SSAS에 대한 것입니다. 클라이언트 응용 프로그램에서 IIS에 연결하려면 먼저 추가 구성이 필요할 수 있습니다. SSL을 사용할 것인지 또는 바인딩을 구성하는 방법과 같은 사항은 이 문서에서 다루지 않습니다. IIS에 대한 자세한 내용은 [웹 서버(IIS)](http://technet.microsoft.com/library/hh831725.aspx) 를 참조하세요.  
   
 ##  <a name="bkmk_overview"></a> 개요  
- MSMDPUMP는 IIS에 로드되는 ISAPI 확장 프로그램으로, 로컬 또는 원격 Analysis Services 인스턴스에 대한 리디렉션을 제공합니다. 이 ISAPI 확장을 구성하여 Analysis Services 인스턴스에 대한 HTTP 끝점을 만들 수 있습니다.  
+ MSMDPUMP는 IIS에 로드되는 ISAPI 확장 프로그램으로, 로컬 또는 원격 Analysis Services 인스턴스에 대한 리디렉션을 제공합니다. 이 ISAPI 확장을 구성하여 Analysis Services 인스턴스에 대한 HTTP 엔드포인트를 만들 수 있습니다.  
   
- 각 HTTP 끝점에 대해 하나의 가상 디렉터리를 만들고 구성해야 합니다. 각 끝점에는 연결하려는 각 Analysis Services 인스턴스에 대한 고유 MSMDPUMP 파일 집합이 필요합니다. 이 파일 집합의 구성 파일은 각 HTTP 끝점에 사용되는 Analysis Services 인스턴스의 이름을 지정합니다.  
+ 각 HTTP 엔드포인트에 대해 하나의 가상 디렉터리를 만들고 구성해야 합니다. 각 엔드포인트에는 연결하려는 각 Analysis Services 인스턴스에 대한 고유 MSMDPUMP 파일 집합이 필요합니다. 이 파일 집합의 구성 파일은 각 HTTP 엔드포인트에 사용되는 Analysis Services 인스턴스의 이름을 지정합니다.  
   
  IIS에서 MSMDPUMP는 TCP/IP를 통해 Analysis Services OLE DB 공급자를 사용하여 Analysis Services에 연결합니다. 클라이언트 요청이 도메인 트러스트 외부에서 시작될 수 있지만 네이티브 연결이 이뤄지려면 Analysis Services와 IIS가 동일한 도메인 또는 트러스트된 도메인에 있어야 합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34019760"
 |서로 다른 컴퓨터의 IIS와 Analysis Services 비교|이 토폴로지의 경우 웹 서버에 Analysis Services OLE DB 공급자를 설치해야 합니다. 또한 원격 컴퓨터에서 Analysis Services 인스턴스의 위치를 지정하도록 msmdpump.ini 파일을 편집해야 합니다.<br /><br /> 이 토폴로지는 이중 홉 인증 단계를 추가합니다. 즉, 자격 증명이 클라이언트에서 웹 서버로 진행되고 다시 백 엔드 Analysis Services 서버로 진행됩니다. Windows 자격 증명 및 NTLM을 사용하는 경우 NTLM에서 두 번째 서버로의 클라이언트 자격 증명 위임을 허용하지 않으므로 오류가 발생합니다. 가장 일반적인 솔루션은 SSL(Secure Sockets Layer)과 함께 기본 인증을 사용하는 것이지만 MSMDPUMP 가상 디렉터리에 액세스할 때 사용자가 사용자 이름과 암호를 입력해야 합니다. 더 간단한 방법은 사용자가 자연스러운 방식으로 Analysis Services에 액세스할 수 있도록 Kerberos를 사용하도록 설정하고 Analysis Services 제한된 위임을 구성하는 것입니다. 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 를 참조하세요.<br /><br /> Windows 방화벽에서 차단 해제할 포트를 고려합니다. IIS의 웹 응용 프로그램 및 원격 서버의 Analysis Services에 대한 액세스를 허용하도록 두 서버 모두에서 포트를 차단 해제해야 합니다.|  
 |클라이언트 연결이 신뢰할 수 없는 도메인 또는 엑스트라넷 연결에서 시작됩니다.|신뢰할 수 없는 도메인에서 시작된 클라이언트 연결의 경우 인증 제한 사항이 더 많아집니다. 기본적으로 Analysis Services는 사용자가 서버와 같은 도메인에 있도록 요구하는 Windows 통합 인증을 사용합니다. 도메인 외부에서 IIS에 연결하는 엑스트라넷 사용자가 있는 경우 서버가 기본 설정을 사용하도록 구성되면 해당 사용자에게 연결 오류가 발생합니다.<br /><br /> 해결 방법으로 도메인 자격 증명을 사용하여 VPN을 통해 엑스트라넷 사용자를 연결할 수 있습니다. 하지만 IIS 웹 사이트에서 기본 인증과 SSL을 사용하도록 설정하는 것이 더 나을 수 있습니다.|  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
  이 문서의 지침에서는 IIS가 이미 구성되어 있고 Analysis Services가 이미 설치되어 있다고 가정합니다. Windows Server 2012에는 시스템에서 사용하도록 설정할 수 있는 서버 역할로 IIS 8.x가 포함되어 있습니다.  
   
  **IIS 8.0의 추가 구성**  
@@ -92,15 +92,15 @@ ms.locfileid: "34019760"
 >  원격 Analysis Services 서버에 대한 클라이언트 연결을 허용하도록 Windows 방화벽에서 포트를 차단 해제해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_copy"></a> 1단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
- 사용자가 만드는 각 HTTP 끝점에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
+ 사용자가 만드는 각 HTTP 엔드포인트에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
   
-1.  다음 파일을 복사에 \<드라이브 >: files\microsoft SQL Server\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP 합니다. DLL, MSMDPUMP입니다. INI, 및 리소스 폴더입니다.  
+1.  다음 파일을 복사 \<드라이브 >: SQL Server \Program Files\Microsoft\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP 합니다. DLL에서 MSMDPUMP입니다. INI, 파일과 Resources 폴더입니다.  
   
      ![MSMDPUMP 파일의 폴더 구조](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP 파일의 폴더 구조")  
   
-2.  웹 서버에서 새 폴더를 만듭니다: \<드라이브 >: \inetpub\wwwroot\\**OLAP**  
+2.  웹 서버에 새 폴더를 만듭니다: \<드라이브 >: \inetpub\wwwroot\\**OLAP**  
   
 3.  이전에 복사한 파일을 이 새 폴더에 붙여 넣습니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34019760"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> 2단계: IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기  
- 다음으로 응용 프로그램 풀과 PUMP에 대한 끝점을 만듭니다.  
+ 다음으로 응용 프로그램 풀과 PUMP에 대한 엔드포인트를 만듭니다.  
   
 #### <a name="create-an-application-pool"></a>응용 프로그램 풀 만들기  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34019760"
   
 2.  서버 폴더를 열고 **응용 프로그램 풀** 을 마우스 오른쪽 단추로 클릭하고 **응용 프로그램 풀 추가**를 클릭합니다. .NET Framework를 사용하여, 관리되는 파이프라인 모드가 **기본**으로 설정된 **OLAP**이라는 응용 프로그램 풀을 만듭니다.  
   
-     ![스크린 샷의 응용 프로그램 풀 추가 대화 상자](../../analysis-services/instances/media/ssas-httpaccess.PNG "스크린 샷의 응용 프로그램 풀 추가 대화 상자")  
+     ![스크린 샷의 응용 프로그램 풀 추가 대화](../../analysis-services/instances/media/ssas-httpaccess.PNG "스크린 샷의 응용 프로그램 풀 추가 대화 상자")  
   
 3.  기본적으로 IIS는 보안 ID로 **ApplicationPoolIdentity** 를 사용하여 응용 프로그램 풀을 만듭니다. 이 방식은 HTTP를 통해 Analysis Services에 연결할 때 사용할 수 있는 적합한 방법입니다. ID를 변경해야 할 구체적인 이유가 있다면 **OLAP**을 마우스 오른쪽 단추로 클릭하고 **고급 설정**을 선택합니다. **ApplicationPoolIdentity**를 선택합니다. 사용할 사용자 지정 계정으로 기본 제공 계정을 바꾸려면 이 속성의 **변경** 단추를 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34019760"
   
 1.  IIS 관리자에서 **사이트**를 열고 **기본 웹 사이트**를 엽니다. **Olap**이라는 폴더를 표시됩니다. 이것은 \inetpub\wwwroot 아래에 만든 OLAP 폴더에 대한 참조입니다.  
   
-     ![응용 프로그램으로 변환 하기 전에 OLAP 폴더](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "응용 프로그램으로 변환 하기 전에 OLAP 폴더")  
+     ![앱으로 변환 하기 전에 OLAP 폴더](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "앱으로 변환 하기 전에 OLAP 폴더")  
   
 2.  이 폴더를 마우스 오른쪽 단추로 클릭하고 **응용 프로그램으로 변환**을 선택합니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "34019760"
   
 4.  **확인**을 클릭합니다. 웹 사이트를 새로 고치면 OLAP 폴더가 기본 웹사이트 아래에 응용 프로그램으로 표시되는 것을 알 수 있습니다. 이제 MSMDPUMP 파일에 대한 가상 경로가 설정됩니다.  
   
-     ![응용 프로그램으로 변환 후 OLAP 폴더](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "응용 프로그램으로 변환 후 OLAP 폴더")  
+     ![응용 프로그램에는 변환 후 OLAP 폴더](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "응용 프로그램에는 변환 후 OLAP 폴더")  
   
 > [!NOTE]  
 >  이 지침의 이전 버전에는 가상 디렉터리를 만들기 위한 단계가 포함되어 있습니다. 이 단계 더 이상 필요하지 않습니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "34019760"
   
  사용자에게 Windows 사용자 계정이 없으면 프로덕션 환경에서 익명 인증을 사용할 수도 있지만, [익명 인증 사용(IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)문서에서 설명하는 대로 호스트 시스템에서 권한을 잠그는 방식으로 모범 사례를 따르는 것이 좋습니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
   
- 익명을 사용하도록 설정되어 있으면 HTTP 끝점에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 개별 사용자 연결을 감사할 수 없으며 사용자 ID를 사용하여 모델에서 데이터를 선택할 수도 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
+ 익명을 사용하도록 설정되어 있으면 HTTP 엔드포인트에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 개별 사용자 연결을 감사할 수 없으며 사용자 ID를 사용하여 모델에서 데이터를 선택할 수도 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>인증 유형 설정 및 스크립트 맵 추가  
   
@@ -179,7 +179,7 @@ ms.locfileid: "34019760"
   
 3.  Windows 통합 보안을 사용하는 경우 **Windows 인증** 을 사용하도록 설정합니다.  
   
-     ![Vdir 인증 스크린 샷 설정](../../analysis-services/instances/media/ssas-httpaccess-iisauth.png "Vdir 인증 스크린 샷 설정")  
+     ![Vdir 인증 스크린 샷 설정](../../analysis-services/instances/media/ssas-httpaccess-iisauth.png "스크린 샷의 Vdir 인증 설정")  
   
 4.  또는 클라이언트 응용 프로그램과 서버 응용 프로그램이 서로 다른 도메인에 있는 경우 **기본 인증** 을 사용하도록 설정합니다. 이 모드에서는 사용자가 사용자 이름과 암호를 입력해야 합니다. 사용자 이름과 암호는 HTTP 연결을 통해 IIS로 전송됩니다. IIS는 MSMDPUMP에 연결할 때 사용자가 제공된 자격 증명을 사용하는 것으로 가장하려고 하지만 자격 증명은 Analysis Services로 위임되지 않습니다. 대신 이 문서의 6단계에 설명된 대로 연결에서 유효한 사용자 이름 및 암호를 전달해야 합니다.  
   
@@ -221,11 +221,11 @@ ms.locfileid: "34019760"
   
 ```  
   
- HTTP 액세스를 구성하는 Analysis Services 인스턴스가 로컬 컴퓨터에 있고 기본 인스턴스로 설치된 경우 이 설정을 변경할 이유가 없습니다. 서버 이름을 지정 해야 하는 그렇지 않은 경우 (예를 들어 \<서버 이름 > ADWRKS SRV01\</ServerName >). 명명 된 인스턴스로 설치 된 서버를 추가 해야 인스턴스 이름 (예를 들어 \<서버 이름 > ADWRKS SRV01\Tabular\</ServerName >).  
+ HTTP 액세스를 구성하는 Analysis Services 인스턴스가 로컬 컴퓨터에 있고 기본 인스턴스로 설치된 경우 이 설정을 변경할 이유가 없습니다. 서버 이름을 지정 해야 하는 그렇지 않은 경우 (예를 들어 \<서버 이름 > ADWRKS-SRV01\</ServerName >). 명명 된 인스턴스로 설치 된 서버의 경우 인스턴스 이름을 추가 하도록 수 (예를 들어 \<서버 이름 > ADWRKS-SRV01\Tabular\</ServerName >).  
   
  기본적으로 Analysis Services는 TCP/IP 포트 2383에서 수신합니다. Analysis Services를 기본 인스턴스로 설치한 경우에 어떤 포트도 지정할 필요가 없습니다 \<서버 이름 > Analysis Services가 포트 2383에서 자동으로 수신 하는 방법을 인식 하므로 합니다. 하지만 Windows 방화벽에서 해당 포트에 대한 인바운드 연결을 허용해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
- 서버 이름에 포트 번호를 추가 해야 구성 명명 된 인스턴스 또는 기본 고정된 포트에서 수신 대기 하도록 Analysis Services의 인스턴스를 경우 (예를 들어 \<서버 이름 > a W-SRV01:55555\</ServerName >)를 허용 해야 인바운드 Windows 방화벽에서 해당 포트에 연결 합니다.  
+ 서버 이름에 포트 번호를 추가 해야 합니다 또는 고정된 포트에서 수신할 Analysis Services의 인스턴스를 기본, 명명 된 구성한 경우 (예를 들어 \<서버 이름 > AW-SRV01:55555\</ServerName >)를 허용 해야 인바운드 Windows 방화벽에서 해당 포트에 연결 합니다.  
   
 ## <a name="step-5-grant-data-access-permissions"></a>5단계: 데이터 액세스 권한 부여  
  앞에서 설명한 대로 Analysis Services 인스턴스에 대한 권한을 부여해야 합니다. 각 데이터베이스 개체에는 지정된 수준의 권한(읽기 또는 읽기/쓰기)을 제공하는 역할이 있으며 각 역할에는 Windows 사용자 ID로 구성된 멤버가 있습니다.  
@@ -238,7 +238,7 @@ ms.locfileid: "34019760"
 |-|-|  
 |익명|IIS의 **익명 인증 자격 증명 편집** 에서 지정한 계정을 멤버 자격 목록에 추가합니다. 자세한 내용은 [익명 인증](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)을 참조하세요.|  
 |Windows 인증|가장 또는 위임을 통해 Analysis Services 데이터를 요청하는 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> Kerberos 제한 위임이 사용될 경우 사용 권한이 필요한 유일한 계정은 액세스를 요청하는 Windows 사용자 및 그룹 계정입니다. 응용 프로그램 풀 ID에 필요한 권한은 없습니다.|  
-|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 **EffectiveUserName** 을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 &#124; **속성** &#124; **보안** &#124; **추가**합니다. 응용 프로그램 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.")|  
+|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 **EffectiveUserName** 을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 클릭 &#124; **속성** &#124; **Security** &#124; **추가**. 응용 프로그램 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.")|  
   
  사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(영문)을 참조하세요.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "34019760"
   
  **Internet Explorer를 사용하여 연결 문제 해결**  
   
- 이 오류와 함께 종료 하는 연결 요청 제공 하지 않을 수 있습니다 더 이상 진행할: "중 하나가 연결 연결할 수 없습니다 '\<서버 이름 >', Analysis Service 서버에서 실행 되 고 있지 또는".  
+ 이 오류와 함께 종료 되는 연결 요청을 제공 하지 않을 수 있습니다 이동 하는 데는 크게: "연결 연결할 수 없습니다 '\<서버 이름 >', 또는 분석 서비스는 서버에서 실행 중 아님"입니다.  
   
  더 자세한 오류 정보를 확인하려면 다음을 수행합니다.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "34019760"
   
      개체 탐색기에 HTTP 연결이 표시됩니다.  
   
-     ![SSMS에서 표시 된 HTTP 연결](../../analysis-services/instances/media/ssas-httpaccess-ssms.PNG "SSMS에서 표시 된 HTTP 연결")  
+     ![SSMS에서 표시 되는 HTTP 연결](../../analysis-services/instances/media/ssas-httpaccess-ssms.PNG "SSMS에서 표시 되는 HTTP 연결")  
   
 2.  Windows 인증이어야 하며 Management Studio를 사용하는 사용자는 Analysis Services 관리자여야 합니다. 관리자는 다른 사용자의 액세스를 허용하도록 추가 사용 권한을 부여할 수 있습니다.  
   
@@ -283,21 +283,21 @@ ms.locfileid: "34019760"
   
  **AMO를 사용하여 연결 테스트**  
   
- 서버 이름을 끝점의 URL로 대체하여, AMO를 통해 HTTP 액세스를 프로그래밍 방식으로 테스트할 수 있습니다. 자세한 내용은 [포럼 게시물(도메인/포리스트 및 방화벽 경계에서 HTTPS를 통해 SSAS 2008 R2 데이터베이스를 동기화하는 방법)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e)을 참조하세요.  
+ 서버 이름을 엔드포인트의 URL로 대체하여, AMO를 통해 HTTP 액세스를 프로그래밍 방식으로 테스트할 수 있습니다. 자세한 내용은 [포럼 게시물(도메인/포리스트 및 방화벽 경계에서 HTTPS를 통해 SSAS 2008 R2 데이터베이스를 동기화하는 방법)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e)을 참조하세요.  
   
  기본 인증을 사용한 HTTP(S) 액세스에 대한 구문을 보여 주는 연결 문자열의 예  
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- 프로그래밍 방식으로 연결을 설정하는 방법에 대한 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)을 참조하세요.  
+ 프로그래밍 방식으로 연결을 설정하는 방법에 대한 자세한 내용은 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)을 참조하세요.  
   
  마지막 단계로, 연결이 시작된 네트워크 환경에서 실행되는 클라이언트 컴퓨터를 사용하여 좀 더 엄격한 테스트를 통해 후속 확인을 수행하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [포럼 게시물(msmdpump 및 기본 인증을 사용한 http 액세스)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS 인증 방법](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [IIS 7에서 SSL을 설정 하는 방법](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [IIS 7에서 SSL을 설정하는 방법](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

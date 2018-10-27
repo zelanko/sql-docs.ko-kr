@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980593"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148048"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ```  
   
 ## <a name="arguments"></a>인수  
- *모델*  
+ *model*  
  모델의 고유 이름입니다.  
   
  *열 정의 목록*  
@@ -48,10 +48,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  현재 공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
 > [!NOTE]  
->  현재 공급자가 지 원하는 알고리즘의 목록을 사용 하 여 검색할 수 있습니다 [DMSCHEMA_MINING_SERVICES 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)합니다. 현재 인스턴스에서 지 원하는 알고리즘을 보려는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
+>  현재 공급자가 지 원하는 알고리즘의 목록을 사용 하 여 검색할 수 있습니다 [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)합니다. 현재 인스턴스에서 지 원하는 알고리즘을 보려는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
   
  *매개 변수 목록*  
- (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *XML 문자열*  
  고급 사용자만 사용해야 합니다. XML 인코딩 모델(PMML)이며 문자열을 작은따옴표(')로 묶어야 합니다.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [데이터 형식&#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [콘텐츠 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [콘텐츠 형식&#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [열 배포 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [열 배포&#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [모델링 플래그 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [모델링 플래그&#40;데이터 마이닝&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다음의 사용을 지원 \<열 관계 > 절.  
   

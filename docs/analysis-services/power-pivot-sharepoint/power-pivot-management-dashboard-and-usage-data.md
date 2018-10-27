@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 관리 대시보드 및 사용 현황 데이터 | Microsoft Docs
+title: Power Pivot Management Dashboard and Usage Data | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099934"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 관리 대시보드 및 사용 데이터
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "34030344"
   
 5.  텍스트 편집기에서 .odc 파일을 엽니다.  
   
-6.  에  **\<odc:ConnectionString >** 요소를 제거 및 줄 끝으로 스크롤한 **포함 된 데이터 = False**, 한 다음 제거 **편집 모드 = 0**합니다. 문자열의 마지막 문자가 세미콜론인 경우 지금 제거합니다.  
+6.  에  **\<odc: connectionstring >** 요소, 제거한 줄의 끝으로 스크롤한 **포함 된 데이터 = False**, 한 다음 제거 **편집 모드 = 0**. 문자열의 마지막 문자가 세미콜론인 경우 지금 제거합니다.  
   
 7.  파일을 저장합니다. 나머지 단계는 사용 중인 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 및 Excel의 버전에 따라 달라집니다.  
   
@@ -137,8 +137,8 @@ ms.locfileid: "34030344"
   
     9. MDX 쿼리 지정에서 **디자인** 을 클릭하여 MDX 쿼리 디자이너를 열고 작업할 데이터를 조합한 다음 Excel에서 데이터를 시각화할 PivotTable 또는 PivotChart 보고서를 만듭니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SharePoint 2010에서 Power Pivot 데이터 새로 고침](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+## <a name="see-also"></a>관련 항목  
+ [SharePoint 2010에서 Power Pivot 데이터 새로 고침](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

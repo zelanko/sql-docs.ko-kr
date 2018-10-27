@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f7c111f85e3b43a560b70171f8af470a9fc505a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024770"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146254"
 ---
-# <a name="autoexists"></a>Autoexists
+# <a name="autoexists"></a>AUTOEXIST
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   *AUTOEXIST* 개념에서는 동일한 계층의 특성 계층 멤버로 만들 수 있는 모든 조합의 결과로 존재하는 셀이 아니라 큐브에서 실제로 존재하는 셀로 큐브 공간을 제한합니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
   
@@ -308,15 +308,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 AUTOEXISTS를 사용 하 여 수정할 수 있습니다 = [1 | 2 | 3]; 연결 문자열 매개 변수 참조 [XMLA 속성 지원 &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다.  
+ Autoexists 동작은 사용 하 여 수정할 수 = [1 | 2 | 3]에서 연결 문자열을 매개 변수 참조 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 하 고 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대 한 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [다차원 식 & #40; Mdx& #41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX&#40;Multidimensional Expression&#41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

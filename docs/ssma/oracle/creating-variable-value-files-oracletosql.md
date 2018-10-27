@@ -13,12 +13,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1e69780efa7342175e0cf9b63484a08af522e4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 568e42fef097ead1958cf7c767227bb8863e2b16
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100084"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>변수 값 파일 만들기(OracleToSQL)
 변수 값 파일은 다른 서버 마이그레이션에서 자주 변경 하는 원본 또는 대상 서버 이름과 같은 명령의 매개 변수 값을 비교 하는 XML 파일입니다. 많은 수의 데이터베이스 마이그레이션 수행 하는 경우 원본 서버의 각 값을 저장 하는 것에 대 한 여러 변수 파일을 만든 마스터 스크립트 파일의 참조를 **– v** 명령줄에서 전환 합니다. 이 여러 변수 파일에서 변수 값을 사용 하 여 몇 가지 스크립트 파일에 정적 값을 유지 관리에 도움이 됩니다.  
@@ -91,5 +91,5 @@ ms.locfileid: "47840241"
 운영 콘솔에서 다음 단계 [서버 연결 파일 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목  
-[서버 파일 (Oracle) 만들기](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[서버 파일 (Oracle) 만들기](http://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

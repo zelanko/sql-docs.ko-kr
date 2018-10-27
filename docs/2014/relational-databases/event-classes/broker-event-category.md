@@ -17,12 +17,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db73daadcb32a64d308b4f223be133cd5de4bb9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 602113da86b3d8ffdc79484b35dab59749844a01
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101563"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145648"
 ---
 # <a name="broker-event-category"></a>Broker 이벤트 범주
   **Broker** 이벤트 범주에는 일반적인 Service Broker 이벤트가 포함됩니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "48101563"
  두 개의 보안 감사 이벤트도 Service Broker에 제공됩니다. 이러한 이벤트에 대한 자세한 내용은 [Audit Broker Login 이벤트 클래스](audit-broker-login-event-class.md) 및 [Audit Broker Conversation 이벤트 클래스](audit-broker-conversation-event-class.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Security Audit 이벤트 범주](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [Security Audit 이벤트 범주](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

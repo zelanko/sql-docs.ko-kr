@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356534"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099785"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>이란 [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
@@ -47,7 +47,7 @@ T-SQL 코드 조각을 데이터베이스, 테이블, 뷰, 저장된 프로시�
 
 ## <a name="integrated-terminal"></a>통합된 터미널
 
-선호 하는 명령줄 도구를 사용 하 여 (예를 들어, Bash, PowerShell, sqlcmd, bcp 및 ssh) 내에서 통합 터미널 창에는 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용자 인터페이스입니다. 통합된 터미널에 대해 알아보려면 [통합 터미널 통합](terminal.md) 을 참조 하십시오.
+선호 하는 명령줄 도구를 사용 하 여 (예를 들어, Bash, PowerShell, sqlcmd, bcp 및 ssh) 내에서 통합 터미널 창에는 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용자 인터페이스입니다. 통합된 터미널을 알아보려면 [통합된 터미널](integrated-terminal.md)합니다.
 
 ## <a name="extensibility-and-extension-authoring"></a>확장성 및 확장 작성
 

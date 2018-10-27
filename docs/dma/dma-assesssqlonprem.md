@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)는 SQL Server 마이그레이션 평가 수행 합니다. | Microsoft Docs
 description: 다른 SQL Server로 또는 Azure SQL Database로 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하기 위해 Data Migration Assistant 사용 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706191"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643981"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "47706191"
 
 2.  원본 및 대상 서버 유형을 설정 합니다.
 
-    최신 온-프레미스 SQL Server 인스턴스 또는 Azure VM에서 호스팅되는 SQL Server 온-프레미스 SQL Server 인스턴스 업그레이드 하는 경우 원본 및 대상 서버 유형으로 설정 **SQL Server**합니다. Azure SQL Database로 마이그레이션하는 경우 대신로 대상 서버 유형 **Azure SQL Database**합니다.
+    최신 온-프레미스 SQL Server 인스턴스 또는 Azure VM에서 호스팅되는 SQL Server 온-프레미스 SQL Server 인스턴스를 업그레이드 하는 경우 원본 및 대상 서버 유형으로 설정 **SQL Server**합니다. Azure SQL Database로 마이그레이션하는 경우 대신로 대상 서버 유형 **Azure SQL Database**합니다.
 
 3.  **만들기**를 클릭합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "47706191"
 
 2. 보고서 유형을 선택 합니다.
 
-   대상 Azure VM에서 호스팅되는 SQL Server 또는 온-프레미스 SQL Server로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하는 경우에 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
+   대상 Azure VM에서 호스팅되는 SQL Server 또는 온-프레미스 SQL Server로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하려는 경우 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
     -   **호환성 문제**
 
@@ -52,7 +52,7 @@ ms.locfileid: "47706191"
 
     ![SQL Server 대상에 대 한 평가 보고서 유형을 선택합니다](../dma/media/AssessmentTypes.png)
 
-   Azure SQL Database로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하는 경우에 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
+   Azure SQL Database로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하려는 경우 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
     -   **데이터베이스 호환성 확인**
 
@@ -77,7 +77,7 @@ ms.locfileid: "47706191"
 
 ## <a name="view-results"></a>결과 보기
 
-평가 기간 추가 데이터베이스 수와 각 데이터베이스의 스키마 크기에 따라 달라 집니다. 사용 가능한 즉시 각 데이터베이스에 대 한 결과가 표시 됩니다.
+평가 기간 추가 데이터베이스 수와 각 데이터베이스의 스키마 크기에 따라 달라 집니다. 사용할 수는 즉시 각 데이터베이스에 대 한 결과가 표시 됩니다.
 
 1.  평가 완료 하는 데이터베이스를 선택한 다음 전환할 **호환성 문제** 하 고 **기능 권장 사항** 전환기를 사용 하 여 합니다.
 

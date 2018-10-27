@@ -11,12 +11,12 @@ ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142703"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148298"
 ---
 # <a name="autoexists"></a>AUTOEXIST
   *AUTOEXIST* 개념에서는 동일한 계층의 특성 계층 멤버로 만들 수 있는 모든 조합의 결과로 존재하는 셀이 아니라 큐브에서 실제로 존재하는 셀로 큐브 공간을 제한합니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
@@ -89,7 +89,7 @@ WHERE (Measures.[Internet Sales Amount],
  앞의 세 쿼리는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 AUTOEXIST 동작이 미치는 영향을 보여 줍니다.  
   
 ## <a name="deep-and-shallow-autoexists"></a>전체 및 단순 AUTOEXIST  
- AUTOEXIST는 식에 전체 또는 단순 적용될 수 있습니다. `Deep Autoexists`는 slicer 식, 축의 하위 선택 식 등을 적용한 후 가능한 가장 범위가 큰 공간에 맞게 모든 식이 계산됨을 의미합니다. `Shallow Autoexists` 현재 식 전에 외부 식이 계산 됨과 해당 결과가 현재 식에 전달 되기을 의미 합니다. 기본 설정은 전체 AUTOEXIST입니다.  
+ AUTOEXIST는 식에 전체 또는 단순 적용될 수 있습니다. `Deep Autoexists`는 slicer 식, 축의 하위 선택 식 등을 적용한 후 가능한 가장 범위가 큰 공간에 맞게 모든 식이 계산됨을 의미합니다. `Shallow Autoexists`는 현재 식과 해당 결과가 현재 식에 전달되기 전에 외부 식이 계산됨을 의미합니다. 기본 설정은 전체 AUTOEXIST입니다.  
   
  다음 시나리오와 샘플에서는 여러 다른 유형의 AUTOEXIST를 보여 줍니다. 다음 예에서는 두 집합인 계산 식으로서의 집합과 상수 식으로서의 집합을 만듭니다.  
   
@@ -309,15 +309,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 사용 하 여 수정할 수 = [1 | 2 | 3]에서 연결 문자열을 매개 변수 참조 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 하 고 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대 한 합니다.  
+ Autoexists 동작은 사용 하 여 수정할 수 = [1 | 2 | 3]에서 연결 문자열을 매개 변수 참조 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 하 고 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대 한 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](cube-space.md)   
  [튜플](tuples.md)   
- [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](visual-totals-and-non-visual-totals.md)   
- [MDX 언어 참조 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Multidimensional Expression &#40;MDX&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 언어 참조&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

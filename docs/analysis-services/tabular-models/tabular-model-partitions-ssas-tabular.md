@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045264"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146288"
 ---
 # <a name="tabular-model-partitions"></a>테이블 형식 모델 파티션 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 파티션을 만들고 관리 하는 동안 모델을 제작 하는 방법에 대 한 자세한 내용은 참조 [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
+  파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 파티션을 만들고 관리 모델 제작 중에 대 한 자세한 내용은 참조 하세요. [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
   
  이 항목의 섹션:  
   
 -   [이점](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [사용 권한](#bkmk_permissions)  
   
 -   [파티션 처리](#bkmk_process_partitions)  
   
@@ -54,19 +54,19 @@ ms.locfileid: "34045264"
 ##  <a name="bkmk_permissions"></a> Permissions  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 만들고 관리하고 처리하려면 보안 역할에 적절한 Analysis Services 사용 권한이 정의되어 있어야 합니다. 각 보안 역할의 사용 권한은 다음과 같습니다.  
   
-|사용 권한|작업|  
+|사용 권한|동작|  
 |----------------|-------------|  
 |관리자|읽기, 처리, 만들기, 복사, 병합, 삭제|  
 |처리|읽기, 처리|  
 |읽기 전용|읽기|  
   
- 사용 하 여 모델 제작 중에 역할을 만드는 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 참조 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다. 역할 멤버를 사용 하 여 테이블 형식 모델 역할 배포를 관리 하는 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 참조 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)합니다.  
+ 사용 하 여 모델 제작 중에 역할을 만드는 방법은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 참조 하세요 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)입니다. 사용 하 여 배포 된 테이블 형식 모델 역할에 대 한 역할 멤버를 관리 하는 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 참조 하세요 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)입니다.  
   
 ##  <a name="bkmk_parallelProc"></a> 병렬 처리  
-Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 테이블에 대 한 병렬 처리에 포함 되어 있습니다. 병렬 처리에 대한 구성 설정은 없습니다(참고 참조). 병렬 처리는 테이블을 처리하거나 동일한 테이블 및 프로세스에 대해 여러 파티션을 선택할 때 기본적으로 발생합니다. 테이블의 파티션을 독립적으로 처리하도록 선택할 수 있습니다.  
+Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 테이블에 대 한 병렬 처리를 포함 합니다. 병렬 처리에 대한 구성 설정은 없습니다(참고 참조). 병렬 처리는 테이블을 처리하거나 동일한 테이블 및 프로세스에 대해 여러 파티션을 선택할 때 기본적으로 발생합니다. 테이블의 파티션을 독립적으로 처리하도록 선택할 수 있습니다.  
   
 > [!NOTE]  
->  새로 고침 작업을 순서대로 실행할지 또는 병렬로 실행할지를 지정하려면 **maxParallism** 속성 옵션을 [Sequence 명령(TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)과 함께 사용할 수 있습니다.
+>  새로 고침 작업을 순서대로 실행할지 또는 병렬로 실행할지를 지정하려면 **maxParallism** 속성 옵션을 [Sequence 명령(TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl)과 함께 사용할 수 있습니다.
 
 > [!NOTE]  
 >  재인코딩이 감지되는 경우 병렬 처리는 시스템 리소스 사용을 증가시킬 수 있습니다. 여러 파티션 작업은 중단되고 새 인코딩에서 병렬로 다시 시작돼야 하기 때문입니다.  
@@ -82,7 +82,7 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 |지우기 처리|파티션에서 모든 데이터를 제거합니다.|  
 |증분 처리|새 데이터로 파티션을 증분 업데이트합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |태스크|Description|  
 |----------|-----------------|  

@@ -1,24 +1,24 @@
 ---
-title: SQL Server 2019 CTP 2.0 배포에 대 한 Azure Kubernetes Service를 구성 | Microsoft Docs
-description: ''
+title: SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service를 구성 | Microsoft Docs
+description: SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Azure Kubernetes Service (AKS)를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050915"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>SQL Server 2019 CTP 2.0에 대 한 Azure Kubernetes Service를 구성 합니다.
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>SQL Server 2019 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성
 
-Azure Kubernetes Service (AKS)를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응용 프로그램을 실행 하는 Kubernetes 클러스터를 사용 하 여 미리 구성 된 가상 머신의 클러스터를 관리 합니다. 
+이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Azure Kubernetes Service (AKS)를 구성 하는 방법을 설명 합니다. 
 
-이 통해 배포 하 고 Microsoft Azure에서 컨테이너 기반 응용 프로그램 관리의 커뮤니티 전문 지식의 점점 본문을 하거나 기존 기술을 사용할 수 있습니다.
+AKS를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응용 프로그램을 실행 하는 Kubernetes 클러스터를 사용 하 여 미리 구성 된 가상 머신의 클러스터를 관리 합니다. 이 통해 배포 하 고 Microsoft Azure에서 컨테이너 기반 응용 프로그램 관리의 커뮤니티 전문 지식의 점점 본문을 하거나 기존 기술을 사용할 수 있습니다.
 
 이 문서에서는 Azure CLI를 사용 하 여 AKS에서 Kubernetes를 배포 하는 단계를 설명 합니다. Azure 구독이 없으면 시작 하기 전에 무료 계정을 만듭니다.
 
@@ -34,7 +34,7 @@ Azure Kubernetes Service (AKS)를 사용 하면 간단 하 게 생성, 구성 �
 
 - 이 섹션에서는 여야 합니다. Azure CLI 버전 2.0.4 실행 이상. 설치 또는 업그레이드를 참조 해야 하는 경우 [Azure CLI 2.0 설치](https://docs.microsoft.com/cli/azure/install-azure-cli)합니다. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
-- 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)합니다. Kubernetes에 대 한, 서버 및 클라이언트에 대 한 SQL Server에 대 한 빅 데이터 클러스터 1.10 버전 범위의 모든 부 버전을 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. AKS에 대 한 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다. CTP2.0 릴리스 기간에 AKS만 지원함 1.10.7 버전과 1.10.8 참고 합니다. 
+- 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)합니다. Kubernetes에 대 한, 서버 및 클라이언트에 대 한 SQL Server 빅 데이터 클러스터 1.10 버전 범위의 모든 부 버전을 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. AKS에 대 한 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다. CTP2.0 릴리스 기간에 AKS만 지원함 1.10.7 버전과 1.10.8 참고 합니다. 
 
 
 > [!NOTE]
@@ -110,4 +110,4 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
 
 이 문서의 단계는 AKS에서 Kubernetes 클러스터를 구성합니다. SQL Server 2019 빅 데이터 클러스터에 배포 하려면 다음 단계가입니다.
 
-[Kubernetes에 SQL Server 2019 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
+[빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)

@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078063"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145098"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **Analysis Server 속성** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078063"
   
 -   **1103** 은 테이블 형식 모드 또는 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]를 지원하는 설치의 경우 배포 모드 1 또는 2에 대한 기본 호환성 수준입니다.  
   
- 서버에서는 네임스페이스를 지원하는 클라이언트가 DISCOVER_XML_METADATA를 요청할 때 이 값을 반환합니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](schema-rowsets/xml/discover-xml-metadata-rowset.md)을 참조하세요.  
+ 서버에서는 네임스페이스를 지원하는 클라이언트가 DISCOVER_XML_METADATA를 요청할 때 이 값을 반환합니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)을 참조하세요.  
   
 ## <a name="general-properties"></a>일반 속성  
  이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 폴더 위치 및 네트워크 설정과 같은 기본 및 고급 일반 속성을 설정할 수 있습니다.  
@@ -98,8 +98,8 @@ ms.locfileid: "48078063"
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스의 서버 모드 확인](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services의 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)   
- [Analysis Services에서 지 원하는 인증 방법](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [역할 및 사용 권한 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [언어 및 데이터 정렬 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [Analysis Services에서 지원하는 인증 방법](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [역할 및 권한&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
+ [언어 및 데이터 정렬&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

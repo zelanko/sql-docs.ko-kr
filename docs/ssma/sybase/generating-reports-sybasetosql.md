@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5f4357e300e628f6d7af2f796d618a3535768652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce414e10afc316a478825441d41dc5601c043c3d
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098929"
 ---
 # <a name="generating-reports-sybasetosql"></a>보고서 생성(SybaseToSQL)
 개체 트리 수준 SSMA 콘솔의 명령을 사용 하 여 수행 되는 특정 활동의 보고서를 생성 됩니다.  
@@ -146,5 +146,5 @@ ms.locfileid: "47643351"
 -   스크립트 실패  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (Sybase) 실행](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[SSMA 콘솔 (Sybase) 실행](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

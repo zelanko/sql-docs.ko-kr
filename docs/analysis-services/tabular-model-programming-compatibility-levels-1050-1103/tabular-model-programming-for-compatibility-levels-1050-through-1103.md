@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1e14033255d45eaacda1d553c71224e11dfe964
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8db29de7da29b2d446ea74cf818814502dfc5bfd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054701"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148338"
 ---
-# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>테이블 형식 모델 프로그래밍 호환성 수준 1050 ~ 1103
+# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>호환성 수준 1050~1103에 대한 테이블 형식 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   테이블 형식 모델은 분석 및 보고 응용 프로그램에서 사용되는 Analysis Services 데이터를 모델링하는 데 관계형 구문을 사용합니다. 이러한 모델은 테이블 형식 모드에 맞게 구성된 Analysis Service 인스턴스에서 실행되며 이때 요청 시 데이터를 집계하고 계산하는 빠른 테이블 검색 및 저장소용 메모리 내 분석 엔진을 사용합니다.  
   
@@ -27,11 +27,11 @@ ms.locfileid: "38054701"
  SQL Server 2016 부터는 테이블 형식 모델 작성 하거나 수 테이블 형식 메타 데이터를 사용 하 여 모델을 정의 하는 1200 이상 호환성 수준으로 업그레이드 합니다. 이 수준에서 메타 데이터 및 프로그래밍 기능은 근본적으로 다릅니다. 참조 [테이블 형식 모델 프로그래밍 호환성 수준 1200 이상](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md) 하 고 [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md) 자세한 내용은 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [수준 1050 ~ 1103 호환성에서 테이블 형식 개체 모델 이해](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL용 BI 주석에 대한 기술 참조](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
 
 [IMDEmbeddedData 인터페이스](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md)

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40099bef14b2172205a18101036b57d71f3b5812
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830051"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146048"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help [ [ @objname = ] 'name' ]
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 반환 되는 결과 집합 인지 여부에 따라 달라 집니다 *이름을* 는 지정 된 경우 및 어떤 데이터베이스 개체를 지정 합니다.  
+ 반환 되는 결과 집합 인지 여부에 따라 달라 집니다 *이름을* 는 지정 된 경우, 및는 데이터베이스 개체를 지정 합니다.  
   
 1.  하는 경우 **sp_help** 실행은 인수 없이 현재 데이터베이스에 존재 하는 모든 유형의 개체의 요약 정보가 반환 됩니다.  
   

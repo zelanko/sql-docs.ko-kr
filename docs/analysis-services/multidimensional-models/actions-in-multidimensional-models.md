@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024280"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145708"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34024280"
 |**True**|캡션이 MDX이면 **True** 를 지정하고 그렇지 않으면 **False** 를 지정합니다.|  
   
 > [!NOTE]  
->  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) 및 [AMO OLAP 고급 개체 프로그래밍](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)을 참조하세요.  
+>  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 및 [AMO OLAP 고급 개체 프로그래밍](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)을 참조하세요.  
   
 ## <a name="creating-a-reporting-action"></a>보고 동작 만들기  
  보고서 서버는 URL 기반 보고서 요청에 응답합니다. 보고 동작을 만들려면 **큐브** 메뉴에서 **새 보고 작업**을 클릭합니다. 보고 동작에 다음 옵션을 사용할 수 있습니다.  
@@ -109,7 +109,7 @@ parametervalue1
 & ...  
 ```  
   
- 예를 들어:  
+ 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
@@ -121,7 +121,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **드릴스루 열**  
  하나 이상의 차원을 선택하고 각 차원에 대해 동작에 따라 클라이언트 응용 프로그램에 반환되는 드릴스루 열을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

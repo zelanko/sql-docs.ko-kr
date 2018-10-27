@@ -14,12 +14,12 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8aa16d708683a33281ee0836321e11f0a16e3211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0148c1f8284610178cde16852494c297fb4c6e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047703"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147358"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
@@ -57,17 +57,17 @@ ms.locfileid: "48047703"
  데이터 마이닝 및 다차원 데이터를 지원할 수 있도록 새로운 스키마 행 집합 및 열, 마이닝 구조를 만들고 관리하는 데 사용할 수 있는 DMX(Data Mining Extensions) 언어 등 사양에 새로 추가된 사항을 설명합니다.  
   
 ## <a name="related-reference"></a>관련 참조  
- [ADOMD.NET을 사용하여 개발](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  ADOMD.NET 클라이언트 및 서버 프로그래밍 개체를 소개합니다.  
   
- [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  AMO 프로그래밍 라이브러리를 소개합니다.  
   
- [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XMLA(XML for Analysis) 및 해당 확장을 소개합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

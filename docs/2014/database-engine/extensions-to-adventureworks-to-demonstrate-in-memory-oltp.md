@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120390"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100414"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120390"
  이 예제에서는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]의 일부인 새로운 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기능을 소개합니다. 이 예제는 새로운 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 보여주며, [!INCLUDE[hek_2](../includes/hek-2-md.md)]의 성능 이점을 설명하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server 2016에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/en-US/library/mt465764.aspx)을 참조하세요.  
+>  SQL Server 2016에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/library/mt465764.aspx)을 참조하세요.  
   
  또한 AdventureWorks 데이터베이스의 5개 테이블을 메모리 최적화 테이블로 마이그레이션하며, 판매 주문 처리용 데모 작업을 포함하고 있습니다. 이 데모 작업을 사용하여 서버에서 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 를 사용하는 경우의 성능 이점을 확인할 수 있습니다.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 총 6.5GB 정도의 데이터를 확인할 수 있습니다. 테이블 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem의 인덱스의 크기는 판매 주문을 삽입 하기 전에 인덱스의 크기와 동일 인지 확인 합니다. 인덱스 크기는 두 테이블 모두 해시 인덱스를 사용하고 해시 인덱스가 고정되어 있기 때문에 변경되지 않았습니다.  
+ 총 6.5GB 정도의 데이터를 확인할 수 있습니다. SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 인덱스 크기는 판매 주문을 삽입하기 전의 인덱스 크기와 동일합니다. 인덱스 크기는 두 테이블 모두 해시 인덱스를 사용하고 해시 인덱스가 고정되어 있기 때문에 변경되지 않았습니다.  
   
 #### <a name="after-demo-reset"></a>데모를 다시 설정한 후  
  저장 프로시저 Demo.usp_DemoReset을 사용하여 데모를 다시 설정할 수 있습니다. 이 프로시저는 SalesOrderHeader_inmem 및 SalesOrderDetail_inmem 테이블의 데이터를 삭제하고 원래 테이블 SalesOrderHeader 및 SalesOrderDetail의 데이터로 초기값을 다시 설정합니다.  

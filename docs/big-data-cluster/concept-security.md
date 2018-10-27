@@ -1,18 +1,18 @@
 ---
 title: SQL Server 빅 데이터 클러스터에 대 한 보안 개념 | Microsoft Docs
-description: ''
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 대 한 보안 개념을 설명 합니다.
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796619"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050885"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
 
@@ -80,5 +80,5 @@ Livy Spark 또는 저장소 풀에는 Spark와 같은 빅 데이터 클러스터
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 문서를 참조 합니다.
 
-- [SQL Server 2019 빅 데이터 클러스터 란?](big-data-cluster-overview.md)
+- [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)
 - [빠른 시작: SQL Server 빅 데이터 클러스터의 kubernetes 배포](quickstart-big-data-cluster-deploy.md)

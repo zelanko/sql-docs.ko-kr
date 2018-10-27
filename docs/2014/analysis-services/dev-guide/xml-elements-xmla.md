@@ -16,12 +16,12 @@ ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76ad5f1c0cc4dd68865174447cb428c1302d3a8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0886ce167dc58a3b81668ef2ec1ed91a6aeba32d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141664"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144539"
 ---
 # <a name="xml-elements-xmla"></a>XML 요소(XMLA)
   다음 항목에서 지 원하는 Analysis (XMLA) 요소 범주에 대 한 다양 한 XML 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
@@ -30,14 +30,14 @@ ms.locfileid: "48141664"
   
 |속성|Description|  
 |--------------|-----------------|  
-|[헤더 &#40;XMLA&#41;](../xmla/xml-elements-headers/xml-elements-headers.md)|프로토콜 수준의 기능을 관리하기 위해 응용 프로그램 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 SOAP Envelope의 SOAP 헤더에서 전송되는 요소를 설명합니다.|  
-|[메서드 &#40;XMLA&#41;](../xmla/xml-elements-methods.md)|데이터 또는 메타데이터를 검색하거나 인스턴스에 대한 동작을 수행하기 위해 응용 프로그램에 의해 SOAP Envelope에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 전송되는 최상위 요소를 설명합니다.|  
-|[명령 &#40;XMLA&#41;](../xmla/xml-elements-commands/xml-elements-commands.md)|특정 동작을 수행하기 위해 XMLA 메서드에서 전송되는 요소를 설명합니다.|  
-|[개체 &#40;XMLA&#41;](../xmla/xml-elements-objects.md)|응용 프로그램이 XMLA 메서드에 대한 응답으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 SOAP Envelope에서 받은 최상위 요소를 설명합니다.|  
-|[속성 &#40;XMLA&#41;](../xmla/xml-elements-properties/xml-elements-properties.md)|XMLA 헤더, 메서드, 개체 또는 명령에 대한 자식 요소를 설명합니다.|  
+|[헤더 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|프로토콜 수준의 기능을 관리하기 위해 응용 프로그램 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 SOAP Envelope의 SOAP 헤더에서 전송되는 요소를 설명합니다.|  
+|[메서드 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|데이터 또는 메타데이터를 검색하거나 인스턴스에 대한 동작을 수행하기 위해 응용 프로그램에 의해 SOAP Envelope에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 전송되는 최상위 요소를 설명합니다.|  
+|[명령 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|특정 동작을 수행하기 위해 XMLA 메서드에서 전송되는 요소를 설명합니다.|  
+|[개체 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|응용 프로그램이 XMLA 메서드에 대한 응답으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 SOAP Envelope에서 받은 최상위 요소를 설명합니다.|  
+|[속성 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|XMLA 헤더, 메서드, 개체 또는 명령에 대한 자식 요소를 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [XML 데이터 형식 &#40;XMLA&#41;](../xmla/xml-data-types/xml-data-types-xmla.md)   
- [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [XML 데이터 형식 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098143"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146519"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 개념
   CSDLBI(BI 포함 개념 스키마 정의 언어) 주석은 엔터티 데이터 프레임워크를 기반으로 하며, 별도의 데이터 집합을 프로그래밍 방식으로 액세스, 쿼리 또는 내보낼 수 있도록 하여 데이터를 나타내기 위한 추상화입니다. CSDLBI는 풍부한 데이터 기반 보고 및 응용 프로그램을 지원하기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 만든 데이터 모델을 나타내는 데 사용됩니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098143"
   
  **크기:** 차원 열과 속성이 있는 엔터티 (테이블)로 CSDLBI에 표시 됩니다. 큐브 뷰에 포함되지 않았더라도 모델에는 포함되어 있는 차원은 CSDL 출력에 `Hidden`으로 표시되어 나타납니다.  
   
- **큐브 뷰:** 클라이언트는 개별 큐브 뷰에 대 한 CSDL을 요청할 수 있습니다. 자세한 내용은 [DISCOVER_CSDL_METADATA 행 집합](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)합니다.  
+ **큐브 뷰:** 클라이언트는 개별 큐브 뷰에 대 한 CSDL을 요청할 수 있습니다. 자세한 내용은 [DISCOVER_CSDL_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)합니다.  
   
  **계층:** 계층 지원 되며 수준 집합으로 CSDLBI에서 표시 합니다.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098143"
  **제한 사항:** 셀 보안은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비즈니스 인텔리전스에 대 한 CSDL 주석 &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

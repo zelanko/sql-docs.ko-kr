@@ -14,12 +14,12 @@ ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119b06da83da044f2ab8663433f76312540c72a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5047647ef5f440987b4b20db99ad42dacf4fc4d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141753"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147928"
 ---
 # <a name="backup-options"></a>백업 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 여러 가지 방법으로 백업할 수 있지만 백업하기 위해서는 서버 관리자 권한과 데이터베이스 관리자 권한이 필요합니다. **에서** 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적절한 옵션 구성을 선택한 후 백업을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "48141753"
 >  Analysis Services 서비스 계정에는 각 파일에 대해 지정한 백업 위치에 쓸 수 있는 권한이 있어야 합니다. 또한 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 관리자 역할이나 백업할 데이터베이스에 대한 모든 권한(관리자 권한)이 있는 데이터베이스 역할의 멤버를 가지고 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [백업 데이터베이스 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [데이터베이스 백업 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services 데이터베이스 백업 및 복원](backup-and-restore-of-analysis-services-databases.md)   
- [요소를 백업 &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [백업, 복원 및 데이터베이스를 동기화 할 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Backup 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

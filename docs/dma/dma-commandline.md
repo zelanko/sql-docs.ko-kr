@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) 명령줄에서 실행 | Microsoft Docs
 description: 마이그레이션에 대 한 SQL Server 데이터베이스를 평가 하기 위해 명령줄에서 Data Migration Assistant를 실행 하는 방법 알아보기
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 2fa770fad98918ab9e15231822b499787790a900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745281"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643991"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 

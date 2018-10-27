@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025270"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147888"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -255,7 +255,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
@@ -280,7 +280,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  두 집합의 결과가 다름을 확인할 수 있습니다. 첫 번째 쿼리는 상위 5개 판매 지역에서 잘 팔리는 제품이 무엇인가라는 질문에 답했고, 두 번째 쿼리는 상위 5개 판매 제품이 가장 많이 팔리는 지역이 어디인가라는 질문에 답변했습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
  하위 SELECT에는 다음과 같은 제한이 있습니다.  
   
 -   WHERE 절은 하위 공간을 필터링하지 않습니다.  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   축 절에서는 HAVING 절을 사용할 수 없습니다. 대신 [필터&#40;MDX&#41;](../../../mdx/filter-mdx.md) 함수 식을 사용하세요.  
   
--   기본적으로 계산된 멤버; 하위 select에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로에서 값을 할당 하 여는 **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROP_MSMD_SUBQUERIES** 속성[ 지원 되는 XMLA 속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다. [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 또는 **DBPROP_MSMD_SUBQUERIES** 의 값에 따른 계산 멤버의 동작에 대한 자세한 내용은 **하위 SELECT 및 하위 큐브의 계산 멤버**를 참조하세요.  
+-   기본적으로 계산된 멤버가 하위 select;에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로의 값을 할당 하 여는 **하위 쿼리** 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 하거나 **DBPROP_MSMD_SUBQUERIES** 에서속성[ 지원 되는 XMLA 속성 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)합니다. [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 또는 **DBPROP_MSMD_SUBQUERIES** 의 값에 따른 계산 멤버의 동작에 대한 자세한 내용은 **하위 SELECT 및 하위 큐브의 계산 멤버**를 참조하세요.  
   
   

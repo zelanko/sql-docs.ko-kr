@@ -18,12 +18,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c230750377d2667d70d239a7a90a7a69d4ff209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068333"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146328"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
   차원 보안은 데이터가 아닌 차원 개체에 대한 권한을 설정하는 데 사용됩니다. 일반적으로, 차원에 대한 권한을 설정할 때 기본 목표는 처리 작업에 대한 액세스를 허용하거나 거부하는 것입니다.  
@@ -66,13 +66,13 @@ ms.locfileid: "48068333"
      기본적으로 권한은 해당 데이터베이스 차원에서 상속됩니다. **상속** 확인란 선택을 취소하여 **읽기** 에서 **읽기/쓰기**로 사용 권한을 변경합니다. **읽기/쓰기**를 사용하기 전에 앞의 섹션에 나와 있는 참고 사항을 읽어보시기 바랍니다.  
   
 > [!IMPORTANT]  
->  AMO(Analysis Management Object)를 사용하여 데이터베이스 역할의 사용 권한을 구성하면 큐브의 DimensionPermission 특성에 있는 큐브 차원에 대한 모든 참조가 데이터베이스의 DimensionPermission 특성으로부터 사용 권한 상속을 분리합니다. AMO에 대한 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
+>  AMO(Analysis Management Object)를 사용하여 데이터베이스 역할의 사용 권한을 구성하면 큐브의 DimensionPermission 특성에 있는 큐브 차원에 대한 모든 참조가 데이터베이스의 DimensionPermission 특성으로부터 사용 권한 상속을 분리합니다. AMO에 대한 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 및 사용 권한 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

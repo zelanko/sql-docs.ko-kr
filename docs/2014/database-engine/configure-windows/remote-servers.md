@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168693"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991166"
 ---
 # <a name="remote-servers"></a>원격 서버
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 응용 프로그램은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>로컬 서버 또는 원격 서버 속성 보기  
- **xp_msver** 확장 저장 프로시저를 사용하여 로컬 서버 또는 원격 서버의 특성을 검토할 수 있습니다. 이러한 특성에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 번호, 컴퓨터의 프로세서 유형과 개수 및 운영 체제 버전이 포함됩니다. 로컬 서버에서는 원격 서버의 데이터베이스, 파일, 로그인 및 도구를 볼 수 있습니다. 자세한 내용은 참조 하세요. [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/입니다.  
+ **xp_msver** 확장 저장 프로시저를 사용하여 로컬 서버 또는 원격 서버의 특성을 검토할 수 있습니다. 이러한 특성에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 번호, 컴퓨터의 프로세서 유형과 개수 및 운영 체제 버전이 포함됩니다. 로컬 서버에서는 원격 서버의 데이터베이스, 파일, 로그인 및 도구를 볼 수 있습니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

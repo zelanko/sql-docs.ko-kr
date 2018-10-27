@@ -10,12 +10,12 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a311b35597b3c474c2128e73b148ab882f19f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ff1a1a9f5b8ba216a2d14d186f2ade20e5eb3dc
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100114"
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정(MySQLToSQL)
 합니다 **'설정'** 탭 노드 수준 설정을 설정할 수 있습니다. 탭은 다음 메타 베이스 노드에서 사용할 수 있습니다.  
@@ -76,5 +76,5 @@ ms.locfileid: "47732321"
     3.  사용자가 변경한 설정을 클릭 하 여 종속 연결 된 기본 설정 파일에 저장 됩니다 **적용** 단추입니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[프로젝트 설정 (변환) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[프로젝트 설정 (변환) (MySQL to SQL)](http://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127437"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991176"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "48127437"
   
     2.  권장 인덱스로 현재 물리적 데이터베이스 설계에 대한 쿼리 성능이 충분히 향상되지는 않습니다.  
   
-    3.  데이터베이스 엔진 튜닝 관리자를 실행 하는 사용자가 멤버인 되지 합니다 `db_owner` 데이터베이스 역할 또는 `sysadmin` 고정된 서버 역할입니다. 작업의 쿼리는 데이터베이스 엔진 튜닝 관리자를 실행하는 사용자의 보안 컨텍스트에서 분석됩니다. 사용자는 `db_owner` 데이터베이스 역할의 멤버여야 합니다.  
+    3.  데이터베이스 엔진 튜닝 관리자를 실행하는 사용자가 `db_owner` 데이터베이스 역할 또는 `sysadmin` 고정 서버 역할의 멤버가 아닙니다. 작업의 쿼리는 데이터베이스 엔진 튜닝 관리자를 실행하는 사용자의 보안 컨텍스트에서 분석됩니다. 사용자는 `db_owner` 데이터베이스 역할의 멤버여야 합니다.  
   
 -   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 `msdb` 데이터베이스에 저장합니다. `msdb` 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 `msdb` 데이터베이스에 적합한 백업 전략을 구현합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127437"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
  데이터베이스 엔진 튜닝 관리자는 전체 기능을 제공하기 위해 **xp_msver** 확장 저장 프로시저에 의존합니다. 이 확장 저장 프로시저는 기본적으로 튜닝됩니다. 데이터베이스 엔진 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 튜닝 중인 데이터베이스가 있는 컴퓨터에서 프로세서 개수 및 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 데이터베이스 엔진 튜닝 관리자는 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 가정합니다. 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다.  
   
- 권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver** 을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 참조 하세요. [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/입니다.  
+ 권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver** 을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)을 참조하세요.  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>데이터베이스 엔진 튜닝 관리자 태스크  
  다음 표에는 일반적인 데이터베이스 엔진 튜닝 관리자 태스크 및 이러한 태스크를 수행하는 방법에 대해 설명하는 항목이 나열되어 있습니다.  

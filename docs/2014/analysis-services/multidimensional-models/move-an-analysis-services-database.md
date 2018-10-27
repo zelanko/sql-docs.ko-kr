@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055158"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145328"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 다차원 또는 테이블 형식 model 데이터베이스를 다른 위치로 이동해야 하는 경우가 종종 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다.  
@@ -145,10 +145,10 @@ ms.locfileid: "48055158"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)   
  [데이터베이스 저장소 위치](database-storage-location.md)   
- [Readwritemode 데이터베이스](database-readwritemodes.md)   
- [Attach 요소](../xmla/xml-elements-commands/attach-element.md)   
- [Detach 요소](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 요소](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 요소](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [ReadWriteMode 데이터베이스](database-readwritemodes.md)   
+ [Attach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

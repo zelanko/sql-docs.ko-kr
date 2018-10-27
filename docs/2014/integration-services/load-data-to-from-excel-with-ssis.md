@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098522"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991256"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -254,9 +254,9 @@ Excel 열에 텍스트 데이터가 포함되어 있음이 확인되면 드라�
 [스크립트 태스크를 사용한 Excel 파일 작업](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 정보
-[Excel 데이터 원본에 연결](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Excel 데이터 원본에 연결](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>기타 문서
-[Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

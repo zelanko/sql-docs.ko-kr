@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050901"
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL을 사용하여 Python 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ ms.locfileid: "49461919"
     
     또한 비활성화 된 네트워크 프로토콜을 사용 하도록 설정 하거나 SQL Server는 외부 클라이언트와 통신할 수 있도록 방화벽을 열기 해야 합니다. 자세한 내용은 [설치 문제 해결](../common-issues-external-script-execution.md)합니다.
 
+### <a name="call-revoscalepy-functions"></a>Revoscalepy 함수를 호출 합니다.
+
+확인 하려면 **revoscalepy** 수를 포함 하는 스크립트 실행 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 통계 요약 데이터를 생성 하는 합니다. 이 스크립트 revoscalepy에 포함 된 기본 제공 샘플에서 샘플.xdf 데이터 파일을 검색 하는 방법에 설명 합니다. RxOptions 함수를 제공 합니다 **sampleDataDir** 샘플 파일의 위치를 반환 하는 매개 변수입니다.
+
+Rx_summary 형식의 개체를 반환 하므로 `class revoscalepy.functions.RxSummary.RxSummaryResults`여러 요소를 포함 하는, pandas를 사용 하 여 바로 테이블 형식으로 데이터 프레임을 추출 합니다.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>기본 Python 상호 작용
 
 두 가지 방법으로 SQL Server에서 Python 코드를 실행할 수 있습니다.
@@ -102,7 +129,7 @@ ms.locfileid: "49461919"
 이제 이러한 규칙에 유의 하십시오.
 
 + 내의 모든 항목을 `@script` 인수는 유효한 Python 코드 여야 합니다. 
-+ 코드는 들여쓰기, 변수 이름 등 관련 된 모든 Pythonic 규칙을 따라야 합니다. 오류가 발생 하는 경우 공백 및 대/소문자를 확인 합니다.
++ 코드는 들여쓰기, 변수 이름 등 관련 된 모든 Python 규칙을 따라야 합니다. 오류가 발생 하는 경우 공백 및 대/소문자를 확인 합니다.
 + 기본적으로 로드 되지 않은 모든 라이브러리를 사용 하는 경우 로드 하는 데 스크립트의 시작 부분에 import 문을 사용 해야 합니다. SQL Server는 여러 제품 관련 라이브러리를 추가합니다. 자세한 내용은 [Python 라이브러리](../python/python-libraries-and-data-types.md)합니다.
 + 라이브러리에 이미 설치 되어 있지 않으면를 중지 하 고 여기에 설명 된 대로 SQL Server 외부 Python 패키지 설치: [SQL Server에 새로운 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 

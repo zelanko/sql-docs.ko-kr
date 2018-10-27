@@ -1,62 +1,60 @@
 ---
-title: Revoscalepy를 사용 하 여 Python을 사용 하 여 모델을 만드는 | Microsoft Docs
+title: Revoscalepy를 사용 하 여 Python를 사용 하 여 SQL Server에서 모델 만들기 | Microsoft Docs
+description: Revoscalepy 함수를 사용 하 여 SQL Server에서 원격으로 실행 되는 데이터 과학 모델을 만드는 Python 스크립트를 작성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/25/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c8ff387c3abda3f147700dce6349009a027a778
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461959"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100164"
 ---
-# <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy를 사용 하 여 Python을 사용 하 여 모델을 만들려면
+# <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Revoscalepy를 사용 하 여 Python을 사용 하 여 SQL Server에서 원격으로 실행 되는 모델을 만들려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단원에서는 SQL Server에서 선형 회귀 모델 만들기를 원격 개발 클라이언트에서 Python 코드를 실행 하는 방법을 알아봅니다. 
+합니다 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Microsoft에서 Python 라이브러리는 데이터 탐색, 시각화, 변환 및 분석에 대 한 데이터 과학 알고리즘을 제공 합니다. 이 라이브러리는 SQL Server의 Python 통합 시나리오에서 전략적 중요도 있습니다. 다중 코어 서버의 **revoscalepy** 함수 병렬로 실행할 수 있습니다. 중앙 서버 및 클라이언트 워크스테이션을 사용 하 여 분산된 아키텍처에서 (같은 모든 물리적 컴퓨터를 구분 **revoscalepy** 라이브러리), 로컬에서 시작 되지만 다음 실행을 이동 하는 Python 코드를 작성할 수는 데이터가 있는 원격 SQL Server 인스턴스.
+
+찾을 수 있습니다 **revoscalepy** 다음과 같은 Microsoft 제품에 배포 합니다.
+
++ [SQL Server Machine Learning Services (in-database)](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft Machine Learning Server (독립 실행형 서버, 비 SQL)](https://docs.microsoft.com/machine-learning-server/index)
++ [클라이언트 쪽 Python 라이브러리 (개발 워크스테이션)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
+
+이 연습에는 기반으로 선형 회귀 모델을 만드는 방법을 보여 줍니다 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)에서 알고리즘 중 하 나와 **revoscalepy** 입력으로 계산 컨텍스트를 수락 하는 합니다. 이 연습에서 실행할 코드를 로컬에서 사용 하 여 원격 컴퓨팅 환경에 코드 실행을 이동 **revoscalepy** 계산 컨텍스트를 원격을 사용 하도록 설정 하는 함수입니다.
+
+이 자습서를 완료 하 여 학습할 방법:
+
+> [!div class="checklist"]
+> * 사용 하 여 **revoscalepy** 선형 모델을 만들려면
+> * 원격 계산 컨텍스트를 로컬에서 작업을 이동
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ 이 단원에서는 이전 단원 보다 다양 한 데이터를 사용합니다. 이전 단원을 먼저 완료 되어야 할 필요가 없습니다. 그러나 이전 단원을 완료 하 고 Python을 실행 하도록 이미 구성 서버가 있는 경우 해당 서버 및 데이터베이스 컨텍스트로 사용할를 계산 합니다.
-+ 컨텍스트에 계산으로 SQL Server를 사용 하 여 Python 코드를 실행할 SQL Server 2017 이상이 필요 합니다. 명시적으로 설치 하 고 기능을 사용 하도록 설정 해야 게다가 **Machine Learning Services**, Python 언어 옵션을 선택 합니다.
+이 연습에서 사용 하는 샘플 데이터를 [ **flightdata** ](demo-data-airlinedemo-in-sql.md) 데이터베이스입니다.
 
-    SQL Server 2017의 시험판 버전을 설치한 경우 업데이트 해야에 적어도 RTM 버전입니다. 서비스 릴리스 이후 계속 해 서에 확장 하 고 Python 기능을 향상 합니다. 이 자습서의 일부 기능은 초기 시험판 버전에서 작동 하지 않을 수 있습니다.
+이 문서의 샘플 코드를 실행 하는 IDE 및 IDE Python 실행 파일에 연결 되어 있어야 합니다.
 
-+ 이 예제에서는 라는 미리 정의 된 Python 환경에 `PYTEST_SQL_SERVER`입니다. 포함 하도록 구성 된 환경 **revoscalepy** 및 기타 필요한 라이브러리입니다. 
+계산 컨텍스트 전환 사례를 하려면를 [로컬 워크스테이션](../python/setup-python-client-tools-sql.md) 및 사용 하 여 SQL Server 데이터베이스 엔진 인스턴스 [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 Python을 사용 하도록 설정 합니다. 
 
-    Python을 실행 하도록 구성 된 environment가 없는 경우 별도로 수행 해야 합니다. 또는 Python 환경을 수정 하는 방법에 대 한 설명은이 자습서의 범위를 벗어났습니다. 올바른 라이브러리를 포함 하는 Python 클라이언트를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [설치 Python 클라이언트](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 하 고 [도구 링크 Python](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)합니다.
+> [!Tip]
+> 두 대의 컴퓨터에 없는 경우에 관련 응용 프로그램을 설치 하 여 하나의 물리적 컴퓨터에서 원격 계산 컨텍스트를 시뮬레이션할 수 있습니다. 첫 번째, 설치 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) "원격" 인스턴스로 작동 합니다. 두 번째, 설치 합니다 [작동 하는 Python 클라이언트 라이브러리](../python/setup-python-client-tools-sql.md) 클라이언트입니다. 두 개는 동일한 Python 배포와 동일한 컴퓨터에 Microsoft Python 라이브러리를 해야 합니다. 파일 경로 및 연습을 성공적으로 완료 하는 데 사용 하는 복사본을 Python.exe 추적 해야 합니다.
 
 ## <a name="remote-compute-contexts-and-revoscalepy"></a>원격 계산 컨텍스트 및 revoscalepy
 
-이 샘플 원격에서 Python 모델을 만드는 과정을 보여 줍니다 _계산 컨텍스트_, 클라이언트에서 작업 하지만 원격 환경, SQL Server, Spark Machine Learning Server 등을 선택할 수 있는 위치는 작업이 실제로 수행 됩니다. 계산 컨텍스트를 사용 하 여 쉽게 코드를 한 번 작성 하 고 지원 되는 모든 환경에 배포 합니다.
+이 샘플 클라이언트에서 작업 하지만 원격 환경, SQL Server, Spark 등의 작업이 실제로 수행 되는 Machine Learning Server를 선택할 수 있는 원격 계산 컨텍스트를에서 Python 모델을 만드는 과정을 보여 줍니다. 데이터가 상주 하는 계산을 적용할 원격 계산 컨텍스트는.
 
 SQL Server에서 Python 코드를 실행 하려면 필요 합니다 **revoscalepy** 패키지 있습니다. 이 유사한 Microsoft에서 제공 하는 특별 한 Python 패키지를 **RevoScaleR** R 언어에 대 한 패키지입니다. 합니다 **revoscalepy** 패키지 계산 컨텍스트 만들기를 지원 하 고 로컬 워크스테이션 및 원격 서버 간에 데이터 및 모델을 전달 하기 위한 인프라를 제공 합니다. 합니다 **revoscalepy** 데이터베이스에서 코드 실행이 지 함수 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)합니다.
 
 이 단원에서는 사용 하 여 데이터에서 SQL Server를 기반으로 선형 모델을 학습 하 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)에서 함수 **revoscalepy** 매우 큰 데이터 집합을 통해 회귀를 지 합니다. 
 
-이 단원에서는 기본 설정 하 고 다음을 사용 하는 방법 보여 줍니다는 **SQL Server 계산 컨텍스트에서** python에서입니다. 방법에 대 한 다른 플랫폼을 사용 하 여 계산 컨텍스트 작업 및 지원 되는 계산 컨텍스트 [Machine Learning Server에서 스크립트 실행에 대 한 계산 컨텍스트](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)
+이 단원에서는 기본 설정 하 고 다음을 사용 하는 방법 보여 줍니다는 **SQL Server 계산 컨텍스트에서** python에서입니다. 방법에 대 한 다른 플랫폼을 사용 하 여 계산 컨텍스트 작업 및 지원 되는 계산 컨텍스트 [Machine Learning Server에서 스크립트 실행에 대 한 계산 컨텍스트](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)합니다.
 
-## <a name="prepare-the-database-and-sample-data"></a>데이터베이스 및 샘플 데이터 준비
-
-1. 이 단원에서는 데이터베이스를 사용 **sqlpy**합니다. 이전 단원 중 하나를 완료 하지 않은 경우에 다음 코드를 실행 하 여 데이터베이스를 만들 수 있습니다.
-
-    ```sql
-    CREATE DATABASE sqlpy;
-    GO
-    USE sqlpy;
-    GO
-    ```
-
-    > [!IMPORTANT]
-    > 다른 데이터베이스를 사용 하려는 경우에 샘플 코드를 편집 하 고 연결 문자열에 데이터베이스 이름을 변경 해야 합니다.
-
-2. 이 샘플에서는 R 및 Python 모두에 사용할 수 있는 항공사 데이터 집합을 사용 합니다. Python 샘플에 대 한 데이터베이스를 만든 후 여기에 설명 된 대로 데이터를 사용 하 여 테이블을 채웁니다: [RevoScaleR의 데이터 샘플링](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data)합니다.
-
-3. 클라이언트에서 사용할 수 있는 환경을 사용 하도록이 환경의 이름을 변경 합니다.
 
 ## <a name="run-the-sample-code"></a>샘플 코드를 실행 합니다.
 
@@ -126,7 +124,7 @@ def test_linmod_sql():
 
 ### <a name="defining-a-data-source-vs-defining-a-compute-context"></a>계산 컨텍스트 정의 및 데이터 원본 정의
 
-데이터 원본에서 계산 컨텍스트를 다릅니다. 합니다 _데이터 원본_ 코드에 사용 된 데이터를 정의 합니다. 합니다 _계산 컨텍스트_ 코드를 실행 하는 위치를 정의 합니다. 그러나 동일한 정보 중 일부를 사용합니다.
+데이터 원본에서 계산 컨텍스트를 다릅니다. 합니다 *데이터 원본* 코드에 사용 된 데이터를 정의 합니다. 계산 컨텍스트는 코드를 실행 하는 위치를 정의 합니다. 그러나 동일한 정보 중 일부를 사용합니다.
 
 + Python 변수인와 같은 `sql_query` 및 `sql_connection_string`, 데이터의 원본을 정의 합니다. 
 
@@ -154,7 +152,7 @@ def test_linmod_sql():
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-에 대 한 호출에서이 계산 컨텍스트는 다시 [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):입니다.
+에 대 한 호출에서이 계산 컨텍스트는 다시 [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
@@ -173,10 +171,9 @@ SQL Server 계산 컨텍스트를 일괄 처리 크기 설정 수도 있고 작�
 + 샘플 4 개의 프로세서를 사용 하 여 컴퓨터에서 실행 되므로 `num_tasks` 매개 변수는 리소스의 최대 사용을 허용 하도록 4로 설정 됩니다. 
 + 이 값을 0으로 설정 하면 SQL Server 서버에 대 한 현재 MAXDOP 설정에서 최대한 많은 작업이 병렬로 실행 하는 기본값을 사용 합니다. 그러나 할당할 수 있는 태스크 수가 정확한 서버 설정과 같은 다른 많은 요소를 실행 하는 다른 작업에 따라 달라 집니다.
 
-## <a name="related-samples"></a>관련 된 샘플
+## <a name="next-steps"></a>다음 단계
 
 이러한 추가 Python 샘플 및 자습서 원격 계산 컨텍스트 사용 뿐만 아니라 더 복잡 한 데이터 원본을 사용 하 여 종단 간 시나리오를 보여 줍니다.
 
 + [SQL 개발자를 위한 데이터베이스 내 Python](sqldev-in-database-python-for-sql-developers.md)
-+ [Python 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [Python 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

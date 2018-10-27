@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f3806faf430f5909397a3b805433ddaca402b78f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021220"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144968"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 서버 개체 아키텍처
   ADOMD.NET 서버 개체는 사용자 정의 함수 (Udf) 또는 저장된 프로시저를 만드는 데 사용할 수 있는 도우미 개체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
   
 > [!NOTE]  
->  사용 하 여 **Microsoft.AnalysisServices.AdomdServer** 네임 스페이스 (및 이러한 개체) msmgdsrv.dll에 대 한 참조를 UDF 프로젝트 또는 저장된 프로시저에 추가 해야 합니다.  
+>  사용 하는 **Microsoft.AnalysisServices.AdomdServer** 네임 스페이스 (및 이러한 개체), msmgdsrv.dll에 대 한 참조를 UDF 프로젝트 또는 저장된 프로시저에 추가 해야 합니다.  
   
- ![ADOMD.NET 서버에서 개체 관계 표시](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 보여 줍니다.")  
+ ![ADOMD.NET 서버에서 개체 관계를 보여 줍니다](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 보여 줍니다.")  
 ADOMD.NET 개체 모델  
   
  ADOMD.NET 개체 계층 구조와의 상호 작용은 일반적으로 다음 표에 설명된 최상위 레이어에 있는 하나 이상의 개체에서 시작됩니다.  
@@ -35,7 +35,7 @@ ADOMD.NET 개체 모델
 |집합 및 튜플 만들기|<xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>, <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder><br /> <xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>는 변경할 수 없는 집합을 만드는 방법을 제공하고 <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder>는 변경할 수 없는 튜플을 만드는 방법을 제공합니다.|  
 |MDX 언어의 6가지 기본 유형 간의 암시적 변환 및 캐스트 지원|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> 개체는 다음 형식 간의 암시적 변환 및 캐스트를 제공합니다.<br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Level><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Member><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Set><br /><br /> 스칼라 또는 값 유형|  
   
-## <a name="see-also"></a>관련 항목:  
- [ADOMD.NET 서버 프로그래밍](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+## <a name="see-also"></a>관련 항목  
+ [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

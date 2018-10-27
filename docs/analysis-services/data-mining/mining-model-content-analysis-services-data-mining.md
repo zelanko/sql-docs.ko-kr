@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ecf592968e6bd025a0096d0ed3369029cbf4eec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019530"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146228"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34019530"
  루트 노드의 자식 노드 개수는 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 자식 노드의 의미와 내용은 이러한 알고리즘뿐 아니라 데이터의 깊이와 복잡도에 의해 결정됩니다.  
   
 ##  <a name="bkmk_Nodes"></a> 마이닝 모델 콘텐츠의 노드  
- 마이닝 모델에서 노드는 모델의 전부 또는 일부에 대한 정보를 저장하는 범용 컨테이너입니다. 각 노드의 구조는 항상 동일하며 데이터 마이닝 스키마 행 집합으로 정의된 열을 포함합니다. 자세한 내용은 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)을 참조하세요.  
+ 마이닝 모델에서 노드는 모델의 전부 또는 일부에 대한 정보를 저장하는 범용 컨테이너입니다. 각 노드의 구조는 항상 동일하며 데이터 마이닝 스키마 행 집합으로 정의된 열을 포함합니다. 자세한 내용은 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)을 참조하세요.  
   
  각 노드에는 각 모델 내에서 고유한 식별자를 포함하는 노드에 대한 메타데이터, 보모 노드의 ID 및 노드에 있는 자식 노드 개수가 포함됩니다. 메타데이터는 노드가 속한 모델과 특정 모델이 저장되는 데이터베이스 카탈로그를 식별합니다. 노드에 제공되는 추가 내용은 모델을 만드는 데 사용된 알고리즘의 유형에 따라 다르며, 여기에는 다음이 포함될 수 있습니다.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "34019530"
   
 |NODE_TYPE ID|노드 레이블|노드 내용|  
 |-------------------|----------------|-------------------|  
-|1.|Model|메타데이터 및 루트 내용 노드입니다. 모든 모델 유형에 적용됩니다.|  
-|2|트리|분류 트리의 루트 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
+|1|Model|메타데이터 및 루트 내용 노드입니다. 모든 모델 유형에 적용됩니다.|  
+|2|trEE|분류 트리의 루트 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |3|내부|트리의 내부 분할 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |4|배포|트리의 터미널 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |5|클러스터|알고리즘을 통해 검색되는 클러스터입니다. 클러스터링 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
@@ -203,7 +203,7 @@ ms.locfileid: "34019530"
   
 |VALUE_TYPE ID|값 레이블|값 형식 이름|  
 |--------------------|-----------------|---------------------|  
-|1.|Missing|사례 데이터에 해당 특성에 대한 값이 포함되지 않았음을 나타냅니다. **Missing** 상태는 값이 있는 특성과 별도로 계산됩니다.|  
+|1|Missing|사례 데이터에 해당 특성에 대한 값이 포함되지 않았음을 나타냅니다. **Missing** 상태는 값이 있는 특성과 별도로 계산됩니다.|  
 |2|Existing|사례 데이터에 해당 특성에 대한 값이 포함되어 있음을 나타냅니다.|  
 |3|연속|특성 값이 연속 숫자 값이며 분산 및 표준 편차와 함께 평균으로 표시할 수 있음을 나타냅니다.|  
 |4|불연속|불연속 값으로 처리되는 숫자 또는 텍스트 값을 나타냅니다.<br /><br /> **참고** 불연속 값도 누락될 수 있지만 누락된 불연속 값은 계산을 수행할 때 다르게 처리됩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.|  
@@ -242,7 +242,7 @@ ms.locfileid: "34019530"
   
 |노드 수준/특성 및 값|한계 확률|노드 확률|  
 |----------------------------------------|--------------------------|----------------------|  
-|모델 루트<br /><br /> 모든 대상 고객|1.|1.|  
+|모델 루트<br /><br /> 모든 대상 고객|1|1|  
 |성별로 나눈 대상 고객|.5|.5|  
 |성별로 나누고 다시 소득에 따라 세 가지로 나눈 대상 고객|.33|.5 * .33 = .165|  
   
@@ -263,14 +263,14 @@ ms.locfileid: "34019530"
 |알고리즘 또는 모델 유형|모델 콘텐츠|마이닝 모델 쿼리|  
 |-----------------------------|-------------------|----------------------------|  
 |연결 규칙 모델|[연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|클러스터링 모델|[의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|의사 결정 트리 모델|[의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|클러스터링 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|의사 결정 트리 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |선형 회귀 모델|[선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |로지스틱 회귀 모델|[로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes 모델|[Naive Bayes 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes 모델|[Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |신경망 모델|[신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |시퀀스 클러스터링|[시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|시계열 모델|[시계열 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|시계열 모델|[시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 마이닝 모델 콘텐츠를 보기 위한 도구  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 찾아볼 경우 **및**에서 사용할 수 있는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Microsoft 일반 콘텐츠 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]트리 뷰어에서 정보를 볼 수 있습니다.  
@@ -292,8 +292,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 열고 시스템 테이블을 쿼리하여 데이터 마이닝 스키마 행 집합의 정보에 액세스할 수도 있습니다. 자세한 내용은 [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [Microsoft 일반 콘텐츠 트리 뷰어 & #40; 데이터 마이닝 & #41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="see-also"></a>관련 항목  
+ [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

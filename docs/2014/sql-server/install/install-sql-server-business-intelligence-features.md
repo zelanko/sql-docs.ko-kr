@@ -1,32 +1,31 @@
 ---
-title: SQL Server 2014 BI 기능 설치 | Microsoft Docs
+title: SQL Server 2014 BI 기능 설치
 ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
-ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fec33fe160d5ee901eefda541133e6c7b9610b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.date: 10/24/2018
+ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051145"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 BI 기능 설치
+
   Microsoft Business Intelligence 플랫폼에 속하는 SQL Server 기능에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 이러한 기능을 설치하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 독립 실행형 서버로 설치하거나, 확장 구성으로 설치하거나, SharePoint 팜의 공유 서비스 응용 프로그램으로 설치할 수 있습니다. 팜에 서비스를 설치하면 SharePoint에서만 사용 가능한 BI 기능을 사용할 수 있는데, 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 테이블 형식 model 데이터베이스에서 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 임시 대화형 보고서 디자이너인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint용 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이 포함됩니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 SharePoint용 PowerPivot의 설치 단계에 익숙한 경우 검사 목록으로 바로 이동하여 특정 시나리오를 사용하는 방법에 대한 지침을 확인할 수 있습니다. 자세한 내용은 [SharePoint 사용 하 여 BI 기능 설치에 대 한 검사 목록](checklists-for-installing-bi-features-with-sharepoint.md)합니다.  
   
-## <a name="contents"></a>내용  
- 섹션 내용  
+## <a name="contents"></a>내용
+
+섹션 내용
   
 |링크|태스크|  
 |----------|----------|  
@@ -42,10 +41,12 @@ ms.locfileid: "48116963"
 |[SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [SharePoint용 PowerPivot 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|이 섹션의 지침에 따라 이전 버전에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 서버 및 콘텐츠를 업그레이드할 수 있습니다.|  
 |[SQL Server 2014 제거](uninstall-sql-server.md)<br /><br /> [SharePoint용 PowerPivot 제거](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [Reporting Services 제거](../../../2014/sql-server/install/uninstall-reporting-services.md)|이 섹션의 지침에 따라 BI 기능을 제거할 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [새로운 &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
- [Analysis Services 및 Business Intelligence의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
- [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)   
- [SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  
+## <a name="see-also"></a>관련 항목
+
+* [새로운 &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+
+* [Analysis Services 및 Business Intelligence의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)
+
+* [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)
+
+* [SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)

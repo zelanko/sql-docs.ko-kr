@@ -15,12 +15,12 @@ ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 247be53e3811e721d05733320372caf7f1350032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d89f9e8e80aa611d9c8077cf75f7f42af855da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225023"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148228"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET Server 기능
   모든 ADOMD.NET 서버 개체는 서버의 데이터 및 메타데이터에 대해 읽기 전용 액세스를 제공하므로 ADOMD.NET 서버 개체 모델을 사용하여 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 이 서버 개체 모델은 스키마 행 집합을 지원하지 않습니다.  
@@ -63,6 +63,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [ADOMD.NET 서버 프로그래밍](adomd-net-server-programming.md)  
+ [ADOMD.NET 서버 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

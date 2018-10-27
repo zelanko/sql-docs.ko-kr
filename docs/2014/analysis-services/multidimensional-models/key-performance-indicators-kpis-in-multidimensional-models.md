@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134013"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145225"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
   비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 응용 프로그램의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
- KPI는 목표 집합에 대한 정보, 큐브에 기록된 성능의 실제 수식 및 성능의 추세와 상태를 보여 주는 측정값을 처리합니다. AMO는 KPI 값에 대한 수식 및 기타 정의를 정의하는 데 사용됩니다. ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 KPI 값을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](adomd-net/developing-with-adomd-net.md)을 참조하세요.  
+ KPI는 목표 집합에 대한 정보, 큐브에 기록된 성능의 실제 수식 및 성능의 추세와 상태를 보여 주는 측정값을 처리합니다. AMO는 KPI 값에 대한 수식 및 기타 정의를 정의하는 데 사용됩니다. ADOMD.NET과 같은 쿼리 인터페이스는 클라이언트 응용 프로그램에서 KPI 값을 검색하여 최종 사용자에게 노출하는 데 사용됩니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)을 참조하세요.  
   
  단순 <xref:Microsoft.AnalysisServices.Kpi> 개체는 기본 정보, 목표, 계산된 실제 값, 상태 값, 추세 값 및 KPI가 표시되는 폴더로 구성되어 있습니다. 기본 정보에는 KPI의 이름과 설명이 포함됩니다. 목표는 숫자로 계산되는 MDX 식입니다. 실제 값은 숫자로 계산되는 MDX 식입니다. 상태 및 추세 값은 숫자로 계산되는 MDX 식입니다. 폴더는 KPI를 클라이언트에 표시하기 위한 권장 위치입니다.  
   
