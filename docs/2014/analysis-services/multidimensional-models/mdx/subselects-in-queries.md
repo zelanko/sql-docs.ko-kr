@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212093"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148458"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
   하위 SELECT 식은 바깥쪽 외부 SELECT가 실행되는 큐브 공간을 제한하는 데 사용되는 중첩 SELECT 식입니다. 하위 SELECT를 사용하면 모든 계산이 실행되는 새로운 공간을 정의할 수 있습니다.  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   축 절에서는 HAVING 절을 사용할 수 없습니다. 대신 [필터&#40;MDX&#41;](/sql/mdx/filter-mdx) 함수 식을 사용하세요.  
   
--   기본적으로 계산된 멤버가 하위 select;에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로의 값을 할당 하 여는 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 하거나 `DBPROP_MSMD_SUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 참조 [하위 Select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 에 대 한 값에 따라 계산된 멤버의 동작에 대 한 자세한 설명은 `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`합니다.  
+-   기본적으로 계산된 멤버가 하위 select;에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로의 값을 할당 하 여는 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 하거나 `DBPROP_MSMD_SUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 참조 [하위 Select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 에 대 한 값에 따라 계산된 멤버의 동작에 대 한 자세한 설명은 `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`합니다.  
   
   

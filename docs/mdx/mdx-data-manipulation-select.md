@@ -1,5 +1,5 @@
 ---
-title: SELECT 문 (MDX) | Microsoft Docs
+title: 선택 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55a4e841a181e788892c293ec9c39a1a53a0459e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741892"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148418"
 ---
-# <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 선택
+# <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 - SELECT
 
 
   지정한 큐브에서 데이터를 검색합니다.  
@@ -89,7 +89,7 @@ FROM
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *정수*  
+ *Integer*  
  0에서 127 사이의 정수입니다.  
   
  *Cube_Name*  
@@ -117,7 +117,7 @@ FROM
   
  하위 SELECT 문에 NON VISUAL 옵션을 사용하면 필터링된 합계 대신 순 합계를 유지하면서 멤버를 필터링할 수 있습니다. 즉, 상위 10개 매출 정보(사람/제품/지역)를 쿼리한 후 상위 10개의 매출 합계 값 대신 쿼리한 모든 멤버의 매출 순 합계를 반환 결과로 얻을 수 있습니다. 자세한 내용은 아래 예를 참조하십시오.  
   
- 계산된 멤버에 포함 될 수 \<t query axis > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [XMLA 속성 지원 &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
+ 계산된 멤버에 포함 될 수 있습니다 \<SELECT 쿼리 축 절 > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [지원 되는 XMLA 속성 &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 하 고 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대 한 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
 ## <a name="autoexists"></a>AUTOEXIST  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
@@ -340,10 +340,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 AUTOEXISTS를 사용 하 여 수정할 수 있습니다 = [1 | 2 | 3]; 연결 문자열 매개 변수 참조 [XMLA 속성 지원 &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다.  
+ Autoexists 동작은 사용 하 여 수정할 수 = [1 | 2 | 3]에서 연결 문자열을 매개 변수 참조 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 하 고 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용에 대 한 합니다.  
   
 ## <a name="examples"></a>예  
- 합계를 반환 하는 다음 예제에서는 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년의 첫 8 개월 동안 집계는 `Date` 차원에서의 **Adventure Works** 큐브.  
+ 합계를 반환 하는 다음 예제에서는 합니다 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년의 첫 8 개월 동안 집계를 `Date` 차원에서는 **Adventure Works** 큐브.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 이해 하기 **보이지 않는** 다음 예제에서는 [Adventure Works]의 쿼리를 있는 제품 범주 데이터 열은 열이 고 대리점 업종이 행 테이블에서 [Reseller Sales Amount] 수치를 가져올 수는 있습니다. 합계는 제품과 대리점을 모두 포함합니다.  
+ 알아야 **NON VISUAL을** 제품 범주가 열이 되 고는 대리점 업종이 행 인 테이블에서 [Reseller Sales Amount] 수치를 가져오려면 다음 예제에서는 [Adventure Works]의 쿼리입니다. 합계는 제품과 대리점을 모두 포함합니다.  
   
  SELECT 문은 다음과 같습니다.  
   
@@ -436,7 +436,7 @@ WHERE
   
  이전 결과와 비교하면 [All Resellers] 행에는 [Value Added Reseller] 및 [Warehouse]에 표시된 값에 대한 합계가 표시되고 [All Products] 열에는 표시되지 않은 제품을 포함한 모든 제품의 합계 값이 표시되는 것을 알 수 있습니다.  
   
- 다음 예에서는 하위 SELECT에서 계산 멤버를 사용하여 멤버를 필터링하는 방법을 보여 줍니다. 이 샘플을 재현할 수 있으려면는 연결이 설정 되어 있어야 연결 문자열 매개 변수를 사용 하 여 *하위 쿼리 = 1*합니다.  
+ 다음 예에서는 하위 SELECT에서 계산 멤버를 사용하여 멤버를 필터링하는 방법을 보여 줍니다. 이 샘플을 재현할 수 일 하는 연결이 설정 되어 있어야 연결 문자열 매개 변수를 사용 하 여 *하위 쿼리 = 1*합니다.  
   
  `select Measures.allmembers on 0`  
   
@@ -464,7 +464,7 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>관련 항목  
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [쿼리 및 Slicer 축으로 쿼리 제한 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   

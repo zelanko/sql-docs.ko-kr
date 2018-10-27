@@ -15,18 +15,18 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087703"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148358"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
   선택한 개체에 대한 개체 정의 또는 메타데이터를 읽을 수 있는 권한을 통해 관리자는 개체 정의를 수정하거나 개체 구조를 수정하거나 개체에 대한 실제 데이터를 볼 수 있는 권한을 부여하지 않고도 개체 정보를 볼 수 있는 권한을 부여할 수 있습니다. `Read Definition` 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 권한은 부여할 수 있습니다. 필요한 경우 `Read Definition` 큐브에 대 한 권한을 설정한 다음 `Read Definition` 데이터베이스에 대 한 합니다. 사용 권한은 가산적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  
   
 > [!NOTE]  
->  데이터베이스의 메타데이터를 읽을 수 있는 권한은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]데이터베이스에 연결하는 데 필요한 최소 사용 권한입니다. 메타데이터를 읽을 권한이 있는 사용자는 DISCOVER_XML_METADATA 스키마 행 집합을 사용하여 개체를 쿼리하고 해당 메타데이터를 볼 수도 있습니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](../schema-rowsets/xml/discover-xml-metadata-rowset.md)을 참조하세요.  
+>  데이터베이스의 메타데이터를 읽을 수 있는 권한은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]데이터베이스에 연결하는 데 필요한 최소 사용 권한입니다. 메타데이터를 읽을 권한이 있는 사용자는 DISCOVER_XML_METADATA 스키마 행 집합을 사용하여 개체를 쿼리하고 해당 메타데이터를 볼 수도 있습니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)을 참조하세요.  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>데이터베이스에 대한 정의 읽기 권한 설정  
  데이터베이스 메타데이터를 읽을 수 있는 권한을 부여하면 데이터베이스 내 모든 개체의 메타데이터를 읽을 수 있는 권한도 부여됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48087703"
 5.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 권한 부여 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [처리 권한 부여 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [데이터베이스 권한 부여&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   
