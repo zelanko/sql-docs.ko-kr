@@ -13,12 +13,12 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6187b1c9ed2153342f90fc5752e7f34b1e189442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac0bfe3762635d4e903221a1688514faff0e4488
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643141"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099866"
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "47643141"
   
 ## <a name="see-also"></a>참고 항목  
 [보기](../../ssms/solution/solution-explorer.md)  
-[원본 제어에서 솔루션 열기](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
+[원본 제어에서 솔루션 열기](https://msdn.microsoft.com/library/ms174216.aspx)  
   

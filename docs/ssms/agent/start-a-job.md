@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a64a49babfe377230bf3e17dc6a356afc46f1cdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5e43f4f9135d2891c772f001e88a6af42e3b062
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673211"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099494"
 ---
 # <a name="start-a-job"></a>Start a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47673211"
     GO  
     ```  
   
-자세한 내용은 [sp_start_job(Transact-SQL)](http://msdn.microsoft.com/en-us/8a91df6a-eb84-4512-9a17-4a6e32a9538a)을 참조하세요.  
+자세한 내용은 [sp_start_job(Transact-SQL)](http://msdn.microsoft.com/8a91df6a-eb84-4512-9a17-4a6e32a9538a)을 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업을 시작하려면**  

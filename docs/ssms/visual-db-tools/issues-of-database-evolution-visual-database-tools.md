@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16c59e244c3b99ec6d76fd5b5754c1efeb88a26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a423dd7f00ff216d11dc5b865c1f1c8bb26ca08
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100024"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47788861"
 데이터베이스 디자인을 변경하는 방법에 관계 없이 변경 기록을 유지해야 합니다. 프로덕션 데이터베이스의 모든 수정 내용에 대한 SQL 스크립트를 유지하는 것도 변경 기록을 유지하는 한 방법입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
+[제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

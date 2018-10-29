@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d73d357ad9ec688854de3553e825693f20c42c68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a309b4884d870d6d17a19f73144725077005f18a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099315"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server Business Intelligence 기능 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47741311"
 > SSDT(SQL Server Data Tools)는 SQL Server 2016에 포함되지 않습니다. [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714).
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services&#40;SSRS&#41;의 새로운 기능](http://msdn.microsoft.com/en-us/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
+ [Reporting Services&#40;SSRS&#41;의 새로운 기능](http://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Integration Services의 새로운 기능](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [MDS&#40;Master Data Services&#41;의 새로운 기능](../../master-data-services/what-s-new-in-master-data-services-mds.md)   

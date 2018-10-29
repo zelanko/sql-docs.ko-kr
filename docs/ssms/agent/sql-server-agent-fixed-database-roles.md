@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0badaa56c5df96d1023e8fca66f773c8427fa27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7387016972eb110c0fd07c4bdc68d92bef066fff
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748091"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100264"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -115,8 +115,8 @@ ms.locfileid: "47748091"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
-[sp_update_job(Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
-[sp_update_schedule(Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  
-[sp_notify_operator(Transact-SQL)](http://msdn.microsoft.com/en-us/c440f5c9-9884-4196-b07c-55d87afb17c3)  
-[sp_purge_jobhistory(Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)  
+[sp_update_job(Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
+[sp_update_schedule(Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  
+[sp_notify_operator(Transact-SQL)](http://msdn.microsoft.com/c440f5c9-9884-4196-b07c-55d87afb17c3)  
+[sp_purge_jobhistory(Transact-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)  
   

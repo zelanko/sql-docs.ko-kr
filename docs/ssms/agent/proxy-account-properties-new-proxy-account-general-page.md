@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e4233e204e9612c40f91003f844400f3cca13a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3cf80df907dfe313d7282d0cf4efe31bd9b7f56
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099644"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>프록시 계정 속성 - 새 프록시 계정(일반 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47641551"
 프록시에 대한 자격 증명 이름을 입력합니다.  
   
 > [!NOTE]  
-> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기(SQL Server Management Studio)](http://msdn.microsoft.com/en-us/c1e77e91-2a69-40d9-b8b3-97cffc710586)를 참조하세요.  
+> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기(SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)를 참조하세요.  
   
 **...**  
 **자격 증명 선택** 대화 상자를 시작합니다.  

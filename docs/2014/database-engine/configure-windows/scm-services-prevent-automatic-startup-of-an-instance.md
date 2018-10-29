@@ -38,7 +38,7 @@ ms.locfileid: "48178303"
   
 3.  세부 정보 창에서 **MSSQLServer**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  에 **SQL Server \< ***instancename***> 속성** 대화 상자를 **속성** 상자에서 값을 설정 **시작 모드**하 **수동**합니다.  
+4.  에 **SQL Server \<***instancename***> 속성** 대화 상자를 **속성** 상자에서 값을 설정 **시작 모드**하 **수동**합니다.  
   
 5.  **확인**을 클릭하여 **SQL Server \<***instancename***> 속성** 대화 상자를 닫은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자를 닫습니다.  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c560cc6c8c11fb3d224bf0cefef0f34e658086e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3283f1c71d6ded1f9799788483c05afffbf87251
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100020"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server 에이전트 보안 구현
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47625761"
   
 ## <a name="see-also"></a>참고 항목  
 [미리 정의된 역할 사용](../../reporting-services/security/role-definitions-predefined-roles.md)  
-[sp_addrolemember(Transact-SQL)](http://msdn.microsoft.com/en-us/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
-[sp_droprolemember(Transact-SQL)](http://msdn.microsoft.com/en-us/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
-[보안 및 보호(데이터베이스 엔진)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  
+[sp_addrolemember(Transact-SQL)](http://msdn.microsoft.com/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
+[sp_droprolemember(Transact-SQL)](http://msdn.microsoft.com/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
+[보안 및 보호(데이터베이스 엔진)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)  
   

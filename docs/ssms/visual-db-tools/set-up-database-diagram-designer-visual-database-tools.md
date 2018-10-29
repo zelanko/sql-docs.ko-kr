@@ -17,12 +17,12 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 408598a2aa90a039617a76605497812872ddae05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a593627965e006336b06a1afd1f391f3e175d46e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098595"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,5 +62,5 @@ ms.locfileid: "47660951"
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [이전 버전에서 데이터베이스 다이어그램 업그레이드&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
-[ALTER AUTHORIZATION(Transact-SQL)](http://msdn.microsoft.com/en-us/8c805ae2-91ed-4133-96f6-9835c908f373)  
+[ALTER AUTHORIZATION(Transact-SQL)](http://msdn.microsoft.com/8c805ae2-91ed-4133-96f6-9835c908f373)  
   

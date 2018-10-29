@@ -17,12 +17,12 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 544817890a988c41188df8b825560a5c9246d96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db9cda0558f2d43aa8921428f87a08f826a05afe
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620651"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099842"
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,5 +57,5 @@ ms.locfileid: "47620651"
 ## <a name="see-also"></a>참고 항목  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[솔루션 탐색기 원본 제어](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[솔루션 탐색기 원본 제어](https://msdn.microsoft.com/library/ms173879.aspx)  
   

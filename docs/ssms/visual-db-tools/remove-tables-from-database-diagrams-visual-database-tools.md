@@ -15,12 +15,12 @@ ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60351ce3cdf50aa279ee88af3fffb3ed1afec8ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd5407b13719451d960be51321f47bcc0dc4754
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100054"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "47766581"
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](http://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

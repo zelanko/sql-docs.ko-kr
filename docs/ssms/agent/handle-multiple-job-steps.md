@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b76bb16bc0fbd91b8c3dced2567f44a90a31c7f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33d297baecdf8e7b767dc1b9fd6df9a68c3a11ac
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099437"
 ---
 # <a name="handle-multiple-job-steps"></a>다중 작업 단계 처리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47600071"
 ## <a name="see-also"></a>참고 항목  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-[sysjobs(Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
+[sysjobs(Transact-SQL)](http://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
 [sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [작업 구현](../../ssms/agent/implement-jobs.md)  
 [작업 단계 관리](../../ssms/agent/manage-job-steps.md)  
