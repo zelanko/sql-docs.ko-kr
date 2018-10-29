@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015820"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145688"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "34015820"
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
   
--   [마이닝 구조에 사용 되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [모델링 플래그 & #40; 데이터 마이닝 & #41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [알고리즘 매개 변수 확인 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015820"
 ### <a name="analysis-management-objects-amo"></a>AMO(Analysis Management Objects)  
  AMO(Analysis Management Objects)는 XMLA의 최상위에 작성되며 데이터 마이닝 개체를 완전히 제어할 수 있게 하는 개체 모델입니다. AMO를 사용하여 마이닝 구조와 마이닝 모델을 생성, 배포 및 모니터링할 수 있습니다.  
   
--   [AMO 개념 및 개체 모델](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 개념 및 개체 모델](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34015820"
   
  **제한 사항:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 생성하는 일부 XMLA 문은 내부 용도로만 사용할 수 있고 XML DDL 스크립트에는 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 개발자 설명서](../../analysis-services/analysis-services-developer-documentation.md)  
   
   

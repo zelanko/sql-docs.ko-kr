@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874351"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460318"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -80,13 +80,11 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 - [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - 통합 인증은 지원되지 않습니다. 지금은 사용자 이름 및 암호만 지원됩니다.  
-- 기본적으로 암호화를 사용하도록 설정합니다. 암호화를 사용하지 않도록 설정하려면 ...해야 합니다.
-- [형식 매핑 제한 사항](polybase-type-mapping.md)
 
+- 암호화는 기본적으로 사용하도록 설정됩니다.
 
-## <a name="security-and-authentication"></a>보안 및 인증 
+## <a name="next-steps"></a>다음 단계
 
-## <a name="see-also"></a>참고 항목  
-
-[PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
+PolyBase에 대한 자세한 내용은 [PolyBase란?](polybase-guide.md)을 참조하세요.

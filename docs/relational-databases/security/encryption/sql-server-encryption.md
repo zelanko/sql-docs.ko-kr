@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782851"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643931"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,9 @@ ms.locfileid: "47782851"
 ## <a name="related-content"></a>관련 내용  
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
+
+[Azure SQL Database 보안 기능 개요](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>데이터 보호, 액세스 제어, 사전 대처식 모니터링을 위한 Azure SQL Database 보안 개요입니다.
   
  [암호화 함수&#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  암호화 함수 구현 방법에 대한 정보입니다.  

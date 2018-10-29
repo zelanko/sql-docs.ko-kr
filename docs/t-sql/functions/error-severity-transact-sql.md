@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23b3938eb6ef388f5ddb50e1c9e768e222dfd488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711131"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359290"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,8 +62,7 @@ ERROR_SEVERITY ( )
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_SEVERITY`는 해당 오류의 심각도 값을 반환합니다.  
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -72,7 +71,9 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -88,8 +89,7 @@ ErrorSeverity
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 저장된 프로시저는 오류에 대한 정보를 반환합니다.  
 
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +104,9 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -127,6 +129,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [오류 및 이벤트 참조&#40;데이터베이스 엔진&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebeb314304edd0678e366ebc67ffe6caafc4a168
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94720f617b9d2d8723ac6e9a28770291a966d4b3
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656141"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359330"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ERROR_STATE ( )
 ### <a name="a-using-errorstate-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류의 상태가 반환됩니다.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide by zero error  
     SELECT 1/0;  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>2. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -106,7 +106,7 @@ GO
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>3. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -131,7 +131,8 @@ GO
  [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)    
+ [오류 및 이벤트 참조&#40;데이터베이스 엔진&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775611"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356144"
 ---
 # <a name="databases"></a>데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
   
 ## <a name="basic-information-about-databases"></a>데이터베이스에 대한 기본 정보  
  컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스가 하나 이상 설치될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스는 하나 이상의 데이터베이스를 포함할 수 있습니다.  데이터베이스 내에 스키마라는 하나 이상의 개체 소유권 그룹이 있습니다. 각 스키마에는 테이블, 뷰, 저장 프로시저와 같은 데이터베이스 개체가 있습니다. 인증서 및 비대칭 키와 같은 일부 개체는 데이터베이스에는 포함되지만 스키마에는 포함되지 않습니다. 테이블을 만드는 방법은 [Tables](../../relational-databases/tables/tables.md)을 참조하십시오.  
@@ -38,7 +38,7 @@ ms.locfileid: "47775611"
  데이터베이스에 대한 액세스 권한이 있는 사용자는 데이터베이스의 개체에 액세스할 수 있습니다. 개별 사용자에게 사용 권한을 부여할 수 있지만 데이터베이스 역할을 만들고 데이터베이스 사용자를 역할에 추가한 다음 해당 역할에 액세스 권한을 부여하는 것이 좋습니다. 사용자 대신 역할에 사용 권한을 부여하면 사용 권한을 일관적으로 유지하고 사용자 수의 증가와 지속적인 변화를 쉽게 파악할 수 있습니다. 역할 사용 권한에 대한 자세한 내용은 [CREATE ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) 및 [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.  
   
 ## <a name="working-with-databases"></a>데이터베이스 작업  
- 데이터베이스를 사용하는 대부분의 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구를 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 도구에는 데이터베이스와 데이터베이스 내의 개체를 만드는 데 필요한 그래픽 사용자 인터페이스가 있습니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성하여 데이터베이스와 상호 작용하기 위한 쿼리 편집기가 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 디스크에서 설치하거나 MSDN에서 다운로드할 수 있습니다.  
+ 데이터베이스를 사용하는 대부분의 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구를 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 도구에는 데이터베이스와 데이터베이스 내의 개체를 만드는 데 필요한 그래픽 사용자 인터페이스가 있습니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성하여 데이터베이스와 상호 작용하기 위한 쿼리 편집기가 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 디스크에서 설치하거나 MSDN에서 다운로드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 도구에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
   

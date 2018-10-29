@@ -39,7 +39,7 @@ ms.locfileid: "47684371"
 ####  <a name="Permissions"></a> Permissions  
  기술 자료를 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Export"></a> Export a knowledge base to a .dqs file  
+##  <a name="Export"></a> .Dqs 파일로 기술 자료 내보내기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   

@@ -9,6 +9,18 @@ items:
   items:
   - name: SQL Server 빅 데이터 클러스터 배포
     href: quickstart-big-data-cluster-deploy.md
+- name: 자습서
+  items:
+  - name: 1_HDFS 데이터 쿼리
+    href: tutorial-query-hdfs-storage-pool.md
+  - name: 2_Oracle 데이터 쿼리
+    href: tutorial-query-oracle.md
+  - name: 3_SQL을 사용하여 데이터 풀 로드
+    href: tutorial-data-pool-ingest-sql.md
+  - name: 4_Spark를 사용하여 데이터 풀 로드
+    href: tutorial-data-pool-ingest-spark.md
+  - name: 5_Spark Notebook 실행
+    href: tutorial-notebook-spark.md
 - name: 개념
   items:
   - name: 컨트롤러
@@ -35,6 +47,8 @@ items:
       href: deploy-on-minikube.md
     - name: AKS에 배포
       href: deploy-on-aks.md
+    - name: Kubeadm을 사용하여 배포
+      href: deploy-with-kubeadm.md
     - name: Azure Data Studio와 연결
       href: deploy-big-data-tools.md
   - name: 데이터 가상화
@@ -55,6 +69,8 @@ items:
     items:
     - name: 클러스터 관리 포털
       href: cluster-admin-portal.md
+    - name: Kubernetes 문제 해결
+      href: cluster-troubleshooting-commands.md
   - name: 전자 필기장
     items:
     - name: 전자 필기장 개요
@@ -75,9 +91,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 빅 데이터 클러스터 액세스 권한 요청
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: c8a685c849acf82b9fdfa078093528e9c0972964
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 002406f8631806d30c8c1c3d4600bf19d5512dd9
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085310"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050838"

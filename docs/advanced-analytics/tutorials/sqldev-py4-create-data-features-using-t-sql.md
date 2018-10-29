@@ -1,5 +1,5 @@
 ---
-title: 단계 4 만들 데이터 기능 T-SQL을 사용 하 여 | Microsoft Docs
+title: T-SQL을 사용 하 여 데이터 기능 만들기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,31 +7,31 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202075"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806683"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>4단계: T-SQL을 사용하여 데이터 기능 만들기
+# <a name="create-data-features-using-t-sql"></a>T-SQL을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터 탐색 후 데이터에서 몇 가지 정보를 수집 하 고이로 이동 준비가 *엔지니어링 기능*합니다. 이 프로세스는 원시 데이터에서 기능을 만드는 모델링 하는 고급 분석에 중요 한 단계 될 수 있습니다.
+데이터 탐색 후 데이터의 몇 가지 정보를 수집 하 고이 이동할 준비가 *기능 엔지니어링*합니다. 원시 데이터에서 기능을 만드는이 프로세스는 고급 모델링 분석에서 중요 한 단계를 수 있습니다.
 
-이 문서는 자습서의 일부는 [SQL 개발자를 위해 데이터베이스에서 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
+이 문서는 자습서에 일부 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
 
-이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 원시 데이터에서 기능을 만드는 방법을 알아봅니다. 그런 다음 저장 프로시저에서 해당 함수를 호출하여 기능 값이 포함된 테이블을 만듭니다.
+이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 원시 데이터에서 특성을 만드는 방법을 알아봅니다. 그런 다음 저장 프로시저에서 해당 함수를 호출하여 기능 값이 포함된 테이블을 만듭니다.
 
 ## <a name="define-the-function"></a>함수 정의
 
 원래 데이터에 보고된 거리 값은 보고된 미터 거리를 기반으로 하며 지리적 거리 또는 이동한 거리를 나타내지 않을 수도 있습니다. 따라서 원본 NYC Taxi 데이터 집합에서 사용할 수 있는 좌표를 통해 승하차 지점 사이의 직접 거리를 계산해야 합니다. 이렇게 하려면 사용자 지정 [함수에](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 수식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용합니다.
 
-사용자 지정 T-SQL 함수 _fnCalculateDistance_를 사용하여 Haversine 수식을 통해 거리를 계산하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
+사용자 정의 T-SQL 함수 _fnCalculateDistance_를 사용하여 Haversine 수식을 사용한 거리를 계산하고 두 번째 사용자 정의 함수 _fnEngineerFeatures_를 사용하여 모든 특성을 포함하는 테이블을 생성합니다.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance를 사용 하 여 여행 거리를 계산 합니다.
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance를 사용한 여정 거리 계산
 
-1.  이 연습을 위한 준비 과정에서 _fnCalculateDistance_ 함수를 다운로드하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 등록한 상태여야 합니다. 코드를 검토 하는 데 1 분을 소요 됩니다.
+1.  이 연습을 위한 준비 과정에서 _fnCalculateDistance_ 함수를 다운로드하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 등록한 상태여야 합니다. 잠시 시간을 내어 코드를 검토하십시오.
   
     [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **프로그래밍 기능**, **함수** , **스칼라 반환 함수**를 차례로 확장합니다.
     _fnCalculateDistance_를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
@@ -66,9 +66,9 @@ ms.locfileid: "31202075"
 
 모델 학습에 사용할 수 있는 테이블에 계산 값을 추가하려면 다른 함수 _fnEngineerFeatures_를 사용합니다.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>사용 하 여 기능 저장 _fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>사용 하 여 기능을 저장 _fnEngineerFeatures_
 
-1.  이 연습을 위한 준비 과정에서 만들어진 사용자 지정 T-SQL 함수 _fnEngineerFeatures_의 코드를 검토합니다.
+1.  잠시 시간을 내어 이 연습을 준비하는 과정에서 작성해야 하는 사용자 정의 T-SQL 함수인 _fnEngineerFeatures_ 에 대한 코드를 검토하십시오.
   
     이 함수는 여러 열을 입력으로 사용하고 여러 기능 열이 있는 테이블을 출력하는 테이블 반환 함수입니다.  이 함수는 모델 작성에 사용할 기능 집합을 만드는 데 사용됩니다. _fnEngineerFeatures_ 함수는 이전에 만든 T-SQL 함수 _fnCalculateDistance_를 호출하여 승하차 위치 사이의 직접 거리를 가져옵니다.
   
@@ -106,16 +106,16 @@ ms.locfileid: "31202075"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    확인한 것처럼 미터에서 보고된 거리가 항상 지리적 거리와 일치하는 것은 아닙니다. 이 때문에 기능 엔지니어링 팀이 중요 합니다.
+    확인한 것처럼 미터에서 보고된 거리가 항상 지리적 거리와 일치하는 것은 아닙니다. 이 때문에 기능 엔지니어링이 중요 합니다.
 
-다음 단계에서 이러한 데이터 기능을 만들고 학습 Python을 사용 하는 기계 학습 모델을 사용 하는 방법을 설명 합니다.
+다음 단계에서는 이러한 데이터 기능을 사용 하 여 Python을 사용 하 여 기계 학습 모델을 학습 하는 방법에 알아봅니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>이전 단계
 
-[3단계: 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
+[데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
 
 

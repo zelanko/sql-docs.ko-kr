@@ -30,7 +30,7 @@ ms.locfileid: "48094145"
 > 2.  패키지를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
 > 3.  필요에 따라 **고급** 탭에서 로깅 수준 등의 옵션을 설정하거나 매개 변수 값과 연결 관리자 속성을 설정합니다.  
 >   
->      로깅 수준에 대한 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)을 참조하십시오.  
+>      로깅 수준에 대한 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)을 참조하십시오.  
 > 4.  **확인** 을 클릭하여 패키지를 실행하기 전에 **스크립트**를 클릭합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에 Transact-SQL이 나타납니다.  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>저장 프로시저를 사용하여 패키지를 배포하고 실행하려면  

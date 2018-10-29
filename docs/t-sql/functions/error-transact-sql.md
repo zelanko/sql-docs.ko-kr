@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd379df3c82a16924a984464d1bdbe68e8ebfce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632131"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359300"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47632131"
 ### <a name="a-using-error-to-detect-a-specific-error"></a>1. @@ERROR를 사용하여 특정 오류 검색  
  다음 예에서는 `@@ERROR`를 사용하여 `UPDATE` 문에서 CHECK 제약 조건 위반(오류 #547)을 확인합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -72,7 +72,7 @@ GO
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>2. @@ERROR를 사용하여 조건부로 프로시저 종료  
  다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `DELETE` 문 뒤의 `@@ERROR`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -107,7 +107,7 @@ GO
 ### <a name="c-using-error-with-rowcount"></a>3. @@ERROR와 @@ROWCOUNT 함께 사용  
  다음 예에서는 `@@ERROR`를 `@@ROWCOUNT`와 함께 사용하여 `UPDATE` 문 작업의 유효성을 검사합니다. `@@ERROR`의 값을 확인하여 오류 표시가 있는지 검사하고 `@@ROWCOUNT`를 사용하여 업데이트가 테이블의 행에 제대로 적용되었는지 확인합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -176,7 +176,7 @@ GO
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [오류 및 이벤트 참조&#40;데이터베이스 엔진&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

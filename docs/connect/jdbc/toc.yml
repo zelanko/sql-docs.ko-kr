@@ -1,21 +1,24 @@
-- name: SQL Server용 Microsoft JDBC Driver
-  href: microsoft-jdbc-driver-for-sql-server.md
-- name: JDBC 코드 샘플 +
-  href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
-- name: JDBC API 참조 +
-  href: reference/jdbc-driver-api-reference.md
-- name: JDBC 드라이버 시작
-  href: getting-started-with-the-jdbc-driver.md
+items:
+- name: SQL Server용 4.2 Microsoft JDBC Driver
   items:
+  - name: Microsoft JDBC Driver 4.2 for SQL Server
+    href: microsoft-jdbc-driver-for-sql-server.md
+  - name: JDBC 코드 샘플 +
+    href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
+  - name: JDBC API 참조 +
+    href: reference/jdbc-driver-api-reference.md
+  - name: JDBC 드라이버 시작
+    href: getting-started-with-the-jdbc-driver.md
+    items:
     - name: '1단계: Java 개발을 위한 개발 환경 구성'
       href: step-1-configure-development-environment-for-java-development.md
     - name: '2단계: Java 개발을 위한 SQL 데이터베이스 만들기'
       href: step-2-create-a-sql-database-for-java-development.md
     - name: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명'
       href: step-3-proof-of-concept-connecting-to-sql-using-java.md
-- name: JDBC 드라이버 개요
-  href: overview-of-the-jdbc-driver.md
-  items:
+  - name: JDBC 드라이버 개요
+    href: overview-of-the-jdbc-driver.md
+    items:
     - name: Microsoft JDBC Driver for SQL Server 다운로드
       href: download-microsoft-jdbc-driver-for-sql-server.md
     - name: JDBC 드라이버에 대한 릴리스 정보
@@ -38,9 +41,9 @@
       href: frequently-asked-questions-faq-for-jdbc-driver.md
     - name: Microsoft JDBC Driver for SQL Server의 기능 종속성
       href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-- name: JDBC 드라이버 응용 프로그램 보안
-  href: securing-jdbc-driver-applications.md
-  items:
+  - name: JDBC 드라이버 응용 프로그램 보안
+    href: securing-jdbc-driver-applications.md
+    items:
     - name: 연결 문자열 보안
       href: securing-connection-strings.md
     - name: 사용자 입력 유효성 검사
@@ -52,15 +55,15 @@
     - name: FIPS 모드
       href: ../../connect/jdbc/fips-mode.md
       items:
-        - name: SSL 지원 이해
-          href: understanding-ssl-support.md
-        - name: SSL 암호화를 사용한 연결
-          href: connecting-with-ssl-encryption.md
-        - name: SSL 암호화에 대한 클라이언트 구성
-          href: configuring-the-client-for-ssl-encryption.md
-- name: JDBC 드라이버로 성능 및 안정성 개선
-  href: improving-performance-and-reliability-with-the-jdbc-driver.md
-  items:
+      - name: SSL 지원 이해
+        href: understanding-ssl-support.md
+      - name: SSL 암호화를 사용한 연결
+        href: connecting-with-ssl-encryption.md
+      - name: SSL 암호화에 대한 클라이언트 구성
+        href: configuring-the-client-for-ssl-encryption.md
+  - name: JDBC 드라이버로 성능 및 안정성 개선
+    href: improving-performance-and-reliability-with-the-jdbc-driver.md
+    items:
     - name: 개체가 사용되고 있지 않을 때 닫기
       href: closing-objects-when-not-in-use.md
     - name: 트랜잭션 크기 관리
@@ -73,9 +76,9 @@
       href: sparse-columns.md
     - name: JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱
       href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
-- name: JDBC 드라이버 관련 문제 진단
-  href: diagnosing-problems-with-the-jdbc-driver.md
-  items:
+  - name: JDBC 드라이버 관련 문제 진단
+    href: diagnosing-problems-with-the-jdbc-driver.md
+    items:
     - name: 오류 처리
       href: handling-errors.md
     - name: 드라이버 버전 가져오기
@@ -86,57 +89,57 @@
       href: troubleshooting-connectivity.md
     - name: 확장 이벤트 로그의 진단 정보 액세스
       href: accessing-diagnostic-information-in-the-extended-events-log.md
-- name: 샘플 JDBC 드라이버 응용 프로그램
-  href: sample-jdbc-driver-applications.md
-  items:
+  - name: 샘플 JDBC 드라이버 응용 프로그램
+    href: sample-jdbc-driver-applications.md
+    items:
     - name: 데이터 연결 및 검색
       href: connecting-and-retrieving-data.md
       items:
-        - name: 연결 URL 샘플
-          href: connection-url-sample.md
-        - name: 데이터 원본 샘플
-          href: data-source-sample.md
+      - name: 연결 URL 샘플
+        href: connection-url-sample.md
+      - name: 데이터 원본 샘플
+        href: data-source-sample.md
     - name: 데이터 형식(JDBC) 사용
       href: working-with-data-types-jdbc.md
       items:
-        - name: 기본 데이터 형식 샘플
-          href: basic-data-types-sample.md
-        - name: SQLXML 데이터 형식 샘플
-          href: sqlxml-data-type-sample.md
-        - name: 공간 데이터 형식 샘플
-          href: spatial-data-types-sample.md
+      - name: 기본 데이터 형식 샘플
+        href: basic-data-types-sample.md
+      - name: SQLXML 데이터 형식 샘플
+        href: sqlxml-data-type-sample.md
+      - name: 공간 데이터 형식 샘플
+        href: spatial-data-types-sample.md
     - name: 결과 집합 사용
       href: working-with-result-sets.md
       items:
-        - name: 결과 집합 데이터 샘플 검색
-          href: retrieving-result-set-data-sample.md
-        - name: 결과 집합 데이터 샘플 수정
-          href: modifying-result-set-data-sample.md
-        - name: 결과 집합 데이터 샘플 캐싱
-          href: caching-result-set-data-sample.md
+      - name: 결과 집합 데이터 샘플 검색
+        href: retrieving-result-set-data-sample.md
+      - name: 결과 집합 데이터 샘플 수정
+        href: modifying-result-set-data-sample.md
+      - name: 결과 집합 데이터 샘플 캐싱
+        href: caching-result-set-data-sample.md
     - name: 큰 데이터 작업
       href: working-with-large-data.md
       items:
-        - name: 큰 데이터 읽기 샘플
-          href: reading-large-data-sample.md
-        - name: 저장 프로시저로 큰 데이터 읽기 샘플
-          href: reading-large-data-with-stored-procedures-sample.md
-        - name: 큰 데이터 업데이트 샘플
-          href: updating-large-data-sample.md
+      - name: 큰 데이터 읽기 샘플
+        href: reading-large-data-sample.md
+      - name: 저장 프로시저로 큰 데이터 읽기 샘플
+        href: reading-large-data-with-stored-procedures-sample.md
+      - name: 큰 데이터 업데이트 샘플
+        href: updating-large-data-sample.md
     - name: 데이터 검색 및 분류 샘플
       href: data-discovery-classification-sample.md
-- name: JDBC SQL 드라이버에 대한 준수 및 법적 고지
-  href: compliance-and-legal-for-the-jdbc-sql-driver.md
-  items:
+  - name: JDBC SQL 드라이버에 대한 준수 및 법적 고지
+    href: compliance-and-legal-for-the-jdbc-sql-driver.md
+    items:
     - name: JDBC 드라이버의 JDBC 4.1 준수
       href: jdbc-4-1-compliance-for-the-jdbc-driver.md
     - name: JDBC 드라이버의 JDBC 4.2 준수
       href: jdbc-4-2-compliance-for-the-jdbc-driver.md
     - name: JDBC 드라이버의 JDBC 4.3 준수
       href: jdbc-4-3-compliance-for-the-jdbc-driver.md
-- name: JDBC SQL 드라이버 프로그래밍 가이드
-  href: programming-guide-for-jdbc-sql-driver.md
-  items:
+  - name: JDBC SQL 드라이버 프로그래밍 가이드
+    href: programming-guide-for-jdbc-sql-driver.md
+    items:
     - name: JDBC 드라이버로 SQL Server에 연결
       href: connecting-to-sql-server-with-the-jdbc-driver.md
     - name: JDBC 드라이버 데이터 형식 이해
@@ -153,117 +156,123 @@
       href: using-always-encrypted-with-the-jdbc-driver.md
     - name: 가이드 문서
       items:
-        - name: SQL이 있는 문 사용
-          href: using-statements-with-sql.md
-        - name: SQL 문을 사용하여 데이터베이스 개체 수정
-          href: using-an-sql-statement-to-modify-database-objects.md
-        - name: 데이터 원본 속성 설정
-          href: setting-the-data-source-properties.md
-        - name: 연결 속성 설정
-          href: setting-the-connection-properties.md
-        - name: 매개 변수가 없는 저장 프로시저 사용
-          href: using-a-stored-procedure-with-no-parameters.md
-        - name: 매개 변수 메타데이터 사용
-          href: using-parameter-metadata.md
-        - name: 기본 데이터 형식 사용
-          href: using-basic-data-types.md
-        - name: 공간 데이터 형식 사용
-          href: use-spatial-datatypes.md
-        - name: 트랜잭션 이해
-          href: understanding-transactions.md
-        - name: 연결 사용
-          href: working-with-a-connection.md
-        - name: JDBC 드라이버의 국가별 기능
-          href: international-features-of-the-jdbc-driver.md
-        - name: 고급 데이터 형식 사용
-          href: using-advanced-data-types.md
-        - name: 데이터 형식 차이 이해
-          href: understanding-data-type-differences.md
-        - name: 다중 결과 집합 사용
-          href: using-multiple-result-sets.md
-        - name: 유지 기능 사용
-          href: using-holdability.md
-        - name: Azure Active Directory 인증을 사용하여 연결
-          href: connecting-using-azure-active-directory-authentication.md
-        - name: 데이터 형식 변환 이해
-          href: understanding-data-type-conversions.md
-        - name: 동시성 제어 이해
-          href: understanding-concurrency-control.md
-        - name: 입력 매개 변수가 있는 저장 프로시저 사용
-          href: using-a-stored-procedure-with-input-parameters.md
-        - name: 데이터베이스 메타데이터 사용
-          href: using-database-metadata.md
-        - name: SQLXML 인터페이스
-          href: sqlxml-interface.md
-        - name: 복잡한 문 처리
-          href: handling-complex-statements.md
-        - name: 연결 풀링 사용
-          href: using-connection-pooling.md
-        - name: JDBC 드라이버에 대해 Always Encrypted API 참조
-          href: always-encrypted-api-reference-for-the-jdbc-driver.md
-        - name: Kerberos 통합 인증을 사용하여 SQL Server에 연결
-          href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-        - name: 업데이트 횟수가 있는 저장 프로시저 사용
-          href: using-a-stored-procedure-with-an-update-count.md
-        - name: 행 잠금에 대한 개요
-          href: understanding-row-locking.md
-        - name: '고가용성, 재해 복구를 위한 JDBC 드라이브 지원'
-          href: jdbc-driver-support-for-high-availability-disaster-recovery.md
-        - name: 결과 집합 메타데이터 사용
-          href: using-result-set-metadata.md
-        - name: XA 트랜잭션 이해
-          href: understanding-xa-transactions.md
-        - name: 자동 생성 키 사용
-          href: using-auto-generated-keys.md
-        - name: 데이터베이스 미러링(JDBC) 사용
-          href: using-database-mirroring-jdbc.md
-        - name: 국가별 문자 집합 지원
-          href: national-character-set-support.md
-        - name: 커서 유형 이해
-          href: understanding-cursor-types.md
-        - name: SQLXML을 사용한 프로그래밍
-          href: programming-with-sqlxml.md
-        - name: 반환 상태가 있는 저장 프로시저 사용
-          href: using-a-stored-procedure-with-a-return-status.md
-        - name: 매개 변수가 없는 SQL 문 사용
-          href: using-an-sql-statement-with-no-parameters.md
-        - name: Azure SQL 데이터베이스에 연결
-          href: connecting-to-an-azure-sql-database.md
-        - name: SQL 문을 사용하여 데이터 수정
-          href: using-an-sql-statement-to-modify-data.md
-        - name: 연결 URL 작성
-          href: building-the-connection-url.md
-        - name: 저장점 사용
-          href: using-savepoints.md
-        - name: 테이블 반환 매개 변수 사용
-          href: using-table-valued-parameters.md
-        - name: XML 데이터 지원
-          href: supporting-xml-data.md
-        - name: 매개 변수가 있는 SQL 문 사용
-          href: using-an-sql-statement-with-parameters.md
-        - name: 격리 수준 이해
-          href: understanding-isolation-levels.md
-        - name: 래퍼 및 인터페이스
-          href: wrappers-and-interfaces.md
-        - name: JDBC 드라이버에서 대량 복사 사용
-          href: using-bulk-copy-with-the-jdbc-driver.md
-        - name: 일괄 삽입 작업에 대량 복사 API 사용
-          href: use-bulk-copy-api-batch-insert-operation.md
-        - name: 출력 매개 변수가 있는 저장 프로시저 사용
-          href: using-a-stored-procedure-with-output-parameters.md
-        - name: 일괄 작업 수행
-          href: performing-batch-operations.md
-        - name: 사용자 정의 형식
-          href: user-defined-types.md
-        - name: java.sql.Time 값을 서버에 보내는 방식 구성
-          href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
-        - name: SQL 이스케이프 시퀀스 사용
-          href: using-sql-escape-sequences.md
-        - name: 저장 프로시저가 있는 문 사용
-          href: using-statements-with-stored-procedures.md
-        - name: Azure Key Vault 샘플 버전 6.0.0
-          href: azure-key-vault-sample-version-6.0.0.md
-        - name: Azure Key Vault 샘플 버전 6.2.2
-          href: azure-key-vault-sample-version-6.2.2.md
-        - name: Azure Key Vault 샘플 버전 7.0.0
-          href: azure-key-vault-sample-version-7-0-0.md
+      - name: SQL이 있는 문 사용
+        href: using-statements-with-sql.md
+      - name: SQL 문을 사용하여 데이터베이스 개체 수정
+        href: using-an-sql-statement-to-modify-database-objects.md
+      - name: 데이터 원본 속성 설정
+        href: setting-the-data-source-properties.md
+      - name: 연결 속성 설정
+        href: setting-the-connection-properties.md
+      - name: 매개 변수가 없는 저장 프로시저 사용
+        href: using-a-stored-procedure-with-no-parameters.md
+      - name: 매개 변수 메타데이터 사용
+        href: using-parameter-metadata.md
+      - name: 기본 데이터 형식 사용
+        href: using-basic-data-types.md
+      - name: 공간 데이터 형식 사용
+        href: use-spatial-datatypes.md
+      - name: 트랜잭션 이해
+        href: understanding-transactions.md
+      - name: 연결 사용
+        href: working-with-a-connection.md
+      - name: JDBC 드라이버의 국가별 기능
+        href: international-features-of-the-jdbc-driver.md
+      - name: 고급 데이터 형식 사용
+        href: using-advanced-data-types.md
+      - name: 데이터 형식 차이 이해
+        href: understanding-data-type-differences.md
+      - name: 다중 결과 집합 사용
+        href: using-multiple-result-sets.md
+      - name: 유지 기능 사용
+        href: using-holdability.md
+      - name: Azure Active Directory 인증을 사용하여 연결
+        href: connecting-using-azure-active-directory-authentication.md
+      - name: 데이터 형식 변환 이해
+        href: understanding-data-type-conversions.md
+      - name: 동시성 제어 이해
+        href: understanding-concurrency-control.md
+      - name: 입력 매개 변수가 있는 저장 프로시저 사용
+        href: using-a-stored-procedure-with-input-parameters.md
+      - name: 데이터베이스 메타데이터 사용
+        href: using-database-metadata.md
+      - name: SQLXML 인터페이스
+        href: sqlxml-interface.md
+      - name: 복잡한 문 처리
+        href: handling-complex-statements.md
+      - name: 연결 풀링 사용
+        href: using-connection-pooling.md
+      - name: JDBC 드라이버에 대해 Always Encrypted API 참조
+        href: always-encrypted-api-reference-for-the-jdbc-driver.md
+      - name: Kerberos 통합 인증을 사용하여 SQL Server에 연결
+        href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+      - name: 업데이트 횟수가 있는 저장 프로시저 사용
+        href: using-a-stored-procedure-with-an-update-count.md
+      - name: 행 잠금에 대한 개요
+        href: understanding-row-locking.md
+      - name: 고가용성, 재해 복구를 위한 JDBC 드라이브 지원
+        href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+      - name: 결과 집합 메타데이터 사용
+        href: using-result-set-metadata.md
+      - name: XA 트랜잭션 이해
+        href: understanding-xa-transactions.md
+      - name: 자동 생성 키 사용
+        href: using-auto-generated-keys.md
+      - name: 데이터베이스 미러링(JDBC) 사용
+        href: using-database-mirroring-jdbc.md
+      - name: 국가별 문자 집합 지원
+        href: national-character-set-support.md
+      - name: 커서 유형 이해
+        href: understanding-cursor-types.md
+      - name: SQLXML을 사용한 프로그래밍
+        href: programming-with-sqlxml.md
+      - name: 반환 상태가 있는 저장 프로시저 사용
+        href: using-a-stored-procedure-with-a-return-status.md
+      - name: 매개 변수가 없는 SQL 문 사용
+        href: using-an-sql-statement-with-no-parameters.md
+      - name: Azure SQL 데이터베이스에 연결
+        href: connecting-to-an-azure-sql-database.md
+      - name: SQL 문을 사용하여 데이터 수정
+        href: using-an-sql-statement-to-modify-data.md
+      - name: 연결 URL 작성
+        href: building-the-connection-url.md
+      - name: 저장점 사용
+        href: using-savepoints.md
+      - name: 테이블 반환 매개 변수 사용
+        href: using-table-valued-parameters.md
+      - name: XML 데이터 지원
+        href: supporting-xml-data.md
+      - name: 매개 변수가 있는 SQL 문 사용
+        href: using-an-sql-statement-with-parameters.md
+      - name: 격리 수준 이해
+        href: understanding-isolation-levels.md
+      - name: 래퍼 및 인터페이스
+        href: wrappers-and-interfaces.md
+      - name: JDBC 드라이버에서 대량 복사 사용
+        href: using-bulk-copy-with-the-jdbc-driver.md
+      - name: 일괄 삽입 작업에 대량 복사 API 사용
+        href: use-bulk-copy-api-batch-insert-operation.md
+      - name: 출력 매개 변수가 있는 저장 프로시저 사용
+        href: using-a-stored-procedure-with-output-parameters.md
+      - name: 일괄 작업 수행
+        href: performing-batch-operations.md
+      - name: 사용자 정의 형식
+        href: user-defined-types.md
+      - name: java.sql.Time 값을 서버에 보내는 방식 구성
+        href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+      - name: SQL 이스케이프 시퀀스 사용
+        href: using-sql-escape-sequences.md
+      - name: 저장 프로시저가 있는 문 사용
+        href: using-statements-with-stored-procedures.md
+      - name: Azure Key Vault 샘플 버전 6.0.0
+        href: azure-key-vault-sample-version-6.0.0.md
+      - name: Azure Key Vault 샘플 버전 6.2.2
+        href: azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault 샘플 버전 7.0.0
+        href: azure-key-vault-sample-version-7-0-0.md
+ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051135"

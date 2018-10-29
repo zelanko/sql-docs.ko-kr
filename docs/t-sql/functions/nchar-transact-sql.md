@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716556"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636442"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 데이터베이스의 데이터 정렬에 SC(보조 문자) 플래그가 포함되어 있지 않은 경우 이 인수는 0에서 65535(0~0xFFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다. 보조 문자에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)를 참조하세요.  
+ 데이터베이스의 데이터 정렬에 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 플래그가 포함되어 있지 않은 경우 이 인수는 0에서 65535(0~0xFFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다. 보조 문자에 대한 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)를 참조하세요.  
   
- 데이터베이스의 데이터 정렬이 SC(보조 문자) 플래그를 지원하는 경우 이 인수는 0에서 1114111(0~0x10FFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다.  
+ 데이터베이스의 데이터 정렬이 SC 플래그를 지원하는 경우 이 인수는 1에서 1114111(0~0x10FFFF) 사이의 양의 정수입니다. 이 범위 밖의 값을 지정한 경우 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nchar(1)**: 기본 데이터베이스 데이터 정렬이 보조 문자를 지원하지 않는 경우  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  *integer_expression* 매개 변수가 0 - 0xFFFF 범위에 있을 경우 한 문자만 반환됩니다. 값이 더 높을 경우 NCHAR가 해당 서로게이트 쌍을 반환합니다. `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`를 사용하여 서로게이트 쌍을 생성하지 마세요. 대신 보조 문자를 지원하는 데이터베이스 데이터 정렬을 사용한 다음 서로게이트 쌍에 대한 유니코드 코드 포인트를 지정합니다. 다음 예에서는 서로게이트 쌍을 생성하는 이전 스타일의 방법과 유니코드 코드 포인트를 지정하는 기본 방법을 모두 보여 줍니다.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>1. NCHAR 및 UNICODE 사용  
  다음 예에서는 `UNICODE` 및 `NCHAR` 함수를 사용하여 `UNICODE` 문자열에 있는 두 번째 문자의 `NCHAR` 값과 `København`(유니코드 문자)를 인쇄하고 실제 두 번째 문자인 `ø`를 인쇄합니다.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>2. SUBSTRING, UNICODE, CONVERT 및 NCHAR 사용  
  다음 예에서는 `SUBSTRING`, `UNICODE`, `CONVERT` 및 `NCHAR` 함수를 사용하여 `København` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자 및 UNICODE 값을 인쇄합니다.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
