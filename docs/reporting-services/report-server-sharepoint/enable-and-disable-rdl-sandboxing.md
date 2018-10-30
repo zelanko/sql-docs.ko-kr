@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c760f97673c5d5cf3df4e794dcc8e56426be3a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf64bf1e07a83defbc3553535251f51fa96f839
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032122"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -179,4 +179,4 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a87fd73ab4517e5277f09eef2714b6ca89038ac4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe66beb328e38a02bf24e9ed6a7ca9349b997781
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029812"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>보고서 뷰어의 로컬 모드와 연결된 모드
 
@@ -36,7 +36,7 @@ ms.locfileid: "47682451"
   
  아래에는 로컬 모드 보고를 지원하는 데이터 처리 확장 프로그램이 나열되어 있습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 보고서 확장 프로그램. Access Services에 대한 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)를 참조하세요.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 보고서 확장 프로그램. Access Services에 대한 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686)를 참조하세요.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램. SharePoint 목록 데이터 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47682451"
   
 ## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>SharePoint 2013에서 로컬 모드 및 액세스 서비스 구성
 
- 기존 Access 2010 웹 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로컬 모드를 지원하도록 SharePoint 2013 팜을 구성할 수 있습니다. 자세한 내용은 [SharePoint Server 2013에서 웹 데이터베이스에 대한 Access Services 2010 설정 및 구성](http://technet.microsoft.com/library/ee748653\(office.15\).aspx)을 참조하십시오.  
+ 기존 Access 2010 웹 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로컬 모드를 지원하도록 SharePoint 2013 팜을 구성할 수 있습니다. 자세한 내용은 [SharePoint Server 2013에서 웹 데이터베이스에 대한 Access Services 2010 설정 및 구성](https://technet.microsoft.com/library/ee748653\(office.15\).aspx)을 참조하십시오.  
   
  SharePoint 2013에 대한 새 Access 웹 데이터베이스를 만들 수 없습니다. Access 2013에서는 Access에서 빌드되는 새로운 유형의 데이터베이스인 *Access 웹 앱* 을 사용한 다음 웹 브라우저에서 SharePoint 앱으로 다른 사용자와 공유합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47682451"
   
 4.  IIS를 다시 설정합니다.  
   
- 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) 및 [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)를 참조하세요.  
+ 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) 및 [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)를 참조하세요.  
   
 ## <a name="connected-mode"></a>연결된 모드
 
@@ -85,4 +85,4 @@ ms.locfileid: "47682451"
 
  [Reporting Services에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b869739cd944ac96104044efc2c79e91f8e8a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f411a80acc72a582071a2ee1297f704ab22d42c1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030802"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47848061"
   
 -   셰이프 차트 종류에서는 Null 값이 생략됩니다.  
   
- 빈 데이터 요소가 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 빈 데이터 요소가 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,4 +47,4 @@ ms.locfileid: "47848061"
 [보고서에 차트 추가](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)   
 [차트 문제 해결](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

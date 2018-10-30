@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 521448c47efdb1ceebbc2f4b1efb0b80378920a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5411edfe1db31233bf987231871040abc4fe2ea1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030362"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "47836151"
      범주 값을 표시하는 테이블 셀에 이 식을 추가하면 해당 행의 데이터 집합 필드에 "Bike"라는 단어가 있을 때마다 해당 테이블 셀 값이 "Bicycle"이라는 단어를 대신 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 속성 대화 상자, 코드](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
+ [보고서 속성 대화 상자, 코드](https://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

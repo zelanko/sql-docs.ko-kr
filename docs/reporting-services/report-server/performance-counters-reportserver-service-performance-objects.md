@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d17a873d3d2e6df6f5c69d6eab0e9b602c70304
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e240e82c48777c19b2c1d731753ab450437f0f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028772"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
   이 항목에서는 **배포에 포함된** ReportServer:Service **및** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 성능 개체의 성능 카운터에 대해 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "47816263"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링하는 데 사용됩니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 카운터는 현재 서버에만 적용되고 스케일 아웃 배포 전체에는 적용되지 않습니다.  
   
- 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](http://msdn.microsoft.com/library/w4bz2147.aspx)(http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  항목 내용  
   

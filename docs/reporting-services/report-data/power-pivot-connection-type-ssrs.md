@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46a91e610fd49f19a4f755b039ce7b111840d5ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030852"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "47611571"
 ## <a name="prerequisites"></a>사전 요구 사항  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본을 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시해야 합니다.  
   
- 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 응용 프로그램이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](http://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
+ 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 응용 프로그램이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
   
 ## <a name="data-source-type"></a>데이터 원본 유형  
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47611571"
  연결 문자열은 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 또는 기타 라이브러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 URL입니다(예: `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`).  
   
 ## <a name="credentials"></a>자격 증명  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
 ## <a name="queries"></a>쿼리  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 연결한 후 MDX 그래픽 쿼리를 통해 기본 데이터 구조에서 찾아보고 선택하여 쿼리를 작성합니다. 쿼리를 작성한 후에는 해당 쿼리를 실행하여 결과 창에서 예제 데이터를 봅니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "47611571"
 -   보고서에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터만 포함되어 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

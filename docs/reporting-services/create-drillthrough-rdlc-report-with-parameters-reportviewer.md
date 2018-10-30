@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b49ec38fd8cedb7d55608d455d2b009ca62f978c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68ea91137c584959c53ee8de010dbff92106c119
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598401"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028062"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>매개 변수가 있는 드릴스루(RDLC) 보고서 만들기 - ReportViewer
-[드릴스루](http://technet.microsoft.com/library/ff519554.aspx) 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 이 자습서에서는 [로컬 모드 보고](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)에서 매개 변수 및 쿼리가 있는 드릴스루 보고서를 만드는 다음과 같은 단원을 설명합니다.  
+[드릴스루](https://technet.microsoft.com/library/ff519554.aspx) 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 이 자습서에서는 [로컬 모드 보고](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)에서 매개 변수 및 쿼리가 있는 드릴스루 보고서를 만드는 다음과 같은 단원을 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 이 연습을 사용하려면 **AdventureWorks2014** 샘플 데이터베이스에 대한 액세스 권한이 있어야 합니다. **AdventureWorks2014** 샘플 데이터베이스를 가져오는 방법에 대한 자세한 내용은 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  
   
-이 연습에서는 Transaction-SQL 쿼리와 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 및 [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 개체를 잘 알고 있다고 가정합니다.  
+이 연습에서는 Transaction-SQL 쿼리와 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 및 [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 개체를 잘 알고 있다고 가정합니다.  
   
 Visual Studio 2015 및 ASP.NET 웹 응용 프로그램을 사용하여 ReportViewer 컨트롤이 있는 ASP.NET 웹 페이지를 만듭니다. 컨트롤은 사용자가 만드는 보고서를 보도록 구성됩니다. 이 연습에서는 Microsoft Visual C#에서 응용 프로그램을 만듭니다.  
   

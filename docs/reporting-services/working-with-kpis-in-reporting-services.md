@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adebe82c29aff88167bd5c8e3cfa02f3f35785c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021587"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -107,4 +107,4 @@ KPI를 새로 고치려면 공유 데이터 집합에 대한 캐싱을 구성해
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

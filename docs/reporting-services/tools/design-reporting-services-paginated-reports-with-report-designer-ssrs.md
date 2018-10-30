@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031912"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
 보고서 디자이너를 사용하여 완전한 기능을 갖추고 페이지 매김 처리한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 집합 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 집합을 정의할 수 있습니다.  
 
-보고서 디자이너는  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능으로, 비즈니스 인텔리전스 솔루션을 만들기 위한 Microsoft Visual Studio 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
+보고서 디자이너는  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능으로, 비즈니스 인텔리전스 솔루션을 만들기 위한 Microsoft Visual Studio 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
 ## <a name="benefits-of-report-projects"></a>보고서 프로젝트의 이점  
 보고서 프로젝트는 보고서 정의 및 리소스를 위한 컨테이너 역할을 합니다. 프로젝트를 사용하면 다음을 수행할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "47739231"
   
 -   **기존 항목을 추가합니다.** 기존 보고서 정의 파일(.rdl)이 보고서 디자이너에 열립니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 만든 보고서 또는 프로젝트를 열면 프로젝트가 현재 버전으로, 보고서가 현재 스키마로 자동 업그레이드될 수 있습니다. 자세한 내용은 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)을(를) 참조하세요.  
   
--   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 보고서를 가져옵니다.** Access 데이터베이스 파일(.mdb, .accdb) 또는 프로젝트 파일(.adp)에서 모든 보고서를 가져옵니다. 보고서 디자이너가 데이터베이스 또는 프로젝트 파일의 각 보고서를 RDL로 변환하여 보고서 프로젝트에 저장합니다. Access 보고서의 일부 기능은 보고서 정의 파일(.rdl)로 전송되지 않습니다. 자세한 내용은 [Microsoft Access에서 보고서 가져오기 &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 및 [지원되는 액세스 보고서 기능 &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)을 참조하세요.  
+-   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 보고서를 가져옵니다.** Access 데이터베이스 파일(.mdb, .accdb) 또는 프로젝트 파일(.adp)에서 모든 보고서를 가져옵니다. 보고서 디자이너가 데이터베이스 또는 프로젝트 파일의 각 보고서를 RDL로 변환하여 보고서 프로젝트에 저장합니다. Access 보고서의 일부 기능은 보고서 정의 파일(.rdl)로 전송되지 않습니다. 자세한 내용은 [Microsoft Access에서 보고서 가져오기 &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 및 [지원되는 액세스 보고서 기능 &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)을 참조하세요.  
   
     > [!NOTE]  
     >  가져오기 기능을 사용하려면 보고서 디자이너가 설치된 컴퓨터에 Access 2002 이상이 설치되어 있어야 합니다. 보고서를 가져올 때 Access 보고서의 데이터 원본이 사용 가능한 상태여야 합니다.  
@@ -180,9 +180,9 @@ ms.locfileid: "47739231"
 
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[SQL Server Data Tools 다운로드](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [SQL Server Data Tools의 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [쿼리 디자인 도구](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server Data Tools의 배포 및 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

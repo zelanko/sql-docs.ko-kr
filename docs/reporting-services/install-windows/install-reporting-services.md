@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028204"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
@@ -130,6 +130,6 @@ SQL Server 2016 Reporting Services 기본 모드를 설치하는 방법에 대�
 
 설치된 보고서 서버를 사용하여 보고서를 만들고 보고서 서버에 배포하기를 시작합니다. 보고서 작성기 시작 방법에 대한 자세한 내용은 [보고서 작성기 설치](../../reporting-services/install-windows/install-report-builder.md)를 참조하세요.
 
-SQL Server Data Tools를 사용하여 보고서를 만들려면 [SQL Server Data Tools를 다운로드합니다](http://go.microsoft.com/fwlink/?LinkID=616714).
+SQL Server Data Tools를 사용하여 보고서를 만들려면 [SQL Server Data Tools를 다운로드합니다](https://go.microsoft.com/fwlink/?LinkID=616714).
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

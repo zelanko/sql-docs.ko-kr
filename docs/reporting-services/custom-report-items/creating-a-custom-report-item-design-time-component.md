@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020607"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
   사용자 지정 보고서 항목 디자인 타임 구성 요소는 Visual Studio 보고서 디자이너 환경에서 사용할 수 있는 컨트롤입니다. 사용자 지정 보고서 항목 디자인 타임 구성 요소는 끌어서 놓기 작업이 가능하고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 속성 브라우저와 통합되고 사용자 지정 속성 편집기를 제공하는 활성화된 디자인 화면을 제공합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "47644861"
  개발 환경에서 디자인 타임 구성 요소를 사용하여 설정된 속성은 호스트 디자인 환경에 의해 serialize 및 deserialize된 다음 RDL(Report Definition Language) 파일에 요소로 저장됩니다. 보고서 처리기에 의해 보고서가 실행되면, 디자인 타임 구성 요소를 사용하여 설정된 속성을 보고서 처리기가 사용자 지정 보고서 항목 런타임 구성 요소로 전달하고, 이 런타임 구성 요소는 사용자 지정 보고서 항목을 렌더링한 뒤 다시 보고서 처리기로 전달합니다.  
   
 > [!NOTE]  
->  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](http://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  
+>  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](https://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  
   
- 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="implementing-a-design-time-component"></a>디자인 타임 구성 요소 구현  
  사용자 지정 보고서 항목 디자인 타임 구성 요소의 주 클래스는 **Microsoft.ReportDesigner.CustomReportItemDesigner** 클래스에서 상속됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 컨트롤에 사용된 표준 특성 외에, 구성 요소 클래스에서 **CustomReportItem** 특성을 정의해야 합니다. 이 특성은 reportserver.config 파일에 정의된 사용자 지정 보고서 항목의 이름과 일치해야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 특성 목록은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서에서 "특성(Attributes)"을 참조하십시오.  
@@ -182,7 +182,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>도구 영역(adornment) 사용  
- 사용자 지정 보고서 항목 클래스는 **Microsoft.ReportDesigner.Design.Adornment** 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** 네임스페이스에 정의된 **Adornment** 클래스는 Windows Forms에 있는 <xref:System.Windows.Forms.Design.Behavior.Adorner> 클래스의 통과 구현입니다. **Adorner** 클래스에 대한 전체 설명은 MSDN 라이브러리에서 [동작 서비스 개요](http://go.microsoft.com/fwlink/?LinkId=116673)를 참조하십시오. **Microsoft.ReportDesigner.Design.Adornment** 클래스를 구현하는 예제 코드는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 사용자 지정 보고서 항목 클래스는 **Microsoft.ReportDesigner.Design.Adornment** 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** 네임스페이스에 정의된 **Adornment** 클래스는 Windows Forms에 있는 <xref:System.Windows.Forms.Design.Behavior.Adorner> 클래스의 통과 구현입니다. **Adorner** 클래스에 대한 전체 설명은 MSDN 라이브러리에서 [동작 서비스 개요](https://go.microsoft.com/fwlink/?LinkId=116673)를 참조하십시오. **Microsoft.ReportDesigner.Design.Adornment** 클래스를 구현하는 예제 코드는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 Windows Forms를 프로그래밍하고 사용하는 방법은 MSDN Library에서 다음 항목을 참조하십시오.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619982"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030672"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "47619982"
 |DateTimeOffset 값의 DateTime 부분만 변환|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |DateTimeOffset 값의 Offset 부분만 변환|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Format 함수를 사용하여 값의 표시 형식을 제어할 수도 있습니다. 자세한 내용은 [함수(Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)를 참조하세요.  
+ Format 함수를 사용하여 값의 표시 형식을 제어할 수도 있습니다. 자세한 내용은 [함수(Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)를 참조하세요.  
   
 ## <a name="advanced-examples"></a>고급 예제  
  데이터 원본의 모든 데이터 형식에 대한 변환을 지원하지 않는 데이터 공급자를 사용하여 데이터 원본에 연결하는 경우 지원되지 않는 데이터 원본 형식의 기본 데이터 형식은 String이 됩니다. 다음 예제에서는 문자열로 반환되는 특정 데이터 형식에 대한 솔루션을 제공합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "47619982"
   
          `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM` (2007년 7월 6일 오후 4:07)입니다.  
   
- 문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](http://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](http://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
+ 문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
   
 -   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 집합에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   

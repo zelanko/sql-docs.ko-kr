@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70746e6bf466c3f6d5e7e22a4a09fd25a4e9fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029342"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
 
@@ -183,4 +183,4 @@ ms.locfileid: "47676181"
 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6963674fe21754b9194cf8b3024e85db7291e370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029822"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
@@ -28,7 +28,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  쿼리 디자이너는 사용자가 액세스할 수 있는 권한이 있는 SharePoint 목록을 자동으로 표시합니다.  
   
- 연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
 ##  <a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다. 보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다. 이 데이터 확장 프로그램과 함께 사용할 수 있는 자격 증명의 유형은 데이터 원본으로 사용 중인 SharePoint 목록에 대한 SharePoint 기술 구성에 따라 다릅니다.  
@@ -71,7 +71,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 또는 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 또는 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
 ##  <a name="Query"></a> 쿼리  
  쿼리를 디자인하려면 데이터 원본을 기준으로 새 데이터 집합을 만든 다음 연결된 쿼리 디자이너를 엽니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
@@ -90,7 +90,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
  여러 목록에서 필드를 선택할 수는 없습니다. 각 목록에 대해 데이터 집합을 만들고 각 데이터 집합에서 필드를 선택할 수 있습니다. 목록에 공용 필드가 있는 경우, 한 데이터 집합에 바인딩된 테이블릭스 데이터 영역에서 Lookup 함수를 사용하여 데이터 영역에 바인딩되지 않는 다른 데이터 집합의 값을 검색할 수 있습니다. 자세한 내용은 [조회 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 참조하세요.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
@@ -98,7 +98,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 -   **쿼리 결과**  쿼리 실행 시 반환되는 예제 행을 표시합니다. SharePoint 사이트에서 SharePoint 목록 값이 자주 변경되는 경우 쿼리 결과 창에 표시되는 값과 보고서에 표시되는 값이 다를 수 있습니다.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
@@ -169,7 +169,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -178,7 +178,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
 
 ## <a name="see-also"></a>참고 항목
@@ -187,4 +187,4 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
 [데이터 필터링, 그룹화 및 정렬](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

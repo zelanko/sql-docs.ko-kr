@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843929"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029152"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 집합(SSRS)
   보고서에 데이터를 추가하려면 데이터 집합을 만듭니다. 각 데이터 집합은 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 집합에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 집합을 검색하는 데 필요한 정보가 포함됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47843929"
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
+ 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
   
  종속되는 데이터 집합을 포함하는 보고서 파트를 추가하여 보고서에 데이터 집합을 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47843929"
   
  쿼리 디자이너에서는 쿼리를 실행해 예제 데이터를 보고 쿼리 명령 구문의 유효성을 검사할 수 있습니다. 결과 집합의 열 이름이 보고서 데이터 창에 표시되는 필드 이름이 됩니다. 결과 집합은 단일 행 및 열 집합이어야 하며 각 데이터 행에는 같은 수의 값이 있어야 합니다. 단일 쿼리에 여러 결과 집합이 있을 수는 없습니다. 열 수가 일정하지 않으며 각 행에 대해 생성되는 데이터 값 수가 다를 수 있는 비정형 계층은 지원되지 않습니다.  
   
- 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 및 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 및 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
- 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
+ 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -120,9 +120,9 @@ ms.locfileid: "47843929"
 ##  <a name="Section"></a> 섹션 내용  
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
- [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45e4c2472436ca1cc89054029c172812d53a6fe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a03db689605fe26f9ba6c21ff26377fcbe40e8c1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031182"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>배경 이미지 추가(보고서 작성기 및 SSRS)
   사각형, 입력란, 목록, 행렬, 테이블 및 차트의 일부분과 같은 보고서 항목이나 페이지 머리글, 페이지 바닥글 또는 보고서 본문과 같은 보고서 섹션에 배경 이미지를 추가할 수 있습니다. 속성 창에 **BackgroundImage** 가 표시되는 보고서 디자인 화면의 모든 선택 항목에 대해 배경 이미지를 정의할 수 있습니다. 배경 이미지는 다른 이미지와 마찬가지로 보고서 서버의 이미지, 데이터 집합 필드의 이미지 또는 보고서 정의에 포함된 이미지에 대한 URL일 수 있습니다. 보고서에 포함된 이미지를 사용하려면 먼저 보고서 정의에 이미지를 추가해야만 디자인 화면에 이미지를 추가할 수 있습니다.  
@@ -67,6 +67,6 @@ ms.locfileid: "47670640"
   
 ## <a name="see-also"></a>참고 항목  
  [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

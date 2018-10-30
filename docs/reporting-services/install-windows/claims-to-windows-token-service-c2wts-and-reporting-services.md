@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460988"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020597"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -44,7 +44,7 @@ SharePoint 팜 외부에 있는 데이터 원본에 대해 Windows 인증을 사
 
 C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한됨)과 “모든 인증 프로토콜 사용”(프로토콜 전환) 구성 옵션에서만 작동합니다.
 
-사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [SharePoint 2013에서 Kerberos 인증 계획](http://technet.microsoft.com/library/ee806870.aspx)을 참조하세요.  
+사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [SharePoint 2013에서 Kerberos 인증 계획](https://technet.microsoft.com/library/ee806870.aspx)을 참조하세요.  
 
 1. C2WTS 서비스 도메인 계정을 구성합니다. 
 
@@ -115,4 +115,4 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
 
 4. **서버의 서비스 관리** 페이지에서 SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대한 클레임을 시작(이미 시작된 경우 중지했다가 시작)합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 SQL Server Reporting Services 공유 서비스가 실행되는 응용 프로그램 서버인 다른 서버가 있는 경우 응용 프로그램 서버에서만 C2WTS를 시작하면 됩니다. 보고서 뷰어 웹 파트를 실행하는 경우 C2WTS는 WFE 서버에서만 필요합니다.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

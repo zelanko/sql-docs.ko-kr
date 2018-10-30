@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 970368454b4e6528526058a943a6154065142de7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ebc39fb525c85fad333637d37aeb235ea9d0a5c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027931"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>데이터 원본 변환(보고서 작성기 및 SSRS)
   보고서 데이터 창의 각 데이터 원본은 보고서에 관련 및 포함되거나 공유됩니다. 보고서 작성기에서 공유 데이터 원본은 보고서 서버 또는 SharePoint 사이트의 게시된 공유 데이터 원본을 가리킵니다. 보고서 디자이너에서 공유 데이터 원본은 솔루션 탐색기의 **공유 데이터 원본** 폴더에 있는 공유 데이터 원본을 가리킵니다.  
   
- 포함된 데이터 원본과 공유 데이터 원본의 차이점에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
+ 포함된 데이터 원본과 공유 데이터 원본의 차이점에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
   
- 공유 데이터 원본을 만드는 방법에 대한 자세한 내용은 [포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)를 참조하세요.  
+ 공유 데이터 원본을 만드는 방법에 대한 자세한 내용은 [포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

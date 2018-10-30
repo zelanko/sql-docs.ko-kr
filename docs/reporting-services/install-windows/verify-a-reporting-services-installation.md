@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027512"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "47828117"
   
 2.  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 새 폴더를 만들거나 파일을 업로드하여 보고서 서버 데이터베이스로 정의가 다시 전달되었는지 여부를 테스트합니다. 이런 작업이 성공적으로 수행되면 연결 기능이 작동합니다.  
   
-     자세한 내용은 [웹 포털&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)을 참조하세요.  
+     자세한 내용은 [웹 포털&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)을 참조하세요.  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>보고서 디자이너가 설치되어 실행 중인지 확인하려면  
   

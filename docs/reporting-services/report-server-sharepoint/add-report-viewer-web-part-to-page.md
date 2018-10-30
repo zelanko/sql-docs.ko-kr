@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e0b05a9d3f78215a11d5ae4071a3a3ed39e225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030422"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
 
@@ -74,4 +74,4 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 * Power BI 보고서는 보고서 뷰어 웹 파트와 함께 사용할 수 없습니다.
 * 보고서 뷰어 웹 파트가 표시되지 않는 경우 페이지에 추가하려면 [보고서 뷰어 웹 파트를 배포](deploy-report-viewer-web-part.md)했는지 확인합니다.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee96150a0c83a87cf276c3678d7b9e4758079b69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312d655507d2c7880746cf1f81f61059ddf64de4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027902"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 연결 형식(SSRS)
 보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다.
@@ -33,14 +33,14 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
 ##  <a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -59,7 +59,7 @@ Data Source="Oracle"; Unicode="True"
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](http://go.microsoft.com/fwlink/?LinkId=112314)   
+-   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](https://go.microsoft.com/fwlink/?LinkId=112314)   
   
 -   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](http://support.microsoft.com/kb/834305)  
   
@@ -72,7 +72,7 @@ Data Source="Oracle"; Unicode="True"
  Oracle 데이터베이스를 기반으로 모델을 만들 수도 있습니다.  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -91,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -100,7 +100,7 @@ Data Source="Oracle"; Unicode="True"
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   

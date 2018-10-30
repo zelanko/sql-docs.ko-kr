@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aee90d29082f2c4ba3d6d609e0ea68e3e986d3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028842"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
@@ -31,7 +31,7 @@ ms.locfileid: "47699712"
 SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 허용하지 않기 때문에 이 오류가 발생할 수 있습니다. (공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없습니다). 이 오류는 보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진의 인스턴스에서 반환됩니다. 대부분의 경우 이 오류는 SQL Server 서비스가 중지되어 발생합니다. 또는 SQL Server Express with Advanced Services나 명명된 인스턴스를 사용하는 경우에는 보고서 서버 데이터베이스의 연결 문자열이나 보고서 서버 URL이 올바르지 않아 이 오류가 발생합니다. 이러한 문제를 해결하려면 다음을 수행하십시오.  
   
 * SQL Server(**MSSQLSERVER**) 서비스가 시작되는지 확인합니다. 데이터베이스 엔진의 인스턴스를 호스팅하는 컴퓨터에서 시작, 관리 도구, 서비스를 차례로 클릭하고 SQL Server(**MSSQLSERVER**)로 스크롤합니다. 시작되지 않은 경우 이 서비스를 마우스 오른쪽 단추로 클릭하고 속성을 선택한 후 시작 유형에서 자동을 선택하고 적용, 시작을 차례로 클릭한 다음 확인을 클릭합니다.   
-* 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 보고서 관리자 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](http://technet.microsoft.com/library/ms365166(v=sql.105).aspx)를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
+* 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 보고서 관리자 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>연결할 수 없습니다. 서버가 실행 중인지 확인하십시오.  
 ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발생할 수 있는 이유에는 여러 가지가 있습니다. 서버를 "localhost"로 지정한 경우 다른 서버 이름을 지정해 보십시오. 이 오류는 새 연결에 메모리를 할당할 수 없는 경우에도 발생할 수 있습니다. 자세한 내용은 [기술 자료 문서 912017 - SQL Server 2005 Analysis Services의 인스턴스에 연결하는 경우 오류 메시지](http://support.microsoft.com/kb/912017)를 참조하십시오.  

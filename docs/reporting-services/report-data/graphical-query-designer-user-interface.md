@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa7c799c6897403b085eb55acf7de3e4247aa77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 025635208eea862fd43a05567a2d223d9ac7645c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020287"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
   
  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 집합에 대한 쿼리를 만들기 전에 [데이터 집합 속성](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 집합에 대한 쿼리를 만들기 전에 [데이터 집합 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47844657"
   
  먼저 3개 창 중 하나에서 정보를 변경할 경우 이러한 변경 내용이 다른 창에 표시됩니다. 예를 들어 다이어그램 창에 테이블을 추가하면 SQL 창에서도 자동으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 테이블이 추가됩니다. SQL 창에서 쿼리에 필드를 추가하면 자동으로 표 형태 창의 목록에 필드가 추가되고 다이어그램 창에서는 테이블이 업데이트됩니다.  
   
- 자세한 내용은 [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)를 참조하세요.  
+ 자세한 내용은 [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)를 참조하세요.  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>그래픽 쿼리 디자이너 도구 모음  
  그래픽 쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다.  
@@ -149,6 +149,6 @@ EXEC uspGetEmployeeManagers '1';
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
+ [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   
   

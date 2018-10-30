@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021878"
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "47849321"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>캐시 새로 고침 계획을 만들어 캐시를 미리 로드하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 캐시할 항목으로 이동합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849321"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>데이터 기반 구독을 사용하여 사용자별 보고서와 함께 캐시를 미리 로드하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 후 구독을 만들 보고서로 이동합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849321"
      그렇지 않고 사용자 지정 일정을 만들려면 **이 구독에 대해 생성된 일정** 을 클릭한 후 **다음**을 클릭합니다. 일정을 구성하고 **마침**을 클릭합니다.  
   
     > [!NOTE]  
-    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
+    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
   
 14. 다음과 같이 보고서에 대한 실행 옵션을 구성합니다. 보고서 페이지에서 **속성** 탭을 클릭합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47849321"
 18. **적용**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   

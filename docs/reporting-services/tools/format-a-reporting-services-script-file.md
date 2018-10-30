@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 980a456f652958492a14eb688ae68b697898d874
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b3606fe93d988d878f98d21124fbb5820cd0ee2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031492"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 형식 지정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트는 WSDL(Web Service Description Language)을 기반으로 하는 프록시에 대해 작성된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 코드 파일로, Reporting Services SOAP API를 정의합니다. 스크립트 파일은 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장됩니다.  
@@ -48,7 +48,7 @@ End Sub
   
  스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
   
- 스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)   

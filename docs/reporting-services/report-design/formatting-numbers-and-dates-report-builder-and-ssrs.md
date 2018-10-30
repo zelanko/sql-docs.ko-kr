@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029212"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
   해당 데이터 영역 **속성** 대화 상자의 **숫자** 페이지에서 형식을 선택하여 데이터 영역에 있는 숫자와 날짜의 형식을 지정할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47803761"
   
 -   기본적으로 클라이언트 컴퓨터의 culture 설정에 따라 숫자 형식이 지정됩니다. 형식 문자열을 사용하여 숫자 표시 방법을 지정하면 보고서를 보는 사람의 위치에 관계 없이 일관된 형식으로 숫자를 표시할 수 있습니다.  
   
--   **숫자** 페이지에서 제공되는 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 표준 숫자 형식 문자열의 일부입니다. 대화 상자에 표시되지 않는 사용자 지정 형식을 사용하여 숫자나 날짜에 형식을 지정하려는 경우에는 숫자 또는 날짜에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 사용할 수 있습니다. 사용자 지정 형식 문자열에 대한 자세한 내용은 MSDN에서 [형식 지정](http://go.microsoft.com/fwlink/?LinkId=112024) 항목을 참조하십시오.  
+-   **숫자** 페이지에서 제공되는 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 표준 숫자 형식 문자열의 일부입니다. 대화 상자에 표시되지 않는 사용자 지정 형식을 사용하여 숫자나 날짜에 형식을 지정하려는 경우에는 숫자 또는 날짜에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 사용할 수 있습니다. 사용자 지정 형식 문자열에 대한 자세한 내용은 MSDN에서 [형식 지정](https://go.microsoft.com/fwlink/?LinkId=112024) 항목을 참조하십시오.  
   
 -   사용자 지정 형식 문자열을 지정하면 culture별 기본 설정보다 높은 우선 순위를 가집니다. 예를 들어 숫자 1234를 1,234로 표시하기 위한 사용자 지정 형식 문자열인 "#,###"를 설정했다고 가정하겠습니다. 미국의 사용자와 유럽의 사용자는 이 형식 문자열을 다르게 해석할 수 있습니다. 사용자 지정 형식을 지정하기 전에, 선택한 형식이 해당 보고서를 보게 될 다른 culture의 사용자에게 어떤 영향을 줄지에 대해 고려하십시오.  
   

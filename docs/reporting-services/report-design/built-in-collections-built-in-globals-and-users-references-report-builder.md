@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd89bede228d7a54e0bbfe7cab967facdcbec563
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031582"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션 - 기본 제공 Globals 및 Users 참조(보고서 작성기)
   **Globals** 및 **User** 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. **Globals** 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. **User** 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "47719901"
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 대화 상자&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [식 대화 상자&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

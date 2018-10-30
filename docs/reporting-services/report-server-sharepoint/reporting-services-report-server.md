@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cac4c0df7f995baa8445b639237c61e26a98856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021627"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
 
@@ -87,7 +87,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  SharePoint 모드에 필요한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+-   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]입니다.  
   
 -   SharePoint 2010 제품을 위한 적절한 Reporting Services 추가 기능 버전  
   
@@ -136,9 +136,9 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |태스크|링크|  
 |----------|----------|  
-|하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)입니다.|  
-|SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.|[HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
+|하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)입니다.|  
+|SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.|[HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |HTML 스타일 및 CSS 스타일시트에 익숙한 웹 개발자는 이 항목의 정보를 사용하여 보고서 관리자의 모양을 사용자 지정하기 위해 수정할 수 있는 파일을 확인할 수 있습니다.|[웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -155,4 +155,4 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

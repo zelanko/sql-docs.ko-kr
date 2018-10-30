@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c68e3551e5519f2a2e00e20f071bfcdb74d6062b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea5c3c20feb94ba780caa9ffb736bb0158d9fa05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772681"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021567"
 ---
 # <a name="report-builder-functions---max-function"></a>보고서 작성기 함수 - Max 함수
   특정 범위의 컨텍스트에서 식에 의해 지정된 Null이 아닌 모든 숫자 값의 최대값을 반환합니다.  
@@ -42,7 +42,7 @@ Max(expression, scope, recursive)
  식 유형에 따라 결정됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 여러 숫자 데이터 형식이 포함된 데이터를 동일한 데이터 형식으로 변환하려면 **CInt**, **CDbl** 또는 **CDec**같은 변환 함수를 사용하세요. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
+ 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 여러 숫자 데이터 형식이 포함된 데이터를 동일한 데이터 형식으로 변환하려면 **CInt**, **CDbl** 또는 **CDec**같은 변환 함수를 사용하세요. 자세한 내용은 [형식 변환 함수](https://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
   
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 808eec12b34da573959340fa5939cca77a590942
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d42e62b506f3c9d7c24007bf69bffae7916d474
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800097"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099924"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>보고서 또는 입력란에 대한 로캘 설정(Reporting Services)
   보고서 또는 입력란의 **Language** 속성에는 날짜, 통화 또는 숫자 값과 같이 언어 및 국가에 따라 다른 보고서 데이터를 표시하기 위한 기본 형식을 결정하는 로캘 설정이 포함됩니다. 입력란의 **Language** 속성은 보고서의 **Language** 속성을 재정의합니다. **Language**에 값을 지정하지 않을 경우 Reporting Services는 게시된 보고서에 대해서는 보고서 서버의 운영 체제 로캘을 사용하고 보고서 미리 보기에 대해서는 보고서 작성 컴퓨터의 로캘을 사용합니다.  
@@ -50,6 +50,6 @@ ms.locfileid: "47800097"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항(Reporting Services)](http://msdn.microsoft.com/en-us/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
+ [다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항(Reporting Services)](https://msdn.microsoft.com/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826133"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021097"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -149,7 +149,7 @@ ms.locfileid: "47826133"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003(.doc) 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](http://go.microsoft.com/fwlink/?LinkID=205622)을 참조하세요.  
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://go.microsoft.com/fwlink/?LinkID=205622)을 참조하세요.  
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-word** 이고 파일 이름 확장명은 .doc입니다.  
   
@@ -195,4 +195,4 @@ ms.locfileid: "47826133"
 [보고서 항목 렌더링](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [테이블, 행렬 및 목록](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

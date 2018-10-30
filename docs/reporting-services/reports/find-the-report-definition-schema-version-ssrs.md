@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75751afcebfa72bda6f8dba9a1bb1dcba60f9373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031552"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>보고서 정의 스키마 버전 찾기(SSRS)
 
@@ -84,4 +84,4 @@ ms.locfileid: "47698341"
 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
 [RDL(Report Definition Language)](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

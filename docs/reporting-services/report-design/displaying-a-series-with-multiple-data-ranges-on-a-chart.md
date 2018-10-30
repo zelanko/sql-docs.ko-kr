@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94cb190dd6933f7a226734b3110f9620c782d0d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029312"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>차트에 데이터 범위가 여러 개 있는 계열 표시
 
@@ -44,7 +44,7 @@ ms.locfileid: "47613801"
   
  데이터 범위 사이에 충분한 간격이 있어도 사용되는 배율 구분선이 표시되지 않는 경우 CollapsibleSpaceThreshold 속성을 25 미만의 값으로 설정할 수 있습니다. CollapsibleSpaceThreshold는 데이터 범위 사이에 필요한 축소 가능한 공간의 백분율을 지정합니다. 자세한 내용은 [차트에 배율 구분선 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
- 차트에서는 차트당 최대 5개의 배율 구분선을 지원하지만 두 개 이상의 배율 구분선을 표시하면 차트를 읽을 수 없게 될 수 있습니다. 데이터 범위가 두 개 이상인 경우 이 데이터를 표시하는 다른 방법을 사용하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ 차트에서는 차트당 최대 5개의 배율 구분선을 지원하지만 두 개 이상의 배율 구분선을 표시하면 차트를 읽을 수 없게 될 수 있습니다. 데이터 범위가 두 개 이상인 경우 이 데이터를 표시하는 다른 방법을 사용하십시오. 자세한 내용은 [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="unsupported-scale-break-scenarios"></a>지원되지 않는 배율 구분선 시나리오  
  다음과 같은 차트 시나리오에서는 배율 구분선이 지원되지 않습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "47613801"
   
 -   이 차트 종류가 극좌표형, 방사형, 원형, 도넛형, 깔때기형, 피라미드형 또는 모든 누적 차트입니다.  
   
- 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -65,7 +65,7 @@ ms.locfileid: "47613801"
 [차트 서식 지정](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [차트의 3D, 빗면 및 기타 효과](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [차트](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[축 속성 대화 상자, 축 옵션](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[축 속성 대화 상자, 축 옵션](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [원형 차트에서 작은 조각 수집](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

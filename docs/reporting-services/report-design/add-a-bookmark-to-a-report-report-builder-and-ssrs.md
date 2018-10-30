@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677001"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030372"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>보고서에 책갈피 추가(보고서 작성기 및 SSRS)
   사용자 지정된 목차를 제공하거나 보고서의 사용자 지정된 내부 탐색 링크를 제공하려는 경우 보고서에 책갈피 또는 책갈피 링크를 추가합니다. 일반적으로 각 테이블 또는 차트나 테이블 또는 행렬에 표시된 고유한 그룹 값 등 사용자를 안내하려는 보고서 위치에 책갈피를 추가합니다. 사용자 고유의 문자열을 만들어 책갈피로 사용하거나 그룹의 경우 책갈피를 그룹 식으로 설정할 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "47677001"
   
  예를 들어 보고서에 색상별로 그룹화된 테이블이 표시되는 경우 그룹 식을 기반으로 책갈피를 그룹 머리글에 추가합니다. 그런 다음 색 값을 표시한 보고서의 시작 부분에 단일 입력란이 있는 테이블을 추가하고 해당 입력란에 책갈피 링크를 설정합니다. 색을 클릭하면 보고서가 해당 색의 그룹 머리글 행을 표시하는 페이지로 이동합니다.  
   
- 모든 보고서 항목에 책갈피를 추가하고 입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목에 책갈피 링크를 추가할 수 있습니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)를 참조하세요.  
+ 모든 보고서 항목에 책갈피를 추가하고 입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목에 책갈피 링크를 추가할 수 있습니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

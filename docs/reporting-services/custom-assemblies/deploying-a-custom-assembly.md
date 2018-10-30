@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7e251bcd88ba69bb160895d3a802381ca22898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db1749b10100cece54cdf579301d1cf243fa5abb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031529"
 ---
 # <a name="deploying-a-custom-assembly"></a>사용자 지정 어셈블리 배포
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리를 배포하려면 어셈블리를 보고서 디자이너 및 보고서 서버의 응용 프로그램 폴더에 둡니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 **Execution** 권한이 부여됩니다. 사용자 지정 어셈블리에 실행 권한 이상의 권한을 부여하려면 보고서 서버에 대한 rssrvpolicy.config 구성 파일 및 보고서 디자이너 미리 보기 창에 대한 rspreviewpolicy.config 구성 파일을 편집해야 합니다. 또는 GAC(전역 어셈블리 캐시)에 사용자 지정 어셈블리를 설치할 수도 있습니다.  
@@ -61,6 +61,6 @@ ms.locfileid: "47792271"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [어셈블리 및 전역 어셈블리 캐시 사용](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [어셈블리 및 전역 어셈블리 캐시 사용](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

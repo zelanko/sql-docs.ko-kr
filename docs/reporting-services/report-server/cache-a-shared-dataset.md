@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73d33f2ca15bda09b29cda5fe9e6c350f05dc10c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0abfd4aba4f18f13fce580f5c73e98cf9ee7ffb5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029282"
 ---
 # <a name="cache-a-shared-dataset"></a>공유 데이터 집합 캐시
   성능을 향상시키는 한 가지 방법은 공유 데이터 집합의 캐싱 속성을 구성하는 것입니다. 공유 데이터 집합이 캐시되면 쿼리 결과의 복사본이 지정된 기간 동안 저장됩니다. 공유 데이터 집합을 사용하는 보고서를 요청하는 첫 번째 사용자는 쿼리 결과 및 모든 처리가 완료될 때까지 기다려야 보고서를 볼 수 있습니다. 캐싱 기간 내에 보고서를 요청하는 이후 사용자는 쿼리 및 처리가 이미 발생했기 때문에 기다리지 않고 볼 수 있습니다. 또한 쿼리를 실행하고 지정된 캐시 만료 시점까지 결과를 캐시하기 위한 캐시 새로 고침 계획을 지정할 수도 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "47699561"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>캐시된 보고서의 만료를 예약하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 캐싱 속성을 설정할 공유 데이터 집합으로 이동하고 항목 위로 마우스를 이동한 다음 드롭다운 화살표를 클릭합니다.  
   

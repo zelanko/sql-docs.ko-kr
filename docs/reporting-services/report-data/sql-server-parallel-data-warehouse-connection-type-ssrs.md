@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c1f77041b8819ca051f5e96da9fd00d994de8805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1253ef0bc89bc72dbd3b0e19fe8fca90f68c75e4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029862"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
 
@@ -25,7 +25,7 @@ ms.locfileid: "47685491"
   
  이 데이터 확장 프로그램은 다중값 매개 변수, 서버 집계 및 연결 문자열과 별개로 관리되는 자격 증명을 지원합니다.  
   
- 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스](http://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오.  
+ 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스](https://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -38,7 +38,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  또한 **데이터 원본 속성** 대화 상자를 사용하여 사용자 이름 및 암호와 같은 자격 증명을 제공합니다. `User Id` 및 `Password` 옵션은 연결 문자열에 자동으로 추가되므로 연결 문자열의 일부로 입력할 필요가 없습니다. 또한 사용자 인터페이스에서는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스에 있는 제어 노드의 IP 주소 및 포트 번호를 지정할 수 있는 옵션이 제공됩니다. 기본적으로 포트는 17000입니다. 포트는 관리자가 구성할 수 있으며 연결 문자열에서 다른 포트 번호를 사용할 수도 있습니다.  
   
- 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
 ##  <a name="Credentials"></a> 자격 증명  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 는 사용자 이름과 암호를 구현 및 저장하기 위한 고유한 보안 기술을 제공합니다. Windows 인증은 사용할 수 없습니다. Windows 인증을 사용하여 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 에 연결하려고 하면 오류가 발생합니다.  
@@ -49,9 +49,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   저장된 사용자 이름 및 암호 사용. 보고서 데이터를 포함하는 데이터베이스가 보고서 서버와 다른 경우 발생하는 이중 홉을 협상하려면 Windows 자격 증명을 자격 증명으로 사용하도록 옵션을 선택합니다. 데이터 원본에 연결한 후 인증된 사용자를 가장하도록 선택할 수도 있습니다.  
   
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 언어를 완벽하게 지원합니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
   
 ###  <a name="QueryText"></a> Text 쿼리 유형 사용  
  텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 명령을 입력하여 데이터 집합의 데이터를 정의합니다. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 에서 데이터를 검색하기 위해 사용하는 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램 내에서 실행되지 않는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 의 인스턴스에서 데이터를 검색하기 위해 사용하는 쿼리와 동일합니다. 예를 들어 다음 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
@@ -123,7 +123,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Remarks"></a> 주의  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -142,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -151,7 +151,7 @@ WHERE EmployeeID = (@EmpID)
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
 
 ## <a name="next-steps"></a>다음 단계
@@ -160,4 +160,4 @@ WHERE EmployeeID = (@EmpID)
 [데이터 필터링, 그룹화 및 정렬](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [식](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

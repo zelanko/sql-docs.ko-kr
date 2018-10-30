@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 867e0fff62bf38f5f2d4d42a24e6c3bf49a9ee34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028792"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "47633711"
   
 -   해상도 및 단순화. 선 및 다각형의 세부 윤곽선과 그리기 시간 간의 균형을 선택합니다.  
   
- 이러한 옵션을 변경하려면 지도 뷰포트를 마우스 오른쪽 단추로 클릭하고 [지도 뷰포트 속성 대화 상자, 일반](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) 페이지 및 관련 페이지를 사용합니다.  
+ 이러한 옵션을 변경하려면 지도 뷰포트를 마우스 오른쪽 단추로 클릭하고 [지도 뷰포트 속성 대화 상자, 일반](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) 페이지 및 관련 페이지를 사용합니다.  
   
 ##  <a name="Legends"></a> 범례의 옵션 변경  
  범례는 사용자가 지도의 데이터를 해석하는 데 도움이 됩니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "47633711"
   
  그룹 식은 공간 데이터와 관계가 있는 분석 데이터가 계층의 각 지도 요소에 대해 집계되는 방법을 지정합니다. 기본적으로 그룹 식은 공간 데이터와 분석 데이터 간의 관계에 대해 지정된 일치 필드의 집합입니다. 예를 들어 국가 또는 지역의 도시 위치와 인구 크기를 표시하는 거품형 지도의 경우 이름이 같은 도시가 여러 개일 수 있기 때문에 일치 필드에는 도시 이름 [City]와 지역 이름 [Region]이 포함됩니다. 해당 그룹 식에는 두 필드 [City] 및 [Region]이 포함됩니다.  
   
- 자세한 내용은 [지도 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](http://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
+ 자세한 내용은 [지도 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
   
 ##  <a name="MapElements"></a> 계층의 지도 요소에 대한 옵션 변경  
  지도 요소는 계층에서 공간 데이터를 기반으로 하는 점, 선 또는 다각형입니다. 지도 요소에 대해 다음 옵션을 설정할 수 있습니다. 이러한 옵션은 포함되었는지 여부와 관계없이 계층의 모든 지도 요소에 적용됩니다.  

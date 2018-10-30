@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029582"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
@@ -113,7 +113,7 @@ ms.locfileid: "47759431"
 
 1. 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 보고서를 미리 보고 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서 항목을 고정하려고 처음 클릭합니다.
 
-2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
+2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
 
 3. 사용자 보안 토큰이 보고서 서버에 반환됩니다.
 
@@ -125,7 +125,7 @@ ms.locfileid: "47759431"
 
 7. 대시보드 타일에서 보고서 항목의 예약된 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독이 만들어집니다. 이 구독에서는 사용자가 로그인할 때 생성된 보안 토큰을 사용합니다.
 
-     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요. 을 참조하십시오.
+     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요. 을 참조하십시오.
 
 사용자가 두 번째로 항목을 고정하는 경우에는 1~4단계를 건너뛰고 대신 앱 ID와 URL이 ReportServer 데이터베이스에서 검색되며 5단계로 진행됩니다.
 
@@ -149,8 +149,8 @@ ms.locfileid: "47759431"
 
 ## <a name="next-steps"></a>다음 단계
 
-[Power BI 통합을 위한 내 설정](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Power BI 통합을 위한 내 설정](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0d5b2101e4fb6ce80e2eb53f7d1f43137273cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b0f49608e5245121377ff53a7f2194d3ba09da3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031292"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47612031"
  그래픽 쿼리 디자이너는 3개의 영역으로 구분됩니다. 쿼리가 테이블/뷰 또는 저장 프로시저/테이블 반환 함수를 사용하는지에 따라 쿼리 디자이너의 레이아웃이 달라집니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]는 저장 프로시저나 테이블 반환 함수를 지원하지 않습니다.  
+>  [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 는 저장 프로시저나 테이블 반환 함수를 지원하지 않습니다.  
   
  다음 그림에서는 테이블 또는 뷰와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47612031"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]를 참조하세요. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
   
  다음 표에서는 집계를 나열하고 각 집계에 대한 간단한 설명을 제공합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "47612031"
   
 -   **왼쪽 테이블** 조인 관계에 속하는 첫 번째 테이블의 이름이 표시됩니다.  
   
--   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다. 조인 유형에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687) 에 있는 "조인 기본 사항"을 참조하십시오.  
+-   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다. 조인 유형에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687) 에 있는 "조인 기본 사항"을 참조하십시오.  
   
 -   **오른쪽 테이블** 조인 관계에서 두 번째 테이블의 이름이 표시됩니다.  
   
@@ -195,6 +195,6 @@ ms.locfileid: "47612031"
  쿼리를 최대한 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집**을 클릭합니다. 텍스트 기반 쿼리 디자이너에서 쿼리를 편집한 후에는 관계형 쿼리 디자이너를 더 이상 사용할 수 없습니다. 이후에는 해당 쿼리가 항상 텍스트 기반 쿼리 디자이너에서 열립니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

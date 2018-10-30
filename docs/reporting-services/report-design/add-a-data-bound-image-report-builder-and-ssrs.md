@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a09992a4e4747550385e9c81c68a1fd9b8989ffb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031694"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
   데이터베이스에 저장된 이미지에 대한 참조를 보고서에 포함할 수 있습니다. 이러한 이미지를 *데이터 바인딩된 이미지*라고 합니다. 제품 목록에서 제품 이름과 함께 표시되는 그림을 예로 들 수 있습니다.  
@@ -49,6 +49,6 @@ ms.locfileid: "47805391"
  [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 116ff01c859f5657b57e4813bbf828737fdaf297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d3a3aa3f8091331f7f2deda5ce3cefd3bc3955
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031024"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
-  보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](http://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
+  보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](https://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
   
  고려해야 할 일반 원칙은 다음과 같습니다.  
   

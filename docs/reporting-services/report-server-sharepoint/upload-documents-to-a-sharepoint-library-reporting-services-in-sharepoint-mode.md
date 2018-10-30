@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021087"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
 
@@ -43,7 +43,7 @@ SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드
   
      보고서 정의가 공유 데이터 원본 파일(.rsds)을 사용하여 외부 데이터 원본에 대한 연결 정보를 저장하는 경우 .rdl 파일 및 .rsds 파일을 동시에 업로드할 수 있습니다. 이렇게 하려면 **여러 문서 업로드**를 클릭하고 두 파일을 모두 지정한 다음 **확인**을 클릭합니다.  
   
- 공유 데이터 원본, 보고서 모델 또는 보고서에 대한 참조를 포함하는 보고서를 업로드하는 경우 파일을 업로드하면 해당 참조가 손상됩니다. 참조를 다시 설정하는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
+ 공유 데이터 원본, 보고서 모델 또는 보고서에 대한 참조를 포함하는 보고서를 업로드하는 경우 파일을 업로드하면 해당 참조가 손상됩니다. 참조를 다시 설정하는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
   
  보고서를 업로드하면 사용자가 열 때 해당 보고서가 요청 시 실행되어 데이터 원본의 라이브 데이터가 검색됩니다. 일정에 따라 데이터를 검색하거나 캐시된 데이터를 사용하도록 보고서를 구성할 수도 있습니다. 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -55,4 +55,4 @@ SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드
  [SharePoint 라이브러리에 공유 데이터 원본 게시](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

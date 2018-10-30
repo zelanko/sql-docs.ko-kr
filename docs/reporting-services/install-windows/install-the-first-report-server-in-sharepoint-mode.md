@@ -6,12 +6,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3bae7d772d5a054c5f536f73d81edb27b550b7fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 681f64500bdc7cac83a580dc5a2abef27ff4535d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051195"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -49,7 +50,7 @@ ms.locfileid: "47715491"
  ![SSRS SharePoint 모드 단일 서버 배포](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 모드 단일 서버 배포")  
   
 > [!TIP]  
->  더 복잡한 배포 예제는 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)를 참조하세요.  
+>  더 복잡한 배포 예제는 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)를 참조하세요.  
   
 ##  <a name="bkmk_setupaccounts"></a> 설치 계정
 
@@ -61,7 +62,7 @@ ms.locfileid: "47715491"
   
  **Reporting Services 서비스 응용 프로그램 만들기**  
   
--   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](http://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (http://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
+-   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (https://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
@@ -296,7 +297,7 @@ ms.locfileid: "47715491"
   
  매개 변수  
   
--   서비스 프록시에 대해 **-Account** 를 업데이트합니다. 계정은 SharePoint 팜에서 관리되는 서비스 계정이어야 합니다. 자세한 내용은 SharePoint 항목 [SharePoint 2013에서 관리 및 서비스 계정 계획](http://technet.microsoft.com/library/cc263445.aspx)을 참조하세요.  
+-   서비스 프록시에 대해 **-Account** 를 업데이트합니다. 계정은 SharePoint 팜에서 관리되는 서비스 계정이어야 합니다. 자세한 내용은 SharePoint 항목 [SharePoint 2013에서 관리 및 서비스 계정 계획](https://technet.microsoft.com/library/cc263445.aspx)을 참조하세요.  
   
 -   서비스 응용 프로그램에 대해 **–DatabaseServer** 매개 변수를 업데이트합니다. 이 매개 변수는 데이터베이스 엔진 인스턴스입니다.  
   
@@ -398,7 +399,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션  
   
--   [Excel Services 데이터 모델 설정(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
+-   [Excel Services 데이터 모델 설정(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
 또한, Reporting Services 서비스 응용 프로그램에서 사용하는 응용 프로그램 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다.
   
@@ -406,7 +407,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  Reporting Services 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 응용 프로그램 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 컴퓨터에 있는 경우와 같이 여러 컴퓨터 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 전자 메일 구성  
- Reporting Services 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 Reporting Services 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. Reporting Services 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2013 및 SharePoint 2016&#41;](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)을 참조하세요. 
+ Reporting Services 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 Reporting Services 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. Reporting Services 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2013 및 SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)을 참조하세요. 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>콘텐츠 라이브러리에 Reporting Services 콘텐츠 형식 추가  
  Reporting Services는 공유 데이터 원본 파일(.rsds), 보고서 모델 파일(.smdl) 및 보고서 작성기 보고서 정의 파일(.rdl)을 관리하는 데 사용하는 미리 정의된 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  
@@ -421,7 +422,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   SharePoint 문서 라이브러리에서 텍스트 상자(예: 제목)만 포함된 기본 Reporting Services 보고서를 만듭니다. 이 보고서에는 어떠한 데이터 원본 또는 데이터 집합도 포함되지 않습니다. 이 보고서의 목적은 보고서 작성기를 열고, 기본 보고서를 작성하고, 보고서를 미리 볼 수 있는지 확인하기 위한 것입니다.  
   
-     보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작(보고서 작성기)](http://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
+     보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작(보고서 작성기)](https://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
 
@@ -430,4 +431,4 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

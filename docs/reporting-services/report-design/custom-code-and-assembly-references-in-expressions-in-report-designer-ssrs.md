@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5261e6943cb4044e4f47d63211b6f5e9d53922f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030412"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
   보고서에 포함된 사용자 지정 코드 또는 직접 작성한 사용자 지정 어셈블리에 대한 참조를 추가한 다음 컴퓨터에 저장하고 보고서 서버로 배포할 수 있습니다. 단일 보고서에서 여러 번 사용된 함수, 사용자 지정 상수 또는 복잡한 함수에는 포함 코드를 사용합니다. 코드를 한 위치에서 관리하면서 여러 보고서에서 사용할 수 있도록 공유하려면 사용자 지정 코드 어셈블리를 사용합니다. 사용자 지정 코드에는 새로운 사용자 지정 상수, 변수, 함수 또는 서브루틴이 포함될 수 있습니다. Parameters 컬렉션과 같은 기본 제공 컬렉션에 대한 읽기 전용 참조를 포함할 수 있습니다. 그러나 사용자 지정 함수에 보고서 데이터 값 집합을 전달할 수 없으며 특히 사용자 지정 집계는 지원되지 않습니다.  
@@ -52,12 +52,12 @@ ms.locfileid: "47728641"
   
  기본 제공 함수를 사용하려면 항목 창에서 함수 이름을 두 번 클릭합니다. 함수 설명이 설명 창에 표시되고 함수 호출 예가 예제 창에 표시됩니다. 코드 창에서 함수 이름을 입력하고 왼쪽 괄호 **(** 를 입력하면 IntelliSense 도움말을 통해 해당 함수 호출에 적합한 각 구문이 표시됩니다. 예를 들어 테이블의 `Quantity` 라는 필드에 대한 최대값을 계산하려면 코드 창에 `=Max(` 라는 간단한 식을 입력하고 스마트 태그를 사용하여 해당 함수 호출에 대해 유효한 모든 구문 목록을 확인합니다. 이 예를 완료하려면 `=Max(Fields!Quantity.Value)`를 입력합니다.  
   
- 각 함수에 대한 자세한 내용은 <xref:System.Math>, <xref:System.Convert>및 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
+ 각 함수에 대한 자세한 내용은 <xref:System.Math>, <xref:System.Convert>및 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
 ##  <a name="NotCommon"></a> 일반적으로 사용되지 않는 함수에 대한 참조 포함  
  일반적으로 사용되지 않는 다른 CLR 네임스페이스에 대한 참조를 포함하려면 <xref:System.Text.StringBuilder>를 참조하세요. 일반적으로 사용되지 않는 이러한 함수의 경우 **식** 대화 상자의 코드 창에서 IntelliSense가 지원되지 않습니다.  
   
- 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
+ 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
 ##  <a name="External"></a> 외부 어셈블리에 대한 참조 포함  
  외부 어셈블리의 클래스에 대한 참조를 포함하려면 보고서 처리기에 대한 어셈블리를 확인해야 합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 보고서에 추가할 어셈블리의 정규화된 이름을 지정할 수 있습니다. 식에서 어셈블리의 클래스에 대한 정규화된 이름을 사용해야 합니다. 외부 어셈블리의 클래스는 **식** 대화 상자에 표시되지 않으므로 정확한 클래스 이름을 입력해야 합니다. 정규화된 이름에는 네임스페이스, 클래스 이름 및 멤버 이름이 포함됩니다.  
@@ -194,6 +194,6 @@ End Function
  [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 자습서 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

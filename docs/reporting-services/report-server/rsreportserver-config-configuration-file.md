@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020347"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -57,7 +57,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  다음 표에서는 파일의 첫 부분에 나타나는 일반 구성 설정에 대한 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다. 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지 **(N)** , SharePoint 모드 보고서 서버에 적용되는지 **(S)** 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
 > [!NOTE]  
->  이 항목에서 "최대 정수"는 INT_MAX 값, 2147483647을 의미합니다.  자세한 내용은 [정수 제한](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)(http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)을 참조하세요.  
+>  이 항목에서 "최대 정수"는 INT_MAX 값, 2147483647을 의미합니다.  자세한 내용은 [정수 제한](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)(https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)을 참조하세요.  
   
 |설정|설명|모드|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  **URLReservations** 는 현재 인스턴스의 보고서 서버 웹 서비스 및 웹 포털에 대한 HTTP 액세스를 정의합니다. URL은 보고서 서버를 구성할 때 예약되고 HTTP.SYS에 저장됩니다.  
   
 > [!WARNING]  
->  SharePoint 모드의 경우 URL 예약은 SharePoint 중앙 관리에서 구성됩니다. 자세한 내용은 [대체 액세스 매핑 구성(http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)을 참조하세요.  
+>  SharePoint 모드의 경우 URL 예약은 SharePoint 중앙 관리에서 구성됩니다. 자세한 내용은 [대체 액세스 매핑 구성(https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx)을 참조하세요.  
   
  구성 파일에서 URL 예약을 직접 수정하지 마세요. 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 또는 보고서 서버 WMI 공급자를 사용하여 기본 모드 보고서 서버에 대한 URL 예약을 만들거나 수정해야 합니다. 구성 파일에서 값을 수정하는 경우 예약이 손상되어 런타임에 서버 오류가 발생하거나 소프트웨어를 제거해도 제거되지 않는 분리된 예약이 HTTP.SYS에 남게 됩니다. 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 및 [구성 파일의 URL&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)를 참조하세요.  
   
@@ -236,7 +236,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 응용 프로그램에서 쉽게 볼 수 있는 응용 프로그램 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
- 보고서 서버 전자 메일은 SMTP 네트워크 장치를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
+ 보고서 서버 전자 메일은 SMTP 네트워크 장치를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
   
 |설정|설명|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|  
 |**MaxConnections**|Bing Maps 웹 서비스에 대한 최대 연결 수를 지정합니다.|  
 |**Timeout**|Bing Maps 웹 서비스의 응답을 기다리는 제한 시간(초 단위)을 지정합니다.|  
-|**AppID**|Bing Maps 웹 서비스에 사용할 응용 프로그램 식별자(AppID)를 지정합니다. **(Default)** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 AppID를 지정합니다.<br /><br /> 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.<br /><br /> 고유한 Bing Maps 사용권 계약을 위해 사용자 지정 AppID를 지정해야 하는 경우가 아니라면 이 값을 변경하지 마세요. AppID를 변경한 경우 변경 내용을 적용하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 다시 시작할 필요는 없습니다.|  
-|**CacheLevel**|System.Net.Cache의 HttpRequestCacheLevel 열거형 값을 지정합니다. 기본값은 **Default**입니다. 자세한 내용은 [HttpRequestCacheLevel 열거형](http://go.microsoft.com/fwlink/?LinkId=153353)을 참조하십시오.|  
+|**AppID**|Bing Maps 웹 서비스에 사용할 응용 프로그램 식별자(AppID)를 지정합니다. **(Default)** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 AppID를 지정합니다.<br /><br /> 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.<br /><br /> 고유한 Bing Maps 사용권 계약을 위해 사용자 지정 AppID를 지정해야 하는 경우가 아니라면 이 값을 변경하지 마세요. AppID를 변경한 경우 변경 내용을 적용하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 다시 시작할 필요는 없습니다.|  
+|**CacheLevel**|System.Net.Cache의 HttpRequestCacheLevel 열거형 값을 지정합니다. 기본값은 **Default**입니다. 자세한 내용은 [HttpRequestCacheLevel 열거형](https://go.microsoft.com/fwlink/?LinkId=153353)을 참조하십시오.|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> 기본 모드 보고서 서버에 대한 기본 구성 파일  
  rsreportserver.config 파일은 기본적으로 다음 위치에 설치됩니다.  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

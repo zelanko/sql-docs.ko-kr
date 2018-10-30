@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99689619610e3237d9c57627229ba3eb3f1f62e1
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031709"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 
@@ -99,4 +99,4 @@ ms.locfileid: "48905749"
 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [로컬 관리에 대해 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
- 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

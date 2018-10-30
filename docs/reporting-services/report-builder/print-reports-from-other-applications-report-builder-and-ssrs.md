@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c3db198ad707c298d48df5043627f327077a859
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 113735877c1618f65d9d1a87ce8cb6cc05c02daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031711"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>다른 응용 프로그램에서 보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 작성기는 다른 응용 프로그램에서 보고서를 쉽게 볼 수 있도록 내보내기 옵션을 제공합니다. 브라우저나 웹 기반의 응용 프로그램에서 보고서를 열면 보고서 위쪽에 나타나는 보고서 도구 모음에서 **내보내기** 명령을 사용할 수 있습니다. 보고서를 내보내면 다른 응용 프로그램에서 보고서가 표시됩니다. 예를 들어 보고서를 Excel로 내보내면 해당 보고서가 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]에서 열립니다. 응용 프로그램에 사용하려는 특정 인쇄 기능이 있는 경우에만 인쇄 목적으로 보고서를 내보내는 것이 좋습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47818778"
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
  [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)   
+ [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

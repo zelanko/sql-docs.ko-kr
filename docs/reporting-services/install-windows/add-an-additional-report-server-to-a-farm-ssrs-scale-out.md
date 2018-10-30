@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b5e42465bd2a0c4661709dd1a17a2b7de8c6b3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830841"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051205"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
@@ -29,7 +30,7 @@ ms.locfileid: "47830841"
 ##  <a name="bkmk_loadbalancing"></a> 부하 분산  
  사용자 환경에 사용자 지정 또는 타사 부하 분산 솔루션이 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 부하 분산은 SharePoint에서 자동으로 관리됩니다. 기본 SharePoint 부하 분산 동작은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 시작한 모든 응용 프로그램 서버에서 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 부하를 분산하는 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 설치되고 시작되었는지 확인하려면 SharePoint 중앙 관리에서 **서버의 서비스 관리** 를 클릭합니다.  
   
-##  <a name="bkmk_prerequisites"></a> 필수 구성 요소  
+##  <a name="bkmk_prerequisites"></a> 사전 요구 사항  
   
 -   SQL Server 설치 프로그램을 실행하려면 로컬 관리자여야 합니다.  
   
@@ -80,4 +81,4 @@ ms.locfileid: "47830841"
 [SharePoint Server 2016에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [SharePoint Server 2013에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

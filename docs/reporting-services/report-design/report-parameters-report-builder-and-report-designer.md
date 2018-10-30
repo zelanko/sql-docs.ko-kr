@@ -15,15 +15,15 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032082"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 생성한 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 생성한 모바일 보고서에서도 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 및 보고서 디자이너에서 만드는 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
   
 ||  
 |-|  
@@ -159,7 +159,7 @@ ms.locfileid: "47681491"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 경우 서로 다른 데이터 원본이 매개 변수에 대한 서로 다른 구문을 지원합니다. 위치 또는 이름으로 쿼리에서 식별되는 매개 변수의 범위를 지원합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)에서 특정 외부 데이터 원본 형식에 대한 항목을 참조하세요. 관계형 쿼리 디자이너에서 매개 변수가 있는 쿼리를 만들려면 필터에 대해 매개 변수 옵션을 선택해야 합니다. 자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
--   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
+-   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 게시된 보고서에 대한 매개 변수 관리  
  보고서를 디자인할 때는 보고서 매개 변수가 보고서 정의에 저장되고, 보고서를 게시할 때는 보고서 매개 변수가 보고서 정의와 별개로 저장되고 관리됩니다.  
@@ -233,13 +233,13 @@ ms.locfileid: "47681491"
   
 
 ##  <a name="bkmk_Related_Topics"></a> 관련 단원  
- [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

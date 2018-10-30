@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cec608dc1dd168ebfc86b1f8d945e5f90d9d7b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021709"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
-  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
+  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
   
 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과는 동일하며 이 그림의 원형 차트와 같은 원형 차트가 만들어집니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47850433"
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
 ##  <a name="WhatsNext"></a> 다음 단계  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 데이터 원본에 실제로 연결되는 *연결 문자열*을 사용하여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 *연결 문자열*을 사용하여 데이터베이스 등의 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 연결 문자열은 실제로 사용자를 데이터 원본에 연결하는 역할을 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
  다른 자습서를 진행하려면 SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명만 있으면 됩니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
   
@@ -233,4 +233,4 @@ ms.locfileid: "47850433"
 [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

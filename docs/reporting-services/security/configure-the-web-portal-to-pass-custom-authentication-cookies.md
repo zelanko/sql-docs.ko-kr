@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b538523839be0260eda33934a18e682579aaa3f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8bb25994596bd58e967288a8830ee11c92c9c7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029972"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성
 
@@ -47,4 +47,4 @@ RSReportServer.config 파일의 웹 포털 구성 설정에 \<**PassThroughCooki
 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [보안 확장 프로그램 개요](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
-추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021177"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -32,11 +32,11 @@ ms.locfileid: "47717221"
   
 * 데이터 원본 및 KPI를 만들고 데이터 집합 및 모바일 보고서를 게시하려면 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
 * [공유 데이터 집합을 만들려면](../install-windows/install-report-builder.md)  
-* 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](http://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
+* 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
 * [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)  
 *  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
 * 결과를 보려면 
-  *   [Power BI 서비스에 등록](http://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
+  *   [Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
   *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
 
   
@@ -133,7 +133,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
     
 ## <a name="create-mobile-report">Reporting Services 모바일 보고서 만들기</a>  
    
-Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고서 게시자를 설치](http://go.microsoft.com/fwlink/?LinkId=717766)하거나 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 시작합니다. 
+Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)하거나 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 시작합니다. 
 
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]를 처음 열면 모바일 보고서를 만들 수 있는 빈 캔버스가 표시됩니다. 먼저 시각적 개체를 만들거나 데이터로 시작할 수 있습니다. 시각적 개체를 먼저 만든 경우 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 는 보고서에 연결된 시뮬레이션 데이터를 자동으로 생성하고 사용자가 시각적 선택 항목을 변경할 때 이를 동적으로 변경합니다. 직접 연습해 보세요.   
   
@@ -259,7 +259,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 보려면 먼저 다음을 수행해야 합니다.
 
-*  계정이 아직 없는 경우[Power BI 서비스에 등록](http://go.microsoft.com/fwlink/?LinkID=513879)합니다.
+*  계정이 아직 없는 경우[Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879)합니다.
 *  모바일 장치에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
 
 ### <a name="view-your-mobile-report"></a>모바일 보고서 보기

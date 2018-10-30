@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cfe1e96a0eb50723596b4bfbea5841a91b5d4233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020237"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
 
@@ -108,9 +108,9 @@ ms.locfileid: "47658921"
 4.  웹 포털에 URL을 붙여넣은 다음, Enter 키를 누릅니다. 보고서가 실행되고 문서 구조가 숨겨집니다.  
   
 > [!NOTE]  
->  샘플 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+>  샘플 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
 >   
->  자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스"를 참조하십시오.  
+>  자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스"를 참조하십시오.  
 
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

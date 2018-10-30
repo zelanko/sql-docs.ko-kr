@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6fbd7d58efd17f7fcbd35cc79a6de78c29946eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020687"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
 
@@ -96,4 +96,4 @@ ms.locfileid: "47839241"
  [보고서 캐시](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

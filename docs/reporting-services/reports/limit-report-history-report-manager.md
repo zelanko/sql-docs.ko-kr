@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 752ea88b7b980ec27af03b60d9b8480f391b6114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8a6664802c9e0d893ae0e8c85a956fa4b324ddc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823155"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021887"
 ---
 # <a name="limit-report-history-report-manager"></a>보고서 기록 제한(보고서 관리자)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 요청 시 보고서 기록을 만들거나 스냅숏이 만들어져 보고서 기록에 추가되는 빈도를 예약할 수 있습니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "47823155"
   
 3.  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

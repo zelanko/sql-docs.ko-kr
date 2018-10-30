@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0fe7960d68c43f7afe46ca518c84be58a60c6463
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031172"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
 
@@ -216,4 +216,4 @@ ms.locfileid: "49120151"
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
 [경고 담당자용 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

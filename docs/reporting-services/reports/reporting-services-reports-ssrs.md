@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030332"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "47657171"
 ## <a name="view-reports"></a>보고서 보기  
  로컬로 저장되거나 보고서 서버에 게시된 보고서를 미리 볼 수 있을 뿐만 아니라 보고서 구독자에게 다양한 보기 환경을 제공할 수 있습니다. 보고서를 보는 방법은 다음과 같습니다.  
   
--   **브라우저.**  보고서 서버 웹 서비스 또는 SharePoint 사이트를 사용하여 게시된 보고서를 볼 수 있습니다. SharePoint 사이트에서는 게시된 보고서를 표시할 웹 파트를 구성할 수도 있습니다. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) 및 [URL 액세스&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)를 참조하세요.  
+-   **브라우저.**  보고서 서버 웹 서비스 또는 SharePoint 사이트를 사용하여 게시된 보고서를 볼 수 있습니다. SharePoint 사이트에서는 게시된 보고서를 표시할 웹 파트를 구성할 수도 있습니다. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) 및 [URL 액세스&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)를 참조하세요.  
   
 -   **배달.**  공유 파일 폴더로 또는 보고서 구독자에게 전자 메일로 보고서를 배달하도록 구독을 구성할 수 있습니다.  자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657171"
   
 -   **인쇄.**  보고서 구독자는 보고서가 표시된 방식에 따라 보고서 또는 보고서 페이지를 인쇄할 수 있습니다. 자세한 내용은 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 응용 프로그램 또는 Windows Form 응용 프로그램을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](http://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
+-   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 응용 프로그램 또는 Windows Form 응용 프로그램을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](https://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
   
 ## <a name="manage-reports"></a>보고서 관리  
  게시된 보고서를 관리하는 방법은 다음과 같습니다.  

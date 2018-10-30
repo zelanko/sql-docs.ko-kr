@@ -11,12 +11,12 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ae6bf032e4b2a3e2b47907e055ffa5a05286bf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19eec5935f79e3adaa136ec3a661f417e7be6dd3
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671284"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226295"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47671284"
 catalog.set_object_parameter_value [@object_type =] object_type   
     , [@folder_name =] folder_name   
     , [@project_name =] project_name   
-    , [@parameter_name =] parameter _name   
+    , [@parameter_name =] parameter_name   
     , [@parameter_value =] parameter_value   
  [  , [@object_name =] object_name ]  
  [  , [@value_type =] value_type ]  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8df4078262868615b9a6e28948b255f753384503
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780961"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031898"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "47780961"
  보고서 서버는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스가 설치된 컴퓨터를 말하며 페이지 매김 처리한 보고서와 모바일 보고서, 보고서 관련 항목 및 리소스, 일정, 구독 등의 항목을 내부적으로 저장합니다. 보고서 서버는 독립 실행형 단일 서버로 구성하거나 확장형 팜으로 구성할 수 있으며 SharePoint Server와 통합할 수도 있습니다. 보고서 서버 항목과의 상호 작용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 서비스, WMI 공급자, URL 액세스를 통해서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 보고서 서버와 상호 작용하는 방식은 배포 토폴로지 및 구성에 따라 다릅니다.  
   
 ### <a name="native-mode-report-servers"></a>기본 모드 보고서 서버
- 기본 모드로 구성된 보고서 서버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치되고 독립 실행형 서버로 구성된 컴퓨터를 말합니다. 보고서 서버, 보고서 및 보고서 관련 항목과의 상호 작용은 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 나 URL 액세스 명령을 통해 브라우저를 사용하거나 SQL Server Management Studio에서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
+ 기본 모드로 구성된 보고서 서버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치되고 독립 실행형 서버로 구성된 컴퓨터를 말합니다. 보고서 서버, 보고서 및 보고서 관련 항목과의 상호 작용은 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 나 URL 액세스 명령을 통해 브라우저를 사용하거나 SQL Server Management Studio에서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)을 참조하세요.  
   
 ### <a name="sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버  
  SharePoint와 통합된 보고서 서버는 두 가지 구성이 가능합니다. [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 SharePoint Server가 SharePoint 공유 서비스로 설치되어 있습니다. 이전 릴리스에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 추가 기능을 설치하여 보고서 서버가 SharePoint Server와 통합됩니다. 두 경우 모두 SharePoint 사이트에서 응용 프로그램 페이지를 사용하여 보고서 서버, 보고서, 보고서 관련 항목과 상호 작용합니다. SharePoint 문서 라이브러리 및 생성한 기타 라이브러리를 사용하여 보고서와 관련된 콘텐츠 형식을 저장합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)를 참조하세요.  
@@ -98,7 +98,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
   
 -   **자격 증명.** 자격 증명은 외부 데이터 액세스를 위해 제공해야 하는 인증 정보입니다.  
   
-     자격 증명은 포함된 데이터 원본을 만들거나 쿼리를 실행하거나 보고서 처리 중 데이터를 검색하는 데 사용합니다. 데이터 원본의 소유자는 데이터에 액세스할 때 사용해야 하는 자격 증명의 유형을 결정합니다. 자격 증명은 보고서 서버, SharePoint 사이트 또는 보고서 제작 환경의 로컬 컴퓨터의 데이터 연결과 독립적으로 관리됩니다. 데이터 원본 유형에 따라 자격 증명을 사용자에게 요청하지 않도록 저장하거나 각 사용자에게 자격 증명을 요청하도록 설정할 수 있습니다. 사용자 컴퓨터에 있는 데이터 원본에 연결하는지 보고서 서버에 있는 데이터 원본에 연결하는지에 따라 필요한 자격 증명은 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+     자격 증명은 포함된 데이터 원본을 만들거나 쿼리를 실행하거나 보고서 처리 중 데이터를 검색하는 데 사용합니다. 데이터 원본의 소유자는 데이터에 액세스할 때 사용해야 하는 자격 증명의 유형을 결정합니다. 자격 증명은 보고서 서버, SharePoint 사이트 또는 보고서 제작 환경의 로컬 컴퓨터의 데이터 연결과 독립적으로 관리됩니다. 데이터 원본 유형에 따라 자격 증명을 사용자에게 요청하지 않도록 저장하거나 각 사용자에게 자격 증명을 요청하도록 설정할 수 있습니다. 사용자 컴퓨터에 있는 데이터 원본에 연결하는지 보고서 서버에 있는 데이터 원본에 연결하는지에 따라 필요한 자격 증명은 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
 ### <a name="report-datasets"></a>보고서 데이터 집합 
  보고서에서 데이터 집합은 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 집합은 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 집합에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 집합에는  
@@ -120,11 +120,11 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
   
  데이터 영역을 사용하여 일반적인 데이터를 시각화할 수 있습니다. 여기에는 테이블, 행렬 또는 목록의 숫자 및 텍스트, 차트 또는 계기의 그래픽 표시 및 지도에 대한 지리적 표시가 포함됩니다. 테이블, 행렬 및 목록은 모두 데이터 집합의 모든 데이터를 표시하기 위해 필요에 따라 확장되는 테이블릭스 데이터 영역을 기반으로 합니다. 테이블릭스 데이터 영역은 정적 행과 열 및 동적 행과 열이 모두 포함된 여러 행 및 열 그룹을 지원합니다. 차트는 여러 계열 및 범주 그룹을 다양한 차트 형식으로 표시하고, 계기는 데이터 집합의 단일 값 또는 집계 값을 표시합니다. 또한 지도는 공간 데이터를 데이터 집합에서 집계한 데이터를 기반으로 모양이 변하는 지도 요소로 표시합니다.  
   
--   **테이블.** 테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
+-   **테이블.** 테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
   
--   **행렬.** 행렬은 크로스탭이라고도 합니다. 행렬 데이터 영역에는 동적 열과 행이 모두 포함되며 데이터에 맞게 확장됩니다. 또한 행렬에는 동적 열과 행 및 정적 열과 행이 있을 수 있습니다. 열이나 행에 다른 열이나 행을 넣을 수 있으며 데이터를 그룹화하는 데 열이나 행을 사용할 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
+-   **행렬.** 행렬은 크로스탭이라고도 합니다. 행렬 데이터 영역에는 동적 열과 행이 모두 포함되며 데이터에 맞게 확장됩니다. 또한 행렬에는 동적 열과 행 및 정적 열과 행이 있을 수 있습니다. 열이나 행에 다른 열이나 행을 넣을 수 있으며 데이터를 그룹화하는 데 열이나 행을 사용할 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
   
--   **목록.** 목록은 자유로운 형태로 정렬된 데이터를 표시하는 데이터 영역입니다. 보고서 항목을 정렬하여 목록 내의 어느 위치에나 입력란, 이미지 및 기타 데이터 영역을 포함하는 양식을 만들 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
+-   **목록.** 목록은 자유로운 형태로 정렬된 데이터를 표시하는 데이터 영역입니다. 보고서 항목을 정렬하여 목록 내의 어느 위치에나 입력란, 이미지 및 기타 데이터 영역을 포함하는 양식을 만들 수 있습니다. 자세한 내용은 [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)을 참조하세요.  
   
 -   **차트.** 차트는 데이터를 그래픽으로 표시합니다. 차트에는 가로 막대형, 원형 및 꺾은선형 차트가 있으며 이외에도 많은 스타일이 지원됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -205,12 +205,12 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  완전히 처리된 보고서는 보고서 렌더러로 전송되어 대상 렌더링 형식의 데이터와 레이아웃을 각 페이지에서 결합합니다. 렌더링 확장 프로그램은 사용자 지정이 가능하며 확장할 수 있습니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 및 [확장&#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)를 참조하세요.  
   
 ### <a name="exported-report"></a>내보낸 보고서
- 내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다.  
   
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 기능 및 태스크&#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

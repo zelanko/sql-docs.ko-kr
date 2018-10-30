@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3df6da1da2786ede9dbde2ec417c5800046577fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f6ff834463d0379d9e93058344dde5a391362d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031392"
 ---
 # <a name="report-data-ssrs"></a>보고서 데이터(SSRS)
   보고서 데이터는 조직의 다양한 데이터 원본에서 가져올 수 있습니다. 보고서 디자인의 첫 단계는 기본 보고서 데이터를 나타내는 데이터 원본 및 데이터 집합을 만드는 것입니다. 각 데이터 원본은 데이터 연결 정보를 포함합니다. 각 데이터 집합은 데이터 원본의 데이터로 사용할 필드 집합을 정의하는 쿼리 명령을 포함합니다. 각 데이터 집합의 데이터를 시각화하려면 테이블, 행렬, 차트 및 지도와 같은 데이터 영역을 추가합니다. 보고서를 처리하면 데이터 원본에 대한 쿼리가 실행되고 각 데이터 영역이 필요에 따라 확장되어 데이터 집합에 대한 쿼리 결과를 표시합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "47611561"
   
 -   **데이터 원본 정의.** 보고서 데이터 원본의 XML 표현을 포함하는 파일입니다. 보고서를 게시할 때 해당 데이터 원본은 보고서 정의와는 별도로 보고서 서버 또는 SharePoint 사이트에 데이터 원본 정의로 저장됩니다. 예를 들어 보고서 서버 관리자가 연결 문자열이나 자격 증명을 업데이트할 수 있습니다. 기본 보고서 서버의 파일 형식은 .rds입니다. SharePoint 사이트의 파일 형식은 .rsds입니다.  
   
--   **연결 문자열.** 연결 문자열은 데이터 원본에 연결하는 데 필요한 연결 속성의 문자열 버전입니다. 연결 속성은 데이터 연결 형식에 따라 다릅니다. 예를 보려면 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)를 참조하세요.  
+-   **연결 문자열.** 연결 문자열은 데이터 원본에 연결하는 데 필요한 연결 속성의 문자열 버전입니다. 연결 속성은 데이터 연결 형식에 따라 다릅니다. 예를 보려면 [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)를 참조하세요.  
   
 -   **공유 데이터 원본.** 여러 보고서에서 사용할 수 있도록 보고서 서버 또는 SharePoint 사이트에 제공되는 데이터 원본입니다.  
   

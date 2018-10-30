@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085449"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029699"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "49085449"
  ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
 보고서 도구 모음  
   
- 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)를 참조하세요.  
+ 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)를 참조하세요.  
   
  보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "49085449"
   
  응용 프로그램 페이지에 액세스하려면 보고서의 드롭다운 메뉴에서 항목과 관련된 동작을 선택하거나 이전에 SharePoint 라이브러리에 추가했던 기타 보고서 서버 항목을 선택합니다. 항목 및 사용자 권한에 따라 보고서 작성기에서 보고서를 만들고 모델을 생성하며 모델 항목 보안을 설정할 수도 있습니다.  
   
- Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
+ Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트에서 보고서 서버 항목 찾기  
  속성을 설정하려면 먼저 항목을 찾아야 합니다. 보고서 서버 항목은 항상 라이브러리나 라이브러리 내의 폴더에 저장됩니다.  
@@ -148,6 +148,6 @@ ms.locfileid: "49085449"
 ## <a name="see-also"></a>참고 항목  
  [보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [보고서 작성기 설치 및 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [보고서 작성기 설치 및 제거](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

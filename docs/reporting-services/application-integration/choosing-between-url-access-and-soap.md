@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028678"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
 
@@ -45,6 +45,6 @@ ms.locfileid: "47783463"
   
  대부분의 경우 보고 요구를 충족하기 위해서는 URL 액세스와 SOAP 호출이 모두 필요합니다. SOAP은 처음에 보고서 서버 데이터베이스에 연결하고 사용자 인터페이스에 사용 가능한 보고서 목록을 표시하는 데 사용되며, URL 액세스는 개별 보고서를 실제로 액세스하고 탐색하는 데 사용됩니다.  
   
- URL 액세스와 웹 서비스를 결합하여 통합 보고 기능을 제공하는 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.
+ URL 액세스와 웹 서비스를 결합하여 통합 보고 기능을 제공하는 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

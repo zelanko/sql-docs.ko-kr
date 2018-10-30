@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff8806f690dab925f30befe2a01ec33e79edd960
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46345d27b35a1ed4697c4925990f41c4cdd58426
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029042"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
   **DataReader** 개체가 있으면 클라이언트에서는 읽기 전용, 정방향 전용 데이터 스트림을 데이터 원본에서 검색할 수 있습니다. 결과는 쿼리 실행으로 반환되고 **DataReader** 클래스의 **Read** 메서드를 사용하여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장됩니다. **DataReader** 클래스를 만들려면 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>를 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>을 구현합니다. **DataReader** 개체를 사용하면 전체 쿼리 결과가 반환될 때까지 기다리지 않고 사용 가능할 때 즉시 데이터를 검색하고 (기본적으로) 한 번에 행 한 개씩만 메모리에 저장하여 시스템 오버헤드를 줄임으로써 응용 프로그램 성능이 높아집니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47750641"
   
  보고서 디자이너에서 **DataReader** 개체는 결과 집합에 대한 스키마 정보 및 필드 목록을 검색하는 데 사용됩니다. <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스의 **GetName**, **GetValue**, **GetFieldType,** 및 **GetOrdinal** 메서드를 구현하여 이 작업을 수행할 수 있습니다.  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 예제 **DataReader** 클래스 구현은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 예제 **DataReader** 클래스 구현은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   

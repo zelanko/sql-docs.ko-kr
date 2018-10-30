@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651881"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020187"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651881"
   
  휘발성 데이터가 포함되어 있는 보고서의 경우 보고서를 실행할 때마다 크기가 급격하게 변경될 수 있습니다. 그럴 경우 데이터 원본을 모니터링하여 데이터 휘발성이 보고서에 미치는 영향 및 이 항목에 설명된 단계를 따라야 하는지 여부를 결정해야 합니다.  
   
- 시간 제한 오류 및 메모리 부족 오류의 진단 방법에 대한 자세한 내용 및 팁을 보려면 blogs.msdn.com에 있는 [보고서 서버에서 보고서를 실행할 때 문제를 진단하는 방법](http://go.microsoft.com/fwlink/?LinkId=85634) 문서를 참조하세요.  
+ 시간 제한 오류 및 메모리 부족 오류의 진단 방법에 대한 자세한 내용 및 팁을 보려면 blogs.msdn.com에 있는 [보고서 서버에서 보고서를 실행할 때 문제를 진단하는 방법](https://go.microsoft.com/fwlink/?LinkId=85634) 문서를 참조하세요.  
   
 ## <a name="configuration-recommendations"></a>구성 권장 사항  
  보고서 실행, 보고서 렌더링 및 보고서 액세스에 대한 권장 사항은 다음과 같습니다.  

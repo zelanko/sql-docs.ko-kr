@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020707"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>주식형 차트(보고서 작성기 및 SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725481"
   
  ![주식형 차트](../../reporting-services/report-design/media/rs-stockchart.gif "주식형 차트")  
   
- 주식형 차트의 예는 보고서 작성기의 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 주식형 차트의 예는 보고서 작성기의 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725481"
 [범위형 차트](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [차트](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [차트 서식 지정](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[축 속성 대화 상자, 축 옵션](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[축 속성 대화 상자, 축 옵션](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

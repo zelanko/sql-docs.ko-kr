@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d93386e89797d75a2e8139f4f7edb558bc64c6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031872"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -69,9 +69,9 @@ ms.locfileid: "47779761"
  보고서의 여러 식에는 함수가 포함됩니다. 이러한 함수를 사용하여 데이터의 형식을 지정하고, 논리를 적용하고, 보고서 메타데이터에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리와 <xref:System.Convert> 및 <xref:System.Math> 네임스페이스의 함수를 사용하는 식을 작성할 수 있습니다. 다른 어셈블리 또는 사용자 지정 코드에서 함수에 대한 참조를 추가할 수 있습니다. 또한 <xref:System.Text.RegularExpressions>를 포함하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 클래스도 사용할 수 있습니다.  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic 함수  
- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 입력란에 표시되는 데이터나 매개 변수, 속성 또는 보고서의 다른 영역에 사용되는 데이터를 조작할 수 있습니다. 이 섹션에서는 이러한 함수 중 몇 가지를 보여 주는 예를 제공합니다. 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 입력란에 표시되는 데이터나 매개 변수, 속성 또는 보고서의 다른 영역에 사용되는 데이터를 조작할 수 있습니다. 이 섹션에서는 이러한 함수 중 몇 가지를 보여 주는 예를 제공합니다. 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](https://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서는 특정 데이터 형식 등에 대한 다양한 사용자 지정 형식 옵션을 제공합니다. 자세한 내용은 MSDN의 [형식 지정](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오.  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서는 특정 데이터 형식 등에 대한 다양한 사용자 지정 형식 옵션을 제공합니다. 자세한 내용은 MSDN의 [형식 지정](https://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오.  
   
 ### <a name="math-functions"></a>수치 연산 함수  
   
@@ -514,7 +514,7 @@ ms.locfileid: "47779761"
  보고서에 사용자 지정 코드를 사용할 수 있습니다. 사용자 지정 코드는 보고서에 포함되거나 보고서에서 사용되는 사용자 지정 어셈블리에 저장됩니다. 사용자 지정 코드에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>사용자 지정 집계를 위해 그룹 변수 사용  
- 특정 그룹 범위에 대해 로컬인 그룹 변수의 값을 초기화한 다음 해당 변수에 대한 참조를 식에 포함할 수 있습니다. 사용자 지정 코드가 있는 그룹 변수를 사용하려면 사용자 지정 집계를 구현합니다. 자세한 내용은 [사용자 지정 집계를 위해 Reporting Services 2008의 그룹 변수 사용(Using Group Variables in Reporting Services 2008 for Custom Aggregation)](http://go.microsoft.com/fwlink/?LinkId=128714)을 참조하십시오.  
+ 특정 그룹 범위에 대해 로컬인 그룹 변수의 값을 초기화한 다음 해당 변수에 대한 참조를 식에 포함할 수 있습니다. 사용자 지정 코드가 있는 그룹 변수를 사용하려면 사용자 지정 집계를 구현합니다. 자세한 내용은 [사용자 지정 집계를 위해 Reporting Services 2008의 그룹 변수 사용(Using Group Variables in Reporting Services 2008 for Custom Aggregation)](https://go.microsoft.com/fwlink/?LinkId=128714)을 참조하십시오.  
   
  변수에 대한 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)를 참조하세요.  
   

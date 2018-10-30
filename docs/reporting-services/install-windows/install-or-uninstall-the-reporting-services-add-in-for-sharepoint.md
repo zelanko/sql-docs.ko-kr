@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da0269e8320f0822723ab42cbe765c6586d0f2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051175"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거
 
@@ -23,7 +24,7 @@ ms.locfileid: "47597912"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 설치 작업은 보고서 서버를 SharePoint 제품 인스턴스와 통합하는 데 필요한 몇 가지 단계 중 하나입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 웹 프런트 엔드 응용 프로그램이 여러 개 있는 SharePoint 팜과 통합하는 경우 웹 서버 프런트 엔드가 있는 팜의 각 컴퓨터에 추가 기능을 설치합니다. 이 작업은 보고서 서버 내용에 액세스하는 데 사용될 웹 프런트 엔드에 대해서만 수행합니다.  
@@ -271,4 +272,4 @@ Rssharepoint.msi /?
 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

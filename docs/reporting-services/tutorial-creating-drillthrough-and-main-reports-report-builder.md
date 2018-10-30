@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029169"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
 이 자습서에서는 두 종류의 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 알아봅니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 
@@ -25,7 +25,7 @@ ms.locfileid: "47654323"
 이 자습서에 소요되는 예상 시간: 30분  
   
 ## <a name="requirements"></a>요구 사항  
-이 자습서를 실행하려면 드릴스루 보고서 및 주 보고서 둘 다에서 Contoso Sales 큐브에 액세스할 수 있어야 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
+이 자습서를 실행하려면 드릴스루 보고서 및 주 보고서 둘 다에서 Contoso Sales 큐브에 액세스할 수 있어야 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
   
 다른 파일인 ContosoBIdemoBAK.exe는 ContosoDW 데이터 웨어하우스를 위한 것으로, 이 자습서에서는 사용되지 않습니다.  
   
@@ -82,7 +82,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 10. **자격 증명 유형**을 클릭합니다.  
   
     > [!NOTE]  
-    > 데이터 원본에서 사용 권한이 구성된 방법에 따라 기본 인증 옵션을 변경해야 할 수 있습니다. 자세한 내용은 [보안&#40;보고서 작성기#41;](../reporting-services/report-builder/security-report-builder.md)을 참조하세요.  
+    > 데이터 원본에서 사용 권한이 구성된 방법에 따라 기본 인증 옵션을 변경해야 할 수 있습니다. 자세한 내용은 [보안&#40;보고서 작성기&#41;](../reporting-services/report-builder/security-report-builder.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

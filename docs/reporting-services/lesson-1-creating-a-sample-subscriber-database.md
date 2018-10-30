@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cc144c8b19b2fa90e2cb867f980d9f0ad3a641b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028312"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
 
@@ -70,4 +70,4 @@ ms.locfileid: "47813501"
 [데이터베이스 만들기](../relational-databases/databases/create-a-database.md)  
 [기본 테이블 보고서 만들기](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

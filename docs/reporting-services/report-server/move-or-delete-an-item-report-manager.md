@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89c84f5528c9cef50d165b83ce2e6e10189a297a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2d321c20aa009f4b807553abf69fe5f357b07a6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020297"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
   보고서 서버에 게시하는 보고서 및 보고서 관련 항목은 폴더에 저장됩니다. 항목을 다른 폴더로 이동할 수 있으며 해당 항목에 대한 참조는 보고서 서버에서 자동으로 유지 관리됩니다. 항목을 삭제하기 전에 해당 항목에 다른 항목이 종속되어 있는지 확인하십시오.  
@@ -39,7 +39,7 @@ ms.locfileid: "47854207"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>내용 페이지에서 항목을 이동하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 이동할 항목을 찾습니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47854207"
  또는 이동할 개체로 이동하고 **속성**을 클릭한 후 페이지 맨 위에서 **이동** 을 클릭합니다.  
   
 ## <a name="delete-an-item"></a>항목 삭제  
- 항목을 삭제하기 전에 해당 항목이 다른 항목에 사용되고 있는지 확인하십시오. 예를 들어 공유 데이터 원본을 삭제하는 경우 해당 데이터 원본을 사용하는 보고서와 모델이 더 이상 실행되지 않습니다. 보고서를 삭제하는 경우 해당 보고서와 관련된 구독 및 보고서 기록도 삭제됩니다. 항목에 대한 종속 항목을 확인하려면 [종속 항목 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)를 참조하세요.  
+ 항목을 삭제하기 전에 해당 항목이 다른 항목에 사용되고 있는지 확인하십시오. 예를 들어 공유 데이터 원본을 삭제하는 경우 해당 데이터 원본을 사용하는 보고서와 모델이 더 이상 실행되지 않습니다. 보고서를 삭제하는 경우 해당 보고서와 관련된 구독 및 보고서 기록도 삭제됩니다. 항목에 대한 종속 항목을 확인하려면 [종속 항목 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)를 참조하세요.  
   
 #### <a name="to-delete-a-report-or-item"></a>보고서 또는 항목을 삭제하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 삭제할 항목을 찾습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47854207"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [내용 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

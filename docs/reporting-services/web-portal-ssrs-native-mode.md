@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c78127437625030db0cd894db2b24d5359d6003e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021897"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
 
@@ -128,4 +128,4 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 [Reporting Services 브라우저 지원 계획](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 2016 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

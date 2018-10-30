@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c0d45b2b8931591688ece17e61427966c2cd795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681961"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028492"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47681961"
 Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
   
 ##  <a name="Credentials"></a> 자격 증명  
@@ -35,7 +35,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -47,7 +47,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **쿼리 뷰** 차원, 멤버, 멤버 속성, 측정값 및 KPI를 메타데이터 브라우저에서 쿼리 창으로 끌어서 MDX 쿼리를 작성합니다. 그런 다음 쿼리 창에서 직접 MDX 텍스트를 편집할 수 있습니다. 추가 데이터 집합 필드를 정의하려면 계산 멤버 창의 계산 멤버를 쿼리 창으로 끕니다.  
   
-     자세한 내용은 [Hyperion Essbase 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)를 참조하세요.  
+     자세한 내용은 [Hyperion Essbase 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)를 참조하세요.  
   
 -   보고서에서 기존 MDX 쿼리를 가져옵니다. **쿼리 가져오기** 단추를 사용하여 .rdl 파일을 찾아서 쿼리를 가져옵니다. [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본을 기반으로 하는 포함된 데이터 집합이 들어 있는 보고서에서 쿼리를 가져올 수 있습니다. .mdx 파일에서 MDX 쿼리를 직접 가져올 수는 없습니다.  
   
@@ -104,9 +104,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> 주의  
- 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
+ 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
- 자세한 내용은 [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](http://go.microsoft.com/fwlink/?LinkId=81970)을 참조하십시오.  
+ 자세한 내용은 [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](https://go.microsoft.com/fwlink/?LinkId=81970)을 참조하십시오.  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -125,7 +125,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -134,10 +134,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  데이터 집합 쿼리에 의해 생성되는 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
- [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](https://go.microsoft.com/fwlink/?LinkId=81970)  
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  
   
   

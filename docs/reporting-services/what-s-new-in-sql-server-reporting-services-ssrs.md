@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "47639781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029502"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -79,7 +79,7 @@ SQL Server vNext CTP 2.0 Reporting Services는 미리 보기로 사용할 수 �
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용자 지정할 수 있습니다.  
   
-  사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
+  사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ SQL Server vNext CTP 2.0 Reporting Services는 미리 보기로 사용할 수 �
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- 자세한 내용은 [웹 포털에서 KPI 사용](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
+ 자세한 내용은 [웹 포털에서 KPI 사용](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
   
  
  ### <a name="mobile-reports"></a>모바일 보고서
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**파일 공유 구독에 대한 공유 자격 증명**. 이제 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로가 있습니다.<br /><br /> 이 릴리스의 새로운 기능으로, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리자는 일대다 구독에서 사용할 수 있는 단일 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 구성 관리자 **파일 공유 계정 지정**에서 구성됩니다. 그러면 사용자는 구독 구성 페이지에서 **파일 공유 계정 사용**을 선택합니다.<br /><br /> 개별 구독을 대상 파일 공유에 대한 특정 자격 증명으로 구성합니다.<br /><br /> 또한, 두 가지 방법을 혼용하여 일부 파일 공유 구독은 중앙식 파일 공유 계정을 사용하고 다른 구독은 특정 자격 증명을 사용하도록 할 수 있습니다.|기본 모드|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL  Server  Data  Tools(SSDT)  
- SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]용 프로젝트 템플릿(보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트)이 포함되어 있습니다. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
+ SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]용 프로젝트 템플릿(보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트)이 포함되어 있습니다. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
 
 ### <a name="report-builder-improvements"></a>보고서 작성기 고급 기능
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI 배율 향상된 기능](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [높은 DPI 및 Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [높은 DPI 및 Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>다음 단계
 
-[Analysis Services의 새로운 기능](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Analysis Services의 새로운 기능](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [이전 버전과의 호환성](reporting-services-backward-compatibility.md)   
-[SQL Server 2016 버전에서 지원하는 Reporting Services 기능](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[SQL Server 2016 버전에서 지원하는 Reporting Services 기능](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Reporting Services 업그레이드 및 마이그레이션](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2610ac04f49ccfd39f1e752ecdc03376c05285fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bacd4064238b3f1e29da67ea8e72bac481939bf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773843"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021537"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 사이트 모음 기능
 
@@ -42,4 +42,4 @@ Reporting Services SharePoint 모드는 세 가지 SharePoint 사이트 모음 �
 [Reporting Services 사이트 설정 및 사이트 기능&#40;SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031652"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -34,7 +34,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 
 ## <a name="cmdlet-summary"></a>Cmdlet 요약
 
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](https://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -51,7 +51,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 자세한 내용은 [Windows PowerShell을 사용하여 SharePoint 2013 관리](http://technet.microsoft.com/library/ee806878.aspx)를 사용할 수도 있습니다.  
+ 자세한 내용은 [Windows PowerShell을 사용하여 SharePoint 2013 관리](https://technet.microsoft.com/library/ee806878.aspx)를 사용할 수도 있습니다.  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸 열기 및 cmdlet 실행
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [검사 목록: PowerShell을 사용하여 SharePoint용 Power Pivot 확인](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [SQL Server PowerShell 도움말](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

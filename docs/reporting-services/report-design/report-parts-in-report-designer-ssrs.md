@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ab3c91c1fd443c4f71330b19759da24b2c66ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1edea2ccb742d68010700bc20f29c313dc93c2f7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031452"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
 
@@ -92,4 +92,4 @@ ms.locfileid: "47722139"
 
 [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

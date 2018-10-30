@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031642"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47824231"
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스.  자세한 내용은 [Adventure Works 2014 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  
   
- -   보고서 디자이너를 사용할 수 있도록 "SQL Server Reporting Services" 구성 요소가 설치된 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).    
+ -   보고서 디자이너를 사용할 수 있도록 "SQL Server Reporting Services" 구성 요소가 설치된[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) .    
   
 또한 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스에서 데이터를 검색하려면 읽기 전용 권한이 있어야 합니다.
 
@@ -57,4 +57,4 @@ ms.locfileid: "47824231"
 
 [Reporting Services 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

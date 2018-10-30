@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 757e8652993e4bed8df1095eaec7252be9df13b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a57f466df8b404455234dde9635448b1a9ebb86
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779651"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031903"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
 
@@ -101,7 +101,7 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[SQL Server 2016 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[SQL Server 2016 제품 사양](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

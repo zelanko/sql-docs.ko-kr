@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030752"
 ---
 # <a name="role-assignments---modify-or-delete"></a>역할 할당 - 수정 또는 삭제
   역할 할당은 수행할 수 있는 태스크를 포함하는 미리 정의된 역할 정의에 그룹 또는 사용자 계정을 매핑하며 폴더, 보고서, 모델 또는 기타 내용 유형에 상대적으로 수행할 수 있는 작업 유형을 결정합니다. 역할 할당을 만들거나 수정하거나 삭제하려면 보고서 관리자를 사용합니다. 특정 사용자 또는 그룹에 대한 역할 할당을 만든 후에는 나중에 다른 역할을 선택하여 수정할 수 있습니다. 보고서 서버에 대한 사용 권한을 취소하려면 보고서 서버에서 역할 할당을 삭제합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47699501"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>시스템 역할 할당을 수정하거나 삭제하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699501"
 ## <a name="see-also"></a>참고 항목  
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)   
- [사이트 설정 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [새 시스템 역할 할당: 시스템 역할 할당 편집 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [사이트 설정 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [새 시스템 역할 할당: 시스템 역할 할당 편집 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906283"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021927"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
@@ -505,7 +505,7 @@ ms.locfileid: "48906283"
 * [목록을 사용하여 송장 및 양식 만들기](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
+쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 

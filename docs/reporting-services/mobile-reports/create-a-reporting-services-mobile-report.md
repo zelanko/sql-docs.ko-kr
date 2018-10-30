@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030202"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
 SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server 2016 Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  
   
-모바일 보고서를 처음 만들 때는 Reporting Services 웹 포털에서 로컬 컴퓨터에 SQL Server 모바일 보고서 게시자를 설치할 수 있습니다. 또는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=733527)에서 설치할 수 있습니다. 처음 만든 후에는 웹 포털이나 로컬에서 보고서 게시자를 시작할 수 있습니다.   
+모바일 보고서를 처음 만들 때는 Reporting Services 웹 포털에서 로컬 컴퓨터에 SQL Server 모바일 보고서 게시자를 설치할 수 있습니다. 또는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=733527)에서 설치할 수 있습니다. 처음 만든 후에는 웹 포털이나 로컬에서 보고서 게시자를 시작할 수 있습니다.   
     
 1. Reporting Services 웹 포털의 위쪽 표시줄에서 **새로 만들기** > **모바일 보고서**를 선택합니다.  
   

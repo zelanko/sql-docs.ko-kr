@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f68945ab92db13f80236cfa900067a7d38533849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 900ec3c13cae856dea769d6a761cf502557a4d22
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028982"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>응용 프로그램에 Reporting Services 통합
 
@@ -54,4 +54,4 @@ URL 액세스 또는 SOAP API를 사용할지 결정하려면 [Reporting Service
 
 SQL Server 2017 Reporting Services REST API에 대한 자세한 내용은 [Reporting Services에 대한 REST API를 사용하여 개발](../developer/rest-api.md)을 참조하세요.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

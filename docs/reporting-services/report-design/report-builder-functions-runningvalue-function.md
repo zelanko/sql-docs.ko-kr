@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e779abdd10eb5b71fa7d7bbf7a6d6938bf469c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021517"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>보고서 작성기 함수 - RunningValue 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  
@@ -46,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** 는 필터 또는 정렬 식에 사용할 수 없습니다.  
   
- 실행 값이 계산되는 데이터 집합의 데이터 형식은 동일해야 합니다. 여러 숫자 데이터 형식이 포함된 데이터를 동일한 데이터 형식으로 변환하려면 **CInt**, **CDbl** 또는 **CDec**같은 변환 함수를 사용하세요. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
+ 실행 값이 계산되는 데이터 집합의 데이터 형식은 동일해야 합니다. 여러 숫자 데이터 형식이 포함된 데이터를 동일한 데이터 형식으로 변환하려면 **CInt**, **CDbl** 또는 **CDec**같은 변환 함수를 사용하세요. 자세한 내용은 [형식 변환 함수](https://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
   
  *Scope* 는 식이 될 수 없습니다.  
   

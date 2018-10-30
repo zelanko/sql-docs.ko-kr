@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d46045779c71ecbe1743d2497344e812d323f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028902"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 
@@ -142,4 +142,4 @@ ms.locfileid: "47777771"
 [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)   
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

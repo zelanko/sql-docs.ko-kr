@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2eae41ae3230206800bd9ebf7ad3055e96d411e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05e0650c71c7f2ed8f9dc51bf01bbb33e325add5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845471"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030182"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 페이지를 매긴 보고서에서 축 간격을 설정하여 차트에서 범주(x) 축에 레이블 수와 눈금 수를 변경하는 방법을 알아 봅니다.
@@ -86,7 +86,7 @@ ms.locfileid: "47845471"
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
  [보조 축에 데이터 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   

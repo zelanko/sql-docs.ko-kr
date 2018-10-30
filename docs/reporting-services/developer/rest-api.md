@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2a5a77918b525bc0a406f8508187017853e093b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028244"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services에 대한 REST API를 사용하여 개발
 
@@ -67,4 +67,4 @@ HTTP 요청/응답 메시지를 테스트하는 도구는 [Fiddler](http://www.t
 
 예제는 [GitHub](https://github.com/Microsoft/Reporting-Services)에서 찾아볼 수 있습니다. 샘플에는 PowerShell 예제와 함께 TypeScript, React 및 웹팩을 기반으로 하는 HTML5 앱이 포함되어 있습니다.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651631"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020377"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 도구도 있습니다. 예를 들어 [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer)는 GitHub에서 사용할 수 있습니다. 
   
- PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
+ PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_trace"></a> 추적 로그 위치  
  추적 로그 파일은 일반적으로 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 폴더에 있지만 SharePoint 중앙 관리의 **진단 로깅** 페이지에서 경로를 확인하거나 변경할 수 있습니다.  
   
- SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
+ SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

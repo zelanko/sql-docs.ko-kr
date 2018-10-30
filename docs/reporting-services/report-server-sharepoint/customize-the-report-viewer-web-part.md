@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cbbc8331699121acaf526e257fd926542c894824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021527"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
 
@@ -84,7 +84,7 @@ ms.locfileid: "47770791"
 |매개 변수 영역 너비|단위와 값을 선택할 수 있습니다. 기본값은 200픽셀입니다. 이 속성의 유일한 요구 사항은 0보다 커야 한다는 것입니다.|  
 |문서 구조|보고서에 정의되어 있으며 한 번 클릭하여 보고서의 특정 섹션에 액세스할 수 있도록 하는 보고서 탐색 컨트롤입니다. 문서 구조는 HTML 보고서에서 사용할 수 있으며 보고서 보기 영역 옆의 축소 가능한 영역에 표시됩니다. 유효한 값은 **Displayed**, **Collapsed**및 **Hidden**입니다. 보고서에 대해 문서 구조가 정의된 경우 웹 파트 속성에서 숨김 또는 축소로 표시되어 있지 않은 한 이 영역은 기본적으로 확장됩니다. 문서 구조가 축소된 경우 화살표를 클릭하여 확장할 수 있습니다.|  
 |문서 구조 영역 너비|단위와 값을 선택할 수 있습니다. 기본값은 200픽셀입니다. 이 속성의 유일한 요구 사항은 0보다 커야 한다는 것입니다.|  
-|매개 변수 로드|보고서의 매개 변수 속성을 검색합니다. 모든 보고서에 매개 변수가 있는 것은 아닙니다. 보고서에 매개 변수가 없으면 값이 반환되지 않습니다. 방금 업로드한 보고서의 속성을 설정하는 경우 데이터 원본 연결이 삭제되었음을 나타내는 오류가 표시될 수 있습니다. 이 경우 연결을 다시 설정하고 연결이 지정된 다음 매개 변수 속성을 설정합니다. 연결을 설정하는 방법에 대한 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.<br /><br /> 최상의 결과를 얻으려면 매개 변수 로드를 클릭하기 전에 **적용** 을 클릭합니다.<br /><br /> 매개 변수 속성을 로드한 다음에는 보고서의 매개 변수 속성 페이지에서와 같은 방식으로 매개 변수 속성을 설정할 수 있습니다. 매개 변수를 설정하는 방법에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)를 참조하세요.|  
+|매개 변수 로드|보고서의 매개 변수 속성을 검색합니다. 모든 보고서에 매개 변수가 있는 것은 아닙니다. 보고서에 매개 변수가 없으면 값이 반환되지 않습니다. 방금 업로드한 보고서의 속성을 설정하는 경우 데이터 원본 연결이 삭제되었음을 나타내는 오류가 표시될 수 있습니다. 이 경우 연결을 다시 설정하고 연결이 지정된 다음 매개 변수 속성을 설정합니다. 연결을 설정하는 방법에 대한 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.<br /><br /> 최상의 결과를 얻으려면 매개 변수 로드를 클릭하기 전에 **적용** 을 클릭합니다.<br /><br /> 매개 변수 속성을 로드한 다음에는 보고서의 매개 변수 속성 페이지에서와 같은 방식으로 매개 변수 속성을 설정할 수 있습니다. 매개 변수를 설정하는 방법에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)를 참조하세요.|  
 
 ## <a name="customizing-the-toolbar"></a>도구 모음 사용자 지정
 
@@ -94,7 +94,7 @@ ms.locfileid: "47770791"
 
 ## <a name="customizing-the-viewing-area"></a>보기 영역 사용자 지정
 
- 보기 영역은 보고서를 표시하는 데 사용됩니다. 보고서 보기 영역은 매개 변수 및 자격 증명 영역(사용되는 경우)과 공유됩니다. 자격 증명이 필요한 경우 빈 보고서 보기 영역 옆에 자격 증명 영역이 표시됩니다. 자격 증명 영역은 사용자가 자격 증명을 제공하고 보고서를 실행하면 닫힙니다. 사용자에게 자격 증명 설정을 요청하는 텍스트를 사용자 지정하려면 데이터 원본 연결 속성을 수정합니다. 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
+ 보기 영역은 보고서를 표시하는 데 사용됩니다. 보고서 보기 영역은 매개 변수 및 자격 증명 영역(사용되는 경우)과 공유됩니다. 자격 증명이 필요한 경우 빈 보고서 보기 영역 옆에 자격 증명 영역이 표시됩니다. 자격 증명 영역은 사용자가 자격 증명을 제공하고 보고서를 실행하면 닫힙니다. 사용자에게 자격 증명 설정을 요청하는 텍스트를 사용자 지정하려면 데이터 원본 연결 속성을 수정합니다. 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
   
  매개 변수 영역은 보고서를 실행하기 전에 값을 입력하는 필드를 제공합니다. 이 영역은 보고서 정의에 매개 변수가 포함되어 있는 경우에만 사용됩니다. 매개 변수 또는 자격 증명 영역이 표시되는 경우 보고서 보기가 웹 파트의 나머지 너비를 사용하도록 조정됩니다. 웹 파트의 속성을 설정하여 매개 변수의 너비를 사용자 지정할 수 있습니다. 페이지의 개별 매개 변수 옆에 나타나는 레이블을 정의할 수도 있습니다. 매개 변수 레이블을 수정하는 방법에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)를 참조하세요.  
   
@@ -103,4 +103,4 @@ ms.locfileid: "47770791"
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [웹 페이지에 보고서 뷰어 웹 파트 추가](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

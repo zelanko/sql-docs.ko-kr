@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776561"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150174"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776561"
 1.  데이터베이스를 분리합니다. 자세한 내용은 [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)를 참조하세요.  
   
 2.  Windows 탐색기나 Windows 명령 프롬프트 창에서 분리된 데이터베이스 파일과 로그 파일을 새 위치로 이동합니다.  
-  
-    > [!NOTE]  
-    >  전자 메일로 보낼 수 있을 정도로 파일 크기가 작으면 한 개의 파일로 구성된 데이터베이스를 이동하는 데 전자 메일을 사용할 수 있습니다.  
   
      새 로그 파일을 작성할 경우에도 로그 파일을 이동해야 합니다. 경우에 따라 데이터베이스를 다시 연결하려면 기존 로그 파일이 필요합니다. 따라서 데이터베이스가 분리된 로그 파일 없이도 성공적으로 연결될 때까지 모든 분리된 로그 파일을 항상 보존하세요.  
   

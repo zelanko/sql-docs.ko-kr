@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021057"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -128,13 +128,13 @@ ms.locfileid: "47645171"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 .shp 파일과 .dbf 파일을 보고서 프로젝트에 추가한 다음 공간 데이터 원본으로 .shp 파일의 이름을 지정합니다.  
   
 ###  <a name="GetShapefiles"></a> ESRI 셰이프 파일은 어떻게 구할 수 있습니까?  
- ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
+ ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
 ###  <a name="SqlServerSpatial"></a> SQL Server 공간 쿼리란?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 집합 쿼리입니다.  
   
 > [!NOTE]  
->  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
+>  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
   
  쿼리 디자이너에서 쿼리를 실행하면 결과 집합에 텍스트로 나타나는 공간 데이터가 포함된 열이 표시됩니다. 예를 들어 한 행에 한 점인 공간 데이터가 포함되고 다음 행에 점 집합을 정의하는 공간 데이터가 포함될 수 있습니다. 각 행은 하나의 지도 요소가 됩니다. 각 지도 요소의 표시를 나눌 수 없는 단위로 변경할 수 있습니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645171"
   
 -   **혼합.** **도로** 및 **항공** 보기의 조합을 표시합니다.  
   
- 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371)를 클릭합니다.  
+ 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)를 클릭합니다.  
   
  디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
   

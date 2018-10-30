@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723911"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021157"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  
@@ -151,7 +151,7 @@ End Class
   
 3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 보고서 샘플 프로젝트를 설치한 위치를 찾습니다.  
   
-     보고서 샘플을 다운로드하려면 [AdventureWorks 2012 보고서 샘플](http://go.microsoft.com/fwlink/?LinkId=404153)(영문)로 이동합니다.  
+     보고서 샘플을 다운로드하려면 [AdventureWorks 2012 보고서 샘플](https://go.microsoft.com/fwlink/?LinkId=404153)(영문)로 이동합니다.  
   
 4.  Sales Order Detail.rdl 파일을 선택하고 **추가** 단추를 클릭합니다.  
   

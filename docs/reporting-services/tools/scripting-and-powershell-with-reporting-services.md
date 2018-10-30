@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b013748942c239c16a5265a2daa77a00936ff48a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da1568dfbdee3c772c583569d04d31cba65f6458
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028670"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 비롯한 스크립트를 통해 기본 모드 및 SharePoint 모드에서 PowerShell의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 모델을 활용하여 다양한 개발 및 관리 시나리오를 지원합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "47632541"
   
 -   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
--   [PowerShell을 사용하여 기본 모드 보고서 서버로 Azure VM 만들기](http://msdn.microsoft.com/library/azure/dn449661.aspx)  
+-   [PowerShell을 사용하여 기본 모드 보고서 서버로 Azure VM 만들기](https://msdn.microsoft.com/library/azure/dn449661.aspx)  
   
 -   [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "47632541"
   
 -   [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
+-   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   

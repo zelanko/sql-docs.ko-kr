@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7adb637db4c3b9bcf7350589ac1ff352e8ec9cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029252"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 
@@ -51,4 +51,4 @@ ms.locfileid: "47701481"
 |구독|예|List Subscriptions 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드를 참조하세요.|  
 |스냅숏|||
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

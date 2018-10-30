@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031602"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -48,7 +48,7 @@ ms.locfileid: "47756411"
   
      보고서 서버나 SharePoint 사이트로 처음 저장, 게시 또는 이동할 때 자격 증명을 입력해야 할 수도 있습니다. 입력한 자격 증명은 보고서 작성기 세션이 종료될 때까지 사용됩니다. 이러한 자격 증명을 저장하도록 선택한 경우에는 해당 자격 증명이 사용자 설정과 함께 컴퓨터에 안전하게 저장됩니다. 이후의 보고서 작성기 세션에서 저장된 자격 증명은 같은 보고서 서버나 SharePoint 사이트에 연결하는 데 사용됩니다. 보고서 서버 관리자나 SharePoint 관리자는 사용할 자격 증명 유형을 지정합니다.  
   
--   포함된 데이터 원본에 대한 [데이터 원본 속성 대화 상자, 자격 증명&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 페이지에 입력하는 데이터 원본 자격 증명  
+-   포함된 데이터 원본에 대한 [데이터 원본 속성 대화 상자, 자격 증명&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 페이지에 입력하는 데이터 원본 자격 증명  
   
      보고서 서버에서는 이러한 자격 증명을 외부 데이터 원본으로 데이터를 연결하는 데 사용합니다. 일부 데이터 원본 유형의 경우 자격 증명을 보고서 서버에 안전하게 저장할 수 있습니다. 이러한 자격 증명을 사용하면 다른 사용자가 기본 데이터 연결에 자격 증명을 제공하지 않고 보고서를 실행할 수 있습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756411"
   
      공유 데이터 원본에 대해서는 **암호 저장** 옵션을 사용하여 자격 증명을 사용자 설정과 함께 컴퓨터에 로컬로 저장할 수 있습니다. 보고서 작성기는 해당 외부 데이터 원본에 연결할 때마다 저장된 자격 증명을 사용합니다.  
   
- 자세한 내용은 [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 및 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
+ 자세한 내용은 [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 및 [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ## <a name="using-remote-data-sources"></a>원격 데이터 원본 사용  
  보고서가 원격 데이터베이스 서버에서 데이터를 검색하는 경우 다음 사항을 확인합니다.  

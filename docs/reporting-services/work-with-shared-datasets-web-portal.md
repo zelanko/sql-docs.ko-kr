@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76448fc4a919b9931ea97712038be9ba0f2c2da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747541"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020357"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합 사용 - 웹 포털
 
@@ -104,4 +104,4 @@ ms.locfileid: "47747541"
   
 그런 다음 나열된 계획을 **편집** 또는 **삭제** 할 수 있습니다. **기존 계획에서 새로 만들기** 옵션은 캐시 새로 고침 계획을 하나 선택한 경우에만 설정됩니다. 이 옵션은 원래 계획에서 복사하여 새로운 새로 고침 옵션을 만듭니다. 캐시 새로 고침 계획 페이지의 정보가 선택한 계획의 정보로 채워져서 열립니다. 그런 다음 새로 고침 계획 옵션을 수정하고 새로운 설명과 함께 계획을 저장할 수 있습니다.  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

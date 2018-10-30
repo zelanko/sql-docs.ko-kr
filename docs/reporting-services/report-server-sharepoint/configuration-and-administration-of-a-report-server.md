@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64ce0bab0f99c0213e9ed18046d7e0215a6da5e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bdb765ec6e582d95d7a34b26c2324b381acc610
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031592"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>SSRS(SQL Server Reporting Services) 보고서 서버의 구성 및 관리
 
@@ -58,4 +58,4 @@ SQL Server Reporting Services는 조직에서 사용할 보고서를 작성, 배
   
 -   [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

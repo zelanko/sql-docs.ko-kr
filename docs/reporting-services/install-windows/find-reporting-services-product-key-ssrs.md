@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63fda18a7dce1b6cf27cc21f6decab18948e1209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c7a9e61ff2cda1d0760a1ae28ab7e79fbddf09e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028092"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services의 제품 키를 찾는 방법
 
@@ -46,4 +46,4 @@ SSRS 2017을 처음 설치할 때만 이 단계를 수행해야 합니다. 서�
 ## <a name="next-steps"></a>다음 단계
 
 - [SQL Server 2017 Reporting Services 설치](install-reporting-services.md)
-- 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+- 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

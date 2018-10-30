@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f28687ef3d4faa4feb10aac78bed8c1ee28bed85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020567"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services와 인터넷 정보 서비스 함께 설치
 
@@ -82,4 +82,4 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
 [URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Reporting Services 기본 모드 보고서 서버 설치](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

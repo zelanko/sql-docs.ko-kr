@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 113fd8eb61880b8d04ba7e699be69e1576de1362
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 527a2c67a62328cc0e277bc3c45eebeb9167a804
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020227"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>성능 카운터 MSRS 2011 웹 서비스, 성능 개체
   이 항목에서는 **MSRS 2011 Web Service** 및 **MSRS 2011 Windows Service** 성능 개체에 대한 성능 카운터에 대해 설명합니다. 이 개체는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 기본 코드 배포의 일부입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47851521"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링합니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 개수는 현재 서버에만 적용되고 스케일 아웃 배포에는 적용되지 않습니다.  
   
- 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서 [런타임 프로파일링](http://msdn.microsoft.com/library/w4bz2147.aspx)(http://msdn.microsoft.com/library/w4bz2147.aspx)을 참조하세요.  
+ 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서 [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx)을 참조하세요.  
   
  SharePoint 모드 성능 카운터와 관련된 내용은 [MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터&#40;SharePoint 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)를 참조하세요.  
   

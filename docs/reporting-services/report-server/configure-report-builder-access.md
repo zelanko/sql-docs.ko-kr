@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5acce2ed5c4720bc6a69eb0b0e83125b58b7db1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f980f4bb625fb0686911c7aa1cad28ca574faaf6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030952"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "47675551"
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

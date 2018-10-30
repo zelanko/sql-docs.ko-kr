@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc40029559843dfd520eb73aeda4653f910349dd
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d034b7a930de907e0868271b175cabd5507ad07c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031832"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 응용 프로그램의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 응용 프로그램에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 응용 프로그램을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48905963"
  설치 프로그램과 구성 도구는 또한 보고서 서버 URL에 대한 권한을 할당하고 중복된 인스턴스가 있는지 확인하며 URL 예약을 HTTP.SYS에 추가합니다. HttpCfg.exe 또는 다른 도구를 사용하여 Reporting Services URL 예약을 직접 만들거나 수정하지 마세요. 단계를 건너뛰거나 잘못된 값을 설정할 경우 진단하거나 수정하기 어려운 문제가 발생합니다.  
   
 > [!NOTE]  
->  HTTP.SYS는 네트워크 요청을 수신한 다음 이를 요청 큐로 라우팅하는 운영 체제 구성 요소입니다. 이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]릴리스에서 HTTP.SYS는 보고서 서버 웹 서비스와 보고서 관리자에 대한 요청 큐를 설정하고 유지 관리합니다. 인터넷 정보 서비스(IIS)는 더 이상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램을 호스팅하거나 액세스하는 데 사용되지 않습니다. HTTP.SYS 기능에 대한 자세한 내용은 MSDN의 [HTTP Server API](http://go.microsoft.com/fwlink/?LinkId=92652) 를 참조하세요.  
+>  HTTP.SYS는 네트워크 요청을 수신한 다음 이를 요청 큐로 라우팅하는 운영 체제 구성 요소입니다. 이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]릴리스에서 HTTP.SYS는 보고서 서버 웹 서비스와 보고서 관리자에 대한 요청 큐를 설정하고 유지 관리합니다. 인터넷 정보 서비스(IIS)는 더 이상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램을 호스팅하거나 액세스하는 데 사용되지 않습니다. HTTP.SYS 기능에 대한 자세한 내용은 MSDN의 [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) 를 참조하세요.  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services에서의 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서는 URL을 통해 다음 도구, 응용 프로그램 및 항목에 액세스할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48905963"
 >  이 항목에서는 보고서 서버에 저장된 특정 보고서에 대한 URL 액세스에 대해서는 설명하지 않습니다. 이러한 항목의 URL 액세스에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/access-report-server-items-using-url-access.md) URL 액세스를 사용하여 보고서 서버 항목 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 참조하세요.  
   
 ##  <a name="URLreservation"></a> URL 예약 및 등록  
- URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 HTTP.SYS에 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 URL을 한 개 이상 예약한 다음 서비스가 시작될 때 이를 등록합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](http://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
+ URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 HTTP.SYS에 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 URL을 한 개 이상 예약한 다음 서비스가 시작될 때 이를 등록합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](https://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
   
  *URL 예약* 은 웹 응용 프로그램에 대한 URL 엔드포인트가 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
   

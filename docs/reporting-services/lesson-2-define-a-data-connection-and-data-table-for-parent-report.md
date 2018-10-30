@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfdddd3e263ef6f83f8ad12635c76c61fef6e284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021777"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -26,7 +26,7 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd** 가 추가되고 데이터 집합 디자이너가 열립니다.  
   
-3.  도구 상자 창에서 **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
+3.  도구 상자 창에서 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
   
 4.  **데이터 연결 선택** 페이지에서 **새 연결**을 선택합니다.  
   

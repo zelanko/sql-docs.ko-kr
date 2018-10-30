@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d310371ce9b5f564b6cd48929bd3da39f68d828a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fb4216a0322a0d3f077f237b2ece3cdef7958b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696191"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030762"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services의 고가용성
 
@@ -30,4 +30,4 @@ ms.locfileid: "47696191"
   
  보고서 서버 웹 서비스 및 Windows 서비스는 완벽하게 통합되어 있으며 단일 보고서 서버 인스턴스로 함께 실행됩니다. 한 서비스에 대한 가용성을 다른 서비스와 별도로 구성할 수는 없습니다.  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

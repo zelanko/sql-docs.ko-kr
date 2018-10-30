@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 458db88f63ac2d27db03cace86593907ef67b3b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021327"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "47662991"
   
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-from--a--web-portal-or-sharepoint-library"></a>웹 포털 또는 SharePoint 라이브러리에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작할 수 있습니다. 자세한 내용은 [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)을 참조하세요.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 웹 포털 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 통합된 SharePoint 사이트에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 시작할 수 있습니다. 자세한 내용은 [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)을 참조하세요.  
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>다음과 통합된 SharePoint 사이트 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -36,13 +36,13 @@ ms.locfileid: "47662991"
   
 ## <a name="system-requirements"></a>시스템 요구 사항
   
- Microsoft 다운로드 센터에서 **보고서 작성기 다운로드 페이지** 의 [시스템 요구 사항](http://go.microsoft.com/fwlink/?LinkID=734968) 절을 참조하십시오.
+ Microsoft 다운로드 센터에서 **보고서 작성기 다운로드 페이지** 의 [시스템 요구 사항](https://go.microsoft.com/fwlink/?LinkID=734968) 절을 참조하십시오.
   
-##  <a name="download"></a> 다운로드 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치하려면  
+##  <a name="download"></a> 다운로드 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치  
   
-1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](http://go.microsoft.com/fwlink/?LinkID=734968) 에서 **다운로드**를 클릭합니다.  
+1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](https://go.microsoft.com/fwlink/?LinkID=734968) 에서 **다운로드**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 다운로드를 마치면 **실행**을 클릭합니다.  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 다운로드를 마치면  **실행**을 클릭합니다.  
   
      그러면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 마법사가 실행됩니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47662991"
 4.  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
-    >  보고서 서버에 연결되었을 때 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 로 작업하려면 이 단계에서 서버에 URL을 제공하는 것이 편리합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 **옵션** 대화 상자에서도 이 작업을 수행할 수 있습니다.  
+    >  보고서 서버에 연결되었을 때 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 로 작업하려면 이 단계에서 서버 URL을 입력하는 것이 편리합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 **옵션** 대화 상자에서도 이 작업을 수행할 수 있습니다.  
   
 5.  **설치**를 클릭하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 설치를 완료합니다.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "47662991"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>명령줄에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 
 
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR 및 REPORTSERVERURL을 사용할 수 있습니다. RBINSTALLDIR은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]가 서버에 보고서를 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR 및 REPORTSERVERURL을 사용할 수 있습니다. RBINSTALLDIR은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 서버에 보고서를 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
   
  사용자 인터페이스의 상호 작용이 필요 없는 완전 자동 설치를 수행하려면 **/quiet** 옵션을 지정합니다. 기본적으로 quiet 옵션 플래그를 사용하면 설치 오류가 표시되지 않습니다. 따라서 quite 옵션을 사용할 때는 로깅을 지정하는 **/l** 옵션을 함께 사용하는 것이 좋습니다.   
   
-1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](http://go.microsoft.com/fwlink/?LinkID=734968)에서 **다운로드**를 클릭합니다.  
+1.  [Microsoft 다운로드 센의 보고서 작성기 페이지](https://go.microsoft.com/fwlink/?LinkID=734968)에서 **다운로드**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 다운로드를 마치면 **저장**을 클릭합니다.  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 다운로드를 마치면  **저장**을 클릭합니다.  
   
 3.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "47662991"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치와 관련된 두 가지 옵션은 RBINSTALLDIR 및 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 시에만 적용 가능한 두 가지 옵션은 BINSTALLDIR 및 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
 7.  명령을 실행하려면 Enter 키를 누릅니다.  
   
-## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 기본값 설정  
+## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 를 기본값으로 설정  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치한 후 몇 가지 기본 옵션을 설정할 수 있습니다. **파일** > **옵션**을 클릭합니다.  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치한 다음 몇 가지 기본 옵션을 설정할 수 있습니다. **파일** > **옵션**을 클릭합니다.  
   
      기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 사이트를 설정하는 것이 가장 유용합니다. 자세한 내용은 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)을 참조하세요.  
   
 -   **보고서 작성기** 를 클릭합니다.  
   
-     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 하단에 있는 **연결**을 클릭하여 서버에 연결합니다.  
+     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음 **하단에 있는** 연결 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 을 클릭하여 서버에 연결합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   

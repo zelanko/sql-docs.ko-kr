@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cd1a8450f9ffa847f5feab752c957d20f5fd6e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b748da4e74ce9ade370df965bd8df1c388a3b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028979"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>차트 범례 - 서식 지정(보고서 작성기)
   차트 범례에는 차트의 각 범주에 대한 설명이 포함됩니다. 범례는 항상 하나 이상의 범례 항목을 포함합니다. 각 범례 항목은 다음 그림에 표시된 대로 계열을 나타내는 색 지정된 상자 및 계열을 설명하는 텍스트 문자열로 구성되어 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "47654171"
  기본적으로 범례 텍스트는 범례 영역에 맞게 최적화되지 않습니다. 할당된 공간에 범례 텍스트를 자동으로 맞추려면 AutoFitTextDisabled 속성을 **False** 로 설정하고 MinFontSize 속성에 대한 최소 글꼴 크기를 표시 가능하면서도 범례를 최적화하는 데 적당한 가장 작은 글꼴 크기로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [범례 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [범례 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

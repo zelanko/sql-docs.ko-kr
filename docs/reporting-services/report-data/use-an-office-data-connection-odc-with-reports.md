@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c638b35676966bdb899b0537f410a8c5552179b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028172"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>보고서에 Office 데이터 연결(.odc) 사용
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47657122"
   
  .odc 파일에 익숙하지 않을 경우 다음 지침을 사용하여 .odc 파일을 만들고 내보낼 수 있습니다. OLE DB 데이터 원본에 사용할 .odc 파일을 만드는 한 가지 쉬운 방법은 Excel 2007과 데이터 연결 마법사를 사용하는 것입니다. 이때 마법사에서 데이터 원본을 만들지 않으며 이미 정의된 외부 데이터 원본이 있어야 합니다.  
   
- 기존 .odc 파일은 보고서 및 쿼리와 완전히 호환되는 경우에만 사용해야 합니다. 보고서나 .odc 파일을 완전히 수정해야 하는 오류가 발생하면 보고서에 대해 새 .rsds 파일을 만들어야 합니다. .rsds 파일을 사용하는 공유 데이터 원본을 만드는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
+ 기존 .odc 파일은 보고서 및 쿼리와 완전히 호환되는 경우에만 사용해야 합니다. 보고서나 .odc 파일을 완전히 수정해야 하는 오류가 발생하면 보고서에 대해 새 .rsds 파일을 만들어야 합니다. .rsds 파일을 사용하는 공유 데이터 원본을 만드는 방법은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
   
 ### <a name="to-create-and-export-an-odc-file"></a>.odc 파일을 만들고 내보내려면  
   

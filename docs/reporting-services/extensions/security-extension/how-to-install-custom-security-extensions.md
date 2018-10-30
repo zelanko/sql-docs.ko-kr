@@ -8,12 +8,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020667"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 
@@ -122,4 +122,4 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 [보고서 서버에서 사용자 지정 또는 폼 인증 구성](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [보고서 관리자에서 사용자 지정 인증 쿠키를 전달하도록 구성](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

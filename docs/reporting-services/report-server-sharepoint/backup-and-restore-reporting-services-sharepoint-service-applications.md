@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021247"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
 
@@ -71,9 +71,9 @@ ms.locfileid: "47817501"
   
  자세한 내용은 SharePoint 설명서의 다음 항목을 참조하세요.  
   
- [SharePoint 설명서의 서비스 응용 프로그램 백업(SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)  
+ [SharePoint 설명서의 서비스 응용 프로그램 백업(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)  
   
- [서비스 응용 프로그램 백업(SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [서비스 응용 프로그램 백업(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 확인
 
@@ -125,7 +125,7 @@ ms.locfileid: "47817501"
   
  자세한 내용은 SharePoint 설명서의 다음 항목을 참조하세요.  
   
- [서비스 응용 프로그램 복원(SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)  
+ [서비스 응용 프로그램 복원(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)  
   
  [서비스 응용 프로그램 복원(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
 
@@ -161,4 +161,4 @@ ms.locfileid: "47817501"
   
 6.  **확인**을 선택합니다.
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

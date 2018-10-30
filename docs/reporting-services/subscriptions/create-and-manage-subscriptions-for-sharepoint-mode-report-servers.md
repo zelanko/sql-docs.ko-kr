@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d16794c7903ac106f0ca62953498fe7df70d7303
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100094"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 응용 프로그램에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  
@@ -159,6 +159,6 @@ ms.locfileid: "47761821"
  [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services의 파일 공유 배달](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services의 SharePoint 라이브러리 배달](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [이메일 전송을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [이메일 전송을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

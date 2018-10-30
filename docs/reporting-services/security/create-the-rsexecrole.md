@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6f483fc1a8a21823f2d80c61be971dc04cf5412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f08ddfed806f1b6476599b0d83ef3d795633cb0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029700"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
@@ -265,4 +265,4 @@ GO
 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecb1ff697f90149b102592306a8756bd7a84f776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021647"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
@@ -143,7 +143,7 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>다음 단계
 
-[서비스 계정 구성](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[서비스 계정 구성](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
@@ -151,4 +151,4 @@ An error occurred within the report server database.  This may be due to a conne
 [확장 배포의 암호화 키 추가 및 제거](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

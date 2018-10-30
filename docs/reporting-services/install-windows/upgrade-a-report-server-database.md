@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06a345284c235ffc1bf65400238ef01107df9f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027532"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
@@ -70,4 +70,4 @@ ms.locfileid: "47628951"
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

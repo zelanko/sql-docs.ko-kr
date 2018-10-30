@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6df6dc9d5d22ae158830aee5418a28d92a8b758e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686191"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029732"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "47686191"
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
-     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
+     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(https://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
   
 -   color  
   

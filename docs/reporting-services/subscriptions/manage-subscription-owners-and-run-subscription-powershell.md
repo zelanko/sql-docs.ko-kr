@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1280abde041d47e43fc1452f675e882e17ca68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0f09bb0b1a9e4abbcd462eb515f6832853d511e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624462"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021737"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "47624462"
 ### <a name="permissions"></a>Permissions  
  이 섹션에서는 기본 모드와 SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 각 메서드를 사용하기 위해 필요한 권한 수준을 요약합니다. 이 항목의 스크립트는 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 메서드를 사용합니다.  
   
--   [ReportingService2010.ListSubscriptions 메서드](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010.ListSubscriptions 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [ReportingService2010.ChangeSubscriptionOwner 메서드](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010.ChangeSubscriptionOwner 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) 메서드는 실행하는 특정 구독을 트리거하기 위해 마지막 스크립트에서만 사용됩니다. 해당 스크립트를 사용하지 않으려면 FireEvent 메서드에 대한 권한 요구 사항을 무시할 수 있습니다.  
+-   [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) 메서드는 실행하는 특정 구독을 트리거하기 위해 마지막 스크립트에서만 사용됩니다. 해당 스크립트를 사용하지 않으려면 FireEvent 메서드에 대한 권한 요구 사항을 무시할 수 있습니다.  
   
  **기본 모드:**  
   
--   구독 나열: [보고서의 ReportOperation 열거형](http://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 및 사용자는 구독 소유자임) 또는 ReadAnySubscription  
+-   구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 및 사용자는 구독 소유자임) 또는 ReadAnySubscription  
   
 -   구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원이어야 합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47624462"
   
  **SharePoint 모드:**  
   
--   구독 나열: ManageAlerts 또는 [보고서의 CreateAlerts](http://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) 및 사용자는 구독 소유자이며 구독은 정기 구독임)  
+-   구독 나열: ManageAlerts 또는 [보고서의 CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) 및 사용자는 구독 소유자이며 구독은 정기 구독임)  
   
 -   구독 변경: ManageWeb  
   
@@ -133,7 +133,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  SharePoint 모드에서 사이트 URL을 확인하려면 SharePoint cmdlet **Get-SPSite**를 사용합니다. 자세한 내용은 [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)를 참조하세요.  
+>  SharePoint 모드에서 사이트 URL을 확인하려면 SharePoint cmdlet **Get-SPSite**를 사용합니다. 자세한 내용은 [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)를 참조하세요.  
   
 ##  <a name="bkmk_list_all_one_user"></a> 스크립트: 특정 사용자가 소유하는 모든 구독 나열  
  이 스크립트는 특정 사용자가 소유하는 모든 구독을 나열합니다. 이 스크립트를 사용하여 연결을 테스트하거나 다른 스크립트에서 사용하는 보고서 경로 및 구독 ID를 확인할 수 있습니다. 이 스크립트는 조직의 누군가가 떠나고 이들이 소유하고 있던 구독을 확인하여 소유자를 변경하거나 구독을 삭제하려고 할 때 유용합니다.  
@@ -381,12 +381,12 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ## <a name="see-also"></a>참고 항목  
  
-[ReportingService2010.ListSubscriptions 메서드](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+[ReportingService2010.ListSubscriptions 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ChangeSubscriptionOwner 메서드](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+[ReportingService2010.ChangeSubscriptionOwner 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
 
-[ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   

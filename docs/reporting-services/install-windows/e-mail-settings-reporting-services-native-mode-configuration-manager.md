@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020397"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
@@ -25,7 +25,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 
 ## <a name="configuration-requirements"></a>구성 요구 사항
 
-- 보고서 서버 전자 메일 배달은 CDO(Collaboration Data Object)에 구현되며 로컬 또는 원격 SMTP(Simple Mail Transfer Protocol) 서버나 SMTP 전달자가 있어야 합니다. SMTP를 지원하지 않는 운영 체제도 있습니다. Windows Server 2008의 Itanium 기반 버전을 사용하는 경우 SMTP가 지원되지 않습니다. CDO를 통해 제공되는 구성 옵션에 대한 자세한 내용은 MSDN에서 [CoClass 구성(Configuration CoClass)](http://go.microsoft.com/fwlink/?LinkId=98237) 을 참조하십시오.
+- 보고서 서버 전자 메일 배달은 CDO(Collaboration Data Object)에 구현되며 로컬 또는 원격 SMTP(Simple Mail Transfer Protocol) 서버나 SMTP 전달자가 있어야 합니다. SMTP를 지원하지 않는 운영 체제도 있습니다. Windows Server 2008의 Itanium 기반 버전을 사용하는 경우 SMTP가 지원되지 않습니다. CDO를 통해 제공되는 구성 옵션에 대한 자세한 내용은 MSDN에서 [CoClass 구성(Configuration CoClass)](https://go.microsoft.com/fwlink/?LinkId=98237) 을 참조하십시오.
 
 메일을 보내려면 구성된 인증 계정에 SMTP 서버에 대한 권한이 있어야 합니다.
 

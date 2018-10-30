@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60550310a391dfc1ed6dc03042b0d0b86b5152f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd9b806aefc53c644a5ee50799ba9bb60a194ff
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021197"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>보조 축에 데이터 표시(보고서 작성기 및 SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "47801261"
   
  비교할 계열이 3개 이상인 경우에는 차트의 여러 계열을 비교 및 표시하기 위한 다른 방법을 고려해야 합니다. 자세한 내용은 [차트의 여러 계열](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
- 이 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 이 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,4 +39,4 @@ ms.locfileid: "47801261"
 [차트의 축 레이블 서식 지정](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
 [축 간격 지정](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

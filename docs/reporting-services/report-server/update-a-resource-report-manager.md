@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dfa6b9d901b836133af5d0fe851d06c0e7d03cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031567"
 ---
 # <a name="update-a-resource-report-manager"></a>리소스 업데이트(보고서 관리자)
   리소스를 최신 버전으로 바꾸어 업데이트할 수 있습니다. 리소스는 보고서 서버에 저장된 항목이며 사용자가 업로드한 파일의 내용을 포함합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿀 수 있습니다. 리소스를 업데이트하면 리소스에 대한 기존 속성과 보안 설정을 유지하면서 내용을 업데이트할 수 있습니다.  
   
 ### <a name="to-update-a-resource"></a>리소스를 업데이트하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 업데이트할 리소스로 이동하거나 해당 리소스를 검색합니다.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47596862"
  업데이트하는 리소스가 보고서에 사용된 이미지를 포함하는 경우 업데이트된 이미지를 보려면 보고서를 새로 고쳐야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [파일 업로드 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [내용 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [파일 업로드 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [보고서 관리자 F1 도움말](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [보고서 관리자 F1 도움말](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

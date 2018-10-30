@@ -9,12 +9,12 @@ ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b27eafb4908c74bffaeab7e3f5e8e2ae1bf8f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7a3a2d1320e2f33a9246c538d30c63bd0cc890e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031972"
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
 
@@ -59,7 +59,7 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
  두 메시지 형식 간의 유일한 차이점은 항목 5, **경고 결과**입니다. 데이터 경고 인스턴스 또는 데이터 경고 메시지를 만들 때 오류가 발생한 경우 **경고 결과** 에 문제를 설명하는 오류 메시지가 표시됩니다. 모든 받는 사람에게 보낸 오류 메시지를 통해 비즈니스 의사 결정을 내리는 데 필요한 원하는 경고 결과를 사용할 수 없다는 것을 알 수 있습니다.  
   
   
-##  <a name="HowTo"></a> 관련 작업  
+##  <a name="HowTo"></a> 관련 태스크  
  이 섹션에는 데이터 경고 메시지에 표시되는 많은 정보를 제공하는 데이터 경고 정의를 만들고 편집하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
@@ -71,4 +71,4 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

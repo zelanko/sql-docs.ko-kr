@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d498b813bb85c99a5af73fda90f96357d42db08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028082"
 ---
 # <a name="uninstall-report-builder"></a>보고서 작성기 제거
 
 제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다.
 
-명령줄에서 보고서 작성기를 제거할 때 사용하는 구문은 보고서 작성기를 설치할 때 사용하는 구문과 동일하고 /i 옵션 대신 /x 옵션을 사용한다는 점만 다릅니다. 제거할 때 사용하는 명령줄에는 /quiet 옵션과 기타 표준 옵션도 포함될 수 있습니다. 보고서 작성기 Windows Installer 패키지(ReportBuilder3_x86.msi)가 이미 제거되었으면 명령줄을 사용하여 보고서 작성기를 제거하기 어렵습니다. 해당 GUID를 사용하여 보고서 작성기를 제거하는 방법에 대한 자세한 내용은 [명령줄 옵션](/windows/desktop/Msi/command-line-options)에서 msiexec 프로그램에 대한 설명서를 참조하세요.  
+명령줄에서 보고서 작성기를 제거할 때 사용하는 구문은 보고서 작성기를 설치할 때 사용하는 구문과 동일하고 /i 옵션 대신 /x 옵션을 사용한다는 점만 다릅니다. 제거할 때 사용하는 명령줄에는 /quiet 옵션과 기타 표준 옵션도 포함될 수 있습니다. 보고서 작성기 Windows Installer 패키지(ReportBuilder3_x86.msi)가 이미 제거되었으면 명령줄을 사용하여 보고서 작성기를 제거하기 어렵습니다. 해당 GUID를 사용하여 보고서 작성기를 제거하는 방법은 [Command-Line Options](/windows/desktop/Msi/command-line-options)(명령줄 옵션)에서 msiexec 프로그램에 대한 설명서를 참조하세요.  
 
 보고서 작성기용 폴더에 사용자 지정 파일이 포함되어 있으면 보고서 작성기를 제거할 때 해당 폴더와 파일이 유지되고 보고서 작성기 파일만 제거됩니다.  
 
@@ -56,4 +56,4 @@ ms.locfileid: "47733341"
 
 [보고서 작성기 설치](../../reporting-services/install-windows/install-report-builder.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611881"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030018"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -89,7 +89,7 @@ ms.locfileid: "47611881"
   
 -   ODBC  
   
--   파워 뷰용 Microsoft BI 의미 체계 모델: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
+-   파워 뷰용 Microsoft BI 의미 체계 모델: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원하는 데이터 원본 및 버전의 전체 목록은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611881"
 [배포 속성 설정](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

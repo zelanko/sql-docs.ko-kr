@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0cde0748588a56421e7577bf5f9a7d9d8348ccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75789117747794ce3eeb7a1b19bdeff6bfbd6d0c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027732"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
   보고서에 대한 외부 데이터에 액세스하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 사용하는 저장된 자격 증명을 구성할 수 있습니다. 보고서가 무인 모드로 실행되는 경우 저장된 자격 증명이 사용됩니다(예: 보고서를 전자 메일로 게시하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독). 보고서 처리가 예약되거나 트리거되면 보고서 서버는 자격 증명을 검색하고 사용합니다. 이 항목에서는 기본 모드 및 SharePoint 모드 보고서 서버에 대해 저장된 자격 증명을 구성하는 방법에 대해 설명합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "47832501"
 ##  <a name="bkmk_top"></a> 저장된 자격 증명에 대한 보안 정책 요구 사항  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 보고서 서버의 다음 보안 정책 중 하나의 경우, 저장된 자격 증명에 대해 사용하는 계정을 구성해야 합니다. 환경에서 필요한 최저 수준의 권한을 지닌 정책을 선택하는 것이 좋습니다.  
   
-1.  **로컬 로그온 허용**. 자세한 내용은 [로컬 로그온 허용](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)(영문)을 참조하세요.  
+1.  **로컬 로그온 허용**. 자세한 내용은 [로컬 로그온 허용](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)(영문)을 참조하세요.  
   
-2.  **일괄 작업으로 로그온**. 자세한 내용은 [일괄 작업으로 로그온](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)(영문)을 참조하세요.  
+2.  **일괄 작업으로 로그온**. 자세한 내용은 [일괄 작업으로 로그온](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)(영문)을 참조하세요.  
   
-3.  정책에 대한 일반적인 정보는 [그룹 정책 개체의 보안 설정 편집](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)(영문)을 참조하세요.  
+3.  정책에 대한 일반적인 정보는 [그룹 정책 개체의 보안 설정 편집](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)(영문)을 참조하세요.  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 보고서별 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)  
   

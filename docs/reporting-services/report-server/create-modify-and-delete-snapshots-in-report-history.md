@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710601"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029622"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>보고서 기록에서 스냅숏 만들기, 수정 및 삭제
   보고서 기록은 보고서 스냅숏의 모음입니다. 스냅숏을 추가하고 삭제하거나 보고서 기록 저장소에 영향을 주는 속성을 수정하여 보고서 기록을 유지 관리할 수 있습니다. 수동으로 또는 예약된 일정을 통해 보고서 기록을 만들 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "47710601"
  보고서 기록의 스냅숏은 작성 날짜와 시간으로 식별됩니다. 날짜와 시간은 쿼리 실행 시점을 기준으로 합니다.  
   
 ## <a name="creating-snapshots-in-report-history"></a>보고서 기록에서 스냅숏 만들기  
- 무인 모드에서 실행할 수 있는 모든 보고서에 대해 수동으로 또는 예약된 간격으로 스냅숏을 만들 수 있습니다. 무인 모드에서 실행하려면 보고서에서 저장된 자격 증명을 사용하거나 아무 자격 증명도 사용하지 않아야 합니다. 또한 보고서가 매개 변수를 사용하는 경우 보고서를 실행할 때 사용할 기본값을 지정해야 합니다. 보고서의 속성 페이지에서 저장된 자격 증명과 매개 변수 값을 지정할 수 있습니다. 자세한 내용은 [매개 변수 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)를 참조하세요.  
+ 무인 모드에서 실행할 수 있는 모든 보고서에 대해 수동으로 또는 예약된 간격으로 스냅숏을 만들 수 있습니다. 무인 모드에서 실행하려면 보고서에서 저장된 자격 증명을 사용하거나 아무 자격 증명도 사용하지 않아야 합니다. 또한 보고서가 매개 변수를 사용하는 경우 보고서를 실행할 때 사용할 기본값을 지정해야 합니다. 보고서의 속성 페이지에서 저장된 자격 증명과 매개 변수 값을 지정할 수 있습니다. 자세한 내용은 [매개 변수 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)를 참조하세요.  
   
  보고서 스냅숏을 만들면 다음 요소가 보고서 서버 데이터베이스의 보고서 스냅숏과 함께 저장됩니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710601"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 기록 만들기&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

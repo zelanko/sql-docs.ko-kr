@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12c0dda2fb1a9a01cdaf0d3a1077aef54e388ebe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840281"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021457"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -37,7 +37,7 @@ ms.locfileid: "47840281"
 > [!TIP]  
 >  SQL Server의 문제에 대한 최신 정보는 다음을 참조하세요.  
 >   
->  -   [SQL Server 2016 릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=398124).  
+>  -   [SQL Server 2016 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> 함께 설치  
@@ -230,17 +230,17 @@ ms.locfileid: "47840281"
   
 -   [SharePoint 2016으로 업그레이드 프로세스의 개요](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [SharePoint 2013으로 업그레이드 프로세스의 개요](http://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [SharePoint 2013으로 업그레이드 프로세스의 개요](https://go.microsoft.com/fwlink/p/?LinkId=256688).
   
--   [SharePoint 2013으로 업그레이드하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [SharePoint 2013으로 업그레이드하기 전에 정리 준비](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [SharePoint 2013에서 SharePoint 2016으로 데이터베이스 업그레이드](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
 
 ## <a name="next-steps"></a>다음 단계
 
 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36c66a0317fddf9b0b9d6a32ef328706125efea9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021787"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 오류 및 이벤트에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에도 오류 정보가 포함됩니다. 사용할 수 있는 로그 파일의 형식 및 로그를 보는 방법에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "47759501"
 |119|Error|활성화|보고서 서버<br /><br /> 일정 예약 및 배달 프로세서|*\<Source>* 에 보고서 서버 데이터베이스의 내용에 대한 액세스 권한이 부여되지 않았습니다.|  
 |120|Error|활성화|보고서 서버|대칭 키를 해독할 수 없습니다. 서비스가 실행되는 계정이 변경된 것 같습니다. 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
 |121|Error|시작/종료|보고서 서버|RPC(원격 프로시저 호출) 서비스를 시작하지 못했습니다.|  
-|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
+|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대한 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
 |123|경고|로깅|보고서 서버<br /><br /> 보고서 관리자|보고서 서버에서 추적 로그에 쓰지 못했습니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |124|정보|활성화|보고서 서버|보고서 서버 서비스가 활성화되었습니다. 자세한 내용은 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.|  
 |125|정보|활성화|보고서 서버|데이터 암호화에 사용된 키를 추출했습니다. 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
@@ -64,7 +64,7 @@ ms.locfileid: "47759501"
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services 로그 파일 및 원본](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
+ [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

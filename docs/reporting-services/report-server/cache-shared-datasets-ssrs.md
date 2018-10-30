@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021498"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 집합 캐시(SSRS)
   공유 데이터 집합에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 집합 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 집합을 처음 사용할 때 또는 일정을 지정하여 공유 데이터 집합이 캐시되도록 구성할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48905657"
   
  특정 매개 변수 조합에 대한 쿼리 결과가 캐시에 있는 동안 처리를 위해 실행되는 각 보고서에 해당 매개 변수 값이 지정되어 있는 공유 데이터 집합에 대한 참조가 포함되어 있는 경우 이 보고서는 캐시된 데이터를 사용합니다.  
   
- 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)을 참조하세요.  
+ 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)을 참조하세요.  
   
 ## <a name="preloading-the-cache"></a>캐시 미리 로드  
  캐시 새로 고침 계획을 만들어 캐시를 미리 로드할 수 있습니다. 새로 고침 계획을 만들면 항목별 일정 또는 공유 일정을 사용하여 캐시를 새로 고칠 빈도를 지정할 수 있습니다. 동일한 항목에 대해 여러 캐시 항목이 생성되는 것을 방지하려면 지정하는 일정에서 외부 데이터 원본에 대한 쿼리 처리 시간이 충분해야 합니다. 예를 들어 쿼리 실행에 20분이 걸리는 경우 새로 고침 일정은 20분보다 커야 합니다. 자세한 내용은 [Schedules](../../reporting-services/subscriptions/schedules.md)을(를) 참조하세요.  
@@ -68,7 +68,7 @@ ms.locfileid: "48905657"
   
 -   공유 데이터 집합에 대해 ReadPolicy 및 UpdatePolicy 권한이 있어야 합니다.  
   
- 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)을 참조하세요.  
+ 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)을 참조하세요.  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>캐시 만료 조건  
  다음 조건에서는 공유 데이터 집합 캐시가 유효하지 않게 될 수 있습니다.  

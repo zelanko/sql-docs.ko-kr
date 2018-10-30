@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021817"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "49119941"
  Excel 형식으로 렌더링할 때만 보고서 크기가 엄격하게 제한됩니다. 워크시트의 행과 열은 각각 65536개와 256개를 초과할 수 없습니다. 다른 렌더링 형식은 이러한 제한이 없으므로 서버에 있는 리소스 양에 의해서만 크기가 제한됩니다.  
   
 > [!NOTE]  
->  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services의 확장성 및 성능 계획](http://go.microsoft.com/fwlink/?LinkID=70650) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](http://go.microsoft.com/fwlink/?LinkID=77519)을 참조하십시오.  
+>  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services의 확장성 및 성능 계획](https://go.microsoft.com/fwlink/?LinkID=70650) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](https://go.microsoft.com/fwlink/?LinkID=77519)을 참조하십시오.  
   
 ## <a name="measuring-snapshot-storage"></a>스냅숏 저장소 측정  
  특정 스냅숏의 크기는 보고서에 있는 데이터 양에 비례합니다. 스냅숏은 일반적으로 보고서 서버에 저장된 다른 항목보다 훨씬 큽니다. 스냅숏 크기는 몇 MB에서 수십 MB에 이르기까지 다양합니다. 보고서가 아주 큰 경우 스냅숏은 훨씬 더 커집니다. 스냅숏 사용 빈도와 보고서 기록 구성 방법에 따라 보고서 서버 데이터베이스에 필요한 디스크 공간 크기가 짧은 기간 동안에 빠르게 늘어날 수 있습니다.  

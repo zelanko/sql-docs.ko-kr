@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91e4536925b37277f81ccafe41b6a30c6dc52504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c926fc1c7c7e2b01efade00997b955a6de6328b1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031482"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>보고서에 어셈블리 참조 추가(SSRS)
   <xref:System.Math> 또는 <xref:System.Convert>에 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 대한 참조가 포함된 사용자 지정 코드를 포함하는 경우 보고서 처리기가 이름을 확인할 수 있도록 보고서에 대한 어셈블리 참조를 제공해야 합니다. 자세한 내용은 [보고서에 코드 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)를 참조하세요.  
@@ -41,6 +41,6 @@ ms.locfileid: "47657458"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [보고서 속성 대화 상자, 참조](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
+ [보고서 속성 대화 상자, 참조](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

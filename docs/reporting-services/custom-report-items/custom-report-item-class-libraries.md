@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 901171d5e3517fcf89142dcfe44d7074ef83e520
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a52dbdd40605d9a1634495066b4249bd0567075
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028108"
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
-  사용자 지정 보고서 항목은 **Microsoft.ReportDesigner** 네임스페이스의 클래스를 사용합니다. 사용자 지정 보고서 항목 구현에 사용되는 클래스는 두 개의 기본 범주로 그룹화할 수 있습니다. 하나는 사용자 지정 보고서 항목 인프라를 지원하도록 설계된 고유 클래스이고, 다른 하나는 관련 RDL(Report Definition Language) 요소의 기능을 캡슐화하는 관리되는 래퍼 클래스입니다. 이러한 클래스 사용 방법에 대한 코드 예는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+  사용자 지정 보고서 항목은 **Microsoft.ReportDesigner** 네임스페이스의 클래스를 사용합니다. 사용자 지정 보고서 항목 구현에 사용되는 클래스는 두 개의 기본 범주로 그룹화할 수 있습니다. 하나는 사용자 지정 보고서 항목 인프라를 지원하도록 설계된 고유 클래스이고, 다른 하나는 관련 RDL(Report Definition Language) 요소의 기능을 캡슐화하는 관리되는 래퍼 클래스입니다. 이러한 클래스 사용 방법에 대한 코드 예는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>사용자 지정 보고서 항목 인프라 클래스  
  다음 클래스는 사용자 지정 보고서 항목을 구현하는 데 사용됩니다.  

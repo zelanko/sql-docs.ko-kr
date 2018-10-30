@@ -10,12 +10,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b098ffb4559393d3ca1b309b8310e4c3df65f475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028372"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>명령 프롬프트에 Reporting Services 2016 설치
 
@@ -86,6 +86,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep 매개 변수](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[명령 프롬프트에서 파워 피벗 설치](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[명령 프롬프트에서 파워 피벗 설치](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

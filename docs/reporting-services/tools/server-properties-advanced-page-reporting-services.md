@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: dc4d8ec77fa0782fa2aa4f851a5d8f756cb0ecfa
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120060"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021698"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -160,4 +160,4 @@ Power BI 시각적 개체에서 Power BI Report Server 데이터 내보내기를
 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

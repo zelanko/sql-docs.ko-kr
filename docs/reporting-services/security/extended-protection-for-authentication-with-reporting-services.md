@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6397e574376e652217ec909a02a47e0c9c26eae
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031962"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
 
   확장된 보호는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 향상된 기능 집합입니다. 확장된 보호는 응용 프로그램에서 자격 증명과 인증을 보호하는 방법을 개선합니다. 이 기능 자체는 자격 증명 전달과 같은 특정 공격에 대해 직접적인 보호 기능을 제공하지 않지만 인증에 대해 확장된 보호를 적용할 수 있는 인프라를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 같은 응용 프로그램에 제공합니다.  
   
- 확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.  
+ 확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.  
   
 SSRS(SQL Server Reporting Services)는 운영 체제에서 사용하도록 설정되고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 구성된 확장된 보호를 지원하고 적용합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](http://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.  
+>  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](https://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 확장된 보호 개요
 
@@ -164,11 +164,11 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 ## <a name="next-steps"></a>다음 단계
 
 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[인증에 대한 확장된 보호 개요](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 보안 공지: 인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
+[확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[Microsoft 보안 공지: 인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

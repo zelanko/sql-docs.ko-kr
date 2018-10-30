@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47da73089d622ca0dffc6f9cb9d92a1a1c8244dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020468"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 집합 디자인 뷰 (보고서 작성기)
   보고서에서 데이터 집합은 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 집합은 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 집합을 만들 수 있습니다. 공유 데이터 집합 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47800151"
 > [!NOTE]  
 >  공유 데이터 집합은 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
- 자세한 내용은 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 자세한 내용은 [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
 ### <a name="dataset"></a>Dataset  
  **옵션 설정** 단추를 사용하여 공유 데이터 집합 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020647"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
   데이터 기반 구독을 통해 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있습니다. 데이터 기반 구독에서는 구독이 정의될 때 사용자가 지정한 정적 텍스트와 기본값을 사용할 수도 있습니다. 데이터 기반 구독을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "47608333"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>데이터 기반 구독 사용을 위한 요구 사항  
  모든 버전에서 데이터 기반 구독 기능을 사용할 수 있는 것은 아닙니다. 또한 런타임에 구독 데이터를 검색하는 데 사용할 수 있는 데이터 원본의 종류에도 제한이 있습니다. 다음 목록에서는 요구 사항에 대한 추가 정보를 제공합니다.  
   
--   데이터 기반 구독 기능을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+-   데이터 기반 구독 기능을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
 -   구독 데이터의 경우 보고서 서버에 대한 스키마 정보를 제공할 수 있는 데이터 원본을 선택합니다. 지원되는 데이터 원본 유형의 예로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 데이터, ODBC 데이터 원본 및 OLE DB 데이터 원본이 있습니다. 구독자 데이터 원본 요구 사항에 대한 자세한 내용은 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608333"
   
 ## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [데이터 기반 구독 만들기 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [데이터 기반 구독 만들기 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [캐시 사전 로드&#40;보고서 관리자&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

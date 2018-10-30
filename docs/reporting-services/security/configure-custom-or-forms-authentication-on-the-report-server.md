@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cb60efd33fdcf0ad6a7ea67b5c6011b016fd682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef775e1474c38e95491388465d1010c23d64526
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027482"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>보고서 서버에서 사용자 지정 또는 폼 인증 구성
 
@@ -27,7 +27,7 @@ Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 
 > [!NOTE]
 >  사용자 지정 인증 확장 프로그램을 만들려면 사용자 지정 코드와 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 보안 관련 지식이 필요합니다. 사용자 지정 인증 확장 프로그램을 만들지 않으려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 그룹 및 계정을 사용할 수 있지만, 이렇게 하려면 보고서 서버 배포 범위를 대폭 줄여야 합니다. 사용자 지정 인증에 대한 자세한 내용은 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)을 참조하십시오.
 
-또한 SharePoint 제품과 통합된 SQL Server Reporting Services 환경에서 폼 인증이나 사용자 지정 인증 확장 프로그램을 사용하려는 경우에는 SharePoint 사이트에서 해당 인증 방법을 사용하도록 구성해야 합니다. SharePoint에서 인증을 구성하는 방법은 MSDN( [Developer Network)에서](http://go.microsoft.com/fwlink/?LinkId=115575) 인증 예제 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하세요.
+또한 SharePoint 제품과 통합된 SQL Server Reporting Services 환경에서 폼 인증이나 사용자 지정 인증 확장 프로그램을 사용하려는 경우에는 SharePoint 사이트에서 해당 인증 방법을 사용하도록 구성해야 합니다. SharePoint에서 인증을 구성하는 방법은 MSDN( [Developer Network)에서](https://go.microsoft.com/fwlink/?LinkId=115575) 인증 예제 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하세요.
 
 
 
@@ -83,4 +83,4 @@ Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 
 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
 [보고서 서버의 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

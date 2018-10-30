@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100314"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식 단추(**fx**)를 표시하는 대화 상자 또는 **\<Expression...>** 을 표시하는 드롭다운 목록에서 속성 식을 설정할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "47733171"
 |-------------------|---------------------------------------|--------------------|  
 |데이터 집합의 집계 값을 계산합니다.|입력란 내의 자리 표시자에 대한 Value 속성입니다. **자리 표시자 속성 대화 상자, 일반**을 사용합니다.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |동일한 입력란에서 텍스트와 식을 연결합니다.|페이지 머리글 또는 페이지 바닥글에 위치한 입력란 내의 자리 표시자에 대한 Value입니다. **자리 표시자 속성 대화 상자, 일반**을 사용합니다.|`="This report began processing at " & Globals!ExecutionTime`|  
-|다른 범위의 데이터 집합에 대한 집계 값을 계산합니다.|테이블릭스 그룹에 위치한 입력란 내의 자리 표시자에 대한 Value입니다. **자리 표시자 속성 대화 상자, 일반**을 사용합니다.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|다른 범위의 데이터 집합에 대한 집계 값을 계산합니다.|테이블릭스 그룹에 위치한 입력란 내의 자리 표시자에 대한 Value입니다. **자리 표시자 속성 대화 상자, 일반**을 사용합니다.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |값에 따라 입력란에 있는 데이터의 서식을 지정합니다.|테이블릭스의 정보 행에서 입력란 내에 있는 자리 표시자에 대한 Color입니다. **입력란 속성 대화 상자, 글꼴**을 사용합니다.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |보고서 전체에서 참조할 값을 한 번 계산합니다.|보고서 변수에 대한 Value입니다. **보고서 속성 대화 상자, 변수**를 사용합니다.|`=Variables!MyCalculation.Value`|  
 |데이터 집합에서 두 개 이상의 필드에 대한 특정 값을 포함합니다.|테이블릭스의 그룹에 대한 필터 수식입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|데이터 형식에 대해 **부울**을 선택합니다.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

@@ -9,12 +9,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e3fccefab667aefae9f6b481a6e4f0ea73144bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98977f845f2226413c19b338dc15b11589231b98
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028072"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
 
@@ -29,7 +29,7 @@ ms.locfileid: "47705761"
 
 **경고 담당자**— 경고 관리 SharePoint 권한이 있어야 합니다. 기본적으로 팀 사이트 사이트 템플릿을 사용하여 만든 사이트에 대해서는 모든 권한 수준만 이 권한을 포함합니다. 다른 사이트 템플릿을 사용하는 경우 기본 SharePoint 그룹의 다른 목록이 표시됩니다. 기본 제공 권한 수준 중 하나에 경고 관리 권한을 추가할 수 있습니다. 또는 데이터 경고를 보고 삭제하는 경고 담당자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수 있습니다.
 
-SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수준(SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx)을 참조하세요.
+SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수준(SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)을 참조하세요.
 
 ## <a name="grant-permissions"></a>사용 권한 부여
   
@@ -56,4 +56,4 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

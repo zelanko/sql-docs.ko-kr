@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e34042bcaf265651f84a805ff383da3f1caed734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029832"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -114,9 +114,9 @@ ms.locfileid: "47719531"
   
 1.  **지도 점 속성** 대화 상자에서 **일반** 을 선택하여 다음 지도 요소의 레이블, 도구 설명 및 표식 유형 옵션을 변경할 수 있습니다.  
   
-    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대한 옵션을 무시하려면 [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 페이지를 사용합니다.  
+    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대한 옵션을 무시하려면 [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 페이지를 사용합니다.  
   
-    -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 페이지를 사용합니다.  
+    -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 페이지를 사용합니다.  
   
 ##  <a name="Embedded"></a> 포함된 데이터를 공간 데이터의 원본으로 지정하려면  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47719531"
 2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록에서 **타일 계층**을 클릭합니다.  
   
     > [!NOTE]  
-    >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.  
+    >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)을 참조하세요.  
   
 3.  지도 창에서 타일 계층을 마우스 오른쪽 단추로 클릭한 다음 **타일 속성**을 클릭합니다.  
   

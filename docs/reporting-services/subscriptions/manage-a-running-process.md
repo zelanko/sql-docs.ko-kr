@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74a041097f0bd4d8ac824fcb24a21f2ff19339ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021957"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 응용 프로그램 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "47699861"
  [작업 속성&#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c7e880bee978cbd89a09dc375e7d11d108aab19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13c3fb54554387bdb74a478b5f1703645adb462
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029858"
 ---
 # <a name="implementing-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "47742731"
  [데이터 처리 확장 프로그램 코드 디버깅](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  데이터 처리 확장 프로그램에서 코드를 디버깅하는 방법을 설명합니다.  
   
- 완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   

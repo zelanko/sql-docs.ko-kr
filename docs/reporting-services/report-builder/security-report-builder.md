@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9831d45e62711a4fed958b13e12d44d53320a3f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030102"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48906393"
   
      보고서 서버에서 항목을 보거나 게시하기 위해 보고서 관련 항목 및 작업에 적용되는 권한 집합이 역할로 구성됩니다. 보고서 서버 관리자는 하나 이상의 역할에 사용자를 할당합니다. 예를 들어 미리 정의된 역할인 브라우저를 통해 보고서, 폴더, 모델 및 리소스를 볼 수 있습니다.  
   
-     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   SharePoint 통합 모드에서 구성된 보고서 서버  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48906393"
   
  게시한 항목을 다른 사용자가 찾아 공유할 수 있도록 하려면 보고서 서버 관리자와 작업하여 사용자에게 액세스를 제공하는 폴더 구성을 설정해야 합니다. 보고서를 제작하고 게시된 보고서를 실행하는 데 액세스를 사용할 수 있어야 합니다.  
   
- 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48906393"
   
  자격 증명은 보고서 정의에 저장되지 않으며 보고서 서버 또는 SharePoint 사이트 및 보고서 제작 클라이언트의 보고서와는 별도로 관리됩니다.  
   
- 보고서 디자인 타임에 자격 증명은 데이터 집합 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 집합 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 보고서 디자인 타임에 자격 증명은 데이터 집합 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 집합 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
- 데이터에 보안을 설정하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 데이터에 보안을 설정하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
   
 ##  <a name="Models"></a> 모델 및 보안 필터 이해  
@@ -108,13 +108,13 @@ ms.locfileid: "48906393"
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 작성기 설치 및 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [보고서 작성기 설치 및 제거](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

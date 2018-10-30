@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3892815dee3002e06abf6c76e4604225a29749a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba16d32c5a44385329f789c2e0851609514be616
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028572"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 응용 프로그램에 ReportViewer 컨트롤 추가
 보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가합니다. ASP.NET 보고서 웹 사이트를 사용하는 경우 default.aspx 페이지에 ReportViewer 컨트롤이 추가됩니다.   
@@ -30,7 +30,7 @@ ms.locfileid: "47777351"
   
 5.  **보고서 선택** 상자에서 만든 부모 보고서를 선택합니다.  
   
-    보고서를 선택하면 보고서에 사용된 데이터 원본의 인스턴스가 자동으로 만들어집니다. 각 DataTable 및 해당 [DataSet](http://msdn.microsoft.com/library/system.data.dataset.aspx) 컨테이너를 인스턴스화하는 코드가 생성됩니다. 보고서에 사용된 각 데이터 원본에 해당하는 [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) 컨트롤이 디자인 화면에 추가됩니다. 이 데이터 원본 컨트롤은 자동으로 구성됩니다.  
+    보고서를 선택하면 보고서에 사용된 데이터 원본의 인스턴스가 자동으로 만들어집니다. 각 DataTable 및 해당 [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 컨테이너를 인스턴스화하는 코드가 생성됩니다. 보고서에 사용된 각 데이터 원본에 해당하는 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) 컨트롤이 디자인 화면에 추가됩니다. 이 데이터 원본 컨트롤은 자동으로 구성됩니다.  
   
 6.  빌드 메뉴에서 웹 사이트 빌드를 클릭합니다.  
   

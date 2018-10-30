@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dce1ca8367db90177d9a9093da2f7300d7409e45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db5322685b4bddb0ec6b468365b5a4206e6e96a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100354"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "47614491"
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

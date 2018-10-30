@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 4bf85cde9cedd9995fb3092c43f4b2f68e33d2ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 517a73d2b972cab7295a2a1d1710658d26685484
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021557"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>보고서 뷰어 웹 파트의 SharePoint 사이트 설정 - Reporting Services
 
@@ -37,5 +37,5 @@ ms.locfileid: "47824321"
 
 |설정|주석|  
 |-------------|--------------|  
-|사용 데이터 수집|제품 개선을 돕기 위해 오류 및 사용 정보를 Microsoft로 전송할 수 있습니다. Microsoft 오류 보고 데이터 수집 정책의 경우 [Microsoft SQL Server 개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.|  
+|사용 데이터 수집|제품 개선을 돕기 위해 오류 및 사용 정보를 Microsoft로 전송할 수 있습니다. Microsoft 오류 보고 데이터 수집 정책의 경우 [Microsoft SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.|  
 |보고서에 내게 필요한 옵션 메타데이터 사용|렌더링된 보고서에 대한 [`AccessibleTablix` 장치 정보](../html-device-information-settings.md)를 설정합니다.| 

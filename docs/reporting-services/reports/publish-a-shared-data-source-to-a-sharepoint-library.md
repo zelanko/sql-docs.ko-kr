@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b49a7637537be5a77f3c3645c00e2b50283df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68c556abb719ba9642e7c1074866235e46c1f1e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608007"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029122"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
   SharePoint 통합 모드에서 실행 중인 보고서 서버에 공유 데이터 원본을 게시하려면 보고서 디자이너에서 보고서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "47608007"
 9. 솔루션 탐색기에서 게시하려는 공유 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음 **배포**를 클릭합니다. 데이터 원본이 **TargetDataSourceFolder**에 지정된 위치에 게시됩니다. 출력 창에 배포 오류가 표시됩니다.  
   
     > [!NOTE]  
-    >  SharePoint 사이트에 공유 데이터 원본을 게시하면 파일 확장명이 .rsds로 변경됩니다. SharePoint 사이트에서 공유 데이터 원본을 직접 편집 및 관리할 수 있습니다. 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
+    >  SharePoint 사이트에 공유 데이터 원본을 게시하면 파일 확장명이 .rsds로 변경됩니다. SharePoint 사이트에서 공유 데이터 원본을 직접 편집 및 관리할 수 있습니다. 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826721"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027822"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
   보고서 작성기에서는 보고서 정의를 보고서 서버에 저장할 수 있습니다(보고서 게시라고도 함). 보고서를 보고서 서버에 저장하면 다른 사용자가 보고서를 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터를 검색하게 됩니다. 렌더링된 보고서의 정적 복사본을 저장하려면 보고서를 다른 파일 형식으로 내보내고 저장하거나, 보고서 기록 기능을 사용하여 렌더링된 보고서의 여러 버전을 저장합니다.  
@@ -50,6 +50,6 @@ ms.locfileid: "47826721"
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

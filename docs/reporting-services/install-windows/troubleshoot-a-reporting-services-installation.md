@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf5f72629469de95ee5d6ce171fe26fbb5b747b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020327"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -20,7 +20,7 @@ ms.locfileid: "47608353"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
- 릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](http://go.microsoft.com/fwlink/?linkid=236893)를 검토하세요.  
+ 릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](https://go.microsoft.com/fwlink/?linkid=236893)를 검토하세요.  
   
 ##  <a name="bkmk_setuplogs"></a> 설치 로그 확인  
  설치 오류는 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 폴더의 로그 파일에 기록됩니다. 설치 프로그램을 실행할 때마다 하위 폴더가 만들어지는데 하위 폴더의 이름은 설치 프로그램을 실행한 시간과 날짜입니다. 설치 로그 파일을 확인하는 방법에 대한 지침은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  

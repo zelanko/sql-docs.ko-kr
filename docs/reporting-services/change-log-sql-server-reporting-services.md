@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030130"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 변경 로그
 
@@ -33,15 +33,15 @@ ms.locfileid: "47728801"
 
 다음 버그가 수정되었습니다.
 
-- 텍스트 상자가 rc:Toolbar=False이고 긴 텍스트를 포함할 때 직사각형 내부의 텍스트 상자가 직사각형의 세로 확장을 차단함 
-- pageHeight가 0.5인치 미만일 때 텍스트 크기가 조절되지 않음 
-- CRM에서 사용될 때 SSRS 카탈로그 데이터베이스에서 교착 상태 발생 
-- 보고서에서 스크롤할 때 세로로 정렬된 열 머리글이 잘못 표시됨 
-- SCOM Reporting 역할에 추가된 사용자가 SSRS 웹 포털에 액세스할 수 없음 
-- 태국어 문자를 PDF에서 올바르게 내보낼 수 없음 
-- 브라우저 역할 동작 변경 
-- rc:Toolbar=false가 Express Edition에서 작동하지 않음 
-- 매개 변수 프롬프트 영역에 수직 스크롤 막대가 없음 
+- 텍스트 상자가 rc:Toolbar=False이고 긴 텍스트를 포함할 때 직사각형 내부의 텍스트 상자가 직사각형의 세로 확장을 차단함 
+- pageHeight가 0.5인치 미만일 때 텍스트 크기가 조절되지 않음 
+- CRM에서 사용될 때 SSRS 카탈로그 데이터베이스에서 교착 상태 발생 
+- 보고서에서 스크롤할 때 세로로 정렬된 열 머리글이 잘못 표시됨 
+- SCOM Reporting 역할에 추가된 사용자가 SSRS 웹 포털에 액세스할 수 없음 
+- 태국어 문자를 PDF에서 올바르게 내보낼 수 없음 
+- 브라우저 역할 동작 변경 
+- rc:Toolbar=false가 Express Edition에서 작동하지 않음 
+- 매개 변수 프롬프트 영역에 수직 스크롤 막대가 없음 
 - 모바일 보고서 런타임이 업데이트됨 
 
 ### <a name="version-140600744-released-april-25-2018"></a>버전 14.0.600.744, 릴리스 날짜: 2018년 4월 25일 
@@ -82,4 +82,4 @@ ms.locfileid: "47728801"
 
 [Reporting Services(SSRS)의 새로운 기능](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

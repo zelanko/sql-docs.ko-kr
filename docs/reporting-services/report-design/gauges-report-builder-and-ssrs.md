@@ -156,12 +156,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb366c4d9b2b199382df85a884e1806dbd974c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805831"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031282"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 집합의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -282,9 +282,9 @@ ms.locfileid: "47805831"
   
 -   [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
+-   [계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
   
--   [이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
 ##  <a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 계기 작업에 대한 추가 정보를 제공합니다.  

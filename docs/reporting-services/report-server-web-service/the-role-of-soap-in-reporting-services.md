@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2abf45142444939264639779c1e1b232357c683c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ab251afd774e36f35a2c96e7519d3b799b33a9c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032072"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   웹 서버 웹 서비스에서는 SOAP(Simple Object Access Protocol) 메시징을 사용하여 네트워크를 통해 텍스트 기반 명령을 보냅니다. 이러한 명령은 HTTP를 사용하여 World Wide Web을 통해 전송되는 XML 텍스트 형식입니다. SOAP을 통신 프로토콜로 사용하면 보고서 서버 웹 서비스에서는 폭넓게 활용되는 개방형 인프라를 사용하여 응용 프로그램 및 구성 요소와 보고서 서버 간에 데이터 교환이 가능합니다. SOAP 표준은 www.w3.org/TR/SOAP에 정의되어 있습니다.  
@@ -59,7 +59,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>참고 항목  
  [SOAP API 액세스](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031612"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 응용 프로그램 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770901"
   
 -   도메인 사용자 계정으로 실행되는 보고서 서버 서비스의 SPN을 등록합니다. 자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)을 참조하세요.  
   
--   서비스 계정이 네트워크 서비스와 같은 기본 제공 계정으로 실행되도록 변경합니다. 기본 제공 계정은 컴퓨터를 네트워크에 조인할 때 정의한 Host SPN에 HTTP SPN을 매핑합니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)를 참조하세요.  
+-   서비스 계정이 네트워크 서비스와 같은 기본 제공 계정으로 실행되도록 변경합니다. 기본 제공 계정은 컴퓨터를 네트워크에 조인할 때 정의한 Host SPN에 HTTP SPN을 매핑합니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)를 참조하세요.  
   
 -   NTLM을 사용합니다. NTLM은 Kerberos 인증이 실패하는 경우에도 일반적으로 작동합니다. NTLM을 사용하려면 RSReportServer.config 파일에서 **RSWindowsNegotiate** 를 제거하고 **RSWindowsNTLM** 만 지정되어 있는지 확인합니다. 이 방법을 선택하는 경우 보고서 서버 서비스의 SPN을 정의하지 않아도 해당 서비스의 도메인 사용자 계정을 계속 사용할 수 있습니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770901"
   
 -   10진수 값을 16진수 형식으로 변환하는 옵션 중 하나는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계산기를 사용하는 것입니다. Windows 계산기는 ‘Dec’ 옵션과 ‘Hex’ 옵션을 표시하는 여러 모드를 지원합니다. ‘Dec’ 옵션을 선택하고 로그 파일에서 찾은 10진수 값을 붙여 넣거나 입력한 후에 ‘Hex’ 옵션을 선택합니다.  
   
--   그런 다음 [User-Account-Control 특성](http://go.microsoft.com/fwlink/?LinkId=183366) 항목을 참조하여 서비스 계정의 특성을 파생시킵니다.  
+-   그런 다음 [User-Account-Control 특성](https://go.microsoft.com/fwlink/?LinkId=183366) 항목을 참조하여 서비스 계정의 특성을 파생시킵니다.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Reporting Services 서비스 계정에 대해 Active Directory에서 구성된 SPN  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 추적 로그 파일에 SPN을 기록하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 일시적으로 사용하도록 설정할 수 있습니다.  
@@ -202,7 +202,7 @@ ms.locfileid: "47770901"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   Kerberos 및 보고서 서버에 대한 자세한 내용은 [Kerberos와 함께 SharePoint, Reporting Services 및 PerformancePoint Monitoring Server를 사용하여 비즈니스 인텔리전스 솔루션 배포(Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos)](http://go.microsoft.com/fwlink/?LinkID=177751)를 참조하십시오.  
+-   Kerberos 및 보고서 서버에 대한 자세한 내용은 [Kerberos와 함께 SharePoint, Reporting Services 및 PerformancePoint Monitoring Server를 사용하여 비즈니스 인텔리전스 솔루션 배포(Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos)](https://go.microsoft.com/fwlink/?LinkID=177751)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
@@ -210,6 +210,6 @@ ms.locfileid: "47770901"
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [보고서 서버에서 사용자 지정 또는 폼 인증 구성](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

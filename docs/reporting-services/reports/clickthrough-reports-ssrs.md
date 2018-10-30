@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d22f07d4375d92dd49f18f5fe80653f1e401b744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021837"
 ---
 # <a name="clickthrough-reports-ssrs"></a>클릭 광고 보고서(SSRS)
   클릭 광고 보고서는 주 보고서 내에 포함되어 있는 데이터에 대한 세부 정보를 제공하는 보고서입니다. 클릭 광고 보고서는 사용자가 주 보고서에 나타나는 대화형 데이터를 클릭할 때 표시됩니다. 이러한 보고서는 보고서 서버에 의해 자동으로 생성됩니다. 모델 디자이너는 보고서 모델의 엔터티에 할당하는 **DefaultDetailAttribute** 및 **DefaultAggregateAttribute** 속성을 설정하여 클릭 광고 보고서에 표시될 내용을 결정합니다.  
@@ -47,6 +47,6 @@ ms.locfileid: "47855017"
 >  보고서에서 사용되는 기본 엔터티는 보고서를 연결하는 엔터티와 동일한 엔터티여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서를 클릭 광고 보고서로 모델에 연결](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [보고서를 클릭 광고 보고서로 모델에 연결](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b467ce3172f631a5d8d49b35bcdb5c09c61ac5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06d9181358ddd8a3e9709787f6fe254ed913ea08
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032112"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>보고서에 HTML 추가(보고서 작성기 및 SSRS)
   자리 표시자를 사용하여 데이터 집합의 필드에서 보고서에 사용할 HTML을 가져올 수 있습니다. 기본적으로 자리 표시자는 일반 텍스트를 나타내므로 자리 표시자 태그 형식을 HTML로 변경해야 합니다. 자세한 내용은 [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)를 참조하세요.  
@@ -25,7 +25,7 @@ ms.locfileid: "47659971"
   
 1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   
-     **데이터 집합 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 집합이나 공유 데이터 집합을 사용할 수 있습니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 집합 속성 대화 상자, 쿼리](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)를 참조하세요.  
+     **데이터 집합 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 집합이나 공유 데이터 집합을 사용할 수 있습니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 집합 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)를 참조하세요.  
   
 2.  **삽입** 탭에서 **입력란**을 클릭합니다. 목록을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "47659971"
 ## <a name="see-also"></a>참고 항목  
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

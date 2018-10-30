@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f40b4f2e377881cd6788ca3fa8629b5f0f52333f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021847"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
   보고서 관리자를 사용하여 보고서 서버에 게시된 보고서를 볼 수 있습니다. 기본적으로 모든 보고서는 HTML로 열립니다. 보고서가 열린 후 다른 응용 프로그램 형식으로 내보내어 볼 수 있습니다. 보고서에 대화형 기능이 포함되어 있거나 보고서가 대화형 데이터를 포함한 보고서 작성기 보고서인 경우 해당 링크를 클릭하여 추가 보고서 또는 데이터를 볼 수 있습니다.  
   
 ### <a name="to-view-a-report"></a>보고서를 보려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  폴더에서 직접 찾아보거나 이름으로 검색하여 보고서를 찾습니다. **내용** 페이지에서 폴더 이름이나 폴더 아이콘을 클릭하여 폴더 내용을 찾습니다. 페이지 맨 위에 있는 **검색 대상** 입력란에 보고서 이름 전체 또는 일부를 입력하여 보고서를 검색합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "49085049"
      보고서를 닫아도 브라우저 캐시에서 보고서가 제거되지 않습니다. 보고서와의 연결을 끊으려면 브라우저를 닫아야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [내용 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

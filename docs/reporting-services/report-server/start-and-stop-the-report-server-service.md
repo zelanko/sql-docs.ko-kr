@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddbd23aa9a37033c65115c02e49fde8bcedd5dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021493"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
   보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 Windows 서비스로 구현됩니다. 보고서 서버 기능을 사용하려면 서비스를 실행해야 합니다. 서비스를 중지하면 모든 보고서 서버 작업이 중지됩니다.  
@@ -51,6 +51,6 @@ ms.locfileid: "47738701"
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

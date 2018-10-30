@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a01fc40e8946c9d6b9620dc0c17e51d1dd0db6e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b0d32e2705b63ddc5f12af84e0589a9c940582d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620481"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029682"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
   파일 시스템에서 파일을 업로드하여 보고서 서버 데이터베이스에 관리되는 항목으로 저장할 수 있습니다. 파일을 업로드할 때 발생하는 상황은 파일 형식에 따라 다릅니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "47620481"
 |폴더의 내용 보기|리소스 보기, 보고서 보기|  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
  [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

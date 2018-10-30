@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af92398373dbb3ff3afe8c05263ccf692937c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030222"
 ---
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
 
@@ -35,7 +35,7 @@ ms.locfileid: "47676261"
 |RSWindowsNegotiate|Negotiate|사용자 계정 컨트롤|Windows 통합 Kerberos 인증을 먼저 시도하지만 Active Directory가 보고서 서버에 클라이언트 요청에 대한 티켓을 부여하지 못할 경우 NTLM으로 대체됩니다. Negotiate는 티켓을 사용할 수 없는 경우에만 NTLM으로 대체됩니다. 첫 번째 시도 결과가 티켓 누락이 아닌 오류인 경우 보고서 서버는 두 번째 시도를 하지 않습니다.|  
 |RSWindowsNTLM|NTLM|사용자 계정 컨트롤|Windows 통합 인증에 NTLM이 사용됩니다.<br /><br /> 자격 증명은 다른 요청에 대해 위임되거나 가장되지 않습니다. 이후 요청은 새 시도-응답 시퀀스를 따릅니다. 네트워크 보안 설정에 따라 사용자에게 자격 증명을 요구하는 메시지가 표시되거나 인증 요청이 투명하게 처리됩니다.|  
 |RSWindowsKerberos|Kerberos|아니오|Windows 통합 인증에 Kerberos를 사용합니다. 서비스 계정에 대해 SPN(서비스 사용자 이름)을 설정하여 Kerberos를 구성해서는 안 됩니다. 여기에는 도메인 관리자 권한이 요구됩니다. Kerberos에 ID 위임을 설정하는 경우 보고서에 데이터를 제공하는 외부 데이터 원본에 대한 추가 연결에 보고서를 요청하는 사용자의 토큰을 사용할 수도 있습니다.<br /><br /> RSWindowsKerberos를 지정하기 전에 사용 중인 브라우저 종류가 이를 실제로 지원하는지 확인해야 합니다. Microsoft Edge 또는 Internet Explorer를 사용하는 경우 Kerberos 인증은 Negotiate를 통해서만 지원됩니다. Microsoft Edge 또는 Internet Explorer는 Kerberos를 직접 지정하는 인증 요청은 작성하지 않습니다.|  
-|RSWindowsBasic|Basic|아니오|기본 인증은 HTTP 프로토콜에 정의되며 보고서 서버에 대한 HTTP 요청을 인증하는 데만 사용됩니다.<br /><br /> 자격 증명이 Base-64 인코딩으로 HTTP 요청에 전달됩니다. 기본 인증을 사용하는 경우 사용자 계정 정보를 네트워크를 통해 보내기 전에 SSL(Secure Sockets Layer)을 사용하여 암호화합니다. SSL은 HTTP TCP/IP 연결을 통해 클라이언트에서 보고서 서버로 연결 요청을 보내는 데 암호화된 채널을 제공합니다. 자세한 내용은 [TechNet 웹 사이트의](http://go.microsoft.com/fwlink/?LinkId=71123) SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.|  
+|RSWindowsBasic|Basic|아니오|기본 인증은 HTTP 프로토콜에 정의되며 보고서 서버에 대한 HTTP 요청을 인증하는 데만 사용됩니다.<br /><br /> 자격 증명이 Base-64 인코딩으로 HTTP 요청에 전달됩니다. 기본 인증을 사용하는 경우 사용자 계정 정보를 네트워크를 통해 보내기 전에 SSL(Secure Sockets Layer)을 사용하여 암호화합니다. SSL은 HTTP TCP/IP 연결을 통해 클라이언트에서 보고서 서버로 연결 요청을 보내는 데 암호화된 채널을 제공합니다. 자세한 내용은 [TechNet 웹 사이트의](https://go.microsoft.com/fwlink/?LinkId=71123) SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.|  
 |사용자 지정|(Anonymous)|아니오|익명 인증은 HTTP 요청의 인증 헤더를 무시하도록 보고서 서버에 지시합니다. 보고서 서버는 사용자 인증을 위해 제공한 사용자 지정 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms 인증에 대한 호출을 제외한 모든 요청을 수락합니다.<br /><br /> 보고서 서버의 모든 인증 요청을 처리하는 사용자 지정 인증 모듈을 배포하는 경우에만 **Custom** 을 지정하십시오. 사용자 지정 인증 유형은 기본 Windows 인증 확장 프로그램에서 사용할 수 없습니다.|  
   
 ## <a name="unsupported-authentication-methods"></a>지원되지 않는 인증 방법  
@@ -87,4 +87,4 @@ ms.locfileid: "47676261"
 [Reporting Services의 인증](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Reporting Services의 권한 부여](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

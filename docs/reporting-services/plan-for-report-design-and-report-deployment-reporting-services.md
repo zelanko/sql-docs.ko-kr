@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b5e541af99ac03562347a893d67de8ad0390940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029142"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.
@@ -35,13 +35,13 @@ ms.locfileid: "47832331"
   
  RDL 및 RDL 스키마에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [Microsoft SQL Server XML 스키마](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Microsoft SQL Server XML 스키마](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [보고서 정의 언어 사양](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [보고서 정의 언어 사양](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- ReportViewer 컨트롤에 대한 자세한 내용은 [ReportViewer 컨트롤(Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)을 참조하세요.  
+ ReportViewer 컨트롤에 대한 자세한 내용은 [ReportViewer 컨트롤(Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)을 참조하세요.  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 보고서 서버 및 RDL 스키마 지원  
  다음과 같은 방법으로 보고서 정의 파일을 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버에 배포할 수 있습니다.  
@@ -101,11 +101,11 @@ ms.locfileid: "47832331"
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   [RDLC 파일을 RDL 파일로 변환](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [RDLC 파일을 RDL 파일로 변환](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [ReportViewer 컨트롤(Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer 컨트롤(Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [ReportViewer 컨트롤 추가 및 구성](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [ReportViewer 컨트롤 추가 및 구성](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

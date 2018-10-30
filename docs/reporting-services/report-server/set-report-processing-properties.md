@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031772"
 ---
 # <a name="set-report-processing-properties"></a>보고서 처리 속성 설정
   보고서 실행 속성은 보고서의 처리 방식을 제어합니다. 실행 속성은 각 보고서별로 설정해야 합니다.  
   
- 보고서 실행 속성을 설정하려면 보고서 관리자에서 보고서를 연 다음 실행 속성 페이지로 이동합니다. 자세한 내용은 [처리 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 속성을 설정할 수도 있습니다. [처리 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)를 참조하세요.  
+ 보고서 실행 속성을 설정하려면 보고서 관리자에서 보고서를 연 다음 실행 속성 페이지로 이동합니다. 자세한 내용은 [처리 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 속성을 설정할 수도 있습니다. [처리 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)를 참조하세요.  
   
 ## <a name="report-execution-modes"></a>보고서 실행 모드  
  필요에 따라 또는 스냅숏으로 보고서를 실행할 수 있습니다. 다음 섹션에서는 각 방법에 대해 설명합니다.  

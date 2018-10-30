@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021947"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 페이지를 매긴 보고서 항목으로, 다른 페이지를 매긴 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "47849261"
  보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 서버 인스턴스가 서버에서 업데이트되었는지 확인합니다. 또한 데이터 집합 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 게시된 보고서 파트나 보고서 파트의 종속성이 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 항목의 개수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다. 업데이트가 표시되도록 선택하면 보고서 파트의 축소판 그림, 보고서 파트를 마지막으로 수정한 사람 및 시간이 표시됩니다. 그러면 업데이트된 항목 중 일부나 전부를 허용할 수 있습니다.  
   
 > [!NOTE]  
->  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)를 참조하세요.  
+>  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)를 참조하세요.  
   
  보고서 작성기는 보고서 파트를 서버에서 마지막으로 업데이트한 날짜와 보고서 파트를 서버와 마지막으로 동기화한 날짜 간의 차이를 확인합니다. 그러나 보고서에서 보고서 파트를 수정한 날짜는 확인하지 않습니다. 따라서 보고서의 보고서 파트와 서버의 보고서 파트가 크게 다를 수 있지만 보고서 작성기는 업데이트를 확인할 때 이 차이점을 찾지 않습니다.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "47849261"
   
  [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
   
   

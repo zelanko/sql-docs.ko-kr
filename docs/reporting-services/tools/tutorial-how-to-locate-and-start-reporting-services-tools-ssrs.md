@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021167"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856807"
 4.  로컬 보고서 서버에서 웹 포털을 실행하는 경우 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- 보고서 서버 관리자는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 서버와 함께 보고서 서버를 관리할 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)을 참조하세요.  
+ 보고서 서버 관리자는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 서버와 함께 보고서 서버를 관리할 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)을 참조하세요.  
   
 ### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio를 시작하려면  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856807"
   
  보고서 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio에서 제공됩니다. 보고서 디자이너의 디자인 화면에는 보고서 제작 기능에 액세스하는 데 사용되는 탭 창, 마법사 및 메뉴가 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 서버 프로젝트 또는 보고서 서버 마법사 템플릿을 선택하면 보고서 디자이너 도구를 사용할 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요. 
  
-[SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다.  
+[SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다.  
   
 ### <a name="to-start-report-designer"></a>보고서 디자이너를 시작하려면  
   
@@ -134,7 +134,7 @@ ms.locfileid: "47856807"
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에서 페이지를 매긴 보고서를 만드는 데 사용할 수 있는 독립 실행형 응용 프로그램입니다. 보고서를 보고서 디자이너에서 만들었는지 아니면 이전 버전의 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 만들었는지에 상관없이 모든 기존 보고서를 사용자 지정하고 업데이트할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 보고서 작성기를 다운로드할 수 있습니다.  
   
- Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
+ Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](https://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>시작하려면 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ ms.locfileid: "47856807"
   
      또는  
   
-     Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
+     Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](https://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 가 열립니다. 이제 페이지를 매긴 보고서를 만들거나 열 수 있습니다.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- [SQL Server Mobile 보고서 게시자](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 및 iPad, iPhone 등의 모바일 장치에서 볼 수 있는 모바일 보고서를 만듭니다.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
+ [SQL Server Mobile 보고서 게시자](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 및 iPad, iPhone 등의 모바일 장치에서 볼 수 있는 모바일 보고서를 만듭니다.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
   
- Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
+ Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](https://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>시작하려면 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ ms.locfileid: "47856807"
   
      또는  
   
-     Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
+     Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](https://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 가 열립니다. 이제 모바일 보고서를 만들거나 열 수 있습니다.  
 
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[SQL Server 모바일 보고서 게시자를 다운로드](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[보고서 작성기를 다운로드](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[SQL Server Data Tools 다운로드](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [쿼리 디자인 도구](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

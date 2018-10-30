@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c93c32d70ccc2cf1180b44e16c5983d584b2b19b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616072"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031342"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>보고서를 공유 데이터 원본에 바인딩(SSRS)
   보고서를 테스트 서버에서 프로덕션 서버로 이동할 때와 같이 로컬 컴퓨터에 파일을 저장한 다음, 이 파일을 다른 보고서 서버로 업로드해야 하는 경우가 있습니다. 보고서를 새 서버로 업로드하는 경우 새 보고서 서버에 저장된 공유 데이터 원본에 다시 바인딩해야 합니다. 보고서를 다시 바인딩하지 않으면 새 보고서 서버에서 액세스할 때 제대로 작동하지 않습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "47616072"
   
 ## <a name="see-also"></a>참고 항목  
  [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

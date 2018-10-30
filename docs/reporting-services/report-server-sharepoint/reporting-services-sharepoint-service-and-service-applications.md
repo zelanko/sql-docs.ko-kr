@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030632"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 응용 프로그램
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752531"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램 만들기
 
- SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
+ SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>프록시 그룹과 서비스 응용 프로그램의 연결 수정
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752531"
 |서비스 응용 프로그램의 설정 관리|[Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |서비스 응용 프로그램과 관련 구성 요소(예: 암호화 키 및 프록시) 백업 및 복원|[Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

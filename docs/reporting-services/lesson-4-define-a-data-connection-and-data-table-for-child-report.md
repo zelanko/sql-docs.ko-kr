@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b160390718e62854fa1fbfb5aae1d12310420477
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031462"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 부모 보고서를 디자인 한 후에는 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "47695767"
     > [!WARNING]  
     > **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소해야 합니다.  
   
-    이제 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 **DataTable** 이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
+    이제 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 **DataTable** 이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
   
 11. 파일을 저장합니다.  
   

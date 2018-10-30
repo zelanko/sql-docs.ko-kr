@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5057a5d5a504c53daf3de3767ae497302b0a61ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2360f86004a624940abb2f79fca04f8d8ea2177
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031117"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS)
   주 보고서에서 링크를 클릭할 때 열리는 보고서를 *드릴스루 보고서*라고 합니다. 이 드릴스루 링크를 통해 드릴스루 작업을 수행할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "47751825"
 7.  링크를 테스트하려면 보고서를 실행하고 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   

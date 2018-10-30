@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/24/2018
-ms.openlocfilehash: bc5ee18e2ddcde4038541f374bae68aeaa3fd3bc
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 42ca036f069d5c7014e14a4c3ccb0d1e9d298a2b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030129"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
 
@@ -81,4 +81,4 @@ ms.locfileid: "48782312"
 [보고서 서버 데이터베이스 관리](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 [암호화 키 구성 및 관리](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

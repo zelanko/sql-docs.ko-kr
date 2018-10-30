@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027952"
 ---
 # <a name="rendering-extensions-overview"></a>렌더링 확장 프로그램 개요
   렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 장치별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지 및 PDF의 7개 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "47679341"
   
  사용자 지정 렌더링 확장 프로그램 작성은 어려운 작업입니다. 렌더링 확장 프로그램은 일반적으로 가능한 모든 보고서 요소 조합을 지원해야 하며 수많은 클래스, 인터페이스, 메서드 및 속성 구현이 필요합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함되지 않은 형식으로 보고서를 렌더링해야 하고 렌더링 확장 프로그램의 고유한 관리 코드 구현을 작성하려는 경우 렌더링 확장 프로그램 코드는 보고서 서버에 요구되는 **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** 인터페이스를 구현해야 합니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 추가 설명서 및 백서는 [Reporting Services 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=19951)에서 최신 기술 리소스를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 추가 설명서 및 백서는 [Reporting Services 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=19951)에서 최신 기술 리소스를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [렌더링 확장 프로그램 구현](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

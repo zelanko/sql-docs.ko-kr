@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a757dd4dac0e788c33e1189171c58987a7bc4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df16c043688de82a549ec506ece457730626dda1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663621"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029062"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
   링크된 보고서는 기존 보고서에 대한 액세스 지점을 제공하는 보고서 서버 항목입니다. 개념적으로 링크된 보고서는 프로그램을 실행하거나 파일을 열 때 사용하는 프로그램 바로 가기와 비슷합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "47663621"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [새 링크된 보고서 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [항목 위치 선택 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [새 링크된 보고서 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [항목 위치 선택 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

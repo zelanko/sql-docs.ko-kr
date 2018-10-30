@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031862"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 집합 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  
@@ -76,9 +76,9 @@ ms.locfileid: "47853391"
   
 -   **데이터 원본** 연결하는 데이터 원본 유형 버전에서 지원하는 데이터 형식입니다.  
   
-     예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 대한 일반적인 데이터 형식에는 **int**, **datetime**및 **varchar**가 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서 새로 도입된 데이터 형식으로 **date**, **time**, **datetimetz**및 **datetime2**에 대한 지원을 추가했습니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362)을 참조하세요.  
+     예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 대한 일반적인 데이터 형식에는 **int**, **datetime**및 **varchar**가 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서 새로 도입된 데이터 형식으로 **date**, **time**, **datetimetz**및 **datetime2**에 대한 지원을 추가했습니다. 자세한 내용은 [데이터 형식(Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362)을 참조하세요.  
   
--   **데이터 공급자 또는 데이터 처리 확장 프로그램** 데이터 원본에 연결할 때 선택하는 데이터 처리 확장 프로그램의 데이터 공급자 버전에서 지원하는 데이터 형식입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 를 기반으로 하는 데이터 공급자는 CLR에서 지원하는 데이터 형식을 사용합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 데이터 형식 지원에 대한 자세한 내용은 MSDN의 [데이터 형식 매핑(ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) 및 [기본 형식 사용](http://go.microsoft.com/fwlink/?LinkId=112177) 을 참조하세요.  
+-   **데이터 공급자 또는 데이터 처리 확장 프로그램** 데이터 원본에 연결할 때 선택하는 데이터 처리 확장 프로그램의 데이터 공급자 버전에서 지원하는 데이터 형식입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 를 기반으로 하는 데이터 공급자는 CLR에서 지원하는 데이터 형식을 사용합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 데이터 형식 지원에 대한 자세한 내용은 MSDN의 [데이터 형식 매핑(ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) 및 [기본 형식 사용](https://go.microsoft.com/fwlink/?LinkId=112177) 을 참조하세요.  
   
      예를 들어 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 지원하는 일반적인 데이터 형식에는 **Int32** 및 **String**이 있습니다. 달력 날짜 및 시간은 **DateTime** 구조에서 지원합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 서비스 팩 1은 표준 시간대 오프셋이 있는 날짜에 대한 **DateTimeOffset** 구조를 새로 지원합니다.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "47853391"
   
     |SQL 데이터 형식|CLR 데이터 형식|설명|  
     |-------------------|-------------------|-----------------|  
-    |**날짜**|**DateTime**|날짜만|  
+    |**Date**|**DateTime**|날짜만|  
     |**Time**|**TimeSpan**|시간만|  
     |**DateTimeTZ**|**DateTimeOffset**|표준 시간대 오프셋을 포함하는 날짜 및 시간|  
     |**DateTime2**|**DateTime**|소수 자릿수 밀리초를 포함하는 날짜 및 시간|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식에 대한 자세한 내용은 [데이터 형식(데이터베이스 엔진)](http://go.microsoft.com/fwlink/?linkid=98362) 및 [날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식에 대한 자세한 내용은 [데이터 형식(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?linkid=98362) 및 [날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360)를 참조하세요.  
   
  식에서 데이터 집합 필드에 대한 참조를 포함하는 방법은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853391"
   
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

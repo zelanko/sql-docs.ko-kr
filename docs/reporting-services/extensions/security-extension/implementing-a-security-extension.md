@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a117dd047281c3c67156f31ae5d4ec53e6bb48e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b84e2bf86ad41ffca05af115470fd23d2aef95f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030322"
 ---
 # <a name="implementing-a-security-extension"></a>보안 확장 프로그램 구현
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 보안을 위한 주 시스템입니다. 하지만 소속 조직에서 사용자 지정 보안을 충족하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 시스템을 확장해야 하는 경우도 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API로 제공되는 개발 플랫폼을 사용하여 이 작업을 수행할 수 있습니다. 이 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 보안 확장 프로그램 개요를 제공합니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램을 구현, 배포, 제거하는 방법은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램을 구현, 배포, 제거하는 방법은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 확장 프로그램 개요](../../../reporting-services/extensions/security-extension/security-extensions-overview.md)  

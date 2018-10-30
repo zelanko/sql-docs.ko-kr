@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5bcebb2ad5ee184bf2506f028381b3806b15824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73e0921ada81c5424133aa535ce4f2782fe1d784
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783927"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030342"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>식 추가(보고서 작성기 및 SSRS)
   식은 보고서 항목 속성, 필터, 그룹, 정렬 순서, 연결 문자열 및 매개 변수 값을 정의하기 위해 보고서 전체에서 사용됩니다. 식은 등호(=)로 시작하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성됩니다. 이러한 식은 보고서 처리기에 의해 런타임에 평가됩니다. 보고서 처리기는 평가 결과를 보고서 레이아웃 요소와 결합합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47783927"
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [식 대화 상자&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [식 대화 상자&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서에 코드 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
   

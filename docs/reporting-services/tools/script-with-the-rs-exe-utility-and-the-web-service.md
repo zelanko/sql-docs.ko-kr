@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816911"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028702"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
   개발자와 보고서 서버 관리자는 **rs** 유틸리티(RS.exe)를 사용하여 보고서 서버 작업을 수행할 수 있습니다. 이 유틸리티를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성한 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47816911"
   
  [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>참고 항목  
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   

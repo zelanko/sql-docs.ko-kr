@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26c2a900a8e8e39ed6f7d89555dd040945bc57b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2754521a136369995bc0ba6ab93c2fe958dc9e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031432"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델의 데이터를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 및 하나 이상의 보고서 데이터 집합을 정의해야 합니다. 데이터 원본 정의를 만들 때는 클라이언트 컴퓨터에서 데이터 원본에 액세스할 수 있도록 연결 문자열 및 자격 증명을 지정해야 합니다.  
   
- 단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
+ 단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   

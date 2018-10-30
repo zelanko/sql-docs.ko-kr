@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74d29eb991036979b37d3a527f7b323fb5ee1021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029392"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -32,7 +32,7 @@ ms.locfileid: "47596387"
 이 자습서에 소요되는 예상 시간: 30분  
   
 ## <a name="requirements"></a>요구 사항  
-이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
+이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
 
 기타 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   

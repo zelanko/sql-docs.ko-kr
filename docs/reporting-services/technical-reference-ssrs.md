@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 378c5baad5b1527c76cfb26496dca71a98a4ce03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021037"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "47721801"
  ![작은 파일 폴더 아이콘](../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **기능 참조**  
  [보고서 디자이너 F1 도움말](../reporting-services/tools/report-designer-f1-help.md)  
   
- [보고서 관리자 F1 도움말](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [보고서 관리자 F1 도움말](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [보고서 마법사 도움말](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [보고서 마법사 도움말](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [HTML 뷰어 및 보고서 도구 모음](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "47721801"
  ![작은 파일 폴더 아이콘](../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **Reporting Services WMI 공급자 클래스 라이브러리**  
  [Reporting Services WMI 공급자 라이브러리 참조&#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

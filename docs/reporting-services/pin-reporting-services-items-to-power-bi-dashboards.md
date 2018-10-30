@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031412"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI 대시보드에 Reporting Services 항목 고정
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 을 통해 사용자는 보고서 뷰어 도구 모음의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 새 타일로 고정합니다.   고정하려면 먼저 관리자가 보고서 서버를 Azure Active Directory 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]과 통합해야 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "47710557"
   
 ##  <a name="bkmk_to_pin"></a> 보고서 항목을 고정하려면  
   
-1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
+1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ ms.locfileid: "47710557"
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **고정된 항목이 부실 데이터** 를 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 표시하며 일정 기간 동안 업데이트되었습니다.  사용자 자격 증명 토큰이 만료되었으며 다시 로그인해야 합니다.  Azure 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 에 대한 사용자 자격 증명 등록은 90일 동안 유효합니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정**을 클릭합니다. 자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.  
+-   **고정된 항목이 부실 데이터** 를 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 표시하며 일정 기간 동안 업데이트되었습니다.  사용자 자격 증명 토큰이 만료되었으며 다시 로그인해야 합니다.  Azure 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 에 대한 사용자 자격 증명 등록은 90일 동안 유효합니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정**을 클릭합니다. 자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)과 통합해야 합니다.  
   
 -   **고정된 항목이 부실 데이터** 를 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 표시하며 한 번도 새로 고쳐지지 않았습니다.  문제는 보고서가 저장된 자격 증명을 사용하도록 구성되지 않은 것입니다. 보고서 항목 고정 작업은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독을 만들어 타일의 새로 고침 일정을 관리하므로 보고서가 저장된 자격 증명을 사용했어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에는 저장된 자격 증명이 필요합니다. **내 구독** 페이지를 검토하면 다음과 유사한 오류 메시지를 확인할 수 있습니다.  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.  
+-   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) 을 참조하세요.  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47710557"
 
 ## <a name="see-also"></a>참고 항목  
  [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

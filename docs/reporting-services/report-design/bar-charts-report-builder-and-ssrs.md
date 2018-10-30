@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: add231df29906b945d1637c09969b670f4419909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08af2a5d42742dcb165aa2038b858ae1ae2b491
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028632"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)
   가로 막대형 차트는 계열을 가로 막대 집합으로 표시합니다. 일반 가로 막대형 차트는 세로 막대 집합으로 계열을 표시하는 세로 막대형 차트 및 시작점과 끝점이 다양한 가로 막대 집합으로 계열을 표시하는 범위형 가로 막대 차트와 밀접하게 연관되어 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "47703781"
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [자습서: 보고서에 가로 막대형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [자습서: 보고서에 가로 막대형 차트 추가](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

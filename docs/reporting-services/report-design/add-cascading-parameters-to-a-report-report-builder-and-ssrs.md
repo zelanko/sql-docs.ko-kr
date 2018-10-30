@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744021"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030842"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
   연계 매개 변수를 사용하면 대량의 보고서 데이터를 관리할 수 있습니다. 한 매개 변수의 값 목록이 다른 매개 변수에서 선택한 값에 따라 달라지는 관련 매개 변수 집합을 정의할 수 있습니다. 예를 들어 첫 번째 매개 변수가 제품 범주 목록을 나타내는 독립적인 매개 변수이고 사용자가 범주를 선택하면 두 번째 매개 변수가 첫 번째 매개 변수의 값에 종속됩니다. 즉, 두 번째 매개 변수의 값이 선택된 범위 내 하위 범주의 목록으로 업데이트됩니다. 사용자가 보고서를 볼 때 범주 및 하위 범주 매개 변수 모두에 대한 값으로 보고서 데이터가 필터링됩니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "47744021"
   
  목록 뒷부분의 매개 변수에 대한 데이터 집합 쿼리에는 목록 앞부분의 각 매개 변수에 대한 참조가 포함되므로 연계 매개 변수에서는 순서가 중요합니다. 보고서 데이터 창의 매개 변수 순서에 따라 런타임에 보고서에 매개 변수 쿼리가 나타나는 순서가 결정되며 따라서 사용자가 각각의 연속된 매개 변수 값을 선택하는 순서가 결정됩니다.  
   
- 여러 값을 갖는 연계 매개 변수를 만들고 모두 선택 기능을 포함하는 방법은 [모두 선택 다중값 연계 매개 변수를 만드는 방법](http://go.microsoft.com/fwlink/?LinkId=184757)을 참조하십시오.  
+ 여러 값을 갖는 연계 매개 변수를 만들고 모두 선택 기능을 포함하는 방법은 [모두 선택 다중값 연계 매개 변수를 만드는 방법](https://go.microsoft.com/fwlink/?LinkId=184757)을 참조하십시오.  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>관련된 여러 매개 변수가 포함된 쿼리가 있는 기본 데이터 집합을 만들려면  
   

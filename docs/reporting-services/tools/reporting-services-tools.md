@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdde81c9e1fc044bef965695158bf3fcb8aa5dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb425c4f9ec8ada6e5d2b7d6df88127f88762564
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028032"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "47675521"
   
 |도구|설명|액세스 방법|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]를 사용하면 화면 또는 브라우저 창에 맞도록 콘텐츠를 동적으로 조정하고 어떤 화면 크기에나 적합하도록 효율적으로 확장하는 모바일 보고서를 만들 수 있습니다.<br /><br /> 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 모바일 보고서를 만듭니다.<br /><br /> 자세한 내용은 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)를 참조하세요.|[SQL Server 모바일 보고서 게시자](http://go.microsoft.com/fwlink/?LinkId=733527)다운로드|  
+|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]을(를) 사용하면 화면 또는 브라우저 창에 맞도록 콘텐츠를 동적으로 조정하고 어떤 화면 크기에나 적합하도록 효율적으로 확장하는 모바일 보고서를 만들 수 있습니다.<br /><br /> 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 모바일 보고서를 만듭니다.<br /><br /> 자세한 내용은 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)를 참조하세요.|[SQL Server 모바일 보고서 게시자](https://go.microsoft.com/fwlink/?LinkId=733527)다운로드|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 기반으로 보고서를 만들고 보고서와 상호 작용할 수 있도록 디자인한 대화형 데이터 탐색 및 시각 표현 환경입니다.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Silverlight 브라우저를 사용합니다.|  
 |보고서 디자이너|이 도구를 사용하여 보고서를 디자인합니다. 다음과 같은 기능이 포함되어 있습니다.<br /><br /> 기본 모드 또는 SharePoint 모드 보고서 서버에 배포합니다.<br /><br /> 다음에서 호스트됨 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 보고서에 사용되는 데이터를 구성하는 보고서 데이터 창<br /><br /> 대화형으로 보고서를 디자인할 수 있는 디자인 및 미리 보기 탭 뷰<br /><br /> 데이터 원본에서 검색할 데이터 및 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)의 데이터 원본 유형과 연결되는 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> IntelliSense를 사용하여 보고서 내용 및 모양을 사용자 지정하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 식을 작성하는 식 편집기<br /><br /> 사용자 지정 보고서 항목 및 사용자 지정 쿼리 디자이너 지원<br /><br /> <br /><br /> 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
-|보고서 작성기|이 도구를 사용하여 보고서를 디자인합니다. 다음과 같은 기능이 포함되어 있습니다.<br /><br /> 기본 모드 또는 SharePoint 모드 보고서 서버에 배포합니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 보고서 항목을 보고서 파트로 저장하는 기능<br /><br /> 지도를 만들 수 있는 마법사<br /><br /> 집계의 집계<br /><br /> 향상된 식 지원<br /><br /> 선택한 기본 제공 데이터 원본 유형에서 검색할 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> 자세한 내용은 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)를 참조하세요.|[독립 실행형 버전의 보고서 작성기](http://go.microsoft.com/fwlink/?LinkID=219138)다운로드<br /><br /> 또는 보고서 관리자/SharePoint에서 열기|  
+|보고서 작성기|이 도구를 사용하여 보고서를 디자인합니다. 다음과 같은 기능이 포함되어 있습니다.<br /><br /> 기본 모드 또는 SharePoint 모드 보고서 서버에 배포합니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 보고서 항목을 보고서 파트로 저장하는 기능<br /><br /> 지도를 만들 수 있는 마법사<br /><br /> 집계의 집계<br /><br /> 향상된 식 지원<br /><br /> 선택한 기본 제공 데이터 원본 유형에서 검색할 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> 자세한 내용은 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)를 참조하세요.|[독립 실행형 버전의 보고서 작성기](https://go.microsoft.com/fwlink/?LinkID=219138)다운로드<br /><br /> 또는 보고서 관리자/SharePoint에서 열기|  
   
 ## <a name="tools-for-report-server-administration"></a>보고서 서버 관리를 위한 도구  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버 관리에 사용할 수 있는 그래픽 및 스크립팅 도구 집합입니다. 사용하는 도구는 사용하는 보고서 서버의 배포 모드에 따라 다릅니다.  
@@ -76,6 +76,6 @@ ms.locfileid: "47675521"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services&#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

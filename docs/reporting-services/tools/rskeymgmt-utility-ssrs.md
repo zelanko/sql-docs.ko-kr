@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c9eff9d11f56fac8b979f7ca96703c76497f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d94dfc03c090a871742999a821d1bfa0951add7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030932"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
@@ -173,7 +173,7 @@ rskeymgmt -r <installationID>
  암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

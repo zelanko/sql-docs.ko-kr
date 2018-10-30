@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9539992fdcabd16bdd3d6cd7601fea97c57a78d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031732"
 ---
 # <a name="report-builder-tutorials"></a>보고서 작성기 자습서
 
@@ -74,4 +74,4 @@ ms.locfileid: "47731921"
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [자습서: 오프라인에서 빠른 차트 보고서 만들기](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

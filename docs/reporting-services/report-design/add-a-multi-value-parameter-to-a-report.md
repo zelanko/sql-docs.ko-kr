@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97345e896dc3df2af8f6441fead1a0d9cd7ba617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029982"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
   사용자가 매개 변수에 둘 이상의 값을 선택할 수 있는 보고서에 매개 변수를 추가할 수 있습니다.  
   
  여러 매개 변수 값을 보고서 URL 내의 보고서에 전달할 수 있습니다. 다중 값 매개 변수를 포함하는 URL 예제는 [URL에 보고서 매개 변수 전달](../../reporting-services/pass-a-report-parameter-within-a-url.md)을 참조하세요.  
   
- 여러 매개 변수 값을 저장 프로시저에 전달하는 방법에 대한 자세한 내용은 mssqltips.com의 [SSRS 보고서에 다중 선택 매개 변수로 작업](http://go.microsoft.com/fwlink/?LinkId=321529) 을 참조하세요.  
+ 여러 매개 변수 값을 저장 프로시저에 전달하는 방법에 대한 자세한 내용은 mssqltips.com의 [SSRS 보고서에 다중 선택 매개 변수로 작업](https://go.microsoft.com/fwlink/?LinkId=321529) 을 참조하세요.  
   
 ## <a name="to-add-a-multi-value-parameter"></a>다중 값 매개 변수를 추가하려면  
   

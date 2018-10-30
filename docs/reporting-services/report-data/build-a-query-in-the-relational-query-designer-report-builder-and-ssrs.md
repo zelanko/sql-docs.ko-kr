@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0c484325309f40217de302b1d7f24eb253ec9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e626cb890343f42095a1702942a5aefc37a75
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772651"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021667"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
   쿼리 디자이너를 사용하면 보고서 데이터 집합에 사용하기 위해 외부 데이터 원본에서 검색할 데이터를 지정할 수 있습니다. 마법사에서 쿼리를 작성하거나 데이터 집합 쿼리를 만들 때 쿼리 디자이너를 사용할 수 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "47772651"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 데이터 집합은 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 집합 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
+ 데이터 집합은 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 집합 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음과 같은 태스크에 쿼리 디자이너를 사용할 수 있습니다.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "47772651"
 1.  쿼리 디자이너 도구 모음에서 **쿼리 실행(!)** 을 클릭합니다.  
   
     > [!NOTE]  
-    >  쿼리 디자이너는 디자인 타임 자격 증명을 사용하여 쿼리를 실행하고 결과 집합을 검색합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+    >  쿼리 디자이너는 디자인 타임 자격 증명을 사용하여 쿼리를 실행하고 결과 집합을 검색합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
  쿼리는 데이터 원본에서 실행되고 쿼리 결과 창에 예제 데이터를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services 쿼리 디자이너](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
+ [Reporting Services 쿼리 디자이너](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

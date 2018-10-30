@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19918059fad650d11bea68b7a0088c83f82be4b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9106fffcd2a66254acf5a47799fc8942ef3f0b38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705931"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030692"
 ---
 # <a name="cache-a-report-report-manager"></a>보고서 캐시(보고서 관리자)
   성능을 향상시키는 한 가지 방법은 보고서의 캐싱 속성을 구성하는 것입니다. 보고서가 캐시되면 렌더링된 보고서의 복사본이 짧은 시간 동안 저장됩니다. 보고서를 요청하는 첫 번째 사용자는 모든 처리가 완료될 때까지 기다려야 보고서를 볼 수 있습니다. 캐싱 기간 내에 보고서를 요청하는 이후 사용자는 처리가 이미 발생했기 때문에 보고서를 바로 볼 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47705931"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>캐시된 보고서의 만료를 예약하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다. 캐싱 속성을 설정할 보고서로 이동하고 항목 위로 마우스를 이동한 다음 드롭다운 화살표를 클릭합니다.  
   

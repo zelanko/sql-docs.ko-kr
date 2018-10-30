@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53bfd456357cc0472ca135a11601535f99a344cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021907"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 보고서 서버를 설치 또는 구성하지 않은 경우 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 및 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  
@@ -75,7 +75,7 @@ ms.locfileid: "47741121"
   
 2.  **허용** 을 클릭하여 계속합니다.  
   
-3.  URL 주소에 보고서 관리자 URL을 입력합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
+3.  URL 주소에 보고서 관리자 URL을 입력합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
   
 4.  **도구**를 클릭합니다.  
   

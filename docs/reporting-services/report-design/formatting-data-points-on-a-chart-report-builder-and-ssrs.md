@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021227"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  
@@ -74,7 +74,7 @@ ms.locfileid: "47624571"
 |#MAX|계열의 모든 Y 값에 대한 최대값|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|계열의 모든 Y 값에 대한 첫 번째 값|All|`=First(Fields!MyDataField.Value)`|  
   
- 키워드 형식을 지정하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 괄호로 묶습니다. 예를 들어 도구 설명에서 데이터 요소의 값을 두 소수 자릿수를 포함하는 숫자로 지정하려면 계열의 **도구 설명** 속성에 대해 "#VALY{N2}"와 같이 형식 문자열 "N2"를 중괄호로 묶습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열에 대한 자세한 내용은 MSDN의 [형식 지정(Formatting Types)](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 숫자 형식을 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 형식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)를 참조하세요.  
+ 키워드 형식을 지정하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 괄호로 묶습니다. 예를 들어 도구 설명에서 데이터 요소의 값을 두 소수 자릿수를 포함하는 숫자로 지정하려면 계열의 **도구 설명** 속성에 대해 "#VALY{N2}"와 같이 형식 문자열 "N2"를 중괄호로 묶습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열에 대한 자세한 내용은 MSDN의 [형식 지정(Formatting Types)](https://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 숫자 형식을 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 형식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)를 참조하세요.  
   
  차트에 키워드를 추가하는 방법에 대한 자세한 내용은 [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   

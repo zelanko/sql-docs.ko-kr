@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5c2520599c0b92a2b9978e393b5e3a6cf85daad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e95427238fa6ab393d6d5469540dae7808df3762
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028532"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Reporting Services 보고서 뷰어 웹 파트와 필터 또는 문서 웹 파트 연결
 
@@ -81,4 +81,4 @@ SharePoint 제품을 사용하는 경우 필터 웹 파트 또는 문서 웹 파
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [보고서 뷰어 웹 파트 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a57d7330dba6703b8cdcae264dc835113e4a0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029052"
 ---
 # <a name="saving-reports-report-builder"></a>보고서 저장(보고서 작성기)
   보고서 작성기에서 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 서버, SharePoint 라이브러리, 쓰기 권한이 있는 파일 공유 또는 컴퓨터에 페이지를 매긴 보고서를 저장할 수 있습니다. 
@@ -62,7 +62,7 @@ ms.locfileid: "47594762"
    
 ## <a name="see-also"></a>참고 항목  
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [보고서 작성기 설치 및 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [보고서 작성기 설치 및 제거](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

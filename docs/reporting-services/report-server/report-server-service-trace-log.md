@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031072"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  
@@ -110,5 +110,5 @@ ms.locfileid: "47833271"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)
   

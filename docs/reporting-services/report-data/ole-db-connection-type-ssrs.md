@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a37f501c688ad8669a5adcde87cbc0b4b02f3b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d489b9d01d4d381294f387e1602e6edbfe23481
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030438"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 연결 형식(SSRS)
   OLE DB 데이터 공급자의 데이터를 포함하려면 OLE DB 유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 데이터 처리 확장 프로그램을 기반으로 합니다.  
@@ -31,7 +31,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  사용하는 연결 문자열은 연결하려는 외부 데이터 원본에 따라 달라집니다. 데이터 공급자별 연결 문자열 속성을 설정하려면 **데이터 원본 속성** 대화 상자의 **일반** 페이지에서 **빌드** 단추를 클릭하여 **연결 속성** 대화 상자를 엽니다. **데이터 연결 속성** 대화 상자를 통해 확장된 데이터 원본 속성을 설정합니다.  
   
- 연결 문자열의 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 연결 문자열의 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
   
 ##  <a name="Credentials"></a> 자격 증명  
@@ -39,7 +39,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
 ###### <a name="special-characters-in-a-password"></a>암호의 특수 문자  
  암호를 입력하라는 메시지를 표시하거나 연결 문자열에 암호를 포함하도록 OLE DB 데이터 원본을 구성한 경우 사용자가 문장 부호와 같은 특수 문자가 포함된 암호를 입력하면 일부 기본 데이터 원본 드라이버에서 해당 특수 문자의 유효성을 검사할 수 없습니다. 보고서 처리 시 "올바른 암호가 아닙니다" 메시지가 나타나면 이 문제 때문일 수 있습니다.  
@@ -57,13 +57,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  원하는 데이터를 성공적으로 검색하려면 데이터 공급자가 지원하는 쿼리 구문을 제공해야 합니다. 매개 변수 지원은 데이터 공급자에 따라 다릅니다. 자세한 내용은 선택한 데이터 공급자와 관련된 항목을 참조하십시오. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
--   [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
+-   [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
--   [.NET Framework Data Provider for Oracle 사용(Using the .NET Framework Data Provider for Oracle)](http://go.microsoft.com/fwlink/?LinkId=112314)  
+-   [.NET Framework Data Provider for Oracle 사용(Using the .NET Framework Data Provider for Oracle)](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
- 특정 OLE DB 데이터 공급자에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ 특정 OLE DB 데이터 공급자에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -82,7 +82,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -91,7 +91,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   

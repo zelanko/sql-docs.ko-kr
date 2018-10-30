@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e82acf2dba0fac879868951ce992193c3a1f645
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04b7e05737db7eadb28f8c8f5266c6e984e0094
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028942"
 ---
 # <a name="manage-report-data-sources"></a>보고서 데이터 원본 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서, 보고서 모델 및 데이터 기반 구독은 외부 데이터 원본에서 데이터를 검색합니다. 보고서 서버는 외부 데이터 원본에 연결하기 위해 보고서, 모델 또는 구독에 정의되어 있거나 참조된 데이터 원본 연결 정보를 사용합니다. 데이터 원본 연결 속성은 보고서 또는 모델을 만들 때 항상 함께 정의되지만 보고서 또는 모델이 보고서 서버에 게시된 후에 독립적으로 관리할 수 있습니다.  
@@ -61,13 +61,13 @@ ms.locfileid: "47661261"
 |----------|----------|----------|  
 |연결 문자열의 예를 봅니다.||[데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |데이터 원본에 연결하기 위한 자격 증명을 가져오는 방법을 선택합니다.||[보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|보고서 정의(.rdl) 파일에 데이터 원본 연결 속성을 추가합니다.|보고서 디자이너|[포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|보고서 정의(.rdl) 파일에 데이터 원본 연결 속성을 추가합니다.|보고서 디자이너|[포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
 |보고서 프로젝트의 공유 데이터 원본(.rds) 파일을 추가하고 연결합니다.|보고서 디자이너|[공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |사용자가 런타임에 선택할 수 있는 미리 정의된 데이터 원본 목록을 만듭니다. 사용자가 보고서를 요청하면 보고서는 데이터 원본 목록을 제공합니다. 사용자는 보고서를 실행하기 전에 사용할 데이터 원본을 선택해야 합니다. 보고서에 데이터 원본 선택 목록을 추가하려면 식을 사용합니다.<br /><br /> 이를 동적 데이터 원본 연결이라고 합니다.|보고서 디자이너|[데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |보고서 서버에 공유 데이터 원본 항목을 만듭니다.|[공유 데이터 원본 만들기, 수정 및 삭제](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |자격 증명을 구독 또는 보고서 스냅숏을 만들기 위한 선행 조건으로 저장합니다.|웹 포털|[Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |게시된 보고서의 데이터 원본 연결 속성을 편집합니다.|웹 포털|[보고서의 데이터 원본 속성 구성](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|보고서 서버에 공유 데이터 원본 항목을 만듭니다.|SharePoint 사이트|[공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|보고서 서버에 공유 데이터 원본 항목을 만듭니다.|SharePoint 사이트|[공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
 |보고서에 기존 .odc 연결 정보를 사용합니다.|SharePoint 사이트|[보고서에 Office 데이터 연결&#40;.odc&#41; 사용&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  

@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09d930c7241a2fb0beb7c5455c5e2db7b6caeb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 603407cd0642a8fb3bb66826d89300ea0d8c7e0d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050935"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>팜에 추가 Reporting Services 웹 프런트 엔드 추가
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 응용 프로그램 서버와 WFE(웹 프런트 엔드) 서버에 필요한 구성 요소가 포함됩니다. 이 항목은 구독, 데이터 경고 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능에서 사용하는 응용 프로그램 페이지를 포함하여 WFE 서버에 필요한 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]구성 요소 설치에 대해 설명합니다. WFE에 필요한 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 SharePoint 2016 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치하는 것입니다.  
@@ -56,4 +57,4 @@ ms.locfileid: "47815611"
 [SharePoint Server 2016에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [SharePoint Server 2013에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

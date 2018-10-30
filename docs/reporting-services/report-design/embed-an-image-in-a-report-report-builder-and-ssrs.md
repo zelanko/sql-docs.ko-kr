@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3198eef5cb9f4e405b1ee56f06de6301fa0e994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5949cac74f857b6a696faa51c58e614176824a5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620521"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021937"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>보고서에 이미지 포함(보고서 작성기 및 SSRS)
   보고서에 포함 이미지를 포함할 수 있습니다. 이미지를 포함하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의 즉, 보고서를 정의하는 파일의 크기도 늘어납니다. 보고서에 포함된 이미지는 보고서 데이터 창에 나열됩니다.  
@@ -63,6 +63,6 @@ ms.locfileid: "47620521"
 ## <a name="see-also"></a>참고 항목  
  [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 668818a529a721a500f03b5d388f6e56648f4d38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45db20b8f7f6fb4feca35b806f5fb694982cc8a1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021347"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>포함된 데이터 원본 만들기 및 수정
   포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47742871"
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
         -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47742871"
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
         -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47742871"
   
 4.  **자격 증명**을 클릭합니다.  
   
-     이 데이터 원본에 사용할 자격 증명을 지정합니다. 데이터 원본의 소유자는 지원되는 자격 증명 유형을 선택합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+     이 데이터 원본에 사용할 자격 증명을 지정합니다. 데이터 원본의 소유자는 지원되는 자격 증명 유형을 선택합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,6 +77,6 @@ ms.locfileid: "47742871"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   

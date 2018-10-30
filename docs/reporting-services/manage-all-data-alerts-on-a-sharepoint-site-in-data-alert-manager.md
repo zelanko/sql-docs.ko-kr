@@ -12,12 +12,12 @@ ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b60b6a004ce481d6b4566ca914b2c4b8bb7b451d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 146c860a0618c4d8caf6b8485599fc01515b2a3b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020307"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
 
@@ -58,4 +58,4 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

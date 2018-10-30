@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29bb7917990082bcb0b7c79514fea2f6955cd86b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: f22aed510bf6c5a34d4c4c2a79db7d0f3a56bfe2
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051125"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>지원되는 SharePoint와 Reporting Services 서버의 조합
 
@@ -77,4 +78,4 @@ SharePoint 모드로 설치된 SQL Server Reporting Services 보고서 서버에
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

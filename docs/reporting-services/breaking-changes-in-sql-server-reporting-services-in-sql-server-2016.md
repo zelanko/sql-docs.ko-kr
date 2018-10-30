@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e4018f203cd32be40af07b895392a2b642a9418
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e183d0aee0bfdaeb80af16b26e7fa0045b60be1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028832"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용
 
@@ -42,4 +42,4 @@ ms.locfileid: "47837701"
 [SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
 [SQL Server 2016에서 SQL Server Reporting Services에 지원 되지 않는 기능](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

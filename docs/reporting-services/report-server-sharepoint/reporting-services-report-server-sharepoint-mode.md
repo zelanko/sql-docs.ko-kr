@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029802"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800991"
 
  설치 및 구성하는 방법은 다음 항목을 참조하세요.  
   
--   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)  
+-   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)  
   
 -   [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800991"
   
 -   Reporting Services의 모든 응용 프로그램 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 중 Reporting Services 인스턴스에 사용되는 언어로 표시됩니다.  
   
--   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 응용 프로그램 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](http://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
+-   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 응용 프로그램 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](https://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
   
 -   SharePoint 사이트, SharePoint 중앙 관리, 온라인 도움말 및 메시지는 Office Server 제품에서 지원되는 언어로 제공됩니다.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800991"
   
 |**태스크**|**링크**|  
 |--------------|--------------|  
-|SharePoint 모드에서 Reporting Services 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)|  
-|보고서 서버를 추가하여 Reporting Services SharePoint 배포 스케일 아웃합니다.|[팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)|  
+|SharePoint 모드에서 Reporting Services 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)|  
+|보고서 서버를 추가하여 Reporting Services SharePoint 배포 스케일 아웃합니다.|[팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)|  
 |보기용으로 설치된 Reporting Services 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |SharePoint 내에서 보고서 서버에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkId=221297)|  
+|TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkId=221297)|  
 
 ## <a name="next-steps"></a>다음 단계
 
 [SharePoint용 Reporting Services 추가 기능 설치 및 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

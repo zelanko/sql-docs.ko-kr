@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d22880b4c0004a5a17e76ca04c6c42d22db2ec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f17725fde71f3b1bb12e39f16308ca2ca024f57
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030652"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>식의 상수(보고서 작성기 및 SSRS)
   상수는 리터럴 텍스트 또는 미리 정의된 텍스트로 구성됩니다. 보고서 처리기는 미리 정의된 상수에 액세스할 수 있으므로 사용자가 식에 상수를 포함하면 이러한 상수가 나타내는 값은 식이 계산되기 전에 대체됩니다.  
@@ -51,10 +51,10 @@ ms.locfileid: "47599905"
 |MistyRose|배경색을 기반으로 하는 보고서 속성에 대한 식을 만드는 경우 이름으로 색을 지정할 수 있습니다. 유효한 이름은 **식** 대화 상자에 나열됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [식 대화 상자](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [식 대화 상자](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [식 대화 상자&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
+ [식 대화 상자&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

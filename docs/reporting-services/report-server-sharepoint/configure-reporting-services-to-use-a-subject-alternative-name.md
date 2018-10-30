@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: feb3a973ced242d52a6fda8e1bcb1222cb24ecae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade77624ec83c39d89cde2d5f98d5f01d15ceec4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020527"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
 
@@ -124,4 +124,4 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인
  [Reporting Services 구성 파일 수정](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613131"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100194"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  암시적 권한은 또한 포괄적 또는 상위 권한을 상속할 수도 있습니다. 예를 들어, 테이블에 대한 **UPDATE** 권한은 해당 테이블, 또는 해당 테이블의 **CONTROL** 권한을 포함하는 스키마의 **UPDATE** 권한을 가짐으로써 상속할 수 있습니다,  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
- 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
+ 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
   
 ## <a name="permission-list"></a>허가 목록  
   
@@ -244,7 +244,7 @@ REVOKE
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 메일로 요청합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
  다음 목록에서는 기본 사용 권한을 설명합니다.  

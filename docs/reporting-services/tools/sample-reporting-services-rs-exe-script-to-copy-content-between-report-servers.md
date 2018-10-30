@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec2227925dcc8023a04c3993b2cecd32e89a4db4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031442"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
 
@@ -265,7 +265,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  Microsoft Azure 가상 컴퓨터에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Microsoft Azure VM 만들기](http://msdn.microsoft.com/library/dn449661.aspx)를 참조하세요.  
+>  Microsoft Azure 가상 컴퓨터에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Microsoft Azure VM 만들기](https://msdn.microsoft.com/library/dn449661.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 모음에서 Windows Azure 가상 컴퓨터의 기본 모드로 서버로  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  

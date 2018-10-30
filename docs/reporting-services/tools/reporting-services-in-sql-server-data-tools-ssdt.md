@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906003"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030382"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
  이 항목에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48906003"
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
   
--   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)** 으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>** 을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
+-   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)** 으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>** 을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
   
 -   속성 창의 도구 모음 단추를 사용하여 종류별 보기에서 사전순 보기로 표 형태 창을 변경할 수 있습니다. 종류별 보기에서는 범주 내의 모든 속성을 보기 위해 해당 범주를 확장해야 할 수 있습니다. 항목의 속성 대화 상자를 열려면 도구 모음에서 **속성 페이지** 단추를 클릭하거나 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48906003"
   
 
 ##  <a name="bkmk_SourceControl"></a> 원본 제어  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. 옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로 이 폴더는 다음 위치에 있습니다. `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
@@ -305,10 +305,10 @@ ms.locfileid: "48906003"
   
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)
+[SQL Server Data Tools 다운로드](https://go.microsoft.com/fwlink/?LinkID=616714)
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 보고서](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools의 배포 및 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

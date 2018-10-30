@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e7f842e786f3c73bfbd0f03d7c15bba70d76b3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe40c87620bec778bda8a656bf403b03d17e2739
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027472"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
   배달 확장 프로그램 클래스는 알림 내용을 기준으로 사용자에게 보고서 알림을 배달하는 데 사용됩니다. 배달 확장 프로그램 클래스는 배달 확장 프로그램에 전달되는 사용자 설정을 검사하기 위한 인프라도 제공합니다. 또한 배달 확장 프로그램 클래스에는 클라이언트가 확장 프로그램의 이름, 확장 프로그램에서 지원하는 설정, 배달 확장 프로그램에서 사용 가능한 렌더링 형식 등에 대한 정보를 얻는 데 사용할 수 있는 특정 속성이 포함되어야 합니다.  
@@ -31,7 +31,7 @@ IDeliveryExtension 인터페이스를 통해 사용자 데이터의 검사가 �
   
  또한 배달 확장 프로그램 클래스를 사용하여 RSReportServer.config 파일에 저장된 사용자 지정 구성 데이터를 검색하고 처리할 수 있습니다. 사용자 지정 구성 데이터를 처리하는 방법은 <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A> 메서드를 참조하십시오.  
   
- 예제 **IDeliveryExtension** 클래스 구현은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ 예제 **IDeliveryExtension** 클래스 구현은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

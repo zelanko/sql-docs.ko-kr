@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c945a601238c6ba110986c236d1079ec9ba99bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021597"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 관리
   이 섹션에서는 Reporting Services 구성 관리자를 사용하여 기본 모드 보고서 서버 인스턴스를 구성하는 절차를 제공합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47677861"
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Reporting Services 구성 도구를 시작하는 단계에 대해 설명합니다.  
   
- [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
  보고서 서버 서비스에 대한 계정 및 암호 정보를 지정하는 방법에 대해 설명합니다.  
   
  [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "47677861"
  [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  여러 보고서 서버에서 보고서 서버 데이터베이스를 공유하도록 구성하는 단계에 대해 설명합니다.  
   
- [이메일 전송을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  전자 메일 배포를 위한 보고서 서버를 구성하는 단계에 대해 설명합니다.  
   
  [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

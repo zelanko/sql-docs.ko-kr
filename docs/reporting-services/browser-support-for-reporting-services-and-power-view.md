@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96c7e313bea6d36d62267413618b4a90bfdd2d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695911"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021221"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 
@@ -82,7 +82,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 제품을 사용하는 경우에는  [SharePoint 2016의 브라우저 지원 계획](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 제품을 사용하는 경우에는  [SharePoint 2016의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 
 ### <a name="authentication-requirements"></a>인증 요구 사항
 
@@ -142,15 +142,15 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
- SharePoint 2016 브라우저 지원에 대한 자세한 내용은 [SharePoint 2013의 브라우저 지원 계획](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
+ SharePoint 2016 브라우저 지원에 대한 자세한 내용은 [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 [웹 포털에서 보고서 찾기 및 보기](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
-[웹 포털(SSRS 기본 모드)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[웹 포털(SSRS 기본 모드)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)
 

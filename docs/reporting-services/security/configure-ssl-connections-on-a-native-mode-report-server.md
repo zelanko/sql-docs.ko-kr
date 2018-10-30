@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ef9ae610a977c372503918b128141485e05dc17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613761"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020277"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47613761"
   
  테스트를 위해 로컬로 인증서를 생성할 수 있습니다. **MakeCert** 유틸리티에서 예제 명령을 템플릿으로 사용하는 경우 명령을 실행하기 전에 서버 이름을 호스트로 지정하고 모든 줄 바꿈을 제거해야 합니다. DOS 창에서 명령을 실행하는 경우 전체 명령을 수용하기 위해 창의 버퍼 크기를 늘려야 할 수도 있습니다.  
   
- IIS와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 동일한 컴퓨터에서 함께 실행하는 경우 IIS 관리자 콘솔 응용 프로그램을 사용하여 컴퓨터에 설치된 인증서를 가져올 수 있습니다. IIS 관리자에는 신뢰할 수 있는 인증 기관의 후속 처리를 위해 인증서 요청(.crt) 파일을 만들고 패키징하는 옵션이 포함되어 있습니다. 사용 중인 인증 기관은 인증서(.cer) 파일을 만들어 돌려보냅니다. IIS 관리 콘솔을 사용하여 로컬 저장소의 인증서 파일을 설치할 수 있습니다. 자세한 내용은 Technet의 [SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data)](http://go.microsoft.com/fwlink/?LinkId=71123) 를 참조하십시오.  
+ IIS와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 동일한 컴퓨터에서 함께 실행하는 경우 IIS 관리자 콘솔 응용 프로그램을 사용하여 컴퓨터에 설치된 인증서를 가져올 수 있습니다. IIS 관리자에는 신뢰할 수 있는 인증 기관의 후속 처리를 위해 인증서 요청(.crt) 파일을 만들고 패키징하는 옵션이 포함되어 있습니다. 사용 중인 인증 기관은 인증서(.cer) 파일을 만들어 돌려보냅니다. IIS 관리 콘솔을 사용하여 로컬 저장소의 인증서 파일을 설치할 수 있습니다. 자세한 내용은 Technet의 [SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data)](https://go.microsoft.com/fwlink/?LinkId=71123) 를 참조하십시오.  
   
 ## <a name="interoperability-issues-with-iis"></a>IIS와의 상호 운용성 문제  
  동일한 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 IIS의 공존은 보고서 서버에 대한 SSL 연결에 중요한 영향을 미칩니다.  

@@ -12,12 +12,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73ff7713605df82a8a9e2989c94e06febd70fd32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84d99c48cea1da044e5372713a487f250bb1f40d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021127"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
 
@@ -79,4 +79,4 @@ SQL Server Reporting Services는 데이터 경고를 관리할 수 있도록 Sha
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)
