@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050855"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 릴리스 정보
 
 **[최신 버전 다운로드](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+릴리스 날짜: 2018 년 10 월 24 일  
+빌드: 15.0.4200.1 
+
+릴리스는 다음 기능 및 수정 합니다.
+
+- 데이터베이스 호환성 수준이 150에 대 한 지원이 추가 되었습니다.
+- 관리 되는 인스턴스에 대 한 지원이 추가 되었습니다.
+- 추가 MaxParallelism 명령줄 매개 변수를 데이터베이스 작업에 대 한 병렬 처리 수준을 지정 합니다.
+- SQL Server에 연결할 때 인증 토큰을 지정 하려면 AccessToken 명령줄 매개 변수를 추가 합니다.
+- 가져오기에 대 한 스트림 BLOB/CLOB 데이터 형식에 대 한 지원이 추가 되었습니다.
+- 스칼라 UDF에 대 한 지원이 추가 되었습니다 'INLINE' 옵션입니다.
+- 그래프 테이블의 '병합' 구문에 대 한 지원이 추가 되었습니다.
+- 그래프 테이블에 대 한 고정된 확인 되지 않은 의사 (pseudo) 열입니다.
+- 메모리 최적화 테이블에는 그룹을 사용 하는 메모리 최적화 된 파일을 사용 하 여 데이터베이스 만들기를 고정 합니다.
+- 외부 테이블에 확장된 속성을 포함 하 여 수정 했습니다.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ ms.locfileid: "47754338"
 다음 수정 사항을 포함 하는 릴리스:
 
 - 향상 된 SqlClient 예외 메시지를 포함 하 여 연결 실패에 대 한 오류 메시지입니다.
-- 추가 MaxParallelism 명령줄 매개 변수를 데이터베이스 작업에 대 한 병렬 처리 수준을 지정 합니다.
 - Import/export에 단일 파티션 인덱스의 index 압축을 지원 합니다.
 - XML 열 집합 SQL 2017 이상에 대 한 리버스 엔지니어링 문제가 수정 되었습니다.
 - 문제를 해결 하 고 Azure SQL Database에 대 한 데이터베이스 호환성 수준 140을 스크립팅 무시 된 키를 누릅니다.

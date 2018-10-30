@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: ecefe3f1abe47a1a4f1af967cb1a15ee9f4dd52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050925"
 ---
 # <a name="download-and-install-sqlpackage"></a>다운로드 및 설치 sqlpackage
 
@@ -23,11 +23,11 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 다운로드 하 여 최신.NET Framework 릴리스 및 macOS 및 Linux 미리 보기를 설치 합니다.
 
-|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드|
+|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=875508)|2018 년 6 월 22 일|17.8|14.0.4079.2|
-|macOS (미리 보기)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
-|Linux(미리 보기)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 년 10 월 24 일|18.0|15.0.4200.1|
+|macOS (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=873927)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
+|Linux(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=873926)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
 
@@ -35,9 +35,10 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 이 버전의 sqlpackage는 표준 Windows 설치 관리자 환경 및.zip을 포함합니다. 
 
-1. 다운로드 및 실행 합니다 [DacFramework.msi Windows 설치 관리자](https://go.microsoft.com/fwlink/?linkid=875508)합니다.
+1. 다운로드 및 실행 합니다 [DacFramework.msi Windows 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)합니다.
 2. 새 명령 프롬프트 창을 열고 및 sqlpackage.exe를 실행 합니다.
-    - sqlpackage를 설치 하기는 ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` 폴더
+    - sqlpackage를 설치 하기는 ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` 폴더
+    - X86 설치는 x64 버전 sqlpackage 설치는 컴퓨터는 ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` 폴더
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Macos (미리 보기) sqlpackage 가져오기
 
@@ -47,7 +48,8 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
    **.zip 설치:**
 
    ```bash
-   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
    sqlpackage
