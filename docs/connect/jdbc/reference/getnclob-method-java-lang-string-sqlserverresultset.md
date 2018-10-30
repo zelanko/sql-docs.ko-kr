@@ -11,12 +11,12 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee88668cd930fa83f27f1fa4d3eace212e8419e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 0a7241be8ab1c8ffcaf6b4eb143740f3ca09161d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787951"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991136"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *columnLable*  
+ *columnLabel*  
   
  열 레이블이 포함된 **문자열**입니다.  
   
