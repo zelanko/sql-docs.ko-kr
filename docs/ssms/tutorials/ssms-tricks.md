@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864391"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150184"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
@@ -133,7 +133,7 @@ ms.locfileid: "47864391"
 
 
 ## <a name="filter-objects-in-object-explorer"></a>개체 탐색기에서 개체 필터링
-많은 개체가 있는 데이터베이스에서 특정 개체를 더 쉽게 찾도록 개체를 필터링할 수 있습니다. 이 섹션에서는 테이블을 필터링하는 방법을 설명하지만 개체 탐색기의 다른 노드에서 다음 단계를 사용할 수 있습니다.
+많은 개체가 있는 데이터베이스에서 필터링을 사용하여 특정 테이블, 뷰 등을 검색할 수 있습니다. 이 섹션에서는 테이블을 필터링하는 방법을 설명하지만 개체 탐색기의 다른 노드에서 다음 단계를 사용할 수 있습니다.
 
 1. SQL Server에 연결합니다.
 2. **데이터베이스** > **AdventureWorks** > **테이블**을 확장합니다. 데이터베이스의 모든 테이블이 표시됩니다.

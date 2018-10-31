@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461068"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146058"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -89,7 +89,7 @@ ms.locfileid: "49461068"
 
 ![Applies to 텍스트](./media/sql-server-docs-contribute/applies-to.png)
 
-문서에 대한 올바른 applies-to include를 찾으려면 다음 팁을 사용합니다.
+문서에 대한 올바른 applies-to include 파일을 찾으려면 다음 팁을 사용합니다.
 
 - 일반적으로 사용되는 목록은 [SQL Server 버전 및 applies-to include 파일](applies-to-includes.md)을 참조하세요.
 - 동일한 기능 또는 관련된 작업을 다루는 다른 문서를 살펴봅니다. 해당 문서를 편집하는 경우 applies-to include에 대한 Markdown을 복사할 수 있습니다(제출하지 않고 편집을 취소할 수 있음).

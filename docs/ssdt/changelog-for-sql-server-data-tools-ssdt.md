@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072177"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991306"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "49072177"
 ### <a name="known-issues"></a>알려진 문제:
 
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
-- SSDT 15.8.1은 현재 Windows 7 SP1을 지원하지 않으므로 Windows 7 SP1을 사용 중인 경우 15.8.0을 계속 사용하세요.
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>Visual Studio 2017용 SSDT(15.8)
@@ -492,16 +491,16 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
     - PowerQuery의 예제별 열 추가
     - 1400 모델의 데이터 액세스 옵션(M 엔진에서 사용하는 모델 수준 속성)
         - 빠른 결합 사용(기본값은 false. true로 설정할 경우 데이터를 결합할 때 매시업 엔진이 데이터 원본 개인 정보 보호 수준을 무시함)
-        - 레거시 리디렉션 사용(기본값은 false. true로 설정할 경우 매시업 엔진이 안전하지 않을 수 있는 HTTP 리디렉션을 추적함.  예: HTTPS에서 HTTP URI로 리디렉션)  
-        - 오류 값을 Null로 반환(기본값은 false. true로 설정할 경우 셀 수준 오류가 null로 반환됨. false인 경우 셀에 오류가 포함되어 있으면 예외가 발생함)  
+        - 레거시 리디렉션 사용(기본값은 false. true로 설정할 경우 매시업 엔진이 안전하지 않을 수 있는 HTTP 리디렉션을 추적함.  예: HTTPS에서 HTTP URI로 리디렉션)  
+        - 오류 값을 Null로 반환(기본값은 false. true로 설정할 경우 셀 수준 오류가 null로 반환됨. false인 경우 셀에 오류가 포함되어 있으면 예외가 발생함)  
     - PowerQuery를 사용하는 추가 데이터 원본(파일 데이터 원본)
-        - 내보내기 
-        - Text/CSV 
-        - Xml 
-        - Json 
-        - Folder 
-        - Access 데이터베이스 
-        - Azure Blob Storage 
+        - 내보내기 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - Folder 
+        - Access 데이터베이스 
+        - Azure Blob Storage 
     - 지역화된 PowerQuery 사용자 인터페이스
 - DAX 편집기 도구 창
     - SSDT의 보기, 다른 창 메뉴를 통해 사용 가능한 측정값, 계산 열 및 세부 정보 열 식에 대한 DAX 편집 환경 개선
@@ -610,24 +609,24 @@ SqlPackage의 게시 및 스크립트 작업에 대해 새 인수 두 개가 추
 DacFx에서 DacServices.Publish() 및 DacServices.Script()라는 새 API 두 개가 추가되었습니다. 이러한 API를 통해 게시 + 스크립트 + 보고서 작업의 동시 수행도 지원합니다. 사용법 예제:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -657,12 +656,12 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 * 데이터 표에서 스크롤 막대 위치 조정 컨트롤을 클릭할 경우 특정 상황에서 작동이 중단되는 SSDT AS 테이블 형식 디자이너의 문제가 수정됨
 * SSDT AS 테이블 형식에서 현재 사용자로 연결을 가장하는 옵션을 사용할 수 없는 문제가 수정됨
 * 수식 입력줄을 너무 멀리 확장할 경우 프로젝트를 다시 열 수 없는 SSDT AS 테이블 형식 디자이너의 문제가 수정됨
-* 테이블 탭이 선택된 경우 키를 누를 때 발생하는 SSDT AS 테이블 형식 디자이너의 작동이 중단되는 문제가 해결됨
+* 테이블 탭이 선택된 경우 키를 누를 때 발생하는 SSDT AS 테이블 형식 디자이너의 작동 중단이 수정됨
 * Excel의 분석 기능이 하위 수준 AS 서버 버전에 연결하지 못하는 SSDT AS 프로젝트의 문제가 수정됨
 
 **통합 서비스**
 
-* 연결 버그 [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) 수정됨: 여러 통합 서비스 패키지 작업 이동
+* 연결 버그 [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) 수정됨: 여러 통합 서비스 패키지 작업 이동
 
 
 
@@ -675,7 +674,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 **새로운 기능**
 
-이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 응용 프로그램 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 응용 프로그램 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
+이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 응용 프로그램 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 응용 프로그램 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
 
 **Analysis Services – SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
 
