@@ -142,7 +142,7 @@ ms.locfileid: "48207581"
   
      데이터 원본을 완료하고 데이터 원본 마법사를 닫습니다.  
   
-6.  활성 서버에 대한 빠른 검색과 연결을 제공하려면 연결 문자열에 **MultiSubnetFailover=Yes** 를 추가합니다. 이 속성에 대한 자세한 내용은 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하십시오.  
+6.  활성 서버에 대한 빠른 검색과 연결을 제공하려면 연결 문자열에 **MultiSubnetFailover=Yes** 를 추가합니다. 이 속성에 대한 자세한 내용은 [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하십시오.  
   
      이 속성은 속성 표에 표시되지 않습니다. 속성을 추가하려면 데이터 원본을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. 연결 문자열에 `MultiSubnetFailover=Yes` 를 추가합니다.  
   

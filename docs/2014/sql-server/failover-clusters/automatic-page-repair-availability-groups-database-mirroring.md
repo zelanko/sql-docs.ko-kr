@@ -32,7 +32,7 @@ ms.locfileid: "48070590"
   
   
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> 자동 페이지 복구 시도가 발생하는 오류 유형  
  데이터베이스 미러링 자동 페이지 복구는 다음 표에 나열된 오류 중 하나로 인해 실패한 작업이 있는 데이터 파일의 페이지만 복구하도록 시도합니다.  
   
 |오류 번호|Description|자동 페이지 복구 시도가 발생되는 인스턴스|  
@@ -56,7 +56,7 @@ ms.locfileid: "48070590"
   
 
   
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> 주/기본 데이터베이스에서 I/O 오류 처리  
  주/기본 데이터베이스에서는 데이터베이스가 SYNCHRONIZED 상태이고 주/기본 데이터베이스가 미러/보조 데이터베이스에 대한 로그 레코드를 계속 보내는 경우에만 자동 페이지 복구가 시도됩니다. 자동 페이지 복구 시도에서 기본적인 동작 시퀀스는 다음과 같습니다.  
   
 1.  주/기본 데이터베이스의 데이터 페이지에서 읽기 오류가 발생하면 주/기본 데이터베이스는 해당 오류 상태와 함께 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 테이블에 행을 삽입합니다. 그런 다음 데이터베이스 미러링의 경우에는 주 데이터베이스가 미러 데이터베이스에 해당 페이지의 복사본을 요청합니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우에는 주 데이터베이스가 해당 요청을 모든 보조 데이터베이스에 브로드캐스팅하고 응답할 첫 번째 데이터베이스에서 페이지를 가져옵니다. 이 요청에는 페이지 ID와 현재 플러시된 로그 끝에 있는 LSN이 지정됩니다. 페이지가 *복원 보류*로 표시되므로 자동 페이지 복구 시도 중에는 액세스할 수 없습니다. 복구 시도 중에 이 페이지에 액세스하려고 하면 오류 829(복원 보류)가 발생하며 실패합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48070590"
   
 
   
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> 미러/보조 데이터베이스에서 I/O 오류 처리  
  미러/보조 데이터베이스에서 발생하는 데이터 페이지에 대한 I/O 오류는 일반적으로 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서와 동일한 방식으로 처리됩니다.  
   
 1.  데이터베이스 미러링을 사용하는 경우 로그 레코드를 다시 실행할 때 미러 데이터베이스에 하나 이상의 페이지 I/O 오류가 발생한 경우 미러링 세션은 SUSPENDED 상태가 됩니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용하는 경우 로그 레코드를 다시 실행할 때 보조 복제본에 하나 이상의 페이지 I/O 오류가 발생한 경우 보조 데이터베이스는 SUSPENDED 상태가 됩니다. 이때 미러/보조 데이터베이스는 해당 오류 상태와 함께 **suspect_pages** 테이블에 행을 삽입합니다. 그런 다음 미러/보조 데이터베이스는 주/기본 데이터베이스에 해당 페이지의 복사본을 요청합니다.  

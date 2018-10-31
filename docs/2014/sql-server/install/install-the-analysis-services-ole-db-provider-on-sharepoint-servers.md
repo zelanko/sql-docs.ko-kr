@@ -120,7 +120,7 @@ ms.locfileid: "48128570"
   
 4.  에 **기능 선택** 페이지에서 **Analysis Services OLE DB Provider for SQL Server**합니다. 다른 구성 요소의 선택을 취소하고 설치를 완료합니다. SpPowerPivot.msi에 대 한 자세한 내용은 참조 하세요. [를 설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
   
-5.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
+5.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
   
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 OLE DB 공급자 이전 호스트에 설치 버전의 통합 문서  

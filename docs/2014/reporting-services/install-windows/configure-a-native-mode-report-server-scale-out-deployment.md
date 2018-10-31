@@ -116,7 +116,7 @@ ms.locfileid: "48095553"
   
 4.  이제 두 보고서 서버 인스턴스가 작동하는지 확인할 수 있습니다. 두 번째 인스턴스를 확인하려면 Reporting Services 구성 도구를 사용하여 보고서 서버에 연결한 다음 웹 서비스 URL 또는 보고서 관리자 URL을 클릭합니다.  
   
- 로드 균형이 조정된 서버 클러스터에서 보고서 서버를 실행하려는 경우 추가 구성이 필요합니다. 자세한 내용은 [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
+ 로드 균형이 조정된 서버 클러스터에서 보고서 서버를 실행하려는 경우 추가 구성이 필요합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
