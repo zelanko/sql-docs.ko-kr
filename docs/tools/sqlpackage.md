@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051225"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -51,8 +51,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action: 게시 /? |
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다. |
@@ -97,10 +99,12 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|게시|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{대화형&#124;ClientIdSecret}|Azure KeyVault에 액세스할 때 어떤 인증 방법을 사용할지를 지정합니다. |
 |**/ClientId:**|**/cid**|{string}|필요한 경우 Azure KeyVault에 대해 인증 시 사용할 클라이언트 ID를 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Profile:**|**/pr**|{string}|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 출력을 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다.|
 |**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action: 게시 /?|
@@ -236,8 +240,10 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|내보내기|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action: 게시 /?|
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
@@ -272,8 +278,10 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|가져오기|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|작업별 속성에 대한 이름 값 쌍을 지정합니다. {PropertyName}={Value}. 해당 작업의 속성 이름을 보려면 특정 작업의 도움말을 참조하십시오. 예: sqlpackage.exe /Action: 게시 /?|
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
 |**/SourceFile:**|**/sf**|{string}|작업 원본으로 사용할 원본 파일을 지정합니다. 이 매개 변수를 사용하는 경우 다른 원본 매개 변수가 무효화됩니다. |
@@ -308,8 +316,10 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OutputPath:**|**/op**|{string}|출력 파일이 생성되는 파일 경로를 지정합니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Profile:**|**/pr**|{string}|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 출력을 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다. |
@@ -438,8 +448,10 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OutputPath:**|**/op**|{string}|출력 파일이 생성되는 파일 경로를 지정합니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Quiet:**|**/q**|{True&#124;False}|자세한 피드백을 무시할지 여부를 지정합니다. 기본값은 False입니다.|
@@ -463,8 +475,10 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |매개 변수|약식|값|설명|
 |---|---|---|---|
 |**/Action:**|**/a**|스크립트|수행할 작업을 지정합니다. |
+|**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
+|**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
 |**/OutputPath:**|**/op**|{string}|출력 파일이 생성되는 파일 경로를 지정합니다. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|sqlpackage.exe이 기존 파일을 덮어써야 할지 여부를 지정합니다. False를 지정하면 기존 파일이 나타나는 경우 sqlpackage.exe에서 작업이 중단됩니다. 기본값은 True입니다. |
 |**/Profile:**|**/pr**|{string}|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 출력을 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다.|

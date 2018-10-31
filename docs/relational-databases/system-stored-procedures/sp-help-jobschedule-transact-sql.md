@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**job_count**|**int**|반환된 작업 수입니다.|  
   
-> **참고:****sp_help_jobschedule** 에서 값을 반환 합니다 **dbo.sysjobschedules** 하 고 **dbo.sysschedules** 시스템 테이블 **msdb** .   **sysjobschedules** 20 분 마다 업데이트 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
+> **참고:** **sp_help_jobschedule** 에서 값을 반환 합니다 **dbo.sysjobschedules** 하 고 **dbo.sysschedules** 시스템 테이블 **msdb** .   **sysjobschedules** 20 분 마다 업데이트 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
  매개 변수 **sp_help_jobschedule** 특정 조합 에서만에서 사용할 수 있습니다. 하는 경우 *schedule_id* 도 지정 된 *job_id* 나 *job_name* 지정할 수 있습니다. 이 고, 그렇지 합니다 *job_id* 하거나 *job_name* 매개 변수는 함께 사용할 수 있습니다 *schedule_name*합니다.  
