@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644011"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960797"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "49644011"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 멀티바이트 인코딩에는 다음이 포함됩니다.
 -   코드 페이지 936 및 950(중국어), 932(일본어) 또는 949(한국어)를 사용하는 일부 동아시아 언어의 경우 DBCS(더블바이트 문자 집합)입니다.
--   코드 페이지가 65001인 UTF-8입니다. **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터))
+-   코드 페이지가 65001인 UTF-8입니다. **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터))
 
 여러 언어를 지원하는 사이트가 있는 경우:
 - [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 부터 UTF-8 사용 데이터 정렬을 사용하여 유니코드를 지원하고 문자 변환 문제를 최소화하세요. 
@@ -64,12 +64,12 @@ CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 
   
 > [!WARNING]
 > Null이 아닌 각 varchar(max) 또는 nvarchar(max) 열은 24바이트의 추가 고정 할당이 필요하며 정렬 작업 시 여기에 8,060바이트의 행 제한이 적용됩니다. 이로 인해 null이 아닌 varchar(max) 또는 테이블에서 생성할 수 있는 nvarchar (max)열의 수에 묵시적 제한이 적용됩니다.  
-테이블 생성 시 또는 데이터 삽입 시점에 특별한 오류(최대 행의 크기가 최대로 허용된 8060바이트를 초과한다는 일반적인 경고 외의 메시지)가 표시되지 않습니다. 이렇게 크기가 큰 행은 클러스터형 인덱스 키 업데이트 같은 일부 정상 작업이나 전체 열 집합 정렬에서 오류(오류 512 등)를 발생시킬 수 있고 사용자는 이러한 오류를 작업을 수행하기 전에는 예측할 수 없습니다.
+테이블 생성 시 또는 데이터 삽입 시점에 특별한 오류(최대 행의 크기가 최대로 허용된 8,060바이트를 초과한다는 일반적인 경고 외의 메시지)가 표시되지 않습니다. 이렇게 크기가 큰 행은 클러스터형 인덱스 키 업데이트 같은 일부 정상 작업이나 전체 열 집합 정렬에서 오류(오류 512 등)를 발생시킬 수 있고 사용자는 이러한 오류를 작업을 수행하기 전에는 예측할 수 없습니다.
   
 ##  <a name="_character"></a> 문자 데이터 변환  
 문자 식이 다른 크기의 문자 데이터 형식으로 변환되면 새 데이터 형식에 대해 너무 긴 값은 잘립니다. **uniqueidentifier** 형식은 문자 식에서 변환하기 위한 문자 형식으로 간주되므로, 문자 형식으로 변환하기 위한 잘림 규칙이 있습니다. 뒷부분에 나오는 예 섹션을 참조하세요.
   
-문자 식이 다른 데이터 형식 또는 크기의 문자 식으로 변환되는 경우(예: **char(5)** 에서 **varchar(5)** 로, 또는 **char(20)** 에서 **char(15)** 로) 입력 값의 데이터 정렬은 변환된 값에 적용됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절을 사용하여 특정 데이터 정렬을 할당할 수 있습니다.
+문자 식이 다른 데이터 형식 또는 크기의 문자 식으로 변환되는 경우(예: **char(5)** 에서 **varchar(5)** 로, 또는 **char(20)** 에서 **char(15)** 로) 입력 값의 데이터 정렬은 변환된 값에 적용됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두 [COLLATE](../../t-sql/statements/collations.md) 절을 사용하여 특정 데이터 정렬을 할당할 수 있습니다.
   
 > [!NOTE]  
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 마찬가지로 코드 페이지 변환 중 데이터 손실은 보고되지 않습니다.  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>관련 항목:
 [nchar 및 nvarchar&#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE&#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
