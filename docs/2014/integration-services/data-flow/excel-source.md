@@ -39,7 +39,7 @@ ms.locfileid: "48099073"
 > [!IMPORTANT]  
 >  Excel에서 워크시트나 범위는 테이블 또는 뷰에 해당합니다. Excel 원본 및 대상 편집기의 사용 가능한 테이블 목록은 기존 워크시트(Sheet1$와 같이 워크시트 이름에 $ 기호가 붙음)와 명명된 범위(MyRange와 같이 $ 기호가 없음)를 표시합니다. 자세한 내용은 "사용 시 고려 사항" 섹션을 참조하십시오.  
   
- Excel 원본은 Excel 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자가 사용할 통합 문서 파일을 지정합니다. 자세한 내용은 [Excel Connection Manager](../connection-manager/excel-connection-manager.md)를 참조하세요.  
+ Excel 원본은 Excel 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자가 사용할 통합 문서 파일을 지정합니다. 자세한 내용은 [Excel 연결 관리자](../connection-manager/excel-connection-manager.md)를 참조하세요.  
   
  Excel 원본에는 하나의 일반 출력 및 하나의 오류 출력이 있습니다.  
   

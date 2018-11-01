@@ -51,7 +51,7 @@ ms.locfileid: "48107923"
   
 -   [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel용 Master Data Services 추가 기능](master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [보안&#40;Master Data Services&#41;](../security-master-data-services.md)  
   
