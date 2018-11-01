@@ -60,7 +60,7 @@ ms.locfileid: "48163683"
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 ##  <a name="createlib"></a> PowerPivot 갤러리 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 새 서버 설치 옵션을 사용하여 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치하면 만들어집니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 기존 팜에 추가한 경우 또는 추가 라이브러리가 필요한 경우 응용 프로그램이나 사이트에 대해 새로 만들 수 있습니다.  

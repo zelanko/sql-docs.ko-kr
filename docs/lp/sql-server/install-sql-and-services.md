@@ -6,12 +6,12 @@ description: SQL Server 및 관련 서비스를 설치하거나 업그레이드�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 6ca8f1acd90936c6f58a80543027731b6ada6451
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336172"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743148"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -288,6 +288,25 @@ ms.locfileid: "49336172"
                                                 <div class="cardText">
                                                     <h3>SSMA(SQL Server Migration Assistant)</h3>
                                                     <p>Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스를 마이그레이션하는 작업을 자동화합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/install-sql-and-services/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>DEA(데이터베이스 실험 도우미)</h3>
+                                                    <p>기존 워크로드에 대한 SQL Server의 대상 버전을 평가하는 데 유용합니다.</p>
                                                 </div>
                                             </div>
                                         </div>

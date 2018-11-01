@@ -193,7 +193,7 @@ ms.locfileid: "48140612"
  장애 조치(Failover) 후 클라이언트는 현재 주 데이터베이스에 다시 연결해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 업그레이드 중에 가용성 유지  
- 하드웨어나 소프트웨어를 업그레이드할 때 가용성 그룹의 데이터베이스 관리자는 수동 장애 조치(Failover)를 사용하여 데이터베이스 가용성을 유지 관리할 수 있습니다. 소프트웨어 업그레이드에 가용성 그룹을 사용하려면 대상 보조 복제본을 호스팅하는 서버 인스턴스 및/또는 컴퓨터 노드는 업그레이드를 이미 수신한 상태여야 합니다. 자세한 내용은 [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md)을 참조하세요.  
+ 하드웨어나 소프트웨어를 업그레이드할 때 가용성 그룹의 데이터베이스 관리자는 수동 장애 조치(Failover)를 사용하여 데이터베이스 가용성을 유지 관리할 수 있습니다. 소프트웨어 업그레이드에 가용성 그룹을 사용하려면 대상 보조 복제본을 호스팅하는 서버 인스턴스 및/또는 컴퓨터 노드는 업그레이드를 이미 수신한 상태여야 합니다. 자세한 내용은 [최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트](upgrading-always-on-availability-group-replica-instances.md)을 참조하세요.  
   
 ##  <a name="ForcedFailover"></a> 강제 장애 조치(failover)(데이터가 손실될 수 있음)  
  가용성 그룹의 강제 장애 조치(Failover)(데이터가 손실될 수 있음)는 보조 복제본을 웜 대기 서버로 사용할 수 있는 재해 복구 방법입니다. 강제 장애 조치(Failover)를 수행하면 데이터가 손실될 위험이 있으므로 반드시 필요한 경우에만 주의해서 사용해야 합니다. 데이터 손실을 감수하더라도 즉시 가용성 데이터베이스 서비스를 복원해야 하는 경우에만 강제 장애 조치(Failover)를 수행하는 것이 좋습니다. 강제 장애 조치(failover)를 위한 사전 요구 사항 및 권장 사항에 대한 자세한 내용과 강제 장애 조치(failover)를 사용하여 치명적인 오류에서 복구하는 예제 시나리오는 [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
