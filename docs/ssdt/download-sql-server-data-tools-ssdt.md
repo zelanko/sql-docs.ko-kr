@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419200"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226305"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 1. [SSDT 독립 실행형 설치 관리자를 다운로드](#ssdt-for-vs-2017-standalone-installer)합니다.
 2. [vs_sql.exe를 다운로드](https://aka.ms/vs/15/release/vs_sql.exe)합니다.
-3. 여전히 온라인 상태에서 다음 명령 중 하나를 실행하여 오프라인 설치에 필요한 모든 파일을 다운로드합니다. `--layout` 옵션이 핵심입니다. <filepath>를 파일을 저장할 실제 경로로 바꿉니다.
+3. 여전히 온라인 상태에서 다음 명령 중 하나를 실행하여 오프라인 설치에 필요한 모든 파일을 다운로드합니다. `--layout` 옵션을 사용하는 것이 핵심입니다. 오프라인 설치를 위한 실제 파일을 다운로드합니다. <filepath>를 파일을 저장할 실제 레이아웃 경로와 바꿉니다.
 
+   
    1.   특정 언어의 경우 `vs_sql.exe --layout c:\<filepath> --lang en-us` 로캘을 전달합니다(단일 언어는 1GB 이하).  
    2. 모든 언어의 경우 `--lang` 인수를 생략한 `vs_sql.exe --layout c:\<filepath>` 형태를 사용합니다(모든 언어는 3.9GB 이하).
 
+4. `SSDT-Setup-ENU.exe /layout c:\<filepath>`를 실행하여 VS2017 파일이 다운로드된 동일한 `<filepath>` 위치로 SSDT 페이로드를 추출합니다. 이렇게 하면 두 폴더의 모든 파일이 단일 레이아웃 폴더에 결합됩니다.
+
 이전 단계를 완료한 후 오프라인 상태에서 다음 작업을 완료할 수 있습니다.
 
-1. SSDT 페이로드 폴더로 VS2017 페이로드를 복사합니다. 두 폴더의 모든 파일이 단일 레이아웃 폴더에 결합되도록 합니다.
-2. `vs_setup.exe --NoWeb`을 실행하여 VS2017 Shell 및 SQL Server Data Project를 설치합니다.
-3. `SSDT-Setup-ENU.exe /install`을 실행하고 SSIS/SSRS/SSAS를 선택합니다.
+1. `vs_setup.exe --NoWeb`을 실행하여 VS2017 Shell 및 SQL Server Data Project를 설치합니다.
+2. 레이아웃 폴더에서 `SSDT-Setup-ENU.exe /install`을 실행하고 SSIS/SSRS/SSAS를 선택합니다.
 
    - 무인 설치의 경우 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`를 실행합니다.  
 

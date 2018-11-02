@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460318"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226265"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -64,13 +64,9 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 
 - 가변 길이 열의 전체 길이를 포함하여 행의 최대 가능 크기는 SQL Server에서 32KB를 초과하거나, Azure SQL Data Warehouse에서 1MB를 초과할 수 없습니다.
 
-- PolyBase는 Hive 0.12+ 데이터 유형(즉, Char(), VarChar())을 지원하지 않습니다.
-
 - SQL Server 또는 Azure SQL Data Warehouse에서 ORC 파일 형식으로 데이터를 내보낼 때 텍스트가 많은 열은 java 메모리 부족 오류로 인해 50개 이내로 제한될 수 있습니다. 이 문제를 해결하려면 열의 하위 집합만 내보냅니다.
 
-- Hadoop에서 암호화된 미사용 데이터를 읽거나 쓸 수 없습니다. 여기에는 HDFS 암호화 영역 또는 투명 암호화가 포함됩니다.
-
-- KNOX가 활성화되어 있으면 PolyBase가 Hortonworks 인스턴스에 연결할 수 없습니다.
+- Knox가 활성화되어 있으면 PolyBase가 Hortonworks 인스턴스에 연결할 수 없습니다.
 
 - 트랜잭션이 true인 Hive 테이블을 사용하는 경우 PolyBase는 Hive 테이블의 디렉터리에 있는 데이터에 액세스할 수 없습니다.
 
@@ -80,10 +76,6 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 - [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- 통합 인증은 지원되지 않습니다. 지금은 사용자 이름 및 암호만 지원됩니다.  
-
-- 암호화는 기본적으로 사용하도록 설정됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

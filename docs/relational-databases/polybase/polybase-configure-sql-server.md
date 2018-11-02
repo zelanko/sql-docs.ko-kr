@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806643"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -38,7 +38,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
 - CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE(Transact-SQL) 
 - CREATE EXTERNAL TABLE(Transact-SQL) 
-- CREATE STATISTICS(Transact-SQL) .
+- CREATE STATISTICS(Transact-SQL)
 
 1. 데이터베이스에 마스터 키를 만듭니다. 이 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
 
@@ -68,7 +68,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -80,7 +80,7 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
      GO
      ```
 
-1.  외부 SQL Server에 저장된 데이터를 나타내는 외부 테이블을 만듭니다. [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+1.  외부 SQL Server 에 저장된 데이터를 나타내는 외부 테이블을 만듭니다. [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -107,6 +107,10 @@ SQL Server 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>SQL Server 커넥터 호환 형식
+
+SQL Server 연결을 인식하는 다른 데이터 원본에 연결할 수 있습니다. SQL Server PolyBase 커넥터를 사용하면 **Azure SQL Data Warehouse와 Azure SQL Database**의 외부 테이블을 만들 수 있습니다. 위에 나열된 동일한 단계를 따라 수행하면 됩니다. 데이터베이스 범위 자격 증명, 서버 주소, 포트 및 위치 문자열이 연결할 호환 가능한 데이터 원본의 자격 증명과 연관되도록 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

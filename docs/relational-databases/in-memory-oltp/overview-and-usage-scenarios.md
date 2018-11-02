@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830741"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150194"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ GitHub에 게시된 스크립트에서 기본 제공 [!INCLUDE[ssNoVersion](../.
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
 - 한 고객은 기존 TVP를 메모리 최적화 TVP로 바꾼 것만으로 성능을 40% 개선할 수 있었습니다. [Azure에서 메모리 내 OLTP를 사용하여 고속 IoT 데이터 수집](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne은 엔터프라이즈 확장성 개선의 일환으로 tempdb의 테이블을 메모리 내 OLTP 테이블로 교환하여 모니터링 솔루션에서 대기 시간이 거의 없이 데이터 수집 용량을 크게 향상시켰습니다. [솔루션 공급자가 데이터 모니터링 혁신을 통해 성능 한계를 극복했습니다.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL(추출, 변환, 로드)
 

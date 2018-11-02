@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307147"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226395"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "49307147"
 
 SSMS 18.x는 새로운 Visual Studio 2017 Shell(격리 모드)을 기준으로 합니다.
 
-- 이는 최신 셸(Visual Studio 2107 15.6.4를 선택함)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
+- 이는 최신 셸(Visual Studio 2017 15.6.4를 선택함)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
 
 접근성 개선 사항:
 
@@ -127,14 +127,15 @@ Always On:
 감사 파일:
 
 - Azure AD 기반 인증을 기반으로 저장소 계정 키에서 인증 방법을 변경했습니다.
-AD 기반 Always Encrypted:
+
+항상 암호화:
 
 - 항상 데이터베이스 연결을 위해 이제 Always Encrypted를 사용하거나 사용하지 않도록 설정하는 쉬운 방법을 제공하는 *Always Encrypted 사용* 확인란(‘서버에 연결’ 대화 상자에 있음)이 있는 Always Encrypted 탭을 추가했습니다.
 - 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지를 개선했습니다.
   - 서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).
   - 새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.
   - 기타 Always Encrypted 키 관리 대화 상자에는 enclave 계산을 허용하는 열 마스터 키에 대한 정보를 제공합니다.
-  - 자세한 내용은 [보안 enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+  - 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
         
 ### <a name="bug-fixes"></a>버그 수정
@@ -451,7 +452,7 @@ SMO:
 **AS(Analysis Services)**
 
 - 테이블 형식 Analysis Services 1400 수준 호환성 모델에서 OAuth 데이터 원본을 수정할 때 발생한, OAuth 토큰의 변경 내용이 데이터 원본에서 업데이트되지 않는 문제를 해결했습니다.
-- 일부 잘못된 데이터 원본 자격 증명을 사용하거나 Analysis Services 테이블 형식 1400 수준 호환성 모델에서 파워 쿼리(예: Oracle)의 데이터 원본 마이그레이션을 지원하지 않는 데이터 원본을 편집할 때 발생할 수 있는 SSMS의 작동 중단 문제를 해결했습니다.
+- 일부 잘못된 데이터 원본 자격 증명을 사용하거나 Analysis Services 테이블 형식 1400 수준 호환성 모델에서 파워 쿼리(예: Oracle)의 데이터 원본 마이그레이션을 지원하지 않는 데이터 원본을 편집할 때 발생할 수 있는 SSMS의 크래시를 수정했습니다.
 
 
 ### <a name="known-issues"></a>알려진 문제
@@ -747,7 +748,7 @@ XE 프로파일러 라이브 데이터 창을 닫아도 기본 세션이 중지�
 SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL 매개 변수 값이 생성되는 문제를 수정했습니다.
 확대된 DB를 스크립팅하면 *데이터\_압축* 옵션을 잘못 내보내는 문제를 수정했습니다.
 - 작업 활동 모니터: 사용자가 범주를 기준으로 필터링하려고 할 때 “인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다. 
-      매개 변수 이름: 인덱스(System.Windows.Forms)” 오류가 발생하는 문제를 수정했습니다 - [연결 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
+      매개 변수 이름: 인덱스(System.Windows.Forms)" 오류가 발생하는 문제를 수정했습니다 - [연결 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
 - 연결 대화 상자: 읽기/쓰기 도메인 컨트롤러에 액세스할 수 없는 도메인 사용자가 SQL 인증을 사용하여 SQL Server에 로그인할 수 없는 문제를 해결했습니다 - [연결 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
 - 복제: SQL Server에서 끌어오기 구독의 속성을 볼 때 “ServerInstance 속성에 ‘null’ 값을 적용할 수 없습니다”와 비슷한 오류가 표시되는 문제를 해결했습니다.
 - SSMS 설치: SSMS를 설치하면 머신에 설치된 모든 제품이 다시 구성되는 문제를 해결했습니다.
@@ -970,7 +971,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 http://connect.microsoft.com/SQLServer/feedback/details/3135326
 - "URL에 백업/복원"에서 SSMS가 클래식 저장소 계정을 열거하지 않았던 문제 해결.
 - 스키마 바운드 보안 개체를 DB 역할에 추가하려고 할 때 예외가 throw되었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- SSMS에서 다음 오류가 간헐적으로 표시되는 문제를 해결했습니다. “데이터가 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다.” 테이블 노드를 확장하는 경우 http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- SSMS에서 다음 오류가 간헐적으로 표시되는 문제를 해결했습니다. “데이터가 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 테이블 노드를 확장하는 경우 http://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: 특정 경계 값으로 파티션 함수를 평가할 때 DTAEngine.exe가 힙 손상으로 종료되는 문제 해결.
 
 
@@ -1124,12 +1125,12 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
 - 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 Always Encrypted 오류.
 - OLTP 및 OLAP에 대한 기본 연결 제한 시간을 15초에서 30초로 변경하여 무시된 연결 실패의 클래스를 수정함. 
-- 사용자 지정 보고서가 시작될 때 SSMS 작동이 중단되는 문제가 해결됨. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- 사용자 지정 보고서가 시작될 때 SSMS 작동이 중단되는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
 - Azure SQL Database의 “스크립트 생성...”이 실패하는 문제를 해결했습니다.
 - 저장 프로시저와 같은 개체를 스크립팅할 때 줄 바꿈이 추가되지 않도록 "스크립팅" 및 "스크립트 생성 마법사"를 수정함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 공급자: Dimension 및 MeasureGroup 폴더에 LastProcessed 속성을 추가함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- 활성 쿼리 통계: 배치에 있는 첫 번째 쿼리만 표시하던 문제를 해결함. [Connect 항목] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
-- 실행 계획: 속성 창에서 전체 스레드의 합계 대신 최댓값을 표시함.
+- 활성 쿼리 통계: 배치에 있는 첫 번째 쿼리만 표시하던 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- 실행 계획: 속성 창에서 전체 스레드의 합계 대신 최대값을 표시함.
 - 쿼리 저장소: 실행 변형이 높은 쿼리에 대해 새 보고서를 추가함.
 - 개체 탐색기 성능 문제: [연결 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114074). 테이블의 상황에 맞는 메뉴가 잠시 중단됨. 원격(인터넷) 연결을 통해 테이블의 인덱스를 마우스 오른쪽 단추로 클릭할 경우 SSMS가 느려짐. 서버에서 정렬되는 테이블 쿼리 실행 차단
 - SSMS에서 Azure 배포 마법사를 제거함(Azure VM에 데이터베이스 배포)
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 데이터베이스에 대한 사용 권한을 표시하려고 할 때 SSMS의 작동이 중단되는 문제를 해결함
 - 쿼리 저장소: 쿼리 저장소 보고서의 결과 표에 대한 상황에 맞는 메뉴 항목의 일반적인 개선 사항
 - 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- 여러 스키마가 포함된 기존 데이터베이스에 대한 Always Encrypted 구성이 작동하지 않음. [Connect 항목] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- Always Encrypted, 암호화된 열 마법사가 시스템 뷰를 참조하는 뷰를 포함하는 데이터베이스로 인해 실패함. [Connect 항목] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 여러 스키마가 포함된 기존 데이터베이스에 대한 Always Encrypted 구성이 작동하지 않음. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Always Encrypted, 암호화된 열 마법사가 시스템 뷰를 참조하는 뷰를 포함하는 데이터베이스로 인해 실패함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Always Encrypted를 사용하여 암호화할 때 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 오류가 발생함.
 - "새 서버 등록" 대화 상자에서 UI 잘림 문제를 해결함
 - 따옴표가 있는 문자열 상수 값을 포함하는 식을 잘못 업데이트하는 DMF 조건 UI 수정

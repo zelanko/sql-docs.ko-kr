@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031632"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 
 
 >[!NOTE]
->  대시보드 및 KPI와 같은 Datazen Server 콘텐츠를 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버로 마이그레이션해야 하나요? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
+>  대시보드 및 KPI와 같은 Datazen Server 콘텐츠를 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버로 마이그레이션해야 하나요? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "47739341"
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  모바일 보고서 만들기  
   
 다음 문서는 시작하는 데 도움이 됩니다.
--  [SQL Server 모바일 보고서 게시자](http://go.microsoft.com/fwlink/?LinkID=733527)다운로드  
+-  [SQL Server 모바일 보고서 게시자](https://go.microsoft.com/fwlink/?LinkID=733527)다운로드  
 -  [Reporting Services 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [전체 연습: SQL Server 2016 Reporting Services에서 모바일 보고서 및 KPI 만들기](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan의 블로그)  
 - [디자인 우선 또는 데이터 우선](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): 먼저 시뮬레이션된 데이터로 보고서를 디자인할지 또는 사용자 고유의 데이터로 시작할지 결정합니다.  

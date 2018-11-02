@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874361"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806753"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -35,27 +35,28 @@ SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsof
 - 최소 메모리: 4GB  
    
 - 최소 하드 디스크 공간: 2GB  
+- **권장:** 최소 16GB RAM
    
 - PolyBase가 제대로 작동하려면 TCP/IP를 사용하도록 설정해야 합니다. Developer 및 Express SQL Server 버전을 제외하고 모든 버전의 SQL Server에서 TCP/IP는 기본적으로 사용하도록 설정되어 있습니다. Developer 및 Express 버전에서 PolyBase가 제대로 작동하기 위해서는 TCP/IP 연결을 사용하도록 설정해야 합니다([서버 네트워크 프로토콜 사용 또는 사용 안 함](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 참조).
 
-- Azure Blob 또는 Hadoop 클러스터 중 하나인 외부 데이터 원본입니다. 지원되는 Hadoop 버전은 [PolyBase 구성](#supported)을 참조하세요. 
-- MSVC++ 2012 설치  
-
-> [!NOTE]
-> Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다.
+- MSVC++ 2012 
 
 **참고**  
 
-PolyBase는 컴퓨터당 하나의 SQL Server 인스턴스에만 설치할 수 있습니다.  
-   
+PolyBase는 컴퓨터당 하나의 SQL Server 인스턴스에만 설치할 수 있습니다.
+
+> **중요**
+>
+> Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce를 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다.
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>단일 노드 또는 PolyBase 확장 그룹
 
-SQL Server 인스턴스에서 PolyBase 설치를 시작하기 전에 단일 노드 설치나 PolyBase 스케일 아웃 그룹을 원할 경우 계획을 세우는 것이 좋습니다. 
+SQL Server 인스턴스에서 PolyBase 설치를 시작하기 전에 단일 노드 설치나 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 원할 경우 계획을 세우는 것이 좋습니다.
 
-PolyBase 스케일 아웃 그룹의 경우 다음 사항을 확인해야 합니다. 
+PolyBase 스케일 아웃 그룹의 경우 다음 사항을 확인해야 합니다.
 
 - 모든 컴퓨터가 같은 도메인에 있습니다.
-- 설치하는 동안 동일한 서비스 계정 및 암호를 사용합니다.
+- PolyBase를 설치하는 동안 동일한 서비스 계정 및 암호를 사용합니다.
 - SQL Server 인스턴스가 네트워크를 통해 서로 통신할 수 있습니다.
 - SQL Server 인스턴스는 모두 동일한 버전의 SQL Server입니다.
 
@@ -63,7 +64,7 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
 
 ## <a name="install-using-the-installation-wizard"></a>설치 마법사를 사용하여 설치  
    
-1. **SQL Server 설치 센터**를 실행합니다. SQL Server 설치 미디어를 넣고 **Setup.exe**를 두 번 클릭합니다.  
+1. SQL Server setup.exe를 실행합니다.   
    
 2. **설치**를 클릭한 후 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**를 클릭합니다.  
    
@@ -71,10 +72,11 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
 
  ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
-4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 SQL Server PolyBase 데이터 이동 서비스를 구성하여 동일한 계정 하에서 실행합니다.  
+4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 SQL Server PolyBase 데이터 이동 서비스를 구성하여 동일한 도메인 계정 하에서 실행합니다.  
    
-   > **중요!** PolyBase 스케일 아웃 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스는 동일한 도메인 계정으로 실행되어야 합니다.  
-   > PolyBase 규모 확장 참조  
+ > **중요!** 
+>
+>PolyBase 스케일 아웃 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스는 동일한 도메인 계정으로 실행되어야 합니다. [PolyBase 스케일 아웃 그룹](#Enable)을 참조하세요
    
 5. **PolyBase 구성 페이지**에서 다음 옵션 중 하나를 선택합니다. 자세한 내용은 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md) 을 참조하세요.  
    
@@ -88,14 +90,10 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
    
 6. **PolyBase 구성 페이지**에서 6개 이상의 포트로 포트 범위를 지정합니다. SQL Server 설치 프로그램이 해당 범위의 앞쪽에서 사용할 수 있는 6개의 포트를 할당합니다.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **중요!**
   >
   > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
 
-::: moniker-end
 
 ##  <a name="installing"></a> 명령 프롬프트를 사용하여 설치  
 
@@ -134,12 +132,9 @@ PolyBase를 독립 실행형으로 또는 스케일 아웃 그룹에 설치한 �
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
 
-::: moniker-end
+
 
 **예제**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> PolyBase 사용
-
 
 설치를 완료하면 Polybase를 사용하여 해당 기능에 액세스할 수 있습니다. SQL Server 2019 CTP 2.0에 연결하는 경우 다음 Transact-SQL 명령을 사용하여 설치 후에 PolyBase를 사용하도록 설정해야 합니다.
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 그런 다음, 인스턴스를 **다시 시작**해야 합니다. 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>설치 후 참고 사항  
 
@@ -195,7 +185,7 @@ SQL Server PolyBase 설치는 컴퓨터에 다음과 같은 방화벽 규칙을 
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    
-설치 시, SQL Server 서버를 PolyBase 규모 확장 그룹의 일부로 사용하도록 선택하면, 이 규칙이 활성화되며 SQL Server 데이터베이스 엔진, SQL Server PolyBase 엔진, SQL Server PolyBase 데이터 이동 서비스 및 SQL Browser에 대해 들어오는 연결을 허용하도록 방화벽이 열립니다. 하지만 설치하는 동안 컴퓨터에 방화벽 서비스가 실행되고 있지 않으면 SQL Server 설치가 이 규칙을 활성화하지 못합니다. 이런 경우 설치 후에 컴퓨터에서 방화벽 서비스를 시작하고 규칙을 활성화해야 합니다.  
+설치 시, SQL Server 인스턴스를 PolyBase 규모 확장 그룹의 일부로 사용하도록 선택하면, 이 규칙이 활성화되며 SQL Server 데이터베이스 엔진, SQL Server PolyBase 엔진, SQL Server PolyBase 데이터 이동 서비스 및 SQL Browser에 대해 들어오는 연결을 허용하도록 방화벽이 열립니다. 하지만 설치하는 동안 머신에 방화벽 서비스가 실행되고 있지 않으면 SQL Server 설치가 이 규칙을 활성화하지 못합니다. 이런 경우 설치 후에 컴퓨터에서 방화벽 서비스를 시작하고 규칙을 활성화해야 합니다.  
    
 #### <a name="to-enable-the-firewall-rules"></a>방화벽 규칙을 사용하려면  
 

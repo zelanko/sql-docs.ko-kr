@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720511"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051016"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "47720511"
   
 4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)** 위에 놓습니다.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    행 핸들에는 이제 두 개의 그룹을 표시하기 위해 ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png)에 두 개의 대괄호가 있습니다. 테이블에도 두 개의 **Order** 열이 있습니다.  
   
 5.  이중선 **오른쪽** 에서 원래 **Date** 및 **Order** 열을 삭제합니다. 그러면 이 개인 레코드 값이 제거되고 그룹 값만 표시됩니다. 두 열의 열 핸들을 선택하고 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47720511"
   
 4.  **서식** 메뉴에서 **배경색**, **주황색**, **확인**을 차례로 클릭합니다.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![배경색을 주황색으로 설정합니다](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>보고서에 총합계를 추가하려면  
   
@@ -113,9 +113,9 @@ ms.locfileid: "47720511"
 2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
   
 3.  **TargetServerURL** 에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
+    - `http://localhost/reportserver` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
   
 4. TargetReportFolder는 프로젝트 이름인 tutorial이며,  다음 단계에서 보고서를 배포할 폴더의 이름입니다.  
@@ -143,15 +143,15 @@ ms.locfileid: "47720511"
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 URL로 이동합니다.   
     **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어 다음과 같이 사용할 수 있습니다.   
-    - `http://<server name>/reports`를 클릭합니다.  
-     - `http://localhost/reports` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
+    `http://<server name>/reports`을 참조하세요.  
+    `http://localhost/reports`는 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
 8.  보고서가 포함된 폴더로 이동합니다. 기본 이름은 프로젝트 이름인 *tutorial*또는 프로젝트 속성의 TargetReportFolder 필드에 입력한 이름입니다.   
 **Sales Orders** 보고서의 이름을 클릭하여 브라우저에서 렌더링된 보고서를 봅니다.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.**  
+기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

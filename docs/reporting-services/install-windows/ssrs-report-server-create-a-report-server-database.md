@@ -1,17 +1,17 @@
 ---
 title: 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050907"
 ---
 # <a name="create-a-report-server-database"></a>보고서 서버 데이터베이스 만들기
 
@@ -66,10 +66,10 @@ ms.locfileid: "47768241"
 >  보고서 서버 데이터베이스를 호스팅하는 보고서 서버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 서로 다른 도메인에 있을 수 있습니다. 인터넷 배포의 경우 방화벽 뒤에 있는 서버를 사용하는 것이 일반적입니다. 보고서 서버를 인터넷 액세스용으로 구성하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하여 방화벽 뒤에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 IPSEC을 사용하여 연결 보안을 설정합니다.  
   
 ## <a name="database-server-edition-requirements"></a>데이터베이스 서버 에디션 요구 사항  
- 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)의 "보고서 서버 데이터베이스 서버 버전 요구 사항" 섹션을 참조하세요.  
+ 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 보고 서비스](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)의 [보고서 서버 데이터베이스 서버 버전 요구 사항](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 
-[Reporting Services 구성 관리자](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services 구성 관리자](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906313"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806833"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -257,29 +257,33 @@ ms.locfileid: "48906313"
 
  지원되는 힌트는 다음과 같습니다.    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- 쿼리 프로세서가 쿼리 계획을 생성할 때 최적화된 중첩 루프 조인을 위해 정렬 연산(일괄 처리 정렬)을 사용하지 않도록 지시합니다 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340과 동일합니다.
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> 쿼리 최적화 프로그램이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON에 해당합니다.
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- 쿼리 최적화 프로그램 핫픽스(SQL Server 누적 업데이트 및 서비스 팩에서 릴리스된 변경 내용)를 사용하도록 설정합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 QUERY_OPTIMIZER_HOTFIXES=ON에 해당합니다.
-*  'DISABLE_PARAMETER_SNIFFING'  
- 쿼리 계획이 쿼리를 컴파일할 때 처음 사용된 매개 변수 값과 독립적이되도록, 쿼리 최적화 프로그램이 하나 이상의 매개 변수가 있는 쿼리를 컴파일할 때 평균 데이터 분산을 사용하도록 지시합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 PARAMETER_SNIFFING=OFF에 해당합니다.
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> SQL Server가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
-*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> SQL Server가 TOP, OPTION (FAST N), IN 또는 EXISTS 키워드를 포함하는 쿼리에 행 목표 조정을 사용하지 않는 계획을 생성하게 합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138과 동일합니다.
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- 카디널리티 추정이 필요한 모든 선행 인덱스 열에 대해 자동으로 생성된 빠른 통계(히스토그램 수정)를 사용합니다. 카디널리티 추정에 사용되는 히스토그램은 이 열의 실제 최댓값 또는 최솟값을 반영하기 위해 쿼리 컴파일 시점에 조정됩니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139와 동일합니다. 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리 계획을 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- 쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- 다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조하세요.
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
- 일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
-*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
- 일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조합니다.
-*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리를 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
+   일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조하세요.
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
+   일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
+   다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조하세요.
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'      
+   쿼리 프로세서가 쿼리 계획을 생성할 때 최적화된 중첩 루프 조인을 위해 정렬 연산(일괄 처리 정렬)을 사용하지 않도록 지시합니다 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340과 동일합니다.
+*  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
+   SQL Server가 TOP, OPTION (FAST N), IN 또는 EXISTS 키워드를 포함하는 쿼리에 행 목표 조정을 사용하지 않는 계획을 생성하게 합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138과 동일합니다.
+*  'DISABLE_PARAMETER_SNIFFING'      
+   쿼리 계획이 쿼리를 컴파일할 때 처음 사용된 매개 변수 값과 독립적이되도록, 쿼리 최적화 프로그램이 하나 이상의 매개 변수가 있는 쿼리를 컴파일할 때 평균 데이터 분산을 사용하도록 지시합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 PARAMETER_SNIFFING=OFF에 해당합니다.
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
+   카디널리티 추정이 필요한 모든 선행 인덱스 열에 대해 자동으로 생성된 빠른 통계(히스토그램 수정)를 사용합니다. 카디널리티 추정에 사용되는 히스토그램은 이 열의 실제 최댓값 또는 최솟값을 반영하기 위해 쿼리 컴파일 시점에 조정됩니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139와 동일합니다. 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
+   쿼리 최적화 프로그램 핫픽스(SQL Server 누적 업데이트 및 서비스 팩에서 릴리스된 변경 내용)를 사용하도록 설정합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 QUERY_OPTIMIZER_HOTFIXES=ON에 해당합니다.
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
+   쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
+   쿼리 최적화 프로그램이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON에 해당합니다.
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  쿼리가 데이터베이스 호환성 수준 *n*으로 컴파일된 것처럼 쿼리 수준에서 쿼리 최적화 프로그램 동작을 강제 실행합니다. 여기서 *n*은 지원되는 데이터베이스 호환성 수준입니다. *n*에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터)    
- 
+
    > [!NOTE]
    > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 강제 실행되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
    > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.  
@@ -287,7 +291,7 @@ ms.locfileid: "48906313"
     
 *  'QUERY_PLAN_PROFILE'      
  쿼리에 대해 간단한 프로파일링을 사용합니다. 이 새 힌트가 포함된 쿼리가 완료되면 새 확장 이벤트 query_plan_profile이 발생합니다. 이 확장 이벤트는 query_post_execution_showplan 확장 이벤트와 유사한 실행 통계 및 실제 실행 계획 XML을 표시하지만 새 힌트가 포함된 쿼리에 대해서만 표시합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터 시작). 
- 
+
   > [!NOTE]
   > query_post_execution_showplan 확장 이벤트 수집을 사용하도록 설정하는 경우 서버에서 실행되는 모든 쿼리에 표준 프로파일링 인프라가 추가되므로 전체 서버 성능에 영향을 미칠 수 있습니다.      
   > 대신 *query_thread_profile* 확장 이벤트의 컬렉션을 사용하도록 설정하여 간단한 프로파일링 인프라를 사용하는 경우 성능 오버헤드가 훨씬 감소하지만 전체 서버 성능에는 여전히 영향을 미칩니다.       
