@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643981"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965959"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행 합니다.
 
@@ -47,15 +47,13 @@ ms.locfileid: "49643981"
    대상 Azure VM에서 호스팅되는 SQL Server 또는 온-프레미스 SQL Server로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하려는 경우 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
     -   **호환성 문제**
-
     -   **새로운 기능의 권장 사항**
 
     ![SQL Server 대상에 대 한 평가 보고서 유형을 선택합니다](../dma/media/AssessmentTypes.png)
 
-   Azure SQL Database로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가 하려는 경우 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
+   Azure SQL Database로 마이그레이션에 대 한 원본 SQL Server 인스턴스를 평가할 때 다음 평가 보고서 유형 중 하나 또는 모두를 선택할 수 있습니다.
 
     -   **데이터베이스 호환성 확인**
-
     -   **기능 패리티 확인**
 
     ![SQL Database 대상에 대 한 평가 보고서 유형 선택](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ ms.locfileid: "49643981"
 
 마찬가지로, 기능 권장 사항에서 검토할 수 있습니다 **성능**를 **저장소**, 및 **보안** 영역입니다.
 
-기능 권장 사항 다양 한 메모리 내 OLTP 및 Columnstore, Stretch Database, Always Encrypted, 동적 데이터 마스킹 및 투명 한 데이터 암호화와 같은 기능을 설명합니다.
+기능 권장 사항 다양 한 메모리 내 OLTP, Columnstore, Stretch Database, Always Encrypted, 동적 데이터 마스킹 및 투명 한 데이터 암호화와 같은 기능을 설명합니다.
 
 ![기능 권장 사항 보기](../dma/media/FeatureRecommendations.png)
 
-Azure SQL Database에 대 한 평가가 마이그레이션 차단 문제와 기능 패리티 문제를 제공합니다. 특정 옵션을 선택 하 여 두 범주에 대 한 결과 검토 합니다.
+Azure SQL Database에 대 한 평가가 마이그레이션 차단 문제와 기능 패리티 문제를 제공합니다. 특정 옵션을 선택 하 여 두 범주에 대 한 결과 검토 합니다.
 
 - 합니다 **SQL Server 기능 패리티** 범주는 다양 한 권장 사항, Azure 및 완화 단계에서 사용할 수 있는 대안을 제공 합니다. 마이그레이션 프로젝트에서이 노력을 계획할 수 있습니다.
 
   ![SQL Server 기능 패리티에 대 한 정보 보기](../dma/media/SQLFeatureParity.png)
 
-- 합니다 **호환성 문제** 범주는 Azure SQL database로 온-프레미스 SQL Server 데이터베이스 마이그레이션 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하기 위한 권장 사항을 제공 합니다.
+- 합니다 **호환성 문제** 범주는 Azure SQL database로 온-프레미스 SQL Server 데이터베이스 마이그레이션 차단 하는 부분적으로 지원 되거나 지원 되지 않는 기능을 제공 합니다. 그런 다음 해당 문제를 해결 하기 위한 권장 사항을 제공 합니다.
 
   ![보기 호환성 문제](../dma/media/CompatibilityIssues.png)
 

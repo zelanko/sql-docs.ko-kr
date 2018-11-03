@@ -1,7 +1,7 @@
 ---
 title: 복제 스냅숏 에이전트 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0914e0c2abea1ab4dc15b5d3410f6d717403ef27
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087163"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237009"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
   복제 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
@@ -132,6 +132,9 @@ ms.locfileid: "48087163"
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
 |**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
+
+ > [!NOTE]  
+ >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
   
  자세한 내용은 [보안 개요&#40;복제&#41;](../security/security-overview-replication.md)를 참조하세요.  
   
@@ -194,12 +197,12 @@ ms.locfileid: "48087163"
 |**2**|모든 오류 메시지 및 진행률 보고 메시지가 출력되며, 디버깅에 유용합니다.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 테이블 개체 사전 인출 되어 캐시 됩니다 하는 경우를 지정 하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용 하 여 특정 테이블 속성을 프리페치 하 합니다.  이 매개 변수는 않는 실행 하는 SMO 프리페치 상당한 작업은 더 이상를 시나리오에 유용할 수 있습니다. 이 매개 변수를 사용 하지 않으면이 의사 결정 테이블 아티클로 게시에 추가 되는 백분율을 기준으로 런타임에 수행 됩니다.  
+ 테이블 개체가 프리페치되고 캐시되는지를 지정하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용하여 특정 테이블 속성을 프리페치하는 것입니다.  이 매개 변수는 SMO 프리페치 작업이 실행하는 데 상당히 오래 걸리는 경우에 유용할 수 있습니다. 이 매개 변수를 사용하지 않으면 게시에 아티클로 추가되는 테이블의 비율을 기준으로 런타임 시 동작이 결정됩니다.  
   
 |OutputVerboseLevel 값|Description|  
 |------------------------------|-----------------|  
-|**0**|SMO 요소의 프리페치 메서드를 호출 하는 사용할 수 없습니다.|  
-|**1**|스냅숏 에이전트에서 SMO를 사용 하 여 일부 테이블 속성 캐시 프리페치 메서드를 호출 합니다.|  
+|**0**|SMO 구성 요소의 프리페치 메서드 호출을 사용할 수 없습니다.|  
+|**1**|스냅숏 에이전트가 프리페치 메서드를 호출하여 SMO를 사용하는 일부 테이블 속성을 캐시합니다.|  
   
  **-PacketSize** *packet_size*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 스냅숏 에이전트에서 사용하는 패킷 크기(바이트)입니다. 기본값은 8192바이트입니다.  

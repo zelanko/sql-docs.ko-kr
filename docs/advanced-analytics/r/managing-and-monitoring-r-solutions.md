@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169083"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743208"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>관리 하 고 SQL server machine learning 워크 로드를 통합 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ DBA 서버 자산에 대 한 책임으로 알 수 없는 문제를 나타내는 
 
 > [!NOTE]
 > R 패키지에 대 한 서버 관리자 권한이 필요 하지 않습니다 특히 패키지 설치에 대 한 대체 방법을 사용 하는 경우. 참조 [SQL Server에 설치할 R 패키지](install-additional-r-packages-on-sql-server.md) 세부 정보에 대 한 합니다.
+
+## <a name="monitoring-script-execution"></a>모니터링 스크립트 실행
+
+실행 되는 R 및 Python 스크립트 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 시작 하는 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 인터페이스입니다. 하지만, 실행 패드 리소스가 관리 되거나 리소스를 적절 하 게 관리 하는 Microsoft에서 제공 하는 보안 서비스 이므로 개별적으로 모니터링 하지 않습니다.
+
+실행 패드 서비스에서 실행 되는 외부 스크립트를 사용 하 여 관리 되는 [Windows 작업 개체](/windows/desktop/ProcThread/job-objects)합니다. 작업 개체를 사용하면 프로세스 그룹을 하나의 단위로 관리할 수 있습니다. 각 작업 개체는 계층적이며 연결된 모든 프로세스의 특성을 제어합니다. 작업 개체에서 수행된 작업은 작업 개체와 연결된 모든 프로세스에 영향을 줍니다.
+
+즉, 개체와 연결된 하나의 작업을 종료해야 하는 경우 관련된 모든 프로세스도 종료됨에 유의하세요. Windows 작업 개체에 할당된 R 스크립트를 실행 중이며 해당 스크립트가 실행하는 관련된 ODBC 작업을 종료해야 하는 경우 부모 R 스크립트 프로세스도 종료됩니다.
+
+병렬 처리를 사용 하는 외부 스크립트를 시작 하는 경우 단일 Windows 작업 개체는 모든 병렬 자식 프로세스를 관리 합니다.
+
+작업에서 프로세스가 실행되고 있는지 확인하려면 `IsProcessInJob` 함수를 사용합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

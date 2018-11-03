@@ -1,5 +1,5 @@
 ---
-title: SQL Server Python 및 R 자습서 아이리스 데모 데이터 집합 | Microsoft Docs
+title: SQL Server에서 Python 및 R 자습서 아이리스 데모 데이터 집합 | Microsoft Docs
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806673"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216687"
 ---
-#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서 아이리스 데이터
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server에서 Python 및 R 자습서 아이리스 데이터 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 연습에서는 데이터를 저장 하는 SQL Server 데이터베이스를 만들 합니다 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set) 모델과 동일한 데이터를 기반으로 합니다. 아이리스 데이터는 SQL Server로 설치 하는 R 및 Python 배포판에 포함 되 고 SQL Server machine learning 자습서에 사용 됩니다. 

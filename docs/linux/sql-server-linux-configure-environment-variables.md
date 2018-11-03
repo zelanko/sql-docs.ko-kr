@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750512"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753540"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux의 환경 변수를 사용 하 여 SQL Server 설정 구성
 
@@ -61,8 +61,8 @@ Linux에서 SQL Server 2019 CTP 2.0을 구성 하려면 몇 가지 다른 환경
 | **MSSQL_DUMP_DIR** | 여기서 SQL Server를 맡 메모리 덤프 및 기타 문제 해결 파일 기본적으로 디렉터리를 변경 합니다. |
 | **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용 하도록 설정 합니다. 예를 들어, '1'을 사용 하 고 '0'은 사용할 수 없습니다. |
 | **MSSQL_AGENT_ENABLED** | SQL Server 에이전트를 사용 하도록 설정 합니다. 예를 들어, 'true' 켜져 있고 'f a l'은 사용 하지 않도록 설정 합니다. 기본적으로 에이전트를 비활성화 합니다.  |
-| **MSSQL_MASTER_DATA_FILE** | Master 데이터베이스 데이터 파일의 위치를 설정합니다. |
-| **MSSQL_MASTER_LOG_FILE** | Master 데이터베이스 로그 파일의 위치를 설정합니다. |
+| **MSSQL_MASTER_DATA_FILE** | Master 데이터베이스 데이터 파일의 위치를 설정합니다. 이름을 지정 해야 합니다 **master.mdf** SQL Server를 처음 실행 될 때까지 합니다. |
+| **MSSQL_MASTER_LOG_FILE** | Master 데이터베이스 로그 파일의 위치를 설정합니다. 이름을 지정 해야 합니다 **mastlog.ldf** SQL Server를 처음 실행 될 때까지 합니다. |
 | **MSSQL_ERROR_LOG_FILE** | 오류 로그 파일의 위치를 설정합니다. |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ Linux에서 SQL Server 2019 CTP 2.0을 구성 하려면 몇 가지 다른 환경
 | **MSSQL_DUMP_DIR** | 여기서 SQL Server를 맡 메모리 덤프 및 기타 문제 해결 파일 기본적으로 디렉터리를 변경 합니다. |
 | **MSSQL_ENABLE_HADR** | 가용성 그룹을 사용 하도록 설정 합니다. 예를 들어, '1'을 사용 하 고 '0'은 사용할 수 없습니다. |
 | **MSSQL_AGENT_ENABLED** | SQL Server 에이전트를 사용 하도록 설정 합니다. 예를 들어, 'true' 켜져 있고 'f a l'은 사용 하지 않도록 설정 합니다. 기본적으로 에이전트를 비활성화 합니다.  |
-| **MSSQL_MASTER_DATA_FILE** | Master 데이터베이스 데이터 파일의 위치를 설정합니다. |
-| **MSSQL_MASTER_LOG_FILE** | Master 데이터베이스 로그 파일의 위치를 설정합니다. |
+| **MSSQL_MASTER_DATA_FILE** | Master 데이터베이스 데이터 파일의 위치를 설정합니다. 이름을 지정 해야 합니다 **master.mdf** SQL Server를 처음 실행 될 때까지 합니다. |
+| **MSSQL_MASTER_LOG_FILE** | Master 데이터베이스 로그 파일의 위치를 설정합니다. 이름을 지정 해야 합니다 **mastlog.ldf** SQL Server를 처음 실행 될 때까지 합니다. |
 | **MSSQL_ERROR_LOG_FILE** | 오류 로그 파일의 위치를 설정합니다. |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>예: 초기 설치
+## <a name="use-with-initial-setup"></a>초기 설치 사용
 
 이 예제에서는 실행 `mssql-conf setup` 사용 하 여 환경 변수를 구성 합니다. 다음 환경 변수를 지정 합니다.
 
@@ -104,7 +104,7 @@ Linux에서 SQL Server 2019 CTP 2.0을 구성 하려면 몇 가지 다른 환경
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>예: Docker
+## <a name="use-with-docker"></a>Docker 사용
 
 이 예제에서는 docker 명령은 새 SQL Server 컨테이너를 만들려면 다음 환경 변수를 사용 합니다.
 

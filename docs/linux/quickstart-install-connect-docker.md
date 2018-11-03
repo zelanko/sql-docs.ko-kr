@@ -4,7 +4,7 @@ description: 이 빠른 시작이에서는 Docker를 사용 하 여 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085289"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753550"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker 사용 하 여 빠른 시작: 실행 SQL Server 컨테이너 이미지
 
@@ -44,8 +44,9 @@ ms.locfileid: "49085289"
 ## <a id="requirements"></a> 사전 요구 사항
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
-- 최소 2GB의 디스크 공간
-- 최소 2GB의 RAM
+- Docker **overlay2** 저장소 드라이버입니다. 이것은 대부분의 사용자에 대 한 기본값입니다. 이 저장소 공급자를 사용 하지 않는 변경 해야 하는 경우, 및를 참조 하십시오 지침에서 경고는 [overlay2 구성에 대 한 docker 설명서](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)합니다.
+- 최소 2gb의 디스크 공간입니다.
+- 최소 2gb의 RAM입니다.
 - [Linux에서 SQL Server에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so

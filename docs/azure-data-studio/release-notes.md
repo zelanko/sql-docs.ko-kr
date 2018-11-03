@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411200"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237069"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 릴리스 정보
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411200"
 
 ## <a name="october-2018-october-release"></a>2018 년 10 월 (10 월 릴리스)
 
-릴리스 날짜: 2018 년 10 월 18 일  
-버전: 1.1.3
+릴리스 날짜: 2018 년 10 월 29 일  
+버전: 1.1.4
 
 - Azure SQL Database를 이동할 Azure 리소스 탐색기를 소개 합니다.
 - 개체 탐색기와 쿼리 편집기에 해당 하는 연결의 견고성을 향상
@@ -32,6 +32,12 @@ ms.locfileid: "49411200"
 - 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>버그 수정
+- 수정 [#2717 발급](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 열으로 된 결과 형식을 클릭
+- 수정 [#2993 발급](https://github.com/Microsoft/azuredatastudio/issues/2993): 너비의 결과 windows 완전 하지 않습니다.
+- 수정 [#2999 발급](https://github.com/Microsoft/azuredatastudio/issues/2999): DB에 연결 하는 경우 Mac에서 System.Diagnostics.Tracing 파일을 로드할 수 없습니다
+- 수정 [#2851 발급](https://github.com/Microsoft/azuredatastudio/issues/2851): 시계열 차트 제대로 렌더링 되지 않습니다.
+- 수정 [#2996 발급](https://github.com/Microsoft/azuredatastudio/issues/2996): 임시 갑자기 세션 변경으로 인해 테이블 손실
+- ...
 
 자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 

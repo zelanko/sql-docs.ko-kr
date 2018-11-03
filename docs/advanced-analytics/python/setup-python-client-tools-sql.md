@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051155"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216627"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>SQL Server Machine Learning 사용에 대 한 Python 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 통합은 Machine Learning Services (In-database) 설치에서 Python 옵션을 포함 하는 경우 SQL Server 2017 이상부터 사용할 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services 설치](../install/sql-machine-learning-services-windows-install.md)합니다.
+Python 통합은 Python 옵션을 포함 하는 경우 SQL Server 2017 이상부터 사용할 수 있습니다는 [Machine Learning Services (In-database) 설치](../install/sql-machine-learning-services-windows-install.md)합니다. 
 
-이 문서에서는 기계 학습 및 Python 통합에 사용할 원격 SQL Server에 연결할 수 있도록 클라이언트 개발 워크스테이션을 구성 하는 방법에 알아봅니다. 끝으로 해야 동일한 Python 라이브러리와 SQL Server의 기능 푸시 계산을 SQL Server에 원격 세션에 대 한 로컬 세션에서 합니다.
+이 문서에서는 기계 학습 및 Python 통합에 사용할 원격 SQL Server에 연결할 수 있도록 Python 클라이언트 개발 워크스테이션을 구성 하는 방법에 알아봅니다. 이 연습에서는 Python 코드를 실행할 Jupyter Notebook을 사용 합니다. 이 문서의 단계를 완료 한 후 SQL Server에 있는 것과 동일한 Python 라이브러리를 해야 합니다. 또한 SQL Server에서 Python의 원격 세션 로컬 Python 세션에서 계산을 푸시하는 방법을 알 수 있습니다.
 
 > [!Tip]
-> 비디오 데모를 참조 하세요 [R 실행 및 Jupyter Notebook에서 SQL Server의 원격 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)합니다.
+> 비디오 데모를 보려면이 문서의 연습을 참조 하세요 [R 실행 및 Jupyter Notebook에서 SQL Server의 원격 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)합니다.
 
 > [!Note]
 > 클라이언트 라이브러리만 설치 하는 대신은 독립 실행형 서버를 사용 합니다. 독립 실행형을 사용 하 여 다양 한 클라이언트와 서버는 더 많은 종단 간 시나리오 작업에 대 한 일부 고객은 선호 하는 옵션입니다. 있는 경우는 [독립 실행형 서버](../install/sql-machine-learning-standalone-windows-install.md) SQL Server 데이터베이스 엔진 인스턴스를 완전히 분리 된 Python 서버가 있는 SQL Server 설치 프로그램에서 제공 합니다. Standalon 서버 Anaconda 및 Microsoft 전용 라이브러리의 오픈 소스 기본 배포를 포함합니다. 이 위치에서 Python 실행 파일을 찾을 수 있습니다: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`합니다. 리치 클라이언트 설치 유효성 검사를 열고을 [Jupyter notebook](#python-tools) 는 Python.exe를 사용 하 여 서버에서 명령을 실행 합니다.
@@ -127,7 +127,7 @@ Python을 사용 하는 데이터베이스의 계정에 대해 다음 권한을 
 
 다음 단계를 시도 하기 전에 SQL Server 인스턴스에 대 한 연결 문자열에 있는 사용 권한이 있는지 확인 합니다 [아이리스 샘플 데이터베이스](../tutorials/demo-data-iris-in-sql.md)합니다. 데이터베이스가 없습니다. 충분 한 권한이 할 수 있습니다 [인라인 참조 하 여 데이터베이스를 만들](#create-iris-remotely)합니다.
 
-연결 문자열을 유효한 값으로 바꿉니다. 샘플 코드를 사용 하 여 `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` 코드 해야 원격 서버를 지정 수 있는 인스턴스 이름을 사용 하지만 합니다.
+연결 문자열을 유효한 값으로 바꿉니다. 샘플 코드를 사용 하 여 `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` 코드 해야 원격 서버를 지정할 수 있습니다는 인스턴스 이름과 데이터베이스 사용자 로그인에 매핑되는 자격 증명 옵션을 사용 하 여 있지만.
 
 ### <a name="define-a-function"></a>함수 정의
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-테이블을 만들고 아이리스 데이터를 로드 하려면 RecoscalePy Api를 사용 합니다.
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-테이블을 만들고 아이리스 데이터를 로드 하려면 Revoscalepy Api를 사용 합니다.
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

@@ -10,12 +10,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae7a2aaed9c1555b890dca68cbfedf027e9e54f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137433"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753500"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
   이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 응용 프로그램은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48137433"
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 이 예제에서 사용하는 테이블을 삭제합니다.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -48,7 +48,7 @@ CREATE TABLE SpatialSample (Name varchar(10), Geog Geography)
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -69,7 +69,7 @@ class direxec {
       HSTMT hstmt;   // Statement Handle  
       SQLHDESC hdesc;   // Descriptor handle  
       SQLCHAR szData[MAX_DATA];   // Returned Data Storage  
-      SDWORD cbData;   // Output Lenght of data   
+      SDWORD cbData;   // Output Length of data   
   
       SQLCHAR szConnStrOut[MAX_DATA + 1];  
       SWORD swStrLen;  
@@ -86,7 +86,7 @@ public:
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-      // Allocate the enviroment handle  
+      // Allocate the environment handle  
       rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
       check_rc(rc);  
   
@@ -211,7 +211,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use tempdb  
 GO  
   

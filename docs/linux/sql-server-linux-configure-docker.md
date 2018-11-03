@@ -4,19 +4,19 @@ description: 사용 하 여 SQL Server 2017 및 2019 CTP 2.0 컨테이너 이미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/02/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 169ca2d6afc9d6061af0021d97062d12f19c9854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596551"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753560"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 

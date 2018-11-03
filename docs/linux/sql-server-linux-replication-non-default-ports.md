@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 21a1ec20733c0f6a5ad05444a65c7df59257b683
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2bbbf6ce5bebed8eecb218fa4cd026de4670f229
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254326"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>기본이 아닌 포트를 사용 하 여 복제를 구성 합니다.
 

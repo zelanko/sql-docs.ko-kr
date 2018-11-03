@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460883"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236939"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -200,5 +200,6 @@ SQL Server Data Tools, 외부 테이블을 별도 폴더에 표시 됩니다 **�
 
 ## <a name="next-steps"></a>다음 단계
 
-PoliyBase에 대 한 자세한 내용은 참조는 [PolyBase 란?](../relational-databases/polybase/polybase-guide.md)합니다. 
+Hadoop 보안 설정 참조 하세요 [Hadoop 보안 구성](polybase-configure-hadoop-security.md)합니다.<br>
+PolyBase에 대한 자세한 내용은 [PolyBase란?](../relational-databases/polybase/polybase-guide.md)을 참조하세요. 
  

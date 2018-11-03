@@ -4,18 +4,18 @@ description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694671"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753590"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694671"
 | [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
 | [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
 | [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
-| [기본 master 데이터베이스 파일 디렉터리](#masterdatabasedir) | 기존 SQL 설치에서 master 데이터베이스 파일용 기본 디렉터리를 변경합니다.|
+| [기본 master 데이터베이스 디렉터리](#masterdatabasedir) | Master 데이터베이스 및 로그 파일용 기본 디렉터리를 변경합니다.|
 | [기본 master 데이터베이스 파일 이름](#masterdatabasename) | Master 데이터베이스 파일의 이름을 변경합니다. |
 | [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일에 대 한 기본 디렉터리를 변경 합니다. |
 | [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 Profiler 추적, 시스템 상태 세션 XE를 및 Hekaton 세션 XE 파일용 기본 디렉터리를 변경합니다. |
@@ -190,7 +190,7 @@ ms.locfileid: "47694671"
 
 ## <a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경
 
-합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다. 
+합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다.
 
 이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
 
@@ -214,13 +214,16 @@ ms.locfileid: "47694671"
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > 마스터 데이터 및 로그 파일을 이동 하는 것 외에도 다른 모든 시스템 데이터베이스의 기본 위치는 이동이 합니다.
+
 1. SQL Server 서비스를 중지 합니다.
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Master.mdf 및 masterlog.ldf를 이동 합니다. 
+1. Master.mdf 및 masterlog.ldf를 이동 합니다.
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ ms.locfileid: "47694671"
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> SQL Server는 지정된 된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면, 시스템 데이터베이스의 템플릿 복사본이 지정된 된 디렉터리에 자동으로 생성 됩니다 및 SQL Server 성공적으로 시작 됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타 데이터를 새 마스터 데이터베이스에서 업데이트 되지 않습니다. SQL Server를 중지 하 고 지정된 된 새 위치에 이전 master.mdf 및 mastlog.ldf 이동할 기존 메타 데이터를 사용 하 여 계속 하려면 SQL Server를 시작 해야 합니다. 
 
+   > [!NOTE]
+   > SQL Server는 지정된 된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면, 시스템 데이터베이스의 템플릿 복사본이 지정된 된 디렉터리에 자동으로 생성 됩니다 및 SQL Server 성공적으로 시작 됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타 데이터를 새 마스터 데이터베이스에서 업데이트 되지 않습니다. SQL Server를 중지 하 고 지정된 된 새 위치에 이전 master.mdf 및 mastlog.ldf 이동할 기존 메타 데이터를 사용 하 여 계속 하려면 SQL Server를 시작 해야 합니다.
+ 
+## <a id="masterdatabasename"></a> Master 데이터베이스 파일의 이름 변경
 
-## <a id="masterdatabasename"></a> Master 데이터베이스 파일의 이름을 변경 합니다.
+합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. Master 데이터베이스 및 로그 파일의 이름을 변경 하려면이 사용할 수도 있습니다. 
 
-합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다. 이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
+이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
 
 1. SQL Server 서비스를 중지 합니다.
 
@@ -251,8 +255,11 @@ ms.locfileid: "47694671"
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > Master 데이터베이스의 이름을 변경 및 SQL Server를 성공적으로 시작 된 후 로그 파일 수 있습니다. 초기 실행 하기 전에 SQL Server에서는 master.mdf 및 mastlog.ldf 이라는 이름으로 파일을 사용 합니다.
 
 1. Master 데이터베이스 데이터 및 로그 파일의 이름 변경 
 
@@ -266,8 +273,6 @@ ms.locfileid: "47694671"
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> 기본 덤프 디렉터리 위치 변경
 

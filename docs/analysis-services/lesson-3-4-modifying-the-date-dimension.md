@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019670"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753570"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>단원 3-4-Date 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "34019670"
   
 5.  **특성** 창의 **Date Key** 특성을 **<new level>** 계층 **창의** English Month Name **수준 아래** 셀에 끌어옵니다.  
   
-6.  **계층** 창에서 **Hierarchy** 계층의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 **Calendar Date**를 입력합니다.  
+6.  에 **계층** 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭 합니다 **계층** 계층 클릭 **이름 바꾸기**, 입력 **Calendar Date**.  
   
 7.  마우스 오른쪽 단추를 클릭하여 사용하는 상황에 맞는 메뉴를 통해 **Calendar Date** 계층에서 **English Month Name** 수준의 이름을 **Calendar Month**로 변경한 다음 **Date Key** 수준의 이름을 **Date**로 변경합니다.  
   
@@ -300,6 +300,6 @@ ms.locfileid: "34019670"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [배포된 큐브 찾아보기](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

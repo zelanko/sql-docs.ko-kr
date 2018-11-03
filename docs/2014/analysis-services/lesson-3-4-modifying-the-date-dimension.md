@@ -11,18 +11,18 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168163"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753580"
 ---
 # <a name="modifying-the-date-dimension"></a>Date 차원 수정
   이 항목의 태스크에서는 사용자 정의 계층을 만들고 Date, Month, Calendar Quarter 및 Calendar Semester 특성에 대해 표시되는 멤버 이름을 변경합니다. 또한 특성에 대한 복합 키를 정의하고 차원 멤버의 정렬 순서를 제어하고 특성 관계도 정의합니다.  
   
 ## <a name="adding-a-named-calculation"></a>명명된 계산 추가  
- 계산 열로 표시되는 SQL 식인 명명된 계산을 데이터 원본 뷰의 테이블에 추가할 수 있습니다. 이 식은 테이블의 열로 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블을 수정하지 않고 데이터 원본 뷰에서 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조하세요.  
+ 계산 열로 표시되는 SQL 식인 명명된 계산을 데이터 원본 뷰의 테이블에 추가할 수 있습니다. 이 식은 테이블의 열로 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블을 수정하지 않고 데이터 원본 뷰에서 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>명명된 계산을 추가하려면  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48168163"
   
 5.  끌어서를 **Date Key** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층** 창 를 아래 합니다 **English Month Name** 수준입니다.  
   
-6.  에 **계층** 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭는 **계층** 계층, 클릭 **이름 바꾸기**, 입력 `Calendar Date`합니다.  
+6.  에 **계층** 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭 합니다 **계층** 계층 클릭 **이름 바꾸기**, 입력 `Calendar Date`.  
   
 7.  마우스 오른쪽 단추 클릭 상황에 맞는 메뉴를 사용 하 여는 `Calendar Date` 계층 이름 바꾸기는 **English Month Name** 수준을 `Calendar Month`, 바꾸고, 합니다 **Date Key** 수준을 `Date`합니다.  
   

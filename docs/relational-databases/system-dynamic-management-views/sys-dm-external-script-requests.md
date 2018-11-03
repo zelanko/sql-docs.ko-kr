@@ -1,7 +1,7 @@
 ---
 title: sys.dm_external_script_requests | Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2016
+ms.date: 10/28/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,27 +19,26 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb5597a9163ac87e9f6c08421025340cf8263b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843471"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743191"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다.
- 
   
 > [!NOTE] 
 >  
->  이 DMV는 외부 스크립트 실행 기능을 지원하는 기능을 설치하고 사용하도록 설정한 경우에만 사용할 수 있습니다. R 스크립트에서 이 작업을 수행하는 방법에 대한 자세한 내용은 [SQL Server R Services 설정](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)을 참조하세요.  
+> 이 동적 관리 뷰 (DMV)는 설치 하 고 외부 스크립트 실행을 지 원하는 기능을 사용 하도록 설정 하는 경우에 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016에서 R Services](../../advanced-analytics/r/sql-server-r-services.md) 하 고 [Machine Learning 서비스 (R, Python) SQL Server 2017의](../../advanced-analytics/what-is-sql-server-machine-learning.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**고유 식별자**|외부 스크립트 요청을 전송한 프로세스 ID입니다. 받은 프로세스 ID에 해당 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|language|**nvarchar**|지원되는 스크립트 언어를 나타내는 키워드입니다. 현재 `R` 만 유일하게 지원됩니다.|  
+|language|**nvarchar**|지원되는 스크립트 언어를 나타내는 키워드입니다. |  
 |degree_of_parallelism|**int**|생성된 병렬 프로세스의 수를 나타내는 숫자입니다. 이 값은 요청된 병렬 프로세스의 수와 다를 수 있습니다.|  
 |external_user_name|**nvarchar**|스크립트가 실행된 Windows 작업자 계정입니다.|  
   
@@ -54,12 +53,11 @@ ms.locfileid: "47843471"
 
 이 뷰는 스크립트 언어 식별자를 사용하여 필터링할 수 있습니다.
 
-또한 이 뷰는 스크립트를 실행하는 작업자 계정을 반환합니다. R 스크립트에서 사용하는 작업자 계정에 대한 자세한 내용은 [R 서비스에 대한 사용자 계정 풀 수정](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md)을 참조하세요.
+또한 이 뷰는 스크립트를 실행하는 작업자 계정을 반환합니다. 외부 스크립트를 사용 하는 작업자 계정에 대 한 자세한 (SQLRUserGroup) 섹션에서 처리에 사용 된 Id 참조 [SQL Server Machine Learning Services의 확장성 프레임 워크에 대 한 보안 개요](../../advanced-analytics/concepts/security.md#sqlrusergroup)합니다.
 
-**external_script_request_id** 필드에서 반환되는 GUID는 또한 임시 파일이 저장되는 보안 디렉터리의 파일 이름을 나타냅니다. MSSQLSERVER01과 같은 작업자 계정은 각각 단일 SQL 로그인 또는 Windows 사용자를 나타내며 여러 스크립트 요청을 실행하는 데 사용할 수 있습니다. 기본적으로 이러한 임시 파일은 요청된 스크립트가 완료된 후 정리됩니다. 디버깅 목적으로 일정 기간 동안 이러한 파일을 유지해야 하는 경우에는 [고급 분석 확장 구성 및 관리](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md) 항목에 설명된 대로 정리 플래그를 변경할 수 있습니다.  
+**external_script_request_id** 필드에서 반환되는 GUID는 또한 임시 파일이 저장되는 보안 디렉터리의 파일 이름을 나타냅니다. MSSQLSERVER01과 같은 작업자 계정은 각각 단일 SQL 로그인 또는 Windows 사용자를 나타내며 여러 스크립트 요청을 실행하는 데 사용할 수 있습니다. 기본적으로 이러한 임시 파일은 요청된 스크립트가 완료된 후 정리됩니다.
  
 이 DMV는 활성 프로세스만 모니터링하며, 이미 완료된 스크립트에 대해서는 보고할 수 없습니다. 스크립트 기간을 추적해야 하는 경우에는 스크립트에 타이밍 정보를 추가하고 스크립트 실행의 일부로 캡처하는 것이 좋습니다.
-
 
 ## <a name="examples"></a>예  
   

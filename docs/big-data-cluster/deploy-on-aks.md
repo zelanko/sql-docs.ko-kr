@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050915"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216683"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>SQL Server 2019 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -27,11 +27,8 @@ AKS를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- AKS environment에 대 한 최소 VM 요구 사항인 두 개 이상의 에이전트 Vm (마스터에 추가 된) 최소 크기인 [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)합니다. VM 당 필요한 최소 리소스는 4 Cpu 및 14GB 메모리입니다.
+- AKS environment에 대 한 최소 VM 요구 사항 4 개 이상의 Cpu와 32GB의 메모리가 각 (마스터) 외에도 두 개 이상의 에이전트 Vm으로 됩니다. Vm에 대 한 여러 크기 옵션을 제공 하는 azure 인프라를 참조 하십시오 [여기](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) 배포 하려는 지역에 대 한 선택 항목에 대 한 합니다.
   
-   > [!NOTE]
-   > 최소 크기는 빅 데이터 작업 또는 여러 Spark 응용 프로그램을 실행 하려는 경우 [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), VM 당 필요한 최소 리소스는 cpu가 8 개 및 32GB의 메모리가 및 합니다.
-
 - 이 섹션에서는 여야 합니다. Azure CLI 버전 2.0.4 실행 이상. 설치 또는 업그레이드를 참조 해야 하는 경우 [Azure CLI 2.0 설치](https://docs.microsoft.com/cli/azure/install-azure-cli)합니다. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
 - 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)합니다. Kubernetes에 대 한, 서버 및 클라이언트에 대 한 SQL Server 빅 데이터 클러스터 1.10 버전 범위의 모든 부 버전을 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. AKS에 대 한 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다. CTP2.0 릴리스 기간에 AKS만 지원함 1.10.7 버전과 1.10.8 참고 합니다. 
@@ -81,7 +78,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```
