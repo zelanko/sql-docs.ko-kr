@@ -6,12 +6,12 @@ description: SQL Server 데이터베이스에서 데이터를 쉽게 쿼리할 �
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 55494c482a0632a3c962a64d5a57a09dd7e9e9ab
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 6506311cd20587ae4db11f99691bcf2639458b18
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336132"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970334"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -81,25 +81,6 @@ ms.locfileid: "49336132"
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li>
-                                <a href="/sql/relational-databases/cursors/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/query-data/cursors.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>커서</h3>
-                                                    <p> 결과 집합 행을 한 번에 하나씩 처리할 수 있습니다. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                             <li>
                                 <a href="/sql/relational-databases/search/full-text-search/">
                                     <div class="cardSize">
