@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411140"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965958"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -28,9 +28,9 @@ ms.locfileid: "49411140"
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 년 10 월 18 일 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 년 10 월 18 일 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 년 10 월 18 일 |1.1.3|
+|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 년 10 월 30 일 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 년 10 월 30 일 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 년 10 월 30 일 |1.1.4|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
@@ -44,7 +44,7 @@ ms.locfileid: "49411140"
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 
-**.zip 파일**
+**zip 파일**
 
 1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2030736)을 다운로드합니다.
 2. 다운로드한 파일을 찾은 다음 압축을 풉니다.
@@ -148,10 +148,19 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>권장 시스템 요구 사항
+최적의 경험, 권장된 시스템 요구 사항을 사용 하세요.
+
+|             | CPU 코어 | 메모리/RAM |
+|:-----------:|:---------:|:----------:|
+| 권장 |     4     |      8     |
+|   최소   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>업데이트 확인
 최신 업데이트를 확인하려면 창 왼쪽 아래에 있는 기어 아이콘을 클릭한 다음 **업데이트 확인**을 클릭합니다.
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>지원 되는 SQL 서비스 (SSMS 18.0을 미리 보기)
+## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
 
 * 이 버전의 Azure 데이터 Studio는 모든 협력 [지원 되는 SQL Server 2014-버전 [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) 하 고 Azure SQL Database 및 Azure SQL Data Warehouse의 최신 클라우드 기능을 사용 하 여 작업에 대 한 지원을 제공 합니다. Azure Data Studio는 또한 Azure SQL 관리 되는 인스턴스에 대 한 미리 보기 지원을 제공합니다.
 

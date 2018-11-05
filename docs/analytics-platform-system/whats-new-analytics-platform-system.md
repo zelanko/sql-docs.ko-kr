@@ -9,17 +9,69 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461108"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237079"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## <a name="aps-cu72"></a>APS CU7.2
+릴리스 날짜-2018 년 10 월
+
+### <a name="support-for-tls-12"></a>TLS 1.2에 대 한 지원
+AP CU7.2 TLS 1.2를 지원합니다. 클라이언트 컴퓨터 AP AP를 노드 간 통신 설정할 수 있는 이제 TLS1.2를 통해서만 통신 합니다. SSDT, SSIS 및 TLS 1.2를 통해서만 통신 하도록 설정 된 클라이언트 컴퓨터에 설치 된 Dwloader와 같은 도구 이제 TLS 1.2를 사용 하 여 AP를 연결할 수 있습니다. 기본적으로 AP는 이전 버전과 호환성에 대 한 모든 TLS (1.0, 1.1 및 1.2) 버전을 지원 합니다. APS 어플라이언스를 설정 하려는 경우 stictly에 TLS 1.2를 사용 하 여, 레지스트리 설정을 변경 하 여 이렇게 수 있습니다. 
+
+참조 [TLS1.2 AP에 구성](configure-tls12-aps.md) 자세한 내용은 합니다.
+
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>Polybase Hadoop 암호화 영역을 지원 합니다.
+PolyBase는 이제 Hadoop 암호화 영역 통신할 수 있습니다. 에 필요한 AP 구성 변경 내용을 확인할 [Hadoop 보안 구성](polybase-configure-hadoop-security.md#encryptionzone)합니다.
+
+### <a name="insert-select-maxdop-options"></a>Insert Select maxdop 옵션
+추가한 것을 [기능 스위치가](appliance-feature-switch.md) insert select 작업에 대해 1 보다 큰 maxdop 설정을 선택할 수 있습니다. 이제 0, 1, 2 또는 4 maxdop 설정을 설정할 수 있습니다. 기본값은 1입니다.
+
+> [!IMPORTANT]  
+> Maxdop 증가 유발 하는 경우도 느린 작업 또는 교착 상태 오류가 발생 합니다. 발생 하는 경우 maxdop 1로 다시 설정을 변경 하 고 작업을 다시 시도 합니다.
+
+### <a name="columnstore-index-health-dmv"></a>ColumnStore 인덱스 상태 DMV
+Columnstore 인덱스 상태 정보를 사용 하 여 볼 수 있습니다 **dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv 합니다. 조각화를 확인 하 고 다시 만들거나 columnstore 인덱스를 다시 구성할 시기를 결정 하려면 다음 보기를 사용 합니다.
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>ORC 및 Parquet 파일에 대 한 PolyBase 날짜 범위 증가
+읽기, 가져오기 및 내보내기 이제 PolyBase를 사용 하 여 날짜 데이터 형식 ORC 및 Parquet 파일 형식에 대 한 날짜 1970-01-01 전후 2038-01-20을 지원 합니다.
+
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>대상으로 SQL Server 2017에 대 한 SSIS 대상 어댑터
+SQL Server 2017 배포 대상에서 다운로드할 수 있습니다 하는 대로를 지 원하는 새 AP SSIS 대상 어댑터 [다운로드 사이트](https://www.microsoft.com/en-us/download/details.aspx?id=57472)합니다.
+
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
 릴리스 날짜-2018 년 7 월
