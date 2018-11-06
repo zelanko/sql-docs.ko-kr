@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851958"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753519"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> 권장 사항: 복구 모델을 변경한 후  
@@ -129,7 +129,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
     -   정기적 데이터베이스 백업이 예약 되어 있는지 확인합니다. 데이터베이스를 백업하는 것은 데이터를 보호하고 트랜잭션 로그의 비활성 부분을 자르는 데 필수적입니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -137,7 +137,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
 -   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [작업을 사용하지 않거나 사용하도록 설정](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   

@@ -1,7 +1,7 @@
 ---
 title: 복제 스냅숏 에이전트 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6553c3531545a17b6a47ad88cb2fbeace845a1b6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: d15b66563af888e38734cc14a975fee4b19a6285
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169386"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237059"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,6 +133,9 @@ snapshot [ -?]
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
 |**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
+
+ > [!NOTE]  
+ >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
   
  자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
   

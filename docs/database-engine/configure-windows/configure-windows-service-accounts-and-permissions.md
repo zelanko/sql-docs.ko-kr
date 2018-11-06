@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0093ef6c277198953a93c8f8f7ba21c17af3ebd
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383808"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237119"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.locfileid: "49383808"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\ReportServer$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 응용 프로그램 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  

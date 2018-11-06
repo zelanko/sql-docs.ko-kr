@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2c03cecb508788e1852ee154d783a8f25320298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411783"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
 
@@ -452,7 +452,7 @@ IF ($restart -eq 1)
 
 분산 트랜잭션이 클러스터된 DTC 리소스를 사용하도록 하려면 두 노드에서 모두 로컬 DTC를 사용하지 않도록 설정합니다.  다음 스크립트는 각 노드에서 로컬 DTC 서비스를 사용하지 않도록 설정하고 중지합니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 
