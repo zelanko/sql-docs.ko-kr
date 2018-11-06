@@ -5,8 +5,7 @@ ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
@@ -15,12 +14,12 @@ ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16c2176b61dba039145e31160a9bbec1021e4d8d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608059"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033313"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 쿼리 저장소 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

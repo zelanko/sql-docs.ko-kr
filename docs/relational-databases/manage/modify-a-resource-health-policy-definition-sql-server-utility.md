@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
@@ -14,12 +13,12 @@ ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a8c0dd9d00f3ba04879ec0c7d4fff16fccc819b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b26249363db9ffb2f90dd25d7663300ebe5d5ede
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685541"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029780"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>리소스 상태 정책 정의 수정(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

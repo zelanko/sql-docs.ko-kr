@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
@@ -15,12 +14,12 @@ ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e6244e3f3ab3d04c24fa54ab7769a0fc707825e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9dd5a0291ebd43ca385a7c432cb0ece9243c819
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732501"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029840"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker Statistics 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPDone (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2989f2dc79574b7a0959ffea5a3ff5988bead882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728121"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031530"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>예제  
  이 예제에서는 **IBCPSession** 인터페이스를 사용하는 방법을 보여 줍니다.  
   
- 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 실행해야 합니다.  
+ 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 실행해야 합니다.  
   
 ```sql  
 create table fltest(col1 int, col2 int, col3 image)  

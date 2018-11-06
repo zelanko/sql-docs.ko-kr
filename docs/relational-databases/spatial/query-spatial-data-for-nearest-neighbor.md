@@ -1,24 +1,22 @@
 ---
 title: 가장 인접한 항목의 공간 데이터 쿼리 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5851318136a1d534ef6a91dd0ef166694708bfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3421dd1189edf648f1e512851223f5baceaef8ff
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663051"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018878"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

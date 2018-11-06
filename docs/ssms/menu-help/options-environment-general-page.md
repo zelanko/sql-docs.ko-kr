@@ -8,19 +8,18 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9911b6ca969a329e72c393b99689867728485be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9908f1dbf2ae0d5d92be9180170f6dff8803bbb4
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745261"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031603"
 ---
 # <a name="options-environment---general-page"></a>옵션(환경 - 일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

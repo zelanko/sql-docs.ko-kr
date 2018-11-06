@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Backup Device
@@ -15,12 +14,12 @@ ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b622b17b19d3fedf192eecc1d976330c685752c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b62410dae31ae76aa70d2c80d92342afe08a1f34
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602751"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033190"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, Backup Device 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

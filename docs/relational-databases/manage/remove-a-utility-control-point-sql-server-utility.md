@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1eb80c3ba2818a0b084721314a9c1e87681a394b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba620742c18f6ca2b6190dc710b7dee474182e2b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724281"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030590"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>유틸리티 제어 지점 제거(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47724281"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  이 절차를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 UCP를 제거하기 전에 다음 요구 사항을 확인하세요. 저장 프로시저는 작업의 일부로 필수 구성 요소 검사를 실행합니다.  

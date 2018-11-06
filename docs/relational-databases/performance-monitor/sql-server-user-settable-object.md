@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
@@ -15,12 +14,12 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40be191181d093b7e32f5f3f7ac0c8ac0c868b23
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609961"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033480"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

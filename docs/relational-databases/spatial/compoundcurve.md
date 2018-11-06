@@ -1,24 +1,22 @@
 ---
 title: CompoundCurve | Microsoft 문서
-ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21d9af33cf8b131d9da5cc2c996f8bedfe4c9677
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cab23e9c1c0515cd0fd49b191928870aeb2184c7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681431"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019038"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -198,5 +196,5 @@ Circle Two12.566370…
  [LineString](../../relational-databases/spatial/linestring.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [Point](../../relational-databases/spatial/point.md)  
+ [점](../../relational-databases/spatial/point.md)  
   
