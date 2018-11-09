@@ -4,7 +4,7 @@ description: 이 빠른 시작이에서는 Docker를 사용 하 여 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753550"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272611"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker 사용 하 여 빠른 시작: 실행 SQL Server 컨테이너 이미지
 
@@ -137,20 +137,20 @@ SELECT @@SERVERNAME,
 
 ## <a id="pullandrun2019"></a> 끌어오고 컨테이너 이미지 실행
 
-1. Docker 허브에서 SQL Server 2019 CTP 2.0 Linux 컨테이너 이미지를 끌어옵니다.
+1. Docker 허브에서 SQL Server 2019 미리 보기 Linux 컨테이너 이미지를 끌어옵니다.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!TIP]
-   > 이 빠른 시작에서는 SQL Server 2019 CTP 2.0 Docker 이미지를 사용 합니다. SQL Server 2017 이미지를 실행 하려는 경우 참조를 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)합니다.
+   > 이 빠른 시작에서는 SQL Server 2019 미리 보기 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행 하려는 경우 참조를 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)합니다.
 
-   이전 명령은 Ubuntu를 기준으로 최신 SQL Server 2019 CTP 2.0 컨테이너 이미지를 끌어옵니다. RedHat 기반 컨테이너 이미지를 대신 사용 하려면 참조 [RHEL 실행 기반 컨테이너 이미지](sql-server-linux-configure-docker.md#rhel)합니다. 특정 이미지를 끌어오려면 콜론 및 태그 이름(예를 들어 `mcr.microsoft.com/mssql/server:2017-GA`)을 추가합니다. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)를 참조하세요.
+   이전 명령에서 Ubuntu 기반 최신 SQL Server 2019 미리 보기 컨테이너 이미지를 가져옵니다. RedHat 기반 컨테이너 이미지를 대신 사용 하려면 참조 [RHEL 실행 기반 컨테이너 이미지](sql-server-linux-configure-docker.md#rhel)합니다. 특정 이미지를 끌어오려면 콜론 및 태그 이름(예를 들어 `mcr.microsoft.com/mssql/server:2017-GA`)을 추가합니다. 사용 가능한 모든 이미지를 보려면 [mssql-server-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)를 참조하세요.
 
    이 문서의 bash 명령에 대 한 `sudo` 사용 됩니다. MacOS에서 `sudo` 필요가 없을 수도 있습니다. Linux에서 사용 하지 않으려면 `sudo` Docker를 실행 하려면 구성할 수 있습니다를 **docker** 그룹화 하 고 해당 그룹에 사용자를 추가 합니다. 자세한 내용은 [Linux에 대 한 사후 설치 단계](https://docs.docker.com/install/linux/linux-postinstall/)합니다.
 
@@ -159,20 +159,20 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!NOTE]
    > 암호는 SQL Server 기본 암호 정책이 따라야 합니다. 그렇지 않으면 컨테이너는 SQL 서버를 설정할 수 없어 작동이 중지됩니다. 기본적으로 암호는 8자 이상이어야 하며 다음 네 집합 중 세 집합의 문자를 포함해야 합니다. 대문자, 소문자, 십진수 숫자 및 기호입니다. [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령을 실행하여 오류 로그를 검사할 수 있습니다.
 
    > [!NOTE]
-   > 기본적으로 SQL Server 2019 CTP 2.0의 Developer edition을 사용 하 여 컨테이너를 만듭니다이 있습니다.
+   > 기본적으로 SQL Server 2019 미리 보기의 Developer edition을 사용 하 여 컨테이너를 만듭니다이 있습니다.
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
@@ -182,7 +182,7 @@ SELECT @@SERVERNAME,
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서는 SQL Server 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1433 포트에 노출 됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
-   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | SQL Server 2019 CTP 2.0 Linux 컨테이너 이미지입니다. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu** | SQL Server 2019 CTP 2.1 Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
