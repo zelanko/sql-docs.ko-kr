@@ -3,18 +3,18 @@ title: 새로운&#39;SQL Server Machine Learning Services의 새로운 | Microso
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712577"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269657"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,9 +103,9 @@ Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 �
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="azure-sql-database-roadmap"></a>Azure SQL Database 로드맵
+## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning에서 Azure SQL Database 서비스
 
-현재 있는지 Machine Learning 서비스 (R 및 Python) Azure SQL Database에서 지원 되지 않습니다. 지원은 로드맵 상에 있지만 출시 될 예정된 날짜 없음이 이번에 있습니다.  
+Machine Learning 서비스 (R)을 사용한 Azure SQL Database의 공개 미리 보기로 제공 됩니다. 자세한 내용은 [빠른 시작: Azure SQL Database (미리 보기)에서 사용 하 여 Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
