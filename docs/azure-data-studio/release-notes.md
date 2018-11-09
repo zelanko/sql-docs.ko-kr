@@ -2,7 +2,7 @@
 title: Azure Data Studio 릴리스 정보 | Microsoft Docs
 description: Azure Data Studio 릴리스 정보
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
-ms.translationtype: MT
+ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237069"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269966"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 릴리스 정보
 
-**[10 월 릴리스를 다운로드 하십시오!](download.md)**
+**[11 월 릴리스를 다운로드 하십시오!](download.md)**
+
+## <a name="november-2018-november-release"></a>2018 년 11 월 (11 월 릴리스)
+
+릴리스 날짜: 2018 년 11 월 6 일  
+버전: 1.2.4
+
+- Idera 확장 소개
+- 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 붙여넣기 계획 확장 소개
+- 하이 컬러 쿼리 확장이 포함 되 면 SSMS 편집기 테마를 소개 합니다.
+- SQL Server 에이전트, Profiler, 및 가져오기 확장의 수정
+- .NET Core 해결 macOS에서 비활성 연결을 삭제 소켓 KeepAlive 문제 발생
+- .NET Core에 SQL 도구 서비스 업그레이드 (지원용 최종 AAD) 2.2 미리 보기 3
+
+### <a name="bug-fixes"></a>버그 수정
+- 수정 [#2933 발급](https://github.com/Microsoft/azuredatastudio/issues/2933): Azure SQL DB에 연결 손실
+- 수정 [#2914 발급](https://github.com/Microsoft/azuredatastudio/issues/2914): OE 데이터베이스 노드를 확장 하는 "잘못 된 인수" 예외
+- 수정 [#2935 발급](https://github.com/Microsoft/azuredatastudio/pull/2935): 쿼리 결과에 여러 줄 메시지를 올바르게 표시
+- 수정 [#2906 발급](https://github.com/Microsoft/azuredatastudio/pull/2906): 데이터를 편집 수정 문서 이름 테이블 이름에 특수 문자가 포함 된 경우
+- 수정 [#2929 발급](https://github.com/Microsoft/azuredatastudio/issues/2929): 빌드된 changelog 라는 확장에서 변경 내용에 대 한 VSCode 릴리스를 확인 하려면
+- 수정 [#2719 발급](https://github.com/Microsoft/azuredatastudio/issues/2719): 고대비 테마 double/삼중 아이콘
+- 수정 [#3047 발급](https://github.com/Microsoft/azuredatastudio/pull/3047): SQL Server에 연결 하기 위한 명령줄 인터페이스를 추가 합니다.
+- 수정 [#3031 발급](https://github.com/Microsoft/azuredatastudio/pull/3031): 쿼리 계획 테마 지원 추가
+- ...
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="october-2018-october-release"></a>2018 년 10 월 (10 월 릴리스)
 
@@ -58,7 +84,7 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
     - Notebook에서 PROSE 코드 Accelerator 라이브러리를 사용 하 여 빠른 데이터 준비에 대 한 파일 형식 및 데이터 형식에 알아봅니다.
   - Azure 리소스 탐색기
     - Azure 리소스 탐색기 보기를 사용 하 여 Azure 계정에 대 한 끝점 관련 된 데이터를 이동 하 고 개체 탐색기에 대 한 연결을 만들 수 있습니다. 이 릴리스에서 Azure SQL Database 및 서버 지원 됩니다.
-  - SQL Server Polybase 외부 테이블 마법사 만들기
+  - SQL Server PolyBase 외부 테이블 마법사 만들기
     - 사용이 간편한 마법사를 사용 하 여 외부 테이블 및 지 원하는 메타 데이터 구조를 만듭니다. 이 릴리스에서 원격 SQL Server 및 Oracle 서버는 지원 됩니다.
 - 쿼리 결과 표 성능 및 많은 수의 결과 집합에 대 한 UX 향상 합니다.
 - 모눈 레이아웃 및 설정 편집기 개선 (미리 보기)를 사용 하 여 1.26.1를 1.23에서 visual Studio Code 소스 코드 새로 고칩니다.

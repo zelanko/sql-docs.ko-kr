@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050845"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221609"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
 
-주요 시나리오 중 하나에 SQL Server 2019 CTP 2.0에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
+주요 시나리오 중 하나에 SQL Server 2019 CTP 2.1에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
 ## <a name="prerequisite"></a>사전 요구 사항 
 SQL Server에 대 한 빅 데이터 도구를 설치 하 고 Spark 작업을 제출할 수 있습니다 빅 데이터 클러스터에 연결 합니다. 설치 세부 정보에 대 한 링크를 참조 [빅 데이터 도구 배포](deploy-big-data-tools.md)합니다.
