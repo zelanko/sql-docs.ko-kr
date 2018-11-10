@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411733"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ SQL PowerShell 업데이트를 제공하기 위해 SQL PowerShell 모듈의 ID�
 
 **SQLPS 모듈을 가져오는 PowerShell 스크립트를 업데이트하세요.**
 
-`Import-Module -Name SQLPS`를 실행하는 PowerShell 스크립트가 있다면 새로운 공급자 기능과 새로운 cmdlet을 활용하는 것이 좋으며 이를 `Import-Module -Name SqlServer`로 변경해야 합니다. 새 모듈은 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 폴더에 설치됩니다. 따라서 $env:PSModulePath 변수를 업데이트할 필요가 없습니다. **SqlServer**라는 타사 또는 커뮤니티 버전의 모듈을 사용하는 스크립트가 있다면 Prefix 매개 변수를 사용하여 이름 충돌을 방지하세요. SQL Server 에이전트에서 사용하는 모듈에 대한 변경 사항은 없습니다. 
+`Import-Module -Name SQLPS`를 실행하는 PowerShell 스크립트가 있다면 새로운 공급자 기능과 새로운 cmdlet을 활용하는 것이 좋으며 이를 `Import-Module -Name SqlServer`로 변경해야 합니다. 새 모듈은 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 폴더에 설치됩니다. 따라서 $env:PSModulePath 변수를 업데이트할 필요가 없습니다. **SqlServer**라는 타사 또는 커뮤니티 버전의 모듈을 사용하는 스크립트가 있다면 Prefix 매개 변수를 사용하여 이름 충돌을 방지하세요.
 
-  
+SQL Server 에이전트에서 사용하는 모듈에 대한 변경 사항은 없습니다. 따라서 PowerShell 형식의 작업 단계에서는 SQLPS 모듈을 사용합니다. 자세한 내용은 [SQL Server 에이전트에서 PowerShell을 실행하는 방법](run-windows-powershell-steps-in-sql-server-agent.md)을 참조하세요.
+
+
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 구성 요소  
 **SqlServer** 모듈은 두 개의 Windows PowerShell 스냅인을 로드합니다.  
   

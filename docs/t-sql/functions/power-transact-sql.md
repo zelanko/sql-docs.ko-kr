@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838991"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743178"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  *float_expression*의 거듭제곱입니다. *y*는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- *float_expression*에서 제출된 것과 동일한 형식을 반환합니다. 예를 들어 **십진수**(2,0)가 *float_expression*으로 제출되면 반환되는 결과는 **십진수**(2,0)입니다.  
+ 반환 형식은 *float_expression*의 입력 형식에 따라 달라집니다.
+ 
+|입력 형식|반환 형식|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**10진수(*p*, *s*)**|**10진수(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+결과가 반환 형식에 맞지 않으면 산술 오버플로 오류가 발생합니다.
   
 ## <a name="examples"></a>예  
   

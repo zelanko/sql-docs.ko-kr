@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SqlServiceType Property (SqlService Class)
@@ -19,12 +18,12 @@ ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52d7ded99c82d12aa0ae4165fd63ca522e8a7cb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f305987c748f71614d640e61d9b76b12bb0f72ff
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597631"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216751"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ object.SqlServiceType [= value]
   
 |형식|정의|  
 |----------|----------------|  
-|*1.*|MSSQLSERVER는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스입니다.|  
+|*1*|MSSQLSERVER는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스입니다.|  
 |*2*|SQLSERVERAGENT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스입니다.|  
 |*3*|MSFTESQL은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 전체 텍스트 검색 엔진 서비스입니다.|  
 |*4*|MsDtsServer는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 서비스입니다.|  

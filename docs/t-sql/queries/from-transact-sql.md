@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753431"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966041"
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>APPLY 사용  
  APPLY 연산자의 좌우 피연산자는 모두 테이블 식입니다. 이러한 피연산자 간의 주요 차이점은 *right_table_source*에서 *left_table_source*의 열을 함수의 인수 중 하나로 사용하는 테이블 반환 함수를 사용할 수 있다는 것입니다. *left_table_source*는 테이블 반환 함수를 포함할 수 있지만 *right_table_source*의 열인 인수는 포함할 수 없습니다.  
   
- APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블 원본을 생성합니다.  
+APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블 원본을 생성합니다.  
   
 1.  *left_table_source*의 각 행에 대해 *right_table_source*를 평가하여 행 집합을 생성합니다.  
   
-     *right_table_source*의 값은 *left_table_source*에 따라 달라집니다. *right_table_source*는 대략 `TVF(left_table_source.row)`와 같이 표현될 수 있습니다. 여기서 `TVF`는 테이블 반환 함수입니다.  
+    *right_table_source*의 값은 *left_table_source*에 따라 달라집니다. *right_table_source*는 대략 `TVF(left_table_source.row)`와 같이 표현될 수 있습니다. 여기서 `TVF`는 테이블 반환 함수입니다.  
   
 2.  UNION ALL 연산을 수행하여 *right_table_source*를 평가할 때 각 행에 대해 생성된 결과 집합을 *left_table_source*와 결합합니다.  
   
-     APPLY 연산자의 결과로 생성된 열 목록은 *right_table_source*의 열 목록과 결합된 *left_table_source*의 열 집합입니다.  
+    APPLY 연산자의 결과로 생성된 열 목록은 *right_table_source*의 열 목록과 결합된 *left_table_source*의 열 집합입니다.  
   
 ## <a name="using-pivot-and-unpivot"></a>PIVOT 및 UNPIVOT 사용  
  *pivot_column* 및 *value_column*은 PIVOT 연산자에서 사용되는 그룹화 열입니다. PIVOT은 다음과 같은 방식으로 출력 결과 집합을 가져옵니다.  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>11. APPLY 사용  
- 다음 예에서는 다음 스키마를 가진 테이블이 데이터베이스에 존재하는 것으로 가정합니다.  
+다음 예제에서는 다음 테이블 및 테이블 반환 함수가 데이터베이스에 존재한다고 가정합니다.  
+
+|개체 이름|열 이름|      
+|---|---|   
+|부서|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+`GetReports` 테이블 반환 함수는 지정된 `MgrID`에 직접 또는 간접적으로 보고하는 모든 직원의 목록을 반환합니다.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- 또 다른 테이블 반환 함수인 `GetReports(MgrID)`는 지정된 `EmpID`에 직접 또는 간접적으로 보고하는 모든 직원의 목록(`EmpLastName`, `EmpSalary`, `MgrID`)을 반환합니다.  
-  
- 이 예에서는 `APPLY`를 사용하여 모든 부서와 해당 부서의 모든 직원을 반환합니다. 특정 부서에 직원이 한 명도 없으면 해당 부서에 대해서는 행이 반환되지 않습니다.  
+이 예에서는 `APPLY`를 사용하여 모든 부서와 해당 부서의 모든 직원을 반환합니다. 특정 부서에 직원이 한 명도 없으면 해당 부서에 대해서는 행이 반환되지 않습니다.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- 쿼리가 직원이 없는 부서의 행도 생성하도록 하려면 `EmpID`를 사용하세요. 이 때 `EmpLastName`, `EmpSalary` 및 `OUTER APPLY` 열에 대해서는 Null 값이 생성됩니다.  
+쿼리가 직원이 없는 부서의 행도 생성하도록 하려면 `EmpID`를 사용하세요. 이 때 `EmpLastName`, `EmpSalary` 및 `OUTER APPLY` 열에 대해서는 Null 값이 생성됩니다.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>12. CROSS APPLY 사용  
- 다음 예제는 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색함으로써 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색합니다. 그런 다음 `CROSS APPLY`에 계획 핸들을 전달할 `sys.dm_exec_query_plan` 연산자를 지정합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
+다음 예제는 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색함으로써 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색합니다. 그런 다음 `CROSS APPLY`에 계획 핸들을 전달할 `sys.dm_exec_query_plan` 연산자를 지정합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
   
 ```sql
 USE master;  

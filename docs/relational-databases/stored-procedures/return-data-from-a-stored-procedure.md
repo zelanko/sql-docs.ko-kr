@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411793"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383768"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>결과 집합을 사용하여 데이터를 반환하는 예제 
   다음 예제에서는 vEmployee 보기에도 표시되는 모든 SalesPerson 행에 LastName 및 SalesYTD 값을 반환하는 저장 프로시저를 보여줍니다.
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>출력 매개 변수의 예  
  다음 예에서는 입력 및 출력 매개 변수가 있는 프로시저를 보여 줍니다. `@SalesPerson` 매개 변수는 호출 프로그램이 지정한 입력 값을 받습니다. SELECT 문은 입력 매개 변수에 전달된 값을 사용하여 정확한 `SalesYTD` 값을 가져옵니다. 또한 SELECT 문은 `@SalesYTD` 출력 매개 변수에 값을 할당하여 해당 프로시저가 종료될 때 호출 프로그램으로 값을 반환합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  다음 예에서는 첫 번째 예에 생성된 프로시저를 호출하고 호출 프로그램의 지역 변수인 `@SalesYTD` 변수의 호출된 프로시저로부터 반환된 출력 값을 저장합니다.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  먼저 선언된 프로시저를 만들고 Currency 테이블에서 커서를 엽니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  다음으로 지역 커서 변수를 선언하는 일괄 처리를 실행하고, 지역 변수에 커서를 할당하는 프로시저를 실행한 다음, 커서에서 행을 인출합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,12 +177,12 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>반환 코드를 사용하여 데이터 반환  
  프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. RETURN 문을 사용하여 프로시저의 반환 코드를 지정할 수 있습니다. OUTPUT 매개 변수에서와 같이 프로시저가 실행될 때 호출 프로그램에서 사용할 수 있도록 반환 코드 값을 변수에 저장해야 합니다. 예를 들어 `@result` int **데이터 형식의** 할당 변수는 다음과 같은 `my_proc`프로시저의 반환 코드를 저장하는 데 사용됩니다.  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  TSQL에서 TRY/CATCH/THROW 오류 처리를 사용하기 전에 저장 프로시저의 성공 여부를 확인하기 위해 종종 반환 코드가 필요합니다.  저장 프로시저는 항상 오류(필요한 경우 THROW/RAISERROR를 사용하여 생성됨)와 함께 오류를 표시하고 오류를 표시하기 위해 반환 코드를 사용하지 않습니다.  또한 응용 프로그램 데이터를 반환하기 위해 반환 코드를 사용하지 않도록 방지해야 합니다.
+ 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  TSQL에서 TRY/CATCH/THROW 오류 처리를 사용하기 전에 저장 프로시저의 성공 여부를 확인하기 위해 종종 반환 코드가 필요합니다.  저장 프로시저는 항상 오류(필요한 경우 THROW/RAISERROR를 사용하여 생성됨)와 함께 실패를 표시하고 오류를 표시하는 반환 코드를 사용하지 않습니다.  또한 응용 프로그램 데이터를 반환하기 위해 반환 코드를 사용하지 않도록 방지해야 합니다.
   
 ### <a name="examples-of-return-codes"></a>반환 코드의 예  
  다음 예에서는 여러 오류에 대한 특정 반환 코드 값을 설정하는 오류 처리가 포함된 `usp_GetSalesYTD` 프로시저를 보여 줍니다. 다음 표에서는 발생 가능한 각 오류에 프로시저에서 할당한 정수 값 및 각 값에 해당하는 의미를 보여 줍니다.  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|판매량을 가져오는 동안 오류가 발생했습니다.|  
 |4|판매 직원의 NULL 판매량을 찾았습니다.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  다음 예에서는 `usp_GetSalesYTD` 프로시저에서 반환되는 반환 코드를 처리하기 위한 프로그램을 만듭니다.  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

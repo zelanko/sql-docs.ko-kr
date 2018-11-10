@@ -22,17 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32984277ce15362335bcf528e0946914986ba382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f962317b7695d705d64652d6a5fa43db774802d2
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793621"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970478"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. IF 키워드 및 조건 다음에 이어지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 부울 식이 TRUE를 반환하는 경우 즉, 조건이 만족되는 경우 실행됩니다. ELSE 키워드는 선택적이며 IF 조건이 만족되지 않는 경우 즉, 부울 식이 FALSE를 반환하는 경우 실행될 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동반합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. IF 키워드 및 조건 다음에 이어지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 부울 식이 TRUE를 반환하는 경우 즉, 조건이 만족되는 경우 실행됩니다. ELSE 키워드는 선택적이며 IF 조건이 만족되지 않는 경우 즉, 부울 식이 FALSE를 반환하는 경우 실행될 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동반합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

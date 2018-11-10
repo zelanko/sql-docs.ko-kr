@@ -47,17 +47,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780811"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970694"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
   
 -   입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로시저 또는 일괄 처리에 반환합니다.  
   

@@ -13,17 +13,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3adba9ae1492c14f5e4e72dd8bc7f3c94522759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d3a1899234656f03572d4e5c0d4c54722e8d93d
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719151"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971064"
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL 관계형 데이터베이스를 사용하기 위한 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 섹션에서는 Microsoft SQL 관계형 데이터베이스, 데이터베이스 개체, 데이터 형식, 그리고 데이터 작업 및 관리에 사용되는 메커니즘과 관련된 기능 및 태스크를 다룹니다. 이 정보는 대부분의 버전에 공통적으로 적용 된 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]합니다. 개별 항목을 일부 기능은 일부 플랫폼으로 제한 됩니다 나타낼 수 있습니다. 특정 플랫폼에 대 한 자세한 내용은 다음 링크를 참조 합니다: 
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+이 섹션에서는 Microsoft SQL 관계형 데이터베이스, 데이터베이스 개체, 데이터 형식, 그리고 데이터 작업 및 관리에 사용되는 메커니즘과 관련된 기능 및 태스크를 다룹니다. 이 정보는 대부분의 버전에 공통적으로 적용 된 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]합니다. 개별 항목을 일부 기능은 일부 플랫폼으로 제한 됩니다 나타낼 수 있습니다. 특정 플랫폼에 대 한 자세한 내용은 다음 링크를 참조 합니다: 
   
 - [온-프레미스 SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) 및 [SQL Server 구성](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  

@@ -29,17 +29,20 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411210"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970514"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 발생할 때 이러한 트리거가 발생합니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 발생할 때 이러한 트리거가 발생합니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
   
  DDL 트리거는 다양한 DDL(데이터 정의 언어) 이벤트에 대한 응답으로 실행됩니다. 이러한 이벤트는 주로 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER 및 DROP 문, DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에 해당합니다. LOGON 트리거는 사용자 세션이 설정될 때 발생하는 LOGON 이벤트에 대한 응답으로 실행됩니다. 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문으로 직접 만들거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서 만들어지고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되는 어셈블리의 메서드로 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 특정 문에 대한 여러 트리거를 만들 수 있습니다.  
   

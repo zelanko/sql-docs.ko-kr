@@ -28,15 +28,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab79910472860ed7986621c095a4ccc939a2b3af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596651"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970534"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 이 함수는 지정한 *date*의 지정한 *datepart*를 나타내는 정수를 반환합니다.
   

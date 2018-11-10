@@ -24,15 +24,19 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09b339293e7dff650a7c91850d745b9c580f856e
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 20dbf5e89a29c7a92cb3c8172cb037f0983203ec
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419258"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971074"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 SSMS는 SQL Server에서 Azure SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
 
 로컬 컴퓨터 또는 클라우드 등 어디에서나 SSMS(SQL Server Management Studio)를 사용하여 데이터베이스 및 데이터 웨어하우스를 쿼리, 디자인 및 관리할 수 있습니다.

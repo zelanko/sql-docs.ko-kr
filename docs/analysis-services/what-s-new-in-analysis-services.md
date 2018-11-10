@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 
 특히 SQL Server 2016 SP1 Analysis Services는 다음과 같은 주요 영역에서 향상된 기능을 제공합니다.
 
--   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은&4;개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2노드 시스템에서는 할당된 원격 메모리에 액세스하는 비용이 일반적으로 NUMA 고유 정보를 관리하는 오버헤드를 보증하지 않습니다.
+-   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은 4 개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2노드 시스템에서는 할당된 원격 메모리에 액세스하는 비용이 일반적으로 NUMA 고유 정보를 관리하는 오버헤드를 보증하지 않습니다.
 -   **메모리 할당** - Analysis Services는 모든 코어에 별도의 메모리 풀을 제공하는 확장 가능한 할당자인 Intel Threading Building Blocks로 가속화되었습니다. 코어 수가 증가하면 시스템이 거의 선형으로 확장됩니다.
 -   **힙 조각화** - 또한 Intel TBB 기반의 확장 가능한 할당자를 사용하면 Windows 힙에서 발생하는 것으로 나타난 힙 조각화로 인한 성능 문제를 완화할 수 있습니다.
 
@@ -139,7 +139,7 @@ refresh|개체를 처리합니다. ASSL에서는 PROCESS에 해당합니다.
 ### <a name="dax-variables"></a>DAX 변수    
 이번 릴리스에서는 DAX의 변수를 지원합니다. 이제 나중에 다른 측정값 식에 인수로 전달될 수 있는 명명된 변수로 식의 결과를 저장할 수 있습니다. 일단 변수 식에 대한 결과 값이 계산되면 변수가 다른 식에서 참조되더라도 해당 값은 변경되지 않습니다. 자세한 내용은 [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx)(VAR 함수)을 참조하세요.    
 ### <a name="new-dax-functions"></a>새로운 DAX 함수
-이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해&50;가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](http://msdn.microsoft.com/library/mt704075.aspx)를 참조하세요.
+이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해 50 가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](http://msdn.microsoft.com/library/mt704075.aspx)를 참조하세요.
 ### <a name="save-incomplete-measures"></a>완료되지 않은 측정값 저장
 완료되지 않은 DAX 측정값을 테이블 형식 1200 모델 프로젝트에 직접 저장하고 계속할 수 있을 때 다시 선택할 수 있습니다.
 ### <a name="additional-dax-enhancements"></a>DAX의 추가 기능 향상

@@ -21,15 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8e1f69d90c73aa7b8b6a6dbfba9f8f7092d2215
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60de5eb3816f6cc38eda9c92ff3b4681f8fe0e17
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806191"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970624"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 이 항목의 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜/시간 데이터 형식 및 함수를 다룹니다.
 -   [날짜 및 시간 데이터 형식](#DateandTimeDataTypes)  

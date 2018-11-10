@@ -4,19 +4,21 @@ description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 603e84f3f4e1e27052df6996ae06933ace585c0f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226285"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221709"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
 
 부터 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server 빅 데이터 클러스터를 사용 하면 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포 합니다. 이러한 구성 요소는 읽기, 쓰기, 및 TRANSACT-SQL 또는 Spark의 빅 데이터 처리, 결합 및 대규모 빅 데이터를 사용 하 여 높은 가치의 관계형 데이터에 분석 있게 할 수 있도록 나란히 실행 됩니다.
+
+새로운 기능 및 최신 릴리스의 알려진된 문제에 대 한 자세한 내용은 참조는 [릴리스](big-data-cluster-release-notes.md)합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

@@ -22,17 +22,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f577d2176ca4fc8380f68026222d306e3ae4113a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775451"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970904"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  결과 집합의 출력 번호를 지정합니다. 보다 구체적으로는, 결과 집합 파티션 내의 행 일련 번호를 반환합니다. 각 파티션의 첫 번째 행은 1로 시작합니다. 
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+결과 집합의 출력 번호를 지정합니다. 보다 구체적으로는, 결과 집합 파티션 내의 행 일련 번호를 반환합니다. 각 파티션의 첫 번째 행은 1로 시작합니다. 
   
 `ROW_NUMBER`와 `RANK`는 유사합니다. `ROW_NUMBER`는 모든 행의 번호를 순차적으로 지정합니다(예: 1, 2, 3, 4, 5). `RANK`는 순위 동률(예: 1, 2, 2, 4, 5)에 대해 동일한 숫자 값을 제공합니다.   
   

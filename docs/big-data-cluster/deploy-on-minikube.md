@@ -4,15 +4,15 @@ description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050785"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221576"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성
 
@@ -20,7 +20,7 @@ ms.locfileid: "50050785"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- Minikube 클러스터 SQL Server 2019 CTP 2.0에 대 한 SQL 빅 데이터 클러스터 구성에서를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
+- Minikube 클러스터 SQL Server 2019 CTP 2.1에 대 한 SQL 빅 데이터 클러스터 구성에서를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
 
    > [!TIP] 
    > 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#define-environment-variables) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
@@ -44,7 +44,7 @@ ms.locfileid: "50050785"
 
 ## <a name="install-minikube"></a>Minikube를 설치 합니다.
 
-에 대 한 지침에 따라 Minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 CTP 2.0 빅 데이터 클러스터 버전 v0.24.1와 등록에 작동합니다.
+에 대 한 지침에 따라 Minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 CTP 2.1 빅 데이터 클러스터 버전 v0.24.1와 등록에 작동합니다.
 
 ## <a name="create-a-minikube-cluster"></a>Minikube 클러스터 만들기
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 이 문서의 단계 Minikube 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
-[SQL Server 2019 CTP 2.0 Kubernetes에 배포](deployment-guidance.md#deploy)
+[SQL Server 2019 CTP 2.1 Kubernetes에 배포](deployment-guidance.md#deploy)

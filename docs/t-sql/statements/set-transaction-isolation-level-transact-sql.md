@@ -28,17 +28,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100284"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970564"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 연결하여 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 잠금 및 행 버전 관리 기능을 제어합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)]에 연결하여 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 잠금 및 행 버전 관리 기능을 제어합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

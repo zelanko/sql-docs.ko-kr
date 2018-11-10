@@ -27,17 +27,20 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aa8fce2f2579f792abc78b8837e4a33e090f806e
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 983a09448d1f78b67b1df4d7874be762d746c668
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100484"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970398"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 지정한 형식으로 데이터베이스 테이블이나 뷰로 가져옵니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 지정한 형식으로 데이터베이스 테이블이나 뷰로 가져옵니다.  
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

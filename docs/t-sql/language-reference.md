@@ -16,15 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641661"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970764"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 참조(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 이 토픽에서는 Microsoft Transact-SQL(T-SQL) 참조 토픽을 찾고 사용하는 방법에 대한 기본 사항을 제공합니다. T-SQL은 Microsoft SQL 제품 및 서비스를 사용하는데 있어 핵심입니다. SQL 데이터베이스와 통신하는 모든 도구와 응용 프로그램은 T-SQL 명령을 보내서 수행합니다.  
 

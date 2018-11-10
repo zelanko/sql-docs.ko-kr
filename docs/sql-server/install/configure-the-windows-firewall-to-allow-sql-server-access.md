@@ -23,15 +23,18 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 516732cacc3f5f34b7faa1eecd31e82cd286fa61
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 936daeb3e47c4acf57b3bc519f410861c4248945
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383728"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971004"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   

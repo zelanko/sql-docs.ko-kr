@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  인스턴스 이름입니다. *instance_name* 됩니다 **sysname** 이며 null 인 경우 로컬 인스턴스가 기본값으로 합니다.  
   
-> **참고:***instance_name* 되는 컴퓨터 이름과 인스턴스 이름 형식으로 이루어진 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.    
+> **참고:** *instance_name* 되는 컴퓨터 이름과 인스턴스 이름 형식으로 이루어진 정규화 된 인스턴스 이름 이어야 합니다 *computerName* \\ *instanceName*합니다.    
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

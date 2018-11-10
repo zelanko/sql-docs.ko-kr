@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806633"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757958"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Teradata의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -27,28 +27,29 @@ ms.locfileid: "49806633"
 
 PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.md)를 참조하세요. 설치 문서에서는 필수 구성 요소를 설명합니다.
 
-Teradatan에서 PolyBase를 사용하려면 VC++ 재배포 가능 패키지가 필요합니다.
+Teradata에서 PolyBase를 사용하려면 VC++ 재배포 가능 패키지가 필요합니다.
  
 ## <a name="configure-an-external-table"></a>외부 테이블 구성
 
 Teradata 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다. 이 섹션에서는 이러한 외부 테이블을 만들기 위한 샘플 코드를 제공합니다. 
 
-이 섹션에서는 다음 개체를 만듭니다.
+이 섹션에서 이러한 개체를 만듭니다.
 
 - CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE(Transact-SQL) 
 - CREATE EXTERNAL TABLE(Transact-SQL) 
 - CREATE STATISTICS(Transact-SQL)
 
-1. 데이터베이스에 마스터 키가 없는 경우 하나 만듭니다. 이 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
+1. 마스터 키가 없는 경우 데이터베이스에 마스터 키를 만듭니다. 마스터 키는 자격 증명 비밀을 암호화하는 데 필요합니다.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>인수
+    **인수**
+
     PASSWORD ='password'
 
-    데이터베이스의 마스터 키를 암호화하는 데 사용되는 암호입니다. password는 SQL Server의 인스턴스를 호스팅하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.
+    데이터베이스의 마스터 키를 암호화하는 데 사용되는 암호인가요? 암호는 SQL Server 인스턴스를 호스팅하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.
 
 1. 데이터베이스 범위 자격 증명을 만듭니다.
  
@@ -78,7 +79,7 @@ Teradata 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 �
 
      ```
 
-1.  외부 Teradata 시스템에 저장된 데이터를 나타내는 외부 테이블을 만듭니다. [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+1.  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 외부 Teradata 시스템에 저장된 데이터를 나타내는 외부 테이블을 만듭니다.
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ Teradata 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 �
      );
      ```
 
-1. **선택 사항:** 외부 테이블에 대한 통계를 만듭니다.
+1. *선택 사항:* 외부 테이블에 대한 통계를 만듭니다.
 
-    최적의 쿼리 성능을 위해서는 특히 조인, 필터 및 집계에 사용되는 외부 테이블 열에 대해 통계를 만드는 것이 좋습니다.
+    최적의 쿼리 성능을 위해서는 특히 조인, 필터 및 집계에 사용되는 외부 테이블 열에 대해 통계를 만듭니다.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

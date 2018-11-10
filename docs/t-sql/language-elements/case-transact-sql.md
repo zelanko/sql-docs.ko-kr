@@ -22,17 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a09b5e3dfcc3d9a28d6d5373319606f64b8a7eff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f62721f4efe8eb76c6f67679e0a8a0f3a0c49687
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807351"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970657"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  조건 목록을 평가하고 가능한 여러 결과 식 중 하나를 반환합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+조건 목록을 평가하고 가능한 여러 결과 식 중 하나를 반환합니다.  
   
  CASE 식에는 두 가지 형식이 있습니다.  
   

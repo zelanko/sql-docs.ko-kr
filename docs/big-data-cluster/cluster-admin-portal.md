@@ -4,15 +4,15 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 모�
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356054"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221469"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>클러스터 관리 포털 소개
 
@@ -32,7 +32,7 @@ ms.locfileid: "49356054"
 컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
 
 > [!NOTE]
-> CTP 2.0에 대 한 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
+> CTP 2.1에 대 한 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
 
 ## <a name="overview"></a>개요
 
@@ -87,7 +87,7 @@ ms.locfileid: "49356054"
 
 모든 풀 페이지 (계산, 저장소 및 데이터)에서 드릴 다운할 수 있습니다 각 pod 페이지를 클릭 하 여 **기본**
 
-![pod](./media/cluster-admin-portal/portal-data-default-pool.png)
+![Pod](./media/cluster-admin-portal/portal-data-default-pool.png)
 
 드릴 다운 경로 맨 위에서 breadcrumb 보여 줍니다.
 

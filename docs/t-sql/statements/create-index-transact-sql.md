@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777731"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971034"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 테이블 또는 뷰에 관계 인덱스를 만듭니다. 이 인덱스는 클러스터형 또는 비클러스터형 B-트리 인덱스이므로 rowstore 인덱스라고도 합니다. 테이블에 데이터가 채워지기 전에 rowstore 인덱스를 만들 수 있습니다. 특히 쿼리가 특정 열에서 값을 선택하거나 값을 특정 순서로 정렬해야 하는 경우 rowstore 인덱스를 사용하여 쿼리 성능을 개선할 수 있습니다.  
   
@@ -652,7 +656,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 > 테이블이 분할된 경우 분할 키 열이 비고유 클러스터형 인덱스에 아직 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 해당 열이 인덱스에 추가됩니다. 인덱싱된 열(포함 열 제외)과 추가된 분할 열의 결합된 크기는 비고유 클러스터형 인덱스에서 1,800바이트를 초과할 수 없습니다.  
   
 ## <a name="computed-columns"></a>계산 열  
- 계산 열에 인덱스를 만들 수 있습니다. 또한 계산 열은 PERSISTED 속성을 가질 수 있습니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다.  
+ 계산 열에 인덱스를 만들 수 있습니다. 또한 계산 열은 PERSISTED 속성을 가질 수 있습니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다.  
   
  계산 열을 인덱싱하려면 계산 열이 결정적이고 정확해야 합니다. 그러나 PERSISTED 속성을 사용하면 인덱싱할 수 있는 계산 열 유형이 다음을 포함하도록 확장할 수 있습니다.  
   
@@ -828,7 +832,7 @@ WITH ( DROP_EXISTING = ON );
 ## <a name="examples-sql-server-azure-sql-database"></a>예제: SQL Server, Azure SQL Database  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>5. 고유한 비클러스터형 인덱스 만들기  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Name` 테이블의 `Production.UnitMeasure` 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.  
+ 다음 예에서는 `Name` 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.  
   
 ```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
@@ -914,7 +918,7 @@ Number of rows
  `Production.UnitMeasure` 테이블에서 오직 한 행만 `UNIQUE` 인덱스 제약 조건을 위반했지만 이 테이블에서 어떤 행도 삽입되지 않았습니다.  
   
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>7. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기  
- 다음 예에서는 `ProductID` 옵션을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.WorkOrder` 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.  
+ 다음 예에서는 `ProductID` 옵션을 사용하여 `Production.WorkOrder` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.  
   
 ```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
@@ -988,7 +992,7 @@ GO
 ```  
   
 ### <a name="j-create-a-partitioned-index"></a>10. 분할된 인덱스 만들기  
- 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 기존 파티션 구성표인 `TransactionsPS1`에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.  
+ 다음은 `TransactionsPS1` 데이터베이스에 있는 기존 파티션 구성표인 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   

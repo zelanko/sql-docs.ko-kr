@@ -25,17 +25,20 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4aa14bf055805a7dc779fe6c489694d2d0815934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696371"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970524"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 수행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화할 수 있습니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 수행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화할 수 있습니다.  
   
  **성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상시킬 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
@@ -411,7 +414,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>3. MERGE를 사용하여 파생된 원본 테이블을 통해 대상 테이블에 UPDATE 및 INSERT 작업 수행  
- 다음 예에서는 MERGE를 사용하여 행을 업데이트하거나 삽입하는 방식으로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesReason` 테이블을 수정합니다. 원본 테이블의 `NewName` 값이 대상 테이블 `Name`의 `SalesReason` 열에 있는 값과 일치하는 경우 대상 테이블에서 `ReasonType` 열이 업데이트됩니다. `NewName` 값이 일치하지 않으면 원본 행이 대상 테이블에 삽입됩니다. 원본 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하여 원본 테이블의 여러 행을 지정하는 파생 테이블입니다. 파생 테이블에서 테이블 값 생성자를 사용하는 방법에 대한 자세한 내용은 [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)을 참조하세요. 또한 이 예에서는 OUTPUT 절의 결과를 테이블 변수에 저장한 다음 삽입되거나 업데이트된 행의 개수를 반환하는 단순한 SELECT 작업을 수행하여 MERGE 문의 결과를 요약합니다.  
+ 다음 예에서는 MERGE를 사용하여 행을 업데이트하거나 삽입하는 방식으로 `SalesReason` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 수정합니다. 원본 테이블의 `NewName` 값이 대상 테이블 `Name`의 `SalesReason` 열에 있는 값과 일치하는 경우 대상 테이블에서 `ReasonType` 열이 업데이트됩니다. `NewName` 값이 일치하지 않으면 원본 행이 대상 테이블에 삽입됩니다. 원본 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하여 원본 테이블의 여러 행을 지정하는 파생 테이블입니다. 파생 테이블에서 테이블 값 생성자를 사용하는 방법에 대한 자세한 내용은 [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)을 참조하세요. 또한 이 예에서는 OUTPUT 절의 결과를 테이블 변수에 저장한 다음 삽입되거나 업데이트된 행의 개수를 반환하는 단순한 SELECT 작업을 수행하여 MERGE 문의 결과를 요약합니다.  
   
 ```  
 -- Create a temporary table variable to hold the output actions.  
@@ -435,7 +438,7 @@ GROUP BY Change;
 ```  
   
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>4. MERGE 문의 결과를 다른 테이블에 삽입  
- 다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하고 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Quantity` 테이블의 `ProductInventory` 열을 `SalesOrderDetail` 테이블에서 처리되는 순서대로 업데이트합니다. 이 예에서는 업데이트된 행을 캡처하여 재고 변경 내용을 추적하는 데 사용되는 다른 테이블에 삽입합니다.  
+ 다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하고 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 `Quantity` 데이터베이스에서 `ProductInventory` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열을 `SalesOrderDetail` 테이블에서 처리되는 순서대로 업데이트합니다. 이 예에서는 업데이트된 행을 캡처하여 재고 변경 내용을 추적하는 데 사용되는 다른 테이블에 삽입합니다.  
   
 ```  
 CREATE TABLE Production.UpdatedInventory  

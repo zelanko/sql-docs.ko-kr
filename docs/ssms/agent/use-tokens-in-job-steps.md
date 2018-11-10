@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675571"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743228"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "47675571"
 |**(A-ERR)**|오류 번호입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 오류 번호 값으로 대체됩니다.|  
 |**(A-SEV)**|오류 심각도입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 오류 심각도 값으로 대체됩니다.|  
 |**(A-MSG)**|메시지 내용입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 메시지 텍스트 값으로 대체됩니다.|  
-|**(JOBNAME)**|작업의 이름입니다.|  
-|**(STEPNAME)**|단계 이름입니다.|  
+|**(JOBNAME)**|작업의 이름입니다. 이 토큰은 SQL Server 2016 이상에서만 지원됩니다.|  
+|**(STEPNAME)**|단계 이름입니다. 이 토큰은 SQL Server 2016 이상에서만 지원됩니다.|  
 |**(DATE)**|현재 날짜(YYYYMMDD 형식)입니다.|  
 |**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER를 가집니다.|  
 |**(JOBID)**|작업 ID입니다.|  

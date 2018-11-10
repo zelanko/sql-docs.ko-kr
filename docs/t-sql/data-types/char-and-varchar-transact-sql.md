@@ -25,15 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960797"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970915"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 고정 길이(**char**) 또는 가변 길이(**varchar**)인 문자 데이터 형식입니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 문자 인코딩을 사용합니다. UTF-8이 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 해당 데이터 정렬의 코드 페이지에서 지원하는 문자의 하위 집합만 저장합니다.
   

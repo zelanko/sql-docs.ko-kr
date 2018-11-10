@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666681"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965981"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ DBCC CLONEDATABASE
 NO_STATISTICS  
 클론에서 테이블/인덱스 통계를 제외해야 하는지 여부를 지정합니다. 이 옵션을 지정하지 않으면 테이블/인덱스 통계가 자동으로 포함됩니다. 이 옵션은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 사용할 수 있습니다.
 
-NO_QUERYSTORE는 클론에서 쿼리 저장소 데이터를 제외해야 하는지 여부를 지정합니다. 이 옵션을 지정하지 않으면 원본 데이터베이스에 쿼리 저장소가 활성화된 경우 쿼리 저장소 데이터가 클론에 복사됩니다. 이 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 사용할 수 있습니다.
+NO_QUERYSTORE<br>
+클론에서 쿼리 저장소 데이터를 제외해야 하는지 여부를 지정합니다. 이 옵션을 지정하지 않으면 원본 데이터베이스에 쿼리 저장소가 활성화된 경우 쿼리 저장소 데이터가 클론에 복사됩니다. 이 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 사용할 수 있습니다.
 
 VERIFY_CLONEDB  
-새로운 데이터베이스의 일관성을 확인합니다.  이 옵션은 복제된 데이터베이스가 프로덕션용일 경우에 필요합니다.  VERIFY_CLONEDB를 활성화하면 통계 및 쿼리 저장소 컬렉션도 비활성화되므로 WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE를 실행하는 것과 동일합니다.  이 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 사용할 수 있습니다.
+새로운 데이터베이스의 일관성을 확인합니다.  이 옵션은 복제된 데이터베이스가 프로덕션용일 경우에 필요합니다.  VERIFY_CLONEDB를 활성화하면 통계 및 쿼리 저장소 컬렉션도 비활성화되므로 WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE를 실행하는 것과 동일합니다.  이 옵션은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8부터 지원됩니다.
 
 > [!NOTE]  
 > 다음 명령을 사용하여 복제된 데이터베이스가 프로덕션용인지 확인할 수 있습니다. <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Service broker 관련 시스템 카탈로그에 복제가 포함되어야 하는 경우를 지정합니다.  SERVICEBROKER 옵션은 VERIFY_CLONEDB와 함께 사용할 수 없습니다.  이 옵션은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8부터 지원됩니다.
+
 BACKUP_CLONEDB  
-복제 데이터베이스의 백업을 만들고 확인합니다.  VERIFY_CLONEDB와 함께 사용하는 경우 백업을 수행하기 전에 복제 데이터베이스가 확인됩니다.  이 옵션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터 사용할 수 있습니다.
+복제 데이터베이스의 백업을 만들고 확인합니다.  VERIFY_CLONEDB와 함께 사용하는 경우 백업을 수행하기 전에 복제 데이터베이스가 확인됩니다.  이 옵션은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8부터 지원됩니다.
   
 ## <a name="remarks"></a>Remarks
 DBCC CLONEDATABASE에 의해 다음 유효성 검사가 수행됩니다. 유효성 검사 중 하나라도 실패할 경우 명령이 실패합니다.

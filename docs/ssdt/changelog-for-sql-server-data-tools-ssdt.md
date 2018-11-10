@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991306"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216811"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>Visual Studio 2017용 SSDT(15.8.2)
+빌드 번호: 14.0.16182.0  
+릴리스 날짜: 2018년 11월 5일  
+
+### <a name="whats-new"></a>새로운 기능
+**SSIS:**
+
+대한 스크립트 작업/플랫 파일 대상을 포함하는 패키지를 포함하는 SSIS 프로젝트 패키지를 Azure SSIS에 배포하면 Azure SSIS에서 실행에 실패하는 문제를 해결했습니다. 
+
+### <a name="known-issues"></a>알려진 문제:
+
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- Visual Studio 2017용 SSDT(15.8.2)는 Oracle/Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>Visual Studio 2017용 SSDT(15.8.1)
@@ -40,6 +55,8 @@ ms.locfileid: "49991306"
 ### <a name="known-issues"></a>알려진 문제:
 
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- 스크립트 작업/플랫 파일 대상을 포함하는 패키지가 있는 SSIS 프로젝트를 Azure SSIS에 배포하면 Azure-SSIS에서 실행에 실패합니다.
+- Visual Studio 2017용 SSDT(15.8.1)는 Oracle/Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>Visual Studio 2017용 SSDT(15.8)

@@ -15,17 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfd594650225431708137dab5ffcc92119d970c8
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 2add7097a4cead6a03d2aa3f0b6e14b9cc0bdce5
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383748"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970375"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="Top"></a>   
 -   **시작하기 전에:**  [사용 권한](#Permissions)  

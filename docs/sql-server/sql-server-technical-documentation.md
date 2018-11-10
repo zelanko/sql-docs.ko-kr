@@ -21,15 +21,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b078cde18c41a67b4866297c2edd19b30f959d08
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d0a7e900b727f7967ad38c26d40f717d382bfd7f
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419248"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970994"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.

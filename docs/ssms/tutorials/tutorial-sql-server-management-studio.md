@@ -23,15 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723871"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970544"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 등 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   

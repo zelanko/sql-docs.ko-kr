@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetProtocolsOrder Method (ClientNetworkProtocol Class)
@@ -19,12 +18,12 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a8e26a44dac0c968f9f8af2b628b218335b69424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a570a1ebe7fa60ce05b5e12e4ffca5b31c9df36a
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856361"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217031"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

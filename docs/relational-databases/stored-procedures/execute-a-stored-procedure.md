@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419279"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970314"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
  두 가지 방법으로 저장 프로시저를 실행할 수 있습니다. 가장 일반적인 첫 번째 방법은 응용 프로그램 또는 사용자가 프로시저를 호출하는 것입니다. 두 번째 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 자동 실행되도록 프로시저를 설정하는 것입니다. 응용 프로그램이나 사용자가 프로시저를 호출할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 또는 EXEC 키워드가 호출에서 명시적으로 지정됩니다. 또는 프로시저가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 문이면 키워드를 사용하지 않고 프로시저를 호출하고 실행할 수 있습니다.  
   

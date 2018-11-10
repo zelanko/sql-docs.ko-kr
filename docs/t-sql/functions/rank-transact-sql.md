@@ -22,19 +22,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa1dc96a026a08aa66218f0a30ca580fb524e9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653479"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970344"
 ---
 # <a name="rank-transact-sql"></a>RANK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  결과 집합의 파티션 내에 있는 각 행의 순위를 반환합니다. 요청한 행의 순위는 해당 행 앞에 있는 행의 순위에 1을 더한 값입니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-  ROW_NUMBER와 RANK는 유사합니다. ROW_NUMBER는 모든 행을 순차적으로 번호 지정합니다.(예: 1, 2, 3, 4, 5) RANK는 순위 동률(예: 1, 2, 2, 4, 5)에 대해 동일한 숫자 값을 제공합니다.   
+결과 집합의 파티션 내에 있는 각 행의 순위를 반환합니다. 요청한 행의 순위는 해당 행 앞에 있는 행의 순위에 1을 더한 값입니다.  
+
+ROW_NUMBER와 RANK는 유사합니다. ROW_NUMBER는 모든 행을 순차적으로 번호 지정합니다.(예: 1, 2, 3, 4, 5) RANK는 순위 동률(예: 1, 2, 2, 4, 5)에 대해 동일한 숫자 값을 제공합니다.   
   
 > [!NOTE]
 > RANK는 쿼리를 실행할 때 계산되는 임시 값입니다. 테이블의 숫자를 유지하려면 [IDENTITY 속성](../../t-sql/statements/create-table-transact-sql-identity-property.md) 및 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하세요. 

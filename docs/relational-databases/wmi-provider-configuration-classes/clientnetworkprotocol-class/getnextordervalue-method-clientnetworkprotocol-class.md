@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - GetNextOrderValue Method (ClientNetworkProtocol Class)
@@ -19,12 +18,12 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e43e75b932b719a27eeb164c4555cb1773985cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f4454c3d8d3391a420e63fbe84bf1f9cf5f155
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824142"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215011"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
