@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - validating installations [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2a71d127ad565690f78dbbbf8eeffaa13194b2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0473a30a3c32b83a312aea92705f3f8e6e0b4dab
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178563"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018128"
 ---
 # <a name="validate-a-sql-server-installation"></a>SQL Server 설치 유효성 검사
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 검색 보고서를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 확인할 수 있습니다. **설치 됨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 검색 보고서** 모든 보고서가 표시 됩니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 제품 및 기능에 로컬 서버에 설치 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 검색 보고서는 **설치 센터의** 도구 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서 사용할 수 있습니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d561f608b1a69f3872d66c8f454853ffeee5b82b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149803"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029661"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. [DQS &#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에서 설명한 대로 정리 작업을 실행하는 모든 단계는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 경우와 같지만 이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 참조 데이터 서비스를 사용하여 데이터를 정리하는 방법을 설명합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "48149803"
 ##  <a name="Cleanse"></a> 참조 데이터 기술 자료를 사용하여 데이터 정리  
  이전 항목에서 매핑한 것 도메인을 사용 하 여 동일한 예제를 사용 하 여 계속 예정 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), Windows Azure Marketplace의 Melissa Data service를 사용 하 여 합니다. 이제 같은 도메인을 사용하여 샘플 US 주소 몇 개를 정리합니다. 데이터를 정리하는 단계는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에 설명된 것과 동일합니다. 그러나 프로세스를 진행하는 동안 필요할 때마다 다시 설명하겠습니다.  
   
-1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택합니다. 참조 [데이터 품질 프로젝트를 만들고](../../2014/data-quality-services/create-a-data-quality-project.md)합니다.  
+1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택합니다. [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)을 참조하세요.  
   
 2.  **맵** 페이지에서 **Address Line**, **City**, **State**및 **Zip**도메인을 원본 데이터의 알맞은 열에 매핑합니다. **다음**을 클릭합니다.  
   
@@ -72,13 +71,13 @@ ms.locfileid: "48149803"
   
      **원래 값:**  
   
-    |Address Line|City|State|Zip|  
+    |Address Line|City|상태|Zip|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **제안된 값:**  
   
-    |Address Line|City|State|Zip|  
+    |Address Line|City|상태|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

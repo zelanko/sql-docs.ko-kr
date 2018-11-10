@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,15 +13,15 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060573"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018318"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 2014로 업그레이드(설치 프로그램)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 구성 요소를 업그레이드할 수 있는 단일 기능 트리를 제공합니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 이전 버전과 함께 설치하거나 기존 데이터베이스 및 구성 설정을 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 마이그레이션하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 적용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 구성 요소를 업그레이드할 수 있는 단일 기능 트리를 제공합니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 이전 버전과 함께 설치하거나 기존 데이터베이스 및 구성 설정을 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 마이그레이션하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 적용할 수 있습니다.  
   
  자세한 내용은 다음 항목을 참조하세요.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "48060573"
 -   [데이터베이스 복사 마법사 사용](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 것은 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1을 실행하는 컴퓨터에서 지원되지 않습니다. Server Core 설치에 대 한 자세한 내용은 참조 하세요. [Server Core에 SQL Server 2014 설치](install-sql-server-on-server-core.md)합니다.  
+>  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 것은 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1을 실행하는 컴퓨터에서 지원되지 않습니다. Server Core 설치에 대 한 자세한 내용은 참조 하세요. [Server Core에 SQL Server 2014 설치](install-sql-server-on-server-core.md)합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있으며 로컬 관리자인 도메인 계정을 사용해야 합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 항목을 검토하십시오.  
@@ -125,7 +124,7 @@ ms.locfileid: "48060573"
   
 -   **서버 등록** - 업그레이드하면 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 등록 설정이 제거됩니다. 업그레이드한 후 서버를 다시 등록해야 합니다.  
   
--   **통계 업데이트** - 쿼리 성능을 최적화할 수 있도록 업그레이드 후에 모든 데이터베이스에 대한 통계를 업데이트하는 것이 좋습니다. 사용 된 `sp_updatestats` 저장 프로시저에서 사용자 정의 테이블의 통계를 업데이트 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
+-   **통계 업데이트** - 쿼리 성능을 최적화할 수 있도록 업그레이드 후에 모든 데이터베이스에 대한 통계를 업데이트하는 것이 좋습니다. `sp_updatestats` 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 사용자 정의 테이블의 통계를 업데이트할 수 있습니다.  
   
 -   **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
   

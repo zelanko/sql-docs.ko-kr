@@ -6,19 +6,18 @@ ms.author: mikeray
 manager: craigg
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: ''
+ms.technology: linux
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: c2a9d64b0ef55afb02022b7be27c096ea1221e6b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390845"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030435"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제
 

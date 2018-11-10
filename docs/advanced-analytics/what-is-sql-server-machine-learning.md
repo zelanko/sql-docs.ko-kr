@@ -3,24 +3,26 @@ title: R 및 Python Machine Learning Services에서 SQL Server | Microsoft Docs
 description: SQL Server 및 SQL server에서 데이터 과학 및 통계 모델링, 기계 학습 모델, 예측 분석, 데이터 시각화 등에 대 한 관계형 데이터와 통합 하는 Python R입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 11/06/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343118"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269706"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017의 Machine Learning Services는 SQL Server에서 R 및 Python 코드를 실행 하는 데 사용 되는 데이터베이스 엔진 인스턴스를 추가 합니다. 핵심 엔진 프로세스 로부터 격리 하지만 저장된 프로시저, R 또는 Python 문이 포함 된 T-SQL 스크립트 또는 T-SQL을 포함 하는 R 또는 Python 코드와 관계형 데이터에 완벽 하 게 사용할 수 있는 코드는 확장성 프레임 워크에서 실행 됩니다. 
 
-이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다.
+이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다. 
+
+Azure SQL Database에서 [Machine Learning 서비스 (R)을 통한]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)) 현재 공개 미리 보기로 제공 됩니다.
 
 Machine Learning 서비스의 핵심 가치 제안을 소수 자릿수 및 계산 및 처리, 데이터 상주를 제공 하는 기능에 대 한 고급 분석을 제공 하는 엔터프라이즈 R 및 Python 패키지의 기능에서 데이터 끌어오기를 할 필요가 없습니다 네트워크입니다.
 

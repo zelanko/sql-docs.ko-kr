@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237079"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269756"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -137,7 +137,7 @@ AP AU6 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가 �
 
 **데이터 형식**
 
-- [VARCHAR(MAX)][]하십시오 [NVARCHAR(MAX)][] 하 고 [varbinary (max)][]합니다. 이러한 LOB 데이터 형식에 최대 크기는 2GB입니다. 이러한 로드를 사용 하 여 개체 [bcp 유틸리티][]합니다. Polybase 및 dwloader 지원 하지 않습니다 현재 다음 데이터 형식. 
+- [VARCHAR(MAX)][]하십시오 [NVARCHAR(MAX)][] 하 고 [varbinary (max)][]합니다. 이러한 LOB 데이터 형식에 최대 크기는 2GB입니다. 이러한 로드를 사용 하 여 개체 [bcp 유틸리티][]합니다. PolyBase 및 dwloader 지원 하지 않습니다 현재 다음 데이터 형식. 
 - [SYSNAME][]
 - [고유 식별자][]
 - [NUMERIC][] 및 DECIMAL 데이터 형식입니다.

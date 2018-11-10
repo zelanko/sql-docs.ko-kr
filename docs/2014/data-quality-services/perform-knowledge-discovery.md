@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,19 +15,19 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076053"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032470"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  
   
  기술 자료 검색은 마법사 기반 프로세스로, 각각 완료되어야 하는 3단계를 포함합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  검색을 실행하려는 원본 데이터가 Excel 파일 형식일 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel을 설치해야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
@@ -67,12 +66,12 @@ ms.locfileid: "48076053"
   
 4.  **매핑** 테이블에서 다음과 같이 기술 자료 검색을 수행할 각 원본 열을 기술 자료의 도메인에 매핑합니다.  
   
-    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [도메인 규칙 만들기](../../2014/data-quality-services/create-a-domain-rule.md) 또는 [복합 도메인 만들기](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
+    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) 또는 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
   
     2.  각 매핑에 대해 이전 단계를 반복합니다. 테이블의 행 수를 변경하려면 **열 매핑 추가**를 클릭하거나 특정 행을 선택하고 **선택한 열 매핑 제거**를 클릭합니다. 채워진 행이 선택되었을 때 **선택한 열 매핑 제거** 를 클릭하면 채워지지 않은 행이 있는 경우에도 선택된 행이 삭제됩니다.  
   
         > [!NOTE]  
-        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
     3.  정의된 복합 도메인을 표시하려면 **복합 도메인 보기/선택** 을 클릭합니다. 복합 도메인이 정의되지 않은 경우 컨트롤을 사용할 수 없습니다.  
   
@@ -172,14 +171,14 @@ ms.locfileid: "48076053"
   
     -   **선택한 도메인 값을 그룹의 선행 값으로 설정**:그룹에서 선행 값으로 지정되지 않은 값을 선택한 다음 **선택한 도메인 값을 그룹의 선행 값으로 설정** 단추를 클릭하여 그룹의 선행 값을 변경합니다.  
   
-6.  **맞춤법 검사기**: 도메인 속성 페이지에서 맞춤법 검사기를 활성화한 경우 맞춤법 검사기에서 수정 사항을 제안하는 표시인 빨강 물결선 밑줄이 있는 값을 찾으세요. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
+6.  **맞춤법 검사기**: 도메인 속성 페이지에서 맞춤법 검사기를 활성화한 경우 맞춤법 검사기에서 수정 사항을 제안하는 표시인 빨강 물결선 밑줄이 있는 값을 찾으세요. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
   
     > [!NOTE]  
     >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 활성화하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 비활성화된 경우 **데이터 검색 결과 관리** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 활성화할 수 있습니다.  
   
 7.  **새 도메인 값 추가**: 테이블의 끝에 행을 추가하려면 **새 도메인 값 추가** 단추를 클릭하여 도메인에 새 값을 추가합니다. 값을 입력하면 행의 위치가 사전순으로 변경됩니다.  
   
-8.  **Excel에서 도메인 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭한 다음 **Excel에서 도메인 값 가져오기**를 선택하여 Excel 스프레드시트에서 새 값을 추가합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
+8.  **Excel에서 도메인 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭한 다음 **Excel에서 도메인 값 가져오기**를 선택하여 Excel 스프레드시트에서 새 값을 추가합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Import Values from an Excel File into a Domain](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
 9. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭하고 **프로젝트 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **마침**을 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
   

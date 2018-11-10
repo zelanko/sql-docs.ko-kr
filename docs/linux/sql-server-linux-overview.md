@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: d4b887225908896ce15dfaae0443c22eb535e209
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419308"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269527"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -26,22 +26,22 @@ SQL Server 2017부터 SQL Server는 Linux에서 실행 됩니다. 동일한 SQL 
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 CTP 2.0 on Linux를 실행합니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다. 이 릴리스에 대 한 자세한 내용을 참조 하세요 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다. 이 릴리스에 대 한 자세한 내용을 참조 하세요 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)합니다.
+> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)합니다.
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-linux-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)합니다.
+> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-linux-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)합니다.
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 CTP 2.0가 출시 되었습니다! Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 CTP 2.0의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+> SQL Server 2019 미리 보기를 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
 ::: moniker-end
 
 ## <a name="install"></a>설치

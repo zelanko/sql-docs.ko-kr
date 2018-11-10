@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107883"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031840"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 관리 기능을 수행하는 방법에 대해 설명합니다. 기술 자료에 대해 삭제, 잠금 해제, 작업 취소, 이름 바꾸기 및 속성 표시 기능을 수행할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  기술 자료를 관리하려면 기술 자료가 이미 생성되어 있고 게시되었거나(다른 사람이 생성한 경우) 닫혀 있어야 합니다(본인이 생성한 경우).  
@@ -43,9 +42,9 @@ ms.locfileid: "48107883"
   
     1.  **열기**: **작업 선택** 창에서 선택한 작업의 기술 자료를 열려면 클릭합니다.  
   
-    2.  **잠금 해제**: 도메인 관리, 기술 자료 검색 및 일치 정책 작업 단계 중 하나에서 기술 자료로 작업 중이었다가 닫은 사용자만 기술 자료의 잠금을 해제할 수 있습니다. 기술 자료를 언로드할 경우 다른 사람이 열어서 작업할 수 있습니다. 기술 자료가 작업 상태가 아닌 경우 이 명령을 사용할 수 없습니다. 자세한 내용은 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)합니다.  
+    2.  **잠금 해제**: 도메인 관리, 기술 자료 검색 및 일치 정책 작업 단계 중 하나에서 기술 자료로 작업 중이었다가 닫은 사용자만 기술 자료의 잠금을 해제할 수 있습니다. 기술 자료를 언로드할 경우 다른 사람이 열어서 작업할 수 있습니다. 기술 자료가 작업 상태가 아닌 경우 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
   
-    3.  **작업 삭제**: 테이블의 상태 필드 항목에 기술 자료가 작업 중인 상태로 표시되는 경우 클릭합니다. 기술 자료가 작업 상태가 아닌 경우, 기술 자료가 잠긴 경우에는 이 명령을 사용할 수 없습니다. 자세한 내용은 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)합니다.  
+    3.  **작업 삭제**: 테이블의 상태 필드 항목에 기술 자료가 작업 중인 상태로 표시되는 경우 클릭합니다. 기술 자료가 작업 상태가 아닌 경우, 기술 자료가 잠긴 경우에는 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
   
     4.  **이름 바꾸기**: 마우스 오른쪽 단추로 클릭한 기술 자료에서 테이블의 기술 자료 필드를 편집 가능한 상태로 만들려면 클릭합니다. 이름을 변경한 다음 해당 기술 자료를 클릭하고 필드의 다른 기술 자료를 클릭하여 이름 변경을 적용합니다.  
   

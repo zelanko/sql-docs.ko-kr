@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: da3730d162ecacc0f6559db578ebb124b2fdfa4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698251"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270176"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 및 bcp을 Linux의 SQL Server 명령줄 도구 설치
 
@@ -197,7 +197,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a id="docker"></a> Docker
 
-SQL Server 2017 CTP 2.0부터, SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 명령 프롬프트를 사용 하 여 이미지를 연결 하는 경우 도구를 로컬로 실행할 수 있습니다.
+SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 명령 프롬프트를 사용 하 여 이미지를 연결 하는 경우 도구를 로컬로 실행할 수 있습니다.
 
 ## <a name="offline-installation"></a>오프라인 설치
 

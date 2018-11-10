@@ -65,6 +65,8 @@ items:
     items:
     - name: PROSE Code Accelerator를 사용한 데이터 랭글링
       href: use-prose-for-big-data-automation.md
+    - name: 앱 배포
+      href: big-data-cluster-create-apps.md
     - name: Spark로 기계 학습 모델 교육 및 만들기
       href: train-and-create-machinelearning-models-with-spark.md
     - name: Spark/Mleap를 사용하여 ML 모델 내보내기
@@ -95,9 +97,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 빅 데이터 클러스터 액세스 권한 요청
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 6e4a0480fa79a79f0e3b987bac5cf1fa1b000971
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: fa4a5b29c4a4ebb3cb879de4a390effb76002ae9
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411743"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221619"

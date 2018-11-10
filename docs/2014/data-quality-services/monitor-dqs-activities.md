@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
@@ -16,17 +15,17 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e8ba4bae008eb5328d28bd4e48ac383a570b330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb022e92fcae3908e49a5a44a6978ff16442712a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072753"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033010"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색, 도메인 관리, 일치 정책, 데이터 정리, 데이터 일치 및 SSIS 정리 작업을 중앙에서 모니터링하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  DQS_Main 데이터베이스에 대해 dqs_administrator 역할을 가진 사용자만 작업을 종료하거나 작업의 프로세스를 중지할 수 있습니다.  

@@ -4,15 +4,15 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050839"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221789"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -24,7 +24,7 @@ SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 �
 
 > [!NOTE]
 
-> CTP 2.0의 경우만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
+> CTP 2.1의 경우만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 ## <a name="deployment-settings"></a>배포 설정
 

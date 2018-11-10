@@ -2,7 +2,7 @@
 title: Azure 데이터 Studio SQL Server 2019 확장 (미리 보기) | Microsoft Docs
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411170"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269816"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -30,9 +30,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
    |플랫폼|다운로드|릴리스 날짜|버전
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|2018 년 10 월 18 일|0.7.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|2018 년 10 월 18 일 |0.7.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|2018 년 10 월 18 일 |0.7.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 년 11 월 6 일 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 년 11 월 6 일 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 년 11 월 6 일 |0.8.0
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -42,6 +42,27 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
 
+## <a name="release-notes-v080"></a>릴리스 정보 (v0.8.0)
+*Notebook*:
+* 셀 추가 셀 "기타 작업" 셀 단추를 클릭 하면 이제는 전 / 후 기존
+* **새 연결 추가** "다른 이름에 연결" 드롭다운 목록에서 연결 옵션이 추가 되었습니다
+* A **Notebook 종속성을 다시 설치** Python 패키지 업데이트를 지원 하 고 설치 응용 프로그램을 닫거나 걸리거나 도중에 중단 된 경우 해결에 명령이 추가 되었습니다. 이 명령 팔레트에서 실행할 수 있습니다 (사용 하 여 `Ctrl/Cmd+Shift+P` 형식과 `Reinstall Notebook Dependencies`)
+* PROSE python 패키지 1.1.0으로 업데이트 된 버그 수정 포함 하 고 있습니다. 사용 된 **Notebook 종속성을 다시 설치** 이 패키지를 업데이트 하는 명령
+* A **출력 지우기** 명령을 클릭 하 여 이제 지원 되는 **기타 작업** 셀 단추
+* 다음을 고정 고객 문제를 보고 합니다.
+  * Notebook 세션 경로 문제로 인해 Windows에서 시작할 수 없음
+  * 예: C:\ 또는 D:\ 드라이브의 루트 폴더에서 notebook은 시작할 수 없습니다.
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) VS Code에서 광고에서 만든 notebook을 편집할 수 없습니다.
+  * Spark UI 링크 Spark 커널을 실행 하는 경우 이제 작동
+  * "패키지 관리" 이름이 "패키지 설치"
+
+*외부 데이터 만들기*:
+
+* 오류 메시지 복사할 및에 대 한 요약 및 세부 보기도 쉽게 구분 되었습니다.
+* 향상 된 UI 레이아웃이 크게 향상 된 안정성 및 오류 처리
+* 다음을 고정 고객 문제를 보고 합니다.
+  * 잘못 된 열 매핑 사용 하 여 테이블은 사용 안 함으로 표시 되 고 경고에서 오류를 설명 합니다.
+
 ## <a name="release-notes-v072"></a>릴리스 정보 (v0.7.2)
 * Azure 리소스 탐색기는 이제 Azure Data Studio에 기본 제공 하 고이 확장에서 제거 되었습니다. 이에 대 한 피드백을 주셔서 감사 합니다!
 * Markdown 셀 수를 사용 하 여 notebook의 성능이 향상 되었습니다.
@@ -50,7 +71,7 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 * Notebook 종속성을 다시 설치를 지원 합니다. 사용자 이미 닫혀 Azure Data Studio만 설치 하는 경우에 유용 합니다.
 * Notebook 셀 실행 취소를 지원 합니다.
 * 외부 데이터 만들기 마법사를 사용 하는 경우 향상 된 안정성, 특히 연결 오류가 발생 한 경우.
-* Polybase 사용 또는 대상 서버에서 실행 되는 경우에 외부 데이터 만들기 마법사의 사용을 차단 합니다.
+* PolyBase 사용 또는 대상 서버에서 실행 되는 경우에 외부 데이터 만들기 마법사의 사용을 차단 합니다.
 * 맞춤법 및 SQL Server 2019 및 외부 데이터 만들기와 관련 된 픽스를 명명 합니다.
 * Azure Data Studio 디버그 콘솔에서 많은 오류를 제거 합니다.
 
@@ -83,7 +104,7 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 * Notebook 헤더의 단추를 통해 코드 또는 markdown 셀을 추가 합니다. 각 셀의 왼쪽에 휴지통 아이콘을 사용 하 여 셀을 제거 합니다.
 * 코드 셀에 대 한 재생 단추를 사용 하 여 셀을 실행 하 고 markdown 편집 간을 전환 눈 모양 아이콘을 사용 하 여 미리 보기
 
-## <a name="polybase-create-external-table-wizard"></a>Polybase 외부 테이블 마법사 만들기
+## <a name="polybase-create-external-table-wizard"></a>PolyBase 외부 테이블 마법사 만들기
 
 * SQL Server 2019 인스턴스에서 *외부 테이블 만들기 마법사* 세 가지 방법으로 열 수 있습니다.
   * 서버를 마우스 오른쪽 단추로 클릭, 선택 **관리**SQL Server 2019 (미리 보기)에 대 한 탭을 클릭 하 고 선택 **Create External Table**합니다.
@@ -106,3 +127,5 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 * 연결을 만들 때 암호를 저장 하지 않으면, Spark 작업을 제출 하는 등 일부 작업이 실패할 수 있습니다.
 * 기존.ipynb notebook 뷰어에 내용을 로드할 4 이상 버전으로 업그레이드 해야 합니다.
+* 실행 합니다 **Notebook 종속성을 다시 설치** 명령 2 개의 태스크가 실패 한 작업 보기를 표시 될 수 있습니다. 설치에 실패 해도이
+* 선택 **새 연결 추가** Notebook을 및 취소를 클릭 하면 **연결 선택** 이미 연결 된 경우에 표시 됩니다.

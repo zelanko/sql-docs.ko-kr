@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dc4324a9c0f50ed55131e41b5e767e1ce90232c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92f0094262f2f53dfcdc51fcbd77b08fa079d3be
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059673"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032850"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  

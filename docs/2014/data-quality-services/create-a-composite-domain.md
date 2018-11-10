@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
@@ -14,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105373"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030330"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
@@ -28,7 +27,7 @@ ms.locfileid: "48105373"
   
  복합 도메인을 만든 후 복합 도메인의 속성을 변경하거나 도메인에 참조 데이터 서비스를 연결하거나 도메인 간 규칙을 만들거나 값 관계를 만들 수 있습니다. 이렇게 하려면 **도메인 관리** 페이지의 **도메인** 목록에서 복합 도메인을 선택한 다음 해당 탭을 선택합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  복합 도메인을 만들려면 기술 자료를 만들고 열어야 하며 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48105373"
   
 3.  **기술 자료 검색** 을 작업으로 선택한 다음 **만들기** 를 클릭하여 새 기술 자료를 만들거나 **열기** 를 클릭하여 기존 기술 자료를 엽니다.  
   
-4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)합니다.  
+4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)을 참조하세요.  
   
 5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   

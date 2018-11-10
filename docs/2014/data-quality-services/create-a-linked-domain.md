@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
@@ -13,12 +12,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7213b82f77bf283cf3debf268ed089058b05c7e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140131"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032405"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 연결된 도메인을 만드는 방법에 대해 설명합니다. 이전의 다른 기존 도메인에서 연결된 도메인을 만들고 해당 도메인의 모든 값, 규칙 및 속성을 상속(이름 및 설명 제외)할 수 있습니다. 연결된 도메인 집합을 하나로 관리할 수 있습니다. 하나의 도메인을 다른 도메인에 연결하여 다른 도메인의 콘텐츠를 상속하는 도메인을 만들 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48140131"
   
  예를 들어 고객 이름, 고객 성 및 아버지의 이름 필드가 포함된 레코드가 여기에 해당합니다. 고객 이름과 아버지의 이름을 둘 다 이름 도메인에 매핑하고 이름 도메인과 성 도메인을 전체 이름 복합 도메인의 일부로 지정한 경우를 가정해 보겠습니다. 이 경우의 문제는 아버지의 이름이 성 없이 복합 도메인에 추가된다는 점입니다. 그러나 두 이름 필드를 각각 서로 다른 도메인에 연결하고 두 도메인을 연결한 경우 고객 이름 도메인은 전체 복합 도메인에 추가하고 아버지의 이름 필드는 복합 도메인에 추가하지 않을 수 있습니다. 이렇게 하면 아버지의 이름이 복합 도메인에 추가되지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  

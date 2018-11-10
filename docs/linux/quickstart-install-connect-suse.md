@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833071"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269626"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server를 설치 하는 빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고
 
@@ -24,20 +24,20 @@ ms.locfileid: "47833071"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 SQL Server 2017 또는 SQL Server 2019 CTP 2.0에 설치 SUSE Linux Enterprise Server (SLES) v12 SP2. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서는 SQL Server 2017 또는 SQL Server 2019 preview에 설치한 SUSE Linux Enterprise Server (SLES) v12 SP2. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 빠른 시작에서는 SUSE Linux Enterprise Server (SLES) v12 SP2에서 SQL Server 2019 CTP 2.0을 설치 합니다. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서는 SUSE Linux Enterprise Server (SLES) v12 SP2에서 SQL Server 2019 preview를 설치 합니다. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 ::: moniker-end
 
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 SLES v12 SP2 컴퓨터 있어야 **2GB 이상의** 메모리입니다. 파일 시스템에 있어야 **XFS** 하거나 **EXT4**합니다. 와 같은 다른 파일 시스템 **BTRFS**, 지원 되지 않습니다.
 
@@ -155,7 +155,7 @@ SLES의 SQL Server를 구성 하려면 설치 하려면 터미널에서 다음 �
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-이 시점에서 SQL Server 2019 CTP 2.0 SLES 컴퓨터에서 실행 되 고 사용할 준비가 되었습니다!
+이 시점에서 SQL Server 2019 미리 보기 SLES 컴퓨터에서 실행 되 고 사용할 준비가 되었습니다!
 
 ::: moniker-end
 

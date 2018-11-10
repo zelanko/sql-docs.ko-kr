@@ -1,11 +1,9 @@
 ---
 title: 공간 인덱스 만들기, 수정 및 삭제 | Microsoft 문서
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122353"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018658"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
   공간 인덱스의 열에 특정 작업을 수행할 보다 효율적으로 수를 `geometry` 또는 `geography` 데이터 형식 (한 *공간 열*). 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122353"
   
      테이블 디자이너에서 테이블이 열립니다.  
   
-2.  선택 된 `geometry` 또는 `geography` 인덱스에 대 한 열입니다.  
+2.  인덱스에 대해 `geometry` 또는 `geography` 열을 선택합니다.  
   
 3.  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
   
@@ -130,7 +128,7 @@ ms.locfileid: "48122353"
   
   
 ##  <a name="restrictions"></a> 공간 인덱스의 제한 사항  
- 공간 인덱스는 `geometry` 또는 `geography` 유형의 열에서만 만들 수 있습니다.  
+ 공간 인덱스는 `geometry` 또는 `geography` 형식의 열에서만 만들 수 있습니다.  
   
 ### <a name="table-and-view-restrictions"></a>테이블 및 뷰 제한 사항  
  공간 인덱스는 기본 키가 있는 테이블에서만 정의할 수 있습니다. 테이블의 최대 기본 키 열 수는 15개입니다.  

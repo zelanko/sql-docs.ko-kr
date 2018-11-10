@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189553"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018568"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
   이 항목에서는 업그레이드 프로세스를 준비하고 이해하는 데 필요한 다음과 같은 정보를 제공합니다.  
@@ -108,7 +107,7 @@ ms.locfileid: "48189553"
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드 이전에 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.  
   
 > [!NOTE]  
->  새 사용자 데이터베이스의 호환성 수준을 상속 합니다 `model` 데이터베이스입니다.  
+>  새 사용자 데이터베이스는 `model` 데이터베이스의 호환성 수준을 상속합니다.  
   
 ## <a name="migrating-databases"></a>데이터베이스 마이그레이션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 백업 및 복원 기능이나 분리 및 연결 기능을 사용하여 사용자 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 이동할 수 있습니다. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) 또는 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
@@ -125,15 +124,15 @@ ms.locfileid: "48189553"
   
 -   쿼리 결과가 의미적으로 일관성이 유지되도록 하려면 전체 텍스트 카탈로그를 다시 작성합니다.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 전체 텍스트 및 의미 체계 검색에서 사용할 새로운 단어 분리기를 설치합니다. 단어 분리기는 인덱싱 및 쿼리 시에 모두 사용됩니다. 전체 텍스트 카탈로그를 다시 작성하지 않으면 검색 결과가 일관적이지 않을 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단어 분리기와 현재 단어 분리기에서 다르게 분리되는 구를 찾는 전체 텍스트 쿼리를 실행하면 해당 구가 포함된 문서 또는 행이 검색되지 않을 수 있습니다. 그 이유는 인덱싱된 구가 현재 사용되는 쿼리와 다른 논리를 사용하여 분리되었기 때문입니다. 이를 해결하려면 인덱스 시 및 쿼리 시 동작이 동일하도록 새 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 채우면(다시 작성하면) 됩니다.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 전체 텍스트 및 의미 체계 검색에서 사용할 새로운 단어 분리기를 설치합니다. 단어 분리기는 인덱싱 및 쿼리 시에 모두 사용됩니다. 전체 텍스트 카탈로그를 다시 작성하지 않으면 검색 결과가 일관적이지 않을 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단어 분리기와 현재 단어 분리기에서 다르게 분리되는 구를 찾는 전체 텍스트 쿼리를 실행하면 해당 구가 포함된 문서 또는 행이 검색되지 않을 수 있습니다. 그 이유는 인덱싱된 구가 현재 사용되는 쿼리와 다른 논리를 사용하여 분리되었기 때문입니다. 이를 해결하려면 인덱스 시 및 쿼리 시 동작이 동일하도록 새 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 채우면(다시 작성하면) 됩니다.  
   
      자세한 내용은 [sp_fulltext_catalog&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql)를 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다.  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성되어 분할된 테이블 및 인덱스에 대한 쿼리에 적용되는 USE PLAN 힌트의 유효성을 검사하거나 이러한 힌트를 제거합니다.  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 생성되어 분할된 테이블 및 인덱스에 대한 쿼리에 적용되는 USE PLAN 힌트의 유효성을 검사하거나 이러한 힌트를 제거합니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 분할 된 테이블 및 인덱스에 대 한 쿼리의 처리 방법이 달라졌습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성된 계획에 USE PLAN 힌트를 사용하는 분할된 개체에 대한 쿼리에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용할 수 없는 계획이 포함될 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 다음 절차를 수행하는 것이 좋습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 분할된 테이블 및 인덱스에 대한 쿼리의 처리 방법이 달라졌습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성된 계획에 USE PLAN 힌트를 사용하는 분할된 개체에 대한 쿼리에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용할 수 없는 계획이 포함될 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 다음 절차를 수행하는 것이 좋습니다.  
   
      **직접 쿼리에서 USE PLAN 힌트를 지정 된 경우:**  
   

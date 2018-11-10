@@ -19,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676381"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031270"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,6 +203,10 @@ GO
 - **tempdb** 의 모든 할당에는 단일 익스텐트가 사용됩니다. [추적 플래그 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)은 더 이상 필요하지 않습니다.  
 - 주 파일 그룹의 경우 AUTOGROW_ALL_FILES 속성이 설정되며 속성을 수정할 수 없습니다. 
 
+tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를 참조하세요.
+
+[TEMPDB – 파일 및 추적 플래그 및 업데이트](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 tempdb 용량 계획
  SQL Server 프로덕션 환경에서 tempdb의 적절한 크기는 많은 요인에 따라 결정됩니다. 이 문서의 앞부분에서 설명한 것처럼 기존 작업, 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 등이 이러한 요인에 포함됩니다. SQL Server 테스트 환경에서 다음 태스크를 수행하여 기존 작업을 분석하는 것이 좋습니다.
 - tempdb에 대해 자동 증가를 설정합니다.
@@ -273,5 +277,5 @@ GO
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2005에서의 tempdb 사용](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [SQL Server 2005에서의 tempdb 사용](https://technet.microsoft.com/library/cc966545.aspx)  
  [tempdb의 디스크 공간 부족 문제 해결](http://msdn.microsoft.com/library/ms176029.aspx) 

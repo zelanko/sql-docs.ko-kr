@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068813"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032710"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   데이터 정리는 데이터 원본의 데이터 품질을 분석하고, 시스템의 제안을 수동으로 승인/거부하고, 데이터를 변경하는 프로세스입니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 정리에는 데이터가 기술 자료의 지식을 준수하는 정도를 분석하는 컴퓨터 기반 프로세스이며, 데이터 정리가 정확히 원하는 대로 수행되는지 보장하기 위해 데이터 관리자가 컴퓨터 기반 프로세스 결과를 검토하고 수정할 수 있게 해주는 대화형 프로세스입니다.  
@@ -99,7 +98,7 @@ ms.locfileid: "48068813"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|정리 활동을 위한 임계값 구성 방법을 설명합니다.|[정리 및 일치에 대한 임계값 구성](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|정리 활동을 위한 임계값 구성 방법을 설명합니다.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |DQS에 기본 제공되는 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |참조 데이터 서비스의 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |복합 도메인을 정리하는 방법을 설명합니다.|[복합 도메인의 데이터 정리](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

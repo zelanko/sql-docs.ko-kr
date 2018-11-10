@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,17 +13,17 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101733"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018438"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1의 Server Core 설치에서 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 를 구성하는 방법에 대한 자세한 내용을 다룹니다. 다음 섹션을 참조하십시오.  
   
--   [Windows Server의 Server Core 구성 및 관리](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [Windows Server에서 Server Core 구성 및 관리](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
 -   [SQL Server 업데이트 설치](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  서버 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 AlwaysOn 가용성 그룹을 사용하도록 설정해야 합니다. AlwaysOn 가용성 그룹 관리에 대한 자세한 내용은 [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>원격으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 사용  
- PC에서 수행할 클라이언트 버전을 실행 하는이 단계는 의미 [!INCLUDE[win7](../../includes/win7-md.md)] 이상 또는 서버 그래픽 셸이 설치 된 다른 서버 (즉, 전체 설치 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 또는 서버를 사용 하 여 Windows Server 8 설치 그래픽 셸 기능이 활성화)입니다.  
+ 이러한 단계는 [!INCLUDE[win7](../../includes/win7-md.md)] 이상의 클라이언트 버전을 실행하는 PC 또는 서버 그래픽 셸이 설치된 다른 서버에서 수행됨을 의미합니다( [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 전체 설치 또는 서버 그래픽 셸 기능이 활성화된 Windows Server 8 설치).  
   
 1.  컴퓨터 관리를 엽니다. 컴퓨터 관리를 열려면 다음 중 하나를 수행합니다.  
   

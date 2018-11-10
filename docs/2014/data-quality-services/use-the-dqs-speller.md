@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22b930ecab06ef6bd635cddd21af8ebbf8f1b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168653"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032780"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "48168653"
   
  맞춤법 검사기는 문자열 데이터 형식인 단일 도메인에 대해서만 작동합니다. 문자열 데이터 형식인 단일 도메인의 모든 값은 유효성 검사를 위해 맞춤법 검사기에 전송됩니다. 맞춤법 검사기는 복합 도메인에 대해 작동하지 않으며 문자열, 혼합 값(예: 공백 없는 문자와 숫자의 조합), 로마 숫자, 단일 문자 및 대문자로만 이루어진 값을 제외한 도메인 형식에 대해 작동하지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  맞춤법 검사기를 실행하려면 기술 자료 검색 또는 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다. 맞춤법 검사기를 실행하려는 도메인과 페이지에서 맞춤법 검사기를 설정한 상태여야 합니다. 그리고 도메인의 언어 속성이 지정되어 있어야 합니다.  

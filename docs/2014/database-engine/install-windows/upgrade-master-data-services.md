@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079677"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019018"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2로 업그레이드하는 데는 네 가지 시나리오가 있습니다. 해당 상황에 적합한 시나리오를 선택하십시오.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079677"
 > -   업그레이드를 수행하기 전에 데이터베이스를 백업합니다.  
 > -   업그레이드 프로세스는 저장 프로시저를 다시 만들고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용되는 테이블을 업그레이드합니다. 이러한 구성 요소에 사용자 지정된 내용은 손실될 수 있습니다.  
 > -   모델 배포 패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 사용할 수 있습니다. 만든 모델 배포 패키지를 배포할 수 없습니다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
-> -   계속 사용 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 의 Master Data Services 추가 기능에 Excel 용 Master Data Services 및 Data Quality Services를 업그레이드 한 후 SP1 버전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 합니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능에 Excel에 대 한 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
+> -   MDS(Master Data Services) 및 Data Quality Services를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)서 다운로드할 수 있습니다.  
   
 ##  <a name="noengine"></a> 데이터베이스 엔진 업그레이드 없이 업그레이드  
  이 시나리오 간주 될 수 있습니다-나란히 설치 되므로 둘 다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 동일한 컴퓨터 또는 별도 컴퓨터에서 병렬로 설치 됩니다.  

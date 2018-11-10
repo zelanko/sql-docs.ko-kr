@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,17 +12,17 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190963"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030879"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인의 속성을 설정하려면 기술 자료와 도메인을 만들어 두어야 합니다.  
@@ -35,9 +34,9 @@ ms.locfileid: "48190963"
   
 ##  <a name="Set"></a> 도메인 속성 설정  
   
-1.  도메인 관리 작업에서 기술 자료를 열어 기존 도메인 속성 설정 (참조 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md))를 선택한 다음 적절 한 도메인에는 **도메인** 목록. 기본적으로 도메인 속성 페이지가 표시됩니다.  
+1.  도메인 관리 작업에서 기술 자료를 연 후( [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)참조) **도메인** 목록에서 적절한 도메인을 선택하여 기존 도메인의 속성을 설정합니다. 기본적으로 도메인 속성 페이지가 표시됩니다.  
   
-2.  에 설명 된 대로 만든 후 새 도메인 속성 설정 [도메인 만들기](../../2014/data-quality-services/create-a-domain.md)합니다.  
+2.  [Create a Domain](../../2014/data-quality-services/create-a-domain.md)에 설명된 대로 새 도메인을 만든 후 속성을 설정합니다.  
   
 3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190963"
 ###  <a name="Speller"></a> 맞춤법 검사기 설정  
  데이터 형식이 **문자열**인 경우 도메인에 대해 DQS 맞춤법 검사기를 설정하려면 클릭합니다. 맞춤법 검사기는 문자열 데이터 형식인 도메인에 대해서만 작동합니다. **맞춤법 검사기 사용** 확인란은 확인란과 관련된 단일 도메인에 대해서만 맞춤법 검사기를 설정합니다. 복합 도메인에는 이 확인란이 적용되지 않습니다.  
   
- 맞춤법 검사기는 도메인 값에 대한 구문 및 유효성 검사 수정 사항을 제안합니다. 자세한 내용은 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)합니다.  
+ 맞춤법 검사기는 도메인 값에 대한 구문 및 유효성 검사 수정 사항을 제안합니다. 자세한 내용은 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)을 참조하세요.  
   
 ###  <a name="Syntax"></a> 구문 오류 알고리즘 해제  
  데이터 형식이 **문자열**인 경우 정리 작업 시 DQS에서 도메인의 구문 오류를 식별하지 않도록 지정하려면 선택합니다. 해당 도메인의 구문 오류 식별이 무의미한 경우 이 확인란을 선택합니다. 예를 들어 일련 번호의 경우 구문 오류 식별이 중요하지 않을 수 있습니다. 이 컨트롤은 문자열 데이터 형식에만 사용할 수 있습니다. DQS는 문자열이 아닌 데이터 형식에서 구문 오류를 검사하지 않습니다.  

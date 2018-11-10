@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226395"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270276"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ RestoreDefaultFonts - 기본 설정으로 되돌리기
 AAD가 여럿인 경우 Azure Key Vault 로그인 페이지에 Azure 구독이 표시되지 않는 AE 마법사의 문제를 해결함. Azure Key Vault 로그인 페이지에 사용자에게 읽기 권한이 있는 Azure 구독이 표시되지 않는 AE 마법사의 문제를 해결함
   - 리소스 파일을 제대로 로드할 수 없어서 부정확한 오류 메시지가 표시되는 문제를 해결함
 - SSMS 설치 페이지에서 하이퍼링크의 대비 향상
-- SQL Server Express(2016 SP1)에 연결된 경우 Polybase 노드가 표시되지 않는 문제를 해결함
+- SQL Server Express(2016 SP1)에 연결된 경우 PolyBase 노드가 표시되지 않는 문제를 해결함
 - SSMS가 Azure DB의 호환성 수준을 v140으로 변경할 수 없는 문제를 해결함
 - Azure 데이터베이스 목록을 확장할 때 개체 탐색기의 성능이 향상됨. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - 비관계형 서버 유형(AS\RS\IS)에 대해 "SQL Server 로그 보기" 상황에 맞는 메뉴 항목이 잘못 표시되는 문제를 해결함 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - SSMS에서 Azure 배포 마법사를 제거함(Azure VM에 데이터베이스 배포)
 - SSMS에서 실행 계획에 누락된 인덱스가 표시되지 않았던 문제를 해결함 [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - SSMS에서 종료 시 발생하는 일반적인 작동 중단 문제를 해결함
-- Polybase|규모 확장 그룹 노드에서 상황에 맞는 메뉴를 표시할 때 오류가 발생하는 개체 탐색기의 문제를 해결함 [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- PolyBase|규모 확장 그룹 노드에서 상황에 맞는 메뉴를 표시할 때 오류가 발생하는 개체 탐색기의 문제를 해결함 [연결 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - 데이터베이스에 대한 사용 권한을 표시하려고 할 때 SSMS의 작동이 중단되는 문제를 해결함
 - 쿼리 저장소: 쿼리 저장소 보고서의 결과 표에 대한 상황에 맞는 메뉴 항목의 일반적인 개선 사항
 - 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

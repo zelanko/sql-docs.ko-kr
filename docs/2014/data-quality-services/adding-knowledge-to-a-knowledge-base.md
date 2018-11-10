@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205549"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030170"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 정보를 추가할 수 있는 방법에 대해 설명합니다. 데이터 품질 작업을 수행하려면 먼저 데이터에 대한 정보가 있어야 합니다. 데이터 품질 기술 자료를 만들고 유지 관리하며 여기에 특정 유형의 데이터 원본과 관련된 정보를 추가하는 방식으로 이러한 정보를 얻을 수 있습니다. 기술 자료는 데이터 관련 지식의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다.  
@@ -40,14 +39,14 @@ ms.locfileid: "48205549"
 ##  <a name="Discovery"></a> 기술 자료 검색 수행  
  기술 자료 검색에서는 데이터 샘플이 데이터 품질 기준에 맞는지 분석한 다음 이를 통해 얻은 정보를 기술 자료에 추가합니다. 이는 데이터 불일치 및 구문 오류를 식별하고 데이터에 대한 변경 내용을 제안하는 컴퓨터 기반 프로세스입니다. 기술 자료 검색 작업은 대화형으로 도메인 값을 관리할 수 있는 페이지가 포함된 마법사입니다.  
   
--   자세한 내용은 설명서를 참조 하세요 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)합니다.  
+-   자세한 내용은 설명서에서 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)을 참조하십시오.  
   
 -   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
   
 ##  <a name="ManageDomain"></a> 도메인의 데이터 값 관리  
  DQS에서는 컴퓨터 기반 기술 자료 검색 작업으로 생성된 메타데이터를 대화형으로 변경 및 보강할 수 있습니다. 이 작업은 도메인 관리 작업에서 수행할 수 있으며, 특정 데이터 값에 변경 내용을 적용할 수 있습니다.  
   
--   자세한 내용은 설명서를 참조 하세요 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)합니다.  
+-   자세한 내용은 설명서에서 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)을 참조하십시오.  
   
 -   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48205549"
 ##  <a name="Default"></a> 기본 DQS 기술 자료 사용  
  DQS에서는 미국 회사 및 주소 데이터에 대한 도메인이 포함된 DQS 데이터라는 미리 구축된 기술 자료를 제공합니다. 이 기술 자료를 사용하면 기술 자료를 새로 만들 필요 없이 빠르게 프로젝트를 시작할 수 있습니다. DQS 데이터 기술 자료는 읽기 전용이지만 데이터 관리자가 이를 기반으로 새로운 기술 자료를 만들 수 있습니다.  
   
--   자세한 내용은 설명서를 참조 하세요 [DQS 기본 기술 자료를 사용 하 여](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)입니다.  
+-   자세한 내용은 설명서에서 [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)을 참조하십시오.  
   
   

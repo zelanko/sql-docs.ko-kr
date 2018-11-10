@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628151"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269737"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능과 WideWorldImportersDW 사용
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ PolyBase는 도시의 판매 추가 확장을 위해 유용할 수 있습니다�
 
 샘플 데이터베이스의 PolyBase 사용을 사용 하려면가 설치 되어 있는지 확인 하 고 데이터베이스에 다음 저장된 프로시저를 실행 합니다.
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 외부 테이블 만들기는이 `dbo.CityPopulationStatistics` 참조 하는 Azure blob storage에서 호스트 되는 미국에서는 도시 인구 데이터를 포함 하는 공용 데이터 집합입니다. 당신은 구성 프로세스를 이해 하려면 저장된 프로시저에서 코드를 검토 하는 것이 좋습니다. 사용자 고유의 데이터를 Azure blob 저장소를 호스트 하 고 일반 공용 액세스를 안전 하 게 유지 하려는 경우에 추가 구성 단계를 수행 해야 합니다. 다음 쿼리는 외부 데이터 집합에서 데이터를 반환합니다.
 

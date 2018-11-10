@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686621"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033630"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio Code를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 
@@ -250,7 +250,7 @@ Visual Studio Code는 Linux, macOS 및 확장을 지 원하는 Windows 용 그�
 
 실제 시나리오에서 저장 하 고 실행 해야 하는 스크립트를 만들 수 있습니다 (관리 또는 개발 프로젝트의 일부로) 이상. 이 예에서 사용 하 여 스크립트를 저장할 수 있습니다는 **.sql** 확장 합니다.
 
-T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 작성] 하며 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
+T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성](자습서: Transact-SQL 문 작성) 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)](Transact-SQL 참조(데이터베이스 엔진))를 참조하세요.
 
 사용 하 여 mssql 확장에 영향을 주는에 대 한 자세한 내용은 참조 하세요. [mssql 확장 프로젝트 wiki]합니다.
 

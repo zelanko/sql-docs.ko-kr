@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4721b388d35974b8e9749d74dbdf5f9ec988d85e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48166ece4bdbfb8472890c61ee4a33e3ce4243d0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105333"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032230"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)는 Microsoft .NET Framework 4 어셈블리를 참조하는 SQLCR(SQL 공용 언어 런타임)의 컬렉션입니다. 참조되는 이러한 .NET Framework 어셈블리에 영향을 주는 .NET Framework 업데이트를 컴퓨터에 설치하면 GAC(전역 어셈블리 캐시)의 어셈블리 MVID(모듈 버전 ID)가 변경될 수 있습니다. 이렇게 되면 GAC의 참조되는 어셈블리 MVID와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 어셈블리 MVID 간에 불일치가 발생합니다.  
@@ -29,7 +28,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  이 문제를 해결하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 영향을 받는 SQLCLR 어셈블리를 업그레이드해야 합니다. DQS 데이터베이스를 다시 만드는 것을 건너뛰고 영향을 받는 어셈블리만 업그레이드하도록 **upgradedlls** 명령줄 매개 변수를 사용하여 DQSInstaller.exe를 실행하면 됩니다. 이렇게 하면 기술 자료, 데이터 품질 프로젝트 및 DQS의 다른 데이터를 유지할 수 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   

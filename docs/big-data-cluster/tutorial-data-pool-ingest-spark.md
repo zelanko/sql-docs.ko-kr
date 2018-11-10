@@ -4,15 +4,15 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: d4ee9037e1762f11a569c94e416fcf5e45449d46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644275"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221479"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터 수집
 
@@ -61,7 +61,7 @@ ms.locfileid: "49644275"
       );
    ```
   
-1. CTP 2.0에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 2.1에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 

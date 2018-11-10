@@ -1,18 +1,19 @@
 ---
-title: 데이터 탐색 및 시각화 | Microsoft Docs
+title: 단원 1 탐색 하 고 Python 및 T-SQL (SQL Server Machine Learning)를 사용 하 여 데이터 시각화 | Microsoft Docs
+description: 포함 하는 방법을 보여 주는 자습서 SQL Server에서 Python 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806853"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030983"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,18 +69,19 @@ ms.locfileid: "49806853"
 
 ### <a name="create-a-plot-as-varbinary-data"></a>Varbinary 데이터 플롯 만들기
 
-합니다 **revoscalepy** SQL Server 2017의 Machine Learning Services에 포함 된 모듈의 것과 비슷한 기능을 지원 합니다 **RevoScaleR** r 패키지  이 예제에서는 Python과 동일 `rxHistogram` 히스토그램을 데이터를 기반으로 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 
-
 Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 개체로 **varbinary** 데이터입니다. 이진 데이터를 직접 볼 수 없습니다 하지만 클라이언트에서 Python 코드를 사용 하 여 deserialize 하 고 수치를 확인 하 고 클라이언트 컴퓨터에 이미지 파일을 저장 합니다.
 
-1. 저장된 프로시저를 만듭니다 _SerializePlots_PowerShell 스크립트를 이미 하지 않은 경우.
+1. 저장된 프로시저를 만듭니다 **PyPlotMatplotlib**PowerShell 스크립트를 이미 하지 않은 경우.
 
     - 변수의 `@query` 쿼리 텍스트를 정의 `SELECT tipped FROM nyctaxi_sample`에 스크립트 입력된 변수를 인수로 Python 코드 블록에 전달 되는 `@input_data_1`합니다.
     - Python 스크립트는 간단 합니다. **matplotlib** `figure` 개체 히스토그램 및 산 점도 할 때 사용 되 고 이러한 개체는 사용 하 여 serialize 한 다음는 `pickle` 라이브러리.
     - Python 그래픽 개체가 serialize 되는 **pandas** 데이터 프레임 출력.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[SerializePlots]
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -134,7 +136,7 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
 2. 이제 입력 쿼리로 하드 코드 된 데이터에서 플롯을 생성 하려면 인수 없이 저장된 프로시저를 실행 합니다.
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 결과 다음과 같이 해야 합니다.
@@ -148,19 +150,20 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     ```
 
   
-4. Python 클라이언트에서 생성 된 이진 그림 개체는 SQL Server 인스턴스에 연결 하 고 그림을 보려면 이제 수 있습니다. 
+4. [Python 클라이언트](../python/setup-python-client-tools-sql.md), 이제 생성 된 이진 그림 개체는 SQL Server 인스턴스에 연결 하 고 그림을 볼 수 있습니다. 
 
     이렇게 하려면 서버 이름, 데이터베이스 이름 및 자격 증명을 적절 하 게 대체 다음 Python 코드를 실행 합니다. Python 버전 클라이언트와 서버에서 동일 해야 합니다. 또한 Python 라이브러리 (예: matplotlib) 클라이언트에서 라이브러리 서버에 설치를 기준으로 동일 하거나 더 높은 버전 인지 확인 합니다.
   
     **SQL Server 인증을 사용 합니다.**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,12 +174,13 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     **Windows 인증을 사용 하 여:**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

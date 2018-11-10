@@ -1,11 +1,9 @@
 ---
 title: 공간 인덱스 개요 | Microsoft 문서
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113641"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018678"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 `geometry` 또는 `geography`와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
@@ -123,7 +121,7 @@ ms.locfileid: "48113641"
 >  공간 인덱스의 **tessellation_scheme** 설정은 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰에서 볼 수 있습니다.  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>기하 도형 표 공간 분할(tessellation) 구성표  
- GEOMETRY_AUTO_GRID 공간 분할은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상에서 `geometry` 데이터 형식의 기본 공간 분할(tessellation) 구성표입니다.  GEOMETRY_GRID 공간 분할은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 geometry 데이터 형식에 사용할 수 있는 유일한 공간 분할(tessellation) 구성표입니다. 이 섹션에서는 공간 인덱스 작업과 연관된 기하 도형 표 공간 분할의 측면에서 지원되는 메서드 및 경계 상자에 대해 설명합니다.  
+ GEOMETRY_AUTO_GRID 공간 분할은 `geometry` 이상에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식의 기본 공간 분할(tessellation) 구성표입니다.  GEOMETRY_GRID 공간 분할은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 geometry 데이터 형식에 사용할 수 있는 유일한 공간 분할(tessellation) 구성표입니다. 이 섹션에서는 공간 인덱스 작업과 연관된 기하 도형 표 공간 분할의 측면에서 지원되는 메서드 및 경계 상자에 대해 설명합니다.  
   
 > [!NOTE]  
 >  [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113641"
 >  공간 인덱스의 표 밀도는 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰의 bounding_box_xmin, bounding_box_ymin, bounding_box_xmax 및 bounding_box_ymax 열에서 볼 수 있습니다.  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>지리 표 공간 분할 구성표  
- 이 공간 분할 구성표에만 적용 됩니다는 `geography` 열입니다. 이 섹션에서는 지리 표 공간 분할에서 지원되는 메서드에 대해 요약하고 측지 공간이 평면에 표시되는 방법에 대해 설명합니다. 이 측지 공간은 표 계층 구조로 분해됩니다.  
+ 공간 분할 구성표는 `geography` 열에만 적용합니다. 이 섹션에서는 지리 표 공간 분할에서 지원되는 메서드에 대해 요약하고 측지 공간이 평면에 표시되는 방법에 대해 설명합니다. 이 측지 공간은 표 계층 구조로 분해됩니다.  
   
 > [!NOTE]  
 >  [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
@@ -223,7 +221,7 @@ ms.locfileid: "48113641"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>공간 인덱스를 사용하는 쿼리  
- 공간 인덱스에서 인덱싱된 공간 연산자를 포함 하는 쿼리에서만 지원 되는 `WHERE` 절. 예를 들어 다음과 같은 예제 구문의 경우  
+ 공간 인덱스는 `WHERE`절에서 인덱싱된 공간 연산자를 포함하는 쿼리에서만 지원됩니다. 예를 들어 다음과 같은 예제 구문의 경우  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679381"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018338"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|대상 로그인의 SID입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다.|  
 |target_database_principal_name|**sysname**|동작의 대상 사용자입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다.|  
 |server_instance_name|**sysname**|감사가 수행된 서버 인스턴스의 이름입니다. 표준 서버\인스턴스 형식을 사용합니다.|  
-|database_name|**sysname**|동작이 수행된 데이터베이스 컨텍스트입니다. Null을 허용합니다. 서버 수준에서 수행되는 감사에 대해 NULL을 반환합니다.|  
-|schema_name|**sysname**|동작이 수행된 스키마 컨텍스트입니다. Null을 허용합니다. 스키마 외부에서 수행되는 감사에 대해 NULL을 반환합니다.|  
+|database_name|**sysname**|동작이 수행된 데이터베이스 컨텍스트입니다. Null을 허용합니다. 서버 수준에서 발생 하는 감사에 대 한 NULL을 반환 합니다.|  
+|schema_name|**sysname**|동작이 수행된 스키마 컨텍스트입니다. Null을 허용합니다. 스키마 외부에서 발생 하는 감사에 대 한 null 값을 반환 합니다.|  
 |object_name|**sysname**|감사가 수행된 대상 엔터티의 이름입니다. 여기에는 다음이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용합니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 Null을 반환합니다(예: 인증).|  
 |statement|**nvarchar(4000)**|TSQL 문이 있는 경우 TSQL 문입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다.|  
 |additional_information|**nvarchar(4000)**|단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름 등의 잘못 된 xml 문자가 이스케이프 구문 분석 됩니다 `'\<'`, `'>'`를 `'/'`, `'_x'`합니다. 로 이스케이프 됩니다 `_xHHHH\_`합니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다.|  

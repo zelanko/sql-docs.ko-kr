@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
@@ -13,19 +12,19 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 358e0f9718ee6e301b0cf4257d3bda5bea5ae084
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051303"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031609"
 ---
 # <a name="create-a-domain"></a>도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인을 만드는 방법에 대해 설명합니다. 도메인의 값은 필드의 데이터를 의미 체계에 따라 표현한 것입니다. 도메인에 대한 자세한 내용은 [도메인 관리](../../2014/data-quality-services/managing-a-domain.md)를 참조하세요.  
   
  새 도메인을 만드는 방법에는 두 가지가 있습니다. 첫 번째는 새 기술 자료 또는 기존 기술 자료에 정보를 추가할 데이터 샘플을 분석하는 기술 자료 검색 작업의 매핑 단계에서 만드는 방법입니다. 두 번째는 도메인 관리 작업에서 기존 도메인을 변경하는 대신 새 도메인을 만드는 방법입니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인을 만들려면 기술 자료를 만들고 열어 두어야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48051303"
   
 3.  **기술 자료 검색** 을 작업으로 선택한 다음 **만들기** 를 클릭하여 새 기술 자료를 만들거나 **열기** 를 클릭하여 기존 기술 자료를 엽니다.  
   
-4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)합니다.  
+4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)을 참조하세요.  
   
 5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 해당 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48051303"
 1.  **도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다.  
   
     > [!NOTE]  
-    >  도메인 속성에 대 한 자세한 내용은 참조 하세요. [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)합니다.  
+    >  도메인 속성에 대한 자세한 내용은 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)을 참조하십시오.  
   
 2.  **데이터 형식** 목록에서 도메인 값의 데이터 형식을 선택합니다. 데이터 형식은 **문자열** (기본값), **날짜**, **정수**또는 **10진수**가 될 수 있습니다.  
   

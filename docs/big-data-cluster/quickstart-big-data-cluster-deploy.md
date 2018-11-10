@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050995"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269558"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터 배포
 
@@ -28,8 +28,6 @@ SQL Server 빅 데이터 클러스터를 설치 하는 명령을 실행 하는 �
 
 설치 하는 **mssqlctl** CLI 도구는 SQL Server 빅 데이터를 관리 하는 클라이언트 컴퓨터에서 클러스터를 먼저 설치 해야 [Python](https://www.python.org/downloads/) 최소 버전 v3.0 및 [pip3](https://pip.pypa.io/en/stable/installing/)합니다. `pip` 다운로드 하는 3.4 이상의 Python 버전을 사용 하는 경우 이미 설치 되어 [python.org](https://www.python.org/)합니다.
 
-Python 설치를 사용할 수 없는 경우는 `requests` 패키지를 설치한 `requests` 사용 하 여 `python -m pip install requests` (사용 하 여 `python3` Linux에서 이러한 명령에 대 한). 이미 있는 경우는 `requests` 패키지를 사용 하 여 최신 버전으로 업그레이드 `python -m pip install requests --upgrade`합니다.
-
 ## <a name="verify-aks-configuration"></a>AKS 구성 확인
 
 배포 된 AKS 클러스터를 만든 후 실행할 수는 아래 클러스터 구성을 보려면 kubectl 명령을 합니다. 해당 kubectl 가리키는 올바른 클러스터 컨텍스트를 확인 합니다.
@@ -43,8 +41,11 @@ kubectl config view
 설치를 알아보려면 아래 명령의 실행 **mssqlctl** 클라이언트 컴퓨터에 도구입니다. Windows 및 Linux 클라이언트에서 명령이 작동 하지만 Windows에서 관리자 권한으로 실행 되는 cmd 창에서 실행 되는지 또는 앞에 접두사를 사용 하 여 `sudo` on Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> 이전 릴리스를 설치한 경우 클러스터를 삭제 해야 합니다 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
 
 > [!TIP]
 > 하는 경우 **mssqlctl** 올바르게 설치, 문서의 필수 구성 요소 단계를 검토 하지 않습니다 [mssqlctl 설치](deployment-guidance.md#mssqlctl)합니다.
@@ -58,7 +59,7 @@ Windows 또는 Linux/macOS 클라이언트 사용 하는지에 따라 달라 집
 - 에 [명령 창](http://docs.microsoft.com/visualstudio/ide/reference/command-window), 따옴표 환경 변수에 포함 됩니다. 따옴표를 사용 하 여 암호를 래핑할 경우 큰따옴표는 암호에 포함 됩니다.
 - Bash에서 따옴표 변수에 포함 되지 않습니다. 큰따옴표를 사용 하는 예제 `"`합니다.
 - 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `'` 문자입니다.
-- CTP 2.0 릴리스에 대 한 기본 포트를 변경 하지 마세요.
+- CTP 2.1 릴리스에 대 한 기본 포트를 변경 하지 마세요.
 - `sa` 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $MSSQL_SA_PASSWORD`를 실행하여 지정한 `MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안상의 이유로 변경 프로그램 `sa` 설명 된 모범 사례에 따라 암호 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
 
 다음 환경 변수를 초기화 합니다.  빅 데이터 클러스터를 배포 하는 데 필요 합니다.
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터를 배포 합니다.
 
-Kubernetes 클러스터에서 SQL Server 2019 CTP 2.0 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
+Kubernetes 클러스터에서 SQL Server 2019 CTP 2.1 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
 
 ```bash
 mssqlctl create cluster <name of your cluster>

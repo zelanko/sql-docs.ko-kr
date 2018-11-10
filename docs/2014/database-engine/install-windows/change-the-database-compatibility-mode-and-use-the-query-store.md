@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
@@ -15,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143423"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018468"
 ---
 # <a name="migrate-query-plans"></a>쿼리 계획 마이그레이션
   데이터베이스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하면 대부분의 경우 쿼리 성능이 향상됩니다. 그러나 성능 향상을 위해 세심하게 튜닝된 중요한 쿼리의 경우 업그레이드하기 전에 각 쿼리에 대한 계획 지침을 만들어 쿼리 계획을 보존할 수 있습니다. 업그레이드 후에 쿼리 최적화 프로그램에서 한 개 이상의 쿼리에 대해 효율성이 낮은 계획이 선택된 경우 계획 지침을 사용하여 쿼리 최적화 프로그램에서 업그레이드 전 계획이 사용되도록 지정할 수 있습니다.  

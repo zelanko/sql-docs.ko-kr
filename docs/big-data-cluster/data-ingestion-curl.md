@@ -1,22 +1,22 @@
 ---
-title: Curl을 사용 하 여 SQL Server 2019 CTP 2.0에서 HDFS에 데이터 로드 | Microsoft Docs
+title: Curl을 사용 하 여 SQL Server 2019 CTP 2.1에서 HDFS에 데이터 로드 | Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 05ce2d4d848b7c244d672f6ab43cbcf09224e63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796594"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221629"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-20"></a>Curl을 사용 하 여 SQL Server 2019 CTP 2.0에서 HDFS에 데이터를 로드
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>Curl을 사용 하 여 SQL Server 2019 CTP 2.1에서 HDFS에 데이터를 로드
 
-이 문서를 사용 하는 방법에 설명 **curl** SQL Server 2019 CTP 2.0에서 HDFS에 데이터를 로드 합니다.
+이 문서를 사용 하는 방법에 설명 **curl** SQL Server 2019 CTP 2.1에서 HDFS에 데이터를 로드 합니다.
 
 ## <a name="obtain-the-service-external-ip"></a>서비스 외부 IP 가져오기
 

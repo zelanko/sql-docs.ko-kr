@@ -2,17 +2,17 @@
 title: R를 사용한 데이터 관찰 및 요약 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ba464bafdb077649dad9633bcb21ca2b026221ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1d6c225b3ec6b2a7a80dea155b564b94ecab60fb
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203395"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032890"
 ---
 # <a name="view-and-summarize-data-using-r"></a>R를 사용한 데이터 관찰 및 요약
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "31203395"
 + 스크립트에서 개별 줄을 실행하려면 파일에서 한 줄 혹은 여러 줄을 강조 표시하고 Ctrl + ENTER 를 누릅니다.
 
 > [!TIP]
-> 연습의 나머지 부분을 나중에 완료하려는 경우 R 작업 영역을 저장해 두세요.  이런 방식으로 데이터 개체 및 기타 변수 준비가 다시 사용 합니다.
+> 연습의 나머지 부분을 나중에 완료하려는 경우 R 작업 영역을 저장해 두세요.  이런 방식으로 데이터 개체 및 다른 변수는 다시 사용 하기 위해 준비 합니다.
 
 ## <a name="define-a-sql-server-compute-context"></a>SQL Server 계산 컨텍스트 정의
 
@@ -52,7 +52,7 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
 2. SQL Server에 대한 연결 문자열을 만들고 R 변수 _connStr_ 에 저장합니다.
     
     ```R
-    connStr <- "Driver=SQL Server;Server=your_server_name;Database=Your_Database_Name;Uid=Your_User_Name;Pwd=Your_Password"
+    connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
 
     서버 이름으로 인스턴스 이름만 사용할 수도 있고 네트워크에 따라 전체 식별자 이름이 필요할 수도 있습니다.
@@ -60,12 +60,12 @@ Microsoft R을 사용하면 R 코드에서 [!INCLUDE[ssNoVersion](../../includes
     Windows 인증의 경우 구문이 조금 다릅니다.
     
     ```R
-    connStr <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
+    connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
     다운로드 가능한 R 스크립트는 SQL 로그인만 사용합니다. 일반적으로 R 코드에 암호가 저장되는 것을 피하기 위해 가능한 Windows 인증을 사용하길 권장합니다. 그러나 이 자습서의 코드가 Github에서 다운로드한 코드와 일치하도록 나머지 연습에서는 SQL 로그인을 사용할 것입니다. (역주. 명명된 인스턴스에 연결하는 경우 구분 문자 \ 를 두 번 지정합니다.)
 
-3. 새로운 _계산 컨텍스트_ 를 만들 때 사용할 변수를 정의합니다. 계산 컨텍스트 개체를 만든 후에 이를 사용해서 SQL Server 인스턴스에 R 코드를 실행할 수 있습니다.
+3. 새로운 *계산 컨텍스트* 를 만들 때 사용할 변수를 정의합니다. 계산 컨텍스트 개체를 만든 후에 이를 사용해서 SQL Server 인스턴스에 R 코드를 실행할 수 있습니다.
 
     ```R
     sqlShareDir <- paste("C:\\AllShare\\",Sys.getenv("USERNAME"),sep="")
@@ -106,10 +106,10 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
 1. SQL 쿼리를 문자열 변수로 저장합니다. 쿼리는 모델 훈련용 데이터를 정의합니다.
 
     ```R
-    sampleDataQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
+    sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
 
-    좀 더 빠르게 실행 하는 TOP 절을 사용 했습니다 하지만 쿼리에 의해 반환 되는 실제 행 순서에 따라 달라질 수 있습니다. 따라서 요약 결과가 아래에 나열 된 다른 수도 있습니다. TOP 절을 제거 하려면 자유롭게 합니다.
+    더 빠르게 실행 하는 작업을 하기 위해 여기에 TOP 절을 사용 했습니다 하지만 쿼리에 의해 반환 되는 실제 행 순서에 따라 달라질 수 있습니다. 따라서 요약 결과 아래에 나열 된 다른 수도 있습니다. TOP 절을 제거 해도 됩니다.
 
 2. 쿼리 정의를 인수로 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수에 전달합니다.
 
@@ -180,7 +180,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
   
     **결과**
 
-    이러한 경우 결과 rxSummary 함수 성공적으로 실행 하는 경우 나타납니다 목록 다음에 통계의 범주별으로 보여 줍니다. 
+    이와 같은 결과가 나타납니다 rxSummary 함수를 성공적으로 실행 하는 경우 통계 목록을 범주별으로 옵니다. 
 
     ```
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
@@ -188,7 +188,7 @@ Microsoft R에서 *데이터 소스* 는 RevoScaleR 함수를 사용하여 만�
     Number of valid observations: 1000
     ```
 
-### <a name="bonus-exercise-on-big-data"></a>빅 데이터 보너스 연습
+### <a name="bonus-exercise-on-big-data"></a>빅 데이터 연습
 
 모든 행을 사용하는 새로운 쿼리 문자열을 정의하세요. 이 실험을 위해 새 데이터 원본 개체를 설정하는 것을 권장합니다. 처리량에 미치는 영향을 보기 위해 *rowsToRead* 매개변수를 바꾸어볼 수도 있습니다.
 

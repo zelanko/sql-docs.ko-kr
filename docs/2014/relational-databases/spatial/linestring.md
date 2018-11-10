@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft 문서
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059753"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018478"
 ---
 # <a name="linestring"></a>LineString
   `LineString`은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
 ## <a name="linestring-instances"></a>LineString 인스턴스  
- 아래 그림의 예를 보여 줍니다. `LineString` 인스턴스.  
+ 다음 그림에서는 `LineString` 인스턴스의 예를 보여 줍니다.  
   
  ![geometry LineString 인스턴스의 예](../../database-engine/media/linestring.gif "geometry LineString 인스턴스의 예")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059753"
   
 -   그림 1은 단순하고 닫혀 있지 않은 `LineString` 인스턴스입니다.  
   
--   그림 2는 단순 하지 않고 닫혀 있지 않은, `LineString` 인스턴스.  
+-   그림 2는 단순하지 않고 닫혀 있지 않은 `LineString` 인스턴스입니다.  
   
 -   그림 3은 닫혀 있고 단순한 `LineString` 인스턴스이므로 링입니다.  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3`에서는 `LineString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다.  
   
- 다음 `LineString` 인스턴스가 허용 되지 않습니다. 이 인스턴스에서 `System.FormatException`이 발생합니다.  
+ 다음 `LineString` 인스턴스가 허용되지 않습니다. 이 인스턴스에서 `System.FormatException`이 발생합니다.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- 에 대 한는 `LineString` 인스턴스는 다음 조건을 충족 해야 유효 합니다.  
+ `LineString` 인스턴스는 다음 조건을 충족해야 유효합니다.  
   
-1.  `LineString` 인스턴스가 허용 되어야 합니다.  
+1.  `LineString` 인스턴스가 허용되어야 합니다.  
   
 2.  `LineString` 인스턴스가 비어 있지 않는 경우 해당 인스턴스에 2개 이상의 고유 점이 포함되어야 합니다.  
   
-3.  `LineString` 인스턴스 두 개 이상의 연속 점 간격으로 자체적으로 겹쳐질 수 없습니다.  
+3.  `LineString` 인스턴스는 두 개 이상의 연속 점 간격으로 자체적으로 겹쳐질 수 없습니다.  
   
  다음 `LineString` 인스턴스는 유효합니다.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- 다음 `LineString` 인스턴스는 유효 하지 않습니다.  
+ 다음 `LineString` 인스턴스는 유효하지 않습니다.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

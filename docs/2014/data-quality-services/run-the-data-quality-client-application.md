@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.browseforservers.f1
@@ -14,17 +13,17 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74968a185a5b9e3d0ff4dfe1da7dcbb374bfdc4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ea19b5b56902e3c8fb4fa664b4449c29af2ee41
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140573"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032951"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 응용 프로그램 실행
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]를 실행하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에 로그온하면 DQS([!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)])를 사용할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 설치를 완료해야 합니다. 자세한 내용은 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)를 참조하세요.  

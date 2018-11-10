@@ -1,11 +1,9 @@
 ---
 title: MultiLineString | Microsoft 문서
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 053af2980857e1bde0ea4b3812b64a276ee9e171
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157263"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019058"
 ---
 # <a name="multilinestring"></a>MultiLineString
   A `MultiLineString` 0 개 이상의 컬렉션인 `geometry` 하거나 **geographyLineString** 인스턴스.  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 인스턴스  
- 아래 그림의 예를 보여 줍니다. `MultiLineString` 인스턴스.  
+ 다음 그림에서는 `MultiLineString` 인스턴스의 예를 보여 줍니다.  
   
  ![geometry MultiLineString 인스턴스의 예](../../database-engine/media/multilinestring.gif "geometry MultiLineString 인스턴스의 예")  
   
@@ -35,16 +33,16 @@ ms.locfileid: "48157263"
   
 -   그림 2는 `MultiLineString` 요소의 엔드포인트만 교차하므로 단순한 `LineString` 인스턴스입니다. 경계는 두 개의 겹치지 않는 엔드포인트입니다.  
   
--   그림 3은 해당 `MultiLineString` 요소 중 하나의 내부가 교차하므로 단순하지 않은 `LineString` 인스턴스입니다. 이 경계의 `MultiLineString` 인스턴스는 4 개의 끝점입니다.  
+-   그림 3은 해당 `MultiLineString` 요소 중 하나의 내부가 교차하므로 단순하지 않은 `LineString` 인스턴스입니다. 이 `MultiLineString` 인스턴스의 경계는 4개의 엔드포인트입니다.  
   
--   그림 4는 단순 하지 않고 닫혀 있지 않은, `MultiLineString` 인스턴스.  
+-   그림 4는 단순하지 않고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다.  
   
--   그림 5는 단순하고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다. 때문에 닫히지 해당 `LineStrings` 요소가 닫혀 있지 않습니다. 간단 하므로의 내부에 교차는 `LineStrings` 인스턴스가 교차 합니다.  
+-   그림 5는 단순하고 닫혀 있지 않은 `MultiLineString` 인스턴스입니다. 때문에 닫히지 해당 `LineStrings` 요소가 닫혀 있지 않습니다. `LineStrings` 인스턴스의 내부에 교차하는 것이 없으므로 단순합니다.  
   
--   그림 6은 단순 하면서도 닫힌 `MultiLineString` 인스턴스. 이 인스턴스는 해당 요소가 모두 닫혀 있으므로 닫혀 있고, 해당 요소 중 교차하는 것이 없으므로 단순합니다.  
+-   그림 6은 단순하고 닫혀 있는 `MultiLineString` 인스턴스입니다. 이 인스턴스는 해당 요소가 모두 닫혀 있으므로 닫혀 있고, 해당 요소 중 교차하는 것이 없으므로 단순합니다.  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- 에 `MultiLineString` 인스턴스를 허용 해야 하거나 비어 있거나 수만 `LineString` 인스턴스로만 구성 되어 허용 되는 합니다. 에 대 한 자세한 수락 `LineString` 인스턴스를 참조 하세요 [LineString](../spatial/linestring.md)합니다. 다음은 허용되는 `MultiLineString` 인스턴스의 예입니다.  
+ `MultiLineString` 인스턴스는 비어 있거나 허용되는 `LineString` 인스턴스로만 구성되어 있어야 허용됩니다. 에 대 한 자세한 수락 `LineString` 인스턴스를 참조 하세요 [LineString](../spatial/linestring.md)합니다. 다음은 허용되는 `MultiLineString` 인스턴스의 예입니다.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -53,14 +51,14 @@ DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 다음 예제에서는 throw 한 `System.FormatException` 때문에 두 번째 `LineString` 인스턴스가 유효 하지 않습니다.  
+ 다음 예에서는 두 번째 `LineString` 인스턴스가 유효하지 않으므로 `System.FormatException`이 발생합니다.  
   
 ```  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- 에 대 한는 `MultiLineString` 인스턴스는 다음 조건을 충족 해야 유효 합니다.  
+ `MultiLineString` 인스턴스는 다음 조건을 충족해야 유효합니다.  
   
 1.  `MultiLineString` 인스턴스를 구성하는 모든 인스턴스가 유효한 `LineString` 인스턴스여야 합니다.  
   
@@ -76,7 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 유효 하지 때문에 두 번째 `LineString` 인스턴스가 겹치는 첫 번째 `LineString` 간격 인스턴스. 즉, 이 두 인스턴스는 무한한 점에서 접합니다.  
+ `@g4`는 두 번째 `LineString` 인스턴스가 일정 간격으로 첫 번째 `LineString` 인스턴스와 겹치므로 유효하지 않습니다. 즉, 이 두 인스턴스는 무한한 점에서 접합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 SRID 0으로 두 개의 `geometry``MultiLineString` 요소를 포함하는 단순한 `LineString` 인스턴스를 만듭니다.  

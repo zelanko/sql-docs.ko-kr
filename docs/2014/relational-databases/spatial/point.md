@@ -1,11 +1,9 @@
 ---
 title: 점 | Microsoft 문서
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146873"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017990"
 ---
 # <a name="point"></a>점
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 데이터는 `Point` 단일 위치를 나타내는 0 차원 개체 이며 Z (높이) 값 및 M (측정값) 값을 포함할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 데이터에서 `Point`는 단일 위치를 나타내는 0차원 개체 이며 Z(높이) 및 M(측정값) 값을 포함할 수 있습니다.  
   
 ## <a name="geography-data-type"></a>geography 데이터 형식  
  Geography 데이터 형식의 점 유형은 *Lat* 와 *Long* 가 각각 경도와 위도를 나타내는 단일 위치를 나타냅니다. 경도와 위도 값은 각도로 측정됩니다. 위도 값은 항상 [-90, 90] 사이에 있고 이 범위를 벗어난 값을 입력하면 예외를 발생합니다. 경도 값은 항상 [-180, 180] 사이에 있고 이 범위를 벗어나서 입력된 값은 이 범위 안에 있는 값으로 랩 어라운드(wrap-around)됩니다. 예를 들어 경도 값에 190을 입력하면 그 값은 -170으로 래핑됩니다. *SRID* 는 반환할 **geography** 인스턴스의 Spatial Reference ID를 나타냅니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2765133431c78714e2714b0fb59e4701aeaf0dd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ac4fce9d79c606b8a447ec23fbc1267f8f8f45b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156013"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032050"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 의 두 가지 구성 요소가 포함됩니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "48156013"
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0(이미 설치되어 있지 않은 경우 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 와 함께 설치됨)<br /><br /> Internet Explorer 6.0 SP1 이상|  
   
 > [!IMPORTANT]  
->  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]는 동일한 컴퓨터나 별도의 컴퓨터에 설치할 수 있습니다. 두 가지 구성 요소는 모두 임의의 순서로 서로 독립적으로 설치할 수 있습니다. 하지만 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 사용하려면 연결할 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 가 설치되어 있어야 합니다.  
+>  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 동일한 컴퓨터나 별도의 컴퓨터에 설치할 수 있습니다. 두 가지 구성 요소는 모두 임의의 순서로 서로 독립적으로 설치할 수 있습니다. 하지만 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 사용하려면 연결할 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 가 설치되어 있어야 합니다.  
 > -   최신 또는 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 DQS 정리 변환을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 버전의 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 연결할 수 있습니다. 기존 버전의 DQS를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 방법은 [Data Quality Services 업그레이드](../../database-engine/install-windows/upgrade-data-quality-services.md)를 참조하세요.  
 > -   Microsoft Excel은 Data Quality 클라이언트를 설치하기 위한 필수 구성 요소는 아니지만, Excel 파일에서 도메인 값을 가져오거나 기술 자료 검색, 정리 또는 일치 작업을 위해 Excel 파일의 원본 데이터에 매핑하는 등의 다양한 작업을 클라이언트 응용 프로그램에서 수행하려면 Data Quality 클라이언트 컴퓨터에 Microsoft Excel 2003 이상이 설치되어 있어야 합니다.  
   

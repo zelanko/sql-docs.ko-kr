@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,21 +14,21 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091753"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031510"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 일치를 수행하는 방법에 대해 설명합니다. 일치 프로세스에서는 일치 정책의 일치 규칙에 따라 일치 레코드 클러스터를 확인하고 Survivorship 규칙에 따라 각 클러스터에서 하나의 레코드를 존속 레코드로 지정한 후 결과를 내보냅니다. 일치 프로세스(중복 제거라고도 함)는 DQS의 컴퓨터 기반 프로세스에서 수행되지만, 대화형으로 일치 규칙을 만들고 여러 선택 항목에서 Survivorship 규칙을 선택하여 일치 프로세스를 제어할 수 있습니다.  
   
  일치는 데이터 원본을 확인하고 도메인을 데이터 원본에 매핑하는 매핑 프로세스, 일치 분석 및 Survivorship을 실행하는 일치 프로세스, 그리고 Survivorship 규칙을 지정하고 일치 결과를 내보내는 내보내기 프로세스의 3단계로 수행됩니다. 이러한 각 프로세스는 일치 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 일치 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. DQS에서는 원본 데이터, 일치 규칙 및 일치 결과에 대한 통계를 제공하므로 정보를 바탕으로 일치에 대한 의사를 결정하고 일치 프로세스를 구체화할 수 있습니다.  
   
- 하나 이상의 일치 규칙을 사용하여 일치 정책을 만들고 예제 데이터에서 해당 정책을 실행하여 일치 프로세스를 준비해야 합니다. 일치 프로젝트 프로세스는 일치 정책 프로세스와 별개이며, 기술 자료는 일치 프로젝트에서 얻은 일치 정보로 채워지지 않습니다. 일치 정책을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)합니다.  
+ 하나 이상의 일치 규칙을 사용하여 일치 정책을 만들고 예제 데이터에서 해당 정책을 실행하여 일치 프로세스를 준비해야 합니다. 일치 프로젝트 프로세스는 일치 정책 프로세스와 별개이며, 기술 자료는 일치 프로젝트에서 얻은 일치 정보로 채워지지 않습니다. 일치 정책을 만드는 방법은 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -166,7 +165,7 @@ ms.locfileid: "48091753"
     >  일치 프로젝트를 완료한 다음 다시 사용하면 해당 일치 프로젝트에서 당시에 게시된 기술 자료를 사용합니다. 즉, 프로젝트를 완료한 이후에 기술 자료에 적용한 변경 내용은 사용되지 않습니다. 이러한 변경 내용을 사용하거나 새 기술 자료를 사용하려면 새로운 일치 프로젝트를 만들어야 합니다. 반면, 일치 프로젝트를 만들고 완료하지 않은 경우 프로젝트에서 일치를 실행하면 일치 정책에 게시한 변경 내용이 사용됩니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 일치 프로젝트를 실행한 후  
- 일치 프로젝트를 실행한 후 기술 자료의 일치 정책을 변경하고 업데이트된 일치 정책에 따라 다른 일치 프로젝트를 만들어 실행할 수 있습니다. 자세한 내용은 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
+ 일치 프로젝트를 실행한 후 기술 자료의 일치 정책을 변경하고 업데이트된 일치 정책에 따라 다른 일치 프로젝트를 만들어 실행할 수 있습니다. 자세한 내용은 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)을 참조하세요.  
   
 ##  <a name="Profiler"></a> 프로파일러 및 결과 탭  
  프로파일러 및 결과 탭에는 일치 프로세스에 대한 통계가 포함됩니다.  

@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da1dd90bb9a6ed19ed7bcbffc7afdfd0298291e2
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419478"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269997"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |   --- |   --- |   --- |
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
 |TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트 |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.  |       |
-|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생생하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.  |       |
+|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생성하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.  |       |
 |DBCC CLONEDATABASE에 대한 SSB(Service Broker) 지원    |   DBCC CLONEDATABASE 명령이 SSB 개체의 스크립팅을 허용하도록 향상되었습니다.  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075)   |
 |TempDB 버전 저장소 공간 사용량을 모니터링하는 새로운 DMV    |   SQL Server 2016 SP2에 sys.dm_tran_version_store_space_usage DMV가 새롭게 도입되어 TempDB에서 버전 저장소 사용량을 모니터링 할 수 있습니다. 이제 DBA를 프로덕션 서버에서 실행할 때 성능 오버 헤드가 발생하지 않으면서, 데이터베이스당 버전 저장소 사용 요구 사항을 기반으로 TempDB 크기를 사전에 계획할 수 있습니다. |       |
 |복제 에이전트에 대한 완벽한 덤프 지원 | 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본적으로 예외 증상의 미니 덤프가 만들어집니다. 이렇게 하면 처리되지 않은 예외 문제를 해결하는 것이 매우 어렵습니다. 이번 변경을 통해 복제 에이전트에 대한 전체 덤프를 생성할 수 있는 새로운 레지스트리 키가 도입되었습니다.  |       |
@@ -99,7 +99,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 - 메모리 내 OLTP(로컬 DB에서 사용할 수 없음)
 - 여러 파일 스트림 컨테이너(Local DB에서 사용할 수 없음)
 - 분할
-- Polybase
+- PolyBase
 - 행 수준 보안
 
 다음 표에는 SQL Server 2016 SP1에서 제공하는 주요 향상 기능이 요약되어 있습니다.

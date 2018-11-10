@@ -6,7 +6,7 @@ ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324636"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031200"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "49324636"
 ![적응 쿼리 처리 기능](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>적응 쿼리 처리를 사용하도록 설정하는 방법
-데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>일괄 처리 모드 메모리 부여 피드백
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다.  동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
-다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이 **88초**였습니다.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다.  동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
+다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이  **88초** 였습니다.   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -60,7 +60,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![높은 분산](./media/2_AQPGraphHighSpills.png)
 
-메모리 부여 피드백을 사용하여 두 번째로 실행하는 경우 기간이 **1초**(88초에서 감소)이고 분산이 완전히 제거되며 부여가 더 높습니다. 
+메모리 부여 피드백을 사용하여 두 번째로 실행하는 경우 기간이  **1초** (88초에서 감소)이고 분산이 완전히 제거되며 부여가 더 높습니다. 
 
 ![분산 없음](./media/3_AQPGraphNoSpills.png)
 
@@ -69,14 +69,14 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 크기가 부족한 메모리 부여 조건의 경우 일괄 처리 모드 연산자에 대해 디스크로 분산이 발생하며 메모리 부여 피드백이 메모리 부여 다시 계산을 트리거합니다. 분산 이벤트는 메모리 부여 피드백에 보고되며, *spilling_report_to_memory_grant_feedback* xEvent 이벤트를 통해 표시될 수 있습니다. 이 이벤트는 계획의 노드 ID와 해당 노드의 분산 데이터 크기를 반환합니다.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>메모리 부여 피드백 및 매개 변수가 중요한 시나리오
-최적 상태를 유지하려면 매개 변수 값마다 다른 쿼리 계획이 필요할 수도 있습니다. 이러한 유형의 쿼리를 "매개 변수가 중요한" 쿼리로 정의합니다. 매개 변수가 중요한 계획의 경우 메모리 요구 사항이 불안정하면 쿼리에서 메모리 부여 피드백이 자동으로 비활성화됩니다. 쿼리가 여러 번 반복 실행된 후 계획이 비활성화되며, *memory_grant_feedback_loop_disabled* xEvent를 모니터링하면 이를 관찰할 수 있습니다. 매개 변수 스니핑 및 매개 변수 민감도에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)를 참조하세요.
+최적 상태를 유지하려면 매개 변수 값마다 다른 쿼리 계획이 필요할 수도 있습니다. 이러한 유형의 쿼리를 "매개 변수가 중요한" 쿼리로 정의합니다. 매개 변수가 중요한 계획의 경우 메모리 요구 사항이 불안정하면 쿼리에서 메모리 부여 피드백이 자동으로 비활성화됩니다. 쿼리가 여러 번 반복 실행된 후 계획이 비활성화되며, *memory_grant_feedback_loop_disabled* xEvent를 모니터링하면 이를 관찰할 수 있습니다. 매개 변수 스니핑 및 매개 변수 민감도에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)를 참조하세요.
 
 ### <a name="memory-grant-feedback-caching"></a>메모리 부여 피드백 캐싱
-단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 저장소에 캡처되지 않습니다.
-캐시에서 계획을 제거하면 피드백이 유지되지 않습니다. 장애 조치(failover)가 있는 경우에도 피드백이 손실됩니다. `OPTION (RECOMPILE)`을 사용하는 문은 새 계획을 만들지만 캐시하지 않습니다. 캐시되지 않으므로 메모리 부여 피드백이 생성되지 않으며 해당 컴파일 및 실행을 위해 저장되지 않습니다.  그러나 `OPTION (RECOMPILE)`을 사용하지 **않는** 동등한 문(즉, 동일한 쿼리 해시 포함)을 캐시한 후 다시 실행하는 경우 연속된 문은 메모리 부여 피드백에서 혜택을 받을 수 있습니다.
+단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 저장소에 캡처되지 않습니다.
+캐시에서 계획을 제거하면 피드백이 유지되지 않습니다. 장애 조치(failover)가 있는 경우에도 피드백이 손실됩니다. `OPTION (RECOMPILE)`을 사용하는 문은 새 계획을 만들지만 캐시하지 않습니다. 캐시되지 않으므로 메모리 부여 피드백이 생성되지 않으며 해당 컴파일 및 실행을 위해 저장되지 않습니다.  그러나 `OPTION (RECOMPILE)`을 사용하지 **않는** 동등한 문(즉, 동일한 쿼리 해시 포함)을 캐시한 후 다시 실행하는 경우 연속된 문은 메모리 부여 피드백에서 혜택을 받을 수 있습니다.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>메모리 부여 피드백 작업 추적
-*memory_grant_updated_by_feedback* xEvent 이벤트를 사용하여 메모리 부여 피드백 이벤트를 추적할 수 있습니다. 이 이벤트는 현재 실행 횟수 기록, 메모리 부여 피드백이 계획을 업데이트한 횟수, 수정 전 적합한 추가 메모리 부여, 메모리 부여 피드백이 캐시된 계획을 수정한 후 적합한 추가 메모리 부여를 추적합니다.
+*memory_grant_updated_by_feedback* xEvent 이벤트를 사용하여 메모리 부여 피드백 이벤트를 추적할 수 있습니다. 이 이벤트는 현재 실행 횟수 기록, 메모리 부여 피드백이 계획을 업데이트한 횟수, 수정 전 적합한 추가 메모리 부여, 메모리 부여 피드백이 캐시된 계획을 수정한 후 적합한 추가 메모리 부여를 추적합니다.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>메모리 부여 피드백, 리소스 관리자 및 쿼리 힌트
 부여되는 실제 메모리는 리소스 관리자 또는 쿼리 힌트에 따른 쿼리 메모리 제한을 준수합니다.
@@ -158,7 +158,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
-일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
+일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
 작동 방식은 다음과 같습니다.
 -  중첩된 루프 조인이 해시 조인보다 적합할 만큼 빌드 조인 입력의 행 수가 충분히 작으면 계획이 중첩된 루프 알고리즘으로 전환됩니다.
 -  빌드 조인 입력이 특정 행 수 임계값을 초과하면 전환이 발생하지 않으며 계획이 해시 조인을 계속 사용합니다.
@@ -166,34 +166,34 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 다음 쿼리는 적응 조인 예제를 설명하기 위해 사용됩니다.
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.MD)를 사용하도록 설정하면 다음 계획이 표시됩니다.
+이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.MD)를 사용하도록 설정하면 다음 계획이 표시됩니다.
 
 ![쿼리 결과 336개 행](./media/4_AQPStats336Rows.png)
 
 계획에 다음이 표시됩니다.
 1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
-1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
+1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
 1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여 줍니다.
 1. 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
  이제 계획과 동일한 쿼리를 비교합니다. 하지만 이번에는 테이블에 하나의 행만 있는 *Quantity* 값에 대해 쿼리합니다.
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
+쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
 
 ![쿼리 결과 하나의 행](./media/5_AQPStatsOneRow.png)
 
@@ -205,7 +205,7 @@ WHERE [fo].[Quantity] = 361;
 작은 조인 입력 검색과 큰 조인 입력 검색 간에 자주 변동하는 워크로드가 이 기능에서 가장 큰 혜택을 받게 됩니다.
 
 ### <a name="adaptive-join-overhead"></a>적응 조인 오버헤드
-적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩된 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
+적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩된 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>적응 조인 캐싱 및 다시 사용
 일괄 처리 모드 적응 조인은 문의 초기 실행에서 작동하며, 컴파일된 후에는 컴파일된 적응 조인 임계값과 외부 입력의 빌드 단계를 통과하는 런타임 행에 따라 연속 실행이 적응 상태로 유지됩니다.
@@ -236,7 +236,7 @@ WHERE [fo].[Quantity] = 361;
 적응 조인이 중첩된 루프 작업으로 전환하는 경우 해시 조인 빌드에서 이미 읽은 행이 사용됩니다. 연산자는 외부 참조 행을 다시 읽지 **않습니다**.
 
 ### <a name="adaptive-threshold-rows"></a>적응 임계값 행
-다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다.  이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
+다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다.  이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
 
 ![조인 임계값](./media/6_AQPJoinThreshold.png)
 

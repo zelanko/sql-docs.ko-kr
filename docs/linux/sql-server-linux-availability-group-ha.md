@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798941"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031026"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -62,8 +62,8 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 | |읽기-배율|고가용성 & </br> 데이터 보호 | 데이터 보호
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 
-|1개 보조 복제본 중단  | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 
+|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 
+|1개 보조 복제본 중단  | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 
 <sup>*</sup> 기본
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W.| 자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우
-|1개 보조 복제본 중단  |기본은 읽기/쓰기, 데이터 손실 위험에 노출 실행 합니다. |보조 복제본이 복구 될 때까지 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다.
+|1개 보조 복제본 중단  |기본은 읽기/쓰기, 데이터 손실 위험에 노출 실행 합니다. |보조 복제본이 복구 될 때까지 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다.
 <sup>*</sup> 기본
 
 >[!NOTE]
@@ -108,9 +108,9 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |주 중단 | 자동 장애 조치(failover). 새 주 복제본은 R / W. | 자동 장애 조치(failover). 새 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다. 
-|보조 복제본 중단 | 주 복제본이 읽기/쓰기를 (기본 실패 하 고 복구할 수 없는) 경우 데이터 손실 위험에 노출 실행입니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 장애 조치 하는 경우 주 복제본이 없는 실패 합니다. 
-|구성 전용 복제본 중단 | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. 
-|동기 보조 + 구성만 복제본 중단| 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 자동 장애 조치 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 복제본이 없는 경우 장애 조치에도 기본 실패 합니다. 
+|보조 복제본 중단 | 주 복제본이 읽기/쓰기를 (기본 실패 하 고 복구할 수 없는) 경우 데이터 손실 위험에 노출 실행입니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 장애 조치 하는 경우 주 복제본이 없는 실패 합니다. 
+|구성 전용 복제본 중단 | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. 
+|동기 보조 + 구성만 복제본 중단| 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 자동 장애 조치 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 복제본이 없는 경우 장애 조치에도 기본 실패 합니다. 
 <sup>*</sup> 기본
 
 >[!NOTE]

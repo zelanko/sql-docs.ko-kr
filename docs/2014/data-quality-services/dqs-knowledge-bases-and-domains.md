@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad3530b8179989f86cc62c9c18c888575890b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1c6fe8e8d049b7b999984c0dcb5f0ed49e662a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153003"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032409"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 설명합니다. 데이터를 정리하려면 데이터에 대한 지식이 있어야 합니다. 데이터 품질 프로젝트에 대한 지식을 준비하기 위해서는 DQS가 잘못되었거나 부적합한 데이터를 식별하기 위해 사용할 수 있는 KB(기술 자료)를 작성하고 유지 관리해야 합니다. DQS를 사용하면 컴퓨터 기반 프로세스 대화형 프로세스를 모두 사용하여 기술 자료를 만들고, 작성 및 업데이트할 수 있습니다. 기술 자료에서 지식은 도메인에서 유지 관리되며 이러한 각 기술 자료는 특정 데이터 필드와 관련이 있습니다. 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다.  
@@ -95,7 +94,7 @@ ms.locfileid: "48153003"
  도메인 속성은 연관된 값에 적용할 처리를 정의하고 구동합니다. 값의 데이터 형식 및 언어를 설정하고, 선행 값을 사용하여 원본 데이터가 정리되도록 지정하고(이 옵션을 해제하면 선행 값이 아니라 올바른 용어를 사용하여 원본 데이터가 정리됨), 도메인에 있는 데이터 값이 출력될 때 적용할 형식을 구성하여 데이터 표준화를 보장하고, 적용할 알고리즘(구문 오류, 맞춤법 검사기 또는 문자열 정규화)을 정의할 수 있습니다.  
   
 ### <a name="reference-data-services"></a>참조 Data Services  
- 도메인 관리 프로세스에서 온라인 참조 데이터를 도메인에 연결할 수 있습니다. 이를 통해 도메인의 데이터를 참조 데이터 공급자가 유지 관리하는 데이터와 비교할 수 있습니다. **응용 프로그램의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+ 도메인 관리 프로세스에서 온라인 참조 데이터를 도메인에 연결할 수 있습니다. 이를 통해 도메인의 데이터를 참조 데이터 공급자가 유지 관리하는 데이터와 비교할 수 있습니다. **응용 프로그램의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 ### <a name="applying-domain-rules"></a>도메인 규칙 적용  
  데이터 유효성 검사를 위한 도메인 규칙을 만들 수 있습니다. 도메인 규칙은 문자열 값일 수 있는 단일 용어와 같은 기본 제약 조건으로부터 전자 메일 주소의 올바른 형식과 같은 보다 복잡한 정규식까지 다양한 데이터의 정확도를 보장합니다.  
@@ -131,7 +130,7 @@ ms.locfileid: "48153003"
   
 -   복합 도메인의 데이터는 참조 데이터 원본에 연결할 수 있으며, 이 경우 복합 도메인이 참조 데이터 공급자에 전송됩니다. 이러한 작업은 종종 주소 데이터에서 수행됩니다.  
   
- 복합 도메인으로 표현되는 데이터를 구문 분석하는 방법은 복합 도메인 속성에 의해 결정됩니다. 구분 기호나 도메인 순서를 기준으로 데이터 구문을 분석하거나, 복합 도메인에서 **기술 자료 구문 분석 사용** 속성을 선택하여 복합 도메인에 연결된 도메인의 기술 자료를 기반으로 데이터 구문을 분석할 수 있습니다. 자세한 내용은 [Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)합니다.  
+ 복합 도메인으로 표현되는 데이터를 구문 분석하는 방법은 복합 도메인 속성에 의해 결정됩니다. 구분 기호나 도메인 순서를 기준으로 데이터 구문을 분석하거나, 복합 도메인에서 **기술 자료 구문 분석 사용** 속성을 선택하여 복합 도메인에 연결된 도메인의 기술 자료를 기반으로 데이터 구문을 분석할 수 있습니다. 자세한 내용은 [Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)을 참조하세요.  
   
  복합 도메인은 단일 도메인과 다르게 관리됩니다. 복합 도메인에서는 값을 관리하지 않으며, 복합 도메인을 구성하는 단일 도메인에서 값을 관리합니다. 하지만 도메인 관리 활동의 도메인 목록에서 복합 도메인에 있는 서로 다른 값 사이의 관계를 보고 여기에 적용되는 통계를 확인할 수 있습니다. 예를 들어 동일한 5개 문자열 값으로 구성되는 단일 주소가 몇 번이나 반복되는지 확인할 수 있습니다. 기술 자료 검색 활동의 검색 단계에서 프로파일링은 복합 도메인이 아닌 복합 도메인 내의 단일 도메인에서 수행됩니다. 하지만 대화형 정리의 경우 단일 도메인이 아니라 복합 도메인에서 데이터를 정리합니다.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48153003"
 ##  <a name="Matching"></a> 데이터 일치  
  도메인 관리를 통해 기술 자료를 수동으로 변경하는 것 외에도 일치하는 지식을 기술 자료에 추가할 수 있습니다. 데이터 중복 제거 프로세스를 위해 DQS를 준비하려면 일치 가능성을 계산하기 위해 DQS가 사용할 일치 규칙을 만들어야 합니다. 정책에는 데이터 관리자가 DQS에서 데이터 행을 비교하는 방법을 식별하기 위해 만드는 하나 이상의 일치 규칙이 포함됩니다. 데이터 관리자는 행에서 비교할 데이터 필드와 비교 시 각 필드가 갖는 가중치를 결정합니다. 데이터 관리자는 또한 일치하는 것으로 간주할 일치 확률을 결정합니다. DQS는 데이터 품질 프로젝트에서 일치 활동을 수행하는 데 사용할 일치 규칙을 기술 자료에 추가합니다.  
   
- 기술 자료 및 데이터 일치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Data Matching](../../2014/data-quality-services/data-matching.md)합니다.  
+ 기술 자료 및 데이터 일치에 대한 자세한 내용은 [데이터 일치](../../2014/data-quality-services/data-matching.md)에서 유지 관리할 수 있으며,  
   
 ## <a name="in-this-section"></a>섹션 내용  
  기술 자료 및 도메인에서 다음과 같은 작업을 수행할 수 있습니다.  

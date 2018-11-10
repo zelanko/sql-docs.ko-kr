@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ca7ee9b3-ef9a-4ba4-83d0-9ee9f80dab27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bd9a63741539f36b56da9a1202020b76dca88f8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74bbb7c7e971df4a7d570b91dc5f231a71d87bf3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780181"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030960"
 ---
 # <a name="run-utility-and-non-utility-collection-sets-on-same-sql-instance"></a>동일한 SQL 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 집합 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47780181"
   
      UCP 만들기 마법사나 관리되는 인스턴스 추가 마법사를 시작하기 전에 이러한 저장 프로시저를 실행하지 않으면 작업이 실패합니다.  
   
--   ph x="1" /&gt; 의 관리되는 인스턴스에서 모든 컬렉션 집합에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유틸리티 UMDW(sysutility_mdw)를 사용해야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 모든 컬렉션 집합에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유틸리티 UMDW(sysutility_mdw)를 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

@@ -6,19 +6,19 @@ ms.author: mikeray
 manager: craigg
 ms.date: 03/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58cbcb648d6318b1b013082fc621c48e278f9186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ad9b87f701a1f1de4f13a7788bba13543056e8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793581"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030020"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제 구성
 
@@ -36,7 +36,7 @@ SQL Server Management Studio (SSMS) 또는 TRANSACT-SQL 저장 프로시저를 �
   
 * 저장된 프로시저를 사용 하 여 예제를 수행 합니다 [Linux에서 SQL Server 구성 복제](sql-server-linux-replication-tutorial-tsql.md) 자습서입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 게시자, 배포자 및 구독자를 구성 하기 전에 SQL Server 인스턴스에 대 한 몇 가지 구성 단계를 완료 해야 합니다.
 

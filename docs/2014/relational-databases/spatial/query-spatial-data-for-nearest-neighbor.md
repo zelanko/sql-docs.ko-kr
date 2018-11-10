@@ -1,22 +1,20 @@
 ---
 title: 가장 인접한 항목의 공간 데이터 쿼리 | Microsoft 문서
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164723"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018698"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
   공간 데이터에 사용되는 일반적인 쿼리는 가장 인접한 항목 쿼리입니다. 가장 인접한 항목 쿼리는 특정 공간 개체에 가장 가까운 공간 개체를 찾는 데 사용됩니다. 예를 들어 웹 사이트에 대한 상점 로케이터는 고객 위치와 가장 가까운 상점 위치를 찾아야 하는 경우가 많습니다.  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>가장 인접한 항목 쿼리 및 공간 인덱스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `TOP` 및 `ORDER BY` 절은 공간 데이터 열에서 가장 인접한 항목 쿼리를 수행하는 데 사용됩니다. 합니다 `ORDER BY` 절에 대 한 호출을 포함 합니다 `STDistance()` 공간 열 데이터 형식에 대 한 메서드. `TOP` 절은 쿼리에 대해 반환 되는 개체의 수를 나타냅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `TOP` 및 `ORDER BY` 절은 공간 데이터 열에서 가장 인접한 항목 쿼리를 수행하는 데 사용됩니다. `ORDER BY` 절은 공간 열 데이터 형식의 `STDistance()` 메서드에 대한 호출을 포함합니다. `TOP` 절은 쿼리에 대해 반환하는 개체 수를 나타냅니다.  
   
  가장 인접한 항목 쿼리에서 공간 인덱스를 사용하려면 다음 요구 사항을 충족해야 합니다.  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 절은 `STDistance()` 메서드를 포함해야 합니다.  
   
-4.  `WHERE` 절에 조건자가 여러 개 있는 경우 `STDistance()` 메서드를 포함하는 조건자는 다른 조건자와 `AND` 결합으로 연결되어야 합니다. 합니다 `STDistance()` 메서드는 선택적 부분에 있을 수 없습니다는 `WHERE` 절.  
+4.  `WHERE` 절에 조건자가 여러 개 있는 경우 `STDistance()` 메서드를 포함하는 조건자는 다른 조건자와 `AND` 결합으로 연결되어야 합니다. `STDistance()` 메서드는 `WHERE` 절의 선택적 부분에 있을 수 없습니다.  
   
 5.  `ORDER BY` 절의 첫 번째 식은 `STDistance()` 메서드를 사용해야 합니다.  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- 쿼리 부족을 `WHERE` 를 사용 하는 절 `STDistance()` 하므로 쿼리에서 공간 인덱스를 사용할 수 없습니다. 구문 섹션에 지정 된 형식에서.  
+ 이 쿼리에는 구문 섹션에서 지정한 형식의 `STDistance()`를 사용하는 `WHERE` 절이 부족하므로 쿼리에서 공간 인덱스를 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)  

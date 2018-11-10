@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197253"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019028"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>SharePoint용 PowerPivot 업그레이드
   이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 구체적인 단계는 사용자 환경에서 현재 실행 중인 SharePoint 버전에 따라 달라 집니다 및 SharePoint 추가 기능에 대 한 PowerPivot 포함 (**spPowerPivot.msi**).  
@@ -155,7 +154,7 @@ ms.locfileid: "48197253"
   
 7.  **PowerPivot 구성 도구를 실행** SharePoint에서 솔루션을 업그레이드 하려면 SQL Server Analysis Services (PowerPivot) 서비스 및 웹 서비스를 실행 하는 첫 번째 SharePoint 응용 프로그램 서버. 이 단계에서는 중앙 관리를 사용할 수 없습니다.  
   
-    1.  에 **시작** 메뉴에서 **프로그램도**, 클릭 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 클릭 하 고 **PowerPivot 구성 도구** . 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
+    1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **PowerPivot 구성 도구**를 차례로 클릭합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
     2.  시작 시 구성 도구에서 PowerPivot 팜 솔루션과 PowerPivot 웹 응용 프로그램 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 “최신 버전의 PowerPivot 솔루션 파일이 검색되었습니다. 팜을 업그레이드 하려면 업그레이드 옵션을 선택하십시오." **확인** 을 클릭하여 메시지를 닫습니다.  
   
@@ -245,7 +244,7 @@ Get-PowerPivotSystemService
   
  **Windows 파일 탐색기**:  
   
-1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 대한 **Bin** 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`과 같습니다.  
+1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 대한 **Bin** 폴더로 이동합니다. 예를 들면 `C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\bin`입니다.  
   
 2.  `msmdsrv.exe`를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -259,7 +258,7 @@ Get-PowerPivotSystemService
   
  PowerPivot 서비스를 시작하면 버전 정보가 Windows 이벤트 로그에 기록됩니다.  
   
-1.  Windows `eventvwr`  
+1.  Windows `eventvwr`을 실행합니다.  
   
 2.  원본 `MSOLAP$POWERPIVOT`에 대한 필터를 만듭니다.  
   
@@ -292,7 +291,7 @@ Get-PowerPivotSystemService
   
 4.  자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)을 참조하세요.  
   
- MSOLAP.4는 OLAP Services 10.0의 Microsoft OLE DB 공급자로 설명되어 있습니다. 이 버전은 Excel 서비스로 설치된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 기본 버전이어야 하며, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전일 수도 있습니다. SharePoint 설치의 기본 버전은 PowerPivot 데이터 액세스를 지원하지 않습니다. SharePoint에서 PowerPivot 통합 문서에 연결하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전 이상이 있어야 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전이 있는지 확인하려면 파일 속성을 보고 버전을 확인하는 방법이 설명된 이전 섹션의 지침을 따르십시오.  
+ MSOLAP.4는 OLAP Services 10.0의 Microsoft OLE DB 공급자로 설명되어 있습니다. 이 버전은 Excel 서비스로 설치된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 기본 버전이어야 하며, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전일 수도 있습니다. SharePoint 설치의 기본 버전은 PowerPivot 데이터 액세스를 지원하지 않습니다. SharePoint에서 PowerPivot 통합 문서에 연결하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전 이상이 있어야 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전이 있는지 확인하려면 파일 속성을 보고 버전을 확인하는 방법이 설명된 이전 섹션의 지침을 따르십시오.  
   
 ### <a name="verify-the-adomdnet-data-provider-version"></a>ADOMD.NET 데이터 공급자 버전 확인  
  다음 지침을 사용하여, 설치된 ADOMD.NET의 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 응용 프로그램의 관리자여야 합니다.  

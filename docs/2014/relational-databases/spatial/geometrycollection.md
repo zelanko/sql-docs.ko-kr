@@ -1,11 +1,9 @@
 ---
 title: GeometryCollection | Microsoft 문서
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea9758d3411c242ade8293a8a52f7c22bd845ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228893"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018518"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A `GeometryCollection` 0 개 이상의 컬렉션인 `geometry` 또는 `geography` 인스턴스. `GeometryCollection` 비어 있을 수 있습니다.  
+  `GeometryCollection`은 1개 이상의 `geometry` 또는 `geography` 인스턴스 컬렉션입니다. `GeometryCollection`은 비워 둘 수 있습니다.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 인스턴스  
   
@@ -35,14 +33,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 다음 예제에서는 throw를 `System.FormatException` 때문에 `LinesString` 의 인스턴스는 `GeometryCollection` 인스턴스가 허용 되지 않습니다.  
+ 다음 예에서는 `LinesString` 인스턴스의 `GeometryCollection` 인스턴스가 허용되지 않으므로 `System.FormatException`이 발생합니다.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음은 세 가지 유효한 `GeometryCollection` 인스턴스와 유효 하지 않은 한 인스턴스.  
+ `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음 예에서는 유효한 `GeometryCollection` 인스턴스 세 개와 유효하지 않은 인스턴스 하나를 보여 줍니다.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

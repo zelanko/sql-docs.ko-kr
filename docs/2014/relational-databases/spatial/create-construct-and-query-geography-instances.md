@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
@@ -15,22 +14,22 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fdb6d7b2c5649908b31a958238572aa6b8b0285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218319"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018748"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
   지리 공간 데이터 형식인 `geography`는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원 (둥근 표면) 데이터를 저장 합니다.  
   
- `geography` 형식은 미리 정의 되 고 각 데이터베이스에서 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 `geography` 형식의 테이블 열을 만들고 `geography` 데이터에 대한 작업을 수행할 수 있습니다.  
+ `geography` 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 `geography` 형식의 테이블 열을 만들고 `geography` 데이터에 대한 작업을 수행할 수 있습니다.  
   
 ##  <a name="creating"></a> 새 지리 인스턴스 만들기 또는 구성  
   
 ###  <a name="existing"></a> 기존 인스턴스에서 새 지리 인스턴스 만들기  
- 합니다 `geography` 새로 만들기를 사용할 수는 필요한 수많은 기본 메서드를 제공 하는 데이터 형식 `geography` 기존 인스턴스를 기반으로 한 인스턴스.  
+ `geography` 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 기존 인스턴스에 기반하여 새 `geography` 인스턴스를 만들 수 있습니다.  
   
  **지리의 버퍼를 만들려면**  
  [STBuffer&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -48,7 +47,7 @@ ms.locfileid: "48218319"
  [STDifference&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> WKT 입력으로부터 지리 인스턴스 구성  
- `geography` 데이터 형식은 Open Geospatial Consortium (OGC) WKT 표현에서 지리를 생성 하는 여러 가지 기본 메서드를 제공 합니다. WKT 표준은 지리 데이터를 텍스트 형식으로 교환할 수 있는 텍스트 문자열입니다.  
+ `geography` 데이터 형식은 OGC(Open Geospatial Consortium) WKT 표현에서 지리를 생성하는 여러 가지 기본 메서드를 제공합니다. WKT 표준은 지리 데이터를 텍스트 형식으로 교환할 수 있는 텍스트 문자열입니다.  
   
  **WKT 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [STGeomFromText&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -77,7 +76,7 @@ ms.locfileid: "48218319"
  [STGeomCollFromText&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> WKB 입력으로부터 지리 인스턴스 구성  
- WKB는 허용 하는 OGC에 의해 지정 된 이진 형식 `Geography` 데이터를 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 교환 될 수 있습니다. 다음 함수는 WKB 입력을 사용하여 geography 인스턴스를 생성합니다.  
+ WKB는 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 `Geography` 데이터를 교환할 수 있도록 OGC에서 지정하는 이진 형식입니다. 다음 함수는 WKB 입력을 사용하여 geography 인스턴스를 생성합니다.  
   
  **WKB 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [STGeomFromWKB&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -112,7 +111,7 @@ ms.locfileid: "48218319"
  [GeomFromGML&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> 지리 인스턴스에서 WKT 및 WKB 반환  
- 다음 메서드를 사용 하 여 WKT 또는 WKB 형식을 반환할 수는 `geography` 인스턴스:  
+ 다음 메서드를 사용하여 `geography` 인스턴스의 WKT 또는 WKB 형식을 반환할 수 있습니다.  
   
  **지리 인스턴스의 WKT 표현을 반환하려면**  
  [STAsText&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -132,7 +131,7 @@ ms.locfileid: "48218319"
  모든 `geography` 인스턴스 메서드를 통해 검색할 수 있는 속성의 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 합니다. 다음 항목에서는 geography 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
   
 ###  <a name="valid"></a> 유효성, 인스턴스 유형 및 GeometryCollection 정보  
- 후는 `geography` 인스턴스 생성, 다음 메서드를 사용 하 여 인스턴스 유형을 반환할 인스턴스인 경우는 `GeometryCollection` 인스턴스를 특정 반환 `geography` 인스턴스.  
+ `geography` 인스턴스를 구성한 후 다음과 같은 방법으로 인스턴스 유형을 반환할 수 있습니다. `GeometryCollection` 인스턴스인 경우 특정 `geography` 인스턴스를 반환할 수 있습니다.  
   
  **geography 인스턴스 유형을 반환하려면**  
  [STGeometryType&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -162,7 +161,7 @@ ms.locfileid: "48218319"
  [STEndpoint&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> 차원  
- 비어 있지 않은 `geography` 인스턴스 수 0-1 또는 2 차원이 있습니다. 0 차원 `geography` 인스턴스를 같은 `Point` 고 `MultiPoint`, 길이 또는 영역이 없습니다. `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString`과 같은 1차원 개체에는 길이가 있고, 2 차원 인스턴스에 같은 `Polygon, CurvePolygon`, 및 `MultiPolygon`는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 최대 차원을 보고합니다.  
+ 비어 있지 않은 `geography` 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. 0 차원 `geography` 인스턴스를 같은 `Point` 고 `MultiPoint`, 길이 또는 영역이 없습니다. `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString`과 같은 1차원 개체에는 길이가 있고, `Polygon, CurvePolygon` 및 `MultiPolygon`과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 최대 차원을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -174,15 +173,15 @@ ms.locfileid: "48218319"
  [STArea&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a> 비어 있음  
- *빈* `geography` 인스턴스에 점이 하나도 없습니다. 비어 있는 `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString` 인스턴스의 길이는 0입니다. 비어 있는 영역 `Polygon, CurvePolygon` 고 `MultiPolygon` 0입니다.  
+ *빈* `geography` 인스턴스에 점이 하나도 없습니다. 비어 있는 `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString` 인스턴스의 길이는 0입니다. 비어 있는 `Polygon, CurvePolygon` 및 `MultiPolygon` 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> 닫힘  
- A *닫힌* `geography` 인스턴스는 시작 지점 및 끝 지점 동일 합니다. `Polygon` 인스턴스는 닫혀 있다고 간주 합니다. `Point` 인스턴스는 닫혀 있지 않습니다.  
+ A *닫힌* `geography` 인스턴스는 시작 지점 및 끝 지점 동일 합니다. `Polygon` 인스턴스는 닫혀 있다고 간주되며, `Point` 인스턴스는 닫혀 있지 않습니다.  
   
- 링은 단순 하 고 닫은 `LineString` 인스턴스.  
+ 링은 단순하고 닫혀 있는 `LineString` 인스턴스입니다.  
   
  **인스턴스가 닫혀 있는지 확인하려면**  
  [STIsClosed&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
@@ -194,7 +193,7 @@ ms.locfileid: "48218319"
  [RingN&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
 ###  <a name="srid"></a> SRID(Spatial Reference ID)  
- Spatial reference ID (SRID) 되는 타원 좌표계를 지정 하는 식별자는 `geography` 인스턴스를 나타내는입니다. 다른 SRID를 사용하는 두 `geography` 인스턴스는 서로 비교할 수 없습니다.  
+ SRID는 `geography` 인스턴스를 나타내는 타원 좌표계를 지정하는 식별자입니다. 다른 SRID를 사용하는 두 `geography` 인스턴스는 서로 비교할 수 없습니다.  
   
  **인스턴스의 SRID를 설정하거나 반환하려면**  
  [STSrid&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
@@ -202,7 +201,7 @@ ms.locfileid: "48218319"
  이 속성은 수정할 수 있습니다.  
   
 ##  <a name="rel"></a> 지리 인스턴스 간 관계 확인  
- 합니다 `geography` 데이터 형식을 통해 간 관계를 확인 하 여 많은 기본 제공 메서드 `geography` 인스턴스.  
+ `geography` 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 두 개의 `geography` 인스턴스 간 관계를 확인할 수 있습니다.  
   
  **두 인스턴스가 동일한 점 집합으로 구성되었는지 확인하려면**  
  [STEquals&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48218319"
  [STSymDifference&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> 지원되는 SRID를 사용해야 하는 geography 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 EPSG 표준을 기준으로 하는 SRID를 지원합니다. 계산을 수행하거나 지리 공간 데이터가 있는 메서드를 사용할 경우 `geography` 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 SRID가 사용되어야 합니다. SRID는 **sys.spatial_reference_systems** 카탈로그 뷰에 표시된 SRID 중 하나와 일치해야 합니다. 이전에 설명한 대로 수행 하는 경우 계산에서 사용 하 여 공간 데이터는 `geography` 데이터 형식에 따라 결과가 달라 집니다 데이터를 만드는 데 사용 된 타원 면에 대로 각 타원 면에는 특정 공간 참조 식별자 (지정 SRID)입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 EPSG 표준을 기준으로 하는 SRID를 지원합니다. 계산을 수행하거나 지리 공간 데이터가 있는 메서드를 사용할 경우 `geography` 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 SRID가 사용되어야 합니다. SRID는 **sys.spatial_reference_systems** 카탈로그 뷰에 표시된 SRID 중 하나와 일치해야 합니다. 앞에서 설명한 대로 각 타원면에는 특정 SRID가 지정되므로 `geography` 데이터 형식을 사용하여 공간 데이터에서 계산을 수행할 경우 데이터를 만드는 데 사용된 타원면에 따라 결과가 달라집니다.  
   
  `geography` 인스턴스의 메서드를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 WGS 84 공간 참조 시스템에 매핑되는 기본 SRID 4326을 사용합니다. WGS 84(또는 SRID 4326)가 아닌 공간 참조 시스템의 데이터를 사용할 경우 지리 공간 데이터에 대해 특정 SRID를 결정해야 합니다.  
   

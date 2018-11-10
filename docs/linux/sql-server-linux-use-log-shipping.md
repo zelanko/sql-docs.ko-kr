@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 09e46e999b63054d52000cdd7c0613272e242d21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705441"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032330"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달을 사용 시작
 
@@ -32,7 +31,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 - 보조 SQL Server 인스턴스에 하나 이상의 네트워크를 통해 트랜잭션 로그 백업 파일 복사
 - 보조 SQL Server 인스턴스에서 트랜잭션 로그 백업 파일 복원
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 - [Linux에서 SQL Server 에이전트를 설치 합니다.](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>로그 전달이 CIFS를 사용 하 여 네트워크 공유 설정 

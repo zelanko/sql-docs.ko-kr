@@ -25,6 +25,8 @@ items:
     href: isolate-performance-problems.md
   - name: 병목 상태 식별
     href: identify-bottlenecks.md
+  - name: 스칼라 사용자 정의 함수 인라인 처리
+    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: DMV를 사용하여 뷰의 사용 및 성능 확인
     href: use-dmvs-determine-usage-performance-views.md
   - name: 서버 성능 및 작업 모니터링
@@ -114,9 +116,9 @@ items:
   href: joins.md
 - name: 하위 쿼리
   href: subqueries.md
-ms.openlocfilehash: 0860910f4e556d92a536fb45002f9c6180e2aab9
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450288"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221529"

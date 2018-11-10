@@ -14,15 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 4a0a054becfb4c4c4c04d9eca8ce67da6c783f80
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226305"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217831"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 **SQL Server Data Tools**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 응용 프로그램을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
 
 *대부분의 사용자의 경우 SSDT(SQL Server Data Tools)는 Visual Studio를 설치하는 동안 설치됩니다. Visual Studio 설치 관리자를 사용하여 SSDT를 설치하면 기본 SSDT 기능을 추가하므로 AS, IS 및 RS 도구를 가져오기 위해 [SSDT 독립 실행형 설치 관리자](#ssdt-for-vs-2017-standalone-installer)를 여전히 실행해야 합니다.*
@@ -44,19 +48,20 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.8.1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2024393) 
+[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.8.2) 다운로드](https://go.microsoft.com/fwlink/?linkid=2038031) 
 
 > [!IMPORTANT]
-> - Visual Studio 2017용 SSDT(15.8.1)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
-> - Windows 10 1803에 SSDT를 설치하고 SSIS를 설치하도록 선택하면 시스템이 예기치 않게 다시 부팅될 수 있습니다. 설치 관리자를 다시 시작하고 다시 부팅한 후 설치를 계속할 수 있습니다.
+> - Visual Studio 2017용 SSDT(15.8.2)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - 대한 스크립트 작업/플랫 파일 대상을 포함하는 패키지를 포함하는 SSIS 프로젝트 패키지를 Azure SSIS에 배포하면 Azure SSIS에서 실행에 실패하는 문제를 해결했습니다.
+> - Visual Studio 2017용 SSDT(15.8.2)는 Oracle/Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
 
 
 
 **버전 정보**  
   
-릴리스 번호: 15.8.1  
-빌드 번호: 14.0.16179.0  
-릴리스 날짜: 2018년 9월 27일  
+릴리스 번호: 15.8.2  
+빌드 번호: 14.0.16182.0  
+릴리스 날짜: 2018년 11월 5일  
 
 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
 
@@ -66,17 +71,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.  
 
-[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
-[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
-[일본어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
-[한국어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
+[중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x804) | 
+[중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x404) | 
+[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x409) | 
+[프랑스어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40c)  
+[독일어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x407) | 
+[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x410) | 
+[일본어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x411) | 
+[한국어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x412) | 
+[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x416) | 
+[러시아어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x419) | 
+[스페인어]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40a)  
 
 
 ## <a name="offline-install"></a>오프라인 설치

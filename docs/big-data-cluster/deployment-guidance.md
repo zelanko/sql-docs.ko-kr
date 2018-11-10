@@ -4,15 +4,15 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051185"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269866"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>SQL Server 빅 데이터에서 kubernetes 클러스터를 배포 하는 방법
 
@@ -26,7 +26,7 @@ Kubernetes 클러스터에 docker 컨테이너로 SQL Server 빅 데이터 클�
 
 ## <a id="prereqs"></a> Kubernetes 클러스터 필수 구성 요소
 
-SQL Server 빅 데이터 클러스터는 Kubernetes에 대 한, 서버 및 클라이언트에 대 한 최소 v1.10 버전이 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다.  최신 버전의 minikube 및 AKS는 1.10 이상. 사용 해야 AKS 용 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
+SQL Server 빅 데이터 클러스터는 Kubernetes에 대 한, 서버 및 클라이언트에 대 한 최소 v1.10 버전이 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. 최신 버전의 minikube 및 AKS는 1.10 이상. 사용 해야 AKS 용 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
 
 > [!NOTE]
 > 클라이언트와 서버가 Kubernetes 버전 + 1 또는-1 부 버전 되도록 참고 합니다. 자세한 내용은 [지원 되는 버전 및 구성 요소 기울이기 Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)합니다.
@@ -54,7 +54,12 @@ SQL Server 빅 데이터 클러스터는 Kubernetes에 대 한, 서버 및 클�
 
 ## <a id="deploy"></a> SQL Server 빅 데이터 클러스터를 배포 합니다.
 
-Kubernetes 클러스터를 구성한 후에 SQL Server 빅 데이터 클러스터에 대 한 배포를 사용 하 여 진행할 수 있습니다. 개발/테스트 환경에 대 한 모든 기본 구성 사용 하 여 Azure에서 빅 데이터 클러스터를 배포 하려면이 문서의 지침을 따릅니다.
+Kubernetes 클러스터를 구성한 후에 SQL Server 빅 데이터 클러스터에 대 한 배포를 사용 하 여 진행할 수 있습니다. 
+
+> [!NOTE]
+> 이전 릴리스에서 업그레이드 하는 경우를 참조 하십시오 합니다 [이 문서의 섹션 업그레이드](#upgrade)합니다.
+
+개발/테스트 환경에 대 한 모든 기본 구성 사용 하 여 Azure에서 빅 데이터 클러스터를 배포 하려면이 문서의 지침을 따릅니다.
 
 [빠른 시작: SQL Server 빅 데이터 클러스터의 kubernetes 배포](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Mssqlctl 설치
 
 **mssqlctl** 하면 클러스터 관리자가 부트스트랩 REST Api를 통해 빅 데이터 클러스터를 관리 하는 Python으로 작성 된 명령줄 유틸리티입니다. 필요한 최소 Python 버전 v3.5 됩니다. 또한 있어야 `pip` 다운로드 및 설치 하는 데 사용 되는 **mssqlctl** 도구입니다. 
+
+> [!IMPORTANT]
+> 이전 릴리스를 설치한 경우 클러스터를 삭제 해야 합니다 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
 
 ### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl 설치
 
@@ -89,7 +97,7 @@ kubectl config view
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl 설치
@@ -105,17 +113,10 @@ Linux에 설치 해야 합니다 **python3** 하 고 **python3-pip** 패키지 �
    sudo -H pip3 install --upgrade pip
    ```
 
-1. 최신 있어야 **요청** 패키지 있습니다.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>환경 변수를 정의 합니다.
@@ -275,6 +276,29 @@ minikube ip
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> 새 릴리스로 업그레이드
+
+현재 빅 데이터 클러스터를 새 릴리스로 업그레이드 하는 유일한 방법은 수동으로 제거 하 고 클러스터를 다시 만듭니다. 에 고유한 버전의 각 릴리스에 **mssqlctl** 는 이전 버전과 호환 되지 않습니다. 또한 새 노드에서 이미지를 다운로드 하는 이전 클러스터 있으면 최신 이미지 클러스터에서 이전 이미지와 호환 되지 않을 수 있습니다. 최신 버전으로 업그레이드 하려면 다음 단계를 사용 합니다.
+
+1. 이전 클러스터를 삭제 하기 전에 SQL Server 마스터 인스턴스 및 HDFS에서 데이터를 백업 합니다. SQL Server 마스터 인스턴스를 사용할 수 있습니다 [SQL Server 백업 및 복원](data-ingestion-restore-databse.md)합니다. HDFS에 대 한 있습니다 [사용 하 여 데이터를 복사할 수 있습니다 **curl**](data-ingestion-curl.md)합니다.
+
+1. 사용 하 여 이전 클러스터를 삭제 합니다 `mssqlctl delete cluster` 명령입니다.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. 최신 버전의 설치 **mssqlctl**합니다.
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 각 릴리스에 대 한 경로 대 한 **mssqlctl** 변경 합니다. 이전에 설치한 경우에 **mssqlctl**, 최신 경로에서 새 클러스터를 만들기 전에 다시 설치 해야 합니다.
+
+1. 지침을 사용 하 여 최신 릴리스를 설치 합니다 [배포 섹션](#deploy) 이 문서의. 
 
 ## <a name="next-steps"></a>다음 단계
 

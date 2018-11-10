@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991196"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269916"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스를 복원 합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "49991196"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 자습서에는 이동 하 고 Docker에서 실행 하는 SQL Server 2019 CTP 2.0 Linux 컨테이너 이미지를 SQL Server 백업 파일을 복원 하는 방법을 보여 줍니다.
+이 자습서에는 이동 하 고 Docker에서 실행 되는 SQL Server 2019 미리 보기 Linux 컨테이너 이미지를 SQL Server 백업 파일을 복원 하는 방법을 보여 줍니다.
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ ms.locfileid: "49991196"
 
 1. Linux/Mac에서 bash 터미널 또는 Windows에서 관리자 권한 PowerShell 세션을 엽니다.
 
-1. Docker 허브에서 SQL Server 2019 CTP 2.0 Linux 컨테이너 이미지를 끌어옵니다.
+1. Docker 허브에서 SQL Server 2019 미리 보기 Linux 컨테이너 이미지를 끌어옵니다.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ ms.locfileid: "49991196"
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   이 명령은 Developer edition (기본값)를 사용 하 여 SQL Server 2019 CTP 2.0 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트와 호스트에 노출 됩니다 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 라는 데이터 볼륨 컨테이너를 만듭니다 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하기 위해 사용 됩니다.
+   이 명령은 Developer edition (기본값)를 사용 하 여 SQL Server 2019 미리 보기 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트와 호스트에 노출 됩니다 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 라는 데이터 볼륨 컨테이너를 만듭니다 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하기 위해 사용 됩니다.
 
 1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
@@ -533,7 +533,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2019 CTP 2.0을 실행 하는 Linux 서버로 이동 하는 방법을 알아보았습니다. 방법을 배웠습니다에:
+이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2019 미리 보기를 실행 하는 Linux 서버로 이동 하는 방법을 알아보았습니다. 방법을 배웠습니다에:
 
 ::: moniker-end
 

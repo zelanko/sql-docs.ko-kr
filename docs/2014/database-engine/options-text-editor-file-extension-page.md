@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076868"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031790"
 ---
 # <a name="options-text-editor---file-extension-page"></a>옵션(텍스트 편집기 - 파일 확장명 페이지)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 특정 파일 확장명의 모든 파일을 처리하는 방법을 지정할 수 있습니다. 입력하는 확장명마다 편집기를 선택할 수 있으므로 특정 형식의 문서를 열 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기를 선택할 수 있습니다. 파일 확장명 옵션을 열려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기**를 확장한 다음 **파일 확장명**을 클릭합니다.  

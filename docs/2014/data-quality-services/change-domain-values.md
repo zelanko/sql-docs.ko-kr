@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 086d66a1503c988c8962203681b58706ec5281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4162f2d0bd4662221fe8a9d32f3eb741155a302
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200533"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033360"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료의 메타데이터를 변경하고 보강하는 방법에 대해 설명합니다. 기술 자료 검색, 기술 자료로 정보 또는 도메인 가져오기, 기술 자료를 기반으로 다른 기술 자료 작성 등의 작업을 통해 기술 자료를 생성한 후 데이터 값을 대화식으로 변경할 수 있습니다. 기술 자료 생성은 컴퓨터 기반 프로세스를 활용할 뿐만 아니라 다음과 같이 사용자의 고유한 정보를 사용하여 데이터 값을 확인하고 변경하는 방법도 제공합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48200533"
   
 -   Excel 파일에서 도메인 값 가져오기  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "48200533"
   
     -   **선택한 도메인 값을 그룹의 선행 값으로 설정**: 그룹의 선행 값을 변경하려면 그룹에서 선행 값으로 지정되지 않은 값을 선택한 다음 **선택한 도메인 값을 그룹의 선행 값으로 설정** 단추를 클릭합니다. 이렇게 하면 선행 값이 다른 값의 대체 값으로 설정됩니다. 그룹화된 둘 이상의 값을 설정했고 DQS에서 지정된 값의 선행 값을 다른 값으로 변경하려는 경우에만 이 작업을 수행할 수 있습니다. 선행 값은 굵게 표시된 값이 있는 파란색 행으로 표시됩니다.  
   
-7.  **맞춤법 검사기**: 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
+7.  **맞춤법 검사기**: 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
   
     > [!NOTE]  
     >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **도메인 값** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  

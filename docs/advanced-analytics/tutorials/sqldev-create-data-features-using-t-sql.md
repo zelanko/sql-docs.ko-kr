@@ -1,6 +1,6 @@
 ---
-title: T-SQL 함수 (SQL Server Machine Learning)를 사용 하 여 2 서로 데이터 기능 단원 | Microsoft Docs
-description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
+title: T-SQL 함수 (SQL Server Machine Learning의 R)를 사용 하 여 2 만들기 데이터 기능 단원 | Microsoft Docs
+description: Machine learning R 모델에서 사용 하기 위해 저장된 프로시저에 계산을 추가 하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462099"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031500"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2 단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

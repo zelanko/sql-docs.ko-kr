@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf190518a5875487a859360df3a3c11e0ed4ecbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b7b1364d13bd653b81464e26c3f434525623451
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218869"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033339"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)](DQS)는 지식 기반 데이터 품질 제품입니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 데이터 수정, 강화, 표준화 및 중복 제거를 포함한 다양한 핵심 데이터 품질 태스크를 수행할 수 있습니다. DQS를 통해 참조 데이터 공급자가 제공하는 클라우드 기반 참조 데이터 서비스를 사용하여 데이터 정리를 수행할 수 있습니다. DQS는 또한 데이터 품질 태스크에 통합된 프로파일링을 제공하여 데이터의 무결성을 분석할 수 있게 해줍니다.  
+  DQS([!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)])는 지식 기반 데이터 품질 제품입니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 데이터 수정, 강화, 표준화 및 중복 제거를 포함한 다양한 핵심 데이터 품질 태스크를 수행할 수 있습니다. DQS를 통해 참조 데이터 공급자가 제공하는 클라우드 기반 참조 데이터 서비스를 사용하여 데이터 정리를 수행할 수 있습니다. DQS는 또한 데이터 품질 태스크에 통합된 프로파일링을 제공하여 데이터의 무결성을 분석할 수 있게 해줍니다.  
   
- DQS는 모두 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 의 일부로 설치되는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]및 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 구성됩니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]는 데이터 품질 기능 및 저장소가 포함된 세 가지 SQL Server 카탈로그로 구성되는 SQL Server 인스턴스 기능입니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]는 비즈니스 사용자, 정보 근로자 및 IT 전문가가 컴퓨터 기반 데이터 품질 분석을 수행하고 해당 데이터 품질을 대화형으로 관리하기 위해 사용할 수 있는 SQL Server 공유 기능입니다. 또한 모두 DQS를 기반으로 하는 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 및 MDS(Master Data Services) 데이터 품질 기능을 사용하여 데이터 품질 프로세스를 수행할 수 있습니다.  
+ DQS는 모두 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]의 일부로 설치되는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 및 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 구성됩니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]는 데이터 품질 기능 및 저장소가 포함된 세 가지 SQL Server 카탈로그로 구성되는 SQL Server 인스턴스 기능입니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]는 비즈니스 사용자, 정보 근로자 및 IT 전문가가 컴퓨터 기반 데이터 품질 분석을 수행하고 해당 데이터 품질을 대화형으로 관리하기 위해 사용할 수 있는 SQL Server 공유 기능입니다. 또한 모두 DQS를 기반으로 하는 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 및 MDS(Master Data Services) 데이터 품질 기능을 사용하여 데이터 품질 프로세스를 수행할 수 있습니다.  
   
  DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](install-windows/install-data-quality-services.md)를 참조하십시오. 기존 버전의 DQS를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드하려면 [Data Quality Services 업그레이드](../database-engine/install-windows/upgrade-data-quality-services.md)를 참조하세요.  
   

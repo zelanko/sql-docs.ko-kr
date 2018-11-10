@@ -1,11 +1,9 @@
 ---
 title: Polygon | Microsoft 문서
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
@@ -14,12 +12,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 65ee65f4185f9045a4ac75e4c058030d2d02fed6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906133"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018888"
 ---
 # <a name="polygon"></a>Polygon
   `Polygon`은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.  

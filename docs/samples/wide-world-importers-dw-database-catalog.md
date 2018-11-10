@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627117"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270166"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ WideWorldImportersDW 다음 팩트 테이블에 있습니다. WideWorldImporters
 |Configuration_ApplyPartitionedColumnstoreIndexing|팩트 테이블의 분할 및 columnstore 인덱스에 적용 됩니다.|
 |Configuration_ConfigureForEnterpriseEdition|분할 인덱싱 및 메모리 내 columnstore에 적용 됩니다.|
 |Configuration_EnableInMemory|통합 준비 테이블을 ETL 성능 향상을 위해 SCHEMA_ONLY 메모리 최적화 테이블을 바꿉니다.|
-|Configuration_ApplyPolybase|외부 데이터 원본, 파일 형식 및 테이블을 구성합니다.|
+|Configuration_ApplyPolyBase|외부 데이터 원본, 파일 형식 및 테이블을 구성합니다.|
 |Configuration_PopulateLargeSaleTable|Enterprise edition에 적용 한 다음 2012 년의 추가 기록으로 많은 양의 데이터를 채웁니다.|
 |Configuration_ReseedETL|기존 데이터를 제거 하 고 ETL 시드를 다시 시작 됩니다. 따라서 OLAP 데이터베이스를 다시 채워야 OLTP 데이터베이스에서 업데이트 된 행을 일치 시킵니다.|
 

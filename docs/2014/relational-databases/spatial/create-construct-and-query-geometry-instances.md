@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158973"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018195"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
-  평면 공간 데이터 형식인 `geometry`, 유클리드 (평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
+  평면 공간 데이터 형식 `geometry`는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
- `geometry` 형식은 미리 정의 되 고 각 데이터베이스에서 사용할 수 있습니다. 형식의 테이블 열을 만들 수 있습니다 `geometry` 에서 작동할 `geometry` 와 동일한 방식으로의 데이터를 다른 CLR 형식을 사용 합니다.  
+ `geometry` 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 CLR 형식을 사용할 때와 동일한 방식으로 `geometry` 형식의 테이블 열을 만들고 `geometry` 데이터에 대한 작업을 수행할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 `geometry` 데이터 형식(평면)은 Open Geospatial Consortium (OGC) Simple Features for SQL Specification 버전 1.1.0을 따릅니다.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158973"
 ##  <a name="creating"></a> 새 geometry 인스턴스 만들기 또는 구성  
   
 ###  <a name="existing"></a> 기존 인스턴스에서 새 geometry 인스턴스 만들기  
- 합니다 `geometry` 새로 만들기를 사용할 수는 필요한 수많은 기본 메서드를 제공 하는 데이터 형식 `geometry` 기존 인스턴스를 기반으로 한 인스턴스.  
+ `geometry` 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 기존 인스턴스에 기반하여 새 `geometry` 인스턴스를 만들 수 있습니다.  
   
  **geometry 버퍼를 만들려면**  
  [STBuffer&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158973"
   
   
 ###  <a name="wkb"></a> WKB 입력에서 geometry 인스턴스 구성  
- WKB는 여는 OGC Open Geospatial Consortium ()를 허용 하는 지정 된 이진 형식의 `geometry` 데이터를 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 교환 될 수 있습니다. 다음 함수는 WKB 입력을 사용하여 기하 도형을 생성합니다.  
+ WKB는 OGC(Open Geospatial Consortium)에서 지정한 이진 형식으로, 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 `geometry` 데이터를 교환하도록 허용합니다. 다음 함수는 WKB 입력을 사용하여 기하 도형을 생성합니다.  
   
  **WKB 입력에서 모든 유형의 geometry 인스턴스를 생성하려면**  
  [STGeomFromWKB&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158973"
   
   
 ##  <a name="returning"></a> geometry 인스턴스에서 WKT 및 WKB 반환  
- 다음 메서드를 사용 하 여 WKT 또는 WKB 형식을 반환할 수는 `geometry` 인스턴스:  
+ 다음 메서드를 사용하여 `geometry` 인스턴스의 WKT 또는 WKB 형식을 반환할 수 있습니다.  
   
  **geometry 인스턴스의 WKT 표현을 반환하려면**  
  [STAsText&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158973"
  모든 `geometry` 인스턴스 메서드를 통해 검색할 수 있는 속성의 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 합니다. 다음 항목에서는 기하 도형 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
   
 ###  <a name="valid"></a> 유효성, 인스턴스 유형 및 GeometryCollection 정보  
- 한 번을 `geometry` 인스턴스 생성, 다음 메서드를 사용 하 여 제대로 구성 되었는지 확인, 인스턴스 유형을 반환 하거나, 컬렉션 인스턴스인 경우 특정 반환 `geometry` 인스턴스.  
+ `geometry` 인스턴스가 생성되면 다음 메서드를 사용하여 이 인스턴스가 올바른 형식일 경우 인스턴스 유형을 반환하는지 또는 컬렉션 인스턴스일 경우 특정 `geometry` 인스턴스를 반환하는지를 확인할 수 있습니다.  
   
  **geometry 인스턴스 유형을 반환하려면**  
  [STGeometryType&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158973"
   
   
 ###  <a name="dimension"></a> 차원  
- 비어 있지 않은 `geometry` 인스턴스 수 0-1 또는 2 차원이 있습니다. 0 차원 `geometries`와 같은 `Point` 고 `MultiPoint`, 길이 또는 영역이 없습니다. 1 차원 개체와 같은 `LineString, CircularString, CompoundCurve`, 및 `MultiLineString`, 길이입니다. `Polygon`, `CurvePolygon` 및 `MultiPolygon`과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
+ 비어 있지 않은 `geometry` 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. `geometries` 및 `Point`와 같은 0차원 `MultiPoint`에는 길이 또는 영역이 없습니다. `LineString, CircularString, CompoundCurve` 및 `MultiLineString`과 같은 1차원 개체에는 길이가 있고, `Polygon`, `CurvePolygon` 및 `MultiPolygon`과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 `GeometryCollection`에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158973"
   
   
 ###  <a name="empty"></a> 비어 있음  
- *빈* `geometry` 인스턴스에 점이 하나도 없습니다. 비어 있는 길이 `LineString, CircularString`, `CompoundCurve`, 및 `MultiLineString` 는 0입니다. 비어 있는 영역 `Polygon`, `CurvePolygon`, 및 `MultiPolygon` 0입니다.  
+ *빈* `geometry` 인스턴스에 점이 하나도 없습니다. 비어 있는 `LineString, CircularString`, `CompoundCurve` 및 `MultiLineString` 인스턴스의 길이는 0입니다. 비어 있는 `Polygon`, `CurvePolygon` 및 `MultiPolygon` 인스턴스의 영역은 0입니다.  
   
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- 경계를 `Polygon` 또는 `MultiPolygon` 인스턴스가 해당 링의 집합입니다.  
+ `Polygon` 또는 `MultiPolygon` 인스턴스의 경계는 해당 인스턴스 링의 집합입니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 닫힘  
- A *닫힌* `geometry` 인스턴스는 시작 지점 및 끝 지점 동일 합니다. `Polygon` 인스턴스는 닫혀 있다고 간주 합니다. `Point` 인스턴스는 닫혀 있지 않습니다.  
+ A *닫힌* `geometry` 인스턴스는 시작 지점 및 끝 지점 동일 합니다. `Polygon` 인스턴스는 닫혀 있다고 간주되며, `Point` 인스턴스는 닫혀 있지 않습니다.  
   
- 링은 단순 하 고 닫은 `LineString` 인스턴스.  
+ 링은 단순하고 닫혀 있는 `LineString` 인스턴스입니다.  
   
  **인스턴스가 닫혀 있는지 확인하려면**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> geometry 인스턴스 간 관계 확인  
- 합니다 `geometry` 데이터 형식을 통해 간 관계를 확인 하 여 많은 기본 제공 메서드 `geometry` 인스턴스.  
+ `geometry` 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 두 개의 `geometry` 인스턴스 간 관계를 확인할 수 있습니다.  
   
  **두 인스턴스가 동일한 점 집합으로 구성되었는지 확인하려면**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

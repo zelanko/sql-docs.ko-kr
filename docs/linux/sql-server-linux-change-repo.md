@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693551"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269448"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693551"
 이 문서에서는 Linux의 SQL Server 2017 및 SQL Server 2019 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 출시 되었습니다! 해를 사용 하 여이 문서에서는 새로운 **mssql-서버-미리 보기** 리포지토리. 다음의 지침을 사용 하 여를 설치 합니다 [설치 가이드](sql-server-linux-setup.md)합니다.
+> SQL Server 2019 preview 출시 되었습니다! 해를 사용 하 여이 문서에서는 새로운 **mssql-서버-미리 보기** 리포지토리. 다음의 지침을 사용 하 여를 설치 합니다 [설치 가이드](sql-server-linux-setup.md)합니다.
 
 ## <a id="repositories"></a>저장소
 
@@ -32,7 +32,7 @@ Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 
 | 리포지토리 | 이름 | Description |
 |---|---|---|
 | **미리 보기 (2017)** | **mssql-server** | SQL Server 2017 CTP 및 RC 리포지토리 (중단). |
-| **미리 보기 (2019)** | **mssql-서버-미리 보기** | SQL Server 2019 CTP 및 RC 리포지토리입니다. |
+| **미리 보기 (2019)** | **mssql-서버-미리 보기** | SQL Server 2019 미리 보기 및 RC 리포지토리입니다. |
 | **CU** | **mssql-server-2017** | SQL Server 2017 CU (누적 업데이트) 리포지토리. |
 | **GDR** | **mssql-server-2017-gdr** | 중요 업데이트의 경우에 SQL Server 2017 GDR 리포지토리. |
 

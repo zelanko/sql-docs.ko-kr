@@ -3,17 +3,17 @@ title: 단원 1 탐색 및 R 및 T-SQL (SQL Server Machine Learning)를 사용 �
 description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461989"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032220"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>1 단원: 데이터 탐색 및 시각화를
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "49461989"
 
 이 단원에서는 샘플 데이터를 검토 하를 사용 하 여 몇 개의 그림을 생성 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 과 제네릭 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 기본 R에서 함수 이러한 R 함수에 이미 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다.
 
-주요 목적은에서 R 함수를 호출 하는 방법을 보여 주는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저에 응용 프로그램 파일 형식으로 결과 저장:
+이 단원의 주요 목적은에서 R 함수를 호출 하는 방법을 보여 주는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저에 응용 프로그램 파일 형식으로 결과 저장:
 
 + 사용 하 여 저장된 프로시저 **RxHistogram** varbinary 데이터를 R 그림을 생성 합니다. 사용 하 여 **bcp** 이진 스트림으로 이미지 파일로 내보내려면 합니다.
 + 사용 하 여 저장된 프로시저 **Hist** JPG 및 PDF 출력으로 결과 저장 하는 점도 생성 합니다.
@@ -34,7 +34,7 @@ ms.locfileid: "49461989"
 
 일반적으로 데이터 과학 솔루션 개발에는 데이터 탐색 및 데이터 시각화가 많이 포함됩니다. 먼저 잠시 시간을 내서 샘플 데이터를 검토해 보겠습니다.
 
-원본 데이터 집합에서는 택시 식별자 및 여정 기록이 별도의 파일로 제공되었습니다. 그러나 샘플 데이터를 쉽게 사용하기 위해 두 개의 원래 데이터 집합이 _medallion_, _hack\_license_ 및 _pickup\_datetime_ 열에 조인되었습니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 집합에는 1,703,957개의 행과 23개 열이 있습니다
+원래 공용 데이터 집합을 택시 식별자 및 여정 레코드가 별도 파일에 제공 되었습니다. 그러나 샘플 데이터를 쉽게 사용하기 위해 두 개의 원래 데이터 집합이 _medallion_, _hack\_license_ 및 _pickup\_datetime_ 열에 조인되었습니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 집합에는 1,703,957개의 행과 23개 열이 있습니다
 
 **택시 식별자**
   
@@ -61,16 +61,14 @@ ms.locfileid: "49461989"
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>데이터를 그리는 rxHistogram을 사용 하 여 저장된 프로시저 만들기
 
-사용 하 여 플롯을 만들려면 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)에서 제공 하는 향상 된 R 함수 중 하나 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)합니다. 이 단계에서 데이터를 기반으로 히스토그램 플롯을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 저장된 프로시저에서이 함수를 래핑할 수 있습니다 **PlotHistogram**합니다.
+사용 하 여 플롯을 만들려면 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)에서 제공 하는 향상 된 R 함수 중 하나 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)합니다. 이 단계에서 데이터를 기반으로 히스토그램 플롯을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 저장된 프로시저에서이 함수를 래핑할 수 있습니다 **PlotRxHistogram**합니다.
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭는 **NYCTaxi_Sample** 데이터베이스를 확장 하 고 **프로그래밍**를 펼친 다음 **저장 프로시저** 보려는 2 단원에서 만든 절차입니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **NYCTaxi_Sample** 선택한 데이터베이스 **새 쿼리**합니다.
 
-2. 마우스 오른쪽 단추로 클릭 **PlotHistogram** 선택한 **수정** 소스를 보려면. 호출 하는이 절차를 실행할 수 있습니다 **rxHistogram** 왕복된 nyctaxi_sample 테이블의 열에 포함 된 데이터입니다.
-
-3. 선택적으로 learning 실습에서는 다음 예제를 사용 하 여이 저장된 프로시저의 고유한 복사본을 만듭니다. 새 쿼리 창을 열고 히스토그램을 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예제에서는 이름이 **PlotHistogram2** 기존 프로시저를 사용 하 여 충돌 되지 않도록 합니다.
+2. 히스토그램을 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예제에서는 이름이 **RPlotRxHistogram*합니다.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram2]
+    CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -92,13 +90,15 @@ ms.locfileid: "49461989"
     GO
     ```
 
-저장된 프로시저 **PlotHistogram2** 기존 저장된 프로시저에 동일 **PlotHistogram** NYCTaxi_sample 데이터베이스에서 찾을 수 있습니다. 
+이 스크립트를 이해 해야 할 사항은 다음과 같습니다. 
   
-+ `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다.
++ `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다. 외부 프로세스로 실행 되는 스크립트를 R에 대 한 스크립트에 대 한 입력 및 입력 간의 일대일 매핑이 있어야 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) SQL Server에서 R 세션을 시작 하는 시스템 저장 프로시저입니다.
   
-+ R 스크립트는 간단: R 변수 (`image_file`) 이미지를 저장 하도록 정의 된 다음 합니다 **rxHistogram** 함수가 호출 되어 플롯을 생성 합니다.
++ 변수로 R 스크립트 내에서 (`image_file`) 이미지를 저장 하도록 정의 됩니다. 
+
++ 합니다 **rxHistogram** RevoScaleR 라이브러리에서 함수가 호출 되어 플롯을 생성 합니다.
   
-+ R 장치 설정 됩니다 **해제** 이 명령으로 SQL Server에서 외부 스크립트를 실행 하는 때문입니다. 일반적으로 R에서 높은 수준의 그리기 명령을 실행할 때 R 그래픽 창을 엽니다 호출을 *장치*합니다. 창의 크기 및 색과 기타 측면을 변경하거나, 파일에 쓰거나 다른 방법으로 출력을 처리하는 경우 장치를 끌 수 있습니다.
++ R 장치 설정 됩니다 **해제** 이 명령으로 SQL Server에서 외부 스크립트를 실행 하는 때문입니다. 일반적으로 R에서 높은 수준의 그리기 명령을 실행할 때 R 그래픽 창을 엽니다 호출을 *장치*합니다. 파일에 작성 하거나 다른 방법으로 출력을 처리 하는 경우 장치를 해제할 수 있습니다.
   
 + R 그래픽 개체는 출력을 위해 R data.frame으로 직렬화됩니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "49461989"
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 다음 문을 실행합니다.
   
     ```SQL
-    EXEC [dbo].[PlotHistogram]
+    EXEC [dbo].[RxPlotHistogram]
     ```
   
     **결과**
@@ -120,7 +120,7 @@ ms.locfileid: "49461989"
 2.  PowerShell 명령 프롬프트를 열고 적절 한 인스턴스 이름, 데이터베이스 이름, 사용자 이름 및 자격 증명을 인수로 제공 하 고 다음 명령을 실행 합니다. Windows id를 사용 하는 바꿀 수 있습니다 **-U** 하 고 **-P** 사용 하 여 **-T**합니다.
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
+     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
     > [!NOTE]
@@ -162,16 +162,16 @@ ms.locfileid: "49461989"
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Hist 및 다양 한 출력 형식을 사용 하 여 저장된 프로시저 만들기
 
-일반적으로 데이터 과학자는 다양 한 관점에서 데이터에 대 한 정보를 가져오려면 여러 데이터 시각화를 생성 합니다. 이 예제에서는 저장된 프로시저와 같은 인기 있는 형식으로 이진 데이터를 내보낼 히스토그램을 만들려는 Hist 함수를 사용 합니다. JPG, 합니다. PDF 및 합니다. PNG입니다. 
+일반적으로 데이터 과학자는 다양 한 관점에서 데이터에 대 한 정보를 가져오려면 여러 데이터 시각화를 생성 합니다. 이 예제에서는 호출 된 저장된 프로시저를 만듭니다 **RPlotHist** 히스토그램, 산 점도 및 다른 R 그래픽을 작성 합니다. JPG 및 합니다. PDF 형식입니다.
 
-1. 기존 저장된 프로시저를 사용 하 여 **PlotInOutputFiles**히스토그램, 산 점도 및 다른 R 그래픽을 기록할 수 있습니다. JPG 및 합니다. PDF 형식입니다. 마우스 오른쪽 단추 클릭을 사용 하 여 **수정** 소스를 보려면.
+이 저장 프로시저는 합니다 **Hist** 와 같은 인기 있는 형식으로 이진 데이터를 내보낼 히스토그램을 만드는 함수입니다. JPG, 합니다. PDF 및 합니다. PNG입니다. 
 
-2. 선택적으로 learning 실습에서는 사용자에 따라이 절차의 복사본을 만들 **PlotInOutputFiles2**, 명명 충돌을 피하기 위해 고유한 이름입니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **NYCTaxi_Sample** 선택한 데이터베이스 **새 쿼리**합니다.
 
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 **쿼리** 창을 열고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 붙여 놓습니다.
+2. 히스토그램을 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예제에서는 이름이 **RPlotHist** 합니다.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
+    CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -236,7 +236,7 @@ ms.locfileid: "49461989"
   
 + 저장 프로시저 내의 SELECT 쿼리 출력은 기본 R 데이터 프레임인 `InputDataSet`에 저장됩니다. 그런 다음 다양한 R 그리기 함수를 호출하여 실제 그래픽 파일을 생성할 수 있습니다. 포함된 R 스크립트의 대부분은 `plot` 또는 `hist`와 같은 그래픽 함수의 옵션을 나타냅니다.
   
-+ 모든 파일은 로컬 폴더 _C:\temp\Plots\\_에 저장됩니다. 대상 폴더는 R 스크립트에 저장 프로시저의 일부로 제공되는 인수에 의해 정의됩니다.  `mainDir`변수 값을 변경하여 대상 폴더를 변경할 수 있습니다.
++ 모든 파일은 C:\temp\Plots 로컬 폴더에 저장 됩니다. 대상 폴더는 R 스크립트에 저장 프로시저의 일부로 제공되는 인수에 의해 정의됩니다.  `mainDir`변수 값을 변경하여 대상 폴더를 변경할 수 있습니다.
 
 + 파일을 다른 폴더에 출력하려면 저장 프로시저에 포함된 R 스크립트의 `mainDir` 변수 값을 변경합니다. 다른 형식, 더 많은 파일 등을 출력하도록 스크립트를 수정할 수도 있습니다.
 
@@ -245,7 +245,7 @@ ms.locfileid: "49461989"
 JPEG 및 PDF 파일 형식은 이진 그리려는 데이터를 내보내려면 다음 문을 실행 합니다.
 
 ```SQL
-EXEC PlotInOutputFiles
+EXEC RPlotHist
 ```
 
 **결과**
