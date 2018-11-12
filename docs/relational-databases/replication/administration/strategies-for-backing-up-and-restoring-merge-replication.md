@@ -72,7 +72,7 @@ ms.locfileid: "47707911"
   
  구독을 다시 초기화하려면 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)를 참조하십시오.  
   
- 스냅숏을 만들고 적용하려면 [Create 및 Apply the Initial Snapshot](../../../relational-databases/replication/create-및-apply-the-initial-snapshot.md) 및 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
+ 스냅숏을 만들고 적용하려면 [Create 및 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)및 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>배포 데이터베이스 백업 및 복원  
  병합 복제를 사용하는 경우에는 배포 데이터베이스를 정기적으로 백업해야 합니다. 사용하는 백업이 배포자를 사용하는 모든 게시의 최단 보존 기간을 넘기지 않은 한 특별 고려 사항 없이 배포 데이터베이스를 복원할 수 있습니다. 예를 들어 보존 기간이 10일, 20일, 30일인 3개의 게시가 있는 경우 데이터베이스 복원에 사용되는 백업은 10일보다 더 오래된 것이면 안 됩니다. 배포 데이터베이스는 병합 복제에서 제한된 역할을 가집니다. 즉, 변경 추적에 사용된 데이터를 저장하지 않으며 구독 데이터베이스로 전달될 병합 복제 변경 내용에 대해 트랜잭션 복제에서와 같이 임시 저장소를 제공하지 않습니다.  
