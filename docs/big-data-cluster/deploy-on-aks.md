@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
 ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/07/2018
 ms.locfileid: "51221659"
