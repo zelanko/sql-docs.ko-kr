@@ -252,7 +252,7 @@ ms.locfileid: "48906303"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> 원본 제어  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. 옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로이 폴더는 \<드라이브 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject에 있습니다. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
