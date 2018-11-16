@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b24129d26523ec4bee866c96180c0907992099e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51a50d8798dc05ee012d7da9848e45a759b7d9cb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701401"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ WITH NAME = *new_name*
 ### <a name="a-change-the-name-of-a-database-role"></a>1. 데이터베이스 역할의 이름 변경  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다.   이 예제에서는 [AdventureWorks](http://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
+ 다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -130,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>2. 역할 멤버 추가 또는 제거  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 다음 예에서는 `Sales`라는 데이터베이스 역할을 만듭니다. Barry라는 데이터베이스 사용자를 멤버 자격에 추가한 다음, Barry라는 멤버를 제거하는 방법을 보여줍니다.   이 예제에서는 [AdventureWorks](http://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
+ 다음 예에서는 `Sales`라는 데이터베이스 역할을 만듭니다. Barry라는 데이터베이스 사용자를 멤버 자격에 추가한 다음, Barry라는 멤버를 제거하는 방법을 보여줍니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
   
 ```sql  
 CREATE ROLE Sales;  

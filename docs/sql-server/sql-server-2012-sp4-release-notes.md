@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e23ae3f88e27f29e32e78c3bafa2ae47005b7573
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701101"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "47790191"
 
 서비스 팩은 설치 미디어로 제공되지 않고 온라인으로만 사용할 수 있으며 다음과 같이 다운로드할 수 있습니다.
 - [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
-- [SQL Server 2012 SP3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
-- [SQL Server 2012 SP2](http://support.microsoft.com/KB/2958429)
-- [SQL Server 2012 SP1](http://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
+- [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
+- [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
 
 ## <a name="service-pack-4-release-notes"></a>서비스 팩 4 릴리스 정보
 
@@ -61,41 +61,41 @@ ms.locfileid: "47790191"
 ## <a name="service-pack-3-release-notes"></a>서비스 팩 3 릴리스 정보
 
 ### <a name="download-pages"></a>다운로드 페이지
-- [SQL Server 2012 SP3 기능 팩](http://go.microsoft.com/fwlink/?linkid=615935)
-- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+- [SQL Server 2012 SP3 기능 팩](https://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](https://go.microsoft.com/fwlink/?linkid=692144)
 
 현재 설치된 버전에 따라 다운로드할 파일의 이름과 위치를 확인하기 위한 자세한 내용은 [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)(SQL Server 2012 서비스 팩 3 릴리스 정보)에서 “Select the correct file to download”(다운로드할 올바른 파일 선택) 섹션을 참조하세요.
 
 ## <a name="service-pack-2-release-notes"></a>서비스 팩 2 릴리스 정보
   
 ### <a name="download-pages"></a>다운로드 페이지 
-- [SQL Server 2012 SP2 기능 팩](http://go.microsoft.com/fwlink/?LinkID=401008)
-- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+- [SQL Server 2012 SP2 기능 팩](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 아래 표에서 현재 설치된 버전에 따라 다운로드할 파일의 위치와 이름을 확인하세요. 다운로드 페이지에 시스템 요구 사항 및 기본 설치 지침이 나와 있습니다.  
 
 |현재 설치된 버전|원하는 작업|다운로드 및 설치할 파일|  
 |---|---|---|   
 |32비트 설치:|||  
-|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 다운로드 페이지**<arch>**-**<lang id>**에 있는** SQLServer2012SP2-KB2958429- [.exe](http://go.microsoft.com/fwlink/?LinkID=401006)|  
-|32비트 버전의 SQL  Server  2012  RTM  Express|32비트 버전의 SQL Server 2012 Express SP2으로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32비트 버전의 SQL Server 2012 및 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL Server 2012 SP2로 모든 제품 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRADV_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 기능 팩](http://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 32비트 버전 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|  
+|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 다운로드 페이지**<arch>**-**<lang id>**에 있는** SQLServer2012SP2-KB2958429- [.exe](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|32비트 버전의 SQL  Server  2012  RTM  Express|32비트 버전의 SQL Server 2012 Express SP2으로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32비트 버전의 SQL Server 2012 및 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL Server 2012 SP2로 모든 제품 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRADV_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 32비트 버전 도구 하나 이상|32비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|  
 |64비트 설치:|||  
-|64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP2로 업그레이드|<arch>-<langid>SQL Server 2012 SP2 다운로드 페이지 [에 있는 SQLServer2012SP2-KB2958429-](http://go.microsoft.com/fwlink/?LinkID=401006).exe|  
-|64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 효율성 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 기능 팩](http://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 64비트 버전 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|   
+|64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP2로 업그레이드|<arch>-<langid>SQL Server 2012 SP2 다운로드 페이지 [에 있는 SQLServer2012SP2-KB2958429-](https://go.microsoft.com/fwlink/?LinkID=401006).exe|  
+|64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 효율성 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|[Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=29065) 또는 [Microsoft SQL Server 2012 SP1 기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 64비트 버전 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP2 Feature Pack으로 도구 업그레이드|Microsoft [SQL Server 2012 SP2 기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=401008)에 있는 도구 하나 이상|   
 
 
 ## <a name="service-pack-1-release-notes"></a>서비스 팩 1 릴리스 정보
 
 ### <a name="download-pages"></a>다운로드 페이지  
-- [SQL Server 2012 SP1 기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](http://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
 
 
 다음 표를 사용하여 다운로드 및 설치할 파일을 결정합니다. 서비스 팩을 설치하기 전에 올바른 시스템 요구 사항을 갖추고 있는지 확인합니다. 시스템 요구 사항은 표에 링크되어 있는 다운로드 페이지에서 확인할 수 있습니다.  
@@ -103,30 +103,30 @@ ms.locfileid: "47790191"
 |현재 설치된 버전|원하는 작업|다운로드 및 설치할 파일|  
 |---|---|---|  
 |**32비트 설치:**|||  
-|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL  Server  2012  SP1로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
-|32비트 버전의 SQL  Server  2012  RTM  Express|32비트 버전의 SQL  Server  2012  Express  SP1으로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
-|32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL  Server  2012  SP1로 클라이언트 및 관리 도구 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
-|32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL  Server  2012  SP1  Management  Studio  Express로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
-|32비트 버전의 SQL Server 2012 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL  Server  2012  SP1로 모든 제품 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
-|32비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](http://www.microsoft.com/download/details.aspx?id=16978)에 있는 도구 하나 이상|32비트 버전의 Microsoft  SQL  Server  2012  SP1  기능 팩으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
-|SQL  Server  2012의 32비트 설치 없음|32비트 Server  2012(SP1  포함)  설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](http://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
-|SQL  Server  2012  Management  Studio의 32비트 설치 없음|32비트 SQL  Server  2012  Management  Studio(SP1포함)  설치|[여기](http://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
-|32비트 버전의 SQL  Server  2012  RTM  Express  없음|32비트 SQL  Server  2012  Express(SP1포함)  설치|[여기](http://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLEXPR32_x86_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](http://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
+|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL  Server  2012  SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
+|32비트 버전의 SQL  Server  2012  RTM  Express|32비트 버전의 SQL  Server  2012  Express  SP1으로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
+|32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL  Server  2012  SP1로 클라이언트 및 관리 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
+|32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL  Server  2012  SP1  Management  Studio  Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
+|32비트 버전의 SQL Server 2012 **및** 32비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|32비트 버전의 SQL  Server  2012  SP1로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x86-ENU.exe|  
+|32비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)에 있는 도구 하나 이상|32비트 버전의 Microsoft  SQL  Server  2012  SP1  기능 팩으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
+|SQL  Server  2012의 32비트 설치 없음|32비트 Server  2012(SP1  포함)  설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
+|SQL  Server  2012  Management  Studio의 32비트 설치 없음|32비트 SQL  Server  2012  Management  Studio(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
+|32비트 버전의 SQL  Server  2012  RTM  Express  없음|32비트 SQL  Server  2012  Express(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLEXPR32_x86_ENU.exe|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2**의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
 |**64비트 설치:**|||  
-|64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
-|64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
-|64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 클라이언트 및 관리 효율성 도구 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
-|64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP1 Management Studio Express로 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
-|64비트 버전의 SQL Server 2012 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 모든 제품 업그레이드|[여기](http://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
-|64비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](http://www.microsoft.com/download/en/details.aspx?id=16978)에 있는 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP1 Feature Pack으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
-|SQL Server 2012의 64비트 설치 없음|64비트 Server 2012(SP1 포함) 설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](http://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
-|SQL Server 2012 Management Studio의 64비트 설치 없음|64비트 SQL Server 2012 Management Studio(SP1 포함) 설치|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
-|64비트 버전의 SQL Server 2012 RTM  Express 없음|64비트 SQL Server 2012 Express(SP1포함) 설치|[여기](http://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLEXPR_x64_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**64비트 설치|64비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](http://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
+|64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
+|64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
+|64비트 버전의 SQL Server 2012 클라이언트 및 관리 효율성 도구(SQL Server 2012 Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 클라이언트 및 관리 효율성 도구 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
+|64비트 버전의 SQL Server 2012 Management Studio Express|64비트 버전의 SQL Server 2012 SP1 Management Studio Express로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
+|64비트 버전의 SQL Server 2012 **및** 64비트 버전의 클라이언트 및 관리 도구(SQL Server 2012 RTM Management Studio 포함)|64비트 버전의 SQL Server 2012 SP1로 모든 제품 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
+|64비트 버전의 [Microsoft SQL Server 2012 RTM 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=16978)에 있는 도구 하나 이상|64비트 버전의 Microsoft SQL Server 2012 SP1 Feature Pack으로 도구 업그레이드|[Microsoft  SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에 있는 파일 하나 이상|  
+|SQL Server 2012의 64비트 설치 없음|64비트 Server 2012(SP1 포함) 설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
+|SQL Server 2012 Management Studio의 64비트 설치 없음|64비트 SQL Server 2012 Management Studio(SP1 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
+|64비트 버전의 SQL Server 2012 RTM  Express 없음|64비트 SQL Server 2012 Express(SP1포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLEXPR_x64_ENU.exe|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2**64비트 설치|64비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>이 서비스 팩에서 해결된 알려진 문제  
-이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 [이 KB 문서](http://support.microsoft.com/kb/2674319)를 참조하세요.   
+이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 [이 KB 문서](https://support.microsoft.com/kb/2674319)를 참조하세요.   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>동일한 IP 주소를 사용하는 경우 SQL Server 장애 조치(Failover) 클러스터 인스턴스의 다시 설치가 실패함  
 **문제:** SQL Server 장애 조치(Failover) 클러스터 인스턴스를 설치하는 동안 잘못된 IP 주소를 지정하는 경우 설치에 실패합니다. 실패한 인스턴스를 제거한 후 올바른 IP 주소와 동일한 인스턴스 이름을 사용하여 SQL Server 장애 조치(Failover) 클러스터 인스턴스를 다시 설치하려고 하면 설치에 실패합니다. 이 오류는 이전 설치로 인해 중복된 리소스 그룹이 남겨졌기 때문에 발생합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "47790191"
 3.  **PowerPivot  갤러리**를 클릭합니다.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013에서 PowerPivot for Excel을 사용하려면 Excel과 함께 설치된 추가 기능을 사용해야 합니다.  
-**문제:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](http://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드할 수 있는 PowerPivot 추가 기능으로는 두 가지 버전이 잇는데, 하나는 SQL Server 2008 R2에서 제공되고 다른 하나는 SQL Server 2012에서 제공됩니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
+**문제:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드할 수 있는 PowerPivot 추가 기능으로는 두 가지 버전이 잇는데, 하나는 SQL Server 2008 R2에서 제공되고 다른 하나는 SQL Server 2012에서 제공됩니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
   
 **해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용하도록 설정해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능**을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동**을 클릭합니다. **COM 추가 기능**에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47790191"
   
 -   연결 문자열 속성 '사용자 ID'에 값 'SharePoint  Principal'이 지원되지 않습니다."  
   
-**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지(**spPowerPivot.msi**)를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](http://go.microsoft.com/fwlink/p/?LinkID=268266)에서 기능 팩을 다운로드할 수 있습니다.  
+**해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지(**spPowerPivot.msi**)를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 기능 팩을 다운로드할 수 있습니다.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>예약된 데이터 새로 고침 후 PowerPivot 통합 문서의 파워 뷰 시트가 삭제됨  
 **문제**: SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침** 을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "47790191"
 ### <a name="sql-server-express"></a>SQL Server Express  
   
 #### <a name="full-version-of-sql-server-management-studio-available-in-sql-server-2012-express-sp1"></a>SQL Server 2012 Express SP1에서 사용할 수 있는 SQL Server Management Studio의 전체 버전  
-SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2012  Management  Studio  Express  대신 SQL  Server  2012  Management  Studio의 전체 버전(이전에는 SQL  Server  2012  DVD에서만 사용 가능)이 포함되어 있습니다. SQL  Server  2012  Express  SP1을 다운로드하고 설치하려면 [SQL  Server  2012  Express  서비스 팩 1](http://go.microsoft.com/fwlink/p/?linkid=267905)을 참조하십시오.  
+SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2012  Management  Studio  Express  대신 SQL  Server  2012  Management  Studio의 전체 버전(이전에는 SQL  Server  2012  DVD에서만 사용 가능)이 포함되어 있습니다. SQL  Server  2012  Express  SP1을 다운로드하고 설치하려면 [SQL  Server  2012  Express  서비스 팩 1](https://go.microsoft.com/fwlink/p/?linkid=267905)을 참조하십시오.  
   
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service 및 Designer for Oracle by Attunity  
   
@@ -201,7 +201,7 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
   
 **해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면 다음을 수행합니다.  
   
-1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/p/?LinkID=268266)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
+1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
   
 2.  .msi  파일을 실행합니다.  
   
@@ -212,7 +212,7 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
   
 **선택적 XML 인덱스 지원**  
   
-SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터를 인덱싱하는 새로운 방법을 제공하는 새로운 SQL Server 기능인 [SXI(선택적 XML 인덱스)](http://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)에 대한 지원이 포함되어 있습니다.  
+SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터를 인덱싱하는 새로운 방법을 제공하는 새로운 SQL Server 기능인 [SXI(선택적 XML 인덱스)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)에 대한 지원이 포함되어 있습니다.  
   
 이제 DACFx에서는 모든 DAC  시나리오 및 클라이언트 도구에서의 SXI  인덱스를 지원합니다. SXI는 최신 버전의 SSDT에서만 지원됩니다. SSDT  RTM  및 2012년 9월 버전에서는 SXI를 지원하지 않습니다.  
   
@@ -232,7 +232,7 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 -   BACPAC  내보내기 – .bacpac  파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Microsoft Azure SQL 데이터베이스를 채웁니다.  
   
-MSDN의 전체 SqlPackage.exe 설명서는 [여기](http://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)에 있습니다.  
+MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)에 있습니다.  
   
 **패키지 호환성**  
   
@@ -247,7 +247,7 @@ MSDN의 전체 SqlPackage.exe 설명서는 [여기](http://msdn.microsoft.com/li
 - [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/help/321185)
 - [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [How to identify your SQL Server version and edition ](https://support.microsoft.com/help/321185)(SQL Server 버전 및 에디션 확인 방법) 
-- [SQL  Server  버전 및 에디션 확인 방법](http://support.microsoft.com/kb/321185)  
-- [SQL Server 2014 버전에서 지원하는 기능](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [SQL  Server  버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)  
+- [SQL Server 2014 버전에서 지원하는 기능](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

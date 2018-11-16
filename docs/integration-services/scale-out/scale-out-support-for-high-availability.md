@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594772"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638150"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -29,7 +29,7 @@ Scale Out 마스터 쪽 고가용성은 [SSIS 카탈로그용 Always On](../cata
 SSIS 카탈로그에 Always On을 사용하려면 Scale Out 마스터 쪽에 고가용성을 설정하려면 다음 작업을 수행합니다.
 
 ## <a name="1-prerequisites"></a>1. 사전 요구 사항
-Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.
+Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. 주 노드에 Scale Out 마스터 설치
 Scale Out 마스터의 주 노드에 SQL Server 데이터베이스 엔진 서비스, Integration Services 및 Scale Out 마스터를 설치합니다. 

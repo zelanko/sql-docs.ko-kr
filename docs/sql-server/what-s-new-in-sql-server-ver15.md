@@ -1,22 +1,20 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703911"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272621"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]는 이전 릴리스를 토대로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는 SQL Server 2019의 새로운 기능을 요약해서 설명합니다. 자세한 내용 및 알려진 문제에 대해서는 [SQL Server 2019 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
 **SQL Server 2019를 사용해 보세요.**
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019를 다운로드하여 Windows에 설치](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019를 다운로드하여 Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
 
@@ -178,7 +176,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
   인덱스 만들기가 실패하는 경우 이 기능을 사용하지 않고 온라인 인덱스 만들기 작업을 다시 실행해야 하며 작업을 처음부터 다시 시작해야 합니다.
 
-이 릴리스에서는 다시 시작 가능한 기능을 확장하여 사용 가능한 [다시 시작 가능한 온라인 인덱스 다시 작성](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)에 이 기능을 추가합니다.
+이 릴리스에서는 다시 시작 가능한 기능을 확장하여 사용 가능한 [다시 시작 가능한 온라인 인덱스 다시 작성](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)에 이 기능을 추가합니다.
 
 또한 [온라인 및 다시 시작 가능한 DDL 작업의 데이터베이스 범위 기본 설정](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 이 기능을 특정 데이터베이스의 기본값으로 설정할 수 있습니다.
 
@@ -264,7 +262,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 이 기능을 사용하지 않을 경우 인덱스 만들기 및 다시 작성과 같은 인덱스 DDL 문에서 직접 온라인 및 다시 시작 가능 옵션을 지정해야 합니다.
 
-추가 정보: 인덱스 다시 시작 가능 작업에 대한 자세한 내용은 [다시 시작 가능한 온라인 인덱스 만들기](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)를 참조하세요.
+추가 정보: 인덱스 다시 시작 가능 작업에 대한 자세한 내용은 [다시 시작 가능한 온라인 인덱스 만들기](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)를 참조하세요.
 
 ### <a id="ha"></a>Always On 가용성 그룹 - 추가 동기 복제본(CTP 2.0)
 
@@ -331,7 +329,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 기술보다 좀 더 효율적으로 쿼리 성능 데이터를 제공합니다. 간단한 프로파일링은 이제 기본적으로 사용되도록 설정됩니다. 이 기능은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 도입되었습니다. 간단한 프로파일링은 표준 쿼리 프로파일링 메커니즘의 최대 75% CPU 오버헤드와 비교할 때 2% CPU 오버헤드가 예상되는 쿼리 실행 통계 수집 메커니즘을 제공합니다. 이전 버전에서 이 기능은 기본적으로 해제되었습니다. 데이터베이스 관리자는 [추적 플래그 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 이 기능을 사용하도록 설정할 수 있습니다. 
 
-간단한 프로파일링에 대한 자세한 내용은 [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)(개발자 선택 사항: 쿼리 진행률 - 시간, 장소에 제한 없음)를 참조하세요.
+간단한 프로파일링에 대한 자세한 내용은 [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)(개발자 선택 사항: 쿼리 진행률 - 시간, 장소에 제한 없음)를 참조하세요.
 
 ### <a id="polybase"></a>새 PolyBase 커넥터
 

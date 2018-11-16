@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699671"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 데이터베이스 전체에 데이터베이스 호환성 수준 140을 사용하려고 하는데 데이터베이스 호환성 수준 110에 매핑하는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 **카디널리티 예상** 모델을 선호하는 이유가 있다면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 및 키워드 `LEGACY_CARDINALITY_ESTIMATION = ON`을 참조하세요.
 >  
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요. 이 아티클에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 140으로 이동에도 같은 방법론이 적용됩니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요. 이 아티클에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 140으로 이동에도 같은 방법론이 적용됩니다.
 
 다음 쿼리를 실행하여 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전을 확인합니다.  
   
@@ -116,7 +116,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 호환성 수준 간의 차이점에 대한 자세한 내용은 이 아티클의 뒷부분에 나오는 해당 섹션을 참조하세요. 
 
-업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 최신 버전으로 업그레이드하려면 [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) 도구(DMA)를 사용하여 데이터베이스의 응용 프로그램 코드에 대한 정적 기능 노출 영역 유효성 검사를 수행하는 것이 좋습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 응용 프로그램이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. DMA 도구에 대한 자세한 내용은 [여기](http://blogs.msdn.microsoft.com/datamigration/dma)를 참조하세요.
+업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]를 최신 버전으로 업그레이드하려면 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 도구(DMA)를 사용하여 데이터베이스의 응용 프로그램 코드에 대한 정적 기능 노출 영역 유효성 검사를 수행하는 것이 좋습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 응용 프로그램이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. DMA 도구에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/datamigration/dma)를 참조하세요.
 
 > [!NOTE] 
 > DMA는 데이터베이스 호환성 수준 100 이상을 지원합니다. 원본 버전 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]는 제외됩니다. 

@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b177c0d0c1ea8a88c5f5d0380b45a5b548499482
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d871c2442f226b78118199d7b81a8b9f9557cc6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699951"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,7 +64,7 @@ SET SHOWPLAN_XML { ON | OFF }
   
  \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- 실행 계획 스키마는 [이 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.  
+ 실행 계획 스키마는 [이 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  

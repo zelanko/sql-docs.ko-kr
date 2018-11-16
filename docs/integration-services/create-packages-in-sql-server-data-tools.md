@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847061"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639710"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 방법 중 하나를 사용하여 새 패키지를 만들 수 있습니다.  
@@ -44,9 +44,9 @@ ms.locfileid: "47847061"
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 간단한 가져오기 또는 내보내기 수행하는 완전한 패키지를 만듭니다. 이 마법사는 연결, 원본 및 대상을 구성하고 가져오기 또는 내보내기를 즉시 실행하는 데 필요한 데이터 변환을 추가합니다. 필요에 따라 나중에 다시 실행하기 위해 패키지를 저장하거나 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 향상시키고 구체화할 수 있습니다. 그러나 패키지를 저장하는 경우에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 변경하거나 실행하기 전에 기존 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]프로젝트에 패키지를 추가해야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만드는 패키지는 파일 시스템에 저장됩니다. 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 패키지 저장소에 저장하려면 패키지 복사본을 저장해야 합니다. 자세한 내용은 [패키지의 복사본 저장](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만드는 패키지는 파일 시스템에 저장됩니다. 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 패키지 저장소에 저장하려면 패키지 복사본을 저장해야 합니다. 자세한 내용은 [패키지의 복사본 저장](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)을 참조하세요.  
 
- 기본 패키지 템플릿을 사용하여 기본 패키지를 만드는 방법을 보여 주는 비디오는 [기본 패키지 만들기(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=131023)를 참조하세요.  
+ 기본 패키지 템플릿을 사용하여 기본 패키지를 만드는 방법을 보여 주는 비디오는 [기본 패키지 만들기(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131023)를 참조하세요.  
 
 ## <a name="get-sql-server-data-tools"></a>SQL Server Data Tools 가져오기
 SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.

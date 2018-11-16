@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021907"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812866"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 보고서 서버를 설치 또는 구성하지 않은 경우 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 및 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  
@@ -87,7 +87,7 @@ ms.locfileid: "50021907"
   
 8.  **사이트**를 클릭합니다.  
   
-9. `http://<your-server-name>`를 추가합니다.  
+9. `https://<your-server-name>`를 추가합니다.  
   
 10. 기본 사이트에 HTTPS를 사용하지 않으면 **이 영역이 있는 모든 사이트에 대해 서버 확인(https:) 필요** 확인란의 선택을 취소합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021907"
   
 ###  <a name="bkmk_configure_site_settings"></a> 보고서 관리자 사이트 설정  
   
-1.  관리자 권한을 가진 브라우저를 열고 보고서 관리자 `http://<server name>/reports`로 이동합니다.  
+1.  관리자 권한을 가진 브라우저를 열고 보고서 관리자 `https://<server name>/reports`로 이동합니다.  
   
 2.  홈 페이지의 위쪽 모퉁이에 있는 **사이트 설정** 을 클릭합니다.  
   

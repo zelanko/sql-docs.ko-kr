@@ -19,12 +19,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57c3adc8418eaab839ef4f7c924c794eaa53bb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a136d62eb71b4551478e4247c498555cad0fafe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605911"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641020"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
   피벗 변환은 입력 데이터를 열 값으로 피벗함으로써 정규화된 데이터 집합을 정규화 상태는 낮지만 좀 더 압축된 버전으로 만듭니다. 예를 들어 고객 이름, 제품 및 구매 수량이 나열된 정규화된 **Orders** 데이터 집합에는 일반적으로 여러 제품을 구매한 고객에 대해 여러 행이 포함되어 있으며, 각 행에는 해당 고객의 각 제품 주문 정보가 표시되어 있습니다. 피벗 변환을 사용하여 이 데이터 집합을 제품 열로 피벗하면 각 고객별로 단일 행만 포함된 데이터 집합을 출력할 수 있습니다. 이 단일 행에는 해당 고객의 모든 구매 정보가 나열되며, 제품 이름은 열 이름으로, 그리고 수량은 제품 열에 값으로 표시됩니다. 모든 고객이 모든 제품을 구매하는 것은 아니기 때문에 여러 열에 Null 값이 포함될 수 있습니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "47605911"
   
  **고급 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

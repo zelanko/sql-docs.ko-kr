@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605841"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642380"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605841"
  한 데이터 흐름에 여러 집계를 만들어야 하는 경우 여러 변환을 만드는 대신 하나의 집계 변환을 사용하는 여러 집계를 만드십시오. 이 방법을 사용하면 한 집계가 다른 집계의 하위 집합인 경우 성능이 향상됩니다. 이는 변환이 한 번만 들어오는 데이터를 검색하고 내부 저장소를 최적화할 수 있기 때문입니다. 예를 들어 집계에서 GROUP BY 절 및 AVG 집계를 사용하는 경우 이를 하나의 변환으로 조합하면 성능을 향상시킬 수 있습니다. 그러나 하나의 집계 변환 내에서 여러 집계를 수행하면 집계 작업이 직렬화되므로 여러 집계가 독립적으로 계산되어야 하는 경우 성능이 향상되지 않을 수 있습니다.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>유사 항목 조회 및 유사 항목 그룹화 변환  
- 유사 항목 조회 및 유사 항목 그룹화 변환의 성능 최적화에 대한 자세한 내용은 백서 [SQL Server 2005 데이터 변환 서비스의 퍼지 조회 및 퍼지 그룹화](http://go.microsoft.com/fwlink/?LinkId=96604)를 참조하십시오.  
+ 유사 항목 조회 및 유사 항목 그룹화 변환의 성능 최적화에 대한 자세한 내용은 백서 [SQL Server 2005 데이터 변환 서비스의 퍼지 조회 및 퍼지 그룹화](https://go.microsoft.com/fwlink/?LinkId=96604)를 참조하십시오.  
   
 #### <a name="lookup-transformation"></a>조회 변환  
  필요한 열만 조회하는 SELECT 문을 입력하여 메모리에서 참조 데이터의 크기를 최소화합니다. 이 옵션은 불필요한 데이터를 대량 반환하는 전체 테이블 또는 뷰 선택 작업보다 성능을 향상시킵니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605841"
   
  일반적으로 느린 변경 차원 변환에서 가장 느린 구성 요소는 한 번에 하나의 행에 대해 UPDATE를 수행하는 OLE DB 명령 변환입니다. 따라서 느린 변경 차원 변환의 성능을 향상시키는 가장 효과적인 방법은 OLE DB 명령 변환을 바꾸는 것입니다. 업데이트할 모든 행을 준비 테이블에 저장하는 대상 구성 요소로 이러한 변환을 바꿀 수 있습니다. 그런 다음 모든 행에 대해 동시에 단일 집합 기반 Transact-SQL UPDATE를 수행하는 SQL 실행 태스크를 추가할 수 있습니다.  
   
- 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](http://go.microsoft.com/fwlink/?LinkId=96602)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
+ 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
   
 ### <a name="destinations"></a>대상  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
@@ -171,35 +171,35 @@ ms.locfileid: "47605841"
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](http://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](http://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
--   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](http://go.microsoft.com/fwlink/?LinkId=220816)  
+-   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=220816)  
   
--   msdn.microsoft.com의 기술 문서 - [SSIS를 사용하여 30분 이내에 1TB 로드](http://go.microsoft.com/fwlink/?LinkId=220817)  
+-   msdn.microsoft.com의 기술 문서 - [SSIS를 사용하여 30분 이내에 1TB 로드](https://go.microsoft.com/fwlink/?LinkId=220817)  
   
--   sqlcat.com의 기술 문서 - [SQL Server Integration Services의 상위 10가지 모범 사례](http://go.microsoft.com/fwlink/?LinkId=220818)  
+-   sqlcat.com의 기술 문서 - [SQL Server Integration Services의 상위 10가지 모범 사례](https://go.microsoft.com/fwlink/?LinkId=220818)  
   
--   sqlcat.com의 기술 문서 및 예제 - [SSIS용 "Balanced Data Distributor"](http://go.microsoft.com/fwlink/?LinkId=220822)  
+-   sqlcat.com의 기술 문서 및 예제 - [SSIS용 "Balanced Data Distributor"](https://go.microsoft.com/fwlink/?LinkId=220822)  
   
--   blogs.msdn.com의 블로그 게시물 - [SSIS 패키지 성능 문제 해결](http://go.microsoft.com/fwlink/?LinkId=238156)  
+-   blogs.msdn.com의 블로그 게시물 - [SSIS 패키지 성능 문제 해결](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
  **비디오**  
   
--   비디오 시리즈, [엔터프라이즈에서 SSIS 패키지의 성능 설계 및 조정(SQL 비디오 시리즈)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   비디오 시리즈, [엔터프라이즈에서 SSIS 패키지의 성능 설계 및 조정(SQL 비디오 시리즈)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   technet.microsoft.com의 비디오, [엔터프라이즈에서 SSIS 패키지 데이터 흐름 튜닝(SQL Server 비디오)](http://technet.microsoft.com/sqlserver/ff686901.aspx)  
+-   technet.microsoft.com의 비디오, [엔터프라이즈에서 SSIS 패키지 데이터 흐름 튜닝(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686901.aspx)  
   
--   technet.microsoft.com의 비디오, [SSIS 데이터 흐름 버퍼 이해(SQL Server 비디오)](http://technet.microsoft.com/sqlserver/ff686905.aspx)  
+-   technet.microsoft.com의 비디오, [SSIS 데이터 흐름 버퍼 이해(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686905.aspx)  
   
--   channel9.msdn.com의 비디오 - [Microsoft SQL Server Integration Services 성능 디자인 패턴](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)  
+-   channel9.msdn.com의 비디오 - [Microsoft SQL Server Integration Services 성능 디자인 패턴](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)  
   
--   sqlcat.com의 프레젠테이션 - [Microsoft IT의 SQL Server 2008 SSIS 데이터 흐름 엔진 향상 기능 활용 방법](http://go.microsoft.com/fwlink/?LinkId=217660)  
+-   sqlcat.com의 프레젠테이션 - [Microsoft IT의 SQL Server 2008 SSIS 데이터 흐름 엔진 향상 기능 활용 방법](https://go.microsoft.com/fwlink/?LinkId=217660)  
   
--   technet.microsoft.com의 비디오 - [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
+-   technet.microsoft.com의 비디오 - [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>참고 항목  
  [패키지 배포 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   

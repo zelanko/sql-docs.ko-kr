@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edad80b1e0172073f6be494519d2ae68f3a1dc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659226"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
 SQL Server 단위 테스트에서 하나 이상의 Transact\-SQL 테스트 스크립트가 실행됩니다. 결과는 Transact\-SQL 스크립트와 오류를 반환하고 테스트를 실패 처리하는 데 사용되는 THROW 또는 RAISERROR 내에서 평가할 수 있으며, 결과를 평가하기 위한 테스트 조건을 테스트에 정의할 수 있습니다. 테스트는 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 클래스의 인스턴스를 반환합니다. 이 클래스의 인스턴스에는 하나 이상의 데이터 집합, 실행 시간 및 스크립트의 영향을 받는 행이 포함됩니다. 이러한 모든 정보는 스크립트를 실행하는 동안 수집됩니다. 이러한 결과는 테스트 조건을 사용하여 평가될 수 있습니다. SQL Server Data Tools에서는 미리 정의된 테스트 조건의 집합을 제공합니다. 사용자 지정 조건을 작성하고 사용할 수도 있습니다. [SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)을 참조하세요.  
@@ -92,7 +92,7 @@ SQL Server 단위 테스트 디자이너를 표시하려면 **솔루션 탐색�
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   
-5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](http://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
+5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
   
 6.  기본적으로 편집 창에는 테스트의 Transact\-SQL 본문이 나타납니다. 필요한 경우 예상 결과를 만들도록 코드를 수정할 수 있습니다. 예를 들어 테스트에 테스트 전 코드가 있는 경우 해당 코드를 추가해야 할 수 있습니다.  
   
@@ -122,7 +122,7 @@ SQL Server 단위 테스트에 필요한 스키마 테스트 조건을 추가한
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   
-5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](http://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
+5.  테스트할 데이터베이스에 대한 연결을 지정합니다. 자세한 내용은 [방법: 데이터베이스 연결 만들기](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)를 참조하세요.  
   
 6.  기본적으로 편집 창에는 테스트의 Transact\-SQL 본문이 나타납니다. 필요한 경우 예상 결과를 만들도록 코드를 수정할 수 있습니다. 예를 들어 테스트에 테스트 전 코드가 있는 경우 해당 코드를 추가해야 할 수 있습니다.  
   

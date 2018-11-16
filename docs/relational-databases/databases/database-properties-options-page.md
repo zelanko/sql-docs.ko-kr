@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706561"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659372"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +95,10 @@ ms.locfileid: "47706561"
  SQL Server 2016 및 Azure SQL 데이터베이스에는 데이터베이스 수준으로 범위를 지정할 수 있는 여러 구성 속성이 있습니다. 이러한 모든 설정에 대한 자세한 내용은 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.  
   
  **기존 카디널리티 추정**  
- 데이터베이스의 호환성 수준에 관계없이 주 항목에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 지정합니다. 이 설정은 [추적 플래그 9481](https://support.microsoft.com/en-us/kb/2801413)과 동일합니다.  
+ 데이터베이스의 호환성 수준에 관계없이 주 항목에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 지정합니다. 이 설정은 [추적 플래그 9481](https://support.microsoft.com/kb/2801413)과 동일합니다.  
   
  **보조 항목용 기존 카디널리티 추정**  
- 데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 지정합니다. 이 설정은 [추적 플래그 9481](https://support.microsoft.com/en-us/kb/2801413)과 동일합니다.  
+ 데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 지정합니다. 이 설정은 [추적 플래그 9481](https://support.microsoft.com/kb/2801413)과 동일합니다.  
   
  **최대 DOP**  
  문에 사용해야 하는 주 항목에 대한 기본 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 설정을 지정합니다.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706561"
  문에 사용해야 하는 보조 항목(있는 경우)에 대한 기본 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 설정을 지정합니다.  
   
  **매개 변수 검색**  
- 주 항목에 대해 매개 변수 검색을 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4136](https://support.microsoft.com/en-us/kb/980653)과 동일합니다.  
+ 주 항목에 대해 매개 변수 검색을 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4136](https://support.microsoft.com/kb/980653)과 동일합니다.  
   
  **보조 항목에 대한 매개 변수 검색**  
- 보조 항목(있는 경우)에 대해 매개 변수 검색을 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4136](https://support.microsoft.com/en-us/kb/980653)과 동일합니다.  
+ 보조 항목(있는 경우)에 대해 매개 변수 검색을 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4136](https://support.microsoft.com/kb/980653)과 동일합니다.  
   
  **쿼리 최적화 프로그램 수정**  
- 데이터베이스의 호환성 수준에 관계없이 주 항목에 대해 쿼리 최적화 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4199](https://support.microsoft.com/en-us/kb/974006)와 동일합니다.  
+ 데이터베이스의 호환성 수준에 관계없이 주 항목에 대해 쿼리 최적화 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4199](https://support.microsoft.com/kb/974006)와 동일합니다.  
   
  **보조 항목에 대한 쿼리 최적화 프로그램 수정**  
- 데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대해 쿼리 최적화 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4199](https://support.microsoft.com/en-us/kb/974006)와 동일합니다.  
+ 데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대해 쿼리 최적화 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4199](https://support.microsoft.com/kb/974006)와 동일합니다.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 디렉터리 이름**  

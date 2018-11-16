@@ -14,17 +14,17 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddd46be3b9e7770d7dd29c5f5a88820eb650d8ef
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a0f79247c6de064288704b3cce6d04fbef6ed584
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099264"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696971"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>설명 속성 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **설명 속성** 대화 상자에서는 테이블, 열, 외래 키 제약 조건 등과 같은 데이터베이스 개체에 대한 자세한 설명을 입력할 수 있는 편집 가능한 영역을 제공합니다. 디자이너에서 테이블이나 뷰를 선택한 경우 이러한 개체에 대한 속성 창에서 이 대화 상자에 액세스할 수 있고, 테이블 디자이너에서 테이블 열에 대한 **열 속성** 탭을 사용하거나 인덱스 및 CHECK 제약 조건 같은 개체의 대화 상자를 통해 이 대화 상자에 액세스할 수도 있습니다. 설명은 개체에 대한 확장 속성으로 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[방법: 테이블 속성 표시(Visual Database Tools)](http://msdn.microsoft.com/1865fb7c-f480-4100-9007-df5364cd002a)  
+[방법: 테이블 속성 표시(Visual Database Tools)](https://msdn.microsoft.com/1865fb7c-f480-4100-9007-df5364cd002a)  
   

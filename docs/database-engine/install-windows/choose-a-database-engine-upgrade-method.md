@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970784"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665612"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "50970784"
   
  **다운로드**  
   
--   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)** 로 이동하세요.  
+-   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  계정이 있으면 **[여기](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
+-   Azure 계정이 있으세요?  계정이 있으면 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
   
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.
 >   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Azure에서 SQL Server 옵션 선택](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
-##  <a name="UpgradeInPlace"></a> 전체 업그레이드  
+## <a name="upgrade-in-place"></a>전체 업그레이드  
  이 방식에서는 SQL Server 설치 프로그램에서 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비트를 새 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 비트로 바꾼 다음 시스템 및 사용자 데이터베이스 각각을 업그레이드하여 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 업그레이드합니다.  전체 업그레이드가 가장 쉽고 약간의 가동 중지 시간이 필요하며 대체가 필요할 경우 대체 시간이 더 오래 소요되고 일부 시나리오에서는 지원되지 않습니다. 지원되는 현재 위치 업그레이드 및 지원되지 않는 전체 업그레이드 시나리오에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)를 참조하세요.  
   
  이 방식은 다음과 같은 시나리오에서 빈번하게 사용됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "50970784"
   
  자세한 내용은 [설치 마법사를 사용하여 SQL Server 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조하세요.  
   
-##  <a name="NewInstallationUpgrade"></a> 새 설치로 마이그레이션  
+## <a name="migrate-to-a-new-installation"></a>새 설치로 마이그레이션  
  이 방식에서는 현재 환경을 유지하면서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 빌드합니다. 이때 새 하드웨어와 새 버전의 운영 체제를 사용하는 경우가 많습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 새 환경에 설치한 다음에는 기존 사용자 데이터베이스를 기존 환경에서 새 환경으로 마이그레이션하고 가동 중지 시간을 최소화할 수 있도록 새 환경을 준비하기 위한 여러 단계를 수행합니다. 이러한 단계에는 다음을 마이그레이션하는 작업이 포함됩니다.  
   
 -   **시스템 개체:** 일부 응용 프로그램은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 응용 프로그램은 master 및 msdb 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 응용 프로그램에 대한 로그인은 master 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 msdb 데이터베이스에 저장되어 있는 SQL Server 에이전트 작업에 따라 응용 프로그램이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 master에 저장되어 있습니다.  
@@ -80,21 +80,18 @@ ms.locfileid: "50970784"
  사용자 데이터베이스를 마이그레이션한 후에는 다양한 방법 중 하나(예: 서버 이름 변경, DNS 항목 사용, 연결 문자열 수정)를 사용하여 새 사용자가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 합니다.  새 설치 방식에서는 현재 위치 업그레이드에 비해 위험과 가동 중지 시간이 줄어들며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드할 때 하드웨어와 운영 체제도 함께 손쉽게 업그레이드할 수 있습니다.  
   
 > [!NOTE]  
->  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#RollingUpgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](../database-mirroring/setting-up-database-mirroring-sql-server.md) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](http://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
+>  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#RollingUpgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](../database-mirroring/setting-up-database-mirroring-sql-server.md) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](https://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
   
  예를 들어 이 방식으로 다음을 업그레이드할 수 있습니다.  
   
--   지원되지 않는 운영 체제에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드  
+-   지원되지 않는 운영 체제에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드    
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에서 x86 설치를 지원하지 않으므로 SQL Server x86 설치 업그레이드   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 새 하드웨어 및/또는 새 운영 체제 버전으로 업그레이드    
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드   
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에서 SQL Server 2005 전체 업그레이드를 지원하지 않으므로 SQL Server 2005 업그레이드 - 자세한 내용은 [SQL Server 2005에서 업그레이드하나요?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)를 참조하세요.
+
   
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에서 x86 설치를 지원하지 않으므로 SQL Server x86 설치 업그레이드  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 새 하드웨어 및/또는 새 운영 체제 버전으로 업그레이드  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드  
-  
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에서 SQL Server 2005 전체 업그레이드를 지원하지 않으므로 SQL Server 2005 업그레이드 - 자세한 내용은 [SQL Server 2005에서 업그레이드하나요?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)를 참조하세요.  
-  
- 새 설치 업그레이드에 필요한 단계는 연결된 스토리지를 사용하는 경우나 SAN 스토리지를 사용하는 경우에 따라 약간 달라집니다.  
+새 설치 업그레이드에 필요한 단계는 연결된 스토리지를 사용하는 경우나 SAN 스토리지를 사용하는 경우에 따라 약간 달라집니다.  
   
 -   **연결된 저장소 환경:** 연결된 저장소를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
   
@@ -104,19 +101,14 @@ ms.locfileid: "50970784"
   
      ![SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
   
-##  <a name="RollingUpgrade"></a> 롤링 업그레이드  
+## <a name="rolling-upgrade"></a>롤링 업그레이드  
  롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  
   
--   Always-On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.  
-  
--   장애 조치 클러스터 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.  
-  
--   미러링된 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [미러된 인스턴스 업그레이드](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)를 참조하세요.  
-  
--   로그 전달 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server용 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)를 참조하세요.  
-  
--   복제 환경: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)를 참조하세요.
-  
+-   Always-On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.    
+-   장애 조치 클러스터 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.    
+-   미러링된 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [미러된 인스턴스 업그레이드](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)를 참조하세요.    
+-   로그 전달 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server용 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)를 참조하세요.    
+-   복제 환경: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)를 참조하세요.  
 -   SQL Server Reporting Services 확장 환경: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계

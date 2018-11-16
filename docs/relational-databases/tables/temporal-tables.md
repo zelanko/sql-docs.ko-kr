@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665139"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47856721"
   
     -   [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **비디오:** 임시 테이블에 대한 20분간의 논의는 [SQL Server 2016의 임시 테이블](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)을 참조하세요.  
+-   **비디오:** 임시 테이블에 대한 20분간의 논의는 [SQL Server 2016의 임시 테이블](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)을 참조하세요.  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 temporal 테이블이란?  
  시스템 버전 임시 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 temporal 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 temporal 테이블이라고 합니다.  

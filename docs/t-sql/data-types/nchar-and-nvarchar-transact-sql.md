@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696732"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 및 nvarchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-고정 길이(**nchar**) 또는 가변 길이(**nvarchar**)인 문자 데이터 형식입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-16](http://www.wikipedia.org/wiki/UTF-16) 문자 인코딩을 사용합니다. SC가 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 문자 인코딩에서 지원하는 문자 데이터의 하위 집합만 저장합니다.
+고정 길이(**nchar**) 또는 가변 길이(**nvarchar**)인 문자 데이터 형식입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 문자 인코딩을 사용합니다. SC가 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 문자 인코딩에서 지원하는 문자 데이터의 하위 집합만 저장합니다.
   
 ## <a name="arguments"></a>인수  
 **nchar** [ ( n ) ]  
-고정 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이어야 합니다. 저장소 크기는 *n*바이트의 두 배입니다. [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
+고정 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이어야 합니다. 저장소 크기는 *n*바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
   
 **nvarchar** [ ( n | **max** ) ]  
-가변 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^30-1자(2GB)임을 나타냅니다. 저장소 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
+가변 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^30-1자(2GB)임을 나타냅니다. 저장소 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
   
 ## <a name="remarks"></a>Remarks  
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.
@@ -64,7 +64,7 @@ SET ANSI_PADDING은 **nchar** 및 **nvarchar**에 대해 항상 ON입니다. SET
 ## <a name="see-also"></a>관련 항목:
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

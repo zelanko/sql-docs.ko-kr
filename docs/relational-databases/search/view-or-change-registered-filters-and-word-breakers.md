@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b56fa606b23ed599b8e2994f52ce2324de82e472
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0c8624187fe53a34056f75eae056c189541e95
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660852"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47602842"
   
      **Microsoft Filter Pack IFilter를 설치 및 로드하려면**  
   
-    -   [SQL Server에 Microsoft Filter Pack IFilter를 등록하는 방법](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [SQL Server에 Microsoft Filter Pack IFilter를 등록하는 방법](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  **sp_fulltext_service** 를 사용하여 새로 설치된 단어 분리기 및 필터를 다음과 같이 서버 인스턴스에 로드합니다.  
   

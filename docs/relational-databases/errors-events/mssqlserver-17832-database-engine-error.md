@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6431ccfaff9cf9b78a257db3908edc7134904a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664261"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657213"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Kerberos 환경에서 Windows 인증을 사용할 경우 클라이언트는 PAC(
   
 패킷이 잘못 만들어졌거나 전송 중에 손상된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 문제에 대한 추가 정보를 제공할 수 없습니다.  
   
-사용자가 여러 그룹의 멤버이거나 많은 정책을 사용하는 경우 이러한 것들을 모두 나열하기 위해 토큰이 정상보다 커질 수 있습니다. 토큰이 서버 컴퓨터의 **MaxTokenSize** 값보다 커질 경우 클라이언트가 GNE(일반 네트워크 오류)에 연결하지 못하고 오류 17832가 발생할 수 있습니다. 이 문제는 그룹이나 정책이 많은 일부 사용자에게만 영향을 줄 수 있습니다. 서버 컴퓨터의 **MaxTokenSize** 값에 문제가 있을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 오류 17832와 함께 상태가 9인 오류가 표시됩니다. Kerberos 및 **MaxTokenSize**에 대한 자세한 내용은 [KB327825](http://support.microsoft.com/kb/327825)를 참조하세요.  
+사용자가 여러 그룹의 멤버이거나 많은 정책을 사용하는 경우 이러한 것들을 모두 나열하기 위해 토큰이 정상보다 커질 수 있습니다. 토큰이 서버 컴퓨터의 **MaxTokenSize** 값보다 커질 경우 클라이언트가 GNE(일반 네트워크 오류)에 연결하지 못하고 오류 17832가 발생할 수 있습니다. 이 문제는 그룹이나 정책이 많은 일부 사용자에게만 영향을 줄 수 있습니다. 서버 컴퓨터의 **MaxTokenSize** 값에 문제가 있을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 오류 17832와 함께 상태가 9인 오류가 표시됩니다. Kerberos 및 **MaxTokenSize**에 대한 자세한 내용은 [KB327825](https://support.microsoft.com/kb/327825)를 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
 이 문제를 해결하려면 서버 컴퓨터의 **MaxTokenSize** 값을 조직에 있는 모든 사용자의 토큰 중 가장 큰 토큰을 포함할 수 있는 충분한 크기로 늘립니다. 조직에 맞는 올바른 토큰 크기를 조사하려면 **Tokensz** 응용 프로그램을 사용합니다.  

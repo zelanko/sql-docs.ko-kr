@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759701"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697332"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  할당 연산자의 오른쪽에 변수가 포함된 식이 있고 UPDATE, SELECT 및 RECEIVE 문에 SET이 포함된 곳에는 어디에나 복합 할당 연산자를 사용할 수 있습니다.  
   
- 값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 [이 KB 문서](http://support.microsoft.com/kb/287515)를 참조하세요.  
+ 값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 [이 KB 문서](https://support.microsoft.com/kb/287515)를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@***local_variable*을 사용할 수 있습니다.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028542"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813516"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "50028542"
   
  예를 들어 스키마가 복합 유형 **ReportParameters**인 RDL 요소 **ReportParametersType**를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 **Type**이라는 단어를 붙여 만듭니다. **ReportParameters** 요소는 **Report** 요소(복합 형식)에 포함될 수 있고 **ReportParameter** 요소를 포함할 수 있습니다. **ReportParameterType** 은 단순 유형으로 값은 **Boolean**, **DateTime**, **Integer**, **Float**또는 **String**중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
- RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`http://servername/reportserver/reportdefinition.xsd`  
+ RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`https://servername/reportserver/reportdefinition.xsd`  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL 만들기  
  개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 응용 프로그램을 작성할 수 있습니다.  

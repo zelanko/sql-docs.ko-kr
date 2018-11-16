@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ac2b973c867e8c5edc4cd8b7eb42ecfee6b3fe0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906293"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640690"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "48906293"
 |**DataProfilingTaskTrace**|태스크 상태에 대한 설명 정보를 제공합니다. 메시지에는 다음 정보가 포함됩니다.<br /><br /> 처리 요청 시작<br /><br /> 쿼리 시작<br /><br /> 쿼리 끝<br /><br /> 계산 요청 마침|  
   
 ## <a name="output-and-its-schema"></a>출력 및 스키마  
- 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
+ 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
   
  데이터 품질 정보에 대한 이 스키마는 다음과 같은 경우 유용할 수 있습니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48906293"
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
+ 대상 네임스페이스는 스키마에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>패키지 조건부 워크플로의 출력  
  데이터 프로파일링 구성 요소에는 데이터 프로파일링 태스크의 출력을 기반으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 워크플로에 조건부 논리를 구현하기 위한 기본 제공 기능이 없습니다. 그러나 이 논리는 스크립트 태스크를 사용하여 최소한의 프로그래밍 작업으로 손쉽게 추가할 수 있습니다. 이 코드는 XML 출력을 대상으로 XPath 쿼리를 수행한 다음 그 결과를 패키지 변수로 저장합니다. 스크립트 태스크를 후속 태스크에 연결하는 선행 제약 조건은 식을 사용하여 워크플로를 확인할 수 있습니다. 예를 들어 스크립트 태스크는 열에서 특정 임계값을 초과하는 null 값의 비율을 탐지합니다. 이 경우 패키지를 중단하면 문제가 계속되기 전에 해결할 수 있습니다.  

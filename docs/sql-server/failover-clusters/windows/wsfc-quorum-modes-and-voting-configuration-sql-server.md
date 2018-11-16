@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703591"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 쿼럼 모드 및 투표 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835931"
 > [!IMPORTANT]  
 >  NodeWeight 설정을 사용하려면 WSFC 클러스터의 모든 서버에 다음 핫픽스를 적용해야 합니다.  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 쿼럼 투표에 권장되는 조정  
  지정된 WSFC 노드의 투표를 사용하거나 사용하지 않도록 설정하는 경우 다음 지침을 따르세요.  
@@ -110,7 +110,7 @@ ms.locfileid: "47835931"
 >   
 >  -   주 복제본을 호스팅하는 클러스터 노드에 투표가 없습니다.  
 > -   보조 복제본이 자동 장애 조치(Failover)용으로 구성되고 해당 클러스터 노드에 투표가 없습니다.  
-> -   가용성 복제본을 호스팅하는 모든 클러스터 노드에[KB2494036](http://support.microsoft.com/kb/2494036) 이 설치되어 있지 않습니다. 멀티 사이트 배포에 클러스터 노드에 대한 투표를 추가하거나 제거하려면 이 패치가 필요합니다. 그러나 단일 사이트 배포에서는 주로 요구되지 않으며 경고를 무시해도 괜찮습니다.  
+> -   가용성 복제본을 호스팅하는 모든 클러스터 노드에[KB2494036](https://support.microsoft.com/kb/2494036) 이 설치되어 있지 않습니다. 멀티 사이트 배포에 클러스터 노드에 대한 투표를 추가하거나 제거하려면 이 패치가 필요합니다. 그러나 단일 사이트 배포에서는 주로 요구되지 않으며 경고를 무시해도 괜찮습니다.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 WSFC 클러스터 구성 및 노드 쿼럼 투표에 관련된 설정을 관리하는 데 도움이 되는 몇 가지 시스템 DMV(동적 관리 뷰)를 표시합니다.  
@@ -125,13 +125,13 @@ ms.locfileid: "47835931"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Always On 가용성 그룹 마법사의 쿼럼 투표 구성 검사](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 기술: 장애 조치(failover) 클러스터](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 기술: 장애 조치(failover) 클러스터](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [장애 조치(Failover) 클러스터 단계별 가이드: 장애 조치 클러스터에서 쿼럼 구성](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터 단계별 가이드: 장애 조치 클러스터에서 쿼럼 구성](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

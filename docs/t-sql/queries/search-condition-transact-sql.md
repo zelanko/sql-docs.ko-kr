@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745331"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699801"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "47745331"
  열 이름, 상수, 함수, 변수, 스칼라 하위 쿼리이거나 열 이름, 상수 및 연산자나 하위 쿼리로 연결된 함수의 결합입니다. 식에는 CASE 식도 포함될 수 있습니다.  
   
 > [!NOTE]  
->  유니코드가 아닌 문자열 상수 및 변수는 데이터베이스의 기본 데이터 정렬에 해당하는 코드 페이지를 사용합니다. 코드 페이지 변환은 유니코드가 아닌 문자 데이터를 사용하고 유니코드가 아닌 **char**, **varchar** 및 **text** 문자 데이터 형식을 참조할 때 발생할 수 있습니다. 코드 페이지가 데이터베이스의 기본 데이터 정렬에 해당 하는 코드 페이지와 다른 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 유니코드가 아닌 문자열 상수와 변수를 참조된 열 또는 COLLATE를 사용하여 지정된 열의 데이터 정렬에 해당하는 코드 페이지로 변환합니다. [가장 적합한 매핑](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)을 찾을 수 있으면 새 코드 페이지에서 찾을 수 없는 문자는 비슷한 문자로 변환됩니다. 그렇지 않으면 기본 대체 문자("?")로 변환됩니다.  
+>  유니코드가 아닌 문자열 상수 및 변수는 데이터베이스의 기본 데이터 정렬에 해당하는 코드 페이지를 사용합니다. 코드 페이지 변환은 유니코드가 아닌 문자 데이터를 사용하고 유니코드가 아닌 **char**, **varchar** 및 **text** 문자 데이터 형식을 참조할 때 발생할 수 있습니다. 코드 페이지가 데이터베이스의 기본 데이터 정렬에 해당 하는 코드 페이지와 다른 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 유니코드가 아닌 문자열 상수와 변수를 참조된 열 또는 COLLATE를 사용하여 지정된 열의 데이터 정렬에 해당하는 코드 페이지로 변환합니다. [가장 적합한 매핑](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)을 찾을 수 있으면 새 코드 페이지에서 찾을 수 없는 문자는 비슷한 문자로 변환됩니다. 그렇지 않으면 기본 대체 문자("?")로 변환됩니다.  
 >  
 > 여러 코드 페이지로 사용하는 경우 문자 상수 앞에 대문자 'N'을 붙일 수 있으며, 유니코드 변수를 사용하여 코드 페이지 변환을 방지할 수 있습니다.  
   

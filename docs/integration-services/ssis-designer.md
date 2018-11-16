@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820111"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642130"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들고 유지 관리하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트의 일부로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "47820111"
 ### <a name="data-flow-tab"></a>데이터 흐름 탭  
  패키지에 데이터 흐름 태스크가 포함된 경우 패키지에 데이터 흐름을 추가할 수 있습니다. **데이터 흐름** 탭의 디자인 화면에서 패키지의 데이터 흐름을 구성합니다. **도구 상자** 에서 디자인 화면으로 항목을 끌어 놓고 항목 아이콘을 클릭한 후 한 항목에서 다른 항목으로 화살표를 끌어서 항목을 데이터 흐름으로 연결합니다.  
   
- 자세한 내용은 [Data Flow](../integration-services/data-flow/data-flow.md)을(를) 참조하세요.  
+ 자세한 내용은 [Data Flow](../integration-services/data-flow/data-flow.md)을 참조하세요.  
   
 ### <a name="parameters-tab"></a>매개 변수 탭  
  Integration Services(SSIS) 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 프로젝트 매개 변수를 만들고 패키지 수준에서 패키지 매개 변수를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다. 이 탭에서 패키지 매개 변수를 관리할 수 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "47820111"
 ### <a name="event-handlers-tab"></a>이벤트 처리기 탭  
  **이벤트 처리기** 탭의 디자인 화면에서 패키지의 이벤트를 구성합니다. **이벤트 처리기** 탭에서 이벤트 처리기를 만들려는 패키지 또는 패키지 개체를 선택한 다음 이벤트 처리기와 연결할 이벤트를 선택합니다. 이벤트 처리기에는 제어 흐름과 선택적 데이터 흐름이 있습니다.  
   
- 자세한 내용은 [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)을(를) 참조하세요.  
+ 자세한 내용은 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)을(를) 참조하세요.  
   
 ### <a name="package-explorer-tab"></a>패키지 탐색기 탭  
  패키지는 여러 태스크, 연결 관리자, 변수 및 기타 요소가 포함되어 복잡할 수 있습니다. 패키지를 탐색기로 보면 전체 패키지 요소 목록을 확인할 수 있습니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820111"
 #### <a name="connection-managers-area"></a>연결 관리자 영역  
  **연결 관리자** 영역에서는 패키지에서 사용되는 연결 관리자를 추가하고 수정합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 텍스트 파일, OLE DB 데이터베이스 및 .NET 공급자와 같은 다양한 데이터 원본에 연결하기 위한 연결 관리자가 포함됩니다.  
   
- 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
+ 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
  
 ## <a name="control-flow-tab"></a>제어 흐름 탭
 **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다.  

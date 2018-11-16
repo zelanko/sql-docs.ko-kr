@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 321ae7aea8a8d3742f641e57d5a8c4276938a555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65466a1750ecc340ed10ae961fa1a46d05a22192
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665258"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606813"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 
 ### <a name="not-included"></a>포함되지 않음
 
-* 이 항목에는 SSPI 오류 정보가 포함되어 있지 않습니다. SSPI 오류의 경우 ["SSPI 컨텍스트를 생성할 수 없습니다" 오류 메시지의 문제를 해결하는 방법](http://support.microsoft.com/kb/811889)을 참조하세요.  
-* 이 항목에는 Kerberos 오류 정보가 포함되어 있지 않습니다. 도움말을 보려면 [SQL Server용 Microsoft Kerberos 구성 관리자](http://www.microsoft.com/download/details.aspx?id=39046)를 참조하세요.
+* 이 항목에는 SSPI 오류 정보가 포함되어 있지 않습니다. SSPI 오류의 경우 ["SSPI 컨텍스트를 생성할 수 없습니다" 오류 메시지의 문제를 해결하는 방법](https://support.microsoft.com/kb/811889)을 참조하세요.  
+* 이 항목에는 Kerberos 오류 정보가 포함되어 있지 않습니다. 도움말을 보려면 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하세요.
 * 이 항목에는 SQL Azure 연결 정보가 포함되어 있지 않습니다. 도움말은 [Microsoft Azure SQL Database 연결 문제 해결(영문)](https://support.microsoft.com/help/10085/troubleshooting-connectivity-issues-with-microsoft-azure-sql-database)을 참조하세요. 
 
 ## <a name="gathering-information-about-the-instance-of-sql-server"></a>SQL Server 인스턴스에 대한 정보 수집
@@ -80,10 +80,10 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설정할 수 있어야 합니다. `ping` 도구를 사용하여 TCP를 테스트합니다.
 1.  시작 메뉴에서 **실행**을 클릭합니다. **실행** 창에서 **cmd**를 입력하고 **확인**을 클릭합니다. 
 2.  명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 IP 주소를 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping 192.168.1.101` , IPv6 주소를 사용하는 경우 `ping fe80::d51d:5ab5:6f09:8f48%11` 를 입력합니다. ping 뒤의 숫자를 앞에서 수집한 컴퓨터의 IP 주소로 바꾸어야 합니다. 
-3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
+3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](https://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
 4.  그런 다음 IP 주소를 사용하여 ping 테스트에 성공한 경우 컴퓨터 이름을 TCP/IP 주소를 확인할 수 있는지 테스트합니다. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 컴퓨터 이름을 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping newofficepc` 
 5.  ipaddress를 ping할 수 있지만 **대상 호스트에 연결할 수 없습니다.** 와 같은 오류를 수신합니다. 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
-6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
+6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](https://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
   
   
 ## <a name="testing-a-local-connection"></a>로컬 연결 테스트
@@ -104,7 +104,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
 >    [!NOTE] 
->    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
+>    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
 4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
@@ -144,7 +144,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
   * SQL Server Browser 서비스를 시작합니다. 섹션 1.d, **SQL Server 인스턴스에 대한 정보 수집**섹션으로 돌아갑니다.
   * SQL Server Browser 서비스가 방화벽에 의해 차단되고 있습니다. 방화벽에서 UDP 포트 1434를 엽니다. **방화벽에서 포트 열기**섹션으로 돌아갑니다. (TCP 포트가 아니라 UDP 포트를 열고 있는지 확인하세요. 두 포트는 다릅니다.)
   * UDP 포트 1434 정보가 라우터에 의해 차단되고 있습니다. UDP 통신(사용자 데이터그램 프로토콜)은 라우터를 통과하도록 설계되지 않았습니다. 이는 우선 순위가 낮은 트래픽이 네트워크를 채우지 않도록 합니다. UDP 트래픽을 전달하도록 라우터를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
-  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 **문제 해결: 제한 시간이 만료되었습니다.** 의 [여러 서버 IP 주소](http://msdn.microsoft.com/library/ms190181.aspx)섹션을 참조하세요. SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
+  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 **문제 해결: 제한 시간이 만료되었습니다.** 의 [여러 서버 IP 주소](https://msdn.microsoft.com/library/ms190181.aspx)섹션을 참조하세요. SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
      
 3. IP 주소(또는 명명된 인스턴스의 IP 주소 및 인스턴스 이름)을 사용하여 연결할 수 있으면 컴퓨터 이름(또는 명명된 인스턴스의 경우 컴퓨터 이름 및 인스턴스 이름)을 사용하여 연결을 시도합니다. TCP/IP 연결을 강제로 적용하려면 컴퓨터 이름 앞에 `tcp:` 를 넣습니다. 예를 들어 `ACCNT27`컴퓨터에 있는 기본 인스턴스의 경우 `tcp:ACCNT27` 을 사용합니다. 해당 컴퓨터에 있는 `PAYROLL`이라는 명명된 인스턴스의 경우 `tcp:ACCNT27\PAYROLL` 을 사용합니다. IP 주소를 사용하여 연결할 수 있지만 컴퓨터 이름을 사용해서는 연결할 수 없는 경우 이름 확인 문제가 있는 것입니다. 섹션 4, **TCP/IP 연결 테스트**섹션으로 돌아갑니다.
 

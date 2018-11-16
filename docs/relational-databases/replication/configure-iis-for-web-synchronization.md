@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665742"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 구독에서 웹 동기화를 사용하도록 구성\(SQL Server Management Studio)\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 구독에서 웹 동기화를 사용하도록 구성\(SQL Server Management Studio)\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [방법:구독에서 웹 동기화를 사용하도록 구성(복제 Transact-SQL 프로그래밍)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [방법:구독에서 웹 동기화를 사용하도록 구성(복제 Transact-SQL 프로그래밍)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [방법: 구독에서 웹 동기화를 사용하도록 구성(RMO 프로그래밍)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [방법: 구독에서 웹 동기화를 사용하도록 구성(RMO 프로그래밍)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  웹 동기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터를 사용하여 끌어오기 구독을 병합 게시에 동기화합니다. IIS 버전 5.0, IIS 버전 6.0 및 IIS 버전 7.0이 지원됩니다. 웹 동기화 구성 마법사는 IIS 버전 7.0에서 지원되지 않습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684881"
   
 4.  **확인**을 클릭합니다.  
   
- CA에서 서버 인증서를 얻을 수 없는 경우에는 테스트용 인증서를 지정할 수 있습니다. 테스트를 위해 IIS 6.0을 구성하려면 SelfSSL 유틸리티를 사용하여 인증서를 설치합니다. 이 유틸리티는 IIS 6.0 Resource Kit에서 사용할 수 있습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=30958)에서 도구를 다운로드할 수 있습니다. IIS 5.0의 경우 [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/?LinkId=46229)을 방문하십시오.  
+ CA에서 서버 인증서를 얻을 수 없는 경우에는 테스트용 인증서를 지정할 수 있습니다. 테스트를 위해 IIS 6.0을 구성하려면 SelfSSL 유틸리티를 사용하여 인증서를 설치합니다. 이 유틸리티는 IIS 6.0 Resource Kit에서 사용할 수 있습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=30958)에서 도구를 다운로드할 수 있습니다. IIS 5.0의 경우 [Microsoft 도움말 및 지원](https://go.microsoft.com/fwlink/?LinkId=46229)을 방문하십시오.  
   
 > [!NOTE]  
 >  웹 사이트에서 SSL을 사용하려면 먼저 인증서를 웹 사이트에 연결해야 합니다. SelfSSL에서는 인증서를 자동으로 기본 웹 사이트에 연결합니다. 이미 인증서가 있거나 CA에서 나중에 인증서를 설치할 경우 해당 인증서를 웹 동기화에서 사용하는 웹 사이트에 명시적으로 연결해야 합니다. 구독 동기화에 사용되는 웹 사이트에는 인증서를 하나만 연결해야 합니다. 인증서를 여러 개 연결하는 경우 구독자는 사용 가능한 첫 번째 웹 사이트를 사용합니다.  

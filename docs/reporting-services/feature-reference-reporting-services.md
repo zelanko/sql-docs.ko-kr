@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021047"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811806"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 응용 프로그램의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "50021047"
  [Reporting Services 개념&#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [보고서 작성기 시작](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [보고서 작성기 시작](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [보고서 작성기 1.0을 사용하여 보고서 디자인 및 구현](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

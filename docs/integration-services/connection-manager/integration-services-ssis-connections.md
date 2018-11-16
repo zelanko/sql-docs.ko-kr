@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820341"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639140"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -110,9 +110,9 @@ ms.locfileid: "47820341"
   
 |형식|설명|항목|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle \<version info\> 서버에 연결합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
-|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](http://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
-|TERADATA|Teradata \<version info\> 서버에 연결합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|ORACLE|Oracle \<version info\> 서버에 연결합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
+|TERADATA|Teradata \<version info\> 서버에 연결합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
  사용자 지정 연결 관리자를 작성할 수도 있습니다. 자세한 내용은 [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)을 참조하세요.  
@@ -244,7 +244,7 @@ ms.locfileid: "47820341"
   
 1.  **연결 관리자** 영역에서 매개 변수를 만들려는 연결 관리자를 마우스 오른쪽 단추로 클릭한 후 **매개 변수화**를 클릭합니다.  
   
-2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)을 참조하세요.  
+2.  **매개 변수화** 대화 상자에서 매개 변수 설정을 구성합니다. 자세한 내용은 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)을 참조하세요.  
 
 ## <a name="delete-a-connection-manager"></a>연결 관리자 삭제 
 ###  <a name="DeletePackageLevel"></a> 패키지에서 연결 관리자 삭제  
@@ -334,14 +334,14 @@ ms.locfileid: "47820341"
 
 ## <a name="related-content"></a>관련 내용  
   
--   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](http://technet.microsoft.com/sqlserver/gg598963.aspx)  
+-   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
   
--   blogs.msdn.com의 블로그 항목 - [SSIS에서 MySQL에 연결](http://go.microsoft.com/fwlink/?LinkId=217669)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS에서 MySQL에 연결](https://go.microsoft.com/fwlink/?LinkId=217669)  
   
--   msdn.microsoft.com의 기술 문서 - [SQL Server Integration Services의 SharePoint 데이터 추출 및 로드](http://go.microsoft.com/fwlink/?LinkId=247826)  
+-   msdn.microsoft.com의 기술 문서 - [SQL Server Integration Services의 SharePoint 데이터 추출 및 로드](https://go.microsoft.com/fwlink/?LinkId=247826)  
   
--   support.microsoft.com의 기술 자료 - [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)(SSIS에서 Oracle 연결 관리자를 사용하는 경우 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 오류 메시지가 발생합니다.)  
+-   support.microsoft.com의 기술 자료 - [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(SSIS에서 Oracle 연결 관리자를 사용하는 경우 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 오류 메시지가 발생합니다.)  
   
   

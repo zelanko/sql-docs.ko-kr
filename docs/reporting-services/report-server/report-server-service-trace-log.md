@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031072"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813796"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031072"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- 자세한 내용은 [웹 사이트의](http://support.microsoft.com/?kbid=913046) 기술 자료 문서 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
+ 자세한 내용은 [웹 사이트의](https://support.microsoft.com/?kbid=913046) 기술 자료 문서 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
 ##  <a name="bkmk_log_file_fields"></a> 로그 파일 필드  
  추적 로그에는 다음과 같은 필드가 있습니다.  

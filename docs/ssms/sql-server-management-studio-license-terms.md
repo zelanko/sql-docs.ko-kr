@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620341"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699051"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 사용권 계약서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>사용 가능한 언어:  
-[중국어(간체)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [중국어(번체)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [영어(미국)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [프랑스어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[독일어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [이탈리아어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [일본어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [한국어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [포르투갈어(브라질)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [러시아어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [스페인어](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[중국어(간체)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[독일어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>Microsoft 소프트웨어 사용 조건  
 **MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -73,7 +73,7 @@ ms.locfileid: "47620341"
   
 **3.    인터넷 기반 서비스.** Microsoft는 소프트웨어와 함께 인터넷 기반 서비스를 제공합니다. Microsoft는 이러한 서비스를 언제라도 변경 또는 중단할 수 있습니다.  
   
-&nbsp;&nbsp;**a.    인터넷 기반 서비스에 대한 동의.** 아래 조항과 SQL Server 개인정보취급방침에 명시된 소프트웨어 기능은 인터넷을 통해 Microsoft 또는 서비스 공급자 컴퓨터 시스템에 연결됩니다. 어떤 경우에는 연결될 때 별도의 통지를 받지 못할 수도 있습니다. 이 기능을 해제하거나 사용하지 않을 수도 있습니다. 이 기능에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)를 참조하세요. **이 기능을 사용함과 동시에 귀하는 이러한 정보의 전송에 동의하게 됩니다.** Microsoft는 귀하의 신원을 식별하거나 귀하에게 연락할 목적으로 이 정보를 사용하지 않습니다.  
+&nbsp;&nbsp;**a.    인터넷 기반 서비스에 대한 동의.** 아래 조항과 SQL Server 개인정보취급방침에 명시된 소프트웨어 기능은 인터넷을 통해 Microsoft 또는 서비스 공급자 컴퓨터 시스템에 연결됩니다. 어떤 경우에는 연결될 때 별도의 통지를 받지 못할 수도 있습니다. 이 기능을 해제하거나 사용하지 않을 수도 있습니다. 이 기능에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120)를 참조하세요. **이 기능을 사용함과 동시에 귀하는 이러한 정보의 전송에 동의하게 됩니다.** Microsoft는 귀하의 신원을 식별하거나 귀하에게 연락할 목적으로 이 정보를 사용하지 않습니다.  
   
 &nbsp;&nbsp;**i.    컴퓨터 정보.** 다음 기능은 인터넷 프로토콜을 사용하여 귀하가 사용하고 있는 인터넷 프로토콜 주소, 운영 체제 종류, 브라우저 및 소프트웨어의 이름과 버전, 소프트웨어를 설치한 장치의 언어 코드 등의 컴퓨터 정보를 해당 시스템에 전송합니다. Microsoft는 귀하에게 인터넷 기반 서비스를 제공할 목적으로 이 정보를 사용합니다.  
   

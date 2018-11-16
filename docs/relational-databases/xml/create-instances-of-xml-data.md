@@ -20,12 +20,12 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779951"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670452"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내부적으로 UTF-16 인코딩을 사용하는 효율적인 이진 표현으로 XML을 나타냅니다. 사용자가 제공한 인코딩은 유지되지 않지만 구문 분석 프로세스 중에 고려됩니다.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>CLR 사용자 정의 형식 캐스팅  
- CLR 사용자 정의 형식에 XML 직렬화가 지정되면 명시적으로 해당 형식의 인스턴스를 XML 데이터 형식으로 캐스팅할 수 있습니다. CLR 사용자 정의 형식의 XML 직렬화에 대한 자세한 내용은 [CLR 데이터베이스 개체에서 XML 직렬화](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)를 참조하세요.  
+ CLR 사용자 정의 형식에 XML 직렬화가 지정되면 명시적으로 해당 형식의 인스턴스를 XML 데이터 형식으로 캐스팅할 수 있습니다. CLR 사용자 정의 형식의 XML 직렬화에 대한 자세한 내용은 [CLR 데이터베이스 개체에서 XML 직렬화](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)를 참조하세요.  
   
 ### <a name="white-space-handling-in-typed-xml"></a>형식화된 XML에서 공백 처리  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요소 내용 내에 있는 공백은 시작 또는 끝 태그처럼 마크업으로 구분된 공백 전용 문자 데이터 시퀀스 내에 있을 경우와 엔터티화되지 않은 경우 불필요한 것으로 간주됩니다. CDATA 섹션은 무시됩니다. 이러한 공백을 처리하는 방식은 W3C(World Wide Web Consortium)에서 게시한 XML 1.0 사양에 설명된 방법과 다릅니다. 그 이유는 XML 1.0에 설명된 대로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XML 파서가 제한된 개수의 DTD 하위 집합만 인식하기 때문입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 제한된 DTD 하위 집합에 대한 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  

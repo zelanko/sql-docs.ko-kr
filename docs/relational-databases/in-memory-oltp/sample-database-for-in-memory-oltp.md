@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120450"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665622"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120450"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "49120450"
   
  해시 인덱스를 사용하여 작업을 추가로 최적화할 수 있습니다. 해시 인덱스는 포인트 조회와 행 삽입에 대해 특히 최적화됩니다. 그러나 해시 인덱스가 범위 검색, 정렬된 검색 또는 선행 인덱스 키 열에 대한 검색을 지원하지 않는다는 점을 고려해야 합니다. 따라서 이러한 인덱스를 사용할 때는 주의를 기울여야 합니다. 또한 만들 때 bucket_count를 지정해야 합니다. bucket_count는 일반적으로 인덱스 키 값의 수와 그 두 배 사이에서 설정되어야 하지만 더 많이 추정해도 대개 문제가 되지 않습니다.  
   
- [인덱스 지침](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 과 [올바른 bucket_count 선택](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
+ [인덱스 지침](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 과 [올바른 bucket_count 선택](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
   
  마이그레이션된 테이블의 인덱스는 데모 판매 주문 처리 작업에 맞게 조정되었습니다. 작업은 Sales.SalesOrderHeader_inmem 및 Sales.SalesOrderDetail_inmem 테이블의 삽입 및 포인트 조회에 의존하며 Production.Product_inmem 및 Sales.SpecialOffer_inmem 테이블에서 기본 키 열에 대한 포인트 조회에도 의존합니다.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120450"
   
     -   지정된 판매 주문에 대한 배송 정보를 업데이트합니다. 또한 판매 주문의 모든 품목에 대한 배송 정보도 업데이트합니다.  
   
-    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)에서 온라인 설명서 항목을 참조하세요.  
+    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)에서 온라인 설명서 항목을 참조하세요.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120450"
   
  설치 단계:  
   
-1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  특정 파일이 사용 중이라는 대화 상자가 나타나면 'Continue'를 클릭합니다.  
   

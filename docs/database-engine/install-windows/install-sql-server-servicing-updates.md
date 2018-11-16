@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ae35c63bdcf5be1bda4dd85010828cb8485f9be4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 985c1117e5913c38769a1baddd50a09ac6978ab1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821131"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604813"
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
 
@@ -44,11 +44,11 @@ ms.locfileid: "47821131"
 설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
   
 ## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>설치 후 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 용 업데이트 설치  
-[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]인스턴스가 설치된 경우 GDR(General Distribution Release), SP(서비스 팩) 및 CU(누적 업데이트)를 포함한 최신 보안 업데이트와 중요 업데이트를 적용하는 것이 좋습니다. 자세한 내용은 [2016년 3월에 발표한 SQL Server ISM(증분 서비스 모델)](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)을 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]인스턴스가 설치된 경우 GDR(General Distribution Release), SP(서비스 팩) 및 CU(누적 업데이트)를 포함한 최신 보안 업데이트와 중요 업데이트를 적용하는 것이 좋습니다. 자세한 내용은 [2016년 3월에 발표한 SQL Server ISM(증분 서비스 모델)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)을 참조하세요.
 
 > [!NOTE]
 > [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터는 단순화되고 예측 가능한 일반 서비스 주기를 채택하고 있으며 SP(서비스 팩)는 더 이상 제공되지 않습니다. CU(누적 업데이트)만, 필요한 경우 GDR(General Distribution Release)
-> 자세한 내용은 [2017년 9월에 발표한 SQL Server에 대한 MSM(Modern Servicing Model)](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)을 참조하세요.
+> 자세한 내용은 [2017년 9월에 발표한 SQL Server에 대한 MSM(Modern Servicing Model)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)을 참조하세요.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트는 MU( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update), WSUS(Windows Server Update Services) 및 Microsoft 다운로드 센터를 통해 제공됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 보안 및 중요 업데이트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 제공되며 이러한 업데이트를 보려면 제어판의 Windows Update 애플릿을 통해 MU를 선택해야 합니다.  
   

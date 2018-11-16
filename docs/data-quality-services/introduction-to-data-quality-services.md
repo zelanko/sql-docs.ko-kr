@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640857"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700281"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640857"
   
 -   **일치:** 규칙 기반 프로세스의 의미적인 중복 항목의 식별을 통해 일치 항목을 확인하고 중복 제거를 수행할 수 있습니다. 자세한 내용은 [Data Matching](../data-quality-services/data-matching.md)을 참조하세요.  
   
--   **참조 데이터 서비스:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/)에서 참조 데이터 서비스를 사용하여 데이터를 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
+-   **참조 데이터 서비스:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/)에서 참조 데이터 서비스를 사용하여 데이터를 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 -   **프로파일링:** 데이터 원본의 분석을 통해 기술 자료 검색, 도메인 관리, 일치 및 데이터 정리 프로세스의 모든 단계에서 데이터의 품질에 대한 이해력을 제공합니다. 프로파일링은 DQS 데이터 품질 솔루션의 강력한 도구입니다. 프로파일링이 지식 관리, 일치 또는 데이터 정리만큼 중요한 데이터 품질 솔루션을 만들 수 있습니다. 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e51a9c2ca8dbebe5f807b7e286eaa61242b04332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617651"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657812"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47617651"
 |형식|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
- 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](http://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
+ 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
   
  특정 파일 형식은 세 가지 유형의 속성을 구현할 수 있습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47617651"
   
  명령 프롬프트에서 **filtdump.exe** 를 실행하고 단일 인수를 제공합니다. 이 인수는 IFilter가 설치된 파일 형식을 사용하는 개별 파일의 이름입니다. 이 유틸리티는 문서에서 IFilter를 통해 검색된 모든 속성의 목록을 속성 집합 GUID, 정수 ID 및 추가 정보와 함께 표시합니다.  
   
- 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](http://go.microsoft.com/fwlink/?LinkId=212980)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
+ 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
   
 -   64비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`을 찾아봅니다.  
   
@@ -84,9 +84,9 @@ propID = 4
 …  
 ```  
   
- 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
+ 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
   
- Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](http://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
+ Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](https://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
   
 ##  <a name="examples"></a> 검색 속성 목록에 속성 추가  
  다음 예에서는 속성을 검색 속성 목록에 추가하는 방법을 보여 줍니다. 이 예에서는 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문을 사용하여 `System.Author` 속성을 `PropertyList1`이라는 검색 속성 목록에 추가하고 속성에 `Author`라는 이름을 제공합니다.  

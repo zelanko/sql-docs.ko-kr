@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4511437b4d4c18fa7834cf7e61af4eda6a74d46a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703101"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  **nvarchar** 형식 패턴  
   
- *format* 인수는 유효한 .NET Framework 형식 문자열을 표준 형식 문자열(예: "C" 또는 "D") 또는 날짜 및 숫자 값에 대한 사용자 지정 문자 패턴(예: "MMMM DD, yyyy (dddd)")으로 포함해야 합니다. 복합 서식 지정은 지원되지 않습니다. 이러한 형식 지정 패턴에 대한 자세한 설명은 .NET Framework 설명서에서 일반적인 문자열 서식 지정, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식을 참조하세요. 시작할 때 유용한 항목은 "[형식 지정](http://go.microsoft.com/fwlink/?LinkId=211776)"입니다.  
+ *format* 인수는 유효한 .NET Framework 형식 문자열을 표준 형식 문자열(예: "C" 또는 "D") 또는 날짜 및 숫자 값에 대한 사용자 지정 문자 패턴(예: "MMMM DD, yyyy (dddd)")으로 포함해야 합니다. 복합 서식 지정은 지원되지 않습니다. 이러한 형식 지정 패턴에 대한 자세한 설명은 .NET Framework 설명서에서 일반적인 문자열 서식 지정, 사용자 지정 날짜 및 시간 형식 및 사용자 지정 숫자 형식을 참조하세요. 시작할 때 유용한 항목은 "[형식 지정](https://go.microsoft.com/fwlink/?LinkId=211776)"입니다.  
   
  *culture*  
  culture를 지정하는 선택적 **nvarchar** 인수입니다.  
@@ -128,7 +128,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>2. 사용자 지정 서식 문자열이 포함된 FORMAT  
- 다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예는 현재 날짜가 2012년 9월 27일인 경우를 가정합니다. 이러한 서식과 다른 사용자 지정 서식에 대한 자세한 내용은 [사용자 지정 숫자 형식 문자열](http://msdn.microsoft.com/library/0c899ak8.aspx)을 참조하세요.  
+ 다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예는 현재 날짜가 2012년 9월 27일인 경우를 가정합니다. 이러한 서식과 다른 사용자 지정 서식에 대한 자세한 내용은 [사용자 지정 숫자 형식 문자열](https://msdn.microsoft.com/library/0c899ak8.aspx)을 참조하세요.  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -147,7 +147,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>3. 숫자 유형이 있는 FORMAT  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 **Sales.CurrencyRate** 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 **Sales.CurrencyRate** 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](https://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

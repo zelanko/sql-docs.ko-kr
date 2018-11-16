@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100194"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696781"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  암시적 권한은 또한 포괄적 또는 상위 권한을 상속할 수도 있습니다. 예를 들어, 테이블에 대한 **UPDATE** 권한은 해당 테이블, 또는 해당 테이블의 **CONTROL** 권한을 포함하는 스키마의 **UPDATE** 권한을 가짐으로써 상속할 수 있습니다,  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
- 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
+ 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
   
 ## <a name="permission-list"></a>허가 목록  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFRENCES  
   
- 각 사용 권한 유형에 대한 정의는 [사용 권한(데이터베이스 엔진)](http://msdn.microsoft.com/library/ms191291.aspx)을 참조하세요.  
+ 각 사용 권한 유형에 대한 정의는 [사용 권한(데이터베이스 엔진)](https://msdn.microsoft.com/library/ms191291.aspx)을 참조하세요.  
   
 ### <a name="chart-of-permissions"></a>권한 목록  
  모든 사용 권한은 이 포스터에 그래픽으로 표시됩니다. 이 방법이 사용 권한의 중첩된 계층 구조를 볼 수 있는 가장 쉬운 방법입니다. 예를 들어, **ALTER ON LOGIN** 권한은 자체적으로 부여될 수 있지만, 또한 로그인에 해당 로그인에 대한 **CONTROL** 권한이 부여되거나 또는 로그인에 **ALTER ANY LOGIN** 권한이 부여된다면 포함될 수 있습니다.  
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](http://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
  다음 목록에서는 기본 사용 권한을 설명합니다.  

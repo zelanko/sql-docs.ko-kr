@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d44aeec8323578c8867f5978fbc6c5f8b6fa0d0d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419468"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699449"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "49419468"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **SQL Server를 지금 사용해 보세요.** 
-- **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
+- **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
 - 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
 - Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 머신](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)을 설정하세요.
 
@@ -60,8 +60,8 @@ SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 �
 - 새 **데이터베이스 일관성 검사기(DBCC)** 는 잠재적 데이터 손상 문제를 감지하기 위해 내부적으로 실행됩니다.
 - **직접 쿼리**는 라이브 외부 데이터를 먼저 가져오는 대신 쿼리하며 이제 Azure SQL, Oracle 및 Teradata를 비롯한 더 많은 데이터 원본을 지원합니다. 
 - 다양한 새 **DAX(Data Access Expressions) 기능**이 있습니다.
-- 새 **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 
-- [Analysis Services Management Objects(AMO)](http://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 **Microsoft.AnalysisServices.Core.dll**을 포함하도록 리팩터링되었습니다.
+- 새 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 
+- [Analysis Services Management Objects(AMO)](https://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 **Microsoft.AnalysisServices.Core.dll**을 포함하도록 리팩터링되었습니다.
 
 [Analysis Services 엔진(SSAS)](../analysis-services/what-s-new-in-analysis-services.md)을 참조하세요. 
 
@@ -100,11 +100,11 @@ Microsoft가 이 릴리스에서 Reporting Services를 완전히 개선했습니
 ## <a name="next-steps"></a>다음 단계   
 - [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 2016 데이터시트](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [SQL Server 2016 데이터시트](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [SQL Server 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)
 - [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [설치 마법사에서 SQL Server 2016 설치](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [설치 및 서비스 설치](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [설치 및 서비스 설치](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [새 SQL PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

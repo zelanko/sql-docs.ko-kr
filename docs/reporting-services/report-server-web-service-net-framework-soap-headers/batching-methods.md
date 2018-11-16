@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60a96336e4570d586b0a5c04449602206b74fcdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110f374bb5cc557bc80cc2bf63d8582e1b85d4d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797261"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813846"
 ---
 # <a name="batching-methods"></a>일괄 처리 메서드
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더를 사용하면 단일 작업에 여러 웹 서비스 메서드를 포함시킬 수 있습니다. 메서드는 호출된 순서대로 단일 데이터베이스 트랜잭션의 범위 내에서 실행됩니다.  
@@ -45,7 +45,7 @@ Class Sample
         Dim rs As New ReportingService2005()  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
       ' Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         Dim bh As New BatchHeader()  
   
@@ -77,7 +77,7 @@ class Sample
         ReportingService2005 rs = new ReportingService2005();  
         rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
       // Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2005.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2005.asmx"  
   
         BatchHeader bh = new BatchHeader();  
   

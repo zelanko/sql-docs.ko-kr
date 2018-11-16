@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ea464ae0717f69df69af48063499cf3cc8a5c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9209682962a974e7a8ff6ef6419517416d399d8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661892"
 ---
 # <a name="views"></a>뷰
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718711"
  분할된 뷰는 하나 이상의 서버에 있는 여러 멤버 테이블의 수평 분할된 데이터를 조인하여 데이터가 한 테이블에 있는 것처럼 보이게 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일한 인스턴스에 있는 멤버 테이블을 조인하는 뷰는 로컬 분할 뷰입니다.  
   
  시스템 뷰  
- 시스템 뷰는 카탈로그 메타데이터를 노출합니다. 시스템 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 인스턴스에 정의된 개체에 대한 정보를 반환할 수 있습니다. 예를 들어 sys.databases 카탈로그 뷰를 쿼리하여 인스턴스에서 사용할 수 있는 사용자 정의 데이터베이스에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
+ 시스템 뷰는 카탈로그 메타데이터를 노출합니다. 시스템 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 인스턴스에 정의된 개체에 대한 정보를 반환할 수 있습니다. 예를 들어 sys.databases 카탈로그 뷰를 쿼리하여 인스턴스에서 사용할 수 있는 사용자 정의 데이터베이스에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
 ## <a name="common-view-tasks"></a>일반 뷰 태스크  
  다음 표에서는 뷰 만들기 또는 수정과 연관된 일반 태스크에 대한 링크를 제공합니다.  

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5aa7205329304a6b66fc602999ae2a9ad6837873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626441"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677552"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ go
   
 1.  코드 예제로 사용할 기존 테스트 데이터베이스를 결정합니다.  
   
-2.  새 테스트 데이터베이스를 만들려면 [Azure 포털](http://portal.azure.com) 을 사용하여 이름이 **imoltp**인 데이터베이스를 생성합니다.  
+2.  새 테스트 데이터베이스를 만들려면 [Azure 포털](https://portal.azure.com) 을 사용하여 이름이 **imoltp**인 데이터베이스를 생성합니다.  
   
- 이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](http://azure.microsoft.com/documentation/articles/sql-database-get-started)을 참조하십시오.  
+ 이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](https://azure.microsoft.com/documentation/articles/sql-database-get-started)을 참조하십시오.  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>2단계: 메모리 액세스에 최적화된 테이블과 NCSProc 만들기  
  이 단계를 통해 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저(NCSProc)를 만들 수 있습니다. 다음을 수행합니다.  

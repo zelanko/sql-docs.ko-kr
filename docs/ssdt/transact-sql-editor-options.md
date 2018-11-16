@@ -28,12 +28,12 @@ ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de191188dfcd22a75ed42555b432d757f9ac316e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667052"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 이 항목에서는 Transact-SQL 편집기의 일부 옵션에 대한 정보를 제공합니다. 이러한 옵션을 설정하려면 **옵션** 대화 상자에서 **도구\옵션** 메뉴로 이동합니다.  
@@ -50,25 +50,25 @@ ms.locfileid: "47598922"
 |**SET TEXTSIZE**|기본값 2,147,483,647바이트는 SQL Server에서 text, ntext, nvarchar(max) 및 varchar(max) 데이터 필드의 제한까지 전체 데이터 필드를 제공한다는 것을 나타냅니다. XML 데이터 형식에는 영향을 주지 않습니다. 값이 클 경우 결과를 제한하려면 보다 작은 수를 지정합니다. 지정한 수보다 많은 열은 잘립니다.|  
 |**실행 제한 시간**|쿼리를 취소할 때까지 기다리는 시간(초)을 나타냅니다. 값 0은 무한 대기 또는 제한 시간 없음을 의미합니다.|  
 |**기본적으로 SQLCMD 모드로 새 쿼리를 엽니다.**|SQLCMD 모드로 새 쿼리를 열려면 이 확인란을 선택합니다. 이 확인란은 도구 메뉴를 통해 대화 상자를 연 경우에만 표시됩니다.<br /><br />이 옵션을 선택할 경우 다음과 같은 제한 사항에 유의해야 합니다.<br /><br />-   데이터베이스 엔진 쿼리 편집기에서 IntelliSense는 해제되어 있습니다.<br />-   쿼리 편집기를 명령줄에서 실행하지 못하므로 변수와 같은 명령줄 매개 변수를 전달할 수 없습니다.<br />-   쿼리 편집기는 운영 체제 프롬프트에 응답할 수 없으므로 대화형 문을 실행하지 않도록 주의해야 합니다.|  
-|**SET NOCOUNT**|Transact-SQL 문의 영향을 받은 행 수를 나타내는 메시지가 결과의 일부로 반환되지 않도록 합니다. 자세한 내용은 [SET NOCOUNT](http://go.microsoft.com/fwlink/?LinkID=238731)를 참조하십시오.|  
-|**SET NOEXEC**|**ON**으로 설정하면 Microsoft® SQL Server™가 Transact-SQL 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. **OFF**로 설정하면 Microsoft® SQL Server™가 컴파일 후 모든 일괄 처리를 실행합니다. 자세한 내용은 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)를 참조하세요.|  
-|**SET PARSEONLY**|각 Transact-SQL 문의 구문을 검사한 후 문을 컴파일하거나 실행하지 않고 오류 메시지를 반환합니다. 자세한 내용은 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)를 참조하십시오.|  
-|**SET CONCAT_NULL_YIELDS_NULL**|연결 결과를 Null 값으로 처리할지 빈 문자열 값으로 처리할지 여부를 제어합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)을 참조하세요.|  
-|**SET ARITHABORT**|쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다. 자세한 내용은 [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)를 참조하세요.|  
-|**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™가 Transact-SQL 문을 실행하지 않도록 합니다. 대신 SQL Server는 문 실행 방법에 대한 자세한 정보를 반환합니다. 자세한 내용은 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)를 참조하세요.|  
+|**SET NOCOUNT**|Transact-SQL 문의 영향을 받은 행 수를 나타내는 메시지가 결과의 일부로 반환되지 않도록 합니다. 자세한 내용은 [SET NOCOUNT](https://go.microsoft.com/fwlink/?LinkID=238731)를 참조하십시오.|  
+|**SET NOEXEC**|**ON**으로 설정하면 Microsoft® SQL Server™가 Transact-SQL 문의 각 일괄 처리를 컴파일하지만 실행하지는 않습니다. **OFF**로 설정하면 Microsoft® SQL Server™가 컴파일 후 모든 일괄 처리를 실행합니다. 자세한 내용은 [SET NOEXEC](https://go.microsoft.com/fwlink/?LinkId=238770)를 참조하세요.|  
+|**SET PARSEONLY**|각 Transact-SQL 문의 구문을 검사한 후 문을 컴파일하거나 실행하지 않고 오류 메시지를 반환합니다. 자세한 내용은 [SET PARSEONLY](https://go.microsoft.com/fwlink/?LinkId=238734)를 참조하십시오.|  
+|**SET CONCAT_NULL_YIELDS_NULL**|연결 결과를 Null 값으로 처리할지 빈 문자열 값으로 처리할지 여부를 제어합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](https://go.microsoft.com/fwlink/?LinkId=238733)을 참조하세요.|  
+|**SET ARITHABORT**|쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다. 자세한 내용은 [SET ARITHABORT](https://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)를 참조하세요.|  
+|**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™가 Transact-SQL 문을 실행하지 않도록 합니다. 대신 SQL Server는 문 실행 방법에 대한 자세한 정보를 반환합니다. 자세한 내용은 [SET SHOWPLAN_TEXT](https://go.microsoft.com/fwlink/?LinkID=238737)를 참조하세요.|  
 |**SET STATISTICS TIME**|각 문을 구문 분석, 컴파일 및 실행하는 데 필요한 시간(밀리초)을 표시합니다.|  
 |**SET STATISTICS IO**|Microsoft® SQL Server™가 Transact-SQL 문에 의해 생성된 디스크 작동 크기에 대한 정보를 표시하도록 합니다.|  
-|**SET TRANSACTION ISOLATION LEVEL**|연결하여 실행되는 모든 Microsoft® SQL Server™ **SELECT** 문의 기본 트랜잭션 잠금 동작을 제어합니다. 자세한 내용은  [SET TRANSACTION ISOLATION LEVEL](http://go.microsoft.com/fwlink/?LinkId=238730)을 참조하십시오.|  
-|**SET LOCK_TIMEOUT**|잠금이 해제될 때가지 문이 기다려야 할 시간(밀리초)을 지정합니다. 자세한 내용은 [SET LOCK_TIMEOUT](http://go.microsoft.com/fwlink/?LinkId=238747)을 참조하세요.|  
-|**SET QUERY_GOVERNOR_COST_LIMIT**|현재 연결에 대해 구성되어 있는 값을 재정의합니다. 자세한 내용은 [SET QUERY_GOVERNOR_COST_LIMIT](http://go.microsoft.com/fwlink/?LinkId=238749)을 참조하세요.|  
-|**SET ANSI_DEFAULTS**|SQL-92 표준 동작 일부를 전체적으로 지정하는 Microsoft® SQL Server™ 설정 그룹을 제어합니다. 자세한 내용은 [SET ANSI_DEFAULTS](http://go.microsoft.com/fwlink/?LinkId=238750)를 참조하세요.|  
-|**SET QUOTED_IDENTIFIER**|Microsoft® SQL Server™가 인용 부호 구분 식별자 및 리터럴 문자열에 관해 SQL-92 규칙을 따르도록 합니다. 큰따옴표로 구분된 식별자는 Transact-SQL의 예약된 키워드이거나 Transact-SQL 식별자 구문 규칙에서 허용하지 않는 문자를 포함할 수 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](http://go.microsoft.com/fwlink/?LinkId=238751)를 참조하세요.|  
-|**SET ANSI_NULL_DFLT_ON**|데이터베이스의 ANSI Null 기본값 옵션이 false로 설정되어 있으면 세션의 동작을 변경하여 새 열의 기본 Null 허용 여부보다 우선 적용됩니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752)을 참조하세요.|  
-|**SET IMPLICIT_TRANSACTIONS**|**ON**으로 설정하면 연결이 암시적 트랜잭션 모드로 설정됩니다. **OFF**로 설정하면 연결이 다시 자동 커밋 트랜잭션 모드로 돌아갑니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS](http://go.microsoft.com/fwlink/?LinkId=238753)를 참조하세요.|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|트랜잭션을 커밋할 때 커서를 닫을 것인지를 제어합니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754)을 참조하세요.|  
-|**SET ANSI_PADDING**|열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다. 자세한 내용은 [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755)을 참조하세요.|  
-|**SET ANSI_WARNINGS**|여러 오류 조건에 대한 SQL-92 표준 동작을 지정합니다. 자세한 내용은 [SET ANSI_WARNINGS](http://go.microsoft.com/fwlink/?LinkId=238758)를 참조하세요.|  
-|**SET ANSI_NULLS**|Null 값과 함께 사용될 경우 Equals(**=**)와 Not Equal To(**<>**) 비교 연산자의 SQL-92 호환 동작을 지정합니다. 자세한 내용은 [SET ANSI_NULLS](http://go.microsoft.com/fwlink/?LinkId=238759)를 참조하세요.|  
+|**SET TRANSACTION ISOLATION LEVEL**|연결하여 실행되는 모든 Microsoft® SQL Server™ **SELECT** 문의 기본 트랜잭션 잠금 동작을 제어합니다. 자세한 내용은  [SET TRANSACTION ISOLATION LEVEL](https://go.microsoft.com/fwlink/?LinkId=238730)을 참조하십시오.|  
+|**SET LOCK_TIMEOUT**|잠금이 해제될 때가지 문이 기다려야 할 시간(밀리초)을 지정합니다. 자세한 내용은 [SET LOCK_TIMEOUT](https://go.microsoft.com/fwlink/?LinkId=238747)을 참조하세요.|  
+|**SET QUERY_GOVERNOR_COST_LIMIT**|현재 연결에 대해 구성되어 있는 값을 재정의합니다. 자세한 내용은 [SET QUERY_GOVERNOR_COST_LIMIT](https://go.microsoft.com/fwlink/?LinkId=238749)을 참조하세요.|  
+|**SET ANSI_DEFAULTS**|SQL-92 표준 동작 일부를 전체적으로 지정하는 Microsoft® SQL Server™ 설정 그룹을 제어합니다. 자세한 내용은 [SET ANSI_DEFAULTS](https://go.microsoft.com/fwlink/?LinkId=238750)를 참조하세요.|  
+|**SET QUOTED_IDENTIFIER**|Microsoft® SQL Server™가 인용 부호 구분 식별자 및 리터럴 문자열에 관해 SQL-92 규칙을 따르도록 합니다. 큰따옴표로 구분된 식별자는 Transact-SQL의 예약된 키워드이거나 Transact-SQL 식별자 구문 규칙에서 허용하지 않는 문자를 포함할 수 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](https://go.microsoft.com/fwlink/?LinkId=238751)를 참조하세요.|  
+|**SET ANSI_NULL_DFLT_ON**|데이터베이스의 ANSI Null 기본값 옵션이 false로 설정되어 있으면 세션의 동작을 변경하여 새 열의 기본 Null 허용 여부보다 우선 적용됩니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON](https://go.microsoft.com/fwlink/?LinkID=238752)을 참조하세요.|  
+|**SET IMPLICIT_TRANSACTIONS**|**ON**으로 설정하면 연결이 암시적 트랜잭션 모드로 설정됩니다. **OFF**로 설정하면 연결이 다시 자동 커밋 트랜잭션 모드로 돌아갑니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS](https://go.microsoft.com/fwlink/?LinkId=238753)를 참조하세요.|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|트랜잭션을 커밋할 때 커서를 닫을 것인지를 제어합니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)을 참조하세요.|  
+|**SET ANSI_PADDING**|열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다. 자세한 내용은 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)을 참조하세요.|  
+|**SET ANSI_WARNINGS**|여러 오류 조건에 대한 SQL-92 표준 동작을 지정합니다. 자세한 내용은 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)를 참조하세요.|  
+|**SET ANSI_NULLS**|Null 값과 함께 사용될 경우 Equals(**=**)와 Not Equal To(**<>**) 비교 연산자의 SQL-92 호환 동작을 지정합니다. 자세한 내용은 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)를 참조하세요.|  
   
 ## <a name="QueryResults"></a>쿼리 결과  
   

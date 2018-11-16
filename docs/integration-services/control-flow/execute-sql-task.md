@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721771"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641834"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "47721771"
 >  SQL 실행 태스크 외부에서 작성된 SQL 문은 유효하더라도 SQL 실행 태스크에서 성공적으로 구문 분석되지 않을 수도 있습니다.  
   
 > [!NOTE]  
->  SQL 실행 태스크는 **RecognizeAll** ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](http://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
+>  SQL 실행 태스크는 **RecognizeAll** ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](https://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>여러 개의 문을 일괄 처리로 전송  
  SQL 실행 태스크에 여러 개의 문이 포함된 경우 문을 그룹화하여 일괄 처리로 실행할 수 있습니다. 일괄 처리의 마지막을 알리려면 GO 명령을 사용합니다. 두 GO 명령 사이의 모든 SQL 문은 일괄 처리로 실행되도록 OLE DB Provider에 전송됩니다. SQL 명령은 GO 명령으로 구분된 여러 개의 일괄 처리를 포함할 수 있습니다.  
@@ -183,7 +183,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **SQLStatement**  
  실행할 SQL 문을 옵션 상자에 입력하거나, 찾아보기 단추(…)를 클릭하여 **SQL 쿼리 입력** 대화 상자에 SQL 문을 입력하거나, **쿼리 작성** 을 클릭하고 **쿼리 작성기** 대화 상자를 사용하여 SQL 문을 작성합니다.  
   
- **관련 항목:** [쿼리 작성기](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **관련 항목:** [쿼리 작성기](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
@@ -195,7 +195,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **SourceVariable**  
  기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
@@ -307,7 +307,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 ###  <a name="Date_and_time_data_types"></a> 날짜 및 시간 데이터 형식의 매개 변수 사용  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 날짜 및 시간 매개 변수 사용  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식인 **time** 및 **datetimeoffset** 데이터를 읽을 때는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식인 **time** 및 **datetimeoffset**데이터를 읽을 때는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
   
 -   **time** 데이터의 경우 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하려면 매개 변수 유형이 **Input** 또는 **Output**이고 데이터 형식이 **string**인 매개 변수에 이 데이터를 저장해야 합니다.  
   
@@ -322,7 +322,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 방법에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 및 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 날짜 및 시간 매개 변수 사용  
- OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2** 및 **datetimeoffset** 형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2**및 **datetimeoffset**형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   NVARCHAR 데이터 형식의 입력 매개 변수  
   
@@ -338,7 +338,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 연결 관리자의 날짜 및 시간 매개 변수 사용  
- ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2** 또는 **datetimeoffset** 중 한 형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime**, **datetime2**또는 **datetimeoffset**중 한 형식의 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   SQL_WVARCHAR 데이터 형식의 **input** 매개 변수  
   
@@ -382,7 +382,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
 |ADO|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure가 **False**로 설정된 경우 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure가 **True**로 설정된 경우 `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |ODBC|1, 2, 3, …|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, …|  
   
-10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
+10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
   
 11. **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
   
@@ -471,7 +471,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
 |ADO|IsQueryStoreProcedure가 **False**로 설정된 경우 `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure가 **True**로 설정된 경우 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure가 **True**로 설정됩니다.<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
  XML 결과 집합은 **String** 또는 **Object** 데이터 형식의 변수에만 매핑할 수 있습니다. 변수에 **String** 데이터 형식이 있는 경우 SQL 실행 태스크는 문자열을 반환하고 XML 원본은 XML 데이터를 사용할 수 있습니다. 변수가 **개체** 데이터 형식인 경우 SQL 실행 태스크는 DOM(문서 개체 모델) 개체를 반환합니다.  
   
- **전체 결과 집합** 은 **Object** 데이터 형식의 변수에 매핑되어야 합니다. 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](http://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
+ **전체 결과 집합** 은 **Object** 데이터 형식의 변수에 매핑되어야 합니다. 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](https://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
   
  다음 표에는 결과 집합에 매핑될 수 있는 변수의 데이터 형식이 요약되어 있습니다.  
   
@@ -554,7 +554,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 8.  결과 집합 매핑을 추가하려면 **추가**를 클릭합니다.  
   
-9. **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
+9. **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
   
 10. 필요에 따라 **결과 이름** 목록에서 결과 집합의 이름을 수정합니다.  
   

@@ -1,23 +1,21 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269806"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703861"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 
@@ -33,7 +31,7 @@ ms.locfileid: "51269806"
 > - 모든 버전에서 SQL Server의 기존 인스턴스 업그레이드
 
 **체험하기[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]**
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [다운로드하여 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Windows에 설치](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [다운로드하여 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
 
@@ -45,12 +43,12 @@ ms.locfileid: "51269806"
 제한되는 지원은 다음 위치 중 하나에서 확인할 수 있습니다.
 
 - 포럼
-  - [SQL Server 피드백](http://aka.ms/sqlfeedback)
+  - [SQL Server 피드백](https://aka.ms/sqlfeedback)
   - [SQL Server 시작](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server 설명서](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- 또는 [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)를 사용하여 트윗
+- 또는 [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)를 사용하여 트윗
 
 ### <a name="documentation-ctp-21"></a>설명서(CTP 2.1)
 
@@ -69,7 +67,7 @@ ms.locfileid: "51269806"
     - [Linux - 시스템 요구 사항](../linux/sql-server-linux-setup.md#system)
   - **소프트웨어**
     - Windows Server 2016 이상. 추가 요구 사항은 [SQL Server 설치 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
-    - Microsoft .NET Framework 4.6.2. [다운로드 센터](http://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.
+    - Microsoft .NET Framework 4.6.2. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.
     - Linux의 경우 [Linux - 지원되는 플랫폼](../linux/sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 
 ### <a name="floating-point-results"></a>부동 소수점 결과

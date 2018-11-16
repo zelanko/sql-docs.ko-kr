@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658632"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51031270"
  \* 파일의 수는 컴퓨터의 논리 프로세서 수에 따라 달라집니다. 일반적으로 논리 프로세서의 수가 8 이하인 경우 논리 프로세서와 같은 수의 데이터 파일을 사용합니다. 논리 프로세서의 수가 8보다 클 경우 8개의 데이터 파일을 사용합니다. 그런 다음에도 경합이 계속될 경우 경합이 허용 가능한 수준으로 감소할 때까지 데이터 파일의 수를 4의 배수로 늘리거나 작업/코드를 변경합니다.
 
 > [!NOTE]
-> 데이터 파일 수의 기본값은 [KB 2154845](http://support.microsoft.com/kb/2154845/)의 일반 지침을 기준으로 합니다.  
+> 데이터 파일 수의 기본값은 [KB 2154845](https://support.microsoft.com/kb/2154845/)의 일반 지침을 기준으로 합니다.  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>SQL Server에서 tempdb 데이터 및 로그 파일 이동  
  **tempdb** 데이터 및 로그 파일을 이동하려면 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
@@ -70,34 +69,34 @@ ms.locfileid: "51031270"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
-|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
-|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
-|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
-|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
-|ARITHABORT|OFF|사용자 계정 컨트롤|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
 |AUTO_CLOSE|OFF|아니오|  
-|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_CREATE_STATISTICS|ON|예|  
 |AUTO_SHRINK|OFF|아니오|  
-|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS|ON|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|아니오|  
-|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
-|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|ON|아니오|  
 |ENCRYPTION|OFF|아니오|  
 |MIXED_PAGE_ALLOCATION|OFF|아니오|  
-|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|사용자 계정 컨트롤|  
-|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
-|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
+|NUMERIC_ROUNDABORT|OFF|예|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니오|  
 |RECOVERY|SIMPLE|아니오|  
-|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
-|Service Broker 옵션|ENABLE_BROKER|사용자 계정 컨트롤|  
+|RECURSIVE_TRIGGERS|OFF|예|  
+|Service Broker 옵션|ENABLE_BROKER|예|  
 |TRUSTWORTHY|OFF|아니오|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
@@ -278,4 +277,4 @@ tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2005에서의 tempdb 사용](https://technet.microsoft.com/library/cc966545.aspx)  
- [tempdb의 디스크 공간 부족 문제 해결](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [tempdb의 디스크 공간 부족 문제 해결](https://msdn.microsoft.com/library/ms176029.aspx) 

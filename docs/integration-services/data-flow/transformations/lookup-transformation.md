@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730931"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639660"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730931"
   
 ## <a name="related-content"></a>관련 내용  
   
--   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](http://go.microsoft.com/fwlink/?LinkId=131031)  
+-   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
   
--   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](http://go.microsoft.com/fwlink/?LinkId=146623)  
+-   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   
--   blogs.msdn.com의 블로그 항목 - [조회 패턴: 대/소문자 구분 안 함](http://go.microsoft.com/fwlink/?LinkId=157782)  
+-   blogs.msdn.com의 블로그 항목 - [조회 패턴: 대/소문자 구분 안 함](https://go.microsoft.com/fwlink/?LinkId=157782)  
   
--   msftisprodsamples.codeplex.com의 예제 - [조회 변환](http://go.microsoft.com/fwlink/?LinkId=267528)  
+-   msftisprodsamples.codeplex.com의 예제 - [조회 변환](https://go.microsoft.com/fwlink/?LinkId=267528)  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제품 예제 및 예제 데이터베이스를 설치하는 방법은 [SQL Server Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=267527)를 참조하십시오.  
+     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제품 예제 및 예제 데이터베이스를 설치하는 방법은 [SQL Server Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=267527)를 참조하십시오.  
   
 ## <a name="lookup-transformation-editor-general-page"></a>조회 변환 편집기(일반 페이지)
   조회 변환 편집기 대화 상자의 **일반** 페이지를 사용하여 캐시 모드와 연결 형식을 선택하고 일치하는 항목이 없는 행의 처리 방법을 지정할 수 있습니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730931"
  **일치하는 항목이 없는 행 처리 방법 지정** 목록 상자에서 다른 옵션을 선택하면 행이 오류로 처리되며 **오류 출력** 페이지에 있는 **오류** 옵션을 사용할 수 있습니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 집합을 생성할 수도 있습니다.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730931"
  **쿼리 결과 미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 이 옵션은 최대 200개의 행을 표시합니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
@@ -272,7 +272,7 @@ ms.locfileid: "47730931"
  **쿼리 매개 변수 설정** 대화 상자를 사용하여 입력 열을 매개 변수에 매핑합니다.  
   
 ### <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>참고 항목  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

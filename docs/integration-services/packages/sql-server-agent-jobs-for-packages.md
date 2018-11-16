@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bce4b148fbb5a573446f21ea7e116a01d79fc1e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849527"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642190"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -60,14 +60,14 @@ ms.locfileid: "47849527"
   
  자세한 내용은 [SQL Server 에이전트를 사용하여 패키지 예약](#schedule)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
   
 ##  <a name="trouble"></a> 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하십시오.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
   
@@ -120,11 +120,11 @@ ms.locfileid: "47849527"
   
 7.  **다음 계정으로 실행** 목록에서 **SQL Server 에이전트 서비스 계정** 을 선택하거나 작업 단계에 사용될 자격 증명이 있는 프록시 계정을 선택합니다. 프록시 계정을 만드는 방법은 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조하십시오.  
   
-     **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)를 참고하십시오.  
+     **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참고하십시오.  
   
     > **참고:** 프록시 계정에 사용하는 자격 증명의 암호가 변경되면 자격 증명 암호를 업데이트해야 합니다. 그렇지 않으면 작업 단계가 실패합니다.  
   
-     SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)을 참조하세요.  
+     SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)을 참조하세요.  
   
 8.  **패키지 원본** 목록 상자에서 패키지의 원본을 클릭하고 작업 단계의 옵션을 구성합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "47849527"
     ||**속성 재정의**:<br /><br /> 패키지 속성에 대한 새 값을 입력하고, 속성 경로를 지정하고, 속성 값이 중요한지 여부를 나타내려면 **추가** 를 클릭합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 중요한 데이터를 암호화합니다. 속성에 대한 설정을 편집하거나 제거하려면 **속성** 재정의 상자의 행을 클릭한 다음 **편집** 이나 **제거**를 클릭합니다. 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.<br /><br /> <br /><br /> 참고: **속성 재정의** 옵션은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 이전 릴리스에서 업그레이드된 구성을 포함하는 패키지용입니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 를 사용하여 만들고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지는 구성 대신 매개 변수를 사용합니다.|  
     ||**로깅 수준**<br /><br /> 패키지 실행에 대해 다음 로깅 수준 중 하나를 선택합니다. **성능** 또는 **자세한 정보** 로깅 수준을 선택하면 패키지 실행 성능에 영향을 줄 수 있습니다.<br /><br /> **없음**:<br />                          로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.<br /><br /> **기본**:<br />                          사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 로깅 수준의 기본값입니다.<br /><br /> **성능**:<br />                          성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **자세한 정보**:<br />                          사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 선택한 로깅 수준은 SSISDB 보기 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 보고서에 표시될 정보를 결정합니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.|  
     ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 파일을 저장합니다.|  
-    ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
+    ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
   
      **패키지 원본**:  SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47849527"
     |**구성**|특정 구성으로 패키지를 실행할 XML 구성 파일을 추가합니다. 패키지 구성을 사용하여 런타임 시 패키지 속성 값을 업데이트합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/ConfigFile**옵션에 해당합니다.<br /><br /> 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하십시오. 패키지 구성을 만드는 방법은 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)를 참조하십시오.|  
     |**명령 파일**|**dtexec**에 실행할 추가 옵션을 별도 파일에 지정합니다.<br /><br /> 예를 들어 패키지를 실행하는 동안 하나 이상의 지정된 이벤트가 발생하는 경우 디버그 덤프 파일을 생성하려면 /Dump *errorcode* 옵션을 포함하는 파일을 포함할 수 있습니다.<br /><br /> **명령 파일** 옵션을 사용하면 여러 파일을 만들어서 적절한 파일을 지정하는 방법으로 한 패키지에 대해 다른 옵션 집합을 실행할 수 있습니다.<br /><br /> **명령 파일** 옵션은 **dtexec** 의 **/CommandFile**옵션에 해당합니다.|  
     |**데이터 원본**|패키지에 포함된 연결 관리자를 봅니다. 연결 문자열을 수정하려면 연결 관리자를 클릭하고 연결 문자열을 클릭합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Connection**옵션에 해당합니다.|  
-    |**실행 옵션**|**유효성 검사 경고 발생 시 패키지 실패**<br /> 경고 메시지가 오류로 간주되는지 여부를 나타냅니다. 이 옵션을 선택하고 유효성 검사 중 경고가 발생하면 패키지는 유효성 검사 중 실패합니다. 이 옵션은 **dtexec** 의 **/WarnAsError**옵션에 해당합니다.<br /><br /> **패키지를 실행하지 않고 유효성 검사**<br /> 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지할지 여부를 나타냅니다. 이 옵션은 **dtexec** 의 **/Validate**옵션에 해당합니다.<br /><br /> **MacConcurrentExecutables 속성 무시**<br /> 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. -1 값은 패키지가 실행할 수 있는 최대 파일 수가 패키지를 실행하는 컴퓨터의 프로세서 총 수에 2를 더한 값과 같음을 의미합니다. 이 옵션은 **dtexec** 의 **/MaxConcurrent**옵션에 해당합니다.<br /><br /> **패키지 검사점 사용**<br /> 패키지 실행 중 검사점 사용 여부를 나타냅니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.<br /><br /> 이 옵션은 **dtexec** 의 **/CheckPointing**옵션에 해당합니다.<br /><br /> **다시 시작 옵션 무시**<br /> 패키지의 **CheckpointUsage** 속성에 대해 새 값이 설정되었는지를 나타냅니다. **다시 시작 옵션** 목록 상자에서 값을 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Restart**옵션에 해당합니다.<br /><br /> **32비트 런타임 사용**<br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
+    |**실행 옵션**|**유효성 검사 경고 발생 시 패키지 실패**<br /> 경고 메시지가 오류로 간주되는지 여부를 나타냅니다. 이 옵션을 선택하고 유효성 검사 중 경고가 발생하면 패키지는 유효성 검사 중 실패합니다. 이 옵션은 **dtexec** 의 **/WarnAsError**옵션에 해당합니다.<br /><br /> **패키지를 실행하지 않고 유효성 검사**<br /> 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지할지 여부를 나타냅니다. 이 옵션은 **dtexec** 의 **/Validate**옵션에 해당합니다.<br /><br /> **MacConcurrentExecutables 속성 무시**<br /> 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. -1 값은 패키지가 실행할 수 있는 최대 파일 수가 패키지를 실행하는 컴퓨터의 프로세서 총 수에 2를 더한 값과 같음을 의미합니다. 이 옵션은 **dtexec** 의 **/MaxConcurrent**옵션에 해당합니다.<br /><br /> **패키지 검사점 사용**<br /> 패키지 실행 중 검사점 사용 여부를 나타냅니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.<br /><br /> 이 옵션은 **dtexec** 의 **/CheckPointing**옵션에 해당합니다.<br /><br /> **다시 시작 옵션 무시**<br /> 패키지의 **CheckpointUsage** 속성에 대해 새 값이 설정되었는지를 나타냅니다. **다시 시작 옵션** 목록 상자에서 값을 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Restart**옵션에 해당합니다.<br /><br /> **32비트 런타임 사용**<br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
     |**로깅**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 응용 프로그램 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Logger**옵션에 해당합니다.|  
     |**값 설정**|패키지 속성 설정을 재정의합니다. **속성** 상자에서 **속성 경로** 및 **값** 열에 값을 입력합니다. 속성 하나에 대한 값을 입력하면, **속성** 상자에 빈 행이 나타나고 다른 속성에 대한 값을 입력할 수 있게 됩니다.<br /><br /> 속성 상자에서 속성을 제거하려면 행을 클릭한 다음 **제거**를 클릭합니다.<br /><br /> 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.|  
     |**확인**|**서명된 패키지만 실행**<br /> 패키지 서명 확인 여부를 나타냅니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 이 옵션은 **dtexec** 의 **/VerifySigned**옵션에 해당합니다.<br /><br /> **패키지 빌드 확인**<br /> 패키지의 빌드 번호가 이 옵션 옆에 있는 **빌드** 상자에 입력된 빌드 번호와 비교하여 검증되었는지를 나타냅니다. 일치하지 않을 경우 패키지가 실행되지 않습니다. 이 옵션은 **dtexec** 의 **/VerifyBuild**옵션에 해당합니다.<br /><br /> **패키지 ID 확인**<br /> 패키지의 GUID가 이 옵션 옆에 있는 **패키지 ID** 상자에 입력된 package ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyPackageID**옵션에 해당합니다.<br /><br /> **버전 ID 확인**<br /> 패키지의 버전 GUID가 이 옵션 옆에 있는 **버전 ID** 상자에 입력된 버전 ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyVersionID**옵션에 해당합니다.|  
@@ -195,16 +195,16 @@ ms.locfileid: "47849527"
 
 ## <a name="external-resources"></a>외부 리소스  
   
--   [웹 사이트의 기술 자료 문서 -](http://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [웹 사이트의 기술 자료 문서 -](https://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772)  
   
--   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141771)  
+-   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)  
   
--   mssqltips.com의 기술 문서 - [Windows PowerShell을 사용하여 SQL Server 에이전트 작업 확인(Checking SQL Server Agent jobs using Windows PowerShell)](http://go.microsoft.com/fwlink/?LinkId=165675)  
+-   mssqltips.com의 기술 문서 - [Windows PowerShell을 사용하여 SQL Server 에이전트 작업 확인(Checking SQL Server Agent jobs using Windows PowerShell)](https://go.microsoft.com/fwlink/?LinkId=165675)  
   
--   mssqltips.com의 기술 문서 - [SQL 에이전트 작업 설정 또는 해제 시 자동 경고](http://go.microsoft.com/fwlink/?LinkId=165676)  
+-   mssqltips.com의 기술 문서 - [SQL 에이전트 작업 설정 또는 해제 시 자동 경고](https://go.microsoft.com/fwlink/?LinkId=165676)  
   
--   mssqltips.com의 블로그 항목 - [Windows 이벤트 로그에 쓰도록 SQL 에이전트 작업 구성](http://go.microsoft.com/fwlink/?LinkId=220745)  
+-   mssqltips.com의 블로그 항목 - [Windows 이벤트 로그에 쓰도록 SQL 에이전트 작업 구성](https://go.microsoft.com/fwlink/?LinkId=220745)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfb63472c5132ad37abbe8832929e10f694f84f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703891"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services에 대한 설치 작업
 
@@ -52,12 +52,12 @@ ms.locfileid: "47689411"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스 만들기|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 마스터 데이터에 대한 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.|[Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 만들기|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]를 호스팅하기 위한 웹 응용 프로그램을 만들고 구성합니다.|[마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 웹 응용 프로그램과 연결|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결합니다.|[Master Data Services 데이터베이스와 웹 응용 프로그램 연결](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Internet Explorer 보안 강화 구성|Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 설치하는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 응용 프로그램 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 응용 프로그램 사이트로의 이동에 실패합니다.|[Internet Explorer: 보안 구성 강화](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|설치 - [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|마스터 데이터로 작업하는 사용자는 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 설치할 수 있습니다.|[http://go.microsoft.com/fwlink/?LinkID=398159](http://go.microsoft.com/fwlink/?LinkID=398159)|  
+|Internet Explorer 보안 강화 구성|Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 설치하는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 응용 프로그램 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 응용 프로그램 사이트로의 이동에 실패합니다.|[Internet Explorer: 보안 구성 강화](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|설치 - [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|마스터 데이터로 작업하는 사용자는 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 설치할 수 있습니다.|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |DQS(Data Quality Services) 통합 사용|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]사용자의 경우 유사 데이터를 일치시키는 데 사용할 수 있는 DQS 기능과의 통합을 사용합니다.|[MDS(Master Data Services)와 Data Quality Services의 통합 설정](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |예제 모델 배포|예제 모델 패키지는 MDS(Master Data Services)와 함께 설치되며, MDSModelDeploy.exe를 사용하여 배포할 수 있습니다.|[SQL Server에 MDS 예제 배포](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- 설치 프로세스 또는 초기 구성 중에 문제가 발생한 경우 TechNet Wiki에서 [설치 및 구성 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 을 참조하십시오.  
+ 설치 프로세스 또는 초기 구성 중에 문제가 발생한 경우 TechNet Wiki에서 [설치 및 구성 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 을 참조하십시오.  
   
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 가 컴퓨터에서 더 이상 필요하지 않은 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 제거하고 제거 프로세스의 영향을 받지 않는 항목을 제거할지 여부를 결정할 수 있습니다. 자세한 내용은 [Master Data Services 제거](../../sql-server/install/uninstall-and-remove-master-data-services.md)를 참조하세요.  
   

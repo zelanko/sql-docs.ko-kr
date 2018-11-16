@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614441"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658082"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](http://msdn.microsoft.com/library/mt631669.aspx) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.  
+  [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 에 대한 시스템 버전 temporal 테이블은 메모리 내 OLTP 작업으로 수집한 데이터 위에 [데이터 감사 및 특정 시간 분석](https://msdn.microsoft.com/library/mt631669.aspx) 이 필요한 시나리오에 대해 비용 효율적인 솔루션을 제공하기 위한 것입니다. 이는 높은 트랜잭션 처리량, 잠금 없는 동시성 및 동시에 쉽게 쿼리할 수 있는 대량의 기록 데이터를 저장하는 기능을 제공합니다.  
   
 ## <a name="overview"></a>개요  
  시스템 버전 temporal 테이블은 자동으로 데이터 변경 내용에 대한 전체 기록을 유지하며 특정 시간 분석에 대해 편리한 TRANSACT-SQL 확장을 적용합니다. 일반적인 시나리오에서는 데이터 기록이 정기적으로 쿼리되지 않더라도 매우 긴 시간(여러 달, 심지어 수 년) 동안 보존됩니다.  

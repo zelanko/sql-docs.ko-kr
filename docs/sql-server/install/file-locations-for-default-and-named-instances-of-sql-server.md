@@ -10,12 +10,12 @@ ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffd05feffd0a3b92abad1f7a661daeeccddd98ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8db4609eb02cb64c4281190462e74fe24711d02
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609461"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699241"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "47609461"
 >  데이터 파일은 항상 Data라는 하위 디렉터리에 위치합니다. 예를 들어 데이터 파일이 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\MSSQL\Data에 있는 경우 업그레이드 중에 루트 경로를 시스템 데이터베이스의 데이터 디렉터리로 지정하려면 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 엔진 구성 - 데이터 디렉터리](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Analysis Services 구성 - 데이터 디렉터리](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
+ [데이터베이스 엔진 구성 - 데이터 디렉터리](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
+ [Analysis Services 구성 - 데이터 디렉터리](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   

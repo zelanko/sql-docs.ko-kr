@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 1ac9c72ecee9beee66ea190b3acf233a0e4bc753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668552"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV를 사용하여 뷰의 사용 통계 및 성능 확인
 
@@ -201,8 +201,8 @@ GO
 ## <a name="related-external-resources"></a>관련 외부 리소스
 
 - [성능 튜닝을 위한 DMV(동영상 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [성능 튜닝을 위한 DMV(슬라이드 e 데모 - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [성능 튜닝을 위한 DMV(슬라이드 e 데모 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
 - [캡슐 양식으로 SQL Server 튜닝(동영상 - SQL Saturday Parma)](https://vimeo.com/200980883)
-- [nutshell에서 SQL Server 튜닝(슬라이드 및 데모 - SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [nutshell에서 SQL Server 튜닝(슬라이드 및 데모 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
 - [SQL Server 동적 관리 뷰를 사용한 성능 튜닝](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
 - [SQL Server 2016의 가장 중요한 대기 유형](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)

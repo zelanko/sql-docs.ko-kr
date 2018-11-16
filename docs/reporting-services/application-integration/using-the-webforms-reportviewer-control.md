@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a5146555a434bd2f0b5c864fd4daae7e66d2cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcd5aab378463274c8856241a948360c9ec2f72e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722261"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813036"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 응용 프로그램에서 렌더링할 수 있습니다.  
@@ -82,7 +82,7 @@ protected void Page_Init(object sender, EventArgs e)
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =  
-            new Uri("http://<Server Name>/reportserver");  
+            new Uri("https://<Server Name>/reportserver");  
         serverReport.ReportPath =  
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -118,7 +118,7 @@ Partial Class _Default
   
             'Set the report server URL and report path  
             serverReport.ReportServerUrl = _  
-                New Uri("http://<Server Name>/reportserver")  
+                New Uri("https://<Server Name>/reportserver")  
             serverReport.ReportPath = _  
                 "/AdventureWorks Sample Reports/Sales Order Detail"  
   

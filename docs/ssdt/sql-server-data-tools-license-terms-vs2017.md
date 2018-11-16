@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: facb62a69380df53d0f8b76db49086412e37ef31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07e75b6fa3391bfb82752ffbff81e513f2a9259f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682194"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659713"
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47682194"
 &nbsp;&nbsp;**a.    SQL Server Reporting Services 맵 보고서 항목.** 소프트웨어에는 Bing Maps(또는 후속 모델) 응용 프로그래밍 인터페이스("Bing Maps API")를 통한 맵, 이미지 및 기타 데이터와 같은 콘텐츠 검색 기능이 포함되어 있을 수 있습니다. 이 기능의 목적은 맵, 항공 사진 및 하이브리드 이미지 위에 데이터를 표시하는 보고서를 만들기 위한 것입니다. 이러한 기능이 포함되어 있는 경우 귀하는 이 기능을 사용하여 동적 문서 또는 정적 문서를 만들고 볼 수 있습니다. 이는 소프트웨어에 통합된 액세스 방법 및 수단을 통해서만 가능합니다. 이러한 경우를 제외하고 Bing Maps API를 통해 사용 가능한 콘텐츠의 데이터베이스를 복사, 저장, 보관하거나 만들 수 없습니다. 다음 항목은 Bing Maps API를 통해 사용 가능한 경우에도 어떤 목적으로든 사용할 수 없습니다.  
 * 센서 기반 안내/라우팅을 제공하기 위한 Bing Maps API  
 * 도로 교통 데이터 또는 조감도 이미지(또는 관련 메타데이터)  
-또한 귀하가 Bing Maps를 사용할 경우 Bing Maps 최종 사용자 사용 약관(http://go.microsoft.com/?linkid=9710837) 및 Bing Maps 개인정보처리방침(http://go.microsoft.com/fwlink/?LinkID=248686)이 적용됩니다.  
+또한 귀하가 Bing Maps를 사용할 경우 Bing Maps 최종 사용자 사용 약관(https://go.microsoft.com/?linkid=9710837) 및 Bing Maps 개인정보처리방침(https://go.microsoft.com/fwlink/?LinkID=248686)이 적용됩니다.  
   
 &nbsp;&nbsp;**b.**  이 소프트웨어는 SSIS(SQL Server Integration Services) 사용자가 (a) 온-프레미스 데이터 저장소와 Microsoft 온라인 서비스 간에 데이터를 이동하고, (b) Microsoft 온라인 서비스에서 특정 작업을 트리거할 수 있도록 설계되었습니다. 이 작업을 수행하도록 소프트웨어에서는 인터넷 프로토콜을 사용하여 (i) 사용자가 지정한 자체 데이터 및 소프트웨어 구성에 대한 데이터 등의 데이터를 이러한 서비스에 보내고, (ii) 사용자가 지정한 자체 데이터 및 Microsoft 온라인 서비스의 특성 및 구성에 대한 데이터 등의 데이터를 이러한 서비스로부터 요청합니다. 이러한 서비스와 통신하도록 소프트웨어를 구성한 후에는 소프트웨어가 이러한 서비스에 연결될 때 별도의 통지를 받을 수 없습니다.  
   

@@ -1,12 +1,10 @@
 ---
 title: 데이터 변경 내용 추적(SQL Server) | Microsoft 문서
-ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a668e59baa2b412a960447b1fe14c6adf596804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666414"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,11 +56,11 @@ ms.locfileid: "47625390"
 |기능|변경 데이터 캡처|변경 내용 추적|  
 |-------------|-------------------------|---------------------|  
 |**추적된 변경 내용**|||  
-|DML 변경|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|DML 변경|예|예|  
 |**추적된 정보**|||  
-|기록 데이터|사용자 계정 컨트롤|아니오|  
-|열 변경 여부|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|DML 유형|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|기록 데이터|예|아니오|  
+|열 변경 여부|예|예|  
+|DML 유형|예|예|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
@@ -90,11 +88,11 @@ ms.locfileid: "47625390"
   
 |열 유형|변경 테이블에 변경 내용이 캡처되는지 여부|제한 사항|  
 |--------------------|---------------------------------------|-----------------|  
-|스파스 열|사용자 계정 컨트롤|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
+|스파스 열|예|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
 |계산 열|아니오|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
-|XML|사용자 계정 컨트롤|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
-|timestamp|사용자 계정 컨트롤|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
-|BLOB 데이터 형식|사용자 계정 컨트롤|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
+|XML|예|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
+|timestamp|예|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
+|BLOB 데이터 형식|예|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능  
  이 섹션에서는 다음 기능으로 변경 데이터 캡처와 상호 작용하는 방법에 대해 설명합니다.  
@@ -155,7 +153,7 @@ ms.locfileid: "47625390"
   
      변경 내용 추적에 대해 설명하고, 변경 내용 추적 작동 방법에 대한 높은 수준의 개요를 제공하며, 변경 내용 추적과 다른 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기능의 상호 작용 방식에 대해 설명합니다.  
   
--   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]에 대한 설명서에서 "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
   
@@ -178,7 +176,7 @@ ms.locfileid: "47625390"
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [변경 데이터 캡처 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [변경 데이터 캡처 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656159"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621801"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 Azure 주요 자격 증명 모음 간 브리지 역할을 하므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은(는) Azure 주요 자격 증명 모음 서비스의 확장성, 고성능 및 고가용성을 활용할 수 있습니다. 다음 이미지는 키 계층이 Azure 주요 자격 증명 모음 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용하여 EKM 공급자 아키텍처에서 작동하는 방법을 보여 줍니다.  
   
-  Azure 주요 자격 증명 모음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 가상 컴퓨터의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치와 함께 온-프레미스 서버용으로 사용할 수 있습니다. 키 자격 증명 모음 서비스에서는 더 높은 수준의 비대칭 암호화 키 보호를 위해 세부적인 제어 및 모니터링이 이루어지는 HSM(하드웨어 보안 모듈)을 사용할 수도 있습니다. 주요 자격 증명 모음에 대한 자세한 내용은 [Azure 주요 자격 증명 모음](http://go.microsoft.com/fwlink/?LinkId=521401)을 참조하세요.  
+  Azure 주요 자격 증명 모음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 가상 컴퓨터의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치와 함께 온-프레미스 서버용으로 사용할 수 있습니다. 키 자격 증명 모음 서비스에서는 더 높은 수준의 비대칭 암호화 키 보호를 위해 세부적인 제어 및 모니터링이 이루어지는 HSM(하드웨어 보안 모듈)을 사용할 수도 있습니다. 주요 자격 증명 모음에 대한 자세한 내용은 [Azure 주요 자격 증명 모음](https://go.microsoft.com/fwlink/?LinkId=521401)을 참조하세요.  
   
  다음 이미지에 키 자격 증명 모음을 사용한 EKM의 프로세스 흐름이 요약되어 있습니다. 이미지의 프로세스 단계 번호는 이미지에서 설명하는 설정 단계 번호와 일치하지 않습니다.  
   

@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906083"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641750"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -58,7 +58,7 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
 |-----------|-----------------|  
 |**SourceType = DirectInput**|옵션 상자에서 직접 제출할 U-SQL 쿼리를 입력하거나 [찾아보기] 단추(...)를 선택하여 **U-SQL 쿼리 입력** 대화 상자에 U-SQL 쿼리를 입력합니다.|  
 |**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...**>을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.|  
-|**SourceType = Variable**|기존 변수를 선택하거나 \<**새 변수...**>를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
+|**SourceType = Variable**|기존 변수를 선택하거나 \<**새 변수...**>를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
 
 
 ### <a name="job-configuration"></a>작업 구성

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678022"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47625781"
   
 -   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
@@ -441,7 +440,7 @@ ms.locfileid: "47625781"
  테스트 메일 메시지의 **mailitem_id** 입니다.  
   
  **문제 해결**  
- 온라인 설명서의 [데이터베이스 메일 문제 해결](http://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
+ 온라인 설명서의 [데이터베이스 메일 문제 해결](https://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   

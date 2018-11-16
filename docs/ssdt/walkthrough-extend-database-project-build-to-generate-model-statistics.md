@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659142"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
 빌드 참가자를 만들어서 데이터베이스 프로젝트를 빌드할 때 사용자 지정 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 빌드할 때 SQL 데이터베이스 모델에서 통계를 출력하는 ModelStatistics라는 빌드 참가자를 만듭니다. 이 빌드 참가자는 빌드할 때 매개 변수가 사용되기 때문에 몇 가지 추가 단계가 필요합니다.  
@@ -56,12 +56,12 @@ ms.locfileid: "47669881"
   
 |**클래스**|**메서드/속성**|**설명**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|모델에서 개체를 쿼리하며 모델 API를 사용하기 위한 기본 요소입니다. 테이블 또는 뷰와 같은 최상위 유형만 쿼리할 수 있으며, 열과 같은 유형은 모델 트래버스를 통해서만 찾을 수 있습니다. ModelTypeClass 필터가 지정되지 않았으면 모든 최상위 유형이 반환됩니다.|  
-|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|현재 TSqlObject에서 참조되는 요소에 대한 관계를 찾습니다. 예를 들어 테이블의 경우 이 메서드는 테이블의 열과 같은 개체를 반환합니다. 이 예에서는 ModelRelationshipClass 필터를 사용해서 쿼리할 정확한 관계를 지정할 수 있습니다(예: "Table.Columns" 필터를 사용하면 열만 반환되도록 보장할 수 있음).<br /><br />이외에도 GetReferencingRelationshipInstances, GetChildren 및 GetParent와 같은 비슷한 메서드가 많이 있습니다. 자세한 내용은 API 설명서를 참조하십시오.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|모델에서 개체를 쿼리하며 모델 API를 사용하기 위한 기본 요소입니다. 테이블 또는 뷰와 같은 최상위 유형만 쿼리할 수 있으며, 열과 같은 유형은 모델 트래버스를 통해서만 찾을 수 있습니다. ModelTypeClass 필터가 지정되지 않았으면 모든 최상위 유형이 반환됩니다.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|현재 TSqlObject에서 참조되는 요소에 대한 관계를 찾습니다. 예를 들어 테이블의 경우 이 메서드는 테이블의 열과 같은 개체를 반환합니다. 이 예에서는 ModelRelationshipClass 필터를 사용해서 쿼리할 정확한 관계를 지정할 수 있습니다(예: "Table.Columns" 필터를 사용하면 열만 반환되도록 보장할 수 있음).<br /><br />이외에도 GetReferencingRelationshipInstances, GetChildren 및 GetParent와 같은 비슷한 메서드가 많이 있습니다. 자세한 내용은 API 설명서를 참조하십시오.|  
   
 **참가자를 고유하게 식별**  
   
-빌드 프로세스 중에는 사용자 지정 참가자가 표준 확장 디렉터리에서 로드됩니다. 빌드 참가자는 [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 특성으로 식별됩니다. 이 특성은 참가자를 검색하는 데 필요합니다. 이 특성은 다음과 비슷합니다.  
+빌드 프로세스 중에는 사용자 지정 참가자가 표준 확장 디렉터리에서 로드됩니다. 빌드 참가자는 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 특성으로 식별됩니다. 이 특성은 참가자를 검색하는 데 필요합니다. 이 특성은 다음과 비슷합니다.  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "47669881"
   
 -   클래스 라이브러리 프로젝트를 만들고 필요한 참조를 추가합니다.  
   
--   [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)로부터 상속되는 ModelStatistics라는 클래스를 정의합니다.  
+-   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)로부터 상속되는 ModelStatistics라는 클래스를 정의합니다.  
   
 -   OnExecute 메서드를 재정의합니다.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "47669881"
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  

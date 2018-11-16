@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666762"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>방법: SQL Server 단위 테스트 실행 구성
 테스트 프로젝트를 구성하여 SQL Server 단위 테스트가 실행되는 방법의 여러 측면을 제어하는 몇 가지 설정을 지정할 수 있습니다. 이러한 구성 설정은 테스트 프로젝트의 app.config 파일에 저장됩니다. 이 파일을 직접 편집하는 경우 테스트 구성 대화 상자에 새 값이 나타납니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47668901"
 -   **스키마 배포**. 데이터베이스 프로젝트는 데이터베이스의 오프라인 표현입니다. 데이터베이스 프로젝트는 데이터베이스 개체의 구조를 나타내지만 데이터를 포함하지는 않습니다. 데이터베이스 프로젝트에서 스키마를 변경한 후에 실제 데이터베이스에서 해당 스키마를 테스트할 수 있습니다. 스키마 배포 단계에서는 테스트할 데이터베이스 개체가 데이터베이스 프로젝트에서 테스트를 실행할 데이터베이스에 복사됩니다. 스키마 배포에 대한 자세한 내용은 [데이터베이스 스키마 배포](#DeployingDBSchema)를 참조하세요.  
   
     > [!NOTE]  
-    > 테스트는 솔루션 폴더에서 실행되지 않고 로컬 하드 디스크에 있는 별도의 폴더에서 실행됩니다. 테스트 배포의 여러 측면을 구성할 수 있지만 일반적으로 단위 테스트에 대해서는 이를 구성할 필요가 없습니다. 테스트 배포에 대한 자세한 내용은 [테스트 실행](http://msdn.microsoft.com/library/dd286680(VS.100).aspx)을 참조하세요.  
+    > 테스트는 솔루션 폴더에서 실행되지 않고 로컬 하드 디스크에 있는 별도의 폴더에서 실행됩니다. 테스트 배포의 여러 측면을 구성할 수 있지만 일반적으로 단위 테스트에 대해서는 이를 구성할 필요가 없습니다. 테스트 배포에 대한 자세한 내용은 [테스트 실행](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)을 참조하세요.  
   
 ## <a name="SpecifyConnectionStrings"></a>연결 문자열 지정  
   

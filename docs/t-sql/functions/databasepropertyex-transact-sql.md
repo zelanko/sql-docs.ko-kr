@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d31b8d30686e55d97423648e34ea63be653be031
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1e75eb377a21c8d5192926b2c912ae4da5a0b7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697431"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>인수  
-*database*  
+*데이터베이스*  
 `DATABASEPROPERTYEX`에서 명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *database*에는 **nvarchar(128)** 데이터 형식이 있습니다.  
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 `DATABASEPROPERTYEX`에 현재 데이터베이스의 이름을 반환합니다. 다른 데이터베이스 이름을 제공하는 경우 모든 속성에 대해 NULL을 반환합니다.
@@ -57,7 +57,7 @@ DATABASEPROPERTYEX ( database , property )
 |---|---|---|
 |데이터 정렬|데이터베이스의 기본 데이터 정렬 이름입니다.|데이터 정렬 이름<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |ComparisonStyle|데이터 정렬의 Windows 비교 스타일입니다. 다음 스타일 값을 사용하여 완성된 ComparisonStyle 값에 대한 비트맵을 빌드합니다.<br /><br /> 대/소문자 무시: 1<br /><br /> 악센트 무시: 2<br /><br /> Ignore Kana : 65536<br /><br /> 전자/반자 무시: 131072<br /><br /> <br /><br /> 예를 들어 기본값 196609는 대/소문자 무시, 일본어 가나 무시 및 전자/반자 무시 옵션이 결합된 결과입니다.|비교 스타일을 반환합니다.<br /><br /> 모든 이진 데이터 정렬에 대해 0을 반환합니다.<br /><br /> 기본 데이터 형식: **int**|  
-|버전|데이터베이스 버전 또는 서비스 계층입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 범용<br /><br /> 중요 비즈니스용<br /><br /> Basic<br /><br /> 표준<br /><br /> Premium<br /><br /> 시스템(master 데이터베이스용)<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **nvarchar(64)**|  
+|버전|데이터베이스 버전 또는 서비스 계층입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 범용<br /><br /> 중요 비즈니스용<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> 시스템(master 데이터베이스용)<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **nvarchar(64)**|  
 |IsAnsiNullDefault|데이터베이스가 Null 값 허용에 대해 ISO 규칙을 따릅니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAnsiNullsEnabled|Null에 대한 모든 비교는 알 수 없음이 됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAnsiPaddingEnabled|비교 또는 삽입하기 전에 문자열이 동일한 길이만큼 채워집니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
@@ -68,7 +68,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsAutoCreateStatisticsIncremental|가능하면 자동으로 만든 단일 열 통계는 증분합니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoShrink|데이터베이스 파일을 주기적으로 자동 축소합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoUpdateStatistics|쿼리에서 오래된 기존 통계를 사용할 경우 쿼리 최적화 프로그램이 이러한 통계를 업데이트합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 입력이 잘못됨<br /><br /> 기본 데이터 형식: **int**|
-|IsClone|데이터베이스는 DBCC CLONEDATABASE로 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 [Microsoft 지원 아티클](http://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
+|IsClone|데이터베이스는 DBCC CLONEDATABASE로 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsCloseCursorsOnCommitEnabled|트랜잭션이 커밋되면 열려 있는 모든 커서가 닫힙니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsFulltextEnabled|데이터베이스에 전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 입력이 잘못됨<br /><br /> 기본 데이터 형식: **int**<br /><br /> **참고:** 이 속성의 값은 이제 아무런 영향을 주지 않습니다. 사용자 데이터베이스는 전체 텍스트 검색을 사용하도록 항상 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서는 이 속성이 제거될 예정입니다. 새 개발 작업에서는 이 속성을 사용하지 말고 현재 이 속성을 사용하는 응용 프로그램은 가능한 한 빨리 수정하세요.|  
 |IsInStandBy|데이터베이스가 로그 복원이 허용된 읽기 전용으로 온라인 상태입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
@@ -84,7 +84,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsSubscribed|데이터베이스가 게시를 구독합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsSyncWithBackup|데이터베이스는 게시된 데이터베이스이거나 배포 데이터베이스이며, 트랜잭션 복제를 중단하지 않는 복원을 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
-|IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 아티클](http://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
+|IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 아티클](https://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
 |LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  

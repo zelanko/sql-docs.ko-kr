@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707900"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639030"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "47707900"
   
     3.  **행 개수 데이터 캡처** 행 개수 정보에 대한 별도의 테이블을 만듭니다. 이 테이블에서 패키지 실행의 각 인스턴스는 ExecutionID로 식별됩니다. 행 개수 변환을 사용하여 데이터 흐름의 중요 지점에서 일련의 변수에 행 개수를 저장합니다. 데이터 흐름이 끝난 후에는 나중에 분석 및 보고할 수 있도록 SQL 실행 태스크를 사용하여 일련의 값을 이 테이블의 행에 삽입합니다.  
   
-     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](http://go.microsoft.com/fwlink/?LinkId=96602)의 "ETL 감사 및 로깅" 섹션을 참조하십시오.  
+     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 "ETL 감사 및 로깅" 섹션을 참조하십시오.  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>디버그 덤프 파일을 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  
@@ -95,7 +95,7 @@ ms.locfileid: "47707900"
      **DelayValidation** 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **false**을 참조하세요. 그러나 이 속성 값이 **false**이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 **true**로 설정하면 데이터베이스의 잠금으로 인한 차단 문제를 방지할 수 있습니다. 특히 패키지에서 트랜잭션을 사용하는 경우에 유용합니다.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>런타임 권한 문제 해결  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 배포된 패키지를 실행하려고 할 때 오류가 발생하면 에이전트에서 사용하는 계정에 필요한 권한이 없는 것일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행한 패키지의 문제를 해결하는 방법은 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)를 참조하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 패키지를 실행하는 방법은 [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 배포된 패키지를 실행하려고 할 때 오류가 발생하면 에이전트에서 사용하는 계정에 필요한 권한이 없는 것일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행한 패키지의 문제를 해결하는 방법은 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참조하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 패키지를 실행하는 방법은 [패키지에 대한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.  
   
  Excel 또는 Access 데이터 원본에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 TEMP 및 TMP 환경 변수로 지정되는 폴더에서 임시 파일을 읽고, 쓰고, 만들고, 삭제할 수 있는 사용 권한을 가진 계정이 있어야 합니다.  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707900"
  [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>관련 내용  
- dougbert.com의 블로그 항목, [오류 출력에 오류 열 이름 추가](http://go.microsoft.com/fwlink/?LinkId=261546)  
+ dougbert.com의 블로그 항목, [오류 출력에 오류 열 이름 추가](https://go.microsoft.com/fwlink/?LinkId=261546)  

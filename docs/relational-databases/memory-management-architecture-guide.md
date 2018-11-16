@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623831"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669402"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 <sup>6</sup> 32비트에서 AWE 지원에 대해 또는 64비트에서 단독으로 LPIM(메모리의 페이지 잠금) 권한이 부여된 경우 max server memory도 설정하는 것이 좋습니다. LPIM에 대한 자세한 내용은 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)을 참조하세요.
 
 > [!NOTE]
-> 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](http://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](http://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
+> 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](https://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](https://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
@@ -88,9 +87,9 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|사용자 계정 컨트롤|예, "임의 크기" 페이지 할당에 통합됨|
+|단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니오|사용자 계정 컨트롤|
+|CLR 할당|아니오|예|
 |스레드 스택 메모리|아니오|아니오|
 |Windows에서 직접 할당|아니오|아니오|
 
@@ -116,10 +115,10 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
 |단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|사용자 계정 컨트롤|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|스레드 스택 메모리|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|Windows에서 직접 할당|사용자 계정 컨트롤|사용자 계정 컨트롤|
+|다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|예|예|
+|스레드 스택 메모리|예|예|
+|Windows에서 직접 할당|예|예|
 
 ## <a name="dynamic-memory-management"></a> 동적 메모리 관리
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 메모리 관리 동작은 시스템에 메모리가 부족해지지 않도록 필요한 만큼 메모리를 확보하는 것입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 Microsoft Windows의 메모리 알림 API를 사용하여 이 작업을 수행합니다.
@@ -188,7 +187,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 **네트워크 패킷 크기**는 응용 프로그램과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진 간의 통신에 사용하는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.
 
-다중 활성 결과 집합(MARS)을 사용할 수 있으면 사용자 연결은 약 (3 + 3 \* num_logical_connections) \* network_packet_size + 94KB입니다.
+다중 활성 결과 집합(MARS)을 사용할 수 있으면 사용자 연결은 약 (3 + 3 \*num_logical_connections)\* network_packet_size + 94KB입니다.
 
 ## <a name="effects-of-min-memory-per-query"></a>min memory per query 효과
 *min memory per query* 구성 옵션은 쿼리 실행을 위해 할당할 최소 메모리 용량(KB)을 설정합니다. 최소 메모리 부여라고도 합니다. 모든 쿼리는 요청된 최소 메모리가 보호될 수 있을 때까지, 실행을 시작하기 전에 또는 쿼리 대기 서버 구성 옵션에서 지정된 값을 초과할 때까지 기다려야 합니다. 이 시나리오에 누적된 대기 유형은 RESOURCE_SEMAPHORE입니다.

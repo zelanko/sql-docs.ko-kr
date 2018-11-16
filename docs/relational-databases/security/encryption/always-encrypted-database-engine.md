@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675132"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,10 +104,10 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 |태스크|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|사용자 계정 컨트롤|예|아니오|
-|데이터베이스에 키 메타데이터 만들기|사용자 계정 컨트롤|예|사용자 계정 컨트롤|
-|암호화된 열이 있는 새 테이블 만들기|사용자 계정 컨트롤|예|사용자 계정 컨트롤|
-|선택한 데이터베이스 열에 있는 기존 데이터 암호화|사용자 계정 컨트롤|예|아니오|
+|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니오|
+|데이터베이스에 키 메타데이터 만들기|예|예|예|
+|암호화된 열이 있는 새 테이블 만들기|예|예|예|
+|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니오|
 
 > [!NOTE]
 > 데이터베이스를 호스트하는 컴퓨터와 다른 컴퓨터의 보안 환경에서 키 프로비저닝 또는 데이터 암호화 도구를 실행해야 합니다. 그러지 않으면 중요한 데이터나 키가 서버 환경에 누출되어 상시 암호화 사용의 이점이 줄어듭니다.  
@@ -187,7 +187,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 - SQL Server Management Studio는 *서버에 연결* 대화 상자의 **추가 속성** 탭에서 **열 암호화 설정=사용** 으로 설정하여 연결하는 경우 암호화된 열에서 검색된 결과의 암호를 해독할 수 있습니다. 암호화된 열을 삽입, 업데이트 또는 필터링하려면 SQL Server Management Studio 버전 17 이상이 필요합니다.
 
-- `sqlcmd` 에서 암호화된 연결을 사용하려면 버전 13.1 이상이 필요하며 [다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=825643)에서 제공됩니다.
+- `sqlcmd` 에서 암호화된 연결을 사용하려면 버전 13.1 이상이 필요하며 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=825643)에서 제공됩니다.
 
   
 ## <a name="database-permissions"></a>데이터베이스 권한  

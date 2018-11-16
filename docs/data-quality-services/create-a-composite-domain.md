@@ -15,12 +15,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4efd1769b95a43b6718eaa635273458bc241f282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776614"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701781"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
 
@@ -32,7 +32,7 @@ ms.locfileid: "47776614"
   
  복합 도메인을 만든 후 복합 도메인의 속성을 변경하거나 도메인에 참조 데이터 서비스를 연결하거나 도메인 간 규칙을 만들거나 값 관계를 만들 수 있습니다. 이렇게 하려면 **도메인 관리** 페이지의 **도메인** 목록에서 복합 도메인을 선택한 다음 해당 탭을 선택합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  복합 도메인을 만들려면 기술 자료를 만들고 열어야 하며 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "47776614"
   
 5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [Knowledge-Based Parsing](#KnowledgeBaseParsing)을 참조하세요.  
   
-6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

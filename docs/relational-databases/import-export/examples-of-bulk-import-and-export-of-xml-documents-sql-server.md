@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10ed333bd96a0667271f3f5653e9f81ba614d49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662581"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670602"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47662581"
 자세한 내용은 다음 항목을 참조하십시오.
 - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [BULK INSERT 또는 OPENROWSET(BULK...)(SQL Server)를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/en-us/kb/316005)
+- [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/kb/316005)
 - [XML 스키마 컬렉션 [SQL Server]](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>예  

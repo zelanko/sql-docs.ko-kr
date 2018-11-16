@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691787"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640200"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ ms.locfileid: "47691787"
 ####  <a name="encrypted"></a> SSIS 카탈로그에서 항상 암호화 지원  
  SSIS는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 암호화 기능을 이미 지원합니다. 자세한 내용은 다음 블로그 게시물을 참조하세요.  
   
--   [SSIS의 항상 암호화 기능](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS의 항상 암호화 기능](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [항상 암호화된 조회 변환](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [항상 암호화된 조회 변환](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>디버깅 향상
 
@@ -213,7 +213,7 @@ ms.locfileid: "47691787"
   
 -   스크립트 구성 요소 또는 사용자 지정 데이터 흐름 구성 요소에서 IDTSComponentMetadata100 인터페이스의 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 메서드를 호출합니다.  
   
- 이러한 향상에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물 [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS 데이터 흐름에 대한 오류 열 개선)를 참조하세요.  
+ 이러한 향상에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물 [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS 데이터 흐름에 대한 오류 열 개선)를 참조하세요.  
   
 > [!NOTE]  
 >  (이 지원은 후속 릴리스에서 확장되었습니다. 자세한 내용은 [오류 열 이름에 대한 지원 확장](#getidstring) 및 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.)  
@@ -223,7 +223,7 @@ ms.locfileid: "47691787"
   
  GetIdentificationStringByLineageID 메서드 이름이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>에서 추가되거나 업데이트된 기능에 대해 설명합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
   
- 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  RC0에서 이 메서드는 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스로 이동되었습니다. 자세한 내용은 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.  
@@ -285,7 +285,7 @@ ms.locfileid: "47691787"
  Excel 연결 관리자, Excel 원본 및 Excel 대상에서 이제 Excel 2016 데이터 원본에 대한 명시적 지원을 제공합니다.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 릴리스됨  
- Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016이 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다. 기능 팩의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Microsoft® SQL Server® 2016 기능 팩)을 참조하세요.
+ Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016이 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다. 기능 팩의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Microsoft® SQL Server® 2016 기능 팩)을 참조하세요.
  
 #### <a name="oracleteradata"></a> Oracle 및 Teradata용 Connectors v4.0 릴리스됨
 Oracle 및 Teradata용 Microsoft Connectors v4.0이 릴리스되었습니다. 커넥터를 다운로드하려면 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Oracle 및 Teradata용 Microsoft Connectors v4.0)를 참조하세요.
@@ -346,7 +346,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
  SQL Server 가져오기 및 내보내기 마법사에서 이제 Azure Blob Storage에서 데이터를 가져오고, Azure Blob Storage에 데이터를 저장합니다. 자세한 내용은 [데이터 원본 선택&#40;SQL Server 가져오기 및 내보내기 마법사&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 및 [대상 선택&#40;SQL Server 가져오기 및 내보내기 마법사&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요. 
 
 ####  <a name="CDCOracle"></a> Microsoft SQL Server 2016용 Change Data Capture Designer 및 Service for Oracle이 릴리스됨  
- Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity가 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다.  이제 이러한 구성 요소는 클래식 설치에서 Oracle 12c를 지원합니다. 다중 테넌트 설치는 지원되지 않습니다. Feature Pack의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)을 참조하세요.  
+ Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity가 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다.  이제 이러한 구성 요소는 클래식 설치에서 Oracle 12c를 지원합니다. 다중 테넌트 설치는 지원되지 않습니다. Feature Pack의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)을 참조하세요.  
   
 ####  <a name="cdc2016"></a> CDC 구성 요소가 SQL Server 2016용으로 업데이트됨  
  CDC(변경 데이터 캡처) 제어 작업, 원본, 분할자 변환 구성 요소가 SQL Server 2016과의 완벽한 호환성을 제공할 수 있도록 업데이트되었습니다. 새로운 기능은 없고 동작에서 변경된 사항도 없습니다.  
@@ -360,7 +360,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
  차원 처리 대상은 SQL 2016 호환성 수준을 사용하는 테이블 형식 모델에 대해서는 작동하지 않습니다.  Analysis Services 처리 태스크 및 파티션 처리 대상만 있으면 테이블 형식 처리가 가능합니다. 
 
 ####  <a name="builtinR"></a> 기본 제공 R 서비스에 대한 지원  
- SSIS에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 기본 제공 R 서비스를 이미 지원합니다. 데이터를 추출하고 분석 출력을 로드하는 것뿐 아니라 R 모델을 빌드, 실행하고 주기적으로 보존하기 위해 SSIS를 사용할 수 있습니다. 자세한 내용은 다음 로그 게시물을 참조하세요. [SQL Server 2016 SSIS 및 R 서비스를 사용하여 기계 학습 프로젝트 운영](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)합니다. 
+ SSIS에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 기본 제공 R 서비스를 이미 지원합니다. 데이터를 추출하고 분석 출력을 로드하는 것뿐 아니라 R 모델을 빌드, 실행하고 주기적으로 보존하기 위해 SSIS를 사용할 수 있습니다. 자세한 내용은 다음 로그 게시물을 참조하세요. [SQL Server 2016 SSIS 및 R 서비스를 사용하여 기계 학습 프로젝트 운영](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)합니다. 
 
 ####  <a name="ValidateXML"></a> XML 태스크에서 풍부한 XML 유효성 검사 출력  
  XML 태스크의 **ValidationDetails** 속성을 사용하도록 설정하여 XML 문서의 유효성을 검사하고 풍부한 오류 출력을 가져올 수 있습니다. **ValidationDetails** 속성을 사용할 수 있게 되기 전에 먼저 XML 태스크에 의해 수행된 XML 유효성 검사가 오류 또는 해당 위치에 대한 정보 없이 true 또는 false 결과만 반환했습니다. 이제 **ValidationDetails** 를 true로 설정할 경우 출력 파일에는 줄 번호 및 위치를 포함하여 모든 오류에 대한 자세한 정보가 포함됩니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다. 자세한 내용은 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)를 참조하십시오.  

@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773767"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670142"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "47773767"
   
 -   **Script**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
   
-DACFx에 대한 자세한 내용은 [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx)의 DACFx 관리되는 API 설명서 또는 [SqlPackage.exe](../tools/sqlpackage.md)(DACFx 명령줄 도구)를 참조하세요.  
+DACFx에 대한 자세한 내용은 [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx)의 DACFx 관리되는 API 설명서 또는 [SqlPackage.exe](../tools/sqlpackage.md)(DACFx 명령줄 도구)를 참조하세요.  
   
 > [!IMPORTANT]  
-> dbSqlPackage 공급자 기능은 Visual Studio의 다음 주요 릴리스에서 제거됩니다. 웹 배포를 사용하여 데이터베이스 게시를 수행하는 방법에 대한 자세한 내용은 [증분 데이터베이스 게시를 위한 dbDacFx 공급자](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing)를 참조하세요.  
+> dbSqlPackage 공급자 기능은 Visual Studio의 다음 주요 릴리스에서 제거됩니다. 웹 배포를 사용하여 데이터베이스 게시를 수행하는 방법에 대한 자세한 내용은 [증분 데이터베이스 게시를 위한 dbDacFx 공급자](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing)를 참조하세요.  
   
 ## <a name="command-line-syntax"></a>명령줄 구문  
 **dbSqlPackage** 공급자를 사용하는 **MSDeploy**는 다음 형식의 명령줄을 사용합니다.  

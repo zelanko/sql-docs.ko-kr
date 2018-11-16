@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020237"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812806"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
 
@@ -82,14 +82,14 @@ ms.locfileid: "50020237"
      예를 들어 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 예제 보고서의 경우 다음 URL에서 Product Catalog라는 보고서를 지정합니다.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  서버의 보고서 경로를 복사합니다. 예에서 보고서 경로는 `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`입니다.  
   
 3.  다음 3개의 구성 요소를 사용하여 새 URL을 만듭니다.  
   
-    -   보고서 서버의 보고서 뷰어: `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   보고서 서버의 보고서 뷰어: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   1단계에서 복사한 보고서 이름. 예를 들면 다음과 같습니다. `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50020237"
      다음 URL에서는 이러한 3개의 구성 요소가 나열되는 순서대로 추가하여 포함되어 있습니다.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

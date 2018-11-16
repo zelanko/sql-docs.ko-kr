@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696811"
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  런타임 문 오류 이외의 오류로 인해 명시적 트랜잭션이 제대로 완료되지 않은 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 자동으로 트랜잭션을 롤백하고 해당 트랜잭션에 보유 중인 모든 리소스를 해제합니다. 예를 들어, 클라이언트와 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스 간의 네트워크 연결이 끊어진 경우 네트워크에서 이 인스턴스에게 연결이 끊어진 것을 알릴 때 이 연결에 대한 커밋되지 않은 모든 트랜잭션은 롤백됩니다.  
   
- 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 **ON**으로 설정된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx)를 참조하세요.  
+ 일괄 처리에서 런타임 문 오류가 발생할 경우 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 **ON**으로 설정된[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**와 일관되게 작동하며 전체 트랜잭션이 롤백됩니다. **XACT_ABORT** 설정에 대한 자세한 내용은 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)를 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  한 세션은 특정 시점에 한 트랜잭션만 실행할 수 있고 저장 지점과 중첩 트랜잭션은 지원되지 않습니다.  

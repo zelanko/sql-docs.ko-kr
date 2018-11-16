@@ -11,12 +11,12 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfad67095446d9a5143a4262f05520f76ff96dfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60748312c4169eafa50bdf7685c9b5111b3bc66a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778441"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639160"
 ---
 # <a name="xml-source-custom-properties"></a>XML 원본 사용자 지정 속성
   XML 원본에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "47778441"
  자세한 내용은 [XML Source](../../integration-services/data-flow/xml-source.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

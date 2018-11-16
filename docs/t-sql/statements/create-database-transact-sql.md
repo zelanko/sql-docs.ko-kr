@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701051"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이 인수를 지정하지 않으면 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬이 할당됩니다. 데이터베이스 스냅숏에는 데이터 정렬 이름을 지정할 수 없습니다.  
   
- FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 절을 사용하여 데이터 정렬 이름을 지정할 수 없습니다. 연결된 데이터베이스의 데이터 정렬을 변경하는 방법은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)를 참조하세요.  
+ FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 절을 사용하여 데이터 정렬 이름을 지정할 수 없습니다. 연결된 데이터베이스의 데이터 정렬을 변경하는 방법은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)를 참조하세요.  
   
  Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)를 참조하세요.  
   
@@ -509,7 +509,7 @@ CREATE DATABASE database_snapshot_name
  FOR ATTACH를 지정하지 않은 경우 모든 새 데이터베이스는 model 데이터베이스에서 데이터베이스 옵션 설정을 상속합니다. 예를 들어 자동 축소와 같은 데이터베이스 옵션은 model 데이터베이스와 새로 만드는 모든 데이터베이스에서 **true**로 설정됩니다. model 데이터베이스에서 옵션을 변경하면 새로 만드는 모든 데이터베이스에 이러한 새 옵션 설정이 사용됩니다. 기존 데이터베이스는 model 데이터베이스 변경 내용의 영향을 받지 않습니다. CREATE DATABASE 문에 FOR ATTACH를 지정하는 경우 새 데이터베이스는 원본 데이터베이스의 데이터베이스 옵션 설정을 상속합니다.  
   
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
- 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
+ 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  CREATE DATABASE, CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 필요합니다.  
@@ -874,7 +874,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />논리 서버\*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />논리 서버 \*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-새 데이터베이스의 이름입니다. 이 이름은 SQL Server에서 고유해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](http://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
+새 데이터베이스의 이름입니다. 이 이름은 SQL Server에서 고유해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](https://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
   
 *Collation_name*  
 
 데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 지정되지 않는 경우 해당 데이터베이스가 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS에 할당됩니다.  
   
-Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
+Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ CATALOG_COLLATION 인수는 데이터베이스를 생성하는 동안에만 사�
   
 - 원본 서버 이름과 복사 대상 서버의 이름은 서로 같아도 되고 달라도 됩니다. 이름이 동일한 경우 이 매개 변수는 선택적으로, 현재 세션의 서버 컨텍스트가 기본값으로 사용됩니다.  
   
-- 원본 및 대상 데이터베이스 이름은 고유하게 지정해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](http://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
+- 원본 및 대상 데이터베이스 이름은 고유하게 지정해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](https://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
   
 - `CREATE DATABASE` 문은 새 데이터베이스가 만들어질 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버의 master 데이터베이스 컨텍스트 내에서 실행되어야 합니다. 
 - 복사를 마친 뒤에는 대상 데이터베이스를 독립적인 데이터베이스로 관리해야 합니다. 원본 데이터베이스와 별도로 새 데이터베이스에 대해 `ALTER DATABASE` 및 `DROP DATABASE` 문을 실행할 수 있습니다. 또한 새 데이터베이스를 다른 새 데이터베이스에 복사할 수 있습니다.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-새 데이터베이스의 이름입니다. 이 이름은 SQL Server에서 고유해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](http://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
+새 데이터베이스의 이름입니다. 이 이름은 SQL Server에서 고유해야 하며 식별자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 규칙을 따라야 합니다. 자세한 내용은 [식별자](https://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
   
 *Collation_name*  
 
 데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 지정되지 않는 경우 해당 데이터베이스가 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS에 할당됩니다.  
   
-Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
+Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>인수  
 *database_name*  
-새 데이터베이스의 이름입니다. 이 이름은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 및 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스를 모두 호스트할 수 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 대한 규칙을 준수할 수 있는 SQL 서버에서 고유해야 합니다. 자세한 내용은 [식별자](http://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
+새 데이터베이스의 이름입니다. 이 이름은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 및 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스를 모두 호스트할 수 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 대한 규칙을 준수할 수 있는 SQL 서버에서 고유해야 합니다. 자세한 내용은 [식별자](https://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
   
 *collation_name*  
 데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 지정되지 않는 경우 해당 데이터베이스가 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS에 할당됩니다.  
   
-Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
+Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)를 참조하세요.  
   
 *EDITION*  
 데이터베이스의 서비스 계층을 지정합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에 대한 'datawarehouse'를 사용합니다.  
@@ -1384,7 +1384,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* 병렬<br />데이터 웨어하우스 \*_** |
 
 &nbsp;
 

@@ -17,12 +17,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2fbcef1433f75be10cd9b0e916d1a49fd545208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672382"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47731871"
   
 1.  배포자에 최신 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2를 설치합니다.  
   
-    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition을 사용하는 경우 [SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지의 **관련 다운로드** 섹션에서 Microsoft SQL Server Feature Pack의 최신 버전에 대한 링크를 클릭합니다. **Microsoft SQL Server Feature Pack** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
+    -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition을 사용하는 경우 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지의 **관련 다운로드** 섹션에서 Microsoft SQL Server Feature Pack의 최신 버전에 대한 링크를 클릭합니다. **Microsoft SQL Server Feature Pack** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
   
     -   [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition을 사용하는 경우 해당 공급자가 포함된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] HIS(Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) 서버의 최신 버전을 설치합니다.  
   

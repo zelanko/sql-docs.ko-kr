@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1c3b689a42b2c7a0a41fd4df71a6d78dc2a122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710691"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663292"
 ---
 # <a name="create-clr-functions"></a>CLR 함수 만들기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47710691"
 -   [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>네이티브 코드 액세스  
- CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](http://go.microsoft.com/fwlink/?LinkID=181929) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
+ CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](https://go.microsoft.com/fwlink/?LinkID=181929) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

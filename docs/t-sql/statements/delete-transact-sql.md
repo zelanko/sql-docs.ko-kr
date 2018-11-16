@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798602"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700321"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="locking-behavior"></a>잠금 동작  
  기본적으로 DELETE 문은 항상 수정하는 테이블에 대해 배타적(X) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 배타(X) 잠금을 사용하면 다른 트랜잭션이 데이터를 수정할 수 없습니다. 읽기 작업은 NOLOCK 힌트 또는 READ UNCOMMITED 격리 수준을 사용해서만 수행할 수 있습니다. 테이블 힌트를 지정해 다른 잠금 방법을 지정하여 DELETE 문의 기간에 이 기본 동작을 재정의할 수 있지만, 숙련된 개발자 및 데이터베이스 관리자가 최후의 수단으로만 힌트를 사용하시기 바랍니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
- 힙에서 행을 삭제할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 작업에 대해 행 또는 페이지 잠금을 사용할 수 있습니다. 이 경우 삭제 작업에서 비운 페이지가 힙에 할당된 상태로 남아 있습니다. 빈 페이지의 할당이 취소되지 않으면 데이터베이스의 다른 개체가 해당 공간을 다시 사용할 수 없습니다.  
+ 힙에서 행을 삭제할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 작업에 대해 행 또는 페이지 잠금을 사용할 수 있습니다. 이 경우 삭제 작업에서 비운 페이지가 힙에 할당된 상태로 남아 있습니다. 빈 페이지의 할당이 취소되지 않으면 데이터베이스의 다른 개체가 해당 공간을 다시 사용할 수 없습니다.  
   
  힙에서 행을 삭제하고 페이지 할당을 취소하려면 다음 방법 중 하나를 사용하세요.  
   
@@ -205,7 +205,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   행을 삭제하기 전에 힙에 클러스터형 인덱스를 만듭니다. 행이 삭제되고 나면 클러스터형 인덱스를 삭제할 수 있습니다. 이 방법은 앞의 두 방법보다 시간이 오래 걸리며 임시 리소스를 더 많이 사용합니다.  
   
 > [!NOTE]  
->  `ALTER TABLE <table_name> REBUILD` 문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
+>  `ALTER TABLE <table_name> REBUILD`문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
  DELETE 문은 항상 전체 로깅됩니다.  
@@ -230,7 +230,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  이 섹션의 예에서는 최소 필수 구문을 사용하여 DELETE 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>1. WHERE 절 없이 DELETE 사용  
- 다음 예에서는 삭제되는 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 모든 행을 삭제합니다.  
+ 다음 예에서는 삭제되는 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `SalesPersonQuotaHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 모든 행을 삭제합니다.  
   
 ```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
@@ -241,7 +241,7 @@ GO
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2. WHERE 절을 사용하여 행 집합 삭제  
- 다음 예에서는 `StandardCost` 열의 값이 `1000.00`을 초과하는 모든 행을 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductCostHistory`테이블에서 삭제합니다.  
+ 다음 예에서는 `ProductCostHistory` 열의 값이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 을 초과하는 모든 행을 `StandardCost` 데이터베이스의 `1000.00`테이블에서 삭제합니다.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>3. 커서를 사용하여 삭제할 행 확인  
- 다음 예에서는 `my_cursor`이라는 커서를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `EmployeePayHistory` 테이블에서 단일 행을 삭제합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 다음 예에서는 `EmployeePayHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용하여 `my_cursor`. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -324,7 +324,7 @@ WHERE DueDate < '20020701';
 GO  
 ```  
   
- TOP을 사용하여 시간 순서로 행을 삭제해야 하는 경우에는 하위 SELECT 문에서 ORDER BY를 지정하는 방식으로 TOP을 사용해야 합니다. 다음 쿼리는 `PurchaseOrderDetail` 테이블에서 기한이 가장 빠른 10개의 행을 삭제합니다. 10개의 행만 삭제하기 위해 하위 SELECT  문에서 지정한 열(`PurchaseOrderID`)은 테이블의 기본 키입니다. 하위 SELECT 문에 키가 아닌 열을 사용하면 지정한 열에 중복 값이 있을 경우 10개가 넘는 행이 삭제될 수 있습니다.  
+ TOP을 사용하여 시간 순서로 행을 삭제해야 하는 경우에는 하위 SELECT 문에서 ORDER BY를 지정하는 방식으로 TOP을 사용해야 합니다. 다음 쿼리는 `PurchaseOrderDetail` 테이블에서 기한이 가장 빠른 10개의 행을 삭제합니다. 10개의 행만 삭제하기 위해 하위 SELECT 문에서 지정한 열(`PurchaseOrderID`)은 테이블의 기본 키입니다. 하위 SELECT 문에 키가 아닌 열을 사용하면 지정한 열에 중복 값이 있을 경우 10개가 넘는 행이 삭제될 수 있습니다.  
   
 ```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>10. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
- 다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
+ 다음 예에서는 `ProductProductPhoto` 문의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 절에 정의된 검색 조건에 따라 `FROM` 데이터베이스의 `DELETE` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
- 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
+ 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
   
 ```sql
 -- Uses AdventureWorks  

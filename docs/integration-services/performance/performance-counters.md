@@ -17,12 +17,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d648c8b94efef60cab796f5d36dc9b31378a9e2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836311"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641160"
 ---
 # <a name="performance-counters"></a>성능 카운터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  
@@ -70,11 +70,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>관련 내용  
   
--   codeplex.com의 도구, [SSIS Performance Visualization for Business Intelligence Development Studio(CodePlex 프로젝트)](http://go.microsoft.com/fwlink/?LinkId=146626)  
+-   codeplex.com의 도구, [SSIS Performance Visualization for Business Intelligence Development Studio(CodePlex 프로젝트)](https://go.microsoft.com/fwlink/?LinkId=146626)  
   
--   msdn.microsoft.com의 비디오, [기업에서 SSIS 패키지의 성능 측정 및 이해(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=150497)  
+-   msdn.microsoft.com의 비디오, [기업에서 SSIS 패키지의 성능 측정 및 이해(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=150497)  
   
--   support.microsoft.com의 지원 문서, [Windows Server 2008로 업그레이드한 후 성능 모니터에서 SSIS 성능 카운터를 더 이상 사용할 수 없다.](http://go.microsoft.com/fwlink/?LinkId=235319)  
+-   support.microsoft.com의 지원 문서, [Windows Server 2008로 업그레이드한 후 성능 모니터에서 SSIS 성능 카운터를 더 이상 사용할 수 없다.](https://go.microsoft.com/fwlink/?LinkId=235319)  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>데이터 흐름 성능 카운터에 대한 로그 추가
   이 절차에서는 데이터 엔진에서 제공하는 성능 카운터에 대한 로그를 추가하는 방법을 설명합니다.  

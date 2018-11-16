@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671250"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
 SQL Server 단위 테스트에서는 Transact\-SQL 테스트 스크립트가 실행되어 결과를 반환합니다. 결과가 결과 집합으로 반환되는 경우도 있습니다. 테스트 조건을 사용하면 결과의 유효성을 검사할 수 있습니다. 예를 들어 테스트 조건을 사용하여 특정 결과 집합에서 반환되는 행 수를 확인하거나 특정 테스트가 실행되는 데 걸린 시간을 확인할 수 있습니다. 테스트 조건에 대한 자세한 내용은 [SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)을 참조하세요.  
@@ -79,7 +79,7 @@ Transact\-SQL 스크립트에서 RAISERROR 문을 사용하여 서버에서 Tran
   
 @ErrorState는 1~127 사이의 임의 정수입니다. 이 정수를 사용하여 코드의 서로 다른 위치에서 발생한 단일 오류를 구분할 수 있습니다.  
   
-자세한 내용은 [RAISERROR(Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx)를 참조하세요. SQL Server 단위 테스트에서 RAISERROR를 사용하는 예는 [방법: 단일 트랜잭션 범위 내에서 실행되는 SQL Server 단위 테스트 작성](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md) 항목에서 제공됩니다.  
+자세한 내용은 [RAISERROR(Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)를 참조하세요. SQL Server 단위 테스트에서 RAISERROR를 사용하는 예는 [방법: 단일 트랜잭션 범위 내에서 실행되는 SQL Server 단위 테스트 작성](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md) 항목에서 제공됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

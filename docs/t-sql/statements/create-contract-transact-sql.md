@@ -22,12 +22,12 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ba861b5e0aa289f4ac7bd8a7f406f0f8a5958a91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713641"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703281"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ CREATE CONTRACT contract_name
   
  계약은 시작자가 메시지를 보낼 수 있도록 허용해야 합니다. 계약이 하나 이상의 메시지 유형(SENT BY ANY 또는 SENT BY INITIATOR)을 포함하지 않으면 CREATE CONTRACT 문이 실패합니다.  
   
- 계약에 관계없이 서비스는 항상 메시지 유형 `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error` 및 `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`을 수신할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 응용 프로그램에 대한 시스템 메시지에 이러한 메시지 유형을 사용합니다.  
+ 계약에 관계없이 서비스는 항상 메시지 유형 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 및 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`을 수신할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 응용 프로그램에 대한 시스템 메시지에 이러한 메시지 유형을 사용합니다.  
   
  계약은 임시 개체가 아닐 수 있습니다. #로 시작하는 계약 이름은 허용되지만 영구 개체입니다.  
   

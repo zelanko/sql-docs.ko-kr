@@ -19,12 +19,12 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74287e364736b4a1d09711b20817a9a0b0c694c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839541"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698521"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>2. 분할된 테이블이나 인덱스의 비어 있지 않은 각 파티션에 있는 행 수 가져오기  
  다음 예에서는 데이터가 있는 `TransactionHistory` 테이블의 각 파티션에 있는 행 수를 반환합니다. `TransactionHistory` 테이블은 파티션 함수 `TransactionRangePF1`을 사용하며 `TransactionDate` 열에서 분할됩니다.  
   
- 이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
+ 이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ GO
  다음 예에서는 `5` 테이블의 파티션 `TransactionHistory`에 있는 모든 행을 반환합니다.  
   
 > [!NOTE]  
->  이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
+>  이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

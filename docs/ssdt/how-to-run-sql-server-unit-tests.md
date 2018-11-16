@@ -11,12 +11,12 @@ ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbaaa9635a39ab4a0b8f8fcd1a0a4dc8048d6c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677882"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트 실행
 다양한 창 및 명령 프롬프트 창을 사용하는 등 여러 방법 중 하나로 SQL Server 단위 테스트를 실행할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "47645141"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)  
-[방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](http://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[명령줄에서 자동화된 테스트 실행(Visual Studio 2010)](http://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[응용 프로그램 테스트(Visual Studio 2012)](http://msdn.microsoft.com/library/ms182409.aspx)  
+[방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[명령줄에서 자동화된 테스트 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
+[응용 프로그램 테스트(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

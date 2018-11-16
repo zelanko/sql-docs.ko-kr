@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12e9df07ba16f7fd2bfe1ec13f6bdc85167d53db
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665412"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016에서 지원되지 않는 전체 텍스트 검색 기능](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
+ [SQL Server 2016에서 지원되지 않는 전체 텍스트 검색 기능](https://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

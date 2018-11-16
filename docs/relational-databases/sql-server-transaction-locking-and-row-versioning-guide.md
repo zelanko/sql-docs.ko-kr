@@ -5,8 +5,7 @@ ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -18,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661119"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -298,9 +297,9 @@ GO
   
 |격리 수준|커밋되지 않은 읽기|반복되지 않는 읽기|가상|  
 |---------------------|----------------|------------------------|-------------|  
-|**READ UNCOMMITTED**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
-|**READ COMMITTED**|아니오|예|사용자 계정 컨트롤|  
-|**REPEATABLE READ**|아니오|아니오|사용자 계정 컨트롤|  
+|**READ UNCOMMITTED**|예|예|예|  
+|**READ COMMITTED**|아니오|예|예|  
+|**REPEATABLE READ**|아니오|아니오|예|  
 |**스냅숏**|아니오|아니오|아니오|  
 |**직렬화 가능**|아니오|아니오|아니오|  
   
@@ -435,11 +434,11 @@ GO
 ||기존의 허가 모드||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**요청 모드**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**내재된 공유(IS)(IS)**|사용자 계정 컨트롤|예|예|예|예|아니오|  
-|**공유(S)**|사용자 계정 컨트롤|예|예|아니오|아니오|아니오|  
-|**업데이트(U)**|사용자 계정 컨트롤|예|아니오|아니오|아니오|아니오|  
-|**의도 배타(IX)**|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|아니오|아니오|  
-|**의도 배타 공유(SIX)**|사용자 계정 컨트롤|아니오|아니오|아니오|아니오|아니오|  
+|**내재된 공유(IS)(IS)**|예|예|예|예|예|아니오|  
+|**공유(S)**|예|예|예|아니오|아니오|아니오|  
+|**업데이트(U)**|예|예|아니오|아니오|아니오|아니오|  
+|**의도 배타(IX)**|예|아니오|아니오|예|아니오|아니오|  
+|**의도 배타 공유(SIX)**|예|아니오|아니오|아니오|아니오|아니오|  
 |**배타적(X)**|아니오|아니오|아니오|아니오|아니오|아니오|  
   
 > [!NOTE]  
@@ -478,12 +477,12 @@ GO
 ||기존의 허가 모드|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**공유(S)**|사용자 계정 컨트롤|예|아니오|예|예|예|아니오|  
-|**업데이트(U)**|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|아니오|사용자 계정 컨트롤|아니오|  
-|**배타적(X)**|아니오|아니오|아니오|아니오|아니오|사용자 계정 컨트롤|아니오|  
-|**RangeS-S**|사용자 계정 컨트롤|예|아니오|예|예|아니오|아니오|  
-|**RangeS-U**|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|아니오|아니오|아니오|  
-|**RangeI-N**|사용자 계정 컨트롤|예|예|아니오|아니오|사용자 계정 컨트롤|아니오|  
+|**공유(S)**|예|예|아니오|예|예|예|아니오|  
+|**업데이트(U)**|예|아니오|아니오|예|아니오|예|아니오|  
+|**배타적(X)**|아니오|아니오|아니오|아니오|아니오|예|아니오|  
+|**RangeS-S**|예|예|아니오|예|예|아니오|아니오|  
+|**RangeS-U**|예|아니오|아니오|예|아니오|아니오|아니오|  
+|**RangeI-N**|예|예|예|아니오|아니오|예|아니오|  
 |**RangeX-X**|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
   
 #### <a name="lock_conversion"></a> 변환 잠금  
@@ -1861,7 +1860,7 @@ GO
  KILL 문을 사용해야 하는 경우도 있습니다. 그러나 특히 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하십시오. 자세한 내용은 [KILL&#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.  
   
 ##  <a name="Additional_Reading"></a> 더 보기   
-[행 버전 관리 오버헤드](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[행 버전 관리 오버헤드](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [확장 이벤트](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

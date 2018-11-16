@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5731d561fd60391c5467189f5b7e468a137ce95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1771d1bfc426bf42aeccf11cacf7d214437863d2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691607"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702011"
 ---
 # <a name="manage-events"></a>이벤트 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47691607"
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## <a name="running-event-triggered-jobs"></a>이벤트 트리거된 작업의 실행  
 경고에 응답하여 작업이 실행되도록 작업을 정의할 수 있습니다. 예를 들어 작업을 실행하여 경고에서 감지한 문제를 진단하거나 해결할 수 있습니다.  
@@ -95,5 +95,5 @@ ms.locfileid: "47691607"
 > 작업에서 이벤트를 발생시킬 수 있으므로 재귀 경고 작업 루프를 만들지 않도록 주의하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
-[sp_add_notification(Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification(Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

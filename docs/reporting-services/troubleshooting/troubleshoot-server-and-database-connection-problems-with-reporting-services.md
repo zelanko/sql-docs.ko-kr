@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028842"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814316"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
@@ -34,7 +34,7 @@ SQL Server에 연결할 때 기본 설정에서 SQL Server가 원격 연결을 �
 * 보고서 서버 URL 및 보고서 서버 데이터베이스 연결 문자열이 올바른지 확인합니다. Reporting Services 또는 데이터베이스 엔진이 명명된 인스턴스로 설치된 경우 설치 중 만들어지는 기본 연결 문자열에 인스턴스 이름이 포함됩니다. 예를 들어 DEVSRV01이라는 이름의 서버에 SQL Server Express with Advanced Services의 기본 인스턴스를 설치한 경우 보고서 관리자 URL은 DEVSRV01\Reports$SQLEXPRESS가 됩니다. 또한 연결 문자열의 데이터베이스 서버 이름은 DEVSRV01\SQLEXPRESS와 유사하게 됩니다. SQL Server Express에 대한 URL 및 데이터 원본 연결 문자열에 대한 자세한 내용은 [SQL Server Express with Advanced Services의 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)를 참조하십시오. 보고서 서버 데이터베이스의 연결 문자열을 확인하려면 Reporting Services 구성 도구를 시작하고 데이터베이스 설치 페이지를 확인합니다.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>연결할 수 없습니다. 서버가 실행 중인지 확인하십시오.  
-ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발생할 수 있는 이유에는 여러 가지가 있습니다. 서버를 "localhost"로 지정한 경우 다른 서버 이름을 지정해 보십시오. 이 오류는 새 연결에 메모리를 할당할 수 없는 경우에도 발생할 수 있습니다. 자세한 내용은 [기술 자료 문서 912017 - SQL Server 2005 Analysis Services의 인스턴스에 연결하는 경우 오류 메시지](http://support.microsoft.com/kb/912017)를 참조하십시오.  
+ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발생할 수 있는 이유에는 여러 가지가 있습니다. 서버를 "localhost"로 지정한 경우 다른 서버 이름을 지정해 보십시오. 이 오류는 새 연결에 메모리를 할당할 수 없는 경우에도 발생할 수 있습니다. 자세한 내용은 [기술 자료 문서 912017 - SQL Server 2005 Analysis Services의 인스턴스에 연결하는 경우 오류 메시지](https://support.microsoft.com/kb/912017)를 참조하십시오.  
   
 오류에 "해당 호스트를 알 수 없습니다"도 포함된 경우 이는 Analysis Services 서버를 사용할 수 없거나 이 서버에서 연결을 거부함을 나타냅니다. Analysis Services 서버가 원격 컴퓨터에 명명된 인스턴스로 설치된 경우 SQL Server Browser 서비스를 실행하여 해당 인스턴스에 사용되는 포트 번호를 가져와야 할 수 있습니다.  
   
@@ -59,7 +59,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
   
 이 오류를 해결하려면 소프트웨어를 다시 설치해야 합니다. 다른 모든 경우에는 임시 해결 방법으로 다음과 같이 SOAP 엔드포인트를 통해 보고서 서버에 연결할 수 있습니다.  
   
-* Management Studio의 **서버에 연결** 대화 상자에서 **서버 이름**에 보고서 서버 URL을 입력합니다. 기본적으로 `http://<your server name>/reportserver`입니다. 또는 SQL Server 2008 Express with Advanced Services를 사용 중인 경우 `http://<your server name>/reportserver$sqlexpress`입니다.  
+* Management Studio의 **서버에 연결** 대화 상자에서 **서버 이름**에 보고서 서버 URL을 입력합니다. 기본적으로 `https://<your server name>/reportserver`입니다. 또는 SQL Server 2008 Express with Advanced Services를 사용 중인 경우 `https://<your server name>/reportserver$sqlexpress`입니다.  
   
 오류를 해결하여 WMI 공급자를 통해 연결하려면 설치 프로그램을 실행하여 Reporting Services를 복구하거나 Reporting Services를 다시 설치해야 합니다.  
   

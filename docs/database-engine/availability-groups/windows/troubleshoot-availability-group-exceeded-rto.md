@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724221"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606873"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>문제 해결: 가용성 그룹 초과 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   가용성 그룹에 데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치(failover) 후 장애 조치 시간이 RTO(복구 시간 목표)를 초과하는 것을 발견할 수 있습니다. 또는 [Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)의 방법을 사용하여 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예상할 때 RTO 초과를 발견할 수 있습니다.  
   
- 자동 장애 조치가 아직 완료되지 않은 경우 [SQL Server 2012 Always On 환경에서 자동 장애 조치(failover) 문제 해결](http://support.microsoft.com/kb/2833707)을 참조하세요.  
+ 자동 장애 조치가 아직 완료되지 않은 경우 [SQL Server 2012 Always On 환경에서 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)을 참조하세요.  
   
  다음 섹션에서는 RTO를 초과하는 장애 조치 시간에 대한 일반적인 원인을 설명합니다.  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  다시 실행 스레드가 실제로 뒤처진 경우 보조 복제본에 대해 성능 저하의 근본 원인을 조사해야 합니다. 보고 워크로드와의 I/O 경합이 있는 경우 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md)를 사용하여 보고 워크로드가 실행되는 I/O 사이클을 간접적으로 제어하는 데 사용되는 CPU 사이클을 어느 정도 제어할 수 있습니다. 예를 들어 보고 워크로드가 CPU의 10%를 사용하지만 워크로드가 I/O 경계인 경우 Resource Governor를 사용하여 CPU 리소스 사용량을 5%로 제한하면 읽기 워크로드를 제한하여 I/O에 대한 영향을 최소화할 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   
