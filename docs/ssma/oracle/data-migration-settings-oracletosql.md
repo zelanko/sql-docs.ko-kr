@@ -10,19 +10,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: df7e09828a172a27c7819565954be2040e1ce909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824171"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656140"
 ---
 # <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정(OracleToSQL)
   
 ## <a name="data-migration-settings"></a>데이터 마이그레이션 설정  
 **데이터 마이그레이션 설정** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.  
   
--   이 탭은 사용 가능한 **데이터 마이그레이션 옵션을 확장** 로 설정 된 **표시** 설정으로 설정 된 경우 숨겨집니다 **숨기기** 프로젝트 설정에서. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 합니다.  
+-   이 탭은 사용 가능한 **데이터 마이그레이션 옵션을 확장** 로 설정 된 **표시** 설정으로 설정 된 경우 숨겨집니다 **숨기기** 프로젝트 설정에서. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 합니다.  
   
 -   구현 될 사용자 지정 SQL 문을 구문 분석할 **데이터 마이그레이션 설정** 테이블 노드를 탭 합니다.  
   

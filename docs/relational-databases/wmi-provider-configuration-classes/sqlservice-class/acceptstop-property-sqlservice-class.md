@@ -17,12 +17,12 @@ ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 324df0e451fd2fbdc2986c5f0bc4add86f90eabe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 26889228181b16c7ea58560708766d048b939f0d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217331"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656692"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ object.AcceptStop [= value]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

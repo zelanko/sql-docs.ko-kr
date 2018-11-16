@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49a5634ed1e3b0c897a75d6ca98aa8bc6cbdbf14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aca83b74b4665bd72bc3dd3b1d1bba4744735c13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852817"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657710"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT BCPControl(
   
  가능한 값 *eOption* 됩니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|이미 진행 중인 대량 복사 작업을 중지합니다. 다른 스레드에서 값이 BCP_OPTION_ABORT인 *eOption* 인수와 함께 **BCPControl** 메서드를 호출하여 실행 중인 대량 복사 작업을 중지할 수 있습니다. 합니다 *iValue* 인수는 무시 됩니다.|  
 |BCP_OPTION_BATCH|일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCP_OPTION_BATCH는 기본값으로 다시 설정됩니다.|  
@@ -78,7 +78,7 @@ HRESULT BCPControl(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하십시오.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 함수를 호출하기 전에 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  

@@ -20,12 +20,12 @@ ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b5d242f2a7834f5e931ff248e49ef7e2e8a87f8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c78c491177b843d947e9e194bed804e9351f2298
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031870"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677779"
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,6 @@ srvproc
 |SRV_RECOMPILE|클라이언트가 원격 저장 프로시저를 실행하기 전에 재컴파일하도록 요청했습니다. 이 플래그는 확장 저장 프로시저 API 응용 프로그램에 적용되지 않을 수 있습니다.|  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
   

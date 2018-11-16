@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673732"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47733721"
   
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 내에서 고유한 데이터베이스 이름입니다.|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 내에서 고유한 데이터베이스 ID입니다.|  
@@ -83,7 +83,7 @@ ms.locfileid: "47733721"
 |**is_db_chaining_on**|**bit**|1 = 데이터베이스 간 소유권 체인이 ON 상태입니다.<br /> 0 = 데이터베이스 간 소유권 체인이 OFF 상태입니다.|  
 |**is_parameterization_forced**|**bit**|1 = 매개 변수화가 FORCED로 설정되어 있습니다.<br /> 0 = 매개 변수화가 SIMPLE로 설정되어 있습니다.|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 데이터베이스에 암호화된 마스터 키가 있습니다.<br /> 0 = 데이터베이스에 암호화된 마스터 키가 없습니다.|  
-|**is_query_store_on**|**bit**|1 = 쿼리 저장소는이 데이터베이스에 대해 사용 하도록 설정 합니다. 확인할 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 쿼리 저장소 상태를 볼 수 있습니다.<br /> 0 = 쿼리 저장소가 비활성화 되어<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = 쿼리 저장소는이 데이터베이스에 대해 사용 하도록 설정 합니다. 확인할 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 쿼리 저장소 상태를 볼 수 있습니다.<br /> 0 = 쿼리 저장소가 비활성화 되어<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = 데이터베이스가 트랜잭션 또는 스냅숏 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 게시 데이터베이스가 아닙니다.|  
 |**is_subscribed**|**bit**|이 열은 사용되지 않으며, 데이터베이스의 구독자 상태에 관계없이 항상 0을 반환합니다.|  
 |**is_merge_published**|**bit**|1 = 데이터베이스가 병합 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 병합 복제 토폴로지에서 게시 데이터베이스가 아닙니다.|  

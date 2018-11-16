@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665680"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -77,14 +77,14 @@ SMB (서버 메시지 블록) Linux 변형을 인 samba 공유와 같은 UNC 경
 
 Windows 기반 SMB 공유를 사용할 수도 있습니다. SMB 공유를 호스트 하는 Linux 서버에서 올바르게 구성 되어 Samba의 클라이언트 부분으로 Linux 기반 일 필요가 없습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 및 공유에 올바른 액세스 권한이 있습니다. 혼합된 된 환경에서 대해서에 대 한 기존 인프라를 이용 하는 한 가지 방법은 것이 Linux 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 배포 합니다.
 
-중요 한 점은 Samba 배포의 버전 SMB 3.0 호환 되어야 합니다. SMB 지원은에서 추가 될 때 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], SMB 3.0을 지원 하려면 모든 공유 해야 하는 것입니다. Samba 공유 및 Windows 서버가 아닌 사용 Samba 기반 공유 SMB 3.1.1 지 Samba 4.0 이상 및 이상적 4.3 또는 나중에 사용 해야 합니다. SMB 및 Linux에 대 한 정보는 좋은 원본은 [Samba에 SMB3](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)합니다.
+중요 한 점은 Samba 배포의 버전 SMB 3.0 호환 되어야 합니다. SMB 지원은에서 추가 될 때 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], SMB 3.0을 지원 하려면 모든 공유 해야 하는 것입니다. Samba 공유 및 Windows 서버가 아닌 사용 Samba 기반 공유 SMB 3.1.1 지 Samba 4.0 이상 및 이상적 4.3 또는 나중에 사용 해야 합니다. SMB 및 Linux에 대 한 정보는 좋은 원본은 [Samba에 SMB3](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)합니다.
 
 마지막으로, 네트워크 파일 시스템 (NFS) 공유를 사용 하는 옵션입니다. Windows 기반 배포에 대 한 옵션 아닙니다 NFS를 사용 하 여 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], Linux 기반 배포에만 사용할 수 있습니다.
 
 ### <a name="configure-the-firewall"></a>방화벽 구성
 Windows와 마찬가지로 Linux 배포는 기본 제공 방화벽입니다. 회사 외부 방화벽 서버를 사용 하는 경우에 Linux에서 방화벽을 사용 하지 않도록 설정 허용 될 수 있습니다. 그러나는 방화벽이 사용 되는 위치에 관계 없이 열려는 포트 해야 합니다. 다음 표에서 문서에 필요한 공통 포트 항상 사용 가능한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에 배포 합니다.
 
-| 포트 번호 | 형식     | Description                                                                                                                 |
+| 포트 번호 | 형식     | 설명                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | (사용) 하는 경우 samba – 끝점 매퍼                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **방화벽 설명서:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>설치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 가용성에 대 한 패키지
@@ -156,7 +156,7 @@ Pacemaker의 전체 설명서에 대 한 자세한 설명은 RHEL 및 SLES에 �
 
 Ubuntu는 가용성에 대 한 가이드는 없습니다.
 
-전체 스택에 대 한 자세한 내용은 공식 참조 [Pacemaker 설명서 페이지](http://clusterlabs.org/doc/) Clusterlabs 사이트입니다.
+전체 스택에 대 한 자세한 내용은 공식 참조 [Pacemaker 설명서 페이지](https://clusterlabs.org/doc/) Clusterlabs 사이트입니다.
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker 개념 및 용어
 이 섹션에서는 일반적인 개념과 Pacemaker 구현에 대 한 용어에 설명합니다.
@@ -208,13 +208,13 @@ Pacemaker 클러스터에 대 한 로그 위치 분포에 따라 다릅니다.
 이 섹션에서는 Pacemaker 클러스터에 대 한 계획의 중요 사항을 설명합니다.
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux 기반 가상화 Pacemaker 클러스터 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-가상 컴퓨터를 사용 하 여 Linux 기반 배포 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Ag에 Fci 배포와 Windows 기반 함수와 동일한 규칙을 적용 됩니다. 지원 가능성에 대 한 규칙의 기본 집합이 있는 가상화 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] microsoft에서 제공 하는 배포 [Microsoft 지원 KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)합니다. Microsoft의 Hyper-v 및 VMware의 ESXi와 같은 다른 하이퍼바이저 플랫폼 자체의 차이로 인해 다른 차이 위쪽에, 있을 수 있습니다.
+가상 컴퓨터를 사용 하 여 Linux 기반 배포 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Ag에 Fci 배포와 Windows 기반 함수와 동일한 규칙을 적용 됩니다. 지원 가능성에 대 한 규칙의 기본 집합이 있는 가상화 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] microsoft에서 제공 하는 배포 [Microsoft 지원 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)합니다. Microsoft의 Hyper-v 및 VMware의 ESXi와 같은 다른 하이퍼바이저 플랫폼 자체의 차이로 인해 다른 차이 위쪽에, 있을 수 있습니다.
 
 가상화 아래에 있는 10ag 및 Fci에 있어 선호도 방지 지정된 하는 Pacemaker 클러스터의 노드에 대해 설정 되어 있는지 확인 합니다. 호스팅 Vm AG 또는 FCI 구성에서 고가용성을 위해 구성 된 경우 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 되지 같은 하이퍼바이저 호스트에서 실행 되어야 합니다. 예를 들어, 2 노드 FCI를 배포 하는 경우 존재 해야 *최소한* 세 가지 하이퍼바이저 호스트 이므로 어딘가에 호스트 오류가 발생 하면 이동할 노드를 호스팅하는 Vm 중 하나에 대 한 기능을 사용 하는 경우에 특히 같은 라이브 마이그레이션 또는 vMotion 합니다.
 
 자세한 내용은 참조 하세요.
 -   Hyper-v가 설치 설명서- [고가용성을 위한 게스트 클러스터링을 사용 하 여](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   (용으로 작성 된 Windows 기반 배포 하지만 여전히 개념이 대부분 적용) – 백서 [고가용성 계획, VMware vsphere 업무상 중요 한 SQL Server 배포](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   (용으로 작성 된 Windows 기반 배포 하지만 여전히 개념이 대부분 적용) – 백서 [고가용성 계획, VMware vsphere 업무상 중요 한 SQL Server 배포](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >STONITH 사용 하 여 RHEL Pacemaker 클러스터를 사용 하 여 Hyper-v에서 아직 지원 되지 않습니다. 자세한 내용 및 업데이트 하는 지원 될 때까지 참조 하세요 [RHEL 높은 가용성 클러스터에 대 한 지원 정책을](https://access.redhat.com/articles/29440#3physical_host_mixing)합니다.

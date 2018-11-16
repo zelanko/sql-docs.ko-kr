@@ -20,12 +20,12 @@ ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34eaf2858e9108bdadda6f3a1ae2da2a11caaf57
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c49d9e3ac3ba60ded98c7bdba55465b914bf1b28
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671422"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ msglen
 -   네트워크를 통해 오류 메시지를 보낼 때 오류가 발생한 경우  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [srv_sendmsg(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md)  

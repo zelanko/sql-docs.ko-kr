@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269756"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700362"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -70,7 +70,7 @@ from cte;
 읽기, 가져오기 및 내보내기 이제 PolyBase를 사용 하 여 날짜 데이터 형식 ORC 및 Parquet 파일 형식에 대 한 날짜 1970-01-01 전후 2038-01-20을 지원 합니다.
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>대상으로 SQL Server 2017에 대 한 SSIS 대상 어댑터
-SQL Server 2017 배포 대상에서 다운로드할 수 있습니다 하는 대로를 지 원하는 새 AP SSIS 대상 어댑터 [다운로드 사이트](https://www.microsoft.com/en-us/download/details.aspx?id=57472)합니다.
+SQL Server 2017 배포 대상에서 다운로드할 수 있습니다 하는 대로를 지 원하는 새 AP SSIS 대상 어댑터 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)합니다.
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -85,7 +85,7 @@ AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.c
 ### <a name="bug-fixes"></a>버그 수정
 AP CU7.1를 사용 하 여 SQL Server 2016 SP2 CU2를 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| Title | Description |
+| Title | 설명 |
 |:---|:---|
 | **튜플 이동 기 교착 상태가 발생할** |업그레이드는 분산 트랜잭션 및 튜플 이동 기 백그라운드 스레드에서 교착 상태를 오래 가능성을 해결합니다. CU7.1를 설치한 후 SQL Server 시작 매개 변수 또는 전역 추적 플래그가 튜플 이동 기를 중지 하려면 TF634를 사용한 고객 안전 하 게 제거할 수 있습니다. | 
 | **특정 lag/잠재 고객 쿼리 실패** |이 업그레이드를 사용 하 여 오류가 발생 하는 지연/잠재 고객의 중첩 된 함수를 사용 하 여 CCI 테이블에 대 한 특정 쿼리 고정 됩니다. | 
@@ -111,7 +111,7 @@ AP AU7 소개에서 기능 스위치 [Configuration Manager](launch-the-configur
 ### <a name="known-issues"></a>알려진 문제
 으로 설명 하는 문제를 해결 하는 Intel BIOS 업데이트는 제공 하는 AP AU7 소프트웨어로 *투기적 실행 사이드 채널 공격*합니다. 공격 이라는 것을 악용 하는 것을 목표로 *스펙터와 멜트다운 취약점으로 인 한*합니다. BIOS 업데이트를 수동으로 설치 하 고 있지만 AP와 함께 패키지 AP AU7 소프트웨어 설치의 일부로 없습니다.
 
-Microsoft는 BIOS 업데이트를 설치 하려면 모든 고객에 게 권고 합니다. Microsoft 다양 한 환경에서 다양 한 SQL 워크 로드에서 커널 가상 주소 숨기기 (KVAS), 커널 페이지 테이블 간접 참조 (KPTI) 및 간접 분기 예측 완화 (IBP)의 효과 측정 합니다. 측정값에 일부 워크 로드를 크게 저하 됨. 프로덕션 환경에 배포 하기 전에 BIOS 업데이트 사용의 성능 효과 테스트 하는 것이 좋습니다는 결과 따라 합니다. SQL Server 지침을 참조 하세요 [여기](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)합니다.
+Microsoft는 BIOS 업데이트를 설치 하려면 모든 고객에 게 권고 합니다. Microsoft 다양 한 환경에서 다양 한 SQL 워크 로드에서 커널 가상 주소 숨기기 (KVAS), 커널 페이지 테이블 간접 참조 (KPTI) 및 간접 분기 예측 완화 (IBP)의 효과 측정 합니다. 측정값에 일부 워크 로드를 크게 저하 됨. 프로덕션 환경에 배포 하기 전에 BIOS 업데이트 사용의 성능 효과 테스트 하는 것이 좋습니다는 결과 따라 합니다. SQL Server 지침을 참조 하세요 [여기](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)합니다.
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

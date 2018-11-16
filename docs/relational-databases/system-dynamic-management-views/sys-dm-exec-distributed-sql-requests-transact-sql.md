@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0845e5398b11b2d145c64f5717a08f4abf079c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f86941149741caee7849c579e32ad070d7a3dec
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669502"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   쿼리에서 SQL 단계의 일부로 모든 SQL 쿼리 배포에 대 한 정보를 보유합니다.  이 보기는 지난 1000 개의 요청에 대 한 데이터를 보여 줍니다. 활성 요청은이 보기에 있는 데이터를 갖습니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|execution_id 및 step_index이이 보기에 대 한 키를 구성 합니다. 요청과 연결 된 고유 숫자 id입니다.|ID를 참조 하세요 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|이 배포의 일부인 쿼리 단계의 인덱스입니다.|step_index를 참조 하세요 [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)합니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47603881"
 |command|nvarchar(4000)|이 단계의 명령의 전체 텍스트를 포함합니다.|단계에 대 한 모든 요청이 유효한 문자열입니다. 4000 자 보다 긴 경우 잘립니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

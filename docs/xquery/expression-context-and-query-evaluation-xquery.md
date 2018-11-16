@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -20,12 +19,12 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673522"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47755921"
   
     -   WITH XMLNAMESPACES를 사용하여 정의된 모든 네임스페이스. 자세한 내용은 [WITH XMLNAMESPACES를 사용 하 여 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 WITH XMLNAMESPACES 선언 네임 스페이스에 바인딩하는 접두사 (pd) (`http://someURI`). 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
+    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 WITH XMLNAMESPACES 선언 네임 스페이스에 바인딩하는 접두사 (pd) (`https://someURI`). 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -72,7 +71,7 @@ ms.locfileid: "47755921"
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -86,10 +85,10 @@ ms.locfileid: "47755921"
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -134,10 +133,10 @@ ms.locfileid: "47755921"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  

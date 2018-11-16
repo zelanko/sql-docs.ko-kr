@@ -20,12 +20,12 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f219e283078b39364ac7a6ee6e0c877c3760194
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1f7e179c654418ea1c6a0f5d208f4cecebdadd91
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670553"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ srcdata
  응용 프로그램의 열 이름이 유니코드로 되어 있으면 **srv_describe**를 호출하기 전에 서버의 멀티바이트 코드 페이지로 변환해야 합니다. 자세한 내용은 [유니코드 데이터 및 서버 코드 페이지](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [srv_sendrow(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   

@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603171"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677692"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47603171"
  예를 들어, 다음 XSD 스키마 조각을 고려해 보십시오.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "47603171"
  이제 다음과 같은 주석이 추가된 XSD 스키마에 지정된 XML 뷰를 고려해 보십시오. 이 스키마를 사용 하 여  **\<sql: relationship >** Cust 테이블과 CustOrder 테이블 간의 관계를 지정 합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -226,7 +226,7 @@ ms.locfileid: "47603171"
  스키마는 다음과 같습니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

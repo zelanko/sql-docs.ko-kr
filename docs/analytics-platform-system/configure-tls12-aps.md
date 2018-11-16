@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 638633a84721532ad05a52126aa7bcfd3f2bb6b7
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697861"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP에서 TLS 1.2를 구성 합니다.
 
@@ -22,7 +22,7 @@ TLS 1.2만 사용 하도록 AP를 보호 하려면 모든 실제 및 가상 호�
 
 > [!WARNING]
 > 이 섹션, 방법 또는 태스크에는 레지스트리를 수정하는 방법을 알려 주는 단계가 포함되어 있습니다. 그러나 잘못는 데이터가 손실 될 수 있습니다 및 운영 체제의 다시 설치 해야 레지스트리를 수정 하면 심각한 문제가 발생할 수 있습니다. 좋습니다 다시 레지스트리를 수정 하기 전에 합니다. 그런 다음 문제가 발생하면 레지스트리를 복원할 수 있습니다. 백업 하 고 레지스트리를 복원 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 문서를 보려면 다음 문서 번호를 클릭 합니다.<br>
-[322756](https://support.microsoft.com/en-us/help/322756) 를 백업 하 고 Windows에서 레지스트리를 복원 하는 방법
+[322756](https://support.microsoft.com/help/322756) 를 백업 하 고 Windows에서 레지스트리를 복원 하는 방법
 
 **사용 하지 않도록 설정 합니다.**
 ```

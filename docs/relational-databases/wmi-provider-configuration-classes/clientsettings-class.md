@@ -17,12 +17,12 @@ ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 073ceab7ca384cb257716a7e0708867fe4c717f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87ee6cf8c3ef84363608f7703cc5a8fe64ab15c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660173"
 ---
 # <a name="clientsettings-class"></a>ClientSettings 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47705723"
  이 클래스를 사용하여 클라이언트를 프로그래밍 방식으로 관리할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+ [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

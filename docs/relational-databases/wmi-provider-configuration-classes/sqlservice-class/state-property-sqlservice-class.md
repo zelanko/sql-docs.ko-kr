@@ -18,12 +18,12 @@ ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b7351f0b341a652ff7616bde788581caa087a7e9
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c93beed93b14639266f9b68e8c4515259d31e049
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216031"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669282"
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,6 @@ object.State [= value]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

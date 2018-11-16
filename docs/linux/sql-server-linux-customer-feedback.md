@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669062"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 고객 의견
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623723"
 
 기본적으로 Microsoft SQL Server는 고객이 응용 프로그램을 사용하는 방법에 대한 정보를 수집합니다. 특히, SQL Server는 설치 환경, 사용 및 성능에 대한 정보를 수집합니다. 이 정보는 Microsoft에서 고객의 요구에 맞게 제품을 향상시키는 데 도움이 됩니다. 예를 들어 Microsoft는 관련 버그를 수정하고, SQL Server 사용 방법에 대한 설명서를 개선하고, 고객에게 더 나은 서비스를 제공하기 위해 제품에 기능을 추가할지 여부를 결정할 수 있도록 고객에게 발생하는 오류 코드 종류에 대한 정보를 수집합니다.
 
-이 문서에서는 세부 정보 수집는 보내도록 Linux의 Microsoft SQL Server를 구성 하는 방법에 대 한 어떤 종류의 정보는 수집에 대 한 정보를 Microsoft입니다. SQL Server 2017에는 수행 하 고 사용자 로부터 수집 하지 않습니다 정보를 설명 하는 개인정보취급방침 포함 됩니다. 자세한 내용은 참조는 [개인정보취급방침](http://go.microsoft.com/fwlink/?LinkID=868444)합니다.
+이 문서에서는 세부 정보 수집는 보내도록 Linux의 Microsoft SQL Server를 구성 하는 방법에 대 한 어떤 종류의 정보는 수집에 대 한 정보를 Microsoft입니다. SQL Server 2017에는 수행 하 고 사용자 로부터 수집 하지 않습니다 정보를 설명 하는 개인정보취급방침 포함 됩니다. 자세한 내용은 참조는 [개인정보취급방침](https://go.microsoft.com/fwlink/?LinkID=868444)합니다.
 
 특히 Microsoft는 이러한 메커니즘을 통해 다음과 같은 유형의 정보는 전송하지 않습니다.
 

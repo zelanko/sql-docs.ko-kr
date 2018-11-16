@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc0f1e2038bb0b6fb687198bccdadaf565a951b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2cce444ecff2ba3526c69d3d562f40d864f3ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655552"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 호출 및 프로세스 출력을 사용하여 저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47841151"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 응용 프로그램에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 **IMultipleResults::GetResult** 에서 DB_S_NORESULT를 반환하거나 **IMultipleResults** 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47841151"
 ## <a name="example"></a>예제  
  이 예에서는 행 집합, 반환 코드 및 출력 매개 변수 처리를 보여 줍니다. 결과 집합은 처리되지 않습니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 응용 프로그램에서 사용하는 저장 프로시저를 만듭니다.  
   

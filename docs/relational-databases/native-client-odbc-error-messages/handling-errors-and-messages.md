@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b59490cd0c8926b9b266135856a54d4d1645bc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca55861daaeb32eaf5cce4fc70e09f54622a3f13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676771"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661962"
 ---
 # <a name="handling-errors-and-messages"></a>오류 및 메시지 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47676771"
   
  원래 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 API 인 C 언어용 Db-library 허용 콜백 오류 처리를 설치할 응용 프로그램 및 해당 반환 오류 또는 메시지가 메시지 처리 함수입니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 다시 보낸 메시지를 검색 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ODBC 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 설정 하 고 메시지를 하나 이상의 진단 레코드를 반환 합니다. 따라서 ODBC 응용 프로그램을 신중 하 게 테스트 해야 이러한 반환 코드 및 호출에 대 한 **SQLGetDiagRec** 메시지 데이터를 검색 합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 오류 추적에 추가 된 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하십시오 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 오류 추적에 추가 된 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하십시오 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

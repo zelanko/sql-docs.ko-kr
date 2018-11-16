@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e1a8db0077b5ec164fe5939b126cfab98e218bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778391"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668652"
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템 - 시퀀스 형식 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47778391"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -67,7 +66,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" />'  
 SELECT @var.query('data(/root[1]) instance of  empty() ')  
 GO  
 ```  
@@ -80,7 +79,7 @@ GO
 -- DROP XML SCHEMA COLLECTION SC.  
 -- GO  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
   <element name="root">  
     <complexType>  
        <sequence/>  
@@ -118,7 +117,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -137,7 +136,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte ')   
 GO  
 -- result = false  
@@ -147,7 +146,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte? ')   
 GO  
 -- result = true  
@@ -166,7 +165,7 @@ GO
   
 ```  
 SELECT Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 data(/AWMI:root[1]/AWMI:Location[1]/@LocationID) instance of xs:integer?') as Result   
 FROM Production.ProductModel   
 WHERE ProductModelID = 7  
@@ -261,7 +260,7 @@ element(*, ElementType?)
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
 targetNamespace="myNS" xmlns:ns="myNS">  
   <complexType name="CustomerType">  
      <sequence>  
@@ -310,11 +309,11 @@ GO
 ### <a name="example-b"></a>예 2  
  다음 예에서는 식에 의해 반환된 노드가 특정 이름의 요소 노드인지 여부를 확인하는 방법을 보여 줍니다. 사용 된 **element()** 테스트 합니다.  
   
- 다음 예에서 XML 인스턴스에서 쿼리되는 두 개의 <`Customer`> 요소는 유형이 각각 `CustomerType` 및 `SpecialCustomerType`으로 서로 다릅니다. 식에 의해 반환된 <`Customer`> 요소의 유형을 확인해야 한다고 가정하십시오. 다음 XML 스키마 컬렉션은 `CustomerType` 및 `SpecialCustomerType` 유형을 정의합니다.  
+ 다음 예에서 XML 인스턴스에서 쿼리되는 두 개의 <`Customer`> 요소는 유형이 각각 `SpecialCustomerType` 및 `CustomerType`으로 서로 다릅니다. 식에 의해 반환된 <`Customer`> 요소의 유형을 확인해야 한다고 가정하십시오. 다음 XML 스키마 컬렉션은 `CustomerType` 및 `SpecialCustomerType` 유형을 정의합니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
           targetNamespace="myNS"  xmlns:ns="myNS">  
   <complexType name="CustomerType">  
     <sequence>  
@@ -346,7 +345,7 @@ SET @var = '
    <firstName>FirstName1</firstName>  
    <lastName>LastName1</lastName>  
 </x:customer>  
-<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
    <firstName> FirstName2</firstName>  
    <lastName> LastName2</lastName>  
    <Age>21</Age>  
@@ -360,14 +359,14 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 이전 쿼리의 식을 바꾸고 두 번째 <`customer`> 요소(`/x:customer)[2]`)를 검색하면 `instance of`가 True를 반환합니다.  
+ 이전 쿼리의 식을 바꾸고 두 번째 <`customer`> 요소(`instance of`)를 검색하면 `/x:customer)[2]`가 True를 반환합니다.  
   
 ### <a name="example-c"></a>예 3  
  이 예에서는 특성 테스트가 사용됩니다. 다음 XML 스키마는 CustomerID 및 Age 특성이 포함된 CustomerType 복합 유형을 정의합니다. Age 특성은 선택 사항입니다. 특정 XML 인스턴스에 대해 <`customer`> 요소에 Age 특성을 제공할지 여부를 결정할 수 있습니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
        targetNamespace="myNS" xmlns:ns="myNS">  
 <complexType name="CustomerType">  
   <sequence>  

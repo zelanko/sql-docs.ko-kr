@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3e39c7e7d6c94ce83889fbd6e29b26da278862f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55b8ee380645df874d10b04e54e341411105953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618477"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658299"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>새로운&#39;의 SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47618477"
 -   마이그레이션 문제  
   
 ## <a name="installing-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 설치  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 SQL Server와 함께 제공되었으며 SQL Server Express를 제외한 모든 버전의 SQL Server에 기본적으로 함께 설치되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 SQL Server에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](http://www.microsoft.com/download/details.aspx?id=30403)합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 SQL Server와 함께 제공되었으며 SQL Server Express를 제외한 모든 버전의 SQL Server에 기본적으로 함께 설치되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 SQL Server에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](https://www.microsoft.com/download/details.aspx?id=30403)합니다.  
   
  SQLXML 4.0 SP1 파일은 다음 위치에 설치됩니다.  
   

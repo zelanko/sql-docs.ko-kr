@@ -10,22 +10,22 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 84c242d3c7c8e38642f1ee76f109f90a1ea9520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667992"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 가이드는 SUSE Linux Enterprise Server (SLES) SQL Server에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. SUSE 클러스터링 계층 더해서 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
+이 가이드는 SUSE Linux Enterprise Server (SLES) SQL Server에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. SUSE 클러스터링 계층 더해서 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](https://clusterlabs.org/)합니다. 
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하세요. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 NFS 공유를 구성 하려면 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -261,6 +261,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 [SUSE Linux Enterprise 고가용성 확장-관리 가이드](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

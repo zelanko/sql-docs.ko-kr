@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675102"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>반환된 테이블
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|
 |request_id|**int**|요청의 ID입니다. Null을 허용하지 않습니다.|
@@ -66,7 +66,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 **경량** 인프라를 프로 파일링 통계는 사용할 수 있습니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 사용 하도록 설정할 수 있습니다.
   -  전역적으로 추적을 사용 하 여 플래그 7412입니다.
-  -  사용 하 여 [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) 확장된 이벤트입니다.
+  -  사용 하 여 [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) 확장된 이벤트입니다.
   
 > [!NOTE]
 > 대신 표준 프로 파일링, DMV와 같은 인프라를 프로 파일링 하는 쿼리 실행 통계의 모든 소비자에 게 경량 프로 파일링 됩니다 사용 하 여 추적 플래그 7412 사용 하도록 설정 하면 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)합니다.

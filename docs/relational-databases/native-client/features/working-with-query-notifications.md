@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9e6c469e4cc90565cfc0864b4f03fee44d326f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747061"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670742"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "47747061"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  서비스에서 위에 표시된 미리 정의된 계약 `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`을 사용해야 합니다.  
+>  서비스에서 위에 표시된 미리 정의된 계약 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`을 사용해야 합니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합 수정에 소비자 알림을 지원 합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.  
@@ -77,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 속성 집합  
  OLE DB를 통해 쿼리 알림을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client DBPROPSET_SQLSERVERROWSET 속성 집합을 다음과 같은 새 속성을 추가 합니다.  
   
-|이름|형식|Description|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.<br /><br /> 기본값은 432000초(5일)입니다. 최소값은 1초이고 최대값은 2^31-1초입니다.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|알림의 메시지 메시지입니다. 사용자가 정의하며 미리 정의된 형식은 없습니다.<br /><br /> 기본값은 빈 문자열입니다. 1-2000자를 사용하여 메시지를 지정할 수 있습니다.|  
@@ -117,7 +117,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 및 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS가 NULL이 아니면 명령을 실행할 때마다 위에 정의된 3개의 특성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이면 헤더가 전달되지 않고 SQL_SUCCESS_WITH_INFO가 반환됩니다. 유효성 검사에서 발생 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)를 **SqlExecDirect**, 및 **SqlExecute**모든 특성이 유효 하지 않은 경우는 실패 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 버전에 대해 이러한 쿼리 알림 특성이 설정되어 있으면 SQL_SUCCESS_WITH_INFO로 인해 실행이 실패합니다.  
+ SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 및 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS가 NULL이 아니면 명령을 실행할 때마다 위에 정의된 3개의 특성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이면 헤더가 전달되지 않고 SQL_SUCCESS_WITH_INFO가 반환됩니다. 유효성 검사에서 발생 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 **SqlExecDirect**, 및 **SqlExecute**모든 특성이 유효 하지 않은 경우는 실패 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 버전에 대해 이러한 쿼리 알림 특성이 설정되어 있으면 SQL_SUCCESS_WITH_INFO로 인해 실행이 실패합니다.  
   
 > [!NOTE]  
 >  문을 준비할 때는 구독이 시작되지 않습니다. 문을 실행해야 구독을 시작할 수 있습니다.  

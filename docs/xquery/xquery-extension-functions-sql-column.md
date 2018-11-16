@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119890"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662272"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sql:column("columnName")
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
-    declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
                ProductID=       "{ sql:column("P.ProductID") }"  
                ProductName=     "{ sql:column("P.Name") }"  
@@ -112,7 +111,7 @@ ProductID               Result
 ```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <Product   
            ProductID=       "{ sql:column("P.ProductID") }"  
            ProductName=     "{ sql:column("P.Name") }"  
@@ -132,7 +131,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server XQuery 확장 함수](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 확장 함수](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML 데이터 인스턴스 만들기](../relational-databases/xml/create-instances-of-xml-data.md)   

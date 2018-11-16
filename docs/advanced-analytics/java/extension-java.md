@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d69a255c56c3b15051a393b74eb1492a4f830f4
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696422"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019에 Java 언어 확장 
 
@@ -32,7 +32,7 @@ Windows 및 Linux에서 Java 버전 요구 사항이 달라 집니다. Java Runt
 
 | 운영 체제 | Java 버전 | JRE 다운로드 | JDK 다운로드 |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
 | Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 Linux에서 **mssql server-확장성 java** 이미 설치 되어 있지 않으면 자동으로 패키지 JRE 1.8 설치 합니다. 설치 스크립트는 또한 라는 JAVA_HOME 환경 변수를 JVM 경로 추가 합니다.

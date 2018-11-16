@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7bbed133da510d27ddfb985a508184ba1cbd94e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730531"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681361"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery의 네임스페이스 처리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47730531"
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /AWMI:root/AWMI:Location[1]/AWMI:step  
     ') as x  
 FROM Production.ProductModel  
@@ -47,7 +46,7 @@ WHERE ProductModelID=7
  다음은 결과의 일부입니다.  
   
 ```  
-<AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
+<AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
 …  
 ```  
   
@@ -58,7 +57,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /root/Location[1]/step  
     ') as x  
 FROM Production.ProductModel  
@@ -68,18 +67,18 @@ where ProductModelID=7
  다음은 결과입니다.  
   
 ```  
-<step xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
+<step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
 …  
 ```  
   
- 이 예에서 정의된 네임스페이스 `"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`는 기본 네임스페이스 또는 비어 있는 네임스페이스를 무시하도록 만들어져 있습니다. 이 때문에 쿼리에 사용된 경로 식에 네임스페이스 접두사가 더 이상 없습니다. 또한 결과에 표시되는 요소 이름에도 네임스페이스 접두사가 더 이상 없습니다. 또한 기본 네임스페이스는 해당 특성을 제외한 모든 요소에 적용됩니다.  
+ 이 예에서 정의된 네임스페이스 `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`는 기본 네임스페이스 또는 비어 있는 네임스페이스를 무시하도록 만들어져 있습니다. 이 때문에 쿼리에 사용된 경로 식에 네임스페이스 접두사가 더 이상 없습니다. 또한 결과에 표시되는 요소 이름에도 네임스페이스 접두사가 더 이상 없습니다. 또한 기본 네임스페이스는 해당 특성을 제외한 모든 요소에 적용됩니다.  
   
 ### <a name="c-using-namespaces-in-xml-construction"></a>3. XML 생성에 네임스페이스 사용  
  새로운 네임스페이스를 정의할 때 이러한 네임스페이스의 범위에는 쿼리 뿐만 아니라 생성 범위도 포함됩니다. 예를 들어 XML 생성 시 "`declare namespace ...`" 선언을 사용하여 새로운 네임스페이스를 정의한 다음 쿼리 결과 내에 표시되도록 생성하는 모든 요소 및 특성에서 해당 네임스페이스를 사용할 수 있습니다.  
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      declare namespace myNS="uri:SomeNamespace";<myNS:Result>  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -94,8 +93,8 @@ where ProductModelID=19
 ```  
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
-  <Summary xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+  <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   
      suspension, and traction for all terrain.</p1:p>  
@@ -107,7 +106,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <myNS:Result xmlns:myNS="uri:SomeNamespace">  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -121,7 +120,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       declare default element namespace "uri:SomeNamespace";<Result>  
           { /PD:ProductDescription/PD:Summary }  
        </Result>  
@@ -136,8 +135,8 @@ where ProductModelID=19
 ```  
   
       <Result xmlns="uri:SomeNamespace">  
-  <PD:Summary xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+  <PD:Summary xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
          Our top-of-the-line competition mountain bike. Performance-  
          enhancing options include the innovative HL Frame, super-smooth   
          front suspension, and traction for all terrain.</p1:p>  

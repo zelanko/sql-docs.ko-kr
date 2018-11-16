@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356104"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672002"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>SQL Server Always On 가용성 그룹에서 kubernetes에 연결
 
-SQL Server의에서 인스턴스에 연결 하려면 Kubernetes 클러스터에 컨테이너를 만들려면를 [부하 분산 서비스](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)합니다. 부하 분산 장치는 끝점입니다. IP 주소를 보유 하 고 SQL Server 인스턴스를 실행 중인 pod에 IP 주소에 대 한 요청을 전달 합니다.
+SQL Server의에서 인스턴스에 연결 하려면 Kubernetes 클러스터에 컨테이너를 만들려면를 [부하 분산 서비스](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)합니다. 부하 분산 장치는 끝점입니다. IP 주소를 보유 하 고 SQL Server 인스턴스를 실행 중인 pod에 IP 주소에 대 한 요청을 전달 합니다.
 
 가용성 그룹 복제본에 연결 하려면 다른 복제본 형식에 대 한 서비스를 만듭니다. 서비스에 있는 복제본의 다른 형식에 대 한 예제를 확인할 수 있습니다 [sql-서버-샘플/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)합니다.
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063953"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606643"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTestCase()
  학습 데이터 집합의 일부인 사례를 반환 하려면 함수를 사용 [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 합니다 `Targeted Mailing` 에서 만든 마이닝 구조를 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
+ 다음 예제에서는 합니다 `Targeted Mailing` 에서 만든 마이닝 구조를 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 테스트에 사용된 구조의 모든 사례를 반환합니다.  
   
 ```  
 SELECT *  

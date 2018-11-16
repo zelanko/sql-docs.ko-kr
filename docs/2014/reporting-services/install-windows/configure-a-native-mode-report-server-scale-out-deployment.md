@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095553"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606853"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
+
   Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
   
  SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
@@ -119,11 +120,11 @@ ms.locfileid: "48095553"
  로드 균형이 조정된 서버 클러스터에서 보고서 서버를 실행하려는 경우 추가 구성이 필요합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

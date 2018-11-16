@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2610d8691748e316396ccd7babcc0c9e4991aa29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a1019d2781ea71f5f1017051f113a985f989be
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656383"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47796931"
  경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, DELETE 또는 MERGE 문의 OUTPUT 절을 사용 하 여 실행 되 고, SQLRowCount OUTPUT 절에서 생성 한 결과 집합의 모든 행이 소비 될 때까지 영향을 받는 행의 수를 반환 하지 것입니다. 소비이 행 호출 SQLFetch 또는 SQLFetchScroll입니다. 모든 결과 행이 소비 될 때까지 SQLResultCols는-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll sql_no_data가 반환 된 후 응용 프로그램을 다음 결과로 이동할 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 하려면 SQLRowCount 호출 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLRowCount 함수](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 함수](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

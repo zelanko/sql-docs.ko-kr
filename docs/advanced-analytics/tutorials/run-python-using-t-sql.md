@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702961"
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL을 사용하여 Python 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 
 다른 유형의 입력 SQL 변수로 전달할 수 있습니다: 예를 들어, 전달할 수 있습니다 학습된 된 모델을 변수로 같은 serialization 함수를 사용 하 여 [pickle](https://docs.python.org/3.0/library/pickle.html) 또는 [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) 에서 모델을 작성 하는 이진 형식입니다.
 
-저장된 프로시저가 반환 단일 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) 데이터 프레임 출력으로 하지만 스칼라 및 변수로 모델을 출력할 수도 있습니다. 예를 들어 이진 변수 학습된 된 모델 출력 하 고 테이블에 해당 모델을 작성 하는 T-SQL INSERT 문을 전달할 수 있습니다. 이진 형식의 그림 또는 스칼라를 생성할 수도 있습니다 (날짜 및 시간을 같은 개별 값을 시간 경과 됨 모델을 학습 등).
+저장된 프로시저가 반환 단일 Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) 데이터 프레임 출력으로 하지만 스칼라 및 변수로 모델을 출력할 수도 있습니다. 예를 들어 이진 변수 학습된 된 모델 출력 하 고 테이블에 해당 모델을 작성 하는 T-SQL INSERT 문을 전달할 수 있습니다. 이진 형식의 그림 또는 스칼라를 생성할 수도 있습니다 (날짜 및 시간을 같은 개별 값을 시간 경과 됨 모델을 학습 등).
 
 지금은 살펴보겠습니다 기본값 sp_execute_external_script의 입력 및 출력 변수: `InputDataSet` 고 `OutputDataSet`입니다. 
 
@@ -313,7 +313,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
 
 스칼라 수학 결과 테이블 형식 구조로 변환 하지를 계속 해야 SQL Server에서 처리할 수 있는 형식으로 변환 합니다. 
 
-1. 계열 data.frame로 변환 하려면 호출을 pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) 메서드.
+1. 계열 data.frame로 변환 하려면 호출을 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) 메서드.
 
     ```sql
     execute sp_execute_external_script 

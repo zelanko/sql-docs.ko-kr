@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb960fc84dd1558589918096daedf4d36d18ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632171"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604883"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등 수*입니다.*  
@@ -68,7 +68,7 @@ ms.locfileid: "47632171"
  다음 코드 샘플을 여는 방법 표시 하는 예를 들어, 한 **레코드 집합** Winnt/system32 디렉터리의 Readme25.txt 파일:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  서버를 지정 하는 연결 문자열에서 절대 URL (`YourServer`) 및 경로 (`Winnt`). 이 URL도 컨텍스트를 정의합니다.  
@@ -80,7 +80,7 @@ recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTa
  또 다른 예로, 다음 코드는 열립니다는 **Recordset** 의 내용에는 `Winnt` 디렉터리:  
   
 ```  
-recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 공급자가 제공한 URL 구성표  

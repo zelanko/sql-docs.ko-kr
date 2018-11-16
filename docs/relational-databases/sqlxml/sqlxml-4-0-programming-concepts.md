@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9146f64cf975c04bff3c04e9595835f0c0674e21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ffebfa67e2ad599a1ac50cbd643546a04f93619
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709831"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671478"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47709831"
  [SQLXML 4.0 데이터 액세스 구성 요소](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  SQLXMLOLEDB 공급자를 문서화하고 다른 SQLXML 4.0 데이터 액세스 구성 요소에 대한 링크를 제공합니다.  
   
- [SQLXML 4.0 .NET Framework 지원](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework 지원](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  .NET Framework에 대한 SQLXML 4.0 지원을 설명합니다.  
   
  [템플릿, XSL 및 스키마 캐싱 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

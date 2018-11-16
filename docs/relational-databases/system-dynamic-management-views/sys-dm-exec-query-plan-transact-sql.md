@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671199"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   계획 핸들로 지정한 일괄 처리에 대한 XML 형식의 실행 계획을 반환합니다. 계획 핸들로 지정된 계획은 캐시되거나 현재 실행 중일 수 있습니다.  
   
- 실행 계획 XML 스키마는 게시 및에서 사용할 수 있습니다 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 설치된 디렉터리에서도 사용할 수 있습니다.  
+ 실행 계획 XML 스키마는 게시 및에서 사용할 수 있습니다 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 설치된 디렉터리에서도 사용할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|이 계획에 해당하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 컴파일할 당시 유효했던 컨텍스트 데이터베이스의 ID입니다. 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.<br /><br /> 열이 Null 값을 허용합니다.|  
 |**objectid**|**int**|이 쿼리 계획에 대한 저장 프로시저나 사용자 정의 함수와 같은 개체의 ID입니다. 임시 및 준비 된 일괄 처리에 대 한이 열은 **null**.<br /><br /> 열이 Null 값을 허용합니다.|  

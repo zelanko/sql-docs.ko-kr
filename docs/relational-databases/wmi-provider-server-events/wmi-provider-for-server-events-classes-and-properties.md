@@ -15,12 +15,12 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3673ee3d837179984c4221e1aa2509f67643dfb4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cfa410f43d22541eee3749e523e98b8b8c45ceac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669952"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>서버 이벤트용 WMI 공급자 클래스 및 속성
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51217101"
   
  이벤트나 이벤트 그룹에서 쿼리할 수 있는 속성에 대해서는 이벤트 스키마를 참조하십시오. 기본적으로 이벤트 스키마는 다음 디렉터리에 설치 됩니다. [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 합니다.  
   
- 또는 게시 된 이벤트 스키마를 참조할 수 있습니다 [ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)합니다.  
+ 또는 게시 된 이벤트 스키마를 참조할 수 있습니다 [ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100)합니다.  
   
  예를 들어 ALTER_DATABASE 이벤트를 참조 하 여 설명 하는 부모 이벤트가 DDL_SERVER_LEVEL_EVENTS 되 고 속성은 **TSQLCommand** 하 고 **DatabaseName**합니다. 이벤트 속성을 상속 **SQLInstance**를 **PostTime**를 **ComputerName**를 **SPID**, 및 **LoginName** . 자식 이벤트가 없습니다.  
   

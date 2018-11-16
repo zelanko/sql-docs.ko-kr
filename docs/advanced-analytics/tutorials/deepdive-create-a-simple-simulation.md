@@ -1,5 +1,5 @@
 ---
-title: 만들기 (SQL과 R 심층 분석)에 대해 간단한 시뮬레이션 | Microsoft Docs
+title: 간단한 시뮬레이션 만들기 (SQL 및 R 심층 분석) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202885"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698241"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>간단한 시뮬레이션 (SQL과 R 심층 분석) 만들기
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>간단한 시뮬레이션 만들기 (SQL 및 R 심층 분석)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서를 사용 하는 방법에는 데이터 과학 심층 분석 자습서의 마지막 단계는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server와 함께 합니다.
+이 문서에서 사용 하는 방법에 대 한 데이터 과학 심층 분석 자습서, 마지막 단계는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
 
-지금까지 사용 중인 설계 된 R 기능 간의 데이터 이동에 맞게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 계산 컨텍스트 및 합니다. 그러나 사용자 지정 R 함수를 작성하고 서버 컨텍스트에서 실행하려는 경우를 가정해 보세요.
+지금까지 사용 했던 설계 된 R 함수 간에 데이터 이동에 대 한 특히 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 로컬 계산 컨텍스트. 그러나 사용자 지정 R 함수를 작성하고 서버 컨텍스트에서 실행하려는 경우를 가정해 보세요.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rxExec [함수를 사용하여](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 컴퓨터 컨텍스트에서 임의 함수를 호출할 수 있습니다. 사용할 수도 있습니다 **rxExec** 코어 단일 서버에서 작업을 명시적으로 배포 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rxExec [함수를 사용하여](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 컴퓨터 컨텍스트에서 임의 함수를 호출할 수 있습니다. 사용할 수도 있습니다 **rxExec** 명시적으로 단일 서버에 코어 작업을 배포 합니다.
 
-이 단원에서는 간단한 시뮬레이션을 만들려면 원격 서버를 사용 합니다. 시뮬레이션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터가 필요하지 않습니다. 예제에서는 사용자 지정 함수를 디자인한 다음 **rxExec** 함수를 사용하여 호출하는 방법만 보여 줍니다.
+이 단원에서는 원격 서버를 사용 하 여 간단한 시뮬레이션 만들기. 시뮬레이션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터가 필요하지 않습니다. 예제에서는 사용자 지정 함수를 디자인한 다음 **rxExec** 함수를 사용하여 호출하는 방법만 보여 줍니다.
 
-사용 하 여 보다 복잡 한 예제를 보려면 **rxExec**,이 문서를 참조: [foreach 및 rxExec 세분화 정교 하지 않은 병렬 처리](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+사용 하 여 더 복잡 한 예제 **rxExec**,이 문서를 참조 하세요. [foreach와 rxExec 성긴 수준 병렬 처리](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-custom-function"></a>사용자 정의 함수 만들기
+## <a name="create-the-custom-function"></a>사용자 지정 함수 만들기
 
 일반적인 카지노 게임은 다음과 같은 규칙에 따라 한 쌍의 주사위를 굴리는 동작으로 구성됩니다.
 
@@ -65,7 +65,7 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
     }
     ```
   
-2.  분할의 단일 게임을 시뮬레이트하기 위해 함수를 실행 합니다.
+2.  단일 주사위 게임을 시뮬레이트하기 위해 함수를 실행 합니다.
   
     ```R
     rollDice()
@@ -73,13 +73,13 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
   
     이겼나요, 졌나요?
   
-지금 사용 하는 방법을 살펴보겠습니다 **rxExec** 기능을 여러 번 실행 하려면, 달성의 확률을 확인 하는 데 도움이 되는 시뮬레이션을 만들려고 합니다.
+지금 사용 하는 방법을 살펴보겠습니다 **rxExec** 함수를 여러 번 실행 하는 여 이길 확률을 확인 하는 데 도움이 되는 시뮬레이션을 만드는 데 있습니다.
 
 ## <a name="create-the-simulation"></a>시뮬레이션 만들기
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 컨텍스트에서 임의 함수를 실행하려면 **rxExec** 함수를 호출합니다. 하지만 **rxExec** 코어가 여기 서버 컨텍스트에 SQL Server 컴퓨터에 사용자 지정 함수를 실행 또는 노드에 걸쳐 병렬로 함수의 분산된 실행을 지원 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 컨텍스트에서 임의 함수를 실행하려면 **rxExec** 함수를 호출합니다. 하지만 **rxExec** 또한 노드에서 병렬로 함수의 분산된 실행을 지원 하거나 코어 서버 컨텍스트를 여기에서 해당 SQL Server 컴퓨터의 사용자 지정 함수를 실행 합니다.
 
-1. 사용자 지정 함수에 인수로 호출 **rxExec**시뮬레이션을 수정 하는 다른 매개 변수와 함께 합니다.
+1. 사용자 지정 함수에 인수로 호출 **rxExec**시뮬레이션을 수정 하는 다른 매개 변수를 사용 하 여 함께 합니다.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -115,19 +115,19 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
 -   워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 간에 모델, 데이터 및 그림 전달
   
 
-데이터 파일은 Revolution analytics 웹 사이트에서 사용할 수 있는 10 백만 관찰의 더 큰 데이터 집합을 사용 하 여 이러한 기술은 시험 하려는 경우: [데이터 집합의 인덱스](http://packages.revolutionanalytics.com/datasets)
+데이터 파일에는 Revolution analytics 웹 사이트에서 사용할 수 있는 10 백만 관찰의 큰 데이터 집합을 사용 하 여 이러한 기술을 실험 하려는 경우: [데이터 집합의 인덱스](https://packages.revolutionanalytics.com/datasets)
 
-이 연습에서는 더 큰 데이터 파일을 다시 사용 하려면 데이터를 다운로드 하 고 각 데이터 원본 다음과 같이 수정 합니다.
+이 연습에서는 더 큰 데이터 파일을 다시 사용 하려면 데이터를 다운로드 하 고 각 데이터 원본을 다음과 같이 수정 합니다.
 
-1. 변수 수정 `ccFraudCsv` 및 `ccScoreCsv` 새 데이터 파일을 가리키도록
-2. 참조 하는 테이블의 이름을 변경 *sqlFraudTable* 를 `ccFraud10`
-3. 참조 하는 테이블의 이름을 변경 *sqlScoreTable* 를 `ccFraudScore10`
+1. 변수를 수정 `ccFraudCsv` 고 `ccScoreCsv` 새 데이터 파일을 가리키도록
+2. 참조 하는 테이블의 이름을 변경할 *sqlFraudTable* 를 `ccFraud10`
+3. 참조 하는 테이블의 이름을 변경할 *sqlScoreTable* 를 `ccFraudScore10`
 
-## <a name="additional-samples"></a>추가 예제
+## <a name="additional-samples"></a>추가 샘플
 
-계산 컨텍스트 및 RevoScaler 함수를 전달 하 고 데이터 변환의 사용, 마스터 한 했으므로이 자습서를 확인해 보십시오.
+계산 컨텍스트 및 RevoScaler 함수를 전달 하 고 데이터 변환 사용 하셨습니다., 했으므로 이러한 자습서를 확인 합니다.
 
-[컴퓨터 학습 서비스에 대 한 R 자습서](machine-learning-services-tutorials.md)
+[Machine Learning 서비스에 대 한 R 자습서](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>이전 단계
 
 [SQL Server와 XDF 파일 간에 데이터 이동](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

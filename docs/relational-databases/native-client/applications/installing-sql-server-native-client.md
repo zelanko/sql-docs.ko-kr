@@ -22,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f17f628a739d0db63278097fe864d56fcfb808e
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: b2c6695fd8e005311667b1edaad1b9e315019487
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383445"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670982"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "49383445"
  
  없는 SQL Server 2016 Native Client가 있습니다. 자세한 내용은 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)합니다. 
  
-sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server Native Client의 최신 버전을 다운로드 하려면로 이동 [Microsoft® SQL Server® 2012 기능 팩](http://www.microsoft.com/en-us/download/confirmation.aspx?id=29065)합니다. 이전 버전의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 컴퓨터의 SQL Server 2012 설치도 되어 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0에는 이전 버전와 함께 설치 됩니다.  
+sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server Native Client의 최신 버전을 다운로드 하려면로 이동 [Microsoft® SQL Server® 2012 기능 팩](https://www.microsoft.com/download/confirmation.aspx?id=29065)합니다. 이전 버전의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 컴퓨터의 SQL Server 2012 설치도 되어 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0에는 이전 버전와 함께 설치 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 파일(sqlncli11.dll, sqlnclir11.rll 및 s11ch_sqlncli.chm)은 다음 위치에 설치됩니다.  
   
@@ -53,7 +53,7 @@ sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치의 일부로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치하는 방법 이외에 sqlncli.msi라는 재배포 가능 설치 프로그램을 사용할 수도 있습니다. sqlncli.msi는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 디스크의 다음 위치에 있습니다. `%CD%\Setup\`  
   
- sqlncli.msi를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포할 수 있습니다. 응용 프로그램을 배포할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치해야 할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](http://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](http://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
+ sqlncli.msi를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포할 수 있습니다. 응용 프로그램을 배포할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 설치해야 할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](https://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](https://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
   
  x64 및 Itanium 버전의 sqlncli.msi가 32비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 설치합니다. 응용 프로그램을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   
@@ -73,6 +73,6 @@ sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 사용 하 여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [설치 방법 도움말 항목](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [설치 방법 도움말 항목](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69269e2934589841c42825f21494932b5306dd2d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099284"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673722"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "50099284"
   
 > **참고** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 이름을 사용 하 여 **sys.dm_pdw_nodes_os_child_instances**합니다.  
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|이 사용자 인스턴스의 사용자 이름입니다.|  
 |owning_principal_sid|nvarchar(256)|이 사용자 인스턴스를 소유하는 보안 주체의 SID(보안 ID)입니다. 이는 Windows SID와 일치합니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "50099284"
  동적 관리 뷰에 대 한 자세한 내용은 참조 하십시오 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비관리자 용 사용자 인스턴스](http://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [비관리자 용 사용자 인스턴스](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
   
   
 

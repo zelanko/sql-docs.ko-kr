@@ -14,12 +14,12 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 76b861e0cfc6b9c2e747395e1b75a13f33b73f23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa54fa7b0f4eaf272b3a59f9beac80974bd6dcbf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672820"
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47722551"
   
 -   CLR 함수. 자세한 내용은 [CLR 함수 만들기](../../relational-databases/user-defined-functions/create-clr-functions.md)합니다.  
   
--   CLR 저장 프로시저. 자세한 내용은 [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)합니다.  
+-   CLR 저장 프로시저. 자세한 내용은 [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)합니다.  
   
 -   CLR 트리거. 자세한 내용은 [CLR 트리거 만들기](../../relational-databases/triggers/create-clr-triggers.md)합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47722551"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)|어셈블리를 만들기 전에 고려해야 하는 항목에 대해 설명합니다. 여기에는 어셈블리 패키지, 코드 액세스 권한 및 기타 제한 사항이 포함됩니다.|  
 |[어셈블리 구현](../../relational-databases/clr-integration/assemblies-implementing.md)|어셈블리를 만들고 삭제하는 방법, 어셈블리 수정 방법 및 시기, 어셈블리에 대한 메타데이터 검색 방법에 대해 설명합니다.|  

@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec49f2b0db65c57b69e721f569fccfe32e861e8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf2d3bc2b9bd40a141cae19a22ffde56ea16dd6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618461"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674302"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   지정 된 PolyBase 요청 또는 쿼리를 작성 하는 모든 단계에 대 한 정보를 보유 합니다. 쿼리 단계 마다 하나의 행을 나열합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 및 step_index이이 보기에 대 한 키를 구성 합니다. 요청과 연결 된 고유 숫자 id입니다.|ID를 참조 하세요 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|요청을 구성 하는 단계의 순서에서이 단계의 위치입니다.|0 (n-1)를 n 단계를 사용 하 여 요청입니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47618461"
 |command|nvarchar(4000)|이 단계의 명령의 전체 텍스트를 포함합니다.|단계에 대 한 모든 요청이 유효한 문자열입니다. 4000 자 보다 긴 경우 잘립니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

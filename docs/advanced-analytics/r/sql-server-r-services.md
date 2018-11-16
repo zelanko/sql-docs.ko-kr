@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7871870b6fd708b4f06703754831a698002bb2f1
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659932"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ RevoScaleR, MicrosoftML, 및 기타 R 라이브러리에 포함 됩니다. 데�
 
 SQL Server 2016은 R만 있습니다. 다음 표에 SQL Server 2016의 기능을 보여 줍니다.
 
-| 구성 요소 | Description |
+| 구성 요소 | 설명 |
 |-----------|-------------|
 | SQL Server 실행 패드 서비스 | 외부 R 런타임 및 SQL Server 인스턴스 간의 통신을 관리 하는 서비스입니다. |
 | R 패키지 | [**RevoScaleR** ](revoscaler-overview.md) 가장 널리 사용 되는이 라이브러리의 확장 가능한 R. 함수는 주 라이브러리입니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 모델링 및 분석의 다양 한 형태는 이러한 라이브러리에 있습니다. 또한 이러한 라이브러리의에서 함수에 병렬 처리를 조정 및 계산 엔진에 의해 관리 되는 데이터의 청크에서 작동 하는 기능에 대 한 사용 가능한 코어에서 워크 로드를 자동으로 배포 합니다.  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) , T-SQL 저장 프로시저에 R 스크립트를 배치 하 고, 데이터베이스와 함께 저장된 프로시저를 등록 하 고, R 개발 환경에서 저장된 프로시저를 실행 하는 것에 대 한 도우미 함수를 제공 합니다.<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) R에서 MDX 쿼리를 지정 하는 데는|

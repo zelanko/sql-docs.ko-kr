@@ -14,12 +14,12 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 038cb740cd2d8e2457f83f829c85f4d6598b9f97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 653e29f8666f63cd4867b11b378ee8711f8b0508
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824081"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606443"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타내는 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수를 *처리기*합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47824081"
  **적용 대상:** [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ DataControl.Handler = String
  *DataControl*  
  나타내는 개체 변수는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
- *문자열*  
+ *String*  
  A **문자열** 쉼표로 구분 된 모든 처리기 및 모든 매개 변수의 이름을 포함 하는 값 (예를 들어 `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
 ## <a name="remarks"></a>Remarks  

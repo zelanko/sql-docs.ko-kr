@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a0db5aab684503cd59982eb0efd50ef533d4da0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b94ca4b8fcd9aada2b6963a8ee567fb0e12882
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669582"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685161"
  다음 XSD 스키마를 사용 하 여 대상 네임 스페이스를 지정 합니다 **xsd: targetnamespace** 특성입니다. 스키마도 설정 합니다 **elementFormDefault** 하 고 **attributeFormDefault** 특성 값을 **"unqualified"** (이러한 특성에 대 한 기본값). 전역 선언 이며 모든 로컬 요소에 영향을 줍니다 (**\<순서 >** 스키마에서) 및 특성 (**CustomerID**를 **ContactName**, 및  **OrderID** 스키마에서).  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:CO="urn:MyNamespace"   
             targetNamespace="urn:MyNamespace" >  

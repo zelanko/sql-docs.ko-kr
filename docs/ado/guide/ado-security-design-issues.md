@@ -1,7 +1,7 @@
 ---
 title: ADO 보안 디자인 문제 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c961c24f0ffcbb3f0cbafabce2988edb6c8d607
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716371"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293129"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 보안 디자인 기능에서 ActiveX 데이터 개체 (ADO) 2.8 이상에 대해 설명 합니다. 이러한 변경 되었습니다 2.8 ado에서 보안을 개선 합니다. Windows Vista에서 Windows DAC 6.0에 포함 된 6.0, ADO ADO 2.8, Windows XP 및 Windows Server 2003에서 MDAC 2.8에 포함 된 기능적으로 동일 합니다. 이 항목에서는 가장 2.8 이상 ado에서 응용 프로그램을 보호 하는 방법에 대 한 정보를 제공 합니다.
@@ -32,7 +32,7 @@ ms.locfileid: "47716371"
 ### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>이제 사용자에 게 경고 하는 데 사용 하는 수정 및 향상 된 보안 경고 메시지 상자
  ADO 2.7 및 이전 버전 스크립트를 사용한 웹 페이지에서 신뢰할 수 없는 공급자의 ADO 코드를 실행 하려고 할 때 다음과 같은 경고 메시지가 나타납니다.
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -41,7 +41,7 @@ box.
 
  ADO 2.8 이상에 대 한 앞의 메시지가 더 이상 나타나지 않습니다. 대신이 컨텍스트에서 다음과 같은 메시지가 나타납니다.
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -87,7 +87,7 @@ Website, click OK, otherwise click Cancel.
 
  이제 보안 경고가 나타나는 경우 메시지 상자를 사용자를 게 알립니다.
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

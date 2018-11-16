@@ -20,12 +20,12 @@ ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 262ef81630f192d45065c093346336331a590502
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e473b213321af7366881f0f9a0f32c5ac4ab70cd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677572"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ pfNull
  매개 변수 정보를 성공적으로 가져오면 SUCCEED가 반환되고 그렇지 않으면 FAIL이 반환됩니다. 현재 원격 저장 프로시저가 없고 *n*번째 원격 저장 프로시저 매개 변수가 없으면 FAIL이 반환됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 컴파일한 DLL을 설치하기 전에 해당 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+ **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 컴파일한 DLL을 설치하기 전에 해당 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 저장 프로시저 프로그래머 참조](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  

@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5efebacd3fd63aa9359ff11950281a237794b268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788631"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663022"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 보유 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 DMS 작업자의 일부인 쿼리입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|참조의 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|이 DMS 작업자의 일부인 단계를 쿼리 합니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|step_index를 참조 하세요 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "47788631"
 |source_info|**nvarchar(4000)**|판독기 경우 원본 테이블 및 열 사양입니다.||  
 |destination_info|**nvarchar(4000)**|작성기의 경우, 대상 테이블 사양입니다.||  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 정보를 참조 하세요 [시스템 뷰 최대값](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

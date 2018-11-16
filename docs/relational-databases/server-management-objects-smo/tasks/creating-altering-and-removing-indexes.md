@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 838e28849a75db0f35a1917784a221987160650d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7325d9a9093e1b62ecf8564ca10c31499d915a45
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671312"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)에서 만드는 MySampleCollection이라는 XML 스키마 컬렉션입니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -208,7 +208,7 @@ Public Class A
         Dim tb As New Table(db1, "XmlTable3")  
   
         Dim mySample As New XmlSchemaCollection(db1, "Sample4", "dbo")  
-        mySample.Text = "<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
+        mySample.Text = "<xsd:schema xmlns:xsd=""https://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
         mySample.Create()  
   
         Dim col11 As Column  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C#에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)에서 만드는 MySampleCollection이라는 XML 스키마 컬렉션입니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -271,7 +271,7 @@ public class A {
       Table tb = new Table(db1, "XmlTable3");  
   
       XmlSchemaCollection mySample = new XmlSchemaCollection(db1, "Sample4", "dbo");  
-      mySample.Text = "<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
+      mySample.Text = "<xsd:schema xmlns:xsd=\"https://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
       mySample.Create();  
   
       Column col11;  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 XML 스키마 컬렉션에서 만들어진 MySampleCollection 라는 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)에서 만드는 MySampleCollection이라는 XML 스키마 컬렉션입니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

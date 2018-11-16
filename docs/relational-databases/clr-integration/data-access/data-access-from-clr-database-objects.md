@@ -23,12 +23,12 @@ ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 223aa817298fc21dedbbb763b3f775feaa4e2807
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f99d182691ed08ebf7a3e8e71572068cd08848f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673442"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47812921"
  [CLR 통합 및 트랜잭션](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  System.Transactions 네임스페이스에 제공되는 새 트랜잭션 프레임워크가 ADO.NET 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 통합과 통합되는 방법에 대해 설명합니다.  
   
- [CLR 데이터베이스 개체에서 XML 직렬화](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [CLR 데이터베이스 개체에서 XML 직렬화](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 데이터베이스 개체의 XML 직렬화 시나리오를 구현하는 방법에 대해 설명합니다.  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032670"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676532"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스
 
@@ -35,7 +35,7 @@ Linux에서 SQL Server FCI를 만들려면 참조 [Linux에서 SQL Server FCI �
 
     클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하세요. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
 
-RHEL HA 추가 기능 및 SUSE HAE에서 빌드된 [Pacemaker](http://clusterlabs.org/)합니다.
+RHEL HA 추가 기능 및 SUSE HAE에서 빌드된 [Pacemaker](https://clusterlabs.org/)합니다.
 
 다음 다이어그램에서 알 수 있듯이, 저장소는 두 서버에 표시 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소 통신 및 리소스 관리를 조정합니다. 저장소 리소스 및 SQL Server에 활성 연결이 서버 중 하나입니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 리소스를 다른 노드로 이동 합니다.  
 

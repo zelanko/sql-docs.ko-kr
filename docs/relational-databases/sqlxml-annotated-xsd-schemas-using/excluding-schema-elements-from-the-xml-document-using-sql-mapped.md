@@ -24,12 +24,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a93d62917efb4bb53c1d5a699109844e1d358bb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0efaecb87fb9fa2876d2c5cb66f36eae48e7b974
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669302"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped를 사용하여 XML 문서에서 스키마 요소 제외
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47837101"
  스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. 합니다  **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에서 동일한 이름 가진 열에 매핑됩니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  

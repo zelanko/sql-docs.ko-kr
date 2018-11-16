@@ -17,12 +17,12 @@ ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 79589050b26e072b1081323e42fdaee2345a7d6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 589c4cf9e5e67f3e1d1af41098109b1bb1867928
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661212"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47623083"
  [.NET Framework의 SQL Server 데이터 형식](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 해당되는 .NET Framework 데이터 형식에 대해 간략하게 설명합니다.  
   
- [CLR 통합 사용자 지정 특성 개요](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [CLR 통합 사용자 지정 특성 개요](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  CLR 통합 사용자 지정 특성에 대한 정보를 제공합니다.  
   
  [CLR 사용자 정의 함수](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -66,10 +66,10 @@ ms.locfileid: "47623083"
  [CLR 사용자 정의 형식](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  CLR 사용자 정의 형식을 구현하고 사용하는 방법에 대해 설명합니다.  
   
- [CLR 저장 프로시저](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR 저장 프로시저](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  CLR 저장 프로시저를 구현하고 사용하는 방법에 대해 설명합니다.  
   
- [CLR 트리거](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR 트리거](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  CLR 트리거를 구현하고 사용하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

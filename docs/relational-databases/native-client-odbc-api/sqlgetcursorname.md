@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b973884248415222702ce7a88f47402beb61c749
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87810dc52c1f4bc2e610b90dea9d2bb8997792d2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676192"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47719871"
   응용 프로그램이 커서 이름을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 커서를 생성할 때 응용 프로그램의 커서 이름을 생성합니다. 응용 프로그램은 **SQLGetCursorName** 을 사용하여 위치 지정 UPDATE 및 DELETE 문에 대해 드라이버에서 정의된 커서 이름을 검색할 수 있습니다. 응용 프로그램에서 위치 지정 데이터 조작 문을 이용하기 위해 **SQLSetCursorName** 을 호출할 필요는 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetCursorName 함수](http://go.microsoft.com/fwlink/?LinkId=59349)   
+ [SQLGetCursorName 함수](https://go.microsoft.com/fwlink/?LinkId=59349)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8d1c158b9bdd922deb069e6cc95a71dab0e24a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b4b35ddef4844f5c57ae77e4ee4c6d1dcbaf167
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650731"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681211"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0에서 updategram을 사용하여 데이터 수정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47650731"
  [Updategram의 데이터베이스 동시성 문제 처리 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Updategram에서 동시성 문제를 처리하는 데 사용할 수 있는 다양한 수준의 보호에 대해 설명하고 이에 대한 예를 제공합니다.  
   
- [Updategram 예제 응용 프로그램 &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
+ [Updategram 예제 응용 프로그램 &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
  Updategram을 사용하는 예제 응용 프로그램을 제공합니다.  
   
  [XML Updategram에 대 한 제한 사항 및 지침 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  

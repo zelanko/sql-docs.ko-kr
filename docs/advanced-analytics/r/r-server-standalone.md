@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176433"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657502"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (독립 실행형) 및 SQL server에서 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ SQL Server 독립 실행형 R Server 또는 SQL Server와 독립적으로 실행
 
 SQL Server 2016은 R만 있습니다. SQL Server 2017은 R과 Python을 지원합니다. 다음 표에 각 버전의 기능을 보여 줍니다.
 
-| 구성 요소 | Description |
+| 구성 요소 | 설명 |
 |-----------|-------------|
 | R 패키지 | [**RevoScaleR** ](revoscaler-overview.md) 데이터 조작, 변환, 시각화 및 분석에 대 한 함수를 사용 하 여 확장 가능한 R 주 라이브러리입니다.  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) , T-SQL 저장 프로시저에 R 스크립트를 배치 하 고, 데이터베이스와 함께 저장된 프로시저를 등록 하 고, R 개발 환경에서 저장된 프로시저를 실행 하는 것에 대 한 도우미 함수를 제공 합니다.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) 제품 웹 서비스 배포 (SQL Server 2017에만 해당)에 있습니다. <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) R에서 MDX 쿼리를 지정 하는 데는|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 은 Microsoft의 오픈 소스 분산은 R입니다. 패키지 및 인터프리터를 포함 됩니다. 항상 설치 프로그램의 번들 MRO의 버전을 사용 합니다. |

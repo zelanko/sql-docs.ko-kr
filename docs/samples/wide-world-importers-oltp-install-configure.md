@@ -10,27 +10,27 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701461"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673482"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP 데이터베이스 설치 및 구성 지침은입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전의 경우 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전의 경우 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과 사용 하 여 2016 년 6 월 릴리스 이상.
 
 ## <a name="download"></a>다운로드
 
 샘플의 최신 릴리스:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Bacpac를 다운로드 샘플 WideWorldImporters 데이터베이스 백업/해당 하는 Azure SQL Database 또는 SQL Server의 버전입니다.
 
@@ -90,5 +90,5 @@ Azure SQL Database에서 감사를 통해 구성 됩니다 합니다 [Azure port
 
 행 수준 보안 WideWorldImporters bacpac 다운로드에서는 기본적으로 사용 되지 않습니다. 데이터베이스에서 행 수준 보안을 사용 하려면 다음 저장된 프로시저를 실행 합니다.
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909823"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696432"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System에 대 한 SQL Server Operations Manager (SCOM) 관리 팩을 설치 합니다.
 다운로드 하 여 SQL Server PDW 용 System Center Operations Manager (SCOM) 관리 팩을 설치 하려면 다음이 단계를 따릅니다. 관리 팩은 SQL Server PDW SCOM에서 모니터링 해야 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "37909823"
 System Center Operations Manager는 설치 하 고 실행 해야 합니다. SQL Server PDW 2012 System Center Operations Manager 2007 R2, System Center Operations Manager 2012 또는 System Center Operations Manager 2012 서비스 팩 1에 필요합니다.  
   
 ## <a name="Step1"></a>1 단계: 관리 팩 다운로드  
-AP PDW 워크 로드의 경우 다운로드 합니다 [Microsoft Analytics Platform System에 대 한 System Center 관리 팩](http://go.microsoft.com/fwlink/?LinkId=396857)합니다.  
+AP PDW 워크 로드의 경우 다운로드 합니다 [Microsoft Analytics Platform System에 대 한 System Center 관리 팩](https://go.microsoft.com/fwlink/?LinkId=396857)합니다.  
   
-어플라이언스 관리에 대 한 다운로드 합니다 [SQL Server 어플라이언스 기본 관리 팩](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436)합니다.  
+어플라이언스 관리에 대 한 다운로드 합니다 [SQL Server 어플라이언스 기본 관리 팩](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436)합니다.  
   
-AP 없이 PDW의 이전 버전을 다운로드 합니다[Microsoft SQL Server 2012 병렬 데이터 웨어하우스 어플라이언스 용 System Center 모니터링 팩](http://go.microsoft.com/fwlink/p/?LinkId=282661)합니다.  
+AP 없이 PDW의 이전 버전을 다운로드 합니다[Microsoft SQL Server 2012 병렬 데이터 웨어하우스 어플라이언스 용 System Center 모니터링 팩](https://go.microsoft.com/fwlink/p/?LinkId=282661)합니다.  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>2 단계: 관리 팩 설치  
   

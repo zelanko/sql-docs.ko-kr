@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f986f447ff3659ade6fe3211b08d0759cbac0b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68aa464a2cb89c9909a40bc2ef732d3623bf3d97
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845111"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657958"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ End Sub
  다음 XSD 스키마(EmpSchema.xml)를 디스크에 저장하고 이 코드에 지정된 경로를 디스크에서 매핑 스키마가 저장된 위치로 업데이트하십시오. 이 코드에서는 스키마가 C: 드라이브의 Schemas 폴더에 저장되어 있다고 가정합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419268"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677921"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -118,9 +118,9 @@ Linux에서 로그 디렉터리에 덤프를 찾습니다. Linux 코어 덤프�
 코어 덤프에 대 한 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-SQL 덤프에 대 한 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ SQLCMD 사용 하 여 단일 사용자 모드로 SQL Server를 시작 합니다.
 
 2. 오류: 호스트 이름이 15 자 여야 합니다 또는 작습니다.
 
-   SQL Server Debian 패키지를 설치 하려는 컴퓨터의 이름이 15 자를 초과할 때마다 발생 하는 알려진 문제입니다. 컴퓨터의 이름을 변경 이외의 대안이 없습니다 않습니다. 이 작업을 수행 하는 하나의 방법은 호스트 파일을 편집 하 고 컴퓨터를 다시 부팅 하 여 것입니다. 다음 [웹 사이트 가이드](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) 이에 대해 자세히 설명 합니다.
+   SQL Server Debian 패키지를 설치 하려는 컴퓨터의 이름이 15 자를 초과할 때마다 발생 하는 알려진 문제입니다. 컴퓨터의 이름을 변경 이외의 대안이 없습니다 않습니다. 이 작업을 수행 하는 하나의 방법은 호스트 파일을 편집 하 고 컴퓨터를 다시 부팅 하 여 것입니다. 다음 [웹 사이트 가이드](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) 이에 대해 자세히 설명 합니다.
 
 3. 시스템 관리 (SA) 암호를 재설정 합니다.
 
@@ -239,7 +239,7 @@ SQLCMD 사용 하 여 단일 사용자 모드로 SQL Server를 시작 합니다.
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   리소스: [특수 문자](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   리소스: [특수 문자](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

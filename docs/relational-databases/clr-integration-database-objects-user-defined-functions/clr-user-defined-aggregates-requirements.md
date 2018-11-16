@@ -20,24 +20,24 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1defa76a4fb59812165929f91e14bb5fe7d9026d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646211"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662472"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 사용자 정의 집계 - 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약의 구성 합니다 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 네 가지 방법 중 구성 된 새 값을 누적 하는 메커니즘을 포함 합니다. **Init**를 **Accumulate**합니다  **병합**, 및 **종료**합니다. 이러한 요구를 충족 하는 경우 수의 사용자 정의 집계의 활용 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- 자세한 내용은 [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
+ 자세한 내용은 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
   
 ## <a name="aggregation-methods"></a>집계 메서드  
  사용자 정의 집계로 등록된 클래스는 다음과 같은 인스턴스 메서드를 지원해야 합니다. 쿼리 프로세서는 이러한 메서드를 사용하여 집계를 계산합니다.  
   
-|메서드|구문|Description|  
+|메서드|구문|설명|  
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|쿼리 프로세서는 이 메서드를 사용하여 집계 계산을 초기화합니다. 이 메서드는 쿼리 프로세서가 집계하는 각 그룹에 대해 한 번씩 호출됩니다. 쿼리 프로세서는 여러 그룹의 집계를 계산할 때 집계 클래스의 동일한 인스턴스를 다시 사용할 수 있습니다. 합니다 **Init** 메서드가 인스턴스의 이전 사용에서 필요에 따라 정리를 수행 하 고 새 집계 계산을 다시 시작할 수 있도록 합니다.|  
 |**누적**|`public void Accumulate ( input-type value[, input-type value, ...]);`|함수의 매개 변수를 나타내는 1개 이상의 매개 변수. *input_type* 관리 되는 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당 네이티브 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지정한 데이터 형식 *input_sqltype* 에 **CREATE AGGREGATE** 문. 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.<br /><br /> UDT(사용자 정의 형식)의 경우 input-type이 UDT 형식과 동일합니다. 쿼리 프로세서는 이 메서드를 사용하여 집계 값을 누적시킵니다. 이 메서드는 집계되는 그룹의 각 값에 대해 한 번씩 호출됩니다. 쿼리 프로세서 항상 호출이 호출 후에 합니다 **Init** 집계 클래스의 지정 된 인스턴스에서 메서드. 이 메서드 구현은 전달되는 인수 값의 누적을 반영하도록 인스턴스 상태를 업데이트해야 합니다.|  

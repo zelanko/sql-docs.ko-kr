@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 994b6c41476c9780670a9c70b04b9a19329d7afb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50292ea6232a4234cd01e54867ab0ef97c254c6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814311"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665542"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47814311"
   이 예제에서는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정의 암호를 변경하는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
  빌드하기 전에 .C++ 코드를 업데이트하여 사용자 ID, 이전 암호 및 새 암호를 지정합니다.  

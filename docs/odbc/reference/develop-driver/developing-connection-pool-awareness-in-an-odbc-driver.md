@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661752"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버 연결 풀링 서비스를 제공 해야 하는 방법에 대 한 정보를 포함 하는 ODBC 드라이버를 개발 하는 세부 정보를 설명 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "47820191"
 ## <a name="the-connection-rating"></a>연결 평가  
  새 연결에 비해, 풀링된 연결의 일부 연결 정보 (예: 데이터베이스)를 다시 설정 하 여 더 나은 성능을 얻을 수 있습니다. 따라서 하지 못하게 하려는 데이터베이스 이름 키 특성 집합의 수입니다. 그렇지 않은 경우 고객은 다양 한 다른 연결 문자열을 사용 하는 위치 하지 않을 수 있는 중간 계층 응용 프로그램에 적합 한, 각 데이터베이스에 대해 별도 풀을 할 수 있습니다.  
   
- 반환 된 연결이 동일한 응용 프로그램 요청에 있도록 새 응용 프로그램 요청에 따라 일치 하지 않는 특성을 다시 설정 해야의 일부 특성이 일치 하지 않습니다 하는 연결을 다시 사용할 때마다 (SQL_ATTR 특성의 설명을 참조 하세요. _DBC_INFO_TOKEN [SQLSetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59368)). 그러나 이러한 특성을 다시 설정 하면 성능이 떨어질 수 있습니다. 예를 들어, 데이터베이스를 다시 설정 하면 서버는 네트워크 호출을 해야 합니다. 따라서 가능한 경우 완벽 하 게 일치 하는 연결을 다시 사용 합니다.  
+ 반환 된 연결이 동일한 응용 프로그램 요청에 있도록 새 응용 프로그램 요청에 따라 일치 하지 않는 특성을 다시 설정 해야의 일부 특성이 일치 하지 않습니다 하는 연결을 다시 사용할 때마다 (SQL_ATTR 특성의 설명을 참조 하세요. _DBC_INFO_TOKEN [SQLSetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59368)). 그러나 이러한 특성을 다시 설정 하면 성능이 떨어질 수 있습니다. 예를 들어, 데이터베이스를 다시 설정 하면 서버는 네트워크 호출을 해야 합니다. 따라서 가능한 경우 완벽 하 게 일치 하는 연결을 다시 사용 합니다.  
   
  드라이버의 등급 함수는 새 연결 요청을 사용 하 여 기존 연결을 평가할 수 있습니다. 예를 들어 드라이버의 등급 함수 확인할 수 있습니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47820191"
   
  드라이버 관리자의 **SQLAllocHandle** 하 고 **SQLFreeHandle** 이 새 핸들 형식은 허용 하지 것입니다.  
   
- SQL_HANDLE_DBC_INFO_TOKEN 자격 증명과 같은 비밀 정보를 포함할 수 있습니다. 따라서 드라이버를 안전 하 게 지워야 메모리 버퍼 (사용 하 여 [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) 사용 하 여이 핸들을 해제 하기 전에 중요 한 정보가 포함 된 **SQLFreeHandle**합니다. 응용 프로그램의 환경 핸들이 닫힐 때마다 모든 연결 풀을 닫습니다.  
+ SQL_HANDLE_DBC_INFO_TOKEN 자격 증명과 같은 비밀 정보를 포함할 수 있습니다. 따라서 드라이버를 안전 하 게 지워야 메모리 버퍼 (사용 하 여 [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) 사용 하 여이 핸들을 해제 하기 전에 중요 한 정보가 포함 된 **SQLFreeHandle**합니다. 응용 프로그램의 환경 핸들이 닫힐 때마다 모든 연결 풀을 닫습니다.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>드라이버 관리자 연결 풀 알고리즘 등급  
  이 섹션에서는 드라이버 관리자 연결 풀링 등급 알고리즘을 설명 합니다. 드라이버 개발자는 이전 버전과 호환성을 위해 동일한 알고리즘을 구현할 수 있습니다. 이 알고리즘에 가장 적합 한을 사용할 수 없습니다. 이 구체화 해야 알고리즘 기반 구현 (그렇지 않은 경우에이 기능을 구현할 필요가 없습니다).  

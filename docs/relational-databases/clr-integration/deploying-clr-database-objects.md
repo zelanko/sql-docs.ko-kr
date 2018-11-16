@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b2fa1bdf96693a29f0e4e7b5d2d27b35a83c122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639311"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663052"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR 데이터베이스 개체 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47639311"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- 다양 한 유형의 관리 되는 데이터베이스 개체를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [clr 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 [clr 사용자 정의 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)하십시오 [CLR 저장 프로시저](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), 및 [CLR 트리거](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)합니다.  
+ 다양 한 유형의 관리 되는 데이터베이스 개체를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [clr 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 [clr 사용자 정의 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)하십시오 [CLR 저장 프로시저](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), 및 [CLR 트리거](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)합니다.  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>프로덕션 서버에 어셈블리 배포  
  테스트 서버에서 CLR 데이터베이스 개체를 테스트하고 확인하고 나면 프로덕션 서버에 배포할 수 있습니다. 관리 되는 데이터베이스 개체를 디버깅 하는 방법에 대 한 자세한 내용은 참조 하세요. [CLR 데이터베이스 개체 디버깅](../../relational-databases/clr-integration/debugging-clr-database-objects.md)합니다.  

@@ -18,12 +18,12 @@ ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b83b7f4a589bbfbeeb37c1773956773dbef01b11
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2f9fe308986b37108763004e15728de515db1696
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217061"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668432"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 속성(ServerSettings 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.NumberOfFlags [= value]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -21,19 +21,19 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95adea5a61ecc102dae885e9ea526113942a13a5
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671742"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 작업
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 서버 이벤트용 WMI 공급자를 사용하여 프로그래밍하기 전에 고려해야 할 사항에 대한 지침을 제공합니다.  
   
 ## <a name="enabling-service-broker"></a>Service Broker 사용  
- 서버 이벤트용 WMI 공급자는 이벤트에 대한 WQL 쿼리를 대상 데이터베이스의 이벤트 알림으로 변환하는 방식으로 작동합니다. 이벤트 알림의 작동 방식에 대해 알고 있으면 공급자를 프로그래밍할 때 유용합니다. 자세한 내용은 [서버 이벤트용 WMI 공급자 개념](http://technet.microsoft.com/library/ms180560.aspx)을 참조하십시오.  
+ 서버 이벤트용 WMI 공급자는 이벤트에 대한 WQL 쿼리를 대상 데이터베이스의 이벤트 알림으로 변환하는 방식으로 작동합니다. 이벤트 알림의 작동 방식에 대해 알고 있으면 공급자를 프로그래밍할 때 유용합니다. 자세한 내용은 [서버 이벤트용 WMI 공급자 개념](https://technet.microsoft.com/library/ms180560.aspx)을 참조하십시오.  
   
  특히 WMI 공급자가 만드는 이벤트 알림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 서버 이벤트에 대한 메시지를 보내기 때문에 이 서비스는 이벤트가 생성되는 경우에는 반드시 사용할 수 있어야 합니다. 프로그램에서 서버 인스턴스의 이벤트를 쿼리하는 경우 해당 인스턴스의 msdb에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용할 수 있어야 합니다. 그 이유는 이 위치가 공급자가 만든 대상 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스(이름: SQL/Notifications/ProcessWMIEventProviderNotification/v1.0)의 위치이기 때문입니다. 프로그램에서 데이터베이스 또는 특정 데이터베이스 개체의 이벤트를 쿼리하는 경우에는 대상 데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용할 수 있어야 합니다. 응용 프로그램이 배포된 후 해당하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용할 수 있게 설정하지 않으면 기본 이벤트 알림을 통해 생성되는 모든 이벤트가 이벤트 알림에 사용되는 서비스의 큐에 전송되지만 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용할 수 있게 설정할 때까지는 WMI 관리 응용 프로그램에 반환되지 않습니다.  
   
@@ -64,7 +64,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   범위가 큐에 한정되는 이벤트 알림을 생성하려면 최소한 해당 큐에 대해 ALTER 권한이 필요합니다.  
   
- WQL 쿼리의 범위에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)을 참조하십시오.  
+ WQL 쿼리의 범위에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)을 참조하십시오.  
   
  예를 들어 다음과 같은 WQL 쿼리가 포함된 WMI 공급자 응용 프로그램을 생각해 볼 수 있습니다.  
   
@@ -114,6 +114,6 @@ WHERE DatabaseName = "AdventureWorks2012"
  WMI 공급자 서버 이벤트 알림을 만들면 이벤트 알림은 필요한 이벤트 대상 데이터베이스에 대 한 이벤트 알림 이벤트 데이터를 보냅니다 대상 서비스 라는 msdb에 **SQL/알림/ProcessWMIEventProviderNotification /v1.0**합니다. 대상 서비스는 이름이 **WMIEventProviderNotificationQueue** 인 **msdb**큐에 이벤트를 추가합니다. 서비스와 큐 모두 공급자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 처음 연결할 때 동적으로 만들어집니다. 그런 다음 공급자는 이 큐에서 XML 이벤트 데이터를 읽어 MOF(Managed Object Format)로 변환한 후 클라이언트 응용 프로그램에 반환합니다. MOF 데이터는 WQL 쿼리에서 CIM(Common Information Model) 클래스 정의로 요청되는 이벤트의 속성으로 구성되며 각 속성에는 해당되는 CIM 형식이 있습니다. 예를 들어 합니다 `SPID` CIM 형식으로 속성은 반환 **Sint32**합니다. 각 속성의 CIM 형식은 [서버 이벤트용 WMI 공급자 클래스 및 속성](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)의 각 이벤트 클래스 아래에 나열되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 이벤트용 WMI 공급자 개념](http://technet.microsoft.com/library/ms180560.aspx)  
+ [서버 이벤트용 WMI 공급자 개념](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

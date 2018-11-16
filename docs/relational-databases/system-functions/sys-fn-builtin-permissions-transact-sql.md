@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4c94f4df0b79705980d808bd8b59f93dde90869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818065"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660752"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|데이터 정렬|Description|  
+|열 이름|데이터 형식|데이터 정렬|설명|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
 |permission_name|**nvarchar(60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
@@ -86,15 +86,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 |사용 권한 유형|사용 권한 이름|적용되는 보안 개체 또는 클래스|  
 |---------------------|---------------------|-----------------------------------|  
-|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|ALTER ANY MASK<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AAMK|ALTER ANY MASK<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
-|AL|ALTER<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|AL|ALTER<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |AL|ALTER|ASYMMETRIC KEY|  
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
@@ -111,24 +111,24 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|ROUTE|  
 |AL|ALTER|SCHEMA|  
 |AL|ALTER|SEARCH PROPERTY LIST|  
-|AL|ALTER<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|AL|ALTER<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
 |AL|ALTER|User|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
-|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
 |ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -144,8 +144,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|ALTER ANY SECURITY POLICY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALSR|ALTER ANY SERVER ROLE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALSP|ALTER ANY SECURITY POLICY<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALSR|ALTER ANY SERVER ROLE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALSV|ALTER ANY SERVICE|DATABASE|  
@@ -156,11 +156,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AUTH|AUTHENTICATE SERVER|SERVER|  
 |BADB|BACKUP DATABASE|DATABASE|  
 |BALO|BACKUP LOG|DATABASE|  
-|CADB|CONNECT ANY DATABASE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CADB|CONNECT ANY DATABASE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CL|CONTROL|APPLICATION ROLE|  
 |CL|CONTROL|ASSEMBLY|  
 |CL|CONTROL|ASYMMETRIC KEY|  
-|CL|CONTROL<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|CL|CONTROL<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
@@ -177,7 +177,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SCHEMA|  
 |CL|CONTROL|SEARCH PROPERTY LIST|  
 |CL|CONTROL SERVER|SERVER|  
-|CL|CONTROL<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|CL|CONTROL<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
@@ -188,7 +188,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|CREATE AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRAC|CREATE AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -213,7 +213,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
 |CRSO|CREATE SEQUENCE|SCHEMA|  
-|CRSR|CREATE SERVER ROLE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRSR|CREATE SERVER ROLE<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
@@ -224,13 +224,13 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |DL|Delete|DATABASE|  
 |DL|Delete|OBJECT|  
 |DL|Delete|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|OBJECT|  
 |EX|CREATE 문을 실행하기 전에|SCHEMA|  
 |EX|CREATE 문을 실행하기 전에|TYPE|  
 |EX|CREATE 문을 실행하기 전에|XML SCHEMA COLLECTION|  
-|IAL|IMPERSONATE ANY LOGIN<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|IAL|IMPERSONATE ANY LOGIN<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |IM|IMPERSONATE|Login|  
 |IM|IMPERSONATE|User|  
 |IN|INSERT|DATABASE|  
@@ -260,10 +260,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
-|SUS|SELECT ALL USER SECURABLES<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|SUS|SELECT ALL USER SECURABLES<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |TO|TAKE OWNERSHIP|ASSEMBLY|  
 |TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|TO|TAKE OWNERSHIP<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
@@ -278,19 +278,19 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|ROLE|  
 |TO|TAKE OWNERSHIP|ROUTE|  
 |TO|TAKE OWNERSHIP|SCHEMA|  
-|TO|TAKE OWNERSHIP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|TO|TAKE OWNERSHIP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |TO|TAKE OWNERSHIP|SERVICE|  
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|UNMASK<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|UMSK|UNMASK<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |UP|UPDATE|DATABASE|  
 |UP|UPDATE|OBJECT|  
 |UP|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
-|VW|VIEW DEFINITION<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|VW|VIEW DEFINITION<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
@@ -306,15 +306,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ROUTE|  
 |VW|VIEW DEFINITION|SCHEMA|  
 |VW|VIEW DEFINITION|SEARCH PROPERTY LIST|  
-|VW|VIEW DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|VW|VIEW DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
 |VW|VIEW DEFINITION|User|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  

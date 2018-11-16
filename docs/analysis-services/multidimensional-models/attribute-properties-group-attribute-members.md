@@ -1,5 +1,5 @@
 ---
-title: Attribute Members (Discretization) 그룹화 | Microsoft Docs
+title: Attribute Members (Discretization) 그룹 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021760"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813716"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>특성 속성-특성 멤버 그룹화
+# <a name="attribute-properties---group-attribute-members"></a>특성 속성 - 특성 멤버 그룹화
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
   
  특성에 대한 **DiscretizationMethod** 속성은 멤버의 그룹화 방식을 제어합니다.  
   
-|**DiscretizationMethod** 설정|Description|  
+|**DiscretizationMethod** 설정|설명|  
 |--------------------------------------|-----------------|  
 |**없음**|멤버를 표시합니다.|  
 |**자동**|**EqualAreas** 메서드 또는 **Clusters** 메서드 중에서 데이터를 가장 잘 표현하는 메서드를 선택합니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "34021760"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34021760"
   
  `<Bucket name>` 매개 변수는 멤버 또는 멤버 그룹 정보를 멤버 그룹 이름의 일부로 나타내기 위해 일련의 변수를 통합할 수 있는 문자열 식입니다.  
   
-|변수|Description|  
+|변수|설명|  
 |--------------|-----------------|  
 |%{First bucket member}|현재 멤버 그룹에 포함할 첫 번째 멤버의 이름입니다.|  
 |%{Last bucket member}|현재 멤버 그룹에 포함할 마지막 멤버의 이름입니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "34021760"
   
 -   멤버 그룹이 포함된 차원의 차원 테이블이 업데이트된 후 해당 차원이 완전히 처리되면 새로운 멤버 그룹 집합이 생성됩니다. 새 멤버 그룹의 이름과 자식은 원래의 멤버 그룹과 다를 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

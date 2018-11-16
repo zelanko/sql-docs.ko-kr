@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741882"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702371"
 ---
-# <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작-UPDATE CUBE
+# <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 
 
-  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예에 대 한이 블로그 게시물의 "할당 이해"를 참조: [Analysis Services (블로그)로 쓰기 저장 응용 프로그램 빌드](http://go.microsoft.com/fwlink/?LinkId=394977)합니다.  
+  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제에 대 한이 블로그 게시물의 "할당 이해"를 참조 하세요. [Analysis Services (블로그)를 사용 하 여 쓰기 저장 응용 프로그램 빌드](https://go.microsoft.com/fwlink/?LinkId=394977)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,13 +54,13 @@ UPDATE [ CUBE ] Cube_Name
  0에서 1 사이의 10진수 값을 반환하는 유효한 MDX 숫자 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 큐브의 지정된 리프 또는 리프가 아닌 셀의 값을 업데이트할 수 있습니다. 지정된 리프가 아닌 셀 값을 종속되는 여러 리프 셀에 할당할 수도 있습니다. 튜플 식으로 지정되는 셀은 다차원 공간의 유효한 셀일 수 있으며, 리프 셀일 필요가 없습니다. 하지만 셀을 집계 해야는 [Sum](../mdx/sum-mdx.md) 집계 함수 및 셀을 식별 하는 데 사용 되는 튜플의 계산된 멤버를 포함 하지 않아야 합니다.  
+ 큐브의 지정된 리프 또는 리프가 아닌 셀의 값을 업데이트할 수 있습니다. 지정된 리프가 아닌 셀 값을 종속되는 여러 리프 셀에 할당할 수도 있습니다. 튜플 식으로 지정되는 셀은 다차원 공간의 유효한 셀일 수 있으며, 리프 셀일 필요가 없습니다. 그러나 사용 하 여 셀을 집계 해야 합니다는 [합계](../mdx/sum-mdx.md) 집계 함수 및 셀을 식별 하는 데 사용 되는 튜플의 계산된 멤버를 포함할 수 없습니다.  
   
- 개념으로 생각 될 수 있습니다는 **UPDATE CUBE** 문은 일련의 개별 셀 쓰기 저장 작업은 지정 된 합계로 롤업되는 리프 멤버 및 리프가 아닌 셀에 자동으로 생성 하는 서브루틴으로 합니다.  
+ 생각 하면 도움이 될 것을 **UPDATE CUBE** 일련의 지정된 된 합계로 롤업되는 리프 멤버 및 리프가 아닌 셀에 개별 셀 쓰기 저장 작업을 자동으로 생성 하는 하위 루틴으로 문의 합니다.  
   
- 다음은 대 한 할당 방법 설명 합니다.  
+ 다음은 할당의 메서드를 설명 합니다.  
   
- **USE_EQUAL_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 따른 동일 값 할당 됩니다.  
+ **USE_EQUAL_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 따라 같은 값이 할당 됩니다.  
   
 ```  
 <leaf cell value> =   
@@ -75,7 +75,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식을 기반으로 하는 같은 값이 할당 됩니다.  
+ **USE_WEIGHTED_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 기반 하는 같은 값이 할당 됩니다.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
@@ -88,7 +88,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- 가중치 식이 지정 되지 않은 경우는 **UPDATE CUBE** 문은 암시적으로 다음 식을 사용 합니다.  
+ 가중치 식이 지정 하지 않으면 경우는 **UPDATE CUBE** 문은 암시적으로 다음 식을 사용 합니다.  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -99,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  클라이언트 응용 프로그램에서는 잘못된 롤업 값이나 일관적이지 않은 데이터 등의 발생 가능한 예기치 않은 결과를 방지하기 위해 모든 차원에 대한 할당을 동시에 고려해야 합니다.  
   
- 각 **UPDATE CUBE** 할당을 원자 트랜잭션에 있어서 핵심적인 요소로 고려 되어야 합니다. 즉, 식이나 보안 위배 오류 등의 어떤 이유로 인해 할당 작업 중 하나라도 실패하면 전체 UPDATE CUBE 작업이 실패합니다. 개별 할당 작업의 계산을 처리하기 전에 데이터의 스냅숏을 사용하여 결과 계산이 올바른지 확인해야 합니다.  
+ 각 **UPDATE CUBE** 할당 거래 목적에 대 한 원자성을 고려해 야 합니다. 즉, 식이나 보안 위배 오류 등의 어떤 이유로 인해 할당 작업 중 하나라도 실패하면 전체 UPDATE CUBE 작업이 실패합니다. 개별 할당 작업의 계산을 처리하기 전에 데이터의 스냅숏을 사용하여 결과 계산이 올바른지 확인해야 합니다.  
   
 > [!CAUTION]  
 >  정수가 포함된 측정값에서 사용되는 경우 USE_WEIGHTED_ALLOCATION 메서드는 증분적인 반올림 변화로 인한 부정확한 결과를 반환할 수 있습니다.  

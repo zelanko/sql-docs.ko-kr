@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e16a481b0f7b776386dc03fc2b201ae0708958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f718a4412afabd8544c944c31b7e686ebb96fcf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607152"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663252"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>테이블 및 열에 대한 XSD 요소 및 특성의 명시적 매핑
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47607152"
  에 없는 주석이 지정 된 **ContactID** 특성입니다. 따라서 이름이 같은 열에 특성을 매핑하는 기본 매핑이 수행됩니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  

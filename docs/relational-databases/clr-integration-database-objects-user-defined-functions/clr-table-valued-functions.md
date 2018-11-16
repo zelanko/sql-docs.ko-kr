@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93367529fddf407d0ce133785f850b974ee7847d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ed37d62e887bcb9820496a66d65108cb69fbe10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669842"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>예제: SQL Server 쿼리 결과 반환  
- 다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 쿼리하는 테이블 반환 함수를 보여줍니다. 이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 AdventureWorks Light 데이터베이스를 사용합니다. 참조 [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks 다운로드에 대 한 자세한 내용은 합니다.  
+ 다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 쿼리하는 테이블 반환 함수를 보여줍니다. 이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 AdventureWorks Light 데이터베이스를 사용합니다. 참조 [ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks 다운로드에 대 한 자세한 내용은 합니다.  
   
  원본 코드 파일 FindInvalidEmails.cs 또는 FindInvalidEmails.vb를 지정하십시오.  
   

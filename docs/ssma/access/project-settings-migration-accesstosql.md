@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659342"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정을 통해로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  
@@ -88,5 +88,5 @@ SSMA 이전 가장 이전 버전의 액세스 날짜를 수정 해야 하는지 
 데이터 마이그레이션 중에 사용 되는 일괄 처리 크기입니다. 각 일괄 처리 후 트랜잭션이 기록 됩니다. 기본적으로 모든 스키마에 대 한 일괄 처리 크기는 10000입니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

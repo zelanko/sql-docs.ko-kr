@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147308"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701901"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState(MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  서버에서 드릴 함수;에 제공 하는 지원 수준을 확인할 수 있습니다는 XMLA 속성 MdpropMdxDrillFunctions를 쿼리 합니다. 참조 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 세부 정보에 대 한 합니다.  
   
- 참조 [데이터베이스 저널: MDX 집합 함수: The Toggledrillstate () 함수](http://go.microsoft.com/fwlink/?LinkId=517759) 시나리오 및이 함수와 관련 된 예제입니다.  
+ 참조 [데이터베이스 저널: MDX 집합 함수: The Toggledrillstate () 함수](https://go.microsoft.com/fwlink/?LinkId=517759) 시나리오 및이 함수와 관련 된 예제입니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 첫 번째 집합의 Australia 멤버를 드릴다운하고 첫 번째 집합의 United States 멤버를 드릴업합니다.  

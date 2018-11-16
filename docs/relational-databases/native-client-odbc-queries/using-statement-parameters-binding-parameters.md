@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748701"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662492"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>문 매개 변수 사용 - 매개 변수 바인딩
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748701"
   
  명명 된 매개 변수는 사용 하는 경우에 지원 됩니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 문 또는 저장된 프로시저를 실행 하 여 ODBC CALL 이스케이프 시퀀스입니다.  
   
- 하는 경우 **SQL_DESC_NAME** 설정 된 저장된 프로시저 매개 변수의 경우 쿼리의 모든 저장된 프로시저 매개 변수가 설정 해야 **SQL_DESC_NAME**합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 **SQL_DESC_NAME** 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*', 여기서 *이름을* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [이름 (명명 된 매개 변수)에 의해 매개 변수 바인딩](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ 하는 경우 **SQL_DESC_NAME** 설정 된 저장된 프로시저 매개 변수의 경우 쿼리의 모든 저장된 프로시저 매개 변수가 설정 해야 **SQL_DESC_NAME**합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 **SQL_DESC_NAME** 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*', 여기서 *이름을* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [이름 (명명 된 매개 변수)에 의해 매개 변수 바인딩](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>관련 항목  
  [문 매개 변수 사용](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

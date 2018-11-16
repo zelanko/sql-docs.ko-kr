@@ -28,12 +28,12 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eb36afbcfe8d406708719fb7062510fd9f828a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608361"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661662"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 Access 기능 (AccessToSQL)
 모든 액세스 데이터베이스 기능을 사용 하 여 호환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 예약 된 키워드 집합은 및입니다. 문제에 성공적인 마이그레이션을 방해할 수 있습니다 이러한 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 가능한 마이그레이션 문제 및 수행할 수 있는 정보에 대해 자세히 알아보려면 다음 표를 사용 합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "47608361"
   
 |데이터베이스 설정 또는 기능에 액세스|마이그레이션 문제|  
 |--------------------------------------|-------------------|  
-|테이블 액세스에 고유 인덱스를 사용할 필요가 없습니다.|고유 인덱스가 없는 테이블을 마이그레이션된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 마이그레이션 후 테이블을 수정할 수 없습니다. 이 응용 프로그램 호환성 문제가 발생할 수 있습니다.<br /><br />Access 데이터베이스 개체를 변환 하는 경우 출력 창에는 고유 인덱스에 있지 않은 Access 테이블이 나열 됩니다.<br /><br />기본 키에 추가에 대 한 액세스를 구성할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 하는 동안 테이블입니다. 자세한 내용은 [프로젝트 설정 (변환)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)합니다.|  
+|테이블 액세스에 고유 인덱스를 사용할 필요가 없습니다.|고유 인덱스가 없는 테이블을 마이그레이션된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 마이그레이션 후 테이블을 수정할 수 없습니다. 이 응용 프로그램 호환성 문제가 발생할 수 있습니다.<br /><br />Access 데이터베이스 개체를 변환 하는 경우 출력 창에는 고유 인덱스에 있지 않은 Access 테이블이 나열 됩니다.<br /><br />기본 키에 추가에 대 한 액세스를 구성할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 하는 동안 테이블입니다. 자세한 내용은 [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)합니다.|  
 |테이블 액세스 복제 열 경우|복제 시스템 열을 포함 하는 Access 테이블을 마이그레이션된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 마이그레이션 후 Jet 복제 기능이 중단 됩니다.<br /><br />마이그레이션 후 사용 하 여 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 데이터베이스의 동기화 된 복사본을 유지 관리 합니다.|  
 |여러 null 값을 포함 하는 고유 인덱스가 있는 테이블을 액세스 합니다.|여러 null 값을 가진 고유 인덱스가 있는 테이블 액세스를 전송할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 고유 인덱스에 여러 null 허용 하지 않습니다. 이러한 테이블에 대 한 마이그레이션이 실패 합니다.<br /><br />SSMA는 평가 보고서에서이 문제는 플래그입니다. 평가 보고서를 참조 하세요 [변환을 위해 Access 데이터베이스 개체 평가](assessing-access-database-objects-for-conversion-accesstosql.md)합니다.<br /><br />이 문제가 발생할 경우에 기본 키에 중복 된 null 값이 없는지 확인 해야 합니다. 또는 기본 키 또는 여러 개의 null 값을 포함 하는 고유 인덱스를 제거 해야 합니다.|  
-|테이블 액세스의 날짜 값을 포함 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 범위입니다.|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 1 1753 년 1 월 12 월 31 범위의 날짜를 수락 하는 형식 9999만 합니다. 액세스 허용 31 Dec 1 년 1 월 100 범위의 날짜가 9999입니다.<br /><br />SSMA는 평가 보고서에서이 문제는 플래그입니다. 평가 보고서를 참조 하세요 [변환을 위해 Access 데이터베이스 개체 평가](assessing-access-database-objects-for-conversion-accesstosql.md)합니다.<br /><br />SSMA에서 날짜를 확인 하는 방법을 구성할 수 있습니다 개는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 범위입니다. 자세한 내용은 [프로젝트 설정 (마이그레이션)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)합니다.|  
+|테이블 액세스의 날짜 값을 포함 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 범위입니다.|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 1 1753 년 1 월 12 월 31 범위의 날짜를 수락 하는 형식 9999만 합니다. 액세스 허용 31 Dec 1 년 1 월 100 범위의 날짜가 9999입니다.<br /><br />SSMA는 평가 보고서에서이 문제는 플래그입니다. 평가 보고서를 참조 하세요 [변환을 위해 Access 데이터베이스 개체 평가](assessing-access-database-objects-for-conversion-accesstosql.md)합니다.<br /><br />SSMA에서 날짜를 확인 하는 방법을 구성할 수 있습니다 개는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 범위입니다. 자세한 내용은 [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)합니다.|  
 |액세스에 대 한 인덱스 길이 900 바이트를 초과 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스는 인덱스 키 열의 총 크기는 900 바이트 한도 갖습니다. 큰 인덱스를 사용 하는 테이블에 액세스 하는 경우 SSMA 경고가 표시 됩니다.<br /><br />데이터 마이그레이션을 사용 하 여 계속 하면 마이그레이션이 실패할 수 있습니다.|  
 |액세스 개체 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 키워드 또는 특수 문자를 포함 합니다.|액세스 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 예약 된 키워드 및 특수 문자 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 이름이 지정 된 개체를 수락할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 키워드 또는 "select" 같은 대괄호로 묶은 또는 따옴표 붙은 식별자를 사용 하거나 [선택].p 경우 특수 문자를 포함 합니다. 자세한 내용은 나오는 "구분 기호로 분리 됨 식별자 (데이터베이스 엔진)" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.<br /><br />**참고:** 구분 식별자에 따옴표를 사용 하려면 SET quoted_identifier가 ON 이어야 합니다.<br /><br />예를 들어 `CREATE TABLE [schema](c1 [FOR])` 는 유효한 문이 **스키마** 하 고 **에 대 한** 은 예약 된 키워드. 또한 `CREATE TABLE [xxx*yyy](c1 x&y)` 는 테이블 및 열 이름에 특수 문자를 포함 하는 경우에 유효한 문이  **\&#42;** 하 고 **&amp;** 합니다.<br /><br />또한 이러한 개체를 참조 하는 모든 쿼리 대괄호 또는 따옴표를 사용 하 여 이름을 사용 해야 합니다. 예를 들어, 쿼리 `SELECT * FROM schema` 실패 합니다. 올바른 쿼리는: `SELECT * FROM [schema]`합니다.<br /><br />Access 데이터베이스 개체를 변환할 때는 키워드 또는 특수 문자를 사용 하는 모든 액세스 테이블 출력 창에 나열 됩니다. Access에서 테이블을 수정 하 고 제거 하 고 수는 데이터베이스를 다시 추가 또는 쿼리를 사용 하 여 대괄호 또는 따옴표로 구분 식별자에는 해당 개체를 참조 하는 쿼리를 수정할 수 있습니다. 쿼리를 수정 하면 액세스 응용 프로그램 오류를 반환할 수도 다른 문제가 있습니다.|  
 |필드 크기는 기본 키/외래 키 관계에서 다릅니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 데이터 형식 또는 foreign key 제약 조건 크기는 열을 연결 하는 Jet 기능을 지원 하지 않습니다.<br /><br />출력 창의 모든 기본 키/외래 키 제약 조건을에 변환 되지 것입니다 표시 Access 데이터베이스 개체를 변환 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 일치 하 고 다음 제거 하 고 있도록 Access 데이터베이스를 다시 추가 데이터 형식 및 열 액세스에서 크기를 변경할 수 있습니다. 이러한 제약 조건에서 생성 되지 것입니다 하지만 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

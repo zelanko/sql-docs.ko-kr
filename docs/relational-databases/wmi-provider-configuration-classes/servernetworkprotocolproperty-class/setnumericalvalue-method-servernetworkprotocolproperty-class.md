@@ -18,12 +18,12 @@ ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cdb4e60dfeb4cc9ee372e578b9f8c9dfdcf14a12
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 0d61c99f046e1030ef00925e13bcd39b6abeddb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666079"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue 메서드(ServerNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.SetNumericalValue(NumValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*NumValue*|A **uint32** 현재 속성의 새 값을 지정 하는 값입니다.|  
   
@@ -52,6 +52,6 @@ object.SetNumericalValue(NumValue)
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

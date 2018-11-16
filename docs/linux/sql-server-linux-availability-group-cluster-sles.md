@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383738"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670622"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 가이드는 SQL Server의 Enterprise Server SLES (SUSE Linux) 12 SP2에 대 한 3 개 노드 클러스터를 만드는 지침을 제공 합니다. 고가용성을 위해 Linux에서 가용성 그룹을 필요한 3 개의 노드가-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. SUSE 클러스터링 계층 더해서 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
+이 가이드는 SQL Server의 Enterprise Server SLES (SUSE Linux) 12 SP2에 대 한 3 개 노드 클러스터를 만드는 지침을 제공 합니다. 고가용성을 위해 Linux에서 가용성 그룹을 필요한 3 개의 노드가-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. SUSE 클러스터링 계층 더해서 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](https://clusterlabs.org/)합니다. 
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하세요. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "49383738"
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   자세한 내용은 참조는 [SLES 관리 가이드-기타 섹션](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)합니다.
+   자세한 내용은 참조는 [SLES 관리 가이드-기타 섹션](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)합니다.
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 용 SQL Server 로그인 만들기
@@ -104,7 +104,7 @@ Linux 서버에서 가용성 그룹을 구성 하 고 그런 다음 클러스터
 
 ## <a name="set-up-the-first-node"></a>첫 번째 노드 설정
 
-   참조 [SLES 설치 지침](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   참조 [SLES 설치 지침](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. 으로 로그인 `root` 물리적 또는 가상 머신 클러스터 노드로 사용 하려면.
 2. 부트스트랩 스크립트를 실행 하 여 시작 합니다.
@@ -220,7 +220,7 @@ Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 �
 
 노드 수준 펜싱 노드 리소스 실행 되지 않도록 보장 합니다. 노드를 다시 설정 하 여 이렇게 하 고는 Pacemaker 구현의 STONITH (약자인 "헤드에 있는 다른 노드가 특이") 이라고 합니다. 키를 누릅니다. Pacemaker는 다양 한 서버는 무정전 전원 공급 장치 또는 관리 인터페이스 카드와 같은 장치 펜싱을 지원 합니다.
 
-자세한 내용은 [부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 하 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
+자세한 내용은 [부터 Pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 하 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
 
 클러스터 초기화 시 STONITH 구성이 감지 되 면 비활성화 됩니다. 다음 명령을 실행 하 여 나중에 활성화할 수 있습니다.
 

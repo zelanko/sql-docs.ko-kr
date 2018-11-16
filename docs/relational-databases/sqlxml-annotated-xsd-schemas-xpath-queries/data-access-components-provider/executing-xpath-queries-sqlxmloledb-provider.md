@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aada8746e4953de11d989831c7ed28fbb48c415f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 814d4efd49c5a579551a5cec39f5866018d50871
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675242"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47596143"
  이 예제 ADO 응용 프로그램에서는 XPath 쿼리(루트)를 XSD 매핑 스키마(MySchema.xml)에 대해 지정합니다. 스키마에는  **\<연락처 >** 사용 하 여 요소 **ContactID**를 **FirstName**, 및 **LastName** 특성입니다. 이 스키마에서는 기본 매핑이 수행됩니다. 즉, 요소 이름은 같은 이름의 테이블에 매핑되고 단순 유형의 특성은 같은 이름의 열에 매핑됩니다.  
   
 ```  
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

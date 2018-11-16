@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d0ffa48cd8e3658cade73d715245c01cb30f659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661832"
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,8 +103,8 @@ go
  다음 쿼리는 AdditionalContactInfo 열에 대해 지정 합니다 **xml** Contact 테이블에서 형식입니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. 합니다 \<telephoneNumber >, \<호출기 >, 다른 노드는 문서의 아무 곳 이나 나타날 수 있습니다. 모두 포함 하는 시퀀스를 생성 하는 쿼리를 \<telephoneNumber > 뒤에, 컨텍스트 노드의 자식을 \<호출기 > 자식입니다. `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
- 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+ 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('  
    for $a in /aci:AdditionalContactInfo   
@@ -118,13 +117,13 @@ WHERE ContactID=3
  다음은 결과입니다.  
   
 ```  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3333</act:number>  
 </act:telephoneNumber>  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
-<act:pager xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:pager xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>999-555-1244</act:number>  
   <act:SpecialInstructions>  
 Page only in case of emergencies.  

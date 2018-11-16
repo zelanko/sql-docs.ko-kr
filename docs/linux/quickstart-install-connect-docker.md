@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: b0b123fbf42c81dd4f755855a2c71b0bb799a2a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272611"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667012"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Docker 사용 하 여 빠른 시작: 실행 SQL Server 컨테이너 이미지
 
@@ -94,9 +94,9 @@ any changes to one section should be duplicated in the other-->
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
+   | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서는 SQL Server 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1433 포트에 노출 됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
@@ -176,9 +176,9 @@ SELECT @@SERVERNAME,
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
+   | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서는 SQL Server 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1433 포트에 노출 됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |

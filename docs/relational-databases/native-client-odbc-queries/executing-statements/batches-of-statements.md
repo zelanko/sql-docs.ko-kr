@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 651ff25ac3331820f93fae7cdd5fc85567738107
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac0a6d48c8a3492dcbbb260e56405165220c4fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851978"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662582"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  일괄 처리 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 세미콜론 (;)에 전달 된 단일 문자열에 두 개 이상의 문을 포함 **SQLExecDirect** 하거나 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+  일괄 처리 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 세미콜론 (;)에 전달 된 단일 문자열에 두 개 이상의 문을 포함 **SQLExecDirect** 하거나 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 SQLExecDirect(hstmt,   

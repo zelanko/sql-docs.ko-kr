@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c362a9d1797a5b770aaabf6dbd19761033545e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664222"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47682891"
 ## <a name="diagnostics"></a>진단  
  하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 관련 SQLSTATE SQLPutData에 대 한 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Error|설명|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|보낼 바이트에는 데이터의 길이 지정 된 경우 응용 프로그램에 예를 들어 SQL_LEN_DATA_AT_EXEC를 사용 하 여 (*n*) 위치 *n* 를 통해 응용 프로그램에서 지정 된 바이트의 총 수는 0 보다 크면 SQLPutData 지정된 된 길이 일치 해야 합니다.|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47682891"
  **SQLPutData** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLPutData 함수](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

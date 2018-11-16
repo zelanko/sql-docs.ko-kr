@@ -18,12 +18,12 @@ ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4eaf0dd335db21ddbdd06d89babd89876235a92b
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 675e66b7e223e0b3218cc917a8c127afdf0e8f87
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217051"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667743"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 메서드(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.SetOrderValue(OrderValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*OrderValue*|순서 값을 설정하는**int32** 값입니다.|  
   
@@ -52,6 +52,6 @@ object.SetOrderValue(OrderValue)
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 속성(순서 탭)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [클라이언트 프로토콜 속성(순서 탭)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

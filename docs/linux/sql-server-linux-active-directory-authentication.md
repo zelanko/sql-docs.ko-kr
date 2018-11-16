@@ -11,12 +11,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 85684fdb257dea2d4b3c06537c59e4c1a997aaaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658501"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
 
@@ -37,7 +37,7 @@ ms.locfileid: "47631597"
 >
 > 구성 하려는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 타사 AD 공급자를 사용 하도록 linux에서 하세요 [타사 Active Directory 공급자를 사용 하 여 Linux의 SQL Server를 사용 하 여](./sql-server-linux-active-directory-third-party-providers.md)입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 AD 인증을 구성 하기 전에 해야 합니다.
 
@@ -163,7 +163,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    
    > SQL Server 사용자 계정 및 그룹 보안 식별자 (SID)에 매핑하기 위한 SSSD 및 NSS를 사용 합니다. SSSD 구성 하 고 AD 로그인을 성공적으로 만들려면 SQL Server에 대 한 순서 대로 실행 해야 합니다. Realmd 일반적으로이 도메인에 가입의 일부로 자동으로 않지만 일부 경우에 이렇게 해야 별도로 있습니다.
    >
-   > 구성 하려면 다음을 확인 [SSSD 수동으로](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > 구성 하려면 다음을 확인 [SSSD 수동으로](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
   
 5. 도메인에서 사용자에 대 한 정보를 수집할 이제 수 및 해당 사용자로 Kerberos 티켓을 얻을 수 있습니다는 확인 합니다.

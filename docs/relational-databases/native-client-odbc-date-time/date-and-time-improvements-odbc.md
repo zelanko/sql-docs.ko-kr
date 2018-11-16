@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79a8d1fb25d37638f637f3b9ffe4ff8d2fdf5209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6669ab863896acd9633171fd4c3e7330f9edd74f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685511"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659812"
 ---
 # <a name="date-and-time-improvements-odbc"></a>날짜 및 시간 기능 향상(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47685511"
  [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
   
- [메타 데이터 &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [메타 데이터 &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
  반환 되는 구현 매개 변수 설명자 (IPD) 구현 행 설명자 (IRD) 필드와 및 열 메타 데이터에서 반환 된 정보를 설명 **SQLColumns** 및 **SQLProcedureColumns**. 또한 데이터 형식에서 반환 된 메타 데이터를 설명 **SQLGetTypeInfo**.  
   
  [날짜/시간 데이터 형식 변환 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a2f53826756ae0caa194080bdc328d08eb492ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666992"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ SELECT @x.query('local-name(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      local-name(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -77,7 +76,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
   /AWMI:root//*[local-name() = "Location"]') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -86,7 +85,7 @@ WHERE ProductModelID=7
  쿼리는 <`root`> 요소의 모든 <`Location`> 요소 자식을 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [노드 함수](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [노드 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [namespace-uri 함수 &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

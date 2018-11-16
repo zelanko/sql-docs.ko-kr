@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677802"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ SQL Server 용 ODBC 드라이버에 자세한 내용은 참조 [Windows의 SQL S
 
 ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 Windows 7 SDK에 대 한 표준 ODBC에 추가 된 세 가지 기능을 지원 합니다.  
 
--   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](http://go.microsoft.com/fwlink/?LinkID=191493)합니다.  
+-   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](https://go.microsoft.com/fwlink/?LinkID=191493)합니다.  
 
--   C 데이터 형식 확장성. 자세한 내용은 [odbc에서 C 데이터 형식](http://go.microsoft.com/fwlink/?LinkID=191495)합니다.  
+-   C 데이터 형식 확장성. 자세한 내용은 [odbc에서 C 데이터 형식](https://go.microsoft.com/fwlink/?LinkID=191495)합니다.  
 
      이 기능을 지원 하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQLGetDescField 반환할 수 있습니다 **SQL_C_SS_TIME2** (에 대 한 **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**) 대신 **SQL_C_BINARY**응용 프로그램에서 ODBC 3.8을 사용 하는 경우. 자세한 내용은 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
 
--   호출 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](http://go.microsoft.com/fwlink/?LinkID=191494)합니다.  
+-   호출 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](https://go.microsoft.com/fwlink/?LinkID=191494)합니다.  
 
  다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 동작 변경에 대해 설명합니다.  
 

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826351"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673532"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47826351"
 > [!CAUTION]  
 >  설치용 많은 수의 데이터베이스 또는 로그인의 큰 숫자 sys.event_log에서 활동 높은 CPU 사용량, 성능에서 제한 하면 하 고 로그인 오류가 발생할 수 있습니다. Sys.event_log의 쿼리 문제에 참가할 수 있습니다. Microsoft는 협력 하 여이 문제를 해결 합니다. 한편이 문제의 영향을 줄이기 위해 sys.event_log의 쿼리를 제한 합니다. NewRelic SQL Server 플러그 인을 사용자가 방문 [Microsoft Azure SQL Database 플러그 인 조정 및 성능 조정](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) 추가 구성 정보에 대 한 합니다.  
   
- `sys.event_log` 뷰는 다음 열을 포함 합니다.  
+ `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -75,12 +75,12 @@ ms.locfileid: "47826351"
 |**연결**|**connection_failed**|9|**재구성**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**연결**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
 |**연결**|**connection_terminated**|1|**재구성**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
-|**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 [엔진 제한](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
-|**연결**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
-|**연결**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
-|**연결**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
-|**연결**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션 로그 공간 사용량이 너무 많아 세션이 종료되었습니다. 단일 트랜잭션에서 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
-|**연결**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 메모리 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 처리할 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
+|**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 [엔진 제한](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
+|**연결**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
+|**연결**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
+|**연결**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
+|**연결**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션 로그 공간 사용량이 너무 많아 세션이 종료되었습니다. 단일 트랜잭션에서 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
+|**연결**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 메모리 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 처리할 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**엔진**|**교착 상태**|0|**교착 상태**|2|교착 상태가 발생했습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -224,6 +224,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Azure SQL Database의 확장된 이벤트](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database의 확장된 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

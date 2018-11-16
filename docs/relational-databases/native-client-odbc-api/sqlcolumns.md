@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6117efa06effea24fda8fac4c1567bbe8a6c390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697771"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664832"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "47697771"
   
  **SQLColumns** 는 정적 서버 커서에 대해 실행할 수 있습니다. 실행 하려고 **SQLColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
  Odbc 2. *x* 응용 프로그램에서 와일드 카드를 사용 하지 *TableName*하십시오 **SQLColumns** 에 대 한 정보가 테이블 이름이 일치를 반환 *TableName*현재 사용자가 소유 하 고 있습니다. 현재 사용자와 이름이 같은 없는 테이블을 소유 하는 경우는 *TableName* 매개 변수를 **SQLColumns** 일치 하는 테이블 이름이 다른 사용자가 소유한 모든 테이블에 대 한 정보를 반환 합니다  *TableName* 매개 변수입니다. Odbc 2. *x* 와일드 카드를 사용 하 여 응용 프로그램 **SQLColumns** 이름이 일치 하는 모든 테이블을 반환 *TableName*합니다. Odbc 3. *x* 응용 프로그램 **SQLColumns** 이름이 일치 하는 모든 테이블을 반환 *TableName* 소유자 또는 와일드 카드 사용 여부에 관계 없이 합니다.  
   
  다음 표에서는 결과 집합에서 반환되는 열을 나열합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR를 반환 합니다 **varchar (max)** 데이터 형식입니다.|  
 |TYPE_NAME|에 대해 "varchar", "varbinary" 또는 "nvarchar"를 반환 합니다 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** 데이터 형식입니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "47697771"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
  두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 SQLColumns에 대 한 집합에 특정 열이 추가 되었습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
 |SS_IS_COLUMN_SET|**smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "47697771"
  ODBC의 스파스 열에 대 한 자세한 내용은 참조 하세요. [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLColumns 함수](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 함수](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

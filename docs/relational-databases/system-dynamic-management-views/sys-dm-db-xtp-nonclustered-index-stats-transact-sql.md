@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf04bac335e35088c1faf7a29b2e07b1ad324add
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa87aa3514af538f55965b00efe8f5965f5c753f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602591"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674312"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47602591"
   
  다시 시도 횟수가 많으면 동시성 오류가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원을 호출합니다.  
   
- 메모리 액세스에 최적화 된, 비클러스터형 인덱스에 대 한 자세한 내용은 참조 하세요. [SQL Server 메모리 내 OLTP 내부 개요](http://t.co/T6zToWc6y6), 17 페이지입니다.  
+ 메모리 액세스에 최적화 된, 비클러스터형 인덱스에 대 한 자세한 내용은 참조 하세요. [SQL Server 메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 17 페이지입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|개체의 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 최적화 테이블의 ID입니다.|  

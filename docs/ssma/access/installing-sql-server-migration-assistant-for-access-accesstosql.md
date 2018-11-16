@@ -23,17 +23,17 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8dd4dcfc08366e78f11fc8b10fa269f17bb09e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708441"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664122"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>액세스 (AccessToSQL)에 대 한 SQL Server Migration Assistant 설치
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 위한 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 최신 버전의 SSMA 연결할 설치 필수 구성 요소에 대 한 정보 및 설치, 라이선스, 제거 및 SSMA 업그레이드에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA를 설치 하기 전에 시스템에는 다음 요구 사항을 충족 하는지 확인 합니다.  
   
 -   Windows 7 또는 이후 버전 또는 Windows Server 2008 또는 이상 버전.  
@@ -46,12 +46,12 @@ SSMA를 설치 하기 전에 시스템에는 다음 요구 사항을 충족 하�
   
 -   Microsoft 데이터 액세스 개체 (DAO) 공급자 버전 12.0 또는 14.0입니다. 2007 Microsoft Office 2010 제품에서 DAO 공급자를 설치 하거나 Microsoft 웹 사이트에서 다운로드할 수 있습니다.  
   
--   SQL Server Native Access 클라이언트 (SNAC) 버전 10.5 이상을 SQL Azure 마이그레이션에 대 한 합니다. SNAC의 최신 버전을 가져올 수 있습니다 [Microsoft® SQL Server® 2008 R2 기능 팩](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   SQL Server Native Access 클라이언트 (SNAC) 버전 10.5 이상을 SQL Azure 마이그레이션에 대 한 합니다. SNAC의 최신 버전을 가져올 수 있습니다 [Microsoft® SQL Server® 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=196940)  
   
 -   4GB RAM (권장)입니다.  
   
 ## <a name="installing-ssma"></a>SSMA 설치  
-SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](http://aka.ms/ssmaforaccess)합니다.  
+SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](https://aka.ms/ssmaforaccess)합니다.  
   
 최신 버전을 다운로드 한 후 SSMA를 설치 하기 전에 설치 파일에서 추출 해야 합니다.
 

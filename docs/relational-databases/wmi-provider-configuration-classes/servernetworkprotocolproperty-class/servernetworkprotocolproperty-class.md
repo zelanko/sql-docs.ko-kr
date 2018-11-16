@@ -18,12 +18,12 @@ ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d24ce1da092627ead79026c7e9185ac2cebc5d73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db2a59bb231be6c8ba4c78b74fa9cbc399eab74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770281"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667292"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "47770281"
 -   현재 속성에 대한 플래그를 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

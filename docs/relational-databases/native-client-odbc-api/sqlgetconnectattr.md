@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ee6b6b3a879d78ff69be237d218dcb089f0fdfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 153b5f73ea753639a7617f5de6d942dae40fadda
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660541"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성 아닐 때까지 연결 된 또는 사용 하 여 특성을 설정한 후에 대해 보고 하는 값 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성에 대해 보고되는 값은 연결을 설정하거나 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 사용하여 특성을 설정할 때까지 보장되지 않습니다.  
   
  이 항목에서는 읽기 전용 특성을 나열합니다. 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성을 참조 하세요 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47766601"
 > [!NOTE]  
 >  표준 ODBC 연결 특성 SQL_ATTR_CONNECTION_DEAD는 가장 최근 연결 상태를 반환합니다. 이 상태는 현재 연결 상태가 아닐 수도 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|서버에 대한 연결이 손실되었습니다.|  
 |SQL_CD_FALSE|연결이 열려 있으며 문 처리에 사용할 수 있습니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "47766601"
   
  자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_ERROR|연결하지 못했습니다.|  
 |SQL_SUCCESS|연결이 성공했습니다. 출력 버퍼에서 클라이언트 연결 ID를 찾습니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "47766601"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 특성은 현재 드라이버 성능 통계가 포함된 SQLPERF 구조에 대한 포인터를 반환합니다. 성능 로깅이 사용되지 않는 경우**SQLGetConnectAttr** 에서 NULL을 반환합니다. SQLPERF 구조의 통계는 드라이버에서 동적으로 업데이트되지 않습니다. 성능 통계를 새로 고쳐야 할 때마다 **SQLGetConnectAttr** 을 호출합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |NULL|성능 로깅이 사용되지 않습니다.|  
 |다른 모든 값|SQLPERF 구조에 대한 포인터입니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "47766601"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 특성은 사용자 데이터 포인터를 검색합니다. 사용자 데이터는 클라이언트 소유의 메모리에 저장되고 연결별로 기록됩니다. 사용자 데이터 포인터가 설정되지 않은 경우 NULL 포인터인 SQL_UD_NOTSET가 반환됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|사용자 데이터 포인터가 설정되어 있지 않습니다.|  
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "47766601"
  Spn에 대 한 자세한 내용은 참조 하세요. [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   

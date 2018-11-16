@@ -20,12 +20,12 @@ ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f6bd0247da9244d6a0754e437f2c71b2105fd03b
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: fe233e9d55a35e44ff6739acbba42c74aad10937
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031770"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663312"
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,6 +81,6 @@ fNull
 -   *cbLen* 인수가 잘못된 경우  
   
 ## <a name="remarks"></a>Remarks  
- **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 컴파일한 DLL을 설치하기 전에 해당 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+ **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 컴파일한 DLL을 설치하기 전에 해당 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
   

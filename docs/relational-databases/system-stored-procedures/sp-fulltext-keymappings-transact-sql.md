@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deece034b6ef4f6159a34705b21e39d8279f36f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660483"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  키 값에 해당하는 내부 문서 ID(DocId)입니다. 잘못된 *docid* 값은 결과를 반환하지 않습니다.  
   
  *key*  
- 지정한 테이블의 전체 텍스트 키 값입니다. 잘못된 *key* 값은 결과를 반환하지 않습니다. 전체 텍스트 키 값에 대 한 자세한 내용은 [전체 텍스트 인덱스 관리](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)합니다.  
+ 지정한 테이블의 전체 텍스트 키 값입니다. 잘못된 *key* 값은 결과를 반환하지 않습니다. 전체 텍스트 키 값에 대 한 자세한 내용은 [전체 텍스트 인덱스 관리](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)합니다.  
   
 > [!IMPORTANT]  
 >  한 개, 두 개 또는 세 개의 매개 변수를 사용하는 방법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
@@ -60,7 +60,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
 |Key|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
@@ -90,7 +90,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>예  
   
 > [!NOTE]  
->  이 예제에서는 사용 하 여 섹션을 `Production.ProductReview` 목차는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스. 제공 하는 예제를 실행 하 여이 인덱스를 만들 수 있습니다 합니다 `ProductReview` 테이블의 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
+>  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. 제공 하는 예제를 실행 하 여이 인덱스를 만들 수 있습니다 합니다 `ProductReview` 테이블의 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>1. 모든 Key 및 DocId 값 가져오기  
  다음 예제에서는 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 지역 변수를 만들고 문을 `@table_id` 의 ID를 할당할 수는 `ProductReview` 테이블로 해당 값입니다. 이 예제를 실행 **sp_fulltext_keymappings** 지정 `@table_id` 에 대 한 합니다 *table_id* 매개 변수입니다.  

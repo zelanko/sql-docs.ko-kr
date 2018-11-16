@@ -10,12 +10,12 @@ ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 551808268b4f6eb8a0d5c16c14bcb16ba977ce61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96ade7125c0d03963e8e012ed72bdb8fdef492cf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662352"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server-Azure SQL Database (SybaseToSQL)로 SAP ASE 데이터베이스 마이그레이션
 SQL Server Migration Assistant (SSMA)에 대 한 SAP 적응형 Server Enterprise (ASE)는 SAP ASE 데이터베이스를 신속 하 게 마이그레이션할 수 있도록 포괄적인 환경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database. SSMA SAP ase를 사용 하 여 있습니다 수 데이터베이스 개체 및 데이터를 검토, 평가 마이그레이션에 대 한 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database.  
@@ -31,17 +31,17 @@ SAP ASE 데이터베이스에서 개체 및 데이터를 성공적으로 마이�
   
 3.  [SQL Server 인스턴스에 연결](connecting-to-sql-server-sybasetosql.md) 나 [Azure SQL Database의 인스턴스에 연결](connecting-to-azure-sql-db-sybasetosql.md)합니다.  
   
-4.  [SQL Server에 SAP ASE 데이터베이스 스키마 매핑 Azure SQL Database 데이터베이스 스키마 /](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268)합니다.  
+4.  [SQL Server에 SAP ASE 데이터베이스 스키마 매핑 Azure SQL Database 데이터베이스 스키마 /](https://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268)합니다.  
   
 5.  필요에 따라 [평가 보고서를 만들](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) 변환에 대 한 데이터베이스 개체를 평가 하는 변환 시간 예측 합니다.  
   
-6.  [SQL Server로 SAP ASE 데이터베이스 스키마를 변환 / Azure SQL Database 스키마](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)합니다.  
+6.  [SQL Server로 SAP ASE 데이터베이스 스키마를 변환 / Azure SQL Database 스키마](https://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)합니다.  
   
-7.  [SQL Server로 변환 된 데이터베이스 개체를 로드 / Azure SQL Database](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  
+7.  [SQL Server로 변환 된 데이터베이스 개체를 로드 / Azure SQL Database](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  
   
     스크립트를 저장 하 고 실행 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 또는 데이터베이스 개체를 동기화 합니다.  
   
-8.  [SQL Server로 데이터를 마이그레이션 / Azure SQL Database](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)합니다.  
+8.  [SQL Server로 데이터를 마이그레이션 / Azure SQL Database](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)합니다.  
   
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   

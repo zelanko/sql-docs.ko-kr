@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665832"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 
@@ -104,8 +104,8 @@ ms.locfileid: "47796721"
 >자동 장애 조치(failover)는 위치 제약 조건을 추가하지 않으므로 정리가 필요하지 않습니다. 
 
 자세한 내용은 다음을 참조하세요.
-- [Red Hat - Managing Cluster Resources](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)(Red Hat - 클러스터 리소스 관리)
-- [Pacemaker-수동으로 리소스 이동](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
+- [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)(Red Hat - 클러스터 리소스 관리)
+- [Pacemaker-수동으로 리소스 이동](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 관리 가이드-리소스](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> 강제 장애 조치 

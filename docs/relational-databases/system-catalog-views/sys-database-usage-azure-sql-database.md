@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b5735a0829579a612999381e3108717ac1f7430c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822068"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656742"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47822068"
   
  합니다 **sys.database_usage** 뷰는 다음 열을 포함 합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |Time|사용 이벤트가 발생한 날짜입니다.|  
 |sku|데이터베이스에 대 한 서비스 계층의 형식: **웹**를 **비즈니스**를 **기본**를 **표준**, **Premium**|  
@@ -51,7 +51,7 @@ ms.locfileid: "47822068"
  합니다 **sys.database_usage** 보기 구독의 각 날짜에 대해 하나의 행을 반환 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Database 가격 정보](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Windows Azure SQL Database의 계정 및 청구](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL Database 가격 정보](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Windows Azure SQL Database의 계정 및 청구](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

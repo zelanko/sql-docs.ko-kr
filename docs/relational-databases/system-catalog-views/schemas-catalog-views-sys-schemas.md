@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aaff898ab07a4d314eb08cd72cf2c896d5ed7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a676eb3e9bf67d14e45ebc9973f5be7998e19cf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649021"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665792"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>스키마 카탈로그 뷰-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47649021"
 > [!NOTE]  
 >  데이터베이스 스키마는 XML 문서의 콘텐츠 모델을 정의하는 XML 스키마와는 다릅니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|스키마의 이름입니다. 데이터베이스 내에서 고유합니다.|  
 |**schema_id**|**int**|스키마의 ID입니다. 데이터베이스 내에서 고유합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47649021"
   
 ## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [스키마 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+ [스키마 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

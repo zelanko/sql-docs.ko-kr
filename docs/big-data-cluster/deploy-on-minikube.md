@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221576"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702351"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성
 
@@ -39,7 +39,7 @@ ms.locfileid: "51221576"
 
 1. 하이퍼바이저를 설치 하는 아직 없는 경우 지금 설치 합니다.
    - OS X 설치 [xhyve 드라이버](https://git.k8s.io/minikube/docs/drivers.md)하십시오 [VirtualBox](https://www.virtualbox.org/wiki/Downloads), 또는 [VMware Fusion](https://www.vmware.com/products/fusion)합니다.
-   - Linux의 경우 설치 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 하거나 [KVM](http://www.linux-kvm.org/)합니다.
+   - Linux의 경우 설치 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 하거나 [KVM](https://www.linux-kvm.org/)합니다.
    - Windows를 설치 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 하거나 [Hyper-v](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)합니다. Hyper-v에서 구성 된 외부 스위치가 없으면 그런 다음 외부 네트워크 액세스 권한이 있는 하나를 만듭니다.  참조 하는 방법 [minikube 용 hyper-v의 외부 스위치를 만드는](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)합니다.
 
 ## <a name="install-minikube"></a>Minikube를 설치 합니다.

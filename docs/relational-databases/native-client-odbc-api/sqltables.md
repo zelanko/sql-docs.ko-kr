@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e5bb94b8b99881784dba458969ba4b24789ee85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d23edc53d6eb4f27fa1e836b999dd86809bba9a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669272"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47839811"
   
  사용 가능한 카탈로그, 스키마 및 테이블 형식 보고서를 SQLTables는 특수 한 빈 문자열 (길이가 0 인 바이트 포인터) 사용 합니다. 빈 문자열은 기본값(NULL 포인터)이 아닙니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
  SQLTables 반환에 대 한 정보가 테이블 이름이 일치 *TableName* 고 현재 사용자가 소유 합니다.  
   
@@ -58,7 +58,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLTables 함수](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 함수](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a054ef8015379d7360f513ce075c1001bf08d898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844971"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663592"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47844971"
 |**process_kernel_time_ms**|**bigint**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 커널 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**process_user_time_ms**|**bigint**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 걸린 총 시간(밀리초)입니다. 이 값은 서버에 있는 모든 프로세서의 시간을 포함하므로 단일 프로세서 클럭보다 클 수 있습니다. Null을 허용하지 않습니다.|  
 |**time_source**|**int**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 벽시계 시간(wall clock time)을 검색하는 데 사용하는 API를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 에 대해 설명 합니다 **time_source** 열입니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER = 합니다 [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER = 합니다 [멀티미디어 타이머](http://go.microsoft.com/fwlink/?LinkId=163094) 벽 시계 시간을 검색 하는 API입니다.|  
+|**time_source_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 에 대해 설명 합니다 **time_source** 열입니다. Null을 허용하지 않습니다.<br /><br /> QUERY_PERFORMANCE_COUNTER = 합니다 [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API 벽 시계 시간을 검색 합니다.<br /><br /> MULTIMEDIA_TIMER = 합니다 [멀티미디어 타이머](https://go.microsoft.com/fwlink/?LinkId=163094) 벽 시계 시간을 검색 하는 API입니다.|  
 |**virtual_machine_type**|**int**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 가상화된 환경에서 실행되고 있는지 여부를 나타냅니다.  Null을 허용하지 않습니다.<br /><br /> 0 = 없음<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 에 대해 설명 합니다 **virtual_machine_type** 열입니다. Null을 허용하지 않습니다.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신 내에서 실행 중이 아닙니다.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 하이퍼바이저 내에서 실행되고 있습니다(하드웨어 지원 가상화를 의미함). Hyper_V 역할을 설치한 경우 하이퍼바이저가 OS를 호스팅하므로 호스트 OS에서 실행되는 인스턴스는 하이퍼바이저에서 실행됩니다.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 Microsoft Virtual PC와 같이 하드웨어 길잡이가 적용되지 않는 가상 컴퓨터 내에서 실행되고 있습니다.|  
 |**softnuma_configuration**|**int**|**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 방식으로 NUMA 노드가 구성 되어을 지정 합니다. Null을 허용하지 않습니다.<br /><br /> 0 = OFF 하드웨어 기본값을 나타냅니다.<br /><br /> 1 = 자동 소프트 NUMA<br /><br /> 2 = 레지스트리를 통해 수동 SOFT-NUMA|  

@@ -12,23 +12,23 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb6967f2e4ca514209355901caf1a163dbf8415d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72bf3354dc0709a2b3baf645c78c2a8ce6df4f22
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754550"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667242"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML이 SQL Server에 설치되지 않음
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 모든 버전의 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 기본 설치에 포함되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](https://www.microsoft.com/en-us/download/details.aspx?id=30403)합니다.  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 모든 버전의 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 기본 설치에 포함되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](https://www.microsoft.com/download/details.aspx?id=30403)합니다.  
   
  응용 프로그램 실행 되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLXML 4.0이 필요 하 고 다운로드 하 여 SQLXML 4.0 SP1을 설치 해야 합니다.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>SQLOLEDB 및 SQL Server Native Client OLE DB 공급자를 사용하는 SQLXML 4.0 SP1의 새로운 데이터 형식 관련 동작  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SQLXML을 사용 하는 개발자는 데 사용할 수 있습니다 다음 데이터 형식을 도입 되었습니다.  
   
--   **날짜**  
+-   **Date**  
   
 -   **Time**  
   

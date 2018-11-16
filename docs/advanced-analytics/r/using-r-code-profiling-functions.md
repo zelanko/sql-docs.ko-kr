@@ -1,5 +1,5 @@
 ---
-title: 프로 파일링 함수 (SQL Server 기계 학습) R 코드를 사용 하 여 | Microsoft Docs
+title: R 코드 프로 파일링 함수 (SQL Server Machine Learning)를 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202175"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703971"
 ---
-# <a name="using-r-code-profiling-functions"></a>R 코드 프로 파일링 함수를 사용 하 여
+# <a name="using-r-code-profiling-functions"></a>R 코드 프로파일링 함수 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 이 항목에서는 시작하기 위한 몇 가지 기본 리소스 목록을 제공합니다. 전문가인 경우에는 Hadley Wickham의 서적 ""Advanced R""에서 [Performance](http://adv-r.had.co.nz/Performance.html) 장을 참조하는 것이 좋습니다.
+SQL Server 리소스 및 도구를 사용하여 R 스크립트 실행을 모니터링할 뿐 아니라 다른 R 패키지에서 제공된 성능 도구를 사용하여 내부 함수 호출에 대한 추가 정보를 가져올 수 있습니다. 이 항목에서는 시작하기 위한 몇 가지 기본 리소스 목록을 제공합니다. 전문가 지침에 장에 권장 [성능](https://adv-r.had.co.nz/Performance.html) "Advanced R" Hadley wickham이 책에서.
 
 ## <a name="using-rprof"></a>RPROF 사용
 
@@ -66,7 +66,7 @@ help("Sys.time")
 
 기본적으로 설치되는 Microsoft R Open에 대한 설명서에는 프로파일링 및 디버그를 자세히 설명하는 R 언어에 대한 확장 개발 매뉴얼이 포함됩니다.
 
-장은 온라인도 사용할 수 있습니다: [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+이 장에도 온라인 [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R 도움말 파일 위치
 

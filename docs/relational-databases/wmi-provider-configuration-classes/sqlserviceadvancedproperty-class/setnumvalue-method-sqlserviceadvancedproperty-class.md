@@ -18,12 +18,12 @@ ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3d706a26dc057b6139c231b77b8a8b56a31bdebd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 26f70bd5b9080560d5ae3be40850abef256ed307
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662192"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 메서드(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.SetNumValue(NumValue)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*NumValue*|고급 속성의 값을 지정하는 **uint32** 값입니다.|  
   
@@ -53,6 +53,6 @@ object.SetNumValue(NumValue)
  속성을 숫자 값으로 설정하려면 속성 값 형식이 숫자여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

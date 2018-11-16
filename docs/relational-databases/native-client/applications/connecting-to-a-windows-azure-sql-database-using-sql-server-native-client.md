@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d555596fd9a15f985b8b75fe4b56d89d377191f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92184be8a4195ce5b246cd957ba675fcb2fe43a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720231"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665213"
 ---
 # <a name="connecting-to-a-windows-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client를 사용하여 Microsoft Azure SQL Database에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  에 연결 하는 방법을 보여 주는 샘플을 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 참조 [개발: 방법 항목 (Windows Azure SQL 데이터베이스)](http://msdn.microsoft.com/library/ee621787.aspx).  
+  에 연결 하는 방법을 보여 주는 샘플을 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 참조 [개발: 방법 항목 (Windows Azure SQL 데이터베이스)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>SQL Database에 연결할 때 알려진 문제  
  다음은 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 알려진 문제입니다.  

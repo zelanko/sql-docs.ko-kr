@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657462"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "47681711"
   
  CLR 통합의 관리되는 데이터베이스 개체 유형은 다양합니다. 이러한 개체에 대 한 일반적인 정보를 참조 하세요 [공용 언어 런타임 (CLR) 통합을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)합니다. 이러한 개체가 실행 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만듭니다는 **AppDomain** 있는 로드 고 필요한 코드를 실행 합니다. 에 대 한 격리 수준을 **AppDomain** 하나인 **AppDomain** 소유자 마다 데이터베이스당 합니다. 즉, 사용자가 소유한 모든 CLR 개체는 항상 동일한 실행 **AppDomain** 데이터베이스별 (다른 데이터베이스에 CLR 데이터베이스 개체는 다른 응용 프로그램 도메인에서 실행에 CLR 데이터베이스 개체를 등록 하는 사용자) 경우입니다. **AppDomain** 코드가 실행 완료 된 후 제거 되지 않습니다. 나중에 실행하도록 메모리에 캐시됩니다. 이 성능을 향상 시킵니다.  
   
- 자세한 내용은 [응용 프로그램 도메인](http://go.microsoft.com/fwlink/p/?LinkId=299658)합니다.  
+ 자세한 내용은 [응용 프로그램 도메인](https://go.microsoft.com/fwlink/p/?LinkId=299658)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|주소를 **AppDomain**합니다. 관리 되는 모든 데이터베이스 사용자가 소유 하는 개체가 동일한 항상 로드 됩니다 **AppDomain**합니다. 이 현재 로드 된 모든 어셈블리를 조회 하려면이 열을 사용할 수 있습니다 **AppDomain** 에 **sys.dm_clr_loaded_assemblies**합니다.|  
 |**appdomain_id**|**int**|ID를 **AppDomain**합니다. 각 **AppDomain** 고유 ID가 있습니다.|  
@@ -59,13 +59,13 @@ ms.locfileid: "47681711"
   
 ## <a name="appdomain-initialization"></a>AppDomain 초기화  
   
-|State|Description|  
+|상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|합니다 **AppDomain** 만들어집니다.|  
   
 ## <a name="appdomain-usage"></a>AppDomain 사용  
   
-|State|Description|  
+|상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|런타임에서 **AppDomain** 여러 사용자가 사용할 준비가 되었습니다.|  
 |E_APPDOMAIN_SINGLEUSER|합니다 **AppDomain** DDL 작업에 사용할 준비가 되었습니다. 공유된 AppDomain이 DDL 작업이 아닌 CLR 통합 실행에 사용된다는 점에서 E_APPDOMAIN_SHARED와 다릅니다. 이러한 AppDomain은 동시에 실행되는 다른 작업과 격리됩니다.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47681711"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 정리  
   
-|State|Description|  
+|상태|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR가 언로드를 요청 합니다 **AppDomain**이므로 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었으므로 합니다.|  
 |E_APPDOMAIN_UNLOADED|CLR가 언로드 합니다 **AppDomain**합니다. 이로 인해는 에스컬레이션 프로시저의 결과 일반적으로 **ThreadAbort**를 **OutOfMemory**, 또는 사용자 코드에서 처리 되지 않은 예외입니다.|  

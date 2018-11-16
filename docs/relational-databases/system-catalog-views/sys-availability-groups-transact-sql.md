@@ -21,19 +21,19 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b55828992f748579351120bebe4e2043d377b9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3bd8688a2e9b66eab7187720d96d823f8d943c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668678"
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   SQL Server의 로컬 인스턴스에 가용성 복제본을 호스팅하는 각 가용성 그룹에 대 한 행을 반환 합니다. 각 행에는 가용성 그룹 메타데이터의 캐시된 복사본이 포함됩니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|가용성 그룹의 GUID(Globally Unique Identifier)입니다.|  
 |**name**|**sysname**|가용성 그룹의 이름으로, WSFC(Windows Server 장애 조치(failover) 클러스터) 내에서 고유해야 하는 사용자 지정 이름입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "47699481"
   
 |값|실패 조건|  
 |-----------|-----------------------|  
-|1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 종료 되었습니다.<br /><br /> WSFC 장애 조치 클러스터에 연결 하기 위한 가용성 그룹의 임대가-서버 인스턴스로부터 ACK를 받지 때문에 만료 됩니다. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.|  
+|1|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 종료 되었습니다.<br /><br /> WSFC 장애 조치 클러스터에 연결 하기 위한 가용성 그룹의 임대가-서버 인스턴스로부터 ACK를 받지 때문에 만료 됩니다. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.|  
 |2|다음과 같은 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> <br /><br /> -인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 지정 및 클러스터에 연결 하지 **health_check_timeout** 가용성 그룹의 임계값을 초과 합니다.<br /><br /> -가용성 복제본이 실패 상태입니다.|  
 |3|분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.<br /><br /> 이것은 기본값입니다.|  
 |4|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  

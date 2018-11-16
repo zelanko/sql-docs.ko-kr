@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633911"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676342"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성
 
@@ -38,8 +38,8 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 이 섹션에서는 FCI에 대 한 노드로 사용할 서버에서 iSCSI 초기자를 구성 하는 방법을 설명 합니다. Ubuntu 및 RHEL 지침 작동 해야 합니다.
 
 지원 되는 배포에 대 한 iSCSI 초기자에 대 한 자세한 내용은 다음 링크를 참조 하세요.
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다. iSCSI 해야 전용 네트워크에서 인식 하 고 해당 네트워크를 사용 하는 iSCSI를 구성 하므로 합니다. 실행할 `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` 여기서 `<iSCSIIfaceName>` 네트워크에 대 한 고유 또는 친숙 한 이름입니다. 다음 예제에서는 `iSCSINIC`:

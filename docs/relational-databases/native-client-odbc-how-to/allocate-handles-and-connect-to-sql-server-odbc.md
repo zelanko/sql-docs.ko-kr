@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfccae77af978ad0422d6eae0ca965624c8ee615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677382"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47602671"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
   
-3.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
+3.  호출 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
 4.  호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 사용 하 여 **특성** SQL_ATTR_ODBC_VERSION으로 설정 하 고 **ValuePtr** 응용 프로그램은 ODBC 3.x 형식 함수를 사용 하 여 나타내려면 SQL_OV_ODBC3으로 설정 호출합니다.  
   
-5.  필요에 따라 호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) 환경 옵션을 가져오려고 합니다.  
+5.  필요에 따라 호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) 환경 옵션을 가져오려고 합니다.  
   
-6.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_DBC 연결 핸들을 할당 합니다.  
+6.  호출 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_DBC 연결 핸들을 할당 합니다.  
   
 7.  필요에 따라 호출할 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 가져오려고 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47602671"
 13. 호출 **SQLFreeHandle** 사용 하 여를 **HandleType** SQL_HANDLE_ENV 환경 핸들입니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에 대 한 호출을 보여 줍니다 **SQLDriverConnect** 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 있습니다. 불완전 한 연결 문자열을 전달 하 여 **SQLDriverConnect**, ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 발생 합니다.  

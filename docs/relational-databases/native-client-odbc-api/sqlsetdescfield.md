@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6659f2abe2a167ece55aa8d6a9bbc99065f56613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91fd10869af91ff3ef6ab31fffdd0d9a8105d6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606762"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677492"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47606762"
   SQLSetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 설명자 필드 설정에 사용할 수 있습니다. 사용 가능한 필드에 대 한 정보를 참조 하세요 [테이블 반환 매개 변수 설명자 필드](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) 하 고 [테이블 반환 매개 변수 구성 열의 설명자 필드](../../relational-databases/native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 테이블 반환 매개 변수 열은 설명자 헤더 필드 SQL_SOPT_SS_PARAM_FOCUS가 SQL_DESC_TYPE이 SQL_SS_TABLE로 설정된 레코드의 서수로 설정된 경우에만 사용할 수 있습니다. SQL_SOPT_SS_PARAM_FOCUS에 대 한 자세한 내용은 참조 하세요. [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)합니다.  
+ 테이블 반환 매개 변수 열은 설명자 헤더 필드 SQL_SOPT_SS_PARAM_FOCUS가 SQL_DESC_TYPE이 SQL_SS_TABLE로 설정된 레코드의 서수로 설정된 경우에만 사용할 수 있습니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 참조하십시오.  
   
  테이블 반환 매개 변수가 아닌 매개 변수의 서 수에 SQL_SOPT_SS_PARAM_FOCUS를 설정 하려고 시도 SQLSetStmtAttr SQL_ERROR를 반환 하 고 sqlstate 진단 레코드가 생성 됩니다 = HY024 및 "잘못 된 특성 값이"입니다. SQL_SOPT_SS_PARAM_FOCUS는 SQL_ERROR가 반환될 때 변경되지 않습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47606762"
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlsetdescfield-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescField 지원  
- ODBC에서 날짜/시간 기능이 향상되었습니다. 새 날짜/시간 유형에 대해 제공 된 설명자 필드에 대 한 정보를 참조 하세요 [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)합니다.  
+ ODBC에서 날짜/시간 기능이 향상되었습니다. 새로운 날짜/시간 형식에 제공되는 설명자 필드에 대한 자세한 내용은 [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)를 참조하십시오.  
   
  자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47606762"
  자세한 내용은 [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   
