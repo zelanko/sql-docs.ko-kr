@@ -14,12 +14,12 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 571b521ed41828b60a385df312e7aab1130c8e08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80151d60b14bc582b8be7c8fbf229cc795a74d3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627261"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606307"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47627261"
 |2|[!INCLUDE[tsql](../../includes/tsql-md.md)] 및 Win32 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 엔진 구성 - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
- [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+ [데이터베이스 엔진 구성 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
+ [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

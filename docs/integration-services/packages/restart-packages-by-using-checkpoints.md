@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703201"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637740"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47703201"
 > [!NOTE]  
 >  같은 패키지에서 검사점 및 트랜잭션을 사용하면 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 패키지가 실패하고 검사점에서 다시 시작되면 패키지에서 이미 성공적으로 커밋한 트랜잭션을 반복할 수 있습니다.  
   
- For Loop 및 Foreach Loop 컨테이너에 대한 검사점 데이터는 저장되지 않습니다. 패키지를 다시 시작할 때 For Loop 및 Foreach Loop 컨테이너와 그 자식 컨테이너는 다시 실행됩니다. 루프에 있는 자식 컨테이너가 성공적으로 실행되면 검사점 파일에 기록되지 않고 다시 실행됩니다. 자세한 내용 및 해결 방법은 [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](http://go.microsoft.com/fwlink/?LinkId=241633)를 참조하십시오.  
+ For Loop 및 Foreach Loop 컨테이너에 대한 검사점 데이터는 저장되지 않습니다. 패키지를 다시 시작할 때 For Loop 및 Foreach Loop 컨테이너와 그 자식 컨테이너는 다시 실행됩니다. 루프에 있는 자식 컨테이너가 성공적으로 실행되면 검사점 파일에 기록되지 않고 다시 실행됩니다. 자세한 내용 및 해결 방법은 [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](https://go.microsoft.com/fwlink/?LinkId=241633)를 참조하십시오.  
   
  패키지를 다시 시작하면 패키지는 구성을 다시 로드하는 대신 검사점 파일에 기록된 구성 정보를 사용합니다. 이렇게 하면 패키지가 실패한 시점과 동일한 구성으로 다시 실행될 수 있습니다.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703201"
     
 ## <a name="external-resources"></a>외부 리소스  
   
--   social.technet.microsoft.com의 기술 문서 - [장애 조치(Failover) 또는 실패 이후 SSIS 패키지 자동 다시 시작](http://go.microsoft.com/fwlink/?LinkId=200407)  
+-   social.technet.microsoft.com의 기술 문서 - [장애 조치(Failover) 또는 실패 이후 SSIS 패키지 자동 다시 시작](https://go.microsoft.com/fwlink/?LinkId=200407)  
   
--   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](http://go.microsoft.com/fwlink/?LinkId=241633)  
+-   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](https://go.microsoft.com/fwlink/?LinkId=241633)  

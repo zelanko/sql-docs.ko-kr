@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dfda8e563b604f265692e0d2dde4d77755cdccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688691"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558830"
 ---
 # <a name="model-database"></a>model 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,33 +53,33 @@ ms.locfileid: "47688691"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
-|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
-|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
-|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
-|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
-|ARITHABORT|OFF|사용자 계정 컨트롤|  
-|AUTO_CLOSE|OFF|사용자 계정 컨트롤|  
-|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_SHRINK|OFF|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
+|AUTO_CLOSE|OFF|예|  
+|AUTO_CREATE_STATISTICS|ON|예|  
+|AUTO_SHRINK|OFF|예|  
+|AUTO_UPDATE_STATISTICS|ON|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|아니오|  
-|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
-|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 예<br /><br /> 사용자 계정 컨트롤|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 예<br /><br /> 예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|OFF|아니오|  
 |ENCRYPTION|OFF|아니오|  
 |MIXED_PAGE_ALLOCATION|ON|아니오|  
-|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
-|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
-|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
-|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
-|READ_COMMITTED_SNAPSHOT|OFF|사용자 계정 컨트롤|  
-|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|사용자 계정 컨트롤|  
-|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
+|NUMERIC_ROUNDABORT|OFF|예|  
+|PAGE_VERIFY|CHECKSUM|예|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
+|READ_COMMITTED_SNAPSHOT|OFF|예|  
+|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 다름*|예|  
+|RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|DISABLE_BROKER|아니오|  
 |TRUSTWORTHY|OFF|아니오|  
   
