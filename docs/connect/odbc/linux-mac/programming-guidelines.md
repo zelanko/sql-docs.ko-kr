@@ -10,39 +10,39 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613088"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602188"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS 및 Linux 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 프로그래밍 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client([SQL Server Native Client(ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))를 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 Windows Data Access Components의 ODBC를 기반으로 합니다([ODBC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+macOS 및 Linux 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 프로그래밍 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))를 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 Windows Data Access Components의 ODBC를 기반으로 합니다([ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 ODBC를 사용 하 고 여러 활성 결과 집합 (MARS) 및 기타 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 하 여 특정 기능 `/usr/local/include/msodbcsql.h` unixODBC 헤더를 포함 한 후 (`sql.h`를 `sqlext.h`를 `sqltypes.h`, 및 `sqlucode.h`). 그런 다음, Windows ODBC 응용 프로그램에서 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관련 항목에 대해 동일한 기호화된 이름을 사용합니다.
 
 ## <a name="available-features"></a>사용 가능한 기능  
-ODBC([SQL Server Native Client(ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
+ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151))에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 설명서의 다음 섹션은 macOS 및 Linux 기반 ODBC 드라이버를 사용할 때 유용합니다.  
 
--   [SQL Server와 통신(ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [SQL Server와 통신(ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [연결 및 쿼리 시간 제한 지원](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [커서](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [날짜/시간 기능 향상(ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [쿼리 실행(ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [날짜/시간 기능 향상(ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [쿼리 실행(ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [오류 및 메시지 처리](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos 인증](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [큰 CLR 사용자 정의 형식(ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
--   [트랜잭션 수행(ODBC)(분산 트랜잭션 제외)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [결과 처리(ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [큰 CLR 사용자 정의 형식(ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
+-   [트랜잭션 수행(ODBC)(분산 트랜잭션 제외)](https://msdn.microsoft.com/library/ms131706.aspx)  
+-   [결과 처리(ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [저장 프로시저 실행](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [스파스 열 지원(ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
+-   [스파스 열 지원(ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL 암호화](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [테이블 반환 매개 변수](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [명령 및 데이터 API용 UTF-8 및 UTF-16](http://msdn.microsoft.com/library/ff878241.aspx)
+-   [명령 및 데이터 API용 UTF-8 및 UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [카탈로그 함수 사용](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>지원되지 않는 기능
@@ -58,7 +58,7 @@ MacOS 및 Linux에서 ODBC 드라이버의이 릴리스에서 제대로 작동 �
 -   분산 트랜잭션(SQL_ATTR_ENLIST_IN_DTC 특성이 지원되지 않음)  
 -   데이터베이스 미러링  
 -   FILESTREAM  
--   [SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=234099)에 설명된 ODBC 드라이버 성능 프로파일링 및 성능과 관련된 연결 특성은 다음과 같습니다.  
+-   [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099)에 설명된 ODBC 드라이버 성능 프로파일링 및 성능과 관련된 연결 특성은 다음과 같습니다.  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -66,7 +66,7 @@ MacOS 및 Linux에서 ODBC 드라이버의이 릴리스에서 제대로 작동 �
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect  
--   SQL_C_INTERVAL_YEAR_TO_MONTH와 같은 C 간격 유형([데이터 형식 식별자 및 설명자](http://msdn.microsoft.com/library/ms716351(VS.85).aspx)에 설명됨)
+-   SQL_C_INTERVAL_YEAR_TO_MONTH와 같은 C 간격 유형([데이터 형식 식별자 및 설명자](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)에 설명됨)
 -   SQLSetConnectAttr 함수의 SQL_ATTR_ODBC_CURSORS 특성에 대한 SQL_CUR_USE_ODBC 값입니다.
 
 ## <a name="character-set-support"></a>문자 집합 지원

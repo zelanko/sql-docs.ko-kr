@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822211"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291759"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

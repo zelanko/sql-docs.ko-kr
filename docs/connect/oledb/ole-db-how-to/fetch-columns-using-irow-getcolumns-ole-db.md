@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: bce9eac6761abb7b07722e69c2cd84013bc72914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724161"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600083"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47724161"
 -   한 열에 두 번 액세스하는 방법. 처음에는 실제 열 너비를 가져오고 다음에는 실제 데이터에 액세스합니다. DBCOLUMNACCESS 구조에서 **pData**가 NULL이고 **cbMaxLen**이 0이면 **IRow**-**>GetColumns()** 호출에서 실제 열 길이만 반환합니다. 이 경우 같은 열에 대해 **IRow->GetColumns()** 를 다시 호출하여 실제 데이터를 검색할 수 있습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>IRow::GetColumns를 사용하여 열을 인출하려면  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47724161"
   
  DBCOLUMNACCESS 구조에서 pData가 NULL이고 cbMaxLen이 0이면 IRow->GetColumns 호출에서 실제 열 길이만 반환합니다. 이 경우 같은 열에 대해 IRow->GetColumns를 다시 호출하여 실제 데이터를 검색할 수 있습니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   

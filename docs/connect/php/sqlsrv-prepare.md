@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a293ff4bd2eae7f1e54914c805e4e180ce17fb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669521"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602923"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -219,7 +219,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에는 입력된 매개 변수로 10 진수 값을 바인딩하는 방법을 보여 줍니다.  

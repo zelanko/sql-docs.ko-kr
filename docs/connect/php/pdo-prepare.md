@@ -11,12 +11,12 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca5e1a4d0dd3f76b3fabefa6549eb644a894845a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 583ed80add549b5d90cff2aba24e25fb6e2050f9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745141"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606403"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -227,5 +227,5 @@ PDO_SQLSRV 드라이버에서 지정 된 인코딩은 먼저 확인 `PDO::bindPa
 ## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

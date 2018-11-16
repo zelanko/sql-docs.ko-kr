@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810151"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604363"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,17 +57,17 @@ DSN에 연결 하는 경우 추가할 수도 있습니다 **Trusted_Connection =
 
 Kerberos 자격 증명이 설계에 따라 만료되므로 응용 프로그램이 서비스로 실행되는 경우 계속해서 서비스 가용성을 보장하도록 자격 증명을 갱신합니다. ODBC 드라이버를 갱신 하지 않으면 자격 증명 자체; 있는지는 `cron` 작업 또는 정기적으로 만료 되기 전에 자격 증명을 갱신 하는를 실행 하는 스크립트입니다. 각 갱신 마다 암호를 요구를 방지 하려면 keytab 파일을 사용할 수 있습니다.  
   
-[Kerberos 구성 및 사용](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 은 Linux에서 서비스를 Kerberize하는 방법에 대해 자세하게 설명합니다.
+[Kerberos 구성 및 사용](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 은 Linux에서 서비스를 Kerberize하는 방법에 대해 자세하게 설명합니다.
   
 ## <a name="tracking-access-to-a-database"></a>데이터베이스에 대한 액세스 추적
 
-시스템 계정을 사용할 때 데이터베이스 관리자는 데이터베이스에 대한 액세스의 감사 내역을 만들어 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스할 수 있습니다.  
+시스템 계정을 사용할 때 데이터베이스 관리자는 데이터베이스에 대한 액세스의 감사 내역을 만들어 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 액세스할 수 있습니다.  
   
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 시스템 계정을 사용하고 보안 컨텍스트를 가장하기 위한 Linux 기능은 없습니다. 그러므로 사용자를 확인하기 위해 필요한 작업이 더 이상 없습니다.
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 로그인할 때 시스템 계정을 사용하고 보안 컨텍스트를 가장하기 위한 Linux 기능은 없습니다. 그러므로 사용자를 확인하기 위해 필요한 작업이 더 이상 없습니다.
   
 시스템 계정이 아닌 사용자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 활동을 감사하려면 응용 프로그램이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**를 사용해야 합니다.  
   
-응용 프로그램 성능을 향상하려면 응용 프로그램이 통합 인증 및 감사를 사용하는 연결 풀링을 사용하면 됩니다. 그러나 연결 풀링, 통합 인증 및 감사를 함께 사용하면 unixODBC 드라이버 관리자가 서로 다른 사용자에게 풀링 연결을 다시 사용하도록 허용하기 때문에 보안 위험이 생깁니다. 자세한 내용은 [ODBC 연결 풀링](http://www.unixodbc.org/doc/conn_pool.html)을 참조하세요.  
+응용 프로그램 성능을 향상하려면 응용 프로그램이 통합 인증 및 감사를 사용하는 연결 풀링을 사용하면 됩니다. 그러나 연결 풀링, 통합 인증 및 감사를 함께 사용하면 unixODBC 드라이버 관리자가 서로 다른 사용자에게 풀링 연결을 다시 사용하도록 허용하기 때문에 보안 위험이 생깁니다. 자세한 내용은 [ODBC 연결 풀링](https://www.unixodbc.org/doc/conn_pool.html)을 참조하세요.  
 
 다시 사용하기 전에 `sp_reset_connection`을 실행하여 응용 프로그램이 풀링 연결을 다시 설정해야 합니다.  
 
@@ -83,7 +83,7 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 응용 프로그램�
   
 -   응용 프로그램 서버를 다른 데이터베이스로 인증하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]은 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   
@@ -126,7 +126,7 @@ Linux 또는 macOS 컴퓨터의 시간 및 시간 Kerberos 키 배포 센터 (KD
 
 Kerberos 인증이 실패하는 경우 Linux 또는 macOS 기반 ODBC 드라이버가 NTLM 인증을 사용하지 않습니다.  
 
-Active Directory를 사용 하 여 Linux 또는 macOS 컴퓨터를 인증 하는 방법에 대 한 자세한 내용은 참조 하세요. [Active Directory를 사용 하 여 Linux 클라이언트 인증](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) 고 [ActiveDirectory와통합OSX에대한모범사례](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Kerberos를 구성 하는 방법에 대 한 자세한 내용은 참조는 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)합니다.
+Active Directory를 사용 하 여 Linux 또는 macOS 컴퓨터를 인증 하는 방법에 대 한 자세한 내용은 참조 하세요. [Active Directory를 사용 하 여 Linux 클라이언트 인증](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) 고 [ActiveDirectory와통합OSX에대한모범사례](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Kerberos를 구성 하는 방법에 대 한 자세한 내용은 참조는 [MIT Kerberos 설명서](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)합니다.
 
 ## <a name="see-also"></a>참고 항목  
 [프로그래밍 지침](../../../connect/odbc/linux-mac/programming-guidelines.md)

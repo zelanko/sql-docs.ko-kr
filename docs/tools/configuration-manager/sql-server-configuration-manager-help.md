@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48d376d197684dbe0a9267fcbde39afa81417fd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc654782c02536b4a03f19669f1f7e345a016b30
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720401"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657262"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47720401"
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자로 구성할 수 없습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]는 구성 관리자로 구성할 수 없습니다.  
   
 ## <a name="services"></a>서비스  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 서비스를 관리합니다. 이러한 태스크의 대부분은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 대화 상자를 사용하여 수행할 수도 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 자신이 관리하는 서비스에 대해 서비스 계정 변경 시 올바른 권한을 적용하는 등 Windows 서비스 대화 상자에서는 지원하지 않는 작업을 추가로 지원합니다. 일반 Windows 서비스 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 구성할 경우 서비스가 작동하지 않을 수도 있습니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "47720401"
  [SQL Server 서비스](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 네트워크 구성](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 구성](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [네트워크 프로토콜 선택](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

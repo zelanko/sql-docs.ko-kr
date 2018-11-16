@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997c952ed127005f23b57654f1c0b9da033c14f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18016780c53575b0416d9a0aa7a8f4499c41de51
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609591"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603713"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -55,7 +55,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
   
 -   64비트 SQLLEN/SQLULEN용으로 빌드된 64비트 UnixODBC 2.3.0 드라이버 관리자입니다. 이후 버전의 64비트 UnixODBC 드라이버 관리자는 Linux 기반 ODBC 드라이버로 지원되지 않습니다. 자세한 내용은 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 을 참조하세요.  
   
--   ODBC Driver for **Red Hat Enterprise Linux 5(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
+-   ODBC Driver for **Red Hat Enterprise Linux 5(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -63,7 +63,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC Driver for **Red Hat Enterprise Linux 6(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
+-   ODBC Driver for **Red Hat Enterprise Linux 6(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)에서 다운로드할 수 있습니다.  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -71,7 +71,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC Driver for **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)에서 다운로드할 수 있습니다.  
+-   ODBC Driver for **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** 에는 다음 패키지가 필요하며 [Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)에서 다운로드할 수 있습니다.  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  

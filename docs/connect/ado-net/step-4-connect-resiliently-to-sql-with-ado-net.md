@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119810"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607103"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 
@@ -39,7 +39,7 @@ ms.locfileid: "49119810"
   
 프로그램이 일시적 오류와 지속적인 오류를 구별 해야 합니다. 일시적인 오류는 일시적인 네트워크 문제 등의 짧은 시간 내 지울 수 있는 오류 조건입니다.  프로그램에 대상 데이터베이스 이름 맞춤법 오류가-이 경우 "이러한 데이터베이스가 없습니다." 오류는 유지 하 고 짧은 기간 내 지우는 수 없는 경우 영구 오류의 예로 것입니다.  
   
-일시적인 오류로 분류 되는 오류 번호 목록에서 제공 됩니다. [SQL Database 클라이언트 응용 프로그램에 대 한 오류 메시지](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+일시적인 오류로 분류 되는 오류 번호 목록에서 제공 됩니다. [SQL Database 클라이언트 응용 프로그램에 대 한 오류 메시지](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>2 단계: 만들기 및 샘플 응용 프로그램 실행  
   
@@ -317,4 +317,4 @@ ms.locfileid: "49119810"
   
 ## <a name="next-steps"></a>Next Steps  
   
-다른 모범 practicies 및 디자인 지침을 탐색 하려면 방문 [SQL Database에 연결: 링크, 모범 사례 및 디자인 지침](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+다른 모범 practicies 및 디자인 지침을 탐색 하려면 방문 [SQL Database에 연결: 링크, 모범 사례 및 디자인 지침](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

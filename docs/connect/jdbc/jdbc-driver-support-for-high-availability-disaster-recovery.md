@@ -11,12 +11,12 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aefb03c667d870800a67f49c50baccf2230d7e2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b101070aaaef8a0e287bf02d943359d9fca8de67
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836171"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605483"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,7 +58,7 @@ note 하십시오.
   
  가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **multiSubnetFailover=true**를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
   
- 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 대 한 자세한 내용은 참조 하세요. [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)합니다.  
+ 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 대 한 자세한 내용은 참조 하세요. [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)합니다.  
   
  다음 지침에 따라 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결하십시오.  
   

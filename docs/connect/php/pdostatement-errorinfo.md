@@ -11,12 +11,12 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ada0e81599b2f44a00d1964f9c5bfc67ab6cda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc81be8628145c63a3d9c2296846ca19b0cc39b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810551"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605623"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -60,5 +60,5 @@ print_r ($stmt->errorInfo());
 ## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

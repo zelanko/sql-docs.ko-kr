@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084931"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600963"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>명령줄 도구: sqlcmd.exe 및 bcp.exe
 
-`bcp.exe` 하 고 `sqlcmd.exe` 도구에서 사용 하 여 드라이버를 다운로드할 수 있습니다 [SQL Server 용 Microsoft 명령줄 유틸리티 11](http://www.microsoft.com/download/details.aspx?id=36433)를 [SQL Server 용 Microsoft 명령줄 유틸리티 13](https://www.microsoft.com/download/details.aspx?id=52680), 또는 [SQL Server 용 Microsoft 명령줄 유틸리티 13.1](https://www.microsoft.com/download/details.aspx?id=53591)합니다. 드라이버를 설치 하려면 필수 구성 요소 `sqlcmd.exe` 고 `bcp.exe`입니다.
+`bcp.exe` 하 고 `sqlcmd.exe` 도구에서 사용 하 여 드라이버를 다운로드할 수 있습니다 [SQL Server 용 Microsoft 명령줄 유틸리티 11](https://www.microsoft.com/download/details.aspx?id=36433)를 [SQL Server 용 Microsoft 명령줄 유틸리티 13](https://www.microsoft.com/download/details.aspx?id=52680), 또는 [SQL Server 용 Microsoft 명령줄 유틸리티 13.1](https://www.microsoft.com/download/details.aspx?id=53591)합니다. 드라이버를 설치 하려면 필수 구성 요소 `sqlcmd.exe` 고 `bcp.exe`입니다.
   
 `bcp.exe` 및 `sqlcmd.exe` 에 설치 됩니다 합니다 `110\Tools` 의 하위 폴더 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` 버전 11 및 `130\Tools` 13 및 13.1에 대 한 합니다.
 

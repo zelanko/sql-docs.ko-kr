@@ -16,12 +16,12 @@ ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 223abdf54e5af3e92d0ab1c172ae1f5d1f5b9bf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b1fe358652ed237a5e0cd3bbb235e85e937ad21
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645591"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602085"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public final void setMaxRows(int max)
   
  setMaxRows 메서드가 호출되면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 응용 프로그램의 쿼리를 실행할 때 SET ROWCOUNT SQL 문을 실행합니다. 이로 인해 JDBC 드라이버에서는 해당 쿼리에서 반환되는 행 수뿐만 아니라 해당 쿼리에서 실행되는 모든 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 영향을 받는 최대 행 수도 제한하게 됩니다. 응용 프로그램에서 최상위 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 대한 제한만 설정해야 하는 경우에는 setMaxRows 메서드 대신 쿼리에 SELECT TOP N SQL 구문을 사용해야 합니다.  
   
- SET ROWCOUNT SQL 문에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “[SET ROWCOUNT(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=139522)” 항목을 참조하십시오.  
+ SET ROWCOUNT SQL 문에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “[SET ROWCOUNT(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)” 항목을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

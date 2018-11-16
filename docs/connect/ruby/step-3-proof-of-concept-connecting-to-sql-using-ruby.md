@@ -11,12 +11,12 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eed37349152b48ab49859b44cc23cb463d8541b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f384f179983012d5acf4726fb641245ca8a2cfb2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801381"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599973"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL과 연결된 개념 증명
 
@@ -59,7 +59,7 @@ ms.locfileid: "47801381"
   
 TinyTDS와 Azure 함께 사용 하려면 것이 좋습니다 여러 실행 `SET` 문을 현재 세션에서 특정 정보를 처리 하는 방법을 변경 합니다. 권장 `SET` 문을 코드 샘플에 제공 됩니다. 예를 들어 `SET ANSI_NULL_DFLT_ON` 열의 null 허용 여부 상태가 명시적으로 명시 되지 않은 경우에 null 값을 허용 하기 위해 만든 새 열을 사용 하면 됩니다.  
   
-Microsoft SQL Server에 맞게 [날짜/시간](../../t-sql/data-types/datetime-transact-sql.md) 형식에 사용 합니다 [strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 해당 날짜/시간 형식으로 캐스팅 함수입니다.  
+Microsoft SQL Server에 맞게 [날짜/시간](../../t-sql/data-types/datetime-transact-sql.md) 형식에 사용 합니다 [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 해당 날짜/시간 형식으로 캐스팅 함수입니다.  
   
 ``` ruby
     require 'tiny_tds'  

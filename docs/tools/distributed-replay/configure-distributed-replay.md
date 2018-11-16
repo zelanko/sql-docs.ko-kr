@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745321"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677612"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47745321"
 |설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
-|최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1` 은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
+|최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1`은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
   
 ### <a name="example"></a>예제  
  기본 전처리 구성 파일입니다.  
@@ -168,8 +167,8 @@ ms.locfileid: "47745321"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>모드를 시퀀싱 하는 동기화를 사용 하 여 실행 하는 경우 가능한 문제
  재생 기능을 표시 되는 "정지" 또는 재생 이벤트에 매우 느리게 진행 하는 문제가 발생할 수 있습니다. 재생 중인 추적 데이터 및/또는 복원된 대상 데이터베이스에 존재 하지 않는 이벤트에 의존 하는 경우이 현상이 발생할 수 있습니다. 
- 
- 한 가지 예는 Service Broker 수신 WAITFOR 문에서 같이 WAITFOR를 사용 하는 캡처된 작업 합니다. 동기화 시퀀스 모드를 사용할 때 일괄 처리는 순차적으로 재생 됩니다. WAITFOR의 전체 기간 대기 데이터베이스 백업 후 원본 데이터베이스에 대해 발생 하는 삽입 하지만 추적 캡처를 재생 하기 전에 시작 될 경우 할 수도 있습니다 재생 중에 발급 된 WAITFOR 수신 합니다. WAITFOR 수신 중지 됩니다 후 재생할 수로 설정 하는 이벤트입니다. 이 WAITFOR 완료 될 때까지 Batch Requests/sec 성능 모니터 카운터를 0으로 재생 데이터베이스 대상 삭제 될 수 있습니다. 
+ 
+한 가지 예는 Service Broker 수신 WAITFOR 문에서 같이 WAITFOR를 사용 하는 캡처된 작업 합니다. 동기화 시퀀스 모드를 사용할 때 일괄 처리는 순차적으로 재생 됩니다. WAITFOR의 전체 기간 대기 데이터베이스 백업 후 원본 데이터베이스에 대해 발생 하는 삽입 하지만 추적 캡처를 재생 하기 전에 시작 될 경우 할 수도 있습니다 재생 중에 발급 된 WAITFOR 수신 합니다. WAITFOR 수신 중지 됩니다 후 재생할 수로 설정 하는 이벤트입니다. 이 WAITFOR 완료 될 때까지 Batch Requests/sec 성능 모니터 카운터를 0으로 재생 데이터베이스 대상 삭제 될 수 있습니다. 
  
  이 문제를 방지 하려면 동기화 모드를 사용 하는 경우 다음을 수행 해야 합니다.
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745321"
 ## <a name="see-also"></a>참고 항목  
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [SQL Server Distributed Replay 포럼](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 2단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay 포럼](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 – 2단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

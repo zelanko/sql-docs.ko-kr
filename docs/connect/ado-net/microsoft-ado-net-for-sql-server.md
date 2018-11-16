@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765533"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602283"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -36,8 +36,8 @@ ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. Sys
 * [System.Data.SqlClient 네임스페이스](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>커뮤니티  
-* [ADO.NET 관리 공급자 포럼](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [ADO.NET DataSet 포럼](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [ADO.NET 관리 공급자 포럼](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
+* [ADO.NET DataSet 포럼](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>다른 샘플  
 * [ADO.NET 코드 예제](https://msdn.microsoft.com/library/dw70f090.aspx)  

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5a05eda3627663b1c9f35be966da5550a3ddb4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d1c0b91053f5a09f1392315130ed0b90dc4215
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620511"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656862"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47620511"
  이 매개 변수(밀리초)는 응답을 받을 때까지 **KEEPALIVE** 재전송을 구분하는 간격을 지정합니다. 기본값은 1000밀리초입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 프로토콜 선택](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
+ [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [새 별칭&#40;별칭 탭&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [&#60;Alias&#62; 속성&#40;별칭 탭&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)  
   

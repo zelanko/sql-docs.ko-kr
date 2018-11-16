@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 484d8912c205f55dcebfacee01ec0c017b58117c
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: d500dc56ff128029ebba1576a84919f9694d8903
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085200"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602233"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49085200"
 
   합니다 **SSVARIANT** msoledbsql.h에 정의 된 구조를 SQL Server에 대 한 OLE DB 드라이버의 DBTYPE_SQLVARIANT 값에 해당 합니다.  
   
- **SSVARIANT** 는 판별 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
+ **SSVARIANT** 는 판별 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](https://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  DataTypeCompat==80인 경우, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 **SSVARIANT**에 VT_SS_WVARSTRING으로 나타납니다.  

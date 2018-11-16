@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ffb878e0d30ce7f905ce74647e8db8c2983501
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597987"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605823"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47597987"
   
 5.  설치 준비가 되고 컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 있는 경우 **./build_dm.sh** 명령을 실행합니다.
 
-컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [ http://www.unixodbc.org ](http://www.unixodbc.org/)합니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh-다운로드 url file://unixODBC-2.3.0.tar.gz =** 합니다.  
+컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [ https://www.unixodbc.org ](https://www.unixodbc.org/)합니다. 페이지 왼쪽에서 다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh-다운로드 url file://unixODBC-2.3.0.tar.gz =** 합니다.  
 
 6.  **YES**를 입력하여 파일의 압축 해제를 진행합니다. 이 부분의 프로세스를 완료하려면 최대 5분까지 걸릴 수 있습니다.  
 
@@ -66,7 +66,7 @@ ms.locfileid: "47597987"
 
 1.  이전에 설치된 unixODBC 버전(예: unixODBC 2.2.11)을 제거합니다. Red Hat Enterprise Linux 5 또는 6에서 **yum remove unixODBC** 명령을 실행합니다. SUSE Linux enterprise **zypper 제거 unixODBC**합니다.  
   
-2.  [http://www.unixodbc.org](http://www.unixodbc.org/)으로 이동하여 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0.tar.gz 파일을 컴퓨터에 저장합니다. UnixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다.  
+2.  [https://www.unixodbc.org](https://www.unixodbc.org/)으로 이동하여 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0.tar.gz 파일을 컴퓨터에 저장합니다. UnixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다.  
   
 3.  Linux 컴퓨터에서 명령을 실행 합니다. **tar xvzf unixODBC-2.3.0.tar.gz**합니다.  
   

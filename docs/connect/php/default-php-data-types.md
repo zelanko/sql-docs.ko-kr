@@ -14,17 +14,17 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5778bdbfa00d3280e6257572a6c5357b23945b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754670"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600333"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-서버에서 데이터를 검색할 때 사용자가 PHP 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 데이터를 기본 PHP 데이터 형식으로 변환합니다.  
+서버에서 데이터를 검색할 때 사용자가 PHP 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 데이터를 기본 PHP 데이터 형식으로 변환합니다.  
   
 PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이터 형식은 정수 또는 문자열입니다.  
   
@@ -100,10 +100,10 @@ SQL Server 2008에 새로 추가되었지만 열에 포함되지 않은 데이�
 |-----------|---------------|  
 |테이블 반환 매개 변수|아니오|  
 |스파스 열|부분|  
-|Null 비트 압축|사용자 계정 컨트롤|  
-|큰 CLR UDT(사용자 정의 형식)|사용자 계정 컨트롤|  
+|Null 비트 압축|예|  
+|큰 CLR UDT(사용자 정의 형식)|예|  
 |서비스 사용자 이름|아니오|  
-|MERGE|사용자 계정 컨트롤|  
+|MERGE|예|  
 |FILESTREAM|부분|  
   
 부분 형식 지원이란 열 형식에 대해 프로그래밍 방식으로 쿼리할 수 없다는 의미입니다.  
@@ -113,7 +113,7 @@ SQL Server 2008에 새로 추가되었지만 열에 포함되지 않은 데이�
 
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
-[PHP 형식](http://php.net/manual/en/language.types.php)
+[PHP 형식](https://php.net/manual/en/language.types.php)
 
 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 

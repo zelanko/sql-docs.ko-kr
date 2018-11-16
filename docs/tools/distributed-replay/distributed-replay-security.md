@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717031"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677752"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717031"
   
     3.  Enter 키를 누릅니다.  
   
-2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법은 [검사 목록: DCOM 응용 프로그램 관리](http://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법은 [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
-3.  **응용 프로그램별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 응용 프로그램별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 응용 프로그램 이름은 **DReplayController**입니다. 응용 프로그램별 권한을 설정하는 방법은 [검사 목록: DCOM 응용 프로그램 관리](http://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+3.  **응용 프로그램별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 응용 프로그램별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 응용 프로그램 이름은 **DReplayController**입니다. 응용 프로그램별 권한을 설정하는 방법은 [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
  다음 표에서는 관리 도구를 실행하는 데 사용되는 대화형 사용자 계정과 클라이언트 서비스 계정에 필요한 DCOM 권한에 대해 설명합니다.  
   

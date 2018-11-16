@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743001"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602033"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>이 버전의 드라이버에서 알려진 문제
 
@@ -25,7 +25,7 @@ ms.locfileid: "47743001"
 
 이 문서에서는 Linux 및 macOS에서 Microsoft ODBC Driver 13, 13.1 및 17 for SQL Server를 사용 하 여 알려진된 문제 목록이 포함 되어 있습니다.
 
-추가 문제는 [Microsoft ODBC 드라이버 팀 블로그](http://blogs.msdn.com/b/sqlnativeclient/)에 게시됩니다.  
+추가 문제는 [Microsoft ODBC 드라이버 팀 블로그](https://blogs.msdn.com/b/sqlnativeclient/)에 게시됩니다.  
 
 - Windows, Linux 및 macOS는 PUA(사용자 지정 영역) 또는 EUDC(최종 사용자 정의)의 문자를 다르게 변환합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 내에서 서버에 수행되는 변환은 Windows 변환 라이브러리를 사용합니다. 드라이버의 변환은 Windows, Linux 또는 macOS 변환 라이브러리를 사용 합니다. 이러한 변환을 수행할 때 각 라이브러리는 다른 결과를 생성할 수 있습니다. 자세한 내용은 [최종 사용자 정의 및 개인 사용자 영역 문자최종 사용자 정의 및 개인 사용자 영역 문자](/windows/desktop/Intl/end-user-defined-characters)를 참조하세요.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718311"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606263"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 스파스 열 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718311"
   
  SQL Server용 OLE DB 드라이버에서 스파스 열 지원에 대한 자세한 내용은 [스파스 열 지원(OLE DB)](../../oledb/ole-db/sparse-columns-support-ole-db.md)을 참조하세요.  
   
- 이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
+ 이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>스파스 열 및 SQL Server 용 OLE DB 드라이버에 대 한 사용자 시나리오  
  다음 표에서 스파스 열을 사용 하 여 SQL Server 사용자에 대 한 OLE DB 드라이버에 대 한 일반적인 사용자 시나리오를 요약 합니다.  

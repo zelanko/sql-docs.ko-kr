@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 74b71f4370c3f60170c79da50e15dcbe40b9adc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de7466bb2a2697b0b8aa2a994797cb66c69b74f0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744661"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660382"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,6 +53,6 @@ ms.locfileid: "47744661"
   
     -   [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+    -   [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

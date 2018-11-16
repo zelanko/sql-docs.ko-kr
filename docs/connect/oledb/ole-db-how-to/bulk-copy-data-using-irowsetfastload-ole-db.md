@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f5ec623af1f64371af682861f738290e0fb74ee3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c39d2aa6b98be2ba3432234b97a36591bbfa105a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701391"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604673"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "47701391"
   
  **IRowsetFastLoad**를 사용하여 레코드를 테이블에 대량 복사하는 방법을 보여 주는 전체 예제가 있습니다. 이 예제에서는 10개의 레코드를 **IRFLTable** 테이블에 추가합니다. 이를 위해 데이터베이스에 **IRFLTable** 테이블을 만들어야 합니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>데이터를 SQL Server 테이블로 대량 복사하려면  
   

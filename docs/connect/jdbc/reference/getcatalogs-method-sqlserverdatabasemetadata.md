@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81c905a483972ab0dfe7b03573bc30bf6d474e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727191"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601234"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.ResultSet getCatalogs()
  이 getCatalogs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogs 메서드에 의해 지정됩니다.  
   
 > [!NOTE]  
->  SQL Azure 호출 하려면 master 데이터베이스에 연결 해야 **SQLServerDatabaseMetaData.getCatalogs**합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** sys.databases 뷰를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하세요 [sys.databases (SQL Azure 데이터베이스)](http://go.microsoft.com/fwlink/?LinkId=217396) 알아야 **SQLServerDatabaseMetaData.getCatalogs** SQL Azure 동작 합니다.  
+>  SQL Azure 호출 하려면 master 데이터베이스에 연결 해야 **SQLServerDatabaseMetaData.getCatalogs**합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** sys.databases 뷰를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하세요 [sys.databases (SQL Azure 데이터베이스)](https://go.microsoft.com/fwlink/?LinkId=217396) 알아야 **SQLServerDatabaseMetaData.getCatalogs** SQL Azure 동작 합니다.  
   
  getCatalogs 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   

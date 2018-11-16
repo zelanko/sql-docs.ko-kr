@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746851"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600303"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -115,6 +115,6 @@ SUSE Linux(Preview)의 ODBC 드라이버는 64비트 SUSE Linux Enterprise 11 �
 
 Linux 기반 ODBC 드라이버는 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]을 지원합니다. 자세한 내용은 [Linux Support for High Availability, Disaster Recovery 기반 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
 
-Linux 기반 ODBC 드라이버는 Microsoft Azure SQL 데이터베이스에 대한 연결을 지원합니다. 자세한 내용은 [방법: ODBC를 사용하여 Microsoft Azure SQL 데이터베이스에 연결](http://msdn.microsoft.com/library/hh974312.aspx)을 참조하세요.  
+Linux 기반 ODBC 드라이버는 Microsoft Azure SQL 데이터베이스에 대한 연결을 지원합니다. 자세한 내용은 [방법: ODBC를 사용하여 Microsoft Azure SQL 데이터베이스에 연결](https://msdn.microsoft.com/library/hh974312.aspx)을 참조하세요.  
 
 합니다 `-l` (로그인 시간 제한) 옵션에 추가 되었습니다 `bcp`합니다. 자세한 내용은 [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)을 참조하세요.

@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687043"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600103"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux 및 macOS 지원에 대 한 ODBC 드라이버 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]합니다. [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)(SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)(SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [가용성 그룹의 생성 및 구성(SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [가용성 그룹의 생성 및 구성(SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. Linux 또는 macOS의 ODBC 응용 프로그램이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 응용 프로그램이 계속 작동하려면 새 연결을 열어야 합니다.
 

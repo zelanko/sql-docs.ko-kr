@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691821"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602173"
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,10 +34,10 @@ PDO_SQLSRV 드라이버를 사용하는 경우 서버에서 데이터를 검색�
   
 3.  원하는 PHP 데이터 형식을 선택적인 세 번째 매개 변수로 지정한 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용하여 반환된 행에서 필드 데이터를 검색합니다. 선택적인 세 번째 매개 변수를 지정하지 않으면 데이터가 기본 PHP 형식에 따라 반환됩니다. 기본 PHP 반환 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-    PHP 데이터 형식을 지정하는 데 사용하는 상수에 대한 자세한 내용은 [상수(Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 PHPTYPE 섹션을 참조하세요.  
+    PHP 데이터 형식을 지정하는 데 사용하는 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 PHPTYPE 섹션을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에서 행을 검색합니다. 반환된 각 행에서 *ReviewDate* 필드는 문자열로 검색되고 *Comments* 필드는 스트림으로 검색됩니다. 스트림 데이터는 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 함수를 사용하여 표시됩니다.  
+다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에서 행을 검색합니다. 반환된 각 행에서 *ReviewDate* 필드는 문자열로 검색되고 *Comments* 필드는 스트림으로 검색됩니다. 스트림 데이터는 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 함수를 사용하여 표시됩니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   

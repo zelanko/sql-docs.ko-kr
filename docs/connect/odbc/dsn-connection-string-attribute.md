@@ -1,7 +1,7 @@
 ---
 title: DSN 및 연결 문자열 키워드 및 SQL Server 용 ODBC 드라이버에 사용 된 특성 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838181"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512867"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -40,8 +40,8 @@ ms.locfileid: "47838181"
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [데이터베이스](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
-| [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
+| [데이터베이스 백업](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| [설명](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [드라이버](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Encrypt](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
@@ -160,6 +160,9 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 대화형 인증|
 | |SQL_AU_RESET|설정 되지 않은 합니다. 모든 DSN 또는 연결 문자열 설정을 재정의합니다.|
 
+> [!NOTE]
+> 사용 하는 경우 `Authentication` 키워드 또는 특성을 명시적으로 지정 `Encrypt` 연결 문자열에 원하는 값으로 설정 / DSN / 연결 특성입니다. 가리킵니다 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) 세부 정보에 대 한 합니다.
+
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption-SQL_COPT_SS_COLUMN_ENCRYPTION
 
 투명 한 열 암호화 (상시 암호화)를 제어합니다. 참조 [항상 암호화를 사용 하 여 (ODBC)](using-always-encrypted-with-the-odbc-driver.md) 자세한 내용은 합니다.
@@ -176,7 +179,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 
 | 키워드 값 | 특성 값| 설명 |
 |-|-|-|
-|사용자 계정 컨트롤|SQL_IS_ON|(기본값) 투명 네트워크 IP 확인 사용|
+|예|SQL_IS_ON|(기본값) 투명 네트워크 IP 확인 사용|
 |아니오|SQL_IS_OFF|투명 네트워크 IP 확인 사용 안 함|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -186,7 +189,7 @@ SQL Server 2012에 연결 하 고 최신 메타 데이터에 대 한 SET FMTONLY
 | 키워드 값 | 설명 |
 |-|-|
 |아니오|(기본값) 사용 가능한 경우 메타 데이터에 대 한 sp_describe_first_result_set을 사용 합니다. |
-|사용자 계정 컨트롤| 메타 데이터에 대 한 SET FMTONLY를 사용 합니다. |
+|예| 메타 데이터에 대 한 SET FMTONLY를 사용 합니다. |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 

@@ -11,12 +11,12 @@ ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f5f33f7d027a858bdd57aa69c65107ed15856e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bdeb21f1f380b11d5c007c189587657e8e0b207
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609251"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605123"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,5 +43,5 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

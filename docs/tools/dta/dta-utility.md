@@ -5,8 +5,7 @@ ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644362"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292499"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -419,6 +418,6 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
   
 ## <a name="see-also"></a>참고 항목  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

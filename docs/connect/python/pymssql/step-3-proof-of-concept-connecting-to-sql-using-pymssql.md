@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764061"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606823"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>3단계: pymssql을 사용하여 SQL에 연결하는 개념 증명
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47764061"
   
 ## <a name="step-1--connect"></a>1 단계: 연결  
   
-합니다 [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) 함수는 SQL Database에 연결 하는 데 사용 됩니다.  
+합니다 [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) 함수는 SQL Database에 연결 하는 데 사용 됩니다.  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ ms.locfileid: "47764061"
   
 ## <a name="step-2--execute-query"></a>2 단계: 쿼리를 실행 합니다.  
   
-합니다 [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) 결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리를 허용 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다 [cursor.fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)합니다.  
+합니다 [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) 결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리를 허용 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다 [cursor.fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)합니다.  
   
   
 ```python

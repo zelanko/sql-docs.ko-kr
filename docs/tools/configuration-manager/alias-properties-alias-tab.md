@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: b3c35a28a4def950efd2e486628ff26c706cd1e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48ff3b9485f4e8915299c4ad06709336e7031bfd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730541"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677562"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;별칭&gt; 속성(별칭 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "47730541"
 ## <a name="see-also"></a>참고 항목  
  [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

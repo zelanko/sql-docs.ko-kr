@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767141"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602653"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -221,7 +221,7 @@ You have successfully logged on as: <your user name>
     3. "앱 등록" 탭을 클릭 합니다.
     4. 서랍에서 "새 응용 프로그램 등록"을 클릭 합니다.
     5. Mytokentest 응용 프로그램에 대 한 친숙 한 이름으로 입력 하 고 "웹 앱/API"를 선택 합니다.
-    6. 로그온 URL 필요 하지 않습니다. 아무 것도 제공할: "http://mytokentest" 입니다.
+    6. 로그온 URL 필요 하지 않습니다. 아무 것도 제공할: "https://mytokentest" 입니다.
     7. 맨 아래에서 "만들기"를 클릭 합니다.
     9. Azure portal에서 계속 하는 동안 응용 프로그램의 "설정" 탭을 클릭 하 고 "속성" 탭을 엽니다.
     10. "응용 프로그램 ID" (즉, 클라이언트 ID) 값을 찾아 복사 제외 하 고, 나중에 필요 (예를 들어 1846943b-ad04-4808-aa13-4702d908b5c1) 응용 프로그램을 구성 하는 경우. 다음 스냅숏을 참조 합니다.

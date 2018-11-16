@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805311"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603943"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -68,7 +68,7 @@ SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includ
 
 암호화를 사용하면 보안은 강화되지만 성능은 저하됩니다.
 
-자세한 내용은 [SQL Server 연결 암호화](http://go.microsoft.com/fwlink/?LinkId=220900) 하 고 [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)합니다.
+자세한 내용은 [SQL Server 연결 암호화](https://go.microsoft.com/fwlink/?LinkId=220900) 하 고 [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)합니다.
 
 **Encrypt** 및 **TrustServerCertificate**에 대한 설정과 관계없이 서버 로그인 자격 증명(사용자 이름 및 암호)은 상시 암호화됩니다. 다음 표는 **Encrypt** 및 **TrustServerCertificate** 를 설정할 때의 영향을 보여 줍니다.  
 

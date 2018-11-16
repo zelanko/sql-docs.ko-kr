@@ -19,12 +19,12 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb1a54fc32fe4f840a0023fc707d5d93b0284f32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df39220a9d3ee2286e4ed86610790e20a3b78c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700901"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601193"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PHP 연결 리소스입니다. 연결을 만들 수 없고 열 수 없으면 **f
 *UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 Windows 인증을 사용하여 연결을 만들고 엽니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://www.codeplex.com/SqlServerSamples) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 Windows 인증을 사용하여 연결을 만들고 엽니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  

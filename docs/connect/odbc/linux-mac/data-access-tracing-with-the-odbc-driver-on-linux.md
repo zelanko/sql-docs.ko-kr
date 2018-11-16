@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782881"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607193"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-합니다 [unixODBC 설명서](http://www.unixodbc.org/doc/UserManual/) 사용자 및 시스템 Dsn 간의 차이점을 설명 합니다. 요약:  
+합니다 [unixODBC 설명서](https://www.unixodbc.org/doc/UserManual/) 사용자 및 시스템 Dsn 간의 차이점을 설명 합니다. 요약:  
 
 - 사용자 Dsn---이들은 에서만 특정 사용자에 게 제공 되는 Dsn입니다. 사용자가 사용 하 여 연결, 추가, 수정 및 제거할 수는 자신의 사용자 Dsn입니다. 사용자 Dsn이 사용자의 홈 디렉터리, 또는 그 하위 디렉터리의 파일에 저장 됩니다.
   

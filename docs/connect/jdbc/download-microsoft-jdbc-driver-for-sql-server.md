@@ -11,12 +11,12 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bf3a5a4ff0a71f3941833db6213c5ec53f46120
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710561"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602303"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 다운로드
 
@@ -32,12 +32,12 @@ JDBC 드라이버는 다음 코드를 사용 하 여 POM.xml 파일에 종속성
 ```  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>SQL Server 용 JDBC 드라이버의 사용 가능한 다운로드
- * [SQL Server용 Microsoft JDBC Driver 7.0](http://go.microsoft.com/fwlink/?linkid=2005972) 
- * [SQL Server용 Microsoft JDBC Driver 6.4](http://go.microsoft.com/fwlink/?linkid=868290) 
- * [SQL Server용 Microsoft JDBC Driver 6.2](http://go.microsoft.com/fwlink/?linkid=852460) 
- * [SQL Server용 Microsoft JDBC Driver 6.0](http://go.microsoft.com/fwlink/?LinkId=245496) 
- * [SQL Server용 Microsoft JDBC Driver 4.2](http://go.microsoft.com/fwlink/?linkid=841534) 
- * [SQL Server용 Microsoft JDBC Driver 4.1](http://go.microsoft.com/fwlink/?linkid=841533) 
+ * [SQL Server용 Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) 
+ * [SQL Server용 Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290) 
+ * [SQL Server용 Microsoft JDBC Driver 6.2](https://go.microsoft.com/fwlink/?linkid=852460) 
+ * [SQL Server용 Microsoft JDBC Driver 6.0](https://go.microsoft.com/fwlink/?LinkId=245496) 
+ * [SQL Server용 Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) 
+ * [SQL Server용 Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>지원되지 않는 드라이버  
 지원되지 않는 드라이버 버전은 여기에서 다운로드할 수 없습니다. Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.  

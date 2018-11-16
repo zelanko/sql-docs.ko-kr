@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778261"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604703"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>1단계: Ruby 개발을 위한 개발 환경 구성
 SQL Server 용 Ruby 드라이버를 사용 하 여 응용 프로그램을 개발 하기 위해 개발 환경 필수 구성 요소를 사용 하 여 구성 해야 합니다.    
@@ -27,7 +27,7 @@ Ruby 드라이버는 SQL Server 및 Azure SQL Database에 기본적으로 사용
 ## <a name="windows"></a>Windows  
   
 1.  **Ruby 설치 관리자 다운로드**  
-컴퓨터에 없으면 Ruby를 설치 하십시오. 새 ruby 사용자에 대 한 Ruby 2.2.X 설치 관리자를 사용 하는 것이 좋습니다. 안정적인 언어와 호환 되 고 업데이트 된 패키지 (보석)의 광범위 한 목록을 제공 합니다. 이동 합니다 [Ruby 다운로드 페이지](http://rubyinstaller.org/downloads/) 하 고 적절 한 2.1.x 설치 관리자를 다운로드 합니다. 예제를 64 비트 컴퓨터의 경우 다운로드 Ruby 2.1.6 (x64) 설치 관리자에 대 한 합니다.   
+컴퓨터에 없으면 Ruby를 설치 하십시오. 새 ruby 사용자에 대 한 Ruby 2.2.X 설치 관리자를 사용 하는 것이 좋습니다. 안정적인 언어와 호환 되 고 업데이트 된 패키지 (보석)의 광범위 한 목록을 제공 합니다. 이동 합니다 [Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/) 하 고 적절 한 2.1.x 설치 관리자를 다운로드 합니다. 예제를 64 비트 컴퓨터의 경우 다운로드 Ruby 2.1.6 (x64) 설치 관리자에 대 한 합니다.   
   
 2.  **Ruby 설치**  
 설치 관리자 다운로드 되 면 다음을 수행 합니다.  

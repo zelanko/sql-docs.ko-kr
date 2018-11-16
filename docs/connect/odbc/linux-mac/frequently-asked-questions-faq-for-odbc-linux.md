@@ -11,12 +11,12 @@ ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99b92271060cbe670b48058e988b104aa296474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2f363fecebfe9a4ee4e586a5c5df703b47aa0e6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731531"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602983"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -40,7 +40,7 @@ SQL_CHAR 데이터는 UTF-8을 사용하고 SQL_WCHAR 데이터는 UTF-16을 사
 
 **실험하거나 평가하기 위해 드라이버를 사용하여 실행할 수 있는 ODBC 샘플을 다운로드할 수 있나요?**
 
-샘플은 [Linux 기반 ODBC 드라이버에 대해 기존 MSDN C++ ODBC 샘플 사용](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 을 참조하세요. MacOS의 ODBC 드라이버에 적용할 수 이기도합니다. 
+샘플은 [Linux 기반 ODBC 드라이버에 대해 기존 MSDN C++ ODBC 샘플 사용](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 을 참조하세요. MacOS의 ODBC 드라이버에 적용할 수 이기도합니다. 
 
 **Linux 기반 ODBC 드라이버는 macOS 오픈 소스 여부**
 

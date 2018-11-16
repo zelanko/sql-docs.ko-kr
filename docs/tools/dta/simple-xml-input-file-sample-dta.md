@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d17e5d643b65c319277ee85037e527104bb82563
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 806c2bf16aa9b64f5b5b04ceeecec2384f066389
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650951"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292119"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>단순 XML 입력 파일 예제(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

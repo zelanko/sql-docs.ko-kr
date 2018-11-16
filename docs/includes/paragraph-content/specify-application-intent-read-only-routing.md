@@ -9,11 +9,11 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072337"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019068"
 ---
 ## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정
 

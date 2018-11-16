@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 9dcce05957fb00cc966a9667e59b6b510396362a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691291"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605633"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server에 대 한 드라이버 기록
 
@@ -96,7 +96,7 @@ MDAC/WDAC 이러한 구성 요소를 포함 합니다.
 * **SQLODBC:** 는 Microsoft SQL Server ODBC 드라이버 (SQLODBC), Microsoft SQL Server에 대 한 액세스를 지 원하는, 사용 되지 않습니다. SQL Server의 나중 버전으로 해당 연결을 지원할 수 있습니다. SQL Server 7 이전 버전에 연결 하는 기능 후 Windows 7 운영 체제에서 제거 됩니다. 새 응용 프로그램을 새 SQL Server 기능을 지 원하는 Windows에서 SQL Server 용 Microsoft ODBC Driver를 사용 해야 합니다. 기존 응용 프로그램으로 마이그레이션해야 Microsoft ODBC Driver for SQL Server도 더 나은 성능, 안정성 및 지원 가능성에 대 한 합니다. 관련 정보를 참조 하세요 [MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)합니다.
 * **Microsoft Jet 데이터베이스 엔진 4.0:** 버전 2.6 이상에서는 MDAC 이상 Jet 구성 요소를 포함 합니다. 즉, Microsoft Jet, Microsoft Jet OLE DB Provider, ODBC 데스크톱 데이터베이스 드라이버 또는 Jet 데이터 액세스 개체 (DAO)에 MDAC 2.6 고 2.7, 2.8 포함 되지 않습니다. Microsoft Jet 데이터베이스 엔진 4.0 구성 요소 엔지니어링 유지 및 Windows 2000에서 Microsoft Windows의 멤버가 되 면 이후 수준 향상 된 기능을 받지 못한 기능 사용 중단 상태를 입력 합니다.
 
-  사용할 수 없는 64 비트 버전의 Jet 데이터베이스 엔진, Jet OLEDB Driver, Jet ODBC 드라이버 또는 DAO Jet 있습니다. 자세한 내용은 [기술 자료 문서 957570](http://support.microsoft.com/kb/957570)을 참조하십시오. Windows의 64 비트 버전에서 32 비트 Jet Windows WOW64 하위 시스템에서 실행 됩니다. WOW64에 대 한 자세한 내용은 참조는 [MSDN WOW64 설명서](/windows/desktop/WinProg64/wow64-implementation-details)합니다. 네이티브 64 비트 응용 프로그램에서는 WOW64에서 실행 중인 32 비트 Jet 드라이버와 통신할 수 없습니다.
+  사용할 수 없는 64 비트 버전의 Jet 데이터베이스 엔진, Jet OLEDB Driver, Jet ODBC 드라이버 또는 DAO Jet 있습니다. 자세한 내용은 [기술 자료 문서 957570](https://support.microsoft.com/kb/957570)을 참조하십시오. Windows의 64 비트 버전에서 32 비트 Jet Windows WOW64 하위 시스템에서 실행 됩니다. WOW64에 대 한 자세한 내용은 참조는 [MSDN WOW64 설명서](/windows/desktop/WinProg64/wow64-implementation-details)합니다. 네이티브 64 비트 응용 프로그램에서는 WOW64에서 실행 중인 32 비트 Jet 드라이버와 통신할 수 없습니다.
 
   Microsoft Jet 대신 사용 하 여 것이 좋습니다 [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) 새 관계형 데이터 저장소를 필요로 하는 비 Microsoft Access 응용 프로그램을 개발 하는 경우. 이러한 새 또는 변환 Jet 응용 프로그램을 위해 Microsoft Office 2003 및 이전 파일 (.mdb 및.xls)를 사용 하 여 Jet을 사용 하 여 기본이 아닌 데이터 저장소에 대 한 계속 수 있습니다. 그러나 이러한 응용 프로그램에 대 한 Jet에서 2007 Office System 드라이버 마이그레이션하도록 계획 해야 있습니다. 할 수 있습니다 [2007 Office System 드라이버 다운로드](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)를 읽고 (.mdb 및.xls)의 Office 2003 또는 Office 2007 (*.accdb, *.xlsm, *.xlsx 및 *.xlsb) 파일 형식 중 하나에서 기존 파일에 쓸 수 있습니다.
 
@@ -110,7 +110,7 @@ MDAC/WDAC 이러한 구성 요소를 포함 합니다.
 * **Oracle ODBC 및 Oracle OLE DB:** Microsoft Oracle ODBC Driver (Oracle ODBC) 및 Microsoft OLE DB Provider for Oracle (Oracle OLE DB) Oracle 데이터베이스 서버에 대 한 액세스를 제공 합니다. Oracle OCI (Call Interface) 버전 7 사용 하 여 작성 된 하며 Oracle 7에 대 한 전체 지원을 제공 합니다. 또한 Oracle 8 데이터베이스에 대 한 제한 된 지원을 제공 Oracle 7 에뮬레이션을 사용 합니다. Oracle는 OCI 버전 7 호출을 사용 하는 응용 프로그램을 더 이상 지원 합니다. 이러한 기술은 사용 되지 않습니다. Oracle 데이터 소스를 사용 하는 경우 Oracle에서 제공한 드라이버와 공급자를 마이그레이션해야 합니다.
 * **RDS:** 원격 데이터 서비스 (RDS)는 인터넷 또는 인트라넷에서 원격 ADO 레코드 집합 개체에 액세스 하기 위한 전용 Microsoft 메커니즘입니다. RDS는 사용 되지 않습니다. MDAC 2.1부터 RDS에 없는 중요 한 기능 기능이 향상 되었습니다. Microsoft는 광범위 한 SOAP 기능을 포함 하 고 RDS 구성 요소를 대체.NET Framework를 출시 했습니다. 모든 RDS 서버 구성 요소는 Windows 7 이후 운영 체제에서 제거 됩니다.
 * **JRO:** Jet 복제 개체 (JRO)는 사용 되지 않습니다. JRO Jet 사용 하 여 ADO 내에서 사용 됩니다 (*.mdb) 데이터베이스를 만들어서 Jet 데이터베이스 (.mdb의)을 압축 하 고 Jet 복제 관리를 수행 합니다. MDAC 2.7 마지막 출시 됩니다. JRO 64 비트 Windows 운영 체제에서 제공 되지 않습니다. JRO Microsoft Access 2007 파일 형식에서 지원 되지 않습니다 (*.accdb).
-* **16 비트 ODBC 지원:** 16 비트 응용 프로그램을 사용 하는 경우 32 비트 응용 프로그램을로 마이그레이션할 해야 있습니다. 16 비트 기능 않으며 64 비트 운영 체제에서 제거 됩니다. 자세한 내용은 [기술 자료 문서 896458](http://support.microsoft.com/kb/896458)을 참조하십시오.
+* **16 비트 ODBC 지원:** 16 비트 응용 프로그램을 사용 하는 경우 32 비트 응용 프로그램을로 마이그레이션할 해야 있습니다. 16 비트 기능 않으며 64 비트 운영 체제에서 제거 됩니다. 자세한 내용은 [기술 자료 문서 896458](https://support.microsoft.com/kb/896458)을 참조하십시오.
 * **OLEDB 공급자 (MSDAOSP)가 간단한:** OLEDB 간단한 공급자는 간단한 데이터에 대 한 OLE DB 공급자를 신속 하 게 빌드하기 위한 프레임 워크를 제공 합니다. MSDAOSP 사용 되지 않습니다.
 * **ODBC 커서 라이브러리:** ODBC 커서 라이브러리 (ODBCCR32.dll) 제한 된 클라이언트 쪽 데이터 커서를 제공 합니다. ODBC 커서 라이브러리는 더 이상 사용 되지 않습니다. 응용 프로그램 대신 서버 쪽 커서 구현을 사용할 수 있습니다.
 * **OLE DB-Out-of-process 인터페이스 원격:** OLEDB 인터페이스 원격 (msdaps.dll) OLE DB 공급자가 out-of-process 실행 수를 허용 하려고 합니다. OLEDB-Out-of-process 인터페이스 remoting은 사용 하는 사용 되지 않습니다.

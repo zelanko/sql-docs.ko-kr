@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e56d57cb3df19df1cbf09811ebfebca66efe51b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677581"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600233"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ Azure Active Directory 사용자, DBA의 및 응용 프로그램 프로그래머
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver 11 for SQL Server  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대한 모든 기능이 포함되어 있습니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 Windows 운영 체제에서 제공되는 ODBC 드라이버를 기반으로 합니다. 자세한 내용은 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)를 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 제공되는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native Client ODBC 드라이버에 대한 모든 기능이 포함되어 있습니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 Windows 운영 체제에서 제공되는 ODBC 드라이버를 기반으로 합니다. 자세한 내용은 [Windows Data Access Components SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx)를 참조하세요.  
   
 이 릴리스의 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 다음과 같은 새 기능이 포함되어 있습니다.  
   
@@ -41,10 +41,10 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에�
 –l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 `bcp.exe` 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp.exe`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다. 약 10초 미만의 로그인 시간 제한은 안정적이지 않습니다.  
   
 ### <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
   
 ### <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [비동기 실행(알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 지원합니다. 사용 샘플은 [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)을 참조하세요.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [비동기 실행(알림 방법)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 지원합니다. 사용 샘플은 [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)을 참조하세요.  
   
 ### <a name="connection-resiliency"></a>연결 복원력
 응용 프로그램이 Microsoft Azure SQL 데이터베이스에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다. 자세한 내용은 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조하세요.  

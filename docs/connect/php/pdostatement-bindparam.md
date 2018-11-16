@@ -11,12 +11,12 @@ ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9471c0c86edd9ff5a8357b797014036bd60fec83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647668"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606363"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,7 +122,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에는 입력된 매개 변수로 10 진수 값을 바인딩하는 방법을 보여 줍니다.  
@@ -146,5 +146,5 @@ $stmt->execute();
 ## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

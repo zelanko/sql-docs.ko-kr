@@ -11,17 +11,17 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f8557d34acd3de425f4d6932eca95fbe6e2d334
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc9e6673076cdbd071f2357ce1bd5c4d10c2092
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784941"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602513"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 이 항목은 Windows 기반의 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 드라이버 인식 연결 풀링 개선 사항을 설명합니다.  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 이 항목은 Windows 기반의 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 드라이버 인식 연결 풀링 개선 사항을 설명합니다.  
   
 -   연결 속성에 관계없이 `SQLDriverConnect`를 사용하는 연결은 `SQLConnect`를 사용하는 연결과는 별도의 풀로 이동합니다.
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 스레드에 대한 Windows 사용자의 보안 컨텍스트를 사용하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 Windows 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하고 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 자격 증명을 사용하여 백 엔드에 연결하는 경우 여러 Windows 사용자가 잠재적으로 동일한 연결 풀을 사용할 수 있다는 것입니다. Windows 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 Windows 사용자의 보안 컨텍스트를 사용합니다. 즉, Windows의 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하는 경우에도 여러 Windows 사용자가 연결을 공유하지 않습니다.
@@ -45,12 +45,12 @@ ms.locfileid: "47784941"
   
     |키워드|ODBC 드라이버 13|ODBC 드라이버 11|
     |-|-|-|
-    |`Address`|사용자 계정 컨트롤|예|
+    |`Address`|예|예|
     |`AnsiNPW`|예|예|
     |`App`|예|예|
     |`ApplicationIntent`|예|예|  
     |`Authentication`|예|아니오|
-    |`ColumnEncryption`|사용자 계정 컨트롤|아니오|
+    |`ColumnEncryption`|예|아니오|
     |`Database`|예|예|
     |`Encrypt`|예|예|  
     |`Failover_Partner`|예|예|
@@ -64,17 +64,17 @@ ms.locfileid: "47784941"
     |`Trusted_Connection`|예|예|
     |`TrustServerCertificate`|예|예|
     |`UID`|예|예|
-    |`WSID`|예|사용자 계정 컨트롤|
+    |`WSID`|예|예|
     
 - 다음 연결 특성에서 연결 문자열과 풀링된 연결 문자열 사이에 차이가 있는 경우 풀링된 연결이 사용되지 않습니다.  
   
     |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|사용자 계정 컨트롤|예|
+    |`SQL_ATTR_CURRENT_CATALOG`|예|예|
     |`SQL_ATTR_PACKET_SIZE`|예|예|
     |`SQL_COPT_SS_ANSI_NPW`|예|예|
     |`SQL_COPT_SS_ACCESS_TOKEN`|예|아니오|
-    |`SQL_COPT_SS_AUTHENTICATION`|사용자 계정 컨트롤|아니오|
+    |`SQL_COPT_SS_AUTHENTICATION`|예|아니오|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|예|예|
     |`SQL_COPT_SS_BCP`|예|예|
     |`SQL_COPT_SS_COLUMN_ENCRYPTION`|예|아니오|
@@ -96,7 +96,7 @@ ms.locfileid: "47784941"
   
     |키워드|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |`AutoTranslate`|사용자 계정 컨트롤|예|
+    |`AutoTranslate`|예|예|
     |`Description`|예|예|
     |`MultisubnetFailover`|예|예|  
     |`QueryLog_On`|예|예|
@@ -104,13 +104,13 @@ ms.locfileid: "47784941"
     |`QueryLogTime`|예|예|
     |`Regional`|예|예|
     |`StatsLog_On`|예|예|
-    |`StatsLogFile`|  예|사용자 계정 컨트롤|
+    |`StatsLogFile`|  예|예|
   
      다음 연결 특성 중 하나를 변경하는 경우 기존 연결을 재사용할 수 있습니다.  필요에 따라 드라이버가 값을 재설정합니다. 드라이버가 추가로 네트워크를 호출하지 않고 클라이언트에서 이러한 특성을 재설정할 수 있습니다.  
   
     |attribute|ODBC 드라이버 13|ODBC 드라이버 11|  
     |-|-|-|  
-    |모든 문 특성|사용자 계정 컨트롤|예|
+    |모든 문 특성|예|예|
     |`SQL_ATTR_AUTOCOMMIT`|예|예|
     |`SQL_ATTR_CONNECTION_TIMEOUT`|  예|예|
     |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|예|예|
@@ -125,7 +125,7 @@ ms.locfileid: "47784941"
     |`SQL_COPT_SS_PRESERVE_CURSORS`|예|예|
     |`SQL_COPT_SS_TRANSLATE`|예|예|
     |`SQL_COPT_SS_USER_DATA`|  예|예|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|예|사용자 계정 컨트롤|  
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|예|예|  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

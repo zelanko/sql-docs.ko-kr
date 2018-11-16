@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be4e5fa8ea0298fa096c0c65a91b7683c66b8e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666282"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47598751"
 ### <a name="input-trace-versions"></a>입력 추적 버전  
  Distributed Replay는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 수집된 입력 추적 데이터를 지원합니다.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  누적 업데이트 1 이상입니다. 참조- [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)합니다.
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  누적 업데이트 1 이상입니다. 참조- [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)합니다.
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -161,6 +161,6 @@ ms.locfileid: "47598751"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 보안](../../tools/distributed-replay/distributed-replay-security.md)   
- [Distributed Replay 설치 - 개요](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

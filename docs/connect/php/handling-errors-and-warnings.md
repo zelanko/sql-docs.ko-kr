@@ -11,17 +11,17 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0095293db694c746dac1749b35d9de29c5fbd592
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809841"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599464"
 ---
 # <a name="handling-errors-and-warnings"></a>오류 및 경고 처리
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV 드라이버를 사용하는 경우 [PDO](http://php.net/manual/book.pdo.php) 웹 사이트에서 오류 및 오류 처리에 대한 자세한 내용을 볼 수 있습니다.  
+PDO_SQLSRV 드라이버를 사용하는 경우 [PDO](https://php.net/manual/book.pdo.php) 웹 사이트에서 오류 및 오류 처리에 대한 자세한 내용을 볼 수 있습니다.  
   
 이 섹션의 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]SQLSRV 드라이버의 오류 및 경고 처리에 대한 정보를 제공합니다.  
   

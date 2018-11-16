@@ -11,21 +11,21 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682571"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601973"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 국가별 기능은 다음과 같습니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 국제화 기능에는 다음이 포함됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동일한 언어로 완전히 지역화된 환경을 지원합니다.  
   
--   로캘을 구분하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터에 대해 Java 언어 변환을 지원합니다.  
+-   로캘 구분 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터에 대한 Java 언어 변환 지원  
   
 -   운영 체제와 상관없이 국가별 언어 지원  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682571"
 ## <a name="collation-support"></a>데이터 정렬 지원  
  JDBC 드라이버 3.0에서는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원하는 모든 데이터 정렬 및 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]에 도입된 새로운 버전의 Windows 데이터 정렬 이름 또는 새 데이터 정렬을 지원합니다.  
   
- 데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의[데이터 정렬 및 유니코드 지원](http://go.microsoft.com/fwlink/?LinkId=131366) 및 [Windows 데이터 정렬 이름(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367)을 참조하십시오.  
+ 데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의[데이터 정렬 및 유니코드 지원](https://go.microsoft.com/fwlink/?LinkId=131366) 및 [Windows 데이터 정렬 이름(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)을 참조하십시오.  
   
 ## <a name="using-international-domain-names-idn"></a>IDN(국제 도메인 이름) 사용  
- SQL Server용 JDBC Driver 6.0에서는 IDN(Internationalized Domain Name)의 사용을 지원하고 연결 중 필요한 경우 유니코드 serverName을 ASCII 호환 인코딩(Punycode)으로 변환할 수 있습니다.  IDN이 Punycode 형식(RFC 3490에서 지정)의 ASCII 문자열로 DNS(Domain Name System)에 저장되면 serverNameAsACE 속성을 true로 설정하여 유니코드 서버 이름을 변환할 수 있습니다.  그렇지 않으면 DNS 서비스가 유니코드 문자를 사용할 수 있도록 구성된 경우 serverNameAsACE 속성을 false(기본값)로 설정합니다.  또한 이전 버전의 JDBC 드라이버의 경우 연결을 위해 해당 속성을 설정하기 전에 [Java의 IDN.toASCII](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 메서드를 사용하여 serverName을 Punycode로 변환할 수 있습니다.  
+ SQL Server용 JDBC Driver 6.0에서는 IDN(Internationalized Domain Name)의 사용을 지원하고 연결 중 필요한 경우 유니코드 serverName을 ASCII 호환 인코딩(Punycode)으로 변환할 수 있습니다.  IDN이 Punycode 형식(RFC 3490에서 지정)의 ASCII 문자열로 DNS(Domain Name System)에 저장되면 serverNameAsACE 속성을 true로 설정하여 유니코드 서버 이름을 변환할 수 있습니다.  그렇지 않으면 DNS 서비스가 유니코드 문자를 사용할 수 있도록 구성된 경우 serverNameAsACE 속성을 false(기본값)로 설정합니다.  또한 이전 버전의 JDBC 드라이버의 경우 연결을 위해 해당 속성을 설정하기 전에 [Java의 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 메서드를 사용하여 serverName을 Punycode로 변환할 수 있습니다.  
   
 > [!NOTE]  
 >  Windows 이외의 플랫폼용으로 작성된 대부분의 확인 프로그램 소프트웨어는 인터넷 DSN 표준 기반이므로 IDN에 대해 Punycode 형식을 사용할 가능성이 높은 반면 개인 네트워크의 Windows 기반 DNS 서버는 서버 단위로 UTF-8 문자 사용을 허용하도록 구성될 수 있습니다.  자세한 내용은 [유니코드 문자 지원](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)을 참조하세요.  

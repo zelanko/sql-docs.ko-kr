@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,12 +17,12 @@ ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e3e73a62eeb7b5feea20fc90c730e6648706953
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767951"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291305"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ profiler
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 사용자 로그인 ID입니다. 로그인 ID는 대/소문자를 구분합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]을 참조하세요.  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]를 참조하세요.  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 암호를 지정합니다. 사용자가 원하는 대로 지정할 수 있습니다.  

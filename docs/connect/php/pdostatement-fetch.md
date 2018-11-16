@@ -11,12 +11,12 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05da1bce4c7c890e332c23ab7d69fe753b12a628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624f5efe97333fd76e934f94517588aede030f38
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632801"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605263"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -144,5 +144,5 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ## <a name="see-also"></a>참고 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

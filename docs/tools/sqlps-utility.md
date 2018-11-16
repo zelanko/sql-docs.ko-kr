@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
@@ -16,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666972"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ sqlps
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 경로를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체의 계층 구조를 탐색합니다.  
   
- 기본적으로 **sqlps** 유틸리티는 스크립팅 실행 정책이 **Restricted**로 설정된 상태로 실행됩니다. 이는 모든 PowerShell 스크립트의 실행을 차단합니다. **Set-ExecutionPolicy** cmdlet을 사용하면 서명된 스크립트나 모든 스크립트를 실행하도록 설정할 수 있습니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. PowerShell 스크립트를 설정하는 방법은 [Windows PowerShell 스크립트 실행](http://go.microsoft.com/fwlink/?LinkId=103166)을 참조하십시오.  
+ 기본적으로 **sqlps** 유틸리티는 스크립팅 실행 정책이 **Restricted**로 설정된 상태로 실행됩니다. 이는 모든 PowerShell 스크립트의 실행을 차단합니다. **Set-ExecutionPolicy** cmdlet을 사용하면 서명된 스크립트나 모든 스크립트를 실행하도록 설정할 수 있습니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. PowerShell 스크립트를 설정하는 방법은 [Windows PowerShell 스크립트 실행](https://go.microsoft.com/fwlink/?LinkId=103166)을 참조하십시오.  
   
  **및** 의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 유틸리티 버전은 Windows PowerShell 1.0 미니 셸로 구현되었습니다. 미니 셸에는 사용자가 미니 셸에서 로드하는 스냅인 이외의 스냅인을 로드할 수 없는 것과 같은 몇 가지 제한 사항이 있습니다. 이러한 제한 사항은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 모듈을 사용하도록 변경된 **sqlps** 이상 버전의 유틸리티에는 적용되지 않습니다.  
   

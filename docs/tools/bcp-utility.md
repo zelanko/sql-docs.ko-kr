@@ -5,8 +5,7 @@ ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383848"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675382"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Bcp 유틸리티의 최신 버전을 참조 하세요. [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Bcp 유틸리티의 최신 버전을 참조 하세요. [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Bcp를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
@@ -184,7 +183,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F** *first_row* 는 1부터 시작합니다.  
 
 **-G**<a name="G"></a>  
- 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](http://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
+ 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
 
 > [!TIP]
 >  Bcp 버전 Azure Active Directory 인증 (AAD) 형식에 대 한 지원을 포함 하는 경우 검사할 **bcp-** (bcp\<공간 >\<dash >\<dash >)-G 목록에 표시 되는지 확인 하 고 사용 가능한 인수입니다.
@@ -384,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ## 주의<a name="remarks"></a>
  총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 Windows 도움말을 참조하십시오.  
  
-bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=52676)에서 별도로 다운로드할 수도 있습니다.  `ENU\x64\MsSqlCmdLnUtils.msi` 또는 `ENU\x86\MsSqlCmdLnUtils.msi`중에 선택합니다.
+bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)에서 별도로 다운로드할 수도 있습니다.  `ENU\x64\MsSqlCmdLnUtils.msi` 또는 `ENU\x86\MsSqlCmdLnUtils.msi`중에 선택합니다.
 
   
  XML 서식 파일은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  

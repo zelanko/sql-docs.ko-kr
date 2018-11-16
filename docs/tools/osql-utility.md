@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291919"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -340,7 +339,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
- [-- &#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [--&#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   

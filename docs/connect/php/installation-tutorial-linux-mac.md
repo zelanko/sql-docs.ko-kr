@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 88d50c22a9e48db225f8cd38d8a1050ec0f4c156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af05ede442133465e7f268665bac4cd11a17f653
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851731"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604603"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 및 macOS Microsoft Drivers for PHP for SQL Server에 대 한 설치 자습서
 다음 지침을 정리 된 환경을 가정 및 Ubuntu 16.04, 17.10 및 18.04, RedHat 7, Debian 8 및 9, Suse 12, 및 macOS 10.11의 SQL Server에 대 한 PHP에 대 한 PHP 7.x, Microsoft ODBC driver, Apache, 및 Microsoft 드라이버를 설치 하는 방법을 보여 줍니다. 10.12 및 10.13 합니다. 이러한 지침은 PECL를 사용 하 여 드라이버를 설치 하는 것이 좋습니다 하지만에서 미리 작성 된 이진 파일을 다운로드할 수도 있습니다는 [&#40;microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지 및 의지침에따라설치[ Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)합니다. 에 대 한 확장 로드 및 php.ini에 확장을 추가할 것 수행 되는 이유는 설명은 섹션을 참조 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)합니다.
@@ -81,7 +81,7 @@ sudo service apache2 restart
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum-config-manager --enable remi-php72
@@ -187,12 +187,12 @@ sudo service apache2 restart
 
 > [!NOTE]
 > PHP 7.0을 설치 하려면 skip 아래 명령을 suse 12의 기본 PHP를은 리포지토리-7.0을 추가 합니다.
-> PHP 7.1을 설치 하려면 다음 URL을 사용 하 여 아래 리포지토리 URL을 바꿉니다. `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> PHP 7.1을 설치 하려면 다음 URL을 사용 하 여 아래 리포지토리 URL을 바꿉니다. `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 ```
 sudo su
-zypper -n ar -f http://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-pear php7-devel
 ```
@@ -329,7 +329,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-브라우저를 가리키면 http://localhost/testsql.php (http://localhost:8080/testsql.php macOS에서). 이제 SQL Server/Azure SQL database에 연결할 수 있어야 합니다.
+브라우저를 가리키면 https://localhost/testsql.php (https://localhost:8080/testsql.php macOS에서). 이제 SQL Server/Azure SQL database에 연결할 수 있어야 합니다.
 
 ## <a name="see-also"></a>참고 항목  
 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

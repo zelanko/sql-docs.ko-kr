@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f5bcf3ed174c5d25d817738195670ea573c64909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93aa83acd2bc73c8d67cdadddf1b7d1956dc4f7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759769"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657476"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47759769"
  일시 중지한 서비스를 다시 시작합니다.  
   
 > [!IMPORTANT]  
->  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](http://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
+>  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](https://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]시작 시 "구현되지 않았습니다[0x80004001]"라는 구가 포함된 WMI 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 대상 컴퓨터에 설치되어 있지 않은 것입니다.  

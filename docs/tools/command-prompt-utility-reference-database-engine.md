@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server]
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d4341ed928cb525b85e53c256589fc4e0ac5cdcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6b699c7ff8830d1f74d14a077a4d0cb4e68116
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598881"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291659"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47598881"
 |**유틸리티**|**설명**|**설치 위치**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 유틸리티](../tools/bcp-utility.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 복사하는 데 사용합니다.|\<*드라이브*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
-|[dta 유틸리티](../tools/dta/dta-utility.md)|작업을 분석하고 해당 작업에서 서버 성능을 최적화하기 위한 물리적 디자인 구조를 제시하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[dta Utility](../tools/dta/dta-utility.md)|작업을 분석하고 해당 작업에서 서버 성능을 최적화하기 위한 물리적 디자인 구조를 제시하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. 이 명령 프롬프트 유틸리티의 사용자 인터페이스 버전을 **DTExecUI**라고 하며 이는 패키지 실행 유틸리티를 표시합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 유틸리티](../integration-services/dtutil-utility.md)|SSIS 패키지를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[배포 유틸리티를 사용하여 모델 솔루션 배포](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|   
@@ -70,6 +69,6 @@ ms.locfileid: "47598881"
  [복제 로그 판독기 에이전트](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [복제 병합 에이전트](../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [복제 스냅숏 에이전트](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

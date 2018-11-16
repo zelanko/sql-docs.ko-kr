@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613421"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603093"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -105,25 +105,25 @@ JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0은 재배포 가능 합니다.
 예 드라이버는 IPv6 주소 사용을 지원합니다. 연결 속성 컬렉션 및 serverName 연결 문자열 속성을 사용 합니다. 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성)을 참조하세요.
 
 **적응 버퍼링이란 무엇인가요?**  
-적응 버퍼링 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2부터 도입되었습니다. 이 기능은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계되었습니다. Microsoft SQL Server JDBC Driver의 선택 버퍼링 기능은 "선택" 또는 "전체"로 설정될 수 있는 responseBuffering 연결 문자열 속성을 제공합니다. 버전 1.2 릴리스에서는 버퍼링 모드가 기본적으로 "full"이므로 응용 프로그램에서 명시적으로 적응 버퍼링 모드를 설정해야 합니다. JDBC Driver 버전 2.0부터, 이 드라이버의 기본 동작은 "선택"입니다. 따라서 적응 버퍼링을 사용하기 위해 응용 프로그램에서 명시적으로 적응 버퍼링을 요청할 필요가 없습니다. 자세한 내용은 [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md)(적응 버퍼링 사용) 및 [What is adaptiveresponse buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575)(적응 응답 버퍼링이란 무엇이며 왜 사용해야 하나요?)을 참조하세요.
+적응 버퍼링 Microsoft SQL Server 2005 JDBC 드라이버 버전 1.2부터 도입되었습니다. 이 기능은 서버 커서 오버헤드 없이 모든 종류의 큰 값 데이터를 검색할 수 있도록 설계되었습니다. Microsoft SQL Server JDBC Driver의 선택 버퍼링 기능은 "선택" 또는 "전체"로 설정될 수 있는 responseBuffering 연결 문자열 속성을 제공합니다. 버전 1.2 릴리스에서는 버퍼링 모드가 기본적으로 "full"이므로 응용 프로그램에서 명시적으로 적응 버퍼링 모드를 설정해야 합니다. JDBC Driver 버전 2.0부터, 이 드라이버의 기본 동작은 "선택"입니다. 따라서 적응 버퍼링을 사용하기 위해 응용 프로그램에서 명시적으로 적응 버퍼링을 요청할 필요가 없습니다. 자세한 내용은 [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md)(적응 버퍼링 사용) 및 [What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575)(적응 응답 버퍼링이란 무엇이며 왜 사용해야 하나요?)을 참조하세요.
 
 **이 드라이버는 연결 풀링을 지원하나요?**  
-이 드라이버는 Java Platform, Enterprise Edition 5(Java EE 5) 연결 풀링을 지원합니다. 미들웨어 응용 프로그램 서버 공급업체가 제공하며 JDBC 3.0과 호환되는 모든 연결 풀링 구현에 참여할 수 있도록 드라이버는 JDBC 3.0 필수 인터페이스를 구현합니다. 이 드라이버는 이러한 환경에서 풀링된 연결에 참여합니다. 자세한 내용은 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)(연결 풀링 사용)을 참조하세요. 이 드라이버는 자체 풀링 구현을 제공하지 않으며 타사 Java 응용 프로그램 서버에 의존합니다.
+이 드라이버는 Java Platform, Enterprise Edition 5(Java EE 5) 연결 풀링을 지원합니다. 미들웨어 응용 프로그램 서버 공급업체가 제공하며 JDBC 3.0과 호환되는 모든 연결 풀링 구현에 참여할 수 있도록 드라이버는 JDBC 3.0 필수 인터페이스를 구현합니다. 이 드라이버는 이러한 환경에서 풀링된 연결에 참여합니다. 자세한 내용은 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)을 참조하세요. 이 드라이버는 자체 풀링 구현을 제공하지 않으며 타사 Java 응용 프로그램 서버에 의존합니다.
 
 **이 드라이버에 대한 지원을 사용할 수 있나요?**  
-몇 가지 지원 옵션을 사용할 수 있습니다. 질문을 게시 하거나를 발급할 수 있습니다 우리의 [GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc) 는 Microsoft에서 모니터링 됩니다. [포럼](http://go.microsoft.com/fwlink/?LinkID=246673) Microsoft, Mvp 및 커뮤니티에서 모니터링 됩니다. Microsoft 고객 지원 서비스에 문의할 수도 있습니다. 개발 팀에서는 타사 응용 프로그램 서버 외부에서 발생하는 문제를 재현하도록 요청할 수도 있습니다. 호스팅 Java 컨테이너 환경 외부에서 발생하는 문제를 재현할 수 없는 경우 관련 타사에 문의해야만 계속 팀의 지원을 받을 수 있습니다. 팀은 문제가 가장 잘 지원할 수 있도록 Windows 등의 운영 체제에서 문제를 재현 하도록 요청 될 수 있습니다.
+몇 가지 지원 옵션을 사용할 수 있습니다. 질문을 게시 하거나를 발급할 수 있습니다 우리의 [GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc) 는 Microsoft에서 모니터링 됩니다. [포럼](https://go.microsoft.com/fwlink/?LinkID=246673) Microsoft, Mvp 및 커뮤니티에서 모니터링 됩니다. Microsoft 고객 지원 서비스에 문의할 수도 있습니다. 개발 팀에서는 타사 응용 프로그램 서버 외부에서 발생하는 문제를 재현하도록 요청할 수도 있습니다. 호스팅 Java 컨테이너 환경 외부에서 발생하는 문제를 재현할 수 없는 경우 관련 타사에 문의해야만 계속 팀의 지원을 받을 수 있습니다. 팀은 문제가 가장 잘 지원할 수 있도록 Windows 등의 운영 체제에서 문제를 재현 하도록 요청 될 수 있습니다.
 
 **이 드라이버는 타사 응용 프로그램 서버에서 사용할 수 있도록 인증되었나요?**
 이 드라이버는 IBM WebSphere 및 SAP NetWeaver를 비롯한 다양한 응용 프로그램 서버에서 테스트되었습니다.
 
 **추적을 사용하도록 설정하려면 어떻게 하나요?**  
-이 드라이버에서는 추적 또는 로깅 기능을 사용하여 응용 프로그램에서 사용되는 JDBC Driver 관련 문제를 해결할 수 있습니다. 클라이언트 쪽 JAR 추적을 사용으로 설정할 수 있도록 JDBC Driver는 java.util.logging의 로깅 API를 사용합니다. 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요. 서버 쪽 XA 추적에 대한 자세한 내용은 [SQL Server의 데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=248705)을 참조하세요.
+이 드라이버에서는 추적 또는 로깅 기능을 사용하여 응용 프로그램에서 사용되는 JDBC Driver 관련 문제를 해결할 수 있습니다. 클라이언트 쪽 JAR 추적을 사용으로 설정할 수 있도록 JDBC Driver는 java.util.logging의 로깅 API를 사용합니다. 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요. 서버 쪽 XA 추적에 대한 자세한 내용은 [SQL Server의 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=248705)을 참조하세요.
 
 **SQL Server 2000 JDBC Driver, 2005 Driver, 1.0, 1.1 또는 1.2 Driver와 같은 이전 버전의 드라이버는 어디에서 다운로드할 수 있나요?**  
 이러한 드라이버 버전은 더 이상 지원되지 않으므로 다운로드할 수 없습니다. Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.
 
 **현재 JRE 1.4를 사용하고 있습니다. 어떤 드라이버가 JRE 1.4와 호환되나요?**  
-SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경우 [SAPService 마켓플레이스](http://service.sap.com/) 에 연결하여 1.2 Microsoft JDBC Driver를 얻을 수 있습니다.
+SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경우 [SAPService 마켓플레이스](https://service.sap.com/) 에 연결하여 1.2 Microsoft JDBC Driver를 얻을 수 있습니다.
 
 **이 드라이버가 FIPS 유효성 검사 알고리즘을 사용하여 통신할 수 있나요?**  
 Microsoft JDBC Driver에는 암호화 알고리즘이 포함되어 있지 않습니다. 고객이 FIPS(Federal Information Processing Standards)에서 허용될 수 있는 운영 체제, 응용 프로그램 및 JVM 알고리즘을 활용하며 해당 알고리즘을 사용하도록 드라이버를 구성하는 경우 해당 드라이버는 지정된 알고리즘만 통신에 사용합니다.

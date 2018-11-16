@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e2277e97eddd2e3a4ce89a5ea3f2da4d84e247f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caebb35ed8dfb3eee67c5371ff9ffb4078311546
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661841"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656943"
 ---
 # <a name="creating-a-valid-connection-string-using-shared-memory-protocol"></a>공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ WHERE session_id = @@SPID;
   
 ## <a name="see-also"></a>참고 항목  
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
- [네트워크 프로토콜 선택](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
+ [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

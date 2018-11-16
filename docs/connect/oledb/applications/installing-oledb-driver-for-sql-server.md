@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071669"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602223"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ OLE DB Driver for SQL Server 파일 (msoledbsql.dll, msoledbsqlr.rll)에 설치 
 
 OLE DB Driver for SQL Server 헤더 및 라이브러리 파일 (msoledbsql.h 및 msoledbsql.lib)에 설치 된 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`합니다. 또한 msoledbsql.msi 설치의 동일한 파일에 x64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`합니다.  
 
-Msoledbsql.msi 통해 SQL Server 용 OLE DB 드라이버를 배포할 수 있습니다. 응용 프로그램을 배포 하는 경우 SQL Server 용 OLE DB 드라이버를 설치 해야 합니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](http://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](http://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
+Msoledbsql.msi 통해 SQL Server 용 OLE DB 드라이버를 배포할 수 있습니다. 응용 프로그램을 배포 하는 경우 SQL Server 용 OLE DB 드라이버를 설치 해야 합니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](https://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](https://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
   
 X64 msoledbsql.msi도 SQL Server 용 OLE DB 드라이버의 32 비트 버전을 설치 합니다. 응용 프로그램에 개발 된 것 이외의 플랫폼을 대상으로 하는 경우에 x64 및 x86 msoledbsql.msi의 버전을 다운로드할 수 있습니다.
 

@@ -11,12 +11,12 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3afc4fc8a74dfe4c2ed625fc7a82df02dc21af3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0f359c66250d11fa01c74567e1faeab3ff064ac
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850491"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602253"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time 값을 서버에 보내는 방식 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47850491"
   
  사용 하려는 경우는 **날짜/시간** 하 고 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정 해야 java.sql.Time 값을 사용 하 여 작업 하는 경우 데이터 형식에는 **sendTimeAsDatetime** 연결 속성을 **true**합니다. 사용 하려는 경우는 **시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 경우 설정 해야 java.sql.Time 값을 사용 합니다 **sendTimeAsDatetime** 연결 속성을 **false**.  
   
- 날짜도 저장할 수 있는 데이터 형식의 매개 변수에 java.sql.Time 값을 보낼 시 java.sql.Time 값을 **datetime**(1/1/1970) 값으로 보내는지 아니면 **time**(1/1/1900) 값으로 보내는지에 따라 기본 날짜가 달라지므로 주의해야 합니다. 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 때의 데이터 변환에 대한 자세한 내용은 [날짜 및 시간 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=145211)을 참조하세요.  
+ 날짜도 저장할 수 있는 데이터 형식의 매개 변수에 java.sql.Time 값을 보낼 시 java.sql.Time 값을 **datetime**(1/1/1970) 값으로 보내는지 아니면 **time**(1/1/1900) 값으로 보내는지에 따라 기본 날짜가 달라지므로 주의해야 합니다. 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 때의 데이터 변환에 대한 자세한 내용은 [날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkID=145211)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0 **sendTimeAsDatetime** 은 기본적으로 true입니다. 후속 릴리스에서는 **sendTimeAsDatetime** 연결 속성이 기본적으로 false로 설정될 수 있습니다.  
   

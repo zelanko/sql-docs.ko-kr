@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828271"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604721"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -605,5 +605,5 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 ## <a name="see-also"></a>참고 항목
 
 - [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [상시 암호화 블로그](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

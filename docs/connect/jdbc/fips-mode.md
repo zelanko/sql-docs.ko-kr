@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324574"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601873"
 ---
 # <a name="fips-mode"></a>FIPS 모드
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ SQL Server 용 Microsoft JDBC Driver 지원 *FIPS 140 규격 모드*합니다. O
 
 ## <a name="fips-configured-jvm"></a>구성 된 JVM FIPS
 
-FIPS 구성에 대 한 승인 된 모듈 참조에 [유효성이 검사 FIPS 140-1 및 FIPS 140-2 암호화 모듈](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)합니다. 
+FIPS 구성에 대 한 승인 된 모듈 참조에 [유효성이 검사 FIPS 140-1 및 FIPS 140-2 암호화 모듈](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)합니다. 
 
 공급 업체는 FIPS를 사용 하 여 JVM을 구성 하려면 몇 가지 추가 단계가 있을 수 있습니다.
 
@@ -87,7 +87,7 @@ private Certificate getCertificate(String pathName)
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>적절 한 정책 파일
-일부 FIPS 공급자 무제한 정책 jar가 필요 합니다. 이러한 경우, Sun / Oracle는 Java Cryptography Extension (JCE) 무제한 Strength Jurisdiction Policy Files에 대 한 다운로드 [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) 또는 [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)합니다. 
+일부 FIPS 공급자 무제한 정책 jar가 필요 합니다. 이러한 경우, Sun / Oracle는 Java Cryptography Extension (JCE) 무제한 Strength Jurisdiction Policy Files에 대 한 다운로드 [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) 또는 [JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)합니다. 
 
 ## <a name="appropriate-configuration-parameters"></a>적절 한 구성 매개 변수
 JDBC 드라이버를 FIPS 규격 모드에서 실행 하려면 다음 표에 나와 있는 것 처럼 연결 속성을 구성 합니다. 

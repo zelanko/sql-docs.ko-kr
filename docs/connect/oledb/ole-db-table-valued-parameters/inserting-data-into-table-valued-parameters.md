@@ -13,19 +13,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9054dde2ce697cf954ad36474220a38c3d1210d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656381"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604593"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정하는 두 가지 모델로 밀어넣기 모델과 끌어오기 모델을 지원합니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
+  SQL Server용 OLE DB 드라이버는 소비자가 테이블 반환 매개 변수 행의 데이터를 지정하는 두 가지 모델로 밀어넣기 모델과 끌어오기 모델을 지원합니다. 끌어오기 모델을 보여 주는 예제를 사용할 수 있습니다. [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
 > [!NOTE]  
 >  테이블 반환 매개 변수 열은 모든 행에 기본값이 아닌 값이 있거나 모든 행에 기본값이 있어야 합니다. 일부 행에만 기본값이 있으면 안 됩니다. 따라서 테이블 반환 매개 변수 바인딩에서 테이블 반환 매개 변수 행 집합 열 데이터에는 DBSTATUS_S_ISNULL 및 DBSTATUS_S_OK 상태 값만 사용할 수 있습니다. DBSTATUS_S_DEFAULT를 사용하면 오류가 발생하며 바인딩 상태 값은 DBSTATUS_E_BADSTATUS로 설정됩니다.  

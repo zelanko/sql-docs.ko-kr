@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e3fc010dfa8dfd24c216fc5074efd0dca2ad85d3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032306"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606943"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server용 OLE DB 드라이버(OLE DB) 인터페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51032306"
   
  이 SQL Server용 OLE DB 드라이버 프로그래밍 참조에는 모든 OLE DB 인터페이스 및 메서드가 포함되어 있지는 않으며 SQL Server용 OLE DB 드라이버를 사용할 때 공급자별 동작을 지원하는 인터페이스 및 메서드만 포함합니다.  
   
- 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](http://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
+ 핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642412"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657672"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>3단원: dta 명령 프롬프트 유틸리티 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47642412"
   
 자주 사용하는 XML 도구에서 데이터베이스 엔진 튜닝 관리자 XML 스키마를 사용하여 유틸리티의 입력 파일을 만들 수 있습니다. 이 스키마는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되며 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd에서 확인할 수 있습니다.  
   
-데이터베이스 엔진 튜닝 관리자 XML 스키마는 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서 온라인으로도 제공됩니다.  
+데이터베이스 엔진 튜닝 관리자 XML 스키마는 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서 온라인으로도 제공됩니다.  
   
 데이터베이스 엔진 튜닝 관리자 XML 스키마를 사용하면 튜닝 옵션을 보다 유연하게 설정할 수 있습니다. 예를 들어 "가정(what-if)" 분석을 수행할 수 있습니다. "가정(what-if)" 분석에는 튜닝하려는 데이터베이스에 대해 일련의 기존 및 가상 물리적 디자인 구조를 지정한 다음 데이터베이스 엔진 튜닝 관리자로 분석하여 이 가상 물리적 디자인으로 쿼리 처리 성능이 개선될지 확인하는 작업이 포함됩니다. 이 분석 유형은 실제 구현 시 오버헤드를 발생시키지 않고 새 구성을 평가하는 이점이 있습니다. 가상 물리적 디자인으로 원하는 성능 개선이 이루어지지 않으면 필요한 결과를 만드는 구성에 도달할 때까지 해당 디자인을 쉽게 변경하고 다시 분석할 수 있습니다.  
   

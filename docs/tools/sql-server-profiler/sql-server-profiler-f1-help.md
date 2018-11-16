@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667442"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서�
 |---|---
 |**Events** 열|이벤트 열에서 확인란을 선택하거나 선택 취소하여 추적된 이벤트를 지정합니다. **Events** 는 이벤트 범주별로 구성됩니다. 템플릿에 지정된 이벤트 클래스는 자동으로 선택됩니다. 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하세요.  
 |데이터 열|원하는 이벤트 및 데이터 열에 해당하는 확인란을 선택하여 추적된 데이터 열을 지정합니다. 추적에 포함된 각 이벤트와 관련된 모든 이벤트 열이 기본적으로 선택됩니다.  
-|필터|데이터 열 머리글을 클릭하고 필터 조건을 입력하여 필터를 지정합니다. 필터링된 데이터 열은 **필터 편집** 대화 상자에서 열 레이블 왼쪽에 있는 필터 아이콘으로 표시됩니다. 자세한 내용은 [SQL Server Profiler - 필터 편집](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)을 참조하세요.  
+|필터|데이터 열 머리글을 클릭하고 필터 조건을 입력하여 필터를 지정합니다. 필터링된 데이터 열은 **필터 편집** 대화 상자에서 열 레이블 왼쪽에 있는 필터 아이콘으로 표시됩니다. 자세한 내용은 [SQL Server Profiler - 필터 편집](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)을 참조하세요.  
 |**모든 이벤트 표시**|사용할 수 있는 모든 이벤트를 표시합니다. 기본적으로 **이벤트 선택** 표에서 선택된 행만 표시됩니다. **이벤트 선택** 표에서 선택되지 않은 모든 이벤트를 숨기려면 이 확인란의 선택을 취소합니다.  
 |**모든 열 표시**|사용할 수 있는 모든 데이터 열을 표시합니다. 기본적으로 선택된 데이터 열만 표시됩니다. **이벤트 선택** 표에서 선택되지 않은 모든 데이터 열을 숨기려면 이 확인란의 선택을 취소합니다.  
 |**열 필터**|**필터 편집** 대화 상자를 시작합니다. 이 대화 상자를 사용하여 데이터 열 필터를 편집할 수 있습니다.  
@@ -179,7 +179,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서�
 |---|---
 |**확인하지 않고 모든 롤오버 파일을 순서대로 로드**|추적 파일이 열리면 롤오버 파일을 자동으로 로드합니다. 이 옵션을 선택하면 추적하는 동안 두 개 이상의 파일이 생성된 경우 자동으로 모든 롤오버 파일이 로드됩니다.  
 |**롤오버 파일 로드 전에 확인**|추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 롤오버 파일을 추가하기 전에 사용자에게 확인 메시지를 표시합니다.  
-|**다음 롤오버 파일 로드 안 함**|추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 다음 롤오버 파일을 로드하지 않습니다.  
+|**다음 롤오버 파일 로드 안 함**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 다음 롤오버 파일을 로드하지 않습니다.  
 ### <a name="replay-options"></a>재생 옵션  
 |항목|설명
 |---|---

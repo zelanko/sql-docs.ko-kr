@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 994011062b36f028157c3f70b3f2ed3c335d526f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f09f9e2f9ad166edb764aa33a8b20623e11cf08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612911"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600673"
 ---
 # <a name="return-codes"></a>반환 코드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47612911"
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 응용 프로그램 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
+ OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
   
  S_OK를 반환 하는 OLE DB 드라이버는 SQL Server 멤버 함수, 함수 성공 했습니다.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 4ca0d4337a4377f1c61d118db7852b195dc279e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c80013249af94a2ad94c221bc6155dca7c7d2664
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684411"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606763"
 ---
 # <a name="information-in-error-interfaces"></a>오류 인터페이스의 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47684411"
 |멤버 함수|설명|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|ERRORINFO 구조에 오류에 대한 기본 정보를 채웁니다. ERRORINFO 구조에는 오류에 대한 HRESULT 반환 값을 식별하는 멤버와 오류가 적용되는 공급자 및 인터페이스가 포함됩니다.|  
-|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스에 대한 참조를 반환합니다.|  
+|**GetCustomErrorObject**|**ISQLErrorInfo** 및 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorInfo**|**IErrorInfo** 인터페이스에 대한 참조를 반환합니다.|  
 |**GetErrorParameters**|OLE DB Driver for SQL Server를 통해 소비자에 게 매개 변수를 반환 하지 않는 **GetErrorParameters**합니다.|  
 |**GetRecordCount**|사용할 수 있는 오류 레코드 수입니다.|  

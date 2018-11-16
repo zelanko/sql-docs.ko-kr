@@ -11,19 +11,19 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40def6feee993604fb65ebc1abd2d98f5c0718ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751761"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603043"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC 드라이버 배포
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하는 응용 프로그램을 배포하는 경우 해당 응용 프로그램과 함께 JDBC 드라이버도 다시 배포해야 합니다. Windows 운영 체제의 구성 요소인 Windows DAC(Windows Data Access Components)와 달리 JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성 요소로 간주됩니다.  
   
- 응용 프로그램과 함께 JDBC 드라이버를 배포하는 데에는 두 가지 접근 방식이 있습니다. 그 중 하나는 JDBC 드라이버 파일을 자체 사용자 지정 설치 패키지의 일부로 포함시키는 것입니다. 나머지 방식은 Microsoft가 제공하는 JDBC 설치 패키지를 사용하는 것인데, 이는 [SQL Server용 Microsoft JDBC 드라이버 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=70166)에서 다운로드할 수 있습니다.  
+ 응용 프로그램과 함께 JDBC 드라이버를 배포하는 데에는 두 가지 접근 방식이 있습니다. 그 중 하나는 JDBC 드라이버 파일을 자체 사용자 지정 설치 패키지의 일부로 포함시키는 것입니다. 나머지 방식은 Microsoft가 제공하는 JDBC 설치 패키지를 사용하는 것인데, 이는 [SQL Server용 Microsoft JDBC 드라이버 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=70166)에서 다운로드할 수 있습니다.  
   
  다음 섹션에서는 Windows 및 UNIX 운영 체제에서 JDBC 설치 패키지를 사용하는 방법에 대해 설명합니다.  
   

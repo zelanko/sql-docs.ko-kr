@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728531"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600473"
 ---
 # <a name="support-for-localdb"></a>LocalDB 지원
 
@@ -60,7 +60,7 @@ LocalDB 설치 및 LocalDB 인스턴스를 구성 하는 방법을 비롯 한 Lo
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-필요한 경우 sqllocaldb.exe를 사용하여 LocalDB 인스턴스를 만들 수 있습니다. 또한 sqlcmd.exe를 사용하여 LocalDB 인스턴스에서 데이터베이스를 추가하고 수정할 수 있습니다. `sqlcmd -S (localdb)\v11.0`)을 입력합니다. (명령줄에서 실행할 때와 동일한 결과 얻기 위해 올바른 계정으로 실행 해야 하는 IIS를 실행 하는 경우 참조 [를 사용 하 여 IIS에서 LocalDB 사용 전체, 2 부: 인스턴스 소유권](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) 자세한.)
+필요한 경우 sqllocaldb.exe를 사용하여 LocalDB 인스턴스를 만들 수 있습니다. 또한 sqlcmd.exe를 사용하여 LocalDB 인스턴스에서 데이터베이스를 추가하고 수정할 수 있습니다. `sqlcmd -S (localdb)\v11.0`)을 입력합니다. (명령줄에서 실행할 때와 동일한 결과 얻기 위해 올바른 계정으로 실행 해야 하는 IIS를 실행 하는 경우 참조 [를 사용 하 여 IIS에서 LocalDB 사용 전체, 2 부: 인스턴스 소유권](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) 자세한.)
 
 다음은 연결 문자열 예 SQLSRV 드라이버를 사용 하 여 명명 된 myinstance 인스턴스는 LocalDB에서 데이터베이스에 연결 하는입니다.
 

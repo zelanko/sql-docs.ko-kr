@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -15,12 +14,12 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 571b2a78414b6435a48d24cbc4abb83d0f8d2d8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a70ee2ad71f6b51f8bb28dc0361e65c6cebc18a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657532"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47750501"
 ## <a name="requirements"></a>요구 사항  
 이 자습서는 데이터베이스 엔진 튜닝 관리자 GUI나 **dta** 명령 프롬프트 유틸리티에는 익숙하지 않지만 데이터베이스 개념과 인덱스 및 인덱싱된 뷰와 같은 구조에는 많은 경험이 있는 데이터베이스 관리자를 대상으로 합니다.  
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 예제 데이터베이스가 포함된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (또는 최신 버전)를 설치해야 합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](http://sqlserversamples.codeplex.com)를 참조하세요.  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 예제 데이터베이스가 포함된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (또는 최신 버전)를 설치해야 합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](https://sqlserversamples.codeplex.com)를 참조하세요.  
   
 ## <a name="after-you-finish-this-tutorial"></a>이 자습서를 마친 후  
 이 자습서의 학습을 마친 후에는 다음 항목을 참조하여 데이터베이스 엔진 튜닝 관리자에 대한 자세한 내용을 보십시오.  

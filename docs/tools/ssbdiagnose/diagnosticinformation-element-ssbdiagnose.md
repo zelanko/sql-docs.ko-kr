@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - XML output file format [ssbdiagnose], diagnosticinformation element
@@ -16,12 +15,12 @@ ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e436911e0d7d6eb1b3d7a6d70befded41e04829
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39c1b90b368470f4a5ef2cd5fd2d90309aea3dda
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665061"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668393"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 요소(ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "47665061"
 |**자식 요소**|[Banner 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Remarks  
- XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](http://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
+ XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](https://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [ssbdiagnose 유틸리티&#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  

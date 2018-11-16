@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770951"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605133"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하는 SQL과 연결된 개념 증명
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47770951"
   
 ## <a name="step-2--execute-query"></a>2 단계: 쿼리를 실행 합니다.  
   
-합니다 [sqlsrv_query ()](http://php.net/manual/en/function.sqlsrv-query.php) 결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리 및 연결 개체를 수락 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다 [sqlsrv_fetch_array ()](http://php.net/manual/en/function.sqlsrv-fetch-array.php)합니다.  
+합니다 [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) 결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리 및 연결 개체를 수락 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다 [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)합니다.  
   
 ```php  
     function ReadData()  

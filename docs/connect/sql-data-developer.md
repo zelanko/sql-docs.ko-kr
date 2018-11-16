@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 181039ae52fc20c4b453d268b81cf4029cf6c473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cecdeb5d702346110c37068a51aebd755a57411
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615501"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601633"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 모바일 장치 및 데스크톱 웹 서버, 엔터프라이즈 서버 및 클라우드 전반에서 데이터 중심 솔루션을 만드는 데 사용 하 여 Microsoft SQL 데이터 플랫폼입니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "47615501"
 ## <a name="sql-data-storage"></a>SQL 데이터 저장소
 * [SQL Server 데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md): 온라인 트랜잭션 처리 작업 또는 온라인 분석 처리 데이터에 대 한 관계형 데이터베이스를 만들려면 SQL Server 데이터베이스 엔진을 사용 합니다. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): 사용 하 여 SQL Azure 데이터베이스를 클라우드로 이동 하려면 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact를 독립 실행형 및 데스크톱, 모바일 장치에 간헐적으로 연결된 응용 프로그램을 빌드하고 웹 클라이언트입니다.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact를 독립 실행형 및 데스크톱, 모바일 장치에 간헐적으로 연결된 응용 프로그램을 빌드하고 웹 클라이언트입니다.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): 작성 하 고 TRANSACT-SQL 코드를 SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 테스트할 개발 하는 동안 LocalDB를 사용 합니다.
 
 ## <a name="sql-data-tools"></a>SQL Data tools

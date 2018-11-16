@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eec1a271e10e85c9a22bfa45c75c8ac5efbbf7d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785622"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606203"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 로드
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,9 +77,9 @@ PHP를 시작할 때 SQLSRV 드라이버를 로드하려면 먼저 드라이버 
 3.  웹 서버를 다시 시작합니다.  
   
 > [!NOTE]  
-> 드라이버가 성공적으로 로드되었는지 여부를 확인하려면 [phpinfo()](http://php.net/manual/en/function.phpinfo.php)를 호출하는 스크립트를 실행합니다.  
+> 드라이버가 성공적으로 로드되었는지 여부를 확인하려면 [phpinfo()](https://php.net/manual/en/function.phpinfo.php)를 호출하는 스크립트를 실행합니다.  
   
-**php.ini** 지시문에 대한 자세한 내용은 [핵심 php.ini 지시문 설명](http://php.net/manual/en/ini.core.php)을 참조하세요.  
+**php.ini** 지시문에 대한 자세한 내용은 [핵심 php.ini 지시문 설명](https://php.net/manual/en/ini.core.php)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

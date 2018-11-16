@@ -18,12 +18,12 @@ ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 303f97e5a2fb4599bde5c17fee056a3572491ad0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655975"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,4 +59,4 @@ ms.locfileid: "47824131"
 
 ## <a name="next-steps"></a>다음 단계  
  [SQL Server Profiler 개요](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc05d9c20affd1d995312c261b68dac178f8ddb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f645884e28d93bf25032aa6cf89ae3d5dd6774
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754581"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671215"
 ---
 # <a name="create-element-dta"></a>Create 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ ms.locfileid: "47754581"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[Recommendation 요소&#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
-|**자식 요소**|[Index 요소&#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://schemas.microsoft.com/sqlserver/) 참조)<br /><br /> **Heap** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://schemas.microsoft.com/sqlserver/) 참조)|  
+|**자식 요소**|[Index 요소&#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://schemas.microsoft.com/sqlserver/) 참조)<br /><br /> **Heap** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://schemas.microsoft.com/sqlserver/) 참조)|  
   
 ## <a name="remarks"></a>Remarks  
- 데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **CreateTypecomplexType** 입니다. 이 요소는 사용자 지정 구성에 대한 인덱스, 통계 및 힙 구조를 만드는 데 사용됩니다. 이 **Create** 요소를 뷰(**CreateViewType**) 또는 분할(**CreatePType**)을 만드는 데 사용할 수 있는 다른 유형과 혼동하지 마세요. 이러한 기타 [Create](http://schemas.microsoft.com/sqlserver/) 요소 유형에 대한 내용은 **데이터베이스 엔진 튜닝 관리자 XML 스키마** 를 참조하세요.  
+ 데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **CreateTypecomplexType** 입니다. 이 요소는 사용자 지정 구성에 대한 인덱스, 통계 및 힙 구조를 만드는 데 사용됩니다. 이 **Create** 요소를 뷰(**CreateViewType**) 또는 분할(**CreatePType**)을 만드는 데 사용할 수 있는 다른 유형과 혼동하지 마세요. 이러한 기타 [Create](https://schemas.microsoft.com/sqlserver/) 요소 유형에 대한 내용은 **데이터베이스 엔진 튜닝 관리자 XML 스키마** 를 참조하세요.  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조하세요.  

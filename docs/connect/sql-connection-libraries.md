@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806095"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600373"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
-이 문서에서는 연결 모듈에 대 한 다운로드 링크를 제공 하거나 *드라이버* 클라이언트 프로그램 상호 작용에 사용할 수 있는 [Microsoft SQL Server](../relational-databases/database-features.md), 및 클라우드에서 해당 쌍을 사용 하 여 [Azure SQL Database](http://docs.microsoft.com/azure/sql-database/)합니다. 드라이버는 다음 운영 체제에서 실행 되는 프로그래밍 언어의 다양 한 사용할 수 있습니다.
+이 문서에서는 연결 모듈에 대 한 다운로드 링크를 제공 하거나 *드라이버* 클라이언트 프로그램 상호 작용에 사용할 수 있는 [Microsoft SQL Server](../relational-databases/database-features.md), 및 클라우드에서 해당 쌍을 사용 하 여 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)합니다. 드라이버는 다음 운영 체제에서 실행 되는 프로그래밍 언어의 다양 한 사용할 수 있습니다.
 
 - Linux(Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | 언어 | SQL driver 다운로드 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Linux Ubuntu 용.NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 용.NET core](https://www.microsoft.com/net/core#macos)<br />[Windows에 대 한.NET core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[Linux Ubuntu 용.NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 용.NET core](https://www.microsoft.com/net/core#macos)<br />[Windows에 대 한.NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 드라이버를 설치 지침](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -68,18 +68,18 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 언어 | ORM 드라이버 다운로드 |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 이상)](http://docs.microsoft.com/ef/) |
-| Java | [ORM 최대 절전 모드로 전환](http://hibernate.org/orm)|
-| PHP | [Eloquent ORM, Laravel 설치에 포함](http://laravel.com/docs/) |
-| Node.js | [ORM sequelize](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 이상)](https://docs.microsoft.com/ef/) |
+| Java | [ORM 최대 절전 모드로 전환](https://hibernate.org/orm)|
+| PHP | [Eloquent ORM, Laravel 설치에 포함](https://laravel.com/docs/) |
+| Node.js | [ORM sequelize](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>웹 앱을 빌드 페이지
-[http://aka.ms/sqldev](http://aka.ms/sqldev) 집합이 안내 *앱을 빌드* 웹 페이지입니다. 웹 페이지 프로그래밍 언어, 운영 체제 및 SQL 연결 드라이버의 다양 한 조합에 대 한 정보를 제공 합니다. 웹 앱을 빌드 페이지에서 제공한 정보는 다음 항목이 같습니다.
+[https://aka.ms/sqldev](https://aka.ms/sqldev) 집합이 안내 *앱을 빌드* 웹 페이지입니다. 웹 페이지 프로그래밍 언어, 운영 체제 및 SQL 연결 드라이버의 다양 한 조합에 대 한 정보를 제공 합니다. 웹 앱을 빌드 페이지에서 제공한 정보는 다음 항목이 같습니다.
 
 - 운영 체제, 언어 + 드라이버의 각 조합에 대해 처음부터 시작 하는 방법에 대 한 세부 정보입니다.
     - 최신 SQL 연결 드라이버를 설치 하기 위한 지침입니다.
@@ -97,7 +97,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 &nbsp;
 
 ## <a name="related-links"></a>관련 링크
-- [코드, Java 및 기타 언어를 사용 하 여 클라우드에서 Azure SQL Database에 연결 하기 위한 예제](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)합니다.
+- [코드, Java 및 기타 언어를 사용 하 여 클라우드에서 Azure SQL Database에 연결 하기 위한 예제](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)합니다.
 
 <!-- Image references -->
 

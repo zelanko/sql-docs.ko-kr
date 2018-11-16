@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598391"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603533"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -35,9 +35,9 @@ ms.locfileid: "47598391"
   
 | 리소스                                                                                                             | 설명                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [테이블 반환 매개 변수 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 온라인 설명서의 | 만들기 및 테이블 반환 매개 변수를 사용 하는 방법을 설명 합니다.                             |
-| [사용자 정의 테이블 형식](http://go.microsoft.com/fwlink/?LinkId=98364) SQL Server 온라인 설명서의                  | 테이블 반환 매개 변수를 선언 하는 데 사용 되는 사용자 정의 테이블 형식을 설명 합니다. |
-| 합니다 [Microsoft SQL Server 데이터베이스 엔진](http://go.microsoft.com/fwlink/?LinkId=120507) CodePlex의 섹션        | SQL Server 기능 및 기능을 사용 하는 방법을 보여 주는 샘플이 포함 되어 있습니다.  |
+| [테이블 반환 매개 변수 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 온라인 설명서의 | 만들기 및 테이블 반환 매개 변수를 사용 하는 방법을 설명 합니다.                             |
+| [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkId=98364) SQL Server 온라인 설명서의                  | 테이블 반환 매개 변수를 선언 하는 데 사용 되는 사용자 정의 테이블 형식을 설명 합니다. |
+| 합니다 [Microsoft SQL Server 데이터베이스 엔진](https://go.microsoft.com/fwlink/?LinkId=120507) CodePlex의 섹션        | SQL Server 기능 및 기능을 사용 하는 방법을 보여 주는 샘플이 포함 되어 있습니다.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>이전 버전의 SQL Server에서 여러 행 전달  
 
@@ -53,7 +53,7 @@ ms.locfileid: "47598391"
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
 
-테이블 반환 매개 변수는 강력한 형식의 테이블 구조를 기반으로 TRANSACT-SQL을 사용 하 여 정의 된 `CREATE TYPE` 문입니다. 테이블 형식을 만들고 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용 하려면 먼저 SQL Server의 구조를 정의 해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 하세요. [사용자 정의 테이블 형식](http://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
+테이블 반환 매개 변수는 강력한 형식의 테이블 구조를 기반으로 TRANSACT-SQL을 사용 하 여 정의 된 `CREATE TYPE` 문입니다. 테이블 형식을 만들고 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용 하려면 먼저 SQL Server의 구조를 정의 해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 하세요. [사용자 정의 테이블 형식](https://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ pStmt.execute();
 
 | 속성                                                                                                    | 설명                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 공용 최종 void setStructured (int 된, 문자열 tvpName SQLServerDataTable tvpDataTbale)    | 데이터 테이블을 사용 하 여 테이블 반환 매개 변수를 채웁니다. 된 매개 변수 인덱스, tvpName 테이블 반환 매개 변수의 이름을 이며 tvpDataTable 원본 데이터 테이블 개체입니다.                                                                                                          |
+| 공용 최종 void setStructured (int 된, 문자열 tvpName SQLServerDataTable tvpDataTable)    | 데이터 테이블을 사용 하 여 테이블 반환 매개 변수를 채웁니다. 된 매개 변수 인덱스, tvpName 테이블 반환 매개 변수의 이름을 이며 tvpDataTable 원본 데이터 테이블 개체입니다.                                                                                                          |
 | 공용 최종 void setStructured (int 된, 문자열 tvpName, ResultSet tvpResultSet)             | 임의의 테이블에서 검색 된 결과 집합을 사용 하 여 테이블 반환 매개 변수를 채웁니다. 된 매개 변수 인덱스, tvpName 테이블 반환 매개 변수의 이름을 이며 tvpResultSet 원본 결과 집합 개체입니다.                                                                               |
 | 공용 최종 void setStructured (int 된, 문자열 tvpName ISQLServerDataRecord tvpDataRecord) | ISQLServerDataRecord 개체를 사용 하 여 테이블 반환 매개 변수를 채웁니다. ISQLServerDataRecord 스트리밍 데이터에 사용 되 고 사용자가 사용 하는 방법을 결정 합니다. 된 매개 변수 인덱스가, tvpName 테이블 반환 매개 변수의 이름을 이며 tvpDataRecord ISQLServerDataRecord 개체입니다. |
   

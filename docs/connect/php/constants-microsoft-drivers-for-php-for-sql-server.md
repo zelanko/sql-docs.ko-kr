@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605511"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603753"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605511"
 이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 정의된 상수를 설명합니다.  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV 드라이버 상수  
-[PDO 웹 사이트](http://php.net/manual/book.pdo.php)에 나열된 상수는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 유효합니다.  
+[PDO 웹 사이트](https://php.net/manual/book.pdo.php)에 나열된 상수는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 유효합니다.  
   
 다음은 PDO_SQLSRV 드라이버의 Microsoft 관련 상수를 설명합니다.  
   
@@ -132,7 +132,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV_PARAM_OUT|출력 매개 변수를 나타냅니다.|  
   
 ### <a name="phptype-constants"></a>PHPTYPE 상수  
-다음 표는 PHP 데이터 형식을 설명하는 데 사용되는 상수를 나열합니다. PHP 데이터 형식에 대한 자세한 내용은 [PHP 형식](http://php.net/manual/en/language.types.php)을 참조하세요.  
+다음 표는 PHP 데이터 형식을 설명하는 데 사용되는 상수를 나열합니다. PHP 데이터 형식에 대한 자세한 내용은 [PHP 형식](https://php.net/manual/en/language.types.php)을 참조하세요.  
   
 |SQLSRV 상수|PHP 데이터 형식|  
 |-------------------|-----------------|  

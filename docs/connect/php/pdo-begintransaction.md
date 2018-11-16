@@ -11,12 +11,12 @@ ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76ca72895d7927f92ff7e3119c0e17f12a84db67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3e4fc0dce4b712d1a7bea39f0b69f605d68fcb9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792858"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606623"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,5 +63,5 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

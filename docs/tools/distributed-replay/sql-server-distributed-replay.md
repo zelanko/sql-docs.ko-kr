@@ -12,12 +12,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01e3594d662a78b5f9e71f4c8b23612fd739fc4e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254339"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656702"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,8 @@ ms.locfileid: "50254339"
 |관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소하는 방법에 대해 설명합니다.|[관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server Distributed Replay 포럼](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 – 2단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay 포럼](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 – 2단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

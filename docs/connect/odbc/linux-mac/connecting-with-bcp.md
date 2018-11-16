@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682641"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600163"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지의 Windows 버전 간의 차이점을 설명 `bcp`합니다.
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지의 Windows 버전 간의 차이점을 설명 `bcp`합니다.
   
 - 필드 종결자는 탭("\t")입니다.  
   
@@ -100,7 +100,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 행 종결자를 지정합니다.  
   
 - -r  
-클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 대량 복사하도록 지정합니다.  
+클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다.  
   
 - -S *server*  
 이름을 지정 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결 하 여 차원 인지 또는 사용, DSN입니다.  
@@ -112,7 +112,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 `bcp` 유틸리티가 신뢰할 수 있는 연결을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 연결되도록 지정합니다(통합 보안).  
   
 - -U *login_id*  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결에 사용하는 로그인 ID를 지정합니다.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  
   
 - -V  
 `bcp` 유틸리티 버전 번호 및 저작권을 보고합니다.  
@@ -141,7 +141,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 명령 프롬프트에서 리디렉션된 출력을 받는 파일의 이름을 지정합니다.  
   
 - -V (80 | 90 | 100)  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 이전 버전에서 데이터 형식을 사용합니다.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이전 버전의 데이터 형식을 사용합니다.  
   
 - -X  
 서식 및 -f format_file 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다.  

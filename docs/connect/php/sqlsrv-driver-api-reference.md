@@ -11,12 +11,12 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756591"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601213"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|서버에 대한 정보를 제공합니다.|  
   
 ## <a name="reference"></a>참조  
-[PHP 매뉴얼](http://php.net/manual)  
+[PHP 매뉴얼](https://php.net/manual)  
   
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)

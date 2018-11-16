@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed7803b276159de71bd609dae4742401f04bc120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621617"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291795"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -233,7 +232,7 @@ WHERE database_id = DB_ID();
  **-P** 옵션을 암호 없이 지정할 경우 **ssbdiagnose** 는 기본 암호(NULL)를 사용합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md)를 참조하세요.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 자세한 내용은 [Strong Passwords](../../relational-databases/security/strong-passwords.md)을 참조하세요.  
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
   
@@ -461,9 +460,9 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING&#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE&#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [RECEIVE&#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f09e7899d3723e646f285dbc599a30556f6df039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a99b2d366368a88925344cc54470bef7ba25152a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778081"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671572"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "47778081"
 ```  
   
 <DTAXML   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
 ```  
@@ -42,8 +41,8 @@ ms.locfileid: "47778081"
   
 |attribute|설명|  
 |---------------|-----------------|  
-|**xmlns:xsi**|필수 사항입니다. XML 스키마 인스턴스 네임스페이스를 식별합니다. 이 네임스페이스의 특성은 데이터베이스 엔진 튜닝 관리자 XML 파일의 유효성을 검사하는 데 사용되는 스키마를 참조하는 데 사용됩니다.<br /><br /> 필요한 값: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|**xmlns**|필수 사항입니다. 데이터베이스 엔진 튜닝 관리자 네임스페이스를 식별합니다.<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 XML 편집기를 사용하여 데이터베이스 엔진 튜닝 관리자 XML 파일을 편집할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 가능한 참조 항목을 찾기 위해 F1 도움말과 동적 도움말에서 이 값이 사용됩니다.<br /><br /> 필요한 값:<br /><br /> [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://go.microsoft.com/fwlink/?LinkId=43100) 네임스페이스|  
+|**xmlns:xsi**|필수 사항입니다. XML 스키마 인스턴스 네임스페이스를 식별합니다. 이 네임스페이스의 특성은 데이터베이스 엔진 튜닝 관리자 XML 파일의 유효성을 검사하는 데 사용되는 스키마를 참조하는 데 사용됩니다.<br /><br /> 필요한 값: [https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns**|필수 사항입니다. 데이터베이스 엔진 튜닝 관리자 네임스페이스를 식별합니다.<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 XML 편집기를 사용하여 데이터베이스 엔진 튜닝 관리자 XML 파일을 편집할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 가능한 참조 항목을 찾기 위해 F1 도움말과 동적 도움말에서 이 값이 사용됩니다.<br /><br /> 필요한 값:<br /><br /> [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?LinkId=43100) 네임스페이스|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
@@ -58,10 +57,10 @@ ms.locfileid: "47778081"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|없음|  
-|**자식 요소**|[DTAInput 요소&#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](http://schemas.microsoft.com/sqlserver/) 참조)|  
+|**자식 요소**|[DTAInput 요소&#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 요소(자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://schemas.microsoft.com/sqlserver/) 참조)|  
   
 ## <a name="remarks"></a>Remarks  
- XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](http://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
+ XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](https://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
 ## <a name="example"></a>예제  
  일반적인 **DTAXML** 요소의 예는 [XML 입력 파일 예제&#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md)를 참조하세요.  

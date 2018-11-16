@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9d0eec73509de66d1be04c1fce3d82d185e27f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64930811074de1beb3c86ef5502c139394213096
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642973"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600043"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "47642973"
 
   이 예제에서는 열거자 개체를 사용하여 사용 가능한 데이터 원본을 나열하는 방법을 보여 줍니다.  
   
- 소비자는 [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) 메서드를 호출하여 MSOLEDBSQL 열거자에 표시되는 데이터 원본을 나열할 수 있습니다. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
+ 소비자는 [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) 메서드를 호출하여 MSOLEDBSQL 열거자에 표시되는 데이터 원본을 나열할 수 있습니다. 이 메서드는 현재 표시되는 데이터 원본에 대한 정보의 행 집합을 반환합니다.  
   
- 사용 중인 네트워크 라이브러리에 따라 적절한 도메인에서 데이터 원본이 검색됩니다. 명명된 파이프를 사용하는 경우 클라이언트가 로그온한 도메인에서 데이터 원본을 검색하고 AppleTalk를 사용하는 경우 기본 영역에서 데이터 원본을 검색하며 SPX/IPX를 사용하는 경우 바인더리에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 목록에서 데이터 원본을 검색하고 Banyan VINES를 사용하는 경우 로컬 네트워크에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터 원본을 검색합니다. 멀티프로토콜 및 TCP/IP 소켓은 지원되지 않습니다.  
+ 사용 중인 네트워크 라이브러리에 따라 적절한 도메인에서 데이터 원본이 검색됩니다. 명명된 파이프를 사용하는 경우 클라이언트가 로그온한 도메인에서 데이터 원본을 검색하고 AppleTalk를 사용하는 경우 기본 영역에서 데이터 원본을 검색하며 SPX/IPX를 사용하는 경우 바인더리에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 목록에서 데이터 원본을 검색하고 Banyan VINES를 사용하는 경우 로컬 네트워크에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 데이터 원본을 검색합니다. 멀티프로토콜 및 TCP/IP 소켓은 지원되지 않습니다.  
   
  서버를 끄거나 켤 때 이러한 도메인의 정보를 업데이트하는 데 몇 분이 소요될 수 있습니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB 데이터 원본을 열거하려면  
   

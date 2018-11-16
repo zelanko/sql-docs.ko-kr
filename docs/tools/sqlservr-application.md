@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -24,12 +23,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4ff327c1962d4440df32badb234c715a64ac00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775596"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656913"
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  대부분의 경우 sqlserver.exe 프로그램은 문제 해결이나 주요 유지 관리 작업에만 사용됩니다. sqlservr.exe를 사용하여 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 시작할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 서비스로 실행되지 않으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **명령을 사용하여** 를 중지할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에서 서비스 상태를 표시하므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 중지되었음을 올바르게 나타냅니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 서버에 연결할 수 있지만 마찬가지로 서비스가 중지되었음을 나타냅니다.  
   
 ## <a name="compatibility-support"></a>호환성 지원  
- **-h**  매개 변수는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  
+ **-h**  매개 변수는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)  

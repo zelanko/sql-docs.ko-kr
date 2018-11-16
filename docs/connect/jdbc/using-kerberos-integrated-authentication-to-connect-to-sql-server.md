@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798901"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600453"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 응용 프로그램에서 유형 4 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다. 참조 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 연결 속성에 대 한 자세한 내용은 합니다. Kerberos에 대 한 자세한 내용은 참조 하세요. [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)합니다.
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 응용 프로그램에서 유형 4 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다. 참조 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 연결 속성에 대 한 자세한 내용은 합니다. Kerberos에 대 한 자세한 내용은 참조 하세요. [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)합니다.
 
 Java **Krb5LoginModule**과 함께 통합 인증을 사용하면 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)를 사용하여 모듈을 구성할 수 있습니다.
 
@@ -54,7 +54,7 @@ Kerberos 인증 com.microsoft.sqlserver.jdbc.internals.KerbAuthentication을 지
 
 다음 지침은 Kerberos 구성에 도움이 될 것입니다.
 
-1. 설정할 **AllowTgtSessionKey** Windows 레지스트리에서 1입니다. 자세한 내용은 [Windows Server 2003의 Kerberos 프로토콜 레지스트리 항목 및 KDC 구성 키](http://support.microsoft.com/kb/837361)를 참조하십시오.
+1. 설정할 **AllowTgtSessionKey** Windows 레지스트리에서 1입니다. 자세한 내용은 [Windows Server 2003의 Kerberos 프로토콜 레지스트리 항목 및 KDC 구성 키](https://support.microsoft.com/kb/837361)를 참조하십시오.
 2. Kerberos 구성(UNIX 환경에서 krb5.conf)이 사용자 환경의 올바른 영역과 KDC를 가리키는지 확인하십시오.
 3. kinit을 사용하거나 도메인에 로그인하여 TGT 캐시를 초기화합니다.
 4. **authenticationScheme=JavaKerberos**를 사용하는 응용 프로그램이 Windows Vista 또는 Windows 7 운영 체제에서 실행될 때는 표준 사용자 계정을 사용해야 합니다. 그러나 관리자 계정에서 응용 프로그램을 실행하는 경우 관리자 권한을 사용하여 응용 프로그램을 실행해야 합니다.
@@ -72,9 +72,9 @@ SPN(서비스 사용자 이름)은 클라이언트가 서비스 인스턴스를 
 
 SPN(서비스 사용자 이름)에 대한 자세한 내용은 다음을 참조하십시오.
 
-- [SQL Server에서 Kerberos 인증을 사용하는 방법](http://support.microsoft.com/kb/319723)
+- [SQL Server에서 Kerberos 인증을 사용하는 방법](https://support.microsoft.com/kb/319723)
 
-- [SQL Server에서 Kerberos 사용](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [SQL Server에서 Kerberos 사용](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > 6.2 릴리스의 JDBC 드라이버에서 적절 한 영역 간 Kerberos를 사용 하기 전에 명시적으로 설정 해야 합니다 **serverSpn**합니다.

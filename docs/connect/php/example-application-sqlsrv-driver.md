@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3e97f0fa4e8abfb8eddb27095fefcacd565d1d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671641"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677372"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 응용 프로그램(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ AdventureWorks 제품 검토 예제 응용 프로그램은 [!INCLUDE[ssDriverPHP
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  시작 하 여 응용 프로그램을 실행 http://localhost/adventureworks_demo.php 브라우저에서 합니다.  
+4.  시작 하 여 응용 프로그램을 실행 https://localhost/adventureworks_demo.php 브라우저에서 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 응용 프로그램을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
@@ -57,7 +57,7 @@ AdventureWorks 제품 검토 예제 응용 프로그램은 데이터베이스에
   
 adventureworks_demo.php 파일에 다음 코드를 추가합니다.  
   
-```  
+```php
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -497,7 +497,7 @@ photo.php 스크립트는 지정된 **ProductID**에 대한 제품 사진을 반
   
 photo.php 파일에 다음 코드를 추가합니다.  
   
-```  
+```php
 <?php  
 /*=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
@@ -550,7 +550,7 @@ else
      die(print_r( sqlsrv_errors(), true));  
 }  
   
-/* Free the statement and connectin resources. */  
+/* Free the statement and connection resources. */  
 sqlsrv_free_stmt( $stmt );  
 sqlsrv_close( $conn );  
 ?>  

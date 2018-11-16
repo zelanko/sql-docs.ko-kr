@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851978"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605653"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -45,7 +45,7 @@ ms.locfileid: "48851978"
 
 - XA 트랜잭션을 MS DTC(Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
   
-     [MSDTC 및 밀접하게 결합된 트랜잭션](http://support.microsoft.com/kb/938653)에서 제공하는 핫픽스는 같은 GTRID(전역 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 한 개의 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 리소스 관리자에서 다른 XA 분기의 변경 내용을 확인할 수 있습니다.  
+     [MSDTC 및 밀접하게 결합된 트랜잭션](https://support.microsoft.com/kb/938653)에서 제공하는 핫픽스는 같은 GTRID(전역 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 한 개의 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 리소스 관리자에서 다른 XA 분기의 변경 내용을 확인할 수 있습니다.  
   
 - [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(전역 트랜잭션 ID) 및 FormatID(형식 ID)를 갖는 밀접하게 결합된 XA 트랜잭션을 응용 프로그램에서 사용할 수 있습니다. 이 기능을 사용 하기 위해 설정 해야 합니다 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 메서드의 플래그 매개 변수:  
   
@@ -117,7 +117,7 @@ Windows Vista 이상:
 ### <a name="BKMK_ServerSide"></a> 준비되지 않은 트랜잭션의 자동 롤백에 대해 서버 쪽 제한 시간 설정을 구성합니다.  
 
 > [!WARNING]  
-> 이 서버 쪽 옵션은 SQL Server용 Microsoft JDBC Driver 4.2 이상의 새로운 기능입니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 시간 제한 설정에 대한 자세한 내용은 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)을 참조하세요.  
+> 이 서버 쪽 옵션은 SQL Server용 Microsoft JDBC Driver 4.2 이상의 새로운 기능입니다. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 시간 제한 설정에 대한 자세한 내용은 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)을 참조하세요.  
 
 분산 트랜잭션의 제한 시간 동작을 제어하는 두 가지 레지스트리 설정(DWORD 값)이 있습니다.  
   

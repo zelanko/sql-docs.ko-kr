@@ -11,12 +11,12 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6257f3575412bc35b00722a0b5da6b8c5ca74f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1c7a244cdf644bef537f59ce705d14a750700f1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816001"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604843"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 인터페이스
 
@@ -32,15 +32,15 @@ XML 값에 액세스 하기 위한 메서드를 제공 하는 SQLXML 인터페�
   
 |메서드 구문|메서드 설명|  
 |-------------------|------------------------|  
-|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|이 메서드는 SQLXML 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
-|[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|SQLXML에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
-|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|**XML** 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
-|[T extends Source T getSource(Class\<T> sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|반환을 **원본** 읽기용 합니다 **XML** 이 지정 된 값 **SQLXML** 개체.<br /><br /> **참고:** getSource 메서드는 원본 javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource 및 java.io.InputStream을 지원합니다.|  
-|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|이 SQLXML 개체가 지정하는 **XML** 값의 문자열 표현을 반환합니다.|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 수 있는 스트림을 검색합니다.|  
-|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 스트림을 반환합니다.|  
-|[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|반환 된 **결과** 설정에 대 한를 **XML** 이 지정 된 값 **SQLXML** 개체입니다.<br /><br /> **참고:** setResult 메서드는 원본 javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult 및 java.io.OutputStream을 지원합니다.|  
-|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|이 SQLXML 개체가 지정하는 XML 값을 지정된 **String** 표현으로 설정합니다.|  
+|[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|이 메서드는 SQLXML 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
+|[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|SQLXML에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
+|[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|**XML** 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
+|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|반환을 **원본** 읽기용 합니다 **XML** 이 지정 된 값 **SQLXML** 개체.<br /><br /> **참고:** getSource 메서드는 원본 javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource 및 java.io.InputStream을 지원합니다.|  
+|[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|이 SQLXML 개체가 지정하는 **XML** 값의 문자열 표현을 반환합니다.|  
+|[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 수 있는 스트림을 검색합니다.|  
+|[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|이 SQLXML 개체가 나타내는 **XML** 값을 쓰는 데 사용할 스트림을 반환합니다.|  
+|[T extends Result T setResult(Class\<T> resultClass)](https://go.microsoft.com/fwlink/?LinkId=131760)|반환 된 **결과** 설정에 대 한를 **XML** 이 지정 된 값 **SQLXML** 개체입니다.<br /><br /> **참고:** setResult 메서드는 원본 javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult 및 java.io.OutputStream을 지원합니다.|  
+|[void setString(String value)](https://go.microsoft.com/fwlink/?LinkId=131762)|이 SQLXML 개체가 지정하는 XML 값을 지정된 **String** 표현으로 설정합니다.|  
   
 응용 프로그램은 SQLXML 개체에 XML 값을 한 번만 읽고 쓸 수 있습니다.  
   

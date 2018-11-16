@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f2828098784601e10136ed8dd0f4b6f0272137d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461128"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601105"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49461128"
 
 ## <a name="php"></a>PHP
 
-안정적인 최신 PHP 이진 파일을 다운로드하고 설치하는 방법에 대한 자세한 내용은 [PHP 웹 사이트](http://php.net)를 참조하세요.  Microsoft Drivers for PHP for SQL Server에는 다음 버전의 PHP 필요합니다.
+안정적인 최신 PHP 이진 파일을 다운로드하고 설치하는 방법에 대한 자세한 내용은 [PHP 웹 사이트](https://php.net)를 참조하세요.  Microsoft Drivers for PHP for SQL Server에는 다음 버전의 PHP 필요합니다.
 
 |SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; PHP 버전|5.3 및 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ ms.locfileid: "49461128"
 
 -   드라이버 파일의 버전은 PHP 확장 디렉터리에 있어야 합니다. 참조 [드라이버 버전](#driver-versions) 다른 드라이버 파일에 대 한 정보에 대 한 합니다.  드라이버를 다운로드하려면 [Microsoft Drivers for PHP for SQL Server 다운로드](download-drivers-php-sql-server.md)를 참조하세요. PHP에 대한 드라이버를 구성하는 방법에 대한 자세한 내용은 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)를 참조하세요.
 
--   웹 서버가 필요합니다. 웹 서버는 PHP를 실행하도록 구성되어야 합니다. IIS 사용 하 여 PHP 응용 프로그램을 호스트 하는 방법에 대 한 정보를 참조 하세요. 합니다 [PHP의 웹 사이트의 자습서](http://php.net/manual/fa/install.windows.iis.php)합니다.  
+-   웹 서버가 필요합니다. 웹 서버는 PHP를 실행하도록 구성되어야 합니다. IIS 사용 하 여 PHP 응용 프로그램을 호스트 하는 방법에 대 한 정보를 참조 하세요. 합니다 [PHP의 웹 사이트의 자습서](https://php.net/manual/fa/install.windows.iis.php)합니다.  
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]가 FastCGI에서 IIS 10을 사용하여 테스트되었습니다.  
 

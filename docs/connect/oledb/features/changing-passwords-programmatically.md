@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 89d674e075e8a05697328f60c6bb47a40e82ebf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775437"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605894"
 ---
 # <a name="changing-passwords-programmatically"></a>프로그래밍 방식으로 암호 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47775437"
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에는 사용자 암호가 만료될 때 관리자만 암호를 다시 설정할 수 있었습니다. 부터는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver for SQL Server 지원 변경 내용 및 OLE DB 드라이버를 통해 프로그래밍 방식으로 암호 만료를 처리 합니다 **SQL Server 로그인** 대화 상자.  
   
 > [!NOTE]  
->  가능한 경우 런타임에 자격 증명을 입력하라는 메시지를 사용자에게 표시하고 해당 자격 증명을 지속형 형식으로 저장하지 마십시오. 자격 증명을 저장해야 하는 경우 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 암호화해야 합니다. 암호 사용에 대한 자세한 내용은 [강력한 암호](../../../relational-databases/security/strong-passwords.md)를 참조하세요.  
+>  가능한 경우 런타임에 자격 증명을 입력하라는 메시지를 사용자에게 표시하고 해당 자격 증명을 지속형 형식으로 저장하지 마십시오. 자격 증명을 저장해야 하는 경우 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 암호화해야 합니다. 암호 사용에 대한 자세한 내용은 [강력한 암호](../../../relational-databases/security/strong-passwords.md)를 참조하세요.  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 로그인 오류 코드  
  인증 문제로 인해 연결할 수 없는 경우 분석 및 검색 지원을 위해 응용 프로그램에서 다음 SQL Server 오류 코드 중 하나를 사용할 수 있습니다.  

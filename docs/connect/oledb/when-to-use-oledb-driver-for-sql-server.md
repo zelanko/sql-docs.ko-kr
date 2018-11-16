@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798202"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602813"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 데이터에 액세스 하는 데 사용할 수 있는 하나의 기술을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  다른 데이터 액세스 기술에 대한 자세한 내용은 [데이터 액세스 기술 로드맵](http://go.microsoft.com/fwlink/?LinkID=179186) 참조  
+  OLE DB Driver for SQL Server는 데이터에 액세스 하는 데 사용할 수 있는 하나의 기술을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  다른 데이터 액세스 기술에 대한 자세한 내용은 [데이터 액세스 기술 로드맵](https://go.microsoft.com/fwlink/?LinkID=179186) 참조  
   
  SQL Serverd용 OLE DB 드라이버를 응용 프로그램의 데이터 액세스 기술로 사용할지 여부를 결정할 때는 여러 요인을 고려해야 합니다.  
   
