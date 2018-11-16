@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac92901f1a2afdf163db9544beb887ca64ceea1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777624a6dc7bf85ee618f586319aa6dc0c719e56
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780761"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662462"
 ---
 # <a name="prepared-execution"></a>준비된 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ODBC API에서는 반복적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 실행과 관련한 구문 분석 및 컴파일 오버헤드를 줄이는 한 가지 방법으로 준비된 실행을 정의합니다. 응용 프로그램은 SQL 문이 포함된 문자열을 작성한 다음 두 단계로 실행합니다. 호출한 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) 를 구문 분석 하 고 하 여 실행 계획으로 컴파일된 문이 한 번의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 그런 다음 호출 **SQLExecute** 준비 된 실행 계획의 각 실행에 대 한 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 응용 프로그램에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+  ODBC API에서는 반복적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 실행과 관련한 구문 분석 및 컴파일 오버헤드를 줄이는 한 가지 방법으로 준비된 실행을 정의합니다. 응용 프로그램은 SQL 문이 포함된 문자열을 작성한 다음 두 단계로 실행합니다. 호출한 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 를 구문 분석 하 고 하 여 실행 계획으로 컴파일된 문이 한 번의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 그런 다음 호출 **SQLExecute** 준비 된 실행 계획의 각 실행에 대 한 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 응용 프로그램에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  대부분의 데이터베이스에서 준비된 실행은 문을 직접 실행하는 경우보다 3-4배 이상 빠릅니다. 가장 큰 이유는 직접 실행할 경우 매번 문이 컴파일되는 반면에 준비된 실행에서는 문이 한 번만 컴파일되기 때문입니다. 또한 준비된 실행을 사용할 경우 문을 실행할 때마다 드라이버가 전체 SQL 문 대신 실행 계획 식별자와 매개 변수 값만 데이터 원본에 보내면 되므로 네트워크 트래픽도 줄일 수 있습니다.  
   

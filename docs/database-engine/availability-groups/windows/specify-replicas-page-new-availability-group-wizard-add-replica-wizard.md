@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623571"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605443"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47623571"
  **서버 인스턴스**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
- 보조 복제본을 호스팅하는 데 사용할 서버 인스턴스가 **가용성 복제본** 표에 나열되어 있지 않으면 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
+ 보조 복제본을 호스팅하는 데 사용할 서버 인스턴스가 **가용성 복제본** 표에 나열되어 있지 않으면 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
   
  **초기 역할**  
  새 복제본이 처음에 수행할 역할( **주** 또는 **보조**)을 나타냅니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "47623571"
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  
   
  **Azure 복제본 추가**  
- 가용성 그룹에서 보조 복제본을 실행하는 Microsoft Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Windows Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
+ 가용성 그룹에서 보조 복제본을 실행하는 Microsoft Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Windows Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
   
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  

@@ -10,12 +10,12 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4e77b08484a08871d2b9dcd70de0ddf339bb8f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805971"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666502"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>DB2 클라이언트 (DB2ToSQL) 용 SSMA 설치
 SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  
@@ -32,7 +32,7 @@ SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 �
   
 이 항목에서는 설치 필수 구성 요소 및 SSMA 설치에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA는 DB2 버전 9.0 / 10.0 z/os 또는 LUW 버전 9.8 및 10.1 이상 버전에서 DB2를 사용 하 여 작동 하도록 설계 되었습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014입니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -41,7 +41,7 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 이상이 있습니다.  
   
--   합니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0 이상이 있습니다. 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다. 가져올 수도 있습니다는 [.NET Framework 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=48882)합니다.  
+-   합니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0 이상이 있습니다. 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다. 가져올 수도 있습니다는 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)합니다.  
   
 -   DB2 버전 5 이상 버전 및 마이그레이션하려는 DB2 데이터베이스에 대 한 연결에 대 한 Microsoft OLEDB 공급자입니다.  
   
@@ -50,9 +50,9 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
 -   4GB RAM이 권장 됩니다.  
   
 ## <a name="microsoft-oledb-provider-for-db2"></a>Microsoft OLE DB Provider for DB2  
-OLEDB provider for DB2 버전 5.0 다운로드 하려면로 이동 하십시오 [Microsoft® SQL Server® 2014 기능 팩](http://www.microsoft.com/download/details.aspx?id=42295)합니다.  
+OLEDB provider for DB2 버전 5.0 다운로드 하려면로 이동 하십시오 [Microsoft® SQL Server® 2014 기능 팩](https://www.microsoft.com/download/details.aspx?id=42295)합니다.  
   
-SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](http://aka.ms/ssmafordb2)합니다.  
+SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](https://aka.ms/ssmafordb2)합니다.  
   
 최신 버전을 다운로드 한 후 SSMA를 설치 하기 전에 설치 파일에서 추출 해야 합니다.  
   

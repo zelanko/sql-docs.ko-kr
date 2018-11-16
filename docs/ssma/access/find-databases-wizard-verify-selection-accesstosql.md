@@ -12,12 +12,12 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cfd409799157d2f1adeb4d362dd2e85e4eb4bb82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100274"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669482"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>데이터베이스 찾기 마법사 (선택 확인) (AccessToSQL)
 데이터베이스 찾기 마법사의 확인 선택 페이지 SSMA에 추가할 파일을 나열 합니다. 파일 목록이 올바르지 않으면, 클릭 **다시** 목록을 수정할 수 있습니다. 그렇지 않은 경우 클릭 **완료** 파일을 추가 합니다.  
@@ -35,5 +35,5 @@ Access 데이터베이스 파일의 경로 보여 줍니다.
 파일의 소유자를 보여 줍니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

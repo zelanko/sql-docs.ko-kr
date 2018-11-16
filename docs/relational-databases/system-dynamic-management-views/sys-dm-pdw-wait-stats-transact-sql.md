@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c6ee905e387f0333b26f99b9b73859e273711df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a62b88ae5c5e0589b54781c85ff43cc39babe2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852251"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667812"
 ---
 # <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  와 관련 된 정보를 보유 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS 상태 관련 다른 노드에서 실행 되는 인스턴스. 대기 유형 및 해당 설명의 목록을 참조 하세요 [sys.dm_os_wait_stats](http://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)합니다.  
+  와 관련 된 정보를 보유 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS 상태 관련 다른 노드에서 실행 되는 인스턴스. 대기 유형 및 해당 설명의 목록을 참조 하세요 [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|이 항목이 참조 하는 노드의 ID입니다.||  
 |**wait_name**|**nvarchar(255)**|대기 유형의 이름입니다.||  

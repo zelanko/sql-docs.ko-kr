@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dfb2c3493e1d343107fb288320de30f5258b2eaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60ae2d8cc9b03a03dee159d04dcd0e4e1a8bd7cd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718241"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663160"
 ---
 # <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   각 맵 감소 작업 실행의 일부로 Hadoop에 푸시되는 대 한 행을 포함 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 외부 Hadoop 테이블에 대 한 쿼리 합니다. 각 맵 감소 작업을 쿼리에서 조건부 중 하나를 나타냅니다. 이 Hadoop 외부 테이블에 대 한 쿼리 조건자 푸시 다운이 활성화 될 때만 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 외부 Hadoop 작업의 ID입니다.|ID로 동일한 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|이 Hadoop 작업을 나타내는 쿼리 단계의 인덱스입니다.|step_index 동일 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
@@ -35,6 +35,6 @@ ms.locfileid: "47718241"
 |reduce_progress|**int**|완료 된 감소 작업의 백분율...|부동 소수점 수 between 및 0과 100 포함 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

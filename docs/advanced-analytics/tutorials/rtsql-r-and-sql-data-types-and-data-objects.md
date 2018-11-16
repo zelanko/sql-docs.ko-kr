@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6eeb2c71e821c9ccf5a89129a862b3d01a1d64bf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2e861bf2d8daf2460fbffcf2d92fcd33f859cd78
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699127"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>빠른 시작: 데이터 형식 및 SQL Server에서 R을 사용 하 여 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "39085505"
 + CAST 및 Convert 연산이 필요함 
 + R 및 SQL이 서로 다른 데이터 개체를 사용함
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이전 빠른 시작에서는 [Hello World R 및 SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
 
@@ -108,7 +108,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. R 데이터 형식의 차이점은 Hadley Wickham의 글 [R 데이터 구조](http://adv-r.had.co.nz/Data-structures.html)에서 보다 자세하게 설명하므로 여기서는 생략합니다.
+확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. R 데이터 형식의 차이점은 Hadley Wickham의 글 [R 데이터 구조](https://adv-r.had.co.nz/Data-structures.html)에서 보다 자세하게 설명하므로 여기서는 생략합니다.
 
 현재로서는 R 개체를 데이터 프레임으로 강제 변환할 때 예상되는 결과를 확인해야 합니다.
 
@@ -197,10 +197,10 @@ R은 데이터 프레임을 채우기 위해 RTestData에서 검색된 요소를
     
 |*Col2*|*Col3*|
 |----|----|
-|@shouldalert|@shouldalert|
+|1|1|
 |10|2|
 |100|3|
-|@shouldalert|4|
+|1|4|
 |10|5|
 |100|6|
 

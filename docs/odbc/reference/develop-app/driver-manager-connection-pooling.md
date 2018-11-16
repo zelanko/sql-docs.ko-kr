@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677582"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 응용 프로그램을 다시 사용할 때마다 설정할 필요가 없는 연결 풀에서 연결을 사용 합니다. 연결 생성 되었으며 풀에 배치 되 면 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -59,11 +59,11 @@ ms.locfileid: "47826141"
     > [!NOTE]  
     >  풀링된 연결으로 요청 된 연결을 일치 하는 방법을 SQL_ATTR_CP_MATCH 환경 특성에 의해 결정 됩니다. 자세한 내용은 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)합니다.  
   
-     ODBC 응용 프로그램은 연결 풀링을 사용 하 여 호출 해야 [CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307) 응용 프로그램을 초기화 하는 동안 및 [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310) 응용 프로그램을 닫을 때.  
+     ODBC 응용 프로그램은 연결 풀링을 사용 하 여 호출 해야 [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) 응용 프로그램을 초기화 하는 동안 및 [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) 응용 프로그램을 닫을 때.  
   
 5.  호출 **SQLDisconnect** 연결 작업을 완료 합니다. 연결이 연결 풀으로 반환 되 고 다시 사용 하기 위해 사용할 수 있게 됩니다.  
   
- 자세한 내용은 참조 하세요. [Microsoft Data Access Components의 풀링](http://go.microsoft.com/fwlink/?LinkId=120776)합니다.  
+ 자세한 내용은 참조 하세요. [Microsoft Data Access Components의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)합니다.  
   
 ## <a name="connection-pooling-considerations"></a>연결 풀링 고려 사항  
  SQL 명령을 사용 하 여 다음 작업 중 (대신 ODBC API를 통해) 수행 연결의 상태에 영향을 하 고 연결 풀링이 활성화 되어 있을 때 예기치 않은 문제가 발생할 수 있습니다.  
@@ -85,4 +85,4 @@ ms.locfileid: "47826141"
 ## <a name="see-also"></a>관련 항목  
  [연결에 대 한 데이터 원본 또는 드라이버](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft Data Access Components의 풀링](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft Data Access Components의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832011"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670692"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft sql wide World Importers 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services는 분석 데이터 모델을 만드는 데이터 �
 
 예제 데이터베이스 및 샘플 코드에 대 한 라이선스 여기에 설명 된: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-샘플 데이터베이스 data.gov 및 자연 스러운 EarthData에서 로드 된 공용 데이터를 포함 합니다. 사용 약관은 다음과 같습니다. [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+샘플 데이터베이스 data.gov 및 자연 스러운 EarthData에서 로드 된 공용 데이터를 포함 합니다. 사용 약관은 다음과 같습니다. [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

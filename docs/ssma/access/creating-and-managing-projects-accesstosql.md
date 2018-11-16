@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663382"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 (AccessToSQL) 만들기 및 관리
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 있습니다 SSMA 프로젝트를 먼저 만들어야 합니다. 마이그레이션하려는 Access 데이터베이스에 대 한 메타 데이터가 포함 된 파일이 프로젝트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받을 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정 합니다.  
@@ -39,19 +39,19 @@ SSMA는 변환 및 데이터베이스 개체를 동기화 하 고 데이터를 �
   
 3.  왼쪽된 창에서 클릭 **변환**합니다.  
   
-4.  오른쪽 창에서 옵션을 검토 합니다. 이러한 옵션에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (변환)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)합니다.  
+4.  오른쪽 창에서 옵션을 검토 합니다. 이러한 옵션에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)합니다.  
   
 5.  필요에 따라 옵션을 변경 합니다.  
   
 6.  에 대 한 이전 단계를 반복 합니다 **마이그레이션**를 **GUI**, 및 **형식 매핑** 페이지입니다.  
   
-    -   마이그레이션 옵션에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)합니다.  
+    -   마이그레이션 옵션에 대 한 자세한 내용은 [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)합니다.  
   
-    -   사용자 인터페이스 옵션에 대 한 정보를 참조 하세요 [프로젝트 설정 (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
+    -   사용자 인터페이스 옵션에 대 한 정보를 참조 하세요 [프로젝트 설정 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
   
-    -   데이터 형식 매핑 설정에 대 한 자세한 내용은 참조 하십시오 [프로젝트 설정 (형식 매핑)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)합니다.  
+    -   데이터 형식 매핑 설정에 대 한 자세한 내용은 참조 하십시오 [프로젝트 설정 (형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)합니다.  
   
-    -   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)합니다.  
+    -   SQL Azure 설정에 대 한 자세한 내용은 [프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)합니다.  
   
 **참고** SQL Azure 마이그레이션 프로젝트를 만드는 동안 선택한 경우에 SQL Azure 설정이 제공 됩니다.  
   

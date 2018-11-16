@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085109"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661272"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 작동
 
@@ -31,20 +31,20 @@ ms.locfileid: "49085109"
 
 ## <a name="architecture-description"></a>아키텍처 설명
 
-클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. Corosync 및 Pacemaker 클러스터 통신 및 리소스 관리를 조정합니다. SQL Server 인스턴스는 하나의 노드 또는 다른 활성입니다.
+클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](https://clusterlabs.org/)합니다. Corosync 및 Pacemaker 클러스터 통신 및 리소스 관리를 조정합니다. SQL Server 인스턴스는 하나의 노드 또는 다른 활성입니다.
 
 다음 다이어그램에서는 SQL Server를 사용 하 여 Linux 클러스터의 구성 요소를 보여 줍니다. 
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
+클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
 
 ## <a name = "failManual"></a>장애 조치 클러스터를 수동으로
 
-`resource move` 명령 대상 노드에서 시작 리소스를 강제 적용 제약 조건을 만듭니다.  실행 한 후 합니다 `move` 명령인 실행 리소스 `clear` 다시 리소스를 이동 하거나 리소스를 자동으로 장애 조치할 수 있도록 제약 조건을 제거 됩니다. 
+`resource move` 명령 대상 노드에서 시작 리소스를 강제 적용 제약 조건을 만듭니다.  실행 한 후 합니다 `move` 명령인 실행 리소스 `clear` 다시 리소스를 이동 하거나 리소스를 자동으로 장애 조치할 수 있도록 제약 조건을 제거 됩니다. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 현재 클러스터 상태를 보려면
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 클러스터 및 리소스의 실시간 상태 보기:
@@ -183,7 +183,7 @@ sudo crm_mon
     다음 예제에서는 명명 된 노드를 추가 **vm3** 클러스터에 있습니다.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 다음 명령을 실행 하는 클러스터에서 노드를 삭제 합니다.
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Sqlservr 리소스 모니터링 간격의 빈도 변경
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 클러스터 문제 해결에 세 개의 디먼 함께 작동 하 클러스터 리소스를 관리 하는 방식을 이해 도움이 될 수 있습니다. 
 
-| 데몬 | Description 
+| 데몬 | 설명 
 | ----- | -----
 | Corosync | 쿼럼 멤버 자격 및 클러스터 노드 간 메시징을 제공 합니다.
 | Pacemaker | Corosync 위에 상주 하 고 리소스에 대 한 상태 시스템을 제공 합니다. 
@@ -226,7 +226,7 @@ Pacemaker 정상 쿼럼 출력의 예는 다음과 같습니다.
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [부터 클러스터](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
+* [부터 클러스터](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
 
 ## <a name="next-steps"></a>다음 단계
 

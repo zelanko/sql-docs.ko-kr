@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9797709fb012db8bc82a21a84c2927ab65aa3016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796428"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672982"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE(ODBC 오류 코드)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "47796428"
   
  이러한 상태 오류 코드에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [부록 A: ODBC 오류 코드](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [부록 A: ODBC 오류 코드](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [SQLSTATE 매핑](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE 매핑](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## <a name="see-also"></a>관련 항목  
  [오류 및 메시지 처리](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

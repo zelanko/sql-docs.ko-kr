@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638311"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350647"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 프로그래머는 ADO 또는 RDS 이상적인 환경에 게 모든 데이터 소스를 OLE DB 인터페이스를 노출 한 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 점점 더 많은 데이터베이스 공급 업체는 OLE DB 인터페이스를 구현 하지만 일부 데이터 소스는이 이렇게를 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -50,7 +50,7 @@ MSDASQL
 
  문자열을 이러한 키워드 이루어져 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|ODBC 용 OLE DB 공급자를 지정합니다.|
 |**DSN**|데이터 원본 이름을 지정합니다.|
@@ -93,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>공급자별 연결 속성
  여러 속성을 추가 하는 ODBC 용 OLE DB 공급자는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션을 **연결** 개체입니다. 다음 표에서 해당 OLE DB 속성 이름 괄호로 사용 하 여 이러한 속성을 보여 줍니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |액세스할 수 있는 절차 (KAGPROP_ACCESSIBLEPROCEDURES)|저장된 프로시저에 대 한 액세스 권한이 있는지 여부를 나타냅니다.|
 |액세스 가능한 테이블이 (KAGPROP_ACCESSIBLETABLES)|사용자는 데이터베이스 테이블에 대해 SELECT 문을 실행할 수 있는 권한이 있는지 여부를 나타냅니다.|
@@ -120,7 +120,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>공급자 관련 레코드 집합 및 명령 속성
  여러 속성을 추가 하는 ODBC 용 OLE DB 공급자는 **속성** 의 컬렉션을 **레코드 집합** 및 **명령** 개체입니다. 다음 표에서 해당 OLE DB 속성 이름 괄호로 사용 하 여 이러한 속성을 보여 줍니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |쿼리 기반 업데이트/삭제/삽입 (KAGPROP_QUERYBASEDUPDATES)|업데이트, 삭제 및 삽입 SQL 쿼리를 사용 하 여 수행할 수 있는지 여부를 나타냅니다.|
 |ODBC 동시성 유형을 (KAGPROP_CONCURRENCY)|데이터 원본에서 동시에 동일한 데이터에 액세스 하려고 하는 두 사용자로 인 한 잠재적인 문제를 줄이는 데 사용할 메서드를 나타냅니다.|
@@ -201,33 +201,33 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |메서드|ForwardOnly|Dynamic|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|사용자 계정 컨트롤|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|사용자 계정 컨트롤|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[Update](../../../ado/reference/ado-api/update-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
+|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
 
  * Microsoft Access 데이터베이스에 대 한 지원 되지 않습니다.
 
 ## <a name="dynamic-properties"></a>동적 속성
  Microsoft OLE DB Provider for ODBC에 여러 동적 속성을 삽입 합니다 **속성** 컬렉션을 아직 열지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.
 
- 다음 테이블은 각 동적 속성에 대 한 OLE DB 및 ADO 이름의 상호는 인덱스입니다. OLE DB 프로그래머 참조 이름을 참조 하는 ADO 속성 라는 용어로, "Description"로 지정 합니다. OLE DB 프로그래머 참조에서 이러한 속성에 대 한 자세한 정보를 찾을 수 있습니다. 인덱스의 OLE DB 속성 이름을 검색 하거나 참조 [부록 c: OLE DB 속성](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)합니다.
+ 다음 테이블은 각 동적 속성에 대 한 OLE DB 및 ADO 이름의 상호는 인덱스입니다. OLE DB 프로그래머 참조 이름을 참조 하는 ADO 속성 라는 용어로, "Description"로 지정 합니다. OLE DB 프로그래머 참조에서 이러한 속성에 대 한 자세한 정보를 찾을 수 있습니다. 인덱스의 OLE DB 속성 이름을 검색 하거나 참조 [부록 c: OLE DB 속성](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)합니다.
 
 ## <a name="connection-dynamic-properties"></a>연결의 동적 속성
  에 다음 속성을 추가 합니다 **연결** 개체의 **속성** 컬렉션입니다.
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |업데이트 허용|DBPROP_UPDATABILITY|
 |책갈피 사용|DBPROP_BOOKMARKS|
 
- 특정 구현 기능에 대 한 정보와 Microsoft OLE DB Provider for ODBC에 대 한 자세한 내용은 참조는 [OLE DB Programmer's Reference](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 하거나 MSDN에서 Data Access and Storage Developer Center 웹 사이트를 방문 합니다.
+ 특정 구현 기능에 대 한 정보와 Microsoft OLE DB Provider for ODBC에 대 한 자세한 내용은 참조는 [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 하거나 MSDN에서 Data Access and Storage Developer Center 웹 사이트를 방문 합니다.
 
 ## <a name="see-also"></a>관련 항목
  [개체 (ADO)를 명령](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [실행 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [메서드 지원](../../../ado/reference/ado-api/supports-method.md)

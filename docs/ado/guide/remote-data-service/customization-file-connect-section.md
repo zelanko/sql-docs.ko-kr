@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04850440b9dd1a5da9270b7782c07dca93bbab54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757801"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558540"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 합니다. 합니다 **연결** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어, 모든 경우는 **연결** 없거나 비어 있는 경우 섹션 된 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  
@@ -31,12 +31,12 @@ ms.locfileid: "47757801"
 -   클라이언트 연결 문자열을 대체 하는 새 연결 문자열입니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="syntax"></a>구문  
  기본 액세스 항목을 폼입니다.  
   
-```  
+```console
   
 Access=  
 accessRight  
@@ -45,7 +45,7 @@ accessRight
   
  대체 연결 문자열 항목은 다음과 폼입니다.  
   
-```  
+```console
   
 Connect=  
 connectionString  
@@ -54,7 +54,7 @@ connectionString
   
 ## <a name="remarks"></a>Remarks  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**연결**|이 나타내는 리터럴 문자열은 연결 문자열 입력입니다.|  
 |***connectionString***|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  

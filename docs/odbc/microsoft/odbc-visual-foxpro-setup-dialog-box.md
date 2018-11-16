@@ -15,17 +15,17 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ec2a9f033c124ab70db996f11179797877c09b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686441"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674419"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
 합니다 **ODBC Visual FoxPro 설치** 대화 상자에서는 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
   
- 드라이버를 다운로드 하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트](http://go.microsoft.com/fwlink/?LinkId=121318)합니다.  
+ 드라이버를 다운로드 하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트](https://go.microsoft.com/fwlink/?LinkId=121318)합니다.  
   
 ## <a name="dialog-box-options"></a>대화 상자 옵션  
  **데이터 원본 이름**  

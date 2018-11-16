@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998585"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602833"
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>예  
  EXISTS 및 NOT EXISTS를 사용하여 중첩 테이블의 조건을 확인할 수 있습니다. 이는 데이터 마이닝 모델을 학습 또는 테스트하는 데 사용되는 데이터를 제어하는 필터를 만들 때 유용합니다. 자세한 내용은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
- 다음 예제는 기반을 `[Association]` 마이닝 구조 및 마이닝 모델에서 만든 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 고객이 하나 이상의 Patch kit을 구매한 사례만 반환합니다.  
+ 다음 예제는 기반을 `[Association]` 마이닝 구조 및 마이닝 모델에서 만든 합니다 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 고객이 하나 이상의 Patch kit을 구매한 사례만 반환합니다.  
   
 ```  
 SELECT * FROM [Association].CASES  

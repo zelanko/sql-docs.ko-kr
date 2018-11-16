@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a685a06ae50961cd90752e64d1c2f41049d4f4ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd6e33f7265eaa7f2ae7433410aae2d4d2e507db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666632"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47814291"
   
 2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 SQL_ATTR_ROW_ARRAY_SIZE 특성으로 행 집합 크기를 설정합니다.  
   
-3.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406)을 호출하여 커서 이름을 설정합니다.  
+3.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406)을 호출하여 커서 이름을 설정합니다.  
   
 4.  SQL 문을 실행합니다.  
   
-5.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)을 호출하여 커서 이름을 가져옵니다(3단계에서 [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406)을 사용하여 커서 이름을 지정하지 않은 경우).  
+5.  필요한 경우 WHERE CURRENT OF 절을 사용하여 위치 지정 업데이트를 수행하려면 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)을 호출하여 커서 이름을 가져옵니다(3단계에서 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406)을 사용하여 커서 이름을 지정하지 않은 경우).  
   
 6.  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)를 호출하여 행 집합의 열 수(C)를 가져옵니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "47814291"
   
     -   다른 결과 집합이 없으면 SQL_NO_DATA가 반환됩니다.  
   
-    -   SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR가 반환되면 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)를 호출하여 사용할 수 있는 PRINT 또는 RAISERROR 문 출력이 있는지 확인합니다.  
+    -   SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR가 반환되면 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)를 호출하여 사용할 수 있는 PRINT 또는 RAISERROR 문 출력이 있는지 확인합니다.  
   
      바인딩된 문 매개 변수가 출력 매개 변수 또는 저장 프로시저의 반환 값으로 사용될 경우 바인딩된 매개 변수 버퍼에서 현재 사용할 수 있는 데이터를 사용합니다.  
   
-     바인딩된 매개 변수를 사용하면 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 또는 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)를 호출할 때마다 SQL 문이 S번 실행됩니다. 여기서 S는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 이는 S개의 결과 집합을 처리해야 함을 의미하며, 각 결과 집합은 SQL 문을 한 번 실행했을 때 일반적으로 반환되는 모든 결과 집합, 출력 매개 변수 및 반환 코드 전체로 구성됩니다.  
+     바인딩된 매개 변수를 사용하면 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 또는 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 호출할 때마다 SQL 문이 S번 실행됩니다. 여기서 S는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 이는 S개의 결과 집합을 처리해야 함을 의미하며, 각 결과 집합은 SQL 문을 한 번 실행했을 때 일반적으로 반환되는 모든 결과 집합, 출력 매개 변수 및 반환 코드 전체로 구성됩니다.  
   
      결과 집합에 계산 행이 포함된 경우 각 계산 행은 별도의 결과 집합으로 사용할 수 있습니다. 이러한 계산 결과 집합은 일반 행 내에 섞여 일반 행을 여러 개의 결과 집합으로 나눕니다.  
   

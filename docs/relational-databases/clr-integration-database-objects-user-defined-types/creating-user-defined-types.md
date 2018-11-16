@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685941"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661270"
 ---
 # <a name="creating-user-defined-types"></a>사용자 정의 형식 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>예제  
  다음 코드 샘플에서 자세히 설명 된 Point UDT를 정의 [코딩 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)합니다.  
   
- 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](https://msftengprodsamples.codeplex.com/)합니다.  
   
  C#  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960787"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601823"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -31,7 +31,7 @@ ms.locfileid: "49960787"
 - DMA가 시작 됩니다. 네트워크에 있는 도구 컴퓨터를 지정 합니다. 이 컴퓨터에 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
     - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 이상.
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 이상.
+    - [PowerShell](https://aka.ms/wmf5download) v5.0 이상.
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 이상.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 이상.
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
@@ -96,7 +96,7 @@ Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만�
 
 DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description
+|매개 변수  |설명
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
 |**serverName** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
@@ -118,7 +118,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 
 DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description
+|매개 변수  |설명
 |---------|---------|
 |**processTo**  | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
 |**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

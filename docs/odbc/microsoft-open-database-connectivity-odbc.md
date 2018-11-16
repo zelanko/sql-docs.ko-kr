@@ -11,12 +11,12 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 326d0872d554e4074b004f59c4a1d5b700dc4531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616192"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662979"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC(Open Database Connectivity)
 Microsoft ODBC Open Database Connectivity () 인터페이스는 C 프로그래밍 언어 인터페이스 응용 프로그램의 다양 한 Dbms (데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 합니다. ODBC는 관계형 데이터 저장소를 위해 특별히 설계 된 고성능 하위 수준 인터페이스입니다.  
@@ -49,4 +49,4 @@ Microsoft ODBC Open Database Connectivity () 인터페이스는 C 프로그래�
  드라이버 원본 이름과 데이터 관리를 구성 하기 위한 명령줄 유틸리티를 설명 합니다.  
   
 ## <a name="support"></a>지원  
- 지원 옵션에 대 한 정보를 확인할 수 있습니다 합니다 [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink?linkid=5521) 웹 사이트입니다.
+ 지원 옵션에 대 한 정보를 확인할 수 있습니다 합니다 [Microsoft 도움말 및 지원](https://go.microsoft.com/fwlink?linkid=5521) 웹 사이트입니다.

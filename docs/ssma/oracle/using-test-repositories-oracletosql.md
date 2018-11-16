@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666172"
 ---
 # <a name="using-test-repositories-oracletosql"></a>테스트 리포지토리 사용(OracleToSQL)
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례와 나중에 사용할 테스트 결과입니다. 리포지토리 데이터를 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 하 고 **RunTestCaseResultRepository** 스키마에서 **ssma_oracle_utilities** 의**ssmatesterdb** 데이터베이스입니다.  
@@ -50,7 +50,7 @@ SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례와 �
   
 -   클릭 합니다 **편집** 테스트 사례 마법사를 실행 하 고 선택한 테스트를 변경 하는 단추입니다.  
   
--   클릭 합니다 **실행** 버튼을 클릭 하는 [테스트 사례 실행 (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) 대화 하 고 선택한 테스트를 실행 합니다.  
+-   클릭 합니다 **실행** 버튼을 클릭 하는 [테스트 사례 실행 (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) 대화 하 고 선택한 테스트를 실행 합니다.  
   
 ## <a name="test-results-repository"></a>테스트 결과 리포지토리  
 테스트 결과 리포지토리를 볼 수 있습니다 합니다 **테스트 결과** 페이지의 **저장소의 테스트 사례** 창. 클릭 하 여 열 **테스트 결과 중...** **테스터** 메뉴.  

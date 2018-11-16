@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830651"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512808"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ SQL 그래프를 설계 하는 방법에 대해 알아봅니다. 기본 사항�
 데이터베이스당 하나의 그래프를 만들 수 있습니다. 그래프 노드와 지 테이블의 컬렉션인 합니다. 모두 하나의 논리 그래프에 속하지 있지만 데이터베이스의 모든 스키마에서 노드 또는 지 테이블을 만들 수 있습니다. 노드 테이블은 노드의 비슷한 유형의 컬렉션입니다. 예를 들어 Person 노드 테이블을 그래프에 속한 모든 사람 노드를 포함 합니다. 마찬가지로, edge 테이블이 가장자리의 유사한 형식의 컬렉션입니다. 예를 들어, 친구 edge 테이블을 다른 사람에 게 사용자를 연결 하는 모든 가장자리를 보유 합니다. 노드 및에 지 테이블에 저장 되므로, 대부분의 일반적인 테이블에서 지원 되는 작업은 노드 또는 지 테이블에서 지원 됩니다. 
  
  
-![sql 그래프 아키텍처](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 그래프 데이터베이스 아키텍처")   
+![sql 그래프 아키텍처](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 그래프 데이터베이스 아키텍처")   
 
 그림 1: SQL 그래프 데이터베이스 아키텍처
  
@@ -45,7 +44,7 @@ SQL 그래프를 설계 하는 방법에 대해 알아봅니다. 기본 사항�
 ## <a name="edge-table"></a>Edge 테이블
 Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 항상 전송 하 고 두 노드를 연결 합니다. Edge 테이블을 그래프에서 다 대 다 관계를 모델링 하는 사용자를 수 있습니다. Edge 테이블을 수도 있습니다에 모든 사용자 정의 특성 없을 수 있습니다. 사용자 정의 특성을 함께 edge 테이블을 만들 때마다 edge 테이블의 세 가지 암시적 열이 생성 됩니다.
 
-|열 이름    |Description  |
+|열 이름    |설명  |
 |---   |---  |
 |`$edge_id`   |데이터베이스에 지정 된 가장자리를 고유 하 게 식별합니다. 생성된 된 열 이며 값은 내부적으로 생성 된 bigint 값을 edge 테이블의 object_id의 조합입니다. 그러나 경우는 `$edge_id` 열을 선택 하면 JSON 문자열의 형태로 계산 된 값이 표시 됩니다. `$edge_id` 16 진수 문자열을 사용 하 여 내부 이름에 매핑하는 의사 (pseudo) 열입니다. 선택 하면 `$edge_id` 테이블에서 열 이름으로 나타납니다 `$edge_id_\<hex_string>`합니다. 쿼리에서 의사 (pseudo) 열 이름을 사용 하 여 권장 되는 방법의 내부 쿼리 `$edge_id` 열 및 16 진수 문자열을 사용 하 여 내부 이름을 사용 하 여 피해 야 합니다. |
 |`$from_id`   |저장소는 `$node_id` 가장자리의 원본 위치에서 노드.  |
@@ -57,7 +56,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 
 그림 2는 노드와 지 테이블은 데이터베이스에 저장 하는 방법을 보여 줍니다. 
 
-![사용자 친구 테이블](../../relational-databases/graphs/media/person-friends-tables.png "Person 노드 및 친구 edge 테이블")   
+![사용자 친구 테이블](../../relational-databases/graphs/media/person-friends-tables.png "Person 노드 및 친구 edge 테이블")   
 
 그림 2: 노드와 지 테이블 표현
 
@@ -69,7 +68,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="systables"></a>sys.tables
 다음의 새로운, bit 형식, SYS에 열이 추가 됩니다. 테이블입니다. 하는 경우 `is_node` 테이블 노드 테이블 인지 여부를 나타내는 1로 설정 된 경우 `is_edge` 테이블이 지 테이블 인지 여부를 나타내는 1로 설정 됩니다.
  
-|열 이름 |데이터 형식 |Description |
+|열 이름 |데이터 형식 |설명 |
 |--- |---|--- |
 |is_node |bit |1 = 노드 테이블입니다. |
 |is_edge |bit |1 =는 edge 테이블 |
@@ -77,14 +76,14 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="syscolumns"></a>sys.columns
 `sys.columns` 뷰에 추가 열 `graph_type` 및 `graph_type_desc`, 노드와 지 테이블의 열 형식을 나타내는입니다.
  
-|열 이름 |데이터 형식 |Description |
+|열 이름 |데이터 형식 |설명 |
 |--- |---|--- |
 |graph_type |ssNoversion |값 집합이 포함 된 내부 열입니다. 값은 1 ~ 8 그래프 열에 대 한 다른 사용자에 대 한 NULL 사이 하는 것입니다.  |
 |graph_type_desc |nvarchar(60)  |값 집합이 포함 된 내부 열 |
  
 다음 표에서 유효한 값은 `graph_type` 열
 
-|열 값  |Description  |
+|열 값  |설명  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -119,7 +118,7 @@ Edge 테이블에 암시적 열
 ### <a name="system-functions"></a>시스템 함수
 다음 기본 제공 함수를 추가 됩니다. 이러한 하면 사용자가 생성 된 열에서 정보를 추출 합니다. 이러한 메서드는 사용자 로부터 입력을 확인 하지 않습니다는 참고 합니다. 사용자 지정 유효 하지 않은 경우 `sys.node_id` 메서드는 적절 한 부분을 추출 하 고 반환 합니다. OBJECT_ID_FROM_NODE_ID 걸립니다 예를 들어를 `$node_id` 입력과 object_id를 반환 하는이 노드가 속한 테이블의 합니다. 
  
-|기본 제공   |Description  |
+|기본 제공   |설명  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Object_id에서 추출 된 `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |graph_id 추출를 `node_id`  |
@@ -130,7 +129,7 @@ Edge 테이블에 암시적 열
 
 
 
-## <a name="transact-sql-reference"></a>TRANSACT-SQL 참조 
+## <a name="transact-sql-reference"></a>Transact-SQL 참조 
 에 대해 알아봅니다는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server 및 Azure SQL Database에 도입 된 확장 수 있도록 만들고 그래프 개체를 쿼리 합니다. 쿼리 언어 확장 쿼리 도움말과 ASCII art 구문을 사용 하 여 그래프를 트래버스 합니다.
  
 ### <a name="data-definition-language-ddl-statements"></a>DDL (데이터 정의 언어) 문이
@@ -140,7 +139,7 @@ Edge 테이블에 암시적 열
 |ALTER TABLE    |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|노드 및에 지 테이블이 관계형 테이블을 사용 하 여 동일한 방식으로 변경할 수는 `ALTER TABLE`합니다. 사용자를 추가 하거나 사용자 정의 열, 인덱스 또는 제약 조건을 수정할 수 있습니다. 그러나 같은 내부 그래프 열 변경 `$node_id` 또는 `$edge_id`, 오류가 발생 합니다.  |
 |CREATE  INDEX   |[CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |의사 (pseudo) 열과 노드와 지 테이블의 사용자 정의 열에 인덱스를 만들 수 있습니다. 클러스터형 및 비클러스터형 columnstore 인덱스를 포함 하 여 모든 인덱스 유형에 지원 됩니다.  |
 |에 지 제약 조건 만들기    |[에 지 제약 조건은 &#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |사용자 이제에 지 제약 조건은 특정 의미 체계를 적용할 edge 테이블을 만들 수 있습니다 및 데이터 무결성 유지 관리할 수도  |
-|DROP TABLE |[DROP TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |노드 및에 지 테이블이 관계형 테이블을 사용 하 여 동일한 방식으로 삭제할 수는 `DROP TABLE`합니다. 그러나이 릴리스에서 제약 조건이 없는 경우가 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드 또는 노드 테이블 삭제 시 계단식된 삭제는 지원 되지 않습니다. 노드 테이블을 삭제, 사용자가 그래프의 무결성을 유지 하기 위해 수동으로 노드 테이블의 노드에 연결 된 모든 가장자리를 삭제 하는 것이 좋습니다.  |
+|DROP TABLE |[DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |노드 및에 지 테이블이 관계형 테이블을 사용 하 여 동일한 방식으로 삭제할 수는 `DROP TABLE`합니다. 그러나이 릴리스에서 제약 조건이 없는 경우가 없는 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리는 노드 또는 노드 테이블 삭제 시 계단식된 삭제는 지원 되지 않습니다. 노드 테이블을 삭제, 사용자가 그래프의 무결성을 유지 하기 위해 수동으로 노드 테이블의 노드에 연결 된 모든 가장자리를 삭제 하는 것이 좋습니다.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>데이터 조작 언어 (DML) 문

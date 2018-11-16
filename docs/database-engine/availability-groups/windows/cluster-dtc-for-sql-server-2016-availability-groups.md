@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703731"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601383"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 가용성 그룹에 대한 클러스터 DTC
 
@@ -48,7 +48,7 @@ ms.locfileid: "47703731"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|로컬 DTC 서비스를 중지하고 사용하지 않도록 설정합니다.|[서비스 시작 방법 구성](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 각 인스턴스에 대해 SQL Server 서비스를 순환합니다.  필요에 따라 가용성 그룹을 장애 조치(Failover)합니다.|[가용성 그룹의 계획된 수동 장애 조치(Failover) 수행(SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- 서버가 Windows Server 2012 R2인 경우 운영 체제에 [KB 3030373](http://support.microsoft.com/kb/3090973) 이 적용되어 있어야 합니다.
+- 서버가 Windows Server 2012 R2인 경우 운영 체제에 [KB 3030373](https://support.microsoft.com/kb/3090973) 이 적용되어 있어야 합니다.
 
 - [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 검사 목록에 따라 가용성 그룹에 대해 서버를 준비합니다.
 
@@ -64,6 +64,6 @@ ms.locfileid: "47703731"
 [가용성 그룹 단계별 만들기](create-an-availability-group-transact-sql.md)
 
 
-[가용성 그룹의 SQL Server 2016 DTC 지원(영문)](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[가용성 그룹의 SQL Server 2016 DTC 지원(영문)](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성(영문)](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성(영문)](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

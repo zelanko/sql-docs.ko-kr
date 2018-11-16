@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666171"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673552"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 함수
 **규칙**  
  버전에 도입 되었습니다: ODBC 3.81 표준 준수: ODBC  
   
  **요약**  
- **SQLCleanupConnectionPoolID** 풀 ID를 초과 하는 드라이버에 알립니다. 풀 ID는 해당 풀 ID와 연결 된 풀의 모든 연결 된 때마다 제한 시간 수의 제한 시간이 초과 되었습니다. 참조 [Microsoft Data Access Components의 풀링](http://msdn.microsoft.com/library/ms810829.aspx) 연결 제한 시간에 대 한 자세한 내용은 합니다.  
+ **SQLCleanupConnectionPoolID** 풀 ID를 초과 하는 드라이버에 알립니다. 풀 ID는 해당 풀 ID와 연결 된 풀의 모든 연결 된 때마다 제한 시간 수의 제한 시간이 초과 되었습니다. 참조 [Microsoft Data Access Components의 풀링](https://msdn.microsoft.com/library/ms810829.aspx) 연결 제한 시간에 대 한 자세한 내용은 합니다.  
   
 ## <a name="syntax"></a>구문  
   

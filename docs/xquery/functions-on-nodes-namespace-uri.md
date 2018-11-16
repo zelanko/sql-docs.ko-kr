@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667173"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>노드 함수 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      namespace-uri(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -76,16 +75,16 @@ WHERE ProductModelID=7
  다음은 결과입니다.  
   
 ```  
-http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
+https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>2. 조건자의 인수 없이 namespace-uri() 사용  
- 다음 쿼리는 형식화된 CatalogDescription xml 열에 대해 지정되었습니다. 이 식은 네임스페이스 URI가 `http://www.adventure-works.com/schemas/OtherFeatures`인 모든 요소 노드를 반환합니다. 네임 스페이스-**uri ()** 함수 인수 없이 지정 되 고 컨텍스트 노드를 사용 합니다.  
+ 다음 쿼리는 형식화된 CatalogDescription xml 열에 대해 지정되었습니다. 이 식은 네임스페이스 URI가 `https://www.adventure-works.com/schemas/OtherFeatures`인 모든 요소 노드를 반환합니다. 네임 스페이스-**uri ()** 함수 인수 없이 지정 되 고 컨텍스트 노드를 사용 합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-   /p1:ProductDescription//*[namespace-uri() = "http://www.adventure-works.com/schemas/OtherFeatures"]  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   /p1:ProductDescription//*[namespace-uri() = "https://www.adventure-works.com/schemas/OtherFeatures"]  
 ') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -94,13 +93,13 @@ WHERE ProductModelID=19
  다음은 결과 중 일부입니다.  
   
 ```  
-<p1:wheel xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
-<p2:saddle xmlns:p2="http://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+<p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
+<p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
+  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 …  
 ```  
   
- 이전 쿼리의 네임스페이스 URI를 `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 그런 다음 확장 QName의 네임스페이스 URI 부분이 `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`인 <`ProductDescription`> 요소의 모든 요소 노드 자식을 검색합니다.  
+ 이전 쿼리의 네임스페이스 URI를 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 그런 다음 확장 QName의 네임스페이스 URI 부분이 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`인 <`ProductDescription`> 요소의 모든 요소 노드 자식을 검색합니다.  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
@@ -108,7 +107,7 @@ WHERE ProductModelID=19
 -   합니다 **namespace-uri ()** 함수는 xs: anyuri 대신 xs: string 유형의 인스턴스를 반환 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [노드 함수](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [노드 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [local-name 함수 &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270136"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666022"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -78,7 +78,7 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 
 ## <a id="CU12"></a> CU12 (2018 년 10 월)
 
-이 SQL Server 2017 누적 업데이트 12 (CU12) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3045.24 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4464082 ](https://support.microsoft.com/en-us/help/4464082)합니다.
+이 SQL Server 2017 누적 업데이트 12 (CU12) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3045.24 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -92,7 +92,7 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 
 ## <a id="CU11"></a> CU11 (9 월 2018)
 
-이 SQL Server 2017 누적 업데이트 11 (CU11) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3038.14 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262)합니다.
+이 SQL Server 2017 누적 업데이트 11 (CU11) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3038.14 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -106,7 +106,7 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 
 ## <a id="CU10"></a> CU10 (2018 년 8 월)
 
-이 SQL Server 2017 누적 업데이트 10 (CU10) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3037.1 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123)합니다.
+이 SQL Server 2017 누적 업데이트 10 (CU10) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3037.1 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -120,7 +120,7 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 
 ## <a id="CU9-GDR2"></a> Cu9까지 포함-GDR2 (2018 년 8 월)
 
-또한 SQL Server 2017에 대 한 이전에 릴리스된 CU (cu9까지 포함)를 포함 하는 보안 업데이트입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3035.2 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805)합니다.
+또한 SQL Server 2017에 대 한 이전에 릴리스된 CU (cu9까지 포함)를 포함 하는 보안 업데이트입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3035.2 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -134,7 +134,7 @@ CU 리포지토리를 구성한 경우 (**mssql server 2017**), 새 설치를 �
 
 ## <a id="GDR2"></a> GDR2 (2018 년 8 월)
 
-SQL Server 2017에 대 한 GDR2 (및 GDR1) 보안 수정 사항을 포함 하는 보안 업데이트입니다.  이 릴리스에 대 한 SQL Server 엔진 버전 14.0.2002.14 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803)합니다.
+SQL Server 2017에 대 한 GDR2 (및 GDR1) 보안 수정 사항을 포함 하는 보안 업데이트입니다.  이 릴리스에 대 한 SQL Server 엔진 버전 14.0.2002.14 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -148,7 +148,7 @@ SQL Server 2017에 대 한 GDR2 (및 GDR1) 보안 수정 사항을 포함 하는
 
 ## <a id="CU9"></a> Cu9까지 포함 합니다 (2018 년 7 월)
 
-이 SQL Server 2017 누적 업데이트 9(cu9) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3030.27 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265)합니다.
+이 SQL Server 2017 누적 업데이트 9(cu9) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3030.27 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -162,7 +162,7 @@ SQL Server 2017에 대 한 GDR2 (및 GDR1) 보안 수정 사항을 포함 하는
 
 ## <a id="CU8"></a> CU8 (2018 년 6 월)
 
-이 SQL Server 2017 누적 업데이트 8 (CU8) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3029.16 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363)합니다.
+이 SQL Server 2017 누적 업데이트 8 (CU8) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3029.16 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -176,7 +176,7 @@ SQL Server 2017에 대 한 GDR2 (및 GDR1) 보안 수정 사항을 포함 하는
 
 ## <a id="CU7"></a> CU7 (2018 년 5 월)
 
-이 SQL Server 2017 누적 업데이트 7 (CU7) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3026.27 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789)합니다.
+이 SQL Server 2017 누적 업데이트 7 (CU7) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3026.27 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -236,7 +236,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> CU4 (2018 년 2 월)
 
-이 SQL Server 2017 누적 업데이트 4 (CU4) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3022.28 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498)합니다.
+이 SQL Server 2017 누적 업데이트 4 (CU4) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3022.28 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -253,7 +253,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (2018 년 1 월)
 
-SQL Server 2017에 대 한 보안 수정 GDR1 포함 하는 보안 업데이트입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.2000.63 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122)합니다.
+SQL Server 2017에 대 한 보안 수정 GDR1 포함 하는 보안 업데이트입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.2000.63 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -267,7 +267,7 @@ SQL Server 2017에 대 한 보안 수정 GDR1 포함 하는 보안 업데이트�
 
 ## <a id="CU3"></a> CU3 (2018 년 1 월)
 
-이 SQL Server 2017 누적 업데이트 3 (CU3) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3015.40 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987)합니다.
+이 SQL Server 2017 누적 업데이트 3 (CU3) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3015.40 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 

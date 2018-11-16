@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613151"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560300"
 ---
 # <a name="address-book-command-buttons"></a>주소록 명령 단추
 주소록 응용 프로그램에는 다음과 같은 명령 단추가 포함:  
@@ -33,7 +33,7 @@ ms.locfileid: "47613151"
 -   A **변경 내용을 취소** 변경 내용을 취소 하는 단추입니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="find-button"></a>찾기 단추  
  클릭 하는 **찾을** 단추가 활성화 VBScript Find_OnClick 하위 프로시저를 작성 하 고 SQL 쿼리를 보냅니다. 이 단추를 클릭 하면 데이터 그리드를 채웁니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "47613151"
   
  예를 들어 경우는 **Last Name** 상자에 "Berge" 항목을 포함 및 **제목** 상자 항목 "프로그램 관리자," SQL 문이 포함 된 (값 `myQuery`)를 읽는:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>쿼리를 보내고 준비  
  Find_OnClick Sub 프로시저의 마지막 부분은 두 개의 문으로 구성 됩니다. 첫 번째 문은 할당 합니다 [SQL](../../../ado/reference/rds-api/sql-property.md) 의 속성을 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체를 동적으로 작성 된 SQL 쿼리 합니다. 두 번째 문은 **rds. DataControl** 개체 (`DC1`)를 데이터베이스에 쿼리하고 다음 표의 새 쿼리 결과 표시 합니다.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>프로필 [업데이트] 단추  
  클릭 하는 **프로필 업데이트** 실행 하는 VBScript Update_OnClick 하위 프로시저를 활성화 하는 단추는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 하 고 [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md) 메서드.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>변경 내용 취소 단추  
  클릭 **변경 내용을 취소** 실행 하는 VBScript Cancel_OnClick 하위 프로시저를 활성화 합니다 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) 메서드.  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

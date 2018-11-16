@@ -16,18 +16,18 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075cb0870d7fa3f4cbddaef60c2de4d1aa0683c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668262"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>원본 및 대상 데이터 형식 (AccessToSQL) 매핑
 액세스 데이터베이스 형식에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식입니다. Access 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 대 한 액세스에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 절차에 표시 된 대로 매핑을 사용자 지정할 수 있습니다.  
   
 ## <a name="default-mappings"></a>기본 매핑  
-SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록을 참조 하세요 [프로젝트 설정 (형식 매핑)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)합니다.  
+SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목록을 참조 하세요 [프로젝트 설정 (형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)합니다.  
   
 ## <a name="customizing-data-type-mappings"></a>사용자 지정 데이터 형식 매핑  
 사용 하 여 합니다 **프로젝트 설정** 대화 상자에서 모든 데이터베이스 및 프로젝트의 데이터베이스 개체에 대 한 형식이 매핑되는 방법을 사용자 지정할 수 있습니다. 프로젝트에 대 한 형식 매핑을 모든 데이터베이스 및 사용자 지정 형식 매핑 되지 않은 데이터베이스 개체에 적용 됩니다.  

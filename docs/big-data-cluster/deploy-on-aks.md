@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: HT
+ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221659"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700408"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>SQL Server 2019 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -27,11 +27,13 @@ AKS를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- 기본 시나리오 유효성 검사를 하는 동안 최적의 환경을 위해 AKS environment에 대 한 4 개 이상의 Vcpu 및 32GB의 메모리가 각 (마스터) 외에도 세 개 이상의 에이전트 Vm이 좋습니다. Vm에 대 한 여러 크기 옵션을 제공 하는 azure 인프라를 참조 하십시오 [여기](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) 배포 하려는 지역에 대 한 선택 항목에 대 한 합니다.
+- 기본 시나리오 유효성 검사를 하는 동안 최적의 환경을 위해 AKS environment에 대 한 4 개 이상의 Vcpu 및 32GB의 메모리가 각 (마스터) 외에도 세 개 이상의 에이전트 Vm이 좋습니다. Vm에 대 한 여러 크기 옵션을 제공 하는 azure 인프라를 참조 하십시오 [여기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) 배포 하려는 지역에 대 한 선택 항목에 대 한 합니다.
   
 - 이 섹션에서는 여야 합니다. Azure CLI 버전 2.0.4 실행 이상. 설치 또는 업그레이드를 참조 해야 하는 경우 [Azure CLI 2.0 설치](https://docs.microsoft.com/cli/azure/install-azure-cli)합니다. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
-- 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 버전 1.10 서버와 클라이언트 모두에 대 한 최소. Kubectl 클라이언트에 특정 버전을 설치 하려는 경우 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. AKS를 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
+- 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 1.10 버전 이상. Kubectl 클라이언트에 특정 버전을 설치 하려는 경우 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. 
+
+- Kubernetes 서버로 동일한 1.10 최소 버전 적용 됩니다. AKS를 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
 
 > [!NOTE]
 클라이언트/서버 버전 즉 기울이기는 + /-1 부 버전은 지원 합니다. Kubernetes 설명서 상태는 "클라이언트 마스터에서 둘 이상의 부 버전 불일치 해야 하지만 마스터 최대 1 개 부 버전에서 발생할 수 있습니다. 예를 들어 v1.3 마스터 v1.1, v1.2 및 v1.3 노드를 사용 하 여 작동 및 v1.2, v1.3, 및 v1.4 클라이언트를 사용 해야 합니다. " 자세한 내용은 [지원 되는 버전 및 구성 요소 기울이기 Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)합니다.
@@ -82,7 +84,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
     --kubernetes-version 1.10.8
     ```
 
-    늘리거나 변경 하 여 기본 에이전트 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 하려는 에이전트 노드 수입니다.
+    늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 입니다 하려는 에이전트 노드는 마스터 Kubernetes 노드는 포함 되지 않습니다. 되므로 위의 예에서 **4** 크기의 Vm **Standard_E4s_v3** AKS 클러스터에 사용 되는: **1** 마스터에 대 한 및 **3** 에 에이전트 노드입니다.
 
     몇 분 후 명령이 완료 되 고 클러스터에 대 한 JSON 형식 정보를 반환 합니다.
 

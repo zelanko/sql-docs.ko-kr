@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,12 +20,12 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2cc3870ca0b302175c6fdd546b730e73956485f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661842"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47824795"
   
  일반 연산자는 다음 표에 정의되어 있습니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |=|같음|  
 |!=|같지 않음|  
@@ -84,7 +83,7 @@ select @x.query('/a[1] < "17"')
  다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 경우 비교는 True를 반환 합니다 < 그림\> 요소입니다.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('         
     for $P in /PD:ProductDescription/PD:Picture[PD:Size = "small"]         
     return $P') as Result         
@@ -96,8 +95,8 @@ WHERE  ProductModelID=19
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.value('         
    /aci:AdditionalContactInfo//act:telephoneNumber/act:number = "112-111-1111"', 'nvarchar(10)') as Result         
@@ -109,8 +108,8 @@ WHERE ContactID=1
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('         
   if (/aci:AdditionalContactInfo//act:telephoneNumber/act:number = ("222-222-2222","112-111-1111"))         
@@ -127,11 +126,11 @@ WHERE ContactID=1
   
 ```  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     112-111-1111  
 \</act:number>   
 ```  
@@ -141,7 +140,7 @@ WHERE ContactID=1
   
  값 비교 연산자는 다음 표에 정의되어 있습니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |eq|같음|  
 |ne|같지 않음|  
@@ -158,7 +157,7 @@ WHERE ContactID=1
   
 ```  
 SELECT CatalogDescription.query('         
-              declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
+              declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
               for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]         
               return         
                     $P         
@@ -179,7 +178,7 @@ WHERE ProductModelID=19
   
 ```  
 \<PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   \<PD:Angle>front\</PD:Angle>  
   \<PD:Size>small\</PD:Size>  
   \<PD:ProductPhotoID>31\</PD:ProductPhotoID>  
@@ -194,7 +193,7 @@ WHERE ProductModelID=19
  다음 쿼리는 업무 센터 위치 10이 특정 제품 모델의 제조 프로세스에서 첫 번째인지 여부를 확인합니다.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
   
 SELECT ProductModelID, Instructions.query('         
     if (  (//AWMI:root/AWMI:Location[@LocationID=10])[1]         
@@ -230,8 +229,8 @@ ProductModelID       Result
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
   
 SELECT CatalogDescription.value('  
      (/PD:ProductDescription/PD:Features/WM:Warranty)[1] <<   

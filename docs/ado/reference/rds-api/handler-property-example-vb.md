@@ -15,27 +15,27 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d719050da7878f8f5421e632943868fe4b1f75ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c87dcf67e7da0c9ff0abf3aac7676a508a7bcd10
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615842"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601393"
 ---
 # <a name="handler-property-example-vb"></a>Handler 속성 예제(VB)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  이 예제에서는 합니다 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [처리기](../../../ado/reference/rds-api/handler-property-rds.md) 속성입니다. (참조 [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md) 대 한 자세한 내용은 합니다.)  
   
  Msdfmap.ini, 매개 변수 파일에 다음 섹션에서는 서버에 있는 것으로 가정 합니다.  
   
 ```  
-[connect AuthorDataBase]  
+[connect AuthorDataBase]  
 Access=ReadWrite  
 Connect="DSN=Pubs"  
-[sql AuthorById]  
-SQL="SELECT * FROM Authors WHERE au_id = ?"  
+[sql AuthorById]  
+SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
  코드는 다음과 같습니다. 에 할당 한 명령을 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성 일치는 ***AuthorById*** 식별자 및 Michael O'Leary 작성자에 대 한 행을 검색 합니다. 합니다 **DataControl** 개체 **레코드 집합** 속성은 할당 하 여 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 코딩 편의 위해 전적으로 개체입니다.  
@@ -51,7 +51,7 @@ Public Sub Main()
     dc.Handler = "MSDFMAP.Handler"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.Connect = "Data Source=AuthorDataBase"  
     dc.SQL = "AuthorById('267-41-2394')"  
     dc.Refresh                  'Retrieve the record  

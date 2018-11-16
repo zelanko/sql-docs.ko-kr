@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ff011bc3ab4b3b8cc49fc9199f4ca2359deeb021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676352"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 데이터베이스 연결 성공 및 실패 개요를 제공 하는 이벤트입니다. 연결 이벤트에 대 한 자세한 내용은 참조에서 이벤트 유형을 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
-|통계|형식|Description|  
+|통계|형식|설명|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -94,6 +94,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows Azure SQL Database 문제 해결](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Windows Azure SQL Database 문제 해결](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

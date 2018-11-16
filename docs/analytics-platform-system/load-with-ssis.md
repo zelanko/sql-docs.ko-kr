@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394168"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700919"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 Integration Services를 사용 하 여 데이터 로드
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 SQL Server Parallel Data Warehouse로 데이터를 로드 하는 것에 대 한 참조 및 배포 정보를 제공 합니다.  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -56,7 +56,7 @@ BIDS는 기본적으로 64 비트 이진 파일을 사용 하 여 패키지를 �
 ### <a name="run-from-powershell"></a>PowerShell에서 실행  
 Windows PowerShell에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
   
-예를 들어 IPv4 주소를 사용하는 경우 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예를 들면 다음과 같습니다. `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows에서 실행할 명령 프롬프트 
 Windows 명령 프롬프트에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
@@ -249,12 +249,12 @@ id,city,lastUpdateDate,orderDate
 ## <a name="see-also"></a>관련 항목  
 [SSIS PDW 대상 어댑터를 사용 하는 스크립트 작업 만들기](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[(Integration Services) 패키지 디자인 및 구현](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[자습서: 마법사를 사용 하 여 기본 패키지 만들기](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[시작 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[동적 패키지 생성 예제](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[병렬 처리 (SQL Server 비디오)에 대 한 SSIS 패키지 디자인](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 커뮤니티 예제: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[(Integration Services) 패키지 디자인 및 구현](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[자습서: 마법사를 사용 하 여 기본 패키지 만들기](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[시작 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[동적 패키지 생성 예제](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[병렬 처리 (SQL Server 비디오)에 대 한 SSIS 패키지 디자인](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server 커뮤니티 예제: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [증분 로드 개선 변경 데이터 캡처를 사용 하 여](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [느린 변경 차원 변환](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [대량 삽입 태스크](../integration-services/control-flow/bulk-insert-task.md)  

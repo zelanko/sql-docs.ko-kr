@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757401b45cb66267d80091783d1ec900346722f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7d18848c7cb1baa328210884fb4460628a12d9e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669042"
 ---
 # <a name="core-sqlxml-security-considerations"></a>핵심 SQLXML 보안 고려 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   다음은 데이터 액세스에 SQLXML을 사용하는 경우에 대한 보안 지침입니다.  
   
--   SQLXMLOLEDB 공급자가 노출 하는 **StreamFlags** 설정할 수 있는 속성 플래그를 나타내는 SQLXML 기능을 사용 하거나 각 특정 인스턴스에 대해 사용 하지 않도록 설정 해야 합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 [SQLXMLOLEDB 공급자 &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   SQLXMLOLEDB 공급자가 노출 하는 **StreamFlags** 설정할 수 있는 속성 플래그를 나타내는 SQLXML 기능을 사용 하거나 각 특정 인스턴스에 대해 사용 하지 않도록 설정 해야 합니다. 이 속성을 사용하여 SQLXML 사용을 사용자 지정하고 원하는 구성 요소만 사용되도록 설정할 수 있습니다. 자세한 내용은 [SQLXMLOLEDB 공급자 &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   SQLXML 오류가 발생하고 반환되는 경우 테이블 이름, 열 이름 또는 유형 정보와 같은 데이터베이스 스키마 정보가 포함될 수 있습니다. 의도되지 않았거나 필요하지 않은 경우 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 대한 정보를 쉽게 검색할 수 없도록 이러한 오류를 처리할 때는 주의해야 합니다.  
   

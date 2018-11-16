@@ -13,12 +13,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 982b169851fee01c56bfae046bf6acb809a97de2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad404e9555a015e1a76e349fb2c4481fc58b5a0f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658422"
 ---
 # <a name="sqlconnect"></a>SQLConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47829551"
  사용 하 여 대 한 자세한 내용은 **SQLConnect** 에 연결 하는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 클러스터를 참조 하십시오 [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLConnect 함수](http://go.microsoft.com/fwlink/?LinkId=101541)   
+ [SQLConnect 함수](https://go.microsoft.com/fwlink/?LinkId=101541)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6353935efe167023b39d51d53e061b5a6b5deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677232"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "47673565"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>문을 한 번 준비한 후 여러 번 실행하려면  
   
-1.  [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) 를 호출하여 문을 준비합니다.  
+1.  [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 를 호출하여 문을 준비합니다.  
   
-2.  필요에 따라 [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
+2.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
 3.  필요에 따라 준비된 문의 각 매개 변수에 대해 다음 작업을 수행합니다.  
   
-    -   호출 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 매개 변수 정보를 얻을 수 있습니다.  
+    -   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 을 호출하여 매개 변수 정보를 얻습니다.  
   
-    -   각 매개 변수를 사용 하 여 프로그램 변수에 바인딩할 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)합니다. 실행 시 데이터 매개 변수를 설정합니다.  
+    -   [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 사용하여 각 매개 변수를 프로그램 변수에 바인딩합니다. 실행 시 데이터 매개 변수를 설정합니다.  
   
 4.  준비된 문을 실행할 때마다 다음 작업을 수행합니다.  
   
     -   문에 매개 변수 표식이 있는 경우 데이터 값을 바인딩된 매개 변수 버퍼에 넣습니다.  
   
-    -   [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하여 준비된 문을 실행합니다.  
+    -   [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하여 준비된 문을 실행합니다.  
   
-    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 하 고 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)합니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 준비하려면  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47673565"
   
 2.  SQLPrepare 문 준비를 호출 합니다.  
   
-3.  필요에 따라 [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
+3.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
 4.  필요에 따라 준비 된 문의 각 매개 변수에 대해 매개 변수 정보를 가져오려면 SQLDescribeParam를 호출 합니다.  
   

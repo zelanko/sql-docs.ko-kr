@@ -23,19 +23,19 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 53f99419e70b7ebd97f19cc7245b226b20a7f7a4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0fb7b7719ce53fe4f20863cb3f44c9483bc6b472
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808639"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660352"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 데이터베이스의 분류 된 각 항목에 대 한 행을 반환 합니다.
 
-|열 이름|데이터 형식|Description|
+|열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|분류 존재 하는 항목의 클래스를 식별|  
 |**class_desc**|**varchar(16)**|분류 존재 하는 항목의 클래스에 대 한 설명|  
@@ -79,4 +79,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICTION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL Information Protection 시작](http://aka.ms/sqlip)
+[SQL Information Protection 시작](https://aka.ms/sqlip)

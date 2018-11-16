@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622281"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656762"
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   호출되거나 참조되는 어셈블리가 동일한 데이터베이스에 만들어졌습니다.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>어셈블리 생성 시 보안 지정  
- 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전**를 **EXTERNAL_ACCESS**, 또는 **안전 하지 않음** . **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](http://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
+ 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전**를 **EXTERNAL_ACCESS**, 또는 **안전 하지 않음** . **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
   
  **SAFE** 는 기본 권한 집합이며 대부분의 시나리오에서 작동합니다. 이 보안 수준을 지정하려면 다음과 같이 CREATE ASSEMBLY 문의 구문을 수정합니다.  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [어셈블리 삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md)   
- [부분적으로 신뢰할 수 있는 호출자 허용](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [부분적으로 신뢰할 수 있는 호출자 허용](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

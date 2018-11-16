@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bac931a87ee71c7a0a153e1635f262b5e29bcc59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637d07662a19d3f2b739c48fd3d3f25a2d108360
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788074"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657744"
 ---
 # <a name="performing-bulk-copy-operations"></a>대량 복사 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "47788074"
   
  공급자별 속성 SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS 및 SSPROP_FASTLOADKEEPIDENTITY는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 대량 복사 행 집합의 동작을 제어합니다. 속성에 지정 된 된 *rgProperties* 의 멤버는 * rgPropertySets ***IOpenRowset**매개 변수 멤버입니다.  
   
-|속성 ID|Description|  
+|속성 ID|설명|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 소비자가 제공한 ID 값을 유지합니다.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 있는 ID 열의 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성됩니다. 열에서 무시 됩니다에 대 한 바인딩된 모든 값은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.<br /><br /> VARIANT_TRUE: 소비자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ID 열의 값을 제공하는 접근자를 바인딩합니다. NULL을 허용하는 열에서는 ID 속성을 사용할 수 없으므로 소비자가 **IRowsetFastLoad::Insert**를 호출할 때마다 고유한 값을 제공합니다.|  
 |SSPROP_FASTLOADKEEPNULLS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: DEFAULT 제약 조건이 있는 열에 대해 NULL을 유지합니다. NULL을 허용하고 DEFAULT 제약 조건이 적용된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열에만 영향을 줍니다.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 열에 대해 NULL이 포함된 행을 삽입하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 열의 기본값을 삽입합니다.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 열에 대해 NULL이 포함된 행을 삽입하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 열 값으로 NULL을 삽입합니다.|  
@@ -119,6 +119,6 @@ ms.locfileid: "47788074"
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [대량 가져오기 성능 최적화](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [대량 가져오기 성능 최적화](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

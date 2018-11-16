@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254449"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701451"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  SQL Server 신뢰할 수 있는 실행 패드 서비스는 R 및 Python에 대 한 외부 스크립트 실행을 지원합니다. SP1에서 SQL Server 2016 R Services는 서비스를 제공합니다. SQL Server 2017 나타나며 설치의 일부로 실행 패드 서비스를 포함합니다.
 
-여러 문제는 시작, 구성 문제 또는 변경 내용을 포함 하 여 또는 네트워크 프로토콜을 누락 하에서 실행 패드를 방지할 수 있습니다. 이 문서에서는 다양 한 문제에 대 한 문제 해결 지침을 제공합니다. 모든 하지 못한 것에 대 한 질문을 게시할 수는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)합니다.
+여러 문제는 시작, 구성 문제 또는 변경 내용을 포함 하 여 또는 네트워크 프로토콜을 누락 하에서 실행 패드를 방지할 수 있습니다. 이 문서에서는 다양 한 문제에 대 한 문제 해결 지침을 제공합니다. 모든 하지 못한 것에 대 한 질문을 게시할 수는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)합니다.
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 

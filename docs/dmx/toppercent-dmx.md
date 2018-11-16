@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040401"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600393"
 ---
 # <a name="toppercent-dmx"></a>TopPercent(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  **TopPercent** 함수는 계산된 된 값에 따라 차수의 내림차순 최상위 행을 반환 합니다.는 \<식의 순위를 지정 > 각 행에 대 한 인수는 합계는 \<식의 순위를 지정 > 값은 최소한으로 지정 된 백분율을 지정 합니다 \<% > 인수입니다. **TopPercent** 지정된 된 백분율 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 사용 하 여 작성 하는 연결 모델에 대해 예측 쿼리를 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
+ 다음 예제에서는 사용 하 여 작성 하는 연결 모델에 대해 예측 쿼리를 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
   
  TopPercent의 작동 원리를 이해 하려면 우선 중첩된 테이블만 반환 하는 예측 쿼리를 실행 하는 데 도움이 수 있습니다.  
   

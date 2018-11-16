@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850983"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664933"
 ---
 # <a name="clr-integration---overview"></a>CLR 통합 - 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850983"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저로는 수행할 수 없는 기능을 수행하도록 확장 저장 프로시저를 작성할 수 있습니다. 하지만 형식 안전성이 확인된 관리 코드와 달리 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성을 손상시킬 수 있습니다. 또한 메모리 관리, 스레드 및 파이버 예약, 동기화 서비스 등이 CLR의 관리 코드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 보다 강력하게 통합되어 있습니다. CLR 통합을 사용하면 확장 저장 프로시저보다 안전한 방식으로 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 불가능한 태스크를 수행하는 데 필요한 저장 프로시저를 작성할 수 있습니다. CLR 통합 및 확장된 저장된 프로시저에 대 한 자세한 내용은 참조 하세요. [CLR 통합의 성능을](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [.NET Framework 설치](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 통합 아키텍처](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [.NET Framework 설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [CLR 통합 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 통합 시작](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

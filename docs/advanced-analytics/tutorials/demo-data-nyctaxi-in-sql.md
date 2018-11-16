@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3618504d0db8003df7787778d84d62990c83b8fb
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701351"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 공용 데이터로 구성 된 샘플 데이터베이스를 설정 하는 방법에 설명 합니다 [뉴욕 시 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)합니다. 이 데이터는 SQL Server에서 데이터베이스 내 분석에 대 한 몇 가지 R 및 Python 자습서에 사용 됩니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 시스템 데이터베이스 백업 파일에는 약간 넘는 90MB, 기본 데이터 테이블의 1.7 백만 행을 제공 합니다.
+이 문서에서는 공용 데이터로 구성 된 샘플 데이터베이스를 설정 하는 방법에 설명 합니다 [뉴욕 시 택시 및 리무진 수수료](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)합니다. 이 데이터는 SQL Server에서 데이터베이스 내 분석에 대 한 몇 가지 R 및 Python 자습서에 사용 됩니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 시스템 데이터베이스 백업 파일에는 약간 넘는 90MB, 기본 데이터 테이블의 1.7 백만 행을 제공 합니다.
 
 이 연습을 완료 하려면 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 또는 데이터베이스 백업 파일을 복원 하 고 T-SQL 쿼리를 실행할 수 있는 다른 도구입니다.
 

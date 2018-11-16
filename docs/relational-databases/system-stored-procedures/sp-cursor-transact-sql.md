@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662522"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47725271"
   
 ||  
 |-|  
-|**적용 대상**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**적용 대상**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 다음 중 하나 필요로 **int** 값을 입력 합니다.  
   
-|값|이름|Description|  
+|값|이름|설명|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  에 지정 된 행 *rownum* 다시 액세스 하 고 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. 에 지정 된 행 *rownum* 다시 액세스 및 삭제 합니다.|  

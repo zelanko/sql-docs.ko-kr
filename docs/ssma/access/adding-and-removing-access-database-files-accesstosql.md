@@ -29,12 +29,12 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ec65ffa5ee5df74d48de5280fedb825da8607aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598167"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655642"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access 데이터베이스 파일 (AccessToSQL) 추가 및 제거
 로 Access 데이터를 마이그레이션하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure SSMA 프로젝트에 하나 이상의 Access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 Access 97 또는 이후 버전 이어야 합니다. 이전 버전의 Access에서 데이터베이스에 있는 경우 데이터베이스를 최신 버전으로 변환 해야 합니다. 열고 SSMA를 추가 하기 전에 Access 97 이상에서 데이터베이스를 저장 하 여이 작업을 수행 합니다.  
@@ -129,7 +129,7 @@ Access 데이터베이스에 해당 파일을 추가한 후 변경 될 경우에
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택한 **Remove Database**합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스에서 다음 단계 [SQL Server에 연결](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)합니다.  
+마이그레이션 프로세스에서 다음 단계 [SQL Server에 연결](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -13,12 +13,12 @@ ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6122efd4340fb223e42ffa77b5851380be23b0c0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099374"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675602"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>프로젝트 설정 (변환) (AccessToSQL)
 변환 프로젝트 설정을 통해 개체에서 Access 데이터베이스 개체를 변환 하는 방법을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  
@@ -112,5 +112,5 @@ SSMA에서 개체 식별자 이름을 따옴표로 묶을 수는 경우 메시�
 -   **전체 모드**: True  
   
 ## <a name="see-also"></a>관련 항목  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

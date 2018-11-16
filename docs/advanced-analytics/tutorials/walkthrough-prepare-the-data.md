@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703681"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 이 예제에서는 R grep 함수로 사용 가능한 경로의 벡터를 검색하고 그 중 "Program Files"를 포함하는 경로를 찾습니다. 자세한 내용은 [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)합니다.
+    - 이 예제에서는 R grep 함수를 사용 하 여 사용 가능한 경로의 벡터를 검색 하 고 "Program Files"를 포함 하는 경로 찾을. 자세한 내용은 [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep)합니다.
 
     - 패키지가 이미 설치되었다고 생각되면 `installed.packages()` 를 실행하여 설치된 패키지 목록을 확인하십시오.
 
@@ -173,7 +173,7 @@ PowerShell 스크립트에 문제가 있다면 수동으로 전체 혹은 일부
 
 데이터를 수동으로 다운로드하려면 다음 링크를 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 대상 저장**을 선택합니다.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 다운로드한 데이터 파일의 경로와 데이터가 저장된 파일 이름을 적어둡니다. **bcp** 를 사용하여 테이블에 데이터를 로드하려면 전체 경로가 필요합니다. 
 
@@ -265,7 +265,7 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 데이터는 각 여정의 요금 및 지불된 팁 금액을 비롯하여 2013년 17,300만 개별 여정의 레코드를 포함하는 뉴욕시 택시 데이터 집합의 대표 샘플링입니다. 데이터를 보다 쉽게 사용하기 위해 Microsoft 데이터 과학 팀이 다운샘플링을 수행하여 데이터의 1%만 얻었습니다.  이 데이터는 Azure의 공용 Blob 저장소 컨테이너에 .CSV 형식으로 공유됩니다. 원본 데이터에는 350MB 이하의 압축되지 않은 파일입니다.
 
-+ 공용 데이터 집합: [NYC 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 공용 데이터 집합: [NYC 택시 및 리무진 수수료](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [NYC Taxi 데이터 집합은 Azure ML 모델을 토대로](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)합니다.
 
@@ -281,7 +281,7 @@ GitHub 리포지토리에서 파일을 다운로드하면 다음과 같습니다
 
 PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행합니다. 다음 표는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트와 용도입니다.
 
-|SQL 스크립트 파일 이름|Description|
+|SQL 스크립트 파일 이름|설명|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|데이터베이스와 두 개의 테이블을 만듭니다.<br /><br /> *nyctaxi_sample*: NYC 택시 데이터 집합의 1% 샘플인 훈련용 데이터를 저장하는 테이블입니다. 저장소와 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다.<br /><br /> *nyc_taxi_models*: 훈련된 모델을 이진 형식으로 저장하는데 사용되는 테이블입니다.|
 |PredictTipBatchMode.sql|새로운 관측(observations)에 대한 레이블(labels)을 예측하기 위해 훈련된 모델을 호출하는 저장 프로시저를 만듭니다. 입력 매개 변수로 쿼리를 받습니다.|

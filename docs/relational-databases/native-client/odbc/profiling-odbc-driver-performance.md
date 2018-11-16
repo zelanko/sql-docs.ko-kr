@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8b62db56319fd3d09d7c6afd14df2ee727bb4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659514"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>응용 프로그램 프로필 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |TimerResolution|서버 클럭 시간의 최소 인식 값(밀리초)입니다. 일반적으로 0으로 보고되며, 보고된 수가 큰 경우에만 고려되어야 합니다. 서버 클럭의 최소 인식 값이 시간 기반 통계의 적정 간격보다 클 경우 해당 통계는 과장될 수 있습니다.|  
 |SQLidu|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
@@ -87,7 +87,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
 |의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 응용 프로그램이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
-|SQLPrepares|수가 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) SQL_PERF_START 이후 호출 합니다.|  
+|SQLPrepares|수가 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) SQL_PERF_START 이후 호출 합니다.|  
 |ExecDirects|수가 **SQLExecDirect** SQL_PERF_START 이후 호출 합니다.|  
 |SQLExecutes|수가 **SQLExecute** SQL_PERF_START 이후 호출 합니다.|  
 |CursorOpens|SQL_PERF_START 이후 드라이버가 서버 커서를 연 횟수입니다.|  
@@ -117,7 +117,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>시간 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  

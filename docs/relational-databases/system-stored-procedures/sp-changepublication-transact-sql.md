@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689731"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670172"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정된 된 게시에 대 한 익명 구독을 만들 수 있습니다 하 고 *immediate_sync* 수도 있어야 **true**합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
@@ -116,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**동시**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 ||**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 |**taskid**||이 속성은 더 이상 사용되지 않으며 지원되지 않습니다.|  
-|**allow_drop**|**true**|사용 하도록 설정 `DROP TABLE` 트랜잭션 복제의 일부인 문서에 대 한 DLL을 지원 합니다. 최소 지원 버전: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서비스 팩 2 이상 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 1 이상입니다. 추가 참조: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|사용 하도록 설정 `DROP TABLE` 트랜잭션 복제의 일부인 문서에 대 한 DLL을 지원 합니다. 최소 지원 버전: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서비스 팩 2 이상 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 1 이상입니다. 추가 참조: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|사용 하지 않도록 설정 `DROP TABLE` 트랜잭션 복제의 일부인 문서에 대 한 DLL을 지원 합니다. 이 **기본** 이 속성의 값입니다.|
 |**NULL** (기본값)||에 대 한 지원 되는 값의 목록을 반환 *속성*합니다.|  
   

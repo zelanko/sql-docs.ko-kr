@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657751"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558451"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000에서 RDS 구성
 Windows 2000으로 업그레이드 한 후 제대로 작동 하려면 RDS를 시작 하는 문제를 발생 하면 문제를 해결 하려면 다음이 단계를 수행 합니다.  
   
-1.  Internet Explorer를 사용 하 여 http:// 서버로 이동 하 여 World Wide Web Publishing 서비스가 첫 번째 실행 중인지 확인 합니다. 이 방식으로 웹 서버에 액세스할 수 없는 경우 명령 프롬프트를 열고 "NET START W3SVC" 다음 명령을 입력 합니다.  
+1.  Internet Explorer를 사용 하 여 https:// 서버로 이동 하 여 World Wide Web Publishing 서비스가 첫 번째 실행 중인지 확인 합니다. 이 방식으로 웹 서버에 액세스할 수 없는 경우 명령 프롬프트를 열고 "NET START W3SVC" 다음 명령을 입력 합니다.  
   
 2.  시작 메뉴의 실행을 선택 합니다. Msdfmap.ini 형식과 msdfmap.ini 파일을 메모장에서 열려면 확인을 클릭 합니다. [기본값 연결] 섹션을 확인 하 고 액세스 매개 변수 액세스 권한 없음으로 설정 된 경우 디스크 캐싱을 READONLY로 변경 합니다.  
   
@@ -38,7 +38,7 @@ Windows 2000으로 업그레이드 한 후 제대로 작동 하려면 RDS를 시
  서버를 다시 부팅 하는 경우 해야 변경 내용이 처음에 문제를 해결 하는 표시 되지 않습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다. Windows 8 및 Windows Server 2012 부터는 Windows 운영 체제에서 RDS 서버 구성 요소는 더 이상 포함 된 합니다. RDS를 사용 하는 응용 프로그램을 마이그레이션할 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다. Windows 8 및 Windows Server 2012 부터는 Windows 운영 체제에서 RDS 서버 구성 요소는 더 이상 포함 된 합니다. RDS를 사용 하는 응용 프로그램을 마이그레이션할 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)

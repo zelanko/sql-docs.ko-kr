@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678961"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659152"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL)의 명령줄 옵션
 Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -120,7 +120,7 @@ Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 
 ### <a name="secure-password-option-psecurepassword"></a>보안 암호 옵션:-p/securepassword  
 이 옵션에는 서버 연결에 대 한 암호화 된 암호를 나타냅니다. 다른 모든 옵션에서 다른: 마이그레이션 프로젝트에 사용 되는 서버 연결에 대 한 암호 암호화를 관리할 수 있습니다 하지만 옵션은 모든 스크립트 실행 아니고 모든 마이그레이션 관련 작업에 도움이 됩니다.  
   
-명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 섹션입니다.  
+명령줄 매개 변수로 옵션 또는 암호를 입력할 수 없습니다. 그렇지 않으면 오류가 발생합니다. 자세한 내용은 참조는 [관리 암호](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 섹션입니다.  
   
 다음 하위 옵션에 대 한 지 `–p/securepassword`:  
   

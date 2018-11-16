@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5110c06913325421aeeaa2d31295d7e2bc6bf59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645601"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291529"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>부록 a: 데이터 및 서비스 공급자
 이 섹션에서는 세 가지 공급자: 데이터 공급자, 서비스 공급자 및 서비스 구성 요소입니다. 공급자 두 범주로 나누어집니다: 서비스를 제공 하 고 데이터를 제공 합니다. A *데이터 공급자* 자체 데이터를 소유 하 고 응용 프로그램에 테이블 형식으로 제공 합니다. A *서비스 공급자* 생성 하 고 ADO 응용 프로그램의 기능을 확대 하는 데이터를 사용 하 여 서비스를 캡슐화 합니다. 으로 서비스 공급자를 추가로 정의할 수도 있습니다는 *서비스 구성 요소*에 다른 서비스 공급자 또는 구성 요소와 함께 작동 해야 합니다.
@@ -54,7 +54,7 @@ ms.locfileid: "47645601"
 ## <a name="provider-specific-dynamic-properties"></a>공급자별 동적 속성
  [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 관련 동적 속성을 포함 합니다 공급자입니다. 이러한 속성 ADO에서 지 원하는 기본 제공 속성 외에도 공급자에 관련 된 기능에 대 한 정보를 제공 합니다.
 
- 연결을 설정 하 고 이러한 개체를 만든, 사용 하 여를 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 **속성** 공급자별 속성을 가져올 개체의 컬렉션입니다. 공급자 설명서를 참조 하며 [OLE DB Programmer's Guide](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 이러한 동적 속성에 대 한 자세한 내용은 합니다.
+ 연결을 설정 하 고 이러한 개체를 만든, 사용 하 여를 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 **속성** 공급자별 속성을 가져올 개체의 컬렉션입니다. 공급자 설명서를 참조 하며 [OLE DB Programmer's Guide](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 이러한 동적 속성에 대 한 자세한 내용은 합니다.
 
 ## <a name="service-providers"></a>서비스 공급자
  서비스 공급자를 사용 하는 키워드를 제공 해야 합니다. 또한 각 서비스 공급자와 연결 된 공급자 특정 동적 속성 알아야 합니다. 공급자 관련 세부 정보는 Microsoft에서 현재 사용할 수 있는 각 서비스 공급자에 대해 나열 됩니다.
