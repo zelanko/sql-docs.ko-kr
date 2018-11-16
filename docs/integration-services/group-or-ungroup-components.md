@@ -16,12 +16,12 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c781794fb548baa688596e613270c641eff9d481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37711d75b48118bd180307795d9fbaa3dfc4bf74
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765541"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638020"
 ---
 # <a name="group-or-ungroup-components"></a>구성 요소 그룹화 또는 그룹 해제
   **디자이너의**제어 흐름 **,** 데이터 흐름 **및** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭에서는 축소 가능한 그룹화를 지원합니다. 패키지에 여러 구성 요소가 있는 경우 탭이 복잡해져서 모든 구성 요소를 한 번에 확인하기 어렵고 사용하려는 항목을 쉽게 찾기 어려울 수 있습니다. 축소 가능한 그룹화 기능을 사용하면 작업 공간을 절약하고 큰 패키지를 쉽게 사용할 수 있습니다.  
@@ -62,6 +62,6 @@ ms.locfileid: "47765541"
   
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

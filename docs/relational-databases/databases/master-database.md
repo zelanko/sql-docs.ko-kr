@@ -5,8 +5,7 @@ ms.date: 07/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
@@ -15,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dad70b3deaf6b9412314f8f212b52268ba77dd61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618531"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558640"
 ---
 # <a name="master-database"></a>master 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,34 +50,34 @@ ms.locfileid: "47618531"
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|아니오|  
-|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
-|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
-|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
-|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
-|ARITHABORT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULL_DEFAULT|OFF|예|  
+|ANSI_NULLS|OFF|예|  
+|ANSI_PADDING|OFF|예|  
+|ANSI_WARNINGS|OFF|예|  
+|ARITHABORT|OFF|예|  
 |AUTO_CLOSE|OFF|아니오|  
-|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_CREATE_STATISTICS|ON|예|  
 |AUTO_SHRINK|OFF|아니오|  
-|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS|ON|예|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
 |CHANGE_TRACKING|OFF|아니오|  
-|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
-|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
+|CONCAT_NULL_YIELDS_NULL|OFF|예|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
+|CURSOR_DEFAULT|GLOBAL|예|  
 |데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|ON|아니오|  
 |ENCRYPTION|OFF|아니오|  
 |MIXED_PAGE_ALLOCATION|ON|아니오|  
-|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
-|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
-|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
-|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
+|NUMERIC_ROUNDABORT|OFF|예|  
+|PAGE_VERIFY|CHECKSUM|예|  
+|PARAMETERIZATION|SIMPLE|예|  
+|QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니오|  
-|RECOVERY|SIMPLE|사용자 계정 컨트롤|  
-|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
+|RECOVERY|SIMPLE|예|  
+|RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|DISABLE_BROKER|아니오|  
-|TRUSTWORTHY|OFF|사용자 계정 컨트롤|  
+|TRUSTWORTHY|OFF|예|  
   
 이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   

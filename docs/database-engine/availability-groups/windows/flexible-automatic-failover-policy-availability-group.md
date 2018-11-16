@@ -15,12 +15,12 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bfdf7f9452e716c5b0e79270c620fdf5992ce94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbec09065f8aff8bbf5f490111821ced051ed0ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671661"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603603"
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>유연한 자동 장애 조치 정책 - 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47671661"
   
 |Level|오류 상태|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 값|PowerShell 값|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|1|서버 작동 중지 시. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.<br /><br /> <br /><br /> 제한 수준이 가장 낮은 상태입니다.|1|**OnServerDown**|  
+|1|서버 작동 중지 시. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server Always On 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)을 참조하세요.<br /><br /> <br /><br /> 제한 수준이 가장 낮은 상태입니다.|1|**OnServerDown**|  
 |2|서버 응답 없음 발생 시. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 클러스터에 연결되어 있지 않고 가용성 그룹의 사용자 지정 상태 확인 제한 시간 임계값이 초과된 경우<br /><br /> 가용성 복제본이 오류 상태에 있는 경우|2|**OnServerUnresponsive**|  
 |3|중대 서버 오류 발생 시. 분리된 스핀 잠금, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> 이 값은 기본 수준입니다.|3|**OnCriticalServerError**|  
 |4|일반 서버 오류 발생 시. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치를 시작하도록 지정합니다.|4|**OnModerateServerError**|  
@@ -77,12 +77,12 @@ ms.locfileid: "47671661"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [작동 방법: SQL Server Always On 임대 시간 제한](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [작동 방법: SQL Server Always On 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
- [장애 조치 및 장애 조치 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  

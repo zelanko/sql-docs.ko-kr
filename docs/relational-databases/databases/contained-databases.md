@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -18,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afec1cde13ea1734fe0f7829f878715064f55641
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849193"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559020"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "47849193"
   
 ## <a name="see-also"></a>참고 항목  
  [수정된 기능&#40;포함된 데이터베이스&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)   
+ [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  

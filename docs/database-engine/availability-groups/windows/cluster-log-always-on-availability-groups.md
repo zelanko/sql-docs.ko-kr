@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731561"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601333"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731561"
 ## <a name="generate-cluster-log"></a>클러스터 로그 생성  
  클러스터 로그를 두 가지 방법으로 생성할 수 있습니다.  
   
-1.  명령 프롬프트에서 `cluster /log /g` 명령을 사용합니다. 이 명령은 각 WSFC 노드의 \windows\cluster\reports 디렉터리에 클러스터 로그를 생성합니다. 이 방법의 장점은 `/level` 옵션을 사용하여 생성된 로그의 세부 수준을 지정할 수 있다는 것입니다. 단점은 생성된 클러스터 로그에 대한 대상 디렉터리를 지정할 수 없다는 것입니다. 자세한 내용은 [Windows Server 2008 장애 조치(failover) 클러스터링에서 cluster.log를 만드는 방법](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)을 참조하세요.  
+1.  명령 프롬프트에서 `cluster /log /g` 명령을 사용합니다. 이 명령은 각 WSFC 노드의 \windows\cluster\reports 디렉터리에 클러스터 로그를 생성합니다. 이 방법의 장점은 `/level` 옵션을 사용하여 생성된 로그의 세부 수준을 지정할 수 있다는 것입니다. 단점은 생성된 클러스터 로그에 대한 대상 디렉터리를 지정할 수 없다는 것입니다. 자세한 내용은 [Windows Server 2008 장애 조치(failover) 클러스터링에서 cluster.log를 만드는 방법](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)을 참조하세요.  
   
-2.  [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet을 사용합니다. 이 방법의 장점은 cmdlet에서 실행하는 노드의 모든 노드에서 한 대상 디렉터리까지 클러스터 로그를 생성할 수 있다는 것입니다. 단점은 생성된 로그의 세부 수준을 지정할 수 없다는 것입니다.  
+2.  [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet을 사용합니다. 이 방법의 장점은 cmdlet에서 실행하는 노드의 모든 노드에서 한 대상 디렉터리까지 클러스터 로그를 생성할 수 있다는 것입니다. 단점은 생성된 로그의 세부 수준을 지정할 수 없다는 것입니다.  
   
  다음 PowerShell 명령은 최근 15분의 모든 클러스터 노드에서 클러스터 로그를 생성하고 현재 디렉터리에 저장합니다. 관리자 권한으로 PowerShell 창에서 명령을 실행합니다.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  가용성 그룹 리소스를 다시 마우스 오른쪽 단추로 클릭하고 **이 리소스를 온라인으로 만들기**를 클릭합니다.  
   
 ## <a name="availability-group-resource-events"></a>가용성 그룹 리소스 이벤트  
- 아래 표는 가용성 그룹 리소스에 속하는 CLUSTER.LOG에서 볼 수 있는 다양한 이벤트 유형을 보여 줍니다. WSFC의 RHS(Resource Hosting Subsystem) 및 RCM(Resource Control Monitor)에 대한 자세한 내용은 [Windows Server 2008 장애 조치 클러스터의 RHS(Resource Hosting Subsystem)](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)를 참조하세요.  
+ 아래 표는 가용성 그룹 리소스에 속하는 CLUSTER.LOG에서 볼 수 있는 다양한 이벤트 유형을 보여 줍니다. WSFC의 RHS(Resource Hosting Subsystem) 및 RCM(Resource Control Monitor)에 대한 자세한 내용은 [Windows Server 2008 장애 조치 클러스터의 RHS(Resource Hosting Subsystem)](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)를 참조하세요.  
   
 |ID|원본|CLUSTER.LOG의 예|  
 |----------------|------------|------------------------------|  

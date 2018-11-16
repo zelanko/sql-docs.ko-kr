@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788801"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602823"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>가용성 복제본에 정상 상태의 역할이 없음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47788801"
  이 정책은 가용성 복제본의 역할 상태를 확인합니다. 가용성 복제본의 역할이 주 역할이나 보조 역할이 아닌 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 복제본에 정상 상태의 역할이 없음](http://go.microsoft.com/fwlink/p/?LinkId=220856) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 복제본에 정상 상태의 역할이 없음](https://go.microsoft.com/fwlink/p/?LinkId=220856) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 가용성 복제본의 역할이 비정상 상태에 있습니다. 복제본에 주 역할 또는 보조 역할이 없습니다.  

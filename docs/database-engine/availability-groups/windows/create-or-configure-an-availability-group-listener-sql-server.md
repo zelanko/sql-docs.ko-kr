@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: ad05cbe7415aed8c821664082fcd557d48f3582f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120240"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600905"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,14 +103,14 @@ ms.locfileid: "49120240"
  의미 있는 문자열을 지정하는 것이 좋습니다. 예를 들어, `AG1`이라는 가용성 그룹의 경우 `ag1-listener`와 같은 의미 있는 DNS 호스트 이름을 지정합니다.  
   
 > [!IMPORTANT]  
->  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
+>  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
   
 ###  <a name="WinPermissions"></a> Windows 사용 권한  
   
 |Permissions|링크|  
 |-----------------|----------|  
-|가용성 그룹을 호스팅하는 WSFC 클러스터의 CNO(클러스터 개체 이름)에는 **컴퓨터 개체 생성** 권한이 있어야 합니다.<br /><br /> Active Directory에서 기본적으로 CNO는 명시적으로 **컴퓨터 개체 생성** 권한이 없으며 10개의 VCO(가상 컴퓨터 개체)를 만들 수 있습니다. 10개의 VCO를 만든 후에는 VCO를 추가로 만들 수 없습니다. WSFC 클러스터의 CNO에 대한 권한을 명시적으로 부여하여 이 문제를 방지할 수 있습니다. 삭제한 가용성 그룹에 대한 VCO는 Active Directory에서 자동으로 삭제되지 않으며 수동으로 삭제하지 않는 한 10개의 VCO 기본 제한 개수에 대해 계산됩니다.<br /><br /> 참고: 일부 조직에서는 보안 정책에 따라 **컴퓨터 개체 생성** 권한을 개별 사용자 계정에 부여하는 작업이 금지됩니다.|*클러스터를 설치하는 사람의 계정을 구성하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *클러스터 이름 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|조직에서 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비해야 하는 경우 **계정 운영자** 그룹의 멤버 자격 또는 도메인 관리자의 지원이 필요합니다.|*클러스터형 서비스 또는 응용 프로그램에 대한 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)|  
+|가용성 그룹을 호스팅하는 WSFC 클러스터의 CNO(클러스터 개체 이름)에는 **컴퓨터 개체 생성** 권한이 있어야 합니다.<br /><br /> Active Directory에서 기본적으로 CNO는 명시적으로 **컴퓨터 개체 생성** 권한이 없으며 10개의 VCO(가상 컴퓨터 개체)를 만들 수 있습니다. 10개의 VCO를 만든 후에는 VCO를 추가로 만들 수 없습니다. WSFC 클러스터의 CNO에 대한 권한을 명시적으로 부여하여 이 문제를 방지할 수 있습니다. 삭제한 가용성 그룹에 대한 VCO는 Active Directory에서 자동으로 삭제되지 않으며 수동으로 삭제하지 않는 한 10개의 VCO 기본 제한 개수에 대해 계산됩니다.<br /><br /> 참고: 일부 조직에서는 보안 정책에 따라 **컴퓨터 개체 생성** 권한을 개별 사용자 계정에 부여하는 작업이 금지됩니다.|*클러스터를 설치하는 사람의 계정을 구성하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *클러스터 이름 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|조직에서 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비해야 하는 경우 **계정 운영자** 그룹의 멤버 자격 또는 도메인 관리자의 지원이 필요합니다.|*클러스터형 서비스 또는 응용 프로그램에 대한 계정을 미리 준비하는 단계* - [장애 조치(Failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)|  
   
 > [!TIP]  
 >  일반적으로 수신기 가상 네트워크 이름에 대한 컴퓨터 계정을 미리 준비하지 않는 것이 가장 간단합니다. 가능하면 WSFC 고가용성 마법사를 실행할 때 계정을 자동으로 만들고 구성하도록 합니다.  
@@ -248,9 +248,9 @@ ms.locfileid: "49120240"
 ###  <a name="ADQuotas"></a> Active Directory 할당량으로 인한 가용성 그룹 수신기 만들기의 오류  
  참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다.  자세한 내용은 다음 문서를 참조하세요.  
   
--   [컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결하는 방법](http://support.microsoft.com/kb/307532)  
+-   [컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결하는 방법](https://support.microsoft.com/kb/307532)  
   
--   [Active Directory 할당량](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [Active Directory 할당량](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹 수신기를 만든 후  
   
@@ -346,17 +346,17 @@ Start-ClusterResource yourListenerName
   
         3.  WSFC 가용성 그룹 리소스에 종속성을 추가합니다.  
   
-         장애 조치(Failover) 클러스터 관리자의 대화 상자와 탭에 대한 자세한 내용은 [사용자 인터페이스: 장애 조치(Failover) 클러스터 관리자 스냅인](http://technet.microsoft.com/library/cc772502.aspx)을 참조하세요.  
+         장애 조치(Failover) 클러스터 관리자의 대화 상자와 탭에 대한 자세한 내용은 [사용자 인터페이스: 장애 조치(Failover) 클러스터 관리자 스냅인](https://technet.microsoft.com/library/cc772502.aspx)을 참조하세요.  
   
     -   **장애 조치(failover) 클러스터용 Windows PowerShell 사용:**  
   
-        1.  [Add-ClusterResource](http://technet.microsoft.com/library/ee460983.aspx) 를 사용하여 네트워크 이름과 IP 주소 리소스를 만듭니다.  
+        1.  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) 를 사용하여 네트워크 이름과 IP 주소 리소스를 만듭니다.  
   
-        2.  [Start-ClusterResource](http://technet.microsoft.com/library/ee461056.aspx) 를 사용하여 네트워크 이름 리소스를 시작합니다.  
+        2.  [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) 를 사용하여 네트워크 이름 리소스를 시작합니다.  
   
-        3.  [Add-ClusterResourceDependency](http://technet.microsoft.com/library/ee461014.aspx) 를 사용하여 네트워크 이름과 기존 SQL Server 가용성 그룹 리소스 간의 종속성을 설정합니다.  
+        3.  [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) 를 사용하여 네트워크 이름과 기존 SQL Server 가용성 그룹 리소스 간의 종속성을 설정합니다.  
   
-         장애 조치(failover) 클러스터용 Windows Powershell에 대한 자세한 내용은 [서버 관리자 명령 개요](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)를 참조하세요.  
+         장애 조치(failover) 클러스터용 Windows Powershell에 대한 자세한 내용은 [서버 관리자 명령 개요](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)를 참조하세요.  
   
 2.  새 수신기에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 수신 대기를 시작합니다. 추가 수신기를 만든 후 가용성 그룹의 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 연결하고 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 수신기 포트를 수정합니다.  
   

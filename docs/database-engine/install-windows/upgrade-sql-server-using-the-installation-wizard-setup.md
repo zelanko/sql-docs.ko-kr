@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803721"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607163"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
@@ -120,7 +120,7 @@ ms.locfileid: "47803721"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
   
-15. 전체 텍스트 검색 업그레이드 옵션 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)를 참조하세요.  
+15. 전체 텍스트 검색 업그레이드 옵션 페이지에서 업그레이드하려는 데이터베이스의 업그레이드 옵션을 지정합니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)를 참조하세요.  
   
 16. 모든 규칙이 통과하면 기능 규칙 창이 자동으로 진행됩니다.  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47803721"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   
- [이전 버전과의 호환성_삭제됨](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

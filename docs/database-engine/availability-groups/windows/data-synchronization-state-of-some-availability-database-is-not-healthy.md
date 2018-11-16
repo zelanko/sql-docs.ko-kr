@@ -14,12 +14,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7282c310d9cce29761af6536598b9c1184a94455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9260f9de24d282b3b6ce5c4e46b4572e01aafa9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787872"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604459"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47787872"
  이 정책은 가용성 데이터베이스("데이터베이스 복제본"이라고도 함)의 데이터 동기화 상태를 확인합니다. 데이터 동기화 상태가 NOT SYNCHRONIZING이거나 동기 커밋 데이터베이스 복제본에 대한 상태가 SYNCHRONIZED 상태가 아닌 경우 정책은 비정상 상태에 있습니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법은 TechNet Wiki의 [가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](http://go.microsoft.com/fwlink/p/?LinkId=220863) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법은 TechNet Wiki의 [가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](https://go.microsoft.com/fwlink/p/?LinkId=220863) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  복제본의 가용성 데이터베이스 중 하나 이상의 상태가 비정상 데이터 동기화 상태입니다. 비동기 커밋 가용성 복제본인 경우 모든 가용성 데이터베이스를 SYNCHRONIZING 상태로 설정해야 합니다. 이 복제본이 동기 커밋 가용성 복제본이면 모든 가용성 데이터베이스가 SYNCHRONIZED 상태에 있어야 합니다. 이 문제는 다음에 의해 발생할 수 있습니다.  

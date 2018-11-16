@@ -5,29 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aacf37fc9d3cb7fd4b69b51e3adf115cf53bd6a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779751"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571452"
 ---
 # <a name="sql-trace"></a>SQL 추적
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
+  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
   
 ## <a name="benefits-of-sql-trace"></a>SQL 추적의 이점  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
   
 ## <a name="sql-trace-architecture"></a>SQL 추적 아키텍처  
  이벤트 원본은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 같은 추적 이벤트나 교착 상태 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 생성하는 원본일 수 있습니다. 이벤트에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오. 이벤트가 발생한 후 해당 이벤트 클래스가 추적 정의에 포함되면 이벤트 정보가 추적에 의해 수집됩니다. 추적 정의의 이벤트 클래스에 필터가 정의되어 있으면 해당 필터가 적용되고 추적 이벤트 정보가 큐에 전달됩니다. 이 큐로부터 추적 정보가 파일에 기록되거나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]같은 응용 프로그램에서 SMO에 의해 사용될 수 있습니다. 다음 다이어그램에서는 추적 중 SQL 추적에서 이벤트를 수집하는 방법을 보여 줍니다.  

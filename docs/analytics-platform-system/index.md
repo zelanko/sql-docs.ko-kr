@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909744"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702451"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 데이터 웨어하우징 및 빅 데이터 분석을 위해 설계된 데이터 플랫폼인 Microsoft APS(Analytics Platform System)는 완벽한 데이터 통합, 고속 쿼리 처리, 확장성이 우수한 저장소, 종단 간 비즈니스 인텔리전스 솔루션에 대한 간단한 유지 관리를 제공합니다.  
@@ -51,6 +51,6 @@ PDW를 사용하면 획기적인 쿼리 성능 외에도 다음 작업을 간편
 
 ## <a name="next-steps"></a>다음 단계
 
-PDW의 이점에 대한 자세한 내용은 MSDN의 [차세대 데이터 웨어하우징 및 빅 데이터 솔루션을 위한 획기적인 플랫폼](http://msdn.microsoft.com/library/dn520808.aspx) 백서를 참조하세요.  
+PDW의 이점에 대한 자세한 내용은 MSDN의 [차세대 데이터 웨어하우징 및 빅 데이터 솔루션을 위한 획기적인 플랫폼](https://msdn.microsoft.com/library/dn520808.aspx) 백서를 참조하세요.  
   
 

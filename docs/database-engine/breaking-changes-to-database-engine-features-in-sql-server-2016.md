@@ -5,8 +5,7 @@ ms.date: 11/15/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
@@ -15,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cbd8baa507b681f32d2cd123f029b530fd4d100
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2680ee81bbf2f4b49eb3835bb18a3d4b712f8c5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788491"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602693"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 데이터베이스 엔진 기능의 주요 변경
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47788491"
 
 -   MD2, MD4, MD5, SHA 또는 SHA1 해시 알고리즘을 사용하는 경우(권장되지 않음) 데이터베이스 호환성 수준을 130 이전으로 설정해야 합니다.  
 
--   데이터베이스 호환성 수준 130에서 **datetime** 과 **datetime2** 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4010261)를 참조하세요.
+-   데이터베이스 호환성 수준 130에서 **datetime** 과 **datetime2** 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.
   
 ## <a name="previous-versions"></a>이전 버전  
   
@@ -50,6 +49,6 @@ ms.locfileid: "47788491"
  [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [일부 데이터 형식 및 일반적이지 않은 작업 처리 시 Windows의 SQL Server 2016 또는 SQL Server 2017 향상된 기능](http://support.microsoft.com/help/4010261)
+ [일부 데이터 형식 및 일반적이지 않은 작업 처리 시 Windows의 SQL Server 2016 또는 SQL Server 2017 향상된 기능](https://support.microsoft.com/help/4010261)
   
   
