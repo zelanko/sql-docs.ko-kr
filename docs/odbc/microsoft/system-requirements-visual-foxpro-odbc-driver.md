@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693391"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664102"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>시스템 요구 사항(Visual FoxPro ODBC 드라이버)
 설치에 대 한 시스템 요구 사항의 최소 운영 체제 및 드라이버를 성공적으로 설치 하는 데 필요한 디스크 공간을 제공 합니다. 드라이버를 설치한 후 Visual FoxPro 데이터에 액세스 하는 데 사용할 특정 응용 프로그램 소프트웨어를 선택할 수 있습니다.  
   
 ## <a name="installation-requirements"></a>설치 요구 사항  
- 설치 요구 사항 및 기타 정보를 참조 하세요 [Visual FoxPro ODBC 드라이버 다운로드 사이트](http://go.microsoft.com/fwlink/?LinkId=121318)합니다.  
+ 설치 요구 사항 및 기타 정보를 참조 하세요 [Visual FoxPro ODBC 드라이버 다운로드 사이트](https://go.microsoft.com/fwlink/?LinkId=121318)합니다.  
   
 ## <a name="accessing-visual-foxpro-data"></a>Visual FoxPro 데이터에 액세스  
  Microsoft Visual FoxPro 또는 FoxPro 2에 액세스 합니다. *x* 데이터 다음이 있어야 합니다.  

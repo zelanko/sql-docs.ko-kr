@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b476cd8c1579ba519d8f045154be4bd7628badc6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032092"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602643"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup 및 Restore 메서드|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD는 계속 사용되지 않습니다. BACKUP { DATABASE &#124; LOG } WITH PASSWORD 및 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD는 더 이상 사용되지 않습니다.|없음|BACKUP DATABASE 또는 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|호환성 수준|버전 100([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])에서 업그레이드합니다.|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 더 이상 [지원](http://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 응용 프로그램을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
+|호환성 수준|버전 100([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])에서 업그레이드합니다.|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 더 이상 [지원](https://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 응용 프로그램을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
 |데이터베이스 개체|트리거에서 결과 집합을 반환하는 기능|없음|트리거에서 결과 반환|12|  
 |암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|  
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -123,7 +122,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |보안|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |보안|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |보안|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|보안|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|이 저장 프로시저가 반환하는 정보는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 올바른 것이지만 출력에는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 구현된 사용 권한 계층에 대한 변경 내용이 반영되지 않습니다. 자세한 내용은 [고정 서버 역할의 권한](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)을 참조하십시오.|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|보안|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|이 저장 프로시저가 반환하는 정보는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 올바른 것이지만 출력에는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 구현된 사용 권한 계층에 대한 변경 내용이 반영되지 않습니다. 자세한 내용은 [고정 서버 역할의 권한](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)을 참조하십시오.|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |보안|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY 및 REVOKE 관련 권한|ALL 권한|35|  
 |보안|PERMISSIONS 내장 함수|대신 sys.fn_my_permissions를 쿼리해야 합니다.|PERMISSIONS|170|  
 |보안|SETUSER|EXECUTE AS|SETUSER|165|  

@@ -10,12 +10,12 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680951"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669783"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 (AccessToSQL) 만들기
 변수 값 파일을 XML 파일 (예: 소스 또는 대상 서버 이름)에 서버 마이그레이션 간에 자주 변경 되는 명령의 매개 변수 값을 비교 됩니다. 원본 서버의 각 값을 저장 하는 것에 대 한 여러 변수 파일을 만들고 사용 하 여 마스터 스크립트 파일에서 참조 된 많은 수의 데이터베이스 마이그레이션 발생 합니다 **– v** 명령줄에서 전환 합니다. 이 동작은 여러 변수 파일에서 변수 값을 사용 하 여 몇 가지 스크립트 파일에 정적 값을 유지 관리에 도움이 됩니다.  
@@ -95,5 +95,5 @@ ms.locfileid: "47680951"
 운영 콘솔에서 다음 단계 [서버 연결 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>참고자료  
-[서버 연결 파일 (액세스) 만들기](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[서버 연결 파일 (액세스) 만들기](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

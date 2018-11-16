@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660143"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI 클라이언트 SDK 사양
 
@@ -30,9 +30,9 @@ ms.locfileid: "47806181"
 - Linux의 SQL Server 인스턴스 이름에 대 한 참조가 제거 되었습니다 하므로 명명 된 인스턴스를 지원 하지 않습니다. 
 - 공유 라이브러리 libsqlvdi.so /opt/mssql/lib/libsqlvdi.so 설치에서 구현 됩니다.
 
-이 문서는 대 한 추 록 **vbackup.chm** Windows VDI 사양 세부 정보입니다. 다운로드 합니다 [Windows VDI 사양](http://www.microsoft.com/download/details.aspx?id=17282)합니다.
+이 문서는 대 한 추 록 **vbackup.chm** Windows VDI 사양 세부 정보입니다. 다운로드 합니다 [Windows VDI 사양](https://www.microsoft.com/download/details.aspx?id=17282)합니다.
 
-또한에서 샘플 VDI 백업 솔루션을 검토 합니다 [SQL Server 샘플 GitHub 리포지토리](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)합니다.
+또한에서 샘플 VDI 백업 솔루션을 검토 합니다 [SQL Server 샘플 GitHub 리포지토리](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)합니다.
 
 ## <a name="user-permissions-setup"></a>사용자 권한 설정
 
@@ -195,7 +195,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 | |**pCmd** |ClientVirtualDevice::GetCommand에서 이전에 반환 되는 명령의 주소입니다.
 | |**completionCode** |완료 상태를 나타내는 상태 코드입니다. 이 매개 변수는 모든 명령에 대 한 반환 되어야 합니다. 반환 되는 코드는 수행 중인 명령에 적합 해야 합니다. ERROR_SUCCESS 모든 경우에 성공적으로 실행된 명령을 나타내는 데 사용 됩니다. 가능한 코드의 전체 목록은 파일을 참조 하세요. vdierror.h 합니다. 각 명령에 대 한 일반적인 상태 코드 목록은이 문서의 뒷부분에서 "명령"에 나타납니다.
 | |**bytesTransferred** |성공적으로 전송 된 바이트 수입니다. 데이터 전송 명령을 읽기 및 쓰기에 대해서만 반환 됩니다.
-| |**위치** |이것이 GetPosition 명령에 대 한 응답입니다.
+| |**position** |이것이 GetPosition 명령에 대 한 응답입니다.
         
 | 반환 값 | 인수 | 설명
 | ----- | ----- | ------ |

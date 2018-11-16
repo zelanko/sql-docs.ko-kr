@@ -19,19 +19,19 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834711"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657252"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>쿼리 알림-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버에서 활성 쿼리 알림 구독에 관한 정보를 반환합니다. 이 뷰를 사용하여 서버 또는 지정된 데이터베이스의 활성 구독을 확인하거나 지정된 서버 보안 주체를 확인할 수 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|구독의 ID입니다.|  
 |**database_id**|**int**|알림 쿼리가 실행된 데이터베이스의 ID입니다. 이 데이터베이스에 이 구독과 관련된 정보가 저장됩니다.|  
@@ -133,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [쿼리 알림 관련된 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [쿼리 알림 관련된 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

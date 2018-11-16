@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718381"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665040"
 ---
 # <a name="common-language-runtime-integration-overview"></a>공용 언어 런타임 통합 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "47718381"
  [CLR 통합의 새로운 기능](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  이 릴리스의 새로운 기능에 대해 설명합니다.  
   
- [CLR 통합 아키텍처](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [CLR 통합 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  통합된 CLR의 디자인 목표를 설명합니다.  
   
  [CLR 통합 사용](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  통합된 CLR을 사용하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [.NET Framework 설치](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [.NET Framework 설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [통합된 CLR의 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

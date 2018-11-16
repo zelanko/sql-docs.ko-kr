@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269726"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677958"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server를 설치 하는 빠른 시작: Ubuntu에서 데이터베이스를 만들고
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269726"
 
 사용 하 여 Ubuntu 16.04 컴퓨터가 있어야 **2GB 이상의** 메모리입니다.
 
-사용자 컴퓨터에서 Ubuntu를 설치 하려면로 이동 [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server)합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
+사용자 컴퓨터에서 Ubuntu를 설치 하려면로 이동 [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server)합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
 
 > [!NOTE]
 > 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다. 

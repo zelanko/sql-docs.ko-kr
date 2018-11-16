@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789221"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600243"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP Active Server Pages () 응용 프로그램을 만듭니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "47789221"
 </HTML>  
 ```  
   
- Default.htm 파일을 닫고 XMLResponse.asp 저장 한 같은 폴더에 저장 합니다. Internet Explorer 4.0을 사용 하 여 열거나 나중에 URL http://*sqlserver*/XMLPersist/default.htm 하 고 결과 관찰 합니다. 데이터 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL http://를 엽니다 *sqlserver* /XMLPersist/XMLResponse.asp 하 고 결과 관찰 합니다. XML이 표시 됩니다.  
+ Default.htm 파일을 닫고 XMLResponse.asp 저장 한 같은 폴더에 저장 합니다. Internet Explorer 4.0을 사용 하 여 열거나 나중에 URL https://*sqlserver*/XMLPersist/default.htm 하 고 결과 관찰 합니다. 데이터 바인딩된 DHTML 테이블에 표시 됩니다. 이제 URL https://를 엽니다 *sqlserver* /XMLPersist/XMLResponse.asp 하 고 결과 관찰 합니다. XML이 표시 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)   

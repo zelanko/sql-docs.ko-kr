@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661812"
 ---
 # <a name="unicode"></a>유니코드
 유니코드는 많은 언어의 문자 인코딩을 정의 합니다.  
   
- 유니코드 표준에 대 한 자세한 내용은 참조 하세요. [유니코드 컨소시엄](http://www.unicode.org)합니다.  
+ 유니코드 표준에 대 한 자세한 내용은 참조 하세요. [유니코드 컨소시엄](https://www.unicode.org)합니다.  
   
  유니코드 유니버설 문자 집합을 정의합니다. Windows ANSI 코드 페이지에는 일반적으로 하나의 언어에 대 한 문자가 포함 된 문자 집합을 정의 합니다. 다른 코드 페이지를 사용 하는 데 필요한 응용 프로그램을 작성 하는 것이 어려울 수 있습니다.  
   

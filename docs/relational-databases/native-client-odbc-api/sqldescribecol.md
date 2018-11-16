@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 254737b7d9169ae4db4d652c26ec29d459b2dcbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe93359fa1d05a6a1d898438961c96799c3b0f57
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663742"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47706521"
 
   실행된 된 문의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합의 열을 설명할 때 서버에 쿼리할 필요가 없습니다. 이 예에서 **SQLDescribeCol** 서버 왕복은 발생 하지 않습니다. 와 같은 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)하 고[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)를 호출 **SQLDescribeCol** 준비 되었지만 실행된 되지 않은 문에 서버 왕복이 생성 합니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문 일괄 처리에서 여러 결과 행 집합이 반환되는 경우 서수로 참조되는 열이 별도의 테이블에서 시작되거나 결과 집합의 완전히 다른 열을 참조할 수 있습니다. **SQLDescribeCol** 각 집합에 대해 호출 해야 합니다. 결과 집합이 변경되면 응용 프로그램에서는 행 결과를 인출하기 전에 데이터 값을 다시 바인딩해야 합니다. 집합 반환을 여러 결과 처리 하는 방법에 대 한 자세한 내용은 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문 일괄 처리에서 여러 결과 행 집합이 반환되는 경우 서수로 참조되는 열이 별도의 테이블에서 시작되거나 결과 집합의 완전히 다른 열을 참조할 수 있습니다. **SQLDescribeCol** 각 집합에 대해 호출 해야 합니다. 결과 집합이 변경되면 응용 프로그램에서는 행 결과를 인출하기 전에 데이터 값을 다시 바인딩해야 합니다. 여러 결과 집합 반환을 처리하는 방법은 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)를 참조하십시오.  
   
  준비된 SQL 문의 일괄 처리에서 여러 개의 결과 집합이 생성될 경우 첫 번째 결과 집합에 대해서만 열 특성이 보고됩니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47706521"
  **SQLDescribeCol** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLDescribeCol 함수](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol 함수](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

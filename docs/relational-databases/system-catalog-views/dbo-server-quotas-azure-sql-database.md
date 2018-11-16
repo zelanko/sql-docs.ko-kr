@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 02a1d28025fd88694ea4538dc352bc8b7fea51d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662617"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671333"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47662617"
   
  서버의 사용 가능한 데이터베이스 할당량 유형을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |quota_name|**nvarchar**|서버의 할당량 유형입니다. 형식 **Premium_database** 리소스 예약을 사용 하 여 데이터베이스에 해당 합니다.|  
 |quota_value|**int**|서버에서 허용되는 할당량 유형의 수입니다.|  
@@ -47,6 +47,6 @@ ms.locfileid: "47662617"
  이 보기는 가상으로 연결할 수 있는 권한 가진 모든 사용자 역할에 사용할 수 있습니다 **마스터** 데이터베이스입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Premium 데이터베이스 관리](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [Premium 데이터베이스 관리](https://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

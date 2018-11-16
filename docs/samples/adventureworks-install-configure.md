@@ -10,21 +10,21 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c39ecc5693297070d47afc9b989de795eb9af2c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657513"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks 링크와 설치 지침은 다운로드 합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-- [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 나 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전의 경우 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 나 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전의 경우 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과 사용 하 여 2016 년 6 월 릴리스 이상.
  
 ## <a name="github-links"></a>Github 링크

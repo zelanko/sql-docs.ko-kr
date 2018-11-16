@@ -16,12 +16,12 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3128f207468fb0b9c5c4f4b4ee5ffbc51243bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dea69fde76f34fea7a6a4f5c3319d1b1a1772a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768947"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675742"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR(공용 언어 런타임) 통합 프로그래밍 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47768947"
  The Microsoft.SqlServer.Server 네임스페이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 프로그래밍에 대한 핵심 기능이 포함되어 있습니다. 그러나 Microsoft.SqlServer.Server 네임스페이스는 .NET Framework SDK에 설명되어 있는데, 이 설명서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에 포함되어 있지 않습니다.  
   
 > [!IMPORTANT]  
->  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 Books Onl 온라인 설명서 컬렉션과 목차에 있는 지침에 따라 [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
+>  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 Books Onl 온라인 설명서 컬렉션과 목차에 있는 지침에 따라 [.NET Framework SDK 설치](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
   
 > [!NOTE]  
 >  CLR 사용자 함수와 같은 CLR 기능이 *되지* Azure SQL Database에 대 한 지원.  
@@ -64,11 +64,11 @@ ms.locfileid: "47768947"
  [관리되는 데이터베이스 개체 모니터링 및 문제 해결](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  
   
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  CLR 개체를 사용하는 사용 시나리오 및 코드 예제에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [.NET Framework SDK 설치](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

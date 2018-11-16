@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845796"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668408"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
 Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화 하도록 설계 된 도구입니다.  
@@ -49,11 +49,11 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 * *이 대상 Oracle 용 SSMA 에서만 지원 됩니다.
  
 ## <a name="downloads"></a>다운로드
-- [SSMA for Access](http://aka.ms/ssmaforaccess)
-- [SSMA for DB2](http://aka.ms/ssmafordb2)
-- [MySQL용 SSMA](http://aka.ms/ssmaformysql)
-- [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [MySQL용 SSMA](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA 지원 받기  
 **도움말 및 지원에 대 한 Microsoft SQL Server Migration Assistant (SSMA):**  
@@ -62,9 +62,9 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
   
 -   **SQL Server 커뮤니티 포럼** – SQL Server 커뮤니티에서 질문 하기  
   
-    -   [SQL Server 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42455) -뉴스 그룹 및 SQL Server 커뮤니티에서 모니터링 되는 포럼입니다. 이 사이트에는 블로그 및 웹 사이트와 같은 커뮤니티 정보 소스도 나열됩니다.  
+    -   [SQL Server 커뮤니티](https://go.microsoft.com/fwlink/?LinkId=42455) -뉴스 그룹 및 SQL Server 커뮤니티에서 모니터링 되는 포럼입니다. 이 사이트에는 블로그 및 웹 사이트와 같은 커뮤니티 정보 소스도 나열됩니다.  
   
-    -   [SQL Server Developer Center 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42456) -뉴스 그룹, 포럼 및 SQL Server 개발자에 게 유용한 기타 커뮤니티 리소스  
+    -   [SQL Server Developer Center 커뮤니티](https://go.microsoft.com/fwlink/?LinkId=42456) -뉴스 그룹, 포럼 및 SQL Server 개발자에 게 유용한 기타 커뮤니티 리소스  
   
 -   보조 지원-이동 [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) 고 ' SQL Server Migration Assistant'를 검색 합니다.  버전을 선택한 다음 "요청 시작" 선택  보조 지원 SQL Server 마이그레이션 길잡이 도구가 포함 되어 있습니다.  
   

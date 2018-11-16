@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c2044c56bdb1581f3d68af741198bcffa4ff6b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625671"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603590"
 ---
 # <a name="sql-server-installation"></a>SQL Server 설치
 
@@ -44,7 +44,7 @@ ms.locfileid: "47625671"
 
 - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]의 버전 및 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-2017.md)  
 - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]의 버전 및 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-2016.md)  
-- [[!INCLUDE[ss2014](../../includes/sssql14-md.md)] 버전에서 지원하는 기능](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+- [[!INCLUDE[ss2014](../../includes/sssql14-md.md)] 버전에서 지원하는 기능](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## <a name="in-this-section"></a>섹션 내용  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사와 명령 프롬프트 중 어느 쪽을 사용하는지에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치에는 다음 단계가 포함됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "47625671"
 [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 옵션에 대해 설명합니다.  
   
-[SQL Server 설치 사용자 인터페이스 참조](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
+[SQL Server 설치 사용자 인터페이스 참조](https://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사에서 제공되는 설치 옵션에 대해 설명합니다.  
   
 [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -75,12 +75,12 @@ ms.locfileid: "47625671"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능(Microsoft BI 플랫폼에 속함)에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치 방법에 대해 설명합니다.  
   
 ## <a name="more-information"></a>추가 정보
-[SharePoint와 함께 SQL Server BI 기능 설치&#40;파워 피벗 및 Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
+[SharePoint와 함께 SQL Server BI 기능 설치&#40;파워 피벗 및 Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  이 섹션에서는 SharePoint 환경에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다. 여기에서는 SharePoint의 특정 버전 및 에디션에서 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설명하고 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 SharePoint 모드의 Reporting Services에 대한 설치 지침을 제공합니다.  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 새 샘플 데이터베이스 [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md)를 설치합니다. 
   
-[추가 SQL Server 예제 및 예제 데이터베이스 설치](http://sqlserversamples.codeplex.com/)  
+[추가 SQL Server 예제 및 예제 데이터베이스 설치](https://sqlserversamples.codeplex.com/)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 및 예제 데이터베이스를 설치 및 구성하는 방법에 대해 설명합니다.  
   
 [의 모든 버전을 지원하는 링크 및 자세한 내용은](https://msdn.microsoft.com/library/ff803383.aspx) SQL Server 업데이트 센터 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 참조하세요.  

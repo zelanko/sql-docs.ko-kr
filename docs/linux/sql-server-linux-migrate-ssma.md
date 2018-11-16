@@ -10,18 +10,18 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: sql-linux
-ms.openlocfilehash: e09721aa80924d08eebad859a4354ba5fcc2843d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3558e4a9ebf8c8ea2c46fbb7925781b6e81f2e5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710321"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662989"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Linux로 데이터베이스 마이그레이션 자동화
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 소개 [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) 쉽게 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 Linux의 SQL Server로 데이터베이스를 마이그레이션할 수 있습니다. SSMA는 Windows 응용 프로그램, 따라서 SSMA를 사용 하 여 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터의 경우. 
+이 문서에서는 소개 [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) 쉽게 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 Linux의 SQL Server로 데이터베이스를 마이그레이션할 수 있습니다. SSMA는 Windows 응용 프로그램, 따라서 SSMA를 사용 하 여 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터의 경우. 
 
 SSMA는 Oracle, MySQL, Sybase, DB2 및 Microsoft SQL Server on Linux에 대 한 액세스를 포함 하 여 원본 데이터베이스의 다양 한 지원 및와 같은 마이그레이션 작업을 자동화할 수 있습니다.
 
@@ -32,15 +32,15 @@ SSMA는 Oracle, MySQL, Sybase, DB2 및 Microsoft SQL Server on Linux에 대 한 
 - 마이그레이션을 테스트합니다
 
 시작 하려면 다음 목록에서 원본 데이터베이스에 대 한 SQL Server Migration Assistant (SSMA)를 다운로드 합니다.
-- [SSMA for Access](http://aka.ms/ssmaforaccess)
-- [SSMA for DB2](http://aka.ms/ssmafordb2)
-- [MySQL용 SSMA](http://aka.ms/ssmaformysql) 
-- [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for Sybase ASE](http://aka.ms/ssmaforsybase) 
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [MySQL용 SSMA](https://aka.ms/ssmaformysql) 
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for Sybase ASE](https://aka.ms/ssmaforsybase) 
 
-다음에 따라 합니다 [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) 원본 데이터베이스에 Linux의 SQL Server로 마이그레이션하려 합니다.
+다음에 따라 합니다 [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) 원본 데이터베이스에 Linux의 SQL Server로 마이그레이션하려 합니다.
 
 ## <a name="see-also"></a>참고자료
-- [Microsoft Data Migration 블로그](http://blogs.msdn.microsoft.com/datamigration)
-- [SQL Server Migration Assistant (SSMA) 블로그](http://blogs.msdn.microsoft.com/ssma/)
+- [Microsoft Data Migration 블로그](https://blogs.msdn.microsoft.com/datamigration)
+- [SQL Server Migration Assistant (SSMA) 블로그](https://blogs.msdn.microsoft.com/ssma/)
 

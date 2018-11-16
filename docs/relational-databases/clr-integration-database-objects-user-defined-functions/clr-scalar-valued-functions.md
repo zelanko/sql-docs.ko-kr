@@ -17,16 +17,16 @@ ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2f90b3f7ce82a0ad6b21f2ad76d3e986ba1fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677352"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)]이나 다른 관리 코드에서 액세스할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
+  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수에 대한 요구 사항  
  .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. 입력된 매개 변수와 SVF를에서 반환 되는 형식에서 지원 되는 스칼라 데이터 형식 중 하나가 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제외한 **varchar**, **char**를 **rowversion**를 **텍스트**를 **ntext**에 **이미지**를 **타임 스탬프**를 **테이블**, 또는 **커서** . SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대 한 자세한 내용은 참조 하세요. [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.  
@@ -81,11 +81,11 @@ Public Class T
 End Class  
 ```  
   
- 코드의 첫 번째 줄에서는 **Microsoft.SqlServer.Server** 를 참조하여 특성에 액세스하고 **System.Data.SqlClient** 를 참조하여 ADO.NET 네임스페이스에 액세스합니다. (이 네임 스페이스를 포함 **SqlClient**,.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
+ 코드의 첫 번째 줄에서는 **Microsoft.SqlServer.Server** 를 참조하여 특성에 액세스하고 **System.Data.SqlClient** 를 참조하여 ADO.NET 네임스페이스에 액세스합니다. 이 네임스페이스에는 .NET Framework Data Provider for **SqlClient**인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 들어 있습니다.  
   
  그런 다음 이 함수는 **SqlFunction** 네임스페이스에 있는 **Microsoft.SqlServer.Server** 사용자 지정 특성을 받습니다. 사용자 지정 특성은 UDF(사용자 정의 함수)에서 in-process 공급자를 사용하여 서버의 데이터를 읽는지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDF로 데이터를 업데이트, 삽입 또는 삭제할 수는 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 in-process 공급자를 사용하지 않는 UDF의 실행을 최적화할 수 있습니다. 이렇게 하려면 **DataAccessKind** 를 **DataAccessKind.None**으로 설정합니다. 다음 줄에서 대상 메서드는 public static(Visual Basic .NET의 경우 공유) 메서드입니다.  
   
- **SqlContext** 클래스는 **Microsoft.SqlServer.Server** 네임 스페이스에 액세스할 수는 **SqlCommand** 개체에 대 한 연결을 사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미 설정 된 인스턴스입니다. 여기서는 사용되지 않지만 **System.Transactions** API(응용 프로그래밍 인터페이스)를 통해 현재 트랜잭션 컨텍스트를 사용할 수도 있습니다.  
+ **SqlContext** 네임스페이스에 있는 **Microsoft.SqlServer.Server** 클래스는 이미 설정된 **SqlCommand** 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 액세스할 수 있습니다. 여기서는 사용되지 않지만 **System.Transactions** API(응용 프로그래밍 인터페이스)를 통해 현재 트랜잭션 컨텍스트를 사용할 수도 있습니다.  
   
  함수 본문에 있는 대부분의 줄은 **System.Data.SqlClient** 네임스페이스에 있는 형식을 사용하는 클라이언트 응용 프로그램을 작성해 본 개발자에게 익숙한 코드여야 합니다.  
   
@@ -149,11 +149,11 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시된 함수 이름이 대상 public static 메서드의 이름과 일치할 필요는 없습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 표시된 함수 이름이 대상 public static 메서드의 이름과 일치할 필요는 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [CLR 통합 사용자 지정 특성 개요](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [CLR 통합 사용자 지정 특성 개요](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

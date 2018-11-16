@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,17 +16,17 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741291"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350387"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
 다음 헤더를 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 액세스 하려는 각 필드에 대 한 ADO 바인딩을 매크로 지정 해야 합니다.  
   
-```  
+```cpp
 #ifndef _ICRSINT_H_  
 #define _ICRSINT_H_  
   
@@ -58,16 +58,16 @@ enum ADOFieldStatusEnum
   
 typedef struct stADO_BINDING_ENTRY  
 {  
-   ULONG      ulOrdinal;  
-   WORD       wDataType;  
-   BYTE       bPrecision;  
-   BYTE       bScale;  
-   ULONG      ulSize;  
-   ULONG      ulBufferOffset;  
-   ULONG      ulStatusOffset;  
-   ULONG      ulLengthOffset;  
-   ULONG      ulADORecordBindingOffSet;  
-   BOOL       fModify;  
+   ULONG      ulOrdinal;  
+   WORD       wDataType;  
+   BYTE       bPrecision;  
+   BYTE       bScale;  
+   ULONG      ulSize;  
+   ULONG      ulBufferOffset;  
+   ULONG      ulStatusOffset;  
+   ULONG      ulLengthOffset;  
+   ULONG      ulADORecordBindingOffSet;  
+   BOOL       fModify;  
 } ADO_BINDING_ENTRY;  
   
 #define BEGIN_ADO_BINDING(cls) public: \  

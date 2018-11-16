@@ -14,19 +14,19 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633438"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601353"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 모양의 열의 정의 데이터 셰이핑 **Recordset**, 열 및는 방식을 나타내는 엔터티 간의 관계를 **레코드 집합** 데이터로 채워집니다.  
   
  모양의 **레코드 집합** 열에는 다음과 같은 유형의 구성 될 수 있습니다.  
   
-|열 유형|Description|  
+|열 유형|설명|  
 |-----------------|-----------------|  
 |data|필드를 **레코드 집합** 테이블을 데이터 공급자는 쿼리 명령에서 반환 된, 또는 이전에 모양 **레코드 집합**합니다.|  
 |장|다른에 대 한 참조가 **레코드 집합**라는 *장*합니다. 장 열 수 있도록 정의 *부모-자식* 관계 위치를 *부모* 은 합니다 **레코드 집합** 장 열을 포함 하는 는*자식* 은 합니다 **레코드 집합** 장 나타내는입니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "47633438"
   
  액세스할 수 있습니다는 **레코드 집합** 구성 요소는 모양의 **레코드 집합** 프로그래밍 방식으로 또는 적절 한 시각적 컨트롤을 통해.  
   
- Microsoft 셰이프 명령을 생성 하는 비주얼 도구를 제공 합니다. (참조를 [데이터 환경 디자이너](http://go.microsoft.com/fwlink/?LinkId=5689) Visual Basic 6 설명서에서) (참조 "를 사용 하 여 the Microsoft 계층적 계층적 커서를 표시 하 고 다른 Flexgrid 컨트롤 "Visual Basic 6 문서의)입니다.  
+ Microsoft 셰이프 명령을 생성 하는 비주얼 도구를 제공 합니다. (참조를 [데이터 환경 디자이너](https://go.microsoft.com/fwlink/?LinkId=5689) Visual Basic 6 설명서에서) (참조 "를 사용 하 여 the Microsoft 계층적 계층적 커서를 표시 하 고 다른 Flexgrid 컨트롤 "Visual Basic 6 문서의)입니다.  
   
  계층적 탐색에 대 한 자세한 **레코드 집합**를 참조 하세요 [계층적 레코드 집합에서 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)합니다.  
   

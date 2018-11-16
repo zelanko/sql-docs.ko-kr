@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824031"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350527"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -34,12 +34,12 @@ ms.locfileid: "47824031"
 ## <a name="binding-entries"></a>바인딩 항목
  ADO의 Visual c + + 확장의 필드를 매핑하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 C/c + + 변수입니다. 필드 및 변수 간의 매핑 정의 라고는 *항목을 바인딩*합니다. 매크로 숫자, 고정 길이 및 가변 길이 데이터에 대 한 바인딩 항목을 제공합니다. Visual c + + 확장 클래스에서 파생 된 클래스에서 선언 된 C/c + + 변수와 바인딩 항목 **CADORecordBinding**합니다. 합니다 **CADORecordBinding** 클래스 바인딩 항목 매크로 통해 내부적으로 정의 됩니다.
 
- ADO OLE DB에 내부적으로 이러한 매크로의 매개 변수를 매핑합니다 **DBBINDING** OLE DB를 만들고 구조체 **접근자** 이동 및 변환 필드 및 변수 간에 데이터를 관리 하는 개체입니다. 구성 데이터를 정의 하는 OLE DB의 세 부분: A *버퍼* 데이터가 저장 됩니다; 여기서는 *상태* 저장 버퍼 하거나 변수를 복원 해야 하는 방법을 나타내는 필드입니다. 하며 *길이* 데이터입니다. (참조 [가져오기 및 설정 데이터 (OLE DB)](http://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)자세한 정보에 대 한 OLE DB 프로그래머 참조.)
+ ADO OLE DB에 내부적으로 이러한 매크로의 매개 변수를 매핑합니다 **DBBINDING** OLE DB를 만들고 구조체 **접근자** 이동 및 변환 필드 및 변수 간에 데이터를 관리 하는 개체입니다. 구성 데이터를 정의 하는 OLE DB의 세 부분: A *버퍼* 데이터가 저장 됩니다; 여기서는 *상태* 저장 버퍼 하거나 변수를 복원 해야 하는 방법을 나타내는 필드입니다. 하며 *길이* 데이터입니다. (참조 [가져오기 및 설정 데이터 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)자세한 정보에 대 한 OLE DB 프로그래머 참조.)
 
 ## <a name="header-file"></a>헤더 파일
  ADO의 Visual c + + 확장을 사용 하려면 응용 프로그램에서 다음 파일을 포함 합니다.
 
-```
+```cpp
 #include <icrsint.h>
 ```
 
@@ -63,19 +63,19 @@ ms.locfileid: "47824031"
 ## <a name="syntax"></a>구문
  **BindToRecordset** 메서드에 연결 합니다 **레코드 집합** C/c + + 변수를 사용 하 여 필드입니다.
 
-```
+```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
  **AddNew** 메서드 호출의 마다 ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 새 행을 추가 하는 **레코드 집합**합니다.
 
-```
+```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
  **업데이트** 메서드 호출의 마다 ADO [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 업데이트 하는 **레코드 집합**합니다.
 
-```
+```cpp
 Update(CADORecordBinding *binding)
 ```
 
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  매크로의 제품군과 같은 고정 길이 데이터에 대 한 제공 됩니다 **adDate** 하거나 **adBoolean**; 숫자 데이터와 같은 **adTinyInt**, **adInteger**, 또는 **adDouble**; 및 가변 길이 데이터와 같은 **adChar**를 **집합이 있으므로 필요** 또는 **adVarBinary**합니다. 모든 숫자 형식, 제외한 **adVarNumeric**, 고정 길이 형식 이기도 합니다. 각 제품군 서로 다른 매개 변수 집합에 있으므로 관련 없는 바인딩 정보를 제외할 수 있습니다.
 
- 자세한 내용은 [부록 a: 데이터 형식](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), OLE DB 프로그래머 참조입니다.
+ 자세한 내용은 [부록 a: 데이터 형식](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), OLE DB 프로그래머 참조입니다.
 
 ### <a name="begin-binding-entries"></a>바인딩 항목 시작
  **BEGIN_ADO_BINDING**(*Class*)
@@ -111,16 +111,16 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>바인딩 항목 끝
  **END_ADO_BINDING**()
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*클래스*|C/c + + 변수와 바인딩 항목 정의 되는 클래스입니다.|
 |*Ordinal*|서 수를 1에서 계산 된 **레코드 집합** C/c + + 변수에 해당 하는 필드.|
-|*데이터 형식*|C/c + + 변수 해당 ADO 데이터 형식 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값을 **레코드 집합** 필드 필요한 경우이 데이터 형식으로 변환 됩니다.|
+|*DataType*|C/c + + 변수 해당 ADO 데이터 형식 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값을 **레코드 집합** 필드 필요한 경우이 데이터 형식으로 변환 됩니다.|
 |*Buffer*|C/c + + 변수의 이름을 여기서는 **레코드 집합** 필드 저장 됩니다.|
 |*크기*|최대 크기 (바이트)입니다 *버퍼*합니다. 하는 경우 *버퍼* 에 가변 길이 문자열을 포함 종료 0에 대 한 공간을 허용 합니다.|
 |*상태*|나타내는 변수의 이름입니다 여부를 내용의 *버퍼* 올바른지 여부에 관계 없이 필드를 변환 하는 *DataType* 성공 했습니다.<br /><br /> 이 변수에 대 한 가장 중요 한 두 값이 **adFldOK**, 즉, 변환 작업이 성공적 및 **adFldNull**, VT_NULL 형식의 VARIANT 필드의 값을 의미 하는 것 뿐만 아니라 및 비어 있습니다.<br /><br /> 가능한 값 *상태* "상태 값입니다." 다음 표에 나열 되어 있습니다|
 |*수정*|부울 플래그입니다. TRUE 이면 ADO 해당 업데이트를 허용 됨을 나타냅니다 **Recordset** 포함 된 값을 사용 하 여 필드 *버퍼*합니다.<br /><br /> 설정할 부울 *수정* 바인딩된 필드를 업데이트 하는 ADO를 사용 하도록 설정 하려면 TRUE이 고 필드를 검사 하지만 변경 하지 않으려면 FALSE 매개 변수입니다.|
-|*전체 자릿수*|숫자 변수를 나타낼 수 있는 자릿수의 수입니다.|
+|*정밀도*|숫자 변수를 나타낼 수 있는 자릿수의 수입니다.|
 |*소수 자릿수*|숫자 변수에 대 한 소수 자릿수의 수입니다.|
 |*길이*|에 있는 데이터의 실제 길이 포함 하는 4 바이트 변수의 이름을 *버퍼*합니다.|
 
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  데이터를 설정 하는 경우 *상태* 로 설정할 수 있습니다 **adFldNull** 나타내려면 합니다 **레코드 집합** 필드를 설정 해야 null로 합니다.
 
-|상수|값|Description|
+|상수|값|설명|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null이 아닌 필드 값을 반환 했습니다.|
 |**adFldBadAccessor**|1|바인딩이 잘못 되었습니다.|

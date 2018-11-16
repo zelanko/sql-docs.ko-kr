@@ -13,12 +13,12 @@ ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72e902c6eb27cadff5f49d5bc385b99917f977eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636b2f541ebd5d3624e205a3442cf1618cdf78a6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850429"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606793"
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand 메서드
 기본 OLE DB 명령을 먼저 OLE DB 명령에 ADO 명령에 설정 하는 모든 매개 변수 정보를 전파를 반환 합니다.  
@@ -37,4 +37,4 @@ HRESULT get_OLEDBCommand(
  [out] 기본 OLE DB 명령에 대 한 IUnknown 포인터를 쓸 위치 포인터 위치에 대 한 포인터입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [IADOCommandConstruction](http://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+ [IADOCommandConstruction](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)

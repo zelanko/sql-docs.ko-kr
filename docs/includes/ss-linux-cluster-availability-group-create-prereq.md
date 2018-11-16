@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
 
@@ -44,8 +44,8 @@
    다음 예제에서는 **node1**, **node2** 및 **node3**에 대한 항목이 추가된 **node1**의 `/etc/hosts`를 보여 줍니다. 이 문서의 **node1** 주 복제본을 호스팅하는 서버를 가리킵니다. 및 **node2** 하 고 **node3** 보조 복제본을 호스팅하는 서버를 가리킵니다.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,11 +77,11 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-이 XE 세션에 대 한 자세한 내용은 참조 하십시오 [이벤트를 확장 하는 AlwaysOn](http://msdn.microsoft.com/library/dn135324.aspx)합니다.
+이 XE 세션에 대 한 자세한 내용은 참조 하십시오 [이벤트를 확장 하는 AlwaysOn](https://msdn.microsoft.com/library/dn135324.aspx)합니다.
 
 ## <a name="create-a-certificate"></a>인증서 만들기
 
-Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 끝점 간의 통신을 인증합니다. 
+Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 엔드포인트 간의 통신을 인증합니다. 
 
 다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음, 인증서를 백업하고 개인 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에 연결 합니다. 인증서를 만들려면 다음 TRANSACT-SQL 스크립트를 실행 합니다.
 
@@ -126,9 +126,9 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>모든 복제본에서 데이터베이스 미러링 끝점 만들기
+## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>모든 복제본에서 데이터베이스 미러링 엔드포인트 만들기
 
-데이터베이스 미러링 엔드포인트는 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스트하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. 
+데이터베이스 미러링 엔드포인트는 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스트하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 엔드포인트는 고유의 TCP 포트 번호에서 수신합니다. 
 
 다음 Transact-SQL 스크립트는 가용성 그룹에 대해 수신하는 엔드포인트 `Hadr_endpoint`를 만듭니다. 끝점을 시작 하 고 사용자가 만든 인증서에 연결 권한을 부여 합니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다. 필요에 따라 IP 주소 `LISTENER_IP = (0.0.0.0)`을 포함할 수 있습니다. 수신기 IP 주소는 IPv4 주소여야 합니다. 또한 `0.0.0.0`을 사용할 수 있습니다. 
 
@@ -166,6 +166,6 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >SQL Server 2017 릴리스의 경우 데이터베이스 미러링 끝점에 대 한 지원 되는 유일한 인증 방법은 `CERTIFICATE`합니다. `WINDOWS` 릴리스에서 옵션을 사용 합니다.
 
-자세한 내용은 [데이터베이스 미러링 엔드포인트(SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)를 참조하세요.
+자세한 내용은 [데이터베이스 미러링 엔드포인트(SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)를 참조하세요.
 
 

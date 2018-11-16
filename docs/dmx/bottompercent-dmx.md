@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002115"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602933"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  합니다 **BottomPercent** 함수 오름차순에서 맨 아래 행을 반환 합니다. 순위 계산된 된 값에 기반 합니다 \<식의 순위를 지정 > 각 행에 대 한 인수는의 합계는 \<식의 순위를 지정 > 값은 최소한으로 지정 된 백분율을 지정는 \<% > 인수입니다. **BottomPercent** 지정된 된 백분율 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는에서 만든 연결 모델에 대해 예측 쿼리를 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
+ 다음 예제에서는에서 만든 연결 모델에 대해 예측 쿼리를 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
   
  BottomPercent의 작동 원리를 이해 하려면 우선 중첩된 테이블만 반환 하는 예측 쿼리를 실행 하는 데 도움이 수 있습니다.  
   

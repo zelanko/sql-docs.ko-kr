@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661961"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670501"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47661961"
  합니다  **\<관계 >** 요소는 Sales.Customer 테이블의 CustomerID 기본 키를 가리키는 외래 키로 Sales.SalesOrderHeader 테이블의 CustomerID를 식별 합니다. 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** 요소입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "47661961"
  다음은 명명되지 않은 관계가 지정되는 수정된 스키마입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -206,7 +206,7 @@ ms.locfileid: "47661961"
  다음 스키마에는 **msdata: relationship** 주석은  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct 합니다. 이 두 값이 지정되는 순서가 중요합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "47661961"
  명명된 관계를 지정하는 대신 익명 관계를 지정할 수 있습니다. 이 경우 전체 내용의  **\<주석 >**...  **\</annotation >**, 두 개의 관계를 설명 하는의 자식 요소로 나타낼  **\<제품 >** 합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "47661961"
  이 예의 스키마에 포함 되어는 \<고객 > 요소를 \<CustomerID > 자식 요소 및 IDREFS 형식의 OrderIDList 특성입니다. \<고객 > 요소는 AdventureWorks 데이터베이스의 Sales.Customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위는 모든 자식 요소에 적용 하거나 하지 않는 한 특성 **sql: relation** 된 자식 요소 또는 특성에 경우에 적절 한 기본 키/외래 키 관계 여야 합니다 사용 하 여 정의 된 \<관계 > 요소입니다. 자식 요소 또는 특성을 사용 하 여 다른 테이블을 지정 하 고는 **관계** 주석을 지정 해야 합니다는 **관계** 주석입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "47661961"
  합니다  **\<순서 >** 요소를 포함 합니다  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 됩니다  **\<OrderDetail >** 자식 요소를 주문에 속하는 주문 정보는 자식 요소로 표시 되도록 **\<순서 >** 요소입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  다음 XML 뷰에 합니다  **\<Emp1 >** 하 고  **\<Emp2 >** Sales.Emp1 및 Sales.Emp2 테이블 매핑 요소:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

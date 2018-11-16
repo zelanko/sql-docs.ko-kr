@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392b1a0dd471c699dfc10f9c105d9975508968b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606492"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350377"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
 ADO API 참조는 ADO API (응용 프로그래밍 인터페이스)을 Microsoft Visual Basic과 유사한 구문을 사용 하 여의 기능을 설명 합니다. 독자는 모든 사용자, ADO 프로그래머에 게 Visual Basic, Visual c + +와 같은 다양 한 언어를 사용 하는 (하거나 사용 하지 않고 합니다 **#import** 지시문), 및 Visual J++ (사용 하 여 ADO/WFC 클래스 패키지).  
@@ -44,26 +44,26 @@ ADO API 참조는 ADO API (응용 프로그래밍 인터페이스)을 Microsoft 
   
  이러한 형식으로 호출 하 여 속성을 설정 또는 얻을 수 있습니다.  
   
-```  
-variable = objectPtr->GetProperty(); // get property value   
-objectPtr->PutProperty(value);       // set property value  
-objectPtr->PutRefProperty(&value);   // set property with object pointer  
-```  
+```cpp
+variable = objectPtr->GetProperty(); // get property value   
+objectPtr->PutProperty(value);       // set property value  
+objectPtr->PutRefProperty(&value);   // set property with object pointer  
+```
   
 ## <a name="using-property-directives"></a>속성 지시문을 사용 하 여  
  **__declspec**  컴파일러 지시문이는 대체 구문 할 속성으로 사용 되는 함수를 선언 하는 Microsoft 전용 C 언어 확장입니다. 결과적으로 설정 하거나 Visual Basic에서와 비슷한 방식으로 속성의 값을 얻을 수 있습니다. 예를 들어, 설정 하 고 이러한 방식으로 속성을 가져올 수 있습니다.  
   
-```  
-objectPtr->property = value;        // set property value  
-variable = objectPtr->property;     // get property value  
-```  
+```cpp
+objectPtr->property = value;        // set property value  
+variable = objectPtr->property;     // get property value  
+```
   
  코드에 없는 알림:  
   
-```  
-objectPtr->PutProperty(value);      // set property value  
-variable = objectPtr->GetProperty;  // get property value  
-```  
+```cpp
+objectPtr->PutProperty(value);      // set property value  
+variable = objectPtr->GetProperty;  // get property value  
+```
   
  컴파일러는 적절 한 생성 **Get * * *-* 를 **배치**-, 또는 **PutRef * * * 속성* 호출 되는 대체 구문을 선언 및 속성 인지에 따라 읽거나 작성 합니다.  
   
@@ -78,36 +78,36 @@ variable = objectPtr->GetProperty;  // get property value
   
  **__declspec**  컴파일러 지시문을 선언 합니다 **항목** 각 컬렉션에는 대체 구문으로 속성의 기본적인 **GetItem()** 메서드. 대체 구문 대괄호를 사용 하 고 배열 참조와 비슷합니다. 일반적으로 두 가지 형태는 다음과 같습니다.  
   
-```  
+```cpp
   
       collectionPtr->GetItem(index);  
 collectionPtr->Item[index];  
-```  
+```
   
  예를 들어, 필드에 값을 할당을 **레코드 집합** 라는 개체 ***rs***에서 파생 된 합니다 **작성자** 목차를 **pubs** 데이터베이스입니다. 사용 된 **Item()** 세 번째 액세스할 속성을 **필드** 의 **레코드 집합** 개체 **필드** 컬렉션 (컬렉션에서 인덱스가 만들어집니다 0입니다. 세 번째 필드는 가정 ***au_fname***). 호출을 **value ()** 메서드는 **필드** 문자열 값을 할당 하는 개체입니다.  
   
  이 표현 될 수 있습니다 Visual Basic의 다음 네 가지 방법 (마지막으로 두 가지 양식은 Visual Basic에 고유한; 다른 언어에 해당 하는 없는):  
   
-```  
+```cpp
 rs.Fields.Item(2).Value = "value"  
 rs.Fields.Item("au_fname").Value = "value"  
 rs(2) = "value"  
 rs!au_fname = "value"  
-```  
+```
   
  위의 처음 두 형식이 Visual c + +에서와 동등한 다음과 같습니다.  
   
-```  
+```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
 rs->Fields->GetItem("au_fname")->PutValue("value");  
-```  
+```
   
  -또는-(에 대 한 대체 구문을 합니다 **값** 속성 표시 됨)  
   
-```  
+```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
 rs->Fields->Item["au_fname"]->Value = "value";  
-```  
+```
   
  에서 컬렉션을 반복 하는 예 "ADO 참조"의 "ADO 컬렉션" 섹션을 참조 합니다.  
   
@@ -139,14 +139,14 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  예를 들어 선언 된 **Recordset::Open** 메서드는:  
   
-```  
-    HRESULT Open (  
-        const _variant_t & Source,  
-        const _variant_t & ActiveConnection,  
-        enum CursorTypeEnum CursorType,  
-        enum LockTypeEnum LockType,  
-        long Options );  
-```  
+```cpp
+    HRESULT Open (  
+        const _variant_t & Source,  
+        const _variant_t & ActiveConnection,  
+        enum CursorTypeEnum CursorType,  
+        enum LockTypeEnum LockType,  
+        long Options );  
+```
   
  합니다 `ActiveConnection` 인수에 대 한 참조에는 **_variant_t**, 개방적이 고에 대 한 포인터 또는 연결 문자열을 코딩할 수 있는 **연결** 개체입니다.  
   
@@ -177,13 +177,13 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  세 가지 메서드는 예외를 사용 하는 일반적인 **vtMissing**합니다. 이들은 합니다 **Execute** 의 메서드는 **연결** 및 **명령** 개체 및 **NextRecordset** 메서드의 합니다 **레코드 집합** 개체입니다. 다음은 해당 서명이입니다.  
   
-```  
-_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
-_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
-_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
-```  
+```cpp
+_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
+        long Options );  // Connection  
+_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
+        long Options );  // Command  
+_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
+```
   
  매개 변수를 *RecordsAffected* 하 고 *매개 변수*에 대 한 포인터를 **Variant**합니다. *매개 변수* 의 주소를 지정 하는 입력 매개 변수를 **Variant** 하나만 포함 된 매개 변수 또는 매개 변수는 실행 중인 명령을 수정 하는 배열입니다. *RecordsAffected* 의 주소를 지정 하는 출력 매개 변수를 **Variant**여기서 메서드에 의해 영향을 받는 행 수가 반환 됩니다.  
   
@@ -193,11 +193,11 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAff
   
  따라서 이러한 세 가지 방법에 대 한와 같은 코딩 하는 것이 유효 합니다.  
   
-```  
-pConnection->Execute("commandText", NULL, adCmdText);   
-pCommand->Execute(NULL, NULL, adCmdText);  
+```cpp
+pConnection->Execute("commandText", NULL, adCmdText);   
+pCommand->Execute(NULL, NULL, adCmdText);  
 pRecordset->NextRecordset(NULL);  
-```  
+```
   
 ## <a name="error-handling"></a>오류 처리  
  Com에서 대부분의 작업 함수를 성공적으로 완료 되었는지 여부를 나타내는 HRESULT 반환 코드를 반환 합니다. 합니다 **#import** 지시문 각 "원시" 메서드 또는 속성 래퍼 코드를 생성 하 고 반환된 된 HRESULT를 확인 합니다. HRESULT 오류를 나타냅니다 래퍼 코드는 인수로 서 COM 오류를 HRESULT 반환 코드를 사용 하 여 호출 _com_issue_errorex()에서 throw 합니다. COM 오류 개체를 낼 수 있습니다는 **시도**-**catch** 블록입니다. (효율성의 위해서 catch에 대 한 참조를 **_com_error** 개체입니다.)  
@@ -212,54 +212,54 @@ pRecordset->NextRecordset(NULL);
 ### <a name="declaring-an-ado-object"></a>ADO 개체를 선언합니다.  
  Visual basic에서 ADO 개체 변수 (이 경우에 **레코드 집합** 개체) 다음과 같이 선언 됩니다.  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
-```  
+```
   
  절은 "`ADODB.Recordset`"의 ProgID는 합니다 **레코드 집합** 레지스트리에 정의 된 개체입니다. 새 인스턴스를 **레코드** 개체는 다음과 같이 선언 됩니다.  
   
-```  
+```vb
 Dim rst As New ADODB.Recordset  
-```  
+```
   
  -또는-  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
 Set rst = New ADODB.Recordset  
-```  
+```
   
  Visual c + +에서는 합니다 **#import** 지시문 모든 ADO 개체에 대 한 스마트 포인터 형식 선언을 생성 합니다. 예를 들어 가리키는 변수를 **_Recordset** 형식의 개체가 **_RecordsetPtr**를 다음과 같이 선언 되 고:  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
-```  
+```
   
  새 인스턴스를 가리키는 변수를 **_Recordset** 개체는 다음과 같이 선언 됩니다.  
   
-```  
+```cpp
 _RecordsetPtr  rs("ADODB.Recordset");  
-```  
+```
   
  -또는-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
-```  
+```
   
  -또는-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance(__uuidof(_Recordset));  
-```  
+```
   
  후 합니다 **CreateInstance** 메서드가 호출 되 면 변수를 다음과 같이 사용할 수 있습니다.  
   
-```  
+```cpp
 rs->Open(...);  
-```  
+```
   
  한 경우, 다음에 유의 "`.`" 변수는 클래스의 인스턴스인 것 처럼 연산자를 사용 (`rs.CreateInstance`), 및 다른 경우에는 "`->`" 연산자는 변수를 인터페이스에 대 한 포인터 처럼 사용 됩니다 (`rs->Open`).  
   
@@ -268,61 +268,61 @@ rs->Open(...);
 ### <a name="coding-a-missing-parameter--string"></a>누락 된 매개 변수 코딩-문자열  
  누락 된 코드 해야 할 때 **문자열** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. Visual c + +에서는 피연산자를 지정 해야 합니다. 코드를 **_bstr_t** 빈 문자열 값으로 포함 합니다.  
   
-```  
-_bstr_t strMissing(L"");  
-```  
+```cpp
+_bstr_t strMissing(L"");  
+```
   
 ### <a name="coding-a-missing-parameter--variant"></a>누락 된 매개 변수 코딩-Variant  
  누락 된 코드 해야 할 때 **Variant** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. Visual c + +의 모든 피연산자를 지정 해야 합니다. 누락 된 코드 **Variant** 매개 변수를 **_variant_t** 특수 값, DISP_E_PARAMNOTFOUND, 및 형식, VT_ERROR로 설정 합니다. 또는 지정할 **vtMissing**에서 제공 하는 해당 하는 미리 정의 된 상수를 **#import** 지시문입니다.  
   
-```  
-_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
-```  
+```cpp
+_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
+```
   
  또는 사용  
   
-```  
+```cpp
 ...vtMissing...;  
-```  
+```
   
 ### <a name="declaring-a-variant"></a>Variant 선언  
  Visual basic의 경우는 **Variant** 로 선언 합니다 **Dim** 문은 다음과 같이:  
   
-```  
-Dim VariableName As Variant  
-```  
+```vb
+Dim VariableName As Variant  
+```
   
  Visual c + +에서 형식으로 변수를 선언 **_variant_t**합니다. 구성도 몇 **_variant_t** 선언 아래에 표시 됩니다.  
   
 > [!NOTE]
 >  이러한 선언에는 단순히을 대략적으로 자신의 프로그램에서 코드는 제공 합니다. 자세한 내용은 아래 예제 및 Visual C++ 설명서를 참조 하세요.  
   
-```  
-_variant_t  VariableName(value);  
-_variant_t  VariableName((data type cast) value);  
-_variant_t  VariableName(value, VT_DATATYPE);  
-_variant_t  VariableName(interface * value, bool fAddRef = true);  
-```  
+```cpp
+_variant_t  VariableName(value);  
+_variant_t  VariableName((data type cast) value);  
+_variant_t  VariableName(value, VT_DATATYPE);  
+_variant_t  VariableName(interface * value, bool fAddRef = true);  
+```
   
 ### <a name="using-arrays-of-variants"></a>Variant의 배열을 사용 하 여  
  Visual basic에서 배열 **변형** 사용 하 여 코딩할 수 있습니다 합니다 **Dim** 문 또는 수를 사용할 수 있습니다 합니다 **배열** 함수를 다음 예제 코드 에서처럼:  
   
-```  
-Public Sub ArrayOfVariants  
-Dim cn As ADODB.Connection  
-Dim rs As ADODB.Recordset  
+```vb
+Public Sub ArrayOfVariants  
+Dim cn As ADODB.Connection  
+Dim rs As ADODB.Recordset  
 Dim fld As ADODB.Field  
   
-    cn.Open "DSN=pubs"  
-    rs = cn.OpenSchema(adSchemaColumns, _  
-        Array(Empty, Empty, "authors", Empty))  
+    cn.Open "DSN=pubs"  
+    rs = cn.OpenSchema(adSchemaColumns, _  
+        Array(Empty, Empty, "authors", Empty))  
     For Each fld in rs.Fields  
         Debug.Print "Name = "; fld.Name  
     Next fld  
     rs.Close  
     cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  다음 Visual c + + 예제는 **SafeArray** 사용을 **_variant_t**합니다.  
   
@@ -333,12 +333,12 @@ End Sub
   
 2.  사용할 수 있도록 1 차원 배열에만 필요한 **SafeArrayCreateVector**, 범용 대신 **SAFEARRAYBOUND** 선언 하 고 **SafeArrayCreate** 함수입니다. 다음은 해당 코드를 사용 하 여 새로운 같습니다 **SafeArrayCreate**:  
   
-    ```  
-       SAFEARRAYBOUND   sabound[1];  
-       sabound[0].lLbound = 0;  
-       sabound[0].cElements = 4;  
-       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
-    ```  
+    ```cpp
+       SAFEARRAYBOUND   sabound[1];  
+       sabound[0].lLbound = 0;  
+       sabound[0].cElements = 4;  
+       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
+    ```
   
 3.  열거형된 상수인으로 식별 되는 스키마 **adSchemaColumns**, 4 개 제약 조건 열과 연결 된: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME 및 COLUMN_NAME 합니다. 따라서 배열을 **Variant** 네 개의 요소를 사용 하 여 값이 생성 됩니다. 그런 다음 TABLE_NAME 세 번째 열에 해당 하는 제약 조건 값이 지정 됩니다.  
   
@@ -348,15 +348,15 @@ End Sub
   
      하는 경우 **SafeArrayDestroy** 된 호출 코드는 다음과 같습니다.  
   
-    ```  
-          TESTHR(SafeArrayDestroy(pSa));  
-       vtCriteria.vt = VT_EMPTY;  
-          vtCriteria.parray = NULL;  
-    ```  
+    ```cpp
+          TESTHR(SafeArrayDestroy(pSa));  
+       vtCriteria.vt = VT_EMPTY;  
+          vtCriteria.parray = NULL;  
+    ```
   
      그러나 것 수 있도록 하려면 훨씬 더 간단 합니다 **_variant_t** 관리를 **SafeArray**합니다.  
   
-```  
+```cpp
 // Visual_CPP_ADO_Prog_1.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -411,27 +411,27 @@ int main() {
    }  
    CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-property-getputputref"></a>속성 Get/Put/PutRef를 사용 하 여  
  Visual basic에서 속성의 이름은 여부에 따라이 검색, 할당에 대 한 참조를 할당 한정 되지 않습니다.  
   
-```  
-Public Sub GetPutPutRef  
-Dim rs As New ADODB.Recordset  
-Dim cn As New ADODB.Connection  
-Dim sz as Integer  
-cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
-         "Initial Catalog=pubs;Integrated Security=SSPI;"  
-rs.PageSize = 10  
-sz = rs.PageSize  
-rs.ActiveConnection = cn  
-rs.Open "authors",,adOpenStatic  
+```vb
+Public Sub GetPutPutRef  
+Dim rs As New ADODB.Recordset  
+Dim cn As New ADODB.Connection  
+Dim sz as Integer  
+cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
+         "Initial Catalog=pubs;Integrated Security=SSPI;"  
+rs.PageSize = 10  
+sz = rs.PageSize  
+rs.ActiveConnection = cn  
+rs.Open "authors",,adOpenStatic  
 ' ...  
 rs.Close  
 cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  이 Visual c + + 예제는 **가져오기**/**배치**/**PutRef * * * 속성*합니다.  
   
@@ -442,7 +442,7 @@ End Sub
   
 2.  피연산자를 캐스팅 하는 데 필요한 아닙니다 `rs->PutRefActiveConnection(cn)` 하 `(IDispatch *)` 피연산자의 형식이 이미 `(IDispatch *)`합니다.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_2.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -480,35 +480,35 @@ int main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-getitemx-and-itemx"></a>GetItem(x) 및 항목 [x]를 사용 하 여  
  Visual Basic 예제에 대 한 표준 구문과 대체 구문을 보여 줍니다 **항목**().  
   
-```  
-Public Sub GetItemItem  
-Dim rs As New ADODB.Recordset  
-Dim name as String  
-rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
-name = rs(0)  
-' -or-  
-name = rs.Fields.Item(0)  
-rs(0) = "Test"  
+```vb
+Public Sub GetItemItem  
+Dim rs As New ADODB.Recordset  
+Dim name as String  
+rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
+         adLockBatchOptimistic, adTable  
+name = rs(0)  
+' -or-  
+name = rs.Fields.Item(0)  
+rs(0) = "Test"  
 rs.UpdateBatch  
-' Restore name  
-rs(0) = name  
+' Restore name  
+rs(0) = name  
 rs.UpdateBatch  
 rs.Close  
-End Sub  
-```  
+End Sub  
+```
   
  Visual c + + 예제를 보여 줍니다 **항목**합니다.  
   
 > [!NOTE]
 >  코드 예제에서 주석 처리 된 섹션에 해당 하는 다음 참고: 사용 하 여 해당 컬렉션에 액세스 하면 **항목**, 인덱스 **2**, 캐스팅 되어야 합니다 **긴** 하므로 적절 한 생성자가 호출 됩니다.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_3.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -549,7 +549,7 @@ void main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>사용 하 여 ADO 개체 포인터 캐스팅 (IDispatch *)  
  다음 Visual c + + 예제를 사용 하 여 하는 방법을 보여 줍니다 (IDispatch *) 캐스트 ADO 개체 포인터에 대 한 합니다.  
@@ -565,7 +565,7 @@ void main() {
   
  이 섹션의 코드의 유용한 동작의 일부를 보여 줍니다 **_variant_t** 하 고 **_bstr_t** 연산자입니다.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_4.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

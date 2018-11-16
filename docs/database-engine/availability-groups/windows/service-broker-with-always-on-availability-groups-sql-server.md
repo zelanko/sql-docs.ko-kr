@@ -13,12 +13,12 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdb5eee5e8dc0addd0a15d5fdde98eef6a133913
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687841"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607113"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47687841"
     > [!NOTE]  
     >  기본적으로 **msdb**를 비롯하여 각 사용자 데이터베이스에는 **AutoCreatedLocal**경로가 포함되어 있습니다. 이 경로는 임의의 서비스 이름 및 Broker 인스턴스와 일치하며 메시지가 현재 인스턴스 내에 배달되도록 지정합니다. **AutoCreatedLocal** 의 우선 순위는 원격 인스턴스와 통신하는 특정 서비스를 명시적으로 지정하는 경로의 우선 순위보다 낮습니다.  
   
-     경로를 만드는 방법은 [버전의 온라인 설명서에 있는](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) Service Broker 라우팅 예 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [CREATE ROUTE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
+     경로를 만드는 방법은 [버전의 온라인 설명서에 있는](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) Service Broker 라우팅 예 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [CREATE ROUTE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 ##  <a name="SendRemoteMessages"></a> 가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항  
   

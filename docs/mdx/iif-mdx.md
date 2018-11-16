@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740682"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700781"
 ---
 # <a name="iif-mdx"></a>IIf(MDX)
 
@@ -29,25 +29,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>인수  
- IIf 함수는 세 개의 인수를 가져와: iif (\<조건 >, \<다음 분기 >, \<else 분기가 >).  
+ IIf 함수 3 개 인수: iif (\<조건 >에 \<분기 한 다음 >, \<else 분기 >).  
   
  *Logical_Expression*  
- 확인 하는 조건을 **true** (1) 또는 **false** (0). 유효한 MDX(Multidimensional Expressions) 논리식이어야 합니다.  
+ 평가 하는 조건을 **true** (1) 또는 **false** (0). 유효한 MDX(Multidimensional Expressions) 논리식이어야 합니다.  
   
- *Expression1 힌트 [Eager | 엄격한 | 지연]]*  
- 논리 식이 때 사용 되는 **true**합니다. Expression1은 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
+ *Expression1 힌트 [즉시 | 엄격한 | 지연]]*  
+ 논리 식으로 평가 되 면 사용할 **true**합니다. Expression1은 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
- *Expression2 힌트 [Eager | 엄격한 | 지연]]*  
- 논리 식이 때 사용 되는 **false**합니다. Expression2는 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
+ *Expression2 힌트 [즉시 | 엄격한 | 지연]]*  
+ 논리 식으로 평가 되 면 사용할 **false**합니다. Expression2는 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 논리 식으로 지정 된 조건이 **false** 이 식의 값이 0입니다. 다른 값으로 계산 **true**합니다.  
+ 논리 식으로 지정 된 조건이 **false** 이 식의 값이 0입니다. 다른 값으로 계산 되 **true**합니다.  
   
- 조건이 **true**, **IIf** 함수는 첫 번째 식을 반환 합니다. 그렇지 않은 경우 이 함수는 두 번째 식을 반환합니다.  
+ 조건이 **true**서 **IIf** 함수는 첫 번째 식을 반환 합니다. 그렇지 않은 경우 이 함수는 두 번째 식을 반환합니다.  
   
  지정된 식은 값이나 MDX 개체를 반환할 수 있습니다. 또한 지정된 식은 형식이 일치할 필요가 없습니다.  
   
- **IIf** 함수 검색 조건에 따라 멤버의 집합을 만들기 위한 권장 되지 않습니다. 대신를 사용 하 여는 [필터](../mdx/filter-mdx.md) 함수 논리 식에 대해 지정된 된 집합의 각 멤버를 평가 하 고 멤버의 하위 집합을 반환 합니다.  
+ 합니다 **IIf** 함수 검색 조건에 따라 멤버 집합을 만들기 위한 권장 되지 않습니다. 대신 합니다 [필터](../mdx/filter-mdx.md) 함수를 논리 식에 대해 지정된 된 집합의 각 멤버를 평가 하 여 멤버의 하위 집합을 반환 합니다.  
   
 > [!NOTE]  
 >  두 식 중 하나가 NULL인 경우 조건을 만족하면 결과 집합은 NULL이 됩니다.  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER 및 STRICT는 힌트에서 함께 사용할 수 없으며 동일한 IIF(,,)에서 서로 다른 식에 대해 사용할 수 있습니다.  
   
- 자세한 내용은 참조 [SQL Server Analysis Services 2008의 함수 쿼리 힌트](http://go.microsoft.com/fwlink/?LinkId=269540) 및 [실행 계획 및 MDX IIF 함수 및 CASE 문의 대 한 계획 힌트](http://go.microsoft.com/fwlink/?LinkId=269565)합니다.  
+ 자세한 내용은 [SQL Server Analysis Services 2008의 IIF 함수 쿼리 힌트](https://go.microsoft.com/fwlink/?LinkId=269540) 하 고 [실행 계획 및 MDX IIF 함수 및 CASE 문의 계획 힌트](https://go.microsoft.com/fwlink/?LinkId=269565)합니다.  
   
 ## <a name="examples"></a>예  
- 다음 쿼리를 사용 하 여 표시 **IIF** Internet Sales Amount 측정값 큰 경우 두 개의 서로 다른 문자열 값 또는 $10000 보다 작은 중 하나를 반환 하는 계산된 측정값 내:  
+ 다음 쿼리는 간단한 사용 방법을 보여 줍니다 **IIF** $10000 미만이 Internet Sales Amount 측정값 큰 경우 두 개의 다른 문자열 값의 하나를 반환 하는 계산된 측정값 내에서:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -131,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 다음은의 예로 **IIF** 행에 복잡 한 튜플 집합을 만들려면 Generate 함수 내의 두 집합 중 하나를 반환 합니다.  
+ 다음은 예가 **IIF** 행에서 복잡 한 튜플 집합을 만들려면 Generate 함수 내의 두 집합 중 하나를 반환 합니다.  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -178,6 +178,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

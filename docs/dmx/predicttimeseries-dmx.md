@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040441"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602493"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   세 번째 예는 EXTEND_MODEL_CASES 매개 변수를 사용하여 마이닝 모델을 새 데이터로 업데이트하는 방법을 보여 줍니다.  
   
- 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 참조는 데이터 마이닝 자습서 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 하 고 [시간 시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
+ 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 참조는 데이터 마이닝 자습서 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 하 고 [시간 시계열 예측 DMX 자습서](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
   
 > [!NOTE]  
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예제 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
  특정 지역에 대한 데이터가 잘못된 것을 발견하고 모델의 패턴을 사용하여 새 데이터와 일치하도록 예측을 조정하려 한다고 가정합니다. 다른 지역의 추세가 더 안정적이라는 것을 발견하고 가장 안정적인 모델을 여러 지역의 데이터에 적용하려고 할 수도 있습니다.  
   
- 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오의 전체 연습을 참조 하세요 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  
+ 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오의 전체 연습을 참조 하세요 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  
   
  다음 PREDICTION JOIN 쿼리에서는 데이터를 바꾸고 새 예측을 만드는 구문을 보여 줍니다. 데이터를 바꾸기 위해 이 예에서는 Amount 및 Quantity 열의 값을 검색하여 각 값에 2를 곱합니다.  
   
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   새로 확장된 모델을 기반으로 나머지 세 개의 시간 조각에 대한 새 예측을 반환합니다.  
   
- 다음 표에서는 예 2 쿼리의 결과를 보여 줍니다. M200 Europe에 대해 반환된 첫 두 값은 사용자가 제공한 새 값과 동일합니다. 이 동작은 의도적인 것으로, 새 데이터의 끝 이후부터 예측을 시작하려면 시작 및 종료 시간 단계를 지정해야 합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요 [5 단원: 시계열 모델 확장](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)합니다.  
+ 다음 표에서는 예 2 쿼리의 결과를 보여 줍니다. M200 Europe에 대해 반환된 첫 두 값은 사용자가 제공한 새 값과 동일합니다. 이 동작은 의도적인 것으로, 새 데이터의 끝 이후부터 예측을 시작하려면 시작 및 종료 시간 단계를 지정해야 합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요 [5 단원: 시계열 모델 확장](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)합니다.  
   
  Pacific 지역에 대한 새 데이터도 제공하지 않았습니다. 따라서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 5개의 시간 조각 모두에 대해 새 예측을 반환합니다.  
   
@@ -255,6 +255,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [시계열 모델 쿼리 예제](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [예측 &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [예측&#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

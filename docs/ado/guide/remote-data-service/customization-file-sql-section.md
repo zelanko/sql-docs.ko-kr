@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625881"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558530"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 합니다 **sql** 섹션 클라이언트 명령 문자열을 대체 하는 새 SQL 문자열을 포함할 수 있습니다. 섹션에서 SQL 문자열이 없을 경우 섹션 무시 됩니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  새 SQL 문자열을 사용할 수 있습니다 *매개 변수가 있는*합니다. 매개 변수 즉,는 **sql** SQL 문자열 섹션 (지정 된는 '?' 문자) 해당 인수에 대체 될 수 있습니다는 *식별자* 클라이언트 명령 문자열에 (지정 된을 쉼표로 구분 된 목록을 괄호 안에 있음)입니다. 식별자와 인수 목록은 함수 호출 처럼 동작합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47625881"
   
  새 SQL 문 문자열이 올바르지 않으면 문이 실행이 실패 합니다. 클라이언트 매개 변수는 실질적으로 무시 됩니다. 의도적으로 "기능을 해제 하려면" 모든 클라이언트 SQL 명령을 지정 하 여이 수행할 수 있습니다.  
   
-```  
+```console
 [SQL default]   
 SQL = " "  
 ```  
@@ -46,7 +46,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**SQL**|이 나타내는 리터럴 문자열에는 SQL 섹션 항목입니다.|  
 |***sqlString***|클라이언트 문자열을 대체 하는 SQL 문자열입니다.|  

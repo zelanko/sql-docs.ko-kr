@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657152"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse는 저장된 프로시저
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50254409"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  일부 추가 시스템 저장된 프로시저의 인스턴스 내 에서만 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Api 없습니다 일반 고객에 대 한 클라이언트를 통해 사용 합니다. 이러한 절차에 나열 됩니다 [시스템 저장 프로시저 (Transact SQL)](http://msdn.microsoft.com/library/ms187961.aspx)합니다. 이러한 절차는 변경 될 수 있습니다 및 호환성이 보장 되지 않습니다. 목록에서 모든 절차에서 사용할 수 없는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
+>  일부 추가 시스템 저장된 프로시저의 인스턴스 내 에서만 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 Api 없습니다 일반 고객에 대 한 클라이언트를 통해 사용 합니다. 이러한 절차에 나열 됩니다 [시스템 저장 프로시저 (Transact SQL)](https://msdn.microsoft.com/library/ms187961.aspx)합니다. 이러한 절차는 변경 될 수 있습니다 및 호환성이 보장 되지 않습니다. 목록에서 모든 절차에서 사용할 수 없는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 저장 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

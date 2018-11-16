@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629652"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676909"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침
 
@@ -36,7 +36,7 @@ ms.locfileid: "47629652"
 
 - **여러 tempdb 데이터 파일 구성**
 
-   SQL Server Linux 설치에는 여러 tempdb 파일을 구성 하는 옵션을 제공 하지 않습니다, 설치 후 여러 tempdb 데이터 파일을 만들면 고려 하는 것이 좋습니다. 자세한 내용은 문서에서 지침을 참조 하세요 [SQL Server tempdb 데이터베이스에 할당 경합을 줄이려면 권장 사항](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)합니다.
+   SQL Server Linux 설치에는 여러 tempdb 파일을 구성 하는 옵션을 제공 하지 않습니다, 설치 후 여러 tempdb 데이터 파일을 만들면 고려 하는 것이 좋습니다. 자세한 내용은 문서에서 지침을 참조 하세요 [SQL Server tempdb 데이터베이스에 할당 경합을 줄이려면 권장 사항](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)합니다.
 
 ### <a name="advanced-configuration"></a>고급 구성
 

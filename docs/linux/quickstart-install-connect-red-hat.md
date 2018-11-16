@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269846"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669452"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server를 설치 하는 빠른 시작: Red Hat에 SQL Server를 설치하고 데이터베이스 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269846"
 
 **2GB 이상** 메모리를 가진 RHEL 7.3 또는 7.4 컴퓨터가 있어야 합니다.
 
-Red Hat Enterprise Linux 사용자의 컴퓨터에 설치 하려면로 이동 [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image RHEL` 를 사용합니다.
+Red Hat Enterprise Linux 사용자의 컴퓨터에 설치 하려면로 이동 [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image RHEL` 를 사용합니다.
 
 CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 다음 단계를 수행 하기 전에 이전 리포지토리를 먼저 제거 해야 합니다. 자세한 내용은 [SQL Server 2017 및 2019에 대해 Linux 구성 리포지토리 ](sql-server-linux-change-repo.md)합니다.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699458"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 보안 시스템 디자인, 중요한 자산 암호화 및 데이터베이스 서버에 대한 방화벽 구축과 같은 데이터베이스의 보안을 설정하기 위해 여러 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)가 도난 된 경우 악의적인 사용자만 복원 또는 데이터베이스를 연결 하 고 수 데이터를 찾아볼 합니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
@@ -207,7 +207,7 @@ SQL Server PDW에 문제 해결을 위한 로그의 집합을 유지 관리 합�
   
 시스템 (예: 암호를 제공) 사람이 개입할 필요 없이 키에 액세스할 수 있습니다. 인증서를 사용할 수 없는 경우 시스템 오류 적절 한 인증서 사용 가능할 때까지 DEK를 해독할 수 없는 메시지가 출력 됩니다.  
   
-인증서 보호에 사용할 하나의 어플라이언스에서 다른 데이터베이스를 이동 하는 경우 해당 ' 대상 서버의 DEK를 먼저 복원 해야 합니다. 그런 다음 데이터베이스는 일반적으로 복원할 수 있습니다. 자세한 내용은 표준 SQL Server 설명서를 참조 하세요 [다른 SQL Server로 TDE 보호 데이터베이스 이동](http://technet.microsoft.com/library/ff773063.aspx)합니다.  
+인증서 보호에 사용할 하나의 어플라이언스에서 다른 데이터베이스를 이동 하는 경우 해당 ' 대상 서버의 DEK를 먼저 복원 해야 합니다. 그런 다음 데이터베이스는 일반적으로 복원할 수 있습니다. 자세한 내용은 표준 SQL Server 설명서를 참조 하세요 [다른 SQL Server로 TDE 보호 데이터베이스 이동](https://technet.microsoft.com/library/ff773063.aspx)합니다.  
   
 Dek를 암호화 하는 인증서를 사용 하는 데이터베이스 백업이으로 보존 됩니다. 백업 인증서 개인 키 없이 인증서를 사용할 수 없으므로 데이터베이스 복원에 대 한 인증서 개인 키를 포함 해야 합니다. 이러한 인증서에 개인 키 백업 인증서 복원을 위해 제공 해야 하는 암호로 보호 하는 별도 파일에 저장 됩니다.  
   

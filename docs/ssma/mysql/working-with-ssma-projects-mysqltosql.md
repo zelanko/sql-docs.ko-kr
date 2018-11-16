@@ -15,12 +15,12 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f29b13b47c6f52522606bb8bc4a1aeff6b642145
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661672"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 SQL Server 또는 SQL Azure MySQL 데이터베이스를 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
@@ -54,7 +54,7 @@ SSMA 변환 하 고 데이터베이스를 로드, 데이터 마이그레이션 �
   
 -   SQL Server에 대 한 동기화 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)합니다.  
   
--   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 (GUI) (SSMA 공통)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
+-   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 (GUI) (SSMA 공통)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)합니다.  
   
 -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)합니다.  
   

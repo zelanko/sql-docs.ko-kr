@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269558"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697041"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터 배포
 
@@ -56,7 +56,7 @@ Windows 또는 Linux/macOS 클라이언트 사용 하는지에 따라 달라 집
 
 계속 하기 전에 다음 중요 한 지침을 note:
 
-- 에 [명령 창](http://docs.microsoft.com/visualstudio/ide/reference/command-window), 따옴표 환경 변수에 포함 됩니다. 따옴표를 사용 하 여 암호를 래핑할 경우 큰따옴표는 암호에 포함 됩니다.
+- 에 [명령 창](https://docs.microsoft.com/visualstudio/ide/reference/command-window), 따옴표 환경 변수에 포함 됩니다. 따옴표를 사용 하 여 암호를 래핑할 경우 큰따옴표는 암호에 포함 됩니다.
 - Bash에서 따옴표 변수에 포함 되지 않습니다. 큰따옴표를 사용 하는 예제 `"`합니다.
 - 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `'` 문자입니다.
 - CTP 2.1 릴리스에 대 한 기본 포트를 변경 하지 마세요.

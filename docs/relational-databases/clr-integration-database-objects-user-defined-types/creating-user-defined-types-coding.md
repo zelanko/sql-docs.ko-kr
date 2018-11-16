@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795771"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661563"
 ---
 # <a name="creating-user-defined-types---coding"></a>사용자 정의 형식 만들기 - 코딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  패딩의 목적은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 한 UDT와 다른 UDT를 비교할 때 culture 바이트는 culture 바이트와 비교하고 통화 바이트 값은 통화 바이트 값과 비교하도록 culture를 통화 값과 완전히 분리하는 것입니다.  
   
- 목록에 대 한 전체 코드는 **통화** UDT의 예제 CLR을 설치 하기 위한 지침에 따라 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 목록에 대 한 전체 코드는 **통화** UDT의 예제 CLR을 설치 하기 위한 지침에 따라 [SQL Server 데이터베이스 엔진 예제](https://msftengprodsamples.codeplex.com/)합니다.  
   
 ### <a name="currency-attributes"></a>통화 특성  
  합니다 **통화** 다음 특성을 사용 하 여 UDT가 정의 되어 있습니다.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 전체 코드 목록에 대 한 합니다 **통화** UDT를 참조 하세요 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 전체 코드 목록에 대 한 합니다 **통화** UDT를 참조 하세요 [SQL Server 데이터베이스 엔진 예제](https://msftengprodsamples.codeplex.com/)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

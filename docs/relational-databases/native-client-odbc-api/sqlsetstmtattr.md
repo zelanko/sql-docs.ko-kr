@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667784"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47852871"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 특성은 드라이버가 커서에 드라이버별 성능 옵션을 사용할지 여부를 지정합니다. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 이러한 옵션에 설정 된 경우 허용 되지 않습니다. 기본 설정은 SQL_CO_OFF입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|기본. 빠른 정방향 전용, 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정, 사용 하도록 설정 **SQLGetData** 읽기 전용, 정방향 전용 커서에 있습니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램이 이제 설정 해야 사용 하 여 다른 커서 유형을 **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 합니다.|  
 |SQL_CO_FFO|빠른 정방향 전용, 읽기 전용 커서를 사용 하지 않도록 설정 수 있도록 **SQLGetData** 읽기 전용, 정방향 전용 커서에 있습니다.|  
@@ -66,9 +66,9 @@ ms.locfileid: "47852871"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 특성 문이 될 때까지 지연 즉시 준비 여부를 결정 **SQLExecute**하십시오 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 실행 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
-|SQL_DP_ON|기본. 호출한 후 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)를 때까지 문 준비가 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는**SQLDescribeParam**) 실행 됩니다.|  
+|SQL_DP_ON|기본. 호출한 후 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 때까지 문 준비가 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는**SQLDescribeParam**) 실행 됩니다.|  
 |SQL_DP_OFF|문을 준비할 즉시 **SQLPrepare** 실행 됩니다.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -76,7 +76,7 @@ ms.locfileid: "47852871"
   
  *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|기본. 드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용하지 않습니다.|  
 |SQL_RE_ON|드라이버가 날짜, 시간 및 통화 데이터를 문자열 데이터로 변환할 때 클라이언트 로캘 설정을 사용합니다.|  
@@ -91,7 +91,7 @@ ms.locfileid: "47852871"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 특성은 포함 된 열에 대 한 작업 로깅을 설정/해제 **텍스트** 하거나 **이미지** 데이터입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|수행 된 작업의 로깅을 사용 하지 않도록 설정 **텍스트** 하 고 **이미지** 데이터입니다.|  
 |SQL_TL_ON|기본. 수행 된 작업의 로깅을 사용 하도록 설정 **텍스트** 하 고 **이미지** 데이터입니다.|  
@@ -99,7 +99,7 @@ ms.locfileid: "47852871"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 특성은 결과 집합에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 문의 숨겨진 열을 노출합니다. 드라이버는 기본적으로 이러한 열을 노출하지 않습니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|기본. 결과 집합에서 FOR BROWSE 열을 숨깁니다.|  
 |SQL_HC_ON|FOR BROWSE 열을 공개합니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "47852871"
   
  SQL_SOPT_SS_NAME_SCOPE의 형식은 SQLULEN입니다.  
   
-|*ValuePtr* 값|Description|  
+|*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|기본.<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하면 SQLColumns 스파스의 멤버가 아닌 열만 반환 됩니다 **column_set**합니다.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|응용 프로그램이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램으로 테이블 반환 매개 변수의 TYPE_NAME을 전달 합니다 *TableName* 매개 변수입니다.|  
@@ -150,7 +150,7 @@ ms.locfileid: "47852871"
  SQL_SOPT_SS_NAME_SCOPE의 이외의 값이 호출 됩니다 SQLTables, SQLColumns, 또는 SQLPrimaryKeys 카탈로그 함수가 다른 경우 SQL_SS_NAME_SCOPE_TABLE 면 SQL_ERROR가 반환 됩니다. SQLSTATE HY010 및 "함수 시퀀스 오류입니다(SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되지 않았습니다)" 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetStmtAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

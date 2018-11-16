@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5704c5bea3f1f89d304d412586d0c950f09a3d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ed7bd7452a5a4307070dc91eb0a796c1e6c09b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770291"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604264"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "47770291"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|READ_ONLY_ROUTING_LIST에 읽기 가능한 보조 복제본을 호스팅하는 서버 인스턴스만 포함되어 있는지 확인합니다.|**읽기 가능한 보조 복제본을 확인하려면:** sys.availability_replicas(**secondary_role_allow_connections_desc** 열)<br /><br /> **읽기 전용 라우팅 목록을 보려면:** sys.availability_read_only_routing_lists<br /><br /> **읽기 전용 라우팅 목록을 변경하려면:** ALTER AVAILABILITY GROUP|[sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|Windows 방화벽이 READ_ONLY_ROUTING_URL 포트를 차단하고 있는지 확인합니다.|—|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 다음을 확인합니다.<br /><br /> SQL Server 원격 연결이 사용되고 있는지 여부<br /><br /> TCP/IP가 사용되고 있는지 여부<br /><br /> IP 주소가 올바르게 구성되어 있는지 여부|—|[서버 속성 보기 또는 변경&#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|READ_ONLY_ROUTING_URL(TCP**://***system-address***:***port*)에 올바른 FQDN(정규화된 도메인 이름) 및 포트 번호가 포함되어 있는지 확인합니다.|—|[Always On에 대한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|READ_ONLY_ROUTING_URL(TCP**://***system-address***:***port*)에 올바른 FQDN(정규화된 도메인 이름) 및 포트 번호가 포함되어 있는지 확인합니다.|—|[Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|클라이언트 시스템|클라이언트 드라이버가 읽기 전용 라우팅을 지원하는지 확인합니다.|—|[Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
@@ -159,9 +159,9 @@ ms.locfileid: "47770291"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

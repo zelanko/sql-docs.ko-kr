@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657135"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|테이블 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  해시됨 인덱스 유형은 정확하게 일치하는 항목 검색 또는 범위 검색을 허용하지만 패턴 일치 검색은 이 인덱스를 사용하지 않습니다.  
   
- **sp_statistics** 같습니다 **SQLStatistics** ODBC에서. 반환 된 결과 정렬 **NON_UNIQUE**, **유형**를 **INDEX_QUALIFIER**를 **INDEX_NAME**, 및 **SEQ_IN_ 인덱스**합니다. 자세한 내용은 참조는 [ODBC API 참조](http://go.microsoft.com/fwlink/?LinkId=68323)합니다.  
+ **sp_statistics** 같습니다 **SQLStatistics** ODBC에서. 반환 된 결과 정렬 **NON_UNIQUE**, **유형**를 **INDEX_QUALIFIER**를 **INDEX_NAME**, 및 **SEQ_IN_ 인덱스**합니다. 자세한 내용은 참조는 [ODBC API 참조](https://go.microsoft.com/fwlink/?LinkId=68323)합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  

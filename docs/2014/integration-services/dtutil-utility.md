@@ -26,15 +26,15 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a359d584125a2b332e178d03d03cc75f4f4ad1f1
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149173"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559478"
 ---
 # <a name="dtutil-utility"></a>Encrypt
-  합니다 **dtutil** 명령 p1ompt 유틸리티를 사용 하 여 관리 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 `/SQL`, `/FILE` 및 `/DTS` 옵션으로 식별됩니다.  
+  **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 `/SQL`, `/FILE` 및 `/DTS` 옵션으로 식별됩니다.  
   
  **dtutil** 명령 프롬프트 유틸리티는 명령 파일이나 리디렉션 사용을 지원하지 않습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48149173"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 인스턴스에 연결된 경우에는 dtutil에서 수행하는 대부분의 작업을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서도 시각적으로 수행할 수 있습니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)를 참조하세요.  
   
- 옵션은 순서에 관계없이 입력할 수 있습니다. 파이프("|") 문자는 `OR` 연산자이며 가능한 값을 표시하는 데 사용됩니다. 로 구분 된 옵션 중 하나를 사용 해야는 `OR` 파이프 합니다.  
+ 옵션은 순서에 관계없이 입력할 수 있습니다. 파이프("|") 문자는 `OR` 연산자이며 가능한 값을 표시하는 데 사용됩니다. `OR` 파이프로 구분된 옵션 중 하나를 사용해야 합니다.  
   
  모든 옵션은 슬래시(/) 또는 빼기 기호(-)로 시작해야 합니다. 단, 슬래시 또는 빼기 기호와 옵션 텍스트 사이에는 공백이 없어야 합니다. 그렇지 않으면 명령이 실패합니다.  
   
@@ -85,10 +85,10 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>매개 변수  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |/?|명령 프롬프트 옵션을 표시합니다.|  
-|/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 대해 Copy 동작을 지정합니다. 이 매개 변수를 사용하려면 먼저 **/FI**, **/SQ**또는 **/DT** 옵션을 사용하여 패키지 위치를 지정해야 합니다. 그런 다음 대상 위치 및 대상 패키지 이름을 지정합니다. *destinationPathandPackageName* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 복사할 대상 위치를 지정합니다. 경우 대상 *위치* 됩니다 `SQL`의 *DestUser*, *DestPassword* 하 고 *DestServer* 인수 수도 있어야 합니다 명령에 지정 합니다.<br /><br /> 경우는 `Copy` 동작에서 대상 위치에 기존 패키지가 **dtutil** 패키지 삭제를 확인 하 라는 메시지입니다. 합니다 `Y` 응답 하면 패키지를 덮어쓰고 및 `N` 응답 하면 프로그램을 종료 합니다. 명령에 *Quiet* 인수가 포함된 경우 메시지가 표시되지 않으며 기존 패키지를 덮어씁니다.|  
+|/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 대해 Copy 동작을 지정합니다. 이 매개 변수를 사용하려면 먼저 **/FI**, **/SQ**또는 **/DT** 옵션을 사용하여 패키지 위치를 지정해야 합니다. 그런 다음 대상 위치 및 대상 패키지 이름을 지정합니다. *destinationPathandPackageName* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 복사할 대상 위치를 지정합니다. 경우 대상 *위치* 됩니다 `SQL`의 *DestUser*, *DestPassword* 하 고 *DestServer* 인수 수도 있어야 합니다 명령에 지정 합니다.<br /><br /> 경우는 `Copy` 동작에서 대상 위치에 기존 패키지가 **dtutil** 패키지 삭제를 확인 하 라는 메시지입니다. `Y`로 응답하면 패키지를 덮어쓰고 `N`으로 응답하면 프로그램을 종료합니다. 명령에 *Quiet* 인수가 포함된 경우 메시지가 표시되지 않으며 기존 패키지를 덮어씁니다.|  
 |/Dec[rypt] *password*|선택 사항입니다. 암호가 암호화된 패키지를 로드할 때 사용할 해독 암호를 설정합니다.|  
 |/Del[ete]|*SQL*, *DTS* 또는 *FILE* 옵션으로 지정된 패키지를 삭제합니다. **dtutil** 에서 패키지를 삭제할 수 없을 경우 프로그램이 종료됩니다.|  
 |/DestP[assword] *password*|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 대상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하기 위해 SQL 옵션에 사용할 암호를 지정합니다. *DESTPASSWORD* 옵션이 포함되지 않은 명령줄에서 *DTSUSER* 를 지정하면 오류가 생성됩니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
@@ -106,10 +106,10 @@ dtutil /option [value] [/option [value]]...
 |/FR[ename] {*SQL* &#124; *DTS*} [;*ParentFolderPath; OldFolderName;NewFolderName]*|선택 사항입니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 폴더 이름을 바꿉니다. *ParentFolderPath* 는 이름을 바꿀 폴더의 위치입니다. *OldFolderName* 은 폴더의 현재 이름이며 *NewFolderName* 은 폴더에 지정할 새 이름입니다.|  
 |/H[elp] *option*|광범위한 내용을 다루는 도움말을 표시합니다. 이 도움말에서는 **dtutil** 옵션을 표시하고 그 사용 방법을 설명합니다. 옵션 인수는 선택 사항입니다. 이 인수를 포함할 경우 도움말 텍스트에는 지정된 옵션에 대한 자세한 내용이 포함됩니다. 다음 예에서는 모든 옵션에 대한 도움말을 표시합니다.<br /><br /> `dtutil /H`<br /><br /> 다음 두 예에서는 */H* 옵션을 사용하여 특정 옵션에 대한 자세한 도움말을 표시하는 방법을 보여 줍니다. 이 예에서 도움말을 표시할 특정 옵션은 */Q [uiet]* 입니다.<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
 |/I[DRegenerate]|패키지를 위한 새 GUID를 만들고 패키지 ID 속성을 업데이트합니다. 패키지를 복사해도 패키지 ID는 동일하게 유지되므로 로그 파일에는 두 패키지 모두에 대해 동일한 GUID가 포함됩니다. 이 동작은 새로 복사된 패키지에 대해 새 GUID를 만들어 원본과 구별합니다.|  
-|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 대해 Move 동작을 지정합니다. 이 매개 변수를 사용하려면 먼저 **/FI**, **/SQ**또는 **/DT** 옵션을 사용하여 패키지 위치를 지정합니다. 그런 다음 **Move** 동작을 지정합니다. 이 동작에는 세미콜론으로 구분되는 두 인수가 필요합니다.<br /><br /> 대상 인수는 *SQL*, *FILE*또는 *DTS*를 지정할 수 있습니다. *SQL* 대상은 *DESTUSER*, *DESTPASSWORD*및 *DESTSERVER* 옵션을 포함할 수 있습니다.<br /><br /> *pathandname* 인수는 패키지 위치를 지정합니다. *SQL* 은 패키지 경로와 패키지 이름을 사용하고 *FILE* 은 UNC 또는 로컬 경로를 사용하며 *DTS* 는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 루트에 상대적인 위치를 사용합니다. 대상이 *FILE* 또는 *DTS*인 경우 path 인수에는 파일 이름이 포함되지 않습니다. 대신 지정된 위치의 패키지 이름을 파일 이름으로 사용합니다.<br /><br /> <br /><br /> 경우는 `MOVE` 동작에서 대상 위치에 기존 패키지가 **dtutil** 패키지를 덮어쓸 것인지 확인 하 라는 메시지가 표시 합니다. 합니다 `Y` 응답 하면 패키지를 덮어쓰고 및 `N` 응답 하면 프로그램을 종료 합니다. 명령에 *QUIET* 옵션이 포함된 경우 메시지가 표시되지 않으며 기존 패키지를 덮어씁니다.|  
+|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 대해 Move 동작을 지정합니다. 이 매개 변수를 사용하려면 먼저 **/FI**, **/SQ**또는 **/DT** 옵션을 사용하여 패키지 위치를 지정합니다. 그런 다음 **Move** 동작을 지정합니다. 이 동작에는 세미콜론으로 구분되는 두 인수가 필요합니다.<br /><br /> 대상 인수는 *SQL*, *FILE*또는 *DTS*를 지정할 수 있습니다. *SQL* 대상은 *DESTUSER*, *DESTPASSWORD*및 *DESTSERVER* 옵션을 포함할 수 있습니다.<br /><br /> *pathandname* 인수는 패키지 위치를 지정합니다. *SQL* 은 패키지 경로와 패키지 이름을 사용하고 *FILE* 은 UNC 또는 로컬 경로를 사용하며 *DTS* 는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 루트에 상대적인 위치를 사용합니다. 대상이 *FILE* 또는 *DTS*인 경우 path 인수에는 파일 이름이 포함되지 않습니다. 대신 지정된 위치의 패키지 이름을 파일 이름으로 사용합니다.<br /><br /> <br /><br /> 경우는 `MOVE` 동작에서 대상 위치에 기존 패키지가 **dtutil** 패키지를 덮어쓸 것인지 확인 하 라는 메시지가 표시 합니다. `Y`로 응답하면 패키지를 덮어쓰고 `N`으로 응답하면 프로그램을 종료합니다. 명령에 *QUIET* 옵션이 포함된 경우 메시지가 표시되지 않으며 기존 패키지를 덮어씁니다.|  
 |/Q[uiet]|`COPY`, `MOVE` 또는 `SIGN` 옵션이 포함된 명령을 실행할 때 나타날 수 있는 확인 메시지를 표시하지 않습니다. 이 메시지는 지정된 패키지와 이름이 같은 패키지가 대상 컴퓨터에 이미 있을 경우 또는 지정된 패키지에 이미 서명이 된 경우 나타납니다.|  
 |/R[emark] *text*|명령줄에 주석을 추가합니다. 주석 인수는 선택 사항입니다. 주석 텍스트에 공백이 포함된 경우 텍스트를 따옴표로 묶어야 합니다. 명령줄에 여러 REM 옵션을 포함할 수 있습니다.|  
-|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 서명합니다. 이 동작에서는 세미콜론으로 구분되는 세 인수를 사용합니다.<br /><br /> 대상 인수는 *SQL*, *FILE*또는 *DTS*를 지정할 수 있습니다. SQL 대상은 *DESTUSER*, *DESTPASSWORD* 및 *DESTSERVER* 옵션을 포함할 수 있습니다.<br /><br /> path 인수는 동작을 수행할 패키지의 위치를 지정합니다.<br /><br /> hash 인수는 다양한 길이의 16진수 문자열로 표현되는 인증서 식별자를 지정합니다.<br /><br /> <br /><br /> **\*\* 중요 \*\*** 패키지의 서명을 확인하도록 구성된 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 디지털 서명이 있는지, 유효한지, 그리고 신뢰할 수 있는 원본에서 제공된 것인지만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지가 변경되었는지 여부는 확인하지 않습니다.<br /><br /> 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.|  
+|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 서명합니다. 이 동작에서는 세미콜론으로 구분되는 세 인수를 사용합니다.<br /><br /> 대상 인수는 *SQL*, *FILE*또는 *DTS*를 지정할 수 있습니다. SQL 대상은 *DESTUSER*, *DESTPASSWORD* 및 *DESTSERVER* 옵션을 포함할 수 있습니다.<br /><br /> path 인수는 동작을 수행할 패키지의 위치를 지정합니다.<br /><br /> hash 인수는 다양한 길이의 16진수 문자열로 표현되는 인증서 식별자를 지정합니다.<br /><br /> <br /><br /> **\*\* 중요 \*\*** 패키지의 서명을 확인하도록 구성된 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 디지털 서명이 있는지, 유효한지, 그리고 신뢰할 수 있는 원본에서 제공된 것인지만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지가 변경되었는지 여부는 확인하지 않습니다.<br /><br /> 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.|  
 |/SourceP[assword] *password*|*인증을 사용하는* 인스턴스의 데이터베이스에 저장된 *패키지를 검색할 수 있도록* SQL [!INCLUDE[ssIS](../includes/ssis-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SOURCEUSER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 사용할 암호를 지정합니다. 지정 하면 오류가 발생 *SOURCEPASSWORD* 포함 되지 않은 명령줄에서를 `SOURCEUSER` 옵션입니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|[!INCLUDE[ssIS](../includes/ssis-md.md)]에 저장된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지를 검색할 수 있도록 `SQL` 옵션에 사용할 서버 이름을 지정합니다. *SQL* , *SQL*, *SQL* *SQL*또는 *MOVE* *SQL* 옵션을 사용하여 패키지 위치를 지정해야 합니다.<br /><br /> 서버 이름에 백슬래시 및 인스턴스 이름을 추가하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름을 지정할 수 있습니다.|  
 |/SourceU[ser] *username*|*인증을 사용하는* 에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 검색할 수 있도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SOURCESERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 사용할 사용자 이름을 지정합니다. *SOURCEUSER* , *SIGN SQL*또는 *COPY SQL*옵션이 포함되지 않은 명령줄에서 *MOVE SQL* 를 지정하면 오류가 발생합니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
@@ -118,7 +118,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 종료 코드  
  **dtutil** 은 구문 오류가 있거나, 잘못된 인수가 사용되었거나, 잘못된 옵션 조합이 지정된 경우 경고를 표시하는 종료 코드를 설정합니다. 그 이외의 경우 이 유틸리티는 "작업이 완료되었습니다"라는 메시지를 표시합니다. 다음 표에는 **dtutil** 유틸리티가 종료 시 설정할 수 있는 값이 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|유틸리티가 성공적으로 실행되었습니다.|  
 |1|유틸리티가 실패했습니다.|  
@@ -183,7 +183,7 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
 ```  
   
 > [!NOTE]  
->  명명된 된 서버에서 패키지를 삭제 하려면 포함는 `SOURCESERVER` 옵션 및 해당 인수입니다. *SQL* 옵션을 사용해야만 서버를 지정할 수 있습니다.  
+>  명명된 서버에서 패키지를 삭제하려면 `SOURCESERVER` 옵션 및 해당 인수를 포함합니다. *SQL* 옵션을 사용해야만 서버를 지정할 수 있습니다.  
   
  SSIS 패키지 저장소에 저장된 패키지를 삭제하려면 다음 구문을 사용합니다.  
   
@@ -260,7 +260,7 @@ dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
- 인증서에 대한 정보를 찾으려면 **CertMgr**을 사용합니다. 해시 코드는 **CertMgr** 유틸리티에서 인증서를 선택한 다음 속성을 표시하는 **보기** 를 클릭하여 볼 수 있습니다. **자세히** 탭에는 인증서에 대한 자세한 정보가 제공됩니다. `Thumbprint` 속성은 공백이 제거 된 해시 값으로 사용 합니다.  
+ 인증서에 대한 정보를 찾으려면 **CertMgr**을 사용합니다. 해시 코드는 **CertMgr** 유틸리티에서 인증서를 선택한 다음 속성을 표시하는 **보기** 를 클릭하여 볼 수 있습니다. **자세히** 탭에는 인증서에 대한 자세한 정보가 제공됩니다. `Thumbprint` 속성은 공백이 제거된 다음 해시 값으로 사용됩니다.  
   
 > [!NOTE]  
 >  이 예에 사용된 해시는 실제 해시가 아닙니다.  

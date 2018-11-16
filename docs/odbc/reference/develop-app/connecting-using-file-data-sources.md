@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856353"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677322"
 ---
 # <a name="connecting-using-file-data-sources"></a>파일 데이터 원본을 사용하여 연결
 파일 데이터 원본에 대 한 연결 정보를.dsn 파일에 저장 됩니다. 결과적으로, 연결 문자열을 단일 사용자가 반복적으로 사용 하거나 적절 한 드라이버를 설치할 경우 여러 사용자가 공유 수 있습니다. 드라이버 이름 (또는 공유할 수 없는 파일 데이터 소스는 경우 다른 데이터 원본 이름)을 포함 하는 파일 및 필요에 따라 연결 문자열을 사용할 수 있는 **SQLDriverConnect**합니다. 드라이버 관리자에 대 한 호출에 대 한 연결 문자열을 빌드합니다 **SQLDriverConnect** .dsn 파일의 키워드에서.  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  파일 데이터 원본에 사용 되는 연결 문자열은.dsn 파일에 지정 된 키워드 및 호출에서 연결 문자열에 지정 된 키워드의 합집합 **SQLDriverConnect**합니다. 키워드.dsn 파일에서 연결 문자열 키워드를 사용 하 여 충돌 하는 경우 드라이버 관리자는 키워드 값을 사용할지 결정 합니다. 자세한 내용은 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

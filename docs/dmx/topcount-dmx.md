@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989858"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601743"
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  그러나 여기서 계속 해야 TopCount를 사용 하는 경우가 있습니다. 예를 들어 DMX 지원 하지 않습니다 합니다 **위쪽** 하위 select 문에서 한정자입니다. 합니다 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 함수 또한 추가 지원 하지 않습니다 **위쪽**.  
   
 ## <a name="examples"></a>예  
- 다음 예제는 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 동일한 결과 반환 하지만 첫 번째 예제에서는 TopCount와 사용 하 고 두 번째 예제 Predict 함수를 사용 합니다.  
+ 다음 예제는 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리를 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 동일한 결과 반환 하지만 첫 번째 예제에서는 TopCount와 사용 하 고 두 번째 예제 Predict 함수를 사용 합니다.  
   
  TopCount의 작동 원리를 이해 하려면 우선 중첩된 테이블만 반환 하는 예측 쿼리를 실행 하는 데 도움이 수 있습니다.  
   

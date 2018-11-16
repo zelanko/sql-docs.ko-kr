@@ -13,21 +13,21 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a8d89adf13e2e377122321fd8e385b96888e699e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665892"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   보안 주체에 일부 권한이 부여 또는 보안 주체를 소유 하는 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
+|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에서 사용 되는 최대 열 ID입니다.||  

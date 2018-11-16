@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994475"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599934"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTrainingCase()
  테스트 데이터 집합의 일부인 사례를 반환 하려면 함수를 사용 [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서 타겟된 메일링 시나리오에서 클러스터링 데이터 마이닝 모델을 사용 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 마이닝 모델을 학습하는 데 사용된 사례만 반환합니다. 또한 학습 사례는 40세 미만의 고객으로 제한됩니다.  
+ 다음 예제에서 타겟된 메일링 시나리오에서 클러스터링 데이터 마이닝 모델을 사용 합니다 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 마이닝 모델을 학습하는 데 사용된 사례만 반환합니다. 또한 학습 사례는 40세 미만의 고객으로 제한됩니다.  
   
 ```  
 SELECT *  

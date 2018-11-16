@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696942"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Windows Server Update Services (WSUS) 구성
 이러한 지침은 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 Analytics Platform System에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
   
-WSUS를 구성 하는 방법에 대 한 자세한 내용은 참조는 [WSUS 단계별 설치 가이드](http://go.microsoft.com/fwlink/?LinkId=202417) WSUS 웹 사이트입니다. WSUS를 구성한 후 참조 [다운로드 및 Microsoft 업데이트 적용 &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) 에 업데이트를 시작 합니다.  
+WSUS를 구성 하는 방법에 대 한 자세한 내용은 참조는 [WSUS 단계별 설치 가이드](https://go.microsoft.com/fwlink/?LinkId=202417) WSUS 웹 사이트입니다. WSUS를 구성한 후 참조 [다운로드 및 Microsoft 업데이트 적용 &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) 에 업데이트를 시작 합니다.  
   
 > [!WARNING]  
 > 이 구성 프로세스 중 오류를 발생 하는 경우 중지 하 고 지원에 문의 합니다. 오류를 무시 하거나 오류가 수신 되는 프로세스를 진행 하지 마십시오.  
@@ -79,7 +79,7 @@ WSUS를 구성 하려면:
   
 4.  업스트림 서버를 선택 합니다.  
   
-    에 **업스트림 서버 선택** 페이지 WSUS 구성 마법사는 선택한 가상 머신 관리 노드에 WSUS 소프트웨어 업데이트를 받을 업스트림 서버에 연결 하는 방법입니다. 업스트림 서버 동기화 할 두 가지 선택 사항이 [Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349) 또는 다른 Windows Server Update Services 서버를 사용 하 여 업데이트를 동기화 합니다.  
+    에 **업스트림 서버 선택** 페이지 WSUS 구성 마법사는 선택한 가상 머신 관리 노드에 WSUS 소프트웨어 업데이트를 받을 업스트림 서버에 연결 하는 방법입니다. 업스트림 서버 동기화 할 두 가지 선택 사항이 [Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349) 또는 다른 Windows Server Update Services 서버를 사용 하 여 업데이트를 동기화 합니다.  
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update를 사용 하 여 업데이트  
   

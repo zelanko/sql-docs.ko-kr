@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662852"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  특정 데이터베이스에 대 한 managed backup을 사용 하도록 설정 하는 것에 대 한 데이터베이스 이름입니다.  
   
  @container_url  
- 백업의 위치를 나타내는 URL입니다. 때 @credential_name 가 null 인 경우이 URL은 Azure Storage에 blob 컨테이너에 대 한 공유 액세스 서명 (SAS) URL 및 백업을 사용 하 여 새로운 블록 blob 기능에 백업 합니다. 자세한 내용은 살펴보시기 [이해 SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)합니다. 때 @credential_name 지정 하면 저장소 계정 URL 이며 백업은 사용 되지 않는 백업 페이지 blob 기능을 사용 합니다.  
+ 백업의 위치를 나타내는 URL입니다. 때 @credential_name 가 null 인 경우이 URL은 Azure Storage에 blob 컨테이너에 대 한 공유 액세스 서명 (SAS) URL 및 백업을 사용 하 여 새로운 블록 blob 기능에 백업 합니다. 자세한 내용은 살펴보시기 [이해 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)합니다. 때 @credential_name 지정 하면 저장소 계정 URL 이며 백업은 사용 되지 않는 백업 페이지 blob 기능을 사용 합니다.  
   
 > [!NOTE]  
 >  이 현재가 매개이 변수에 대 한 SAS URL만 지원 됩니다.  

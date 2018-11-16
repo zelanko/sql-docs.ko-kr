@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d550bbda171fea5cf9cbbd7576ce9705a94f3dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8a93b99317ff927315e996fddae8c2df3b5c50c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683341"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660792"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Enter ContactID: <input type=text name="cid"><br>
 <%  
   else  
 %>  
-<form name="Contacts" action="http://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
+<form name="Contacts" action="https://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
 You may update customer information below.<br><br>  
 <!-- A comment goes here to separate the parts of the application or page. -->  
 <br>  
@@ -115,7 +115,7 @@ You may update customer information below.<br><br>
     ObjXML.setProperty "ServerHTTPRequest", TRUE  
   
     objXML.async=False  
-    objXML.Load("http://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
+    objXML.Load("https://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
     set objCustomer=objXML.documentElement.childNodes.Item(0)  
   
   ' In retrieving data from the database, if a value in the column is NULL there  

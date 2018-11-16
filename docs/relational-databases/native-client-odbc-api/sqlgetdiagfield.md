@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d81731eb933f5f1c35eff3ae358462d90af07f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743331"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675438"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 다음과 같은 추가 진단 필드를 지정 **SQLGetDiagField**합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 **SQLGetDiagField**에 대해 다음과 같은 추가 진단 필드를 지정합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
-|진단 레코드 필드|Description|  
+|진단 레코드 필드|설명|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|오류를 생성하는 저장 프로시저의 줄 번호를 보고합니다. SQL_DIAG_SS_LINE 값은 SQL_DIAG_SS_PROCNAME에서 값을 반환하는 경우에만 의미가 있습니다. 값은 부호 없는 16비트 정수로 반환됩니다.|  
-|SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대 한 정보를 참조 하세요 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)합니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  
-|SQL_DIAG_SS_PROCNAME|필요한 경우 오류를 생성하는 저장 프로시저의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다. 호출 하 여 확인할 수 있습니다 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN의 값을 요청 합니다.|  
+|SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대한 자세한 내용은 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하십시오. 값은 부호 있는 32비트 정수로 반환됩니다.|  
+|SQL_DIAG_SS_PROCNAME|필요한 경우 오류를 생성하는 저장 프로시저의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 달라집니다. SQL_MAX_PROCEDURE_NAME_LEN의 값을 요청하는 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 를 호출하여 값을 확인할 수 있습니다.|  
 |SQL_DIAG_SS_SEVERITY|관련된 오류 메시지의 심각도 수준입니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  
 |SQL_DIAG_SS_SRVNAME|오류가 발생한 서버의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 sqlncli.h의 SQL_MAX_SQLSERVERNAME 매크로에 의해 정의됩니다.|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "47743331"
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetDiagField 함수](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField 함수](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

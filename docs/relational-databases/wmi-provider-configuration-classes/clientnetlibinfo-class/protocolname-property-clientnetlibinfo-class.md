@@ -18,12 +18,12 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52647f8c9bf423ae1a2f72d0749663a78dfe6cb3
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 0306b08efda2809e57cdf277b109ec8cc7187fd3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217431"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677832"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 속성(ClientNetLibInfo 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.ProtocolName [= value]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+ [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

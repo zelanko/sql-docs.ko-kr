@@ -6,12 +6,12 @@ description: SQL Server 데이터베이스에서 데이터를 쉽게 쿼리할 �
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 6506311cd20587ae4db11f99691bcf2639458b18
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 19ca726086355529576d7d47ff825dbe3cac32d8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970334"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699331"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -225,16 +225,16 @@ ms.locfileid: "50970334"
         <h2>Microsoft에 연락하기</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 참여 </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> 참여 </a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 도움말 보기 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 피드백 </a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> 피드백 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 설문 조사 </a> 
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> 설문 조사 </a> 
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> 블로그 </a>

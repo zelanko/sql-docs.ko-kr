@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822111"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603023"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
 부모를 가리키는 절대 URL 문자열을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 현재 **레코드** 개체입니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "47822111"
  가정 폴더 "first"에서 "두 번째" 포함 되어 있습니다. 엽니다는 **레코드** 다음 구문을 사용 하 여 개체:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- 이제 `the` **ParentURL** 속성이 `"http://first"`의 동일 **ActiveConnection**합니다.  
+ 이제 `the` **ParentURL** 속성이 `"https://first"`의 동일 **ActiveConnection**합니다.  
   
- 원본 수도 있습니다 절대 URL 같은 `"http://first/second"`합니다. 합니다 **ParentURL** 속성이 다음 `"http://first"`, 상위 수준 `"second"`합니다.  
+ 원본 수도 있습니다 절대 URL 같은 `"https://first/second"`합니다. 합니다 **ParentURL** 속성이 다음 `"https://first"`, 상위 수준 `"second"`합니다.  
   
  이 속성 경우 null 값일 수 있습니다.  
   

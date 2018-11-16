@@ -6,8 +6,7 @@ ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
@@ -22,19 +21,19 @@ author: josack
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc51ed4b1cdce8e099a6d8929ad55e045af8c016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ebd9b778f48e42c9200e7586983aba801b52e4c
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835431"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51570722"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 리소스 세마포에 동시 쿼리 최적화를 제한 하는 데의 현재 상태를 반환 합니다.
 
-|Column|형식|Description|  
+|Column|형식|설명|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|리소스 관리자에서 리소스 풀 ID|  
 |**name**|**sysname**|게이트 이름 (소규모, 중간 게이트웨이 큰 게이트웨이) 컴파일|

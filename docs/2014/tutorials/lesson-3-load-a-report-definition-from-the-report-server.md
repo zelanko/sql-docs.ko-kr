@@ -11,12 +11,12 @@ ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17d53c7a49afc61d3e43606ac3f805a5b21e6bd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208153"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813876"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3단원: 보고서 서버에서 보고서 정의 로드
   프로젝트를 만들고 RDL 스키마에서 클래스를 생성하면 보고서 서버에서 보고서 정의를 로드할 준비가 됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48208153"
         string reportPath =   
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012";  
   
-        // Retrieve the report defintion   
+        // Retrieve the report definition   
         // from the report server  
         byte[] bytes =   
             _reportService.GetItemDefinition(reportPath);  
@@ -72,7 +72,7 @@ ms.locfileid: "48208153"
         Dim reportPath As String = _  
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012"  
   
-        'Retrieve the report defintion   
+        'Retrieve the report definition   
         'from the report server  
         Dim bytes As Byte() = _  
             m_reportService.GetItemDefinition(reportPath)  

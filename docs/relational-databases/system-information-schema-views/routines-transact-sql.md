@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8022ec474810362b7a0742e014a1db620c28172e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673562"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47857098"
 > [!NOTE]  
 >  ROUTINE_DEFINITION 열은 함수 또는 저장 프로시저를 만든 원본 문을 포함합니다. 이러한 원본 문은 중간 캐리지 리턴을 포함하는 경우가 많습니다. 결과를 텍스트 형식으로 표시하는 응용 프로그램에 이 열을 반환하는 경우에는 ROUTINE_DEFINITION 결과의 중간 캐리지 리턴이 전체 결과 집합의 형식에 영향을 줄 수 있습니다. ROUTINE_DEFINITION 열을 선택하는 경우에는 반드시 중간 캐리지 리턴에 맞게 조정해야 합니다. 예를 들어 결과 집합을 표 형태로 반환하거나 ROUTINE_DEFINITION을 자체 입력란 형식으로 반환해야 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_CATALOG와 동일합니다.|  
 |SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|스키마의 특정 이름입니다.<br /><br /> **\*\* 중요 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "47857098"
 |LAST_ALTERED|**datetime**|함수를 마지막으로 수정한 시간입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [정보 스키마 뷰 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

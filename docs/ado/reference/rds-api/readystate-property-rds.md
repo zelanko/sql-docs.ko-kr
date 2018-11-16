@@ -14,23 +14,23 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f122c178a663c1080093d1f6d391a4869c3ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632571"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599904"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 속성(RDS)
 진행률을 나타냅니다를 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체에 데이터를 검색 하는 대로 해당 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 다음 값 중 하나를 반환 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|현재 쿼리가 계속 실행 되 고 인출 된 행이 없습니다. 합니다 **DataControl** 개체의 **Recordset** 를 사용 하기 위해 사용할 수 없습니다.|  
 |**adcReadyStateInteractive**|현재 쿼리에 의해 검색 되는 행의 초기 집합에 저장 된 합니다 **DataControl** 개체의 **레코드 집합** 되며 사용 하기 위해 사용할 수 있습니다. 나머지 행 반입 되 고 계속 합니다.|  

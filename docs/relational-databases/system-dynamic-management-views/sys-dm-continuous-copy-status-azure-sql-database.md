@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 407af081f09fb773a8a3a4ee7ccc7e3c42ee3229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655941"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665942"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47655941"
 SQL Database V12를 사용 하는 경우 사용 해야 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (있으므로 *sys.dm_continuous_copy_status* V11에만 적용 됩니다).
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  
@@ -62,6 +62,6 @@ SQL Database V12를 사용 하는 경우 사용 해야 [sys.dm_geo_replication_l
   
 ## <a name="see-also"></a>관련 항목  
  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [활성 지역 복제 저장 프로시저 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [활성 지역 복제 저장 프로시저 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

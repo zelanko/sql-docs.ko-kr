@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747681"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350188"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 확장
+# <a name="visual-c-extensions-for-ado"></a>ADO용 Visual C++ 확장
 Visual c + + ADO 프로그래밍의 기본 메서드를 사용 하는 **#import** 지시문에 설명 된 대로 [Visual c + + ADO 프로그래밍 Microsoft](../../../ado/guide/appendixes/visual-c-ado-programming.md)합니다. 그러나 이전 버전의 ADO Visual c + +를 사용 하 여 프로그래밍 하는 대체 방법을와 함께 제공 되는: Visual c + + 확장 합니다. 이 섹션에서는 Visual c + + 확장 코드를 유지 관리 해야 하는 사람에 게이 기능을 설명 하지만 #을 사용 하 여 새 ADO 코드를 작성 해야**가져올**합니다.
 
  가장 작업 Visual c + + 프로그래머에 게 발생 하는 c + + 데이터 형식에 VARIANT 데이터 형식을 반환 하 고 클래스 또는 구조체에서 변환된 된 데이터를 저장 하는 데이터 변환는 ADO 사용 하 여 데이터를 검색 하는 경우 중 하나입니다. 번거로운 뿐만 VARIANT 데이터 형식을 통해 데이터를 c + + 검색 성능도 저하 시킵니다.

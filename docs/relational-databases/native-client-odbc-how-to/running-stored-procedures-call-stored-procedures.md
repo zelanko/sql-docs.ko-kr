@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b6c57b37948110bca985994686e43f83de6e30b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce757524bd43c403e89aaa1ebf0461c8e31ff381
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595401"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663412"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>저장 프로시저 실행 - 저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47595401"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  호출 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저 반환 값 (있는 경우).  
+2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
-3.  사용 하 여 문을 실행할 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)합니다.  
+3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 사용하여 문을 실행합니다.  
   
 > [!NOTE]  
 >  응용 프로그램이 ODBC CALL 이스케이프 시퀀스가 아닌 Transact-SQL EXECUTE 구문을 사용하여 프로시저를 제출하는 경우 SQL Server ODBC 드라이버는 프로시저 호출을 RPC 대신 SQL 문으로 SQL Server에 전달합니다. 또한 Transact-SQL EXECUTE 문을 사용하면 출력 매개 변수가 반환되지 않습니다.  

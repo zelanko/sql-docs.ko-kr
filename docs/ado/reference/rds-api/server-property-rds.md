@@ -16,12 +16,12 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680624"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600183"
 ---
 # <a name="server-property-rds"></a>Server 속성(RDS)
 인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47680624"
  설정할 수 있습니다 합니다 **Server** 의 OBJECT 태그에서 디자인 타임에 속성을[rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 또는 런타임에 코드를 스크립팅 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="syntax"></a>구문  
  **HTTP**  
@@ -49,7 +49,7 @@ ms.locfileid: "47680624"
 ```  
   
 DataControl  
-.Server="http://  
+.Server="https://  
 awebsrvr:port  
 "  
   
@@ -112,7 +112,7 @@ DataControl.Server=""
  A **문자열** 서버에 있으면 원격 컴퓨터 또는 빈 문자열 서버가 로컬 컴퓨터의 경우는 인터넷 또는 인트라넷 경로 또는 컴퓨터 이름을 포함 하는 값입니다.  
   
  *port*  
- (선택 사항) IIS를 실행 하는 서버에 연결 하는 데 사용 되는 포트입니다. 포트 번호는 Internet Explorer에서 설정 됩니다 (에 **뷰** 메뉴에서 클릭 **옵션**를 선택한 후는 **연결** 탭) 또는 IIS에서.  
+ 선택 사항입니다. IIS를 실행 하는 서버에 연결 하는 데 사용 되는 포트입니다. 포트 번호는 Internet Explorer에서 설정 됩니다 (에 **뷰** 메뉴에서 클릭 **옵션**를 선택한 후는 **연결** 탭) 또는 IIS에서.  
   
  *DataControl*  
  나타내는 개체 변수는 **rds. DataControl** 개체입니다.  

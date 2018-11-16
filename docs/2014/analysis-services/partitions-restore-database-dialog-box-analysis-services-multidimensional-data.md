@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164393"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639870"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>파티션(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] **데이터베이스 복원** 대화 상자의 **파티션** 페이지를 사용하여 로컬 파티션을 복원할 위치를 지정하고 원격 파티션 복원 여부와 원격 파티션 복원 시 사용할 원격 백업 파일을 지정할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48164393"
   
  이 옵션을 선택하면 활성화되는 다음 표는 각 로컬 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |**Cube**|로컬 파티션이 포함된 큐브 이름을 표시합니다.|  
 |**측정값 그룹**|로컬 파티션이 포함된 측정값 그룹 이름을 표시합니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "48164393"
   
  이 옵션을 선택하면 활성화되는 다음 표는 각 로컬 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |**Server**|원격 파티션을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 이름을 표시합니다.|  
 |**데이터 원본**|백업 파일에서 원격 파티션이 포함된 데이터베이스를 나타내는 데이터 원본 이름을 표시합니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "48164393"
 |**...**|**원격 파티션 - 고급 설정** 대화 상자를 표시하고 데이터 원본의 연결 문자열과 같은 원격 파티션 복원에 대한 고급 옵션을 수정하려면 클릭합니다. **원격 파티션 - 고급 설정** 대화 상자에 대한 자세한 내용은 [원격 파티션 - 고급 설정 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 복원 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [데이터베이스 복원 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [일반 &#40;데이터베이스 복원 대화 상자&#41; &#40;Analysis Services-다차원 데이터&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services 데이터베이스 백업 및 복원](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

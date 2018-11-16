@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a844bf7f3e8ab474b9eb9c0cfa85b2b75ffcadc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 372a4859c80fc58dff37080e9383ffeebc1721a1
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776221"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559394"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47776221"
   이 항목에서는 테이블 반환 매개 변수 행 집합 개체와 연관된 OLE DB 속성 및 속성 집합에 대한 정보를 제공합니다.  
   
 ## <a name="properties"></a>속성  
- 다음은 테이블 반환 매개 변수 행 집합 개체에 대한 IRowsetInfo::GetPropeties 메서드를 통해 표시되는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 설정 하려고 iopenrowset:: Openrowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 통해 속성의 기본이 아닌 값으로 메서드는 오류가 발생 하며 개체가 만들어질 수 있습니다.  
+ 다음은 테이블 반환 매개 변수 행 집합 개체에서 irowsetinfo:: Getproperties 메서드를 통해 노출 하는 속성 목록입니다. 모든 테이블 반환 매개 변수 행 집합 속성은 읽기 전용입니다. 따라서 설정 하려고 iopenrowset:: Openrowset 또는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 통해 속성의 기본이 아닌 값으로 메서드는 오류가 발생 하며 개체가 만들어질 수 있습니다.  
   
  테이블 반환 매개 변수 행 집합 개체에 구현되지 않은 속성은 다음 목록에 없습니다. 전체 속성 목록을 보려면 Windows Data Access Components의 OLE DB 설명서를 참조하십시오.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47776221"
 |SSPROP_COL_COMPUTED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 이러한 속성은 ISSCommandWithParamters::GetParameterProperties에 대 한 호출에서 테이블 반환 매개 변수 형식 정보를 검색 하는 동안 읽히고 소비자 및 테이블 반환 매개 변수에 대 한 특정 속성을 설정 하는 동안 소비자가 설정 isscommandwithparameters:: Setparameterproperties를 통해.  
+ 이러한 속성은 isscommandwithparameters:: Getparameterproperties에 대 한 호출에서 테이블 반환 매개 변수 형식 정보를 검색 하는 동안 읽히고 소비자 및 테이블 반환 매개 변수에 대 한 특정 속성을 설정 하는 동안 소비자가 설정 isscommandwithparameters:: Setparameterproperties를 통해.  
   
  다음 표에서는 이러한 속성에 대해 자세히 설명합니다.  
   

@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100204"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605423"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
 
@@ -26,7 +26,7 @@ ms.locfileid: "50100204"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- 릴리스 정보는 [SQL Server 2016 릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=398124)를 참조하세요.  
+ 릴리스 정보는 [SQL Server 2016 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=398124)를 참조하세요.  
   
  **문서 내용:**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50100204"
   
  **SharePoint  2010:**  
   
--   기존 설치가 SharePoint 2010을 실행 중인 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. 자세한 내용은 [Microsoft SharePoint 2010용 서비스 팩 2](http://www.microsoft.com/download/details.aspx?id=39672)를 참조하세요. PowerShell 명령 `(Get-SPfarm).BuildVersion.ToString()` 을 사용하여 버전을 확인하십시오. 출시 날짜에 대한 빌드 버전을 참조하려면 [SharePoint 2010 빌드 번호](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)를 참조하세요.  
+-   기존 설치가 SharePoint 2010을 실행 중인 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. 자세한 내용은 [Microsoft SharePoint 2010용 서비스 팩 2](https://www.microsoft.com/download/details.aspx?id=39672)를 참조하세요. PowerShell 명령 `(Get-SPfarm).BuildVersion.ToString()` 을 사용하여 버전을 확인하십시오. 출시 날짜에 대한 빌드 버전을 참조하려면 [SharePoint 2010 빌드 번호](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)를 참조하세요.  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> 기존 SharePoint 2013 팜 업그레이드  
  SharePoint 2013에 배포된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 업그레이드하려면 다음을 수행하십시오.  
@@ -92,7 +92,7 @@ ms.locfileid: "50100204"
   
 2.  서버를 다시 시작합니다.  
   
-3.  SharePoint 2013 팜의 각 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 실행하여 데이터 공급자를 설치합니다. 데이터베이스 공급자를 업그레이드하는 SQL 서버 설치 마법사를 실행한 서버는 예외입니다. 자세한 내용은 [Microsoft SharePoint 2013용 Microsoft SQL Server 2014 파워 피벗 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=42300) 및 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
+3.  SharePoint 2013 팜의 각 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능(**spPowerPivot.msi**)을 실행하여 데이터 공급자를 설치합니다. 데이터베이스 공급자를 업그레이드하는 SQL 서버 설치 마법사를 실행한 서버는 예외입니다. 자세한 내용은 [Microsoft SharePoint 2013용 Microsoft SQL Server 2014 파워 피벗 다운로드](https://www.microsoft.com/download/details.aspx?id=42300) 및 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
 4.  **SharePoint 2013 팜의 각 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행** 하여 추가 기능이 설치된 업데이트된 솔루션 파일을 사용하여 SharePoint 팜을 구성합니다. 이 단계에서는 SharePoint 중앙 관리를 사용할 수 없습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100204"
   
  ![SharePoint 2010용 파워 피벗 업그레이드](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "SharePoint 2010용 파워 피벗 업그레이드")  
   
-1.  [Microsoft SharePoint 2010용 서비스 팩 2](http://www.microsoft.com/download/details.aspx?id=39672) 를 다운로드하여 팜의 모든 서버에 적용합니다. SharePoint SP2가 성공적으로 설치되었는지 확인합니다. 중앙 관리의 업그레이드 및 마이그레이션 페이지에서 제품 및 패치 설치 상태 확인 페이지를 열고 SP2와 관련된 상태 메시지를 확인합니다.  
+1.  [Microsoft SharePoint 2010용 서비스 팩 2](https://www.microsoft.com/download/details.aspx?id=39672) 를 다운로드하여 팜의 모든 서버에 적용합니다. SharePoint SP2가 성공적으로 설치되었는지 확인합니다. 중앙 관리의 업그레이드 및 마이그레이션 페이지에서 제품 및 패치 설치 상태 확인 페이지를 열고 SP2와 관련된 상태 메시지를 확인합니다.  
   
 2.  SharePoint 2010 관리 Windows 서비스가 실행되고 있는지 확인합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "50100204"
   
          통합 문서를 최신 버전으로 덮어쓰려면 **예** 를 클릭합니다. 그렇지 않으면 **아니요** 를 클릭하여 홈 페이지로 돌아갑니다. 통합 문서를 다른 위치에 저장하여 복사본을 만든 다음 계속할 준비가 되면 이 단계로 돌아옵니다.  
   
-         대시보드에 사용된 통합 문서 사용자 지정에 대한 자세한 내용은 [Power Pivot 관리 대시보드 사용자 지정](http://go.microsoft.com/fwlink/?linkID=229639)을 참조하세요.  
+         대시보드에 사용된 통합 문서 사용자 지정에 대한 자세한 내용은 [Power Pivot 관리 대시보드 사용자 지정](https://go.microsoft.com/fwlink/?linkID=229639)을 참조하세요.  
   
     5.  태스크 목록에서 동작을 검토하고 도구에서 수행하지 않으려는 동작을 제외합니다. 모든 동작은 기본적으로 포함됩니다. 동작을 제거하려면 태스크 목록에서 동작을 선택한 다음 매개 변수 페이지에서 **태스크 목록에 이 동작 포함** 확인란의 선택을 취소합니다.  
   
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |서비스가 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 모든 컴퓨터에서 실행되고 있는지 확인합니다.|[SharePoint용 파워 피벗 서버 시작 또는 중지](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |사이트 모음 수준에서 기능이 활성화되어 있는지 확인합니다.|[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |통합 문서를 연 다음 쿼리를 시작하는 필터나 슬라이서를 클릭하여 개별 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서가 제대로 로드되는지 확인합니다.|하드 드라이브에 캐시된 파일이 있는지 확인합니다. 캐시된 파일이 있으면 실제 해당 서버에 데이터 파일이 로드된 것입니다. c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup 폴더에서 캐시된 파일을 찾습니다.|  
-|데이터 새로 고침에 대해 구성된 선택한 통합 문서에서 새로 고침을 테스트합니다.|데이터 새로 고침을 테스트하는 가장 쉬운 방법은 데이터 새로 고침이 즉시 실행되도록 **가능한 빨리 새로 고치십시오.** 확인란을 선택하여 데이터 새로 고침 일정을 수정하는 것입니다. 이 단계는 현재 통합 문서에 대한 데이터 새로 고침 성공 여부를 확인합니다. 자주 사용하는 다른 통합 문서에 대해 이 단계를 반복하여 데이터 새로 고침이 작동하는지 확인합니다. 데이터 새로 고침 예약에 대한 자세한 내용은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
+|데이터 새로 고침에 대해 구성된 선택한 통합 문서에서 새로 고침을 테스트합니다.|데이터 새로 고침을 테스트하는 가장 쉬운 방법은 데이터 새로 고침이 즉시 실행되도록 **가능한 빨리 새로 고치십시오.** 확인란을 선택하여 데이터 새로 고침 일정을 수정하는 것입니다. 이 단계는 현재 통합 문서에 대한 데이터 새로 고침 성공 여부를 확인합니다. 자주 사용하는 다른 통합 문서에 대해 이 단계를 반복하여 데이터 새로 고침이 작동하는지 확인합니다. 데이터 새로 고침 예약에 대한 자세한 내용은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
 |이후에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드의 데이터 새로 고침 보고서에서 데이터 새로 고침 오류가 없는지 모니터링합니다.|[Power Pivot 관리 대시보드 및 사용 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설정 및 기능을 구성하는 방법은 [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)을 참조하세요.  
   
- 설치 후 구성 태스크를 모두 안내하는 단계별 지침은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)을 참조하세요.  
+ 설치 후 구성 태스크를 모두 안내하는 단계별 지침은 [초기 구성(SharePoint용 파워 피벗)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [SharePoint 2010용 파워 피벗 설치](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

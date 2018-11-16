@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: f277ca5984523ea25a0a7a8f02cde025d6e14789
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675462"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
@@ -38,10 +38,10 @@ SQL Server 2017은 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server
 
 | 플랫폼 | 지원 되는 버전 | 가져오기
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 또는 7.4 | [RHEL 7.4 가져오기](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 또는 7.4 | [RHEL 7.4 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 받기](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ubuntu 16.04를 가져오기](http://www.ubuntu.com/download/server)
-| **Docker 엔진** | 1.8+ | [Docker 가져오기](http://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Ubuntu 16.04를 가져오기](https://www.ubuntu.com/download/server)
+| **Docker 엔진** | 1.8+ | [Docker 가져오기](https://www.docker.com/products/overview)
 
 Microsoft 배포와 OpenShift 및 Kubernetes를 사용 하 여 SQL Server 컨테이너 관리를 지원 합니다.
 

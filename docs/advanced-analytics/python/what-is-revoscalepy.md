@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8b2e217f599112019e96f3e20b727456b9da607f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697571"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>SQL Server Machine Learning에서 revoscalepy를 소개합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ SQL Server에서 Python 사용 하 여 machine learning을 위해 지원 되는 
 
 다음 기계 학습 알고리즘 및 RevoScaleR의 요약 함수는 CTP 2.0부터 SQL Server 2017에 포함 됩니다.
 
-| 기능| Description|참고|
+| 기능| 설명|참고|
 | ------ | ------ |------ |
 |`rx_btrees` | 적합된 한 stochastic 그라데이션 승격 의사 결정 트리|`rx_btrees_ex` CTP 2.0|
 |`rx_dforest` | 적합된 한 분류 및 회귀 의사 결정 포리스트|`rx_dforest_ex` CTP 2.0|
@@ -89,7 +89,7 @@ SQL Server에서 Python 사용 하 여 machine learning을 위해 지원 되는 
 
 새로운 기계 학습 알고리즘의 Python 버전도 제공 됩니다 [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| 기능| Description|
+| 기능| 설명|
 | ------ | ------ |
 |`rx_fast_forest` |의사 결정 포리스트 모델 만들기|
 |`rx_fast_linear` | 확률적 이중 좌표 경사를 사용 하 여 선형 회귀|
@@ -163,7 +163,7 @@ Python 코드에서 SQL Server를 실행 하려면 설치 해야 SQL Server 2017
 
 모듈을 가져오고를 호출 하 여 모든 Python 함수에 도움말을 볼 수 있습니다 `help()`합니다. 예를 들어 실행 `help(revoscalepy)` Python IDE에서 해당 서명 사용 하 여 revoscalepy 모듈에서 모든 함수의 목록을 반환 합니다.
 
-Visual Studio 용 Python 도구를 사용 하는 경우에 구문 및 인수 도움말을 보려면 IntelliSense를 사용할 수 있습니다. 자세한 내용은 [Visual Studio의 Python 지원](http://docs.microsoft.com/visualstudio/python/installation), 및 Visual Studio의 버전과 일치 하는 확장을 다운로드 합니다. Visual Studio 2015 및 2017을 사용 하 여 Python 또는 이전 버전을 사용할 수 있습니다.
+Visual Studio 용 Python 도구를 사용 하는 경우에 구문 및 인수 도움말을 보려면 IntelliSense를 사용할 수 있습니다. 자세한 내용은 [Visual Studio의 Python 지원](https://docs.microsoft.com/visualstudio/python/installation), 및 Visual Studio의 버전과 일치 하는 확장을 다운로드 합니다. Visual Studio 2015 및 2017을 사용 하 여 Python 또는 이전 버전을 사용할 수 있습니다.
 
 ## <a name="see-also"></a>관련 항목
 

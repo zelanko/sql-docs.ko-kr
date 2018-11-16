@@ -12,12 +12,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 72df6a9da82e421dfb921501c110d363aa54a8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781563"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666822"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Oracle용 SSMA 클라이언트 설치(OracleToSQL)
 SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  
@@ -34,7 +34,7 @@ SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 �
   
 이 항목에서는 설치 필수 구성 요소 및 SSMA 설치에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 SSMA는 Oracle 9 및 이후 버전의 모든 버전을 사용 하 여 작동 하도록 설계 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -43,7 +43,7 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 이상이 있습니다.  
   
--   합니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0 이상이 있습니다. 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다. 가져올 수도 있습니다는 [.NET Framework 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=48882)합니다.  
+-   합니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0 이상이 있습니다. 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다. 가져올 수도 있습니다는 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)합니다.  
   
 -   Oracle 클라이언트 9.0 또는 이후 버전 및 마이그레이션하려는 Oracle 데이터베이스에 연결 합니다. Oracle 클라이언트 버전으로 동일한 버전 또는 Oracle 데이터베이스 버전 보다 이후 버전 이어야 합니다.  
   
@@ -54,7 +54,7 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
 -   4GB RAM이 권장 됩니다.  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>용 SSMA는 Oracle 클라이언트 설치  
-SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](http://aka.ms/ssmafororacle)합니다.  
+SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](https://aka.ms/ssmafororacle)합니다.  
   
 최신 버전을 다운로드 한 후 SSMA를 설치 하기 전에 설치 파일에서 추출 해야 합니다.  
   

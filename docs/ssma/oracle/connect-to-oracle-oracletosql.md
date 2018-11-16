@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681111"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle에 연결(OracleToSQL)
 사용 된 **Connect to Oracle** 마이그레이션하려는 Oracle 데이터베이스에 연결 대화 상자.  
@@ -70,7 +70,7 @@ SSMA가 Oracle 데이터베이스에 연결 하는 데 사용할 사용자 이�
   
 연결 문자열 매개 변수 이름 / 값 쌍으로 구성 됩니다.  
   
--   OLE DB 연결 문자열 정보를 참조 하세요 [Microsoft OLE DB Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) MSDN 라이브러리 문서.  
+-   OLE DB 연결 문자열 정보를 참조 하세요 [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) MSDN 라이브러리 문서.  
   
 SSMA 연결 문자열의 경우 항상 공급자 매개 변수를 포함 합니다. 또한 Oracle에 연결할 때 포트 매개 변수를 포함 해야 합니다.  
   

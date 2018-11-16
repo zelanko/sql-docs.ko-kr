@@ -13,31 +13,31 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 385b4b9849a43a9b89b2f09f0609c08212860c86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf20a7318236280e7b861a5fbd21ea8315d288d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838171"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599808"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션은 필수입니다. 이전 예제에서 알 수 있듯이, ADO 데이터 값의 의미 체계를 업데이트 하기 위한 최대한 유지 하기 위해 각 열에 대 한 자세한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열 및 속해 있는 행 집합의 이름입니다. 최소 스키마의 예는 다음과 같습니다.  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
-    xmlns:rs="urn:schemas-microsoft-com:rowset"  
-    xmlns:z="#RowsetSchema">  
-  <s:Schema id="RowsetSchema">  
-    <s:ElementType name="row" content="eltOnly">  
-      <s:AttributeType name="ShipperID"/>  
-      <s:AttributeType name="CompanyName"/>  
-      <s:AttributeType name="Phone"/>  
-      <s:Extends type="rs:rowbase"/>  
-    </s:ElementType>  
-  </s:Schema>  
-  <rs:data>  
+    xmlns:rs="urn:schemas-microsoft-com:rowset"  
+    xmlns:z="#RowsetSchema">  
+  <s:Schema id="RowsetSchema">  
+    <s:ElementType name="row" content="eltOnly">  
+      <s:AttributeType name="ShipperID"/>  
+      <s:AttributeType name="CompanyName"/>  
+      <s:AttributeType name="Phone"/>  
+      <s:Extends type="rs:rowbase"/>  
+    </s:ElementType>  
+  </s:Schema>  
+  <rs:data>  
 ...  
-  </rs:data>  
+  </rs:data>  
 </xml>  
 ```  
   
@@ -79,31 +79,31 @@ ms.locfileid: "47838171"
   
 ```  
 <s:Schema id="RowsetSchema">  
-  <s:ElementType name="row" content="eltOnly">  
-    <s:attribute type="s1"/>  
-    <s:attribute type="CompanyName"/>  
-    <s:attribute type="s3"/>  
-    <s:extends type="rs:rowbase"/>  
-  </s:ElementType>  
-  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
-    rs:maydefer="true" rs:writeunknown="true">  
-    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
-      rs:fixedlength="true" rs:maybenull="true"/>  
-  </s:AttributeType>  
+  <s:ElementType name="row" content="eltOnly">  
+    <s:attribute type="s1"/>  
+    <s:attribute type="CompanyName"/>  
+    <s:attribute type="s3"/>  
+    <s:extends type="rs:rowbase"/>  
+  </s:ElementType>  
+  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
+    rs:maydefer="true" rs:writeunknown="true">  
+    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
+      rs:fixedlength="true" rs:maybenull="true"/>  
+  </s:AttributeType>  
 </s:Schema>  
 <rs:data>  
-  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
+  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
 </rs:data>  
 ```  
   
  에 대 한 별칭이 없는 정의 되어 있기 때문에 마찬가지로 `CompanyName` 이전 예에서 `CompanyName` 문서 전체에서 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 사용 하 여 열 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식에 선언적 가이드의 데이터 형식 섹션을 참조 합니다 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체가에 직접 dt: type 특성을 지정 하거나 방법 열 정의의 중첩 된 요소로 사용 합니다. 예:  
+ Dt: type 특성을 사용 하 여 열 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식에 선언적 가이드의 데이터 형식 섹션을 참조 합니다 [W3C XML 데이터 사양](https://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체가에 직접 dt: type 특성을 지정 하거나 방법 열 정의의 중첩 된 요소로 사용 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 <s:AttributeType name="Phone" >  
-  <s:datatype dt:type="string"/>  
+  <s:datatype dt:type="string"/>  
 </s:AttributeType>  
 ```  
   
@@ -127,12 +127,12 @@ ms.locfileid: "47838171"
   
 <!—- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
+    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
 <!—- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" />  
+    <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
 <!—- 4. Integer -->  
@@ -146,10 +146,10 @@ ms.locfileid: "47838171"
   
 ```  
 <s:AttributeType name="ShipperID">  
-  <s:datatype dt:type="int" dt:maxLength="4"/>  
+  <s:datatype dt:type="int" dt:maxLength="4"/>  
 </s:AttributeType>  
 <s:AttributeType name="CompanyName">  
-  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
+  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
 </s:AttributeType>  
 ```  
   

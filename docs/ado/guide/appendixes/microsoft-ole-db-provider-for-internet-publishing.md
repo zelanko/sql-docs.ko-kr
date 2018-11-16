@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e780efde72007d9ed4f1b701cde220a0f9be4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688121"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350034"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 게시 개요
 Microsoft OLE DB Provider for Internet Publishing는 ADO를 Microsoft FrontPage 또는 Microsoft Internet Information Server 제공한 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등 웹 원본 파일이 포함 됩니다.
@@ -28,7 +28,7 @@ Microsoft OLE DB Provider for Internet Publishing는 ADO를 Microsoft FrontPage 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  이 공급자에 연결을 설정 합니다 *공급자* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -37,19 +37,19 @@ MSDAIPP.DSO
 ## <a name="typical-connection-string"></a>일반적인 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은:
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  -또는-
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  문자열을 이러한 키워드 이루어져 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|인터넷 게시용 OLE DB Provider를 지정합니다.|
 |**데이터 원본** -또는- **URL**|파일 또는 웹 폴더에 게시 하는 디렉터리의 URL을 지정 합니다.|

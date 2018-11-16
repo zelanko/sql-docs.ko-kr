@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700212"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System에서 소프트웨어 서비스
 이 섹션에는 소프트웨어 서비스 분석 플랫폼 시스템 어플라이언스, WSUS 및 Analytics Platform System 핫픽스를 포함 하 여에 대 한 요구 사항을 요약 합니다.  
   
 ## <a name="Basics"></a>소프트웨어 서비스 기본 정보  
-**WSUS:** 분석 플랫폼 시스템 어플라이언스 업데이트를 Windows Server Update Services (WSUS)에서 수신 하도록 구성 해야 합니다. 이러한 업데이트에는 어플라이언스 소프트웨어의 중요 한 변경 내용을 포함 합니다. 를 구성한 후 많은 업데이트는 자동으로 설치 됩니다 및 실습 관리가 필요 하지 않습니다. WSUS 업데이트 하는 동안 일반적으로 구성 되는 [구성 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md) 단계 새 어플라이언스 설치 중 수행 합니다. 그렇지 않은 경우이 구성 단계를 나중에 수행할 수 있습니다. WSUS에 대 한 내용은 참조는 [WSUS 웹 사이트 가이드](http://go.microsoft.com/fwlink/?LinkId=202417)합니다.  
+**WSUS:** 분석 플랫폼 시스템 어플라이언스 업데이트를 Windows Server Update Services (WSUS)에서 수신 하도록 구성 해야 합니다. 이러한 업데이트에는 어플라이언스 소프트웨어의 중요 한 변경 내용을 포함 합니다. 를 구성한 후 많은 업데이트는 자동으로 설치 됩니다 및 실습 관리가 필요 하지 않습니다. WSUS 업데이트 하는 동안 일반적으로 구성 되는 [구성 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md) 단계 새 어플라이언스 설치 중 수행 합니다. 그렇지 않은 경우이 구성 단계를 나중에 수행할 수 있습니다. WSUS에 대 한 내용은 참조는 [WSUS 웹 사이트 가이드](https://go.microsoft.com/fwlink/?LinkId=202417)합니다.  
   
 **핫픽스:** 또한 Analytics Platform System 핫픽스를 적용 해야 할 수 있습니다. A *핫픽스* Analytics Platform System 소프트웨어를 사용 하 여 문제를 해결 하는 특정 고객에 대해 만든 소프트웨어 업데이트입니다. 각 핫픽스는 고객 관련 문제에 대 한 수정 프로그램을 설치 하는 실행 파일. 또한 각 핫픽스는 Windows, SQL Server 및 Analytics Platform System에 대 한 모든 이전에 릴리스된 소프트웨어 업데이트의 누적 포함 되어 있습니다. 핫픽스를 설치 해야 할 경우 Microsoft 지원으로 핫픽스 및 지침을 사용 하 여 제공 합니다.  
   

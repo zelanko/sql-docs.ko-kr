@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735525"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600013"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화
 전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입 합니다.  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. 레코드 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL에서 볼 수 있으면 열; 아직 존재 하지 않는 경우 만들어집니다. 교체 해야 하는 "http://servername/foldername/" 환경에서 올바른 URL을 사용 하 여 합니다.  
+ 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. 레코드 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL에서 볼 수 있으면 열; 아직 존재 하지 않는 경우 만들어집니다. 교체 해야 하는 "https://servername/foldername/" 환경에서 올바른 URL을 사용 하 여 합니다.  
   
  레코드 집합 개체 `grs`, 레코드의 자식에 대해 열려 `grec`합니다. 그런 다음 `lstMain` URL에 게시 된 리소스 파일 이름으로 채워집니다.  
   

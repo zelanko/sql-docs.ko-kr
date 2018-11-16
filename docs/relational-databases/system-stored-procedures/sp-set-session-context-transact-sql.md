@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d278e7540ef27e4c6041406bc7c4011976a5a213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832761"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811874"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47832761"
 ## <a name="syntax"></a>구문  
   
 ```  
-sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'  
+sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'  
     [ , [ @read_only = ] { 0 | 1 } ]  
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @key=] '키'  
+ [ @key=] N'key'  
  키 설정 되는 형식의 **sysname**합니다. 최대 키 크기는 128 바이트입니다.  
   
  [ @value=] 'value'  
@@ -58,7 +58,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## <a name="remarks"></a>Remarks  
  다른 저장된 프로시저와 같이 리터럴 및 변수 (not 식 또는 함수 호출)만 매개 변수로 전달할 수 있습니다.  
   
- 세션 컨텍스트의 총 크기는 256kb로 제한 합니다. 이 제한을 초과 하는 값 집합에는 문이 실패 합니다. 전체 메모리 사용량을 모니터링할 수 있습니다 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)합니다.  
+ 세션 컨텍스트의 총 크기는 1MB로 제한 합니다. 이 제한을 초과 하는 값을 설정 하는 경우 문이 실패 합니다. 전체 메모리 사용량을 모니터링할 수 있습니다 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)합니다.  
   
  쿼리하여 메모리의 전반적인 사용량을 모니터링할 수 있습니다 [sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 다음과 같습니다. `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
@@ -66,14 +66,14 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  다음 예제에서는 설정 하 고 다음 값이 영어 언어 라는 세션 컨텍스트 키를 반환 하는 방법을 보여 줍니다.  
   
 ```  
-EXEC sp_set_session_context 'language', 'English';  
+EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
  다음 예에서는 선택적 읽기 전용 플래그의 사용을 보여 줍니다.  
   
 ```  
-EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
+EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

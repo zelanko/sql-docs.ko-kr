@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c859de289a9f93a23702c63bd50269bb0881b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714991"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350507"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 모든 데이터 공급자에서 상대적으로 균일 한 기능입니다.
@@ -31,7 +31,7 @@ OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지�
 ## <a name="keyword"></a>키워드
  이 서비스 구성 요소를 호출 하려면 설정 합니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**합니다.
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -41,7 +41,7 @@ recordset.CursorLocation=adUseClient
 
  커서 서비스 호출 된 후에 일부 동적 속성을 변경 해도 기본 데이터 원본에 표시 되지 않습니다. 예를 들어 설정를 *명령 제한 시간* 속성을 **레코드 집합** 기본 데이터 공급자에 표시 되지 것입니다.
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  기본 데이터 공급자가 지원 되는 경우에 동적 속성 DBPROP_SERVERDATAONINSERT 커서 서비스에서 지원 되지 않습니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |자동 다시 계산 (DBPROP_ADC_AUTORECALC)|이 값을 얼마나 자주 나타냅니다 Data Shaping Service를 사용 하 여 만든 레코드 집합에 대 한 계산 및 집계 열이 계산 됩니다. 기본값 (값 = 1) Data Shaping Service 값이 변경 되었는지 확인 될 때마다 다시 계산 합니다. 값이 0 이면 계층을 처음으로 빌드될 때 계산 또는 집계 열만 계산 됩니다.|
 |일괄 처리 크기 (DBPROP_ADC_BATCHSIZE)|데이터 저장소에 전송 되기 전에 일괄 처리할 수 있는 update 문의 수를 나타냅니다. 일괄 처리에서 더 많은 문이 데이터에 더 적은 왕복을 저장합니다.|
@@ -75,7 +75,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  설정 하거나 인덱스 이름을 지정 하 여 동적 속성을 검색할 수도 있습니다는 **속성** 컬렉션입니다. 예를 들어, get 및 현재 값을 인쇄 합니다 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 동적 속성을 다음 새 값을 다음과 같이 설정 합니다.
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```
@@ -83,7 +83,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>기본 제공 속성 동작
  OLE DB에 대 한 커서 서비스는 특정 기본 제공 속성의 동작을도 영향을 줍니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형의 보완을 **레코드 집합**합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|에 대 한 사용 가능한 잠금의 종류를 보완을 **레코드 집합**합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|

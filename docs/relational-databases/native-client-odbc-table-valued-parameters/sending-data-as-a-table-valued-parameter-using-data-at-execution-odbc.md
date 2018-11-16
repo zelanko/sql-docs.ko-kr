@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b704980c39a93979df74c6bbdb0ce9b04d3bec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678052"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +188,7 @@ from @Items
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 하나의 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -376,7 +376,7 @@ EXIT:
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 여러 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -583,6 +583,6 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [ODBC 테이블 반환 매개 변수 프로그래밍 예제](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [ODBC 테이블 반환 매개 변수 프로그래밍 예제](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

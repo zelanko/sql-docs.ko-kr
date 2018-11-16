@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663273"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47633481"
 |percent_complete|**int**|완료된 작업의 백분율입니다. 값 연속 되지 않으며 유효한 값은 아래 나열 됩니다. NULL이 아닙니다.<br/><br/>0 = 작업이 시작 되지 않음<br/>50 = 작업이 진행 중<br/>100 = 작업 완료|  
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
 |error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
-|error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도 대 한 자세한 내용은 참조 하세요. [데이터베이스 엔진 오류 심각도](http://go.microsoft.com/fwlink/?LinkId=251052)합니다.|  
+|error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도 대 한 자세한 내용은 참조 하세요. [데이터베이스 엔진 오류 심각도](https://go.microsoft.com/fwlink/?LinkId=251052)합니다.|  
 |error_state|**int**|나중에 사용하도록 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  
 |last_modify_time|**datetime**|장기 실행 작업에 대해 레코드가 마지막으로 수정된 타임스탬프입니다. 완료된 작업의 경우 이 필드에는 작업 완료 시간의 타임스탬프가 표시됩니다.|  

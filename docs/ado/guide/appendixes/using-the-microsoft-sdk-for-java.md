@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786921"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350497"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Java용 Microsoft SDK 사용
 
@@ -38,13 +38,13 @@ Microsoft SDK for Java 개발자 키트는 Microsoft Internet Explorer 환경에
   
 1.  명령 프롬프트에서 다음을 실행 합니다. Java의 Bin 디렉터리에 대 한 Microsoft SDK를 포함 하도록 경로 설정 하거나 해당 위치에서 명령을 실행 해야 합니다. 일반적으로 Microsoft SDK for Java는 Visual Studio와 동일한 위치에 설치 됩니다. 이 단일 명령 문입니다.  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  생성된 된 클래스를 컴파일하려면 다음 명령을 실행 합니다. /G:t 스위치를 추적할 수 있도록 디버그 기호 생성을 설정 합니다. Java 기호입니다. 릴리스 빌드에 대 한 제거 합니다.  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

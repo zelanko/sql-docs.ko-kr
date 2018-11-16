@@ -14,23 +14,23 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 732cefe8bd94e9c588ff5117eb39258b327e4eb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b266474c348af50db26fddafeea79d4cf33ade
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601771"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602563"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 속성(RDS)
 비동기 가져오기의 유형을 나타냅니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="setting-and-return-values"></a>설정 및 반환 값  
  설정 하거나 다음 값 중 하나를 반환 합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|모든 레코드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 컨트롤 응용 프로그램에 반환 되기 전에 페치됩니다. 전체 **레코드 집합** 무언가를 수행 하는 응용 프로그램 허용 하기 전에 페치됩니다.|  
 |**adcFetchBackground**|컨트롤은 레코드의 첫 번째 일괄 처리를 가져온 즉시 응용 프로그램에 반환할 수 있습니다. 후속 읽기 작업은 **레코드 집합** 는 첫 번째 일괄 처리에서 반입 되지 않은 레코드에 액세스 하려고는 검색된 된 레코드는 실제로 인출 될 때까지 지연 됩니다, 이때 컨트롤 응용 프로그램에 반환 합니다.|  

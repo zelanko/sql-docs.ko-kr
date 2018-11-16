@@ -20,16 +20,16 @@ ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0cea18d6895363e1a264258c88d733fc3c5ab35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 755ca4454ecf1d07f2f932a4651ab6378d5eb189
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661121"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601573"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  다음 코드를 설정 하는 방법을 보여 줍니다는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** designtime 및 데이터 원본을 사용 하 여 테이블 데이터 인식 HTML에 해당 하는 바인딩 매개 변수입니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **FilterColumnVBS.asp**합니다.  
   
@@ -91,7 +91,7 @@ Filter Criterion: <SELECT NAME="cboCriterion">
               <br>  
 Filter Value: <INPUT NAME="txtFilterValue">  
 <HR WIDTH="25%">  
-<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
+<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
 <INPUT TYPE=BUTTON NAME=SortFilter VALUE="APPLY">  
   
 <HR>  

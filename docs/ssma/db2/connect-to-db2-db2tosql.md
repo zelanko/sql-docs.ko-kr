@@ -10,12 +10,12 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768913"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670522"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2에 연결 (DB2ToSQL)
 사용 된 **DB2에 연결** 마이그레이션하려는 DB2 데이터베이스에 연결 대화 상자.  
@@ -70,7 +70,7 @@ SSMA가 DB2 데이터베이스에 연결 하는 데 사용할 사용자 이름�
   
 연결 문자열 매개 변수 이름 / 값 쌍으로 구성 됩니다.  
   
--   OLE DB 연결 문자열 정보를 참조 하세요 [Microsoft OLE DB Provider for DB2](http://go.microsoft.com/fwlink/?LinkId=85640) MSDN 라이브러리 문서.  
+-   OLE DB 연결 문자열 정보를 참조 하세요 [Microsoft OLE DB Provider for DB2](https://go.microsoft.com/fwlink/?LinkId=85640) MSDN 라이브러리 문서.  
   
 SSMA 연결 문자열의 경우 항상 공급자 매개 변수를 포함 합니다. 또한, DB2에 연결할 때 포트 매개 변수를 포함 해야 합니다.  
   

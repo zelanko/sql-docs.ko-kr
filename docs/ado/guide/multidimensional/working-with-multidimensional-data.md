@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695081"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350277"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 최대 네 개의 축 및 일반적으로 2 또는 3의 컬렉션인 이루어져 있습니다. *축* 찾기 또는 큐브의 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  
@@ -64,7 +64,7 @@ A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일�
   
  각 좌표 두 멤버가 포함 된 위치로 표시 됩니다-영업 직원 차원과 Geography 차원에서 다른에서:  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,7 +72,7 @@ A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일�
   
  Y 축에는 다음 8 개 위치에 포함 된 하나의 차원만 있습니다.  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

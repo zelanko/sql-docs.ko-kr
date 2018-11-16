@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670412"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47603551"
  XPath는 세 가지 데이터 형식: **문자열**를 **번호**, 및 **부울**합니다. 합니다 **번호** 데이터 형식은 항상를 IEEE 754 배정밀도 부동 소수점입니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float(53)** 데이터 형식에 가장 가까운 XPath **번호**합니다. 그러나 **float(53)** IEEE 754 정확히 같지 않습니다. 예를 들어 NaN(Not-a-Number)과 무한대는 모두 사용되지 않습니다. 숫자가 아닌 문자열을 변환 하려고 **번호** 오류가 0으로 나누려고 하려고 합니다.  
   
 ## <a name="xpath-conversions"></a>XPath 변환  
- `OrderDetail[@UnitPrice > "10.0"]` 같은 XPath 쿼리를 사용할 경우 암시적/명시적 데이터 형식 변환으로 인해 쿼리의 의미가 미세하게 변경될 수 있습니다. 따라서 XPath 데이터 형식의 구현 방법을 올바르게 이해하고 있어야 합니다. XPath 언어 사양, XML 경로 언어 (XPath) 버전 1.0 W3C 권장 8 1999 년 10 월, 제안 된 W3C 웹 사이트에서 찾을 수 있습니다 http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ `OrderDetail[@UnitPrice > "10.0"]` 같은 XPath 쿼리를 사용할 경우 암시적/명시적 데이터 형식 변환으로 인해 쿼리의 의미가 미세하게 변경될 수 있습니다. 따라서 XPath 데이터 형식의 구현 방법을 올바르게 이해하고 있어야 합니다. XPath 언어 사양, XML 경로 언어 (XPath) 버전 1.0 W3C 권장 8 1999 년 10 월, 제안 된 W3C 웹 사이트에서 찾을 수 있습니다 https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  XPath 연산자는 다음의 네 범주로 나뉩니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47603551"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 노드-설정-에-**문자열** 또는 노드-설정-에-**번호** XPath 사양에 설명 된 대로 변환이 구현 되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어, XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 해당 주문을 선택 하는 첫 번째 **OrderDetail** 가 **단가** 10.0 보다 큰. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 쿼리를 사용 하 여 해당 주문 선택 **OrderDetail** 에 **단가** 10.0 보다 큰.  
   
- 변환할 **부울** 존재 생성 테스트 하므로 XPath 쿼리 `Products[@Discontinued=true()]` SQL 식과 같습니다 "Products.Discontinued is null", not SQL 식 "Products.Discontinued = 1". 하려면 쿼리를, 후자는 SQL 식과 동일 하도록 먼저 변환 된 노드 집합 이외**부울** 와 같은 입력 **번호**합니다. `Products[number(@Discontinued) = true()]`) 을 입력합니다.  
+ 변환할 **부울** 존재 생성 테스트 하므로 XPath 쿼리 `Products[@Discontinued=true()]` SQL 식과 같습니다 "Products.Discontinued is null", not SQL 식 "Products.Discontinued = 1". 하려면 쿼리를, 후자는 SQL 식과 동일 하도록 먼저 변환 된 노드 집합 이외**부울** 와 같은 입력 **번호**합니다. 예를 들어 `Products[number(@Discontinued) = true()]` .  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   

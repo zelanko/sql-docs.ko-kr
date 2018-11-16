@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085489"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677682"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 가이드는 Red Hat Enterprise Linux에서 SQL Server에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. 클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. SQL Server 인스턴스는 하나의 노드 또는 다른 활성입니다.
+이 가이드는 Red Hat Enterprise Linux에서 SQL Server에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. 클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](https://clusterlabs.org/)합니다. SQL Server 인스턴스는 하나의 노드 또는 다른 활성입니다.
 
 > [!NOTE] 
 > Red Hat HA 추가 기능 및 설명서에 대 한 액세스는 구독이 필요 합니다. 
@@ -30,7 +30,7 @@ ms.locfileid: "49085489"
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
+클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ NFS 서버에서 다음을 수행합니다.
 
 NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 참조 하세요.
 
-* [NFS 서버 및 firewalld | 스택 교환](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [NFS 볼륨을 탑재 | Linux 네트워크 관리자 가이드](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS 서버 및 firewalld | 스택 교환](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [NFS 볼륨을 탑재 | Linux 네트워크 관리자 가이드](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS 서버 구성](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>공유 저장소를 가리키도록 데이터베이스 파일 디렉터리를 탑재 합니다.
@@ -389,7 +389,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [부터 클러스터](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
+* [부터 클러스터](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
 
 ## <a name="next-steps"></a>다음 단계
 

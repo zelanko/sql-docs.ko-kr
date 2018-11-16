@@ -18,12 +18,12 @@ ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afdf049c2b25c61cabcc0b1608a39557700f514f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c18a431531ec63f34c932d088da5eabc8c274c63
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217243"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672332"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 속성(ClientSettingsGeneralFlag 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.FlagValue [= value]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+ [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

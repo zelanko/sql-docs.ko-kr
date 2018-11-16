@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e643f90a5df9b113f2fd59a2328868131bf9c63d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700591"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS에서 DirectQuery 모드를 사용하도록 설정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34045127"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DirectQuery 구성 단계는 모델의 호환성 수준에 따라 다릅니다. 아래에서 모든 호환성 수준에 대해 해당하는 단계를 찾을 수 있습니다.  
   
- 이 문서에서는 생성 하는 메모리 내 테이블 형식 모델이 호환성 수준 1200 이상의 및 DirectQuery 액세스를 사용 하도록 설정 하 고 연결 문자열 업데이트에 필요 유효성을 검사를 가정 합니다. 낮은 호환성 수준에서 시작하는 경우 먼저 수동으로 업그레이드해야 합니다. 단계는 [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md) 를 참조하세요.  
+ 이 문서 작성 했으며 DirectQuery 액세스를 설정 하 고 연결 문자열 업데이트에 필요 하 고 호환성 수준 1200 이상에서 메모리 내 테이블 형식 모델을 유효성 검사를 가정 합니다. 낮은 호환성 수준에서 시작하는 경우 먼저 수동으로 업그레이드해야 합니다. 단계는 [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md) 를 참조하세요.  
   
 > [!IMPORTANT]  
 >  데이터 저장소 모드를 전환하기 위해 Management Studio 대신 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하는 것이 좋습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 모델을 변경한 다음 서버 배포로 후속 작업을 할 경우 해당 모델과 데이터베이스는 동기화를 유지합니다. 또한 모델의 저장소 모드를 변경하면 발생하는 유효성 검사 오류를 검토할 수 있습니다. 이 문서의 설명대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용할 경우 유효성 검사 오류는 보고되지 않습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "34045127"
   
 -   모델에 DirectQuery 모드에서 유효성 검사 오류를 일으킬 수 있는 기능이 없는지 확인한 다음, 모델에 대한 데이터 저장소 모드를 메모리 내에서 DirectQuery로 변경합니다.  
   
-     기능 제한 목록에 설명 되어 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
+     기능 제한 사항 목록은 된다 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
   
 -   백엔드 외부 데이터베이스에서 데이터를 검색하려면 배포된 데이터베이스에서 사용하는 연결 문자열 및 자격 증명을 검토합니다. 단 하나의 연결만 있고, 해당 설정이 쿼리 실행에 적합한지 확인합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34045127"
   
 -   캐시와 관계형 데이터 원본 모두 사용할 수 있는 경우 기본적으로 사용되는 연결 방법을 설정할 수 있지만 궁극적으로는 클라이언트가 DirectQueryMode 연결 문자열 속성을 사용하여 사용되는 원본을 제어합니다.  
   
--   DirectQuery 모드에 사용된 기본 파티션이 절대 처리되지 않는 방식으로 캐시에 파티션을 구성할 수 있으며 항상 관계형 원본을 참조해야 합니다. 여러 가지 방법으로 파티션을 사용하여 모델 디자인 및 보고 환경을 최적화할 수 있습니다. 자세한 내용은 참조 [DirectQuery 모델에서 파티션 정의](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)합니다.  
+-   DirectQuery 모드에 사용된 기본 파티션이 절대 처리되지 않는 방식으로 캐시에 파티션을 구성할 수 있으며 항상 관계형 원본을 참조해야 합니다. 여러 가지 방법으로 파티션을 사용하여 모델 디자인 및 보고 환경을 최적화할 수 있습니다. 자세한 내용은 [DirectQuery 모델에서 파티션 정의](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)합니다.  
   
 -   모델을 배포한 후 기본적으로 사용되는 연결 방법을 변경할 수 있습니다. 예를 들어 모델을 사용하는 보고서나 쿼리를 모두 철저히 테스트한 후에만 테스트에 혼합 모드를 사용하고 모델을 **DirectQuery 전용** 모드로 전환할 수 있습니다. 자세한 내용은 [DirectQuery의 기본 연결 방법 설정 또는 변경](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)을 참조하세요.  
   
@@ -124,10 +124,10 @@ ms.locfileid: "34045127"
   
 3.  추적에서 관계형 데이터베이스에 대한 쿼리 실행의 증거를 확인해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [지원 되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [확장된 이벤트](../../relational-databases/extended-events/extended-events.md)   
- [Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
+
   
   

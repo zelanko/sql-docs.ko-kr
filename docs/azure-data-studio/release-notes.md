@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: HT
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269966"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289923"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 릴리스 정보
 
@@ -26,7 +26,6 @@ ms.locfileid: "51269966"
 릴리스 날짜: 2018 년 11 월 6 일  
 버전: 1.2.4
 
-- Idera 확장 소개
 - 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - 붙여넣기 계획 확장 소개
 - 하이 컬러 쿼리 확장이 포함 되 면 SSMS 편집기 테마를 소개 합니다.

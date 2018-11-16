@@ -14,23 +14,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57b45032038f81fe6e2e15202db7b8c790ca4716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e76ca73ea92d7402e601729df9855d237c3c23d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674442"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  SQLParamData 반환 하는 경우는 *ValuePtrPtr* 테이블 반환 매개 변수를 사용 하 여 연결, 응용 프로그램 호출 해야 사용 하 여 SQLPutData *StrLen_Or_Ind*합니다. 하는 경우 *StrLen_Or_Ind* 값이 0 보다 큰 응용 프로그램에 대 한 준비 되어 있다는 뜻 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 다음 테이블 반환 매개 변수 행에 대 한 매개 변수 데이터를 수집 하도록 합니다. *StrLen_Or_Ind* 의 값이 0이면 테이블 반환 매개 변수에 대한 데이터의 행이 더 이상 없음을 나타냅니다. 자세한 내용은 [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
+  SQLParamData 반환 하는 경우는 *ValuePtrPtr* 테이블 반환 매개 변수를 사용 하 여 연결, 응용 프로그램 호출 해야 사용 하 여 SQLPutData *StrLen_Or_Ind*합니다. *StrLen_Or_Ind* 의 값이 0보다 크면 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 다음 테이블 반환 매개 변수에 대한 데이터를 수집할 준비가 되었음을 나타냅니다. *StrLen_Or_Ind* 의 값이 0이면 테이블 반환 매개 변수에 대한 데이터의 행이 더 이상 없음을 나타냅니다. 자세한 내용은 [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
   
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=80706)   
+ [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

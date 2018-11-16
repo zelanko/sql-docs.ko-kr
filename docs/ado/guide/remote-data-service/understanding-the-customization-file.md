@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,22 +13,22 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce87954d2cb6e436af9ab990eb93dc1e5a91e8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678471"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558720"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 네 가지 섹션 유형은 리터럴 문자열에 표시 됩니다 **연결**, **sql**합니다 **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본, 사용자가 지정한 식별자를 또는 nothing입니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  따라서 각 섹션의 다음 섹션 헤더 중 하나를 사용 하 여 표시 됩니다.  
   
-```  
+```console
   
 [ connect default ] [ connect    
 identifier   
@@ -42,7 +42,7 @@ identifier
   
  섹션 헤더 같은 부분이 포함 됩니다.  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |**connect**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**sql**|명령 문자열을 수정 하는 리터럴 문자열입니다.|  
@@ -75,23 +75,4 @@ identifier
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [필수 클라이언트 설정](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [고유한 사용자 지정된 처리기 작성](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,20 +15,20 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd22d13a0fe656a7d176d6fb9fd2a97e3ce8d3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673556"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604643"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 단순 공급자 개요
-Microsoft OLE DB 단순 공급자 (OSP)는 공급자에 기록 된 사용 하 여 모든 데이터에 액세스 하는 ADO를 허용 합니다 [OLE DB 단순 공급자 (OSP) 도구 키트](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)합니다. 간단한 공급자는 메모리 내 배열 또는 XML 문서와 같은 기본만 OLE DB 지원 해야 하는 데이터 원본에 액세스 하기 위해서입니다.
+Microsoft OLE DB 단순 공급자 (OSP)는 공급자에 기록 된 사용 하 여 모든 데이터에 액세스 하는 ADO를 허용 합니다 [OLE DB 단순 공급자 (OSP) 도구 키트](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)합니다. 간단한 공급자는 메모리 내 배열 또는 XML 문서와 같은 기본만 OLE DB 지원 해야 하는 데이터 원본에 액세스 하기 위해서입니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  OLE DB 단순 공급자 DLL에 연결 하려면 다음을 설정 합니다 *공급자* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:
 
-```
+```vb
 MSDAOSP
 ```
 
@@ -39,13 +39,13 @@ MSDAOSP
 ## <a name="typical-connection-string"></a>일반적인 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은:
 
-```
+```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
  문자열을 이러한 키워드 이루어져 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|SQL Server 용 OLE DB 공급자를 지정합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|
@@ -55,26 +55,26 @@ MSDAOSP
 
  합니다 **portfolio.xml** 다음 트리를 포함 하는 다음 예제에서 사용 되는 파일:
 
-```
+```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML DSO에서 기본 제공 추론을 사용 하 여 장에 계층적 XML 트리의 노드를 변환할 **레코드 집합**합니다.
 
  이러한 기본 제공 추론을 사용 하 여, XML 트리는 두 수준의 계층으로 변환 됩니다 **레코드 집합** 다음 폼의:
 
-```
+```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  포트폴리오 및 정보 태그는 계층적 표현 되지 않는 유의 **레코드 집합**합니다. XML DSO 계층적 XML 트리를 변환 하는 방법에 대 한 설명은 **레코드 집합**, 다음 규칙을 참조 하세요. $Text 열은 다음 섹션에 설명 되어 있습니다.
@@ -100,7 +100,7 @@ Shares, Symbol, Price, $Text
 
  생성 하는 데 필요한 코드를 **레코드 집합** 는 다음과 같습니다.
 
-```
+```vb
 Dim adoConn as ADODB.Connection
 Dim adoRS as ADODB.Recordset
 
@@ -108,15 +108,15 @@ Set adoRS = New ADODB.Connection
 Set adoRS = New ADODB.Recordset
 
 adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-adoRS.Open "http://WebServer/VRoot/portfolio.xml, adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
 >  네 개의 다른 명명 규칙을 사용 하 여 데이터 파일의 경로 지정할 수 있습니다.
 
-```
+```vb
 'HTTP://
-adoRS.Open "http://WebServer/VRoot/portfolio.xml", adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml", adoConn
 'FILE://
 adoRS.Open "file:/// C:\\Directory\\portfolio.xml", adoConn
 'UNC Path
@@ -137,14 +137,14 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   각 데이터 ($Text)의 추가 열을 추가 하는 XMLDSO **레코드 집합** 계층 구조에서.
 
- OLE DB 단순 공급자에 대 한 자세한 내용은 참조 하세요. [단순 공급자 빌드](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)합니다.
+ OLE DB 단순 공급자에 대 한 자세한 내용은 참조 하세요. [단순 공급자 빌드](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)합니다.
 
 ## <a name="code-example"></a>코드 예
  다음 Visual Basic 코드 계층을 생성, 임의의 XML 파일을 열면 하는 방법을 보여 줍니다 **Recordset**, 및 각각의 각 레코드를 작성 하는 재귀적으로 **레코드 집합** 디버그 창으로 합니다.
 
  주식 시세를 포함 하는 간단한 XML 파일을 다음과 같습니다. 다음 코드에서이 파일을 사용 하 여 두 수준의 계층을 생성 하 **레코드 집합**합니다.
 
-```
+```xml
 <portfolio>
    <stock>
       <shares>100</shares>
@@ -152,7 +152,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$70.00</price>
       <info>
          <companyname>Microsoft Corporation</companyname>
-         <website>http://www.microsoft.com</website>
+         <website>https://www.microsoft.com</website>
       </info>
    </stock>
    <stock>
@@ -161,7 +161,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$107.00</price>
       <info>
          <companyname>Apple Computer, Inc.</companyname>
-         <website>http://www.apple.com</website>
+         <website>https://www.apple.com</website>
       </info>
    </stock>
    <stock>
@@ -170,7 +170,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$50.00</price>
       <info>
          <companyname>Dell Corporation</companyname>
-         <website>http://www.dell.com</website>
+         <website>https://www.dell.com</website>
       </info>
     </stock>
     <stock>
@@ -179,7 +179,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
        <price>$115.00</price>
        <info>
           <companyname>Intel Corporation</companyname>
-          <website>http://www.intel.com</website>
+          <website>https://www.intel.com</website>
        </info>
    </stock>
 </portfolio>
@@ -187,7 +187,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
  다음은 Visual Basic sub 프로시저입니다. 첫 번째 만듭니다는 **레코드 집합** 에 전달 합니다 *WalkHier* sub 프로시저를 재귀적으로 하위 계층에서 각 쓰기에서는 **필드** 각각의 각 레코드에서 **레코드 집합** 디버그 창에 있습니다.
 
-```
+```vb
 Private Sub BrowseHierRecordset()
 ' Add ADO 2.7 or later to Project/References
 ' No need to add MSXML2, ADO just passes the ProgID through to the OSP.
@@ -201,7 +201,7 @@ Private Sub BrowseHierRecordset()
     Set adoChildRS = ADODB.Recordset
 
     adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-    adoRS.Open "http://bwillett3/Kowalski/portfolio.xml", adoConn
+    adoRS.Open "https://bwillett3/Kowalski/portfolio.xml", adoConn
 
     Dim iLevel As Integer
     iLevel = 0

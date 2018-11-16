@@ -17,12 +17,12 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb638e8bf2715dafa1ae876c227c89f7cd20f7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daaf8c7fcd44ac814bceeaba61a6d152e7051d99
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600982"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637500"
 ---
 # <a name="reuse-of-package-objects"></a>패키지 개체 다시 사용
   다시 사용하려는 자주 사용되는 패키지 기능입니다. 예를 들어 태스크 집합을 만든 경우 항목을 모두 그룹으로 다시 사용하거나 다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 만든 연결 관리자와 같은 단일 항목을 다시 사용하려고 할 수 있습니다.  
@@ -42,8 +42,8 @@ ms.locfileid: "47600982"
   
 -   [패키지 개체 복사](../integration-services/copy-package-objects.md)  
   
--   [프로젝트 항목 복사](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [프로젝트 항목 복사](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [패키지 템플릿으로 패키지 저장](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [패키지 템플릿으로 패키지 저장](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

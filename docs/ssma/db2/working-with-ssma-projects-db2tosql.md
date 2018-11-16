@@ -10,12 +10,12 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb43fabb2592b6d82d3fb6d14f516bfdd0029bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775109"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671382"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 (DB2ToSQL) 작업
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
@@ -116,7 +116,7 @@ DB2에서 끊어진 프로젝트를 열면 [!INCLUDE[ssNoVersion](../../includes
 3.  에 다시 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 **파일** 메뉴에서 클릭 **SQL Server에 다시 연결**합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스에서 다음 단계 [DB2 데이터베이스에 연결할](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)합니다.  
+마이그레이션 프로세스에서 다음 단계 [DB2 데이터베이스에 연결할](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

@@ -12,12 +12,12 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea7f401e2f78d954f92395069b7b53167294662d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812071"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666752"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
@@ -60,5 +60,5 @@ SSMA는 검사의 위치를 나열 합니다. 클릭할 때 합니다 **추가**
   
 ## <a name="see-also"></a>관련 항목  
 [Access 데이터베이스 파일 추가 및 제거](adding-and-removing-access-database-files-accesstosql.md)  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

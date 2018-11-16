@@ -18,12 +18,12 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.openlocfilehash: 13ebffbaf9d80374f735f3cae147df74c2643f20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533cdfe3b83b8b759129a27a6dc1699298dd3f13
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743181"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602953"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ common criteria compliance enabled 옵션은 [정보 기술 보안 평가에 대
 |로그인 통계를 확인할 수 있는 기능|common criteria compliance enabled 옵션을 설정하면 로그인 감사를 사용할 수 있습니다. 사용자가 성공적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로그인할 때마다 마지막으로 성공한 로그인 시간, 마지막으로 실패한 로그인 시간 및 마지막으로 성공한 로그인 시간과 현재 로그인 시간 사이의 시도 횟수에 대한 정보를 사용할 수 있습니다. 이러한 로그인 통계는 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 동적 관리 뷰를 쿼리하여 볼 수 있습니다.|  
 |`GRANT` 열에서 `DENY`테이블을 재정의하지 않아야 함|common criteria compliance enabled 옵션을 사용하도록 설정하면 테이블 수준 `DENY`가 열 수준 `GRANT`보다 우선 적용됩니다. 이 옵션을 사용하지 않도록 설정하면 열 수준 `GRANT`가 테이블 수준 `DENY`보다 우선 적용됩니다.|  
   
- common criteria compliance enabled 옵션은 고급 옵션입니다. Common Criteria는 Enterprise Edition 및 Datacenter Edition에 대해서만 평가되고 인증됩니다. Common Criteria 인증의 최신 상태는 [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) 웹 사이트를 참조하세요.  
+ common criteria compliance enabled 옵션은 고급 옵션입니다. Common Criteria는 Enterprise Edition 및 Datacenter Edition에 대해서만 평가되고 인증됩니다. Common Criteria 인증의 최신 상태는 [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) 웹 사이트를 참조하세요.  
   
 > [!IMPORTANT]  
->  common criteria compliance enabled 옵션을 설정하는 것 외에도 Common Criteria EAL4+(Evaluation Assurance Level 4+)를 준수하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성하는 스크립트를 다운로드하여 실행해야 합니다. 이 스크립트는 [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) 웹 사이트에서 다운로드할 수 있습니다.  
+>  common criteria compliance enabled 옵션을 설정하는 것 외에도 Common Criteria EAL4+(Evaluation Assurance Level 4+)를 준수하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성하는 스크립트를 다운로드하여 실행해야 합니다. 이 스크립트는 [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) 웹 사이트에서 다운로드할 수 있습니다.  
   
  `sp_configure` 시스템 저장 프로시저를 사용하여 설정을 변경하는 경우 show advanced options가 1로 설정되었을 때만 common criteria compliance enabled를 변경할 수 있습니다. 이 설정은 서버를 다시 시작한 후에 적용됩니다. 가능한 값은 0과 1입니다.  
   

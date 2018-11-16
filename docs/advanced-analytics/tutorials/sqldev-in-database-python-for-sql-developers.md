@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032990"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560385"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위한 자습서: 데이터베이스 내 Python 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Python 또는 SQL로 새 Python 개발자를 새 SQL 프로그래머 라면 여�
 
 + [1 단원: 데이터 탐색 및 시각화를 Python을 사용 하 여](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [2 단원: 데이터를 만들 사용자 지정 SQL 함수를 사용 하 여 기능](sqldev-py4-create-data-features-using-t-sql.md)
++ [2 단원: 사용자 지정 SQL 함수를 사용 하 여 데이터 기능 만들기](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [3 단원: 학습 및 T-SQL을 사용 하 여 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

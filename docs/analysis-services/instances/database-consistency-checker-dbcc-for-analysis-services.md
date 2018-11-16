@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147868"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697017"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services에 대 한 데이터베이스 일관성 검사기 (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50147868"
  데이터베이스가 SQL Server 2016 인스턴스에서 실행되는 한 Analysis Services에 대한 DBCC는 호환성 수준과 Analysis Services 데이터베이스 형식에 상관없이 모든 경우에 실행됩니다. 단지 각 데이터베이스 형식에 올바른 명령 구문을 사용하고 있어야 합니다.  
   
 > [!NOTE]  
->  [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)에 대해 잘 알고 있는 경우 Analysis Services에서 DBCC가 훨씬 범위가 좁다는 것을 즉시 확인할 수 있습니다. Analysis Services에서 DBCC는 데이터베이스 또는 개별 개체 전체에서 데이터 손상 시 단독으로 보고하는 단일 명령입니다. 정보를 수집하는 것과 같이 다른 작업을 고려하고 있는 경우에는 AMO PowerShell 또는 XMLA 스크립트를 대신 사용해 보세요. 자세한 내용은 [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 링크를 참조하세요.  
+>  [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)에 대해 잘 알고 있는 경우 Analysis Services에서 DBCC가 훨씬 범위가 좁다는 것을 즉시 확인할 수 있습니다. Analysis Services에서 DBCC는 데이터베이스 또는 개별 개체 전체에서 데이터 손상 시 단독으로 보고하는 단일 명령입니다. 정보를 수집하는 것과 같이 다른 작업을 고려하고 있는 경우에는 AMO PowerShell 또는 XMLA 스크립트를 대신 사용해 보세요.
   
 ## <a name="permission-requirements"></a>사용 권한 요구 사항  
  명령을 실행하려면 Analysis Services 데이터베이스 또는 서버 관리자(서버 역할의 멤버)여야 합니다. 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 및 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

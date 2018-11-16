@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b51d695a923b6db1661e6e15605a1f05d08178
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099874"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293159"
 ---
 # <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,15 +155,18 @@ SQL Server 개발에서 일반적인 패턴으로 고유한 저장된 프로시�
 
 이 연습에서는 다른 작업을 각 저장된 프로시저는 시스템 저장 프로시저를 사용 하는 위치에 저장된 프로시저를 만드는 방법을 배웠습니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python 프로세스를 시작 합니다. Python 프로세스에 대 한 입력 매개 변수로 sp_execute_external 스크립트에 전달 됩니다. Python 스크립트 자체 및 SQL Server 데이터베이스에서 데이터 변수를 모두 입력으로 전달 됩니다.
 
+일반적으로 SSMS를 사용 하 여 세련 된 Python 코드 또는 행 기반 출력을 반환 하는 간단한 Python 코드를 사용 하 여 계획만 해야 합니다. 도구로 SSMS T-SQL과 같은 쿼리 언어를 지원 하 고 평면화 된 행 집합을 반환 합니다. 산 점도 또는 히스토그램과 같은 visual 출력을 생성 하는 코드, 이미지를 렌더링할 수 있는 도구 또는 최종 사용자 응용 프로그램이 필요 합니다.
+
 다양 한 작업을 처리 하는 일체 스크립트를 작성 하는 데 사용 되는 몇 가지 Python 개발자를 위한 구성 작업의 경우 별도 절차가에 울 수 있지만 불필요 한 합니다. 하지만 학습 및 점수 매기기는 다양 한 사용 사례가 있습니다. 구분 하 여 다른 일정 및 작업에 사용 권한 범위에서 각 작업을 넣을 수 있습니다.
 
 마찬가지로, 리소스 거 버 넌 스, 병렬 처리와 같은 또는 알고리즘을 사용 하 여 스크립트를 작성 하 여 SQL Server의 리소스 기능도 활용할 수 있습니다 [revoscalepy](../python/what-is-revoscalepy.md) 하거나 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 는 스트리밍 및 병렬 실행을 지원 합니다. 학습 및 점수 매기기를 분리 하 여 특정 워크 로드에 대 한 최적화 대상으로 지정할 수 있습니다.
 
 최종 혜택은 프로세스 매개 변수를 사용 하 여 수정할 수 있도록 합니다. 이 연습에서는 (이 예제의 "Naive Bayes" 이라는) 모델을 생성 하는 Python 코드는 점수 매기기 프로세스에서 모델을 호출 하는 두 번째 저장된 프로시저에 대 한 입력으로 전달 되었습니다. 이 연습에서는 하나의 모델을 사용 하지만 어떻게 모델 점수 매기기 작업에서 매개 변수화 없게 스크립트 유용한 상상할 수 있습니다.
 
-
 ## <a name="next-steps"></a>다음 단계
 
-이전 자습서 로컬 실행에 집중 합니다. 그러나 실행할 수 있습니다도 Python 코드는 클라이언트 워크스테이션에서 SQL Server를 사용 하 여 원격 계산 컨텍스트로. SQL Server에 연결 하는 클라이언트 워크스테이션을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Python 클라이언트 도구 설정](../python/setup-python-client-tools-sql.md)합니다.
+Python을 처음 사용 하는 SQL 개발자 인 경우 원격 SQL Server 인스턴스를 로컬 세션에서 실행을 전환 하는 기능을 사용 하 여 단계 및 Python 코드를 로컬로 사용 하기 위한 도구를 검토 합니다.
 
-+ [Python 클라이언트에서 revoscalepy 모델 만들기](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [Python 클라이언트 워크스테이션 설정](../python/setup-python-client-tools-sql.md)합니다.
+

@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703661"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604343"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47703661"
 
 #### <a name="try-it-out"></a>사용해보기
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을 다운로드하려면 **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![다운로드](../analysis-services/media/download.png "다운로드")로 이동하세요.
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을 다운로드하려면 **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![다운로드](../analysis-services/media/download.png "다운로드")로 이동하세요.
 
 - Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.
 
@@ -236,7 +235,7 @@ Insert select 문에서 Insert는 다중 스레드 형식이거나, 병렬 계�
 
 
 ## <a name="temporal-tables"></a>임시 테이블
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 은 이제 시스템 버전 임시 테이블을 지원합니다. 임시 테이블은 언제든지 저장된 팩트에 대한 올바른 정보를 제공하는 새로운 테이블 유형입니다. 각 임시 테이블은 실제로 현재 데이터 및 기록 데이터에 각각 하나씩 해당하는 테이블 두 개로 구성됩니다. 시스템에서는 현재 데이터가 포함된 테이블의 데이터가 변경될 때 이전 값이 기록 테이블에 저장되어 있는지 확인합니다. 이와 같은 복잡한 구조가 사용자에게 표시되지 않도록 쿼리 구문이 제공됩니다. 자세한 내용은 [Temporal Tables](../relational-databases/tables/temporal-tables.md)을 참조하세요.
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 은 이제 시스템 버전 temporal 테이블을 지원합니다. 임시 테이블은 언제든지 저장된 팩트에 대한 올바른 정보를 제공하는 새로운 테이블 유형입니다. 각 임시 테이블은 실제로 현재 데이터 및 기록 데이터에 각각 하나씩 해당하는 테이블 두 개로 구성됩니다. 시스템에서는 현재 데이터가 포함된 테이블의 데이터가 변경될 때 이전 값이 기록 테이블에 저장되어 있는지 확인합니다. 이와 같은 복잡한 구조가 사용자에게 표시되지 않도록 쿼리 구문이 제공됩니다. 자세한 내용은 [Temporal Tables](../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
 ## <a name="backups"></a>백업
 
@@ -373,7 +372,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 - [sys.dm_exec_function_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md)는 스칼라 반환 함수에 대한 실행 통계를 제공합니다.
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 [sys.dm_db_index_usage_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)의 항목은 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 이전의 상태로 유지됩니다.
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 제출된 문에 대한 정보는 새로운 동적 관리 함수인 [sys.dm_exec_input_buffer&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)를 통해 반환할 수 있습니다.
-- [SQL Server R 서비스](../advanced-analytics/r-services/sql-server-r-services.md)를 지원하는 2개의 새로운 뷰: [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)가 제공됩니다. 
+- [SQL Server R 서비스](../advanced-analytics/r-services/sql-server-r-services.md)를 지원하는&2;개의 새로운 뷰: [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)가 제공됩니다. 
 
 
 ## <a name="security-enhancements"></a>향상된 보안 기능
@@ -441,17 +440,17 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 Microsoft Azure에 연결하기 위해 개발 중인 ADAL(Active Directory Authentication Library)을 지원합니다. 이 기능은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 사용되는 인증서 기반 인증을 대체합니다.
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6을 설치해야 합니다. .NET 4.6은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.
 - 결과 표에서 텍스트를 복사하거나 저장할 때 캐리지 리턴/줄 바꿈(줄 바꿈 문자)을 유지하는 새 쿼리 결과 표 옵션이 지원됩니다. 도구/옵션 메뉴에서 이 옵션을 설정합니다.
-- SQL Server 관리 도구는 더 이상 주 기능 트리에서 설치되지 않습니다. 자세한 내용은 [SSMS로 SQL Server 관리 도구 설치](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)를 참조하세요.
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6.1을 설치해야 합니다. .NET 4.6.1은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.
+- SQL Server 관리 도구는 더 이상 주 기능 트리에서 설치되지 않습니다. 자세한 내용은 [SSMS로 SQL Server 관리 도구 설치](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)를 참조하세요.
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6.1을 설치해야 합니다. .NET 4.6.1은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.
 
 ### <a name="upgrade-advisor"></a>업그레이드 관리자
 SQL Server 2016 업그레이드 관리자 Preview는 이전 버전의 사용자가 SQL Server 데이터베이스에 대해 업그레이드 규칙 집합을 실행하여 주요 변경 내용, 동작 변경 내용 및 더 이상 사용되지 않는 기능을 파악하고 스트레치 데이터베이스 등의 새로운 기능을 적용할 때 도움을 제공할 수 있게 하는 독립 실행형 도구입니다.
 
- [여기](https://www.microsoft.com/en-us/download/details.aspx?id=48119) 에서 업그레이드 관리자 Preview를 다운로드하거나, 웹 플랫폼 설치 관리자를 사용하여 설치할 수 있습니다.
+ [여기](https://www.microsoft.com/download/details.aspx?id=48119) 에서 업그레이드 관리자 Preview를 다운로드하거나, 웹 플랫폼 설치 관리자를 사용하여 설치할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 
  
-[SSMS로 SQL Server 관리 도구 설치](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[SSMS로 SQL Server 관리 도구 설치](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fe2eb1d6d5c83a85fed628b02869cbf7b29eee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385826be9e980c2e6a46c880dd6248fd355dade1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680001"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350275"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
@@ -35,14 +35,14 @@ ms.locfileid: "47680001"
   
  복사 및 ASP 페이지에 이러한 파일에서 상수 정의 붙여 하거나, 서버 쪽 스크립팅, 수행 하는 경우 웹 사이트의 폴더로 Adovbs.inc 파일을 복사 하 고 다음과 같은 ASP 페이지에서 참조 합니다.  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>Vbscript에서 ADO 개체 만들기  
  사용할 수 없습니다는 **Dim** VBScript의 특정 형식으로 개체를 할당 하는 문입니다. 또한 VBScript을 지원 하지 않습니다는 **새로 만들기** 구문을 사용 합니다 **Dim** 응용 프로그램에 대 한 Visual Basic의 문입니다. 대신 사용 해야 합니다 **CreateObject** 함수 호출:  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -50,14 +50,14 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## <a name="vbscript-examples"></a>VBScript 예제  
  다음 코드는 페이지 ASP (Active Server) 파일에서 VBScript 서버 쪽 프로그래밍의 일반적인 예:  
   
-```  
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+```vb
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
-    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
+    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
   
-    <!-- Your ASP Code goes here -->  
+    <!-- Your ASP Code goes here -->  
 <%  
 Dim Source  
 Dim Connect  
@@ -65,13 +65,13 @@ Dim Rs1
   
 Source = "SELECT * FROM Authors"  
 Connect = "Provider=sqloledb;Data Source=srv;" & _  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
   
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 Rs1.Open Source, Connect, adOpenForwardOnly  
 Response.Write("Success!")  
 %>  
-    </BODY>  
+    </BODY>  
 </HTML>  
 ```  
   

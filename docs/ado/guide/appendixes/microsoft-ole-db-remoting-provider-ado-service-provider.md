@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,37 +15,37 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624611"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600663"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 원격 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자를 수 있습니다. 원격 컴퓨터의 로컬 사용자와 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 공급자는 원격 컴퓨터에 액세스 하는 데 사용할 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 처럼 원격 컴퓨터를 액세스할 수 있습니다.
 
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.
 
 ## <a name="provider-keyword"></a>공급자 키워드
  OLE DB 원격 공급자를 호출 하려면 연결 문자열에 다음 키워드와 값을 지정 합니다. (공급자 이름에 공백이 참고 합니다.)
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
 ## <a name="additional-keywords"></a>추가 키워드
  이 서비스 공급자가 호출 되 면 다음과 같은 추가 키워드 관련이 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**데이터 원본**|원격 데이터 원본의 이름을 지정합니다. 처리를 위해 OLE DB 원격 공급자에 게 전달 됩니다.<br /><br /> 이 키워드는 해당 하는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.|
 
 ## <a name="dynamic-properties"></a>동적 속성
  이 서비스 공급자가 호출 된 다음 동적 속성에 추가 됩니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.
 
-|동적 속성 이름|Description|
+|동적 속성 이름|설명|
 |---------------------------|-----------------|
 |**DFMode**|DataFactory 모드를 나타냅니다. 원하는 버전을 지정 하는 문자열을 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 서버의 개체입니다. 특정 버전의 요청에 대 한 연결을 열기 전에이 속성을 설정 합니다 **DataFactory**합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하는 시도가 수행 됩니다. 이전 버전이 없는 경우 오류가 발생 합니다. 하는 경우 **DFMode** 보다 작으면 사용 가능한 버전을 오류가 발생 합니다. 연결 된 후이 속성은 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21", 버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자가 서버에 전송 하는 명령 (행 집합) 속성의 문자열에 추가 될 값을 나타냅니다. 이 문자열에 대 한 기본값은 vt_empty 합니다.|
@@ -58,14 +58,14 @@ Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급�
 
  쓰기 가능한 동적 속성의 이름을 연결 문자열 키워드를 지정 하 여 설정할 수도 있습니다. 예를 들어 설정 된 **인터넷 시간 제한** 동적 속성을 지정 하 여 5 초:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  또한 설정 하거나 인덱스 이름을 지정 하 여 동적 속성을 검색할 수 있습니다 합니다 **속성** 속성입니다. 다음 예제에서는 가져오고 현재 값을 인쇄 하는 방법을 보여 줍니다 합니다 **인터넷 시간 제한** 동적 속성을 새 값을 설정 합니다.
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>예제
  쿼리를 수행 하는이 예제는 **작성자** 목차 합니다 **Pubs** 이라는 서버의 데이터베이스 *해당 서버*합니다. 원격 데이터 원본 및 원격 서버의 이름을 제공 됩니다는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드는[연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 지정 된 개체 및 SQL 쿼리를[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. A **레코드 집합** 개체 반환, 편집 및 데이터 소스를 업데이트 하는 데 사용 합니다.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>관련 항목
- [OLE DB 원격 공급자 개요](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [OLE DB 원격 공급자 개요](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

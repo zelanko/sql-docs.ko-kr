@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120290"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604953"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120290"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반적인 내용은 [SQL Server 2012 Always On FAQ(http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)를 참조하세요.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반적인 내용은 [SQL Server 2012 Always On FAQ(https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)를 참조하세요.  
   
  **항목 내용:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120290"
   
  이 메시지는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 속성 중 하나를 포함했지만 서버에서 이러한 속성이 인식되지 않는 경우에 발생합니다. 위에 언급한 오류 메시지는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 사용자 인터페이스에서 '연결 테스트' 단추를 클릭할 때 그리고 원격 오류가 보고서 서버에 설정된 경우 보고서를 미리 볼 때 표시됩니다.  
   
- 필요한 핫픽스에 대한 자세한 내용은 [KB 2654347A – SQL Server 2012의 Always On 기능에 대한 지원을 .NET Framework 3.5 SP1에 도입하는 핫픽스](http://go.microsoft.com/fwlink/?LinkId=242896)를 참조하세요.  
+ 필요한 핫픽스에 대한 자세한 내용은 [KB 2654347A – SQL Server 2012의 Always On 기능에 대한 지원을 .NET Framework 3.5 SP1에 도입하는 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)를 참조하세요.  
   
  기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120290"
   
 -   ReportServerTempDB  
   
- 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 응용 프로그램 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(http://go.microsoft.com/fwlink/?LinkId=245165))](http://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
+ 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 응용 프로그램 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165))](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
   
 > [!NOTE]  
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1588f2f60da6355b1218757710c52e7671293d9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c76b1c2d598c8b136c0a3f890ea0ed4db6be0e20
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664391"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677712"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>테이블 반환 매개 변수 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47664391"
 
   이 예제에서는 테이블 반환 매개 변수를 사용하여 여러 열과 함께 서버에 대한 한 번의 호출로 여러 행을 삽입하는 방법을 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다. 테이블 반환 매개 변수를 사용 하 여 더 많은 샘플을 참조 하세요 [odbc table-valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다. 테이블 반환 매개 변수를 사용하는 예제에 대한 자세한 내용은 [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)를 참조하십시오.  
   
 ## <a name="example"></a>예제  
  TVPDemo라는 ODBC 데이터 원본이 필요합니다. 컴퓨터의 모든 테스트 데이터베이스가 TVPDemo의 기본 데이터베이스가 될 수 있습니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  

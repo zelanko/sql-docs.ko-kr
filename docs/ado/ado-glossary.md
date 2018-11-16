@@ -1,10 +1,10 @@
 ---
-title: ADO 용어 설명 | Microsoft Docs
+title: ADO 용어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebc0a74b32e63a7f7bd7807510941143f653af17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771641"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291769"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
 이 항목에서는 ADO와 관련 된 용어를 정의합니다.

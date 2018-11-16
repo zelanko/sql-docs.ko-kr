@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985328"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601463"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,24 +31,24 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행 수를 지정하는 정수입니다.  
   
  *식 목록*  
  관련 열 식별자(모델에서 파생됨) 또는 식의 쉼표로 구분된 목록입니다.  
   
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
  *조건 목록*  
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **SELECT DISTINCT FROM** 문을 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- 합니다 **SELECT DISTINCT FROM** 문을 사용 하면 직접 중첩된 테이블 안의 열을 참조할 수 있습니다. 예를 들어:  
+ 합니다 **SELECT DISTINCT FROM** 문을 사용 하면 직접 중첩된 테이블 안의 열을 참조할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |연속|열에서 값의 중간점|  
   
 ## <a name="discrete-column-example"></a>불연속 열의 예  
- 다음 코드 샘플은 기반 합니다 `[TM Decision Tree]` 에서 만든 모델을 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 불연속 열 `Gender`에 있는 고유 값을 반환합니다.  
+ 다음 코드 샘플은 기반 합니다 `[TM Decision Tree]` 에서 만든 모델을 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 불연속 열 `Gender`에 있는 고유 값을 반환합니다.  
   
 ```  
 SELECT DISTINCT [Gender]  

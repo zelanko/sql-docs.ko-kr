@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673112"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 테이블 반환 매개 변수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766571"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>완전히 바인딩된 여러 행 버퍼를 사용하는 테이블 반환 매개 변수(모든 값을 메모리에 로드하여 TVP로 데이터 전송)  
  완전히 바인딩된 여러 행 버퍼와 함께 사용하는 경우 모든 매개 변수 값을 메모리에서 사용할 수 있습니다. 이는 테이블 반환 매개 변수를 단일 저장 프로시저로 패키지할 수 있는 OLTP 트랜잭션의 대표적인 예입니다. 테이블 반환 매개 변수가 없다면 복잡한 다중 문 일괄 처리를 동적으로 생성하거나 서버를 여러 번 호출해야 할 수 있습니다.  
   
- 자체 테이블 반환 매개 변수를 사용 하 여 바인딩된 [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) 다른 매개 변수와 함께 합니다. 모든 매개 변수에 바인딩된 후 응용 프로그램에서 각 테이블 반환 매개 변수에 매개 변수 포커스 특성 SQL_SOPT_SS_PARAM_FOCUS를 설정 하 고 테이블 반환 매개 변수의 열에 대 한 SQLBindParameter를 호출 합니다.  
+ 자체 테이블 반환 매개 변수를 사용 하 여 바인딩된 [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) 다른 매개 변수와 함께 합니다. 모든 매개 변수에 바인딩된 후 응용 프로그램에서 각 테이블 반환 매개 변수에 매개 변수 포커스 특성 SQL_SOPT_SS_PARAM_FOCUS를 설정 하 고 테이블 반환 매개 변수의 열에 대 한 SQLBindParameter를 호출 합니다.  
   
  테이블 반환 매개 변수의 서버 유형은 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고유 형식인 SQL_SS_TABLE입니다. SQL_SS_TABLE의 바인딩 C 형식은 항상 SQL_C_DEFAULT여야 합니다. 테이블 반환 매개 변수 바인딩 매개 변수에 대해서는 데이터가 전송되지 않습니다. 이 매개 변수는 테이블 메타데이터를 전달하고, 테이블 반환 매개 변수 구성 열의 데이터 전달 방법을 제어하는 데 사용됩니다.  
   

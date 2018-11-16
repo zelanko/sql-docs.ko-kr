@@ -20,26 +20,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 764e2f6481121bb7684c9c4db4b56af9dc9628f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602342"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672952"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 운영 체제 버전 정보를 표시 하는 행을 반환 합니다.  
   
-|열 이름 |데이터 형식 |Description |  
+|열 이름 |데이터 형식 |설명 |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |운영 체제의 종류: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제의 설명입니다. |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스(버전 번호)입니다. 값 및 설명의 목록을 참조 하세요 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)합니다. <br> Linux의 경우 빈 문자열을 반환 합니다. |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 운영 체제의 서비스 팩 수준입니다. <br> Linux의 경우 빈 문자열을 반환 합니다. |  
-|**host_sku**|**int**|Windows SKU(Stock Keeping Unit) ID입니다. SKU Id 및 설명의 목록을 참조 하세요 [GetProductInfo 함수](http://msdn.microsoft.com/library/ms724358.aspx)합니다. Null을 허용합니다. <br> Linux의 경우 NULL을 반환합니다. |  
-|**os_language_version**|**int**|운영 체제의 Windows LCID(로캘 ID)입니다. LCID 값 및 설명의 목록을 참조 하세요 [Microsoft에서 할당 한 로캘 Id](http://go.microsoft.com/fwlink/?LinkId=208080)합니다. null일 수 없습니다.|  
+|**host_sku**|**int**|Windows SKU(Stock Keeping Unit) ID입니다. SKU Id 및 설명의 목록을 참조 하세요 [GetProductInfo 함수](https://msdn.microsoft.com/library/ms724358.aspx)합니다. Null을 허용합니다. <br> Linux의 경우 NULL을 반환합니다. |  
+|**os_language_version**|**int**|운영 체제의 Windows LCID(로캘 ID)입니다. LCID 값 및 설명의 목록을 참조 하세요 [Microsoft에서 할당 한 로캘 Id](https://go.microsoft.com/fwlink/?LinkId=208080)합니다. null일 수 없습니다.|  
 
 ## <a name="remarks"></a>Remarks  
 이 보기는 비슷합니다 [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), Windows 및 Linux를 구분 하는 열을 추가 합니다.

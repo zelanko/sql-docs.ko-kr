@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764412"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677672"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 (AccessToSQL) 마이그레이션 준비
 Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하는 데이터베이스를 결정 해야 합니다.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>SQL Server로 마이그레이션할 시기 결정  
-Jet 데이터베이스 엔진에 사용 되는 데이터베이스 엔진 액세스에 대 한 데이터 관리를 위한 유연 하 고 사용 하기 쉬운 솔루션을입니다. 그러나 커질수록 데이터베이스와 더 많은 업무에 중요 한 많은 사용자가 찾을 이들이 필요로 하는 뛰어난 성능, 보안 또는 가용성. 보다 강력한 데이터 플랫폼을 필요로 하는 응용 프로그램의 경우 해당 응용 프로그램에 대 한 기본 데이터베이스를 이동할 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마이그레이션 시기를 결정 하는 방법에 대 한 자세한 내용은 참조는 [마이그레이션 정보 페이지](http://go.microsoft.com/fwlink/?LinkId=68571) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 사이트입니다.  
+Jet 데이터베이스 엔진에 사용 되는 데이터베이스 엔진 액세스에 대 한 데이터 관리를 위한 유연 하 고 사용 하기 쉬운 솔루션을입니다. 그러나 커질수록 데이터베이스와 더 많은 업무에 중요 한 많은 사용자가 찾을 이들이 필요로 하는 뛰어난 성능, 보안 또는 가용성. 보다 강력한 데이터 플랫폼을 필요로 하는 응용 프로그램의 경우 해당 응용 프로그램에 대 한 기본 데이터베이스를 이동할 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마이그레이션 시기를 결정 하는 방법에 대 한 자세한 내용은 참조는 [마이그레이션 정보 페이지](https://go.microsoft.com/fwlink/?LinkId=68571) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 사이트입니다.  
   
 데이터베이스를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 된 테이블을 사용 하 여 액세스를 사용 하는 것, 응용 프로그램을 수동으로 마이그레이션할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 직접 상호 작용 하는.NET Framework 기반 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   

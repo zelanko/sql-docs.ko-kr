@@ -10,22 +10,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307f26be96477fa6c11f813ecfd7659df4f30d72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ba3c6bfb78656226745dc8267077749ca46ff3a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847041"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661692"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
   
  날짜/시간 기능 향상에 대 한 자세한 내용은 참조 하세요. [날짜 및 시간 기능 향상 &#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) 하 고 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- 이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
+ 이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
 ## <a name="usage"></a>사용법  
  다음 섹션에서는 새 date 및 time 형식을 사용하는 다양한 방법에 대해 설명합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47847041"
 ### <a name="use-time-as-a-distinct-data-type"></a>고유 데이터 형식으로 Time 사용  
  OLE DB에는 정밀도가 1초인 시간(DBTYPE_DBTIME)만 포함하는 데이터 형식이 이미 있습니다. ODBC에서 이에 해당하는 형식은 SQL_TYPE_TIME(ODBC 2.0 응용 프로그램의 경우 SQL_TIME)입니다.  
   
- 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 데이터 형식은 100나노초까지 정확한 소수 자릿수 초를 사용합니다. 형식을 사용 하려면이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) 및 SQL_SS_TIME2 (ODBC). 소수 자릿수 초가 없는 시간을 사용하도록 작성된 기존 응용 프로그램은 time(0) 열을 사용할 수 있습니다. 응용 프로그램에서 메타데이터로 반환된 형식을 사용하지 않는 한 기존 OLE DB DBTYPE_TIME 및 ODBC SQL_TYPE_TIME 형식과 해당 구조체는 올바로 작동해야 합니다.  
+ 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time 데이터 형식은 100나노초까지 정확한 소수 자릿수 초를 사용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 이 형식을 사용하려면 새 DBTYPE_DBTIME2(OLE DB) 및 SQL_SS_TIME2(ODBC) 형식이 필요합니다. 소수 자릿수 초가 없는 시간을 사용하도록 작성된 기존 응용 프로그램은 time(0) 열을 사용할 수 있습니다. 응용 프로그램에서 메타데이터로 반환된 형식을 사용하지 않는 한 기존 OLE DB DBTYPE_TIME 및 ODBC SQL_TYPE_TIME 형식과 해당 구조체는 올바로 작동해야 합니다.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>확장된 초 소수 부분 자릿수의 고유 데이터 형식으로 Time 사용  
  프로세스 제어 및 제조 응용 프로그램과 같은 일부 응용 프로그램에는 정밀도가 최대 100나노초인 시간 데이터를 처리하는 기능이 필요합니다. 이를 위해 새 DBTYPE_DBTIME2(OLE DB) 및 SQL_SS_TIME2(ODBC) 형식이 추가되었습니다.  

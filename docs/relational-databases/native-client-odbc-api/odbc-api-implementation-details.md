@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3078fa2406bfbc4e45ed2b68e2119927590c4a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24ddc42ecfe8b9fa84822d476f5ac4b5e555141b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723422"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677182"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47723422"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조에는 ODBC 함수 호출이 모두 문서화되어 있지는 않습니다. 드라이버 관련 매개 변수를 가지는 함수나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용될 때의 동작에 대해서만 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조에 대 한 Microsoft Data Access Components SDK를 다운로드 합니다 [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), 보거나 합니다 [ODBC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조에 대 한 Microsoft Data Access Components SDK를 다운로드 합니다 [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), 보거나 합니다 [ODBC 프로그래머 참조](https://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47723422"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41; 참조](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41; 참조](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

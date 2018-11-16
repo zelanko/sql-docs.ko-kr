@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698581"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350237"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "47698581"
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  이 공급자에 연결을 설정 합니다 *공급자* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:
 
-```
+```vb
 MSDAORA
 ```
 
@@ -42,13 +42,13 @@ MSDAORA
 ## <a name="typical-connection-string"></a>일반적인 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은:
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
  문자열을 이러한 키워드 이루어져 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|OLE DB Provider for Oracle 지정합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|
@@ -61,9 +61,9 @@ MSDAORA
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
  공급자는 ADO를 정의한 것 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. 으로 ADO 연결 속성을 이러한 공급자별 속성을 통해 설정할 수 있습니다는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 의 일부로 **ConnectionString**.
 
- 이러한 매개 변수는에 자세히 설명 합니다 [OLE DB Programmer's Reference](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)합니다. 합니다 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 이러한 매개 변수 이름과 해당 OLE DB 속성 간의 상호 참조를 제공 합니다.
+ 이러한 매개 변수는에 자세히 설명 합니다 [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)합니다. 합니다 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 이러한 매개 변수 이름과 해당 OLE DB 속성 간의 상호 참조를 제공 합니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |**창 핸들**|창 핸들을 사용 하 여 추가 정보를 묻는 메시지를 나타냅니다.|
 |**로캘 ID**|(예: 1033) 사용자의 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자를 나타냅니다. 이러한 기본 설정을 나타내는 날짜 및 시간 형식 지정 방법을, 문자열 비교 되 고, 항목이 사전순으로 정렬 됩니다.|

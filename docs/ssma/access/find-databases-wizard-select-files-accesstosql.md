@@ -12,12 +12,12 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6414ba876f5f4b763fb0b333c9d241248a555f26
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099804"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663922"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 찾기 마법사 (파일 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 파일 선택 페이지를 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 확인 선택 페이지를 표시 합니다.  
@@ -52,5 +52,5 @@ Access 데이터베이스 파일의 경로 표시 합니다.
 날짜 및 데이터베이스를 마지막으로 수정한 시간입니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e24660402f2278f1d71f0729281e0009029936da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e78f822b064e54dffccb6acd35771ae7083958
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673142"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>SQL Server와 통신(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47707141"
   
  응용 프로그램에서는 개수에 제한 없이 여러 데이터 원본에 연결할 수 있습니다. 응용 프로그램은 여러 드라이버와 여러 데이터 원본의 조합, 단일 드라이버와 여러 데이터 원본 조합 또는 단일 드라이버와 단일 데이터 원본에 대한 여러 개의 연결을 사용할 수 있습니다.  
   
- 다운로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에서 샘플 합니다 [SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkId=62796) MSDN 페이지를 참조 합니다.  
+ 다운로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에서 샘플 합니다 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=62796) MSDN 페이지를 참조 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

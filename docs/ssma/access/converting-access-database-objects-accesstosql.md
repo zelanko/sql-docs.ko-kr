@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666202"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
 Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음 스키마를 변환할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마입니다.  
@@ -49,7 +49,7 @@ Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion]
 변환 중 SSMA 상태 출력 창 및 오류, 경고 및 오류 목록 창에 정보 메시지를 인쇄합니다. 이 정보를 사용 하 여 Access 데이터베이스 또는 원하는 변환 결과 얻으려면 변환 프로세스를 수정 해야 하는지 여부를 결정 합니다. 정보를 사용할 수도 있습니다는 [Access 데이터베이스 마이그레이션에 대 한 준비](preparing-access-databases-for-migration-accesstosql.md) 항목 확인 하는 고 변환할 수 없습니다.  
   
 ## <a name="setting-conversion-options"></a>변환 옵션 설정  
-개체를 변환 하기 전에 프로젝트 변환 옵션을 검토 합니다 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스가 없는 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 하세요. [프로젝트 설정 (변환)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+개체를 변환 하기 전에 프로젝트 변환 옵션을 검토 합니다 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스가 없는 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 하세요. [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>변환 결과  
 다음 표에서 변환 되는 경우 개체를 액세스 하 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체:  

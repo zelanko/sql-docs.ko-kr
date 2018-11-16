@@ -14,16 +14,16 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b002fb0c6dcfa17a01f42c65f1946536a915c210
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707611"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601484"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 메서드 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  다음 코드 조각에서는 사용 하는 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 메서드는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47707611"
 <SCRIPT Language="VBScript">  
   
      'set RDS properties for control just created  
-    RDS.Server = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    RDS.Server = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     RDS.Connect = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     RDS.SQL = "Select * from Employees"  
     RDS.Refresh  

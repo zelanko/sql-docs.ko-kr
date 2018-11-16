@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758721"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674112"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 워크플로
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47758721"
 
 다음으로, 일련의 데이터 흐름 작업을 각 차원을 로드합니다. 그런 다음 각 팩트를 로드 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - SQL Server 2016 (이상), WideWorldImporters 및 WideWorldImportersDW 데이터베이스 (동일한 또는 다른 인스턴스의 SQL Server)
 - SQL Server Management Studio
@@ -45,7 +45,7 @@ ms.locfileid: "47758721"
 
 ## <a name="download"></a>다운로드
 
-샘플의 최신 릴리스를 참조 하세요 [wide world-importers 릴리스](http://go.microsoft.com/fwlink/?LinkID=800630)합니다. 다운로드 합니다 *일일 ETL.ispac* Integration Services 패키지 파일입니다.
+샘플의 최신 릴리스를 참조 하세요 [wide world-importers 릴리스](https://go.microsoft.com/fwlink/?LinkID=800630)합니다. 다운로드 합니다 *일일 ETL.ispac* Integration Services 패키지 파일입니다.
 
 샘플 데이터베이스를 다시 만들려면 소스 코드를 보려면 [importers-world wide-](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)합니다.
 

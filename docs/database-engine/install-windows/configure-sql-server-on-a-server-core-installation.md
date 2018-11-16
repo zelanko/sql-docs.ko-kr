@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38fefb6c403008e32d9783ac8a1b2a956a340055
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691582"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602023"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
@@ -34,15 +34,15 @@ Server Core 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md
   
 Server Core 설치를 원격으로 구성하고 관리하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.  
   
-- [Server Core 설치](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Server Core 설치](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [Sconfig.cmd로 Windows Server 2016의 Server Core 설치 구성](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Sconfig.cmd로 Windows Server 2016의 Server Core 설치 구성](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Server Core 서버 Windows Server 2012 R2에 서버 역할 및 기능 설치](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Server Core 서버 Windows Server 2012 R2에 서버 역할 및 기능 설치](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Server Core 설치 관리: 개요](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Server Core 설치 관리: 개요](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Server Core 설치 관리](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Server Core 설치 관리](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치  
 이 섹션에서는 Windows Server Core 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 업데이트 설치에 대한 정보를 제공합니다. 시스템이 최신 보안 업데이트로 업데이트되도록 고객이 적절한 시기에 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 확인하고 설치하는 것이 좋습니다. Windows Server Core 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]을 설치하는 방법에 대한 자세한 내용은 [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
@@ -230,6 +230,6 @@ $Tcp
   
 ## <a name="see-also"></a>참고 항목  
  [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [설치 방법 도움말 문서](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [설치 방법 도움말 문서](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

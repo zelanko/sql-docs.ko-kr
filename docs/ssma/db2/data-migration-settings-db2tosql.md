@@ -10,19 +10,19 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 295aca6d94eb7ec1ce2deb97d7f77e23999d7e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759591"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681081"
 ---
 # <a name="data-migration-settings-db2tosql"></a>데이터 마이그레이션 설정 (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>데이터 마이그레이션 설정  
 **데이터 마이그레이션 설정** 데이터 마이그레이션에 대 한 사용자 지정 쿼리를 작성할 수 있습니다.  
   
--   이 탭은 사용 가능한 **데이터 마이그레이션 옵션을 확장** 로 설정 된 **표시** 설정으로 설정 된 경우 숨겨집니다 **숨기기** 프로젝트 설정에서. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 합니다.  
+-   이 탭은 사용 가능한 **데이터 마이그레이션 옵션을 확장** 로 설정 된 **표시** 설정으로 설정 된 경우 숨겨집니다 **숨기기** 프로젝트 설정에서. 프로젝트 마이그레이션 설정에 대 한 자세한 내용은 참조 하세요. [프로젝트 설정 (마이그레이션)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 합니다.  
   
 -   구현 될 사용자 지정 SQL 문을 구문 분석할 **데이터 마이그레이션 설정** 테이블 노드를 탭 합니다.  
   
@@ -53,5 +53,5 @@ ms.locfileid: "47759591"
 -   **취소:** 클릭 **취소** 전에 변경 내용이 적용 되 고 있는 설정을 복원 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[SQL Server로 마이그레이션 DB2 데이터](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[SQL Server로 마이그레이션 DB2 데이터](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

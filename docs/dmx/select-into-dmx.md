@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040421"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602603"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ FROM <existing model>
  공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
  *매개 변수 목록*  
- (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *expression*  
  학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 참조 하세요. [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
@@ -54,7 +54,7 @@ FROM <existing model>
  합니다 **WITH DRILLTHROUGH** 절에 새 마이닝 모델에서 드릴스루 사용 하도록 설정 합니다. 드릴스루는 모델을 만들 때만 사용할 수 있습니다.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>예제 1: 모델의 매개 변수 변경  
- 다음 예제는 기존 마이닝 모델을 기반으로 새 마이닝 모델을 만듭니다 `TM_Clustering`에서 만든 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 새 모델에서는 최대 다섯 개의 클러스터가 존재하도록 CLUSTER_COUNT 매개 변수를 수정합니다. 반면 기존 모델에서는 기본값인 10이 사용됩니다.  
+ 다음 예제는 기존 마이닝 모델을 기반으로 새 마이닝 모델을 만듭니다 `TM_Clustering`에서 만든 합니다 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 새 모델에서는 최대 다섯 개의 클러스터가 존재하도록 CLUSTER_COUNT 매개 변수를 수정합니다. 반면 기존 모델에서는 기본값인 10이 사용됩니다.  
   
 ```  
 SELECT * INTO [New_Clustering]  

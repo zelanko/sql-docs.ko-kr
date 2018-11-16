@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c796bec63e2d90153af059543c694efd7c00b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63af1c6822f5646f37d7d391afa833206c9d65f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701941"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674200"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLBindParameter** 데이터 변환에 대 한 데이터를 제공 하는 데 사용 하는 경우의 부담을 제거할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 응용 프로그램의 클라이언트 및 서버 구성 요소에 대 한 성능이 크게 향상 합니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
+  **SQLBindParameter** 를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 데이터를 제공할 때 데이터 변환을 수행하지 않아도 되기 때문에 응용 프로그램의 클라이언트 및 서버 구성 요소 모두에서 성능이 크게 향상됩니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
   
 > [!NOTE]  
 >  **char** 및 **wchar** 형식 데이터를 이미지 열에 삽입할 경우 이진 형식으로 변환된 후의 데이터 크기가 아니라 전달되는 데이터의 크기가 사용됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "47701941"
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter와 테이블 반환 매개 변수  
  다른 매개 변수 유형과 마찬가지로 테이블 반환 매개 변수 SQLBindParameter 적용 됩니다.  
   
- 테이블 반환 매개 변수가 바인딩된 후에는 해당 열도 바인딩됩니다. 호출 하면 열을 바인딩하려면 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 테이블 반환 매개 변수의 서 수에 SQL_SOPT_SS_PARAM_FOCUS를 설정할 수 있습니다. 그런 다음, 테이블 반환 매개 변수의 각 열에 대 한 SQLBindParameter을 호출 합니다. SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정하면 최상위 매개 변수 바인딩으로 돌아갈 수 있습니다.  
+ 테이블 반환 매개 변수가 바인딩된 후에는 해당 열도 바인딩됩니다. 열을 바인딩하려면 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 테이블 반환 매개 변수의 서수에 SQL_SOPT_SS_PARAM_FOCUS를 설정합니다. 그런 다음, 테이블 반환 매개 변수의 각 열에 대 한 SQLBindParameter을 호출 합니다. SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정하면 최상위 매개 변수 바인딩으로 돌아갈 수 있습니다.  
   
  테이블 반환 매개 변수 설명자 필드에 매핑 매개 변수에 대 한 자세한 내용은 참조 하세요. [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "47701941"
   
 ## <a name="see-also"></a>관련 항목  
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLBindParameter 함수](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter 함수](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

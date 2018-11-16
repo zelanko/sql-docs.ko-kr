@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749748"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681371"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +169,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  병합 에이전트를 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|요청 시|  
@@ -187,7 +187,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *frequency_interval*  
  병합 에이전트가 실행되는 요일입니다. *frequency_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|일요일|  
 |**2**|월요일|  
@@ -204,7 +204,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  병합 에이전트의 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|첫째|  
 |**2**|둘째|  
@@ -219,7 +219,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|둘째|  
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  기존 에이전트 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 구독이 동기화될 경우에만 지정됩니다. 구성원이 아닌 경우는 **sysadmin** 고정 서버 역할을 지정 해야 *job_login* 하 고 *job_password* 지정 하는 경우 *job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- 필터링된 데이터 스냅숏을 사용하는 경우에 스냅숏 파일을 읽을 대상 폴더 경로입니다. *dynamic_snapshot_location* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을(를) 참조하세요.  
+ 필터링된 데이터 스냅숏을 사용하는 경우에 스냅숏 파일을 읽을 대상 폴더 경로입니다. *dynamic_snapshot_location* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  웹 동기화를 사용할 수 있음을 나타냅니다. *use_web_sync* 됩니다 **비트**, 기본값은 0입니다. **1** HTTP를 사용해 인터넷으로 끌어오기 구독을 동기화 할 수 있음을 지정 합니다.  
   
  [  **@internet_url =** ] **'***internet_url***'**  
- 웹 동기화용 복제 수신기(REPLISAPI.DLL)의 위치입니다. *internet_url* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. *internet_url* 형식으로 정규화 된 URL은 `http://server.domain.com/directory/replisapi.dll`합니다. 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
+ 웹 동기화용 복제 수신기(REPLISAPI.DLL)의 위치입니다. *internet_url* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. *internet_url* 형식으로 정규화 된 URL은 `https://server.domain.com/directory/replisapi.dll`합니다. 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `https://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
   
  [  **@internet_login =** ] **'***internet_login***'**  
  병합 에이전트가 HTTP 기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용하는 로그인입니다. *internet_login* 됩니다 **sysname**, 기본값은 NULL입니다.  
@@ -314,7 +314,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  HTTPS를 사용하여 웹 동기화 동안 웹 서버에 연결할 때 병합 에이전트에서 사용하는 인증 방법입니다. *internet_security_mode* 됩니다 **int** 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|기본 인증이 사용됩니다.|  
 |**1** (기본값)|Windows 통합 인증이 사용됩니다.|  

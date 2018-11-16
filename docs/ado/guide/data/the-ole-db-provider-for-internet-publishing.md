@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632211"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600023"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시용 OLE DB 공급자
 ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 하 고 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체 수 Microsoft OLE DB provider for Internet Publishing (게시 공급자 인터넷) 액세스 하 고 리소스를 조작 웹 폴더 또는 파일 등 Microsoft FrontPage에서 제공 합니다. ADO의 원본을 지정할 수 있습니다는 **레코드**, **Stream**, 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 한 URL 이어야 합니다. 수 다음 업로드, 다운로드, 이동, 복사 및 리소스를 삭제 또는 직접 리소스 속성을 조작 합니다.  
@@ -36,20 +36,20 @@ ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 하 고 [St
 -   지정 "URL =" 연결 문자열에 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Msdaipp.dso에 대 한 지정 된 *공급자* 연결 문자열 키워드입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Msdaipp.dso에 대 한 지정 합니다 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

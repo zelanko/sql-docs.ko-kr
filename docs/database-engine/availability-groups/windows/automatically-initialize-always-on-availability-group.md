@@ -10,12 +10,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72b1695a77fbf5d8d080a11abe65247f59fffe59
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 5ef4cee8a8f784af0eb8e51b9ac23dc16ecf63bf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336262"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605793"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -286,5 +286,5 @@ SQL Server는 자동 시드를 위해 고정 개수의 스레드를 사용합니
 
 [CREATE AVAILABILITY GROUP(Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
+[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](https://technet.microsoft.com/library/dn135328.aspx)
 

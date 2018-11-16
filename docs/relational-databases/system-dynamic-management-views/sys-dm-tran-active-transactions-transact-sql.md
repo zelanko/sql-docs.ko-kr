@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b940db47793a5b56c952970c4f12e4a7f15f92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e2d3ef2e3428a45dce7e55761a16cc32cb3b425
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663159"
 ---
 # <a name="sysdmtranactivetransactions-transact-sql"></a>sys.dm_tran_active_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47674811"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_active_transactions**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|데이터베이스 수준이 아닌 인스턴스 수준의 트랜잭션 ID입니다. 이 ID는 한 인스턴스 내의 모든 데이터베이스에서 고유하지만 모든 서버 인스턴스에서 고유하지는 않습니다.|  
 |NAME|**nvarchar(32)**|트랜잭션 이름입니다. 트랜잭션이 표시된 경우 표시된 이름이 트랜잭션 이름을 덮어쓰며 이를 대체합니다.|  
@@ -46,10 +46,10 @@ ms.locfileid: "47674811"
 |transaction_state|**int**|0 = 트랜잭션이 아직 완전히 초기화되지 않았습니다.<br /><br /> 1 = 트랜잭션을 초기화했지만 시작하지 않았습니다.<br /><br /> 2 = 트랜잭션이 활성 상태입니다.<br /><br /> 3 = 트랜잭션을 종료했습니다. 이것은 읽기 전용 트랜잭션에 사용됩니다.<br /><br /> 4 = 분산 트랜잭션에서 커밋 프로세스가 시작되었습니다. 이것은 분산 트랜잭션에만 사용됩니다. 분산 트랜잭션이 여전히 활성 상태지만 더 이상은 처리할 수 없습니다.<br /><br /> 5 = 트랜잭션이 준비된 상태이며 해결을 기다리고 있습니다.<br /><br /> 6 = 트랜잭션을 커밋 했습니다.<br /><br /> 7 = 트랜잭션을 롤백하고 있습니다.<br /><br /> 8 = 트랜잭션이 롤백 되었습니다.|  
 |transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|dtc_state|**int**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (최초 릴리스- [현재 릴리스](http://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> 1 = 활성<br /><br /> 2 = 준비됨<br /><br /> 3 = 커밋됨<br /><br /> 4 = 중단됨<br /><br /> 5 = 복구됨|  
+|dtc_state|**int**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (최초 릴리스- [현재 릴리스](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> 1 = 활성<br /><br /> 2 = 준비됨<br /><br /> 3 = 커밋됨<br /><br /> 4 = 중단됨<br /><br /> 5 = 복구됨|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary(128)**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (최초 릴리스- [현재 릴리스](http://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|filestream_transaction_id|**varbinary(128)**|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (최초 릴리스- [현재 릴리스](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한

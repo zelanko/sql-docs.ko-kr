@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0831d34da78e107e3830a4cc04d1b1014f33f912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110d613f8b2e9f4fed1788a614b71041710edac4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823372"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662942"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 드라이버 관리자는 모든 **SQLDrivers** 특성 사양 문자열을 반환합니다. 특성 문자열 및 값 정의에 대한 자세한 내용은 온라인에서 [데이터 액세스 및 저장소 개발자 센터(Data Access and Storage Developer Center)](http://go.microsoft.com/fwlink/?LinkId=4173)또는 [ODBC 프로그래머 참조(ODBC Programmer's Reference)](http://go.microsoft.com/fwlink/?LinkId=45250) 를 참조하십시오.  
+  ODBC 드라이버 관리자는 모든 **SQLDrivers** 특성 사양 문자열을 반환합니다. 특성 문자열 및 값 정의에 대한 자세한 내용은 온라인에서 [데이터 액세스 및 저장소 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink/?LinkId=4173)또는 [ODBC 프로그래머 참조(ODBC Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45250) 를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

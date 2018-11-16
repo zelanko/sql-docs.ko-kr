@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695903"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512708"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 그래프 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695903"
 
 
 ## <a name="what-is-a-graph-database"></a>그래프 데이터베이스는 무엇입니까?  
-그래프 데이터베이스는 노드 (또는 꼭 짓 점)의 컬렉션 및 가장자리 (또는 관계). 노드 엔터티 (예: 사용자 또는 조직)를 나타내고,에 지 (예, 좋아요 또는 친구)에 연결 하는 두 노드 간의 관계를 나타냅니다. 노드 및에 지 모두 관련 된 속성이 있을 수 있습니다. 그래프 데이터베이스를 고유 하 게 설정 하는 일부 기능은 다음과 같습니다.  
+그래프 데이터베이스는 노드(또는 꼭짓점) 및 모서리(또는 관계) 컬렉션입니다. 노드는 엔터티(예: 사용자 또는 조직)를 나타내고, 모서리는 연결된 두 노드 간 관계(예: 호감 또는 친구)를 나타냅니다. 노드 및에 지 모두 관련 된 속성이 있을 수 있습니다. 그래프 데이터베이스를 고유 하 게 설정 하는 일부 기능은 다음과 같습니다.  
 -   가장자리 또는 관계는 그래프 데이터베이스에서 첫 번째 클래스 엔터티 및 수 있는 특성 또는 속성 하 합니다. 
 -   가장자리가 하나 그래프 데이터베이스에서 여러 노드를 유연 하 게 연결 수 있습니다.
 -   패턴 일치 및 다중 홉 탐색 쿼리를 쉽게 표현할 수 있습니다.
@@ -76,7 +75,7 @@ AND Person1.Name = 'John';
 
 기존 도구 및 에코 시스템에서 활용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 합니다. 백업 및 복원와 같은 도구 가져오기 및 내보내기에 BCP 즉시 작동 합니다. 관계형 테이블을 사용 하 여 작동 방식으로 다른 도구 또는 SSIS, SSRS, 또는 Power BI와 같은 서비스 그래프 테이블을 사용 하 여 작동 됩니다.
 
-## <a name="edge-constraints"></a>에 지 제약 조건
+## <a name="edge-constraints"></a>에지 제약 조건
 에 지 제약 그래프에 지 테이블에 정의 되 고 지정 된 가장자리 유형을 연결할 수 있는 노드 테이블의 쌍입니다. 사용자가 해당 그래프 스키마를 더 세부적으로 제어할을 이렇게 합니다. 에 지 제약 조건 사용 하 여 사용자 지정 된 가장자리를 연결할 수는 노드의 형식을 제한할 수 있습니다. 
 
 참조 만들기 및에 지 제약 조건을 사용 하는 방법을 자세히 알아보려면 [에 지 제약 조건](../../relational-databases/tables/graph-edge-constraints.md)

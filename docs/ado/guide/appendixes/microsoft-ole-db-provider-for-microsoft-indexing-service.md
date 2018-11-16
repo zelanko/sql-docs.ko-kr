@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613281"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350357"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service가 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색 하는 SQL 쿼리를 실행할 수 있습니다.
@@ -30,7 +30,7 @@ Microsoft OLE DB Provider for Microsoft Indexing Service가 파일 시스템 및
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  이 공급자에 연결을 설정 합니다 **공급자 =** 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,13 +39,13 @@ MSIDXS
 ## <a name="typical-connection-string"></a>일반적인 연결 문자열
  이 공급자에 대 한 일반적인 연결 문자열은:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
  문자열을 이러한 키워드 이루어져 있습니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|Microsoft 인덱싱 서비스용 OLE DB Provider를 지정합니다. 일반적으로 이것은 유일한 키워드 연결 문자열에 지정 합니다.|
 |**데이터 원본**|인덱싱 서비스 카탈로그 이름을 지정합니다. 이 키워드를 지정 하지 않으면 기본 시스템 카탈로그가 사용 됩니다.|
@@ -97,20 +97,20 @@ MSIDXS
 |메서드|사용 가능 여부|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|사용자 계정 컨트롤|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|사용자 계정 컨트롤|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|사용자 계정 컨트롤|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|사용자 계정 컨트롤|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|
 |[Update](../../../ado/reference/ado-api/update-method.md)|아니요|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
 

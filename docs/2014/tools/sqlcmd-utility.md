@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229973"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641540"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   합니다 `sqlcmd` 유틸리티를 사용 하면 입력 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트의 명령 프롬프트에서 파일 **쿼리 편집기** SQLCMD 모드에서 Windows 스크립트 파일에서 또는의 운영 체제 (Cmd.exe) 작업 단계는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업입니다. 이 유틸리티는 ODBC를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 일괄 처리를 실행합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "48229973"
  서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K**를 지정하지 않으면 sqlcmd 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  `-M` *multisubnet_failover*  
- 항상 지정 `-M` 가용성 그룹 수신기에 연결할 때는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스. `-M`은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. `–M`이 지정되지 않은 경우 `-M`이 해제됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]를 참조 하세요 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)를 [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), 및 [활성 보조: 읽기 가능한 보조 복제본 ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ `-M` 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 지정하십시오. `-M`은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. `–M`이 지정되지 않은 경우 `-M`이 해제됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]를 참조 하세요 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)를 [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), 및 [활성 보조: 읽기 가능한 보조 복제본 ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -182,7 +182,7 @@ ms.locfileid: "48229973"
   
 -   여러 입력 파일이 있는 경우 동일한 코드 페이지를 사용하는 것으로 간주됩니다. 유니코드 및 비유니코드 입력 파일을 함께 사용할 수 있습니다.  
   
- 입력 `chcp` Cmd.exe의 코드 페이지를 확인 하려면 명령 프롬프트에서.  
+ 명령 프롬프트에서 `chcp`를 입력하여 Cmd.exe의 코드 페이지를 확인합니다.  
   
  **-i** *input_file*[**,***input_file2*...]  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. 순서대로 읽고 처리할 파일을 여러 개 지정할 수 있습니다. 파일 이름 사이에 공백을 넣지 마십시오. 먼저 `sqlcmd`는 지정한 모든 파일이 있는지 확인합니다. 하나 이상의 파일이 없을 경우 `sqlcmd`가 종료됩니다. -i 옵션과 -Q/-q 옵션은 함께 사용할 수 없습니다.  
@@ -600,7 +600,7 @@ ms.locfileid: "48229973"
   
  1부터 -99까지의 반환 값은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 예약되어 있으므로 `sqlcmd`는 다음과 같은 추가 반환 값을 정의합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |-------------------|-----------------|  
 |-100|반환 값을 선택하기 전에 오류가 발생했습니다.|  
 |-101|반환 값을 선택할 때 행을 찾을 수 없습니다.|  
@@ -707,7 +707,7 @@ ms.locfileid: "48229973"
   
  `GO`  
   
- Enter 키를 누르면 다음 결과 집합이 반환됩니다.  
+ ENTER를 누르면 다음 결과 집합이 반환 됩니다.  
   
  `BusinessEntityID FirstName    LastName`  
   

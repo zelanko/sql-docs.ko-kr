@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252011"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674203"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 
@@ -33,11 +33,11 @@ ms.locfileid: "48252011"
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Azure Kubernetes Service에서 실행 중인 Kubernetes에서 HA 솔루션
 
-Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](http://kubernetes.io/docs/concepts/storage/storage-classes/), [영구적 볼륨 클레임](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), 및 [Azure 디스크 볼륨 형식](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)합니다. 만들기 및 Kubernetes에 기본적으로 SQL Server 인스턴스를 관리할 수 있습니다. 이 문서의 예제에서에서 만드는 방법을 보여 줍니다.는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 공유 디스크 장애 조치 클러스터 인스턴스에 유사한 고가용성 구성을 위해. 이 구성에서는 Kubernetes 클러스터 오 케 스트레이 터의 역할을 재생합니다. 컨테이너에서 SQL Server 인스턴스를 실패 한 경우는 오 케 스트레이 터 같은 영구 저장소에 연결 하는 컨테이너의 다른 인스턴스를 부트스트랩 합니다.
+Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/), [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), 및 [Azure 디스크 볼륨 형식](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)합니다. 만들기 및 Kubernetes에 기본적으로 SQL Server 인스턴스를 관리할 수 있습니다. 이 문서의 예제에서에서 만드는 방법을 보여 줍니다.는 [배포](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) 공유 디스크 장애 조치 클러스터 인스턴스에 유사한 고가용성 구성을 위해. 이 구성에서는 Kubernetes 클러스터 오 케 스트레이 터의 역할을 재생합니다. 컨테이너에서 SQL Server 인스턴스를 실패 한 경우는 오 케 스트레이 터 같은 영구 저장소에 연결 하는 컨테이너의 다른 인스턴스를 부트스트랩 합니다.
 
 ![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-위의 다이어그램에서 `mssql-server` 은 컨테이너에는 [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/)합니다. Kubernetes는 클러스터의 리소스를 조정합니다. A [복제본 세트](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) pod가 노드 실패 후 자동으로 복구 하 고 있는지 확인 합니다. 응용 프로그램 서비스에 연결 합니다. 이 경우 서비스를 나타내는 실패 후에 동일 하 게 유지 하는 IP 주소를 호스트 하는 부하 분산 장치는 `mssql-server`합니다.
+위의 다이어그램에서 `mssql-server` 은 컨테이너에는 [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)합니다. Kubernetes는 클러스터의 리소스를 조정합니다. A [복제본 세트](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) pod가 노드 실패 후 자동으로 복구 하 고 있는지 확인 합니다. 응용 프로그램 서비스에 연결 합니다. 이 경우 서비스를 나타내는 실패 후에 동일 하 게 유지 하는 IP 주소를 호스트 하는 부하 분산 장치는 `mssql-server`합니다.
 
 다음 다이어그램에는 `mssql-server` 컨테이너에 실패 했습니다. 오 케 스트레이 터로 Kubernetes 복제본에 정상 인스턴스의 정확한 수를 설정 및 구성에 따라 새 컨테이너를 시작을 보장 합니다. 오 케 스트레이 터 같은 노드에서 새 pod를 시작 하 고 `mssql-server` 같은 영구 저장소에 다시 연결 합니다. 서비스에 다시 만들어진 연결 `mssql-server`합니다.
 
@@ -47,12 +47,12 @@ Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](http://kube
 
 ![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * **Kubernetes 클러스터**
    - 이 자습서에는 Kubernetes 클러스터에 필요합니다. 단계를 사용 하 여 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) 클러스터를 관리 합니다. 
 
-   - 참조 [Azure Container Service (AKS) 클러스터 배포](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) 를 만들고 사용 하 여 AKS에서 단일 노드 Kubernetes 클러스터에 연결 `kubectl`합니다. 
+   - 참조 [Azure Container Service (AKS) 클러스터 배포](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) 를 만들고 사용 하 여 AKS에서 단일 노드 Kubernetes 클러스터에 연결 `kubectl`합니다. 
 
    >[!NOTE]
    >노드 오류를 방지 하려면 Kubernetes 클러스터에는 둘 이상의 노드가 필요 합니다.
@@ -62,7 +62,7 @@ Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](http://kube
 
 ## <a name="create-an-sa-password"></a>SA 암호를 만들려면
 
-Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와 같은 중요 한 구성 정보를 관리할 수 있습니다 [비밀](http://kubernetes.io/docs/concepts/configuration/secret/)합니다.
+Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와 같은 중요 한 구성 정보를 관리할 수 있습니다 [비밀](https://kubernetes.io/docs/concepts/configuration/secret/)합니다.
 
 다음 명령은 SA 계정의 암호를 만듭니다.
 
@@ -77,9 +77,9 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
 
 ## <a name="create-storage"></a>저장소 만들기
 
-구성 된 [영구적 볼륨](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) 및 [영구적 볼륨 클레임](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) Kubernetes 클러스터에서. 다음 단계를 수행 합니다. 
+구성 된 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) 및 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) Kubernetes 클러스터에서. 다음 단계를 수행 합니다. 
 
-1. 영구적 볼륨 및 저장소 클래스를 정의 하는 매니페스트를 만듭니다 클레임입니다.  매니페스트는 저장소 프로 비 저 너를, 매개 변수를 지정 하 고 [회수 정책](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)합니다. Kubernetes 클러스터는이 매니페스트를 사용 하 여 영구 저장소를 만듭니다. 
+1. 영구적 볼륨 및 저장소 클래스를 정의 하는 매니페스트를 만듭니다 클레임입니다.  매니페스트는 저장소 프로 비 저 너를, 매개 변수를 지정 하 고 [회수 정책](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)합니다. Kubernetes 클러스터는이 매니페스트를 사용 하 여 영구 저장소를 만듭니다. 
 
    다음 yaml 예제에서는 저장소 클래스와 영구적 볼륨 클레임을 정의합니다. 저장소 클래스 너는 `azure-disk`이므로 Azure에서 Kubernetes 클러스터가이 있습니다. 저장소 계정 유형이 `Standard_LRS`합니다. 영구적 볼륨 클레임이 이름은 `mssql-data`합니다. 영구적 볼륨 클레임 메타 데이터 주석 연결 저장소 클래스를 포함 합니다. 
 
@@ -155,7 +155,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
 
 이 예제에서는 SQL Server 인스턴스를 호스팅하는 컨테이너는 Kubernetes 배포 개체로 설명 되어 있습니다. 배포 된 복제본 집합을 만듭니다. 복제본 세트 pod를 만듭니다. 
 
-이 단계에서는 SQL Server를 기반으로 컨테이너를 설명 하는 매니페스트를 만듭니다 [mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 이미지입니다. 매니페스트 참조를 `mssql-server` 영구적 볼륨 클레임 및 `mssql` Kubernetes 클러스터에 이미 적용 하는 암호입니다. 매니페스트도 설명 합니다.는 [서비스](http://kubernetes.io/docs/concepts/services-networking/service/)합니다. 이 서비스는 부하 분산 장치. 부하 분산 장치 IP 주소를 SQL Server 인스턴스를 복구한 후에 유지 되도록 보장 합니다. 
+이 단계에서는 SQL Server를 기반으로 컨테이너를 설명 하는 매니페스트를 만듭니다 [mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 이미지입니다. 매니페스트 참조를 `mssql-server` 영구적 볼륨 클레임 및 `mssql` Kubernetes 클러스터에 이미 적용 하는 암호입니다. 매니페스트도 설명 합니다.는 [서비스](https://kubernetes.io/docs/concepts/services-networking/service/)합니다. 이 서비스는 부하 분산 장치. 부하 분산 장치 IP 주소를 SQL Server 인스턴스를 복구한 후에 유지 되도록 보장 합니다. 
 
 1. 배포를 설명 하는 매니페스트 (YAML 파일)를 만듭니다. 다음 예제에서는 SQL Server 컨테이너 이미지를 기반으로 컨테이너를 포함 하 여 배포를 설명 합니다.
 
@@ -212,7 +212,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
    * `value: "Developer"`: SQL Server Developer edition을 실행 하도록 컨테이너를 설정 합니다. Developer edition은 프로덕션 데이터에 대 한 허가 받지 않았습니다. 프로덕션 사용에 대 한 배포가 되 면 적절 한 버전을 설정 (`Enterprise`, `Standard`, 또는 `Express`). 
 
       >[!NOTE]
-      >자세한 내용은 [SQL Server 라이선스 방법](http://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
+      >자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
 
    * `persistentVolumeClaim`:이 값에 대 한 항목이 필요한 `claimName:` 영구적 볼륨 클레임에 대 한 사용 되는 이름에 매핑되는 합니다. 이 자습서에서는 `mssql-data`합니다. 
 
@@ -275,9 +275,9 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
 
 SQL Server 인스턴스에 연결 하려면 다음 응용 프로그램을 사용할 수 있습니다. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Kubernetes 자동으로 다시는 pod를 만듭니다 SQL Server 인스턴스를
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
->[Kubernetes 소개](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes 소개](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

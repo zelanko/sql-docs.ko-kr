@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100104"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663863"
 ---
 # <a name="generating-reports-db2tosql"></a>보고서 생성 (DB2ToSQL)
 개체 트리 수준 SSMA 콘솔의 명령을 사용 하 여 수행 되는 특정 활동의 보고서를 생성 됩니다.  
@@ -138,5 +138,5 @@ ms.locfileid: "50100104"
 -   스크립트 실패  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 실행](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[SSMA 콘솔 실행](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

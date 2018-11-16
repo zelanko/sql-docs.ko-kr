@@ -19,19 +19,19 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795031"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664976"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 복제 트랜잭션 또는 변경 데이터 캡처 트랜잭션에 대한 정보를 반환합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|트랜잭션이 피어 투 피어 트랜잭션 복제를 통해 게시된 데이터베이스에 있는지 여부를 지정합니다. true이면 값이 1이고, 그렇지 않으면 0입니다.|  
 |**db_ver**|**int**|데이터베이스 버전입니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47795031"
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [복제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

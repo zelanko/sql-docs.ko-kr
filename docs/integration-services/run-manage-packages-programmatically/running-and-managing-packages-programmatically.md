@@ -11,12 +11,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e6dee6bea3a3d4c0c6cd5c2f7bb3f6ac51abe88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e5780ffb31d3f917245e423e8d88ad4033e3e9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656701"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638310"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>프로그래밍 방식으로 패키지 실행 및 관리
   개발 환경 외부에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리 및 실행해야 하는 경우 패키지를 프로그래밍 방식으로 조작할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47656701"
 ## <a name="running-packages-on-the-integration-services-server"></a>Integration Services 서버의 패키지 실행  
  패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 경우 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하여 프로그래밍 방식으로 패키지를 실행할 수 있습니다. Microsoft.SqlServer.Management.IntegrationServices 어셈블리는 .NET Framework 3.5로 컴파일됩니다. .NET Framework 4.0 응용 프로그램을 빌드하는 경우 프로젝트 파일에 어셈블리 참조를 직접 추가해야 할 수 있습니다.  
   
- 또한 네임스페이스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포 및 관리할 수 있습니다. 네임스페이스 및 코드 조각에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](http://go.microsoft.com/fwlink/?LinkId=253122)블로그 항목을 참조하십시오.  
+ 또한 네임스페이스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포 및 관리할 수 있습니다. 네임스페이스 및 코드 조각에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=253122)블로그 항목을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [로컬 실행과 원격 실행의 차이점 이해](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

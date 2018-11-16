@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740341"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658389"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터 및 가용성 그룹 리소스 구성
 
@@ -134,7 +134,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>펜싱 (STONITH) 구성
 
-Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 지원 되는 클러스터 설치를 구성 하는 펜싱 장치에 필요 합니다. Cluster resource manager는 노드 또는 노드 리소스의 상태를 확인할 수 없습니다, 하는 경우 펜스를 알려진된 상태로 클러스터를 다시 표시 하려면 사용 됩니다. 리소스 수준 펜싱 주로 리소스를 구성 하 여 가동 중지 시에도 없는 데이터 손상이 있는지 확인 합니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 된 블록 장치 Distributed) DRBD를 사용 하 여 통신 링크 중단 합니다. 노드 수준 펜싱 노드 리소스 실행 되지 않도록 보장 합니다. 노드를 다시 설정 하 여 이렇게 하 고는 Pacemaker 구현의 STONITH (약자인 "헤드에 있는 다른 노드가 특이") 이라고 합니다. 키를 누릅니다. 무정전 전원 공급 장치 또는 관리를 서버에 대 한 카드 인터페이스 예를 들어, pacemaker 다양 한 펜스 장치를 지원 합니다. 자세한 내용은 [처음부터 Pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) 고 [펜싱 및 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 지원 되는 클러스터 설치를 구성 하는 펜싱 장치에 필요 합니다. Cluster resource manager는 노드 또는 노드 리소스의 상태를 확인할 수 없습니다, 하는 경우 펜스를 알려진된 상태로 클러스터를 다시 표시 하려면 사용 됩니다. 리소스 수준 펜싱 주로 리소스를 구성 하 여 가동 중지 시에도 없는 데이터 손상이 있는지 확인 합니다. 리소스 수준 펜싱을 사용할 수 있습니다 예를 들어, 오래 된 경우 처럼 노드에서 디스크를 표시 하려면 (복제 된 블록 장치 Distributed) DRBD를 사용 하 여 통신 링크 중단 합니다. 노드 수준 펜싱 노드 리소스 실행 되지 않도록 보장 합니다. 노드를 다시 설정 하 여 이렇게 하 고는 Pacemaker 구현의 STONITH (약자인 "헤드에 있는 다른 노드가 특이") 이라고 합니다. 키를 누릅니다. 무정전 전원 공급 장치 또는 관리를 서버에 대 한 카드 인터페이스 예를 들어, pacemaker 다양 한 펜스 장치를 지원 합니다. 자세한 내용은 [처음부터 Pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) 고 [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 구성 펜싱 노드 수준 환경에 따라 크게 달라 집니다, 있으므로 (구성할 수 있습니다 나중)이이 자습서에 대 한 비활성화 했습니다. 주 노드에서 다음 스크립트를 실행 합니다. 
 

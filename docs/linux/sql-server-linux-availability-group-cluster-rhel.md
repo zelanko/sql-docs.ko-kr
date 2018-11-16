@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715461"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670822"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Red Hat Enterprise Linux에서 SQL Server에 대 한 3 개 노드의 가용성 그룹 클러스터를 만드는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹을 필요한 3 개의 노드가-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
+이 문서에서는 Red Hat Enterprise Linux에서 SQL Server에 대 한 3 개 노드의 가용성 그룹 클러스터를 만드는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹을 필요한 3 개의 노드가-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 클러스터링 계층은 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](https://clusterlabs.org/)합니다. 
 
 > [!NOTE] 
 > Red Hat 전체 설명서에 대 한 액세스는 유효한 구독이 필요합니다. 
 
-클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
+클러스터 구성, 리소스 에이전트 옵션 및 관리에 대 한 자세한 내용은 방문 [RHEL 참조 설명서](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)합니다.
 
 > [!NOTE] 
 > SQL Server는 통합 되지 않습니다와 긴밀 하 게 Linux의 Pacemaker를 사용 하 여 Windows Server 장애 조치 클러스터링 된. SQL Server 인스턴스를 클러스터의 인식 아닙니다. Pacemaker는 클러스터 리소스 오케스트레이션을 제공 합니다. 또한 가상 네트워크 이름은 Windows Server 장애 조치 클러스터링에 특정-Pacemaker에 해당 항목이 없습니다. 가용성 그룹 동적 관리 뷰 (Dmv) 클러스터 정보를 쿼리 하는 Pacemaker 클러스터에서 빈 행을 반환 합니다. 장애 조치 후 투명 하 게 다시 연결에 대 한 수신기를 만들려면 가상 IP 리소스를 만드는 데 사용 된 IP 사용 하 여 DNS에서 수신기 이름을 수동으로 등록 합니다. 
@@ -58,7 +58,7 @@ RHEL에 대 한 고가용성을 구성 하려면 항상 사용 가능한 구독�
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Rhel 고가용성 구독 사용
 
-클러스터의 각 노드 RHEL 및 높은 가용성 추가 대 한 적절 한 구독이 가져야 합니다. 요구 사항을 검토 [Red Hat Enterprise Linux에서 고가용성 클러스터 패키지를 설치 하는 방법](http://access.redhat.com/solutions/45930)합니다. 구독 및 리포지토리를 구성 하려면 다음이 단계를 수행 합니다.
+클러스터의 각 노드 RHEL 및 높은 가용성 추가 대 한 적절 한 구독이 가져야 합니다. 요구 사항을 검토 [Red Hat Enterprise Linux에서 고가용성 클러스터 패키지를 설치 하는 방법](https://access.redhat.com/solutions/45930)합니다. 구독 및 리포지토리를 구성 하려면 다음이 단계를 수행 합니다.
 
 1. 시스템을 등록 합니다.
 
@@ -88,7 +88,7 @@ RHEL에 대 한 고가용성을 구성 하려면 항상 사용 가능한 구독�
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-자세한 내용은 [Pacemaker-The 오픈 소스, 높은 가용성 클러스터](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)합니다. 
+자세한 내용은 [Pacemaker-The 오픈 소스, 높은 가용성 클러스터](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)합니다. 
 
 구독을 구성한 후 Pacemaker를 구성 하려면 다음 단계를 완료 합니다.
 
@@ -110,9 +110,9 @@ Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 �
 
 STONITH를 및 펜싱에 대 한 내용은 다음 문서를 참조 합니다.
 
-* [부터 pacemaker 클러스터](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [펜싱 및 STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Pacemaker 사용 하 여 Red Hat 고가용성 추가 기능: 펜싱](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [부터 pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [펜싱 및 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Pacemaker 사용 하 여 Red Hat 고가용성 추가 기능: 펜싱](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 구성 펜싱 노드 수준 환경에 따라 크게 달라 집니다, 때문에 (구성할 수 있습니다 나중)이이 자습서에 대 한 비활성화 합니다. 다음 스크립트는 노드 수준 펜스를 비활성화합니다.
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Pacemaker 클러스터 속성에 대 한 자세한 내용은 [Pacemaker 클러스터 속성](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)합니다.
+Pacemaker 클러스터 속성에 대 한 자세한 내용은 [Pacemaker 클러스터 속성](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)합니다.
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 용 SQL Server 로그인 만들기
 

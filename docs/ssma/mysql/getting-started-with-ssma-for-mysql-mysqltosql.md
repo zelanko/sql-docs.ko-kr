@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677252"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL 사용 하 여 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환, SQL Server 또는 Azure SQL DB에 결과 스키마를 업로드 및 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  
@@ -73,7 +73,7 @@ SQL Server 또는 Azure SQL DB 메타 데이터 탐색기의 SQL Server 또는 A
   
 이 메타 데이터 탐색기를 사용 하 여 변환 된 MySQL 데이터베이스 개체를 선택 하 고 SQL Server 또는 Azure SQL DB의 인스턴스를 사용 하 여 해당 개체를 동기화 할 수 있습니다.  
   
-자세한 내용은 참조 하세요. [동기화 (SQL Server에는 MySQL / Azure SQL DB)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+자세한 내용은 참조 하세요. [동기화 (SQL Server에는 MySQL / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>메타데이터  
 각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 MySQL 메타 데이터 탐색기에서 테이블을 선택 하면 9 개의 탭 표시 됩니다. **테이블**, **SQL**를 **형식 매핑**를 **데이터**,  **설정을**, **문자 집합 매핑**를 **SQL 모드**를 **속성**, 및 **보고서**합니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. SQL Server 메타 데이터 탐색기에서 테이블을 선택 하는 경우에 세 개의 탭 표시 됩니다. **테이블**, **SQL** 하 고 **데이터**입니다.  

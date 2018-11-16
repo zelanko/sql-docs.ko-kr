@@ -10,19 +10,19 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dd380541c42e7e49434a0683609c3fb8dd6ae64a
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 730965c17bc53781729d0dcd78aaa8085128a35b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098986"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659422"
 ---
 # <a name="appendix---1-accesstosql"></a>부록-1 (AccessToSQL)
 SSMA 콘솔 명령줄 옵션에 대 한 빠른 보기:  
   
 |Sl 합니다. 아니요.|스위치|필수 여부|스위치 인수|허용 되는 값|  
 |-----------|----------|-------------|-------------------|--------------------|  
-|1|-s/script|사용자 계정 컨트롤|scriptfile|올바른 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
+|1|-s/script|예|scriptfile|올바른 XML 파일 이름입니다.<br /><br />콘솔 스크립트 정의 파일입니다.|  
 |2|-v/변수|아니요|variablevaluefile|올바른 XML 파일 이름입니다. 스크립트 파일에서 변수를 사용 하는이 파일을 지정 해야 합니다.|  
 |3|-c/serverconnection|아니요|serverconnectionfile|올바른 XML 파일 이름입니다. 이 파일 서버 연결 정보를 포함 합니다.|  
 |4|-x/xmloutput|아니요|xmloutputfile|이 옵션은 XML 형식으로 콘솔 출력을 나타냅니다. 이 옵션을 지정 하지 않으면 기본 출력을 텍스트 형식으로 됩니다.<br /><br />Xmloutputfile를 지정 하지 않은 경우 XML 출력은 STDOUT으로 전송 됩니다.<br /><br />Xmloutputfile에는 콘솔 출력은 XML 형식으로 기록 되는 파일의 이름입니다.|  
@@ -32,5 +32,5 @@ SSMA 콘솔 명령줄 옵션에 대 한 빠른 보기:
 |8|-?|아니요|해당 사항 없음|해당 사항 없음|  
   
 ## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[SSMA 콘솔 (Access)를 실행합니다.](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

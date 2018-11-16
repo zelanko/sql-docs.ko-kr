@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613432"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600933"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613432"
   
 4.  [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 업그레이드한 후에 수행하는 단계 중 하나는 데이터베이스 호환성 모드를 변경한 다음 쿼리 저장소를 사용해 성능을 모니터링하여 새 기능을 사용하도록 설정하는 것입니다. 이 문서에서는 해당 프로세스에 대해 설명하고 권장 워크플로를 제공합니다.  
   
-5.  [새 SQL Server 기능 활용](http://www.microsoft.com/sql-server/sql-server-2017) 마지막으로 이전 단계를 완료한 후에는 새 데이터베이스 엔진의 특정 향상 기능을 사용해 볼 수 있습니다. 이 문서에서는 이러한 향상 기능 중 몇 가지를 소개하고 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
+5.  [새 SQL Server 기능 활용](https://www.microsoft.com/sql-server/sql-server-2017) 마지막으로 이전 단계를 완료한 후에는 새 데이터베이스 엔진의 특정 향상 기능을 사용해 볼 수 있습니다. 이 문서에서는 이러한 향상 기능 중 몇 가지를 소개하고 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
   
   

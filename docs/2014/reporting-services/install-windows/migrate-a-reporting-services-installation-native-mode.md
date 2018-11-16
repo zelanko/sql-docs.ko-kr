@@ -1,32 +1,23 @@
 ---
 title: Reporting Services 설치 마이그레이션(기본 모드) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082893"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604064"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
+
   이 항목에서는 다음과 같은 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 배포 중 하나를 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스로 마이그레이션하는 데 필요한 단계별 지침을 제공합니다.  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082893"
   
  보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 제한되어 있습니다. 이전 설치에서 만든 보고서 서버 데이터베이스를 다시 사용하는 경우에는 다음 항목을 검토하십시오.  
   
--   [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> 고정 데이터베이스 이름  
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버의 기본 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
@@ -268,8 +259,8 @@ ms.locfileid: "48082893"
 2.  이 컴퓨터에서 IIS가 더 이상 필요하지 않은 경우 제거합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 설치 마이그레이션 &#40;SharePoint 모드&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [보고서 서버 데이터베이스를 &#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services 업그레이드 및 마이그레이션](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services의 이전 버전과의 호환성](../reporting-services-backward-compatibility.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

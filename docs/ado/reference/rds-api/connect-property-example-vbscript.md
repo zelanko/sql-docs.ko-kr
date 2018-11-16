@@ -15,16 +15,16 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bca5485634769322ce41ea85b4e08801af507d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730751"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602144"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  이 코드를 설정 하는 방법을 보여 줍니다 합니다 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 디자인 타임에 속성:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47730751"
 .  
    <PARAM NAME="SQL" VALUE="Select * from Sales">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Pubs">  
-   <PARAM NAME="Server" VALUE="http://MyWebServer">  
+   <PARAM NAME="Server" VALUE="https://MyWebServer">  
 .  
 </OBJECT>  
 ```  
@@ -86,7 +86,7 @@ BODY {
 </TBODY>  
 </TABLE>  
 <FORM name="frmInput">  
-    SERVER: <INPUT Name="txtServer" Size="103" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+    SERVER: <INPUT Name="txtServer" Size="103" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     DATA SOURCE: <INPUT Name="txtDataSource" Size="93" Value="<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     CONNECT: <INPUT Name="txtConnect" Size="100"><BR>  
     SQL: <INPUT Name="txtSQL" Size="110" Value="Select FirstName, LastName from Employees">  

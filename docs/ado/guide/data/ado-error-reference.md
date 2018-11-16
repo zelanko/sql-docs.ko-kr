@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752391"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600923"
 ---
 # <a name="ado-errors"></a>ADO 오류
 합니다 **ErrorValueEnum** 상수 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 된 상수의 전체 목록은 참조 하세요 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션에서는 몇 가지 흥미로운 오류 검사를 하면 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 일부 특정 한 상황에 설명 합니다. 모두를 **ErrorValueEnum** 상수 및 짧은 양의 10 진수 나열 됩니다.
@@ -64,7 +64,7 @@ ms.locfileid: "47752391"
 |**3724**|**adErrCantConvertvalue**|부호 불일치 또는 데이터 오버플로가 아닌 다른 이유로 데이터 값을 변환할 수 없습니다. 예를 들어, 변환 시 데이터가 잘렸습니다.|
 |**3725**|**adErrCantCreate**|데이터 값을 설정 하거나 필드 데이터 형식을 알 되었거나 공급자가 작업을 수행 하려면 리소스 부족 하기 때문에 검색 될 수 없습니다.|
 |**3726**|**adErrColumnNotOnThisRow**|레코드에이 필드가 없습니다. 필드 이름이 잘못 지정 된 또는 아닌 필드를 **필드** 현재 레코드의 컬렉션에서 참조 되었습니다.|
-|**3727**|**adErrURLDoesNotExist**|원본 URL 또는 URL이 없는 대상의 부모입니다. 원본 또는 대상 URL에 인쇄상 오류가 없는 경우 해야 할 수 있습니다 `http://mysite/photo/myphoto.jpg` 때 실제로 있어야 `http://mysite/photos/myphoto.jpg` 대신 합니다. 부모 URL에서 철자 오류 메시지 (이 예에서 *사진* 대신 *사진*)는 오류를 반환 했습니다.|
+|**3727**|**adErrURLDoesNotExist**|원본 URL 또는 URL이 없는 대상의 부모입니다. 원본 또는 대상 URL에 인쇄상 오류가 없는 경우 해야 할 수 있습니다 `https://mysite/photo/myphoto.jpg` 때 실제로 있어야 `https://mysite/photos/myphoto.jpg` 대신 합니다. 부모 URL에서 철자 오류 메시지 (이 예에서 *사진* 대신 *사진*)는 오류를 반환 했습니다.|
 |**3728**|**adErrTreePermissionDenied**|권한이 트리 또는 하위 트리를 액세스 하기에 충분 하지 않습니다. 연결 문자열에 명명 된 사용자에 적절 한 권한이 없습니다.|
 |**3729**|**adErrInvalidURL**|URL에 잘못 된 문자가 있습니다. URL을 올바르게 입력 했는지 확인 합니다. URL은 현재 공급자에 등록 된 스키마를 따릅니다 (예: 인터넷 게시 공급자가 http에 대 한 등록 함).|
 |**3730**|**adErrResourceLocked**|지정된 된 URL을 나타내는 개체 하나 이상의 다른 프로세스에 의해 잠겨 있습니다. 프로세스가 완료 될 때까지 기다린 후 작업을 다시 시도 합니다. 다른 사용자 또는 응용 프로그램에서 다른 프로세스에서 액세스 하려는 개체를 잠 궜 습니다. 다중 사용자 환경에서 발생 한 것 같습니다.|

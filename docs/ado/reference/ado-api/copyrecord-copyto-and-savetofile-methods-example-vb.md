@@ -17,12 +17,12 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601681"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603653"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB)
 이 예제를 사용 하 여 파일의 복사본을 만드는 방법을 보여 줍니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 하거나 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 인터넷 게시용 웹 폴더에 하나의 복사본이 만들어집니다. 다른 속성 및 표시 된 메서드를 포함 [Stream 형식](../../../ado/reference/ado-api/type-property-ado-stream.md)를 **열려**를 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드 열기](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47601681"
   
 'Note:  
 ' This sample requires that "C:\checkmrk.wmf" and  
-' "http://MyServer/mywmf.wmf" exist.  
+' "https://MyServer/mywmf.wmf" exist.  
   
 Option Explicit  
   
@@ -54,10 +54,10 @@ Private Sub Form_Load()
     ' Initialize path and URL strings  
     strPicturePath = "C:\checkmrk.wmf"  
     strStreamPath = "C:\mywmf.wmf"  
-    strStreamURL = "URL=http://MyServer/mywmf.wmf"  
+    strStreamURL = "URL=https://MyServer/mywmf.wmf"  
     strStream2Path = "C:\checkmrk2.wmf"  
     strRecordPath = "C:\mywmf.wmf"  
-    strRecordURL = "http://MyServer/mywmf2.wmf"  
+    strRecordURL = "https://MyServer/mywmf2.wmf"  
   
     ' Load the file into the stream  
     objStream.Open  

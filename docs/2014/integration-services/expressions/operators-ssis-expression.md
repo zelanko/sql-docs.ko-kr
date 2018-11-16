@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cbceb75a036343b0d116481c5e36e3da3aa63a85
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
+ms.lasthandoff: 11/15/2018
 ms.locfileid: "51272591"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
@@ -28,7 +28,7 @@ ms.locfileid: "51272591"
   
  다음 표에서는 이 섹션의 연산자에 대한 항목을 나열합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[캐스트&#40;SSIS 식&#41;](cast-ssis-expression.md)|식의 데이터 형식을 다른 데이터 형식으로 변환합니다.|  
 |[&#40;&#41;&#40;괄호&#41;&#40;SSIS 식&#41;](parentheses-ssis-expression.md)|식의 계산 순서를 식별합니다.|  

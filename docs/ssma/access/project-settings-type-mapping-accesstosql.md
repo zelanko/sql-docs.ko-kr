@@ -17,12 +17,12 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855111"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681251"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
 형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [매핑 원본 및 대상 데이터 형식](mapping-source-and-target-data-types-accesstosql.md)합니다.  
@@ -75,5 +75,5 @@ ms.locfileid: "47855111"
   
 ## <a name="see-also"></a>관련 항목  
 [원본 및 대상 데이터 형식 매핑](mapping-source-and-target-data-types-accesstosql.md)  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   
