@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856111"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638010"
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서 SQL 실행 태스크의 SQL 문은 MERGE 문을 포함할 수 있습니다. 이 MERGE 문을 사용하면 하나의 문에서 여러 INSERT, UPDATE 및 DELETE 작업을 수행할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47856111"
     > [!NOTE]  
     >  이 시나리오의 MERGE 문에는 일반적으로 준비 테이블이 필요하지만 MERGE 문의 성능은 대개 조회 변환에 의해 수행되는 행 단위 조회보다 뛰어납니다. 또한 MERGE는 대용량 조회 테이블이 조회 변환에서 참조 테이블을 캐시하는 데 사용할 수 있는 메모리를 테스트하는 경우 유용합니다.  
   
- MERGE 문 사용을 지원하는 예제 대상 구성 요소는 CodePlex 커뮤니티 예제 [MERGE 대상(MERGE Destination)](http://go.microsoft.com/fwlink/?LinkId=141215)을 참조하세요.  
+ MERGE 문 사용을 지원하는 예제 대상 구성 요소는 CodePlex 커뮤니티 예제 [MERGE 대상(MERGE Destination)](https://go.microsoft.com/fwlink/?LinkId=141215)을 참조하세요.  
   
 ## <a name="using-merge"></a>MERGE 사용  
  일반적으로 삽입, 업데이트 및 삭제가 포함된 한 테이블의 변경을 다른 테이블에 적용하려는 경우 MERGE 문을 사용합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]전에는 이 프로세스에 조회 변환과 여러 OLE DB 명령 변환이 모두 필요했습니다. 조회 변환은 행 단위로 조회를 수행하여 각 행이 새로운 행인지 변경된 행인지를 판단했습니다. 그러면 OLE DB 명령 변환이 필요한 INSERT, UPDATE 및 DELETE 작업을 수행했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상에서는 하나의 MERGE 문이 조회 변환과 이에 해당하는 OLE DB 명령 변환을 대체합니다.  

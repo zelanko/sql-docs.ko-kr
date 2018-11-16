@@ -11,12 +11,12 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a348823679ab464bb35520d309d5c8cc50b3ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77bcdee3a2382bef57d6b8c2ceb791da983d399
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829637"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637570"
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>4-2단원 - 손상된 파일 만들기
 변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47829637"
   
     예제 데이터는 SSIS 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   

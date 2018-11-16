@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852028"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600953"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852028"
   
 ||종속 기능|핫픽스|링크|  
 |------|-----------------------|------------|----------|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347 [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347 [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> 검사 목록: 요구 사항(Windows 시스템)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852028"
 ###  <a name="PermissionsWindows"></a> 사용 권한(Windows 시스템)  
  WSFC를 관리하려면 사용자가 모든 클러스터 노드의 시스템 관리자여야 합니다.  
   
- 클러스터 관리를 위한 계정에 대한 자세한 내용은 [부록 A: 장애 조치(failover) 클러스터 요구 사항](http://technet.microsoft.com/library/dd197454.aspx)을 참조하세요.  
+ 클러스터 관리를 위한 계정에 대한 자세한 내용은 [부록 A: 장애 조치(failover) 클러스터 요구 사항](https://technet.microsoft.com/library/dd197454.aspx)을 참조하세요.  
   
 ###  <a name="RelatedTasksWindows"></a> 관련 태스크(Windows 시스템)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852028"
   
 ##### <a name="related-content-powershell"></a>관련 내용(PowerShell)  
   
--   [클러스터링 및 고가용성](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
+-   [클러스터링 및 고가용성](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
   
--   [장애 조치(Failover) 클러스터에서 Windows PowerShell 시작](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터에서 Windows PowerShell 시작](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [클러스터 리소스 명령 및 해당 Windows PowerShell Cmdlet](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [클러스터 리소스 명령 및 해당 Windows PowerShell Cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> 관련 콘텐츠(Windows 시스템)  
   
--   [다중 사이트 장애 조치(Failover) 클러스터에서 DNS 설정 구성](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [다중 사이트 장애 조치(Failover) 클러스터에서 DNS 설정 구성](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [네트워크 이름 리소스에 DNS 등록](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [네트워크 이름 리소스에 DNS 등록](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server 인스턴스 필수 구성 요소 및 제한 사항  
@@ -167,7 +167,7 @@ ms.locfileid: "48852028"
   
     -   보조 복제본의 백업은 백업 작업 시간 동안 주 스레드를 복제본에 보관합니다.  
   
- 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
+ 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
   
 ###  <a name="PermissionsSI"></a> 사용 권한(서버 인스턴스)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852028"
   
 ###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
  WSFC 노드 간의 통신 및 가용성 복제본 간의 통신에는 동일한 네트워크 링크를 사용하는 것이 좋습니다.  개별 네트워크 링크를 사용하면 가끔씩이라도 일부 링크에 문제가 발생할 경우 예기치 않은 동작이 발생할 수 있습니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "48852028"
 ###  <a name="RestrictionsFCI"></a> 제한 사항(FCI)  
   
 > [!NOTE]  
-> 장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)를 지원합니다. CSV에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](http://technet.microsoft.com/library/dd759255.aspx)를 참조하세요.  
+> 장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)를 지원합니다. CSV에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](https://technet.microsoft.com/library/dd759255.aspx)를 참조하세요.  
   
 -   **FCI의 클러스터 노드는 지정된 가용성 그룹에 대해 하나의 복제본만 호스팅할 수 있음:** FCI에 가용성 복제본을 추가하면 가능한 FCI 소유자인 WSFC 노드에서 동일한 가용성 그룹에 대해 다른 복제본을 호스팅할 수 있습니다.  가능한 충돌을 방지하려면 장애 조치(Failover) 클러스터 인스턴스의 가능한 소유자를 구성하는 것이 좋습니다. 그러면 단일 WSFC에서 동일한 가용성 그룹의 두 가용성 복제본을 호스트하려고 시도하지 않게 됩니다.
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852028"
   
 -   [장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 가용성 그룹 필수 구성 요소 및 제한 사항  
  **섹션 내용**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852028"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

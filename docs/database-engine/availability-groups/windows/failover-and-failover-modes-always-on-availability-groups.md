@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 048b5d627e33ac241f68c7d2017535ddb5e0bd16
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906333"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605313"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +81,9 @@ ms.locfileid: "48906333"
   
 ||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(automatic failover)|아니오|아니오|사용자 계정 컨트롤|  
-|계획된 수동 장애 조치(Failover)|아니오|예|사용자 계정 컨트롤|  
-|강제 장애 조치(failover)|사용자 계정 컨트롤|사용자 계정 컨트롤|예**\***|  
+|자동 장애 조치(automatic failover)|아니오|아니오|예|  
+|계획된 수동 장애 조치(Failover)|아니오|예|예|  
+|강제 장애 조치(failover)|예|예|예**\***|  
   
  **\*** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
   
@@ -258,9 +258,9 @@ ms.locfileid: "48906333"
   
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|사용자 계정 컨트롤|아니오|  
-|Synchronous-commit|아니오|사용자 계정 컨트롤|  
-|Asynchronous-commit|아니오|사용자 계정 컨트롤|  
+|Synchronous-commit|예|아니오|  
+|Synchronous-commit|아니오|예|  
+|Asynchronous-commit|아니오|예|  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 이 시나리오에서 상태 103인 오류 1408이 관찰될 수 있습니다(오류: 1408, 심각도: 16, 상태: 103). 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  
   
@@ -348,7 +348,7 @@ ms.locfileid: "48906333"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

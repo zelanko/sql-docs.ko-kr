@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658201"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606893"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658201"
  다음은 버퍼 풀 확장 기능에 적용되는 용어입니다.  
   
  SSD(반도체 드라이브)  
- 반도체 드라이브는 영구적인 방식으로 메모리(RAM)에 데이터를 저장합니다. 자세한 내용은 [이 정의](http://en.wikipedia.org/wiki/Solid-state_drive)를 참조하십시오.  
+ 반도체 드라이브는 영구적인 방식으로 메모리(RAM)에 데이터를 저장합니다. 자세한 내용은 [이 정의](https://en.wikipedia.org/wiki/Solid-state_drive)를 참조하십시오.  
   
  버퍼  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버퍼는 메모리 내의 8KB 페이지입니다. 이 크기는 데이터 또는 인덱스 페이지의 크기와 같습니다. 따라서 버퍼 캐시는 8KB 페이지로 나누어집니다. 페이지는 버퍼 관리자에 더 많은 데이터를 읽어 올 버퍼 영역이 필요할 때까지 버퍼 캐시에 남아 있습니다. 데이터는 수정되는 경우에만 다시 디스크에 쓰여집니다. 이러한 메모리 내의 수정된 페이지를 더티 페이지라고 합니다. 디스크에 있는 해당 데이터베이스 이미지와 동일한 페이지를 클린 페이지라고 합니다. 버퍼 캐시의 데이터는 여러 번 수정한 후 디스크에 다시 쓸 수 있습니다.  

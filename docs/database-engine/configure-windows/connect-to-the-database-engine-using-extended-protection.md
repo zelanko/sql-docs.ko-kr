@@ -18,19 +18,19 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 638bd8f87293a6d541cbcef7078a6724d6380d33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700091"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606013"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
   
 > [!IMPORTANT]  
->  Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](http://support.microsoft.com/kb/968389)를 참조하십시오.  
+>  Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](https://support.microsoft.com/kb/968389)를 참조하십시오.  
   
 ## <a name="description-of-extended-protection"></a>확장된 보호 설명  
  **확장된 보호** 는 서비스 바인딩 및 채널 바인딩을 사용하여 인증 릴레이 공격을 방지합니다. 인증 릴레이 공격에서는 NTLM 인증을 수행할 수 있는 클라이언트(예: Windows 탐색기, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, .NET SqlClient 응용 프로그램 등)가 악의적인 CIFS 파일 서버 등의 공격자에 연결하면, 공격자가 클라이언트 자격 증명을 사용해 클라이언트로 가장하여 서비스(예: [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 인스턴스)로 인증하게 됩니다.  
@@ -50,14 +50,14 @@ ms.locfileid: "47700091"
  채널 바인딩에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 인스턴스와 클라이언트 간에 보안 채널(Schannel)을 설정합니다. 서비스는 해당 채널과 관련된 클라이언트의 CBT(채널 바인딩 토큰)를 자체 CBT와 비교하여 클라이언트의 신뢰성을 확인합니다. 채널 바인딩을 수행하면 유인 공격과 스푸핑 공격을 모두 해결할 수 있습니다. 그러나 모든 세션 트래픽에 대해 TLS(전송 계층 보안) 암호화를 수행해야 하므로 런타임 비용이 많이 듭니다. 클라이언트 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 암호화를 사용하는 경우에는 암호화를 클라이언트에서 적용하는지 서버에서 적용하는지에 관계없이 채널 바인딩이 수행됩니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 공급자는 TLS 1.0 및 SSL 3.0을 지원합니다. 운영 체제 SChannel 계층을 변경하여 다른 프로토콜 (예: TLS 1.1 또는 TLS 1.2)를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결이 실패할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 공급자는 TLS 1.0 및 SSL 3.0을 지원합니다. 운영 체제 SChannel 계층을 변경하여 다른 프로토콜 (예: TLS 1.1 또는 TLS 1.2)를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결이 실패할 수 있습니다.  
   
 ### <a name="operating-system-support"></a>운영 체제 지원  
  다음 링크에서는 Windows에서 **확장된 보호**를 지원하는 방법에 대해 자세히 설명합니다.  
   
--   [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft 보안 공지(973811), 인증에 대한 확장된 보호.](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft 보안 공지(973811), 인증에 대한 확장된 보호.](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>설정  
  세 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 설정이 서비스 바인딩과 채널 바인딩에 영향을 줍니다. 이러한 설정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 또는 WMI를 사용하여 구성할 수 있으며, 정책 기반 관리의 **서버 프로토콜 설정** 패싯을 사용해 볼 수 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "47700091"
      **허용되는 NTLM SPN** 변수는 서버가 여러 SPN을 사용하는 경우 필요합니다. 클라이언트가 서버에서 사용하지 않는 유효한 SPN을 통해 서버에 연결하려고 시도하면 서비스 바인딩이 실패합니다. 이러한 문제를 방지하기 위해 사용자는 **허용되는 NTLM SPN**을 사용하여 서버를 표시하는 여러 SPN을 지정할 수 있습니다. **허용되는 NTLM SPN** 은 세미콜론으로 구분되는 일련의 SPN입니다. 예를 들어 **MSSQLSvc/ HostName1.Contoso.com** 및 **MSSQLSvc/ HostName2.Contoso.com**SPN을 허용하려면 **허용되는 NTLM SPN** 상자에 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 을 입력합니다. 변수의 최대 길이는 2,048자입니다. **허용되는 NTLM SPN** 은 **구성 관리자의** MSSQLSERVER 속성에 대한 프로토콜(고급 탭) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있습니다.  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>데이터베이스 엔진에 대해 확장된 보호 사용  
- **확장된 보호**를 사용하려면 서버와 클라이언트 둘 다에 **확장된 보호**를 지원하는 운영 체제가 설치되어 있어야 하며, 이들 운영 체제에서 **확장된 보호** 를 사용하도록 설정해야 합니다. 운영 체제에 대해 **확장된 보호** 를 사용하도록 설정하는 방법에 대한 자세한 내용은 [인증에 대한 확장된 보호](http://support.microsoft.com/kb/968389)를 참조하십시오.  
+ **확장된 보호**를 사용하려면 서버와 클라이언트 둘 다에 **확장된 보호**를 지원하는 운영 체제가 설치되어 있어야 하며, 이들 운영 체제에서 **확장된 보호** 를 사용하도록 설정해야 합니다. 운영 체제에 대해 **확장된 보호** 를 사용하도록 설정하는 방법에 대한 자세한 내용은 [인증에 대한 확장된 보호](https://support.microsoft.com/kb/968389)를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. 일부 이전 버전**에 대해서는 향후 업데이트에서** 확장된 보호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 제공될 예정입니다. 서버 컴퓨터에서 **확장된 보호** 를 사용하도록 설정한 후에는 다음 단계를 수행하여 **확장된 보호**를 사용하도록 설정합니다.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "47700091"
 ## <a name="configuring-other-sql-server-components"></a>다른 SQL Server 구성 요소 구성  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하는 방법은 [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)를 참조하세요.  
   
- IIS를 사용하여 HTTP 또는 HTTPs 연결을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 액세스할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 IIS에서 제공하는 확장된 보호 기능을 사용할 수 있습니다. IIS에서 확장된 보호를 사용하도록 구성하는 방법에 대한 자세한 내용은 [IIS 7.5에서 확장된 보호 구성](http://go.microsoft.com/fwlink/?LinkId=181105)을 참조하십시오.  
+ IIS를 사용하여 HTTP 또는 HTTPs 연결을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 액세스할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 IIS에서 제공하는 확장된 보호 기능을 사용할 수 있습니다. IIS에서 확장된 보호를 사용하도록 구성하는 방법에 대한 자세한 내용은 [IIS 7.5에서 확장된 보호 구성](https://go.microsoft.com/fwlink/?LinkId=181105)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)   
  [클라이언트 네트워크 구성](../../database-engine/configure-windows/client-network-configuration.md)   
- [인증에 대한 확장된 보호 개요](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [확장된 보호를 사용하는 Windows 통합 인증(영문)](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [확장된 보호를 사용하는 Windows 통합 인증(영문)](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

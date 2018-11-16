@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: db65d03e5a831e4438b407997a2ac42599e3df4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611161"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606783"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>실패한 SQL Server 설치 복구
 
@@ -81,6 +81,6 @@ ms.locfileid: "47611161"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [설치 방법 도움말 문서](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [설치 방법 도움말 문서](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

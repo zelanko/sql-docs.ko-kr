@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689521"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638740"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
@@ -58,13 +58,13 @@ ms.locfileid: "47689521"
   
  태스크 또는 데이터 흐름 구성 요소 대화 상자나 속성 창에 쿼리를 입력하여 직접 입력을 제공할 수 있습니다.  
   
- 자세한 내용은 [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)을 참조하세요.  
+ 자세한 내용은 [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)을 참조하세요.  
   
 ## <a name="sql-in-files"></a>파일 내의 SQL  
  SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)을 참조하세요.  
   
 ## <a name="sql-in-variables"></a>변수 내의 SQL  
- SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
 
 ## <a name="query-builder-dialog-box"></a>쿼리 작성기 대화 상자
 **쿼리 작성기** 대화 상자를 사용하여 SQL 실행 태스크, OLE DB 원본 및 대상, 조회 변환에서 사용할 쿼리를 만들 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "47689521"
   
  Transact-SQL 언어와 해당 구문에 대한 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
   
- 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용하는 쿼리에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 및 [SQL 실행 태스크의 결과 집합](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)을 참조하세요.  
+ 쿼리에 변수를 사용하여 입력 매개 변수에 값을 제공하고 출력 매개 변수의 값을 캡처하며 반환 코드를 저장할 수도 있습니다. 패키지에서 사용하는 쿼리에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md), [OLE DB 원본](../integration-services/data-flow/ole-db-source.md) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services/integration-services-ssis-queries.md)를 참조하세요. SQL 실행 태스크에서 변수를 사용하는 방법에 대한 자세한 내용은 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 및 [SQL 실행 태스크의 결과 집합](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)을 참조하세요.  
   
  조회 및 유사 항목 조회 변환에서도 매개 변수와 반환 코드에 변수를 사용할 수 있습니다. OLE DB 원본에 대한 정보는 이러한 두 변환에도 적용됩니다.  
   

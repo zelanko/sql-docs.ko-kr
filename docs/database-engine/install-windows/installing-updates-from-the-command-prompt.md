@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81811251b92f751f9acda8305a4cf89b6da8f18e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764193"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605993"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
 
@@ -90,6 +90,6 @@ ms.locfileid: "47764193"
  * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다. 
  
 ## <a name="see-also"></a>관련 항목: 
- [SQL Server 서비스 설치 개요](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
+ [SQL Server 서비스 설치 개요](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

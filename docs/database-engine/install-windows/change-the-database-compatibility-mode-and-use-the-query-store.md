@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754921"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606773"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
@@ -39,7 +39,7 @@ ms.locfileid: "47754921"
 > - 업그레이드 후에는 tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 현재 호환성 수준으로 설정됩니다.   
 > - master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.    
   
-새 쿼리 프로세서 기능을 활성화하는 업그레이드 프로세스는 제품의 릴리스 이후 서비스 모델과 관련이 있습니다.  이러한 수정의 일부는 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)에서 릴리스됩니다.  수정이 필요한 고객은 다른 고객에 대한 예기치 않은 회귀를 일으키지 않고 이러한 수정을 선택할 수 있습니다. 쿼리 프로세서 핫픽스에 대한 릴리스 이후 서비스 모델은 [여기](http://support.microsoft.com/kb/974006)에 설명되어 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 호환성 수준으로 전환하면 이러한 수정이 이제 최신 호환성 수준에서 기본적으로 사용될 수 있으므로 추적 플래그 4199가 더 이상 필요하지 않습니다. 따라서 업그레이드 프로세스의 일부로 업그레이드 프로세스가 완료되면 4199가 활성화되지 않는 것을 확인하는 것이 중요합니다.  
+새 쿼리 프로세서 기능을 활성화하는 업그레이드 프로세스는 제품의 릴리스 이후 서비스 모델과 관련이 있습니다.  이러한 수정의 일부는 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)에서 릴리스됩니다.  수정이 필요한 고객은 다른 고객에 대한 예기치 않은 회귀를 일으키지 않고 이러한 수정을 선택할 수 있습니다. 쿼리 프로세서 핫픽스에 대한 릴리스 이후 서비스 모델은 [여기](https://support.microsoft.com/kb/974006)에 설명되어 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 호환성 수준으로 전환하면 이러한 수정이 이제 최신 호환성 수준에서 기본적으로 사용될 수 있으므로 추적 플래그 4199가 더 이상 필요하지 않습니다. 따라서 업그레이드 프로세스의 일부로 업그레이드 프로세스가 완료되면 4199가 활성화되지 않는 것을 확인하는 것이 중요합니다.  
 
 > [!NOTE]
 > 그러나 해당하는 경우 여전히 RTM 이후 출시된 새로운 쿼리 프로세서 수정을 활성화하는 데 추적 플래그 4199가 필요합니다.

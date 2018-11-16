@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694502"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603999"
 ---
 # <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 엔드포인트와 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
+>  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 엔드포인트와 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>두 번째 클러스터에 분산 가용성 그룹 조인  
  그런 다음 두 번째 WSFC에 분산형 가용성 그룹을 조인합니다.  

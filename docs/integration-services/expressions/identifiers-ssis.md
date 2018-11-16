@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651581"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638790"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
   식에서 식별자는 연산에 사용할 수 있는 열과 변수입니다. 식은 일반 식별자와 정규화된 식별자를 사용할 수 있습니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "47651581"
 ## <a name="unique-variable-names"></a>고유 변수 이름  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 사용자 지정 변수를 지원하며 시스템 변수 집합을 제공합니다. 기본적으로 사용자 지정 변수는 **User** 네임스페이스에 속하고 시스템 변수는 **System** 네임스페이스에 속합니다. 사용자 지정 변수용 네임스페이스를 추가로 만들고 응용 프로그램의 요구에 맞게 기존 네임스페이스 이름을 업데이트할 수 있습니다. 식 작성기는 모든 네임스페이스의 범위 내 변수 목록을 표시합니다.  
   
- 모든 변수는 범위를 가지고 있고 하나의 네임스페이스에 속합니다. 변수 범위는 패키지 범위이거나 패키지의 컨테이너 또는 태스크 범위입니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 식 작성기는 범위 내 변수 목록만 표시합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 모든 변수는 범위를 가지고 있고 하나의 네임스페이스에 속합니다. 변수 범위는 패키지 범위이거나 패키지의 컨테이너 또는 태스크 범위입니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 식 작성기는 범위 내 변수 목록만 표시합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
   
  식에 사용된 변수의 이름이 고유해야 식 계산기에서 식을 올바로 계산할 수 있습니다. 패키지에서 이름이 같은 변수를 여러 개 사용할 경우 해당 네임스페이스가 서로 달라야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 두 개의 콜론으로 구성된(::) 네임스페이스 확인 연산자를 사용하여 네임스페이스로 변수를 정규화합니다. 예를 들어 다음 식에서는 **Count**라는 이름을 가진 변수 두 개를 사용합니다. 하나는 **User** 네임스페이스에 속하고 다른 하나는 **MyNamespace** 네임스페이스에 속합니다.  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651581"
 ```  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://go.microsoft.com/fwlink/?LinkId=746575)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=746575)  
   
   

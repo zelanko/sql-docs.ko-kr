@@ -322,18 +322,18 @@ items:
 - name: 리소스
   items:
   - name: SSIS 포럼에서 도움말 보기
-    href: https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices
+    href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices
   - name: Stack Overflow에서 도움말 보기
-    href: http://stackoverflow.com/questions/tagged/ssis
+    href: https://stackoverflow.com/questions/tagged/ssis
   - name: SSIS 팀 블로그 수행
     href: https://blogs.msdn.microsoft.com/ssis/
   - name: 문제 보고 및 기능 요청
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: PC의 문서 가져오기
     href: ../sql-server/sql-server-help-installation.md
-ms.openlocfilehash: 78a0869048a24a747ae30a079db736d4c9cf5ea4
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: c9546c0b08704f060169987bafc864dca922e011
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533985"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696721"

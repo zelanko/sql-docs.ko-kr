@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383328"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600893"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383328"
 
 * **샘플 데이터베이스 및 샘플 코드**: 
     * 기본적으로 SQL Server 설치의 일부로 설치되지 않습니다. 
-    * Express 버전 이외의 SQL Server 버전에 대해 설치하려면 [GitHub](http://github.com/Microsoft/sql-server-samples)를 참조하세요.
+    * Express 버전 이외의 SQL Server 버전에 대해 설치하려면 [GitHub](https://github.com/Microsoft/sql-server-samples)를 참조하세요.
     
 
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
@@ -70,7 +70,7 @@ ms.locfileid: "49383328"
 |[SQL Server 데이터베이스 엔진 설치](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[SQL Server 복제 설치](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[Distributed Replay 설치 - 개요](../../tools/distributed-replay/install-distributed-replay-overview.md)|Distributed Replay 기능 설치와 관련된 문서들을 나열합니다.|  
-|[SSMS로 SQL Server 관리 도구 설치](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구를 설치 및 구성하는 방법에 대해 설명합니다.|  
+|[SSMS로 SQL Server 관리 도구 설치](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구를 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[SQL Server PowerShell 설치](../../database-engine/install-windows/install-sql-server-powershell.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 구성 요소 설치에 대한 고려 사항을 설명합니다.|  
   
 

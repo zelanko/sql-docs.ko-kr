@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14af3a13043a21691e38f5fa8226041fb797f975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656371"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600173"
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47656371"
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](http://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](https://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 문제는 주 복제본을 호스팅하는 서버 인스턴스에 장애가 있거나 WSFC(Windows Server 장애 조치(Failover) 클러스터) 가용성 그룹 리소스가 오프라인 상태가 되어 발생할 수 있습니다. 다음과 같은 경우 가용성 그룹이 오프라인 상태가 될 수 있습니다.  

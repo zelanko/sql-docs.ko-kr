@@ -15,19 +15,19 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8222a9d4ccf71b012c41a7a5059a46ea3b42e060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90788ae0c29e293db84f3b6f60fd93af41b99d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645841"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637705"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 패키지에 대한 설명을 제공하고 이해 및 유지 관리를 쉽게 하기 위해 사용할 수 있는 주석을 제공합니다. 주석은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름, 데이터 흐름 및 이벤트 처리기에 추가할 수 있습니다. 주석에는 모든 종류의 텍스트가 포함될 수 있으며 패키지에 레이블, 설명 및 기타 설명 정보를 추가하는 데 유용합니다. 주석은 디자인 타임 전용 기능입니다. 예를 들어 주석은 로그에 기록되지 않습니다.  
   
  Enter 키를 누르면 텍스트가 다음 줄로 줄 바꿈됩니다. 텍스트 줄을 추가하면 주석 상자의 크기가 자동으로 늘어납니다. 패키지 파일의 CDATA 섹션에 있는 패키지 주석은 일반 텍스트로 유지됩니다.  
   
- 패키지 파일의 형식을 변경하는 방법에 대한 자세한 내용은 [SSIS 패키지 형식](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)을 참조하세요.  
+ 패키지 파일의 형식을 변경하는 방법에 대한 자세한 내용은 [SSIS 패키지 형식](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)을 참조하세요.  
   
  패키지가 저장될 때 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 주석을 해당 패키지에 저장합니다.  
   

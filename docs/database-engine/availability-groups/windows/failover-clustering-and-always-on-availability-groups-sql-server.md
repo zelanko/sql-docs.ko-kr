@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864311"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605453"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 
@@ -61,11 +61,11 @@ ms.locfileid: "47864311"
   
 ||FCI 내의 노드|가용성 그룹 내의 복제본|  
 |-|-------------------------|-------------------------------------------|  
-|**WSFC 클러스터 사용**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**WSFC 클러스터 사용**|예|예|  
 |**보호 수준**|인스턴스|데이터베이스|  
 |**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스팅하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**저장소 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
-|**읽기 가능한 보조 복제본**|아니요*|사용자 계정 컨트롤|  
+|**읽기 가능한 보조 복제본**|아니요*|예|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  
 |**장애 조치(Failover)가 실행된 리소스**|서버, 인스턴스 및 데이터베이스|데이터베이스만|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47864311"
  **가용성 그룹에 대한 장애 조치(Failover) 정책 설정은 독립 실행형 인스턴스에서 호스팅되는지 FCI 인스턴스에서 호스팅되는지에 관계없이 모든 복제본에 적용됩니다.  
   
 > [!NOTE]  
->  장애 조치(failover) 클러스터링 내의 **노드 수** 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다양한 버전에 **Always On 가용성 그룹**에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  장애 조치(failover) 클러스터링 내의 **노드 수** 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다양한 버전에 **Always On 가용성 그룹**에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI에서 가용성 복제본을 호스팅하는 경우의 고려 사항  
   
@@ -117,17 +117,17 @@ ms.locfileid: "47864311"
   
      [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **백서:**  
   
-     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
+     [SQL Server 고객 자문 팀 백서](https://sqlcat.com/)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

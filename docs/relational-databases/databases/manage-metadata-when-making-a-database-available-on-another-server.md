@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840992"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559477"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -267,7 +266,7 @@ ms.locfileid: "47840992"
 > **참고:** 미러된 데이터베이스에 대한 로그인을 설정하는 방법은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정(SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 및 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
   
-##  <a name="permissions"></a> 사용 권한  
+##  <a name="permissions"></a> Permissions  
  데이터베이스를 다른 서버 인스턴스에서 사용할 수 있을 때 다음의 사용 권한 유형이 영향을 받을 수 있습니다.  
   
 -   시스템 개체에 대한 GRANT, REVOKE 또는 DENY 권한  

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662191"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603573"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>수신기, 클라이언트 연결 및 응용 프로그램 장애 조치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662191"
  가용성 그룹 수신기는 다음에 의해 정의됩니다.  
   
  고유 DNS 이름  
- 이것은 VNN(가상 네트워크 이름)이라고도 합니다. DNS 호스트 이름에 대한 Active Directory 명명 규칙이 적용됩니다. 자세한 내용은 [컴퓨터, 도메인, 사이트 및 OU에 대한 Active Directory 명명 규칙(](http://support.microsoft.com/kb/909264) KB 문서를 참조하세요.  
+ 이것은 VNN(가상 네트워크 이름)이라고도 합니다. DNS 호스트 이름에 대한 Active Directory 명명 규칙이 적용됩니다. 자세한 내용은 [컴퓨터, 도메인, 사이트 및 OU에 대한 Active Directory 명명 규칙(](https://support.microsoft.com/kb/909264) KB 문서를 참조하세요.  
   
  하나 이상의 VIP(가상 IP 주소)  
  VIP는 가용성 그룹이 장애 조치(failover)할 수 있는 하나 이상의 서브넷에 대해 구성됩니다.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [가용성 그룹 수신기 소개](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server Always On 팀 블로그)  
   
