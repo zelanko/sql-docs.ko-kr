@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 28c0d7598baf5cff573716f4e7848852c42a9f8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606041"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659662"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server 2017로 마이그레이션
 
@@ -28,7 +28,7 @@ ms.locfileid: "47606041"
 > * 샘플 HR 스키마 변환
 > * 데이터 마이그레이션
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 인스턴스가 Oracle 12c (12.2.0.1.0)는 **HR** 스키마 설치
 - Linux의 SQL Server의 작업 인스턴스를
@@ -38,7 +38,7 @@ ms.locfileid: "47606041"
 
 ## <a name="download-and-install-ssma-for-oracle"></a>다운로드 및 Oracle 용 SSMA 설치
 
-여러 버전의 SQL Server Migration Assistant는 원본 데이터베이스에 따라 사용할 수 있습니다.  현재 버전을 다운로드 [SQL Server Migration Assistant for Oracle](http://aka.ms/ssmafororacle) 다운로드 페이지에 나와 있는 지침을 사용 하 여 설치 합니다.
+여러 버전의 SQL Server Migration Assistant는 원본 데이터베이스에 따라 사용할 수 있습니다.  현재 버전을 다운로드 [SQL Server Migration Assistant for Oracle](https://aka.ms/ssmafororacle) 다운로드 페이지에 나와 있는 지침을 사용 하 여 설치 합니다.
 
 > [!NOTE]
 > 이번에 **확장 팩 Oracle 용 SSMA** linux에서 지원 되지 않습니다 이지만이 자습서에 필요 하지 않습니다.

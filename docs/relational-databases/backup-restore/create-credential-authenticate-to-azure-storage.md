@@ -13,12 +13,12 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e67b9f7bc040265d770c8eef026cecc49c2c52fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c02298de6521aa2bf5380216862fb30094803115
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765836"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677872"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure Storage 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47765836"
   
 ## <a name="windows-azure-credentials"></a>Windows Azure 자격 증명  
  **관리 인증서**  
- 이 옵션을 사용하여 Windows Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Windows Azure 관리 인증서에 대한 자세한 내용은 [Windows Azure용 관리 인증서 만들기 및 업로드](http://go.microsoft.com/fwlink/?LinkId=320781)를 참조하십시오.  
+ 이 옵션을 사용하여 Windows Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Windows Azure 관리 인증서에 대한 자세한 내용은 [Windows Azure용 관리 인증서 만들기 및 업로드](https://go.microsoft.com/fwlink/?LinkId=320781)를 참조하십시오.  
   
  **구독**  
  로컬 인증서 저장소의 관리 인증서와 일치하는 Windows Azure 구독 ID를 선택, 입력 또는 붙여 넣습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "47765836"
  게시 프로필을 컴퓨터에 다운로드한 경우 이 옵션을 사용합니다. 이 옵션을 사용하는 경우 구독 ID 및 인증서가 자동으로 채워집니다.  
   
 > [!CAUTION]  
->  SQL Server는 현재 프로필 버전 2.0 게시를 지원합니다. 게시 프로필의 지원되는 버전을 다운로드하려면 [게시 프로필 2.0 다운로드](http://go.microsoft.com/fwlink/?LinkId=396421)를 참조하세요.  
+>  SQL Server는 현재 프로필 버전 2.0 게시를 지원합니다. 게시 프로필의 지원되는 버전을 다운로드하려면 [게시 프로필 2.0 다운로드](https://go.microsoft.com/fwlink/?LinkId=396421)를 참조하세요.  
   
 ## <a name="storage-account"></a>저장소 계정  
  백업 파일을 저장하는 데 사용할 저장소 계정을 선택합니다.  

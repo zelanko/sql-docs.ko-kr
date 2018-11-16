@@ -11,15 +11,15 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c754ce006834a44413d64821ea79349da2e62d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655786"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>데이터베이스 코드 분석 규칙의 확장성 개요
-SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스 코드의 Transact\-SQL 디자인, 명명 및 성능 경고에 대해 보고하는 코드 분석 규칙이 포함되어 있습니다. 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)을 참조하세요.  
+SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스 코드의 Transact\-SQL 디자인, 명명 및 성능 경고에 대해 보고하는 코드 분석 규칙이 포함되어 있습니다. 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)을 참조하세요.  
   
 포함하려는 특정 Transact\-SQL 문제에 대한 처리가 기본 제공 코드 분석 규칙에 포함되지 않은 경우 사용자 지정 데이터베이스 코드 분석 규칙을 만들 수 있습니다. 예를 들어 [SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)에 나와 있듯이 WAITFOR DELAY 문의 사용을 방지하는 사용자 지정 규칙을 만들 수 있습니다. 사용자 지정 데이터베이스 코드 분석 규칙을 만들려면 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 네임스페이스의 클래스를 사용합니다.  
   
@@ -30,7 +30,7 @@ SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스
   
 ![데이터베이스 코드 분석 규칙 구성 요소](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "데이터베이스 코드 분석 규칙 구성 요소")  
   
-정적 코드 분석을 직접 실행하거나(자세한 내용은 [방법: Transact-SQL 코드를 분석하여 오류 찾기](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) 참조) 빌드를 수행하여 데이터베이스 코드 분석 규칙 기능을 사용하는 경우 프로젝트에서 규칙을 구성한 방식에 따라 모든 규칙이 로드되고 사용됩니다. 자세한 내용은 [방법: 데이터베이스 코드의 정적 분석에 대한 특정 규칙 활성화 및 비활성화](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)를 참조하세요. 확장 관리자는 만들고 등록한 모든 사용자 지정 규칙 어셈블리도 로드합니다. 자세한 내용은 [방법: 기능 확장 설치 및 관리](../ssdt/how-to-install-and-manage-feature-extensions.md)를 참조하세요.  
+정적 코드 분석을 직접 실행하거나(자세한 내용은 [방법: Transact-SQL 코드를 분석하여 오류 찾기](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) 참조) 빌드를 수행하여 데이터베이스 코드 분석 규칙 기능을 사용하는 경우 프로젝트에서 규칙을 구성한 방식에 따라 모든 규칙이 로드되고 사용됩니다. 자세한 내용은 [방법: 데이터베이스 코드의 정적 분석에 대한 특정 규칙 활성화 및 비활성화](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)를 참조하세요. 확장 관리자는 만들고 등록한 모든 사용자 지정 규칙 어셈블리도 로드합니다. 자세한 내용은 [방법: 기능 확장 설치 및 관리](../ssdt/how-to-install-and-manage-feature-extensions.md)를 참조하세요.  
   
 사용자 지정 코드 분석 규칙 클래스는 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)에서 상속합니다. 사용자 지정 규칙 클래스는 규칙 실행 컨텍스트를 통해 다양한 유용한 개체에 액세스할 수 있습니다. 이러한 개체는 다음과 같습니다.  
   

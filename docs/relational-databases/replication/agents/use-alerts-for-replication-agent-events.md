@@ -22,12 +22,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048465a20f3a665d3199a6382695f14b28d8902d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659409"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "47850340"
   
 |메시지 ID|미리 정의된 경고|경고가 발생되는 조건|msdb..sysreplicationalerts에 추가 정보 입력|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**복제: 에이전트 성공**|에이전트가 성공적으로 종료됩니다.|사용자 계정 컨트롤|  
-|14151|**복제: 에이전트 실패**|오류로 인해 에이전트가 종료됩니다.|사용자 계정 컨트롤|  
-|14152|**복제: 에이전트 다시 시도**|불필요한 작업을 다시 시도한 후 에이전트가 종료합니다. 에이전트에는 사용할 수 없는 서버, 교착 상태, 연결 실패, 제한 시간 실패 등이 발생합니다.|사용자 계정 컨트롤|  
+|14150|**복제: 에이전트 성공**|에이전트가 성공적으로 종료됩니다.|예|  
+|14151|**복제: 에이전트 실패**|오류로 인해 에이전트가 종료됩니다.|예|  
+|14152|**복제: 에이전트 다시 시도**|불필요한 작업을 다시 시도한 후 에이전트가 종료합니다. 에이전트에는 사용할 수 없는 서버, 교착 상태, 연결 실패, 제한 시간 실패 등이 발생합니다.|예|  
 |14157|**복제: 만료된 구독 삭제**|만료된 구독이 삭제되었습니다.|아니오|  
 |20572|**복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**|'데이터 유효성 검사 실패 시 구독 다시 초기화' 응답 작업이 구독을 성공적으로 다시 초기화합니다.|아니오|  
-|20574|**복제: 구독자가 데이터 유효성 검사에 실패했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사에 실패합니다.|사용자 계정 컨트롤|  
-|20575|**복제: 구독자가 데이터 유효성 검사를 통과했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사를 통과합니다.|사용자 계정 컨트롤|  
+|20574|**복제: 구독자가 데이터 유효성 검사에 실패했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사에 실패합니다.|예|  
+|20575|**복제: 구독자가 데이터 유효성 검사를 통과했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사를 통과합니다.|예|  
 |20578|**복제: 에이전트 사용자 지정 종료**|||  
-|22815|**피어 투 피어 충돌 감지 경고**|피어 투 피어 노드에서 변경 내용을 적용하려고 할 때 배포 에이전트에서 충돌이 감지되었습니다.|사용자 계정 컨트롤|  
+|22815|**피어 투 피어 충돌 감지 경고**|피어 투 피어 노드에서 변경 내용을 적용하려고 할 때 배포 에이전트에서 충돌이 감지되었습니다.|예|  
   
- 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)를 참조하세요.  
+ 복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)를 참조하세요.  
   
  **미리 정의된 복제 경고를 구성하려면**  
   

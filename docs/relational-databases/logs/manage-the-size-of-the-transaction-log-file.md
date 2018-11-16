@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674852"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47664751"
 로그 파일의 현재 크기 및 최대 크기, 파일의 자동 증가 옵션에 대한 정보를 보기 위해 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)에서 해당 로그 파일의 **size**, **max_size** 및 **growth** 열을 사용할 수도 있습니다.  
   
 > [!IMPORTANT]
-> 로그 디스크가 오버로드되지 않도록 하세요. 로그 저장소가 트랜잭션 로드에 대한 [IOPS](http://wikipedia.org/wiki/IOPS) 및 지연 시간 요구 사항을 견딜 수 있는지 확인하세요. 
+> 로그 디스크가 오버로드되지 않도록 하세요. 로그 저장소가 트랜잭션 로드에 대한 [IOPS](https://wikipedia.org/wiki/IOPS) 및 지연 시간 요구 사항을 견딜 수 있는지 확인하세요. 
   
 ##  <a name="ShrinkSize"></a> 로그 파일 크기 축소  
  실제 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 이는 트랜잭션 로그 파일에 사용되지 않은 공간이 포함되어 있는 경우에 유용합니다. 데이터베이스가 온라인 상태이고 하나 이상의 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)에 여유 공간이 있는 경우에만 로그 파일을 축소할 수 있습니다. 경우에 따라 다음에 로그가 잘릴 때까지 로그를 축소하지 못할 수도 있습니다.  
@@ -101,9 +101,9 @@ ms.locfileid: "47664751"
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작|데이터는 1MB입니다. 로그 파일은 10%입니다.|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전|데이터는 10%입니다. 로그 파일은 10%입니다.|  
 
--   작은 확장 증분은 너무 많은 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 성능이 저하될 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
+-   작은 확장 증분은 너무 많은 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 성능이 저하될 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
 
--   큰 확장 증분은 너무 적고 큰 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 이 또한 성능에 영향을 줄 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요. 
+-   큰 확장 증분은 너무 적고 큰 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가 생성되어 이 또한 성능에 영향을 줄 수 있습니다. 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요. 
 
 -   자동 증가를 사용하는 경우에도 쿼리의 요구 사항을 충족시킬 정도로 빠르게 커질 수 없는 경우 트랜잭션 로그가 꽉 찼다는 메시지를 받을 수 있습니다. 확장 증분 변경에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 

@@ -14,12 +14,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0433940c558dc6cac8aeb7310bb6b038e911b971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827191"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640771"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services(SSIS) 서버 및 카탈로그
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47827191"
 ## <a name="high-availability"></a>고가용성  
  다른 사용자 데이터베이스와 마찬가지로, **SSISDB** 데이터베이스는 데이터베이스 미러링 및 복제를 지원합니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
+ 또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
   
 ##  <a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
  **SSISDB** 데이터베이스를 호스트하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
@@ -57,6 +57,6 @@ ms.locfileid: "47827191"
 -   [Integration Services(SSIS) 패키지 실행](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>관련 내용  
- blogs.msdn.com의 블로그 항목, [Always On을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873)  
+ blogs.msdn.com의 블로그 항목, [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873)  
   
   

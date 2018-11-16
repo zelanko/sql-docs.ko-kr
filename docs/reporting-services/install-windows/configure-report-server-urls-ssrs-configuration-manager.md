@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609701"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813346"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. 응용 프로그램을 사용하려면 먼저 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 응용 프로그램 URL에 대한 기본값을 제공합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609701"
 ## <a name="default-urls"></a>기본 URL  
  URL을 통해 보고서 서버 또는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 액세스하는 경우 URL에는 IP 주소가 아닌 호스트 이름이 포함되어야 합니다. TCP/IP 네트워크에서는 IP 주소가 호스트 이름(또는 컴퓨터의 네트워크 이름)으로 확인됩니다. 기본값을 사용하여 URL을 구성한 경우 다음과 같이 컴퓨터 이름 또는 localhost가 호스트 이름으로 지정된 URL을 사용하여 보고서 서버 웹 서비스에 액세스할 수 있어야 합니다.  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  이러한 URL을 사용 가능하게 만드는 설정은 다음 표에 나와 있습니다. 이 표에서는 호스트 이름을 포함하는 URL을 통해 보고서 서버 연결을 가능하게 하는 기본값을 보여 줍니다.  
   

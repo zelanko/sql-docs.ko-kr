@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799111"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641260"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -233,7 +233,7 @@ ms.locfileid: "47799111"
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에는 파일 연결 관리자를 사용합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 OLE DB 연결 관리자를 사용합니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)을 참조하세요.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 OLE DB 연결 관리자를 사용합니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
     -   Windows 이벤트 로그에는 아무 것도 선택하지 마십시오. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 자동으로 로그를 만듭니다.  
   
@@ -679,4 +679,4 @@ SQL Server Integration Services는 패키지 및 여러 태스크에 대한 로�
 -   [Integration Services 패키지에서 기록하는 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>관련 내용  
- [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](https://go.microsoft.com/fwlink/?LinkId=150579)  

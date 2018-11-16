@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c1280a60cf7c53454ab77da6fed58fd09902748
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411763"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639170"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 연결 관리자
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하면 패키지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 실행하는 서버 또는 큐브 및 차원 데이터에 대한 액세스를 제공하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 패키지를 개발하는 동안에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트에만 연결할 수 있습니다. 런타임에는 사용자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 서버 및 데이터베이스에 패키지가 연결됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "50411763"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하는 경우 인증 모드를 지정합니다.  
 
 > [!NOTE]    
->  ADF(Azure Data Factory)에서 SSIS를 사용하고 AAS(Azure Analysis Services) 인스턴스에 연결하려고 할 경우 MFA(Multi-Factor Authentication)을 설정한 계정을 사용할 수 없지만 대신 서비스 사용자를 사용해야 합니다. [여기](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-service-principal)를 참조하여 만들고, **특정 사용자 이름 및 암호 사용**을 선택하여 연결 관리자의 서버에 로그인하고, 응용 프로그램 ID/키를 사용자 이름/암호로 입력합니다. 마지막으로 사용자 지정 설정을 통해 Azure-SSIS IR(Integration Runtime)에서 필수 클라이언트 라이브러리도 설치해야 합니다. [SSIS IR 사용자 지정](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)에서 **AAS** 예제를 참조하세요.
+>  ADF(Azure Data Factory)에서 SSIS를 사용하고 AAS(Azure Analysis Services) 인스턴스에 연결하려고 할 경우 MFA(Multi-Factor Authentication)을 설정한 계정을 사용할 수 없지만 대신 서비스 사용자를 사용해야 합니다. [여기](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)를 참조하여 만들고, **특정 사용자 이름 및 암호 사용**을 선택하여 연결 관리자의 서버에 로그인하고, 응용 프로그램 ID/키를 사용자 이름/암호로 입력합니다. 마지막으로 사용자 지정 설정을 통해 Azure-SSIS IR(Integration Runtime)에서 필수 클라이언트 라이브러리도 설치해야 합니다. [SSIS IR 사용자 지정](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)에서 **AAS** 예제를 참조하세요.
   
 -   연결 관리자에서 만든 연결이 런타임에 유지될지 여부를 나타냅니다.  
   

@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794611"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662262"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794611"
  GUI를 사용하여 **dta** 명령줄 유틸리티로 생성된 튜닝 출력을 볼 수도 있습니다.  
   
 > [!NOTE]  
->  **dta** 명령줄 유틸리티를 사용하며 **-ox** 인수를 사용하여 XML 파일에 출력 내용이 기록되도록 지정하는 경우 **의** 파일 **메뉴에서** 파일 열기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 클릭하여 XML 출력 파일을 열어 볼 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)을 참조하세요. **dta** 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](../../tools/dta/dta-utility.md)를 참조하세요.  
+>  **dta** 명령줄 유틸리티를 사용하며 **-ox** 인수를 사용하여 XML 파일에 출력 내용이 기록되도록 지정하는 경우 **의** 파일 **메뉴에서** 파일 열기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 클릭하여 XML 출력 파일을 열어 볼 수 있습니다. 자세한 내용은 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)을 참조하세요. **dta** 명령줄 유틸리티에 대한 자세한 내용은 [dta 유틸리티](../../tools/dta/dta-utility.md)를 참조하세요.  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 권장 구성을 보려면  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794611"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     데이터베이스 엔진 튜닝 관리자 XML 스키마는 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)에서 온라인으로도 제공됩니다.  
+     데이터베이스 엔진 튜닝 관리자 XML 스키마는 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)에서 온라인으로도 제공됩니다.  
   
 6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 이렇게 하면 **Configuration** 요소에 지정된 권장 구성으로 XML 출력 파일이 생성됩니다. 이 출력에 따른 다른 가상 구성을 확인하기 위해 데이터베이스 엔진 튜닝 관리자를 다시 실행하려면 출력 파일에서 **Configuration** 요소 내용을 복사하여 원본 또는 새 XML 입력 파일에 붙여 넣습니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
@@ -310,7 +310,7 @@ ms.locfileid: "47794611"
  **나중에 적용하도록 예약**  
  권장 구성에 대한 스크립트를 생성하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업으로 동작을 저장합니다.  
   
- **날짜**  
+ **Date**  
  권장 구성을 적용하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행할 날짜를 지정합니다.  
   
  **Time**  
@@ -322,7 +322,7 @@ ms.locfileid: "47794611"
  **튜닝 요약**  
  데이터베이스 엔진 튜닝 관리자의 권장 구성을 요약하여 표시합니다.  
   
- **날짜**  
+ **Date**  
  데이터베이스 엔진 튜닝 관리자가 보고서를 만든 날짜입니다.  
   
  **Time**  

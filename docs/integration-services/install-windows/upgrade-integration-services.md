@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753801"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642360"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47753801"
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
 >   
->  지원되지 않는 다른 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 Integration Services 기능](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)을 참조하세요.  
+>  지원되지 않는 다른 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 Integration Services 기능](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)을 참조하세요.  
   
 ## <a name="upgrading-integration-services"></a>Integration Services 업그레이드  
  다음 방법 중 하나를 사용하여 업그레이드할 수 있습니다.  
@@ -145,6 +145,6 @@ ms.locfileid: "47753801"
 -   업그레이드된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장되어 있는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 패키지는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트 작업을 사용하여 실행할 수 없습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
+ blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](https://go.microsoft.com/fwlink/?LinkId=238157)  
   
   

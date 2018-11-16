@@ -21,12 +21,12 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc6cf206895f3f6f283c7908b4c00f98b5aba2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea4388b453043cb380e7247d6688597300d51366
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769533"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639691"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
   플랫 파일 원본은 텍스트 파일에서 데이터를 읽습니다. 텍스트 파일은 구분 기호로 분리됨, 고정 폭 또는 혼합 형식 중 하나일 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47769533"
     > [!NOTE]  
     >  플랫 파일 원본이 사용하는 플랫 파일 연결 관리자에서 구분 기호로 분리된 형식을 사용하여 길이가 0인 문자열을 Null로 해석하도록 구성해야 합니다. 연결 관리자가 고정 폭 또는 왼쪽 정렬 형식을 사용하는 경우 공백으로 구성된 데이터를 Null 값으로 해석할 수 없습니다.  
   
- 플랫 파일 원본 출력의 출력 열에는 FastParse 속성이 포함됩니다. FastParse는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용할지 또는 로캘을 구분하는 표준 구문 분석 루틴을 사용할지를 나타냅니다. 자세한 내용은 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요.  
+ 플랫 파일 원본 출력의 출력 열에는 FastParse 속성이 포함됩니다. FastParse는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용할지 또는 로캘을 구분하는 표준 구문 분석 루틴을 사용할지를 나타냅니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요.  
   
  또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은 **false**로 설정됩니다. 이진 형식을 사용하려면 UseBinaryFormat을 **true** 로 설정하고 출력 열의 데이터 형식을 **DT_BYTES**로 설정합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 **DT_BYTES** 데이터를 다른 데이터 형식으로 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. **DT_BYTES**를 캐스팅할 수 있는 데이터 형식에 대한 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47769533"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [플랫 파일 사용자 지정 속성](../../integration-services/data-flow/flat-file-custom-properties.md)  
   

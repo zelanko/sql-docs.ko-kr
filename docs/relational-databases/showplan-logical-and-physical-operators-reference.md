@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -138,12 +137,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 203de7b4d8ca3e101650619445ccc9ede82fa2a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a965fd156f659a473f79522f1fafe7e9d0a81de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672442"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -251,7 +250,7 @@ ms.locfileid: "47799123"
 |![Nonclustered index spool 연산자 아이콘](../relational-databases/media/index-spool-32x.gif "Nonclustered index spool operator icon")|**Index Spool**|**Index Spool** 물리 연산자는 **Argument** 열에 SEEK:() 조건자를 포함합니다. **Index Spool** 연산자는 입력 행을 검색하고 각 행의 복사본을 숨겨진 스풀 파일( **tempdb** 데이터베이스에 저장되어 쿼리 사용 기간 중에만 존재함)에 배치하며 행에 대해 비클러스터형 인덱스를 작성합니다. 이렇게 하면 인덱스의 검색 기능을 사용하여 SEEK:() 조건자에 부합되는 행만 출력할 수 있습니다. 예를 들어 **Nested Loops** 연산자로 연산자를 다시 돌리지만 다시 바인딩할 필요가 없을 경우 입력 사항을 다시 검색하는 대신 스풀된 데이터를 사용합니다.|  
 |![Nonclustered index update 연산자 아이콘](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered index update operator icon")|**Nonclustered Index Update**|**Nonclustered Index Update** 물리 연산자는 **Argument** 열에 지정된 비클러스터형 인덱스에 입력된 내용에서 행을 업데이트합니다. SET:() 조건자가 있는 경우에는 업데이트된 각 열이 이 값으로 설정됩니다. **Nonclustered Index Update** 는 물리 연산자입니다.|  
 |![Online index insert 연산자 아이콘](../relational-databases/media/online-index-32x.gif "Online index insert operator icon")|**Online Index Insert**|**Online Index Insert** 물리 연산자는 인덱스, 만들기, 변경 또는 삭제 작업이 온라인으로 수행됨을 나타냅니다. 즉, 사용자가 인덱스 작업 동안 기본 테이블 데이터를 사용할 수 있습니다.|  
-|없음|**Parallelism**|<a name="exchange"></a>**Parallelism** 연산자(또는 교환 반복기)는 Distribute Streams, Gather Streams 및 Repartition Streams 논리 연산을 수행합니다. **Argument** 열에는 PARTITION COLUMNS:() 조건자와 쉼표로 구분된 분할될 열 목록이 함께 포함될 수 있습니다. 또한 **Argument** 열에는 분할 동안 정렬 순서를 지정할 열을 나열하는 ORDER BY:() 조건자도 포함될 수 있습니다. **Parallelism** 은 물리 연산자입니다. Parallelism 연산자에 대한 자세한 내용은 [Craig Freedman의 블로그 시리즈](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)를 참조하세요.<br /><br />**참고:** 쿼리가 병렬 쿼리로 컴파일되었지만 런타임에 직렬 쿼리로 실행되는 경우 SET STATISTICS XML이나 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **실제 실행 계획 포함** 옵션을 사용하여 생성된 실행 계획 출력에는 **Parallelism** 연산자의 **RunTimeInformation** 요소가 포함되지 않습니다. SET STATISTICS PROFILE 출력에서 실제 행 개수와 실제 실행 수는 **Parallelism** 연산자에 대해 0으로 표시됩니다. 두 조건 중 하나가 발생할 경우 **Parallelism** 연산자가 쿼리 컴파일 중에만 사용되었으며 런타임 쿼리 계획에는 사용되지 않았음을 의미합니다. 서버에 동시 로드 양이 많으면 병렬 쿼리 계획이 직렬로 실행될 수 있습니다.|  
+|없음|**Parallelism**|<a name="exchange"></a>**Parallelism** 연산자(또는 교환 반복기)는 Distribute Streams, Gather Streams 및 Repartition Streams 논리 연산을 수행합니다. **Argument** 열에는 PARTITION COLUMNS:() 조건자와 쉼표로 구분된 분할될 열 목록이 함께 포함될 수 있습니다. 또한 **Argument** 열에는 분할 동안 정렬 순서를 지정할 열을 나열하는 ORDER BY:() 조건자도 포함될 수 있습니다. **Parallelism** 은 물리 연산자입니다. Parallelism 연산자에 대한 자세한 내용은 [Craig Freedman의 블로그 시리즈](https://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)를 참조하세요.<br /><br />**참고:** 쿼리가 병렬 쿼리로 컴파일되었지만 런타임에 직렬 쿼리로 실행되는 경우 SET STATISTICS XML이나 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **실제 실행 계획 포함** 옵션을 사용하여 생성된 실행 계획 출력에는 **Parallelism** 연산자의 **RunTimeInformation** 요소가 포함되지 않습니다. SET STATISTICS PROFILE 출력에서 실제 행 개수와 실제 실행 수는 **Parallelism** 연산자에 대해 0으로 표시됩니다. 두 조건 중 하나가 발생할 경우 **Parallelism** 연산자가 쿼리 컴파일 중에만 사용되었으며 런타임 쿼리 계획에는 사용되지 않았음을 의미합니다. 서버에 동시 로드 양이 많으면 병렬 쿼리 계획이 직렬로 실행될 수 있습니다.|  
 |![Parameter table scan 연산자 아이콘](../relational-databases/media/parameter-table-scan-32x.gif "Parameter table scan operator icon")|**Parameter Table Scan**|**Parameter Table Scan** 연산자는 현재 쿼리에서 매개 변수의 역할을 하는 테이블을 검색합니다. 일반적으로 이 연산자는 저장 프로시저 안에서 INSERT 쿼리에 사용합니다. **Parameter Table Scan** 은 논리 및 물리 연산자입니다.|  
 |없음|**Partial Aggregate**|**Partial Aggregate** 는 병렬 계획에 사용됩니다. Partial Aggregate는 최대한 많은 입력 행에 집계 함수를 적용하여 디스크 쓰기("spill"이라고 함)가 필요가 없도록 합니다. **Hash Match** 는 파티션 집계를 구현하는 유일한 물리 연산자(반복자)입니다. **Partial Aggregate** 는 논리 연산자입니다.|  
 |![Population query 커서 연산자 아이콘](../relational-databases/media/poulation-query-32x.gif "Population query cursor operator icon")|**Population Query**|**Population Query** 연산자는 커서가 열려 있을 때 커서의 작업 테이블을 채웁니다.|  
@@ -265,7 +264,7 @@ ms.locfileid: "47799123"
 |![Remote update 연산자 아이콘](../relational-databases/media/remote-update-32x.gif "Remote update operator icon")|**Remote Update**|**Remote Update** 연산자는 원격 개체에서 입력 행을 업데이트합니다. **Remote Update** 은 논리 및 물리 연산자입니다.|  
 |![Repartition streams parallelism 연산자 아이콘](../relational-databases/media/parallelism-repartition-stream.gif "Repartition streams parallelism operator icon")|**Repartition Streams**|**Repartition Streams** 연산자(또는 교환 반복기)는 여러 개의 스트림을 사용하며 여러 개의 레코드 스트림을 만듭니다. 레코드 내용과 형식은 변경되지 않습니다. 쿼리 최적화 프로그램이 비트맵 필터를 사용하면 출력 스트림의 행 수가 줄어듭니다. 입력 스트림의 각 레코드가 한 개의 출력 스트림에 배치됩니다. 이 연산자가 순서를 그대로 유지하는 경우에는 모든 입력 스트림이 정렬되어 여러 개의 정렬된 출력 스트림으로 병합되어야 합니다. 출력이 분할되는 경우에는 **Argument** 열에 PARTITION COLUMNS:() 조건자와 분할 열이 포함됩니다. 출력이 정렬되는 경우에는 **Argument** 열에 ORDER BY:() 조건자와 정렬될 열이 포함됩니다. **Repartition Streams** 는 논리 연산자입니다. 이 연산자는 병렬 쿼리 계획에서만 사용됩니다.| 
 |![Result 언어 요소 아이콘](../relational-databases/media/result-32x.gif "Result language element icon")|**결과**|**Result** 연산자는 쿼리 계획의 끝에 반환되는 데이터입니다. 이는 일반적으로 실행 계획의 루트 요소입니다. **Result** 는 언어 요소입니다.|  
-|![RID lookup 연산자 아이콘](../relational-databases/media/rid-nonclust-locate-32x.gif "RID lookup operator icon")|**RID Lookup**|**RID Lookup** 은 제공된 RID(행 식별자)를 사용하여 힙을 조회하는 책갈피 조회입니다. **Argument** 열에는 테이블의 행을 조회하는 데 사용되는 책갈피 레이블 및 행을 조회할 테이블의 이름이 포함됩니다. **RID Lookup** 은 항상 NESTED LOOP JOIN과 함께 사용됩니다. **RID Lookup** 는 물리 연산자입니다. 책갈피 조회에 대한 자세한 내용은 MSDN SQL Server 블로그의 "[책갈피 조회(Bookmark Lookup)](http://go.microsoft.com/fwlink/?LinkId=132568)"를 참조하십시오.|  
+|![RID lookup 연산자 아이콘](../relational-databases/media/rid-nonclust-locate-32x.gif "RID lookup operator icon")|**RID Lookup**|**RID Lookup** 은 제공된 RID(행 식별자)를 사용하여 힙을 조회하는 책갈피 조회입니다. **Argument** 열에는 테이블의 행을 조회하는 데 사용되는 책갈피 레이블 및 행을 조회할 테이블의 이름이 포함됩니다. **RID Lookup** 은 항상 NESTED LOOP JOIN과 함께 사용됩니다. **RID Lookup** 는 물리 연산자입니다. 책갈피 조회에 대한 자세한 내용은 MSDN SQL Server 블로그의 "[책갈피 조회(Bookmark Lookup)](https://go.microsoft.com/fwlink/?LinkId=132568)"를 참조하십시오.|  
 |없음|**Right Anti Semi Join**|**Right Anti Semi Join** 연산자는 첫 번째(최상위) 입력에 일치하는 행이 없는 경우 두 번째(최하위) 입력의 각 행을 출력합니다. 일치하는 행은 **Argument** 열의 조건자에 부합되는 행으로 정의됩니다(조건자가 없으면 각 행이 일치 행임). **Right Anti Semi Join** 는 논리 연산자입니다.|  
 |없음|**Right Outer Join**|**Right Outer Join** 연산자는 두 번째(최하위) 입력 중에서 첫 번째(최상위) 입력과 일치하는 각 행을 반환합니다. 또한 첫 번째 입력과 일치하지 않는 두 번째 입력의 모든 행도 NULL로 조인하여 반환합니다. **Argument** 열에 조인 조건자가 없으면 각 행이 일치하는 행입니다. **Right Outer Join** 는 논리 연산자입니다.|  
 |없음|**Right Semi Join**|**Right Semi Join** 연산자는 첫 번째(최상위) 입력에 일치하는 행이 있는 경우 두 번째(최하위) 입력의 각 행을 반환합니다. **Argument** 열에 조인 조건자가 없으면 각 행이 일치하는 행입니다. **Right Semi Join** 는 논리 연산자입니다.|  

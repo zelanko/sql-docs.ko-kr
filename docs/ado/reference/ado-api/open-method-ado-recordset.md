@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc084a4fc2d5448efce8721c426ce78a4bb18a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655521"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606687"
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드(ADO 레코드 집합)
 커서를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -36,19 +36,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) A **Variant** 유효한로 평가 되는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체, SQL 문, 테이블 이름, 저장된 프로시저 호출, URL 또는 파일의 이름 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 포함 하는 영구적으로 저장 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+ 선택 사항입니다. A **Variant** 유효한로 평가 되는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체, SQL 문, 테이블 이름, 저장된 프로시저 호출, URL 또는 파일의 이름 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 포함 하는 영구적으로 저장 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
  *ActiveConnection*  
- (선택 사항) 중 하나를 **Variant** 유효한 계산 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 변수 이름 또는 **문자열** 포함 하는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 매개 변수입니다.  
+ 선택 사항입니다. 중 하나를 **Variant** 유효한 계산 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 변수 이름 또는 **문자열** 포함 하는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 매개 변수입니다.  
   
  *CursorType*  
- (선택 사항) A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 공급자를 열 때 사용 해야 하는 커서의 형식을 결정 하는 값을 **레코드 집합**합니다. 기본값은 **adOpenForwardOnly**합니다.  
+ 선택 사항입니다. A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 공급자를 열 때 사용 해야 하는 커서의 형식을 결정 하는 값을 **레코드 집합**합니다. 기본값은 **adOpenForwardOnly**합니다.  
   
  *LockType*  
- (선택 사항) A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 사용할지 결정 하는 어떤 유형의 잠금 (동시성) 공급자를 열 때 값을 **Recordset**합니다. 기본값은 **adLockReadOnly**합니다.  
+ 선택 사항입니다. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 사용할지 결정 하는 어떤 유형의 잠금 (동시성) 공급자를 열 때 값을 **Recordset**합니다. 기본값은 **adLockReadOnly**합니다.  
   
  *옵션*  
- (선택 사항) **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 *원본* 것 이외의 다른 나타내는 경우 인수는 **명령** 개체 또는 합니다 **레코드 집합** 이전에 저장 된 파일에서 복원 해야 합니다. 하나 이상의 수 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 하거나 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값을 비트 OR 연산자를 함께 사용할 수 있습니다.  
+ 선택 사항입니다. **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 *원본* 것 이외의 다른 나타내는 경우 인수는 **명령** 개체 또는 합니다 **레코드 집합** 이전에 저장 된 파일에서 복원 해야 합니다. 하나 이상의 수 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 하거나 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값을 비트 OR 연산자를 함께 사용할 수 있습니다.  
   
 > [!NOTE]
 >  열면를 **레코드 집합** 에서 **Stream** 포함 된 지속형 **레코드 집합**를 사용 하 여는 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값**adAsyncFetchNonBlocking** 영향을 주지 것입니다; fetch는 동기 및 차단 됩니다.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  사용 하 여는 **엽니다** 메서드를 **레코드 집합** 개체는 기본 테이블, 쿼리 또는 이전에 저장 된 결과에서 레코드를 나타내는 커서를 엽니다 **레코드 집합**.  
   
- 옵션을 사용 하 여 *원본* 중 하나를 사용 하 여 데이터 원본을 지정 하려면 인수:를 **명령** 개체 변수, SQL 문, 저장된 프로시저, 테이블 이름, URL 또는 전체 파일 경로 이름입니다. 하는 경우 *원본* 는 파일 경로 이름에 전체 경로 ("c:\dir\file.rst"), 상대 경로 수 있습니다 ("... \file.rst"), 또는 URL ("http://files/file.rst").  
+ 옵션을 사용 하 여 *원본* 중 하나를 사용 하 여 데이터 원본을 지정 하려면 인수:를 **명령** 개체 변수, SQL 문, 저장된 프로시저, 테이블 이름, URL 또는 전체 파일 경로 이름입니다. 하는 경우 *원본* 는 파일 경로 이름에 전체 경로 ("c:\dir\file.rst"), 상대 경로 수 있습니다 ("... \file.rst"), 또는 URL ("https://files/file.rst").  
   
  사용 하는 좋은 방법이 아닙니다 합니다 *원본* 인수를 **열기** 메서드 호출에 성공 했는지 여부를 확인 하려면 쉬운 방법이 없기 때문에 레코드를 반환 하지 않는 작업 쿼리를 수행 하 합니다. 합니다 **레코드 집합** 등 반환한 쿼리 닫히게 됩니다. 호출 SQL INSERT 문과 같은 레코드를 반환 하지 않는 쿼리를 수행 하는 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 **명령** 개체 또는 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드의 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 대신 합니다.  
   

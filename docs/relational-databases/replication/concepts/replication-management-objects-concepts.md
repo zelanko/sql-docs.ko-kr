@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672632"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749671"
 >  속성을 설정할 때 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 트랜잭션을 명시적으로 선언할 수 있지만 이러한 트랜잭션은 내부 복제 트랜잭션을 방해하여 예기치 않은 결과를 초래할 수 있기 때문에 RMO와 함께 사용하지 않는 것이 좋습니다.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>RMO 구성 요소에 대한 TLS 1.2 지원을 사용하도록 설정 
- Windows 2012 및 이하 버전의 RMO 구성 요소에 대한 TLS 1.2 지원은 [KB 3140245](http://support.microsoft.com/help/3140245) 업데이트를 설치하고 이 문서에서 언급한 대로 레지스트리 키를 만들어 활성화할 수 있습니다. Windows 2012 R2 이상 버전에서는 위의 문서에서 설명한 대로 레지스트리 키만 만들어야 합니다.
+ Windows 2012 및 이하 버전의 RMO 구성 요소에 대한 TLS 1.2 지원은 [KB 3140245](https://support.microsoft.com/help/3140245) 업데이트를 설치하고 이 문서에서 언급한 대로 레지스트리 키를 만들어 활성화할 수 있습니다. Windows 2012 R2 이상 버전에서는 위의 문서에서 설명한 대로 레지스트리 키만 만들어야 합니다.
  
 ## <a name="example"></a>예제  
  이 예에서는 속성 변경 내용을 캐시하는 방법을 보여 줍니다. 여기서 트랜잭션 게시의 특성에 대한 변경 내용은 서버에 명시적으로 전송되기 전까지 캐시됩니다.  

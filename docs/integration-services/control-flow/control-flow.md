@@ -15,12 +15,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 032b2fc6eee634f1b651384a035d381820844200
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673461"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640670"
 ---
 # <a name="control-flow"></a>제어 흐름
   패키지는 제어 흐름과 하나 이상의 데이터 흐름(선택적)으로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지의 구조를 제공하는 컨테이너, 기능을 제공하는 태스크 및 실행 개체, 컨테이너, 태스크를 정렬된 제어 흐름으로 연결하는 선행 제약 조건 등 3가지 유형의 제어 흐름 요소를 제공합니다.  
@@ -54,11 +54,11 @@ ms.locfileid: "47673461"
   
      **제어 흐름** 탭의 디자인 화면에 태스크나 컨테이너를 추가하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 해당 항목에 연결선을 자동으로 추가합니다. 패키지에 두 개 이상의 항목, 태스크 또는 컨테이너가 포함된 경우 해당 연결선을 서로 연결하여 이를 하나의 제어 흐름으로 결합시킬 수 있습니다.  
   
-     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
+     두 항목 간의 연결선을 선행 제약 조건이라고 합니다. 선행 제약 조건은 연결된 두 항목 간의 관계를 정의합니다. 선행 제약 조건은 런타임에 태스크 및 컨테이너가 실행되는 순서와 태스크 및 컨테이너가 실행되는 조건을 지정합니다. 예를 들어 선행 제약 조건을 사용하면 특정 태스크가 성공해야 제어 흐름의 다음 태스크가 실행되도록 지정할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
   
 -   연결 관리자 추가  
   
-     대부분의 태스크에는 데이터 원본에 대한 연결이 필요하며, 이를 위해서는 해당 태스크에 필요한 연결 관리자를 패키지에 추가해야 합니다. 사용되는 열거자 유형에 따라 Foreach 루프 컨테이너에도 연결 관리자가 필요할 수 있습니다. 연결 관리자는 제어 흐름을 항목별로 구성할 때나 제어 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
+     대부분의 태스크에는 데이터 원본에 대한 연결이 필요하며, 이를 위해서는 해당 태스크에 필요한 연결 관리자를 패키지에 추가해야 합니다. 사용되는 열거자 유형에 따라 Foreach 루프 컨테이너에도 연결 관리자가 필요할 수 있습니다. 연결 관리자는 제어 흐름을 항목별로 구성할 때나 제어 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 디자인 화면을 관리하고 제어 흐름을 이해하기 쉽게 만드는 데 사용할 수 있는 여러 디자인 타임 기능도 포함됩니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47673461"
   
 -   [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [구성 요소 그룹화 또는 그룹 해제](../../integration-services/group-or-ungroup-components.md)  
   

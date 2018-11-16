@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659139"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672622"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore 인덱스 - 데이터 웨어하우스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>스냅숏 격리 및 커밋된 읽기 스냅숏 격리  
- 트랜잭션 일관성을 보장하려면 스냅숏 격리(SI)를 사용하고 columnstore 인덱스에 대한 쿼리의 문 수준 일관성을 보장하려면 커밋된 읽기 스냅숏 격리(RCSI)를 사용합니다. 이렇게 하면 데이터 기록기를 차단하지 않고 쿼리를 실행할 수 있습니다. 이 비차단 동작 덕분에 복잡한 트랜잭션에 대한 교착 상태의 가능성이 크게 줄어듭니다. 자세한 내용은 MSDN의 [SQL Server에서의 스냅숏 격리](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 를 참조하세요.  
+ 트랜잭션 일관성을 보장하려면 스냅숏 격리(SI)를 사용하고 columnstore 인덱스에 대한 쿼리의 문 수준 일관성을 보장하려면 커밋된 읽기 스냅숏 격리(RCSI)를 사용합니다. 이렇게 하면 데이터 기록기를 차단하지 않고 쿼리를 실행할 수 있습니다. 이 비차단 동작 덕분에 복잡한 트랜잭션에 대한 교착 상태의 가능성이 크게 줄어듭니다. 자세한 내용은 MSDN의 [SQL Server에서의 스냅숏 격리](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Columnstore 인덱스 디자인 지침](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

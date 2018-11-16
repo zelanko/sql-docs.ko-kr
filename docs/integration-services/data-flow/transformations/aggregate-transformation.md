@@ -20,12 +20,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607341"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638930"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "47607341"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -178,7 +178,7 @@ ms.locfileid: "47607341"
 |**Group By**|데이터 집합을 그룹으로 나눕니다. 모든 데이터 형식의 열을 그룹화할 수 있습니다. 자세한 내용은 GROUP BY를 참조하십시오.|  
 |**Sum**|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 SUM을 참조하십시오.|  
 |**평균**|열에 있는 열 값의 평균을 반환합니다. 숫자 데이터 형식의 열만 평균을 계산할 수 있습니다. 자세한 내용은 AVG를 참조하십시오.|  
-|**개수**|그룹의 항목 개수를 반환합니다. 자세한 내용은 COUNT를 참조하십시오.|  
+|**Count**|그룹의 항목 개수를 반환합니다. 자세한 내용은 COUNT를 참조하십시오.|  
 |**CountDistinct**|그룹에서 Null이 아닌 고유한 값의 개수를 반환합니다. 자세한 내용은 COUNT 및 DISTINCT를 참조하십시오.|  
 |**최소**|그룹의 최소값을 반환합니다. 숫자 데이터 형식에서만 실행됩니다.|  
 |**최대값**|그룹의 최대값을 반환합니다. 숫자 데이터 형식에서만 실행됩니다.|  

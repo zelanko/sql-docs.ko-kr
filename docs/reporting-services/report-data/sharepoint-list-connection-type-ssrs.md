@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029822"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813576"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
@@ -24,7 +24,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
 
 ##  <a name="Connection"></a> 연결 문자열  
- SharePoint 목록에 대한 연결 문자열은 SharePoint 사이트 또는 하위 사이트에 대한 URL입니다(예: `http://MySharePointWeb/MySharePointSite` 또는 `http://MySharePointWeb/MySharePointSite/Subsite`).  
+ SharePoint 목록에 대한 연결 문자열은 SharePoint 사이트 또는 하위 사이트에 대한 URL입니다(예: `https://MySharePointWeb/MySharePointSite` 또는 `https://MySharePointWeb/MySharePointSite/Subsite`).  
   
  쿼리 디자이너는 사용자가 액세스할 수 있는 권한이 있는 SharePoint 목록을 자동으로 표시합니다.  
   
@@ -41,10 +41,10 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|사용자 계정 컨트롤|아니오|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|아니오|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  
   
@@ -52,9 +52,9 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|아니오|아니오|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|아니오|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  
@@ -69,7 +69,7 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
  **자격 증명 필요 없음(자격 증명 사용 안 함):**  
  이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
- Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
+ Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 또는 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   

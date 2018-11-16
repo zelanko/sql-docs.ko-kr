@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771581"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638610"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은 **SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  관리 센터를 사용하면 SQL Server 데이터베이스에 뷰를 게시할 수 있습니다. 따라서 SSIS 패키지 게시 마법사를 사용하여 SSIS 패키지를 SQL 뷰로 게시할 수 있습니다. 그런 다음 Power BI 관리 센터의 OData 피드에 포함할 뷰를 선택할 수 있습니다. 데이터 관리자는 Excel용 파워 쿼리 추가 기능을 사용하여 SSIS 패키지의 피드를 사용할 수 있습니다.  
   
- 자세한 연습은 [SSIS 패키지를 OData 피드 원본으로 게시](http://go.microsoft.com/fwlink/?LinkID=317367)를 참조하십시오.  
+ 자세한 연습은 [SSIS 패키지를 OData 피드 원본으로 게시](https://go.microsoft.com/fwlink/?LinkID=317367)를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열**을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SSIS 패키지를 OData 피드 원본으로 게시](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [SSIS 패키지를 OData 피드 원본으로 게시](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   
