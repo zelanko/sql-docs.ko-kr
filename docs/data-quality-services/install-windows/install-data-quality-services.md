@@ -12,12 +12,12 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db5804b0ac8af0648a38e862bb81adedd9ef016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699692"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -27,7 +27,7 @@ ms.locfileid: "47669671"
   
 |DQS 구성 요소|설명|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]는 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 은(는) [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 응용 프로그램으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
   
 > [!IMPORTANT]  
@@ -57,7 +57,7 @@ ms.locfileid: "47669671"
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0(이미 설치되어 있지 않은 경우 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 와 함께 설치됨)<br /><br /> Internet Explorer 6.0 SP1 이상|  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]는 동일한 컴퓨터나 별도의 컴퓨터에 설치할 수 있습니다. 두 가지 구성 요소는 모두 임의의 순서로 서로 독립적으로 설치할 수 있습니다. 하지만 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 사용하려면 연결할 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 가 설치되어 있어야 합니다.  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 동일한 컴퓨터나 별도의 컴퓨터에 설치할 수 있습니다. 두 가지 구성 요소는 모두 임의의 순서로 서로 독립적으로 설치할 수 있습니다. 하지만 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 사용하려면 연결할 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 가 설치되어 있어야 합니다.  
 >   
 >  최신 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 및 DQS 정리 변환을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 버전의 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 연결할 수 있습니다. 기존 버전의 DQS를 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]로 업그레이드하는 방법은 [Data Quality Services 업그레이드](../../database-engine/install-windows/upgrade-data-quality-services.md)를 참조하세요.  
 >   
@@ -117,7 +117,7 @@ ms.locfileid: "47669671"
                     [DQS 작업을 위해 데이터 액세스](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [비디오: DQS 설치 및 구성](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [비디오: DQS 설치 및 구성](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [DQSInstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services 업그레이드](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -125,6 +125,6 @@ ms.locfileid: "47669671"
  [SQL Server Business Intelligence 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [SQL Server 제거](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [DQS에서 설치 및 구성 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [DQS에서 설치 및 구성 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

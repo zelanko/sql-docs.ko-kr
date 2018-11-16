@@ -22,12 +22,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771611"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639600"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "47771611"
 |True|False|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
 |False|True|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
 |True|True|아니오|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
-|False|False|사용자 계정 컨트롤|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
-|False|True|사용자 계정 컨트롤|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
-|True|False|사용자 계정 컨트롤|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
-|True|True|사용자 계정 컨트롤|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
+|False|False|예|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
+|False|True|예|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
+|True|False|예|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
+|True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>열 내보내기 변환 구성  
  다음과 같은 방법으로 열 내보내기 변환을 구성할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "47771611"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

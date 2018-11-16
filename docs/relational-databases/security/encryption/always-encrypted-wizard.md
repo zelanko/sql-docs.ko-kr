@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630171"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673582"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630171"
  
  - 마법사를 사용하여 상시 암호화를 구성하고 클라이언트 응용 프로그램에서 사용하는 방법을 보여 주는 종합 연습은 [SQL 데이터베이스 자습서: 상시 암호화로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.  
  
- - 마법사 사용이 포함된 비디오는 [상시 암호화를 사용하여 중요 데이터 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요. 그리고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 팀 블로그 [SSMS 암호화 마법사 - 간단한 몇 단계로 상시 암호화 설정](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)을 참조하세요.  
+ - 마법사 사용이 포함된 비디오는 [상시 암호화를 사용하여 중요 데이터 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요. 그리고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 팀 블로그 [SSMS 암호화 마법사 - 간단한 몇 단계로 상시 암호화 설정](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)을 참조하세요.  
  
  - **사용 권한:** 이 마법사를 사용하여 암호화된 열을 쿼리하고 키를 선택하려면 `VIEW ANY COLUMN MASTER KEY DEFINITION` 및 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 사용 권한이 있어야 합니다. 새 키를 만들려면 `ALTER ANY COLUMN MASTER KEY` 및 `ALTER ANY COLUMN ENCRYPTION KEY` 사용 권한이 있어야 합니다.  
  

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120430"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703821"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="DataTypes"></a> 데이터 형식
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 저장소 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 사용 방법을 더 잘 이해하려면 [SQL Data Warehouse의 테이블에 대한 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
 
-데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
+데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
 
 `datetimeoffset` [ ( *n* ) ]  
  *n*의 기본값은 7입니다.  
@@ -291,7 +291,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 각 배포에는 모든 테이블 파티션이 포함됩니다. 예를 들어 60개 배포와 4개 테이블 파티션이 있는 경우 320개의 파티션이 됩니다. 테이블이 클러스터형 columnstore 인덱스인 경우 파티션당 하나의 columnstore 인덱스가 됩니다. 즉, 320개의 columnstore 인덱스를 가지게 됩니다.
 
-columnstore 인덱스의 이점 활용하기 위해 더 적은 테이블 파티션을 사용하여 각 columnstore 인덱스에 충분한 행이 있는지 확인하는 것이 좋습니다. 추가 지침의 경우 [SQL Data Warehouse에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) 및 [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)을 참조하세요.  
+columnstore 인덱스의 이점 활용하기 위해 더 적은 테이블 파티션을 사용하여 각 columnstore 인덱스에 충분한 행이 있는지 확인하는 것이 좋습니다. 추가 지침의 경우 [SQL Data Warehouse에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) 및 [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)을 참조하세요.  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>rowstore 테이블(힙 또는 클러스터형 인덱스)  
@@ -304,7 +304,7 @@ rowstore 테이블을 columnstore 테이블로 변경하려면 테이블에서 �
 
 자세한 내용은 다음 문서를 참조하세요.
 - [버전이 지정된 columnstore 인덱스 기능 요약](https://msdn.microsoft.com/library/dn934994/)
-- [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

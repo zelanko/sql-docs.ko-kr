@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804661"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641150"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804661"
 ## <a name="samples-of-change-data-capture-packages"></a>패키지 변경 데이터 캡처 예제  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [지정된 간격 동안 변경 데이터 캡처 패키지 예제 추가 정보](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [지정된 간격 동안 변경 데이터 캡처 패키지 예제 추가 정보](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [마지막 요청 이후 변경 데이터 캡처 패키지 예제 추가 정보](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [마지막 요청 이후 변경 데이터 캡처 패키지 예제 추가 정보](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804661"
 -   [여러 테이블의 증분 로드 수행](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>관련 내용  
- sqlblog.com의 블로그 항목 - [SSIS 디자인 패턴 – 증분 로드](http://go.microsoft.com/fwlink/?LinkId=217679)  
+ sqlblog.com의 블로그 항목 - [SSIS 디자인 패턴 – 증분 로드](https://go.microsoft.com/fwlink/?LinkId=217679)  
   
   

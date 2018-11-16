@@ -14,12 +14,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6f57d1cc99a2966ea220774366cca8aa6e2f8049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834967"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702711"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
 
@@ -33,16 +33,16 @@ ms.locfileid: "47834967"
 |구성 요소|설명|  
 |---------------------------|-----------------|  
 |**masterDataServices**|사용자 지정 요소. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.|  
-|**connectionStrings**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [connectionStrings 요소(ASP.NET 설정 스키마)](http://go.microsoft.com/fwlink/?LinkId=178347) 를 참조하세요.|  
-|**system.web**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [system.web 요소(ASP.NET 설정 스키마)](http://go.microsoft.com/fwlink/?LinkId=178348) 를 참조하세요.|  
-|**startup**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<startup> 요소](http://go.microsoft.com/fwlink/?LinkId=178349)를 참조하세요.|  
-|**런타임**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<runtime> 요소](http://go.microsoft.com/fwlink/?LinkId=178350)를 참조하세요.|  
-|**system.codedom**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<system.codedom> 요소](http://go.microsoft.com/fwlink/?LinkId=178351)를 참조하세요.|  
-|**system.web.extensions**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [system.web.extensions 요소(ASP.NET 설정 스키마)](http://go.microsoft.com/fwlink/?LinkId=178352) 를 참조하세요.|  
-|**system.webServer**|IIS 요소를 포함하는 섹션 그룹. 자세한 내용은 MSDN Library에서 [system.webServer 섹션 그룹 \[IIS 7 설정 스키마\]](http://go.microsoft.com/fwlink/?LinkId=178353)을 참조하세요.|  
-|**system.serviceModel**|WCF 요소. 자세한 내용은 MSDN Library에서 [\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354)을 참조하세요.|  
-|**system.diagnostics**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<system.diagnostics> 요소](http://go.microsoft.com/fwlink/?LinkId=178355)를 참조하세요.|  
-|**appSettings**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [appSettings 요소(일반 설정 스키마)](http://go.microsoft.com/fwlink/?LinkId=178356) 를 참조하세요.|  
+|**connectionStrings**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [connectionStrings 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178347) 를 참조하세요.|  
+|**system.web**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [system.web 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178348) 를 참조하세요.|  
+|**startup**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<startup> 요소](https://go.microsoft.com/fwlink/?LinkId=178349)를 참조하세요.|  
+|**런타임**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<runtime> 요소](https://go.microsoft.com/fwlink/?LinkId=178350)를 참조하세요.|  
+|**system.codedom**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<system.codedom> 요소](https://go.microsoft.com/fwlink/?LinkId=178351)를 참조하세요.|  
+|**system.web.extensions**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [system.web.extensions 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178352) 를 참조하세요.|  
+|**system.webServer**|IIS 요소를 포함하는 섹션 그룹. 자세한 내용은 MSDN Library에서 [system.webServer 섹션 그룹 \[IIS 7 설정 스키마\]](https://go.microsoft.com/fwlink/?LinkId=178353)을 참조하세요.|  
+|**system.serviceModel**|WCF 요소. 자세한 내용은 MSDN Library에서 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354)을 참조하세요.|  
+|**system.diagnostics**|.NET Framework 요소. 자세한 내용은 MSDN Library에서 [\<system.diagnostics> 요소](https://go.microsoft.com/fwlink/?LinkId=178355)를 참조하세요.|  
+|**appSettings**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [appSettings 요소(일반 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178356) 를 참조하세요.|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 요소  
  **\<masterDataServices>** 요소는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 연결하는 데 사용되는 사용자 지정 요소입니다.  

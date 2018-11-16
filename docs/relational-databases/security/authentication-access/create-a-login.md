@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630361"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675430"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47630361"
   
 > **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
   
- 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
+ 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
   
 > **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 경우 ID는 master 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "47630361"
   
     2.  **찾을 위치 선택**에서 **위치...** 를 클릭하여 **위치** 대화 상자를 열고 사용 가능한 서버 위치 중 하나를 선택합니다. 완료되었으면 **확인**을 클릭합니다.  
   
-    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](http://technet.microsoft.com/library/cc771712.aspx)를 참조하세요.  
+    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](https://technet.microsoft.com/library/cc771712.aspx)를 참조하세요.  
   
-    4.  고급 검색 옵션을 보려면 **고급...** 을 클릭하세요. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자 - 고급 페이지](http://technet.microsoft.com/library/cc733110.aspx)를 참조하세요.  
+    4.  고급 검색 옵션을 보려면 **고급...** 을 클릭하세요. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자 - 고급 페이지](https://technet.microsoft.com/library/cc733110.aspx)를 참조하세요.  
   
     5.  **확인**을 클릭합니다.  
   

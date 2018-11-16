@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785021"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642010"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47785021"
 ## <a name="system-and-user-defined-variables"></a>시스템 및 사용자 정의 변수  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 사용자 정의 변수와 시스템 변수라는 두 가지 유형의 변수를 지원합니다. 사용자 정의 변수는 패키지 개발자에 의해 정의되며 시스템 변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 의해 정의됩니다. 사용자 정의 변수는 패키지에 필요한 만큼 얼마든지 만들 수 있지만 시스템 변수는 추가로 만들 수 없습니다.  
   
- SQL 실행 태스크에서 SQL 문의 매개 변수에 변수를 매핑하는 데 사용하는 매개 변수 바인딩에 모든 변수, 즉 시스템 변수와 사용자 정의 변수를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
+ SQL 실행 태스크에서 SQL 문의 매개 변수에 변수를 매핑하는 데 사용하는 매개 변수 바인딩에 모든 변수, 즉 시스템 변수와 사용자 정의 변수를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
   
 > [!NOTE]  
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "47785021"
   
  각 컨테이너 유형에 따라 서로 다른 시스템 변수를 사용할 수 있습니다. 패키지 및 해당 요소에서 사용되는 시스템 변수에 대한 자세한 내용은 [System Variables](../integration-services/system-variables.md)를 참조하십시오.  
   
- 변수의 실제 사용 시나리오에 대한 자세한 내용은 [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ 변수의 실제 사용 시나리오에 대한 자세한 내용은 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
   
 ## <a name="properties-of-variables"></a>변수 속성  
  **변수** 창이나 **속성** 창에서 다음 속성을 설정하여 사용자 정의 변수를 구성할 수 있습니다. 일부 속성은 속성 창에서만 사용할 수 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "47785021"
  변수 이름을 지정합니다.  
   
  **네임스페이스**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
   
 **RaiseChangedEvent**  
  이 속성을 **True**로 설정하면 변수에서 값을 변경할 때 **OnVariableValueChanged** 이벤트가 발생합니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "47785021"
 
 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 있습니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
   
- 변수가 식으로 계산되도록 구성된 경우에는 식을 제공해야 합니다. 런타임에 식이 계산되고 변수에는 해당 계산의 결과가 설정됩니다. 예를 들어 변수에 `DATEPART("month", GETDATE())` 식이 사용된 경우 이 변수의 값은 현재 날짜의 월에 해당하는 숫자입니다. 식은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법 구문을 사용하는 유효한 식이어야 합니다. 변수에 식이 사용되는 경우 이 식에는 식 문법에서 제공하는 연산자와 함수 및 리터럴을 사용할 수 있지만 식에서 패키지의 데이터 흐름에 있는 열을 참조할 수는 없습니다. 식의 최대 길이는 4000자입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ 변수가 식으로 계산되도록 구성된 경우에는 식을 제공해야 합니다. 런타임에 식이 계산되고 변수에는 해당 계산의 결과가 설정됩니다. 예를 들어 변수에 `DATEPART("month", GETDATE())` 식이 사용된 경우 이 변수의 값은 현재 날짜의 월에 해당하는 숫자입니다. 식은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법 구문을 사용하는 유효한 식이어야 합니다. 변수에 식이 사용되는 경우 이 식에는 식 문법에서 제공하는 연산자와 함수 및 리터럴을 사용할 수 있지만 식에서 패키지의 데이터 흐름에 있는 열을 참조할 수는 없습니다. 식의 최대 길이는 4000자입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
 **ValueType**    
  > [!NOTE]  
@@ -155,9 +155,9 @@ ms.locfileid: "47785021"
   
  **데이터 흐름 식** 변수를 사용하여 파생 열 및 조건부 분할 변환에서 열을 채우기 위해 사용하는 식에 값을 제공하거나 데이터 행을 다른 변환 출력에 전송할 수 있습니다. 예를 들어 `@varSalutation + LastName`식은 `VarSalutation` 변수와 `LastName` 열의 값을 연결합니다. `Income < @HighIncome`식은 `Income` 열의 값이 `HighIncome` 변수의 값보다 작은 데이터 행을 출력에 전송합니다. 자세한 내용은 [파생 열 변환](../integration-services/data-flow/transformations/derived-column-transformation.md), [조건부 분할 변환](../integration-services/data-flow/transformations/conditional-split-transformation.md) 및 [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true**로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)를 참조하세요.  
+ **선행 제약 조건 식** 제약 조건이 지정된 실행 개체가 실행되는지 여부를 결정하기 위해 선행 제약 조건에서 사용할 값을 제공합니다. 식을 실행 결과(성공, 실패, 완료)와 함께 사용하거나 실행 결과 대신에 사용할 수 있습니다. 예를 들어 `@varMax > @varMin`식이 **true**로 계산될 경우 실행 개체가 실행됩니다. 자세한 내용은 [선행 제약 조건에 식 추가](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)를 참조하세요.  
   
- **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
+ **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
   
  **For 루프 식** For 루프의 초기화, 계산 및 대입 식에서 사용할 값을 제공합니다. 예를 들어 `varCount` 변수가 2, `varMaxCount` 변수가 10, 초기화 식이 `@varCount`, 계산 식이  `@varCount < @varMaxCount`, 대입 식이 `@varCount =@varCount +1`인 경우 루프는 8번 반복됩니다. 자세한 내용은 [For Loop Container](../integration-services/control-flow/for-loop-container.md)을 참조하세요.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47785021"
   
 6.  필요에 따라 **표 옵션** 아이콘을 클릭하고 **가변 눈금 옵션** 대화 상자에 표시할 추가 열을 선택한 다음 **확인**을 클릭합니다.  
   
-7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)을 참조하세요.  
+7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)을 참조하세요.  
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 

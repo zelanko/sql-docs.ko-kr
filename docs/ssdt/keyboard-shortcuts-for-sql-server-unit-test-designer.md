@@ -11,12 +11,12 @@ ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e975230f89f782cd404525c81c682be46d20cf35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6d6621f14b8294e93110311ca5ea210652bb868
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759311"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659583"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 단위 테스트 디자이너의 바로 가기 키
 다음 바로 가기 키를 사용하여 SQL Server 단위 테스트 디자이너 내에서 탐색할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47759311"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Transact-SQL 편집기의 바로 가기 키(Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=160735)  
-[Visual Studio의 내게 필요한 옵션 기능(Visual Studio 2010)](http://msdn.microsoft.com/library/y4b5z3y3(VS.90).aspx)  
-[Visual Studio의 내게 필요한 옵션 기능(Visual Studio 2012)](http://msdn.microsoft.com/library/y4b5z3y3.aspx)  
+[Transact-SQL 편집기의 바로 가기 키(Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=160735)  
+[Visual Studio의 내게 필요한 옵션 기능(Visual Studio 2010)](https://msdn.microsoft.com/library/y4b5z3y3(VS.90).aspx)  
+[Visual Studio의 내게 필요한 옵션 기능(Visual Studio 2012)](https://msdn.microsoft.com/library/y4b5z3y3.aspx)  
   

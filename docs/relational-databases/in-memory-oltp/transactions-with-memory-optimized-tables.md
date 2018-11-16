@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51adb868b7504010956ab560904b3739f1cf137b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670722"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -317,6 +317,6 @@ go
   
 - [sp_getapplock(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [데이터베이스 엔진의 행 버전 관리 기반 격리 수준](http://msdn.microsoft.com/library/ms177404.aspx)  
+- [데이터베이스 엔진의 행 버전 관리 기반 격리 수준](https://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031362"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812686"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>브라우저를 사용하여 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   지원되는 웹 브라우저에서 보고서 서버에 직접 연결하여 보고서를 볼 수 있습니다. 모든 보고서에는 보고서 서버에 대한 URL 주소가 있습니다. 보고서의 웹 주소를 입력하여 웹 응용 프로그램과는 상관없이 브라우저 창에 보고서를 열 수 있습니다. 보고서는 HTML 형식으로 열리고 페이지를 탐색하거나 보고서 내의 데이터 값을 검색하는 데 사용할 수 있는 보고서 도구 모음이 함께 표시됩니다. URL에 매개 변수를 설정하여 도구 모음을 숨기거나 보고서의 출력 형식을 선택할 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "50031362"
 ## <a name="typing-the-url-address-of-a-report"></a>보고서의 URL 주소 입력  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버의 특정 항목에 대한 URL 액세스를 지원합니다. 이 URL에는 보고서의 정규화된 경로와 보고서를 렌더링하기 위한 명령이 포함되어야 합니다. 보고서에 매개 변수가 포함되어 있으면 보고서를 여는 데 필요한 값도 모두 지정해야 합니다. 경로, 매개 변수 값 또는 렌더링 확장 프로그램에 공백이 포함된 보고서의 URL을 입력할 경우 원하는 결과를 얻으려면 URL 인코딩된 문자를 URL에 포함해야 합니다. 다음 예에서는 경로 이름, 매개 변수 및 렌더링 확장 프로그램에 공백에 대한 인코딩을 포함하는 보고서 URL을 보여 줍니다.  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Internet Explorer에서 URL에 사용할 수 있는 문자는 최대 2,083자까지입니다. 자세한 내용은 [Internet Explorer의 최대 URL 길이(Maximum URL length in Internet Explorer)](http://support.microsoft.com/kb/208427)를 참조하십시오.  
+ Internet Explorer에서 URL에 사용할 수 있는 문자는 최대 2,083자까지입니다. 자세한 내용은 [Internet Explorer의 최대 URL 길이(Maximum URL length in Internet Explorer)](https://support.microsoft.com/kb/208427)를 참조하십시오.  
   
  URL을 통해 보고서에 액세스하는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스(URL Access)"를 참조하십시오.  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], target service
@@ -16,12 +15,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb36c8e5c92672132c07228bb265ad90d327b97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704526"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662241"
 ---
 # <a name="implement-event-notifications"></a>이벤트 알림 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47704526"
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]에는 다음 특정 메시지 유형과 이벤트 알림에 대한 계약이 포함되어 있으므로 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 시작하는 서비스를 만들지 않아도 됩니다.  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  이벤트 알림을 받는 대상 서비스는 이러한 기존 계약을 인식해야 합니다.  
@@ -44,7 +43,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  메시지를 받을 큐를 만듭니다.  
   
     > [!NOTE]  
-    >  큐에서 `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`의 메시지 유형을 받습니다.  
+    >  큐에서 `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`의 메시지 유형을 받습니다.  
   
 2.  이벤트 알림 계약을 참조하는 큐에 서비스를 만듭니다.  
   
@@ -61,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

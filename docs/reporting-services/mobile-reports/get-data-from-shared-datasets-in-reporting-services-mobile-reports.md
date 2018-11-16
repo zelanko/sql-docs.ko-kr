@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836961"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813936"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
@@ -41,7 +41,7 @@ Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 집�
   
 데이터 집합을 가져온 후에는 시뮬레이트된 데이터 또는 Excel 파일의 로컬 데이터를 사용할 때와 같은 방법으로 모바일 보고서를 디자인할 수 있습니다.  
   
-기본적으로 공유 데이터 집합은 최신 데이터를 포함하므로 항상 최신 상태로 유지됩니다. 해당 데이터 집합을 기반으로 하는 모바일 보고서를 볼 때마다 SQL Server가 기본 쿼리를 실행하여 최신 데이터를 반환하기 때문입니다. 따라서 많은 사용자가 모바일 보고서를 확인할 때는 이 방식이 적절하지 않을 수도 있으므로 캐싱을 설정해 쿼리를 주기적으로 실행하고 결과 데이터 집합을 캐시할 수 있습니다. 이 블로그 게시물에서는 [웹 포털에서 캐싱 및 데이터 새로 고침이 작동하는 방식](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)에 대해 설명합니다.  
+기본적으로 공유 데이터 집합은 최신 데이터를 포함하므로 항상 최신 상태로 유지됩니다. 해당 데이터 집합을 기반으로 하는 모바일 보고서를 볼 때마다 SQL Server가 기본 쿼리를 실행하여 최신 데이터를 반환하기 때문입니다. 따라서 많은 사용자가 모바일 보고서를 확인할 때는 이 방식이 적절하지 않을 수도 있으므로 캐싱을 설정해 쿼리를 주기적으로 실행하고 결과 데이터 집합을 캐시할 수 있습니다. 이 블로그 게시물에서는 [웹 포털에서 캐싱 및 데이터 새로 고침이 작동하는 방식](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)에 대해 설명합니다.  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>보고서 서버 추가, 편집 또는 제거  
   
@@ -60,8 +60,8 @@ Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 집�
 ### <a name="see-also"></a>관련 항목:  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
--  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  
+-  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
+-  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  
   
   
   

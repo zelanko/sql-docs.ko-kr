@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020327"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814026"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
   설치 중에 오류가 발생하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치할 수 없는 경우 이 문서에 설명된 지침에 따라 설치 오류가 발생할 가능성이 가장 높은 상황을 처리하세요.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
  릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](https://go.microsoft.com/fwlink/?linkid=236893)를 검토하세요.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "50020327"
   
 -   개발 환경에서 SharePoint 문서를 검토합니다. [SharePoint에 대한 일반 개발 환경 설정](https://msdn.microsoft.com/library/ee554869)  
   
--   포럼 포스트 검토: [Windows 7에 설치한 이후에 중앙 관리에서 빈 페이지 반환](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   포럼 포스트 검토: [Windows 7에 설치한 이후에 중앙 관리에서 빈 페이지 반환](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   SharePoint 2013/2016 중앙 관리 서비스와 같은 SharePoint 서비스를 위해 사용 중인 서비스 계정은 로컬 운영 체제에 관리 권한이 있어야 합니다.  
   
@@ -267,9 +267,9 @@ ms.locfileid: "50020327"
 ##  <a name="bkmk_additional"></a> 추가 리소스  
  다음은 문제 해결 지원을 검토할 수 있는 추가 리소스입니다.  
   
--   TechNet Wiki: [SharePoint 2010 통합 모드에서 SSRS(SQL Server Reporting Services) 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki: [SharePoint 2010 통합 모드에서 SSRS(SQL Server Reporting Services) 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [포럼: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [포럼: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   피드백이나 추가 질문이 있으신가요? [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 방문하세요.  
   

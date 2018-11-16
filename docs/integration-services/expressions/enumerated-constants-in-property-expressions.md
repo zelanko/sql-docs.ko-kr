@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736891"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638970"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 **LoggingMode** 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  
@@ -581,7 +581,7 @@ ms.locfileid: "47736891"
 |실패|1|  
 |Completion|2|  
   
- **IsolationLevel** 속성 - .NET Framework **IsolationLevel** 열거를 통해 설정됩니다. 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)의 .NET Framework 클래스 라이브러리(.NET Framework Class Library)를 참조하십시오.  
+ **IsolationLevel** 속성 - .NET Framework **IsolationLevel** 열거를 통해 설정됩니다. 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)의 .NET Framework 클래스 라이브러리(.NET Framework Class Library)를 참조하십시오.  
   
  **LoggingMode** 속성 - **DTSLoggingMode** 열거 값을 사용하여 설정합니다.  
   

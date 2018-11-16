@@ -13,15 +13,15 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649987"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638530"
 ---
 # <a name="using-variables-in-the-script-component"></a>스크립트 구성 요소에서 변수 사용
-  변수에는 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+  변수에는 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)을 참조하세요.  
   
  **스크립트 변환 편집기**의 **스크립트** 페이지에 있는 **ReadOnlyVariables** 및 **ReadWriteVariables** 필드에 쉼표로 구분된 변수 목록을 입력하여 사용자 지정 스크립트에서 기존 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 개별 변수를 읽고 쓰는 데는 **Value** 속성을 사용합니다. 스크립트 구성 요소에서는 스크립트를 통해 런타임에 변수가 조작될 때 필요한 모든 잠금을 백그라운드에서 처리합니다.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "47649987"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](../../../integration-services/integration-services-ssis-variables.md)   
- [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

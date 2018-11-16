@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668603"
 ---
 # <a name="database-engine-developer-documentation"></a>데이터베이스 엔진 개발자 설명서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597654"
  [데이터베이스 엔진 확장 저장 프로시저 프로그래밍](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  확장 저장 프로시저를 사용하여 C와 같은 프로그래밍 언어로 고유한 외부 루틴을 만드는 방법을 설명합니다.  
   
- [데이터 수집기 프로그래밍](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [데이터 수집기 프로그래밍](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  데이터 수집기 개체 모델에 대해 설명합니다.  
   
- [예외 메시지 상자 프로그래밍](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [예외 메시지 상자 프로그래밍](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  응용 프로그램에서 예외 메시지 상자 프로그래밍 인터페이스를 사용하여 메시징 환경에 대한 추가적인 제어를 제공하고, 사용자에게 나중에 참조할 수 있도록 오류 메시지 내용을 저장하는 옵션을 제공하고, 메시지를 통해 도움을 받을 수 있는 기회를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -29,12 +29,12 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1c47c1d68b2c05b5f3ddb02e2f5b6e4506e1194
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d23eea4bf6fdfb38108e74ad80588252605e77a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703141"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,25 +63,25 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Remarks  
  ALTER XML SCHEMA COLLECTION을 사용하여 XML 스키마 컬렉션에 네임스페이스가 없는 새 XML 스키마를 추가하거나 컬렉션의 기존 네임스페이스에 새 구성 요소를 추가할 수 있습니다.  
   
- 다음 예에서는 `MyColl` 컬렉션에 있는 `http://MySchema/test_xml_schema` 기존 네임스페이스에 새 \<element>를 추가합니다.  
+ 다음 예에서는 `MyColl` 컬렉션에 있는 `https://MySchema/test_xml_schema` 기존 네임스페이스에 새 \<element>를 추가합니다.  
   
 ```  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
-    xmlns="http://www.w3.org/2001/XMLSchema"   
-    targetNamespace="http://MySchema/test_xml_schema">  
+    xmlns="https://www.w3.org/2001/XMLSchema"   
+    targetNamespace="https://MySchema/test_xml_schema">  
       <element name="root" type="string"/>   
   </schema>'  
 -- Modify the collection.   
 ALTER XML SCHEMA COLLECTION MyColl ADD '  
-  <schema xmlns="http://www.w3.org/2001/XMLSchema"   
-         targetNamespace="http://MySchema/test_xml_schema">   
+  <schema xmlns="https://www.w3.org/2001/XMLSchema"   
+         targetNamespace="https://MySchema/test_xml_schema">   
      <element name="anotherElement" type="byte"/>   
  </schema>';  
 ```  
   
- `ALTER XML SCHEMA`는 `<anotherElement>` 요소를 이전에 정의한 네임스페이스인 `http://MySchema/test_xml_schema`에 추가합니다.  
+ `ALTER XML SCHEMA`는 `<anotherElement>` 요소를 이전에 정의한 네임스페이스인 `https://MySchema/test_xml_schema`에 추가합니다.  
   
  컬렉션에 추가하려는 구성 요소 중 일부가 이미 동일한 컬렉션에 있는 구성 요소를 참조하는 경우에는 `<import namespace="referenced_component_namespace" />`를 사용해야 합니다. 그러나 `<xsd:import>`의 현재 스키마 네임스페이스는 사용할 수 없으므로 현재 스키마 네임스페이스와 동일한 대상 네임스페이스의 구성 요소를 자동으로 가져옵니다.  
   
@@ -105,11 +105,11 @@ USE SampleDB;
 GO  
 CREATE XML SCHEMA COLLECTION ManuInstructionsSchemaCollection AS  
 N'<?xml version="1.0" encoding="UTF-16"?>  
-<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
-   xmlns          ="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+   xmlns          ="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
    elementFormDefault="qualified"   
    attributeFormDefault="unqualified"  
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
+   xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
   
     <xsd:complexType name="StepType" mixed="true" >  
         <xsd:choice  minOccurs="0" maxOccurs="unbounded" >   
@@ -200,10 +200,10 @@ CREATE XML SCHEMA COLLECTION N'
   
 ```  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
-'<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+'<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
+    xmlns:xsd="https://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
         <xsd:complexType>  
             <xsd:sequence>  
@@ -213,14 +213,14 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
         </xsd:complexType>  
     </xsd:element>  
 </xsd:schema>  
- <xs:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+ <xs:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
-    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"   
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"  
-    xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
+    xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
+    xmlns:xs="https://www.w3.org/2001/XMLSchema"  
+    xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
     <xs:import   
-namespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
+namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
     <xs:element name="ProductDescription" type="ProductDescription" />  
         <xs:complexType name="ProductDescription">  
             <xs:sequence>  
@@ -231,7 +231,7 @@ namespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/Produc
         </xs:complexType>  
         <xs:complexType name="Summary" mixed="true" >  
             <xs:sequence>  
-                <xs:any processContents="skip" namespace="http://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
+                <xs:any processContents="skip" namespace="https://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />  
             </xs:sequence>  
         </xs:complexType>  
 </xs:schema>'  
@@ -248,7 +248,7 @@ GO
 ```  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  xmlns:ns="https://ns">  
 <element name="e" type="dateTime"/>  
 </schema>';  
 GO  

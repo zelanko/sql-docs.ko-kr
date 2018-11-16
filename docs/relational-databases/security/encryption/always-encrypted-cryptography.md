@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667183"
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768901"
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256**은 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생되었습니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256**은 [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생되었습니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
   
- 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256** 은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 자세한 설명은 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)에 있습니다.  
+ 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256** 은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 자세한 설명은 [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)에 있습니다.  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 은 다음 단계를 통해 지정된 일반 텍스트 값에 대한 암호화 값을 계산합니다.  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|해당 없음(지원되지 않음)|  
   
 ## <a name="net-reference"></a>.NET 참조  
- 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 **.NET 참조** 에서 **SqlAeadAes256CbcHmac256Algorithm.cs** 및 [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)파일을 참조하세요.  
+ 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 **.NET 참조** 에서 **SqlAeadAes256CbcHmac256Algorithm.cs** 및 [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)파일을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

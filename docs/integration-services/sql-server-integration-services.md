@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699652"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,8 +43,8 @@ ms.locfileid: "49383288"
 SQL Server에 SQL Server Integration Services를 설치하는 방법과 추가 다운로드에 대한 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
--   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [Stack Overflow에서 도움말 보기](http://stackoverflow.com/questions/tagged/ssis)  
+-   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Stack Overflow에서 도움말 보기](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)
 -   [문제 보고 및 기능 요청](https://feedback.azure.com/forums/908035-sql-server)
 -   [PC의 문서 가져오기](../sql-server/sql-server-help-installation.md)

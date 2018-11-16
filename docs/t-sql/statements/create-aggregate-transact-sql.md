@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e61e945523163766a323ec7edb2b40540cb69b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853879"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699929"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  EXTERNAL NAME 절에 지정된 어셈블리에 대한 REFERENCES 권한과 CREATE AGGREGATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 StringUtilities.csproj 예제 응용 프로그램이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
+ 다음 예에서는 StringUtilities.csproj 예제 응용 프로그램이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
   
  이 예에서는 집계 `Concatenate`를 만듭니다. 집계를 만들기 전에 `StringUtilities.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   

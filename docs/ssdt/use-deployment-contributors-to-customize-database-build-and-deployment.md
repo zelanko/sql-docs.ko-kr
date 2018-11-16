@@ -11,12 +11,12 @@ ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21a391b45abc89749db3ae2b7886f7b904b00e9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666252"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정
 Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작업의 동작을 수정하기 위해 사용할 수 있는 확장성 지점을 제공합니다.  
@@ -33,11 +33,11 @@ Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작
 ### <a name="supported-extensibility-scenarios"></a>지원되는 확장성 시나리오  
 다음 예제 시나리오를 지원하도록 빌드 또는 배포 참가자를 구현할 수 있습니다.  
   
--   **프로젝트 빌드 중 스키마 설명서 생성** - 이 시나리오를 지원하기 위해서는 [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)를 구현하고 스키마 설명서를 생성하도록 OnExecute 메서드를 재정의합니다. 확장을 실행할지 여부를 제어하고 출력 파일의 이름을 지정하는 기본 인수를 정의하는 대상 파일을 만들 수 있습니다.  
+-   **프로젝트 빌드 중 스키마 설명서 생성** - 이 시나리오를 지원하기 위해서는 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)를 구현하고 스키마 설명서를 생성하도록 OnExecute 메서드를 재정의합니다. 확장을 실행할지 여부를 제어하고 출력 파일의 이름을 지정하는 기본 인수를 정의하는 대상 파일을 만들 수 있습니다.  
   
--   **SQL 프로젝트가 배포될 때 다른 보고서 생성** - 이 시나리오를 지원하기 위해서는 SQL 프로젝트를 배포할 때 XML 파일을 생성하는 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)를 구현합니다.  
+-   **SQL 프로젝트가 배포될 때 다른 보고서 생성** - 이 시나리오를 지원하기 위해서는 SQL 프로젝트를 배포할 때 XML 파일을 생성하는 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)를 구현합니다.  
   
--   **데이터 동작 발생 시점을 변경하기 위한 배포 계획 수정** - 이 시나리오를 지원하기 위해서는 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 구현하고 배포 계획을 반복합니다. 해당 계획의 각 SqlTableMigrationStep에 대해 비교 결과를 조사해서 해당 단계를 수행하거나 건너 뛸지를 결정합니다.  
+-   **데이터 동작 발생 시점을 변경하기 위한 배포 계획 수정** - 이 시나리오를 지원하기 위해서는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 구현하고 배포 계획을 반복합니다. 해당 계획의 각 SqlTableMigrationStep에 대해 비교 결과를 조사해서 해당 단계를 수행하거나 건너 뛸지를 결정합니다.  
   
 -   **SQL 프로젝트가 배포될 때 생성된 dacpac에 파일 복사** - 이 시나리오를 지원하기 위해서는 배포 참가자를 구현하고, 프로젝트 시스템에서 DeploymentExtensionConfiguration으로 표시된 파일을 지정하도록 OnEstablishDeploymentConfiguration 메서드를 재정의합니다. 이러한 파일은 출력 폴더에 복사되고 생성된 dacpac 내에 추가되어야 합니다. 또한 여러 파일을 출력 폴더에 복사되고 배포 매니페스트에 추가되는 하나의 새 파일로 병합하도록 참가자를 수정할 수도 있습니다. 배포 중에는 OnApplyDeploymentConfiguration 메서드를 구현해서 dacpac에서 해당 파일을 추출하고 OnExecute 메서드에서 사용하도록 준비할 수 있습니다.  
   
@@ -47,9 +47,9 @@ Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작
   
 |**일반 태스크**|**지원 콘텐츠**|  
 |--------------------|--------------------------|  
-|**확장성 지점에 대해 자세히 알아보기:** 빌드 및 배포 참가자 구현을 위해 사용할 수 있는 기본 클래스에 대해 자세히 알아볼 수 있습니다.|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**확장성 지점에 대해 자세히 알아보기:** 빌드 및 배포 참가자 구현을 위해 사용할 수 있는 기본 클래스에 대해 자세히 알아볼 수 있습니다.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |**샘플 참가자 만들기:** 빌드 또는 배포 참가자를 만드는 데 필요한 단계에 대해 알아봅니다. 이 연습에서는 다음을 수행할 수 있습니다.<br /><br />-   모델의 모든 요소를 나열하는 보고서를 생성하는 빌드 참가자를 만듭니다.<br />-   실행 전 배포 계획을 변경하는 배포 참가자를 만듭니다.<br />-   SQL 프로젝트를 배포할 때 배포 보고서를 생성하는 배포 참가자를 만듭니다.<br /><br />팀에 참가자를 분배하려는 방법에 따라 모든 참가자를 단일 어셈블리에 또는 여러 어셈블리 사이에 만들 수 있습니다.|[연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL 단위 테스트에 대한 사용자 지정 조건 정의](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
+[SQL 단위 테스트에 대한 사용자 지정 조건 정의](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

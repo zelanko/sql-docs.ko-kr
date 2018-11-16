@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669602"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -585,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  경우에 따라 필터링된 인덱스는 필터링된 인덱스 식에 필터링된 인덱스 정의의 포괄 열 또는 키로 열을 포함하지 않고 쿼리를 처리합니다. 다음 지침은 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 하는 경우에 대해 설명합니다. 이 예에서는 앞에서 만든 필터링된 인덱스 `FIBillOfMaterialsWithEndDate` 를 참조합니다.  
   
- 필터링된 인덱스 식이 쿼리 조건자와 같고 쿼리가 쿼리 결과로 필터링된 인덱스 식의 열을 반환하지 않는다면 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 할 필요는 없습니다. 예를 들어 다음 쿼리 조건자가 필터 식과 같고 `FIBillOfMaterialsWithEndDate` 가 쿼리 결과로 반환되지 않기 때문에 `EndDate` 는 이 쿼리를 처리합니다. `FIBillOfMaterialsWithEndDate` 는 필터링된 인덱스 정의의 포괄 열 또는 키로 `EndDate` 가 필요하지 않습니다.  
+ 필터링된 인덱스 식이 쿼리 조건자와 같고 쿼리가 쿼리 결과로 필터링된 인덱스 식의 열을 반환하지 않는다면 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 할 필요는 없습니다. 예를 들어 다음 쿼리 조건자가 필터 식과 같고 `FIBillOfMaterialsWithEndDate`가 쿼리 결과로 반환되지 않기 때문에 `EndDate`는 이 쿼리를 처리합니다. `FIBillOfMaterialsWithEndDate` 는 필터링된 인덱스 정의의 포괄 열 또는 키로 `EndDate` 가 필요하지 않습니다.  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -825,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>메모리 내 비클러스터형 인덱스 아키텍처
 
-메모리 내 비클러스터형 인덱스는 Bw-트리라고 하는 데이터 구조를 사용하여 구현되며, 2011에 Microsoft Research를 통해 처음으로 고안 및 설명되었습니다. Bw-트리는 잠금 및 래치 없는 B-트리의 변형입니다. 자세한 내용은 [Bw-트리: 새 하드웨어 플랫폼을 위한 B-트리](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)를 참조하세요. 
+메모리 내 비클러스터형 인덱스는 Bw-트리라고 하는 데이터 구조를 사용하여 구현되며, 2011에 Microsoft Research를 통해 처음으로 고안 및 설명되었습니다. Bw-트리는 잠금 및 래치 없는 B-트리의 변형입니다. 자세한 내용은 [Bw-트리: 새 하드웨어 플랫폼을 위한 B-트리](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)를 참조하세요. 
 
 상위 수준에서 살펴보자면, Bw-트리는 페이지 ID를 통해 구성되는 페이지 맵(PidMap)이자, 페이지 ID를 할당 및 재사용하기 위한 기능(PidAlloc)이자, 페이지 맵에서 연결된 그리고 서로 연결된 페이지 집합으로 이해할 수 있습니다. 이러한 세 가지 상위 수준의 하위 구성 요소가 Bw-트리의 기본 내부 구조를 구성합니다.
 
@@ -892,7 +891,7 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [인덱스 다시 구성 및 다시 작성](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [기본 키를 만들기](../relational-databases/tables/create-primary-keys.md)    
 [메모리 액세스에 최적화된 테이블의 인덱스](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -902,4 +901,4 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [계산 열의 인덱스](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [인덱스 및 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

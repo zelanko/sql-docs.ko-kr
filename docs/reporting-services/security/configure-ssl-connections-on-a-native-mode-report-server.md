@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020277"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813606"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 사용 중인 경우 자세한 내용은 SharePoint 설명서를 참조하십시오. 예를 들어 [SharePoint 2010 웹 응용 프로그램에서 SSL을 사용하는 방법(http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)입니다.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 사용 중인 경우 자세한 내용은 SharePoint 설명서를 참조하십시오. 예를 들어 [SharePoint 2010 웹 응용 프로그램에서 SSL을 사용하는 방법(https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)입니다.  
   
  인터넷 정보 서비스(IIS)도 HTTP SSL을 사용하므로 IIS와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 동일한 컴퓨터에서 실행하는 경우 중요한 상호 운용성 문제를 고려해야 합니다. IIS와의 상호 운용성 문제 섹션에서 이러한 문제를 처리하는 방법에 대한 지침을 확인하십시오.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020277"
   
  SSL 바인딩은 Microsoft Windows의 공유 리소스입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 또는 IIS 관리자와 같은 다른 도구에서 변경한 내용은 동일한 컴퓨터의 다른 응용 프로그램에 영향을 줄 수 있습니다. 바인딩을 만들 때 사용한 것과 동일한 도구를 사용하여 바인딩을 편집하는 것이 가장 좋습니다.  예를 들어 구성 관리자를 사용하여 SSL 바인딩을 만든 경우 구성 관리자를 사용하여 바인딩의 수명을 관리하고, IIS 관리자를 사용하여 바인딩을 만드는 경우 IIS 관리자를 사용하여 바인딩의 수명을 관리하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 전에 IIS가 이미 컴퓨터에 설치되어 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성하기 전에 IIS에서 SSL 구성을 검토하는 것이 가장 좋습니다.  
   
- Reporting Services 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 SSL 바인딩을 제거하는 경우 인터넷 정보 서비스(IIS)를 실행하는 서버 또는 다른 HTTP.SYS 서버의 웹 사이트에 대해 SSL이 더 이상 작동하지 않을 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 다음 레지스트리 키를 제거합니다. 이 레지스트리 키가 제거되면 IIS에 대한 SSL 바인딩도 제거됩니다. 이 바인딩이 없으면 HTTPS 프로토콜에 대해 SSL이 제공되지 않습니다. 이 문제를 진단하려면 IIS 관리자 또는 HTTPCFG.exe 명령줄 유틸리티를 사용합니다. 이 문제를 해결하려면 IIS 관리자를 사용하여 웹 사이트에 대한 SSL 바인딩을 복원합니다. 이 문제가 다시 발생하지 않도록 하려면 IIS 관리자를 사용하여 SSL 바인딩을 제거한 다음 IIS 관리자를 사용하여 원하는 웹 사이트에 대한 바인딩을 복원합니다. 자세한 내용은 기술 자료 문서 [SSL 바인딩을 제거한 후 SSL이 더 이상 작동하지 않습니다(http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n)를 참조하세요.  
+ Reporting Services 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 SSL 바인딩을 제거하는 경우 인터넷 정보 서비스(IIS)를 실행하는 서버 또는 다른 HTTP.SYS 서버의 웹 사이트에 대해 SSL이 더 이상 작동하지 않을 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 다음 레지스트리 키를 제거합니다. 이 레지스트리 키가 제거되면 IIS에 대한 SSL 바인딩도 제거됩니다. 이 바인딩이 없으면 HTTPS 프로토콜에 대해 SSL이 제공되지 않습니다. 이 문제를 진단하려면 IIS 관리자 또는 HTTPCFG.exe 명령줄 유틸리티를 사용합니다. 이 문제를 해결하려면 IIS 관리자를 사용하여 웹 사이트에 대한 SSL 바인딩을 복원합니다. 이 문제가 다시 발생하지 않도록 하려면 IIS 관리자를 사용하여 SSL 바인딩을 제거한 다음 IIS 관리자를 사용하여 원하는 웹 사이트에 대한 바인딩을 복원합니다. 자세한 내용은 기술 자료 문서 [SSL 바인딩을 제거한 후 SSL이 더 이상 작동하지 않습니다(https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   

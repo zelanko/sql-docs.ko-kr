@@ -14,12 +14,12 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664296"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638586"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -201,5 +201,5 @@ ms.locfileid: "47664296"
 ## <a name="standard-parse"></a>Standard Parse
 표준 구문 분석은 로캘 기반의 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 자동 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 표준 구문 분석은 API를 구문 분석하는 OLE DB와 동일합니다.  
   
- 표준 구문 분석은 국가별 데이터에 대한 데이터 형식 변환을 지원하며 데이터 형식이 빠른 구문 분석에서 지원되지 않는 경우에만 사용되어야 합니다. 자동 데이터 형식 변환 API에 대한 자세한 내용은 [MSDN Library(](http://go.microsoft.com/fwlink/?LinkId=79427))의 "데이터 형식 변환 API(Data Type Conversion APIs)"를 참조하십시오. 
+ 표준 구문 분석은 국가별 데이터에 대한 데이터 형식 변환을 지원하며 데이터 형식이 빠른 구문 분석에서 지원되지 않는 경우에만 사용되어야 합니다. 자동 데이터 형식 변환 API에 대한 자세한 내용은 [MSDN Library(](https://go.microsoft.com/fwlink/?LinkId=79427))의 "데이터 형식 변환 API(Data Type Conversion APIs)"를 참조하십시오. 
  

@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738011"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697891"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738011"
   
  원격 설치에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
   
- Windows 장애 조치 클러스터에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 설치에 대한 자세한 내용은 [SQL Server Analysis Services 클러스터링 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
+ Windows 장애 조치 클러스터에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 설치에 대한 자세한 내용은 [SQL Server Analysis Services 클러스터링 방법](https://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 항목을 검토하십시오.  
@@ -169,7 +169,7 @@ ms.locfileid: "47738011"
   
 17. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
   
-     모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 전체 텍스트 검색 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 비롯한 모든 클러스터 인식 서비스에 대해서는 시작 유형이 "수동"으로 설정되며 설치 과정에서 이를 변경할 수 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 서비스 계정을 개별적으로 구성하여 각 서비스에 대해 최소한의 권한만 제공할 것을 권장합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에서 태스크를 완료하는 데 필요한 최소한의 권한만 부여할 수 있습니다. 자세한 내용은 [서버 구성 - 서비스 계정](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+     모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 전체 텍스트 검색 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 비롯한 모든 클러스터 인식 서비스에 대해서는 시작 유형이 "수동"으로 설정되며 설치 과정에서 이를 변경할 수 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 서비스 계정을 개별적으로 구성하여 각 서비스에 대해 최소한의 권한만 제공할 것을 권장합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에서 태스크를 완료하는 데 필요한 최소한의 권한만 부여할 수 있습니다. 자세한 내용은 [서버 구성 - 서비스 계정](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
      이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 모든 서비스 계정에 대해 동일한 로그온 계정을 지정하려면 페이지 맨 아래에 있는 필드에 자격 증명을 입력합니다.  
   

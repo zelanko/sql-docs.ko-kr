@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851077"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696114"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
 
@@ -42,7 +42,7 @@ ms.locfileid: "47851077"
 -   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [여기](http://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
+ [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [여기](https://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
   
 ### <a name="role-and-role-services"></a>역할 및 역할 서비스  
  Windows Server 2012 또는 Windows Server 2012 R2의 MMC(Microsoft Management Console)에서 **서버 관리자**를 사용하여 **웹 서버(IIS)** 역할 및 다음 필수 역할 서비스를 설치할 수 있습니다.  

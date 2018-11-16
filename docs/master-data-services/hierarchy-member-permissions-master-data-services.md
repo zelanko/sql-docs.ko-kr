@@ -15,12 +15,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b23ab90b6c9e0a8b4296b95da6ff91ba962936d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702481"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "47631394"
 -   한 계층 노드에는 **만들기**/**읽기**/**업데이트**/**삭제** 권한의 조합이 할당되고 다른 노드에는 **거부** 권한이 할당된 경우에는 노드의 멤버에 대한 액세스가 거부됩니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](http://go.microsoft.com/fwlink/p/?LinkId=615376)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

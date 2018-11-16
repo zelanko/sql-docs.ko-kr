@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855231"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696842"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -33,7 +33,7 @@ ms.locfileid: "47855231"
   
  **다운로드**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
 -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855231"
   
     ```  
   
-     자세한 내용은 [URL 압축](http://www.iis.net/configreference/system.webserver/urlcompression)을 참조하세요.  
+     자세한 내용은 [URL 압축](https://www.iis.net/configreference/system.webserver/urlcompression)을 참조하세요.  
   
 -   다음 새 SQL Server 에이전트 작업은 인덱스 및 로그 유지 관리를 수행합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855231"
   
  조각화가 30%를 넘는 인덱스는 온라인으로 다시 작성됩니다. 다시 작성되는 동안 같은 테이블의 CRUD 작업 성능이 저하됩니다. 성능 저하가 걱정되는 경우 업무 시간 외에 저장 프로시저를 실행하는 것이 좋습니다. 인덱스 조각화에 대한 자세한 내용은 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하십시오.  
   
- 자세한 내용은 Master Data Services 블로그에서 [SQL Server 2016의 성능 및 배율 향상](http://go.microsoft.com/fwlink/p/?LinkId=615375)게시물을 참조하세요.  
+ 자세한 내용은 Master Data Services 블로그에서 [SQL Server 2016의 성능 및 배율 향상](https://go.microsoft.com/fwlink/p/?LinkId=615375)게시물을 참조하세요.  
   
 ##  <a name="improved-security"></a>보안 향상:  
   

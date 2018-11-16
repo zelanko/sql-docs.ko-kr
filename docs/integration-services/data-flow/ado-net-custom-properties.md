@@ -11,12 +11,12 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14f27c373ac4cb054fa666992465f137ff23e481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee5b1f92bd834a22401377c7e0f16e0c4812379e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637481"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639240"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -50,6 +50,6 @@ ms.locfileid: "47637481"
  자세한 내용은 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

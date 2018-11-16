@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828601"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641190"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "47828601"
 ## <a name="installation"></a>설치  
  이 섹션에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 CDC 구성 요소의 설치 절차에 대해 설명합니다.  
   
- SSIS용 CDC 구성 요소는 Microsoft SQL Server®용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity에 패키징됩니다. 이 다운로드는 SQL Server 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](http://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+ SSIS용 CDC 구성 요소는 Microsoft SQL Server®용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity에 패키징됩니다. 이 다운로드는 SQL Server 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
 ### <a name="version-support"></a>버전 지원
 
@@ -205,15 +205,15 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
   
 -   mattmasson.com의 블로그 항목 - [SQL Server 2012용 SSIS의 CDC](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)  
   
--   blogs.msdn.com의 CDC Service 설정 관련 블로그 항목, [SQL Server 2012의 Oracle용 CDC](http://go.microsoft.com/fwlink/?LinkId=247827)  
+-   blogs.msdn.com의 CDC Service 설정 관련 블로그 항목, [SQL Server 2012의 Oracle용 CDC](https://go.microsoft.com/fwlink/?LinkId=247827)  
   
--   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft SQL Server 2012 변경 데이터 캡처 설치](http://go.microsoft.com/fwlink/?LinkId=252958)  
+-   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft SQL Server 2012 변경 데이터 캡처 설치](https://go.microsoft.com/fwlink/?LinkId=252958)  
   
--   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft 변경 데이터 캡처의 구성 문제 해결](http://go.microsoft.com/fwlink/?LinkId=252960)  
+-   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft 변경 데이터 캡처의 구성 문제 해결](https://go.microsoft.com/fwlink/?LinkId=252960)  
   
--   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft 변경 데이터 캡처의 CDC 인스턴스 오류 문제 해결](http://go.microsoft.com/fwlink/?LinkId=252961)  
+-   social.technet.microsoft.com의 기술 문서, [Attunity Oracle용 Microsoft 변경 데이터 캡처의 CDC 인스턴스 오류 문제 해결](https://go.microsoft.com/fwlink/?LinkId=252961)  
   
--   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898)(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
+-   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
   
 ## <a name="see-also"></a>참고 항목  
  [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)  

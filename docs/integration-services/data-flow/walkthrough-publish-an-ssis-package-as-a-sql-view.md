@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717891"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641570"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout은 SSIS용 OLE DB 공급자가 SSIS 패키지에서 새 데이터가 도착할 때까지 대기할 수 있는 시간(초)입니다. 기본적으로 제한 시간은 60초입니다. 20에서 32000 사이의 정수를 시간 제한 값으로 지정할 수 있습니다.  
   
- Parameters는 패키지 매개 변수 값과 프로젝트 매개 변수 값을 모두 포함합니다. 매개 변수에 대한 규칙은 [DTExec](http://msdn.microsoft.com/library/hh231187.aspx)의 매개 변수와 동일합니다.  
+ Parameters는 패키지 매개 변수 값과 프로젝트 매개 변수 값을 모두 포함합니다. 매개 변수에 대한 규칙은 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)의 매개 변수와 동일합니다.  
   
  다음 목록은 쿼리 절에 허용되는 특수 문자를 지정합니다.  
   

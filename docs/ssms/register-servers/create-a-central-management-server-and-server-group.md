@@ -13,12 +13,12 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b41df0872ca52a73a21db5f151bbaa1a03cf5bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4755e76755a455ff5a4fca7a77a7c9188fd76f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696142"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47845901"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47845901"
   
 4.  **등록된 서버**에서 서버 이름과 설명(선택 사항)을 입력합니다.  
   
-5.  **연결 속성** 탭에서 네트워크 및 연결 속성을 검토하거나 수정합니다. 자세한 내용은 [서버에 연결&#40;연결 속성 페이지&#41; 데이터베이스 엔진](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)을 참조하세요.  
+5.  **연결 속성** 탭에서 네트워크 및 연결 속성을 검토하거나 수정합니다. 자세한 내용은 [서버에 연결&#40;연결 속성 페이지&#41; 데이터베이스 엔진](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)을 참조하세요.  
   
 6.  **테스트**를 클릭하여 연결을 테스트합니다.  
   

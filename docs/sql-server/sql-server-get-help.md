@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698231"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ SQL Server 엔지니어링 팀은 SQL Server [사용자 의견](https://feedback
 상용 사용자인 경우 Microsoft [연락처](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) 페이지를 검토해 주세요.
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>SQL Server에 대한 라이선스 정보를 검토하려면
-SQL Server의 라이선스 정보를 다운로드하여 검토하려는 경우 [Microsoft SQL Server 추가 소프트웨어 사용 조건](https://www.microsoft.com/en-us/download/details.aspx?id=39299)에서 확인할 수 있습니다. 
+SQL Server의 라이선스 정보를 다운로드하여 검토하려는 경우 [Microsoft SQL Server 추가 소프트웨어 사용 조건](https://www.microsoft.com/download/details.aspx?id=39299)에서 확인할 수 있습니다. 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>커뮤니티에 도움을 요청하려면 
 일반적인 SQL Server 커뮤니티에 참여하려는 경우 사용 가능한 여러 옵션이 있습니다.
@@ -80,9 +80,9 @@ SQL 팀에게 연결할 수 있는 여러 소셜 미디어가 있습니다.
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL 문서 콘텐츠에 대한 피드백을 제공하려면
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![콘텐츠 편집](../includes/media/edit-topic-pencil.png) 콘텐츠 편집
-문서에 잘못된 내용이 있나요? 콘텐츠를 직접 편집할 수 있다는 것을 알고 계시나요? 이렇게 하면 문서가 더 이상 개선되지 않지만 페이지에 공헌자로 기입됩니다. [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)에서 자세한 정보를 확인합니다. 
+문서에 잘못된 내용이 있나요? 콘텐츠를 직접 편집할 수 있다는 것을 알고 계시나요? 이렇게 하면 문서가 더 이상 개선되지 않지만 페이지에 공헌자로 기입됩니다. [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)에서 자세한 정보를 확인합니다. 
 
 ### <a name="surveys"></a>설문 조사
-SQL Docs 경험에 관한 의견을 공유하려는 경우 설문 조사를 진행해 주세요. 이 설문 조사는 [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey)에 있으며 약 10~15분이 소요됩니다. 
+SQL Docs 경험에 관한 의견을 공유하려는 경우 설문 조사를 진행해 주세요. 이 설문 조사는 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey)에 있으며 약 10~15분이 소요됩니다. 
 
-SQL 콘텐츠 팀과 공유할 아이디어, 제안, 피드백 등이 있는 경우 [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback)에서 수행할 수 있습니다. 
+SQL 콘텐츠 팀과 공유할 아이디어, 제안, 피드백 등이 있는 경우 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)에서 수행할 수 있습니다. 

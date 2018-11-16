@@ -1,7 +1,7 @@
 ---
 title: PREDICT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682321"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695461"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ MODEL = @model | model_literal
 
 ### <a name="arguments"></a>인수
 
-**모델**
+**model**
 
 `MODEL` 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 모델을 지정합니다. 모델은 변수 또는 리터럴 또는 스칼라 식으로 지정됩니다.
 
@@ -70,9 +70,6 @@ DATA 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되�
 PARAMETERS 매개 변수를 사용하여 점수 매기기 또는 예측에 사용되는 선택적 사용자 정의 매개 변수를 지정합니다.
 
 각 매개 변수의 이름은 모델 유형에 따라 다릅니다. 예를 들어 RevoScaleR의 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 함수는 물류 회귀 모델의 점수를 매길 때 나머지를 계산해야 하는지 여부를 나타내는 `@computeResiduals` 매개 변수를 지원합니다. 호환되는 모델을 호출하는 경우 `PREDICT` 함수에 해당 매개 변수 이름 및 TRUE 또는 FALSE를 전달할 수 있습니다.
-
-> [!NOTE]
-> SQL Server 2017의 시험판 버전에서는 이 옵션이 작동하지 않습니다.
 
 **WITH ( <result_set_definition> )**
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>R 모델을 만들고 선택적 모델 매개 변수를 사용하여 점수를 생성
-
-> [!NOTE]
-> 매개 변수 인수 사용은 릴리스 후보 1에서 지원되지 않습니다.
 
 이 예제에서는 이와 같은 RevoScaleR 호출을 사용하여 공변성 행렬(covariance matrix)에 맞는 물류 회귀 모델을 만들었다고 가정합니다.
 

@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673292"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617712"
  위에서 언급한 대로 경우에 따라서는 아티클을 삭제하면 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다. 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md) 및 [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] 서비스 팩 2** 이상 및 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 서비스 팩 1** 이상에서는 트랜잭션 복제에 참여하는 아티클에 대한 **DROP TABLE** DLL 명령을 사용한 테이블 삭제를 지원합니다. 게시에서 DROP TABLE DDL이 지원되면 DROP TABLE 작업은 게시 및 데이터베이스에서 테이블을 삭제합니다. 로그 판독기 에이전트는 삭제된 테이블의 배포 데이터베이스에 대해 정리 명령을 게시하고 게시자 메타데이터를 정리합니다. 로그 판독기가 삭제된 테이블을 참조하는 일부 로그 레코드를 처리하지 않은 경우에는 삭제된 테이블과 연결된 새 명령을 무시합니다. 이미 처리된 레코드는 배포 데이터베이스로 전달됩니다. 로그 판독기가 오래된(삭제된) 아티클을 정리하기 전에 배포 에이전트가 이 레코드를 처리할 경우 이 레코드는 구독자 데이터베이스에 적용될 수 있습니다. 모든 트랜잭션 복제 게시에 대한 **기본** 설정은 DROP TABLE DLL을 지원하지 않는 것입니다. [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)에서 이 향상된 기능을 자세히 설명합니다.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] 서비스 팩 2** 이상 및 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 서비스 팩 1** 이상에서는 트랜잭션 복제에 참여하는 아티클에 대한 **DROP TABLE** DLL 명령을 사용한 테이블 삭제를 지원합니다. 게시에서 DROP TABLE DDL이 지원되면 DROP TABLE 작업은 게시 및 데이터베이스에서 테이블을 삭제합니다. 로그 판독기 에이전트는 삭제된 테이블의 배포 데이터베이스에 대해 정리 명령을 게시하고 게시자 메타데이터를 정리합니다. 로그 판독기가 삭제된 테이블을 참조하는 일부 로그 레코드를 처리하지 않은 경우에는 삭제된 테이블과 연결된 새 명령을 무시합니다. 이미 처리된 레코드는 배포 데이터베이스로 전달됩니다. 로그 판독기가 오래된(삭제된) 아티클을 정리하기 전에 배포 에이전트가 이 레코드를 처리할 경우 이 레코드는 구독자 데이터베이스에 적용될 수 있습니다. 모든 트랜잭션 복제 게시에 대한 **기본** 설정은 DROP TABLE DLL을 지원하지 않는 것입니다. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)에서 이 향상된 기능을 자세히 설명합니다.
 
   
 ## <a name="see-also"></a>참고 항목  

@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664692"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677302"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47664692"
 각 로그 백업을 복원할 때 데이터베이스 엔진은 로그에 기록된 모든 수정 내용을 다시 적용하여 모든 트랜잭션을 롤포워드합니다. 마지막 로그 백업이 복원되면 데이터베이스 엔진은 로그 정보를 사용하여 해당 지점에서 완료되지 않은 모든 트랜잭션을 롤백합니다. 
 
 ### <a name="supporting-transactional-replication"></a>트랜잭션 복제 지원
-로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](http://msdn.microsoft.com/library/ms151706.aspx)을 참조하세요.
+로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 자세한 내용은 [트랜잭션 복제 작동 방법](https://msdn.microsoft.com/library/ms151706.aspx)을 참조하세요.
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>고가용성 및 재해 복구 솔루션 지원
 대기 서버 솔루션, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달은 트랜잭션 로그를 많이 사용합니다. 
@@ -157,7 +157,7 @@ ms.locfileid: "47664692"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 새 힙 다시 빌드(해당 사항이 있을 경우) `DROP INDEX` 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> Related tasks  
  **트랜잭션 로그 관리**  
   
 -   [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

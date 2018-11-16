@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021317"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813407"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021317"
 ###  <a name="bkmk_content_only_migration"></a> 콘텐츠 전용 마이그레이션  
  **Reporting Services 콘텐츠 전용 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠를 새 팜으로 복사하려는 경우 **rs.exe** 와 같은 도구를 사용하여 콘텐츠를 새 SharePoint 설치에 복사해야 합니다. 콘텐츠 전용 마이그레이션에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 이 스크립트는 기본 모드와 SharePoint 모드의 보고서 서버 사이에 콘텐츠 및 리소스를 마이그레이션할 수 있습니다. 자세한 내용은 [보고서 서버 간 콘텐츠 복사를 위한 샘플 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 및 [한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션하는 Reporting Services RS.exe 스크립트](http://azuresql.codeplex.com/releases/view/115207)를 참조하세요.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 이 스크립트는 기본 모드와 SharePoint 모드의 보고서 서버 사이에 콘텐츠 및 리소스를 마이그레이션할 수 있습니다. 자세한 내용은 [보고서 서버 간 콘텐츠 복사를 위한 샘플 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 및 [한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션하는 Reporting Services RS.exe 스크립트](https://azuresql.codeplex.com/releases/view/115207)를 참조하세요.  
   
--   **Reporting Services 마이그레이션 도구:** 대부분의 시나리오에서 마이그레이션 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560)(http://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
+-   **Reporting Services 마이그레이션 도구:** 대부분의 시나리오에서 마이그레이션 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](https://www.microsoft.com/download/details.aspx?id=29560)(https://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
   
 ###  <a name="bkmk_full_migration"></a> 전체 마이그레이션  
  **전체 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스와 함께 SharePoint 콘텐츠 데이터베이스를 새 팜으로 마이그레이션하는 경우 이 항목에 요약되어 있는 일련의 백업 및 복원 옵션을 따르면 됩니다. 백업 단계에서 사용한 도구와 다른 도구를 복원 단계에 사용해야 하는 경우도 있습니다. 예를 들어, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화 키를 백업할 수 있지만 암호화 키를 SQL Server 2016 Reporting Services SharePoint 모드 설치로 복원할 때는 SharePoint 중앙 관리 또는 PowerShell을 사용해야 합니다.  

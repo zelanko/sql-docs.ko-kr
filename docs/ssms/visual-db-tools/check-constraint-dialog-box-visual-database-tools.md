@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611761"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697627"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47611761"
 확장하면 **식** 속성 필드가 표시됩니다.  
   
 **식**  
-선택한 CHECK 제약 조건의 식을 표시합니다. 새 제약 조건을 만드는 경우 이 상자의 작업을 마치기 전에 식을 입력해야 합니다. 기존 CHECK 제약 조건을 편집할 수도 있습니다. 자세한 내용은 [제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)을 참조하세요.  
+선택한 CHECK 제약 조건의 식을 표시합니다. 새 제약 조건을 만드는 경우 이 상자의 작업을 마치기 전에 식을 입력해야 합니다. 기존 CHECK 제약 조건을 편집할 수도 있습니다. 자세한 내용은 [제약 조건 작업(Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)을 참조하세요.  
   
 **ID 범주**  
 확장하면 **이름** 및 **설명**에 대한 속성이 표시됩니다.  
@@ -65,6 +65,6 @@ CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트
 이 테이블에서 복제 에이전트가 삽입 또는 업데이트를 실행할 때 제약 조건을 적용할지 여부를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[제약 조건 작업(Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [인덱스 - 키 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

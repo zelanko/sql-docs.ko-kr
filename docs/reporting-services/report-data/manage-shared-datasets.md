@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030592"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814216"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "50030592"
  XML에서 공유 데이터 집합 정의를 보는 또 다른 방법은 보고서 관리자에서 URL 액세스 구문을 사용하는 것입니다. 예를 들어 각 데이터 집합 매개 변수에 대한 기본값을 보려면 다음 URL 액세스 명령을 사용하여 보고서 서버에서 DataSet1이라는 공유 데이터 집합 정의를 표시할 수 있습니다.  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>공유 데이터 집합 정의에 대한 액세스 제어  
@@ -90,10 +90,10 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |공유 데이터 집합 항목 속성 변경|보고서 관리자|[일반 속성 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |보고서의 공유 데이터 집합 인스턴스에 대한 추가 공유 데이터 집합 속성 지정|보고서 작성기 보고서 디자이너|[데이터 집합 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |공유 데이터 집합의 다른 공유 데이터 원본에 바인딩|보고서 관리자|[데이터 원본 선택 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|데이터 집합 매개 변수의 기본값 확인|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|데이터 집합 매개 변수의 기본값 확인|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |캐싱 설정|보고서 관리자|[공유 데이터 집합 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |캐시 새로 고침 계획 만들기 또는 편집|보고서 관리자|[캐시 새로 고침 옵션&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|공유 데이터 집합 정의 스키마 보기|보고서 관리자|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|공유 데이터 집합 정의 스키마 보기|보고서 관리자|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 통합 모드에서 보고서 서버와 SharePoint 사이트 간의 공유 데이터 집합 정의 동기화|SharePoint 응용 프로그램 페이지|공유 데이터 집합 항목 속성 변경<br /><br /> 캐시 옵션 변경<br /><br /> 공유 데이터 원본 변경|  
   
 ## <a name="comparing-shared-datasets-with-other-report-server-items"></a>공유 데이터 집합과 다른 보고서 서버 항목 비교  

@@ -16,12 +16,12 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 834ffc7227301ba01d6c669940661bead6d1ab58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aee07af3a8c8026448cc6804df1bc979e78c538
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785864"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638430"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 복사
   이 항목에서는 기존 패키지를 복사하여 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법과 새 패키지의 **Name** 및 **GUID** 속성을 업데이트하는 방법에 대해 설명합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "47785864"
 11. **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 새 패키지를 저장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [패키지의 복사본 저장](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [패키지의 복사본 저장](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services&#40;SSIS&#41; 패키지](../integration-services/integration-services-ssis-packages.md)  
   

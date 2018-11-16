@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 394330d19904e61eb4a339468cd882f09240ff65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673022"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -201,20 +201,20 @@ WHERE col1 = 'dn';
   
 | 연산 | 메모리 액세스에 최적화됨, <br/> 해시 | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 색인 검색은 모든 테이블 행을 검색합니다. | 사용자 계정 컨트롤 | 예 | 사용자 계정 컨트롤 |  
-| 같음 조건자(=)에서 인덱스 검색 | 사용자 계정 컨트롤 <br/> (전체 키는 필수) | 사용자 계정 컨트롤  | 사용자 계정 컨트롤 |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니오 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 사용자 계정 컨트롤 |  
-| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 예 | 사용자 계정 컨트롤 |  
-| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 아니오 | 사용자 계정 컨트롤 |  
+| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
+| 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니오 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 예 |  
+| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 예 | 예 |  
+| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 아니오 | 예 |  
 
 <sup>1</sup> 메모리 최적화 비클러스터형 인덱스의 경우 인덱스 검색을 수행하는 데 전체 키가 필요하지 않습니다.  
 
 ## <a name="automatic-index-and-statistics-management"></a>자동 인덱스 및 통계 관리
 
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
 
 ## <a name="Additional_Reading"></a> 참고 항목   
  [SQL Server 인덱스 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)   
  [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [메모리 최적화 테이블의 비클러스터형 인덱스](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  

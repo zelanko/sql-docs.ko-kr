@@ -14,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d156013805b9ab681af0b4a076932365cd51005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8799fe2cd73aea2fc2ae1a799e6bda634b8e6763
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700401"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,27 +34,27 @@ ms.locfileid: "47729131"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링 개념에 대해 설명하고 연관된 콘텐츠 및 태스크에 대한 링크를 제공합니다.|[Always On 장애 조치(failover) 클러스터 인스턴스&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 정책 개념에 대해 설명하고 조직 요구 사항에 맞는 장애 조치(Failover) 정책 구성과 관련된 링크를 제공합니다.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 유지 관리하는 방법에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|WSFC(Windows Server Failover Cluster)에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 설치하는 방법에 대해 설명합니다.|[SSAS(SQL Server Analysis Services) 클러스터링 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|WSFC(Windows Server Failover Cluster)에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 설치하는 방법에 대해 설명합니다.|[SSAS(SQL Server Analysis Services) 클러스터링 방법](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
 ##  <a name="BestPractices"></a> 최선의 구현 방법  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](http://go.microsoft.com/fwlink/?LinkId=296445)검토  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)검토  
   
 -   필수 구성 요소 소프트웨어를 설치합니다. 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하거나 업그레이드하기 전에 다음과 같은 필수 구성 요소를 설치하여 설치 시간을 절약합니다. 각 장애 조치(Failover) 클러스터 노드에 필수 구성 요소 소프트웨어를 설치하고 노드를 한 번 다시 시작한 후 설치 프로그램을 실행해야 합니다.  
   
-    -   Windows PowerShell은 더 이상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 설치되지 않습니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 요소 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 설치하려면 Windows PowerShell이 필요합니다. Windows PowerShell이 컴퓨터에 설치되어 있지 않은 경우 [Windows 관리 프레임워크](http://go.microsoft.com/fwlink/?LinkId=186214) 페이지에 나오는 지침에 따라 PowerShell을 사용하도록 설정할 수 있습니다.  
+    -   Windows PowerShell은 더 이상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 설치되지 않습니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 요소 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 설치하려면 Windows PowerShell이 필요합니다. Windows PowerShell이 컴퓨터에 설치되어 있지 않은 경우 [Windows 관리 프레임워크](https://go.microsoft.com/fwlink/?LinkId=186214) 페이지에 나오는 지침에 따라 PowerShell을 사용하도록 설정할 수 있습니다.  
   
-    -   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 이전 버전의 Windows 운영 체제에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][릴리스 정보](http://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
+    -   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 이전 버전의 Windows 운영 체제에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작이 발생하지 않도록 하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치에 대한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 항목이 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 업데이트 패키지:** 설치 중 .NET Framework 4 설치로 인한 컴퓨터 다시 시작이 발생하지 않도록 하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치에 대한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 항목이 컴퓨터에 설치되어 있어야 합니다.  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 를 Windows 7 SP1 또는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2에 설치하는 경우 이 업데이트가 포함됩니다. 이전 버전의 Windows 운영 체제에 설치하는 경우 [Windows Vista 및 Windows Server 2008의 .NET Framework 4.0용 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)에서 다운로드하십시오.  
   
     -   .NET Framework 4: 설치 프로그램에서는 클러스터링된 운영 체제에 .NET Framework 4를 설치합니다. 설치 시간을 단축하려면 설치 프로그램을 실행하기 전에 .NET Framework 4를 설치하는 것이 좋습니다.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 지원 파일. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 미디어에 있는 SqlSupport.msi를 실행하여 이러한 파일을 설치할 수 있습니다.  
   
--   바이러스 백신 소프트웨어가 WSFC 클러스터에 설치되지 않았는지 확인합니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 기술 자료 문서 [클러스터 서비스에서 백신 소프트웨어를 사용하면 문제가 발생할 수 있다(Antivirus software may cause problems with cluster services)](http://go.microsoft.com/fwlink/?LinkId=116986)를 참조하십시오.  
+-   바이러스 백신 소프트웨어가 WSFC 클러스터에 설치되지 않았는지 확인합니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 기술 자료 문서 [클러스터 서비스에서 백신 소프트웨어를 사용하면 문제가 발생할 수 있다(Antivirus software may cause problems with cluster services)](https://go.microsoft.com/fwlink/?LinkId=116986)를 참조하십시오.  
   
 -   장애 조치(Failover) 클러스터 설치를 위한 클러스터 그룹의 이름을 지정할 경우 다음과 같은 문자를 클러스터 그룹 이름에 사용하면 안 됩니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47729131"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터 그룹과 장애 조치(Failover) 클러스터에 포함될 디스크 간의 종속성을 자동으로 설정합니다. 설치 전에 디스크에 종속성을 설정하지 마십시오.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 동안 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크 리소스 이름에 대한 컴퓨터 개체(Active Directory 컴퓨터 계정)가 생성됩니다. [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 클러스터에서 클러스터 이름 계정(클러스터 자체의 컴퓨터 계정)에 컴퓨터 개체를 생성할 수 있는 권한이 있어야 합니다. 자세한 내용은 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx)을 참조하십시오.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 동안 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크 리소스 이름에 대한 컴퓨터 개체(Active Directory 컴퓨터 계정)가 생성됩니다. [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 클러스터에서 클러스터 이름 계정(클러스터 자체의 컴퓨터 계정)에 컴퓨터 개체를 생성할 수 있는 권한이 있어야 합니다. 자세한 내용은 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx)을 참조하십시오.  
   
     -   저장소 옵션으로 SMB 파일 공유를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47729131"
   
 -   클러스터 솔루션에 지리적으로 분산된 클러스터 노드가 포함된 경우 네트워크 대기 시간 및 공유 디스크 지원과 같은 추가 항목을 확인해야 합니다.  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에 대한 하드웨어 유효성 검사](http://go.microsoft.com/fwlink/?LinkId=196817) 및 [Windows 장애 조치(Failover) 클러스터에 대한 지원 정책](http://go.microsoft.com/fwlink/?LinkId=196818)을 참조하십시오.  
+    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에 대한 하드웨어 유효성 검사](https://go.microsoft.com/fwlink/?LinkId=196817) 및 [Windows 장애 조치(Failover) 클러스터에 대한 지원 정책](https://go.microsoft.com/fwlink/?LinkId=196818)을 참조하십시오.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 디스크가 압축되거나 암호화되지 않았는지 확인합니다. 압축된 드라이브 또는 암호화된 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려고 시도하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 실패합니다.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "47729131"
   
     -   추가 드라이브를 마운트한 후에는 드라이브를 포맷할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다. 자세한 내용은 [데이터 파일 저장소 유형](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 및 [데이터베이스 엔진 구성 - 데이터 디렉터리](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다. 자세한 내용은 [데이터 파일 저장소 유형](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 및 [데이터베이스 엔진 구성 - 데이터 디렉터리](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)를 참조하세요.  
   
--   iSCSI 기술 구성 요소에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 배포하는 경우 각별히 주의해야 합니다. 자세한 내용은 [iSCSI 기술 구성 요소의 SQL Server에 대한 지원](http://go.microsoft.com/fwlink/?LinkId=116960)을 참조하십시오.  
+-   iSCSI 기술 구성 요소에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 배포하는 경우 각별히 주의해야 합니다. 자세한 내용은 [iSCSI 기술 구성 요소의 SQL Server에 대한 지원](https://go.microsoft.com/fwlink/?LinkId=116960)을 참조하십시오.  
   
--   자세한 내용은 [Microsoft 클러스터링에 대한 SQL Server 지원 정책](http://go.microsoft.com/fwlink/?LinkId=116958)을 참조하십시오.  
+-   자세한 내용은 [Microsoft 클러스터링에 대한 SQL Server 지원 정책](https://go.microsoft.com/fwlink/?LinkId=116958)을 참조하십시오.  
   
--   적절한 쿼럼 드라이브 구성에 대한 자세한 내용은 [쿼럼 드라이브 구성 정보](http://go.microsoft.com/fwlink/?LinkId=196816)를 참조하십시오.  
+-   적절한 쿼럼 드라이브 구성에 대한 자세한 내용은 [쿼럼 드라이브 구성 정보](https://go.microsoft.com/fwlink/?LinkId=196816)를 참조하십시오.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원본 설치 파일과 클러스터가 서로 다른 도메인에 있을 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 사용할 수 있는 현재 도메인으로 설치 파일을 복사합니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "47729131"
   
 -   [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)의 내용을 검토합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 Kerberos 인증을 설정하려면 [기술 자료의](http://support.microsoft.com/kb/319723) SQL Server에서 Kerberos 인증을 사용하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 을 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 Kerberos 인증을 설정하려면 [기술 자료의](https://support.microsoft.com/kb/319723) SQL Server에서 Kerberos 인증을 사용하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 을 참조하십시오.  
   
 ##  <a name="Network"></a> 네트워크, 포트 및 방화벽 고려 사항 검토  
   
@@ -183,12 +183,12 @@ ms.locfileid: "47729131"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|사용자 계정 컨트롤|사용자 계정 컨트롤|예**|예**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|예**|예**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|예|예|예**|예**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|예|예|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|예|예|예**|예**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|예|예|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|예|예|예|예|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|예|예|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47729131"
      같은 서브넷에 대해 구성된 IP 주소를 두 개 이상 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 시작하는 동안 클라이언트 연결 오류가 발생할 수 있습니다.  
   
 #### <a name="related-content"></a>관련 내용  
- [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 다중 사이트 장애 조치(failover)에 대한 자세한 내용은 [Windows Server 2008 R2 장애 조치(failover) 클러스터링 사이트](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 및 [다중 사이트 장애 조치(failover) 클러스터에서 클러스터형 서비스 또는 응용 프로그램 디자인](http://go.microsoft.com/fwlink/?LinkId=177873)을 참조하세요.  
+ [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 다중 사이트 장애 조치(failover)에 대한 자세한 내용은 [Windows Server 2008 R2 장애 조치(failover) 클러스터링 사이트](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) 및 [다중 사이트 장애 조치(failover) 클러스터에서 클러스터형 서비스 또는 응용 프로그램 디자인](https://go.microsoft.com/fwlink/?LinkId=177873)을 참조하세요.  
   
 ##  <a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터 구성  
   
@@ -228,7 +228,7 @@ ms.locfileid: "47729131"
   
 -   WSFC는 IsAlive 검사를 사용하여 장애 조치(Failover) 클러스터형 인스턴스가 실행 중인지 확인할 수 있어야 합니다. 이 작업을 수행하려면 트러스트된 연결을 사용하여 서버에 연결해야 합니다. 기본적으로 클러스터 서비스를 실행하는 계정은 클러스터의 노드에서 관리자로 구성되지 않으며 BUILTIN\Administrators 그룹은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 권한을 갖지 않습니다. 이러한 설정은 클러스터 노드에 대한 권한을 변경할 경우에만 변경됩니다.  
   
--   DNS(도메인 이름 서비스) 또는 WINS(Windows 인터넷 이름 서비스)를 구성합니다. DNS 서버 또는 WINS 서버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터가 설치될 환경에서 실행되어야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 인터페이스 가상 참조의 동적 도메인 이름 서비스 등록이 필요합니다. DNS 서버 구성에서는 클러스터 노드가 네트워크 이름에 매핑된 온라인 IP 주소를 동적으로 등록할 수 있어야 합니다. 동적 등록을 완료할 수 없는 경우 설치 프로그램이 실패하고 설치가 롤백됩니다. 자세한 내용은 [기술 자료 문서](http://support.microsoft.com/kb/947048)를 참조하십시오.  
+-   DNS(도메인 이름 서비스) 또는 WINS(Windows 인터넷 이름 서비스)를 구성합니다. DNS 서버 또는 WINS 서버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터가 설치될 환경에서 실행되어야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 인터페이스 가상 참조의 동적 도메인 이름 서비스 등록이 필요합니다. DNS 서버 구성에서는 클러스터 노드가 네트워크 이름에 매핑된 온라인 IP 주소를 동적으로 등록할 수 있어야 합니다. 동적 등록을 완료할 수 없는 경우 설치 프로그램이 실패하고 설치가 롤백됩니다. 자세한 내용은 [기술 자료 문서](https://support.microsoft.com/kb/947048)를 참조하십시오.  
   
 ##  <a name="MSDTC"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator) 설치  
  장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하기 전에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] MSDTC(Distributed Transaction Coordinator) 클러스터 리소스를 만들어야 하는지 여부를 결정해야 합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]만 설치하는 경우 MSDTC 클러스터 리소스는 필요하지 않습니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 과 SSIS 또는 워크스테이션 구성 요소를 설치하는 경우 또는 분산 트랜잭션을 사용하려는 경우에는 MSDTC를 설치해야 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]전용 인스턴스에는 MSDTC가 필요하지 않습니다.  

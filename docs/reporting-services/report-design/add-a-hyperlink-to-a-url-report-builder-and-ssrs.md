@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737741"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814146"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  의 페이지를 매긴 보고서에서 입력란, 이미지, 차트 및 계기에 하이퍼링크 동작을 추가하는 방법을 알아봅니다. 링크를 통해 다른 보고서, 보고서의 책갈피 또는 정적 또는 동적 URL로 이동할 수 있습니다. 
@@ -73,9 +73,9 @@ ms.locfileid: "47737741"
   
 4.  **URL 선택**에서 URL이나 URL로 계산되는 식을 입력 또는 선택하거나, 드롭다운 화살표를 클릭하고 URL이 들어 있는 필드 이름을 클릭합니다. 
 
-    기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. `http://<servername>/images/image1.jpg`)을 입력합니다. 
+    기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. `https://<servername>/images/image1.jpg`)을 입력합니다. 
     
-    SharePoint 통합 모드로 구성된 보고서 서버에 게시된 항목의 경우 정규화된 URL을 사용합니다. `http://<SharePointservername>/<site>/Documents/images/image1.jpg`)을 입력합니다.
+    SharePoint 통합 모드로 구성된 보고서 서버에 게시된 항목의 경우 정규화된 URL을 사용합니다. `https://<SharePointservername>/<site>/Documents/images/image1.jpg`)을 입력합니다.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

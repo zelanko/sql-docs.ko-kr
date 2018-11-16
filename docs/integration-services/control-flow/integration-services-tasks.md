@@ -27,12 +27,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccf893e78afdd01a001a513bd266f60c3b8b607c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7675748ba110d19147750133bf3252ba3c29e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788551"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640940"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
   태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "47788551"
   
  프로그래밍 방식으로 패키지에 태스크를 추가하는 방법에 대한 자세한 내용은 [프로그래밍 방식으로 태스크 추가](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)를 참조하세요.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 각 태스크의 사용자 지정 대화 상자나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 포함된 속성 창을 사용하여 각 태스크를 개별적으로 구성할 수 있습니다. 패키지는 동일한 유형의 태스크를 여러 개 포함할 수 있으며(예: 6개의 SQL 실행 태스크) 각 태스크가 서로 다르게 구성될 수 있습니다. 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 각 태스크의 사용자 지정 대화 상자나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 포함된 속성 창을 사용하여 각 태스크를 개별적으로 구성할 수 있습니다. 패키지는 동일한 유형의 태스크를 여러 개 포함할 수 있으며(예: 6개의 SQL 실행 태스크) 각 태스크가 서로 다르게 구성될 수 있습니다. 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
 ## <a name="tasks-connections-and-groups"></a>태스크 연결 및 그룹  
  태스크에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  

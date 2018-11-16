@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08d0b31d5ed0be4b3d9a5e766483f14e0653343e
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757968"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665428"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -31,16 +31,16 @@ ms.locfileid: "50757968"
 ||||||
 |-|-|-|-|-|   
 |**기능**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL 데이터 웨어하우스**|**병렬 데이터 웨어하우스**| 
-|다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|
-|Hadoop에서 데이터 가져오기|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|
-|Hadoop으로 데이터 내보내기  |사용자 계정 컨트롤|아니오|아니오| 사용자 계정 컨트롤|
+|다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|예|아니오|아니오|예|
+|Hadoop에서 데이터 가져오기|예|아니오|아니오|예|
+|Hadoop으로 데이터 내보내기  |예|아니오|아니오| 예|
 |Azure HDInsight 쿼리, Azure HDInsight에서 가져오기, Azure HDInsight로 내보내기 |아니오|아니오|아니오|아니오
-|Hadoop으로 쿼리 계산 푸시다운|사용자 계정 컨트롤|아니오|아니오|사용자 계정 컨트롤|  
-|Azure Blob 저장소에서 데이터 가져오기|사용자 계정 컨트롤|아니오|예|사용자 계정 컨트롤| 
-|Azure Blob 저장소로 데이터 내보내기|사용자 계정 컨트롤|아니오|예|사용자 계정 컨트롤|  
-|Azure Data Lake Store에서 데이터 가져오기|아니오|아니오|사용자 계정 컨트롤|아니오|    
-|Azure Data Lake Store에서 데이터 내보내기|아니오|아니오|사용자 계정 컨트롤|아니오|
-|Microsoft BI 도구에서 PolyBase 쿼리 실행|사용자 계정 컨트롤|아니오|예|사용자 계정 컨트롤|   
+|Hadoop으로 쿼리 계산 푸시다운|예|아니오|아니오|예|  
+|Azure Blob 저장소에서 데이터 가져오기|예|아니오|예|예| 
+|Azure Blob 저장소로 데이터 내보내기|예|아니오|예|예|  
+|Azure Data Lake Store에서 데이터 가져오기|아니오|아니오|예|아니오|    
+|Azure Data Lake Store에서 데이터 내보내기|아니오|아니오|예|아니오|
+|Microsoft BI 도구에서 PolyBase 쿼리 실행|예|아니오|예|예|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 연산자가 지원하는 푸시 다운 계산
 
@@ -49,8 +49,8 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 Hadoop 클러스터로 푸시
 ||||
 |-|-|-| 
 |**연산자 유형**|**Hadoop으로 푸시 가능**|**Blob 저장소로 푸시 가능**|
-|열 프로젝션|사용자 계정 컨트롤|아니오|
-|조건자|사용자 계정 컨트롤|아니오|
+|열 프로젝션|예|아니오|
+|조건자|예|아니오|
 |집계|부분|아니오|
 |외부 테이블 간 조인|아니오|아니오|
 |외부 테이블과 로컬 테이블 간 조인|아니오|아니오|
@@ -73,7 +73,7 @@ PolyBase에는 다음과 같은 제한 사항이 있습니다.
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
 
-- [PolyBase는 SQL Server 2016 장애 조치(failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
+- [PolyBase는 SQL Server 2016 장애 조치(failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
 

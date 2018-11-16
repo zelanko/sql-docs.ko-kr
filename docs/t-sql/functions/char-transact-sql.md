@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701941"
 ---
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 0에서 255 사이의 정수입니다. `CHAR`은 이 범위를 벗어나는 정수 식에 대해 또는 정수 식이 더블바이트 문자의 첫 번째 바이트인 경우에만 `NULL` 값을 반환합니다.
 
 > [!NOTE]
-> [Shift 일본어 산업 표준](http://www.wikipedia.org/wiki/Shift_JIS)처럼 일부 비유럽 문자 집합에는 싱글바이트 코딩 체계로 나타낼 수 있지만, 멀티바이트 인코딩이 필요한 문자가 포함됩니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요. 
+> [Shift 일본어 산업 표준](https://www.wikipedia.org/wiki/Shift_JIS)처럼 일부 비유럽 문자 집합에는 싱글바이트 코딩 체계로 나타낼 수 있지만, 멀티바이트 인코딩이 필요한 문자가 포함됩니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요. 
   
 ## <a name="return-types"></a>반환 형식
 **char(1)**

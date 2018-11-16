@@ -10,12 +10,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 2e994b13fdd3ebf159d51bf38b52c9ad5b5e082d
-ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
+ms.openlocfilehash: bc5ac40cd1131db2dd83a121177c1288fb01d1c4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44499309"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699619"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:http://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.net
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
 
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/ -->
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/ -->
 
 [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 

@@ -15,18 +15,18 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832091"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660562"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전에 
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 
 
 ###  <a name="Security"></a> 보안 
 자세한 내용은 [안전한 배포&#40;복제&#41;](../../relational-databases/replication/security/secure-deployment-replication.md)를 참조하세요.
@@ -52,7 +52,7 @@ ms.locfileid: "47832091"
 
   - 필요에 따라 배포자를 사용할 수 있도록 다른 게시자를 설정합니다. 배포자를 사용할 수 있도록 다른 게시자를 설정한 경우 **배포자 암호** 페이지에서 이러한 게시자에서 배포자로 연결할 때 사용될 암호를 입력해야 합니다.
 
-  - 필요에 따라 구성 설정을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)를 참조하세요.
+  - 필요에 따라 구성 설정을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)을 참조하세요.
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용 
 복제 저장 프로시저를 사용하여 복제 게시 및 배포를 프로그래밍 방식으로 구성할 수 있습니다.
@@ -96,7 +96,7 @@ ms.locfileid: "47832091"
 
 1. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 서버 연결을 만듭니다.
 
-2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.
+2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.
 
 3. <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "47832091"
 
 1. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 원격 배포자 서버에 대한 연결을 만듭니다.
 
-2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.
+2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.
 
 3. <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.
 
@@ -132,7 +132,7 @@ ms.locfileid: "47832091"
 
 5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 원격 배포자에 연결할 때 게시자에서 사용되는 보안 암호 및 3단계에서 만든 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 지정합니다. 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.
 
-   > `IMPORTANT!!` 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.
+   > `IMPORTANT!!` 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.
 
 6. <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다.
 
@@ -157,7 +157,7 @@ ms.locfileid: "47832091"
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출합니다. 5단계에서 지정된 원격 배포자 이름 및 원격 배포자 암호를 전달합니다.
 
 >[!IMPORTANT]
-가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](http://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.
+가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.
 
 ###  <a name="PShellExample"></a> 예(RMO) 
 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 게시 및 배포를 구성할 수 있습니다.

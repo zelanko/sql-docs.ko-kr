@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f06d186ba77c1b65c6ef683a069e718b42c1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656391"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602963"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "47656391"
   
 -   **복제본을 추가하려면:**  [Azure 복제본 추가 마법사(SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
--   온-프레미스 서브넷에 Windows Azure를 사용하는 사이트 간 VPN을 갖춘 하이브리드 IT 환경이 있어야 합니다. 자세한 내용은 [관리 포털에서 사이트 간 VPN 구성](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create)을 참조하세요.  
+-   온-프레미스 서브넷에 Windows Azure를 사용하는 사이트 간 VPN을 갖춘 하이브리드 IT 환경이 있어야 합니다. 자세한 내용은 [관리 포털에서 사이트 간 VPN 구성](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)을 참조하세요.  
   
 -   가용성 그룹은 온-프레미스 가용성 복제본을 포함해야 합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47656391"
   
 1.  먼저 Windows Azure 구독을 위한 관리 인증서를 다운로드합니다. **다운로드** 를 클릭하여 로그인 페이지를 엽니다.  
   
-2.  Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 "mailto:patc@contoso.com" patc@contoso.com 하이퍼링크와 같은 이메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](http://technet.microsoft.com/jj592903) 및 [조직 계정을 사용하는 로그인의 문제 해결](https://support.microsoft.com/kb/2756852)을 참조하세요.  
+2.  Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 "mailto:patc@contoso.com" patc@contoso.com 하이퍼링크와 같은 이메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](https://technet.microsoft.com/jj592903) 및 [조직 계정을 사용하는 로그인의 문제 해결](https://support.microsoft.com/kb/2756852)을 참조하세요.  
   
 3.  다음에는 **연결**을 클릭하여 구독에 연결합니다. 연결되면 드롭다운 목록에 **가상 네트워크** 및 **가상 네트워크 서브넷**과 같은 Microsoft Azure 매개 변수가 채워집니다.  
   

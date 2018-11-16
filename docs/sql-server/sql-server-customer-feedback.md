@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419128"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701995"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견
 설치 후에 SQL Server 구성 요소 및 인스턴스에 대한 사용 데이터 수집 설정을 오류 및 사용 보고 응용 프로그램을 통해 변경할 수 있습니다. 이 응용 프로그램은 SQL Server 설치의 일부로 사용할 수 있습니다. 이 도구를 사용하면 SQL Server 인스턴스에서 자체 사용 데이터 설정을 구성할 수 있습니다.
 
 > [!NOTE]
-> SQL Server의 구성 도구에서 오류 및 사용 보고 응용 프로그램이 나열됩니다. SQL Server 2017의 경우와 같은 방식으로 이 도구를 사용하여 오류 보고 및 사용 의견 수집에 대한 기본 설정을 관리할 수 있습니다. 오류 보고는 사용 의견 수집과는 별개이므로 사용 의견 수집과는 별도로 켜거나 끌 수 있습니다. 오류 보고는 Microsoft로 전송되며 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)에 설명된 중요한 정보를 포함할 수 있는 크래시 덤프를 수집합니다.
+> SQL Server의 구성 도구에서 오류 및 사용 보고 응용 프로그램이 나열됩니다. SQL Server 2017의 경우와 같은 방식으로 이 도구를 사용하여 오류 보고 및 사용 의견 수집에 대한 기본 설정을 관리할 수 있습니다. 오류 보고는 사용 의견 수집과는 별개이므로 사용 의견 수집과는 별도로 켜거나 끌 수 있습니다. 오류 보고는 Microsoft로 전송되며 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)에 설명된 중요한 정보를 포함할 수 있는 크래시 덤프를 수집합니다.
 
 SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하거나 누르고 검색 상자에서 "오류"를 검색합니다. SQL Server 오류 및 사용 보고 항목이 표시 됩니다. 이 도구를 시작한 후 해당 컴퓨터에 설치된 인스턴스 및 구성 요소에 대해 수집된 사용 의견 및 심각한 오류를 관리할 수 있습니다.
 
@@ -153,7 +153,7 @@ SSMS는 자체 크래시 덤프를 수집하지 않습니다. SSMS와 관련된 
  
 - Windows Server 2016 및 Windows 10
 
-    [조직에서 Windows 원격 분석 구성](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [조직에서 Windows 원격 분석 구성](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 및 Windows 7
 
     [WER 설정](/windows/desktop/wer/wer-settings)

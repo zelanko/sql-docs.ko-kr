@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031898"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814306"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "50031898"
  보고서 서버 항목에는 페이지 매김 처리한 보고서와 모바일 보고서, KPI, 공유 데이터 원본, 공유 데이터 집합뿐 아니라 보고서 서버에 게시하거나 업로드하거나 저장할 수 있는 기타 항목도 포함됩니다. 항목은 기본 보고서 서버에 보고서 서버 계층형 폴더 구조로 구성되거나 SharePoint 사이트의 SharePoint 콘텐츠 라이브러리에 구성됩니다, 자세한 내용은 [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)를 참조하세요.  
   
 ### <a name="folders"></a>폴더
- 기본 보고서 서버의 폴더는 보고서 서버에 저장된 모든 주소 지정 가능 항목의 계층형 탐색 구조와 경로를 제공합니다. 폴더 계층과 사이트 및 폴더 사용 권한을 사용하여 보고서 서버 항목에 대한 액세스를 제어하며, 이를 *항목 수준 보안*이라고 합니다. 기본적으로 특정 폴더에 대해 정의한 역할 할당은 폴더 계층 내의 자식 폴더에 상속됩니다. 특정 역할을 폴더에 할당하는 경우 상속 규칙이 더 이상 적용되지 않습니다. 폴더 구조는 **홈**이라는 루트 노드와 선택적인 **내 보고서** 기능을 지원하는 예약된 폴더로 구성됩니다. 브라우저에서 루트 노드는 보고서 서버 가상 디렉터리 주소의 이름입니다(예: `http://myreportserver/reports`). 자세한 내용은 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)을(를) 참조하세요.  
+ 기본 보고서 서버의 폴더는 보고서 서버에 저장된 모든 주소 지정 가능 항목의 계층형 탐색 구조와 경로를 제공합니다. 폴더 계층과 사이트 및 폴더 사용 권한을 사용하여 보고서 서버 항목에 대한 액세스를 제어하며, 이를 *항목 수준 보안*이라고 합니다. 기본적으로 특정 폴더에 대해 정의한 역할 할당은 폴더 계층 내의 자식 폴더에 상속됩니다. 특정 역할을 폴더에 할당하는 경우 상속 규칙이 더 이상 적용되지 않습니다. 폴더 구조는 **홈**이라는 루트 노드와 선택적인 **내 보고서** 기능을 지원하는 예약된 폴더로 구성됩니다. 브라우저에서 루트 노드는 보고서 서버 가상 디렉터리 주소의 이름입니다(예: `https://myreportserver/reports`). 자세한 내용은 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)을(를) 참조하세요.  
   
  SharePoint 사이트에서 문서 라이브러리 및 콘텐츠 라이브러리의 SharePoint 폴더를 사용하여 항목을 구성할 수 있습니다.  
   

@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28b06c57666f07430a87d8577b7534cf47cf35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630351"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638909"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47630351"
   
 -   SQL Server CDC 메커니즘에 의해 생성되고 Oracle 이외의 일반 SQL Server CDC에서 사용되는 것과 동일한 변경 테이블 및 변경 액세스 기능 집합  
   
- 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](http://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
   
 ## <a name="creating-the-cdc-database"></a>CDC 데이터베이스 만들기  
  대부분의 경우 CDC 데이터베이스는 CDC Designer 콘솔을 사용하여 만들지만, CDC Designer 콘솔을 사용하여 생성되는 CDC 배포 스크립트를 사용하여 만들 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 필요한 경우 항목(예: 저장소, 보안 또는 가용성)에 대한 데이터베이스 설정을 변경할 수 있습니다.  
@@ -51,11 +51,11 @@ ms.locfileid: "47630351"
  미러 테이블은 비어 있고 데이터가 저장되어 있지 않습니다. 미러 테이블은 Oracle CDC 인스턴스에 사용되는 표준 SQL Server CDC 인프라를 사용하도록 설정하는 데 사용됩니다. 미러 테이블에서 데이터가 삽입되거나 업데이트되지 않도록 모든 UPDATE, DELETE 및 INSERT 작업이 PUBLIC에 대해 거부됩니다. 따라서 미러 테이블에서 데이터를 수정할 수 없습니다.  
   
 ## <a name="access-to-change-data"></a>변경 데이터 액세스  
- 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](http://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
   
  또한 캡처 인스턴스를 만들 때 제어 역할을 지정한 경우 호출자도 지정된 제어 역할의 멤버여야 합니다. 메타데이터에 액세스하는 다른 일반적인 변경 데이터 캡처 함수에 모든 데이터베이스 사용자가 PUBLIC 역할을 통해 액세스할 수 있습니다. 물론 반환된 메타데이터에 대한 액세스는 기본 원본 테이블에 대한 선택적 액세스 권한을 사용하거나 정의된 제어 역할의 멤버 자격을 통해 일반적으로 제어됩니다.  
   
- 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 원본 구성 요소를 통한 CDC 데이터 액세스에도 동일한 규칙이 적용됩니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47630351"
   
  `<schema-name>.<table-name>`테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
   
- 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 테이블은 SQL Server CDC 구성 요소에 의해 생성됩니다. Oracle CDC에서의 캡처 테이블 사용은 일반적인 사용과는 다릅니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "47630351"
 |항목|설명|  
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
-|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
+|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
 |use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  

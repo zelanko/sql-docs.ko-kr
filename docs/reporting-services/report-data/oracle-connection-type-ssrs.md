@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 312d655507d2c7880746cf1f81f61059ddf64de4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027902"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813426"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 연결 형식(SSRS)
 보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다.
 
 Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있습니다.
  
-1.  [Oracle의 다운로드 사이트](http://www.oracle.com/us/products/tools/index-090165.html)로 이동
+1.  [Oracle의 다운로드 사이트](https://www.oracle.com/us/products/tools/index-090165.html)로 이동
 2.  Windows(서버에 대해 64비트, 도구에 대해 32비트)용 ODAC 12c 릴리스 4(12.1.0.2.4) 다운로드
 3.  Data Provider for .NET 4 설치
   
@@ -61,9 +61,9 @@ Data Source="Oracle"; Unicode="True"
   
 -   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](https://go.microsoft.com/fwlink/?LinkId=112314)   
   
--   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](http://support.microsoft.com/kb/834305)  
+-   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://support.microsoft.com/kb/834305)  
   
--   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](http://support.microsoft.com/kb/870668)  
+-   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램  
  OLE DB 데이터 원본 유형을 사용하여 Oracle 데이터베이스에서 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)을 참조하세요.  

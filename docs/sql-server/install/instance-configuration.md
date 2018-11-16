@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764841"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701065"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47764841"
  **관리자 지정** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 서버 관리자를 한 명 이상 지정해야 합니다. 지정한 사용자 또는 그룹은 설치할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 관리자 역할 멤버가 됩니다. 이러한 사용자 또는 그룹은 소프트웨어를 설치할 컴퓨터와 동일한 도메인의 Windows 도메인 사용자 계정이어야 합니다.  
   
 > [!NOTE]  
->  UAC(사용자 계정 컨트롤)는 관리 동작이나 응용 프로그램을 실행하려면 관리자가 승인을 해야 하는 Windows 보안 기능입니다. UAC는 기본적으로 설정되므로, 높은 권한을 필요로 하는 특정 작업을 허용하라는 메시지가 표시됩니다. UAC를 구성하여 기본 동작을 변경하거나 특정 프로그램에 대해 UAC를 사용자 지정할 수 있습니다. UAC 및 UAC 구성에 대한 자세한 내용은 [사용자 계정 컨트롤 단계별 가이드](http://go.microsoft.com/fwlink/?linkid=196350) 및 [사용자 계정 컨트롤(Wikipedia)0](http://go.microsoft.com/fwlink/?linkid=196351)을 참조하세요.  
+>  UAC(사용자 계정 컨트롤)는 관리 동작이나 응용 프로그램을 실행하려면 관리자가 승인을 해야 하는 Windows 보안 기능입니다. UAC는 기본적으로 설정되므로, 높은 권한을 필요로 하는 특정 작업을 허용하라는 메시지가 표시됩니다. UAC를 구성하여 기본 동작을 변경하거나 특정 프로그램에 대해 UAC를 사용자 지정할 수 있습니다. UAC 및 UAC 구성에 대한 자세한 내용은 [사용자 계정 컨트롤 단계별 가이드](https://go.microsoft.com/fwlink/?linkid=196350) 및 [사용자 계정 컨트롤(Wikipedia)0](https://go.microsoft.com/fwlink/?linkid=196351)을 참조하세요.  
   
 ### <a name="see-also"></a>참고 항목  
  [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -250,7 +250,7 @@ ms.locfileid: "47764841"
  디렉터리, 파일 위치 및 인스턴스 ID 명명에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하세요.  
   
     
- [파일 서버의 공유 및 NTFS 권한](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여** 을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
@@ -428,7 +428,7 @@ ms.locfileid: "47764841"
   
 ### <a name="see-also"></a>참고 항목  
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [파일 서버의 공유 및 NTFS 권한](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>데이터베이스 엔진 구성 - 사용자 인스턴스
 **사용자 인스턴스** 페이지를 사용하여 관리자 권한 없이 사용자에 대한 개별 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 생성하고 관리자 역할에 사용자를 추가할 수 있습니다.  

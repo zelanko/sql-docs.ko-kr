@@ -14,12 +14,12 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b06376518361b0ab33d227e11a06654bfc3618f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d70f630f5dca16e1140ebe5846d49b14a9a626
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657406"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699541"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>SQL Server Management Studio에서 서버 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47657406"
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도구 구성 요소에는 등록된 서버, 개체 탐색기, 솔루션 탐색기, 템플릿 탐색기, 개체 탐색기 정보 페이지 및 문서 창이 포함되어 있습니다. 도구를 표시하려면 **보기** 메뉴에서 도구 이름을 클릭합니다. 쿼리 편집기 도구를 표시하려면 도구 모음에서 **새 쿼리** 단추를 클릭합니다.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 간의 네트워크 트래픽은 기본적으로 암호화되지 않습니다. 암호화된 연결이 설정되지 않은 경우 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서 중요한 데이터(암호 포함)를 사용하지 마십시오. 자세한 내용은 [방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)을 참조하세요.  
+> [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 간의 네트워크 트래픽은 기본적으로 암호화되지 않습니다. 암호화된 연결이 설정되지 않은 경우 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서 중요한 데이터(암호 포함)를 사용하지 마십시오. 자세한 내용은 [방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)을 참조하세요.  
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 를 사용하여 다음을 수행할 수 있습니다.  
   
@@ -62,5 +62,5 @@ ms.locfileid: "47657406"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio 사용](../ssms/use-sql-server-management-studio.md)  
-[방법: 서버 속성 보기(SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[방법: 서버 속성 보기(SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

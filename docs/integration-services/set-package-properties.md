@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73752c57120544374edfc9790b07fe6a648779a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826301"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642247"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -54,19 +54,19 @@ ms.locfileid: "47826301"
   
 -   [트랜잭션](#Transactions)  
   
--   [버전](#Version)  
+-   [버전(Version)](#Version)  
   
  **속성** 창에서 설정할 수 없는 추가 패키지 속성에 대한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>를 참조하세요.  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>속성 창에서 패키지 속성을 설정하려면  
   
--   [패키지의 속성 설정](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [패키지의 속성 설정](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## <a name="properties-by-category"></a>항목별 속성  
  다음 표에서는 항목별 패키지 속성을 나열합니다.  
   
 ###  <a name="Checkpoints"></a> 검사점  
- 이 항목의 속성을 사용하면 제어 흐름 시작부터 패키지를 다시 실행하는 대신 패키지 제어 흐름의 오류 발생 시점으로부터 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+ 이 항목의 속성을 사용하면 제어 흐름 시작부터 패키지를 다시 실행하는 대신 패키지 제어 흐름의 오류 발생 시점으로부터 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 |속성|설명|  
 |--------------|-----------------|  

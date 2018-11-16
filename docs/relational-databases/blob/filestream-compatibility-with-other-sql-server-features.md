@@ -14,12 +14,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d7e0f84458b7b07c68f502bb40c50a5d37d86d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07e044e232ead6d91d1c6a281e61ff995cebcbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769347"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673642"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47769347"
  게시자에서 FILESTREAM 특성을 사용할 수 있는 **varbinary(max)** 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 **varbinary(max)** 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 복제하는 경우가 아니면 FILESTREAM 특성을 복제하는 것이 좋습니다. FILESTREAM 열이 있는 테이블은 지정된 스키마 옵션에 상관없이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 구독자에 복제할 수 없습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](http://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](https://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
   
 ### <a name="considerations-for-transactional-replication"></a>트랜잭션 복제에 대한 고려 사항  
  트랜잭션 복제를 위해 게시된 테이블의 FILESTREAM 열을 사용할 경우 다음 사항을 고려하십시오.  

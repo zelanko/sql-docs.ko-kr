@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146058"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697691"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -33,7 +33,7 @@ ms.locfileid: "50146058"
 
 브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 전체 프로세스는 [Microsoft Docs 기여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) 문서에 설명되어 있습니다. 다음 비디오는 브라우저에서 변경 사항을 제출하는 종단 간 프로세스를 보여 줍니다.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > **편집** 단추의 위치는 비디오에서 표시된 것과 약간 다르지만 프로세스는 동일합니다.

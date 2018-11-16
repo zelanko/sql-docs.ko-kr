@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aa9be217bc6235c0bc01c5d4adfd9caa9d7a630a
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 63425a2a280154522c0219a89033e67c4e8bdeda
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419178"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703262"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,6 +161,6 @@ Microsoft는 SQL Server를 사용하는 다른 프로그램에서 설정한 응�
 
 ## <a name="telemetry-controls"></a>원격 분석 컨트롤
 
-제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft의 내용을 참조하세요.
+제품에서 원격 분석을 켜고 끄는 방법에 대한 지침은 https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft의 내용을 참조하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

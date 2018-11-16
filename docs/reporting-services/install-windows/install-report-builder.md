@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021327"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813186"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "50021327"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 
   
- 관리자는 System Center Configuration Manager와 같은 소프트웨어를 사용하여 프로그램을 컴퓨터에 배포할 수도 있습니다. 특정 소프트웨어를 사용하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치하는 방법을 확인하려면 해당 소프트웨어의 설명서를 참조하십시오. 자세한 내용은 [System Center Configuration Manager 사이트](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager)를 참조하세요.  
+ 관리자는 System Center Configuration Manager와 같은 소프트웨어를 사용하여 프로그램을 컴퓨터에 배포할 수도 있습니다. 특정 소프트웨어를 사용하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 설치하는 방법을 확인하려면 해당 소프트웨어의 설명서를 참조하십시오. 자세한 내용은 [System Center Configuration Manager 사이트](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  Windows Vista 및 Windows 7의 경우 보안 기능으로 인해 명령줄 작업을 실행하려면 높은 권한이 필요합니다. 따라서 명령줄을 실행할 경우 사용 권한을 요청하는 메시지가 표시되므로 자동 설치를 수행할 수 없습니다. 자동 설치를 수행하려면 관리자 권한으로 명령줄을 실행해야 합니다.  

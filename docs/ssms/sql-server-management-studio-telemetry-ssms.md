@@ -11,16 +11,16 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe3642cf4d74b67fcb595548a498fb062d5cddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633351"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698902"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 사용 현황 피드백 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
+SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 
 ## <a name="audit-feature-usage-data"></a>기능 사용 현황 데이터 감사
 
@@ -33,8 +33,8 @@ SSMS를 통해 데이터베이스와 상호 작용할 경우 **출력** 창에 �
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>SSMS에서 사용 현황 피드백 수집 사용 또는 사용 안 함
 
-SSMS에 대한 사용 현황 데이터 수집을 포함하거나 제외하려면 [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)(Microsoft로 피드백을 보내도록 SQL Server 2016을 구성하는 방법)를 참조하세요.
+SSMS에 대한 사용 현황 데이터 수집을 포함하거나 제외하려면 [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)(Microsoft로 피드백을 보내도록 SQL Server 2016을 구성하는 방법)를 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:
 
-[SQL Server 사용 피드백 모음에 대한 로컬 감사](http://msdn.microsoft.com/library/mt743085.aspx)
+[SQL Server 사용 피드백 모음에 대한 로컬 감사](https://msdn.microsoft.com/library/mt743085.aspx)

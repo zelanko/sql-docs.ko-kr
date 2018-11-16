@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169054"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703651"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -168,13 +168,13 @@ SET <optionspec>
 -   2  -  오류 및 경고가 로깅됩니다.  
   
 SQLDUMPEREDUMPFLAGS  
- SQL  Server  SQLDumper  유틸리티에서 생성되는 덤프 파일의 형식을 결정합니다. 기본 설정은 0입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](http://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
+ SQL  Server  SQLDumper  유틸리티에서 생성되는 덤프 파일의 형식을 결정합니다. 기본 설정은 0입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
   
  SQLDUMPERDUMPPATH  =  {  'os_file_path'  |  DEFAULT  }  
- SQLDumper  유틸리티에서 덤프 파일을 저장하는 위치입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](http://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
+ SQLDumper  유틸리티에서 덤프 파일을 저장하는 위치입니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
   
  SQLDUMPERDUMPTIMEOUT  =  {  'dump_time-out'  |  DEFAULT  }  
- SQL  Server  오류 시 SQLDumper  유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0이며 이는 덤프를 완료하는 데 시간 제한이 없음을 의미합니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](http://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
+ SQL  Server  오류 시 SQLDumper  유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0이며 이는 덤프를 완료하는 데 시간 제한이 없음을 의미합니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
   
  FAILURECONDITIONLEVEL  =  {  'failure_condition_level'  |  DEFAULT  }  
  SQL  Server  장애 조치(failover)  클러스터 인스턴스가 장애 조치(failover)되거나 다시 시작되는 조건입니다. 기본값은 3이며,  이는 치명적인 서버 오류 시 SQL  Server  리소스가 장애 조치(failover)되거나 다시 시작됨을 의미합니다. 이 오류 상태 및 기타 오류 상태 수준에 대한 자세한 내용은 [FailureConditionLevel 속성 설정 구성](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)을 참조하세요.  

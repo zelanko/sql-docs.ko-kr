@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252160"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703671"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -365,7 +365,7 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 또한 RESTORE 문을 사용하여 대체 위치로 복원, 차등 복원, 파일 및 파일 그룹 복원, 전체 텍스트 데이터의 차등 파일 및 파일 그룹 복원을 수행할 수 있습니다. 또한 RESTORE를 사용하면 전체 텍스트 파일만 복원할 수도 있고 데이터베이스 데이터를 함께 복원할 수도 있습니다.  
   
 > [!NOTE] 
-> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 데이터베이스 파일로 처리됩니다. 따라서 백업 작업 중에 더 이상 일시 중지하고 재개할 필요가 없다는 점을 제외하고 전체 텍스트 카탈로그를 백업하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 절차는 계속 적용 가능합니다. 자세한 내용은 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=107381)을 참조하세요.  
+> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 데이터베이스 파일로 처리됩니다. 따라서 백업 작업 중에 더 이상 일시 중지하고 재개할 필요가 없다는 점을 제외하고 전체 텍스트 카탈로그를 백업하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 절차는 계속 적용 가능합니다. 자세한 내용은 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=107381)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 서버 인스턴스의 백업 및 복원 작업을 추적하는 백업 및 복원 기록 테이블이 있습니다. 복원을 수행하면 백업 기록 테이블도 수정됩니다. 자세한 내용은 [백업 기록 및 헤더 정보 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)를 참조하세요.  
@@ -745,7 +745,7 @@ FROM URL
 복원 작업에 사용되는 URL에 배치된 하나 이상의 백업 장치를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다. 
 
 > [!IMPORTANT]  
-> URL에서 복원할 때 여러 장치에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+> URL에서 복원할 때 여러 장치에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
 *n*  
 쉼표로 구분된 목록에 백업 장치를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.  

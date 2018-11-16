@@ -11,17 +11,17 @@ ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7ae9cbd530432ac43daca81c82bd477603c6ecbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cdcd3edf5e766e5d6805331f0453f65ab765322
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672642"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Azure DB에서 메모리 내 OLTP 사용의 경우 [SQL 데이터베이스에서 메모리 내 시작](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)을 참조하세요.  
+  Azure DB에서 메모리 내 OLTP 사용의 경우 [SQL 데이터베이스에서 메모리 내 시작](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)을 참조하세요.  
   
  [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 외에 메모리 내 OLTP를 사용하기 위한 요구 사항은 다음과 같습니다.  
   

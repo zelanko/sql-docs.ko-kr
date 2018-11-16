@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031412"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813236"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI 대시보드에 Reporting Services 항목 고정
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 을 통해 사용자는 보고서 뷰어 도구 모음의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 새 타일로 고정합니다.   고정하려면 먼저 관리자가 보고서 서버를 Azure Active Directory 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]과 통합해야 합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "50031412"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 뷰어에서 고정합니다(예: `http://myserver/Reports`).  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너 또는 보고서 서버 url에서는 고정할 수 없습니다.  예를 들면 `http://myserver/ReportServer`과 같습니다.  
+-   [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 뷰어에서 고정합니다(예: `https://myserver/Reports`).  [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너 또는 보고서 서버 url에서는 고정할 수 없습니다.  예를 들면 `https://myserver/ReportServer`과 같습니다.  
   
 -   브라우저에서 보고서 서버 사이트의 팝업을 허용하도록 구성해야 합니다.  
   

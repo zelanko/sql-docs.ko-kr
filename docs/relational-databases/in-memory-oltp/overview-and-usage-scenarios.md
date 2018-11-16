@@ -5,20 +5,19 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150194"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660372"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "50150194"
 
 ## <a name="in-memory-oltp-overview"></a>메모리 내 OLTP 개요
 
-메모리 내 OLTP는 올바른 워크로드에 대해 상당한 성능 향상을 제공할 수 있습니다. 한 고객은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 실행하는 단일 컴퓨터에서 메모리 내 OLTP를 사용하여 [초당 120만 요청을 달성](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)하려는 bwin입니다. 또 다른 고객은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 메모리 내 OLTP를 활용하여 [리소스 사용률을 70%로 줄이는 동시에](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) 워크로드를 두 배로 늘리려는 Quorum입니다. 경우에 따라 고객이 최대 30배의 성능 향상을 얻기도 하지만 성능 향상 정도는 워크로드에 따라 다릅니다.
+메모리 내 OLTP는 올바른 워크로드에 대해 상당한 성능 향상을 제공할 수 있습니다. 한 고객은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 실행하는 단일 컴퓨터에서 메모리 내 OLTP를 사용하여 [초당 120만 요청을 달성](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)하려는 bwin입니다. 또 다른 고객은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 메모리 내 OLTP를 활용하여 [리소스 사용률을 70%로 줄이는 동시에](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) 워크로드를 두 배로 늘리려는 Quorum입니다. 경우에 따라 고객이 최대 30배의 성능 향상을 얻기도 하지만 성능 향상 정도는 워크로드에 따라 다릅니다.
 
 그렇다면 이러한 성능 향상은 어디에서 이루어지는 것일까요? 기본적으로 메모리 내 OLTP는 데이터 액세스 및 트랜잭션 실행을 보다 효율적으로 만들고, 동시 실행 트랜잭션 간에 잠금 및 래치 경합을 제거하여 트랜잭션 처리 성능을 개선합니다. 한편으로는 메모리 내 작업이기 때문에 빠르지 않지만 다른 한편으로는 메모리 내 데이터를 중심으로 최적화되기 때문에 빠릅니다. 메모리 내 및 높은 동시성 컴퓨팅의 최신 개선 사항을 활용하기 위해 데이터 저장소, 액세스 및 처리 알고리즘이 처음부터 다시 설계되었습니다.
 
@@ -67,8 +66,8 @@ ms.locfileid: "50150194"
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- CMC Markets는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 일관된 짧은 대기 시간을 달성합니다. [1초도 기다리기에 너무 긴 시간이기 때문에 이 금융 서비스 회사는 현재 거래 소프트웨어를 업데이트하고 있습니다.](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 증가된 처리량을 지원하고 워크로드의 급증을 처리합니다. [온라인 게임 회사는 향후 위험을 원치 않을 때 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 투자합니다.](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 일관된 짧은 대기 시간을 달성합니다. [1초도 기다리기에 너무 긴 시간이기 때문에 이 금융 서비스 회사는 현재 거래 소프트웨어를 업데이트하고 있습니다.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 증가된 처리량을 지원하고 워크로드의 급증을 처리합니다. [온라인 게임 회사는 향후 위험을 원치 않을 때 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 투자합니다.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>IoT(사물 인터넷)를 비롯한 데이터 수집
@@ -93,9 +92,9 @@ ms.locfileid: "50150194"
  
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘립니다.](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 대한 실시간 액세스 실현](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for].
+- [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘립니다.](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 대한 실시간 액세스 실현](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for].
 
 ### <a name="caching-and-session-state"></a>캐싱 및 세션 상태
 
@@ -113,7 +112,7 @@ GitHub에 게시된 스크립트에서 기본 제공 [!INCLUDE[ssNoVersion](../.
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- bwin은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 처리량을 획기적으로 늘리고 ASP.NET 세션 상태에 대한 하드웨어 공간을 크게 줄일 수 있었습니다. [게임 사이트에서 초당 250,000 요청으로 확장하고 플레이어 경험 개선](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 처리량을 획기적으로 늘리고 ASP.NET 세션 상태에 대한 하드웨어 공간을 크게 줄일 수 있었습니다. [게임 사이트에서 초당 250,000 요청으로 확장하고 플레이어 경험 개선](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
 - bwin은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 사용하여 ASP.NET 세션 상태 처리량을 늘리고 엔터프라이즈 수준의 다중 계층 캐싱 시스템을 구현했습니다. [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP를 사용하여 전례 없는 성능 및 확장성을 달성하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 개체 대체
@@ -224,7 +223,7 @@ GO
 
 ## <a name="resources-to-learn-more"></a>참조 리소스:
 
-[더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](http://msdn.microsoft.com/library/mt694156.aspx)   
+[더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](https://msdn.microsoft.com/library/mt694156.aspx)   
 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) 에서 확인할 수 있습니다.  
 [메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](https://www.youtube.com/watch?v=l5l5eophmK4) (데모는 8분 25초에서 시작)   
 [메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -233,4 +232,4 @@ GO
 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx) 
+[메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx) 

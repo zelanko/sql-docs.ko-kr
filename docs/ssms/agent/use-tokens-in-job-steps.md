@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743228"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703581"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "50743228"
 ## <a name="updating-job-steps-to-use-macros"></a>매크로를 사용하도록 작업 단계 업데이트  
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 이스케이프 매크로 없이 토큰이 포함된 작업 단계는 실패하고 작업을 실행하기 전에 매크로를 사용하여 작업 단계에 포함된 하나 이상의 토큰을 업데이트해야 한다는 오류 메시지가 반환됩니다.  
   
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] 기술 자료 문서 915845: [토큰을 사용하는 SQL Server 에이전트 작업 단계가 SQL Server 2005 서비스 팩 1에서 실패합니다](http://support.microsoft.com/kb/915845). 이 스크립트를 통해 토큰을 사용하는 모든 작업 단계를 **ESCAPE_NONE** 매크로로 업데이트할 수 있습니다. 이 스크립트를 사용한 다음 토큰을 사용하는 작업 단계를 가능한 한 빨리 검토하여 **ESCAPE_NONE** 매크로를 작업 단계 컨텍스트에 맞는 이스케이프 매크로로 바꾸는 것이 좋습니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] 기술 자료 문서 915845: [토큰을 사용하는 SQL Server 에이전트 작업 단계가 SQL Server 2005 서비스 팩 1에서 실패합니다](https://support.microsoft.com/kb/915845). 이 스크립트를 통해 토큰을 사용하는 모든 작업 단계를 **ESCAPE_NONE** 매크로로 업데이트할 수 있습니다. 이 스크립트를 사용한 다음 토큰을 사용하는 작업 단계를 가능한 한 빨리 검토하여 **ESCAPE_NONE** 매크로를 작업 단계 컨텍스트에 맞는 이스케이프 매크로로 바꾸는 것이 좋습니다.  
   
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰 바꾸기를 처리하는 방법에 대해 설명합니다. 경고 토큰 바꾸기를 설정하거나 해제하려면 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 확인란을 선택하거나 선택을 취소합니다.  
   

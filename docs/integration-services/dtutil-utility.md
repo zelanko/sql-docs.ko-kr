@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681901"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642220"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 **/SQL**, **/FILE**및 **/DTS** 옵션으로 식별됩니다.  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  이 예에 사용된 해시는 실제 해시가 아닙니다.  
   
- 자세한 내용은 [Authenticode로 코드 서명 및 확인(Signing and Checking Code with Authenticode)](http://go.microsoft.com/fwlink/?LinkId=78100)의 CertMgr 섹션을 참조하십시오.  
+ 자세한 내용은 [Authenticode로 코드 서명 및 확인(Signing and Checking Code with Authenticode)](https://go.microsoft.com/fwlink/?LinkId=78100)의 CertMgr 섹션을 참조하십시오.  
   
 ### <a name="encrypt-examples"></a>암호화 예  
  다음 예에서는 암호와 함께 전체 패키지 암호화를 사용하여 파일 기반 PackageToEncrypt.dtsx를 파일 기반 EncryptedPackage.dts로 암호화합니다. 암호화에 사용된 암호는 *EncPswd*입니다.  

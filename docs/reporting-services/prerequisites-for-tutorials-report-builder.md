@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031942"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813106"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
 
@@ -29,9 +29,9 @@ ms.locfileid: "50031942"
   
     보고서 서버에서 **새로 만들기** > **페이지가 매겨진 보고서**를 선택합니다.
   
-    SharePoint 통합 모드의 보고서 서버에서 **문서** 탭의 **새 문서**를 선택하고 드롭다운 목록에서 **보고서 작성기 보고서**를 선택합니다. `http://<servername>/sites/mySite/reports`)을 입력합니다. SharePoint 관리자는 각 문서 라이브러리에서 보고서 작성기 보고서를 사용할 수 있도록 설정해야 합니다.  
+    SharePoint 통합 모드의 보고서 서버에서 **문서** 탭의 **새 문서**를 선택하고 드롭다운 목록에서 **보고서 작성기 보고서**를 선택합니다. `https://<servername>/sites/mySite/reports`)을 입력합니다. SharePoint 관리자는 각 문서 라이브러리에서 보고서 작성기 보고서를 사용할 수 있도록 설정해야 합니다.  
   
--   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트 또는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버의 URL. 보고서, 공유 데이터 원본, 공유 데이터 집합, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버의 URL은 `http://<servername>/reportserver`이고, SharePoint 사이트의 URL은 `http://<sitename>` 또는 `http://<server>/site`입니다.  
+-   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트 또는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버의 URL. 보고서, 공유 데이터 원본, 공유 데이터 집합, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버의 URL은 `https://<servername>/reportserver`이고, SharePoint 사이트의 URL은 `https://<sitename>` 또는 `https://<server>/site`입니다.  
   
 -   SQL Server 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 집합에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 SQL Server 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   

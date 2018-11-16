@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666522"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 응용 프로그램 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 응용 프로그램 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "47855291"
 단위 테스트 중 하나에서 저장 프로시저의 오류가 검색된 후 오류를 수정하고 테스트를 다시 실행합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 연습을 완료하려면 데이터베이스를 만들고 배포할 수 있는 권한이 있는 데이터베이스 서버(또는 LocalDB 데이터베이스)에 연결할 수 있어야 합니다. 자세한 내용은 [Visual Studio의 데이터베이스 기능에 필요한 권한](http://msdn.microsoft.com/library/aa833413(VS.100).aspx)을 참조하세요.  
+이 연습을 완료하려면 데이터베이스를 만들고 배포할 수 있는 권한이 있는 데이터베이스 서버(또는 LocalDB 데이터베이스)에 연결할 수 있어야 합니다. 자세한 내용은 [Visual Studio의 데이터베이스 기능에 필요한 권한](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)을 참조하세요.  
   
 ## <a name="CreateScript"></a>데이터베이스 스키마가 포함된 스크립트 만들기  
   
@@ -968,7 +968,7 @@ ms.locfileid: "47855291"
     특정 예외가 표시되도록 지정합니다. 선택적으로 특정 오류 번호를 지정할 수도 있습니다. 이 특성을 추가하지 않으면 단위 테스트가 실패하고 메시지가 테스트 결과 창에 표시됩니다.  
   
     > [!IMPORTANT]  
-    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)을 참조하십시오.  
+    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)을 참조하십시오.  
   
 3.  파일 메뉴에서 SqlServerUnitTests1.cs 저장을 클릭합니다.  
   

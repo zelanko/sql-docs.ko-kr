@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f809f65be52e77e84e1391df0151cc183013624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656511"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663803"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "47656511"
 프로세스를 종료해야 할 때 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 문을 사용해야 하는 경우도 있습니다. 특히 중지하지 않을 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하세요. 자세한 내용은 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:  
-[KB 지원 문서 - A transaction log grows unexpectedly or becomes full in SQL Server(트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참)](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[KB 지원 문서 - A transaction log grows unexpectedly or becomes full in SQL Server(트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참)](https://support.microsoft.com/kb/317375) [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 301d4af9c9c9ddc36b57005d2b5b34ddb51b35aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715701"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678102"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SQL 전체 텍스트 필터 데몬 시작 관리자 서비스는 [!INCLUDE[ssNoV
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 클라이언트에 대한 명명된 파이프 서버 역할을 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작되기 전에 다른 프로세스에서 이미 명명된 파이프를 만든 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 Windows 이벤트 로그에 오류가 기록되고 전체 텍스트 검색을 사용할 수 없게 됩니다.  동일한 명명된 파이프를 사용하고 응용 프로그램을 중지하려고 시도하는 프로세스 또는 응용 프로그램이 무엇인지 확인하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

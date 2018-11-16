@@ -16,12 +16,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b6d0f537db9195ff0afb9994f48ca14411dcf30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599301"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642244"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -246,6 +246,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>관련 내용  
   
--   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)  
+-   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)  
   
   

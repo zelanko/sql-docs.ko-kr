@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7a6db30cca46d752e8f6f350d780863cfaa7452c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669102"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49643931"
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
 
-[Azure SQL Database 보안 기능 개요](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+[Azure SQL Database 보안 기능 개요](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
 </br>데이터 보호, 액세스 제어, 사전 대처식 모니터링을 위한 Azure SQL Database 보안 개요입니다.
   
  [암호화 함수&#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -80,7 +80,7 @@ ms.locfileid: "49643931"
  데이터를 암호화하기 위해 인증서를 사용하는 방법에 대한 정보입니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 보안 및 보호](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 보안 및 보호](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
 ## <a name="see-also"></a>참고 항목  

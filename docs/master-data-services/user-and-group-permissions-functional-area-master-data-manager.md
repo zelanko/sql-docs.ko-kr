@@ -12,12 +12,12 @@ ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adff470aea31f69532c0f12cf72b1baf7d0008f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfc0fecfb813fab9ccc7109a06729bd14abacfbc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612251"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697199"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47612251"
   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [마스터 데이터 관리자 보안 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [마스터 데이터 관리자 보안 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)  

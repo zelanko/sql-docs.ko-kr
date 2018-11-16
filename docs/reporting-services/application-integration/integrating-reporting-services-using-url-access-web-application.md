@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800031"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813986"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL 액세스는 네트워크를 통해 개별 보고서에 액세스할 수 있도록 특별히 디자인되었습니다. 이런 유형의 액세스는 보고서 보기와 탐색을 사용자 지정 웹 응용 프로그램으로 통합하는 데 알맞습니다. 웹 응용 프로그램에서 URL 액세스를 사용하려면 다음 작업을 수행할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47800031"
  다음 예에서 하이퍼링크는 "main"이라는 프레임을 대상으로 지정하며 이 프레임은 하이퍼링크를 포함하는 프레임과 다를 수 있습니다. 하이퍼링크는 웹 포털의 일부일 수 있습니다.  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -60,7 +60,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  다음 예제 HTML은 특정 URL로 보고서 서버를 대상으로 지정하고 쿼리 문자열 매개 변수를 폼 입력 필드의 일부로 전달하는 데 사용할 수 있는 폼의 사용을 보여 줍니다.  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -72,7 +72,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  위의 예에서 사용자가 폼에 있는 단추를 클릭하면 보고서 서버가 현재 프레임에서 대상으로 지정된 HTML 렌더링 보고서를 반환합니다. 비슷한 URL 액세스 문자열은 다음과 같습니다.  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

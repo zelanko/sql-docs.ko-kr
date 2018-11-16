@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673602"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633141"
 ## <a name="rbs-requirements"></a>RBS 요구 사항  
  - RBS를 사용하려면 BLOB 메타데이터가 저장된 기본 데이터베이스 서버용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요합니다.  그러나 제공된 FILESTREAM 공급자를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 BLOB 자체를 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하려면 RBS에는 적어도 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 용 ODBC 드라이버 버전 11 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]용 ODBC 드라이버 버전 13이 필요합니다. 드라이버는 [SQL Server용 ODBC 드라이버 다운로드](https://msdn.microsoft.com/library/mt703139.aspx)에서 제공됩니다.    
   
- RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 저장소 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 저장소 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
+ RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 저장소 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 저장소 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
   
 ## <a name="rbs-security"></a>RBS 보안  
- SQL Remote Blob Storage 팀 블로그에서 이 기능에 대한 유익한 정보를 참고할 수 있습니다. RBS 보안 모델은 [RBS 보안 모델](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)의 게시물에 설명되어 있습니다.  
+ SQL Remote Blob Storage 팀 블로그에서 이 기능에 대한 유익한 정보를 참고할 수 있습니다. RBS 보안 모델은 [RBS 보안 모델](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)의 게시물에 설명되어 있습니다.  
   
 ### <a name="custom-providers"></a>사용자 지정 공급자  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에 BLOB을 저장하기 위해 사용자 지정 공급자를 사용하는 경우, 사용자 지정 공급자가 사용하는 저장소 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
@@ -77,10 +77,10 @@ ms.locfileid: "47633141"
 ##  <a name="rbsresources"></a> RBS 리소스  
   
  **RBS 예제**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
   
  **RBS 블로그**  
- [RBS 블로그](http://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
+ [RBS 블로그](https://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
   
 ##  <a name="Key_rotation"></a> 키 회전 스크립트  
  이 예제는 현재 사용된 RBS 자격 증명 저장소 대칭 키를 선택한 키로 바꾸기 위해 `sp_rotate_rbs_symmetric_credential_key` 라는 이름의  

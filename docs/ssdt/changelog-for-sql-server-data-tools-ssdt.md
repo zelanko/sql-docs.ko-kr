@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677902"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - 테이블 형식: DAX 구문 분석 및 수식 입력줄에 대한 여러 개선 사항 및 성능 수정.
 - 테이블 형식: SSAS 테이블 형식 프로젝트가 열려 있지 않은 경우 테이블 형식 모델 탐색기가 더 이상 표시되지 않음.
 - 다차원: 고해상도(High-DPI) 컴퓨터에서 처리 대화 상자를 사용할 수 없는 문제를 해결함.
-- 표 형식: SSMS가 이미 열려 있을 때 BI 프로젝트를 여는 경우 SSDT 오류가 발생하는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- 테이블 형식: 1103 모델에서 계층이 bim 파일로 올바르게 저장되지 않는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 표 형식: SSMS가 이미 열려 있을 때 BI 프로젝트를 여는 경우 SSDT 오류가 발생하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 테이블 형식: 1103 모델에서 계층이 bim 파일로 올바르게 저장되지 않는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 테이블 형식: 통합 작업 영역 모드가 지원되지 않는데도 32비트 컴퓨터에서 허용되는 문제를 해결함.
 - 테이블 형식: 부분 선택 모드에서 항목을 클릭하는 경우(예를 들어, DAX 식을 입력하지만 측정값을 클릭함) 작동이 중단될 수 있는 문제를 해결함.
-- 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - 테이블 형식: [다이어그램 뷰]를 선택하지 않았는데도 TME에서 계층을 선택할 때 속성이 표시되는 문제를 해결함.
 - 테이블 형식: 특정 응용 프로그램에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결함.
 - 테이블 형식: 특정 정의가 포함된 측정값이 있어서 1103의 일부 이전 모델을 열 수 없는 문제를 해결함.
@@ -569,8 +569,8 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - SSDT에서 보고서를 디자인할 때 대부분의 변경 작업 중 매개 변수, 데이터 원본 및 데이터 집합의 트리 뷰가 축소되는 문제를 해결함 
 - [저장]을 누를 때 최신 버전이 아니라 RDL 버전이 저장되는 문제를 해결함.
 - 백업이 꺼져 있을 때 SSDT RS가 파일을 백업하는 문제와 여러 다른 문제를 해결함.
-- "셀 분할"을 클릭할 때 오류가 표시되는 보고서 작성기의 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- 캐싱으로 인해 보고서의 데이터가 잘못될 수 있는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- "셀 분할"을 클릭할 때 오류가 표시되는 보고서 작성기의 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- 캐싱으로 인해 보고서의 데이터가 잘못될 수 있는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **IS 프로젝트:**
 - run64bitruntime 설정이 유지되지 않는 문제를 해결함.
@@ -582,7 +582,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 
 **데이터베이스 프로젝트:**
 - SSDT DACPAC 배포에서 IgnoreColumnOrder에 대한 설정 다시 추가. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- STRING_SPLIT를 사용하는 경우 SSDT가 컴파일하지 못함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- STRING_SPLIT를 사용하는 경우 SSDT가 컴파일하지 못함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [Github 문제](https://github.com/Microsoft/DACExtensions/issues/8)
 - 파일 그룹 배치에 대한 DacFx 임시 수정
 - 외부 동의어에 대한 "확인되지 않은 참조" 오류에 대한 수정 
@@ -743,7 +743,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
     - **SSDT:**
         - 연결 버그 1898001 [128자까지만 입력할 수 있는 열 설명 문제가 수정](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters)되었습니다.
         - VS에서 데이터베이스를 게시할 경우 게시 프로필 xml의 DatabaseServiceObjective 속성이 적용되지 않는 문제가 수정되었습니다.
-        - 연결 버그 2900167 [임시 파일이 잘못 남겨지는 단위 테스트 문제가 수정](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)되었습니다.
+        - 연결 버그 2900167 [임시 파일이 잘못 남겨지는 단위 테스트 문제가 수정](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)되었습니다.
         - 데이터베이스 설정의 보존 기간 콤보 상자가 잘리는 문제가 수정되었습니다.
         - 암호를 변경하는 동안 SQL CLR 프로젝트 속성의 빈 기존 암호가 확인되지 않는 문제가 수정되었습니다.
     - **DACFx:**

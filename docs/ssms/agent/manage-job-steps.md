@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52829a433526e10b3170610a1f9281bfbd9a5796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699072"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ ms.locfileid: "47840481"
   
 모든 작업 단계는 특정 보안 컨텍스트에서 실행됩니다. 작업 단계에서 프록시를 지정하면 해당 작업 단계는 프록시의 자격 증명 보안 컨텍스트에서 실행됩니다. 작업 단계에서 프록시를 지정하지 않으면 작업 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정의 컨텍스트에서 실행됩니다. sysadmin 고정 서버 역할의 멤버만이 프록시를 명시적으로 지정하지 않는 작업을 만들 수 있습니다.  
   
-작업 단계는 특정 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 사용자의 컨텍스트에서 실행되기 때문에 해당 사용자는 작업 단계를 실행하는 데 필요한 권한과 구성이 있어야 합니다. 예를 들어 드라이브 문자나 UNC(Universal Naming Convention) 경로가 필요한 작업을 만드는 경우 작업 단계는 태스크를 테스트하는 동안 사용자의 Windows 사용자 계정으로 실행됩니다. 그러나 해당 작업 단계의 Windows 사용자도 필요한 권한, 드라이브 문자 구성 또는 필요한 드라이브에 대한 액세스 권한이 있어야 합니다. 그렇지 않으면 작업 단계가 실패합니다. 이런 문제가 발생하지 않도록 각 작업 단계의 프록시에 작업 단계에서 수행하는 태스크에 필요한 권한이 있는지 확인하십시오. 자세한 내용은 [보안 및 보호(데이터베이스 엔진)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)를 참조하세요.  
+작업 단계는 특정 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 사용자의 컨텍스트에서 실행되기 때문에 해당 사용자는 작업 단계를 실행하는 데 필요한 권한과 구성이 있어야 합니다. 예를 들어 드라이브 문자나 UNC(Universal Naming Convention) 경로가 필요한 작업을 만드는 경우 작업 단계는 태스크를 테스트하는 동안 사용자의 Windows 사용자 계정으로 실행됩니다. 그러나 해당 작업 단계의 Windows 사용자도 필요한 권한, 드라이브 문자 구성 또는 필요한 드라이브에 대한 액세스 권한이 있어야 합니다. 그렇지 않으면 작업 단계가 실패합니다. 이런 문제가 발생하지 않도록 각 작업 단계의 프록시에 작업 단계에서 수행하는 태스크에 필요한 권한이 있는지 확인하십시오. 자세한 내용은 [보안 및 보호(데이터베이스 엔진)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)를 참조하세요.  
   
 ## <a name="job-step-logs"></a>작업 단계 로그  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 일부 작업 단계의 출력을 운영 체제 파일이나 msdb 데이터베이스의 sysjobstepslogs 테이블에 기록할 수 있습니다. 다음은 두 대상에 모두 출력을 기록할 수 있는 작업 단계 유형입니다.  
   
 -   실행 프로그램 및 운영 체제 명령  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 데이터를 대량으로 가져오는 데 서식 파일을 사용하는 방법을 보여 줍니다.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 태스크  
   
@@ -96,7 +96,7 @@ sysadmin 고정 서버 역할의 멤버인 사용자가 실행한 작업 단계�
   
 필요에 따라 기존의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 파일을 작업 단계에 대한 명령으로 열 수 있습니다.  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하지 않습니다. 대신에 작업 단계가 작업 단계 소유자의 계정으로 실행되거나 작업 단계 소유자가 sysadmin 고정 서버 역할의 멤버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정으로 실행됩니다. sysadmin 고정 서버 역할의 멤버는 sp_add_jobstep 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *매개 변수를 사용하여* 작업 단계가 다른 사용자의 컨텍스트에서 실행되도록 지정할 수도 있습니다. 자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하지 않습니다. 대신에 작업 단계가 작업 단계 소유자의 계정으로 실행되거나 작업 단계 소유자가 sysadmin 고정 서버 역할의 멤버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정으로 실행됩니다. sysadmin 고정 서버 역할의 멤버는 sp_add_jobstep 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *매개 변수를 사용하여* 작업 단계가 다른 사용자의 컨텍스트에서 실행되도록 지정할 수도 있습니다. 자세한 내용은 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 > [!NOTE]  
 > 단일 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에는 다수의 일괄 처리가 여러 개 포함될 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에는 포함된 GO 명령이 있을 수 있습니다.  
@@ -108,7 +108,7 @@ PowerShell 스크립트 작업 단계를 만들 때 다음 둘 중 하나를 단
   
 -   열려는 기존 PowerShell 스크립트 파일  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 하위 시스템은 PowerShell 세션을 열고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 로드합니다. 작업 단계 명령으로 사용되는 PowerShell 스크립트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 하위 시스템은 PowerShell 세션을 열고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 로드합니다. 작업 단계 명령으로 사용되는 PowerShell 스크립트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인을 사용하여 PowerShell 스크립트를 작성하는 방법에 대한 자세한 내용은 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)을 참조하세요.  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 스크립팅 작업 단계  
   
@@ -172,7 +172,7 @@ Set oServer = nothing
   
 -   실행할 문을 입력합니다. 이 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다.  
   
-MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
+MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
   
 ## <a name="integration-services-packages"></a>Integration Services 패키지  
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 작업 단계를 만들 때는 다음을 수행해야 합니다.  
@@ -217,7 +217,7 @@ SSIS 카탈로그에 패키지를 배포하고 패키지 원본으로 **SSIS 카
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[sysjobstepslogs(Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs(Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [작업 만들기](../../ssms/agent/create-jobs.md)  
-[sp_add_job(Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job(Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

@@ -11,18 +11,18 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753c323030f5d854bba3e0cd7bd985f8fdc90d24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649701"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672802"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
   
- 이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](http://azure.microsoft.com/documentation/articles/powershell-install-configure/)하십시오.  
+ 이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)하십시오.  
   
 > [!IMPORTANT]  
 >  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "47649701"
   
 #### <a name="create-the-azure-blob-container"></a>Azure Blob 컨테이너 만들기  
   
-1.  **Azure 구독:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](http://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](http://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
+1.  **Azure 구독:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
   
 2.  **Azure Storage 계정 만들기:** 이미 저장소 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 저장소 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 저장소 계정을 만듭니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47649701"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     저장소 계정에 대한 자세한 내용은 [Azure Storage 계정](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
+     저장소 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
   
 3.  **백업 파일의 Blob 컨테이너 만들기:** Blob 컨테이너를 Azure 관리 포털에 만들거나 Azure PowerShell을 사용하여 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 저장소 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47649701"
     |**컨테이너 URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS 토큰:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
+     SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>사용 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

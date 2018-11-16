@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a487f7e081d9660f2034d8f6a2e62752bd7bd51
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701964"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "50099597"
     GO  
     ```  
   
-자세한 내용은 [sp_add_category(Transact-SQL)](http://msdn.microsoft.com/6cca32cd-d941-4378-aed6-a7c90cb7520a)를 참조하세요.  
+자세한 내용은 [sp_add_category(Transact-SQL)](https://msdn.microsoft.com/6cca32cd-d941-4378-aed6-a7c90cb7520a)를 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업 범주를 만들려면**  

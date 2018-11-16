@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028204"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812976"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
@@ -98,15 +98,15 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 |부분|설명|
 |----------|-----------------|
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
-|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `http://<computername>/reportserver`, `http://localhost/reportserver` 또는`http://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
+|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는`https://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 웹 포털을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|
 |가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer 형식, 웹 포털의 경우 Reports 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 웹 포털의 기본 가상 디렉터리는 **reports**입니다.|
 
 전체 URL 문자열의 예는 다음과 같습니다.
 
-- `http://+:80/reportserver`, 보고서 서버에 대한 액세스를 제공합니다.
+- `https://+:80/reportserver`, 보고서 서버에 대한 액세스를 제공합니다.
 
-- `http://+:80/reports`, 웹 포털에 대한 액세스를 제공합니다.
+- `https://+:80/reports`, 웹 포털에 대한 액세스를 제공합니다.
 
 ## <a name="firewall"></a>방화벽
 

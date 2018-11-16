@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825921"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664992"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>데이터 계층 응용 프로그램 프레임워크 - 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47825921"
     -   소프트웨어나 본 계약서를 제3자에게 양도하는 행위, 또는  
     -   상업용 소프트웨어 호스팅 서비스에 소프트웨어를 사용하는 행위  
       
-4.  **제3자 통지.** 본 소프트웨어에는 제3자가 아닌 Microsoft가 본 계약에 명시된 조항에 따라 귀하에게 라이선스를 허여한 제3자 코드가 포함되어 있을 수 있습니다. 제3자 코드는 정보 제공을 목적으로 포함되어 있습니다. 또한 이 소프트웨어에 연결되어 있거나 이 소프트웨어에서 호출 또는 참조되는 제3자 스크립트는 Microsoft가 아니라 그러한 코드를 소유하는 제3자에 의해 귀하에게 라이선스가 부여됩니다. ASP.NET Ajax CDN 사용 약관(http://www.asp.net/ajaxlibrary/CDN.ashx)을 참조하세요.  
+4.  **제3자 통지.** 본 소프트웨어에는 제3자가 아닌 Microsoft가 본 계약에 명시된 조항에 따라 귀하에게 라이선스를 허여한 제3자 코드가 포함되어 있을 수 있습니다. 제3자 코드는 정보 제공을 목적으로 포함되어 있습니다. 또한 이 소프트웨어에 연결되어 있거나 이 소프트웨어에서 호출 또는 참조되는 제3자 스크립트는 Microsoft가 아니라 그러한 코드를 소유하는 제3자에 의해 귀하에게 라이선스가 부여됩니다. ASP.NET Ajax CDN 사용 약관(https://www.asp.net/ajaxlibrary/CDN.ashx)을 참조하세요.  
   
 5.  **백업 복사본.** 소프트웨어의 백업 복사본을 하나 만들 수 있습니다. 이 백업 복사본은 소프트웨어를 다시 설치할 때만 사용할 수 있습니다.  
   

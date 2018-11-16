@@ -20,12 +20,12 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ba4b5ba58034a47f289fb0230dd64cf57e0adcc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a9ca973b09dbadc4ab59219d8d916953ef318c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703831"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47793141"
  FCI는 [가용성 그룹](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 활용하여 데이터베이스 수준에서 원격 재해 복구 기능을 제공할 수 있습니다. 자세한 내용은 [장애 조치(Failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter Edition에서는 S2D(저장소 공간 다이렉트) 지원이 도입되었습니다. SQL Server 장애 조치(Failover) 클러스터 인스턴스는 클러스터 저장소 리소스에 대해 S2D를 지원합니다. 자세한 내용은 [Windows Server 2016의 저장소 공간 다이렉트](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)를 참조하세요.
+ > Windows Server 2016 Datacenter Edition에서는 S2D(저장소 공간 다이렉트) 지원이 도입되었습니다. SQL Server 장애 조치(Failover) 클러스터 인스턴스는 클러스터 저장소 리소스에 대해 S2D를 지원합니다. 자세한 내용은 [Windows Server 2016의 저장소 공간 다이렉트](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)를 참조하세요.
  > 
- >장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)도 지원합니다. 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](http://technet.microsoft.com/library/dd759255.aspx)을 참조하세요. 
+ >장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)도 지원합니다. 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](https://technet.microsoft.com/library/dd759255.aspx)을 참조하세요. 
    
  **항목 내용:**  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47793141"
 |----------------------------|---------------|  
 |새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI를 설치하는 방법을 설명합니다.|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 장애 조치(failover) 클러스터를 업그레이드하는 방법을 설명합니다.|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(Failover) 클러스터 개요](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(Failover) 클러스터 개요](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |FCI의 노드와 가용성 그룹 내 복제본 간의 개념적인 차이를 설명하고 FCI를 사용하여 가용성 그룹을 위한 복제본을 호스팅할 때 고려해야 할 사항에 대해 설명합니다.|[장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

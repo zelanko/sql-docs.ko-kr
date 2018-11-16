@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657612"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Transact-SQL 계산을 많이 처리하는 시스템도 적합합니다.
   
   
 > [!NOTE]
-> 메모리 내 기능에 대한 동영상(2분 소요)은 [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)(Azure SQL 데이터베이스 - 메모리 내 기술)에서 확인할 수 있습니다. 이 동영상은 2015년 12월에 발표되었습니다.  
+> 메모리 내 기능에 대한 동영상(2분 소요)은 [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)(Azure SQL 데이터베이스 - 메모리 내 기술)에서 확인할 수 있습니다. 이 동영상은 2015년 12월에 발표되었습니다.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 네이티브 UDF의 성능에 대한 테스트 데이터 및 설명은 다음을 참조하세요.  
   
   - [SQL Server 2016에서 네이티브 컴파일 UDF로 RBAR 영향 완화](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [고유하게 컴파일된 사용자 정의 함수](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) 블로그 게시물, 2016년 1월 Gail Shaw 작성  
+  - [고유하게 컴파일된 사용자 정의 함수](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) 블로그 게시물, 2016년 1월 Gail Shaw 작성  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   - [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다.  
   - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션 지원   
-- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - 메모리 최적화 테이블에서 사용하는 저장소는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
 - [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 메모리 최적화 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  

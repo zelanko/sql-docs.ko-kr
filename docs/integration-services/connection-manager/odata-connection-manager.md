@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667281"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641837"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
  OData 연결 관리자를 사용하여 OData 데이터 원본에 연결합니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 데이터 원본에 연결하고 서비스에서 데이터를 사용합니다. 자세한 내용은 [OData Source](../../integration-services/data-flow/odata-source.md)를 참조하십시오.  
@@ -74,7 +74,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
  연결 관리자의 이름입니다.  
   
  **서비스 문서 위치**  
- OData 서비스의 URL입니다. 예를 들어 http://services.odata.org/V3/Northwind/Northwind.svc/을 참조하십시오.  
+ OData 서비스의 URL입니다. 예를 들어 https://services.odata.org/V3/Northwind/Northwind.svc/을 참조하십시오.  
   
  **인증**  
 다음 옵션 중 하나를 선택합니다.

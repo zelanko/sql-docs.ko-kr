@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674122"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47809714"
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 최적화 테이블의 사용 지침에 대해 설명합니다.|  
 |[메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|메모리 최적화 테이블을 만들고 사용하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
 |[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|  
-|[메모리 액세스에 최적화된 테이블 변수](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|기존의 테이블 변수 대신 메모리 최적화 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
-|[메모리 액세스에 최적화된 테이블의 인덱스](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|메모리 최적화 인덱스를 소개합니다.|  
+|[메모리 액세스에 최적화된 테이블 변수](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|기존의 테이블 변수 대신 메모리 최적화 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
+|[메모리 액세스에 최적화된 테이블의 인덱스](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|메모리 최적화 인덱스를 소개합니다.|  
 |[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|  
-|[메모리 내 OLTP의 메모리 관리](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
+|[메모리 내 OLTP의 메모리 관리](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
 |[메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 최적화 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
-|[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|메모리 최적화 테이블의 백업, 복원 및 복구를 논의합니다.|  
+|[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|메모리 최적화 테이블의 백업, 복원 및 복구를 논의합니다.|  
 |[메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]지원을 논의합니다.|  
 |[메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 가용성 그룹 및 장애 조치(failover) 클러스터링을 논의합니다.|  
 |[메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|메모리 최적화 테이블을 지원하는 새 구문/기능과 업데이트된 구문/기능을 나열합니다.|  
@@ -79,13 +79,13 @@ ms.locfileid: "47809714"
 
 -   [SQL Server 메모리 내 OLTP 내부 기술 백서](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [SQL Server 메모리 내 OLTP와 Columnstore 기능 비교](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [SQL Server 메모리 내 OLTP와 Columnstore 기능 비교](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   SQL Server 2016의 메모리 내 OLTP에 대한 새로운 기능 [1부](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) 및 [2부](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [메모리 내 OLTP 블로그](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [메모리 내 OLTP 블로그](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 기능](../../relational-databases/database-features.md)  

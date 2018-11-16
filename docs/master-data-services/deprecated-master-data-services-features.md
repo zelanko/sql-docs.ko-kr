@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 75cdf58cfe2c5ca7c71654133626700a3ca36db9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9a151f0336e1a411f0bde8b905608349efefb56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798718"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701881"
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
 
@@ -54,7 +54,7 @@ ms.locfileid: "47798718"
 * [멤버 수정 기록](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](http://go.microsoft.com/fwlink/p/?LinkId=615373)  
+ msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](https://go.microsoft.com/fwlink/p/?LinkId=615373)  
   
 ## <a name="see-also"></a>참고 항목  
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  

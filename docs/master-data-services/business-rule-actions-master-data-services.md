@@ -12,12 +12,12 @@ ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696601"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47694191"
 |---------------------|-----------------|  
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**잘못됨**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
-|**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
+|**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
 |**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 이 동작을 필수 조건과 함께 사용하면 구독 시스템의 인덱스 필드 유효성을 확인할 수 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.<br /><br /> **참고**: 첫 번째 특성이 날짜/시간 형식이면 숫자 또는 텍스트 형식의 특성과 함께 사용할 수 없습니다. 첫 번째 특성이 숫자 형식이면 날짜/시간 형식의 특성과 함께 사용할 수 없습니다.|  
 |**다음 값 중 하나가 있어야 함**|선택한 특성에 목록에 지정된 **값 중 하나가 있어야** 합니다.<br /><br /> 이 동작은 텍스트 값에 유효합니다.|  
 |**보다 커야 함**|선택한 특성이 특정 특성 또는 특정 특성 값 **보다 크거나** , 비어 있어야 합니다.<br /><br /> 이 동작은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "47694191"
   
 |동작 이름|설명|  
 |-----------------|-----------------|  
-|**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](http://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](https://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   

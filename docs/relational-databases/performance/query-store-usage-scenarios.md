@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcea20d707eb04922efc9a12fb81335ef48f9378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654251"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673832"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47654251"
   
 -   부담이 큰 쿼리에서 참조하는 테이블에 누락된 인덱스 만들기  
   
--   행 수준 보안을 위한 보안 정책 적용. 자세한 내용은 [쿼리 저장소를 사용하여 행 수준 보안 최적화](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)를 참조하세요.  
+-   행 수준 보안을 위한 보안 정책 적용. 자세한 내용은 [쿼리 저장소를 사용하여 행 수준 보안 최적화](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)를 참조하세요.  
   
 -   OLTP 응용 프로그램에서 자주 수정되는 테이블에 임시 시스템 버전 추가  
   

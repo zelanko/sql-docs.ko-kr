@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 21745dae4137bd96fff43b48bf794cf1b67519e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72cb156eca1c69785e16e6875a517b2d99922d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803311"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603253"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
 
@@ -43,7 +43,7 @@ SysPrep을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 - Windows 시스템 준비 도구(또는 Windows SysPrep)와 함께 사용하면 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 포함하여 원본 컴퓨터에서 운영 체제 이미지를 만들 수 있습니다. 그런 다음 이 운영 체제 이미지를 여러 컴퓨터에 배포할 수 있습니다. 운영 체제 구성을 완료한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 이미지 완료 단계를 사용하여 준비 인스턴스를 구성할 수 있습니다.  
   
-    Windows SysPrep 도구는 Windows 운영 체제 이미지를 준비하는 데 사용됩니다. 이 도구는 조직에 배포할 운영 체제의 사용자 지정 이미지를 캡처하는 데 사용됩니다. SysPrep 및 용도에 대한 자세한 내용은 [Sysprep이란?](http://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)을 참조하십시오.  
+    Windows SysPrep 도구는 Windows 운영 체제 이미지를 준비하는 데 사용됩니다. 이 도구는 조직에 배포할 운영 체제의 사용자 지정 이미지를 캡처하는 데 사용됩니다. SysPrep 및 용도에 대한 자세한 내용은 [Sysprep이란?](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)을 참조하십시오.  
   
 ## <a name="installation-media-considerations"></a>설치 미디어 고려 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전체 버전을 사용하는 경우 다음 사항을 고려하십시오.  

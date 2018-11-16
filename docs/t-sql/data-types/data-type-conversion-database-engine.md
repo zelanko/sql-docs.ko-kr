@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2556b7c0e6c7bbbc4d25821a54a627263b3a3d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb50e72c96f69b58dcae48a30cd4b29994ba9e44
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819491"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697761"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**float**|**Double**|  
 |**real**|**단일**|  
 |**money**, **smallmoney**|**Currency**|  
-|**datetime**, **smalldatetime**|**날짜**|  
+|**datetime**, **smalldatetime**|**Date**|  
 |NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
   
 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열은 **Byte(*길이*** 0에서 1**까지)** 의 범위를 갖습니다. 여기서 *길이*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **binary**, **varbinary** 또는 **이미지** 값에서 바이트 수를 말합니다.
@@ -109,7 +109,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**Currency**|**money**|  
-|**날짜**|**datetime**|  
+|**Date**|**datetime**|  
 |4000자 이하의 **문자열**|**varchar**/**nvarchar**|  
 |4000자를 초과하는 **문자열**|**text**/**ntext**|  
 |8000바이트 이하의 1차원 **Byte()** 배열|**varbinary**|  
@@ -119,6 +119,6 @@ CAST ( $157.27 AS VARCHAR(10) )
 [OLE 자동화 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

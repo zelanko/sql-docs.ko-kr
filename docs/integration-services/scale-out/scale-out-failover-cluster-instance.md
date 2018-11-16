@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1e3aa4a72623e986a4e5a6494829f7e7a53d9cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668641"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640450"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 Scale Out 지원
 
 SQL Server 장애 조치(failover) 클러스터 인스턴스로 Scale Out 마스터 쪽에서 고가용성을 설정하려면 다음을 수행합니다.
 
 ## <a name="1-prerequisites"></a>1. 사전 요구 사항
-Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.
+Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. SQL Server 장애 조치(failover) 클러스터 설치
 SQL Server 장애 조치(failover) 클러스터를 설치합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)를 참조하세요. 설치하는 동안 기능 선택 페이지에서 데이터베이스 엔진 서비스를 선택합니다. 나중에 구성할 수 있도록 SQL Server 네트워크 이름을 기록합니다.

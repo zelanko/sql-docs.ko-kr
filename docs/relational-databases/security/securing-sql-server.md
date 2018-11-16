@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663302"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [웹 사이트에서](http://go.microsoft.com/fwlink/?LinkID=31629) 보안에 대한 자세한 정보를 확인할 수 있습니다. 여기에는 최선의 구현 방법 안내와 보안 검사 목록도 포함되어 있습니다. 이 사이트에는 최신 서비스 팩 정보 및 다운로드도 포함되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [웹 사이트에서](https://go.microsoft.com/fwlink/?LinkID=31629) 보안에 대한 자세한 정보를 확인할 수 있습니다. 여기에는 최선의 구현 방법 안내와 보안 검사 목록도 포함되어 있습니다. 이 사이트에는 최신 서비스 팩 정보 및 다운로드도 포함되어 있습니다.  
   
 ## <a name="platform-and-network-security"></a>플랫폼 및 네트워크 보안  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 플랫폼에는 클라이언트를 데이터베이스 서버에 연결하는 물리적 하드웨어와 네트워킹 시스템 및 데이터베이스 요청을 처리하는 데 사용되는 이진 파일이 포함되어 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "47760801"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일|[SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 향상된 보안 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 최신 서비스 팩을 확인하려면 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) 웹 사이트를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 향상된 보안 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 최신 서비스 팩을 확인하려면 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 웹 사이트를 참조하십시오.  
   
  다음 스크립트를 사용하여 시스템에 설치된 서비스 팩을 확인할 수 있습니다.  
   
@@ -125,7 +125,7 @@ GO
   
 |내용|참조 항목|  
 |---------------------------|---------|  
-|다음 연결, 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|다음 연결, 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 및 명령 프롬프트에서 쿼리 실행|[sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)|  
 |다음 네트워크 구성 및 제어: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)|  
 |정책 기반 관리를 사용하여 기능 설정 및 해제|[정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>관련 내용  
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 2012 보안 모범 사례 - 운영 및 관리 태스크](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[SQL Server 2012 보안 모범 사례 - 운영 및 관리 태스크](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server 보안 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [보안 모범 사례 및 레이블 보안 백서](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [행 수준 보안](../../relational-databases/security/row-level-security.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020377"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814176"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |보고서 서버 카탈로그||  
 |보고서 서버 청크||  
 |보고서 서버 정리||  
-|보고서 서버 구성 관리자|샘플 항목:<br /><br /> MediumUsing 보고서 서버 내부 url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing 또는 잘못된 ExtendedProtectionLevel 설정|  
+|보고서 서버 구성 관리자|샘플 항목:<br /><br /> MediumUsing 보고서 서버 내부 url `https://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing 또는 잘못된 ExtendedProtectionLevel 설정|  
 |보고서 서버 암호화||  
 |보고서 서버 데이터 확장 프로그램||  
 |보고서 서버 DB 폴링||  

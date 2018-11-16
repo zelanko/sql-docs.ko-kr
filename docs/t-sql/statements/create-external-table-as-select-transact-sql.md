@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254459"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697211"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   외부 파티션 이동  
   
- **적용 대상:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로서, 어플라이언스 관리자는 Hadoop 연결을 구성해야 합니다. 자세한 내용은 [여기](http://www.microsoft.com/download/details.aspx?id=48241)서 다운로드할 수 있는 APS 설명서의 외부 데이터 연결 구성(분석 플랫폼 시스템)을 참조하세요.  
+ **적용 대상:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]외부 테이블을 만들기 위한 필수 구성 요소로서, 어플라이언스 관리자는 Hadoop 연결을 구성해야 합니다. 자세한 내용은 [여기](https://www.microsoft.com/download/details.aspx?id=48241)서 다운로드할 수 있는 APS 설명서의 외부 데이터 연결 구성(분석 플랫폼 시스템)을 참조하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  외부 테이블 데이터는 데이터베이스 외부에 상주하므로 백업 및 복원 작업은 데이터베이스에 저장된 데이터에 대해서만 작동합니다. 즉, 메타데이터만 백업 및 복원됩니다.  

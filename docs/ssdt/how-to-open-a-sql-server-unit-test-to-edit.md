@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787431"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659069"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>방법: 편집할 SQL Server 단위 테스트 열기
 SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 디자이너**를 사용하여 Transact\-SQL 문과 테스트 조건을 추가합니다. 디자이너를 사용하여 만든 테스트는 Visual C# 또는 Visual Basic 코드를 생성합니다. 이 코드는 테스트를 실행할 때 실행됩니다.  
   
-테스트가 만족스러운 경우 테스트를 있는 그대로 실행할 수 있습니다. 이 단위 테스트에 기능을 더 추가하려면 테스트의 코드를 편집하면 됩니다. 이 코드는 테스트 프로젝트의 .cs 또는.vb 파일에 있습니다. 자세한 내용은 [SQL Server 단위 테스트 파일](../ssdt/sql-server-unit-test-files.md)을 참조하세요. 새 테스트 조건을 만들어 테스트를 사용자 지정할 수도 있습니다. 자세한 내용은 [방법: 데이터베이스 단위 테스트 디자이너용 테스트 조건 만들기(Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx)를 참조하세요.  
+테스트가 만족스러운 경우 테스트를 있는 그대로 실행할 수 있습니다. 이 단위 테스트에 기능을 더 추가하려면 테스트의 코드를 편집하면 됩니다. 이 코드는 테스트 프로젝트의 .cs 또는.vb 파일에 있습니다. 자세한 내용은 [SQL Server 단위 테스트 파일](../ssdt/sql-server-unit-test-files.md)을 참조하세요. 새 테스트 조건을 만들어 테스트를 사용자 지정할 수도 있습니다. 자세한 내용은 [방법: 데이터베이스 단위 테스트 디자이너용 테스트 조건 만들기(Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx)를 참조하세요.  
   
 > [!NOTE]  
 > .cs 또는 .vb 파일을 편집하여 테스트 메서드를 삭제하더라도 **SQL Server 단위 테스트 디자이너**에는 해당 테스트 메서드가 여전히 나타납니다. 테스트 클래스의 InitializeComponent 메서드에는 여전히 해당 테스트의 멤버 변수가 포함되어 있기 때문에 이러한 상황이 발생합니다. 디자이너에 테스트가 나타나더라도 해당 테스트의 코드는 더 이상 존재하지 않으므로 해당 테스트를 실행할 수는 없습니다. 이 테스트의 테스트 메서드를 다시 생성하려면 편집기에서 Transact\-SQL을 편집한 후 .cs 또는 .vb 테스트 파일을 저장하거나 테스트 프로젝트를 다시 빌드합니다.  

@@ -23,19 +23,19 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4843f3085b409ef1c34096e040c92be8cd8c744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711001"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696631"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 모든 데이터베이스의 트랜잭션 로그 공간 사용량 통계를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대기 및 래치 통계를 다시 설정하는데 사용할 수도 있습니다.
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서 미리 보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 ## <a name="examples"></a>예  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>1. 모든 데이터베이스에 대한 로그 공간 정보 표시  
-다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 포함된 모든 데이터베이스에 대한 `LOGSPACE` 정보를 표시합니다.
+다음 예에서는 `LOGSPACE` 인스턴스에 포함된 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정보를 표시합니다.
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

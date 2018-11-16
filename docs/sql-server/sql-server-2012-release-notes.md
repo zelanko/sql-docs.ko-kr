@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e9539302dfa2bfdd13c55cd9d06544e5a55a6d5d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703941"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](http://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
+이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](https://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
   
-SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 정보를 참조하십시오. 추가 정보 문서는 설치 미디어에 포함되어 있거나 [추가 정보](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 다운로드 페이지에서 다운로드할 수 있습니다. 또한 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=190948) 및 [SQL Server 포럼](http://go.microsoft.com/fwlink/?LinkId=213599)에서 자세한 내용을 볼 수 있습니다.  
+SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 정보를 참조하십시오. 추가 정보 문서는 설치 미디어에 포함되어 있거나 [추가 정보](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 다운로드 페이지에서 다운로드할 수 있습니다. 또한 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=190948) 및 [SQL Server 포럼](https://go.microsoft.com/fwlink/?LinkId=213599)에서 자세한 내용을 볼 수 있습니다.  
   
 ## <a name="Install"></a>1.0 시작하기 전  
 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 설치하기 전에 다음 정보를 고려하십시오.  
@@ -75,7 +75,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 네트워크 이름을 바꾼 후 SQL Server 2008, 2008 R2 Analysis Services 장애 조치(Failover) 클러스터가 SQL Server 2012로 업그레이드되지 않을 수 있음  
 **문제:** Windows 클러스터 관리 도구를 사용하여 Microsoft SQL Server 2008 또는 Microsoft SQL Server 2008 R2 Analysis Services 장애 조치(Failover) 클러스터의 네트워크 이름을 변경하고 나면 업그레이드 작업에 실패할 수도 있습니다.  
   
-**해결 방법:** 이 문제를 해결하려면 [기술 자료 문서](http://support.microsoft.com/kb/955784)의 해결 방법 섹션에 있는 지침에 따라 ClusterName 레지스트리 항목을 업데이트하세요.  
+**해결 방법:** 이 문제를 해결하려면 [기술 자료 문서](https://support.microsoft.com/kb/955784)의 해결 방법 섹션에 있는 지침에 따라 ClusterName 레지스트리 항목을 업데이트하세요.  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 Windows Server 2008 R2 Server Core 서비스 팩 1에서 SQL Server 2012 설치  
 Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니다. 단, 다음과 같은 제한 사항이 있습니다.  
@@ -88,14 +88,14 @@ Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니�
   
 -   Microsoft SQL Server 2012는 Windows Server 2008 R2 Server Core SP1을 실행하는 컴퓨터에서 이전 버전의 SQL Server와 함께 설치할 수 없습니다.  
   
--   SQL Server 2012의 일부 기능은 Server Core 운영 체제에서 지원되지 않습니다. 지원되는 기능 및 Server Core에 SQL Server 2012 설치에 대한 자세한 내용은 [Server Core에 SQL Server 2012 설치](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)를 참조하세요.  
+-   SQL Server 2012의 일부 기능은 Server Core 운영 체제에서 지원되지 않습니다. 지원되는 기능 및 Server Core에 SQL Server 2012 설치에 대한 자세한 내용은 [Server Core에 SQL Server 2012 설치](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx)를 참조하세요.  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 의미 체계 검색을 위한 추가 종속성 설치  
 **문제:** 통계 의미 체계 검색에는 의미 체계 언어 통계 데이터베이스라고 하는 추가적인 필수 구성 요소가 있으며, 이는 SQL Server 설치 프로그램으로 설치되지 않습니다.  
   
 **해결 방법:** 의미 체계 언어 통계 데이터베이스를 의미 체계 인덱싱을 위한 필수 구성 요소로 설정하려면 다음 태스크를 수행합니다.  
   
-1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(http://go.microsoft.com/fwlink/?LinkId=221787))에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
+1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(https://go.microsoft.com/fwlink/?LinkId=221787))에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
   
 2.  데이터베이스를 적절한 데이터 폴더로 이동합니다. 데이터베이스를 기본 위치에 두는 경우 연결하기 전에 권한을 변경해야 합니다.  
   
@@ -156,7 +156,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **배포 이미지 서비스 및 관리(DISM.exe)를 사용하여 .NET Framework 3.5 SP1을 활성화할 수 있습니다.**  
   
-        배포 이미지 서비스 및 관리(DISM.exe)를 사용하여 .NET Framework 3.5 SP1을 활성화할 수도 있습니다. Windows 기능을 온라인으로 사용하도록 설정하는 방법은 [Windows 기능을 온라인으로 사용하거나 사용하지 않도록 설정](http://technet.microsoft.com/library/dd744582(WS.10).aspx)을 참조하세요. 다음은 .NET Framework 3.5 SP1 활성화 지침입니다.  
+        배포 이미지 서비스 및 관리(DISM.exe)를 사용하여 .NET Framework 3.5 SP1을 활성화할 수도 있습니다. Windows 기능을 온라인으로 사용하도록 설정하는 방법은 [Windows 기능을 온라인으로 사용하거나 사용하지 않도록 설정](https://technet.microsoft.com/library/dd744582(WS.10).aspx)을 참조하세요. 다음은 .NET Framework 3.5 SP1 활성화 지침입니다.  
   
         1.  명령 프롬프트에 다음 명령을 입력하여 운영 체제에서 사용할 수 있는 모든 기능을 나열합니다.  
   
@@ -182,17 +182,17 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   Visual Studio 구성 요소가 올바르게 설치될 수 있도록 하려면 SQL Server에서 업데이트를 설치해야 합니다. SQL Server 설치 프로그램에서 이 업데이트가 있는지 확인한 다음 SQL Server 설치를 계속하기 전에 업데이트를 다운로드하고 설치해야 합니다. SQL Server를 설치하는 동안 작업이 중단되는 것을 방지하려면 아래에 설명된 대로 SQL Server 설치 프로그램을 실행하기 전에 업데이트를 다운로드하고 설치할 수 있습니다(또는 Windows Update에 사용 가능한 .NET Framework 3.5 SP1의 모든 업데이트를 설치할 수 있습니다).  
   
-    -   Windows Vista SP2 또는 Windows Server 2008 SP2 운영 체제가 설치된 컴퓨터에 SQL Server 2012를 설치하는 경우 필요한 업데이트를 [여기](http://support.microsoft.com/?kbid=956250)에서 얻을 수 있습니다.  
+    -   Windows Vista SP2 또는 Windows Server 2008 SP2 운영 체제가 설치된 컴퓨터에 SQL Server 2012를 설치하는 경우 필요한 업데이트를 [여기](https://support.microsoft.com/?kbid=956250)에서 얻을 수 있습니다.  
   
     -   Windows 7 SP1 또는 Windows Server 2008 R2 SP1 운영 체제가 설치된 컴퓨터에 SQL Server 2012를 설치하는 경우 컴퓨터에 이 업데이트가 이미 설치되어 있습니다.  
   
--   Windows PowerShell 2.0은 SQL Server 2012 데이터베이스 엔진 구성 요소 및 SQL Server Management Studio를 설치하기 위한 필수 구성 요소이지만 Windows PowerShell은 더 이상 SQL Server 설치 프로그램으로 설치되지 않습니다. PowerShell 2.0이 컴퓨터에 설치되어 있지 않은 경우 [Windows 관리 프레임워크](http://support.microsoft.com/kb/968929) 페이지에 나오는 지침에 따라 PowerShell 2.0을 사용하도록 설정할 수 있습니다. Windows PowerShell 2.0을 얻는 방법은 실행 중인 운영 체제에 따라 달라집니다.  
+-   Windows PowerShell 2.0은 SQL Server 2012 데이터베이스 엔진 구성 요소 및 SQL Server Management Studio를 설치하기 위한 필수 구성 요소이지만 Windows PowerShell은 더 이상 SQL Server 설치 프로그램으로 설치되지 않습니다. PowerShell 2.0이 컴퓨터에 설치되어 있지 않은 경우 [Windows 관리 프레임워크](https://support.microsoft.com/kb/968929) 페이지에 나오는 지침에 따라 PowerShell 2.0을 사용하도록 설정할 수 있습니다. Windows PowerShell 2.0을 얻는 방법은 실행 중인 운영 체제에 따라 달라집니다.  
   
     -   Windows Server 2008 – Windows PowerShell 1.0은 기능이며 추가할 수 있습니다. Windows PowerShell 2.0 버전은 다운로드하여 설치합니다(OS 패치로 유효함).  
   
     -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0은 기본적으로 설치됩니다.  
   
--   SharePoint 환경에서 SQL Server 2012의 기능을 사용하려는 경우 SharePoint Server 2010 SP1(서비스 팩 1) 및 SharePoint 8월 누적 업데이트가 필요합니다. SQL Server 2012 기능을 팜에 추가하기 전에 SP1 및 SharePoint [8월 누적 업데이트](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)를 설치하고 서버 팜을 완전히 패치해야 합니다. 이러한 요구 사항은 다음의 SQL Server 2012 기능에 적용됩니다. 팜의 데이터베이스 서버로 데이터베이스 엔진의 인스턴스 사용, SharePoint용 PowerPivot 구성 또는 SharePoint 모드에서 Reporting Services 배포에 적용됩니다.  
+-   SharePoint 환경에서 SQL Server 2012의 기능을 사용하려는 경우 SharePoint Server 2010 SP1(서비스 팩 1) 및 SharePoint 8월 누적 업데이트가 필요합니다. SQL Server 2012 기능을 팜에 추가하기 전에 SP1 및 SharePoint [8월 누적 업데이트](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)를 설치하고 서버 팜을 완전히 패치해야 합니다. 이러한 요구 사항은 다음의 SQL Server 2012 기능에 적용됩니다. 팜의 데이터베이스 서버로 데이터베이스 엔진의 인스턴스 사용, SharePoint용 PowerPivot 구성 또는 SharePoint 모드에서 Reporting Services 배포에 적용됩니다.  
   
 ### <a name="18-supported-operating-systems-for-sql-server-2012"></a>1.8 SQL Server 2012에서 지원되는 운영 체제  
 SQL Server 2012는 Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1 및 Windows 7 SP1 운영 체제에서 지원됩니다.  
@@ -200,7 +200,7 @@ SQL Server 2012는 Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 S
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework가 설치 패키지에 포함되지 않음  
 **문제:** Sync Framework가 SQL Server 2012 설치 패키지에 포함되어 있지 않습니다.  
   
-**해결 방법:** [Microsoft 다운로드 센터 페이지](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)에서 적합한 Sync Framework 버전을 다운로드할 수 있습니다.  
+**해결 방법:** [Microsoft 다운로드 센터 페이지](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)에서 적합한 Sync Framework 버전을 다운로드할 수 있습니다.  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Visual Studio 2010 서비스 팩 1이 제거된 경우 SQL Server 2012 인스턴스를 복구하여 특정 구성 요소를 복원해야 함  
 **문제:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치는 Visual Studio 2010 서비스 팩 1의 일부 구성 요소에 종속되어 있습니다. 서비스 팩 1을 제거하면 공유 구성 요소 중 일부가 원래 버전으로 다운그레이드되고 몇몇 다른 구성 요소가 컴퓨터에서 완전히 제거됩니다.  
@@ -230,7 +230,7 @@ SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [�
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**해결 방법**: 운영 체제를 업그레이드한 후 .NET Framework 4 설치를 복구합니다. 자세한 내용은 [.NET Framework의 기존 설치를 복구하는 방법](http://support.microsoft.com/kb/306160)을 참조하세요.  
+**해결 방법**: 운영 체제를 업그레이드한 후 .NET Framework 4 설치를 복구합니다. 자세한 내용은 [.NET Framework의 기존 설치를 복구하는 방법](https://support.microsoft.com/kb/306160)을 참조하세요.  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server 버전을 업그레이드하려면 다시 시작해야 함  
 **문제**: SQL Server 2012 인스턴스 버전을 업그레이드하는 경우 새 버전과 관련된 일부 기능이 즉시 활성화되지 않을 수 있습니다.  
@@ -313,7 +313,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 2.  IPv6용 포트에 대해 보안 ACL을 설정하고 관리 CMD 창에서 다음을 실행합니다.  
   
     ```  
-    netsh http add urlacl url=http://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
+    netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
@@ -323,12 +323,12 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 DQS는 클러스터에서 지원되지 않음  
 **문제:** DQS는 SQL Server 클러스터 설치에서 지원되지 않습니다. SQL Server의 클러스터 인스턴스를 설치하려는 경우 **기능 선택** 페이지에서 **Data Quality Services** 및 **Data Quality Client** 확인란을 선택하지 않아야 합니다. 클러스터 인스턴스를 설치할 때 이 확인란을 선택하고 DQSInstaller.exe 파일을 실행하여 Data Quality 서버 설치를 완료하면 DQS가 이 노드에 설치되지만 클러스터에 노드를 추가할 경우 추가 노드에서 DQS를 사용할 수 없으므로 추가 노드에서 DQS가 작동하지 않습니다.  
   
-**해결 방법:** 이 문제를 해결하려면 SQL Server 2012 누적 업데이트 1을 설치합니다. 자세한 내용은 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)을 참조하세요.  
+**해결 방법:** 이 문제를 해결하려면 SQL Server 2012 누적 업데이트 1을 설치합니다. 자세한 내용은 [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)을 참조하세요.  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Data Quality 서버를 다시 설치하려면 Data Quality 서버를 제거한 후 DQS 개체 삭제하기  
 **문제:** Data Quality 서버를 제거하는 경우 SQL Server 인스턴스에서 DQS 개체(DQS 데이터베이스, DQS 로그인 및 DQS 저장 프로시저)가 삭제되지 않습니다.  
   
-**해결 방법:** Data Quality 서버를 동일한 컴퓨터 및 동일한 SQL Server 인스턴스에 다시 설치하려면 SQL Server 인스턴스에서 DQS 개체를 수동으로 삭제해야 합니다. 또한, Data Quality 서버를 다시 설치하기 전에 컴퓨터의 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 폴더에서 DQS 데이터베이스(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA) 파일을 삭제해야 합니다. 그렇지 않으면 Data Quality 서버 설치가 실패합니다. 기술 자료나 데이터 품질 프로젝트와 같은 데이터를 보존하려면 데이터베이스 파일을 삭제하지 말고 이동합니다. 제거 프로세스 완료 후 DQS 개체 제거에 대한 자세한 내용은 [Data Quality 서버 개체 제거](http://msdn.microsoft.com/library/hh231667.aspx)를 참조하세요.  
+**해결 방법:** Data Quality 서버를 동일한 컴퓨터 및 동일한 SQL Server 인스턴스에 다시 설치하려면 SQL Server 인스턴스에서 DQS 개체를 수동으로 삭제해야 합니다. 또한, Data Quality 서버를 다시 설치하기 전에 컴퓨터의 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 폴더에서 DQS 데이터베이스(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA) 파일을 삭제해야 합니다. 그렇지 않으면 Data Quality 서버 설치가 실패합니다. 기술 자료나 데이터 품질 프로젝트와 같은 데이터를 보존하려면 데이터베이스 파일을 삭제하지 말고 이동합니다. 제거 프로세스 완료 후 DQS 개체 제거에 대한 자세한 내용은 [Data Quality 서버 개체 제거](https://msdn.microsoft.com/library/hh231667.aspx)를 참조하세요.  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 종료된 기술 자료 검색 또는 대화형 정리 작업에 대한 메시지가 지연됨  
 **문제:** 관리자가 작업 모니터링 화면에서 작업을 종료하면 기술 자료 검색, 도메인 관리 또는 대화형 정리 작업을 실행 중인 대화형 사용자는 그 다음 작업을 수행할 때까지 자신의 작업이 종료되었다는 메시지를 받지 않게 됩니다.  
@@ -488,7 +488,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 **해결 방법:** 없습니다.  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn 가용성 그룹  
-가용성 그룹을 만들기 전에 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)에 대한 사전 요구 사항, 제한 사항 및 권장 사항](http://go.microsoft.com/?linkid=9753168) 을 참조하세요. AlwaysOn 가용성 그룹에 대한 소개는 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)](http://go.microsoft.com/?linkid=9753166)을 참조하세요.  
+가용성 그룹을 만들기 전에 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)에 대한 사전 요구 사항, 제한 사항 및 권장 사항](https://go.microsoft.com/?linkid=9753168) 을 참조하세요. AlwaysOn 가용성 그룹에 대한 소개는 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)](https://go.microsoft.com/?linkid=9753166)을 참조하세요.  
   
 #### <a name="571-client-connectivity-for-alwayson-availability-groups"></a>5.7.1 AlwaysOn 가용성 그룹의 클라이언트 연결  
 **업데이트한 날짜:** 2012년 8월 13일  
@@ -503,13 +503,13 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
-|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|사용자 계정 컨트롤|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|예|  
+|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
+|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
   
-**\&#42;** .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치 다운로드:  
+**\&#42;** .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치 다운로드:  
   
-**\&#42;\&#42;**.NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치 다운로드:  
+**\&#42;\&#42;**.NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치 다운로드:  
   
 **MultiSubnetFailover 키워드 및 관련 기능**  
   
@@ -570,10 +570,10 @@ Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300
 **해결 방법:** 연결 문자열에 'multisubnetfailover = true'를 사용합니다.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Active Directory 할당량 때문에 새로운 가용성 그룹 수신기 만들기 실패  
-**문제:** 참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다. 자세한 내용은 [컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결하는 방법](http://support.microsoft.com/kb/307532) 및 [Active Directory 할당량](http://technet.microsoft.com/library/cc904295(WS.10).aspx)을 참조하세요.  
+**문제:** 참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다. 자세한 내용은 [컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결하는 방법](https://support.microsoft.com/kb/307532) 및 [Active Directory 할당량](https://technet.microsoft.com/library/cc904295(WS.10).aspx)을 참조하세요.  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 가용성 그룹 수신기 이름에 동일한 15자 접두사를 사용하여 NetBIOS 충돌  
-두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265(WS.10).aspx)을 참조하세요.  
+두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](https://technet.microsoft.com/library/cc731265(WS.10).aspx)을 참조하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -607,10 +607,10 @@ Oracle용 CDC 서비스는 Oracle 트랜잭션 로그를 검색하고 관련 Ora
   
 3.  MDS 기능이 포함된 SQL Server 2012를 주 클러스터 노드에 설치한 다음 MDS 기능이 포함된 SQL Server 2012를 추가 클러스터 노드에 설치합니다.  
   
-문제에 대한 자세한 내용 및 위 단계를 수행하는 방법은 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)을 참조하세요.  
+문제에 대한 자세한 내용 및 위 단계를 수행하는 방법은 [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467)을 참조하세요.  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 필요  
-마스터 데이터 관리자 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
+마스터 데이터 관리자 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -622,7 +622,7 @@ SQL Server 2012 Reporting Services에서 Microsoft SQL Server PDW Appliance Upda
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2.0 에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
+SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2.0 에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

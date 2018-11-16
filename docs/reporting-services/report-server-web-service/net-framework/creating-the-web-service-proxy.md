@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842251"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814276"
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
   클라이언트와 웹 서비스는 입력 및 출력 매개 변수를 XML로 캡슐화하는 SOAP 메시지를 사용하여 통신할 수 있습니다. 프록시 클래스는 매개 변수를 XML 요소에 매핑한 다음 네트워크를 통해 SOAP 메시지를 보냅니다. 이와 같이 프록시 클래스 덕분에 SOAP 수준에서 웹 서비스와 통신할 필요가 없으며 SOAP 및 웹 프록시를 지원하는 임의의 개발 환경에서 웹 서비스 메서드를 호출할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47842251"
      예를 들어 다음 명령 프롬프트 문은 보고서 서버 웹 서비스의 관리 엔드포인트에 대한 URL을 지정합니다.  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      WSDL 도구에서는 프록시 생성을 위해 다수의 명령 프롬프트 인수를 사용합니다. 위의 예에서는 C# 언어 및 웹 서비스 엔드포인트를 두 개 이상 사용하는 경우 이름 충돌 방지를 위해 프록시에 사용하도록 제안된 네임스페이스를 지정하고 ReportingService2010.cs라는 C# 파일을 생성합니다. 이 예에서 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]을 지정한다면 이름이 ReportingService2010.vb인 프록시 파일을 생성하게 됩니다. 이 파일은 명령을 실행하는 위치인 디렉터리에 만들어집니다.  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      보고서 서버 웹 서비스의 보고서 실행 엔드포인트에 대한 간단한 URL은 다음과 같습니다.  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      URL에는 보고서 서버 웹 서비스가 배포된 도메인, 서비스가 포함된 폴더의 이름 및 서비스에 대한 검색 파일의 이름이 포함됩니다. 다양한 URL 요소에 대한 자세한 내용은 [SOAP API 액세스](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)를 참조하세요.  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e363e401bfa37afa31216edcb7817021415779e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595546"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814286"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint 라이브러리에 보고서 게시
   SharePoint 통합용으로 구성된 SharePoint 사이트에 보고서를 게시하려면 보고서 디자이너에서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다. 보고서 정의에서 하위 보고서, 드릴스루 보고서 및 리소스(예: 웹 기반 이미지)에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "47595546"
   
 4.  프로젝트의 공유 데이터 원본을 게시하고 이전에 게시된 공유 데이터 원본을 덮어쓰려면 **OverwriteDataSources** 를 **True**로 설정합니다.  
   
-5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더의 URL(예: `http://TestServer/TestSite/Documents/DataSources`)으로 나열됩니다.  
+5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더의 URL(예: `https://TestServer/TestSite/Documents/DataSources`)으로 나열됩니다.  
   
      값을 지정하지 않으면 **TargetReportFolder** 값이 사용됩니다.  
   
-6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다(예: `http://TestServer/TestSite/Documents/Reports`).  
+6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다(예: `https://TestServer/TestSite/Documents/Reports`).  
   
-7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: `http://servername`, `http://servername/site`또는 `http://servername/site/subsite`)으로 나열됩니다.  
+7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: `https://servername`, `https://servername/site`또는 `https://servername/site/subsite`)으로 나열됩니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

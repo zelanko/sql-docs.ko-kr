@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671418"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724891"
   
 -   메모리 최적화으로 테이블과 데이터를 마이그레이션합니다(지원되지 않는 기능이 있는 경우).  
     
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>메모리 최적화 관리자 사용 연습  
  **개체 탐색기**에서 변환할 테이블을 마우스 오른쪽 단추로 클릭하고 **메모리 최적화 관리자**를 선택합니다. **테이블 메모리 최적화 관리자**시작 페이지가 표시됩니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724891"
   
  기본 키가 없고 테이블을 비영구 테이블로 마이그레이션하는 경우에는 이 화면이 표시되지 않습니다.  
   
- 텍스트 열( **char**, **nchar**, **varchar**및 **nvarchar**형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 최적화 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 를 참조하십시오.  
+ 텍스트 열( **char**, **nchar**, **varchar**및 **nvarchar**형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 최적화 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 를 참조하십시오.  
   
  기본 키에 대해 다음 매개 변수를 구성할 수 있습니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724891"
   
 -   비클러스터형 인덱스. 이 유형의 인덱스는 범위 쿼리가 많은 인덱스에 적합합니다. **열 정렬 및 순서** 목록의 각 열에 대해 정렬 순서를 구성할 수 있습니다.  
   
- 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
+ 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
   
  기본 키를 선택한 후 **다음** 을 클릭합니다.  
   

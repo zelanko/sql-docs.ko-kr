@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604311"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812727"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 구독 및 배달 문제 해결
   
@@ -67,7 +67,7 @@ Microsoft Windows Server 2003에서 POP3(Post Office Protocol 버전 3)을 사�
 * 자격 증명 설정을 저장 값에서 통합 값이나 사용자 입력 값으로 변경한 경우  
 * 보고서 정의의 매개 변수 이름이나 데이터 형식이 변경되고 보고서가 다시 게시된 경우. 구독에 더 이상 유효하지 않은 매개 변수가 포함되어 있으면 해당 구독이 비활성화됩니다.  
   
-자세한 내용은 TechNet Wiki [Troubleshoot issues and errors with Reporting Services(Reporting Services 문제 및 오류 해결)](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)를 참조하세요.  
+자세한 내용은 TechNet Wiki [Troubleshoot issues and errors with Reporting Services(Reporting Services 문제 및 오류 해결)](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)를 참조하세요.  
   
   
     

@@ -16,12 +16,12 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c181dc687f2e00ff566ca37ca0de7583cab121e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 023d0f1e720965725438682ce7df8b035d43620f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666562"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "47721781"
   
 ## <a name="see-also"></a>관련 항목:  
  [저장 프로시저 실행](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [SQL Server Management Studio 사용](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [SQL Server Management Studio 사용](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   
   

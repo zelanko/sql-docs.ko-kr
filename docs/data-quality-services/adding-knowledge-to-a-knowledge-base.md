@@ -12,12 +12,12 @@ ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2223d0ab9f9ee3f2d6032bdcde425caae7657e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2749719f7ced61f304aadb5636d4909fd5b5db
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711251"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700711"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
 
@@ -46,14 +46,14 @@ ms.locfileid: "47711251"
   
 -   자세한 내용은 설명서에서 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)을 참조하십시오.  
   
--   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
+-   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
   
 ##  <a name="ManageDomain"></a> 도메인의 데이터 값 관리  
  DQS에서는 컴퓨터 기반 기술 자료 검색 작업으로 생성된 메타데이터를 대화형으로 변경 및 보강할 수 있습니다. 이 작업은 도메인 관리 작업에서 수행할 수 있으며, 특정 데이터 값에 변경 내용을 적용할 수 있습니다.  
   
 -   자세한 내용은 설명서에서 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하십시오.  
   
--   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
+-   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
   
 ##  <a name="DQSFile"></a> .dqs 파일에서 정보 가져오기  
  .dqs 데이터 파일에서 기존 기술 자료로 도메인을 가져오거나 .dqs에서 새 기술 자료로 전체 기술 자료를 가져올 수 있습니다. 이렇게 하려면 먼저 기존 도메인 또는 기술 자료를 .dqs 파일로 내보내야 합니다. 도메인이 포함된 .dqs 파일은 모든 도메인 파일을 포함하고, 기술 자료가 포함된 .dqs 파일은 도메인 및 일치 정책을 비롯하여 모든 기술 자료 정보를 포함합니다.  

@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668032"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명하지만 이러한 구분이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식에는 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용될 수 있습니다.  
 
 OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 원호 세그먼트  
 인스턴스화할 수 있는 세 가지 형식은 원호 세그먼트 **CircularString**, **CompoundCurve**및 **CurvePolygon**을 취할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
@@ -173,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## <a name="see-also"></a>참고 항목  
 - [공간 데이터(SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography 데이터 형식 메서드 참조](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031872"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814326"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -475,7 +475,7 @@ ms.locfileid: "50031872"
 -   다음 식을 입력란에서 동작으로 사용하면 데이터 집합 필드 `EmployeeID` 를 URL 매개 변수로 지정하는 사용자 지정 URL이 생성됩니다.  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      자세한 내용은 [URL에 하이퍼링크 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)를 참조하세요.  
@@ -483,7 +483,7 @@ ms.locfileid: "50031872"
 -   다음 식은 입력란에 URL을 추가할지 여부를 조건부로 제어합니다. 이 식은 보고서에 활성 URL을 포함할지 여부를 사용자가 결정하도록 허용하는 `IncludeURLs` 라는 매개 변수를 사용합니다. 이 식은 입력란의 동작으로 설정됩니다. 이 매개 변수를 False로 설정하고 보고서를 보면 하이퍼링크 없이 Microsoft Excel로 보고서를 내보낼 수 있습니다.  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> 보고서 데이터  

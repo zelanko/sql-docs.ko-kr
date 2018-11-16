@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72f7e1846084a65ac42988f592eef3e7f9e93925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7296a880dcf9ec10a5aa86182a71c3eec879bb54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677532"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>주의 대상 페이지가 있는 데이터베이스의 무결성 검사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47651395"
   
 -   전체 데이터베이스 일관성 검사([DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md))를 완료합니다.  
   
--   [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397)에 정의된 사용자 동작을 구현합니다.  
+-   [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397)에 정의된 사용자 동작을 구현합니다.  
   
 ## <a name="for-more-information"></a>참조 항목  
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

@@ -15,19 +15,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dc9d6b5c66e161f29b1914e9c01a956c0546adb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6cf384434915fd0f83dc20d6bfbfd0f6c24788c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735121"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673762"
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 다음 가이드를 사용할 수 있습니다. 이러한 가이드는 해당 가이드에 다른 설명이 없는 한 일반 개념을 다루며 모든 버전의 SQL Server에 적용됩니다. 
 
-[Always On 가용성 그룹 문제 해결 및 모니터링 가이드](http://msdn.microsoft.com/library/dn135328)  
+[Always On 가용성 그룹 문제 해결 및 모니터링 가이드](https://msdn.microsoft.com/library/dn135328)  
 [인덱스 아키텍처 및 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  
 [메모리 관리 아키텍처 가이드](../relational-databases/memory-management-architecture-guide.md)  
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)  

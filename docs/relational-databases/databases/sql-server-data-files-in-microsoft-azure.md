@@ -5,19 +5,18 @@ ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822201"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675702"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ ms.locfileid: "47822201"
 ### <a name="azure-storage-concepts"></a>Azure Storage 개념  
  Windows Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Windows Azure에서 저장소 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
   
- [Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 저장소 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 저장소 용량 한도 미만이어야 합니다. 저장소 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](http://docs.microsoft.com/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [BLOB](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
+ [Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 저장소 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 저장소 용량 한도 미만이어야 합니다. 저장소 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://docs.microsoft.com/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `https://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
   
 ### <a name="azure-billing-considerations"></a>Azure 청구 고려 사항  
- 의사 결정 및 계획 과정에서 Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Azure Storage에 SQL Server 데이터 파일을 저장할 경우 저장소 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. Azure Storage 및 Azure Virtual Machines의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격 책정](http://azure.microsoft.com/pricing/) 페이지의 정보를 사용하세요.  
+ 의사 결정 및 계획 과정에서 Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Azure Storage에 SQL Server 데이터 파일을 저장할 경우 저장소 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. Azure Storage 및 Azure Virtual Machines의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격 책정](https://azure.microsoft.com/pricing/) 페이지의 정보를 사용하세요.  
   
 ### <a name="sql-server-concepts"></a>SQL Server 개념  
  이 새로운 향상된 기능을 사용할 경우 다음을 수행해야 합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "47822201"
   
 -   Azure Storage 컨테이너, 연결된 정책 이름 및 SAS 키를 SQL Server 자격 증명 저장소에 저장해야 합니다.  
   
- 다음 예에서는 Azure Storage 컨테이너를 만들고 읽기, 쓰기 및 나열 권한이 있는 정책을 만들었다고 가정합니다. 컨테이너에 대한 정책을 만들면 메모리에 암호화되지 않은 상태로 유지해도 안전하고 SQL Server에서 컨테이너의 BLOB 파일에 액세스하는 데 필요한 SAS 키가 생성됩니다. 다음 코드 조각에서 `'<your SAS key>'` 를 `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`와 유사한 항목으로 바꾸십시오. 자세한 내용은 [Azure Storage 리소스에 대한 액세스 관리](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)를 참조하십시오.  
+ 다음 예에서는 Azure Storage 컨테이너를 만들고 읽기, 쓰기 및 나열 권한이 있는 정책을 만들었다고 가정합니다. 컨테이너에 대한 정책을 만들면 메모리에 암호화되지 않은 상태로 유지해도 안전하고 SQL Server에서 컨테이너의 BLOB 파일에 액세스하는 데 필요한 SAS 키가 생성됩니다. 다음 코드 조각에서 `'<your SAS key>'` 를 `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`와 유사한 항목으로 바꾸십시오. 자세한 내용은 [Azure Storage 리소스에 대한 액세스 관리](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)를 참조하십시오.  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
@@ -94,9 +93,9 @@ ON
 ### <a name="installation-prerequisites"></a>설치 필수 구성 요소  
  Azure에 SQL Server 데이터 파일을 저장할 경우 설치를 위한 필수 조건은 다음과 같습니다.  
   
--   **SQL Server 온-프레미스:** SQL Server 2016 이후에는 이 기능이 포함됩니다. SQL Server의 최신 버전을 다운로드하는 방법을 알아보려면 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.  
+-   **SQL Server 온-프레미스:** SQL Server 2016 이후에는 이 기능이 포함됩니다. SQL Server의 최신 버전을 다운로드하는 방법을 알아보려면 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.  
   
--   Azure 가상 머신에서 실행 중인 SQL Server: [Azure 가상 머신에 SQL Server](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)를 설치하는 경우 SQL Server 2016을 설치하거나 기존 인스턴스를 업데이트하세요. 이와 마찬가지로 SQL Server 2016 플랫폼 이미지를 사용하여 Azure에서 새 가상 머신을 만들 수도 있습니다.
+-   Azure 가상 머신에서 실행 중인 SQL Server: [Azure 가상 머신에 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)를 설치하는 경우 SQL Server 2016을 설치하거나 기존 인스턴스를 업데이트하세요. 이와 마찬가지로 SQL Server 2016 플랫폼 이미지를 사용하여 Azure에서 새 가상 머신을 만들 수도 있습니다.
 
   
 ###  <a name="bkmk_Limitations"></a> 제한 사항  
@@ -109,7 +108,7 @@ ON
   
 -   Azure의 SQL Server 데이터 파일 기능을 사용할 경우 저장소 계정에 대한 지리적 복제는 지원되지 않습니다. 저장소 계정이 지리적으로 복제되는 동안 지리적 장애 조치(failover)가 발생할 경우 데이터베이스가 손상될 수 있습니다.  
   
--   용량 제한은 [Blob Storage 소개](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)를 참조하세요.  
+-   용량 제한은 [Blob Storage 소개](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)를 참조하세요.  
   
 -   Azure Storage의 SQL Server 데이터 파일 기능을 사용하여 Azure BLOB에 메모리 내 OLTP 데이터를 저장할 수 없습니다. 메모리 내 OLTP는 **FileStream** 에 종속되지만 이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없기 때문입니다.  
   
@@ -123,7 +122,7 @@ ON
  이 섹션에서는 Azure Storage에 SQL Server 데이터 파일을 저장할 때 사용할 수 있는 도구 및 프로그래밍 참조 라이브러리에 대해 설명합니다.  
   
 ### <a name="powershell-support"></a>PowerShell 지원  
- PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용하여 BLOB에 액세스합니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`  
+ PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용하여 BLOB에 액세스합니다. `https://storageaccount.blob.core.windows.net/<container>/<blob>`  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 개체 및 성능 카운터 지원  
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  

@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805461"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660124"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Azure Blob에 백업 그래픽](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
- 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [Microsoft Azure Blob 저장소 서비스](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)로 백업하고 반대로 복원하는 방법에 대해 설명합니다. 또한 Microsoft Azure Blob 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 저장할 경우의 이점에 대해서도 간략하게 설명합니다.  
+ 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [Microsoft Azure Blob 저장소 서비스](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)로 백업하고 반대로 복원하는 방법에 대해 설명합니다. 또한 Microsoft Azure Blob 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 저장할 경우의 이점에 대해서도 간략하게 설명합니다.  
   
  SQL Server에서는 다음과 같은 방식으로 Microsoft Azure Blob 저장소 서비스에 백업할 수 있습니다.  
   
 -   **Microsoft로 백업 관리:** 이제 디스크와 테이프에 백업할 때와 동일한 방법을 사용하여 URL을 백업 대상으로 지정하고 Microsoft Azure Storage로 백업할 수 있습니다. 이 기능을 사용하여 로컬 저장소나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다. 이 기능은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서 블록 Blob, 공유 액세스 서명, 스트라이프를 사용하면서 성능과 기능이 더욱 향상되었습니다.  
   
     > [!NOTE]  
-    >  SQL Server 2012 SP1 CU2 이전의 SQL Server 버전의 경우 Microsoft Azure 도구의 추가 기능인 SQL Server 백업을 사용하여 Microsoft Azure Storage에 백업을 쉽고 빠르게 만들 수 있습니다. 자세한 내용은 [다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  
+    >  SQL Server 2012 SP1 CU2 이전의 SQL Server 버전의 경우 Microsoft Azure 도구의 추가 기능인 SQL Server 백업을 사용하여 Microsoft Azure Storage에 백업을 쉽고 빠르게 만들 수 있습니다. 자세한 내용은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  
   
 -   **Azure Blob Storage의 데이터베이스 파일에 대한 파일-스냅숏 백업** : Azure 스냅숏을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업은 Azure Blob Storage 서비스를 사용하여 저장된 데이터베이스 파일에 대해 거의 즉각적인 백업 및 복원을 제공합니다. 이 기능으로 백업 및 복원 정책을 간소화할 수 있으며 특정 시점 복원을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. 이 기능은 SQL Server 2016 이상에서 사용할 수 있습니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805461"
 ##  <a name="Billing"></a> Microsoft Azure 청구 고려 사항:  
  Microsoft Azure Storage 비용을 이해하면 Microsoft Azure에서 백업을 만들고 저장하는 데 드는 비용을 예측할 수 있습니다.  
   
- [Microsoft Azure 가격 계산기](http://go.microsoft.com/fwlink/?LinkId=277060) 로 예상 비용을 계산할 수 있습니다.  
+ [Microsoft Azure 가격 계산기](https://go.microsoft.com/fwlink/?LinkId=277060) 로 예상 비용을 계산할 수 있습니다.  
   
- **저장소:** 요금은 사용 공간을 기준으로 하며 단계적 등급과 중복 수준에 따라 계산됩니다. 자세한 내용과 최선 정보는 **가격 정보** 문서의 [데이터 관리](http://go.microsoft.com/fwlink/?LinkId=277059) 섹션을 참조하세요.  
+ **저장소:** 요금은 사용 공간을 기준으로 하며 단계적 등급과 중복 수준에 따라 계산됩니다. 자세한 내용과 최선 정보는 **가격 정보** 문서의 [데이터 관리](https://go.microsoft.com/fwlink/?LinkId=277059) 섹션을 참조하세요.  
   
- **데이터 전송:** Microsoft Azure에 대한 인바운드 데이터 전송은 무료입니다. 아웃바운드 전송의 경우 대역폭 사용 요금이 부과되며 단계적 지역별 등급을 기준으로 계산됩니다. 자세한 내용은 가격 정보 문서의 [데이터 전송](http://go.microsoft.com/fwlink/?LinkId=277061) 섹션을 참조하십시오.  
+ **데이터 전송:** Microsoft Azure에 대한 인바운드 데이터 전송은 무료입니다. 아웃바운드 전송의 경우 대역폭 사용 요금이 부과되며 단계적 지역별 등급을 기준으로 계산됩니다. 자세한 내용은 가격 정보 문서의 [데이터 전송](https://go.microsoft.com/fwlink/?LinkId=277061) 섹션을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
 

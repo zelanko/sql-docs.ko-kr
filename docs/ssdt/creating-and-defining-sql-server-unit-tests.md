@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688591"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681281"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server 단위 테스트 만들기 및 정의
 SQL Server 단위 테스트를 실행하면 스키마에 있는 하나 이상의 데이터베이스 개체에 대한 변경 내용으로 인해 데이터베이스 응용 프로그램의 기존 기능이 중단되는지 여부를 확인할 수 있습니다. 이러한 테스트는 소프트웨어 개발자가 만드는 단위 테스트를 보완합니다. 응용 프로그램의 동작을 확인하려면 두 가지 테스트 유형을 모두 실행해야 합니다.  
@@ -46,7 +46,7 @@ SQL Server 단위 테스트를 추가하고 스키마의 개체를 테스트하�
 [SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)  
 SQL Server 단위 테스트를 만든 후에는 [테스트 뷰] 창이나 SQL Server 단위 테스트 디자이너에서 또는 Team Foundation Build를 사용하여 실행할 수 있습니다.  
   
-[시나리오: 데이터베이스 단위 테스트의 사용자 지정 테스트 조건 정의](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[시나리오: 데이터베이스 단위 테스트의 사용자 지정 테스트 조건 정의](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 기본 테스트 조건으로 확인할 수 없는 동작을 테스트하기 위해 사용자 지정 테스트 조건을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

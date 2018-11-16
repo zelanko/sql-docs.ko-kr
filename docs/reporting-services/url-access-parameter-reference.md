@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ec74bab3523b4e77c1b1c0c9355353c48490140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817557"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813726"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -48,13 +48,13 @@ ms.locfileid: "47817557"
      **Native** 모드의 예제:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      **SharePoint** 모드의 예제:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* : 보고서 확대/축소 값을 정수 백분율 또는 문자열 상수로 설정합니다. 표준 문자열 값에는 **Page Width** 및 **Whole Page**가 포함됩니다. Internet Explorer 5.0 이전 버전과 모든 비[!INCLUDE[msCoName](../includes/msconame-md.md)] 브라우저에서는 이 매개 변수가 무시됩니다. 이 매개 변수의 기본값은 **100**입니다.  
@@ -62,13 +62,13 @@ ms.locfileid: "47817557"
      **Native** 모드의 예제:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      **SharePoint** 모드의 예제.  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* : 보고서에 표시할 페이지를 설정합니다. 보고서의 페이지 수보다 큰 값을 입력하면 마지막 페이지가 표시됩니다. **0** 보다 작은 값을 입력하면 보고서의 1페이지가 표시됩니다. 이 매개 변수의 기본값은 **1**입니다.  
@@ -76,13 +76,13 @@ ms.locfileid: "47817557"
      보고서의 2 페이지를 표시하기 위한 **Native** 모드의 예제:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      보고서의 2 페이지를 표시하기 위한 **SharePoint** 모드의 예제:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*: 보고서에서 텍스트의 특정 집합을 검색합니다.  
@@ -90,13 +90,13 @@ ms.locfileid: "47817557"
      **Native** 모드의 예제.  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      **SharePoint** 모드의 예제.  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* : 검색할 마지막 섹션을 지정합니다. 이 매개 변수의 기본값은 보고서의 마지막 페이지입니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "47817557"
      Product Catalog 예제 보고서의 1페이지부터 5페이지까지 첫 번째 "Mountain-400"을 검색하는 **Native** 모드의 예제입니다.  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* : 검색에 사용할 마지막 페이지 번호를 설정합니다. 예를 들어, 값 **5** 는 검색할 마지막 페이지가 보고서의 5페이지임을 나타냅니다. 기본값은 현재 페이지 번호입니다. 이 매개 변수는 *StartFind* 매개 변수와 함께 사용하십시오. 위 예제를 참조하십시오.  
@@ -130,19 +130,19 @@ ms.locfileid: "47817557"
          **Native** 모드의 예제.  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          예를 들어 **Native** 모드의 명명된 인스턴스입니다.  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          **SharePoint** 모드의 예제.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** 보고서는 볼 수 있도록 브라우저에서 렌더링됩니다.  
@@ -150,13 +150,13 @@ ms.locfileid: "47817557"
          **Native** 모드의 예제:  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          **SharePoint** 모드의 예제.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
     -   **GetSharedDatasetDefinition** 공유 데이터 집합과 연결되는 XML 정의를 표시합니다. 쿼리, 데이터 집합 매개 변수, 기본값, 데이터 집합 필터, 데이터 정렬 및 대/소문자 구분 등의 데이터 옵션을 포함하여 공유 데이터 집합 속성이 정의에 저장됩니다. 이 값을 사용하려면 공유 데이터 집합에 대한 **보고서 정의 읽기** 권한이 있어야 합니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "47817557"
          **Native** 모드의 예제.  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** . 주어진 공유 데이터 원본의 속성을 XML로 표시합니다. 브라우저에서 XML을 지원하고 데이터 원본에 대해 **Read Contents** 권한을 가진 인증된 사용자이면 데이터 원본 정의가 표시됩니다.  
@@ -172,13 +172,13 @@ ms.locfileid: "47817557"
          **Native** 모드의 예제.  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          **SharePoint** 모드의 예제.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents** . 리소스를 렌더링하고 리소스가 브라우저와 호환되면 이를 HTML 페이지에 표시합니다. 그렇지 않으면 파일 또는 리소스를 열거나 디스크에 저장하라는 메시지가 나타납니다.  
@@ -186,13 +186,13 @@ ms.locfileid: "47817557"
          **Native** 모드의 예제.  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          **SharePoint** 모드의 예제.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** . 게시된 보고서 항목과 연결되는 XML 정의를 표시합니다. 이 값을 사용하려면 게시된 보고서 항목에 대한 **콘텐츠 읽기** 권한이 있어야 합니다.  
@@ -229,13 +229,13 @@ ms.locfileid: "47817557"
      예를 들어 **Native** 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용:  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      예를 들어 **SharePoint** 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   *ParameterLanguage*:  
@@ -244,7 +244,7 @@ ms.locfileid: "47817557"
      브라우저 언어를 재정의하고 문화권 값을 de-DE로 지정하는 **Native** 모드의 예제입니다.  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* : 보고서 기록 스냅숏을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
@@ -252,7 +252,7 @@ ms.locfileid: "47817557"
      타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅숏을 검색하는 **Native** 모드의 예제입니다.  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   *PersistStreams*:  
@@ -289,7 +289,7 @@ ms.locfileid: "47817557"
      예를 들어 **SharePoint** 모드에서는 도구 모음에 페이지 매김만 표시합니다.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*: 보고서 뷰어 웹 파트에 대한 머리글 표시를 제어합니다. 기본값은 **Full**입니다. 사용할 수 있는 값에는  
@@ -303,7 +303,7 @@ ms.locfileid: "47817557"
      예를 들어 **SharePoint** 모드에서는 머리글에 bread-crumb 탐색만 표시합니다.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*: 보고서 뷰어 웹 파트에서 매개 변수 영역의 표시 너비(픽셀 단위)를 제어합니다. 기본값은 보고서 뷰어 웹 파트 기본값과 같습니다. 값은 음의 정수가 아니어야 합니다.  
@@ -321,7 +321,7 @@ ms.locfileid: "47817557"
      예를 들어 **SharePoint** 모드에서는 매개 변수 프롬프트 영역을 축소합니다.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
 -   *DocMapMode*: 보고서 뷰어 웹 파트의 문서 구조 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은  
@@ -337,7 +337,7 @@ ms.locfileid: "47817557"
      예를 들어 **SharePoint** 모드에서는 도구 모음을 아래쪽에 도킹합니다.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
 -   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 추가하려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은  
@@ -367,11 +367,11 @@ ms.locfileid: "47817557"
      예를 들어 **SharePoint** 모드에서는 **뒤로** 단추, 텍스트 검색 컨트롤, 페이지 탐색 컨트롤 및 **새로 고침** 단추만 표시합니다.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## <a name="see-also"></a>참고 항목  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
   
   

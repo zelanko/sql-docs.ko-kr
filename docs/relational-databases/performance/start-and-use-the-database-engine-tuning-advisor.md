@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661132"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "47846601"
 >  데이터베이스 엔진 튜닝 관리자의 일시 중지 기능은 지원되지 않습니다. **분석 중지** 또는 **분석 중지(권장 구성)** 도구 모음 단추를 클릭한 후 **분석 시작** 도구 모음 단추를 클릭하면 데이터베이스 엔진 튜닝 관리자가 새 튜닝 세션을 시작합니다.  
   
 ###  <a name="dta"></a> dta 유틸리티 사용  
- [dta 유틸리티](../../tools/dta/dta-utility.md) 는 데이터베이스를 튜닝하기 위해 사용할 수 있는 명령 프롬프트 실행 파일을 제공합니다. 이 유틸리티를 사용하면 일괄 처리 파일이나 스크립트에 데이터베이스 엔진 튜닝 관리자를 사용할 수 있습니다. **dta** 유틸리티는 계획 캐시 항목, 추적 파일, 추적 테이블 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작업으로 가져옵니다. 또한 다음 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100)에서 사용 가능한 데이터베이스 엔진 튜닝 관리자 XML 스키마를 따르는 XML 입력을 가져옵니다.  
+ [dta 유틸리티](../../tools/dta/dta-utility.md) 는 데이터베이스를 튜닝하기 위해 사용할 수 있는 명령 프롬프트 실행 파일을 제공합니다. 이 유틸리티를 사용하면 일괄 처리 파일이나 스크립트에 데이터베이스 엔진 튜닝 관리자를 사용할 수 있습니다. **dta** 유틸리티는 계획 캐시 항목, 추적 파일, 추적 테이블 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작업으로 가져옵니다. 또한 다음 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100)에서 사용 가능한 데이터베이스 엔진 튜닝 관리자 XML 스키마를 따르는 XML 입력을 가져옵니다.  
   
  **dta** 유틸리티에서 작업을 튜닝하기 전에 다음 사항을 고려하세요.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "47846601"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서 온라인으로도 제공됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서 온라인으로도 제공됩니다.  
   
  이 페이지에서는 많은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 스키마를 제공합니다. 페이지 아래로 스크롤하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 행을 찾으세요.  
   

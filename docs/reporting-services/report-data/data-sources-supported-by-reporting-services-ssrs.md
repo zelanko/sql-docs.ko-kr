@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029171"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813866"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "50029171"
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 데이터 처리 확장 프로그램을 사용하려면 보고서에 사용할 데이터 원본의 버전을 기반으로 추가 데이터 공급자 계층을 선택해야 합니다. 특정 데이터 공급자를 선택하지 않으면 기본값이 제공됩니다. 데이터 원본 또는 공유 데이터 원본 대화 상자의 **편집** 단추를 통해 액세스하는 **연결 속성** 대화 상자를 사용하여 특정 데이터 공급자를 선택합니다.  
   
- OLE DB 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요. 특정 OLE DB 공급자 지원에 대한 자세한 내용은 [기술 자료의](http://support.microsoft.com/default.aspx/kb/811241) 특정 OLE DB 공급자에 대한 Visual Studio .NET 디자이너 도구의 지원(Visual Studio .NET Designer Tool Supports Specific OLE DB Providers) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하십시오.  
+ OLE DB 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요. 특정 OLE DB 공급자 지원에 대한 자세한 내용은 [기술 자료의](https://support.microsoft.com/default.aspx/kb/811241) 특정 OLE DB 공급자에 대한 Visual Studio .NET 디자이너 도구의 지원(Visual Studio .NET Designer Tool Supports Specific OLE DB Providers) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하십시오.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "50029171"
   
  이 확장 프로그램은 위치에 종속적인 명명되지 않은 매개 변수를 지원하지만 명명된 매개 변수는 지원하지 않습니다. 명명된 매개 변수를 사용하려면 [Oracle](#OracleClient) 데이터 처리 확장 프로그램을 사용합니다.  
   
- Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](http://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](http://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
+ Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](https://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](https://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -229,11 +229,11 @@ ms.locfileid: "50029171"
  
 Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있습니다.
  
-1.  [Oracle의 다운로드 사이트](http://www.oracle.com/us/products/tools/index-090165.html)로 이동
+1.  [Oracle의 다운로드 사이트](https://www.oracle.com/us/products/tools/index-090165.html)로 이동
 2.  Windows(서버에 대해 64비트, 도구에 대해 32비트)용 ODAC 12c 릴리스 4(12.1.0.2.4) 다운로드
 3.  Data Provider for .NET 4 설치
   
- 이 확장 프로그램은 명명된 매개 변수를 지원합니다. Oracle 버전 11g 이상의 경우 다중값 매개 변수가 지원됩니다. 위치에 종속적인 명명되지 않은 매개 변수의 경우 데이터 공급자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle과 함께 OLE DB 데이터 처리 확장 프로그램을 사용합니다. Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](http://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](http://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
+ 이 확장 프로그램은 명명된 매개 변수를 지원합니다. Oracle 버전 11g 이상의 경우 다중값 매개 변수가 지원됩니다. 위치에 종속적인 명명되지 않은 매개 변수의 경우 데이터 공급자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle과 함께 OLE DB 데이터 처리 확장 프로그램을 사용합니다. Oracle을 데이터 원본으로 구성하는 방법은 [Reporting Services를 사용하여 Oracle 데이터 원본을 구성하고 액세스하는 방법(How to use Reporting Services to configure and to access an Oracle data source)](https://support.microsoft.com/kb/834305)을 참조하십시오. 추가 사용 권한 구성에 대한 자세한 내용은 [기술 자료에서](https://support.microsoft.com/kb/870668) NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하세요.  
   
  다중 입력 매개 변수를 사용하여 저장 프로시저에서 데이터를 검색할 수 있지만 저장 프로시저는 하나의 출력 커서만 반환해야 합니다. 자세한 내용은 [DataReader를 사용하여 데이터 검색(Retrieving Data Using the DataReader)](https://go.microsoft.com/fwlink/?LinkId=81758)의 Oracle 섹션을 참조하십시오.  
   
@@ -270,7 +270,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.  
   
- Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)백서를 참조하세요.  
+ Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)백서를 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   

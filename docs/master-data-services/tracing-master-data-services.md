@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 054c6d8ea517bf3a2edd64622fc7385d8f9e24f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 706da94bfae2b4d00904e354f32af4237f902570
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705951"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700232"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47705951"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
+           https://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -70,6 +70,6 @@ ms.locfileid: "47705951"
     |메시지|추적의 메시지 본문입니다.|  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [로깅 문제 해결 개선](http://go.microsoft.com/fwlink/p/?LinkId=615377)  
+ msdn.com의 블로그 게시물 [로깅 문제 해결 개선](https://go.microsoft.com/fwlink/p/?LinkId=615377)  
   
   

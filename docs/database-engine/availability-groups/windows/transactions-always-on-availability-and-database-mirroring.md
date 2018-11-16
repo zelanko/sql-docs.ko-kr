@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611032"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606843"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ SQL Server 2017은 가용성 그룹의 데이터베이스에 대한 분산 트�
 
 자세한 내용은 다음을 참조하세요.
 
-- [DTC 관리 가이드(영문)](http://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 개발자 가이드(영문)](http://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC 프로그래머 참조(영문)](http://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 관리 가이드(영문)](https://msdn.microsoft.com/library/ms681291.aspx)
+- [DTC 개발자 가이드(영문)](https://msdn.microsoft.com/library/ms679938.aspx)
+- [DTC 프로그래머 참조(영문)](https://msdn.microsoft.com/library/ms686108.aspx)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 이전 버전: 동일한 SQL Server 인스턴스 내의 데이터베이스 간 트랜잭션 지원  
 
@@ -60,7 +60,7 @@ SQL Server 2016에서는 트랜잭션에 포함된 하나 이상의 데이터베
   
  분산 트랜잭션과 관련하여 충족해야 하는 요구 사항은 다음과 같습니다.  
   
--   Windows Server 2012 R2 이상에서 가용성 그룹을 실행해야 합니다. Windows Server 2012 R2의 경우 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  
+-   Windows Server 2012 R2 이상에서 가용성 그룹을 실행해야 합니다. Windows Server 2012 R2의 경우 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  
   
 -   **CREATE AVAILABILITY GROUP** 명령 및 **WITH DTC\_SUPPORT = PER_DB** 절을 사용하여 가용성 그룹을 만들어야 합니다. 현재는 기존 가용성 그룹을 변경할 수 없습니다.  
 

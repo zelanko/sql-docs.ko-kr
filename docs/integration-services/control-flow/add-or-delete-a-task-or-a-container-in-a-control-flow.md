@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765751"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640079"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
   제어 흐름 디자이너에서 작업 중일 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 도구 상자에는 패키지의 제어 흐름을 작성하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크가 나열됩니다. 도구 상자에 대한 자세한 내용은 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)를 참조하십시오.  
@@ -96,9 +96,9 @@ ms.locfileid: "47765751"
   
 4.  **제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 다음 **편집** 을 클릭하여 해당 태스크 또는 컨테이너 편집기를 엽니다.  
   
-     For 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [For 루프 컨테이너 구성](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)을 참조하세요.  
+     For 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [For 루프 컨테이너 구성](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)을 참조하세요.  
   
-     Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
+     Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
     > [!NOTE]  
     >  시퀀스 컨테이너에는 사용자 지정 편집기가 없습니다.  

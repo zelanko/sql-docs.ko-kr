@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af39fd0a7a05bd66565ac94f112c63ac1158df86
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264893"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662431"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,11 +128,11 @@ ms.locfileid: "48264893"
   
 ## <a name="related-content"></a>관련 내용  
  분할된 테이블 및 인덱스 전략과 구현에 대한 자세한 내용은 다음 백서를 참조하십시오.  
--   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [자동 슬라이딩 윈도우를 구현하는 방법](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [분할된 테이블로 대량 로드](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [자동 슬라이딩 윈도우를 구현하는 방법](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: 데이터 수명 주기 - 분할](https://technet.microsoft.com/library/cc966424.aspx)    
--   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [대규모 관계형 데이터 웨어하우스를 구축하기 위한 상위 10가지 최선의 방법](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [대규모 관계형 데이터 웨어하우스를 구축하기 위한 상위 10가지 최선의 방법](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

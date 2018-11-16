@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675902"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅숏 에이전트가 스냅숏을 만들어 스냅숏 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅숏을 구독자에게 적용합니다. 
@@ -252,7 +252,7 @@ ms.locfileid: "49419458"
     
 1. 자세한 정보 로깅을 사용하지 않으려면 이전과 동일한 단계를 따라 전에 추가했던 전체 `-Output` 줄을 제거합니다. 
 
-자세한 내용은 [복제 에이전트에 대한 자세한 정보 로깅 사용하도록 설정](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)을 참조합니다. 
+자세한 내용은 [복제 에이전트에 대한 자세한 정보 로깅 사용하도록 설정](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)을 참조합니다. 
 
 
 ## <a name="see-also"></a>관련 항목:

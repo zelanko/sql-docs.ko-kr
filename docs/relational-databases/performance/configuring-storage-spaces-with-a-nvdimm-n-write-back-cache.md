@@ -10,12 +10,12 @@ ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4e9b90ef6a61d080d0a8c36b809a3f695e4fd291
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bba028ef8c2d0bcc5c3a3c328cc5be0eabab9c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665273"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +76,8 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
  ![Log_Space 드라이브](../../relational-databases/performance/media/log-space-drive.png "Log_Space 드라이브")  
   
 ## <a name="see-also"></a>참고 항목  
- [Windows 10에서 Windows 저장소 공간](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
- [Windows 2012 R2에서 Windows 저장소 공간](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
+ [Windows 10에서 Windows 저장소 공간](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
+ [Windows 2012 R2에서 Windows 저장소 공간](https://technet.microsoft.com/library/hh831739.aspx)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [데이터 및 로그 파일의 기본 위치 보기 또는 변경&#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   

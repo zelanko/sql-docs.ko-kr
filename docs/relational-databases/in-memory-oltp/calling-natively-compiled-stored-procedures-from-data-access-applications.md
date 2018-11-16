@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722681"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657782"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  메모리 최적화 데이터 파일 그룹이 포함된 예제 데이터베이스를 만듭니다. 메모리 최적화 데이터 파일 그룹이 있는 데이터베이스를 만드는 방법은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
-2.  데이터베이스를 가리키는 PrepExecSample이라는 ODBC 데이터 원본을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버를 사용합니다. 예제를 수정하고 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)를 사용할 수도 있습니다.  
+2.  데이터베이스를 가리키는 PrepExecSample이라는 ODBC 데이터 원본을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버를 사용합니다. 예제를 수정하고 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)를 사용할 수도 있습니다.  
   
 3.  샘플 데이터베이스에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트(아래)를 실행합니다.  
   

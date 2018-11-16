@@ -16,12 +16,12 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99773e3327831cdb622382483bc9c128b9ffef82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700385"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "50100134"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio 사용](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio에서 쿼리 작성, 분석 및 편집](http://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
+[SQL Server Management Studio에서 쿼리 작성, 분석 및 편집](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [솔루션&#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   

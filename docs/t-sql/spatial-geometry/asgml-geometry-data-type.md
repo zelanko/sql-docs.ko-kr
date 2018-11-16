@@ -20,19 +20,19 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd98df91229a94f1c4562ae4fcd44f5742d0e91e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3b518f9255f3a6ed08bc66fdbd43eba6ed1472
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699751"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 **geometry** 인스턴스의 GML(Geography Markup Language) 표현을 반환합니다.
   
-Geography Markup Language에 대한 자세한 내용은 OGC(Open Geospatial Consortium) 사양: [OGC 사양, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
+Geography Markup Language에 대한 자세한 내용은 OGC(Open Geospatial Consortium) 사양: [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ SELECT @g.AsGml();
  이 메서드는 `LineString` 인스턴스로 설명을 반환합니다.  
   
 ```  
-<LineString xmlns="http://www.opengis.net/gml">  
+<LineString xmlns="https://www.opengis.net/gml">  
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   

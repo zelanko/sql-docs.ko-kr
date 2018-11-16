@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169273"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695565"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]에는 이벤트 알림용 메시지 유형과 계약이 포함되어 있습니다. 따라서 다음과 같은 계약 이름을 지정하는 Service Broker가 이미 있으므로 Service Broker 시작 서비스를 생성하지 않아도 됩니다. `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]에는 이벤트 알림용 메시지 유형과 계약이 포함되어 있습니다. 따라서 다음과 같은 계약 이름을 지정하는 Service Broker가 이미 있으므로 Service Broker 시작 서비스를 생성하지 않아도 됩니다. `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  이벤트 알림을 받는 대상 서비스는 이러한 기존 계약을 인식해야 합니다.  
   
@@ -144,7 +144,7 @@ GO
 --the event notifications contract.  
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
-([http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
+([https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
 GO  
 --Create a route on the service to define the address   
 --to which Service Broker sends messages for the service.  

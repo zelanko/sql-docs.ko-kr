@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d034b7a930de907e0868271b175cabd5507ad07c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031832"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814116"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 응용 프로그램의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 응용 프로그램에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 응용 프로그램을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -57,8 +57,8 @@ ms.locfileid: "50031832"
   
 |HTTP.SYS에서의 URL 예약|URL|설명|  
 |---------------------------------|---------|-----------------|  
-|`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|이 URL 예약은 포트 80에 와일드카드(+)를 지정하며, 포트 80에서 보고서 서버 컴퓨터로 확인되는 호스트를 지정하는 들어오는 모든 요청을 보고서 서버 큐에 추가합니다. 이 URL 예약을 사용하면 원하는 수의 URL을 사용하여 보고서 서버에 액세스할 수 있습니다.<br /><br /> 이 URL은 대부분의 운영 체제에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 기본 URL 예약입니다.|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|이 URL 예약은 IP 주소를 지정하며 와일드카드 URL 예약보다 훨씬 제한적입니다. IP 주소를 포함하는 URL만 보고서 서버에 연결하는 데 사용할 수 있습니다. 지정된 이 URL 예약, `http://<computername>/reportserver` 또는 `http://localhost/reportserver`에서 보고서 서버에 대한 요청은 실패합니다.|  
+|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|이 URL 예약은 포트 80에 와일드카드(+)를 지정하며, 포트 80에서 보고서 서버 컴퓨터로 확인되는 호스트를 지정하는 들어오는 모든 요청을 보고서 서버 큐에 추가합니다. 이 URL 예약을 사용하면 원하는 수의 URL을 사용하여 보고서 서버에 액세스할 수 있습니다.<br /><br /> 이 URL은 대부분의 운영 체제에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 기본 URL 예약입니다.|  
+|`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|이 URL 예약은 IP 주소를 지정하며 와일드카드 URL 예약보다 훨씬 제한적입니다. IP 주소를 포함하는 URL만 보고서 서버에 연결하는 데 사용할 수 있습니다. 지정된 이 URL 예약, `https://<computername>/reportserver` 또는 `https://localhost/reportserver`에서 보고서 서버에 대한 요청은 실패합니다.|  
   
 ##  <a name="DefaultURLs"></a> 기본 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치할 경우 설치 프로그램이 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 대한 URL을 예약합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 URL 예약을 정의하는 경우 이러한 기본값을 그대로 사용할 수도 있습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 명명된 인스턴스로 설치할 경우 기본 URL에 인스턴스 이름이 포함됩니다.  
@@ -82,12 +82,12 @@ ms.locfileid: "50031832"
   
 |인스턴스 유형|응용 프로그램|기본 URL|HTTP.SYS의 실제 URL 예약|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|기본 인스턴스|보고서 서버 웹 서비스|`http://\<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|기본 인스턴스|웹 포털|`http://<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|명명된 인스턴스|보고서 서버 웹 서비스|`http://<servername>/reportserver_<instancename>`|`http://<servername>:80/reportserver_<instancename>`|  
-|명명된 인스턴스|웹 포털|`http://<servername>/reports_<instancename>`|`http://<servername>:80/reports_<instancename>`|  
-|SQL Server Express|보고서 서버 웹 서비스|`http://<servername>/reportserver_SQLExpress`|`http://<servername>:80/reportserver_SQLExpress`|  
-|SQL Server Express|웹 포털|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
+|기본 인스턴스|보고서 서버 웹 서비스|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|기본 인스턴스|웹 포털|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|명명된 인스턴스|보고서 서버 웹 서비스|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
+|명명된 인스턴스|웹 포털|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
+|SQL Server Express|보고서 서버 웹 서비스|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
+|SQL Server Express|웹 포털|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL에 대한 인증 및 서비스 ID  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약은 보고서 서버 서비스의 서비스 계정을 지정합니다. 서비스가 실행되는 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램용으로 생성된 모든 URL에 사용됩니다. 보고서 서버 인스턴스의 서비스 ID는 RSReportServer.config 파일에 저장됩니다.  
@@ -97,9 +97,9 @@ ms.locfileid: "50031832"
  기본 보안이 **RSWindowsNegotiate**이므로 익명 액세스는 허용되지 않습니다. 인트라넷 액세스의 경우 보고서 서버 URL에 네트워크 컴퓨터 이름이 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 인터넷 연결용으로 구성하려는 경우 다른 설정을 사용해야 합니다. 인증에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ##  <a name="URLlocalAdmin"></a> 로컬 관리 URL  
- URL 예약에 대해 강력한 또는 약한 와일드카드를 지정한 경우 `http://localhost/reportserver` 또는 `http://localhost/reports`를 사용할 수 있습니다.  
+ URL 예약에 대해 강력한 또는 약한 와일드카드를 지정한 경우 `https://localhost/reportserver` 또는 `https://localhost/reports`를 사용할 수 있습니다.  
   
- `http://localhost` URL은 `http://127.0.0.1`로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
+ `https://localhost` URL은 `https://127.0.0.1`로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 이후에는 실수로 프로그램을 높은 권한으로 실행하는 위험을 최소화하는 새로운 보안 기능이 포함되어 있습니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.  
   

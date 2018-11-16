@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653041"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811776"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결
   
@@ -29,7 +29,7 @@ ms.locfileid: "47653041"
   
 기본 모드의 보고서 서버에 보고서를 배포할 때 일반적으로 발생하는 오류는 보고서 서버 이름 대신 보고서 폴더 이름을 지정하는 것입니다.   
   
-보고서 서버 URL이 보고서 관리자의 가상 디렉터리 주소(예: `http://localhost/reportserver`)가 아닌 보고서 서버의 주소(예: `http://localhost/reports`)인지 확인하십시오. 보고서 서버에 대해 기본 포트 번호인 80이 아닌 다른 포트 번호를 지정한 경우 보고서 서버 주소에서 이를 지정해야 합니다(예: `http://localhost:81/reportserver`).   
+보고서 서버 URL이 보고서 관리자의 가상 디렉터리 주소(예: `https://localhost/reportserver`)가 아닌 보고서 서버의 주소(예: `https://localhost/reports`)인지 확인하십시오. 보고서 서버에 대해 기본 포트 번호인 80이 아닌 다른 포트 번호를 지정한 경우 보고서 서버 주소에서 이를 지정해야 합니다(예: `https://localhost:81/reportserver`).   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>게시된 보고서에서 항목을 전환할 때 아무 작업도 수행되지 않는 경우  
   로컬 미리 보기에서 보고서를 표시할 때 보고서의 항목을 전환하여 표시하거나 숨길 수 있습니다. 동일한 보고서를 보고서 서버에 게시한 후 볼 때는 항목을 전환해도 아무 작업도 수행되지 않습니다.   
