@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa3decb1f8abd44dc9e35f75de63ebae24a885e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608845"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704021"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>4. SAS 토큰을 사용하여 자격 증명 만들기  
- **적용 대상**: [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.  
+ **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.  
   
  다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용하기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)를 참조합니다.  
   
@@ -168,6 +168,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [공유 액세스 서명](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [공유 액세스 서명](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

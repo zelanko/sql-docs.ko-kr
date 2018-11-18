@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ead1b1837f389d4c2a9d433b35caad7f0380ad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 955bbdf7932516623eb09f043bd7885455155e50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624511"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671902"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47624511"
 >  이 항목에서 설명하는 기능은 데이터베이스 게시 마법사에서 제공했던 기능입니다. 게시 기능이 스크립트 생성 및 게시 마법사에 추가되었고 데이터베이스 게시 마법사는 더 이상 사용되지 않습니다.  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사  
- 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스 또는 선택된 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다. SQL Server 웹 호스팅 공급자는 웹 서비스에 대한 연결 인터페이스입니다. 웹 서비스는 CodePlex의 SQL Server Hosting Toolkit에 있는 데이터베이스 게시 서비스 프로젝트를 사용하여 생성됩니다. 웹 서비스를 통해 웹 호스터 고객은 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스를 서비스로 쉽게 게시할 수 있습니다. SQL Server Hosting Toolkit을 다운로드하는 방법은 [SQL Server 데이터 게시 서비스(SQL Server Database Publishing Services)](http://go.microsoft.com/fwlink/?LinkId=142025)를 참조하세요.  
+ 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스 또는 선택된 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다. SQL Server 웹 호스팅 공급자는 웹 서비스에 대한 연결 인터페이스입니다. 웹 서비스는 CodePlex의 SQL Server Hosting Toolkit에 있는 데이터베이스 게시 서비스 프로젝트를 사용하여 생성됩니다. 웹 서비스를 통해 웹 호스터 고객은 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스를 서비스로 쉽게 게시할 수 있습니다. SQL Server Hosting Toolkit을 다운로드하는 방법은 [SQL Server 데이터 게시 서비스(SQL Server Database Publishing Services)](https://go.microsoft.com/fwlink/?LinkId=142025)를 참조하세요.  
   
  스크립트 생성 및 게시 마법사는 데이터베이스를 전송하기 위한 스크립트를 만드는 데 사용할 수도 있습니다.  
   

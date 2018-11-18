@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636482"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661722"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "49636482"
     
 데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
     
-데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]은(는) [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 인코딩을 위한 추가 옵션을 도입합니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 데이터 정렬은 대/소문자, 악센트, 일본어 가나, 전자/반자를 구분하며 UTF-8로 인코딩됩니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분하며 비유니코드 인코딩을 사용합니다. 다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
+데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]은(는) [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 인코딩을 위한 추가 옵션을 도입합니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 데이터 정렬은 대/소문자, 악센트, 일본어 가나, 전자/반자를 구분하며 UTF-8로 인코딩됩니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분하며 비유니코드 인코딩을 사용합니다. 다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
     
 |옵션|설명|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ ms.locfileid: "49636482"
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타가나를 구분합니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |전자/반자 구분(_WS)|전자와 반자 문자를 구분합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 같은 문자의 전자 표시와 반자 표시를 동일한 문자로 간주합니다. 전자/반자를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
-|변형 선택기 구분(_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서 처음 도입된 일본어 데이터 정렬 Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140에서 다양한 표의 변형 선택기를 구분합니다. 변형 시퀀스는 기본 문자와 추가 변형 선택기로 구성됩니다. 이 _VSS 옵션을 선택하지 않으면 데이터 정렬이 변형 선택기를 구분하지 않고 변형 선택기가 비교에서 고려되지 않습니다. 즉, SQL Server는 정렬할 때 다른 변형 선택기를 사용하여 동일한 기본 문자 위에 구축된 문자를 동일한 것으로 간주합니다. [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(유니코드 표의 변형 데이터베이스)도 참조하세요. <br/><br/> 변형 선택기 구분(_VSS) 데이터 정렬은 전체 텍스트 검색 인덱스에서 지원되지 않습니다. 전체 텍스트 검색 인덱스는 악센트 구분(_AS), 일본어 가나 구분(_KS) 및 전자/반자 구분(_WS) 옵션만 지원합니다. SQL Server XML 및 CLR 엔진은 (_VSS) 변형 선택기를 지원하지 않습니다.
+|변형 선택기 구분(_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서 처음 도입된 일본어 데이터 정렬 Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140에서 다양한 표의 변형 선택기를 구분합니다. 변형 시퀀스는 기본 문자와 추가 변형 선택기로 구성됩니다. 이 _VSS 옵션을 선택하지 않으면 데이터 정렬이 변형 선택기를 구분하지 않고 변형 선택기가 비교에서 고려되지 않습니다. 즉, SQL Server는 정렬할 때 다른 변형 선택기를 사용하여 동일한 기본 문자 위에 구축된 문자를 동일한 것으로 간주합니다. [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(유니코드 표의 변형 데이터베이스)도 참조하세요. <br/><br/> 변형 선택기 구분(_VSS) 데이터 정렬은 전체 텍스트 검색 인덱스에서 지원되지 않습니다. 전체 텍스트 검색 인덱스는 악센트 구분(_AS), 일본어 가나 구분(_KS) 및 전자/반자 구분(_WS) 옵션만 지원합니다. SQL Server XML 및 CLR 엔진은 (_VSS) 변형 선택기를 지원하지 않습니다.
 |UTF-8(_UTF8)|UTF-8 인코딩 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수 있습니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 데이터 형식에 기본 비유니코드 인코딩 형식을 사용합니다.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 데이터 정렬 집합은 다음과 같습니다.    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> 로캘    
-로캘은 위치나 문화권과 관련된 정보의 모음입니다. 여기에는 통용 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 문자 및 문화권별 표기법 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.    
+로캘은 위치나 문화권과 관련된 정보의 모음입니다. 여기에는 통용 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 문자 및 문화권별 표기법 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  코드 페이지는 지정한 스크립트의 각 문자와 연결된 숫자 인덱스 또는 코드 포인트 값을 정렬한 문자 집합입니다. Windows 코드 페이지는 일반적으로 *문자 집합* 또는 *charset*이라고 합니다. 코드 페이지는 여러 다른 Windows 시스템 로캘에 사용되는 문자 집합과 자판 배열을 지원하는 데 사용됩니다.     
@@ -258,10 +258,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |날짜, 시간 및 통화 데이터가 사용 및 표시되는 방식에 대한 기본 설정과 오류 메시지 언어를 변경하는 방법에 대해 설명합니다.|[세션 언어 설정](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> 관련 내용    
-[SQL Server 모범 사례 데이터 정렬 변경](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server 모범 사례 데이터 정렬 변경](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-["SQL Server 모범 사례 유니코드로 마이그레이션"](http://go.microsoft.com/fwlink/?LinkId=113890) - 더 이상 유지 관리되지 않음   
-[유니코드 컨소시엄 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=48619)    
+["SQL Server 모범 사례 유니코드로 마이그레이션"](https://go.microsoft.com/fwlink/?LinkId=113890) - 더 이상 유지 관리되지 않음   
+[유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>참고 항목    
 [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     

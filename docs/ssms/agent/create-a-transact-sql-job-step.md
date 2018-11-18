@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7588b612242fe69284642532d7bd0a59de98505
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fe1b2d834f5c7c71025f091f525146a11dfd5eaa
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119830"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699618"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "49119830"
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **Transact-SQL 작업 단계를 만들려면**  

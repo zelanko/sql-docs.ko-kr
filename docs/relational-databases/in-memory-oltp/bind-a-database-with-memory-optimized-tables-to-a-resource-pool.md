@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0fcb098d96e8e62bd99f6c9560df1d23d5266ca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680731"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672792"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> 리소스 풀 만들기 및 메모리 구성  
  메모리 최적화 테이블의 메모리를 구성할 때 용량 계획은 MAX_MEMORY_PERCENT가 아니라 MIN_MEMORY_PERCENT를 기준으로 해야 합니다.  MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 대한 자세한 내용은 [ALTER RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)을 참조하세요. 이렇게 하면 MIN_MEMORY_PERCENT로 인해 다른 리소스 풀에 대한 메모리 압력이 발생하여 메모리가 확실히 적용되므로 메모리 최적화 테이블의 메모리 가용성을 보다 효율적으로 예측할 수 있습니다. 메모리를 사용할 수 있고 OOM(메모리 부족) 조건을 방지할 수 있도록 하려면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값이 동일해야 합니다. 커밋된 메모리의 양에 따라 메모리 최적화 테이블에 사용 가능한 메모리의 비율은 아래 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 을 참조하세요.  
   
- VM 환경에서 작업할 때 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 을 참조하세요.  
+ VM 환경에서 작업할 때 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 을 참조하세요.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서는 메모리의 절반을 사용할 수 있는 Pool_IMOLTP라는 리소스 풀을 만듭니다.  풀이 만들어진 후 Pool_IMOLTP를 포함하도록 리소스 관리자가 다시 구성됩니다.  
   
@@ -143,7 +143,7 @@ GO
  이제 데이터베이스가 리소스 풀에 바인딩됩니다.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경  
- 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 항목을 참조하세요.  
+ 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 항목을 참조하세요.  
   
 1.  `ALTER RESOURCE POOL` 을 사용해서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 모두 변경합니다.  
   
@@ -211,7 +211,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>참고 항목  
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

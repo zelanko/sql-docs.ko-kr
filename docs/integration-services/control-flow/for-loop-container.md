@@ -18,12 +18,12 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6266d7c1cd72599467710d835f67075a640b9c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 914a8eab85e26e97c1f36f95b75366d6fdd98bce
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635791"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640500"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
   For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 **False**가 될 때까지 워크플로를 반복합니다.  
@@ -63,14 +63,14 @@ ms.locfileid: "47635791"
   
 2.  For 루프 컨테이너에 태스크 및 컨테이너를 추가합니다. 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)를 참조하세요.  
   
-3.  선행 제약 조건을 사용하여 For 루프 컨테이너에 있는 태스크 및 컨테이너를 연결합니다. 자세한 내용은 [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)을 참조하세요.  
+3.  선행 제약 조건을 사용하여 For 루프 컨테이너에 있는 태스크 및 컨테이너를 연결합니다. 자세한 내용은 [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)을 참조하세요.  
   
-4.  For 루프 컨테이너를 구성합니다. 자세한 내용은 [For 루프 컨테이너 구성](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)가 될 때까지 워크플로를 반복합니다.  
+4.  For 루프 컨테이너를 구성합니다. 자세한 내용은 [For 루프 컨테이너 구성](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)가 될 때까지 워크플로를 반복합니다.  
 
 ##  <a name="configure-the-for-loop-container"></a>For 루프 컨테이너 구성
 이 절차에서는 **For 루프 편집기** 대화 상자를 사용하여 For 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  
   
- For Loop 컨테이너의 예는 bimonkey.com의 [실패하지 않는 SSIS 루프](http://go.microsoft.com/fwlink/?LinkId=240295) 를 참조하십시오.  
+ For Loop 컨테이너의 예는 bimonkey.com의 [실패하지 않는 SSIS 루프](https://go.microsoft.com/fwlink/?LinkId=240295) 를 참조하십시오.  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 For 루프 컨테이너를 두 번 클릭하여 **For 루프 편집기**를 엽니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "47635791"
   
  식에서 변수를 지정할 때는 변수 이름 앞에 @ 기호를 사용해야 합니다. 예를 들어 변수 이름이 **Counter**이면 For 루프 컨테이너에서 사용되는 식에 @Counter를 입력합니다. 변수에 네임스페이스 속성을 포함시키려면 변수와 네임스페이스를 괄호로 묶어야 합니다. 예를 들어 변수가 **Counter** 이고 네임스페이스가 **MyNamespace** 이면 [@MyNamespace::Counter]를 입력합니다.  
   
- For 루프 컨테이너에서 사용되는 변수는 For 루프 컨테이너의 범위 또는 패키지 컨테이너 계층에서 높은 수준의 컨테이너 범위에 정의되어 있어야 합니다. 예를 들어 For 루프 컨테이너는 자체 범위에 정의된 변수와 패키지 범위에 정의된 변수를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
+ For 루프 컨테이너에서 사용되는 변수는 For 루프 컨테이너의 범위 또는 패키지 컨테이너 계층에서 높은 수준의 컨테이너 범위에 정의되어 있어야 합니다. 예를 들어 For 루프 컨테이너는 자체 범위에 정의된 변수와 패키지 범위에 정의된 변수를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 식 문법에는 평가, 초기화 및 대입에 사용되는 복잡한 식을 구현할 수 있는 완벽한 연산자 및 함수가 제공됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   

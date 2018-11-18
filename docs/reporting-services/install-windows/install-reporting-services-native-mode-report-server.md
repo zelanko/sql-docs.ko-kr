@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029342"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813666"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
 
@@ -85,15 +85,15 @@ ms.locfileid: "50029342"
 |부분|설명|  
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
-|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `http://<computername>/reportserver`, `http://localhost/reportserver` 또는 `http://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|  
+|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는 `https://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|  
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 응용 프로그램을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
 |가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer_\<*instance_name*> 형식으로, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 경우 Reports_\<*instance_name*> 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 기본 가상 디렉터리는 **reports**입니다.|  
   
  전체 URL 문자열의 예는 다음과 같습니다.  
   
--   `http://+:80/reportserver`, 보고서 서버에 대한 액세스를 제공합니다.  
+-   `https://+:80/reportserver`, 보고서 서버에 대한 액세스를 제공합니다.  
   
--   `http://+:80/reports`, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 대한 액세스를 제공합니다.
+-   `https://+:80/reports`, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 대한 액세스를 제공합니다.
   
 ##  <a name="bkmk_installwithwizard"></a> SQL Server 설치 마법사로 기본 모드 설치  
  다음 목록에서는 SQL Server 설치 마법사에서 선택하는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 특정 단계와 옵션에 대해 설명합니다. 설치 마법사에 표시될 각 페이지가 아니라 기본 모드 설치에 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 페이지에 대해서만 설명합니다.  
@@ -130,9 +130,9 @@ ms.locfileid: "50029342"
   
 5.  인스턴스 구성 페이지에서 **명명된 인스턴스**를 구성하도록 선택한 경우 보고서 관리자 및 보고서 서버 자체를 탐색할 때 URLS에 인스턴스 이름을 사용해야 합니다. 인스턴스 이름이 "THESQLINSTANCE"인 경우 URLS는 다음과 같습니다.  
   
-    -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
+    -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
-    -   `http://[ServerName]/Reports_THESQLINSTANCE`  
+    -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
 6.  **서버 구성**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능을 사용하려는 경우 **서버 구성** 페이지에서 SQL Server 에이전트 **자동** 시작 유형을 구성합니다.   기본값은 수동입니다.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "50029342"
   
     -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 열고 보고서 서버에 연결할 수 있는지 확인합니다.  
   
-    -   **관리자 권한을 가진** 브라우저를 열고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 연결합니다. 예를 들어 `http://localhost/Reports`입니다.  
+    -   **관리자 권한을 가진** 브라우저를 열고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 연결합니다. 예를 들어 `https://localhost/Reports`입니다.  
   
-    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예:  `http://localhost/ReportServer`  
+    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예:  `https://localhost/ReportServer`  
   
  자세한 내용은 다음 두 항목의 기본 섹션을 참조하세요.  
   

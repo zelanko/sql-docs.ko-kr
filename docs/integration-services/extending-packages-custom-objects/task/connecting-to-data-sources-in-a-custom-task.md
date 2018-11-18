@@ -22,12 +22,12 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515e27ccf0d61edef0f240751226c25ebd8a6977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78b71fea28e31ca6bba5c7c1aa3f65b89a3ed57e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625990"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640900"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>사용자 지정 태스크에서 데이터 원본에 연결
   태스크는 연결 관리자를 통해 외부 데이터 원본에 연결하여 데이터를 검색하거나 저장합니다. 디자인 타임에 연결 관리자는 논리적 연결을 나타내며 서버 이름 및 인증 속성과 같은 주요 정보를 설명합니다. 런타임에 태스크에서는 연결 관리자의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 메서드를 호출하여 데이터 원본에 대한 실제 연결을 설정합니다.  
@@ -138,6 +138,6 @@ End Function
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

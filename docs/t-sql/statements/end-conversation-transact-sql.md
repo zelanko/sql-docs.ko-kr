@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799392"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701298"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 대화에 대한 대화 종료 또는 오류 메시지를 아직 처리하지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 대화 상대에게 대화가 종료되었음을 알립니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 서비스로 보내는 메시지는 지정된 옵션에 따라 다릅니다.  
   
--   오류 없이 대화가 종료되고 원격 서비스에 대한 대화가 아직 활성 상태인 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]은 원격 서비스로 `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 유형의 메시지를 보냅니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 대화 순서에 따라 전송 큐에 추가합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 보내기 전에 현재 전송 큐에 있는 이 대화의 모든 메시지를 보냅니다.  
+-   오류 없이 대화가 종료되고 원격 서비스에 대한 대화가 아직 활성 상태인 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]은 원격 서비스로 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 유형의 메시지를 보냅니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 대화 순서에 따라 전송 큐에 추가합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 메시지를 보내기 전에 현재 전송 큐에 있는 이 대화의 모든 메시지를 보냅니다.  
   
--   오류가 발생하여 대화가 종료되고 원격 서비스에 대한 대화가 아직 활성 상태인 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스로 `http://schemas.microsoft.com/SQL/ServiceBroker/Error` 유형의 메시지를 보냅니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 현재 전송 큐에 있는 이 대화의 다른 모든 메시지를 삭제합니다.  
+-   오류가 발생하여 대화가 종료되고 원격 서비스에 대한 대화가 아직 활성 상태인 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스로 `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 유형의 메시지를 보냅니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 현재 전송 큐에 있는 이 대화의 다른 모든 메시지를 삭제합니다.  
   
 -   WITH CLEANUP 절을 사용하여 데이터베이스 관리자는 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 이 옵션은 대화의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 이런 경우 대화의 원격측은 대화가 종료되었다는 어떠한 표시도 받지 못하며 응용 프로그램에서 보냈지만 네트워크를 통해 아직 전송되지 않은 메시지도 받을 수 없습니다. 따라서 대화를 정상적으로 완료할 수 없는 경우에는 이 옵션을 사용하지 않는 것이 좋습니다.  
   

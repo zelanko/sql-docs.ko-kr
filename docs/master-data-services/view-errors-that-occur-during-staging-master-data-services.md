@@ -14,12 +14,12 @@ ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25d141b8ead8c08cc420b751e0c1762fecefd95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78857ad6fbb9bcef203af0473147cd69eed49701
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700551"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>준비 과정에서 발생하는 오류 보기(Master Data Services)
 
@@ -55,6 +55,6 @@ ms.locfileid: "47765481"
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
- [준비 프로세스 문제 해결(Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [준비 프로세스 문제 해결(Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

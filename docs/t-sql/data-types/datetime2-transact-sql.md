@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: d71290c863f71894632d9092f3c51b2713d8d96f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782332"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696872"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "48782332"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|사용자 계정 컨트롤|  
+|사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|아니오|  
 |일광 절약 시간제 인식|아니오|  
   
@@ -159,7 +159,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
 
 > [!NOTE]
-> 위의 예에 나와 있는 것처럼 데이터베이스 호환성 수준 130에서 datetime과 datetime2 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4010261)를 참조하세요.
+> 위의 예에 나와 있는 것처럼 데이터베이스 호환성 수준 130에서 datetime과 datetime2 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.
 
 ### <a name="converting-string-literals-to-datetime2"></a>문자열 리터럴을 datetime2로 변환  
 문자열에 포함된 모든 부분의 형식이 올바른 경우 문자열 리터럴에서 날짜/시간 유형으로 변환할 수 있습니다. 그렇지 않으면 런타임 오류가 발생합니다. 날짜/시간 유형에서 문자열 리터럴로의 암시적 변환 또는 명시적 변환에 스타일을 지정하지 않은 경우 현재 세션의 기본 형식이 지정됩니다. 다음 표에서는 문자열 리터럴을 **datetime2** 데이터 형식으로 변환하는 규칙을 보여 줍니다.

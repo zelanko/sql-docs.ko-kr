@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f27df5372436759fb719ddcafcf028b8d918205d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018398"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669612"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "51018398"
   
 4.  **공간 인덱스** 대화 상자에서 **추가**를 클릭합니다.  
   
-5.  **선택한 공간 인덱스** 목록에서 새 인덱스를 선택하고 오른쪽에 있는 표에서 공간 인덱스의 속성을 설정합니다. 속성에 대한 자세한 내용은 [공간 인덱스 대화 상자&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)를 참조하세요.  
+5.  **선택한 공간 인덱스** 목록에서 새 인덱스를 선택하고 오른쪽에 있는 표에서 공간 인덱스의 속성을 설정합니다. 속성에 대한 자세한 내용은 [공간 인덱스 대화 상자&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)를 참조하세요.  
   
   
 ###  <a name="alter"></a> 공간 인덱스를 변경하려면  

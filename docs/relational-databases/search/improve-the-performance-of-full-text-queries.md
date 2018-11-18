@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d5e0cbabfc66d7a6da51d69b1290594f03c7cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701381"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677362"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47701381"
 -   선택적 관계 조건을 포함하는 응용 프로그램의 경우 선택적 관계 조건자와 비선택적 전체 텍스트 조건자를 사용하는 쿼리는 쿼리 최적화 프로그램을 사용하도록 작성되었을 때 최상의 성능을 발휘할 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램이 효과적인 쿼리 계획을 생성하기 위해 조건자나 범위 축소 중 어느 것을 이용할지 결정할 수 있습니다. 이러한 방식은 관계형 데이터를 전체 텍스트 데이터로 인덱싱하는 것보다 간단하고 효율적일 때가 많습니다.  
   
 ## <a name="related-resources"></a>관련 리소스  
- [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>참고 항목  
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

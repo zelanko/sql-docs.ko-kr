@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674334"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813246"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674334"
  대상 라이브러리에 있는 보고서의 선택적 **Title** 속성을 지정합니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  
- SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어 `http://mySharePointWeb/MySite/MyDocLib`에서 `http://mySharePointWeb`은 웹 응용 프로그램을 나타내고 "MySite"는 SharePoint 사이트를 나타내며 "MyDocLib"는 보고서가 배달될 SharePoint 라이브러리를 나타냅니다.  
+ SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어 `https://mySharePointWeb/MySite/MyDocLib`에서 `https://mySharePointWeb`은 웹 응용 프로그램을 나타내고 "MySite"는 SharePoint 사이트를 나타내며 "MyDocLib"는 보고서가 배달될 SharePoint 라이브러리를 나타냅니다.  
   
  페이지, 사이트 또는 목록은 지정할 수 없습니다. 대상 컨테이너는 동일한 사이트나 팜에 있는 라이브러리여야 합니다.  
   

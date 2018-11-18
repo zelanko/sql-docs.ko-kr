@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e43f13971cb52382409b38c654eb0b1a659844b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c01f4ad93f36874e70352b6efa6c5592c71d6bf8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818535"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671772"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47818535"
   
  **사전 요구 사항:**  
   
--   Windows 저장소 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)입니다.  
+-   Windows 저장소 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [Lesson 1: Create Windows Azure Storage Objects](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)입니다.  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   

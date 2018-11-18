@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688351"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813806"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 집합 쿼리나 XML **ElementPath** 의 XML **Query** 를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 집합 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |주문|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **예제 #2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>XML 문서: Customers.xml  
- 이전 섹션의 요소 경로 예를 사용하려면 이 XML을 복사하여 보고서 디자이너에서 액세스할 수 있는 URL에 저장한 다음 해당 XML 문서를 XML 데이터 원본으로 사용합니다(예: `http://localhost/Customers.xml`).  
+ 이전 섹션의 요소 경로 예를 사용하려면 이 XML을 복사하여 보고서 디자이너에서 액세스할 수 있는 URL에 저장한 다음 해당 XML 문서를 XML 데이터 원본으로 사용합니다(예: `https://localhost/Customers.xml`).  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  
@@ -185,7 +185,7 @@ XMLLocalName :: =
   
      `<XmlData>`  
   
-5.  Customers.XML을 복사하여 쿼리 창에서 `<XmlData>`다음에 텍스트를 붙여 넣습니다.  
+5.  Customers.XML을 복사하여 쿼리 창에서 `<XmlData>` 다음에 텍스트를 붙여 넣습니다.  
   
 6.  쿼리 창에서 Customers.XML로부터 복사한 첫 번째 줄을 삭제합니다. `<?xml version="1.0"?>`  
   

@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722511"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602868"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722511"
   
  또한 두 성능 개체 `SQL Server:Availability Replica > Flow Control Time (ms/sec)` 및 `SQL Server:Availability Replica > Flow Control/sec`를 확인하는 것도 유용합니다. 이러한 두 값을 곱하면 흐름 제어가 해제될 때까지 대기하는 데 소비한 최종 시간이 나타납니다. 흐름 제어 대기 시간이 길수록 전송 속도가 더 느립니다.  
   
- 다음 메트릭은 네트워크 대기 시간 및 처리량 진단에 유용합니다. **ping.exe** 및 [네트워크 모니터](http://www.microsoft.com/download/details.aspx?id=4865) 등 다른 Windows 도구를 사용하여 대기 시간 및 네트워크 사용률을 평가할 수 있습니다.  
+ 다음 메트릭은 네트워크 대기 시간 및 처리량 진단에 유용합니다. **ping.exe** 및 [네트워크 모니터](https://www.microsoft.com/download/details.aspx?id=4865) 등 다른 Windows 도구를 사용하여 대기 시간 및 네트워크 사용률을 평가할 수 있습니다.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47722511"
  로그 블록이 로그 파일에서 확정되자마자 데이터 손실이 방지됩니다. 그러므로 로그 파일을 데이터 파일에서 격리하는 것이 중요합니다. 로그 파일 및 데이터 파일이 모두 같은 하드 디스크로 매핑된 경우 데이터 파일에 대한 읽기 횟수가 많은 보고 워크로드는 로그 확정 작업에 필요한 것과 같은 I/O 리소스를 사용합니다. 로그 확정이 느리면 주 복제본에 대한 승인이 느려져서 흐름 제어의 과도한 활성화 및 긴 흐름 제어 대기 시간을 유발할 수 있습니다.  
   
 ### <a name="diagnosis-and-resolution"></a>진단 및 해결  
- 네트워크가 높은 대기 시간 또는 낮은 처리량을 겪지 않는 것을 확인했으면 보조 복제본에 대해 I/O 경합을 조사해야 합니다. [SQL Server: 디스크 I/O 최소화](http://technet.microsoft.com/magazine/jj643251.aspx)의 쿼리는 경합 식별에 유용합니다. 해당 문서의 예제를 편의상 아래에 인용합니다.  
+ 네트워크가 높은 대기 시간 또는 낮은 처리량을 겪지 않는 것을 확인했으면 보조 복제본에 대해 I/O 경합을 조사해야 합니다. [SQL Server: 디스크 I/O 최소화](https://technet.microsoft.com/magazine/jj643251.aspx)의 쿼리는 경합 식별에 유용합니다. 해당 문서의 예제를 편의상 아래에 인용합니다.  
   
  다음 스크립트를 사용하여 SQL Server의 모든 인스턴스에서 실행 중인 모든 가용성 데이터베이스의 각 데이터 및 로그 파일에 대한 읽기 및 쓰기 횟수를 볼 수 있습니다. 이는 평균 I/O 정지 시간(밀리초) 기준으로 정렬됩니다. 참고로 숫자는 서버 인스턴스가 시작된 마지막 시간부터 누적되었습니다. 그러므로 어느 정도 시간이 경과한 후 두 측정값 간의 차를 가져와야 합니다.  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  I/O 병목 상태를 식별하고 로그 파일 및 데이터 파일을 같은 하드 디스크에 저장한 경우 가장 먼저 수행해야 할 일은 데이터 파일 및 로그 파일을 서로 다른 디스크에 저장하는 것입니다. 이 모범 사례는 보고 워크로드가 주 복제본에서 로그 버퍼까지의 로그 전송 경로 및 보조 복제본에서의 트랜잭션을 확정하는 기능을 방해하지 않도록 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [SQL Server의 성능 문제 해결(SQL Server 2012에 적용)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

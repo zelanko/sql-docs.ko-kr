@@ -15,12 +15,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d2289a199ec54eacb42a5fce175f91872ab8133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ed9891af2905f8f45716c64b5f3ed9ac241905
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700410"
 ---
 # <a name="model-object-permissions-master-data-services"></a>모델 개체 권한(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47848871"
  일반적으로 모델 개체에 **모든** 권한을 할당한 다음 그 아래 개체에 대한 사용 권한을 명시적으로 할당합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- msdn.com의 블로그 게시물 [향상된 보안 기능](http://go.microsoft.com/fwlink/p/?LinkId=615376)  
+ msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

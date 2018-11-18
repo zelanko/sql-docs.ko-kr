@@ -11,17 +11,17 @@ ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 616e050d70d2ee67dfc9661781eda77dd78f92e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 539eb7ed053ff4f1d41aaa34360cd71772bbfc9c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720221"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681091"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용
 이 예제에서는 Microsoft SQL Server 2012를 대상으로 하는 데이터베이스 프로젝트에 시퀀스 개체를 추가합니다.  
   
-Microsoft SQL Server 2012에는 시퀀스가 도입되었습니다. 시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다.  시퀀스 개체에 대한 자세한 내용은 [시퀀스 번호](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)를 참조하세요. Microsoft SQL Server 2012의 새로운 기능에 대한 자세한 내용은 [SQL Server 2012의 새로운 기능](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx)을 참조하세요.  
+Microsoft SQL Server 2012에는 시퀀스가 도입되었습니다. 시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다.  시퀀스 개체에 대한 자세한 내용은 [시퀀스 번호](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)를 참조하세요. Microsoft SQL Server 2012의 새로운 기능에 대한 자세한 내용은 [SQL Server 2012의 새로운 기능](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)을 참조하세요.  
   
 > [!WARNING]  
 > 다음 절차에서는 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md) 및 [프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md) 섹션의 이전 절차에서 만들어진 엔터티를 활용합니다.  

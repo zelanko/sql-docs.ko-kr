@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fce1dd4e7f8773d4fb7e80619d9511cc9680c244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796911"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670564"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47796911"
 > [!IMPORTANT]  
 >  허가 받은 사용자는 Windows 응용 프로그램 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 응용 프로그램 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
- Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008의 경우 감사 정책 프로그램( **AuditPol.exe** )을 사용하여 명령줄에서 더욱 세부적인**응용 프로그램 생성**정책을 설정할 수 있습니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](http://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](http://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
+ Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008의 경우 감사 정책 프로그램( **AuditPol.exe** )을 사용하여 명령줄에서 더욱 세부적인**응용 프로그램 생성**정책을 설정할 수 있습니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](https://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 다음과 같은 방법으로 파일 위치에 대한 액세스를 제한할 수 있습니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "47796911"
  [DDL 트리거](../../../relational-databases/triggers/ddl-triggers.md)  
  DDL(데이터 정의 언어) 트리거를 사용하여 데이터베이스 변경 내용을 추적할 수 있는 방법에 대해 설명합니다.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](https://go.microsoft.com/fwlink/?LinkId=101152)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 최신 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

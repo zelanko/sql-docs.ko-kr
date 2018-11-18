@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a77bc4e35d1aaefe3c1d55fd4be8086a71d5dabb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf1113603800d232ccdc88aa6b436f8d8a0e6f6c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644121"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814206"
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
   *rs:Format* URL 매개 변수를 사용하여 선택적으로 보고서를 렌더링할 형식을 지정할 수 있습니다.  HTML4.0 및 HTM5 형식(렌더링 확장 프로그램)은 브라우저에서 렌더링하고 다른 형식의 경우 브라우저는 로컬 파일에 보고서 출력을 저장하라는 메시지가 나타납니다.  
@@ -24,19 +24,19 @@ ms.locfileid: "47644121"
  예를 들어 기본 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용합니다.  
   
 ```  
-http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
   
  또한 SharePoint 통합 모드 보고서 서버에서 가져오는 경우 다음을 사용합니다.  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
   
  예를 들어 브라우저의 다음 URL 명령은 보고서 서버의 명명된 인스턴스에서 PPTX 보고서를 내보냅니다.  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  이 매개 변수의 유효한 값은 액세스할 보고서 서버에 설치된 보고서 렌더링 확장 프로그램을 기반으로 합니다. 일반적인 확장 프로그램은 HTML4.0, MHTML, IMAGE, EXCELOPENXML(xlsx), WORDOPENXML(docx), CSV, PDF, XML 및 NULL입니다. 지정된 렌더링 확장 프로그램이 보고서 서버에 설치되지 않은 경우 보고서가 렌더링되지 않고 오류가 발생하여 브라우저에 표시됩니다.  

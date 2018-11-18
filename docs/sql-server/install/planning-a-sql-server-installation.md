@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701921"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713181"
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
- 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. 무인 설치(`/Q` 또는 `/QS` 매개 변수 사용)에는 `/IAcceptSQLServerLicenseTerms` 매개 변수가 포함되어야 합니다. [Microsoft SQL Server 사용 조건 및 정보](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)에서 사용 조건을 별도로 다운로드하여 검토하세요. 볼륨 라이선스 조건에 대해서는 [Licensing Terms and Documentation](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)(사용 조건 및 설명서)을 참조하세요. 이전 버전의 SQL Server에 대해서는 [Microsoft 소프트웨어 라이선스 조건](http://go.microsoft.com/fwlink/?LinkID=148209)을 참조하세요.  
+ 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. 무인 설치(`/Q` 또는 `/QS` 매개 변수 사용)에는 `/IAcceptSQLServerLicenseTerms` 매개 변수가 포함되어야 합니다. [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)에서 사용 조건을 별도로 다운로드하여 검토하세요. 볼륨 라이선스 조건에 대해서는 [Licensing Terms and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)(사용 조건 및 설명서)을 참조하세요. 이전 버전의 SQL Server에 대해서는 [Microsoft 소프트웨어 라이선스 조건](https://go.microsoft.com/fwlink/?LinkID=148209)을 참조하세요.  
   
 > [!NOTE]  
 >  소프트웨어의 수령 방법(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  

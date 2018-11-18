@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631871"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658079"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47631871"
 `ALTER DATABASE`의 `FILEGROWTH` 및 `SIZE` 인수에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.
 
 > [!TIP]
-> 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
+> 주어진 인스턴스의 모든 데이터베이스의 현재 트랜잭션 로그 크기에 대한 최적의 VLF 분포 및 필수 크기를 수행할 필수 성장 증분을 결정하려면 이 [스크립트](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)를 참조하세요.
   
  트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 VLF로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
   
@@ -143,12 +142,12 @@ ms.locfileid: "47631871"
  첫 번째 로그 백업을 만들기 전에 데이터베이스 백업 또는 파일 백업 집합의 첫 번째 집합과 같은 전체 백업을 만들어야 합니다. 파일 백업만 사용하여 데이터베이스를 복원하면 복잡해질 수 있습니다. 따라서 가능하면 처음에 전체 데이터베이스 백업을 수행하는 것이 좋습니다. 그런 후에 트랜잭션 로그를 정기적으로 백업할 수 있습니다. 이렇게 하면 작업 손실 위험이 최소화될 뿐만 아니라 트랜잭션 로그가 잘립니다. 일반적으로 기존 로그 백업 후에도 트랜잭션 로그가 잘리지만  
   
 > [!IMPORTANT]
-> 비즈니스 요구 사항, 특히 손상된 로그 저장소에 의해 발생될 수 있는 작업 손실에 대한 허용 범위를 지원하기 위해 로그 백업을 충분히 자주 수행하는 것이 좋습니다. 로그 백업의 적절한 수행 빈도는 저장 및 관리는 물론 복원까지 가능할 수 있는 로그 백업의 횟수에 의해 조정되는 작업 손실 위험에 대한 허용 범위에 따라 달라집니다. 복구 전략을 구현할 때 필요한 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](http://wikipedia.org/wiki/Recovery_point_objective), 특히 로그 백업 케이던스에 대해 생각해보세요.
+> 비즈니스 요구 사항, 특히 손상된 로그 저장소에 의해 발생될 수 있는 작업 손실에 대한 허용 범위를 지원하기 위해 로그 백업을 충분히 자주 수행하는 것이 좋습니다. 로그 백업의 적절한 수행 빈도는 저장 및 관리는 물론 복원까지 가능할 수 있는 로그 백업의 횟수에 의해 조정되는 작업 손실 위험에 대한 허용 범위에 따라 달라집니다. 복구 전략을 구현할 때 필요한 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](https://wikipedia.org/wiki/Recovery_point_objective), 특히 로그 백업 케이던스에 대해 생각해보세요.
 > 로그 백업에 걸리는 시간은 매 15분에서 30분이면 충분합니다. 비즈니스에서 작업 손실 위험을 최소화하려는 경우에는 로그 백업을 더 자주 수행해야 합니다. 로그 백업 횟수가 많아지면 로그 잘림이 더 자주 발생하여 로그 파일의 크기가 작아지는 이점이 있습니다.  
   
 > [!IMPORTANT]
 > 복원해야 하는 로그 백업의 수를 제한하려면 데이터를 정기적으로 백업해야 합니다. 예를 들어 주별 전체 데이터베이스 백업과 일별 차등 데이터베이스 백업을 예약할 수 있습니다.  
-> 또 복구 전략을 구현할 때 필요한 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](http://wikipedia.org/wiki/Recovery_point_objective), 특히 전체 및 차등 데이터베이스 백업 케이던스에 대해 생각해보세요.
+> 또 복구 전략을 구현할 때 필요한 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 및 [RPO](https://wikipedia.org/wiki/Recovery_point_objective), 특히 전체 및 차등 데이터베이스 백업 케이던스에 대해 생각해보세요.
 
 트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.
   
@@ -253,7 +252,7 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 [recovery interval 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Paul Randall, “SQL Server의 로깅 및 복구 이해”](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Paul Randall, “SQL Server의 로깅 및 복구 이해”](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

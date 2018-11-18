@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645151"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813356"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "47645151"
   
          `netstat –anp tcp`  
   
-    -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](http://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 전용 포트(49152 - 65535) 간의 차이를 검토합니다.  
+    -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](https://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 전용 포트(49152 - 65535) 간의 차이를 검토합니다.  
   
     -   Windows 방화벽을 사용하고 있는 경우 포트를 열어야 합니다. 자세한 내용은 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)를 참조하세요.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645151"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>추가 URL을 지정하는 고급 속성 설정  
  포트 또는 호스트 이름(도메인 이름 서버가 컴퓨터에 할당된 IP 주소로 확인할 수 있는 호스트 헤더 이름 또는 IP 주소)을 여러 개 지정하여 보고서 서버 웹 서비스 또는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 URL을 여러 개 예약할 수 있습니다. URL을 여러 개 만들면 같은 보고서 서버 인스턴스에 대해 서로 다른 액세스 경로를 설정할 수 있습니다. 예를 들어 보고서 서버에 대한 인트라넷 및 익스트라넷 액세스가 사용 가능하도록 하기 위해 다음과 같이 인트라넷을 통한 액세스에 대해서는 기본 URL을 사용하고 익스트라넷 액세스에 대해서는 정규화된 추가 호스트 이름을 사용할 수 있습니다.  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  같은 응용 프로그램 인스턴스에 대해서는 가상 디렉터리 이름을 여러 개 설정할 수 없습니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램 인스턴스는 한 개의 가상 디렉터리 이름에 매핑됩니다. 같은 컴퓨터에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스가 여러 개 있는 경우 각 요청이 원하는 대상에 도달하게 하려면 응용 프로그램에 대한 가상 디렉터리 이름에 인스턴스 이름이 포함되어 있어야 합니다.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645151"
   
 2.  **추가**를 클릭합니다.  
   
-3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 `http://www`를 포함한 전체 URL을 포함시킵니다.  
+3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 `https://www`를 포함한 전체 URL을 포함시킵니다.  
   
 4.  포트를 지정합니다. 사용자 지정 포트를 지정한 경우 응용 프로그램 URL에 항상 포트 번호가 포함되어야 합니다.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645151"
 ##  <a name="URLExamples"></a> URL 구성 예  
  다음 목록에서는 보고서 서버 URL의 예를 보여 줍니다.  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645151"
   
  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 액세스하는 데 사용하는 URL은 비슷한 형식으로 구성되며 일반적으로 보고서 서버를 호스트하는 동일한 웹 사이트에서 생성됩니다. 가상 디렉터리 이름만 다릅니다. 이 경우에는 **reports** 이지만 원하는 이름으로 구성할 수 있습니다.  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

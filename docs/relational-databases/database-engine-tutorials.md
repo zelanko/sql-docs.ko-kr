@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7df1012ad723b01817de6b1c6cafb01b91ea781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855658"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669332"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47855658"
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 2016 자습서](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI: SQL Server 2012 샘플](http://go.microsoft.com/fwlink/?linkID=220734)  
+[TechNet WIKI: SQL Server 2012 샘플](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   

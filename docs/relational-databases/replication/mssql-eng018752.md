@@ -13,12 +13,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7f2dea4a4bd04c3edccd710b4265fb13983dd1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e05a58c9a88ffaa4292fd4d103cd56f5b827e9b5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665652"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47719161"
   
 -   로그 판독기 에이전트를 다시 시작합니다. 자세한 내용은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요.  
   
--   배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작(클러스터에서 오프라인 또는 온라인 상태로 만듦)합니다. 예약된 작업이 다른 **인스턴스에서**sp_repldone **,** sp_replcmds **또는** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행했을 가능성이 있는 경우 해당 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트도 다시 시작합니다. 자세한 내용은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
+-   배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작(클러스터에서 오프라인 또는 온라인 상태로 만듦)합니다. 예약된 작업이 다른 **인스턴스에서**sp_repldone **,** sp_replcmds **또는** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행했을 가능성이 있는 경우 해당 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트도 다시 시작합니다. 자세한 내용은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
   
 -   게시 데이터베이스의 게시자에서 [sp_replflush&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)를 실행한 다음 로그 판독기 에이전트를 다시 시작합니다.  
   

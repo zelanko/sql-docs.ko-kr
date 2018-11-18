@@ -18,16 +18,16 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cf761fe98c7450578314f0f60b7d05c51407269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbca8d80adc2f37e441387d91701633f87e6a7c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818551"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672072"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  OpenSqlFilestream API는 파일 시스템에 저장된 FILESTREAM BLOB(Binary Large Object)에 대한 Win32 호환 파일 핸들을 가져옵니다. 핸들이 [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)의 Win32 API 중 하나로 전달될 수 있습니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
+  OpenSqlFilestream API는 파일 시스템에 저장된 FILESTREAM BLOB(Binary Large Object)에 대한 Win32 호환 파일 핸들을 가져옵니다. 핸들이 [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)의 Win32 API 중 하나로 전달될 수 있습니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 동일한 트랜잭션에서 실행할 수 있습니다. 이를 통해 SQL 데이터와 FILESTREAM BLOB 데이터 간의 일관성을 유지 관리할 수 있습니다.  
   
@@ -54,7 +54,7 @@ HANDLE OpenSqlFilestream (
  [in] **PathName** 함수에서 반환하는 [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) 경로입니다. PathName은 FILESTREAM 테이블 및 열에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 또는 UPDATE 권한이 있는 계정의 컨텍스트에서 호출해야 합니다.  
   
  *DesiredAccess*  
- [in] FILESTREAM BLOB 데이터에 액세스하는 데 사용되는 모드를 설정합니다. 이 값은 [DeviceIoControl Function](http://go.microsoft.com/fwlink/?LinkId=105527)(DeviceIoControl 함수)에 전달됩니다.  
+ [in] FILESTREAM BLOB 데이터에 액세스하는 데 사용되는 모드를 설정합니다. 이 값은 [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527)(DeviceIoControl 함수)에 전달됩니다.  
   
 |속성|값|의미|  
 |----------|-----------|-------------|  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021097"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814096"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021097"
   
  다음 항목에서는 Office 및 Word 옵션 설정에 대한 추가 정보를 제공합니다.  
   
--   Word의 **Microsoft Office 언어 기본 설정** 또는 **Word 옵션** 대화 상자에서 편집 언어를 변경합니다. 자세한 내용은 [편집, 표시 또는 도움말 언어 기본 설정 지정](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)을 참조하세요.  
+-   Word의 **Microsoft Office 언어 기본 설정** 또는 **Word 옵션** 대화 상자에서 편집 언어를 변경합니다. 자세한 내용은 [편집, 표시 또는 도움말 언어 기본 설정 지정](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)을 참조하세요.  
   
--   Office 언어 팩을 추가한 다음 편집 언어를 변경합니다. 자세한 내용은 [편집, 표시 또는 도움말 언어 기본 설정 지정](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 및 [Office 언어 옵션](http://office.microsoft.com/language/)을 참조하세요.  
+-   Office 언어 팩을 추가한 다음 편집 언어를 변경합니다. 자세한 내용은 [편집, 표시 또는 도움말 언어 기본 설정 지정](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 및 [Office 언어 옵션](https://office.microsoft.com/language/)을 참조하세요.  
   
 > [!NOTE]  
 >  Word의 **Microsoft Office 언어 기본 설정** 또는 **Word 옵션** 대화 상자에서 편집 언어를 변경하는 경우 변경된 편집 언어가 모든 Office 프로그램에 적용됩니다.  

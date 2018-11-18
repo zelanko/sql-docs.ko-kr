@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906153"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666832"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "48906153"
 
 이 섹션에서는 동일하게 정의된 이벤트 세션에 대한 세 가지 기술적 관점을 일치 및 상호 연결합니다. 세션이 정의되었으며 SQL Server Management Studio(SSMS.exe)의 **개체 탐색기** 에 표시되지만 세션이 현재 실행되고 있지 않습니다.
 
-예기치 않은 오류를 방지하려면 매달 [SSMS의 최신 업데이트를 설치](http://msdn.microsoft.com/library/mt238290.aspx)하는 것이 좋습니다.
+예기치 않은 오류를 방지하려면 매달 [SSMS의 최신 업데이트를 설치](https://msdn.microsoft.com/library/mt238290.aspx)하는 것이 좋습니다.
 
 
 확장 이벤트 카탈로그 뷰에 대한 참조 설명서는 [확장 이벤트 카탈로그 뷰(TRANSACT-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)에 있습니다.

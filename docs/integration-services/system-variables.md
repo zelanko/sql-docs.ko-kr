@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726272"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641910"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
@@ -105,6 +105,6 @@ ms.locfileid: "47726272"
  이 규칙은 사용자 정의 변수에도 적용됩니다. 그러나 시스템 변수 데이터 형식의 경우 변경할 수 없으므로 데이터 형식에 맞게 적절하게 사용해야 하는 반면 사용자 정의 데이터 형식은 보다 융통성이 높습니다. 매개 변수 바인딩에 사용되는 사용자 정의 변수는 일반적으로 매핑되는 매개 변수의 데이터 형식과 호환 가능한 데이터 형식으로 정의됩니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

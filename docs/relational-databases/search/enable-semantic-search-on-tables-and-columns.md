@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672472"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 의미 체계 인덱스 추가  
- **전체 텍스트 인덱스 속성** 대화 상자의 **전체 텍스트 인덱스 열** 페이지에서 의미 체계 및 전체 텍스트 인덱싱을 사용하도록 설정된 열을 변경할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 관리](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조하세요.  
+ **전체 텍스트 인덱스 속성** 대화 상자의 **전체 텍스트 인덱스 열** 페이지에서 의미 체계 및 전체 텍스트 인덱싱을 사용하도록 설정된 열을 변경할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 관리](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조하세요.  
 
 ## <a name="alter-a-semantic-index"></a>의미 체계 인덱스 변경
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 의미 체계 인덱스 삭제  
- **전체 텍스트 인덱스 속성** 대화 상자의 **전체 텍스트 인덱스 열** 페이지에서 의미 체계 및 전체 텍스트 인덱싱을 사용하도록 설정된 열을 변경할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 관리](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조하세요.  
+ **전체 텍스트 인덱스 속성** 대화 상자의 **전체 텍스트 인덱스 열** 페이지에서 의미 체계 및 전체 텍스트 인덱싱을 사용하도록 설정된 열을 변경할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 관리](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)를 참조하세요.  
   
 ###  <a name="dropreq"></a> 의미 체계 인덱스 삭제를 위한 요구 사항 및 제한 사항  
   

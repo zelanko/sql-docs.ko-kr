@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f6303d4854e8a46715182bd40e274e8ccf12b30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701331"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ EVENTDATA( )
 ## <a name="schemas-returned"></a>반환된 스키마  
 EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 모든 이벤트의 스키마 정의는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 디렉터리에 설치됩니다.  
   
-[Microsoft SQL Server XML 스키마](http://go.microsoft.com/fwlink/?LinkID=31850) 웹 페이지에도 이벤트 스키마가 있습니다.  
+[Microsoft SQL Server XML 스키마](https://go.microsoft.com/fwlink/?LinkID=31850) 웹 페이지에도 이벤트 스키마가 있습니다.  
   
 특정 이벤트에 대한 스키마를 추출하려면 복합 유형 `EVENT_INSTANCE_<event_type>`에 대한 스키마를 검색하세요. 예를 들어 `DROP_TABLE` 이벤트의 스키마를 추출하려면 `EVENT_INSTANCE_DROP_TABLE`의 스키마를 검색합니다.  
   

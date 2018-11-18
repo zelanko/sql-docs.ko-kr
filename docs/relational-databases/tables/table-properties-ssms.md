@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efcfa1d417a68428beb724c21f918f8af07dfffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708531"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676072"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47708531"
  따옴표 붙은 식별자 옵션이 ON으로 설정된 상태에서 개체가 만들어졌는지 여부를 나타냅니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  **잠금 에스컬레이션**  
- 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](http://msdn.microsoft.com/library/jj856598.aspx)을 참조하세요. 가능한 값은  
+ 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://msdn.microsoft.com/library/jj856598.aspx)을 참조하세요. 가능한 값은  
   
  AUTO  
  이 옵션을 선택하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 테이블 스키마에 적절한 잠금 에스컬레이션 세분성을 선택할 수 있습니다.  

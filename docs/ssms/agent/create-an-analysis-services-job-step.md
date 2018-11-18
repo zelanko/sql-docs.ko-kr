@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a59b69bd421b1b20bb59d772e5b393915cd0c5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42d5ae09ef078e98f1343a4e4e7bfda7ac6566b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698191"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47759601"
   
 ### <a name="Restrictions"></a>제한 사항  
   
--   작업 단계에서 Analysis Services 명령을 사용하는 경우 명령 문은 XML for Analysis Services **Execute** 메서드여야 합니다. 문에 전체 SOAP(Simple Object Access Protocol) Envelope 또는 XML for Analysis **Discover** 메서드를 포함할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 전체 SOAP Envelope와 **Discover** 메서드를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서는 지원하지 않습니다. XML for Analysis Services에 대한 자세한 내용은 [XML for Analysis 개요(XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)를 참조하세요.  
+-   작업 단계에서 Analysis Services 명령을 사용하는 경우 명령 문은 XML for Analysis Services **Execute** 메서드여야 합니다. 문에 전체 SOAP(Simple Object Access Protocol) Envelope 또는 XML for Analysis **Discover** 메서드를 포함할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 전체 SOAP Envelope와 **Discover** 메서드를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서는 지원하지 않습니다. XML for Analysis Services에 대한 자세한 내용은 [XML for Analysis 개요(XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)를 참조하세요.  
   
--   작업 단계에서 Analysis Services 쿼리를 사용하는 경우 쿼리 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다. MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
+-   작업 단계에서 Analysis Services 쿼리를 사용하는 경우 쿼리 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다. MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
   
 ### <a name="Security"></a>보안  
   
@@ -124,13 +124,13 @@ ms.locfileid: "47759601"
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  
@@ -146,7 +146,7 @@ ms.locfileid: "47759601"
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services 쿼리 작업 단계를 만들려면  
   
@@ -173,10 +173,10 @@ ms.locfileid: "47759601"
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **PowerShell 스크립트 작업 단계를 만들려면**  
   
-선택한 프로그래밍 언어(예: XMLA 또는 MDX)를 사용하여 **JobStep** 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
+선택한 프로그래밍 언어(예: XMLA 또는 MDX)를 사용하여 **JobStep** 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   

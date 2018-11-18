@@ -19,12 +19,12 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71e88a63a3f3518ba983f494b69b4046346a5e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 468364203d169e6987322edbb99f0b2cea863fec
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696004"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>예  
-이 예에서는 `HelloWorld` 어셈블리가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 등록되어 있다고 가정합니다. 자세한 내용은 [Hello World 예제](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조하세요.
+이 예에서는 `HelloWorld` 어셈블리가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 등록되어 있다고 가정합니다. 자세한 내용은 [Hello World 예제](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)를 참조하세요.
   
 ```sql
 USE AdventureWorks2012;  

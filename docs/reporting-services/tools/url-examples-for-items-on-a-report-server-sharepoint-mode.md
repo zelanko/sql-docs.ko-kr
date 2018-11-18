@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839561"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812959"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839561"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 엔드포인트는 사용할 수 없습니다. 프록시 엔드포인트에는 포트 번호가 포함됩니다(예: `http:*//servername:8080/reportserver*`).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
- 보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: `http://*servername/site*` 또는 `http://*servername/site/subsite*`).  
+ 보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: `https://*servername/site*` 또는 `https://*servername/site/subsite*`).  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 웹 응용 프로그램에서 사이트와 하위 사이트는 주 사이트의 탭에 해당하는 경우가 많습니다. 사이트 이름이나 하위 사이트 이름을 찾으려면 **홈**, **모든 사이트 콘텐츠**를 차례로 클릭합니다. 그런 다음 아래쪽으로 스크롤하여 **사이트 및 작업 영역**을 찾습니다. 이 섹션에 사이트 목록이 표시됩니다.  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 라이브러리에 대한 URL  
  SharePoint 라이브러리에 보고서나 관련 항목을 배포하는 경우 SharePoint 라이브러리에 대한 URL을 사용해야 합니다. 라이브러리에 사용할 URL은 사용하는 SharePoint 버전에 따라 달라집니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 또는 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]에서는 라이브러리가 서버 이름 뒤에 표시됩니다(예: `http://*servername/*Shared Documents`).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 또는 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]에서는 라이브러리가 서버 이름 뒤에 표시됩니다(예: `https://*servername/*Shared Documents`).  
   
- [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]에서는 라이브러리가 사이트 및 하위 사이트 뒤에 표시됩니다(예: `http://*servername/site/*Documents`)을 입력합니다.  
+ [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]에서는 라이브러리가 사이트 및 하위 사이트 뒤에 표시됩니다(예: `https://*servername/site/*Documents`)을 입력합니다.  
   
  새 SharePoint 라이브러리나 잘 모르는 사이트의 경로 정보를 찾으려면 브라우저를 열고 보고서를 게시할 SharePoint 라이브러리를 찾습니다. 라이브러리가 비어 있으면 임의의 파일을 업로드합니다. 그런 다음 해당 파일을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **속성** 창을 엽니다. 파일 주소에 게시 작업을 위해 필요한 URL 값이 들어 있습니다.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 사이트의 항목에 대한 정규화된 URL  
- SharePoint 라이브러리에 저장된 항목의 주소는 항상 루트 노드로 사용되는 웹 응용 프로그램으로 시작하여(`http://*server*`) 참조하는 파일 이름으로 끝나는 정규화된 URL로 지정됩니다.  
+ SharePoint 라이브러리에 저장된 항목의 주소는 항상 루트 노드로 사용되는 웹 응용 프로그램으로 시작하여(`https://*server*`) 참조하는 파일 이름으로 끝나는 정규화된 URL로 지정됩니다.  
   
  URL의 파일 이름에는 파일 확장명이 포함되어야 합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839561"
  드릴스루 보고서를 지정하려면 식에 URL을 포함합니다. 예를 들어 SalesDetails라는 보고서를 드릴스루 보고서로 지정하려면 입력란 또는 자리 표시자 텍스트에 대한 동작에서 ReportName을 다음 식으로 설정합니다.  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>SharePoint 사이트의 예약된 이름  
@@ -94,11 +94,11 @@ ms.locfileid: "47839561"
   
 |대상|URL 예|  
 |------------|-----------------|  
-|SharePoint 서버|`http://TestServer`|  
-|SharePoint 서버 사이트 또는 하위 사이트|`http://TestServer/toplevelsite/subsite`|  
-|**또는** [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|**또는** 인스턴스의 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 폴더에 있는 Company Sales 샘플 보고서|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|**또는** [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|SharePoint 서버|`https://TestServer`|  
+|SharePoint 서버 사이트 또는 하위 사이트|`https://TestServer/toplevelsite/subsite`|  
+|**또는** [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|**또는** 인스턴스의 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 폴더에 있는 Company Sales 샘플 보고서|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|**또는** [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> 제작 도구에서 SharePoint 라이브러리로 게시  
  보고서 제작 도구를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일은 추가되기 전에 유효한지 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  

@@ -16,12 +16,12 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9014d94c486221c00f6d705e4bda95f3f9e731f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab222a561f15c0eeaf9e887ddf88fe0d9cad4f82
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754391"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640960"
 ---
 # <a name="history-cleanup-task"></a>기록 정리 태스크
   기록 정리 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스의 다음 기록 테이블에서 항목을 삭제합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "47754391"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   

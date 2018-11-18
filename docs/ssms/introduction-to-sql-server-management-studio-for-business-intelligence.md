@@ -15,12 +15,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8626960b3b5a16a8edc3aed7956799de24e61c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608791"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701369"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio 소개
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
   
 공유 일정 폴더를 사용하여 공유 일정을 관리하고 보고서 서버 데이터베이스(ReportServer, ReportServerTempdb)를 관리할 수 있습니다. 또한 보고서 서버 데이터베이스를 새로운 또는 다른 SQL Server 데이터베이스 엔진([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)])으로 이동할 때 Master 시스템 데이터베이스에서 RSExecRole을 만듭니다. 이러한 태스크에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [Management Studio 방법 도움말 항목](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Management Studio 방법 도움말 항목](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [보고서 서버 데이터베이스 관리](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
   
 다양한 기능을 설정 및 구성하고 서버 기본값을 설정하고 역할 및 작업을 관리함으로써 서버를 관리할 수도 있습니다. 이러한 태스크에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [방법: 보고서 서버 속성 설정(Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [방법: 보고서 서버 속성 설정(Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [방법: 역할 만들기, 삭제 또는 수정(Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [방법: 역할 만들기, 삭제 또는 수정(Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Data Tools를 사용한 개발 및 구현](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

@@ -17,12 +17,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd50e2c507295921952c549d1eeee869b74e0e7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731101"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641460"
 ---
 # <a name="advanced-editor"></a>고급 편집기
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "47731101"
   
  구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [경로 속성](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [경로 속성](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  편집하는 특정 구성 요소에 대한 자세한 내용은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 및 개념 설명서의 데이터 흐름 요소 섹션에서 구성 요소 설명을 참조하세요.  
   

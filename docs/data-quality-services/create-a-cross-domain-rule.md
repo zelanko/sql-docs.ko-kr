@@ -15,12 +15,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da205f6e24c037eb6fe17601b188d07b66f12d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696271"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
 
@@ -36,7 +36,7 @@ ms.locfileid: "47810621"
   
  단일 도메인에만 영향을 주는 모든 단순한 규칙 뒤에서 도메인 간 규칙을 사용하세요. 값이 단일 도메인 규칙(존재할 경우)을 전달할 경우에만 도메인 간 규칙이 적용됩니다. 먼저 규칙이 실행되는 복합 도메인과 단일 도메인을 모두 정의해야 규칙을 실행할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 간 규칙을 만들려면 복합 도메인을 만들어 열어 놓아야 합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "47810621"
   
     6.  테스트 완료 후 **복합 도메인 규칙 테스트** 대화 상자에서 **닫기** 를 클릭합니다.  
   
-2.  도메인 간 규칙을 완성하면 **End the Domain Management Activity** 에서 설명한 대로 [마침](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)을 클릭하여 도메인 관리 작업을 완료합니다.  
+2.  도메인 간 규칙을 완성하면 **End the Domain Management Activity** 에서 설명한 대로 [마침](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)을 클릭하여 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 간 규칙을 만든 후  
  도메인 간 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

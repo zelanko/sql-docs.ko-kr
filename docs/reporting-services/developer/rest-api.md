@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028244"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812747"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services에 대한 REST API를 사용하여 개발
 
@@ -46,7 +46,7 @@ REST API 요청/응답 쌍은 5개의 구성 요소로 구분할 수 있습니�
 
 * HTTP **응답 메시지 헤더** 필드:
 
-    * 범위가 2xx 성공 코드부터 4xx 또는 5xx 오류 코드인 [HTTP 상태 코드](http://www.w3.org/Protocols/HTTP/HTRESP.html)입니다. 또는 API 설명서에 나와 있는 것처럼 서비스 정의된 상태 코드가 반환될 수 있습니다.
+    * 범위가 2xx 성공 코드부터 4xx 또는 5xx 오류 코드인 [HTTP 상태 코드](https://www.w3.org/Protocols/HTTP/HTRESP.html)입니다. 또는 API 설명서에 나와 있는 것처럼 서비스 정의된 상태 코드가 반환될 수 있습니다.
     * `Content-type` 응답 헤더와 같은 요청의 응답을 지원하는 데 필요한 선택적 추가 헤더 필드입니다.
 
 * 선택적 HTTP **응답 메시지 본문** 필드:
@@ -59,7 +59,7 @@ REST API 요청/응답 쌍은 5개의 구성 요소로 구분할 수 있습니�
 
 ## <a name="testing-api-calls"></a>API 호출 테스트
 
-HTTP 요청/응답 메시지를 테스트하는 도구는 [Fiddler](http://www.telerik.com/fiddler)입니다. Fiddler는 REST 요청을 가로챌 수 있는 무료 웹 디버깅 프록시로, HTTP 요청/응답 메시지를 쉽게 진단할 수 있도록 합니다.
+HTTP 요청/응답 메시지를 테스트하는 도구는 [Fiddler](https://www.telerik.com/fiddler)입니다. Fiddler는 REST 요청을 가로챌 수 있는 무료 웹 디버깅 프록시로, HTTP 요청/응답 메시지를 쉽게 진단할 수 있도록 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

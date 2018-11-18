@@ -14,12 +14,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910b511796411207151b40933cf82c8ea06b9dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7c01d2ac09ebb1e521dfbf7c762077a3f68379
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821351"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696711"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 
@@ -27,7 +27,7 @@ ms.locfileid: "47821351"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인의 속성을 설정하려면 기술 자료와 도메인을 만들어 두어야 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47821351"
   
 2.  [Create a Domain](../data-quality-services/create-a-domain.md)에 설명된 대로 새 도메인을 만든 후 속성을 설정합니다.  
   
-3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 속성 설정 후  
  도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

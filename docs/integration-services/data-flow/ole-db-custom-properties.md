@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0961f3cb3b63b86b65490e0959d9e369edb0ed5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836051"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638990"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -69,6 +69,6 @@ ms.locfileid: "47836051"
  자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

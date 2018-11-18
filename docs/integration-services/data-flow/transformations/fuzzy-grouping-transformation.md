@@ -29,18 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822221"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638907"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
->  성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
+>  성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
   
  유사 항목 그룹화 변환에는 변환 알고리즘이 작업을 수행하는 데 필요한 임시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블을 만들기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 필요합니다. 연결은 데이터베이스에 테이블을 만드는 권한을 가진 사용자로 확인되어야 합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47822221"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

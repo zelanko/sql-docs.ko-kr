@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652381"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638780"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
   원본 데이터의 프로필을 검토하기 전에 수행해야 하는 첫 번째 단계는 데이터 프로파일링 태스크를 설정하고 실행하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 이 태스크를 만듭니다. 데이터 프로파일링 태스크를 구성하려면 데이터 프로파일링 태스크 편집기를 사용합니다. 이 편집기를 사용하면 프로필을 출력할 위치와 계산할 프로필을 선택할 수 있습니다. 태스크를 설정한 후 패키지를 실행하여 데이터 프로필을 계산합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "47652381"
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
+ 대상 네임스페이스는 스키마에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  

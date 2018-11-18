@@ -13,12 +13,12 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050681b0b215d8dc8625bf6a4480d47c50c89b55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d8a45b8142a9788ea1aae5bc81193c8a7a3120f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769731"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660322"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>예제: ELEMENTXSINIL 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ FOR XML EXPLICIT;
   
  다음은 결과의 일부입니다.  
   
- `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

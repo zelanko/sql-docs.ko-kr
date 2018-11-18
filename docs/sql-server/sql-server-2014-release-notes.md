@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419498"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699698"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 1.  SQL Server 2014 CTP 2 데이터베이스를 SQL Server 2014 RTM 인스턴스에 연결합니다.    
 2.  SQL Server 2014 CTP 2에서 만든 데이터베이스 백업을 SQL Server 2014 RTM 인스턴스로 복원합니다.    
 3.  SQL Server 2014 RTM으로 전체 업그레이드를 수행합니다.
-4.  SQL Server 2014 RTM으로 롤링 업그레이드를 수행합니다. 롤링 업그레이드를 시작하기 전에 수동 장애 조치(failover) 모드로 전환해야 합니다. 자세한 내용은 [최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트](http://msdn.microsoft.com/library/dn178483.aspx)를 참조하세요.    
+4.  SQL Server 2014 RTM으로 롤링 업그레이드를 수행합니다. 롤링 업그레이드를 시작하기 전에 수동 장애 조치(failover) 모드로 전환해야 합니다. 자세한 내용은 [최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트](https://msdn.microsoft.com/library/dn178483.aspx)를 참조하세요.    
 5.  SQL Server 2014 CTP 2에서 설치된 트랜잭션 성능 컬렉션 집합에 의해 수집된 데이터는 SQL Server 2014 RTM에서 SQL Server Management Studio를 통해 볼 수 없으며 그 반대의 경우도 마찬가지입니다.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>SQL Server 2014 RTM에서 SQL Server 2014 CTP 2로의 다운그레이드  
@@ -114,7 +114,7 @@ SQL Server 2014 SP1은 CU 5를 포함하여 SQL Server 2014 CU 1에서 제공하
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 미디어/ISO/CAB의 잘못된 버전의 StreamInsight Client  
 잘못된 버전의 StreamInsight.msi 및 StreamInsightClient.msi가 SQL Server 미디어/ISO/CAB의 다음 경로에 있습니다(StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**해결 방법:** [SQL Server 2014 Feature Pack 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkID=306709)에서 올바른 버전을 다운로드하여 설치합니다.  
+**해결 방법:** [SQL Server 2014 Feature Pack 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkID=306709)에서 올바른 버전을 다운로드하여 설치합니다.  
   
 ### <a name="ProdDoc"></a>제품 설명서 RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard의 변경 사항은 다음과 같습니다.
 -   최대 메모리가 64GB에서 128GB로 증가했습니다.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>메모리 최적화 관리자가 호환되지 않는 것으로 기본 제약 조건에 플래그를 지정함  
-**문제:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않음 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)을 참조하세요.  
+**문제:** SQL Server Management Studio에서 메모리 최적화 관리자는 모든 기본 제약 조건에 호환되지 않음 플래그를 지정합니다. 일부 기본 제약 조건은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 메모리 최적화 관리자는 지원되는 유형의 기본 제약 조건과 지원되지 않는 유형의 기본 제약 조건을 구분하지 않습니다. 지원되는 기본 제약 조건에는 고유하게 컴파일된 저장 프로시저 내에서 지원되는 모든 상수, 식 및 기본 제공 함수가 포함됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되는 함수 목록을 보려면 [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)을 참조하세요.  
   
 **해결 방법:** 메모리 최적화 관리자를 사용하여 블로커를 식별하려면 호환되는 기본 제약 조건을 무시합니다. 메모리 최적화 관리자를 사용하여 다른 블로커를 제외하고 호환되는 기본 제약 조건이 있는 테이블을 마이그레이션하려면 다음 단계를 수행하십시오.  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
+자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>다중 노드 SharePoint 팜을 SQL Server 2014 Reporting Services로 업그레이드하는 데 필요한 순서  
 **문제:** SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능의 모든 인스턴스 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스의 인스턴스가 업그레이드되면 다중 노드 팜에서 보고서 렌더링이 실패합니다.  
@@ -333,7 +333,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 1.  먼저 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능의 모든 인스턴스를 업그레이드합니다.    
 2.  그런 다음 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스의 모든 인스턴스를 업그레이드합니다.  
   
-자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
+자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
   
 ### <a name="AzureVM"></a>Microsoft Azure Virtual Machines의 SQL Server 2014 RTM  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     이렇게 하면 마법사가 Microsoft Azure에서 복제본을 추가하는 작업을 완료할 수 있습니다.  
   
-2.  마법사가 완료된 후 [Microsoft Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](http://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Microsoft Azure에서 수신기의 구성을 완료해야 합니다.  
+2.  마법사가 완료된 후 [Microsoft Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](https://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Microsoft Azure에서 수신기의 구성을 완료해야 합니다.  
   
 ### <a name="SSAS"></a>Analysis Services(RTM)
   
@@ -359,9 +359,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](http://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
 **추가 정보:**  
   
@@ -374,9 +374,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](http://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
 **추가 정보:**  
   
@@ -389,7 +389,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  Microsoft Excel에서 사용자 지정 고급 속성의 선택을 취소합니다. 다음 기술 자료 문서 [KB 2927748](http://support.microsoft.com/kb/2927748)의 “해결 방법” 섹션을 참조하세요.  
+1.  Microsoft Excel에서 사용자 지정 고급 속성의 선택을 취소합니다. 다음 기술 자료 문서 [KB 2927748](https://support.microsoft.com/kb/2927748)의 “해결 방법” 섹션을 참조하세요.  
   
 **추가 정보:**  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Reporting Services에 대해 관련이 없는 업그레이드 문제를 보고함  
 **문제:** SQL Server 2014 미디어에서 제공된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Reporting Services 서버를 분석할 때 여러 오류를 잘못 보고합니다.  
   
-**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
+**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 업그레이드 관리자가 SQL Server Integration Services 서버를 분석할 때 오류를 보고함  
 **문제:** SQL Server 2014 미디어에서 제공된 SSUA(SQL Server 업그레이드 관리자)가 SQL Server Integration Services 서버를 분석할 때 오류를 보고합니다.  사용자에게 표시되는 오류는 다음과 같습니다.  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
+**해결 방법:** 이 문제는 [SSUA용 SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)에서 제공되는 SQL Server 업그레이드 관리자에서 해결되었습니다.  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

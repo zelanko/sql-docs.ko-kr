@@ -12,12 +12,12 @@ ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06110a0befbf835e4c2b3efe4ede9b4c22f4e020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f710dcbd2757b6fd284e0c72c2409de1670af7f8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699662"
 ---
 # <a name="dqs-security"></a>DQS 보안
 
@@ -43,6 +43,6 @@ ms.locfileid: "47640501"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|SQL Server Management Studio를 사용하여 사용자를 만들고 DQS 역할을 부여하는 방법에 대해 설명합니다.|[SSMS에서 DQS 사용자 관리](http://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
+|SQL Server Management Studio를 사용하여 사용자를 만들고 DQS 역할을 부여하는 방법에 대해 설명합니다.|[SSMS에서 DQS 사용자 관리](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
   
   

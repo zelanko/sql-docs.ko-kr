@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 79b7a54c511d483fde86d11eeb8670ce2ac2bc14
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021157"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813976"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  
@@ -73,7 +73,7 @@ public partial class Form1 : Form
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =   
-            new Uri("http:// <Server Name>/reportserver");  
+            new Uri("https:// <Server Name>/reportserver");  
         serverReport.ReportPath =   
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -120,7 +120,7 @@ Public Class Form1
   
         'Set the report server URL and report path  
         serverReport.ReportServerUrl = _  
-           New Uri("http://<Server Name>/reportserver")  
+           New Uri("https://<Server Name>/reportserver")  
         serverReport.ReportPath = _  
            "/AdventureWorks Sample Reports/Sales Order Detail"  
   

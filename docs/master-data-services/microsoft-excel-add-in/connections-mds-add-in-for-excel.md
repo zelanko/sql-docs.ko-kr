@@ -11,12 +11,12 @@ ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c19314bea6e961c8f4d12dc295b3cc2ea089c7e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696261"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>연결(Excel용 MDS 추가 기능)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47646821"
 
   데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에 다운로드하려면 먼저 연결을 만들어야 합니다. 연결은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스가 연결할 MDS 데이터베이스를 확인하는 방법입니다.  
   
- 연결 문자열은 일반적으로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL입니다(예: `http://contoso/mds`).  
+ 연결 문자열은 일반적으로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL입니다(예: `https://contoso/mds`).  
   
  Excel을 시작할 때마다 MDS 저장소에 연결해야 합니다. 이에 대한 유일한 예외는 활성 스프레드시트에 이미 MDS 관리 데이터가 포함된 경우입니다. 이 경우 사용자가 새로 고치거나 시트의 데이터를 게시할 때마다 연결이 자동으로 수행됩니다.  
   

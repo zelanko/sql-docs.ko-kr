@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0493fb8952932c688edf7c8ae89385a0363fa3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612773"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666682"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "47612773"
 ##  <a name="bkmk_Monitoring"></a> 메모리 사용 모니터링  
   
 ###  <a name="bkmk_UsingSSMS"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
   
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용  
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.  

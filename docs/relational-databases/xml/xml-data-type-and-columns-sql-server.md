@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761957"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662509"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761957"
   
 -   **xml** 데이터 형식의 네이티브 저장소  
   
-     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
+     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
   
-     XML 스키마에 바인딩된 **xml** 데이터 형식인 형식화된 **xml** 데이터 형식에 대해 PSVI(Post-Schema Validation InfoSet)는 InfoSet에 유형 정보를 추가하고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
+     XML 스키마에 바인딩된 **xml** 데이터 형식인 형식화된 **xml** 데이터 형식에 대해 PSVI(Post-Schema Validation InfoSet)는 InfoSet에 유형 정보를 추가하고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 및 [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
   
 -   XML 및 관계형 저장소 간 매핑  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761957"
   
 -   XML 데이터를 대량 로드하고 XML 뷰를 사용하여 기본 테이블로 분해해야 합니다.  
   
- 이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
+ 이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>예: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
  이해를 돕기 위해 고객, 주문 및 라인 항목 등과 같은 기존 관계형 데이터가 있고 이를 XML로 처리하려는 경우를 가정해 보십시오. 관계형 데이터에 대해 AXSD를 사용하여 XML 뷰를 정의합니다. XML 뷰를 사용하면 XML 데이터를 테이블에 대량 로드하고 XML 뷰를 사용하여 관계형 데이터를 쿼리 및 업데이트할 수 있습니다. 이 모델은 XML 태그가 포함된 데이터를 다른 응용 프로그램과 교환하고 SQL 응용 프로그램을 방해 받지 않고 실행해야 하는 경우에 유용합니다.  

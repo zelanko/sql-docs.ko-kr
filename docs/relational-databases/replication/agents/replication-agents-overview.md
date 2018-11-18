@@ -25,12 +25,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c57bd5d7ace7d19857d2bae2992621a301e0cbac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba7afec0dc420d89a940db9aa4efbbd89043992f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675086"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47668501"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제에 사용되는 에이전트를 호스팅 및 예약하고 복제 에이전트를 쉽게 실행하는 방법을 제공합니다. 또한[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제 이외의 작업을 제어하고 모니터링합니다. 자세한 내용은 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치될 때 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 명시적으로 선택하지 않으면 기본적으로 이 서비스는 해제됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작하는 방법은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치될 때 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 자동으로 시작하도록 명시적으로 선택하지 않으면 기본적으로 이 서비스는 해제됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작하는 방법은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
   
 ## <a name="snapshot-agent"></a>스냅숏 에이전트  
  일반적으로 스냅숏 에이전트는 모든 복제 유형에서 사용됩니다. 스냅숏 에이전트는 게시된 테이블과 다른 개체의 스키마 및 초기 데이터 파일을 준비하고, 스냅숏 파일을 저장하고, 배포 데이터베이스의 동기화에 대한 정보를 기록합니다. 배포자에서 스냅숏 에이전트를 실행합니다. 자세한 내용은 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)을 참조하세요.  

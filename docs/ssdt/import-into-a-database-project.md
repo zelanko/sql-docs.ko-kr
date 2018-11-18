@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716051"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667102"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 가져오기를 사용하여 라이브 데이터베이스 또는 .dacpac의 새 개체로 프로젝트를 채우거나 프로젝트의 기존 개체를 스크립트의 새 정의로 업데이트할 수 있습니다. 이러한 세 경로 사이에는 아래 설명과 같이 주목할 몇 가지 동작 차이가 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "47716051"
   
 스크립트에서 가져오기 프로세스는 배포 전/배포 후 스크립트, SQLCMD 변수 또는 RefactorLog 파일을 이해하지 못합니다. 이러한 항목과 가져올 때 감지된 지원되지 않는 구문은 프로젝트에서 **스크립트** 폴더의 **ScriptsIgnoredOnImport.sql** 파일에 배치됩니다.  
   
-자세한 내용은 [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads)에서 SSDT 팀 포럼을 참조하세요.  
+자세한 내용은 [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads)에서 SSDT 팀 포럼을 참조하세요.  
   
 ## <a name="bkmk_import_encrypted"></a>암호화된 개체 가져오기  
 암호화된 개체를 데이터베이스 프로젝트로 가져올 경우 개체 정의의 전문을 서버에서 항상 검색할 수 있는 것이 아닙니다. 그렇기 때문에 이러한 클래스의 개체를 처리할 때는 가져오기 동작이 다를 수 있습니다.  

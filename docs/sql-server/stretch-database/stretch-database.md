@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d9675dfc6a36407f788bfc9c419ce9aea1eccb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689591"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702001"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47689591"
  SQL Server 2016 업그레이드 관리자의 기능인 Stretch Database 관리자를 사용하여 Stretch Database용 데이터베이스 및 테이블을 식별할 수 있습니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요. 잠재적 차단 문제에 대한 자세한 내용은 [Stretch Database에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.  
 
 ## <a name="test-drive-stretch-database"></a>Stretch Database 시험 사용  
- **AdventureWorks 예제 데이터베이스를 사용하여 Stretch Database를 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=49502). 예제 데이터베이스를 SQL Server 2016 인스턴스로 복원한 후 예제 파일의 압축을 풀고 Stretch DB 폴더에서 Stretch DB Samples 파일을 엽니다. 이 파일의 스크립트를 실행하여 Stretch Database를 사용하도록 설정하기 전과 후에 데이터에 사용되는 공간을 확인하고, 데이터 마이그레이션 진행 상황을 추적하고, 데이터 마이그레이션 중에, 그리고 그 후에 계속해서 기존 데이터를 쿼리하고 새 데이터를 삽입할 수 있는지 확인합니다.  
+ **AdventureWorks 예제 데이터베이스를 사용하여 Stretch Database를 시험 사용합니다.** AdventureWorks 예제 데이터베이스를 가져오려면 [여기](https://www.microsoft.com/download/details.aspx?id=49502). 예제 데이터베이스를 SQL Server 2016 인스턴스로 복원한 후 예제 파일의 압축을 풀고 Stretch DB 폴더에서 Stretch DB Samples 파일을 엽니다. 이 파일의 스크립트를 실행하여 Stretch Database를 사용하도록 설정하기 전과 후에 데이터에 사용되는 공간을 확인하고, 데이터 마이그레이션 진행 상황을 추적하고, 데이터 마이그레이션 중에, 그리고 그 후에 계속해서 기존 데이터를 쿼리하고 새 데이터를 삽입할 수 있는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
  **Stretch Database에 적합한 데이터베이스 및 테이블 식별.** SQL Server 2016 업그레이드 관리자를 다운로드하고 스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스의 후보 데이터베이스 및 테이블을 식별할 수 있습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  

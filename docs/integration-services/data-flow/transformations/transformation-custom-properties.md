@@ -42,19 +42,19 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee76028cbc0e416b320a8042eaf577dfeb621ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722941"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640740"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
   
- 이 항목에서는 다양한 데이터 흐름 변환의 사용자 지정 속성을 나열하고 설명합니다. 대부분의 데이터 흐름 개체에 공통되는 속성에 대한 자세한 내용은 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
+ 이 항목에서는 다양한 데이터 흐름 변환의 사용자 지정 속성을 나열하고 설명합니다. 대부분의 데이터 흐름 개체에 공통되는 속성에 대한 자세한 내용은 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
   
- 변환의 일부 속성은 속성 식을 사용하여 설정할 수 있습니다. 자세한 내용은 [식을 사용하여 설정할 수 있는 데이터 흐름 속성](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)을 참조하세요.  
+ 변환의 일부 속성은 속성 식을 사용하여 설정할 수 있습니다. 자세한 내용은 [식을 사용하여 설정할 수 있는 데이터 흐름 속성](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)을 참조하세요.  
   
 ## <a name="transformations-with-custom-properties"></a>사용자 지정 속성이 있는 변환  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47722941"
   
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |SourceInputColumnLineageId|정수|출력 열의 원본인 입력 열의 **LineageID** 입니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
@@ -629,8 +629,8 @@ ms.locfileid: "47722941"
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [경로 속성](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [식을 사용하여 설정할 수 있는 데이터 흐름 속성](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [경로 속성](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [식을 사용하여 설정할 수 있는 데이터 흐름 속성](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

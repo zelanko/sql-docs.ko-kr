@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a39ae6682829121d2471d49c3dd8fd9fdfbfd8d
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864207"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640981"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      범위 또는 수준(실행 및 프로젝트) 및 삭제할 키 수를 지정할 수 있습니다. 삭제할 기본 일괄 처리 크기는 1000입니다. 수준을 2로 설정하면 연결된 프로젝트가 삭제된 경우에만 키와 인증서가 삭제됩니다.  
   
- 자세한 내용은 다음 기술 자료 문서를 참조하세요. [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](http://support.microsoft.com/kb/2972285)  
+ 자세한 내용은 다음 기술 자료 문서를 참조하세요. [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>예제  
  다음 예제는 cleanup_server_execution_keys 저장 프로시저를 호출합니다.  

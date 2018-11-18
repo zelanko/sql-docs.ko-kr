@@ -20,12 +20,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fda41af4bbf9f6e0b98de5c543af99e732966d53
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821951"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640490"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
   데이터 마이닝 모델 학습 대상은 데이터 마이닝 모델 알고리즘을 통해 대상에서 수신하는 데이터를 전달함으로써 데이터 마이닝 모델을 학습합니다. 동일 데이터 마이닝 구조를 기반으로 모델을 작성한 경우에는 하나의 대상에서 여러 데이터 마이닝 모델의 성향을 습득할 수 있습니다. 자세한 내용은 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 및 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)를 참조하세요.  
@@ -44,7 +44,7 @@ ms.locfileid: "47821951"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [데이터 마이닝 모델 학습 대상 사용자 지정 속성](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00f555c060c348573eb6af8b98e90d506b8179ea
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 829af3ab6638b0334b574aff84770acfa4b6e81b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221739"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702341"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "51221739"
   
 **사용해보기:**  
   
--   [**Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)에서 SQL Server를 다운로드하세요. 
+-   [**Evaluation Center**](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)에서 SQL Server를 다운로드하세요. 
   
--   [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)이 이미 설치된 가상 컴퓨터 실행  
+-   [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)이 이미 설치된 가상 컴퓨터 실행  
   
 **다음은 모든 버전에 적용되는 고려 사항입니다.**  
   
@@ -86,14 +86,14 @@ ms.locfileid: "51221739"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 지원 파일  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 에 [!INCLUDE[win8](../../includes/win8-md.md)]를 설치하기 위한 최소 버전 요구 사항은 [Windows Server 2012 또는 Windows 8에 SQL Server 설치](http://support.microsoft.com/kb/2681562)(http://support.microsoft.com/kb/2681562))를 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 에 [!INCLUDE[win8](../../includes/win8-md.md)]를 설치하기 위한 최소 버전 요구 사항은 [Windows Server 2012 또는 Windows 8에 SQL Server 설치](https://support.microsoft.com/kb/2681562)(https://support.microsoft.com/kb/2681562))를 참조하십시오.  
   
 ##  <a name="hwswr"></a> 하드웨어 및 소프트웨어 요구 사항  
 다음은 모든 설치에 적용되는 요구 사항입니다.  
   
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치 프로그램이 자동으로 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](http://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)]에는 .NET Framework 4.6.2가 필요합니다. [다운로드 센터](http://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](http://support.microsoft.com/kb/2919355)가 필요합니다.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치 프로그램이 자동으로 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](https://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)]에는 .NET Framework 4.6.2가 필요합니다. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](https://support.microsoft.com/kb/2919355)가 필요합니다.|  
 |네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 네트워크 프로토콜로 공유 메모리, 명명된 파이프, TCP/IP 및 VIA를 지원합니다.<br/><br/> **참고:** VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 응용 프로그램은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다.<br/><br/> **중요:** VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)를 참조하십시오.|  
 |하드 디스크|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br/><br/> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 있는 [하드 디스크 공간 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)을 참조하세요. 데이터 파일에 대해 지원되는 저장소 유형에 대한 자세한 내용은 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
@@ -251,6 +251,6 @@ ms.locfileid: "51221739"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [SQL Server 2016 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+ [SQL Server 2016 제품 사양](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
   
   

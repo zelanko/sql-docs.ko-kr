@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701321"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
 |[커서 함수](cursor-functions-transact-sql.md)|커서에 대한 정보를 반환합니다.|  
 |[날짜 및 시간 데이터 형식 및 함수](date-and-time-data-types-and-functions-transact-sql.md)|날짜 및 시간 입력 값에 대한 작업을 수행하며 문자열, 숫자 또는 날짜와 시간 값을 반환합니다.|  
 |[JSON 함수](json-functions-transact-sql.md)|JSON 데이터를 검증, 쿼리 또는 변경합니다.|  
-|[논리 함수](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|논리 연산을 수행합니다.|  
+|[논리 함수](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|논리 연산을 수행합니다.|  
 |[수치 연산 함수](mathematical-functions-transact-sql.md)|함수에 매개 변수로 제공되는 입력 값을 기반으로 하여 계산 작업을 수행하고 숫자 값을 반환합니다.|  
 |[메타데이터 함수](metadata-functions-transact-sql.md)|데이터베이스와 데이터베이스 개체에 대한 정보를 반환합니다.|  
 |[보안 함수](security-functions-transact-sql.md)|사용자와 역할에 대한 정보를 반환합니다.|  
 |[문자열 함수](string-functions-transact-sql.md)|문자열(**char** 또는 **varchar**) 입력 값에 대한 작업을 수행하고 문자열이나 숫자 값을 반환합니다.|  
 |[시스템 함수](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|작업을 수행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 값, 개체 및 설정에 대한 정보를 반환합니다.|  
 |[시스템 통계 함수](system-statistical-functions-transact-sql.md)|시스템에 대한 통계 정보를 반환합니다.|  
-|[텍스트 및 이미지 함수](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|텍스트 또는 이미지 입력 값이나 열에 대한 작업을 수행하고 그 값에 대한 정보를 반환합니다.|  
+|[텍스트 및 이미지 함수](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|텍스트 또는 이미지 입력 값이나 열에 대한 작업을 수행하고 그 값에 대한 정보를 반환합니다.|  
   
 ## <a name="function-determinism"></a>함수 결정성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 제공 함수는 결정적이거나 비결정적입니다. 특정 입력 값 집합으로 함수를 호출했을 때 항상 동일한 결과를 반환하는 경우에는 함수가 결정적이며 동일한 특정 입력 값 집합으로 함수를 호출할 때마다 다른 결과를 반환할 수 있으면 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  

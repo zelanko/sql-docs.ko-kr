@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8a477f90842e7aa6c1fb9da5347e0555927a036
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 04e14297fe4eb7cdad254bc888cf0657d4a80298
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874331"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669232"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +71,8 @@ ms.locfileid: "48874331"
 |||  
 |-|-|  
 |도구|용도|  
-|[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|인증서를 만듭니다.|  
-|[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|대칭 키에 대한 강력한 이름을 만듭니다.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|인증서를 만듭니다.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|대칭 키에 대한 강력한 이름을 만듭니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  

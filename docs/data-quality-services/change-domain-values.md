@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830851"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699928"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 
@@ -37,7 +37,7 @@ ms.locfileid: "47830851"
   
 -   Excel 파일에서 도메인 값 가져오기  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "47830851"
   
     -   **선택한 도메인 값을 그룹의 선행 값으로 설정**: 그룹의 선행 값을 변경하려면 그룹에서 선행 값으로 지정되지 않은 값을 선택한 다음 **선택한 도메인 값을 그룹의 선행 값으로 설정** 단추를 클릭합니다. 이렇게 하면 선행 값이 다른 값의 대체 값으로 설정됩니다. 그룹화된 둘 이상의 값을 설정했고 DQS에서 지정된 값의 선행 값을 다른 값으로 변경하려는 경우에만 이 작업을 수행할 수 있습니다. 선행 값은 굵게 표시된 값이 있는 파란색 행으로 표시됩니다.  
   
-7.  **맞춤법 검사기**: 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../data-quality-services/set-domain-properties.md)를 참조하세요.  
+7.  **맞춤법 검사기**: 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../data-quality-services/set-domain-properties.md)를 참조하세요.  
   
     > [!NOTE]  
     >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **도메인 값** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "47830851"
   
 11. **선택한 도메인 값 삭제**: 하나 이상의 기존 값을 도메인에서 제거하려면 값 테이블에서 값을 선택한 다음 **선택한 도메인 값 삭제** 아이콘을 클릭합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   
-12. **마침** 을 클릭하여 [도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+12. **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 값 변경 후  
  도메인 값을 변경한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

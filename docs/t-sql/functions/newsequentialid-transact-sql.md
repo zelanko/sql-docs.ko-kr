@@ -19,12 +19,12 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c7ece007386a9048db3ec33322d7da0cab332cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855817"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698281"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47855817"
 > [!IMPORTANT]  
 >  개인 정보 보호가 중요한 경우에는 이 함수를 사용하지 마십시오. 다음번에 생성되는 GUID 값을 추측할 수 있으므로 이 GUID와 관련된 데이터에 액세스할 수 있습니다.  
   
- NEWSEQUENTIALID는 Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 함수(일부 [바이트 셔플 적용됨](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/))에 대한 래퍼입니다.
+ NEWSEQUENTIALID는 Windows [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) 함수(일부 [바이트 셔플 적용됨](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/))에 대한 래퍼입니다.
   
 > [!WARNING]  
 >  UuidCreateSequential 함수는 하드웨어 종속성이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스(예: 포함된 데이터베이스)를 다른 컴퓨터로 이동할 때 순차 값의 클러스터가 나타날 수 있습니다. Always On 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 사용 시 데이터베이스가 다른 컴퓨터로 장애 조치되면 순차 값의 클러스터가 나타날 수 있습니다.  

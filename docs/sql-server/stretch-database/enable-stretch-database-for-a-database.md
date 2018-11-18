@@ -12,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753758"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696418"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47753758"
   
 -   [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 검토합니다.  
   
--   Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   

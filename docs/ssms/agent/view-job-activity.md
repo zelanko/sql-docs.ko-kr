@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7010649fa7a2c8efbe1f8093fd081897b420e1a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ce3fe6aec1612eff8d9560801119894de15e16
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608899"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702983"
 ---
 # <a name="view-job-activity"></a>작업 활동 보기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,5 +86,5 @@ ms.locfileid: "47608899"
     GO  
     ```  
   
-자세한 내용은 [sp_help_jobactivity(Transact-SQL)](http://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511)를 참조하세요.  
+자세한 내용은 [sp_help_jobactivity(Transact-SQL)](https://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511)를 참조하세요.  
   

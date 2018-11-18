@@ -17,12 +17,12 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb021bb8dc456a1ca8032150500620cfe5e01b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4496c35376a91ca0450a68a08087bac5e034725
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749912"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641969"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
   런타임 엔진에서 다음과 같은 유형의 개체에 태스크를 추가할 수 있습니다.  
@@ -411,7 +411,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](http://go.microsoft.com/fwlink/?LinkId=243223)  
+ blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
 
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 태스크 연결](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

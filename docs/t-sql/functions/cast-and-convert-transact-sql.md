@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697461"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿠웨이트 알고리즘을 통해 아랍어 스타일의 날짜 형식을 지원합니다.
   
-|두 자리 연도(yy) (<sup>1</sup>)|네 자리 연도(yyyy)|표준|입/출력(<sup>3</sup>)|  
+|두 자리 연도(yy) (<sup>1</sup>)|네 자리 연도(yyyy)|Standard|입/출력(<sup>3</sup>)|  
 |---|---|--|---|
 |-|**0** 또는 **100** (<sup>1,</sup><sup>2</sup>)|datetime 및 smalldatetime의 기본값|mon dd yyyy hh:miAM(또는 PM)|  
 |**1**|**101**|미국|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
@@ -194,7 +194,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 암시적 변환에서는 CAST 함수나 CONVERT 함수 지정이 필요하지 않습니다. 명시적 변환에서는 CAST 함수나 CONVERT 함수를 지정해야 합니다. 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **bigint**, **sql_variant** 및 **xml**이 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant**로는 암시적으로 변환됩니다.
   
 > [!TIP]  
->  이 차트는 [Microsoft 다운로드 센터](http://www.microsoft.com/download/details.aspx?id=35834)에서 PDF 파일로 다운로드할 수 있습니다.  
+>  이 차트는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35834)에서 PDF 파일로 다운로드할 수 있습니다.  
   
 ![데이터 형식 변환표](../../t-sql/data-types/media/lrdatahd.png "데이터 형식 변환표")
   

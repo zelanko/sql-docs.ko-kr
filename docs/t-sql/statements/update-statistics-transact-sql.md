@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2461cbf6c5ee2622112f7841eb44059dd83661a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674751"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701759"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ UPDATE STATISTICS schema_name . ] table_name
   
  대부분의 워크로드에서 전체 검사가 필요하지 않으며 기본 샘플링이 적당합니다.  
 그러나 매우 폭 넓은 데이터 배포에 민감한 특정 워크로드의 경우 샘플 크기를 증가시켜야 할 수 있으며 심지어 전체 검사가 필요할 수도 있습니다.  
-자세한 내용은 [CSS SQL 에스컬레이션 서비스 블로그](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)를 참조하세요.  
+자세한 내용은 [CSS SQL 에스컬레이션 서비스 블로그](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)를 참조하세요.  
   
  RESAMPLE  
  가장 최근의 샘플링 주기를 사용하여 각 통계를 업데이트합니다.  

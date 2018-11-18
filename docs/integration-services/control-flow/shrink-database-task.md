@@ -17,12 +17,12 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26e5ab994e84a46a2a61b3fb57f98df4f9ea2959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfea8989d573ef107d6c8b493e213c6ea5050b0f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653031"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640097"
 ---
 # <a name="shrink-database-task"></a>데이터베이스 축소 태스크
   데이터베이스 축소 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터와 로그 파일의 크기를 줄입니다.  
@@ -54,6 +54,6 @@ ms.locfileid: "47653031"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
