@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e55ca626161e046f1833744da972e4b7420ff21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd43087f302adca4f20d53e63005786736188786
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748501"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560210"
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ ms.locfileid: "47748501"
 ## <a name="accessing-the-resource-database"></a>Resource 데이터베이스 액세스  
  Resource 데이터베이스는 Microsoft CSS(고객 지원 서비스) 전문가가 직접 수정하거나 전문가의 지도를 받아 수정해야 합니다. Resource 데이터베이스의 ID는 항상 32767입니다. Resource 데이터베이스와 관련된 다른 중요한 값은 버전 번호 및 데이터베이스가 마지막으로 업데이트된 시간입니다.  
   
- Resource **데이터베이스의 버전 번호를 확인하려면 다음 문을 사용합니다.******  
+ Resource **데이터베이스의 버전 번호를** **확인하려면 다음 문을 사용합니다**.  
   
 ```  
 SELECT SERVERPROPERTY('ResourceVersion');  
 GO  
 ```  
   
- Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다.******  
+ Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다****.**  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  

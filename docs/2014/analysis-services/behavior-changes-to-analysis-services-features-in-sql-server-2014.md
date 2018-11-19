@@ -103,7 +103,7 @@ ms.locfileid: "50145851"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>부하 분산 요청에 대한 새 기본 설정이 라운드 로빈에서 상태 기반으로 변경됨  
  PowerPivot 서비스 응용 프로그램에는 PowerPivot 데이터에 대한 요청이 팜의 여러 SharePoint용 PowerPivot 서비스에서 분산되는 방식을 결정하는 기본 설정이 포함됩니다. 이전 릴리스에서 기본 설정은 요청이 사용 가능한 서버 간에 순차적으로 분산되는 **라운드 로빈**이었습니다. 이 릴리스에서는 기본값이 **상태 기반**입니다. PowerPivot 서비스 응용 프로그램에서는 사용 가능한 메모리 또는 CPU와 같은 서버 상태 통계를 사용하여 xt 요청을 가져올 서버 인스턴스를 결정합니다.  
   
- 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 응용 프로그램에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
+ 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 응용 프로그램에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [만들고 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)   
