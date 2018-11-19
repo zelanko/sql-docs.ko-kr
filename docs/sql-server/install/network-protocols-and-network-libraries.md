@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a04cd6d732622e91d5080ed77a2eba4d62d71a12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696641"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47630191"
 ## <a name="default-sql-server-network-configuration"></a>기본 SQL Server 네트워크 구성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스는 TCP/IP 포트 1433 및 명명된 파이프 \\\\.\pipe\sql\query에 대해 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스는 포트 번호가 운영 체제에서 할당되는 TCP 동적 포트로 구성됩니다.  
   
- 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 특정 포트 주소를 통과하도록 구성된 방화벽 서버를 통과해야 하는 경우와 같이 동적 포트 주소를 사용할 수 없는 경우에는 할당되지 않은 포트 번호를 선택합니다. 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다.  
+ 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 특정 포트 주소를 통과하도록 구성된 방화벽 서버를 통과해야 하는 경우와 같이 동적 포트 주소를 사용할 수 없는 경우에는 할당되지 않은 포트 번호를 선택합니다. 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다.  
   
  보안을 향상시키기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치될 때 네트워크 연결이 부분적으로만 설정됩니다. 설치가 완료된 후 네트워크 프로토콜을 설정, 해제 및 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성 영역을 사용합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47630191"
 -   로컬 영역 연결 속성에서 **인터넷 프로토콜(TCP/IP) 속성** 대화 상자를 사용하여 **Microsoft 네트워크용 파일 및 프린터 공유** 및 **Microsoft 네트워크용 클라이언트**를 제거합니다.  
   
 ## <a name="endpoints"></a>엔드포인트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*엔드포인트*로 표시됩니다. ph x="1" /&gt; 엔드포인트에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 엔드포인트 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 엔드포인트에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 엔드포인트의 카탈로그 뷰에서 가져와야 하는 엔드포인트 ID가 사용됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대한 새로운 개념이 도입되었습니다. 즉, 연결이 서버 끝에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]*엔드포인트*로 표시됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트에 대해 사용 권한을 부여, 취소 및 거부할 수 있습니다. 기본적으로 모든 사용자는 sysadmin 그룹의 멤버나 엔드포인트 소유자에 의해 사용 권한이 거부 또는 취소되지 않은 한 엔드포인트에 액세스할 권한이 있습니다. GRANT, REVOKE 및 DENY ENDPOINT 구문에는 관리자가 엔드포인트의 카탈로그 뷰에서 가져와야 하는 엔드포인트 ID가 사용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 지원되는 모든 네트워크 프로토콜뿐만 아니라 관리자 전용 연결에 대해서도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 엔드포인트를 만듭니다.  
   

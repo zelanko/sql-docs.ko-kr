@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601271"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639181"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      이 옵션을 사용하려면 두 매개 변수 모두를 지정해야 합니다. 즉, *id_or_name* 인수에 연결 관리자 이름 또는 GUID를 제공하고 *connection_string* 인수에 올바른 연결 문자열을 지정해야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
-     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 **구성과 같은 구성에만** /Connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
+     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 **구성과 같은 구성에만** /Connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (옵션). 패키지 실행 중 지정된 로그 항목을 콘솔에 표시합니다. 이 옵션을 생략하면 콘솔에 로그 항목이 표시되지 않습니다. 표시를 제한하는 매개 변수 없이 이 옵션을 지정하면 모든 로그 항목이 표시됩니다. 콘솔에 표시되는 항목을 제한하려면 *displayoptions* 매개 변수를 사용하여 표시할 열을 지정하고 *list_options* 매개 변수를 사용하여 로그 항목 유형을 제한합니다.  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
+     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
   
 -   **/Ser[ver]** *server*: (옵션). **/SQL** 또는 **/DTS** 옵션을 지정한 경우 이 옵션은 패키지를 검색할 서버의 이름을 지정합니다. **/Server** 옵션을 생략하고 **/SQL** 또는 **/DTS** 옵션을 지정하면 로컬 서버에 대해 패키지가 실행됩니다. *server_instance* 값은 따옴표로 묶을 수 있습니다.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>관련 내용  
- www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
+ www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
   
   

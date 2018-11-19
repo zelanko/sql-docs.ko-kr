@@ -15,12 +15,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800741"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642410"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -230,8 +230,8 @@ ms.locfileid: "47800741"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|파일 "%1"을(를) 쓰기용으로 열 수 없습니다. 이 파일이 읽기 전용이거나 사용자에게 올바른 권한이 없습니다.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|이 쿼리 실행과 연결된 결과 행 집합이 없습니다. 결과가 올바르게 지정되지 않았습니다.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|디버그 덤프 파일이 잘못 생성되었습니다. hresult는 0x%1!8.8X!입니다.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|지정된 URL이 잘못되었습니다. 이 오류는 서버 또는 프록시 URL이 Null이거나 잘못된 형식일 때 발생할 수 있습니다. 유효한 URL 형식은 http://ServerName:Port/ResourcePath 또는 https://ServerName:Port/ResourcePath 형식입니다.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1이 잘못되었습니다. 이 오류는 http 또는 https가 아닌 스키마가 지정되었거나 URL의 형식이 잘못되었을 때 발생할 수 있습니다. 유효한 URL 형식은 http://ServerName:Port/ResourcePath 또는 https://ServerName:Port/ResourcePath 형식입니다.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|지정된 URL이 잘못되었습니다. 이 오류는 서버 또는 프록시 URL이 Null이거나 잘못된 형식일 때 발생할 수 있습니다. 유효한 URL 형식은 https://ServerName:Port/ResourcePath 또는 https://ServerName:Port/ResourcePath 형식입니다.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1이 잘못되었습니다. 이 오류는 http 또는 https가 아닌 스키마가 지정되었거나 URL의 형식이 잘못되었을 때 발생할 수 있습니다. 유효한 URL 형식은 https://ServerName:Port/ResourcePath 또는 https://ServerName:Port/ResourcePath 형식입니다.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|서버 %1에 연결을 설정할 수 없습니다. 이 오류는 서버가 없거나 프록시 설정이 올바르지 않을 때 발생할 수 있습니다.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|서버와의 연결이 재설정되었거나 종료되었습니다. 나중에 다시 시도하십시오.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1"에 로그인하지 못했습니다. 이 오류는 제공된 로그인 자격 증명이 올바르지 않을 때 발생합니다. 로그인 자격 증명을 확인하십시오.|  
@@ -1088,7 +1088,7 @@ ms.locfileid: "47800741"
 |0xC00470D6|-1073450794|DTS_E_EXPREVALINVALIDTOKENSINGLEQUOTE|식 "%1"을(를) 구문 분석하지 못했습니다. 줄 번호 "%2", 문자 번호 "%3"에는 작은따옴표를 사용할 수 없습니다.|  
 |0xC00470D7|-1073450793|DTS_E_EXPREVALINVALIDTOKENSINGLEEQUAL|식 "%1"을(를) 구문 분석하지 못했습니다. 줄 번호 "%2", 문자 번호 "%3"에는 등호(=)를 사용할 수 없습니다. 지정한 위치에 이중 등호(==)가 필요할 수 있습니다.|  
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|구성 요소 "%1"이(가) 런타임 개체 참조 추적 장치 컬렉션을 캐시하지 못했으며 오류 코드 0x%2!8.8X!이(가) 반환되었습니다.|  
-|0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|이름이 "%1"인 여러 입력 열이 있습니다. 원하는 입력 열을 [Component Name].[%2](으)로 고유하게 지정하거나 계보 ID로 참조해야 합니다. 현재 지정한 입력 열이 둘 이상의 구성 요소에 있습니다.|  
+|0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|이름이 "%1"인 여러 입력 열이 있습니다. 원하는 입력 열을 [Component Name].[%2]\(으)로 고유하게 지정하거나 계보 ID로 참조해야 합니다. 현재 지정한 입력 열이 둘 이상의 구성 요소에 있습니다.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|"[%1].[%2]"이라는 입력 열을 찾지 못했습니다(오류 코드 0x%3!8.8X!). 해당 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
 |0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|이름이 "%1"인 여러 변수가 있습니다. 원하는 변수를 \@[Namespace::%2]\(으)로 고유하게 지정해야 합니다. 해당 변수가 둘 이상의 네임스페이스에 있습니다.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|데이터 흐름 엔진 스케줄러가 파이프라인에 대한 실행 계획을 줄이지 못했습니다. OptimizedMode 속성을 false로 설정하십시오.|  
@@ -2013,7 +2013,7 @@ ms.locfileid: "47800741"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|요소 "%2"에서 "%1"에 대한 XML 스키마 데이터 형식 정보가 변경되었습니다.  이 구성 요소의 메타데이터를 다시 초기화하고 열 매핑을 검토하십시오.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1이(가) 조인 또는 복사에 사용되지 않았습니다. 입력 열 목록에서 사용하지 않은 열을 제거하십시오.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|들어오는 버퍼를 정렬하는 동안 스택 오버플로로 인해 정렬이 실패했습니다.  데이터 흐름 태스크의 DefaultBufferMaxRows 속성을 줄이십시오.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 http://www.microsoft.com/downloads를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 https://www.microsoft.com/downloads를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
 |||DTS_E_INITTASKOBJECTFAILED|0x%3!8.8X! "%4!s!" 오류로 인해 태스크 "%1!s!", 유형 "%2!s!"에 대한 태스크 개체를 초기화하지 없습니다.|  
 |||DTS_E_GETCATMANAGERFAILED|0x%1!8.8X! "%2!s!" 오류로 인해 COM 구성 요소 범주 관리자를 만들지 못했습니다.|  
 |||DTS_E_COMPONENTINITFAILED|0x%2!8.8X! " %3!s!" 오류로 인해 %1!s! 구성 요소를 초기화하지 반환되었습니다|  

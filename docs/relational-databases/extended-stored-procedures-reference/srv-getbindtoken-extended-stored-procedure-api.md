@@ -20,12 +20,12 @@ ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1410a30d234124d0c32d8026512fa36e5d070f0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 04d0993fc8e0a84d001dfd7e899dedf6ecc8dde2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032631"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655632"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ bindtoken
     >  한 번에 하나의 바인딩된 세션만 공유 연결에 액세스할 수 있습니다. 특정 세션이 서버에서 문을 실행하고 있거나, 서버로부터 보류 중인 결과가 있으면 바인딩된 동일한 연결을 공유하는 다른 세션에서는 현재 세션이 현재 문의 실행을 완료할 때까지 서버에 액세스할 수 없습니다. 서버가 작업 중일 때 특정 세션이 연결에 액세스하려고 시도하면 연결이 사용 중이므로 나중에 다시 시도하라는 오류가 해당 세션에 반환됩니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_bindsession&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   

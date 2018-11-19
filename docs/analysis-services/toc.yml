@@ -10,7 +10,7 @@ items:
   - name: 도구 및 응용 프로그램
     href: tools-and-applications-used-in-analysis-services.md
   - name: 클라이언트 라이브러리(데이터 공급자)
-    href: instances/data-providers-used-for-analysis-services-connections.md
+    href: ./instances/data-providers-used-for-analysis-services-connections.md
   - name: 테이블 형식 및 다차원 솔루션 비교
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
   - name: Analysis Services 기능 및 태스크
@@ -33,7 +33,6 @@ items:
     - name: 팁과 모범 사례
       href: globalization-tips-and-best-practices-analysis-services.md
 - name: 자습서
-  href: analysis-services-tutorials-ssas.md
   items:
   - name: 테이블 형식 모델링(1400 호환성 수준)
     href: tutorial-tabular-1400/as-adventure-works-tutorial.md
@@ -73,31 +72,31 @@ items:
   - name: 테이블 형식 모델링(1200 호환성 수준)
     href: tabular-modeling-adventure-works-tutorial.md
     items:
-    - name: '1단원: 새 테이블 형식 모델 프로젝트를 만들기'
+    - name: 1 - 새 테이블 형식 모델 프로젝트 만들기
       href: lesson-1-create-a-new-tabular-model-project.md
-    - name: '2단원: 데이터 추가'
+    - name: 2 - 데이터 추가
       href: lesson-2-add-data.md
-    - name: '3단원: 날짜 테이블로 표시'
+    - name: 3 - 날짜 테이블로 표시
       href: lesson-3-mark-as-date-table.md
-    - name: '4단원: 관계 만들기'
+    - name: 4 - 관계 만들기
       href: lesson-4-create-relationships.md
-    - name: '5단원: 계산 열 만들기'
+    - name: 5 - 계산 열 만들기
       href: lesson-5-create-calculated-columns.md
-    - name: '6단원: 측정값 만들기'
+    - name: 6 - 측정값 만들기
       href: lesson-6-create-measures.md
-    - name: '7단원: 핵심 성과 지표 만들기'
+    - name: 7 - KPI(핵심 성과 지표) 만들기
       href: lesson-7-create-key-performance-indicators.md
-    - name: '8단원: 큐브 뷰 만들기'
+    - name: 8 - 큐브 뷰 만들기
       href: lesson-8-create-perspectives.md
-    - name: '9단원: 계층 구조 만들기'
+    - name: 9 - 계층 구조 만들기
       href: lesson-9-create-hierarchies.md
-    - name: '10단원: 파티션 만들기'
+    - name: 10 - 파티션 만들기
       href: lesson-10-create-partitions.md
-    - name: '11단원: 역할 만들기'
+    - name: 11 - 역할 만들기
       href: lesson-11-create-roles.md
-    - name: '12단원: Excel에서 분석'
+    - name: 12 - Excel에서 분석
       href: lesson-12-analyze-in-excel.md
-    - name: '13단원: 배포'
+    - name: 13 - 배포
       href: lesson-13-deploy.md
     - name: 추가 단원 - 행 필터를 사용하여 동적 보안 구현
       href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
@@ -210,55 +209,1284 @@ items:
     href: data-mining-tutorials-analysis-services.md
 - name: 방법
   items:
-  - name: 테이블 형식 모델
-    href: ../analysis-services/tabular-models/tabular-models-ssas.md
-  - name: 다차원 모델
-    href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
+  - name: 설치 및 구성
+    items:
+    - name: 테이블 형식 또는 다차원 모드로 설치
+      href: ./instances/install-windows/install-analysis-services.md
+    - name: SharePoint용 PowerPivot 모드로 설치
+      href: ./instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+      items:
+      - name: SharePoint용 파워 피벗 설치 확인
+        href: ./instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+      - name: SharePoint 2016용 파워 피벗의 최소 권한 구성 예제
+        href: ./instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
+      - name: SharePoint 2013용 파워 피벗의 최소 권한 구성 예
+        href: ./instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+      - name: SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
+        href: ./instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+      - name: SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
+        href: ./instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+      - name: 파워 피벗 구성 및 솔루션 배포(SharePoint 2016)
+        href: ./instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+      - name: 파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
+        href: ./instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+      - name: SharePoint 2013으로 파워 피벗 마이그레이션
+        href: ./instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+      - name: 통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
+        href: ./instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+      - name: Analysis Services 및 KCD(Kerberos 제한 위임) 구성
+        href: ./instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+      - name: 검사 목록 PowerShell을 사용하여 SharePoint용 PowerPivot 확인
+        href: ./instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+      - name: SharePoint 2016에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포
+        href: ./instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+      - name: 다층 계층 SharePoint 2016 팜에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포
+        href: ./instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+    - name: 클라이언트 라이브러리(AMO, ADOMD.NET, MSOLAP) 설치
+      href: ./instances/data-providers-used-for-analysis-services-connections.md
+    - name: 누적 업데이트 빌드 버전 확인
+      href: ./instances/analysis-services-component-version.md
+    - name: 설치 후 구성
+      items:
+      - name: 설치 후 구성 개요
+        href: ./instances/post-install-configuration-analysis-services.md
+      - name: Windows 방화벽 구성
+        href: ./instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+      - name: 서비스 계정 구성
+        href: ./instances/configure-service-accounts-analysis-services.md
+      - name: 관리자 추가
+        href: ./instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+      - name: 기본적으로 해제되어 있는 기능
+        href: ./instances/features-off-by-default-analysis-services.md
+      - name: SSMS의 서버 그룹
+        href: ./instances/register-an-analysis-services-instance-in-a-server-group.md
+      - name: 서버 모드 확인
+        href: ./instances/determine-the-server-mode-of-an-analysis-services-instance.md
+      - name: Analysis Services 인스턴스 이름 바꾸기
+        href: ./instances/rename-an-analysis-services-instance.md
+  - name: 테이블 형식 모델링
+    items:
+    - name: 테이블 형식 모델링 개요
+      href: ./tabular-models/tabular-models-ssas.md
+    - name: 호환성 수준
+      href: ./tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md
+    - name: 테이블 형식 1400 모델에서 지원되는 데이터 원본
+      href: ./tabular-models/data-sources-supported-ssas-tabular-1400.md
+    - name: 테이블 형식 1200 모델에서 지원되는 데이터 원본
+      href: ./tabular-models/data-sources-supported-ssas-tabular.md
+    - name: 테이블 형식 모델 만들기
+      items:
+      - name: 테이블 형식 모델 디자이너
+        href: ./tabular-models/tabular-model-designer-ssas.md
+      - name: 작업 영역 데이터베이스
+        href: ./tabular-models/workspace-database-ssas-tabular.md
+      - name: 테이블 형식 모델 프로젝트
+        href: ./tabular-models/tabular-model-projects-ssas-tabular.md
+        items:
+        - name: 새 테이블 형식 모델 프로젝트 만들기
+          href: ./tabular-models/create-a-new-tabular-model-project-analysis-services.md
+        - name: Analysis Services에서 가져오기
+          href: ./tabular-models/import-from-analysis-services-ssas-tabular.md
+        - name: 파워 피벗에서 가져오기
+          href: ./tabular-models/import-from-power-pivot-ssas-tabular.md
+      - name: 속성
+        items:
+        - name: 파워 뷰 - 보고 속성
+          href: ./tabular-models/power-view-reporting-properties-ssas-tabular.md
+        - name: 파워 뷰 - 기본 필드 집합 구성
+          href: ./tabular-models/power-view-configure-default-field-set-for-reports.md
+        - name: 파워 뷰 - 테이블 동작 속성 구성
+          href: ./tabular-models/power-view-configure-table-behavior-properties-for-reports.md
+        - name: 프로젝트 속성
+          href: ./tabular-models/project-properties-ssas-tabular.md
+        - name: 모델 속성
+          href: ./tabular-models/model-properties-ssas-tabular.md
+        - name: 테이블 속성
+          href: ./tabular-models/table-properties-ssas-tabular.md
+        - name: 열 속성
+          href: ./tabular-models/column-properties-ssas-tabular.md
+        - name: 기본 데이터 모델링 및 배포 속성 구성
+          href: ./tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+      - name: 데이터 가져오기
+        items:
+        - name: 테이블 형식 1400 모델에서 지원되는 데이터 원본
+          href: ./tabular-models/data-sources-supported-ssas-tabular-1400.md
+        - name: 테이블 형식 1200 모델에서 지원되는 데이터 원본
+          href: ./tabular-models/data-sources-supported-ssas-tabular.md
+        - name: 지원되는 데이터 형식
+          href: ./tabular-models/data-types-supported-ssas-tabular.md
+        - name: 가장
+          href: ./tabular-models/impersonation-ssas-tabular.md
+        - name: 원시 쿼리를 사용하여 데이터 가져오기
+          href: ./tabular-models/ssas-import-query.md
+      - name: DirectQuery 모드
+        href: ./tabular-models/directquery-mode-ssas-tabular.md
+        items:
+        - name: SSDT에서 DirectQuery 모드를 사용하도록 설정
+          href: ./tabular-models/enable-directquery-mode-in-ssdt.md
+        - name: SSMS에서 DirectQuery 모드를 사용하도록 설정
+          href: ./tabular-models/enable-directquery-mode-in-ssms.md
+        - name: DirectQuery 모델에 샘플 데이터 추가
+          href: ./tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md
+        - name: DirectQuery 모델에서 파티션 정의
+          href: ./tabular-models/define-partitions-in-directquery-models-ssas-tabular.md
+        - name: DirectQuery 모드에서 모델 테스트
+          href: ./tabular-models/test-a-model-in-directquery-mode.md
+        - name: DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2016)
+          href: ./tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md
+      - name: 테이블 및 열
+        href: ./tabular-models/tables-and-columns-ssas-tabular.md
+        items:
+        - name: 테이블에 열 추가
+          href: ./tabular-models/add-columns-to-a-table-ssas-tabular.md
+        - name: 열 삭제
+          href: ./tabular-models/delete-a-column-ssas-tabular.md
+        - name: 테이블, 열 또는 행 필터 매핑 변경
+          href: ./tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md
+        - name: 시간 인텔리전스에 사용할 날짜 테이블로 표시 지정
+          href: ./tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+        - name: 테이블 추가
+          href: ./tabular-models/add-a-table-ssas-tabular.md
+        - name: 테이블 삭제
+          href: ./tabular-models/delete-a-table-ssas-tabular.md
+        - name: 계산 테이블 만들기
+          href: ./tabular-models/create-a-calculated-table-ssas-tabular.md
+        - name: 테이블 또는 열 이름 바꾸기
+          href: ./tabular-models/rename-a-table-or-column-ssas-tabular.md
+        - name: 열 데이터 형식 설정
+          href: ./tabular-models/set-the-data-type-of-a-column-ssas-tabular.md
+        - name: 열 숨기기 또는 고정
+          href: ./tabular-models/hide-or-freeze-columns-ssas-tabular.md
+        - name: 계산 열
+          href: ./tabular-models/ssas-calculated-columns.md
+        - name: 계산 열 만들기
+          href: ./tabular-models/ssas-calculated-columns-create-a-calculated-column.md
+        - name: 테이블의 데이터 정렬
+          href: ./tabular-models/sort-data-in-a-table-ssas-tabular.md
+        - name: 테이블의 데이터 필터링
+          href: ./tabular-models/filter-data-in-a-table-ssas-tabular.md
+      - name: 관계
+        href: ./tabular-models/relationships-ssas-tabular.md
+        items:
+        - name: 두 테이블 간에 관계 만들기
+          href: ./tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md
+        - name: 관계 삭제
+          href: ./tabular-models/delete-relationships-ssas-tabular.md
+        - name: 양방향 교차 필터
+          href: ./tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md
+      - name: 새 명명된 집합
+        href: ./tabular-models/calculations-ssas-tabular.md
+        items:
+        - name: 테이블 형식 모델의 DAX 이해
+          href: ./tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md
+      - name: 측정값 그룹
+        href: ./tabular-models/measures-ssas-tabular.md
+        items:
+        - name: 측정값 만들기 및 관리
+          href: ./tabular-models/create-and-manage-measures-ssas-tabular.md
+      - name: KPI
+        href: ./tabular-models/kpis-ssas-tabular.md
+        items:
+        - name: KPI 만들기 및 관리
+          href: ./tabular-models/create-and-manage-kpis-ssas-tabular.md
+      - name: 계층 구조
+        href: ./tabular-models/hierarchies-ssas-tabular.md
+        items:
+        - name: 계층 만들기 및 관리
+          href: ./tabular-models/create-and-manage-hierarchies-ssas-tabular.md
+      - name: 파티션
+        href: ./tabular-models/partitions-ssas-tabular.md
+        items:
+        - name: 작업 영역 데이터베이스에서 파티션 만들기 및 관리
+          href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+        - name: 작업 영역 데이터베이스에서 파티션 처리
+          href: ./tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+      - name: 큐브 뷰
+        href: ./tabular-models/perspectives-ssas-tabular.md
+        items:
+        - name: 큐브 뷰 만들기 및 관리
+          href: ./tabular-models/create-and-manage-perspectives-ssas-tabular.md
+      - name: Translations
+        href: ./tabular-models/translations-in-tabular-models-analysis-services.md
+      - name: 역할
+        href: ./tabular-models/roles-ssas-tabular.md
+        items:
+        - name: 역할 만들기 및 관리
+          href: ./tabular-models/create-and-manage-roles-ssas-tabular.md
+        - name: 개체 수준 보안
+          href: ./tabular-models/object-level-security.md
+      - name: 도구 모음
+        href: ./tabular-models/analyze-in-excel-ssas-tabular.md
+        items:
+        - name: Excel에서 테이블 형식 모델 분석
+          href: ./tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md
+      - name: 테이블 형식 모델의 문자열 저장소 및 데이터 정렬
+        href: ./tabular-models/string-storage-and-collation-in-tabular-models.md
+    - name: 테이블 형식 모델 솔루션 배포
+      href: ./tabular-models/tabular-model-solution-deployment-ssas-tabular.md
+      items:
+      - name: SQL Server Data Tools에서 배포
+        href: ./tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: 테이블 형식 모델 데이터베이스 관리
+      href: ./tabular-models/tabular-model-databases-ssas-tabular.md
+      items:
+      - name: 데이터베이스, 테이블 또는 파티션 처리
+        href: ./tabular-models/process-database-table-or-partition-analysis-services.md
+      - name: 테이블 형식 모델 역할
+        href: ./tabular-models/tabular-model-roles-ssas-tabular.md
+        items:
+        - name: SSMS를 사용하여 역할 관리
+          href: ./tabular-models/manage-roles-by-using-ssms-ssas-tabular.md
+      - name: 테이블 형식 모델 파티션
+        href: ./tabular-models/tabular-model-partitions-ssas-tabular.md
+        items:
+        - name: 테이블 형식 모델 파티션 만들기 및 관리
+          href: ./tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md
+        - name: 테이블 형식 모델 파티션 처리
+          href: ./tabular-models/process-tabular-model-partitions-ssas-tabular.md
+    - name: 테이블 형식 모델 데이터베이스에 연결
+      href: ./tabular-models/connect-to-a-tabular-model-database-ssas.md
+    - name: 파워 피벗에서 복원
+      href: ./tabular-models/restore-from-power-pivot.md
+  - name: 다차원 모델링
+    items:
+    - name: 다차원 모델링 개요
+      href: ./multidimensional-models/multidimensional-models-ssas.md
+    - name: 다차원 솔루션
+      href: ./multidimensional-models/multidimensional-model-solutions-ssas.md
+      items:
+      - name: SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기
+        href: ./multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
+        items:
+        - name: Analysis Services 프로젝트 만들기(SSDT)
+          href: ./multidimensional-models/create-an-analysis-services-project-ssdt.md
+        - name: Analysis Services 프로젝트 속성 구성(SSDT)
+          href: ./multidimensional-models/configure-analysis-services-project-properties-ssdt.md
+        - name: Analysis Services 프로젝트 빌드(SSDT)
+          href: ./multidimensional-models/build-analysis-services-projects-ssdt.md
+        - name: Analysis Services 프로젝트 배포(SSDT)
+          href: ./multidimensional-models/deploy-analysis-services-projects-ssdt.md
+        - name: MDX 스크립트 만들기 및 실행(SSDT)
+          href: ./multidimensional-models/create-and-run-an-mdx-script-in-sql-server-data-tools.md
+        - name: Analysis Services 프로젝트에 대한 XML 보기(SSDT)
+          href: ./multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md
+        - name: 온라인 모드로 Analysis Services 데이터베이스에 연결
+          href: ./multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md
+        - name: 개발 단계 중의 Analysis Services 프로젝트 및 데이터베이스 작업
+          href: ./multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md
+        - name: 프로덕션 환경에서 Analysis Services 프로젝트 및 데이터베이스 작업
+          href: ./multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md
+      - name: 솔루션 탐색기
+        href: ./multidimensional-models/data-sources-in-multidimensional-models.md
+        items:
+        - name: 지원되는 데이터 원본
+          href: ./multidimensional-models/supported-data-sources-ssas-multidimensional.md
+        - name: 데이터 원본 만들기
+          href: ./multidimensional-models/create-a-data-source-ssas-multidimensional.md
+        - name: 데이터 원본 삭제
+          href: ./multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md
+        - name: 데이터 원본 속성 설정
+          href: ./multidimensional-models/set-data-source-properties-ssas-multidimensional.md
+        - name: 데이터 원본 연결에 대한 가장 옵션 설정
+          href: ./multidimensional-models/set-impersonation-options-ssas-multidimensional.md
+        - name: 다차원 모델 프로그래밍
+          href: ./multidimensional-models/multidimensional-model-programming.md
+      - name: 데이터 원본 뷰
+        href: ./multidimensional-models/data-source-views-in-multidimensional-models.md
+        items:
+        - name: 데이터 원본 및 바인딩
+          href: ./multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md
+        - name: 데이터 원본 뷰 정의
+          href: ./multidimensional-models/defining-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거
+          href: ./multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 데이터 탐색
+          href: ./multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰 디자이너에서의 다이어그램 작업
+          href: ./multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md
+        - name: 데이터 원본 뷰에서 스키마 새로 고침
+          href: ./multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기
+          href: ./multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 논리적 관계 정의
+          href: ./multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 논리적 기본 키 정의
+          href: ./multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 명명된 계산 정의
+          href: ./multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 명명된 쿼리 정의
+          href: ./multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰 삭제
+          href: ./multidimensional-models/delete-a-data-source-view-analysis-services.md
+        - name: 데이터 원본 뷰에서 속성 변경
+          href: ./multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md
+        - name: 스키마 생성 마법사
+          href: ./multidimensional-models/schema-generation-wizard-analysis-services.md
+          items:
+          - name: 스키마 생성 마법사 사용
+            href: ./multidimensional-models/use-the-schema-generation-wizard-analysis-services.md
+          - name: 데이터베이스 스키마 이해
+            href: ./multidimensional-models/understanding-the-database-schemas.md
+          - name: 증분 생성 이해
+            href: ./multidimensional-models/understanding-incremental-generation.md
+          - name: 데이터 원본 뷰 및 데이터 원본에 대한 변경 내용 관리
+            href: ./multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md
+      - name: 차원
+        href: ./multidimensional-models/dimensions-in-multidimensional-models.md
+        items:
+        - name: 차원 마법사를 사용하여 차원 만들기
+          href: ./multidimensional-models/create-a-dimension-using-the-dimension-wizard.md
+        - name: 기존 테이블을 사용하여 차원 만들기
+          href: ./multidimensional-models/create-a-dimension-by-using-an-existing-table.md
+        - name: 시간 테이블을 생성하여 시간 차원 만들기
+          href: ./multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md
+        - name: 데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
+          href: ./multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
+        - name: 데이터베이스 차원
+          href: ./multidimensional-models/define-database-dimensions.md
+        - name: 데이터베이스 차원 - 특성 계층에 대한 (모든) 수준 구성
+          href: ./multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md
+        - name: 데이터베이스 차원 - 솔루션 탐색기에서 수정 또는 삭제
+          href: ./multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md
+        - name: 데이터베이스 차원 - 디자이너에서 데이터 찾아보기
+          href: ./multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md
+        - name: 데이터베이스 차원 - 디자이너의 BI 마법사
+          href: ./multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md
+        - name: 데이터베이스 차원 - 날짜 형식 만들기
+          href: ./multidimensional-models/database-dimensions-create-a-date-type-dimension.md
+        - name: 데이터베이스 차원 - 부모-자식의 재무 계정
+          href: ./multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md
+        - name: 데이터베이스 차원 - 통화 형식
+          href: ./multidimensional-models/database-dimensions-create-a-currency-type-dimension.md
+        - name: 차원 특성 속성 참조
+          href: ./multidimensional-models/dimension-attribute-properties-reference.md
+          items:
+          - name: 특성 속성 - 특성 이름 바꾸기
+            href: ./multidimensional-models/attribute-properties-rename-an-attribute.md
+          - name: 특성 속성 - 차원에 특성 추가
+            href: ./multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md
+          - name: 특성 속성 - 차원에서 특성 제거
+            href: ./multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md
+          - name: 특성 속성 - 특성 유형 구성
+            href: ./multidimensional-models/attribute-properties-configure-attribute-types.md
+          - name: 특성 속성 - 특성 멤버 그룹화
+            href: ./multidimensional-models/attribute-properties-group-attribute-members.md
+          - name: 특성 속성 - 사용자 지정 멤버 수식 정의
+            href: ./multidimensional-models/attribute-properties-define-custom-member-formulas.md
+          - name: 특성 속성 - 기본 멤버 정의
+            href: ./multidimensional-models/attribute-properties-define-a-default-member.md
+          - name: 특성 속성 - 차원 디자이너에서 특성 보기
+            href: ./multidimensional-models/attribute-properties-view-attributes-in-dimension-designer.md
+          - name: 특성 속성 - 자동으로 새 특성 정의
+            href: ./multidimensional-models/attribute-properties-define-a-new-attribute-automatically.md
+          - name: 특성 속성 - 차원 디자이너에서 특성 보기
+            href: ./multidimensional-models/view-attributes-in-dimension-designer.md
+          - name: 특성 속성 - KeyColumn 속성 수정
+            href: ./multidimensional-models/attribute-properties-modify-the-keycolumn-property.md
+          - name: 특성 속성 - 키 열에 특성 바인딩
+            href: ./multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md
+          - name: 특성 속성 - 이름 열에 특성 바인딩
+            href: ./multidimensional-models/attribute-properties-bind-an-attribute-to-a-name-column.md
+          - name: 특성 속성 - Usage 속성 설정
+            href: ./multidimensional-models/attribute-properties-set-usage-property.md
+          - name: 특성 속성 - 멤버 그룹 정의
+            href: ./multidimensional-models/attribute-properties-define-member-groups.md
+        - name: 부모-자식 차원
+          href: ./multidimensional-models/parent-child-dimension.md
+        - name: 부모-자식 차원 특성
+          href: ./multidimensional-models/parent-child-dimension-attributes.md
+        - name: 부모-자식 차원 특성 - 사용자 지정 롤업 연산자
+          href: ./multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md
+        - name: 부모-자식 차원 특성 - 단항 연산자
+          href: ./multidimensional-models/parent-child-dimension-attributes-unary-operators.md
+        - name: 사용자 정의 계층 구조 - 만들기
+          href: ./multidimensional-models/user-defined-hierarchies-create.md
+        - name: 사용자 정의 계층 구조 - 비정형 계층 구조
+          href: ./multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md
+        - name: 사용자 정의 계층 구조 - 사용자 정의 계층 구조 추가 또는 삭제
+          href: ./multidimensional-models/user-defined-hierarchies-add-or-delete-a-user-defined-hierarchy.md
+        - name: 특성 관계 - 정의
+          href: ./multidimensional-models/attribute-relationships-define.md
+        - name: 특성 관계 - 특성 속성 구성
+          href: ./multidimensional-models/attribute-relationships-configure-attribute-properties.md
+        - name: 특성 관계 - 관계 만들기, 수정 또는 삭제
+          href: ./multidimensional-models/attribute-relationships-create-modify-or-delete-relationship.md
+        - name: 특성 관계 - 관계 형식 정의
+          href: ./multidimensional-models/attribute-relationships-define-the-relationship-type.md
+        - name: 특성 관계 - 다이어그램의 셰이프 정렬
+          href: ./multidimensional-models/attribute-relationships-arrange-shapes-in-the-diagram.md
+        - name: BI 마법사 - 차원에 계정 인텔리전스 추가
+          href: ./multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md
+        - name: BI 마법사 - 차원에 차원 인텔리전스 추가
+          href: ./multidimensional-models/bi-wizard-add-dimension-intelligence-to-a-dimension.md
+        - name: BI 마법사 - 차원에 사용자 지정 집계 추가
+          href: ./multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md
+        - name: BI 마법사 - 차원에 특성의 사용자 지정 멤버 수식
+          href: ./multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
+        - name: BI 마법사 - 차원의 순서 정의
+          href: ./multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md
+        - name: BI 마법사 - 차원 쓰기 저장(writeback) 설정
+          href: ./multidimensional-models/bi-wizard-enable-dimension-writeback.md
+        - name: 차원 및 파티션에 대한 문자열 저장소 구성
+          href: ./multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md
+        - name: 연결된 차원 정의
+          href: ./multidimensional-models/define-linked-dimensions.md
+      - name: 큐브
+        href: ./multidimensional-models/cubes-in-multidimensional-models.md
+        items:
+        - name: 큐브 마법사를 사용하여 큐브 만들기
+          href: ./multidimensional-models/create-a-cube-using-the-cube-wizard.md
+        - name: 데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
+          href: ./multidimensional-models/create-a-cube-from-a-template-without-using-a-data-source-view.md
+        - name: 데이터 원본 뷰를 사용하여 큐브 만들기
+          href: ./multidimensional-models/create-a-cube-using-a-data-source-view.md
+        - name: 큐브에서 데이터 및 메타데이터 찾아보기
+          href: ./multidimensional-models/browse-data-and-metadata-in-cube.md
+        - name: 큐브 스키마 보기
+          href: ./multidimensional-models/view-the-cube-schema.md
+        - name: 큐브 차원 속성 정의
+          href: ./multidimensional-models/define-cube-dimension-properties.md
+        - name: 큐브 계층 속성 정의
+          href: ./multidimensional-models/define-cube-hierarchy-properties.md
+        - name: 큐브 특성 속성 정의
+          href: ./multidimensional-models/define-cube-attribute-properties.md
+        - name: 일반 관계 및 일반 관계 속성 정의
+          href: ./multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md
+        - name: 참조 관계 및 참조 관계 속성 정의
+          href: ./multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md
+        - name: 팩트 관계 및 팩트 관계 속성 정의
+          href: ./multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md
+        - name: 다 대 다 관계 및 다 대 다 관계 속성 정의
+          href: ./multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md
+      - name: 측정값 및 측정값 그룹
+        href: ./multidimensional-models/measures-and-measure-groups.md
+        items:
+        - name: 측정값 및 측정값 그룹 만들기
+          href: ./multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md
+        - name: 측정값 그룹 속성 구성
+          href: ./multidimensional-models/configure-measure-group-properties.md
+        - name: 측정값 속성 구성
+          href: ./multidimensional-models/configure-measure-properties.md
+        - name: 집계 함수 사용
+          href: ./multidimensional-models/use-aggregate-functions.md
+        - name: 반가산적 동작 정의
+          href: ./multidimensional-models/define-semiadditive-behavior.md
+        - name: 정의된 연결된 측정값 그룹
+          href: ./multidimensional-models/linked-measure-groups.md
+      - name: 파티션
+        href: ./multidimensional-models/partitions-in-multidimensional-models.md
+        items:
+        - name: 로컬 파티션 만들기
+          href: ./multidimensional-models/create-and-manage-a-local-partition-analysis-services.md
+        - name: 원격 파티션 만들기
+          href: ./multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md
+        - name: 파티션 원본 변경
+          href: ./multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md
+        - name: 집계 디자인
+          href: ./multidimensional-models/designing-aggregations-analysis-services-multidimensional.md
+        - name: 파티션 편집 또는 삭제
+          href: ./multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md
+        - name: 파티션 병합
+          href: ./multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md
+        - name: 파티션 저장소 설정
+          href: ./multidimensional-models/set-partition-storage-analysis-services-multidimensional.md
+        - name: 파티션 조각 설정
+          href: ./multidimensional-models/set-the-partition-slice-property-analysis-services.md
+        - name: 파티션 쓰기 저장(writeback) 설정
+          href: ./multidimensional-models/set-partition-writeback.md
+      - name: 새 명명된 집합
+        href: ./multidimensional-models/calculations-in-multidimensional-models.md
+        items:
+        - name: 계산 멤버 만들기
+          href: ./multidimensional-models/create-calculated-members.md
+        - name: 명명된 집합 만들기
+          href: ./multidimensional-models/create-named-sets.md
+        - name: 할당 및 기타 스크립트 명령 정의
+          href: ./multidimensional-models/define-assignments-and-other-script-commands.md
+        - name: 비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
+          href: ./multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
+      - name: KPI
+        href: ./multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md
+      - name: 동작
+        href: ./multidimensional-models/actions-in-multidimensional-models.md
+        items:
+        - name: 동작
+          href: ./multidimensional-models/actions-analysis-services-multidimensional-data.md
+        - name: 표준 동작 추가
+          href: ./multidimensional-models/add-a-standard-action.md
+        - name: 동작 테스트
+          href: ./multidimensional-models/test-an-action.md
+        - name: 템플릿을 사용하여 동작 만들기
+          href: ./multidimensional-models/use-a-template-to-create-an-action.md
+      - name: 큐브 뷰
+        href: ./multidimensional-models/perspectives-in-multidimensional-models.md
+      - name: Translations
+        href: ./multidimensional-models/translations-in-multidimensional-models-analysis-services.md
+      - name: 솔루션 배포
+        href: ./multidimensional-models/multidimensional-model-solution-deployment.md
+        items:
+        - name: Analysis Services 배포에 대한 요구 사항 및 고려 사항
+          href: ./multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md
+        - name: XMLA를 사용하여 모델 솔루션 배포
+          href: ./multidimensional-models/deploy-model-solutions-using-xmla.md
+        - name: 배포 마법사를 사용하여 모델 솔루션 배포
+          href: ./multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+          items:
+          - name: Analysis Services 배포 마법사 실행
+            href: ./multidimensional-models/running-the-analysis-services-deployment-wizard.md
+          - name: 배포 스크립트 파일 - 스크립트를 만들기 위한 입력
+            href: ./multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+          - name: 배포 스크립트 파일 - 설치 대상 지정
+            href: ./multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+          - name: 배포 스크립트 파일 - 파티션 및 역할 배포 옵션
+            href: ./multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+          - name: 배포 스크립트 파일 - 솔루션 배포 구성 설정
+            href: ./multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+          - name: 배포 스크립트 파일 - 처리 옵션 지정
+            href: ./multidimensional-models/deployment-script-files-specifying-processing-options.md
+          - name: Analysis Services 배포 스크립트 이해
+            href: ./multidimensional-models/understanding-the-analysis-services-deployment-script.md
+        - name: 배포 유틸리티를 사용하여 모델 솔루션 배포
+          href: ./multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+    - name: 다차원 데이터베이스
+      href: ./multidimensional-models/multidimensional-model-databases-ssas.md
+      items:
+      - name: Analysis Services 데이터베이스 연결 및 분리
+        href: ./multidimensional-models/attach-and-detach-analysis-services-databases.md
+      - name: Analysis Services 데이터베이스 백업 및 복원
+        href: ./multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+        items:
+        - name: 백업 옵션
+          href: ./multidimensional-models/backup-options.md
+        - name: 복원 옵션
+          href: ./multidimensional-models/restore-options.md
+      - name: Analysis Services 데이터베이스 문서화 및 스크립트
+        href: ./multidimensional-models/document-and-script-an-analysis-services-database.md
+      - name: Analysis Services 데이터베이스 수정 또는 삭제
+        href: ./multidimensional-models/modify-or-delete-an-analysis-services-database.md
+      - name: Analysis Services 데이터베이스 이동
+        href: ./multidimensional-models/move-an-analysis-services-database.md
+      - name: 다차원 데이터베이스 이름 바꾸기
+        href: ./multidimensional-models/rename-a-multidimensional-database-analysis-services.md
+      - name: 호환성 수준
+        href: ./multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md
+      - name: 다차원 데이터베이스 속성 설정
+        href: ./multidimensional-models/set-multidimensional-database-properties-analysis-services.md
+        items:
+        - name: 데이터베이스 저장소 위치
+          href: ./multidimensional-models/database-storage-location.md
+        - name: ReadWriteMode 데이터베이스
+          href: ./multidimensional-models/database-readwritemodes.md
+      - name: Analysis Services 데이터베이스 동기화
+        href: ./multidimensional-models/synchronize-analysis-services-databases.md
+      - name: ReadOnly 및 ReadWrite 모드 전환
+        href: ./multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+    - name: 다차원 모델 처리
+      href: ./multidimensional-models/processing-a-multidimensional-model-analysis-services.md
+      items:
+      - name: 처리 옵션 및 설정
+        href: ./multidimensional-models/processing-options-and-settings-analysis-services.md
+      - name: 데이터베이스, 차원 및 파티션 처리
+        href: ./multidimensional-models/processing-analysis-services-objects.md
+      - name: 도구 및 처리 접근 방법
+        href: ./multidimensional-models/tools-and-approaches-for-processing-analysis-services.md
+      - name: 일괄 처리
+        href: ./multidimensional-models/batch-processing-analysis-services.md
+      - name: 원격 처리
+        href: ./multidimensional-models/remote-processing-analysis-services.md
+      - name: 오류 구성
+        href: ./multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md
+    - name: 역할 및 권한
+      href: ./multidimensional-models/roles-and-permissions-analysis-services.md
+      items:
+      - name: 개체 및 작업에 대한 액세스 승인
+        href: ./multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md
+      - name: 데이터베이스 사용 권한
+        href: ./multidimensional-models/grant-database-permissions-analysis-services.md
+      - name: 큐브 또는 모델 권한
+        href: ./multidimensional-models/grant-cube-or-model-permissions-analysis-services.md
+      - name: 처리 권한
+        href: ./multidimensional-models/grant-process-permissions-analysis-services.md
+      - name: 정의 읽기 권한
+        href: ./multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md
+      - name: 차원 권한
+        href: ./multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md
+      - name: 차원 데이터에 대한 사용자 지정 액세스
+        href: ./multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md
+      - name: 셀 데이터에 대한 사용자 지정 액세스
+        href: ./multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md
+      - name: 데이터 원본 개체 권한
+        href: ./multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md
+      - name: 데이터 마이닝 권한
+        href: ./multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md
+    - name: 다차원 모델용 파워 뷰
+      href: ./multidimensional-models/power-view-for-multidimensional-models.md
+      items:
+      - name: 다차원 모델용 파워 뷰 이해
+        href: ./multidimensional-models/understanding-power-view-for-multidimensional-models.md
+      - name: 보고서 데이터 원본 만들기
+        href: ./multidimensional-models/create-a-report-data-source.md
+      - name: 파워 뷰 보고서 만들기
+        href: ./multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
+    - name: 어셈블리 관리
+      href: ./multidimensional-models/multidimensional-model-assemblies-management.md
   - name: 데이터 마이닝
-    href: ../analysis-services/data-mining/data-mining-ssas.md
+    items:
+    - name: 데이터 마이닝 개요
+      href: ./data-mining/data-mining-ssas.md
+    - name: 데이터 마이닝 개념
+      href: ./data-mining/data-mining-concepts.md
+    - name: 알고리즘
+      href: ./data-mining/data-mining-algorithms-analysis-services-data-mining.md
+      items:
+      - name: Microsoft 연결
+        href: ./data-mining/microsoft-association-algorithm.md
+        items:
+        - name: Microsoft 연결 알고리즘 기술 참조
+          href: ./data-mining/microsoft-association-algorithm-technical-reference.md
+        - name: 연결 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md
+        - name: 연결 모델 쿼리 예제
+          href: ./data-mining/association-model-query-examples.md
+      - name: Microsoft 클러스터링
+        href: ./data-mining/microsoft-clustering-algorithm.md
+        items:
+        - name: Microsoft 클러스터링 알고리즘 기술 참조
+          href: ./data-mining/microsoft-clustering-algorithm-technical-reference.md
+        - name: 클러스터링 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md
+        - name: 클러스터링 모델 쿼리 예제
+          href: ./data-mining/clustering-model-query-examples.md
+      - name: Microsoft 의사 결정 트리
+        href: ./data-mining/microsoft-decision-trees-algorithm.md
+        items:
+        - name: Microsoft 의사 결정 트리 알고리즘 기술 참조
+          href: ./data-mining/microsoft-decision-trees-algorithm-technical-reference.md
+        - name: 의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md
+        - name: 의사 결정 트리 모델 쿼리 예제
+          href: ./data-mining/decision-trees-model-query-examples.md
+      - name: Microsoft 선형 회귀
+        href: ./data-mining/microsoft-linear-regression-algorithm.md
+        items:
+        - name: Microsoft 선형 회귀 알고리즘 기술 참조
+          href: ./data-mining/microsoft-linear-regression-algorithm-technical-reference.md
+        - name: 선형 회귀 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md
+        - name: 선형 회귀 모델 쿼리 예제
+          href: ./data-mining/linear-regression-model-query-examples.md
+      - name: Microsoft 로지스틱 회귀
+        href: ./data-mining/microsoft-logistic-regression-algorithm.md
+        items:
+        - name: Microsoft 로지스틱 회귀 알고리즘 기술 참조
+          href: ./data-mining/microsoft-logistic-regression-algorithm-technical-reference.md
+        - name: 로지스틱 회귀 모델에 대한 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-logistic-regression-models.md
+        - name: 로지스틱 회귀 모델 쿼리 예제
+          href: ./data-mining/logistic-regression-model-query-examples.md
+      - name: Microsoft Naive Bayes
+        href: ./data-mining/microsoft-naive-bayes-algorithm.md
+        items:
+        - name: Microsoft Naive Bayes 알고리즘 기술 참조
+          href: ./data-mining/microsoft-naive-bayes-algorithm-technical-reference.md
+        - name: Naive Bayes 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md
+        - name: Naive Bayes 모델 쿼리 예제
+          href: ./data-mining/naive-bayes-model-query-examples.md
+      - name: Microsoft 신경망
+        href: ./data-mining/microsoft-neural-network-algorithm.md
+        items:
+        - name: Microsoft 신경망 알고리즘 기술 참조
+          href: ./data-mining/microsoft-neural-network-algorithm-technical-reference.md
+        - name: 신경망 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md
+        - name: 신경망 모델 쿼리 예제
+          href: ./data-mining/neural-network-model-query-examples.md
+      - name: Microsoft 시퀀스 클러스터링
+        href: ./data-mining/microsoft-sequence-clustering-algorithm.md
+        items:
+        - name: Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
+          href: ./data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md
+        - name: 시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-sequence-clustering-models.md
+        - name: 시퀀스 클러스터링 모델 쿼리 예제
+          href: ./data-mining/sequence-clustering-model-query-examples.md
+      - name: Microsoft 시계열
+        href: ./data-mining/microsoft-time-series-algorithm.md
+        items:
+        - name: Microsoft Time Series Algorithm Technical Reference
+          href: ./data-mining/microsoft-time-series-algorithm-technical-reference.md
+        - name: 시계열 모델에 대한 마이닝 모델 콘텐츠
+          href: ./data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md
+        - name: 시계열 모델 쿼리 예제
+          href: ./data-mining/time-series-model-query-examples.md
+      - name: 플러그 인 알고리즘
+        href: ./data-mining/plugin-algorithms.md
+    - name: 구조
+      href: ./data-mining/mining-structures-analysis-services-data-mining.md
+      items:
+      - name: 마이닝 구조 열
+        href: ./data-mining/mining-structure-columns.md
+        items:
+        - name: 데이터 형식(데이터 마이닝)
+          href: ./data-mining/data-types-data-mining.md
+        - name: 중첩 테이블
+          href: ./data-mining/nested-tables-analysis-services-data-mining.md
+        - name: 열 배포
+          href: ./data-mining/column-distributions-data-mining.md
+        - name: 분할 방법
+          href: ./data-mining/discretization-methods-data-mining.md
+        - name: 분류된 열
+          href: ./data-mining/classified-columns-data-mining.md
+      - name: 마이닝 구조에서의 드릴스루
+        href: ./data-mining/drillthrough-on-mining-structures.md
+      - name: 마이닝 구조 및 구조 열의 속성
+        href: ./data-mining/properties-for-mining-structure-and-structure-columns.md
+      - name: 마이닝 구조 태스크 및 방법
+        href: ./data-mining/mining-structure-tasks-and-how-tos.md
+        items:
+        - name: 새 관계형 마이닝 구조 만들기
+          href: ./data-mining/create-a-new-relational-mining-structure.md
+        - name: 새 OLAP 마이닝 구조 만들기
+          href: ./data-mining/create-a-new-olap-mining-structure.md
+        - name: 마이닝 구조에 열 추가
+          href: ./data-mining/add-columns-to-a-mining-structure.md
+        - name: 마이닝 구조에서 열 제거
+          href: ./data-mining/remove-columns-from-a-mining-structure.md
+        - name: 마이닝 구조에 중첩 테이블 추가
+          href: ./data-mining/add-a-nested-table-to-a-mining-structure.md
+        - name: 마이닝 구조 속성 변경
+          href: ./data-mining/change-the-properties-of-a-mining-structure.md
+        - name: 마이닝 구조에 사용되는 데이터 원본 뷰 편집
+          href: ./data-mining/edit-the-data-source-view-used-for-a-mining-structure.md
+        - name: 마이닝 구조 처리
+          href: ./data-mining/process-a-mining-structure.md
+    - name: 모델
+      href: ./data-mining/mining-models-analysis-services-data-mining.md
+      items:
+      - name: 마이닝 모델 열
+        href: ./data-mining/mining-model-columns.md
+      - name: 내용 유형(데이터 마이닝)
+        href: ./data-mining/content-types-data-mining.md
+      - name: 마이닝 모델 속성
+        href: ./data-mining/mining-model-properties.md
+      - name: 누락 값
+        href: ./data-mining/missing-values-analysis-services-data-mining.md
+      - name: 기능 선택(데이터 마이닝)
+        href: ./data-mining/feature-selection-data-mining.md
+      - name: 모델링 플래그(데이터 마이닝)
+        href: ./data-mining/modeling-flags-data-mining.md
+      - name: 마이닝 모델 콘텐츠
+        href: ./data-mining/mining-model-content-analysis-services-data-mining.md
+      - name: 마이닝 모델에서의 드릴스루
+        href: ./data-mining/drillthrough-on-mining-models.md
+      - name: 마이닝 모델에 대한 필터
+        href: ./data-mining/filters-for-mining-models-analysis-services-data-mining.md
+        items:
+        - name: 모델 필터 구문 및 예
+          href: ./data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md
+      - name: 마이닝 모델 태스크 및 방법
+        href: ./data-mining/mining-model-tasks-and-how-tos.md
+        items:
+        - name: 기존 마이닝 구조에 마이닝 모델 추가
+          href: ./data-mining/add-a-mining-model-to-an-existing-mining-structure.md
+        - name: 마이닝 구조에서 마이닝 모델 삭제
+          href: ./data-mining/delete-a-mining-model-from-a-mining-structure.md
+        - name: 마이닝 모델에서 열 제외
+          href: ./data-mining/exclude-a-column-from-a-mining-model.md
+        - name: 모델 열의 별칭 만들기
+          href: ./data-mining/create-an-alias-for-a-model-column.md
+        - name: 마이닝 모델에서 열의 분할 변경
+          href: ./data-mining/change-the-discretization-of-a-column-in-a-mining-model.md
+        - name: 모델링 플래그 확인 또는 변경
+          href: ./data-mining/view-or-change-modeling-flags-data-mining.md
+        - name: 모델에서 회귀 변수로 사용할 열 지정
+          href: ./data-mining/specify-a-column-to-use-as-regressor-in-a-model.md
+        - name: 마이닝 모델의 속성 변경
+          href: ./data-mining/change-the-properties-of-a-mining-model.md
+        - name: 마이닝 모델에 필터 적용
+          href: ./data-mining/apply-a-filter-to-a-mining-model.md
+        - name: 마이닝 모델에서 필터 삭제
+          href: ./data-mining/delete-a-filter-from-a-mining-model.md
+        - name: 마이닝 모델에 드릴스루 사용
+          href: ./data-mining/enable-drillthrough-for-a-mining-model.md
+        - name: 알고리즘 매개 변수 확인 또는 변경
+          href: ./data-mining/view-or-change-algorithm-parameters.md
+        - name: 마이닝 모델 처리
+          href: ./data-mining/process-a-mining-model.md
+        - name: 마이닝 모델 복사본 만들기
+          href: ./data-mining/make-a-copy-of-a-mining-model.md
+        - name: 데이터 마이닝 차원 만들기
+          href: ./data-mining/create-a-data-mining-dimension.md
+    - name: 테스트 및 유효성 검사
+      href: ./data-mining/testing-and-validation-data-mining.md
+      items:
+      - name: 데이터 집합 학습 및 테스트
+        href: ./data-mining/training-and-testing-data-sets.md
+      - name: 리프트 차트
+        href: ./data-mining/lift-chart-analysis-services-data-mining.md
+      - name: 수익 차트
+        href: ./data-mining/profit-chart-analysis-services-data-mining.md
+      - name: 분류표
+        href: ./data-mining/classification-matrix-analysis-services-data-mining.md
+      - name: 산점도
+        href: ./data-mining/scatter-plot-analysis-services-data-mining.md
+      - name: 교차 유효성 검사
+        href: ./data-mining/cross-validation-analysis-services-data-mining.md
+        items:
+        - name: 교차 유효성 검사 보고서의 측정값
+          href: ./data-mining/measures-in-the-cross-validation-report.md
+        - name: 교차 유효성 검사 수식
+          href: ./data-mining/cross-validation-formulas.md
+      - name: 테스트 및 유효성 검사 태스크 및 방법
+        href: ./data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md
+        items:
+        - name: 리프트 차트, 수익 차트 또는 분류표 만들기
+          href: ./data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md
+        - name: 교차 유효성 검사 보고서 만들기
+          href: ./data-mining/create-a-cross-validation-report.md
+        - name: 모델 테스트 데이터 선택 및 매핑
+          href: ./data-mining/choose-and-map-model-testing-data.md
+        - name: 모델 테스트 데이터에 필터 적용
+          href: ./data-mining/apply-filters-to-model-testing-data.md
+        - name: 마이닝 모델 테스트에 사용할 열 선택
+          href: ./data-mining/choose-the-column-to-use-for-testing-a-mining-model.md
+        - name: 정확도 차트 유형 선택 및 차트 옵션 설정
+          href: ./data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md
+        - name: 정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
+          href: ./data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md
+    - name: 쿼리
+      href: ./data-mining/data-mining-queries.md
+      items:
+      - name: 예측 쿼리
+        href: ./data-mining/prediction-queries-data-mining.md
+      - name: 내용 쿼리
+        href: ./data-mining/content-queries-data-mining.md
+      - name: 드릴스루 쿼리
+        href: ./data-mining/drillthrough-queries-data-mining.md
+        items:
+        - name: 마이닝 모델에서 사례 데이터로 드릴스루
+          href: ./data-mining/drill-through-to-case-data-from-a-mining-model.md
+        - name: DMX를 사용하여 드릴스루 쿼리 만들기
+          href: ./data-mining/create-drillthrough-queries-using-dmx.md
+      - name: 데이터 정의 쿼리
+        href: ./data-mining/data-definition-queries-data-mining.md
+      - name: Data Mining Schema Rowsets
+        href: ./data-mining/data-mining-schema-rowsets-ssas.md
+      - name: 데이터 마이닝 쿼리 도구
+        href: ./data-mining/data-mining-query-tools.md
+      - name: 데이터 마이닝 쿼리 태스크 및 방법
+        href: ./data-mining/data-mining-query-tasks-and-how-tos.md
+        items:
+        - name: 예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
+          href: ./data-mining/create-a-prediction-query-using-the-prediction-query-builder.md
+        - name: SQL Server Management Studio에서 DMX 쿼리 만들기
+          href: ./data-mining/create-a-dmx-query-in-sql-server-management-studio.md
+        - name: 데이터 마이닝 디자이너에서 단일 쿼리 작성
+          href: ./data-mining/create-a-singleton-query-in-the-data-mining-designer.md
+        - name: 모델에 예측 함수 적용
+          href: ./data-mining/apply-prediction-functions-to-a-model.md
+        - name: 예측 쿼리에 대한 입력 데이터 선택 및 매핑
+          href: ./data-mining/choose-and-map-input-data-for-a-prediction-query.md
+        - name: 예측 쿼리 수동 편집
+          href: ./data-mining/manually-edit-a-prediction-query.md
+        - name: 예측 쿼리 결과 보기 및 저장
+          href: ./data-mining/view-and-save-the-results-of-a-prediction-query.md
+        - name: 마이닝 모델에 내용 쿼리 만들기
+          href: ./data-mining/create-a-content-query-on-a-mining-model.md
+        - name: 마이닝 모델을 만드는 데 사용한 매개 변수 쿼리
+          href: ./data-mining/query-the-parameters-used-to-create-a-mining-model.md
+        - name: 템플릿에서 단일 예측 쿼리 작성
+          href: ./data-mining/create-a-singleton-prediction-query-from-a-template.md
+        - name: XMLA를 사용하여 데이터 마이닝 쿼리 만들기
+          href: ./data-mining/create-a-data-mining-query-by-using-xmla.md
+        - name: 데이터 마이닝 쿼리에 대한 제한 시간 값 변경
+          href: ./data-mining/change-the-time-out-value-for-data-mining-queries.md
+    - name: 솔루션
+      href: ./data-mining/data-mining-solutions.md
+      items:
+      - name: 데이터 마이닝 프로젝트
+        href: ./data-mining/data-mining-projects.md
+        items:
+        - name: Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
+          href: ./data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md
+      - name: 데이터 마이닝 개체 처리
+        href: ./data-mining/processing-data-mining-objects.md
+      - name: 데이터 마이닝 솔루션 관련 프로젝트
+        href: ./data-mining/related-projects-for-data-mining-solutions.md
+      - name: 데이터 마이닝 솔루션 배포
+        href: ./data-mining/deployment-of-data-mining-solutions.md
+        items:
+        - name: 데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
+          href: ./data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md
+        - name: 데이터 마이닝 개체 내보내기 및 가져오기
+          href: ./data-mining/export-and-import-data-mining-objects.md
+    - name: Architecture
+      href: ./data-mining/data-mining-architecture.md
+      items:
+      - name: 논리 아키텍처
+        href: ./data-mining/logical-architecture-analysis-services-data-mining.md
+      - name: 물리적 아키텍처
+        href: ./data-mining/physical-architecture-analysis-services-data-mining.md
+      - name: 데이터 마이닝 서비스 및 데이터 원본
+        href: ./data-mining/data-mining-services-and-data-sources.md
+      - name: 데이터 마이닝 솔루션 및 개체 관리
+        href: ./data-mining/management-of-data-mining-solutions-and-objects.md
+        items:
+        - name: 데이터 마이닝 개체 이동
+          href: ./data-mining/moving-data-mining-objects.md
+        - name: 처리 요구 사항 및 고려 사항(데이터 마이닝)
+          href: ./data-mining/processing-requirements-and-considerations-data-mining.md
+        - name: SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링
+          href: ./data-mining/using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md
+      - name: 보안 개요(데이터 마이닝)
+        href: ./data-mining/security-overview-data-mining.md
+    - name: Tools
+      href: ./data-mining/data-mining-tools.md
+      items:
+      - name: 데이터 마이닝 마법사
+        href: ./data-mining/data-mining-wizard-analysis-services-data-mining.md
+        items:
+        - name: 관계형 마이닝 구조 만들기
+          href: ./data-mining/create-a-relational-mining-structure.md
+        - name: OLAP 마이닝 구조 만들기
+          href: ./data-mining/create-an-olap-mining-structure.md
+        - name: 구조에 마이닝 모델 추가
+          href: ./data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md
+        - name: 마이닝 모델 및 구조 사용자 지정
+          href: ./data-mining/customize-mining-models-and-structure.md
+      - name: Data Mining Designer
+        href: ./data-mining/data-mining-designer.md
+      - name: 데이터 마이닝 모델 뷰어
+        href: ./data-mining/data-mining-model-viewers.md
+        items:
+        - name: Microsoft 트리 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-tree-viewer.md
+        - name: Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md
+        - name: Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md
+        - name: Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md
+        - name: Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md
+        - name: Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md
+        - name: Microsoft 신경망 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md
+        - name: Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기
+          href: ./data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md
+        - name: 마이닝 모델 뷰어 태스크 및 방법
+          href: ./data-mining/mining-model-viewer-tasks-and-how-tos.md
+          items:
+          - name: 마이닝 모델 및 데이터 마이닝 뷰어 선택
+            href: ./data-mining/select-a-mining-model-and-a-data-mining-viewer.md
+          - name: 마이닝 모델의 뷰 복사
+            href: ./data-mining/copy-a-view-of-a-mining-model.md
+          - name: 종속성 네트워크에서 특정 노드 찾기
+            href: ./data-mining/find-a-specific-node-in-a-dependency-network.md
+          - name: 연결 규칙 모델에서 규칙 필터링
+            href: ./data-mining/filter-a-rule-in-an-association-rules-model.md
+          - name: 연결 규칙 모델에서 항목 집합 필터링
+            href: ./data-mining/filter-an-itemset-in-an-association-rules-model.md
+          - name: 모델 뷰어에서 드릴스루 사용
+            href: ./data-mining/use-drillthrough-from-the-model-viewers.md
+          - name: 시계열 모델에 대한 수식 보기
+            href: ./data-mining/view-the-formula-for-a-time-series-model-data-mining.md
+          - name: 데이터 마이닝 뷰어에서 사용되는 색 변경
+            href: ./data-mining/change-the-colors-used-in-the-data-mining-viewer.md
+      - name: Office용 데이터 마이닝 추가 기능
+        href: ./data-mining/sql-server-data-mining-add-ins-for-office.md
+    - name: 저장 프로시저
+      href: ./data-mining/data-mining-stored-procedures-analysis-services-data-mining.md
+      items:
+      - name: SystemGetCrossValidationResults
+        href: ./data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md
+      - name: SystemGetClusterCrossValidationResults
+        href: ./data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md
+      - name: SystemGetAccuracyResults
+        href: ./data-mining/systemgetaccuracyresults-analysis-services-data-mining.md
+      - name: SystemGetClusterAccuracyResults
+        href: ./data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md
+    - name: DMX(Data Mining Extensions)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
   - name: SharePoint용 PowerPivot
-    href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
-  - name: Analysis Services 인스턴스 모니터
-    href: instances/monitor-an-analysis-services-instance.md
+    items:
+    - name: SharePoint용 PowerPivot 개요
+      href: ./power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    - name: 중앙 관리에서 파워 피벗 서버 관리 및 구성
+      href: ./power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+      items:
+      - name: SharePoint에 PowerPivot 솔루션 배포
+        href: ./power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+      - name: PowerPivot 서비스 응용 프로그램 만들기 및 구성
+        href: ./power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+      - name: SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결
+        href: ./power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+      - name: 사이트 모음에 대해 파워 피벗 기능 통합 활성화
+        href: ./power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+      - name: MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
+        href: ./power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+      - name: 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기
+        href: ./power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+      - name: Power Pivot 서비스 계정 구성
+        href: ./power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+      - name: SharePoint 로그 파일 구성 및 보기
+        href: ./power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+      - name: 디스크 공간 사용 구성
+        href: ./power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+      - name: 최대 파일 업로드 크기 구성
+        href: ./power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+      - name: 구성 설정 참조
+        href: ./power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+      - name: SharePoint용 파워 피벗 서버 시작 또는 중지
+        href: ./power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+    - name: Windows PowerShell을 사용하여 파워 피벗 구성
+      href: ./power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+    - name: Power Pivot Configuration Tools
+      href: ./power-pivot-sharepoint/power-pivot-configuration-tools.md
+      items:
+      - name: SharePoint 2013용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)
+        href: ./power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+    - name: Power Pivot 가용성 및 재해 복구
+      href: ./power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+    - name: Power Pivot 인증 및 권한 부여
+      href: ./power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+    - name: PowerPivot 상태 규칙 구성
+      href: ./power-pivot-sharepoint/configure-power-pivot-health-rules.md
+      items:
+      - name: 상태 규칙 참조
+        href: ./power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+    - name: Power Pivot 관리 대시보드 및 사용 데이터
+      href: ./power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+      items:
+      - name: 파워 피벗 사용 현황 데이터 수집
+        href: ./power-pivot-sharepoint/power-pivot-usage-data-collection.md
+      - name: 사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
+        href: ./power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+    - name: Create and Customize Power Pivot Gallery
+      href: ./power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+      items:
+      - name: 파워 피벗 갤러리 사용
+        href: ./power-pivot-sharepoint/use-power-pivot-gallery.md
+      - name: 파워 피벗 갤러리 삭제
+        href: ./power-pivot-sharepoint/delete-power-pivot-gallery.md
+    - name: 파워 피벗 데이터 액세스
+      href: ./power-pivot-sharepoint/power-pivot-data-access.md
+    - name: Power Pivot 데이터 새로 고침
+      href: ./power-pivot-sharepoint/power-pivot-data-refresh.md
+      items:
+      - name: 파워 피벗 데이터 새로 고침 기록 보기
+        href: ./power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+      - name: SharePoint 2013에서 파워 피벗 데이터 새로 고침
+        href: ./power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+        items:
+        - name: 데이터 새로 고침 예약 및 Windows 인증을 지원하지 않는 데이터 원본(SharePoint용 파워 피벗)
+          href: ./power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+    - name: 파워 피벗 데이터 피드
+      href: ./power-pivot-sharepoint/power-pivot-data-feeds.md
+      items:
+      - name: 데이터 피드 라이브러리 만들기 또는 사용자 지정
+        href: ./power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+      - name: 파워 피벗 데이터 피드 사용
+        href: ./power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+      - name: Power Pivot 데이터 피드 라이브러리 삭제
+        href: ./power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+      - name: 데이터 피드 라이브러리에서 파워 피벗 데이터 피드 공유
+        href: ./power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: 파워 피벗 BI 의미 체계 모델 연결(.bism)
+      href: ./power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+      items:
+      - name: 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가
+        href: ./power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+      - name: 파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
+        href: ./power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+      - name: Create a BI Semantic Model Connection to a Tabular Model Database
+        href: ./power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+      - name: Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
+        href: ./power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+    - name: 오류 및 이벤트 참조(SharePoint용 파워 피벗)
+      href: ./power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
+      items:
+      - name: '외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 새로 고치지 못한 연결: 파워 피벗 데이터'
+        href: ./power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+      - name: Microsoft.Data.Services 파일 또는 어셈블리를 로드할 수 없습니다.
+        href: ./power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+      - name: "'Microsoft.AnalysisServices.SharePoint.Integration' 파일 또는 어셈블리를 로드할 수 없습니다."
+        href: ./power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+      - name: 통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다.
+        href: ./power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+      - name: '데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. 새로 고치지 못한 연결: 파워 피벗 데이터'
+        href: ./power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+      - name: 메모, 도형 또는 기타 개체 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다.
+        href: ./power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+      - name: 통합 문서가 저장된 신뢰할 수 있는 위치에서 외부 데이터 연결을 허용하지 않습니다.
+        href: ./power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+      - name: 통합 문서에는 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함되어 있습니다.
+        href: ./power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+      - name: 통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
+        href: ./power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
   - name: 서버 관리
-    href: ../analysis-services/instances/analysis-services-instance-management.md
-  - name: 추적 이벤트
-    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-- name: 개발자
+    items:
+    - name: SQL Server Analysis Services 서버 관리 개요
+      href: ./instances/analysis-services-instance-management.md
+    - name: 서버 속성
+      items:
+      - name: 서버 속성 개요
+        href: ./server-properties/server-properties-in-analysis-services.md
+      - name: 데이터 마이닝 속성
+        href: ./server-properties/data-mining-properties.md
+      - name: DAX 속성
+        href: ./server-properties/dax-properties.md
+      - name: 기능 속성
+        href: ./server-properties/feature-properties.md
+      - name: FileStore 속성
+        href: ./server-properties/filestore-properties.md
+      - name: 일반 속성
+        href: ./server-properties/general-properties.md
+      - name: 잠금 관리자 속성
+        href: ./server-properties/lock-manager-properties.md
+      - name: 로그 속성
+        href: ./server-properties/log-properties.md
+      - name: 메모리 속성
+        href: ./server-properties/memory-properties.md
+      - name: 네트워크 속성
+        href: ./server-properties/network-properties.md
+      - name: OLAP 속성
+        href: ./server-properties/olap-properties.md
+      - name: 보안 속성
+        href: ./server-properties/security-properties.md
+      - name: 스레드 풀 속성
+    - name: Analysis Services 모니터링
+      items:
+      - name: 모니터링 개요
+        href: ./instances/monitor-an-analysis-services-instance.md
+      - name: SQL Server 프로파일러
+        href: ./instances/use-sql-server-profiler-to-monitor-analysis-services.md
+        items:
+        - name: SQL Server 프로파일러를 사용한 Analysis Services 모니터링
+          href: ./instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: 재생을 위해 프로파일러 추적 만들기
+          href: ./instances/create-profiler-traces-for-replay-analysis-services.md
+      - name: 확장 이벤트
+        href: ./instances/monitor-analysis-services-with-sql-server-extended-events.md
+      - name: 동적 관리 뷰(DMV)
+        href: ./instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: 성능 카운터
+        href: ./instances/performance-counters-ssas.md
+      - name: 추적 이벤트
+        href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+  - name: 연결
+    items:
+    - name: 서버에 연결 개요
+      href: ./instances/connect-to-analysis-services.md
+    - name: 클라이언트 응용 프로그램에서 연결
+      href: ./instances/connect-from-client-applications-analysis-services.md
+    - name: '연결 문자열 속성 '
+      href: ./instances/connection-string-properties-analysis-services.md
+    - name: 인증 방법
+      href: ./instances/authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos 인증
+      href: ./instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN 등록
+      href: ./instances/spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP 액세스
+      href: ./instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: 클라이언트 라이브러리(데이터 공급자)
+      href: ./instances/data-providers-used-for-analysis-services-connections.md
+    - name: 사용자 및 세션 연결 끊기
+      href: ./instances/disconnect-users-and-sessions-on-analysis-services-server.md
+- name: Developer
   items:
   - name: Analysis Services 개발자 설명서
     href: analysis-services-developer-documentation.md
-  - name: 호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
-    href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+  - name: 테이블 형식 모델
     items:
-    - name: TMSL(테이블 형식 모델 스크립팅 언어)
-      href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: TMSL(테이블 형식 모델 스크립팅 언어) 명령
-      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-commands
-    - name: TMSL(테이블 형식 모델 스크립팅 언어) 개체
-      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-tabular-objects
-  - name: 호환성 수준 1050 및 1103에 대한 테이블 형식 모델 프로그래밍
-    href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-  - name: ASSL(Analysis Services 스크립팅 언어) +
-    href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-  - name: AMO(Analysis Management Objects)+
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-  - name: ADOMD.NET +
-    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
-  - name: OLAP 논리 +
-    href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-  - name: OLAP 실제 +
-    href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-  - name: OLAP 확장 +
-    href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-  - name: 스키마 행 집합
-    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
-  - name: Analysis Services 스크립팅 언어(XMLA용 ASSL)
-    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-  - name: 데이터 마이닝 프로그래밍
-    href: data-mining-programming.md
+    - name: 테이블 형식 1200 이상
+      items:
+      - name: 호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
+        href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+      - name: TMSL(테이블 형식 모델 스크립팅 언어)
+        href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+      - name: TOM(테이블 형식 개체 모델)
+        href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
+      - name: AMO(Analysis Management Objects)
+        href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+      - name: 스키마 행 집합
+        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+    - name: 테이블 형식 1103 이하
+      items:
+      - name: 호환성 수준 1103 이하에 대한 테이블 형식 모델 프로그래밍
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+      - name: CSDL(개념 스키마 정의 언어)
+        href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+      - name: ASSL(Analysis Services Scripting Language)
+        href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: IMDEmbeddedData 인터페이스
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: 스키마 행 집합
+        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+      - name: 표시
+        items:
+        - name: 연결 표현(테이블 형식)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+        - name: 데이터베이스 표현(테이블 형식)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md
+        - name: 큐브 뷰 표현(테이블 형식)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md
+        - name: 테이블 형식 모델 쿼리
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/querying-a-tabular-model.md
+        - name: 관계 표현(테이블 형식)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md
+        - name: 테이블 - 계산 열 표현
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md
+        - name: 테이블 - 계산 측정값 표현
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md
+        - name: 테이블 - 계층 표현
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md
+        - name: 테이블 - KPI(핵심 성과 지표) 표현
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md
+        - name: 테이블 - 파티션 표현
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md
+        - name: 테이블 표현(테이블 형식)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
+        - name: 1050~1103 수준에서 테이블 형식 개체 모델 이해
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+  - name: 다차원 모델
     items:
-    - name: 데이터 마이닝 프로그래밍 - OLE DB
+    - name: 다차원 모델 프로그래밍
+      href: ./multidimensional-models/multidimensional-model-programming.md
+    - name: AMO(Analysis Management Objects)
+      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+    - name: ASSL(Analysis Services Scripting Language)
+      href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: 스키마 행 집합
+      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+    - name: XMLA(XML for Analysis)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: Analysis Services 스크립팅 언어(XMLA용 ASSL)
+      href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: OLAP 논리
+      href: ./multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+    - name: OLAP 실제
+      href: ./multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: OLAP 확장
+      href: ./multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+  - name: 데이터 마이닝
+    items:
+    - name: 데이터 마이닝 프로그래밍
+      href: data-mining-programming.md
+    - name: AMO(Analysis Management Objects)
+      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: DMX(Data Mining Extensions)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
+    - name: XMLA(XML for Analysis)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+    - name: 데이터 마이닝용 OLE DB
       href: data-mining-programming-ole-db.md
 - name: 샘플
   items:
@@ -266,25 +1494,39 @@ items:
     href: analysis-services-samples.md
 - name: 참조
   items:
-  - name: Analysis Services용 PowerShell 참조
-    href: ../analysis-services/powershell/analysis-services-powershell-reference.md
-  - name: SharePoint용 Power Pivot에 대한 PowerShell 참조
-    href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-  - name: MSDN의 DAX(데이터 분석 식)
+  - name: PowerShell for Analysis Services
+    href: ./powershell/analysis-services-powershell-reference.md
+  - name: SharePoint용 PowerPivot에 대한 PowerShell
+    href: ./powershell/powershell-reference-for-power-pivot-for-sharepoint.md
+  - name: DAX(Data Analysis Expressions)
     href: https://msdn.microsoft.com/library/gg413422.aspx
-  - name: DMX(Data Mining Extensions)
-    href: ../dmx/data-mining-extensions-dmx-reference.md
-  - name: MDX(Multidimensional Expressions)
-    href: ../mdx/analysis-services-language-reference.md
   - name: 파워 쿼리 M
     href: https://msdn.microsoft.com/library/mt211003.aspx
-  - name: 서버 속성
-    href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+  - name: DMX(Data Mining Extensions)
+    href: ../dmx/data-mining-extensions-dmx-reference.md
+  - name: MDX(Multidimensional Data Expressions)
+    href: ../mdx/multidimensional-expressions-mdx-reference.md
+  - name: TMSL(테이블 형식 모델 스크립팅 언어)
+    href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+  - name: TOM(테이블 형식 개체 모델)
+    href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
+  - name: AMO(Analysis Management Objects)
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+  - name: CSDL(개념 스키마 정의 언어)
+    href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   - name: XMLA(XML for Analysis)
     href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
-ms.openlocfilehash: b70c3825382c6b008fd5db0ddf1c29356df72ddb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+  - name: ADOMD.NET
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+  - name: Analysis Services 스크립팅 언어(XMLA용 ASSL)
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  - name: 스키마 행 집합
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+  - name: 추적 이벤트
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+ms.openlocfilehash: 31cc232f3a10dbaf2113af6708bce6df3923178e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145368"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698471"
