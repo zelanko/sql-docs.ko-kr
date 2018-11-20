@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   **\<inputbuffer>_ProcessInputRow**를 재정의하여 각 입력 행의 데이터를 전달할 때 처리합니다.  
   
--   입력 행을 반복하면서 추가 작업을 수행해야 하는 경우에만 **\<inputbuffer>_ProcessInput**을 재정의합니다. 예를 들어 모든 행이 처리된 후 다른 동작을 수행하려면 `EndOfRowset`을 테스트해야 합니다. 행 처리를 수행하려면 \<** inputbuffer>_ProcessInputRow를 호출합니다.  
+-   입력 행을 반복하면서 추가 작업을 수행해야 하는 경우에만 **\<inputbuffer>_ProcessInput**을 재정의합니다. 예를 들어 모든 행이 처리된 후 다른 동작을 수행하려면 `EndOfRowset`을 테스트해야 합니다. 행 처리를 수행하려면 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
   
 -   출력을 닫기 전에 출력에 대한 작업을 수행해야 하는 경우 `FinishOutputs`를 재정의합니다.  
   
