@@ -2,20 +2,20 @@
 title: SQL 클라이언트 프로그래밍에 대 한 홈 페이지 | Microsoft Docs
 description: 다운로드 한 언어 및 Azure SQL Database 또는 SQL Server에 연결 하는 것에 대 한 운영 체제의 다양 한 조합에 대 한 설명서에 대 한 주석이 추가 된 링크를 사용 하 여 허브 페이지입니다.
 author: MightyPen
-ms.date: 04/16/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: meetb
+ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633801"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289903"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL server 프로그래밍 하는 클라이언트에 대 한 홈 페이지
 
@@ -34,8 +34,8 @@ Microsoft SQL Server와 클라우드의 Azure SQL Database와 상호 작용을 �
 
 Azure SQL Database에 연결 하기 위한 연결 문자열에 대 한 자세한 내용은 다음을 참조 하세요.
 
-- [.NET Core (C#)를 사용 하 여 Azure SQL database 쿼리](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)합니다.
-- 근처의 다른 언어에 대 한 내용의 테이블의 이전 문서는 다른 Azure SQL 데이터베이스입니다. 예를 들어, 참조 [Azure SQL database 쿼리를 사용 하 여 PHP](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)합니다.
+- [.NET Core (C#)를 사용 하 여 Azure SQL database 쿼리](/azure/sql-database/sql-database-connect-query-dotnet-core)합니다.
+- 근처의 다른 언어에 대 한 내용의 테이블의 이전 문서는 다른 Azure SQL 데이터베이스입니다. 예를 들어, 참조 [Azure SQL database 쿼리를 사용 하 여 PHP](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)합니다.
 
 
 #### <a name="build-an-app-webpages"></a>웹 앱을 빌드 페이지
@@ -79,8 +79,8 @@ C# 및 Visual Basic 같은.NET 관리 되는 언어는 ADO.NET의 가장 일반�
 | :-- | :-- |
 | [ADO.NET을 사용하여 SQL에 연결하는 개념 증명](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
 | [ADO.NET을 사용하여 탄력적으로 SQL에 연결](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 연결 분 연결 손실의 정도 부딪힐 수 있으므로 코드 예제에서는 논리 다시 시도 하세요.<br /><br />재시도 논리는 유지 관리는 인터넷을 통해 클라우드 데이터베이스에 같은 Azure SQL Database에 연결에도 적용 됩니다. |
-| [연결 및 쿼리 하는 C# 프로그램을 만들려면 Windows/Linux/macOS에서.NET Core를 사용 하는 방법의 데모를 azure SQL Database:](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 예입니다. |
-| [빌드-는 앱: C#, ADO.NET, Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 코드 예제와 함께 구성 정보입니다. |
+| [연결 및 쿼리 하는 C# 프로그램을 만들려면 Windows/Linux/macOS에서.NET Core를 사용 하는 방법의 데모를 azure SQL Database:](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 예입니다. |
+| [빌드-는 앱: C#, ADO.NET, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>설명서
@@ -88,8 +88,8 @@ C# 및 Visual Basic 같은.NET 관리 되는 언어는 ADO.NET의 가장 일반�
 |||
 | :-- | :-- |
 | [ADO.NET을 사용 하 여 C#](./ado-net/index.md)| 설명서의 루트입니다. |
-| [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | ADO.NET에 대 한 사용 되는 클래스의 집합입니다. |
-| [네임스페이스: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | ADO.NET center 대부분 직접 클래스의 집합입니다. |
+| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET에 대 한 사용 되는 클래스의 집합입니다. |
+| [네임스페이스: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | ADO.NET center 대부분 직접 클래스의 집합입니다. |
 | &nbsp; | <br /> |
 
 
@@ -103,14 +103,14 @@ EF (entity Framework)는 개체-관계형 매핑 (ORM)를 제공합니다. ORM �
 EF는 다음과 같은 기술 사용 하 여 직접 또는 간접 관계가:
 
 - .NET Framework
-- [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), 또는 [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), 또는 [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - 언어 구문 향상 같은 합니다 **=>** C# 연산자입니다.
-- SQL database의 테이블에 매핑되는 클래스에 대 한 소스 코드를 생성 하는 편리한 프로그램. 예를 들어 [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)합니다.
+- SQL database의 테이블에 매핑되는 클래스에 대 한 소스 코드를 생성 하는 편리한 프로그램. 예를 들어 [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)합니다.
 
 
 #### <a name="original-ef-and-new-ef"></a>원래 EF 및 새 EF
 
-합니다 [Entity Framework에 대 한 시작 페이지](http://docs.microsoft.com/ef/) EF 다음과 유사한 설명과 함께 소개 합니다.
+합니다 [Entity Framework에 대 한 시작 페이지](https://docs.microsoft.com/ef/) EF 다음과 유사한 설명과 함께 소개 합니다.
 
 - Entity Framework는.NET 개발자가.NET 개체를 사용 하 여 데이터베이스를 작업할 수 있도록 개체 관계형 매퍼 (O/RM). 대부분의 개발자는 일반적으로 작성 해야 하는 데이터 액세스 소스 코드에 대 한 필요가 없습니다.
 
@@ -118,8 +118,8 @@ EF는 다음과 같은 기술 사용 하 여 직접 또는 간접 관계가:
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft는 2008 년 8 월에에서 EF를 처음 릴리스 합니다. 2015 년 5 월 Microsoft는 발표 EF 6.x는 Microsoft를 개발 하는 마지막 버전 이었습니다. Microsoft 공용 도메인에 소스 코드를 릴리스 했습니다.<br /><br />처음에 EF는.NET Framework의 일부가 되었습니다. 하지만 EF 6.x는.NET Framework에서 제거 되었습니다.<br /><br />[EF 6.x 소스 코드 리포지토리에 github *aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft은 2016 년 6 월에에서 새로 개발 된 EF Core를 출시 합니다. EF Core는 우수한 유연성과 이식성을 위해 설계 되었습니다. EF Core는 바로 Microsoft Windows 이외의 운영 체제에서 실행할 수 있습니다. 및 EF Core는 Microsoft SQL Server 이외의 데이터베이스 및 기타 관계형 데이터베이스와 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스를 사용 하 여.NET Framework에서 EF Core 시작](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft는 2008 년 8 월에에서 EF를 처음 릴리스 합니다. 2015 년 5 월 Microsoft는 발표 EF 6.x는 Microsoft를 개발 하는 마지막 버전 이었습니다. Microsoft 공용 도메인에 소스 코드를 릴리스 했습니다.<br /><br />처음에 EF는.NET Framework의 일부가 되었습니다. 하지만 EF 6.x는.NET Framework에서 제거 되었습니다.<br /><br />[EF 6.x 소스 코드 리포지토리에 github *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft은 2016 년 6 월에에서 새로 개발 된 EF Core를 출시 합니다. EF Core는 우수한 유연성과 이식성을 위해 설계 되었습니다. EF Core는 바로 Microsoft Windows 이외의 운영 체제에서 실행할 수 있습니다. 및 EF Core는 Microsoft SQL Server 이외의 데이터베이스 및 기타 관계형 데이터베이스와 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예제:**<br />[Entity Framework Core 시작](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스를 사용 하 여.NET Framework에서 EF Core 시작](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 및 관련된 기술 강력 되며 전체 영역을 마스터 하려는 개발자를 위한 학습할 내용이 많습니다.
@@ -141,8 +141,8 @@ Microsoft은 SQL Server를 사용 하 여 (또는 물론 Azure SQL Database를 �
 | [코드 예제](./jdbc/code-samples/index.md) | 데이터 형식, 결과 집합 및 큰 데이터에 대 한 설명 하는 코드 예제입니다. |
 | [연결 URL 샘플](./jdbc/connection-url-sample.md) | SQL Server에 연결할 연결 URL을 사용 하는 방법에 설명 합니다. 사용 하 여 SQL 문을 사용 하 여 데이터를 검색 합니다. |
 | [데이터 원본 샘플](./jdbc/data-source-sample.md) | SQL Server에 연결할 데이터 원본을 사용 하는 방법에 설명 합니다. 다음 데이터를 검색 하는 저장된 프로시저를 사용 합니다. |
-| [Java를 사용 하 여 Azure SQL database 쿼리](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 예입니다. |
-| [Ubuntu에서 SQL Server를 사용 하 여 Java 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 코드 예제와 함께 구성 정보입니다. |
+| [Java를 사용 하 여 Azure SQL database 쿼리](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 예입니다. |
+| [Ubuntu에서 SQL Server를 사용 하 여 Java 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>설명서
@@ -164,15 +164,15 @@ Microsoft은 SQL Server를 사용 하 여 (또는 물론 Azure SQL Database를 �
 
 Node.js를 사용 하 여 있습니다 수 연결할 SQL Server에서 Windows, Linux 또는 Mac. Node.js 설명서의 루트가 [여기](./node-js/index.md)합니다.
 
-SQL Server 용 Node.js 연결 드라이버는 JavaScript에서 구현 됩니다. 드라이버는 모든 최신 버전의 SQL Server에서 지원 되는 TDS 프로토콜을 사용 합니다. 드라이버는 오픈 소스 프로젝트 [Github에서 사용할 수 있는](http://tediousjs.github.io/tedious/)합니다.
+SQL Server 용 Node.js 연결 드라이버는 JavaScript에서 구현 됩니다. 드라이버는 모든 최신 버전의 SQL Server에서 지원 되는 TDS 프로토콜을 사용 합니다. 드라이버는 오픈 소스 프로젝트 [Github에서 사용할 수 있는](https://tediousjs.github.io/tedious/)합니다.
 
 #### <a name="code-examples"></a>코드 예제
 
 |||
 | :-- | :-- |
 | [Node.js를 사용하여 SQL에 연결하는 개념 증명](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 기본적인 원본 SQL Server에 연결 및 쿼리 실행에 대 한 코드입니다. |
-| [Azure SQL database: Node.js 쿼리를 사용 하 여](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 클라우드에서 Azure SQL Database에 대 한 예제를 제공 합니다. |
-| [SQL Server를 사용 하 여 macos에 Node.js 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 코드 예제와 함께 구성 정보입니다. |
+| [Azure SQL database: Node.js 쿼리를 사용 하 여](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 클라우드에서 Azure SQL Database에 대 한 예제를 제공 합니다. |
+| [SQL Server를 사용 하 여 macos에 Node.js 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 
@@ -227,8 +227,8 @@ PHP를 사용 하 여 SQL 서버와 상호 작용할 수 있습니다. PHP 설�
 | :-- | :-- |
 | [PHP를 사용하여 SQL에 연결하는 개념 증명](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
 | [PHP를 사용하여 탄력적으로 SQL에 연결](./php/step-4-connect-resiliently-to-sql-with-php.md) | 인터넷 및 클라우드를 통해 연결 분 연결 손실의 정도 부딪힐 수 있으므로 코드 예제에서는 논리 다시 시도 하세요. |
-| [Azure SQL database: PHP 쿼리를 사용 하 여](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 예입니다. |
-| [RHEL에서 SQL Server를 사용 하려면 PHP 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 코드 예제와 함께 구성 정보입니다. |
+| [Azure SQL database: PHP 쿼리를 사용 하 여](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 예입니다. |
+| [RHEL에서 SQL Server를 사용 하려면 PHP 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 
@@ -245,8 +245,8 @@ SQL Server와 상호 작용에 Python을 사용할 수 있습니다.
 |||
 | :-- | :-- |
 | [Pyodbc를 사용 하 여 Python 사용 하 여 SQL에 연결 하는 개념 증명](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
-| [Azure SQL database: Python 쿼리를 사용 하 여](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 예입니다. |
-| [SLES의 SQL Server를 사용 하려면 PHP 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 코드 예제와 함께 구성 정보입니다. |
+| [Azure SQL database: Python 쿼리를 사용 하 여](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 예입니다. |
+| [SLES의 SQL Server를 사용 하려면 PHP 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>설명서
@@ -270,15 +270,15 @@ Ruby를 사용 하 여 SQL 서버와 상호 작용할 수 있습니다. Ruby 설
 |||
 | :-- | :-- |
 | [Ruby를 사용하여 SQL에 연결하는 개념 증명](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 작은 코드 예제는 연결 및 SQL Server 쿼리를 중점적으로 수행 합니다. |
-| [Azure SQL database: Ruby 쿼리를 사용 하 여](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예입니다. |
-| [SQL Server를 사용 하 여 MacOS에서 Ruby 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 코드 예제와 함께 구성 정보입니다. |
+| [Azure SQL database: Ruby 쿼리를 사용 하 여](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 예입니다. |
+| [SQL Server를 사용 하 여 MacOS에서 Ruby 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 코드 예제와 함께 구성 정보입니다. |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpwwwmicrosoftcomsql-serverdeveloper-get-started"></a>[SQL 클라이언트 개발에 대 한 앱을 빌드 웹 사이트](http://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[SQL 클라이언트 개발에 대 한 앱을 빌드 웹 사이트](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
 우리의 [ *앱을 빌드* ](https://www.microsoft.com/sql-server/developer-get-started/) 웹 페이지 프로그래밍 언어를 SQL Server에 연결 하는 것에 대 한 긴 목록에서 선택할 수 있습니다. 및 클라이언트 프로그램에서 다양 한 운영 체제를 실행할 수 있습니다.
@@ -346,16 +346,16 @@ Ruby를 사용 하 여 SQL 서버와 상호 작용할 수 있습니다. Ruby 설
 
 #### <a name="developer-hub-for-azure"></a>Azure에 대 한 개발자 허브
 
-- [Azure에 대 한 개발자 허브](http://docs.microsoft.com/azure/)
-- [.NET 개발자 용 azure](http://docs.microsoft.com/dotnet/azure/)
-- [Java 개발자 용 azure](http://docs.microsoft.com/java/azure/)
-- [Node.js 개발자 용 azure](http://docs.microsoft.com/nodejs/azure/)
-- [Python 개발자 용 azure](http://docs.microsoft.com/python/azure/)
-- [Azure에서 PHP 웹 앱 만들기](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [Azure에 대 한 개발자 허브](https://docs.microsoft.com/azure/)
+- [.NET 개발자 용 azure](https://docs.microsoft.com/dotnet/azure/)
+- [Java 개발자 용 azure](https://docs.microsoft.com/java/azure/)
+- [Node.js 개발자 용 azure](https://docs.microsoft.com/nodejs/azure/)
+- [Python 개발자 용 azure](https://docs.microsoft.com/python/azure/)
+- [Azure에서 PHP 웹 앱 만들기](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>다른 언어
 
-- [Windows에서 SQL Server를 사용 하 여 Go 앱 만들기](http://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [Windows에서 SQL Server를 사용 하 여 Go 앱 만들기](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 

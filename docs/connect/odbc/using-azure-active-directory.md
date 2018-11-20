@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory를 사용 하 여 ODBC 드라이버로 | SQL Server 용 Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 11/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635011"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604103"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ Azure Active Directory에서 페더레이션된 id를 사용 하 여 사용자 �
 |속성|값|Default|설명|
 |-|-|-|-|
 |`Authentication`|(설정 안 함) (빈 문자열), `SqlPassword`하십시오 `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`|(설정 안 됨)|인증 모드를 제어합니다.<table><tr><th>값<th>설명<tr><td>(설정 안 됨)<td>다른 키워드 (기존 레거시 연결 옵션)에 의해 결정 되는 인증 모드<tr><td>(빈 문자열)<td>연결 문자열: "{0}" 재정의 설정 되지 않은 하 고는 `Authentication` 값이 DSN에서 설정 합니다.<tr><td>`SqlPassword`<td>사용자 이름 및 암호를 사용 하 여 SQL Server 인스턴스로 직접 인증 합니다.<tr><td>`ActiveDirectoryPassword`<td>사용자 이름 및 암호를 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 드라이버만_합니다. 통합된 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryInteractive`<td>_Windows 드라이버만_합니다. 대화형 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.</table>|
-|`Encrypt`|(설정 안 됨), `Yes`, `No`|(설명 참조)|연결의 암호화를 제어합니다. 경우 사전 특성 값을 `Authentication` 설정이 잘못 되었습니다 _none_, 기본값은 `Yes`합니다. 그렇지 않은 경우 기본값은 `No`입니다. 암호화 전 특성 값이 `Yes` 값 설정 된 경우 `Yes` DSN 또는 연결 문자열입니다.|
+|`Encrypt`|(설정 안 됨), `Yes`, `No`|(설명 참조)|연결의 암호화를 제어합니다. 경우 사전 특성 값을 `Authentication` 설정이 잘못 되었습니다 _none_ DSN 또는 연결 문자열에서 기본값은 `Yes`합니다. 그렇지 않은 경우 기본값은 `No`입니다. 경우 특성 `SQL_COPT_SS_AUTHENTICATION` 사전 특성 값을 재정의 `Authentication`, 명시적으로 DSN 또는 연결 문자열이 나 연결 특성에서 암호화 값을 설정 합니다. 암호화 전 특성 값이 `Yes` 값 설정 된 경우 `Yes` DSN 또는 연결 문자열입니다.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>새롭거나 수정 된 연결 특성
 
@@ -45,7 +45,7 @@ Azure Active Directory에서 페더레이션된 id를 사용 하 여 사용자 �
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_RESET`|(설정 안 됨)|에 대 한 설명을 참조 하세요. `Authentication` 위의 키워드입니다. `SQL_AU_NONE` 집합을 명시적으로 재정의 하기 위해 제공 됩니다 `Authentication` DSN 및/또는 연결 문자열에 값 동안 `SQL_AU_RESET` DSN 또는 연결 문자열 값 보다 우선적으로 적용을 하도록 허용, 설정 된 경우 특성 unsets 합니다.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|에 대 한 포인터 `ACCESSTOKEN` 또는 NULL|NULL|Null이 아닌 경우 azure Ad 액세스 토큰을 사용 하 여 지정 합니다. 액세스 토큰을 지정 하면 오류가 발생 그리고 `UID`, `PWD`, `Trusted_Connection`, 또는 `Authentication` 연결 문자열 키워드 또는 해당 특성에 해당 합니다. <br> **참고:** ODBC 드라이버 13.1 버전에만 지원 이렇게 _Windows_합니다.|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(설명 참조)|연결의 암호화를 제어합니다. `SQL_EN_OFF` 및 `SQL_EN_ON` 사용 하지 않도록 설정 하 고 각각의 암호화를 사용 하도록 설정 합니다. 경우 사전 특성 값을 `Authentication` 설정이 잘못 되었습니다 _none_ 또는 `SQL_COPT_SS_ACCESS_TOKEN` 설정 되어 및 `Encrypt` 기본값은 DSN 또는 연결 문자열에 지정 되지 않았습니다 `SQL_EN_ON`합니다. 그렇지 않은 경우 기본값은 `SQL_EN_OFF`입니다. 이 특성을 제어의 유효 값 [연결에 대 한 암호화를 사용할지 여부입니다.](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(설명 참조)|연결의 암호화를 제어합니다. `SQL_EN_OFF` 및 `SQL_EN_ON` 사용 하지 않도록 설정 하 고 각각의 암호화를 사용 하도록 설정 합니다. 경우 사전 특성 값을 `Authentication` 설정이 잘못 되었습니다 _none_ 또는 `SQL_COPT_SS_ACCESS_TOKEN` 설정 되어 및 `Encrypt` 기본값은 DSN 또는 연결 문자열에 지정 되지 않았습니다 `SQL_EN_ON`합니다. 그렇지 않은 경우 기본값은 `SQL_EN_OFF`입니다. 경우 연결 특성 `SQL_COPT_SS_AUTHENTICATION` 로 설정 되어 하지 _none_명시적으로 설정 합니다 `SQL_COPT_SS_ENCRYPT` 값을 원하는 값 경우 `Encrypt` DSN 또는 연결 문자열에 지정 되지 않았습니다. 이 특성을 제어의 유효 값 [연결에 대 한 암호화를 사용할지 여부입니다.](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|ODBC 연결을 통해 AAD 보안 주체에 대 한 암호 변경을 수행할 수 없는 하므로 Azure Active Directory를 사용 하 여 지원 되지 않습니다. <br><br>SQL Server 인증의 암호 만료가 SQL Server 2005에 도입되었습니다. `SQL_COPT_SS_OLDPWD` 클라이언트가 연결에 대 한 기존 및 새 암호를 제공할 수 있도록 특성이 추가 되었습니다. 이 속성을 설정하면 변경된 "이전 암호"가 연결 문자열에 포함되기 때문에 공급자가 첫 번째 연결 또는 이후 연결에 연결 풀을 사용하지 않습니다.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_사용 되지 않음_; 사용 `SQL_COPT_SS_AUTHENTICATION` 로 `SQL_AU_AD_INTEGRATED` 대신 합니다. <br><br>강제로 서버 로그인에 대 한 액세스 유효성 검사에 대 한 Windows 인증 (Kerberos Linux 및 macOS)를 사용합니다. 드라이버의 일부로 제공 되는 사용자 식별자와 암호 값을 무시 Windows 인증을 사용 하는 경우 `SQLConnect`하십시오 `SQLDriverConnect`, 또는 `SQLBrowseConnect` 처리 합니다.|
 
@@ -57,7 +57,7 @@ DSN 설정 및 드라이버의 Ui 연결을 Azure AD를 사용 하 여 인증을
 
 새 Azure AD 사용 하 여 인증 옵션을 만들 때 또는 드라이버의 설치 UI를 사용 하 여 기존 DSN을 편집 하는 것이 가능:
 
-`Authentication=ActiveDirectoryIntegrated` SQL Azure Azure Active Directory 통합 인증
+`Authentication=ActiveDirectoryIntegrated` SQL Azure에 대한 Azure Active Directory 통합 인증
 
 ![CreateNewDSN_ADIntegrated.png](windows/CreateNewDSN_ADIntegrated.png)
 
@@ -106,7 +106,7 @@ SQLDriverConnect 연결을 완료 하는 데 필요한 정보가 요청 될 때 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 > [!NOTE] 
->- Windows ODBC 드라이버를 사용 하 여 새 Active Directory 옵션을 사용 하는 경우에 있는지 확인 합니다 [SQL Server 용 Active Directory 인증 라이브러리](http://go.microsoft.com/fwlink/?LinkID=513072) 설치가 완료 된 후입니다. Linux 및 macOS 드라이버를 사용 하는 경우 확인 `libcurl` 가 설치 되었습니다. 다른 인증 방법이 나 ODBC 작업에 필요한 아니므로 드라이버 버전 17.2 이상에서 명시적 종속성 되지 않습니다.
+>- Windows ODBC 드라이버를 사용 하 여 새 Active Directory 옵션을 사용 하는 경우에 있는지 확인 합니다 [SQL Server 용 Active Directory 인증 라이브러리](https://go.microsoft.com/fwlink/?LinkID=513072) 설치가 완료 된 후입니다. Linux 및 macOS 드라이버를 사용 하는 경우 확인 `libcurl` 가 설치 되었습니다. 다른 인증 방법이 나 ODBC 작업에 필요한 아니므로 드라이버 버전 17.2 이상에서 명시적 종속성 되지 않습니다.
 >- SQL Server 계정 사용자 이름 및 암호를 사용 하 여 연결을 사용할 수 있습니다 새 `SqlPassword` 이 옵션을 사용 하면 더 안전한 연결 기본값 이므로 특히 SQL Azure 대 한 권장 되지 않는 옵션입니다.
 >- 연결 하려면 Azure Active Directory 계정 사용자 이름 및 암호를 사용 하 여 지정 합니다 `Authentication=ActiveDirectoryPassword` 연결 문자열에는 `UID` 및 `PWD` 키워드의 사용자 이름 및 암호를 각각.
 >- Windows 통합 인증 또는 Active Directory 통합 (Windows 드라이버에만 해당) 인증을 사용 하 여 연결할 지정 `Authentication=ActiveDirectoryIntegrated` 연결 문자열에 있습니다. 드라이버는 올바른 인증 모드를 자동으로 선택 됩니다. `UID` 및 `PWD` 지정 하면 안 됩니다.
@@ -136,7 +136,7 @@ typedef struct AccessToken
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 다음 샘플 Azure Active Directory를 사용 하 여 액세스 토큰 인증을 사용 하 여 SQL Server에 연결 하는 데 필요한 코드를 보여 줍니다. 이 경우 액세스 토큰을 처리 하 고 연결 특성을 설정 하는 응용 프로그램 코드를 수정 해야 할 것입니다.

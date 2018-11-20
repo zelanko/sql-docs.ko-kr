@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051225"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629626"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{대화형&#124;ClientIdSecret}|Azure KeyVault에 액세스할 때 어떤 인증 방법을 사용할지를 지정합니다. |
 |**/ClientId:**|**/cid**|{string}|필요한 경우 Azure KeyVault에 대해 인증 시 사용할 클라이언트 ID를 지정합니다. |
+|**/ DeployScriptPath:**|**/dsp**|{string}|배포 스크립트 출력에 대 한 선택적 파일 경로 지정 합니다. Azure 배포의 경우 master 데이터베이스를 만들거나 수정하는 TSQL 명령이 있을 경우 스크립트가 동일한 경로에 작성되지만 “Filename_Master.sql”을 출력 파일 이름으로 사용합니다. |
+|**/ DeployReportPath:**|**/drp**|{string}|배포 보고서 xml 파일을 출력에 대 한 선택적 파일 경로 지정 합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
 |**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |
@@ -476,6 +478,8 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |---|---|---|---|
 |**/Action:**|**/a**|스크립트|수행할 작업을 지정합니다. |
 |**/AccessToken:**|**/at**|{string}| 대상 데이터베이스에 연결할 때 사용할 액세스 토큰 기반 인증 액세스 토큰을 지정합니다. |
+|**/ DeployScriptPath:**|**/dsp**|{string}|배포 스크립트 출력에 대 한 선택적 파일 경로 지정 합니다. Azure 배포의 경우 master 데이터베이스를 만들거나 수정하는 TSQL 명령이 있을 경우 스크립트가 동일한 경로에 작성되지만 “Filename_Master.sql”을 출력 파일 이름으로 사용합니다. |
+|**/ DeployReportPath:**|**/drp**|{string}|배포 보고서 xml 파일을 출력에 대 한 선택적 파일 경로 지정 합니다. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|진단 로깅이 콘솔로 출력되는지 여부를 지정합니다. 기본값은 False입니다. |
 |**/ DiagnosticsFile:**|**/df**|{string}|진단 로그를 저장할 파일을 지정합니다. |
 |**/ MaxParallelism:**|**/mp**|{int}| 데이터베이스에 대해 실행 중인 동시 작업에 대한 병렬 처리 수준을 지정합니다. 기본값은 8입니다. |

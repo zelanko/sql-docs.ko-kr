@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842751"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600973"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47842751"
 - Microsoft JDBC Driver 있는지 확인 하십시오 6.0 (또는 이상) 개발 컴퓨터에서 SQL Server가 설치에 대 한 합니다. 
 - Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files를 다운로드하여 설치합니다.  zip 파일에 포함된 추가 정보에서 설치 지침 및 가능한 내보내기/가져오기 문제와 관련된 자세한 내용을 읽어야 합니다.  
 
-    - mssql-jdbc-X.X.X.jre7.jar 또는 sqljdbc41.jar를 사용하는 경우 [JCE(Java Cryptography Extension) Unlimited Strength Jurisdiction Policy Files 7 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)에서 정책 파일을 다운로드할 수 있습니다.
+    - mssql-jdbc-X.X.X.jre7.jar 또는 sqljdbc41.jar를 사용하는 경우 [JCE(Java Cryptography Extension) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)에서 정책 파일을 다운로드할 수 있습니다.
 
-    - mssql-jdbc-X.X.X.jre8.jar 또는 sqljdbc42.jar를 사용하는 경우 [JCE(Java Cryptography Extension) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)에서 정책 파일을 다운로드할 수 있습니다.
+    - mssql-jdbc-X.X.X.jre8.jar 또는 sqljdbc42.jar를 사용하는 경우 [JCE(Java Cryptography Extension) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)에서 정책 파일을 다운로드할 수 있습니다.
 
     - Mssql-jdbc X.X.X.jre9.jar를 사용 하는 경우 정책 파일이 없는 다운로드 해야 합니다. Java 9에서에서 법적으로 성인이 정책을 무제한 강력한 암호화 기본값으로 사용 됩니다.
 
@@ -46,8 +46,8 @@ SQL Server 용 Microsoft JDBC Driver는 다음 기본 제공 열 마스터 키 �
 | 클래스                                                 | 설명                                        | 공급자 (조회) 이름  | 미리 등록 되어 있습니까? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault에 대 한 키 저장소에 대 한 공급자입니다. | AZURE_KEY_VAULT         | 아니오                 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 인증서 저장소에 대한 공급자입니다.      | MSSQL_CERTIFICATE_STORE | 사용자 계정 컨트롤                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 키 저장소 공급자                   | MSSQL_JAVA_KEYSTORE     | 사용자 계정 컨트롤                |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 인증서 저장소에 대한 공급자입니다.      | MSSQL_CERTIFICATE_STORE | 예                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java 키 저장소 공급자                   | MSSQL_JAVA_KEYSTORE     | 예                |
 
 미리 등록 된 키 저장소 공급자의 이러한 공급자를 사용 하려면 다음 항목이 응용 프로그램 코드를 변경 하지 해야 합니다.
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > Maven 프로젝트에 이러한 종속성을 포함 하는 방법의 예제를 참조 하세요. [다운로드 ADAL4J 및 AKV와의 종속성을 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자를 사용 하 여
+### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
 SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SQL Server Management Studio (SSMS)는 Always Encrypted 마법사 또는 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키와 열 암호화 키 정의 만들 수 있습니다. 상시 암호화 데이터에 대 한 열 마스터 키로 사용할 수 있는 Windows 인증서 저장소에 자체 서명 된 인증서를 생성 하려면 동일한 마법사를 사용할 수 있습니다. 열 마스터 키와 열 암호화 키 T-SQL 구문에 대 한 자세한 내용은 참조 하세요. [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 하 고 [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각.
 
 SQLServerColumnEncryptionCertificateStoreProvider 이름의 MSSQL_CERTIFICATE_STORE 이며 공급자 개체의 getName() API에서 쿼리할 수 있습니다. 드라이버에 의해 자동으로 등록 됩니다 하 고 응용 프로그램 변경 없이 원활 하 게 사용할 수 있습니다.
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 JDBC 드라이버는 자동으로 이러한 자격 증명은 연결 속성에 있는 경우는 SQLServerColumnEncryptionJavaKeyStoreProvider를 인스턴스화합니다.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Java 키 저장소에 대 한 열 마스터 키 만들기
-SQLServerColumnEncryptionJavaKeyStoreProvider JKS 또는 PKCS12 키 저장소 형식으로 사용할 수 있습니다. 만들기 또는 가져오기에이 공급자를 사용 하 여 사용할 키를 사용 하 여 Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) 유틸리티입니다. 키에는 자체 키 저장소와 동일한 암호를 있어야 합니다. 공개 키 및 keytool 유틸리티를 사용 하 여 연결된 된 개인 키를 만드는 방법의 예는 다음과 같습니다.
+SQLServerColumnEncryptionJavaKeyStoreProvider JKS 또는 PKCS12 키 저장소 형식으로 사용할 수 있습니다. 만들기 또는 가져오기에이 공급자를 사용 하 여 사용할 키를 사용 하 여 Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) 유틸리티입니다. 키에는 자체 키 저장소와 동일한 암호를 있어야 합니다. 공개 키 및 keytool 유틸리티를 사용 하 여 연결된 된 개인 키를 만드는 방법의 예는 다음과 같습니다.
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -652,4 +652,4 @@ SQLServerBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한
 
 ## <a name="see-also"></a>참고 항목
 
-[Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 용 ODBC 드라이버 다운로드 | Microsoft Docs
+title: ODBC Driver for SQL Server 다운로드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7e691c3be64bd58512a2a2c8ed0fab144cd001d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621971"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601043"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
@@ -102,6 +102,6 @@ ms.locfileid: "47621971"
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 및 6(64비트)** - [Microsoft ODBC Driver 11 for SQL Server 다운로드 - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 및 6(64비트)** - [Microsoft ODBC Driver 11 for SQL Server 다운로드 - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** - [Microsoft ODBC Driver 11 Preview for SQL Server 다운로드 - SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** - [Microsoft ODBC Driver 11 Preview for SQL Server 다운로드 - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

@@ -5,20 +5,19 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643941"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292979"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "49643941"
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 실행 중인 경우 항상 데이터베이스 관리를 위한 무료, 경량 도구입니다. 이 미리 보기 릴리스에서 확장 된 TRANSACT-SQL 편집기 및 데이터베이스의 작동 상태에 대 한 사용자 지정이 가능한 정보를 포함 하 여 데이터베이스 관리 기능을 제공 합니다. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows, macOS 및 Linux에서 실행**합니다.|
 | [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 관리. | **SSMS는 Windows에서 실행됩니다.**|
-| [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 용 강력한 개발 환경에 Visual Studio를 설정 합니다.| **Windows에서 실행 되는 SSDT**합니다.|
+| [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 용 강력한 개발 환경에 Visual Studio를 설정 합니다.| **SSDT는 Windows에서 실행됩니다**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code를 설치한 후 설치 합니다 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL Database 및 SQL Data Warehouse 개발을 위한 합니다.| **Windows, macOS 및 Linux에서 실행 되는 visual Studio Code**합니다.|
 
 
