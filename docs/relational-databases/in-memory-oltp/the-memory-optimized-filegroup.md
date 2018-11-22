@@ -11,12 +11,12 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31c66aaacdcebfeabf43cc6466659e25d47d4d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606941"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269746"
 ---
 # <a name="the-memory-optimized-filegroup"></a>메모리 액세스에 최적화된 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47606941"
   
 다음 제한 사항은 메모리 최적화 파일 그룹에 적용됩니다.  
   
--   메모리 최적화 파일 그룹을 만들었으면 데이터베이스를 삭제하는 방식으로만 제거할 수 있습니다. 프로덕션 환경에서 메모리 최적화 파일 그룹을 제거하지 않아도 됩니다.  
+-   메모리 최적화 파일 그룹을 사용하면 데이터베이스를 삭제하는 방식으로만 제거할 수 있습니다. 프로덕션 환경에서 메모리 최적화 파일 그룹을 제거하지 않아도 됩니다.  
   
 -   비어 있지 않은 컨테이너를 제거하거나 데이터 및 델타 파일 쌍을 메모리 최적화 파일 그룹의 다른 컨테이너로 이동할 수 없습니다.  
   

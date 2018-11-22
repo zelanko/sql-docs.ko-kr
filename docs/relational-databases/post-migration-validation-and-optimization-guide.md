@@ -1,12 +1,10 @@
 ---
 title: 마이그레이션 후 유효성 검사 및 최적화 가이드 | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662951"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658529"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "47662951"
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경하는 경우에 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)(SQL Server 2014 카디널리티 평가기로 쿼리 계획 최적화)를 참조하세요.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)(SQL Server 2014 카디널리티 평가기로 쿼리 계획 최적화)를 참조하세요.
 
 ### <a name="steps-to-resolve"></a>해결 단계
 
@@ -53,7 +51,7 @@ ms.locfileid: "47662951"
 **적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 첫 컴파일 시 입력 매개 변수를 검색하고 해당 입력 데이터 분포에 최적화된 매개 변수가 있고 재사용 가능한 계획을 생성하여 저장 프로시저의 쿼리 계획을 컴파일합니다. 저장 프로시저가 아닌 경우에도 간단한 계획을 생성하는 문은 대부분 매개 변수가 가집니다. 계획이 처음 캐시된 후 이후 실행은 모두 기존에 캐시된 계획에 매핑됩니다.
 첫 번째 컴파일 시 일반 작업에 대해 가장 일반적인 매개 변수 집합을 사용하지 않았을 경우 문제가 발생할 수 있습니다. 매개 변수가 다르면 같은 실행 계획의 효율이 떨어집니다. 이 항목에 대한 자세한 내용은 [매개 변수 스니핑](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 참조하세요.
@@ -81,7 +79,7 @@ ms.locfileid: "47662951"
 
 1.  모든 누락된 인덱스 참조에 대해 그래픽 실행 계획을 활용합니다.
 2.  [데이터베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)에서 생성한 인덱싱 제안 사항을 검토합니다.
-3.  [SQL Server 성능 대시보드](https://www.microsoft.com/en-us/download/details.aspx?id=29063)를 통해 [누락된 인덱스 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 활용합니다.
+3.  [SQL Server 성능 대시보드](https://www.microsoft.com/download/details.aspx?id=29063)를 통해 [누락된 인덱스 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 활용합니다.
 4.  기존 DMV를 사용하여 누락되거나 중복되거나 거의 사용되지 않거나 전혀 사용되지 않는 인덱스에 대한 정보를 제공할 수 있는 기존 스크립트를 활용하고 인덱스 참조가 힌트로 제공되거나 데이터베이스의 기존 프로시저 및 함수에 하드 코딩되었는지 확인합니다. 
 
 > [!TIP] 

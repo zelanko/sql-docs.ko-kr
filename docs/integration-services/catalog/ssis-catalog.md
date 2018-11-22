@@ -1,7 +1,7 @@
 ---
 title: SSIS 카탈로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864301"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641412"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47864301"
   
  **SSISDB** 데이터베이스를 유지 관리하려면 사용자 데이터베이스 관리를 위한 표준 엔터프라이즈 정책을 적용하는 것이 좋습니다. 유지 관리 계획 만들기에 대해서는 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)을 참조하십시오.  
   
- **SSISDB** 카탈로그 및 **SSISDB** 데이터베이스는 Windows PowerShell을 지원합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)블로그 항목을 참조하십시오.  
+ **SSISDB** 카탈로그 및 **SSISDB** 데이터베이스는 Windows PowerShell을 지원합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)블로그 항목을 참조하십시오.  
   
  작업 데이터를 보는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](../../integration-services/performance/monitor-running-packages-and-other-operations.md)을 참조하세요.  
   
@@ -356,12 +356,12 @@ ms.locfileid: "47864301"
   
     ```  
   
-     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](http://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
+     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
 
 ## <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
   카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 저장소 및 관리 지점 역할을 합니다.  
   
- 또한 catalog.catalog_property 뷰에서 카탈로그 속성을 보고 catalog.configure_catalog 저장 프로시저를 사용하여 속성을 설정할 수 있습니다. 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)를 참조하세요.  
+ 또한 `catalog.catalog_properties` 보기에서 카탈로그 속성을 보고 `catalog.configure_catalog` 저장 프로시저를 사용하여 속성을 설정할 수 있습니다. 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)를 참조하세요.  
   
  **수행 작업**  
   
@@ -380,15 +380,14 @@ ms.locfileid: "47864301"
 ###  <a name="options"></a> 옵션 구성  
   
 #### <a name="options"></a>Options  
- 다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
+ 다음 표에서는 대화 상자의 특정 속성과 `catalog.catalog_properties` 보기의 해당 속성에 대해 설명합니다.  
   
-|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|설명|  
+|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_properties 보기)|설명|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|암호화 알고리즘 이름|ENCRYPTION_CLEANUP_ENABLED|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256(기본값)|  
-|유효성 검사 제한 시간(초)|VALIDATION_TIMEOUT|프로젝트 유효성 검사 또는 패키지 유효성 검사가 중지되기 전에 실행될 수 있는 최대 기간(초)을 지정합니다. 기본값은 300초입니다.<br /><br /> 유효성 검사 수행은 비동기 작업입니다. 프로젝트나 패키지가 클수록 유효성 검사에 걸리는 시간이 길어집니다.<br /><br /> 프로젝트와 패키지의 유효성을 검사하는 방법은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)를 참조하십시오.|  
+|암호화 알고리즘 이름|ENCRYPTION_ALGORITHM|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256(기본값)|  
+|프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|카탈로그에 저장되는 프로젝트 버전 수를 지정합니다. 최대값을 초과하는 오래된 버전의 프로젝트는 프로젝트 버전 정리 작업이 실행될 때 제거됩니다.|  
 |주기적으로 로그 정리|OPERATION_CLEANUP_ENABLED|SQL Server 에이전트 작업인 작업 정리가 실행되도록 지정하려면 이 속성을 True로 설정하고, 그렇지 않으면 이 속성을 False로 설정합니다.|  
 |보존 기간(일)|RETENTION_WINDOW|허용 가능한 작업 데이터의 최대 수명(일)을 지정합니다. 지정된 일수보다 오래된 데이터는 SQL 에이전트 작업인 작업 정리를 통해 제거됩니다.|  
-|프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|카탈로그에 저장되는 프로젝트 버전 수를 지정합니다. 최대값을 초과하는 오래된 버전의 프로젝트는 프로젝트 버전 정리 작업이 실행될 때 제거됩니다.|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ ms.locfileid: "47864301"
   
     ```  
   
-3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
+3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
   
 4.  다음을 수행하여 ##MS_SSISServerCleanupJobLogin##에 대한 CREATE LOGIN 스크립트를 생성합니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)을 참조하세요.  
   
@@ -437,7 +436,7 @@ ms.locfileid: "47864301"
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS 데이터베이스를 복원하려면  
   
-1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 sp_configure 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [clr enabled 옵션](http://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
+1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 sp_configure 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [clr enabled 옵션](https://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
   
     ```  
     use master   
@@ -577,10 +576,10 @@ ms.locfileid: "47864301"
   
 3.  [가용성 그룹에서 SSISDB 업그레이드](#Upgrade)  
   
-###  <a name="prereq"></a> 필수 구성 요소  
+###  <a name="prereq"></a> 사전 요구 사항  
 SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 다음 필수 구성 요소를 수행합니다.  
   
-1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
+1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
   
 2.  클러스터의 각 노드에 Integration Services 기능이 포함된 SQL Server 2016(SSIS)을 설치합니다.  
   
@@ -662,8 +661,8 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)  
+-   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](http://go.microsoft.com/fwlink/?LinkId=246669)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](https://go.microsoft.com/fwlink/?LinkId=246669)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](http://go.microsoft.com/fwlink/?LinkId=254267)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)  

@@ -11,12 +11,12 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bad683dc5ad0b49ac464ab3efcb90a652d45aa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760821"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559162"
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>3-3단원 - 3단원 자습서 패키지 테스트
 이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47760821"
   
 ![패키지의 데이터 흐름](../integration-services/media/task9lesson1data.gif "패키지의 데이터 흐름")  
   
-### <a name="to-run-the-lesson-4-tutorial-package"></a>4단원 자습서 패키지를 실행하려면  
+### <a name="to-run-the-lesson-3-tutorial-package"></a>3단원 자습서 패키지를 실행하려면  
   
 1.  SSIS 메뉴에서 이벤트 로그를 클릭합니다.  
   

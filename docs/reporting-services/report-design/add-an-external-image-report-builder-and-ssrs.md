@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7f83a95102716547e14b7bea10d5f05a9277ec4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c42c413e235abd758d51a76b1726e0c35e3ff758
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031192"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812296"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>외부 이미지 추가(보고서 작성기 및 SSRS)
   외부 이미지는 기본 모드나 SharePoint 통합 모드에 있는 보고서 서버 또는 다른 웹 사이트에 있을 수 있습니다. 보고서에 외부 이미지를 포함할 때는 해당 이미지가 존재하며 보고서를 읽는 사용자에게 해당 이미지에 액세스할 수 있는 권한이 있는지 확인해야 합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)를 참조하세요.  
@@ -35,7 +35,7 @@ ms.locfileid: "50031192"
   
      기본 모드의 보고서 서버에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 상대 경로(예: ../images/image1.jpg)를 입력합니다.  
   
-     SharePoint 통합 모드의 보고서 서버나 기타 웹 사이트에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 전체 URL(예: http://\<SharePointservername>/\<site>/Documents/images/image1.jpg)을 입력합니다.  
+     SharePoint 통합 모드의 보고서 서버 또는 다른 웹 사이트에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 전체 URL을 입력합니다(예: https://\<SharePointservername>/\<site>/Documents/images/image1.jpg).  
   
      자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   

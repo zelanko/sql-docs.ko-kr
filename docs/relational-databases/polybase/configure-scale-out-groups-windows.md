@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905137"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672942"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
 
@@ -52,7 +52,7 @@ ms.locfileid: "48905137"
   
    - PQTH4A-CMP02  
   
-2. 도메인 계정: *PQTH4A\PolybaseUse*r  
+2. 도메인 계정: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>모든 시스템에 PolyBase 사용하는 SQL Server 설치
 
@@ -60,7 +60,7 @@ ms.locfileid: "48905137"
   
 2. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.
   
-3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 **도메인 계정** PQTH4A\PolybaseUser를 사용합니다.
+3. 서버 구성 페이지에서 SQL Server PolyBase 엔진 및 SQL Server PolyBase 데이터 이동 서비스에 대해 PQTH4A\PolyBaseUser **도메인 계정**을 사용합니다.
   
 4. PolyBase 구성 페이지에서 **PolyBase 스케일 아웃 그룹의 일부로 SQL Server 인스턴스 사용**옵션을 선택합니다. 이 옵션은 PolyBase 서비스로 들어오는 연결을 허용하도록 방화벽을 엽니다.
   
@@ -106,6 +106,6 @@ ms.locfileid: "48905137"
   
 ## <a name="next-steps"></a>다음 단계  
 
-문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.
+문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.
   
 PolyBase에 대한 자세한 내용은 [PolyBase 개요](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.

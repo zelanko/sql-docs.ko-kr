@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411773"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639130"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411773"
 분산 트랜잭션을 보장하려면 데이터베이스를 분산 트랜잭션 리소스 관리자로 등록하도록 가용성 그룹을 구성해야 합니다.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이상은 가용성 그룹에서 분산 트랜잭션에 대한 완전한 지원을 제공합니다. [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이전 버전은 가용성 그룹의 데이터베이스가 포함된 데이터베이스 간 분산 트랜잭션(예: 동일한 SQL Server 인스턴스에서 데이터베이스를 사용하는 트랜잭션)을 지원하지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 서비스 팩 2 이상은 가용성 그룹에서 분산 트랜잭션에 대한 완전한 지원을 제공합니다. [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이전 버전은 가용성 그룹의 데이터베이스가 포함된 데이터베이스 간 분산 트랜잭션(예: 동일한 SQL Server 인스턴스에서 데이터베이스를 사용하는 트랜잭션)을 지원하지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]에서 구성하는 단계는 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]과 동일합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "50411773"
 
 * 분산 트랜잭션에 참여하는 모든 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 인스턴스는 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 이상이어야 합니다.
 
-* Windows Server 2016 또는 Windows Server 2012 R2에서 가용성 그룹을 실행해야 합니다. Windows Server 2012 R2의 경우 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  
+* Windows Server 2016 또는 Windows Server 2012 R2에서 가용성 그룹을 실행해야 합니다. Windows Server 2012 R2의 경우 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 만들기
 
@@ -180,16 +180,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](http://technet.microsoft.com/library/cc754134.aspx)을 참조하세요.
+미결 트랜잭션을 해결하는 방법에 대한 자세한 내용은 [수동으로 트랜잭션 해결(영문)](https://technet.microsoft.com/library/cc754134.aspx)을 참조하세요.
 
 ## <a name="next-steps"></a>Next Steps  
 
-[분산 트랜잭션](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[분산 트랜잭션](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링](transactions-always-on-availability-and-database-mirroring.md)  
 
-[XA 트랜잭션 지원(영문)](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[XA 트랜잭션 지원(영문)](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[작동 방법: DTC 트랜잭션에 대한 세션/SPID (-2)(영문)](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[작동 방법: DTC 트랜잭션에 대한 세션/SPID (-2)(영문)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

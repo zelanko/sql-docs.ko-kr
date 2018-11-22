@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030622"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813176"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
@@ -79,7 +79,7 @@ ms.locfileid: "50030622"
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>* 을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
 
 3. **사이트 컬렉션 관리**에서 **사이트 컬렉션 기능**을 선택합니다.
 
@@ -119,7 +119,7 @@ SharePoint 중앙 관리에서 솔루션 취소 기능을 제공하기는 하지
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>* 을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
 
 2. **웹 디자이너 갤러리** 아래에서 **웹 파트**를 선택합니다.
 

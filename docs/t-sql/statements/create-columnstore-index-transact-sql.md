@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699411"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **비클러스터형 columnstore 인덱스:**
 -   최대 1,024개의 열만 사용할 수 있습니다.
 -   제약 조건 기반 인덱스로 만들 수 없습니다. columnstore 인덱스가 있는 테이블에 고유한 제약 조건, 기본 키 제약 조건 또는 외래 키 제약 조건을 가질 수 없습니다. 제약 조건은 항상 행 저장소 인덱스에서 적용됩니다. 제약 조건은 columnstore(클러스터형 또는 비클러스터형) 인덱스에서 적용될 수 없습니다.
--   뷰 또는 인덱싱된 뷰에서는 만들 수 없습니다.  
 -   스파스 열을 포함할 수 없습니다.  
 -   **ALTER INDEX** 문을 사용하여 변경할 수 없습니다. 비클러스터형 인덱스를 변경하려면 인덱스를 삭제하고 해당 columnstore 인덱스를 대신 다시 만들어야 합니다. **ALTER INDEX**를 사용하여 columnstore 인덱스를 해제하고 다시 만들 수 있습니다.  
 -   **INCLUDE** 키워드를 사용하여 만들 수 없습니다.  
 -   인덱스를 정렬하기 위해 **ASC** 또는 **DESC** 키워드를 포함할 수 없습니다. columnstore 인덱스는 압축 알고리즘에 따라 정렬됩니다. 정렬을 사용하면 성능상의 많은 이점이 없어집니다.  
 -   비클러스터형 열 저장소 인덱스에는 nvarchar(max), varchar(max) 및 varbinary(max) 형식의 LOB(대형 개체) 열을 포함할 수 없습니다. 클러스터형 columnstore 인덱스 만이 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 버전부터 LOB 형식 및 프리미엄 계층, 표준 계층(S3 이상)에서 구성된 Azure SQL Database 및 모든 VCore 제품 계층을 지원합니다. 참고: 이전 버전에서는 클러스터형 및 비클러스터형 columnstore 인덱스에서 LOB 형식을 지원하지 않습니다.
+
+
+> [!NOTE]  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 인덱싱 된 뷰에서 비클러스터형 columnstore 인덱스를 만들 수 있습니다.  
 
 
  **columnstore 인덱스는 다음 기능과 함께 사용할 수 없습니다.**  
@@ -392,6 +395,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   변경 데이터 캡처 읽기 전용인 NCCI(비클러스터형 columnstore 인덱스)에 대해 변경 데이터 캡처를 사용할 수 없습니다. CCI(클러스터형 columnstore 인덱스)에서 작동합니다.  
 -   읽기용 보조 Always OnReadable 가용성 그룹의 읽기 가능한 보조에서 CCI(클러스터형 columnstore 인덱스)에 액세스할 수 없습니다.  읽기 가능한 보조에서 NCCI(비클러스터형 columnstore 인덱스)에 액세스할 수 있습니다.  
 -   MARS(Multiple Active Result Sets) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다. 그러나 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 columnstore 인덱스가 있는 테이블에서 동시 DML(데이터 조작 언어) 작업에는 MARS를 지원하지 않습니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결을 종료하고 트랜잭션을 중단합니다.  
+-  비클러스터형 columnstore 인덱스는 뷰 또는 인덱싱된 뷰에서 만들 수 없습니다.
   
  columnstore 인덱스의 성능상 이점 및 제한 사항에 대한 자세한 내용은 [Columnstore 인덱스 개요](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>5. columnstore 테이블을 rowstore 힙으로 변환  
- 클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
+ 클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

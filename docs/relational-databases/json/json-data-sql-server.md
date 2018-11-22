@@ -14,15 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664622"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 엔드포인트가 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
 
@@ -62,9 +65,9 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 데이터베이스 테이블에 저장된 JSON 텍스트가 있는 경우 다음과 같은 기본 제공 함수를 사용하여 JSON 텍스트의 값을 읽거나 수정할 수 있습니다.  
     
 -   [ISJSON(Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.
--   [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)는 JSON 문자열에서 스칼라 값을 추출합니다.
--   [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)는 JSON 문자열에서 개체 또는 배열을 추출합니다.
--   [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)는 JSON 문자열에 있는 값을 변경합니다.
+-   [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)는 JSON 문자열에서 스칼라 값을 추출합니다.
+-   [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)는 JSON 문자열에서 개체 또는 배열을 추출합니다.
+-   [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)는 JSON 문자열에 있는 값을 변경합니다.
 
 
 **예제**
@@ -244,7 +247,7 @@ JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>SQL Server에서 JSON 데이터 저장 및 인덱싱
 
-JSON은 텍스트 형식이므로 JSON 문서는 SQL Database의 `NVARCHAR` 열에 저장될 수 있습니다. 모든 SQL Server 하위 시스템에서 `NVARCHAR` 형식이 지원되므로 **CLUSTERED COLUMNSTORE** 인덱스, **메모리 최적화** 테이블 또는 OPENROWSET 또는 Polybase를 사용하여 읽을 수 있는 외부 파일이 있는 테이블에 JSON 문서를 넣을 수 있습니다.
+JSON은 텍스트 형식이므로 JSON 문서는 SQL Database의 `NVARCHAR` 열에 저장될 수 있습니다. 모든 SQL Server 하위 시스템에서 `NVARCHAR` 형식이 지원되므로 OPENROWSET 또는 PolyBase를 사용하여 읽을 수 있는 **CLUSTERED COLUMNSTORE** 인덱스가 있는 테이블, **메모리 최적화** 테이블 또는 외부 파일이 있는 테이블에 JSON 문서를 넣을 수 있습니다.
 
 SQL Server에서 JSON 데이터를 저장, 인덱싱 및 최적화하는 옵션에 대해 자세히 알아보려면 다음 문서를 참조하세요.
 -   [SQL Server 또는 SQL Database에 JSON 문서 저장](store-json-documents-in-sql-tables.md)
@@ -255,7 +258,7 @@ SQL Server에서 JSON 데이터를 저장, 인덱싱 및 최적화하는 옵션�
 
 표준 JSON 또는 행으로 구분된 JSON으로 파일에 저장된 정보의 형식을 지정할 수 있습니다. SQL Server는 JSON 파일의 콘텐츠를 가져와 **OPENJSON** 또는 **JSON_VALUE** 함수를 사용하여 구문 분석하고 테이블에 로드할 수 있습니다.  
   
--   JSON 문서가 로컬 파일, 공유 네트워크 드라이브 또는 SQL Server에서 액세스할 수 있는 Azure Files 위치에 저장된 경우 대량 가져오기를 사용하여 JSON 데이터를 SQL Server로 로드할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [OPENROWSET를 사용하여 SQL Server로 JSON 파일 가져오기(BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)를 참조하세요.  
+-   JSON 문서가 로컬 파일, 공유 네트워크 드라이브 또는 SQL Server에서 액세스할 수 있는 Azure Files 위치에 저장된 경우 대량 가져오기를 사용하여 JSON 데이터를 SQL Server로 로드할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [OPENROWSET를 사용하여 SQL Server로 JSON 파일 가져오기(BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)를 참조하세요.  
   
 -   행으로 구분된 JSON 파일이 Azure Blob Storage 또는 Hadoop 파일 시스템에 저장된 경우 PolyBase를 사용하여 JSON 텍스트를 로드하고 Transact-SQL 코드에서 구문 분석한 후 테이블에 로드할 수 있습니다.  
 
@@ -335,12 +338,12 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 -   요청: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   응답: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   응답: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 다음 OData URL은 ProductID 및 ProductName 열에서 `id`가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON**을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +380,7 @@ AdventureWorks 샘플 데이터베이스를 가져오려면 [Microsoft 다운로
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
   
-특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
+특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
 
 ### <a name="microsoft-videos"></a>Microsoft 비디오
 

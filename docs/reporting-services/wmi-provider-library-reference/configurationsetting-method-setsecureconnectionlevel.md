@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d28e2a460340985d771924d1c8c88559dfd08cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88db44f4ee7acd3ae5ca43b73b79ee397514ef52
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759770"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812606"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting 메서드 - SetSecureConnectionLevel
   보고서 서버의 보안 연결 수준을 설정합니다.  
@@ -50,7 +50,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>Remarks  
  메서드를 호출하면 보고서 서버의 SecureConnectionLevel 속성이 지정된 값으로 설정됩니다. 값이 0이면 SSL이 해제되어 있음을 나타냅니다. 값이 1보다 크거나 같으면 SSL이 설정됨을 나타냅니다.  
   
--   값을 설정하면 보고서 서버 구성 파일의 SecureConnectionLevel 요소가 변경되며 구성 파일의 **URLRoot** 요소는 지정된 *Level* 이 1보다 크거나 같은 경우 "https://"를 사용하도록 설정되고 지정된 *Level* 이 0인 경우에는 "http://"를 사용하도록 설정됩니다.  
+-   값이 설정되면 보고서 서버 구성 파일의 SecureConnectionLevel 요소가 변경되며, 지정된 *Level*이 1보다 크거나 같은 경우 구성 파일의 **URLRoot** 요소가 "https://"를 사용하도록 설정되고, 지정된 *Level* 이 0인 경우 "http://"를 사용하도록 설정됩니다.  
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SecureConnectionLevel은 설정/해제가 전환되며 기본값은 0입니다. SetSecureConnectionLevel 메서드 API를 통해 전달되는 값이 1보다 크거나 같으면 SSL이 설정된 것으로 간주하고 그에 따라 구성 속성 SecureConnectionLevel이 rsreportserver.config 파일에서 설정됩니다. 값 2와 3도 이전 버전과의 호환성을 위해 계속 허용됩니다.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614781"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813686"
 ---
 # <a name="html-device-information-settings"></a>HTML 장치 정보 설정
 다음 표에서는 HTML 형식으로 렌더링하기 위한 장치 정보 설정을 보여 줍니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47614781"
 |**ReplacementRoot(\*)**|ReportViewer 컨트롤 외부에 렌더링될 때 보고서의 모든 드릴스루, 토글 및 책갈피 링크에 추가할 문자열입니다. 예를 들어 이 문자열은 사용자가 클릭할 경우 사용자 지정 페이지로 리디렉션하는 데 사용됩니다.|  
 |**ResourceStreamRoot(\*)**|모든 이미지 리소스(예: 토글 또는 정렬을 위한 이미지)에 대해 URL에 추가할 문자열입니다.|  
 |**섹션**|렌더링할 보고서의 페이지 번호입니다. **0** 은 보고서의 모든 섹션이 렌더링됨을 나타냅니다. 기본값은 **1**입니다.|  
-|**StreamRoot(\*)**|보고서 서버에서 반환된 HTML 보고서에서 IMG 요소의 **src** 특성 값 앞에 접두사를 추가하는 데 사용되는 경로입니다. 기본적으로 보고서 서버에서 경로가 제공됩니다. 이 설정을 사용하여 보고서의 이미지에 대한 루트 경로를 지정할 수 있습니다(예: **http://\<servername>/resources/companyimages**).|  
+|**StreamRoot(\*)**|보고서 서버에서 반환된 HTML 보고서에서 IMG 요소의 **src** 특성 값 앞에 접두사를 추가하는 데 사용되는 경로입니다. 기본적으로 보고서 서버에서 경로가 제공됩니다. 이 설정을 사용하여 보고서의 이미지에 대한 루트 경로를 지정할 수 있습니다(예: **https://\<servername>/resources/companyimages**).|  
 |**StyleStream**|스타일 및 스크립트가 문서에 만들어지지 않고 별도의 스트림으로 만들어지는지 여부를 나타냅니다. 기본 값은 **false**입니다.|  
 |**도구 모음**|도구 모음을 표시할지, 아니면 숨길지 나타냅니다. 이 매개 변수의 기본값은 **true**입니다. 이 매개 변수 값이 **false**이면 문서 구조를 제외한 나머지 옵션이 모두 무시됩니다. 이 매개 변수를 생략하면 도구 모음이 지원하는 렌더링 형식에 맞게 자동으로 표시됩니다.<br /><br /> 보고서 뷰어 도구 모음은 URL 액세스를 사용하여 보고서를 렌더링할 때 렌더링됩니다. 도구 모음은 SOAP API를 통해 렌더링되지 않습니다. 하지만 **Toolbar** 장치 정보 설정은 SOAP **Render** 메서드 사용 시 보고서가 표시되는 방식에 영향을 줍니다. SOAP을 사용하여 HTML로 렌더링할 때 이 매개 변수 값이 **true** 이면 보고서의 첫 번째 섹션만 렌더링됩니다. 값이 **false**이면 전체 HTML 보고서가 단일 HTML 페이지로 렌더링됩니다.|  
 |**UserAgent**|요청 중인 브라우저의 **user-agent** 문자열로, HTTP 요청에서 찾을 수 있습니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47614781"
   
 ## <a name="see-also"></a>참고 항목  
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021677"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814006"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021677"
 |설정|주석|  
 |-------------|--------------|  
 |보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 응용 프로그램을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
-|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 응용 프로그램으로 시작하려면 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
+|보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 한 번 클릭 애플리케이션으로 시작하려면 https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
 |클라이언트 인쇄 기능 사용|기본값은 TRUE입니다.<br /><br /> 사용자가 인쇄 옵션을 제공 하는 클라이언트 쪽 컨트롤을 다운로드할 수 있는지 여부를 지정합니다.|  
 |세션 제한 시간 편집|기본값은 7200초입니다.|  
 |세션 캐시 제한 편집|기본값은 5입니다.|  

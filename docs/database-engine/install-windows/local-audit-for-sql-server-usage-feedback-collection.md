@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794391"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601685"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794391"
 
 ## <a name="introduction"></a>소개
 
-Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  
+Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  
 
 SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서 로컬 감사는 SSIS(SQL Server Integration Services)에 대해서도 사용할 수 있습니다. 설정 중 설치된SQL Server 구성 요소와 설정 이후 다운로드하거나 설치한 SQL Server 도구에는 사용 피드백 모음에 대한 로컬 감사 기능이 없습니다. 
 
@@ -37,7 +37,7 @@ SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 
 
 1. 인스턴스는 SQL Server 2016 RTM CU2 이상으로 패치됩니다. Integration Services의 경우 인스턴스가 SQL 2016 RTM CU4 또는 SQL 2016 SP1로 패치됩니다.
 
-1. 사용자는 레지스트리 키 추가 및 수정, 폴더 만들기, 폴더 보안 관리 및 Windows 서비스를 중지/시작이 가능한 액세스 권한이 부여된 시스템 관리자 또는 역할이어야 합니다.  
+1. 사용자는 레지스트리 키 추가 및 수정, 폴더 만들기, 폴더 보안 관리 및 Windows 서비스를 중지/시작이 가능한 액세스 권한이 부여된 시스템 관리자 또는 역할이어야 합니다.  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>로컬 감사를 켜기 전 사전 구성 단계 
 
@@ -66,7 +66,7 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>로컬 감사 파일에 대한 새 폴더를 구성합니다.    
 
-로컬 감사에서 로그를 작성할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*가 됩니다. 
+로컬 감사에서 로그를 작성할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*가 됩니다. 
  
   >[!NOTE] 
   >감사 기능과 패치를 허용하여 SQL Server의 잠재적인 문제를 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
@@ -127,7 +127,7 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 
 사전 구성 단계를 완료한 후에 로컬 감사를 켤 수 있습니다. 이를 위해 레지스트리 키를 수정할 수 있는 액세스 권한이 있는 시스템 관리자 계정 또는 비슷한 역할을 사용하여 다음 단계에 따라 로컬 감사를 켜거나 끕니다. 
 
-1. **regedit**를 실행합니다.  
+1. **regedit**를 실행합니다.  
 
 1. 적절한 CPE [경로](#create-a-registry-key-setting-to-configure-local-audit-target-directory)로 이동합니다. 
 
@@ -162,9 +162,9 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 
 ## <a name="maintenance"></a>유지 관리 
 
-1. 로컬 감사에서 기록된 파일별로 디스크 공간 사용을 제한하려면 정책이나 일반 작업을 설정하여 오래 되어 불필요한 파일을 제거하도록 로컬 감사 디렉터리를 정리하세요.  
+1. 로컬 감사에서 기록된 파일별로 디스크 공간 사용을 제한하려면 정책이나 일반 작업을 설정하여 오래 되어 불필요한 파일을 제거하도록 로컬 감사 디렉터리를 정리하세요.  
 
-2. 적절한 사람만 액세스할 수 있도록 로컬 감사 디렉터리 경로를 보호합니다. [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/kb/3153756)(Microsoft에 피드백을 보내도록 SQL Server 2016를 구성하는 방법)에 설명된 대로 로그 파일에 정보가 포함되어 있습니다. 이 파일에 대한 액세스 권한은 대부분의 조직 멤버는 읽을 수 없습니다.  
+2. 적절한 사람만 액세스할 수 있도록 로컬 감사 디렉터리 경로를 보호합니다. [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/kb/3153756)(Microsoft에 피드백을 보내도록 SQL Server 2016를 구성하는 방법)에 설명된 대로 로그 파일에 정보가 포함되어 있습니다. 이 파일에 대한 액세스 권한은 대부분의 조직 멤버는 읽을 수 없습니다.  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>로컬 감사 출력 데이터 구조의 데이터 사전 
 
@@ -177,9 +177,9 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 - **data** 에는 **queryTimeInTicks**를 수행한 해당 쿼리 실행의 출력이 포함됩니다.
 - T-SQL 쿼리에 대한**queryIdentifiers** 에는 쿼리에서 저장된 T-SQL 쿼리 정의가 있습니다.
 
-| 논리 로컬 감사 정보 계층 구조 | 관련 열 |
+| 논리 로컬 감사 정보 계층 구조 | 관련 열 |
 | ------ | -------|
-| 머리글 | emitTime, schemaVersion 
+| 머리글 | emitTime, schemaVersion 
 | 컴퓨터 | operatingSystem 
 | 인스턴스 | instanceUniqueID, correlationID, clientVersion 
 | Session | sessionID, traceName 
@@ -188,12 +188,12 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>이름/값 쌍 정의 및 예제 
 
-아래 나열된 열은 로컬 감사 파일 출력 순서를 나타냅니다. SHA 256을 사용하는 단방향 해시를 통해 아래의 다양한 열이 익명 값으로 처리됩니다.  
+아래 나열된 열은 로컬 감사 파일 출력 순서를 나타냅니다. SHA 256을 사용하는 단방향 해시를 통해 아래의 다양한 열이 익명 값으로 처리됩니다.  
 
 | 속성 | 설명 | 예제 값
 |-------|--------| ----------|
 |instanceUniqueID| 익명화된 인스턴스 식별자 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| SQLCEIP의 스키마 버전 |  3 
+|schemaVersion| SQLCEIP의 스키마 버전 |  3 
 |emitTime |데이터 요소를 내보내는 시간(UTC) | 2016-09-08T17:20:22.1124269Z 
 |sessionID | SQLCEIP 서비스를 제공하는 세션 식별자 | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | 추가 식별자에 대한 자리 표시자 | 0 
@@ -204,8 +204,8 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 |queryIdentifier | 추적 범주: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |traceName | 쿼리 식별자 | SQLServerProperties.002 
 |data   | T-SQL 쿼리, XE 세션 또는 응용 프로그램의 출력으로 queryIdentifier에서 수집된 정보 출력 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| 해당하는 경우 데이터를 생성하는 queryIdentifier와 관련된 T-SQL 쿼리 정의.        이 구성 요소는 SQL Server CEIP 서비스에서 업로드되지 않습니다. 고객에 대한 참조로만 로컬 감사에 포함됩니다.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 다음 추적 범주가 포함된 쿼리를 실행하는 데 소요되는 기간: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|Query| 해당하는 경우 데이터를 생성하는 queryIdentifier와 관련된 T-SQL 쿼리 정의.        이 구성 요소는 SQL Server CEIP 서비스에서 업로드되지 않습니다. 고객에 대한 참조로만 로컬 감사에 포함됩니다.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | 다음 추적 범주가 포함된 쿼리를 실행하는 데 소요되는 기간: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>추적 범주 
 현재 다음 추적 범주를 수집합니다. 
@@ -263,7 +263,7 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ DBA는 디스크 공간을 너무 많이 사용하지 않도록 디렉터리에�
 
 **이 JSON 출력을 읽는 데 사용하는 클라이언트 또는 도구가 있나요?**
 메모장, Visual Studio 또는 어떤 JSON 판독기든지 사용자가 선택하여 출력을 읽을 수 있습니다.
-또는 JSON 파일을 읽고 아래와 같이 SQL Server 2016 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
+또는 JSON 파일을 읽고 아래와 같이 SQL Server 2016 인스턴스에서 데이터를 분석할 수 있습니다. SQL Server에서 JSON 파일을 읽는 방법에 대한 자세한 내용은 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(OPENROWSET(BULK) 및 OPENJSON(TRANSACT-SQL)를 사용하여 SQL Server로 JSON 파일 가져오기)을 참조하세요.
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

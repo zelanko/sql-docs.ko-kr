@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252200"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814356"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -668,7 +668,7 @@ Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion
   
 **\<mixed_page_allocation_option> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON }은 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있을지 여부를 제어합니다.  
  
@@ -682,7 +682,7 @@ ON
   
 **\<PARAMETERIZATION_option> ::=**  
   
-매개 변수화 옵션을 제어합니다.  
+매개 변수화 옵션을 제어합니다. 매개 변수화에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)를 참조하세요. 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ FORCED
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.  
+이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요. 
   
 ON  
 쿼리 저장소를 사용하도록 설정합니다.  
   
 OFF  
-쿼리 저장소를 사용하지 않도록 합니다.  이것은 기본값입니다.   
+쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.   
   
 CLEAR  
 쿼리 저장소의 내용을 제거합니다.  
@@ -799,7 +799,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 - 사용자 또는 시스템 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드하는 경우 PAGE_VERIFY 값(NONE 또는 TORN_PAGE_DETECTION)이 유지됩니다. CHECKSUM을 사용하는 것이 좋습니다.  
   
     > [!NOTE]  
-    > 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 tempdb 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 새로 설치된 경우 tempdb 데이터베이스의 기본값은 CHECKSUM입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.  
+    > 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 tempdb 데이터베이스의 PAGE_VERIFY 데이터베이스 옵션이 NONE으로 설정되며 수정할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 새로 설치된 경우 tempdb 데이터베이스의 기본값은 CHECKSUM입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치를 업그레이드하면 기본값이 NONE으로 유지됩니다. 이 옵션은 수정할 수 없습니다. tempdb 데이터베이스에는 CHECKSUM을 사용하는 것이 좋습니다.  
   
 - TORN_PAGE_DETECTION은 리소스는 덜 사용하지만 CHECKSUM 보호를 최소한으로 제공합니다.  
 - PAGE_VERIFY는 데이터베이스를 잠그거나 오프라인으로 설정하지 않고 즉, 데이터베이스의 동시성을 방해하지 않고 설정할 수 있습니다.  
@@ -809,7 +809,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 체크섬, 조각난 페이지 또는 기타 I/O 오류로 읽기가 실패할 경우 4번 다시 시도합니다. 다시 시도 중에 한 번이라도 읽기가 성공하면 오류 로그에 메시지가 기록되고 해당 읽기를 트리거한 명령이 계속 수행됩니다. 다시 시도가 실패하면 824 오류 메시지와 함께 명령이 실패합니다.  
   
-오류 메시지 823, 824 및 825에 대한 자세한 내용은 [SQL Server에서 메시지 823 오류 문제를 해결하는 방법](http://support.microsoft.com/help/2015755), [SQL Server에서 메시지 824 문제를 해결하는 방법](http://support.microsoft.com/help/2015756) 및 [SQL Server에서 메시지 825&#40;읽기 다시 시도&#41; 오류 문제를 해결하는 방법](http://support.microsoft.com/help/2015757)을 참조하세요.
+오류 메시지 823, 824 및 825에 대한 자세한 내용은 [SQL Server에서 메시지 823 오류 문제를 해결하는 방법](https://support.microsoft.com/help/2015755), [SQL Server에서 메시지 824 문제를 해결하는 방법](https://support.microsoft.com/help/2015756) 및 [SQL Server에서 메시지 825&#40;읽기 다시 시도&#41; 오류 문제를 해결하는 방법](https://support.microsoft.com/help/2015757)을 참조하세요.
   
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 *page_verify_option* 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 *IsTornPageDetectionEnabled* 속성을 검사하여 확인할 수 있습니다.  
   
@@ -1115,27 +1115,27 @@ NO_WAIT
   
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<db_user_access_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<db_update_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<delayed_durability_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<external_access_option>|사용자 계정 컨트롤|아니오|  
-|\<cursor_option>|사용자 계정 컨트롤|아니오|  
-|\<auto_option>|사용자 계정 컨트롤|아니오|  
-|\<sql_option>|사용자 계정 컨트롤|아니오|  
-|\<recovery_option>|사용자 계정 컨트롤|아니오|  
-|\<target_recovery_time_option>|아니오|사용자 계정 컨트롤|  
+|\<db_state_option>|예|예|  
+|\<db_user_access_option>|예|예|  
+|\<db_update_option>|예|예|  
+|\<delayed_durability_option>|예|예|  
+|\<external_access_option>|예|아니오|  
+|\<cursor_option>|예|아니오|  
+|\<auto_option>|예|아니오|  
+|\<sql_option>|예|아니오|  
+|\<recovery_option>|예|아니오|  
+|\<target_recovery_time_option>|아니오|예|  
 |\<database_mirroring_option>|아니오|아니오|  
 |ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
-|READ_COMMITTED_SNAPSHOT|아니오|사용자 계정 컨트롤|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<service_broker_option>|사용자 계정 컨트롤|아니오|  
-|DATE_CORRELATION_OPTIMIZATION|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<parameterization_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<change_tracking_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<db_encryption_option>|사용자 계정 컨트롤|아니오|  
+|READ_COMMITTED_SNAPSHOT|아니오|예|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
+|\<service_broker_option>|예|아니오|  
+|DATE_CORRELATION_OPTIMIZATION|예|예|  
+|\<parameterization_option>|예|예|  
+|\<change_tracking_option>|예|예|  
+|\<db_encryption_option>|예|아니오|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
   
 |||  
 |-|-|  
@@ -1171,7 +1171,7 @@ GO
 ```  
   
 ### <a name="b-setting-the-database-to-readonly"></a>2. 데이터베이스를 READ_ONLY로 설정  
-데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY`로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
+데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
   
 > [!NOTE]  
 >  이 예에서는 첫 번째 `WITH ROLLBACK IMMEDIATE` 문에서 `ALTER DATABASE` 종료 옵션을 사용합니다. 완료되지 않은 트랜잭션은 모두 롤백되며 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 다른 모든 연결은 즉시 끊어집니다.  
@@ -1219,7 +1219,7 @@ GO
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -1946,25 +1946,25 @@ NO_WAIT
   
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|사용자 계정 컨트롤|아니오|  
-|\<change_tracking_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<cursor_option>|사용자 계정 컨트롤|아니오|  
-|\<db_encryption_option>|사용자 계정 컨트롤|아니오|  
-|\<db_update_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<db_user_access_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<delayed_durability_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<parameterization_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<auto_option>|예|아니오|  
+|\<change_tracking_option>|예|예|  
+|\<cursor_option>|예|아니오|  
+|\<db_encryption_option>|예|아니오|  
+|\<db_update_option>|예|예|  
+|\<db_user_access_option>|예|예|  
+|\<delayed_durability_option>|예|예|  
+|\<parameterization_option>|예|예|  
 |ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
-|READ_COMMITTED_SNAPSHOT|아니오|사용자 계정 컨트롤|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|DATE_CORRELATION_OPTIMIZATION|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|\<sql_option>|사용자 계정 컨트롤|아니오|  
-|\<target_recovery_time_option>|아니오|사용자 계정 컨트롤|  
+|READ_COMMITTED_SNAPSHOT|아니오|예|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
+|DATE_CORRELATION_OPTIMIZATION|예|예|  
+|\<sql_option>|예|아니오|  
+|\<target_recovery_time_option>|아니오|예|  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-setting-the-database-to-readonly"></a>1. 데이터베이스를 READ_ONLY로 설정  
-데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY`로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
+데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
   
 ```sql  
 USE master;  
@@ -2008,7 +2008,7 @@ GO
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2666,7 +2666,7 @@ NO_WAIT
 ## <a name="examples"></a>예  
   
 ### <a name="a-setting-the-database-to-readonly"></a>1. 데이터베이스를 READ_ONLY로 설정  
-데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY`로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
+데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.  
   
 ```sql  
 USE master;  
@@ -2710,7 +2710,7 @@ GO
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

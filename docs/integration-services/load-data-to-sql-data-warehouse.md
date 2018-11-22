@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610941"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269936"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드
 
@@ -96,7 +96,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 1. Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 데이터를 저장합니다. Azure Blob 업로드 태스크를 가져오려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]을 다운로드합니다.
 
-2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 Polybase 스크립트를 시작합니다. Azure Blob Storage에서 (SSIS가 아닌) SQL Data Warehouse로 데이터를 로드하는 예제는 [자습서: Azure SQL Data Warehouse로 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
+2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 (SSIS가 아닌) SQL Data Warehouse로 데이터를 로드하는 예제는 [자습서: Azure SQL Data Warehouse로 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
 
 ## <a name="option-2---use-a-source-and-destination"></a>옵션 2 - 원본 및 대상 사용
 

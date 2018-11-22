@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020567"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813513"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services와 인터넷 정보 서비스 함께 설치
 
@@ -41,11 +41,11 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
   
 |예제|요청|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `http://123.234.345.456/reports` 또는 `http://\<computername>/reports`로 전송된 모든 요청을 받습니다.|  
-|`http://+:80/reports`|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
-|`http://123.234.345.456:80`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `http://123.234.345.456` 또는 `http://\<computername>`을 지정하는 모든 요청을 받습니다.|  
-|`http://+:80`|**모두 할당됨**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
-|`http://*:80`|**모두 할당되지 않음**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
+|`https://123.234.345.456:80/reports`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `https://123.234.345.456/reports` 또는 `https://\<computername>/reports`로 전송된 모든 요청을 받습니다.|  
+|`https://+:80/reports`|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
+|`https://123.234.345.456:80`|도메인 이름 서비스가 해당 호스트 이름에 대한 IP 주소를 확인할 수 있는 경우 `https://123.234.345.456` 또는 `https://\<computername>`을 지정하는 모든 요청을 받습니다.|  
+|`https://+:80`|**모두 할당됨**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
+|`https://*:80`|**모두 할당되지 않음**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
   
  'System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다 (예외가 발생한 HRESULT: 0x80070020)'.라는 오류 메시지가 표시되면 포트 충돌이 발생한 것입니다.  
   
@@ -54,9 +54,9 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
   
 |응용 프로그램|URL 예약|설명|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
-|보고서 서버|`http://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 http://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
-|웹 포털|`http://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 http://\<computername>/reports에 대한 모든 요청을 받습니다.|  
-|IIS|`http://*:80/`|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 응용 프로그램이 받지 않은 모든 나머지 요청을 받습니다.|  
+|보고서 서버|`https://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 https://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
+|웹 포털|`https://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 https://\<computername>/reports에 대한 모든 요청을 받습니다.|  
+|IIS|`https://*:80/`|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 응용 프로그램이 받지 않은 모든 나머지 요청을 받습니다.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0, 8.5에서 SQL Server Reporting Services 함께 배포
 
@@ -66,7 +66,7 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
   
 -   기본 구성으로 설치된 보고서 서버 인스턴스. 여기서 URL 예약은 포트 80을 지정하며 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 응용 프로그램은 가상 디렉터리 이름으로도 "Reports"를 사용합니다.  
   
- 구성이 이와 같을 때 http://\<computername>:80/reports로 전송된 요청은 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에서 수신됩니다. IIS의 Reports 가상 디렉터리를 통해 액세스되는 응용 프로그램은 보고서 서버 인스턴스가 설치된 후 더 이상 요청을 받지 않습니다.  
+ 이 구성이 지정되면 https://\<computername>:80/reports로 전송된 요청이 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에서 수신됩니다. IIS의 Reports 가상 디렉터리를 통해 액세스되는 응용 프로그램은 보고서 서버 인스턴스가 설치된 후 더 이상 요청을 받지 않습니다.  
   
  이전 버전 및 최신 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]배포를 함께 실행하는 경우 방금 설명한 라우팅 문제가 발생할 가능성이 높습니다. 이는 모든 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 "ReportServer" 및 "Reports"를 보고서 서버 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 응용 프로그램의 가상 디렉터리 이름으로 사용하여 IIS에 "reports" 및 "reportserver" 가상 디렉터리가 있을 가능성이 높아지기 때문입니다.  
   

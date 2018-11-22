@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752761"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571392"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name*은 기본값이 없는 **char** 데이터 형식입니다.  
   
  *init_string*  
- 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'**_keyword1_=_value_**;***keyword2*=* value***'**  
+ 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'**_키워드 1_=_값_ **;** _키워드 2_=_값_**'**  
   
  공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서는 *init_string* 인수에 가장 자주 사용되는 키워드를 나열합니다.  
   

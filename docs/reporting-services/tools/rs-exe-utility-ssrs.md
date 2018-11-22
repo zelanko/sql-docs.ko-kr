@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30457df56828e9a2c197b44126555c63f17c40f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681941"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813046"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -56,7 +56,7 @@ rs {-?}
  실행할 .rss 파일을 지정합니다(필수). 이 값은 .rss 파일의 상대 경로 또는 정규화된 경로여야 합니다.  
   
  **-s** *serverURL*  
- 파일을 실행할 웹 서버 이름 및 보고서 서버 가상 디렉터리를 지정합니다(필수). 보고서 서버 URL의 예는 `http://examplewebserver/reportserver`입니다. 서버 이름의 시작 부분에 붙는 접두사 http:// 또는 https://는 옵션입니다. 이를 생략하면 보고서 서버 스크립트 호스트에서 https를 먼저 사용해 본 다음 작동하지 않는 경우 http를 사용합니다.  
+ 파일을 실행할 웹 서버 이름 및 보고서 서버 가상 디렉터리를 지정합니다(필수). 보고서 서버 URL의 예는 `https://examplewebserver/reportserver`입니다. 서버 이름의 시작 부분에 붙는 http:// 또는 https:// 접두사는 선택 사항입니다. 이를 생략하면 보고서 서버 스크립트 호스트에서 https를 먼저 사용해 본 다음 작동하지 않는 경우 http를 사용합니다.  
   
  **-u** [*domain*\\]*username*  
  보고서 서버에 연결하는 데 사용되는 사용자 계정을 지정합니다(옵션). **-u** 와 **-p** 를 생략하면 현재 Windows 사용자 계정이 사용됩니다.  
@@ -88,7 +88,7 @@ rs {-?}
   
  **-v** 인수는 명령줄에서 지정되며 런타임에 스크립트에 정의된 전역 변수의 값을 설정하는 데 사용됩니다. 예를 들어 스크립트에 *parentFolder*라는 변수가 포함되어 있다면 다음과 같이 명령줄에서 해당 폴더에 대한 이름을 지정할 수 있습니다.  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v a=**"**1**" **-v b=**"**2**"를 지정하면 **a** 수에는 "**1**" 값이 지정되고 **b** 변수에는 "**2**" 값이 지정됩니다.  
   
@@ -97,14 +97,14 @@ rs {-?}
  **-t**  
  추적 로그에 오류 메시지를 출력합니다(옵션). 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
-##  <a name="bkmk_permissions"></a> 사용 권한  
+##  <a name="bkmk_permissions"></a> Permissions  
  이 도구를 사용하려면 스크립트를 실행하는 보고서 서버 인스턴스에 연결할 수 있는 사용 권한이 필요합니다. 스크립트를 실행하여 로컬 컴퓨터나 원격 컴퓨터를 변경할 수 있습니다. 원격 컴퓨터에 설치된 보고서 서버를 변경하려면 **-s** 인수에 원격 컴퓨터를 지정합니다.  
   
 ##  <a name="bkmk_examples"></a> 예  
  다음 예에서는 실행할 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트 및 웹 서비스 메서드가 포함된 스크립트 파일을 지정하는 방법을 보여 줍니다.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  

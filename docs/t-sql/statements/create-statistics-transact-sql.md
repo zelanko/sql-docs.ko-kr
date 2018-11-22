@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2527a7ed3401ea2da3269efb98a01c4d74651132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799131"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560206"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -288,19 +288,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>5. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
- 다음 예제에서는 `Contact` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `ContactMail2` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>5. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
+ 다음 예제에서는 `Contact` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `ContactMail2` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```  
   
-```sql  
-CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+### Examples using AdventureWorksDW database. 
   
-### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW 데이터베이스를 사용하는 예제입니다. 
-  
-### <a name="f-create-statistics-on-two-columns"></a>6. 두 열에 대한 통계 만들기  
- 다음 예제에서는 `DimCustomer` 테이블의 `CustomerKey` 및 `EmailAddress` 열을 기반으로 `CustomerStats1` 통계를 만듭니다. 통계는 `Customer` 테이블에 있는 행의 통계적으로 의미 있는 샘플링을 기반으로 작성됩니다.  
+### F. Create statistics on two columns  
+ The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

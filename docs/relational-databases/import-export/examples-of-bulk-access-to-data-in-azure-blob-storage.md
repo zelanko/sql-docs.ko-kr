@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791751"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560410"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure Blob Storage의 데이터에 대량 액세스 예제
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791751"
 `BULK INSERT` 및 `OPENROWSET` 문은 Azure Blob Storage의 파일에 직접 액세스할 수 있습니다. 다음 예제에서는 `newinvoices`라는 저장소 계정 및 `Week3`이라는 컨테이너에 저장된 `inv-2017-01-19.csv`라는 CSV(쉼표로 구분된 값) 파일의 데이터를 사용합니다. 서식 파일의 경로를 사용할 수 있지만 다음 예제에는 이러한 경로가 포함되어 있지 않습니다. 
 
 SQL Server에서 Azure Blob Storage에 대량 액세스하려면 적어도 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1이 필요합니다.
+
+>  [!IMPORTANT]
+>  Blob의 컨테이너 및 파일에 대한 모든 경로는 `CASE SENSITIVE`입니다. 정확하지 않은 경우 “대량 로드할 수 없습니다. 파일 "file.csv"가 없거나 파일 액세스 권한이 없습니다.” 같은 오류가 반환될 수 있습니다.
+"
+
 
 ## <a name="create-the-credential"></a>자격 증명 만들기   
    

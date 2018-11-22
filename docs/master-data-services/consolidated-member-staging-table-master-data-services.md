@@ -15,12 +15,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a4adf80de645d9f29082141a249d08cc9365e88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cac987ae75a35223bd0fc61c1848edbbe0ca71
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834251"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701389"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>통합 멤버 준비 테이블(Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47834251"
 |**코드**<br /><br /> 필수(단, **ImportType 1** 또는 **2**에 대해 코드가 자동으로 생성되는 경우는 제외). 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.|멤버의 고유 코드입니다.|  
 |**이름**<br /><br /> 선택 사항|멤버의 이름입니다.|  
 |**NewCode**|멤버 코드를 변경하는 경우에만 사용합니다.|  
-|\<특성 이름>|엔터티의 각 특성에 대해 열이 존재합니다. **ImportType** **0** 또는 **2**에 사용합니다. 자유 형식 특성의 경우 특성의 새 텍스트 또는 문자열 값을 지정합니다. 도메인 기반 특성의 경우에는 특성이 될 멤버의 코드를 지정합니다. 링크 특성의 경우 URL이 **http://** 로 시작해야 합니다.<br /><br /> <br /><br /> 참고: 파일 특성을 준비할 수 없습니다.|  
+|\<특성 이름>|엔터티의 각 특성에 대해 열이 존재합니다. **ImportType** **0** 또는 **2**에 사용합니다. 자유 형식 특성의 경우 특성의 새 텍스트 또는 문자열 값을 지정합니다. 도메인 기반 특성의 경우에는 특성이 될 멤버의 코드를 지정합니다. 링크 특성의 경우 URL은 **https://** 로 시작해야 합니다.<br /><br /> <br /><br /> 참고: 파일 특성을 준비할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

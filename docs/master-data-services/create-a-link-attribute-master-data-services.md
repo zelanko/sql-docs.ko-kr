@@ -15,21 +15,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eca5b1b66d296ccee49377d436b3be4c66a8cd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719281"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703159"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>링크 특성 만들기(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 http://www.contoso.com 같은 하이퍼링크를 특성 값으로 입력할 수 있도록 하려면 링크 특성을 만듭니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 https://www.contoso.com 같은 하이퍼링크를 특성 값으로 입력할 수 있도록 하려면 링크 특성을 만듭니다.  
   
 > [!NOTE]  
->  사용자가 링크 특성 값을 입력할 때 문자열은 **http://** 로 시작해야 하며 그렇지 않으면 오류가 표시됩니다.  
+>  사용자가 링크 특성 값을 입력할 때 문자열은 **https://** 로 시작해야 하며, 그렇지 않으면 오류가 표시됩니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  

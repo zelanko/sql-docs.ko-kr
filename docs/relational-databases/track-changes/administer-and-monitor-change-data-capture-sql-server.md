@@ -1,12 +1,10 @@
 ---
 title: 변경 데이터 캡처 관리 및 모니터링(SQL Server) | Microsoft 문서
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780031"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560520"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,18 +84,24 @@ ms.locfileid: "47780031"
 ### <a name="identify-sessions-with-empty-result-sets"></a>빈 결과 집합이 포함된 세션 확인  
  sys.dm_cdc_log_scan_sessions의 각 행은 로그 검색 세션을 나타냅니다(ID가 0인 행은 제외). 로그 검색 세션은 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)을 한 번 실행하는 것과 같습니다. 세션 중에 검색을 수행하면 변경 내용이나 빈 결과가 반환될 수 있습니다. 결과 집합이 비어 있으면 sys.dm_cdc_log_scan_sessions의 empty_scan_count 열이 1로 설정됩니다. 캡처 작업이 계속해서 실행될 때와 같이 연속된 빈 결과 집합이 반환되면 마지막 남은 행에 있는 empty_scan_count가 증가합니다. 예를 들어 sys.dm_cdc_log_scan_sessions에 검색 후 이미 변경 내용이 반환된 10개의 행이 있고 하나의 행에 5개의 빈 결과가 있는 경우 뷰에는 총 11개의 행이 포함됩니다. empty_scan_count 열에서 마지막 행의 값은 5입니다. 검색 결과가 비어 있는 세션을 확인하려면 다음과 같은 쿼리를 실행합니다.  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>대기 시간 확인  
  sys.dm_cdc_log_scan_sessions 관리 뷰에는 각 캡처 세션에 대한 대기 시간을 기록하는 열이 포함됩니다. 대기 시간이란 원본 테이블에서 커밋되고 있는 트랜잭션과 변경 테이블에서 커밋되고 있는 마지막으로 캡처된 트랜잭션 사이의 경과 시간입니다. 대기 시간 열은 활성 세션에 대해서만 채워집니다. empty_scan_count 열에서 값이 0보다 큰 세션의 경우 대기 시간 열은 0으로 설정됩니다. 다음 쿼리는 가장 최근의 세션에 대한 평균 대기 시간을 반환합니다.  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  대기 시간 데이터를 사용하여 캡처 프로세스에서 트랜잭션을 처리하는 속도가 빠르거나 느린지 확인할 수 있습니다. 이 데이터는 캡처 프로세스가 계속해서 실행되는 경우에 가장 유용합니다. 캡처 프로세스가 예약 일정에 따라 실행되는 경우 원본 테이블에서 커밋되고 있는 트랜잭션과 예약 시간에 실행되는 캡처 프로세스 사이의 시간 간격으로 인해 대기 시간이 길어질 수 있습니다.  
   
  캡처 프로세스 효율성에 대한 또 다른 중요한 측정값은 처리량입니다. 이 수치는 각 세션 중에 처리되는 초당 평균 명령 수를 나타냅니다. 세션의 처리량을 확인하려면 command_count 열에 있는 값을 duration 열에 있는 값으로 나눕니다. 다음 쿼리는 가장 최근의 세션에 대한 평균 처리량을 반환합니다.  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>데이터 수집기를 사용하여 샘플링 데이터 수집  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅숏을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅숏을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.  
@@ -130,10 +134,10 @@ ms.locfileid: "47780031"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780031"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

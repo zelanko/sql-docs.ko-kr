@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709741"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637870"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  파일 그룹은 온라인 상태로 존재해야 하며 새 파티션을 보유할 수 있도록 파티션 함수를 사용하는 파티션 스키마에 의해 NEXT USED로 표시되어야 합니다. 파일 그룹은 CREATE PARTITION SCHEME 문에서 파티션에 할당됩니다. CREATE PARTITION SCHEME 문이 필요한 수보다 많은 파일 그룹을 할당하는 경우(보유할 파일 그룹보다 적은 수의 파티션이 CREATE PARTITION FUNCTION 문에서 만들어짐) 할당되지 않은 파일 그룹이 있으며 이들 중 하나는 파티션 스키마에 의해 NEXT USED로 표시됩니다. 이 파일 그룹은 새 파티션을 보유하게 됩니다. 파티션 스키마가 NEXT USED로 표시한 파일 그룹이 없는 경우 ALTER PARTITION SCHEME를 사용하여 파일 그룹을 추가하거나 새 파티션을 보유할 기존 파일 그룹을 지정해야 합니다. 이미 파티션을 보유하고 있는 파일 그룹이 추가 파티션을 보유하도록 지정할 수 있습니다. 파티션 함수는 둘 이상의 파티션 스키마에 참여할 수 있으므로 파티션을 추가하는 파티션 함수를 사용하는 모든 파티션 스키마에는 NEXT USED 파일 그룹이 있어야 합니다. 그렇지 않으면 ALTER PARTITION FUNCTION은 NEXT USED 파일 그룹이 부족한 파티션 스키마 또는 스키마를 표시하는 오류를 일으키고 실패합니다.  
   
- 동일한 파일 그룹에 모든 파티션을 만든 경우 파일 그룹은 초기에 자동으로 NEXT USED 파일 그룹이 되도록 할당됩니다. 그러나 분할 작업이 수행된 이후에는 더 이상 지정된 NEXT USED 파일 그룹이 없습니다. ALTER PARITION SCHEME을 사용하여 NEXT USED 파일 그룹이 되도록 명시적으로 파일 그룹을 할당해야 합니다. 그렇지 않으면 후속 분할 작업은 실패하게 됩니다.  
+ 동일한 파일 그룹에 모든 파티션을 만든 경우 파일 그룹은 초기에 자동으로 NEXT USED 파일 그룹이 되도록 할당됩니다. 그러나 분할 작업이 수행된 이후에는 더 이상 지정된 NEXT USED 파일 그룹이 없습니다. ALTER PARTITION SCHEME을 사용하여 NEXT USED 파일 그룹이 되도록 명시적으로 파일 그룹을 할당해야 합니다. 그렇지 않으면 후속 분할 작업은 실패하게 됩니다.  
   
 > [!NOTE]  
 >  columnstore 인덱스의 제한 사항: 테이블에 columnstore 인덱스가 있으면 빈 파티션만 분할할 수 있습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   ALTER PARTITION FUNCTION 문의 시퀀스를 수행합니다.  
   
- ALTER PARITITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
+ ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
   
  ALTER PARTITION FUNCTION은 파티션 함수를 사용하는 테이블에 비활성화된 클러스터형 인덱스가 있는 경우 실패합니다.  
   

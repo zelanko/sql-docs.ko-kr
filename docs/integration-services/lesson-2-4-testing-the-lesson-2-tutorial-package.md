@@ -11,12 +11,12 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 314e79b0cf5a35a27d93fc3a6906bdb9fbe01abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745731"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629516"
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>2-4단원 - 2단원 자습서 패키지 테스트
 Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성되었으므로 2단원 패키지에서는 Sample Data 폴더에 있는 14개의 플랫 파일을 반복 처리할 수 있습니다. 지정한 파일 이름 기준과 일치하는 파일 이름을 찾을 때마다 Foreach 루프 컨테이너는 사용자 정의 변수를 해당 파일 이름으로 채웁니다. 이에 따라 이 변수가 플랫 파일 연결 관리자의 ConnectionString 속성을 업데이트하면 새 플랫 파일에 연결됩니다. Foreach 루프 컨테이너는 폴더에 있는 다음 파일에 연결하기 전에 새 플랫 파일의 데이터에 대해 수정되지 않은 데이터 흐름 태스크를 실행합니다.  
@@ -24,7 +24,7 @@ Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성�
 다음 절차를 사용하여 패키지에 추가한 새 루핑 기능을 테스트할 수 있습니다.  
   
 > [!NOTE]  
-> 1단원에서 패키지를 실행한 경우 이 단원에서 패키지를 실행하기 전에 AdventureWorksDW2012에서 dbo.FactCurrency의 레코드를 삭제해야 하며, 그렇지 않으면 패키지가 실패하고 기본 키 제약 조건 위반을 나타내는 오류가 나타납니다. 디버그/디버깅 시작(F5)을 선택하여 패키지를 실행하면 1단원 및 2단원이 모두 실행되므로 같은 오류가 발생합니다. 2단원에서는 1단원에서 이미 삽입한 레코드를 삽입하려고 시도합니다.  
+> 1단원에서 패키지를 실행한 경우 이 단원에서 패키지를 실행하기 전에 AdventureWorksDW2012에서 dbo.NewFactCurrencyRate의 레코드를 삭제해야 하며, 그렇지 않으면 패키지가 실패하고 기본 키 제약 조건 위반을 나타내는 오류가 나타납니다. 디버그/디버깅 시작(F5)을 선택하여 패키지를 실행하면 1단원 및 2단원이 모두 실행되므로 같은 오류가 발생합니다. 2단원에서는 1단원에서 이미 삽입한 레코드를 삽입하려고 시도합니다.  
   
 ## <a name="checking-the-package-layout"></a>패키지 레이아웃 확인  
 패키지를 테스트하려면 먼저 2단원 패키지의 제어 흐름과 데이터 흐름에 다음 다이어그램에 표시된 개체가 있는지 확인해야 합니다. 데이터 흐름은 1단원의 데이터 흐름과 동일해야 합니다.  

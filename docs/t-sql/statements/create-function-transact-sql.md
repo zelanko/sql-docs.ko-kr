@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864291"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704071"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 루틴입니다. 반환 값은 단일 스칼라 값이나 테이블일 수 있습니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
+> [!div class="nextstepaction"]
+> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 루틴입니다. 반환 값은 단일 스칼라 값이나 테이블일 수 있습니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
   
 -   SELECT 등의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   CREATE FUNCTION 문을 실행한 사용자는 해당 함수가 참조하는 데이터베이스 개체에 대한 REFERENCES 권한이 있어야 합니다.  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- 스칼라 반환 함수의 **OnNULLCall** 특성을 지정합니다. 이 특성을 지정하지 않으면 기본적으로 CALLED ON NULL INPUT이 적용됩니다. 즉, 인수로 NULL이 전달되는 경우에도 함수 본문이 실행됩니다.  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+스칼라 반환 함수의 **OnNULLCall** 특성을 지정합니다. 이 특성을 지정하지 않으면 기본적으로 CALLED ON NULL INPUT이 적용됩니다. 즉, 인수로 NULL이 전달되는 경우에도 함수 본문이 실행됩니다.  
   
- CLR 함수에 RETURNS NULL ON NULL INPUT을 지정할 경우 받은 인수 중 하나라도 NULL이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 실제로 함수의 본문을 호출하지 않고 NULL을 반환할 수 있습니다. \<method_specifier>에 지정된 CLR 함수의 메서드가 RETURNS NULL ON NULL INPUT을 지정하는 사용자 지정 특성을 이미 가지고 있지만 CREATE FUNCTION 문에 CALLED ON NULL INPUT이 지정된 경우 CREATE FUNCTION 문이 우선 적용됩니다. CLR 테이블 반환 함수에는 **OnNULLCall** 특성을 지정할 수 없습니다. 
+CLR 함수에 RETURNS NULL ON NULL INPUT을 지정할 경우 받은 인수 중 하나라도 NULL이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 실제로 함수의 본문을 호출하지 않고 NULL을 반환할 수 있습니다. \<method_specifier>에 지정된 CLR 함수의 메서드가 RETURNS NULL ON NULL INPUT을 지정하는 사용자 지정 특성을 이미 가지고 있지만 CREATE FUNCTION 문에 CALLED ON NULL INPUT이 지정된 경우 CREATE FUNCTION 문이 우선 적용됩니다. CLR 테이블 반환 함수에는 **OnNULLCall** 특성을 지정할 수 없습니다. 
   
- EXECUTE AS 절  
- 사용자 정의 함수가 실행되는 보안 컨텍스트를 지정합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 함수가 참조하는 데이터베이스 개체에 대한 사용 권한을 확인하는 데 사용할 사용자 계정을 제어할 수 있습니다.  
+EXECUTE AS 절  
+사용자 정의 함수가 실행되는 보안 컨텍스트를 지정합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 함수가 참조하는 데이터베이스 개체에 대한 사용 권한을 확인하는 데 사용할 사용자 계정을 제어할 수 있습니다.  
   
 > [!NOTE]  
->  인라인 사용자 정의 함수에는 EXECUTE AS를 지정할 수 없습니다.  
+>  EXECUTE AS는 인라인 테이블 반환 함수에 지정할 수 없습니다.
   
  자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
+
+INLINE = { ON | OFF }  
+이 스칼라 UDF를 인라인해야 하는지 여부를 지정합니다. 이 절은 스칼라 사용자 정의 함수에만 적용됩니다. `INLINE` 절은 필수 항목이 아닙니다. `INLINE` 절을 지정하지 않으면 UDF가 인라인 가능한지 여부에 따라 ON/OFF로 자동으로 설정됩니다. `INLINE=ON`이 지정되었지만 UDF를 인라인할 수 없는 것으로 확인되면 오류가 throw됩니다. 자세한 내용은 [스칼라 UDF 인라인 처리](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)를 참조하세요.
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 시스템 데이터, 시스템 카탈로그 또는 가상 시스템 테이블에 액세스합니다.||  
 |**UserDataAccess**|함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스의 사용자 데이터에 액세스합니다.|사용자 정의 테이블 및 임시 테이블은 포함되고 테이블 변수는 포함되지 않습니다.|  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 정확성 및 결정성 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 결정됩니다. CLR 함수의 데이터 액세스 및 결정성 속성은 사용자가 지정할 수 있습니다. 자세한 내용은 [CLR 통합 사용자 지정 특성 개요](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)를 참조하세요.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 정확성 및 결정성 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 결정됩니다. CLR 함수의 데이터 액세스 및 결정성 속성은 사용자가 지정할 수 있습니다. 자세한 내용은 [CLR 통합 사용자 지정 특성 개요](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)를 참조하세요.  
   
  이러한 속성에 대한 현재 값을 표시하려면 [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)를 사용하세요.  
   

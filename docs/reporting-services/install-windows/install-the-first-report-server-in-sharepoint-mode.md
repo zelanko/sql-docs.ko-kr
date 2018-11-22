@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 681f64500bdc7cac83a580dc5a2abef27ff4535d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051195"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814136"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -270,7 +270,7 @@ ms.locfileid: "50051195"
   
 1.  다음 단계에서는 SharePoint 사이트가 SharePoint 2013에 대한 2013 **환경 버전**에 대해 구성되었다고 가정합니다.  
   
-     원하는 SharePoint 사이트로 브라우저를 엽니다. 예를 들어, http://\<서버 이름>/사이트/bi  
+     원하는 SharePoint 사이트로 브라우저를 엽니다(예: https://\<servername>/sites/bi).  
   
 2.  **설정**![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
   
@@ -373,8 +373,8 @@ write-host -foregroundcolor DarkGray $time
 Write-Host -ForegroundColor Green "Enable the PowerView and reportserver site features"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
 #!!!! update "-url"  of the site where you want the features enabled  
-Enable-SPfeature -identity "powerview" -Url http://server/sites/bi  
-Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi  
+Enable-SPfeature -identity "powerview" -Url https://server/sites/bi  
+Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi  
   
 ####To Verify, you can run the following:  
 #Get-SPRSServiceApplication  

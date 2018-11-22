@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827111"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640480"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>2-1단원 - 1단원 패키지 복사
 이 태스크에서는 1단원에서 만든 Lesson 1.dtsx 패키지의 복사본을 만듭니다. 1단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 1단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 2단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47827111"
   
 7.  속성 창에서 **Name** 속성을 **Lesson 2**로 업데이트합니다.  
   
-8.  **ID** 속성 상자를 클릭하고 드롭다운 화살표를 클릭한 다음 **<Generate New ID>** 를 클릭합니다.  
+8.  **ID** 속성 상자를 클릭한 다음, 드롭다운 화살표를 클릭하고 **\<새 ID 만들기\>** 를 클릭합니다.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>완성된 1단원 패키지를 추가하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47827111"
   
     이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   

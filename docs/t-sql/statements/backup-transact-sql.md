@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252210"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699341"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -257,7 +257,7 @@ TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../re
 > NUL 디스크 장치는 전송된 모든 정보를 버리고 테스트용으로만 사용해야 합니다. 프로덕션용이 아닙니다.
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 장치로만 백업할 수 있습니다. URL로 백업할 때 여러 장치에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 장치로만 백업할 수 있습니다. URL로 백업할 때 여러 장치에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
 **URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 엔터프라이즈 버전에서만 사용할 수 있습니다.  
   
 > [!NOTE]  
-> MIRROR TO = DISK인 경우 BACKUP은 디스크 장치에 적합한 블록 크기를 자동으로 결정합니다. 블록 크기에 대한 자세한 내용은 이 표의 뒷부분에 나오는 "BLOCKSIZE"를 참조하십시오.  
+> MIRROR TO = DISK의 경우 BACKUP은 디스크의 섹터 크기에 따라 디스크 디바이스에 적절한 블록 크기를 자동으로 결정합니다. MIRROR TO 디스크가 기본 백업 디바이스로 지정된 디스크와 다른 섹터 크기로 포맷되면 백업 명령이 실패합니다.  백업을 섹터 크기가 다른 디바이스에 미러링하려면 BLOCKSIZE 매개 변수를 지정해야 하며, 모든 대상 디바이스 중에서 가장 높은 섹터 크기로 설정해야 합니다.  블록 크기에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "BLOCKSIZE"를 참조하세요.  
   
 \<backup_device>이 섹션의 앞부분에 나오는 "\<backup_device>"를 참조하세요.
   
@@ -470,7 +470,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.  
+> `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.  
 
@@ -726,7 +726,7 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 운영 체제가 데이터베이스의 데이터 정렬을 지원하는 한 프로세서 유형이 다르더라도 플랫폼 간 백업 작업을 수행할 수 있습니다.  
  
 단일 데이터 파일로 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스에 백업 압축을 사용하는 경우 **65536(64KB)보다 큰** `MAXTRANSFERSIZE` 설정을 사용하는 것이 좋습니다.   
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 TDE 암호화 데이터베이스에 최적화된 압축 알고리즘 즉, 먼저 페이지 암호를 해독하고 압축한 다음, 다시 암호화하는 알고리즘이 사용됩니다. `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE로 암호화된 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 TDE 암호화 데이터베이스에 최적화된 압축 알고리즘 즉, 먼저 페이지 암호를 해독하고 압축한 다음, 다시 암호화하는 알고리즘이 사용됩니다. `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE로 암호화된 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
 
 > [!NOTE]  
 > 기본값 `MAXTRANSFERSIZE`이 64K를 초과하는 경우가 있습니다.
@@ -1003,7 +1003,7 @@ TO URL
 백업 작업에 사용할 URL을 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에 대한 백업을 만드는 데 사용됩니다. 
 
 > [!IMPORTANT]  
-> URL로 백업할 때 여러 장치에 백업하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+> URL로 백업할 때 여러 장치에 백업하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
 *n*  
 쉼표로 구분된 목록에 백업 장치를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.  
@@ -1068,7 +1068,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.  
+> `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.  
 

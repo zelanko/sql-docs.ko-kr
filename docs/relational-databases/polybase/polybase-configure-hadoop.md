@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806723"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606563"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -35,11 +35,9 @@ ms.locfileid: "49806723"
 
 - PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
 
-  - Linux/Windows Server에서 Hortonworks HDP 1.3  
-  - Linux에서 Hortonworks HDP 2.1 - 2.6
-  - Windows Server에서 Hortonworks HDP 2.1 - 2.3  
-  - Linux에서 Cloudera CDH 4.3  
-  - Linux에서 Cloudera CDH 5.1 – 5.5, 5.9 - 5.13
+  - Linux의 Hortonworks HDP 1.3, 2.1-2.6, 3.0
+  - Windows Server의 Hortonworks HDP 1.3, 2.1-2.3
+  - Linux의 Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13
 
 > [!NOTE]
 > PolyBase는 SQL Server 2016 SP1 CU7 및 SQL Server 2017 CU3부터 Hadoop 암호화 영역을 지원합니다. [PolyBase 스케일 아웃 그룹](polybase-scale-out-groups.md)을 사용 중인 경우 모든 계산 노드도 Haddop 암호화 영역 지원을 포함하는 빌드에 있어야 합니다.
@@ -75,7 +73,7 @@ ms.locfileid: "49806723"
 1. SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 동일한 파일을 찾습니다. 이 파일에서 구성 키 yarn.application.classpath의 값을 찾아서 복사합니다.  

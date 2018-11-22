@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,19 +11,144 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703991"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
+이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [이전 버전의 SSMS](#previous-ssms-releases)를 다운로드하세요.
+
+## <a name="ssms-180-preview-5download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0(미리 보기 5)](download-sql-server-management-studio-ssms.md)
+
+빌드 번호: 15.0.18068.0<br>
+릴리스 날짜: 2018년 11월 15일
+
+미리 보기 5는 SSMS 18.0의 두 번째 공개 미리 보기입니다. SSMS의 GA(일반 공급) 버전이 필요하면 [SSMS 17.9를 다운로드하여 설치하세요](#ssms-179-latest-ga-release).
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+- "SQL Server 오류 로그 구성" 아래에서 "오류 로그 파일의 최대 크기"가 공개됩니다. 자세한 내용은 [SQL Server 오류 로그의 최대 크기 설정](https://feedback.azure.com/forums/908035/suggestions/33624115)을 참조하세요.  
+
+개체 탐색기:
+
+- 데이터베이스 이름을 모든 스키마 개체로 변경할 때 확인을 요청하는 논리가 확장되었습니다(설정을 구성할 수 있고, 사용하지 않도록 설정됨).
+
+개체 스크립팅:
+
+- 개체를 스크립팅할 때 'CREATE 또는 ALTER'에 대한 새 메뉴 항목이 추가되었습니다.
+
+데이터베이스 호환성 수준 업그레이드:
+
+-  <Database name> > **작업** > **데이터베이스 업그레이드** 아래에 새 옵션이 추가되었습니다. 이 옵션은 새로운 *QTA(쿼리 튜닝 길잡이)* 를 시작하여 사용자에게 다음 프로세스를 안내합니다.
+   - 데이터베이스 호환성 수준을 업그레이드하기 전에 성능 기준 수집  
+   - 원하는 데이터베이스 호환성 수준으로 업그레이드
+   - 동일한 워크로드를 통해 두 번째 성능 데이터 전달 수집
+   - 워크로드 회귀 검색 및 워크로드 성능 향상을 위한 테스트된 권장 사항 제공
+
+이 기능은 QTA에서 이전에 알려진 정상 상태에 따라 권장 사항을 생성하지 않는 마지막 단계를 제외하고는 [최신 SQL Server로 업그레이드하는 동안 성능 안정성 유지](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade)에서 설명된 데이터베이스 업그레이드 프로세스와 비슷합니다.
+
+쿼리 저장소:
+
+- 차트의 Y축에 표시된 숫자에 수천 개의 구분 기호를 추가하여 일부 보고서(전체 리소스 사용량)의 사용 편의성이 향상되었습니다.
+- 새 쿼리 대기 통계 보고서가 추가되었습니다.
+
+취약성 평가:
+
+- Azure SQL Data Warehouse에서 취약성 평가 작업 메뉴를 사용할 수 있습니다.
+
+데이터 마스킹:
+
+- 정적 데이터 마스킹이 추가되었습니다. 정적 데이터 마스킹은 사용자가 SQL 데이터베이스의 복사본을 만들고 복사본에 중요한 데이터를 마스킹할 수 있는 데이터 보호 도구입니다. 이 기능은 개발/테스트 팀 또는 분석 팀과 같이 프로덕션 환경을 사용하지 않는 사용자와 자신의 프로덕션 데이터베이스를 공유하는 사용자에게 유용합니다. 자세한 내용은 [Azure SQL Database 및 SQL Server에 대한 정적 데이터 마스킹](https://azure.microsoft.com/blog/static-data-masking-preview/)을 참조하세요.
+
+SMO:
+
+- 사용 중인 SQL 버전의 서비스 수준(예: CU12, RTM 등)에 매핑되는 서버 개체에 대한 새 ProductUpdateLevel 속성이 공개되었습니다.
+- "lastgoodcheckdbtime" 데이터베이스 속성에 매핑되는 데이터베이스 개체에 대한 새 LastGoodCheckDbTime 속성이 공개되었습니다. 이러한 속성을 사용할 수 없는 경우 기본값인 1/1/1900 12:00:00 AM이 반환됩니다.
+
+Managed Instance 지원:
+
+- 논리적 복제 지원이 추가되었습니다.
+
+Azure Data Studio 통합:
+
+- 개체 탐색기에 **Azure Data Studio 시작** 메뉴 항목이 추가되었습니다.
+
+SSIS:
+
+- 고객이 Azure Government 클라우드에 있는 Azure-SSIS IR에서 SSIS 패키지를 예약할 수 있도록 하는 지원이 추가되었습니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+작동 중단/반응이 없음:
+
+- 중앙 관리 서버 및 Azure SQL Database 서버를 사용하려고 할 때 SSMS에서 발생하는 충돌 문제가 해결되었습니다. 자세한 내용은 [중앙 관리 서버 사용 시의 충돌](https://feedback.azure.com/forums/908035/suggestions/33374884)을 참조하세요.  
+- IsFullTextEnabled 속성을 검색하는 방법을 최적화하여 개체 탐색기의 중단 문제가 해결되었습니다.
+- 불필요한 쿼리를 작성하여 데이터베이스 속성을 검색하지 않도록 방지하여 '데이터베이스 복사 마법사'의 중단 문제가 해결되었습니다.
+
+SSMS 옵션:
+
+- Ctrl+D가 이전 버전의 SSMS에서처럼 바로 가기로 복원되었습니다. 자세한 내용은 [SSMS에서 ResultsToGrid에 대한 Ctrl-D 바로 가기 복원](https://feedback.azure.com/forums/908035/suggestions/35544754)을 참조하세요.
+
+개체 탐색기:
+
+- 높은 DPI 모니터에서 '새 작업 일정' 대화 상자가 제대로 렌더링되지 않는 문제가 해결되었습니다.
+- 개체 탐색기에서 데이터베이스 크기("크기(MB)")를 표시하는 방식이 수정/향상되었습니다. 두 자리 소수점 십진수만 사용하고, 형식은 천 단위 구분 기호로 지정됩니다. 자세한 내용은 [소수 자릿수가 너무 많은 크기(MB) 속성](https://feedback.azure.com/forums/908035/suggestions/34379308)을 참조하세요.
+- '이 작업을 수행하려면 PartitionScheme 속성을 설정하세요'와 같은 오류로 인해 '공간 인덱스'를 만드는 데 실패하는 문제가 해결되었습니다.
+- 가능한 경우 추가 쿼리를 실행하지 않도록 방지하여 개체 탐색기의 성능이 약간 향상되었습니다.
+
+AS(Analysis Services):
+
+- DAX 구문 분석에서 파일을 찾을 수 없음 예외가 throw되는 문제가 해결되었습니다.
+- "배포 마법사"에 대한 바로 가기가 시작 메뉴에 다시 추가되었습니다.
+
+IS(Integration Services):
+
+- SQL Server 2019 및 SSMS 18.0이 동일한 머신에 설치되어 있는 경우 배포 마법사에서 SQL Server에 연결하지 못하는 병렬 배포 문제가 해결되었습니다.
+- 유지 관리 계획을 설계할 때 유지 관리 계획 작업을 편집할 수 없는 문제가 해결되었습니다.
+- 배포 중인 프로젝트의 이름이 변경될 때 배포 마법사가 중지되는 문제가 해결되었습니다.
+- Azure-SSIS IR 일정 기능에서 환경 설정을 사용하도록 설정되었습니다.
 
 
-## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0(미리 보기 4)](download-sql-server-management-studio-ssms.md)
+HADR/가용성 그룹:
+
+- 장애 조치 가용성 그룹 마법사의 역할이 항상 "확인 중"으로 표시되는 문제가 해결되었습니다.
+- SSMS의 "AG 대시보드"에서 잘린 경고가 표시되는 문제가 해결되었습니다.
+
+DB 백업/복원/연결/분리:
+
+- "데이터베이스 연결" 마법사에서 이름이 변경된 보조 파일을 표시하지 않는 문제가 해결되었습니다. 이제 파일이 표시되고 이에 대한 주석(예: "찾을 수 없음")이 추가되었습니다. 자세한 내용은 [데이터베이스 연결에서 보조 파일이 표시되지 않음](https://feedback.azure.com/forums/908035/suggestions/32897434)을 참조하세요.
+
+
+Managed Instance 지원:
+
+- SSMS 탐색기의 AAD 로그인 지원이 향상되었습니다.
+- SMO 파일 그룹 개체의 스크립팅이 향상되었습니다.
+- 자격 증명 및 감사에 대한 UI가 향상되었습니다.
+
+
+DAC 가져오기 마법사:
+
+- AAD를 사용하여 연결할 때 DAC 가져오기 마법사가 작동하지 않는 문제가 해결되었습니다.
+
+XEvent Viewer:
+
+- *확장 이벤트 도구 모음 옵션*을 사용하여 이벤트를 그룹화할 때 XEvent 뷰어가 충돌하는 문제가 해결되었습니다.
+
+취약성 평가:
+
+- 검색 결과가 제대로 로드되지 않는 문제가 해결되었습니다.
+
+
+
+
+## <a name="ssms-180-preview-4"></a>SSMS 18.0(미리 보기 4)
 
 빌드 번호: 15.0.18040.0<br>
 릴리스 날짜: 2018년 9월 24일
@@ -36,15 +161,15 @@ ms.locfileid: "51270276"
 
 작아진 다운로드 크기:
 
-- 번들의 현재 크기가 SSMS 17.x의 절반보다 작습니다(약 400MB). IS(Integration Services) 구성 요소가 다시 추가되면 크기가 증가하지만 전만큼 크지 않아야 합니다.
+- 번들의 현재 크기는 SSMS 17.x의 절반보다 작습니다(최대 400MB). 결국 IS(Integration Services) 구성 요소가 다시 추가되면 크기가 커지지만 이전만큼 크지는 않아야 합니다.
 
 SSMS 18.x는 새로운 Visual Studio 2017 Shell(격리 모드)을 기준으로 합니다.
 
-- 이는 최신 셸(Visual Studio 2017 15.6.4를 선택함)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
+- 이 변경은 최신 셸(Visual Studio 2017 15.6.4를 선택했음)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
 
 접근성 개선 사항:
 
-- 모든 도구(SSMS, DTA 및 프로파일러)에서 접근성 문제를 해결하는 데 많은 작업이 있었습니다.
+- 모든 도구(SSMS, DTA 및 프로파일러)에서 접근성 문제를 해결하기 위한 많은 작업이 수행되었습니다.
 
 SSMS는 사용자 지정 폴더에 설치할 수 있습니다.
 
@@ -59,15 +184,15 @@ SSMS는 사용자 지정 폴더에 설치할 수 있습니다.
 
 SSMS는 더 이상 SQL 엔진과 구성 요소를 공유하지 않습니다.
 
-- SQL 엔진과의 구성 요소 공유를 방지하기 위해 상당한 노력이 있었습니다. 이로 인해 SQL 또는 SSMS의 서비스 가능성 문제가 발생하여 다른 하나에 의해 설치된 파일을 덮어쓰기도 했습니다.
+- SQL 엔진과 구성 요소를 공유하지 않도록 많은 노력을 기울였지만, SQL 또는 SSMS를 설치할 때 다른 구성 요소에서 설치한 파일을 덮어쓰는 서비스 효율성 문제가 자주 발생했습니다.
 
 이제 SSMS를 사용하려면 NetFx 4.7.2 이상이 필요합니다.
 
-- 최소 요구 사항을 NetFx4.6.1에서 NetFx4.7.2로 업그레이드했습니다. 이를 통해 새로운 프레임워크에서 제공하는 새로운 기능을 이용할 수 있습니다.
+- 최소 요구 사항을 NetFx4.6.1에서 NetFx4.7.2로 업그레이드했습니다. 이 변경을 통해 새 프레임워크에서 제공하는 새로운 기능을 활용할 수 있습니다.
 
-Windows 8에서는 SSMS가 지원되지 않습니다. Windows 10 / Windows Server 2016에서는 버전 1607(10.0.14393) 이상이 필요합니다.
+SSMS는 Windows 8에서 지원되지 않습니다. Windows 10 / Windows Server 2016에서는 버전 1607(10.0.14393) 이상이 필요합니다.
   
-- NetFx 4.7.2의 새로운 종속성으로 인해 SSMS 18.0은 Windows 8, 이전 버전의 Windows 10 및 Windows Server 2016에 설치되지 않습니다. SSMS 설치가 해당 운영 체제에서는 차단됩니다. Windows 8.1은 여전히 지원됩니다.
+- NetFx 4.7.2의 새로운 종속성으로 인해 SSMS 18.0은 Windows 8, 이전 버전의 Windows 10 및 Windows Server 2016에 설치되지 않습니다. SSMS 설치는 이러한 운영 체제에서 차단됩니다. Windows 8.1은 여전히 지원됩니다.
 
 SSMS는 PATH 환경 변수에 추가되지 않습니다.
 
@@ -75,8 +200,8 @@ SSMS는 PATH 환경 변수에 추가되지 않습니다.
 
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]에 대한 지원
 
-- 다음은 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)](compatLevel 150 등...)를 ‘완전히’ 인식하는 첫 번째 SSMS 릴리스입니다.
-- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]의 “BATCH_STARTED_GROUP” 및 “BATCH_COMPLETED_GROUP”과 SSMS의 SQL Database Managed Instance를 지원합니다.
+- 이 릴리스는 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)](compatLevel 150 등)를 완전히 *인식*하는 첫 번째 SSMS 릴리스입니다.
+- SSMS의 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 및 Managed Instance에서 "BATCH_STARTED_GROUP" 및 "BATCH_COMPLETED_GROUP"을 지원합니다.
 - GraphDB: Graph TC Sequence 실행 계획에서 플래그를 추가합니다.
 - Always Encrypted: [보안 enclave를 사용한 상시 암호화](../relational-databases/security/encryption/always-encrypted-enclaves.md) 지원을 추가했습니다.
   - 사용자가 “옵션” 단추를 클릭하여 enclave 지원을 사용할 수 있도록 설정하고 구성할 때 연결 대화 상자에는 새로운 “Always Encrypted” 탭이 있습니다.
@@ -94,20 +219,20 @@ SMO:
 
 - 다시 시작 가능한 인덱스 생성을 위한 SMO 지원을 확장합니다.
 - SMO 개체에서 새 이벤트(“PropertyMissing”)를 추가하여 응용 프로그램 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.
-- “백업 체크섬 기본값” 서버 구성에 매핑되는 구성 개체에 대한 새로운 *DefaultBackupChecksum* 속성을 공개했습니다.
+- "백업 체크섬 기본값" 서버 구성에 매핑되는 Configuration 개체에 대한 새 *DefaultBackupChecksum* 속성이 공개되었습니다.
 
 SSMS:
 
 - SSMS의 파일 그룹에 대한 AUTOGROW_ALL_FILES 구성 옵션 공개
 - 문제가 발생할 수 있는 ‘경량 풀링’ 및 ‘우선 순위 높임’ 옵션이 SSMS GUI에서 제거되었습니다(https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended).
 - SQL 편집기는 **Ctrl+D** 바로 가기를 사용하여 행을 복제합니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594).
-- 파일을 생성하는 새 메뉴 및 키 바인딩: **Ctrl+Alt+N**. **Ctrl+N**을 사용하면 새 쿼리가 계속 만들어집니다.
+- 파일을 생성하는 새 메뉴 및 키 바인딩: **Ctrl+Alt+N**. **Ctrl+N**을 사용하면 새 쿼리를 계속 만듭니다.
 - 이제 사용자는 규칙 이름 하나를 자동으로 생성하는 대신 **새 방화벽 규칙** 대화 상자에서 규칙 이름을 지정할 수 있습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039).
 - 데이터 분류: 권장 사항을 업데이트했습니다.
 - 특별히 v140 T-SQL을 위해 편집기에서 IntelliSense를 개선했습니다.
 - 모든 계층 1 언어에 대한 지원
 - 데이터 정렬 대화 상자에서 UTF-8용 SSMS UI에 지원을 추가했습니다.
-- 연결 대화 상자 MRU 암호를 위해 “Windows 자격 증명 관리자”로 전환했습니다. 따라서 암호의 지속성을 항상 신뢰할 수 없다는 오랫동안 미해결 상태인 문제가 해결됩니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486).
+- 연결 대화 상자 MRU 암호를 위해 “Windows 자격 증명 관리자”로 전환했습니다. 이렇게 하면 암호의 지속성을 항상 신뢰할 수 없다는 오랫동안의 미해결 문제가 해결됩니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486).
 - 높은 DPI에 대한 지원이 기본적으로 사용됩니다.
 - 예상 모니터에서 더 많은 대화 상자와 창이 표시되도록 하여 다중 모니터 시스템을 더욱 강력하게 지원합니다.
 - 서버 속성 대화 상자의 새 데이터베이스 설정 페이지에서 ‘백업 체크섬 기본값’ 서버 구성을 제공했습니다. (https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974).
@@ -115,7 +240,7 @@ SSMS:
 
 SSMS / 실행 계획:
 
-- 실행 계획 연산자 노드 아래에 실제 경과 시간, 실제 대 예상 행 수를 추가했습니다(사용할 수 있는 경우). 이로 인해 실제 계획의 모습이 활성 쿼리 통계 계획과 일치하게 됩니다.
+- 실행 계획 연산자 노드 아래에 실제 경과 시간, 실제 대 예상 행 수를 추가했습니다(사용할 수 있는 경우). 이렇게 변경하면 실제 계획이 활성 쿼리 통계 계획과 일관되게 표시됩니다.
 - 실행 계획에 대한 쿼리 편집 단추를 클릭하면, 쿼리가 4000자를 넘을 경우 SQL 엔진이 실행 계획을 자를 수 있음을 사용자에게 표시하도록 도구 설명을 수정하고 주석을 추가했습니다.
 - “Materializer Operator(외부 Select)”를 표시하는 논리를 추가했습니다.
 - “batch-mode scan on rowstores” 기능을 사용하는 쿼리를 쉽게 식별할 수 있도록 새로운 실행 계획 특성 BatchModeOnRowStoreUsed를 추가합니다. 쿼리가 batch-mode scan on rowstores를 수행할 때마다 새 특성(BatchModeOnRowStoreUsed="true")이 StmtSimple 요소에 추가됩니다.
@@ -146,7 +271,7 @@ Always On:
 - “Script as Create/Update/Drop”(작성/업데이트/삭제로 스크립트)를 선택할 때 반응이 없거나 성능이 저하되는 공통 소스를 수정했습니다(SMO 개체의 불필요한 페치를 제거함).
 - ADAL 추적을 사용하는 동안 MFA를 사용하여 Azure SQL DB에 연결할 때 반응이 없는 문제를 해결했습니다.
 - 작업 모니터에서 호출하면 활성 쿼리 통계에서 반응이 없는(또는 인지된 반응 없음) 문제(“보안 정보 유지”가 설정되지 않은 SQL Server 인증을 사용할 때 발생하는 문제)를 해결했습니다.
-- 개체 탐색기에서 “보고서”를 선택할 때 반응이 없는 문제(리소스 연결 대기 시간이 길거나 일시적으로 리소스에 액세스할 수 없으면 발생하는 문제)를 해결했습니다.
+- 리소스의 연결이 오랫동안 지연되거나 리소스에서 일시적으로 액세스할 수 없는 상황을 명확히 나타낼 수 없는 개체 탐색기에서 "보고서"를 선택할 때 중단되는 문제가 해결되었습니다.
 
 연결 대화 상자:
 
@@ -154,7 +279,7 @@ Always On:
 
 XEvent:
 
-- 작업 ID 및 클래스 유형 필드를 읽기 가능한 문자열로 표시하는 두 개의 열, 즉 “action_name” 및 “class_type_desc” 열을 추가했습니다.
+- 작업 ID 및 클래스 유형 필드를 읽기 가능한 문자열로 표시하는 두 개의 열, 즉 "action_name" 및 "class_type_desc" 열이 추가되었습니다.
 - 이벤트 1,000,000개라는 이벤트 XEvent 뷰어 상한을 제거했습니다.
 
 외부 테이블:
@@ -168,10 +293,10 @@ SSMS 옵션:
 
 SSMS 편집기:
 
-- 기본 색상을 복원하면 색상이 기본 녹색이 아니라 라임 녹색으로 변경되어 흰색 배경에서 읽기가 매우 어려워지던 “SQL 시스템 테이블”의 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
+- 기본 색을 복원하면 기본 녹색이 아니라 라임 녹색으로 변경되어 흰색 배경에서 읽기가 매우 어려웠던 "SQL 시스템 테이블"의 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
 - AAD 인증을 사용하여 Azure SQL DW에 연결할 때 intellisense가 작동하지 않는 문제를 해결했습니다.
 - 사용자에게 마스터 액세스 권한이 없는 경우 Azure의 IntelliSense에 발생하는 문제를 해결했습니다.
-- 대상 데이터베이스의 데이터 정렬이 대/소문자를 구분할 때 중단된 “임시 테이블”을 작성하는 코드 조각을 수정했습니다.
+- 대상 데이터베이스의 데이터 정렬이 대/소문자를 구분할 때 손상되던 "임시 테이블"을 만드는 코드 조각이 수정되었습니다.
 
 개체 탐색기:
 
@@ -180,8 +305,8 @@ SSMS 편집기:
 - “상위 N 편집...”을 호출하기 전에는 OE가 따옴표를 이스케이프 처리하지 않아 디자이너가 혼동하게 되는 문제를 해결했습니다.
 - “데이터 계층 응용 프로그램 가져오기” 마법사가 Azure Storage 트리에서 시작되지 않던 문제를 해결했습니다.
 - SSL 확인란의 상태가 지속되지 않은 “데이터베이스 메일 구성”의 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541).
-- SSMS가 is_auto_update_stats_async_on으로 데이터베이스를 복원하려고 할 때 기존 연결을 닫는 옵션을 회색으로 표시하는 문제를 해결했습니다.
-- OE에서 노드(예: “테이블”)를 마우스 오른쪽 단추로 클릭하고 **필터 > 필터 설정**으로 이동하여 필터링 테이블과 같은 작업을 수행하려고 하면 현재 SSMS가 활성 상태가 아닌 다른 화면에 필터가 표시될 수 있는 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106).
+- is_auto_update_stats_async_on을 사용하여 데이터베이스를 복원하려고 할 때 SSMS에서 기존 연결을 닫는 ograyedto를 회색으로 표시하는 문제가 해결되었습니다.
+- OE에서 노드(예: "테이블")를 마우스 오른쪽 단추로 클릭하고 **필터 > 필터 설정**으로 차례로 이동하여 테이블 필터링과 같은 작업을 수행하려고 하면 SSMS가 현재 활성화된 위치 이외의 다른 화면에 필터 설정 양식이 나타날 수 있는 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106).
 - 개체의 이름을 바꾸려고 할 때 개체 탐색기에서 Delete 키가 작동하지 않는 오랫동안 미해결 상태였던 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510).
 - 기존 데이터베이스 파일의 속성을 표시할 때 새 데이터베이스를 생성할 때 표시되는 “처음 크기(MB)” 대신 “크기(MB)” 열 아래에 크기가 나타납니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024).
 - “그래프 테이블”의 “디자인” 상황에 맞는 메뉴 항목을 사용하지 않도록 설정했습니다. 현재 버전의 SSMS에서 이러한 유형의 테이블을 지원하지 않기 때문입니다.
@@ -195,7 +320,7 @@ SSMS 편집기:
 개체 스크립팅:
 
 - 전체 성능 개선 사항 - WideWorldImporters 스크립트 생성 시간은 SSMS 17.7과 비교하여 반 정도 소요됩니다.
-- 개체를 스크립팅할 때 기본값이 있는 DB 범위 지정 구성이 생략됩니다.
+- 개체를 스크립팅할 때 기본값이 있는 DB 범위 지정 구성은 생략됩니다.
 - 스크립팅 시 동적 T-SQL을 생성하지 마세요(https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391).
 - SQL Server 2016 및 그 이전 버전에서 테이블을 스크립팅할 때 그래프 구문 “as edge” 및 “as node”를 생략하세요.
 
@@ -227,7 +352,7 @@ AS:
 DB 백업/복원/연결/분리:
 
 - .mdf 파일의 실제 파일 이름이 원래 파일 이름과 일치하지 않을 때 사용자가 데이터베이스를 연결할 수 없는 문제를 해결했습니다.
-- SSMS가 유효한 복원 계획을 찾지 못하거나 최적이 아닌 계획을 찾을 수 있는 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752).
+- SSMS에서 유효한 복원 계획을 찾지 못하거나 최적이 아닌 계획을 찾을 수 있는 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752).
 - URL 백업을 복원하려 할 때 발생하는 SSMS의 작동 중단 문제를 해결했습니다.
 
 작업 활동 모니터:
@@ -256,7 +381,7 @@ Azure SQL Database:
 일반적인 Azure SQL 지원:
 
 - 일반적인 Azure UI 컨트롤에서 사용자가 Azure 구독(50개가 넘는 경우)을 표시하지 못하는 문제를 해결했습니다. 또한 정렬 기준이 구독 ID가 아니라 이름으로 변경되었습니다. 예를 들어, URL에서 백업을 복원하려 할 때 이 문제가 발생할 수 있습니다.
-- 사용자의 일부 테넌트에 구독이 없는 경우 “인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다”라는 오류를 발생시킬 수 있는 구독을 열거할 때 일반적인 Azure UI 컨트롤에 있는 문제를 해결했습니다. 예를 들어, URL에서 백업을 복원하려 할 때 이 문제가 발생할 수 있습니다.
+- 사용자의 일부 테넌트에 구독이 없는 경우 "인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다”라는 오류를 발생시킬 수 있는 구독을 열거할 때 일반적인 Azure UI 컨트롤에 있는 문제를 해결했습니다. 예를 들어, URL에서 백업을 복원하려 할 때 이 문제가 발생할 수 있습니다.
 
 결과 표:
 
@@ -279,14 +404,14 @@ SSMS에서는 다음 기능을 더 이상 사용할 수 없습니다.
   - SQL Server 구성 관리자 및 Reporting Server 구성 관리자가 모두 더 이상 SSMS 설정의 일부가 아닙니다.
 
 - DMF 표준 정책
-  - 정책이 더 이상 SSMS와 함께 설치되지 않으며 Git으로 이동하게 됩니다. 필요한 경우 참여하고 다운로드/설치할 수 있습니다.
+  - 정책이 더 이상 SSMS와 함께 설치되지 않으며 Git으로 이동됩니다. 필요한 경우 사용자가 기여하고 다운로드/설치할 수 있습니다.
 
-- SSMS 명령줄 옵션 -P가 제거됨
+- -P SSMS 명령줄 옵션이 제거됨
   - 보안상의 이유로 명령줄에서 일반 텍스트 암호를 지정하는 옵션이 제거되었습니다.
 
 - [스크립트 생성] | [웹 서비스에 게시]가 제거되었습니다. 이 기능(더 이상 사용되지 않음)은 SSMS UI에서 제거되었습니다.
 
-- 개체 탐색기에서 “유지 관리 | 레거시” 노드를 제거했습니다. [스크립트 생성 및 게시]에서 [웹 서비스에 게시] 옵션이 제거되었습니다. ‘매우 오래된’ “데이터베이스 유지 관리 계획” 및 “SQL 메일” 노드에 더 이상 액세스할 수 없습니다. 최신 “데이터베이스 메일” 및 “유지 관리 계획” 노드는 계속해서 정상적으로 작동합니다.
+- 개체 탐색기에서 “유지 관리 | 레거시” 노드를 제거했습니다. [스크립트 생성 및 게시]에서 [웹 서비스에 게시] 옵션이 제거되었습니다. *이전*의 "데이터베이스 유지 관리 계획" 및 "SQL 메일" 노드에 더 이상 액세스할 수 없습니다. 최신 "데이터베이스 메일" 및 "유지 관리 계획" 노드는 정상적으로 계속 작동합니다.
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -313,7 +438,7 @@ SSIS
 릴리스 날짜: 2018년 9월 4일
 
 > [!NOTE]
-> 영어 이외의 지역화된 SSMS 17.x 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지](https://support.microsoft.com/en-us/kb/2862966) 가 필요합니다.
+> 영어 이외의 지역화된 SSMS 17.x 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지](https://support.microsoft.com/kb/2862966) 가 필요합니다.
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
@@ -338,12 +463,12 @@ Azure SQL:
     
 복제 모니터:
 
-- 복제 모니터(SqlMonitor.exe)가 시작되지 않도록 만드는 문제를 해결함(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+- 복제 모니터(SqlMonitor.exe)가 시작되지 않는 문제가 해결되었습니다(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079).
 
-플랫 파일 가져오기 마법사: 
+플랫 파일 가져오기 마법사:
 
 - “플랫 파일 마법사” 대화 상자의 도움말 페이지에 대한 링크를 수정함 
-- 테이블이 이미 있는 경우 마법사에서 대상 테이블 변경을 허용하지 않는 문제를 해결했습니다. 사용자는 마법사를 종료하지 않고 다시 시도하고 실패한 테이블을 삭제하고 마법사에 정보를 다시 입력할 수 있습니다(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+- 테이블이 이미 있는 경우 마법사에서 대상 테이블 변경을 허용하지 않는 문제를 해결했습니다. 사용자는 마법사를 종료하지 않고 다시 시도하고 실패한 테이블을 삭제하고 마법사에 정보를 다시 입력할 수 있습니다(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186).
 
 데이터 계층 응용 프로그램 가져오기/내보내기:
 
@@ -351,18 +476,18 @@ Azure SQL:
 
 IntelliSense:
 
-- MFA와 함께 AAD를 사용할 때 IntelliSense 완료가 작동되지 않는 문제를 해결했습니다. 
+- MFA와 함께 AAD를 사용할 때 IntelliSense 완료가 작동되지 않는 문제를 해결했습니다.
 
-개체 탐색기: 
+개체 탐색기:
 
 - SSMS가 실행되는 모니터 대신 임의의 모니터에 “필터 대화 상자”가 표시되는 문제를 해결했습니다(다중 모니터 시스템).
 
-Azure SQL: 
+Azure SQL:
 
-- 특정 데이터베이스에 연결될 때 드롭다운에 “마스터”가 표시되지 않는, “사용 가능한 데이터베이스”에서 데이터베이스 열거형과 관련된 문제를 해결했습니다. 
-- MFA와 함께 AAD를 사용하여 스크립트(“데이터” 또는 “스키마 및 데이터”)를 생성하려고 하면 실패하고 SQL Azure DB에 연결할 수 없는 문제를 해결했습니다. 
-- SQL Azure DB에 연결되어 있을 때 UI에서 “테이블 추가”를 선택할 수 없는 뷰 디자이너(뷰) 문제를 해결했습니다. 
-- MFA 토큰 갱신 중 SSMS 쿼리 편집기가 자동으로 연결을 닫았다가 다시 여는 문제를 해결했습니다. 이는 트랜잭션을 종료하고 다시 열지 않는 것처럼 사용자가 모르는 사이에 부작용이 발생하는 것을 방지합니다. 이러한 변경으로 인해 속성 창에 토큰 만료 시간이 추가됩니다. 
+- 특정 데이터베이스에 연결될 때 드롭다운에 “마스터”가 표시되지 않는, “사용 가능한 데이터베이스”에서 데이터베이스 열거형과 관련된 문제를 해결했습니다.
+- MFA와 함께 AAD를 사용하여 스크립트(“데이터” 또는 “스키마 및 데이터”)를 생성하려고 하면 실패하고 SQL Azure DB에 연결할 수 없는 문제를 해결했습니다.
+- SQL Azure DB에 연결되어 있을 때 UI에서 “테이블 추가”를 선택할 수 없는 뷰 디자이너(뷰) 문제를 해결했습니다.
+- MFA 토큰 갱신 중 SSMS 쿼리 편집기가 자동으로 연결을 닫았다가 다시 여는 문제를 해결했습니다. 이렇게 하면 트랜잭션을 종료하고 다시 열지 않는 것처럼 사용자가 모르는 사이에 부작용이 발생하지 않습니다. 이러한 변경으로 인해 속성 창에 토큰 만료 시간이 추가됩니다. 
 - SSMS가 MFA 로그인을 사용하는 AAD에 대해 가져온 MSA 계정에 대한 암호를 묻지 않는 문제를 해결했습니다. 
 
 작업 모니터: 
@@ -372,7 +497,7 @@ Azure SQL:
 Microsoft Azure 통합: 
 
 - SSMS에서 처음 50개 구독만 표시하는 문제를 해결했습니다(Always Encrypted 대화 상자, URL에서 백업/복원 대화 상자 등). 
-- URL에서 백업/복원 대화 상자에서 저장소 계정이 없는 Microsoft Azure 계정에 로그인하려고 하면 SSMS에서 예외("인덱스가 범위를 벗어났습니다.")를 throw하는 문제를 해결했습니다. 
+- [URL에서 백업 복원] 대화 상자에서 스토리지 계정이 없는 Microsoft Azure 계정에 로그인하려고 하는 동안 SSMS에서 예외("인덱스가 범위를 벗어났습니다.")를 throw하는 문제가 해결되었습니다. 
 
 개체 스크립팅: 
 
@@ -459,7 +584,7 @@ SMO:
 
 - ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE <database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
 - 새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
-- XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드해보세요.
+- XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드하는 것이 좋습니다.
 
 
 
@@ -551,7 +676,7 @@ SQL Database Managed Instance:
 - 다음과 같은 일반적인 관리 시나리오에 대한 지원:
    - 데이터베이스 만들기 및 변경
    - 데이터베이스 백업 및 복원
-   - 데이터 계층 응용 프로그램 가져오기, 내보내기, 추출 및 게시
+   - 데이터 계층 애플리케이션 가져오기, 내보내기, 추출 및 게시
    - 서버 속성 보기 및 변경
    - 전체 개체 탐색기 지원
    - 데이터베이스 개체 스크립팅
@@ -575,7 +700,7 @@ SQL Database Managed Instance:
 
 데이터 분류:
 
-- 부실한 *정보 유형* 및 *민감도 레이블*로 표시되는 새롭게 추가된 분류를 야기한 *데이터 분류*의 문제를 해결했습니다.
+- 새로 추가된 분류가 부실한 *정보 유형* 및 *민감도 레이블*로 표시되는 *데이터 분류의 문제가 해결되었습니다.
 - 대/소문자 구분 데이터 정렬로 설정된 서버를 대상으로 하는 경우 *데이터 분류*가 작동하지 않는 문제를 해결했습니다.
         
 Always On:
@@ -583,8 +708,8 @@ Always On:
 - *대기 시간 데이터 수집*을 클릭할 때 서버가 대/소문자 구분 데이터 정렬로 설정된 경우 오류가 발생할 수 있는 AG 보기 대시보드의 문제를 해결했습니다.
 - SSMS에서 클러스터 서비스가 종료될 때 *분산*으로 AG를 잘못 보고하는 문제를 해결했습니다.
 - *가용성 그룹 만들기* 대화 상자를 사용하여 AG를 만들 때 *ReadOnlyRoutingUrl*이 필요한 오류를 수정했습니다.
-- 주 서버가 다운되고 보조 서버로 수동으로 장애 조치(failover)할 때 NullReferenceException이 throw되는 오류를 해결했습니다.
-- 데이터베이스를 초기화하는 백업/복원을 사용하여 가용성 그룹을 만들 때 보조 복제본에서 기본 디렉터리에 데이터베이스 파일이 생성되는 문제가 해결되었습니다. 수정 사항은 다음을 포함합니다.
+- 주 서버가 가동 중지되어 보조 서버로 수동으로 장애 조치할 때 NullReferenceException이 throw되는 오류가 수정되었습니다.
+- 데이터베이스를 초기화하기 위해 백업/복원을 사용하여 가용성 그룹을 만들 때 보조 복제본에서 데이터베이스 파일이 기본 디렉터리에 만들어지는 문제가 해결되었습니다. 수정 사항은 다음을 포함합니다.
    - 데이터/로그 디렉터리 유효성 검사기를 추가합니다.
    - 복제본이 다른 OS에 있는 경우 주 복제본으로만 파일 재배치를 수행합니다.
 - SSMS 마법사가 보조 조인 실패를 발생시키는 *CLUSTER_TYPE* 옵션을 생성하지 않는 문제를 해결했습니다.
@@ -641,7 +766,7 @@ SMO:
 실행 계획:
 
 - SQL Data Warehouse에 예상된 계획 단추를 표시하도록 설정되었습니다.
-- 새 실행 계획 특성 *EstimateRowsWithoutRowGoal*이 추가되었습니다. *QueryTimeStats*에 새 실행 계획 특성 *UdfCpuTime* 및  *UdfElapsedTime*이 추가되었습니다. 자세한 내용은 [SQL Server 2017 CU3에 추가된 쿼리 실행 계획에서 최적화 프로그램 행 목표 정보](http://support.microsoft.com/help/4051361)를 참조하세요.
+- 새 실행 계획 특성 *EstimateRowsWithoutRowGoal*이 추가되었습니다. *QueryTimeStats*에 새 실행 계획 특성 *UdfCpuTime* 및  *UdfElapsedTime*이 추가되었습니다. 자세한 내용은 [SQL Server 2017 CU3에 추가된 쿼리 실행 계획에서 최적화 프로그램 행 목표 정보](https://support.microsoft.com/help/4051361)를 참조하세요.
 
 
 
@@ -663,7 +788,7 @@ SMO:
 SMO:
 
 - 서버 데이터 정렬이 대/소문자를 구분하는 경우에 SMO가 AvailabilityReplica 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS는 다음과 같은 오류 메시지를 표시할 수 있습니다. "다중 식별자 "a.delimited"를 바인딩할 수 없습니다."
-- DatabaseScopedConfigurationCollection 클래스에서 데이터 정렬을 잘못 처리하는 문제가 해결되었습니다.(결과적으로 터키어 로캘로 ma 컴퓨터에서 실행되는 SSMS는 대/소문자를 구분하는 데이터 정렬로 서버에서 실행되는 데이터베이스를 마우스 오른쪽 단추로 클릭할 때 다음과 같은 오류를 표시할 수 있습니다. "레거시 카디널리티 추정은 범위가 잘못 지정된 구성입니다.")
+- 데이터 정렬을 잘못 처리하는 DatabaseScopedConfigurationCollection 클래스의 문제가 해결되었습니다. (결과적으로 터키어 로캘을 사용하는 ma 머신에서 실행되는 SSMS는 대/소문자를 구분하는 데이터 정렬을 사용하여 서버에서 실행되는 데이터베이스를 마우스 오른쪽 단추로 클릭할 때 "레거시 카디널리티 추정은 올바른 범위의 구성이 아닙니다"와 같은 오류를 표시할 수 있습니다.)
 - JobServer 클래스에서 SMO가 SQL 2005 서버에서 SQL 에이전트 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS가 다음과 같은 오류를 throw합니다. "지역 변수에 기본값을 할당할 수 없습니다. 스칼라 변수 “\@ServiceStartMode”를 선언해야 하고 궁극적으로 개체 탐색기에서 SQL 에이전트 노드가 표시되지 않았습니다.)
 
 템플릿: 
@@ -699,7 +824,7 @@ SMO:
 - 평가 결과에는 각 문제를 해결하는 실행 가능한 단계와 사용자 정의 재구성 스크립트(해당하는 경우)가 포함됩니다. 평가 보고서는 각 환경에 맞게 사용자 지정하고 특정 요구 사항에 맞게 조정할 수 있습니다. [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)에서 자세히 알아보세요.
 
 SMO:
-- *HasMemoryOptimizedObjects*가 Azure에서 예외를 throw하는 문제를 수정했습니다.
+- *HasMemoryOptimizedObjects가 Azure에서 예외를 throw하는 문제가 해결되었습니다.
 - 새로운 CATALOG_COLLATION 기능에 대한 지원이 추가되었습니다.
 
 Always On 대시보드:
@@ -749,11 +874,11 @@ SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL �
 확대된 DB를 스크립팅하면 *데이터\_압축* 옵션을 잘못 내보내는 문제를 수정했습니다.
 - 작업 활동 모니터: 사용자가 범주를 기준으로 필터링하려고 할 때 “인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다. 
       매개 변수 이름: 인덱스(System.Windows.Forms)" 오류가 발생하는 문제를 수정했습니다 - [연결 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
-- 연결 대화 상자: 읽기/쓰기 도메인 컨트롤러에 액세스할 수 없는 도메인 사용자가 SQL 인증을 사용하여 SQL Server에 로그인할 수 없는 문제를 해결했습니다 - [연결 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
+- 연결 대화 상자: 읽기/쓰기 도메인 컨트롤러에 액세스할 수 없는 도메인 사용자가 SQL 인증을 사용하여 SQL Server에 로그인할 수 없는 문제가 해결되었습니다 - [연결 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
 - 복제: SQL Server에서 끌어오기 구독의 속성을 볼 때 “ServerInstance 속성에 ‘null’ 값을 적용할 수 없습니다”와 비슷한 오류가 표시되는 문제를 해결했습니다.
 - SSMS 설치: SSMS를 설치하면 머신에 설치된 모든 제품이 다시 구성되는 문제를 해결했습니다.
 - 사용자 설정:
-   - 이 수정으로 US Government 소버린 클라우드 사용자는 유니버설 인증 및 Azure Active Directory 로그인을 통해 SSMS를 사용하여 Azure SQL Database 및 Azure Resource Manager 리소스에 중단 없이 액세스할 수 있습니다.  이전 버전의 SSMS 사용자는 도구|옵션|Azure Services를 열고 리소스 관리 아래에서 "Active Directory 기관" 속성의 구성을 https://login.microsoftonline.us로 변경해야 합니다.
+   - 이 수정을 사용하면 US Government 소버린 클라우드 사용자는 유니버설 인증 및 Azure Active Directory 로그인을 통해 SSMS를 사용하여 Azure SQL Database 및 Azure Resource Manager 리소스에 중단 없이 액세스할 수 있습니다.  이전 버전의 SSMS 사용자는 도구|옵션|Azure Services를 열고 리소스 관리 아래에서 "Active Directory 기관" 속성의 구성을 https://login.microsoftonline.us로 변경해야 합니다.
 
 **AS(Analysis Services)**
 
@@ -778,7 +903,7 @@ SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL �
 
 ### <a name="enhancements"></a>개선 사항
 
-- 최소한의 사용자 간섭 또는 특수화된 도메인 지식을 요구하는 지능형 프레임워크로 CSV 파일의 가져오기 작업을 단순화하기 위해 새 "플랫 파일 가져오기" 마법사가 추가되었습니다. 자세한 내용은 [SQL 마법사로 플랫 파일 가져오기](../relational-databases/import-export/import-flat-file-wizard.md)를 참조하세요.
+- 지능형 프레임워크를 사용하여 CSV 파일 가져오기 환경을 간소화하고 최소한의 사용자 간섭 또는 특수화된 도메인 지식을 요구하는 새 "플랫 파일 가져오기" 마법사가 추가되었습니다. 자세한 내용은 [SQL 마법사로 플랫 파일 가져오기](../relational-databases/import-export/import-flat-file-wizard.md)를 참조하세요.
 - 개체 탐색기에 "XEvent Profiler" 노드가 추가되었습니다. 자세한 내용은 [SSMS XEvent Profiler 사용](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)을 참조하세요.
 - 성능 대시보드 기록 대기 작업 보고서에 대기 작업 필터링 및 분류가 업데이트되었습니다.
 - "Predict" 함수의 구문 검사가 추가되었습니다.
@@ -789,7 +914,7 @@ SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL �
 - "Active Directory - MFA 지원을 포함한 유니버설 인증" 로그인에 대한 출력 창에 상세 내용 추적을 전송하는 옵션이 추가되었습니다(기본적으로 꺼짐. "도구 > 옵션 > Azure 서비스 > Azure 클라우드 > ADAL 출력 창 추적 수준" 아래의 사용자 설정에서 켜야 함). 
 - 쿼리 저장소: 
   - 쿼리 저장소 UI는 QDS가 모든 데이터를 기록하는 한 QDS가 OFF인 경우에도 액세스할 수 있습니다.
-  - 이제 쿼리 저장소 UI는 모든 기존 보고서의 대기 분류를 노출합니다. 이를 통해 고객은 상위 대기 중인 쿼리 등의 시나리오를 잠금 해제할 수 있습니다.
+  - 이제 쿼리 저장소 UI는 모든 기존 보고서의 대기 분류를 노출합니다. 이렇게 하면 고객이 상위 대기 중인 쿼리 등의 시나리오를 잠금 해제할 수 있습니다.
 - 스크립팅 매개 변수 헤더 옵션을 포함했습니다(기본적으로 꺼짐. "도구 > 옵션 > SQL Server 개체 탐색기 > 스크립팅 > 스크립팅 매개 변수 헤더 포함" 아래의 사용자 설정에서 활성화될 수 있음). - [연결 항목 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)
 - "RC" 브랜딩이 제거되었습니다.
 
@@ -800,14 +925,14 @@ SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL �
 - XEvent: 
    - SSMS이 .xel 파일에서 이벤트의 일부만 여는 문제를 해결했습니다.
    - 기본 데이터베이스가 '마스터'가 아닌 경우 "라이브 데이터 감시"를 개선했습니다. - [연결 항목 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)
-- Always On: "복원 로그 백업"에 "이 백업 집합의 로그는 LSN x에서 종료됩니다. 데이터베이스를 적용하기에 너무 이릅니다."라는 오류가 발생하는 문제를 해결했습니다.
+- Always On: "이 백업 세트의 기호는 데이터베이스에 적용하기에 너무 이른 LSN x에서 종료됩니다."라는 오류로 인해 "로그 백업 복원"이 실패하는 문제가 해결되었습니다.
 - 작업 활동 모니터: 일관성 없는 아이콘을 수정했습니다. - [연결 항목 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)
 - 쿼리 저장소: 쿼리 저장소 보고서에 "사용자 지정" 날짜 범위를 선택할 수 없는 문제를 해결했습니다. 아래 연결 항목에 연결됩니다.
    - [연결 항목 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
-   - [연결 항목 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+   - [연결 항목 3139399](https://connect.microsoft.com/SQLServer/feedback/details/3139399)
 - 저장된 정보에 명명된 데이터베이스가 있고 사용자가 <default>를 선택할 때 연결 대화 상자가 가장 최근에 사용된 데이터베이스를 "정리"하지 않는 문제를 해결했습니다.
 - 개체 스크립팅: 사용자가 서버에서 DW 데이터베이스를 일시 중지한 경우 “데이터베이스 스크립트 생성”이 작동하지 않고 오류를 throw하지만, DW가 아닌 다른 데이터베이스를 선택하고 스크립팅하려고 시도하는 문제를 해결했습니다.
-스크립팅된 저장 프로시저의 헤더가 스크립트 설정과 일치하지 않고 잘못된 스크립트를 생성하는 문제를 해결했습니다. - [연결 항목 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)
+스크립팅된 저장 프로시저의 헤더가 스크립트 설정과 일치하지 않고 잘못된 스크립트를 생성하는 문제를 해결했습니다. - [연결 항목 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784)
 SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 사용합니다.
   SSMS에서 Azure SQL Database에 연결된 경우 일부 개체(UDF, 보기, SP, 트리거)에서 “변경” 또는 “실행” 스크립팅을 허용하지 않는 문제를 해결했습니다. - [연결 항목 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)
 - 쿼리 편집기:
@@ -825,14 +950,14 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 - 작업 모니터: Linux에서 실행 중인 SQL Server를 가리킬 때 작업 모니터가 작동하지 않는 문제를 해결했습니다.
 - 외부 데이터 원본이나 외부 파일 형식 개체를 전송하지 않는 SMO 전송 클래스 관련 문제를 해결했습니다. 이제 해당 유형의 개체는 전송에 정확히 포함되어야 합니다.
 - 등록된 서버:
-   - UA 서버에 다중 서버 쿼리를 사용할 수 있습니다(그룹의 모든 UA 서버에 동일한 토큰을 사용하려고 함).
+   - UA 서버에 다중 서버 쿼리를 사용할 수 있습니다(그룹의 모든 UA 서버에 동일한 토큰을 사용하려고 시도함).
 - AD 유니버설 인증:
    - Azure AD 인증이 지원되지 않는 문제를 해결했습니다.
    - 테이블/뷰 디자이너가 작동하지 않는 문제를 해결했습니다.
    - "상위 1000개 행 선택"과 "상위 200개 행 편집"이 작동하지 않는 문제를 해결했습니다.
 - 데이터베이스 복원: 대체 위치에 파일을 이동할 때 복원이 경로의 마지막 폴더를 생략하는 문제를 해결했습니다.
 - 압축 마법사:
-   - 인덱스에 대한 압축 마법사 관리와 관련된 문제를 해결했습니다. 데이터 압축 마법사가 SQL 2016 이전 버전에서 중지되는 문제를 해결했습니다.
+   - 인덱스에 대한 압축 마법사 관리와 관련된 문제 및 데이터 압축 마법사가 SQL 2016 이전 버전에서 중지되는 문제가 해결되었습니다.
         https://connect.microsoft.com/SQLServer/feedback/details/3139342
    - Azure 테이블 및 인덱스에 압축 마법사를 추가했습니다.
 - 실행 계획: 
@@ -908,8 +1033,8 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 - 성능 대시보드 서버 보고서를 기본 보고서로 제공:
   - SQL Server 2008 이상의 버전에 연결할 수 있습니다.
   - 누락된 인덱스 하위 보고서는 점수 매기기를 사용하여 가장 유용한 인덱스를 식별하는 데 도움을 줍니다.
-  - 기록 대기 상태 하위 보고서는 대기 범주를 집계합니다. 유휴 및 중지 대기는 기본적으로 필터링됩니다.
-  - 새 기록 래치 하위 보고서.
+  - 기록 대기 통계 하위 보고서는 대기 범주를 집계합니다. 유휴 및 중지 대기는 기본적으로 필터링됩니다.
+  - 새 기록 래치 하위 보고서가 추가되었습니다.
 - 실행 계획 노드 검색을 사용하여 계획 속성을 검색할 수 있습니다. 테이블 이름과 같은 연산자 속성을 쉽게 찾을 수 있습니다. 계획을 볼 때 이 옵션을 사용하려면
   - 계획을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 [노드 찾기] 옵션을 클릭합니다.
   - CTRL+F 사용
@@ -930,7 +1055,7 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
    `Msg 0, Level 11, State 0, Line 0
 The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
 
-   쿼리를 다시 실행하면 오류를 통과하고 성공하게 됩니다.
+   쿼리를 다시 실행하면 오류를 통과하고 성공해야 합니다.
 
 - MFA를 지원하는 유니버설 인증을 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
   - **새 테이블/뷰** 디자이너는 이전 스타일 로그인 프롬프트를 표시하며 Azure AD 인증을 위해 작동하지 않습니다.
@@ -949,10 +1074,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - “하나 이상의 구성 요소를 찾을 수 없습니다. 응용 프로그램을 다시 설치하세요.”와 같은 오류로 SSMS가 가끔 시작을 거부하는 문제 해결.
 - SSMS UI의 SPID가 부실하고 동기화되지 않는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - SSMS(자동) 설치 프로그램에서 /passive 인수가 /quiet으로 처리되는 문제 해결.
-- SSMS를 시작할 때 가끔 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다.” 오류가 발생하는 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3134698
+- SSMS를 시작할 때 가끔 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다.” 오류가 발생하는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3134698
 - "데이터 압축 마법사"의 그래프 테이블에서 ‘Calculate’를 누를 때 SSMS가 충돌을 일으켰던 문제 해결.
 - 테이블에 대한 인덱스를 마우스 오른쪽 단추로 클릭할 때(느린 인터넷 연결을 통해) 발생하는 성능 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3120783
-- SSMS가 서버의 백업 파일을 대/소문자 구분 데이터 정렬로 열거하지 못하는 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3134787 및 https://connect.microsoft.com/SQLServer/feedback/details/3137000
+- SSMS가 서버의 백업 파일을 대/소문자 구분 데이터 정렬로 열거하지 못하는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3134787 및 https://connect.microsoft.com/SQLServer/feedback/details/3137000
 - 실행 계획 및 실행 계획 비교와 관련된 각종 수정 사항
 - SSMS를 실행하는 컴퓨터에 SQL Server를 설치하지 않은 경우 사용자가 [연결] 대화 상자를 이용하여 연결에 사용할 “네트워크 프로토콜”을 지정할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3134997
 - 일부 SSMS 대화 상자가 “임의의” 위치에서 나타나는 다중 모니터 구성에 대한 지원 향상. 작업 대화 상자 또는 속성 시트를 종료한 후 그 위치를 기억할 수 있도록 “SQL Server 개체 탐색기 | 명령” 사용자 설정 아래에 새 옵션인 “작업 대화 상자” 추가. https://connect.microsoft.com/SQLServer/feedback/details/889169, https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
@@ -960,18 +1085,18 @@ The connection is broken and recovery is not possible. The client driver attempt
 - “실행 후 결과 삭제” 옵션 개선. https://connect.microsoft.com/SQLServer/feedback/details/1196581
 - 관리자가 아닌 Azure 구독에 사용자가 액세스할 수 없는 문제 개선/해결.
 - “데이터베이스 복원” 마법사가 원본 데이터베이스 선택에 관계없이 OE에서 선택한 대상 데이터베이스를 유지하도록 개선. https://connect.microsoft.com/SQLServer/feedback/details/3118581
-- 새롭게 잘못 추가된 “고유하게 컴파일된 저장 프로시저”를 개체 탐색기가 정렬하지 않았던 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3133365
+- 새롭게 잘못 추가된 “고유하게 컴파일된 저장 프로시저”를 개체 탐색기가 정렬하지 않았던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133365
 - “상위 n개 행 선택”에 “TOP” 절이 포함되지 않았던 문제 해결. Azure SQLDW의 경우. https://connect.microsoft.com/SQLServer/feedback/details/3133551 및 https://connect.microsoft.com/SQLServer/feedback/details/3135874
 - QueryStoreUI: 사용자 지정이 아닌 시간 간격이 올바로 작동하지 않는 보고서가 있었던 문제 해결.
 - Always Encrypted: 새 CMK 대화 상자에서 AKV 권한 상태에 대한 메시징 기능 개선. 긴 이름을 가진 CEK를 보다 쉽게 구분할 수 있도록 CEK 드롭다운에 도구 설명 추가. 일부 CNG 키 저장소 공급자가 Always Encrypted를 위한 [새 열 마스터 키] 대화 상자에 표시되지 않는 문제 해결.
-- SSMS 연결에 대해 일관성 없는 “응용 프로그램 이름” 해결. http://connect.microsoft.com/SQLServer/feedback/details/3135115
+- SSMS 연결에 대해 일관성 없는 “응용 프로그램 이름” 해결. https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - SSMS가 SQL Azure에 대한 정확한 스크립트(DATA_COMPRESSIONS 옵션을 포함한 테이블 및 인덱스)를 생성하지 않았던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - 사용자가 빠른 실행을 위해 CTRL+Q 바로 가기를 사용할 수 없었던 문제 해결(참고: 이제 쿼리 편집기에서 "IntelliSense 사용" 옵션을 설정/해제하기 위한 새 키 바인딩은 CTRL+B, CTRL+I). https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - "데이터베이스 복원"에서 사용자 지정 도메인이 정의된 계정을 가진 구독에서 저장소 계정을 선택하려고 할 때 SSMS가 예외를 throw했던 문제 해결
-- "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 http://connect.microsoft.com/SQLServer/feedback/details/3135326
+- "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - "URL에 백업/복원"에서 SSMS가 클래식 저장소 계정을 열거하지 않았던 문제 해결.
 - 스키마 바운드 보안 개체를 DB 역할에 추가하려고 할 때 예외가 throw되었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- SSMS에서 다음 오류가 간헐적으로 표시되는 문제를 해결했습니다. “데이터가 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 테이블 노드를 확장하는 경우 http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- SSMS에서 다음 오류가 간헐적으로 표시되는 문제를 해결했습니다. “데이터가 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 테이블 노드를 확장하는 경우 https://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: 특정 경계 값으로 파티션 함수를 평가할 때 DTAEngine.exe가 힙 손상으로 종료되는 문제 해결.
 
 
@@ -1016,7 +1141,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 스크립팅: 해당 옵션을 사용하지 않도록 설정하여 삭제를 스크립팅하려고 할 때 SSMS가 Azure 데이터베이스 개체를 실수로 삭제하지 않도록 일시적으로 제한함.  향후 SSMS 릴리스에서 적절한 수정이 제공될 예정입니다.
 - 개체 탐색기: AS COPY를 사용하여 만든 Azure 데이터베이스에 연결할 때 “데이터베이스” 노드가 확장되지 않는 문제를 해결함
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>[SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpsgomicrosoftcomfwlinklinkid847722"></a>[SSMS 17.0](https://go.microsoft.com/fwlink/?LinkID=847722) ![다운로드](../ssdt/media/download.png)
 출시 | 빌드 번호: 14.0.17099.0
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
@@ -1081,7 +1206,7 @@ RestoreDefaultFonts - 기본 설정으로 되돌리기
 - RC 빌드에서 “도움말 뷰어”를 열 수 없는 문제를 해결함
 - SSMS에서 “유지 관리 계획 태스크 도구 상자” 항목이 없을 수 있는 문제를 해결함
 - SSMS에서 사용자가 데이터베이스 이름에 중괄호가 포함된 경우 데이터베이스를 축소할 수 없는 문제를 해결함 [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
-- SSMS에서 Azure 데이터베이스의 삭제를 스크립팅하려고 할 때 실제로 데이터베이스 자체가 삭제되는 문제를 해결함 [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- SSMS에서 Azure 데이터베이스의 삭제를 스크립팅하려고 할 때 실제로 데이터베이스 자체가 삭제되는 문제를 해결함 [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3131458/)
 - 사용자 정의 테이블 형식에 대해 기본값이 스크립팅되지 않은 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
 - 인덱스의 상황에 맞는 메뉴에 대한 또 한차례의 성능 주위 성능 향상. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
 - 실행 계획에서 누락된 인덱스를 마우스로 가리킬 때 과도한 깜박임 발생하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
@@ -1115,33 +1240,33 @@ AAD가 여럿인 경우 Azure Key Vault 로그인 페이지에 Azure 구독이 �
 - 사용자에게 데이터베이스에 대한 특정 사용 권한이 있는 경우 SSMS 작동이 중단되게 하는 문제를 해결함. 
 - SSMS - 보기를 검토하는 동안 디자인 화면에서 테이블이 사라짐. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
 - 사용자는 테이블 스크롤 막대를 사용하여 테이블 내용을 스크롤할 수 없고, 위쪽/아래쪽 화살표로만 이 작업을 할 수 있음. 버그인 스크롤 막대를 사용하여 스크롤하려고 시도한 후 테이블 내용을 스크롤할 수도 있음. [Connect 항목](
-http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
 - [Generate Tasks]\(작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
-- 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3113387)
 - 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 Always Encrypted 오류.
 - OLTP 및 OLAP에 대한 기본 연결 제한 시간을 15초에서 30초로 변경하여 무시된 연결 실패의 클래스를 수정함. 
-- 사용자 지정 보고서가 시작될 때 SSMS 작동이 중단되는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- 사용자 지정 보고서가 시작될 때 SSMS 작동이 중단되는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3118856)
 - Azure SQL Database의 “스크립트 생성...”이 실패하는 문제를 해결했습니다.
-- 저장 프로시저와 같은 개체를 스크립팅할 때 줄 바꿈이 추가되지 않도록 "스크립팅" 및 "스크립트 생성 마법사"를 수정함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
-- SQLAS PowerShell 공급자: Dimension 및 MeasureGroup 폴더에 LastProcessed 속성을 추가함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- 활성 쿼리 통계: 배치에 있는 첫 번째 쿼리만 표시하던 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- 저장 프로시저와 같은 개체를 스크립팅할 때 줄 바꿈이 추가되지 않도록 "스크립팅" 및 "스크립트 생성 마법사"를 수정함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3115850)
+- SQLAS PowerShell 공급자: Dimension 및 MeasureGroup 폴더에 LastProcessed 속성을 추가함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3111879)
+- 활성 쿼리 통계: 배치에 있는 첫 번째 쿼리만 표시하던 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - 실행 계획: 속성 창에서 전체 스레드의 합계 대신 최대값을 표시함.
 - 쿼리 저장소: 실행 변형이 높은 쿼리에 대해 새 보고서를 추가함.
-- 개체 탐색기 성능 문제: [연결 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114074). 테이블의 상황에 맞는 메뉴가 잠시 중단됨. 원격(인터넷) 연결을 통해 테이블의 인덱스를 마우스 오른쪽 단추로 클릭할 경우 SSMS가 느려짐. 서버에서 정렬되는 테이블 쿼리 실행 차단
+- 개체 탐색기 성능 문제: [연결 항목](https://connect.microsoft.com/SQLServer/feedback/details/3114074). 테이블의 상황에 맞는 메뉴가 잠시 중단됨. 원격(인터넷) 연결을 통해 테이블의 인덱스를 마우스 오른쪽 단추로 클릭할 경우 SSMS가 느려짐. 서버에서 정렬되는 테이블 쿼리 실행 차단
 - SSMS에서 Azure 배포 마법사를 제거함(Azure VM에 데이터베이스 배포)
-- SSMS에서 실행 계획에 누락된 인덱스가 표시되지 않았던 문제를 해결함 [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
+- SSMS에서 실행 계획에 누락된 인덱스가 표시되지 않았던 문제를 해결함 [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - SSMS에서 종료 시 발생하는 일반적인 작동 중단 문제를 해결함
-- PolyBase|규모 확장 그룹 노드에서 상황에 맞는 메뉴를 표시할 때 오류가 발생하는 개체 탐색기의 문제를 해결함 [연결 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- PolyBase|규모 확장 그룹 노드에서 상황에 맞는 메뉴를 표시할 때 오류가 발생하는 개체 탐색기의 문제를 해결함 [연결 항목](https://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - 데이터베이스에 대한 사용 권한을 표시하려고 할 때 SSMS의 작동이 중단되는 문제를 해결함
 - 쿼리 저장소: 쿼리 저장소 보고서의 결과 표에 대한 상황에 맞는 메뉴 항목의 일반적인 개선 사항
-- 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- 여러 스키마가 포함된 기존 데이터베이스에 대한 Always Encrypted 구성이 작동하지 않음. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- Always Encrypted, 암호화된 열 마법사가 시스템 뷰를 참조하는 뷰를 포함하는 데이터베이스로 인해 실패함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3103181)
+- 여러 스키마가 포함된 기존 데이터베이스에 대한 Always Encrypted 구성이 작동하지 않음. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Always Encrypted, 암호화된 열 마법사가 시스템 뷰를 참조하는 뷰를 포함하는 데이터베이스로 인해 실패함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Always Encrypted를 사용하여 암호화할 때 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 오류가 발생함.
 - "새 서버 등록" 대화 상자에서 UI 잘림 문제를 해결함
 - 따옴표가 있는 문자열 상수 값을 포함하는 식을 잘못 업데이트하는 DMF 조건 UI 수정
@@ -1156,7 +1281,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 이제 SSMS DAX 쿼리 편집기에서 Ctrl-R을 누르면 결과 창이 전환됨
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>[SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>[SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.16106.4
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
@@ -1179,7 +1304,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 원격(인터넷) 연결을 통해 테이블의 인덱스를 마우스 오른쪽 단추로 클릭할 경우 SSMS가 느려짐. [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
  
-* SQL 디자이너 스크롤 막대 관련 문제를 해결함. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+* SQL 디자이너 스크롤 막대 관련 문제를 해결함. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
 * 테이블의 상황에 맞는 메뉴가 잠시 중단됨 
  
@@ -1214,6 +1339,6 @@ SSMS 설치에 문제가 있고, 표준 제거 및 다시 설치로 해결되지
 
 
 ## <a name="additional-downloads"></a>추가 다운로드  
-모든 SQL Server Management Studio 다운로드의 전체 목록은 [Microsoft 다운로드 센터](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)를 검색하세요.  
+모든 SQL Server Management Studio 다운로드의 전체 목록은 [Microsoft 다운로드 센터](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)를 검색하세요.  
   
 최신 SQL Server Management Studio에 대해서는 [SQL Server Management Studio 다운로드&#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  

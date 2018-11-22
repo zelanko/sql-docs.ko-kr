@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419408"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703771"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)
+- 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)
 
 **SQL Server를 사용해 보세요.**
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -40,16 +40,16 @@ ms.locfileid: "49419408"
 - **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음 단계를 완료합니다.
 
     1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
-    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 후 **적용**을 클릭합니다.
+    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 다음, **적용**을 클릭합니다.
     3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 다시 선택하고 **적용**을 클릭합니다.
 
 ### <a name="master-data-services-mds"></a>MDS(Master Data Services)
-- **문제 및 고객에게 미치는 영향:** 사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
+- **문제 및 고객에게 미치는 영향:**  사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
 
 - **해결 방법:** 
   - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
   - 로 구분하거나 여러
-  - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
+  - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
 
 ### <a name="analysis-services"></a>Analysis Services
 - **문제 및 고객에게 미치는 영향:** 다음 원본에 대한 데이터 커넥터는 1400 호환성 수준의 표 형식 모델에서는 아직 사용할 수 없습니다.

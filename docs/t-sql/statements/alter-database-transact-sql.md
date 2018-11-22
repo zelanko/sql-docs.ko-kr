@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252140"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571472"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -143,6 +143,9 @@ MODIFY NAME **=***new_database_name*
   
 COLLATE *collation_name*  
 데이터베이스에 대한 데이터 정렬을 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 정렬이 지정됩니다.  
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스를 만든 후에는 데이터 정렬을 변경할 수 없습니다.
   
 기본 데이터 정렬이 아닌 데이터 정렬로 데이터베이스를 만들 경우 데이터베이스의 데이터는 항상 지정된 데이터 정렬을 따릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 포함된 데이터베이스를 만들 때 내부 카탈로그 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 정렬인 **Latin1_General_100_CI_AS_WS_KS_SC**를 통해 유지됩니다.  
   

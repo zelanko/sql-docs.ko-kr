@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817691"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663362"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817691"
   
 -   Azure 구독이 있어야 합니다.  
   
--   최신 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)(5.2.0 이상)을 설치하세요.  
+-   최신 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)(5.2.0 이상)을 설치하세요.  
 
 -   Azure Active Directory 만들기  
 
@@ -239,10 +239,13 @@ SQL Server 버전  |재배포 가능 설치 링크
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
- [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
+ [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
 
 > [!NOTE]  
 >  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드"의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 또는 이후 버전으로 업그레이드하세요.
+
+> [!NOTE]  
+> 1.0.5.0 버전의 경우 지문 알고리즘 측면에서 큰 변화가 있습니다. 1.0.5.0 버전으로 업그레이드한 후 데이터베이스 복원 실패가 발생할 수 있습니다. [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) KB 문서를 참조하세요.
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

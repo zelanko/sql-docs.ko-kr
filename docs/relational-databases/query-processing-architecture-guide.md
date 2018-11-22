@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226385"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701481"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 리소스 비용이 가장 낮은 실행 계획만 선택하는 것은 아닙니다. 쿼리 최적화 프로그램은 타당한 리소스 비용을 사용하여 사용자에게 결과를 반환하고 가장 빠른 결과를 반환하는 계획을 선택합니다. 예를 들어 병렬로 쿼리를 처리하는 것은 대개 직렬로 처리하는 것보다 많은 리소스를 사용하지만 쿼리를 좀 더 빠르게 끝냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 서버 로드에 나쁜 영향을 미치지 않는 경우 병렬 실행 계획을 사용하여 결과를 반환합니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 테이블 또는 인덱스에서 정보를 추출하는 다른 방법의 리소스 비용을 예상할 때 배포 통계를 이용합니다. 열 및 인덱스에 대해 배포 통계가 보유됩니다. 배포 통계는 특정 인덱스 또는 열에서 값의 선택도를 표시합니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN에 대한 인덱스는 제조업체에 대한 인덱스보다 좀 더 선택적입니다. 인덱스 통계가 현재의 데이터가 아니면 쿼리 최적화 프로그램은 테이블의 현재 상태에 대해 최상의 선택을 하지 못할 수 있습니다. 인덱스 통계를 최신 상태로 유지하는 방법에 대한 자세한 내용은 [통계](../relational-databases/statistics/statistics.md)를 참조하세요. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 테이블 또는 인덱스에서 정보를 추출하는 다른 방법의 리소스 비용을 예상할 때 배포 통계를 이용합니다. 배포 통계는 열과 인덱스에 대해 유지되며, 기본 데이터의 밀도<sup>1</sup>에 대한 정보를 보유합니다. 이는 특정 인덱스 또는 열에서 값의 선택도를 표시하는 데 사용됩니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN의 밀도가 제조업체보다 낮으므로 VIN의 인덱스가 제조업체의 인덱스보다 더 선택적입니다. 인덱스 통계가 현재의 데이터가 아니면 쿼리 최적화 프로그램은 테이블의 현재 상태에 대해 최상의 선택을 하지 못할 수 있습니다. 밀도에 대한 자세한 내용은 [통계](../relational-databases/statistics/statistics.md#density)를 참조하세요. 
+
+<sup>1</sup> 밀도는 데이터에 존재하는 고유 값의 분포 또는 지정된 열에 대한 중복 값의 평균 개수를 정의합니다. 밀도가 감소하면 값의 선택도가 증가합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 프로그래머나 데이터베이스 관리자의 입력을 요청하지 않고 데이터베이스 서버가 데이터베이스의 조건 변화에 맞춰 동적으로 조정될 수 있게 하므로 중요합니다. 이를 통해 프로그래머는 쿼리의 최종 결과를 설명하는 데 주안점을 둘 수 있습니다. 프로그래머는 문이 실행될 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 데이터베이스의 상태에 맞게 효율적인 실행 계획을 세운다는 것을 신뢰할 수 있습니다.
 
@@ -138,11 +139,11 @@ GO
 
 `SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 SELECT 문을 포함할 수 있습니다.
 
-`CREATE PROCEDURE` 또는 `ALTER TABL`같은 DDL(데이터 정의 언어) 문도 결과적으로 시스템 카탈로그 테이블에 대한 관계형 연산으로 해석되며 `ALTER TABLE ADD COLUMN`문처럼 데이터 테이블에 대한 관계형 연산으로 해석되는 경우도 있습니다.
+`CREATE PROCEDURE` 또는 `ALTER TABLE`과 같은 DDL(데이터 정의 언어) 문조차 결과적으로 시스템 카탈로그 테이블에서, 때로는(예: `ALTER TABLE ADD COLUMN`) 데이터 테이블에 대해 일련의 관계형 연산으로 해석됩니다.
 
 ### <a name="worktables"></a>작업 테이블
 
-관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 `tempdb` 에 작성되며 더 필요 없을 때 자동으로 삭제됩니다.
+관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 tempdb에 작성되며, 더 이상 필요하지 않으면 자동으로 삭제됩니다.
 
 ### <a name="view-resolution"></a>뷰 확인
 
@@ -698,7 +699,7 @@ MAXDOP([최대 병렬 처리 수준](../database-engine/configure-windows/config
 
 최대 병렬 처리 수준 옵션을 0(기본값)으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. MAXDOP 옵션을 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 64개 논리적 프로세서의 런타임 대상을 설정해도 필요한 경우 다른 값을 수동으로 설정할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다. MAXDOP는 일부 병렬 쿼리에만 적용되는 값이나 병렬 처리에 적합한 모든 쿼리의 미정 대상입니다. 즉, 런타임에 사용할 수 있는 작업자 스레드가 충분하지 않은 경우 MAXDOP 서버 구성 옵션보다 낮은 병렬 처리 수준으로 쿼리를 실행할 수 있습니다.
 
-MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
+MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
 
 ### <a name="parallel-query-example"></a>병렬 쿼리 예제
 
@@ -1019,7 +1020,7 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 * 빠른 프로세서와 가능한 많은 프로세서 코어가 장착된 서버를 사용하여 병렬 쿼리 처리 기능을 이용합니다.
 * 서버에 충분한 I/O 컨트롤러 대역폭이 있는지 확인합니다. 
 * 모든 분할된 대형 테이블에 클러스터형 인덱스를 만들어 B-트리 검색 최적화를 이용합니다.
-* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](http://msdn.microsoft.com/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
+* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](https://msdn.microsoft.com/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
 
 ### <a name="example"></a>예제
 

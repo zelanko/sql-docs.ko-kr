@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a143011f3fb93c9aeef6d699e89e0d12b664409c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b4efb9168f49b6c574b3358cba6dadb6d5896af
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855731"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269896"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ CREATE TABLE
 
 Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니다.
 
-노드 또는 에지 테이블은 외부 테이블(그래프 테이블에 대한 polybase 지원 없음)이 될 수 없습니다 . 
+노드 또는 에지 테이블은 외부 테이블(그래프 테이블에 대한 PolyBase 지원 없음)이 될 수 없습니다. 
   
  
 ## <a name="examples"></a>예  

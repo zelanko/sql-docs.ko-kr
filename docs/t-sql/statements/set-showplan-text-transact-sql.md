@@ -27,12 +27,12 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834791"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558670"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하지 않고 실행 정보만 반환합니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 대한 실행 계획 정보가 반환됩니다. 예를 들어 SET SHOWPLAN_TEXT 옵션을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 같은 테이블을 포함하는 다음 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_TEXT 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 실행 계획 정보가 있는 보고서를 생성하지 않고 문을 실행합니다.  
   
- SET SHOWPLAN_TEXT는 **osql** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 응용 프로그램에 읽을 수 있는 출력을 반환하기 위한 옵션입니다. SET SHOWPLAN_ALL 옵션은 해당 출력을 처리하도록 디자인된 프로그램에서 사용할 수 있도록 더 자세한 출력을 반환합니다.  
+ SET SHOWPLAN_TEXT는 **sqlcmd** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 애플리케이션에 읽을 수 있는 출력을 반환하기 위한 옵션입니다. SET SHOWPLAN_ALL 옵션은 해당 출력을 처리하도록 디자인된 프로그램에서 사용할 수 있도록 더 자세한 출력을 반환합니다.  
   
  SET SHOWPLAN_TEXT 및 SET SHOWPLAN_ALL 옵션은 저장 프로시저에서 지정할 수 없습니다. 두 옵션은 일괄 처리에서 유일한 문이어야 합니다.  
   

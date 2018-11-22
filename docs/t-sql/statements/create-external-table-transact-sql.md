@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100294"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703961"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 테이블 메타데이터만이 Hadoop 또는 Azure Blob Storage에 참조된 파일 또는 폴더에 관한 기본 통계와 함께 SQL에 저장됩니다. 실제 데이터가 이동되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장되지 않습니다.  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE을 통해 하나 이상의 열 정의를 사용할 수 있습니다. CREATE EXTERNAL TABLE과 CREATE TABLE 모두 열을 정의하는 데 같은 구문을 사용합니다. 이에 대한 예외는 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없다는 것입니다. 열 정의 및 해당 데이터 형식에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [Azure SQL Database에 대한 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)을 참조하세요.  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE을 통해 하나 이상의 열 정의를 사용할 수 있습니다. CREATE EXTERNAL TABLE과 CREATE TABLE 모두 열을 정의하는 데 같은 구문을 사용합니다. 이에 대한 예외는 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없다는 것입니다. 열 정의 및 해당 데이터 형식에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [Azure SQL Database에 대한 CREATE TABLE](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)을 참조하세요.  
   
  데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.  
   
@@ -161,7 +161,7 @@ SQL Data Warehouse 및 Analytics Platform System에서는 [CREATE EXTERNAL TABLE
   
  ![외부 테이블에 대한 재귀적 데이터](../../t-sql/statements/media/aps-polybase-folder-traversal.png "외부 테이블에 대한 재귀적 데이터")  
   
- 기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.  
+ 기본값을 변경하고 루트 폴더에서 읽기만 하려면 core-site.xml 구성 파일에서 특성 \<polybase.recursive.traversal>을 'false'로 설정합니다. 이 파일은 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` 아래에 있습니다. `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`)을 입력합니다.  
   
  DATA_SOURCE = *external_data_source_name*  
  외부 데이터의 위치를 포함하는 외부 데이터 원본의 이름을 지정합니다. 이 위치는 Hadoop 또는 Azure Blob Storage입니다. 외부 데이터 원본을 만들려면 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)을 사용합니다.  
@@ -265,7 +265,7 @@ reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있�
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  임시 쿼리 시나리오, 즉 SELECT FROM EXTERNAL TABLE에서 PolyBase는 외부 데이터 원본에서 검색된 행을 임시 테이블에 저장합니다. 쿼리가 완료된 후 PolyBase는 임시 테이블을 제거하고 삭제합니다. 영구적 데이터가 SQL 테이블에 저장되지 않습니다.  
   
- 이에 비해 가져오기 시나리오, 즉 SELECT INTO FROM EXTERNAL TABLE에서 PolyBase는 외부 데이터 원본에서 검색된 행을 영구 데이터로 SQL 테이블에 저장합니다. 새 테이블은 PolyBase가 외부 데이터를 검색할 때 쿼리를 실행하는 동안 만들어집니다.  
+ 이에 비해 가져오기 시나리오, 즉 SELECT INTO FROM EXTERNAL TABLE에서 PolyBase는 외부 데이터 원본에서 검색된 행을 영구 데이터로 SQL 테이블에 저장합니다. 새 테이블은 PolyBase에서 외부 데이터를 검색할 때 쿼리 실행 중에 만들어집니다.  
   
  PolyBase는 쿼리 성능을 향상시키기 위해 쿼리 계산 중 일부를 Hadoop에 푸시할 수 있습니다. 이 기능을 조건자 푸시 다운이라 합니다. 이 기능을 활성화하려면 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)에 Hadoop 리소스 관리자 위치 옵션을 지정합니다.  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [일반적인 메타데이터 쿼리 예제(SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [일반적인 메타데이터 쿼리 예제(SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

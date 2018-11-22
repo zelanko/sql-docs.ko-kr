@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030612"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814266"
 ---
 # <a name="start-report-builder"></a>보고서 작성기 시작
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030612"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 웹 포털에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하려면  
   
-1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로 URL은 http://\<*servername*>/reports입니다.  
+1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로 이 URL은 https://\<*servername*>/reports입니다.  
   
 2.  웹 포털의 위쪽 막대에서 **새로 만들기** > **페이지를 매긴 보고서**를 선택합니다.  
   

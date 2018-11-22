@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461088"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704141"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -144,7 +144,7 @@ ASYMMETRIC KEY *asym_key_name*
 >  CHECK_EXPIRATION 및 CHECK_POLICY는 Windows Server 2003 이상 버전에서만 적용됩니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요. 
   
 - 인증서나 비대칭 키에서 만든 로그인은 코드 서명 용도로만 사용되며 SQL Server에 연결할 때는 사용할 수 없습니다. 인증서나 비대칭 키가 master 데이터베이스에 이미 있는 경우에만 인증서나 비대칭 키에서 로그인을 만들 수 있습니다. 
-- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
@@ -294,7 +294,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - 암호는 대소문자를 구분합니다.
-- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
     - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
@@ -326,8 +326,8 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
-- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- 데이터베이스의 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** … **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** … **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
   
 ## <a name="examples"></a>예  
@@ -412,7 +412,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - 암호는 대소문자를 구분합니다.
-- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
     - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
@@ -444,8 +444,8 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
-- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- 데이터베이스의 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** … **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
   
 ## <a name="examples"></a>예  
@@ -530,7 +530,7 @@ PASSWORD **='** password**'*
   
 ## <a name="remarks"></a>Remarks  
 - 암호는 대소문자를 구분합니다.
-- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
     - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
@@ -557,8 +557,8 @@ SQL Data Warehouse에서 연결을 인증하는 데 필요한 로그인 데이�
 로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 기본 제공 데이터베이스 역할 또는 사용자 지정 역할 중 하나에 사용을 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 직접 사용자에게 권한을 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
-- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문은 관리 서버 역할 중 하나에 사용을 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE**을 사용합니다... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** … **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오. 
   
@@ -667,7 +667,7 @@ WINDOWS
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION 및 CHECK_POLICY는 Windows Server 2003 이상 버전에서만 적용됩니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요. 
   
-- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992)을 참조하세요.
+- 로그인을 전송하는 스크립트는 [SQL Server 2005와 SQL Server 2008 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992)을 참조하세요.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다. 
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 

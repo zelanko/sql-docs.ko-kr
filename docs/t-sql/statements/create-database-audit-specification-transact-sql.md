@@ -23,12 +23,12 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c7f8c07725d702eb09cf538dc688136f230659c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812721"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289883"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  감사 동작 또는 감사 동작 그룹을 적용할 데이터베이스의 테이블, 뷰 또는 기타 보안 개체입니다. 자세한 내용은 [Securables](../../relational-databases/security/securables.md)을 참조하세요.  
   
  *principal*  
- 감사 동작 또는 감사 동작 그룹을 적용할 데이터베이스 보안 주체의 이름입니다. 자세한 내용은 [보안 주체 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.  
+ 감사 동작 또는 감사 동작 그룹을 적용할 데이터베이스 보안 주체의 이름입니다. 모든 데이터베이스 보안 주체를 감사하려면 데이터베이스 보안 주체 `public`을 사용합니다. 자세한 내용은 [보안 주체 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.  
   
  WITH ( STATE = { ON | OFF } )  
  감사에서 이 감사 사양에 대한 레코드를 수집하거나 수집하지 못하도록 설정합니다.  
@@ -91,8 +91,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  생성된 데이터베이스 감사 사양은 `CONTROL SERVER`,`ALTER ANY DATABASE AUDIT`권한이 있는 보안 주체 또는 `sysadmin` 계정이 볼 수 있습니다.  
   
-## <a name="examples"></a>예  
- 다음 예에서는 `Payrole_Security_Audit`라는 서버 감사를 만들고 `Payrole_Security_Audit` 데이터베이스의 `SELECT` 테이블에 대해 `INSERT` 사용자의 `dbo` 및 `HumanResources.EmployeePayHistory` 문을 감사하는 `AdventureWorks2012`라는 데이터베이스 감사 사양을 만듭니다.  
+## <a name="examples"></a>예
+
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>1. 데이터베이스 감사 주체에 대해 테이블에서 SELECT 및 INSERT 감사 
+ 다음 예에서는 `Payrole_Security_Audit`라는 서버 감사를 만들고 `AdventureWorks2012` 데이터베이스의 `HumanResources.EmployeePayHistory` 테이블에 대해 사용자(`public`)의 `SELECT` 및 `INSERT` 문을 감사하는 `Payrole_Security_Audit`라는 데이터베이스 감사 사양을 만듭니다.  
   
 ```  
 USE master ;  
@@ -116,8 +118,39 @@ ADD (SELECT , INSERT
      ON HumanResources.EmployeePayHistory BY dbo )  
 WITH (STATE = ON) ;  
 GO  
-```  
+``` 
+
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>2. 특정 데이터베이스 역할에 대해 _sales_ 스키마에서 _모든_ 개체에 대해 DML(INSERT, UPDATE 또는 DELETE) 감사  
+ 다음 예에서는 `DataModification_Security_Audit`라는 서버 감사를 만든 다음, `AdventureWorks2012` 데이터베이스의 `Sales` 스키마에 있는 모든 개체에 대해 새 데이터베이스 역할 `SalesUK`의 사용자에 의한 `INSERT`, `UPDATE` 및 `DELETE` 문을 감사하는 `Audit_Data_Modification_On_All_Sales_Tables`라는 데이터베이스 감사 사양을 만듭니다.  
   
+```  
+USE master ;  
+GO  
+-- Create the server audit.
+-- Change the path to a path that the SQLServer Service has access to. 
+CREATE SERVER AUDIT DataModification_Security_Audit  
+    TO FILE ( FILEPATH = 
+'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+GO  
+-- Enable the server audit.  
+ALTER SERVER AUDIT DataModification_Security_Audit   
+WITH (STATE = ON) ;  
+GO  
+-- Move to the target database.  
+USE AdventureWorks2012 ;  
+GO  
+CREATE ROLE SalesUK
+GO
+-- Create the database audit specification.  
+CREATE DATABASE AUDIT SPECIFICATION Audit_Data_Modification_On_All_Sales_Tables  
+FOR SERVER AUDIT DataModification_Security_Audit  
+ADD ( INSERT, UPDATE, DELETE  
+     ON Schema::Sales BY SalesUK )  
+WITH (STATE = ON) ;    
+GO  
+```  
+
+
 ## <a name="see-also"></a>참고 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

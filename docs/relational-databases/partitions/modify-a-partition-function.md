@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90e24f7de0ca9950962cd078c7e7360572de89da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673721"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638520"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47673721"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47673721"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파티션 함수 수정을 위한 복제 지원을 제공하지 않습니다. 게시 데이터베이스의 파티션 함수를 변경하려면 구독 데이터베이스에서 직접 파티션 함수를 수정해야 합니다.  
   
--   ALTER PARITITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
+-   ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   

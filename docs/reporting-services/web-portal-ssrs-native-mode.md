@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021897"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814336"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
 
@@ -75,9 +75,9 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 
 2. 웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다.
 
-    기본적으로 이 URL은 *http://[ComputerName]/reports*입니다.
+    기본적으로 이 URL은 *https://[ComputerName]/reports*입니다.
 
-    특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예: *http://[ComputerName]:80/reports* 또는 *http://[ComputerName]:8080/reports*을 참조하십시오.
+    특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예를 들어 *https://[ComputerName]:80/reports* 또는 *https://[ComputerName]:8080/reports*입니다.
 
 ## <a name="grouping-by-categories"></a>범주별 그룹화
 

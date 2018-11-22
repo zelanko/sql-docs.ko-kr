@@ -1,7 +1,7 @@
 ---
 title: 가용성 그룹에서 SQL Server 배포 데이터베이스 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818001"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602633"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -48,6 +48,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 - 기존 배포 데이터베이스 AG에 노드추가 또는 제거
 - 배포자에는 여러 배포 데이터베이스가 있을 수 있습니다. 각 배포 데이터베이스는 자체 AG에 있을 수 있고 다른 AG에는 있을 수 없습니다. 여러 배포 데이터베이스가 AG를 공유할 수 있습니다.
 - 게시자 및 배포자는 별도 SQL Server 인스턴스에 있어야 합니다.
+- 배포 데이터베이스를 호스트하는 가용성 그룹에 대한 수신기가 기본값이 아닌 포트를 사용하도록 구성된 경우, 이 수신기에 대한 별칭과 기본값 이외 포트를 설정해야 합니다.
 
 ## <a name="limitations-or-exclusions"></a>제한 및 배제
 
@@ -63,6 +64,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 - 배포 데이터베이스 AG에 수신기가 구성되어 있어야 합니다.
 - 배포 데이터베이스 AG의 보조 복제본은 동기 또는 비동기가 될 수 있습니다. 동기 모드가 권장되며 기본 설정입니다.
 - 양방향 트랜잭션 복제는 지원되지 않습니다.
+- SSMS은 배포 데이터베이스가 가용성 그룹에 추가되면 배포 데이터베이스를 동기화 중/동기화됨으로 표시하지 않습니다.
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>참고 항목  

@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 지능형 쿼리 처리 | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 지능형 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030940"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660955"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **지능형 쿼리 처리** 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다.
 
-![지능형 쿼리 처리 기능](./media/2_IQPFeatureFamily.png)
+![지능형 쿼리 처리 기능](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>적응 쿼리 처리
 적응 쿼리 처리 기능 제품군에는 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 쿼리 처리 개선 사항이 포함됩니다. 이러한 개선 사항에는 다중 문 테이블 반환 함수에 대한 일괄 처리 모드 적응 조인, 메모리 부여 피드백 및 인터리브 실행이 포함됩니다.
@@ -54,6 +54,14 @@ ms.locfileid: "51030940"
 테이블 변수 지연 컴파일을 사용하면 테이블 변수를 참조하는 문 컴파일은 문이 실제로 처음 실행될 때까지 지연됩니다. 이 지연 컴파일 동작은 임시 테이블의 동작과 동일하고, 이 변경으로 인해 원래 1행 추측 대신에 실제 카디널리티가 사용됩니다. Azure SQL Database에서 테이블 변수 지연 컴파일의 공개 미리 보기를 사용하도록 설정하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
 
 자세한 내용은 [테이블 변수 지연 컴파일](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation )을 참조하세요.
+
+## <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
+> [!NOTE]
+> 스칼라 UDF 인라인 처리는 공개 미리 보기 기능입니다.  
+
+스칼라 UDF 인라인 처리는 자동으로 스칼라 UDF(사용자 정의 함수)를 관계식으로 변환하고 호출 SQL 쿼리에 포함하여 스칼라 UDF를 활용하는 작업의 성능을 향상합니다. 스칼라 UDF 인라인 처리는 UDF 내에서 작업의 비용 기반 최적화를 용이하게 하고 비효율적이고 반복적인 직렬 실행 계획 대신 효율적인 집합 지향 병렬 계획을 가능하게 합니다. 이 기능은 데이터베이스 호환성 수준 150에서 기본적으로 사용하도록 설정됩니다.
+
+자세한 내용은 [스칼라 UDF 인라인 처리](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)를 참조하세요.
 
 ## <a name="approximate-query-processing"></a>대략적인 쿼리 처리
 > [!NOTE]

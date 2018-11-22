@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072257"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697361"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -36,7 +36,7 @@ ms.locfileid: "49072257"
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 알아보는 데 유용한 동영상 및 기타 학습 리소스의 링크는 [Master Data Services에 대해 알아보기](../master-data-services/learn-sql-server-master-data-services.md)를 참조하세요. 
   
 > **다운로드**  
->-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
+>-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
 >-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가 이미 설치된 가상 머신을 실행해 보세요.  
  
 > **MDS 웹 사이트를 만들 수 없는 경우**
@@ -194,7 +194,7 @@ ms.locfileid: "49072257"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 응용 프로그램을 시작합니다. 웹 사이트 주소는 http://*서버 이름*/*웹 응용 프로그램*/입니다. 
+15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 응용 프로그램을 시작합니다. 웹 사이트 주소는 https://*서버 이름*/*웹 애플리케이션*/입니다. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -272,7 +272,7 @@ ms.locfileid: "49072257"
   
     1.  설정한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 사이트로 이동합니다. [데이터베이스 및 웹 사이트 설정](#SetUpWeb) 섹션을 참조하세요.  
   
-         웹 사이트 주소는 http://*서버 이름*/*웹 응용 프로그램*/입니다.  
+         웹 사이트 주소는 https://*서버 이름*/*웹 애플리케이션*/입니다.  
   
     2.  **모델** 목록 상자에서 모델을 선택하고 **탐색기**를 클릭합니다.  
   
