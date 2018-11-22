@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021177"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813766"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -23,7 +23,7 @@ ms.locfileid: "50021177"
 이 문서에서는 다음 작업을 안내합니다.   
   
 - AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 집합 만들기  
-- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+-  [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 모바일 보고서 게시  
 - Power BI 모바일 앱에서 모바일 보고서 보기  
   
@@ -37,7 +37,7 @@ ms.locfileid: "50021177"
 *  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
-  *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
+  *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
 
   
 ## <a name="create-a-shared-data-source"></a>공유 데이터 원본 만들기  
@@ -76,7 +76,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
 4. 이름 필드에 데이터 원본을 저장한 서버의 이름을 다음 형식으로 입력합니다.   
    
-   이름: http://*localhost*/ReportServer  
+   이름: https://*localhost*/ReportServer  
    항목 유형: 데이터 원본(*.rsds)  
    
 5. **열기**를 클릭하여 해당 서버에서 만든 데이터 원본으로 이동합니다.  
@@ -260,7 +260,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 보려면 먼저 다음을 수행해야 합니다.
 
 *  계정이 아직 없는 경우[Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879)합니다.
-*  모바일 장치에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
+*  모바일 장치에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
 
 ### <a name="view-your-mobile-report"></a>모바일 보고서 보기
   

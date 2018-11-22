@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051016"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813676"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -110,16 +110,16 @@ ms.locfileid: "50051016"
   
 1.  선택 단계에서는 웹 포털에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
   
-2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
+2.   **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
   
 3.  **TargetServerURL** 에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
+    - `https://localhost/reportserver` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
   
 4. TargetReportFolder는 프로젝트 이름인 tutorial이며,  다음 단계에서 보고서를 배포할 폴더의 이름입니다.  
-5. **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 6.  **빌드** 메뉴를 클릭한 다음 **자습서 배포**를 클릭합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "50051016"
     > 'Sales Orders.rdl'을 건너뜁니다. 최신 항목입니다.  
     > 빌드 완료 -- 0개 오류, 0개 경고  
     > ------ 배포 시작: 자습서, 구성: 디버그 ------  
-    > http://[server name]/reportserver에 배포하는 중  
+    > https://[서버 이름]/reportserver에 배포하는 중  
     > '/tutorial/Sales Orders' 보고서를 배포하는 중  
     > 배포 완료 -- 0개 오류, 0개 경고  
     > ========== 빌드: 1개 성공 또는 최신, 0개 실패, 0개 건너뜀 ==========  
@@ -143,8 +143,8 @@ ms.locfileid: "50051016"
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 URL로 이동합니다.   
     **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어 다음과 같이 사용할 수 있습니다.   
-    `http://<server name>/reports`을 참조하세요.  
-    `http://localhost/reports`는 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
+    `https://<server name>/reports`을 참조하세요.  
+    `https://localhost/reports`는 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
 8.  보고서가 포함된 폴더로 이동합니다. 기본 이름은 프로젝트 이름인 *tutorial*또는 프로젝트 속성의 TargetReportFolder 필드에 입력한 이름입니다.   
 **Sales Orders** 보고서의 이름을 클릭하여 브라우저에서 렌더링된 보고서를 봅니다.  

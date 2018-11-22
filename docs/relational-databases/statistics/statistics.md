@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0180124c5904c6ea1020ad92337a566d8418651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697397"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47791481"
   
 ##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
 ### <a name="statistics"></a>통계  
- 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 BLOB(Binary Large Object) 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 조건자에 따라 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
+ 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 BLOB(Binary Large Object) 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티* 또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 쿼리 최적화 프로그램은 조건자에 따라 카디널리티 추정을 사용하여 리소스 집약적 Index Scan 연산자 대신 Index Seek 연산자를 선택할 수 있습니다. 이렇게 하면 쿼리 성능이 향상됩니다.  
   
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 *히스토그램*을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 
 
@@ -45,7 +45,7 @@ ms.locfileid: "47791481"
 **히스토그램**은 데이터 집합에서 각 고유 값의 발생 빈도를 측정합니다. 쿼리 최적화 프로그램은 행을 통계적으로 샘플링하거나 테이블 또는 뷰의 모든 행에 대해 전체 검색을 수행하는 방법으로 열 값을 선택하여 통계 개체의 첫 번째 키 열에 있는 열 값에 대한 히스토그램을 계산합니다. 샘플링된 행 집합으로 히스토그램을 만드는 경우 저장된 행 수의 합계와 고유 값의 수는 예상치이며 정수일 필요가 없습니다.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 히스토그램은 통계 개체의 키 열 집합에 있는 첫 번째 열의 단일 열에 대해서만 빌드됩니다.
+> <a name="frequency"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 히스토그램은 통계 개체의 키 열 세트에서 첫 번째 열인 단일 열에 대해서만 작성됩니다.
   
 쿼리 최적화 프로그램에서는 히스토그램을 만들기 위해 열 값을 정렬하고 고유한 각 열 값과 일치하는 값의 수를 계산한 다음 열 값을 최대 200개의 연속적인 히스토그램 단계로 집계합니다. 각 히스토그램 단계의 범위는 열 값에서 상한 열 값까지입니다. 범위는 경계 값 자체를 제외하고 경계 값 사이의 모든 가능한 열 값을 포함합니다. 정렬된 열 값 중 가장 낮은 값은 첫 번째 히스토그램 단계의 상한 값입니다.
 
@@ -70,12 +70,12 @@ ms.locfileid: "47791481"
 -   점선은 범위 내 고유 값의 총 개수(*distinct_range_rows*) 및 범위 내 값의 총 개수(*range_rows*)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 계산하며 샘플링된 값은 저장하지 않습니다.   
   
 #### <a name="density"></a>밀도 벡터  
-**밀도**는 주어진 열 또는 열의 조합에서 중복 수에 대한 정보이며 1/(고유 값 수)로 계산됩니다. 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 
+**밀도**는 주어진 열 또는 열의 조합에서 중복 수에 대한 정보이며 1/(고유 값 수)로 계산됩니다. 쿼리 최적화 프로그램은 같은 테이블 또는 인덱싱된 뷰에서 여러 열을 반환하는 쿼리의 카디널리티 예상치 정확도를 높이기 위해 밀도를 사용합니다. 밀도가 감소하면 값의 선택도가 증가합니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN의 밀도가 제조업체보다 낮으므로 VIN의 인덱스가 제조업체의 인덱스보다 더 선택적입니다. 
 
 > [!NOTE]
 > 빈도는 통계 개체의 첫 번째 키 열에서 각 고유 값의 항목에 대한 정보이며, 행 수 * 밀도로 계산됩니다. 최대 빈도 1은 고유 값이 있는 열에서 찾을 수 있습니다.
 
-예를 들어 통계 개체에 `CustomerId`, `ItemId`, `Price` 키 열이 있는 경우 다음의 각 열 접두사에 대해 밀도가 계산됩니다.
+밀도 벡터는 통계 개체에 있는 각 열 접두사당 한 개의 밀도를 포함합니다. 예를 들어 통계 개체에 `CustomerId`, `ItemId`, `Price` 키 열이 있는 경우 다음의 각 열 접두사에 대해 밀도가 계산됩니다.
   
 |열 접두사|밀도 계산 기준|  
 |---|---|
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * 통계 평가 시 테이블 카디널리티가 500 이하이면, 500개 수정 사항마다 업데이트합니다.
     * 통계 평가 시 테이블 카디널리티가 500 초과이면, 500+20%의 수정 사항마다 업데이트합니다.
 
-* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt(1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다.  
+* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다.  
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
@@ -121,7 +121,7 @@ ORDER BY s.name;
   
 AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 작성된 통계에 적용됩니다. 이 옵션은 또한 필터링된 통계에도 적용됩니다.  
  
-AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](http://support.microsoft.com/help/2754171)를 참조하세요.
+AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](https://support.microsoft.com/help/2754171)를 참조하세요.
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  비동기 통계 업데이트 옵션인 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)는 쿼리 최적화 프로그램이 동기 또는 비동기 통계 업데이트를 사용하는지를 결정합니다. 기본적으로 비동기 통계 업데이트 옵션은 OFF이며 쿼리 최적화 프로그램은 통계를 동기적으로 업데이트합니다. AUTO_UPDATE_STATISTICS_ASYNC 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 작성된 통계에 적용됩니다.  
@@ -273,7 +273,7 @@ GO
 
 ### <a name="automatic-index-and-statistics-management"></a>자동 인덱스 및 통계 관리
 
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
   
 ##  <a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
@@ -383,10 +383,10 @@ GO
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)   
- [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](http://support.microsoft.com/help/2754171)   
+ [SQL Server의 Autostat(AUTO_UPDATE_STATISTICS) 동작 제어](https://support.microsoft.com/help/2754171)   
  [STATS_DATE&#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
