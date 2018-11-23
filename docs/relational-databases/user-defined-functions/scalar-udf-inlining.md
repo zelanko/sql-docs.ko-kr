@@ -27,7 +27,7 @@ ms.locfileid: "51222109"
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 문서에서는 지능형 쿼리 처리 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 스칼라 UDF를 호출하는 쿼리 성능을 높입니다.
+이 문서에서는 지능형 쿼리 처리 기능 모음의 기능인 스칼라 UDF 인라인 처리를 소개합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 스칼라 UDF를 호출하는 쿼리 성능을 높입니다.
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 스칼라 사용자 정의 함수
 
