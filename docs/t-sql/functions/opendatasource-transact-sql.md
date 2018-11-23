@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name*은 기본값이 없는 **char** 데이터 형식입니다.  
   
  *init_string*  
- 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'**_키워드 1_=_값_ **;** _키워드 2_=_값_**'**  
+ 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'**_keyword1_=_value_ **;** _keyword2_=_value_**'**  
   
  공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서는 *init_string* 인수에 가장 자주 사용되는 키워드를 나열합니다.  
   
