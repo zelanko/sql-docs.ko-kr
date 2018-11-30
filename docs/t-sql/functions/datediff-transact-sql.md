@@ -69,7 +69,7 @@ DATEDIFF ( datepart , startdate , enddate )
 |**dayofyear**|**dy, y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
-|**hour**|**m**|  
+|**hour**|**hh**|  
 |**minute**|**mi, n**|  
 |**second**|**ss, s**|  
 |**millisecond**|**ms**|  
