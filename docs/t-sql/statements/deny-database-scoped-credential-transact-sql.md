@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bea99935468b3da3e2ca101a328df85c70a857a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4074d587bd170351c00a71bca81f6169b1cc021f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506105"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 데이터베이스 범위 자격 증명l(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  데이터베이스 범위 자격 증명에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ 데이터베이스 범위 자격 증명에서 **::**_credential_name_  
  사용 권한을 거부하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

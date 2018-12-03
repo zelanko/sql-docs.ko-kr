@@ -11,12 +11,12 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cc9e6673076cdbd071f2357ce1bd5c4d10c2092
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602513"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403178"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

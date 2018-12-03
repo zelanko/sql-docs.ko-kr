@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814096"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393339"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814096"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 파일에 대한 Word 렌더러를 정의합니다. WORD 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 버전을 정의합니다. `Visible = “false”` 는 Word 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.  
+ WORDOPENXML 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 파일에 대한 Word 렌더러를 정의합니다. WORD 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 버전을 정의합니다. `Visible = "false"` 는 Word 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word와 Word 2003 렌더러의 차이점  
  Word 또는 Word 2003 렌더러를 사용하여 렌더링된 보고서는 대개 시각적으로는 구분되지 않습니다. 그러나 Word 형식과 Word 2003 형식에는 약간의 차이점이 있습니다.  

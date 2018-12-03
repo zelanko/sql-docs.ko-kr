@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506977"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>조회 변환 전체 캐시 모드 - OLE DB 연결 관리자
   전체 캐시 모드와 OLE DB 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서는 조회 변환이 실행되기 전에 참조 데이터베이스가 캐시에 로드됩니다.  
@@ -46,17 +46,17 @@ ms.locfileid: "47616043"
   
 7.  **일치하는 항목이 없는 행 처리 방법 지정** 목록에서 일치하는 항목이 없는 행에 대한 오류 처리 옵션을 선택합니다.  
   
-8.  연결 페이지에서, **OLE DB 연결 관리자** 목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)을 참조하세요.  
+8.  연결 페이지에서, **OLE DB 연결 관리자** 목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
 9. 다음 태스크 중 하나를 수행합니다.  
   
     -   **테이블 또는 뷰 사용**을 클릭한 다음 테이블이나 뷰를 선택하거나, **새로 만들기** 를 클릭하여 테이블이나 뷰를 만듭니다.  
   
-         —또는—  
+         -또는-  
   
     -   **SQL 쿼리 결과 사용**을 클릭한 후 **SQL 명령** 창에서 쿼리를 작성하거나 **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 제공하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
     -   또는 **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   

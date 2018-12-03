@@ -11,12 +11,12 @@ ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 273a8d6893caf5552dc2945561e51cf4c5170f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e43274ff06c741252f5bd4926a8ff28ef82e1a9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783891"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412200"
 ---
 # <a name="setting-the-connection-properties"></a>연결 속성 설정
 
@@ -66,7 +66,7 @@ ms.locfileid: "47783891"
 | gsscredential<br/><br/>org.ietf.jgss.GSSCredential<br/><br/>null | SQL Server 용 Microsoft JDBC Driver 6.2부터,으로 Kerberos 제한 된 위임에 사용할 사용자 자격 증명은이 속성에 전달할 수 있습니다. <br/><br/>사용 하 여 사용 해야 **integratedSecurity** 으로 **true** 하 고 **JavaKerberos** **authenticationscheme**합니다. |
 | hostNameInCertificate<br/><br/>String<br/><br/>null | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사할 때 사용할 호스트 이름입니다.<br/><br/> hostNameInCertificate 속성이 지정되지 않았거나 null로 설정된 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 연결 URL의 **serverName** 속성 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사할 호스트 이름으로 사용합니다.<br/><br/> **참고:** 이 속성은 함께에서 사용 합니다 **암호화**/**authentication** 속성 및 **trustServerCertificate** 속성입니다. 이 속성은 연결에서 Secure Sockets Layer (SSL) 암호화를 사용 하는 경우에 인증서 유효성 검사를 적용 하며 **trustServerCertificate** "false"로 설정 됩니다. SSL 연결이 성공하려면 **hostNameInCertificate**에 전달된 값이 서버 인증서의 SAN(주체 대체 이름)에 있는 CN(일반 이름) 또는 DNS 이름과 정확히 일치하는지 확인하십시오. 자세한 내용은 [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)합니다. |
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름입니다. 지정하지 않으면 기본 인스턴스에 연결합니다. instanceName 및 포트를 모두 지정하는 경우에 대해서는 포트 관련 설명을 참조하십시오.<br/><br/> **Server** 연결 속성에 Virtual Network 이름을 지정하는 경우 **instanceName** 연결 속성을 사용할 수 없습니다. 참조 [High Availability, Disaster Recovery에 대 한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) 자세한 내용은 합니다. |
-| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | Windows 자격 증명으로 사용 됩니다 함을 나타내려면 "true"로 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 운영 체제입니다. "true"로 설정하는 경우 JDBC 드라이버는 컴퓨터 또는 네트워크 로그온 시 이미 제공된 자격 증명에 대해 로컬 컴퓨터 자격 증명 캐시를 검색합니다.<br/><br/> "True"로 설정 (사용 하 여 **authenticationscheme = JavaKerberos**)에서 Kerberos 자격 증명을 사용 하는 나타내기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. Kerberos 인증에 대 한 자세한 내용은 참조 하세요. [Kerberos 통합 인증을 사용 하려면 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)합니다. <br/><br/> "false"로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다. |
+| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | Windows 자격 증명으로 사용 됩니다 함을 나타내려면 "true"로 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 운영 체제입니다. "true"로 설정하는 경우 JDBC 드라이버는 컴퓨터 또는 네트워크 로그온 시 이미 제공된 자격 증명에 대해 로컬 컴퓨터 자격 증명 캐시를 검색합니다.<br/><br/> "True"로 설정 (사용 하 여 **authenticationscheme = JavaKerberos**)에서 Kerberos 자격 증명을 사용 하는 나타내기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. <br/><br/> "false"로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다. |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | SQL Server 용 Microsoft JDBC Driver 6.2부터, SQL Server에 연결할 때마다 Kerberos 연결을 설정 하는 자체 JAAS 로그인 구성 파일을 있을 수 있습니다. 이 속성을 통해 로그인 구성 파일의 이름을 전달할 수 있습니다. <br/> 기본적으로 드라이버 설정 속성 `useDefaultCcache = true` IBM Jvm에 대 한 및 `useTicketCache = true` 다른 Jvm에 대 한 합니다. |
 | KeyStoreAuthentication<br/><br/>String<br/><br/>null | SQL Server 용 Microsoft JDBC Driver 6.0부터,이 속성이 항상 암호화 된 연결에 원활 하 게 설정 하는 키 저장소를 식별 하 고 키 저장소에 인증 하는 데 사용 되는 인증 메커니즘을 결정 합니다. SQL Server 용 Microsoft JDBC Driver 6.0 설정을 지 원하는 구성의 Java 키 저장소를 원활 하 게 설정 해야이 속성을 사용 하 여 "**keyStoreAuthentication = JavaKeyStorePassword**"입니다. 참고는이 속성을 사용 하려면도 설정 해야 합니다 **keyStoreLocation** 하 고 **keyStoreSecret** Java 키 저장소에 대 한 속성입니다. <br/><br/>자세한 내용은 [JDBC Driver에서 Always Encrypted 사용](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. |
 | keyStoreLocation<br/><br/>String<br/><br/>null | 때 **keyStoreAuthentication = JavaKeyStorePassword**서 **keyStoreLocation** 상시 암호화와 함께 사용 될 열 마스터 키를 저장 하는 Java 키 저장소 파일의 경로를 식별 하는 속성 데이터입니다. 참고 경로 키 저장소 파일에 포함 되어야 합니다.<br/><br/>자세한 내용은 [JDBC Driver에서 Always Encrypted 사용](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. |

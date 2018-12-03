@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7fdccffc1ba4b2e1f0fc6c880fb605888e43abb9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603533"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410400"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -110,7 +110,7 @@ SQL Server 용 Microsoft JDBC Driver 6.0부터, 테이블 반환 매개 변수�
 ```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =
-    (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
+    (SQLServerPreparedStatement) connection.prepareStatement("INSERT INTO dbo.Categories SELECT * FROM ?");  
 pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);  
 pStmt.execute();  
 ```

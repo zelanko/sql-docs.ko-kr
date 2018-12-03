@@ -19,12 +19,12 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d0bca5ece051f8c208c9985e1601c5491e4413b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1edffab8e94c9ee171b3be4203d08b23df83452
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692901"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404448"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "47692901"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```    
 DROP EVENT SESSION event_session_name  
 ON SERVER  
 ```  
@@ -49,14 +48,14 @@ ON SERVER
  이벤트 세션을 삭제하면 대상 및 세션 매개 변수와 같은 모든 구성 정보가 완전히 제거됩니다.  
   
 ## <a name="permissions"></a>Permissions  
- ALTER ANY EVENT SESSION 권한이 필요합니다.  
+ `ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 이벤트 세션 삭제 방법을 보여 줍니다.  
+다음 예에서는 이벤트 세션 삭제 방법을 보여 줍니다.  
   
-```  
-DROP EVENT SESSION evt_spin_lock_diagnosis  
-ON SERVER;  
+```sql  
+DROP EVENT SESSION evt_spin_lock_diagnosis ON SERVER;
+GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  

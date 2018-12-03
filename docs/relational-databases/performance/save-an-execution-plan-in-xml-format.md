@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3237d32b7d76469667ad00ec30ed932f3f3d22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e986f251ad729d4110ec7eff21fe2b7e6ee0c5b
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827231"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302776"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47827231"
     GO  
     ```  
   
-     [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 설정하려면 다음 문을 사용합니다.  
+    [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 설정하려면 다음 문을 사용합니다.  
   
     ```sql  
     SET STATISTICS XML ON;  

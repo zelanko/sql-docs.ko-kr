@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68cdbca9db8c1495569c8b3688215616fe2ba33f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814166"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405900"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 모든 방법을 사용할 수는 없습니다. 다음 테이블에는 가능한 방법과 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "51814166"
 ```  
 #disable specific subscription  
 $rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
-$subscriptionID = "subscription guid”;  
+$subscriptionID = "subscription guid";  
 $rs2010.DisableSubscription($subscriptionID);  
   
 ```  

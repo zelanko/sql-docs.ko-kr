@@ -3,26 +3,24 @@ title: '자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | M
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571382"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302846"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +55,7 @@ Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티�
 -   저장소 계정  
 -   Azure Blob 컨테이너   
 -   SAS 정책    
+
 이 스크립트는 먼저 여러 변수를 선언하여 위 리소스의 이름 및 다음 필수 입력 값의 이름을 지정합니다.  
   
 -   기타 리소스 개체의 이름 지정에 사용되는 접두사 이름    

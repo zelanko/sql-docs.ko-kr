@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738311"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394016"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위
   식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "47738311"
      다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [첫 번째 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **도메인 범위** 동기화 범위라고도 하며, 중첩된 데이터 영역의 식 계산에 적용되는 데이터 범위 유형입니다. 도메인 범위는 중첩된 인스턴스를 맞추고 쉽게 비교할 수 있도록 모든 그룹 인스턴스에 걸쳐 집계를 지정하는 데 사용됩니다. 예를 들어 값이 정렬되도록 테이블에 포함된 스파크라인에 대해 범위와 높이를 맞출 수 있습니다.  

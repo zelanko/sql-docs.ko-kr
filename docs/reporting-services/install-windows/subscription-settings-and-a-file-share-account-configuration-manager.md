@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402118"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>구독 설정 및 파일 공유 계정(구성 관리자)
   **구성 관리자의** 구독 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정을 사용하면 보고서를 파일 공유로 전달하는 여러 구독에서 단일 자격 증명 집합을 사용할 수 있습니다. 자격 증명을 변경해야 하는 경우 파일 공유 계정에 대한 구성을 변경하면 각각의 개별 구독을 업데이트할 필요가 없습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813116"
 > [!IMPORTANT]
 > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정은 구독 배달을 제어하고 파일 공유 구독에서 사용되는 계정과 상호작용합니다. Windows 보안 기능은 1) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정 및 2) 파일 공유 계정에서 사용된 계정을 조합하여 사용할 수 없습니다. 예를 들어 기본 운영 체제 계정이 파일 공유 계정에서 사용된 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정은 가장 권한이 있는 다른 서비스 계정이어야 합니다. 명시적 파일 공유 계정 및 암호가 구성된 경우 파일 공유 계정은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 실행하는 컴퓨터에 로그온할 수 있는 권한이 있어야 합니다. 파일 공유 계정에 필수 권한이 없는 경우 파일 공유 계정을 사용하는 구독은 다음과 유사한 오류가 발생하여 실패합니다.  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>파일 공유 계정 사용을 감사하기 위한 PowerShell 샘플  
  다음 Windows PowerShell 스크립트를 실행하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 공유 계정 **을 사용하도록 구성된 모든**구독이 나열됩니다. `SERVERNAME` 을(를) 보고서 서버에 대한 적절한 값으로 업데이트합니다.  

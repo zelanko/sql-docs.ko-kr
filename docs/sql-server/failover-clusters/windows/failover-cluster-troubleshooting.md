@@ -14,12 +14,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b4cecedd4d58531017b8f7557515a61e7e07496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f6c458d34a5d42d0300441ee85c03a3bf4a04c3
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608401"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302816"
 ---
 # <a name="failover-cluster-troubleshooting"></a>장애 조치(Failover) 클러스터 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47608401"
   
 -   [Windows Server 2012 R2 기반 장애 조치(Failover) 클러스터의 권장 핫픽스 및 업데이트](https://support.microsoft.com/kb/2920151)  
   
--   [Windows Server 2012 기반 장애 조치(Failover) 클러스터의 권장 핫픽스 및 업데이트](https://support.microsoft.com/kb/278426)  
+-   [Windows Server 2012 기반 장애 조치(Failover) 클러스터의 권장 핫픽스 및 업데이트](https://support.microsoft.com/kb/2784261)  
   
 -   [Windows Server 2008 R2 기반 장애 조치(Failover) 클러스터의 권장 핫픽스 및 업데이트](https://support.microsoft.com/kb/980054)  
   

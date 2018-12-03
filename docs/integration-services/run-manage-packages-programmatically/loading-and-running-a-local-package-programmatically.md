@@ -21,12 +21,12 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b649bb7aceb199906c29ced140c566e944de6384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24c1d81d9bdeb290c95a8675b39964b8232d923d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506371"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
   [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 응용 프로그램, 콘솔 응용 프로그램, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 응용 프로그램에서 패키지를 실행할 수 있습니다.  
@@ -174,7 +174,7 @@ Class EventListener
     ByVal helpFile As String, ByVal helpContext As Integer, _  
     ByVal idofInterfaceWithError As String) As Boolean  
   
-    ' Add application–specific diagnostics here.  
+    ' Add application-specific diagnostics here.  
     Console.WriteLine("Error in {0}/{1} : {2}", source, subComponent, description)  
     Return False  
   

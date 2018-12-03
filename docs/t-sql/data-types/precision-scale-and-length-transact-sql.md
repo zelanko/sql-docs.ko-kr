@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507259"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ ms.locfileid: "47603521"
   
 \* 결과 전체 자릿수와 소수 자릿수의 최대값은 38입니다. 결과의 전체 자릿수가 38보다 크면 38로 줄어들고 결과의 정수 부분이 잘리지 않도록 해당 소수 자릿수가 줄어듭니다. 곱하기나 나누기 같은 일부의 경우에는 오버플로 오류가 발생할 수 있지만 소수점 이하 자릿수를 유지하기 위해 소수 자릿수가 줄어들지 않습니다.
 
-더하기 및 빼기 연산에서 10진수의 정수 부분을 저장할 `max(p1 – s1, p2 – s2)`개의 자릿수가 필요합니다. 예를 들어 `max(p1 – s1, p2 – s2) < min(38, precision) – scale`을 저장할 자릿수가 충분하지 않으면 소수 자릿수는 정수 부분에 충분한 자릿수를 제공하도록 줄어듭니다. 결과 소수 자릿수는 `MIN(precision, 38) - max(p1 – s1, p2 – s2)`이므로 소수 부분은 결과 소수 자릿수에 맞게 반올림될 수 있습니다.
+더하기 및 빼기 연산에서 10진수의 정수 부분을 저장할 `max(p1 - s1, p2 - s2)`개의 자릿수가 필요합니다. 예를 들어 `max(p1 - s1, p2 - s2) < min(38, precision) - scale`을 저장할 자릿수가 충분하지 않으면 소수 자릿수는 정수 부분에 충분한 자릿수를 제공하도록 줄어듭니다. 결과 소수 자릿수는 `MIN(precision, 38) - max(p1 - s1, p2 - s2)`이므로 소수 부분은 결과 소수 자릿수에 맞게 반올림될 수 있습니다.
 
 곱하기 및 나누기 연산에서 결과의 정수 부분을 저장하기 위해 `precision - scale`개의 자릿수가 필요합니다. 다음 규칙을 사용하여 소수 자릿수를 줄일 수 있습니다.
-1.  정수 부분이 32보다 작으면 결과적인 소수 자릿수가 `38 – (precision-scale)`보다 클 수 없으므로 `min(scale, 38 – (precision-scale))`로 줄어듭니다. 이 경우 결과가 반올림 될 수도 있습니다.
+1.  정수 부분이 32보다 작으면 결과적인 소수 자릿수가 `38 - (precision-scale)`보다 클 수 없으므로 `min(scale, 38 - (precision-scale))`로 줄어듭니다. 이 경우 결과가 반올림 될 수도 있습니다.
 1. 소수 자릿수가 6보다 작고 정수 부분이 32보다 큰 경우 소수 자릿수는 변경되지 않습니다. 이 경우 10진수(38, 소수 자릿수)에 맞지 않아 오버플로 오류가 발생할 수 있습니다. 
 1. 소수 자릿수가 6보다 크고 정수 부분이 32보다 큰 경우 소수 자릿수는 6으로 설정됩니다. 이 경우 정수 부분과 소수 자릿수 모두 줄어들 수도 있고 결과 형식은 10진수(38,6)입니다. 정수 부분이 32 자릿수에 맞지 않으면 결과가 소수점 이하 6 자리로 반올림되거나 오버플로 오류가 발생합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "47603521"
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 이 경우 전체 자릿수는 61이고 소수 자릿수는 40입니다.
-정수 부분(전체 자릿수-소수 자릿수 = 21)은 32보다 작으므로 곱하기 규칙에서 case(1)이고 소수 자릿수는 `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`로 계산됩니다. 결과 형식은 `decimal(38,17)`입니다.
+정수 부분(전체 자릿수-소수 자릿수 = 21)은 32보다 작으므로 곱하기 규칙에서 case(1)이고 소수 자릿수는 `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`로 계산됩니다. 결과 형식은 `decimal(38,17)`입니다.
 
 다음 식은 결과 `0.000001`을 `decimal(38,6)`에 맞게 반환합니다.
 ```sql

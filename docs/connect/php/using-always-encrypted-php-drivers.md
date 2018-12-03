@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403428"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 다음 예제에서는 SQLSRV 및 PDO_SQLSRV 드라이버를 사용 하 여 암호화 된 열에서 일반 텍스트 데이터를 검색 하 고 암호화 된 값에 따라 데이터 필터링을 보여 줍니다. 다음 사항을 note 합니다.
  -   해당 드라이버가 서버로 전달하기 전에 투명하게 암호화할 수 있도록 바인딩 매개 변수를 사용하여 SSN 열에서 필터링하기 위해 WHERE 절에 사용되는 값을 전달해야 합니다.
  -   바인딩된 매개 변수를 사용 하 여 쿼리를 실행할 때 SQLSRV 드라이버를 사용 하는 경우 명시적으로 사용자 SQL 형식을 지정 하지 않은 경우 PHP 드라이버를 자동으로 사용자에 대 한 SQL 형식을 결정 합니다.
- -   프로그램이 인쇄 하는 모든 값은 드라이버 SSN 및 BirthDate 열에서 검색 한 데이터를 투명 하 게 해독 하므로 일반 텍스트입니다.
+ -   이 드라이버는 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄한 모든 값은 일반 텍스트로 표시됩니다.
  
 참고: 쿼리 같음 비교 암호화 된 열에 대해서만 실행할 수는 결정적 암호화. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
 

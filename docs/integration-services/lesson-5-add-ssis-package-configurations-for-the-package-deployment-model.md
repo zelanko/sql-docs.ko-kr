@@ -11,12 +11,12 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7bf78e034a998b8b6123c11f9d512e4f1232a44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 424ec0d1cc37cab9791497ce9dede701ccdc3451
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639800"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302426"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>5단원: 패키지 배포 모델을 위한 SSIS 패키지 구성 추가
 패키지 구성을 사용하면 개발 환경 외부에서 런타임 속성과 변수를 설정할 수 있습니다. 구성을 통해 쉽고 유연하게 배포할 수 있는 패키지를 개발할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음과 같은 구성 유형을 제공합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "51639800"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table  
   
-이 단원에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가 [에서 만든 간단한](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md) 패키지를 수정하여 패키지 배포 모델을 사용하고 패키지 구성을 활용합니다. 또한 자습서에 포함된 완료된 4단원 패키지를 복사할 수도 있습니다. 패키지 구성 마법사를 통해 Directory 속성에 매핑된 패키지 수준 변수를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성을 업데이트하는 XML 구성을 만듭니다. 구성 파일을 생성했으면 개발 환경 외부에서 변수 값을 수정하고 수정된 속성을 새 예제 데이터 폴더로 지정합니다. 패키지를 다시 실행하면 구성 파일이 변수 값을 채우고 해당 변수가 **Directory**속성을 업데이트합니다. 결과적으로 패키지는 패키지에 하드 코드된 원래 폴더의 파일이 아니라 새 데이터 폴더의 파일을 반복 처리합니다.  
+이 단원에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가 [에서 만든 간단한](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md) 패키지를 수정하여 패키지 배포 모델을 사용하고 패키지 구성을 활용합니다. 또한 자습서에 포함된 완료된 4단원 패키지를 복사할 수도 있습니다. 패키지 구성 마법사를 통해 Directory 속성에 매핑된 패키지 수준 변수를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성을 업데이트하는 XML 구성을 만듭니다. 구성 파일을 생성했으면 개발 환경 외부에서 변수 값을 수정하고 수정된 속성을 새 예제 데이터 폴더로 지정합니다. 패키지를 다시 실행하면 구성 파일이 변수 값을 채우고 해당 변수가 **Directory** 속성을 업데이트합니다. 결과적으로 패키지는 패키지에 하드 코드된 원래 폴더의 파일이 아니라 새 데이터 폴더의 파일을 반복 처리합니다.  
   
 > [!IMPORTANT]  
 > 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하십시오.  

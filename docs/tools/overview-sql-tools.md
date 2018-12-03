@@ -1,7 +1,7 @@
 ---
 title: SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292979"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190993"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51292979"
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** 는 여러 데이터베이스 개발 태스크를 자동화 하는 명령줄 유틸리티입니다. macOS 및 Linux 버전의 sqlpackage는 현재 미리 보기. | Windows, macOS 및 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** SQL을 사용 하 여 작업에 대 한 cmdlet을 제공 합니다.| Windows, macOS 및 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 명령 프롬프트에서 스크립트 파일을 입력 합니다. | Windows, macOS 및 Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|**대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다.|Windows, macOS 및 Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다.|Windows, macOS 및 Linux|
 |[**mssql-scripter (미리 보기)**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter** 은 SQL Server 데이터베이스를 스크립팅 하는 것에 대 한 다중 플랫폼 명령줄 환경|Windows, macOS 및 Linux|
 |[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux에서 실행 중인 SQL Server를 구성 합니다.|Linux|
 

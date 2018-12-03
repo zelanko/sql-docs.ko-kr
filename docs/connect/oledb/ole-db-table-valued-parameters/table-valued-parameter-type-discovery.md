@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8e4da9d25a5d23e81e1d5dd44becd17e26263338
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: aab78327d575858675ade3bbc5d652cce5db12a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558320"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506254"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>테이블 반환 매개 변수 형식 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571213"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302687"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51571213"
 - [추가 연결 권한 부여](#additional) 
 
 ## <a name="tools">시작 도구</a> 
- - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 다양한 도구와 함께 제공됩니다. 이 항목에서는 이 중 가장 필요한 도구를 설명하고 작업에 적합한 도구를 선택할 수 있도록 도움을 줍니다. 모든 도구는 **시작** 메뉴에서 액세스할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 같은 일부 도구는 기본적으로 설치되지 않으며 설치하는 동안 클라이언트 구성 요소의 일부로 해당 도구를 선택해야 합니다. 아래에서 설명하는 도구에 대한 전체 설명을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에서 검색하세요. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 에는 이러한 도구의 일부만 포함되어 있습니다.  
+- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 다양한 도구와 함께 제공됩니다. 이 항목에서는 이 중 가장 필요한 도구를 설명하고 작업에 적합한 도구를 선택할 수 있도록 도움을 줍니다. 모든 도구는 **시작** 메뉴에서 액세스할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 같은 일부 도구는 기본적으로 설치되지 않으며 설치하는 동안 클라이언트 구성 요소의 일부로 해당 도구를 선택해야 합니다. 아래에서 설명하는 도구에 대한 전체 설명을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에서 검색하세요. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 에는 이러한 도구의 일부만 포함되어 있습니다.  
 
 ### <a name="basic-tools"></a>기본 도구
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. SSMS는 [Microsoft 다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 무료로 다운로드할 수 있습니다. 이전 버전의 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]에서 최신 버전을 사용할 수 있습니다.  
@@ -45,10 +45,10 @@ ms.locfileid: "51571213"
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 시작하려면  
 - 현재 버전의 Windows에서는 **시작** 페이지에 **구성 관리자**을 차례로 가리킨 다음 **SQL Server *version* 구성 관리자**에서 무료로 다운로드할 수 있습니다.   
- -- 이전 버전의 Windows를 사용하는 경우 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
- -  
+- 이전 버전의 Windows를 사용하는 경우 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
+
 ## <a name="connect"></a>Management Studio로 연결  
- - 인스턴스 이름을 알고 있으며 컴퓨터의 로컬 관리자 그룹 멤버로 연결하는 경우에는 동일한 컴퓨터에서 실행하는 도구의 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 쉽게 연결할 수 있습니다. 다음 절차는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 호스팅하는 컴퓨터에서 수행해야 합니다.  
+- 인스턴스 이름을 알고 있으며 컴퓨터의 로컬 관리자 그룹 멤버로 연결하는 경우에는 동일한 컴퓨터에서 실행하는 도구의 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 쉽게 연결할 수 있습니다. 다음 절차는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 호스팅하는 컴퓨터에서 수행해야 합니다.  
 
 > [!NOTE]  
 > 이 항목에서는 온-프레미스 SQL Server에 연결하는 방법을 설명합니다. Azure SQL Database에 연결하려면 [SQL Server Management Studio를 사용하여 SQL Database에 연결 및 샘플 T-SQL 쿼리 실행](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/)을 참조하세요.  

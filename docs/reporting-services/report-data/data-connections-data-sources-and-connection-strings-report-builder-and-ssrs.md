@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9294579f338034ae7082f8fe05960af4e3a4fc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814016"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394035"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "51814016"
 |Azure SQL 데이터베이스|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형을 **Microsoft Azure SQL Database**로 설정합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 병렬 데이터 웨어하우스|`HOST=<IP address>;database= AdventureWorks; port=<port>`|데이터 원본 유형을 **Microsoft SQL Server Parallel Data Warehouse**로 설정합니다. 자세한 내용은 [SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)을 참조하세요.|  
 |로컬 서버의 Analysis Services 데이터베이스|`data source=localhost;initial catalog=Adventure Works DW`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 또는 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.|  
-|Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.|  
+|Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.|  
 |기본 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다. 자세한 내용은 [보고서 모델 연결&#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)을 참조하세요.|  
 |SharePoint 통합 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|데이터 원본 유형으로 **OLE DB Provider for OLAP Services 8.0**을 설정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 속성을 **8.0** 으로 설정하면 **2000**데이터 원본에 보다 빠르게 연결할 수 있습니다. 이 속성을 설정하려면 **연결 속성** 대화 상자의 **고급 속성** 탭을 사용합니다.|  

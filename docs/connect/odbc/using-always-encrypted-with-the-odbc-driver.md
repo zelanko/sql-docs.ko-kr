@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506834"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 
 드라이버가 다음 자격 증명 형식을 사용 하 여 Azure Key Vault에 인증을 지원 합니다.
 
-- 사용자 이름/암호 –이 메서드를 사용 하 여 자격 증명이 Azure Active Directory 사용자 및 해당 암호의 이름입니다.
+- 사용자 이름/암호-이 메서드를 사용 하 여 자격 증명이 Azure Active Directory 사용자 및 해당 암호의 이름입니다.
 
-- 클라이언트 I d/비밀 –이 메서드를 사용 하 여 자격 증명은 응용 프로그램 클라이언트 ID 및 응용 프로그램 비밀입니다.
+- 클라이언트 I d/비밀-이 메서드를 사용 하 여 자격 증명은 응용 프로그램 클라이언트 ID 및 응용 프로그램 비밀입니다.
 
 열 암호화에 대 한 AKV에 저장 된 Cmk를 사용 하는 드라이버를 허용 하려면 다음 연결 문자열 전용 키워드를 사용 합니다.
 

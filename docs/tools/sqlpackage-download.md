@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050925"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396318"
 ---
 # <a name="download-and-install-sqlpackage"></a>다운로드 및 설치 sqlpackage
 
@@ -26,8 +26,8 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 |플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 년 10 월 24 일|18.0|15.0.4200.1|
-|macOS (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=873927)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
-|Linux(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=873926)|2018 년 5 월 9 일 |0.0.1|15.0.4057.1|
+|macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 년 11 월 15 일 | - |13.0.0.0|
+|.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 년 11 월 15 일 | - |13.0.0.0|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
 
@@ -42,7 +42,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Macos (미리 보기) sqlpackage 가져오기
 
-1. 다운로드 [macOS 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=873927)합니다.
+1. 다운로드 [macOS 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044514)합니다.
 2. 파일을 추출할 sqlpackage 시작을 새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    **.zip 설치:**
@@ -57,7 +57,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Linux (미리 보기) sqlpackage 가져오기
 
-1. 다운로드 [Linux 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=873926) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여:
+1. 다운로드 [Linux 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044263) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여:
 2. 파일을 추출할 sqlpackage 시작을 새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    **.zip 설치:**

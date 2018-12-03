@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671221"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504052"
 ---
 # <a name="secure-the-subscriber"></a>구독자 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671221"
  자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 및 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. 각 구독자에서 구성한 계정에 이름이 **syncobj_***\<HexadecimalNumber>* 형식으로 지정된 게시 데이터베이스의 뷰에 대한 사용 권한을 부여합니다.  
+>  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. 각 구독자에서 구성한 계정에 이름이 **syncobj_**_\<HexadecimalNumber>_ 형식으로 지정된 게시 데이터베이스의 뷰에 대한 사용 권한을 부여합니다.  
   
 ## <a name="queued-updating-subscriptions"></a>지연 업데이트 구독  
  지연 업데이트 구독 구성 시 보안과 관련된 다음 두 가지 영역을 유의하십시오.  
