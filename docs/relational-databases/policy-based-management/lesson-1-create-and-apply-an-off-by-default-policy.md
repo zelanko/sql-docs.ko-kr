@@ -3,20 +3,20 @@ title: '1단원: Off By Default 정책 만들기 및 적용 | Microsoft 문서'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
+ms.technology: security
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b5d665bc5f97bf43c74bbe2f24875c3917b139f3
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512718"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158625"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>1단원: Off By Default 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
