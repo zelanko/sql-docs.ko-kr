@@ -11,12 +11,12 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 295d4b7867c8ed51822080d03489643d69f68f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735462"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396337"
 ---
 # <a name="understanding-cursor-types"></a>커서 유형 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47735462"
 -   결과 집합에 나타난 데이터베이스 데이터에 대해 다른 사용자가 변경한 내용을 여러 가지 수준으로 볼 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서 유형에 대한 자세한 설명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “커서 유형(데이터베이스 엔진)” 항목을 참조하십시오.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서 유형에 대한 자세한 설명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "커서 유형(데이터베이스 엔진)" 항목을 참조하십시오.  
   
  JDBC 사양은 정방향 전용 커서 및 스크롤 가능 커서를 지원합니다. 이러한 커서는 다른 작업으로 인한 변경 사항을 감지하거나 감지하지 못하며 읽기 전용이거나 업데이트 가능합니다. 이 기능은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)][SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스에서 제공됩니다.  
   
