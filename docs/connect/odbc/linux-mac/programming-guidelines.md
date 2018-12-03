@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9a8fa77ed1819d22eb90ea4fb0a7308122f708e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522950"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -123,7 +123,7 @@ ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 �
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 및 **호스트,포트**를 사용하여 DAC(관리자 전용 연결)를 만들 수 있습니다. Sysadmin 역할의 멤버는 먼저 DAC 포트를 검색해야 합니다. 참조 [데이터베이스 관리자를 위한 진단 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) 를 검색 하는 방법입니다. 예를 들어 DAC 포트가 33000인 경우 다음과 같이 `sqlcmd`로 연결할 수 있습니다.  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  
