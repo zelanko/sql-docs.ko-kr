@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677302"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711594"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "51677302"
 |7|DATABASE_SNAPSHOT_CREATION|데이터베이스 스냅숏이 생성되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |8|LOG_SCAN|로그 검색이 수행되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.|  
-|10|—|내부용으로만 사용할 수 있습니다.|  
-|11|—|내부용으로만 사용할 수 있습니다.|  
-|12|—|내부용으로만 사용할 수 있습니다.|  
+|10|-|내부용으로만 사용할 수 있습니다.|  
+|11|-|내부용으로만 사용할 수 있습니다.|  
+|12|-|내부용으로만 사용할 수 있습니다.|  
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 [로그 시퀀스 번호(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
   
@@ -158,17 +158,17 @@ ms.locfileid: "51677302"
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 새 힙 다시 빌드(해당 사항이 있을 경우) `DROP INDEX` 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **트랜잭션 로그 관리**  
+**트랜잭션 로그 관리**  
   
 -   [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **트랜잭션 로그 백업(전체 복구 모델)**  
+**트랜잭션 로그 백업(전체 복구 모델)**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **트랜잭션 로그 복원(전체 복구 모델)**  
+**트랜잭션 로그 복원(전체 복구 모델)**  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

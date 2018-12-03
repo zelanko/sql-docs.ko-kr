@@ -5,19 +5,18 @@ ms.date: 10/12/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bcfba99d057c616f279423721cce50bad26638ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3392f524dff3c237912a7564e083a3cb7ecdd0ed
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695551"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617183"
 ---
 # <a name="data-quality-services"></a>데이터베이스 엔진 서비스
 
