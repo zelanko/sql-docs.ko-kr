@@ -78,7 +78,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event(7.0 Insert)|SELECT, INSERT 또는 UPDATE 문이 실행되기 전에 발생합니다.|  
 |29-31|예약됨|이벤트 28을 대신 사용합니다.|  
 |32|예약됨|예약됨|  
-|33|예외|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
+|33|Exception|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
 |34|SP:CacheMiss|저장 프로시저가 프로시저 캐시에서 발견되지 않는 때를 나타냅니다.|  
 |35|SP:CacheInsert|항목이 프로시저 캐시에 삽입되는 때를 나타냅니다.|  
 |36|SP:CacheRemove|항목이 프로시저 캐시에서 제거되는 때를 나타냅니다.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정한 시간을 나타냅니다.|  
 |213|Database Suspect Data Page|페이지에 추가 되었음을 나타냅니다 합니다 **suspect_pages** 테이블의 **msdb**합니다.|  
 |214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지하는 시간을 나타냅니다.|  
-|215|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|  
+|215|PreConnect:Starting|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|  
 |216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 완료하는 시간을 나타냅니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
@@ -258,26 +258,26 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
-|13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
+|13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
 |15|**EndTime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 채워지지도 합니다 **Hash Warning** 이벤트입니다.|  
 |16|**Reads**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열이 채워져 있지 합니다 **잠금: 출시** 이벤트입니다.|  
 |17|**Writes**|이벤트 대신 서버에서 수행한 물리적 디스크 쓰기 수입니다.|  
 |18|**CPU**|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
-|19|**사용 권한**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
+|19|**Permissions**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
 |20|**Severity**|예외적인 심각도입니다.|  
 |21|**EventSubClass**|이벤트 하위 클래스의 유형입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
 |22|**Exchange Spill**|시스템이 할당한 개체의 ID입니다.|  
-|23|**성공**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
+|23|**Success**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
 |24|**IndexID**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |25|**IntegerData**|추적에서 캡처된 이벤트 클래스에 의존하는 정수 값입니다.|  
-|26|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 *servername* 또는 *servername\instancename*를 추적 합니다.|  
+|26|**ServerName**|인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 *servername* 또는 *servername\instancename*를 추적 합니다.|  
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
 |29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. 참조 [@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)합니다.|  
 |30|**State**|오류 발생 시의 서버 상태입니다.|  
-|31|**오류**|오류 번호입니다.|  
-|32|**모드**|획득된 잠금의 잠금 모드입니다. 이 열이 채워져 있지 합니다 **잠금: 출시** 이벤트입니다.|  
+|31|**Error**|오류 번호입니다.|  
+|32|**Mode**|획득된 잠금의 잠금 모드입니다. 이 열이 채워져 있지 합니다 **잠금: 출시** 이벤트입니다.|  
 |33|**Handle**|이벤트에 참조된 개체의 핸들입니다.|  
 |34|**ObjectName**|액세스된 개체의 이름입니다.|  
 |35|**DatabaseName**|사용 하 여 지정 된 데이터베이스의 이름을 *데이터베이스* 문입니다.|  
@@ -302,7 +302,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |55|**IntegerData2**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |56|**ObjectID2**|관련 개체 또는 엔터티의 ID입니다(사용 가능한 경우).|  
-|57|**형식**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
+|57|**Type**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |58|**OwnerID**|잠금을 소유하는 개체의 유형입니다. 잠금 이벤트 전용입니다.|  
 |59|**ParentName**|개체가 포함된 스키마의 이름입니다.|  
 |60|**IsSystem**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> **1** = 시스템<br /><br /> **0** = 사용자입니다.|  
@@ -312,13 +312,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
   
  **[ @on=]** *on*  
- 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *온* 됩니다 **비트**, 기본값은 없습니다.  
+ 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *on*은 **비트** 형식입니다. 기본값은 없습니다.  
   
- 경우 *온* 로 설정 된 **1**, 및 *column_id* 가 null 인 경우 이벤트가 ON으로 설정 되 고 모든 열이 지워집니다. 하는 경우 *column_id* 가 null이 열은 해당 이벤트에 대 한 ON으로 설정 합니다.  
+ *on*이 **1**로 설정되고 *column_id* 가 null 인 경우, 이벤트는 ON으로 설정되며 모든 열이 지워집니다. *column_id* 가 null인 경우, 해당 이벤트에 대한 열은 ON으로 설정됩니다.  
   
- 하는 경우 *에* 로 설정 된 **0**, 및 *column_id* 가 NULL 이면 이벤트 꺼져 OFF 고 모든 열이 지워집니다. 하는 경우 *column_id* 열 설정는 null이 아니면 OFF입니다.  
+ *on*이 **0**로 설정되고 *column_id* 가 NULL 인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id* 가 null이 아니면, 열은 OFF로 설정됩니다.  
   
- 이 테이블 간의 상호 작용을 보여 줍니다 **@on** 하 고 **@columnid**합니다.  
+ 이 테이블 간의 **@on**과 **@columnid** 간의 상호 작용을 보여 줍니다.  
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -343,7 +343,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_trace_setevent** 대부분의 이전 버전에서 사용할 수 있는 확장된 저장된 프로시저가 실행 하 던 작업의 수행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 **sp_trace_setevent** 다음 대신:  
+ **sp_trace_setevent** 는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있었던 확장 저장 프로시저가 실행했던 많은 작업을 수행합니다. 다음 대신 **sp_trace_setevent** 를 사용합니다:  
   
 -   **xp_trace_addnewqueue**  
   
@@ -351,9 +351,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자가 실행 해야 합니다 **sp_trace_setevent** 각 이벤트에 대 한 추가 된 각 열에 대 한 합니다. 각 실행 하는 동안 경우 **@on** 로 설정 되어 **1**를 **sp_trace_setevent** 추적의 이벤트 목록에 지정된 된 이벤트를 추가 합니다. 하는 경우 **@on** 로 설정 되어 **0**를 **sp_trace_setevent** 목록에서 지정된 된 이벤트를 제거 합니다.  
+ 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on**이 **1**로 설정된 경우 sp_trace_setevent는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on**이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다. 
   
- 프로시저를 저장 하는 모든 SQL 추적의 매개 변수 (**sp_trace_xx**) 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
+ 모든 SQL Trace 저장 프로시저 (**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한 대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
