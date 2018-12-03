@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521486"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  이것은 생성된 해당 XML입니다. 인라인 XSD의 일부만 표시됩니다.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -279,7 +279,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`Price`> 요소에 대해 `xsi:nil` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `nillable` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`Price`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -335,7 +335,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  다음은 결과입니다. 인라인 XSD 스키마의 조각만 표시됩니다.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -404,7 +404,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  다음 쿼리에서 Col2 및 Col3에는 같은 별칭이 지정됩니다. 이 쿼리는 이름이 같고 결과에서 모두 <`raw`> 요소의 자식인 두 개의 형제 요소를 생성합니다. 이 열은 모두 유형이 다르며 모두 NULL일 수 있습니다. 다음은 결과입니다. 인라인 XSD 스키마의 일부만 표시됩니다.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
