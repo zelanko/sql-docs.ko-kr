@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658532"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543844"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 내부 `SELECT … FOR XML` 쿼리는 외부 `SELECT`가 `query()` 메서드를 **xml** 유형에 적용하는 **xml** 유형 결과를 반환합니다. 지정된 `TYPE` 지시어에 유의하십시오.  
+ 내부 `SELECT ... FOR XML` 쿼리는 외부 `SELECT`가 `query()` 메서드를 **xml** 유형에 적용하는 **xml** 유형 결과를 반환합니다. 지정된 `TYPE` 지시어에 유의하십시오.  
   
  다음은 결과입니다.  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 다음 쿼리에서는 **xml** 데이터 형식의 `value()` 메서드를 사용하여 `SELECT…FOR XML` 쿼리가 반환한 XML 결과에서 값을 검색합니다. 자세한 내용은 [value&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/value-method-xml-data-type.md)를 참조하세요.  
+ 다음 쿼리에서는 **xml** 데이터 형식의 `value()` 메서드를 사용하여 `SELECT...FOR XML` 쿼리가 반환한 XML 결과에서 값을 검색합니다. 자세한 내용은 [value&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/value-method-xml-data-type.md)를 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
