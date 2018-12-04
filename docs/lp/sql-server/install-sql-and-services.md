@@ -6,12 +6,12 @@ description: SQL Server 및 관련 서비스를 설치하거나 업그레이드�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: be4c1d4fed73718c0a2aa7e5d386613444c3072d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697941"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402086"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -154,7 +154,7 @@ ms.locfileid: "51697941"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>SSRS(SQL Server Reporting Services) 설치</h3>
-                                                    <p>보고서를 만들고, 게시하고, 관리한 다음, 웹 브라우저에서 보거나, 모바일 장치에서 보거나, 받은 편지함에서 메일로 보는지에 관계없이 다양한 방식으로 적절한 사용자에게 제공하기 위한 솔루션입니다. </p>
+                                                    <p>보고서를 만들고, 게시하고, 관리한 다음, 웹 브라우저에서 보거나, 모바일 디바이스에서 보거나, 받은 편지함에서 이메일로 보는지에 관계없이 다양한 방식으로 적절한 사용자에게 제공하기 위한 솔루션입니다. </p>
                                                 </div>
                                             </div>
                                         </div>
