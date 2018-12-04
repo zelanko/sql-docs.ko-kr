@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537598"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635441"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행합니다.  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635441"
     -   SQL 추적 열이 확장 이벤트의 이벤트와 관련된 데이터 필드 중 하나에 매핑되어 있습니다.  
   
         > [!NOTE]  
-        >  확장 이벤트의 각 이벤트에는 결과 집합에 자동으로 포함되는 기본 데이터 필드 집합이 있습니다.  
+        > 확장 이벤트의 각 이벤트에는 결과 집합에 자동으로 포함되는 기본 데이터 필드 집합이 있습니다.  
   
     -   동작 열에 의미 있는 확장 이벤트 해당 항목이 없습니다. 예를 들어 SQL 추적의 EventClass 열이 이러한 경우에 해당합니다. 이벤트 이름이 동일한 용도로 사용되므로 이 열은 확장 이벤트에 필요하지 않습니다.  
   

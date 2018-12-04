@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a2b2d16b5815a665e718e16fb04f74ff408fefae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527588"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
   SharePoint 통합 모드에서 실행 중인 보고서 서버에 공유 데이터 원본을 게시하려면 보고서 디자이너에서 보고서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "51812816"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 기존 또는 새로운 보고서 서버 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. *\<프로젝트>***속성 페이지** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. _\<프로젝트>_**속성 페이지** 대화 상자가 열립니다.  
   
 3.  SharePoint 사이트에 게시하는 데 사용할 **구성** 을 선택합니다(예:  
   

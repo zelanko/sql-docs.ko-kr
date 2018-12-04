@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 20b127cc0eccdf98ef81e8f7df476a78b69eca02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbf1a69df5326f12511976d079289195c97c4f57
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855743"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641084"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;
   
 ## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DBCC FREEPROCCACHE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
+[DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)
   

@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628661"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509218"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
   부분 캐시 또는 캐시 없음 모드를 사용하여 조회 변환을 구성할 수 있습니다.  
@@ -61,11 +61,11 @@ ms.locfileid: "47628661"
   
     -   **SQL 쿼리 결과 사용**을 클릭한 다음 **SQL 명령** 창에 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
          **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 공급하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
          **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   

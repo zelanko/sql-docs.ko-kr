@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - log files,advanced settings
@@ -15,12 +14,12 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f87f2bc3329122a441906cec5bcf164d2743fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cead3d9d41c8f54aca9d2c7cc9c1e0498dd58753
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770201"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617393"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
 
@@ -31,7 +30,7 @@ ms.locfileid: "47770201"
 > [!NOTE]  
 >  이러한 작업은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 수행할 수 없으며 고급 사용자 전용입니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   

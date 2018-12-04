@@ -18,12 +18,12 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390015877bc930ec70b2b858e077baa5ce920fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b88fa209dba54482de1e113b7b7ee81528b43ab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519781"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 유형 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  유형에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  사용 권한을 거부할 유형을 지정합니다. 범위 한정자(**::**)가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자(**.**)가 필요합니다.  
   
  TO \<database_principal>  

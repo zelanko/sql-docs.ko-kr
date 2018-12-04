@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f962317b7695d705d64652d6a5fa43db774802d2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6851ae0f1ff4f5e65ce74db7f351deb3127a1a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515212"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ELSE
  더 많은 예제를 보려면 [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `IF…ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
+ 다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```  
 -- Uses AdventureWorksDW  

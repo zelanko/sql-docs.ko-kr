@@ -26,12 +26,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dee6642a83eb56445d9c951e695d960e0358e9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e70357c54b30d657eb773913abf19d7fbe78385
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533030"
 ---
 # <a name="backup-devices-sql-server"></a>백업 장치(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47777411"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
@@ -81,7 +81,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  예:  
   
@@ -98,7 +98,7 @@ RESTORE DATABASE AdventureWorks2012
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -117,7 +117,7 @@ GO
     > **중요!** 네트워크를 통해 데이터를 백업하면 네트워크 오류가 발생하기 쉬우므로 원격 디스크를 사용하는 경우 완료 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요.  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC(범용 명명 규칙) 이름 지정  
- 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 장치에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* 형식입니다.  
+ 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 장치에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_.  
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
@@ -147,7 +147,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
@@ -161,7 +161,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 테이프와 관련된 BACKUP 및 RESTORE 옵션(Transact-SQL)  
  테이프를 편리하게 관리할 수 있도록 BACKUP 문은 다음과 같은 테이프 관련 옵션을 제공합니다.  
@@ -179,7 +179,7 @@ GO
 ###  <a name="OpenTapes"></a> 열려 있는 테이프 관리  
  열려 있는 테이프 장치 목록 및 탑재 요청 상태를 보려면 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 동적 관리 뷰를 쿼리합니다. 이 뷰는 다음 BACKUP 또는 RESTORE 작업을 기다리는 동안 일시적으로 유휴 상태에 있는 사용 중인 테이프를 비롯하여 열려 있는 모든 테이프를 표시합니다.  
   
- 테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 RESTORE REWINDONLY FROM TAPE **=***backup_device_name* 명령을 사용할 수 있습니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
+ 테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 다음 명령을 사용할 수 있습니다. RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage 서비스 사용  

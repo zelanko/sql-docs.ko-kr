@@ -5,19 +5,18 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 679cb9b7ba6b6a3019c1037017ee1b9aa27ecf00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a1ad8c326dc6fe221777136edcb01a9b9aa1af
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743113"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617493"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
 
@@ -25,7 +24,7 @@ ms.locfileid: "47743113"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 관리 기능을 수행하는 방법에 대해 설명합니다. 기술 자료에 대해 삭제, 잠금 해제, 작업 취소, 이름 바꾸기 및 속성 표시 기능을 수행할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  기술 자료를 관리하려면 기술 자료가 이미 생성되어 있고 게시되었거나(다른 사람이 생성한 경우) 닫혀 있어야 합니다(본인이 생성한 경우).  

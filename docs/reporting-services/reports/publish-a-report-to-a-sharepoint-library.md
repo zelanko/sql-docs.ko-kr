@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 7043001ee9942ec1e99e329209b56a670274b2ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814286"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527560"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint 라이브러리에 보고서 게시
   SharePoint 통합용으로 구성된 SharePoint 사이트에 보고서를 게시하려면 보고서 디자이너에서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다. 보고서 정의에서 하위 보고서, 드릴스루 보고서 및 리소스(예: 웹 기반 이미지)에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "51814286"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 기존 또는 새로운 보고서 서버 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. *\<프로젝트>***속성 페이지** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. _\<프로젝트>_**속성 페이지** 대화 상자가 열립니다.  
   
 3.  **구성** 목록에서 보고서를 작성 및 게시하는 데 사용할 솔루션 빌드 구성의 이름을 선택합니다. 현재 구성은 **활성**(*\<configuration>*)으로 나열됩니다.  
   

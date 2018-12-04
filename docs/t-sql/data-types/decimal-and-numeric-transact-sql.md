@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c56435e2b0b576ae33ddb00f631fde8dee608ff7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 0e487b66d13b4dcaba83219cc1fa6edf8eadc37d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530018"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "50970457"
 전체 자릿수와 소수 자릿수가 고정된 숫자 데이터 형식입니다. decimal과 numeric은 동의어이며 서로 대체해 사용할 수 있습니다.
   
 ## <a name="arguments"></a>인수  
-**decimal**[ **(***p*[ **,***s*] **)**] 및 **numeric**[ **(***p*[ **,***s*] **)**]  
-고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(***p*,*s***)** 입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
+**decimal**[ **(**_p_[ **,**_s_] **)**] 및 **numeric**[ **(**_p_[ **,**_s_] **)**]  
+고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(**_p_, _s_**)** 입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
   
 p(전체 자릿수)  
 소수점 왼쪽과 오른쪽에 저장할 최대 전체 자릿수입니다. 전체 자릿수 값은 1에서 최대 전체 자릿수인 38 사이여야 합니다. 기본 전체 자릿수는 18입니다.

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enable notifications
@@ -16,12 +15,12 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df84ccf152a7170cb4df9e0bb1e8a1893541484e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b19a2b9174924fd941721f9a7dd1b8764e5bb5
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841593"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617043"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>DQS에서 프로파일링 알림 설정 또는 해제
 
@@ -29,7 +28,7 @@ ms.locfileid: "47841593"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 프로파일링 알림을 설정하거나 해제하는 방법에 대해 설명합니다. 기본적으로 프로파일링 알림은 DQS에서 사용하도록 설정됩니다. 프로파일링 알림은 데이터 원본에 대한 중요한 사실과 데이터에 대해 수행된 현재 작업의 효과를 알려 줍니다. 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   

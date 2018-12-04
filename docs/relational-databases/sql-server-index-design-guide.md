@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669602"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712704"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -638,7 +638,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. 자세한 내용은 [Columnstore 인덱스 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
 
-버전 정보는 [Columnstore 인덱스 - 새로운 기능](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)을 참조하세요.
+버전 정보는 [Columnstore 인덱스 - 새로운 기능](../relational-databases/indexes/columnstore-indexes-what-s-new.md)을 참조하세요.
 
 ### <a name="columnstore-index-architecture"></a>Columnstore 인덱스 아키텍처
 

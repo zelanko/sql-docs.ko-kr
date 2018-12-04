@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.admin.config.general.f1
@@ -18,12 +17,12 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a04fbc0b19b59097c46a7e55ecbd55030f4e68b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbb09e9aa932797a975f26de15e2b466101c4026
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733587"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616313"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>정리 및 일치에 대한 임계값 구성
 
@@ -31,7 +30,7 @@ ms.locfileid: "47733587"
 
   이 항목에서는 컴퓨터 기반 정리 및 일치 작업 중에 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 사용할 임계값을 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   

@@ -14,12 +14,12 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23099d58f498d73ece64abcb2789f75feb2adc6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746601"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538367"
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
-  <xsd:schema …  
+  <xsd:schema ...  
 ```  
   
  그런 다음 해당 XML 인스턴스를 유니코드 인스턴스로 만들기 위해 N을 포함시켜야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
@@ -76,11 +76,11 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
 -- Assign XML instance to a variable.  
 DECLARE @X XML  
-SET @X = N'…'  
+SET @X = N'...'  
 -- Insert XML instance into an xml type column.  
-INSERT INTO T VALUES (N'…')  
+INSERT INTO T VALUES (N'...')  
 -- Create an XML schema collection  
-CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

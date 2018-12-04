@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3743dbd355f2f6a45e3a73559a1bef93f8f2dd9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ee52cac510d4166666d9f93fbb31da2bcde4fef
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699741"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616643"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
 

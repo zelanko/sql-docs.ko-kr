@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddb0f0da5f44f765733ea01dceac2d13e647221d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06e42c1acf4493019dc626f30d032b70519c346f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540828"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT 검색 속성 목록 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ GRANT permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  사용 권한을 부여할 검색 속성 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  **기존 검색 속성 목록을 보려면**  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527096"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49460378"
 
 #### <a name="remarks"></a>Remarks
 
-연결 복원 력 연결이 유휴 상태일 때 적용 됩니다. 예를 들어 트랜잭션을 실행 트리거되지 않습니다 – 재연결 시도 하는 동안 발생 하는 오류가 고, 그렇지 정상적으로 실패 합니다. 다음과 같은 경우 복구할 수 없는 세션 상태 라고 재연결 시도 트리거하지 않습니다.
+연결 복원 력 연결이 유휴 상태일 때 적용 됩니다. 실행 예를 들어 트랜잭션 다시 시도-트리거하지 않습니다 하는 동안 발생 하는 오류가 고, 그렇지 정상적으로 실패 합니다. 다음과 같은 경우 복구할 수 없는 세션 상태 라고 재연결 시도 트리거하지 않습니다.
 
 * 임시 테이블
 * 전역 및 로컬 커서

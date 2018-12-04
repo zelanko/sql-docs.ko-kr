@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536647"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ SQLDriverConnect 연결을 완료 하는 데 필요한 정보가 요청 될 때 
 이러한 옵션은 위의 UI DSN 설정에서 사용할 수 있는 동일한 5에 해당합니다.
 
 ### <a name="example-connection-strings"></a>연결 문자열 예
-1. SQL Server 인증 – 레거시 구문입니다. 서버 인증서 유효성이 검사 되지 않습니다 하 고 서버에 적용 하는 경우에 암호화가 사용 됩니다. 사용자 이름/암호는 연결 문자열에 전달 됩니다.
+1. SQL Server 인증-레거시 구문 서버 인증서 유효성이 검사 되지 않습니다 하 고 서버에 적용 하는 경우에 암호화가 사용 됩니다. 사용자 이름/암호는 연결 문자열에 전달 됩니다.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. SQL 인증 – 새 구문입니다. 암호화를 요청 하는 클라이언트 (기본값인 `Encrypt` 됩니다 `true`) 유효성이 확인 되 고 암호화 설정에 관계 없이 서버 인증서를 가져옵니다 (경우가 아니면 `TrustServerCertificate` 로 설정 된 `true`). 사용자 이름/암호는 연결 문자열에 전달 됩니다.
+2. SQL 인증-새 구문입니다. 암호화를 요청 하는 클라이언트 (기본값인 `Encrypt` 됩니다 `true`) 유효성이 확인 되 고 암호화 설정에 관계 없이 서버 인증서를 가져옵니다 (경우가 아니면 `TrustServerCertificate` 로 설정 된 `true`). 사용자 이름/암호는 연결 문자열에 전달 됩니다.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. 통합 Windows 인증 (Kerberos Linux 및 macOS) SSPI (SQL Server 또는 SQL IaaS)-현재 구문을 사용 합니다. 서버 인증서 암호화가 사용 하지 않는 한 검증 되지 않은 합니다. 
+3. 통합 Windows 인증 (Kerberos Linux 및 macOS) 현재 구문을 SSPI (SQL Server 또는 SQL IaaS)를 사용 하 여 합니다. 서버 인증서 암호화가 사용 하지 않는 한 검증 되지 않은 합니다. 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Windows 드라이버만_.) 통합 Windows 인증을 사용 하 여 SSPI (SQL Server 또는 SQL IaaS에서의 데이터베이스에서 대상 데이터베이스로 경우) – 새 구문입니다. 암호화를 요청 하는 클라이언트 (기본값인 `Encrypt` 됩니다 `true`) 유효성이 확인 되 고 암호화 설정에 관계 없이 서버 인증서를 가져옵니다 (경우가 아니면 `TrustServerCertificate` 로 설정 된 `true`). 
+4. (_Windows 드라이버만_.) 통합 Windows 인증을 사용 하 여 SSPI (SQL Server 또는 SQL IaaS에서의 데이터베이스에서 대상 데이터베이스로 경우)-새 구문입니다. 암호화를 요청 하는 클라이언트 (기본값인 `Encrypt` 됩니다 `true`) 유효성이 확인 되 고 암호화 설정에 관계 없이 서버 인증서를 가져옵니다 (경우가 아니면 `TrustServerCertificate` 로 설정 된 `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. AAD (Azure SQL db에서의 데이터베이스에서 대상 데이터베이스로 경우) 사용자 이름/암호 인증입니다. 서버 인증서 유효성을 검사, 암호화 설정에 관계 없이 (하지 않는 한 `TrustServerCertificate` 로 설정 된 `true`). 사용자 이름/암호는 연결 문자열에 전달 됩니다. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`

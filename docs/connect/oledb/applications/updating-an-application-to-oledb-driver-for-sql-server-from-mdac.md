@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dae35a8d8ef11619bd6a6ce43f9dc4ba7cfb73f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524482"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC에서 SQL Server용 OLE DB 드라이버로 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

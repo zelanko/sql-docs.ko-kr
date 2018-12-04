@@ -18,12 +18,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7598f2c27ba93d2b736315526d5b4e004232d777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529926"
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   

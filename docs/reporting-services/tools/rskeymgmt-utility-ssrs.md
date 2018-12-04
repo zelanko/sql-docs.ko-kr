@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d94dfc03c090a871742999a821d1bfa0951add7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030932"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545367"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "50030932"
 ```  
   
 rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  

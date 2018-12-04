@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512116"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "47596092"
   
      대부분의 경우 클라이언트 응용 프로그램은 항상 현재 주 복제본에 연결하려고 하지만 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 활용하기 위해 현재 주 복제본만 사용할 수 있는 것은 아닙니다. 가용성 그룹이 읽기 가능한 보조 복제본을 지원하도록 구성된 경우 보조 노드에서도 변경 데이터를 수집할 수 있습니다.  
   
-     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
+     가용성 그룹이 구성된 경우 SECONDARY_ROLE과 연결된 ALLOW_CONNECTIONS 특성을 사용하여 지원되는 보조 액세스 유형을 지정합니다. ALL로 구성된 경우 보조 복제본에 대한 모든 연결이 허용되지만 읽기 전용 액세스가 필요한 연결만 성공합니다. READ_ONLY로 구성된 경우 연결이 성공하려면 보조 데이터베이스에 연결할 때 읽기 전용 의도를 지정해야 합니다. 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
   
      다음 쿼리를 사용하면 읽기 가능한 보조 복제본에 연결하기 위해 읽기 전용 의도가 필요한지 여부를 확인할 수 있습니다.  
   
@@ -207,11 +207,11 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 |||||  
 |-|-|-|-|  
-||**게시자**|**Distributor***\*|**구독자**|  
-|**트랜잭션**|사용자 계정 컨트롤<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|사용자 계정 컨트롤|사용자 계정 컨트롤| 
+||**게시자**|**배포자**|**구독자**|  
+|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|예| 
 |**P2P**|아니오|아니오|아니오|  
-|**병합**|사용자 계정 컨트롤|아니오|아니오|  
-|**스냅숏**|사용자 계정 컨트롤|아니오|사용자 계정 컨트롤|
+|**병합**|예|아니오|아니오|  
+|**스냅숏**|예|아니오|예|
   
  **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   

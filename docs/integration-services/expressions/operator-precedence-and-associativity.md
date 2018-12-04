@@ -14,12 +14,12 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1724fcbf34817dbb87c2c57a68735c1502bcdce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f8ef15874d9777aeb1b47481ba4f9933b13b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651851"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502015"
 ---
 # <a name="operator-precedence-and-associativity"></a>연산자 우선 순위 및 계산 방향
   식 계산기가 지원하는 연산자 집합의 각 연산자에는 우선 순위 계층에서 지정된 우선 순위와 계산 방향이 있습니다. 연산자의 계산 방향은 연산자의 연결성을 나타냅니다. 우선 순위가 높은 연산자가 우선 순위가 낮은 연산자보다 먼저 계산됩니다. 복잡한 식에 여러 개의 연산자가 있을 경우 연산자 우선 순위가 연산 수행 순서를 결정합니다. 실행 순서는 결과 값에 중대한 영향을 줄 수 있습니다. 일부 연산자는 우선 순위가 같습니다. 우선 순위가 같은 여러 개의 연산자가 식에 포함되어 있으면 연산자는 왼쪽에서 오른쪽으로 또는 오른쪽에서 왼쪽으로 계산됩니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "47651851"
 |연산자 기호|연산 유형|계산 방향|  
 |---------------------|-----------------------|-------------------|  
 |( )|식|왼쪽에서 오른쪽|  
-|–, !, ~|단항 연산자|오른쪽에서 왼쪽|  
+|-, !, ~|단항 연산자|오른쪽에서 왼쪽|  
 |casts|단항 연산자|오른쪽에서 왼쪽|  
 |*, / ,%|곱셈|왼쪽에서 오른쪽|  
-|+, –|가산적|왼쪽에서 오른쪽|  
+|+, -|가산적|왼쪽에서 오른쪽|  
 |\<, >, \<=, >=|관계형|왼쪽에서 오른쪽|  
 |==, !=|등호|왼쪽에서 오른쪽|  
 |&|비트 AND|왼쪽에서 오른쪽|  

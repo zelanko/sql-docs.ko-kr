@@ -10,12 +10,12 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae11b65eab37e07286b5d06a7c09305ba5020095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528377"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality 서버 개체 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47819411"
  SQL Server Management Studio에서 개체를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제** 를 클릭하여 이러한 개체를 삭제할 수 있습니다.  
   
 > [!IMPORTANT]  
->  명령 프롬프트에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 명령줄 매개 변수를 사용하여 SQL Server 인스턴스에서 `–uninstall` 를 제거하는 경우 제거 프로세스의 일부로 모든 DQS 객체가 삭제됩니다. [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 이를 수동으로 삭제할 필요가 없습니다. 명령 프롬프트에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거하려면 명령 프롬프트에 다음   
+>  명령 프롬프트에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 명령줄 매개 변수를 사용하여 SQL Server 인스턴스에서 `-uninstall` 를 제거하는 경우 제거 프로세스의 일부로 모든 DQS 객체가 삭제됩니다. [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 이를 수동으로 삭제할 필요가 없습니다. 명령 프롬프트에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거하려면 명령 프롬프트에 다음   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Data Quality 서버를 포함하는 SQL Server 인스턴스 제거  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509525"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813356"
   
     -   명령 프롬프트에서 사용 중인 TCP 포트를 반환하는 다음 명령을 입력합니다.  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](https://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 전용 포트(49152 - 65535) 간의 차이를 검토합니다.  
   

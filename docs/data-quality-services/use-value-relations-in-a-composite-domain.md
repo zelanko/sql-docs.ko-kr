@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
@@ -14,12 +13,12 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a60784e5ccbb4bc5c94396a46d2bd2754923eaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 320f57a1e80a39ae3048c8a08fd991cb643e2dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655691"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617903"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
 
@@ -27,7 +26,7 @@ ms.locfileid: "47655691"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색 프로세스 중에 복합 도메인에 대해 발견된 값 조합을 보는 방법에 대해 설명합니다. 이 페이지에서는 값 조합의 발생 횟수를 보여줍니다. 복합 도메인에는 값 관리가 지원되지 않으므로 이러한 값에 대해 어떠한 작업도 수행할 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  값 관계를 보려면 복합 도메인을 만들고 열어 두어야 합니다.  

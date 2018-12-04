@@ -18,12 +18,12 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 447fe67a9fa97fbb475f9d6daaed181347cabe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd121ddef59e59da76bbf7b4ee3303833863b23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656011"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514624"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 인증서 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  인증서에 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  사용 권한을 부여할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

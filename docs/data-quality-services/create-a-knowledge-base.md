@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.selectkb.f1
@@ -15,12 +14,12 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4dcb1c4783b29560a9f5ba83435797fe5f494de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690711"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616343"
 ---
 # <a name="create-a-knowledge-base"></a>기술 자료 만들기
 
@@ -28,7 +27,7 @@ ms.locfileid: "47690711"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료를 만들고 도메인 관리, 기술 자료 검색 또는 일치 정책 추가를 수행할 준비를 갖추는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  기술 자료를 만들려면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]가 설치되어 있어야 합니다.  

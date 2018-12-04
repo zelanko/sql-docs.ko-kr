@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81603c1fd153795054897d362d4a2c9df5a88b66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37ef3f8bb8f1a39a9d1af06a8ee71735bf0cccbf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632911"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617913"
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
 

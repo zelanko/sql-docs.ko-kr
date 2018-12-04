@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.admin.config.log.f1
@@ -20,12 +19,12 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 231d7867e5c5ce2b42a2d22d10a69e3ab351aa94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 542312d01ded8542c03a18e8f95ead0de6f07f39
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599241"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617163"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
 
@@ -45,7 +44,7 @@ ms.locfileid: "47599241"
   
  다양한 DQS 작업 및 모듈의 심각도를 구성하면 해당 DQS 작업 또는 모듈에 대한 DQS 로그 파일에 로깅하고 기록할 정보가 필터링됩니다. 예를 들어 DQS 작업의 심각도를 **경고**로 설정하면 해당 DQS 작업과 관련된 경고 이상의 심각도 메시지만 로깅됩니다(오류 및 치명적).  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   

@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bfbcea3785b15396e4ee02615cb860d250d45c0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512499"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>가용성 그룹 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51601095"
   
 |태스크|Transact-SQL 문|태스크를 수행할 위치**\***|  
 |----------|----------------------------------|---------------------------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹 만들기|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|보조 복제본을 호스트하는 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 및 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다.|  

@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cecdeb5d702346110c37068a51aebd755a57411
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601633"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616684"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 모바일 장치 및 데스크톱 웹 서버, 엔터프라이즈 서버 및 클라우드 전반에서 데이터 중심 솔루션을 만드는 데 사용 하 여 Microsoft SQL 데이터 플랫폼입니다.  

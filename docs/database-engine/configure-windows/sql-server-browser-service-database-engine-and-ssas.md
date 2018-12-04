@@ -16,12 +16,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d1a7e6361fad5d7e37ca624b98c7220e622d398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714011"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616943"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,5 +131,5 @@ ms.locfileid: "47714011"
   
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [SQL Server 데이터베이스 엔진의 인스턴스 숨기기](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

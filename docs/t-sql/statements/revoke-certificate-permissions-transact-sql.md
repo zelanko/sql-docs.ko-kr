@@ -17,12 +17,12 @@ ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 109ac82aab6881f5ab0a92305308654c0c6b5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25fae09a89359b5fafe5491f4ed3edd387fc70ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706956"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534006"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 인증서 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  인증서에 대해 취소할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  사용 권한을 취소할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838501"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509958"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
 >    메시지 491, 수준 16, 상태 1, 줄 20    
 >    FROM 절의 대량 행 집합에 대해 상관 관계 이름을 지정해야 합니다.    
   
--   `SELECT...FROM OPENROWSET(BULK...)` 문은 데이터를 테이블로 가져오지 않고 파일의 데이터를 직접 쿼리합니다. `SELECT…FROM OPENROWSET(BULK...)` 문도 서식 파일을 사용하여 대량 열 별칭을 나열하는 방법으로 열 이름 및 데이터 형식을 지정할 수 있습니다.  
+-   `SELECT...FROM OPENROWSET(BULK...)` 문은 데이터를 테이블로 가져오지 않고 파일의 데이터를 직접 쿼리합니다. `SELECT...FROM OPENROWSET(BULK...)` 문도 서식 파일을 사용하여 대량 열 별칭을 나열하는 방법으로 열 이름 및 데이터 형식을 지정할 수 있습니다.  
   
 -   `INSERT` 또는 `MERGE` 문에서 `OPENROWSET(BULK...)`을 원본 테이블로 사용하면 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 대량으로 가져올 수 있습니다. 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   

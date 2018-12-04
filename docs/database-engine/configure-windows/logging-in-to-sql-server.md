@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600546"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617673"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600546"
 |IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 명명된 인스턴스에 연결합니다.|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 연결을 강제 적용하여 이름별로 기본 인스턴스에 연결합니다.|tcp:APPHOST|  
 |TCP 연결을 강제 적용하여 이름별로 명명된 인스턴스에 연결합니다.|tcp:APPHOST\SQLEXPRESS|  
-|명명된 파이프 연결을 지정하여 기본 인스턴스에 연결합니다.|\\\APPHOST\pipe\unit\app|  
+|명명된 파이프 연결을 지정하여 기본 인스턴스에 연결합니다.|\\\APPHOST\pipe\SQL\query|  
 |명명된 파이프 연결을 지정하여 기본 인스턴스에 연결합니다.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |명명된 파이프 연결을 강제 적용하여 이름별로 기본 인스턴스에 연결합니다.|np:APPHOST|  
 |명명된 파이프 연결을 강제 적용하여 이름별로 명명된 인스턴스에 연결합니다.|np:APPHOST\SQLEXPRESS|  

@@ -18,12 +18,12 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c7a1d742e76f9825986fbaba0e12278974006fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 932080377094ae17767856a9ced0256e05e0fe81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544061"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  엔드포인트에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  사용 권한을 거부할 엔드포인트를 지정합니다. 범위 한정자(**::**)가 필요합니다.  
   
  TO \<server_principal>  

@@ -1,22 +1,22 @@
 ---
 title: SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포 | Microsoft Docs
-ms.date: 10/05/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502825"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 보고서 뷰어 웹 파트는 SharePoint 사이트 내에서 SQL Server Reporting Services(기본 모드) 보고서를 보는 데 사용할 수 있는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 보고서 서버에서 보고서를 보고, 탐색하고, 인쇄하고, 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 SQL Server Reporting Services 보고서 서버 또는 Power BI Report Server에서 처리하는 보고서 정의 파일(.rdl)과 연결됩니다. 이 보고서 뷰어 웹 파트는 Power BI Report Server에서 호스트되는 Power BI 보고서와 함께 사용할 수 없습니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "51813176"
 2. [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx)을 실행하여 팜 솔루션을 추가합니다.
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.
@@ -64,13 +64,13 @@ ms.locfileid: "51813176"
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## <a name="activate-feature"></a>기능 활성화

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
@@ -14,12 +13,12 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a79a860b30a94c5514c91922354a9a82c30e4148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f87200afad4a7026f763cdf5eecf34160082ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647721"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617373"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
 
@@ -27,7 +26,7 @@ ms.locfileid: "47647721"
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   

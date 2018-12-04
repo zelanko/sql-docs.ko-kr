@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dad7f27c2effc6ecfb76aa72babafebf951c7117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdf32f89c911f769140da15c4fb127918eba79c2
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613551"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617513"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
 
@@ -31,7 +30,7 @@ ms.locfileid: "47613551"
   
  기술 자료를 가져올 때는 클라이언트 응용 프로그램에 기술 자료 이름이 이미 있어 이름을 바꾸어야 하는 경우를 제외하고 동일한 이름을 사용할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  .dqs 파일에서 기술 자료를 가져오려면 기술 자료를 .dqs 파일로 이미 내보낸 상태여야 합니다.  

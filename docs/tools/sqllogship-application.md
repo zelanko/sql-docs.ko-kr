@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4b12736ccbf670b12312b372410879c8a08a9e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508056"
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51291859"
   
 ```  
   
-sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ –verboselevel level ] [ –logintimeout timeout_value ] [ -querytimeout timeout_value ]  
+sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ -verboselevel level ] [ -logintimeout timeout_value ] [ -querytimeout timeout_value ]  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -52,7 +52,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  최근 복원 지점 이후에 생성된 대상 디렉터리의 백업 파일이 데이터베이스 또는 보조 데이터베이스에 복원됩니다. 그런 다음 **sqllogship** 응용 프로그램은 파일 보존 기간을 기준으로 모든 이전 백업 파일을 정리합니다. 다음으로 응용 프로그램은 보조 서버 및 모니터 서버의 복원 작업에 대한 기록을 작성합니다. 마지막으로 응용 프로그램은 보존 기간을 기준으로 이전 기록 정보를 정리하는 **sp_cleanup_log_shipping_history**를 실행합니다.  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  로그 전달 기록에 추가된 메시지 수준을 지정합니다. *level* 은 다음 정수 중 하나입니다.  
   
 |level|설명|  
@@ -63,7 +63,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이것은 기본값입니다.|  
 |4|모든 디버깅 및 추적 메시지를 출력합니다.|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** *timeout_value*  
  서버 인스턴스 로그인에 할당된 제한 시간 값을 지정합니다. 기본값은 15초입니다. *timeout_value* 는 **int**_입니다._  
   
  **-querytimeout** *timeout_value*  

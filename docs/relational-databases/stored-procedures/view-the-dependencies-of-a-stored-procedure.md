@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5685c3f7b24422e17a5315f89e1b36c2e415297c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709091"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617743"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47709091"
   
 -   **프로시저 종속성을 보려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47709091"
     SELECT referenced_schema_name, referenced_entity_name,  
     referenced_minor_name,referenced_minor_id, referenced_class_desc,  
     is_caller_dependent, is_ambiguous  
-    FROM sys.dm_sql_referencing_entities ('Purchasing.uspVendorAllInfo', 'OBJECT');  
+    FROM sys.dm_sql_referenced_entities ('Purchasing.uspVendorAllInfo', 'OBJECT');  
     GO  
     ```  
   

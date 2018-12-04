@@ -13,12 +13,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a99c6f0f1e583afe023823ab2e46e3d142a5e7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502204"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47633791"
  다음 예에서는 기본 서버 인스턴스에 `master` 데이터베이스를 복원합니다. 이 예에서는 서버 인스턴스가 이미 단일 사용자 모드로 실행되고 있다고 가정합니다. 다음 예에서는 `sqlcmd` 를 시작하고 디스크 장치에서 `RESTORE DATABASE` 의 전체 데이터베이스 백업을 복원하는 `master` 문을 실행합니다. `Z:\SQLServerBackups\master.bak`  
   
 > [!NOTE]  
->  명명된 인스턴스의 경우 **sqlcmd** 명령에 **-S***\<ComputerName>*\\*\<InstanceName>* 옵션을 지정해야 합니다.  
+>  명명된 인스턴스의 경우 **sqlcmd** 명령에 **-S**_\<ComputerName>_\\*\<InstanceName>* 옵션을 지정해야 합니다.  
   
 ```  
   

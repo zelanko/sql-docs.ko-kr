@@ -20,12 +20,12 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cabcdc95bbdf748774a0435715ae93241cdb33ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7ad315244d6a236285abdd6784237856c3d442f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511429"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 비대칭 키 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  비대칭 키에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  사용 권한을 거부할 비대칭 키를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

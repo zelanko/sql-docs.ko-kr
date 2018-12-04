@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545468"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  문 및 인터리브 됩니다.이 atomic 블록을 수행한 변경 내용을 서로 격리 됩니다. 예를 들어, 한 문 또는 atomic 블록 일부 변경을 수행 하 고 다음 다른 문으로 실행을 생성, 새 문을 첫 번째 문에서 수행한 변경 내용은 표시 되지 않습니다. 또한 첫 번째 문에서 실행을 다시 시작 하는 경우 다른 문에서 변경한 나타나지 않습니다. 문 완료 되며 문이 시작 되기 전에 커밋된 변경 내용을 표시 됩니다.  
   
- BEGIN TRANSACTION 문을 사용 하 여 현재 사용자 트랜잭션 내에서 새 사용자 트랜잭션을 시작할 수 있습니다 –이 BEGIN TRANSACTION T-SQL 문에서 호출할 수 있도록 interop 모드 에서만에서 지원 되 고 있지에서 내에서 고유 하 게 컴파일된 저장 프로시저입니다. 저장을 만들면 SAVE TRANSACTION 또는 트랜잭션 API 호출을 사용 하 여 트랜잭션을 지정 합니다. 저장 점으로 롤백하려면 Save(save_point_name) 합니다. 이 기능은 T-SQL 문을 에서만 활성화 및 제외할 범위 내에서 고유 하 게 컴파일된 저장된 프로시저.  
+ BEGIN TRANSACTION 문을 사용 하 여 현재 사용자 트랜잭션 내에서 새 사용자 트랜잭션을 시작할 수 있습니다-이 BEGIN TRANSACTION T-SQL 문에서 호출할 수 있도록 interop 모드 에서만에서 지원 되며 제외할 범위 내에서 고유 하 게 컴파일된 저장 프로시저입니다. 저장을 만들면 SAVE TRANSACTION 또는 트랜잭션 API 호출을 사용 하 여 트랜잭션을 지정 합니다. 저장 점으로 롤백하려면 Save(save_point_name) 합니다. 이 기능은 T-SQL 문을 에서만 활성화 및 제외할 범위 내에서 고유 하 게 컴파일된 저장된 프로시저.  
   
  **MARS 및 columnstore 인덱스**  
   

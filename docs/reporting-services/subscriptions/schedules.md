@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029572"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711474"
 ---
 # <a name="schedules"></a>일정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 처리와 배포를 쉽게 제어할 수 있도록 **공유 일정** 과 **보고서별 일정** 을 제공합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.
@@ -54,7 +54,7 @@ ms.locfileid: "50029572"
  예약을 만들고 관리하는 방법은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)를 참조하세요.  
   
 > [!NOTE]  
->  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)을 참조하세요.  
+>  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
 ##  <a name="bkmk_compare"></a> 공유 일정과 보고서별 일정 비교  
  두 가지 유형의 일정 모두 출력 내용이 같습니다.  

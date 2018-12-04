@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11602dcd1274690e7b77ca285c50269e83b6ca23
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532109"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51215801"
  **서버 이름 선택 또는 입력**  
  이 태스크를 수행할 때 연결할 서버를 선택합니다.  
   
- **…**  
+ **...**  
  사용 가능한 서버 목록이 보이도록 선택합니다.  
   
  **서버 로그온 정보 입력**  

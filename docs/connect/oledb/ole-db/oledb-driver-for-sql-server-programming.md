@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535131"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍용 OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47810771"
   
 -   [FILESTREAM 지원](../../oledb/features/filestream-support.md)  
   
--   [의](../../oledb/ole-db-transactions/transactions.md)  
+-   [트랜잭션](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [오류](../../oledb/ole-db-errors/errors.md)  
   

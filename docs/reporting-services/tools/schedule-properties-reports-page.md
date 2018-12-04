@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f0cdfafa38ff35c2e469d9be9491133261983fb
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9724ec5d7b1d4746842b95c8219ff493ee1d3862
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099193"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712694"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 일정 속성 페이지를 사용하여 특정 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  
@@ -32,7 +32,7 @@ ms.locfileid: "50099193"
   **웹 포털의** 사이트 설정 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 공유 일정을 관리할 수도 있습니다.
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
 ## <a name="options"></a>Options  
  **Folder**  

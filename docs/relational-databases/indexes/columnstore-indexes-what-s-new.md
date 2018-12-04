@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629511"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514553"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629511"
   
 -   Columnstore 인덱스는 읽기 커밋된 스냅숏 격리 수준(RCSI) 및 스냅숏 격리(SI)를 지원합니다. 이를 통해 트랜잭션을 잠금이 없는 분석 쿼리와 일관성을 유지할 수 있습니다.  
   
--   Columnstore는 인덱스를 명시적으로 다시 만들 필요 없이 삭제된 행을 제거하여 인덱스 조각 모음을 지원합니다. `ALTER INDEX … REORGANIZE` 문은 내부에서 정의한 정책을 바탕으로 columnstore에서 온라인 작업으로 삭제된 행을 제거함  
+-   Columnstore는 인덱스를 명시적으로 다시 만들 필요 없이 삭제된 행을 제거하여 인덱스 조각 모음을 지원합니다. `ALTER INDEX ... REORGANIZE` 문은 내부에서 정의한 정책을 바탕으로 columnstore에서 온라인 작업으로 삭제된 행을 제거함  
   
 -   Columnstore 인덱스는 AlwaysOn 읽기 가능 보조 복제본에 대한 액세스일 수 있습니다. 분석 쿼리를 AlwaysOn 보조 복제본으로 분산하여 운영 분석의 성능을 개선할 수 있습니다.  
   

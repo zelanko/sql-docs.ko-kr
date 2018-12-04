@@ -9,12 +9,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0fb7557159f5c5560e4c8f4ad27d1a778da1e66f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 63cdf3f760c332bfe6d0b7438a1e5778f90295cc
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813696"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617813"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
 
@@ -72,7 +72,7 @@ ms.locfileid: "51813696"
   
 5.  브라우저를 새로 고친 다음 **보고서 서버 통합 기능** 에 대해 **활성화**를 클릭합니다.  
   
-     ![rs_reportserver_integration_deactive](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="bkmk_enable_content_management"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2013)  
   

@@ -10,12 +10,12 @@ ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bba028ef8c2d0bcc5c3a3c328cc5be0eabab9c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: abe4c1e52fbb43f7c2c1ffbe4a7e6c40c45fda78
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528339"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ $pd | Select FriendlyName, MediaType, BusType
  PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 저장소 풀을 쉽게 빌드할 수 있습니다.  
   
 ```  
-New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
+New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
@@ -62,7 +62,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
  이제 풀을 만들었으며 다음 단계는 가상 디스크를 지정하고 서식을 지정하는 것입니다. 이 경우 하나의 가상 디스크만 만들어지고 New-Volume PowerShell cmdlet을 사용하여 이 프로세스를 간소화할 수 있습니다.  
   
 ```  
-New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –FriendlyName Log_Space –Size 300GB –FileSystem NTFS –AccessPath S: -ResiliencySettingName Mirror  
+New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  

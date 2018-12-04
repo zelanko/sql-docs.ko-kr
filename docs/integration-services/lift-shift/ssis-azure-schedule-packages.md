@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4656d67d7f9db1f1f5154790fe27e5e295036135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e82b888f06c7a1dbdf2f5b40211bab4a6a012c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768343"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418833"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약
 
@@ -56,33 +56,33 @@ SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장
 다음 예제에 표시된 스크립트와 비슷한 Transact-SQL 스크립트를 사용하여 작업을 만듭니다.
 
 ```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
 
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
 
 -- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
 
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
 ## <a name="agent"></a> 프레미스에서 SQL Server 에이전트를 사용하여 패키지 예약
@@ -102,8 +102,8 @@ SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL S
         @srvproduct='',     
         @provider='sqlncli', -- Use SQL Server native client
         @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
-        @location=‘’,
-        @provstr=‘’,
+        @location='',
+        @provstr='',
         @catalog='SSISDB'  -- Add SSISDB as the initial catalog
     ```
 
@@ -112,8 +112,8 @@ SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL S
     ```sql
     -- Add your Azure SQL DB server admin credentials
     EXEC sp_addlinkedsrvlogin
-        @rmtsrvname = 'myLinkedServer’,
-        @useself = 'false’,
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
         @rmtuser = 'myUsername', -- Add your server admin username
         @rmtpassword = 'myPassword' -- Add your server admin password
     ```
@@ -142,17 +142,17 @@ SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL S
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE @return_value int, @exe_id bigint 
+    DECLARE @return_value int, @exe_id bigint 
 
-    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-        @folder_name=N'folderName', @project_name=N'projectName', 
-        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
-        @execution_id=@exe_id OUTPUT 
+    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
     EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
         @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  작업 구성 및 예약을 완료합니다.

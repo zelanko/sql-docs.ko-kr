@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530529"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  XACT_STATE와 @@TRANCOUNT 함수는 모두 현재 요청에 활성 사용자 트랜잭션이 있는지 여부를 검색하는 데 사용될 수 있습니다. @@TRANCOUNT을 사용하여 트랜잭션이 커밋되지 않은 트랜잭션으로 분류되었는지 여부를 확인할 수는 없습니다. 또한 XACT_STATE를 사용하여 중첩된 트랜잭션이 있는지 여부를 확인할 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `XACT_STATE` 구문의 `CATCH` 블록에서 `TRY…CATCH`를 사용하여 트랜잭션을 커밋 또는 롤백하는지를 확인합니다. `SET XACT_ABORT`가 `ON`으로 설정되어 있으므로 제약 조건 위반 오류가 발생하면 트랜잭션은 커밋할 수 없는 상태가 됩니다.  
+ 다음 예에서는 `XACT_STATE` 구문의 `CATCH` 블록에서 `TRY...CATCH`를 사용하여 트랜잭션을 커밋 또는 롤백하는지를 확인합니다. `SET XACT_ABORT`가 `ON`으로 설정되어 있으므로 제약 조건 위반 오류가 발생하면 트랜잭션은 커밋할 수 없는 상태가 됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -110,7 +110,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [@@TRANCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SAVE TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  

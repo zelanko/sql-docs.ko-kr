@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a33053220184dfc58b0e0f6ccfb9526b5cb3ea5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7baf327182cec41ffbd20e75517cc9b944226140
+ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697121"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52282045"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치 
 
-[SSMS는 여러 언어로 사용할](download-sql-server-management-studio-ssms.md#available-languages-ssms-179) 수 있지만 시스템 로캘이 SSMS 언어와 일치하지 않을 경우 SSMS 설치 관리자는 컴퓨터에서 설치를 차단합니다. 
+[SSMS는 여러 언어로 사용할](download-sql-server-management-studio-ssms.md#available-languages-ssms-1791) 수 있지만 시스템 로캘이 SSMS 언어와 일치하지 않을 경우 SSMS 설치 관리자는 컴퓨터에서 설치를 차단합니다. 
 
 다음 지침은 Windows 버전에 따라 다릅니다. 다음은 Windows 10용 지침입니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "51697121"
 1. SSMS를 사용할 언어의 Windows 언어 팩을 설치합니다. 
    - **설정** > **시간 및 언어** > **지역 및 언어** > **언어 추가** 
 2. 방금 설치한 언어를 클릭하여 이전 단계에서 설치한 언어 팩을 사용하도록 시스템 로캘을 설정한 다음, **기본값으로 설정**을 선택합니다. (SSMS를 설치한 후 시스템 로캘을 다시 영어로 설정할 수 있습니다. )
-3. 운영 체제가 원하는 언어로 실행되면 [SSMS는 여러 언어로 제공됩니다](download-sql-server-management-studio-ssms.md#available-languages-ssms-179). 새 SSMS 언어를 처음으로 설치할 때는 전체 패키지를 사용합니다. 이후 설치에서는 업그레이드 패키지를 사용할 수 있습니다.
+3. 운영 체제가 원하는 언어로 실행되면 [SSMS는 여러 언어로 제공됩니다](download-sql-server-management-studio-ssms.md#available-languages-ssms-1791). 새 SSMS 언어를 처음으로 설치할 때는 전체 패키지를 사용합니다. 이후 설치에서는 업그레이드 패키지를 사용할 수 있습니다.
 4. SSMS를 실행하면 이전 단계에서 설치한 언어로 표시됩니다.
 5. 컴퓨터의 시스템 로캘을 다시 영어로 설정합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "51697121"
 1. SSMS를 사용할 언어의 Windows 언어 팩을 설치합니다. 
    - **설정** > **시간 및 언어** > **지역 및 언어** > **언어 추가** 
 2. 방금 설치한 언어를 클릭하여 이전 단계에서 설치한 언어 팩을 사용하도록 시스템 로캘을 설정한 다음, **기본값으로 설정**을 선택합니다. 
-3. 운영 체제가 원하는 언어로 실행되면 [SSMS는 여러 언어로 제공됩니다](download-sql-server-management-studio-ssms.md#available-languages-ssms-179). 새 SSMS 언어를 처음으로 설치할 때는 전체 패키지를 사용합니다. 이후 설치에서는 업그레이드 패키지를 사용할 수 있습니다.
+3. 운영 체제가 원하는 언어로 실행되면 [SSMS는 여러 언어로 제공됩니다](download-sql-server-management-studio-ssms.md#available-languages-ssms-1791). 새 SSMS 언어를 처음으로 설치할 때는 전체 패키지를 사용합니다. 이후 설치에서는 업그레이드 패키지를 사용할 수 있습니다.
 4. 처음 설치한 SSMS 버전의 언어와 일치하지 않는 언어 버전을 설치할 때마다, 해당하는 Visual Studio 2015 Shell(격리) 언어 팩을 설치합니다.
    - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS)(*등록 연결* 프로세스에 로그인하여 완료해야 할 수도 있음)로 이동하세요.
    - 원하는 Visual Studio 2015 Shell(격리) 언어 팩을 다운로드하여 설치합니다.

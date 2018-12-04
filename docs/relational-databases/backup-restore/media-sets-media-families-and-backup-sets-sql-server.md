@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534114"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WITH
   
  ![3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트")  
   
- 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 전체 데이터베이스 백업을 복원한 후 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원하는 경우 FILE **=***backup_set_file_number* 절을 사용하는 방법을 보여줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.  
+ 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예제에서는 **=**_데이터베이스의 전체 데이터베이스 백업을 복원한 후 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원하는 경우 FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 절의 사용을 보여 줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657573"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520516"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "51657573"
   
 2.  **서버에 연결** 대화 상자의 **서버 유형** 상자에서 **데이터베이스 엔진** 을 선택합니다.  
   
-3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:***<computer_name>* 을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:***<computer_name>***,49172**를 입력합니다.  
+3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:**_<computer_name>_ 을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:**_<computer_name>_**,49172**를 입력합니다.  
   
     > [!NOTE]  
     > **서버 이름** 상자에서 **tcp:** 를 생략하면 클라이언트에서 설정된 모든 프로토콜을 클라이언트 구성에 지정된 순서대로 시도합니다.  

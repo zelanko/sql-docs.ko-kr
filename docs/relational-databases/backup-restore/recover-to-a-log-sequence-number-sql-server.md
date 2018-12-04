@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540292"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>로그 시퀀스 번호로 복구(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694781"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN으로 복원하기 위한 Transact-SQL 구문  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
   
--   WITH STOPATMARK **='** lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPATMARK **='** lsn:_<lsn_number>_**'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
      STOPATMARK는 복구 중지 지점을 나타내며 지정된 로그 레코드를 포함하는 지점까지 롤포워드됩니다.  
   
--   WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPBEFOREMARK **='** lsn:_<lsn_number>_**'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN 번호가 포함된 로그 레코드 바로 앞의 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
      STOPBEFOREMARK는 LSN에 롤포워드하고 롤포워드의 해당 로그 레코드를 제외합니다.  
   

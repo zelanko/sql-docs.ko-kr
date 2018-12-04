@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae01b16fd8c5c2694bd7816f220650471f0de3cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ed8697108ee88989e74721922731883538e9c0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507527"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 데이터베이스 범위 자격 증명(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  데이터베이스 범위 자격 증명에 대해 철회할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::***credential_name*  
+ ON CERTIFICATE **::**_credential_name_  
  사용 권한을 철회하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7509dbd825679377b9284928efd8720a9579793c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518238"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ HAVING 절:
 
 ```sql
 DECLARE @v INT = 9000;
-SELECT TOP (@v) … FROM … ORDER BY …
+SELECT TOP (@v) ... FROM ... ORDER BY ...
 ```
 
 하지만 **TOP** 절에 상수를 사용하면 변수를 사용할 때보다 나은 성능을 가져옵니다.  

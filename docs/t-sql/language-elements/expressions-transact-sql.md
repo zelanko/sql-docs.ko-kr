@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cec2923a408a857c5cdd6440e022c9314f1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511924"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47658781"
 }  
 [ COLLATE Windows_collation_name ]  
   
--- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+-- Scalar Expression in a DECLARE, SET, IF...ELSE, or WHILE statement  
 <scalar_expression> ::=  
 {  
     constant   
@@ -86,7 +86,7 @@ ms.locfileid: "47658781"
 |----------|----------------|  
 |*constant*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.|  
 |*scalar_function*|특정 서비스를 제공하고 단일 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 단위입니다. *scalar_function*은 SUM, GETDATE 또는 CAST 함수 또는 스칼라 사용자 정의 함수와 같은 기본 제공 스칼라 함수가 될 수 있습니다.|  
-|[ *table_name***.** ]|테이블의 이름 또는 별칭입니다.|  
+|[ _table_name_**.** ]|테이블의 이름 또는 별칭입니다.|  
 |*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
 |*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
 |**(** *expression*  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  

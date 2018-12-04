@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0225c5cf3e2b8109ac9d85e00133e9a1b8b79367
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5eb84d88bf2f20a688b09f8c1951045793234f38
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602573"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413760"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
  읽을 수 없는 보조 데이터베이스 또는 읽을 수 있는 보조 데이터베이스에서 실행할 때 실패하는 트리거 및 작업이 있는 경우 트리거와 작업을 스크립팅하여 지정된 복제본에서 데이터베이스가 주 데이터베이스인지 읽을 수 있는 보조 데이터베이스인지 확인해야 합니다. 이 정보를 얻으려면 [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) 함수를 사용하여 데이터베이스의 **Updateability** 속성을 반환합니다. 읽기 전용 데이터베이스를 식별하려면 다음과 같이 READ_ONLY를 값으로 지정합니다.  
   
 ```  
-DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'  
 ```  
   
  쓰기 전용 데이터베이스를 식별하려면 READ_WRITE를 값으로 지정합니다.  

@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528435"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 연결 관리자
   SAP BW 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 연결 관리자 구성 요소입니다. 따라서 SAP BW 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 및 대상 구성 요소에 필요한 SAP Netweaver BW 버전 7 시스템에 대한 연결을 제공합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 패키지의 일부인 SAP BW 원본 및 대상은 SAP BW 연결 관리자를 사용하는 유일한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "51641990"
   
     -   SAP BW 연결 관리자를 두 번 클릭합니다.  
   
-         —또는—  
+         -또는-  
   
     -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
   

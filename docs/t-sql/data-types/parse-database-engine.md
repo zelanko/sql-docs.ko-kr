@@ -18,12 +18,12 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7bf64e4859f9ccf8470a464017596485d87baab5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40647221fe39df637407056d8b41c0e7e75428f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417144"
 ---
 # <a name="parse-database-engine"></a>Parse(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ hierarchyidRepresentation    StringRepresentation
 다음 코드 조각에서는 Parse() 메서드를 호출합니다.
   
 ```sql
-string input = “/1/2/”;  
+string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  
   
