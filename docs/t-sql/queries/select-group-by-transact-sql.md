@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906023"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509049"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
   
 -   명시적 GROUPING SETS 목록의 일부가 아닌 그룹화 집합을 GROUP BY 절에 사용할 수 없습니다. 예를 들어 `GROUP BY Column1, (Column2, ...ColumnN`)은 표준에서 허용되지만, Transact-SQL에서는 허용되지 않습니다.  Transact-SQL은 의미상 동일한 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` 및 `GROUP BY Column1, Column2, ... ColumnN`을 지원합니다. 이러한 예는 이전 `GROUP BY` 예와 기능적으로 동일합니다. 이는 `GROUP BY Column1, (Column2, ...ColumnN`)이 의미상 동일하지 않은 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`로 잘못 해석될 수 있는 가능성을 방지하기 위한 것입니다.  
   
--   그룹화 집합은 그룹화 집합 내에 사용할 수 없습니다. 예를 들어 `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))`는 SQL-2006 표준에서 허용되지만, Transact-SQL에서는 허용되지 않습니다. Transact-SQL은 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 또는 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`를 허용합니다. 이는 의미상 첫 번째 GROUP BY 예제와 동일하며 더 명확한 구문을 사용합니다.  
+-   그룹화 집합은 그룹화 집합 내에 사용할 수 없습니다. 예를 들어 `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))`는 SQL-2006 표준에서 허용되지만, Transact-SQL에서는 허용되지 않습니다. Transact-SQL은 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 또는 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`를 허용합니다. 이는 의미상 첫 번째 GROUP BY 예제와 동일하며 더 명확한 구문을 사용합니다.  
   
 -   GROUP BY [ALL/DISTINCT]는 열 식이 포함된 단순 GROUP BY 절에서만 허용됩니다. GROUPING SETS, ROLLUP, CUBE, WITH CUBE 또는 WITH ROLLUP 구조에서는 허용되지 않습니다. ALL은 기본값이며 암시적입니다. 또한 이전 버전과 호환되는 구문에서도 허용됩니다.
   

@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612462"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537921"
 ---
 # <a name="remote-servers"></a>원격 서버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612462"
 >  가능하면 Windows 인증을 사용하세요.  
   
 ### <a name="remote-server-security-example"></a>원격 서버 보안 예  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **및** serverReceive **와 같은**설치를 고려합니다. **serverReceive** 는 **serverSend**로부터의 **Sales_Mary**라는 수신 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **의**Alice **라는**인증 로그인에 매핑하도록 구성되어 있습니다. **serverSend**로부터의 **Joe**라는 또 다른 수신 로그인은 **serverReceive**** 에서 **Joe**라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverSend **및** serverReceive **와 같은**설치를 고려합니다. **serverReceive** 는 **serverSend**로부터의 **Sales_Mary**라는 수신 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive **의**Alice **라는**인증 로그인에 매핑하도록 구성되어 있습니다. **serverSend**로부터의 **Joe**라는 또 다른 수신 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **serverReceive _의_ Joe **라는**인증 로그인에 매핑됩니다.  
   
  다음 Transact-SQL 코드 예제는 `serverSend` 에 대해 RPC를 수행하도록 `serverReceive`를 구성합니다.  
   

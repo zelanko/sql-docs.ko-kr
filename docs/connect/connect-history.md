@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 98f49213afaaac17ea41a366bf4888043cc61045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529440"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server에 대 한 드라이버 기록
 
@@ -24,7 +24,7 @@ ms.locfileid: "51605633"
 
 SQL Server 용 Microsoft ODBC 드라이버의 세 고유 세대가 있습니다. 일부로 계속 제공 되는 첫 번째 "SQL Server" ODBC 드라이버 [Windows Data Access Components](#microsoft-or-windows-data-access-components)합니다. 하지 새로운 개발에이 드라이버를 사용 하는 것이 좋습니다. SQL Server 2005부터 합니다 [SQL Server Native Client](#sql-server-native-client) ODBC 인터페이스를 포함 하 고 SQL Server 2012를 통해 SQL Server 2005와 함께 제공 되는 ODBC 드라이버입니다. 하지 새로운 개발에이 드라이버를 사용 하는 것이 좋습니다. SQL Server 2012 이후에 [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) 앞으로 최신 서버 기능을 사용 하 여 업데이트 되는 드라이버입니다.
 
-### <a name="sql-server-native-client"></a>SQL Server Native Client 
+### <a name="sql-server-native-client"></a> SQL Server Native Client 
 
 SQL Server Native Client는 OLE DB 및 ODBC 모두에 사용 되는 독립 실행형 라이브러리입니다. SQL Server Native Client (종종 약식된 SNAC) 2012를 통해 SQL Server 2005에 포함 되었습니다. SQL Server 2012를 통해 SQL Server 2005에 도입 된 새 기능을 활용 해야 하는 응용 프로그램에 대 한 SQL Server Native Client은 사용할 수 있습니다. (Microsoft/Windows Data Access Components SQL Server에서 이러한 새 기능에 대 한 업데이트 되지 않습니다.) SQL Server 2012 이상의 새로운 기능에 대 한 SQL Server Native Client 업데이트 되지 않습니다. 전환할 Microsoft ODBC Driver for SQL Server 또는 Microsoft OLE DB Driver for SQL Server 앞으로 새 SQL Server 기능을 활용 하려는 경우.
 

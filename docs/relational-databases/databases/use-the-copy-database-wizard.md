@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403248"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -301,7 +301,7 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
 
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 선택하고 **데이터베이스 복사...** 를 클릭합니다.
+2.   **데이터베이스**를 확장하고 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 선택하고 **데이터베이스 복사...** 를 클릭합니다.
 
 3.  **데이터베이스 복사 마법사 시작** 페이지가 표시되면 **다음**을 클릭합니다.
 
@@ -312,7 +312,7 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
      > **참고** 모든 데이터베이스에서 데이터베이스 복사 마법사를 시작할 수 있습니다.  원본 또는 대상 서버에서 데이터베이스 복사 마법사를 사용할 수 있습니다.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  분리 및 연결 방법을 사용하여 데이터베이스를 다른 실제 서버 인스턴스로 이동합니다.  로그인 및 SQL Server 에이전트 작업도 이동됩니다.**  
-다음 예제는 `Sales` 데이터베이스, `contoso\Jennie` 인 Windows 로그인 및 `Jennie’s Report` 인 SQL Server 에이전트 작업을 `Server1` 의 SQL Server 2008 인스턴스에서 `Server2`의 SQL Server 2016 인스턴스로 이동합니다.  `Jennie’s Report` 는 `Sales` 데이터베이스를 사용합니다.  `Sales` 는 대상 서버 `Server2`에 존재하지 않습니다.  `Server1` 은 데이터베이스 이동 후 다른 팀에 다시 할당됩니다.
+다음 예제는 `Sales` 데이터베이스, `contoso\Jennie` 인 Windows 로그인 및 `Jennie's Report` 인 SQL Server 에이전트 작업을 `Server1` 의 SQL Server 2008 인스턴스에서 `Server2`의 SQL Server 2016 인스턴스로 이동합니다.  `Jennie's Report` 는 `Sales` 데이터베이스를 사용합니다.  `Sales` 는 대상 서버 `Server2`에 존재하지 않습니다.  `Server1` 은 데이터베이스 이동 후 다른 팀에 다시 할당됩니다.
   
 6.  위의 [제한 사항](#Restrictions)에 설명된 것처럼 대상 서버에 없는 데이터베이스를 참조하는 SQL Server 에이전트 작업을 전송할 때 대상 서버에서 셸 데이터베이스가 생성되어야 합니다.  대상 서버에서 `Sales` 라는 셸 데이터베이스를 만듭니다. 
 
@@ -322,7 +322,7 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
   
 9.  **대상 데이터베이스 구성** 페이지: **마법사** 에서 `Sales` 가 이미 대상 서버에 있다는 것을 확인했습니다. 위의 **6단계** 에서 만들어져서 `_new` 대상 데이터베이스 **이름에** 가 추가되었습니다.  `_new` 대상 데이터베이스 **입력란에서** 를 삭제합니다.  원하는 경우 **파일 이름**및 **대상 폴더**를 변경합니다.  **대상 서버에서 이름이 같은 데이터베이스를 삭제한 다음 데이터베이스 전송을 계속하여 기존 데이터베이스 파일을 덮어씁니다.** 를 선택합니다.  **다음**을 클릭합니다.
   
-10. **서버 개체 선택** 페이지: **선택한 관련 개체:** 패널에서 **개체 이름 로그인**에 대한 줄임표 단추를 클릭합니다.  **복사 옵션** 아래에서 **선택한 로그인만 복사합니다.** 를 선택합니다.  **모든 서버 로그인 표시**확인란을 선택합니다.  **에 대한** 로그인 `contoso\Jennie`확인란을 선택합니다.  **확인**을 클릭합니다.  **사용 가능한 관련 개체:** 패널에서 **SQL Server 에이전트 작업** 을 선택하고 **>** 단추를 클릭합니다.  **선택한 관련 개체** 패널에서 **SQL Server 에이전트 작업**단추에 대한 줄임표 단추를 클릭합니다.  **복사 옵션** 아래에서 **선택한 작업만 복사합니다.** 를 선택합니다.  `Jennie’s Report`확인란을 선택합니다.  **확인**을 클릭합니다.  **다음**을 클릭합니다.  
+10. **서버 개체 선택** 페이지: **선택한 관련 개체:** 패널에서 **개체 이름 로그인**에 대한 줄임표 단추를 클릭합니다.  **복사 옵션** 아래에서 **선택한 로그인만 복사합니다.** 를 선택합니다.  **모든 서버 로그인 표시**확인란을 선택합니다.  **에 대한** 로그인 `contoso\Jennie`확인란을 선택합니다.  **확인**을 클릭합니다.  **사용 가능한 관련 개체:** 패널에서 **SQL Server 에이전트 작업** 을 선택하고 **>** 단추를 클릭합니다.  **선택한 관련 개체** 패널에서 **SQL Server 에이전트 작업**단추에 대한 줄임표 단추를 클릭합니다.  **복사 옵션** 아래에서 **선택한 작업만 복사합니다.** 를 선택합니다.  `Jennie's Report`확인란을 선택합니다.  **확인**을 클릭합니다.  **다음**을 클릭합니다.  
   
 11. **원본 데이터베이스 파일 위치** 페이지: **원본 서버의 파일 공유** 에 대한 줄임표 단추를 클릭하고 지정된 폴더 위치로 이동합니다.  예를 들어 폴더 위치가 `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` 인 경우 `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` 원본 서버의 파일 공유 **에 대해**를 사용합니다.  **다음**을 클릭합니다.
   
@@ -354,7 +354,7 @@ SSIS 패키지의 기본 이름이 생성됩니다. 원하는 대로 수정합�
 `Server1` 이 다른 팀으로 이동되고 **이동** 작업이 반복되지 않으므로 다음 단계를 실행하는 것이 좋습니다.
      -    `SalesFromServer1toServer2_Move` 에서 SSIS 패키지 `Server2`삭제
      -    `SalesFromServer1toServer2_Move` 에서 SQL Server 에이전트 프록시 작업 `Server2`삭제
-     -    `Jennie’s Report` 에서 SQL Server 에이전트 프록시 작업 `Server1`삭제
+     -    `Jennie's Report` 에서 SQL Server 에이전트 프록시 작업 `Server1`삭제
      -    `contoso\Jennie` 에서 로그인 `Server1`삭제
 
 

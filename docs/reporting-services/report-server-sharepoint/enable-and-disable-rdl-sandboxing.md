@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cf64bf1e07a83defbc3553535251f51fa96f839
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 183d7272049c7981a8a3f53a811087866c05c666
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412750"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -51,8 +51,8 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -104,7 +104,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   형식의 정적 멤버  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드  
+-    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드  
   
 -   보고서 정의의 **\<Classes>** 요소  
   
