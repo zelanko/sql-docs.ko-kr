@@ -12,12 +12,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656702"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531821"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51656702"
   
  다음 표에서는 각 도구를 사용하는 경우에 대해 설명합니다.  
   
-|도구|사용 시기|  
+|도구|사용 시기...|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|단일 컴퓨터에서 기본 재생 메커니즘을 사용하려는 경우. 특히 **단계**, **커서까지 실행**및 **중단점 설정/해제** 명령과 같은 줄 단위 디버깅 기능이 필요합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 추적을 재생하려는 경우|  
 |Distributed Replay|응용 프로그램 호환성을 평가하려는 경우. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 운영 체제 업그레이드 시나리오, 하드웨어 업그레이드 또는 인덱스 튜닝을 테스트하려는 경우입니다.<br /><br /> 캡처된 추적의 동시성이 너무 높아 단일 재생 클라이언트로는 시뮬레이션할 수 없는 경우|  
@@ -73,7 +73,7 @@ ms.locfileid: "51656702"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay 포럼](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 – 2단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 2단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

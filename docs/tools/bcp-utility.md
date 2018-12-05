@@ -1,7 +1,7 @@
 ---
 title: bcp 유틸리티 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,17 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675382"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712504"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Bcp 유틸리티의 최신 버전을 참조 하세요. [SQL Server 용 Microsoft 명령줄 유틸리티 14.0 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Bcp를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
@@ -50,10 +48,31 @@ ms.locfileid: "51675382"
  ![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") **bcp** 구문에 사용되는 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]
-> **bcp** 를 사용하여 데이터를 백업하는 경우 서식 파일을 만들어 데이터 서식을 기록합니다. **bcp** 데이터 파일에는 스키마 또는 서식 정보가 **포함되어 있지 않기** 때문에 테이블이나 뷰가 삭제된 경우 서식 파일이 없으면 데이터를 가져오지 못할 수 있습니다.  
-  
+> **bcp** 를 사용하여 데이터를 백업하는 경우 서식 파일을 만들어 데이터 서식을 기록합니다. **bcp** 데이터 파일에는 스키마 또는 서식 정보가 **포함되어 있지 않기** 때문에 테이블이나 뷰가 삭제된 경우 서식 파일이 없으면 데이터를 가져오지 못할 수 있습니다.
+
+## <a name="download-the-latest-version-of-bcp-utility"></a>Bcp 유틸리티의 최신 버전 다운로드
+
+**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
+
+**버전 정보**
+
+릴리스 번호: 15.0 <br>
+빌드 번호: 15.0.1000.34<br>
+릴리스 날짜: 2018 년 10 월 18 일
+
+새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
+ 
+BCP 버전 실행을 확인 하려면 `bcp /v` 명령 및 해당 15.0.1000.34 확인 또는 이상을 사용 중입니다.
+
+
 <table><th>구문</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
     {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
 <a>                                                                                                         </a>
     [<a href="#a">-a packet_size</a>]
@@ -185,6 +204,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-G**<a name="G"></a>  
  이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
 
+> [!IMPORTANT]
+> **-G** 옵션은 Azure SQL 데이터베이스 및 Azure 데이터 웨어하우스에만 적용됩니다.
+> AAD 통합 및 대화형 인증 Linux 또는 macOS에서 현재 지원 되지 않습니다.
+
 > [!TIP]
 >  Bcp 버전 Azure Active Directory 인증 (AAD) 형식에 대 한 지원을 포함 하는 경우 검사할 **bcp-** (bcp\<공간 >\<dash >\<dash >)-G 목록에 표시 되는지 확인 하 고 사용 가능한 인수입니다.
 
@@ -220,6 +243,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
+- **Azure Active Directory 대화형**  
+
+   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 참조 하세요. [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)합니다. 
+
+   대화형 azure AD에 필요 **bcp** [버전 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 뿐만 이상을 [ODBC 버전 17.2 이상이](https://www.microsoft.com/download/details.aspx?id=56567)합니다.  
+
+   대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.   
+
+   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
+
+   대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다. 
+
+   ``` 
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
+   ``` 
+
+   도메인 페더레이션 한 경우 Azure AD 사용자 Windows 계정을 사용 하 여, 명령줄에 필요한 사용자 이름과 해당 도메인 계정을 포함 (예를 들어 joe@contoso.com 아래 참조).   
+
+   ```
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+   ```
+
+   게스트 사용자는 특정 Azure AD에 존재 하 고 bcp 명령을 실행 하려면 데이터베이스 권한이 있는 SQL DB에 존재 하는 그룹의 일부인, 게스트 사용자 별칭이 사용 됩니다 (예를 들어 *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
@@ -257,21 +303,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 * **FIRE_TRIGGERS**  
 **in** 인수와 함께 지정하면 대량 복사 작업 중에 대상 테이블에 정의한 삽입 트리거가 실행됩니다. FIRE_TRIGGERS를 지정하지 않으면 삽입 트리거가 실행되지 않습니다. FIRE_TRIGGERS는 **out**, **queryout**및 **format** 인수에 대해 무시됩니다.  
   
- **-i** _**input\_file**_<a name="i"></a>  
- 대화형 모드(**-n**, **-c**, **-w**또는 **-N** 을 지정하지 않음)를 사용하여 대량 복사를 수행할 때 각 데이터 필드에 대한 명령 프롬프트 질문의 응답이 포함된 응답 파일의 이름을 지정합니다.  
+**-i** _**input\_file**_<a name="i"></a>  
+대화형 모드(**-n**, **-c**, **-w**또는 **-N** 을 지정하지 않음)를 사용하여 대량 복사를 수행할 때 각 데이터 필드에 대한 명령 프롬프트 질문의 응답이 포함된 응답 파일의 이름을 지정합니다.  
   
- *input_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-i** 와 *input_file* 값 사이에 공백을 포함하지 마세요.  
+*input_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-i** 와 *input_file* 값 사이에 공백을 포함하지 마세요.  
   
- **-k**<a name="k"></a>  
- 작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
+**-k**<a name="k"></a>  
+작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
- **-K** _**application\_intent**_<a name="K"></a>   
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
+**-K** _**application\_intent**_<a name="K"></a>   
+서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
- **-L** _**last\_row**_<a name="L"></a>  
- 테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 마지막 행 번호보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  
+**-L** _**last\_row**_<a name="L"></a>  
+테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수에는 0보다 크고(>) 마지막 행 번호보다 작거나(<) 같은(=) 값을 지정해야 합니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  
   
- *last_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다.  
+*last_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다.  
   
 **-m** _**max\_errors**_<a name="m"></a>  
 **bcp** 작업이 취소되는 최대 구문 오류 발생 횟수를 지정합니다. 구문 오류란 대상 데이터 형식으로의 데이터 변환 오류를 나타냅니다. 총 *max_errors* 수에는 제약 조건 위반과 같이 서버에서만 검색할 수 있는 오류는 제외됩니다.  
@@ -339,7 +385,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *field_term* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-t** 와 *field_term* 값 사이에 공백을 포함하지 마세요.  
   
  **-T**<a name="T"></a>  
- **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 네트워크 사용자의 보안 자격 증명, *login_id*및 *password* 는 필요하지 않습니다. **–T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **–U** 와 **–P** 를 지정해야 합니다.
+ **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 네트워크 사용자의 보안 자격 증명, *login_id*및 *password* 는 필요하지 않습니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.
  
 > [!IMPORTANT]
 > **bcp** 유틸리티에서 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 **사용자 이름** 과 *암호* 를 조합하여 사용하는 대신 *-T* 옵션(트러스트된 연결)을 사용합니다. **bcp** 유틸리티가 SQL Database 또는 SQL Data Warehouse에 연결할 때 Windows 인증 또는 Azure Active Directory 인증을 사용이 지원되지 않습니다. **-U** 및 **-P** 옵션을 사용하세요. 
@@ -661,3 +707,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+## <a name="feedback"></a>피드백
+
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afced2ca67c104b0bb01ccfe57fee2e309cc1b08
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410170"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -129,7 +129,7 @@ JDBC Driver 6.4 Maven 중앙 리포지토리에서 사용할 수 있는 이기�
     
 |JAR|설명|  
 |---------|-----------------|  
-|sqljdbc41.jar|**sqljdbc41.jar** 클래스 라이브러리는 JDBC 4.0 API를 지원합니다. 이 라이브러리에는 JDBC 4.0 드라이버의 모든 기능과 함께 JDBC 4.0 API 메서드가 포함되어 있습니다. JDBC 4.1은 지원되지 않습니다("SQLFeatureNotSupportedException" 예외가 throw됨).<br /><br /> **sqljdbc41.jar** 클래스 라이브러리에는 JRE(Java Runtime Environment) 7.0이 필요합니다. 사용 하 여 **sqljdbc41.jar** JRE 6.0 또는 5.0에서 예외를 throw 합니다.<br /><br /> 
+|sqljdbc41.jar|**sqljdbc41.jar** 클래스 라이브러리는 JDBC 4.0 API를 지원합니다. 이 라이브러리에는 JDBC 4.0 드라이버의 모든 기능과 함께 JDBC 4.0 API 메서드가 포함되어 있습니다. JDBC 4.1은 지원되지 않습니다(“SQLFeatureNotSupportedException” 예외가 throw됨).<br /><br /> **sqljdbc41.jar** 클래스 라이브러리에는 JRE(Java Runtime Environment) 7.0이 필요합니다. 사용 하 여 **sqljdbc41.jar** JRE 6.0 또는 5.0에서 예외를 throw 합니다.<br /><br /> 
   
  JDBC 드라이버는 모든 주요 Sun 호환 Java 가상 머신에서 작동하고 지원되도록 설계되어 있지만 테스트는 Sun JRE 5.0, 6.0 및 7.0에서 수행됩니다.  
   

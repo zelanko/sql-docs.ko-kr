@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65a214e1280dd47609bbef326f082dbf87357cf9
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502710"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>전처리 옵션(Distributed Replay Utility Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ dreplay preprocess [-m controller] -i input_trace_file
  **-i** *input_trace_file*  
  컨트롤러에서 입력 추적 파일의 전체 경로(예: `D:\Mytrace.trc`)를 지정합니다. **-i** 매개 변수는 필수 항목입니다.  
   
- 같은 디렉터리에 롤오버 파일이 있으면 자동으로 로드되어 사용됩니다. 파일은 파일 롤오버 명명 규칙을 따라야 합니다. 예를 들면 `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`…과 같습니다. `Mytrace_n.trc`을 참조하세요.  
+ 같은 디렉터리에 롤오버 파일이 있으면 자동으로 로드되어 사용됩니다. 파일은 파일 롤오버 명명 규칙을 따라야 합니다(예: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, `Mytrace_n.trc`).  
   
 > [!NOTE]  
 >  컨트롤러와는 다른 컴퓨터에서 관리 도구를 사용하는 경우 이 매개 변수에 로컬 경로를 사용할 수 있도록 입력 추적 파일을 컨트롤러로 복사해야 합니다.  
@@ -77,13 +77,13 @@ dreplay preprocess [-m controller] -i input_trace_file
  이 예에서는 모든 기본 설정을 사용하여 전처리 단계가 시작됩니다. `localhost` 값은 컨트롤러 서비스가 관리 도구와 동일한 컴퓨터에서 실행 중임을 나타냅니다. *input_trace_file* 매개 변수는 입력 추적 데이터 `c:\mytrace.trc`의 위치를 지정합니다. 추적 파일 필터링은 사용되지 않으므로 **-c** 매개 변수는 지정할 필요가 없습니다.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  수정한 전처리 구성 파일에는 분산 재생 중 시스템 세션을 필터링하는 필터 조건이 추가되었습니다. 이 필터는 전처리 구성 파일 `<PreprocessModifiers>` 에서 `DReplay.exe.preprocess.config`요소를 수정하여 추가되었습니다.  
