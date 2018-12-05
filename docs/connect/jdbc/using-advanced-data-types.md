@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510499"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -164,7 +164,7 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 UDT(사용자 정의 형식)를 도입하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 함으로써 SQL 형식 체계를 확장했습니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 Microsoft .NET CLR(공용 언어 런타임)에서 지원하는 언어를 사용하여 정의합니다. 이러한 언어에는 Microsoft Visual C# 및 Visual Basic .NET 등이 있습니다. 데이터는 .NET Framework 기반 클래스 또는 구조의 필드와 속성으로 노출되며 동작은 클래스 또는 구조의 메서드로 정의됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 변수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 작업의 변수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 사용자 정의 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “사용자 정의 형식 인스턴스 사용 및 수정”을 참조하세요.  
   

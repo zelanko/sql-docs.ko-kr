@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600973"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510706"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Maven 프로젝트에 이러한 종속성을 포함 하는 방법의 예제를 참조 하세요. [다운로드 ADAL4J 및 AKV와의 종속성을 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
-SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SQL Server Management Studio (SSMS)는 Always Encrypted 마법사 또는 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키와 열 암호화 키 정의 만들 수 있습니다. 상시 암호화 데이터에 대 한 열 마스터 키로 사용할 수 있는 Windows 인증서 저장소에 자체 서명 된 인증서를 생성 하려면 동일한 마법사를 사용할 수 있습니다. 열 마스터 키와 열 암호화 키 T-SQL 구문에 대 한 자세한 내용은 참조 하세요. [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 하 고 [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각.
+SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SQL Server Management Studio (SSMS)는 Always Encrypted 마법사 또는 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키와 열 암호화 키 정의 만들 수 있습니다. 상시 암호화 데이터에 대 한 열 마스터 키로 사용할 수 있는 Windows 인증서 저장소에 자체 서명 된 인증서를 생성 하려면 동일한 마법사를 사용할 수 있습니다. 열 마스터 키와 열 암호화 키 T-SQL 구문에 대 한 자세한 내용은 참조 하세요. [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 하 고 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각.
 
 SQLServerColumnEncryptionCertificateStoreProvider 이름의 MSSQL_CERTIFICATE_STORE 이며 공급자 개체의 getName() API에서 쿼리할 수 있습니다. 드라이버에 의해 자동으로 등록 됩니다 하 고 응용 프로그램 변경 없이 원활 하 게 사용할 수 있습니다.
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 이 문서의 다른 키 저장소 공급자를 드라이버에서 지 원하는 모든 플랫폼에서 사용할 수 있지만 SQLServerColumnEncryptionCertificateStoreProvider 구현의 JDBC 드라이버는 Windows 운영 체제에만 제공 됩니다. 드라이버 패키지에서 사용할 수 있는 sqljdbc_auth.dll에서 종속성을 갖습니다. 이 공급자를 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 이 문서의 다른 키 저장소 공급자를 드라이버에서 지 원하는 모든 플랫폼에서 사용할 수 있지만 SQLServerColumnEncryptionCertificateStoreProvider 구현의 JDBC 드라이버는 Windows 운영 체제에만 제공 됩니다. 드라이버 패키지에서 사용할 수 있는 sqljdbc_auth.dll에서 종속성을 갖습니다. 이 공급자를 사용하려면 sqljdbc_auth.dll 파일을 JDBC 드라이버가 설치된 컴퓨터의 Windows 시스템 경로에 있는 디렉터리에 복사합니다. 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 예를 들어 32비트 JVM을 사용 중이고 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 VM(가상 머신) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다. `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java 키 저장소 공급자를 사용 하 여
 JDBC 드라이버는 Java 키 저장소를 위해 기본 제공된 키 저장소 공급자 구현을 제공합니다. 경우는 **keyStoreAuthentication** 연결 문자열 속성은 연결 문자열에 "JavaKeyStorePassword"로 설정 되어를 드라이버에서 자동으로 인스턴스화합니다 하 고 Java 키 저장소에 대 한 공급자를 등록 합니다. Java 키 저장소 공급자의 이름은 MSSQL_JAVA_KEYSTORE입니다. 이 이름은 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API를 사용 하 여 쿼리할 수도 있습니다. 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

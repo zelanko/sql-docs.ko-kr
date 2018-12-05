@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666282"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527647"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51666282"
   
 -   확장명이 `.trc` 인 단일 추적 파일  
   
--   파일 롤오버 명명 규칙을 따르는 일련의 롤오버 추적 파일은 예를 들면 `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`…와 같습니다. `<TraceFile>_n.trc`.  
+-   파일 롤오버 명명 규칙을 따르는 일련의 롤오버 추적 파일은 예를 들면 `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, `<TraceFile>_n.trc`와 같습니다.  
   
 ### <a name="input-trace-events-and-columns"></a>입력 추적 이벤트 및 열  
  Distributed Replay에서 입력 추적 데이터를 재생하려면 데이터가 특정 이벤트 및 열을 포함해야 합니다. **의** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 템플릿에 필요한 모든 이벤트 및 열과 추가 정보가 포함되어 있습니다. 이 템플릿에 대한 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하십시오.  

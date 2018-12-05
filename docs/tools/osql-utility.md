@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291919"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538911"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  

@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600863"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545295"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600863"
 > [!IMPORTANT]  
 >  연결 복원력 기능은 Microsoft Azure SQL Database 및 SQL Server 2014 이상 서버 버전에서 지원됩니다.  
   
- 유휴 연결 복원력에 대한 자세한 내용은 [기술 문서 - 유휴 연결 복원력](https://go.microsoft.com/fwlink/?LinkId=393996)을 참조하세요.  
+ 유휴 연결 복원력에 대한 자세한 내용은 [Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)(기술 문서 - 유휴 연결 복원력)를 참조하세요.  
   
  재연결 동작을 제어하기 위해 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 다음과 같은 두 가지 옵션이 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51600863"
   
 -   연결 다시 시도 간격  
   
-     연결 다시 시도 간격은 각 연결 다시 시도 간의 시간(초)을 지정합니다. 유효한 값은 1–60입니다. 다시 연결하기 위한 총 시간은 연결 시간 제한(SQLSetStmtAttr에서 SQL_ATTR_QUERY_TIMEOUT)을 초과할 수 없습니다. 기본값은 10초입니다.  
+     연결 다시 시도 간격은 각 연결 다시 시도 간의 시간(초)을 지정합니다. 유효한 값은 1~60입니다. 다시 연결하기 위한 총 시간은 연결 시간 제한(SQLSetStmtAttr에서 SQL_ATTR_QUERY_TIMEOUT)을 초과할 수 없습니다. 기본값은 10초입니다.  
   
      다음과 같이 하면 연결 다시 시도 간격을 수정할 수 있습니다.  
   

@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292499"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529119"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -106,13 +106,13 @@ dta
  튜닝할 각 데이터베이스의 이름을 지정합니다. 첫 번째 데이터베이스가 기본 데이터베이스입니다. 다음과 같이 데이터베이스 이름을 쉼표로 구분하여 여러 데이터베이스를 지정할 수 있습니다.  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
  또는 다음과 같이 각 데이터베이스 이름에 **–D** 인수를 사용하여 여러 데이터베이스를 지정할 수 있습니다.  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 인수는 필수 인수입니다. **-d** 인수를 지정하지 않은 경우 초기에 **dta** 는 작업에서 첫 번째 `USE database_name` 절로 지정된 데이터베이스에 연결합니다. 작업에 명시적 `USE database_name` 절이 없으면 **-d** 인수를 사용해야 합니다.  
@@ -371,7 +371,7 @@ dta -iq -I 48
  이 예에서는 보안 연결(`-E`)을 통해 MyServer에 있는 **tpcd1G** 데이터베이스에 연결하여 작업을 분석하고 권장 구성을 만듭니다. 그리고 script.sql이라는 스크립트 파일에 출력 파일을 씁니다. script.sql이 이미 있을 경우 **인수를 지정했으므로** dta `-F` 는 이 파일을 덮어씁니다. 작업 분석이 완료될 때까지 제한 시간 없이(`-A 0`) 튜닝 세션이 실행됩니다. 권장 구성에서는 최소 향상률 값으로 5%(`-m 5`)를 지정해야 합니다. **dta** 는 최종 권장 구성(`-fa IDX_IV`)에 인덱스 및 인덱싱된 뷰를 포함합니다.  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. 디스크 사용 제한**  
@@ -379,7 +379,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  이 예에서는 원시 데이터 및 추가 인덱스를 포함하여 총 데이터베이스 크기를 3GB(`-B 3000`)로 제한하고 출력을 d:\result_dir\script1.sql로 보냅니다. 1시간(`-A 60`) 동안만 실행됩니다.  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. 튜닝 쿼리 수 제한**  
@@ -387,7 +387,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  이 예에서는 orders_wkld.sql 파일에서 읽혀지는 최대 쿼리 수를 10(`-n 10`)개로 제한하고 15분(`-A 15`) 동안 실행합니다. 최대 쿼리 10개에 도달하거나 15분이 되면 종료됩니다. 10개 쿼리를 모두 튜닝하려면 `-A 0`을 사용하여 튜닝 시간을 무제한으로 지정합니다. 시간이 중요할 경우 다음 예와 같이 `-A` 인수로 튜닝할 수 있는 시간(분)을 지정하여 적절한 제한 시간을 설정합니다.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. 파일에 나열된 특정 테이블 튜닝**  
@@ -413,7 +413,7 @@ AdventureWorks2012.Production.Product  2000000
  튜닝 시간은 2시간(`-A 120`)이며 출력은 XML 파일(`-ox XMLTune.xml`)에 기록됩니다.  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

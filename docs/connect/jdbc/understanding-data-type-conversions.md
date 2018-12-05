@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520207"
 ---
 # <a name="understanding-data-type-conversions"></a>데이터 형식 변환 이해
 
@@ -107,7 +107,7 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 - **비손실(x)**: setter 형식이 원본 서버 유형과 동일하거나 작은 경우의 숫자 변환입니다. 예를 들어, 원본 서버 **10진수** 열에 대해 setBigDecimal을 호출하는 경우는 변환이 필요하지 않습니다. 숫자에서 문자로 변환하는 경우에는 Java **숫자** 데이터 형식이 **문자열**로 변환됩니다. 예를 들어, 값이 "53"인 varchar(50) 열에 setDouble을 호출하면 해당 대상 열에 문자 값 "53"이 생성됩니다.
 
-- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 규칙을 따릅니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로로 인해 지원되지 않는 변환 오류가 발생합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
+- **변환(y)**: Java **숫자** 형식을 보다 작은 원본 서버 **숫자** 형식으로 변환하는 것입니다. 이 변환은 일반적이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 규칙을 따릅니다. 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로는 지원되지 않는 변환 오류를 throw합니다. 예를 들어, 원본 정수 열에 대해 "1.9999" 값으로 updateDecimal을 사용하면 대상 열 값이 "1"이 됩니다. 하지만 "3000000000"을 전달하면 드라이버에서 오류가 발생합니다.
 
 - **데이터 의존(z)**: Java **문자열** 유형을 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환하려면 먼저 드라이버에서 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전달하고 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변환을 수행해야 합니다. sendStringParametersAsUnicode 연결 속성이 true로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **nvarchar**에서 **이미지**로의 변환을 허용하지 않으며 SQLServerException이 발생합니다. sendStringParametersAsUnicode가 false로 설정되어 있고 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 **이미지**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **varchar**에서 **이미지**로의 변환을 허용하며 예외가 발생하지 않습니다.
 

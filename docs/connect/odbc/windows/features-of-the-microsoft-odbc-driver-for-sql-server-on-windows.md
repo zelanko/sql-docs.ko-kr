@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600233"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536636"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -36,9 +36,9 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에
   
 이 릴리스의 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 다음과 같은 새 기능이 포함되어 있습니다.  
   
-### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>로그인 시간 제한을 지정 하는 것에 대 한 bcp.exe – l 옵션
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>로그인 시간 제한을 지정 하기 위한-l 옵션이 bcp.exe
  
-–l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 `bcp.exe` 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp.exe`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다. 약 10초 미만의 로그인 시간 제한은 안정적이지 않습니다.  
+-l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 `bcp.exe` 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp.exe`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다. 약 10초 미만의 로그인 시간 제한은 안정적이지 않습니다.  
   
 ### <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
@@ -53,7 +53,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 `-y0` 에 대 한 옵션 `sqlcmd.exe` 출력이 표시 너비를 0 경우 1MB에서 잘립니다.
   
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]부터 `–y0`이 지정된 경우 단일 열에서 검색할 수 있는 데이터 양에 제한이 없습니다. 이제 `sqlcmd.exe`가 2GB([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 최대 데이터 형식) 정도의 열을 스트림합니다.  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]부터 `-y0`이 지정된 경우 단일 열에서 검색할 수 있는 데이터 양에 제한이 없습니다. 이제 `sqlcmd.exe`가 2GB([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 최대 데이터 형식) 정도의 열을 스트림합니다.  
   
 또 다른 차이점은 해당 둘 다 지정 하면 `-h` 및 `-y0` 이제 오류 옵션이 호환 되지 않음을 보고를 생성 합니다. 열 제목 사이에 인쇄할 행 수를 지정하고 `-y0`과 호환된 적 없었던 `-h`는 무시되었지만 헤더는 인쇄되지 않았습니다.
   

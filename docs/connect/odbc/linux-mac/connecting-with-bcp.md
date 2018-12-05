@@ -13,12 +13,12 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527530"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -79,7 +79,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다.  
   
 - -l  
-로그인 시간 제한을 지정합니다. –l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 시간 제한(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다.
+로그인 시간 제한을 지정합니다. -l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다.
   
 - -L *last_row*  
 테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다.  

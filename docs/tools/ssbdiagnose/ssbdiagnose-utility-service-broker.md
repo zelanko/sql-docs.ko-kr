@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541322"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -207,7 +207,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions >**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
   
- **–E**  
+ **-E**  
  현재 Windows 계정을 로그인 ID로 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대해 Windows 인증 연결을 엽니다. 로그인은 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
  -E 옵션은 SQLCMDUSER 및 SQLCMDPASSWORD 환경 변수의 사용자와 암호 설정을 무시합니다.  

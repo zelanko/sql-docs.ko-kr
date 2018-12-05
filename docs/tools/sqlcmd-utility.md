@@ -1,7 +1,7 @@
 ---
 title: sqlcmd 유틸리티 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbda7d318e797bb5336534cf380089d3bc5b7d38
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661242"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712724"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,10 +50,32 @@ ms.locfileid: "51661242"
 - Windows 스크립트 파일입니다.
 - SQL Server 에이전트 작업의 운영 체제 (Cmd.exe) 작업 단계입니다.
 
-유틸리티는 ODBC를 사용 하 여 TRANSACT-SQL 일괄 처리 실행. 
+유틸리티는 ODBC를 사용 하 여 TRANSACT-SQL 일괄 처리 실행.
+
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd 유틸리티의 최신 버전 다운로드
+
+**[![다운로드](../ssdt/media/download.png) Microsoft 명령줄 유틸리티 다운로드 15.0.x for SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![다운로드](../ssdt/media/download.png) Microsoft 명령줄 유틸리티 다운로드 15.0.x SQL 서버 (x86) (2.2MB)에 대 한](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
+
+**버전 정보**
+
+릴리스 번호: 15.0 <br>
+빌드 번호: 15.0.1000.34<br>
+릴리스 날짜: 2018 년 10 월 18 일
+
+새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
  
+SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1000.34 확인 버전 이상이 사용에서 합니다.
+
+
+
 > [!NOTE]
-> sqlcmd 유틸리티의 가장 최신 버전은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=825643)에서 웹 릴리스로 제공됩니다. 버전 13.1 이상이 상시 암호화를 지원 해야 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
+> 버전 13.1 이상이 상시 암호화를 지원 해야 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
 
 기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다: [ ![Cloud Shell 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
 
@@ -124,7 +146,7 @@ sqlcmd
 ## <a name="command-line-options"></a>명령줄 옵션  
  **로그인 관련 옵션**  
   **-A**  
- DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결할 때 SQL server 관리자 여야 합니다. DAC는 Azure Active Directory 관리자가 제공 되지 않습니다.
+ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결할 때 SQL server 관리자 여야 합니다. DAC에 대 한 Azure Active Directory 관리자를 사용할 수 없습니다.
   
  **-C**  
  이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
@@ -147,8 +169,8 @@ sqlcmd
  이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다.
 
 > [!IMPORTANT]
-> **-G** 옵션은 Azure SQL 데이터베이스 및 Azure 데이터 웨어하우스에만 적용됩니다.
-> AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다. 
+> `-G` 옵션은 Azure SQL Database 및 Azure Data Warehouse에만 적용됩니다.
+> AAD 통합 및 대화형 인증 Linux 또는 macOS에서 현재 지원 되지 않습니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
@@ -169,7 +191,7 @@ sqlcmd
    *AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다*합니다.
 
     ```
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
+    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
     ```  
 
     그러면 백 엔드에서 다음 연결 문자열이 생성됩니다. 
@@ -179,7 +201,41 @@ sqlcmd
     ``` 
 
     > [!NOTE] 
-    > -E 옵션(Trusted_Connection)은 -G 옵션과 함께 사용할 수 없습니다.
+    > `-E` 옵션(Trusted_Connection)은 `-G` 옵션과 함께 사용할 수 없습니다.
+
+
+- **Azure Active Directory 대화형**  
+ 
+   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)합니다. 
+
+   대화형 azure AD에 필요 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 뿐만 이상을 [ODBC 버전 17.2 이상이](https://www.microsoft.com/download/details.aspx?id=56567)합니다.  
+
+   대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.
+
+   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
+
+   대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다.
+
+   ``` 
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
+   ```
+
+   이전 명령에서는 백 엔드에서 다음 연결 문자열을 생성합니다.  
+
+   ```
+   SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
+   ```
+
+   명령줄에 필요한 사용자 이름과 해당 도메인 계정을 포함 Azure AD 사용자는 Windows 계정을 사용 하 여 도메인 페더레이션된 사용자 인 경우 (예를 들어 joe@contoso.com 아래 참조).
+
+   ```
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
+   ```
+ 
+   게스트 사용자는 특정 Azure AD에 존재 하 고 sqlcmd 명령을 실행 하려면 데이터베이스 권한이 있는 SQL DB에 존재 하는 그룹의 일부인, 게스트 사용자 별칭이 사용 됩니다 (예를 들어 *keith0@adventureworks.com*).
+
+  >[!IMPORTANT]
+  >사용 하는 경우 알려진된 문제가 없는 합니다 `-G` 및 `-U` SQLCMD 사용 하 여 옵션 배치 하는 경우를 `-U` 전에 옵션를 `-G` 옵션 인증이 실패 발생할 수 있습니다. 항상 시작 합니다 `-G` 옵션 뒤에 `-U` 옵션입니다.
 
     
  **-H** *workstation_name*  
@@ -191,8 +247,8 @@ sqlcmd
  **-K** *application_intent*  
  서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
- **-M** *multisubnet_failover*  
- SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [! 포함[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 Always On 가용성 그룹 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), 및 [활성 보조: 읽기 가능한 보조 복제본 (Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)합니다.  
+**-M** *multisubnet_failover*  
+ SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -204,7 +260,7 @@ sqlcmd
 
 강력한 암호를 사용 하는 것이 좋습니다.
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**강력한 암호를 사용하세요.**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**강력한 암호를 사용하세요.**](../relational-databases/security/strong-passwords.md)
   
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
@@ -711,7 +767,7 @@ sqlcmd
  일괄 처리 종결자가 나타난 후 이 파일이 읽혀지고 실행됩니다. 여러 **:r** 명령을 실행할 수 있습니다. 이 파일에는 모든 유형의 **sqlcmd** 명령이 포함될 수 있으며 그 예로 일괄 처리 종결자 **GO**를 들 수 있습니다.  
   
 > [!NOTE]  
->  대화형 모드에서 표시되는 줄 수는 **:r** 명령이 나타날 때마다 1씩 증가합니다. **:r** 명령은 목록 명령의 출력에 나타납니다.  
+>  대화형 모드에서 표시되는 줄 수는 `:r` 명령이 나타날 때마다 1씩 증가합니다. `:r` 명령은 목록 명령의 출력에 나타납니다.  
   
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
@@ -763,7 +819,7 @@ sqlcmd
   
 -   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 **sqlcmd** 에서 호출할 경우 이 파일에 :Out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   
--   올바른 파일 경로의 예는 `C:\<filename>`, `\\<Server>\<Share$>\<filename>` , `"C:\Some Folder\<file name>"`입니다. 경로에 공백이 있을 경우 따옴표를 사용합니다.  
+-   올바른 파일 경로의 예는 `C:\<filename>`, `\\<Server>\<Share$>\<filename>` 및 `"C:\Some Folder\<file name>"`입니다. 경로에 공백이 있을 경우 따옴표를 사용합니다.  
   
 -   각각의 새 **sqlcmd** 세션은 이름이 같은 기존 파일을 덮어씁니다.  
   
@@ -827,7 +883,7 @@ Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'�
  스트리밍된 XML 데이터와 행 집합 데이터를 혼합할 수 없습니다. XML 스트림을 출력하는 Transact-SQL 문을 실행하기 전에 XML ON 명령을 실행하지 않은 경우 출력이 잘못됩니다. XML ON 명령을 실행한 경우 일반 행 집합을 출력하는 Transact-SQL 문을 실행할 수 없습니다.  
   
 > [!NOTE]  
->  **:XML** 명령은 SET STATISTICS XML 문을 지원하지 않습니다.  
+>  `:XML` 명령은 SET STATISTICS XML 문을 지원하지 않습니다.  
   
 ###  <a name="OutputJSON"></a> JSON 출력 형식  
  JSON 출력을 원하는 경우에는 다음 명령을 사용합니다. `:XML ON` 그렇지 않으면 출력에 열 이름과 JSON 텍스트가 모두 포함됩니다. 이 출력은 유효한 JSON이 아닙니다.  
@@ -840,7 +896,7 @@ Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'�
 Azure Active Directory 인증 사용 예제:
 ```
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
-sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G -l 30
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
 ## <a name="sqlcmd-best-practices"></a>sqlcmd를 위한 최선의 구현 방법  
@@ -866,13 +922,10 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [작업 단계 관리](~/ssms/agent/manage-job-steps.md)   
  [CmdExec 작업 단계 만들기](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
-  
 
+## <a name="feedback"></a>피드백
 
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
-
-
-
-
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

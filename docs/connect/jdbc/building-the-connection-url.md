@@ -11,12 +11,12 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d009a20b4e3a432cdea72a881024ca3aead1bc09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658801"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159111"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   
@@ -104,7 +104,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오.  
   
- 또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
+ 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

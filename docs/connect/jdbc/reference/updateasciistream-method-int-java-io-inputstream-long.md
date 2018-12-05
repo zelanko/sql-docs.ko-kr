@@ -1,5 +1,5 @@
 ---
-title: updateAsciiStream 메서드 (java.io.InputStream, long) | Microsoft Docs
+title: updateAsciiStream 메서드(java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cec28f465645f6dd72cd877311984376c15dad7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6c5cc380d626152a494cc61c238d163f0188c24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698291"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527841"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>updateAsciiStream 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

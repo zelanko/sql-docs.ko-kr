@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050855"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413752"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 릴리스 정보
 
@@ -76,20 +76,22 @@ ms.locfileid: "50050855"
 - /DiagnosticsFile:"C:\Temp\sqlpackage.log 추가" 명령줄 매개 변수 진단 정보를 저장할 파일 경로 지정 합니다.
 - 추가 /Diagnostics 명령줄 매개 변수를 콘솔에 진단 정보를 기록 합니다.
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>macOS 및 Linux (미리 보기) 0.0.1 sqlpackage
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>macOS 및 Linux.NET Core (미리 보기)에서 sqlpackage
 
-릴리스 날짜: 2018년 5월 9일  
-빌드: 15.0.4057.1
+릴리스 날짜: 2018년 11월 15일  
+빌드: 15.0.4240.1
 
-이 릴리스에서.NET Core 2.0을 대상으로 하는 sqlpackage의 플랫폼 간 미리 보기 빌드를 포함 및 macOS 및 Linux에서 실행할 수 있습니다. 
+이 릴리스에서.NET Core 2.1을 대상으로 하는 sqlpackage의 플랫폼 간 미리 보기 빌드를 포함 및 macOS 및 Linux에서 실행할 수 있습니다. 
+
+다음 수정 사항을 포함 하는 릴리스:
+
+- .NET Core 2.1로 이동 
+- SQL CLR UDT 형식을 비롯 한 CLR UDT 형식에 대 한 지원: SqlGeography, SqlGeometry, 및 SqlHierarchyId 합니다.
 
 이 릴리스는 다음과 같은 알려진된 문제가 사용 하 여 초기 미리 보기:
 
 - /P:CommandTimeout 매개 변수를 120 코딩 하드 되어 있습니다.
 - 빌드 및 배포 참가자가 지원 되지 않습니다.
-  - .NET Core 2.1 System.ComponentModel.Composition.dll 지원 되는 이동 후 수정 될 예정입니다.
-  - 대/소문자 구분 경로 처리 해야 합니다.
-- SQL Server CLR UDT 형식을 비롯 한 SQL CLR UDT 형식 지원 되지 않습니다: SqlGeography, SqlGeometry, 및 SqlHierarchyId 합니다.
 - Json 데이터 serialization을 사용 하는 오래 된.dacpac 및.bacpac 파일 지원 되지 않습니다.
 - 참조 된.dacpacs (예를 들어 master.dacpac) 대/소문자 구분 파일 시스템 문제로 인해 확인할 수 없습니다.
   - 참조 파일 (예를 들어 마스터 모두 대문자로 변경 하려면이 문제를 해결입니다. BACPAC)로 설정 합니다.

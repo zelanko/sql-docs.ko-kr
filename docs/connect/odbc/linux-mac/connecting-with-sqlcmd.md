@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512544"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "51604763"
 다음 명령은 Windows 인증 (Kerberos)을 사용 하는 방법을 보여 줍니다 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, 각각.
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>사용 가능한 옵션
@@ -58,7 +58,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -H 워크스테이션 이름을 지정합니다.  
   
-- -i *input_file*[,*input_file*[,…]] SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 식별합니다.  
+- -i *input_file*[,*input_file*[,...]] SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 식별합니다.  
   
 - -I 집합은 `SET QUOTED_IDENTIFIER` 연결 옵션을 ON입니다.  
   
@@ -75,7 +75,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -m *error_level* stdout에 보낼 오류 메시지를 제어합니다.  
   
 - **-M**_다중\_장애 조치_  
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
 > **-M** 이 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **MultiSubnetFailover=Yes** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -184,7 +184,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 실행할 `sqlcmd` 사용 하 여 `c.sql` 입력 파일:  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - -z *암호* 암호 변경.  
   
@@ -224,7 +224,7 @@ DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd`
 
 동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름(**–U**) 및 암호(**–P**)(제공된 경우)가 무시됩니다.
 
-다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd –D"`  
+다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd -D"`  
 
 ## <a name="see-also"></a>참고 항목  
 [**bcp**를 사용하여 연결](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

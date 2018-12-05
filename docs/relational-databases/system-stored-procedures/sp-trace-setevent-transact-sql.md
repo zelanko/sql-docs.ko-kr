@@ -78,7 +78,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event(7.0 Insert)|SELECT, INSERT 또는 UPDATE 문이 실행되기 전에 발생합니다.|  
 |29-31|예약됨|이벤트 28을 대신 사용합니다.|  
 |32|예약됨|예약됨|  
-|33|예외|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
+|33|Exception|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 예외가 발생했음을 나타냅니다.|  
 |34|SP:CacheMiss|저장 프로시저가 프로시저 캐시에서 발견되지 않는 때를 나타냅니다.|  
 |35|SP:CacheInsert|항목이 프로시저 캐시에 삽입되는 때를 나타냅니다.|  
 |36|SP:CacheRemove|항목이 프로시저 캐시에서 제거되는 때를 나타냅니다.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정한 시간을 나타냅니다.|  
 |213|Database Suspect Data Page|페이지에 추가 되었음을 나타냅니다 합니다 **suspect_pages** 테이블의 **msdb**합니다.|  
 |214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지하는 시간을 나타냅니다.|  
-|215|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|  
+|215|PreConnect:Starting|PreConnect:Starting|  
 |216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 완료하는 시간을 나타냅니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
@@ -258,20 +258,20 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
-|13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
+|13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
 |15|**EndTime**|이벤트가 종료된 시간입니다. 이 열은 **SQL:BatchStarting** 또는 **SP:Starting**과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 채워지지도 합니다 **Hash Warning** 이벤트입니다.|  
 |16|**Reads**|이벤트 대신 서버에서 수행한 논리적 디스크 읽기 수입니다. 이 열이 채워져 있지 합니다 **잠금: 출시** 이벤트입니다.|  
 |17|**Writes**|이벤트 대신 서버에서 수행한 물리적 디스크 쓰기 수입니다.|  
 |18|**CPU**|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
-|19|**사용 권한**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
+|19|**Permissions**|보안 감사에 의해 사용된 사용 권한의 비트맵을 나타냅니다.|  
 |20|**Severity**|예외적인 심각도입니다.|  
 |21|**EventSubClass**|이벤트 하위 클래스의 유형입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
 |22|**Exchange Spill**|시스템이 할당한 개체의 ID입니다.|  
-|23|**성공**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
+|23|**Success**|감사에 사용한 권한 사용 시도의 성공입니다.<br /><br /> **1** = 성공**0** = 실패|  
 |24|**IndexID**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |25|**IntegerData**|추적에서 캡처된 이벤트 클래스에 의존하는 정수 값입니다.|  
-|26|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 *servername* 또는 *servername\instancename*를 추적 합니다.|  
+|26|**ServerName**|인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 *servername* 또는 *servername\instancename*를 추적 합니다.|  
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
 |29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. 참조 [@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)합니다.|  

@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534686"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 
@@ -575,7 +575,7 @@ public class BulkCopyExistingTransactions {
   
 1. **SQL Server Management Studio**를 열고 AdventureWorks 데이터베이스가 있는 SQL Server에 연결합니다.  
   
-2. 데이터베이스를 확장하고 AdventureWorks 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **작업** 및 **데이터 내보내기**…를 선택합니다.  
+2. 데이터베이스를 확장하고 AdventureWorks 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **작업** 및 **데이터 내보내기**를 선택합니다.  
   
 3. 데이터 원본에서 SQL Server(예: SQL Server Native Client 11.0)에 연결할 수 있는 **데이터 원본**을 선택하고 구성을 확인한 후, **다음**을 선택합니다.  
   
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. **전송 데이터를 지정할 쿼리 작성** 및 **다음**을 선택합니다.  **SQL 문** SELECT ProductID, Name, ProductNumber FROM Production.Product를 입력하고 **다음**을 선택합니다.  
   
-6. 구성 확인: 행 구분 기호는 {CR}{LF}로, 열 구분 기호는 쉼표 {,}로 유지할 수 있습니다.  **매핑 편집**...을 선택하고 각 열에 대한 데이터 **형식**(예: ProductID의 경우 정수, 다른 경우 유니코드 문자열)이 올바른지 확인합니다.  
+6. 구성 확인: 행 구분 기호는 {CR}{LF}로, 열 구분 기호는 쉼표 {,}로 유지할 수 있습니다.  **Edit Mappings**(매핑 편집)를 선택하고 각 열에 대해 데이터 **형식**이 올바른지 확인합니다(예: ProductID의 경우 정수, 그 외의 경우 유니코드 문자열).  
   
 7. **마침**으로 건너뛰고 내보내기를 실행합니다.  
 
@@ -759,7 +759,7 @@ SQLServerBulkCopy 클래스를 사용하면 SQL Server 테이블에만 데이터
 | 문자열 getColumnName(int column)    | 지정된 열의 이름을 가져옵니다.                                                                                                                                                                                                                                                                      |
 | Int getColumnType (int 열)       | 지정된 열의 JDBC 데이터 형식을 가져옵니다.                                                                                                                                                                                                                                                            |
 | Int getPrecision (int 열)        | 지정된 열의 전체 자릿수를 가져옵니다.                                                                                                                                                                                                                                                                |
-| GetRowData() 개체               | 현재 행에 대한 데이터를 개체의 배열로 가져옵니다.<br /><br /> 각 개체는 지정된 열에 대해 표시된 JDBC 데이터 형식을 나타내는 데 사용되는 Java 언어 형식과 일치해야 합니다.  자세한 내용은 'JDBC 드라이버 데이터 형식 이해’에서 적절한 매핑을 참조하세요. |
+| GetRowData() 개체               | 현재 행에 대한 데이터를 개체의 배열로 가져옵니다.<br /><br /> 각 개체는 지정된 열에 대해 표시된 JDBC 데이터 형식을 나타내는 데 사용되는 Java 언어 형식과 일치해야 합니다.  자세한 내용은 ‘JDBC 드라이버 데이터 형식 이해’에서 적절한 매핑을 참조하세요. |
 | Int getScale (int 열)            | 지정된 열에 대한 소수 자릿수를 가져옵니다.                                                                                                                                                                                                                                                                    |
 | 부울 isAutoIncrement (int 열) | 열이 ID 열을 나타내는지 여부를 나타냅니다.                                                                                                                                                                                                                                            |
 | 부울 next)                      | 다음 데이터 행으로 이동합니다.                                                                                                                                                                                                                                                                         |
@@ -776,7 +776,7 @@ SQLServerBulkCopy 클래스를 사용하면 SQL Server 테이블에만 데이터
   
 3. CSV 파일에 대해 지정된 구분 기호는 데이터의 임의 위치에 표시되지 않아야 하며 Java 정규식에서 제한된 문자인 경우 올바르게 이스케이프되어야 합니다.  
   
-4. CSV 파일 구현에서 큰따옴표는 데이터의 일부로 처리됩니다. 예를 들어 hello,”world”,”hello,world” 줄은 구분 기호가 쉼표인 경우 hello, “world”, “hello 및 world” 값을 갖는 네 개의 열이 있는 것으로 처리됩니다.  
+4. CSV 파일 구현에서 큰따옴표는 데이터의 일부로 처리됩니다. 예를 들어 hello,“world”,“hello,world” 줄은 구분 기호가 쉼표인 경우 hello, “world”, “hello 및 world” 값을 갖는 네 개의 열이 있는 것으로 처리됩니다.  
   
 5. 줄 바꿈 문자는 행 종결자로 사용되며, 데이터의 어떤 위치에서도 허용되지 않습니다.  
   
