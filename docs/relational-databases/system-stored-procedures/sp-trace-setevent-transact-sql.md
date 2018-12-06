@@ -316,9 +316,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  *on*이 **1**로 설정되고 *column_id* 가 null 인 경우, 이벤트는 ON으로 설정되며 모든 열이 지워집니다. *column_id* 가 null인 경우, 해당 이벤트에 대한 열은 ON으로 설정됩니다.  
   
- *on*이 **0**로 설정되고 *column_id* 가 NULL 인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id* 가 null이 아니면, 열은 OFF로 설정됩니다.  
+ *on*이 **0**으로 설정되고 *column_id*가 NULL인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id*가 null이 아니면, 열은 OFF로 설정됩니다.   
   
- 이 테이블 간의 **@on**과 **@columnid** 간의 상호 작용을 보여 줍니다.  
+ 이 테이블 간의 **@on**과 **@columnid** 간의 상호 작용을 보여줍니다. 
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -343,7 +343,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_trace_setevent** 는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있었던 확장 저장 프로시저가 실행했던 많은 작업을 수행합니다. 다음 대신 **sp_trace_setevent** 를 사용합니다:  
+ **sp_trace_setevent**는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있었던 확장 저장 프로시저가 실행했던 많은 작업을 수행합니다. 다음 대신 **sp_trace_setevent**를 사용합니다. 
   
 -   **xp_trace_addnewqueue**  
   
@@ -353,7 +353,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on**이 **1**로 설정된 경우 sp_trace_setevent는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on**이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다. 
   
- 모든 SQL Trace 저장 프로시저 (**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한 대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
+ 모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다. 
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
