@@ -1,4 +1,4 @@
----
+﻿---
 title: sp_trace_setevent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정한 시간을 나타냅니다.|  
 |213|Database Suspect Data Page|페이지에 추가 되었음을 나타냅니다 합니다 **suspect_pages** 테이블의 **msdb**합니다.|  
 |214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지하는 시간을 나타냅니다.|  
-|215|PreConnect:Starting|PreConnect:Starting|  
+|215|PreConnect:Starting|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작하는 시간을 나타냅니다.|  
 |216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 완료하는 시간을 나타냅니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
@@ -312,13 +312,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
   
  **[ @on=]** *on*  
- 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *온* 됩니다 **비트**, 기본값은 없습니다.  
+ 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *on*은 **비트** 형식입니다. 기본값은 없습니다.  
   
- 경우 *온* 로 설정 된 **1**, 및 *column_id* 가 null 인 경우 이벤트가 ON으로 설정 되 고 모든 열이 지워집니다. 하는 경우 *column_id* 가 null이 열은 해당 이벤트에 대 한 ON으로 설정 합니다.  
+ *on*이 **1**로 설정되고 *column_id* 가 null 인 경우, 이벤트는 ON으로 설정되며 모든 열이 지워집니다. *column_id* 가 null인 경우, 해당 이벤트에 대한 열은 ON으로 설정됩니다.  
   
- 하는 경우 *에* 로 설정 된 **0**, 및 *column_id* 가 NULL 이면 이벤트 꺼져 OFF 고 모든 열이 지워집니다. 하는 경우 *column_id* 열 설정는 null이 아니면 OFF입니다.  
+ *on*이 **0**으로 설정되고 *column_id*가 NULL인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id*가 null이 아니면, 열은 OFF로 설정됩니다.   
   
- 이 테이블 간의 상호 작용을 보여 줍니다 **@on** 하 고 **@columnid**합니다.  
+ 이 테이블 간의 **@on**과 **@columnid** 간의 상호 작용을 보여줍니다. 
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -343,7 +343,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_trace_setevent** 대부분의 이전 버전에서 사용할 수 있는 확장된 저장된 프로시저가 실행 하 던 작업의 수행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 **sp_trace_setevent** 다음 대신:  
+ **sp_trace_setevent**는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있었던 확장 저장 프로시저가 실행했던 많은 작업을 수행합니다. 다음 대신 **sp_trace_setevent**를 사용합니다. 
   
 -   **xp_trace_addnewqueue**  
   
@@ -351,9 +351,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자가 실행 해야 합니다 **sp_trace_setevent** 각 이벤트에 대 한 추가 된 각 열에 대 한 합니다. 각 실행 하는 동안 경우 **@on** 로 설정 되어 **1**를 **sp_trace_setevent** 추적의 이벤트 목록에 지정된 된 이벤트를 추가 합니다. 하는 경우 **@on** 로 설정 되어 **0**를 **sp_trace_setevent** 목록에서 지정된 된 이벤트를 제거 합니다.  
+ 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on**이 **1**로 설정된 경우 sp_trace_setevent는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on**이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다. 
   
- 프로시저를 저장 하는 모든 SQL 추적의 매개 변수 (**sp_trace_xx**) 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
+ 모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다. 
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
