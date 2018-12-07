@@ -15,18 +15,18 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 732cc1fb83248104d7f7487855961bf7969d7fae
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c0b900cc31b9bacf0658422c9953dedec4ee9659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517457"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>통계 업데이트 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **통계 업데이트 태스크** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 인덱스 데이터 정보를 업데이트할 수 있습니다. 데이터베이스의 사용자 테이블에 작성된 각 인덱스의 배포 통계를 다시 샘플링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 배포 통계는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 동안 테이블 탐색을 최적화합니다. 배포 통계를 자동으로 구축하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 인덱스에 대한 해당 테이블에서 데이터를 주기적으로 샘플링합니다. 샘플링하는 양은 테이블의 행 수와 데이터 수정 빈도를 기초로 정해집니다. 테이블에서 지정한 비율의 데이터를 사용하여 추가 샘플링을 수행하려면 이 옵션을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 정보를 사용하여 보다 향상된 쿼리 계획을 만듭니다.  
   
- 이 태스크는 UPDATE STATISTICS 문을 실행합니다.  
+이 태스크에서는 `UPDATE STATISTICS` 문을 실행합니다.  
   
 ## <a name="options"></a>Options  
  **대량 삽입 태스크 편집기**  
@@ -54,7 +54,8 @@ ms.locfileid: "51217124"
   
      선택한 데이터베이스에 대해서만 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다. 이 옵션을 선택한 경우에는 목록에서 하나 이상의 데이터베이스를 선택해야 합니다.  
   
- **참고** 유지 관리 계획은 호환성 수준 80 이상으로 설정된 데이터베이스에 대해서만 실행합니다. 호환성 수준 70 이하로 설정된 데이터베이스는 표시되지 않습니다.  
+ > [!NOTE]
+ > 유지 관리 계획은 호환성 수준 80 이상으로 설정된 데이터베이스에 대해서만 실행합니다. 호환성 수준 70 이하로 설정된 데이터베이스는 표시되지 않습니다.  
   
  **개체**  
  테이블, 뷰 또는 둘 다를 표시하도록 **선택** 표를 제한합니다.  
@@ -84,7 +85,7 @@ ms.locfileid: "51217124"
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
->  영향을 받은 개체 수가 많은 경우에는 표시하는 데 시간이 오래 걸릴 수 있습니다.  
+> 영향을 받은 개체 수가 많은 경우에는 표시하는 데 시간이 오래 걸릴 수 있습니다.  
   
 ## <a name="new-connection-dialog-box"></a>새 연결 대화 상자  
  **연결 이름**  
@@ -112,6 +113,6 @@ ms.locfileid: "51217124"
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

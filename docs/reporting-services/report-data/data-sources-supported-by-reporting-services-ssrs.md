@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813866"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712574"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "51813866"
  사용자 지정 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하십시오. 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 자세한 내용은 <xref:System.Data> 네임스페이스를 참조하세요.   
   
 ## <a name="platform-support-for-report-data-sources"></a>보고서 데이터 원본에 대한 플랫폼 지원  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포에서 사용할 수 있는 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전 및 플랫폼에 따라 달라집니다. 기능에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 Reporting Services 기능](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 버전 및 플랫폼별로 지원되는 데이터 원본에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 표를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포에서 사용할 수 있는 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전 및 플랫폼에 따라 달라집니다. 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 버전 및 플랫폼별로 지원되는 데이터 원본에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 표를 참조하십시오.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본에 대한 플랫폼 고려 사항은 보고서 제작 클라이언트와 보고서 서버에 대해 각각 다릅니다.  
   

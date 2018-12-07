@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515120"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -117,7 +117,7 @@ ms.locfileid: "51813726"
   
 -   *Stylesheet*: HTML 뷰어에 적용할 스타일시트를 지정합니다.  
   
--   장치 정보 설정: `rc:tag=value`형식으로 장치 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 장치 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 장치 정보 설정을 사용할 수 있습니다. `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
+-   장치 정보 설정: `rc:tag=value`형식으로 장치 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 장치 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 장치 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)  
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
@@ -332,7 +332,7 @@ ms.locfileid: "51813726"
   
     -   **Hidden**: 문서 구조 영역을 숨깁니다.  
   
--   *DockToolBar*: 보고서 뷰어 웹 파트의 도구 모음이 위쪽이나 아래쪽에 도킹되는지 여부를 제어합니다. 유효한 값은 **Top** 및 **Bottom**입니다. 기본값은 **Top**입니다.  
+-   *DockToolBar*: 보고서 뷰어 웹 파트의 도구 모음이 상단 또는 하단 중 어디에 도킹되는지를 제어합니다. 유효한 값은 **Top** 및 **Bottom**입니다. 기본값은 **Top**입니다.  
   
      예를 들어 **SharePoint** 모드에서는 도구 모음을 아래쪽에 도킹합니다.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51813726"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 추가하려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은  
+-   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 포함시키려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은  
   
     -   1(0x1): **뒤로** 단추  
   

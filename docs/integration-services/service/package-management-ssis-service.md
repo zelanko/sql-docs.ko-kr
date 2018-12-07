@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532081"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
@@ -139,15 +139,15 @@ ms.locfileid: "47701631"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져오려면 **SQL Server** 옵션을 선택한 후 서버를 지정하고 인증 모드를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우 사용자 이름과 암호를 제공합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **확인**을 클릭합니다.  
   
     -   파일 시스템에서 가져오려면 **파일 시스템** 옵션을 선택합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **열기**를 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **열기**를 클릭합니다.  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에서 가져오려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **확인**을 클릭합니다.  
   
 7.  선택적으로 패키지 이름을 업데이트합니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47701631"
   
     -   파일 시스템으로 내보내려면 **파일 시스템** 옵션을 선택합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하여 패키지를 내보내려는 폴더를 찾고, 패키지 파일의 이름을 입력한 후 **저장**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하여 패키지를 내보내려는 폴더를 찾고, 패키지 파일의 이름을 입력한 후, **저장**을 클릭합니다.  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소로 내보내려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
@@ -221,13 +221,13 @@ ms.locfileid: "47701631"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음 패키지를 찾습니다.  
+ 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음, 패키지를 찾습니다.  
   
  **패키지 이름**  
  필요에 따라 패키지의 이름을 바꿉니다. 기본 이름은 가져올 패키지의 이름입니다.  
   
  **보호 수준**  
- 찾아보기 단추 **(...)** 를 클릭한 다음 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)를 참조하세요.  
+ 찾아보기 단추 **(...)** 를 클릭한 다음, **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)를 참조하세요.  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
@@ -261,10 +261,10 @@ ms.locfileid: "47701631"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음 패키지를 저장할 폴더를 찾습니다.  
+ 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음, 패키지를 저장할 폴더를 찾습니다.  
   
  **보호 수준**  
- 찾아보기 단추 **(...)** 를 클릭한 다음 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)를 참조하세요.  
+ 찾아보기 단추 **(...)** 를 클릭한 다음, **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)를 참조하세요.  
 
 ## <a name="back-up-and-restore-packages"></a>패키지 백업 및 복원
   

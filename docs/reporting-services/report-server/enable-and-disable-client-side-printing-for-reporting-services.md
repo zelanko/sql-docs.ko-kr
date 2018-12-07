@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030172"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711945"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 
   보고서 뷰어 도구 모음의 인쇄 단추는 브라우저에 표시된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 클라이언트 쪽 인쇄에 대해 PDF(Portable Document Format) 형식을 사용합니다. 새 원격 인쇄 환경은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 PDF 렌더링 확장을 사용하여 보고서를 PDF 형식으로 렌더링합니다. 보고서의 .PDF 형식을 다운로드하거나 .PDF 파일을 볼 수 있는 응용 프로그램이 설치된 경우 인쇄 버튼을 클릭하여 .PDF 파일의 페이지 크기, 방향 및 미리 보기 등과 같은 페이지의 일반적인 구성 항목에 대한 인쇄 대화 상자를 표시할 수 있습니다. 클라이언트 쪽 인쇄 기능은 기본적으로 설정되어 있지만 이 기능을 사용하지 않으려면 해제할 수 있습니다.  
   
- 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버에서 클라이언트 컴퓨터에 다운로드해야 하는 ActiveX 컨트롤을 사용했습니다. 보고서 서버를 SQL Server 2016으로 업그레이드하는 경우 인쇄 컨트롤이 보고서 서버 또는 클라이언트 컴퓨터에서 제거되지 않습니다.  
+ 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버에서 클라이언트 컴퓨터에 다운로드해야 하는 ActiveX 컨트롤을 사용했습니다. 보고서 서버를 SQL Server 2016 이상으로 업그레이드하는 경우 인쇄 컨트롤이 보고서 서버 또는 클라이언트 컴퓨터에서 제거되지 않습니다.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> 인쇄 환경  
  보고서 뷰어 도구 모음에서 인쇄 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 단추를 클릭할 때 환경은 클라이언트 컴퓨터에 설치된 .PDF 보기 응용 프로그램 및 사용 중인 브라우저에 따라 달라집니다.   클라이언트 컴퓨터에 따라 PDF 파일을 다운로드하거나 대화 상자에서 인쇄 옵션을 구성하거나 두 가지를 모두 수행할 수 있습니다.  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

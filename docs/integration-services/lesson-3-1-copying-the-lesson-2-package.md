@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 992e258fad0d69542942d2ead4df8cf08b36c391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536794"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>3-1단원 - 2단원 패키지 복사
 이 태스크에서는 2단원에서 만든 Lesson 2.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 2단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 3단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51637790"
   
 3.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
   
-4.  찾아보기 **(…)** 단추를 클릭하여 컴퓨터의 **Lesson 2.dtsx** 로 이동한 다음 **열기**를 클릭합니다.  
+4.  찾아보기 **(…)** 단추를 클릭하여 머신의 **Lesson 2.dtsx**로 이동한 다음, **열기**를 클릭합니다.  
   
     이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   

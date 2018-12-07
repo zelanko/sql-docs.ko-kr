@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028082"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710934"
 ---
 # <a name="uninstall-report-builder"></a>보고서 작성기 제거
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028082"
   
 2.  제어판에서 **프로그램 및 기능**을 클릭합니다.  
   
-3.  **이름** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 보고서 작성기를 찾아 클릭합니다.  
+3.  **이름** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 보고서 작성기를 찾아 클릭합니다.  
   
 4.  **제거**를 클릭합니다.  
   

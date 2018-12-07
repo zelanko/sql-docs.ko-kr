@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 92872e5a185d820650d49fe962eff6a8a78aadf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2168c38ace8f74b46107a1dab25bc8541ac2df35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606463"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537747"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|호환성 수준|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|sp_dbcmptlevel|80|  
+|호환성 수준|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|sp_dbcmptlevel|80|  
 |호환성 수준|데이터베이스 호환성 수준 110 및 120|이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 응용 프로그램을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 110<br /><br /> 데이터베이스 호환성 수준 120||  
 |XML|인라인 XDR 스키마 생성|XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다.|XMLDATA|181|  
 |Backup 및 Restore 메서드|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
@@ -105,7 +105,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |인덱스 옵션|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문|현재 구문을 사용하도록 문을 다시 작성해야 합니다.|INDEX_OPTION|33|  
 |인스턴스 옵션|sp_configure의 'allow updates' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'allow updates'|173|  
 |인스턴스 옵션|sp_configure 옵션:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|이제 자동으로 구성됩니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'locks'<br /><br /> sp_configure의 'open objects'<br /><br /> sp_configure의 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|인스턴스 옵션|sp_configure의 'priority boost' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다. 대신 Windows start /high ... program.exe 옵션을 사용하세요.|sp_configure의 'priority boost'|199|  
+|인스턴스 옵션|sp_configure의 'priority boost' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다. 대신 Windows start /high ... program.exe 옵션을 사용합니다.|sp_configure의 'priority boost'|199|  
 |인스턴스 옵션|sp_configure의 'remote proc trans' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'remote proc trans'|37|  
 |연결된 서버|연결된 서버에 대한 SQLOLEDB 공급자를 지정합니다.|SQL Server Native Client(SQLNCLI)|연결된 서버에 대한 SQLOLEDDB|19|  
 |잠금|sp_lock|sys.dm_tran_locks|sp_lock|99|  

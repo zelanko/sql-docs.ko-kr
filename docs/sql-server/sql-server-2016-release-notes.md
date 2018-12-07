@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524333"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |   --- |   --- |   --- |
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
 |TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트 |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.  |       |
-|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생성하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.  |       |
+|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생성하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)에서 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.  |       |
 |DBCC CLONEDATABASE에 대한 SSB(Service Broker) 지원    |   DBCC CLONEDATABASE 명령이 SSB 개체의 스크립팅을 허용하도록 향상되었습니다.  |   [KB4092075](https://support.microsoft.com/help/4092075) |
 |TempDB 버전 저장소 공간 사용량을 모니터링하는 새로운 DMV    |   SQL Server 2016 SP2에 sys.dm_tran_version_store_space_usage DMV가 새롭게 도입되어 TempDB에서 버전 저장소 사용량을 모니터링 할 수 있습니다. 이제 DBA를 프로덕션 서버에서 실행할 때 성능 오버 헤드가 발생하지 않으면서, 데이터베이스당 버전 저장소 사용 요구 사항을 기반으로 TempDB 크기를 사전에 계획할 수 있습니다. |       |
 |복제 에이전트에 대한 완벽한 덤프 지원 | 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본적으로 예외 증상의 미니 덤프가 만들어집니다. 이렇게 하면 처리되지 않은 예외 문제를 해결하는 것이 매우 어렵습니다. 이번 변경을 통해 복제 에이전트에 대한 전체 덤프를 생성할 수 있는 새로운 레지스트리 키가 도입되었습니다.  |       |
@@ -68,11 +68,11 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |sys.dm_db_file_space_usage의 익스텐트 수정 정보| 마지막 전체 백업 이후에 수정된 익스텐트의 수를 추적하는 새 열이 sys.dm_db_file_space_usage에 추가되었습니다.  |       |
 |sys.dm_exec_query_stats의 세그먼트 정보 |   total_columnstore_segment_reads 및 total_columnstore_segment_skips와 같이, 건너뛴 columnstore 세그먼트와 읽은 columnstore 세그먼트의 수를 추적하는 새 열이 sys.dm_exec_query_stats에 추가되었습니다.   |   [KB4051358](https://support.microsoft.com/help/4051358) |
 |배포 데이터베이스에 맞는 호환성 수준 설정  |   서비스 팩을 설치하면 배포 데이터베이스 호환성 수준이 90으로 변경됩니다. 이것은 sp_vupgrade_replication 저장 프로시저의 코드 경로 때문입니다. 이제 배포 데이터베이스에 올바른 호환성 수준을 설정하도록 SP가 변경되었습니다.   |       |
-|마지막으로 알려진 양호한 DBCC CHECKDB 정보 노출    |   마지막으로 성공한 DBCC CHECKDB 실행 날짜를 프로그래밍 방식으로 반환하는 새 데이터베이스 옵션이 추가되었습니다. DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)를 쿼리하면 지정된 데이터베이스에서 마지막으로 성공한 DBCC CHECKDB가 실행된 날짜/시간을 나타내는 단일 값을 얻을 수 있습니다.  |       |
+|마지막으로 알려진 양호한 DBCC CHECKDB 정보 노출    |   마지막으로 성공한 DBCC CHECKDB 실행 날짜를 프로그래밍 방식으로 반환하는 새 데이터베이스 옵션이 추가되었습니다. 사용자는 이제 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)를 쿼리하여 지정된 데이터베이스에서 마지막으로 DBCC CHECKDB의 실행에 성공한 날짜/시간을 나타내는 단일 값을 얻을 수 있습니다.  |       |
 |실행 계획 XML 향상| 통계 이름, 수정 카운터, 샘플링 비율 및 통계가 마지막으로 업데이트된 시간을 포함하는 [쿼리 계획을 컴파일하는데 사용되는 통계에 대한 정보](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)입니다. 이 기능은 CE 모델 120 이상에만 추가됩니다. 예를 들어 CE 70에서는 지원되지 않습니다.| |
 | |쿼리 최적화 프로그램에서 "행 목표" 논리를 사용하는 경우 새로운 특성인 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/)이 실행 계획 XML에 추가됩니다.| |
 | |스칼라 UDF(사용자 정의 함수)에 소요된 시간을 추적하는 새 런타임 속성 [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/)이 실제 실행 계획 XML에 있습니다.| |
-| |실제 실행 계획 XML에 [상위 10개의 가능한 대기 목록](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/)을 추가하는 CXPACKET 대기 유형이 추가되었습니다. 병렬 쿼리 실행에는 CXPACKET 대기가 자주 포함되지만 이런 유형의 대기는 실제 실행 계획 XML에 보고되지 않았습니다. |       |
+| |실제 실행 계획 XML에서 [상위 10개의 가능한 대기 목록](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/)에 CXPACKET 대기 유형을 추가합니다. 병렬 쿼리 실행에는 CXPACKET 대기가 자주 포함되지만 이런 유형의 대기는 실제 실행 계획 XML에서 보고되지 않았습니다. |       |
 | |병렬 처리 연산자 유출 중 TempDB에 기록된 페이지 수를 보고하는 런타임 유출 경고가 확장되었습니다.| |
 |보조 문자 데이터 정렬이 사용되는 데이터베이스에 대한 복제 지원  |   보조 문자 데이터 정렬을 사용하는 데이터베이스에서 복제가 지원됩니다. |       |
 |가용성 그룹 장애 조치(failover)를 사용하여 적절한 Service Broker 처리 |   가용성 그룹 데이터베이스에서 Service Broker를 사용할 수 있는 현재 구현에서는 AG 장애 조치(failover) 중 주 복제본에서 시작된 모든 Service Broker 연결이 열린 상태로 유지됩니다. 향상된 버전에서는 AG 장애 조치(failover) 중 열려있는 모든 연결을 닫는 것이 목표입니다. |       |
