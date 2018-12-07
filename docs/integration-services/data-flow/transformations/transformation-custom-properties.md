@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507715"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  

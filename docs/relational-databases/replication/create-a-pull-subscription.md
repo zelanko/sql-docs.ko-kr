@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae91aeb2cf31e7855f4f6caa7c1b916c3ef1a968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781181"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503499"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "47781181"
   
 2.  구독자에서 [sp_addmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db**, **@publication**과 다음 매개 변수를 지정합니다.  
   
-    -   **@subscriber_type** - 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global** 을 지정합니다.  
+    -   **@subscriber_type** - 클라이언트 구독에 **local**을 지정하고 서버 구독에 **global**을 지정합니다.  
   
     -   **@subscription_priority** - 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**). 이 지정은 서버 구독에만 필요합니다.  
   

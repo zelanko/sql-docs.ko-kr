@@ -11,12 +11,12 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec1faa2c0fc16037f80857217f3f854503915dd1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 77c3644de5503ac35121c954c8dda4137322ea0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642147"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504125"
 ---
 # <a name="lesson-5-1---copying-the-lesson-4-package"></a>5-1단원 - 4단원 패키지 복사
 이 태스크에서는 4단원에서 만든 Lesson 4.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 4단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 5단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51642147"
   
 3.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
   
-4.  찾아보기 **(…)** 단추를 클릭하여 컴퓨터의 **Lesson 4.dtsx** 로 이동한 다음 **열기**를 클릭합니다.  
+4.  찾아보기 **(...)** 단추를 클릭하여 머신의 **Lesson 4.dtsx**로 이동한 다음, **열기**를 클릭합니다.  
   
     이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   

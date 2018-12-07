@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503268"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51701101"
 ### <a name="supportability-and-diagnostics-improvements"></a>지원 가능성 및 진단 향상
 - **복제 에이전트에 대한 전체 덤프 지원** - 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본 동작은 예외 증상의 미니 덤프를 만드는 것입니다. 기본 동작은 처리되지 않은 예외와 깊이 관련된 복잡한 문제를 해결해야 합니다. SP4에서는 복제 에이전트에 대한 전체 덤프 만들기를 지원하는 새 레지스트리 키를 소개합니다.
 - **XML 실행 계획에서 향상된 진단** - XML 실행 계획은 사용된 추적 플래그, 중첩된 루프 조인을 최적화하는메모리 조각, CPU 시간 및 경과된 시간에 대한 정보를 노출하도록 향상되었습니다. 
-- **진단 XE와 DMV 간의 향상된 상관 관계** - Query_hash 및 query_plan_hash 필드는 쿼리를 고유하게 식별하는 데 사용됩니다. DMV에서는 이를 varbinary(8)으로 정의하는 반면 XEvent에서는 UINT64로 정의합니다. SQL server에 "서명되지 않은 bigint"가 없으므로 캐스팅이 항상 작동하지는 않습니다. 이러한 향상 기능은 query_hash와 query_plan_hash에 해당하는 새 XEvent 작업/필터 열을 소개합니다. 단, XE와 DMV 간에 쿼리의 상관 관계를 지정할 수 있는 INT64로 정의된 경우는 제외합니다. 
+- **진단 XE와 DMV 간의 향상된 상관 관계** - Query_hash 및 query_plan_hash 필드는 쿼리를 고유하게 식별하는 데 사용됩니다. DMV에서는 이를 varbinary(8)으로 정의하는 반면 XEvent에서는 UINT64로 정의합니다. SQL 서버에 "서명되지 않은 bigint"가 없으므로 캐스팅이 항상 작동하지는 않습니다. 이러한 향상 기능은 query_hash와 query_plan_hash에 해당하는 새 XEvent 작업/필터 열을 소개합니다. 단, XE와 DMV 간에 쿼리의 상관 관계를 지정할 수 있는 INT64로 정의된 경우는 제외합니다. 
 - **향상된 메모리 부여/사용량 진단** - 새 query_memory_grant_usage XEvent입니다(Server 2016 SP1의 backport).
 - **SSL 협상 단계에 프로토콜 추적 추가** - 성공/실패 협상에 프로토콜 등을 포함한 비트 추적 정보를 추가합니다. 예를 들어, TLS 1.2를 배포하는 동안 연결 시나리오 문제를 해결할 때 유용할 수 있습니다.
 - **배포 데이터베이스에 대한 올바른 호환성 수준 설정** - 서비스 팩 설치 후에 배포 데이터베이스 호환성 수준이 90으로 변경됩니다. 이러한 수준은 sp_vupgrade_replication 저장 프로시저에 문제가 발생했기 때문에 변경되었습니다. 이제 배포 데이터베이스에 올바른 호환성 수준을 설정하도록 SP가 변경되었습니다. 
@@ -226,11 +226,11 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 **SqlPackage.exe(DACFx 명령줄 도구) 업데이트**  
   
--   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL 데이터베이스로부터 데이터베이스 스냅숏 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Microsoft Azure SQL 데이터베이스에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
+-   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL Database부터 데이터베이스 스냅숏 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Microsoft Azure SQL 데이터베이스에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
   
 -   BACPAC 내보내기 - 온-프레미스 SQL Server의 데이터베이스를 Microsoft Azure SQL 데이터베이스로 마이그레이션하는 데 사용할 수 있는 데이터베이스 스키마 및 사용자 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL 데이터베이스의 논리적 백업 파일(.bacpac)을 만듭니다. Azure와 호환되는 데이터베이스를 내보낸 다음 나중에 지원되는 버전의 SQL  Server 간에 가져올 수 있습니다.  
   
--   BACPAC  내보내기 – .bacpac  파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Microsoft Azure SQL 데이터베이스를 채웁니다.  
+-   BACPAC 내보내기 – .bacpac 파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Microsoft Azure SQL Database를 채웁니다.  
   
 MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)에 있습니다.  
   

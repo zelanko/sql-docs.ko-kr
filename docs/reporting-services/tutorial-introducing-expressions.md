@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800577"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410710"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -587,9 +587,9 @@ ms.locfileid: "47800577"
   
 8. **매개 변수** 를 클릭하고 **값** 목록에서 **RowColor**를 두 번 클릭합니다.  
   
-22. `Parameters!RowColor.Value`바로 뒤에 **, "White")** 를 입력합니다.  
+22. `Parameters!RowColor.Value` 바로 뒤에 **, "White")** 를 입력합니다.  
   
-    완성된 식은 다음과 같습니다. `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    완성된 식은 다음과 같습니다. `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![보고서-작성기-식-자습서-줄무늬-색-식](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

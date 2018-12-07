@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505935"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "51642246"
   
     -   Foreach SMO 열거자를 사용하려면 기존 ADO.NET 연결을 선택하거나 **연결** 목록에서 **새 연결** 을 클릭한 후 사용할 문자열을 입력하거나 **찾아보기**를 클릭합니다. **찾아보기**를 클릭한 경우 **SMO 열거 선택** 대화 상자에서 열거할 개체 유형과 열거 유형을 선택하고 **확인**을 클릭합니다.  
   
-6.  선택적으로 **컬렉션** 페이지의 **식** 입력란에서 찾아보기 단추 **(...)** 를 클릭하여 속성 값을 업데이트하는 식을 만듭니다. 자세한 내용은 [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)을 참조하세요.  
+6.  선택적으로 **컬렉션** 페이지의 **식** 텍스트 상자에서 찾아보기 단추 **(...)** 를 클릭하여 속성 값을 업데이트하는 식을 만듭니다. 자세한 내용은 [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)을 참조하세요.  
   
     > [!NOTE]  
     >  **속성** 목록에 나열되는 속성은 열거자에 따라 다릅니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "51642246"
 |**Foreach ADLS File 열거자**|지정된 Data Lake Store 디렉터리에서 파일을 열거합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
- 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(…)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
+ 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(...)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md), [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md), [식 작성기](../../integration-services/expressions/expression-builder.md)  
   
@@ -240,11 +240,11 @@ ms.locfileid: "51642246"
  열거할 파일을 지정합니다.  
   
 > [!NOTE]  
->  와일드카드 문자(*)를 사용하여 컬렉션에 포함할 파일을 지정합니다. 예를 들어 이름에 "abc"가 포함된 파일을 포함하려면 \*abc\*필터를 사용합니다.  
+>  와일드카드 문자(*)를 사용하여 컬렉션에 포함할 파일을 지정합니다. 예를 들어 이름에 “abc”가 포함된 파일을 포함하려면 \*abc\* 필터를 사용합니다.  
 >   
 >  파일 이름 확장명을 지정하면 열거자는 동일한 확장명에 추가 문자가 포함된 파일도 반환합니다. 이 동작은 이전 버전과의 호환성을 위해 8.3 파일 이름도 비교하는 운영 체제의 **dir** 명령줄 동작과 같습니다. 이 열거자 동작으로 인해 예기치 못한 결과가 발생할 수 있습니다. 예를 들어 Excel 2003 파일만 열거하기 위해 "*.xls"를 지정하면 열거자는 Excel 2007 파일도 반환합니다. 이는 Excel 2007 파일의 확장명이 ".xlsx"이기 때문입니다.  
 >   
->  식을 사용하여 컬렉션에 포함할 파일을 지정할 수 있습니다. **컬렉션** 페이지에서 **식** 을 확장하고 **FileSpec** 속성을 선택한 후 줄임표 단추(…)를 클릭하여 속성 식을 추가합니다.  
+>  식을 사용하여 컬렉션에 포함할 파일을 지정할 수 있습니다. **컬렉션** 페이지에서 **식**을 확장하고 **FileSpec** 속성을 선택한 다음, 줄임표 단추(...)를 클릭하여 속성 식을 추가합니다.  
   
  **정규화된 이름**  
  파일 이름의 정규화된 경로를 검색하려면 선택합니다. 파일 옵션에서 와일드카드 문자를 지정한 경우 반환된 정규화된 경로가 필터와 일치합니다.  
@@ -347,7 +347,7 @@ ms.locfileid: "51642246"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **DocumentSource**  
- **DocumentSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 (...)를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **DocumentSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표(...) 단추를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   

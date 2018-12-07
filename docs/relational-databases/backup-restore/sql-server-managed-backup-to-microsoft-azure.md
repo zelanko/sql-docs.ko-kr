@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677862"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397056"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51677862"
  시스템 저장 프로시저 [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)을 참조하세요. 사용자 지정 일정을 지정하지 않을 경우 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 저장소에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
   
 ### <a name="backup-file-naming-conventions"></a>백업 파일 명명 규칙  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 사용자가 지정하는 컨테이너를 사용하므로, 컨테이너 이름을 제어할 수 있습니다. 백업 파일의 경우 비-가용성 데이터베이스는 다음 규칙을 사용하여 명명됩니다. 데이터베이스 이름의 첫 40자, ‘-‘를 제외한 데이터베이스 GUID 및 타임스탬프를 사용하여 이름이 만들어집니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 사용자가 지정하는 컨테이너를 사용하므로, 컨테이너 이름을 제어할 수 있습니다. 백업 파일의 경우 비-가용성 데이터베이스는 다음 규칙을 사용하여 명명됩니다. 데이터베이스 이름의 첫 40자, '-'를 제외한 데이터베이스 GUID 및 타임스탬프를 사용하여 이름이 만들어집니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
   
 ### <a name="full-database-backup"></a>전체 데이터베이스 백업  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 다음을 만족할 경우 전체 데이터베이스 백업을 예약합니다.  

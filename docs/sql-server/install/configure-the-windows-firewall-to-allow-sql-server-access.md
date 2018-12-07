@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c27a57b034e538971f9ed5e32634a2469c84b0b3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f82ce2b0d3ec19dea48f99634a5c5c9936f25ef9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702883"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408470"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "51702883"
   
     -   [Netsh.exe 도구 및 명령줄 스위치 사용 방법](https://support.microsoft.com/kb/242468)  
   
-    -   ["netsh firewall" 컨텍스트 대신 "netsh advfirewall firewall" 컨텍스트를 사용하여 Windows Server 2008 및 Windows Vista의 Windows 방화벽 동작을 제어하는 방법(How to use the “netsh advfirewall firewall” context instead of the “netsh firewall” context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista)](https://support.microsoft.com/kb/947709)  
+    -   ["netsh firewall" 컨텍스트 대신 "netsh advfirewall firewall" 컨텍스트를 사용하여 Windows Server 2008 및 Windows Vista의 Windows 방화벽 동작을 제어하는 방법](https://support.microsoft.com/kb/947709)  
   
     -   ["netsh firewall" 명령에 "profile=all" 매개 변수를 사용해도 Windows Vista 기반 컴퓨터에서 공개 프로필이 구성되지 않는다(The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer)](https://support.microsoft.com/kb/947213)  
   

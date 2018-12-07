@@ -14,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8799fe2cd73aea2fc2ae1a799e6bda634b8e6763
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 232514d75f55f8f3105fe87e2f3f4ecac9f38805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503480"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -243,7 +243,7 @@ ms.locfileid: "51700401"
   
 -   MSDTC의 클러스터 기본 인스턴스 사용  
   
--   로컬 컴퓨터에 설치된 MSDTC 인스턴스 사용  
+-   로컬 머신에 설치된 MSDTC 인스턴스 사용  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 설치된 MSDTC 인스턴스가 실패한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC의 기본 클러스터 인스턴스 또는 로컬 컴퓨터 인스턴스를 사용하려고 자동으로 시도하지 않습니다. 다른 MSDTC 인스턴스를 사용하려면 실패한 MSDTC 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에서 완전히 제거해야 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 대한 매핑을 만든 경우 매핑된 MSDTC 인스턴스가 실패하면 분산 트랜잭션도 실패합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 다른 MSDTC 인스턴스를 사용하도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 MSDTC 인스턴스를 추가하거나 매핑을 삭제해야 합니다.  

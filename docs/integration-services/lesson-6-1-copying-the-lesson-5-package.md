@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b7d58507dac1d1071f0b546e0610f39381b648de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501811"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>6-1단원 - 5단원 패키지 복사
 이 태스크에서는 5단원에서 만든 Lesson 5.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 5단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 6단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51642040"
   
 3.  기존 패키지의 복사본 추가 대화 상자의 패키지 위치에서 파일 시스템을 선택합니다.  
   
-4.  찾아보기(…) 단추를 클릭하여 컴퓨터의 Lesson 5.dtsx로 이동한 다음 **열기**를 클릭합니다.  
+4.  찾아보기(…) 단추를 클릭하여 머신의 Lesson 5.dtsx로 이동한 다음, **열기**를 클릭합니다.  
   
     이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   

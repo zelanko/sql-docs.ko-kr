@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505765"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>5-2단원 - 패키지 구성 설정 및 구성
 이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "47634771"
   
 7.  **제어 흐름** 탭으로 돌아가 **Foreach File in Folder** 컨테이너를 두 번 클릭합니다.  
   
-8.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 **Expressions**를 클릭한 다음 줄임표 단추 **(...)** 를 클릭합니다.  
+8.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 **Expressions**를 클릭한 다음, 줄임표 단추 **(...)** 를 클릭합니다.  
   
 9. **속성 식 편집기**에서 **속성** 목록을 클릭한 다음 **Directory**를 선택합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47634771"
   
 16. **닫기**를 클릭합니다.  
   
-17. 열거자의**Directory** 속성을 설정하는 변수의 **값** 에 대한 구성 설정을 포함하는 SSISTutorial.dtsConfig 구성 파일이 만들어집니다.  
+17. 열거자의 **Directory** 속성을 설정하는 변수의 **값**에 대한 구성 설정을 포함하는 SSISTutorial.dtsConfig 구성 파일이 만들어집니다.  
   
     > [!NOTE]  
     > 일반적으로 구성 파일에는 패키지 속성에 대한 복잡한 정보가 있지만 이 자습서에서는 구성 정보만 있어야 합니다.  

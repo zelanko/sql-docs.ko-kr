@@ -10,12 +10,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e950ae6cbbf71154bfaf402ae9e3246bd3d93fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398866"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 가용성 그룹 문제 해결 및 모니터링 가이드
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 

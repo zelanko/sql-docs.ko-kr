@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710291"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302886"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>4-3단원 - 오류 흐름 리디렉션 추가
 이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  

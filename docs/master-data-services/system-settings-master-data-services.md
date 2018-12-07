@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507281"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "51696981"
 |**일괄 처리당 행 수**|**RowsPerBatch**|웹 서비스를 통해 각 일괄 처리에서 검색할 레코드 수입니다. 기본값은 **50**입니다.|  
 ||**ApplicationName**|이벤트 로그에 표시되는 텍스트입니다. 기본값은 **MDM**입니다.|  
 ||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 브라우저의 제목 표시줄에 표시되는 텍스트입니다. 기본값은 **마스터 데이터 관리자**입니다.|  
-|**로그 보존(일)**|**LogRentionDays**|로그가 삭제된 후의 일 수입니다. 기본값이 -1이면 로그 테이블 정리되지 않았음을 나타냅니다.<br /><br /> 값이 0이면 로그 테이블이 오늘날의 데이터만 유지한다는 것입니다. 이전 날짜에 대한 데이터 로그는 잘립니다.<br /><br /> 값이 0보다 크면 로그 데이터는 값에서 지정한 일 수에 보관됩니다.|  
+|**로그 보존(일)**|**LogRentionDays**|로그가 삭제된 후의 일 수입니다. 기본값이 -1이면 로그 테이블 정리되지 않았음을 나타냅니다.<br /><br /> 값이 0이면 로그 테이블이 오늘의 데이터만 유지한다는 것입니다. 이전 날짜에 대한 데이터 로그는 잘립니다.<br /><br /> 값이 0보다 크면 로그 데이터는 값에서 지정한 일 수에 보관됩니다.|  
   
 ##  <a name="Versions"></a> 버전 관리 설정  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51696981"
   
 |구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
-|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **…추가…** 가 표시되기 전에 각 계층 노드에 표시되는 최대 멤버 수입니다.(!!) 표시됩니다. 다음 멤버 그룹을 표시하려면 **…추가…** 를 클릭합니다. 기본값은 **50**입니다.|  
+|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **...추가...** 가 표시되기 전에 각 계층에 표시되는 최대 멤버 수입니다. **...추가...** 를 클릭하여 다음 멤버 그룹을 표시할 수 있습니다. 기본값은 **50**입니다.|  
 |**기본적으로 계층에 이름 표시**|**ShowNamesInHierarchy**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 계층을 볼 때 선택되는 기본 설정을 결정합니다.<br /><br /> 기본값은 **예** 또는 **1**로, 각 멤버의 이름 및 코드가 표시됨을 나타냅니다. 코드만 표시하려면 **아니요** 또는 **2** 로 변경합니다.|  
 |**목록의 도메인 기반 특성 수**|**DBAListRowLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 표의 도메인 기반 특성 값을 두 번 클릭할 때 목록에 표시되는 특성 수입니다. 기본값은 **50**입니다. 멤버 수가 50개보다 많으면 검색 가능한 대화 상자가 대신 표시됩니다.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **일치** 필터 조건을 사용할 때 사용되는 유사성 수준입니다. 기본값은 **0.3**입니다. 검색 조건과 보다 일치하는 항목을 반환하려면 **1** 에 가까운 값으로 설정합니다. 정확하게 일치하는 항목을 반환하려면 **1** 로 설정합니다.|  

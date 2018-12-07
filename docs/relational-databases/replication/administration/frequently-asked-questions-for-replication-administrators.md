@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 309f11629199f08080d83931dffcd3ab2f3ab7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507440"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

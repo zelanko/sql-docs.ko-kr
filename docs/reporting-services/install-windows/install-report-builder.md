@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396836"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "51813186"
   
 -   **보고서 작성기** 를 클릭합니다.  
   
-     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음 **하단에 있는** 연결 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 을 클릭하여 서버에 연결합니다.  
+     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 하단에 있는 **연결**을 클릭하여 서버에 연결합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   

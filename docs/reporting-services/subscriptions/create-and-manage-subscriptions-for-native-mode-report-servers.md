@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021687"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400906"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  

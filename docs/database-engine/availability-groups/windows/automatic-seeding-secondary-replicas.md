@@ -3,7 +3,7 @@ title: 보조 복제본에 대한 자동 시드(SQL Server) | Microsoft Docs
 description: 자동 시드를 사용하여 보조 복제본을 초기화합니다.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506693"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>보조 복제본에 대한 자동 시드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,16 +117,14 @@ WITH (
 
 보조 복제본이 되는 인스턴스에서 인스턴스가 조인되면 다음 메시지가 SQL Server 로그에 추가됩니다.
 
->가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `AUTOMATIC`의 `SEEDING_MODE`가 있습니다. `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
+>가용성 그룹 'AGName'에 대해 로컬 가용성 복제본에 데이터베이스를 만드는 권한이 부여되지 않았지만 `AUTOMATIC`의 `SEEDING_MODE`가 있습니다. `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 명령을 사용하여 주 가용성 복제본에서 시드된 데이터베이스를 만들도록 허용하세요.
 
 ### <a name = "grantCreate"></a> 보조 복제본에서 가용성 그룹에 데이터베이스 만들기 권한 부여
 
 조인한 후 SQL Server의 보조 복제본 인스턴스에서 가용성 그룹 권한을 부여하여 데이터베이스를 만드세요. 자동 시드를 실행하려면 가용성 그룹에 데이터베이스를 만들 수 있는 권한이 있어야 합니다. 
 
 >[!TIP]
->보조 복제본에서 가용성 그룹이 데이터베이스를 만들 때 가용성 그룹은 데이터베이스 소유자를 데이터베이스를 만들기 위한 `ALTER AVAILABILITY GROUP` 문을 실행하여 권한을 부여한 계정으로 설정합니다. 대부분의 응용 프로그램에서는 주 복제본과 동일하게 보조 복제본에서도 데이터베이스 소유자가 필요합니다.
->
->모든 데이터베이스가 주 복제본과 동일한 데이터베이스 소유자를 사용하여 만들어졌는지 확인하려면 로그인의 보안 컨텍스트에서 주 복제본의 데이터베이스 소유자인 아래 예제 명령을 실행합니다. 이 로그인에는 `ALTER AVAILABILITY GROUP` 권한이 필요합니다. 
+>가용성 그룹이 보조 복제본에서 데이터베이스를 만들 때 데이터베이스 소유자의 소유자로 “sa”(좀 더 구체적으로 0x01 sid를 사용하는 계정)를 설정합니다. 
 >
 >보조 복제본이 자동으로 데이터베이스를 만든 후 데이터베이스 소유자를 변경하려면 `ALTER AUTHORIZATION`을 실행합니다. [ALTER AUTHORIZATION(Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요.
  
@@ -153,7 +151,7 @@ ALTER AVAILABILITY GROUP [<AGName>]
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>자동 시드로 백업 및 복원 결합
 
-기존의 백업, 복사 및 복원을 자동 시드와 결합할 수 있습니다. 이 경우 먼저 사용 가능한 트랜잭션 로그 모두를 포함하여 데이터베이스를 보조 복제본에 복원합니다. 다음으로 비상 로그 백업을 복원한 것처럼 보조 복제본의 데이터베이스를 "따라 잡기(catch up)" 위해 가용성 그룹을 만들 때 자동 시드를 사용하도록 설정합니다([비상 로그 백업(SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 참조).
+기존의 백업, 복사 및 복원을 자동 시드와 결합할 수 있습니다. 이 경우 먼저 사용 가능한 트랜잭션 로그 모두를 포함하여 데이터베이스를 보조 복제본에 복원합니다. 다음으로 비상 로그 백업을 복원한 것처럼 보조 복제본의 데이터베이스를 “따라 잡기(catch up)” 위해 가용성 그룹을 만들 때 자동 시드를 사용하도록 설정합니다([비상 로그 백업(SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 참조).
 
 ## <a name="add-a-database-to-an-availability-group-with-automatic-seeding"></a>자동 시드로 가용성 그룹에 데이터베이스 추가
 
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

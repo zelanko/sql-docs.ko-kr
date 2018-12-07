@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639890"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503989"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
@@ -153,17 +153,17 @@ ms.locfileid: "51639890"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 데이터 파일 메시지  
  **DataFileMessage**  
- 데이터 파일의 경로를 입력하거나 줄임표 **(...)** 를 클릭한 다음 파일을 찾습니다.  
+ 데이터 파일의 경로를 입력하거나 줄임표 **(...)** 를 클릭한 다음, 파일을 찾습니다.  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 변수 메시지  
  **VariableMessage**  
- 변수 이름을 입력하거나 줄임표 **(...)** 를 클릭한 다음 변수를 선택합니다. 변수는 쉼표로 구분됩니다.  
+ 변수 이름을 입력하거나 줄임표 **(...)** 를 클릭한 다음, 변수를 선택합니다. 변수는 쉼표로 구분됩니다.  
   
  **관련 항목:** 변수 선택  
   
 #### <a name="messagetype--string-message"></a>MessageType = 문자열 메시지  
  **StringMessage**  
- 문자열 메시지를 입력하거나 줄임표 **(...)** 를 클릭한 다음 **문자열 메시지 입력** 대화 상자에 메시지를 입력합니다.  
+ 문자열 메시지를 입력하거나 줄임표 **(...)** 를 클릭한 다음, **문자열 메시지 입력** 대화 상자에 메시지를 입력합니다.  
   
 ## <a name="message-queue-task-editor-receive-page"></a>메시지 큐 태스크 편집기(받기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **받기** 페이지를 사용하여 메시지 큐 태스크가 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 메시지를 받도록 구성할 수 있습니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "51639890"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 데이터 파일 메시지  
  **SaveFileAs**  
- 사용할 파일의 경로를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음 파일을 찾습니다.  
+ 사용할 파일의 경로를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 파일을 찾습니다.  
   
  **Overwrite**  
  데이터 파일 메시지의 내용을 저장할 경우 기존 파일의 데이터를 덮어쓸지 여부를 나타냅니다. 기본값은 **False**입니다.  
@@ -212,8 +212,8 @@ ms.locfileid: "51639890"
  이 옵션은 읽기 전용입니다. 이전에 Filter 속성을 설정할 때 이 옵션은 비어 있거나 패키지의 GUID를 포함할 수 있습니다.  
   
 ##### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **Identifier**  
- 필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음 패키지를 지정합니다.  
+ **ID**  
+ 필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](../../integration-services/control-flow/select-a-package.md)  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51639890"
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
   
  **변수**  
- 변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음 새 변수를 구성합니다.  
+ 변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -238,8 +238,8 @@ ms.locfileid: "51639890"
  이 옵션은 비어 있습니다.  
   
 ##### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **Identifier**  
- 필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음 패키지를 지정합니다.  
+ **ID**  
+ 필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](../../integration-services/control-flow/select-a-package.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639890"
  **Compare** 옵션을 **없음**으로 설정한 경우가 아니면 메시지를 비교할 문자열을 제공합니다.  
   
  **변수**  
- 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음 새 변수를 구성합니다.  
+ 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

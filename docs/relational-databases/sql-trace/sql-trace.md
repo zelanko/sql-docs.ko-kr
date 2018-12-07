@@ -1,7 +1,7 @@
 ---
 title: SQL 추적 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439805"
 ---
 # <a name="sql-trace"></a>SQL 추적
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)일 수 있습니다.  
+SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
-  
+> [!IMPORTANT]
+> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+
 ## <a name="benefits-of-sql-trace"></a>SQL 추적의 이점  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
   
 ## <a name="sql-trace-architecture"></a>SQL 추적 아키텍처  
- 이벤트 원본은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 같은 추적 이벤트나 교착 상태 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 생성하는 원본일 수 있습니다. 이벤트에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오. 이벤트가 발생한 후 해당 이벤트 클래스가 추적 정의에 포함되면 이벤트 정보가 추적에 의해 수집됩니다. 추적 정의의 이벤트 클래스에 필터가 정의되어 있으면 해당 필터가 적용되고 추적 이벤트 정보가 큐에 전달됩니다. 이 큐로부터 추적 정보가 파일에 기록되거나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]같은 응용 프로그램에서 SMO에 의해 사용될 수 있습니다. 다음 다이어그램에서는 추적 중 SQL 추적에서 이벤트를 수집하는 방법을 보여 줍니다.  
+이벤트 원본은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 같은 추적 이벤트나 교착 상태 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 생성하는 원본일 수 있습니다. 이벤트에 대한 자세한 내용은 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오. 이벤트가 발생한 후 해당 이벤트 클래스가 추적 정의에 포함되면 이벤트 정보가 추적에 의해 수집됩니다. 추적 정의의 이벤트 클래스에 필터가 정의되어 있으면 해당 필터가 적용되고 추적 이벤트 정보가 큐에 전달됩니다. 이 큐로부터 추적 정보가 파일에 기록되거나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]같은 응용 프로그램에서 SMO에 의해 사용될 수 있습니다. 다음 다이어그램에서는 추적 중 SQL 추적에서 이벤트를 수집하는 방법을 보여 줍니다.  
   
- ![데이터베이스 엔진 이벤트 추적 프로세스](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
+![데이터베이스 엔진 이벤트 추적 프로세스](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine event tracing process")  
   
 ## <a name="sql-trace-terminology"></a>SQL 추적 용어  
- 다음은 SQL 추적의 주요 개념을 설명하는 용어입니다.  
+다음은 SQL 추적의 주요 개념을 설명하는 용어입니다.  
   
  **이벤트**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작이 발생했음을 의미합니다.  
@@ -70,7 +72,7 @@ ms.locfileid: "51571452"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적을 테이블에 저장할 때 생성되는 테이블입니다.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>데이터 열을 사용하여 반환되는 이벤트 설명  
- SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 반환된 이벤트에 대한 정보를 제공합니다. 다음 표에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터 열에 대해 설명합니다. 이 데이터 열은 SQL 추적에서 사용하는 데이터 열과 동일하며 기본으로 선택된 열에 해당합니다.  
+SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 반환된 이벤트에 대한 정보를 제공합니다. 다음 표에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터 열에 대해 설명합니다. 이 데이터 열은 SQL 추적에서 사용하는 데이터 열과 동일하며 기본으로 선택된 열에 해당합니다.  
   
 |데이터 열|열 번호|설명|  
 |-----------------|-------------------|-----------------|  
