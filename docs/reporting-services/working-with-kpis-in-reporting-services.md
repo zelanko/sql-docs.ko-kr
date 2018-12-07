@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021587"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712494"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021587"
 
 핵심 성과 지표(KPI)는 목표에 대한 진척 정도를 알려 주는 시각적 단서입니다.  핵심 성과 지표는 팀, 관리자 및 비즈니스에서 측정 가능한 목표에 대한 진척 정도를 빠르게 평가하는 데 있어 중요합니다.   
   
-SQL Server 2016 Reporting Services에서 KPI를 사용하여 다음 질문에 대한 답변을 쉽게 시각화할 수 있습니다.  
+SQL Server Reporting Services에서 KPI를 사용하여 다음 질문에 대한 답변을 쉽게 시각화할 수 있습니다.  
   
 -   내 앞 또는 뒤에 있는 것은 무엇인가?  
   
@@ -60,7 +60,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
 > **경고**: 설계 시간에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 집합을 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 집합을 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
   
-> **참고**: **값**, **목표** 및 **상태** 필드는 데이터 집합 결과의 첫 행에서만 값을 선택할 수 있습니다. 하지만, **집합 추세** 필드는 추세를 반영하는 열을 선택할 수 있습니다.  
+> **참고**: **값**, **목표** 및 **상태** 필드는 데이터 세트 결과의 첫 행에서만 값을 선택할 수 있습니다. 하지만, **집합 추세** 필드는 추세를 반영하는 열을 선택할 수 있습니다.  
   
 공유 데이터 집합에서 데이터를 사용하기 위해 다음을 수행할 수 있습니다.  
   
@@ -68,7 +68,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  데이터 상자에서 **줄임표 (...)** 를 선택합니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
+2.  데이터 상자에서 **줄임표(...)** 를 선택합니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   

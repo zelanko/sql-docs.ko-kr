@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소에 대한 모범 사례 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657842"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712124"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   이 문서에서는 워크로드에 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "51657842"
   
 ##  <a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 쿼리 저장소를 사용하는 경우 **Query Performance Insight** 를 사용하여 시간의 흐름에 따른 DTU 사용을 분석할 수 있습니다.  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모든 쿼리(CPU, 메모리, IO 등)에 대한 자세한 리소스 사용을 가져오는 동안 Query Performance Insight에서는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 모든 쿼리(CPU, 메모리, I/O 등)에 대한 자세한 리소스 사용량 정보를 가져올 수 있지만, Query Performance Insight는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>탄력적 풀 데이터베이스에서 쿼리 저장소 사용
@@ -48,11 +48,11 @@ ms.locfileid: "51657842"
   
  매개 변수 값 설정을 위해 따라야 할 지침은 아래와 같습니다.  
   
- **최대 크기(MB):** 데이터베이스 내부에서 쿼리 저장소가 사용할 데이터 공간에 대한 한도를 지정합니다.  이는 쿼리 저장소의 작업 모드에 직접적으로 영향을 주는 가장 중요한 설정입니다.  
+ **최대 크기(MB):** 데이터베이스 내부에서 쿼리 저장소가 사용할 데이터 공간에 대한 한도를 지정합니다. 이는 쿼리 저장소의 작업 모드에 직접적으로 영향을 주는 가장 중요한 설정입니다.  
   
  쿼리 저장소에서 쿼리, 실행 계획 및 통계를 수집하는 동안 이 한도에 도달할 때까지 데이터베이스에서 크기가 증가합니다. 한도에 도달하면 쿼리 저장소는 작업 모드를 자동으로 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 즉 성능 분석은 더 이상 정확하지 않게 됩니다.  
   
- 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
+ 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **통계 수집 간격:** 수집된 런타임 통계에 대한 세분성의 수준을 정의합니다(기본값 - 1시간). 문제를 완화하기 위해 세분성이 더 상세하고 시간을 줄여야 할 경우 값을 낮추는 것을 고려해 볼 수 있지만 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. 통계 수집 간격에 대해 다른 값을 설정하려면 SSMS 또는 Transact-SQL을 사용합니다.  
+
+ **데이터 플러시 간격:** 수집된 런타임 통계를 디스크에 유지하는 빈도(초)를 정의합니다(기본값은 900초(15분)). 워크로드에서 여러 쿼리 및 계획을 대량으로 생성하지 않거나 데이터베이스가 종료될 때까지 데이터를 유지하는 시간을 더 길게 해도 괜찮은 경우 값을 높여도 됩니다. 
+ 
+> [!NOTE]
+> 추적 플래그 7745를 사용하면 장애 조치 또는 종료 명령 시 쿼리 저장소 데이터를 디스크에 쓸 수 없습니다. 자세한 내용은 [중요 업무 서버에 추적 플래그를 사용하여 재해 복구 개선](#Recovery)을 참조하세요.
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터 플러시 간격에 다른 값을 설정할 수 있습니다.  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **통계 수집 간격:** 수집된 런타임 통계에 대한 세분성의 수준을 정의합니다(기본값은 60분). 문제를 완화하기 위해 세분성이 더 상세하고 시간을 줄여야 할 경우 값을 낮추는 것을 고려해 볼 수 있지만 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 통계 수집 간격에 다른 값을 설정할 수 있습니다.  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **오래된 쿼리 임계값(일):** 지속형 런타임 통계와 비활성 쿼리의 보존 기간을 제어하는 시간 기반 정리 정책입니다.  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **쿼리 저장소 캡처 모드:** 쿼리 저장소에 대한 쿼리 캡처 정책을 지정합니다.  
   
--   **All** - 쿼리를 모두 캡처합니다. 이 옵션이 기본 옵션입니다.  
+-   **모두** - 모든 쿼리를 캡처합니다. 이 옵션이 기본 옵션입니다.  
   
--   **Auto** – 빈번하지 않은 쿼리와 중요하지 않은 쿼리에 대한 컴파일 및 실행 기간이 무시됩니다. 실행 횟수, 컴파일 및 런타임 기간에 대한 임계값이 내부적으로 결정됩니다.  
+-   **자동** – 빈번하지 않은 쿼리와 중요하지 않은 쿼리에 대한 컴파일 및 실행 기간이 무시됩니다. 실행 횟수, 컴파일 및 런타임 기간에 대한 임계값이 내부적으로 결정됩니다.  
   
--   **None** - 쿼리 저장소에서 새 쿼리 캡처가 중지됩니다.  
+-   **없음** - 쿼리 저장소에서 새 쿼리 캡처가 중지됩니다.  
   
  다음 스크립트는 쿼리 캡처 모드를 자동으로 설정합니다.  
   
@@ -132,7 +145,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  다음 그림은 쿼리 저장소 보기를 찾는 방법을 보여 줍니다.  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![쿼리 저장소 보기](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "쿼리 저장소 보기")  
   
  다음 표에서는 각 쿼리 저장소 보기를 사용하는 시기를 설명합니다.  
   
@@ -143,10 +156,11 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |리소스를 최고로 사용 중인 쿼리|관심 있는 메트릭 실행을 선택하고 제공된 시간 간격 동안 가장 값이 높은 쿼리를 식별합니다. <br />데이터베이스 리소스 사용에 가장 큰 영향을 미치는 가장 관련성이 높은 쿼리에 주목하려면 이 보기를 사용합니다.|  
 |강제 계획이 포함된 쿼리|쿼리 저장소를 사용하여 이전 강제 계획을 나열합니다. <br />모든 현재 강제 계획에 빠르게 액세스하려면 이 보기를 사용합니다.|  
 |고변형 쿼리|기간, CPU 시간, IO 및 원하는 시간 간격의 메모리 사용량과 같은 사용 가능한 차원과 관련하여 실행 변형이 높은 쿼리를 분석합니다.<br />이 뷰를 사용하여 응용 프로그램 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
+|쿼리 대기 통계|데이터베이스에서 가장 많이 사용되는 대기 범주는 무엇이고 선택한 대기 범주에 가장 많은 영향을 주는 쿼리는 무엇인지 분석합니다.<br />이 보기를 사용하여 대기 통계를 분석하고 애플리케이션의 사용자 경험에 영향을 줄 수 있는 쿼리를 식별할 수 있습니다.<br /><br />**적용 대상:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|  
 |추적된 쿼리|가장 중요한 쿼리 실행을 실시간으로 추적합니다. 일반적으로 강제 계획을 사용하는 쿼리가 있고 해당 쿼리 성능이 안정적인지 확인하려고 할 경우 이 보기를 사용합니다.|
   
 > [!TIP]  
->  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 리소스를 가장 많이 사용하는 쿼리를 식별하고, 선택한 계획을 변경하여 재발된 쿼리를 수정하는 방법은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 리소스를 가장 많이 사용하는 쿼리를 식별하고, 선택한 계획을 변경하여 재발된 쿼리를 수정하는 방법은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
   
  최적 상태가 아닌 성능의 쿼리를 식별한 경우 수행할 작업은 문제의 성격에 따라 다릅니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: 메모리 내 OLTP에 대한 예제 데이터베이스 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 11/30/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665622"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712484"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51665622"
   
 -   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – 메모리 내 OLTP 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
--   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload) 을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐만 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
+-   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload)을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
   
 -   [샘플의 메모리 및 디스크 공간 사용률](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "51665622"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
-  
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP에 사용할 하드웨어에 대한 일반 지침은 [SQL Server 2014의 메모리 내 OLTP에 대한 하드웨어 고려 사항](blog-hardware-in-memory-oltp.md) 블로그 게시물을 참조하세요.
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "51665622"
   
 -   (SalesOrderID)의 해시 인덱스: 예상된 판매 주문 수가 1,000만 개이기 때문에 bucket_count의 크기는 1,000만(1,600만으로 반올림됨)으로 설정됩니다.  
   
--   (SalesPersonID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 집합에는 많은 영업 사원이 없지만, 이후 성장을 허용할 수 있으며 bucket_count의 크기가 과도하게 설정된 경우 포인트 조회에 대한 성능 저하가 발생하지 않습니다.  
+-   (SalesPersonID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 세트에는 많은 영업 사원이 없지만, 이후 성장을 허용할 수 있으며 bucket_count의 크기가 과도하게 설정된 경우 포인트 조회에 대한 성능 저하가 발생하지 않습니다.  
   
 -   (CustomerID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 집합에는 많은 고객이 없지만 이후 성장을 허용할 수 있습니다.  
   
@@ -313,8 +313,8 @@ ms.locfileid: "51665622"
   
  설치 단계:  
   
-1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
-  
+1.  [SQL Server용 RML(Report Markup Language) 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=4511) 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다.
+
 2.  특정 파일이 사용 중이라는 대화 상자가 나타나면 'Continue'를 클릭합니다.  
   
 ### <a name="running-ostress"></a>ostress 실행  
@@ -380,7 +380,7 @@ END
  ostress 도구를 사용하여 여러 동시 연결을 통해 스크립트를 실행할 것입니다. ‘-n’ 매개 변수를 사용하여 연결 수를 제어하고 ‘r’ 매개 변수를 사용하여 스크립트가 각 연결에서 실행되는 횟수를 제어하려고 합니다.  
   
 #### <a name="running-the-workload"></a>작업 실행  
- 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 저장소에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests)섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
+ 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 저장소에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests) 섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
   
  작업에 대한 성능 측정으로 작업을 실행한 후 ostress.exe에서 보고하는 경과 시간을 사용합니다.  
   
@@ -394,7 +394,7 @@ END
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 2분 5초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 1분 0초가 소요되었습니다.  
@@ -409,7 +409,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 41분 25초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 52분 16초가 소요되었습니다.  

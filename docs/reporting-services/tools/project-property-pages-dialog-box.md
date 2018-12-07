@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021867"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712184"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
 
-  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 *\<Report Project Name>***속성**을 클릭합니다.  
+  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
   
  구성 속성을 정의한 후 도구 모음의 **솔루션 구성** 드롭다운 목록에서 구성을 선택할 수 있습니다.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021867"
  보고서가 게시될 때 서버의 데이터 원본을 프로젝트의 데이터 원본으로 덮어쓰려면 **True** 를 선택하고, 서버의 기존 데이터 원본을 그대로 두려면 **False** 를 선택합니다.  
   
  **TargetServerVersion**  
- 적절한 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 선택하거나 **버전 검색** 을 선택하여 **TargetServer URL** 속성이 식별하는 서버에 설치된 버전을 자동으로 확인합니다. 기본값은 **SQL Server 2016**을 클릭합니다.  
+ 적절한 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 선택하거나 **버전 검색** 을 선택하여 **TargetServer URL** 속성이 식별하는 서버에 설치된 버전을 자동으로 확인합니다. 기본값은 **SQL Server 2017**입니다.  
   
  **TargetDataSourceFolder**  
  게시된 공유 데이터 원본을 저장할 폴더의 이름입니다. 폴더를 지정하지 않는 경우 데이터 원본은 보고서와 같은 폴더에 게시됩니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  

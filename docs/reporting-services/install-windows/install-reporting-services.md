@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812976"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712654"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
@@ -124,7 +124,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 
 ## <a name="related-information"></a>관련 정보
 
-SQL Server 2016 Reporting Services 기본 모드를 설치하는 방법에 대한 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 설치](install-reporting-services-native-mode-report-server.md)를 참조하세요. SharePoint 통합 모드에서 SQL Server 2016 Reporting Services를 설치하는 방법에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
+SQL Server Reporting Services 기본 모드를 설치하는 방법에 대한 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 설치](install-reporting-services-native-mode-report-server.md)를 참조하세요. SharePoint 통합 모드에서 SQL Server 2016 Reporting Services 이상을 설치하는 방법에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

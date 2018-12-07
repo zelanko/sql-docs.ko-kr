@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050907"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712224"
 ---
 # <a name="create-a-report-server-database"></a>보고서 서버 데이터베이스 만들기
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050907"
   
  **SharePoint 모드:** 보고서 서버 설치 옵션 페이지에는 **설치 전용**인 SharePoint 모드 옵션 하나만 포함됩니다. 이 옵션은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스를 설치합니다. 다음 단계에는 다음 방법 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 하나 이상 만듭니다.  
   
--   SharePoint 중앙 관리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만듭니다. 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 “서비스/응용 프로그램” 단원을 참조하십시오.  
+-   SharePoint 중앙 관리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만듭니다. 자세한 내용은 [3단계: Reporting Services 서비스 애플리케이션 만들기](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 “서비스/애플리케이션” 섹션을 참조하세요.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 사용하여 서비스 응용 프로그램 및 보고서 서버 데이터베이스를 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)항목에서 서비스 응용 프로그램 만들기 예제를 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050907"
 >  보고서 서버 데이터베이스를 호스팅하는 보고서 서버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 서로 다른 도메인에 있을 수 있습니다. 인터넷 배포의 경우 방화벽 뒤에 있는 서버를 사용하는 것이 일반적입니다. 보고서 서버를 인터넷 액세스용으로 구성하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하여 방화벽 뒤에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 IPSEC을 사용하여 연결 보안을 설정합니다.  
   
 ## <a name="database-server-edition-requirements"></a>데이터베이스 서버 에디션 요구 사항  
- 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 보고 서비스](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)의 [보고서 서버 데이터베이스 서버 버전 요구 사항](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)을 참조하세요.  
+ 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 2017 버전에서 지원하는 보고 서비스](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)의 [보고서 서버 데이터베이스 서버 버전 요구 사항](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

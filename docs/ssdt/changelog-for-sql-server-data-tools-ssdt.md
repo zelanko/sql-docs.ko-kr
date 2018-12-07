@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677902"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712609"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51677902"
 
 **SSIS:**
 
-1. [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]에 대한 지원을 추가합니다.
+1. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대한 지원을 추가합니다.
 2. SQL Server 2012 지원을 제거합니다.
 
 ### <a name="known-issues"></a>알려진 문제:
@@ -138,7 +138,7 @@ ms.locfileid: "51677902"
 
 **SSIS:**
 
-- SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제를 해결합니다.
+- SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제 해결
 - SSDT에서 매우 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
 - 작업 UI에서 간혹 ScriptTask 변수 목록이 사라지는 문제를 해결합니다.
 - 패키지 위치가 SQL Server일 때 기존 패키지 사본 추가가 실패하는 문제 해결
@@ -152,7 +152,7 @@ ms.locfileid: "51677902"
 **설치 관리자:**
 
 - 개인정보 보호 고지 사항에 "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램" 링크를 추가합니다.
-- "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제를 해결합니다.
+- "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제 해결
 
 ### <a name="known-issues"></a>알려진 문제:
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
@@ -207,7 +207,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 1. 아이콘이 더 높은 품질 버전으로 바뀝니다.
 
 **IS(Integration Services)**
-1. ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](..\integration-services\lift-shift\ssis-azure-validate-packages.md)를 참조하세요.
+1. ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](../integration-services/lift-shift/ssis-azure-validate-packages.md)를 참조하세요.
 1. SSIS 확장이 지역화됩니다.
 
 ### <a name="bug-fixes"></a>버그 수정
@@ -234,7 +234,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
   - 백그라운드 분석 실행 - 사용하도록 설정할 경우 최신 데이터 원본에 대한 쿼리 편집기는 쿼리의 출력 스키마를 분석하기 위해 쿼리가 로드되면 데이터 원본에 대해 쿼리를 실행합니다.
 
 **IS(Integration Services)**
-- ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](..\integration-services\lift-shift\ssis-azure-validate-packages.md)를 참조하세요.
+- ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](../integration-services/lift-shift/ssis-azure-validate-packages.md)를 참조하세요.
 
 
 ### <a name="bug-fixes"></a>버그 수정
@@ -373,7 +373,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
    - 자격 증명에 대한 메시지를 표시하지 않는 폴더 데이터 원본 
    - 개체 참조는 구조화된 데이터 원본에서 업데이트된 자격 증명을 가져올 수 있는 예외를 설정하지 않습니다.
    - M 식을 사용하여 파티션 관리자를 여는 작업은 매우 느렸습니다.
-   - PQ 편집기의 테이블에서 속성을 선택하면 속성을 표시하지 않았습니다.
+   - PQ 편집기의 테이블에서 속성을 선택하면 속성이 표시되지 않았습니다.
 - 최상위 예외를 catch하고 출력 창에 표시하도록 파워 쿼리 UI 통합의 강력합을 향상시켰습니다.
 - 컨텍스트 식의 경우 구조 데이터 원본에서 ChangeSource가 변경 재용을 유지하지 않는 문제를 해결했습니다.
 - M 식 오류로 인해 오류 메시지를 표시하지 않고 모델을 업데이터하는 데 실패할 수 있는 문제를 해결했습니다.
@@ -551,7 +551,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - 미리 보기 1400 AS 모델에서 코드를 본 후 통합 작업 영역 서버를 사용하여 열려고 할 때 발생하는 문제를 해결함
 - 특정 상황에서 초기 카탈로그를 지원하지 않는 일부 데이터 원본이 제대로 작동하지 않는 문제를 해결함 
 - 파티션을 유지하는 옵션을 사용하도록 설정한 경우에도 배포 마법사에서 계산된 테이블에 변경 내용을 적용해야 함
-- 기존 AC 연결에 대한 [고급 속성] 대화 상자에 다시 선택할 때까지 전체 목록이 표시되지 않는 문제를 해결함
+- 기존 AS 연결에 대한 [고급 속성] 대화 상자에 다시 선택할 때까지 전체 목록이 표시되지 않는 문제를 해결함
 - 일부 지역화된 빌드에서 표시되는 잘린 UI 문자열 관련 몇 가지 문제를 해결함
 - 1400 호환성 수준 AS 테이블 형식 모델에서 PowerQuery 통합과 관련된 여러 문제를 해결함
 - 보고서 마법사 스타일 템플릿이 올바로 표시되지 않는 문제를 해결함
@@ -617,11 +617,11 @@ SqlPackage의 게시 및 스크립트 작업에 대해 새 인수 두 개가 추
 
 **게시 작업**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **스크립트 작업**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 DacFx에서 DacServices.Publish() 및 DacServices.Script()라는 새 API 두 개가 추가되었습니다. 이러한 API를 통해 게시 + 스크립트 + 보고서 작업의 동시 수행도 지원합니다. 사용법 예제:
 
@@ -663,7 +663,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 * 수정됨 – DacFx 일괄 처리 파서에서 이스케이프된 대괄호 ']' 문자를 구문 분석하지 않아 게시에 실패하는 문제
 * 향상됨 – 이제 SqlPackage의 도움말 출력에 각 작업에 대한 설명이 포함되어 있음
 * 수정됨 - 고급 옵션을 편집할 때와 게시, 스키마 비교 및 기타 파일에 저장된 연결 문자열을 편집할 때 연결 대화 상자의 "암호 저장" 옵션이 유지되지 않았음
-* 수정됨 – IntegratedAuthentication=true인, 기록 탭에 표시된 연결의 경우 연결 속성의 인증 필드가 비어 있었음. 이제 "Windows 인증"이 예상대로 표시됨
+* 수정됨 – IntegratedAuthentication=true인, 기록 탭에 표시된 연결의 경우 연결 속성의 인증 필드가 비어 있었음 이제 "Windows 인증"이 예상대로 표시됨
 * 수정됨 – 도구 -> 옵션 -> 텍스트 편집기 아래의 SQL Server Tools Intellisense 설정에 대한 변경 내용이 유지되지 않았음
 * 향상됨 - 이제 연결 대화 기록 탭의 고정/고정 해제 단추가 더 간단해져 스크롤 막대가 나타날 가능성이 감소함
 * 수정됨 - 연결 대화 상자의 여러 접근성 문제가 수정됨

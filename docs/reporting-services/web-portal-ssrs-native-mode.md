@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814336"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711224"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
 
@@ -54,7 +54,7 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 
 웹 포털은 기본 모드로 실행되는 보고서 서버에만 사용되며 SharePoint 통합 모드용으로 구성된 보고서 서버에 대해서는 지원되지 않습니다.
 
-일부 웹 포털 기능은 지정된 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
+일부 웹 포털 기능은 지정된 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
 
 새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 응용 프로그램 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.
 
@@ -126,6 +126,6 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 [URL 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
 [Reporting Services 브라우저 지원 계획](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server 2016 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](https://go.microsoft.com/fwlink/?LinkId=620231)

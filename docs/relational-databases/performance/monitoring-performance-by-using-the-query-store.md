@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673332"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711504"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다. 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 재발된 쿼리 기능 사용  
- 쿼리 저장소를 사용하도록 설정한 후 개체 탐색기 창의 데이터베이스 부분을 새로 고쳐 **쿼리 저장소** 섹션을 추가합니다.  
+쿼리 저장소를 사용하도록 설정한 후 개체 탐색기 창의 데이터베이스 부분을 새로 고쳐 **쿼리 저장소** 섹션을 추가합니다.  
   
- ![개체 탐색기의 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "개체 탐색기의 쿼리 저장소 트리")  
+![SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리")   ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리") 
   
- **재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 선택할 수 있습니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.  
+**재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. **기간(밀리초)**(기본값), CPU 시간(밀리초), 논리적 읽기(KB), 논리적 쓰기(KB), 물리적 읽기(KB), CLR 시간(ms), DOP, 메모리 사용량(KB), 행 수, 사용된 메모리(KB), 사용된 임시 DB 메모리(KB), 대기 시간(밀리초) 등의 다양한 조건에 따라 맨 위에 있는 드롭다운 상자를 사용하여 쿼리를 필터링합니다.  
+계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제로 적용 및 적용 해제하고, 그리드 형식과 차트 형식 간에 전환하고, 선택한 계획을 비교하고(두 개 이상 선택한 경우), 디스플레이를 새로 고칠 수 있습니다.  
   
- ![개체 탐색기에서 이전 상태로 되돌려진 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "개체 탐색기에서 이전 상태로 되돌려진 쿼리")  
+![SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리")  
   
- 계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.  
+계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.
+
 ##  <a name="Waiting"></a> 대기 쿼리 찾기
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
+
+**쿼리 대기 통계**를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위에 있는 드롭다운 상자를 사용하여 대기 시간의 집계 조건을 평균, 최대, 최소, 표준 편차, **합계**(기본값) 중에 선택합니다.
+
+ ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계")
+
+선택한 대기 범주 디스플레이에서 막대 및 세부 정보 보기를 클릭하여 대기 범주를 선택합니다. 이 새로운 가로 막대형 차트는 해당 대기 범주에 영향을 주는 쿼리를 포함하고 있습니다. 
+  
+ ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 자세한 보기](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 대기 통계 자세한 보기")
+
+평균, 최대, 최소, 표준 편차, **합계**(기본값) 등 선택한 대기 범주에 대한 다양한 조건에 따라 맨 위에 있는 드롭다운 상자를 사용하여 쿼리를 필터링합니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.  
 
 **대기 범주**는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
 
@@ -127,7 +139,6 @@ INNER JOIN sys.query_store_query_text AS Txt
 |데이터베이스당 높은 SOS_SCHEDULER_YIELD 대기|특정 쿼리에 대한 쿼리 저장소의 높은 CPU 대기|쿼리 저장소에서 상위 CPU 소비 쿼리를 찾습니다. 그중에서 높은 CPU 추세가 영향을 받는 쿼리에 대한 높은 CPU 대기와 상호 연결하는 쿼리를 식별합니다. 이러한 쿼리 최적화에 집중하세요. 계획 회귀 또는 누락된 인덱스가 있을 수 있습니다.|
 
 ##  <a name="Options"></a> 구성 옵션 
-
 다음 옵션을 사용하여 쿼리 저장소 매개 변수를 구성할 수 있습니다.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> 쿼리 성능 안정성 유지 관리  
- 여러 번 실행되는 쿼리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 계획을 사용하여 리소스 사용률 및 기간이 달라짐을 알 수 있습니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
+여러 번 실행되는 쿼리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 계획을 사용하여 리소스 사용률 및 기간이 달라짐을 알 수 있습니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
   
- 또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.  
+또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.  
   
- **쿼리에 대 한 계획 강제 적용(강제 적용 정책 적용)** 특정 쿼리에 계획을 ;강제 적용하는 경우 쿼리를 실행할 때마다 강제 적용된 계획이 실행됩니다.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>쿼리에 대한 계획 강제 적용(강제 적용 정책 적용)
+
+특정 쿼리에 계획을 강제로 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 최적화 프로그램에서 계획을 강제로 적용하려고 시도합니다. 계획을 적용하는 데 실패하면 XEvent가 발생하고, 최적화 프로그램이 일반적인 방법으로 최적화하도록 지시됩니다.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- **sp_query_store_force_plan** 을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 해당 쿼리를 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.  
+**sp_query_store_force_plan** 을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 해당 쿼리를 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.  
   
- **쿼리에 대한 계획 강제 적용 제거** 다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램 사용하여 최적의 쿼리 계획을 계산하려면 **sp_query_store_unforce_plan** 을 사용하여 쿼리에 대해 선택한 계획의 강제 적용을 취소합니다.  
+### <a name="remove-plan-forcing-for-a-query"></a>쿼리에 대한 계획 강제 적용 제거
+
+다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램 사용하여 최적의 쿼리 계획을 계산하려면 **sp_query_store_unforce_plan** 을 사용하여 쿼리에 대해 선택한 계획의 강제 적용을 취소합니다.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815409"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712524"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 
@@ -56,7 +56,7 @@ ms.locfileid: "47815409"
   
 이 자습서를 사용하려면 컴퓨터에 다음 항목이 설치되어 있어야 합니다.  
   
--   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)를 참조하세요.  
+-   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 [SQL Server 2017의 버전 및 기능](../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
 -   기본 모드로 보고서 서버가 실행되고 있어야 합니다. 이 자습서에 설명된 사용자 인터페이스는 기본 모드 보고서 서버를 기반으로 합니다. 구독은 SharePoint 모드 보고서 서버에서 지원되지만 사용자 인터페이스는 이 자습서에 설명된 것과 다릅니다.  
   

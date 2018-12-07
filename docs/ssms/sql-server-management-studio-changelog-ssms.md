@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703991"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712734"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -198,10 +198,10 @@ SSMS는 PATH 환경 변수에 추가되지 않습니다.
 
 - SSMS.EXE(및 일반적인 도구)의 경로가 더 이상 경로에 추가되지 않습니다. 사용자는 직접 추가하거나 최신 Windows를 사용할 경우 시작 메뉴에 의존할 수 있습니다.
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]에 대한 지원
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대한 지원
 
-- 이 릴리스는 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)](compatLevel 150 등)를 완전히 *인식*하는 첫 번째 SSMS 릴리스입니다.
-- SSMS의 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 및 Managed Instance에서 "BATCH_STARTED_GROUP" 및 "BATCH_COMPLETED_GROUP"을 지원합니다.
+- 이 릴리스는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)](compatLevel 150 등)를 완전히 *인식*하는 첫 번째 SSMS 릴리스입니다.
+- SSMS의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 및 Managed Instance에서 "BATCH_STARTED_GROUP" 및 "BATCH_COMPLETED_GROUP"을 지원합니다.
 - GraphDB: Graph TC Sequence 실행 계획에서 플래그를 추가합니다.
 - Always Encrypted: [보안 enclave를 사용한 상시 암호화](../relational-databases/security/encryption/always-encrypted-enclaves.md) 지원을 추가했습니다.
   - 사용자가 “옵션” 단추를 클릭하여 enclave 지원을 사용할 수 있도록 설정하고 구성할 때 연결 대화 상자에는 새로운 “Always Encrypted” 탭이 있습니다.
@@ -418,7 +418,7 @@ SSMS에서는 다음 기능을 더 이상 사용할 수 없습니다.
 다음은 현재 릴리스에서 알려진 문제입니다.
 
 > [!IMPORTANT]
-> SQL 쿼리 편집기에서 ‘Active Directory - MFA 지원을 통한 유니버설’ 인증을 사용하는 경우 쿼리를 호출할 때마다 연결이 닫혔다가 다시 열릴 수 있습니다. 이러한 연결 끊김으로 인해 전역 임시 테이블이 예기치 않게 삭제되고, 연결에 새 SPID가 부여되는 것과 같은 부작용이 발생합니다. 이러한 연결 끊김은 연결에 열려 있는 트랜잭션이 있을 때는 발생하지 않습니다. 이 문제를 해결하기 위해 연결 매개 변수에서 `persist security info=true`를 설정할 수 있습니다.
+> SQL 쿼리 편집기에서 *Active Directory - MFA 지원을 통한 유니버설* 인증을 사용하는 경우 쿼리를 호출할 때마다 연결이 닫혔다가 다시 열릴 수 있습니다. 이러한 연결 끊김으로 인해 전역 임시 테이블이 예기치 않게 삭제되고, 연결에 새 SPID가 부여되는 것과 같은 부작용이 발생합니다. 이러한 연결 끊김은 연결에 열려 있는 트랜잭션이 있을 때는 발생하지 않습니다. 이 문제를 해결하기 위해 연결 매개 변수에서 `persist security info=true`를 설정할 수 있습니다.
 
 SSMS
 
@@ -430,7 +430,36 @@ SSIS
 - 이전 버전의 SQL Server를 대상으로 하고 스크립트 작업/스크립트 구성 요소를 동시에 포함하는 패키지는 배포하거나 실행할 수 없습니다.
 - SSMS에서 원격 Integration Services에 연결할 수 없습니다.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9(최신 GA 릴리스)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1(최신 GA 릴리스)
+
+![다운로드](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- 릴리스 번호: 17.9.1<br>
+- 빌드 번호: 14.0.17289.0<br>
+- 릴리스 날짜: 2018년 11월 21일
+
+17.9.1은 17.9의 작은 업데이트로 다음과 같은 버그가 수정되었습니다.
+
+- SQL 쿼리 편집기에서 "Active Directory - MFA 지원을 통한 유니버설" 인증을 사용하는 경우 쿼리를 호출할 때마다 연결이 닫혔다가 다시 열리는 문제가 수정되었습니다. 연결 닫힘으로 인해 글로벌 임시 테이블이 예기치 않게 삭제되고, 연결에 새 SPID가 부여되는 등의 부작용이 발생합니다.
+- 복원 계획이 복원 계획을 찾지 못하거나 특정 조건에서 비효율적인 복원 계획을 생성하는 장기 미해결 문제가 수정되었습니다.
+- "데이터 계층 애플리케이션 가져오기" 마법사에서 Azure SQL 데이터베이스에 연결할 때 오류가 발생할 수 있는 문제가 수정되었습니다.
+
+
+
+> [!NOTE]
+> 영어 이외의 지역화된 SSMS 17.x 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지](https://support.microsoft.com/kb/2862966) 가 필요합니다.
+
+[중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![다운로드](../ssdt/media/download.png)[SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -513,7 +542,7 @@ Help:
 
 
 > [!IMPORTANT]
-> SQL 쿼리 편집기에서 ‘Active Directory - MFA 지원을 통한 유니버설’ 인증을 사용하는 경우 쿼리를 호출할 때마다 연결이 닫혔다가 다시 열릴 수 있습니다. 이러한 연결 끊김으로 인해 전역 임시 테이블이 예기치 않게 삭제되고, 연결에 새 SPID가 부여되는 것과 같은 부작용이 발생합니다. 이러한 연결 끊김은 연결에 열려 있는 트랜잭션이 있을 때는 발생하지 않습니다. 이 문제를 해결하기 위해 연결 매개 변수에서 `persist security info=true`를 설정할 수 있습니다.
+> SQL 쿼리 편집기에서 *Active Directory - MFA 지원을 통한 유니버설* 인증을 사용하는 경우 쿼리를 호출할 때마다 연결이 닫혔다가 다시 열릴 수 있습니다. 이러한 연결 끊김으로 인해 전역 임시 테이블이 예기치 않게 삭제되고, 연결에 새 SPID가 부여되는 것과 같은 부작용이 발생합니다. 이러한 연결 끊김은 연결에 열려 있는 트랜잭션이 있을 때는 발생하지 않습니다. 이 문제를 해결하기 위해 연결 매개 변수에서 `persist security info=true`를 설정할 수 있습니다.
 
 
 
@@ -582,7 +611,7 @@ SMO:
 
 ### <a name="known-issues"></a>알려진 문제
 
-- ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE <database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
+- *속성* 창에서 파일 그룹 속성을 수정한 후 *스크립트* 단추를 클릭하면 두 개의 스크립트(각각 *USE <database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
 - 새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
 - XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드하는 것이 좋습니다.
 
@@ -867,7 +896,7 @@ XE 프로파일러:
 사용자가 전체 XEL 파일을 로드할 수 없는 문제를 수정했습니다.
 - XEvent 프로파일러: 사용자에게 *VIEW SERVER STATE* 권한이 없는 경우 SSMS의 작동이 중단되는 문제를 해결했습니다.
 XE 프로파일러 라이브 데이터 창을 닫아도 기본 세션이 중지되지 않는 문제를 수정했습니다.
-- 등록된 서버: “Move To…” 명령이 멈추는 문제를 해결했습니다([연결 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 및 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
+- 등록된 서버: “Move To...” 명령이 멈추는 문제를 해결했습니다([연결 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 및 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
 - SMO: 전송 개체의 TransferData 메서드가 작동하지 않는 문제를 해결했습니다.
 일시 중지된 SQL DW 데이터베이스에 대해 서버 데이터베이스가 예외를 throw하는 문제를 수정했습니다.
 SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL 매개 변수 값이 생성되는 문제를 수정했습니다.
@@ -978,7 +1007,7 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 **일반 SSMS**
 
 - MFA를 지원하는 UA를 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
-   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 모호하다는 알려진 문제가 있습니다. “파일 또는 어셈블리 ‘Microsoft.IdentityModel.Clients.ActiveDirectory,...’를 로드할 수 없습니다.”가 표시되지만 다음 메시지가 표시되어야 합니다. “데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database (DTAClient)".
+   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 모호하다는 알려진 문제가 있습니다. "파일 또는 어셈블리 ‘Microsoft.IdentityModel.Clients.ActiveDirectory’를 로드할 수 없습니다."가 표시되지만 다음 메시지가 표시되어야 합니다. "데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database (DTAClient)".
 - 오류의 DTA 결과에서 쿼리 분석 시도: "개체는 IConvertible을 구현해야 합니다. (mscorlib)".
 - *재발된 쿼리*가 개체 탐색기에서 보고서의 쿼리 저장소 목록에서 누락되었습니다.
    - 해결 방법: 마우스 오른쪽 단추로 **쿼리 저장소** 노드를 클릭하고 **재발된 쿼리 보기**를 선택합니다.
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - **새 테이블/뷰** 디자이너는 이전 스타일 로그인 프롬프트를 표시하며 Azure AD 인증을 위해 작동하지 않습니다.
   - **상위 200개의 행 편집** 기능은 Azure AD 인증을 지원하지 않습니다.
   - **등록된 서버** 구성 요소는 Azure AD 인증을 지원하지 않습니다.
-  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. *예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다.* *데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)*.
+  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 별 도움이 되지 않는다는 알려진 문제가 있습니다. *파일 또는 어셈블리 ‘Microsoft.IdentityModel.Clients.ActiveDirectory,...’를 로드할 수 없습니다...* 가 표시되지만 다음 메시지가 표시되어야 합니다. *데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)*.
 
 **AS(Analysis Services)**
 
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - "새 서버 등록" 대화 상자에서 UI 잘림 문제를 해결함
 - 따옴표가 있는 문자열 상수 값을 포함하는 식을 잘못 업데이트하는 DMF 조건 UI 수정
 - 사용자 지정 보고서를 실행할 때 SSMS 작동을 중단시킬 수 있는 문제를 수정함
-- 폴더 노드에 "Execution in Scale Out…"(규모 확장에서 실행…) 메뉴 항목 추가
+- 폴더 노드에 "Execution in Scale Out..." 메뉴 항목 추가
 - Azure SQL DB 방화벽 허용 목록 IP 주소 기능 관련 문제를 해결
 - SSMS에서 AS 다차원 파티션의 원본을 편집할 때 개체 참조가 설정되지 않음 예외가 발생하는 문제를 해결함
 - SSMS에서 다차원 AS 서버에서 고객 어셈블리를 삭제할 때 개체 참조가 설정되지 않음 예외가 발생하는 문제를 해결함

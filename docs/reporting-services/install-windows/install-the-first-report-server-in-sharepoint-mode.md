@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814136"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712314"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -62,7 +62,7 @@ ms.locfileid: "51814136"
   
  **Reporting Services 서비스 응용 프로그램 만들기**  
   
--   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (https://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
+-   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (https://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "51814136"
   
  ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") Reporting Services 서비스 응용 프로그램을 만드는 데 PowerShell을 사용하는 방법은 다음을 참조하세요.  
   
--   다음 섹션인 [1~4단계를 위한 Windows PowerShell 스크립트](#bkmk_full_script)를 참조하세요.  
+-   다음 섹션인 [1-4단계를 위한 Windows PowerShell 스크립트](#bkmk_full_script)를 참조하세요.  
   
 -   항목 [PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만들려면](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
@@ -270,7 +270,7 @@ ms.locfileid: "51814136"
   
 1.  다음 단계에서는 SharePoint 사이트가 SharePoint 2013에 대한 2013 **환경 버전**에 대해 구성되었다고 가정합니다.  
   
-     원하는 SharePoint 사이트로 브라우저를 엽니다(예: https://\<servername>/sites/bi).  
+     원하는 SharePoint 사이트로 브라우저를 엽니다. 엽니다(예: https://\<servername>/sites/bi).  
   
 2.  **설정**![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
   
@@ -284,14 +284,14 @@ ms.locfileid: "51814136"
   
  이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)를 참조하세요.  
   
-##  <a name="bkmk_full_script"></a> 1~4단계를 위한 Windows PowerShell 스크립트  
+##  <a name="bkmk_full_script"></a> 1-4단계를 위한 Windows PowerShell 스크립트  
  이 섹션의 PowerShells 스크립트는 이전 섹션의 1~4단계를 완료하는 것과 동일합니다. 이 스크립트는 다음 작업을 완료합니다.  
   
 -   Reporting Services 서비스 및 서비스 프록시를 설치하고 서비스를 시작합니다.  
   
 -   “Reporting Services”라는 서비스 프록시를 만듭니다.  
   
--   “Reporting Services Application”이라는 Reporting Services 서비스 응용 프로그램을 만듭니다.  
+-   “Reporting Services Application”이라는 Reporting Services 서비스 애플리케이션을 만듭니다.  
   
 -   사이트 모음에 대해 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 기능을 사용하도록 설정합니다.  
   
@@ -299,9 +299,9 @@ ms.locfileid: "51814136"
   
 -   서비스 프록시에 대해 **-Account** 를 업데이트합니다. 계정은 SharePoint 팜에서 관리되는 서비스 계정이어야 합니다. 자세한 내용은 SharePoint 항목 [SharePoint 2013에서 관리 및 서비스 계정 계획](https://technet.microsoft.com/library/cc263445.aspx)을 참조하세요.  
   
--   서비스 응용 프로그램에 대해 **–DatabaseServer** 매개 변수를 업데이트합니다. 이 매개 변수는 데이터베이스 엔진 인스턴스입니다.  
+-   서비스 애플리케이션에 대해 **–DatabaseServer** 매개 변수를 업데이트합니다. 이 매개 변수는 데이터베이스 엔진 인스턴스입니다.  
   
--   **기능을 사용하도록 설정하려는 사이트의** –url [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 매개 변수를 업데이트합니다.  
+-   **기능을 사용하도록 설정하려는 사이트의** –url[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 매개 변수를 업데이트합니다.  
   
  **스크립트를 사용하려면:**  
   
@@ -318,7 +318,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -397,7 +397,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  SharePoint 2016의 경우 Excel Services 응용 프로그램을 만들고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션  
+-   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션.  
   
 -   [Excel Services 데이터 모델 설정(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
@@ -428,7 +428,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699751"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711674"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>보고서 작성기 제작 환경(SSRS)
   보고서 작성기 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 은(는) Visual Studio 외부에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들기 위한 독립 실행형 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47699751"
   
 -   보고서 및 관련 항목을 SharePoint 라이브러리, 보고서 서버 또는 로컬 컴퓨터에 저장합니다.  
   
- 보고서 작성기와 보고서 디자이너는 많은 기능을 공유합니다. [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)에 대한 자세한 내용을 참조하십시오.  
+ 보고서 작성기와 보고서 디자이너는 많은 기능을 공유합니다. [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)에 대해 자세히 알아보세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703911"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711834"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]는 이전 릴리스를 토대로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는 SQL Server 2019의 새로운 기능을 요약해서 설명합니다. 자세한 내용 및 알려진 문제에 대해서는 [SQL Server 2019 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는 SQL Server 2019의 새로운 기능을 요약해서 설명합니다. 자세한 내용 및 알려진 문제에 대해서는 [SQL Server 2019 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
 **SQL Server 2019를 사용해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [SQL Server 2019를 다운로드하여 Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703911"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-CTP(Community Technology Preview) 2.1은 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]의 최신 공개 릴리스입니다. [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1용으로 추가되었거나 개선된 기능은 다음과 같습니다.
+CTP(Community Technology Preview) 2.1은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1용으로 추가되었거나 개선된 기능은 다음과 같습니다.
 
 - [빅 데이터 클러스터](#bigdatacluster)
   - Python 및 R 앱 배포
@@ -46,7 +46,7 @@ CTP(Community Technology Preview) 2.1은 [!INCLUDE[sql-server-2019](..\includes\
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]의 첫 번째 공개 릴리스입니다. [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0용으로 추가되었거나 개선된 기능은 다음과 같습니다.
+CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 첫 번째 공개 릴리스입니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0용으로 추가되었거나 개선된 기능은 다음과 같습니다.
 
 - [빅 데이터 클러스터](#bigdatacluster)
   - Kubernetes에서 SQL 및 Spark Linux 컨테이너를 사용하여 빅 데이터 클러스터 배포
@@ -163,7 +163,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 SQL Server 2012에 도입된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
 
-이 기능은 사용 중인 문자 집합에 따라 저장소 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어, Latin 문자열을 포함하는 기존 열 데이터 형식을 UTF-8 사용 데이터 정렬을 통해 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 저장소 요구 수준이 거의 50%로 감소합니다. 이러한 감소는 `NCHAR(10)`에는 저장소로 22바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 12바이트만 필요하기 때문입니다.
+이 기능은 사용 중인 문자 집합에 따라 저장소 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 Latin 문자열을 포함하는 기존 열 데이터 형식을 UTF-8 사용 데이터 정렬을 통해 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 수준이 50%로 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>다시 시작 가능한 온라인 인덱스 만들기(CTP 2.0)
 
