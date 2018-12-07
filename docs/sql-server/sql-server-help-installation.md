@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514529"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SSMS(SQL Server Management Studio) 또는 VS(Visual Studio)의 도움말 뷰어를 사용하여 온라인 소스 또는 디스크의 SQL Server 도움말 패키지를 다운로드 및 설치하고 오프라인으로 볼 수 있습니다. 이 문서에서는 도움말 뷰어를 설치하는 도구, 오프라인 도움말 콘텐츠를 설치하는 방법 및 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 및 SQL Server 2017에 대한 도움말을 보는 방법을 설명합니다.
+
+인터넷 액세스가 가능한 시스템에서 콘텐츠를 다운로드하고 나면, 인터넷 액세스가불 가능한 시스템으로 해당 콘텐츠를 마이그레이션할 수 있습니다. 
 
 > [!NOTE]
 > SQL Server 2016 및 SQL Server 2017 도움말은 결합되었지만 일부 항목은 개별 버전에 적용됩니다(명시된 경우). 대부분의 항목은 두 버전 모두에 적용됩니다.
@@ -125,7 +127,8 @@ Visual Studio에서 설치된 도움말을 보려면:
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    도움말 목차가 왼쪽에 표시되고, 선택한 도움말 항목이 오른쪽에 표시됩니다. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>도움말 뷰어 v1.x 사용
 
 이전 버전의 SSMS 및 VS에서는 SQL Server 2014 도움말을 지원하는 도움말 뷰어 1.x를 사용합니다. 
@@ -165,13 +168,15 @@ Visual Studio에서 설치된 도움말을 보려면:
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>온라인 도움말 보기
 
 온라인 도움말에는 항상 가장 최근의 콘텐츠가 표시됩니다. 
 
 **SSMS 17.x에서 SQL Server 온라인 도움말을 보려면**
 
-- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
+- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
 
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ SSMS 또는 VS의 대화 상자에서 F1 키를 누르거나 **도움말** 또�
 
 >  [!NOTE]
 >  F1 도움말은 온라인 상태일 경우에만 작동합니다. F1 도움말에 대한 오프라인 소스는 없습니다. 
+
+## <a name="systems-without-internet-access"></a>인터넷 액세스를 사용하지 않는 시스템
+인터넷 액세스가 가능한 시스템에서 SQL Server 도움말 뷰어를 사용하여 오프라인으로 다운로드하는 [앞에서 언급한 단계](#use-help-viewer-v2x)를 수행했으면 인터넷 액세스가 불가능한 시스템으로 해당 콘텐츠를 마이그레이션할 수 있습니다. 다음 단계를 사용하여 수행할 수 있습니다. 
+
+  >[!NOTE]
+  >SQL Server Management Studio와 같은 도움말 뷰어를 지원하는 소프트웨어를 오프라인 시스템에 설치해야 합니다. 
+
+1. 도움말 뷰어를 엽니다(Ctrl + Alt + F1).
+1. 관심이 있다면 설명서를 선택합니다. 예를 들어, SQL로 필터링하고 SQL Server 기술 설명서를 선택합니다. 
+1. **로컬 저장소 경로**에서 찾을 수 있는 디스크에 있는 파일의 실제 경로 식별합니다.
+1. 파일 시스템 탐색기를 사용하여 이 위치로 이동합니다. 
+    1.  기본 위치는 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`입니다.
+1. **ContentStore**, **Incoming**, **IndexStore**의 세 개의 폴더를 선택하고 오프라인 시스템에서 동일한 위치로 복사합니다. USB 또는 CD와 같은 중간 미디어 디바이스를 사용해야 합니다. 
+1. 이러한 파일이 이동되면 오프라인 시스템에서 도움말 뷰어를 시작하고 SQL Server 기술 설명서를 사용할 수 있습니다.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>다음 단계

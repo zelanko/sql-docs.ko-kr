@@ -13,12 +13,12 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841631"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417919"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
   SSIS(SQL Server Integration Services) 패키지는 Hadoop 연결 관리자를 통해 속성에 대해 지정된 값을 사용하여 Hadoop 클러스터에 연결할 수 있습니다.  
@@ -205,7 +205,7 @@ KDC 서버에서 다음을 수행합니다.
 
 ## <a name="see-also"></a>관련 항목:  
  [Hadoop 하이브 태스크](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Hadoop Pig 태스크](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Hadoop Pig 작업](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop 파일 시스템 태스크](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   
