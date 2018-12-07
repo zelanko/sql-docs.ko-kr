@@ -1,7 +1,7 @@
 ---
 title: CAST 및 CONVERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/13/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697461"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191073"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -325,7 +325,9 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 |113|130|  
   
 <sup>1</sup> 스타일 20 및 21 제외
-  
+
+자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
+
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 SC(보조 문자) 데이터 정렬을 사용할 경우 **nchar** 또는 **nvarchar** 형식에서 길이가 작은 **nchar** 또는 **nvarchar** 형식으로 CAST 연산을 수행하면 서로게이트 쌍 안에서 자르지 않습니다. 대신 이 연산은 보조 문자 앞에서 자릅니다. 예를 들어 다음 코드 조각에서는 `@x`만 보유한 `'ab'`를 남깁니다. 공간이 부족하여 보조 문자를 포함할 수 없습니다.
   

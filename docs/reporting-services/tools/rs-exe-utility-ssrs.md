@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543957"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -84,7 +84,7 @@ rs {-?}
  스크립트 파일의 명령이 일괄적으로 실행되도록 지정합니다(옵션). 실패하는 명령이 있으면 이 일괄 처리가 롤백됩니다. 일부 명령은 일괄 처리 방식이 아닌 일반적인 방식으로 실행됩니다. 스크립트 내에서 발생되며 처리되지 않는 예외만 롤백됩니다. 스크립트가 예외를 처리하고 **Main**에서 정상적으로 반환되는 경우 일괄 처리가 커밋됩니다. 이 매개 변수를 생략하면 명령이 일괄 처리를 만들지 않고 실행됩니다. 자세한 내용은 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)을 참조하세요.  
   
  **-v** *globalvar*  
- 스크립트에서 사용되는 전역 변수를 지정합니다(옵션). 스크립트에서 전역 변수가 사용되는 경우에는 이 인수를 지정해야 합니다. 지정하는 값은 .rss 파일에 정의되는 전역 변수에 대해 유효해야 합니다. 각 **–v** 인수에 대해 하나의 전역 변수를 지정해야 합니다.  
+ 스크립트에서 사용되는 전역 변수를 지정합니다(옵션). 스크립트에서 전역 변수가 사용되는 경우에는 이 인수를 지정해야 합니다. 지정하는 값은 .rss 파일에 정의되는 전역 변수에 대해 유효해야 합니다. 각 **–v** 인수에 대해 하나의 글로벌 변수를 지정해야 합니다.  
   
  **-v** 인수는 명령줄에서 지정되며 런타임에 스크립트에 정의된 전역 변수의 값을 설정하는 데 사용됩니다. 예를 들어 스크립트에 *parentFolder*라는 변수가 포함되어 있다면 다음과 같이 명령줄에서 해당 폴더에 대한 이름을 지정할 수 있습니다.  
   
@@ -104,7 +104,7 @@ rs {-?}
  다음 예에서는 실행할 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트 및 웹 서비스 메서드가 포함된 스크립트 파일을 지정하는 방법을 보여 줍니다.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  

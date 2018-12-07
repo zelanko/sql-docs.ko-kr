@@ -13,12 +13,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b99978fa5b861ce6fe8481bb0172b91e42d8e72e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519855"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>테이블 반환 개체 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "47616821"
 선택한 테이블 반환 개체에 대한 별칭을 표시합니다. 별칭을 추가하거나 변경하려면 필드에 별칭을 입력합니다.  
   
 **열 목록**  
-선택한 테이블 반환 개체에 포함된 열을 표시합니다. 이러한 열을 별도의 창에 표시하려면 열 목록을 클릭한 다음 속성의 오른쪽에 있는 줄임표(...)를 클릭합니다.  
+선택한 테이블 반환 개체에 포함된 열을 표시합니다. 이러한 열을 별도의 창에 표시하려면 열 목록을 클릭한, 다음 속성의 오른쪽에 있는 줄임표(...)를 클릭합니다.  
   
 **전체 이름**  
 개체의 스키마 또는 데이터 원본과 같은 추가 정보를 포함하여 선택한 테이블 반환 개체의 이름을 표시합니다.  
   
 **매개 변수 목록**  
-선택한 테이블 반환 함수에 대해 정의된 매개 변수를 표시합니다. 매개 변수의 값을 정의하려면 매개 변수 목록을 클릭한 다음 속성의 오른쪽에 있는 줄임표(...)를 클릭합니다. 함수 매개 변수 대화 상자에서 값을 입력합니다. 이 속성은 테이블 반환 함수를 선택한 경우에만 사용할 수 있습니다.  
+선택한 테이블 반환 함수에 대해 정의된 매개 변수를 표시합니다. 매개 변수의 값을 정의하려면 매개 변수 목록을 클릭한 다음, 속성의 오른쪽에 있는 줄임표(...)를 클릭합니다. 함수 매개 변수 대화 상자에서 값을 입력합니다. 이 속성은 테이블 반환 함수를 선택한 경우에만 사용할 수 있습니다.  
   

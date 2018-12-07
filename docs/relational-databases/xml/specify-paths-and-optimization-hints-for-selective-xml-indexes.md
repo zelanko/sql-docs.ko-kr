@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505891"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -358,20 +358,20 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|보다 효율적인 저장소|성능 향상|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|사용자 계정 컨트롤|아니오|  
-|**SINGLETON**|아니오|사용자 계정 컨트롤|  
-|**DATA TYPE**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|**MAXLENGTH**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**node()**|예|아니오|  
+|**SINGLETON**|아니오|예|  
+|**DATA TYPE**|예|예|  
+|**MAXLENGTH**|예|예|  
   
 ### <a name="optimization-hints-and-data-types"></a>최적화 힌트 및 데이터 형식  
  노드를 XQuery 데이터 형식 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 인덱싱할 수 있습니다. 다음 표에서는 각 데이터 형식에서 지원되는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|사용자 계정 컨트롤|아니오|  
-|**SINGLETON**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|**DATA TYPE**|사용자 계정 컨트롤|아니오|  
-|**MAXLENGTH**|사용자 계정 컨트롤|아니오|  
+|**node()**|예|아니오|  
+|**SINGLETON**|예|예|  
+|**DATA TYPE**|예|아니오|  
+|**MAXLENGTH**|예|아니오|  
   
 ### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  

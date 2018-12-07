@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703481"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302563"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
@@ -32,14 +32,17 @@ ms.locfileid: "47703481"
   
 ## <a name="define-a-description"></a>설명 정의  
 1.  설명에 **Sales Order 배달** 을 입력합니다.
+
 ## <a name="type"></a>설명에
 1.  **데이터 기반 구독**을 클릭합니다.  
+
 ## <a name="schedule"></a>일정
 1. 일정 섹션에서 **보고서별 일정**을 클릭합니다.
 2. **일정 편집**을 클릭합니다.
 3.  **일정 정보**에서 **한 번**을 누릅니다.  
 4.  시작 시간을 현재 시간보다 몇 분 앞당겨 지정합니다.  
 5.  **적용**을 클릭합니다.
+
 ## <a name="destination"></a>Destination  
 1.  대상 섹션에서 배달 방법으로 **Windows 파일 공유** 를 선택합니다.  
 
@@ -53,22 +56,24 @@ ms.locfileid: "47703481"
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>자격 증명
- 1. **다음 자격 증명 사용**을 선택합니다.
- 2. **Windows 사용자 이름 및 암호**를 선택합니다.
- 3.  **사용자 이름** 및 **암호**에 도메인 사용자 이름 및 암호를 입력합니다. **사용자 이름**을 지정할 때는 도메인 계정과 사용자 계정을 모두 포함합니다.
-     > [!NOTE]  
+## <a name="credentials"></a>자격 증명
+1. **다음 자격 증명 사용**을 선택합니다.
+2. **Windows 사용자 이름 및 암호**를 선택합니다.
+3.  **사용자 이름** 및 **암호**에 도메인 사용자 이름 및 암호를 입력합니다. **사용자 이름**을 지정할 때는 도메인 계정과 사용자 계정을 모두 포함합니다.
+    > [!NOTE]  
     > 구독자 데이터 원본에 연결하는 데 사용된 자격 증명은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]로 다시 전달되지 않습니다. 나중에 구독을 수정할 경우 데이터 원본에 연결하는 데 사용된 암호를 다시 입력해야 합니다.
+
 ## <a name="query"></a>쿼리      
 1.  쿼리 상자에 다음 쿼리를 입력합니다.  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  제한 시간을 30초로 지정합니다.  
   
 3.  **유효성 검사 쿼리**를 클릭한 다음 **적용**을 클릭합니다.
+
 ## <a name="delivery-options"></a>배달 옵션
 다음 값을 채웁니다.
 

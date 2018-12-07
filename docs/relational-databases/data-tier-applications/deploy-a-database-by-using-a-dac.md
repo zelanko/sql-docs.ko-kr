@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540390"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673352"
   
 3.  **데이터베이스** 노드를 확장합니다.  
   
-4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **SQL Azure에 데이터베이스 배포…** 를 선택합니다.  
+4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음, **SQL Azure에 데이터베이스 배포...** 를 선택합니다.  
   
 5.  다음 마법사 대화 상자를 완료합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51673352"
   
  **로컬 호스트:**  
   
--   **서버 연결** – 서버 연결 세부 정보를 지정한 후 **연결** 을 클릭하여 연결을 확인합니다.  
+-   **서버 연결** – 서버 연결 세부 정보를 지정한 다음, **연결** 을 클릭하여 연결을 확인합니다.  
   
 -   **새 데이터베이스 이름** – 새 데이터베이스 이름을 지정합니다.  
   

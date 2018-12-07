@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661732"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393076"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server에서 JSON으로 일반적인 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WHERE [key] = 'color'
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON은 호환성 수준 130을 필요로 함  
  **질문.** SQL Server 2016에서 OPENJSON을 실행하려는 데 다음 오류가 발생했습니다.  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **대답.** OPENJSON 함수는 호환성 수준 130에서만 사용할 수 있습니다. DB 호환성 수준이 130보다 낮은 경우 OPENJSON은 숨겨집니다. 다른 JSON 함수는 모든 호환성 수준에서 사용할 수 있습니다.  
  

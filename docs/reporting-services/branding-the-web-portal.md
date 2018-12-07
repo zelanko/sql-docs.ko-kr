@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812996"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397711"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 

@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799881"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506556"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
   OLE DB 명령 변환은 데이터 흐름의 각 행에 대해 SQL 문을 실행합니다. 예를 들어 데이터베이스 테이블에서 행을 삽입, 업데이트 또는 삭제하는 SQL 문을 실행할 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "47799881"
   
 6.  **연결 관리자** 탭의 **연결 관리자** 목록에서 OLE DB 연결 관리자를 선택합니다. 자세한 내용은 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
-7.  **구성 요소 속성** 탭을 클릭하고 **SqlCommand** 상자의 줄임표 단추 **(…)** 를 클릭합니다.  
+7.  **구성 요소 속성** 탭을 클릭하고 **SqlCommand** 상자의 줄임표 단추 **(...)** 를 클릭합니다.  
   
 8.  **문자열 값 편집기**에서 각 매개 변수에 대한 매개 변수 표시자로 물음표(?)를 사용하여 매개 변수가 있는 SQL 문을 입력합니다.  
   

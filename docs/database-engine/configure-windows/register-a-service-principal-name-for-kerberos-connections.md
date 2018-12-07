@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605493"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395485"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기본 인증 방법입니다. Windows 인증을 사용하는 클라이언트는 NTLM이나 Kerberos를 사용하여 인증됩니다. Active Directory 환경에서는 항상 Kerberos 인증이 먼저 시도됩니다. 명명된 파이프를 사용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 클라이언트에는 Kerberos 인증을 사용할 수 없습니다.  
   
 ##  <a name="Permissions"></a> Permissions  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory 도메인 서비스에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 응용 프로그램 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory Domain Services에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 애플리케이션 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
   
 > [!NOTE]  
 >  Windows 도메인이 적어도 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 기능 수준 이상에서 실행되도록 구성된 경우 관리 서비스 계정에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 SPN을 등록하는 데 필요한 권한이 없습니다. Kerberos 인증이 필요한 경우 도메인 관리자는 관리 서비스 계정에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN을 수동으로 등록해야 합니다.  

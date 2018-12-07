@@ -17,12 +17,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49902e85a1d70fe39f74429999312c4f6263b04e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 254fa32ff939f7e84c361cd5baae4c99d4c42715
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539681"
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ Ssms
 ## <a name="remarks"></a>Remarks  
  모든 스위치는 선택 사항이며 쉼표로 구분되는 파일을 제외하고 공백으로 구분합니다. 스위치를 지정하지 않으면 **Ssms** 가 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 도구 **메뉴의** 옵션 **설정에 지정된 대로** 를 엽니다. 예를 들어 **환경/일반** 페이지에서 **시작 시** 옵션으로 **새 쿼리 창 열기**를 지정할 경우 **Ssms** 는 빈 쿼리 편집기를 엽니다.  
   
- **-log** 스위치는 명령줄 끝에 다른 모든 스위치 뒤에 나타나야 합니다. 파일 이름 인수는 선택 사항입니다. 파일 이름을 지정하는 경우 해당 파일이 없으면 파일이 만들어집니다. 쓰기 권한 부족 등의 이유로 파일을 만들 수 없는 경우 로그는 대신 지역화되지 않은 APPDATA 위치에 작성됩니다(아래 참조). 파일 이름 인수를 지정하지 않으면 현재 사용자의 지역화되지 않은 응용 프로그램 데이터 폴더에 파일이 두 개 작성됩니다. SQL Server에 대한 지역화되지 않은 응용 프로그램 데이터 폴더는 APPDATA 환경 변수에서 찾아볼 수 있습니다. 예를 들어 SQL Server 2012의 경우 해당 폴더는 \<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\입니다. 기본적으로 두 파일의 이름은 ActivityLog.xml과 ActivityLog.xsl입니다. ActivityLog.xml에는 작업 로그 데이터가 포함되고 ActivityLog.xsl은 XML 파일을 더 편리하게 볼 수 있는 방법을 제공하는 XML 스타일 시트입니다. Internet Explorer와 같은 기본 XML 뷰어에서 로그 파일을 보려면 시작, 실행...을 차례로 클릭하고 제공된 필드에 “\<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml”을 입력한 다음 Enter 키를 누릅니다.  
+ **-log** 스위치는 명령줄 끝에 다른 모든 스위치 뒤에 나타나야 합니다. 파일 이름 인수는 선택 사항입니다. 파일 이름을 지정하는 경우 해당 파일이 없으면 파일이 만들어집니다. 쓰기 권한 부족 등의 이유로 파일을 만들 수 없는 경우 로그는 대신 지역화되지 않은 APPDATA 위치에 작성됩니다(아래 참조). 파일 이름 인수를 지정하지 않으면 현재 사용자의 지역화되지 않은 응용 프로그램 데이터 폴더에 파일이 두 개 작성됩니다. SQL Server에 대한 지역화되지 않은 응용 프로그램 데이터 폴더는 APPDATA 환경 변수에서 찾아볼 수 있습니다. 예를 들어 SQL Server 2012의 경우 해당 폴더는 \<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\입니다. 기본적으로 두 파일의 이름은 ActivityLog.xml과 ActivityLog.xsl입니다. ActivityLog.xml에는 작업 로그 데이터가 포함되고 ActivityLog.xsl은 XML 파일을 더 편리하게 볼 수 있는 방법을 제공하는 XML 스타일 시트입니다. Internet Explorer와 같은 기본 XML 뷰어에서 로그 파일을 보려면 시작, 실행...을 차례로 클릭하고 제공된 필드에 “\<시스템 드라이브>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml”을 입력한 다음, Enter 키를 누릅니다.  
   
  연결 정보를 제공했고 파일 형식이 해당 서버 유형에 연결된 경우 쿼리가 포함된 파일을 서버에 연결할 것인지 묻는 메시지가 나타납니다. 예를 들어 .sql 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SQL 쿼리 편집기 창을 열고 .mdx 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 MDX 쿼리 편집기 창을 엽니다. **에서** SQL Server 솔루션 및 프로젝트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 열립니다.  
   

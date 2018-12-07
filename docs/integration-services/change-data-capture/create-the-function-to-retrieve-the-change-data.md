@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650222"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418034"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  
@@ -135,7 +135,7 @@ deallocate #hfunctions
   
 -   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드에서 유효한 값은 다음과 같습니다. 'I'는 삽입, 'D'는 삭제, 'UO'는 이전 값 업데이트 및 'UN'은 새 값 업데이트입니다.  
   
--   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 ‘_uflag’를 추가한 것입니다.  
+-   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
   
  패키지에서 모든 변경을 쿼리하는 래퍼 함수를 호출하는 경우 래퍼 함수는 __CDC_STARTLSN 및 \__CDC_SEQVAL 열도 반환합니다. 이러한 두 열은 각각 결과 집합의 첫 번째 열과 두 번째 열이 됩니다. 또한 래퍼 함수는 이러한 두 열에 따라 결과 집합을 정렬합니다.  
   

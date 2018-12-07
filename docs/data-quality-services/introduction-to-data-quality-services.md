@@ -5,8 +5,7 @@ ms.date: 03/05/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -14,12 +13,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700281"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617343"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
 
@@ -32,7 +31,7 @@ ms.locfileid: "51700281"
   
  고품질 데이터는 사업체 및 기관의 업무 효율을 위한 핵심 요소입니다. 어떤 규모의 조직이라도 DQS를 활용하여 자신의 데이터가 갖는 정보 가치를 향상시키고 데이터를 의도한 용도에 맞게 적합하게 만들 수 있습니다. 데이터 품질 솔루션은 데이터를 보다 안정적이고, 액세스할 수 있으며, 다시 사용할 수 있도록 만듭니다. 이러한 솔루션은 비즈니스 인텔리전스 또는 데이터 웨어하우스 작업뿐만 아니라 OLTP 작업 시스템에서 잘못된 데이터로 인해 발생하는 문제를 해결하여 데이터의 완전성, 정확성, 준수성 및 일관성을 향상시킬 수 있습니다.  
   
- DQS를 사용하면 데이터베이스 전문가 또는 프로그래머가 아니라도 비즈니스 사용자, 정보 근로자 또는 IT 전문가가 최소한의 설정 및 준비 시간만으로 조직의 데이터 품질 작업을 만들고, 유지 관리 및 실행할 수 있습니다.  
+ DQS를 사용하면 데이터베이스 전문가 또는 프로그래머가 아니어도 비즈니스 사용자, 정보 근로자 또는 IT 전문가가 최소한의 설정 및 준비 시간만으로 조직의 데이터 품질 작업을 만들고, 유지 관리 및 실행할 수 있습니다.  
   
 ##  <a name="Answer"></a> DQS의 요구 사항 답변  
  데이터 품질이란 절대적인 가치를 갖는 특정 용어로 정의되지 않습니다. 데이터 품질은 해당 데이터가 의도한 목적에 대해 적합한지 여부에 따라 달라집니다. DQS는 잠재적으로 잘못된 데이터를 식별하고 해당 데이터가 실제로 잘못되었을 가능성에 대한 평가 결과를 사용자에게 제공합니다. DQS는 사용자가 데이터의 적합성을 결정할 수 있도록 해당 데이터에 대한 체계적인 이해를 돕습니다. DQS를 사용하면 불완전성, 준수성 부족, 비일관성, 부정확성, 부적합성 및 데이터 중복성과 관련된 문제를 해결할 수 있습니다.  

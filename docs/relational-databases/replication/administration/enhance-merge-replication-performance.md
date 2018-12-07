@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535279"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "47718981"
   
 -   구독이 빠른 연결을 통해 동기화되고 게시자에서 구독자로 변경 내용이 전송되면 병합 에이전트에 대해 **–ParallelUploadDownload** 매개 변수를 사용합니다.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에서는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   
     -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530231"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +136,7 @@ ORDER BY order_by_expression
  SELECT TOP (*N*) 문에는 항상 ORDER BY 절을 사용합니다. 이 방법은 TOP의 영향을 받는 행을 예측 가능한 방식으로 나타내는 유일한 방법입니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
 ## <a name="interoperability"></a>상호 운용성  
- ORDER BY 절을 SELECT…INTO 문과 함께 사용하여 다른 원본의 행을 삽입해도 지정된 순서대로 행이 삽입된다는 보장은 없습니다.  
+ ORDER BY 절을 SELECT…INTO 문과 함께 사용하여 다른 원본에서 행을 삽입한 경우 지정된 순서대로 행이 삽입된다는 보장은 없습니다.  
   
  뷰에서 OFFSET과 FETCH를 함께 사용하면 뷰의 updateability 속성이 변경되지 않습니다.  
   

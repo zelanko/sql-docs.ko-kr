@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3424962c9c5df48bc738a0ec35cb92e1d998150
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571302"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525945"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51571302"
   
 |사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 및 CONTAINSTABLE 일반 NEAR 연산자:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|사용자 지정 NEAR 연산자:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 및 CONTAINSTABLE 일반 NEAR 연산자:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|사용자 지정 NEAR 연산자:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 옵션:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|없음|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 없음<sup>*</sup>|237<br /><br /> 없음*|  
 |DATABASEPROPERTYEX 속성: IsFullTextEnabled|없음|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db 옵션:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|없음|sp_detach_db @keepfulltextindexfile|226|  

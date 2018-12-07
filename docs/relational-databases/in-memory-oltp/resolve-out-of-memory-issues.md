@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671692"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518613"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671692"
   
 |항목|개요|  
 |-----------|--------------|  
-|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|“'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다.”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|“'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
 |[메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결](#bkmk_recoverFromOOM)|메모리 부족 문제가 성능에 부정적인 영향을 미치고 있음을 발견할 경우 수행할 작업입니다.|  
-|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다. …” 오류 메시지가 나타나는 경우 수행할 작업입니다.|
+|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
 |[최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs)|가상화된 환경에서 메모리 내 OLTP를 사용할 때의 참고 사항입니다.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
+ 데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다"라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
    
 데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않으며 주의 대상으로 표시됩니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "51671692"
 #### <a name="free-up-existing-memory"></a>기존 메모리 확보  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>필수적이지 않은 메모리 액세스에 최적화된 테이블 행을 삭제하고 가비지 수집 대기  
- 메모리 액세스에 최적화된 테이블에서 필수적이지 않은 행을 제거할 수 있습니다. 가비지 수집기는 이러한 행에 사용되는 메모리를 사용 가능한 메모리로 되돌립니다. 메모리 내 OLTP 엔진은 가비지 행을 적극적으로 수집합니다. 그러나 장기 실행 트랜잭션으로 인해 가비지가 수집되지 않을 수 있습니다. 예를 들어, 5분간 실행되는 트랜잭션이 있는 경우 트랜잭션이 활성 상태인 동안 수행되는 업데이트/삭제 작업으로 생성된 모든 행 버전에 대해 가비지 수집이 수행되지 않을 수 있습니다.  
+ 메모리 액세스에 최적화된 테이블에서 필수적이지 않은 행을 제거할 수 있습니다. 가비지 수집기는 이러한 행에 사용되는 메모리를 사용 가능한 메모리로 되돌립니다. 메모리 내 OLTP 엔진은 가비지 행을 적극적으로 수집합니다. 그러나 장기 실행 트랜잭션으로 인해 가비지가 수집되지 않을 수 있습니다. 예를 들어 5분간 실행되는 트랜잭션이 있는 경우 트랜잭션이 활성 상태인 동안 수행되는 업데이트/삭제 작업으로 생성된 모든 행 버전에 대해 가비지가 수집되지 않을 수 있습니다.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>디스크 기반 테이블로 하나 이상의 행 이동  
  다음 TechNet 문서에는 메모리 최적화 테이블에서 디스크 기반 테이블로 행을 이동하는 방법이 나와 있습니다.  
@@ -130,7 +130,7 @@ GO
  MAX_MEMORY_PERCENT의 최대값에 대한 자세한 내용은 항목 섹션 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)을 참조하세요.  
   
 ##### <a name="install-additional-memory"></a>추가 메모리 설치  
- 가능한 경우 궁극적으로 가장 좋은 해결 방법은 추가 실제 메모리를 설치하는 것입니다. 이렇게 할 경우 [에 더 이상 메모리 부족이 발생하지 않을 것이므로 MAX_MEMORY_PERCENT 값도 늘려서 새로 설치된 메모리 중 전부는 아니라도 대부분을 리소스 풀에 사용하도록 설정할 수 있습니다(하위 항목](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 참조).  
+ 가능한 경우 궁극적으로 가장 좋은 해결 방법은 추가 실제 메모리를 설치하는 것입니다. 이렇게 할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 메모리가 더 필요하지 않을 것이므로 MAX_MEMORY_PERCENT 값도 늘려서 새로 설치된 메모리 중 전부는 아니라도 대부분을 리소스 풀에 사용하도록 설정할 수 있습니다(하위 항목 [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 참조).  
   
 > [!IMPORTANT]  
 >  서버가 VM에서 실행 중이고 전용 서버가 아니면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 동일한 값으로 설정합니다.   
@@ -153,7 +153,7 @@ GO
 -  min server memory를 사용하는 경우에는 다른 프로세스용으로 메모리가 충분히 남아 있도록 필요한 양의 메모리만 할당하여 페이징이 수행되지 않도록 하는 것이 좋습니다.
 -  메모리 미리 할당 값은 너무 높게 설정하지 마십시오. 그렇지 않으면 다른 프로세스에 메모리가 필요할 때 충분한 메모리를 사용하지 못하게 되어 메모리 페이징이 발생할 수 있습니다.
 
-메모리 최적화 테이블이 포함된 데이터베이스에서 위와 같은 방식을 따를 경우, 데이터베이스 복구에 사용할 수 있는 메모리가 충분하더라도 데이터베이스를 복원 및 복구하려고 하면 데이터베이스가 "복구 보류 중" 상태가 될 수 있습니다. 그 이유는 In-Memory OLTP는 시작 시 동적 메모리 할당이 데이터베이스에 메모리를 할당하는 것보다 더 많은 데이터를 메모리로 가져오기 때문입니다.
+메모리 최적화 테이블이 포함된 데이터베이스에서 위와 같은 방식을 따를 경우 데이터베이스 복구에 사용할 수 있는 메모리가 충분하더라도 데이터베이스를 복원 및 복구하려고 하면 데이터베이스가 "복구 보류 중" 상태가 될 수 있습니다. 그 이유는 In-Memory OLTP는 시작 시 동적 메모리 할당이 데이터베이스에 메모리를 할당하는 것보다 더 많은 데이터를 메모리로 가져오기 때문입니다.
 
 ### <a name="resolution"></a>해결 방법
 이 문제를 완화하기 위해서는 필요할 때 추가 메모리를 제공하기 위한 동적 메모리에 따라 달라지는 최소 값이 아니라 데이터베이스를 복구 또는 다시 시작하기 위한 충분한 메모리를 데이터베이스에 미리 할당하십시오.

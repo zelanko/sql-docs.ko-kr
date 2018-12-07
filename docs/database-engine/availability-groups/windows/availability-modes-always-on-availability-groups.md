@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0c4ec35fa7f25e7ece372914bc7109d298817ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544037"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51602893"
 -   [관련 내용](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 지원되는 가용성 모드  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 아래 설명되어 있는 비동기-커밋 모드 및 동기-커밋 모드 및 구성 전용 모드라는 세 가지 가용성 모드를 지원합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 다음과 같이 비동기-커밋 모드, 동기-커밋 모드 및 구성 전용 모드라는 세 가지 가용성 모드를 지원합니다.  
   
 -   *비동기-커밋 모드* 는 여러 가용성 복제본이 상당한 거리를 두고 분산되어 있는 경우에 적합한 재해 복구 솔루션입니다. 모든 보조 복제본이 비동기-커밋 모드로 실행될 경우 주 복제본은 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 대신 주 복제본은 로그 레코드를 로컬 로그 파일에 쓴 후 곧바로 트랜잭션 확인을 클라이언트로 보냅니다. 주 복제본은 비동기-커밋 모드로 구성된 보조 복제본에 비해 최소한의 트랜잭션 대기 시간으로 실행됩니다.  현재 주 복제본이 비동기 커밋 가용성 모드로 구성되어 있는 경우 주 복제본은 보조 복제본 각각의 가용성 모드 설정에 관계없이 모든 보조 복제본에 대해 비동기로 트랜잭션을 커밋합니다.  
   

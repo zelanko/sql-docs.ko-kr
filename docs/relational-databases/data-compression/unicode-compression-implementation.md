@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2637e6c503a5272ff7f4e1f6bc224ecb4449bbd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d3a4ec486e08827d6a56564950106e766dabcc8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633071"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525549"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47633071"
 >  **nvarchar(max)** 데이터는 행에 저장되어 있더라도 유니코드 압축이 지원되지 않습니다. 하지만 이 데이터 형식에서 페이지 압축을 활용할 수 있습니다.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>이전 버전의 SQL Server에서 업그레이드  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전으로 업그레이드되는 경우 유니코드 압축과 관련된 변경 내용은 모든 데이터베이스 개체에 적용되지 않습니다. 이때 해당 개체의 압축 여부는 관계가 없습니다. 데이터베이스가 업그레이드되면 개체는 다음과 같이 영향을 받습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되는 경우 유니코드 압축과 관련된 변경 내용은 압축 여부에 관계 없이 모든 데이터베이스 개체에 적용되지 않습니다. 데이터베이스가 업그레이드되면 개체는 다음과 같이 영향을 받습니다.  
   
 -   압축되지 않은 개체의 경우 변경 내용이 적용되지 않고 이전과 같은 방식으로 계속 동작합니다.  
   

@@ -11,12 +11,12 @@ ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 204f45c5892efd9e06657362fcffc43e769f889b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b287bb547b3f151ba26d0f0707f57bf04c8ec163
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695723"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413050"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS 저장소에 연결(Excel용 MDS 추가 기능)
 
@@ -42,7 +42,7 @@ ms.locfileid: "51695723"
 5.  **MDS 서버 주소** 상자에 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: `https://contoso/mds`)을 입력합니다.  
   
     > [!NOTE]  
-    >  컴퓨터 이름을 사용해야 합니다. “localhost”는 사용하지 마십시오.  
+    >  컴퓨터 이름을 사용해야 합니다. "localhost"는 사용하지 마십시오.  
   
 6.  **확인**을 클릭합니다. 이 이름은 **기존 연결** 섹션에 표시됩니다.  
   

@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966b2acdeff68d445935b55ea1bf8ab24f2ad74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502585"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "47684701"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00 00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|사용자 계정 컨트롤|  
-|표준 시간대 오프셋 인식 및 유지|사용자 계정 컨트롤|  
+|사용자 정의 초 소수 부분 자릿수|예|  
+|표준 시간대 오프셋 인식 및 유지|예|  
 |일광 절약 시간제 인식|아니오|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수 초의 전체 자릿수|  
@@ -236,7 +236,7 @@ SELECT
 |데이터 형식|출력|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**날짜**|2007-05-08|  
+|**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**날짜/시간**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

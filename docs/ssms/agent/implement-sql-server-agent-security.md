@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696172"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521675"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server 에이전트 보안 구현
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ ms.locfileid: "51696172"
   
 -   NT 관리 계정은 서비스 계정 또는 프록시 계정으로 지정하지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 서로 자산에 대한 액세스를 갖고 있습니다. 두 서비스가 단일 프로세스 공간을 공유하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 sysadmin입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 서로의 자산에 대한 액세스 권한이 있습니다. 두 서비스가 단일 프로세스 공간을 공유하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 sysadmin입니다.  
   
 -   TSX를 MSF에 등록할 때 MSX sysadmins는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 TSX 인스턴스에 대한 총 제어 권한을 가져옵니다.  
   
--   ACE는 확장 파일이며 그 자체를 호출할 수 없습니다. ACE는 Microsoft.SqlServer.Chainer.Setup.exe라는 비어 있는 Chainer ScenarioEngine.exe에 의해 호출되며 이는 Microsoft.SqlServer.Chainer.Setup.exe로도 알려져 있습니다.  
+-   ACE는 확장 파일이며 그 자체를 호출할 수 없습니다. ACE는 Microsoft.SqlServer.Chainer.Setup.exe라는 Chainer ScenarioEngine.exe에서 호출되거나 다른 호스트 프로세스에서 호출될 수 있습니다.  
   
--   ACE는 해당 API의 DLL이 ACE에서 호출되기 때문에 SSDP에서 소유하는 다음 구성 DLL에 따라 달라집니다.  
+-   ACE는 해당 API의 DLL이 ACE에서 호출되기 때문에 SSDP에서 소유된 다음 구성 DLL에 따라 달라집니다.  
   
-    -   **SCO** -Microsoft.SqlServer.Configuration.Sco.dll, 가상 계정에 대한 새 SCO 자격 증명을 포함합니다.  
+    -   **SCO** -가상 계정에 대한 새 SCO 자격 증명이 포함된 Microsoft.SqlServer.Configuration.Sco.dll  
   
-    -   **클러스터** -Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **클러스터** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
     -   **확장** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   

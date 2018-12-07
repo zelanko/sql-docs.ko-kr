@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970534"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521219"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ DATEPART ( datepart , date )
 |**day**|**dd**, **d**|  
 |**week**|**wk**, **ww**|  
 |**weekday**|**dw**|  
-|**hour**|**m**|  
+|**hour**|**hh**|  
 |**minute**|**mi, n**|  
 |**second**|**ss**, **s**|  
 |**millisecond**|**ms**|  
@@ -162,12 +162,12 @@ ISO 8601에는 주 번호 매기기 시스템인 ISO 주-일 시스템이 포함
   
 |시작 요일|연도의 첫째 주에 포함되는 항목|주가 두 번 할당됨|사용|  
 |---|---|---|---|
-|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤|United States|  
-|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤|대부분의 유럽, 영국|  
+|일요일|1월 1일<br /><br /> 첫 번째 토요일<br /><br /> 한 해의 1-7일|예|United States|  
+|월요일|1월 1일<br /><br /> 첫 번째 일요일<br /><br /> 한 해의 1-7일|예|대부분의 유럽, 영국|  
 |월요일|1월 4일,<br /><br /> 첫 번째 목요일<br /><br /> 한 해의 4-7일|아니오|ISO 8601, 노르웨이 및 스웨덴|  
 |월요일|1월 7일,<br /><br /> 첫 번째 월요일<br /><br /> 한 해의 7일|아니오||  
-|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤||  
-|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|사용자 계정 컨트롤||  
+|수요일|1월 1일<br /><br /> 첫 번째 화요일<br /><br /> 한 해의 1-7일|예||  
+|토요일|1월 1일<br /><br /> 첫 번째 금요일<br /><br /> 한 해의 1-7일|예||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART`는 **TZoffset**(**tz**) 값을 분 수(부호 있음)로 반환합니다. 이 명령문은 310분의 표준 시간대 오프셋을 반환합니다.

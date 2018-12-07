@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699463"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518378"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51699463"
 확장하면 **열**, **고유**및 **형식**속성이 표시됩니다.  
   
 **열**  
-선택된 정렬 순서대로 키나 인덱스의 열을 나열합니다. 이 옵션을 통해 정렬 순서를 정의하기 위한 대화 상자를 열 수 있습니다. 대화 상자를 표시하려면 **열** 을 클릭한 다음 속성 필드 오른쪽에 나타나는 줄임표 단추(...)를 클릭합니다.  
+선택된 정렬 순서대로 키나 인덱스의 열을 나열합니다. 이 옵션을 통해 정렬 순서를 정의하기 위한 대화 상자를 열 수 있습니다. 대화 상자를 표시하려면 **열** 을 클릭한 다음, 속성 필드 오른쪽에 나타나는 줄임표 단추(...)를 클릭합니다.  
   
 **고유**  
 현재 인덱스나 키에 입력한 데이터가 중복되지 않아야 하는지 여부를 나타냅니다. XML 인덱스에는 사용할 수 없습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "51699463"
 키나 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
-키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음, 속성 필드의 오른쪽에 나타나는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
 **테이블 디자이너 범주**  
 확장하면 **클러스터형으로 만들기**에 대한 정보가 표시됩니다.  

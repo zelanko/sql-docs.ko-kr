@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce67865100e9540a191019e9f3d1f9914817e45e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 043cf48d208378ab3fee65c52b9f7fb9c4e98f67
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509119"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 메서드 - RemoveURL
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  

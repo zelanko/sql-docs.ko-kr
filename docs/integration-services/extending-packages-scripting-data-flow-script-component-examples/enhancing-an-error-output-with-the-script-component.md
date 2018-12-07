@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2c710d2177f47c1c866a62b04ae320dfe0f7d46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527949"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명과 열 이름이 없으므로 사용이 제한될 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "47730841"
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
-1.  새 스크립트 구성 요소를 만들기 전에 데이터 흐름의 업스트림 구성 요소에서 오류 또는 잘림이 발생할 경우 행을 오류 출력으로 리디렉션하도록 구성합니다. 테스트를 위해 오류가 발생하도록 구성 요소를 구성할 수 있습니다. 예를 들어 조회를 수행할 수 없는 두 테이블 간에 조회 변환을 구성할 수 있습니다.  
+1.  새 스크립트 구성 요소를 만들기 전에 데이터 흐름의 업스트림 구성 요소에서 오류 또는 잘림이 발생할 경우 행을 오류 출력으로 리디렉션하도록 구성합니다. 테스트를 위해 오류가 발생하게 하는 방식으로 즉, 조회가 실패한 두 테이블 간에 조회 변환을 구성하여 구성 요소를 구성하려 할 수 있습니다.  
   
 2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.  
   

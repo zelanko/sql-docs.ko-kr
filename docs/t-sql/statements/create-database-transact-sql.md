@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532554"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -898,7 +898,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
@@ -1075,10 +1075,7 @@ AS COPY OF [source_server_name.]source_database_name
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 데이터베이스에는 데이터베이스가 만들어질 때 설정된 몇 가지 기본 설정이 있습니다. 이러한 기본 설정에 대한 자세한 내용은 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)의 값 목록을 참조하세요.  
   
 MAXSIZE에는 데이터베이스의 크기를 제한하는 기능이 있습니다. 데이터베이스 크기가 MAXSIZE에 도달하면 40544 오류 코드가 나타납니다. 이 경우, 데이터를 삽입 또는 업데이트하거나 새 개체(예: 테이블, 저장된 프로시저, 뷰 및 함수)를 만들 수 없습니다. 그러나 데이터 읽기 및 삭제, 테이블 자르기, 테이블 및 인덱스 삭제, 인덱스 다시 작성은 가능합니다. 그런 다음 MAXSIZE를 현재 데이터베이스 크기보다 큰 값으로 업데이트하거나 일부 데이터를 삭제하여 저장소 공간을 비울 수 있습니다. 새 데이터 삽입까지 최대 15분을 지연시킬 수 있습니다.  
-  
-> [!IMPORTANT]  
->  `CREATE DATABASE` 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 유일한 문이어야 합니다. 
-  
+   
 나중에 크기, 버전 또는 서비스 목표 값을 변경하려면, [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls)를 사용하세요.  
 
 CATALOG_COLLATION 인수는 데이터베이스를 생성하는 동안에만 사용할 수 있습니다. 
@@ -1186,7 +1183,7 @@ CREATE DATABASE db_copy
 다음 예에서는 카탈로그 데이터 정렬을 데이터베이스 데이터 생성 중에 DATABASE_DEFAULT로 설정하며, 카탈로그 데이터 정렬을 데이터베이스 데이터 정렬과 동일하게 설정합니다.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1318,13 +1315,13 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 데이터베이스의 서비스 계층을 지정합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에 대한 'datawarehouse'를 사용합니다.  
   
 *MAXSIZE*  
-기본값은 245,760GB(240TB).  
+기본값은 245,760GB(240TB)입니다.  
 
-**적용 대상:** 탄력성 성능 계층에 최적화됨
+**적용 대상:** 컴퓨팅 Gen1에 최적화됨
 
 데이터베이스의 최대 허용 크기입니다. 데이터베이스는 MAXSIZE 이상으로 커질 수 없습니다. 
 
-**적용 대상:** 컴퓨팅 성능 계층에 최적화됨
+**적용 대상:** 컴퓨팅 Gen2에 최적화됨
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다.  columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
   

@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511841"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- 이는 다음 출력을 생성합니다. 12.566370… 4∏와 동일합니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
+ 그러면 다음과 같은 결과가 발생합니다. 12.566370... 이는 4∏에 해당합니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>6. CompoundCurve를 사용하여 반원 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 반원을 저장합니다.  
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  다음과 같은 출력이 생성됩니다.  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  Circle Two의 둘레는 대략 4∏로 이 값은 둘레의 실제 값입니다. 하지만 Circle One의 둘레는 매우 부정확합니다. Circle One의 `CompoundCurve` 인스턴스는 하나의 원호 세그먼트(ABC)와 두 개의 선분(CD, DA)을 저장합니다. 원을 정의하려면 `CompoundCurve` 인스턴스는 두 개의 원호 세그먼트(ABC, CDA)를 저장해야 합니다. 1 `LineString` 인스턴스는 Circle One의 `CompoundCurve` 인스턴스에 두 번째 점 집합(4 2, 2 4, 0 2)을 정의합니다. `CircularString` 내부에서 `CompoundCurve`인스턴스를 명시적으로 선언해야 합니다.  

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b27f66940d3b1a43681cba5ad26a95596d0a969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744191"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418174"
 ---
 # <a name="rename-views"></a>뷰 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47744191"
   
 -   **Follow Up:**  [After renaming a view](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  뷰의 모든 종속성 목록을 가져옵니다. 뷰를 참조하는 모든 개체, 스크립트 또는 응용 프로그램은 새 뷰 이름을 반영하도록 수정되어야 합니다. 자세한 내용은 [Get Information About a View](../../relational-databases/views/get-information-about-a-view.md)를 참조하세요. 뷰 이름을 바꾸는 것보다 뷰를 삭제하고 새로운 이름으로 다시 만드는 것이 좋습니다. 뷰를 다시 만들면 뷰에 참조된 개체에 대한 종속성 정보가 업데이트됩니다.  
@@ -73,6 +73,6 @@ ms.locfileid: "47744191"
  자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) 및 [DROP VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)를 참조하세요.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 뷰 이름을 바꾼 후  
- 뷰의 이전 이름을 참조하는 모든 개체, 스크립트 및 응용 프로그램이 이제 새 이름을 사용하는지 확인합니다.  
+ 뷰의 이전 이름을 참조하는 모든 개체, 스크립트 및 애플리케이션이 이제 새 이름을 사용하는지 확인합니다.  
   
   

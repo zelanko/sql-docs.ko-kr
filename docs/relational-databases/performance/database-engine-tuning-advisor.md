@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085259"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302696"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085259"
 -   저장소 공간 관리  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>데이터베이스 엔진 튜닝 관리자의 이점  
- 데이터베이스의 구조와 데이터베이스에 대해 실행되는 쿼리를 정확하게 이해하지 못하면 쿼리 성능을 최적화하기 어려울 수 있습니다. 데이터베이스 엔진 튜닝 관리자는 현재 쿼리 계획 캐시를 분석하거나 작성하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 작업량을 분석한 후 적절한 물리적 디자인을 권장해 주므로 이 태스크를 보다 쉽게 수행할 수 있습니다. 고급 데이터베이스 관리자를 위해 DTA는 다른 물리적 디자인 대안에 대한 탐구 가정(what-if) 분석을 수행할 수 있는 강력한 메커니즘을 제공합니다. DTA는 다음 정보를 제공할 수 있습니다.  
+ 데이터베이스의 구조와 데이터베이스에 대해 실행되는 쿼리를 정확하게 이해하지 못하면 쿼리 성능을 최적화하기 어려울 수 있습니다. **DTA(데이터베이스 엔진 튜닝 관리자)** 는 현재 쿼리 계획 캐시를 분석하거나 작성하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 작업량을 분석한 후 적절한 물리적 디자인을 권장해 주므로 이 태스크를 보다 쉽게 수행할 수 있습니다. 고급 데이터베이스 관리자를 위해 DTA는 다른 물리적 디자인 대안에 대한 탐구 가정(what-if) 분석을 수행할 수 있는 강력한 메커니즘을 제공합니다. DTA는 다음 정보를 제공할 수 있습니다.  
   
 -   쿼리 최적화 프로그램을 사용하여 작업의 쿼리를 분석하여 데이터베이스에 대한 최상의 rowstore 및 [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) 인덱스 조합을 권장합니다.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085259"
 
 -   데이터베이스 엔진 튜닝 관리자에서 평가할 수 있도록 가상 구성의 형태로 디자인 선택 항목을 사용자가 제공하는 대안을 살펴 봅니다.
 
--  SQL Server 쿼리 저장소, 계획 캐시, SQL Server Profiler 추적 파일 또는 테이블, SQL 파일을 포함하여 다양한 소스에서 워크로드를 튜닝합니다.
+-   SQL Server 쿼리 저장소, 계획 캐시, SQL Server Profiler 추적 파일 또는 테이블, SQL 파일을 포함하여 다양한 소스에서 워크로드를 튜닝합니다.
 
   
- 데이터베이스 엔진 튜닝 관리자는 다음과 같은 쿼리 작업 유형을 처리하도록 설계되었습니다.  
+데이터베이스 엔진 튜닝 관리자는 다음과 같은 쿼리 작업 유형을 처리하도록 설계되었습니다.  
   
 -   OLTP(온라인 트랜잭션 처리) 쿼리만 수행하는 작업  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085259"
 -   업데이트가 많은 작업(데이터 수정이 쿼리보다 많음)  
   
 ## <a name="dta-components-and-concepts"></a>DTA 구성 요소 및 개념  
- 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스  
+ **데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스**  
  작업을 지정하고 다양한 튜닝 옵션을 선택할 수 있는 사용하기 쉬운 인터페이스입니다.  
   
  **dta** 유틸리티  
  데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
- 작업  
+ **작업**  
  튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [쿼리 저장소를 워크로드로 지정](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)할 수 있습니다. 
   
- XML 입력 파일  
+ **XML 입력 파일**  
  데이터베이스 엔진 튜닝 관리자가 작업 부하를 조정하는 데 사용할 수 있는 XML 형식 파일입니다. XML 입력 파일은 GUI 및 **dta** 유틸리티에서 사용할 수 없는 고급 튜닝 옵션을 지원합니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  데이터베이스 엔진 튜닝 관리자에는 다음의 제한 사항이 있습니다.  
   
--   PRIMARY KEY 또는 UNIQUE 제약 조건을 강제로 실행하는 고유한 인덱스를 추가하거나 삭제할 수 없습니다.  
+-   `PRIMARY KEY` 또는 `UNIQUE` 제약 조건을 강제로 실행하는 고유한 인덱스를 추가하거나 삭제할 수 없습니다.  
   
 -   단일 사용자 모드로 설정된 데이터베이스를 분석할 수 없습니다.  
   

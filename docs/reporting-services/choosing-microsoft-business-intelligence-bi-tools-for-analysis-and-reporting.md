@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031662"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399176"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
 적절한 비즈니스 인텔리전스 도구를 선택하는 것은 엄청날 수 있습니다. 다른 Microsoft 제품에 대해 알아보고 필요한 사항에 가장 맞는 하나를 찾아보세요.

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788481"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586286"
 ---
 # <a name="update-statistics"></a>통계 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47788481"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -60,17 +60,17 @@ ms.locfileid: "47788481"
   
 5.  업데이트하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 –**_statistics\_name_ 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택한 다음, **확인**을 클릭합니다.  
+6.  **통계 속성 –**_통계\_이름_ 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택한 다음, **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-update-a-specific-statistics-object"></a>특정 통계 개체를 업데이트하려면  
+### <a name="to-update-a-specific-statistics-object"></a>특정 통계 개체를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -80,13 +80,13 @@ ms.locfileid: "47788481"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>테이블의 모든 통계를 업데이트하려면  
+### <a name="to-update-all-statistics-in-a-table"></a>테이블의 모든 통계를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -96,15 +96,15 @@ ms.locfileid: "47788481"
     GO  
     ```  
   
- 자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요.  
+자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요.  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>데이터베이스의 모든 통계를 업데이트하려면  
+### <a name="to-update-all-statistics-in-a-database"></a>데이터베이스의 모든 통계를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -112,7 +112,9 @@ ms.locfileid: "47788481"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- 자세한 내용은 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요.  
-  
-  
+
+자세한 내용은 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요.   
+
+### <a name="automatic-index-and-statistics-management"></a>자동 인덱스 및 통계 관리
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
+

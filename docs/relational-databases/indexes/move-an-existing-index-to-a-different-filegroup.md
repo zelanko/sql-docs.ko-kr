@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691562"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515778"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47691562"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47691562"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서 **Save***table_name*을 선택합니다.  
+9. **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47691562"
   
 8.  **확인**을 클릭합니다.  
   
- **인덱스 속성 –**  **저장소** *저장소* 페이지에서 다음 정보를 사용할 수 있습니다.  
+ **인덱스 속성 –** *index_name* 대화 상자의 **스토리지** 페이지에서 다음 정보를 사용할 수 있습니다.  
   
  **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  

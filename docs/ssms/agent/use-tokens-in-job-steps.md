@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1e3e1f9dffef09e3799be462e287705eef3b2e30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532604"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "51703581"
 |**(MSSA)**|마스터 SQLServerAgent 서비스 이름입니다.|  
 |**(OSCMD)**|**CmdExec** 작업 단계를 실행하는 데 사용되는 프로그램의 접두사입니다.|  
 |**(SQLDIR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 디렉터리입니다. 기본적으로 C:\Program Files\Microsoft SQL Server\MSSQL에 설치됩니다.|  
-|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다. 예를 들면 $(ESCAPE_SQUOTE(SQLLOGDIR))입니다.|  
+|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다(예: $(ESCAPE_SQUOTE(SQLLOGDIR))).|  
 |**(STEPCT)**|해당 단계가 실행된 횟수(다시 시도 제외)입니다. 단계 명령이 다중 단계 루프를 강제로 종료하기 위해 사용할 수 있습니다.|  
 |**(STEPID)**|단계 ID입니다.|  
 |**(SRVR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 명명된 인스턴스이면 이 이름에는 해당 인스턴스 이름이 포함됩니다.|  

@@ -10,12 +10,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629531"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413200"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 가용성 그룹 확장 이벤트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

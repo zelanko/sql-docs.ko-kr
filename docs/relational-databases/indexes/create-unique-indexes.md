@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515080"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47680491"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Benefits"></a> 고유 인덱스의 이점  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47680491"
   
 7.  주 표의 **(일반)** 에서 **유형** 을 선택한 다음 목록에서 **인덱스** 를 선택합니다.  
   
-8.  **열**을 선택한 다음 줄임표 **(…)** 를 클릭합니다.  
+8.  **열**을 선택한 다음, 줄임표 **(...)** 를 클릭합니다.  
   
 9. **인덱스 열** 대화 상자의 **열 이름**에서 인덱스를 작성할 열을 선택합니다. 최대 16개의 열을 선택할 수 있습니다. 최상의 성능을 얻으려면 인덱스별로 열을 한두 개만 선택하는 것이 좋습니다. 선택한 각 열에 대해 해당 열의 인덱스 값을 오름차순으로 정렬할지 내림차순으로 정렬할지 지정합니다.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680491"
   
 3.  고유 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 후 **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
 6.  **고유** 확인란을 선택합니다.  
   
-7.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
+7.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
 8.  _table\_name_**에서 열 선택** 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   

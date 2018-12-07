@@ -15,16 +15,16 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680311"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525718"
 ---
 # <a name="data-tier-applications"></a>의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  DAC(데이터 계층 응용 프로그램)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
+  DAC(데이터 계층 애플리케이션)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
   
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 관련 아티팩트입니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47680311"
 ## <a name="dac-concepts"></a>DAC 개념  
  DAC를 사용하면 응용 프로그램을 지원하는 데이터 계층 요소를 간편하게 개발, 배포 및 관리할 수 있습니다.  
   
--   DAC(데이터 계층 응용 프로그램)는 테이블, 뷰 및 인스턴스 개체와 같은 사용자의 데이터베이스와 연결된 모든 SQL Server 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 DBA가 SQL Server 개체를 DAC 패키지(또는 .dacpac 파일)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 SQL Server 데이터베이스의 자체 포함 배포 단위입니다.  
+-   DAC(데이터 계층 애플리케이션)는 테이블, 뷰 및 인스턴스 개체와 같은 사용자의 데이터베이스와 연결된 모든 SQL Server 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 DBA가 SQL Server 개체를 DAC 패키지(또는 .dacpac 파일)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 SQL Server 데이터베이스의 자체 포함 배포 단위입니다.  
   
 -   SQL Server 데이터베이스가 DAC로 처리되도록 하려면 사용자 작업을 통해 명시적으로 또는 DAC 작업 중 하나를 통해 암시적으로 등록되어 있어야 합니다. 데이터베이스가 등록되면 DAC 버전 및 기타 속성이 데이터베이스의 메타데이터로 기록됩니다. 반대로, 데이터베이스의 등록을 취소하면 DAC 속성을 제거할 수 있습니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47680311"
   
 -   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 SQL Azure용 관리 포털과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 응용 프로그램으로 등록됩니다.  
   
--   **등록** - 사용자가 데이터베이스를 데이터 계층 응용 프로그램으로 등록할 수 있습니다.  
+-   **등록** - 사용자가 데이터베이스를 데이터 계층 애플리케이션으로 등록할 수 있습니다.  
   
 -   **등록 취소** - 이전에 DAC로 등록된 데이터베이스를 등록 취소할 수 있습니다.  
   
@@ -99,15 +99,15 @@ ms.locfileid: "47680311"
 ## <a name="bacpac"></a>BACPAC  
  BACPAC는 데이터베이스의 스키마와 데이터를 캡슐화 하는 확장명이 .bacpac인 Windows 파일입니다. BACPAC는 서버 간에 데이터베이스를 이동하거나 [로컬 서버에서 클라우드로 데이터베이스를 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)하고 기존 데이터베이스를 개방 형식으로 보관하는 데 주로 사용됩니다.  
   
- DACPAC와 비슷하게 BACPAC 파일 형식도 개방형 형식이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. BACPAC의 데이터는 JSON 형식으로 저장됩니다.  
+ DACPAC와 비슷하게 BACPAC 파일 형식도 개방형이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. BACPAC의 데이터는 JSON 형식으로 저장됩니다.  
   
- DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC는 엄격하게 정의된 스키마를 개발, 테스트, 프로덕션 환경에 순차적으로 배포하는 데 주로 사용됩니다. 또한 그 반대 순서, 즉 프로덕션 환경의 스키마를 캡처하여 테스트 및 개발 환경에 다시 적용할 때도 사용됩니다.  
+ DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC는 엄격하게 정의된 스키마를 개발, 테스트, 프로덕션 환경에 순차적으로 배포하는 데 주로 사용됩니다. 또한 그 반대로, 프로덕션 환경의 스키마를 캡처하여 테스트 및 개발 환경에 다시 적용할 때도 사용됩니다.  
   
  반면에 BACPAC는 스키마와 데이터를 캡처하는 데 중점적으로 사용되며 다음의 두 가지 주요 작업을 지원합니다.  
   
--   **내보내기**- 사용자가 데이터베이스의 스키마 및 데이터를 BACPAC로 내보낼 수 있습니다.  
+-   **내보내기** - 사용자가 데이터베이스의 스키마 및 데이터를 BACPAC로 내보낼 수 있습니다.  
   
--   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버에 있는 새 데이터베이스로 가져올 수 있습니다.  
+-   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
  SQL Server Management Studio, Azure 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서는 이 두 기능이 모두 지원됩니다.  
   

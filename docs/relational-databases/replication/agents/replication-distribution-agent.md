@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5cf1431ab35afc336fb18ac5546d00336f97c1bc
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 3e4a4805ee3cb706a20659919e28c09c84787934
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518357"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ distrib [-?]
  원본에 사용할 수 있는 복제된 트랜잭션이 없는 경우 에이전트에서는 배포자에 트랜잭션 없음 메시지를 보고합니다. 이 옵션은 다른 트랜잭션 없음 메시지를 보고하기 전에 에이전트에서 기다리는 시간을 지정합니다. 에이전트에서는 이전에 복제된 트랜잭션을 처리한 후 원본에 사용할 수 있는 트랜잭션이 없는지 감지할 때 항상 트랜잭션 없음 메시지를 보고합니다. 기본값은 60초입니다.  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming** 을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
+ BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming**을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
   
  **-Output** *output_path_and_file_name*  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
@@ -276,7 +276,7 @@ distrib [-?]
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. See the preceding **–MessageInterval**parameter.  
+ 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. 앞에 나온 **–MessageInterval** 매개 변수를 참조하세요.  
   
  **-UseDTS**  
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  

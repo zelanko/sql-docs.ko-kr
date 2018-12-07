@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b01a26ac0db5d41f23343dda7a106c52524dea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672692"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531511"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ GO
   
 #### <a name="memory-for-the-tables-rows"></a>테이블의 행에 대한 메모리  
   
-위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 5백만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
+위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 500만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
   
 ###  <a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
 

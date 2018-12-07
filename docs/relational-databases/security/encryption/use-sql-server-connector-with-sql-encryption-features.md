@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653801"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401086"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "47653801"
     
     TDE로 암호화된 데이터베이스 백업을 복원하려면 먼저 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 암호화에 사용된 비대칭 Key Vault 키의 사본이 있어야 합니다. 이 작업을 수행하는 방법은 다음과 같습니다.  
     
-    - TDE에 사용된 원래 비대칭 키가 더 이상 Key Vault에 없는 경우 Key Vault 키 백업을 복원하거나 로컬 HSM에서 키를 다시 가져옵니다. **중요:** 키 지문이 데이터베이스 백업에 기록된 지문과 일치하도록 하려면 키의 원래 이름이 **동일한 Key Vault 이름**과 동일해야 합니다.
+    - TDE에 사용된 원래 비대칭 키가 더 이상 Key Vault에 없는 경우 Key Vault 키 백업을 복원하거나 로컬 HSM에서 키를 다시 가져옵니다. **중요:** 키 지문이 데이터베이스 백업에 기록된 지문과 일치하도록 하려면 키의 원래 이름이 **동일한 Key Vault 키 이름**과 동일해야 합니다.
     
     - 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 1단계와 2단계를 적용합니다.
     

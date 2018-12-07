@@ -18,12 +18,12 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f4d5e1a419d9a194532902e0df259eccc35590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519156"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  상수,  변수 또는 식입니다. 식은 EXECUTE  문을 포함할 수 없습니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- 테이블 값 생성자는 두 가지 방법 중 하나로 사용할 수 있습니다. 즉 INSERT … VALUES 문의 VALUES 목록에서 직접 사용하거나, 파생 테이블이 허용되는 모든 위치에서 파생 테이블로 사용합니다. 행 수가 최대값을 초과하면 오류 10738이 반환됩니다. 제한에서 허용하는 것보다 많은 행을 삽입하려면 다음 방법 중 하나를 사용합니다.  
+ 테이블 값 생성자는 다음 두 가지 방법 중 하나로 사용할 수 있습니다. 즉, INSERT ... VALUES 문의 VALUES 목록에서 직접 사용하거나, 파생 테이블이 허용되는 모든 위치에서 파생 테이블로 사용합니다. 행 수가 최대값을 초과하면 오류 10738이 반환됩니다. 제한에서 허용하는 것보다 많은 행을 삽입하려면 다음 방법 중 하나를 사용합니다.  
   
 -   다중 INSERT  문 만들기  
   

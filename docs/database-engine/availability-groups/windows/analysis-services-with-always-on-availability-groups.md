@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395456"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
 
@@ -38,7 +38,7 @@ ms.locfileid: "47635021"
   
  [Always On 가용성 데이터베이스를 사용할 때의 쓰기 저장](#bkmk_writeback)  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
  모든 복제본에 대한 SQL Server 로그인이 있어야 합니다. 가용성 그룹, 수신기 및 데이터베이스를 구성하려면 **sysadmin** 이어야 하지만, 사용자인 경우 **db_datareader** 권한만 있으면 Analysis Services 클라이언트에서 데이터베이스에 액세스할 수 있습니다.  
   
  TDS(Tabular Data Stream) 프로토콜 버전 7.4 이상을 지원하는 데이터 공급자(예: SQL Server Native Client 11.0 또는 .NET Framework 4.02의 SQL Server용 공급자)를 사용하십시오.  
@@ -120,11 +120,11 @@ ms.locfileid: "47635021"
   
 3.  자리 표시자를 사용자 배포에 맞는 값으로 바꿔 스크립트를 수정합니다.  
   
-    -   ‘Computer01’은 주 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
+    -   'Computer01'은 주 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
   
-    -   ‘Computer02’는 보조 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
+    -   'Computer02'는 보조 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
   
-    -   ‘contoso.com’은 도메인 이름으로 바꾸거나, 모든 컴퓨터가 동일한 도메인인 경우 생략합니다. 수신기가 기본 포트를 사용하는 경우 포트 번호는 그대로 유지합니다. 실제로 수신기에서 사용하는 포트의 목록은 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 속성 페이지에 나와 있습니다.  
+    -   'contoso.com'은 도메인 이름으로 바꾸거나, 모든 컴퓨터가 동일한 도메인인 경우 생략합니다. 수신기가 기본 포트를 사용하는 경우 포트 번호는 그대로 유지합니다. 실제로 수신기에서 사용하는 포트의 목록은 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 속성 페이지에 나와 있습니다.  
   
 4.  스크립트를 실행합니다.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635021"
 9. Analysis Services 솔루션에서 처리 또는 쿼리 명령을 반복한 다음 SQL Server Profiler에서 추적을 나란히 표시하여 확인합니다. 새 보조 복제본이 된 다른 인스턴스에서 처리가 진행됨을 알 수 있습니다.  
   
 ##  <a name="bkmk_whathappens"></a> 장애 조치 발생 후의 상황  
- 장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)를 참조하세요.  
+ 장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. “OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01.”  
+ 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
   
  이 오류는 잠시 기다렸다가 다시 시도하면 해결됩니다. 가용성 그룹이 읽기 가능한 보조 복제본에 대해 올바로 구성된 경우 처리를 재시도하면 새 보조 복제본에서 처리가 재개됩니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47635021"
 ##  <a name="bkmk_writeback"></a> Always On 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 응용 프로그램에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
- 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 “외부 데이터 원본에서 데이터를 검색할 수 없습니다.” 오류가 발생합니다.  
+ 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 "외부 데이터 원본에서 데이터를 검색할 수 없습니다." 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "47635021"
   
 ## <a name="see-also"></a>참고 항목  
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On 가용성 그룹을 통한 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [차원 쓰기 저장(writeback) 설정](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

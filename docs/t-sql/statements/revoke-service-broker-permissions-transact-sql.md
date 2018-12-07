@@ -22,12 +22,12 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f1d166d403edc7d63ae3434cb4c98d1b40e4133b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e740cee45eb791f16548f6d98d714a943b9178a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538822"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +63,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  사용 권한을 취소할 계약을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  사용 권한을 취소할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  사용 권한을 취소할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  사용 권한을 취소할 경로를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- SERVICE **::***message_type_name*  
+ SERVICE **::**_message_type_name_  
  사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  

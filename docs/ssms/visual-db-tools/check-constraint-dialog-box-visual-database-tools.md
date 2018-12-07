@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504007"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51697627"
 선택한 CHECK 제약 조건의 이름을 표시합니다. 이 제약 조건의 이름을 변경하려면 속성 필드에 직접 텍스트를 입력합니다.  
   
 **설명**  
-CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트를 입력하여 설명을 편집할 수 있고, 속성 필드의 오른쪽에 있는 줄임표(**...**)를 클릭한 다음 **설명 속성** 대화 상자에서 설명을 편집할 수도 있습니다.  
+CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트를 입력하여 설명을 편집할 수 있고, 속성 필드의 오른쪽에 있는 줄임표(**...**)를 클릭한 다음, **설명 속성** 대화 상자에서 설명을 편집할 수도 있습니다.  
   
 **테이블 디자이너 범주**  
 확장하면 **만들거나 다시 활성화할 때 기존 데이터 검사**, **INSERT 및 UPDATE에 적용**, **복제에 적용**에 대한 속성이 표시됩니다.  

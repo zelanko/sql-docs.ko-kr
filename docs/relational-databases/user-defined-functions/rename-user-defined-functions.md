@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a0bbb55ddb23cfcbebd081cfc25e9a4ee5d6ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c75caf73aed97e2f7d0774de3da0dacc7a8708cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685131"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417844"
 ---
 # <a name="rename-user-defined-functions"></a>사용자 정의 함수 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47685131"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47685131"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **사용자 정의 함수의 이름을 바꾸려면**  
   
- 이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다. Transact-SQL을 사용하여 사용자 정의 함수의 이름을 바꾸려면 먼저 기존 함수를 삭제하고 새로운 이름을 사용하여 다시 만들어야 합니다. 함수의 이전 이름을 사용하는 모든 코드 및 응용 프로그램이 이제 새 이름을 사용하는지 확인합니다.  
+ 이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다. Transact-SQL을 사용하여 사용자 정의 함수의 이름을 바꾸려면 먼저 기존 함수를 삭제하고 새로운 이름을 사용하여 다시 만들어야 합니다. 함수의 이전 이름을 사용하는 모든 코드 및 애플리케이션이 이제 새 이름을 사용하는지 확인합니다.  
   
  자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 및 [DROP FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)을 참조하세요.  
   

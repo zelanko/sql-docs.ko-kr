@@ -15,12 +15,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e44ac5f9f5c1eee8af10dd48fa8577b3056cd70
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8df0a074741f135d9c445a65c31b796f02bb5782
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523512"
 ---
 # <a name="add-copy-of-existing-package"></a>기존 패키지의 복사본 추가
   **기존 패키지의 복사본 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 파일 시스템 또는 SSIS 패키지 저장소에 저장된 패키지의 복사본을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "51641140"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로를 입력하거나 찾아보기 단추 **(…)** 를 클릭한 다음 복사할 패키지를 찾습니다.  
+ 패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭한 다음, 복사할 패키지를 찾습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [패키지 복사본 저장](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539717"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47717941"
 > [!NOTE]  
 > 인덱스에 쿼리가 참조하는 모든 열이 들어 있으면 일반적으로 이 인덱스는 *쿼리를 포함*한다고 합니다.  
    
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="DesignRecs"></a> 디자인 권장 구성  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47717941"
   
 -   **image**, **ntext**및 **text** 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
   
--   테이블의 인덱스를 먼저 삭제하지 않으면 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
+-   해당 테이블의 인덱스를 먼저 삭제하지 않는 경우 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
   
 -   다음 경우를 제외하고 키가 아닌 열은 변경할 수 없습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47717941"
   
 3.  더하기 기호를 클릭하여 키가 아닌 열이 있는 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "47717941"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```sql  
     USE AdventureWorks2012;  

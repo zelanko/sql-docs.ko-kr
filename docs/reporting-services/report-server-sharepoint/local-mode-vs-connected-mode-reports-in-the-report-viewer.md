@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1083c87475c27e33dccd069149e240098d187473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418804"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>보고서 뷰어의 로컬 모드와 연결된 모드
 
@@ -79,7 +79,7 @@ ms.locfileid: "51812934"
   
 ## <a name="connected-mode"></a>연결된 모드
 
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 연결된 모드에서 ADS 확장 프로그램 사용에 대한 최신 정보는 [데이터 확장 프로그램 'ADS'의 오류를 표시하는 SharePoint 사이트에서 서비스 보고서에 액세스](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(영문)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 연결된 모드에서 ADS 확장 프로그램 사용에 대한 최신 정보는 [데이터 확장 프로그램 'ADS'의 오류를 표시하는 SharePoint 사이트에서 서비스 보고서에 액세스](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:
 

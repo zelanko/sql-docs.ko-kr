@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530782"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>방법: 프로젝트의 스냅숏 만들기
 **데이터 계층 응용 프로그램** 파일은 데이터베이스 스키마를 만들 때의 읽기 전용 표현을 제공합니다. 이 파일은 기본적으로 데이터베이스 스키마로 처리되며, 이 스키마의 스키마 개체를 다시 프로젝트로 가져올 수 있습니다. 또한 스냅숏을 데이터베이스 또는 프로젝트의 스키마와 비교하고, 스냅숏에 정의된 스키마를 반영하도록 데이터베이스나 프로젝트를 업데이트할 수도 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47840231"
   
 ### <a name="to-create-a-snapshot"></a>스냅숏을 만들려면  
   
-1.  **솔루션 탐색기**에서 **TradeDev** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 응용 프로그램(\*.dacpac)…** 을 선택합니다.  
+1.  **솔루션 탐색기**에서 **TradeDev** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션(\*.dacpac)…** 을 선택합니다.  
   
 2.  SSDT에서는 먼저 프로젝트를 빌드하려고 시도합니다. 빌드 오류가 없으면 **스냅숏** 폴더가 **솔루션 탐색기**에 만들어집니다. SSDT를 통해 이 폴더 안에 “<Project Name>_YYYYMMDD_HH-MM-SS.dacpac” 형식의 이름을 사용하는 .dacpac 파일이 만들어집니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47840231"
   
 ### <a name="to-import-a-snapshot"></a>스냅숏을 가져오려면  
   
-1.  **솔루션 탐색기**에서 **TradeDev** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **가져오기**, **데이터 계층 응용 프로그램(\*.dacpac)…** 을 차례로 선택합니다.  
+1.  **솔루션 탐색기**에서 **TradeDev** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **가져오기** 및 **데이터 계층 애플리케이션(\*.dacpac)…** 을 차례로 선택합니다.  
   
 2.  **데이터 계층 응용 프로그램 가져오기** 대화 상자에서 **찾아보기**를 클릭하여 가져오기의 원본으로 사용할 **TradeDev1.dacpac**를 선택합니다.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525199"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51701995"
 
 다음 예제 시나리오는 제품을 개선하는 데 도움이 되는 기능 사용 정보를 포함합니다.
 
-SQL Server 2017은 빠른 분석 시나리오를 위해 ColumnStore 인덱스를 지원합니다. ColumnStore 인덱스는 새로 삽입한 데이터에 대한 "B-트리" 인덱스 구조를 특수한 열 기반 압축 구조와 결합하여 데이터를 압축하고 쿼리 실행 속도를 단축합니다. 이 제품에는 백그라운드에서 B-트리 구조의 데이터를 압축된 구조로 마이그레이션하기 위한 추론이 포함되어 있으므로 향후 쿼리 결과가 더 빠르게 제공될 수 있을 것입니다.
+SQL Server 2017은 빠른 분석 시나리오를 위해 ColumnStore 인덱스를 지원합니다. ColumnStore 인덱스는 새로 삽입한 데이터에 대한 "B-트리" 인덱스 구조를 특수한 열 기반 압축 구조와 결합하여 데이터를 압축하고 쿼리 실행 속도를 높입니다. 이 제품에는 백그라운드에서 B-트리 구조의 데이터를 압축된 구조로 마이그레이션하기 위한 추론이 포함되어 있으므로 향후 쿼리 결과가 더 빠르게 제공될 수 있을 것입니다.
 
 백그라운드 작업이 데이터 삽입 속도와 맞지 않을 경우 쿼리 성능이 예상보다 오래 걸릴 수 있습니다. 제품을 개선하기 위해 Microsoft는 SQL Server가 자동 데이터 압축 프로세스 속도를 얼마나 잘 따라가는지에 대한 정보를 수집합니다. 제품 팀은 이 정보를 사용하여 압축을 수행하는 코드의 빈도 및 병렬 처리를 구체적으로 조정합니다. Microsoft에서 데이터 이동 속도를 평가할 수 있도록 경우에 따라 이 정보를 수집하기 위해 다음 쿼리가 실행됩니다. 이 쿼리는 제품 추론을 최적화하는 데 도움이 됩니다.  
 
@@ -63,9 +63,9 @@ Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견
 
 SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하거나 누르고 검색 상자에서 "오류"를 검색합니다. SQL Server 오류 및 사용 보고 항목이 표시 됩니다. 이 도구를 시작한 후 해당 컴퓨터에 설치된 인스턴스 및 구성 요소에 대해 수집된 사용 의견 및 심각한 오류를 관리할 수 있습니다.
 
-유료 버전의 경우 “사용 보고서" 확인란을 사용하여 Microsoft로의 사용 의견 전송을 관리합니다.
+유료 버전의 경우 "사용 보고서" 확인란을 사용하여 Microsoft로의 사용 의견 전송을 관리합니다.
 
-유료 또는 무료 버전에 대해 “오류 보고서" 확인란을 사용하여 Microsoft에 대한 심각한 오류 및 크래시 덤프 관련 의견 전송을 관리할 수 있습니다.
+유료 또는 평가 버전에 대해 "오류 보고서" 확인란을 사용하여 Microsoft에 심각한 오류 및 크래시 덤프 관련 의견을 전송하는 것을 관리합니다.
 
 ## <a name="set-registry-subkeys-on-the-server"></a>서버에서 레지스트리 하위 키 설정
 
@@ -94,7 +94,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
     항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
 
 > [!NOTE]
-> {Major Version}은 SQL Server 버전을 나타냅니다. 예를 들어 SQL Server 2017의 경우는 140입니다.
+> {Major Version}은 SQL Server 버전을 나타냄(예: SQL Server 2017의 경우는 140)
 
 - SQL Server Management Studio:
   

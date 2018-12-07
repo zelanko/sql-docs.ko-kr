@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803261"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505910"
 ---
 # <a name="throw-transact-sql"></a>THROW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 예외를 발생시키고 TRY…CATCH 구문의 CATCH 블록으로 실행을 이전합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 예외를 발생시키고 TRY...CATCH 구문의 CATCH 블록으로 실행을 이전합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Remarks  
  THROW 문 앞의 문 다음에는 세미콜론(;) 문 종결자를 붙여야 합니다.  
   
- TRY…CATCH 구문을 사용할 수 없으면 문 일괄 처리가 종료됩니다. 예외가 발생한 줄 번호와 프로시저가 설정됩니다. 심각도는 16으로 설정됩니다.  
+ TRY...CATCH 구문을 사용할 수 없으면 명령문 일괄 처리가 종료됩니다. 예외가 발생한 줄 번호와 프로시저가 설정됩니다. 심각도는 16으로 설정됩니다.  
   
  매개 변수 없이 지정된 THROW 문은 CATCH 블록 안에 나타나야 합니다. 이렇게 하면 예외가 발생합니다. THROW 문에 발생하는 오류로 인해 문 일괄 처리가 종료됩니다.  
   

@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9cffd51ef8da35c7ee8c1e424c2cddbac92955cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517277"
 ---
 # <a name="working-with-snapshots-web-portal"></a>스냅숏 사용(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-보고서에 대한 스냅숏을 만든 경우 보고서의 **줄임표(...)** , **관리** 를 선택하고 **캐싱** 또는 **기록 스냅숏**을 선택하여 제어할 수 있습니다.  
+보고서에 대한 스냅숏을 만든 경우 보고서의 **줄임표(...)** 및 **관리**를 차례로 선택하고 **캐싱** 또는 **기록 스냅숏**을 선택하여 제어할 수 있습니다.  
   
 > [!NOTE]
 > SQL Server 에이전트 서비스를 시작해야 합니다.  

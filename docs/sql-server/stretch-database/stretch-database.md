@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503786"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "51702001"
  **콜드 데이터에 대한 비용 효율적인 가용성 제공**  
  SQL Server 스트레치 데이터베이스를 사용하여 웜 및 콜드 트랜잭션 데이터를 SQL Server에서 Microsoft Azure로 동적으로 확장할 수 있습니다. 일반적인 콜드 데이터 저장소와 달리 데이터가 항상 온라인 상태로 유지되며 쿼리할 수 있습니다. 고객 주문 기록과 같은 큰 테이블에 대한 부담 없이 보다 긴 데이터 보존 일정을 제공할 수 있습니다. 비용이 많이 드는 온-프레미스 저장소를 확장하는 대신 저렴한 Azure를 이용할 수 있습니다. Azure 포털에서 가격 책정 계층을 선택하고 설정을 구성하여 가격 및 비용을 관리할 수 있습니다. 필요에 따라 확장하거나 축소할 수 있습니다. 자세한 내용은 [SQL Server Stretch Database 가격 정보](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 를 참조하세요.  
   
- **쿼리 또는 응용 프로그램을 변경할 필요가 없음**  
- 온-프레미스에 있든 클라우드로 확장되든 상관없이 SQL Server 데이터에 원활하게 액세스할 수 있습니다.  데이터 저장 위치를 결정하는 정책을 설정하면 SQL Server가 백그라운드에서 데이터 이동을 처리합니다. 전체 테이블은 항상 온라인 상태이며 쿼리할 수 있습니다. 또한 Stretch Database는 기존 쿼리 또는 응용 프로그램을 변경할 필요가 없습니다. 데이터의 위치가 응용 프로그램에 완전히 투명합니다.  
+ **쿼리 또는 애플리케이션을 변경할 필요가 없음**  
+ 온-프레미스에 있든 클라우드로 확장되든 상관없이 SQL Server 데이터에 원활하게 액세스할 수 있습니다.  데이터 저장 위치를 결정하는 정책을 설정하면 SQL Server가 백그라운드에서 데이터 이동을 처리합니다. 전체 테이블은 항상 온라인 상태이며 쿼리할 수 있습니다. 또한 Stretch Database는 기존 쿼리 또는 애플리케이션을 변경할 필요가 없습니다. 데이터의 위치가 애플리케이션에 완전히 투명합니다.  
   
  **온-프레미스 데이터 유지 관리 간소화**  
  데이터에 대한 온-프레미스 유지 관리 및 저장소를 줄일 수 있습니다. 온-프레미스 데이터 백업은 보다 빠르게 실행되며 유지 관리 기간 내에 완료됩니다. 데이터의 클라우드 부분에 대한 백업이 자동으로 실행됩니다. 온-프레미스 저장소 요구 사항이 크게 감소합니다. Azure Storage는 온-프레미스 SSD에 추가하는 것보다 80% 더 저렴할 수 있습니다.  
   
  **마이그레이션 중 데이터 보안 유지**  
- 가장 중요한 응용 프로그램을 클라우드로 안전하게 확장할 수 있습니다. SQL Server의 상시 암호화는 이동 중인 데이터에 대한 암호화를 제공합니다. RLS(행 수준 보안) 및 기타 고급 SQL Server 보안 기능도 스트레치 데이터베이스와 함께 작동하여 데이터를 보호합니다.  
+ 가장 중요한 응용 프로그램을 클라우드로 안전하게 확장할 수 있습니다. SQL Server의 Always Encrypted는 이동 중인 데이터에 대한 암호화를 제공합니다. RLS(행 수준 보안) 및 기타 고급 SQL Server 보안 기능도 Stretch Database와 함께 작동하여 데이터를 보호합니다.  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database의 기능  
  SQL Server 인스턴스 및 데이터베이스에 Stretch Database를 사용하도록 설정하였고 하나 이상의 테이블을 선택했다면 Stretch Database는 콜드 데이터를 Azure로 자동으로 마이그레이션하기 시작합니다.  

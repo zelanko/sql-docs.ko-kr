@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513678"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639130"
 분산 트랜잭션을 보장하려면 데이터베이스를 분산 트랜잭션 리소스 관리자로 등록하도록 가용성 그룹을 구성해야 합니다.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 서비스 팩 2 이상은 가용성 그룹에서 분산 트랜잭션에 대한 완전한 지원을 제공합니다. [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이전 버전은 가용성 그룹의 데이터베이스가 포함된 데이터베이스 간 분산 트랜잭션(예: 동일한 SQL Server 인스턴스에서 데이터베이스를 사용하는 트랜잭션)을 지원하지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 서비스 팩 2 이상은 가용성 그룹에서 분산 트랜잭션에 대한 완전한 지원을 제공합니다. 서비스 팩 2 이전의 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 버전은 가용성 그룹의 데이터베이스가 포함된 데이터베이스 간 분산 트랜잭션(예: 동일한 SQL Server 인스턴스에서 데이터베이스를 사용하는 트랜잭션)을 지원하지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]에서 구성하는 단계는 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]과 동일합니다.
 
@@ -192,4 +192,4 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [XA 트랜잭션 지원(영문)](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[작동 방법: DTC 트랜잭션에 대한 세션/SPID (-2)(영문)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[작동 방법: DTC 트랜잭션에 대한 세션/SPID(-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

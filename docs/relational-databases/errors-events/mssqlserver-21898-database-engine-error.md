@@ -12,12 +12,12 @@ ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd8f3051f1de73a8eabb60401af176a92a04c4d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d96408100616f6939c7a61ea7a76a69e8b4a1e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855871"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398717"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +40,5 @@ ms.locfileid: "47855871"
 **sp_changedistpublisher** 저장 프로시저를 실행하여 새 게시자의 배포 데이터베이스를 원래 게시자에 사용된 배포 데이터베이스로 변경합니다.  
   
 > [!NOTE]  
-> 배포자에서 게시자에 대해 **sp_adddistpublisher**를 실행할 때 잘못된 배포 데이터베이스를 입력한 경우 **sp_changedistpublisher**를 실행하면 문제가 해결됩니다. 그러나 원격 게시자에 식별된 배포 데이터베이스를 사용하는 다른 게시 데이터베이스의 기존 게시가 있는 경우에는 이와 같은 변경이 적절하지 않습니다. 명명된 배포 데이터베이스를 사용하는 복제를 체계적으로 제거한 다음 원래 게시자의 배포 데이터베이스를 사용하여 데이터베이스를 다시 설정해야만 새 게시자가 적합한 호스트로 작동할 수 있습니다.  
+> 배포자에서 게시자에 대해 **sp_adddistpublisher**를 실행할 때 잘못된 배포 데이터베이스를 입력한 경우 **sp_changedistpublisher**를 실행하면 문제가 해결됩니다. 그러나 원격 게시자에 식별된 배포 데이터베이스를 사용하는 다른 게시 데이터베이스의 기존 게시가 있는 경우에는 이와 같은 변경이 적절하지 않습니다. 명명된 배포 데이터베이스를 사용하는 복제를 체계적으로 제거한 다음, 원래 게시자의 배포 데이터베이스를 사용하여 데이터베이스를 다시 설정해야만 새 게시자가 적합한 호스트로 작동할 수 있습니다.  
   

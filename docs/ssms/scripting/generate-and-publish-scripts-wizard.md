@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530568"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -199,7 +199,7 @@ ms.locfileid: "51700271"
   
 -   **변경 내용 추적 스크립팅** - 원본 데이터베이스 또는 원본 데이터베이스의 테이블에서 변경 내용 추적을 사용하도록 설정되어 있는 경우 변경 내용 추적을 스크립팅합니다. 기본값은 **False**입니다. 자세한 내용은 [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)를 참조하세요.  
   
--   **check 제약 조건 스크립팅** – **CHECK** 제약 조건을 스크립트에 추가합니다. 기본값은 **True**입니다. **CHECK** 제약 조건에서는 테이블에 입력한 데이터가 일부 지정된 조건에 맞아야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+-   **CHECK 제약 조건 스크립팅** – **CHECK** 제약 조건을 스크립트에 추가합니다. 기본값은 **True**입니다. **CHECK** 제약 조건에서는 테이블에 입력한 데이터가 일부 지정된 조건에 맞아야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
 -   **데이터 압축 옵션 스크립팅** - 원본 데이터베이스 또는 원본 데이터베이스의 테이블에서 데이터 압축 옵션이 구성되어 있는 경우 데이터 압축 옵션을 스크립팅합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 기본값은 **False**입니다.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "51700271"
   
 12. **게시할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마 및 데이터**입니다.  
   
- **게시 옵션** - 웹 호스트 공급자에 게시하는 경우 트랜잭션을 사용할지 여부를 지정합니다.  
+ **게시 옵션** - 웹 호스트 공급 기업에 게시하는 경우 트랜잭션을 사용할지 여부를 지정합니다.  
   
 1.  **트랜잭션을 사용하여 게시** - 원격 웹 호스팅 공급자에 게시할 때 트랜잭션을 사용합니다. 대상 데이터베이스에서 게시를 완료할 수 없으면 트랜잭션이 롤백됩니다. 기본값은 **True**입니다.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51700271"
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스에서 스크립트 생성  
 
-"다른 이름으로 스크립팅..."을 사용할 때 구문이 생성된 경우 은 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문과 다르게 보이거나 오류 메시지를 받는 경우 SQL Server Management Studio의 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]로 설정해야 할 수 있습니다.  
+"Script As..."를 사용할 때 생성된 구문이 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문과 다르게 보이거나, 오류 메시지를 받은 경우 SQL Server Management Studio의 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]로 설정해야 할 수 있습니다.  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법  
 

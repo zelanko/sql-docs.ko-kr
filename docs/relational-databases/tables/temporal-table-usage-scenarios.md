@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532740"
 ---
 # <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  FOR SYSTEM_TIME이 포함된 임시 절에 지정된 필터링 조건은 SARG 가능합니다. 예를 들어 SQL Server는 기본 클러스터행 인덱스를 활용하여 검색(scan) 작업 대신 찾기(seek)를 수행할 수 있습니다.   
-> 기록 테이블을 직접 쿼리하는 경우 \<기간 열>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 합니다.  
+> 기록 테이블을 직접 쿼리하는 경우 \<기간 열> {< | > | =, ...} date_condition AT TIME ZONE ‘UTC’ 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 확인합니다.  
 > AT TIME ZONE을 기간 열에 적용하면 SQL Server에서는 테이블/인덱스 검색을 수행하지만 이 작업은 비용이 매우 많이 들 수 있습니다. 쿼리에서  
-> \<기간 열>  AT TIME ZONE ‘\<해당 표준 시간대>’  >  {< | > | =, …} date_condition과 같은 조건 형식은 사용하지 마세요.  
+> \<기간 열> AT TIME ZONE ‘\<해당 표준 시간대>’ > {< | > | =, …} date_condition과 같은 조건 형식은 사용하지 마세요.  
   
  참고 항목: [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
@@ -147,7 +147,7 @@ FROM Employee
   
 -   기록 및 현재 데이터의 중요한 지표에 대한 추세  
   
--   과거의 지정 시간"을 기준으로" 전체 데이터의 정확한 스냅숏(어제, 한 달 전 등)  
+-   과거의 지정 시간을 "기준으로" 전체 데이터의 정확한 스냅숏(어제, 한 달 전 등)  
   
 -   관심 있는 두 지정 시간 간의 차이(예: 한 달 전 vs. 3개월 전)  
   
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 임시 쿼리를 활용하면 특정 패턴을 쉽게 찾을 수 있으므로 시스템 버전 관리된 temporal 테이블을 사용하여 주기적으로 또는 불규칙적으로 발생하는 변칙을 검색할 수 있습니다.  
 변칙은 수집하는 데이터 형식과 비즈니스 논리에 따라 달라집니다.  
   
- 다음 예제에서는 "급증" 판매량을 검색하는 간단한 논리를 보여 줍니다. 구매한 제품의 기록을 수집하는 temporal 테이블에서 작업한다고 가정해 봅니다.  
+ 다음 예제에서는 "급증" 판매량을 검색하는 간단한 논리를 보여 줍니다. 구매한 제품의 기록을 수집하는 temporal 테이블을 사용한다고 가정해 봅니다.  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,7 +446,7 @@ FROM CTE
  다음 예제에서는 해당 프로세스에 대해 설명하고, DimLocation 차원 테이블에 ETL에서 채워지는 datetime2의 null이 아닌 열로 ValidFrom과 ValidTo가 있다고 가정합니다.  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

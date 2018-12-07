@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529917"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>데이터베이스 미러링 - 세션 설정 - Windows 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47599101"
   
      여기서 _\<system-address&gt;_ 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, _\<포트&gt;_ 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
-     예를 들어 미러 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 주 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER1(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 엔드포인트에 사용되는 포트는 7022입니다.  
+     예를 들어 미러 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 주 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER1(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 엔드포인트에서 사용되는 포트는 7022입니다.  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -90,7 +90,7 @@ ms.locfileid: "47599101"
   
      자세한 내용은 4단계를 참조하십시오.  
   
-     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 미러 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER2(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 엔드포인트에 사용되는 포트는 7025입니다.  
+     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 미러 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER2(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 엔드포인트에서 사용되는 포트는 7025입니다.  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

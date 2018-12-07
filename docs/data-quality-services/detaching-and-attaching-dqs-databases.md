@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3087eea3b8bcf5b153ff1303cbdddf55263cc6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658441"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617413"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS 데이터베이스 분리 및 연결
 
@@ -25,7 +24,7 @@ ms.locfileid: "47658441"
 
   이 항목에서는 DQS 데이터베이스를 분리 및 연결하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Limitations"></a> 제한 사항  
  제한 사항 목록은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)의 데이터베이스를 분리하는 방법에 대해 설명합니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "47658441"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **데이터베이스 정보** (아래쪽) 창에 연결될 파일 이름이 표시됩니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(…)를 클릭합니다.  
+5.  **데이터베이스 정보** (아래쪽) 창에 연결될 파일 이름이 표시됩니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(...)를 클릭합니다.  
   
 6.  **확인** 을 클릭하여 DQS_MAIN 데이터베이스를 연결합니다.  
   

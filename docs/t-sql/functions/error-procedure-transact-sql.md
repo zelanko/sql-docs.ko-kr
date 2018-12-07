@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807110"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617063"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,9 +59,7 @@ ERROR_PROCEDURE ( )
 `ERROR_PROCEDURE`는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
   
 `ERROR_PROCEDURE`는 `CATCH` 블록 범위 내에서 실행 위치나 실행 횟수에 관계 없이 오류가 발생하는 저장 프로시저 또는 트리거의 이름을 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
-  
-중첩된 `CATCH` 블록에서 `ERROR_PROCEDURE`는 해당 `CATCH` 블록을 참조한 `CATCH` 블록의 범위에 관련된 오류를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 `CATCH` 블록에는 내부 `TRY...CATCH` 구문이 있을 수 있습니다. 해당 내부 `CATCH` 블록 내에서 `ERROR_PROCEDURE`는 내부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다. `ERROR_PROCEDURE`가 외부 `CATCH` 블록에서 실행되는 경우 해당 외부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다.  
-  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_PROCEDURE 사용  

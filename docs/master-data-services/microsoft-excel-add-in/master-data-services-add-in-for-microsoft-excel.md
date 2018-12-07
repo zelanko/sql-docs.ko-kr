@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965971"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617603"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
 
@@ -29,14 +29,14 @@ ms.locfileid: "50965971"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 DQS(Data Quality Services)를 사용하여 데이터를 MDS에 로드하기 전에 일치시킬 수 있습니다. 이렇게 하면 MDS에서 데이터가 중복되지 않도록 방지하는 데 도움이 됩니다.  
 
 ## <a name="downloads"></a>다운로드 
->*  SQL Server 2016 SP1을 위한 Excel용 Master Data Services 추가 기능은 [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836866)에서 다운로드할 수 있습니다. 
+>*  SQL Server 2016 SP2를 위한 Excel용 Master Data Services 추가 기능은 [이 Microsoft 다운로드 센터 페이지](https://www.microsoft.com/download/details.aspx?id=56838)에서 다운로드할 수 있습니다. 
 >* [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836867)에서 SQL Server 2017용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 다운로드합니다.
  
   
 ## <a name="terms"></a>용어  
  추가 기능 사용과 관련해서는 다음과 같은 용어가 사용됩니다. 이러한 개념에 대한 자세한 내용은 [Master Data Services 개요&#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
--   *MDS repository* 는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 저장소의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 저장소에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
+-   *MDS repository* 는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 리포지토리의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 리포지토리에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
   
 -   *MDS 관리 데이터* 는 MDS 리포지토리에 저장되며 데이터가 강조 표시된 행으로 표시되는 Excel에 로드하는 데이터입니다. 비 MDS 관리 데이터를 워크시트에 추가할 수 있으며, 이러한 데이터는 MDS 관리 데이터를 새로 고칠 때 영향을 받지 않습니다.  
   

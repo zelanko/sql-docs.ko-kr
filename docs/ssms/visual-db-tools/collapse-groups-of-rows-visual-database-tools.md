@@ -15,18 +15,18 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 219ece6442b19e1652da164a7620a3a0b5e1e8a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a40eefb6b60b21387c90b84e7bffdc423b7d798
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503968"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>행 그룹 축소(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다. 행을 축소하는 경우 다음 사항에 유의해야 합니다.  
   
--   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어, 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  
+-   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT city, state  

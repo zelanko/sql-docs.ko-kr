@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542009"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028132"
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-보고서의 **줄임표(...)** , **관리** , **구독**을 차례로 선택하면 구독 페이지에 액세스할 수 있습니다.  
+보고서의 **줄임표(...)**, **관리** 및 **구독**을 차례로 선택하면 구독 페이지에 액세스할 수 있습니다.  
   
 구독 페이지에서 **+ 새 구독**을 선택하면 새 구독을 만들 수 있습니다. 기존 구독을 편집하거나 선택한 구독을 삭제할 수도 있습니다.  
   

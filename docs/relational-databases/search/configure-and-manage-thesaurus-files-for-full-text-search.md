@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514273"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47731401"
 2.  그런 다음 전역 동의어 사전에 대해 이러한 단계가 반복됩니다. 그러나 용어가 이미 언어별 동의어 사전 파일에서 일치 항목의 일부인 경우 해당 용어는 전역 동의어 사전에서 일치 항목으로 적합하지 않습니다.  
 
 ##  <a name="structure"></a> 동의어 사전 파일의 구조  
- 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석( `<!--` … `-->`)을 정의합니다. 동의어 사전은 분음 부호 설정, 확장 집합, 교체 집합을 정의하는 자식 요소의 샘플이 포함된 `<thesaurus>` 요소에 정의됩니다.
+ 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 분음 부호 설정, 확장 집합, 교체 집합을 정의하는 자식 요소의 샘플이 포함된 `<thesaurus>` 요소에 정의됩니다.
 
 일반적인 빈 동의어 사전 파일에는 다음과 같은 XML 텍스트가 포함되어 있습니다.  
   

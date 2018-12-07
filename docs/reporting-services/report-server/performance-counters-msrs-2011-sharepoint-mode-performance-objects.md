@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529509"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
   이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "50030194"
 |**Total Snapshot Updates**|총 보고서 실행 스냅숏 업데이트 수입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 "msr"로 시작하는 카운터 집합을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 "msr"로 시작되는 카운터 세트 반환  
   
 ```  
 get-counter -listset msr*  

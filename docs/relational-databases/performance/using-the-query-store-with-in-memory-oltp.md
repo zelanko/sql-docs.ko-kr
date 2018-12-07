@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3989426a807b5d4fbcfa078a41fdaf6856dea98d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541080"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "47709681"
   
 -   쿼리 저장소 캡처 모드(**ALTER TABLE** 문의 *QUERY_CAPTURE_MODE* 매개 변수)는 구성된 값과 관계없이 항상 캡처되므로 기본적으로 컴파일된 모듈에서 쿼리에 영향을 주지 않습니다. 여기에는 `QUERY_CAPTURE_MODE = NONE`설정이 포함됩니다.  
   
--   쿼리 저장소로 캡처된 쿼리 컴파일 기간에는 기본 코드가 생성되기 전 쿼리 최적화에 소요된 시간만 포함됩니다. 보다 정확하게, C 코드 컴파일 시간 및 C 코드를 생성하기 위해 필요한 내부 구조 생성 시간이 포함되지 않습니다.  
+-   쿼리 저장소로 캡처된 쿼리 컴파일 기간에는 기본 코드가 생성되기 전 쿼리 최적화에 소요된 시간만 포함됩니다. 더 정확히 말해 이 기간에는 C 코드 컴파일 시간 및 C 코드 생성을 위해 필요한 내부 구조 생성 시간이 포함되지 않습니다.  
   
--   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 내의 메모리 부여 메트릭은 고유하게 컴파일된 쿼리에 대해 채워지지 않습니다. 해당 값은 항상 0입니다. 메모리 부여 열은 avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, 및 stdev_query_max_used_memory입니다.  
+-   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 내의 메모리 부여 메트릭은 기본적으로 컴파일된 쿼리에 대해 채워지지 않습니다. 해당 값은 항상 0입니다. 메모리 부여 열은 avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, 및 stdev_query_max_used_memory입니다.  
   
 ## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>쿼리 저장소와 메모리 내 OLTP 활성화 및 사용  
  다음의 간단한 예제는 종단 간 사용자 시나리오에서 쿼리 저장소와 메모리 내 OLTP를 사용하는 방법을 보여줍니다. 이 예제에서는 메모리 내 OLTP용으로 데이터베이스(`MemoryOLTP`)가 활성화된 것으로 가정되었습니다.  

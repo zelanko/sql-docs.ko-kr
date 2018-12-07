@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eeff8f6b53b9a48f0da04bdbcd7927a224b3d70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538101"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 메서드 - SetDatabaseConnection
   특정 보고서 서버 데이터베이스에 대한 보고서 서버 데이터베이스 연결을 설정합니다.  
@@ -51,7 +51,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Windows 서비스  
   
@@ -72,7 +72,7 @@ public void BackupEncryptionKey(string Server,
   
  *CredentialsType* 매개 변수를 1([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 설정하면 *UserName* 매개 변수에 전달되는 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름의 요구 사항을 따라야 합니다.  
   
- *CredentialsType* 매개 변수를 2(Windows 서비스)로 설정하면 보고서 서버에서 통합 보안을 사용하여 보고서 서버 데이터베이스에 연결하고 *UserName* 및 *Password* 매개 변수는 무시됩니다. 보고서 서버 웹 서비스는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정 또는 응용 프로그램 풀의 계정과 Windows 서비스 계정을 사용하여 보고서 서버 데이터베이스에 액세스합니다.  
+ *CredentialsType* 매개 변수를 2(Windows 서비스)로 설정하면 보고서 서버에서 통합 보안을 사용하여 보고서 서버 데이터베이스에 연결하고 *UserName* 및 *Password* 매개 변수는 무시됩니다. 보고 서버 웹 서비스는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정 또는 애플리케이션 풀의 계정과 Windows 서비스 계정을 사용하여 보고서 서버 데이터베이스에 액세스합니다.  
   
  SetDatabaseConnection 메서드는 호출되면 지정된 보고서 서버에 대한 구성 파일에 있는 자격 증명과 데이터베이스 정보를 암호화하여 저장합니다.  
   

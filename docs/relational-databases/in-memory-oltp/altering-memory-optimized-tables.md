@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bcf4ff6daa7a6d5e5fe710a51d78a8730a56cfeb
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 698272ee29fe7828f9298d534476db7948b2bde7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636472"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641274"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 
@@ -26,7 +26,7 @@ ms.locfileid: "49636472"
 ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 응용 프로그램을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance는 메모리 최적화된 테이블을 지원하지 않습니다.
+> Azure SQL Database Managed Instance는 범용 서비스 계층에서 메모리 최적화 테이블을 지원하지 않습니다.
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

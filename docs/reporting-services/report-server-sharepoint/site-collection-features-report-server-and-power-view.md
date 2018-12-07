@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 18a805e049dfeedc3b8984c1c92da3af40b5bfda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812280"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405719"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
 
@@ -32,7 +32,7 @@ ms.locfileid: "51812280"
   
  "SharePoint 웹 응용 프로그램 80에는 루트 사이트 모음이 없습니다."  
   
- "RS_SP_ #.log"라는 추가 기능 설치 로그에서 메시지를 찾을 수 있습니다. 여기서 #는 증가 숫자입니다. 로그 파일은 현재 사용자 Temp 폴더(예: C:\Users\\[사용자 이름]\AppData\Local\Temp)에서 찾을 수 있습니다. 추가 기능의 로깅 옵션에 대한 자세한 내용은 [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조하세요.  
+ "RS_SP_#.log"라는 추가 기능 설치 로그에서 메시지를 찾을 수 있습니다. 여기서 #는 증가 숫자입니다. 로그 파일은 현재 사용자 Temp 폴더(예: C:\Users\\[사용자 이름]\AppData\Local\Temp)에서 찾을 수 있습니다. 추가 기능의 로깅 옵션에 대한 자세한 내용은 [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조하세요.  
 
 ## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
   

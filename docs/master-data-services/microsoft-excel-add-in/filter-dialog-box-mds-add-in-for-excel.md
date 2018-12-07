@@ -11,12 +11,12 @@ ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4516be4acd8512feee743e986eea9fd554e4089e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808661"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403898"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
 

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635961"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533026"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47635961"
 |yyyy-mm-ddTZD|XML/SOAP을 사용할 경우 지원됩니다.<br /><br /> TZD는 표준 시간대 지정자(Z나 +hh:mm 또는 -hh:mm)입니다.<br /><br /> - hh:mm은 표준 시간대 오프셋을 나타냅니다. hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br />- MM은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.<br />- +(더하기) 또는 -(빼기)는 표준 시간대 오프셋의 필수 기호입니다. 이는 현지 시간을 가져오기 위해 UTC(Coordinated Universal Time)에서 표준 시간대 오프셋을 더했는지 또는 뺐는지를 나타냅니다. 올바른 표준 시간대 오프셋 범위는 -14:00에서 +14:00 사이입니다.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**date**는 그레고리력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85-Datetime 데이터 형식은 그레고리력 형식의 날짜가 CE 0001–01–01부터 CE 9999–12–31까지 날짜 범위에 저장되게 합니다."
+**date**는 그레고리력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식은 그레고리력 형식의 날짜를 CE 0001–01–01부터 CE 9999–12–31까지 날짜 범위에 저장할 수 있습니다."
   
 하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식은 YYYY-MM-DD로 정의되는 SQL 표준 형식을 따릅니다. 이 형식은 DATE에 대한 ISO 8601 정의와 같습니다.
   

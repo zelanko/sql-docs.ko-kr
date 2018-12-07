@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525288"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,12 +124,12 @@ ms.locfileid: "51697891"
   
 11. 인스턴스 구성 페이지에서 기본 인스턴스를 설치할지 명명된 인스턴스를 설치할지 지정합니다. 자세한 내용은 [Instance Configuration](../../install/instance-configuration.md)을 참조하세요.  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** – 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대한 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(Failover) 클러스터를 식별하는 데 사용되는 이름입니다.  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크 이름** – 새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대한 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(Failover) 클러스터를 식별하는 데 사용되는 이름입니다.  
   
     > [!NOTE]  
     >  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서는 이를 가상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이름이라고 했습니다.  
   
-     **인스턴스 ID** — 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 상자를 선택하고 값을 입력합니다.  
+     **인스턴스 ID** - 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 상자를 선택하고 값을 입력합니다.  
   
     > [!NOTE]  
     >  일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]독립 실행형 인스턴스의 경우 기본 인스턴스인지 명명된 인스턴스인지에 관계없이 **인스턴스 ID** 상자에 기본값을 사용합니다.  
@@ -179,7 +179,7 @@ ms.locfileid: "51697891"
   
 18. **서버 구성 - 데이터 정렬** 탭을 사용하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대해 기본이 아닌 데이터 정렬을 지정할 수 있습니다.  
   
-19. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 – 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
+19. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "51697891"
   
 11. 인스턴스 구성 페이지에서 기본 인스턴스를 설치할지 명명된 인스턴스를 설치할지 지정합니다.
   
-     **인스턴스 ID** — 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 입력란을 선택하고 값을 입력합니다.  
+     **인스턴스 ID** - 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 입력란을 선택하고 값을 입력합니다.  
   
     > [!NOTE]  
     >  일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]독립 실행형 인스턴스의 경우 기본 인스턴스인지 명명된 인스턴스인지에 관계없이 **인스턴스 ID** 텍스트 상자에 기본값을 사용합니다.  
@@ -362,7 +362,7 @@ ms.locfileid: "51697891"
   
 11. 이 항목의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
-12. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 – 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
+12. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
@@ -397,7 +397,7 @@ ms.locfileid: "51697891"
 19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 동일한 장애 조치(Failover) 클러스터를 위해 준비한 모든 노드가 이제 이 단계를 통해 최종 완료된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 일부가 됩니다.  
   
 ## <a name="next-steps"></a>Next Steps  
- **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 구성** — [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
+ **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 구성** - 공격받을 수 있는 시스템의 노출 영역을 줄이려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
  로그 파일 위치에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   

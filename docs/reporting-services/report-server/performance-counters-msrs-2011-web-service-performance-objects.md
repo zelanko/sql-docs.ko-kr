@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 527a2c67a62328cc0e277bc3c45eebeb9167a804
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 52e4ef6b3361ca1e577f4c19a325bcb982c4e103
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020227"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403149"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>성능 카운터 MSRS 2011 웹 서비스, 성능 개체
   이 항목에서는 **MSRS 2011 Web Service** 및 **MSRS 2011 Windows Service** 성능 개체에 대한 성능 카운터에 대해 설명합니다. 이 개체는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 기본 코드 배포의 일부입니다.  

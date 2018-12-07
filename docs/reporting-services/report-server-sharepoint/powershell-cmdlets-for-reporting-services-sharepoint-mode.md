@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9682be8f89a78a959cba3e4991c3405b0326f125
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504296"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -34,7 +34,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 
 ## <a name="cmdlet-summary"></a>Cmdlet 요약
 
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](https://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](https://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 애플리케이션에 대한 참조인 'databases'는 Reporting Services 서비스 애플리케이션에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -61,7 +61,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
   
 3.  **SharePoint 관리 셸**을 클릭합니다.  
   
- cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell ‘Get-Help’ 명령을 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ cmdlet의 명령줄 도움말을 보려면 PowerShell 명령 프롬프트에서 PowerShell 'Get-Help' 명령을 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -117,7 +117,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
  이름에 'SPRS'가 포함된 cmdlet 목록을 반환합니다. Reporting Services cmdlet의 전체 목록입니다.  
   
 ```  
-Get-command –noun *SPRS*  
+Get-command -noun *SPRS*  
 ```  
   
  자세히 말해서 commandlist.txt라는 텍스트 파일로 전달됩니다.  
@@ -156,23 +156,23 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 
  이 예제 스크립트는 다음 태스크를 완료합니다.  
   
-1.  Reporting Services 서비스 응용 프로그램 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 응용 프로그램 풀이 이미 있는 것으로 가정합니다.  
+1.  Reporting Services 서비스 응용 프로그램 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 애플리케이션 풀이 이미 있는 것으로 가정합니다.  
   
 2.  기본 프록시 그룹에 프록시 추가  
   
-3.  포트 80 웹 응용 프로그램의 콘텐츠 데이터베이스에 대한 서비스 응용 프로그램 액세스를 허용합니다. 이 스크립트에서는 `https://sitename` 사이트가 이미 있다고 가정합니다.  
+3.  포트 80 웹앱의 콘텐츠 데이터베이스에 대한 서비스 앱 액세스를 허용합니다. 이 스크립트에서는 `https://sitename` 사이트가 이미 있다고 가정합니다.  
   
 ```  
 # Create service application and service application proxy  
-$appPool = Get-SPServiceApplicationPool “My App Pool”  
-$serviceApp = New-SPRSServiceApplication “My RS Service App” –ApplicationPool $appPool  
-$serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App Proxy” –ServiceApplication $serviceApp  
+$appPool = Get-SPServiceApplicationPool "My App Pool"  
+$serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
+$serviceAppProxy = New-SPRSServiceApplicationProxy -Name "My RS Service App Proxy" -ServiceApplication $serviceApp  
   
 # Add service application proxy to default proxy group.  Any web application that uses the default proxy group will now be able to use this service application.  
-Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
+Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $serviceAppProxy  
   
-# Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “https://sitename”  
+# Grant application pool account access to the port 80 web application's content database.  
+$webApp = Get-SPWebApplication "https://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   
@@ -186,32 +186,32 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 $app=get-sprsserviceapplication -Name "My RS Service App"  
 $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
 $emailXml = [xml]$emailCfg   
-$emailXml.SelectSingleNode("//SMTPServer").InnerText = “<email server name>”  
+$emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 위의 예에서 서비스 응용 프로그램의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 응용 프로그램을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어  
+ 위의 예에서 서비스 응용 프로그램의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 응용 프로그램을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- 다음 스크립트는 "Reporting Services 응용 프로그램" 서비스 응용 프로그램에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 응용 프로그램의 개체로 설정합니다.  
+ 다음 스크립트는 "Reporting Services 애플리케이션" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 응용 프로그램의 개체로 설정합니다.  
   
- 두 번째 문은 $app 변수에서 서비스 응용 프로그램 개체에 대한 'Report Server Email' 배달 확장 프로그램을 가져오고 configurationXML을 선택합니다.  
+ 두 번째 명령문은 $app 변수에서 서비스 애플리케이션 개체에 대한 'Report Server Email' 배달 확장 프로그램을 가져오고 configurationXML을 선택합니다.  
   
 ```  
-$app=get-sprsserviceapplication –Name "Reporting Services Application"  
+$app=get-sprsserviceapplication -Name "Reporting Services Application"  
 Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
  또한 다음과 같이 위의 두 문을 하나로 다시 쓸 수 있습니다.  
   
 ```  
-get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
 ### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정
@@ -237,13 +237,13 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
 ```  
-Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  값이 설정되었는지 확인하려면 GET cmdlet을 다시 실행하세요.  
   
 ```  
-Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ### <a name="list-reporting-services-data-extensions"></a>Reporting Services 데이터 확장 프로그램 나열
@@ -255,7 +255,7 @@ $apps = Get-SPRSServiceApplication
 foreach ($app in $apps)   
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
 }  
 ```  
   

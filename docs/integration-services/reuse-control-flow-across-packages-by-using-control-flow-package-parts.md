@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542654"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>제어 흐름 패키지 파트를 사용하여 패키지에 대해 제어 흐름 재사용
-  일반적으로 사용되는 제어 흐름 태스크 또는 컨테이너를 독립 실행형 파트 파일(".dtsxp" 파일)에 저장하고 제어 흐름 패키지 파트를 사용하여 이 파일을 하나 이상의 패키지에 여러 번 재사용합니다. 이 재사용 기능으로 인해 SSIS 패키지 디자인 및 유지 관리가 좀 더 간편해집니다.  
+  일반적으로 사용되는 제어 흐름 태스크 또는 컨테이너를 독립 실행형 파트 파일(".dtsxp" 파일)에 저장하고 제어 흐름 패키지 파트를 사용하여 이 파일을 하나 이상의 패키지에서 여러 번 재사용합니다. 이 재사용 기능으로 인해 SSIS 패키지 디자인 및 유지 관리가 좀 더 간편해집니다.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>새 제어 흐름 패키지 파트 만들기  
  새 제어 흐름 패키지 파트를 만들려면 솔루션 탐색기에서 **패키지 파트** 폴더를 확장합니다. **제어 흐름** 을 마우스 오른쪽 단추로 클릭하고 **새 제어 흐름 패키지 파트**를 선택합니다.  

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411783"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396924"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
 
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  **in-doubt xact resolution** 구성 
-이 스크립트에서는 미결 트랜잭션에 대한 “커밋 가정"을 위해 **in-doubt xact resolution** 서버 구성 옵션을 구성합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
+이 스크립트에서는 미결 트랜잭션에 대한 "커밋 가정"을 위해 **in-doubt xact resolution** 서버 구성 옵션을 구성합니다.  `SQLNODE1`에 대해 **SQLCMD 모드**로 SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
 ```sql  
 /*******************************************************************
@@ -587,4 +587,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> 데이터베이스 컨텍스트가 `USE AG1` 로 설정되도록 `AG1`문을 실행해야 합니다.  그렇지 않으면 "다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다.”라는 오류 메시지가 나타납니다.
+> 데이터베이스 컨텍스트가 `USE AG1` 로 설정되도록 `AG1`문을 실행해야 합니다.  그렇지 않으면 "다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다."라는 오류 메시지가 나타납니다.

@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537419"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      **자동 채우기를 사용하는 변경 내용 추적을 시작하려면**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
     **예제 - 자동 변경 내용 추적을 사용하도록 전체 텍스트 인덱스 변경**  
     다음 예에서는 자동 채우기와 함께 변경 내용 추적을 사용하도록 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스를 변경합니다.  
@@ -120,9 +120,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      **수동 채우기가 있는 변경 내용 추적을 시작하려면**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
     **예제 - 수동 변경 내용 추적이 있는 전체 텍스트 인덱스 만들기**  
     다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 수동 채우기가 있는 변경 내용 추적을 사용하는 전체 텍스트 인덱스를 만듭니다.  
@@ -150,9 +150,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    
 ### <a name="disable-change-tracking"></a>변경 내용 추적 해제 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>타임스탬프 기반 증분 채우기  

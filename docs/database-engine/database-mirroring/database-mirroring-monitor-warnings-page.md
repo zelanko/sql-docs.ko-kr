@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529679"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47659521"
  지정된 파트너에서 기록되는 이벤트는 현재 역할(주 서버 또는 미러 서버)에 따라 달라집니다. 그러나 데이터베이스가 장애 조치될 경우 경고가 유지되도록 두 파트너 모두에 지정된 이벤트에 대한 경고 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 각 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
 > [!NOTE]  
->  또한 **sp_dbmmonitorchangealert** 시스템 저장 프로시저를 사용하여 이러한 이벤트(보내지 않은 로그, 복구되지 않은 로그, 보내지 않은 가장 오래된 트랜잭션 및 미러 커밋 오버헤드)에 대한 임계값을 구성할 수 있습니다. 자세한 내용은 [sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)를 참조하세요.  
+>  또한 **sp_dbmmonitorchangealert** 시스템 저장 프로시저를 사용하여 해당 이벤트(예: 보내지 않은 로그, 복구되지 않은 로그, 보내지 않은 가장 오래된 트랜잭션 및 미러 커밋 오버헤드)에 대한 임계값을 구성할 수 있습니다. 자세한 내용은 [sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)를 참조하세요.  
   
  다음 표에서는 각 경고와 연관된 이벤트 ID를 보여 줍니다.  
   

@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506243"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "49169113"
 >  가능하면 Windows 인증을 사용하세요.  
   
  **패키지**  
- 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
+ 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자를 사용하여 패키지를 찾습니다.  
   
 #### <a name="package-source--file-system"></a>패키지 원본 = 파일 시스템  
  **패키지**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169113"
  **SSIS 패키지 저장소**에 저장된 패키지를 실행하는 경우 이 옵션을 사용할 수 없습니다.  
   
  **패키지**  
- 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
+ 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자를 사용하여 패키지를 찾습니다.  
   
 ## <a name="configurations-page"></a>구성 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **구성** 페이지를 사용하여 런타임에 로드할 구성 파일을 선택하고 이러한 파일의 로드 순서를 지정할 수 있습니다.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169113"
  패키지 검사점을 사용하는 경우 패키지가 사용하는 검사점 파일을 나열합니다.  
   
  **찾아보기**  
- 패키지 검사점을 사용하는 경우 **열기** 대화 상자에서 찾아보기 단추 **(...)** 를 클릭하여 검사점 파일을 찾습니다. 검사점 파일이 이미 지정되어 있는 경우에는 선택한 파일로 바뀝니다.  
+ 패키지 검사점을 사용하는 경우 **열기** 대화 상자를 사용하여 찾아보기 단추 **(...)** 를 클릭하여 검사점 파일을 찾습니다. 검사점 파일이 이미 지정되어 있는 경우에는 선택한 파일로 바뀝니다.  
   
  **다시 시작 옵션 무시**  
  패키지 검사점을 사용하는 경우 다시 시작 옵션을 무시할 것인지 여부를 나타납니다.  

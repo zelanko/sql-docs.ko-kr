@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817603"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513757"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,14 +95,14 @@ ms.locfileid: "47817603"
  DBA는 다음 문을 사용하여 사용자가 데이터베이스에서 지연된 트랜잭션 내구성을 사용할 수 있는지 여부를 제어할 수 있습니다. ALTER DATABASE를 사용하여 지연된 내구성 설정을 지정해야 합니다.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **사용 안 함**    
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.    
     
  **허용함**    
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 및 [COMMIT 수준 제어 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 을 참조하세요.    
+ 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 및 [COMMIT 수준 제어 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)을 참조하세요.    
     
  **FORCED**    
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 응용 프로그램 코드를 변경하지 않으려는 경우에 유용합니다.    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **코드 예:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    

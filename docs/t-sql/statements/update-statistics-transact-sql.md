@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701759"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586296"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 프로그램은 이미 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 UPDATE STATISTICS 또는 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 저장 프로시저를 사용하여 기본 업데이트 주기보다 더 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
+테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 프로그램은 이미 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 `UPDATE STATISTICS` 또는 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 저장 프로시저를 사용하여 기본 업데이트 주기보다 더 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
   
- 통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 응용 프로그램에 따라 달라집니다. UPDATE STATISTIC은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
+통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 응용 프로그램에 따라 달라집니다. `UPDATE STATISTICS`은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터)에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)까지.  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] ON PARTITIONS 절에 지정된 파티션에 적용되는 리프 수준 통계를 강제로 다시 계산한 다음, 병합하여 전역 통계를 작성합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 절에 지정된 파티션에 적용되는 리프 수준 통계를 강제로 다시 계산한 다음, 병합하여 글로벌 통계를 작성합니다. 서로 다른 샘플링 주기로 작성된 파티션 통계는 병합할 수 없으므로 WITH RESAMPLE이 필요합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS를 사용하는 경우  
- UPDATE STATISTICS를 사용하는 경우에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
+### <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS를 사용하는 경우  
+ `UPDATE STATISTICS`를 사용하는 경우에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
 
-## <a name="limitations-and-restrictions"></a>제한 사항  
+### <a name="limitations-and-restrictions"></a>제한 사항  
 * 외부 테이블에 대해서는 통계 업데이트가 지원되지 않습니다. 외부 테이블에 대한 통계를 업데이트하려면 통계를 삭제하고 다시 만듭니다.  
-* MAXDOP 옵션은 STATS_STREAM, ROWCOUNT 및 PAGECOUNT 옵션과 호환되지 않습니다.
-* MAXDOP 옵션은 Resource Governor 워크로드 그룹 MAX_DOP 설정으로 제한됩니다(사용된 경우).
+* `MAXDOP` 옵션은 `STATS_STREAM`, `ROWCOUNT` 및 `PAGECOUNT` 옵션과 호환되지 않습니다.
+* `MAXDOP` 옵션은 Resource Governor 워크로드 그룹 `MAX_DOP` 설정으로 제한됩니다(사용된 경우).
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
- 데이터베이스의 모든 사용자 정의 테이블 및 내부 테이블에 대한 통계를 업데이트하는 방법은 저장 프로시저 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요. 예를 들어 다음 명령에서는 sp_updatestats를 호출하여 데이터베이스에 대한 모든 통계를 업데이트합니다.  
+### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
+데이터베이스의 모든 사용자 정의 테이블 및 내부 테이블에 대한 통계를 업데이트하는 방법은 저장 프로시저 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요. 예를 들어 다음 명령에서는 sp_updatestats를 호출하여 데이터베이스에 대한 모든 통계를 업데이트합니다.  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>자동 인덱스 및 통계 관리
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
   
-## <a name="determining-the-last-statistics-update"></a>마지막 통계 업데이트 확인  
+### <a name="determining-the-last-statistics-update"></a>마지막 통계 업데이트 확인  
  통계가 마지막으로 업데이트된 시점을 확인하려면 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수를 사용합니다.  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
+### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  다음 구문은 PDW / SQL Data Warehouse에서 지원되지 않음  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
+ 테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE&#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

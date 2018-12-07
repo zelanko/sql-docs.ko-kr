@@ -14,12 +14,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d13838dc09757cecc03fd3520ad327546a85e10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d494a687462617dbb66e3d631c30d7ae6dca4960
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411980"
 ---
 # <a name="package-properties-dialog-box"></a>패키지 속성 대화 상자
   **패키지 속성** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지의 속성을 볼 수 있습니다.  

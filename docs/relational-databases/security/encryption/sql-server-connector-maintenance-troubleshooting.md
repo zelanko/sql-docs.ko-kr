@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649511"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520688"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47649511"
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 “a-z”, “A-Z”, “0-9” 및 “-” 문자만 키 이름에 사용할 수 있으며, 키 이름은 26자로 제한됩니다.   
-> Azure 주요 자격 증명 모음에서 동일한 키 이름의 여러 키 버전은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터와 함께 작동되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용되는 Azure 주요 자격 증명 모음 키를 회전하려면 새 키 이름을 사용하는 새 키를 만들어야 합니다.  
+> Azure 주요 자격 증명 모음에서 동일한 키 이름의 여러 키 버전은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터와 함께 작동되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용되는 Azure Key Vault 키를 전환하려면 새 키 이름을 사용하는 새 키를 만들어야 합니다.  
   
  일반적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 대한 서버 비대칭 키는 1-2년마다 버전을 관리해야 합니다. 주요 자격 증명 모음에서는 키의 버전 관리가 허용되지만 버전 관리를 구현하기 위해 고객이 해당 기능을 사용하면 안 된다는 점에 유의해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서는 주요 자격 증명 모음 키 버전의 변경 사항을 처리할 수 없습니다. 키 버전 관리를 구현하려면 고객은 주요 자격 증명 모음에서 새 키를 만든 다음 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 데이터 암호화 키를 다시 암호화해야 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649511"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -148,7 +148,7 @@ ms.locfileid: "47649511"
   
 * 자격 증명 모음 키를 백업합니다(Backup-AzureKeyVaultKey Powershell cmdlet 사용).  
 * 자격 증명 모음이 실패하는 경우 동일한 지역*에서 새 자격 증명 모음을 만듭니다. 이 자격 증명 모음을 만드는 사용자는 SQL Server의 서비스 사용자 설정과 같은 기본 디렉터리에 있어야 합니다.  
-* 새 자격 증명 모음에 키를 복원합니다(Restore-AzureKeyVaultKey Powershell cmdlet 사용 - 이전과 동일한 이름을 사용하여 키가 복원됨). 동일한 이름의 키가 이미 있는 경우 복원이 실패합니다.  
+* 새 자격 증명 모음에 키를 복원합니다(Restore-AzureKeyVaultKey Powershell cmdlet 사용하면 이전과 동일한 이름으로 키를 복원할 수 있습니다). 동일한 이름의 키가 이미 있는 경우 복원이 실패합니다.  
 * 이 새 자격 증명 모음을 사용할 수 있도록 SQL Server 서비스 사용자에게 권한을 부여합니다.  
 * 새 자격 증명 모음 이름이 반영되도록 데이터베이스 엔진에서 사용하는 SQL Server 자격 증명을 수정합니다(필요할 경우).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47649511"
 ### <a name="on-azure-key-vault"></a>Azure 주요 자격 증명 모음에서  
   
 **Azure 주요 자격 증명 모음에서 키 작업은 어떻게 작동하나요?**  
- 주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure 주요 자격 증명 모음 서비스 내에서 수행되며, 서비스의 보안에 의해 보호됩니다.  
+ 주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure Key Vault 서비스 내에서 수행되며, 서비스 보안에 의해 보호됩니다.  
   
  **키 URI는 무엇인가요?**  
  Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
@@ -238,17 +238,17 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 3018 | ErrorHttpQueryHeaderUpdateBufferLength | 응답 헤더를 쿼리할 때에 버퍼 길이를 업데이트할 수 없습니다.    
 3019 | ErrorHttpReadData | 네트워크 오류로 인해 응답 데이터를 읽을 수 없습니다. 
 3076 | ErrorHttpResourceNotFound | 키 이름을 알 수 없어 서버에서 404로 응답했습니다. 사용자 자격 증명 모음에 키 이름이 있는지 확인하세요.
-3077 | ErrorHttpOperationForbidden | 사용자에게 작업을 수행할 적절한 권한이 없어 403으로 응답했습니다. 지정된 작업에 대한 권한이 있는지 확인하세요. 최소한 커넥터가 제대로 작동하려면 'get, list, wrapKey, unwrapKey' 권한이 필요합니다.   
+3077 | ErrorHttpOperationForbidden | 사용자가 작업을 수행할 적절한 권한이 없어 서버가 403으로 응답했습니다. 지정된 작업에 대한 권한이 있는지 확인하세요. 최소한 커넥터가 제대로 작동하려면 'get, list, wrapKey, unwrapKey' 권한이 필요합니다.   
   
-이 테이블에 오류 코드가 표시되지 않는 경우, 다음과 같은 다른 이유로 오류가 발생할 수 있습니다.   
+이 테이블에 오류 코드가 표시되지 않는 경우 오류가 발생할 수 있는 일부 다른 이유는 다음과 같습니다.   
   
--   인터넷 액세스 권한이 없으며 Azure 주요 자격 증명 모음에 액세스할 수 없습니다. 인터넷 연결을 확인하세요.  
+-   인터넷 액세스 권한이 없으며 Azure Key Vault에 액세스할 수 없는 경우 인터넷 연결을 확인하세요.  
   
 -   Azure 주요 자격 증명 모음 서비스가 종료될 수 있습니다. 나중에 다시 시도하세요.  
   
 -   Azure 주요 자격 증명 모음 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 비대칭 키를 삭제했을 수 있습니다. 키를 복원하세요.  
   
--   "라이브러리를 로드할 수 없습니다." 오류가 표시되는 경우 실행 중인 SQL Server 버전에 적절한 재배포 가능한 Visual Studio C++의 최신 버전이 설치되어 있는지 확인하세요. 다음 표에서는 Microsoft 다운로드 센터에서 설치할 버전을 지정합니다.   
+-   "라이브러리를 로드할 수 없습니다"라는 오류가 표시되는 경우 실행 중인 SQL Server 버전에 따라 재배포 가능한 Visual Studio C++의 적절한 버전이 설치되어 있는지 확인합니다. 다음 표에서는 Microsoft 다운로드 센터에서 설치할 버전을 지정합니다.   
   
 SQL Server 버전  |재배포 가능 설치 링크    
 ---------|--------- 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceaaa60f305bceb51e6c0cfec45da926b1084a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824601"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543454"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 메서드 - CreateSSLCertificateBinding
   SSL 인증서 바인딩을 만듭니다.  
@@ -71,7 +71,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  지정한 IPAddress가 이 컴퓨터의 IPAddress와 일치하지 않는 경우  
   
-3.  지정한 IPAddress가 DHCP IPAddress(정기적으로 변경됨)인 경우 - 대신 와일드카드 IP 주소 사용(0.0.0.0)  
+3.  지정한 IPAddress가 DHCP IPAddress(정기적으로 변경됨)인 경우 대신 와일드카드 IP 주소(0.0.0.0)를 사용합니다.  
   
 4.  지정한 IPAddress가 URL 예약의 IP 주소와 일치하지 않고 와일드카드 또는 호스트 이름 URL 예약이 모두 없는 경우  
   

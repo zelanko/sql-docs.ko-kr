@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb82567b3d30955db1ccb7e8f3f1229e4ef3249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532775"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47843841"
 
 태스크  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스   
 ---------|---------|---------|---------
-1단계. 키 저장소에 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer PowerShell 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 선택한 키 저장소에 관련된 도구를 사용합니다. |[열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 사용자 계정 컨트롤 | 아니오     
+1단계. 키 저장소에 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer PowerShell 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 선택한 키 저장소에 관련된 도구를 사용합니다. |[열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 예 | 아니오     
 2단계.  PowerShell 환경을 시작하고 SqlServer PowerShell 모듈을 가져옵니다.  |   [PowerShell을 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    아니오    | 아니오         
-3단계.  서버 및 데이터베이스에 연결합니다.     |     [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    아니오     | 사용자 계정 컨트롤         
+3단계.  서버 및 데이터베이스에 연결합니다.     |     [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    아니오     | 예         
 4단계.  열 마스터 키의 위치에 대한 정보가 포함된 *SqlColumnMasterKeySettings* 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 키 저장소에 관련된 cmdlet을 사용합니다.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   아니오      | 아니오         
-5단계.  데이터베이스에 열 마스터 키에 대한 메타데이터를 만듭니다.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행하여 키 메타데이터를 만듭니다.|    아니오     |    사용자 계정 컨트롤
-6단계.  열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증합니다. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  사용자 계정 컨트롤   | 아니오         
-7단계.  새 열 암호화 키를 생성하고 열 마스터 키로 암호화하고 데이터베이스에 열 암호화 키 메타데이터를 만듭니다.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**참고:** 내부적으로 열 암호화 키를 생성하고 암호화하는 cmdlet 변형을 사용합니다.<br><br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 실행하여 키 메타데이터를 만듭니다.  | 사용자 계정 컨트롤 | 사용자 계정 컨트롤
+5단계.  데이터베이스에 열 마스터 키에 대한 메타데이터를 만듭니다.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행하여 키 메타데이터를 만듭니다.|    아니오     |    예
+6단계.  열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증합니다. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  예   | 아니오         
+7단계.  새 열 암호화 키를 생성하고 열 마스터 키로 암호화하고 데이터베이스에 열 암호화 키 메타데이터를 만듭니다.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**참고:** 내부적으로 열 암호화 키를 생성하고 암호화하는 cmdlet 변형을 사용합니다.<br><br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 실행하여 키 메타데이터를 만듭니다.  | 예 | 예
   
 
 ## <a name="windows-certificate-store-without-role-separation-example"></a>역할 구분이 없는 Windows 인증서 저장소(예)
@@ -95,7 +95,7 @@ $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 아래 스크립트는 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성에 대한 종단 간 예제입니다.
 
-이 예제는 Microsoft 소프트웨어 키 저장소 공급자를 사용하는 키 저장소를 활용합니다. 하드웨어 보안 모듈 등의 다른 저장소를 사용하도록 예제를 수정할 수 있습니다. 그러려면 장치에 대한 CNG를 구현하는 KSP(키 저장소 공급자)가 컴퓨터에 설치되어 있고 적절하게 작동해야 합니다. "Microsoft 소프트웨어 키 저장소 공급자"를 장치의 KSP 이름으로 바꿔야 합니다.
+이 예제는 Microsoft 소프트웨어 키 저장소 공급자를 사용하는 키 저장소를 활용합니다. 하드웨어 보안 모듈 등의 다른 저장소를 사용하도록 예제를 수정할 수 있습니다. 그러려면 장치에 대한 CNG를 구현하는 KSP(키 저장소 공급자)가 컴퓨터에 설치되어 있고 적절하게 작동해야 합니다. "Microsoft 소프트웨어 키 스토리지 공급 기업"을 디바이스의 KSP 이름으로 바꿔야 합니다.
 
 
 ```
@@ -191,11 +191,11 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 태스크  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스  
 ---------|---------|---------|---------
-1단계. 키 저장소에 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 키 저장소의 유형에 관련된 도구를 사용해야 합니다.     | [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    사용자 계정 컨트롤    | 아니오 
+1단계. 키 저장소에 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 키 저장소의 유형에 관련된 도구를 사용해야 합니다.     | [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    예    | 아니오 
 2단계.  PowerShell 세션을 시작하고 SqlServer 모듈을 가져옵니다.      |     [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | 아니오 | 아니오         
 3단계.  열 마스터 키의 위치에 대한 정보가 포함된 *SqlColumnMasterKeySettings* 개체를 만듭니다. *SqlColumnMasterKeySettings* 는 PowerShell의 메모리에 존재하는 개체입니다. 키 저장소에 관련된 cmdlet을 사용합니다. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | 아니오         | 아니오         
-4단계.  열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |사용자 계정 컨트롤|아니오         
-5단계.  열 암호화 키를 생성하고 열 마스터 키로 암호화하여 열 암호화 키의 암호화된 값을 생성합니다.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    사용자 계정 컨트롤    | 아니오        
+4단계.  열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |예|아니오         
+5단계.  열 암호화 키를 생성하고 열 마스터 키로 암호화하여 열 암호화 키의 암호화된 값을 생성합니다.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    예    | 아니오        
 6단계.  열 마스터 키의 위치(열 마스터 키의 공급자 이름 및 키 경로)와 열 암호화 키의 암호화된 값을 DBA에 제공합니다.  | 다음 예를 참조하십시오.        |   아니오      | 아니오         
 
 ### <a name="dba"></a>DBA 
@@ -206,10 +206,10 @@ DBA는 보안 관리자(위의 6단계)에게 받은 정보를 사용하여 데�
 ---------|---------|---------|---------
 1단계.  보안 관리자로부터 열 마스터 키의 위치와 열 암호화 키의 암호화된 값을 얻습니다. |다음 예를 참조하십시오. | 아니오 | 아니오
 2단계.  PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다.  | [PowerShell을 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | 아니오 | 아니오
-3단계.  서버 및 데이터베이스에 연결합니다. | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니오 | 사용자 계정 컨트롤
+3단계.  서버 및 데이터베이스에 연결합니다. | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니오 | 예
 4단계.  열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 메모리에 존재하는 개체입니다. | New-SqlColumnMasterKeySettings | 아니오 | 아니오
-5단계. 데이터베이스에 열 마스터 키에 대한 메타데이터를 만듭니다. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행하여 열 마스터 키 메타데이터를 만듭니다. | 아니오 | 사용자 계정 컨트롤
-6단계. 데이터베이스에 열 암호화 키 메타데이터를 만듭니다. | New-SqlColumnEncryptionKey<br>**참고:** DBA는 열 암호화 키 메타데이터만 만드는 cmdlet의 변형을 사용합니다.<br>내부적으로 cmdlet은 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 실행하여 열 암호화 키 메타데이터를 만듭니다. | 아니오 | 사용자 계정 컨트롤
+5단계. 데이터베이스에 열 마스터 키에 대한 메타데이터를 만듭니다. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**참고:** 내부적으로 cmdlet은 [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행하여 열 마스터 키 메타데이터를 만듭니다. | 아니오 | 예
+6단계. 데이터베이스에 열 암호화 키 메타데이터를 만듭니다. | New-SqlColumnEncryptionKey<br>**참고:** DBA는 열 암호화 키 메타데이터만 만드는 cmdlet의 변형을 사용합니다.<br>내부적으로 cmdlet은 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 실행하여 열 암호화 키 메타데이터를 만듭니다. | 아니오 | 예
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>역할 구분이 있는 Windows 인증서 저장소(예제)
 

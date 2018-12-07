@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542225"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 페이지를 매긴 보고서 항목으로, 다른 페이지를 매긴 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "50021947"
  검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)로 게시할 수 있습니다.  
   
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
- 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 집합, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 집합 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
+ 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결에 따라 달라집니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 집합 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
  보고서 파트의 데이터 집합은 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 집합일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 집합의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 포함된 데이터 집합 및 공유 데이터 집합에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
   

@@ -14,12 +14,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42fe1ede76c7be079601ea6701466d80e19ddf3e
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: fc50c8392232f96d1a64af124d2d5a773daf1d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525397"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "48264873"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48264873"
     ```  
   
     > [!IMPORTANT]  
-    >  이 데이터베이스를 복구하면 같은 이름의 두 분기 데이터베이스가 온라인 상태가 됩니다. 따라서 클라이언트가 이 두 데이터베이스 중 하나(일반적으로 가장 최근의 주 데이터베이스)에만 액세스할 수 있는지 확인해야 합니다.  
+    >  이 데이터베이스를 복구하면 같은 이름의 두 분기 데이터베이스가 온라인 상태가 됩니다. 따라서 클라이언트가 두 데이터베이스 중 하나(일반적으로 가장 최근의 주 데이터베이스)에만 액세스할 수 있는지 확인해야 합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   

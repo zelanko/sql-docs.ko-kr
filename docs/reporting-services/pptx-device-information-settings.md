@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394856"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 장치 정보 설정
   다음 표는 PPTX 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
@@ -37,12 +37,12 @@ ms.locfileid: "47732301"
 |**PageHeight**|보고서에 대해 설정할 페이지 높이(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **11in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**PageWidth**|보고서에 대해 설정할 페이지 너비(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **8.5in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**StartPage**|렌더링할 보고서의 첫 페이지입니다. **0** 값은 모든 페이지가 렌더링됨을 나타냅니다. 기본값은 **1**입니다.|  
-|**UseReportPageSize**|UseReportPageSize =**false** 인 경우 기본 슬라이드 크기는 13.333” x 7.5”(16:9 가로 세로 비율)의 PowerPoint의 기본값입니다. UseReportPageSize =true인 경우 기본 슬라이드 크기는 보고서의 정의 페이지 크기입니다.<br /><br /> 기본값은 **false**입니다.<br /><br /> PageWidth 및 PageHeight 설정은 기본 너비와 높이를 재정의합니다.|  
+|**UseReportPageSize**|UseReportPageSize =**false**인 경우 기본 슬라이드 크기는 13.333" x 7.5"(16:9 가로 세로 비율)의 PowerPoint의 기본값입니다. UseReportPageSize =true인 경우 기본 슬라이드 크기는 보고서의 정의 페이지 크기입니다.<br /><br /> 기본값은 **false**입니다.<br /><br /> PageWidth 및 PageHeight 설정은 기본 너비와 높이를 재정의합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

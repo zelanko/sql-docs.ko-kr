@@ -1,22 +1,22 @@
 ---
 title: SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가 | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813026"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398354"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server Reporting Services 또는 Power BI Report Server에서 보고서를 표시합니다.
 
@@ -46,19 +46,19 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
     ![보고서 뷰어 웹 파트를 추가합니다.](media/sharepoint-report-viewer-web-part.png)
 
-    이는 처음에 오류와 함께 나타날 수 있습니다. 오류는 기본 보고서 서버 URL이 *https://localhost*로 설정되어 있으며 해당 위치에서 사용할 수 없기 때문입니다.
+    처음에 오류가 표시될 수 있습니다. 오류는 기본 보고서 서버 URL이 *https://localhost*로 설정되어 있으며 해당 위치에서 사용할 수 없기 때문입니다.
 
 ## <a name="configure-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 구성
 
-특정 보고서를 가리키도록 웹 파트를 구성하려면 다음을 수행합니다.
+특정 보고서를 가리키도록 웹 파트를 구성하려면 다음 단계를 수행합니다.
 
 1. SharePoint 페이지를 편집할 때 웹 파트의 오른쪽 위에 있는 아래쪽 화살표를 선택하고 **웹 파트 편집**을 선택합니다.
 
     ![웹 파트 드롭다운 목록에서 웹 페이지를 편집합니다.](media/sharepoint-edit-web-part.png)
 
-2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. 이는 *https://myrsserver/reportserver*과 같이 표시됩니다.
+2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. URL은 *https://myrsserver/reportserver*와 같아야 합니다.
 
-3. 웹 파트 내에서 표시하려는 보고서의 경로 및 이름을 입력합니다. 이는 */AdventureWorks Sample Reports/Company Sales*와 유사합니다. 이 예제에서는 보고서 *Company Sales*는 *AdventureWorks Sample Reports*라는 폴더에 있습니다.
+3. 웹 파트 내에서 표시하려는 보고서의 경로 및 이름을 입력합니다. */AdventureWorks Sample Reports/Company Sales*와 유사합니다. 이 예제에서는 보고서 *Company Sales*는 *AdventureWorks Sample Reports*라는 폴더에 있습니다.
 
 4. 보고서에 매개 변수가 필요한 경우 보고서 서버 URL 및 보고서의 이름을 제공한 후 **매개 변수** 섹션 내에서 **매개 변수 로드**를 선택합니다.
 

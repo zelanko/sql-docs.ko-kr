@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602868"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408770"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

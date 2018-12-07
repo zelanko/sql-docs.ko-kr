@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 89ab3aab8806c32c15496a3544e5fc660368d511
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604353"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394757"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>SQL Server 2005, 2008 또는 2008R2에서 업그레이드하나요?
 
@@ -35,7 +35,7 @@ ms.locfileid: "51604353"
 >  SQL Server 2008 및 2008r2에 대한 지원 연장이 2019년 7월 9일에 끝납니다. 2019년 7월 9일 후에도 SQL Server 2008 또는 2008R2를 실행하는 경우 더 이상 보안 업데이트를 수신할 수 없습니다. 자세한 내용은 [SQL Server 2008에 대한 새 옵션 발표](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/) 블로그에서 찾을 수 있습니다.  
   
 ## <a name="choose-your-upgrade-option"></a>업그레이드 옵션 선택  
-관계형 데이터베이스를 이전 버전의 SQL Server에서 업그레이드하는 경우 Microsoft 플랫폼의 관계형 저장소에 대한 옵션은 다음과 같습니다.  
+관계형 데이터베이스를 이전 버전의 SQL Server에서 업그레이드하는 경우 Microsoft 플랫폼의 관계형 스토리지에 대한 옵션은 다음과 같습니다.  
   
 이러한 옵션에 대한 보다 포괄적인 분석을 보려면 [여기를 클릭](https://sql05upgrade.azurewebsites.net/)하세요.  
   

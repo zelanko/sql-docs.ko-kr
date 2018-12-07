@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532175"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삭제된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ## <a name="error-handling"></a>오류 처리  
- TRY…CATCH 구문에 문을 지정하여 DELETE 문에 대한 오류 처리를 구현할 수 있습니다.  
+ TRY…CATCH 구문에 명령문을 지정하여 DELETE 문에 대한 오류 처리를 구현할 수 있습니다.  
   
  DELETE 문이 트리거를 위반하거나 FOREIGN KEY 제약 조건이 있는 다른 테이블의 데이터에 의해 참조되는 행을 제거하려고 하면 DELETE 문은 실패할 수 있습니다. DELETE가 여러 행을 제거하는 경우 제거되는 행 중 하나가 트리거 또는 제약 조건을 위반하면 이 문이 취소되고 오류가 반환되며 행이 제거되지 않습니다.  
   

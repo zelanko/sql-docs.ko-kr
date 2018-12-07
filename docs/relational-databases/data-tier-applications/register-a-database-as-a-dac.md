@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513231"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813996"
   
 2.  **데이터베이스** 노드를 확장합니다.  
   
-3.  등록할 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **데이터 계층 응용 프로그램으로 등록…** 을 선택합니다.  
+3.  등록할 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음, **데이터 계층 애플리케이션으로 등록...** 을 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813996"
  [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. *SchemaName ***.*** ObjectName*은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **< 이전** - 입력한 값을 변경하기 위해 **속성 설정** 페이지로 돌아갑니다.  
   

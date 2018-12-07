@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717331"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407350"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>클러스터의 Integration Services(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 또는 클러스터 인식형 서비스가 아니며 클러스터 노드 간 장애 조치(failover) 기능을 지원하지 않으므로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클러스터링이 권장되지 않습니다. 따라서 클러스터형 환경에서는 클러스터의 노드마다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하고 독립 실행형 서비스로 시작해야 합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "47717331"
   
 4.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **리소스**를 클릭합니다.  
   
-5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형** 으로 **"일반 서비스"** 를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
+5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형**으로 **"일반 서비스"** 를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
   
 6.  **가능한 소유자** 페이지에서 클러스터의 노드를 리소스의 가능한 소유자로 추가하거나 제거합니다. **다음**을 클릭합니다.  
   

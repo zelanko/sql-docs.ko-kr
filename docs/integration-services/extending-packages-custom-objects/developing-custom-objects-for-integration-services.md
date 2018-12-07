@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2a69f590c6ee1cdc95fc13b3a07fa17fb04feeab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528910"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족하지 못하는 경우 다음을 비롯한 여러 가지 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "51640210"
 ## <a name="providing-a-custom-user-interface"></a>사용자 지정 사용자 인터페이스 제공  
  사용자 지정 개체의 사용자가 해당 개체의 속성을 구성할 수 있도록 하려면 사용자 지정 사용자 인터페이스도 개발해야 합니다. 사용자 지정 사용자 인터페이스가 반드시 필요하지는 않은 경우라도 기본 편집기보다 더 사용자에게 친숙한 인터페이스를 제공하기 위해 사용자 지정 사용자 인터페이스를 만들 수 있습니다.  
   
- 사용자 지정 사용자 인터페이스 프로젝트 또는 어셈블리에는 일반적으로 두 개의 클래스가 포함됩니다. 하나는 특정 사용자 지정 개체 유형의 사용자 인터페이스에 대한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인터페이스를 구현하는 클래스이고 다른 하나는 이 클래스에서 사용자로부터 정보를 수집하기 위해 표시하는 Windows Form입니다. 구현하는 인터페이스에는 단 몇 개의 메서드만 포함되므로 사용자 지정 사용자 인터페이스는 어렵지 않게 개발할 수 있습니다.  
+ 사용자 지정 사용자 인터페이스 프로젝트 또는 어셈블리에는 일반적으로 두 개의 클래스가 있습니다(특정 유형의 사용자 지정 개체의 사용자 인터페이스에 대한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인터페이스를 구현하는 클래스 및 이 클래스에서 사용자로부터 정보를 수집하기 위해 표시하는 Windows Form). 구현하는 인터페이스에는 단 몇 개의 메서드만 포함되므로 사용자 지정 사용자 인터페이스는 어렵지 않게 개발할 수 있습니다.  
   
 > [!NOTE]  
 >  대부분의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로그 공급자에는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>를 구현하며 **구성** 텍스트 상자를 사용 가능한 연결 관리자의 필터링된 드롭다운 목록으로 바꾸는 사용자 지정 사용자 인터페이스가 있습니다. 그러나 사용자 지정 로그 공급자의 사용자 지정 사용자 인터페이스는 이 릴리스의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 구현되어 있지 않습니다. 따라서 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 속성 값을 지정해도 아무 영향이 없습니다.  

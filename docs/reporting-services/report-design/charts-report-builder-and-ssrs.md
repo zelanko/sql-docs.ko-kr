@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc7dac6572ac10d6526fbf4052a046a2093bbd52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507607"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
 차트 데이터 영역을 사용하는 방법에 대해 읽고 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 읽는 사용자가 한 눈에 집계된 많은 양의 데이터를 이해할 수 있도록 합니다.  

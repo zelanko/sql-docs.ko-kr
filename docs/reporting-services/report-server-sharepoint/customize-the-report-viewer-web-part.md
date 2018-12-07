@@ -1,26 +1,26 @@
 ---
 title: 보고서 뷰어 웹 파트 사용자 지정 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411640"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-보고서 뷰어 웹 파트를 사용하여 SharePoint 통합용으로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 표시할 수 있는 보고서에는 보고서 정의 파일(.rdl)과 보고서 작성기 보고서가 있습니다. 보고서는 자동으로 보고서 뷰어 웹 파트의 새 페이지에서 열리지만 특정 보고서가 항상 해당 페이지에 표시되게 하려면 기존 웹 페이지 또는 사이트에 보고서 뷰어 웹 파트를 추가할 수도 있습니다.
+보고서 뷰어 웹 파트를 사용하여 SharePoint 통합용으로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 표시할 수 있는 보고서에는 보고서 정의 파일(.rdl)과 보고서 작성기 보고서가 있습니다. 보고서는 새 페이지의 보고서 뷰어 웹 파트에서 자동으로 열립니다. 또한 해당 페이지에서 특정 보고서가 항상 표시되기를 원하는 경우 기존 웹 페이지 또는 사이트에 보고서 뷰어 웹 파트를 추가할 수 있습니다.
 
 > [!NOTE]
 > 이름은 같지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 통해 설치된 보고서 뷰어 웹 파트는 RSWebParts.cab 파일에 포함된 보고서 뷰어 웹 파트와 다릅니다. 이 항목의 지침은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 통해 설치되는 보고서 뷰어 웹 파트에만 해당됩니다.
@@ -41,7 +41,7 @@ ms.locfileid: "50021527"
   
 ### <a name="change-default-properties"></a>기본 속성 변경
 
- 보고서 뷰어 웹 파트에는 요청 시 라이브러리나 폴더에서 보고서를 여는 데 적합한 기본 속성이 있습니다. 기본적으로 사용 가능한 모든 컨트롤이 도구 모음에 표시되며 높이와 너비는 웹 페이지에서 사용 가능한 모든 공간을 사용하도록 설정됩니다. 기본 속성을 수정하려면 **사이트 설정**을 통해 웹 파트를 사용자 지정합니다.  
+ 보고서 뷰어 웹 파트에는 요청 시 라이브러리나 폴더에서 보고서를 여는 데 적합한 기본 속성이 있습니다. 기본적으로 사용 가능한 모든 컨트롤이 도구 모음에 표시됩니다. 높이 및 너비는 웹 페이지의 모든 사용 가능한 공간을 사용하도록 설정됩니다. 기본 속성을 수정하려면 **사이트 설정**을 통해 웹 파트를 사용자 지정합니다.  
   
 1.  **사이트 동작** 메뉴에서 **사이트 설정**을 클릭합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50021527"
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>웹 페이지에 포함된 보고서 뷰어 사용자 지정
 
- 속성을 설정하여 웹 페이지에 보고서 뷰어를 맞출 수 있습니다. 보고서 뷰어는 속해 있는 페이지와 동일한 스타일 및 색을 사용할 수 있습니다. 도구 모음, 문서 구조 및 매개 변수 영역의 전체 또는 일부를 숨겨 할당된 공간 내에서 보고서 보기 영역을 최대화할 수 있습니다. 보고서는 항상 보고서가 생성될 때 정의된 스타일을 사용합니다. 보고서가 SharePoint 라이브러리에 게시된 후에는 보고서 모양을 사용자 지정할 수 없습니다.  
+ 속성을 설정하여 웹 페이지에 보고서 뷰어를 맞출 수 있습니다. 보고서 뷰어는 속해 있는 페이지와 동일한 스타일 및 색을 사용할 수 있습니다. 도구 모음, 문서 구조 및 매개 변수 영역의 전체 또는 일부를 숨겨 할당된 공간 내에서 보고서 보기 영역을 최대화할 수 있습니다. 보고서는 항상 만들 때 정의한 스타일을 사용합니다. SharePoint 라이브러리에 게시한 후에 보고서 모양을 사용자 지정할 수 없습니다.  
   
  웹 페이지에 보고서 뷰어 웹 파트를 포함하는 경우 **보고서 URL** 속성을 특정 보고서로 설정해야 합니다. 그렇게 하지 않으면 보고서 뷰어에 보고서 연결에 대한 지침이 표시됩니다. 지침을 사용자 지정하거나 제거할 수는 없습니다.  
   

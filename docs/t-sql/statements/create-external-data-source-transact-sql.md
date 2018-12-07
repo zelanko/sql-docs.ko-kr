@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e864e1a5d3eb605fc7db462b1a685ce2e44e4ea5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506411"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -88,25 +88,25 @@ WITH
 GO
 
 
-
-
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -158,7 +158,7 @@ NameNode_URI: Hadoop 클러스터 Namenode의 컴퓨터 이름 또는 IP 주소�
 Hadoop을 포함한 Azure Blob Storage의 경우 Azure Blob Storage에 연결하기 위한 URI를 지정합니다.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb [s]: Azure Blob Storage에 대한 프로토콜을 지정합니다. [s]는 선택 사항이며 보안 SSL 연결을 지정합니다. SQL Server에서 보낸 데이터는 SSL 프로토콜을 통해 안전하게 암호화됩니다. 'wasb' 대신 'wasbs'를 사용할 것을 적극 권장합니다. 참고로 위치에 wasb[s] 대신에 asv[s]를 사용할 수 있습니다. asv[s] 구문은 더 이상 사용되지 않으며 후속 릴리스에서 제거될 예정입니다.  
-container: Azure Blob Storage 컨테이너의 이름을 지정합니다. 도메인의 저장소 계정의 루트 컨테이너를 지정하려면 컨테이너 이름 대신에 도메인 이름을 사용합니다. 루트 컨테이너는 읽기 전용이므로 데이터를 컨테이너에 다시 쓸 수 없습니다.  
+container: Azure Blob Storage 컨테이너의 이름을 지정합니다. 도메인의 스토리지 계정의 루트 컨테이너를 지정하려면 컨테이너 이름 대신에 도메인 이름을 사용합니다. 루트 컨테이너는 읽기 전용이므로 데이터를 컨테이너에 다시 쓸 수 없습니다.  
 account_name: Azure Storage 계정의 정규화된 도메인 이름(FQDN)입니다.  
 예: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -229,7 +229,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Hadoop 리소스 관리자 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 MapReduce와 함께 Hadoop의 계산 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하기 위해 비용 기반 결정을 내릴 수 있습니다. 조건자 푸시 다운이라는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킬 수 있습니다.  
+ Hadoop 리소스 관리자 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 MapReduce와 함께 Hadoop의 컴퓨팅 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하기 위해 비용 기반 결정을 내릴 수 있습니다. 조건자 푸시 다운이라는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킬 수 있습니다.  
   
  이 기능을 지정하지 않으면 Hadoop에 대한 푸시 계산은 PolyBase 쿼리에 대해 비활성화됩니다.  
  
@@ -498,7 +498,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

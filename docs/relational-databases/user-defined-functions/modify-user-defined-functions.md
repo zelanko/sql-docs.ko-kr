@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 492bce94e029f432a7a36b7e60d81435b6b1e0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613741"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535577"
 ---
 # <a name="modify-user-defined-functions"></a>사용자 정의 함수 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47613741"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  ALTER FUNCTION을 사용하여 다음 동작을 수행할 수 없습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "47613741"
   
 5.  쿼리 창에서 ALTER FUNCTION 문을 필요에 따라 변경합니다.  
   
-6.  **파일** 메뉴에서 **저장***function_name*을 클릭합니다.  
+6.  **파일** 메뉴에서 _function_name_ **저장**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

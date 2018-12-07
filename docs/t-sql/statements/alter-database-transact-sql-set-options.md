@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545449"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -1079,7 +1079,7 @@ AFTER 트리거의 직접 재귀적 실행이 허용되지 않습니다. AFTER �
   
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.  
   
@@ -1910,7 +1910,7 @@ AFTER 트리거의 직접 재귀적 실행이 허용되지 않습니다. AFTER �
   
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.  
   
@@ -2638,7 +2638,7 @@ AFTER 트리거의 직접 재귀적 실행이 허용되지 않습니다. AFTER �
   
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.  
   

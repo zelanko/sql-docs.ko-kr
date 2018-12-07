@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539697"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51675342"
 |**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
 |**succeeded**|감사 이벤트를 트리거하는 동작의 사용 권한 검사가 성공했는지 아니면 실패했는지 여부를 나타냅니다. |**bit**<br /> –1 = 성공, <br />0 = 실패|예|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|아니오|  
-|**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />–1 = True, <br />0 = False|아니오|  
+|**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />- 1 = True, <br />0 = False|아니오|  
 |**session_id**|이벤트가 발생한 세션의 ID입니다.|**int**|예|  
 |**server_principal_id**|동작을 수행한 로그인 컨텍스트의 ID입니다.|**int**|예|  
 |**database_principal_id**|동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다.|**int**|아니오|  

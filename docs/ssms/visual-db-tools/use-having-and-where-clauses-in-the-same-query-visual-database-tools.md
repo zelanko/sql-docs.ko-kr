@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537299"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ HAVING 절은 WHERE 절과 비슷하지만 그룹 전체 즉, 그룹을 나타�
   
 -   그런 다음 결과 집합의 행에 HAVING 절이 적용됩니다. HAVING 조건에 맞는 그룹만 쿼리 출력에 표시됩니다. 집계 함수나 GROUP BY 절에도 나타나는 열에만 HAVING 절을 적용할 수 있습니다.  
   
-예를 들어 `titles` 및 `publishers` 테이블을 조인하여 여러 출판사의 평균 도서 가격을 표시하는 쿼리를 만드는 경우를 생각해 볼 수 있습니다. 캘리포니아 주에 있는 출판사 등과 같이 특정 출판사 집합에 대해서만 평균 가격을 표시하고, 그 중에서도 평균 가격이 $10.00 이상인 경우로만 결과를 제한하려고 합니다.  
+예를 들어 `titles` 및 `publishers` 테이블을 조인하여 여러 출판사의 평균 도서 가격을 표시하는 쿼리를 만드는 경우를 생각해 볼 수 있습니다. 캘리포니아 주에 있는 출판사 등과 같이 특정 출판사 세트에 대해서만 평균 가격을 표시하려는 경우 그 중에서도 평균 가격이 $10.00 이상인 경우로만 결과를 제한하려고 합니다.  
   
 평균 가격을 계산하기 전에 캘리포니아에 있지 않은 출판사는 모두 제외하도록 WHERE 절을 사용하여 첫 번째 조건을 설정할 수 있습니다. 두 번째 조건은 데이터를 그룹화하고 요약한 결과를 기반으로 해야 하므로 이 조건에는 HAVING 절이 필요합니다. 결과 SQL 문은 다음과 같습니다.  
   

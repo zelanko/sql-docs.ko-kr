@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602543"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513768"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 
@@ -114,13 +114,13 @@ ms.locfileid: "51602543"
   
 11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. 계속하려면 **다음** 을 클릭합니다. 
   
-     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다. 
+     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다. 
   
-     **인스턴스 루트 디렉터리** — 기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다. 
+     **인스턴스 루트 디렉터리** - 기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다. 
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다. 
   
-     **설치된 인스턴스** — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 
+     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 
   
 12. **디스크 공간 요구 사항** 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다. 
   
@@ -163,13 +163,13 @@ ms.locfileid: "51602543"
   
 9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. 계속하려면 **다음** 을 클릭합니다. 
   
-     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다. 
+     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다. 
   
-     **인스턴스 루트 디렉터리** — 준비 단계에서 지정한 디렉터리가 사용되고 이 단계에서 수정할 수 없습니다. 
+     **인스턴스 루트 디렉터리** - 준비 단계에서 지정한 디렉터리가 사용되고 이 단계에서 수정할 수 없습니다. 
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다. 
   
-     **설치된 인스턴스** — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 
+     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 
   
 10. 이 문서의 나머지 부분에 대한 워크플로는 준비 단계에서 선택한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다. 
   
@@ -187,7 +187,7 @@ ms.locfileid: "51602543"
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
-    - 보안 모드 — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 Windows 인증 또는 혼합 모드 인증을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다. 
+    - 보안 모드 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다. 
   
          장치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)을 참조하세요. 
   

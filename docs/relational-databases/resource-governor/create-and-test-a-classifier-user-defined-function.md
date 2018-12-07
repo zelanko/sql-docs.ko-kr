@@ -15,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53884f814f60ff208dd066daf6c396a819e0a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e086006cf53efe9a462fe9d21ff36377915c92b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398326"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47724441"
     go  
     ```  
   
-4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하십시오.  
+4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하세요.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 날짜 및 시간 데이터 형식 및 함수의 확장된 집합이 도입되었습니다. 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.  
@@ -269,7 +269,7 @@ ms.locfileid: "47724441"
         >  이러한 최선의 구현 방법을 따르는 것이 좋습니다. 문제가 발생하여 최선의 구현 방법을 따를 수 없는 경우에는 Microsoft 지원 센터에 문의하여 향후 발생할 수 있는 문제를 예방하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

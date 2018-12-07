@@ -13,12 +13,12 @@ ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6ebccd038bd2dc96f540e17c9ad67a135ec6ceb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400608"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
 이 항목에서는 **데이터베이스 참조 추가** 대화 상자에서 수행할 수 있는 절차에 대해 설명합니다.  

@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542371"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   FileTable에는 FILESTREAM 열이 포함되어 있으므로 FileTable에는 유효한 FILESTREAM 파일 그룹이 있어야 합니다. 필요에 따라 **CREATE TABLE** 명령의 일부로 유효한 FILESTREAM 파일 그룹을 지정하여 FileTable을 만들 수 있습니다. 파일 그룹을 지정하지 않으면 FileTable에는 데이터베이스의 기본 FILESTREAM 파일 그룹이 사용됩니다. 데이터베이스에 FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
   
--   **TABLE…AS FILETABLE CREATE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
+-   **CREATE TABLE...AS FILETABLE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
   
 -   **tempdb** 데이터베이스나 다른 시스템 데이터베이스에는 FileTable을 만들 수 없습니다.  
   

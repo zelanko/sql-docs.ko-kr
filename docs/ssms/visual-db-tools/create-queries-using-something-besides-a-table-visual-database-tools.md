@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504079"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ FROM sales
 쿼리에 뷰를 추가하는 방법에 대한 자세한 내용은 [쿼리에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>테이블 대신 쿼리 사용  
-쿼리에서 행을 선택할 수 있습니다. 예를 들어, 공동으로 저술한 책(저자가 두 명 이상인 경우)의 제목과 ID를 검색하는 쿼리를 이미 작성했다고 가정하면 SQL은 다음과 같습니다.  
+쿼리에서 행을 선택할 수 있습니다. 예를 들어 공동으로 저술한 책(저자가 두 명 이상인 경우)의 제목과 ID를 검색하는 쿼리를 이미 작성했다고 가정하면 SQL은 다음과 같습니다.  
   
 ```  
 SELECT   

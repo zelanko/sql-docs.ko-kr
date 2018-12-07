@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506336"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
 3. 다음 구문을 유용성을 생각해 보세요.
   -   조건자로 사용되는 함수
   -   와일드카드 검색
-  -   칼럼 형식 데이터를 기반으로 하는 복잡한 식 - 인덱싱할 수 있는 지속형 계산 열 대신 만들 필요가 있는지 평가
+  -   칼럼 형식 데이터를 기반으로 하는 복잡한 식 - 인덱싱할 수 있는 지속형 컴퓨팅 열 대신 만들 필요가 있는지 평가
 
 > [!NOTE] 
 > 위의 모든 작업을 프로그래밍 방식으로 수행할 수 있습니다.

@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dab18fa010b0bc5d85ebeb16f00bcbce49921786
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: fa36b331f42835a4b1bf6b25651a59669cb56ac9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215931"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390496"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

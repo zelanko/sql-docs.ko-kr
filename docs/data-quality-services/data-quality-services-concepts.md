@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738461"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617120"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
 
@@ -61,7 +60,7 @@ ms.locfileid: "47738461"
   
  **데이터 일치**  
   
- 일치 프로세스에서는 데이터 관리자가 데이터를 비교하여 중복 제거 프로세스를 통해 비슷하지만 약간 다른 데이터를 정렬할 수 있습니다. DQS에서는 기술 자료에 포함된 일치 규칙을 기반으로 중복 제거를 수행합니다. 데이터 관리자는 데이터 품질 프로젝트 내에서 일치 프로세스에 대한 매개 변수를 지정합니다. 자세한 내용은 [데이터 일치](../data-quality-services/data-matching.md)을 참조하세요.  
+ 일치 프로세스에서는 데이터 관리자가 데이터를 비교하여 중복 제거 프로세스를 통해 비슷하지만 약간 다른 데이터를 정렬할 수 있습니다. DQS에서는 기술 자료에 포함된 일치 규칙을 기반으로 중복 제거를 수행합니다. 데이터 관리자는 데이터 품질 프로젝트 내에서 일치 프로세스에 대한 매개 변수를 지정합니다. 자세한 내용은 [Data Matching](../data-quality-services/data-matching.md)을 참조하세요.  
   
  **프로파일링 및 알림**  
   

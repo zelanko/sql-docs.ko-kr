@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e1f999908a0cf5ed006c651da31701cb4aa93ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772181"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617453"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 
@@ -33,7 +32,7 @@ ms.locfileid: "47772181"
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보내려면 기술 자료를 내보낼 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `exportkbs` 매개 변수를 사용하여 DQSInstaller.exe를 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일로 모든 기술 자료를 내보내려면:  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "47772181"
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거하는 동안 모든 기술 자료를 DQS 백업 파일로 내보내려면 기술 자료를 내보낼 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `uninstall` 매개 변수를 사용하여 DQSInstaller.exe를 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일로 모든 기술 자료를 내보내고 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]의 설치를 해제하려면:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -54,7 +53,7 @@ ms.locfileid: "47772181"
  기술 자료를 가져올 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `importkbs` 매개 변수를 사용하여 DQSInstaller.exe 파일을 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일에서 모든 기술 자료를 가져오려면:  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 에 가져오려는 기술 자료와 이름이 같은 기술 자료가 이미 있는 경우 가져온 기술 자료의 이름에 밑줄(_)과 함께 1부터 시작되는 정수 값이 추가됩니다. 예를 들어 "CompanyName" 도메인이 중복된 경우 가져온 도메인 이름은 "CompanyName_1"이 됩니다.  

@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -16,18 +16,18 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bcb9137498f43dd746b80ce8ba23ce1c4207fa6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5650417567f41581c42413bac9169e591d59a086
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033150"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511493"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Replica** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터를 포함합니다. 이 개체는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서만 유효합니다.  
   
-|카운터 이름|설명|표시 대상|  
+|카운터 이름|설명|표시 대상...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|마지막 1초 동안 보조 데이터베이스에 대해 보조 복제본에서 받은 FILESTREAM 데이터의 양입니다.|보조 복제본|  
 |**Log Apply Pending Queue**|데이터베이스 복제본에 적용되기를 기다리고 있는 로그 블록 수입니다.|보조 복제본|

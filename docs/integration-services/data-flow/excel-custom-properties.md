@@ -11,12 +11,12 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5217d0b8e3bd9e786e8afa18b2561f5e154ca938
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b000870562295381c9c61d54327da4ae7059a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639320"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542986"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -47,8 +47,8 @@ ms.locfileid: "51639320"
   
 |속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer(열거형)|대상에서 해당 대상 데이터베이스에 액세스하는 방법을 지정하는 값입니다.<br /><br /> 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **OpenRowset** (0) - 테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수를 사용한 OpenRowset** (1)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **FastLoad를 사용한 OpenRowset** (3)—테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수와 FastLoad를 사용한 OpenRowset** (4)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **SQL 명령** (2)—SQL 문을 제공합니다.|  
-|CommandTimeOut|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 참고: 이 속성은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|AccessMode|Integer(열거형)|대상에서 해당 대상 데이터베이스에 액세스하는 방법을 지정하는 값입니다.<br /><br /> 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **OpenRowset**(0) - 테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수를 사용한 OpenRowset**(1) - 테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **FastLoad를 사용한 OpenRowset**(3) - 테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수와 FastLoad를 사용한 OpenRowset**(4) - 테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **SQL 명령**(2) - SQL 문을 제공합니다.|  
+|CommandTimeout|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 참고: 이 속성은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |FastLoadKeepIdentity|Boolean|데이터를 로드할 때 ID 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나를 사용할 경우에만 사용할 수 있습니다. 이 속성의 기본값은 **False**입니다.|  
 |FastLoadKeepNulls|Boolean|데이터를 로드할 때 Null 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나와 함께 사용해야 합니다. 이 속성의 기본값은 **False**입니다.|  
 |FastLoadMaxInsertCommitSize|정수|Excel 대상에서 빠른 로드 작업을 수행하는 동안 커밋을 시도하는 일괄 처리 크기를 지정하는 값입니다. 기본값은 **2147483647**입니다. **0** 값은 모든 행이 처리된 후의 단일 커밋 작업을 나타냅니다.|  

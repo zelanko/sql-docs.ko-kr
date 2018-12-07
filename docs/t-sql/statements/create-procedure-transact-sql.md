@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512125"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -374,7 +374,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
 -   BEGIN/COMMIT TRANSACTION을 사용하여 명시적 트랜잭션을 사용하고 트랜잭션을 되도록 짧게 유지합니다. 트랜잭션이 길면 레코드 잠금 시간이 길어지고 교착 상태가 발생할 확률이 높아집니다.  
   
--   프로시저 내의 오류 처리에 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH 기능을 사용합니다. TRY…CATCH는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록을 캡슐화할 수 있습니다. 따라서 성능 오버헤드가 줄어들 뿐만 아니라 대폭 줄어든 프로그래밍과 함께 오류 보고가 더욱 정확해집니다.  
+-   프로시저 내의 오류 처리에 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH 기능을 사용합니다. TRY...CATCH는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전체 블록을 캡슐화할 수 있습니다. 따라서 성능 오버헤드가 줄어들 뿐만 아니라 대폭 줄어든 프로그래밍과 함께 오류 보고가 더욱 정확해집니다.  
   
 -   프로시저 본문에서 CREATE TABLE 또는 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 참조하는 모든 테이블 열에 DEFAULT 키워드를 사용합니다. 이렇게 하면 Null 값을 허용하지 않는 열에 NULL이 전달되지 않습니다.  
   
@@ -498,7 +498,7 @@ GO
 |[기본 구문](#BasicSyntax)|CREATE PROCEDURE|  
 |[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 테이블 반환 매개 변수 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[저장 프로시저를 사용하여 데이터 수정](#Modify)|UPDATE|  
-|[오류 처리](#Error)|TRY…CATCH|  
+|[오류 처리](#Error)|TRY...CATCH|  
 |[프로시저 정의 난독 처리](#Encrypt)|WITH ENCRYPTION|  
 |[프로시저의 다시 컴파일 강제 수행](#Recompile)|WITH RECOMPILE|  
 |[보안 컨텍스트 설정](#Security)|EXECUTE AS|  
@@ -797,8 +797,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> 오류 처리  
  이 섹션의 예에서는 저장 프로시저가 실행될 때 발생할 수 있는 오류를 처리하는 방법을 보여 줍니다.  
   
-#### <a name="j-using-trycatch"></a>10. TRY…CATCH 사용  
- 다음 예에서는 TRY…CATCH 구문을 통해 저장 프로시저를 실행하는 동안 발생한 오류 정보를 반환합니다.  
+#### <a name="j-using-trycatch"></a>10. TRY...CATCH 사용  
+ 다음 예에서는 TRY...CATCH 구문을 사용하여 저장 프로시저를 실행하는 동안 발생한 오류 정보를 반환합니다.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

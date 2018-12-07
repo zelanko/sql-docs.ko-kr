@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510065"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW는 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드하는 데 사용할 수 있는 3가지 구성 요소 집합으로 구성됩니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "51639580"
 ## <a name="components"></a>구성 요소  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW에는 다음 구성 요소가 포함되어 있습니다.  
   
--   **SAP BW 원본**- SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출할 수 있도록 지원하는 데이터 흐름 원본 구성 요소입니다.  
+-   **SAP BW 원본** - SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출할 수 있도록 지원하는 데이터 흐름 원본 구성 요소입니다.  
   
--   **SAP BW 대상**- SAP BW 대상은 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드할 수 있도록 지원하는 데이터 흐름 대상 구성 요소입니다.  
+-   **SAP BW 대상** - SAP BW 대상은 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드할 수 있도록 지원하는 데이터 흐름 대상 구성 요소입니다.  
   
--   **SAP BW 연결 관리자**- SAP BW 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템으로 연결합니다.  
+-   **SAP BW 연결 관리자** - SAP BW 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템으로 연결합니다.  
   
  SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](https://go.microsoft.com/fwlink/?LinkId=301897)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   

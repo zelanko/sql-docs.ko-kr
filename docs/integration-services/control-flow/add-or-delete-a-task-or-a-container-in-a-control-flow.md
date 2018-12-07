@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640079"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523110"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
   제어 흐름 디자이너에서 작업 중일 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 도구 상자에는 패키지의 제어 흐름을 작성하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크가 나열됩니다. 도구 상자에 대한 자세한 내용은 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)를 참조하십시오.  
@@ -80,7 +80,7 @@ ms.locfileid: "51640079"
 5.  **속성** 창에서 속성 값을 업데이트합니다.  
   
     > [!NOTE]  
-    >  대부분의 속성은 입력란에 직접 값을 입력하거나 목록에서 값을 선택하는 방법으로 설정할 수 있습니다. 그러나 일부 속성은 보다 복잡하므로 사용자 지정 속성 편집기를 사용해야 합니다. 이러한 속성을 설정하려면 입력란을 클릭하고 작성 **(…)** 단추를 클릭하여 사용자 지정 편집기를 엽니다.  
+    >  대부분의 속성은 입력란에 직접 값을 입력하거나 목록에서 값을 선택하는 방법으로 설정할 수 있습니다. 그러나 일부 속성은 보다 복잡하므로 사용자 지정 속성 편집기를 사용해야 합니다. 속성을 설정하려면 입력란을 클릭하고 작성 **(...)** 단추를 클릭하여 사용자 지정 편집기를 엽니다.  
   
 6.  선택적으로 속성 식을 만들어 태스크 또는 컨테이너의 속성을 동적으로 업데이트합니다. 자세한 내용은 [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)을 참조하세요.  
   

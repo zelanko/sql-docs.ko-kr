@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391696"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 메서드 - SetWindowsServiceIdentity
   보고서 서버 Windows 서비스가 지정된 Windows 사용자로 실행되도록 하고 이 계정에 보고서 서버를 작동하기에 충분한 파일 시스템 사용 권한을 부여합니다.  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  *UseBuiltInAccount* 매개 변수가 **true** 로 설정되어 있고 보고서 서버가 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 또는 Windows XP에서 실행되고 있으면 *Name*, *Domain*및 *Password* 매개 변수의 값이 무시되고 로컬 시스템 계정이 사용됩니다.  
   
- *UseBuiltInAccount* 매개 변수가 **true** 로 설정되어 있고 보고서 서버가 Windows Server 2003에서 실행되고 있으면 *Domain* 및 *Password* 속성이 무시되고 이름 필드에 “Builtin\NetworkService”, “Builtin\System” 또는 “Builtin\LocalService”가 포함되어야 합니다.  
+ *UseBuiltInAccount* 매개 변수가 **true**로 설정되어 있고 보고서 서버가 Windows Server 2003에서 실행되고 있으면 *Domain* 및 *Password* 속성이 무시되고 이름 필드에 "Builtin\NetworkService", "Builtin\System" 또는 "Builtin\LocalService"가 포함되어야 합니다.  
   
  SetWindowsServiceIdentity 메서드는 보고서 서버 설치 디렉터리에 있는 파일 및 폴더에 대한 파일 사용 권한을 설정합니다.  
   

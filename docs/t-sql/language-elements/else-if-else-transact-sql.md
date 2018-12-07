@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07852484de0956b21d73fab26ffb0caff13825dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532746"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>4. 중첩된 IF...ELSE 문 사용  
- 다음 예에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
+ 다음 예제에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
   
 ```  
 DECLARE @Number int;  
@@ -138,7 +138,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. 쿼리를 부울 식의 일부로 사용  
- 다음 예에서는 `IF…ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
+ 다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```  
 -- Uses AdventureWorks  

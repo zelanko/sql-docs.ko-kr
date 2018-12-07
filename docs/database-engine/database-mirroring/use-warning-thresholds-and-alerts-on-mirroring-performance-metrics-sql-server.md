@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526975"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51601003"
     |[sp_dbmmonitordropalert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|지정한 성능 메트릭에 대한 경고를 삭제합니다.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
- 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트( *성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
+ 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트(*성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
   
 |성능 메트릭|이벤트 ID|  
 |------------------------|--------------|  

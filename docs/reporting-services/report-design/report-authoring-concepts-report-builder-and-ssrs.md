@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800581"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710994"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에서 페이지를 매긴 보고서를 설명하는 데 사용된 몇 가지 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)을 참조하세요.  
@@ -38,6 +38,6 @@ ms.locfileid: "47800581"
  보고서 매개 변수를 정의하고 사용하는 방법 및 보고서 서버의 보고서 정의를 통해 보고서 매개 변수를 별도로 관리하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9931ea1e809043aa96eddd76cd06cff75b1b1be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a1a8a8beb6f39db8aa7f3b72189870e26762dca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697662"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533536"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>데이터 대량 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "47697662"
   
 |메서드|설명|데이터 가져오기|데이터 내보내기|  
 |------------|-----------------|------------------|------------------|  
-|[bcp 유틸리티](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|[BULK INSERT 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|사용자 계정 컨트롤|아니오|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급자를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문입니다.|사용자 계정 컨트롤|아니오| 
-|[SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|이 마법사는 데이터베이스, 스프레드시트, 텍스트 파일 등 많은 일반적인 데이터 형식 간에 데이터를 가져오고 내보내는 간단한 패키지를 만듭니다.|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|[bcp 유틸리티](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|데이터를 대량으로 내보내고 가져오며 서식 파일을 생성하는 명령줄 유틸리티(Bcp.exe)입니다.|예|예|  
+|[BULK INSERT 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|데이터 파일에서 데이터베이스 테이블이나 분할되지 않은 뷰로 직접 데이터를 가져오는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|예|아니오|  
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...) 문](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|INSERT 문의 데이터를 선택하는 OPENROWSET(BULK…) 함수를 지정하여 대량의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 가져오기 위해 OPENROWSET 대량 행 집합 공급 기업을 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|예|아니오| 
+|[SQL Server 가져오기 및 내보내기 마법사](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|이 마법사는 데이터베이스, 스프레드시트, 텍스트 파일 등 많은 일반적인 데이터 형식 간에 데이터를 가져오고 내보내는 간단한 패키지를 만듭니다.|예|예|  
   
 > [!IMPORTANT]
 > CSV(쉼표로 구분된 값) 파일은 SQL Server 대량 가져오기 작업에서 지원되지 않습니다. 그러나 경우에 따라 데이터를 SQL Server로 대량으로 가져오기 위한 데이터 파일로 CSV(쉼표로 구분된 값) 파일을 사용할 수 있습니다. CSV 파일의 필드 종결자로는 쉼표 이외에 다른 문자도 사용될 수 있습니다. 자세한 내용은 [대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.

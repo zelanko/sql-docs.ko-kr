@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754651"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617439"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
@@ -43,7 +42,7 @@ ms.locfileid: "47754651"
   
  다음 예제를 살펴보세요. 3개의 개별 도메인 ProductName, CompanyName 및 ProductVersion이 있는 복합 도메인 Product가 있습니다. 다음과 같은 선언적 도메인 간 규칙을 만드세요.  
   
- IF 도메인 'CompanyName' 값이 다음을 포함 *Microsoft* AND 도메인 'ProductName' 값이 다음 값과 같음 *Office* AND 'ProductVersion' 값이 다음 값과 같음 *2010* THEN 도메인 'ProductName' 값이 다음 값과 같음 *Microsoft Office 2010*  
+ 도메인 'CompanyName' 값에 *Microsoft*가 포함되고 도메인 'ProductName' 값이 *Office*와 동일하고 'ProductVersion' 값이 *2010*과 동일하면 도메인 'ProductName' 값은 *Microsoft Office 2010*과 동일합니다.  
   
  이 도메인 간 규칙을 실행하면 정리 작업 후 원본 데이터(ProductName)가 다음과 같이 수정됩니다.  
   

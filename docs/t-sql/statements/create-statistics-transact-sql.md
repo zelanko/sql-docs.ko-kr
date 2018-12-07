@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523293"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -110,7 +110,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -126,7 +126,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  통계를 만드는 대상이 되는 테이블, 인덱싱된 뷰 또는 외부 테이블의 이름입니다. 다른 데이터베이스에 대한 통계를 만들려면 정규화된 테이블 이름을 지정합니다.  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  통계에 포함할 하나 이상의 열입니다. 열의 우선 순위는 왼쪽에서 오른쪽이어야 합니다. 히스토그램을 만드는 데에는 첫 번째 열만이 사용됩니다. 모든 열은 밀도라는 열간 상관 관계 통계에 사용됩니다.  
   
  다음 예외 사항을 제외하고 인덱스 키 열로 지정할 수 있는 모든 열을 지정할 수 있습니다.  

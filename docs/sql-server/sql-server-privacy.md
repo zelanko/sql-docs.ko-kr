@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63425a2a280154522c0219a89033e67c4e8bdeda
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703262"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409730"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

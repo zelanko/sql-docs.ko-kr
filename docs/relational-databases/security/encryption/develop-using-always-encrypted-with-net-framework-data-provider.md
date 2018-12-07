@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526523"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -253,9 +253,9 @@ cmd.ExecuteNonQuery();
 
 ## <a name="working-with-column-master-key-stores"></a>열 마스터 키 저장소 작업
 
-매개 변수 값을 암호화하거나 쿼리 결과의 데이터 암호를 해독하려면 대상 열에 대해 구성된 열 암호화 키가 .NET Framework Data Provider for SQL Server에 있어야 합니다. 열 암호화 키는 데이터베이스 메타데이터에 암호화된 형태로 저장됩니다. 각 열 암호화 키에는 열 암호화 키를 암호화하는 데 사용된 해당 열 마스터 키가 있습니다. 데이터베이스 메타데이터에는 열 마스터 키가 저장되지 않습니다. 특정 열 마스터 키가 포함된 키 저장소와 키 저장소에서의 키 위치에 대한 정보만 저장됩니다.
+매개 변수 값을 암호화하거나 쿼리 결과의 데이터 암호를 해독하려면 대상 열에 대해 구성된 열 암호화 키가 .NET Framework Data Provider for SQL Server에 있어야 합니다. 열 암호화 키는 데이터베이스 메타데이터에 암호화된 형태로 저장됩니다. 각 열 암호화 키에는 열 암호화 키를 암호화하는 데 사용된 해당 열 마스터 키가 있습니다. 데이터베이스 메타데이터에는 열 마스터 키가 저장되지 않고, 특정 열 마스터 키가 포함된 키 저장소와 키 저장소에서의 키 위치에 대한 정보만 저장됩니다.
 
-열 암호화 키의 일반 텍스트 값을 가져오려면 .NET Framework Data Provider for SQL Server에서 먼저 열 암호화 키와 해당 열 마스터 키에 대한 메타데이터를 가져온 다음 메타데이터에서 이 정보를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 암호화된 열 암호화 키의 암호를 해독합니다. .NET Framework Data Provider for SQL Server는 열 마스터 키 저장소 공급자를 사용하여 키 저장소와 통신합니다. 열 마스터 키 저장소 공급자는 [SqlColumnEncryptionKeyStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)클래스에서 파생된 클래스 인스턴스입니다.
+열 암호화 키의 일반 텍스트 값을 가져오려면 .NET Framework Data Provider for SQL Server에서 먼저 열 암호화 키와 해당 열 마스터 키에 대한 메타데이터를 가져온 다음 메타데이터에서 이 정보를 사용하여 열 마스터 키가 포함된 키 저장소에 연결하고 암호화된 열 암호화 키의 암호를 해독합니다. .NET Framework Data Provider for SQL Server는 열 마스터 키 저장소 공급 기업을 사용하여 키 저장소와 통신합니다. 해당 공급 기업은 [SqlColumnEncryptionKeyStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)에서 파생된 클래스의 인스턴스입니다.
 
 
 열 암호화 키를 받는 프로세스는 다음과 같습니다.

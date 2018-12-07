@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ed8266a4de04df116989953b3e5b43a162e265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543616"
 ---
 # <a name="create-synonyms"></a>동의어 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47818145"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
  지정된 스키마에서 동의어를 만들려면 사용자에게 CREATE SYNONYM 권한이 있어야 하며 스키마를 소유하거나 ALTER SCHEMA 권한이 있어야 합니다. CREATE SYNONYM 권한은 부여할 수 있는 권한입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "47818145"
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 동의어...** 를 클릭합니다.  
+2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 동의어...** 를 클릭합니다.  
   
 3.  **새 동의어 추가** 대화 상자에 다음 정보를 입력합니다.  
   

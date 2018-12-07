@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516467"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51600953"
   
      스레드는 다음과 같이 요청 시 공유됩니다.  
   
-    -   일반적으로 3-10개의 공유 스레드가 있지만 이 수는 주 복제본 작업에 따라 증가할 수 있습니다.  
+    -   일반적으로 3-10개의 공유 스레드가 있지만 이 수는 주 복제본 워크로드에 따라 증가할 수 있습니다.  
   
     -   지정된 스레드가 얼마 동안 유휴 상태인 경우 일반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스레드 풀로 반환됩니다. 일반적으로 비활성 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 그러나 마지막 활동에 따라 유휴 스레드가 더 길게 유지될 수 있습니다.  
 

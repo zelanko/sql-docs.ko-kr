@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 589da307442ff382910d7185c761d4a0fe6a8178
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1713cfed406a4a300f98a1a06e9317cae1fb82e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723901"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402168"
 ---
 # <a name="xml-device-information-settings"></a>XML 장치 정보 설정
   다음 표는 XML 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47723901"
 ## <a name="see-also"></a>참고 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

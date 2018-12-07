@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534011"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606193"
   
 4.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-5.  세부 정보 창에서 **SQL Server(***\<인스턴스 이름>***)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
+5.  세부 정보 창에서 **SQL Server(**_\<인스턴스 이름>_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell 사용  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606193"
   
 2.  작업 표시줄에서 Windows PowerShell을 시작하거나, 시작, 모든 프로그램, 보조프로그램, Windows PowerShell, Windows PowerShell을 차례로 클릭합니다.  
   
-3.  **sqlps** 를 입력하여 **Import-Module “sqlps”** 모듈을 가져옵니다.  
+3.  **Import-Module “sqlps”** 를 입력하여 **sqlps** 모듈을 가져옵니다.  
   
 4.  다음 문을 실행하여 TCP 및 명명된 파이프 프로토콜을 모두 사용하도록 설정합니다. `<computer_name>` 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 컴퓨터의 이름으로 바꿉니다. 명명된 인스턴스를 구성할 경우 `MSSQLSERVER` 를 인스턴스의 이름으로 바꿉니다.  
   

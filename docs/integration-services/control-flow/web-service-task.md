@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502615"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "51642350"
  **관련 항목:** [HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(…)** 를 클릭하여 이 파일을 찾습니다.  
+ 컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 이 파일을 찾습니다.  
   
  WSDL 파일을 컴퓨터에 이미 수동으로 다운로드한 경우에는 이 파일을 선택하고, WSDL 파일을 아직 다운로드하지 않은 경우에는 다음 단계를 수행합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642350"
  목록에서 실행할 태스크에 사용할 웹 메서드를 선택합니다.  
   
  **WebMethodDocumentation**  
- 웹 방식에 대한 설명을 입력하거나 찾아보기 단추 **(…)** 를 클릭하여 **웹 메서드 설명서** 대화 상자에 설명을 입력합니다.  
+ 웹 방식에 대한 설명을 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 **웹 메서드 설명서** 대화 상자에 설명을 입력합니다.  
   
  **이름**  
  웹 메서드에 대한 입력의 이름을 나열합니다.  

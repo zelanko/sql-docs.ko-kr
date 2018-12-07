@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661872"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543954"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 
 예를 들어, 콜 센터 지원 담당자는 사회 보장 번호 또는 신용 카드 번호의 여러 숫자로 발신자를 식별할 수 있지만, 이러한 데이터 항목이 지원 담당자에게 완전히 노출되어서는 안 됩니다. 모든 마스킹 규칙은 어떠한 쿼리의 결과 집합에서 사회 보장 번호 또는 신용 카드 번호의 마지막 네 자리 숫자를 제외하고 모두 마스킹하도록 정의할 수 있습니다. 또 다른 예로, 개인 식별이 가능한 정보(PII) 데이터를 보호하기 위해 적합한 데이터 마스크를 사용하여 개발자는 적합성 규정 준수 규칙을 위반하지 않고 문제 해결 목적으로 프로덕션 환경을 쿼리할 수 있습니다.
 
-동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
+동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
   
 동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure 포털을 사용하여 동적 데이터 마스킹을 구성하는 방법은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure 포털)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
   

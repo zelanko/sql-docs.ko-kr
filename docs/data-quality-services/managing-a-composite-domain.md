@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bb5b57845613a408a0e374fd26dd67ebad7cd82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621861"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617173"
 ---
 # <a name="managing-a-composite-domain"></a>복합 도메인 관리
 
@@ -27,7 +26,7 @@ ms.locfileid: "47621861"
   
  복합 도메인의 단일 도메인은 서로 공통된 정보 영역이 있어야 합니다. 예를 들어 우편 번호, 국가, 시/도, 구/군/시 및 번지 데이터가 있는 주소 필드가 있습니다. 이 필드에 있는 여러 용어의 데이터 형식은 서로 다를 수 있습니다. 이 문제를 해결하려면 해당 용어를 서로 다른 단일 도메인에 매핑합니다. 또 다른 예로 성, 중간 이름 및 이름 데이터가 있는 전체 이름 필드가 있습니다. 복합 도메인을 사용하려면 필드의 데이터를 서로 다른 단일 도메인으로 구문 분석한 후 해당 필드에 대한 복합 도메인과 필드의 각 부분에 대한 단일 도메인을 만들어야 합니다.  
   
- 복합 도메인은 단일 도메인과 기능이 다릅니다. 복합 도메인에서는 단일 도메인에서처럼 값을 변경할 수 없습니다. 복합 도메인의 경우 도메인 간 규칙을 사용하여 복합 도메인의 단일 도메인에 있는 값을 테스트할 수 있습니다. 또한 복합 도메인에 있는 값 조합을 볼 수도 있습니다.  
+ 복합 도메인은 단일 도메인과 기능이 다릅니다. 복합 도메인에서는 단일 도메인처럼 값을 변경할 수 없습니다. 복합 도메인의 경우 도메인 간 규칙을 사용하여 복합 도메인의 단일 도메인에 있는 값을 테스트할 수 있습니다. 또한 복합 도메인에 있는 값 조합을 볼 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  복합 도메인을 사용하면 다음과 같은 작업을 수행할 수 있습니다.  

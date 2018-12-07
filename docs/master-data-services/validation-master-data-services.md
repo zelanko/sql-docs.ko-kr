@@ -12,12 +12,12 @@ ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aafa6b1378b9489327bb9340ee8168b78723304e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e4691d20c5dbbe67c7d457dbee2042cfd9ad203
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395466"
 ---
 # <a name="validation-master-data-services"></a>유효성 검사(Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "47707063"
   
 |유효성 검사 유형|표준 결정자|발생 시기|MasterData 관리자 웹 UI에 표시|Excel용 추가 기능에 표시|MDS 저장소에 데이터 저장 여부|  
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
-|비즈니스 규칙 유효성 검사|MDS 관리자|사용자가 데이터를 추가하거나 편집할 때 자동으로<br /><br /> 사용자가 비즈니스 규칙을 적용할 때 수동으로<br /><br /> 관리자가 **웹 응용 프로그램의** 버전 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 비즈니스 규칙에 대해 버전의 유효성을 검사할 때 수동으로|유효성 검사 오류|ValidationStatus|사용자 계정 컨트롤|  
+|비즈니스 규칙 유효성 검사|MDS 관리자|사용자가 데이터를 추가하거나 편집할 때 자동으로<br /><br /> 사용자가 비즈니스 규칙을 적용할 때 수동으로<br /><br /> 관리자가 **웹 응용 프로그램의** 버전 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 비즈니스 규칙에 대해 버전의 유효성을 검사할 때 수동으로|유효성 검사 오류|ValidationStatus|예|  
 |데이터 형식 및 내용 유효성 검사|MDS 관리자(특성의 길이 또는 데이터 형식과 같은 모델 개체를 만들 때)|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니오|  
 |데이터 형식 및 내용 유효성 검사|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니오|  
   

@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654cd8331398746213afa892e8bf0c6acc86c269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735511"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391276"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  이 함수는 기본 사용 권한이 아니라 역할 멤버 자격을 평가합니다. 예를 들어 **db_owner** 고정 데이터베이스 역할에는 **CONTROL DATABASE** 권한이 있습니다. 사용자가 **CONTROL DATABASE** 권한을 갖고 있지만 역할의 멤버는 아닌 경우 이 함수는 해당 사용자가 동일한 사용 권한을 갖고 있더라도 **db_owner** 역할의 멤버가 아닌 것으로 올바르게 보고합니다.  
   
- **sysadmin** 고정 서버 역할의 멤버는 모든 데이터베이스를 **dbo** 사용자로 입력합니다. **sysadmin** 고정 서버 역할의 멤버에 대한 사용 권한을 확인하려면 원래의 로그인이 아닌 **dbo**에 대한 사용 권한을 확인합니다. **dbo**는 데이터베이스 역할에 추가될 수 없으며 Windows 그룹에 존재하지 않으므로 **dbo**는 항상 0을 반환합니다.(또는 역할이 존재하지 않으면 NULL을 반환합니다)  
+ **sysadmin** 고정 서버 역할의 멤버는 모든 데이터베이스를 **dbo** 사용자로 입력합니다. **sysadmin** 고정 서버 역할의 멤버에 대한 사용 권한을 확인하려면 원래의 로그인이 아닌 **dbo**에 대한 사용 권한을 확인합니다. **dbo**는 데이터베이스 역할에 추가될 수 없으며 Windows 그룹에 존재하지 않으므로 **dbo**는 항상 0을 반환합니다.(또는 역할이 존재하지 않으면 NULL을 반환합니다.)  
   
 ## <a name="related-functions"></a>관련 함수  
  다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 데이터베이스 역할의 멤버인지 여부를 확인하려면 [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)를 사용하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 역할의 멤버인지 여부를 확인하려면 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)를 사용하세요.  

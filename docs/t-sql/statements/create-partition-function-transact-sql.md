@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755361"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191022"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *partition_function_name*을 사용하는 분할된 테이블 또는 인덱스의 각 파티션에 대한 경계값을 지정합니다. *boundary_value*가 비어 있는 경우 파티션 함수는 *partition_function_name*을 사용하여 전체 테이블이나 인덱스를 단일 파티션에 매핑합니다. CREATE TABLE 또는 CREATE INDEX 문에 지정된 하나의 분할 열만 사용할 수 있습니다.  
   
  *boundary_value*는 변수를 참조할 수 있는 상수 식입니다. 여기에는 사용자 정의 형식 변수나 함수 및 사용자 정의 함수가 포함됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 식은 참조할 수 없습니다. *boundary_value*는 *input_parameter_type*에 제공된 데이터 형식과 일치하거나 해당 데이터 형식으로 암시적으로 변환할 수 있어야 하며 암시적인 변환 중에 값의 크기 및 소수 자릿수가 해당 *input_parameter_type*과 일치하지 않는 방식으로 잘려서는 안 됩니다.  
-  
+
 > [!NOTE]  
->  *boundary_value*가 **datetime** 또는 **smalldatetime** 리터럴로 구성된 경우 이러한 리터럴은 us_english가 세션 언어인 것으로 가정하여 처리됩니다. 이 기능은 더 이상 지원되지 않습니다. 파티션 함수 정의가 모든 세션 언어에 대해 예상대로 작동하도록 하려면 yyyymmdd 형식과 같이 모든 언어 설정에 대해 동일한 방식으로 해석되는 상수를 사용하거나 리터럴을 특정 스타일로 명시적으로 변환하는 것이 좋습니다. 서버의 언어 세션을 결정하려면 `SELECT @@LANGUAGE`를 실행합니다.  
+>  *boundary_value*가 **datetime** 또는 **smalldatetime** 리터럴로 구성된 경우 이러한 리터럴은 us_english가 세션 언어인 것으로 가정하여 처리됩니다. 이 기능은 더 이상 지원되지 않습니다. 파티션 함수 정의가 모든 세션 언어에 대해 예상대로 작동하도록 하려면 yyyymmdd 형식과 같이 모든 언어 설정에 대해 동일한 방식으로 해석되는 상수를 사용하거나 리터럴을 특정 스타일로 명시적으로 변환하는 것이 좋습니다. 서버의 언어 세션을 결정하려면 `SELECT @@LANGUAGE`를 실행합니다.
+>
+> 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
   
  *...n*  
  *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  

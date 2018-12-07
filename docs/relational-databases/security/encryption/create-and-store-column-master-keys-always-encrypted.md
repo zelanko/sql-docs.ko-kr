@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534759"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -139,7 +139,7 @@ SSMS를 사용하고 Azure 주요 자격 증명 모음에 상시 암호화 키�
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>응용 프로그램 및 사용자가 Azure 주요 자격 증명 모음을 사용할 수 있도록 설정
 
-Azure 주요 자격 증명 모음 키를 열 마스터 키로 사용하는 경우 응용 프로그램에서 Azure를 인증해야 하고 응용 프로그램 ID에 주요 자격 증명 모음에 대한 *get*, *unwrapKey*및 *verify*권한이 있어야 합니다. 
+Azure Key Vault 키를 열 마스터 키로 사용하는 경우 애플리케이션에서 Azure를 인증해야 하며 애플리케이션 ID에는 주요 자격 증명 모음에 대한 *get*, *unwrapKey* 및 *verify* 권한이 있어야 합니다. 
 
 Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여 보호된 열 암호화 키를 프로비전하려면 *get*, *unwrapKey*, *wrapKey*, *sign*및 *verify* 권한이 필요합니다. 또한 Azure 주요 자격 증명 모음에서 새 키를 생성하려면 *create* 권한이 필요하고, 주요 자격 증명 모음 콘텐츠를 나열하려면 *list* 권한이 필요합니다.
 
@@ -165,7 +165,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 특정 컴퓨터의 응용 프로그램에서 HSM을 사용할 수 있도록 하려면 CNG를 구현하는 KSP(키 저장소 공급자)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 KSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다.
 
-Windows에는 소프트웨어를 기반으로 하며 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 저장소 공급자(소프트웨어 기반 KSP)가 있습니다. [CNG 키 저장소 공급자](/windows/desktop/SecCertEnroll/cng-key-storage-providers)를 참조하세요.
+Windows에는 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 스토리지 공급 기업(소프트웨어 기반 KSP)이 있습니다. [CNG 키 저장소 공급자](/windows/desktop/SecCertEnroll/cng-key-storage-providers)를 참조하세요.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>CNG/KSP를 사용하여 키 저장소에서 열 마스터 키 만들기
 

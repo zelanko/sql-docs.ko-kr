@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68764169a0e9021ec39eab1b147d2564928dcd38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5ed47af3378636e58e7fccccca3e5bcf7375255d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663642"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520895"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51663642"
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>옵션 1 - FOR JSON PATH로 출력 제어
-**PATH** 모드에서는 점 구문(예: `'Item.Price'` )을 사용하여 중첩 출력을 서식 지정할 수 있습니다.  
+**PATH** 모드에서는 점 구문(예: `'Item.Price'`)을 사용하여 중첩 출력을 서식 지정할 수 있습니다.  
 
 다음은 **PATH** 모드를 **FOR JSON** 절과 함께 사용하는 예제입니다. 다음 예제에서는 **ROOT** 옵션을 사용하여 명명된 루트 요소를 지정합니다. 
   

@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673602"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393658"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51673602"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에 BLOB을 저장하기 위해 사용자 지정 공급자를 사용하는 경우, 사용자 지정 공급자가 사용하는 저장소 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
   
 ### <a name="credential-store-symmetric-key"></a>자격 증명 저장소 대칭 키  
- 공급자가 자격 증명 저장소 내에 저장되는 암호의 설정 및 사용을 요구하는 경우, RBS는 대칭 키를 사용하여 공급자의 BLOB 저장소에 대한 권한을 확보하기 위해 클라이언트가 사용할 수 있는 공급자 암호를 암호화합니다.  
+ 공급자가 자격 증명 저장소 내에 저장되는 비밀의 설정 및 사용을 요구하는 경우, RBS는 대칭 키를 사용하여 공급자의 Blob 저장소에 대한 권한을 확보하기 위해 클라이언트가 사용할 수 있는 공급자 비밀을 암호화합니다.  
   
 -   RBS 2016은 **AES_128** 대칭 키를 사용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이전 버전과의 호환성을 위한 경우를 제외하고 새로운 **TRIPLE_DES** 키 생성을 허용하지 않습니다. 자세한 내용은 [CREATE SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)를 참조하세요.  
   

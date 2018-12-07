@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 48cdfcf18aee274d9017e8d25c44536f2ec51c76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506400"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
 |기존 값|경로가 존재|lax 모드|strict 모드|  
 |--------------------|-----------------|--------------|-----------------|  
-|NOT NULL|사용자 계정 컨트롤|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
+|NOT NULL|예|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
 |NOT NULL|아니오|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `$.user` 또는 `$.user.settings` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `theme`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
-|NULL|사용자 계정 컨트롤|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
+|NULL|예|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
 |NULL|아니오|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
   
  lax 모드에서 JSON_MODIFY는 새 키:값 쌍을 만들려고 시도하지만 일부 경우에는 실패할 수 있습니다.  

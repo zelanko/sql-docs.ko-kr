@@ -15,12 +15,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf8c50739d1579087000aabf9dfbb9e958663118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532825"
 ---
 # <a name="remove-joins-visual-database-tools"></a>조인 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47670051"
 > [!NOTE]  
 > 쿼리에서 조인을 제거해도 데이터베이스에서의 기본 관계는 변경되지 않습니다.  
   
-조인된 두 테이블이 쿼리의 일부인 경우 이 테이블 간의 조인 조건을 모두 제거하면 그 결과 쿼리는 두 테이블 모두의 산물이 됩니다. 즉, CROSS JOIN이 됩니다.  
+조인된 두 테이블이 쿼리의 일부이고 두 테이블 간의 조인 조건을 모두 제거하는 경우 결과 쿼리는 두 테이블의 결과 즉, CROSS JOIN이 됩니다.  
   
 ### <a name="to-remove-a-join"></a>조인을 제거하려면  
   

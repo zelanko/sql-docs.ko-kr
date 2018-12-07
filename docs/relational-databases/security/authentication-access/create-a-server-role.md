@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520896"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47659780"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  데이터베이스 수준 보안 개체에서는 서버 역할에 사용 권한을 부여할 수 없습니다. 데이터베이스 역할을 만들려면 [CREATE ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)을 참조하세요.  
@@ -70,11 +70,11 @@ ms.locfileid: "47659780"
   
 2.  **보안** 폴더를 확장합니다.  
   
-3.  **서버 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 서버 역할...** 을 선택합니다.  
+3.  **서버 역할** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 서버 역할...** 을 선택합니다.  
   
 4.  **새 서버 역할 –**_server\_role\_name_ 대화 상자의 **일반** 페이지에서 **서버 역할 이름** 상자에 새 서버 역할 이름을 입력합니다.  
   
-5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
+5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
   
 6.  **보안 개체**에서 서버 수준 보안 개체를 하나 이상 선택합니다. 보안 개체를 선택하면 해당 보안 개체에 대한 사용 권한을 이 서버 역할에 부여하거나 거부할 수 있습니다.  
   

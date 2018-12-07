@@ -11,17 +11,17 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d17c1ceb03cfc452a925d41fdeab98c6f90339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654414"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532056"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>2-2단원 - 배포 번들 확인
 1단원에서는 Deployment Tutorial 프로젝트를 만들고 패키지와 보조 파일을 프로젝트에 추가했습니다. 이전 태스크에서는 프로젝트를 위한 배포 유틸리티를 작성했습니다.  
   
-이 태스크에서는 배포 번들의 내용을 확인합니다. 배포 번들은 대상 컴퓨터에 복사하고 패키지를 설치하는 데 사용하는 폴더입니다. 배포 유틸리티의 위치로 기본값인 bin\Deployment를 사용한 경우 배포 번들은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 Deployment Tutorial 폴더에 있는 Bin\Deployment 폴더입니다.  
+이 태스크에서는 배포 번들의 내용을 확인합니다. 배포 번들은 대상 컴퓨터에 복사하고 패키지를 설치하는 데 사용하는 폴더입니다. 배포 유틸리티의 위치로 기본값인 bin\Deployment를 사용한 경우 배포 번들은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 Deployment Tutorial 폴더 내에 있는 Bin\Deployment 폴더입니다.  
   
 ### <a name="to-verify-the-content-of-deployment-bundle"></a>배포 번들의 내용을 확인하려면  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397197"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "51813308"
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|SharePoint|  
 |---------------------------------------------|----------------|  
-|**역할:** 예를 들면 “내용 관리자”입니다.|**그룹:** 예를 들면 기본 "뷰어" 그룹입니다.|  
+|**역할:** 예를 들면 "내용 관리자"입니다.|**그룹:** 예를 들면 기본 "뷰어" 그룹입니다.|  
 |---|**권한 수준 그룹:** 예를 들면 "뷰어" 그룹의 "보기만"입니다.|  
-|**작업:** 예를 들면 "보고서 관리"입니다.|**사용 권한:** 예를 들어 "보기만" 그룹 내에서는 항목 보기, 버전 보기 및 응용 프로그램 페이지 보기의 관련 권한이 나열됩니다.|  
+|**작업:** 예를 들면 "보고서 관리"입니다.|**사용 권한:** 예를 들어 "보기만" 그룹 내에서는 항목 보기, 버전 보기 및 애플리케이션 페이지 보기의 관련 권한이 나열됩니다.|  
   
  SharePoint 권한에 대한 자세한 내용은 [권한 수준 및 권한](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 및 [SharePoint 2013의 권한 수준 및 그룹 확인](https://technet.microsoft.com/library/cc262690.aspx)을 참조하세요.  
   

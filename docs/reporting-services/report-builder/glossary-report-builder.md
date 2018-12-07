@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857161"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541803"
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
@@ -155,7 +155,7 @@ ms.locfileid: "47857161"
 |계기(gauge)|계기는 범위 내의 특정 값을 가리키는 표시기가 있는 범위로 데이터를 나타내는 데이터 영역입니다.|  
 |계기 패널(gauge panel)|계기 패널은 하나 이상의 방사형 및 선형 계기가 포함되는 외부 요소입니다.  계기 패널을 사용하여 계기 패널의 모든 계기에 적용할 속성을 정의할 수 있습니다.|  
 |계기 포인터(gauge pointer)|계기 포인터는 계기의 현재 값을 나타내는 바늘, 표식 또는 막대입니다.  계기 눈금에는 반드시 계기 포인터가 붙어 있습니다.|  
-|계기 범위(gauge range)|계기 범위는 계기 눈금에서 특정 색상으로 칠해져 "주요 영역"을 나타내는 영역으로, 항상 시작 값과 끝 값으로 한정되어 있습니다.|  
+|계기 범위(gauge range)|계기 범위는 계기 눈금에서 특정 색상으로 칠해져 "주요 영역"을 나타내며, 항상 시작 값과 끝 값으로 한정되어 있습니다.|  
 |계기 눈금(gauge scale)|계기 눈금은 계기에 표시되는 값 범위로, 최대값과 최소값으로 한정되어 있습니다.  일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다.|  
 |측지 데이터(geodesic data)|곡면에서 점, 선, 면을 지정하는 데이터입니다.|  
 |지리 데이터(geography data)|GPS 위도 및 경도 좌표와 같은 둥근 지구 좌표계에서 데이터를 나타내는 SQL Server 공간 데이터 형식입니다.|  
@@ -186,7 +186,7 @@ ms.locfileid: "47857161"
 |KPI|다음 용어 참조: 핵심 성과 지표(key performance indicator)|  
 |레이블 필드(label field)|해당 키 필드의 레이블을 나타내는 보고서 데이터 집합 필드입니다. 매개 변수와 데이터 영역은 값 대신 키 필드의 레이블을 표시할 수 있습니다.|  
 |latency|한 서버에서 데이터 변경이 완료된 시점과 다른 서버에서 해당 변경 내용이 반영된 시점 간에 지연된 시간을 말합니다.|  
-|위도(latitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 위도 좌표입니다. 유효한 범위는 -90.0에서 +90.0 사이입니다.|  
+|위도(latitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 위도 좌표입니다. 유효 범위는 -90.0에서 +90.0 사이입니다.|  
 |계층(layer)|지도 보고서 항목에서 계층은 단일 공간 데이터 형식의 유형과 표현을 지정합니다. 지도 보고서 항목은 여러 계층의 컨테이너입니다.|  
 |LCID|Windows 기반 로캘을 식별하는 숫자입니다.|  
 |범례(legend)|보고서 차트, 지도 또는 계기 데이터 영역에서 데이터 표현과 기본 데이터 값 사이의 지침을 제공하는 요소입니다.|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857161"
 |로그 파일(log file)|데이터베이스에 대한 수정 내용 레코드를 포함하는 파일 또는 파일 집합입니다.|  
 |논리적 이름(logical name)|SQL Server에서 파일 식별을 위해 사용하는 이름입니다.|  
 |논리 연산자(logical operators)|연산자 AND, OR 및 NOT을 나타내며 WHERE 절에서 검색 조건을 연결하는 데 사용됩니다.|  
-|경도(longitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 좌표입니다. 유효한 범위는 -180.0에서 +180.0 사이입니다.|  
+|경도(longitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 좌표입니다. 유효 범위는 -180.0에서 +180.0 사이입니다.|  
 |다 대 다 관계(many-to-many relationship)|각 테이블의 행과 일치하는 행이 관련 테이블에 여러 개 존재하는 두 테이블 간 관계를 말합니다. 예를 들어 각 판매 송장에는 여러 제품이 포함될 수 있고 각 제품은 여러 판매 송장에 표시될 수 있습니다.|  
 |다 대 일 관계(many-to-one relationship)|한 테이블의 한 행이 다른 테이블의 여러 행과 연관될 수 있는 두 테이블 간 관계를 말합니다.|  
 |지도(map)|제목, 다양한 범주 유형 및 지도 계층의 컨테이너에에 해당하는 보고서 항목입니다.|  

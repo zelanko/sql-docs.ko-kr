@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812826"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390486"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "51812826"
 parameter=value  
 ```  
   
- 예를 들어 보고서에 정의된 두 개의 매개 변수 “ReportMonth” 및 “ReportYear”를 지정하려면 기본 모드 보고서 서버에 다음 URL을 사용합니다.  
+ 예를 들어 보고서에 정의된 두 개의 매개 변수 "ReportMonth" 및 "ReportYear"를 지정하려면 기본 모드 보고서 서버에 다음 URL을 사용합니다.  
   
 ```  
 https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -81,23 +81,23 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> 추가 예  
  다음 URL 예제에는 공백 및 여러 매개 변수가 포함됩니다.  
   
--   “SQL Server 사용자 교육 팀” 폴더 이름에는 공백이 포함되므로 “+”가 공백을 각각 대체합니다.  
+-   "SQL Server 사용자 교육 팀" 폴더 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  
   
--   “팀 프로젝트 보고서” 보고서 이름에는 공백이 포함되므로 “+”가 공백을 각각 대체합니다.  
+-   "팀 프로젝트 보고서" 보고서 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  
   
--   두 개의 매개 변수 “teamgrouping2” 및 “teamgrouping1”에 값 “xgroup” 및 “ygroup”을 전달합니다.  
+-   두 개의 매개 변수 "teamgrouping2" 및 "teamgrouping1"에 값 "xgroup" 및 "ygroup"을 전달합니다.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- 다음 URL 예제에는 다중 값 매개 변수 ”OrderID”를 포함합니다. 다중 값 매개 변수의 형식은 각 값에 대해 매개 변수 이름을 반복합니다.  
+ 다음 URL 예제에는 다중 값 매개 변수 "OrderID"를 포함합니다. 다중 값 매개 변수의 형식은 각 값에 대해 매개 변수 이름을 반복합니다.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 다음 URL 예제는 기본 모드 보고서 서버에 대해 “7/1/2005” 값이 포함된 *SellStartDate* 의 단일 매개 변수를 전달합니다.  
+ 다음 URL 예제는 기본 모드 보고서 서버에 대해 "7/1/2005" 값이 포함된 *SellStartDate*의 단일 매개 변수를 전달합니다.  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

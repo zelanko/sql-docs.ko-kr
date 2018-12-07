@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673672"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521239"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  DAC(데이터 계층 응용 프로그램) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+  DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에서 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 데이터를 사용하여 원본 데이터베이스의 복제본을 만듭니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  가져오기 프로세스에서는 새로운 DAC를 두 단계로 작성합니다.  
@@ -92,14 +92,14 @@ ms.locfileid: "51673672"
   
 -   **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
--   **다음** - **가져오기 설정** 페이지로 진행합니다.  
+-   **다음** - **가져오기 설정** 페이지로 이동합니다.  
   
 -   **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
 ###  <a name="Import_settings"></a> 가져오기 설정 페이지  
  이 페이지에서 가져올 .bacpac 파일의 위치를 지정할 수 있습니다.  
   
--   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
+-   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
 -   **Azure에서 가져오기** - Microsoft Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Microsoft Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673672"
   
  **로컬 SQL Server 인스턴스의 경우**  
   
--   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
+-   **새 데이터베이스 이름** – 가져온 데이터베이스의 이름을 지정합니다.  
   
--   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **데이터 파일 경로** - 데이터 파일을 저장할 로컬 디렉터리를 지정합니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다.  
   
--   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   

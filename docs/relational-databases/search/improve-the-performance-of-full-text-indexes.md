@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672532"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532546"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ ms.locfileid: "51672532"
   
 다음 수식에 대한 자세한 내용은 표 다음에 나오는 참고 사항을 참조하세요.  
   
-|플랫폼|fdhost.exe에 필요한 예상 메모리(MB) -*F*^1|max server memory 계산 수식 -*M*^2|  
+|플랫폼|fdhost.exe에 필요한 예상 메모리(MB) - *F*^1|max server memory 계산 수식 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *탐색 범위 수* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *탐색 범위 수* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *탐색 범위 수* * 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *탐색 범위 수* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
-1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 *T***–** sigma **(***F*i**)**로 계산합니다.  
+1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예제: fdhost.exe에 필요한 예상 메모리  
   
- 이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 계산합니다. 탐색 범위 수는 `8`입니다.  
+ 이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 예측합니다. 탐색 범위 수는 `8`입니다.  
   
  `F = 8*10*8=640`  
   
- 다음 계산에서는 **max server memory**에 대한 최적 값인*M*을 구합니다. 이 시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
+ 다음 계산에서는 **max server memory**의 최적 값-*M*을 구합니다. 이 시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
   
  `M = 8192-640-500=7052`  
   

@@ -21,12 +21,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60de5eb3816f6cc38eda9c92ff3b4681f8fe0e17
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970624"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511708"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ ms.locfileid: "50970624"
     -   [날짜 및 시간 값 수정 함수](#ModifyDateandTimeValues)  
     -   [세션 형식 함수를 설정 또는 반환하는 함수](#SetorGetSessionFormatFunctions)  
     -   [날짜 및 시간 값 유효성 검사 함수](#ValidateDateandTimeValues)  
--   [날짜 및 시간 관련 항목](#DateandTimeRelatedTopics)  
+-   [날짜 및 시간 관련 토픽](#DateandTimeRelatedTopics)  
   
 ##  <a name="DateandTimeDataTypes"></a> 날짜 및 시간 데이터 형식
 다음 표에 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식이 나와 있습니다.
   
 |데이터 형식|형식|범위|정확도|저장소 크기(바이트)|사용자 정의 초 소수 부분 자릿수|표준 시간대 오프셋|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000부터 23:59:59.9999999까지|100나노초|3 ~ 5|사용자 계정 컨트롤|아니오|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000부터 23:59:59.9999999까지|100나노초|3 ~ 5|예|아니오|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01부터 31.12.99까지|1일|3|아니오|아니오|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01부터 2079-06-06까지|1분|4|아니오|아니오|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01부터 9999-12-31까지|0.00333초|8|아니오|아니오|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지|100나노초|6 ~ 8|사용자 계정 컨트롤|아니오|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지(UTC)|100나노초|8 ~ 10|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지|100나노초|6 ~ 8|예|아니오|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지(UTC)|100나노초|8 ~ 10|예|예|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) 데이터 형식은 날짜 또는 시간 데이터 형식이 아닙니다. **timestamp**는 **rowversion**에 사용되지 않는 동의어입니다.  

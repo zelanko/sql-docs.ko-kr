@@ -19,12 +19,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c2284e6e60dfce00888f836da060cb4362db5b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519015"
 ---
 # <a name="delete-a-data-tier-application"></a>데이터 계층 응용 프로그램 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47814701"
   
 3.  **데이터 계층 응용 프로그램** 노드를 확장합니다.  
   
-4.  삭제할 DAC를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 삭제...** 를 선택합니다.  
+4.  삭제할 DAC를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 삭제...** 를 선택합니다.  
   
 5.  마법사 대화 상자를 완료합니다.  
   

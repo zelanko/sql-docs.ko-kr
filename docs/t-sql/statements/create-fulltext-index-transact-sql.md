@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 33eb48be31cccdc96f8a38d008c7d1ebfa865981
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169293"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516132"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  전체 텍스트 인덱스에 포함된 열의 이름입니다. **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** 및 **varbinary(max)** 타입의 열만 전체 텍스트 검색을 위해 인덱싱될 수 있습니다. 여러 열을 지정하려면 다음과 같이 *column_name* 절을 반복합니다.  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  **varbinary(max)** 또는 **image** 문서에 대한 문서 종류를 보유하는 데 사용하는 테이블 열 *type_column_name*의 이름을 지정합니다. 유형 열이라고 하는 이 열에는 사용자 제공 파일 확장명(.doc, .pdf, .xls 등)이 포함됩니다. 형식 열은 **char**, **nchar**, **varchar**또는 **nvarchar**형식이어야 합니다.  
@@ -121,7 +121,7 @@ CREATE FULLTEXT INDEX ON table_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 인덱스가 적용되는 테이블 열의 변경 내용(업데이트, 삭제 또는 삽입)을 해당 전체 텍스트 인덱스로 전파할지 여부를 지정합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
  MANUAL  
- 다음을 호출하면 추적된 변경 내용이 수동으로 전파되도록 지정합니다. ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*수동 채우기*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 주기적으로 호출할 수 있습니다.  
+ 다음을 호출하면 추적된 변경 내용이 수동으로 전파되도록 지정합니다. ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*수동 채우기*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 주기적으로 호출할 수 있습니다.  
   
  **AUTO**  
  기본 테이블에서 데이터가 수정되면 추적된 변경 내용이 자동으로 전파되도록 지정합니다(*자동 채우기*). 변경 내용은 자동으로 전파되지만 전체 텍스트 인덱스에 즉시 반영되지 않을 수 있습니다. 기본값은 AUTO입니다.  

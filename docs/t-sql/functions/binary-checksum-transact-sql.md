@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 392e21cdf50dc537e5bf6cdfcadf18771e66aad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759691"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617763"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,7 +77,7 @@ BINARY_CHECKSUM 및 CHECKSUM은 문자열 데이터 형식에 대해 서로 다�
   
 예를 들어 "McCavity" 및 "Mccavity" 문자열에는 서로 다른 BINARY_CHECKSUM 값이 있습니다. 그러나 대소문자를 구분하지 않는 서버의 경우 CHECKSUM은 해당 문자열에 대해 같은 체크섬 값을 반환합니다. CHECKSUM 값과 BINARY_CHECKSUM 값의 비교는 피해야 합니다.
  
-BINARY_CHECKSUM은 최대 8,000자의 **varbinary(max)** 형식과 최대 255자의 **nvarchar(max)** 형식을 지원합니다.
+BINARY_CHECKSUM은 길이 제한 없는 **varbinary(max)** 형식과 최대 255자의 **nvarchar(max)** 형식을 지원합니다.
   
 ## <a name="examples"></a>예  
 이 예에서는 `BINARY_CHECKSUM`을 사용하여 테이블 행의 변경 내용을 검색합니다.

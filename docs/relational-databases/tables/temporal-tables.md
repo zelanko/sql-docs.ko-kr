@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665139"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403648"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51665139"
   
     -   [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Adventure Works 예제 데이터베이스 다운로드:** 임시 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502) 를 다운로드하고 'Temporal' 폴더의 지침을 따르세요.  
+    -   **Adventure Works 예제 데이터베이스 다운로드:** 임시 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502)를 다운로드하고 'Temporal' 폴더의 지침을 따르세요.  
   
 -   **구문:**  
   

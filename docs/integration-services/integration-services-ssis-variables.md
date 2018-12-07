@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642010"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512897"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -221,7 +221,7 @@ ms.locfileid: "51642010"
   
 4.  삭제할 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭하고 **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
   
 5.  **변수 삭제 확인** 대화 상자에서 **예** 를 클릭하여 삭제를 확인합니다.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "51642010"
   
 4.  변수를 선택한 다음 **변수 이동**을 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭하고 **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
   
 5.  **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   

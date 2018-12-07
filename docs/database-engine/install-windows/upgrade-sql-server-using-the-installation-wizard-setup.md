@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533974"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
@@ -102,15 +102,15 @@ ms.locfileid: "51607163"
   
 12. 인스턴스 구성 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 인스턴스 ID를 지정합니다.  
   
-     **인스턴스 ID** — 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 입력란에 값을 제공합니다.  
+     **인스턴스 ID** - 기본적으로 인스턴스 이름이 인스턴스 ID로 사용됩니다. 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 기본 인스턴스의 경우 인스턴스 이름 및 인스턴스 ID는 MSSQLSERVER입니다. 기본값이 아닌 인스턴스 ID를 사용하려면 **인스턴스 ID** 입력란에 값을 제공합니다.  
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다.  
   
-     **설치된 인스턴스**  — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
+     **설치된 인스턴스** - 그리드에는 설치 프로그램이 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표시됩니다. 컴퓨터에 기본 인스턴스가 이미 설치된 경우 명명된 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
   
 13. 이 문서의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
-14. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 기본 서비스 계정이 표시됩니다. 이 페이지에 구성된 실제 서비스는 사용자가 업그레이드하려는 기능에 따라 달라집니다.  
+14. 서버 구성 - 서비스 계정 페이지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 기본 서비스 계정이 표시됩니다. 이 페이지에 구성된 실제 서비스는 사용자가 업그레이드하려는 기능에 따라 달라집니다.  
   
      인증 및 로그인 정보는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져옵니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 서비스 계정을 개별적으로 구성하도록 권장합니다. 그러면 "서비스 시작" 태스크 완료에 필요한 최소한의 권한만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 부여됩니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "51607163"
 ## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드한 후 다음 태스크를 완료하십시오.  
   
--   **서버 등록** - 업그레이드하면 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 등록 설정이 제거됩니다. 업그레이드한 후 서버를 다시 등록해야 합니다.  
+-   **서버 등록** - 업그레이드하면 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 등록 설정이 제거됩니다. 업그레이드한 후 서버를 다시 등록해야 합니다.  
   
--   **통계 업데이트** - 쿼리 성능을 최적화할 수 있도록 업그레이드 후에 모든 데이터베이스에 대한 통계를 업데이트하는 것이 좋습니다. **sp_updatestats** 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 사용자 정의 테이블의 통계를 업데이트할 수 있습니다.  
+-   **통계 업데이트** - 쿼리 성능을 최적화하려면 업그레이드 후에 모든 데이터베이스에 대한 통계를 업데이트하는 것이 좋습니다. **sp_updatestats** 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 사용자 정의 테이블의 통계를 업데이트할 수 있습니다.  
   
--   **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
+-   **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성** - 공격받을 수 있는 시스템의 노출 영역을 줄이려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)   

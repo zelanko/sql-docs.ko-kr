@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05a08b7085f9485a002db182e3cff9a7ccee7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61b9d5633439ee9092246c0b4ce605b2523c2358
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837671"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535517"
 ---
 # <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47837671"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47837671"
   
 -   클러스터형 인덱스를 비활성화하거나 활성화하고 비클러스터형 인덱스를 비활성화하면 클러스터형 인덱스 동작으로 인해 다음과 같은 결과가 비활성화된 비클러스터형 인덱스에 나타납니다.  
   
-    |클러스터형 인덱스 동작|비활성화된 비클러스터형 인덱스 …|  
+    |클러스터형 인덱스 동작|비활성화된 비클러스터형 인덱스...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD|비활성화된 상태로 유지됩니다.|  
     |ALTER INDEX ALL REBUILD|다시 작성되고 활성화됩니다.|  

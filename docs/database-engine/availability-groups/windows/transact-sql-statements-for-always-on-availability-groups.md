@@ -13,12 +13,12 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9711abe965e293824da78bf0d956311679fc7c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506552"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47771427"
 -   [AVAILABILITY GROUP TRANSACT-SQL 문에 대한 제한 사항](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 은 데이터베이스 미러링 엔드포인트(서버 인스턴스에 없는 경우)를 만듭니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
+ [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md)은 데이터베이스 미러링 엔드포인트를 만듭니다(서버 인스턴스에 없는 경우). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
   
  엔드포인트를 만들 서버 인스턴스에서 이 문을 실행합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트를 하나만 만들 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47771427"
   
  현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 ALTER AVAILABILITY GROUP을 실행합니다.  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ... SET HADR ...  
  ALTER DATABASE 문의 [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 절의 옵션을 통해 보조 데이터베이스를 해당 주 데이터베이스의 가용성 그룹에 조인하고, 조인된 데이터베이스를 제거하고, 조인된 데이터베이스에서 데이터 동기화를 일시 중지하고, 데이터 동기화를 다시 시작할 수 있습니다.  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

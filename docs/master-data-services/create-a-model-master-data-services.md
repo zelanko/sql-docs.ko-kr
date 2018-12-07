@@ -15,12 +15,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20e04541e352e3df79b8ad03b2fa54940a875987
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398793"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47800491"
   
 6.  **로그 보존 기간(일)** 필드에서 로그 데이터 보존 옵션 중 하나를 선택합니다. 기본값인 **시스템 설정**은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 시스템 설정에서 값이 상속됨을 나타냅니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-     시스템 설정을 재정의하고 트랜잭션 로그 데이터는 제거하지 않으려면 **아니요**를 선택합니다. 해당일의 로그 데이터만 보존하고 이전 날짜의 모든 로그 데이터를 자르려면 **예** 를 선택하고 **일** 필드의 값을 0으로 설정합니다. 지정된 기간(일) 동안 로그 데이터를 보존하려면 **예** 를 선택하고 **일** 필드의 값을 원하는 기간(일)으로 설정합니다.  
+     시스템 설정을 재정의하고 트랜잭션 로그 데이터는 제거하지 않으려면 **아니요**를 선택합니다. 해당일의 로그 데이터만 보존하고 이전 날짜의 모든 로그 데이터를 자르려면 **예**를 선택하고 **일** 필드의 값을 0으로 설정합니다. 지정된 기간(일) 동안 로그 데이터를 보존하려면 **예** 를 선택하고 **일** 필드의 값을 원하는 기간(일)으로 설정합니다.  
   
 7.  또는 **모델과 이름이 같은 엔터티 만들기** 를 선택하여 모델과 이름이 같은 엔터티를 만듭니다.  
   

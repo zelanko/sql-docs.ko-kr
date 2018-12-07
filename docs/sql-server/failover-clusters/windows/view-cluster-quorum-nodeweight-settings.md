@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb665581f6a85e073e900c18547ee20406a7582
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407720"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51700768"
 2.  [sys].[dm_hadr_cluster_members] 뷰를 쿼리합니다.  
   
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
- 다음 예에서는 시스템 뷰를 쿼리하여 해당 인스턴스의 클러스터에 있는 모든 노드에 대한 값을 반환합니다.  
+ 다음 예제에서는 시스템 뷰를 쿼리하여 해당 인스턴스의 클러스터에 있는 모든 노드에 대한 값을 반환합니다.  
   
 ```tsql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
@@ -73,7 +73,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  클러스터 노드 속성을 읽기 가능한 형식으로 출력합니다.  
   
 ### <a name="example-powershell"></a>예(Powershell)  
- 다음 예에서는 "Cluster001"이라는 클러스터의 노드 속성 일부를 출력합니다.  
+ 다음 예제에서는 "Cluster001"이라는 클러스터의 노드 속성 일부를 출력합니다.  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  **cluster.exe** 를 사용하여 노드 상태 및 NodeWeight 값을 반환합니다.  
   
 ### <a name="example-clusterexe"></a>예(Cluster.exe)  
- 다음 예에서는 "Cluster001"이라는 클러스터의 노드 속성 일부를 출력합니다.  
+ 다음 예제에서는 "Cluster001"이라는 클러스터의 노드 속성 일부를 출력합니다.  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  

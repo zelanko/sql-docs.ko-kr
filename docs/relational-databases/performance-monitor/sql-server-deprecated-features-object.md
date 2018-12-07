@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523339"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |PERMISSIONS|PERMISSIONS 내장 함수에 대한 참조가 발견되었습니다. 대신 sys.fn_my_permissions를 쿼리해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ProcNums|사용되지 않는 ProcNums 구문이 발견되었습니다. 문을 다시 작성하여 참조를 제거해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |READTEXT|READTEXT 구문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성하세요. 쿼리마다 한 번씩 발생합니다.|  
-|RESTORE DATABASE 또는 LOG WITH DBO_ONLY|RESTORE … … WITH DBO_ONLY 구문이 발견되었습니다. 대신 RESTORE … RESTRICTED_USER를 사용하십시오.|  
-|RESTORE DATABASE 또는 LOG WITH MEDIAPASSWORD|RESTORE … WITH MEDIAPASSWORD 구문이 발견되었습니다. WITH MEDIAPASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
-|RESTORE DATABASE 또는 LOG WITH PASSWORD|RESTORE … WITH PASSWORD 구문이 발견되었습니다. WITH PASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
+|RESTORE DATABASE 또는 LOG WITH DBO_ONLY|RESTORE ... … WITH DBO_ONLY 구문이 발견되었습니다. RESTORE 사용 ... RESTRICTED_USER를 사용하십시오.|  
+|RESTORE DATABASE 또는 LOG WITH MEDIAPASSWORD|RESTORE ... WITH MEDIAPASSWORD 구문이 발견되었습니다. WITH MEDIAPASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
+|RESTORE DATABASE 또는 LOG WITH PASSWORD|RESTORE ... WITH PASSWORD 구문이 발견되었습니다. WITH PASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
 |트리거에서 결과 반환|이 이벤트는 트리거를 호출할 때마다 한 번씩 발생합니다. 결과 집합을 반환하지 않도록 트리거를 다시 작성해야 합니다.|  
 |ROWGUIDCOL|ROWGUIDCOL 구문이 발견되었습니다. $rowguid 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |SET ANSI_NULLS OFF|SET ANSI_NULLS OFF 구문이 발견되었습니다. 사용되지 않는 이 구문을 제거해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -173,13 +173,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure의 'ft notify bandwidth (min)'|sp_configure의 ft notify bandwidth (min) 옵션이 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_configure의 'locks'|sp_configure의 locks 옵션이 발견되었습니다. 잠금은 더 이상 구성할 수 없습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_configure의 'open objects'|sp_configure의 open objects 옵션이 발견되었습니다. 열린 개체의 수는 더 이상 구성할 수 없습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
-|sp_configure의 'priority boost'|sp_configure의 priority boost 옵션이 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다. 대신 Windows start /high ... program.exe 옵션을 사용하세요.|  
+|sp_configure의 'priority boost'|sp_configure의 priority boost 옵션이 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다. 대신 Windows start /high ... program.exe 옵션을 사용합니다.|  
 |sp_configure의 'remote proc trans'|sp_configure의 remote proc trans 옵션이 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_configure의 'set working set size'|sp_configure의 set working set size 옵션이 발견되었습니다. 작업 집합 크기는 더 이상 구성할 수 없습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 저장 프로시저는 마스터 키가 있는지 여부를 확인하지 않습니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 향후 릴리스에서는 마스터 키가 있어야 하며 저장 프로시저 sp_control_dbmasterkey_password에서 사용하는 암호가 데이터베이스 마스터 키를 암호화하는 데 사용된 암호 중 하나와 동일해야 합니다.|  
 |sp_create_removable|sp_create_removable 프로시저가 발견되었습니다. 대신 CREATE DATABASE를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_db_vardecimal_storage_format|**vardecimal** 저장소 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  
-|sp_dbcmptlevel|sp_dbcmptlevel 프로시저가 발견되었습니다. 대신 ALTER DATABASE … SET COMPATIBILITY_LEVEL을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_dbcmptlevel|sp_dbcmptlevel 프로시저가 발견되었습니다. 이 데이터베이스의 모든 대화를 삭제하려면 ALTER DATABASE ... SET COMPATIBILITY_LEVEL을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dbfixedrolepermission|sp_dbfixedrolepermission 프로시저가 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dboption|sp_dboption 프로시저가 발견되었습니다. 대신 ALTER DATABASE 및 DATABASEPROPERTYEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_dbremove|sp_dbremove 프로시저가 발견되었습니다. 대신 DROP DATABASE를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  

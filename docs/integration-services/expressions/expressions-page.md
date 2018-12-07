@@ -15,12 +15,12 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8cc09f10e9bad8e5e1d6aebba6fb18736616e85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27acd1fcf2cd79ce7d681f9491ee77ffc7ad9d71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503925"
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  

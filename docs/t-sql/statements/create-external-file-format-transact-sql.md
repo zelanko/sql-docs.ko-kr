@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719261"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517715"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분을 포함합니다.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간 및 00-59분(초 없음)과, AM, am, PM 또는 pm을 포함합니다.|  
 |date|DATE_FORMAT =  'yyyy-MM-dd'|연도, 월, 일. 시간 요소가 포함되지 않습니다.|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월, 일. 월을 3 M으로 지정하면 입력 값은 Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov 또는 Dec 문자열 중 하나입니다.|  
+|date|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월, 일. 월을 3M으로 지정하면 입력 값은 Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov 또는 Dec 문자열 중 하나입니다.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초를 포함합니다.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초와, 입력 파일에 `{+&#124;-}HH:ss`로 입력한 시간대 오프셋을 포함합니다.  예를 들어, 일광절약시간이 적용되지 않은 로스엔젤레스는 UTC보다 8시간 늦으므로 입력 파일에서 -08:00 값으로 로스엔젤레스의 시간대를 지정합니다.|  
@@ -216,7 +216,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
  상세 정보:  
   
--   월, 일 및 연도 값을 구분하기 위해 '-', '/' 또는 '.'를 사용할 수 있습니다. 간단히 하기 위해 테이 표에서는 '-' 구분 기호만 사용합니다.
+-   월, 일 및 연도 값을 구분하려면 '-', '/' 또는 '.'를 사용할 수 있습니다. 간단히 하기 위해 테이블에서는 '-' 구분 기호만 사용합니다.
   
 -   월을 텍스트로 지정하려면 3자 이상의 문자를 사용합니다. 한두 자로 지정한 문자는 숫자로 해석합니다.
   

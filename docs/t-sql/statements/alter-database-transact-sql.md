@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f1fe0dc073063958af85019c7626d572b38810af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571472"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517975"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -322,7 +322,7 @@ ALTER DATABASE { database_name | CURRENT }
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
@@ -400,7 +400,7 @@ ALTER DATABASE current
 
 데이터베이스의 MAXSIZE 속성이 해당 버전에서 지원되는 유효 범위 밖의 값으로 설정되면 EDITION 변경이 실패합니다.  
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
+MODIFY(MAXSIZE **=**[100MB | 500MB | 1 | 1024...4096]GB)  
 
 데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 
 

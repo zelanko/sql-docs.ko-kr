@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542056"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>스크립트 태스크 편집기에서 스크립트 태스크 구성
   스크립트 태스크에서 사용자 지정 코드를 작성하려면 먼저 **스크립트 태스크 편집기**의 세 페이지에서 주 속성을 구성해야 합니다. 속성 창에서는 스크립트 태스크에 고유하지 않은 추가 태스크 속성을 구성할 수 있습니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "47805521"
 > [!NOTE]  
 >  변수 이름은 대소문자를 구분합니다.  
   
- 변수를 선택하려면 속성 필드 옆의 줄임표(**…**) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../../integration-services/control-flow/select-variables-page.md)를 참조하세요.  
+ 변수를 선택하려면 속성 필드 옆의 줄임표(**...**) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../../integration-services/control-flow/select-variables-page.md)를 참조하세요.  
   
 ### <a name="edit-script-button"></a>스크립트 편집 단추  
  **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 VSTA 개발 환경이 시작됩니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)을 참조하십시오.  
   
 ## <a name="expressions-page-of-the-script-task-editor"></a>스크립트 태스크 편집기의 식 페이지  
- **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [스크립트 태스크 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  

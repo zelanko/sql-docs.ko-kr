@@ -18,12 +18,12 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c19d5d73e996c8d3ea2b6903290ad0b3635e09d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535025"
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47776801"
    ##  <a name="TailLogScenarios"></a> 비상 로그 백업이 필요한 시나리오  
  다음과 같은 경우에는 비상 로그 백업을 수행하는 것이 좋습니다.  
   
--   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대한 오류를 방지하려면 다음을 사용해야 합니다. [BACKUP](../../t-sql/statements/backup-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 WITH NORECOVERY 옵션입니다.  
+-   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대한 오류를 방지하려면 다음을 사용해야 합니다... [BACKUP](../../t-sql/statements/backup-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 WITH NORECOVERY 옵션입니다.  
   
 -   데이터베이스가 오프라인이고 시작되지 않아서 데이터베이스를 복원해야 할 경우 먼저 비상 로그를 백업합니다. 이 시점에서는 트랜잭션이 발생할 수 없으므로 WITH NORECOVERY 옵션의 사용은 선택 사항입니다.  
   

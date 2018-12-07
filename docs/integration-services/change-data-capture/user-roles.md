@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398006"
 ---
 # <a name="user-roles"></a>사용자 역할
   이 섹션에서는 Attunity Oracle CDC Service의 사용자 역할에 대해 설명합니다. 여기서 설명하는 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할, Windows 역할 또는 Oracle 데이터베이스 역할입니다.  

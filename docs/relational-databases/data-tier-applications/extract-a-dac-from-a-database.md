@@ -20,12 +20,12 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b75a298bf86bd1a87308e8136b531c323307e4d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f8073ee3b527602d8d9d750923547b8fc5259d75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514098"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "43811349"
   
 2.  **데이터베이스** 노드를 확장합니다.  
   
-3.  DAC를 추출할 데이터베이스에 대한 노드를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **데이터 계층 응용 프로그램 추출…** 을 선택합니다.  
+3.  DAC를 추출할 데이터베이스에 대한 노드를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음, **데이터 계층 애플리케이션 추출...** 을 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   

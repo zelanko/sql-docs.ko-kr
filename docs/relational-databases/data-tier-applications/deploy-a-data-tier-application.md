@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517438"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 응용 프로그램 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "43820249"
   
 1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
   
-2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 배포…** 를 선택합니다.  
+2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 배포…** 를 선택합니다.  
   
 3.  마법사 대화 상자를 완료하고 마침을 클릭합니다.
 아래 마법사 페이지 중 일부에 대한 자세한 정보: 

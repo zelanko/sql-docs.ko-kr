@@ -30,17 +30,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596661"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509010"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SELECT INTO는 기본 파일 그룹에 새 테이블을 만든 후 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 보려면 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
+SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 보려면 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +86,7 @@ SELECT INTO는 기본 파일 그룹에 새 테이블을 만든 후 쿼리의 결
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  테이블 변수나 테이블 반환 매개 변수를 새 테이블로 지정할 수는 없습니다.  
   
- 원본 테이블이 분할된 경우에도 `SELECT…INTO`를 사용하여 분할된 테이블을 만들 수 없습니다. `SELECT...INTO`는 원본 테이블의 파티션 구성표를 사용하지 않는 대신, 기본 파일 그룹에 새 테이블이 만들어집니다. 분할된 테이블에 행을 삽입하려면 먼저 분할된 테이블을 만든 다음, `INSERT INTO...SELECT...FROM` 문을 사용해야 합니다.  
+ 원본 테이블이 분할된 경우에도 `SELECT...INTO`를 사용하여 분할된 테이블을 만들 수 없습니다. `SELECT...INTO`는 원본 테이블의 파티션 구성표를 사용하지 않는 대신, 기본 파일 그룹에 새 테이블이 만들어집니다. 분할된 테이블에 행을 삽입하려면 먼저 분할된 테이블을 만든 다음, `INSERT INTO...SELECT...FROM` 문을 사용해야 합니다.  
   
  원본 테이블에 정의된 인덱스, 제약 조건 및 트리거는 새 테이블로 전송되지 않으며 `SELECT...INTO` 문에 지정할 수도 없습니다. 이러한 개체가 필요하면 `SELECT...INTO` 문을 실행한 후에 개체를 만들 수 있습니다.  
   
@@ -232,7 +232,7 @@ ORDER BY YearlyIncome;
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>참고 항목  

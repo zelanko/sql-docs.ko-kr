@@ -13,12 +13,12 @@ ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ca1f66b4a4fa825a6bf5939ea5430bacb6b2083
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 989dd7b7fc73a7ec18a44b9ac30e58f060fe5b1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511219"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography 인스턴스의 OGC 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51696361"
   
  [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC 사양, 단순 기능 액세스 2부 - SQL 옵션](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

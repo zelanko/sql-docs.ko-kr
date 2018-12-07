@@ -12,12 +12,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2f2de4e141a43631968124684c9c31ecc3f235f6
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1aca33e3978b89ccf5f4423e76f0e2ba7888e6a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050965"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406520"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>SharePoint 모드에서 Reporting Services 2016 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "50050965"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SharePoint에서 SQL Server Reporting Services를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint에 기반한 모든 배포에서 문서 라이브러리에서 보고서 만들기 및 보기, 전자 메일을 통해 보고서의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 배달, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 데이터 경고 및 보고서 관리 기능을 사용할 수 있습니다. SharePoint 모드의 기능에 대한 자세한 내용은 [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)의 “서버 모드별 기능 지원 및 동작 차이” 섹션을 참조하세요.
+SharePoint에서 SQL Server Reporting Services를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint에 기반한 모든 배포에서 문서 라이브러리에서 보고서 만들기 및 보기, 전자 메일을 통해 보고서의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 배달, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 데이터 경고 및 보고서 관리 기능을 사용할 수 있습니다. SharePoint 모드의 기능에 대한 자세한 내용은 [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)의 "서버 모드별 기능 지원 및 동작 차이" 섹션을 참조하세요.
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.

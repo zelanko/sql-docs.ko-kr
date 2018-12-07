@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514702"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770131"
   
 -   DAC는 처음에 로그인과 관련된 기본 데이터베이스에 연결을 시도합니다. 성공적으로 연결되면 master 데이터베이스에 연결할 수 있습니다. 기본 데이터베이스가 오프라인이거나 사용할 수 없는 경우 연결은 4060 오류를 반환합니다. 그러나 다음 명령을 사용하면 기본 데이터베이스를 무시하고 master 데이터베이스에 연결할 수 있습니다.  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 시작되면 master를 사용할 수 있으므로 DAC로 master 데이터베이스에 연결하는 것이 좋습니다.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47770131"
   
  시작할 때 DAC 포트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 동적으로 할당됩니다. 기본 인스턴스에 연결할 때 DAC는 SQL Server Browser 서비스에 대한 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 요청을 사용하지 않습니다. 먼저 TCP 포트 1434를 통해 연결합니다. 연결이 실패할 경우 SSRP 호출을 실행하여 포트를 설정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 SSRP 요청을 수신하지 않을 경우 연결 요청이 오류를 반환합니다. 오류 로그를 참조하여 DAC를 수신 대기 중인 포트 번호를 찾으십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 원격 관리 연결을 허용하도록 구성되어 있는 경우 DAC를 명시적 포트 번호로 시작해야 합니다.  
   
- **sqlcmd –S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:***\<server>,\<port>*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그는 DAC의 포트 번호를 표시합니다. 포트 번호는 기본적으로 1434입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 DAC 연결만 허용하도록 구성된 경우 다음 명령을 사용하여 루프백 어댑터를 통해 연결하십시오.  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  DAC로 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 에 연결할 때 -d 옵션을 사용하여 연결 문자열에 데이터베이스 이름을 지정해야 합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "47770131"
 ## <a name="example"></a>예제  
  이 예에서 관리자는 `URAN123` 서버가 응답하지 않음을 확인하고 문제를 진단하려고 합니다. 이 작업을 수행하려면 사용자는 `sqlcmd` 명령 프롬프트 유틸리티를 활성화하고 DAC를 나타내는 `URAN123` 를 사용하여 `-A` 서버에 연결해야 합니다.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  이제 관리자가 쿼리를 실행하여 문제를 진단하고 응답하지 않는 세션을 종료할 수 있습니다.  
   

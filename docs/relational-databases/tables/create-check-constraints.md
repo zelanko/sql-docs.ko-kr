@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ace4a96004e22a1c922a491a8f2906c98caefc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856392"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521658"
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47856392"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47856392"
   
 1.  **개체 탐색기**에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건** 을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건**을 클릭합니다.  
   
-2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후 줄임표 **(…)** 를 클릭합니다.  
+2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후, 줄임표 **(...)** 를 클릭합니다.  
   
 3.  **CHECK 제약 조건 식** 대화 상자에서 CHECK 제약 조건에 대한 SQL 식을 입력합니다. 예를 들어 `SellEndDate` 테이블의 `Product` 열에 있는 항목을 `SellStartDate` 열에 있는 날짜보다 크거나 같은 값 또는 NULL 값으로 제한하려면 다음을 입력합니다.  
   

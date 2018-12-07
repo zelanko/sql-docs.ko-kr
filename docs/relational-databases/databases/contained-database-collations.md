@@ -13,12 +13,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a529efc45194a701376fc347d6a3f115db19430
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c62934d6ffe221acd483d316461e0b2c72cc0c46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558770"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413418"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

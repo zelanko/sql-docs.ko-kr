@@ -14,12 +14,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65239f7dbdb0690115f50172ea34f72a62924250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395397"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
 
@@ -31,12 +31,12 @@ ms.locfileid: "47798071"
 |----------|-----------|--------------------------|----------------------|  
 |210001|동일한 멤버 코드가 준비 테이블에 여러 번 나옵니다.|준비 배치에 동일한 멤버 코드가 여러 번 나옵니다. 멤버가 생성 또는 업데이트되지 않았습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210003|특성 값이 존재하지 않거나 비활성인 멤버를 참조합니다.|도메인 기반 특성을 준비할 때는 이름이 아니라 코드를 사용해야 합니다. **ImportType0**, **1**및 **2**에 적용됩니다.|리프<br /><br /> 통합|  
-|210006|멤버 코드가 비활성입니다.|**ImportType** = **1** 이며, 존재하지 않는 멤버 코드를 지정했습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
+|210006|멤버 코드가 비활성입니다.|**ImportType** = **1**이며, 존재하지 않는 멤버 코드를 지정했습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210032|계층 이름이 없거나 잘못되었습니다.|명시적 계층이 없거나 **HierarchyName** 값이 비어 있습니다.|통합<br /><br /> 관계|  
 |210035|코드 생성 비즈니스 규칙이 없기 때문에 **MemberCode** 가 필요합니다.|자동 코드 생성을 사용하지 않는 한 멤버를 만들거나 업데이트할 때 **MemberCode** 가 항상 필요합니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.|리프<br /><br /> 통합|  
 |210036|코드 생성 비즈니스 규칙이 있기 때문에 **MemberCode** 가 필요 없습니다.|자동 코드 생성을 사용하는 경우 멤버를 만들거나 업데이트할 때 **MemberCode** 가 필요하지 않습니다. 그러나 선택하는 경우 코드를 지정할 수 있습니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.|리프<br /><br /> 통합|  
 |210041|"ROOT"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "ROOT"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
-|210042|“MDMUNUSED”는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "MDMUNUSED"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
+|210042|"MDMUNUSED"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "MDMUNUSED"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210052|MemberCode는 도메인 기반 특성 값으로 사용되기 때문에 비활성화할 수 없습니다.|**ImportType** = **3** 또는 **4**일 때 멤버가 다른 멤버의 특성 값으로 사용되는 경우 준비할 수 없습니다. **ImportType5** 또는 **6** 을 사용하여 값을 NULL로 설정하거나 준비 프로세스를 실행하기 전에 값을 변경합니다.|리프<br /><br /> 통합|  
 |300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4** 이며, 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |300004|멤버 코드가 이미 있습니다.|**ImportType** = **1** 이며, 이미 엔터티에 존재하는 멤버 코드를 사용했습니다.|리프<br /><br /> 통합|  

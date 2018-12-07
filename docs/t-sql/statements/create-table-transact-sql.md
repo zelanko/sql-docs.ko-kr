@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697827"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394532"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1047,9 +1047,9 @@ GO
 
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>데이터베이스 범위 전역 임시 테이블(Azure SQL Database)
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 전역 임시 테이블(## 테이블 이름으로 시작)은 tempdb에 저장되며 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 걸쳐 모든 사용자 세션 간에 공유됩니다. SQL 테이블 형식에 대한 자세한 내용은 테이블 만들기에 관한 위의 섹션을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 글로벌 임시 테이블(## 테이블 이름으로 시작)은 tempdb에 저장되며 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 걸쳐 모든 사용자 세션 간에 공유됩니다. SQL 테이블 형식에 대한 자세한 내용은 테이블 만들기에 관한 위의 섹션을 참조하세요.  
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 tempdb에도 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블을 지원합니다. 즉, 전역 임시 테이블은 같은 동일한 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 내의 모든 사용자 세션에 공유됩니다. 다른 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 tempdb에도 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블을 지원합니다. 즉, 글로벌 임시 테이블은 같은 동일한 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 내의 모든 사용자 세션에 공유됩니다. 다른 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 전역 임시 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 임시 테이블에 대해 사용하는 것과 같은 구문과 의미 체계를 따릅니다. 마찬가지로 전역 임시 저장 프로시저도 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 데이터베이스 수준을 범위로 합니다. 로컬 임시 테이블(# 테이블 이름으로 시작)은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에도 지원되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용하는 것과 같은 구문과 의미 체계를 따릅니다.  [임시 테이블](#temporary-tables)에 관한 위의 섹션을 참조하세요.  
 

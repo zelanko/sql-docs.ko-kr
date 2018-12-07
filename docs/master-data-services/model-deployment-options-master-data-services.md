@@ -12,12 +12,12 @@ ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98abe1434ea11e17c222c807c23eebee6974a06a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e09058b71b920a109bccc05c1ee480dc82036c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680631"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415030"
 ---
 # <a name="model-deployment-options-master-data-services"></a>모델 배포 옵션(Master Data Services)
 

@@ -1,7 +1,7 @@
 ---
 title: 계산 열의 인덱스 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851878"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191018"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +36,14 @@ ms.locfileid: "48851878"
 -   데이터 형식 요구 사항  
 -   SET 옵션 요구 사항  
   
-**Ownership Requirements**  
+#### <a name="ownership-requirements"></a>소유권 요구 사항
   
 계산 열에서 모든 함수 참조의 소유자는 테이블 소유자와 같아야 합니다.  
   
-**Determinism Requirements**  
-  
-> [!IMPORTANT]  
->  지정된 입력 집합에 대해 항상 같은 결과 집합을 반환하는 식은 결정적입니다. **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성은 *computed_column_expression* 이 결정적인지 여부를 보고합니다.  
-  
- *computed_column_expression* 은 결정적이어야 합니다. *computed_column_expression*은 다음과 같은 모든 조건이 충족되는 경우 결정적입니다.  
+## <a name="determinism-requirements"></a>결정성 요구 사항  
+
+지정된 입력 집합에 대해 항상 같은 결과 집합을 반환하는 식은 결정적입니다. **COLUMNPROPERTY** 함수의 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 속성은 *computed_column_expression* 이 결정적인지 여부를 보고합니다.  
+*computed_column_expression* 은 결정적이어야 합니다. *computed_column_expression*은 다음과 같은 모든 조건이 충족되는 경우 결정적입니다.  
   
 -   식에서 참조하는 모든 함수가 결정적이고 정확합니다. 이러한 함수에는 사용자 정의 함수와 기본 제공 함수가 포함됩니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요. 계산 열이 PERSISTED일 경우 함수가 정확하지 않을 수 있습니다. 자세한 내용은 이 항목의 뒤에 나오는 [지속형 계산 열에 인덱스 만들기](#BKMK_persisted) 를 참조하십시오.  
   
@@ -56,21 +54,24 @@ ms.locfileid: "48851878"
 -   *computed_column_expression* 에는 시스템 데이터 액세스 또는 사용자 데이터 액세스가 없습니다.  
   
 CLR(공용 언어 런타임) 식이 포함된 계산 열에 인덱스를 만들려면 열이 결정적이어야 하고 PERSISTED로 표시되어야 합니다. CLR 사용자 정의 형식 식은 계산 열 정의에서 허용됩니다. CLR 사용자 정의 형식의 계산 열은 형식이 비교 가능하면 인덱스를 만들 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인덱싱된 계산 열의 날짜 데이터 형식의 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하십시오. 
 
-> [!NOTE]
-> 데이터베이스 호환성 수준이 80 이하로 설정되지 않은 경우 문자열을 날짜 데이터 형식으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 서버 세션의 [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 설정에 따라 결과가 달라지기 때문입니다. 
->
-> 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`30 listopad 1996`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 
-> 마찬가지로 `DATEADD(mm,3,'2000-12-01')`에서는 DATEFORMAT 설정에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식의 `'2000-12-01'` 문자열을 해석합니다.  
->   
-> 호환성 수준이 80 이하로 설정되지 않은 경우에 데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
->   
-> 데이터베이스 호환성 수준 설정이 90이면 이러한 식이 포함된 계산 열에 인덱스를 만들 수 없습니다. 그러나 업그레이드된 데이터베이스로부터 이러한 식을 포함하는 기존 계산 열은 유지할 수 있습니다. 문자열에서 날짜로의 암시적 변환이 포함된 인덱싱된 계산 열을 사용하는 경우 인덱스 손상을 방지하려면 데이터베이스와 응용 프로그램에서 LANGUAGE 및 DATEFORMAT 설정이 일치하는지 확인합니다.  
-  
- **Precision Requirements**  
+#### <a name="cast-and-convert"></a>CAST 및 CONVERT
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인덱싱된 계산 열의 날짜 데이터 형식의 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하십시오. 
+
+자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../../t-sql/data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
+
+#### <a name="compatibility-level"></a>호환성 수준
+
+호환성 수준이 80 이하로 설정되지 않은 경우에 데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업은 비결정적인 것으로 간주됩니다.  
+
+데이터베이스 호환성 수준 설정이 90이면 이러한 식이 포함된 계산 열에 인덱스를 만들 수 없습니다. 그러나 업그레이드된 데이터베이스로부터 이러한 식을 포함하는 기존 계산 열은 유지할 수 있습니다. 문자열에서 날짜로의 암시적 변환이 포함된 인덱싱된 계산 열을 사용하는 경우 인덱스 손상을 방지하려면 데이터베이스와 응용 프로그램에서 LANGUAGE 및 DATEFORMAT 설정이 일치하는지 확인합니다.
+
+호환성 수준 90은 SQL Server 2005에 해당합니다.
+
+
+
+## <a name="precision-requirements"></a>정밀도 요구 사항
   
  *computed_column_expression* 은 정확해야 합니다. *computed_column_expression* 은 다음 조건 중 하나 이상이 충족되는 경우 정확합니다.  
   
@@ -90,14 +91,16 @@ CLR(공용 언어 런타임) 식이 포함된 계산 열에 인덱스를 만들�
 > **float** 또는 **real** 식은 정확하지 않은 것으로 간주되므로 인덱스의 키가 될 수 없습니다. **float** 또는 **real** 식은 인덱싱된 뷰에서 사용할 수 있지만 키로는 사용할 수 없습니다. 계산 열의 경우에도 마찬가지입니다. 함수, 식 또는 사용자 정의 함수에 **float** 또는 **real** 식이 포함되어 있으면 정확하지 않은 것으로 간주됩니다. 논리 식(비교)이 여기에 포함됩니다.  
   
 COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* 이 정확한지 여부를 보고합니다.  
-  
-**Data Type Requirements**  
+
+
+## <a name="data-type-requirements"></a>데이터 형식 요구 사항
   
 -   계산 열에 대해 정의된 *computed_column_expression* 은 **text**, **ntext**또는 **image** 데이터 형식으로 계산할 수 없습니다.  
 -   **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 인덱스 키 열로 사용할 수 있으면 인덱스를 만들 수 있습니다.  
 -   **image**, **ntext**및 **text** 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 키가 아닌 인덱스 열로 사용할 수 있으면 비클러스터형 인덱스에서 키가 아닌(포함된) 열이 될 수 있습니다.  
-  
-**SET Option Requirements**  
+
+
+## <a name="set-option-requirements"></a>SET 옵션 요구 사항
   
 -   계산 열을 정의하는 CREATE TABLE 또는 ALTER TABLE 문이 실행될 때 ANSI_NULLS 연결 수준 옵션이 ON으로 설정되어야 합니다. [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) 함수의 **IsAnsiNullsOn** 속성을 통해 이 옵션이 ON으로 설정되었는지 여부를 알 수 있습니다.  
 -   인덱스가 만들어진 연결과 인덱스에서 값을 변경하는 INSERT, UPDATE 또는 DELETE 문을 실행하려 하는 모든 연결에서 6개의 SET 옵션이 ON으로 설정되어야 하고 하나의 옵션만 OFF로 설정되어야 합니다. 최적화 프로그램은 옵션 설정이 이와 다른 연결에서 실행된 SELECT 문에 대해 계산 열의 인덱스를 무시합니다.  
@@ -114,7 +117,14 @@ COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* �
 > 데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
 ## <a name="BKMK_persisted"></a> 지속형 계산 열에 인덱스 만들기  
-CREATE TABLE 또는 ALTER TABLE 문에서 열이 PERSISTED로 표시된 경우 결정적이지만 정확하지 않은 식으로 정의된 계산 열에 인덱스를 만들 수 있습니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다. 이 옵션을 사용하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 계산 열 식을 반환하는 함수, 특히 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 생성된 CLR 함수가 결정적이면서 동시에 정확한지 여부를 확실히 판단할 수 없을 때에도 계산 열에 인덱스를 만들 수 있습니다.  
+
+경우에 따라 아직 결정적이지만 정확하지 않은 식으로 정의된 계산된 열을 만들 수 있습니다. 열이 CREATE TABLE 또는 ALTER TABLE 문에서 PERSISTED로 표시되는 경우 이를 수행할 수 있습니다.
+
+즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다.
+
+이 옵션을 사용하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 계산 열 식을 반환하는 함수, 특히 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 생성된 CLR 함수가 결정적이면서 동시에 정확한지 여부를 확실히 판단할 수 없을 때에도 계산 열에 인덱스를 만들 수 있습니다.  
+
+
   
 ## <a name="related-content"></a>관련 내용  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   

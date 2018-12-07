@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: c3c9936c7a69ec2d4f54f1f4412c5b39f60035e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539119"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "47607101"
 ## <a id="subheading-1"></a>개요
 데이터 검색 및 분류는 고급 서비스의 집합을 소개하고 데이터베이스뿐만 아니라 데이터를 보호 대상으로 지정하는 새로운 SQL Information Protection 패러다임을 형성합니다.
 * **검색 및 권장 사항** – 분류 엔진은 데이터베이스를 검사하고 잠재적으로 중요한 데이터가 포함된 열을 식별합니다. 그런 다음, 적절한 분류 권장 사항을 쉽게 검토하고 적용할 뿐만 아니라 수동으로 열을 분류하는 방법을 제공합니다.
-* **레이블 지정** – 민감도 분류 레이블은 열에서 영구적으로 태그를 지정할 수 있습니다.
+* **레이블 지정** – 민감도 분류 레이블은 열에서 영구적으로 태그가 지정될 수 있습니다.
 * **표시 유형** - 데이터베이스 분류 상태는 다른 요구 사항뿐만 아니라 규정 준수 및 감사 목적으로 사용할 인쇄/내보낼 수 있는 세부 보고서에서 볼 수 있습니다.
 
 ## <a id="subheading-2"></a>중요한 열 검색, 분류 및 레이블 지정
 다음 섹션에서는 데이터베이스에서 중요한 데이터를 포함하는 열을 검색, 분류, 및 레이블을 지정할 뿐만 아니라 데이터베이스 및 내보내는 보고서의 현재 분류 상태를 보는 단계를 설명합니다.
 
 분류에는 두 개의 메타데이터 특성이 포함됩니다.
-* 레이블 - 주 분류 속성은 열에 저장된 데이터의 민감도 수준을 정의하는 데 사용합니다.  
-* 정보 형식 – 열에 저장된 데이터의 형식에 대한 추가 세분성을 제공합니다.
+* 레이블 - 열에 저장된 데이터의 민감도 수준을 정의하는 데 사용되는 주 분류 특성.  
+* 정보 형식 – 열에 저장된 데이터의 형식에 추가 세분성을 제공합니다.
 
 <br>
 **SQL Server 데이터베이스를 분류하려면:**

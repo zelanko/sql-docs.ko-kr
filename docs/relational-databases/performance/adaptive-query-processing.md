@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031200"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503409"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,12 +27,14 @@ ms.locfileid: "51031200"
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 성능을 향상시키는 데 사용할 수 있는 다음과 같은 적응 쿼리 처리 기능을 소개합니다.
 - 일괄 처리 모드 메모리 부여 피드백
 - 일괄 처리 모드 적응 조인
-- 인터리브 실행 
+- 인터리브 실행
 
-일반 수준에서 SQL Server는 다음과 같이 쿼리를 실행합니다.
+일반 수준에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) 다음과 같이 쿼리를 실행합니다.
 1. 쿼리 최적화 프로세스는 특정 쿼리에 대한 가능한 실행 계획 집합을 생성합니다. 이 시간 동안 계획 옵션의 비용이 추정되고 예상 비용이 가장 낮은 계획이 사용됩니다.
 1. 쿼리 실행 프로세스는 쿼리 최적화 프로그램에서 선택된 계획을 사용하고 실행에 이용합니다.
-    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리 처리 및 실행 모드에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.
+
 쿼리 최적화 프로그램에서 선택된 계획이 여러 가지 이유로 적합하지 않은 경우도 있습니다. 예를 들어 쿼리 계획을 통해 이동하는 예상 행 수가 잘못되었을 수 있습니다. 예상 비용은 실행에 이용하도록 선택되는 계획을 결정하는 데 도움이 됩니다. 카디널리티 예상치가 잘못된 경우 원래 추정이 부실해도 원래 계획이 사용됩니다.
 
 ![적응 쿼리 처리 기능](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
 
 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
@@ -96,7 +98,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-또한 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK을 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+또한 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="row-mode-memory-grant-feedback"></a>행 모드 메모리 부여 피드백
-**적용 대상**: SQL Database(공개 미리 보기 기능으로)
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기 기능으로)
 
 > [!NOTE]
 > 행 모드 메모리 부여 피드백은 공용 미리 보기 기능입니다.  
 
 행 모드 메모리 부여 피드백은 일괄 처리 및 행 모드 연산자의 메모리 부여 크기를 둘 다 조정하여 일괄 처리 모드 메모리 부여 피드백 기능을 확장합니다.  
 
-Azure SQL Database에서 행 모드 메모리 부여 피드백의 공개 미리 보기를 사용하도록 설정하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 행 모드 메모리 부여 피드백의 공개 미리 보기를 사용하도록 설정하려면 쿼리를 실행할 때 연결된 데이터베이스의 데이터베이스 호환성 수준 150을 사용하도록 설정합니다.
 
 행 모드 메모리 부여 피드백 작업은 **memory_grant_updated_by_feedback** XEvent를 통해 표시됩니다. 
 
-행 모드 메모리 부여 피드백부터 실제 실행 후 계획의 경우 MemoryGrantInfo 쿼리 계획 XML 요소에 추가되는 두 개의 새 쿼리 계획 특성인 **IsMemoryGrantFeedbackAdjusted** 및 **LastRequestedMemory**가 표시됩니다. 
+행 모드 메모리 부여 피드백부터 실제 실행 후 계획의 경우 *MemoryGrantInfo* 쿼리 계획 XML 요소에 추가되는 두 개의 새 쿼리 계획 특성인 ***IsMemoryGrantFeedbackAdjusted*** 및 ***LastRequestedMemory***가 표시됩니다. 
 
-LastRequestedMemory는 이전 쿼리 실행에서 부여된 메모리를 KB(킬로바이트) 단위로 표시합니다. IsMemoryGrantFeedbackAdjusted 특성을 사용하면 실제 쿼리 실행 계획 내의 문에 대한 메모리 부여 피드백의 상태를 확인할 수 있습니다. 이 특성에 표시된 값은 다음과 같습니다.
+*LastRequestedMemory*는 이전 쿼리 실행에서 부여된 메모리를 KB(킬로바이트) 단위로 표시합니다. *IsMemoryGrantFeedbackAdjusted* 특성을 사용하면 실제 쿼리 실행 계획 내의 명령문에 대한 메모리 부여 피드백의 상태를 확인할 수 있습니다. 이 특성에 표시된 값은 다음과 같습니다.
 
 | IsMemoryGrantFeedbackAdjusted 값 | 설명 |
-|--- |--- |
+|---|---|
 | No: First Execution | 메모리 부여 피드백은 첫 번째 컴파일 및 연결된 실행에 대한 메모리를 조정하지 않습니다.  |
 | No: Accurate Grant | 디스크에 분산이 없고 문이 부여된 메모리의 50% 이상을 사용하면 메모리 부여 피드백이 트리거되지 않습니다. |
 | No: Feedback disabled | 메모리 부여 피드백이 지속적으로 트리거되고 메모리 증가 작업과 메모리 감소 작업 간에 변동되면 문에 대한 메모리 부여 피드백을 사용할 수 없습니다. |
@@ -131,7 +133,7 @@ LastRequestedMemory는 이전 쿼리 실행에서 부여된 메모리를 KB(킬�
 | Yes: Stable | 메모리 부여 피드백이 적용되었고 이제 부여된 메모리가 안정적입니다. 이는 이전 실행에 마지막으로 부여된 메모리가 현재 실행에 부여된 메모리와 같음을 의미합니다. |
 
 > [!NOTE]
-> 공개 미리 보기 행 모드 메모리 부여 피드백 계획 특성은 버전 17.9 이상의 SQL Server Management Studio 그래픽 쿼리 실행 계획에서 표시됩니다. 
+> 공개 미리 보기 행 모드 메모리 부여 피드백 계획 특성은 버전 17.9 이상의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 쿼리 실행 계획에서 표시됩니다. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 행 모드 메모리 부여 피드백 비활성화
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 행 모드 메모리 부여 피드백을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
@@ -146,7 +148,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-또한 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK을 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+또한 `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 행 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,28 +168,26 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 다음 쿼리는 적응 조인 예제를 설명하기 위해 사용됩니다.
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.MD)를 사용하도록 설정하면 다음 계획이 표시됩니다.
+이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)를 사용하도록 설정하면 다음 계획이 표시됩니다.
 
 ![쿼리 결과 336개 행](./media/4_AQPStats336Rows.png)
 
 계획에 다음이 표시됩니다.
 1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
 1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
-1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여 줍니다.
+1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여줍니다.
 1. 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
  이제 계획과 동일한 쿼리를 비교합니다. 하지만 이번에는 테이블에 하나의 행만 있는 *Quantity* 값에 대해 쿼리합니다.
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ WHERE [fo].[Quantity] = 361;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-또한 DISABLE_BATCH_MODE_ADAPTIVE_JOINS를 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
 SELECT s.CustomerID,
@@ -264,17 +264,18 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>다중 문 테이블 반환 함수에 대한 인터리브 실행
-인터리브 실행을 사용하면 단일 쿼리 실행에 대한 최적화 및 실행 단계 사이의 단방향 경계가 변경되며 수정된 카디널리티 예상치에 따라 계획을 조정할 수 있습니다. 최적화 중에 현재 **MSTVF(다중 문 테이블 반환 함수)** 인 인터리브 실행 후보를 발견할 경우 최적화를 일시 중지하고, 해당 하위 트리를 실행하고, 정확한 카디널리티 예상치를 캡처한 다음 다운스트림 작업에 대해 최적화를 다시 시작합니다.
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 MSTVF에 대한 고정 카디널리티 추정이 100이고, 이전 버전에서는 1입니다. 인터리브 실행은 다중 문 테이블 반환 함수와 연결된 이러한 고정 카디널리티 예상치 때문에 발생하는 워크로드 성능 문제에 도움이 됩니다.
+인터리브 실행을 사용하면 단일 쿼리 실행에 대한 최적화 및 실행 단계 사이의 단방향 경계가 변경되며 수정된 카디널리티 예상치에 따라 계획을 조정할 수 있습니다. 최적화 중에 현재 **MSTVF(다중 명령문 테이블 반환 함수)** 인 인터리브 실행 후보를 발견할 경우 최적화를 일시 중지하고, 해당 하위 트리를 실행하고, 정확한 카디널리티 예상치를 캡처한 다음, 다운스트림 작업에 대해 최적화를 다시 시작합니다.   
 
-다음 이미지에서는 MSTVF의 고정 카디널리티 예상치 영향을 보여 주는 전체 실행 계획의 하위 집합인 활성 쿼리 통계 출력을 보여줍니다. 실제 행 흐름 및 예상 행 수를 확인할 수 있습니다. 중요한 세 가지 계획 영역은 다음과 같습니다(오른쪽에서 왼쪽으로 흐름).
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 MSTVF에 대한 고정 카디널리티 추정이 100이고, 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 1입니다. 인터리브 실행은 MSTVF와 연결된 이러한 고정 카디널리티 예상치 때문에 발생하는 워크로드 성능 문제에 도움이 됩니다. MSTVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
+
+다음 이미지에서는 MSTVF의 고정 카디널리티 예상치 영향을 보여주는 전체 실행 계획의 하위 집합인 [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md) 출력을 보여줍니다. 실제 행 흐름 및 예상 행 수를 확인할 수 있습니다. 중요한 세 가지 계획 영역은 다음과 같습니다(오른쪽에서 왼쪽으로 흐름).
 1. MSTVF 테이블 검색의 고정 예상치는 100개 행입니다. 그러나 이 예제에서는 실제/예상인 *527597/100*을 통해 활성 쿼리 통계에 표시되는 것처럼 527,597개 행이 이 MSTVF 테이블 검색을 통과하므로 고정 예상치와 큰 차이가 있습니다.
 1. 중첩된 루프 작업의 경우 100개의 행만 조인의 외부 측면에서 반환된다고 가정합니다. 실제로 MSTVF에서 반환되는 많은 행 개수를 고려할 때 다른 조인 알고리즘을 사용하는 것이 나을 수도 있습니다.
 1. 해시 일치 작업의 경우 작은 경고 기호가 표시되며, 이 경우 디스크로 분산을 나타냅니다.
@@ -297,7 +298,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 일반적으로 인터리브 실행은 다음과 같은 쿼리에 도움이 됩니다.
 1. 중간 결과 집합(이 경우 MSTVF)에 대한 실제 행 수와 예상치 간에 큰 차이가 있습니다.
 1. 전체 쿼리에서 중간 결과의 크기 변경이 중요합니다. 일반적으로 쿼리 계획의 하위 트리 위에 복잡한 트리가 있는 경우에 발생합니다.
-단순한 MSTVF에서 "SELECT *"의 경우 인터리브 실행이 도움이 되지 않습니다.
+단순한 MSTVF에서 `SELECT *`의 경우 인터리브 실행이 도움이 되지 않습니다.
 
 ### <a name="interleaved-execution-overhead"></a>인터리브 실행 오버헤드
 오버헤드는 최소화되거나 없어야 합니다. MSTVF는 인터리브 실행이 도입되기 전에 이미 구체화되었지만, 이제 지연 최적화를 허용한 후 구체화된 행 집합의 카디널리티 예상치를 활용한다는 차이점이 있습니다.
@@ -339,18 +340,18 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 인터리브된 실행을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-또한 DISABLE_INTERLEAVED_EXECUTION_TVF를 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+또한 `DISABLE_INTERLEAVED_EXECUTION_TVF`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [조인](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)          
-
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)    
+[USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[사용자 정의 함수 만들기(데이터베이스 엔진)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

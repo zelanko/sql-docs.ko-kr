@@ -12,12 +12,12 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ddcd6d754ce1b760d91462847b796e4ec8de933
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 235c64cf0920ec27bedd4ba032f742e206e6e78a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594611"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390358"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>사용자의 사용 권한 테스트(Master Data Services)
 

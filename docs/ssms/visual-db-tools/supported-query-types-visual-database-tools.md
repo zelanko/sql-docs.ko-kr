@@ -23,12 +23,12 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d784fca62ffd20e624cc2c103e4657e277012867
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e4585a5b41fe14e68d7d7e5ca38f8da7060a8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505569"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>지원되는 쿼리 형식(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

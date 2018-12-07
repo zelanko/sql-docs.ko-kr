@@ -15,12 +15,12 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511832"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ SQL 창에서 테이블이나 뷰를 문에 참조하면 참조된 테이블과 
   
 3.  기존 쿼리에 대해 쿼리 디자이너를 엽니다. 이제 두 개의 쿼리 디자이너가 열려 있는 상태입니다.  
   
-4.  새로운 외부 쿼리에 포함하려는 기존의 내부 쿼리에 대해 **SQL 창** 을 표시합니다.  
+4.  새로운 외부 쿼리에 포함하려는 기존의 내부 쿼리에 대해 **SQL 창**을 표시합니다.  
   
 5.  **SQL 창**에서 텍스트 전체를 선택하여 클립보드에 복사합니다.  
   

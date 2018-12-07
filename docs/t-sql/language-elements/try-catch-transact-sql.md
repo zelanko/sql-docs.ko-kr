@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545748"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,32 +61,32 @@ END CATCH
  임의의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
  *statement_block*  
- 일괄 처리나 BEGIN...END 블록으로 묶은 임의의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹입니다.  
+ 일괄 처리나 BEGIN...END 블록으로 묶은 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹입니다.  
   
 ## <a name="remarks"></a>Remarks  
  TRY...CATCH 구문은 심각도가 10을 넘으며 데이터베이스 연결을 닫지 않는 모든 실행 오류를 catch합니다.  
   
  TRY 블록 다음에는 곧바로 연결된 CATCH 블록이 이어져야 합니다. END TRY와 BEGIN CATCH 문 사이에 다른 문을 포함시키면 구문 오류가 발생합니다.  
   
- TRY...CATCH 구문은 여러 일괄 처리에 걸칠 수 없으며 또한 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록에 걸칠 수 없습니다. 예를 들어 하나의 TRY...CATCH 구문이 두 개의 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN…END 블록에 걸치거나 IF...ELSE 구문에 걸칠 수 없습니다.  
+ TRY...CATCH 구문은 여러 일괄 처리에 걸쳐 있을 수 없으며 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록에도 걸쳐 있을 수 없습니다. 예를 들어 하나의 TRY...CATCH 구문이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 BEGIN…END 블록 2개에 걸쳐 있거나 IF...ELSE 구문에 걸쳐 있을 수 없습니다.  
   
  TRY 블록의 마지막 문 실행을 완료할 때 TRY 블록으로 묶은 코드에 오류가 없는 경우 연결된 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. TRY 블록으로 묶은 코드에 오류가 있는 경우 연결된 CATCH 블록의 첫 번째 문으로 제어가 전달됩니다. END CATCH 문이 저장 프로시저 또는 트리거의 마지막 문인 경우 해당 저장 프로시저를 호출하거나 트리거를 발생시킨 문으로 제어가 전달됩니다.  
   
  CATCH 블록의 코드를 완료하면 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. CATCH 블록이 포착한 오류는 호출 응용 프로그램으로 반환되지 않습니다. 오류 정보를 응용 프로그램으로 반환해야 하는 경우 CATCH 블록의 코드에서 SELECT 결과 집합 또는 RAISERROR 및 PRINT 문과 같은 메커니즘을 사용하세요.  
   
- TRY...CATCH 구문은 중첩할 수 있습니다. TRY 블록 또는 CATCH 블록은 중첩된 TRY...CATCH 구문을 포함할 수 있습니다. 예를 들어 CATCH 블록에 TRY...CATCH 구문을 포함하여 CATCH 코드가 발견하는 오류를 처리할 수 있습니다.  
+ TRY...CATCH 구문은 중첩될 수 있습니다. TRY 블록 또는 CATCH 블록에는 중첩된 TRY...CATCH 구문이 포함될 수 있습니다. 예를 들어 CATCH 블록에 TRY...CATCH 구문이 포함되어 CATCH 코드가 발견하는 오류를 처리할 수 있습니다.  
   
- CATCH 블록에서 발견되는 오류는 다른 곳에서 발생한 오류와 같이 취급됩니다. CATCH 블록이 중첩된 TRY...CATCH 구문을 포함하는 경우 중첩된 TRY 블록에서 오류가 발생하면 중첩된 CATCH 블록으로 제어가 전달됩니다. 중첩된 TRY...CATCH 구문이 없는 경우 호출자로 오류가 다시 전달됩니다.  
+ CATCH 블록에서 발견되는 오류는 다른 곳에서 발생한 오류와 같이 취급됩니다. CATCH 블록에 중첩된 TRY...CATCH 구문이 포함되는 경우 중첩된 TRY 블록의 모든 오류는 중첩된 CATCH 블록으로 제어를 전달합니다. 중첩된 TRY...CATCH 구문이 없는 경우 호출자에게 오류를 다시 전달합니다.  
   
- TRY...CATCH 구문은 TRY 블록의 코드가 실행한 저장 프로시저 또는 트리거에서 처리되지 않은 오류를 포착합니다. 또는 저장 프로시저나 트리거 자체에 코드에서 발생한 오류를 처리할 수 있도록 TRY...CATCH 구문을 포함할 수 있습니다. 예를 들어 TRY 블록이 저장 프로시저를 실행하고 해당 저장 프로시저에서 오류가 발생하는 경우 다음과 같은 방법으로 오류를 처리할 수 있습니다.  
+ TRY...CATCH 구문은 TRY 블록의 코드에서 실행된 저장 프로시저 또는 트리거에서 처리되지 않은 오류를 catch합니다. 또는 저장 프로시저나 트리거에는 해당 코드에서 발생된 오류를 처리할 수 있도록 TRY...CATCH 구문이 포함될 수 있습니다. 예를 들어 TRY 블록이 저장 프로시저를 실행하고 해당 저장 프로시저에서 오류가 발생하는 경우 다음과 같은 방법으로 오류를 처리할 수 있습니다.  
   
--   저장 프로시저가 자체적인 TRY...CATCH 구문을 포함하지 않는 경우 오류가 발생하면 EXECUTE 문을 포함하는 TRY 블록과 연결된 CATCH 블록으로 제어가 반환됩니다.  
+-   저장 프로시저에 해당 TRY...CATCH 구문이 포함되지 않는 경우 오류가 발생하면 EXECUTE 문을 포함하는 TRY 블록과 연결된 CATCH 블록으로 제어가 반환됩니다.  
   
--   저장 프로시저가 TRY...CATCH 구문을 포함하는 경우 오류가 발생하면 저장 프로시저의 CATCH 블록으로 제어가 전달됩니다. CATCH 블록 코드를 완료하면 해당 저장 프로시저를 호출한 EXECUTE 문 바로 다음 문으로 제어가 전달됩니다.  
+-   저장 프로시저에 TRY...CATCH 구문이 포함되는 경우 오류가 발생하면 저장 프로시저의 CATCH 블록으로 제어가 전달됩니다. CATCH 블록 코드를 완료하면 해당 저장 프로시저를 호출한 EXECUTE 문 바로 다음 문으로 제어가 전달됩니다.  
   
  GOTO 문을 사용하여 TRY 또는 CATCH 블록에 진입할 수 없지만 동일한 TRY 또는 CATCH 블록 내의 레이블로 이동하거나 TRY 또는 CATCH 블록에서 나가는 것은 가능합니다.  
   
- 사용자 정의 함수에는 TRY...CATCH 구문을 사용할 수 없습니다.  
+ 사용자 정의 함수에서는 TRY...CATCH 구문을 사용할 수 없습니다.  
   
 ## <a name="retrieving-error-information"></a>오류 정보 검색  
  CATCH 블록의 범위에서 다음 시스템 함수를 사용하여 CATCH 블록을 실행하도록 만든 오류에 대한 정보를 얻을 수 있습니다.  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md)는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
   
- CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY…CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
+ CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY...CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -136,17 +136,17 @@ END CATCH;
  ERROR\_\* 함수는 [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) 안의 `CATCH` 블록에서도 작동합니다.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 구문의 영향을 받지 않는 오류  
- TRY...CATCH 구문은 다음과 같은 조건에서 오류를 포착하지 않습니다.  
+ TRY...CATCH 구문은 다음과 같은 조건을 트래핑하지 않습니다.  
   
 -   심각도가 10 이하인 경고 또는 정보 메시지  
   
--   해당 세션에 대한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 태스크 처리를 중지하게 만드는 심각도 20 이상의 오류. 심각도가 20 이상인 오류가 발생하고 데이터베이스 연결이 끊기지 않은 경우 TRY...CATCH가 오류를 처리합니다.  
+-   해당 세션에 대한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 태스크 처리를 중지하게 만드는 심각도 20 이상의 오류. 심각도가 20 이상인 오류가 발생하고 데이터베이스 연결이 끊기지 않은 경우 TRY...CATCH 구문이 오류를 처리합니다.  
   
 -   클라이언트 인터럽트 요청 또는 클라이언트 연결 끊김과 같은 주의  
   
 -   시스템 관리자가 KILL 문을 사용하여 세션을 종료할 때  
   
- 다음 유형의 오류는 TRY...CATCH 구문과 같은 실행 수준에서 발생하는 경우 CATCH 블록에서 처리되지 않습니다.  
+ 다음 유형의 오류가 TRY...CATCH 구문과 동일한 실행 수준에서 발생하는 경우 CATCH 블록에서 처리되지 않습니다.  
   
 -   구문 오류와 같이 일괄 처리의 실행을 막는 컴파일 오류  
   
@@ -154,9 +154,9 @@ END CATCH;
   
  이런 오류는 해당 일괄 처리, 저장 프로시저 또는 트리거를 실행한 수준으로 반환됩니다.  
   
- TRY 블록 내의 더 낮은 실행 수준(예: sp_executesql 또는 사용자 정의 저장 프로시저 실행 시)에서 컴파일하는 동안 또는 문 수준으로 다시 컴파일하는 동안 오류가 발생하는 경우 이 오류는 TRY...CATCH 구문보다 낮은 수준에서 발생하며 연관된 CATCH 블록에서 처리됩니다.  
+ TRY 블록 내의 더 낮은 실행 수준(예: sp_executesql 또는 사용자 정의 저장 프로시저 실행 시)에서 컴파일하는 동안 또는 명령문 수준으로 다시 컴파일하는 동안 오류가 발생하는 경우 이 오류는 TRY...CATCH 구문보다 낮은 수준에서 발생하며 연결된 CATCH 블록에서 처리됩니다.  
   
- 다음 예에서는 `SELECT` 문에서 발생한 개체 이름 확인 오류가 `TRY…CATCH` 구문으로는 포착되지 않지만 저장 프로시저 내에서 동일한 `CATCH` 문을 실행할 때 `SELECT` 블록에서 포착되는 상황을 보여 줍니다.  
+ 다음 예에서는 `SELECT` 문에서 발생한 개체 이름 확인 오류가 `TRY...CATCH` 구문으로는 포착되지 않지만 저장 프로시저 내에서 동일한 `CATCH` 문을 실행할 때 `SELECT` 블록에서 포착되는 상황을 보여 줍니다.  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- 오류가 포착되지 않고 `TRY…CATCH` 구문 밖으로 제어가 전달되어 다음으로 높은 수준으로 이동됩니다.  
+ 오류가 포착되지 않고 `TRY...CATCH` 구문 밖으로 제어가 전달되어 다음으로 높은 수준으로 이동됩니다.  
   
- 저장 프로시저 내에서 `SELECT` 문을 실행하면 `TRY` 블록보다 낮은 수준에서 오류가 발생하여 `TRY…CATCH` 구문에서 오류를 처리할 수 있습니다.  
+ 저장 프로시저 내에서 `SELECT` 문을 실행하면 `TRY` 블록보다 낮은 수준에서 오류가 발생하여 `TRY...CATCH` 구문에서 오류를 처리할 수 있습니다.  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-trycatch"></a>1. TRY…CATCH 사용  
+### <a name="a-using-trycatch"></a>1. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  
@@ -226,7 +226,7 @@ GO
 ```  
   
 ### <a name="b-using-trycatch-in-a-transaction"></a>2. 트랜잭션에서 TRY...CATCH 사용  
- 다음 예에서는 트랜잭션 내에서 `TRY…CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
+ 다음 예에서는 트랜잭션 내에서 `TRY...CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -254,8 +254,8 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>3. TRY...CATCH에 XACT_STATE 사용  
- 다음 예에서는 트랜잭션 내부에서 발생하는 오류를 `TRY…CATCH` 구문을 사용하여 처리하는 방법을 보여 줍니다. 트랜잭션을 커밋해야 하는지 또는 롤백해야 하는지는 `XACT_STATE` 함수가 결정합니다. 이 예에서 `SET XACT_ABORT`는 `ON`입니다. 이렇게 하면 제약 조건 위반 오류가 발생할 경우 트랜잭션을 커밋할 수 없습니다.  
+### <a name="c-using-trycatch-with-xactstate"></a>3. XACT_STATE에서 TRY...CATCH 사용  
+ 다음 예에서는 트랜잭션 내부에서 발생하는 오류를 `TRY...CATCH` 구문을 사용하여 처리하는 방법을 보여 줍니다. 트랜잭션을 커밋해야 하는지 또는 롤백해야 하는지는 `XACT_STATE` 함수가 결정합니다. 이 예에서 `SET XACT_ABORT`는 `ON`입니다. 이렇게 하면 제약 조건 위반 오류가 발생할 경우 트랜잭션을 커밋할 수 없습니다.  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>4. TRY…CATCH 사용  
+### <a name="d-using-trycatch"></a>4. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  

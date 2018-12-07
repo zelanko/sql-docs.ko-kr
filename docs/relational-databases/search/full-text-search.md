@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ae40796c73616831797d3d9fdf589e4dc4e8320
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb330dfed7671762b353176cc7d94df02c5c0e65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535561"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,21 +61,21 @@ ms.locfileid: "47794401"
   
  전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
--   e-비즈니스 - 웹 사이트에서 제품 검색:  
+-   e-비즈니스 - 웹 사이트에서 제품 검색  
   
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
--   채용 시나리오 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 작업한 경험이 있는 지원자 검색:  
+-   채용 시나리오 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용한 경험이 있는 지원자 검색  
   
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  

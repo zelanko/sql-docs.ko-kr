@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700941"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394154"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -122,7 +122,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>시나리오 3: SQL FCI와 SQL Server 가용성 그룹이 모두 있는 Windows 클러스터
 
-독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 사용하지 않고 하나 이상의 가용성 그룹에 포함된 SQL FCI만 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 있는 경우 이를 “가용성 그룹 없음, 독립 실행형 인스턴스 없음” 시나리오와 유사한 방법을 사용하여 새 클러스터로 마이그레이션할 수 있습니다. 시스템 테이블을 대상 FCI 공유 디스크에 복사하기 전에 원본 환경의 모든 가용성 그룹을 삭제해야 합니다. 모든 데이터베이스가 대상 컴퓨터로 마이그레이션되면 동일한 스키마와 수신기 이름으로 가용성 그룹을 다시 만듭니다. 이렇게 하면 Windows Server 장애 조치(failover) 클러스터 리소스가 대상 클러스터에서 올바르게 형식이 지정되고 관리됩니다. **마이그레이션 전에 대상 환경의 각 컴퓨터의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager에서 Always On을 활성화해야 합니다.**
+독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 사용하지 않고 하나 이상의 가용성 그룹에 포함된 SQL FCI만 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 있는 경우 이를 "가용성 그룹 없음, 독립 실행형 인스턴스 없음" 시나리오와 유사한 방법을 사용하여 새 클러스터로 마이그레이션할 수 있습니다. 시스템 테이블을 대상 FCI 공유 디스크에 복사하기 전에 원본 환경의 모든 가용성 그룹을 삭제해야 합니다. 모든 데이터베이스가 대상 컴퓨터로 마이그레이션되면 동일한 스키마와 수신기 이름으로 가용성 그룹을 다시 만듭니다. 이렇게 하면 Windows Server 장애 조치(failover) 클러스터 리소스가 대상 클러스터에서 올바르게 형식이 지정되고 관리됩니다. **마이그레이션 전에 대상 환경의 각 컴퓨터의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager에서 Always On을 활성화해야 합니다.**
 
 ### <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
@@ -160,7 +160,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>시나리오 4: 독립 실행형 SQL Server 인스턴스가 있고 가용성 그룹이 없는 Windows 클러스터
 
-독립 실행형 인스턴스를 사용하여 클러스터를 마이그레이션하는 것은 FCI만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터를 마이그레이션하는 프로세스와 유사하지만 FCI의 네트워크 이름 클러스터 리소스의 VNN을 변경하지 않고 원본 독립 실행형 컴퓨터의 컴퓨터 이름을 변경한 후 대상 컴퓨터에서 이전 컴퓨터의 이름을 “도용”한다는 점이 다릅니다. 이전 컴퓨터의 네트워크 이름을 입수해야만 대상 독립 실행형 컴퓨터를 WSFC로 조인할 수 있으므로 이 시나리오는 독립 실행형이 아닌 시나리오보다 가동 중지 시간이 더 길어집니다.
+독립 실행형 인스턴스를 사용하여 클러스터를 마이그레이션하는 것은 FCI만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터를 마이그레이션하는 프로세스와 유사하지만 FCI의 네트워크 이름 클러스터 리소스의 VNN을 변경하지 않고 원본 독립 실행형 머신의 머신 이름을 변경한 후 대상 머신에서 이전 머신의 이름을 "도용"한다는 점이 다릅니다. 이전 머신의 네트워크 이름을 입수해야만 대상 독립 실행형 머신을 WSFC로 조인할 수 있으므로 이 시나리오는 독립 실행형이 아닌 시나리오보다 가동 중지 시간이 더 길어집니다.
 
 ###  <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 

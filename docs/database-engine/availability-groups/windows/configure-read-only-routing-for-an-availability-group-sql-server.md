@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50819e03af647245949d3c60638767ce3ab859d7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d984799a7ac2ac3c6dd6241e98c3a5af175759b0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605813"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527151"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "51605813"
   
     -   주 역할에 대한 읽기 전용 라우팅을 구성하려면 ADD REPLICA 또는 MODIFY REPLICA WITH 절에서 다음과 같이 PRIMARY_ROLE 옵션을 지정합니다.  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
   
          여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다.  
   
@@ -145,7 +145,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
  하나의 중첩 괄호 수준만 사용할 수 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 기존 가용성 그룹 `AG1` 의 두 가용성 복제본 중 하나가 현재 주 역할을 소유하고 있는 경우 가용성 복제본이 읽기 전용 라우팅을 지원하도록 수정합니다. 이 예에서는`COMPUTER01` 및 `COMPUTER02`를 인스턴스 이름으로 지정하여 가용성 복제본을 호스팅하는 서버 인스턴스를 식별합니다.  
+ 다음 예에서는 기존 가용성 그룹 `AG1` 의 두 가용성 복제본 중 하나가 현재 주 역할을 소유하고 있는 경우 가용성 복제본이 읽기 전용 라우팅을 지원하도록 수정합니다. 가용성 복제본을 호스팅하는 서버 인스턴스를 식별하려면 이 예제에서는 `COMPUTER01` 및 `COMPUTER02` 인스턴스 이름을 지정합니다.  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  

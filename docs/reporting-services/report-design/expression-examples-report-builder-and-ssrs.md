@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814326"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393225"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -165,7 +165,7 @@ ms.locfileid: "51814326"
 -   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [첫 번째 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **DatePart** 함수는 주어진 날짜 값의 지정된 구성 요소를 포함하는 정수 값을 반환합니다. 다음 식은 DataSet1에 있는 SellStartDate의 첫 번째 값에 대한 연도를 반환합니다. 보고서에 여러 개의 데이터 집합이 있으므로 데이터 집합 범위가 지정됩니다.  
@@ -229,7 +229,7 @@ ms.locfileid: "51814326"
      다음 예에서는 선택한 값 목록 이전의 텍스트 문자열을 표시할 뿐 아니라 위의 예와 동일한 작업을 수행합니다.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ ms.locfileid: "51814326"
   
 ### <a name="lookup"></a>조회  
   
--   키 필드를 지정하면 **Lookup** 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 집합에서 제품 이름(“Product”)을 표시합니다.  
+-   키 필드를 지정하면 **Lookup** 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 세트에서 제품 이름("Product")을 표시합니다.  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ ms.locfileid: "51814326"
     End Function  
     ```  
   
-     다음 식은 "ColumnGroupByYear" 컨테이너(그룹 또는 데이터 영역)에 대해 입력란에서 이 사용자 지정 코드를 호출하는 방법을 보여 줍니다.  
+     다음 식은 "ColumnGroupByYear" 컨테이너(그룹 또는 데이터 영역)에 대해 입력란에서 이 사용자 지정 코드를 호출하는 방법을 보여줍니다.  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

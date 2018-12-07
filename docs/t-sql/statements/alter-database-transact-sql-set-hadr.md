@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696211"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533350"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  지정한 데이터베이스에 대해 지정한 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 명령을 실행합니다.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  다음과 같이 지정한 데이터베이스를 지정한 가용성 그룹에 조인하거나 그룹에서 제거합니다.  
   
  *group_name*  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  지정한 보조 데이터베이스를 가용성 그룹에서 제거합니다.  
   
- 보조 데이터베이스가 주 데이터베이스보다 오래되었거나 보조 데이터베이스가 주 데이터베이스를 따라잡을 때까지 기다리고 싶지 않은 경우 보조 데이터베이스를 제거하면 유용합니다. 보조 데이터베이스를 제거한 후 최신 로그 백업으로 백업 시퀀스를 복원하여 데이터베이스를 업데이트할 수 있습니다(RESTORE … WITH NORECOVERY 를 사용하여).  
+ 보조 데이터베이스가 주 데이터베이스보다 오래되었거나 보조 데이터베이스가 주 데이터베이스를 따라잡을 때까지 기다리고 싶지 않은 경우 보조 데이터베이스를 제거하면 유용합니다. 보조 데이터베이스를 제거한 후 최신 로그 백업으로 끝나는 백업 시퀀스를 복원하여 데이터베이스를 업데이트할 수 있습니다(RESTORE … WITH NORECOVERY 를 사용하여).  
   
 > [!IMPORTANT]  
 >  가용성 데이터베이스를 가용성 그룹에서 완전히 제거하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결한 후 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* 문을 사용합니다. 자세한 내용은 [가용성 그룹에서 주 데이터베이스 제거&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)를 참조하세요.  

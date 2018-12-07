@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788541"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411490"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT(SSIS 식)
   지정된 구분 기호로 구분된 토큰을 포함하는 문자열의 토큰 수를 반환합니다.  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  구분 기호로 구분된 토큰이 포함된 문자열입니다.  
   
  *delimiter_string*  
- 구분 기호 문자가 포함된 문자열입니다. 예를 들어 "; ,”에는 세미콜론, 공백 및 쉼표의 세 구분 문자가 포함되어 있습니다.  
+ 구분 기호 문자가 포함된 문자열입니다. 예를 들어 "; ,"에는 세미콜론, 공백 및 쉼표의 세 구분 문자가 포함되어 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
@@ -51,13 +51,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   변수 및 열을 이 식의 인수로 사용할 수 있습니다.  
   
 ## <a name="expression-examples"></a>식 예  
- 다음 예에서는 문자열에 “01”, “12”, “2011”의 토큰 3개가 있으므로 TOKENCOUNT 함수에서 3을 반환합니다.  
+ 다음 예제에서는 문자열에 "01", "12", "2011"의 토큰 3개가 있으므로 TOKENCOUNT 함수에서 3을 반환합니다.  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- 다음 예에서는 토큰 4개(“a”, “little”, “white”, “dog”)가 있으므로 TOKENCOUNT 함수에서 4를 반환합니다.  
+ 다음 예제에서는 토큰 4개("a", "little", "white", "dog")가 있으므로 TOKENCOUNT 함수에서 4를 반환합니다.  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +69,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- 다음 예에서 TOKENCOUNT 함수는 4를 반환합니다. 이 예의 구분 기호 문자열에는 구분 기호가 5개 포함되어 있습니다. 입력 문자열에는 “a”, “little”, “white”, “dog”의 4개 토큰이 포함되어 있습니다.  
+ 다음 예에서 TOKENCOUNT 함수는 4를 반환합니다. 이 예의 구분 기호 문자열에는 구분 기호가 5개 포함되어 있습니다. 입력 문자열에는 "a", "little", "white", "dog"의 4개 토큰이 포함되어 있습니다.  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

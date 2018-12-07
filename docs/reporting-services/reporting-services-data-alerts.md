@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539934"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
@@ -33,11 +33,11 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
 
 다음은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고의 주요 영역을 요약한 것입니다.
 
--   **데이터 경고 정의 및 경고 정의 저장**- 사용자가 보고서를 실행하고, 흥미로운 데이터 값을 식별하는 규칙을 만들고, 데이터 경고 메시지를 보내는 되풀이 패턴을 정의하고, 경고 메시지의 받는 사람을 지정합니다.  
+-   **데이터 경고 정의 및 경고 정의 저장** - 사용자가 보고서를 실행하고, 흥미로운 데이터 값을 식별하는 규칙을 만들고, 데이터 경고 메시지를 보내기 위한 되풀이 패턴을 정의하고, 경고 메시지를 받는 사람을 지정합니다.  
   
--   **데이터 경고 정의 실행**- 경고 서비스에서 예약된 시간에 경고 정의를 처리하고, 보고서 데이터를 검색하고, 경고 정의의 규칙을 기반으로 데이터 경고 인스턴스를 만듭니다.  
+-   **데이터 경고 정의 실행** - 경고 서비스에서 예약된 시간에 경고 정의를 처리하고, 보고서 데이터를 검색하고, 경고 정의의 규칙에 따라 데이터 경고 인스턴스를 만듭니다.  
   
--   **받는 사람에게 데이터 경고 메시지 배달**- 경고 서비스에서 경고 인스턴스를 만들고 받는 사람에게 전자 메일로 경고 메시지를 보냅니다.  
+-   **받는 사람에게 데이터 경고 메시지 배달** - 경고 서비스에서 경고 인스턴스를 만들고 받는 사람에게 이메일로 경고 메시지를 보냅니다.  
   
  또한 데이터 경고 소유자는 자신의 데이터 경고에 대한 정보를 확인하고 해당 데이터 경고 정의를 삭제 및 편집할 수 있습니다. 경고에는 한 명의 소유자(경고를 만든 사용자)가 있습니다.  
   
@@ -190,7 +190,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   

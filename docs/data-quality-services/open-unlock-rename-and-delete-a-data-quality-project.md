@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773201"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617823"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제
 
@@ -32,7 +31,7 @@ ms.locfileid: "47773201"
 
   이 항목에서는 데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기, 삭제 등 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 사용하여 데이터 품질 프로젝트를 관리하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
   
@@ -64,9 +63,9 @@ ms.locfileid: "47773201"
   
 4.  데이터 품질 프로젝트가 마지막으로 닫힌 작업 상태에서 열립니다. 데이터 품질 프로젝트의 상태는 다음과 같습니다.  
   
-    -   **정리** 작업의 경우 데이터 품질 프로젝트의 상태는 **정리 중 - 매핑**, **정리 중 - 정리**, **정리 – 결과 관리 및 보기**및 **정리 – 내보내기**중 하나일 수 있습니다.  
+    -   **정리** 작업의 경우 데이터 품질 프로젝트의 상태는 **정리 중 - 매핑**, **정리 중 - 정리**, **정리 – 결과 관리 및 보기** 및 **정리 – 내보내기** 중 하나입니다.  
   
-    -   **일치** 작업의 경우 데이터 품질 프로젝트의 상태는 **일치 -매핑**, **일치 - 일치**, **일치 - Survivorship**, 및 **일치 - 내보내기**중 하나일 수 있습니다.  
+    -   **일치** 작업의 경우 데이터 품질 프로젝트의 상태는 **일치 -매핑**, **일치 - 일치**, **일치 - Survivorship** 및 **일치 - 내보내기** 중 하나입니다.  
   
 ##  <a name="Unlock"></a> 데이터 품질 프로젝트 잠금 해제  
  데이터 품질 프로젝트를 만드는 경우 다른 사용자가 사용하거나 수정하지 못하도록 프로젝트가 잠긴 상태로 있습니다. 다른 사용자가 데이터 품질 프로젝트에서 작업할 수 있도록 하려면 작업을 완료한 후 데이터 품질 프로젝트의 잠금을 해제해야 합니다. 잠긴 프로젝트에는 자물쇠 기호가 표시됩니다.  

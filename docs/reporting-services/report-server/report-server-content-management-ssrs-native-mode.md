@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678941"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399286"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2부터  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 보고서 관리자 및 새로운 웹 포털 환경에 대해 설명합니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "47678941"
  폴더에 포함된 항목의 표시 유형은 역할 할당(예: 항목을 볼 수 있는 권한) 및 폴더에 적용되는 보기 옵션에 따라 좌우됩니다. 보고서 관리자에서 내용 페이지를 목록 뷰나 자세히 보기로 설정할 수 있습니다. 일부 경우에 보고서나 항목이 목록 뷰에서 숨겨질 수 있습니다. 따라서 내용을 삭제하기 전에 자세한 정보 보기에서 폴더를 확인해야 합니다.  
   
 ##  <a name="bkmk_Resources"></a> 리소스  
- 리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 및 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)의 “지도에 데이터 추가” 섹션을 참조하세요.  
+ 리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 및 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)의 "지도에 데이터 추가" 섹션을 참조하세요.  
   
 ### <a name="adding-and-viewing-a-resource"></a>리소스 추가 및 보기  
  보고서 서버에 리소스를 추가하려면 다음과 같이 파일을 업로드하거나 게시합니다.  

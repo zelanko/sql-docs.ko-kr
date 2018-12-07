@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ebe74f54dd33c3f31bc649eab9395e9f020b35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772391"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534455"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47772391"
 
 ## <a name="understand-distributed-availability-groups"></a>분산 가용성 그룹 이해
 
-분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다. 실제, 가상, 온-프레미스, 공용 클라우드 또는 가용성 그룹 배포를 지원하는 모든 위치에 있을 수 있습니다. 여기에는 Linux에서 호스트되는 가용성 그룹과 Windows에서 호스트되는 가용성 그룹 사이와 같이 도메인 간 및 플랫폼 간이 포함됩니다. 두 가용성 그룹이 통신할 수 있는 한 이러한 가용성 그룹을 포함한 분산 가용성 그룹을 구성할 수 있습니다.
+분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다. 실제, 가상, 온-프레미스, 공용 클라우드 또는 가용성 그룹 배포를 지원하는 모든 위치에 있을 수 있습니다. 여기에는 Linux에서 호스팅되는 가용성 그룹과 Windows에서 호스팅되는 가용성 그룹 사이 같이 도메인 간 및 플랫폼 간이 포함됩니다. 두 가용성 그룹이 통신할 수 있는 한 이러한 가용성 그룹을 포함한 분산 가용성 그룹을 구성할 수 있습니다.
 
 기존 가용성 그룹에는 WSFC 클러스터에 구성된 리소스가 있습니다. 분산 가용성 그룹은 WSFC 클러스터에 아무 것도 구성하지 않습니다. 분산 가용성 그룹에 관한 모든 항목은 SQL Server 내에서 유지 관리됩니다. 분산 가용성 그룹에 대한 정보를 확인하는 방법은 [분산 가용성 그룹 정보 보기](#viewing-distributed-availability-group-information)를 참조하세요. 
 

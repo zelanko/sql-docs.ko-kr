@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526954"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -132,7 +132,7 @@ ms.locfileid: "51697361"
 3.  **데이터베이스 서버** 페이지에서 **인증 유형** 을 선택하고 **연결 테스트** 를 클릭하여 선택한 인증 유형에 대한 자격 증명으로 데이터베이스에 연결할 수 있는지 확인합니다. **다음**을 클릭합니다.
   
     > [!NOTE]  
-    >  **현재 사용자 – 통합 보안** 을 인증 유형으로 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
+    >  인증 유형으로 **현재 사용자 – 통합 보안**을 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   

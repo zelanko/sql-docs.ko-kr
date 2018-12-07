@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400027"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 형식(.xlsx)으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663121"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 확장은 현재 Excel 파일(.xlsx)에 대한 Excel 렌더러를 정의합니다. EXCEL 확장은 Excel 2003 버전을 정의합니다. `Visible = “false”` 는 Excel 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.  
+ EXCELOPENXML 확장은 현재 Excel 파일(.xlsx)에 대한 Excel 렌더러를 정의합니다. EXCEL 확장은 Excel 2003 버전을 정의합니다. `Visible = "false"` 는 Excel 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>현재 Excel(.xlsx)과 Excel 2003 렌더러의 차이점  
  현재 Excel(.xlsx) 또는 Excel 2003 렌더러를 사용하여 렌더링된 보고서는 일반적으로 동일하며 드문 경우에만 두 형식 간의 차이점을 알 수 있습니다. 다음 표에서는 Excel과 Excel 2003 렌더러를 비교합니다.  

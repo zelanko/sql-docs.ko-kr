@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637760"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513002"
 ---
 # <a name="tutorial-using-the-odata-source"></a>자습서: OData 원본 사용
   이 자습서에서는 샘플 **Northwind** OData 서비스(https://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "51637760"
   
 4.  **OData 원본** 구성 요소를 두 번 클릭하여 **OData 원본 편집기** 대화 상자를 실행합니다.  
   
-5.  연결에 대해 **새로 만들기...** 를 클릭해서 새 OData 연결 관리자를 추가합니다.  
+5.  **새로 만들기...** 를 클릭하여 새 OData 연결 관리자를 추가합니다.  
   
 6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서의 목적을 위해 서비스 문서에 대한 URL([https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/))을 입력합니다.  
   

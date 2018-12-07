@@ -15,12 +15,12 @@ ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f972d5ea4b66e6544c9663771f50d6350d1b66a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39c21f0591b6777afac7c06df03525ccd24c3cbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696852"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520908"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 정적 기하 도형 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

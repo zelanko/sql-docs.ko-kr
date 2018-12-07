@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398055"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -246,7 +246,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ```
 
 ##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 저장소 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트 할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 저장소에 마이그레이션되고 닫힌 것으로 표시됩니다.  
+   압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 저장소 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 저장소에 마이그레이션되고 닫힌 것으로 표시됩니다.  
   
 ###### <a name="datacompression"></a>DATA_COMPRESSION  
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
@@ -514,7 +514,7 @@ GO
     ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
-    --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
+    --Clustered rowstore indexes always use the DEFAULT name 'ClusteredIndex_<GUID>'.  
     SELECT i.name   
     FROM sys.indexes i   
     JOIN sys.tables t  

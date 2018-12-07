@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692191"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395685"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -92,7 +92,7 @@ ms.locfileid: "47692191"
 
 이전 섹션의 그림 1에 나와 있는 것처럼 이 문서에서 설명하는 솔루션에는 WSFC(Windows Server 장애 조치(Failover) 클러스터)가 포함되어 있습니다. SQL AlwaysOn은 오류 검색 및 장애 조치를 위해 WFSC에 의존하므로 WSFC를 설정해야 합니다.
 
-WSFC는 응용 프로그램 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
+WSFC는 응용 프로그램 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
@@ -155,9 +155,9 @@ Windows Server 인스턴스마다 다음 단계를 완료하여 각 인스턴스
 
 7.  **요약** 페이지에서 경고 또는 오류 메시지를 확인합니다.
 
-    오류를 수정해야 합니다. 그러나 경고는 문제가 아닐 수 있습니다. 경고 메시지는 “테스트된 항목이 요구 사항을 충족하나, 사용자의 확인이 필요한 항목이 있습니다”라는 의미입니다. 예를 들어 그림 7에서는 “디스크 액세스 대기 시간 유효성 검사” 경고가 표시되는데, 디스크가 일시적으로 다른 작업에 사용되었기 때문일 수 있으며 이는 무시할 수 있습니다. 각 경고 및 오류 메시지에 대한 자세한 내용은 온라인 설명서를 확인해야 합니다. 그림 7을 참조하세요.
- 
-    ![유효성 검사 구성 마법사, 유효성 검사 중 페이지](media/Fig6_ValidationTests.png)
+    오류를 수정해야 합니다. 그러나 경고는 문제가 아닐 수 있습니다. 경고 메시지는 "테스트된 항목이 요구 사항을 충족하나, 사용자의 확인이 필요한 항목이 있습니다"라는 의미입니다. 예를 들어 그림 7에서는 "디스크 액세스 대기 시간 유효성 검사" 경고가 표시되는데, 디스크가 일시적으로 다른 작업에 사용되었기 때문일 수 있으며 이는 무시할 수 있습니다. 각 경고 및 오류 메시지에 대한 자세한 내용은 온라인 설명서를 확인해야 합니다. 그림 7을 참조하세요.
+ 
+![유효성 검사 구성 마법사, 유효성 검사 중 페이지](media/Fig6_ValidationTests.png)
 
     그림 6
 
@@ -326,7 +326,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
     d.  **네트워크 모드** 텍스트 상자에 DHCP를 입력하고 **다음**을 클릭하여 계속합니다.
 
     >[!NOTE] 
-    >필요에 따라 **네트워크 모드**로 “고정 IP”를 선택하고 고정 IP를 입력할 수 있습니다. 또한 1433이 아닌 포트를 입력할 수 있습니다. 
+    >필요에 따라 **네트워크 모드**로 "고정 IP"를 선택하고 고정 IP를 입력할 수 있습니다. 또한 1433이 아닌 포트를 입력할 수 있습니다. 
 
     ![수신기 구성](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     ![데이터 동기화 구성](media/Fig19_AvailabilityGroupDataSync.png)
 
-    그림 19 
+    그림 19 
 
 10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. 계속하려면 **다음** 을 클릭합니다.
 
@@ -354,11 +354,11 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     ![대시보드 보기](media/Fig20_ShowDashboard.png)
 
-    그림 20 
+    그림 20 
 
 3.  **장애 조치**를 클릭하여 동기 복제본 및 비동기 복제본으로 장애 조치를 수행합니다. 이는 해당 장애 조치가 문제 없이 올바르게 실행되었는지 확인하기 위한 것입니다.
 
- AlwaysOn 설정이 완료되었습니다.
+ AlwaysOn 설정이 완료되었습니다.
 
 AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysOn 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)을 참조하세요.
 

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511539"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore 인덱스 - 조각 모음
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ ms.locfileid: "51667592"
 ## <a name="rebuild"></a> ALTER INDEX REBUILD를 사용하여 오프라인에서 columnstore 인덱스에 대한 조각 모음 수행  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상의 경우 온라인 작업과 같이 `REORGANIZE`가 백그라운드에서 필수 재빌드를 수행하므로 columnstore 인덱스를 다시 빌드할 필요가 없습니다.  
   
- columnstore 인덱스를 다시 작성하면 조각화가 제거되고 모든 행이 columnstore로 이동됩니다. [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 기존 클러스터형 columnstore 인덱스를 완전히 다시 작성할 수 있습니다. 또한 ALTER INDEX … REBUILD를 사용하여 다시 작성할 수 있습니다.  
+ columnstore 인덱스를 다시 작성하면 조각화가 제거되고 모든 행이 columnstore로 이동됩니다. [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 기존 클러스터형 columnstore 인덱스를 완전히 다시 작성할 수 있습니다. 또한 ALTER INDEX ... REBUILD를 사용하여 다시 작성할 수 있습니다.  
   
 ### <a name="rebuild-process"></a>프로세스 다시 작성  
  columnstore 인덱스를 다시 작성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

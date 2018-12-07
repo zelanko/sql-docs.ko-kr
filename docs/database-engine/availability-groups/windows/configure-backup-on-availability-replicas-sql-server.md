@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531526"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600753"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  이 논리를 사용하여 백업 작업을 스크립팅하면 동일한 일정으로 모든 가용성 복제본에 대해 실행할 작업을 예약할 수 있습니다. 이러한 각 작업은 동일한 데이터를 조사하여 실행해야 하는 작업을 확인하므로 예약된 작업 중 하나만이 실제로 백업 단계로 진행됩니다.  장애 조치(Failover)의 경우 스크립트나 작업을 수정할 필요가 없습니다. 가용성 복제본을 추가하도록 가용성 그룹을 다시 구성한 경우 백업 작업을 관리하려면 백업 작업을 복사하거나 예약하기만 하면 됩니다. 가용성 복제본을 제거한 경우 해당 복제본을 호스팅하는 서버 인스턴스에서 백업 작업을 삭제합니다.  
   
 > [!TIP]  
->  [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 사용하여 지정된 백업 작업을 만드는 경우 해당 작업에는 **sys.fn_hadr_backup_is_preferred_replica** 함수를 호출하고 확인하는 스크립팅 논리가 자동으로 포함됩니다. 그러나 백업 작업이 "기본 복제본이 아닙니다..." 메시지를 반환하지는 않습니다. 가용성 그룹의 가용성 복제본을 호스트하는 각 서버 인스턴스에서 각 가용성 데이터베이스에 대한 작업을 만들어야 합니다.  
+>  [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 사용하여 지정된 백업 작업을 만드는 경우 해당 작업에는 **sys.fn_hadr_backup_is_preferred_replica** 함수를 호출하고 확인하는 스크립팅 논리가 자동으로 포함됩니다. 그러나 백업 작업은 “선호 복제본이 아닙니다...”라는 메시지를 반환하지 않습니다. 가용성 그룹의 가용성 복제본을 호스트하는 각 서버 인스턴스에서 각 가용성 데이터베이스에 대한 작업을 만들어야 합니다.  
   
 ##  <a name="ForInfoAboutBuPref"></a> 백업 기본 설정에 대한 정보를 가져오려면  
  다음은 보조 복제본에서의 백업과 관련된 정보를 가져오는 데 유용합니다.  

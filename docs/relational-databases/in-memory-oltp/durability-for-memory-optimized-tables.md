@@ -11,12 +11,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2093e1445f7328090d71c6c133960597da5ddf6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650151"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419914"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47650151"
 |CFP0 (30%), CFP1 (20%), CFP2 (50%), CFP3 (10%)|(CFP0, CFP1, CFP2) 파일은 왼쪽부터 선택됩니다.<br /><br /> CTP3는 결과 데이터 파일을 이성적인 크기의 100%를 초과하게 만들므로 선택되지 않습니다.|  
 |CFP0 (80%), CFP1 (30%), CFP2 (10%), CFP3 (40%)|(CFP1, CFP2, CFP3). 파일은 왼쪽부터 선택됩니다.<br /><br /> CFP0는 CFP1과 결합할 경우 결과 데이터 파일이 이상적인 크기의 100%를 초과하게 되므로 건너뜁니다.|  
   
- 사용 가능한 공간이 있는 CFP 중 일부는 병합할 수 없습니다. 예를 들어, 두 개의 인접한 CFP가 60% 채워진 경우 해당 CFP는 병합되지 않고 각 CFP의 저장소 중 40%는 사용되지 않습니다. 최악의 경우 모든 CFP가 50% 채워진 경우 저장소의 50%만 사용됩니다. CFP가 병합되지 않아 삭제된 행이 저장소에 존재할 수 있지만 삭제된 행은 메모리 내 가비지 수집에 의해 메모리에서 이미 제거되었을 수 있습니다. 저장소 관리와 메모리는 가비지 수집에 종속되지 않습니다. 활성 CFP가 차지하는 저장소(일부 CFP는 업데이트되지 않음)는 메모리 내 영구 테이블 크기보다 최대 2배 더 클 수 있습니다.  
+ 사용 가능한 공간이 있는 CFP 중 일부는 병합할 수 없습니다. 예를 들어, 두 개의 인접한 CFP가 60% 채워진 경우 해당 CFP는 병합되지 않고 각 CFP의 저장소 중 40%는 사용되지 않습니다. 최악의 경우 모든 CFP가 50% 채워진 경우 저장소의 50%만 사용됩니다. CFP가 병합되지 않아 삭제된 행이 스토리지에 존재할 수 있지만 삭제된 행은 메모리 내 가비지 수집에 의해 메모리에서 이미 제거되었을 수 있습니다. 저장소 관리와 메모리는 가비지 수집에 종속되지 않습니다. 활성 CFP가 차지하는 저장소(일부 CFP는 업데이트되지 않음)는 메모리 내 영구 테이블 크기보다 최대 2배 더 클 수 있습니다.  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP의 수명 주기  
  CFP 할당을 취소하려면 여러 상태를 전환해야 합니다. 데이터베이스 검사점 및 로그 백업에는 단계를 통해 파일을 전환하는 작업이 필요하고 궁극적으로 더 이상 필요 없는 파일을 정리해야 합니다. 이러한 단계에 대한 자세한 내용은 [sys.dm_db_xtp_checkpoint_files&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)를 참조하세요.  

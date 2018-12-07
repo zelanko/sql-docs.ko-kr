@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542468"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 집합의 데이터를 구성합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "47701351"
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 을 클릭합니다.  
   
-2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음 드롭다운 목록에서 **\<식…>** 을 선택합니다.  
+2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음, 드롭다운 목록에서 **\<식…>** 을 선택합니다.  
   
 3.  식 창에서 다음 식을 입력합니다.  
   

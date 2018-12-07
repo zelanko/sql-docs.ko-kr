@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522909"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,7 +226,7 @@ OUTPUT Clause
  *execute_statement*  
  SELECT 또는 READTEXT 문을 사용하여 데이터를 반환하는 유효한 EXECUTE 문입니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 참조하세요.  
   
- INSERT…EXEC 문에서 EXECUTE 문의 RESULT SETS 옵션을 지정할 수 없습니다.  
+ INSERT...EXEC 문에서 EXECUTE 문의 RESULT SETS 옵션을 지정할 수 없습니다.  
   
  *execute_statement*를 INSERT에 사용하는 경우 각 결과 집합은 테이블 또는 *column_list*의 열과 호환되어야 합니다.  
   
@@ -307,7 +307,7 @@ SQL 그래프 테이블에 데이터를 삽입하는 방법에 대한 자세한 
   
 ### <a name="best-practices-for-bulk-importing-data"></a>데이터 대량 가져오기에 대한 최선의 구현 방법  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>INSERT INTO…SELECT를 사용하여 최소 로깅으로 데이터 대량 가져오기  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>INSERT INTO...SELECT를 사용하여 최소 로깅으로 데이터 대량 가져오기  
  `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`을 사용하여 최소 로깅으로 준비 테이블과 같은 한 테이블에서 다른 테이블로 다수의 행을 효율적으로 전송할 수 있습니다. 최소 로깅은 문의 성능을 향상시키고 트랜잭션 중에 사용 가능한 트랜잭션 로그 공간을 꽉 채울 가능성을 줄일 수 있습니다.  
   
  이 문의 최소 로깅을 위해서는 다음 요구 사항이 충족되어야 합니다.  
@@ -322,7 +322,7 @@ SQL 그래프 테이블에 데이터를 삽입하는 방법에 대한 자세한 
   
 MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이 가능합니다.  
   
- 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO…SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
+ 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT 문은 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>OPENROWSET 및 BULK를 사용하여 데이터 대량 가져오기  
  OPENROWSET 함수에는 INSERT 문을 사용하여 대량 로드 최적화를 제공하는 다음과 같은 테이블 힌트를 사용할 수 있습니다.  
@@ -380,7 +380,7 @@ MERGE 문의 삽입 동작 결과로 힙에 삽입되는 행도 최소 로깅이
     ```  
   
 ## <a name="error-handling"></a>오류 처리  
- TRY…CATCH 구문에 문을 지정하여 INSERT 문에 대한 오류 처리를 구현할 수 있습니다.  
+ TRY...CATCH 구문에 명령문을 지정하여 INSERT 문에 대한 오류 처리를 구현할 수 있습니다.  
   
  INSERT 문이 제약 조건 또는 규칙을 위반하거나 열의 데이터 형식과 호환되지 않는 값을 포함하는 경우 문이 실패하고 오류 메시지가 반환됩니다.  
   
@@ -406,7 +406,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 ## <a name="security"></a>보안  
  연결된 서버 연결이 진행되는 동안 보내는 서버는 연결된 서버 대신 로그인 이름과 암호를 제공하여 받는 서버에 연결합니다. 이 연결이 작동하려면 [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)을 사용하여 연결된 서버 간의 로그인 매핑을 만들어야 합니다.  
   
- OPENROWSET(BULK…)을 사용할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방식을 이해하는 것이 중요합니다. 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)의 "보안 고려 사항"을 참조하세요.  
+ OPENROWSET(BULK...)를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방법을 이해하는 것이 중요합니다. 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)의 "보안 고려 사항"을 참조하세요.  
   
 ### <a name="permissions"></a>Permissions  
  대상 테이블에 대해 INSERT 권한이 필요합니다.  
@@ -421,10 +421,10 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|INSERT • 테이블 값 생성자|  
 |[열 값 처리](#ColumnValues)|IDENTITY • NEWID • 기본값 • 사용자 정의 형식|  
-|[다른 테이블의 데이터 삽입](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH 공통 테이블 식 • TOP • OFFSET FETCH|  
+|[다른 테이블의 데이터 삽입](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH 공통 테이블 식 • TOP • OFFSET FETCH|  
 |[표준 테이블 이외의 대상 개체 지정](#TargetObjects)|뷰 • 테이블 변수|  
 |[원격 테이블에 행 삽입](#RemoteTables)|연결된 서버 • OPENQUERY 행 집합 함수 • OPENDATASOURCE 행 집합 함수|  
-|[테이블 또는 데이터 파일에서 데이터 대량 로드](#BulkLoad)|INSERT…SELECT • OPENROWSET 함수|  
+|[테이블 또는 데이터 파일에서 데이터 대량 로드](#BulkLoad)|INSERT...SELECT • OPENROWSET 함수|  
 |[힌트를 사용하여 쿼리 최적화 프로그램의 기본 동작 재정의](#TableHints)|테이블 힌트|  
 |[INSERT 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
   
@@ -537,7 +537,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  이 섹션의 예에서는 한 테이블의 행을 다른 테이블에 삽입하는 방법을 보여 줍니다.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>8. SELECT 및 EXECUTE 옵션을 사용하여 다른 테이블의 데이터 삽입  
- 다음 예에서는 INSERT…SELECT 또는 INSERT…EXECUTE를 사용하여 한 테이블의 데이터를 다른 테이블에 삽입하는 방법을 보여 줍니다. 이 방법은 모두 열 목록에 리터럴 값과 식을 포함하는 다중 테이블 SELECT 문을 기반으로 합니다.  
+ 다음 예에서는 INSERT...SELECT 또는 INSERT...EXECUTE를 사용하여 한 테이블의 데이터를 다른 테이블에 삽입하는 방법을 보여 줍니다. 이 방법은 모두 열 목록에 리터럴 값과 식을 포함하는 다중 테이블 SELECT 문을 기반으로 합니다.  
   
  첫 번째 INSERT 문은 SELECT 문을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 원본 테이블(`Employee`, `SalesPerson` 및 `Person`)에서 데이터를 파생시키고 결과 집합을 `EmployeeSales` 테이블에 저장합니다. 두 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 포함하는 저장 프로시저를 호출하고 세 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 리터럴 문자열로 참조합니다.  
   
@@ -812,7 +812,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  이 섹션의 예에서는 INSERT 문을 사용하여 데이터를 테이블에 대량으로 로드하는 두 가지 방법을 보여 줍니다.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>17. 최소 로깅으로 힙에 데이터 삽입  
- 다음 예에서는 새 테이블(힙)을 만들고 최소 로깅을 사용하여 다른 테이블의 데이터를 새 테이블에 삽입합니다. 여기에서는 `AdventureWorks2012` 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용하기 위해 행 삽입 전에 `AdventureWorks2012` 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 INSERT INTO…SELECT 문 다음에 FULL로 다시 설정됩니다. 또한 대상 테이블 `Sales.SalesHistory`에 대해 TABLOCK 힌트가 지정됩니다. 이렇게 하면 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
+ 다음 예에서는 새 테이블(힙)을 만들고 최소 로깅을 사용하여 다른 테이블의 데이터를 새 테이블에 삽입합니다. 여기에서는 `AdventureWorks2012` 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅이 사용되도록 하려면 행 삽입 전에 `AdventureWorks2012` 데이터베이스의 복구 모델을 BULK_LOGGED로 설정하고 INSERT INTO...SELECT 문 뒤에 FULL로 다시 설정합니다. 또한 대상 테이블 `Sales.SalesHistory`에 대해 TABLOCK 힌트가 지정됩니다. 이렇게 하면 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
 ```sql
 -- Create the target heap.  

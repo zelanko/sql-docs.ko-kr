@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701781"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616863"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
 
@@ -98,7 +97,7 @@ ms.locfileid: "51701781"
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services를 사용하면 구분 기호나 순서뿐 아니라 기술 자료를 기반으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석은 복잡한 원본 데이터가 복합 도메인에 매핑되어 있고 참조 데이터 서비스를 사용하지 않는 경우에 사용됩니다. 기술 자료 구문 분석을 사용하여 데이터 원본에서 관련 단일 도메인으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석을 사용하는 경우 DQS에서는 먼저 기술 자료를 사용하여 복잡한 데이터를 단일 도메인으로 구문 분석합니다. 가능한 경우 문자열의 일부를 하나 이상의 도메인으로 식별하여 문자열을 여러 도메인으로 구문 분석합니다. 예를 들어, "John B. Doe"를 전체 이름 복합 도메인으로 표시된 전체 이름 필드의 복잡한 값으로 가정합니다. DQS에서 "John"을 이름 도메인으로, "Doe"를 성 도메인으로 식별한 경우 도메인 기술 자료에 따라 "B."를 중간 이름 도메인에 추가합니다.  
+ Data Quality Services를 사용하면 구분 기호나 순서뿐 아니라 기술 자료를 기반으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석은 복잡한 원본 데이터가 복합 도메인에 매핑되어 있고 참조 데이터 서비스를 사용하지 않는 경우에 사용됩니다. 기술 자료 구문 분석을 사용하여 데이터 원본에서 관련 단일 도메인으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석을 사용하는 경우 DQS에서는 먼저 기술 자료를 사용하여 복잡한 데이터를 단일 도메인으로 구문 분석합니다. 가능한 경우 문자열의 일부를 하나 이상의 도메인으로 식별하여 문자열을 여러 도메인으로 구문 분석합니다. 예를 들어 "John B. Doe"를 전체 이름 복합 도메인으로 표시된 전체 이름 필드의 복잡한 값으로 가정합니다. DQS에서 "John"을 이름 도메인으로, "Doe"를 성 도메인으로 식별한 경우 도메인 기술 자료에 따라 "B."를 중간 이름 도메인에 추가합니다.  
   
  기술 자료 구문 분석은 구분 기호 기반 구문 분석을 선택한 경우에만 사용할 수 있습니다. 기술 자료 구문 분석은 구분 기호 구문 분석을 대체하는 것이 아니라 향상시킵니다. 구문 분석에 사용할 기술 자료가 없는 경우에만 DQS에서 구분 기호를 사용하여 구문 분석을 수행합니다. 경우에 따라 DQS에서 기술 자료 구문 분석으로 일부 구문 분석을 확인한 후 구분 기호 기반 구문 분석으로 다른 구문 분석을 확인할 수도 있습니다.  
   

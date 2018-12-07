@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510420"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 고가용성 및 재해 복구 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>고가용성 및 재해 복구 파트너
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | 파트너 | 설명 | 링크 | 
@@ -36,7 +36,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 |![NEC][7]|**NEC**<br>ExpressCluster는 SQL Server에 대한 하드웨어, 소프트웨어, 네트워크 및 사이트 오류를 비롯한 모든 주요 오류에 대한 포괄적이고 완벽하게 자동화된 고가용성 및 재해 복구 솔루션이며, 온-프레미스 또는 클라우드 환경의 물리적 또는 가상 머신에서 실행되는 연결된 응용 프로그램입니다.<br><br>Microsoft SQL Server: 2005 이상, 모든 버전 |[웹 사이트][necec_website]<br>[데이터시트][necec_datasheet]<br>[비디오][necec_youtube]<br>[다운로드][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker의 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>SIOS Technology는 Windows 또는 Linux의 SQL Server에 비용 효율적인 고가용성 및 재해 복구 솔루션을 제공합니다. SIOS SANless 클러스터링은 공유 저장소 SAN의 필요성을 없애 단일 및 다중 사이트 환경의 물리적, 가상, 클라우드 및 하이브리드 클라우드 구성에서 가장 중요한 응용 프로그램을 보호하는 완전한 유연성을 제공합니다.<br><br>Windows Server 장애 조치(Failover) 클러스터링 환경에 SIOS DataKeeper를 추가하여 기존 공유 저장소를 대체하는 SANless 볼륨 리소스를 만들어 Azure에서 WSFC를 쉽게 실행할 수 있습니다.<br><br>SIOS Protection Suite는 SQL Server, SAP, HANA, Oracle 등과 같은 중요한 Linux 응용 프로그램을 보호하는 완전히 유연한 클러스터링 솔루션입니다.|[웹 사이트][sios_website]<br>[데이터시트][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[비디오][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication은 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 응용 프로그램 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows의 SQL Server 2005 SP4 – SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication은 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 응용 프로그램 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 - SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
 
 ## <a name="next-steps"></a>다음 단계
 추가 파트너에 대해 자세히 알아보려면 [모니터링][mon_partners], [관리 파트너][management_partners] 및 [개발 파트너][dev_partners]를 참조하세요.

@@ -24,12 +24,12 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 542bf734722351128136e072222e0c3251e945f7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503096"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ALTER ASSEMBLY assembly_name
   
  자세한 내용은 [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)를 참조하세요.  
   
- [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
  어셈블리와 관련된 특정 파일이나 모든 파일을 데이터베이스에서 제거합니다. ADD FILE이 뒤따를 경우 DROP FILE이 먼저 실행됩니다. 이 기능을 사용하여 같은 파일 이름의 파일을 대체할 수 있습니다.  
   
 > [!NOTE]  

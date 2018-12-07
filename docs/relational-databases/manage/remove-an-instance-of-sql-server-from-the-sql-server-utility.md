@@ -13,12 +13,12 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80dec43a9bafbd4466f0dabd7025eec2f46ef933
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7db64758c57b586982a2f2edfa2008dbec164f90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535216"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "51678009"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 유틸리티 탐색기에서 **관리되는 인스턴스**를 클릭합니다. 유틸리티 탐색기 탐색 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 목록 뷰를 살펴봅니다.  
   
-2.  목록 뷰의 **SQL Server 인스턴스 이름** 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 제거할 인스턴스를 선택합니다. 제거할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **관리되는 인스턴스 제거…** 를 선택합니다.  
+2.  목록 뷰의 **SQL Server 인스턴스 이름** 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 제거할 인스턴스를 선택합니다. 제거할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **Managed Instance 제거...** 를 선택합니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. **연결…** 을 클릭하고 **서버에 연결** 대화 상자의 정보를 확인한 다음 **연결**을 클릭합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. **연결...** 을 클릭하고 **서버에 연결** 대화 상자의 정보를 확인한 다음, **연결**을 클릭합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
   
 4.  작업을 수행하려면 **확인**을 클릭합니다. 작업을 취소하려면 **취소**를 클릭합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51678009"
 ```  
 # Get Ucp connection  
 $UcpServerInstanceName = "ComputerName\InstanceName";  
-$UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
 $UcpConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($UcpConnection);  
   

@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668702"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395902"
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-앞의 명령은 JSON `$.name` 속성의 값을 나타내는 계산 열 `vName`에 표준 인덱스를 만듭니다. 세르비아어-키릴 자모 코드 페이지에서 문자 순서는 ‘А’,’Б’,’В’,’Г’,’Д’,’Ђ’,’Е’ 등의 순서입니다. `JSON_VALUE` 함수의 결과는 원본 열에서 데이터 정렬을 상속하므로 인덱스에서 항목의 순서는 세르비아어 키릴 자모 규칙을 따릅니다. 다음 예제에서는 이 컬렉션을 쿼리하고 이름을 기준으로 결과를 정렬합니다.  
+앞의 명령은 JSON `$.name` 속성의 값을 나타내는 계산 열 `vName`에 표준 인덱스를 만듭니다. 세르비아어-키릴 자모 코드 페이지에서 문자 순서는 'А', 'Б', 'В', 'Г', 'Д', 'Ђ', 'Е' 등의 순서입니다. `JSON_VALUE` 함수의 결과는 원본 열에서 데이터 정렬을 상속하므로 인덱스에서 항목의 순서는 세르비아어 키릴 자모 규칙을 따릅니다. 다음 예제에서는 이 컬렉션을 쿼리하고 이름을 기준으로 결과를 정렬합니다.  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*

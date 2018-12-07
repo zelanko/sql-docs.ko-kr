@@ -1,0 +1,64 @@
+---
+title: 실행 계획 | Microsoft Docs
+ms.custom: ''
+ms.date: 10/28/2015
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: performance
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query execution plans
+ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
+author: pmasl
+ms.author: pelopes
+manager: amitban
+ms.openlocfilehash: 9bf75c2d176c4ea2c596f29f1ddda910e794ae12
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303236"
+---
+# <a name="execution-plans"></a>실행 계획
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+쿼리를 실행하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은(는) 필요한 데이터에 액세스하는 가장 효율적인 방법을 결정하는 명령문을 분석해야 합니다. 이 분석은 쿼리 최적화 프로그램이라는 구성 요소에 의해 처리됩니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 실행 계획이라고도 합니다.   
+
+쿼리 실행 계획은 다음 사항을 정의합니다. 
+
+* 원본 테이블이 액세스되는 순서  
+  일반적으로 데이터베이스 서버는 다양한 방법으로 기본 테이블에 액세스하여 결과 집합을 작성할 수 있습니다. 예를 들어 `SELECT` 문이 세 개의 테이블을 참조하는 경우 데이터베이스 서버는 먼저 `TableA`에 액세스하고, `TableA`의 데이터를 사용하여 `TableB`에서 일치하는 행을 추출한 후 `TableB`의 데이터를 사용하여 `TableC`에서 데이터를 추출합니다. 다음은 데이터베이스 서버가 테이블에 액세스할 수 있는 여러 순서입니다.  
+  `TableC`, `TableB`, `TableA`또는  
+  `TableB`, `TableA`, `TableC`또는  
+  `TableB`, `TableC`, `TableA`또는  
+  `TableC`, `TableA`, `TableB`  
+
+* 각 테이블에서 데이터를 추출하는 데 사용하는 방법  
+  일반적으로 각 테이블의 데이터에 액세스하는 방법에는 여러 가지가 있습니다. 특정 키 값을 가진 몇몇 행만 필요한 경우 데이터베이스 서버는 인덱스를 사용할 수 있습니다. 테이블의 모든 행이 필요한 경우 데이터베이스 서버는 인덱스를 무시하고 테이블을 검색할 수 있습니다. 테이블의 모든 행이 필요하지만 키 열이 `ORDER BY`에 있는 인덱스가 있으면 테이블 검색 대신 인덱스 검색을 수행하여 다른 종류의 결과 집합을 저장할 수 있습니다. 테이블이 매우 작은 경우 테이블 검색은 거의 모든 테이블 액세스를 위한 가장 효율적인 방법일 수 있습니다.
+
+> [!TIP]
+> 쿼리 처리 및 쿼리 실행 계획에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.
+
+## <a name="in-this-section"></a>섹션 내용  
+  
+-   [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)  
+  
+-   [실행 계획 표시 및 저장](../../relational-databases/performance/display-and-save-execution-plans.md)  
+  
+-   [실행 계획 비교 및 분석](../../relational-databases/performance/compare-and-analyze-execution-plans.md)  
+
+-   [계획 지침](../../relational-databases/performance/plan-guides.md)  
+
+## <a name="see-also"></a>참고 항목  
+ [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
+ [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)     
+ [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md)     
+ [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
+ [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
+ [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
+ [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)

@@ -10,12 +10,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: bc5ac40cd1131db2dd83a121177c1288fb01d1c4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699619"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416238"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 
 | 파트너 | 설명 | 링크 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL은 지능형 SQL 통합 개발 환경으로, 데이터베이스 개발자와 데이터베이스 관리자가 단일 인터페이스에서 SQL Server를 비롯한 모든 주요 데이터베이스 플랫폼에서 고성능 SQL 코드를 작성할 수 있도록 해줍니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc.는 개발자 커뮤니티가 프로그래밍 언어, 프레임워크 및 서비스를 유연하게 선택하고 적절한 도구 집합을 사용할 수 있도록 지원합니다. 개발자는 Click2Cloud의 도구 키트를 사용하여 'SQL on Linux' 컨테이너를 만들어 응용 프로그램에 연결할 수 있는 한편 안전한 다중 테넌트 아키텍처를 계속 지원할 수 있습니다. 컨테이너는 모든 클라우드 기반 컨테이너 플랫폼에 독립적으로 배포할 수 있습니다.|[Marketplace][click2cloud_marketplace]<br>[웹 사이트][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[비디오][click2cloud_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc.는 개발자 커뮤니티가 프로그래밍 언어, 프레임워크 및 서비스를 유연하게 선택하고 적절한 도구 집합을 사용할 수 있도록 지원합니다. 개발자는 Click2Cloud의 도구 키트를 사용하여 'SQL on Linux' 컨테이너를 만들어 애플리케이션에 연결할 수 있는 한편 안전한 다중 테넌트 아키텍처를 계속 지원할 수 있습니다. 컨테이너는 모든 클라우드 기반 컨테이너 플랫폼에 독립적으로 배포할 수 있습니다.|[Marketplace][click2cloud_marketplace]<br>[웹 사이트][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[비디오][click2cloud_youtube] |
 ## <a name="next-steps"></a>다음 단계
 다른 일부 파트너에 대해 자세히 알아보려면 [고가용성 및 재해 복구 파트너][hadr_partners], [관리 파트너][management_partners] 및 [모니터링 파트너][monitor_partners]를 참조하세요.
 

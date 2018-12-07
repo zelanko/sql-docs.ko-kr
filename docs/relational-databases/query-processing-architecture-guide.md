@@ -1,7 +1,7 @@
 ---
 title: 쿼리 처리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701481"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542520"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 SQL 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 SQL 문에 대해 기존 실행 계획이 있는지 확인합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 SQL 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 SQL 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 SQL 문에 대해 기존 실행 계획이 있는지 확인합니다. SQL 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 SQL 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 SQL 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 특정 SQL 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 SQL 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
 
-캐시에서 사용되지 않은 기존 실행 계획과 새 SQL 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 다음에서 첫 번째 `SELECT` 문은 기존 계획과 일치되지 않지만 두 번째 문은 일치됩니다.
+캐시에서 사용되지 않은 기존 실행 계획과 새 SQL 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 `Person`은 아래 `SELECT` 문을 실행하는 사용자의 기본 스키마입니다. 이 예제에서는 `Person` 테이블이 실행되기 위해 정규화되어야 할 필요가 없는 반면, 두 번째 명령문은 기존 계획과 일치하지 않지만 세 번째 명령문은 일치한다는 의미입니다.
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>계획 캐시에서 실행 계획 제거
@@ -637,7 +640,6 @@ WHERE ProductID = 63;
 * 응용 프로그램이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
- 
 ### <a name="ParamSniffing"></a> 매개 변수 검색
 “매개 변수 검사”는 컴파일 또는 재컴파일을 수행하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 현재 매개 변수 값을 “검사”하고 쿼리 최적화 프로그램에 전달하여 해당 값이 더욱 효율적인 쿼리 실행 계획을 생성하는 데 사용될 수 있도록 하는 프로세스를 나타냅니다.
 
@@ -655,6 +657,24 @@ WHERE ProductID = 63;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 마이크로프로세서(CPU)를 두 개 이상 사용하는 컴퓨터에서 쿼리 실행과 인덱스 작업을 최적화하는 병렬 쿼리 기능을 제공합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 개의 운영 체제 작업자 스레드로 쿼리나 인덱스 작업을 병렬 수행할 수 있으므로 작업을 빠르고 효율적으로 완료할 수 있습니다.
 
 쿼리를 최적화하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 병렬 실행에 적합한 쿼리나 인덱스 작업을 찾습니다. 이러한 쿼리에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 쿼리 실행 계획에 교환 연산자를 삽입하여 병렬 실행할 쿼리를 준비합니다. 교환 연산자는 프로세스 관리, 데이터 재배포 및 흐름 제어를 제공하는 쿼리 실행 계획의 연산자입니다. 교환 연산자에는 하위 유형으로 `Distribute Streams`, `Repartition Streams`및 `Gather Streams` 논리 연산자가 포함되며 이 중에서 하나 이상이 병렬 쿼리에 대한 쿼리 계획의 실행 계획 출력에 표시될 수 있습니다. 
+
+> [!IMPORTANT]
+> 특정 구문은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 실행 계획의 전체 또는 일부에서 병렬 처리를 활용할 수 있는 기능을 방해합니다.
+
+병렬 처리를 방해하는 구문은 다음과 같습니다.
+>
+> - **스칼라 UDF**    
+>   스칼라 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)를 참조하세요. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 이러한 함수를 인라인 처리하고, 쿼리를 처리하는 도중 병렬 처리 사용을 잠금 해제할 수 있습니다. 스칼라 UDF 인라인 처리에 대한 자세한 내용은 [SQL 데이터베이스의 인텔리전트 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)를 참조하세요.
+> - **원격 쿼리**    
+>   원격 쿼리에 대한 자세한 내용은 [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.
+> - **동적 커서**    
+>   커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
+> - **재귀 쿼리**    
+>   재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
+> - **TVF(테이블 반환된 함수)**    
+>   TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
+> - **TOP 키워드**    
+>   자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.
 
 교환 연산자를 삽입하면 병렬 쿼리 실행 계획이 완성됩니다. 병렬 쿼리 실행 계획은 작업자 스레드를 여러 개 사용할 수 있습니다. 병렬이 아닌 쿼리에서 사용하는 직렬 실행 계획은 실행에 한 작업자 스레드만 사용합니다. 병렬 쿼리에서 사용하는 실제 작업자 스레드 수는 쿼리 계획 실행 초기화 시 결정되며 계획의 복잡성과 병렬 처리 수준에 따라 다릅니다. 병렬 처리 수준에 따라 사용할 최대 CPU 수가 결정됩니다. 사용할 작업자 스레드 수를 의미하지는 않습니다. 병렬 처리 수준 값은 서버 수준에서 설정되며 sp_configure 시스템 저장 프로시저를 사용하여 수정할 수 있습니다. 또한 `MAXDOP` 쿼리 힌트나 `MAXDOP` 인덱스 옵션을 지정하여 개별 쿼리나 인덱스 문에 대해 이 값을 재정의할 수 있습니다. 
 
@@ -1098,4 +1118,6 @@ GO
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)   
- [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [실행 계획](../relational-databases/performance/execution-plans.md)    
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

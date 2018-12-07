@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666522"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540932"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 응용 프로그램 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 응용 프로그램 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
@@ -556,7 +556,7 @@ ms.locfileid: "51666522"
   
 4.  **테스트 조건** 창의 목록에서 **필요한 스키마** 를 클릭하고 **테스트 조건 추가**를 클릭합니다.  
   
-5.  **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**…**’)를 클릭합니다.  
+5.  **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**...**’)를 클릭합니다.  
   
 6.  **expectedSchemaCondition1에 대한 구성** 대화 상자에서 데이터베이스에 대한 연결을 지정합니다. 예를 들어 기본 배포 위치인 LocalDB를 사용한 경우 **새 연결**을 클릭하고 **(LocalDB)\Projects**를 지정합니다. 그런 다음 데이터베이스의 이름을 선택합니다.  
   
@@ -621,7 +621,7 @@ ms.locfileid: "51666522"
   
 13. **테스트 조건** 창의 목록에서 **데이터 체크섬** 을 클릭하고 **테스트 조건 추가**를 클릭합니다.  
   
-14. **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**…**’)를 클릭합니다.  
+14. **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**...**’)를 클릭합니다.  
   
 15. **checksumCondition1에 대한 구성** 대화 상자에서 데이터베이스에 대한 연결을 지정합니다.  
   

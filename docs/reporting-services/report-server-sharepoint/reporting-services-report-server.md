@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400587"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
 
@@ -49,21 +49,21 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |기능 또는 구성 요소|기본 모드|SharePoint 모드|  
 |--------------------------|-----------------|---------------------|  
-|**URL 주소 지정**|사용자 계정 컨트롤|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 응용 프로그램이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
-|**사용자 지정 보안 확장 프로그램**|사용자 계정 컨트롤|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
-|**구성 관리자**|사용자 계정 컨트롤|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**보고서 관리자**|사용자 계정 컨트롤|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
-|**링크된 보고서**|사용자 계정 컨트롤|아니요.|  
-|**내 보고서**|사용자 계정 컨트롤|아니오|  
-|**내 구독** 및 일괄 처리 방법|사용자 계정 컨트롤|아니오|  
-|**데이터 경고**|아니오|사용자 계정 컨트롤|  
-|**파워 뷰**|아니오|사용자 계정 컨트롤<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
-|**.RDL 보고서**|사용자 계정 컨트롤|사용자 계정 컨트롤<br /><br /> .RDL 보고서는 Reporting Services 보고서 서버에서 기본 모드 또는 SharePoint 모드로 실행될 수 있습니다.|  
-|**.RDLX 보고서**|아니오|사용자 계정 컨트롤<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
-|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니오|사용자 계정 컨트롤|  
-|**인터넷 연결 배포를 위한 AAM 영역**|아니오|사용자 계정 컨트롤|  
-|**SharePoint 백업 및 복구**|아니오|사용자 계정 컨트롤|  
-|**ULS 로그 지원**|아니오|사용자 계정 컨트롤|  
+|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 응용 프로그램이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
+|**사용자 지정 보안 확장 프로그램**|예|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
+|**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
+|**보고서 관리자**|예|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**링크된 보고서**|예|아니요.|  
+|**내 보고서**|예|아니오|  
+|**내 구독** 및 일괄 처리 방법|예|아니오|  
+|**데이터 경고**|아니오|예|  
+|**파워 뷰**|아니오|예<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
+|**.RDL 보고서**|예|예<br /><br /> .RDL 보고서는 Reporting Services 보고서 서버에서 기본 모드 또는 SharePoint 모드로 실행될 수 있습니다.|  
+|**.RDLX 보고서**|아니오|예<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
+|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니오|예|  
+|**인터넷 연결 배포를 위한 AAM 영역**|아니오|예|  
+|**SharePoint 백업 및 복구**|아니오|예|  
+|**ULS 로그 지원**|아니오|예|  
   
 ## <a name="native-mode"></a>기본 모드
 

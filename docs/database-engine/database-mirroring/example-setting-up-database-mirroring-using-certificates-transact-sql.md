@@ -16,12 +16,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e320f6f0194f37a6836fd964bf69405bb01cf526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542730"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47803597"
   
  HOST_A는 초기 주 역할을 맡고 HOST_B는 미러 역할을 맡습니다.  
   
- 인증서를 사용하여 데이터베이스 미러링을 설정하는 작업은 4개의 일반적인 단계로 이루어지며, 이 예에서는 이 중 3개, 즉 1, 2, 4단계를 보여 줍니다. 이러한 단계는 다음과 같습니다.  
+ 인증서를 사용하여 데이터베이스 미러링을 설정하는 작업은 4개의 일반적인 단계로 이루어지며, 이 예제에서는 이 중 3개, 즉 1, 2, 4단계를 보여 줍니다. 이러한 단계는 다음과 같습니다.  
   
 1.  [아웃바운드 연결 구성](#ConfiguringOutboundConnections)  
   

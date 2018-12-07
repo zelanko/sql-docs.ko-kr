@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e00610b342f057f99a6aa7bb11ffcce9b23e8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541940"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 대상 구성 요소를 사용하여 업스트림 원본 및 변환에서 받은 데이터를 데이터 원본에 저장할 수 있습니다. 일반적으로 대상 구성 요소는 기존 연결 관리자를 통해 데이터 원본에 연결합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "47620931"
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에서 기존 변수를 사용하려는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에 있는 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에서 해당 변수를 추가할 수 있습니다.  
   
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표(**…**) 단추를 클릭한 다음 **변수 선택** 대화 상자에서 여러 개의 변수를 선택할 수도 있습니다.  
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표(**…**) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 변수를 선택하여 여러 개의 변수를 선택할 수도 있습니다.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   

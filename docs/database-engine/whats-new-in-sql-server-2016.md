@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504507"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +293,7 @@ SQL Server 2016에서는 JSON 가져오기 및 내보내기와 JSON 문자열 �
  자세한 내용은 [PolyBase 가이드](../relational-databases/polybase/polybase-guide.md)를 참조하세요.
 
 ## <a name="stretch-database"></a>스트레치 데이터베이스
- 스트레치 데이터베이스는 기록 데이터를 Microsoft Azure 클라우드에 투명하고 안전하게 마이그레이션하는 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 의 새로운 기능입니다. 온-프레미스에 있든 클라우드로 확장되든 상관없이 SQL Server 데이터에 원활하게 액세스할 수 있습니다. 데이터 저장 위치를 결정하는 정책을 설정하면 SQL Server가 백그라운드에서 데이터 이동을 처리합니다. 전체 테이블은 항상 온라인 상태이며 쿼리할 수 있습니다. 또한 스트레치 데이터베이스는 기존 쿼리 또는 응용 프로그램을 변경할 필요가 없습니다. 데이터의 위치가 응용 프로그램에 완전히 투명합니다. 자세한 내용은 [Stretch Database](../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
+ 스트레치 데이터베이스는 기록 데이터를 Microsoft Azure 클라우드에 투명하고 안전하게 마이그레이션하는 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 의 새로운 기능입니다. 온-프레미스에 있든 클라우드로 확장되든 상관없이 SQL Server 데이터에 원활하게 액세스할 수 있습니다. 데이터 저장 위치를 결정하는 정책을 설정하면 SQL Server가 백그라운드에서 데이터 이동을 처리합니다. 전체 테이블은 항상 온라인 상태이며 쿼리할 수 있습니다. 또한 Stretch Database는 기존 쿼리 또는 애플리케이션을 변경할 필요가 없습니다. 데이터의 위치가 애플리케이션에 완전히 투명합니다. 자세한 내용은 [Stretch Database](../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
  
 ## <a name="support-for-utf-8"></a>UTF-8에 대한 지원
 [bcp 유틸리티](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md)는 이제 UTF-8 코드 페이지를 지원합니다. 자세한 내용은 해당 항목 및 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요.
@@ -382,7 +382,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 
 
 ### <a name="always-encrypted"></a>항상 암호화
-상시 암호화를 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 암호화된 데이터에 대한 작업을 실행할 수 있고, 무엇보다 모든 암호화 키는 서버가 아닌 고객의 신뢰할 수 있는 환경 내의 응용 프로그램에 있습니다. 상시 암호화는 고객 데이터를 보호하므로 DBA가 일반 텍스트 데이터에 액세스할 수 없습니다. 데이터의 암호화 및 암호 해독은 드라이버 수준에서 투명하게 수행되므로 기존 응용 프로그램에서 변경해야 하는 내용이 최소화됩니다. 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
+상시 암호화를 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은(는) 암호화된 데이터에 대한 작업을 실행할 수 있고, 무엇보다 모든 암호화 키는 서버가 아닌 고객의 신뢰할 수 있는 환경 내의 애플리케이션에 있습니다. 상시 암호화는 고객 데이터를 보호하므로 DBA가 일반 텍스트 데이터에 액세스할 수 없습니다. 데이터의 암호화 및 암호 해독은 드라이버 수준에서 투명하게 수행되므로 기존 응용 프로그램에서 변경해야 하는 내용이 최소화됩니다. 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
 
 
 ### <a name="dynamic-data-masking"></a>동적 데이터 마스킹

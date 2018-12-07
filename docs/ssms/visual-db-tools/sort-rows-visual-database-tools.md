@@ -14,12 +14,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505356"
 ---
 # <a name="sort-rows-visual-database-tools"></a>행 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47668231"
     ORDER BY price DESC  
     ```  
   
--   **파생 열을 기준으로 정렬할 수 있습니다.** 예를 들어, 각 행에 책 제목이 있는 결과 집합을 만들어 한 권당 가장 높은 인세를 지불하는 책이 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
+-   **파생 열을 기준으로 정렬할 수 있습니다.** 예를 들어 각 행에 책 제목이 있는 결과 집합을 만들어 한 권당 가장 높은 인세를 지불하는 책이 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ ms.locfileid: "47668231"
   
     파생 열을 계산하려면 위 예제에서와 같이 SQL 구문을 사용하거나 스칼라 값을 반환하는 사용자 정의 함수를 사용할 수 있습니다. 사용자 정의 함수에 대한 자세한 내용은 SQL Server 설명서를 참조하십시오.  
   
--   **그룹화된 행을 정렬할 수 있습니다.** 예를 들어, 각 행에 도시와 해당 도시에 있는 저자 수를 나타내는 결과 집합을 만들어 저자를 많이 포함하는 도시가 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
+-   **그룹화된 행을 정렬할 수 있습니다.** 예를 들어 각 행에 도시와 해당 도시에 있는 저자 수를 나타내는 결과 집합을 만들어 저자를 많이 포함하는 도시가 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT city, state, COUNT(*)  

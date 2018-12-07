@@ -16,17 +16,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6083c77a8bb3474507b8a555dbeaf6e627cf3cb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528230"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
   스크립트 태스크 또는 스크립트 구성 요소를 구성하는 경우 **변수 선택** 대화 상자를 사용하여 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성에 대한 값을 하나 이상 선택할 수 있습니다.  
   
- **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지에 있는 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음 해당 속성과 연관된 줄임표 단추(…)를 클릭하세요.  
+ **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지의 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음, 해당 속성과 연결된 줄임표(…) 단추를 클릭합니다.  
   
 ## <a name="options"></a>Options  
  선택 상자  

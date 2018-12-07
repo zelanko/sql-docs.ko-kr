@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535730"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51701065"
 ### <a name="options"></a>Options  
  장애 조치(Failover) 클러스터 인스턴스만 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 네트워크 이름을 지정합니다. 이 이름은 네트워크에서 장애 조치(Failover) 클러스터 인스턴스를 식별합니다.  
   
- 기본 또는 명명된 인스턴스 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스와 명명된 인스턴스 중 설치할 항목을 결정할 때 다음 정보를 고려하십시오.  
+ 기본 또는 명명된 인스턴스 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스 또는 명명된 인스턴스를 설치할지 결정할 때 다음 정보를 고려하십시오.  
   
 -   데이터베이스 서버에 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치할 경우 이 인스턴스는 기본 인스턴스여야 합니다.  
   
@@ -451,6 +451,6 @@ ms.locfileid: "51701065"
   
  **제공할 사용자** 필드에 권한이 업데이트되어야 할 사용자의 DomainName\UserName이 나열되어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 가능한 권한 **창에 있는** 인스턴스 목록에서 업데이트할 역할을 선택한 다음 오른쪽 화살표를 클릭합니다. 사용 가능한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 역할에 사용자를 추가하려면 오른쪽 화살표를 두 번 클릭합니다.  
   
- 선택 작업이 완료된 경우 변경 내용을 구현하려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]. 변경 없이 도구를 끝내려면 **취소**를 클릭합니다.  
+ 선택 작업이 완료된 경우 변경 내용을 구현하려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]를 클릭하고, 도구를 변경하지 않고 종료하려면 **취소**를 클릭합니다.  
   
   

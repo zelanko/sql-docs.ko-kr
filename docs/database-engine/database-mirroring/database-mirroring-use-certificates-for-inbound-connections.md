@@ -15,12 +15,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b4f641af83a39fa76af3b6dc525740e1c0b0057b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6057c87d7fb4e1a5f4b29879179efa0ff716275e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819291"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529688"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>데이터베이스 미러링 - 인바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47819291"
   
 5.  해당 원격 미러링 엔드포인트에 대한 로그인에 CONNECT 권한을 부여합니다.  
   
-     예를 들어 HOST_B에 있는 원격 서버 인스턴스에 대해 HOST_A에서 로컬 로그인에 연결하는 권한을 부여하려면 즉, `HOST_B_login`에 연결하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
+     예를 들어 HOST_B에 있는 원격 서버 인스턴스에 대해 HOST_A에서 로컬 로그인에 연결할 권한을 부여하려면 즉, `HOST_B_login`에 연결하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
     ```  
     USE master;  

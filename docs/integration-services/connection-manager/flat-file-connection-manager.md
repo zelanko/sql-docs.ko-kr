@@ -23,12 +23,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1570c643375d9ca7b327b7e5f630657ff9aeaeed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6a920aa5f31bb18d717ea3da8edd328bd398a92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420544"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "47694988"
   
 -   텍스트 한정자 문자를 지정합니다. 텍스트 한정자를 인식하도록 각 열을 구성할 수 있습니다.  
   
-     한정자 문자를 사용하여 한정된 문자열에 한정자 문자를 포함할 수 있는 기능이 플랫 파일 연결 관리자에서 지원됩니다. 텍스트 한정자가 두 번 나올 경우 해당 문자열이 한 번 나온 것처럼 리터럴로 해석됩니다. 예를 들어 텍스트 한정자가 작은따옴표이고 입력 데이터가 ‘abc’, ‘def’, ‘g’hi’인 경우 출력 데이터는 abc, def, g’hi입니다. 그러나 한정된 문자열에 포함된 한정자의 인스턴스로 인해 DTS_E_PRIMEOUTPUTFAILED 오류가 발생하며 플랫 파일 원본이 실패하게 됩니다.
+     한정자 문자를 사용하여 한정된 문자열에 한정자 문자를 포함할 수 있는 기능이 플랫 파일 연결 관리자에서 지원됩니다. 텍스트 한정자가 두 번 나올 경우 해당 문자열이 한 번 나온 것처럼 리터럴로 해석됩니다. 예를 들어 텍스트 한정자가 작은따옴표이고 입력 데이터가 'abc', 'def', 'g'hi'인 경우 출력 데이터는 abc, def, g'hi입니다. 그러나 한정된 문자열에 포함된 한정자의 인스턴스로 인해 DTS_E_PRIMEOUTPUTFAILED 오류가 발생하며 플랫 파일 원본이 실패하게 됩니다.
   
 -   개별 열에 대해 이름, 데이터 형식 및 최대 너비와 같은 속성을 설정합니다.  
   

@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526920"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603573"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408890"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>수신기, 클라이언트 연결 및 응용 프로그램 장애 조치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +139,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅  
- 응용 프로그램 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 응용 프로그램의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 응용 프로그램의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 응용 프로그램 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
+ 애플리케이션 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 애플리케이션의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 응용 프로그램의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 응용 프로그램 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
   
- 응용 프로그램 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
+ 애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
   
  읽기 전용 응용 프로그램 의도를 지정하는 ADO.NET 공급자(System.Data.SqlClient)에 대한 연결 문자열의 예는 다음과 같습니다.  
   
@@ -180,7 +180,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> 장애 조치(Failover) 시 클라이언트 연결 동작  
  가용성 그룹 장애 조치(failover)가 발생하면 가용성 그룹에 대한 기존의 영구 연결이 종료되므로 클라이언트는 동일한 주 데이터베이스 또는 읽기 전용 보조 데이터베이스로 계속 작업하려면 새 연결을 설정해야 합니다.  서버측에서 장애 조치(failover)가 수행 중인 동안에는 가용성 그룹에 연결할 수 없으며, 주 데이터베이스가 다시 온라인으로 전환될 때까지 클라이언트 응용 프로그램에서 연결을 다시 시도합니다.  
   
- 클라이언트 응용 프로그램의 연결 시도 중에 연결 제한 시간 이전에 가용성 그룹이 다시 온라인으로 전환되는 경우에는 내부적으로 연결을 재시도하는 과정에서 클라이언트 드라이버가 성공적으로 연결될 수 있으며 이 경우 응용 프로그램에 오류가 표시되지 않습니다.  
+ 클라이언트 애플리케이션의 연결 시도 중에 연결 제한 시간 이전에 가용성 그룹이 다시 온라인으로 전환되는 경우에는 내부적으로 연결을 재시도하는 과정에서 클라이언트 드라이버가 성공적으로 연결될 수 있으며 이 경우 애플리케이션에 오류가 표시되지 않습니다.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 가용성 그룹 다중 서브넷 장애 조치(Failover) 지원  
  연결 문자열에서 MultiSubnetFailover 연결 옵션을 지원하는 클라이언트 라이브러리를 사용 중인 경우 사용하는 공급자의 구문에 따라 MultiSubnetFailover를 "True"나 "Yes"로 설정하여 다른 서브넷에 대한 가용성 그룹 장애 조치(failover)를 최적화할 수 있습니다.  

@@ -5,19 +5,18 @@ ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699692"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617943"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -70,7 +69,7 @@ ms.locfileid: "51699692"
   
 |호출|작업|  
 |----------|------------|  
-|기능 선택|선택:<br /><br /> **데이터베이스 엔진 서비스** 아래에서 **Data Quality Services** 를 선택하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 설치합니다. <br />**Data Quality Services** 확인란을 선택한 경우 SQL Server 설치 프로그램에서 설치 파일인 DQSInstaller.exe를 컴퓨터의 SQL Server 인스턴스 디렉터리에 복사합니다. SQL Server 설치 프로그램을 완료한 후 이 파일을 실행하여 *설치를* 완료 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 해야 합니다. 또한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하려면 먼저 몇 가지 추가 단계를 수행하여 DQS 서버를 구성해야 합니다. 자세한 내용은 [설치 후 태스크](#PostInstallationTasks)를 참조하세요.<br /><br /> **Data Quality 클라이언트** 를 선택하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 설치합니다.<br /><br /> (권장) **관리 도구 – 기본** 에서 **관리 도구 – 전체** 를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 설치합니다. 이렇게 하면 그래픽 사용자 인터페이스를 사용하여 SQL Server 인스턴스를 관리할 수 있으며, 다음 섹션에 나열된 추가 사후 설치 태스크를 수행하는 데에도 도움이 됩니다.|  
+|기능 선택|선택:<br /><br /> **데이터베이스 엔진 서비스** 아래에서 **Data Quality Services** 를 선택하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 설치합니다. <br />**Data Quality Services** 확인란을 선택한 경우 SQL Server 설치 프로그램에서 설치 파일인 DQSInstaller.exe를 컴퓨터의 SQL Server 인스턴스 디렉터리에 복사합니다. SQL Server 설치 프로그램을 완료한 후 이 파일을 실행하여 *설치를* 완료 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 해야 합니다. 또한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하려면 먼저 몇 가지 추가 단계를 수행하여 DQS 서버를 구성해야 합니다. 자세한 내용은 [설치 후 태스크](#PostInstallationTasks)를 참조하세요.<br /><br /> **Data Quality 클라이언트** 를 선택하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 설치합니다.<br /><br /> (권장) **관리 도구 – 기본**에서 **관리 도구 – 전체**를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 설치합니다. 이렇게 하면 그래픽 사용자 인터페이스를 사용하여 SQL Server 인스턴스를 관리할 수 있으며, 다음 섹션에 나열된 추가 사후 설치 태스크를 수행하는 데에도 도움이 됩니다.|  
 |데이터베이스 엔진 구성|**현재 사용자 추가** 를 클릭하여 사용자 Windows 계정을 sysadmin 고정 서버 역할에 추가합니다. 나중에 DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하기 위해서는 이 과정이 필요합니다.|  
   
 ##  <a name="PostInstallationTasks"></a> 설치 후 태스크  

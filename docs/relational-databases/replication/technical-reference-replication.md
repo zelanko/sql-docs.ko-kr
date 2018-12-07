@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d8e08d9ef6221897b5e975702e4767943c174d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85cc48506377e8c884ee0423d40bc0fe6391df25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536827"
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "47851021"
   
  [New Publication Wizard](../../relational-databases/replication/new-publication-wizard.md)  
   
- [기타...](../../relational-databases/replication/properties-reference-replication.md)  
+ [자세히...](../../relational-databases/replication/properties-reference-replication.md)  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 에이전트**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
- [기타...](../../relational-databases/replication/agents/replication-agents.md)  
+ [자세히...](../../relational-databases/replication/agents/replication-agents.md)  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 저장 프로시저**  
  [sp_addarticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "47851021"
   
  [sp_addsubscriber&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
   
- [기타...](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [자세히...](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 테이블**  
  [MSmerge_conflicts_info&#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
@@ -64,14 +64,14 @@ ms.locfileid: "47851021"
   
  [syssubscriptions&#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
- [기타...](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [자세히...](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 뷰**  
  [syspublications&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
- [기타...](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [자세히...](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
  ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 클래스 라이브러리**  
  <xref:Microsoft.SqlServer.Replication>  

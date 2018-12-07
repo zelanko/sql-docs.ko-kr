@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696842"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392343"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -33,7 +33,7 @@ ms.locfileid: "51696842"
   
  **다운로드**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면 **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
 -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   

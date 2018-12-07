@@ -13,12 +13,12 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a2912f9023db4e31bcb35f742d8d7cc1c8ce208
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39ddb99758833a5f942822e2639768480bf1bc99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530140"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51701231"
 ###  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 응용 프로그램의 로그인  
  응용 프로그램에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 응용 프로그램의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 응용 프로그램이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
   
- 이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 응용 프로그램을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법은 KB 문서 918992[SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992/)을 참조하세요.  
+ 이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 응용 프로그램을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 KB 문서 918992 [SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992/)을 참조하세요.  
   
 > [!NOTE]  
 >  이 문제는 다른 컴퓨터의 Windows 로컬 계정에 영향을 줍니다. 하지만 도메인 계정에서는 SID가 각 컴퓨터에서 동일하기 때문에 이러한 문제가 발생하지 않습니다.  

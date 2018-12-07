@@ -16,12 +16,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1998aa0072e001f4c6065341dc788a9b0bb562e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713401"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321729"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
   이 섹션에서는 식 언어가 제공하는 연산자 및 식 계산기에 사용되는 연산자 우선 순위 및 계산 방향에 대해 설명합니다.  
@@ -41,11 +41,11 @@ ms.locfileid: "47713401"
 |[%&#40;모듈로&#41; &#40;SSIS 식&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|첫 번째 숫자 식을 두 번째 식으로 나눈 다음 나머지의 정수 부분을 제공합니다.|  
 |[&#124;&#124;&#40;논리적 OR&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|논리적 OR 연산을 수행합니다.|  
 |[&&&#40;논리적 AND&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|논리적 AND 연산을 수행합니다.|  
-|[\!&#40;논리적 Not&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|부울 피연산자를 부정합니다.|  
+|[\! &#40;논리적 NOT&#41; &#40;SSIS 식&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|부울 피연산자를 부정합니다.|  
 |[&#124;&#40;포괄적 비트 OR&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|두 정수 값의 비트 OR 연산을 수행합니다.|  
 |[^&#40;배타적 비트 OR&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|두 정수 값의 배타적 비트 OR 연산을 수행합니다.|  
 |[&&#40;비트 AND&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|두 정수 값의 비트 AND 연산을 수행합니다.|  
-|[~&#40;비트 Not&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|정수의 비트 부정을 수행합니다.|  
+|[~ &#40;비트 NOT&#41; &#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|정수의 비트 부정을 수행합니다.|  
 |[== &#40;같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/equal-ssis-expression.md)|두 식이 같은지 비교합니다.|  
 |[\!=&#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|두 식이 같지 않은지 비교합니다.|  
 |[&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다.|  

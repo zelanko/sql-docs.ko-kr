@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cff9d79f6c357d419f6ef058e58ea4cc1da4e2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700388"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416774"
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "51700388"
 |컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**같음**|지정된 조건과 정확히 같은 특성 값을 반환합니다. 예를 들어 **Mountain-100**을 필터링하려면 **Mountain-100**을 입력해야 합니다.|  
-|**같지 않음**|지정된 조건과 같지 않은 특성 값을 반환합니다. 필터 조건은 결과에서 생략할 특성 값과 정확히 같아야 합니다. 예를 들어 **Mountain-100**과 일치하는 결과를 생략하려면 **Mountain-100**을 입력해야 합니다.<br /><br /> <br /><br /> 참고: “Is not equal” 절을 사용하여 특성에 필터 조건을 적용하면 특성이 Null인 멤버가 필터 조건을 전달하고 SET ANSI_NULLS가 데이터베이스 문자열에서 ON으로 설정된 경우 결과가 반환됩니다. 이 동작을 중지하려면 데이터베이스 설정에서 SET ANSI_NULLS를 OFF로 설정합니다. SET ANSI_NULLS가 OFF로 설정된 경우 데이터 값이 Null이면 Null 값에 대한 모든 데이터 비교가 TRUE로 평가되고 멤버가 “Is not equal” 절을 전달하지 않는 결과가 발생합니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.|  
+|**같지 않음**|지정된 조건과 같지 않은 특성 값을 반환합니다. 필터 조건은 결과에서 생략할 특성 값과 정확히 같아야 합니다. 예를 들어 **Mountain-100**과 일치하는 결과를 생략하려면 **Mountain-100**을 입력해야 합니다.<br /><br /> <br /><br /> 참고: "Is not equal" 절을 사용하여 특성에 필터 조건을 적용하면 특성이 Null인 멤버가 필터 조건을 전달하고 SET ANSI_NULLS가 데이터베이스 문자열에서 ON으로 설정된 경우 결과가 반환됩니다. 이 동작을 중지하려면 데이터베이스 설정에서 SET ANSI_NULLS를 OFF로 설정합니다. SET ANSI_NULLS가 OFF로 설정된 경우 데이터 값이 Null이면 Null 값에 대한 모든 데이터 비교가 TRUE로 평가되고 멤버가 "Is not equal" 절을 전달하지 않는 결과가 발생합니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.|  
 |**유사함**|Transact-SQL에서 LIKE 연산자를 사용하여 결과를 필터링합니다. 자세한 내용은 SQL Server 온라인 설명서에서 [LIKE&#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md)를 참조하세요.|  
 |**유사하지 않음**|Transact-SQL에서 NOT 연산자를 사용하여 결과를 필터링합니다. 자세한 내용은 SQL Server 온라인 설명서에서 [NOT&#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md)을 참조하세요.|  
 |**보다 큼**|지정된 조건보다 큰 특성 값을 반환합니다. 예를 들어 **F**보다 큰 문자로 시작하는 특성 값을 반환하려면 **F**를 입력합니다.|  

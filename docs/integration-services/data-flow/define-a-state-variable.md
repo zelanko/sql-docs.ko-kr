@@ -11,12 +11,12 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533391"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47628631"
 |**CS**|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
 |**\<cs-lsn>**|이전 CDC 실행 시 마지막으로 처리된 LSN(로그 시퀀스 번호)입니다.|  
 |**CE**|이렇게 하면 현재 처리 범위 끝점(현재 끝)이 표시됩니다. CDC 상태에 CE 구성 요소가 있으면 CDC 패키지가 현재 처리 중이거나 해당 CDC 패키지에서 CDC 처리 범위를 완전히 처리하기 전에 실패했음을 나타냅니다.|  
-|**\<ce-lsn>**|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 항상 처리할 마지막 시퀀스 번호를 최대값(0xFFF…)으로 가정합니다.|  
+|**\<ce-lsn>**|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 처리할 마지막 시퀀스 번호를 항상 최댓값(0xFFF…)으로 가정합니다.|  
 |**IR**|이렇게 하면 초기 처리 범위가 표시됩니다.|  
 |**\<ir-start>**|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
 |**\<ir-end>**|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
@@ -87,6 +87,6 @@ ms.locfileid: "47628631"
   
 ## <a name="see-also"></a>참고 항목  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 제어 태스크 편집기](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

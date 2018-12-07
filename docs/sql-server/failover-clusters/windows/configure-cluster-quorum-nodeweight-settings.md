@@ -13,12 +13,12 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db4e21dc88e3eb5dfc76fa00c37a32148424af20
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9663732206ec3697379a241ae7eecf6d12a3b749
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700961"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407730"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "51700961"
 4.  클러스터 노드 속성을 읽기 가능한 형식으로 출력합니다.  
   
 ### <a name="example-powershell"></a>예(Powershell)  
- 다음 예에서는 NodeWeight 설정을 변경하여 “AlwaysOnSrv1” 노드에 대한 쿼럼 투표를 제거한 다음 클러스터의 모든 노드에 대한 설정을 출력합니다.  
+ 다음 예제에서는 NodeWeight 설정을 변경하여 "AlwaysOnSrv1" 노드에 대한 쿼럼 투표를 제거한 다음, 클러스터의 모든 노드에 대한 설정을 출력합니다.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -85,7 +85,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  **cluster.exe** 를 사용하여 `NodeWeight` 값을 설정합니다.  
   
 ### <a name="example-clusterexe"></a>예(Cluster.exe)  
- 다음 예에서는 NodeWeight 값을 변경하여 “Cluster001” 클러스터의 “AlwaysOnSrv1” 노드에 대한 쿼럼 투표를 제거합니다.  
+ 다음 예제에서는 NodeWeight 값을 변경하여 “Cluster001” 클러스터의 “AlwaysOnSrv1” 노드에 대한 쿼럼 투표를 제거합니다.  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  

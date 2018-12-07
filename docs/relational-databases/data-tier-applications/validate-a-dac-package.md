@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518675"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "43810109"
   
  **SQL Server Developer Tools에서 DAC 보기**  
   
-1.  **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음 **프로젝트...** 를 선택합니다.  
+1.  **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음, **프로젝트...** 를 선택합니다.  
   
 2.  **SQL Server** 프로젝트 템플릿을 선택하고 **이름**, **위치**및 **솔루션 이름**을 지정합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43810109"
   
 4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 응용 프로그램(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
   
-5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 응용 프로그램 가져오기...** 를 선택합니다.  
+5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션 가져오기...** 를 선택합니다.  
   
 6.  **솔루션 탐색기** 를 사용하여 서버 선택 정책과 배포 이전 및 배포 이후 스크립트와 같은 DAC의 모든 파일을 열 수 있습니다.  
   

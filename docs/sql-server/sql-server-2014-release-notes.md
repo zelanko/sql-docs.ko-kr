@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503489"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 |데이터베이스 복제|새 DBCC 명령을 사용하여 데이터 없이 스키마, 메타데이터 및 통계를 복제하여 기존 프로덕션 데이터베이스의 문제를 해결합니다. 복제된 데이터베이스는 프로덕션 환경에서 사용할 수 없습니다.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF 추가|새 DMF sys.dm_db_incremental_stats_properties는 증분 통계에 대한 파티션당 정보를 노출합니다.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
 |SQL Server에서 입력 버퍼를 검색하기 위한 DMF|이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
-|복제를 위한 DROP DDL 지원|트랜잭션 복제 게시에서 아티클로 포함된 테이블을 데이터베이스 및 게시에서 삭제하도록 허용합니다.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|복제를 위한 DROP DDL 지원|트랜잭션 복제 게시에서 문서로 포함된 테이블을 데이터베이스 및 게시에서 삭제하도록 허용합니다.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |SQL 서비스 계정에 대한 IFI 권한|IFI(인스턴트 파일 초기화)가 SQL Server 서비스 시작 시 적용되는지 확인합니다.|[데이터베이스 파일 초기화](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |메모리 부여 - 문제 처리|메모리 경합을 방지하도록 해당 메모리 부여를 제한하여 쿼리를 실행하는 동안 진단 힌트를 활용할 수 있습니다.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |연산자당 쿼리 실행 경량 프로파일링 |실제 행 수와 같은 연산자당 쿼리 실행 통계 수집을 최적화합니다.|[개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
@@ -292,7 +292,7 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services(RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 기본 모드 보고서 서버가 SQL Server 2014 Reporting Services SharePoint 구성 요소와 함께 실행될 수 없음  
-**문제:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소가 동일한 서버에 설치되어 있으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스 ‘SQL Server Reporting Services’(ReportingServicesService.exe)가 시작되지 않습니다.  
+**문제:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소가 동일한 서버에 설치되어 있으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 Windows 서비스 'SQL Server Reporting Services'(ReportingServicesService.exe)가 시작되지 않습니다.  
   
 **해결 방법:** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 구성 요소를 제거하고 Microsoft SQL Server 2012 Reporting Services Windows 서비스를 다시 시작합니다.  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하십시오.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
   
@@ -389,7 +389,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  Microsoft Excel에서 사용자 지정 고급 속성의 선택을 취소합니다. 다음 기술 자료 문서 [KB 2927748](https://support.microsoft.com/kb/2927748)의 “해결 방법” 섹션을 참조하세요.  
+1.  Microsoft Excel에서 사용자 지정 고급 속성의 선택을 취소합니다. 다음 기술 자료 문서 [KB 2927748](https://support.microsoft.com/kb/2927748)의 "해결 방법" 섹션을 참조하세요.  
   
 **추가 정보:**  
   

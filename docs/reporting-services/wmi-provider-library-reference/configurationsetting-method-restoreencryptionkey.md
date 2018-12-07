@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d19ecb9c4f14c0f9750a7344a6c2c442785cbb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692238"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416140"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting 메서드 - RestoreEncryptionKey
   지정된 암호화 키를 보고서 서버 데이터베이스에 다시 적용합니다.  
@@ -58,7 +58,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- 보고서 서버 데이터베이스에 보고서 서버에 대한 항목이 이미 있으면 삭제됩니다. 그런 다음 지정된 암호화 키와 보고서 서버의 공개 키를 사용하여 새로운 항목이 만들어집니다.  
+ 보고서 서버 데이터베이스에 보고서 서버에 대한 항목이 이미 있으면 삭제됩니다. 그런 다음, 지정된 암호화 키와 보고서 서버의 공개 키를 사용하여 새로운 항목이 만들어집니다.  
   
  이 메서드는 암호화 키 목록을 지우는 [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) 메서드 다음에 호출하는 것이 가장 효과적입니다.  
   

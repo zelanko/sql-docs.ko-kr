@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641290"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528451"
 ---
 # <a name="send-mail-task"></a>메일 보내기 태스크
   메일 보내기 태스크는 전자 메일 메시지를 보냅니다. 메일 보내기 태스크를 사용하면 패키지 워크플로의 태스크 성공 여부에 관계없이 패키지가 메시지를 보낼 수 있거나 런타임 시 패키지에서 발생한 이벤트에 응답하여 메시지를 보낼 수 있습니다. 예를 들어 이 태스크는 데이터베이스 백업 태스크의 성공 또는 실패에 대해 데이터베이스 관리자에게 알릴 수 있습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "51641290"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 직접 입력  
  **MessageSource**  
- 메시지 텍스트를 입력하거나 찾아보기 단추(...)를 클릭한 다음 **메시지 원본** 대화 상자에 메시지를 입력합니다.  
+ 메시지 텍스트를 입력하거나 찾아보기 단추(...)를 클릭한 다음, **메시지 원본** 대화 상자에 메시지를 입력합니다.  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 파일 연결  
  **MessageSource**  

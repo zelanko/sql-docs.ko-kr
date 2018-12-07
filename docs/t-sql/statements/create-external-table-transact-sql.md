@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703961"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402818"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -220,7 +220,7 @@ SQL Data Warehouse 및 Analytics Platform System에서는 [CREATE EXTERNAL TABLE
 REJECTED_ROW_LOCATION = *디렉터리 위치*
   
   거부된 행과 해당 오류 파일을 작성해야 하는 외부 데이터 원본 내 디렉터리를 지정합니다.
-지정된 경로가 존재하지 않을 경우 PolyBase는 자동으로 경로를 만듭니다. “_rejectedrows”라는 이름의 하위 디렉터리가 생성됩니다. "_" 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다. 
+지정된 경로가 존재하지 않을 경우 PolyBase는 자동으로 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_" 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다. 
 
 reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있습니다. data와 reason은 별도의 파일에 있으므로 해당 파일의 접미사가 일치해야 합니다. 
   

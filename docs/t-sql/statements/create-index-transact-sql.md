@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518335"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 테이블 또는 뷰에 관계 인덱스를 만듭니다. 이 인덱스는 클러스터형 또는 비클러스터형 B-트리 인덱스이므로 rowstore 인덱스라고도 합니다. 테이블에 데이터가 채워지기 전에 rowstore 인덱스를 만들 수 있습니다. 특히 쿼리가 특정 열에서 값을 선택하거나 값을 특정 순서로 정렬해야 하는 경우 rowstore 인덱스를 사용하여 쿼리 성능을 개선할 수 있습니다.  

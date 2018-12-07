@@ -11,12 +11,12 @@ ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e59151d342d73bc3ea45ab1c778cf8fe5b2ed01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398116"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>특성 유형 변경(Excel용 MDS 추가 기능)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47792621"
   
 -   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 -   기존 모델, 엔터티 및 특성이 있어야 합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47792621"
   
 -   특성의 데이터 형식을 변경합니다.  
   
--   이전 값을 가진 “_old” 접미사를 사용해서 특성의 복사본을 생성합니다. 이를 사용되지 않는 특성이라고 부릅니다.  
+-   이전 값을 가진 "_old" 접미사를 사용해서 특성의 복사본을 생성합니다. 이를 사용되지 않는 특성이라고 부릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   

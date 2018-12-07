@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505295"
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ AS *principal*
  sp_helprotect 시스템 저장 프로시저는 데이터베이스 수준 보안 개체에 대한 사용 권한을 보고합니다.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** … **WITH GRANT OPTION**은 사용 권한을 받는 보안 주체에게 다른 보안 계정에 지정된 권한을 부여할 수 있는 권한이 부여되도록 지정합니다. 사용 권한을 받는 보안 주체가 역할 또는 Windows 그룹인 경우, 그룹 또는 역할의 멤버가 아닌 사용자에게 개체 권한을 추가로 부여해야 할 때는 **AS** 절을 사용해야 합니다. 그룹 또는 역할이 아니라 사용자만 **GRANT** 문을 실행할 수 있으므로 그룹 또는 역할의 특정 멤버는 사용 권한을 부여할 때 **AS** 절을 사용하여 역할 또는 그룹 멤버 자격을 명시적으로 호출해야 합니다. 다음 예에서는 역할 또는 Windows 그룹에 부여될 때 **WITH GRANT OPTION**이 사용되는 방법을 보여 줍니다.  
+ **부여**... **WITH GRANT OPTION**은 사용 권한을 받는 보안 주체에게 다른 보안 계정에 지정된 권한을 부여할 수 있는 권한이 부여되도록 지정합니다. 사용 권한을 받는 보안 주체가 역할 또는 Windows 그룹인 경우, 그룹 또는 역할의 멤버가 아닌 사용자에게 개체 권한을 추가로 부여해야 할 때는 **AS** 절을 사용해야 합니다. 그룹 또는 역할이 아니라 사용자만 **GRANT** 문을 실행할 수 있으므로 그룹 또는 역할의 특정 멤버는 사용 권한을 부여할 때 **AS** 절을 사용하여 역할 또는 그룹 멤버 자격을 명시적으로 호출해야 합니다. 다음 예에서는 역할 또는 Windows 그룹에 부여될 때 **WITH GRANT OPTION**이 사용되는 방법을 보여 줍니다.  
   
 ```  
 -- Execute the following as a database owner  

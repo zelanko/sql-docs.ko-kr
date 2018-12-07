@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539728"
 ---
 # <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47633681"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -59,9 +59,9 @@ ms.locfileid: "47633681"
   
 3.  **역할** 폴더를 확장합니다.  
   
-4.  **응용 프로그램 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 응용 프로그램 역할...** 을 선택합니다.  
+4.  **애플리케이션 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 애플리케이션 역할...** 을 선택합니다.  
   
-5.  **응용 프로그램 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자의 새 응용 프로그램 역할의 새 이름을 입력합니다.  
+5.  **애플리케이션 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자에 새 애플리케이션 역할의 새 이름을 입력합니다.  
   
 6.  **기본 스키마** 상자에 개체 이름을 입력하여 이 역할로 만든 개체를 소유할 스키마를 지정합니다. 또는 줄임표 **(…)** 를 클릭하여 **스키마 찾기** 대화 상자를 엽니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633681"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ **애플리케이션 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

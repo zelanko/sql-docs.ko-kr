@@ -18,19 +18,19 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529708"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 **LoggingMode** 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  
   
  이 항목에서는 해당 멤버가 속성 식에서 일반적으로 사용되는 열거자의 이름에 해당하는 숫자 값만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에는 프로그래밍 방식으로 패키지를 작성하거나 태스크 및 데이터 흐름 구성 요소와 같은 사용자 지정 패키지 요소를 코딩하기 위해 개체 모델을 프로그래밍할 때 사용하는 여러 개의 추가 열거자가 포함되어 있습니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 속성 창에는 패키지 및 패키지 개체의 사용자 지정 속성 외에 패키지, 태스크 및 Foreach 루프, For 루프, 시퀀스 컨테이너에 사용할 수 있는 속성 집합이 포함되어 있습니다. 열거자의 값으로 설정된 공용 속성인**ForceExecutionResult**, **LoggingMode**, **IsolationLevel**및 **Transaction Option**은 공용 속성 섹션에 나열됩니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 속성 창에는 패키지 및 패키지 개체의 사용자 지정 속성 외에 패키지, 태스크 및 Foreach 루프, For 루프, 시퀀스 컨테이너에 사용할 수 있는 속성 집합이 포함되어 있습니다. 열거자의 값으로 설정된 공용 속성인 **ForceExecutionResult**, **LoggingMode**, **IsolationLevel** 및 **Transaction Option**은 공용 속성 섹션에 나열됩니다.  
   
  다음 섹션에서는 열거 상수에 대한 정보를 제공합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "51638970"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 열거자  
- **SourceDocumentType**, **InnerXPathStringSourceType**및 **OuterXPathStringSourceType** 속성 - **SourceType** 열거의 값을 사용하여 설정합니다.  
+ **SourceDocumentType**, **InnerXPathStringSourceType** 및 **OuterXPathStringSourceType** 속성 - **SourceType** 열거 값을 사용하여 설정합니다.  
   
 |SourceType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
@@ -157,7 +157,7 @@ ms.locfileid: "51638970"
 |변수|2|  
   
 ### <a name="bulk-insert-task"></a>대량 삽입 태스크  
- **DataFileType** 속성— **DTSBulkInsert_DataFileType** 열거형의 값을 사용하여 설정합니다.  
+ **DataFileType** 속성— **DTSBulkInsert_DataFileType** 열거 값을 사용하여 설정합니다.  
   
 |DTSBulkInsert_DataFileType의 이름|숫자 값|  
 |--------------------------------------------------|-------------------|  
@@ -374,7 +374,7 @@ ms.locfileid: "51638970"
 |DirectInput|1|  
 |변수|2|  
   
- WMI 이벤트 감시자 **ActionAtEvent** 속성 - **ActionAtEvent** 열거의 값을 사용하여 설정합니다.  
+ WMI 이벤트 감시자 **ActionAtEvent** 속성 - **ActionAtEvent** 열거 값을 사용하여 설정합니다.  
   
 |ActionAtEvent의 이름|숫자 값|  
 |------------------------------------|-------------------|  
@@ -424,7 +424,7 @@ ms.locfileid: "51638970"
 |Diff|4|  
 |Patch|5|  
   
- **SourceType**, **SecondOperandType**및 **XPathSourceType** 속성 - **DTSXMLSourceType** 열거의 값을 사용하여 설정합니다.  
+ **SourceType**, **SecondOperandType** 및 **XPathSourceType** 속성 - **DTSXMLSourceType** 열거 값을 사용하여 설정합니다.  
   
 |DTSXMLSourceType의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
@@ -432,7 +432,7 @@ ms.locfileid: "51638970"
 |변수|1|  
 |DirectInput|2|  
   
- **DestinationType** 및 **DiffGramDestinationType** 속성 - **DTSXMLSaveResultTo** 열거의 값을 사용하여 설정합니다.  
+ **DestinationType** 및 **DiffGramDestinationType** 속성 - **DTSXMLSaveResultTo** 열거 값을 사용하여 설정합니다.  
   
 |DTSXMLSaveResultTo의 이름|숫자 값|  
 |-----------------------------------------|-------------------|  
@@ -533,7 +533,7 @@ ms.locfileid: "51638970"
 |파일|1|  
 |Log|2|  
   
- **BackupDevice** 속성—SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거형의 값을 사용하여 설정합니다.  
+ **BackupDevice** 속성 - SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거 값을 사용하여 설정합니다.  
   
 |DeviceType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
@@ -561,7 +561,7 @@ ms.locfileid: "51638970"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>통계 업데이트 태스크  
- **UpdateType** 속성—SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **StatisticsTarget** 열거형의 값을 사용하여 설정합니다.  
+ **UpdateType** 속성 - SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **StatisticsTarget** 열거 값을 사용하여 설정합니다.  
   
 |StatisticsTarget의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
@@ -581,7 +581,7 @@ ms.locfileid: "51638970"
 |실패|1|  
 |Completion|2|  
   
- **IsolationLevel** 속성 - .NET Framework **IsolationLevel** 열거를 통해 설정됩니다. 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)의 .NET Framework 클래스 라이브러리(.NET Framework Class Library)를 참조하십시오.  
+ **IsolationLevel** 속성 - .NET Framework **IsolationLevel** 열거를 사용하여 설정합니다. 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)의 .NET Framework 클래스 라이브러리(.NET Framework Class Library)를 참조하십시오.  
   
  **LoggingMode** 속성 - **DTSLoggingMode** 열거 값을 사용하여 설정합니다.  
   

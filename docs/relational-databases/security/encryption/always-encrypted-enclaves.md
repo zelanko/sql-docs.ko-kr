@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307117"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711184"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -50,12 +50,12 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 
 - **바로 암호화** – 중요한 데이터에 대한 암호화 작업(예: 초기 데이터 암호화 또는 열 암호화 키 순환)은 보안 Enclave 내에서 수행되며 데이터베이스 외부로 데이터를 이동할 필요가 없습니다. ALTER TABLE Transact-SQL 문을 사용하여 바로 암호화를 실행할 수 있으며, SSMS의 Always Encrypted 마법사 또는 Set-SqlColumnEncryption PowerShell cmdlet과 같은 도구를 사용할 필요가 없습니다.
 
-- **리치 계산(미리 보기)** – 패턴 일치(LIKE 조건자) 및 범위 비교를 비롯하여 암호화된 열에 대해 수행되는 작업은 보안 Enclave 내에서 지원됩니다. 이 경우 데이터베이스 시스템 내에서 이러한 계산을 수행하도록 요구하는 광범위한 응용 프로그램 및 시나리오가 Always Encrypted에서 지원됩니다.
+- **리치 계산(미리 보기)** – 패턴 일치(LIKE 조건자) 및 범위 비교를 비롯하여 암호화된 열에 대해 수행되는 작업은 보안 Enclave 내에서 지원됩니다. 이 경우 데이터베이스 시스템 내에서 이러한 계산을 수행하도록 요구하는 광범위한 애플리케이션 및 시나리오가 Always Encrypted에서 지원됩니다.
 
 > [!IMPORTANT]
-> [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 리치 계산은 몇 가지 성능 최적화가 보류 중이며, 제한된 기능을 포함하고(인덱싱 없음 등), 현재 기본적으로 사용하지 않도록 설정되어 있습니다. 리치 계산을 사용하도록 설정하려면 [리치 계산 사용](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
+> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 리치 계산은 몇 가지 성능 최적화가 보류 중이며, 제한된 기능을 포함하고(인덱싱 없음 등), 현재 기본적으로 사용하지 않도록 설정되어 있습니다. 리치 계산을 사용하도록 설정하려면 [리치 계산 사용](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
 
-[!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 보안 Enclave를 사용한 Always Encrypted는 Windows의 [VBS(가상화 기반 보안)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 보안 메모리 Enclave(가상 보안 모드 또는 VSM Enclave라고도 함)를 사용합니다.
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 보안 Enclave를 사용한 Always Encrypted는 Windows의 [VBS(가상화 기반 보안)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 보안 메모리 Enclave(가상 보안 모드 또는 VSM Enclave라고도 함)를 사용합니다.
 
 ## <a name="secure-enclave-attestation"></a>보안 Enclave 증명
 
@@ -63,11 +63,11 @@ SQL Server 엔진 내의 보안 Enclave는 암호화된 데이터베이스 열�
 
 Enclave를 확인하는 프로세스를 **Enclave 증명**이라고 하며, 일반적으로 응용 프로그램(및 경우에 따라 SQL Server) 내의 클라이언트 드라이버가 외부 증명 서비스에 연결하게 됩니다. 증명 프로세스의 사양은 Enclave 기술과 증명 서비스에 따라 좌우됩니다.
 
-[!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 SQL Server가 VBS 보안 Enclave를 지원하는 증명 프로세스를 Windows Defender System Guard 런타임 증명이라고 하며 이 프로세스는 HGS(호스트 보호 서비스)를 증명 서비스로 사용합니다. 사용자 환경에서 HGS를 구성하고 HGS에서 SQL Server 인스턴스를 호스트하는 컴퓨터를 등록해야 합니다. 또한 HGS 증명을 사용하여 클라이언트 응용 프로그램 또는 도구(예: SQL Server Management Studio)를 구성해야 합니다.
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 SQL Server가 VBS 보안 Enclave를 지원하는 증명 프로세스를 Windows Defender System Guard 런타임 증명이라고 하며 이 프로세스는 HGS(호스트 보호 서비스)를 증명 서비스로 사용합니다. 사용자 환경에서 HGS를 구성하고 HGS에서 SQL Server 인스턴스를 호스트하는 컴퓨터를 등록해야 합니다. 또한 HGS 증명을 사용하여 클라이언트 응용 프로그램 또는 도구(예: SQL Server Management Studio)를 구성해야 합니다.
 
 ## <a name="secure-enclave-providers"></a>보안 Enclave 공급자
 
-보안 Enclave를 사용한 Always Encrypted를 사용하려면 응용 프로그램은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 응용 프로그램은 .NET Framework 4.7.2 및 .NET Framework Data Provider for SQL Server SQL Server를 사용해야 합니다. 또한 .NET 응용 프로그램은 사용 중인 Enclave 유형(예: VBS) 및 증명 서비스(예: HGS)에 국한되는 **보안 Enclave 공급자**로 구성해야 합니다. 지원되는 Enclave 공급자는 NuGet 패키지에 별도로 제공되므로 응용 프로그램에 통합해야 합니다. Enclave 공급자는 지정된 유형의 보안 Enclave와의 보안 채널을 설정하는 데 필요한 방식으로 증명 프로토콜에 적합하게 클라이언트 쪽 논리를 구현합니다.
+보안 Enclave를 사용한 Always Encrypted를 사용하려면 응용 프로그램은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 애플리케이션은 .NET Framework 4.7.2 및 .NET Framework Data Provider for SQL Server SQL Server를 사용해야 합니다. 또한 .NET 응용 프로그램은 사용 중인 Enclave 유형(예: VBS) 및 증명 서비스(예: HGS)에 국한되는 **보안 Enclave 공급자**로 구성해야 합니다. 지원되는 Enclave 공급자는 NuGet 패키지에 별도로 제공되므로 응용 프로그램에 통합해야 합니다. Enclave 공급자는 지정된 유형의 보안 Enclave와의 보안 채널을 설정하는 데 필요한 방식으로 증명 프로토콜에 적합하게 클라이언트 쪽 논리를 구현합니다.
 
 ## <a name="enclave-enabled-keys"></a>Enclave 사용 키
 

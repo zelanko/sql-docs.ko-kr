@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667183"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401126"
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51667183"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>키, 키 저장소 및 키 암호화 알고리즘  
  상시 암호화는 열 마스터 키 및 열 암호화 키의 두 가지 키 유형을 사용합니다.  
   
- 열 마스터 키(CMK)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하기 위해 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 응용 프로그램(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](/windows/desktop/SecCrypto/using-certificate-stores) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 응용 프로그램 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
+ CMK(열 마스터 키)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하기 위해 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 응용 프로그램(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](/windows/desktop/SecCrypto/using-certificate-stores) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 응용 프로그램 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
   
  열 암호화 키(CEK)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하기 위해 사용되는 키)입니다.  
   

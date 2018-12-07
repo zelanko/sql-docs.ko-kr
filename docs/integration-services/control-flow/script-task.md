@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522961"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -127,13 +127,13 @@ ms.locfileid: "51641967"
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
  **ReadOnlyVariables**  
- 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**…**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
   
  **ReadWriteVariables**  
- 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**…**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  

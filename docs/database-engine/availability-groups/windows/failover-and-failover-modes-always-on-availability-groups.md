@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048b5d627e33ac241f68c7d2017535ddb5e0bd16
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523404"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51605313"
   
  지정된 가용성 복제본에서 지원하는 장애 조치(Failover)의 형태는 *장애 조치(Failover) 모드* 속성으로 지정됩니다. 지정된 가용성 복제본의 경우 가능한 장애 조치(Failover) 모드는 다음과 같이 복제본의 [가용성 모드](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) 에 따라 다릅니다.  
   
--   **동기-커밋 복제본** - 두 가지 설정(자동 또는 수동)을 지원합니다. "자동" 설정은 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 지원합니다. 데이터 손실을 방지하기 위해 자동 장애 조치(Failover) 및 계획된 장애 조치(Failover)에서는 장애 조치(Failover) 대상이 동기화 상태가 정상(장애 조치(Failover) 대상의 모든 보조 데이터베이스가 해당 주 데이터베이스와 동기화된 상태)인 동기-커밋 보조 복제본이어야 합니다. 보조 복제본이 이러한 조건을 모두 충족하지 않을 때는 항상 강제 장애 조치(Failover)만 지원됩니다. 강제 장애 조치(Failover)는 또한 역할이 RESOLVING 상태인 복제본을 지원합니다.  
+-   **동기-커밋 복제본**은 두 개의 설정(자동 또는 수동)을 지원합니다. "자동" 설정은 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 지원합니다. 데이터 손실을 방지하기 위해 자동 장애 조치(Failover) 및 계획된 장애 조치(Failover)에서는 장애 조치(Failover) 대상이 동기화 상태가 정상(장애 조치(Failover) 대상의 모든 보조 데이터베이스가 해당 주 데이터베이스와 동기화된 상태)인 동기-커밋 보조 복제본이어야 합니다. 보조 복제본이 이러한 조건을 모두 충족하지 않을 때는 항상 강제 장애 조치(Failover)만 지원됩니다. 강제 장애 조치(Failover)는 또한 역할이 RESOLVING 상태인 복제본을 지원합니다.  
   
 -   **비동기-커밋 복제본** 은 수동 장애 조치(Failover) 모드만 지원합니다. 또한, 절대 동기화되지 않기 때문에 강제 장애 조치(Failover)만 지원합니다.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "51605313"
   
  세 개의 노드에서 가용성 그룹을 호스트하는 WSFC 클러스터를 예로 들어 보겠습니다. 노드 A는 주 복제본을 호스팅하며 노드 B와 노드 C는 보조 복제본을 호스팅합니다. 로컬 보조 복제본이 동기화하는 동안 노드 C는 WSFC 클러스터에서 연결이 끊어집니다.  그러나 노드 A와 노드 B는 정상 상태의 쿼럼을 유지하고 가용성 그룹을 온라인 상태로 유지합니다. 노드 A에서 주 복제본은 계속해서 업데이트를 허용하고 노드 B에서 보조 복제본은 계속해서 주 복제본과 동기화합니다. 노드 C에서 보조 복제본은 비동기화되고 주 복제본 뒤에서 점점 뒤쳐집니다. 그러나, 노드 C는 연결이 끊어졌기 때문에 복제본의 동기화 상태가 잘못 유지됩니다.  
   
- 쿼럼이 손실되고 노드 A에서 강제 적용되면 WSFC 클러스터에서 가용성 그룹의 동기화 상태는 보조 복제본이 노드 C에 UNSYNCHRONIZED로 표시되는 올바른 상태여야 합니다. 그러나 노드 C에서 쿼럼이 강제 적용되면 가용성 그룹의 동기화는 잘못됩니다. 노드 C 연결이 끊어지면 클러스터의 동기화 상태는 되돌아가서 노드 C의 보조 복제본이 SYNCHRONIZED로 *잘못* 표시됩니다. 계획된 수동 장애 조치(failover)는 데이터의 안전성을 보장하므로 쿼럼이 강제 적용된 후 가용성 그룹이 다시 온라인 상태가 되도록 허용되지 않습니다.  
+ 쿼럼이 손실된 다음, 노드 A에서 강제 적용되면 WSFC 클러스터에서 가용성 그룹의 동기화 상태는 UNSYNCHRONIZED로 표시되는 노드 C의 보조 복제본에서 올바른 상태여야 합니다. 그러나 노드 C에서 쿼럼이 강제 적용되면 가용성 그룹의 동기화는 잘못됩니다. 클러스터의 동기화 상태는 SYNCHRONIZED로 *잘못* 표시된 노드 C의 보조 복제본과 노드 C 연결이 끊어진 상태로 되돌아가야 합니다. 계획된 수동 장애 조치(failover)는 데이터의 안전성을 보장하므로 쿼럼이 강제 적용된 후 가용성 그룹이 다시 온라인 상태가 되도록 허용되지 않습니다.  
   
 ###  <a name="TrackPotentialDataLoss"></a> 잠재적인 데이터 손실 추적  
  WSFC 클러스터의 쿼럼이 정상 상태이면 데이터베이스에 대한 현재의 잠재적 데이터 손실을 예측할 수 있습니다. 지정된 보조 복제본의 경우 현재의 잠재적 데이터 손실은 로컬 보조 데이터베이스의 내용이 해당 주 데이터베이스의 내용보다 얼마나 오래되었는지에 따라 다릅니다. 지연 양은 시간에 따라 다르기 때문에 동기화되지 않은 보조 데이터베이스에 대한 잠재적인 데이터 손실을 주기적으로 추적하는 것이 좋습니다. 지연 간격 추적은 각각의 주 데이터베이스 및 보조 데이터베이스에 대한 마지막 커밋 LSN 및 마지막 커밋 시간을 다음과 같이 비교합니다.  

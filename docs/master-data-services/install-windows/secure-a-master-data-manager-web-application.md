@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701251"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641489"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램의 보안 설정
 
@@ -59,8 +59,11 @@ ms.locfileid: "51701251"
 10. 이제 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication에서 web.config 파일을 엽니다.  
   
 11. `<security mode="Message">` 라는 문자열을 찾아 `<security mode="Transport">`로 변경합니다.  
-  
-12. 파일을 저장하고 닫습니다. 오류가 발생하는 경우 UAC를 사용하기 때문일 수 있습니다. 자세한 내용은 [사용자 계정 컨트롤 해제](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx)를 참조하십시오. 이제 사용자가 HTTPS를 사용하여 사이트에 액세스할 수 있습니다.  
+
+12. Silverlight 클라이언트에서 발생할 수 있는 문제를 방지하기 위해 `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">`를 `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`로 변경합니다.
+
+13. 파일을 저장하고 닫습니다. 오류가 발생하는 경우 UAC를 사용하기 때문일 수 있습니다. 자세한 내용은 [사용자 계정 컨트롤 해제](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)를 참조하십시오. 이제 사용자가 HTTPS를 사용하여 사이트에 액세스할 수 있습니다.  
+
   
 ## <a name="see-also"></a>참고 항목  
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

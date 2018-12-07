@@ -24,12 +24,12 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525340"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

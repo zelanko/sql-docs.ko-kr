@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527127"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>2-2단원 - Foreach 루프 컨테이너 추가 및 구성
 이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  

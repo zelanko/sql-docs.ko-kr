@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505977"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  
@@ -38,15 +38,15 @@ ms.locfileid: "47754361"
   
     -   항목을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **식** 입력란을 클릭한 다음 줄임표(...)를 클릭합니다.  
+3.  **식** 상자를 클릭한 다음, 줄임표(...)를 클릭합니다.  
   
 4.  **속성 식 편집기**에서 **속성** 목록의 속성을 선택하고 다음 중 하나를 수행하십시오.  
   
     -   **식** 열에서 속성 식을 직접 입력하거나 변경한 다음 **확인**을 클릭합니다.  
   
-         —또는—  
+         -또는-  
   
-    -   속성의 식 행에서 줄임표(…)를 클릭하여 **식 작성기**를 엽니다.  
+    -   속성의 식 행에서 줄임표(...)를 클릭하여 **식 작성기**를 엽니다.  
   
 5.  (옵션) **식 작성기**에서 다음 태스크 중 하나를 수행합니다.  
   

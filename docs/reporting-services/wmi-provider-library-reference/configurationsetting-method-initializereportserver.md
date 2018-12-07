@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dca016cd56035a9973dd649744f7bca08e2e58a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4084310c0c01b7a06a752783db74615a92aa83ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626231"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405549"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 메서드 - InitializeReportServer
   지정된 보고서 서비스 인스턴스를 초기화합니다.  
@@ -57,7 +57,7 @@ public void InitializeReportServer(string InstallationID,
   
  *InitializeReportServer* 메서드는 암호화 키를 해독할 수 있도록 이미 보안 정보에 대한 액세스 권한이 있는 보고서 서버에 대해 호출되어야 합니다. 그런 다음 암호화된 결과 암호화 키가 보고서 서버 데이터베이스에 저장됩니다.  
   
- InitializeReportServer 메서드를 호출할 때 보고서 서버의 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 속성이 **true** 로 설정되어 있으면 메서드에서 암호화 키를 암호화하지 않고 성공 메시지를 반환합니다.  
+ InitializeReportServer 메서드를 호출할 때 보고서 서버의 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 속성이 **true**로 설정되어 있으면 메서드에서 암호화 키를 암호화하지 않고 성공 메시지를 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

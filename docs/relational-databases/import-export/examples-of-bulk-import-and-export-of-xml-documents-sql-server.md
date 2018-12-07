@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530552"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ GO
   
  이 문제를 해결하려면 `OPENROWSET(BULK...)` 함수를 사용한 다음, 명령의 `CONVERT` 절에 `SELECT` 옵션을 지정하여 DTD가 포함된 데이터 파일에서 XML 데이터를 가져올 수 있습니다. 명령의 기본 구문은 다음과 같습니다.  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>예제 데이터 파일  
  이 대량 가져오기 예를 테스트하려면 먼저 다음 예제 인스턴스를 포함하는 파일(`C:\temp\Dtdfile.xml`)을 만들어야 합니다.  

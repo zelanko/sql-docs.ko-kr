@@ -14,12 +14,12 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6664e93697cca238dff535df1b3c2518ba79b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040377ce7f0879b11ec19f0abd21dd984ef363d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596191"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399802"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47596191"
 소프트웨어 개발자는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 데이터 응용 프로그램을 고객에게 배포하는 방법을 자주 질문하지만 고객이 직접 응용 프로그램을 분석하고 분해할 수 없도록 합니다. 여기에서 중요한 점은 지적 재산권 보호는 법적 문제이며 이러한 보호는 사용권 계약을 기반으로 한다는 점입니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]가 다른 사람이 관리하는 컴퓨터에 설치되어 있으면 기본적으로 일부 측면을 제어할 수 없습니다. 
 
 ## <a name="nature-of-the-problem"></a>문제의 특성
-컴퓨터의 소유자/관리자는 해당 컴퓨터에 설치되어 있는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 인스턴스에 항상 액세스할 수 있습니다. 응용 프로그램을 고객의 컴퓨터에 배포하는 경우 관리자이므로 **sysadmin** 고정 서버 역할의 멤버로 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 여기에는 사용 권한 부여, 백업 관리(다른 컴퓨터로 백업 복원 포함), 데이터 파일 암호 해독 및 이동 등의 기능이 포함됩니다. 자세한 내용은 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요. 
+컴퓨터의 소유자/관리자는 해당 컴퓨터에 설치되어 있는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 인스턴스에 항상 액세스할 수 있습니다. 애플리케이션을 고객의 컴퓨터에 배포하는 경우 관리자이므로 **sysadmin** 고정 서버 역할의 멤버로 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 여기에는 사용 권한 부여, 백업 관리(다른 컴퓨터로 백업 복원 포함), 데이터 파일 암호 해독 및 이동 등의 기능이 포함됩니다. 자세한 내용은 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요. 
 
 저장 프로시저 및 데이터는 암호화할 수 있지만 데이터 구조는 숨길 수 없으며 서버 프로세스에 디버거를 연결할 수 있는 사용자는 런타임에 메모리에서 암호 해독된 프로시저 및 데이터를 검색할 수 있습니다.
 

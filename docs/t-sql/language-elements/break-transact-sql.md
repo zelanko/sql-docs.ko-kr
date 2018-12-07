@@ -1,7 +1,7 @@
 ---
 title: BREAK(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,37 +22,38 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c3d87d20703477b0beaab04b5ab6cd77036c64f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 162866b5200a3c9a24f313e61a9e2dcc4efa689c
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759841"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159121"
 ---
 # <a name="break-transact-sql"></a>BREAK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  WHILE 문의 가장 안쪽의 루프 또는 WHILE 루프 내부의 IF ELSE 문을 종료합니다. 루프의 끝을 표시하는 END 키워드 다음에 표시되는 모든 문은 실행됩니다. BREAK는 IF 테스트에 의해 시작되는 경우가 많습니다.  
-  
-## <a name="examples"></a>예  
-  
-```  
--- Uses AdventureWorks  
-  
-WHILE ((SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300)  
-BEGIN  
-    UPDATE DimProduct  
-        SET ListPrice = ListPrice * 2;  
-     IF ((SELECT MAX(ListPrice) FROM dbo.DimProduct) > $500)  
-         BREAK;  
-END  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [흐름 제어 언어 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
- [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
- [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
-  
-  
+BREAK는 현재 WHILE 루프를 종료합니다. 현재 WHILE 루프가 다른 루프 내에서 중첩되는 경우 BREAK는 현재 루프만을 종료하고, 외부 루프의 다음 명령문에 제어가 제공됩니다.
 
+BREAK는 일반적으로 IF 문 내에 있습니다.
+
+## <a name="examples"></a>예
+
+```sql
+WHILE (1=1)
+BEGIN
+   IF EXISTS (SELECT * FROM ##MyTempTable WHERE EventCode = 'Done')
+   BEGIN
+      BREAK;  -- 'Done' row has finally been inserted and detected, so end this loop.
+   END
+
+   PRINT N'The other process is not yet done.';  -- Re-confirm the non-done status to the console.
+   WAITFOR DELAY '00:01:30';  -- Sleep for 90 seconds.
+END
+```
+
+## <a name="see-also"></a>참고 항목
+
+- [흐름 제어 언어&#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)
+- [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)
+- [IF...ELSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)
 

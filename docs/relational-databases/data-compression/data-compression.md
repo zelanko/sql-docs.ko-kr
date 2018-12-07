@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89da8d8beeca843662c6752cbc99d934b03760ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533550"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>메타데이터  
 다음 시스템 뷰에는 클러스터형 인덱스의 데이터 압축 정보가 포함되어 있습니다.  
 -   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type**과 **type_desc** 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE가 포함됩니다.  
--   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) –**data_compression**과 **data_compression_desc** 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함됩니다.  
+-   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression**과 **data_compression_desc** 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함됩니다.  
   
 [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   

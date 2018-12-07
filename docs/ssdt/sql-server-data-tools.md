@@ -13,17 +13,17 @@ ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414670"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SSDT(SQL Server Data Tools)에서는 Visual Studio 내의 모든 데이터베이스 개발 단계를 망라하는 선언적 유비쿼터스 모델을 도입함으로써 데이터베이스 개발 과정에 일대 변화를 주었습니다. SSDT Transact\-SQL 디자인 기능을 사용하여 데이터베이스를 빌드, 디버깅, 유지 관리 및 리팩터링할 수 있습니다. 데이터베이스 프로젝트를 사용하여 작업하거나 내부 또는 외부의 연결된 데이터베이스 인스턴스를 직접 사용할 수 있습니다.  
   
-개발자는 데이터베이스 개발에 익숙한 Visual Studio 도구를 사용할 수 있습니다. Transact\-SQL 편집기에서는 C# 및 Visual Basic에 사용할 수 있는 기능과 유사한 코드 탐색, IntelliSense 및 언어 지원과 같은 도구, 플랫폼별 유효성 검사, 디버깅 및 선언적 편집 기능을 제공합니다. 또한 SSDT에서는 데이터베이스 프로젝트나 연결된 데이터베이스 인스턴스에서 테이블을 만들고 편집하는 데 사용할 수 있는 시각적 테이블 디자이너를 제공합니다. 팀 기반 환경에서 데이터베이스 프로젝트 작업을 수행하는 동안 모든 파일에 대해 버전 제어를 사용할 수 있습니다. 프로젝트를 게시할 때 SQL 데이터베이스 및 SQL 서버를 포함하여 지원되는 모든 SQL 플랫폼에 게시할 수 있습니다. SSDT 플랫폼 유효성 검사 기능은 스크립트가 지정한 대상에서 작동하도록 해 줍니다.  
+개발자는 데이터베이스 개발에 익숙한 Visual Studio 도구를 사용할 수 있습니다. Transact\-SQL 편집기에서는 C# 및 Visual Basic에 사용할 수 있는 기능과 유사한 코드 탐색, IntelliSense 및 언어 지원과 같은 도구, 플랫폼별 유효성 검사, 디버깅 및 선언적 편집 기능을 제공합니다. 또한 SSDT에서는 데이터베이스 프로젝트나 연결된 데이터베이스 인스턴스에서 테이블을 만들고 편집하는 데 사용할 수 있는 시각적 테이블 디자이너를 제공합니다. 팀 기반 환경에서 데이터베이스 프로젝트 작업을 수행하는 동안 모든 파일에 대해 버전 제어를 사용할 수 있습니다. 프로젝트를 게시할 때 SQL Database 및 SQL 서버를 포함하여 지원되는 모든 SQL 플랫폼에 게시할 수 있습니다. SSDT 플랫폼 유효성 검사 기능은 스크립트가 지정한 대상에서 작동하도록 해 줍니다.  
   
 Visual Studio의 SQL Server 개체 탐색기에서는 SQL Server Management Studio와 유사한 데이터베이스 개체의 뷰를 제공합니다. SQL Server 개체 탐색기를 사용하여 소규모 데이터베이스 관리 및 디자인 작업을 수행할 수 있습니다. 테이블, 저장 프로시저 및 함수를 손쉽게 만들고, 편집하고, 이름을 바꾸고 삭제할 수 있을 뿐 아니라, SQL Server 개체 탐색기에서 바로 상황에 맞는 메뉴를 사용하여 테이블 데이터를 편집하거나, 스키마를 비교하거나, 쿼리를 실행할 수도 있습니다.  
   

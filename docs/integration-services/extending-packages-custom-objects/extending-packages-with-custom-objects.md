@@ -11,17 +11,17 @@ ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4ae926b679da6e984b42037b83bf10d7f6d541
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f901db8451a202b944fc466401ce2ef2c9b6c7d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657871"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529496"
 ---
 # <a name="extending-packages-with-custom-objects"></a>사용자 지정 개체를 사용한 패키지 확장
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 제공된 구성 요소가 개발자의 요구 사항을 충족시키지 못할 경우 개발자 고유의 확장을 코딩하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기능을 확장할 수 있습니다. 두 가지 방법으로 패키지를 확장할 수 있습니다. 스크립트 태스크 및 스크립트 구성 요소에서 제공하는 강력한 래퍼 내에 코드를 작성할 수도 있고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 제공하는 기본 클래스의 파생 클래스를 만들어 사용자 지정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 확장을 처음부터 새로 만들 수도 있습니다.  
   
- 이 섹션에서는 이 둘 중 보다 고급 방법인 사용자 지정 개체를 사용한 패키지 확장 방법에 대해 설명합니다.  
+ 이 섹션에서는 이 둘 중 보다 고급 방법인 사용자 지정 개체를 사용한 패키지 확장 방법에 대해 살펴봅니다.  
   
  사용자 지정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 솔루션에 스크립트 태스크 및 스크립트 구성 요소가 제공하는 것 이상의 유연성이 필요한 경우 또는 여러 패키지에서 다시 사용할 수 있는 구성 요소가 필요한 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 관리 코드로 완벽하게 사용자 지정 작업, 데이터 흐름 구성 요소 및 기타 패키지 개체를 작성할 수 있습니다.  
   

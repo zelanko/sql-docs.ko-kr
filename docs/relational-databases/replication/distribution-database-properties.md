@@ -15,12 +15,12 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97e6fea955e2ee82250f094fcf9f2bf76b15f452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d833e97138dd184f35378ad39f96a9f71675d67
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701161"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535827"
 ---
 # <a name="distribution-database-properties"></a>배포 데이터베이스 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47701161"
  모든 복제 유형에서 기록 메타데이터가 저장되는 시간입니다.  
   
  **큐 판독기 에이전트 보안**  
- 큐 판독기 에이전트는 지연 업데이트 구독이 있는 트랜잭션 복제에서 사용합니다. 새 게시 마법사의 **게시 유형** 페이지에서 **업데이트할 수 있는 구독이 있는 트랜잭션 게시** 를 선택하면 큐 판독기 에이전트가 자동으로 생성됩니다. **보안 설정...** 을 클릭하여 에이전트를 실행하고 배포자에 연결하는 데 사용되는 계정을 변경할 수 있습니다.  
+ 큐 판독기 에이전트는 지연 업데이트 구독이 있는 트랜잭션 복제에서 사용합니다. 새 게시 마법사의 **게시 유형** 페이지에서 **업데이트할 수 있는 구독이 있는 트랜잭션 게시** 를 선택하면 큐 판독기 에이전트가 자동으로 생성됩니다. **보안 설정...** 을 클릭하여 에이전트를 실행하고 배포자에 연결되는 계정을 변경합니다.  
   
  이 페이지에서 **큐 판독기 에이전트 만들기** 를 선택하여 큐 판독기 에이전트를 만들 수도 있습니다. 에이전트가 이미 생성된 경우에는 이 옵션을 사용할 수 없습니다.  
   

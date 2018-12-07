@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512147"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47785901"
 XML 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
-인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
 **테이블 디자이너 범주**  
 확장하면 현재 XML 인덱스의 속성에 대한 정보가 표시됩니다.  

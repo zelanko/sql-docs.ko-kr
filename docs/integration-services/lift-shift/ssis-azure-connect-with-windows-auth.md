@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119980"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411880"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결
 Windows 인증을 사용하여 온-프레미스/Azure 가상 머신과 Azure Files에서 Azure SSIS IR(Integration Runtime)과 동일한 가상 네트워크에 있는 데이터 원본과 파일 공유에 연결할 수 있습니다. Azure-SSIS IR에서 실행되는 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결하는 세 가지 방법은 다음과 같습니다.
@@ -24,7 +24,7 @@ Windows 인증을 사용하여 온-프레미스/Azure 가상 머신과 Azure Fil
 | 연결 방법 | 유효 범위 | 설정 단계 | 패키지의 액세스 방법 | 자격 증명 집합 및 연결된 리소스 수 | 연결된 리소스 유형 | 
 |---|---|---|---|---|---|
 | `cmdkey` 명령을 통해 자격 증명 유지 | Azure-SSIS IR별 | Azure-SSIS IR을 프로비전/재구성할 때 사용자 지정 설정 스크립트(`main.cmd`)에서 `cmdkey` 명령을 실행합니다(예: `cmdkey /add:fileshareserver /user:xxx /pass:yyy`).<br/><br/> 자세한 내용은 [Azure-SSIS IR 설정 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)을 참조하세요. | UNC 경로(예: `\\fileshareserver\folder`)를 통해 패키지에서 직접 리소스에 액세스 | 다양한 연결된 리소스에 여러 자격 증명 집합 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) 참조 <br/><br/> - Windows 인증을 사용하는 SQL Server<br/><br/> - Windows 인증을 사용하는 기타 리소스 |
-| 카탈로그 수준 실행 컨텍스트 설정 | Azure-SSIS IR별 | SSISDB `catalog.set_execution_credential` 저장 프로시저를 실행하여 “실행 방법” 컨텍스트를 설정합니다.<br/><br/> 자세한 내용은 아래에서 이 문서의 나머지 부분을 참조하세요. | 패키지에서 직접 리소스에 액세스 | 모든 연결된 리소스에 하나의 자격 증명 집합만 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) 참조 <br/><br/> - Windows 인증을 사용하는 SQL Server<br/><br/> - Windows 인증을 사용하는 기타 리소스 | 
+| 카탈로그 수준 실행 컨텍스트 설정 | Azure-SSIS IR별 | SSISDB `catalog.set_execution_credential` 저장 프로시저를 실행하여 "실행 방법" 컨텍스트를 설정합니다.<br/><br/> 자세한 내용은 아래에서 이 문서의 나머지 부분을 참조하세요. | 패키지에서 직접 리소스에 액세스 | 모든 연결된 리소스에 하나의 자격 증명 집합만 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) 참조 <br/><br/> - Windows 인증을 사용하는 SQL Server<br/><br/> - Windows 인증을 사용하는 기타 리소스 | 
 | 패키지 실행 시간에 드라이브 탑재(비지속성) | 패키지별 | 패키지의 제어 흐름 시작 부분에 추가되는 프로세스 실행 태스크로 `net use` 명령을 실행합니다(예: `net use D: \\fileshareserver\sharename`). | 매핑된 드라이브를 통해 파일 공유에 액세스 | 다양한 파일 공유에 여러 드라이브 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) 참조 |
 |||||||
 

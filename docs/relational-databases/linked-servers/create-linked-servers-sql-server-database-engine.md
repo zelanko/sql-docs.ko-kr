@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512928"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391247"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51512928"
   
 3.  **서버 유형** 영역에서 연결된 서버가 **SQL Server**의 다른 인스턴스임을 나타내도록 **SQL Server**를 선택합니다.  
   
-4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결** 을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
+4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결**을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
   
      **로컬 로그인**  
      연결된 서버에 연결할 수 있는 로컬 로그인을 지정합니다. 로컬 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이나 Windows 인증 로그인 중 하나일 수 있습니다. 이 목록을 사용하여 특정 로그인에 대한 연결을 제한하거나 일부 로그인이 다른 로그인으로 연결하도록 허용할 수 있습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "51512928"
      **다음 보안 컨텍스트를 사용하여 연결**  
      목록에 정의되어 있지 않은 로그인의 경우 **원격 로그인** 및 **암호** 상자에서 지정한 로그인과 암호를 사용하여 연결하도록 지정합니다. 원격 로그인은 원격 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인이어야 합니다.  
   
-5.  필요에 따라 서버 옵션을 보거나 지정하려면 **서버 옵션**  페이지를 클릭합니다.  
+5.  필요에 따라 서버 옵션을 보거나 지정하려면 **서버 옵션** 페이지를 클릭합니다.  
   
      **데이터 정렬 호환**  
      연결된 서버에 대한 분산 쿼리 실행에 영향을 줍니다. 이 옵션을 true로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 연결된 서버의 모든 문자에 대한 문자 집합 및 데이터 정렬 시퀀스(또는 정렬 순서)가 로컬 서버와 호환된다고 가정합니다. 이렇게 함으로써 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문자 열에 관한 비교를 공급자에 전달할 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 항상 문자 열에 관한 비교를 로컬로 평가합니다.  

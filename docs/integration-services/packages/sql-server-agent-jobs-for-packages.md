@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642190"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400706"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "51642190"
     |**로깅**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 응용 프로그램 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Logger**옵션에 해당합니다.|  
     |**값 설정**|패키지 속성 설정을 재정의합니다. **속성** 상자에서 **속성 경로** 및 **값** 열에 값을 입력합니다. 속성 하나에 대한 값을 입력하면, **속성** 상자에 빈 행이 나타나고 다른 속성에 대한 값을 입력할 수 있게 됩니다.<br /><br /> 속성 상자에서 속성을 제거하려면 행을 클릭한 다음 **제거**를 클릭합니다.<br /><br /> 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.|  
     |**확인**|**서명된 패키지만 실행**<br /> 패키지 서명 확인 여부를 나타냅니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 이 옵션은 **dtexec** 의 **/VerifySigned**옵션에 해당합니다.<br /><br /> **패키지 빌드 확인**<br /> 패키지의 빌드 번호가 이 옵션 옆에 있는 **빌드** 상자에 입력된 빌드 번호와 비교하여 검증되었는지를 나타냅니다. 일치하지 않을 경우 패키지가 실행되지 않습니다. 이 옵션은 **dtexec** 의 **/VerifyBuild**옵션에 해당합니다.<br /><br /> **패키지 ID 확인**<br /> 패키지의 GUID가 이 옵션 옆에 있는 **패키지 ID** 상자에 입력된 package ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyPackageID**옵션에 해당합니다.<br /><br /> **버전 ID 확인**<br /> 패키지의 버전 GUID가 이 옵션 옆에 있는 **버전 ID** 상자에 입력된 버전 ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyVersionID**옵션에 해당합니다.|  
-    |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> 작업 단계에 변경한 내용을 저장하기 위해 **확인** 을 클릭하기 전에 **원래 옵션 복원** 을 클릭하면 **명령줄**상자에 추가로 입력한 옵션을 모두 삭제할 수 있습니다.<br /><br /> **\*\* 팁 \*\*** 명령 프롬프트 창에 명령줄을 복사하고 `dtexec`를 추가하여 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 생성할 수 있습니다.|  
+    |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> 작업 단계에 변경한 내용을 저장하기 위해 **확인**을 클릭하기 전에 **원래 옵션 복원**을 클릭하면 **명령줄** 상자에 추가로 입력한 옵션을 모두 삭제할 수 있습니다.<br /><br /> **\*\* 팁 \*\*** 명령 프롬프트 창에 명령줄을 복사하고 `dtexec`를 추가하여 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 생성할 수 있습니다.|  
   
 9. **확인** 을 클릭하여 설정을 저장하고 **새 작업 단계** 대화 상자를 닫습니다.  
   

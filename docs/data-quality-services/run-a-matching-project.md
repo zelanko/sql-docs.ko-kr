@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702931"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617953"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 
@@ -33,7 +32,7 @@ ms.locfileid: "47702931"
   
  하나 이상의 일치 규칙을 사용하여 일치 정책을 만들고 예제 데이터에서 해당 정책을 실행하여 일치 프로세스를 준비해야 합니다. 일치 프로젝트 프로세스는 일치 정책 프로세스와 별개이며, 기술 자료는 일치 프로젝트에서 얻은 일치 정보로 채워지지 않습니다. 일치 정책을 만드는 방법은 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -128,7 +127,7 @@ ms.locfileid: "47702931"
   
     -   클러스터 및 각 클러스터의 일치하는 레코드 목록(규칙 이름 및 점수 포함). 피벗 레코드는 "피벗"으로 표시됩니다. 클러스터가 내보내기 목록에 맨 먼저 나타납니다.  
   
-    -   일치하지 않는 레코드(점수 및 규칙 이름 열에 "NULL"이 표시됨). 이러한 레코드는 내보내기 목록에서 클러스터 뒤에 추가됩니다.  
+    -   일치하지 않는 레코드 목록(점수 및 규칙 이름 열에 "NULL"이 표시됨). 이러한 레코드는 내보내기 목록에서 클러스터 뒤에 추가됩니다.  
   
      Survivorship 결과에 대한 내보내기 항목은 다음과 같습니다.  
   

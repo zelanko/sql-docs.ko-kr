@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764081"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711244"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
   다음 팁을 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 디자인하는 데 도움이 됩니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "47764081"
  이러한 동작의 조합, 보고서 항목의 너비 및 높이 속성, 보고서 본문의 크기, 페이지 높이 및 페이지 너비 정의, 부모 보고서의 여백 설정, 페이징에 대한 렌더러 관련 지원 모두가 결합하여 렌더링된 페이지에 잘 맞는 보고서 항목을 결정합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 자습서 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)  
   

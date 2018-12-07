@@ -12,6 +12,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
+- TVF
+- MSTVF
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,17 +33,20 @@ helpviewer_keywords:
 - nesting user-defined functions
 - deterministic functions
 - scalar-valued functions
+- scalar UDF
+- MSTVF
+- TVF
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704071"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818519"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,10 +73,10 @@ ms.locfileid: "51704071"
 -   인라인 함수를 보안 정책의 필터 조건자로 사용  
   
 > [!NOTE]  
->  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure SQL Database에는 CLR 통합이 적용되지 않습니다.
+> 이 항목에서는 .NET Framework CLR을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합하는 방법에 대해 설명합니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 CLR 통합이 적용되지 않습니다.
 
 > [!NOTE]  
->  Azure SQL Data Warehouse의 경우 [CREATE FUNCTION(SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) 문서를 참조하세요.
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE FUNCTION(SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md)을 참조하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -268,12 +273,12 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>인수
 *OR ALTER*  
- **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  이미 있는 경우에만 함수를 조건부로 변경합니다. 
  
 > [!NOTE]  
->  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1부터 CLR에 대해 선택적 [OR ALTER] 구문을 사용할 수 있습니다.   
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1부터 CLR에 대해 선택적 [OR ALTER] 구문을 사용할 수 있습니다.   
  
  *schema_name*  
  사용자 정의 함수가 속한 스키마의 이름입니다.  
@@ -282,7 +287,7 @@ RETURNS return_data_type
  사용자 정의 함수의 이름입니다. 함수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 하며 데이터베이스에서 각 스키마별로 고유해야 합니다.  
   
 > [!NOTE]  
->  매개 변수를 지정하지 않은 경우에도 함수 이름 뒤에 괄호를 사용해야 합니다.  
+> 매개 변수를 지정하지 않은 경우에도 함수 이름 뒤에 괄호를 사용해야 합니다.  
   
  @*parameter_name*  
  사용자 정의 함수의 매개 변수입니다. 하나 이상의 매개 변수를 선언할 수 있습니다.  
@@ -292,24 +297,22 @@ RETURNS return_data_type
  at 기호(@)를 첫 번째 문자로 사용하여 매개 변수 이름을 지정합니다. 매개 변수 이름은 식별자에 대한 규칙을 따라야 합니다. 매개 변수는 함수에서 로컬로 사용되므로 다른 함수에서 동일한 매개 변수 이름을 사용할 수 있습니다. 매개 변수는 상수 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다.  
   
 > [!NOTE]  
->  저장 프로시저나 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
+> 저장 프로시저나 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 `INSERT` 또는 `UPDATE` 문은 성공합니다.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  매개 변수 데이터 형식이며 매개 변수 데이터 형식이 속한 스키마가 될 수도 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식 및 사용자 정의 테이블 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image**, 사용자 정의 테이블 형식 및**timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식, **cursor** 및 **table**을 매개 변수 데이터 형식으로 지정할 수 없습니다.  
   
- *type_schema_name*을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 *scalar_parameter_data_type*을 찾습니다.  
+*type_schema_name*을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 *scalar_parameter_data_type*을 찾습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 이름이 포함된 스키마  
-  
 -   현재 데이터베이스에 있는 현재 사용자의 기본 스키마  
-  
 -   현재 데이터베이스의 **dbo** 스키마  
   
- [ =*default* ]  
- 매개 변수의 기본값입니다. *기본* 값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 함수를 실행할 수 있습니다.  
+[ =*default* ]  
+매개 변수의 기본값입니다. *기본* 값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 함수를 실행할 수 있습니다.  
   
 > [!NOTE]  
->  **varchar(max)** 및 **varbinary(max)** 데이터 형식을 제외한 기본 매개 변수 값을 CLR 함수에 지정할 수 있습니다.  
+> **varchar(max)** 및 **varbinary(max)** 데이터 형식을 제외한 기본 매개 변수 값을 CLR 함수에 지정할 수 있습니다.  
   
  함수의 매개 변수에 기본값을 지정한 경우 기본값을 가져오는 함수를 호출할 때 DEFAULT 키워드를 지정해야 합니다. 이 동작은 매개 변수를 생략할 경우 자동으로 기본값이 사용되는 저장 프로시저에서 기본값이 있는 매개 변수를 사용하는 것과는 다릅니다. 그러나 DEFAULT 키워드는 EXECUTE 문을 사용하여 스칼라 함수를 호출할 때 필요하지 않습니다.  
   
@@ -320,31 +323,29 @@ RETURNS return_data_type
  스칼라 사용자 정의 함수의 반환 값입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 경우 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. CLR 함수의 경우 **text**, **ntext**, **image** 및 **timestamp** 데이터 형식을 제외하고 CLR 사용자 정의 형식을 비롯한 모든 데이터 형식이 허용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수에는 비스칼라 형식, **cursor** 및 **table**을 반환 데이터 형식으로 지정할 수 없습니다.  
   
  *function_body*  
- 테이블을 수정하는 경우처럼 함께 사용해도 부작용이 나타나지 않으며 함수의 값을 정의하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. *function_body*는 스칼라 함수와 다중 문 테이블 반환 함수에서만 사용됩니다.  
+ 테이블을 수정하는 경우처럼 함께 사용해도 부작용이 나타나지 않으며 함수의 값을 정의하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. *function_body*는 스칼라 함수와 다중 명령문 테이블 반환 함수(MSTVF)에서만 사용됩니다.  
   
  스칼라 함수에서 *function_body*는 함께 계산되어 스칼라 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
- 다중 문 테이블 반환 함수에서 *function_body*는 TABLE 반환 변수를 채우는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
+ MSTVF에서 *function_body*는 TABLE 반환 변수를 채우는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
  *scalar_expression*  
  스칼라 함수가 반환하는 스칼라 값을 지정합니다.  
   
  TABLE  
- 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 @*local_variables*만 테이블 반환 함수에 전달할 수 있습니다.  
+ TVF(테이블 반환 함수)의 반환 값이 테이블임을 지정합니다. 상수 및 @*local_variables*만 TVF에 전달할 수 있습니다.  
   
- 인라인 테이블 반환 함수에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
+ 인라인 TVF에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
   
- 다중 문 테이블 반환 함수에서 @*return_variable*은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. @*return_variable*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
-  
-> [!WARNING]  
->  **FROM** 절의 다중 문 테이블 반환 함수에 조인할 수 있지만, 그러면 성능이 떨어질 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다중 문 함수에 포함할 수 있는 일부 문에 대해 결과적으로 만족스럽지 못한 쿼리 계획이 생성되는 최적화된 일부 기술은 사용할 수 없습니다. 최상의 성능을 얻으려면 가능한 경우 기본 테이블 간에 함수 대신 조인을 사용합니다.  
+ <a name="mstvf"></a> MSTVF에서 @*return_variable*은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. @*return_variable*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
   
  *select_stmt*  
- 인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
+ 인라인 TVF(테이블 반환 함수)의 반환 값을 정의하는 단일 SELECT 문입니다.  
   
  ORDER (\<order_clause>) 테이블 반환 함수에서 결과가 반환되는 순서를 지정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 “[CLR 테이블 반환 함수에서 정렬 순서 사용](#using-sort-order-in-clr-table-valued-functions)” 섹션을 참조하세요.  
   
- EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  만든 함수 이름에서 참조할 어셈블리 및 메서드를 지정합니다.  
   
@@ -360,18 +361,19 @@ RETURNS return_data_type
     `SELECT * FROM sys.assembly_modules;`을 참조하세요.  
     메서드는 정적이어야 합니다.  
   
- 일반적인 예에서 모든 형식이 MyFood 네임스페이스에 있는 MyFood.DLL의 경우 `EXTERNAL NAME` 값은 다음과 같을 수 있습니다.   
+일반적인 예에서 모든 형식이 MyFood 네임스페이스에 있는 MyFood.DLL의 경우 `EXTERNAL NAME` 값은 다음과 같을 수 있습니다.   
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
+> 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
   
 > [!NOTE]  
->  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
+> 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]([일부 지역에서 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
   
@@ -395,7 +397,7 @@ RETURNS return_data_type
  함수에 다음 옵션 중 하나 이상이 포함되도록 지정합니다.  
   
  ENCRYPTION  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 CREATE FUNCTION 문의 원본 텍스트가 알아보기 어려운 형식으로 변환됨을 나타냅니다. 변조된 출력은 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 그러나 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 권한을 가진 사용자는 이 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 원래 프로시저를 검색할 수 있습니다. 시스템 메타데이터에 액세스하는 방법에 대한 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -408,9 +410,9 @@ RETURNS return_data_type
   
 -   함수가 삭제된 경우  
   
--   SCHEMABINDING 옵션을 지정하지 않은 상태에서 ALTER 문을 사용하여 함수를 수정한 경우  
+-   `SCHEMABINDING` 옵션을 지정하지 않은 상태에서 `ALTER` 문을 사용하여 함수를 수정한 경우  
   
- 다음 조건을 만족하는 경우에만 함수가 스키마에 바인딩될 수 있습니다.  
+다음 조건을 만족하는 경우에만 함수가 스키마에 바인딩될 수 있습니다.  
   
 -   함수가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수입니다.  
   
@@ -420,10 +422,10 @@ RETURNS return_data_type
   
 -   함수와 함수가 참조하는 개체가 동일한 데이터베이스에 속해야 합니다.  
   
--   CREATE FUNCTION 문을 실행한 사용자는 해당 함수가 참조하는 데이터베이스 개체에 대한 REFERENCES 권한이 있어야 합니다.  
+-   `CREATE FUNCTION` 문을 실행한 사용자는 해당 함수가 참조하는 데이터베이스 개체에 대한 `REFERENCES` 권한이 있어야 합니다.  
   
 RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
-스칼라 반환 함수의 **OnNULLCall** 특성을 지정합니다. 이 특성을 지정하지 않으면 기본적으로 CALLED ON NULL INPUT이 적용됩니다. 즉, 인수로 NULL이 전달되는 경우에도 함수 본문이 실행됩니다.  
+스칼라 함수의 **OnNULLCall** 특성을 지정합니다. 이 특성을 지정하지 않으면 기본적으로 CALLED ON NULL INPUT이 적용됩니다. 즉, 인수로 NULL이 전달되는 경우에도 함수 본문이 실행됩니다.  
   
 CLR 함수에 RETURNS NULL ON NULL INPUT을 지정할 경우 받은 인수 중 하나라도 NULL이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 실제로 함수의 본문을 호출하지 않고 NULL을 반환할 수 있습니다. \<method_specifier>에 지정된 CLR 함수의 메서드가 RETURNS NULL ON NULL INPUT을 지정하는 사용자 지정 특성을 이미 가지고 있지만 CREATE FUNCTION 문에 CALLED ON NULL INPUT이 지정된 경우 CREATE FUNCTION 문이 우선 적용됩니다. CLR 테이블 반환 함수에는 **OnNULLCall** 특성을 지정할 수 없습니다. 
   
@@ -431,9 +433,9 @@ EXECUTE AS 절
 사용자 정의 함수가 실행되는 보안 컨텍스트를 지정합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 함수가 참조하는 데이터베이스 개체에 대한 사용 권한을 확인하는 데 사용할 사용자 계정을 제어할 수 있습니다.  
   
 > [!NOTE]  
->  EXECUTE AS는 인라인 테이블 반환 함수에 지정할 수 없습니다.
+> `EXECUTE AS`는 인라인 테이블 반환 함수에 지정할 수 없습니다.
   
- 자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
+자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
 
 INLINE = { ON | OFF }  
 이 스칼라 UDF를 인라인해야 하는지 여부를 지정합니다. 이 절은 스칼라 사용자 정의 함수에만 적용됩니다. `INLINE` 절은 필수 항목이 아닙니다. `INLINE` 절을 지정하지 않으면 UDF가 인라인 가능한지 여부에 따라 ON/OFF로 자동으로 설정됩니다. `INLINE=ON`이 지정되었지만 UDF를 인라인할 수 없는 것으로 확인되면 오류가 throw됩니다. 자세한 내용은 [스칼라 UDF 인라인 처리](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)를 참조하세요.
@@ -456,7 +458,8 @@ INLINE = { ON | OFF }
   
  COLLATE 절은 **char**, **varchar**, **nchar** 및 **nvarchar** 데이터 형식의 열에 데이터 정렬을 변경하는 데만 사용할 수 있습니다.  
   
- CLR 테이블 반환 함수에는 COLLATE를 지정할 수 없습니다.  
+ > [!NOTE]
+ > `COLLATE`는 CLR 테이블 반환 함수에 지정할 수 없습니다.  
   
  ROWGUIDCOL  
  새 열이 행 GUID(Globally Unique Identifier) 열임을 나타냅니다. 테이블당 한 개의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 지정할 수 있으며 ROWGUIDCOL 속성은 **uniqueidentifier** 열에만 할당할 수 있습니다.  
@@ -533,12 +536,15 @@ INLINE = { ON | OFF }
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- SCHEMABINDING 절을 사용하여 사용자 정의 함수를 만들지 않은 경우 기본 개체에 대한 변경 내용이 함수의 정의에 영향을 주어 함수가 호출될 대 예기치 않은 결과를 초래할 수 있습니다. 기본 개체에 대한 변경으로 인해 함수가 최신 상태를 유지하지 못하게 되는 일이 발생하지 않도록 다음 메서드 중 하나를 구현하는 것이 좋습니다.  
+`SCHEMABINDING` 절을 사용하여 사용자 정의 함수를 만들지 않은 경우 기본 개체에 대한 변경 내용이 함수의 정의에 영향을 주어 함수가 호출될 때 예기치 않은 결과를 초래할 수 있습니다. 기본 개체에 대한 변경으로 인해 함수가 최신 상태를 유지하지 못하게 되는 일이 발생하지 않도록 다음 메서드 중 하나를 구현하는 것이 좋습니다.  
   
--   함수를 만들 때 WITH SCHEMABINDING 절을 지정합니다. 이렇게 하면 함수도 수정되지 않는 한 함수 정의에서 참조된 개체를 수정할 수 없습니다.  
+-   함수를 만들 때 `WITH SCHEMABINDING` 절을 지정합니다. 이렇게 하면 함수도 수정되지 않는 한 함수 정의에서 참조된 개체를 수정할 수 없습니다.  
   
 -   함수 정의에 지정된 개체를 수정한 후 [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) 저장 프로시저를 실행합니다.  
   
+> [!IMPORTANT]  
+> 인라인 TVF(인라인 테이블 반환 함수) 및 MSTVF(다중 명령문 테이블 반환 함수)에 대한 자세한 정보 및 성능 고려 사항은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요. 
+
 ## <a name="data-types"></a>데이터 형식  
  CLR 함수에 매개 변수를 지정할 경우 매개 변수는 이전에 *scalar_parameter_data_type*에 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 CLR 통합 데이터 형식 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 공용 언어 런타임 데이터 형식과 비교하는 방법은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조하세요.  
   
@@ -555,26 +561,26 @@ INLINE = { ON | OFF }
  CLR 함수 프로그래밍 방법은 [CLR 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 스칼라 반환 함수는 스칼라 식이 사용되는 위치에서 호출할 수 있습니다. 여기에는 계산 열 및 CHECK 제약 조건 정의가 포함됩니다. 스칼라 반환 함수는 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 사용하여 실행할 수도 있습니다. 스칼라 반환 함수는 적어도 두 부분으로 구성된 함수 이름을 사용하여 호출해야 합니다. 다중 부분 이름에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요. 테이블 반환 함수는 SELECT, INSERT, UPDATE 또는 DELETE 문 FROM 절의 테이블 식이 허용되는 위치에서 호출할 수 있습니다. 자세한 내용은 [사용자 정의 함수 실행](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)을 참조하세요.  
+ 스칼라 함수는 스칼라 식이 사용되는 위치에서 호출할 수 있습니다. 여기에는 계산 열 및 CHECK 제약 조건 정의가 포함됩니다. 스칼라 함수는 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 사용하여 실행할 수도 있습니다. 스칼라 함수는 적어도 두 부분으로 구성된 함수 이름을 사용하여 호출해야 합니다(*<schema>.<function>*). 다중 부분 이름에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙(Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요. 테이블 반환 함수는 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문 `FROM` 절의 테이블 식이 허용되는 위치에서 호출할 수 있습니다. 자세한 내용은 [사용자 정의 함수 실행](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)을 참조하세요.  
   
 ## <a name="interoperability"></a>상호 운용성  
  함수에서 유효한 문은 다음과 같습니다.  
   
 -   대입 문  
-  
--   TRY...CATCH 문을 제외한 흐름 제어 문  
-  
--   로컬 데이터 변수 및 로컬 커서를 정의하는 DECLARE 문  
-  
--   지역 변수에 값을 할당하는 식이 있는 SELECT 목록이 포함된 SELECT 문  
-  
--   함수에서 커서 선언, 열기, 닫기, 할당 취소 등 로컬 커서를 참조하는 커서 작업. INTO 절을 사용하여 지역 변수에 값을 할당하는 FETCH 문만 허용되며 클라이언트에게 데이터를 반환하는 FETCH 문은 허용되지 않습니다.  
-  
--   지역 테이블 변수를 수정하는 INSERT, UPDATE 및 DELETE 문  
-  
--   확장 저장 프로시저를 호출하는 EXECUTE 문  
-  
--   자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
+
+-   `TRY...CATCH` 문을 제외한 흐름 제어 명령문  
+
+-   로컬 데이터 변수 및 로컬 커서를 정의하는 `DECLARE` 문  
+
+-   지역 변수에 값을 할당하는 식이 있는 SELECT 목록이 포함된 `SELECT` 문  
+
+-   함수에서 커서 선언, 열기, 닫기, 할당 취소 등 로컬 커서를 참조하는 커서 작업. `INTO` 절을 사용하여 지역 변수에 값을 할당하는 `FETCH` 문만 허용되며 클라이언트에게 데이터를 반환하는 `FETCH` 문은 허용되지 않습니다.  
+
+-   지역 테이블 변수를 수정하는 `INSERT`, `UPDATE` 및 `DELETE` 문  
+
+-   확장 저장 프로시저를 호출하는 `EXECUTE` 문  
+
+자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
 ### <a name="computed-column-interoperability"></a>계산된 열 상호 운용성  
  함수는 다음 속성을 가집니다. 이러한 속성의 값은 지속 또는 인덱싱할 수 있는 계산 열에 함수를 사용할 수 있는지 여부를 결정합니다.  
@@ -591,19 +597,17 @@ INLINE = { ON | OFF }
   
  이러한 속성에 대한 현재 값을 표시하려면 [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)를 사용하세요.  
   
- 함수가 결정적이려면 스키마 바인딩으로 생성해야 합니다.  
+> [!IMPORTANT]
+> 함수가 결정적이려면 `SCHEMABINDING`으로 생성해야 합니다.  
   
- 사용자 정의 함수를 호출하는 계산 열은 사용자 정의 함수가 다음 속성 값을 가질 경우 인덱스에 사용할 수 있습니다.  
+사용자 정의 함수를 호출하는 계산 열은 사용자 정의 함수가 다음 속성 값을 가질 경우 인덱스에 사용할 수 있습니다.  
   
 -   **IsDeterministic** = true  
-  
 -   **IsSystemVerified** = True(계산 열이 지속형이 아닌 경우)  
-  
--   **UserDataAccess** = false  
-  
+-   **UserDataAccess** = false    
 -   **SystemDataAccess** = false  
   
- 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.  
+자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.  
   
 ### <a name="calling-extended-stored-procedures-from-functions"></a>함수에서 확장 저장 프로시저 호출  
  함수 내부에서 호출된 확장 저장 프로시저는 클라이언트에 결과 집합을 반환할 수 없습니다. 클라이언트에 결과 집합을 반환하는 모든 ODS API는 FAIL을 반환하게 됩니다. 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다시 연결할 수 있지만 확장 저장 프로시저를 호출한 함수와 같은 트랜잭션에 조인하려고 시도해서는 안 됩니다.  
@@ -613,44 +617,44 @@ INLINE = { ON | OFF }
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  사용자 정의 함수는 데이터베이스 상태 수정 동작을 수행하는 데 사용할 수 없습니다.  
   
- 사용자 정의 함수에는 테이블이 대상인 OUTPUT INTO 절을 포함할 수 없습니다.  
+ 사용자 정의 함수에는 테이블이 대상인 `OUTPUT INTO` 절을 포함할 수 없습니다.  
   
  다음 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수에 포함될 수 없습니다.  
   
--   BEGIN DIALOG CONVERSATION  
+-   `BEGIN DIALOG CONVERSATION`  
   
--   END CONVERSATION  
+-   `END CONVERSATION`  
   
--   GET CONVERSATION GROUP  
+-   `GET CONVERSATION GROUP`  
   
--   MOVE CONVERSATION  
+-   `MOVE CONVERSATION`  
   
--   RECEIVE  
+-   `RECEIVE`  
   
--   SEND  
+-   `SEND`  
   
- 사용자 정의 함수는 중첩될 수 있습니다. 즉, 하나의 사용자 정의 함수가 다른 사용자 정의 함수를 호출할 수 있습니다. 중첩 수준은 호출된 함수의 실행이 시작되면 늘어나고 호출된 함수의 실행이 끝나면 줄어듭니다. 사용자 정의 함수는 최대 32 수준까지 중첩될 수 있습니다. 최대 중첩 수준을 초과하면 전체 함수 호출 체인이 실패합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 관리 코드 참조는 32 수준의 중첩 제한에 대해 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  
+사용자 정의 함수는 중첩될 수 있습니다. 즉, 하나의 사용자 정의 함수가 다른 사용자 정의 함수를 호출할 수 있습니다. 중첩 수준은 호출된 함수의 실행이 시작되면 늘어나고 호출된 함수의 실행이 끝나면 줄어듭니다. 사용자 정의 함수는 최대 32 수준까지 중첩될 수 있습니다. 최대 중첩 수준을 초과하면 전체 함수 호출 체인이 실패합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 관리 코드 참조는 32 수준의 중첩 제한에 대해 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  
   
 ### <a name="using-sort-order-in-clr-table-valued-functions"></a>CLR 테이블 반환 함수에서 정렬 순서 사용  
- CLR 테이블 반환 함수에서 ORDER 절을 사용할 때는 다음 지침을 따르세요.  
+CLR 테이블 반환 함수에서 `ORDER` 절을 사용할 때는 다음 지침을 따르세요.  
   
 -   결과가 항상 지정된 순서로 정렬되도록 해야 합니다. 결과가 지정된 순서로 되어 있지 않으면 쿼리가 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류 메시지가 발생합니다.  
   
--   ORDER 절이 지정된 경우 테이블 반환 함수의 출력은 열의 데이터 정렬(명시적 또는 암시적)에 따라 정렬되어야 합니다. 예를 들어 열 데이터 정렬이 중국어(테이블 반환 함수의 DDL에 지정하거나 데이터베이스 데이터 정렬로부터 가져옴)인 경우 반환되는 결과는 중국어 정렬 규칙에 따라 정렬되어야 합니다.  
+-   `ORDER` 절이 지정된 경우 테이블 반환 함수의 출력은 열의 데이터 정렬(명시적 또는 암시적)에 따라 정렬되어야 합니다. 예를 들어 열 데이터 정렬이 중국어(테이블 반환 함수의 DDL에 지정하거나 데이터베이스 데이터 정렬로부터 가져옴)인 경우 반환되는 결과는 중국어 정렬 규칙에 따라 정렬되어야 합니다.  
   
--   ORDER 절이 지정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결과를 반환하는 동안 항상 쿼리 프로세서에서 추가 최적화를 수행하기 위해 ORDER 절을 사용할지 여부를 확인합니다. 쿼리 프로세서에 유용한 경우에만 ORDER 절을 사용하세요.  
+-   `ORDER` 절이 지정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결과를 반환하는 동안 항상 쿼리 프로세서에서 추가 최적화를 수행하기 위해 해당 절을 사용할지 여부를 확인합니다. 쿼리 프로세서에 유용한 경우에만 `ORDER` 절을 사용하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서는 다음과 같은 경우에 ORDER 절을 자동으로 활용합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서는 다음과 같은 경우에 `ORDER` 절을 자동으로 활용합니다.  
   
-    -   ORDER 절이 인덱스와 호환되는 삽입 쿼리  
+    -   `ORDER` 절이 인덱스와 호환되는 삽입 쿼리  
   
-    -   ORDER 절과 호환되는 ORDER BY 절  
+    -   `ORDER` 절과 호환되는 `ORDER BY` 절  
   
-    -   GROUP BY가 ORDER 절과 호환되는 집계  
+    -   집계, 여기서 `GROUP BY`는 `ORDER` 절과 호환됩니다.  
   
-    -   고유 열이 ORDER 절과 호환되는 DISTINCT 집계  
+    -   고유 열이 `ORDER` 절과 호환되는 `DISTINCT` 집계  
   
- SELECT 쿼리에도 ORDER BY를 지정하고 쿼리를 실행해야 ORDER 절에서 정렬된 결과를 얻을 수 있습니다. 테이블 반환 함수의 정렬 순서에 포함된 열을 쿼리하는 방법은 [sys.function_order_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)를 참조하세요.  
+SELECT 쿼리에도 `ORDER BY`를 지정하고 쿼리를 실행해야 `ORDER` 절에서 정렬된 결과를 얻을 수 있습니다. 테이블 반환 함수의 정렬 순서에 포함된 열을 쿼리하는 방법은 [sys.function_order_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)를 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
  다음 표에서는 사용자 정의 함수에 대한 메타데이터를 반환하는 데 사용할 수 있는 시스템 카탈로그 뷰를 나열합니다.  
@@ -663,14 +667,17 @@ INLINE = { ON | OFF }
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|함수에서 참조하는 기본 개체를 표시합니다.|  
   
 ## <a name="permissions"></a>Permissions  
- 데이터베이스에 대한 CREATE FUNCTION 권한과 함수가 생성되는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
+ 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-  
+
+> [!NOTE]
+> UDF에 대한 자세한 예제 및 성능 고려 사항은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요. 
+
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>1. ISO 주를 계산하는 스칼라 반환 사용자 정의 함수 사용  
  다음 예에서는 사용자 정의 함수 `ISOweek`를 만듭니다. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 `SET DATEFIRST 1`을 호출해야 합니다.  
   
- 또한 이 예에서는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 사용하여 저장 프로시저가 실행될 수 있는 보안 컨텍스트를 지정하는 방법을 보여 줍니다. 이 예에서 `CALLER` 옵션은 프로시저를 호출하는 사용자의 컨텍스트에서 프로시저를 실행하도록 지정합니다. 지정할 수 있는 다른 옵션은 SELF, OWNER 및 *user_name*입니다.  
+ 또한 이 예에서는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 사용하여 저장 프로시저가 실행될 수 있는 보안 컨텍스트를 지정하는 방법을 보여 줍니다. 이 예에서 `CALLER` 옵션은 프로시저를 호출하는 사용자의 컨텍스트에서 프로시저를 실행하도록 지정합니다. 지정할 수 있는 다른 옵션은 `SELF`, `OWNER` 및 *user_name*입니다.  
   
  함수 호출은 다음과 같습니다. `DATEFIRST`가 `1`로 설정되어 있다는 점에 유의하세요.  
   
@@ -783,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>4. CLR 함수 만들기  
  이 예에서는 CLR 함수 `len_s`를 만듭니다. 함수를 만들기 전에 `SurrogateStringFunction.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -817,10 +824,11 @@ JOIN sys.objects AS o ON m.object_id = o.object_id
 GO  
 ```  
   
- ENCRYPTION 옵션을 사용하여 만든 함수의 정의는 sys.sql_modules로 확인할 수 없지만 암호화된 함수에 대한 다른 정보는 표시됩니다.  
+ `ENCRYPTION` 옵션을 사용하여 만든 함수의 정의는 sys.sql_modules로 확인할 수 없지만 암호화된 함수에 대한 다른 정보는 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
+ [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [ALTER FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
@@ -828,7 +836,6 @@ GO
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CLR 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
+ [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   
  
-

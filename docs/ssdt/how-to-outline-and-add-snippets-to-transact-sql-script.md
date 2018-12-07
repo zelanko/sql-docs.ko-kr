@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732831"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526059"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
 SQL Server Data Tools에는 응용 프로그램에 바로 삽입할 수 있는 코드 조각으로 구성된 코드 라이브러리가 포함되어 있습니다. 각 코드 조각은 함수, 테이블, 트리거, 인덱스, 뷰, 사용자 정의 데이터 형식 등을 만드는 것과 같은 완전한 스크립팅 작업을 수행합니다. 마우스 클릭 몇 번만으로도 소스 코드에 코드 조각을 삽입할 수 있습니다. 이러한 코드 조각은 입력에 소비되는 시간을 줄여 생산성을 높여 줍니다.  
@@ -42,7 +42,7 @@ SQL Server Data Tools에는 응용 프로그램에 바로 삽입할 수 있는 �
   
 ### <a name="to-outline-code"></a>코드를 개요 보기로 표시하려면  
   
-1.  CREATE TABLE 문 옆의 **–** 기호가 있는지 확인합니다. 스크립트의 섹션 옆에 있는 **-** 기호를 클릭하여 해당 섹션을 숨깁니다.  
+1.  CREATE TABLE 문 옆에 **-** 기호가 있는지 확인합니다. 스크립트의 섹션 옆에 있는 **-** 기호를 클릭하여 해당 섹션을 숨깁니다.  
   
 2.  Transact\-SQL 편집기를 마우스 오른쪽 단추로 클릭하고 **개요**를 선택한 후 **개요 표시 중지**를 선택하여 편집기의 내부 코드에 영향을 주지 않고 개요 정보를 제거합니다.  
   

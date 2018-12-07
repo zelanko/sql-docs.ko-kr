@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730821"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617085"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730821"
 > [!WARNING]  
 >  도메인을 참조 데이터 서비스 스키마의 열에 매핑하는 동안 참조 데이터 서비스에 연결된 복합 도메인을 도메인 드롭다운 목록에서 사용할 수 있습니다. 복합 도메인을 참조 데이터 서비스 스키마의 열에 매핑하지 마세요. 복합 도메인 내의 개별 도메인만 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
- 참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 "(M)"으로 열 이름과 식별됩니다. 예를 들어 **AddressLine** 은 **Melissa Data – Address Data** 의 필수 스키마 열이고 **CompanyName** 은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
+ 참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 열 이름에서 "(M)"으로 식별됩니다. 예를 들어 **AddressLine**은 **Melissa Data – Address Data**의 필수 스키마 열이고 **CompanyName**은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
   
- 이 항목에서는 복합 도메인 **Address Verification**아래에 **Address Line**, **City**, **State**및 **Zip**의 4개 도메인을 만들고 도메인을 **Melissa Data – Address Check** 참조 데이터 서비스에 연결한 다음 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑합니다.  
+ 이 토픽에서는 복합 도메인 **Address Verification** 아래에 **Address Line**, **City**, **State** 및 **Zip**의 4개 도메인을 만들고, 도메인을 **Melissa Data – Address Check** 참조 데이터 서비스에 연결한 다음, 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 것입니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   

@@ -11,12 +11,12 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d46e8f04afac405e625952b077a00abb29415d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528599"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>1-3단원 - 패키지 및 기타 파일 추가
 이 태스크에서는 기존 패키지, 개별 패키지를 지원하는 보조 파일 및 추가 정보를 이전 태스크에서 만든 Deployment Tutorial 프로젝트에 추가합니다. 예를 들어 패키지에 대한 데이터가 포함된 XML 데이터 파일과 프로젝트의 모든 패키지에 대한 추가 정보를 제공하는 텍스트 파일을 추가합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "47607237"
   
 4.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
   
-5.  찾아보기 단추 **(...)** 를 클릭하고 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages로 이동하여 **DataTransfer.dtsx**를 선택한 다음 **열기**를 클릭합니다.  
+5.  찾아보기 단추 **(...)** 를 클릭하고 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages로 이동하여 **DataTransfer.dtsx**를 선택한 다음, **열기**를 클릭합니다.  
   
 6.  **확인**을 클릭합니다.  
   

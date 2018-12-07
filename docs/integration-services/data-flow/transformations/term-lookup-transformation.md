@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522709"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "51640160"
   
 -   입력 열의 텍스트가 분류된 명사구인 경우 명사구의 마지막 단어만 기본 형태로 변환됩니다. 예를 들어 *doctors appointments* 의 분류된 형태는 *doctors appointment*입니다.  
   
- 하위 용어가 둘 이상의 참조 레코드에 있는 경우처럼 참조 집합에서 겹치는 용어가 조회 항목에 포함되어 있을 때는 용어 조회 변환에서 하나의 조회 결과만 반환됩니다. 다음 예에서는 겹치는 하위 용어가 조회 항목에 포함되어 있는 때의 결과를 보여 줍니다. 이 경우 겹치는 하위 용어는 *Windows*이며 두 개의 참조 용어에 들어 있습니다. 그러나 변환에서는 두 개의 결과를 반환하지 않고 *Windows*라는 하나의 참조 용어만 반환합니다. 두 번째 참조 용어인 *Windows 7 Professional*은 반환되지 않습니다.  
+ 참조 집합에서 겹치는 용어가 조회 항목에 포함되어 있을 경우(즉, 하위 용어가 하나를 초과하는 참조 레코드에 있는 경우) 용어 조회 변환에서는 하나의 조회 결과만 반환합니다. 다음 예에서는 겹치는 하위 용어가 조회 항목에 포함되어 있는 때의 결과를 보여 줍니다. 이 경우 겹치는 하위 용어는 *Windows*이며 두 개의 참조 용어에 들어 있습니다. 그러나 변환에서는 두 개의 결과를 반환하지 않고 *Windows*라는 하나의 참조 용어만 반환합니다. 두 번째 참조 용어인 *Windows 7 Professional*은 반환되지 않습니다.  
   
 |항목|값|  
 |----------|-----------|  
@@ -66,7 +66,7 @@ ms.locfileid: "51640160"
 |참조 용어|Windows, Windows 7 Professional|  
 |출력|Windows|  
   
- 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘가 특수 문자에 해당합니다.  
+ 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘ 등이 특수 문자에 해당합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
  용어 조회 변환에서는 데이터 형식이 DT_WSTR 또는 DT_NTEXT인 열만 사용할 수 있습니다. 열에 텍스트가 있지만 데이터 형식이 다른 경우 데이터 변환으로 데이터 흐름에 DT_WSTR 또는 DT_NTEXT 데이터 형식의 열을 추가하고 열 값을 새 열로 복사할 수 있습니다. 그런 다음 데이터 변환의 출력을 용어 조회 변환에 대한 입력으로 사용할 수 있습니다. 자세한 내용은 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)을 참조하세요.  

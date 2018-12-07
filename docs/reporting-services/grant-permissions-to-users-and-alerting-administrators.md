@@ -9,12 +9,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 98977f845f2226413c19b338dc15b11589231b98
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: e3c871fc80ebc172213fe843ea7cdf18002054ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028072"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505600"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
 
@@ -25,9 +25,9 @@ ms.locfileid: "50028072"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-**정보 근로자**- 경고 만들기 및 항목 보기 SharePoint 권한이 있어야 합니다. 디자인, 참가, 읽기, 보기만 등의 기본 제공 SharePoint 권한 수준은 경고 만들기 및 항목 보기 SharePoint 권한을 포함합니다. 알림을 만들고 편집하며 실행하고 보는 사용자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수도 있습니다.
+**정보 근로자** - 경고 만들기 및 항목 보기 SharePoint 권한이 있어야 합니다. 디자인, 참가, 읽기, 보기만 등의 기본 제공 SharePoint 권한 수준은 경고 만들기 및 항목 보기 SharePoint 권한을 포함합니다. 알림을 만들고 편집하며 실행하고 보는 사용자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수도 있습니다.
 
-**경고 담당자**— 경고 관리 SharePoint 권한이 있어야 합니다. 기본적으로 팀 사이트 사이트 템플릿을 사용하여 만든 사이트에 대해서는 모든 권한 수준만 이 권한을 포함합니다. 다른 사이트 템플릿을 사용하는 경우 기본 SharePoint 그룹의 다른 목록이 표시됩니다. 기본 제공 권한 수준 중 하나에 경고 관리 권한을 추가할 수 있습니다. 또는 데이터 경고를 보고 삭제하는 경고 담당자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수 있습니다.
+**경고 담당자** - 경고 관리 SharePoint 권한이 있어야 합니다. 기본적으로 팀 사이트 사이트 템플릿을 사용하여 만든 사이트에 대해서는 모든 권한 수준만 이 권한을 포함합니다. 다른 사이트 템플릿을 사용하는 경우 기본 SharePoint 그룹의 다른 목록이 표시됩니다. 기본 제공 권한 수준 중 하나에 경고 관리 권한을 추가할 수 있습니다. 또는 데이터 경고를 보고 삭제하는 경고 담당자를 지원하는 데 필요한 권한이 있으면 사용자 지정 권한 수준을 만들 수 있습니다.
 
 SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수준(SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)을 참조하세요.
 

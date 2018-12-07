@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667102"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400396"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 가져오기를 사용하여 라이브 데이터베이스 또는 .dacpac의 새 개체로 프로젝트를 채우거나 프로젝트의 기존 개체를 스크립트의 새 정의로 업데이트할 수 있습니다. 이러한 세 경로 사이에는 아래 설명과 같이 주목할 몇 가지 동작 차이가 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "51667102"
 ## <a name="bkmk_import_source_db"></a>가져오기 원본: 데이터베이스 또는 데이터 계층 응용 프로그램(*.dacpac)  
 데이터베이스 또는 .dacpac 파일에서 스키마를 가져오는 기능은 프로젝트에 정의된 스키마 개체가 없을 경우에만 사용할 수 있습니다. 여기에는 RefactorLog 또는 배포 전/배포 후 스크립트가 포함되지 않습니다.  
   
-가져올 때에는 새 개체에 대한 SSDT의 조직적 기본값을 사용하여 개체 정의가 프로젝트 파일에 스크립트로 작성됩니다: 최상위 개체에 대한 새 파일, 동일한 파일에 같은 부모로 정의된 계층적 자식, 가능할 경우 인라인으로 정의된 테이블/열 제약 조건. 각 개체에 대해 더 구체적인 표시 유형과 제어를 사용하려면 가져오기 대신 스키마 비교를 사용하십시오.  
+가져올 때에는 새 개체에 대한 SSDT의 조직적 기본값을 사용하여 개체 정의가 프로젝트 파일에 스크립트로 작성됩니다. 최상위 개체에 대한 새 파일, 동일한 파일에 같은 부모로 정의된 계층적 자식, 가능할 경우 인라인으로 정의된 테이블/열 제약 조건. 각 개체에 대해 더 구체적인 표시 유형과 제어를 사용하려면 가져오기 대신 스키마 비교를 사용하십시오.  
   
 가져오기 원본에 배포 전 및 배포 후 스크립트, RefactorLog 또는 SQLCMD 변수 정의가 포함되어 있는 경우 프로젝트로 가져올 수 있습니다. 프로젝트에 이러한 아티팩트 중 하나라도 이미 포함되어 있을 경우 가져온 파일은 프로젝트의 **가져오기 시 무시됨** 폴더에 추가됩니다.  
   

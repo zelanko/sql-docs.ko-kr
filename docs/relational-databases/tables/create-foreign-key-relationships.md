@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 544dbc5722f1af81b3d4b858a8b6b5e4b2b7165f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517763"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "49383588"
     
 4.  **선택한 관계** 목록에서 관계를 클릭합니다.    
     
-5.  오른쪽에 있는 표에서 **테이블 및 열 사양** 을 클릭한 다음 속성의 오른쪽에 있는 줄임표(**…**)를 클릭합니다.    
+5.  오른쪽에 있는 표에서 **테이블 및 열 사양**을 클릭한 다음, 속성의 오른쪽에 있는 줄임표(**…**)를 클릭합니다.    
     
 6.  **테이블 및 열** 대화 상자의 **기본 키** 드롭다운 목록에서 관계의 기본 키 쪽에 사용할 테이블을 선택합니다.    
     

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391546"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47628431"
 |-------------------------|-------------------------|  
 |메모리 최적화 테이블에 대한 데이터 압축|데이터 압축 기능을 사용하여 데이터베이스 내의 데이터를 압축하고 데이터베이스의 크기를 줄일 수 있습니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 |메모리 최적화 테이블 및 HASH 인덱스와 비클러스터형 인덱스의 분할|분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.|  
-| 복제 | 구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 테이블 또는 뷰와 호환되지 않습니다.<br /><br />메모리 최적화 파일 그룹이 있는 경우 sync_mode=’database snapshot’을 사용한 복제는 지원되지 않습니다.<br /><br />자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|
+| 복제 | 구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 테이블 또는 뷰와 호환되지 않습니다.<br /><br />메모리 최적화 파일 그룹이 있는 경우 sync_mode='database snapshot'을 사용한 복제는 지원되지 않습니다.<br /><br />자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|
 |미러링|MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 데이터베이스 미러링이 지원되지 않습니다. 미러링에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
 |로그를 다시 작성|연결을 통해 로그를 다시 작성 하거나 ALTER DATABASE 데이터베이스는 MEMORY_OPTIMIZED_DATA 파일 그룹에 대해 지원 되지 않습니다.|  
 |연결된 서버|메모리 최적화 테이블과 같은 쿼리 또는 트랜잭션에서는 연결된 서버에 액세스할 수 없습니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.|  
@@ -55,7 +55,7 @@ ms.locfileid: "47628431"
 |데이터베이스|허용함|설명|  
 |---------------|-------------|-----------------|  
 | 사용자 데이터베이스, **모델** 및 **msdb**. | 아니오 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
-| **리소스** 데이터베이스, **tempdb** | 사용자 계정 컨트롤 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
+| **리소스** 데이터베이스, **tempdb** | 예 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
 
 
 ## <a name="scenarios-not-supported"></a>지원되지 않는 시나리오  

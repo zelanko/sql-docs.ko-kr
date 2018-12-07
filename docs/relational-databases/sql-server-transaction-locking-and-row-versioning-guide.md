@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511776"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661119"
   
  일괄 처리에서 제약 조건 위반 등 런타임 문 오류가 발생하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기본적으로 오류를 발생시킨 문만 롤백합니다. 이 동작은 `SET XACT_ABORT` 문을 사용하여 변경할 수 있습니다. `SET XACT_ABORT` ON이 실행된 후에는 모든 런타임 문 오류 발생 시 자동으로 현재 트랜잭션이 롤백됩니다. 구문 오류와 같은 컴파일 오류는 `SET XACT_ABORT` 옵션 설정으로 영향을 받지 않습니다. 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md)를 참조하세요.  
   
- 오류가 발생하면 수정 동작(`COMMIT` 또는 `ROLLBACK`)을 응용 프로그램 코드에 포함해야 합니다. 트랜잭션 오류를 포함하여 오류를 효과적으로 처리할 수 있는 도구로는 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH` 구문이 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `THROW` 문을 사용하여 예외를 발생시키고 실행 영역을 `TRY…CATCH` 구문의 `CATCH` 블록으로 넘길 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)을 참조하세요.  
+ 오류가 발생하면 수정 동작(`COMMIT` 또는 `ROLLBACK`)을 응용 프로그램 코드에 포함해야 합니다. 트랜잭션 오류를 포함하여 오류를 효과적으로 처리할 수 있는 도구로는 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 구문이 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `THROW` 문을 사용하여 예외를 발생시키고 실행 영역을 `TRY...CATCH` 구문의 `CATCH` 블록으로 넘길 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)을 참조하세요.  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>자동 커밋 모드에서 컴파일 오류 및 런타임 오류  
  자동 커밋 모드에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 한 SQL 문이 아니라 전체 일괄 처리를 롤백하는 것처럼 보일 때가 있습니다. 이러한 상황은 런타임 오류가 아니라 컴파일 오류가 발생했을 때 나타납니다. 컴파일 오류가 발생하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 실행 계획을 작성할 수 없으므로 일괄 처리가 실행되지 않습니다. 오류를 생성한 문 이전의 모든 문이 롤백되는 것처럼 보이지만 오류가 발생하면 일괄 처리의 모든 문이 실행되지 않습니다. 다음 예에서는 컴파일 오류가 발생하여 세 번째 일괄 처리의 `INSERT` 문이 하나도 실행되지 않습니다. 처음 두 `INSERT` 문이 롤백되는 것처럼 보이지만 전혀 실행되지 않은 것입니다.  
@@ -421,7 +421,7 @@ GO
 -   **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
   
 > [!TIP]  
-> 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO…SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
+> 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
 #### <a name="key_range"></a> 키 범위 잠금  
  키 범위 잠금은 직렬화 가능 트랜잭션 격리 수준을 사용하는 동안 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 읽는 레코드 집합에 포함된 행 범위를 암시적으로 보호합니다. 키 범위 잠금은 가상 읽기를 방지합니다. 행 간에 키 범위를 보호하면 트랜잭션이 액세스하는 레코드 집합에 대한 가상 삽입이나 가상 삭제도 방지됩니다.  
@@ -1839,7 +1839,7 @@ GO
   
  장기 실행 트랜잭션으로 인해 데이터베이스에 대해 다음과 같은 심각한 문제가 발생할 수 있습니다.  
   
--   활성 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후에 서버 인스턴스가 종료되면 서버 인스턴스가 다시 시작된 후의 복구 단계 수행 시 **recovery interval** 서버 구성 옵션 또는 `ALTER DATABASE … SET TARGET_RECOVERY_TIME`. 이러한 옵션은 활성 검사점 및 간접 검사점의 빈도를 각각 지정합니다. 검사점 형식에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
+-   활성 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후에 서버 인스턴스가 종료되면 서버 인스턴스가 다시 시작된 후의 복구 단계 수행 시 **recovery interval** 서버 구성 옵션 또는 `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`. 이러한 옵션은 활성 검사점 및 간접 검사점의 빈도를 각각 지정합니다. 검사점 형식에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
   
 -   무엇보다도 대기 중인 트랜잭션은 로그를 거의 생성하지 않을 수 있지만 로그 잘림을 무한정 방해하여 트랜잭션 로그가 커져 가득 찰 수 있습니다. 트랜잭션 로그가 꽉 차면 데이터베이스에서 업데이트를 더 이상 수행할 수 없습니다. 자세한 내용은 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [전체 트랜잭션 로그 문제 해결&#40;SQL Server Error 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) 및 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   

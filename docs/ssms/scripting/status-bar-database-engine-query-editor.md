@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643570"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541897"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51643570"
 ##  <a name="SetOEServerColor"></a> 개체 탐색기에서 서버에 대한 상태 색 설정  
  **개체 탐색기에서 서버 상태 색을 설정하려면**  
   
-1.  **개체 탐색기**에서 **연결** 단추를 선택한 다음 **데이터베이스 엔진...** 을 선택합니다.  
+1.  **개체 탐색기**에서 **연결** 단추를 선택한 다음, **데이터베이스 엔진...** 을 선택합니다.  
   
 2.  **서버에 연결** 대화 상자에서 **옵션 >>** 을 선택합니다.  
   
 3.  **사용자 지정 색 사용** 확인란을 선택합니다.  
   
-4.  색을 선택하려면 **선택…** 단추를 선택합니다.  
+4.  색을 선택하려면 **선택...** 단추를 선택합니다.  
   
 5.  기본 색 또는 사용자 지정 색 중 하나를 선택하고 확인을 선택합니다.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "51643570"
 ##  <a name="SetRegServerColor"></a> 등록된 서버에 대한 상태 색 설정  
  **등록된 서버에 대한 서버 색을 설정하려면**  
   
-1.  **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성...** 을 선택합니다.  
+1.  **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성...** 을 선택합니다.  
   
 2.  **서버 등록 속성 편집** 대화 상자에서 **연결 속성** 탭을 선택합니다.  
   
 3.  **사용자 지정 색 사용** 확인란을 선택합니다.  
   
-4.  색을 선택하려면 **선택…** 단추를 선택합니다.  
+4.  색을 선택하려면 **선택...** 단추를 선택합니다.  
   
 5.  기본 색 또는 사용자 지정 색 중 하나를 선택하고 확인을 선택합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51643570"
   
 -   **사용자 지정 색 사용** 확인란을 선택합니다.  
   
--   색을 선택하려면 **선택…** 단추를 선택합니다.  
+-   색을 선택하려면 **선택...** 단추를 선택합니다.  
   
 -   기본 색 또는 사용자 지정 색 중 하나를 선택하고 확인을 선택합니다.  
   

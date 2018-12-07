@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502746"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "51639022"
 |**False**|지정한 작업만 복사합니다.|  
   
  **JobsList**  
- 복사할 작업을 선택하려면 찾아보기 단추 **(…)** 를 클릭합니다. 하나 이상의 작업을 선택해야 합니다.  
+ 복사할 작업을 선택하려면 찾아보기 단추 **(...)** 를 클릭합니다. 하나 이상의 작업을 선택해야 합니다.  
   
 > [!NOTE]  
 >  복사할 작업을 선택하기 전에 **SourceConnection** 을 지정합니다.  

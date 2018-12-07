@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671872"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522248"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671872"
  개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
  **찾아보기 단추**  
- **확장 속성에 대한 값 대화 상자** 대화 상자를 열려면 **값** 옆에 있는 찾아보기(...) 단추를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다.  
+ **확장 속성의 값 대화 상자** 대화 상자를 열려면 **값** 옆에 있는 찾아보기(...) 단추를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다.  
   
  **Delete**  
  선택한 확장 속성을 제거합니다.  

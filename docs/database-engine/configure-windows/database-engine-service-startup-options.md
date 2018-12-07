@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534672"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ms.locfileid: "51603983"
 |**-E**|파일 그룹의 각 파일에 할당되는 익스텐트의 수를 늘립니다. 이 옵션은 인덱스 또는 데이터 검색을 실행하는 사용자 수가 제한되는 데이터 웨어하우스 응용 프로그램에 유용합니다. 성능에 부정적인 영향을 줄 수 있으므로 다른 응용 프로그램에서는 이 옵션을 사용하면 안 됩니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]32비트 릴리스에서는 지원되지 않습니다.|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>문제 해결을 위한 시작 옵션 사용  
- 단일 사용자 모드 및 최소 구성 모드와 같은 일부 시작 옵션은 주로 문제 해결에서 사용됩니다. sqlservr.exe는 수동으로 시작하고 명령줄에서 **–m** 또는 **–f** 옵션을 사용하여 문제 해결을 위해 서버를 시작하는 방법이 가장 간편합니다.  
+ 단일 사용자 모드 및 최소 구성 모드와 같은 일부 시작 옵션은 주로 문제 해결에서 사용됩니다. sqlservr.exe를 수동으로 시작하는 동안 명령줄에서 **–m** 또는 **–f** 옵션을 사용하여 문제 해결을 위해 서버를 시작하면 가장 간단합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net start **를 사용하여**를 시작하는 경우에는 시작 옵션에 하이픈(-) 대신 슬래시(/)를 사용합니다.  
   
 ## <a name="using-startup-options-during-normal-operations"></a>정상적인 작업 중 시작 옵션 사용  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 때마다 사용하는 시작 옵션이 있을 수 있습니다. 이러한 옵션(예: **–g** 또는 추적 플래그로 시작)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자로 시작 매개 변수를 구성하면 가장 쉽게 설정할 수 있습니다. 이러한 도구는 시작 옵션을 레지스트리 키로 저장하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 항상 이 시작 옵션으로 시작할 수 있게 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 때마다 사용하는 시작 옵션이 있을 수 있습니다. 이러한 옵션(예: **–g** 또는 추적 플래그로 시작)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 통해 시작 매개 변수를 구성하면 가장 쉽게 설정할 수 있습니다. 이러한 도구는 시작 옵션을 레지스트리 키로 저장하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 항상 이 시작 옵션으로 시작할 수 있게 됩니다.  
   
 ## <a name="compatibility-support"></a>호환성 지원  
  **-h**  매개 변수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  

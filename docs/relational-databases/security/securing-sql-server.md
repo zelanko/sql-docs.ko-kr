@@ -19,12 +19,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398366"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>보안 주체 및 데이터베이스 개체 보안  
- 보안 주체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여 받은 개인, 그룹 및 프로세스입니다. “보안 개체”는 서버, 데이터베이스 및 데이터베이스에 포함된 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노출 영역이 감소되도록 각 보안 개체의 사용 권한 집합을 구성할 수 있습니다. 다음 표에서는 보안 주체 및 보안 개체에 대한 자세한 정보를 제공합니다.  
+ 보안 주체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여 받은 개인, 그룹 및 프로세스입니다. "보안 개체"는 서버, 데이터베이스 및 데이터베이스에 포함된 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노출 영역이 감소되도록 각 보안 개체의 사용 권한 집합을 구성할 수 있습니다. 다음 표에서는 보안 주체 및 보안 개체에 대한 자세한 정보를 제공합니다.  
   
 |내용|참조 항목|  
 |---------------------------|---------|  

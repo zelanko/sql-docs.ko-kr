@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32b0e29977dea2d3269972ff06bc34f9af214012
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400626"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "51697451"
   
 가상화된 환경에서 계산 용량 제한은 코어가 아닌 논리 프로세서의 수를 기반으로 합니다. 그 이유는 프로세서 아키텍처가 게스트 응용 프로그램에서 볼 수 없기 때문입니다. 
 
-예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 있는 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있습니다. 그러나 하이퍼 스레딩을 사용하지 않는 논리 프로세서는 16개만 포함합니다. 이러한 논리 프로세서는 서버의 가상 컴퓨터에 매핑될 수 있습니다. 해당 논리 프로세서의 가상 컴퓨터 계산 로드는 호스트 서버의 실제 프로세서에서 실행 스레드에 매핑됩니다.  
+예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 있는 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있습니다. 그러나 하이퍼 스레딩을 사용하지 않는 논리 프로세서는 16개만 포함합니다. 이러한 논리 프로세서는 서버의 가상 컴퓨터에 매핑될 수 있습니다. 해당 논리 프로세서의 가상 머신 컴퓨팅 로드는 호스트 서버의 실제 프로세서에서 실행 스레드에 매핑됩니다.  
   
 각각의 가상 프로세서 성능이 중요한 경우 하이퍼 스레딩을 해제할 수 있습니다. BIOS 설정 도중 프로세서에 대해 BIOS 설정을 사용하여 하이퍼 스레딩을 활성화 또는 비활성화할 수 있습니다. 그러나 일반적으로 서버에서 실행되는 모든 작업 부하에 영향을 주는 서버 범위 작업입니다. 이는 물리적 운영 체제 환경에서 하이퍼 스레딩 성능을 향상시킬 수 있는 워크로드로부터 가상화된 환경에서 실행되는 워크로드를 분리할 것을 제안할 수 있습니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515459"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833401"
   
     |최고|좋음|보통|나쁨|심각|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   병합 복제의 경우 성능 품질은 임계값과 관련이 없습니다. 행 처리 임계값은 **성능 심각** 값이 **상태** 열에 표시되는지 여부를 확인합니다. 성능 품질은 개별 구독 성능과 게시에 대한 구독(연결 유형이 전화 접속 또는 LAN 등으로 동일한 구독)의 평균 기록 성능을 비교하여 결정됩니다. 복제 모니터는 같은 유형의 연결별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상 변경 내용이 포함된 동기화가 5회 미만이거나 최신 동기화의 변경 내용 수가 50개 미만이면 복제 모니터에서 값을 표시하지 않습니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833401"
   
     |최고|좋음|보통|나쁨|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  구독 정보를 표시하는 방법에 대한 자세한 내용은 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)을 참조하세요.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47833401"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [복제 모니터에 임계값 및 경고 설정](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

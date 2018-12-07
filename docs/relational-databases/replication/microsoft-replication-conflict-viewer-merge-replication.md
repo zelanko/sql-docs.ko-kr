@@ -13,12 +13,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10b67088d8c7fde760db975070bf7bc53860d107
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545678"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47633363"
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보 표시** (**…**)  
+ **열 정보 표시**(**…**)  
  열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  

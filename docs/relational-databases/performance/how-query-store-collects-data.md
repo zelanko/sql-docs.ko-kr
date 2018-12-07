@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775061"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711075"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   쿼리 저장소는 쿼리 및 계획과 관련된 컴파일 및 런타임 정보를 지속적으로 수집하는 **비행 데이터 레코더** 로 작동합니다. 데이터와 관련된 쿼리는 내부 테이블에 유지되고 뷰 집합을 통해 사용자에게 표시됩니다.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775061"
  다음 다이어그램은 파란색 엔터티로 표시된 컴파일 시간 정보와 함께 쿼리 저장소 뷰와 논리적 관계를 보여 줍니다.  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **보기 설명**  
+**보기 설명**  
   
 |보기|설명|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775061"
 |**sys.query_store_runtime_stats_interval**|쿼리 저장소는 시간을 자동으로 생성된 시간 창(간격)으로 분할하고 실행된 모든 계획에 대한 해당 간격에 집계 통계를 저장합니다. 간격의 크기는 통계 수집 간격 구성 옵션([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서) 또는 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 `INTERVAL_LENGTH_MINUTES`에 의해 제어됩니다.|  
 |**sys.query_store_runtime_stats**|실행된 계획에 대한 집계된 런타임 통계입니다. 모든 캡처된 메트릭은 4개의 통계 함수 형태인 평균, 최소값, 최대값 및 표준 편차로 표현됩니다.|  
   
- 쿼리 저장소 뷰에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링** 의 [관련된 뷰, 함수 및 프로시저](monitoring-performance-by-using-the-query-store.md)섹션을 참조하세요.  
+ 쿼리 저장소 보기에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링**의 [관련 보기, 함수 및 프로시저](monitoring-performance-by-using-the-query-store.md) 섹션을 참조하세요.  
   
 ## <a name="query-processing"></a>쿼리 처리  
  쿼리 저장소는 다음 주요 지점에서 쿼리 처리 파이프라인과 상호 작용합니다.  
@@ -63,10 +62,10 @@ ms.locfileid: "47775061"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- 시스템 충돌이 발생할 경우 쿼리 저장소는 `DATA_FLUSH_INTERVAL_SECONDS`(으)로 정의된 양까지 런타임 데이터를 손실할 수 있습니다. 900초(15분)의 기본값은 쿼리 캡처 성능과 데이터 가용성 사이의 최적의 균형입니다.  
-메모리 부족 시 런타임 통계는 `DATA_FLUSH_INTERVAL_SECONDS`(으)로 정의된 것보다 먼저 디스크에 플러시될 수 있습니다.  
+ 시스템 충돌이 발생할 경우 쿼리 저장소는 `DATA_FLUSH_INTERVAL_SECONDS`로 정의된 양까지 런타임 데이터를 손실할 수 있습니다. 900초(15분)의 기본값은 쿼리 캡처 성능과 데이터 가용성 사이의 최적의 균형입니다.  
+메모리 부족 시 런타임 통계는 `DATA_FLUSH_INTERVAL_SECONDS`로 정의된 것보다 먼저 디스크에 플러시될 수 있습니다.  
 쿼리 저장소 데이터를 읽는 동안 메모리 내 및 디스크의 데이터는 투명하게 통합됩니다.
-세션 종료 또는 클라이언트 응용 프로그램 다시 시작/크래시의 경우 쿼리 통계는 기록되지 않습니다.  
+세션이 종료되거나 클라이언트 애플리케이션이 다시 시작 또는 충돌하면 쿼리 통계가 기록되지 않습니다.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

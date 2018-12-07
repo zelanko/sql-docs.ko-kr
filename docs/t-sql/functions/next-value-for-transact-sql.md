@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525728"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** - 참조되는 각 시퀀스 개체에 대해 새 값이 문의 결과 행당 한 번 생성됩니다.  
   
--   **INSERT** ... **VALUES** - 참조되는 각 시퀀스 개체에 대해 새 값이 문의 삽입된 각 행당 한번 생성됩니다.  
+-   **INSERT**... **VALUES** - 참조되는 각 시퀀스 개체에 대해 새 값이 문의 삽입된 각 행당 한번 생성됩니다.  
   
 -   **UPDATE** - 참조되는 각 시퀀스 개체에 대해 새 값이 문에서 업데이트 중인 각 행당 한 번 생성됩니다.  
   
@@ -93,7 +93,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** 또는 **INTERSECT** 연산자를 사용하는 문에서 사용할 경우  
   
--   **NEXT VALUE FOR** … 없이 **ORDER BY** 절을 사용하는 문에서 사용할 경우 **OVER**(**ORDER BY** ...)를 사용할 경우  
+-   **NEXT VALUE FOR**...없이 **ORDER BY** 절을 사용하는 명령문에서 사용할 경우 **OVER**(**ORDER BY**...)를 사용할 경우  
   
 -   **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML** 절에서 사용할 경우  
   
@@ -130,7 +130,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   기본 제약 조건에서 참조하는 시퀀스 개체를 변경할 수 있습니다.  
   
--   **ORDER BY** 절을 사용하여 쿼리에서 삽입할 데이터를 가져오는 `INSERT … SELECT` 또는 `INSERT … EXEC` 문의 경우 **NEXT VALUE FOR** 함수에서 반환되는 값이 **ORDER BY** 절에 지정된 순서대로 생성됩니다.  
+-   **ORDER BY** 절을 사용하여 쿼리에서 삽입할 데이터를 가져오는 `INSERT ... SELECT` 또는 `INSERT ... EXEC` 문의 경우 **NEXT VALUE FOR** 함수에서 반환되는 값이 **ORDER BY** 절에 지정된 순서대로 생성됩니다.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>OVER ORDER BY 절에서 시퀀스 개체 사용  
  **NEXT VALUE FOR** 함수는 **NEXT VALUE FOR** 호출에 **OVER** 절을 적용하여 정렬된 시퀀스 값의 생성을 지원합니다. **OVER** 절을 사용하면 반환되는 값이 **OVER** 절의 **ORDER BY** 하위 절 순서대로 생성됩니다. **NEXT VALUE FOR** 함수를 **OVER** 절과 함께 사용하는 경우 다음 추가 규칙이 적용됩니다.  
@@ -143,7 +143,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** 문의 **NEXT VALUE FOR** 함수에 대한 모든 호출에서 **OVER** 절을 지정한 경우 **SELECT** 문에 **ORDER BY** 절을 사용할 수 있습니다.  
   
--   **SELECT** 문 또는 `INSERT … SELECT …` 문에 사용하는 경우 **NEXT VALUE FOR** 함수에 **OVER** 절을 사용할 수 있습니다. **NEXT VALUE FOR** 함수로 **OVER** 절을 사용하는 것은 **UPDATE** 또는 **MERGE** 문에서 허용되지 않습니다.  
+-   **SELECT** 문 또는 `INSERT ... SELECT ...` 문에 사용하는 경우 **NEXT VALUE FOR** 함수에 **OVER** 절을 사용할 수 있습니다. **NEXT VALUE FOR** 함수로 **OVER** 절을 사용하는 것은 **UPDATE** 또는 **MERGE** 문에서 허용되지 않습니다.  
   
 -   다른 프로세스에서 시퀀스 개체에 동시에 액세스할 경우 반환되는 번호에 간격이 생길 수 있습니다.  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>5. SELECT … INTO에 NEXT VALUE FOR 함수 사용 INTO  
- 다음 예에서는 `SELECT … INTO` 문을 사용하여 `Production.NewLocation`이라는 테이블을 만든 다음 `NEXT VALUE FOR` 함수를 사용하여 각 행의 번호를 매깁니다.  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>5. SELECT... INTO에서 NEXT VALUE FOR 함수 사용 INTO  
+ 다음 예에서는 `SELECT ... INTO` 문을 사용하여 `Production.NewLocation`이라는 테이블을 만든 다음 `NEXT VALUE FOR` 함수를 사용하여 각 행의 번호를 매깁니다.  
   
 ```  
 USE AdventureWorks2012 ;   

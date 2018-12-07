@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510700"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51670564"
   
  Audit Administrator가 보관 등의 목적으로 파일을 다른 위치에 복사한 경우에는 새 위치에 대한 ACL을 다음과 같은 권한으로 축소해야 합니다.  
   
--   Audit Administrator - 읽기 / 쓰기  
+-   Audit Administrator - 읽기/쓰기  
   
 -   Audit Reader - 읽기  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670564"
  자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 및 [서버 감사 및 데이터베이스 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
   
 ## <a name="considerations"></a>고려 사항  
- 감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하면 서버를 시작할 수 있습니다.  
+ 감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하여 서버를 시작할 수 있습니다.  
   
- 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **플래그를 사용하여** 를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **플래그를 사용하여** 를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
+ 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
   
  서비스 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   

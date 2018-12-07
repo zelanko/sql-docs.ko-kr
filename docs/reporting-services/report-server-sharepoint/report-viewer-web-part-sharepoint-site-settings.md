@@ -1,22 +1,22 @@
 ---
 title: 보고서 뷰어 웹 파트의 SharePoint 사이트 설정 - SSRS | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 517a73d2b972cab7295a2a1d1710658d26685484
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8add27eefcd46769bd8d06c980f10edb8d0739b8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021557"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416170"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>보고서 뷰어 웹 파트의 SharePoint 사이트 설정 - Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 보고서 뷰어 웹 파트에는 구성할 수 있는 몇 가지 설정이 있습니다. 이러한 설정은 사이트 관리자가 SharePoint 사이트 설정 페이지에서 활성화 및 비활성화할 수 있습니다. 각 사이트에 자체 설정이 있습니다. 또한 이렇나 설정은 보고서 뷰어 웹 파트를 다시 설치한 후에는 다시 설정할 수 없습니다.
 

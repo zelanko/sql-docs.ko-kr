@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535395"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47790234"
 
 - **키 프로비저닝** - 신뢰할 수 있는 키 저장소(예: Windows 인증서 저장소, Azure 주요 자격 증명 모음 또는 하드웨어 보안 모듈)에 물리적 키 만들기, 열 마스터 키를 사용하여 열 암호화 키 암호화, 데이터베이스에 두 가지 유형의 키에 대한 메타데이터 만들기
 
-- **키 순환** - 정기적으로 기존 키를 새 키로 교체 키가 손상된 경우 또는 암호화 키를 순환하도록 요구하는 조직의 정책이나 규정 준수 규칙을 준수하기 위해 키를 순환해야 할 수 있습니다. 
+- **키 순환** - 정기적으로 기존 키를 새 키로 교체 키가 손상된 경우 또는 암호화 키를 순환하도록 요구하는 조직의 정책이나 규정 준수 규칙을 준수하려면 키를 순환해야 할 수 있습니다. 
 
 
 ## <a name="KeyManagementRoles"></a> 키 관리 역할
@@ -52,7 +52,7 @@ ms.locfileid: "47790234"
 상시 암호화 키를 관리하는 두 가지 사용자 역할이 있으며, 보안 관리자와 DBA(데이터베이스 관리자)입니다.
 
 - **보안 관리자** - 열 암호화 키와 열 마스터 키를 생성하고 열 마스터 키를 포함하는 키 저장소를 관리합니다. 이러한 태스크를 수행하려면 보안 관리자가 키와 키 저장소에 액세스할 수 있어야 하지만 데이터베이스에 액세스할 필요는 없습니다.
-- **DBA** – 데이터베이스의 키 메타데이터를 관리합니다. 키 관리 태스크를 수행하려면 DBA가 데이터베이스의 키 메타데이터를 관리할 수 있어야 하지만 키 또는 열 마스터 키를 포함하는 키 저장소에 액세스할 필요는 없습니다.
+- **DBA** – 데이터베이스의 키에 대한 메타데이터를 관리합니다. 키 관리 태스크를 수행하려면 DBA가 데이터베이스의 키 메타데이터를 관리할 수 있어야 하지만 키 또는 열 마스터 키를 포함하는 키 저장소에 액세스할 필요는 없습니다.
 
 위의 역할을 고려할 경우 상시 암호화를 위한 키 관리 태스크를 수행하는 두 가지 방법이 있으며, *역할 구분 사용*및 *역할 구분 사용 안 함*입니다. 조직의 필요에 따라 요구 사항에 가장 적합한 키 관리 프로세스를 선택할 수 있습니다.
 
@@ -70,14 +70,14 @@ ms.locfileid: "47790234"
 
 상시 암호화 키는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) 및 [PowerShell](../../scripting/sql-server-powershell.md)을 사용하여 관리할 수 있습니다.
 
-- **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있게 합니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
+- **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있습니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
     - [열 마스터 키 프로비전](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [열 암호화 키 프로비전](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [열 마스터 키 순환](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [열 암호화 키 순환](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** – 역할 구분을 사용 및 사용하지 않고 상시 암호화 키를 관리하기 위한 cmdlet이 포함되어 있습니다. 참조 항목:
+- **SQL Server PowerShell** – 역할 구분을 사용 및 사용하지 않는 상태로 Always Encrypted 키를 관리하기 위한 cmdlet이 포함됩니다. 참조 항목:
     - [PowerShell을 사용하여 상시 암호화 키 구성](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "47790234"
 
 상시 암호화가 이러한 유형의 공격을 효과적으로 방지하려면 키 관리 프로세스에서 열 마스터 키와 열 암호화 키는 물론 열 마스터 키를 포함하는 키 저장소에 대한 자격 증명이 잠재적인 공격자에게 노출되지 않도록 해야 합니다. 다음 몇 가지 지침을 따라야 합니다.
 
-- 데이터베이스를 호스트하는 컴퓨터에서 열 마스터 키 또는 열 암호화 키를 생성하지 않습니다. 대신, 키 관리에만 사용되거나 키에 액세스해야 하는 응용 프로그램을 호스트하는 컴퓨터인 별도 컴퓨터에서 키를 생성합니다. 즉, 상시 암호화 키를 프로비전하거나 유지 관리하는 데 사용되는 컴퓨터에 공격자가 액세스할 경우 키가 짧은 시간 동안만 도구의 메모리에 표시되는 경우에도 키를 얻을 수 있기 때문에 **데이터베이스를 호스트하는 컴퓨터에서 키를 생성하는 데 사용되는 도구를 실행하면 안 됩니다** .
+- 데이터베이스를 호스트하는 컴퓨터에서 열 마스터 키 또는 열 암호화 키를 생성하지 않습니다. 대신, 키 관리에만 사용되거나 키에 액세스해야 하는 응용 프로그램을 호스트하는 컴퓨터인 별도 컴퓨터에서 키를 생성합니다. 즉, Always Encrypted 키를 프로비전하거나 유지 관리하는 데 사용되는 컴퓨터에 공격자가 액세스할 경우 짧은 시간 동안만 키가 도구의 메모리에 표시되는 경우에도 공격자는 키를 얻을 수 있기 때문에 **데이터베이스를 호스팅하는 컴퓨터에서 키를 생성하는 데 사용되는 도구를 실행하면 안 됩니다**.
 - 키 관리 프로세스에서 열 마스터 키 또는 열 암호화 키가 실수로 공개되지 않도록 하려면 키 관리 프로세스를 정의 및 구현하기 전에 잠재적인 악의적 사용자와 보안 위협을 확인하는 것이 중요합니다. 예를 들어 DBA가 중요한 데이터에 액세스할 수 없게 하려는 경우 DBA는 키 생성을 담당할 수 없습니다. 그러나 메타데이터에는 일반 텍스트 키가 포함되지 않으므로 DBA가 데이터베이스의 키 메타데이터를 *관리할 수 있습니다* .
 
 ## <a name="next-steps"></a>Next Steps

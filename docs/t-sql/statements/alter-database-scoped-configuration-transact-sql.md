@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700301"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641504"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -111,7 +111,7 @@ PRIMARY
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-[매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 사용하거나 사용하지 않도록 설정합니다. 기본값은 ON입니다. PARAMETER_SNIFFING를 ON으로 설정하는 것은 [추적 플래그 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하는 것과 동일합니다.
+[매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 사용하거나 사용하지 않도록 설정합니다. 기본값은 ON입니다. PARAMETER_SNIFFING를 OFF로 설정하는 것은 [추적 플래그 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하는 것과 동일합니다.
 
 > [!TIP]
 > 쿼리 수준에서 이를 수행하기 위해 **OPTIMIZE FOR UNKNOWN** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.
@@ -121,7 +121,7 @@ PRIMARY
 
 이 값은 데이터베이스가 기본에 있는 동안 보조에서만 유효하며, 모든 보조에서 이 설정에 대한 값이 기본에 대해 설정된 값이 되도록 지정합니다. [매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 사용하기 위해 기본에 대한 구성이 변경되는 경우 보조에 있는 값은 보조 값을 명시적으로 설정할 필요 없이 적절하게 변경됩니다. PRIMARY는 보조에 대한 기본 설정입니다.
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 데이터베이스의 호환성 수준에 관계없이 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **OFF**이며 가장 높은 호환성 수준이 특정 버전(RTM 이후)에 대해 도입된 후에 릴리스된 쿼리 최적화 프로그램 핫픽스를 비활성화합니다. 이 값을 **ON**으로 설정하면 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 활성화하는 것과 동일합니다.
 

@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522318"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>데이터베이스 미러링 세션 설정 - Windows 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47838941"
   
  데이터베이스 미러링 세션을 설정하고 데이터베이스에 대한 데이터베이스 미러링 속성을 수정하려면 **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다. **미러링** 페이지를 사용하여 데이터베이스 미러링을 구성하기 전에 다음 요구 사항이 충족되었는지 확인합니다.  
   
--   주 서버 인스턴스 및 미러 서버 인스턴스에서 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard 또는 Enterprise)를 실행하고 있어야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
+-   주 서버 인스턴스 및 미러 서버 인스턴스에서는 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard 또는 Enterprise)를 실행해야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
   
     > [!NOTE]  
     >  미러링 모니터 서버 인스턴스는 일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813423"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417284"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
 
@@ -142,7 +142,7 @@ ms.locfileid: "51813423"
   
 7.  **보고서 관리자 URL**에 액세스할 기본 모드 보고서 서버에 연결된 보고서 관리자 인스턴스의 URL을 입력합니다. 기본적으로 보고서 관리자 URL의 구문은 **https://\<servername>/reports**입니다.  
   
-8.  **보고서 경로**에 슬래시를 지정하고 그 뒤에 폴더 경로와 보고서 이름을 지정합니다. 이때 서버 이름이나 보고서 관리자 가상 디렉터리는 포함하지 **마세요** . 예를 들어 Adventure Works 폴더에 있는 'Company Sales' 보고서를 열려면 **/Adventure Works/Company Sales**를 지정합니다. 다음은 '제품' 보고서가 보고서 서버 루트 폴더인 **/Products**에 있는 또 다른 예입니다.  
+8.  **보고서 경로**에 슬래시를 지정하고 그 뒤에 폴더 경로와 보고서 이름을 지정합니다. 이때 서버 이름이나 보고서 관리자 가상 디렉터리는 포함하지 **마세요** . 예를 들어 Adventure Works 폴더에 있는 'Company Sales' 보고서를 열려면 **/Adventure Works/Company Sales**를 지정합니다. 다음은 '제품' 보고서가 보고서 서버 루트 폴더인 **/Products**에 있는 또 다른 예제입니다.  
   
 9. **확인**을 클릭합니다.  
   

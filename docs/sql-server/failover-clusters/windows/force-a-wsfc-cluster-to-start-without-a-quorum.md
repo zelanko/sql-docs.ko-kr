@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520235"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697581"
   
 1.  장애 조치(Failover) 클러스터 관리자를 열고 온라인으로 강제 전환할 클러스터 노드에 연결합니다.  
   
-2.  **동작** 창에서 **클러스터 강제 시작**을 클릭하고 **예. 클러스터를 강제로 시작합니다.** 를 클릭합니다.  
+2.  **동작** 창에서 **클러스터 강제 시작**을 클릭하고 **예. 클러스터를 강제로 시작**을 클릭합니다.  
   
 3.  왼쪽 창의 **장애 조치(Failover) 클러스터 관리자** 트리에서 클러스터 이름을 클릭합니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697581"
   
 3.  `Stop-ClusterNode` 를 사용하여 클러스터 서비스가 중지되었는지 확인합니다.  
   
-4.  `Start-ClusterNode` 와 `–FixQuorum` 을 사용하여 클러스터 서비스를 강제로 시작합니다.  
+4.  `Start-ClusterNode` 와 `-FixQuorum` 을 사용하여 클러스터 서비스를 강제로 시작합니다.  
   
-5.  `Get-ClusterNode` 와 `–Propery NodeWieght = 1` 을 사용하여 노드가 쿼럼의 투표 멤버가 되도록 하는 값을 설정합니다.  
+5.  `Get-ClusterNode` 와 `-Propery NodeWieght = 1` 을 사용하여 노드가 쿼럼의 투표 멤버가 되도록 하는 값을 설정합니다.  
   
 6.  클러스터 노드 속성을 읽기 가능한 형식으로 출력합니다.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697581"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

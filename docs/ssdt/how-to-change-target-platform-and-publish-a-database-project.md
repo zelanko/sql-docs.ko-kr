@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668892"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516705"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
 SSDT(SQL Server Data Tools) 데이터베이스 프로젝트의 대상 SQL Server 버전을 지원되는 SQL Server 인스턴스(SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 또는 SQL Azure)로 변경할 수 있습니다. 이렇게 하면 데이터베이스 개발을 한 프로젝트에 중앙 집중화하고 필요할 때 여러 버전의 SQL Server 인스턴스에 프로젝트를 게시할 수 있습니다.  
@@ -63,7 +63,7 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
   
 6.  이후 게시 작업에 동일한 설정을 다시 사용할 수 있도록 게시 설정을 프로필에 저장할 수도 있습니다. 이렇게 하려면 **데이터베이스 게시** 대화 상자에서 **다른 이름으로 프로필 저장** 단추를 클릭합니다. 나중에 기존 설정을 다시 로드하려면 **프로필 로드** 단추를 클릭하면 됩니다.  
   
-7.  **Data Tools 작업** 창의 메시지를 확인합니다. **게시 미리 보기를 만드는 중...** 오른쪽의 "미리 보기" 링크를 클릭합니다. 그러면 배포 미리 보기 보고서가 열립니다. 프로젝트의 대상 플랫폼이 프로젝트가 게시된 대상 데이터베이스 서버와 동일하지 않으면 이 보고서에 경고가 표시됩니다.  예를 들어 프로젝트의 대상 플랫폼이 Microsoft SQL Server 2012인 경우 프로젝트를 SQL Server 2008 R2 서버 인스턴스에 게시하려고 하면 **출력** 창에 다음 경고가 표시됩니다.  
+7.  **Data Tools 작업** 창의 메시지를 확인합니다. **게시 미리 보기를 만드는 중...** 오른쪽의 "미리 보기" 링크를 클릭합니다. 그러면 배포 미리 보기 보고서가 열립니다. 프로젝트의 대상 플랫폼이 프로젝트가 게시된 데이터베이스 서버와 동일하지 않으면 SSDT는 이 보고서에 경고를 표시합니다.  예를 들어 프로젝트의 대상 플랫폼이 Microsoft SQL Server 2012인 경우 프로젝트를 SQL Server 2008 R2 서버 인스턴스에 게시하려고 하면 **출력** 창에 다음 경고가 표시됩니다.  
   
 **Microsoft SQL Server 2012를 대상 플랫폼으로 지정하는 프로젝트에서 SQL Server 2008에 대한 호환성 문제가 발생할 수 있음**    Microsoft SQL Server 2012에 도입된 엔터티(예: 시퀀스 개체)가 이러한 프로젝트에 포함되어 있으면 게시 작업이 실패합니다.  
   

@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703671"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524589"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -100,7 +100,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    | , <change_data_capture_WITH_option>  
    | , <FILESTREAM_WITH_option>  
    | , <service_broker_WITH options>   
-   | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+   | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
    } [ ,...n ]  
  ]  
 [;]  
@@ -112,7 +112,7 @@ RESTORE DATABASE { database_name | @database_name_var }
    WITH   
       PARTIAL, NORECOVERY   
       [  , <general_WITH_options> [ ,...n ]   
-       | , \<point_in_time_WITH_options—RESTORE_DATABASE>   
+       | , \<point_in_time_WITH_options-RESTORE_DATABASE>   
       ] [ ,...n ]   
 [;]  
   
@@ -148,7 +148,7 @@ RESTORE LOG { database_name | @database_name_var }
        ]  
     | ,  <general_WITH_options> [ ,...n ]  
     | , <replication_WITH_option>  
-    | , \<point_in_time_WITH_options—RESTORE_LOG>   
+    | , \<point_in_time_WITH_options-RESTORE_LOG>   
    } [ ,...n ]  
  ]   
 [;]  
@@ -221,7 +221,7 @@ Note: URL is the format used to specify the location and the file name for the M
  | ERROR_BROKER_CONVERSATIONS   
  | NEW_BROKER  
   
-\<point_in_time_WITH_options—RESTORE_DATABASE>::=   
+\<point_in_time_WITH_options-RESTORE_DATABASE>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = 'lsn:lsn_number'  
@@ -230,7 +230,7 @@ Note: URL is the format used to specify the location and the file name for the M
                  [ AFTER 'datetime']   
    }   
   
-\<point_in_time_WITH_options—RESTORE_LOG>::=   
+\<point_in_time_WITH_options-RESTORE_LOG>::=   
  | {  
    STOPAT = { 'datetime'| @datetime_var }   
  | STOPATMARK = { 'mark_name' | 'lsn:lsn_number' }  
@@ -294,7 +294,7 @@ Note: URL is the format used to specify the location and the file name for the M
   
 ### <a name="discontinued-restore-keywords"></a>지원되지 않는 RESTORE 키워드  
 다음 키워드는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 더 이상 지원되지 않습니다.  
-|지원되지 않는 키워드|대체 키워드|대체 키워드 예|  
+|지원되지 않는 키워드|다음으로 대체됩니다...|대체 키워드 예|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  
 |TRANSACTION|LOG|`RESTORE LOG`|  

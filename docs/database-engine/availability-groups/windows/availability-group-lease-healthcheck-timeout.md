@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264903"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393986"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -39,13 +39,13 @@ Always On 리소스 DLL은 내부 SQL Server 구성 요소의 상태를 모니�
 
 ## <a name="lease-mechanism"></a>임대 메커니즘  
 
-다른 장애 조치 메커니즘과 달리 SQL Server 인스턴스는 임대 메커니즘에서 활성 역할을 수행합니다. 주 복제본인 AG를 온라인으로 전환하면 SQL Server 인스턴스는 AG에 대한 전용 임대 작업자 스레드를 생성합니다. 임대 작업자는 임대 갱신 및 임대 중지 이벤트를 비롯한 리소스 호스트와 메모리의 작은 지역을 공유합니다. 임대 작업자 및 리소스 호스트는 순환 방식으로 작동하며 고유한 임대 갱신 이벤트 또는 중지 이벤트를 알리기 위해 해당하는 임대 갱신 이벤트에 신호를 전송한 다음, 중지하고, 다른 당사자를 대기합니다. 리소스 호스트 및 SQL Server 임대 스레드는 모두 다른 스레드의 신호를 받은 후에 스레드가 다시 시작될 때마다 업데이트되는 TTL(time-to-live) 값을 유지합니다. 신호를 기다리는 동안 TTL(time-to-live)에 도달한 경우 임대가 만료된 다음, 복제본이 해당 특정 AG의 확인 상태로 전환됩니다. 임대 중지 이벤트가 신호를 보내면 복제본은 확인 역할로 전환됩니다. 
+다른 장애 조치 메커니즘과 달리 SQL Server 인스턴스는 임대 메커니즘에서 활성 역할을 수행합니다. 임대 메커니즘은 클러스터 리소스 호스트와 SQL Server 프로세스 간에 Looks-Alive 유효성 검사로 사용됩니다. 메커니즘은 서로의 상태를 확인하고 궁극적으로 분리 장애(split-brain) 시나리오를 방지하여 양쪽(클러스터 서비스 및 SQL Server 서비스)이 자주 접촉하는 상태에 있는지 확인하는 데 사용됩니다.  주 복제본인 AG를 온라인으로 전환하면 SQL Server 인스턴스는 AG에 대한 전용 임대 작업자 스레드를 생성합니다. 임대 작업자는 임대 갱신 및 임대 중지 이벤트를 비롯한 리소스 호스트와 메모리의 작은 지역을 공유합니다. 임대 작업자 및 리소스 호스트는 순환 방식으로 작동하며 고유한 임대 갱신 이벤트 또는 중지 이벤트를 알리기 위해 해당하는 임대 갱신 이벤트에 신호를 전송한 다음, 중지하고, 다른 당사자를 대기합니다. 리소스 호스트 및 SQL Server 임대 스레드는 모두 다른 스레드의 신호를 받은 후에 스레드가 다시 시작될 때마다 업데이트되는 TTL(time-to-live) 값을 유지합니다. 신호를 기다리는 동안 TTL(time-to-live)에 도달한 경우 임대가 만료된 다음, 복제본이 해당 특정 AG의 확인 상태로 전환됩니다. 임대 중지 이벤트가 신호를 보내면 복제본은 확인 역할로 전환됩니다. 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 임대 메커니즘은 SQL Server와 Windows Server 장애 조치(failover) 클러스터 간에 동기화를 적용합니다. 장애 조치 명령이 실행될 때 클러스터 서비스는 현재 주 복제본의 리소스 DLL에 오프라인 호출을 수행합니다. 먼저 리소스 DLL은 저장 프로시저를 사용하여 AG를 오프라인으로 전환하려고 합니다. 이 저장 프로시저가 실패하거나 시간 제한을 초과하면 클러스터 서비스에 다시 오류가 보고됩니다. 그러면 종료 명령이 발급됩니다. 종료는 다시 동일한 저장 프로시저를 실행하려고 하지만 이번에 클러스터는 새 복제본에서 AG를 온라인 상태로 전환하기 전에 리소스 DLL가 성공 또는 실패를 보고하기를 기다리지 않습니다. 이 두 번째 프로시저 호출에 실패하는 경우 리소스 호스트는 인스턴스를 오프라인 상태로 전환하는 임대 메커니즘을 사용해야 합니다. 리소스 DLL을 호출하여 AG를 오프라인 상태로 전환하면 리소스 DLL은 임대 중지 이벤트에 신호를 보내며 SQL Server 임대 작업자 스레드를 다시 시작하여 AG를 오프라인 상태로 전환합니다. 이 중지 이벤트가 신호를 보내지 않더라도 임대는 만료되고 복제본은 확인 상태로 전환됩니다. 
 
-임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU 또는 tempdb 가중으로 인해 임대 작업자 스레드가 부족해져서 SQL 인스턴스의 임대 갱신 메모리를 방해하고 장애 조치를 발생시킬 수 있습니다. 
+임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU, 메모리 부족 상태, 메모리 덤프를 생성하는 동안 응답하지 못하는 SQL 프로세스, 시스템 전반의 중지 또는 tempdb 압력은 임대 작업자 스레드를 손상시켜 SQL 인스턴스에서 임대 갱신을 방지하고 장애 조치(failover)를 발생시킬 수 있습니다. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>클러스터 제한 시간 값에 대한 지침 
 
@@ -80,7 +80,7 @@ AG의 실패 조건 수준은 상태 검사에 대한 오류 조건을 변경합
 | 2: OnServerUnresponsive | HealthCheckTimeout의 `sp_server_diagnostics`에서 수신된 데이터가 없는 경우
 | 3: OnCriticalServerError | (기본값)시스템 구성 요소가 오류를 보고하는 경우
 | 4: OnModerateServerError | 리소스 구성 요소가 오류를 보고하는 경우 
-| 5:  OnAnyQualifiedFailureConitions |  쿼리 처리 구성 요소가 오류를 보고하는 경우
+| 5: OnAnyQualifiedFailureConitions |  쿼리 처리 구성 요소가 오류를 보고하는 경우
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>클러스터 및 Always On 시간 제한 값 업데이트 
 

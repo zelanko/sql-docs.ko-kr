@@ -14,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5564de165e053a871202798ee55b07f2dccc1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524817"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ MAKE TABLE 쿼리를 작성하는 경우 새 테이블의 이름을 입력하십
 현재 쿼리에서 모든 테이블의 전체 열이 결과 집합에 포함되도록 지정합니다. 이 옵션을 선택하면 SQL 문에서 SELECT 키워드 다음에 개별 열 이름 대신 별표(*)를 지정하는 것과 결과가 같습니다.  
   
 **쿼리 매개 변수 목록**  
-쿼리 매개 변수를 표시합니다. 이 매개 변수를 편집하려면 속성을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 일반 OLE DB에만 적용됩니다.  
+쿼리 매개 변수를 표시합니다. 이 매개 변수를 편집하려면 속성을 클릭한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 일반 OLE DB에만 적용됩니다.  
   
 **SQL 주석**  
-SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 쿼리의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
+SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 쿼리의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 **Top 사양 범주**  
 확장하면 **Top**, **Percent**, **식**및 **With Ties** 속성이 표시됩니다.  

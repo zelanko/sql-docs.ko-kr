@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606001"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413699"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
 페이지 레이아웃, 페이지 나누기 및 페이지 크기를 비롯하여 원하는 방식으로 보고서를 작성해야 하므로 페이지를 매긴 보고서에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더링 확장을 읽어보세요. 

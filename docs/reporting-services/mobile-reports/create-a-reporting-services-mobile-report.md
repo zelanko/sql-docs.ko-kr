@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030202"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710704"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서 만들기
-SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server 2016 Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  
+SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 SQL Server Reporting Services 모바일 보고서를 빠르게 만들 수 있습니다.  
   
 모바일 보고서를 처음 만들 때는 Reporting Services 웹 포털에서 로컬 컴퓨터에 SQL Server 모바일 보고서 게시자를 설치할 수 있습니다. 또는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=733527)에서 설치할 수 있습니다. 처음 만든 후에는 웹 포털이나 로컬에서 보고서 게시자를 시작할 수 있습니다.   
     
@@ -62,7 +62,7 @@ SQL Server 모바일 보고서 게시자를 사용하면 조정 가능한 표 �
   
 11. 이제 보고서를 저장합니다. 왼쪽 위의 저장 아이콘을 선택하고 **로컬에 저장** 또는 **서버에 저장**을 클릭합니다.  
   
-   보고서를 서버에 저장하려면 SQL Server 2016 Reporting Services 보고서 서버 액세스 권한이 있어야 합니다.  
+   보고서를 서버에 저장하려면 SQL Server Reporting Services 보고서 서버 액세스 권한이 있어야 합니다.  
      
    ### <a name="see-also"></a>관련 항목:  
      

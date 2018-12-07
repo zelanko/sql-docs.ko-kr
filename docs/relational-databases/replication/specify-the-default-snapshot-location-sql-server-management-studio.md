@@ -14,12 +14,12 @@ ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ca691be3a18e6b74c407707ec3e2203629d9c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa167df2f75b42cf5612b725cbfd368f4dc4407
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843501"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519948"
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>기본 스냅숏 위치 지정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47843501"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅숏 위치를 수정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경할 게시자의 속성 단추(**…**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경하려는 게시자의 속성 단추(**...**)를 클릭합니다.  
   
 2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
   

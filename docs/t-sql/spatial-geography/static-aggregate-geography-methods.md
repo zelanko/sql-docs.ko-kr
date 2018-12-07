@@ -15,12 +15,12 @@ ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1f999e3558d31ea8b869917acec1d5f5a9028ea
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 157347e9eebe108396e908b017b8103cff5b7a9b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502309"
 ---
 # <a name="static-aggregate-geography-methods"></a>정적 지리 집계 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

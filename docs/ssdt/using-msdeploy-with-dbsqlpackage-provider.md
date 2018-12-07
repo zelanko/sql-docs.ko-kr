@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520948"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
@@ -39,16 +39,16 @@ DACFx에 대한 자세한 내용은 [https://msdn.microsoft.com/library/microsof
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 동사  
-**–verb** 스위치를 사용하여 MS-Deploy 명령줄에 MS-Deploy 동사를 지정합니다. **dbSqlPackage** 공급자는 다음 **MSDeploy** 동사를 지원합니다.  
+MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사를 지정합니다. **dbSqlPackage** 공급자는 다음 **MSDeploy** 동사를 지원합니다.  
   
 |동사|설명|  
 |--------|---------------|  
-|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
+|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 원본  
 **dbSqlPackage** 공급자는 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로인 입력을 받아들입니다.  공급자의 입력 원본을 지정하는 구문은 다음과 같습니다.  
@@ -183,24 +183,24 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
 다음은 **dbSqlPackage**를 사용하는 **Extract** 작업의 예제 구문입니다.  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 다음은 **dbSqlPackage**를 사용하는 **Publish** 작업의 예제 구문입니다.  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 다음은 **dbSqlPackage**를 사용하는 **DeployReport** 작업의 예제 구문입니다.  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 다음은 **dbSqlPackage**를 사용하는 **Script** 작업의 예제 구문입니다.  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

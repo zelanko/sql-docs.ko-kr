@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538083"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
   
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 데이터를 가져오려면( `bcp in –c –C65001 –f format_file` …” 또는 “`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...”을 사용하여) 데이터 정렬/코드 페이지에 대한 정보는 65001보다 높은 우선 순위를 갖습니다.  
+ `bcp in -c -C65001 -f format_file` ..." 또는 "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..."을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터를 가져오려는 경우 데이터 정렬/코드 페이지에 대한 정보가 65001 옵션보다 우선됩니다.  
 따라서 서식 파일을 생성하는 경우 생성된 서식 파일에서 데이터 정렬 정보를 수동으로 삭제한 후 데이터 가져오기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](으)로 다시 가져와야 합니다.  
 다음은 데이터 정렬 정보가 없는 서식 파일의 예입니다.  
   
@@ -203,7 +203,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  생성된 `Department-c.xml`서식 파일에는 다음 XML 요소가 포함됩니다.  

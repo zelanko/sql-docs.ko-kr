@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20ce7b15fcfedfe77ff3a03a4dfde1e47969ffad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542441"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,12 +68,12 @@ ms.locfileid: "47701931"
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 함수  
- OPENROWSET 대량 행 집합 공급자는 OPENROWSET 함수를 호출하고 BULK 옵션을 지정하여 액세스합니다. OPENROWSET(BULK…) 함수를 사용하면 OLE DB 공급자를 통해 데이터 파일 등의 원격 데이터 원본에 연결하여 원격 데이터에 액세스할 수 있습니다.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)은 함수  
+ OPENROWSET 대량 행 집합 공급자는 OPENROWSET 함수를 호출하고 BULK 옵션을 지정하여 액세스합니다. OPENROWSET(BULK...) 함수를 사용하면 OLE DB 공급 기업을 통해 데이터 파일 등의 원격 데이터 원본에 연결하여 원격 데이터에 액세스할 수 있습니다.  
 
 **적용 대상:** `OPENROWSET`은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 사용할 수 없습니다.
   
- 데이터를 대량으로 가져오려면 INSERT 문 내의 SELECT…FROM 절에서 OPENROWSET(BULK…)를 호출합니다. 데이터 대량 가져오기의 기본 구문은 다음과 같습니다.  
+ 데이터를 대량으로 가져오려면 INSERT 문 내의 SELECT...FROM 절에서 OPENROWSET(BULK...)를 호출합니다. 데이터 대량 가져오기의 기본 구문은 다음과 같습니다.  
   
  INSERT ... 로 기본 값 사용  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47701931"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 인증된 Windows 사용자의 자격 증명을 전달하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있도록 구성될 수 있습니다. 이러한 작업을 *가장* 또는 *위임*이라고 합니다. BULK INSERT 또는 OPENROWSET을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용자 가장에 대한 보안을 처리하는 방법을 이해해야 합니다. 사용자 가장을 사용하면 데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 또는 사용자와는 다른 컴퓨터에 저장할 수 있습니다. 예를 들어 **Computer_A** 의 사용자에게 **Computer_B**의 데이터 파일에 대한 액세스 권한이 있고 자격 증명의 위임이 적절하게 설정되어 있는 경우 해당 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **에서 실행 중인**인스턴스에 연결하고 **Computer_B**의 데이터 파일에 액세스하여 해당 파일의 데이터를 **Computer_C**의 테이블로 대량 가져올 수 있습니다.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>원격 데이터 파일에서 대량 가져오기  
- BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*이라는 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.  
+ BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_의 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.  
   
  예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce`에서 공유 폴더 `computer2`에 있습니다.  
   

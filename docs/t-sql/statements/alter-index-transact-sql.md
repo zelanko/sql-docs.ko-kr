@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845711"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537779"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -336,7 +336,7 @@ FILLFACTOR = *fillfactor*
  채우기 비율 설정을 보려면 **sys.indexes**를 사용하세요.  
   
 > [!IMPORTANT]
-> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR  값으로 클러스터형 인덱스를 만들거나 변경하면 데이터가 차지하는 저장 공간 크기에 영향이 미칩니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR 값으로 클러스터형 인덱스를 만들거나 변경하면 데이터가 차지하는 저장 공간 크기에 영향이 미칩니다.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
@@ -693,7 +693,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 |-|-|  
 |ALLOW_ROW_LOCKS = ON 또는 OFF|힙 및 연결된 비클러스터형 인덱스|  
 |ALLOW_PAGE_LOCKS = ON|힙 및 연결된 비클러스터형 인덱스|  
-|ALLOW_PAGE_LOCKS = OFF|비클러스터형 인덱스 전체. 즉, 비클러스터형 인덱스에는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타(X) 잠금만 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS,  IU  또는 IX)을 획득할 수 있습니다.|  
+|ALLOW_PAGE_LOCKS = OFF|비클러스터형 인덱스 전체. 즉, 비클러스터형 인덱스에는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타(X) 잠금만 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS, IU 또는 IX)을 획득할 수 있습니다.|  
   
 ## <a name="online-index-operations"></a> 온라인 인덱스 작업  
 인덱스를 다시 작성할 때 ONLINE 옵션이 ON으로 설정되어 있으면 기본 개체, 테이블 및 연결된 인덱스를 쿼리와 데이터 수정에 사용할 수 있습니다. 단일 파티션에 있는 인덱스 부분을 온라인으로 다시 작성할 수도 있습니다. 변경 중에는 아주 잠시 동안만 배타적 테이블 잠금이 유지됩니다.  
@@ -720,7 +720,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
  
 -  같은 매개 변수를 지정하고 원본 ALTER INDEX REBUILD 문을 다시 실행하면 일시 중지된 인덱스 다시 작성 작업이 다시 시작됩니다. 또한 ALTER INDEX RESUME 문을 실행하여 일시 중지된 인덱스 다시 작성 작업을 다시 시작할 수도 있습니다.
 -  SORT_IN_TEMPDB=ON 옵션은 다시 시작 가능한 인덱스에 대해 지원되지 않습니다. 
--  RESUMABLE=ON 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin tran ... commit block의 일부일 수 없음).
+-  RESUMABLE=ON 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin TRAN ... commit  Block에 속할 수 없습니다).
 -  일시 중지된 인덱스 작업만이 다시 시작될 수 있습니다.
 -  일시 중지된 인덱스 작업을 다시 시작할 때 MAXDOP 값을 새 값으로 변경할 수 있습니다.  일시 중지된 인덱스 작업을 다시 시작할 때 MAXDOP를 지정하지 않으면 마지막 MAXDOP 값을 가져옵니다. 인덱스 다시 작성 작업에 대해 MAXDOP 옵션을 전혀 지정하지 않으면 기본값을 가져옵니다.
 - 인덱스 작업을 즉시 일시 중지하려면 진행 중인 명령을 중지하거나(Ctrl-C) ALTER INDEX PAUSE 명령 또는 KILL *session_id* 명령을 실행할 수 있습니다. 명령이 일시 중지된 후 RESUME 옵션을 사용하여 다시 시작할 수 있습니다.
@@ -733,7 +733,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
    -    비활성화된 인덱스 다시 작성은 RESUMABLE=ON 상태에서 지원되지 않습니다.
    -    ALTER INDEX REBUILD ALL 명령
    -    인덱스 다시 작성을 사용한 ALTER TABLE  
-   -    "RESUMABLE=ON" 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin tran ... commit  block의 일부일 수 없음).
+   -    “RESUMABLE=ON” 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin TRAN ... commit Block에 속할 수 없습니다)
    -    계산되었거나 TIMESTAMP 열을 키 열로 포함하는 인덱스를 다시 작성합니다.
 -   LOB 열을 포함하는 기본 테이블의 경우 다시 시작 가능한 클러스터형 인덱스를 다시 작성하려면 이 작업의 시작 부분에 Sch-M 잠금이 필요합니다.
    -    SORT_IN_TEMPDB=ON 옵션은 다시 시작 가능한 인덱스에 대해 지원되지 않습니다. 
@@ -768,7 +768,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 -   The ALTER INDEX \<index> ... REBUILD  WITH  ...  구문은 인덱스의 모든 파티션을 다시 작성합니다.  
   
 ## <a name="statistics"></a>통계  
- **ALTER INDEX ALL ...** 을 테이블에 대해 실행하면 인덱스와 연관된 통계만 업데이트됩니다. 인덱스 대신 테이블에 대해 만들어진 자동 또는 수동 통계는 업데이트되지 않습니다.  
+ 테이블에서 **ALTER INDEX ALL ...** 을 실행하면 인덱스와 연결된 통계만 업데이트됩니다. 인덱스 대신 테이블에 대해 만들어진 자동 또는 수동 통계는 업데이트되지 않습니다.  
   
 ## <a name="permissions"></a>Permissions  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
@@ -1000,7 +1000,7 @@ GO
 ## <a name="examples-rowstore-indexes"></a>예제: rowstore 인덱스  
   
 ### <a name="a-rebuilding-an-index"></a>1. 인덱스 다시 작성  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 단일 인덱스를 다시 작성합니다.  
+ 다음 예에서는 `Employee` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 단일 인덱스를 다시 작성합니다.  
   
 ```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
@@ -1040,7 +1040,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>4. 인덱스에 옵션 설정  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `AK_SalesOrderHeader_SalesOrderNumber` 인덱스에 몇 가지 옵션을 설정합니다.  
+ 다음 예에서는 `AK_SalesOrderHeader_SalesOrderNumber` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 인덱스에 몇 가지 옵션을 설정합니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -1056,7 +1056,7 @@ GO
 ```  
   
 ### <a name="e-disabling-an-index"></a>5. 인덱스 비활성화  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 비클러스터형 인덱스를 비활성화합니다.  
+ 다음 예에서는 `Employee` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 비클러스터형 인덱스를 비활성화합니다.  
   
 ```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1095,7 +1095,7 @@ GO
 ```  
   
 ### <a name="h-rebuilding-a-partitioned-index"></a>8. 분할된 인덱스 다시 작성  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 분할된 인덱스 `5`의 단일 파티션인 파티션 번호 `IX_TransactionHistory_TransactionDate`를 다시 작성합니다. 파티션 5가 온라인으로 다시 작성되고 낮은 우선 순위 잠금에 대한 10분 대기 시간이 인덱스 다시 작성 작업으로 획득된 모든 잠금에 개별적으로 적용됩니다. 이 시간 동안에는 인덱스 다시 작성을 완료하기 위한 잠금을 획득할 수 없으며, 다시 작성 작업 문이 중단됩니다.  
+ 다음 예에서는 `5` 데이터베이스에 있는 분할된 인덱스 `IX_TransactionHistory_TransactionDate`의 단일 파티션인 파티션 번호 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 다시 작성합니다. 파티션 5가 온라인으로 다시 작성되고 낮은 우선 순위 잠금에 대한 10분 대기 시간이 인덱스 다시 작성 작업으로 획득된 모든 잠금에 개별적으로 적용됩니다. 이 시간 동안에는 인덱스 다시 작성을 완료하기 위한 잠금을 획득할 수 없으며, 다시 작성 작업 문이 중단됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525323"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "51640140"
 > [!NOTE]  
 >  **새로 만들기**를 클릭하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 연결된 데이터 원본에 따라 기본 CREATE TABLE 문을 생성합니다. 원본 테이블에 선언된 FILESTREAM 특성이 포함된 열이 있어도 기본 CREATE TABLE 문은 FILESTREAM 특성을 포함하지 않습니다. FILESTREAM 특성이 포함된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소를 실행하려면 먼저 대상 데이터베이스에서 FILESTREAM 저장소를 구현하십시오. 그런 다음 **테이블 만들기** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 추가하십시오. 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>데이터 액세스 모드 = 테이블 또는 뷰 - 빠른 로드  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>데이터 액세스 모드 = 테이블 또는 뷰 - 빠른 로드  
  **테이블 또는 뷰 이름**  
  이 목록을 사용하여 데이터베이스에서 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 테이블을 만듭니다.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640140"
  **변수 이름**  
  테이블 또는 뷰 이름이 포함된 변수를 선택합니다.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>데이터 액세스 모드 = 테이블 이름 또는 뷰 이름 변수 - 빠른 로드  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>데이터 액세스 모드 = 테이블 이름 또는 뷰 이름 변수 - 빠른 로드  
  **변수 이름**  
  테이블 또는 뷰 이름이 포함된 변수를 선택합니다.  
   

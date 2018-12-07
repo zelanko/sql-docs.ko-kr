@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507388"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE(Transact-SQL) IDENTITY (Property)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -68,9 +68,9 @@ IDENTITY [ (seed , increment) ]
   
 -   **트랜잭션 내에서 연속적인 값** – 테이블에서 다른 동시 삽입이 발생할 수 있기 때문에 여러 행 삽입 트랜잭션은 행에 대한 연속적인 값 가져오기를 보장하지 않습니다. 값이 연속적이어야 하는 경우 트랜잭션에서 테이블에 대해 배타적 잠금을 사용하거나 **SERIALIZABLE** 격리 수준을 사용해야 합니다.  
   
--   **서버 다시 시작 또는 다른 실패 후 연속적인 값** – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 성능상의 이유로 ID 값을 캐싱할 수 있으며 데이터베이스 오류 또는 서버 재시작 중에 지정된 값의 일부가 손실될 수 있습니다. 그러면 삽입 시 ID 값에서 간격이 발생할 수 있습니다. 간격이 허용되지 않는 경우 응용 프로그램에서 고유 메커니즘을 사용하여 키 값을 생성해야 합니다. **NOCACHE** 옵션과 함께 시퀀스 생성기를 사용하면 커밋되지 않는 트랜잭션에 대한 간격을 제한할 수 있습니다.  
+-   **서버 다시 시작 또는 다른 실패 후 연속적인 값** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 성능상의 이유로 ID 값을 캐싱할 수 있으며 데이터베이스 오류 또는 서버 재시작 중에 지정된 값의 일부가 손실될 수 있습니다. 그러면 삽입 시 ID 값에서 간격이 발생할 수 있습니다. 간격이 허용되지 않는 경우 응용 프로그램에서 고유 메커니즘을 사용하여 키 값을 생성해야 합니다. **NOCACHE** 옵션과 함께 시퀀스 생성기를 사용하면 커밋되지 않는 트랜잭션에 대한 간격을 제한할 수 있습니다.  
   
--   **값의 재사용** – 특정 IDENTITY 속성에 특정 초기값/증가값이 지정된 경우, 이 ID 값은 엔진에서 다시 사용되지 않습니다. 특정 insert 문이 실패하거나 insert 문이 롤백되는 경우 사용된 ID 값은 손실되고 다시 생성되지 않습니다. 그 결과 후속 ID 값이 생성될 때 간격이 발생할 수 있습니다.  
+-   **값의 재사용** – 특정 IDENTITY 속성에 특정 시드/증가값이 지정된 경우, 이 ID 값은 엔진에서 다시 사용되지 않습니다. 특정 insert 문이 실패하거나 insert 문이 롤백되는 경우 사용된 ID 값은 손실되고 다시 생성되지 않습니다. 그 결과 후속 ID 값이 생성될 때 간격이 발생할 수 있습니다.  
   
  이러한 제한 사항은 일반적인 많은 상황에서 허용되므로 성능 개선을 위한 디자인의 일부입니다. 이러한 제한 사항 때문에 ID 값을 사용할 수 없는 경우 현재 값을 저장하는 별도 테이블을 만들고 응용 프로그램에 대한 테이블 및 번호 지정 액세스를 관리하세요.  
   

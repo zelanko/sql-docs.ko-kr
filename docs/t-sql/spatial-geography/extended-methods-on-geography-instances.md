@@ -13,12 +13,12 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9848ec9734163720c09954e927f0426be1d0c6eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2e5ffebd88c962313e525b110100bf82d2865e40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535479"
 ---
 # <a name="extended-methods-on-geography-instances"></a>geography 인스턴스의 확장 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

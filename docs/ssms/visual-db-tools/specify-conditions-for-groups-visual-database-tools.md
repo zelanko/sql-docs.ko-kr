@@ -14,12 +14,12 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 249123a596ef53bf32758e7b03a9e1e1198b2e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dd5f15a013da84217bb588bca8efbf62d257108
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509638"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>그룹 조건 지정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

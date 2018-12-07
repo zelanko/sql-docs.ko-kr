@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2339f855afa7bfa8fb7a3ed0538aeb40b6c1600
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673091"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530398"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47673091"
     **인스턴스**  
     이벤트가 발생한 인스턴스의 이름입니다. 이 이름은 *컴퓨터 이름*\\*인스턴스 이름*으로 표시됩니다.  
   
-    **날짜**  
+    **Date**  
     이벤트의 날짜를 표시합니다.  
   
     **원본**  

@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522920"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SQL Server 버전  |재배포 가능 설치 링크
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     `Get-AzureRmKeyVault` cmdlet을 호출하여 권한을 확인합니다. '액세스 정책' 아래의 문 출력에 이 주요 자격 증명 모음에 대한 액세스 권한이 다른 테넌트로 나열되는 AAD 응용 프로그램 이름이 표시되어야 합니다.  
+     `Get-AzureRmKeyVault` cmdlet을 호출하여 권한을 확인합니다. 이 주요 자격 증명 모음에 대한 액세스 권한이 있는 다른 테넌트로 나열되는 AAD 애플리케이션 이름이 '액세스 정책' 아래의 명령문 출력에 표시되어야 합니다.  
   
        
 5.  **주요 자격 증명 모음에서 비대칭 키 생성**  
@@ -191,15 +191,15 @@ SQL Server 버전  |재배포 가능 설치 링크
   
         > [!IMPORTANT]  
         >  SQL Server 커넥터는 “a-z”, “A-Z”, “0-9” 및 “-” 문자만 키 이름에 사용할 수 있으며, 키 이름은 26자로 제한됩니다.   
-        > Azure 주요 자격 증명 모음에서 동일한 키 이름의 여러 키 버전은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터와 함께 작동되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용하는 Azure 주요 자격 증명 모음을 회전하려면 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)에서 키 롤오버 단계를 참조하세요.  
+        > Azure 주요 자격 증명 모음에서 동일한 키 이름의 여러 키 버전은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터와 함께 작동되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용되는 Azure Key Vault 키를 전환하려면 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)에서 키 롤오버 단계를 참조하세요.  
 
     ### <a name="import-an-existing-key"></a>기존 키 가져오기   
   
     기존 2048비트 RSA 소프트웨어 보호된 키가 있는 경우 키를 Azure Key Vault에 업로드할 수 있습니다. 예를 들어 `C:\\` 드라이브에 저장된 .PFX 파일(이름: `softkey.pfx` )이 있고 Azure Key Vault에 업로드하려는 경우에는 다음을 입력하여 .PFX 파일에 `securepfxpwd` 의 암호에 대한 `12987553` 변수를 설정합니다.  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     다음을 입력하여 .PFX 파일에서 키를 가져올 수 있습니다. 이렇게 하면 Key Vault 서비스에서 하드웨어(권장)로부터 키가 보호됩니다.  
@@ -215,7 +215,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 
     ### <a name="create-a-new-key"></a>새 키 만들기
     #### <a name="example"></a>예:  
-    또는 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다.  이 예제에서는 `Add-AzureKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호된 키를 만들어 봅시다.  
+    또는 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다.  이 예제에서는 `Add-AzureKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호 키를 만들어 봅시다.  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -242,7 +242,7 @@ SQL Server 버전  |재배포 가능 설치 링크
  [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
 
 > [!NOTE]  
->  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드"의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 또는 이후 버전으로 업그레이드하세요.
+>  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.
 
 > [!NOTE]  
 > 1.0.5.0 버전의 경우 지문 알고리즘 측면에서 큰 변화가 있습니다. 1.0.5.0 버전으로 업그레이드한 후 데이터베이스 복원 실패가 발생할 수 있습니다. [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) KB 문서를 참조하세요.
@@ -345,7 +345,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
      2부에 설명한 대로 비대칭 키를 가져온 경우 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트에서 키 이름을 제공하여 키를 엽니다.  
   
-    -   `CONTOSO_KEY` 를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 키 이름으로 바꿉니다.  
+    -   `CONTOSO_KEY`를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용하려는 키 이름으로 바꿉니다.  
   
     -   `ContosoRSAKey0` 을 Azure 주요 자격 증명 모음의 키 이름으로 바꿉니다.  
   

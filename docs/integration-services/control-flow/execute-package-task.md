@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535704"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "51640680"
  자세한 내용은 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/legacy-package-deployment-ssis.md#child)을 참조하세요.  
   
 ### <a name="accessing-parent-package-variables"></a>부모 패키지 변수 액세스  
- 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기** 의 **스크립트**페이지에서 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다.  
+ 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기**의 **스크립트** 페이지에 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다.  
   
 ## <a name="configuring-the-execute-package-task"></a>패키지 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "51640680"
 >  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조** 로 설정됩니다. [Integration Services(SSIS) 프로젝트 및 패키지를 배포합니다](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **암호**  
- 자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추 (...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
+ 자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추(...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
   
  **ExecuteOutOfProcess**  
  자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은 **False**로 설정되고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행됩니다. 이 속성을 **true**로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 **true**로 설정하면 도구만 설치로 패키지를 디버그할 수 없으며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
@@ -193,7 +193,7 @@ ms.locfileid: "51640680"
  **관련 항목:** [OLE DB 연결 관리자 구성](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- 자식 패키지의 이름을 입력하거나 줄임표 (...)를 클릭하여 패키지를 찾습니다.  
+ 자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  
   
 ##### <a name="location--file-system"></a>Location = 파일 시스템  
  **대량 삽입 태스크 편집기**  

@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401328"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696681"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 해당 이벤트 세션을 자동으로 시작할지 여부를 지정합니다.  
   
 > [!NOTE]  
->  STARTUP_STATE = ON이면 SQL Server를 중지했다가 다시 시작한 경우에만 이벤트 세션이 시작됩니다.  
+> `STARTUP_STATE = ON`이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을(를) 중지했다가 다시 시작한 경우에만 이벤트 세션이 시작됩니다.  
   
  ON  
  시작 시 이벤트 세션이 시작됩니다.  
@@ -239,15 +238,15 @@ ON SERVER
  시작 시 이벤트 세션이 시작되지 않습니다.  
   
 ## <a name="remarks"></a>Remarks  
- 논리 연산자의 우선 순위는 NOT(가장 높음), AND, OR 순입니다.  
+논리 연산자의 우선 순위는 `NOT`(가장 높음), `AND`, `OR` 순입니다.  
   
 ## <a name="permissions"></a>Permissions  
- ALTER ANY EVENT SESSION 권한이 필요합니다.  
+`ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `test_session`이라는 이벤트 세션을 만드는 방법을 보여 줍니다. 두 개의 이벤트를 추가하며 Windows용 이벤트 추적 대상을 사용합니다.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

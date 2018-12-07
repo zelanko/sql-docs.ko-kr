@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606533"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406190"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606533"
   자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 ### <a name="clustering"></a>Clustering  
- 클러스터된 명명된 인스턴스를 숨기면 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 이렇게 되면 클러스터 인스턴스의 **IsAlive** 검사가 실패하게 되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 오프라인 상태가 됩니다. 인스턴스에 대해 구성한 정적 포트를 반영하도록 클러스터된 인스턴스의 모든 노드에서 별칭을 만드는 것이 좋습니다.  
+ 클러스터된 명명된 인스턴스를 숨기면 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 이렇게 되면 클러스터 인스턴스의 **IsAlive** 검사가 실패하게 되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) 오프라인 상태가 됩니다. 인스턴스에 대해 구성한 정적 포트를 반영하도록 클러스터된 인스턴스의 모든 노드에서 별칭을 만드는 것이 좋습니다.  
  자세한 내용은 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   
  클러스터된 명명된 인스턴스를 숨기면 **LastConnect** 레지스트리 키(**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트가 아닌 다른 포트가 있는 경우 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없는 경우 다음과 유사한 오류가 표시될 수 있습니다.  

@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392856"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "51696799"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -144,20 +143,20 @@ ON SERVER
 |STARTUP_STATE = { ON &#124; **OFF** }|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 해당 이벤트 세션을 자동으로 시작할지 여부를 지정합니다.<br /><br /> STARTUP_STATE = ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지했다가 다시 시작한 경우에만 이벤트 세션이 시작됩니다.<br /><br /> ON= 시작 시 이벤트 세션이 시작됩니다.<br /><br /> **OFF** = 시작 시 이벤트 세션이 시작되지 않습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- ADD 및 DROP 인수는 같은 문에 동시에 사용할 수 없습니다.  
+ `ADD` 및 `DROP` 인수는 같은 명령문에 동시에 사용할 수 없습니다.  
   
 ## <a name="permissions"></a>Permissions  
- ALTER ANY EVENT SESSION 권한이 필요합니다.  
+ `ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이벤트 세션을 시작하고 몇 가지 사용 중인 세션 통계를 확인한 다음 기존 세션에 두 개의 이벤트를 추가합니다.  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  

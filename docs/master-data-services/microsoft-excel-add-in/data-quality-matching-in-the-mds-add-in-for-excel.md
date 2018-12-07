@@ -11,12 +11,12 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713101"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402699"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel용 MDS 추가 기능의 데이터 품질 일치
 
@@ -24,7 +24,7 @@ ms.locfileid: "47713101"
 
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가하기 전에 새 데이터와 MDS에서 관리되는 기존 데이터를 비교하면 중복되거나 정확하지 않은 데이터가 추가되는 것을 방지할 수 있습니다.  
   
- MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 DQS(Data Quality Services)를 사용하여 비슷한 데이터를 일치시킵니다. 추가 기능에 포함된 일치 기능을 사용하면 비슷한 레코드가 그룹화되고 결과의 정확성을 보여 주는 점수가 표시됩니다. DQS가 제공하는 일치 기능에 대한 자세한 내용은 [Data Matching](../../data-quality-services/data-matching.md)를 참조하십시오.  
+ MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 DQS(Data Quality Services)를 사용하여 비슷한 데이터를 일치시킵니다. 추가 기능에 포함된 일치 기능을 사용하면 비슷한 레코드가 그룹화되고 결과의 정확성을 보여 주는 점수가 표시됩니다. DQS가 제공하는 일치 기능에 대한 자세한 내용은 [Data Matching](../../data-quality-services/data-matching.md)를 참조하십시오.  
   
 ## <a name="workflow-for-data-quality-matching"></a>데이터 품질 일치 워크플로  
  DQS를 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]와 함께 사용하는 경우 다음 워크플로를 따르십시오.  

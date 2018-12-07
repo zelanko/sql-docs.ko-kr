@@ -12,16 +12,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 18b9b09e5437889389f23b32c61b237ab65d3207
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519757"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Data Tools(SSDT)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 작성하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
+SSDT(SQL Server Data Tools)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 빌드하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
   
 SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-server-data-tools-ssdt.md)를 사용하여 이전 버전의 SQL Server에서 실행되는 데이터베이스, 모델, 보고서 및 패키지를 설계하고 배포할 수 있습니다.  
   

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534767"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -143,7 +143,7 @@ Enclave 사용 키를 도입해도 [Always Encrypted의 키 프로비전 키 및
 - 데이터베이스의 열 마스터 키 메타데이터에 있는 **ENCLAVE_COMPUTATIONS** 속성이 설정됩니다.
 - 열 마스터 키 속성 값(**ENCLAVE_COMPUTATIONS**의 설정 포함)이 디지털로 서명됩니다. 이 도구는 실제 열 마스터 키를 사용하여 생성된 서명을 메타데이터에 추가합니다. 이 서명의 용도는 악의적인 DBA 및 컴퓨터 관리자가 **ENCLAVE_COMPUTATIONS** 설정을 변조하지 못하게 하는 것입니다. SQL 클라이언트 드라이버는 Enclave 사용을 허용하기 전에 서명을 확인합니다. 이를 통해 보안 관리자는 Enclave 내에서 계산될 수 있는 열 데이터를 제어할 수 있습니다.
 
-열 마스터 키의 **ENCLAVE_COMPUTATIONS** 속성은 변경할 수 없습니다. 따라서 키가 프로비전된 후에 변경할 수 없습니다. 하지만 [열 마스터 키 순환](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key) 프로세스를 통해 열 마스터 키를 원래 값과는 다른 **ENCLAVE_COMPUTATIONS** 속성 값을 갖는 새 키로 바꿀 수 있습니다. **ENCLAVE_COMPUTATIONS** 속성에 대한 자세한 내용은 [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요.
+열 마스터 키의 **ENCLAVE_COMPUTATIONS** 속성은 변경할 수 없습니다. 즉, 키가 프로비전된 후에 변경할 수 없습니다. 하지만 [열 마스터 키 순환](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key) 프로세스를 통해 열 마스터 키를 원래 값과는 다른 **ENCLAVE_COMPUTATIONS** 속성 값을 갖는 새 키로 바꿀 수 있습니다. **ENCLAVE_COMPUTATIONS** 속성에 대한 자세한 내용은 [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요.
 
 Enclave 사용 열 암호화 키를 프로비전하려면 열 암호화 키를 암호화하는 열 마스터 키가 Enclave 사용 키인지 확인해야 합니다.
 
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Enclave 사용 키 프로비전 - Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>Enclave 사용 키 프로비전 - Azure Key Vault
 
 클라이언트/개발 컴퓨터에서 Windows PowerShell ISE를 열고 다음 스크립트를 실행합니다.
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설
 - 단점:
   - 암호화 유형을 결정적 암호화에서 임의 암호화로 변경하도록 지원하지 않으므로, 확실히 암호화된 열의 바로 암호화를 잠금 해제한 상태에서 리치 계산을 사용하도록 설정하지 않습니다.
   - 지정된 열 마스터 키와 연결된 일부 열만 선택적으로 변환할 수 없습니다.
-  - 키 관리 오버헤드가 발생하므로, 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 응용 프로그램에서 사용하도록 해야 합니다.  
+  - 키 관리 오버헤드가 발생하므로 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 애플리케이션에서 사용하도록 해야 합니다.  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>옵션 2: 이 방법은 1) 열 마스터 키 순환(옵션 1과 같음) 및 2) 임의 암호화를 사용하여 확실히 암호화된 열의 하위 집합 다시 암호화의 두 단계를 수행하여 해당 열에 대해 리치 계산을 사용하도록 설정합니다.
@@ -522,7 +522,7 @@ Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설
   
 - 단점:
   - 지정된 열 마스터 키와 연결된 일부 열만 선택적으로 변환할 수 없습니다.
-  - 키 관리 오버헤드가 발생하므로, 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 응용 프로그램에서 사용하도록 해야 합니다.
+  - 키 관리 오버헤드가 발생하므로 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 애플리케이션에서 사용하도록 해야 합니다.
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>옵션 3: 클라이언트 쪽에서 새 Enclave 사용 열 암호화 키 및 임의 암호화(필요한 경우)를 사용하여 선택한 열을 다시 암호화
   
@@ -724,7 +724,7 @@ Enclave 사용 열 암호화 키로 열을 암호화할 경우 ALTER TABLE 문�
 
 #### <a name="example"></a>예제
 
-SSN 열을 암호화하며, 열 수준에서 설정된 현재 데이터 정렬이 Latin1\_General\_BIN2라고 가정할 경우 아래 문은 열을 암호 해독(및 데이터 정렬을 변경하지 않고 유지)합니다. 또는 데이터 정렬을 BIN2 이외의 데이터 정렬로 변경하도록 선택할 수도 있습니다.
+SSN 열이 암호화되고 열 수준에서 설정된 현재 데이터 정렬이 Latin1\_General\_BIN2라고 가정할 경우 아래 명령문은 열을 암호 해독합니다(데이터 정렬을 변경하지 않고 유지하면 동일한 명령문에서 데이터 정렬을 BIN2 이외의 데이터 정렬로 변경하도록 선택할 수도 있습니다).
 
 
 ```sql
@@ -741,7 +741,7 @@ GO
 
 Enclave 사용 열에 리치 쿼리를 사용하는 가장 빠른 방법은 SSMS 쿼리 창에서 Always Encrypted에 대한 매개 변수화를 설정하는 것입니다. SSMS의 이 유용한 기능에 대한 자세한 내용은 다음을 참조하세요.
 
-- [Always Encrypted에 대한 매개 변수화 - SSMS를 사용하여 삽입, 업데이트 및 암호화된 열 기준 필터링](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Always Encrypted에 대한 매개 변수화 - SSMS를 사용하여 암호화된 열에 삽입, 업데이트 및 필터링](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [암호화된 열 쿼리](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 

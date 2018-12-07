@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534095"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47720631"
  데이터베이스의 장애 조치 시간은 미러 서버에서 Redo Queue의 로그를 롤포워드할 수 있는 속도에 따라 달라지며 이 속도는 주로 시스템 하드웨어와 현재 작업에 의해 결정됩니다. 주 데이터베이스의 사용량이 많으므로 주 서버는 미러 서버에서 로그를 롤포워드할 수 있는 시간보다 훨씬 빠르게 로그를 미러 서버로 전달할 수도 있습니다. 이 경우 미러 서버에서 Redo Queue의 로그를 롤포워드하는 동안 장애 조치에 오랜 시간이 걸릴 수 있습니다. Redo Queue의 현재 크기를 확인하려면 데이터베이스 미러링 성능 개체의 **Redo Queue** 카운터를 사용합니다. 자세한 내용은 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)을(를) 참조하세요.  
   
 ### <a name="estimating-the-failover-redo-rate"></a>장애 조치 다시 실행 속도 예측  
- 프로덕션 데이터베이스의 테스트 복사본을 사용하여 로그 레코드를 롤포워드하는 데 필요한 시간( *다시 실행 속도*)을 측정할 수 있습니다.  
+ 프로덕션 데이터베이스의 테스트 복사본을 사용하여 로그 레코드를 롤포워드하는 데 필요한 시간(*다시 실행 속도*)을 측정할 수 있습니다.  
   
  장애 조치 중에 롤포워드 시간을 측정하는 방법은 다시 실행 단계 중에 미러 서버가 사용하는 스레드 수에 따라 결정됩니다. 스레드 수는 다음 경우에 따라 달라집니다.  
   

@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13c981282065d8d18e1eb8be19157e0f9d691ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415889"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Set-Location (Encode-SqlName "Table:Test")
  **Decode-Sqlname** cmdlet을 사용하여 16진수 인코딩을 인코딩에 의해 표시되는 문자로 바꿀 수 있습니다.  
   
 ### <a name="examples-decoding"></a>예(디코딩)  
- 이 예에서는 “Table:Test”를 반환합니다.  
+ 이 예제에서는 "Table:Test"를 반환합니다.  
   
 ```  
 Decode-SqlName "Table%3ATest"  
@@ -76,7 +76,7 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>참고 항목  
  [PowerShell의 SQL Server 식별자](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

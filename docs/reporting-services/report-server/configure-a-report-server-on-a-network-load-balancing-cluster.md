@@ -7,12 +7,12 @@ ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-n
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/3/2018
-ms.openlocfilehash: 645a599f01233030167998bc8a720b5722a5b30f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: f9b56ce33635d51b989801b34eea279b53bd4041
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812796"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396136"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
 

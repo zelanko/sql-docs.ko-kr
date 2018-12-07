@@ -15,15 +15,15 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535545"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
-  **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
+  **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) 프로젝트를 사용할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
  
 > [!NOTE]
 > 이 문서에서는 일반적인 SSIS 카탈로그 및 온-프레미스에서 실행되는 SSIS 카탈로그를 설명합니다. Azure SQL Database에서 SSIS 카탈로그를 만들고 Azure에서 SSIS 패키지를 배포 및 실행할 수도 있습니다. 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
@@ -485,7 +485,7 @@ ms.locfileid: "51641412"
   
     -   **메서드 1**  
   
-         이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호를 갖고 있는 경우 이 방법을 사용합니다.  
+         이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호가 있는 경우 이 방법을 사용합니다.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  
@@ -627,7 +627,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
 > [!WARNING]  
 >  Always On에 대한 SSIS 지원을 활성화할 때까지 SSISDB 데이터베이스의 자동 장애 조치(Failover)는 지원되지 않습니다.  
   
- Always On 가용성 그룹에서 새로 추가된 보조 복제본이 테이블에 표시됩니다. 목록에서 각 복제본에 대한 **연결…** 단추를 클릭하고 인증 자격 증명을 입력하여 복제본에 연결합니다. 사용자 계정은 Always On에 대한 SSIS 지원을 활성화하도록 각 복제본에서 sysadmin 그룹의 구성원이어야 합니다. 각 복제본에 성공적으로 연결한 후 **확인** 을 클릭하여 Always On에 대한 SSIS 지원을 활성화합니다.  
+ Always On 가용성 그룹에서 새로 추가된 보조 복제본이 테이블에 표시됩니다. 목록에서 각 복제본에 대한 **연결...** 단추를 클릭하고 인증 자격 증명을 입력하여 복제본에 연결합니다. 사용자 계정은 Always On에 대한 SSIS 지원을 활성화하도록 각 복제본에서 sysadmin 그룹의 구성원이어야 합니다. 각 복제본에 성공적으로 연결한 후 **확인** 을 클릭하여 Always On에 대한 SSIS 지원을 활성화합니다.  
  
 다른 필수 조건을 완료한 후 상황에 맞는 메뉴의 **Always On 지원 활성화** 옵션이 비활성화된 것으로 나타나는 경우 다음을 시도해 봅니다.
 1.  **새로 고침** 옵션을 클릭하여 상황에 맞는 메뉴를 새로 고칩니다.
@@ -635,9 +635,9 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
 3.  SQL Server 버전이 13.0 이상인지 확인합니다. SSIS는 SQL Server 2016 이상 버전에 대해서만 Always On을 지원합니다.
 
 ###  <a name="Upgrade"></a> 가용성 그룹에서 SSISDB 업그레이드  
- 이전 버전에서 SQL Server를 업그레이드하고 SSISDB가 Always On 가용성 그룹에 있는 경우 업그레이드는 "Always On 가용성 그룹의 SSISDB 검사" 규칙에 의해 차단될 수 있습니다. 이 차단은 업그레이드는 단일 사용자 모드에서 실행되는 반면 가용성 데이터베이스는 다중 사용자 데이터베이스여야 하기 때문에 발생합니다. 따라서 업그레이드 또는 패치되는 동안 SSISDB를 포함하는 모든 가용성 데이터베이스는 오프라인으로 전환되고 업그레이드 또는 패치되지 않습니다. 업그레이드를 계속하려면 먼저 가용성 그룹에서 SSISDB를 제거한 다음 각 노드를 업그레이드 또는 패치하고 가용성 그룹에 SSISDB를 다시 추가합니다.  
+ 이전 버전에서 SQL Server를 업그레이드하고 SSISDB가 Always On 가용성 그룹에 있는 경우 업그레이드는 "Always On 가용성 그룹의 SSISDB 검사" 규칙에 따라 차단될 수 있습니다. 이 차단은 업그레이드는 단일 사용자 모드에서 실행되는 반면 가용성 데이터베이스는 다중 사용자 데이터베이스여야 하기 때문에 발생합니다. 따라서 업그레이드 또는 패치되는 동안 SSISDB를 포함하는 모든 가용성 데이터베이스는 오프라인으로 전환되고 업그레이드 또는 패치되지 않습니다. 업그레이드를 계속하려면 먼저 가용성 그룹에서 SSISDB를 제거한 다음 각 노드를 업그레이드 또는 패치하고 가용성 그룹에 SSISDB를 다시 추가합니다.  
   
- “Always On 가용성 그룹의 SSISDB 검사” 규칙에 따라 차단되는 경우 SQL Server를 업그레이드하려면 다음 단계를 수행합니다.  
+ “Always On 가용성 그룹의 SSISDB 검사” 규칙에 따라 차단되는 경우 SQL Server를 업그레이드하려면 이러한 단계를 따릅니다.  
   
 1.  가용성 그룹에서 SSISDB 데이터베이스를 제거합니다. 자세한 내용은 [가용성 그룹에서 보조 데이터베이스 제거&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) 및 [가용성 그룹에서 주 데이터베이스 제거&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)를 참조하세요.  
   

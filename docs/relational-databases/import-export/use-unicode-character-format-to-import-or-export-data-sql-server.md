@@ -15,16 +15,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809641"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413310"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
+확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
   
 * 원본 및 대상 데이터가 유니코드 데이터 형식이면 유니코드 문자 형식을 사용하여 모든 문자 데이터를 보존할 수 있습니다.  
   
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **bcp 및 유니코드 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기**<a name="bcp_widechar_import_fmt"></a>
-**-w** 및 **-f** 스위치와 **IN** 명령.  이 예제에는 bcp, 서식 파일, 유니코드 문자가 포함되고 데이터 파일의 첫 번째 데이터 필드가 문자가 아니므로 해결 방법을 사용해야 합니다.  위의 [유니코드 문자 형식, bcp 및 서식 파일 사용 시 특별 고려 사항](#special_considerations).  추가 레코드를 “더미” 레코드로 추가하여 데이터 파일 `myWidechar.bcp` 를 변경한 다음 `-F 2` 스위치를 사용하여 이 레코드를 건너뜁니다.
+**-w** 및 **-f** 스위치와 **IN** 명령.  이 예제에는 bcp, 서식 파일, 유니코드 문자가 포함되고 데이터 파일의 첫 번째 데이터 필드가 문자가 아니므로 해결 방법을 사용해야 합니다.  위의 [유니코드 문자 형식, bcp 및 서식 파일 사용 시 특별 고려 사항](#special_considerations).  추가 레코드를 "더미" 레코드로 추가하여 데이터 파일 `myWidechar.bcp`를 변경한 다음, `-F 2` 스위치를 사용하여 이 레코드를 건너뜁니다.
 
 명령 프롬프트에서 다음 명령을 입력하고 수정 단계를 수행합니다.
 ```
@@ -243,6 +243,6 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

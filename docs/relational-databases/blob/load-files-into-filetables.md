@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674961"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526706"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 절을 사용하는 BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 절을 사용하지 않는 SELECT * FROM OPENROWSET(BULK …)  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 절을 사용하지 않는 SELECT * FROM OPENROWSET(BULK ...)  
   
 -   FileTable 시스템 정의 제약 조건을 해제하지 않은 경우 제약 조건을 적용하지 않은 대량 로드 작업은 실패합니다. 이 범주에는 다음 작업이 포함됩니다.  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 절을 사용하지 않는 BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 절을 사용하는 SELECT * FROM OPENROWSET(BULK …)  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 절을 사용하는 SELECT * FROM OPENROWSET(BULK ...)  
   
 ###  <a name="HowToBulkLoad"></a> 방법: FileTable로 파일 대량 로드  
  다음과 같은 다양한 방법을 사용하여 파일을 FileTable로 대량 로드할 수 있습니다.  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   FileTable 네임스페이스를 사용하지 않도록 설정하고, **CHECK_CONSTRAINTS** 절을 사용하지 않고 호출합니다. 그런 다음 FileTable 네임스페이스를 다시 사용하도록 설정합니다.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   **IGNORE_CONSTRAINTS** 절을 사용하여 호출합니다.  
   

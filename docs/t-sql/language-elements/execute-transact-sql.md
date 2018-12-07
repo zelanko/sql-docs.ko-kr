@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799711"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641024"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  매개 변수 값이 개체 이름이거나 문자열인 경우 또는 데이터베이스 이름이나 스키마 이름으로 한정되는 경우에는 반드시 전체 이름을 작은따옴표로 묶어야 합니다. 매개 변수 값이 키워드인 경우에는 반드시 큰따옴표로 키워드를 묶어야 합니다.  
   
+`@`으로 시작하지 않고 따옴표로 묶이지 않은 단일 단어를 전달하는 경우, 예를 들어 매개 변수 이름에서 `@`이 빠지면 따옴표가 없더라도 해당 단어는 nvarchar 문자열로 처리됩니다.
+
  기본값이 모듈에서 정의된 경우 사용자가 매개 변수를 지정하지 않고 모듈을 실행할 수 있습니다.  
   
  기본값으로 NULL을 사용할 수도 있습니다. 일반적으로 모듈 정의는 매개 변수 값이 NULL일 때 수행할 동작을 지정합니다.  
@@ -287,7 +289,7 @@ Execute a character string
  연결된 서버로 전달될 명령을 포함하는 상수 문자열입니다. N을 포함하면 문자열이 **nvarchar** 데이터 형식으로 해석됩니다.  
   
  [?]  
- EXEC('…', \<arg-list>) AT \<linkedsrv> 문에 사용되는 통과 명령의 \<arg-list>에 값을 제공할 매개 변수를 나타냅니다.  
+ EXEC('...', \<arg-list>) AT \<linkedsrv> 문에 사용되는 통과 명령의 \<arg-list>에 값을 제공할 매개 변수를 나타냅니다.  
   
  AT *linked_server_name*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -295,7 +297,7 @@ Execute a character string
  *command_string*이 *linked_server_name*에 대해 실행되고 결과(있을 경우)가 클라이언트로 반환되도록 지정합니다. *linked_server_name*은 로컬 서버의 기존 연결된 서버 정의를 참조해야 합니다. 연결된 서버는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의합니다.  
   
  WITH \<execute_option>  
- 가능한 실행 옵션은 아래와 같습니다. INSERT…EXEC 문에서 RESULT SETS 옵션을 지정할 수 없습니다.  
+ 가능한 실행 옵션은 아래와 같습니다. INSERT...EXEC 문에서 RESULT SETS 옵션을 지정할 수 없습니다.  
   
 |용어|정의|  
 |----------|----------------|  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|테이블, 뷰 또는 테이블 반환 함수를 소유한 스키마의 이름입니다.|  
 |table_name &#124; view_name &#124; table_valued_function_name|명명된 테이블, 뷰 또는 테이블 반환 함수에 지정된 열을 반환하도록 지정합니다. 테이블 변수, 임시 테이블 및 동의어는 AS 개체 구문에서 지원되지 않습니다.|  
 |AS TYPE [schema_name.]table_type_name|테이블 형식에 지정된 열을 반환하도록 지정합니다.|  
-|AS FOR XML|EXECUTE 문에서 호출하는 문 또는 저장 프로시저의 XML 결과를 SELECT 문에 의해 생성된 것처럼 형식을 변환하도록 지정합니다. FOR XML … 문을 만들 때 사용됩니다. 원래 문의 type 지시어에서 모든 서식이 제거되고 type 지시어를 지정하지 않은 경우처럼 결과가 반환됩니다. AS FOR XML은 실행된 문 또는 저장 프로시저에서 비-XML 테이블 형식 결과를 XML로 변환하지 않습니다.|  
+|AS FOR XML|EXECUTE 문에서 호출하는 문 또는 저장 프로시저의 XML 결과를 SELECT ... FOR XML ... 문에 의해 생성된 것처럼 형식을 변환하도록 지정합니다. 원래 문의 type 지시어에서 모든 서식이 제거되고 type 지시어를 지정하지 않은 경우처럼 결과가 반환됩니다. AS FOR XML은 실행된 문 또는 저장 프로시저에서 비-XML 테이블 형식 결과를 XML로 변환하지 않습니다.|  
   
 |용어|정의|  
 |----------|----------------|  

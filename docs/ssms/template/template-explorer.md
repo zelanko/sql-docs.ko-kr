@@ -20,12 +20,12 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94842b8da4a9aeee8303b4fef18511234ce34346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813196518f7fc3b258e9b9fbe39bdd4b88089241
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416130"
 ---
 # <a name="template-explorer"></a>Template Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

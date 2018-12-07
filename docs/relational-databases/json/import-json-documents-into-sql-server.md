@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8479d93deaee81cf45e282a05d46596a0d4f332a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537275"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,10 +139,10 @@ SELECT value
 OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반환하고 OPENJSON 함수에 전달합니다. OPENJSON은 BulkColumn 배열에서 JSON 개체의 배열을 반복하고 각 행에 JSON으로 형식이 지정된 한 권의 책을 반환합니다.
 
 ```json
-{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
-{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
-{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
-{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", ... }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie's World : The Greek", ... } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
 ### <a name="example-3"></a>예제 3

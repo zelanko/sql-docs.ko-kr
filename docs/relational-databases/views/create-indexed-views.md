@@ -1,7 +1,7 @@
 ---
 title: 인덱싱된 뷰 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650971"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191053"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   이 항목에서는 뷰에서 인덱스를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  
   
 1.  뷰에 참조될 기존의 모든 테이블에 대해 SET 옵션이 올바른지 확인합니다.    
@@ -66,7 +66,8 @@ ms.locfileid: "47650971"
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> `ANSI_WARNINGS`를 켜기로 설정하면 암시적으로 `ARITHABORT`를 켜기로 설정하게 됩니다.  
   
@@ -107,6 +108,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
     |PRECISE = TRUE|.NET Framework 메서드의 특성으로 명시적으로 선언되어야 합니다.|  
     |DATA ACCESS = NO SQL|DataAccess 특성을 DataAccessKind.None으로 설정하고 SystemDataAccess 특성을 SystemDataAccessKind.None으로 설정함으로써 결정됩니다.|  
     |EXTERNAL ACCESS = NO|CLR 루틴의 경우 이 속성의 기본값은 NO입니다.|  
+    |&nbsp;|&nbsp;|
   
 -   뷰는 `WITH SCHEMABINDING` 옵션을 사용하여 만들어야 합니다.  
   
@@ -126,6 +128,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
     |테이블 변수|`OUTER APPLY` 또는 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |스파스 열 집합|인라인(TVF) 또는 다중 문 테이블 반환 함수(MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup>인덱싱된 뷰는 **float** 열을 포함할 수 있지만 이러한 열은 클러스터형 인덱스 키에 포함될 수 없습니다.  
   
@@ -152,8 +155,9 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
   
  테이블 및 뷰의 인덱스를 비활성화할 수 있습니다. 테이블의 클러스터형 인덱스가 비활성화되면 테이블과 관련된 뷰의 인덱스도 비활성화됩니다.  
  
-<a name="nondeterministic"></a>문자열을 **datetime** 또는 **smalldatetime**으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다. 데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
-  
+<a name="nondeterministic"></a>문자열을 **datetime** 또는 **smalldatetime**으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 자세한 내용은 [날짜 값으로 리터럴 날짜 문자열의 비결정적 변환](../../t-sql/data-types/nondeterministic-convert-date-literals.md)을 참조하세요.
+
+
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -167,7 +171,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다. 예에서는 뷰를 만들고 이 뷰에 인덱스를 만듭니다. 인덱싱된 뷰를 사용하는 두 개의 쿼리가 포함되어 있습니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 예에서는 뷰를 만들고 이 뷰에 인덱스를 만듭니다. 인덱싱된 뷰를 사용하는 두 개의 쿼리가 포함되어 있습니다.  
   
     ```sql  
     USE AdventureWorks2012;  

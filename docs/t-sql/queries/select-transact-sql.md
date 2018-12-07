@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c651f7a719a30ad4781c4d1af8bf3703bfc6d7c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595089"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417364"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -172,7 +172,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 이 예제에서는 `EndDate`가 NULL이 아니며 `MaritalStatus`가 ‘M’(기혼)인 `DimEmployee`의 행만 반환합니다.  
+ 이 예제에서는 `EndDate`가 NULL이 아니며 `MaritalStatus`가 'M'(기혼)인 `DimEmployee`의 행만 반환합니다.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

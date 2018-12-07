@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531559"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 또는 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 중에서 만들 수 있습니다. [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 SqlRestartableScriptContributor라는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 만듭니다. 이 배포 참가자는 배포 스크립트의 일괄 처리에 IF 문을 추가해서 실행 중 오류가 발생할 경우 완료될 때까지 스크립트를 다시 실행할 수 있게 합니다.  
@@ -191,7 +191,7 @@ ms.locfileid: "51681351"
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -674,7 +674,7 @@ ms.locfileid: "51681351"
   
     2.  대상 파일을 저장할 "MyContributors"라는 새 폴더를 만듭니다.  
   
-    3.  이 디렉터리 내에 "MyContributors.targets"라는 새 파일을 만들고 다음 텍스트를 추가한 후 파일을 저장합니다.  
+    3.  이 디렉터리 내에 "MyContributors.targets"라는 새 파일을 만들고 다음 텍스트를 추가하여 파일을 저장합니다.  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,17 +697,17 @@ ms.locfileid: "51681351"
 이러한 방법 중 하나에 따라 작업한 후에는 MSBuild를 사용해서 명령줄 빌드에 대한 매개 변수를 전달할 수 있습니다.  
   
 > [!NOTE]  
-> 참가자 ID를 지정하려면 항상 "DeploymentContributors" 속성을 업데이트해야 합니다. 이 ID는 참가자 원본 파일에서 "ExportDeploymentPlanModifier" 속성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. "ContributorArguments" 속성은 실행할 참가자에 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
+> 참가자 ID를 지정하려면 항상 "DeploymentContributors" 속성을 업데이트해야 합니다. 이 ID는 기여자 원본 파일의 "ExportDeploymentPlanModifier" 특성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. "ContributorArguments" 속성은 기여자가 실행하기 위해 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
   
 ## <a name="deploy-the-database-project"></a>데이터베이스 프로젝트 배포  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>SQL 프로젝트를 배포하고 배포 보고서를 생성하려면  
   
--   프로젝트는 Visual Studio 내에서 일반적으로 게시 및 배포할 수 있습니다. SQL 프로젝트가 포함된 솔루션을 열고 프로젝트의 오른쪽 클릭 상황에 맞는 메뉴에서 “게시…” 옵션을 선택하거나 LocalDB에 대한 디버그 배포의 경우 F5 키를 사용합니다. 이 예제에서는 “게시...” 대화 상자를 사용하여 배포 스크립트를 생성합니다.  
+-   프로젝트는 Visual Studio 내에서 일반적으로 게시 및 배포할 수 있습니다. 단순히 SQL 프로젝트가 포함된 솔루션을 열고 프로젝트에 대한 오른쪽 마우스 클릭 컨텍스트 메뉴에서 [게시...] 옵션을 선택하거나 LocalDB에 대한 디버그 배포에 대해 F5를 사용하면 됩니다. 이 예제에서는 "게시..." 대화 상자를 사용하여 배포 스크립트를 생성합니다.  
   
     1.  Visual Studio를 열고 SQL 프로젝트가 포함된 솔루션을 엽니다.  
   
-    2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시...** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
+    2.  솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시...** 옵션을 선택합니다.  
   
     3.  게시할 서버 이름 및 데이터베이스 이름을 설정합니다.  
   

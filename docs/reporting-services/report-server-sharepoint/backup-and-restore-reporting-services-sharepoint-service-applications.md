@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405718"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
 
@@ -53,7 +53,7 @@ ms.locfileid: "50021247"
 
 ### <a name="back-up-the-encryption-keys-using-sharepoint-central-administration"></a>SharePoint 중앙 관리를 사용하여 암호화 키 백업
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 백업에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 백업에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
 
 ### <a name="back-up-the-service-application-using-sharepoint-central-administration"></a>SharePoint 중앙 관리를 사용하여 서비스 응용 프로그램 백업
 
@@ -131,7 +131,7 @@ ms.locfileid: "50021247"
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>SharePoint 중앙 관리를 사용하여 암호화 키 복원
 
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 복원에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 복원에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 구성
 

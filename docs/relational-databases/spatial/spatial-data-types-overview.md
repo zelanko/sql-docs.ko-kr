@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535825"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 이 조각은 다음 결과를 생성합니다.  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 **CircularString** 인스턴스는 보다 적은 수의 점을 사용하여 **LineString** 인스턴스보다 정확도가 높은 곡선 경계를 저장합니다. **CircularString** 인스턴스는 특정 지점에서 반경 32km 이내 검색과 같이 원 경계를 저장하는 데 유용합니다. **LineString** 인스턴스는 사각형 도시 블록과 같이 선형인 경계를 저장하는 데 유용합니다.  

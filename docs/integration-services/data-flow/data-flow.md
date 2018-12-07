@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503575"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  
@@ -190,7 +190,7 @@ ms.locfileid: "51641680"
  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
 ### <a name="columns"></a>열  
- 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
+ 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은(는) 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
   
 ## <a name="paths"></a>경로  
  경로는 데이터 흐름 구성 요소를 연결합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서는 경로 속성을 보고 수정하고, 경로 시작 지점의 출력 메타데이터를 보고, 데이터 뷰어를 경로에 연결할 수 있습니다.  

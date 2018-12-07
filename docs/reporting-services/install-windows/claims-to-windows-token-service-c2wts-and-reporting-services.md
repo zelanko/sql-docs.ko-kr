@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020597"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397157"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
@@ -90,7 +90,7 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
 
 3. C2WTS *AllowedCallers*를 구성합니다.
 
-    C2WTS에는 구성 파일 **C2WTShost.exe.config**에 명시적으로 나열된 ‘callers’ ID가 필요합니다. C2WTS는 특별히 구성되지 않은 한 시스템의 모든 인증된 사용자로부터의 요청을 허용하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. C2WTShost.exe.config 파일은 다음 위치에 저장됩니다.
+    C2WTS에는 구성 파일 **C2WTShost.exe.config**에 명시적으로 나열된 'callers' ID가 필요합니다. C2WTS는 특별히 구성되지 않은 한 시스템의 모든 인증된 사용자로부터의 요청을 허용하지 않습니다. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. C2WTShost.exe.config 파일은 다음 위치에 저장됩니다.
 
     SharePoint 중앙 관리 내에서 C2WTS 서비스에 대한 서비스 계정을 변경하면 WSS_WPG 그룹에 해당 계정이 추가됩니다.
 

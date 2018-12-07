@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828591"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616893"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
 
@@ -35,7 +34,7 @@ ms.locfileid: "47828591"
   
 -   기존의 채워진 도메인으로 값을 가져옵니다. 이 경우 새 값만 가져옵니다. 기존의 값은 전혀 가져오지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  Excel 파일에서 도메인을 가져오려면 도메인 값이나 전체 도메인을 가져오기 위해 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램이 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 만들어 놓은 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  

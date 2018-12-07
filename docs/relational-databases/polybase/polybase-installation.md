@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523485"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -184,7 +184,7 @@ SQL Server PolyBase 설치는 머신에 다음과 같은 방화벽 규칙을 만
    
 - SQL Server PolyBase – PolyBase 서비스 - \<SQLServerInstanceName>(TCP-In)  
 
-- SQL Server PolyBase – SQL Browser - (UDP-In)  
+- SQL Server PolyBase - SQL Browser - (UDP-In)  
    
 설치 시 SQL Server 인스턴스를 PolyBase 스케일 아웃 그룹의 일부로 사용하면 이러한 규칙이 설정됩니다. 들어오는 연결을 허용하도록 방화벽이 열립니다. SQL Server 데이터베이스 엔진, SQL Server PolyBase 엔진, SQL Server PolyBase 데이터 이동 서비스 및 SQL Browser에 사용할 수 있습니다. 설치 중에 머신의 방화벽 서비스가 실행되고 있지 않으면 SQL Server 설치에서 이러한 규칙을 사용할 수 없습니다. 이 경우 머신에서 방화벽 서비스를 시작하고 설치 후에 이러한 규칙을 활성화합니다.  
    

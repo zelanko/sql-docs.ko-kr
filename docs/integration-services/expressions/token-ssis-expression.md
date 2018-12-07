@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747941"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396959"
 ---
 # <a name="token--ssis-expression"></a>TOKEN(SSIS 식)
   문자열에서 토큰을 구분하는 지정된 구분 기호와 반환할 토큰을 나타내는 토큰 번호를 기반으로 문자열에서 토큰(부분 문자열)을 반환합니다.  
@@ -32,7 +32,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  구분 기호로 구분된 토큰이 포함된 문자열입니다.  
   
  *delimiter_string*  
- 구분 기호 문자가 포함된 문자열입니다. 예를 들어 "; ,”에는 세미콜론, 공백 및 쉼표의 세 구분 문자가 포함되어 있습니다.  
+ 구분 기호 문자가 포함된 문자열입니다. 예를 들어 "; ,"에는 세미콜론, 공백 및 쉼표의 세 구분 문자가 포함되어 있습니다.  
   
  *occurrence*  
  반환될 토큰을 지정하는 부호 있는 또는 부호 없는 정수입니다. 예를 들어 이 매개 변수의 값으로 3을 지정하면 문자열의 세 번째 토큰이 반환됩니다.  
@@ -58,13 +58,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   식의 모든 인수에 대한 값으로 변수 및 열을 사용할 수 있습니다.  
   
 ## <a name="expression-examples"></a>식 예  
- 다음 예에서는 TOKEN 함수가 "a"를 반환합니다. “a little white dog” 문자열에는 4개의 토큰 “a”, “little”, “white”, “dog”가 " "(공백 문자)로 구분되어 있습니다. 두 번째 인수인 구분 기호 문자열은 입력 문자열을 토큰으로 분할하는 데 사용되는 한 구분 기호로 공백 문자를 지정합니다. 마지막 인수 1은 첫 번째로 반환될 토큰을 지정합니다. 이 샘플 문자열에서 첫 번째 토큰은 “a”입니다.  
+ 다음 예에서는 TOKEN 함수가 "a"를 반환합니다. "a little white dog" 문자열에는 4개의 토큰 "a", "little", "white", "dog"가 " "(공백 문자)로 구분되어 있습니다. 두 번째 인수인 구분 기호 문자열은 입력 문자열을 토큰으로 분할하는 데 사용되는 한 구분 기호로 공백 문자를 지정합니다. 마지막 인수 1은 첫 번째로 반환될 토큰을 지정합니다. 이 샘플 문자열에서 첫 번째 토큰은 "a"입니다.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- 다음 예에서는 TOKEN 함수가 "dog"를 반환합니다. 이 예의 구분 기호 문자열에는 구분 기호가 5개 포함되어 있습니다. 입력 문자열에는 “a”, “little”, “white”, “dog”등 4개의 토큰이 포함되어 있습니다.  
+ 다음 예에서는 TOKEN 함수가 "dog"를 반환합니다. 이 예의 구분 기호 문자열에는 구분 기호가 5개 포함되어 있습니다. 입력 문자열에는 "a", "little", "white", "dog"의 4개 토큰이 포함되어 있습니다.  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -82,7 +82,7 @@ TOKEN("a little white dog"," ",99)
 TOKEN("a little white dog","|",1)  
 ```  
   
- 다음 예에서는 TOKEN 함수가 “a”를 반환합니다. 모든 선행 공백 문자는 무시합니다.  
+ 다음 예에서는 TOKEN 함수가 "a"를 반환합니다. 모든 선행 공백 문자는 무시합니다.  
   
 ```  
 TOKEN("        a little white dog", " ", 1)  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- 다음 예에서는 TOKEN 함수가 지정된 경로에서 파일 이름을 반환합니다. 예를 들어 User::Path 값이 “c:\program files\data\myfile.txt”인 경우 TOKEN 함수는 “myfile.txt”를 반환합니다. TOKENCOUNT 함수는 4를 반환하고 TOKEN 함수는 4번째 토큰 “myfile.txt”를 반환합니다.  
+ 다음 예에서는 TOKEN 함수가 지정된 경로에서 파일 이름을 반환합니다. 예를 들어 User::Path 값이 "c:\program files\data\myfile.txt"인 경우 TOKEN 함수는 "myfile.txt"를 반환합니다. TOKENCOUNT 함수는 4를 반환하고 TOKEN 함수는 4번째 토큰 "myfile.txt"를 반환합니다.  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

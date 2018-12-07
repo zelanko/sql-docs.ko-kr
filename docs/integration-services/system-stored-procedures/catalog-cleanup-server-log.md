@@ -11,12 +11,12 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbcf940b5679a22ff6d2c0692878b6c57e104ddb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544706"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ catalog.cleanup_server_log
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 서비스 팩 2에는 SERVER_OPERATION_ENCRYPTION_LEVEL 속성이 **internal.catalog_properties** 테이블에 추가되었습니다. 이 속성에는 두 가지 가능한 값이 있습니다.  
   
--   **PER_EXECUTION (1)** – 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키는 각 실행에 대해 만들어집니다. 각 실행에 대해 인증서/키가 생성되기 때문에 프로덕션 환경에서 성능 문제(교착 상태, 유지 관리 작업 실패 등)가 발생할 수 있습니다. 하지만 이 설정은 다른 값(2)보다 높은 수준의 보안을 제공합니다.  
+-   **PER_EXECUTION(1)** – 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키는 각 실행에 대해 만들어집니다. 각 실행에 대해 인증서/키가 생성되기 때문에 프로덕션 환경에서 성능 문제(교착 상태, 유지 관리 작업 실패 등)가 발생할 수 있습니다. 하지만 이 설정은 다른 값(2)보다 높은 수준의 보안을 제공합니다.  
   
--   **PER_PROJECT (2)** – 중요한 매개 변수를 보호하는 데 사용되는 인증서 및 대칭 키가 각 프로젝트에 대해 만들어집니다. PER_PROJECT (2)가 기본값입니다. 이 설정은 키와 인증서가 각 실행에 대해서 생성되지 않고 프로젝트에 대해 한 번 생성되기 때문에 PER_EXECUTION 수준보다 높은 성능을 제공합니다.  
+-   **PER_PROJECT(2)** – 중요한 매개 변수를 보호하는 데 사용되는 인증서 및 대칭 키는 각 프로젝트에 대해 만들어집니다. PER_PROJECT (2)가 기본값입니다. 이 설정은 키와 인증서가 각 실행에 대해서 생성되지 않고 프로젝트에 대해 한 번 생성되기 때문에 PER_EXECUTION 수준보다 높은 성능을 제공합니다.  
   
  SERVER_OPERATION_ENCRYPTION_LEVE를 2에서 1로 또는 1에서 2로 변경하려면 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 저장 프로시저를 실행해야 합니다. 저장 프로시저를 실행하기 전에 다음을 수행해야 합니다.  
   

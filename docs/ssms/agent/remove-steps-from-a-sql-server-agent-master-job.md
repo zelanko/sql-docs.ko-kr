@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e599d22ea6b3fd3d85fb71eb2e7824104981a308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d0c89058bf05958e3a1d7050a3fd1abd0cacebfe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700792"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509908"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "51700792"
   
 4.  단계를 삭제하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성-***job_name* 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
-  
+5.  **작업 속성-**_job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
+
 6.  **작업 단계 목록**에서 삭제하려는 작업 단계를 선택하고 **삭제**를 클릭합니다.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  

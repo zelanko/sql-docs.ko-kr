@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92b4b124f2cf76d0fedd2f22e32f10204ed06ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534844"
 ---
 # <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
 

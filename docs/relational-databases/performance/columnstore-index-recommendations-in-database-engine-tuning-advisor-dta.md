@@ -13,18 +13,18 @@ ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 620152bc083e5847f09161cd8209ba201ad1baca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403018"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  
-  데이터 웨어하우징 및 분석 워크로드는 기존의 rowstore 인덱스뿐만 아니라 [columnstore 인덱스](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 활용할 수 있습니다. 데이터베이스에 대해 작성할 rowstore 및 columnstore 인덱스 선택은 응용 프로그램의 워크로드에 따라 달라집니다. SQL Server 2016의 [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 워크로드를 분석하고 데이터베이스에 작성할 적절한 rowstore 및 columnstore 인덱스 조합을 권장할 수 있습니다. 
+  데이터 웨어하우징 및 분석 워크로드는 기존의 rowstore 인덱스뿐만 아니라 [columnstore 인덱스](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 활용할 수 있습니다. 데이터베이스에 대해 작성할 rowstore 및 columnstore 인덱스 선택은 애플리케이션의 워크로드에 따라 달라집니다. SQL Server 2016의 [DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)는 워크로드를 분석하고 데이터베이스에 작성할 적절한 rowstore 및 columnstore 인덱스 조합을 권장할 수 있습니다. 
   
  이 기능은 SQL Server Management Studio 버전 **16.4** 이상에서 사용할 수 있습니다. 
   

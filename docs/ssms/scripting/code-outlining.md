@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3b9207af9dcf70db110768dbf4f6895767d22f0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e00bb3652d3692f498bbbb2cd6cae2330865b841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530363"
 ---
 # <a name="code-outlining"></a>코드 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 쿼리를 편집할 때 개요 기능을 사용하여 코드를 필요에 따라 숨길 수 있습니다. 이 기능을 사용하면 특히 큰 쿼리 파일에서 작업 중인 코드를 쉽게 볼 수 있습니다.  
   
 ## <a name="outlining-overview"></a>개요 기능 개요  
- 기본적으로 쿼리 편집기 창을 열 때 모든 코드가 표시되지만 필요에 따라 코드 영역을 축소하여 코드를 숨길 수 있습니다. 편집기 창 왼쪽 가장자리의 세로선에서 빼기 기호(-)가 있는 사각형은 축소 가능한 각 코드 영역의 시작 부분을 나타냅니다. 빼기 기호를 클릭하면 코드 영역의 텍스트는 3개의 마침표( )가 포함된 상자로 바뀌고 빼기 기호는 더하기 기호(+)로 변합니다. 더하기 기호를 클릭하면 축소된 코드가 나타나고 더하기 기호가 빼기 기호로 변합니다. 포인터를 3개의 마침표가 있는 상자 위로 이동하면 축소된 섹션의 코드를 보여 주는 도구 설명이 나타납니다.  
+ 기본적으로 쿼리 편집기 창을 열 때 모든 코드가 표시되지만 필요에 따라 코드 영역을 축소하여 코드를 숨길 수 있습니다. 편집기 창 왼쪽 가장자리의 세로선에서 빼기 기호(-)가 있는 사각형은 축소 가능한 각 코드 영역의 시작 부분을 나타냅니다. 빼기 기호를 클릭하면 코드 영역의 텍스트는 3개의 마침표(...)가 포함된 상자로 대체되고 빼기 기호는 더하기 기호(+)로 변합니다. 더하기 기호를 클릭하면 축소된 코드가 나타나고 더하기 기호가 빼기 기호로 변합니다. 포인터를 3개의 마침표가 있는 상자 위로 이동하면 축소된 섹션의 코드를 보여 주는 도구 설명이 나타납니다.  
   
 ## <a name="system-outline-regions"></a>시스템 개요 영역  
  각 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기에서는 기본 시스템 정의 개요 영역 집합을 생성합니다.  

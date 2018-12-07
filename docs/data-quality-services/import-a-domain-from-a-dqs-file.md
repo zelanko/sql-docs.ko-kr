@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26af15dea92c143fe995e0072f80d3782a3adaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787231"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616403"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>.dqs 파일에서 도메인 가져오기
 
@@ -29,7 +28,7 @@ ms.locfileid: "47787231"
   
  도메인을 가져올 때 도메인 이름은 원래 내보내진 도메인의 이름과 동일하게 유지됩니다. 단, 도메인 이름이 이미 있는 경우에는 DQS에서 이름에 "_1"을 추가합니다. 또한 기존 도메인과 동일한 이름을 가진 개별 도메인이 포함된 복합 도메인을 가져오는 경우에도 마찬가지입니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  .dqs 파일에서 도메인을 가져오려면 단일 도메인 하나 또는 복합 도메인 하나(여러 단일 도메인 포함)를 .dqs 파일로 이미 내보낸 상태여야 합니다. .dqs 파일에는 도메인이 하나만 포함되어야 합니다. 또한 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  

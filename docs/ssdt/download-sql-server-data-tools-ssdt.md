@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 397bc5c7597aedc91c3f6382c505eca9d1cd887b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515999"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,8 +114,8 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 |프로젝트 템플릿|지원 되는 SQL 플랫폼|  
 |-------------------|--------------------|  
 관계형 데이터베이스|  SQL Server 2005* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL 데이터베이스<br /><br />Azure SQL Data Warehouse(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br />  * SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
-  |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 – SQL Server 2017|
-  |Integration Services 패키지| SQL Server 2012 – SQL Server 2017    |
+  |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 - SQL Server 2017|
+  |Integration Services 패키지| SQL Server 2012 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
 Visual Studio 2015용 SSDT 및 Visual Studio 2017용 SSDT는 모두 DacFx 17.4.1를 사용합니다. [DacFx(Data-Tier Application Framework) 17.4.1 다운로드](https://www.microsoft.com/download/details.aspx?id=56508)

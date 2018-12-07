@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533403"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51660372"
 
 ## <a name="usage-scenarios-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용 시나리오
 
-메모리 내 OLTP는 마법의 단추가 아니고 모든 워크로드에 적합한 것도 아닙니다. 예를 들어 메모리 최적화 테이블은 대부분의 쿼리가 큰 데이터 범위에서 집계를 수행하는 경우 CPU 사용률을 낮추지 않습니다. 이 시나리오에는 Columnstore 인덱스가 도움이 됩니다.
+메모리 내 OLTP는 마법의 단추가 아니고 모든 워크로드에 적합한 것도 아닙니다. 예를 들어 메모리 최적화 테이블은 대부분의 쿼리가 큰 데이터 범위에서 집계를 수행하는 경우 CPU 사용률을 낮추지 않습니다. 해당 시나리오에는 Columnstore 인덱스가 도움이 됩니다.
 
 다음은 메모리 내 OLTP를 성공적으로 사용한 고객의 시나리오 및 응용 프로그램 패턴 목록입니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "51660372"
 
 이는 메모리 내 OLTP를 구축한 핵심 시나리오입니다. 개별 트랜잭션에 대해 일관성 있게 낮은 대기 시간으로 대량의 트랜잭션을 지원합니다.
 
-일반적인 워크로드 시나리오는 금융 상품 거래, 스포츠 베팅, 모바일 게임, 광고 전달 등입니다. 또 다른 일반적인 패턴은 자주 읽거나 업데이트하는 "카탈로그"입니다. 예를 들어 대용량 파일이 있고 각 파일이 여러 클러스터 노드에 분산된 경우 메모리 최적화 테이블에서 각 파일의 분할 위치에 대한 카탈로그를 작성합니다.
+일반적인 워크로드 시나리오는 금융 상품 거래, 스포츠 베팅, 모바일 게임, 광고 전달 등입니다. 확인한 다른 일반적인 패턴은 자주 읽거나 업데이트하는 "카탈로그"입니다. 예를 들어 대용량 파일이 있고 각 파일이 여러 클러스터 노드에 분산된 경우 메모리 최적화 테이블에서 각 파일의 분할 위치에 대한 카탈로그를 작성합니다.
 
 #### <a name="implementation-considerations"></a>구현 고려 사항
 
@@ -83,7 +83,7 @@ ms.locfileid: "51660372"
 메모리 최적화 테이블을 데이터 수집에 사용합니다. 수집이 업데이트보다 주로 삽입으로 구성되고 메모리 내 OLTP 저장소의 데이터 공간이 중요한 경우 다음 중 하나를 수행합니다.
 
 - [을 수행하는 작업을 사용하여](../indexes/columnstore-indexes-overview.md)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
-- [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며, 데이터 이동이 시스템에 의해 관리됩니다.
+- [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며 데이터 이동이 시스템에서 관리됩니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 샘플 리포지토리에는 temporal 메모리 최적화 테이블, 메모리 최적화 테이블 형식 및 고유하게 컴파일된 저장 프로시저를 사용하여 센서 데이터의 메모리 내 OLTP 저장소 공간을 관리하는 동시에 데이터 수집을 가속화하는 스마트 그리드 응용 프로그램이 포함되어 있습니다. 
 
@@ -92,7 +92,7 @@ ms.locfileid: "51660372"
  
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘립니다.](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘림](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 대한 실시간 액세스 실현](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
 - Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for].
 
@@ -232,4 +232,4 @@ GO
 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx) 
+[메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx). 

@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a690c550a3010a69d6356a0525eecdfc6410c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392887"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47751061"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47751061"
   
 7.  속성의 설정을 변경하여 인덱스를 사용자 지정합니다.  
   
-8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -**  **일반** *일반* 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
+8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -** **일반** *일반* 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

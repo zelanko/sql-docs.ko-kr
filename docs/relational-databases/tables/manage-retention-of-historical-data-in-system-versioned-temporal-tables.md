@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698601"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417944"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Transact-SQL을 사용하여 일부 기록 테이블 스트레치  
- 기록 테이블 중 일부만 스트레치하려면 [인라인 조건자 함수](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)를 만들어 시작합니다. 이 예에서는 2015년 12월 1일에 처음으로 인라인 조건자 함수를 구성하고 2015년 11월 1일보다 오래된 모든 기록 날짜를 Azure로 스트레치한다고 가정합니다. 이 작업 수행을 위해 다음 함수를 만들기 시작합니다.  
+ 기록 테이블 중 일부만 스트레치하려면 [인라인 조건자 함수](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)를 만들어 시작합니다. 이 예제에서는 2015년 12월 1일에 처음으로 인라인 조건자 함수를 구성하고 2015년 11월 1일보다 오래된 모든 기록 날짜를 Azure로 스트레치한다고 가정합니다. 이 작업 수행을 위해 다음 함수를 만들기 시작합니다.  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -184,7 +184,7 @@ COMMIT ;
   
 > **참고:** 분할 구성 시 RANGE LEFT와 RANGE RIGHT를 사용할 때 성능에 미치는 영향에 대한 자세한 내용은 아래의 테이블 분할 시 성능 고려 사항을 참조하세요.  
   
- 첫 번째 및 마지막 파티션은 각각 위쪽 경계와 아래쪽 경계에 “열린” 상태로 유지됩니다. 이렇게 하면 분할 열 값에 상관없이 모든 새 행에 대상 파티션이 포함됩니다.   
+ 첫 번째 및 마지막 파티션은 각각 위쪽 경계와 아래쪽 경계에 "열린" 상태로 유지됩니다. 이렇게 하면 분할 열 값에 상관없이 모든 새 행에 대상 파티션이 포함됩니다.   
 시간이 지남에 따라 기록 테이블의 새 행은 더 높은 파티션에 순서대로 삽입됩니다. 6번째 파티션이 채워지면 대상으로 지정된 보존 기간에 도달합니다. 이 순간에 반복적인 파티션 유지 관리 작업이 처음으로 시작됩니다(이 예에서는 한 달에 한 번 정기적으로 실행하도록 예약해야 합니다).  
   
  다음 그림은 반복적인 파티션 유지 관리 작업을 보여 줍니다(자세한 단계는 아래 참조).  

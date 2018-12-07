@@ -23,17 +23,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7b546e749c0ca7d695a4cd1b2cd2d25e8683a62
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 5767220ff837aada0dbd6651cfa23f130c482ed4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359311"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535169"
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-이 함수는 TRY...CATCH 구문의 CATCH 블록을 실행시키는 오류의 메시지 텍스트를 반환합니다.  
+이 함수는 TRY...CATCH 구문의 CATCH 블록을 실행하게 한 오류의 메시지 텍스트를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

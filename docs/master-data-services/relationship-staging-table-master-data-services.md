@@ -15,12 +15,12 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d0684a38c51c95b0793667630a73f3da54c7468d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cba75884c259b5e351b0b875c5a6ffb0aabc8f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394296"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
 

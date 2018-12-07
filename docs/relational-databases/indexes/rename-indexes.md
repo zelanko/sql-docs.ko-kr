@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7547210622ca3a1bf9aa33ffb4b6d143b4a943d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653643"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511459"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47653643"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  테이블에서 PRIMARY KEY 또는 UNIQUE 제약 조건을 만들 때 제약 조건과 이름이 같은 인덱스가 테이블에 자동으로 만들어집니다. 인덱스 이름은 테이블에서 고유해야 하므로 테이블에서 기존의 PRIMARY KEY 또는 UNIQUE 제약 조건과 같은 이름으로 인덱스를 만들거나 인덱스 이름을 같은 이름으로 바꿀 수 없습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "47653643"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **Save***table_name*을 클릭합니다.  
+8.  **파일** 메뉴에서 _table name_ **저장**을 클릭합니다.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   

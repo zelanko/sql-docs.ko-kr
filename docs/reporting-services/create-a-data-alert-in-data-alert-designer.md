@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504106"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
 
@@ -75,15 +75,15 @@ ms.locfileid: "50021617"
   
 10. 비교 값을 입력합니다.  
   
-11. 필요에 따라 줄임표 **(…)** 를 다시 클릭합니다.  
+11. 필요에 따라 줄임표 **(...)** 를 다시 클릭합니다.  
   
-     줄임표 **(…)** 는 첫 번째 절을 포함하는 줄에 나타납니다.  
+     줄임표 **(...)** 는 첫 번째 절을 포함하는 줄에 나타납니다.  
   
      OR 절은 AND 규칙 아래와 해당 규칙 내에 추가됩니다.  
   
 12. 필요에 따라 아래쪽 화살표를 클릭하고 **필드 선택 모드**를 선택한 다음 목록에서 열을 선택합니다.  
   
-     OR 절을 추가하기 위해 클릭한 줄임표 **(…)** 가 사라집니다.  
+     OR 절을 추가하기 위해 클릭한 줄임표 **(...)** 가 사라집니다.  
   
 13. 필요에 따라 **규칙 추가** 를 다시 클릭하여 규칙을 더 추가합니다.  
   

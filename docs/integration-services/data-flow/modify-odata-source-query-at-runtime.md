@@ -11,12 +11,12 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ca379e808a970142bd568fe158bafdfaa5d0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517839"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 제공
  데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 *식*을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47778591"
 ## <a name="provide-the-query-as-a-parameter"></a>쿼리를 매개 변수로 제공  
  다음 절차는 OData 원본 구성 요소에서 패키지의 매개 변수로 사용하는 쿼리를 노출하는 방법을 보여 줍니다.  
   
-1.  **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
+1.  **데이터 흐름 태스크**를 마우스 오른쪽 단추로 클릭하고 **매개 변수화...** 옵션을 선택합니다.  
   
 2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "47778591"
   
 2.  **속성** 창에서 **Expressions** 속성을 강조 표시합니다.  
   
-3.  …(줄임표) 단추를 클릭하여 **속성 식 편집기**를 엽니다.  
+3.  줄임표(...) 단추를 클릭하여 **속성 식 편집기**를 엽니다.  
   
 4.  **[OData Source].[Query]** 속성을 선택합니다.  
   
-5.  …(줄임표) 단추를 **식**에 대해 클릭합니다.  
+5.  **식**에 대한 줄임표(...) 단추를 클릭합니다.  
   
 6.  **식**을 입력합니다.  
   

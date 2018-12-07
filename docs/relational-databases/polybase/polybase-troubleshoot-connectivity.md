@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521455"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -136,11 +136,11 @@ PolyBase는 AD와 MIT 간의 트러스트 관계를 지원하지 **않으며** H
  0020: 1F A0 03 02 01 02 A1 18 30 16 1B 06 6B 72 62 74 ........0...krbt 
  0030: 67 74 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D gt..CONTOSO.COM 
  0040: A3 82 01 08 30 82 01 04 A0 03 02 01 10 A1 03 02 ....0........... 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0140: 67 6D F6 41 6C EB E0 C3 3A B2 BD B1 gm.Al...:... 
  Client Principal = admin_user@CONTOSO.COM 
  Server Principal = krbtgt/CONTOSO.COM@CONTOSO.COM 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  [2017-04-25 21:34:34,500] INFO 1639[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
 ```
 
@@ -178,7 +178,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
  0050: 15 73 68 61 73 74 61 2D 68 64 70 32 35 2D 30 30 .hadoop-hdp25-00 
  0060: 2E 6C 6F 63 61 6C A3 82 01 1A 30 82 01 16 A0 03 .local....0..... 
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
  0250: C4 . 
 ```
@@ -204,7 +204,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 |javax.security.auth.login.LoginException<br>Kerberos 데이터베이스에서 클라이언트를 찾을 수 없음  (6) - CLIENT_NOT_FOUND |    지정된 관리 서비스 사용자가 core-site.xml에 지정된 영역에 없습니다.|
 | javax.security.auth.login.LoginException<br> 체크섬 실패 |    관리 서비스 사용자가 있지만 암호가 잘못되었습니다. |
 | 기본 구성 이름: C:\Windows\krb5.ini<br>기본 구성에서 로드됨 | 예외는 아니지만 Java의 krb5LoginModule이 컴퓨터에서 사용자 지정 클라이언트 구성을 검색했음을 나타냅니다. 문제를 일으킬 수 있는 사용자 지정 클라이언트 설정을 확인합니다. |
-| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>잘못된 사용자 이름 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: admin_user@CONTOSO.COM에 적용된 규칙 없음 | Hadoop 클러스터별로 적절한 규칙이 포함된 “hadoop.security.auth_to_local” 속성을 core-site.xml에 추가합니다. |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>잘못된 사용자 이름 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: admin_user@CONTOSO.COM에 적용된 규칙 없음 | Hadoop 클러스터당 적절한 규칙을 사용하여 “hadoop.security.auth_to_local” 속성을 core-site.xml에 추가합니다. |
 | java.net.ConnectException<br>다음 URI의 외부 파일 시스템에 액세스하려는 중: hdfs://10.193.27.230:8020<br>IAAS16981207/10.107.0.245에서 10.193.27.230:8020 사이의 호출이 연결 예외로 실패 | KDC에 대한 인증에 성공했지만 Hadoop 이름 노드에 액세스하지 못했습니다. 이름 노드 IP 및 포트를 확인합니다. Hadoop에서 방화벽이 사용되지 않는지 확인합니다. |
 | java.io.FileNotFoundException<br>파일이 없음: /test/data.csv |    인증에 성공했지만 지정한 위치가 없습니다. 경로를 확인하거나 먼저 루트 “/”를 사용하여 테스트합니다. |
 

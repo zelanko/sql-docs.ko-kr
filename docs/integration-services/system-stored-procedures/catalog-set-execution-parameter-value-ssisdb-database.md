@@ -11,12 +11,12 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808671"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405651"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,25 +83,25 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |4|런타임 계보<br /><br /> 데이터 흐름에서 계보를 추적하는 데 필요한 데이터를 수집합니다.|  
 |100|사용자 지정된 로깅 수준<br /><br /> CUSTOMIZED_LOGGING_LEVEL 매개 변수에서 설정을 지정합니다. 지정할 수 있는 값에 대한 자세한 내용은 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)을 참조하세요.<br /><br /> 사용자 지정된 로깅 수준에 대한 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 사용](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.|  
   
- 패키지 실행 도중 오류 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정하십시오.  
+ 패키지 실행 도중 오류 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정합니다.  
   
 |매개 변수|값|  
 |---------------|-----------|  
 |*execution_id*|실행 인스턴스의 고유 식별자|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- 패키지 실행 도중 이벤트 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정하십시오.  
+ 패키지 실행 도중 이벤트 발생 시 Integration Services 서버가 덤프 파일을 생성하도록 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정합니다.  
   
 |매개 변수|값|  
 |---------------|-----------|  
 |*execution_id*|실행 인스턴스의 고유 식별자|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- 패키지 실행 도중 Integration Services 서버에서 덤프 파일이 생성되도록 하는 이벤트를 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정하십시오. 세미콜론을 사용하여 여러 이벤트 코드를 구분합니다.  
+ 패키지 실행 도중 Integration Services 서버에서 덤프 파일이 생성되도록 하는 이벤트를 지정하려면 실행되지 않은 실행 인스턴스에 대해 다음 매개 변수 값을 설정합니다. 세미콜론을 사용하여 여러 이벤트 코드를 구분합니다.  
   
 |매개 변수|값|  
 |---------------|-----------|  

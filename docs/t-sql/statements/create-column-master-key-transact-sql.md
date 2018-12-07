@@ -27,12 +27,12 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609611"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393046"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ ENCLAVE_COMPUTATIONS
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-column-master-key"></a>1. 열 마스터 키 만들기  
- MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+ MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스 하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  

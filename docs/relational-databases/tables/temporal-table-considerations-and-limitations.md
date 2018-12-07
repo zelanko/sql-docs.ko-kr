@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770461"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410090"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47770461"
   
     -   **변경 데이터 캡처 및 변경 데이터 추적:** 현재 테이블에서만 지원  
   
-    -   **스냅숏 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우, 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서(‘AS OF’ 쿼리 포함)에서 사용됩니다.    
+    -   **스냅숏 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다.    
         각 구독자가 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.  
   
     -   **병합 복제:** temporal 테이블에서 지원되지 않습니다.  

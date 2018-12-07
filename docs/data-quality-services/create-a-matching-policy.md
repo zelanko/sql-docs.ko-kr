@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
@@ -16,22 +15,22 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a8c91398f1543e2ebc23030ab56c6eea42027e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ef1d5301310656cfcb02aef7d488541968d8a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672401"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617693"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음, 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
   
  일치 정책 만들기는 데이터 원본을 확인하고 도메인을 열에 매핑하는 매핑 프로세스, 하나 이상의 일치 규칙을 만들고 각 일치 규칙을 개별적으로 테스트하는 일치 정책 프로세스, 그리고 모든 일치 규칙을 동시에 실행하여 결과에 만족하는 경우 정책을 기술 자료에 추가하는 일치 결과 프로세스의 3단계로 수행됩니다. 이러한 각 프로세스는 일치 정책 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 일치 정책 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. 모든 규칙을 동시에 테스트한 후 필요에 따라 **일치 정책** 페이지로 돌아가서 개별 규칙을 수정하고 별도로 다시 테스트한 다음 **일치 결과** 페이지로 돌아가서 모든 규칙을 다시 한번 동시에 실행할 수 있습니다. DQS에서는 원본 데이터, 일치 규칙 및 일치 결과에 대한 통계를 제공하므로 정보를 바탕으로 일치 정책에 대한 의사를 결정하고 이를 구체화할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  

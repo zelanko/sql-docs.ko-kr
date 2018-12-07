@@ -13,12 +13,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be978540b673578fb9ca401f25dfab053f4f7e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854181"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503973"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Microsoft Azure Storage에 연결(복원)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47854181"
  Windows Azure Storage 계정 액세스 키를 지정합니다.  
   
  **보안 엔드포인트 사용(HTTPS)** 확인란  
- Windows Azure Storage에 대한 보안 연결을 설정하려면 이 옵션을 선택합니다(권장 사항).  
+ Windows Azure 스토리지에 대한 보안 연결을 설정하려면 이 옵션을 선택합니다(권장 사항).  
   
  **계정 키 저장** 확인란  
  SQL Server에서 이 저장소 계정에 대한 액세스 키를 기억하도록 설정하려면 이 확인란을 선택합니다.  

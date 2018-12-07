@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539100"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합 사용 - 웹 포털
 
@@ -46,9 +46,9 @@ ms.locfileid: "50020357"
 기존 공유 데이터 집합을 관리하려면, 다음을 수행합니다.  
   
 > [!NOTE]
-> 폴더에 공유 데이터 집합이 보이지 않는 경우에는 데이터 집합을 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 집합** 이 선택되어 있는지 확인합니다.  
+> 폴더에 공유 데이터 세트가 표시되지 않으면 데이터 세트가 표시되는 것을 확인해야 합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 집합** 이 선택되어 있는지 확인합니다.  
   
-1.  관리하려는 데이터 집합의 **줄임표(…)** 를 선택합니다.  
+1.  관리하려는 데이터 세트의 **줄임표(…)** 를 선택합니다.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   

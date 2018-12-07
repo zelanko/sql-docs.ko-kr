@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a11a7160f5ba6128358531c15bf24e304fdbaad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522347"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "47688941"
  예를 들어 **@pub_identity_range**에 대해 10000을, **@identity_range** 에 대해 1000(구독자에서의 업데이트 수가 적다고 가정)을, 그리고 **@threshold**를 참조하세요. 구독자에서 800(1000의 80%)이 삽입되면 구독자에 새 범위가 할당됩니다. 게시자에서 8000이 삽입되면 게시자에 새 범위가 할당됩니다. 새 범위를 지정하면 테이블의 ID 범위 값에 간격이 발생합니다. 더 높은 임계값을 지정하면 이러한 간격이 줄어들지만 시스템의 내결함성이 저하됩니다. 어떤 이유로든 배포 에이전트를 실행할 수 없으면 구독자에서 ID가 보다 빠른 속도로 줄어들 수 있습니다.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>ID 범위 수동 관리를 위한 범위 할당  
- ID 범위 수동 관리를 지정할 경우 게시자와 각 구독자가 서로 다른 ID 범위를 사용하고 있는지 확인해야 합니다. 예를 들어 게시자에 있는 테이블의 ID 열이 `IDENTITY(1,1)`로 정의되어 있다고 가정합니다. 이 ID 열은 1에서 시작하고 행이 삽입될 때마다 1씩 증가합니다. 게시자의 테이블에 5,000개의 행이 있고 응용 프로그램 수명 동안 테이블이 얼마간 커질 것으로 예상되는 경우 게시자는 1-10,000 범위를 사용할 수 있습니다. 두 개의 구독자가 있는 경우 구독자 A는 10,001-20,000을 사용하고 구독자 B는 20,001-30,000을 사용할 수 있습니다.  
+ ID 범위 수동 관리를 지정할 경우 게시자와 각 구독자가 서로 다른 ID 범위를 사용하고 있는지 확인해야 합니다. 예를 들어 게시자에 있는 테이블의 ID 열이 `IDENTITY(1,1)`로 정의되어 있다고 가정합니다. 이 ID 열은 1에서 시작하고 행이 삽입될 때마다 1씩 증가합니다. 게시자의 테이블에 5,000개의 행이 있고 응용 프로그램 수명 동안 테이블이 얼마간 커질 것으로 예상되는 경우 게시자는 1-10,000 범위를 사용할 수 있습니다. 두 구독자가 있는 경우 구독자 A는 10,001-20,000을 사용하고 구독자 B는 20,001-30,000을 사용할 수 있습니다.  
   
  스냅숏 또는 다른 방법으로 구독자가 초기화되면 DBCC CHECKIDENT를 실행하여 구독자에게 해당 ID 범위의 시작 지점을 할당합니다. 예를 들어 구독자 A에서 `DBCC CHECKIDENT('<TableName>','reseed',10001)`를 실행하고 구독자 B에서 `CHECKIDENT('<TableName>','reseed',20001)`를 실행합니다.  
   

@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517207"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
   데이터 프로파일링 태스크는 데이터 추출, 변환 및 로드 프로세스 내에서 데이터 프로파일링 기능을 제공합니다. 데이터 프로파일링 태스크를 사용하면 다음과 같은 이점이 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51641380"
   
 -   City 열의 값 분포  
   
--   State 열의 Zip 열에 대한 함수 종속성 수준(시/도는 지정된 우편 번호 값에 대해 항상 같아야 함)  
+-   State 열의 Zip 열에 대한 함수 종속성 수준(즉, 시/도는 지정된 우편 번호 값에 대해 항상 같아야 함)입니다.  
   
  데이터 프로필이 제공하는 통계를 통해 원본 데이터를 사용하여 발생할 수 있는 품질 문제를 효과적으로 최소화하기 위해 필요한 정보를 얻을 수 있습니다.  
   

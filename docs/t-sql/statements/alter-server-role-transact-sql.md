@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0280b76490e82aa8bbad2d2dd3bf8cb451d81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541254"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 서버 역할에서 지정한 서버 보안 주체를 제거합니다. *server_principal*은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal*은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 사용자 정의 서버 역할의 새로운 이름을 지정합니다. 이 이름은 아직 서버에 없는 이름이어야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
@@ -167,7 +167,7 @@ ALTER SERVER ROLE LargeRC ADD MEMBER Anna;
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>9. 리소스 클래스에서 로그인을 제거합니다.  
-다음 예에서는 `LargeRC` 서버 역할에서 안나의 멤버 자격을 삭제합니다.  
+다음 예제에서는 `LargeRC` 서버 역할에서 안나의 멤버 자격을 삭제합니다.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  

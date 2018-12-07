@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53b1636c4871e31eac5fe1376d10f84c892b1477
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd057885bbaa3aa6439079a744ac0b2d341dd638
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695677"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616733"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS 기본 기술 자료 사용
 
@@ -39,7 +38,7 @@ ms.locfileid: "51695677"
   
 -   **미국 - 주**: 미국의 각 주에 대해 규칙에 따른 긴 이름(공식 이름)과 2자 약어를 포함합니다. 선행 값은 규칙에 따른 주 이름으로 설정됩니다.  
   
--   **미국 - 주(선행 2자)**:미국의 각 주에 대해 규칙에 따른 긴 이름(공식 이름)과 2자 약어를 포함합니다. 선행 값은 주 이름의 2자 약어로 설정됩니다.  
+-   **미국 - 주(선행 2자)**: 미국의 각 주에 대해 규칙에 따른 긴 이름(공식 이름)과 2자 약어를 포함합니다. 선행 값은 주 이름의 2자 약어로 설정됩니다.  
   
 ## <a name="using-the-default-knowledge-base"></a>기본 기술 자료 사용  
  다음과 같은 방법으로 기본 DQS 기술 자료인 DQS 데이터를 사용할 수 있습니다.  

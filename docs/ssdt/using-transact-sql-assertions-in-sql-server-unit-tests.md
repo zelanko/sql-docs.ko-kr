@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671250"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543898"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
 SQL Server 단위 테스트에서는 Transact\-SQL 테스트 스크립트가 실행되어 결과를 반환합니다. 결과가 결과 집합으로 반환되는 경우도 있습니다. 테스트 조건을 사용하면 결과의 유효성을 검사할 수 있습니다. 예를 들어 테스트 조건을 사용하여 특정 결과 집합에서 반환되는 행 수를 확인하거나 특정 테스트가 실행되는 데 걸린 시간을 확인할 수 있습니다. 테스트 조건에 대한 자세한 내용은 [SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)을 참조하세요.  
@@ -72,7 +72,7 @@ Transact\-SQL 스크립트에서 RAISERROR 문을 사용하여 서버에서 Tran
   
 @ErrorMessage는 사용자 정의 오류 메시지입니다. 이 메시지 문자열은 printf_s 함수와 비슷하게 형식을 지정할 수 있습니다.  
   
-@ErrorSeverity는 0~18의 사용자 정의 심각도 수준입니다.  
+@ErrorSeverity는 0~18 사이의 사용자 정의 심각도 수준입니다.  
   
 > [!NOTE]  
 > 심각도 수준 값 ‘0’과 ‘10’에서는 SQL Server 단위 테스트가 실패하지 않습니다. 테스트를 실패하도록 하려면 0~18 사이의 다른 모든 값을 사용할 수 있습니다.  

@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641837"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511260"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
  OData 연결 관리자를 사용하여 OData 데이터 원본에 연결합니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 데이터 원본에 연결하고 서비스에서 데이터를 사용합니다. 자세한 내용은 [OData Source](../../integration-services/data-flow/odata-source.md)를 참조하십시오.  
@@ -27,7 +27,7 @@ ms.locfileid: "51641837"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>SSIS 패키지에 OData 연결 관리자 추가  
  세 가지 방법으로 새로운 OData 연결 관리자를 SSIS 패키지에 추가할 수 있습니다.  
   
--   **새로 만들기...** 를 클릭합니다. 에서 **새로 만들기…**  
+-   **OData 원본 편집기**에서 **새로 만들기...** 단추를 클릭합니다.  
   
 -   **솔루션 탐색기** 에서 **연결 관리자**폴더를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자**를 클릭합니다. **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
   

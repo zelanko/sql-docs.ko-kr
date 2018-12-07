@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603633"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416514"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 저장소를 사용하여 SQL Server 설치
 

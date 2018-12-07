@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662999"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539110"
 ---
 # <a name="static-data-masking"></a>정적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ NULL로 바꾸기를 수행하는 마스킹 기능에서는 마스킹 이전 데
 
 정적 데이터 마스킹을 실행하는 단계별 가이드는 다음과 같습니다. 
  
-1. SQL Server Management Studio를 실행합니다. 데이터베이스에 연결합니다. 왼쪽의 **개체 탐색기** 창에서 데이터베이스 폴더를 펼칩니다. 마스킹하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다. **작업**을 마우스 왼쪽 단추로 클릭합니다. **데이터베이스 마스크...(미리 보기)** 를 마우스 왼쪽 단추로 클릭합니다.
+1. SQL Server Management Studio를 실행합니다. 데이터베이스에 연결합니다. 왼쪽의 **개체 탐색기** 창에서 데이터베이스 폴더를 펼칩니다. 마스킹하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다. **작업**을 마우스 왼쪽 단추로 클릭합니다. **데이터베이스 마스킹... (미리 보기)** 를 마우스 왼쪽 단추로 클릭합니다.
  
  ![작업 메뉴](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -104,7 +104,7 @@ NULL로 바꾸기를 수행하는 마스킹 기능에서는 마스킹 이전 데
  
  ![마스킹 기능 드롭다운](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 참고: 이 마스킹 기능 대부분에는 추가 구성 매개 변수가 있습니다. 순서 섞기 마스킹의 경우 정적 데이터 마스킹에서 기본 매개 변수를 제공합니다. 그룹 순서 섞기 마스킹, 단일 값 마스킹 및 복합 문자열 마스킹의 경우 사용자가 구성 매개 변수를 제공해야 합니다. 구성 매개 변수를 변경하거나 제공하려면 **구성...** 옵션을 클릭하고 표시되는 대화 상자에서 매개 변수에 대한 (대체) 값을 지정합니다. 각 마스킹 기능에 대한 자세한 설명은 [마스킹 기능](#masking-functions)에서 제공합니다.
+ 참고: 이 마스킹 기능 대부분에는 추가 구성 매개 변수가 있습니다. 순서 섞기 마스킹의 경우 정적 데이터 마스킹에서 기본 매개 변수를 제공합니다. 그룹 순서 섞기 마스킹, 단일 값 마스킹 및 복합 문자열 마스킹의 경우 사용자가 구성 매개 변수를 제공해야 합니다. 구성 매개 변수를 변경하거나 제공하려면 **구성...** 옵션을 클릭하고 팝업으로 나타나는 대화 상자에서 매개 변수 대체 값을 지정합니다. 각 마스킹 기능에 대한 자세한 설명은 [마스킹 기능](#masking-functions)에서 제공합니다.
  
  ![마스킹 기능 구성 단추](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -122,7 +122,7 @@ NULL로 바꾸기를 수행하는 마스킹 기능에서는 마스킹 이전 데
  
  ![구성 파일](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. 정적 데이터 마스킹은 사용자의 **Documents** 폴더에 이름이 Static Data Masking인 폴더를 만들고 로그 파일을 그 안에 배치합니다. 로그 파일은 디버깅에 유용할 수 있습니다. 로그 파일의 이름은 구성 창의 맨 아래에 표시됩니다. 
+6. 정적 데이터 마스킹을 사용하면 Static Data Masking이라는 사용자의 **Documents** 폴더를 만들고 로그 파일을 그 안에 배치할 수 있습니다. 로그 파일은 디버깅에 유용할 수 있습니다. 로그 파일의 이름은 구성 창의 맨 아래에 표시됩니다. 
   
  
 7. (SQL Server만 해당) 온-프레미스 데이터베이스에서 정적 데이터 마스킹을 운용할 경우 정적 데이터 마스킹이 백업/복원 작업을 수행합니다. **2단계: .BAK 파일 복제 위치**에서 백업 파일이 저장되는 서버의 위치를 제공합니다. 

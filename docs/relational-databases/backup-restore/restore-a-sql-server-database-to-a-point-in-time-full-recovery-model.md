@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b910382d1357c9a854a58908fef6972ff8b1fb55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb896309e39a2abe054ce470fd9cec33b690181c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535568"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "47818891"
   
  **기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY...  
   
  복구 지점은 **time** 에 지정된 *datetime*값 또는 그전에 발생한 최근 트랜잭션 커밋입니다.  
   

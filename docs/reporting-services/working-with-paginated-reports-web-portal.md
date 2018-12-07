@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029192"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537347"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50029192"
 > [!NOTE]
 > 페이지를 매긴 보고서가 폴더에 표시되지 않으면 페이지를 매긴 보고서를 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **페이지를 매긴 보고서** 가 선택되어 있는지 확인합니다.  
   
-1.  관리하려는 데이터 집합의 **줄임표(…)** 를 선택합니다.  
+1.  관리하려는 데이터 세트의 **줄임표(…)** 를 선택합니다.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -124,7 +124,7 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>종속 항목  
-종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)** 를 선택하여 이러한 항목을 나중에 관리할 수 있습니다.  
+종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)** 를 선택하여 이러한 항목을 추가로 관리할 수 있습니다.  
   
 ## <a name="caching"></a>캐싱  
 페이지를 매긴 보고서의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  

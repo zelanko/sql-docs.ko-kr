@@ -15,12 +15,12 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76a3fe793e43af89dbbf29c934604d1e3102076a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661127"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502674"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51661127"
  **요청 시** 평가 모드를 사용하여 실행되는 정책은 이 확인란을 사용하지 않습니다.  
   
  **조건 확인**  
- 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추(**…**)를 클릭합니다.  
+ 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추(**...**)를 클릭합니다.  
   
  **적용 대상**  
  이 패싯에서 필터 식을 완성하는 데 사용할 수 있는 대상 유형을 선택합니다.  

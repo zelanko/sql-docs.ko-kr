@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67d2b66ac05562741958b6fb7e439b0685f80458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855659"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512889"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47855659"
 3.  변수 값을 변경하여 각 코드 예제를 독립적으로 시도할 수 있지만, Windows Azure 저장소 계정과 SQL 자격 증명을 만드는 것은 사전 전제 조건이며 Windows Azure Blob 저장소 서비스에 대한 모든 백업 및 복원 작업에 필요합니다.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>모든 SQL Server 인스턴스에서 SQL 자격 증명 만들기  
- 두 가지 예제 스크립트가 있으며 둘 모두 컴퓨터의 모든 SQL Server 인스턴스에서 SQL 자격 증명 "mybackupToURL"을 만듭니다. 간단한 첫 번째 예에서는 자격 증명을 만들고 예외를 트래핑하지 않습니다.  예를 들어 컴퓨터의 인스턴스 중 하나에 동일한 이름의 기존 자격 증명이 이미 있는 경우 스크립트가 실패합니다. 두 번째 예에서는 오류를 트래핑하여 스크립트가 계속 실행될 수 있도록 합니다.  
+ 두 가지 예제 스크립트가 있으며 둘 모두 컴퓨터의 모든 SQL Server 인스턴스에서 SQL 자격 증명 “mybackupToURL”을 만듭니다. 간단한 첫 번째 예에서는 자격 증명을 만들고 예외를 트래핑하지 않습니다.  예를 들어 컴퓨터의 인스턴스 중 하나에 동일한 이름의 기존 자격 증명이 이미 있는 경우 스크립트가 실패합니다. 두 번째 예에서는 오류를 트래핑하여 스크립트가 계속 실행될 수 있도록 합니다.  
   
 ```  
   

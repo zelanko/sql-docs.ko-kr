@@ -11,12 +11,12 @@ ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33c01da8b0ae9f439debe2f8343bddbc1c7de2fe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 640b9c04c8988c091fea267b74c7f3552079d175
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517539"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "51698491"
   
 4.  단계를 추가하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성-***job_name* 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;단계 페이지&#41;](../../ssms/agent/job-properties-new-job-steps-page.md)을 참조하세요.  
-  
+5.  **Job Properties -**_job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 속성 - 새 작업&#40;단계 페이지&#41;](../../ssms/agent/job-properties-new-job-steps-page.md)을 참조하세요.  
+ 
 6.  완료되었으면 **확인**을 클릭합니다.  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL 사용  

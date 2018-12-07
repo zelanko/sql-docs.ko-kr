@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535589"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,13 +94,13 @@ ms.locfileid: "51702681"
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|현재 현지 시간을 반환합니다. time-precision 인수는 반환된 값의 초 전체 자릿수를 결정합니다.|  
 |CURTIME() (ODBC 3.0)|현재 현지 시간을 반환합니다.|  
 |DAYNAME( date_exp ) (ODBC 2.0)|date_exp의 날짜 부분에서 데이터 원본에 따른 요일 이름을 포함한 문자열을 반환합니다(예: 영어를 사용하는 데이터 원본의 경우 Sunday에서 Saturday까지 또는 Sun.에서 Sat.까지. 독일어를 사용하는 데이터 원본의 경우 Sonntag에서 Samstag까지).|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp의 월 필드를 기준으로 해당 월의 일을 1에서 31 사이 정수 값으로 반환합니다.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 요일을 1에서 7 사이의 정수 값으로 반환합니다. 1은 일요일을 나타냅니다.|  
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp의 월 필드를 기준으로 해당 월의 일을 1에서 31 사이의 정수 값으로 반환합니다.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 요일을 1에서 7 사이의 정수 값으로 반환합니다. 이 경우 1은 일요일을 나타냅니다.|  
 |HOUR( time_exp ) (ODBC 1.0)|time_exp의 시간 필드를 기준으로 해당 시간을 0에서 23 사이의 정수 값으로 반환합니다.|  
 |MINUTE( time_exp ) (ODBC 1.0)|time_exp의 분 필드를 기준으로 해당 분을 0에서 59 사이의 정수 값으로 반환합니다.|  
 |SECOND( time_exp ) (ODBC 1.0)|time_exp의 초 필드를 기준으로 해당 초를 0에서 59 사이의 정수 값으로 반환합니다.|  
 |MONTHNAME( date_exp ) (ODBC 2.0)|date_exp의 월 부분에서 데이터 원본에 따른 특정 월 이름을 포함한 문자열을 반환합니다(예: 영어를 사용하는 데이터 원본의 경우 January에서 December까지 또는 Jan.에서 Dec.까지. 독일어를 사용하는 데이터 원본의 경우 Januar에서 Dezember까지).|  
-|QUARTER( date_exp ) (ODBC 1.0)|date_exp의 분기를 1에서 4 사이의 정수 값으로 반환합니다. 1은 1월 1일부터 3월 31일까지를 나타냅니다.|  
+|QUARTER( date_exp ) (ODBC 1.0)|date_exp의 분기를 1에서 4 사이의 정수 값으로 반환합니다. 이 경우 1은 1월 1일에서 3월 31일까지를 나타냅니다.|  
 |WEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 연도의 주를 1에서 53 사이의 정수 값으로 반환합니다.|  
   
 ## <a name="examples"></a>예  

@@ -19,12 +19,12 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d5aa53bc64b8146b4afe8de98d8136c0abbec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509580"
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 모든 쌍(*scalar_expression ***,*** x)* 에 대해 지정된 비교값이 TRUE일 경우 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다. 이때 *x*는 단일 열 집합의 값입니다.  
+ 모든 쌍(_scalar_expression_**,**_x)_ 에 대해 지정된 비교값이 TRUE일 경우 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다. 이때 *x*는 단일 열 세트의 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  ALL의 경우 하위 쿼리에 의해 반환된 모든 값을 정확하게 비교하려면 *scalar_expression*이 필요합니다. 예를 들어 하위 쿼리에서 값 2와 3을 반환할 경우 *scalar_expression* <= ALL (하위 쿼리)은 2의 *scalar_expression*에 대해 TRUE로 계산됩니다. 하위 쿼리에서 값 2와 3을 반환할 경우에는 하위 쿼리 값(값 3)의 일부가 식의 조건을 만족하지 않으므로 *scalar_expression* = ALL(하위 쿼리)은 FALSE로 계산됩니다.  

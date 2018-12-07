@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336292"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529866"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="parallelism"></a>Parallelism
  결과를 클라이언트에 반환하는 OUTPUT 절은 항상 직렬 계획을 사용합니다.
 
-호환성 수준 130 이상으로 설정된 데이터베이스의 컨텍스트에서 INSERT...SELECT 작업이 SELECT 문에 WITH (TABLOCK) 힌트를 사용하고 OUTPUT…INTO를 사용하여 임시 또는 사용자 테이블에 삽입하는 경우, INSERT…SELECT에 대한 목표 테이블은 하위 트리 비용에 따라 병렬 처리에 적합합니다.  OUTPUT INTO 절에서 참조되는 목표 테이블은 병렬 처리에 적합하지 않습니다. 
+호환성 수준 130 이상으로 설정된 데이터베이스의 컨텍스트에서 INSERT...SELECT 작업이 SELECT 문에 WITH(TABLOCK) 힌트를 사용하고 OUTPUT...INTO를 사용하여 임시 테이블 또는 사용자 테이블에 삽입하는 경우, INSERT...SELECT의 목표 테이블은 하위 트리 비용에 따라 병렬 처리에 적합합니다.  OUTPUT INTO 절에서 참조되는 목표 테이블은 병렬 처리에 적합하지 않습니다. 
  
 ## <a name="triggers"></a>트리거  
  OUTPUT에서 반환된 열에는 INSERT, UPDATE 또는 DELETE 문이 완료된 후, 그리고 트리거가 실행되기 전의 데이터가 반영됩니다.  

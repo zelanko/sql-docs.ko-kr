@@ -1,6 +1,6 @@
 ---
 title: 기본 모드 보고서 서버 확장 배포 구성 | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021647"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710644"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.
 
 Power BI Report Server의 경우 적절한 성능을 보장하려면 모든 확장 환경에 대한 부하 분산 장치에서 클라이언트 선호도(고정 세션이라고도 함)를 구성해야 합니다.  
   
-SQL Server 2016 Reporting Services의 경우 SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
+SQL Server 2016 Reporting Services 이전 버전의 경우 SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
  
   *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
   
@@ -46,7 +46,7 @@ SQL Server 2016 Reporting Services의 경우 SharePoint 모드 보고서 서버�
   
  **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
   
--   보고서 서버 인스턴스를 설치하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
+-   보고서 서버 인스턴스를 설치하는 방법은 [설치 마법사에서 SQL Server 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)을 참조하세요.  
   
 -   NLB(네트워크 로드 균형 조정) 클러스터에 스케일 아웃 배포를 호스트하려는 경우 스케일 아웃 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
@@ -133,7 +133,7 @@ An error occurred within the report server database.  This may be due to a conne
 3.  확장 배포 페이지에서 배포에 조인되기를 기다리고 있는 보고서 서버 인스턴스를 선택한 다음 **서버 추가**를 선택합니다.  
   
     > [!NOTE]  
-    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다’와 유사한 오류 메시지가 표시될 수 있습니다.  
     >   
     >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   

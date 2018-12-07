@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514387"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "51217951"
   
     3.  **연결 속성** 대화 상자의 **연결 이름** 상자에 만들려는 연결의 이름을 입력합니다.  
   
-    4.  **SQL Server 데이터에 연결하려면 다음을 지정하세요.** 의 **서버 이름 선택 또는 입력** 상자에 사용하려는 SQL Server의 이름을 입력하거나 줄임표 **(…)** 를 클릭하고 **SQL Server** 대화 상자에서 서버를 선택합니다. **SQL Server** 대화 상자에서 서버를 선택하는 경우 **확인**을 클릭합니다.  
+    4.  **SQL Server 데이터에 연결하려면 다음을 지정하세요.** 의 **서버 이름 선택 또는 입력** 상자에 사용하려는 SQL Server의 이름을 입력하거나 줄임표 **(...)** 를 클릭하여 **SQL Server** 대화 상자에서 서버를 선택합니다. **SQL Server** 대화 상자에서 서버를 선택하는 경우 **확인**을 클릭합니다.  
   
     5.  **서버 로그온 정보 입력**에서 **Windows NT 통합 보안 사용** 또는 **특정 사용자 이름 및 암호 사용**을 선택합니다. 특정 사용자 이름 및 암호를 사용하도록 선택한 경우 **사용자 이름** 및 **암호** 상자에 각각 해당 정보를 입력합니다.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "51217951"
   
         1.  **텍스트 파일 보고서 생성**을 선택하는 경우 **새 파일 만들기** 또는 **파일에 추가**를 선택합니다.  
   
-        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(…)** 를 클릭하고 **폴더 찾기 –**_server\_name_ 또는 **데이터베이스 파일 찾기 –**_server\_name_ 대화 상자에서 폴더 또는 파일 이름의 경로를 선택합니다.  
+        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(...)** 를 클릭하고 **폴더 찾기 –**_server\_name_ 또는 **데이터베이스 파일 찾기 –**_server\_name_ 대화 상자에서 폴더 또는 파일 이름의 경로를 선택합니다.  
   
         3.  **전자 메일 받는 사람에게 보고서 보내기**를 선택하는 경우 **에이전트 운영자** 목록에서 전자 메일로 보낼 보고서의 받는 사람을 선택합니다.  
   

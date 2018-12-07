@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507469"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
@@ -150,7 +150,7 @@ ms.locfileid: "51638950"
   
 -   숫자, 문장 부호 및 영문자 조합. 예를 들어 *A23B#99* 는 용어 *A23B*를 반환합니다.  
   
--   여기에는 문자, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ 및 ‘이 포함됩니다.  
+-   여기에는 문자, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ 및 ‘가 포함됩니다.  
   
     > [!NOTE]  
     >  하나 이상의 마침표(.)가 포함된 머리 글자어는 여러 문장으로 분리되지 않습니다.  

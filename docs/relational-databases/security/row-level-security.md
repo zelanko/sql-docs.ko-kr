@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409900"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51672422"
   
  RLS(행 수준 보안)를 사용하면 고객이 쿼리를 실행하는 사용자의 특성(예: 그룹 멤버 자격 또는 실행 컨텍스트)에 따라 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다.  
   
- 행 수준 보안은 응용 프로그램의 보안 설계 및 코딩을 간소화합니다. RLS는 데이터 행 액세스에 대한 제한을 구현하는 데 유용합니다. 예를 들어 작업자가 자신의 부서와 관련된 데이터 행에만 액세스하거나 고객의 데이터 액세스를 회사와 관련된 데이터로만 제한할 수 있습니다.  
+ 행 수준 보안(RLS)은 응용 프로그램의 보안 설계 및 코딩을 간소화합니다. RLS는 데이터 행 액세스에 대한 제한을 구현하는 데 유용합니다. 예를 들어 작업자가 자신의 부서와 관련된 데이터 행에만 액세스하거나 고객의 데이터 액세스를 회사와 관련된 데이터로만 제한할 수 있습니다.  
   
  액세스 제한 논리는 다른 응용 프로그램 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이로 인해 보안 시스템의 노출 영역이 감소되어 보안 시스템이 더 안정적이고 강력해집니다.  
   

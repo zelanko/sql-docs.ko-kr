@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 125ce02e483cc927cf5b6a1d37f4209dcc3dcb22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836661"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617442"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-두 번째 인수에 지정된 몇 문자가 문자의 대상 집합으로 변환된 이후 첫 번째 인수로 제공된 문자열을 반환합니다.
+두 번째 인수에 지정된 일부 문자가 세 번째 인수에 지정된 문자의 대상 세트로 변환된 이후 첫 번째 인수로 제공된 문자열을 반환합니다.
 
 ## <a name="syntax"></a>구문   
 ```
@@ -36,23 +36,23 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>인수   
 
-inputString   
-모든 문자 형식(nvarchar, varchar, nchar, char)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+ *inputString*   
+ 검색할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식(nvarchar, varchar, nchar, char)은 *inputString*이 될 수 있습니다.
 
-문자   
-대체할 문자가 포함된 모든 문자 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+ *characters*   
+ 바꿔야 하는 문자가 포함된 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 모든 문자 데이터 형식은 *characters*가 될 수 있습니다.
 
-번역   
-두 번째 인수의 형식 및 길이가 일치하는 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+*translations*   
+ 대체 문자를 포함하는 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *translations*는 *characters*와 데이터 종류 및 길이가 같아야 합니다.
 
 ## <a name="return-types"></a>반환 형식   
-`inputString`과 형식이 동일하면서 두 번째 인수의 문자가 세 번째 인수에서 일치하는 문자로 대체되는 문자 식을 반환합니다.
+`inputString`과 데이터 형식이 동일하면서 두 번째 인수의 문자가 세 번째 인수에서 일치하는 문자로 대체되는 문자 식을 반환합니다.
 
 ## <a name="remarks"></a>Remarks   
 
-문자와 번역의 길이가 다를 경우 `TRANSLATE` 함수는 오류를 반환합니다. null 값이 문자 또는 교체 인수로 제공되는 경우 `TRANSLATE` 함수는 변경되지 않은 입력을 반환합니다. `TRANSLATE` 함수의 동작은 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 함수와 동일해야 합니다.   
+*characters*와 *translations* 식이 다른 경우 `TRANSLATE`는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
 
-`TRANSLATE` 함수의 동작은 여러 개의 `REPLACE` 함수를 사용하는 경우와 동일합니다.
+`TRANSLATE` 함수의 동작은 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 함수를 여러 개 사용할 때와 동일합니다.
 
 `TRANSLATE`은 언제나 SC 데이터 정렬을 인식합니다.
 
@@ -68,9 +68,34 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  이 예의 `TRANSLATE` 함수는 `REPLACE`를 사용하는 다음 명령문과 동일하지만 훨씬 간단합니다. `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+#### <a name="equivalent-calls-to-replace"></a>동일한 REPLACE 호출
 
+다음 SELECT 문에는 REPLACE 함수에 대한 4개의 중첩된 호출 그룹이 있습니다. 이 그룹은 앞의 SELECT에서 만든 TRANSLATE 함수에 대한 한 번의 호출과 동일합니다.
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>2. GeoJSON 포인트를 WKT로 변환    
 GeoJSON은 다양한 지리 데이터 구조를 인코딩하는 형식입니다. `TRANSLATE` 함수에서는 개발자가 GeoJSON 포인트를 WKT 형식으로 변환하거나 그 반대로 쉽게 변환할 수 있습니다. 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.   

@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541262"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
 
@@ -108,7 +108,7 @@ ms.locfileid: "47696612"
 ##  <a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  
  언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. **varbinary(max)** 열에 저장되지 않은 데이터에 대해서는 특수 필터링이 수행되지 않습니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
   
- 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 방법을 선택할 수 있습니다. 권장되는 방법은 단순히 텍스트 데이터를 **varbinary(max)** 열에 저장하고 해당 문서 유형을 필터링하도록 지정하는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
+ 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 방법이 있습니다. 이 중 권장되는 방법은 단순히 텍스트 데이터를 **varbinary(max)** 열에 저장하고 해당 문서 유형을 필터링하도록 지정하는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
   
 > [!NOTE]  
 >  중립 언어를 지정하면 언어 기반 형태소 분석은 적용되지 않습니다.  

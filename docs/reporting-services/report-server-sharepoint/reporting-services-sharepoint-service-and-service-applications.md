@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e248ef60abf94ece20d93a6715c53cfc39660be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531469"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 응용 프로그램
 
@@ -28,7 +28,7 @@ ms.locfileid: "50030632"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램 만들기
 
- SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
+ SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법에 대한 자세한 내용은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 애플리케이션 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>프록시 그룹과 서비스 응용 프로그램의 연결 수정
 
@@ -61,19 +61,19 @@ ms.locfileid: "50030632"
 1.  응용 프로그램 풀 이름의 응용 프로그램 풀 개체를 새 동작으로 전달되는 변수에 추가합니다.  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  제공한 이름 및 응용 프로그램 풀 이름을 사용하여 서비스 응용 프로그램을 만듭니다.  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  새 서비스 응용 프로그램 개체를 가져오고 개체를 새 프록시 파이프 지정 cmdlet으로 파이프합니다.  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ## <a name="related-tasks"></a>관련 작업

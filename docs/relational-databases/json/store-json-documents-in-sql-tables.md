@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502778"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
 SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.
@@ -48,12 +48,12 @@ ALTER TABLE WebSite.Logs
 JSON 문서를 테이블에 저장하면 표준 Transact-SQL 언어를 사용하여 문서를 쿼리할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 *아무* T-SQL 함수 및 쿼리 절을 사용하여 JSON 문서를 쿼리할 수 있다는 것이 큰 이점입니다. SQL Server 및 SQL Database는 JSON 문서를 분석하는 데 사용할 수 있는 쿼리에 어떠한 제약 조건을 도입하지 않습니다. `JSON_VALUE` 함수를 사용하여 JSON 문서에서 값을 추출하고 다른 값처럼 쿼리에서 사용할 수 있습니다.
@@ -76,7 +76,7 @@ create table WebSite.Logs (
 );
 ```
 
-이 예에서 사용된 계산 열은 테이블에 추가 공간을 추가하지 않는 비지속형 또는 가상 열입니다. 이는 다음 예와 같이 조회 성능을 향상시키기 위해 색인 `ix_severity`에 의해 사용됩니다.
+이 예제에서 사용된 계산 열은 테이블에 추가 공간을 추가하지 않는 비지속형 또는 가상 열입니다. 이는 다음 예와 같이 조회 성능을 향상시키기 위해 색인 `ix_severity`에 의해 사용됩니다.
 
 ```sql
 SELECT log

@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedb57a3e9505503cc367619c4827bc1e348abf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843651"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523070"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,24 +20,23 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778c3bdb9fc17a27af4fbc3a7b0fd6e2aa89f402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629117"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586236"
 ---
 # <a name="close-transact-sql"></a>CLOSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 결과 집합을 해제하고 커서가 위치한 행에 보유된 커서 잠금을 해제하여 열린 커서를 닫습니다. CLOSE는 데이터 구조를 다시 열 수 있도록 방치하지만 커서를 다시 열 때까지 인출과 위치 지정 업데이트는 허용되지 않습니다. CLOSE는 열려 있는 커서에만 실행할 수 있으며 선언만 되었거나 이미 닫혀 있는 커서에는 사용할 수 없습니다.  
+  현재 결과 집합을 해제하고 커서가 위치한 행에 보유된 커서 잠금을 해제하여 열린 커서를 닫습니다. `CLOSE`는 데이터 구조를 다시 열도록 내버려두지만 커서를 다시 열 때까지 인출과 위치 지정 업데이트는 허용되지 않습니다. CLOSE는 열려 있는 커서에서만 실행되어야 하며 `CLOSE`는 선언만 되었거나 이미 닫혀 있는 커서에서는 사용할 수 없습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -54,7 +53,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>예  
  다음 예에서는 커서 기반 프로세스에서 `CLOSE` 문의 정확한 위치를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
 OPEN Employee_Cursor;  

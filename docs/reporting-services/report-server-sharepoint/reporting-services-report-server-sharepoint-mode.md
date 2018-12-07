@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529737"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -82,7 +82,7 @@ ms.locfileid: "50029802"
   
 -   SQL Server Reporting Services는 SharePoint 문서 라이브러리 버전 제어를 지원하지 **않습니다** . “문서 버전 기록”을 사용하도록 구성된 문서 라이브러리에 보고서 항목을 저장한 경우 Reporting Services 기능은 제대로 작동하지 않으며 ULS 로그에 오류가 생성됩니다. 다음은 ULS 로그에 있는 오류의 예입니다.  
   
-    -   “…보고서와 연결된 데이터 원본을 사용할 수 없습니다”.  
+    -   “...보고서와 연결된 데이터 원본을 사용할 수 없습니다”.  
   
      문서 라이브러리 버전 기록은 “라이브러리 설정”의 ”버전 관리 설정” 페이지에 구성됩니다.  
   

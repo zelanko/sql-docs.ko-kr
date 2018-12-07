@@ -14,12 +14,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49528d0fda3bbbe9798a4a7bdce2cbdd5b7369f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820018"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416674"
 ---
 # <a name="entity-dependencies-explorer"></a>엔터티 종속성 탐색기
 
@@ -42,7 +42,7 @@ ms.locfileid: "47820018"
   
 ![MDS_EntityDependencies_Entity_Node.jpg](../master-data-services/media/mds-entitydependencies-entity-node-jpg.jpg)  
   
-이러한 컨테이너 트리 노드에는 엔터티 이름 왼쪽에 표 모양의 아이콘이 있고 텍스트는 계층 수준 깊이로 색이 지정됩니다. 위의 예제에서는 “CDSR {Canada}” SubRegion에 “NAm {N. America}” BigArea를 참조하는 “CDA {Canada}” Area를 참조하는 “CDR {Canada}” Region에 대한 DBA 참조가 있음을 보여 줍니다.  
+이러한 컨테이너 트리 노드에는 엔터티 이름 왼쪽에 표 모양의 아이콘이 있고 텍스트는 계층 수준 깊이로 색이 지정됩니다. 위 예제는 "CDSR {Canada}" SubRegion에 "NAm {N. America}" BigArea, "CDA {Canada}" Area, "CDR {Canada}" Region을 차례로 참조하는 DBA 참조가 있음을 보여줍니다.  
   
 계층 탐색기 페이지에서와 마찬가지로 뷰는 완벽하게 편집할 수 있습니다. 한 부모에서 다른 부모로 자식 멤버를 잘라내기-붙여넣기 또는 끌어서 놓기로 트리에서 부모-자식 관계를 수정할 수 있습니다. 트리의 오른쪽 세부 정보 창에서 다른 멤버 특성 값을 수정할 수 있습니다.   
   

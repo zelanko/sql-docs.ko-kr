@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535308"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51658632"
   > 각 내부 개체는 IAM 페이지와 8페이지 익스텐트를 포함하여 최소 9페이지를 사용합니다. 페이지 및 익스텐트에 대한 자세한 내용은 [페이지 및 익스텐트](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)를 참조하세요.
 
   > [!IMPORTANT]
-  > Azure SQL Database 논리 서버는 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 전역 임시 테이블 및 전역 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에서 공유합니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance))는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다. Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database 논리 서버의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 논리 서버의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. 
+  > Azure SQL Database 논리 서버는 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 글로벌 임시 테이블 및 글로벌 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에 대해 공유됩니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance))는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다. Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database 논리 서버의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 논리 서버의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. 
 
 - **버전 저장소**는 행 버전 관리를 사용하는 기능을 지원하는 데 필요한 데이터 행을 보관하는 데이터 페이지 모음입니다. 버전 저장소에는 일반 버전 저장소와 온라인 인덱스 작성 버전 저장소가 있습니다. 버전 저장소에는 다음 정보가 포함됩니다.
   - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅숏 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
@@ -204,7 +204,7 @@ GO
 
 tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를 참조하세요.
 
-[TEMPDB – 파일 및 추적 플래그 및 업데이트](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+[TEMPDB – 파일, 추적 플래그 및 업데이트](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 tempdb 용량 계획
  SQL Server 프로덕션 환경에서 tempdb의 적절한 크기는 많은 요인에 따라 결정됩니다. 이 문서의 앞부분에서 설명한 것처럼 기존 작업, 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 등이 이러한 요인에 포함됩니다. SQL Server 테스트 환경에서 다음 태스크를 수행하여 기존 작업을 분석하는 것이 좋습니다.

@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602633"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405970"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -48,7 +48,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 - 기존 배포 데이터베이스 AG에 노드추가 또는 제거
 - 배포자에는 여러 배포 데이터베이스가 있을 수 있습니다. 각 배포 데이터베이스는 자체 AG에 있을 수 있고 다른 AG에는 있을 수 없습니다. 여러 배포 데이터베이스가 AG를 공유할 수 있습니다.
 - 게시자 및 배포자는 별도 SQL Server 인스턴스에 있어야 합니다.
-- 배포 데이터베이스를 호스트하는 가용성 그룹에 대한 수신기가 기본값이 아닌 포트를 사용하도록 구성된 경우, 이 수신기에 대한 별칭과 기본값 이외 포트를 설정해야 합니다.
+- 배포 데이터베이스를 호스트하는 가용성 그룹에 대한 수신기가 기본값이 아닌 포트를 사용하도록 구성된 경우, 이 수신기에 대한 별칭과 기본값 이외 포트를 설정해야 합니다. 이 별칭은 모든 게시자, 배포자 및 구독자 복제본(끌어오기 모드에서 실행 중인 구독자)에서 생성되어야 합니다. 
 
 ## <a name="limitations-or-exclusions"></a>제한 및 배제
 
@@ -236,7 +236,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>배포 데이터베이스 AG에서 게시자 제거
 
-이 예에서는 현재 배포 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다. 
+이 예제에서는 현재 배포 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다. 
 
 ### <a name="publisher-workflow"></a>게시자 워크플로
 

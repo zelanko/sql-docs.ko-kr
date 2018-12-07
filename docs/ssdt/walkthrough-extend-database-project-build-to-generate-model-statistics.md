@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523418"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
 빌드 참가자를 만들어서 데이터베이스 프로젝트를 빌드할 때 사용자 지정 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 빌드할 때 SQL 데이터베이스 모델에서 통계를 출력하는 ModelStatistics라는 빌드 참가자를 만듭니다. 이 빌드 참가자는 빌드할 때 매개 변수가 사용되기 때문에 몇 가지 추가 단계가 필요합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "51659142"
   
 -   모델 통계 생성 및 사용자에게 보고. 이 작업에 대해서는 여기에 표시된 예를 참조하십시오.  
   
-빌드 참가자를 만들 때 주로 사용되는 첫 번째는 OnExecute 메서드입니다. BuildContributor에서 상속되는 모든 클래스는 이 메서드를 구현해야 합니다. BuildContributorContext 개체는 이 메서드에 전달됩니다. 여기에는 데이터베이스의 모델, 빌드 속성 및 빌드 참가자에서 사용할 인수/파일 등 빌드에 대한 모든 관련 데이터가 포함됩니다.  
+빌드 참가자를 만들 때 주로 사용되는 첫 번째는 OnExecute 메서드입니다. BuildContributor에서 상속되는 모든 클래스는 이 메서드를 구현해야 합니다. BuildContributorContext 개체는 이 메서드에 전달됩니다. 여기에는 데이터베이스의 모델, 빌드 속성 및 빌드 기여자가 사용한 인수/파일과 같은 빌드에 대한 모든 관련 데이터가 포함됩니다.  
   
 **TSqlModel 및 데이터베이스 모델 API**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51659142"
 |**클래스**|**메서드/속성**|**설명**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|모델에서 개체를 쿼리하며 모델 API를 사용하기 위한 기본 요소입니다. 테이블 또는 뷰와 같은 최상위 유형만 쿼리할 수 있으며, 열과 같은 유형은 모델 트래버스를 통해서만 찾을 수 있습니다. ModelTypeClass 필터가 지정되지 않았으면 모든 최상위 유형이 반환됩니다.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|현재 TSqlObject에서 참조되는 요소에 대한 관계를 찾습니다. 예를 들어 테이블의 경우 이 메서드는 테이블의 열과 같은 개체를 반환합니다. 이 예에서는 ModelRelationshipClass 필터를 사용해서 쿼리할 정확한 관계를 지정할 수 있습니다(예: "Table.Columns" 필터를 사용하면 열만 반환되도록 보장할 수 있음).<br /><br />이외에도 GetReferencingRelationshipInstances, GetChildren 및 GetParent와 같은 비슷한 메서드가 많이 있습니다. 자세한 내용은 API 설명서를 참조하십시오.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|현재 TSqlObject에서 참조되는 요소에 대한 관계를 찾습니다. 예를 들어 테이블의 경우 이 메서드는 테이블의 열과 같은 개체를 반환합니다. 이 예에서는 ModelRelationshipClass 필터를 사용해서 쿼리할 정확한 관계를 지정할 수 있습니다(예: "Table.Columns" 필터를 사용하면 열만 반환되도록 해야 합니다).<br /><br />이외에도 GetReferencingRelationshipInstances, GetChildren 및 GetParent와 같은 비슷한 메서드가 많이 있습니다. 자세한 내용은 API 설명서를 참조하십시오.|  
   
 **참가자를 고유하게 식별**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51659142"
   
 ```  
   
-이 예에서 특성의 첫 번째 매개 변수는 고유 식별자이며, 이 식별자는 프로젝트 파일에서 참가자를 식별하는 데 사용됩니다. 식별자를 만들 때는 라이브러리의 네임스페이스(이 연습에서는 "ExampleContributors")를 클래스 이름(이 연습에서는 "ModelStatistics")과 결합하는 것이 가장 좋습니다. 이 연습의 뒷부분에서는 이 네임스페이스를 사용해서 실행할 참가자를 지정하는 방법을 볼 수 있습니다.  
+이 예제에서 특성의 첫 번째 매개 변수는 고유 식별자이며, 이 식별자는 프로젝트 파일에서 기여자를 식별하는 데 사용됩니다. 식별자를 생성하려면 라이브러리의 네임스페이스(이 연습에서는 "ExampleContributors")를 클래스 이름(이 연습에서는 "ModelStatistics")과 결합하는 것이 가장 좋습니다. 이 연습의 뒷부분에서는 이 네임스페이스를 사용해서 실행할 참가자를 지정하는 방법을 볼 수 있습니다.  
   
 ## <a name="CreateBuildContributor"></a>빌드 참가자 만들기  
 빌드 참가자를 만들려면 다음 작업을 수행해야 합니다.  
@@ -480,7 +480,7 @@ ms.locfileid: "51659142"
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -495,7 +495,7 @@ ms.locfileid: "51659142"
   
     2.  대상 파일을 저장할 "MyContributors"라는 새 폴더를 만듭니다.  
   
-    3.  이 디렉터리 내에 "MyContributors.targets"라는 새 파일을 만들고 다음 텍스트를 추가한 후 파일을 저장합니다.  
+    3.  이 디렉터리 내에 "MyContributors.targets"라는 새 파일을 만들고 다음 텍스트를 추가한 다음, 파일을 저장합니다.  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -517,7 +517,7 @@ ms.locfileid: "51659142"
 이러한 방법 중 하나에 따라 작업한 후에는 MSBuild를 사용해서 명령줄 빌드에 대한 매개 변수를 전달할 수 있습니다.  
   
 > [!NOTE]  
-> 참가자 ID를 지정하려면 항상 "BuildContributors" 속성을 업데이트해야 합니다. 이 ID는 참가자 원본 파일에서 "ExportBuildContributor" 속성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. "ContributorArguments" 속성은 실행할 참가자에 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
+> 참가자 ID를 지정하려면 항상 "BuildContributors" 속성을 업데이트해야 합니다. 이 ID는 기여자 원본 파일의 "ExportBuildContributor" 속성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. "ContributorArguments" 속성은 기여자가 실행하기에 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
   
 ### <a name="build-the-sql-project"></a>SQL 프로젝트 빌드  
   

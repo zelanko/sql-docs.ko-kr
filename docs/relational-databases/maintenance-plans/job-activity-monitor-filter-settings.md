@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77c42bdf35fce0bb2106e99818e14d5b42992647
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217201"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525642"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51217201"
  이름이 지정되지 않은 이 상자에서는 선택된 조건에 대한 간단한 설명을 제공합니다.  
   
  **필터 적용**  
- 필터를 적용하려면 ******필터 적용** 을 클릭한 다음 **확인**을 클릭합니다. **필터****설정** 대화 상자의 필터 설정을 유지하되 적용하지 않으려면 ******필터 적용**의 선택을 취소한 다음 **확인**을 클릭하여 모든 행을 표시합니다.  
+ 필터를 적용하려면 **Applyfilter**를 클릭한 다음, **확인**을 클릭합니다. **FilterSettings** 대화 상자의 필터 설정을 유지하되 적용하지 않으려면 **Applyfilter**의 선택을 취소한 다음, **확인**을 클릭하여 모든 행을 표시합니다.  
   
  **지우기**  
  필터 설정을 기본 설정으로 되돌립니다.  

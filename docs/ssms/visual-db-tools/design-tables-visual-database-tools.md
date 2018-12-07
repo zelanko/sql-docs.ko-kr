@@ -18,12 +18,12 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff738c43095548ea6667deadf0eb80c4c6818ec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805489"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267858"
 ---
 # <a name="create-and-update-database-tables"></a>데이터베이스 테이블 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,3 +64,4 @@ ms.locfileid: "47805489"
 [인덱스](../../relational-databases/indexes/indexes.md)  
 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)  
+[데이터베이스 만들기 및 Visual Studio에서 테이블 추가](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

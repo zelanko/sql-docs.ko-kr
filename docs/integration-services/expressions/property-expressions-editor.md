@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532150"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
   **속성 식 편집기** 대화 상자를 사용하여 속성 값을 업데이트하는 속성 식을 생성, 편집 또는 삭제할 수 있습니다.  

@@ -17,19 +17,19 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518782"
 ---
 # <a name="transfer-error-messages-task"></a>오류 메시지 전송 태스크
   오류 메시지 전송 태스크에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 간에 전송합니다. 사용자 정의 메시지는 50000보다 크거나 같은 식별자를 가진 메시지입니다. 50000보다 작은 식별자를 가진 메시지는 시스템 오류 메시지이며 오류 메시지 전송 태스크를 사용하여 전송할 수 없습니다.  
   
  모든 오류 메시지를 전송하거나 지정한 오류 메시지만 전송하도록 오류 메시지 전송 태스크를 구성할 수 있습니다. 사용자 정의 오류 메시지는 여러 다른 언어로 제공될 수 있으며 지정된 언어로만 메시지를 전송하도록 태스크를 구성할 수 있습니다. 다른 언어 버전의 메시지를 대상 서버로 전송하려면 해당 서버에 1033 코드 페이지를 사용하는 us_english 버전의 메시지가 있어야 합니다.  
   
- master 데이터베이스의 sysmessages 테이블에는 시스템 및 사용자 정의 오류 메시지를 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 모든 오류 메시지가 들어 있습니다.  
+ master 데이터베이스의 sysmessages 테이블에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 시스템 및 사용자 정의된 모든 오류 메시지가 포함됩니다.  
   
  전송할 사용자 정의 메시지가 이미 대상에 있을 수 있습니다. 식별자 및 언어가 동일한 경우 오류 메시지는 중복 오류 메시지로 정의됩니다. 다음 방식으로 기존 오류 메시지를 처리하도록 오류 메시지 전송 태스크를 구성할 수 있습니다.  
   

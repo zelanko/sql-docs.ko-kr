@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420664"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
 
@@ -62,7 +62,7 @@ ms.locfileid: "47766091"
   
 2.  Microsoft.MasterDataServices.WorkflowTypeExtender.dll에 대한 참조를 추가합니다. 이 어셈블리는 \<설치 폴더>\Master Data Services\WebApplication\bin에 있습니다.  
   
-3.  'using Microsoft.MasterDataServices.Core.Workflow;'을 C# 코드 파일에 추가합니다.  
+3.  'using Microsoft.MasterDataServices.Core.Workflow;'를 C# 코드 파일에 추가합니다.  
   
 4.  클래스 선언에 있는 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>에서 상속합니다. 클래스 선언은 'public class WorkflowTester : IWorkflowTypeExtender'와 비슷해야 합니다.  
   

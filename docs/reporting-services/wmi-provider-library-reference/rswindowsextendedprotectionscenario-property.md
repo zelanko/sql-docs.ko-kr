@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 712b7ec6894cf1c974c00865fc6baa40e9b2a5c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78c3a7693ea17899afde6dec1173d79cddec9954
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407710"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>RSWindowsExtendedProtectionScenario 속성
   보고서 서버에서 허용하도록 구성된 확장된 보호 시나리오를 나타내는 문자열 값을 반환합니다.  
@@ -33,7 +33,7 @@ public string RSWindowsExtendedProtectionScenario;
   
  다음 목록에서는 유효한 값을 보여 줍니다.  
   
- `”Any | Proxy | Direct”`  
+ `"Any | Proxy | Direct"`  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

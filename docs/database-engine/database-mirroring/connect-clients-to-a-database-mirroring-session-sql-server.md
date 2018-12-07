@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac89758902c3df3f69eb7e82b4c2ba1fc320ef14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534679"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ Server=123.34.45.56,4724;
   
   
 ### <a name="retry-delays-during-failover"></a>장애 조치 중 다시 시도 지연  
- 클라이언트가 장애 조치 중인 파트너에 연결하면 해당 파트너가 비활성 상태라고 즉시 응답합니다. 이 경우 각 라운드의 연결 시도가 할당된 다시 시도 시간보다 훨씬 짧습니다. 즉, 로그인 기간이 시간 초과되기 전에 많은 라운드의 연결 시도가 수행될 수 있습니다. 장애 조치 중에 연결 시도를 빨리 연속하여 파트너를 오버로드하지 않도록 방지하기 위해 데이터 액세스 공급자는 각 다시 시도 주기 후에 짧은 다시 시도 지연을 추가합니다. 지정된 다시 시도 지연의 길이는 다시 시도 지연 알고리즘에 의해 결정됩니다. 첫 번째 라운드 후의 지연은 100밀리초입니다. 다음 세 라운드 후에는 다시 시도 지연이 각각 두 배씩 증가하여 200, 400, 800이 됩니다. 이후의 모든 라운드에서 다시 시도 지연은 연결 시도가 성공하거나 시간이 초과될 때까지 1초입니다.  
+ 클라이언트가 장애 조치 중인 파트너에 연결하면 해당 파트너가 비활성 상태라고 즉시 응답합니다. 이 경우 각 라운드의 연결 시도가 할당된 다시 시도 시간보다 훨씬 짧습니다. 즉, 로그인 기간이 시간 초과되기 전에 많은 라운드의 연결 시도가 수행될 수 있습니다. 장애 조치 중에 연결 시도를 빨리 연속하여 파트너를 오버로드하지 않도록 방지하기 위해 데이터 액세스 공급자는 각 다시 시도 주기 후에 짧은 다시 시도 지연을 추가합니다. 지정된 다시 시도 지연의 길이는 다시 시도 지연 알고리즘에 의해 결정됩니다. 첫 번째 라운드 후의 지연은 100밀리초입니다. 다음 세 라운드 후에는 각각 다시 시도 지연이 각각 두 배씩 증가하여 200, 400, 800이 됩니다. 이후의 모든 라운드에서 다시 시도 지연은 연결 시도가 성공하거나 시간이 초과될 때까지 1초입니다.  
   
 > [!NOTE]  
 >  서버 인스턴스가 중지되면 연결 요청이 즉시 실패합니다.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020687"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412090"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020687"
   
 ## <a name="set-database-timeout"></a>데이터베이스 제한 시간 설정
   
-*  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)의 “보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정” 섹션을 참조하세요.  
+*  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)의 "보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정" 섹션을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
 

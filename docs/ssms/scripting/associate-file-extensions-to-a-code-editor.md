@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02a6e33039b097aa8632b94c06624cbcb84b5e6d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 59e49665d11b4b2abcc159e7028cf05db5c98d7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542805"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51643785"
   
 5.  **등록된 파일 형식** 상자에서 새 확장명을 클릭하고 **변경**을 클릭합니다.  
   
-6.  **연결 프로그램** 대화 상자에서 **SSMS - SQL Server Management Studio**를 클릭한 다음 **확인**을 클릭합니다.  
+6.  **연결 프로그램** 대화 상자에서 **SSMS - SQL Server Management Studio**를 클릭한 다음, **확인**을 클릭합니다.  
   
 7.  **닫기** 를 클릭하여 **폴더 옵션** 대화 상자를 닫은 다음 Windows 탐색기를 닫습니다.  
   

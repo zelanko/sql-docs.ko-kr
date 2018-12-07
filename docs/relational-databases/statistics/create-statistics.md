@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510172"
 ---
 # <a name="create-statistics"></a>통계 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47672101"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47672101"
      **테이블에 대한 새 통계**_table\_name_ 대화 상자의**필터** 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
-     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들어 IPv4 주소를 사용하는 경우 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  **테이블에 대한 새 통계**_table\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "47672101"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여넣고 **실행**을 클릭합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
     USE AdventureWorks2012;   

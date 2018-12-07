@@ -14,12 +14,12 @@ ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779281"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396146"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
 **SQL Server 개체 탐색기**의 새 **SQL Server** 노드는 시각적으로 SSMS와 매우 비슷할 뿐만 아니라 SSMS와 비슷하게 동작하는 상황에 맞는 메뉴를 사용하여 새 개체를 만들 수도 있습니다.  
@@ -59,14 +59,14 @@ ms.locfileid: "47779281"
     > [!WARNING]  
     > 연결된 데이터베이스의 개체를 편집하는 경우에는 변경 내용을 로컬 드라이브에 저장하지 마십시오. 데이터베이스의 변경 내용을 올바르게 저장하려면 다음에 나오는 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계를 따릅니다.  
   
-6.  위의 단계를 반복하여 **Customer**라는 다른 테이블을 만듭니다. 이번에는 열 표를 사용하여 Customer 테이블에 다음 열을 추가 합니다. 그런 다음 테이블의 이름이 `[dbo].[Customer]`가 되도록 스크립트를 변경해야 합니다.  
+6.  위의 단계를 반복하여 **Customer**라는 다른 테이블을 만듭니다. 이번에는 열 표를 사용하여 Customer 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Customer]`가 되도록 스크립트를 변경해야 합니다.  
   
     |속성|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  
     |Id|ssNoversion|선택 취소|  
     |속성|nvarchar(128)|선택 취소|  
   
-7.  **Products**라는 테이블을 하나 이상 만듭니다. 열 표를 사용하여 Products 테이블에 다음 열을 추가 합니다. 그런 다음 테이블의 이름이 `[dbo].[Products]`가 되도록 스크립트를 변경해야 합니다.  
+7.  **Products**라는 테이블을 하나 이상 만듭니다. 열 표를 사용하여 Products 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Products]`가 되도록 스크립트를 변경해야 합니다.  
   
     |속성|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  

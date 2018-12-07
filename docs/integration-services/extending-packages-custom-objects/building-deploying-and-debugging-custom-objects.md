@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502878"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 사용자 지정 개체에 대한 코드를 작성한 후에 어셈블리를 빌드하여 배포한 다음, 패키지에서 사용할 수 있도록 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 통합하여 테스트하고 디버그해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "47826531"
 ##  <a name="building"></a> 어셈블리 빌드  
  프로젝트를 서명한 후에는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **빌드** 메뉴에서 사용할 수 있는 명령을 사용하여 프로젝트 또는 솔루션을 빌드하거나 다시 빌드해야 합니다. 솔루션에 사용자 지정 사용자 인터페이스를 위한 별도의 프로젝트가 포함된 경우 이 프로젝트도 강력한 이름으로 서명해야 하며 이 프로젝트를 솔루션과 동시에 빌드할 수 있습니다.  
   
- 어셈블리를 배포하고 전역 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe**와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
+ 어셈블리를 배포하고 글로벌 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe**와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
   
  다음은 사용자 지정 로그 공급자에 대한 빌드 후 이벤트 명령줄의 예입니다.  
   

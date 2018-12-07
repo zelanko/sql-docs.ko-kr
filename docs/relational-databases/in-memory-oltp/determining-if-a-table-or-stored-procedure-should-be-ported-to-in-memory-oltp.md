@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684061"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531619"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 응용 프로그램에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP를 통해 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 응용 프로그램에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
  트랜잭션 성능 분석 보고서는 프로덕션 데이터베이스 또는 프로덕션 작업과 유사한 활성 작업이 있는 테스트 데이터베이스에 대하여 직접 실행됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47684061"
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 **설치 시** 관리 도구-기본 **또는** 관리 도구-고급 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
+ 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치 시 **관리 도구-기본** 또는 **관리 도구-고급**을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때 SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
   
 ## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "47684061"
   
 -   실행 통계 섹션  
   
-     이 섹션에는 저장 프로시저 실행에 대해 수집된 통계를 보여 주는 테이블이 있습니다. 열은 다음과 같습니다.  
+     이 섹션에는 저장 프로시저 실행에 대해 수집된 통계를 보여 주는 테이블이 포함됩니다. 열은 다음과 같습니다.  
   
     -   캐시된 시간. 이 실행 계획이 캐시된 시간입니다. 저장 프로시저가 계획 캐시에서 삭제되고 다시 입력될 때 각 캐시에 대한 시간이 발생합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47684061"
   
     -   총 실행 시간. 프로파일링 동안 저장 프로시저에서 사용한 총 실행 시간입니다. 이 숫자와 CPU 시간 간의 차이가 클수록 저장 프로시저에서 비효율적으로 CPU를 사용하는 것입니다.  
   
-    -   누락된 총 캐시. 프로파일링 동안 저장 프로시저 실행으로 인해 발생한 캐시 누락(실제 저장소에서 읽기) 수입니다.  
+    -   누락된 총 캐시. 프로파일링 동안 저장 프로시저 실행으로 인해 발생한 캐시 누락(실제 스토리지에서 읽기) 수입니다.  
   
     -   실행 수. 프로파일링 동안 이 저장 프로시저가 실행한 횟수입니다.  
   
@@ -137,12 +137,12 @@ ms.locfileid: "47684061"
 2.  다음 명령을 입력합니다.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  다음을 확인합니다.  
   
-    -   존재하지 않는 경우 폴더 경로가 생성됩니다.  
+    -   존재하지 않는 경우 폴더 경로를 생성합니다.  
   
     -   마이그레이션 검사 목록 보고서는 데이터베이스의 모든 테이블 및 저장 프로시저에 대해 생성되고 보고서는 folder_path의 위치에 저장됩니다.  
   
@@ -158,12 +158,12 @@ ms.locfileid: "47684061"
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641570"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521229"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -243,7 +243,7 @@ GO
  OPENQUERY 함수에 대한 구문은 다음과 같습니다.  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  폴더, 프로젝트 및 패키지 매개 변수는 필수입니다. Use32BitRuntime, Timeout 및 Parameters는 선택 사항입니다.  
@@ -258,9 +258,9 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
 -   작은따옴표(') – 표준 OPENQUERY에서 지원됩니다. 쿼리 절에 작은따옴표를 사용하려는 경우 큰따옴표(")를 사용합니다.  
   
--   큰따옴표(") - 쿼리의 매개 변수 부분을 큰따옴표로 묶어야 합니다. 매개 변수 값 자체에 큰따옴표가 포함된 경우에는 이스케이프 문자를 사용합니다. 예를 들면 \"와 같습니다.  
+-   큰따옴표(") - 쿼리의 매개 변수 부분을 큰따옴표로 묶어야 합니다. 매개 변수 값 자체에 큰따옴표가 포함된 경우에는 이스케이프 문자를 사용합니다. 예를 들어 \"을 참조하십시오.  
   
--   왼쪽 및 오른쪽 대괄호([ 및 ]) – 이러한 문자는 선행/후행 공백을 나타내는 데 사용됩니다. 예를 들어, "[ 일부 공간 ]"은 선행 공백과 후행 공백이 하나씩 있는 " 일부 공간 " 문자열을 나타냅니다. 이러한 문자 자체가 쿼리 절에 사용되는 경우에는 이스케이프되어야 합니다. 예를 들어 \\[ 및 \\]입니다.  
+-   왼쪽 및 오른쪽 대괄호([ 및 ]) – 이러한 문자는 선행/후행 공백을 나타내는 데 사용됩니다. 예를 들어 "[ 일부 공간 ]"은 선행 공백과 후행 공백이 하나씩 있는 "일부 공간" 문자열을 나타냅니다. 이러한 문자 자체가 쿼리 절에 사용되는 경우에는 이스케이프되어야 합니다. 예를 들어 \\[ 및 \\]입니다.  
   
 -   슬래시(\\) - 쿼리 절에 사용되는 모든 \는 이스케이프 문자를 사용해야 합니다. 예를 들어 \\\는 쿼리 절에서 \로 평가됩니다.  
   

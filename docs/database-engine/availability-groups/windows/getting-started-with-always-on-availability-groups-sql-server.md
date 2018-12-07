@@ -13,12 +13,12 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 644a789343b68e6808b5d1bf61f8c5768d01c70c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 27d94b747eb1a12a4318e41fe6b4200074a2fc42
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512664"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "51603953"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   **동영상 - Always On 소개:**  [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+-   **동영상 - Always On 소개:** [Microsoft SQL Server 코드 이름 “Denali” Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
--   **동영상 - Always On 심층 탐구:**  [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **동영상 - Always On 심층 탐구:** [Microsoft SQL Server 코드 이름 “Denali” Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  [고가용성 및 재해 복구에 대한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

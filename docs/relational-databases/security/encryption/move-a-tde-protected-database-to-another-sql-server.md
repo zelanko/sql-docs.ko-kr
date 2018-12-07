@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169303"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521110"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "49169303"
   
 4.  **새 데이터베이스** 대화 상자의 **데이터베이스 이름** 상자에 새 데이터베이스의 이름을 입력합니다.  
   
-5.  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../../relational-databases/databases/create-a-database.md)를 참조하세요.  
+5.  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../../relational-databases/databases/create-a-database.md)를 참조하세요.  
   
 6.  개체 탐색기에서 더하기 기호를 클릭하여 **데이터베이스** 폴더를 확장합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49169303"
   
 ###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
-1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후 **분리...** 를 선택합니다.  
+1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후, **분리...** 를 선택합니다.  
   
      **데이터베이스 분리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "49169303"
      선택한 파일을 **연결할 데이터베이스** 표에서 제거합니다.  
   
      **"** *<database_name>* **" 데이터베이스 정보**  
-     연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(**…**)를 클릭합니다.  
+     연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(**...**)를 클릭합니다.  
   
     > [!NOTE]  
     >  파일이 없으면 **메시지** 열에 "찾을 수 없음"이 표시됩니다. 로그 파일을 찾을 수 없는 경우 다른 디렉터리에 있거나 삭제된 것입니다. 올바른 위치를 가리키도록 **데이터베이스 정보** 표의 파일 경로를 업데이트하거나 표에서 로그 파일을 제거해야 합니다. .ndf 데이터 파일을 찾을 수 없는 경우 올바른 위치를 가리키도록 표에서 해당 파일의 경로를 업데이트해야 합니다.  

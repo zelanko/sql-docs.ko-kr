@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532136"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 이진 데이터에서, 즉 **varbinary**, **varbinary(max)** ( **FILESTREAM**포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있도록 설정할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 이진 데이터에서 즉, **varbinary**, **varbinary(max)**(**FILESTREAM**포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51657812"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
  이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  

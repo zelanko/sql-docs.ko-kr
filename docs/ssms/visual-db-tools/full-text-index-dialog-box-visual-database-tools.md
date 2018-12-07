@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09004ae91d7a30c64413f1f5f426e1c9da9fd07
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509001"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51696581"
 확장하면 **열** 및 **전체 텍스트 카탈로그 이름**이 표시됩니다.  
   
 **열**  
-검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표(**...**)를 클릭합니다.  
+검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표 단추(**...**)를 클릭합니다.  
   
 **Full-Text Catalog Name**  
 현재 전체 텍스트 인덱스가 저장되어 있는 전체 텍스트 카탈로그의 이름을 표시합니다. 인덱스를 다른 카탈로그에 저장하려면 카탈로그 이름을 클릭하고 드롭다운 목록에서 다른 이름을 선택합니다.  

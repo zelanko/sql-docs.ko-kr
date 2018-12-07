@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddc53e898acd23ab0f29902703ea53c74987730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514769"
 ---
 # <a name="modify-views"></a>뷰 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47854821"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47854821"
   
     1.  추가하거나 제거할 요소의 확인란을 선택하거나 선택을 취소합니다.  
   
-    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음 **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
+    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음, **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
   
     3.  제거할 테이블의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.  
   

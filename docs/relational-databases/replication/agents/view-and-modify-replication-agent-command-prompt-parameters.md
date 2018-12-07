@@ -13,12 +13,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca6b669a4d93f1b2626b5dd47c12f29346fc6f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2ffecb1f73cdafcd00bf12866a852047e5e266
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636741"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516913"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47636741"
   
  **작업** 폴더에서 에이전트 작업에 액세스할 경우 다음 표를 사용하여 에이전트 작업 이름 및 각 에이전트에 사용 가능한 매개 변수를 확인합니다.  
   
-|에이전트|작업 이름|매개 변수 목록 참조|  
+|에이전트|작업 이름|매개 변수 목록은 다음을 참조하세요.|  
 |-----------|--------------|------------------------------------|  
 |스냅숏 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |병합 게시 파티션에 대한 스냅숏 에이전트|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  

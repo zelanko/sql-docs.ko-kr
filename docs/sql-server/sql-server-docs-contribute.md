@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439905"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -28,6 +28,8 @@ ms.locfileid: "51697691"
 |---|---|
 | [브라우저에서 편집](#githubui) | 모든 문서의 작고 빠른 편집에 적합합니다. |
 | [도구를 사용하여 로컬로 편집](#tools) | 더 복잡한 편집, 여러 문서를 포함하는 편집 및 docs.microsoft.com에 대한 빈번한 참여에 적합합니다. |
+
+모든 공용 기여의 기술적 정확성 및 일관성에 대해 SQL 콘텐츠 팀에서 유효성을 검사합니다. 
 
 ## <a id="githubui"></a> 브라우저에서 편집
 

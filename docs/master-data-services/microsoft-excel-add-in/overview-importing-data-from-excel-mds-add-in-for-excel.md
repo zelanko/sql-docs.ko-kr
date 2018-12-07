@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502944"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능)
 

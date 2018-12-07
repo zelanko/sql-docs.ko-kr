@@ -21,12 +21,12 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514719"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  구성 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE를 실행해야 합니다.  
   
- CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
  *schema_name.function_name*으로 지정한 분류 함수를 등록합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
   
  RESET STATISTICS  
@@ -197,7 +197,7 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.dm_resource_governor_workload_groups&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   

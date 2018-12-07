@@ -1,7 +1,7 @@
 ---
 title: 서버 성능 및 작업 모니터링 | Microsoft 문서
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747261"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513675"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>서버 성능 및 작업 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747261"
   
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 성능 및 작업 모니터링 도구 사용 방법을 설명합니다. 다음 항목이 포함됩니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- **Windows 도구로 모니터링 태스크를 수행**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>Windows 도구로 모니터링 태스크를 수행 
   
 -   [시스템 모니터 시작&#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [Windows 응용 프로그램 로그 보기&#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **Windows 도구로 SQL Server 데이터베이스 경고 만들기**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>Windows 도구로 SQL Server 데이터베이스 경고 만들기  
   
 -   [SQL Server 데이터베이스 경고 설정&#40;Windows&#41;](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **확장 이벤트로 모니터링 작업을 수행하려면**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>확장 이벤트로 모니터링 작업을 수행하려면  
  
  -   [확장 이벤트](../../relational-databases/extended-events/extended-events.md)
  
-  -   [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [개체 탐색기에서 이벤트 세션 관리](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [확장 이벤트 세션 변경](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **SQL Server Management Studio로 모니터링 태스크를 수행**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>SQL Server Management Studio로 모니터링 태스크를 수행  
   
 -   [SQL Server 오류 로그 보기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [작업 모니터 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **Transact-SQL 저장 프로시저를 사용하여 SQL 추적으로 모니터링 태스크를 수행**  
+
+-   [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>SQL 추적 및 SQL Server 프로파일러로 모니터링 태스크를 수행하려면
+
+> [!IMPORTANT]
+> 다음 섹션에서는 SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하는 방법을 설명합니다.  
+> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다.   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+
+> [!NOTE] 
+> Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>Transact-SQL 저장 프로시저를 사용하여 SQL 추적으로 모니터링 태스크를 수행  
   
 -   [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747261"
   
 -   [추적 삭제&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **SQL Server Profiler를 사용하여 추적을 만들고 수정**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적을 만들고 수정  
   
 -   [추적 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747261"
   
 -   [표시된 열 추적으로 구성&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **SQL Server Profiler를 사용하여 추적을 시작, 일시 중지 및 중지**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적을 시작, 일시 중지 및 중지  
   
 -   [서버 연결 후 자동으로 추적 시작&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747261"
   
 -   [일시 중지 또는 중지 후 추적 실행&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **SQL Server Profiler를 사용하여 추적을 열거나 추적 표시 방법을 구성**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적을 열거나 추적 표시 방법을 구성  
   
 -   [추적 파일 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747261"
   
 -   [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **SQL Server Profiler를 사용하여 추적 재생**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 재생  
   
 -   [추적 파일 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747261"
   
 -   [Transact-SQL 스크립트 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **SQL Server Profiler를 사용하여 추적 템플릿을 생성, 수정 및 사용**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 템플릿을 생성, 수정 및 사용  
   
 -   [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747261"
   
 -   [추적 템플릿 가져오기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **SQL Server Profiler 추적을 사용하여 서버 성능을 수집 및 모니터링**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>SQL Server Profiler 추적을 사용하여 서버 성능을 수집 및 모니터링  
   
 -   [추적 중 값 또는 데이터 열 찾기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

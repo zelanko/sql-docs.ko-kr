@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516976"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
 데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "47594842"
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>보고서 데이터에 대한 Transact-SQL 쿼리를 정의하려면  
   
-1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭하고 **데이터 집합...** 을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트...** 를 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
   
 2.  **이름** 상자에 **AdventureWorksDataset**을 입력합니다.  
   

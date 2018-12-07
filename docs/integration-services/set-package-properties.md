@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525259"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -118,8 +118,8 @@ ms.locfileid: "51642247"
   
 |속성|설명|  
 |--------------|-----------------|  
-|**구성**|패키지에서 사용되는 구성 모음입니다. 패키지 구성을 보고 구성하려면 찾아보기 단추 **(…)** 를 클릭합니다.|  
-|**식**|패키지 속성에 대한 식을 만들려면 찾아보기 단추 **(…)** 를 클릭합니다.<br /><br /> 속성 창에 나열된 속성뿐만 아니라 개체 모델에 포함되는 모든 패키지 속성에 대한 속성 식을 만들 수 있습니다.<br /><br /> 자세한 내용은 [패키지에서 속성 식 사용](../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.<br /><br /> 기존 속성 식을 보려면 **Expressions**를 확장합니다. 식을 수정하고 계산하려면 식 입력란에 있는 찾아보기 단추 **(…)** 를 클릭합니다.|  
+|**구성**|패키지에서 사용되는 구성 모음입니다. 패키지 구성을 보고 구성하려면 찾아보기 단추 **(...)** 를 클릭합니다.|  
+|**식**|패키지 속성에 대한 식을 만들려면 찾아보기 단추 **(...)** 를 클릭합니다.<br /><br /> 속성 창에 나열된 속성뿐만 아니라 개체 모델에 포함되는 모든 패키지 속성에 대한 속성 식을 만들 수 있습니다.<br /><br /> 자세한 내용은 [패키지에서 속성 식 사용](../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.<br /><br /> 기존 속성 식을 보려면 **Expressions**를 확장합니다. 식을 수정하고 계산하려면 식 입력란에 있는 찾아보기 단추 **(...)** 를 클릭합니다.|  
 |**ForceExecutionResult**|패키지의 실행 결과입니다. 가능한 값은 **None**, **Success**, **Failure**및 **Completion**입니다. 이 속성의 기본값은 **None**입니다. 자세한 내용은 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult를 참조하세요.|  
 |**LocaleId**|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.|  
 |**LoggingMode**|패키지의 로깅 동작을 지정하는 값입니다. 가능한 값은 **Disabled**, **Enabled**및 **UseParentSetting**입니다. 이 속성의 기본값은 **UseParentSetting**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>를 참조하세요.|  

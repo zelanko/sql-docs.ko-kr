@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a35f7ea2e08caf851a24b8ab52b79f39a760024
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24b47c23fa34fe1a575268cf63ea8e50dd18139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395936"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.
@@ -50,7 +50,7 @@ ms.locfileid: "48906163"
   
 3.  스크롤할 때 계속 표시할 정적 멤버(행 또는 열)에 해당하는 정적 멤버를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     속성 창이 표시되지 않는 경우 보고서 작성기 창의 맨 위에서 **보기** 탭을 클릭한 다음 **속성**을 클릭합니다.  
+     속성 창이 표시되지 않는 경우 보고서 작성기 창의 맨 위에서 **보기** 탭을 클릭한 다음, **속성**을 클릭합니다.  
   
 4.  속성 창에서 **RepeatOnNewPage** 를 True로 설정합니다.  
   

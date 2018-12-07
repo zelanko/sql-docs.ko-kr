@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814026"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391666"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -75,7 +75,7 @@ ms.locfileid: "51814026"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
- **설명:** SharePoint 모드에서 SQL Server 2016 Reporting Services 및 SharePoint 2013/2016용 SQL Server 2016 Reporting Services 추가 기능을 성공적으로 설치한 후 다음 두 메뉴에 “SQL Server Reporting Services”가 나타나지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록되지 않은 것입니다.  
+ **설명:** SharePoint 모드에서 SQL Server 2016 Reporting Services 및 SharePoint 2013/2016용 SQL Server 2016 Reporting Services 추가 기능을 성공적으로 설치한 후 다음 두 메뉴에 "SQL Server Reporting Services"가 나타나지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록되지 않은 것입니다.  
   
 -   SharePoint 2013/2016 중앙 관리 -> "응용 프로그램 관리" -> "서버의 서비스 관리" 페이지  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51814026"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  SharePoint 2013/2016 중앙 관리 -> "**응용 프로그램 관리**" -> "**서버의 서비스 관리**" 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 상태가 “**시작됨**”으로 표시되는지 확인합니다.  
+2.  SharePoint 2013/2016 중앙 관리 -> "**애플리케이션 관리**" -> "**서버의 서비스 관리**" 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
@@ -135,7 +135,7 @@ ms.locfileid: "51814026"
  
  - SSRS 서비스 응용 프로그램이 이 웹 응용 프로그램에 매핑되지 않습니다. SSRS 서비스 응용 프로그램 페이지를 사용하여 SSRS 서비스 응용 프로그램 프록시를 이 웹 응용 프로그램의 응용 프로그램 프록시 그룹에 연결합니다. 
   
- **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. ‘보고서 서버 URL이 구성되지 않았습니다.’라는 메시지의 첫 번째 제안은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 응용 프로그램 설정**페이지에서 완료됩니다.  
+ **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. '보고서 서버 URL이 구성되지 않았습니다.'라는 메시지의 첫 번째 제안은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 응용 프로그램 설정**페이지에서 완료됩니다.  
   
  **추가 정보:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스에 연결해야 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 하면 이 오류 메시지가 표시됩니다. 다음을 포함합니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "51814026"
 ###  <a name="bkmk_RS_SHP_notsupported"></a> PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 PREPAREIMAGE를 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
- "SysPrep이 지원되지 않으므로 PREPAREIMAGE 동작을 실행할 때 지정된 'RS_SHP' 기능이 지원되지 않습니다. SysPrep과 호환되지 않는 기능을 제거하고 설치 프로그램을 다시 실행합니다.  
+ "SysPrep이 지원되지 않으므로 PREPAREIMAGE 동작을 실행할 때 지정된 'RS_SHP' 기능이 지원되지 않습니다. SysPrep과 호환되지 않는 기능을 제거하고 설치 프로그램을 다시 실행합니다."  
   
  **해결 방법:** 해결 방법이 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SYSPREP(PREPAREIMAGE)를 지원하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 SYSPREP을 지원하지 않습니다.  
   

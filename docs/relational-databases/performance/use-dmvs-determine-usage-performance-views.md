@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668552"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586316"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV를 사용하여 뷰의 사용 통계 및 성능 확인
+이 문서에서는 **보기를 사용하는 쿼리 성능**에 대한 정보를 가져오는 데 사용되는 방법 및 스크립트를 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 보기의 사용 및 성능 표시기를 제공하는 것입니다. 
 
-이 문서에서는 데이터베이스 개체에서 **뷰를 사용하는 쿼리 성능**에 대한 정보를 가져오는 데 사용하는 방법 및 스크립트에 대해 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 뷰의 사용 및 성능 표시기를 제공하는 것입니다. 
-
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
-
-DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql)는 SQL Server 쿼리 최적화 프로그램에서 수행한 최적화에 대한 통계를 제공합니다. 이러한 값은 누적되며 SQL Server가 시작될 때 기록을 시작합니다.  
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 수행한 최적화에 대한 통계를 제공합니다. 이러한 값은 누적되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 기록을 시작합니다. 쿼리 최적화 프로그램에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.   
 
 아래의 common_table_expression(CTE)는 이 DMV를 사용하여 뷰를 참조하는 쿼리의 비율과 같은 워크로드 관련 정보를 제공합니다. 이 쿼리에서 반환하는 결과가 자체적으로 성능 문제를 나타내지는 않지만 느리게 작동하는 쿼리에 대한 사용자 불만과 관련이 있는 기본 문제를 나타낼 수 있습니다. 
 
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-이 쿼리의 결과를 시스템 뷰 [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql)의 결과와 조합하여 쿼리 통계, 쿼리 텍스트 및 캐시된 실행 계획을 식별합니다. 
 
-## <a name="sysviews"></a>Sys.views
+이 쿼리의 결과를 시스템 뷰 [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)의 결과와 조합하여 쿼리 통계, 쿼리 텍스트 및 캐시된 실행 계획을 식별합니다. 
 
+## <a name="sysviews"></a>sys.views
 아래 CTE는 실행 횟수, 총 실행 시간 및 메모리에서 읽은 페이지 수에 대한 정보를 제공합니다. 이러한 결과를 사용하여 최적화 후보가 될 수 있는 쿼리를 식별할 수 있습니다. 
   
-  >[!NOTE]
-  > 이 쿼리의 결과는 SQL Server의 버전에 따라 달라질 수 있습니다.  
+> [!NOTE]
+> 이 쿼리의 결과는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전에 따라 달라질 수 있습니다.  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+최종 쿼리는 DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)를 사용하여 사용하지 않는 뷰에 대한 정보를 제공합니다. 그러나 실행 계획 캐시는 동적이므로 결과는 달라질 수 있습니다. 따라서 이 쿼리를 지속적으로 사용하면서 뷰가 실제로 사용되고 있는지 여부를 확인합니다. 
 
-최종 쿼리는 DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)를 사용하여 사용하지 않는 뷰에 대한 정보를 제공합니다. 그러나 실행 계획 캐시는 동적이므로 결과는 달라질 수 있습니다. 따라서 이 쿼리를 지속적으로 사용하면서 뷰가 실제로 사용되고 있는지 여부를 확인합니다. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>관련 외부 리소스
-
-- [성능 튜닝을 위한 DMV(동영상 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [성능 튜닝을 위한 DMV(슬라이드 e 데모 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [캡슐 양식으로 SQL Server 튜닝(동영상 - SQL Saturday Parma)](https://vimeo.com/200980883)
-- [nutshell에서 SQL Server 튜닝(슬라이드 및 데모 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [SQL Server 동적 관리 뷰를 사용한 성능 튜닝](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [SQL Server 2016의 가장 중요한 대기 유형](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## <a name="see-also"></a>관련 항목:
+[동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[성능 튜닝을 위한 DMV(동영상 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
+[성능 튜닝을 위한 DMV(슬라이드 e 데모 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
+[캡슐 양식으로 SQL Server 튜닝(동영상 - SQL Saturday Parma)](https://vimeo.com/200980883)    
+[nutshell에서 SQL Server 튜닝(슬라이드 및 데모 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
+[SQL Server 동적 관리 뷰를 사용한 성능 튜닝](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
+[SQL Server 2016의 가장 중요한 대기 유형](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   

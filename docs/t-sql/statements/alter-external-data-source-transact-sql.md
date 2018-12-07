@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396816"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>인수  
  data_source_name은 데이터 원본에 대한 사용자 정의 이름을 지정합니다. 이름은 고유해야 합니다.
   
- LOCATION = ‘server_name_or_IP’는 서버의 이름 또는 IP 주소를 지정합니다.
+ LOCATION = 'server_name_or_IP'는 서버의 이름 또는 IP 주소를 지정합니다.
   
- RESOURCE_MANAGER_LOCATION = '\<IP 주소; 포트>'는 Hadoop Resource Mnaager 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 Hadoop의 계산 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하도록 선택할 수 있습니다. 이것은 비용 기반 결정입니다. 조건자 푸시 다운이라고 불리는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킵니다.
+ RESOURCE_MANAGER_LOCATION = '\<IP 주소;포트>'는 Hadoop Resource Manager 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 Hadoop의 계산 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하도록 선택할 수 있습니다. 이것은 비용 기반 결정입니다. 조건자 푸시 다운이라고 불리는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킵니다.
   
  CREDENTIAL = Credential_Name은 명명된 자격 증명을 지정합니다. [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
 

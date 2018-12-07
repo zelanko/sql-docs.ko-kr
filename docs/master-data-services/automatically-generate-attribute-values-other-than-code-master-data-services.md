@@ -12,12 +12,12 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404528"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>코드 외의 특성 값 자동 생성(Master Data Services)
 
@@ -54,11 +54,11 @@ ms.locfileid: "47826411"
   
 9. **구성 요소** 창에서 **동작** 노드를 확장합니다.  
   
-10. 기본값 노드에서 **생성되는 값을 기본값으로 설정** 을 클릭하고 **THEN** 창의 **동작** 레이블로 끌어 놓습니다.  
+10. 기본값 노드에서 **생성되는 값을 기본값으로 설정**을 클릭하고 **THEN** 창의 **동작** 레이블로 끌어 놓습니다.  
   
 11. **특성** 창에서 생성할 값을 가진 특성을 클릭하고 이를 **동작 편집** 창의 **특성 선택** 레이블로 끌어 놓습니다.  
   
-12. **시작 값** 및 **증가값** 상자에 값을 입력합니다. 멤버가 이미 있는 경우 가장 높은 기존 값을 기반으로 값이 설정됩니다. 예를 들어 가장 높은 기존 값이 299이고 **증가값** 을 **1**로 설정하는 경우 다음 멤버의 값은 300으로 설정됩니다.  
+12. **시작 값** 및 **증가값** 상자에 값을 입력합니다. 멤버가 이미 있는 경우 가장 높은 기존 값을 기반으로 값이 설정됩니다. 예를 들어 가장 높은 기존 값이 299이고 **증가값**을 **1**로 설정하는 경우 다음 멤버의 값은 300으로 설정됩니다.  
   
 13. **동작 편집** 창에서 **항목 저장**을 클릭합니다.  
   

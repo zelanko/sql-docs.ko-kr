@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소 사용 시나리오 | Microsoft 문서
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673832"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711204"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   쿼리 저장소는 예측 가능한 워크로드 성능을 추적하고 보장하는 것이 중요한 광범위한 시나리오에서 사용될 수 있습니다. 다음은 고려할 수 있는 몇 가지 예입니다.  
   
 -   계획 선택 재발이 있는 쿼리 식별 및 수정  
-  
 -   상위 리소스 소비 쿼리 식별 및 조정  
-  
 -   A/B 테스트  
-  
 -   최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
-  
 -   임시 워크로드 식별 및 개선  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>계획 선택 재발이 있는 쿼리 식별 및 수정  
- 일반 쿼리 실행 중 데이터 카디널리티가 변경되거나, 인덱스가 생성, 변경 또는 삭제되거나, 통계가 업데이트되는 등 중요한 입력이 달라졌기 때문에 쿼리 최적화 프로그램에서 다른 계획을 사용하도록 결정하는 경우가 있을 수 있습니다. 대부분의 경우 새 계획은 이전에 사용된 계획보다 더 낫거나 거의 동일합니다. 그러나 새 계획이 훨씬 나쁜 경우도 있습니다. 이러한 상황을 계획 선택 변경 재발이라고 합니다. 쿼리 저장소 이전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 시간이 지남에 따라 사용된 실행 계획을 확인할 수 있는 기본 제공 데이터 저장소를 제공하지 않았기 때문에 이는 식별하고 수정하기 매우 어려운 문제였습니다.  
+ 일반 쿼리 실행 중 데이터 카디널리티가 변경되거나, 인덱스가 생성, 변경 또는 삭제되거나, 통계가 업데이트되는 등 중요한 입력이 달라졌기 때문에 쿼리 최적화 프로그램에서 다른 계획을 사용하도록 결정하는 경우가 있을 수 있습니다. 대부분의 경우 새 계획은 이전에 사용된 계획보다 더 낫거나 거의 동일합니다. 그러나 새 계획이 훨씬 나쁜 경우도 있습니다. 이러한 상황을 계획 선택 변경 재발이라고 합니다. 쿼리 저장소 이전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 시간이 지남에 따라 사용된 실행 계획을 확인할 수 있는 기본 제공 데이터 스토리지를 제공하지 않았기 때문에 이는 식별하고 수정하기 어려운 문제였습니다.  
   
  쿼리 저장소를 사용하여 다음을 신속하게 수행할 수 있습니다.  
   
 -   관심 기간(지난 시간, 일, 주 등) 동안 실행 메트릭이 저하된 모든 쿼리를 식별할 수 있습니다. **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 분석을 가속화할 수 있습니다.  
   
--   재발된 쿼리 중에서 여러 계획이 있고 잘못된 계획 선택으로 인해 저하된 쿼리를 매우 쉽게 찾을 수 있습니다. **재발된 쿼리** 에서 **계획 요약** 창을 사용하여 재발된 쿼리에 대한 모든 계획과 시간에 따른 쿼리 성능을 시각화할 수 있습니다.  
+-   재발된 쿼리 중에서 여러 계획이 있고 잘못된 계획 선택으로 인해 저하된 쿼리를 쉽게 찾을 수 있습니다. **재발된 쿼리** 에서 **계획 요약** 창을 사용하여 재발된 쿼리에 대한 모든 계획과 시간에 따른 쿼리 성능을 시각화할 수 있습니다.  
   
 -   기록에서 이전 계획이 더 나은 것으로 증명된 경우 이를 적용합니다. **회귀된 쿼리**의 **계획 강제 적용** 단추를 사용하여 쿼리에 대해 선택한 계획을 강제 적용합니다.  
   
@@ -148,7 +144,7 @@ ms.locfileid: "51673832"
 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하여 시스템의 총 쿼리 텍스트 수, 쿼리 수 및 계획 수를 파악하고 query_hash와 plan_hash를 비교하여 차이점을 확인할 수 있습니다.  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
 개별 쿼리 템플릿을 사용하는 접근 방식에서는 계획 지침을 만들어야 합니다.  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ EXEC sp_create_plan_guide
 모든 쿼리(또는 대부분의 쿼리)가 자동 매개 변수화에 적합한 경우 전체 데이터베이스에서 `FORCED PARAMETERIZATION`을 변경하는 것이 더 나은 옵션일 수 있습니다.  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

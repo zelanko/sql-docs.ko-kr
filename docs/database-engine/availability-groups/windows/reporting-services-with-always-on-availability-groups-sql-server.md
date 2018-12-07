@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418678"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "51604953"
   
 -   ReportServerTempDB  
   
- 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 응용 프로그램 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165))](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
+ 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 애플리케이션 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165))](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
   
 > [!NOTE]  
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  

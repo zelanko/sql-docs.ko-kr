@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699831"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526389"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  파티션 내의 시작점 및 끝점을 지정하여 파티션 내의 행을 추가로 제한합니다. 이 작업은 논리적 연결이나 물리적 연결을 통해 현재 행을 기준으로 한 행 범위를 지정하여 수행됩니다. 물리적 연결은 ROWS 절을 사용하여 수행됩니다.  
   
- ROWS 절은 현재 행 이전 또는 다음의 고정 행 수를 지정하여 파티션 내의 행 수를 제한합니다. 또한 RANGE 절은 현재 행의 값을 기준으로 행 범위를 지정하여 파티션 내의 행 수를 논리적으로 제한합니다. 이전 및 다음 행은 ORDER BY 절의 순서에 따라 정의됩니다. “RANGE … CURRENT ROW …” 창 프레임에는 ORDER BY 식에서 현재 행과 동일한 값을 갖는 모든 행이 포함됩니다. 예를 들어 ROWS BETWEEN 2 PRECEDING AND CURRENT ROW는 함수가 작동하는 행의 창 크기가 앞의 두 행과 현재 행을 포함하여 모두 세 개의 행임을 의미합니다.  
+ ROWS 절은 현재 행 이전 또는 다음의 고정 행 수를 지정하여 파티션 내의 행 수를 제한합니다. 또한 RANGE 절은 현재 행의 값을 기준으로 행 범위를 지정하여 파티션 내의 행 수를 논리적으로 제한합니다. 이전 및 다음 행은 ORDER BY 절의 순서에 따라 정의됩니다. 창 프레임 “RANGE... CURRENT ROW..."에는 ORDER BY 식에서 현재 행과 동일한 값을 갖는 모든 행이 포함됩니다. 예를 들어 ROWS BETWEEN 2 PRECEDING AND CURRENT ROW는 함수가 작동하는 행의 창 크기가 앞의 두 행과 현재 행을 포함하여 모두 세 개의 행임을 의미합니다.  
   
 > [!NOTE]  
 >  ROWS 또는 RANGE에는 ORDER BY 절을 지정해야 합니다. ORDER BY에 여러 개의 순서 식이 포함되어 있는 경우 CURRENT ROW FOR RANGE는 현재 행을 확인할 때 ORDER BY 목록의 모든 열을 고려합니다.  

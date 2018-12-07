@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28e84b82a069515330e58ea5a15fd321ce77a11b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514638"
 ---
 # <a name="create-views"></a>뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51660252"
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 뷰...** 를 클릭합니다.  
+2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 뷰...** 를 클릭합니다.  
   
 3.  **테이블 추가** 대화 상자의 테이블, 뷰, 함수 및 동의어 탭 중 하나에서 새 뷰에 포함할 요소를 선택합니다.  
   

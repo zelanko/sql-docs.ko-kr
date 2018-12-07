@@ -14,12 +14,12 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a3f16853d36c7c451d4389c44ec62eaf18c18f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cb781222e14e8baf67a52af62096a8ee8c55ba7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419234"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
   **유효성 검사** 대화 상자에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 또는 패키지의 일반적인 문제를 확인할 수 있습니다.  

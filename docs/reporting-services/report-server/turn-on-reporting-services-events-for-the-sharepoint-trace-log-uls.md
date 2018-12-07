@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814176"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409540"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **제품: SQL Server Reporting Services**  
   
-2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 "Report Server"라는 문자가 있습니다. 예: “Report Server Alerting Runtime” 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
+2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 "Report Server"라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
   
-3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 “Report Server”가 포함되지 않습니다. 예: “Service Application Proxy” Report Server Alerting Runtime” WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
+3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 "Report Server"가 포함되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services 이벤트 목록  
  다음 표에는 SQL Server Reporting Services 범주의 이벤트 목록이 나와 있습니다.  
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 SQL Server Reporting Services 추가 기능의 하나인 파워 뷰 등의 클라이언트 응용 프로그램에서 얻습니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 응용 프로그램에 의해 결정됩니다.|  
+|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 SQL Server Reporting Services 추가 기능의 하나인 파워 뷰 등의 클라이언트 응용 프로그램에서 얻습니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역**의 **범주**에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  
 |보고서 서버 버퍼링 응답||  
@@ -141,7 +141,7 @@ Get-SPDiagnosticConfig
  ![PowerShell 관련 내용](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 도구도 있습니다. 예를 들어 [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer)는 GitHub에서 사용할 수 있습니다. 

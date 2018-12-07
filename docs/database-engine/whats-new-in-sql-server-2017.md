@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541396"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "47838681"
 - 다시 시작 가능한 온라인 인덱스 다시 작성 - 다시 시작 가능한 온라인 인덱스 다시 작성을 사용하면 오류(예: 복제본으로 장애 조치 또는 디스크 공간 부족)가 발생한 후 중지된 위치에서 온라인 인덱스 다시 작성 작업을 다시 시작할 수 있습니다. 또한 온라인 인덱스 다시 작성 작업을 일시 중지했다가 나중에 다시 시작할 수도 있습니다. 예를 들어 우선 순위가 높은 작업을 실행하기 위해 시스템 리소스를 일시적으로 비우거나, 사용 가능한 유지 관리 시간이 큰 테이블에 비해 너무 짧은 경우 또 다른 유지 관리 기간에서 인덱스 다시 작성하여 완료해야 할 수 있습니다. 마지막으로 다시 시작 가능한 온라인 인덱스 다시 작성에는 상당한 로그 공간이 필요하지 않으므로 이 작업이 실행되는 동안 로그 잘림을 수행할 수 있습니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 - **ALTER DATABASE SCOPED CONFIGURATION에 대한 IDENTITY_CACHE 옵션** - IDENTITY_CACHE 옵션이 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 문에 새로 추가되었습니다. 이 옵션을 `OFF`로 설정하면 서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 데이터베이스 엔진에서 ID 열 값 차이가 발생하지 않도록 방지할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.   
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]는 이제 보다 의미있는 관계 지향 데이터를 모델링하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
-- 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
+- 애플리케이션 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 - 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다. [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]의 자동 튜닝은 잠재적인 성능 문제를 검색할 때마다 알려주고, 정정 작업을 적용하거나 [!INCLUDE[ssde-md](../includes/ssde-md.md)]에서 자동으로 성능 문제를 해결할 수 있도록 합니다. 자세한 내용은 [자동 튜닝](../relational-databases/automatic-tuning/automatic-tuning.md)을 참조하세요.
 - 메모리 최적화 테이블에 대한 비클러스터형 인덱스 작성 성능 향상 - 데이터베이스 복구 중에 MEMORY_OPTIMIZED 테이블에 대한 bwtree(비클러스터형) 인덱스를 다시 작성하는 성능이 상당히 최적화되었습니다. 이에 따라 비클러스터형 인덱스를 사용하는 경우 데이터베이스 복구 시간을 크게 줄여줍니다.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)에는 새로운 3개 열, 즉 socket_count, cores_per_socket 및 numa_node_count가 있습니다. NUMA를 초과할 경우 과도하게 커밋된 호스트가 생성될 수 있고 결국 성능 문제로 이어지기 때문에 이 기능은 VM에서 서버를 실행할 때 유용합니다.
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)에 modified_extent_page_count\, 열이 새로 추가되어 데이터베이스의 각 데이터베이스 파일에 대한 차등 변경 내용을 추적합니다. 새로운 modified_extent_page_count 열을 사용하면 데이터베이스에서 변경된 페이지 백분율이 임계값(예: 70-80 %) 미만인 경우 차등 백업을 수행하고, 그렇지 않은 경우 전체 데이터베이스 백업을 수행하는 스마트 백업 솔루션을 빌드할 수 있습니다.
-- SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md)는 이제 SELECT INTO TSQL 구문에 추가된 **ON** 키워드 지원을 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다.
+- SELECT INTO... ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md)는 이제 SELECT INTO TSQL 구문에 추가된 **ON** 키워드 지원을 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다.
 - Tempdb 설정 향상 - 파일 크기가 1GB보다 큰 값으로 설정되고 IFI를 사용하도록 설정되지 않은 경우 이 설정을 통해 고객에 대한 경고 메시지와 함께 파일당 초기 tempdb 파일 크기를 **256GB(262,144MB)** 까지 지정할 수 있습니다. 지정된 tempdb 데이터 파일의 초기 크기에 따라 설치 시간이 기하급수적으로 증가할 수 있는 IFI(인스턴트 파일 초기화)를 사용하지 않도록 설정하는 의미를 이해해야 합니다. IFI는 트랜잭션 로그 크기에 적용할 수 없으므로 SQL Server 서비스 계정에 대한 IFI 설정과 관계없이 설치 중에 tempdb를 시작하는 동안 더 큰 값의 트랜잭션 로그를 지정하면 설치 시간이 항상 증가할 수 있습니다.
 - 새로운 [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) DMV가 데이터베이스당 버전 저장소 사용량을 추적하기 위해 도입되었습니다. 이 새로운 DMV는 프로덕션 서버에서 실행되는 성능 비용이나 오버헤드 없이 데이터베이스당 버전 저장소 사용량 요구 사항을 기반으로 하여 tempdb 크기 조정을 사전에 계획하기 위해 버전 저장소 사용량에 대하여 tempdb를 모니터링하는 데 유용합니다.
 - 새로운 [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) DMF가 DBCC LOGINFO와 비슷한 VLF 정보를 표시하여 고객이 경험한 VLF 수, VLF 크기 또는 축소 파일 문제로 인해 발생할 수 있는 잠재적인 트랜잭션 로그 문제를 모니터링, 경고 및 방지하기 위해 도입되었습니다.

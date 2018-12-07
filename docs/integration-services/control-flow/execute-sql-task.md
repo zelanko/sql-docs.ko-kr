@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641834"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504071"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -181,7 +181,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 #### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 직접 입력  
  **SQLStatement**  
- 실행할 SQL 문을 옵션 상자에 입력하거나, 찾아보기 단추(…)를 클릭하여 **SQL 쿼리 입력** 대화 상자에 SQL 문을 입력하거나, **쿼리 작성** 을 클릭하고 **쿼리 작성기** 대화 상자를 사용하여 SQL 문을 작성합니다.  
+ 실행할 SQL 문을 옵션 상자에 입력하거나, 찾아보기 단추(...)를 클릭하여 **SQL 쿼리 입력** 대화 상자에 SQL 문을 입력하거나, **쿼리 작성**을 클릭하고 **쿼리 작성기** 대화 상자를 사용하여 SQL 문을 작성합니다.  
   
  **관련 항목:** [쿼리 작성기](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -278,10 +278,10 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL 및 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL 및 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 매개 변수 사용  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 및 ADO 연결 관리자에는 매개 변수를 사용하는 SQL 명령에 대한 특별한 요구 사항이 있습니다.  
@@ -440,10 +440,10 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
     |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET 및 SQLMOBILE|\@\<매개 변수 이름>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL 및 OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   
 10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
   
@@ -464,7 +464,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 ##  <a name="Return_codes"></a> 반환 코드 값 가져오기  
  저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. SQL 실행 태스크에 반환 코드를 구현하려면 **ReturnValue** 유형의 매개 변수를 사용합니다.  
   
- 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 **input** 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용하는 방법에 대한 규칙은**Input**, **Output**, **ReturnValue**등의 모든 매개 변수 유형에 대해 동일합니다.  
+ 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 **input** 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용하는 방법에 대한 규칙은**Input**, **Output**, **ReturnValue** 등의 모든 매개 변수 유형에 대해 동일합니다.  
   
  일부 구문은 매개 변수 리터럴을 지원하지 않습니다. 이러한 경우 변수를 사용하여 매개 변수 값을 제공해야 합니다.  
   

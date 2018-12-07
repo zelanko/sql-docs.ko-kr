@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540565"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 �
 **해결 방법:** 이러한 설치 규칙에 대한 자세한 내용은 시스템 구성 검사 보고서를 참조할 수 있습니다. 시스템 구성 검사에서는 각 실행 규칙에 대한 간단한 설명과 실행 상태를 포함하는 보고서를 생성합니다. 시스템 구성 검사 보고서는 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 Distributed Replay Controller 서비스의 로컬 사용자 계정을 추가하면 설치가 갑자기 종료될 수 있음  
-**문제:** SQL Server 설치 프로그램의 **Distributed Replay Controller** 페이지에서 Distributed Replay Controller 서비스의 로컬 사용자 계정을 추가하려고 하면 “SQL Server 설치 오류” 오류 메시지와 함께 설치 프로그램이 갑자기 종료됩니다.  
+**문제:** SQL Server 설치 프로그램의 **Distributed Replay Controller** 페이지에서 Distributed Replay Controller 서비스의 로컬 사용자 계정을 추가하려고 하면 “SQL Server 설치 실패”라는 오류 메시지와 함께 설치 프로그램이 예기치 않게 종료됩니다.  
   
 **해결 방법:** SQL 설치 중에 “현재 사용자 추가” 또는 “추가…”를 통해 로컬 사용자 계정을 추가하지 마세요. 설치가 끝나면 다음 단계를 사용하여 로컬 사용자 계정을 수동으로 추가합니다.  
   
@@ -341,7 +341,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 **해결 방법:** 이 문제를 방지하려면, 새로운 동작을 시작하기 전에 기술 자료로 유지하고자 하는 작업을 게시합니다.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 큰 글꼴 크기에서 컨트롤의 비율이 제대로 조정되지 않음  
-**문제:** 텍스트 크기를 "크게 – 150%"로 변경하거나(Windows Server 2008 또는 Windows 7) 사용자 지정 DPI 설정을 200%로 변경하는 경우(Windows 7) **새 기술 자료** 페이지의 **취소** 및 **만들기** 단추에 액세스할 수 없습니다.  
+**문제:** 텍스트 크기를 "확대 – 150%"로 변경하거나(Windows Server 2008 또는 Windows 7에서) 사용자 지정 DPI 설정을 200%로 변경하는 경우(Windows 7에서) **새 기술 자료** 페이지의 **취소** 및 **만들기** 단추에 액세스할 수 없습니다.  
   
 **해결 방법:** 이 문제를 해결하려면 글꼴을 더 작은 크기로 설정합니다.  
   
@@ -403,7 +403,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 이 오류는 DQS에서 SQL Server 데이터베이스와 C#에서 문자열을 비교하는 방법의 차이로 인해 발생합니다. SQL Server 데이터베이스의 문자열 비교는 대/소문자를 구분하지 않는 반면 C#에서는 대/소문자를 구분합니다.  
   
-한 가지 예를 들어 이러한 경우를 설명하겠습니다. Domain\user1이라는 사용자가 있다고 가정합니다. 사용자가 “user1” 계정을 사용하여 Data Quality 클라이언트 컴퓨터에 로그온하고 기술 자료를 작동합니다. DQS에서는 각 사용자의 최근 기술 자료를 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 레코드 형태로 저장합니다. 이 경우 보고서는 RecentList:KB:Domain\user1과 같은 이름으로 저장됩니다. 이후에 사용자가 “User1”(대문자 U에 주의)로 Data Quality 클라이언트 컴퓨터에 로그온하고 **최근 기술 자료** 목록에서 도메인 관리 작업에 대한 기술 자료를 열려고 합니다. DQS의 기본 코드는 두 문자열 RecentList:KB:DOMAIN\user1과 DOMAIN\User1을 비교합니다. C#에서는 대/소문자를 구분하여 문자열 비교하기 때문에 문자열이 일치하지 않아 DQS에서는 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 사용자(User1)에 대한 새 레코드를 삽입하려고 합니다. 그러나 SQL 데이터베이스의 대/소문자를 구분하지 않는 문자열 비교로 인해 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 문자열이 이미 존재하므로 삽입 작업이 실패합니다.  
+한 가지 예를 들어 이러한 경우를 설명하겠습니다. Domain\user1이라는 사용자가 있다고 가정합니다. 사용자가 “user1” 계정을 사용하여 Data Quality 클라이언트 컴퓨터에 로그온하고 기술 자료를 작동합니다. DQS에서는 각 사용자의 최근 기술 자료를 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 레코드 형태로 저장합니다. 이 경우 보고서는 RecentList:KB:Domain\user1과 같은 이름으로 저장됩니다. 이후에 사용자가 “User1”(대문자 U에 주의)로 Data Quality 클라이언트 컴퓨터에 로그온하고 **최근 기술 자료** 목록에서 도메인 관리 작업에 대한 기술 자료를 열려고 합니다. DQS의 기본 코드는 두 문자열 RecentList:KB:DOMAIN\user1과 DOMAIN\User1을 비교합니다. C#에서는 대/소문자를 구분하여 문자열을 비교하면 문자열이 일치하지 않아 DQS에서는 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 사용자(User1)에 대한 새 레코드를 삽입하려고 합니다. 그러나 SQL 데이터베이스의 대/소문자를 구분하지 않는 문자열 비교로 인해 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 문자열이 이미 존재하므로 삽입 작업이 실패합니다.  
   
 **해결 방법:** 이 문제를 해결하려면 다음 작업 중 하나를 수행하세요.  
   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643629"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617880"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -505,21 +505,21 @@ ms.locfileid: "51643629"
  Windows 자격 증명을 사용한 연결 및 통신 암호화:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 자격 증명을 사용한 연결 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

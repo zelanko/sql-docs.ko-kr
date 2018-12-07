@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672942"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417484"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
 
@@ -70,7 +70,7 @@ ms.locfileid: "51672942"
   
 ## <a name="select-one-sql-server-as-head-node"></a>헤드 노드로 하나의 SQL Server 선택  
   
-설치가 완료 된 후 두 시스템 모두가 PolyBase 그룹 헤드 노드로 작동할 수 있습니다. 이 예제에서는 PQTH4A-CMP01의 “MSSQLSERVER”를 헤드 노드로 선택합니다.
+설치가 완료 된 후 두 시스템 모두가 PolyBase 그룹 헤드 노드로 작동할 수 있습니다. 이 예제에서는 PQTH4A-CMP01의 "MSSQLSERVER"를 헤드 노드로 선택합니다.
   
 ## <a name="add-other-sql-server-instances-as-compute-nodes"></a>다른 SQL Server 인스턴스를 계산 노드로 추가  
   

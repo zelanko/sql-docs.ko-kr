@@ -17,17 +17,17 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641910"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523775"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
   
- SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에는 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
+ SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
   
 ## <a name="system-variables-for-packages"></a>패키지의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지에 대해 제공하는 시스템 변수에 대해 설명합니다.  

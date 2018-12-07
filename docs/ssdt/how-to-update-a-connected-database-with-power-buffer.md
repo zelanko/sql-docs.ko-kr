@@ -13,12 +13,12 @@ ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701531"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396793"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트
 SQL Server Data Tools 파워 버퍼 기술을 사용하면 편집한 모든 내용을 현재 세션에 저장하여 변경 내용을 연결된 데이터베이스에 손쉽게 적용할 수 있습니다. Transact\-SQL 편집기나 테이블 디자이너의 [파워 버퍼] 창에서 수행한 편집 작업으로 인해 발생한 오류는 **오류 목록** 창에 즉시 표시되므로 식별된 오류에 따라 더욱 세부적으로 문제를 해결할 수 있습니다. 변경 내용을 데이터베이스에 적용할 준비가 될 때까지 보류 중인 변경 내용을 확인할 수 있습니다. 업데이트하는 동안 SSDT에서는 사용자가 편집한 내용에 따라 ALTER 스크립트를 자동으로 만들고 잠재적인 문제를 알려 줍니다. 그러면 열려 있는 모든 파워 버퍼 창에서 누적된 모든 변경 내용을 동일한 데이터베이스에 적용하거나, ALTER 스크립트를 저장했다가 나중에 배포할 수 있습니다.  
@@ -29,7 +29,7 @@ SSDT는 Visual Studio 외부에서 데이터베이스 스키마에 대해 변경
   
 ### <a name="to-apply-the-changes-made-in-the-previous-procedures"></a>이전 절차에서 변경한 내용을 적용하려면  
   
-1.  도구 모음에서 녹색 **업데이트** 단추를 클릭합니다. 이 단추 위로 마우스를 이동하면 “데이터베이스 업데이트” 도구 설명이 표시됩니다. 도구 모음은 테이블 디자이너의 열 표 위쪽에 있습니다.  
+1.  도구 모음에서 녹색 **업데이트** 단추를 클릭합니다. 이 단추 위로 마우스를 이동하면 "데이터베이스 업데이트" 도구 설명이 표시됩니다. 도구 모음은 테이블 디자이너의 열 표 위쪽에 있습니다.  
   
 2.  **데이터베이스 업데이트 미리 보기** 대화 상자가 나타납니다. 또한 사용자가 변경한 내용을 기초로 한 배포 스크립트가 백그라운드에서 생성됩니다. 그런 다음 SSDT에서 수행할 데이터베이스 엔터티 만들기 또는 삭제 등의 작업에 대한 요약과 함께 식별된 잠재적 문제가 표시됩니다. 이 항목의 절차에서는 표시되는 문제가 없지만 데이터베이스 정의에 반드시 해결해야만 업데이트 작업을 수행할 수 있는 오류가 포함되어 있는 경우에는 여기에서 표시되는 오류가 매우 유용합니다.  
   

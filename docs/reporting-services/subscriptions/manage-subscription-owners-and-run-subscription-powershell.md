@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de4452bcf7d1600f49ecc28f0a66ae15ef0a602d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c81da7beaedbb7374154db2c35985b8c9955a376
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396856"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> 스크립트: 특정 보고서와 연결된 모든 구독 나열  
- 이 스크립트는 특정 보고서와 연결된 모든 구독을 나열합니다. 보고서 경로 구문은 전체 URL이 필요한 다른 SharePoint 모드입니다. 구문 예제에서 사용된 보고서 이름은 “title only”이며 공백을 포함하고 있으므로 보고서 이름을 작은따옴표로 묶어야 합니다.  
+ 이 스크립트는 특정 보고서와 연결된 모든 구독을 나열합니다. 보고서 경로 구문은 전체 URL이 필요한 다른 SharePoint 모드입니다. 구문 예제에서 사용된 보고서 이름은 "title only"이며 공백을 포함하고 있으므로 보고서 이름을 작은따옴표로 묶어야 합니다.  
   
  **기본 모드 구문:**  
   
@@ -337,7 +337,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  구성 파일에 대한 자세한 내용은 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
- 스크립트에는 지연 논리 “`Start-Sleep -s 6`”이 포함되어 있으므로, 업데이트된 상태가 ListSubscription 메서드를 통해 사용 가능할 수 있도록 이벤트 발생 후 시간이 있습니다.  
+ 스크립트에는 지연 논리 "`Start-Sleep -s 6`"이 포함되어 있으므로, 업데이트된 상태가 ListSubscription 메서드를 통해 사용 가능할 수 있도록 이벤트 발생 후 시간이 있습니다.  
   
  **기본 모드 구문:**  
   
