@@ -52,7 +52,7 @@ ms.locfileid: "51605823"
   
 5.  설치 준비가 되고 컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 있는 경우 **./build_dm.sh** 명령을 실행합니다.
 
-컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [ https://www.unixodbc.org ](https://www.unixodbc.org/)합니다. 페이지 왼쪽에서 다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh-다운로드 url file://unixODBC-2.3.0.tar.gz =** 합니다.  
+컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [ https://www.unixodbc.org ](https://www.unixodbc.org/)합니다. 페이지 왼쪽에서 다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**합니다.  
 
 6.  **YES**를 입력하여 파일의 압축 해제를 진행합니다. 이 부분의 프로세스를 완료하려면 최대 5분까지 걸릴 수 있습니다.  
 
@@ -74,9 +74,9 @@ ms.locfileid: "51605823"
   
 5.  명령 프롬프트에서 명령을 실행 합니다. **CPPFLAGS = "-DSIZEOF_LONG_INT 8 ="** 합니다.  
   
-6.  명령 프롬프트에서 명령을 실행 합니다. **CPPFLAGS 내보내기**합니다.  
+6.  명령 프롬프트에서 명령을 실행 합니다. **export CPPFLAGS**합니다.  
   
-7.  명령 프롬프트에서 명령을 실행: **". / configure--= usr-libdir = / usr/lib64-sysconfdir = / etc-enable gui 접두사 = no-드라이버 사용 = no-사용-iconv-사용 하 여 iconv-char-enc UTF8-사용 하 여 iconv-ucode-enc = UTF16LE ="**.  
+7.  명령 프롬프트에서 명령을 실행: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  명령 프롬프트(루트로 로그인)에서 **make** 명령을 실행합니다.  
   
