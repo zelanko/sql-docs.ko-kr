@@ -312,7 +312,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |64|**SessionLoginName**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  
   
  **[ @on=]** *on*  
- 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *온* 됩니다 **비트**, 기본값은 없습니다.  
+ 이벤트를 ON(1)으로 설정할지, 아니면 OFF(0)로 설정할지를 지정합니다. *on*은 **비트** 형식입니다. 기본값은 없습니다.  
   
  *on*이 **1**로 설정되고 *column_id* 가 null 인 경우, 이벤트는 ON으로 설정되며 모든 열이 지워집니다. *column_id* 가 null인 경우, 해당 이벤트에 대한 열은 ON으로 설정됩니다.  
   
