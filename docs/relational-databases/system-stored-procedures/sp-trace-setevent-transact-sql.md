@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47739911"
@@ -318,7 +318,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  *on*이 **0**으로 설정되고 *column_id*가 NULL인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id*가 null이 아니면, 열은 OFF로 설정됩니다.  
   
- 이 테이블 간의 상호 작용을 보여 줍니다 **@on** 하 고 **@columnid**합니다.  
+ 이 테이블 간의 상호 작용을 보여 줍니다**@on** 하 고 **@columnid**합니다.  
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -351,7 +351,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자가 실행 해야 합니다 **sp_trace_setevent** 각 이벤트에 대 한 추가 된 각 열에 대 한 합니다. 각 실행 하는 동안 경우 **@on** 로 설정 되어 **1**를 **sp_trace_setevent** 추적의 이벤트 목록에 지정된 된 이벤트를 추가 합니다. 하는 경우 **@on** 로 설정 되어 **0**를 **sp_trace_setevent** 목록에서 지정된 된 이벤트를 제거 합니다.  
+ 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on**이 **1**로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on**이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다.   
   
  모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   
