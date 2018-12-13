@@ -200,7 +200,7 @@ ms.locfileid: "51640200"
  SSIS 카탈로그에서 새 **RuntimeLineage** 로깅 수준에서는 데이터 흐름의 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV와 개발자가 이 정보로 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다. 
 
 ####  <a name="CustomLogging"></a> SSIS 카탈로그에서 새 사용자 지정 로깅 수준  
- SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
+ SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
 
 ####  <a name="ErrorColumn"></a> 데이터 흐름의 오류에 대한 열 이름  
  오류 출력에 오류를 포함 하는 데이터 흐름에서 행을 리디렉션하는 경우 출력 오류가 발생 했지만 열 이름이 표시 되지 않는 열에 대 한 숫자 식별자를 포함 합니다. 이제 여러 가지 방법을 사용하여 오류가 발생할 때 열 이름을 찾아 표시할 수 있습니다.  
@@ -291,7 +291,7 @@ ms.locfileid: "51640200"
 Oracle 및 Teradata용 Microsoft Connectors v4.0이 릴리스되었습니다. 커넥터를 다운로드하려면 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Oracle 및 Teradata용 Microsoft Connectors v4.0)를 참조하세요.
 
 ### <a name="pdwau5"></a> PDW(분석 플랫폼 시스템) 어플라이언스 업데이트 5용 커넥터 릴리스됨
-PDW AU5로 데이터를 로드하기 위한 대상 어댑터가 릴리스되었습니다. 어댑터를 다운로드하려면 [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)(분석 플랫폼 시스템 어플라이언스 업데이트 5 설명서 및 클라이언트 도구)를 참조하세요.
+PDW AU5로 데이터를 로드하기 위한 대상 어댑터가 릴리스되었습니다. 어댑터를 다운로드하려면 [분석 플랫폼 시스템 어플라이언스 업데이트 5 설명서 및 클라이언트 도구](https://www.microsoft.com/download/details.aspx?id=51610) 를 참조하세요.
 
 ### <a name="expanded-connectivity-to-the-cloud"></a>클라우드에 연결 확장
 
@@ -327,7 +327,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
  ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
 
 >   [!IMPORTANT]
-> SSIS용 사용자 지정 확장 프로그램을 개발하는 경우 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (사용자 지정 구성 요소에서 멀티 타기팅 지원) 및 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(SQL Server 2016용 SSDT 2015의 다중 버전 지원에서 SSIS 사용자 지정 확장 프로그램을 지원하도록 설정)을 참조하세요.  
+> SSIS용 사용자 지정 확장 프로그램을 개발하는 경우 [사용자 지정 구성 요소에서 멀티 타기팅 지원](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 및 [SQL Server 2016용 SSDT 2015의 다중 버전 지원에서 SSIS 사용자 지정 확장 프로그램을 지원하도록 설정](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/) 을 참조하세요.  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>SQL Server Management Studio의 환경 관리 향상
 

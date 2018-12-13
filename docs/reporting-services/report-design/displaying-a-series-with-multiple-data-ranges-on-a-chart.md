@@ -44,7 +44,7 @@ ms.locfileid: "50029312"
   
  데이터 범위 사이에 충분한 간격이 있어도 사용되는 배율 구분선이 표시되지 않는 경우 CollapsibleSpaceThreshold 속성을 25 미만의 값으로 설정할 수 있습니다. CollapsibleSpaceThreshold는 데이터 범위 사이에 필요한 축소 가능한 공간의 백분율을 지정합니다. 자세한 내용은 [차트에 배율 구분선 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
- 차트에서는 차트당 최대 5개의 배율 구분선을 지원하지만 두 개 이상의 배율 구분선을 표시하면 차트를 읽을 수 없게 될 수 있습니다. 데이터 범위가 두 개 이상인 경우 이 데이터를 표시하는 다른 방법을 사용하십시오. 자세한 내용은 [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ 차트에서는 차트당 최대 5개의 배율 구분선을 지원하지만 두 개 이상의 배율 구분선을 표시하면 차트를 읽을 수 없게 될 수 있습니다. 데이터 범위가 두 개 이상인 경우 이 데이터를 표시하는 다른 방법을 사용하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="unsupported-scale-break-scenarios"></a>지원되지 않는 배율 구분선 시나리오  
  다음과 같은 차트 시나리오에서는 배율 구분선이 지원되지 않습니다.  

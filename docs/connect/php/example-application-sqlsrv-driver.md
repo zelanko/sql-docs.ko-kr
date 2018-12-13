@@ -27,7 +27,7 @@ AdventureWorks 제품 검토 예제 응용 프로그램은 [!INCLUDE[ssDriverPHP
   
 ### <a name="running-the-example-application"></a>예제 응용 프로그램 실행  
   
-1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
+1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
 4.  시작 하 여 응용 프로그램을 실행 https://localhost/adventureworks_demo.php 브라우저에서 합니다.  
