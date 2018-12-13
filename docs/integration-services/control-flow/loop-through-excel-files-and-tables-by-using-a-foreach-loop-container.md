@@ -73,7 +73,7 @@ ms.locfileid: "51639250"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft ACE OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Excel 버전을 확장 속성의 값으로 입력합니다(이 경우에 Excel 12.0). 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+1.  Microsoft ACE OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Excel 버전을 확장 속성의 값으로 입력합니다(이 경우에 Excel 12.0). 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   

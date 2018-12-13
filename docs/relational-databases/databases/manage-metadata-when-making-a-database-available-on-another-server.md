@@ -148,7 +148,7 @@ ms.locfileid: "51559477"
  사용자 정의 오류 메시지는 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 카탈로그 뷰에 있습니다. 이 카탈로그 뷰는 **master**에 저장됩니다. 데이터베이스 응용 프로그램이 사용자 정의 오류 메시지를 사용하며 다른 서버 인스턴스에서 데이터베이스를 사용할 수 있는 경우 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) 를 사용하여 대상 서버 인스턴스에서 이러한 사용자 정의 메시지를 추가합니다.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> 이벤트 알림 및 Windows Management Instrumentation (WMI) 이벤트 (서버 수준)  
   
 ### <a name="server-level-event-notifications"></a>서버 수준 이벤트 알림  
  서버 수준 이벤트 알림은 **msdb**에 저장됩니다. 그러므로 데이터베이스 응용 프로그램이 서버 수준 이벤트 알림을 사용하는 경우 대상 서버 인스턴스에서 해당 이벤트 알림을 다시 만들어야 합니다. 서버 인스턴스의 이벤트 알림을 보려면 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)을 참조하세요.  
