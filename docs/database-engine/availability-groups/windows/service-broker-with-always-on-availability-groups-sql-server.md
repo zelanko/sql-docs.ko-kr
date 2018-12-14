@@ -57,7 +57,7 @@ ms.locfileid: "51607113"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
+     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
 
     > [!NOTE]  
     SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.

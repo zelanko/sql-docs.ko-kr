@@ -50,7 +50,7 @@ ms.locfileid: "51669232"
 |-----------|-----------------|  
 |[CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|인증서를 만들기 위한 명령에 대해 설명합니다.|  
 |[디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|인증서를 사용하여 소프트웨어 패키지를 서명하는 방법에 대한 정보가 표시됩니다.|  
-|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|데이터베이스 미러링에 인증서를 사용하는 방법에 대해 설명합니다.|  
+|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|데이터베이스 미러링에 인증서를 사용하는 방법에 대해 설명합니다.|  
   
 ## <a name="asymmetric-keys"></a>비대칭 키  
  비대칭 키는 대칭 키의 보안을 설정하는 데 사용됩니다. 또한 제한된 데이터 암호화와 데이터베이스 개체의 디지털 서명에도 사용할 수 있습니다. 비대칭 키는 개인 키와 해당 공개 키로 구성됩니다. 비대칭 키에 대한 자세한 내용은 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)입니다.  

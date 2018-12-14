@@ -361,7 +361,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
   
 **추가 정보:**  
   
@@ -376,7 +376,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
-2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)을 참조하세요.  
+2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
   
 **추가 정보:**  
   

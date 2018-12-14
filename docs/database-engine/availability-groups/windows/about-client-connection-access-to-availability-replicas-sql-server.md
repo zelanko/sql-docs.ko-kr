@@ -56,7 +56,7 @@ ms.locfileid: "51602673"
  읽기 전용 연결만  
  **응용 프로그램 의도** 연결 속성이 **ReadOnly** (*읽기 전용 연결*)로 설정된 연결에만 보조 데이터베이스를 사용할 수 있습니다.  
   
- 이 연결 속성에 대한 자세한 내용은 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
+ 이 연결 속성에 대한 자세한 내용은 [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
  읽기 전용 연결 허용  
  모든 보조 데이터베이스는 읽기 액세스 연결에 사용할 수 있습니다. 이 옵션을 선택하면 낮은 버전의 클라이언트가 연결할 수 있습니다.  

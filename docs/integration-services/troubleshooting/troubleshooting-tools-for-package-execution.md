@@ -51,7 +51,7 @@ ms.locfileid: "51639030"
   
 -   **오류 출력을 사용하여 잘못된 데이터 캡처** 오류가 들어 있는 행을 오류 테이블이나 텍스트 파일과 같은 별도의 대상으로 보냅니다. 오류 출력에는 행이 거부되도록 한 오류의 번호와 오류가 발생한 열의 ID가 들어 있는 두 개의 숫자 열이 자동으로 추가됩니다.  
   
--   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
+-   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [스크립트 구성 요소를 사용하여 오류 출력 향상](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
 -   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   

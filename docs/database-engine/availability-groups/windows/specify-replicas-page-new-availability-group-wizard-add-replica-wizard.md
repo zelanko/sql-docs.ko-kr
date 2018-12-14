@@ -79,7 +79,7 @@ ms.locfileid: "51605443"
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
  **엔드포인트 URL**  
- 데이터베이스 미러링 엔드포인트의 실제 또는 제안된 URL을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ 데이터베이스 미러링 엔드포인트의 실제 또는 제안된 URL을 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **포트 번호**  
  엔드포인트의 실제 또는 제안된 포트 번호를 표시합니다. 제안된 새 엔드포인트의 경우 이 값을 변경할 수 있습니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "51605443"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 도메인 계정으로 변경합니다. 자세한 내용은 [SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)을 참조하세요.  
   
-    -   인증서를 사용하는 데이터베이스 미러링 엔드포인트를 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) 또는 [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)에 적용됩니다.  
+    -   인증서를 사용하는 데이터베이스 미러링 엔드포인트를 수동으로 만들려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) 또는 [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)에 적용됩니다.  
   
      엔드포인트를 구성하는 동안 **가용성 복제본 지정** 페이지를 열어 둔 경우 **엔드포인트** 탭으로 돌아와서 **새로 고침** 을 클릭하여 **엔드포인트 값** 표를 업데이트합니다.  
   
@@ -203,11 +203,11 @@ ms.locfileid: "51605443"
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

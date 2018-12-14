@@ -41,7 +41,7 @@ ms.locfileid: "52392343"
   
  성능 향상을 통해 더 큰 모델을 만들고, 데이터를 보다 효율적으로 로드하고, 전반적으로 더 나은 성능을 얻을 수 있습니다. 여기에는 데이터 로드 시간을 줄이고 추가 기능에서 더 큰 엔터티를 처리하도록 Microsoft Excel용 추가 기능의 성능이 향상된 개선 사항이 포함됩니다.  
   
- Microsoft Excel용 추가 기능에 대한 자세한 내용은 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)을 참조하세요.  
+ Microsoft Excel용 추가 기능에 대한 자세한 내용은 [Microsoft Excel용 Master Data Services 추가 기능](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)을 참조하세요.  
   
  향상된 기능은 다음과 같습니다.  
   

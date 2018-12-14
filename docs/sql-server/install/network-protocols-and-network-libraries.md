@@ -81,7 +81,7 @@ ms.locfileid: "51696641"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 기본 TCP  
   
- 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요.  
+ 엔드포인트에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 문서를 참조하세요.  
   
