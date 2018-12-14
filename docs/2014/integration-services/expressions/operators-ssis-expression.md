@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
@@ -16,19 +15,19 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbceb75a036343b0d116481c5e36e3da3aa63a85
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1cb952d965c2ddb316b0890a03e2d10947c2e61a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51272591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766835"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
   이 섹션에서는 식 언어가 제공하는 연산자 및 식 계산기에 사용되는 연산자 우선 순위 및 계산 방향에 대해 설명합니다.  
   
  다음 표에서는 이 섹션의 연산자에 대한 항목을 나열합니다.  
   
-|연산자|설명|  
+|연산자|Description|  
 |--------------|-----------------|  
 |[캐스트&#40;SSIS 식&#41;](cast-ssis-expression.md)|식의 데이터 형식을 다른 데이터 형식으로 변환합니다.|  
 |[&#40;&#41;&#40;괄호&#41;&#40;SSIS 식&#41;](parentheses-ssis-expression.md)|식의 계산 순서를 식별합니다.|  
@@ -47,7 +46,7 @@ ms.locfileid: "51272591"
 |[&&#40;비트 AND&#41;&#40;SSIS 식&#41;](bitwise-and-ssis-expression.md)|두 정수 값의 비트 AND 연산을 수행합니다.|  
 |[~&#40;비트 Not&#41;&#40;SSIS 식&#41;](bitwise-not-ssis-expression.md)|정수의 비트 부정을 수행합니다.|  
 |[== &#40;같음&#41;&#40;SSIS 식&#41;](equal-ssis-expression.md)|두 식이 같은지 비교합니다.|  
-|[!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](unequal-ssis-expression.md)|두 식이 같지 않은지 비교합니다.|  
+|[\!=&#40;같지 않음&#41;&#40;SSIS 식&#41;](unequal-ssis-expression.md)|두 식이 같지 않은지 비교합니다.|  
 |[&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](greater-than-ssis-expression.md)|비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다.|  
 |[&#60;&#40;보다 작음&#41;&#40;SSIS 식&#41;](less-than-ssis-expression.md)|첫 번째 식이 두 번째 식보다 작은지 비교합니다.|  
 |[&#62;=&#40;크거나 같음&#41;&#40;SSIS 식&#41;](greater-than-or-equal-to-ssis-expression.md)|첫 번째 식이 두 번째 식보다 크거나 같은지 비교합니다.|  
