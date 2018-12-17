@@ -63,7 +63,7 @@ ms.locfileid: "51604193"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 제한 시간이 초과될 때까지 원격 작업을 수행할 수 있는 시간을 초 단위로 지정합니다. 기본값은 600이며 10분 대기할 수 있습니다.  
   
  **서버 간 통신에 분산 트랜잭션 필요**  
- MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호합니다. 자세한 내용은 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)을 참조하세요.  
+ MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호합니다. 자세한 내용은 [원격 프로시저 트랜잭션 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="property-page-display-options"></a>속성 페이지 표시 옵션  
  **구성 값**  
