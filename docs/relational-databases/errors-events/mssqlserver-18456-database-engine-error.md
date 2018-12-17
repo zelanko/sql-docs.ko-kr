@@ -115,5 +115,5 @@ Windows 인증을 사용하여 연결하려고 하는 경우 올바른 도메인
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [How To: Use the Network Service Account to Access Resources in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)(방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스)을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: 네트워크 서비스 계정을 사용하여 ASP.NET의 리소스에 액세스](https://msdn.microsoft.com/library/ff647402.aspx)을 참조하세요.  
   

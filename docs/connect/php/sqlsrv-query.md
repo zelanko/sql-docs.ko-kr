@@ -77,7 +77,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>Remarks  
 **sqlsrv_query** 함수는 일회성 쿼리에 적합하며 특수한 환경이 적용되지 않는 한 쿼리를 실행하는 기본 선택이어야 합니다. 이 함수는 최소한의 코드 작성으로 쿼리를 실행하기 위한 간소한 메서드를 제공합니다. **sqlsrv_query** 함수는 명령문 준비와 명령문 실행을 수행하므로 매개 변수가 있는 쿼리를 실행하는 데 사용할 수 있습니다.  
   
-자세한 내용은 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 단일 행이 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 삽입됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
