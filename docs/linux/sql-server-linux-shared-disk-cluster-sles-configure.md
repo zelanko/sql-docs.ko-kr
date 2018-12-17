@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51667992"
@@ -152,11 +152,11 @@ SQL Server 데이터베이스 파일 경로 탑재 하는 NFS 공유 저장소 �
     crm_report -X "-p 3479" [...]
     ```
 
-    자세한 내용은 [System Requirements and Recommendations in the SUSE documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)(SUSE 설명서의 시스템 요구 사항 및 권장 사항)을 참조하세요.
+    자세한 내용은 [SUSE 설명서의 시스템 요구 사항 및 권장 사항](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html) 을 참조하세요.
 
 3. **고가용성 확장을 설치합니다**. 확장을 설치하려면 다음 SUSE 항목의 단계를 따릅니다.
     
-    [Installation and Setup Quick Start](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)(설치 및 설정 빠른 시작)
+    [설치 및 설정 빠른 시작](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
 
 4. **SQL Server용 FCI 리소스 에이전트를 설치합니다**. 두 노드에서 모두 다음 명령을 실행합니다.
 
