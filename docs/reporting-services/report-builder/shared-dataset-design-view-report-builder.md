@@ -31,7 +31,7 @@ ms.locfileid: "50020468"
 > [!NOTE]  
 >  공유 데이터 집합은 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
- 자세한 내용은 [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
 ### <a name="dataset"></a>Dataset  
  **옵션 설정** 단추를 사용하여 공유 데이터 집합 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
