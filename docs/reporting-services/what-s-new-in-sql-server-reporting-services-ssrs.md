@@ -76,12 +76,12 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 사용자 지정 브랜딩 
   브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용자 지정할 수 있습니다.  
   
   사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]의 KPI(핵심 성과 지표) 
 
 현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 에서 직접 KPI를 만들 수 있습니다. KPI를 만들 때 데이터 집합 필드를 선택하고 이러한 값을 요약할 수 있습니다. 관련 콘텐츠를 선택하여 더 세부적으로 드릴스루할 수 있습니다.
   
@@ -106,7 +106,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
- 일부 구성 변경 없이는 기본적으로 연결할 수 없습니다. Power BI 모바일 앱을 보고서 서버에 연결하는 방법에 대한 자세한 내용은 [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)을 참조하세요.
+ 일부 구성 변경 없이는 기본적으로 연결할 수 없습니다. Power BI 모바일 앱을 보고서 서버에 연결하는 방법에 대한 자세한 내용은 [Power BI 모바일 액세스가 가능하도록 보고서 서버 설정](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)을 참조하세요.
   
 ### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>SharePoint 모드 및 SharePoint 2016 지원  
  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 SharePoint 2013 및 SharePoint 2016과의 통합을 지원합니다.
