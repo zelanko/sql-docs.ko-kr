@@ -40,7 +40,7 @@ ms.locfileid: "52530552"
   
 -   BULK INSERT  
   
--   INSERT ... 로 기본 값 사용  
+-   INSERT ... 선택 * OPENROWSET (BULK)에서  
 
 자세한 내용은 다음 항목을 참조하십시오.
 - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

@@ -410,7 +410,7 @@ FILENAME에 새 위치를 지정하여 시스템 또는 사용자 정의 데이�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-file-to-a-database"></a>1. 데이터베이스에 파일 추가  
+### <a name="a-adding-a-file-to-a-database"></a>A. 데이터베이스에 파일 추가  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 5MB 데이터 파일을 추가합니다.  
   
 ```sql  
@@ -428,7 +428,7 @@ ADD FILE
 GO  
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>2. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.  
   
 ```sql  
@@ -457,7 +457,7 @@ TO FILEGROUP Test1FG1;
 GO  
 ```  
   
-### <a name="c-adding-two-log-files-to-a-database"></a>3. 데이터베이스에 두 개의 로그 파일 추가  
+### <a name="c-adding-two-log-files-to-a-database"></a>C. 데이터베이스에 두 개의 로그 파일 추가  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 두 개의 5MB 로그 파일을 추가합니다.  
   
 ```sql  
@@ -482,7 +482,7 @@ ADD LOG FILE
 GO  
 ```  
   
-### <a name="d-removing-a-file-from-a-database"></a>4. 데이터베이스에서 파일 제거  
+### <a name="d-removing-a-file-from-a-database"></a>D. 데이터베이스에서 파일 제거  
 다음 예에서는 2번 예에서 추가한 파일 중 하나를 제거합니다.  
   
 ```sql  
@@ -493,7 +493,7 @@ REMOVE FILE test1dat4;
 GO  
 ```  
   
-### <a name="e-modifying-a-file"></a>5. 파일 수정  
+### <a name="e-modifying-a-file"></a>E. 파일 수정  
 다음 예에서는 2번 예에서 추가한 파일 중 하나의 크기를 늘립니다.  
 MODIFY FILE 명령을 포함한 ALTER DATABASE는 파일 크기를 더 크게 만들 수만 있으므로 파일 크기를 더 작게 만들려면 DBCC SHRINKFILE을 사용해야 합니다.  
   
@@ -528,7 +528,7 @@ GO
 ```
  
   
-### <a name="f-moving-a-file-to-a-new-location"></a>6. 파일을 새 위치로 이동  
+### <a name="f-moving-a-file-to-a-new-location"></a>F. 파일을 새 위치로 이동  
 다음 예에서는 1번 예에서 만든 `Test1dat2` 파일을 새 디렉터리로 이동합니다.  
   
 > [!NOTE]  
@@ -546,7 +546,7 @@ MODIFY FILE
 GO  
 ```  
   
-### <a name="g-moving-tempdb-to-a-new-location"></a>7. tempdb를 새 위치로 이동  
+### <a name="g-moving-tempdb-to-a-new-location"></a>G. tempdb를 새 위치로 이동  
 다음 예에서는 `tempdb`를 디스크의 현재 위치에서 다른 디스크 위치로 이동합니다. MSSQLSERVER 서비스를 시작할 때마다 `tempdb`가 다시 생성되므로 데이터와 로그 파일을 물리적으로 이동할 필요는 없습니다. 3단계에서 서비스를 다시 시작할 때 파일이 생성됩니다. 서비스를 다시 시작하기 전까지는 `tempdb`가 기존의 위치에서 작업을 수행합니다.  
   
 1. `tempdb` 데이터베이스의 논리적 파일 이름 및 디스크에서 현재 위치를 결정합니다.  
@@ -583,7 +583,7 @@ GO
   
 5. tempdb.mdf 및 templog.ldf 파일을 원래 위치에서 삭제합니다.  
   
-### <a name="h-making-a-filegroup-the-default"></a>8. 기본 파일 그룹 설정  
+### <a name="h-making-a-filegroup-the-default"></a>H. 기본 파일 그룹 설정  
 다음 예제에서는 예제 B에서 만든 `Test1FG1` 파일 그룹을 기본 파일 그룹으로 만듭니다. 그 다음 `PRIMARY` 파일 그룹을 기본 파일 그룹으로 다시 설정합니다. `PRIMARY`는 대괄호 또는 따옴표로 구분해야 합니다.  
   
 ```sql  
@@ -638,7 +638,7 @@ TO FILEGROUP xtp_fg;
 GO
 ```  
         
-### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>10. 파일 그룹을 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 증가하도록 변경합니다.
+### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. 파일 그룹을 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 증가하도록 변경합니다.
  다음 예제에서는 필수 `ALTER DATABASE` 문을 생성하고 `AUTOGROW_ALL_FILES` 설정을 사용하여 읽기-쓰기 파일 그룹을 수정합니다.  
   
 ```sql  
