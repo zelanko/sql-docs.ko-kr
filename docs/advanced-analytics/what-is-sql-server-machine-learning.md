@@ -33,13 +33,13 @@ SQL Server 2017은 R과 Python을 지원합니다. 다음 표에서 구성 요�
 | 구성 요소 | Description |
 |-----------|-------------|
 | SQL Server 실행 패드 서비스 | 외부 R 및 Python 런타임 및 데이터베이스 엔진 인스턴스 간 통신을 관리 하는 서비스입니다. |
-| R 패키지 | [**RevoScaleR** ](r/revoscaler-overview.md) 가장 널리 사용 되는이 라이브러리의 확장 가능한 R. 함수는 주 라이브러리입니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 모델링 및 분석의 다양 한 형태는 이러한 라이브러리에 있습니다. 또한 이러한 라이브러리의에서 함수에 병렬 처리를 조정 및 계산 엔진에 의해 관리 되는 데이터의 청크에서 작동 하는 기능에 대 한 사용 가능한 코어에서 워크 로드를 자동으로 배포 합니다.  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다. <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) , T-SQL 저장 프로시저에 R 스크립트를 배치 하 고, 데이터베이스와 함께 저장된 프로시저를 등록 하 고, R 개발 환경에서 저장된 프로시저를 실행 하는 것에 대 한 도우미 함수를 제공 합니다.<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md) 작성 또는 MDX 쿼리를 R 스크립트에서 실행 됩니다.|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 은 Microsoft의 오픈 소스 분산은 R입니다. 패키지 및 인터프리터를 포함 됩니다. 항상 설치 프로그램으로 설치 MRO의 버전을 사용 합니다. |
+| R 패키지 | [**RevoScaleR** ](r/revoscaler-overview.md)은 확장 가능한 R의 주요 라이브러리입니다. 이 라이브러리의 함수들은 가장 널리 사용됩니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 다양한 형태의 모델링 및 분석을 이러한 라이브러리에서 찾을 수 있습니다. 또한 이 라이브러리의 함수는 계산 엔진에서 조정 및 관리하는 데이터 청크 작업을 수행 할 수있는 병렬 처리를 위해 사용 가능한 코어에 작업 부하를 자동으로 배포합니다.<br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)은 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다. <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)는 T-SQL 저장 프로시저에 R 스크립트를 배치 하 고, 데이터베이스와 함께 저장된 프로시저를 등록 하 고, R 개발 환경에서 저장된 프로시저를 실행 하는 것에 대 한 도우미 함수를 제공 합니다.<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)은 R 스크립트에서 MDX 쿼리를 작성 또는 실행합니다.|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) 은 R의 Microsoft의 오픈 소스 분산입니다. 패키지 및 인터프리터를 포함 합니다. 항상 설치 프로그램으로 설치 MRO의 버전을 사용 합니다. |
 | R 도구 | R 콘솔 창 및 명령 프롬프트를 R 배포에 표준 도구 이며  |
 | R 샘플 및 스크립트 |  오픈 소스 R 및 RevoScaleR 패키지 만들기 및 미리 설치 된 데이터를 사용 하 여 스크립트를 실행할 수 있도록 기본 제공 데이터 집합을 포함 합니다. |
 | Python 패키지 | [**revoscalepy** ](python/what-is-revoscalepy.md) 데이터 조작, 변환, 시각화 및 분석에 대 한 함수를 사용 하 여 확장 가능한 Python 주 라이브러리입니다. <br/>[**(Python) microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다.  |
 | Python 도구 | 기본 제공 Python 명령줄 도구는 임시 테스트 및 작업에 유용 합니다.  |
-| Anaconda | Anaconda는 Python 및 필수 패키지를 오픈 소스 배포 됩니다. |
+| Anaconda | Anaconda는 Python 및 필수 패키지의 오픈 소스 배포입니다. |
 | Python 샘플 및 스크립트 | R에서와 마찬가지로 Python 기본 제공 데이터 집합 및 스크립트를 포함 합니다.  |
 | R 및 Python에서 미리 학습 된 모델 | 미리 학습 된 모델은 특정 사용 사례에 대 한 생성 되 고 microsoft 데이터 과학 엔지니어링 팀에서 유지 관리 합니다. 으로 미리 학습 된 모델을 사용할 수 있습니다-텍스트에서 양수 음수가 감정 점수 매기기 또는 기능에서 제공 하는 새 데이터 입력을 사용 하 여 이미지를 검색 하는 것입니다. 모델은 Machine Learning 서비스에서 실행 되지만 SQL Server 설치 프로그램을 통해 설치할 수 없습니다. 자세한 내용은 [설치 미리 학습 된 기계 학습 모델 SQL Server에서](install/sql-pretrained-models-install.md)합니다. |
 
@@ -61,17 +61,17 @@ SQL Server 2017은 R과 Python을 지원합니다. 다음 표에서 구성 요�
 
 + [SQL Server Machine Learning Services (In-database)](install/sql-machine-learning-services-windows-install.md)
  
-### <a name="step-2-configure-a-development-tool"></a>2 단계: 구성 하는 개발 도구
+### <a name="step-2-configure-a-development-tool"></a>2 단계: 개발 도구 구성
 
-데이터 과학자가 일반적으로 사용 하 여 R 또는 Python 자신의 랩톱 또는 개발 워크스테이션에서 데이터를 탐색 하 고 빌드, 우수한 예측 모델이 될 때까지 예측 모델을 조정 하 합니다. SQL Server에서 데이터베이스 내 분석을 사용 하 여이 프로세스를 변경할 필요가 없습니다 있습니다. 설치를 완료 한 후에 로컬 및 원격으로 SQL Server에서 R 또는 Python 코드를 실행할 수 있습니다.
+데이터 과학자들은 일반적으로 랩톱이나 개발 워크 스테이션에서 R 또는 Python을 사용하여 데이터를 탐색하고 좋은 예측 모델을 얻을 때까지 예측 모델을 작성 및 조정합니다. SQL Server의 데이터베이스 내 분석 기능을 사용하면 이 프로세스를 변경할 필요가 없습니다. 설치가 완료되면 SQL Server에서 R 또는 Python 코드를 로컬 및 원격으로 실행할 수 있습니다.
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-+ **원하는 IDE를 사용 하 여**입니다. 원하는 개발 도구에는 R 및 Python 라이브러리를 연결할 수 있습니다. 자세한 내용은 [R 도구 설정](r/set-up-a-data-science-client.md) 하 고 [Python 도구 설정](python/setup-python-client-tools-sql.md)합니다.  
++ **원하는 IDE를 사용**합니다. 원하는 개발 도구에서 R 및 Python 라이브러리를 연결할 수 있습니다. 자세한 내용은 [R 도구 설정](r/set-up-a-data-science-client.md)과 [Python 도구 설정](python/setup-python-client-tools-sql.md)을 참조합니다.  
 
-+ **원격 또는 로컬로 작업**합니다. 데이터 과학자는 SQL Server에 연결 하 고 클라이언트 로컬 분석을 위해 일반적으로 가져올 수 있습니다. 그러나 더 나은 방법은 사용 하는 **RevoScaleR** 또는 **revoscalepy** 비용이 많이 들고 안전 하지 않은 데이터 이동을 방지할 SQL Server 컴퓨터에 계산 푸시 Api.
++ **원격 또는 로컬로 작업**합니다. 데이터 과학자는 평소와 같이 SQL Server에 연결하여 로컬 분석을 위해 클라이언트에 데이터를 가져올 수 있습니다. 그러나 더 나은 솔루션은 **RevoScaleR** 또는 **revoscalepy** API를 사용하여 계산을 SQL Server 컴퓨터로 푸시하여 비용이 많이 들고 안전하지 않은 데이터 이동을 방지하는 것입니다.
 
-+ **SQL Server 저장 프로시저에 R 또는 Python 스크립트를 포함할**합니다. 코드를 완전히 최적화 하는 경우 불필요 한 데이터 이동을 방지 하 고 데이터 처리 작업을 최적화 하는 저장된 프로시저에 래핑하십시오.
++ **SQL Server 저장 프로시저에 R 또는 Python 스크립트를 포함**합니다. 코드가 완전히 최적화되면 불필요한 데이터 이동을 방지하고 데이터 처리 작업을 최적화하기 위해 저장된 프로시저로 래핑하십시오.
 
 ### <a name="step-3-write-your-first-script"></a>3 단계: 첫 번째 스크립트를 작성 합니다.
 
@@ -82,23 +82,23 @@ T-SQL 스크립트 내에서 R 또는 Python 함수를 호출 합니다.
 + [Python: T-SQL을 사용하여 Python 실행](tutorials/run-python-using-t-sql.md)
 + [Python: Python을 사용 하 여 데이터베이스 내 분석에 알아봅니다](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-작업을 위한 최상의 언어를 선택 합니다. R은 SQL을 사용 하 여 구현 하기 어려운 통계적 계산에 적합 합니다. 데이터 집합 기반 작업에 대 한 최대 성능을 얻기 위해 SQL Server의 기능을 활용 합니다. 열에 대해 매우 빠른 계산에 대 한 메모리 내 데이터베이스 엔진을 사용 합니다.
+작업에 가장 적합한 언어를 선택하십시오. R은 SQL을 사용하여 구현하기 어려운 통계 계산에 가장 적합합니다. 데이터를 통한 집합 기반 작업의 경우 SQL Server의 성능을 최대한 활용하여 성능을 극대화하십시오. 열에 대한 매우 빠른 계산을 위해 메모리 내 데이터베이스 엔진을 사용하십시오.
 
 ### <a name="step-4-optimize-your-solution"></a>4 단계: 솔루션을 최적화
 
 모델이 엔터프라이즈 데이터의 크기를 조정 하는 준비 되 면 데이터 과학자는 종종 같은 프로세스를 최적화 하기 위해 DBA 또는 SQL 개발자를 사용 하 여 작동 합니다.
 
-+ 기능 엔지니어링
++ 피처(Feature) 엔지니어링
 + 데이터 수집 및 데이터 변환
 + 점수 매기기
 
-일반적으로 큰 데이터 집합을 사용 하는 경우에 특히 데이터 과학자가 R을 사용 하 여 성능 및 확장성 문제가 되었습니다. 이것은 공용 런타임 구현이 단일 스레드 이며 로컬 컴퓨터에서 사용 가능한 메모리에 맞는 데이터 집합만 수용할 수 있습니다. 더 많은 데이터를 사용 하 여 성능 향상을 위해 여러 기능을 제공 하는 SQL Server Machine Learning Services와 통합:
+일반적으로 R을 사용하는 데이터 과학자들은 특히 대규모 데이터 세트를 사용할 때 성능과 규모면에서 문제가 있었습니다. 이는 공통 런타임 구현이 단일 스레드이며 로컬 컴퓨터의 사용 가능한 메모리에 맞는 데이터 세트만 수용 할 수 있기 때문입니다. SQL Server와의 통합 Machine Learning Services는 더 많은 데이터와 함께 더 나은 성능을 위한 여러 가지 기능을 제공합니다:
 
-+ **RevoScaleR**:이 R 패키지에 병렬 처리 및 확장성을 제공 하도록 다시 설계 된 가장 인기 있는 R 함수 중 일부는 구현이 포함 되어 있습니다. 패키지는 또한 훨씬 큰 메모리와 계산력 일반적으로 SQL Server 컴퓨터에 계산을 푸시하여 성능과 확장을 더 증대 하는 함수를 포함 합니다.
++ **RevoScaleR**:이 R 패키지는 병렬 처리와 스케일을 제공하도록 재 설계된 가장 보편적인 R 기능의 구현을 포함합니다. 또한 이 패키지에는 계산을 SQL Server 컴퓨터로 밀어 넣어 성능과 확장성을 높이는 기능이 포함되어 있습니다. SQL Server 컴퓨터는 대개 메모리와 계산 능력이 훨씬 뛰어납니다.
 
-+ **revoscalepy**합니다. 이 Python 라이브러리 RevoScaleR의 원격 계산 컨텍스트 등 가장 인기 있는 기능을 구현 및 지 원하는 많은 알고리즘 분산 처리 합니다.
++ **revoscalepy**합니다. 이 Python 라이브러리는 원격 계산 컨텍스트와 분산 처리를 지원하는 많은 알고리즘과 같이 RevoScaleR에서 가장 많이 사용되는 함수를 구현합니다.
 
-이 성능에 대 한 자세한 내용은 참조 [성능 사례 연구](r/performance-case-study-r-services.md) 하 고 [R 및 데이터 최적화](r/r-and-data-optimization-r-services.md)합니다.
+성능에 대 한 자세한 내용은 [성능 사례 연구](r/performance-case-study-r-services.md)와 [R 및 데이터 최적화](r/r-and-data-optimization-r-services.md)를 참조합니다.
 
 ### <a name="step-5-deploy-and-consume"></a>5 단계: 배포 및 사용
 
