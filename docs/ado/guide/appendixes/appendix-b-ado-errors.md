@@ -1,5 +1,5 @@
 ---
-title: '부록 b: ADO 오류 | Microsoft Docs'
+title: '부록 B: ADO 오류 코드 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
