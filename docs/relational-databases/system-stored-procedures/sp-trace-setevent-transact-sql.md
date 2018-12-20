@@ -135,14 +135,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|예약됨||  
 |102|Audit Database Scope GDR|데이터베이스 사용 권한 부여와 같은 데이터베이스 전용 동작에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 문 사용 권한에 대한 GRANT, DENY 또는 REVOKE를 실행할 때마다 발생합니다.|  
 |103|Audit Object GDR Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 개체 사용 권한에 대한 GRANT, DENY, REVOKE를 실행할 때마다 발생합니다.|  
-|104|Audit Addlogin Event|발생 경우를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가 되거나 제거에 대 한 **sp_addlogin** 하 고 **sp_droplogin**합니다.|  
-|105|Audit Login GDR Event|Windows 로그인 권한이 추가 되거나 제거 되 면 발생 합니다. 에 대 한 **sp_grantlogin**하십시오 **sp_revokelogin**, 및 **sp_denylogin**합니다.|  
-|106|Audit Login Change Property Event|암호를 제외한 로그인 속성을 수정 하는 경우 발생 합니다. 에 대 한 **sp_defaultdb** 하 고 **sp_defaultlanguage**합니다.|  
+|104|Audit Addlogin Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거되면 발생합니다. **sp_addlogin**, **sp_droplogin** 대상|  
+|105|Audit Login GDR Event|Windows 로그인 권한이 추가되거나 제거되면 발생합니다. **sp_grantlogin**, **sp_revokelogin** 및 **sp_denylogin** 대상|  
+|106|Audit Login Change Property Event|암호를 제외한 로그인 속성을 수정하는 경우 발생합니다. **sp_defaultdb**, **sp_defaultlanguage** 대상|  
 |107|Audit Login Change Password Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호가 변경되면 발생합니다.<br /><br /> 암호는 기록되지 않습니다.|  
-|108|Audit Add Login to Server Role Event|로그인을 추가 하거나; 고정된 서버 역할에서 제거할 때 발생 합니다. 에 대 한 **sp_addsrvrolemember**, 및 **sp_dropsrvrolemember**합니다.|  
-|109|Audit Add DB User Event|로그인이 추가 또는 데이터베이스 사용자를 제거 하는 경우 (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])에 대 한 데이터베이스에 **sp_grantdbaccess**, **sp_revokedbaccess**를 **sp_adduser**, 및 **sp_dropuser**합니다.|  
-|110|Audit Add Member to DB Role Event|로그인이 추가 되거나; 데이터베이스에 데이터베이스 사용자 (고정 또는 사용자 정의)로 제거 하는 경우 발생 합니다. 에 대 한 **sp_addrolemember**하십시오 **sp_droprolemember**, 및 **sp_changegroup**합니다.|  
-|111|Audit Add Role Event|로그인이 추가 되거나; 데이터베이스에 데이터베이스 사용자를 제거 하는 경우 발생 합니다. 에 대 한 **sp_addrole** 하 고 **sp_droprole**합니다.|  
+|108|Audit Add Login to Server Role Event|고정된 서버 역할에서 로그인을 추가하거나 제거할 때 발생합니다. **sp_addsrvrolemember** 및 **sp_dropsrvrolemember** 대상|  
+|109|Audit Add DB User Event|로그인이 데이터베이스에 데이터베이스 사용자(Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 추가 또는 제거될 때 발생합니다. **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 대상|  
+|110|Audit Add Member to DB Role Event|로그인이 데이터베이스에 데이터베이스 사용자(고정 또는 사용자 정의)로 추가 또는 제거될 때 발생합니다. **sp_addrolemember**, **sp_droprolemember** 및 **sp_changegroup** 대상|  
+|111|Audit Add Role Event|로그인이 데이터베이스에 데이터베이스 사용자로 추가 또는 제거될 때 발생합니다. **sp_addrole** 및 **sp_droprole** 대상|  
 |112|Audit App Role Change Password Event|응용 프로그램 역할의 암호가 변경되면 발생합니다.|  
 |113|Audit Statement Permission Event|CREATE TABLE 등 문 사용 권한이 사용되면 발생합니다.|  
 |114|Audit Schema Object Access Event|SELECT 등 개체 사용 권한이 성공적으로 사용되거나 성공적으로 사용되지 않은 모든 경우에 발생합니다.|  
