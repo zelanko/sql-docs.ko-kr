@@ -127,22 +127,22 @@ sp_trace_setevent [ @traceid = ] trace_id
 |93|Log File Auto Grow|로그 파일이 서버에 의해 자동으로 확장되었음을 나타냅니다.|  
 |94|Data File Auto Shrink|데이터 파일이 서버에 의해 자동으로 축소되었음을 나타냅니다.|  
 |95|Log File Auto Shrink|로그 파일이 서버에 의해 자동으로 축소되었음을 나타냅니다.|  
-|96|Showplan Text|쿼리 최적화 프로그램에서 SQL 문의 쿼리 계획 트리를 표시합니다. 이때 **TextData** 열에 이벤트에 대한 실행 계획이 포함되지 않습니다.| 
+|96|Showplan Text|쿼리 최적화 프로그램에서 SQL 문의 쿼리 계획 트리를 표시합니다. 이때 **TextData** 열에 이벤트에 대한 실행 계획이 포함되지 않습니다.|  
 |97|Showplan All|실행된 SQL 문의 전체 컴파일 시간 정보와 쿼리 계획을 표시합니다. 이때 **TextData** 열에 이벤트에 대한 실행 계획이 포함되지 않습니다.|  
-|98|Showplan Statistics Profile|실행된 SQL 문의 전체 실행 시간 정보와 쿼리 계획을 표시합니다. 이때 **TextData** 열에 이벤트에 대한 실행 계획이 포함되지 않습니다.| 
+|98|Showplan Statistics Profile|실행된 SQL 문의 전체 실행 시간 정보와 쿼리 계획을 표시합니다. 이때 **TextData** 열에 이벤트에 대한 실행 계획이 포함되지 않습니다.|  
 |99|예약됨||  
 |100|RPC Output Parameter|모든 RPC에 대한 매개 변수의 출력 값을 생성합니다.|  
 |101|예약됨||  
 |102|Audit Database Scope GDR|데이터베이스 사용 권한 부여와 같은 데이터베이스 전용 동작에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 문 사용 권한에 대한 GRANT, DENY 또는 REVOKE를 실행할 때마다 발생합니다.|  
 |103|Audit Object GDR Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 개체 사용 권한에 대한 GRANT, DENY, REVOKE를 실행할 때마다 발생합니다.|  
-|104|Audit Addlogin Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거되면 발생합니다. **sp_addlogin**, **sp_droplogin** 대상|  
-|105|Audit Login GDR Event|Windows 로그인 권한이 추가되거나 제거되면 발생합니다. sp_grantlogin, sp_revokelogin** 및 sp_denylogin 대상|  
-|106|Audit Login Change Property Event|암호를 제외한 로그인 속성을 수정하는 경우 발생합니다. **sp_defaultdb**, **sp_defaultlanguage** 대상|  
+|104|Audit Addlogin Event|발생 경우를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가 되거나 제거에 대 한 **sp_addlogin** 하 고 **sp_droplogin**합니다.|  
+|105|Audit Login GDR Event|Windows 로그인 권한이 추가 되거나 제거 되 면 발생 합니다. 에 대 한 **sp_grantlogin**하십시오 **sp_revokelogin**, 및 **sp_denylogin**합니다.|  
+|106|Audit Login Change Property Event|암호를 제외한 로그인 속성을 수정 하는 경우 발생 합니다. 에 대 한 **sp_defaultdb** 하 고 **sp_defaultlanguage**합니다.|  
 |107|Audit Login Change Password Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호가 변경되면 발생합니다.<br /><br /> 암호는 기록되지 않습니다.|  
-|108|Audit Add Login to Server Role Event|고정된 서버 역할에서 로그인을 추가하거나 제거할 때 발생합니다. **sp_addsrvrolemember** 및 **sp_dropsrvrolemember** 대상|  
-|109|Audit Add DB User Event|로그인이 데이터베이스에 데이터베이스 사용자(Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 추가 또는 제거될 때 발생합니다. **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 대상|  
-|110|Audit Add Member to DB Role Event|로그인이 데이터베이스에 데이터베이스 사용자(고정 또는 사용자 정의)로 추가 또는 제거될 때 발생합니다. **sp_addrolemember**, **sp_droprolemember** 및 **sp_changegroup** 대상|  
-|111|Audit Add Role Event|로그인이 데이터베이스에 데이터베이스 사용자로 추가 또는 제거될 때 발생합니다. **sp_addrole** 및 **sp_droprole** 대상|  
+|108|Audit Add Login to Server Role Event|로그인을 추가 하거나; 고정된 서버 역할에서 제거할 때 발생 합니다. 에 대 한 **sp_addsrvrolemember**, 및 **sp_dropsrvrolemember**합니다.|  
+|109|Audit Add DB User Event|로그인이 추가 또는 데이터베이스 사용자를 제거 하는 경우 (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])에 대 한 데이터베이스에 **sp_grantdbaccess**, **sp_revokedbaccess**를 **sp_adduser**, 및 **sp_dropuser**합니다.|  
+|110|Audit Add Member to DB Role Event|로그인이 추가 되거나; 데이터베이스에 데이터베이스 사용자 (고정 또는 사용자 정의)로 제거 하는 경우 발생 합니다. 에 대 한 **sp_addrolemember**하십시오 **sp_droprolemember**, 및 **sp_changegroup**합니다.|  
+|111|Audit Add Role Event|로그인이 추가 되거나; 데이터베이스에 데이터베이스 사용자를 제거 하는 경우 발생 합니다. 에 대 한 **sp_addrole** 하 고 **sp_droprole**합니다.|  
 |112|Audit App Role Change Password Event|응용 프로그램 역할의 암호가 변경되면 발생합니다.|  
 |113|Audit Statement Permission Event|CREATE TABLE 등 문 사용 권한이 사용되면 발생합니다.|  
 |114|Audit Schema Object Access Event|SELECT 등 개체 사용 권한이 성공적으로 사용되거나 성공적으로 사용되지 않은 모든 경우에 발생합니다.|  
@@ -227,14 +227,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |197|예약됨||  
 |198|XQuery Static Type|XQuery 식이 실행되면 발생합니다. 이 이벤트 클래스는 XQuery 식의 정적 유형을 제공합니다.|  
 |199|QN: subscription|쿼리 등록을 구독할 수 없으면 발생합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
-|200|QN: parameter table|활성 구독에 대한 정보가 내부 매개 변수 테이블에 저장됩니다. 이 이벤트 클래스는 매개 변수 테이블을 만들거나 삭제하면 발생합니다. 일반적으로 이러한 테이블은 데이터베이스를 다시 시작할 때 생성되거나 삭제됩니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|
-|201|QN: template|쿼리 템플릿은 구독 쿼리의 클래스를 나타냅니다. 일반적으로 매개 변수 값을 제외하면 같은 클래스의 쿼리는 동일합니다. 이 이벤트 클래스는 새로운 구독 요청이 기존 클래스(Match), 새 클래스(Create), 활성 구독이 없는 쿼리 클래스에 대한 템플릿 정리를 나타내는 Drop 클래스에 있으면 발생합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|
+|200|QN: parameter table|활성 구독에 대한 정보가 내부 매개 변수 테이블에 저장됩니다. 이 이벤트 클래스는 매개 변수 테이블을 만들거나 삭제하면 발생합니다. 일반적으로 이러한 테이블은 데이터베이스를 다시 시작할 때 생성되거나 삭제됩니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
+|201|QN: template|쿼리 템플릿은 구독 쿼리의 클래스를 나타냅니다. 일반적으로 매개 변수 값을 제외하면 같은 클래스의 쿼리는 동일합니다. 이 이벤트 클래스는 새로운 구독 요청이 기존 클래스(Match), 새 클래스(Create), 활성 구독이 없는 쿼리 클래스에 대한 템플릿 정리를 나타내는 Drop 클래스에 있으면 발생합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
 |202|QN: dynamics|쿼리 알림의 내부 동작을 추적합니다. **TextData** 열은 이 이벤트에 대한 정보를 포함합니다.|  
 |212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정될 때 나타납니다.|  
-|213|Database Suspect Data Page|**msdb**의 **suspect_pages** 테이블에 페이지가 추가되었을 때 나타납니다.| 
+|213|Database Suspect Data Page|**msdb**의 **suspect_pages** 테이블에 페이지가 추가되었을 때 나타납니다.|  
 |214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지할 때 나타납니다.|  
-|215|PreConnect:Starting|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|  
-|216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수의 실행이 완료될 때 나타납니다.| 
+|215|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|  
+|216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수의 실행이 완료될 때 나타납니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
 |235|Audit Fulltext||  

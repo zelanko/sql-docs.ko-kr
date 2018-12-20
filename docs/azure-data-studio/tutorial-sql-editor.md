@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
 ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49355934"
@@ -116,7 +116,7 @@ ms.locfileid: "49355934"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 정의 피킹 기능을 사용 하는 개체 정의를 볼 수가 있습니다. 이 섹션에서는 두 번째 저장된 프로시저를 만들고 보기 정의 사용 하 여 신속 하 게 저장된 프로시저의 본문을 작성 하는 테이블에 있는 열을 참조 하세요.
 
-1. 키를 눌러 새 편집기를 엽니다 **Ctrl + N**합니다. 
+1. **Ctrl + N** 키를 눌러 새 편집기를 엽니다. 
 
 2. 형식 *sql* 편집기에서 화살표를 아래로 *sqlCreateStoredProcedure*, 키를 누릅니다를 *탭* 키 (또는 *Enter*) 저장 만들기를 로드 하려면 프로시저 코드 조각입니다.
 3. 입력 *setCustomer* 에 대 한 *StoredProcedureName* 하 고 *dbo* 에 대 한 *SchemaName*
@@ -186,7 +186,7 @@ ms.locfileid: "49355934"
 
 1. **서버** 사이드바에서 *dbo.Customers* 테이블을 마우스 오른쪽 단추로 클릭하고 **SELECT TOP 1000** 을 클릭합니다.
 
-2. 결과 보기에서 첫 번째 행을 선택합니다. 전체 행이 선택되어 있는지 확인합니다(가장 왼쪽 열에서 숫자 1)를 누르고 선택한 **JSON으로 저장**합니다. 
+2. 결과 보기에서 첫 번째 행을 선택 합니다. 전체 행이 선택 되어 있는지 확인 합니다 (가장 왼쪽 열에서 숫자 1)를 누르고 선택한 **JSON으로 저장**합니다.  
 3. 나중에 (데스크톱에 대 한 예제) 파일을 삭제 하 고 클릭 수 있도록 기억 하기 위치로 폴더를 변경할 **저장할**합니다. JSON 형식의 파일이 열립니다.
 
    ![JSON으로 저장](./media/tutorial-sql-editor/save-as-json.png)
