@@ -34,7 +34,7 @@ SQL Server 2019 preview가 출시되었습니다. 이 문서에서는 SQL Server
 - 네이티브 Linux 경로 대 한 지원입니다.
 - IPV6 지원 합니다.
 - NFS의 데이터베이스 파일을 지원 합니다.
-- [전송 보안 계층](sql-server-linux-encrypted-connections.md) (TLS) 암호화를 사용할 수 있습니다..
+- [전송 보안 계층](sql-server-linux-encrypted-connections.md)(TLS) 암호화를 사용할 수 있습니다.
 - [Active Directory 인증](sql-server-linux-active-directory-authentication.md)을 사용할 수 있습니다.
 - 고가용성을 위한 [가용성 그룹 기능](sql-server-linux-availability-group-overview.md)
 - [전체 텍스트 검색](sql-server-linux-setup-full-text-search.md)를 지원합니다.
