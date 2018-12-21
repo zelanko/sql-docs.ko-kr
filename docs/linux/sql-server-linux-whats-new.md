@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51659224"
@@ -26,7 +26,7 @@ ms.locfileid: "51659224"
 SQL Server 2019 preview가 출시되었습니다. 이 문서에서는 SQL Server 2019 미리 보기 릴리스를 다루지 않습니다. SQL Server 2019 미리 보기를 알아보려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)을 참조하세요.
 
 > [!NOTE]
-> 이 문서에서의 이러한 기능 외에도, 누적 업데이트는 GA 릴리스 이후 정기적으로 배포됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진 문제는 [릴리스 노트](sql-server-linux-release-notes.md)를 참조하세요.
+> 이 문서에서의 이러한 기능 외에도, 누적 업데이트는 GA 릴리스 이후 정기적으로 배포됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진  문제는 [릴리스 노트](sql-server-linux-release-notes.md)를 참조하세요.
 
 ## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
 

@@ -29,7 +29,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51665582"
@@ -38,7 +38,7 @@ ms.locfileid: "51665582"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux의 SQL Server 2017의 다양한 버전에서 지원되는 기능의 상세 정보를 제공합니다. Windows의 SQL Server의 버전 및 지원하는 기능에 대해서는, [SQL Server 2017-Windows](../sql-server/editions-and-components-of-sql-server-2017.md)를 참조하세요.
+이 문서에서는 Linux의 SQL Server 2017의 다양한 버전에서 지원되는 기능의 상세 정보를 제공합니다. Windows의 SQL Server의 버전 및 지원하는 기능에 대해서는, [SQL Server 2017-Windows](../sql-server/editions-and-components-of-sql-server-2017.md)를 참조하세요.  
   
 설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 버전은 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
@@ -58,9 +58,9 @@ Linux에서 사용할 수 없는 SQL Server 기능의 목록을 보려면 참조
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|정의|  
 |---------------------------------------|----------------|  
 |Enterprise|프리미엄 제품인 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition은 중요 업무용 워크로드에 대한 높은 서비스 수준을 사용하도록 설정하는 매우 빠른 성능 포괄적인 고성능 데이터 센터 기능을 제공합니다.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 부서와 소규모 조직이 응용 프로그램을 실행하기 위한 기본 데이터 관리를 제공하며 온-프레미스 및 클라우드용 공용 개발 도구 지원-최소한의 IT 리소스를 사용하여 효과적인 데이터베이스 관리를 사용하도록 설정합니다.|
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 부서와 소규모 조직이 응용 프로그램을 실행하기 위한 기본 데이터 관리를 제공하며 온-프레미스 및 클라우드용 공용 개발 도구 지원-최소한의 IT 리소스를 사용하여 효과적인 데이터베이스 관리를 사용하도록 설정합니다.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
-|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기반에서 어떤 유형의 응용 프로그램도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허가되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|
+|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기반에서 어떤 유형의 응용 프로그램도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허가되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express Edition|Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 응용 프로그램을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 응용 프로그램을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>클라이언트/서버 응용 프로그램으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
@@ -91,7 +91,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 최적화 데이터의 최대 크기|무제한 메모리| 32GB| 16GB| 352MB|
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|10GB|  
   
-<sup>1</sup> Enterprise edition Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스(새 계약에 사용할 수 없음)는 SQL Server 인스턴스당 20 개의 코어로 제한됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)합니다.
+<sup>1</sup> Enterprise edition Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스(새 계약에 사용할 수 없음)는 SQL Server 인스턴스당 20 개의 코어로 제한됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)합니다.  
  
 ##  <a name="RDBMSHA"></a> RDBMS 고가용성  
   
@@ -117,7 +117,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 <sup>1</sup> Enterprise edition에서, 지원하는 노드 수는 최대 운영 체제 수입니다. Standard 버전에서는 두 개의 노드가 지원됩니다. 
 
-<sup>2</sup> Enterprise edition에서, 2개의 동기 보조 복제본을 포함하여 최대 8개의 보조 복제본에 대한 지원을 제공합니다.
+<sup>2</sup> Enterprise edition에서, 2개의 동기 보조 복제본을 포함하여 최대 8개의 보조 복제본에 대한 지원을 제공합니다. 
 
 <sup>3</sup> standard edition은 기본 가용성 그룹을 지원 합니다. 기본 가용성 그룹은 데이터베이스가 하나인 두 개의 복제본을 지원합니다. 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.    
 
