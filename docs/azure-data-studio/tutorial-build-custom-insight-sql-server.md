@@ -12,36 +12,36 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
 ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49356344"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 빌드 사용자 지정 정보 위젯
+# <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 사용자 지정 정보 위젯 빌드
 
-이 자습서에는 고유한 정보 쿼리를 사용 하 여 사용자 지정 정보 위젯 빌드 방법을 보여 줍니다.
+이 자습서에는 고유한 정보 쿼리를 사용하여 사용자 지정 정보 위젯을 빌드하는 방법을 보여줍니다.
 
-이 자습서에 대해 알아봅니다 방법:
+이 자습서에서 다음과 같은 방법을 배웁니다.
 > [!div class="checklist"]
-> * 사용자 고유의 쿼리를 실행 하 고 차트 보기
-> * 빌드 차트에서 사용자 지정 정보 위젯
+> * 사용자 고유의 쿼리를 실행하고 차트 보기
+> * 차트에서 사용자 지정 정보 위젯 빌드
 > * 서버 또는 데이터베이스 대시보드에 차트를 추가
-> * 사용자 지정 정보 위젯을에 세부 정보 추가
+> * 사용자 지정 정보 위젯에 세부 정보 추가
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)를 사용하여 SQL Server에 연결 및 쿼리
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)를 사용하여 Azure SQL Database에 연결 및 쿼리
 
 
-## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>사용자 고유의 쿼리를 실행 하 고 차트 뷰에서 결과
-이 단계에서 현재 활성 세션을 쿼리 하는 sql 스크립트를 실행 합니다.
+## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>사용자 고유의 쿼리를 실행하고 차트 뷰에서 결과 보기
+이 단계에서 현재 활성 세션을 쿼리하는 sql 스크립트를 실행합니다.
 
-1. 새 편집기를 열려면 누릅니다 **Ctrl + N**합니다. 
+1. 새 편집기를 열려면 **Ctrl + N**을 누릅니다. 
 
-2. 연결 컨텍스트를 변경 **TutorialDB**합니다.
+2. 연결 컨텍스트를 **TutorialDB**로 변경합니다.
 
 3. 쿼리 편집기에 다음 쿼리를 붙여 넣습니다.
 
@@ -51,13 +51,13 @@ ms.locfileid: "49356344"
    WHERE status = 'running'
    ```
 
-4. 쿼리 편집기에서 저장 한 \*.sql 파일입니다. 이 자습서에서는 스크립트를 저장할 *activeSession.sql*합니다.
+4. 편집기에서 쿼리를 \*.sql 파일에 저장합니다. 이 자습서에서는 스크립트를 *activeSession.sql*로 저장합니다.
 
-5. 쿼리를 실행 하려면 키를 누릅니다 **F5**합니다.
+5. 쿼리를 실행하려면 **F5**키를 누릅니다.
 
-6. 쿼리 결과 표시 되 면 클릭 **차트 뷰로**를 클릭 합니다 **차트 뷰어** 탭 합니다.
+6. 쿼리 결과가 표시되면 **차트 뷰로**를 클릭합니다 **차트 뷰어** 탭을 클릭합니다.
 
-7. 변경 **차트 종류** 하 **개수**합니다. 이러한 설정을 수 차트를 렌더링합니다.
+7. **차트 종류**를 **개수**로 변경합니다. 이러한 설정은 개수 차트를 렌더링합니다.
 
 ## <a name="add-the-custom-insight-to-the-database-dashboard"></a>데이터베이스 대시보드를 사용자 지정 정보 추가
 
@@ -109,9 +109,9 @@ ms.locfileid: "49356344"
 
 ## <a name="add-details-to-custom-insight"></a>세부 정보를 사용자 지정 정보 추가
 
-1. 새 편집기를 열려면 누릅니다 **Ctrl + N**합니다.
+1. 새 편집기를 열려면 **Ctrl + N**을 누릅니다.
 
-2. 연결 컨텍스트를 변경 **TutorialDB**합니다.
+2. 연결 컨텍스트를 **TutorialDB**로 변경합니다.
 
 3. 쿼리 편집기에 다음 쿼리를 붙여 넣습니다.
 
@@ -121,7 +121,7 @@ ms.locfileid: "49356344"
     WHERE status = 'running'
    ```
 
-4. 쿼리 편집기에서 저장 한 \*.sql 파일입니다. 이 자습서에서는 스크립트를 저장할 *activeSessionDetail.sql*합니다.
+4. 편집기에서 쿼리를 \*.sql 파일에 저장합니다. 이 자습서에서는 스크립트를 저장할 *activeSessionDetail.sql*합니다.
 
 5. 키를 눌러 **Ctrl + 쉼표** 열려는 *사용자 설정*합니다.
 
@@ -165,10 +165,10 @@ ms.locfileid: "49356344"
 ## <a name="next-steps"></a>다음 단계
 이 자습서에서는 학습 하는 방법.
 > [!div class="checklist"]
-> * 사용자 고유의 쿼리를 실행 하 고 차트 보기
-> * 빌드 차트에서 사용자 지정 정보 위젯
+> * 사용자 고유의 쿼리를 실행하고 차트 보기
+> * 차트에서 사용자 지정 정보 위젯 빌드
 > * 서버 또는 데이터베이스 대시보드에 차트를 추가
-> * 사용자 지정 정보 위젯을에 세부 정보 추가
+> * 사용자 지정 정보 위젯에 세부 정보 추가
 
 데이터베이스 백업 및 복원 하는 방법에 알아보려면 다음 자습서를 완료 합니다.
 

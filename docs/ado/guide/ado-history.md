@@ -1,5 +1,5 @@
 ---
-title: ADO 기록 | Microsoft Docs
+title: ADO 변경 이력 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +20,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709561"
 ---
-# <a name="ado-features-for-each-release"></a>각 릴리스에 대 한 ADO 기능
-이 항목에서는 ADO와 ADO MD ADOX의 각 버전에서 도입 된 새 기능을 나열 합니다.
+# <a name="ado-features-for-each-release"></a>버전별 ADO 기능
+이 항목에서는 ADO와 ADO MD, ADOX의 각 버전에서 도입된 새 기능을 나열합니다.
 
 ## <a name="ado-60"></a>ADO 6.0
- ADO 6.0에서 Windows Vista, Windows Data Access Components (Windows DAC) 6.0의 일부로 포함 됩니다. ADO 6.0 ADO 2.8 기능적으로 동일합니다.
+ ADO 6.0은 Windows Vista에서 Windows Data Access Components (Windows DAC) 6.0의 일부로 포함됩니다. ADO 6.0은 ADO 2.8과 기능적으로 동일합니다.
 
 ## <a name="ado-28"></a>ADO 2.8
  Windows XP 및 Windows Server 2003의 Microsoft 데이터 액세스 구성 요소 (MDAC) 2.8 일부로 ADO 2.8 포함 되었습니다. MDAC 2.8 재배포 가능 패키지 버전은 사용할 수 있습니다; 또한 Windows 2000에만이 재배포 가능 패키지 버전을 설치 해야 하는 참고 합니다. ADO 2.8 몇 가지 보안 관련 문제를 해결 합니다.
@@ -42,7 +42,7 @@ ms.locfileid: "47709561"
 중첩 된 shape 명령에는 이제 최대 512 반환 **레코드 집합**합니다. 즉를 **셰이프** 명령을 모든 수준에서 더 이상 중첩 될 수 없습니다. 각 명령 (자식)는 단일 결과 경우 최대 수준 512을가 하는 대신 **레코드 집합**합니다. 모든 수준에서의 경우는 **셰이프** 명령을 여러 개 반환 합니다 **레코드 집합**, 최대 깊이 수준은 512 보다 작은 됩니다.
 
 ## <a name="ado-27"></a>ADO 2.7
- *64 비트 플랫폼 지원* ADO 2.7에는 64 비트 프로세서에 대 한 지원이 도입 되었습니다.
+ *64비트 플랫폼 지원* ADO 2.7부터 64비트 프로세서를 지원하기 시작했습니다.
 
 ## <a name="ado-26"></a>ADO 2.6
  **CubDef.GetSchemaObject***메서드* ADO 2.6부터 ADO MD 개체를 검색할 수 있습니다에 지정 된 대로 고유 이름을 사용 하 여 [UniqueName 속성 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)합니다.   부모 개체의 이름을 알 수 하지 않아도 및 부모 컬렉션 스키마 개체를 검색 하려면 채울 필요가 없습니다. 참조 [GetSchemaObject 메서드 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)합니다.
