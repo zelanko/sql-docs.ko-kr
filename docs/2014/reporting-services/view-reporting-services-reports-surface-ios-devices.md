@@ -19,21 +19,21 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a8f458589e995162a8753270fbdebe9554a44122
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48188823"
 ---
-# <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 장치 및 Apple iOS 장치에서 Reporting Services 보고서 보기
-  이 문서에서는 Microsoft Surface 장치 및 iPad와 같은 Apple iOS 6 및 Apple Safari 장치에서 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 및 워크플로를 설명합니다.  
+# <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기
+  이 문서에서는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 디바이스에서 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 및 워크플로를 설명합니다.  
   
 ## <a name="view-and-interact-with-reports"></a>보고서 보기 및 상호 작용  
- 부터는 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft Surface 장치 및 Apple iOS 6 및 iPad와 같은 Apple Safari 브라우저를 사용 하 여 장치에서 보고서 보기 및 기본 상호 작용을 지원 합니다. Microsoft Surface 장치를 사용하는 보고서를 게시할 수도 있습니다.  
+ 부터는 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Microsoft Surface 장치 및 Apple iOS 6 및 iPad와 같은 Apple Safari 브라우저를 사용 하 여 장치에서 보고서 보기 및 기본 상호 작용을 지원 합니다. Microsoft Surface 디바이스를 사용하는 보고서를 게시할 수도 있습니다.  
   
  ![IPad 바탕 화면](media/videothumbnail.jpg "IPad 바탕 화면")  
 iPad에서 보고서 보기 동작 보기  
   
- Windows Phone 8 장치에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 볼 수도 있습니다.  
+ Windows Phone 8 디바이스에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 볼 수도 있습니다.  
   
  이 항목에서 설명하는 기능을 활용하려면 다음 중 하나를 설치하세요.  
   
@@ -60,7 +60,7 @@ iPad에서 보고서 보기 동작 보기
   
     -   **SharePoint 웹 파트:** 웹 파트를 SharePoint 페이지에 추가한 경우 볼 수 있습니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서입니다.  
   
-3.  Microsoft Surface 장치에서 보고서 관리자를 사용하여 보고서를 열 수도 있습니다. 디렉터리 찾아보기 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자 및 보고서를 열려면 보고서 이름을 누릅니다.  
+3.  Microsoft Surface 디바이스에서 보고서 관리자를 사용하여 보고서를 열 수도 있습니다. 디렉터리 찾아보기 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자 및 보고서를 열려면 보고서 이름을 누릅니다.  
   
     > [!IMPORTANT]  
     >  보고서 관리자에서 보고서 보기는 iPad에서 지원되지 않습니다.  
@@ -89,7 +89,7 @@ iPad에서 보고서 보기 동작 보기
   
     -   **드롭다운 메뉴 내보내기** 아이콘을 누른 다음 파일 형식을 눌러서 보고서를 내보냅니다.  
   
-        -   Microsoft Surface 장치에서 보고서를 보는 경우 다음 형식 중 하나로 보고서를 내보낼 수 있습니다.  
+        -   Microsoft Surface 디바이스에서 보고서를 보는 경우 다음 형식 중 하나로 보고서를 내보낼 수 있습니다.  
   
             -   보고서 데이터를 가진 XML 파일  
   
@@ -115,7 +115,7 @@ iPad에서 보고서 보기 동작 보기
  RSWindowsNTLM 및 RSWindowsBasic 인증에 대 한 자세한 내용은 참조 하세요. [보고서 서버를 사용 하 여 인증](security/authentication-with-the-report-server.md)합니다.  
   
 ## <a name="uploading-reports"></a>보고서 업로드  
- 적절한 권한이 있는 경우 다음 방법 중 하나를 사용하여 Microsoft Surface 장치에서 보고서를 게시할 수 있습니다.  
+ 적절한 권한이 있는 경우 다음 방법 중 하나를 사용하여 Microsoft Surface 디바이스에서 보고서를 게시할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  이러한 방법은 iPad에서 지원되지 않습니다.  
@@ -129,7 +129,7 @@ iPad에서 보고서 보기 동작 보기
   
 -   [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- Microsoft Business Intelligence 및 모바일 장치에 대한 자세한 내용을 다음을 참조하세요.  
+ Microsoft Business Intelligence 및 모바일 디바이스에 대한 자세한 내용을 다음을 참조하세요.  
   
 -   [모바일 장치 및 SharePoint 2013 개요](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161351(v=office.15).aspx)합니다.  
   

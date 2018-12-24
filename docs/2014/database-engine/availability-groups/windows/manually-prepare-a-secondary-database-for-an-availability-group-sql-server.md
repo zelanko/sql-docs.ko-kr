@@ -20,7 +20,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48189687"
@@ -162,7 +162,7 @@ ms.locfileid: "48189687"
 2.  데이터베이스 복구 모델을 SIMPLE에서 FULL로 변경한 후 보조 데이터베이스를 만드는 데 사용할 수 있는 전체 백업을 만듭니다. 복구 모델이 방금 변경되었으므로 WITH FORMAT 옵션을 지정하여 새 미디어 세트를 만듭니다. 이 옵션은 단순 복구 모델에서 만든 이전 백업과 전체 복구 모델에서 만든 백업을 구분하는 데 유용합니다. 이 예에서는 백업 파일(C:\\[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].bak)이 데이터베이스와 같은 드라이브에서 생성됩니다.  
   
     > [!NOTE]  
-    >  프로덕션 데이터베이스의 경우에는 항상 별도의 장치에 백업해야 합니다.  
+    >  프로덕션 데이터베이스의 경우에는 항상 별도의 디바이스에 백업해야 합니다.  
   
      주 복제본(`INSTANCE01`)을 호스팅하는 서버 인스턴스에서 다음과 같이 주 데이터베이스의 전체 백업을 만듭니다.  
   

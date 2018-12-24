@@ -92,12 +92,12 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterpri
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl 및.rds)|예|예|예|예|예|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|예||||예|  
-|모바일 장치용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|예||||예|  
+|모바일 디바이스용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|예||||예|  
   
 > [!NOTE]  
 > 1.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스트되는 데이터에 액세스할 수 있습니다.  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 장치에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 를 사용할 수도 있습니다.  
-> 3.  클라우드에서  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 장치의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 디바이스에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 를 사용할 수도 있습니다.  
+> 3.  클라우드에서  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 디바이스의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

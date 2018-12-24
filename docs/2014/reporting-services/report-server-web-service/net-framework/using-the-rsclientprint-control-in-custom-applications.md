@@ -44,7 +44,7 @@ ms.locfileid: "48212664"
 -   이미지(EMF) 렌더링에 대한 온라인 설명서 항목을 검토하여 인쇄 미리 보기와 출력을 위해 페이지가 렌더링되는 방법을 이해합니다.  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 개요  
- 이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤은 CAB 파일로 패키지됩니다. **인쇄** 대화 상자의 텍스트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 모든 언어로 지역화됩니다. **RSPrintClient** ActiveX 컨트롤은 이미지 렌더링 확장 프로그램(EMF)을 사용하여 보고서를 인쇄합니다. StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight 및 PageWidth와 같은 EMF 장치 정보를 사용합니다. 이미지 렌더링에 대한 다른 장치 정보 설정은 지원되지 않습니다.  
+ 이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤은 CAB 파일로 패키지됩니다. **인쇄** 대화 상자의 텍스트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 모든 언어로 지역화됩니다. **RSPrintClient** ActiveX 컨트롤은 이미지 렌더링 확장 프로그램(EMF)을 사용하여 보고서를 인쇄합니다. StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight 및 PageWidth와 같은 EMF 디바이스 정보를 사용합니다. 이미지 렌더링에 대한 다른 장치 정보 설정은 지원되지 않습니다.  
   
 ### <a name="language-support"></a>언어 지원  
  인쇄 컨트롤은 여러 언어로 사용자 인터페이스 텍스트를 제공하며 여러 단위의 입력 값을 허용합니다. 사용되는 언어와 단위는 **Culture** 및 **UICulture** 속성에 의해 결정됩니다. 두 속성 모두 LCID 값을 사용합니다. 지원되는 언어의 변형 언어에 대한 LCID를 지정하는 경우 이에 가장 근접한 언어가 사용됩니다. 지원되지 않는 LCID를 지정하는 경우 이와 근접한 LCID가 없으면 영어(미국)가 사용됩니다.  

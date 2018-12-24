@@ -272,7 +272,7 @@ CREATE DATABASE database_snapshot_name
   
 -   **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-     이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 장치에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [저장소 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+     이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [저장소 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
   
  FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.  
   
@@ -361,7 +361,7 @@ CREATE DATABASE database_snapshot_name
  운영 체제(물리적) 파일 이름을 지정합니다.  
   
  **'** *os_file_name* **'**  
- 파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(저장 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 장치에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.  
+ 파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(저장 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 디바이스에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.  
   
  파일에 UNC 경로가 지정되면 SIZE, MAXSIZE 및 FILEGROWTH 매개 변수를 설정할 수 있습니다.  
   

@@ -443,7 +443,7 @@ RESTORE 예에는 다음이 포함됩니다.
 > 추가 예제는 [복원 및 복구 개요(SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)에 나열된 복원 방법 항목을 참조하세요.  
   
 ###  <a name="restoring_full_db"></a> 1. 전체 데이터베이스 복원  
-다음 예에서는 `AdventureWorksBackups` 논리적 백업 장치에서 전체 데이터베이스 백업을 복원합니다. 이 장치를 만드는 예는 [백업 장치](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+다음 예에서는 `AdventureWorksBackups` 논리적 백업 장치에서 전체 데이터베이스 백업을 복원합니다. 이 디바이스를 만드는 예는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
 ```sql  
 RESTORE DATABASE AdventureWorks2012   
@@ -523,7 +523,7 @@ GO
 [&#91;주요 예제&#93;](#examples)  
   
 ###  <a name="restoring_to_pit_using_STOPAT"></a> 6. STOPAT를 사용하여 지정 시간으로 복원  
-다음 예에서는 `12:00 AM` , `April 15, 2020` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 백업 장치 `AdventureWorksBackups`에서 복원할 전체 데이터베이스 백업은 해당 장치의 세 번째 백업 세트(`FILE = 3`)이고, 첫 번째 로그 백업은 네 번째 백업 세트(`FILE = 4`)이고, 두 번째 로그 백업은 다섯 번째 백업 세트(`FILE = 5`)입니다.  
+다음 예에서는 `12:00 AM` , `April 15, 2020` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 백업 디바이스 `AdventureWorksBackups`에서 복원할 전체 데이터베이스 백업은 해당 디바이스의 세 번째 백업 세트(`FILE = 3`)이고, 첫 번째 로그 백업은 네 번째 백업 세트(`FILE = 4`)이고, 두 번째 로그 백업은 다섯 번째 백업 세트(`FILE = 5`)입니다.  
   
 ```sql  
 RESTORE DATABASE AdventureWorks2012  
@@ -742,17 +742,17 @@ DATABASE
   
 FROM URL
 
-복원 작업에 사용되는 URL에 배치된 하나 이상의 백업 장치를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다. 
+복원 작업에 사용되는 URL에 배치된 하나 이상의 백업 디바이스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다. 
 
 > [!IMPORTANT]  
-> URL에서 복원할 때 여러 장치에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+> URL에서 복원할 때 여러 디바이스에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
 *n*  
 쉼표로 구분된 목록에 백업 장치를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.  
  
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-전제 조건으로 BLOB 저장소 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 장치를 읽는 데 필요한 정보를 찾습니다.
+전제 조건으로 BLOB 저장소 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
 
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
 
@@ -790,7 +790,7 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 ##  <a name="examples"></a> 예  
 다음 예제에서는 URL에서 자격 증명 생성을 비롯한 복사 전용 데이터베이스 백업을 복원합니다.  
   
-###  <a name="restore-mi-database"></a> 1. 네 개의 백업 장치에서 데이터베이스를 복원합니다.   
+###  <a name="restore-mi-database"></a> 1. 네 개의 백업 디바이스에서 데이터베이스를 복원합니다.   
 ```sql
 
 -- Create credential

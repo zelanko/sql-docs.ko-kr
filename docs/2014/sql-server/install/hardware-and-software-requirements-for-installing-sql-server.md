@@ -48,7 +48,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77ad7abf663a94a4a9383c82f4a000c9bfc8eb23
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48229983"
@@ -232,7 +232,7 @@ ms.locfileid: "48229983"
   
     > **참고:** SMB 저장소에 대 한 지원 되지 않습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 독립 실행형 또는 클러스터형된 설치에 대 한 데이터 파일. 대신 직접 연결 저장소 또는 SAN(Storage Area Network)을 사용하십시오.  
   
-    > **중요!!** SMB 저장소는 Windows 파일 서버 또는 타사 SMB 저장 장치에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 저장소 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
+    > **중요!!** SMB 저장소는 Windows 파일 서버 또는 타사 SMB 저장 디바이스에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 저장소 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
   
     > **경고**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. Tempdb 데이터 및 로그 파일에 대 한 지정 된 경로에서 올바른지 확인 하십시오 **모든** 클러스터 노드 중입니다. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  
   

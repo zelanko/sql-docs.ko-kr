@@ -59,8 +59,8 @@ ms.locfileid: "51672082"
 |시스템 데이터베이스용 대칭 키|[시스템 데이터베이스의 대칭 키](../../relational-databases/policy-based-management/symmetric-keys-on-system-databases.md)|  
 |Trustworthy 데이터베이스|[신뢰할 수 있는 비트](../../relational-databases/policy-based-management/trustworthy-bit.md)|  
 |Windows 이벤트 로그 클러스터 디스크 리소스 손상 오류|[SCSI 호스트 어댑터 문제 검색](../../relational-databases/policy-based-management/detect-scsi-host-adapter-issues.md)|  
-|Windows 이벤트 로그 장치 드라이버 컨트롤 오류|[장치 드라이버 컨트롤 오류](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
-|Windows 이벤트 로그 장치 준비 안 됨 오류|[장치 준비 안 됨 오류](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
+|Windows 이벤트 로그 디바이스 드라이버 컨트롤 오류|[장치 드라이버 컨트롤 오류](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
+|Windows 이벤트 로그 디바이스 준비 안 됨 오류|[장치 준비 안 됨 오류](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Windows 이벤트 로그 I/O 요청 실패 오류|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
 |Windows 이벤트 로그 I/O 지연 경고|[디스크 입/출력 하위 시스템에서 IO 지연 문제 확인](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 이벤트 로그 하드 페이지 폴트 중 I/O 오류 발생 오류|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  

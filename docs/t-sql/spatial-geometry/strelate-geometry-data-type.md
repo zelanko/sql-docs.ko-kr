@@ -42,7 +42,7 @@ ms.locfileid: "47721921"
  `STRelate()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
  *intersection_pattern_matrix*  
- 두 **geometry** 인스턴스 간에서 DE-9IM 패턴 행렬 장치에 대해 인코딩을 사용할 수 있는 값 **nchar(9)** 형식의 문자열입니다.  
+ 두 **geometry** 인스턴스 간에서 DE-9IM 패턴 행렬 디바이스에 대해 인코딩을 사용할 수 있는 값 **nchar(9)** 형식의 문자열입니다.  
   
 ## <a name="remarks"></a>Remarks  
  이 메서드는 **geometry** 인스턴스의 SRID(spatial Reference ID)가 일치하지 않으면 항상 Null을 반환합니다. 이 메서드는 행렬의 형식이 잘못된 경우 **ArgumentException**을 throw합니다.  

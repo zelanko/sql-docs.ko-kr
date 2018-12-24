@@ -1,5 +1,5 @@
 ---
-title: RGDI 장치 정보 설정 | Microsoft Docs
+title: RGDI 디바이스 정보 설정 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -15,8 +15,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47770471"
 ---
-# <a name="rgdi-device-information-settings"></a>RGDI 장치 정보 설정
-  다음 표는 RGDI 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="rgdi-device-information-settings"></a>RGDI 디바이스 정보 설정
+  다음 표는 RGDI 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  

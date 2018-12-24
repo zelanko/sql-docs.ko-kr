@@ -38,7 +38,7 @@ ms.locfileid: "51667452"
   
 **데이터 손상 오류**  
   
-심각도 수준 21은 잠재적 데이터 손상을 나타냅니다. 가능한 원인은 손상된 페이지 체인, 손상된 IAM 또는 해당 개체에 대한 [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰의 잘못된 항목입니다. 이러한 오류는 하드웨어 또는 디스크 장치 드라이버 오류로 인해 발생하는 경우가 많습니다.  
+심각도 수준 21은 잠재적 데이터 손상을 나타냅니다. 가능한 원인은 손상된 페이지 체인, 손상된 IAM 또는 해당 개체에 대한 [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰의 잘못된 항목입니다. 이러한 오류는 하드웨어 또는 디스크 디바이스 드라이버 오류로 인해 발생하는 경우가 많습니다.  
   
 **일시적 오류**  
   

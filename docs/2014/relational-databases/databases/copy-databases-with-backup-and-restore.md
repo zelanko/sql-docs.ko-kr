@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48057193"
@@ -39,7 +39,7 @@ ms.locfileid: "48057193"
   
 1.  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 인스턴스에 있을 수 있는 원본 데이터베이스를 백업합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터가 *원본 컴퓨터*입니다.  
   
-2.  데이터베이스 복사 하려는 컴퓨터의 (합니다 *대상 컴퓨터*)의 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스를 복원 하려고 하는 합니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 장치를 만듭니다.  
+2.  데이터베이스 복사 하려는 컴퓨터의 (합니다 *대상 컴퓨터*)의 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스를 복원 하려고 하는 합니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 디바이스를 만듭니다.  
   
 3.  대상 컴퓨터에서 원본 데이터베이스의 백업을 복원합니다. 데이터베이스를 복원하면 자동으로 모든 데이터베이스 파일이 생성됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48057193"
 ## <a name="before-you-restore-database-files"></a>데이터베이스 파일을 복원하기 전 고려 사항  
  데이터베이스를 복원하면 복원 중인 데이터베이스에 필요한 데이터베이스 파일이 자동으로 생성됩니다. 기본적으로 복원 프로세스 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 파일은 원본 컴퓨터에 있는 원본 데이터베이스의 백업 파일과 같은 이름과 경로를 사용합니다.  
   
- 원하는 경우 데이터베이스를 복원할 때 장치 매핑, 파일 이름 또는 데이터베이스 복원 경로를 지정할 수 있습니다. 이 방법은 다음과 같은 경우 유용합니다.  
+ 원하는 경우 데이터베이스를 복원할 때 디바이스 매핑, 파일 이름 또는 데이터베이스 복원 경로를 지정할 수 있습니다. 이 방법은 다음과 같은 경우 유용합니다.  
   
 -   원래 컴퓨터에서 데이터베이스에 사용된 디렉터리 구조나 드라이브 매핑이 다른 컴퓨터에는 존재하지 않는 경우. 예를 들어 백업에 포함된 파일이 기본적으로 E 드라이브에 복원되는데 대상 컴퓨터에는 E 드라이브가 없을 수 있습니다.  
   

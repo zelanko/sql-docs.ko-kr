@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48224703"
@@ -184,7 +184,7 @@ ms.locfileid: "48224703"
  Word 또는 Word 2003 렌더러를 사용하여 렌더링된 보고서는 대개 시각적으로는 구분되지 않습니다. 그러나 Word 형식과 Word 2003 형식에는 약간의 차이점이 있습니다.  
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
- 장치 정보 설정을 변경하여 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 예를 들어 하이퍼링크 및 드릴스루 링크를 생략할 수 있고 렌더링 시 항목의 원래 상태와 상관없이 설정/해제 전환이 가능한 모든 항목을 확장할 수 있습니다. 자세한 내용은 [Word Device Information Settings](../word-device-information-settings.md)을 참조하세요.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 예를 들어 하이퍼링크 및 드릴스루 링크를 생략할 수 있고 렌더링 시 항목의 원래 상태와 상관없이 설정/해제 전환이 가능한 모든 항목을 확장할 수 있습니다. 자세한 내용은 [Word Device Information Settings](../word-device-information-settings.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

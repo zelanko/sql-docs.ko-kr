@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51681231"
@@ -54,7 +54,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |값|설명|  
 |-----------|-----------------|  
 |**disk**|백업 장치로서의 하드 디스크 파일입니다.|  
-|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 장치입니다.<br /><br /> 참고: 테이프 백업 장치에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 장치입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
   
  [  **@logicalname =** ] **'***logical_name***'**  
  BACKUP 및 RESTORE 문에서 사용되는 백업 장치의 논리적 이름입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  

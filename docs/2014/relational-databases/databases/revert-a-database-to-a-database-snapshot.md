@@ -16,7 +16,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48184303"
@@ -102,7 +102,7 @@ ms.locfileid: "48184303"
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 장치가 아닌 스냅숏 이름을 지정해야 합니다.  
+     여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 디바이스가 아닌 스냅숏 이름을 지정해야 합니다.  
   
      자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   

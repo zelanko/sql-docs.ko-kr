@@ -1,5 +1,5 @@
 ---
-title: 백업 장치 삭제(SQL Server) | Microsoft 문서
+title: 백업 디바이스 삭제(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,8 +23,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187563"
 ---
-# <a name="delete-a-backup-device-sql-server"></a>백업 장치 삭제(SQL Server)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업 장치를 삭제하는 방법에 대해 설명합니다.  
+# <a name="delete-a-backup-device-sql-server"></a>백업 디바이스 삭제(SQL Server)
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업 디바이스를 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -47,13 +47,13 @@ ms.locfileid: "48187563"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-delete-a-backup-device"></a>백업 장치를 삭제하려면  
+#### <a name="to-delete-a-backup-device"></a>백업 디바이스를 삭제하려면  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **서버 개체**를 확장한 다음 **백업 장치**를 확장합니다.  
   
-3.  원하는 장치를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
+3.  원하는 디바이스를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 4.  **개체 삭제** 대화 상자에서 올바른 장치 이름이 **개체 이름** 열에 표시되는지 확인합니다.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "48187563"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-delete-a-backup-device"></a>백업 장치를 삭제하려면  
+#### <a name="to-delete-a-backup-device"></a>백업 디바이스를 삭제하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 장치를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. 실행할 `sp_dropdevice` 삭제 하는 `mybackupdisk` 백업 장치입니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
+3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 디바이스를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. 실행할 `sp_dropdevice` 삭제 하는 `mybackupdisk` 백업 장치입니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
   
 ```tsql  
 --Define a backup device and physical name.   

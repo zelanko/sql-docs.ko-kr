@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48096153"
@@ -23,7 +23,7 @@ ms.locfileid: "48096153"
   
  형식은 Office Open XML입니다. 이 렌더러에서 생성하는 파일의 내용 유형은 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** 이며 파일 확장명은 .xlsx입니다.  
   
- 장치 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Excel Device Information Settings](../excel-device-information-settings.md)합니다.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Excel Device Information Settings](../excel-device-information-settings.md)합니다.  
   
 > [!IMPORTANT]  
 >  10MB보다 큰 보고서를 Excel로 내보낼 때 오류 메시지가 표시되지 않도록 하려면 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 설치하세요. 문제가 수정된 버전은 SP2입니다.  
@@ -219,7 +219,7 @@ ms.locfileid: "48096153"
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
 ##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  
- 페이지 머리글은 장치 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
+ 페이지 머리글은 디바이스 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
   
  페이지 바닥글은 SimplePageHeaders 설정 값과 상관없이 항상 실제 Excel 워크시트 바닥글 섹션으로 렌더링됩니다.  
   

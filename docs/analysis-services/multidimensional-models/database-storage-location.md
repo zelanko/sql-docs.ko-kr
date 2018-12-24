@@ -18,7 +18,7 @@ ms.locfileid: "50146298"
 ---
 # <a name="database-storage-location"></a>데이터베이스 저장소 위치
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 저장소 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 **DBA는** DbStorageLocation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 장치에 지정할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 저장소 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 **DBA는** DbStorageLocation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 디바이스에 지정할 수 있습니다.  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 데이터베이스 속성  
  **DbStorageLocation** 데이터베이스 속성은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 모든 데이터베이스 데이터 및 메타데이터 파일을 만들고 관리할 폴더를 지정합니다. 모든 메타데이터 파일은 **DbStorageLocation** 폴더에 저장되지만 데이터베이스 메타데이터 파일은 예외적으로 서버 데이터 폴더에 저장됩니다. **DbStorageLocation** 데이터베이스 속성 값을 설정할 때 고려해야 할 두 가지 사항을 반드시 고려해야 합니다.  

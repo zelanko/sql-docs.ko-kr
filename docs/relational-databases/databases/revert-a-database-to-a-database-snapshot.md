@@ -103,7 +103,7 @@ ms.locfileid: "51560430"
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 장치가 아닌 스냅숏 이름을 지정해야 합니다.  
+     여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 디바이스가 아닌 스냅숏 이름을 지정해야 합니다.  
   
      자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   

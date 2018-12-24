@@ -69,9 +69,9 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
-모바일 컴퓨팅으로 인해 작업해야 하는 장치가 이동되었습니다. 즉, 오늘날 사람마다 보고 요구 사항이 다릅니다. 태블릿 및 휴대폰을 도입하는 경우 고정 레이아웃 보고서 환경이 제대로 작동하지 않습니다. 넓은 PC 화면용으로 디자인된 환경은 더 작을 뿐만 아니라 세로 또는 가로 방향이 있는 작은 휴대폰 화면에 적합하지 않습니다.
+모바일 컴퓨팅으로 인해 작업해야 하는 디바이스가 이동되었습니다. 즉, 오늘날 사람마다 보고 요구 사항이 다릅니다. 태블릿 및 휴대폰을 도입하는 경우 고정 레이아웃 보고서 환경이 제대로 작동하지 않습니다. 넓은 PC 화면용으로 디자인된 환경은 더 작을 뿐만 아니라 세로 또는 가로 방향이 있는 작은 휴대폰 화면에 적합하지 않습니다.
 
-이렇게 현저하게 다른 화면 폼 팩터에 필요한 환경은 고정 레이아웃이 아니라 다양한 장치 및 다양한 방식에 맞게 조정되는 반응형 레이아웃입니다. 따라서 약 1년 전에 취득한 Datazen 기술을 기반으로, 제품에 통합된 모바일 보고서라는 새로운 보고서 종류를 추가했습니다. 기존 Datazen 보고서는 [SQL Server Migration Assistant for Datazen(Datazen용 SQL Server Migration Assistant)](https://www.microsoft.com/download/details.aspx?id=53128)을 사용하여 Reporting Services로 마이그레이션할 수 있습니다. 
+이렇게 현저하게 다른 화면 폼 팩터에 필요한 환경은 고정 레이아웃이 아니라 다양한 디바이스 및 다양한 방식에 맞게 조정되는 반응형 레이아웃입니다. 따라서 약 1년 전에 취득한 Datazen 기술을 기반으로, 제품에 통합된 모바일 보고서라는 새로운 보고서 종류를 추가했습니다. 기존 Datazen 보고서는 [SQL Server Migration Assistant for Datazen(Datazen용 SQL Server Migration Assistant)](https://www.microsoft.com/download/details.aspx?id=53128)을 사용하여 Reporting Services로 마이그레이션할 수 있습니다. 
 
 새로운 [모바일 보고서 게시자](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 앱에서 이러한 모바일 보고서를 만듭니다. 그런 다음, Windows 10, iOS, Android 및 HTML5에 대한 기본 [모바일 디바이스용 Power BI 앱](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)에서 Power BI 클라우드에 있는 데이터 및 온-프레미스 SQL Server Reporting Services 데이터에 액세스할 수 있습니다. 시각화를 만들면 모바일 보고서 게시자가 각각에 대한 샘플 데이터를 자동으로 생성하므로 시각화에 데이터가 어떻게 표시되는지, 각 시각화에서 어떤 종류의 데이터가 제대로 작동하는지 확인할 수 있습니다.
 

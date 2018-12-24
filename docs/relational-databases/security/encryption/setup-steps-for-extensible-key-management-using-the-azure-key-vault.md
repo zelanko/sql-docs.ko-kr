@@ -174,7 +174,7 @@ SQL Server 버전  |재배포 가능 설치 링크
     
     빠른 키 복구를 보장하고 Azure 외부의 데이터에 액세스하려면 다음 모범 사례를 권장합니다.
  
-    1. 로컬 HSM 장치에 암호화 키를 로컬로 만듭니다. (이 키는 SQL Server가 지원할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
+    1. 로컬 HSM 디바이스에 암호화 키를 로컬로 만듭니다. (이 키는 SQL Server가 지원할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
     2. Azure Key Vault에 암호화 키를 가져옵니다. 작업을 수행하는 방법은 다음 단계를 참조하세요.
     3. Azure Key Vault에 키를 처음 사용하는 경우 먼저 Azure Key Vault 키 백업을 수행합니다. [백업-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 명령에 대해 알아 봅니다.
     4. 키에 대한 어떤 변경이 발생할 때마다(예: ACL 추가, 태그 추가, 키 특성 추가) 다른 Azure Key Vault 키 백업을 수행해야 합니다.

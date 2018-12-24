@@ -17,7 +17,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 029d59328bf13991cd98c4d5ed5fa186abbd4453
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48111572"
@@ -32,7 +32,7 @@ ms.locfileid: "48111572"
 |SQL Server Databases 카운터|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|데이터베이스에 대한 활성 트랜잭션 수입니다.|  
-|**Backup/Restore Throughput/sec**|데이터베이스 백업 및 복원 작업에 대한 초당 읽기/쓰기 처리량입니다. 예를 들어 백업 장치를 병렬로 추가해 사용하거나 속도가 더 빠른 장치를 사용할 때 데이터베이스 백업 성능이 어떻게 변하는지 측정할 수 있습니다. 데이터베이스 백업 및 복원 작업의 처리량으로 사용자의 백업 및 복원 작업의 진행 상태와 성능을 확인할 수 있습니다.|  
+|**Backup/Restore Throughput/sec**|데이터베이스 백업 및 복원 작업에 대한 초당 읽기/쓰기 처리량입니다. 예를 들어 백업 디바이스를 병렬로 추가해 사용하거나 속도가 더 빠른 디바이스를 사용할 때 데이터베이스 백업 성능이 어떻게 변하는지 측정할 수 있습니다. 데이터베이스 백업 및 복원 작업의 처리량으로 사용자의 백업 및 복원 작업의 진행 상태와 성능을 확인할 수 있습니다.|  
 |**Bulk Copy Rows/sec**|초당 대량 복사되는 행 수입니다.|  
 |**Bulk Copy Throughput/sec**|초당 대량 복사되는 데이터 양(KB)입니다.|  
 |**Commit table entries**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table)을 참조하세요.|  

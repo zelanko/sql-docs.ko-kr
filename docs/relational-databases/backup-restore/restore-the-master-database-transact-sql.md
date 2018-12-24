@@ -43,7 +43,7 @@ ms.locfileid: "52502204"
 3.  서버 인스턴스를 다시 시작하고 다른 데이터베이스 복원, 데이터베이스 연결 및 사용자 불일치 교정 등의 기타 복구 단계를 계속합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 기본 서버 인스턴스에 `master` 데이터베이스를 복원합니다. 이 예에서는 서버 인스턴스가 이미 단일 사용자 모드로 실행되고 있다고 가정합니다. 다음 예에서는 `sqlcmd` 를 시작하고 디스크 장치에서 `RESTORE DATABASE` 의 전체 데이터베이스 백업을 복원하는 `master` 문을 실행합니다. `Z:\SQLServerBackups\master.bak`  
+ 다음 예에서는 기본 서버 인스턴스에 `master` 데이터베이스를 복원합니다. 이 예에서는 서버 인스턴스가 이미 단일 사용자 모드로 실행되고 있다고 가정합니다. 다음 예에서는 `sqlcmd` 를 시작하고 디스크 디바이스에서 `RESTORE DATABASE` 의 전체 데이터베이스 백업을 복원하는 `master` 문을 실행합니다. `Z:\SQLServerBackups\master.bak`  
   
 > [!NOTE]  
 >  명명된 인스턴스의 경우 **sqlcmd** 명령에 **-S**_\<ComputerName>_\\*\<InstanceName>* 옵션을 지정해야 합니다.  

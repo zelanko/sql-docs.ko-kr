@@ -35,7 +35,7 @@ ms.locfileid: "52158915"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>리소스 사용 모니터링(시스템 모니터)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Microsoft Windows 서버 운영 체제를 실행 중인 경우 시스템 모니터 그래픽 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정할 수 있습니다. 이 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 성능 카운터를 보거나 프로세서, 메모리, 캐시, 스레드 및 프로세스 등 다른 개체의 동작을 볼 수 있습니다. 각 개체는 장치 사용, 큐 길이, 지연, 처리량 및 내부 정체의 기타 지표를 측정하는 관련 카운터 집합을 포함합니다.  
+  Microsoft Windows 서버 운영 체제를 실행 중인 경우 시스템 모니터 그래픽 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정할 수 있습니다. 이 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 성능 카운터를 보거나 프로세서, 메모리, 캐시, 스레드 및 프로세스 등 다른 개체의 동작을 볼 수 있습니다. 각 개체는 디바이스 사용, 큐 길이, 지연, 처리량 및 내부 정체의 기타 지표를 측정하는 관련 카운터 집합을 포함합니다.  
   
 > [!NOTE]  
 >  Windows NT 4.0 이후 버전에서는 성능 모니터가 시스템 모니터로 대체되었습니다.  

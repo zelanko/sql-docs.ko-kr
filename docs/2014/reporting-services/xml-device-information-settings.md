@@ -1,5 +1,5 @@
 ---
-title: XML 장치 정보 설정 | Microsoft Docs
+title: XML 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ead3f5a4fcca7e096a73994cbb35f8a6075f8c0d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48202943"
 ---
-# <a name="xml-device-information-settings"></a>XML 장치 정보 설정
-  다음 표는 XML 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="xml-device-information-settings"></a>XML 디바이스 정보 설정
+  다음 표는 XML 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  

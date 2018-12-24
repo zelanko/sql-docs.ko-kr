@@ -282,8 +282,8 @@ cmd.ExecuteNonQuery();
 | 클래스 | 설명 | 공급자 (조회) 이름 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 클래스| Windows 인증서 저장소에 대한 공급자입니다. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다. |[Microsoft 암호화 API: 차세대(CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 장치입니다.  | MSSQL_CNG_STORE|
-| [SqlColumnEncryptionCspProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다.| [Microsoft CAPI(암호화 API)](https://msdn.microsoft.com/library/aa266944.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 장치입니다.| MSSQL_CSP_PROVIDER |
+|[SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다. |[Microsoft 암호화 API: 차세대(CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다.  | MSSQL_CNG_STORE|
+| [SqlColumnEncryptionCspProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**참고:** 이 공급자는 .NET Framework 4.6.1 이상 버전에서 사용할 수 있습니다.| [Microsoft CAPI(암호화 API)](https://msdn.microsoft.com/library/aa266944.aspx)를 지원하는 키 저장소 공급자입니다. 일반적으로 이 저장소의 형식은 하드웨어 보안 모듈로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다.| MSSQL_CSP_PROVIDER |
   
 이러한 공급자를 사용하기 위해 응용 프로그램 코드를 변경할 필요는 없지만 다음에 유의하세요.
 

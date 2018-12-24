@@ -29,7 +29,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
 ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/14/2018
 ms.locfileid: "51641540"
@@ -225,7 +225,7 @@ ms.locfileid: "51641540"
   
  **쿼리 실행 옵션**  
   **-e**  
- 표준 출력 장치에 입력 스크립트를 기록합니다(**stdout**).  
+ 표준 출력 디바이스에 입력 스크립트를 기록합니다(**stdout**).  
   
  **-I**  
  SET QUOTED_IDENTIFIER 연결 옵션을 ON으로 설정합니다. 기본적으로 OFF로 설정되어 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)를 참조하세요.  

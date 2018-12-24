@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 63cbcd4defa3840fc7fdb5c80340e5fd1ea1244e
 ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50099824"
@@ -34,7 +34,7 @@ ms.locfileid: "50099824"
 |셀프 서비스 예측 분석 수행||||||[Excel 용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |데이터 시각화 및 탐색||[파워 뷰](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [파워 맵](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |자연어 쿼리를 사용하여 질문|||||[질문과 대답](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
-|모바일 장치를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (볼 수 있도록 지원 < 250MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Windows 앱 용 power BI](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [Power BI 용 iPad 앱](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
+|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (볼 수 있도록 지원 < 250MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Windows 앱 용 power BI](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [Power BI 용 iPad 앱](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
 |공동 작업 및 공유|||[SharePoint 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 팀 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**기업 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](../analysis-services/analysis-services.md)|  

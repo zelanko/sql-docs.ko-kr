@@ -20,7 +20,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72d8b7697af9920f7bd15e7120a6724acff231d2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48190922"
@@ -39,7 +39,7 @@ ms.locfileid: "48190922"
  웹 동기화에 필요한 구성 요소를 구성하는 방법은 [웹 동기화 구성](configure-web-synchronization.md), [웹 동기화를 위한 IIS 구성](configure-iis-for-web-synchronization.md) 및 [웹 동기화를 위한 IIS 7 구성](configure-iis-7-for-web-synchronization.md)을 참조하세요.  
   
 > [!NOTE]  
->  웹 동기화는 데이터를 휴대용 컴퓨터, 핸드헬드 장치 및 기타 클라이언트와 동기화하기 위해 디자인되었으며 고용량 서버 간 응용 프로그램을 위해 디자인되지 않았습니다.  
+>  웹 동기화는 데이터를 휴대용 컴퓨터, 핸드헬드 디바이스 및 기타 클라이언트와 동기화하기 위해 디자인되었으며 고용량 서버 간 응용 프로그램을 위해 디자인되지 않았습니다.  
   
 ## <a name="overview-of-how-web-synchronization-works"></a>웹 동기화 작동 방식 개요  
  웹 동기화를 사용하면 구독자의 업데이트가 패키지되어 IIS를 실행하는 컴퓨터에 HTTPS 프로토콜을 통해 XML 메시지로 전송됩니다. 그러면 IIS를 실행하는 컴퓨터에서 명령을 이진 형식으로 게시자에 보냅니다. 이때 일반적으로 TCP/IP를 사용합니다. 게시자의 업데이트 내용은 IIS를 실행하는 컴퓨터로 전송된 다음 구독자에 배달할 수 있도록 XML 메시지로 패키지됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: PPTX 장치 정보 설정 | Microsoft Docs
+title: PPTX 디바이스 정보 설정 | Microsoft Docs
 ms.date: 09/11/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -20,8 +20,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52394856"
 ---
-# <a name="pptx-device-information-settings"></a>PPTX 장치 정보 설정
-  다음 표는 PPTX 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="pptx-device-information-settings"></a>PPTX 디바이스 정보 설정
+  다음 표는 PPTX 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  

@@ -55,7 +55,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="remarks"></a>Remarks  
  키가 현재 세션에 열려 있으면 문이 실패합니다.  
   
- EKM(Extensible Key Management) 장치의 EKM 키에 비대칭 키를 매핑하고 **REMOVE PROVIDER KEY** 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 장치에서는 삭제되지 않으며 경고가 발생합니다.  
+ EKM(Extensible Key Management) 디바이스의 EKM 키에 비대칭 키를 매핑하고 **REMOVE PROVIDER KEY** 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 디바이스에서는 삭제되지 않으며 경고가 발생합니다.  
   
 ## <a name="permissions"></a>Permissions  
  대칭 키에 대한 CONTROL 권한이 필요합니다.  

@@ -66,7 +66,7 @@ CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/
   - 온라인 및 다시 시작 가능한 DDL 작업에 대한 데이터베이스 범위 구성 설정
   - Always On 가용성 그룹 - 보조 복제본 연결 리디렉션
   - 데이터 검색 및 분류 - SQL Server에 기본적으로 제공
-  - 영구 메모리 장치에 대한 확장 지원
+  - 영구 메모리 디바이스에 대한 확장 지원
   - `DBCC CLONEDATABASE`에서 Columnstore 통계 지원
   - `sp_estimate_data_compression_savings`에 새로 추가된 옵션
   - SQL Server Machine Learning Services 장애 조치(Failover) 클러스터
@@ -290,9 +290,9 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 >[!NOTE]
 >감사를 사용하도록 설정하는 방법은 변경되지 않았습니다. 감사 레코드에는 `data_sensitivity_information`라는 새 필드가 있습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. [중요한 데이터에 대한 액세스 감사](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)를 참조하세요.
 
-### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>영구 메모리 장치에 대한 확장 지원(CTP 2.0)
+### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>영구 메모리 디바이스에 대한 확장 지원(CTP 2.0)
 
-이제 영구 메모리 장치에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 저장소 스택을 우회하고 장치에 직접 액세스합니다. 이 모드는 이러한 장치에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
+이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 저장소 스택을 우회하고 장치에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일의 예에는 다음이 포함됩니다.
         - 데이터베이스 파일
         - 트랜잭션 로그 파일
@@ -301,11 +301,11 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
     - Microsoft 이외의 일부 웹 사이트에서는 경우에 따라 영구 메모리를 비공식적으로 *pmem*이라고도 합니다.
 
 > [!NOTE]
-> 이 미리 보기 릴리스에는 영구 메모리 장치의 파일을 Linux에서만 사용할 수 있습니다. Windows의 SQL Server는 SQL Server 2016부터 영구 메모리 장치를 지원합니다.
+> 이 미리 보기 릴리스에는 영구 메모리 디바이스의 파일을 Linux에서만 사용할 수 있습니다. Windows의 SQL Server는 SQL Server 2016부터 영구 메모리 디바이스를 지원합니다.
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>하이브리드 버퍼 풀(CTP 2.1)
 
-하이브리드 버퍼 풀은 SQL Server 데이터베이스 엔진의 새로운 기능입니다. 영구 메모리(PMEM) 장치의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다. PMEM 장치는 데이터 액세스 시 대기 시간이 매우 짧기 때문에 엔진은 버퍼 풀의 "클린 페이지" 영역에 데이터 복사본을 만들지 않고 간단히 PMEM에서 직접 페이지에 액세스할 수 있습니다. 향상 기능의 경우처럼 메모리 매핑된 I/O를 사용하여 액세스가 이루어집니다. 따라서 DRAM에 페이지를 복사하지 않고 운영 체제의 I/O 스택에서 영구 저장소의 페이지에 액세스하지 않으므로 성능상의 이점을 제공합니다. 이 기능은 Windows의 SQL Server와 Linux의 SQL Server에서 모두 사용할 수 있습니다.
+하이브리드 버퍼 풀은 SQL Server 데이터베이스 엔진의 새로운 기능입니다. 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다. PMEM 디바이스는 데이터 액세스 시 대기 시간이 매우 짧기 때문에 엔진은 버퍼 풀의 "클린 페이지" 영역에 데이터 복사본을 만들지 않고 간단히 PMEM에서 직접 페이지에 액세스할 수 있습니다. 향상 기능의 경우처럼 메모리 매핑된 I/O를 사용하여 액세스가 이루어집니다. 따라서 DRAM에 페이지를 복사하지 않고 운영 체제의 I/O 스택에서 영구 저장소의 페이지에 액세스하지 않으므로 성능상의 이점을 제공합니다. 이 기능은 Windows의 SQL Server와 Linux의 SQL Server에서 모두 사용할 수 있습니다.
 
 자세한 내용은 [하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 참조하세요.
 

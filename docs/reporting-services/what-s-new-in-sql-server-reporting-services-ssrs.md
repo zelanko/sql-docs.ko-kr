@@ -92,7 +92,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
  
  ### <a name="mobile-reports"></a>모바일 보고서
  
-Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 전용 보고서로서, 모바일 장치에서 보고서에 액세스하는 사용자에게 최적의 환경을 제공합니다. 모바일 보고서는 시간, 범주 및 비교 차트부터 트리맵 및 사용자 지정 맵까지의 다양한 시각화 기능을 사용합니다. 온-프레미스 SQL Server Analysis Services 다차원 및 테이블 형식 데이터를 포함하여 모바일 보고서를 다양한 데이터 원본에 연결합니다. 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 만듭니다. 그런 다음 Reporting Service 서버에 이러한 모바일 보고서를 저장하고, 브라우저 또는 iPad, iPhone, Android 휴대폰 및 Windows 10 장치의 Power BI 모바일 앱에서 이를 보고 조작합니다.
+Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 전용 보고서로서, 모바일 디바이스에서 보고서에 액세스하는 사용자에게 최적의 환경을 제공합니다. 모바일 보고서는 시간, 범주 및 비교 차트부터 트리맵 및 사용자 지정 맵까지의 다양한 시각화 기능을 사용합니다. 온-프레미스 SQL Server Analysis Services 다차원 및 테이블 형식 데이터를 포함하여 모바일 보고서를 다양한 데이터 원본에 연결합니다. 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 만듭니다. 그런 다음 Reporting Service 서버에 이러한 모바일 보고서를 저장하고, 브라우저 또는 iPad, iPhone, Android 휴대폰 및 Windows 10 디바이스의 Power BI 모바일 앱에서 이를 보고 조작합니다.
   
 #### <a name="mobile-report-publisher"></a>모바일 보고서 게시자  
  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]를 사용하여 SQL Server 모바일 보고서를 만들고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 게시할 수 있습니다.  

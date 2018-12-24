@@ -32,13 +32,13 @@ ms.locfileid: "47606421"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치와 백업 미디어를 소개합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 디바이스와 백업 미디어를 소개합니다.  
   
   
 ## <a name="terms"></a>용어
  
  **백업[동사]**  
- 데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 장치(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
+ 데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 디바이스(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
   
 **백업[명사]**  
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 복사본입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 백업은 데이터베이스나 데이터베이스에 있는 하나 이상의 파일 또는 파일 그룹 수준에서 만들어집니다. 테이블 수준 백업은 만들 수 없습니다. 데이터 백업뿐만 아니라 전체 복구 모델에서는 트랜잭션 로그 백업도 만들어야 합니다.  
@@ -89,10 +89,10 @@ ms.locfileid: "47606421"
  백업 작업이 성공할 때 미디어 세트에 추가되는 백업 내용입니다.  
   
  **[미디어 패밀리(media family)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
- 미디어 세트의 미러되지 않은 단일 장치나 일련의 미러된 장치에 생성된 백업입니다.  
+ 미디어 세트의 미러되지 않은 단일 디바이스나 일련의 미러된 디바이스에 생성된 백업입니다.  
   
  **[미디어 세트(media set)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
- 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 장치를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다.  
+ 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다.  
   
  **[미러링된 미디어 세트(mirrored media set)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  미디어 세트의 여러 복사본(미러)입니다.  

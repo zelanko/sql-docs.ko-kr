@@ -90,17 +90,17 @@ ms.locfileid: "48069973"
          복원할 데이터베이스를 드롭다운 목록에서 선택합니다. 목록에는 **msdb** 백업 기록에 따라 백업된 데이터베이스만 포함되어 있습니다.  
   
     > [!NOTE]  
-    >  백업을 다른 서버에서 가져온 경우 대상 서버에 지정한 데이터베이스에 대한 백업 기록 정보가 없습니다. 이 경우 **장치** 를 선택하여 복원할 파일이나 장치를 수동으로 지정합니다.  
+    >  백업을 다른 서버에서 가져온 경우 대상 서버에 지정한 데이터베이스에 대한 백업 기록 정보가 없습니다. 이 경우 **디바이스** 를 선택하여 복원할 파일이나 디바이스를 수동으로 지정합니다.  
   
     1.  **장치**  
   
-         찾아보기(**...**) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 장치 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 장치를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 장치 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 장치를 선택하려면 **추가**를 클릭합니다.  
   
-         원하는 장치를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
+         원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
          **원본: 장치: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.  
   
-         **참고** 이 목록은 **장치** 를 선택한 경우에만 사용할 수 있습니다. 선택한 장치에 백업이 있는 데이터베이스만 사용할 수 있습니다.  
+         **참고** 이 목록은 **장치** 를 선택한 경우에만 사용할 수 있습니다. 선택한 디바이스에 백업이 있는 데이터베이스만 사용할 수 있습니다.  
   
 4.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48069973"
     >  데이터베이스를 다른 서버 인스턴스로 복원하는 경우 새 이름 대신 원래 데이터베이스 이름을 사용할 수 있습니다.  
   
      *backup_device* [ `,`... *n* ]  
-     데이터베이스 백업 복원에 사용할 1-64개의 백업 장치 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 장치를 지정하거나, 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
+     데이터베이스 백업 복원에 사용할 1-64개의 백업 디바이스 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 디바이스를 지정하거나, 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
   
      {0} 디스크 | 테이프} `=` *physical_backup_device_name*  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48069973"
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
      복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) 문을 사용하여 가져올 수 없습니다.  
   
-     이 옵션이 지정되지 않은 경우에는 기본적으로 백업 장치의 첫 번째 백업 세트가 사용됩니다.  
+     이 옵션이 지정되지 않은 경우에는 기본적으로 백업 디바이스의 첫 번째 백업 세트가 사용됩니다.  
   
      자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)에서 "백업 세트 지정"을 참조하세요.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48069973"
     |*n*|추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다.|  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 장치에 있는 첫 번째 백업 세트입니다.  
+ 이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 디바이스에 있는 첫 번째 백업 세트입니다.  
   
 > [!NOTE]  
 >  지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 ALTER DATABASE <database_name> SET RECOVERY FULL을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스가 전체 복구 모델을 사용하도록 변경되어야 합니다.  

@@ -23,7 +23,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b3b0c85dd8fc106edff636f5e217bf46e281b42
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48184453"
@@ -67,7 +67,7 @@ ms.locfileid: "48184453"
   
 -   최소한의 키 입력으로 보다 빠르게 타이핑할 수 있게 해주는 단어 또는 구 예측 소프트웨어  
   
--   마우스나 키보드를 사용할 수 없는 사용자를 위한 단일 스위치 또는 Puff-and-Sip 장치와 같은 대체 입력 장치  
+-   마우스나 키보드를 사용할 수 없는 사용자를 위한 단일 스위치 또는 Puff-and-Sip 디바이스와 같은 대체 입력 디바이스  
   
 ### <a name="upgrading"></a>업그레이드  
  보조 기술 제품을 사용하는 경우 업그레이드하기 전에 보조 기술 제품 공급업체에 문의하여 사용 중인 컴퓨터에 설치되어 있는 제품과의 호환성을 확인하십시오. 또한 보조 기술 제품 공급업체에 사용 중인 Windows 버전이나 기타 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품과의 호환성을 최적화할 수 있도록 설정을 조정하는 방법을 문의할 수 있습니다.  

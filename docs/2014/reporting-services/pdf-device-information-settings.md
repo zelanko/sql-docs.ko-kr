@@ -1,5 +1,5 @@
 ---
-title: PDF 장치 정보 설정 | Microsoft Docs
+title: PDF 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48148303"
 ---
-# <a name="pdf-device-information-settings"></a>PDF 장치 정보 설정
-  다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="pdf-device-information-settings"></a>PDF 디바이스 정보 설정
+  다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  
 |**열**|보고서에 대해 설정할 열 수입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**ColumnSpacing**|보고서에 대해 설정할 열 간격입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
-|**DpiX**|X 방향의 출력 장치 해상도입니다.|  
-|**DpiY**|Y 방향의 출력 장치 해상도입니다.|  
+|**DpiX**|X 방향의 출력 디바이스 해상도입니다.|  
+|**DpiY**|Y 방향의 출력 디바이스 해상도입니다.|  
 |**EndPage**|렌더링할 보고서의 마지막 페이지입니다. 기본값은 `StartPage`에 대한 값입니다.|  
 |`HumanReadablePDF`|원본 가독성을 높이도록 PDF를 압축해야 하는지 여부를 나타냅니다. 기본값은 `false.`|  
 |**MarginBottom**|보고서에 대해 설정할 아래쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  

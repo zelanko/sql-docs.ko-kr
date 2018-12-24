@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48099783"
@@ -105,7 +105,7 @@ ms.locfileid: "48099783"
   
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
- 장치 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../pdf-device-information-settings.md)을 참조하세요.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../pdf-device-information-settings.md)을 참조하세요.  
   
   
   

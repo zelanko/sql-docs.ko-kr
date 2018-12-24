@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116403"
@@ -172,12 +172,12 @@ ms.locfileid: "48116403"
   
  출력에 적용할 XSLT는 보고서의 DataTransform 속성을 사용하여 보고서 정의 파일에 정의하거나 XSLT *DeviceInfo* 매개 변수를 사용하여 정의합니다. 이러한 값 중 하나를 설정하면 XML 렌더러를 사용할 때마다 변환이 일어납니다. 구독을 사용하는 경우에는 RDL DataTransform 속성에 XSLT를 정의해야 합니다.  
   
- DataTransform 정의 속성과 장치 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 장치 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
+ DataTransform 정의 속성과 디바이스 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 디바이스 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 장치 정보 설정  
- 장치 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
   
 -   XML에 적용할 변환(XSLT)  
   

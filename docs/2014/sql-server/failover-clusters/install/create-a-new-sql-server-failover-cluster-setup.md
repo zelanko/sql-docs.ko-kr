@@ -20,7 +20,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd742a01e52f63aa7c357d954c2de025d2f4d509
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116802"
@@ -183,7 +183,7 @@ ms.locfileid: "48116802"
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+         디바이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
@@ -373,7 +373,7 @@ ms.locfileid: "48116802"
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+         디바이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   

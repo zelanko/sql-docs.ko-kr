@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 74fbdebc3e884b4a1068641e25cf7f656bfdbb11
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48081391"
@@ -42,7 +42,7 @@ ms.locfileid: "48081391"
   
 -   DataElementStyle 속성은 XML에서 보고서 항목이 요소와 특성 중 어느 것으로 렌더링될지 제어합니다.  
   
- CSV 내보내기 옵션은 보고서 데이터를 서식 없이 쉼표로 구분된 일반 텍스트 파일로 저장합니다. 기본적으로 이 파일에서는 쉼표(,)를 사용하여 필드 및 행을 구분하지만 이 설정은 장치 정보 설정을 사용하여 구성할 수 있습니다. 결과 파일은 Office SharePoint Server와 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. .csv 파일은 메모장과 같은 텍스트 편집기로 열 수 있습니다. URL로 액세스한 경우 .csv 파일은 **text/csv**의 MIME 형식을 반환합니다. 파일은 MIME 버전 1.0입니다. 보고서를 CSV 파일 형식으로 렌더링하는 방법에 대한 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.  
+ CSV 내보내기 옵션은 보고서 데이터를 서식 없이 쉼표로 구분된 일반 텍스트 파일로 저장합니다. 기본적으로 이 파일에서는 쉼표(,)를 사용하여 필드 및 행을 구분하지만 이 설정은 디바이스 정보 설정을 사용하여 구성할 수 있습니다. 결과 파일은 Office SharePoint Server와 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. .csv 파일은 메모장과 같은 텍스트 편집기로 열 수 있습니다. URL로 액세스한 경우 .csv 파일은 **text/csv**의 MIME 형식을 반환합니다. 파일은 MIME 버전 1.0입니다. 보고서를 CSV 파일 형식으로 렌더링하는 방법에 대한 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.  
   
  보고서 데이터 XML 파일 내보내기 옵션은 보고서를 XML 파일로 저장합니다. 보고서의 XML 스키마는 해당 보고서에만 적용됩니다. XML 내보내기 옵션에서 보고서 레이아웃 정보는 저장되지 않습니다. 이 옵션으로 생성된 XML을 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램에 전송할 수 있습니다. 보고서를 XML 파일 형식으로 렌더링하는 방법에 대한 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.  
   

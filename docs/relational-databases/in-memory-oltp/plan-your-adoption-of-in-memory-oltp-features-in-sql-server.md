@@ -180,7 +180,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 1. [트랜잭션 로그를 백업](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)합니다.
 
-2. 메모리 최적화 FILEGROUP의 파일을 null 장치에 백업합니다. 백업 프로세스에서는 체크섬 유효성 검사를 호출합니다.
+2. 메모리 최적화 FILEGROUP의 파일을 null 디바이스에 백업합니다. 백업 프로세스에서는 체크섬 유효성 검사를 호출합니다.
 
     손상이 발견되면 다음 단계를 진행합니다.
 

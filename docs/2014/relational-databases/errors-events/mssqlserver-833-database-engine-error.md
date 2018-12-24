@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b827814c5cc6b8659f52c0ff07cde9c3600235a4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48071623"
@@ -36,7 +36,7 @@ ms.locfileid: "48071623"
  이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 읽기 또는 쓰기 요청을 실행하여 해당 요청이 반환되는 데 15초 이상 소요되었음을 나타냅니다. 이 오류는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 보고하고 IO 하위 시스템에 문제가 있음을 나타냅니다.  
   
 ### <a name="possible-causes"></a>가능한 원인  
- 이 문제는 시스템 성능 문제, 하드웨어 오류, 펌웨어 오류, 장치 드라이버 문제 또는 IO 프로세스의 필터 드라이버 조정으로 인해 발생할 수 있습니다.  
+ 이 문제는 시스템 성능 문제, 하드웨어 오류, 펌웨어 오류, 디바이스 드라이버 문제 또는 IO 프로세스의 필터 드라이버 조정으로 인해 발생할 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  하드웨어 관련 오류 메시지에 대한 시스템 이벤트 로그를 검사하여 이 오류의 문제를 해결합니다. 또한 사용 가능한 경우 하드웨어 관련 로그를 검사합니다.  

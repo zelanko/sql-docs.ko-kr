@@ -60,7 +60,7 @@ ms.locfileid: "48150433"
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>파일 복원 시퀀스의 Transact-SQL 단계(단순 복구 모델)  
  이 섹션에서는 단순 파일 복원 시퀀스에 대한 필수 [!INCLUDE[tsql](../../../includes/tsql-md.md)][RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 옵션을 보여 줍니다. 이 용도와 관련 없는 구문 및 세부 사항은 생략됩니다.  
   
- 복원 시퀀스는 두 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문만 포함됩니다. 첫 번째 문은 WITH NORECOVERY를 사용하여 보조 파일인 `A`파일을 복원합니다. 두 번째 작업에서는 다른 백업 장치에서 WITH RECOVERY를 사용하여 `B` 및 `C` 파일을 복원합니다.  
+ 복원 시퀀스는 두 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문만 포함됩니다. 첫 번째 문은 WITH NORECOVERY를 사용하여 보조 파일인 `A`파일을 복원합니다. 두 번째 작업에서는 다른 백업 디바이스에서 WITH RECOVERY를 사용하여 `B` 및 `C` 파일을 복원합니다.  
   
 1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
   

@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3bafe77bc1b7a31827c9db1c5eb65ac4af125b1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48059273"
@@ -54,7 +54,7 @@ ms.locfileid: "48059273"
   
 -   개별 백업을 만들거나 로그 전달을 구성하거나 유지 관리 계획을 만들 때 서버 수준 기본값을 재정의할 수 있습니다.  
   
--   백업 압축은 디스크 백업 장치와 테이프 백업 장치 모두에서 지원됩니다.  
+-   백업 압축은 디스크 백업 디바이스와 테이프 백업 디바이스 모두에서 지원됩니다.  
   
 ###  <a name="Security"></a> 보안  
   

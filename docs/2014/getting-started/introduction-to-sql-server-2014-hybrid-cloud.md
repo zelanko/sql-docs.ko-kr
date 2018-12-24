@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4b9f893a0a8711825062a05c5e78db0440d298c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077733"
@@ -59,7 +59,7 @@ ms.locfileid: "48077733"
  
 -  합니다 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md) 기능을 사용 하면 저장소 대상에 대 한 백업을 만드는 동안 데이터를 암호화할 수 있습니다: 온-프레미스 및 Azure Storage. 
  
--  합니다 [백업 압축 (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) 기능을 사용 하면 동일한 데이터의 압축 되지 않은 백업 보다 작은 백업을 만들 수 있습니다. 백업을 압축하면 필요한 장치 I/O가 감소하므로 일반적으로 백업 속도가 크게 향상됩니다. Azure Storage에 백업 파일을 저장할 때 큰 혜택을 얻을 수 있습니다이 있습니다. 
+-  합니다 [백업 압축 (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) 기능을 사용 하면 동일한 데이터의 압축 되지 않은 백업 보다 작은 백업을 만들 수 있습니다. 백업을 압축하면 필요한 디바이스 I/O가 감소하므로 일반적으로 백업 속도가 크게 향상됩니다. Azure Storage에 백업 파일을 저장할 때 큰 혜택을 얻을 수 있습니다이 있습니다. 
  
 -  합니다 [SQL Server Managed Backup to Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) 기능에 SQL Server 데이터베이스를 자동으로 백업 수 있습니다 [Azure Storage](http://www.azure.com/documentation/services/storage/)합니다. 이 기능을 사용하여 백업 전략을 관리하고 단일 데이터베이스나 여러 데이터베이스에 대한 백업을 예약하도록 SQL Server를 구성하거나 인스턴스 수준에서 기본값을 설정할 수 있습니다. 
  

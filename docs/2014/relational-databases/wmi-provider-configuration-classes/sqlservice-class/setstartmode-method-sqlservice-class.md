@@ -22,7 +22,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 289317a56c1a48b69b500758fbbb47e57b8a49e6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48112105"
@@ -51,7 +51,7 @@ StartMode
   
  유효한 값은 다음과 같습니다.  
   
- 값 = 0. 부팅 - 운영 체제 로더에 의해 장치 드라이버가 시작됩니다. 이 값은 드라이버 서비스에 대해서만 유효합니다.  
+ 값 = 0. 부팅 - 운영 체제 로더에 의해 디바이스 드라이버가 시작됩니다. 이 값은 드라이버 서비스에 대해서만 유효합니다.  
   
  값 = 1입니다. 시스템 - `IoInitSystem` 메서드에 의해 장치 드라이버가 시작됩니다. 이 값은 드라이버 서비스에 대해서만 유효합니다.  
   

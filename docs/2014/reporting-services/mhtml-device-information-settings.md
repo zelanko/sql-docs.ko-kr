@@ -1,5 +1,5 @@
 ---
-title: MHTML 장치 정보 설정 | Microsoft Docs
+title: MHTML 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -21,8 +21,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48117472"
 ---
-# <a name="mhtml-device-information-settings"></a>MHTML 장치 정보 설정
-  다음 표는 웹 보관 파일(MHTML) 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="mhtml-device-information-settings"></a>MHTML 디바이스 정보 설정
+  다음 표는 웹 보관 파일(MHTML) 형식으로 보고서를 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  

@@ -21,7 +21,7 @@ ms.locfileid: "47786641"
 # <a name="integrating-reporting-services-using-report-viewer-controls"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015는 보고서 보기 기능을 응용 프로그램에 통합하기 위한 보고서 뷰어 컨트롤을 두 가지 제공합니다. Windows Forms 기반 응용 프로그램용 버전과 Web Forms 응용 프로그램용 버전이 있습니다. 각 컨트롤은 유사한 기능을 제공하지만 개별 환경에 맞게 디자인되었습니다. 두 컨트롤 모두 보고서 서버에 배포되거나(원격 처리 모드) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]이(가) 설치되지 않은 컴퓨터에 복사된(로컬 처리 모드) 보고서를 처리할 수 있습니다.  
   
- 보고서 뷰어 컨트롤에는 화면 해상도가 다른 여러 장치에 동적으로 채택할 수 있는 기본 제공 지원이 포함되지 않습니다.  
+ 보고서 뷰어 컨트롤에는 화면 해상도가 다른 여러 디바이스에 동적으로 채택할 수 있는 기본 제공 지원이 포함되지 않습니다.  
   
 ## <a name="remote-processing-mode"></a>원격 처리 모드  
  원격 처리 모드는 보고서 서버에 배포된 보고서를 보는 데 권장되는 방법입니다. 원격 처리 모드는 다음과 같은 이점을 제공합니다.  

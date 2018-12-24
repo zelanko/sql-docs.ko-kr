@@ -1314,7 +1314,7 @@ ms.locfileid: "51642410"
 |0xC020206C|-1071636372|DTS_E_RAWSTRINGTOOLONG|문자열이 너무 깁니다. 어댑터가 %1!d!바이트 길이의 문자열을 읽었지만 오프셋 %3!d!에서 %2!d!바이트보다 짧은 문자열이 필요합니다. 입력 파일이 손상되었을 수 있습니다. 파일에 표시되는 문자열 길이가 너무 커서 버퍼 열에 맞지 않습니다.|  
 |0xC020206E|-1071636370|DTS_E_RAWSKIPFAILED|원시 어댑터가 계보 ID가 %3!d!인 참조되지 않은 열 "%2"에 대한 입력 열에서 %1!d!바이트를 건너뛰려고 했지만 오류가 발생했습니다. 운영 체제에서 반환된 오류는 이전에 보고되었습니다.|  
 |0xC020206F|-1071636369|DTS_E_RAWREADFAILED|원시 어댑터가 계보 ID가 %3!d!인 열 "%2"에 대한 입력 열에서 %1!d!바이트를 읽으려고 했지만 오류가 발생했습니다. 운영 체제에서 반환된 오류는 이전에 보고되었습니다.|  
-|0xC0202070|-1071636368|DTS_E_RAWFILENAMEINVALID|파일 이름 속성이 잘못되었습니다. 파일 이름이 장치이거나 잘못된 문자를 포함합니다.|  
+|0xC0202070|-1071636368|DTS_E_RAWFILENAMEINVALID|파일 이름 속성이 잘못되었습니다. 파일 이름이 디바이스이거나 잘못된 문자를 포함합니다.|  
 |0xC0202071|-1071636367|DTS_E_BULKINSERTAPIPREPARATIONFAILED|데이터 삽입을 위해 SSIS 대량 삽입을 준비할 수 없습니다.|  
 |0xC0202072|-1071636366|DTS_E_INVALIDDATABASEOBJECTNAME|데이터베이스 개체 이름 "%1"이(가) 잘못되었습니다.|  
 |0xC0202073|-1071636365|DTS_E_INVALIDORDERCLAUSE|정렬 절이 잘못되었습니다.|  
@@ -1327,8 +1327,8 @@ ms.locfileid: "51642410"
 |0xC020207B|-1071636357|DTS_E_RSTDESTBADVARIABLENAME|VariableName 속성이 유효한 변수의 이름으로 설정되지 않았습니다. 쓸 수 있는 런타임 변수 이름이 필요합니다.|  
 |0xC020207C|-1071636356|DTS_E_RSTDESTRSTCONFIGPROBLEM|ADODB.Recordset 개체를 만들거나 구성할 수 없습니다.|  
 |0xC020207D|-1071636355|DTS_E_RSTDESTRSTWRITEPROBLEM|ADODB.Recordset 개체에 쓰는 동안 오류가 발생했습니다.|  
-|0xC020207E|-1071636354|DTS_E_FILENAMEINVALID|파일 이름이 잘못되었습니다. 파일 이름이 장치이거나 잘못된 문자를 포함합니다.|  
-|0xC020207F|-1071636353|DTS_E_FILENAMEINVALIDWITHPARAM|파일 이름 "%1"이(가) 잘못되었습니다. 파일 이름이 장치이거나 잘못된 문자를 포함합니다.|  
+|0xC020207E|-1071636354|DTS_E_FILENAMEINVALID|파일 이름이 잘못되었습니다. 파일 이름이 디바이스이거나 잘못된 문자를 포함합니다.|  
+|0xC020207F|-1071636353|DTS_E_FILENAMEINVALIDWITHPARAM|파일 이름 "%1"이(가) 잘못되었습니다. 파일 이름이 디바이스이거나 잘못된 문자를 포함합니다.|  
 |0xC0202080|-1071636352|DTS_E_CMDDESTNOPARAMS|SQL 명령의 매개 변수에서 대상 열 설명을 검색할 수 없습니다.|  
 |0xC0202081|-1071636351|DTS_E_CMDDESTNOTBOUND|매개 변수가 바인딩되지 않았습니다. SQL 명령의 모든 매개 변수는 입력 열에 바인딩되어야 합니다.|  
 |0xC0202082|-1071636350|DTS_E_TXPIVOTBADUSAGE|입력 열 "%1"(%2!d!)의 PivotUsage 값이 잘못되었습니다.|  

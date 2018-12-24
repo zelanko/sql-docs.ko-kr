@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31203455"
@@ -78,7 +78,7 @@ SQL 저장 프로시저는 해당 하는 경우 및 각 솔루션에는 예제 �
   
     **이진 분류 모델** 예측 하는 엔진 특정 시간 프레임 내에서 실패 합니다.
 
-    **다중 클래스 분류 모델** 특정 엔진 실패할 수 있습니다 및 실패 한 예상 시간 창을 제공 여부를 예측 합니다. 예를 들어 주어진 날짜에 대해 해당 날짜나 주어진 날짜 이후의 일정 기간 동안 장치에서 오류가 발생할지 여부를 예측할 수 있습니다.
+    **다중 클래스 분류 모델** 특정 엔진 실패할 수 있습니다 및 실패 한 예상 시간 창을 제공 여부를 예측 합니다. 예를 들어 주어진 날짜에 대해 해당 날짜나 주어진 날짜 이후의 일정 기간 동안 디바이스에서 오류가 발생할지 여부를 예측할 수 있습니다.
 
 ## <a name="energy-demand-forecasting"></a>에너지 수요 예측
 

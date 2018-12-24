@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc2813b3d43b86ec495912feeaf1052f1c5b97ff
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48117443"
@@ -30,7 +30,7 @@ ms.locfileid: "48117443"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|LDDB_SYSTEMWRONGVER|  
-|메시지 텍스트|장치 %ls에 있는 시스템 데이터베이스의 백업은 이 서버(%ls)와 다른 버전의 서버(%ls)에서 생성되었으므로 복원할 수 없습니다.|  
+|메시지 텍스트|디바이스 %ls에 있는 시스템 데이터베이스의 백업은 이 서버(%ls)와 다른 버전의 서버(%ls)에서 생성되었으므로 복원할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  백업을 원래 수행한 빌드가 아닌 다른 서버 빌드에서는 시스템 데이터베이스(**master**, **model** 또는 **msdb**)의 백업을 복원할 수 없습니다.  

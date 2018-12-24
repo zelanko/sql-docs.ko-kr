@@ -27,9 +27,9 @@ ms.locfileid: "52545345"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
- 규정 준수에 대한 요구와 데이터에 포함된 개인 정보 보호에 대한 관심이 증가함에 따라 조직에서는 "심층 방어" 솔루션을 제공하기 위해 암호화를 활용하고 있습니다. 일반적으로 이 방법은 데이터베이스 암호화 관리 도구만 사용하므로 유용한 방법이 아닙니다. 하드웨어 공급업체에서는 HSM( *하드웨어 보안 모듈* )을 사용하여 엔터프라이즈 키 관리를 해결하는 제품을 제공합니다. HSM 장치는 하드웨어나 소프트웨어 모듈에 암호화 키를 저장합니다. 이 방법은 암호화 키와 암호화 데이터가 별도로 보관되므로 더욱 안전한 솔루션입니다.  
+ 규정 준수에 대한 요구와 데이터에 포함된 개인 정보 보호에 대한 관심이 증가함에 따라 조직에서는 "심층 방어" 솔루션을 제공하기 위해 암호화를 활용하고 있습니다. 일반적으로 이 방법은 데이터베이스 암호화 관리 도구만 사용하므로 유용한 방법이 아닙니다. 하드웨어 공급업체에서는 HSM( *하드웨어 보안 모듈* )을 사용하여 엔터프라이즈 키 관리를 해결하는 제품을 제공합니다. HSM 디바이스는 하드웨어나 소프트웨어 모듈에 암호화 키를 저장합니다. 이 방법은 암호화 키와 암호화 데이터가 별도로 보관되므로 더욱 안전한 솔루션입니다.  
   
- 많은 공급업체에서 키 관리와 암호화 가속 둘 다를 위해 HSM을 제공합니다. HSM 장치는 응용 프로그램과 HSM 간의 매개자로 서버 프로세스가 포함된 하드웨어 인터페이스를 사용합니다. 또한 공급업체는 하드웨어나 소프트웨어일 수 있는 해당 모듈을 통해 MSCAPI 공급자를 구현합니다. 일반적으로 MSCAPI는 HSM에서 제공하는 기능의 하위 집합만 제공합니다. 또한 공급업체는 HSM, 키 구성 및 키 액세스를 위해 관리 소프트웨어를 제공할 수도 있습니다.  
+ 많은 공급업체에서 키 관리와 암호화 가속 둘 다를 위해 HSM을 제공합니다. HSM 디바이스는 응용 프로그램과 HSM 간의 매개자로 서버 프로세스가 포함된 하드웨어 인터페이스를 사용합니다. 또한 공급업체는 하드웨어나 소프트웨어일 수 있는 해당 모듈을 통해 MSCAPI 공급자를 구현합니다. 일반적으로 MSCAPI는 HSM에서 제공하는 기능의 하위 집합만 제공합니다. 또한 공급업체는 HSM, 키 구성 및 키 액세스를 위해 관리 소프트웨어를 제공할 수도 있습니다.  
   
  HSM 구현은 공급업체마다 다르며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 사용하려면 공용 인터페이스가 필요합니다. MSCAPI는 이 인터페이스를 제공하지만 HSM 기능의 하위 집합만 지원합니다. 이외에도 MSCAPI에는 기본적으로 대칭 키를 지속할 수 없고 세션 지향이 지원되지 않는 등의 제한 사항이 있습니다.  
   
@@ -86,10 +86,10 @@ GO
 > [!CAUTION]  
 >  문제 해결을 위해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 기술 지원 서비스에 EKM 공급자의 암호화 키를 제공하거나 공급업체 도구나 프로세스에 액세스해야 할 수 있습니다.  
   
-### <a name="authentication-with-an-ekm-device"></a>EKM 장치를 사용한 인증  
+### <a name="authentication-with-an-ekm-device"></a>EKM 디바이스를 사용한 인증  
  EKM 모듈은 둘 이상의 인증 유형을 지원할 수 있습니다. 각 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 한 가지 유형의 인증만 제공합니다. 즉, 모듈에서 기본 또는 기타 인증 유형을 지원하는 경우 둘 다가 아닌 둘 중 하나만 제공합니다.  
   
-#### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>사용자 이름/암호를 통한 EKM 장치별 기본 인증  
+#### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>사용자 이름/암호를 통한 EKM 디바이스별 기본 인증  
  *사용자 이름/암호* 쌍을 사용한 기본 인증을 지원하는 EKM 모듈의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 사용하여 투명한 인증을 제공합니다. 자격 증명에 대한 자세한 내용은 [자격 증명&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.  
   
  로그온할 때마다 EKM 공급자에 대해 자격 증명을 만든 후 로그인(Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정 모두)에 매핑하여 EKM 모듈에 액세스할 수 있습니다. 자격 증명의 *Identify* 필드에는 사용자 이름이 포함되고 *secret* 필드에는 EKM 모듈에 연결할 암호가 포함됩니다.  
@@ -98,10 +98,10 @@ GO
   
  자격 증명이 고유한 EKM 공급자에 대해 사용되는 경우 로그인에 여러 개의 매핑된 자격 증명이 있을 수 있습니다. 로그인별로 각 EKM 공급자에 하나의 매핑된 자격 증명만 있어야 합니다. 동일한 자격 증명이 다른 로그인에 매핑될 수 있습니다.  
   
-#### <a name="other-types-of-ekm-device-specific-authentication"></a>다른 유형의 EKM 장치별 인증  
+#### <a name="other-types-of-ekm-device-specific-authentication"></a>다른 유형의 EKM 디바이스별 인증  
  Windows 또는 *사용자/암호* 조합 이외의 인증을 사용하는 EKM 모듈의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와는 별도로 인증이 수행되어야 합니다.  
   
-### <a name="encryption-and-decryption-by-an-ekm-device"></a>EKM 장치별 암호화 및 암호 해독  
+### <a name="encryption-and-decryption-by-an-ekm-device"></a>EKM 디바이스별 암호화 및 암호 해독  
  다음 함수와 기능을 사용하여 대칭 및 비대칭 키를 통해 데이터를 암호화하고 암호 해독할 수 있습니다.  
   
 |함수 또는 기능|참조|  
@@ -114,7 +114,7 @@ GO
 |DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY&#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbyasymkey-transact-sql.md)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>EKM 키로 데이터베이스 키 암호화  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 EKM 키를 사용하여 데이터베이스에 있는 다른 키를 암호화할 수 있습니다. EKM 장치에서 대칭 키 및 비대칭 키 모두를 만들고 사용할 수 있습니다. EKM 비대칭 키를 사용하여 네이티브(비 EKM) 대칭 키를 암호화할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 EKM 키를 사용하여 데이터베이스에 있는 다른 키를 암호화할 수 있습니다. EKM 디바이스에서 대칭 키 및 비대칭 키 모두를 만들고 사용할 수 있습니다. EKM 비대칭 키를 사용하여 네이티브(비 EKM) 대칭 키를 암호화할 수 있습니다.  
   
  다음 예에서는 데이터베이스 대칭 키를 만들고 EKM 모듈에 저장된 키를 사용하여 이 키를 암호화합니다.  
   

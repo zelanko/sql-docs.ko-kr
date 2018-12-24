@@ -19,14 +19,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48061423"
 ---
-# <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>백업 파일을 데이터베이스 파일과 별개의 장치에 두어야 함
-  이 규칙은 데이터베이스 파일이 백업 파일과 별개의 장치에 있는지 검사합니다. 데이터베이스 파일과 백업 파일이 동일한 장치에 있는 경우 해당 장치에 오류가 발생하면 데이터베이스와 백업을 모두 사용할 수 없게 됩니다. 또한 데이터베이스 파일과 백업 파일을 별개의 장치에 두면 데이터베이스의 프로덕션 사용과 백업 작성에 대한 I/O 성능이 모두 최적화됩니다.  
+# <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함
+  이 규칙은 데이터베이스 파일이 백업 파일과 별개의 디바이스에 있는지 검사합니다. 데이터베이스 파일과 백업 파일이 동일한 디바이스에 있는 경우 해당 디바이스에 오류가 발생하면 데이터베이스와 백업을 모두 사용할 수 없게 됩니다. 또한 데이터베이스 파일과 백업 파일을 별개의 디바이스에 두면 데이터베이스의 프로덕션 사용과 백업 작성에 대한 I/O 성능이 모두 최적화됩니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
- 데이터베이스와 백업은 별개의 백업 장치에 두는 것이 가장 좋습니다.  
+ 데이터베이스와 백업은 별개의 백업 디바이스에 두는 것이 가장 좋습니다.  
   
 > [!NOTE]  
->  이 정책은 탑재 지점을 통해 개별 물리적 장치를 검색할 수 없습니다.  
+>  이 정책은 탑재 지점을 통해 개별 물리적 디바이스를 검색할 수 없습니다.  
   
 ## <a name="for-more-information"></a>참조 항목  
  [백업 장치&#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  

@@ -38,7 +38,7 @@ ms.locfileid: "47803221"
   
 -   보고서 서버에 대한 매개 변수(있는 경우)와 함께 문자열 사전 개체를 포함하는 *ServerParameters*.  
   
--   장치 설정을 포함하는 *deviceInfo* 매개 변수. 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
+-   디바이스 설정을 포함하는 *deviceInfo* 매개 변수. 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
 -   렌더링하는 클라이언트에 대한 정보가 들어 있는 <xref:System.Collections.Specialized.NameValueCollection> 사전 개체를 포함하는 *clientCapabilities* 매개 변수.  
   

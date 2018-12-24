@@ -20,7 +20,7 @@ ms.locfileid: "52400027"
   
  형식은 Office Open XML입니다. 이 렌더러에 의해 생성된 파일의 콘텐츠 형식은 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** 이고 파일 확장명은 .xlsx입니다.  
   
- 장치 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)을 참조하세요.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)을 참조하세요.  
   
  Excel로 내보내는 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -212,14 +212,14 @@ ms.locfileid: "52400027"
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
 ##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  
- 페이지 머리글은 장치 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
+ 페이지 머리글은 디바이스 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
   
  페이지 바닥글은 SimplePageHeaders 설정 값과 상관없이 항상 실제 Excel 워크시트 바닥글 섹션으로 렌더링됩니다.  
   
  Excel 머리글과 바닥글 섹션에는 태그를 포함하여 문자를 최대 256자까지 사용할 수 있습니다. 문자 수가 이보다 많으면 Excel 렌더러에서는 머리글 및/또는 바닥글 문자열의 끝에서부터 태그 문자를 제거하여 전체 문자 수를 줄입니다. 태그 문자를 모두 제거해도 전체 길이가 최대값을 초과하면 오른쪽부터 시작하여 문자열이 잘립니다.  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader 설정  
- 기본적으로 장치 정보 SimplePageHeaders 설정은 **False**로 지정되어 있습니다. 따라서 페이지 머리글이 Excel 워크시트 화면에서 보고서의 행으로 렌더링됩니다. 머리글이 들어 있는 워크시트 행은 잠긴 행이 됩니다. Excel에서 창을 고정하거나 고정 해제할 수 있습니다. **인쇄 제목** 옵션을 선택하면 모든 워크시트 페이지에 머리글을 인쇄하도록 자동 설정됩니다.  
+ 기본적으로 디바이스 정보 SimplePageHeaders 설정은 **False**로 지정되어 있습니다. 따라서 페이지 머리글이 Excel 워크시트 화면에서 보고서의 행으로 렌더링됩니다. 머리글이 들어 있는 워크시트 행은 잠긴 행이 됩니다. Excel에서 창을 고정하거나 고정 해제할 수 있습니다. **인쇄 제목** 옵션을 선택하면 모든 워크시트 페이지에 머리글을 인쇄하도록 자동 설정됩니다.  
   
  Excel의 페이지 레이아웃 탭에서 **인쇄 제목** 옵션을 선택하면 문서 구조 표지를 제외하고 통합 문서의 모든 워크시트 위쪽에 페이지 머리글이 반복하여 표시됩니다. 보고서 머리글 속성 또는 보고서 바닥글 속성 대화 상자에서 **첫 페이지에 인쇄** 또는 **마지막 페이지에 인쇄** 옵션을 선택하지 않은 경우에는 첫 페이지나 마지막 페이지에 각각 머리글이 추가되지 않습니다.  
   

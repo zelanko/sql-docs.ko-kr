@@ -69,7 +69,7 @@ ms.locfileid: "51814306"
   
  **RSMOBILE**
 
-SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보고서(.rsmobile 파일)를 만들 수 있습니다. Reporting Services 모바일 보고서는 다양한 형태로 데이터 시각화될 뿐 아니라 모바일 장치에 최적화되고 온-프레미스 데이터에 연결됩니다. [Reporting Services 모바일 보고서](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)에 대해 자세히 알아봅니다. 
+SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보고서(.rsmobile 파일)를 만들 수 있습니다. Reporting Services 모바일 보고서는 다양한 형태로 데이터 시각화될 뿐 아니라 모바일 디바이스에 최적화되고 온-프레미스 데이터에 연결됩니다. [Reporting Services 모바일 보고서](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)에 대해 자세히 알아봅니다. 
   
  **RDLC** 
  

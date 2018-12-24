@@ -27,7 +27,7 @@ ms.locfileid: "51601685"
 
 ## <a name="introduction"></a>소개
 
-Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  
+Microsoft SQL Server에는 컴퓨터 또는 디바이스에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  
 
 SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서 로컬 감사는 SSIS(SQL Server Integration Services)에 대해서도 사용할 수 있습니다. 설정 중 설치된SQL Server 구성 요소와 설정 이후 다운로드하거나 설치한 SQL Server 도구에는 사용 피드백 모음에 대한 로컬 감사 기능이 없습니다. 
 

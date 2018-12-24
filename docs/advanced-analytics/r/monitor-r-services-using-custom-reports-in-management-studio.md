@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31201965"
@@ -70,7 +70,7 @@ Management Studio의 보고서에 대 한 일반 소개를 참조 하십시오. 
 8. 다운로드한 RDL 파일 중 하나를 선택한 다음 **열기**를 클릭합니다.
 
 > [!IMPORTANT]
-> 일부 컴퓨터에서는 이러한 보고서를 사용할 수 없습니다. 예를 들면 DPI가 높거나 해상도가 1080p보다 큰 디스플레이 장치가 있는 컴퓨터입니다. SSMS의 보고서 뷰어 컨트롤에는 보고서와 충돌하는 버그가 있습니다.
+> 일부 컴퓨터에서는 이러한 보고서를 사용할 수 없습니다. 예를 들면 DPI가 높거나 해상도가 1080p보다 큰 디스플레이 디바이스가 있는 컴퓨터입니다. SSMS의 보고서 뷰어 컨트롤에는 보고서와 충돌하는 버그가 있습니다.
 
 ## <a name="report-list"></a>보고서 목록
 

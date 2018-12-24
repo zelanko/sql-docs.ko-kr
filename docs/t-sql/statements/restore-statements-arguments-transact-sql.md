@@ -128,10 +128,10 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 
  \<backup_device>::= 다음과 같이 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
   
  { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
- 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 장치의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@**_logical\_backup\_device\_name\_var_)로 제공한 경우 백업 장치 이름은 문자열 상수(**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@**_logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수(**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 장치 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
@@ -253,7 +253,7 @@ CREDENTIAL
  Microsoft Azure Blob Storage 서비스에서 백업을 복원할 때에만 사용됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 장치에서만 복원할 수 있습니다. URL에서 복원할 때 여러 장치에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 장치에서만 복원할 수 있습니다. URL에서 복원할 때 여러 디바이스에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
  REPLACE  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

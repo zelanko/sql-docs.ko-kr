@@ -71,7 +71,7 @@ ms.locfileid: "48093144"
  개별 항목은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용하여 삽입 또는 업데이트할 때 암호화할 수 있습니다. 자세한 내용은 [ENCRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql) 및 [DECRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql)를 참조하세요.  
   
 ### <a name="certificates"></a>인증서  
- 일반적으로 인증서라고도 부르는 공개 키 인증서는 해당 개인 키를 보유하는 사람, 장치 또는 서비스의 ID에 공개 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 CA(인증 기관)에 의해 발행 및 서명됩니다. CA로부터 인증서를 받는 엔터티는 해당 인증서의 주체입니다. 일반적으로 인증서에는 다음과 같은 정보가 포함됩니다.  
+ 일반적으로 인증서라고도 부르는 공개 키 인증서는 해당 개인 키를 보유하는 사람, 디바이스 또는 서비스의 ID에 공개 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 CA(인증 기관)에 의해 발행 및 서명됩니다. CA로부터 인증서를 받는 엔터티는 해당 인증서의 주체입니다. 일반적으로 인증서에는 다음과 같은 정보가 포함됩니다.  
   
 -   주체의 공개 키  
   

@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 766196d5c600f48cb5350d0f4048a4ec637ac01e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48161583"
@@ -54,7 +54,7 @@ ms.locfileid: "48161583"
 -   행을 반복 처리하고 보조 메타데이터를 검색합니다.  
   
 ## <a name="rendering-extensions"></a>렌더링 확장 프로그램  
- 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 장치 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
+ 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 디바이스 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
   
 -   **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 [HTML로 렌더링 &#40;보고서 작성기 및 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) 하 고 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;&#40;reporting Services 2014&#41&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48161583"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 포함되어 있지 않은 보고서 항목에 대한 사용자 지정 보고서 처리를 제공하도록 보고서 처리 확장 프로그램을 추가할 수 있습니다. 기본적으로 보고서 서버는 표, 차트, 행렬, 목록, 입력란, 이미지 및 기타 보고서 항목을 모두 처리할 수 있습니다. 보고서 실행 중에 사용자 지정 처리를 필요로 하는 보고서에 특수 기능을 추가하려면(예: 보고서에 [!INCLUDE[msCoName](../includes/msconame-md.md)] MapPoint 맵 포함) 이러한 작업을 수행하는 보고서 처리 확장 프로그램을 만들 수 있습니다.  
   
 ## <a name="delivery-extensions"></a>배달 확장 프로그램  
- 백그라운드 처리 응용 프로그램에서는 배달 확장 프로그램을 사용하여 보고서를 여러 위치에 배치합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 SMTP(Simple Mail Transport Protocol)를 통해 보고서 자체 또는 보고서 URL 링크가 들어 있는 전자 메일 메시지를 보냅니다. URL 링크 또는 보고서가 없는 간단한 알림은 호출기, 전화 또는 기타 장치로 보낼 수 있습니다. 파일 공유 배달 확장 프로그램은 네트워크의 공유 폴더에 보고서를 저장합니다. 사용자가 만든 파일의 위치, 렌더링 형식, 파일 이름 및 덮어쓰기 옵션을 지정할 수 있습니다. 파일 공유 배달은 렌더링한 보고서의 보관 및 대용량의 보고서 작업을 위한 전략의 일환으로 사용할 수 있습니다. 배달 확장 프로그램은 구독과 함께 사용됩니다. 구독을 만들 때 사용자는 사용할 수 있는 배달 확장 프로그램을 선택하여 보고서 배달 방법을 결정할 수 있습니다.  
+ 백그라운드 처리 응용 프로그램에서는 배달 확장 프로그램을 사용하여 보고서를 여러 위치에 배치합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 SMTP(Simple Mail Transport Protocol)를 통해 보고서 자체 또는 보고서 URL 링크가 들어 있는 전자 메일 메시지를 보냅니다. URL 링크 또는 보고서가 없는 간단한 알림은 호출기, 전화 또는 기타 디바이스로 보낼 수 있습니다. 파일 공유 배달 확장 프로그램은 네트워크의 공유 폴더에 보고서를 저장합니다. 사용자가 만든 파일의 위치, 렌더링 형식, 파일 이름 및 덮어쓰기 옵션을 지정할 수 있습니다. 파일 공유 배달은 렌더링한 보고서의 보관 및 대용량의 보고서 작업을 위한 전략의 일환으로 사용할 수 있습니다. 배달 확장 프로그램은 구독과 함께 사용됩니다. 구독을 만들 때 사용자는 사용할 수 있는 배달 확장 프로그램을 선택하여 보고서 배달 방법을 결정할 수 있습니다.  
   
   

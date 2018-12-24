@@ -60,7 +60,7 @@ ms.locfileid: "47856831"
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  
   
 **백업** 장치  
- SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Windows Azure Blob 저장소 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Windows Azure Blob 저장소 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 **백업 미디어**  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "47856831"
  데이터 백업 및 복원은 특정 환경에 맞게 사용자 지정되어야 하며 적절한 리소스도 마련되어야 합니다. 따라서 복구를 위해 백업 및 복원을 안정적으로 사용하려면 백업 및 복원 전략이 필요합니다. 잘 디자인된 백업 및 복원 전략은 사용자의 특정 비즈니스 요구 사항을 감안해 데이터 가용성을 극대화하고 데이터 손실을 최소화합니다.  
   
   > [!IMPORTANT] 
-  > 데이터베이스와 백업을 서로 다른 장치에 배치하십시오. 그렇지 않으면 데이터베이스가 들어 있는 장치가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 장치에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
+  > 데이터베이스와 백업을 서로 다른 디바이스에 배치하십시오. 그렇지 않으면 데이터베이스가 들어 있는 디바이스가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 디바이스에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
   
  백업 및 복원 전략은 백업에 관련된 부분과 복원에 관련된 부분으로 이루어집니다. 전략의 백업 관련 부분에서는 백업 유형 및 빈도, 백업에 필요한 하드웨어의 특성 및 속도, 백업 테스트 방법 및 백업 미디어 보관 위치 및 보관 방법(보안 고려 사항 포함)을 정의합니다. 전략의 복원 관련 부분에서는 누가 복원을 담당할 것이며 어떻게 데이터베이스 가용성 목표를 충족시키고 데이터 손실을 최소화할 것인가를 정의합니다. 백업 및 복원 절차를 문서화하고 실행 문서에 사본을 보관하는 것이 좋습니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "47856831"
 ### <a name="test-your-backups"></a>백업 테스트  
  백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다.
   
- 각 데이터베이스에 대한 작업 매뉴얼을 작성하여 관리하는 것이 좋습니다. 이 작업 매뉴얼에는 백업 위치, 백업 장치 이름(있는 경우) 및 테스트 백업을 복원하는 데 필요한 시간 등이 수록되어야 합니다.
+ 각 데이터베이스에 대한 작업 매뉴얼을 작성하여 관리하는 것이 좋습니다. 이 작업 매뉴얼에는 백업 위치, 백업 디바이스 이름(있는 경우) 및 테스트 백업을 복원하는 데 필요한 시간 등이 수록되어야 합니다.
 
 ## <a name="monitor-progress-with-xevent"></a>xEvent를 사용하여 진행률 모니터
 백업 및 복원 작업은 데이터베이스의 크기 및 작업의 복잡성으로 인해 시간이 많이 걸릴 수 있습니다. 작업에 문제가 발생하는 경우 **backup_restore_progress_trace** 확장된 이벤트를 사용하여 진행 상황을 실시간으로 모니터링할 수 있습니다. 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](../extended-events/extended-events.md)를 참조하세요.
@@ -190,7 +190,7 @@ GO
   
 -   [작업 예약](../../ssms/agent/schedule-a-job.md)  
   
-## <a name="working-with-backup-devices-and-backup-media"></a>백업 장치 및 백업 미디어 사용  
+## <a name="working-with-backup-devices-and-backup-media"></a>백업 디바이스 및 백업 미디어 사용  
 -   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  

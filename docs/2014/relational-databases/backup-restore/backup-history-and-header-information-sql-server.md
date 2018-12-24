@@ -90,8 +90,8 @@ ms.locfileid: "48226673"
 |정보 문|백업 기록 테이블|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|지정한 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 있는 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스와 트랜잭션 로그 파일 목록 만들기"를 참조하세요.|  
-|[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
-|[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|지정한 백업 장치의 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.|  
+|[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|특정 백업 디바이스의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
+|[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|지정한 백업 디바이스의 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.|  
   
 ##  <a name="ListDbTlogFiles"></a> 데이터베이스 및 트랜잭션 로그 파일  
  백업에서 트랜잭션 로그 파일과 데이터베이스의 목록을 만들 때 표시되는 정보에는 논리적 이름, 물리적 이름, 파일 형식(데이터베이스나 로그), 파일 그룹 멤버, 파일 크기(바이트 단위), 최대 허용 파일 크기, 미리 정의된 파일 증가 크기(바이트 단위) 등이 있습니다. 이 정보는 다음의 경우, 데이터베이스 백업을 복원하기 전에 데이터베이스 백업에서 파일 이름을 결정하는 데 유용합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "48226673"
  자세한 내용은 이 항목의 뒷부분에 나오는 [미디어 헤더 정보 및 백업 헤더 정보 비교](#CompareMediaHeaderBackupHeader)를 참조하세요.  
   
 ##  <a name="BackupHeader"></a> 백업 헤더 정보  
- 백업 헤더를 보면 미디어에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트에 대한 정보가 표시됩니다. 표시된 정보에는 사용한 백업 장치의 유형, 백업 유형(예: 데이터베이스, 트랜잭션, 파일 또는 차등 데이터베이스), 백업 시작과 중지 시간/날짜 정보 등이 포함됩니다. 이 정보는 테이프에서 복원할 백업 세트나 미디어에 포함된 백업을 결정할 때 유용합니다.  
+ 백업 헤더를 보면 미디어에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트에 대한 정보가 표시됩니다. 표시된 정보에는 사용한 백업 디바이스의 유형, 백업 유형(예: 데이터베이스, 트랜잭션, 파일 또는 차등 데이터베이스), 백업 시작과 중지 시간/날짜 정보 등이 포함됩니다. 이 정보는 테이프에서 복원할 백업 세트나 미디어에 포함된 백업을 결정할 때 유용합니다.  
   
 > [!NOTE]  
 >  미디어에서 각 백업에 관한 정보를 표시하기 위해 전체 미디어를 검사해야 하기 때문에 고용량 테이프의 경우 백업 헤더 정보를 보는 데 시간이 많이 걸립니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "48226673"
   
  미디어 헤더를 보는 방법은 이 항목의 앞부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.  
   
- 백업 장치에서 모든 백업 세트의 백업 헤더 정보를 보는 방법은 이 항목의 앞부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.  
+ 백업 디바이스에서 모든 백업 세트의 백업 헤더 정보를 보는 방법은 이 항목의 앞부분에 나오는 "백업 헤더 정보 보기"를 참조하십시오.  
   
 ##  <a name="Verification"></a> 백업 확인  
  백업 확인은 필수는 아니지만 유용한 기능입니다. 백업 확인은 백업의 모든 파일을 읽을 수 있고 저장할 수 있으며 백업을 사용해야 할 때 복원할 수 있도록 백업이 물리적으로 손상되지 않고 그대로인지 확인합니다. 백업 확인은 백업의 데이터 구조를 확인하지 않는다는 점을 이해하는 것이 중요합니다. 그러나 WITH CHECKSUMS를 사용하여 백업을 만든 경우 WITH CHECKSUMS를 사용하여 백업을 확인하면 백업 데이터의 안정성을 정확히 확인할 수 있습니다.  

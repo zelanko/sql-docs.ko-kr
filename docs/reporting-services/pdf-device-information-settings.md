@@ -1,5 +1,5 @@
 ---
-title: PDF 장치 정보 설정 | Microsoft Docs
+title: PDF 디바이스 정보 설정 | Microsoft Docs
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -18,16 +18,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47623201"
 ---
-# <a name="pdf-device-information-settings"></a>PDF 장치 정보 설정
-  다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="pdf-device-information-settings"></a>PDF 디바이스 정보 설정
+  다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  
 | **AccessiblePDF** | 액세스할 수 있는/태그가 지정된 PDF를 렌더링할지 여부를 나타냅니다. 그러면 크기가 더 크지만 화면 판독기 및 기타 보조 기술에서 쉽게 읽고 탐색할 수 있습니다. 기본 값은 **false**입니다. [Power BI Report Server(2018년 3월) 이상에서 사용 가능] |
 |**열**|보고서에 대해 설정할 열 수입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**ColumnSpacing**|보고서에 대해 설정할 열 간격입니다. 이 값은 보고서의 원래 설정을 재정의합니다.|  
-|**DpiX**|X 방향의 출력 장치 해상도입니다.|  
-|**DpiY**|Y 방향의 출력 장치 해상도입니다.|  
+|**DpiX**|X 방향의 출력 디바이스 해상도입니다.|  
+|**DpiY**|Y 방향의 출력 디바이스 해상도입니다.|  
 |**EndPage**|렌더링할 보고서의 마지막 페이지입니다. 기본값은 **StartPage**에 대한 값입니다.|  
 |**HumanReadablePDF**|압축되지 않은 PDF 파일을 렌더링할지 여부를 나타냅니다. 그러면 크기는 크지만 일반 텍스트 편집기에서 보다 읽기 쉬워집니다. 기본값은 **false.** 입니다.|  
 |**MarginBottom**|보고서에 대해 설정할 아래쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  

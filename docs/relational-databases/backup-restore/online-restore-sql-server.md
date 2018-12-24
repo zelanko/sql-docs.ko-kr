@@ -44,7 +44,7 @@ ms.locfileid: "47682771"
 >  데이터베이스가 현재 대량 로그 복구 모델을 사용하고 있을 경우 온라인 복원을 시작하기 전에 전체 복구 모델로 전환하는 것이 좋습니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  서버에 연결된 여러 장치로 백업을 수행한 경우에는 온라인 복원 중에 같은 수의 장치를 사용할 수 있어야 합니다.  
+>  서버에 연결된 여러 디바이스로 백업을 수행한 경우에는 온라인 복원 중에 같은 수의 디바이스를 사용할 수 있어야 합니다.  
   
 > [!CAUTION]  
 >  스냅숏 백업을 사용하여 **Online Restore**을 수행할 수 없습니다. **스냅숏 백업**에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  

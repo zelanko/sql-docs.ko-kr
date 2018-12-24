@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48095383"
@@ -39,7 +39,7 @@ ms.locfileid: "48095383"
 |인수(argument)|동작, 이벤트, 메서드, 속성, 함수 또는 프로시저에 정보를 제공하는 값입니다.|  
 |어셈블리(assembly)|클래스 메타데이터 및 관리 코드를 SQL Server의 개체로 포함하는 관리 응용 프로그램 모듈로, SQL Server에서 이에 대한 CLR 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 사용자 정의 형식을 만들 수 있습니다.|  
 |인증|엔터티에서 제공한 자격 증명의 유효성을 검사하여 사용자 컴퓨터 프로세스 또는 기타 엔터티의 ID를 확인하는 프로세스입니다. 일반적인 형태의 자격 증명으로는 디지털 서명 스마트 카드 생체 인식 데이터 사용자 이름 및 암호 조합이 있습니다.|  
-|권한 부여(authorization)|1. 사용자에게 부여된 권한과 액세스 권한을 확인하는 작업입니다. 2. 사용자, 컴퓨터 프로세스 또는 장치가 특정 정보, 서비스 또는 기능에 액세스할 수 있도록 권한을 부여하는 프로세스입니다.|  
+|권한 부여(authorization)|1. 사용자에게 부여된 권한과 액세스 권한을 확인하는 작업입니다. 2. 사용자, 컴퓨터 프로세스 또는 디바이스가 특정 정보, 서비스 또는 기능에 액세스할 수 있도록 권한을 부여하는 프로세스입니다.|  
 |축|그래프에서 점의 위치를 표시하는 데 사용되는 세로 및 가로 선입니다.|  
 |축 간격(axis interval)|차트 축에서 주 눈금 표시 간의 단위 수입니다. 이 간격은 자동으로 계산되지만 수동으로 설정할 수도 있습니다.|  
 |백업하다(back up)|프로그램, 디스크 또는 데이터의 복사본을 만드는 작업입니다.|  
@@ -119,7 +119,7 @@ ms.locfileid: "48095383"
 |기본 데이터베이스|사용자가 SQL Server에 로그인한 즉시 연결되는 데이터베이스입니다.|  
 |기본 인스턴스(default instance)|프로그램이 설치된 컴퓨터 이름과 동일한 이름을 사용하는 SQL Server 인스턴스입니다.|  
 |구분 기호(delimiter)|1. Transact-SQL에서 큰따옴표("")나 대괄호([])를 사용하여 개체 이름의 시작과 끝을 나타내는 문자입니다. 2. Integration Services 및 Reporting Services에서 레코드, 필드 또는 문자열을 구분하는 데 사용되는 문자입니다.|  
-|배달 확장 프로그램(delivery extension)|특정 장치나 대상 위치로 보고서를 배포하는 데 사용되는 Reporting Services의 구성 요소입니다.|  
+|배달 확장 프로그램(delivery extension)|특정 디바이스나 대상 위치로 보고서를 배포하는 데 사용되는 Reporting Services의 구성 요소입니다.|  
 |배달 프로토콜(delivery protocol)|알림 메시지를 외부 배달 시스템으로 라우팅하는 데 사용되는 통신 규칙 집합입니다.|  
 |종속 항목(dependent item)|보고서 서버에서 다른 항목에 참조된 보고서 카탈로그 항목입니다. 예를 들어 보고서 정의에 공유 데이터 원본에 대한 참조가 포함되어 있을 경우 데이터 원본은 종속 항목이 됩니다.|  
 |거리 눈금(distance scale)|지도 데이터의 현재 해상도에 대해 거리 단위를 표시하는 지도 범례의 한 유형입니다.|  
@@ -318,7 +318,7 @@ ms.locfileid: "48095383"
 |보안 개체(securable)|사용 권한으로 보호할 수 있는 엔터티입니다.|  
 |SSL(Secure Sockets Layer)|신용 카드 번호와 같은 중요한 정보의 가로채기를 방지하기 위한 보안 통신 채널 설정을 위해 제안된 개방형 표준입니다. 여러 인터넷 서비스에서 사용할 수 있도록 설계되었지만 주로 World Wide Web에서 안전한 전자 금융 거래를 가능하게 해줍니다.|  
 |보안 확장 프로그램(security extension)|사용자나 그룹을 보고서 서버에 대해 인증하는 Reporting Services 구성 요소입니다.|  
-|보안 주체(security principal)|Windows 기반 컴퓨터에서 리소스에 대한 액세스 부여 또는 거부의 대상이 될 수 있는 계정(예: 사용자, 보안 그룹, 장치 또는 컴퓨터)입니다.|  
+|보안 주체(security principal)|Windows 기반 컴퓨터에서 리소스에 대한 액세스 부여 또는 거부의 대상이 될 수 있는 계정(예: 사용자, 보안 그룹, 디바이스 또는 컴퓨터)입니다.|  
 |SMDL(Semantic Model Definition Language)|보고서 작성기에서 생성된 보고서에 대한 레이아웃 및 쿼리 정보를 설명하는 일련의 지침입니다.|  
 |계열(series)|차트에서 계열은 둘 이상의 데이터 요소로 구성됩니다.|  
 |서버 집계(server aggregate)|데이터 원본에서 계산되는 집계 값입니다. 데이터 원본에 따라 서버 집계는 데이터 집합 옵션 InterpretSubtotalsAsDetails를 기반으로 세부 정보 데이터 또는 집계로 처리될 수 있습니다.|  

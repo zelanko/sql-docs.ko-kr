@@ -41,9 +41,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 위의 예제에서 장치 정보 설정 **LinkTarget**은 URL 쿼리 문자열 내의 "main" 값과 함께 전달됩니다. 그러면 보고서의 드릴스루 하이퍼링크도 이름이 "main"인 프레임을 대상으로 지정합니다.  
+ 위의 예제에서 디바이스 정보 설정 **LinkTarget**은 URL 쿼리 문자열 내의 "main" 값과 함께 전달됩니다. 그러면 보고서의 드릴스루 하이퍼링크도 이름이 "main"인 프레임을 대상으로 지정합니다.  
   
- 장치 정보 설정에 대한 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
+ 디바이스 정보 설정에 대한 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
  상당수의 서버와 브라우저에서는 URL에 허용되는 문자 수를 제한합니다. 일부의 경우 256자 제한이 적용됩니다. 이 제한을 해결하려면 폼 제출을 사용하여 POST 요청을 사용하면 됩니다.  
   

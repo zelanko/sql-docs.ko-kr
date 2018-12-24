@@ -161,7 +161,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>CNG를 사용하여 하드웨어 보안 모듈에서 열 마스터 키 만들기
 
-상시 암호화를 위한 열 마스터 키를 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이 유형의 저장소는 HSM(하드웨어 보안 모듈)입니다. HSM은 디지털 키를 보호 및 관리하고 암호화 처리를 제공하는 물리적 장치입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 장치 형태입니다.
+상시 암호화를 위한 열 마스터 키를 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이 유형의 저장소는 HSM(하드웨어 보안 모듈)입니다. HSM은 디지털 키를 보호 및 관리하고 암호화 처리를 제공하는 물리적 디바이스입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 디바이스 형태입니다.
 
 특정 컴퓨터의 응용 프로그램에서 HSM을 사용할 수 있도록 하려면 CNG를 구현하는 KSP(키 저장소 공급자)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 KSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다.
 
@@ -205,7 +205,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-capi"></a>CAPI를 사용하여 하드웨어 보안 모듈에서 열 마스터 키 만들기
 
-상시 암호화를 위한 열 마스터 키를 CAPI(암호화 API)를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이러한 저장소는 HSM(하드웨어 보안 모듈)으로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 장치입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 장치 형태입니다.
+상시 암호화를 위한 열 마스터 키를 CAPI(암호화 API)를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이러한 저장소는 HSM(하드웨어 보안 모듈)으로서, 디지털 키를 보호 및 관리하고 암호화 프로세스를 제공하는 물리적 디바이스입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 디바이스 형태입니다.
 
 특정 컴퓨터의 응용 프로그램에서 HSM을 사용할 수 있도록 하려면 CAPI를 구현하는 CSP(Cryptography Service Provider)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 CSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다. 참고: CAPI는 사용되지 않는 레거시 API입니다. HSM에서 KSP를 사용할 수 있는 경우 CSP/CAPI 대신 사용해야 합니다.
 

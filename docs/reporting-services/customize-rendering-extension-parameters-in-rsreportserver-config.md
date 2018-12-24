@@ -33,14 +33,14 @@ ms.locfileid: "47846718"
   
  렌더링 확장 프로그램 매개 변수를 변경하면 보고서 서버의 렌더링 작업에만 영향이 미칩니다. 보고서 디자이너의 보고서 미리 보기에서는 렌더링 확장 프로그램 설정을 재정의할 수 없습니다.  
   
- 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하면 렌더링 확장 프로그램에 전체적으로 영향이 미칩니다. 특정 렌더링 확장 프로그램을 사용하는 경우 구성 파일의 설정이 기본값 대신 사용됩니다. 특정 보고서 또는 렌더링 작업에 대한 렌더링 확장 프로그램 매개 변수를 설정하려면 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용하여 프로그래밍 방식으로 또는 보고서 URL에 장치 정보 설정을 지정하여 장치 정보를 지정해야 합니다. 렌더링 작업에 대한 장치 정보 설정을 지정하고 전체 장치 정보 설정 목록을 보는 방법에 대한 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
+ 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하면 렌더링 확장 프로그램에 전체적으로 영향이 미칩니다. 특정 렌더링 확장 프로그램을 사용하는 경우 구성 파일의 설정이 기본값 대신 사용됩니다. 특정 보고서 또는 렌더링 작업에 대한 렌더링 확장 프로그램 매개 변수를 설정하려면 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용하여 프로그래밍 방식으로 또는 보고서 URL에 디바이스 정보 설정을 지정하여 디바이스 정보를 지정해야 합니다. 렌더링 작업에 대한 디바이스 정보 설정을 지정하고 전체 디바이스 정보 설정 목록을 보는 방법에 대한 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>RSReportServer.config 찾기 및 수정  
  보고서 출력 형식에 대한 구성 설정은 RSReportServer.config 파일에서 렌더링 확장 프로그램 매개 변수로 지정됩니다. 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하려면 렌더링 매개 변수를 설정하는 XML 구조의 정의 방법을 알고 있어야 합니다. 다음 두 가지 XML 구조를 수정할 수 있습니다.  
   
 -   **OverrideNames** 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
   
--   **DeviceInfo** XML 구조는 렌더링 확장 프로그램에서 사용하는 장치 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 장치 정보 설정으로 지정됩니다.  
+-   **DeviceInfo** XML 구조는 렌더링 확장 프로그램에서 사용하는 장치 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
   
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "47846718"
 </Extension>  
 ```  
   
-## <a name="changing-device-information-settings"></a>장치 정보 설정 변경  
- 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 장치 정보 설정을 수정하려면 **DeviceInfo** XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 장치 정보 설정을 지원합니다. 장치 정보 설정의 전체 목록을 보려면 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
+## <a name="changing-device-information-settings"></a>디바이스 정보 설정 변경  
+ 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 디바이스 정보 설정을 수정하려면 **DeviceInfo** XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 디바이스 정보 설정을 지원합니다. 디바이스 정보 설정의 전체 목록을 보려면 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
  다음 예에서는 이미지 렌더링 확장 프로그램의 기본 설정을 수정하는 XML 구조와 구문을 보여 줍니다.  
   

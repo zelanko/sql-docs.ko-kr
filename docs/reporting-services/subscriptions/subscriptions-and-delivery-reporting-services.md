@@ -118,7 +118,7 @@ ms.locfileid: "52711965"
 |Null|Null 배달 공급자는 즉시 볼 수 있는 매개 변수가 있는 보고서와 함께 캐시를 미리 로드하는 데 사용되는 매우 특수화된 배달 확장 프로그램입니다. 이 메서드는 개별 구독의 사용자가 사용할 수 없습니다. Null 배달은 데이터 기반 구독에서 캐시를 미리 로드하여 보고서 서버 성능을 향상시키기 위해 관리자가 사용합니다.|  
   
 > [!NOTE]  
->  보고서 배달은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 아키텍처의 확장 가능한 부분입니다. 타사 공급업체는 보고서를 다른 위치나 장치로 라우팅하는 사용자 지정 배달 확장 프로그램을 만들 수 있습니다. 사용자 지정 배달 확장 프로그램에 대한 자세한 내용은 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)을 참조하세요.  
+>  보고서 배달은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 아키텍처의 확장 가능한 부분입니다. 타사 공급업체는 보고서를 다른 위치나 디바이스로 라우팅하는 사용자 지정 배달 확장 프로그램을 만들 수 있습니다. 사용자 지정 배달 확장 프로그램에 대한 자세한 내용은 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)을 참조하세요.  
   
 ##  <a name="bkmk_parts_of_subscription"></a> 구독 요소  
  구독 정의는 다음과 같은 요소로 구성됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: HTML 장치 정보 설정 | Microsoft Docs
+title: HTML 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a415a5f735e731efe3f3ae8b282f8ce2a1ad2eba
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48155852"
 ---
-# <a name="html-device-information-settings"></a>HTML 장치 정보 설정
-  다음 표에서는 HTML 형식으로 렌더링하기 위한 장치 정보 설정을 보여 줍니다.  
+# <a name="html-device-information-settings"></a>HTML 디바이스 정보 설정
+  다음 표에서는 HTML 형식으로 렌더링하기 위한 디바이스 정보 설정을 보여 줍니다.  
   
 > [!IMPORTANT]  
->  아래 표에 **(\*)** 와 함께 나열된 장치 정보 설정은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 않아야 합니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services에서 사용 되지 않는 기능](deprecated-features-in-sql-server-reporting-services-ssrs.md)합니다.  
+>  아래 표에 **(\*)** 와 함께 나열된 디바이스 정보 설정은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 않아야 합니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services에서 사용 되지 않는 기능](deprecated-features-in-sql-server-reporting-services-ssrs.md)합니다.  
   
 |설정|값|  
 |-------------|-----------|  

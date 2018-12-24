@@ -1,5 +1,5 @@
 ---
-title: ATOM 장치 정보 설정 | Microsoft Docs
+title: ATOM 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108503"
 ---
-# <a name="atom-device-information-settings"></a>ATOM 장치 정보 설정
-  Atom 렌더링 확장 프로그램의 장치 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  
+# <a name="atom-device-information-settings"></a>ATOM 디바이스 정보 설정
+  Atom 렌더링 확장 프로그램의 디바이스 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  
   
- 다음 표에서는 데이터 서비스 문서로 렌더링하기 위한 장치 정보 설정을 보여 줍니다.  
+ 다음 표에서는 데이터 서비스 문서로 렌더링하기 위한 디바이스 정보 설정을 보여 줍니다.  
   
 |설정|값|  
 |-------------|-----------|  

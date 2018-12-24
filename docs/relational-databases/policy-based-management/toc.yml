@@ -63,9 +63,9 @@ items:
       href: detect-failed-input-and-output-requests.md
     - name: SCSI 호스트 어댑터 문제 검색
       href: detect-scsi-host-adapter-issues.md
-    - name: 장치 드라이버 컨트롤 오류
+    - name: 디바이스 드라이버 컨트롤 오류
       href: device-driver-control-error.md
-    - name: 장치 준비 안 됨 오류
+    - name: 디바이스 준비 안 됨 오류
       href: device-not-ready-error.md
     - name: 경량 풀링 해제
       href: disable-lightweight-pooling.md

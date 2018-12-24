@@ -85,7 +85,7 @@ ms.locfileid: "52513757"
     
         완전 내구성이 있는 트랜잭션 또는 sp_flush_log가 성공적으로 커밋되면, 이전에 커밋된 지연된 내구성 트랜잭션은 모두 내구성을 가집니다.
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 모든 트랜잭션이 지연되더라도 로그 생성 및 시간을 모두 기반으로 로그를 디스크에 플러시합니다. 일반적으로 IO 장치가 계속 실행되면 정상으로 처리된 것입니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내구성 있는 트랜잭션 및 sp_flush_log 외의 어떠한 내구성도 보장하지 않습니다.      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 모든 트랜잭션이 지연되더라도 로그 생성 및 시간을 모두 기반으로 로그를 디스크에 플러시합니다. 일반적으로 IO 디바이스가 계속 실행되면 정상으로 처리된 것입니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내구성 있는 트랜잭션 및 sp_flush_log 외의 어떠한 내구성도 보장하지 않습니다.      
     
   
     

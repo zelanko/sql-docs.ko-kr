@@ -110,7 +110,7 @@ items:
     href: url-access-parameter-reference.md
   - name: URL에 보고서 매개 변수 언어 설정
     href: set-the-language-for-report-parameters-in-a-url.md
-  - name: URL에 장치 정보 설정 지정
+  - name: URL에 디바이스 정보 설정 지정
     href: specify-device-information-settings-in-a-url.md
   - name: URL 액세스를 사용하여 보고서 내보내기
     href: export-a-report-using-url-access.md
@@ -143,30 +143,30 @@ items:
   items:
   - name: 기능 참조
     href: feature-reference-reporting-services.md
-  - name: 렌더링 확장 프로그램에 대한 장치 정보 설정
+  - name: 렌더링 확장 프로그램에 대한 디바이스 정보 설정
     href: device-information-settings-for-rendering-extensions-reporting-services.md
     items:
-    - name: ATOM 장치 정보 설정
+    - name: ATOM 디바이스 정보 설정
       href: atom-device-information-settings.md
-    - name: CSV 장치 정보 설정
+    - name: CSV 디바이스 정보 설정
       href: csv-device-information-settings.md
-    - name: Excel 장치 정보 설정
+    - name: Excel 디바이스 정보 설정
       href: excel-device-information-settings.md
-    - name: HTML 장치 정보 설정
+    - name: HTML 디바이스 정보 설정
       href: html-device-information-settings.md
-    - name: 이미지 장치 정보 설정
+    - name: 이미지 디바이스 정보 설정
       href: image-device-information-settings.md
-    - name: MHTML 장치 정보 설정
+    - name: MHTML 디바이스 정보 설정
       href: mhtml-device-information-settings.md
-    - name: PDF 장치 정보 설정
+    - name: PDF 디바이스 정보 설정
       href: pdf-device-information-settings.md
-    - name: PPTX 장치 정보 설정
+    - name: PPTX 디바이스 정보 설정
       href: pptx-device-information-settings.md
-    - name: XML 장치 정보 설정
+    - name: XML 디바이스 정보 설정
       href: xml-device-information-settings.md
-    - name: Word 장치 정보 설정
+    - name: Word 디바이스 정보 설정
       href: word-device-information-settings.md
-    - name: RGDI 장치 정보 설정
+    - name: RGDI 디바이스 정보 설정
       href: rgdi-device-information-settings.md
   - name: HTML 뷰어 및 보고서 도구 모음
     href: html-viewer-and-the-report-toolbar.md

@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48073473"
@@ -98,7 +98,7 @@ ms.locfileid: "48073473"
   
     -   1단계에서 복사한 보고서 이름. 예를 들면 다음과 같습니다. `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
-    -   문서 구조를 숨기도록 지정하는 장치 정보 매개 변수: `&rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False`  
+    -   문서 구조를 숨기도록 지정하는 디바이스 정보 매개 변수: `&rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False`  
   
      다음 URL에서는 이러한 3개의 구성 요소가 나열되는 순서대로 추가하여 포함되어 있습니다.  
   

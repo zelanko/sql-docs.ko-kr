@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48135503"
@@ -119,7 +119,7 @@ ms.locfileid: "48135503"
     > [!IMPORTANT]  
     >  서버 데이터 정렬을 변경했을 경우 시스템 데이터베이스를 복원하지 마세요. 시스템 데이터베이스를 복원하면 새로운 데이터 정렬이 이전 데이터 정렬 설정으로 바뀝니다.  
   
-     백업을 사용할 수 없거나 복원된 백업이 최신 백업이 아닌 경우 누락된 항목을 다시 만듭니다. 예를 들어 사용자 데이터베이스, 백업 장치, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 끝점 등에 대한 모든 누락 항목을 다시 만듭니다. 항목을 다시 만드는 가장 좋은 방법은 해당 항목을 만들었던 원래 스크립트를 실행하는 것입니다.  
+     백업을 사용할 수 없거나 복원된 백업이 최신 백업이 아닌 경우 누락된 항목을 다시 만듭니다. 예를 들어 사용자 데이터베이스, 백업 디바이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, 끝점 등에 대한 모든 누락 항목을 다시 만듭니다. 항목을 다시 만드는 가장 좋은 방법은 해당 항목을 만들었던 원래 스크립트를 실행하는 것입니다.  
   
 > [!IMPORTANT]  
 >  스크립트에 보안을 설정해 무단으로 내용을 변경할 수 없도록 하는 것이 좋습니다.  

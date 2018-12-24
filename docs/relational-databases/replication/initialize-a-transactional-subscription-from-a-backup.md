@@ -55,9 +55,9 @@ ms.locfileid: "47648604"
   
     -   **@backupdevicename** - 복원에 사용할 논리적 또는 물리적 백업 장치  
   
-         논리적 장치의 경우 **sp_addumpdevice** 를 사용하여 장치를 만들 때 지정한 백업 장치의 이름을 지정합니다.  
+         논리적 디바이스의 경우 **sp_addumpdevice** 를 사용하여 디바이스를 만들 때 지정한 백업 디바이스의 이름을 지정합니다.  
   
-         물리적 장치의 경우 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` 또는 `TAPE = '\\.\TAPE0'`과 같이 전체 경로와 파일 이름을 지정합니다.  
+         물리적 디바이스의 경우 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` 또는 `TAPE = '\\.\TAPE0'`과 같이 전체 경로와 파일 이름을 지정합니다.  
   
     -   (옵션) **@password** - 백업 장치를 만들 때 제공한 암호  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47648604"
   
     -   (옵션) **@fileidhint** - 복원되는 백업 세트에 대한 식별자. 예를 들어 **1** 을 지정하면 백업 미디어의 첫 번째 백업 세트를 나타내고 **2** 를 지정하면 두 번째 백업 세트를 나타냅니다.  
   
-    -   (테이프 장치 옵션) **@unload** - 복원이 완료된 후 드라이브에서 테이프를 언로드해야 하는 경우 **1** (기본값), 언로드하지 않아야 하는 경우 **0** 을 지정합니다.  
+    -   (테이프 디바이스 옵션) **@unload** - 복원이 완료된 후 드라이브에서 테이프를 언로드해야 하는 경우 **1** (기본값), 언로드하지 않아야 하는 경우 **0** 을 지정합니다.  
   
 6.  (옵션) 끌어오기 구독의 경우 구독 데이터베이스의 구독자에서 [sp_addpullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) 및 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   

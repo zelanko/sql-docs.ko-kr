@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220093"
@@ -29,7 +29,7 @@ ms.locfileid: "48220093"
 브라우저의 폴더  
   
 > [!NOTE]  
->  핸드헬드 장치에서 보고서에 액세스할 경우 브라우저를 사용하여 보고서를 열어야 합니다. 보고서 관리자는 핸드헬드 장치에서 사용할 수 없습니다.  
+>  핸드헬드 디바이스에서 보고서에 액세스할 경우 브라우저를 사용하여 보고서를 열어야 합니다. 보고서 관리자는 핸드헬드 디바이스에서 사용할 수 없습니다.  
   
  사용할 수 있는 브라우저 종류에 대한 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "Reporting Services에서 지원하는 브라우저 종류(Browser Types Supported by Reporting Services)"를 참조하십시오.  
   

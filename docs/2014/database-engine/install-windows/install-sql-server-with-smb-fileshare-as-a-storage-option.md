@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51018978"
@@ -112,7 +112,7 @@ ms.locfileid: "51018978"
   
 -   네트워크로 연결된 저장소에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](http://go.microsoft.com/fwlink/?LinkId=237321)(http://go.microsoft.com/fwlink/?LinkId=237321)에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
   
--   NetApp 장치와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
+-   NetApp 디바이스와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
     2015-06-04 경우 spid9s Error: 17053, Severity: 16, 상태: 1.  
     2015-06-04 경우 spid9s DoDevIoCtlOut() GetOverlappedResult(): 운영 체제 1 (잘못 된 함수입니다.) 오류가 발생 했습니다.  
   

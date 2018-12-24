@@ -93,7 +93,7 @@ ms.locfileid: "52542410"
   
     -   1단계에서 복사한 보고서 이름. 예를 들면 다음과 같습니다. `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
-    -   문서 구조를 숨기도록 지정하는 장치 정보 매개 변수: `&rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False`  
+    -   문서 구조를 숨기도록 지정하는 디바이스 정보 매개 변수: `&rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False`  
   
      다음 URL에서는 이러한 3개의 구성 요소가 나열되는 순서대로 추가하여 포함되어 있습니다.  
   

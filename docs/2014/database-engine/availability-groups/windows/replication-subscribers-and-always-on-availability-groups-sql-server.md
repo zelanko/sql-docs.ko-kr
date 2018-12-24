@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48153236"
@@ -86,6 +86,6 @@ GO
 2.  새 구독을 만들고 새 스냅숏부터 시작하여 구독을 다시 만듭니다.  
   
 > [!NOTE]  
->  현재 프로세스는 병합 복제 구독자에는 불편하지만 병합 복제의 기본 시나리오는 구독자에서 AlwaysOn 가용성 그룹을 사용하지 않는 연결이 끊긴 사용자(데스크톱, 랩톱, 핸드셋 장치)입니다.  
+>  현재 프로세스는 병합 복제 구독자에는 불편하지만 병합 복제의 기본 시나리오는 구독자에서 AlwaysOn 가용성 그룹을 사용하지 않는 연결이 끊긴 사용자(데스크톱, 랩톱, 핸드셋 디바이스)입니다.  
   
   

@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: baf815460951a91daad76df814cd32298d49a9fa
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48208323"
@@ -33,7 +33,7 @@ ms.locfileid: "48208323"
 |메시지 텍스트|SQL Server에서 일관성 기반의 논리적인 I/O 오류가 검색되었습니다. %ls. 파일 '%ls'의 오프셋 %#016I64x에서 데이터베이스 ID %d에 있는 페이지 %S_PGID의 %S_MSG 중 이 오류가 발생했습니다.  자세한 내용은 SQL Server 오류 로그 또는 시스템 이벤트 로그의 추가 메시지에서 확인할 수 있습니다.|  
   
 ## <a name="explanation"></a>설명  
- 이 오류는 Windows가 디스크에서 페이지를 성공적으로 읽었음을 보고하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 페이지에서 잘못된 내용을 발견했음을 나타냅니다. 이 오류는 Windows에서 오류를 감지하지 못한다는 점만 제외하면 오류 823과 비슷합니다. 일반적으로 이 오류는 디스크 드라이브 실패, 디스크 펌웨어 문제, 잘못된 장치 드라이버 등 I/O 하위 시스템의 문제를 나타냅니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
+ 이 오류는 Windows가 디스크에서 페이지를 성공적으로 읽었음을 보고하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 페이지에서 잘못된 내용을 발견했음을 나타냅니다. 이 오류는 Windows에서 오류를 감지하지 못한다는 점만 제외하면 오류 823과 비슷합니다. 일반적으로 이 오류는 디스크 드라이브 실패, 디스크 펌웨어 문제, 잘못된 디바이스 드라이버 등 I/O 하위 시스템의 문제를 나타냅니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
   

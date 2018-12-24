@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a22d59c38366d5010cc472bb5d86414849cf9e22
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48188743"
@@ -277,7 +277,7 @@ ms.locfileid: "48188743"
 |**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 응용 프로그램에서 쉽게 볼 수 있는 응용 프로그램 파일을 생성하지 않습니다. 유효한 값은<br /><br /> **HTMLOWC**<br /><br /> **RGDI**<br /><br /> **Null**|  
   
 ####  <a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
- 보고서 서버 전자 메일은 SMTP 네트워크 장치를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버를 구성 &#40;SSRS 구성 관리자&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 하 고 [Reporting Services의 전자 메일 배달](../subscriptions/e-mail-delivery-in-reporting-services.md).  
+ 보고서 서버 전자 메일은 SMTP 네트워크 디바이스를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버를 구성 &#40;SSRS 구성 관리자&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 하 고 [Reporting Services의 전자 메일 배달](../subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |설정|Description|  
 |-------------|-----------------|  

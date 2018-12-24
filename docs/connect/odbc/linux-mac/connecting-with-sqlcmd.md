@@ -50,7 +50,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -D `sqlcmd` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
   
-- -e 표준 출력 장치(stdout)에 입력 스크립트를 기록합니다.
+- -e 표준 출력 디바이스(stdout)에 입력 스크립트를 기록합니다.
 
 - 신뢰할 수 있는 연결, 통합된 인증을 사용합니다. Linux 또는 macOS 클라이언트에서 통합된 인증을 사용 하는 신뢰할 수 있는 연결에 대 한 자세한 내용은 참조 하세요. [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)합니다.
 

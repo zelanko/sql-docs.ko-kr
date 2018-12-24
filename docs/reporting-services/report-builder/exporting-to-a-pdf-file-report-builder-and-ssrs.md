@@ -98,7 +98,7 @@ ms.locfileid: "52418134"
   
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
- 장치 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)을 참조하세요.  
+ 디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)을 참조하세요.  
   
   
 ## <a name="see-also"></a>참고 항목  

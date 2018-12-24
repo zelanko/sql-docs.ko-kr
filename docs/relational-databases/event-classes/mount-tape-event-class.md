@@ -47,7 +47,7 @@ ms.locfileid: "47697611"
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|사용자 계정 컨트롤|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|TextData|**ntext**|*물리적 장치 이름* [ ( *논리적 장치 이름* ) ]. 논리적 장치 이름은 sys.backup_devices 카탈로그 뷰에 정의되어 있는 경우에만 표시됩니다.|1|사용자 계정 컨트롤|  
+|TextData|**ntext**|*물리적 장치 이름* [ ( *논리적 장치 이름* ) ]. 논리적 디바이스 이름은 sys.backup_devices 카탈로그 뷰에 정의되어 있는 경우에만 표시됩니다.|1|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

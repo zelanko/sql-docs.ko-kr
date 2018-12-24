@@ -1,5 +1,5 @@
 ---
-title: Excel 장치 정보 설정 | Microsoft Docs
+title: Excel 디바이스 정보 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -21,8 +21,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116207"
 ---
-# <a name="excel-device-information-settings"></a>Excel 장치 정보 설정
-  다음 표는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
+# <a name="excel-device-information-settings"></a>Excel 디바이스 정보 설정
+  다음 표는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
   
 |설정|값|  
 |-------------|-----------|  

@@ -32,7 +32,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48133034"
@@ -88,7 +88,7 @@ ms.locfileid: "48133034"
 |성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 할당(예: 인덱스 검색 수 또는 인덱스 및 데이터에 할당된 페이지 수)을 검색하고 측정합니다.|  
-|[SQLServer:Backup Device](sql-server-backup-device-object.md)|백업 장치의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 장치에 관한 정보를 제공합니다.|  
+|[SQLServer:Backup Device](sql-server-backup-device-object.md)|백업 디바이스의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 디바이스에 관한 정보를 제공합니다.|  
 |[SQLServer:Buffer Manager](sql-server-buffer-manager-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]freememory **및** buffer cache hit ratio **와 같은**에서 사용하는 메모리 버퍼에 관한 정보를 제공합니다.|  
 |[SQL Server:Buffer Node](sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용 가능한 페이지를 요청하고 액세스하는 빈도에 대한 정보를 제공합니다.|  
 |[SQLServer:CLR](sql-server-clr-object.md)|CLR(공용 언어 런타임)에 대한 정보를 제공합니다.|  

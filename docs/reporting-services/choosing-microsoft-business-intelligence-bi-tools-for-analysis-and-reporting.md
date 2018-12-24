@@ -31,7 +31,7 @@ ms.locfileid: "52399176"
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](https://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 지원됨)|  
 |데이터 시각화 및 탐색||[파워 뷰](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 맵](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|모바일 장치를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(모바일 장치용 Power BI 앱 사용)|  
+|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(모바일 디바이스용 Power BI 앱 사용)|  
 |공동 작업 및 공유|||[SharePoint 사이트](https://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 팀 사이트](https://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**기업 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](../analysis-services/analysis-services.md)|  

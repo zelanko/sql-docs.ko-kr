@@ -94,7 +94,7 @@ ms.locfileid: "52159051"
 |성능 개체|설명|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 할당(예: 인덱스 검색 수 또는 인덱스 및 데이터에 할당된 페이지 수)을 검색하고 측정합니다.|  
-|[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|백업 장치의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 장치에 관한 정보를 제공합니다.|  
+|[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|백업 디바이스의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 디바이스에 관한 정보를 제공합니다.|  
 |[SQLServer:Batch Resp Statistics](../../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md)|SQL 일괄 처리 응답 시간을 추적하기 위한 카운터| 
 |[SQLServer:Buffer Manager](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]freememory **및** buffer cache hit ratio **와 같은**에서 사용하는 메모리 버퍼에 관한 정보를 제공합니다.|  
 |[SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용 가능한 페이지를 요청하고 액세스하는 빈도에 대한 정보를 제공합니다.|  

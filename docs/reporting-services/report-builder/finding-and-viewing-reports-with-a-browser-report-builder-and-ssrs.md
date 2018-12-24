@@ -26,7 +26,7 @@ ms.locfileid: "51812686"
 브라우저의 폴더  
   
 > [!NOTE]  
->  핸드헬드 장치에서 보고서에 액세스할 경우 브라우저를 사용하여 보고서를 열어야 합니다. 보고서 관리자는 핸드헬드 장치에서 사용할 수 없습니다.  
+>  핸드헬드 디바이스에서 보고서에 액세스할 경우 브라우저를 사용하여 보고서를 열어야 합니다. 보고서 관리자는 핸드헬드 디바이스에서 사용할 수 없습니다.  
   
  사용할 수 있는 브라우저 종류에 대한 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "Reporting Services에서 지원하는 브라우저 종류(Browser Types Supported by Reporting Services)"를 참조하십시오.  
   

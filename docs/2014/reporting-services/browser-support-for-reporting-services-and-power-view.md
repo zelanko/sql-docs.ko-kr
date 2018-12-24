@@ -22,7 +22,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48157043"
@@ -121,7 +121,7 @@ ms.locfileid: "48157043"
   
 -   PDF 및 TIFF 형식으로 내보내기.  
   
--   iOS 장치의 Apple Safari에서 대화형으로 보고서 보기. 기능 지원에는 확대/축소, 매개 변수 창 및 대화형 정렬이 포함됩니다.  
+-   iOS 디바이스의 Apple Safari에서 대화형으로 보고서 보기. 기능 지원에는 확대/축소, 매개 변수 창 및 대화형 정렬이 포함됩니다.  
   
 -   자세한 내용은 [Reporting Services 보고서 보기 Microsoft Surface 장치 및 Apple iOS 장치에서](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)합니다.  
   
