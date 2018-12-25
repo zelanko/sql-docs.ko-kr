@@ -103,7 +103,7 @@ ms.locfileid: "52514470"
   
 -   TSQL, SMO, PowerShell cmdlet, SQL Server Management Studio 백업 또는 복원 마법사를 사용하여 백업 또는 복원 문을 실행할 수 있습니다.   
   
--   논리적 장치 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 장치로 추가할 수 없습니다.  
+-   논리적 디바이스 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 디바이스로 추가할 수 없습니다.  
   
 -   기존 백업 Blob에 추가는 지원되지 않습니다. 기존 Blob으로 백업은 **WITH FORMAT** 옵션을 사용하여 덮어쓸 수만 있습니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅숏 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.  
   
@@ -248,13 +248,13 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
 >  공유 액세스 토큰을 사용하여 스트라이프 백업 집합, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업 또는 SQL 자격 증명을 만들려면 유지 관리 계획 마법사의 백업 태스크 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
   
 ##  <a name="RestoreSSMS"></a> SQL Server Management Studio를 사용하여 Microsoft Azure Storage에서 복원  
-데이터베이스 복원 태스크에는 **URL** 이 복원할 원본 장치로 포함됩니다.  다음 단계에서는 복원 작업을 사용하여 Microsoft Azure Blob 저장소 서비스에서 복원하는 방법을 설명합니다. 
+데이터베이스 복원 태스크에는 **URL**이 복원할 원본 디바이스로 포함됩니다.  다음 단계에서는 복원 작업을 사용하여 Microsoft Azure Blob 저장소 서비스에서 복원하는 방법을 설명합니다. 
   
 1.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다. 
   
 2.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
   
-3.  찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다. 
+3.  찾아보기(...) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
 
 4.  **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.  **추가** 를 클릭하여 **백업 파일 위치 선택** 대화 상자를 엽니다.
 

@@ -12,7 +12,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48065123"
@@ -95,7 +95,7 @@ ms.locfileid: "48065123"
   
 -   TSQL, SMO 또는 PowerShell cmdlet을 사용하여 백업 또는 복원 문을 실행할 수 있습니다. 현재 SQL Server Management Studio 백업 또는 복원 마법사로 Windows Azure Blob 저장소 서비스로 백업하거나 복원할 수는 없습니다.  
   
--   논리적 장치 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 장치로 추가할 수 없습니다.  
+-   논리적 디바이스 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 디바이스로 추가할 수 없습니다.  
   
 -   기존 백업 Blob에 추가는 지원되지 않습니다. 기존 Blob으로 백업은 WITH FORMAT 옵션을 사용하여 덮어쓸 수만 있습니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48065123"
   
 -   `RETAINDAYS`와 `EXPIREDATE` 백업 세트 옵션 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL- ‘ https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL- ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   
@@ -245,9 +245,9 @@ ms.locfileid: "48065123"
  이전에 설명한 백업 태스크와 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Windows Azure 저장소로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다. 자세한 내용은 참조는 **백업 태스크 정의** 섹션 [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)합니다.  
   
 ##  <a name="RestoreSSMS"></a> Windows Azure storage Using SQL Server Management Studio에서 복원  
- 데이터베이스를 복원하는 경우 **URL** 이 복원할 원본 장치로 포함됩니다. 다음 단계에서는 Windows Azure 저장소에서 복원할 수 있도록 변경된 복원 태스크에 대해 설명합니다.  
+ 데이터베이스를 복원하는 경우 **URL** 이 복원할 원본 디바이스로 포함됩니다. 다음 단계에서는 Windows Azure 저장소에서 복원할 수 있도록 변경된 복원 태스크에 대해 설명합니다.  
   
-1.  SQL Server Management Studio에 있는 복원 태스크의 **일반** 페이지에서 **장치** 를 선택하면 **URL** 이 백업 미디어 유형으로 포함된 **백업 장치 선택** 대화 상자가 표시됩니다.  
+1.  SQL Server Management Studio에 있는 복원 태스크의 **일반** 페이지에서 **디바이스** 를 선택하면 **URL** 이 백업 미디어 유형으로 포함된 **백업 디바이스 선택** 대화 상자가 표시됩니다.  
   
 2.  **URL** 을 선택하고 **추가**를 클릭하면 **Azure 저장소에 연결** 대화 상자가 열립니다. Windows Azure 저장소에 인증하기 위한 SQL 자격 증명 정보를 지정합니다.  
   
