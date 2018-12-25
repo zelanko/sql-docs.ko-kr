@@ -18,7 +18,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48111333"
@@ -62,7 +62,7 @@ ms.locfileid: "48111333"
  백업 세트를 다른 백업 세트로 덮어쓸 수 있는 날짜를 지정합니다.  
   
  **백업할 위치**  
- 파일 또는 테이프에 데이터베이스를 백업합니다. 데이터베이스를 포함하는 컴퓨터에 연결된 테이프 장치만 사용할 수 있습니다.  
+ 파일 또는 테이프에 데이터베이스를 백업합니다. 데이터베이스를 포함하는 컴퓨터에 연결된 테이프 디바이스만 사용할 수 있습니다.  
   
  **하나 이상의 파일에 데이터베이스 백업**  
  **추가** 를 클릭하여 **백업 대상 선택** 대화 상자를 연 다음 하나 이상의 디스크 위치나 테이프 장치를 지정합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48111333"
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

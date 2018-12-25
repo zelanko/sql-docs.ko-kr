@@ -43,7 +43,7 @@ ms.locfileid: "47756861"
 
 필요한 BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에 의해 부여됩니다.  
   
- 백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 [실제 리소스](backup-devices-sql-server.md) 에 액세스하기 전까지는 표시되지 않을 수 있습니다. 따라서 다시 한 번 시작하기 전에 사용 권한을 확인하세요.
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 [실제 리소스](backup-devices-sql-server.md) 에 액세스하기 전까지는 표시되지 않을 수 있습니다. 따라서 다시 한 번 시작하기 전에 사용 권한을 확인하세요.
   
   
 ## <a name="back-up-using-ssms"></a>SSMS를 사용하여 백업  
@@ -104,7 +104,7 @@ ms.locfileid: "47756861"
   
     -   **미디어에 쓰기 전에 체크섬 수행**및 필요에 따라 **체크섬 오류 발생 시 계속**. 체크섬에 대한 자세한 내용은 [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.  
   
-15. **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
+15.  **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
   
     -   일상적인 로그 백업의 경우 기본 선택인 **비활성 항목을 제거하여 트랜잭션 로그 잘라내기**를 유지합니다.  
   
@@ -139,13 +139,13 @@ ms.locfileid: "47756861"
   
     -   백업할 트랜잭션 로그가 속한 데이터베이스의 이름  
   
-    -   트랜잭션 로그 백업이 기록될 백업 장치  
+    -   트랜잭션 로그 백업이 기록될 백업 디바이스  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
 > **중요** 이 예에서는 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다. 로그 백업을 허용하기 위해 전체 데이터베이스를 백업하기 전에 전체 복구 모델을 사용하도록 데이터베이스를 설정했습니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
- 이 예에서는 이전에 만든 명명된 백업 장치 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 `MyAdvWorks_FullRM_log1`데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
+ 이 예에서는 이전에 만든 명명된 백업 디바이스 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 `MyAdvWorks_FullRM_log1`데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
   
 ```sql  
 BACKUP LOG AdventureWorks2012  

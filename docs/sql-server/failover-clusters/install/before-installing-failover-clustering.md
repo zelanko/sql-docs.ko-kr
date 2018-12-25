@@ -40,7 +40,7 @@ ms.locfileid: "52503480"
   
 ##  <a name="BestPractices"></a> 최선의 구현 방법  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)검토  
+-    [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)검토  
   
 -   필수 구성 요소 소프트웨어를 설치합니다. 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하거나 업그레이드하기 전에 다음과 같은 필수 구성 요소를 설치하여 설치 시간을 절약합니다. 각 장애 조치(Failover) 클러스터 노드에 필수 구성 요소 소프트웨어를 설치하고 노드를 한 번 다시 시작한 후 설치 프로그램을 실행해야 합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52503480"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 디스크가 압축되거나 암호화되지 않았는지 확인합니다. 압축된 드라이브 또는 암호화된 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하려고 시도하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 실패합니다.  
   
--   SAN 구성은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server 및 Datacenter Server 버전에서도 지원됩니다. Windows 카탈로그 및 하드웨어 호환성 목록 범주인 "클러스터/다중 클러스터 장치"에는 다중 WSFC 클러스터가 연결된 SAN 저장 장치로 지원되며 테스트를 마친 SAN 사용 가능 저장 장치 집합이 나열되어 있습니다. 인증된 구성 요소를 찾은 후 클러스터 유효성 검사를 실행하십시오.  
+-   SAN 구성은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server 및 Datacenter Server 버전에서도 지원됩니다. Windows 카탈로그 및 하드웨어 호환성 목록 범주인 "클러스터/다중 클러스터 디바이스"에는 다중 WSFC 클러스터가 연결된 SAN 저장 디바이스로 지원되며 테스트를 마친 SAN 사용 가능 저장 디바이스 집합이 나열되어 있습니다. 인증된 구성 요소를 찾은 후 클러스터 유효성 검사를 실행하십시오.  
   
 -   데이터 파일 설치에는 SMB 파일 공유도 지원됩니다. 자세한 내용은 [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하세요.  
   

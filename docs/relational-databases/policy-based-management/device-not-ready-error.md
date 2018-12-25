@@ -1,5 +1,5 @@
 ---
-title: 장치 준비 안 됨 오류 | Microsoft 문서
+title: 디바이스 준비 안 됨 오류 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51662902"
 ---
-# <a name="device-not-ready-error"></a>장치 준비 안 됨 오류
+# <a name="device-not-ready-error"></a>디바이스 준비 안 됨 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 규칙은 시스템 이벤트 로그에서 EventId 15를 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 이와 관련된 문제로 인해 발생할 수 있습니다.  
   

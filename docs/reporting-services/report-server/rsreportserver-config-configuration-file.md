@@ -178,7 +178,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|웹 포털이 연결하는 보고서 서버의 URL을 지정합니다. 다른 인스턴스 또는 원격 컴퓨터의 보고서 서버에 연결하도록 웹 포털을 구성하는 경우에만 이 값을 수정합니다.|N,S|  
-|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
+|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
 |**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual**입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual**로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
@@ -238,7 +238,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 응용 프로그램에서 쉽게 볼 수 있는 응용 프로그램 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
- 보고서 서버 전자 메일은 SMTP 네트워크 장치를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
+ 보고서 서버 전자 메일은 SMTP 네트워크 디바이스를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
   
 |설정|설명|  
 |-------------|-----------------|  

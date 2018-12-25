@@ -25,13 +25,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2616e1ad8aa794f5aff14857b68b146e35dc04f0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48174643"
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
-  **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
+   **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48174643"
  **master** 데이터베이스 트랜잭션 로그 파일의 정규화된 경로를 나타냅니다. **-l** 와 *master_log_path*사이에 공백이 없어야 합니다.  
   
  **-m**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있습니다. 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 장치에 기록되도록 하는 CHECKPOINT 메커니즘이 시작되지 않았습니다. 대개 시스템 데이터베이스에 문제가 있어서 복구해야 하는 경우 이 옵션을 사용합니다. **sp_configure allow updates** 옵션을 설정합니다. 기본적으로 **allow updates** 는 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있습니다. 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 디바이스에 기록되도록 하는 CHECKPOINT 메커니즘이 시작되지 않았습니다. 대개 시스템 데이터베이스에 문제가 있어서 복구해야 하는 경우 이 옵션을 사용합니다. **sp_configure allow updates** 옵션을 설정합니다. 기본적으로 **allow updates** 는 사용할 수 없습니다.  
   
  **-n**  
  명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  

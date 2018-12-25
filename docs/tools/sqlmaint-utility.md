@@ -82,7 +82,7 @@ number[minutes | hours | days | weeks | months]
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
  **-S** *server_name*[ **\\**_instance\_name_]  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
  **-U** *login_ID*  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
@@ -172,7 +172,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
  백업 동작을 지정합니다. **-BkUpDb** 는 전체 데이터베이스를 백업합니다. **-BkUpLog** 는 트랜잭션 로그만 백업합니다.  
   
- *backup_path* 는 백업 디렉터리를 지정합니다. *-UseDefDir* 도 지정한 경우 **backup_path** 는 필요하지 않으며 둘 다 지정하는 경우에는 **-UseDefDir** 값이 우선 적용됩니다. 디렉터리나 \\\\.\TAPE0과 같은 테이프 장치 주소에 백업을 보관할 수 있습니다. 데이터베이스 백업 파일 이름은 다음과 같이 자동으로 생성됩니다.  
+ *backup_path* 는 백업 디렉터리를 지정합니다. *-UseDefDir* 도 지정한 경우 **backup_path** 는 필요하지 않으며 둘 다 지정하는 경우에는 **-UseDefDir** 값이 우선 적용됩니다. 디렉터리나 \\\\.\TAPE0과 같은 테이프 디바이스 주소에 백업을 보관할 수 있습니다. 데이터베이스 백업 파일 이름은 다음과 같이 자동으로 생성됩니다.  
   
 ```  
 dbname_db_yyyyMMddhhmm.BAK  

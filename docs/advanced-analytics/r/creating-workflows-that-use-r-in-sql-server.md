@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: b1c16ac069942af02c2b2d337e887c43d4dff468
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31203385"
@@ -72,7 +72,7 @@ R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
 
-+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Power BI에서 테이블 사용
 
 ### <a name="examples"></a>예
@@ -81,7 +81,7 @@ R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 
 
 CodePlex 프로젝트는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 사용할 수 있는 이미지로 R의 그래픽 출력을 렌더링하는 사용자 지정 보고서 항목을 만드는 데 유용한 코드를 제공합니다.  사용자 지정 보고서 항목을 사용하여 다음을 수행할 수 있습니다.
 
-+ R 그래픽 장치를 사용하여 만든 차트 및 그림을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대시보드에 게시
++ R 그래픽 디바이스를 사용하여 만든 차트 및 그림을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대시보드에 게시
 
 + [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 매개 변수를 R 그림에 전달
 

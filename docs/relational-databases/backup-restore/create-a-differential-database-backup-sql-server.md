@@ -64,13 +64,13 @@ ms.locfileid: "47849898"
 ####  <a name="Permissions"></a> 먼저 권한을 확인하세요.  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 장치의 실제 파일에 대한 소유권 및 권한 문제는 백업 작업에 영향을 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 장치에 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 **않습니다** . 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 실제 리소스에 액세스하기 전까지는 표시되지 않습니다.  
+ 백업 디바이스의 실제 파일에 대한 소유권 및 권한 문제는 백업 작업에 영향을 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 장치에 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 **않습니다** . 백업 디바이스의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 실제 리소스에 액세스하기 전까지는 표시되지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>차등 데이터베이스 백업 만들기  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "47849898"
   
     -   백업할 데이터베이스의 이름  
   
-    -   전체 데이터베이스 백업이 기록되는 백업 장치  
+    -   전체 데이터베이스 백업이 기록되는 백업 디바이스  
   
     -   마지막 전체 데이터베이스 백업이 생성된 후 변경된 데이터베이스 부분만 백업하도록 지정하는 DIFFERENTIAL 절  
   

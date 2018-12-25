@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48079283"
@@ -106,7 +106,7 @@ ms.locfileid: "48079283"
  기준 수치를 설정한 후에 복제 모니터에서 임계값을 설정합니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) 및 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요. 성능 문제가 발생하면 위에 나열된 성능 향상 항목의 제안 사항을 읽어 보고 발생한 문제점에 영향을 주는 영역에서 필요한 사항을 변경하는 것이 좋습니다.  
   
 ## <a name="create-thresholds-and-alerts"></a>임계값 및 경고 만들기  
- 복제 모니터를 사용하면 상태 및 성능과 관련된 여러 임계값을 설정할 수 있습니다. 사용하는 토폴로지에 적합한 임계값을 설정하는 것이 좋습니다. 임계값에 도달하면 경고가 표시되며 선택적으로 경고를 전자 메일 계정, 호출기 또는 다른 장치로 보낼 수 있습니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
+ 복제 모니터를 사용하면 상태 및 성능과 관련된 여러 임계값을 설정할 수 있습니다. 사용하는 토폴로지에 적합한 임계값을 설정하는 것이 좋습니다. 임계값에 도달하면 경고가 표시되며 선택적으로 경고를 전자 메일 계정, 호출기 또는 다른 디바이스로 보낼 수 있습니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   
  모니터링 임계값과 연결시킬 수 있는 경고 외에 복제는 복제 에이전트 동작에 응답하는 미리 정의된 여러 가지 경고를 제공합니다. 관리자가 이러한 경고를 사용하면 복제 토폴로지의 상태에 대한 정보를 계속 받아볼 수 있습니다. 경고에 대해 설명하는 항목을 자세히 읽고 관리 요구 사항에 맞는 경고를 사용하는 것이 좋습니다. 필요한 경우에는 추가 경고를 만들 수도 있습니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48079283"
  게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅숏을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../publish/change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>응용 프로그램 요구 사항이 변경된 경우 스키마 변경 방법 이해  
- _대부분의 경우 응용 프로그램을 제작한 후에 스키마를 변경해야 합니다. 복제 토폴로지에서는 이러한 변경 내용을 모든 구독자에 전파해야 하는 경우가 많습니다. 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
+ _대부분의 경우 응용 프로그램을 제작한 후에 스키마를 변경해야 합니다. 복제 토폴로지에서는 이러한 변경 내용을 모든 구독자에 전파해야 하는 경우가 많습니다. 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
   
 -   ALTER TABLE  
   

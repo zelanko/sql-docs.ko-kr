@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.date: 08/10/2017
 ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51604064"
@@ -170,13 +170,13 @@ ms.locfileid: "51604064"
   
     -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 릴리스용으로 작성된 사용자 지정 인증 확장 프로그램은 다시 컴파일해야 합니다.  
   
-    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
+    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
     -   HTML 3.2 및 HTML OWC 렌더러는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   
     -   다른 사용자 지정 어셈블리는 다시 컴파일할 필요가 없습니다.  
   
-2.  어셈블리를 새 보고서 서버와 보고서 관리자 \bin 폴더로 이동합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 보고서 서버 이진 파일은 기본 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 경우 다음 위치에 있습니다.  
+2.  어셈블리를 새 보고서 서버와 보고서 관리자 \bin 폴더로 이동합니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 보고서 서버 이진 파일은 기본 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 경우 다음 위치에 있습니다.  
   
      `\Program files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -227,11 +227,11 @@ ms.locfileid: "51604064"
 |사용자 지정|정보|  
 |-------------------|-----------------|  
 |사용자 지정 설정으로 보고서 서버 전자 메일 배달|[전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 하 고 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
-|장치 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
+|디바이스 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
 |원격 인스턴스의 보고서 관리자|[보고서 관리자 구성 &#40;기본 모드&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다. 이 그룹에 있는 두 개의 Windows 서비스 그룹의 부르던 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 중 하나를 사용 하 여 연결 하는 사용자 지정 Acl을 사용 하는 경우는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 새 보고서 서버 인스턴스에 대 한 새 그룹에 이러한 Acl을 적용 해야 Windows 그룹 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
+  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다. 이 그룹에 있는 두 개의 Windows 서비스 그룹의 부르던 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 중 하나를 사용 하 여 연결 하는 사용자 지정 Acl을 사용 하는 경우는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 새 보고서 서버 인스턴스에 대 한 새 그룹에 이러한 Acl을 적용 해야 Windows 그룹 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
   
 ##  <a name="bkmk_verify"></a> 배포 확인  
   

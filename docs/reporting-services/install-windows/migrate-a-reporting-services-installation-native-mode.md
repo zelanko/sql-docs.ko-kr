@@ -201,7 +201,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
     * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다.
   
-    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
+    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
     * HTML 3.2 및 HTML OWC 렌더러는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   
@@ -259,7 +259,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 |사용자 지정|정보|  
 |-------------------|-----------------|  
 |사용자 지정 설정으로 보고서 서버 전자 메일 배달|[이메일 설정 - Reporting Services 기본 모드](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
-|장치 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
+|디바이스 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL
 

@@ -236,11 +236,11 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 
 ## <a name="save-your-mobile-report"></a>모바일 보고서 저장  
-보고서를 로컬로 저장하거나 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 저장할 수 있습니다. 로컬로 저장하는 경우 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 는 캐시된 데이터와 함께 저장하므로 이를 열어 계속 작업할 수 있습니다. 하지만 모바일 장치에서 이를 볼 수는 없습니다.   
+보고서를 로컬로 저장하거나 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 저장할 수 있습니다. 로컬로 저장하는 경우 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 는 캐시된 데이터와 함께 저장하므로 이를 열어 계속 작업할 수 있습니다. 하지만 모바일 디바이스에서 이를 볼 수는 없습니다.   
   
 1. 왼쪽 위에서 저장 아이콘을 클릭합니다.   
    
-2. 다른 사람과 공유하고 모바일 장치에서 보려면 **를 서버에 저장**을 클릭합니다.  
+2. 다른 사람과 공유하고 모바일 디바이스에서 보려면 **를 서버에 저장**을 클릭합니다.  
   
 3. 서버에서 모바일 보고서를 저장할 폴더로 이동합니다.  
   
@@ -255,7 +255,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 ## <a name="view-your-report-on-the-web-portal"></a>웹 포털에서 보고서 보기
 
   
-## <a name="view-your-report-on-a-mobile-device"></a>모바일 장치에서 보고서 보기   
+## <a name="view-your-report-on-a-mobile-device"></a>모바일 디바이스에서 보고서 보기   
   
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 보려면 먼저 다음을 수행해야 합니다.
 
@@ -264,7 +264,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 
 ### <a name="view-your-mobile-report"></a>모바일 보고서 보기
   
-1.  모바일 장치에서 Power BI 앱을 열고 로그인합니다.  
+1.  모바일 디바이스에서 Power BI 앱을 열고 로그인합니다.  
     
 2.  Reporting Services 모바일 보고서 및 KPI를 보려면 **Reporting Services**를 탭합니다.  
 ![PBI_iPad_GetStartedSm](../../reporting-services/mobile-reports/media/pbi-ipad-getstartedsm.png)  
