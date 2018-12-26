@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
 ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48878096"
@@ -18,7 +18,7 @@ ms.locfileid: "48878096"
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Server 2016에서 소개된 [SQL Server R Services](../r/sql-server-r-services.md) 의 후속 제품인 SQL Server Machine Learning 서비스에서 제공됩니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다.
+SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Server 2016에서 소개된 [SQL Server R Services](../r/sql-server-r-services.md) 의 후속 제품인 SQL Server Machine Learning 서비스에서 제공됩니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하고 화면의 지시에 따라 머신 러닝 구성 요소를 설치하는 방법을 설명합니다.
 
