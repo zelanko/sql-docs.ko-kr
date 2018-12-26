@@ -43,7 +43,7 @@ ms.locfileid: "51669912"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  XML 인덱스를 **xml** 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 응용 프로그램에서 XML 인덱스를 활용할 수 있습니다.  
+  XML 인덱스를 **xml** 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
   
 -   XML 열의 쿼리가 작업에서 일반적입니다. 데이터를 수정하는 동안 XML 인덱스 유지 관리 비용이 고려되어야 합니다.  
   
@@ -74,7 +74,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  `WHERE` 절의 조건에 맞는 XML 인스턴스를 선택할 수 있도록 `Production.ProductModel` 테이블의 각 행에서 XML BLOB이 런타임 시 단편화됩니다. 그런 다음 `(/PD:ProductDescription/@ProductModelID[.="19"]`메서드의 `exist()` ) 식이 계산됩니다. 이러한 런타임 단편화는 열에 저장된 인스턴스의 크기와 수에 따라 비용이 많이 들 수 있습니다.  
   
- XML BLOB을 쿼리하는 것이 사용자의 응용 프로그램 환경에서 일반적인 경우 이것은 **xml** 형식 열을 인덱싱하는 데 도움이 됩니다. 그러나 데이터 수정 중 인덱스를 유지 관리하는 비용이 듭니다.  
+ XML BLOB을 쿼리하는 것이 사용자의 애플리케이션 환경에서 일반적인 경우 이것은 **xml** 형식 열을 인덱싱하는 데 도움이 됩니다. 그러나 데이터 수정 중 인덱스를 유지 관리하는 비용이 듭니다.  
   
 ## <a name="primary-xml-index"></a>기본 XML 인덱스  
  기본 XML 인덱스는 XML의 XML 인스턴스 내에 있는 모든 태그, 값 및 경로를 인덱싱합니다. 기본 XML 인덱스를 만들려면 XML 열이 발생하는 테이블에는 테이블의 기본 키에 클러스터링된 인덱스가 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 기본 키를 사용하여 기본 XML 인덱스에 있는 행과 XML 열을 포함하는 테이블에 있는 행의 상관 관계를 지정할 수 있습니다.  

@@ -54,7 +54,7 @@ ms.locfileid: "47624701"
  데이터베이스에서 FileTables를 만들려면 데이터베이스에 FILESTREAM 파일 그룹이 있어야 합니다. 이 필수 구성 요소에 대한 자세한 내용은 [FILESTREAM 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md)를 참조하세요.  
   
 ##  <a name="BasicsNTAccess"></a> 데이터베이스 수준에서 비트랜잭션 액세스를 사용하도록 설정  
- FileTable을 사용하면 Windows 응용 프로그램에서 트랜잭션 없이도 FILESTREAM 데이터에 대한 Windows 파일 핸들을 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일에 대해 이 비트랜잭션 액세스를 허용하려면 FileTable을 포함할 각 데이터베이스의 데이터베이스 수준에서 원하는 비트랜잭션 액세스 수준을 지정해야 합니다.  
+ FileTable을 사용하면 Windows 애플리케이션에서 트랜잭션 없이도 FILESTREAM 데이터에 대한 Windows 파일 핸들을 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일에 대해 이 비트랜잭션 액세스를 허용하려면 FileTable을 포함할 각 데이터베이스의 데이터베이스 수준에서 원하는 비트랜잭션 액세스 수준을 지정해야 합니다.  
   
 ###  <a name="HowToCheckAccess"></a> 방법: 데이터베이스에 비트랜잭션 액세스가 사용하도록 설정되어 있는지 확인  
  카탈로그 뷰 [sys.database_filestream_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)를 쿼리하고 **non_transacted_access** 및 **non_transacted_access_desc** 열을 확인합니다.  

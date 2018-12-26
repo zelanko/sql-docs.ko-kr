@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48138273"
@@ -218,7 +218,7 @@ ms.locfileid: "48138273"
  보고서를 처리하는 동안 데이터 집합에 대한 쿼리를 실행하면 결과 집합에 행이 없을 수 있습니다. 렌더링된 보고서에서 빈 데이터 집합에 연결된 데이터 영역은 빈 데이터 영역으로 표시됩니다. 렌더링된 보고서에서 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 모든 데이터 집합에 대한 쿼리에서 런타임에 생성된 데이터가 없는 경우 하위 보고서에 사용할 메시지도 지정할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Options"></a> 데이터 집합 옵션 설정  
- 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL  Server  온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 응용 프로그램에 대한 국가별 고려 사항"  및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
+ 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 애플리케이션에 대한 국가별 고려 사항" 및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   

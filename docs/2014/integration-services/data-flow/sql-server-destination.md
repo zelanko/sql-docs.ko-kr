@@ -21,7 +21,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159893"
@@ -69,7 +69,7 @@ ms.locfileid: "48159893"
   
 -   대량 로드 작업 중에 대상 테이블에서 정의된 삽입 트리거를 실행하지 마십시오.  
   
--   테이블에 잠금을 적용하지 마십시오. 이렇게 하면 대량 삽입 작업 중에 다른 사용자 및 응용 프로그램이 테이블을 사용할 수 있습니다.  
+-   테이블에 잠금을 적용하지 마십시오. 이렇게 하면 대량 삽입 작업 중에 다른 사용자 및 애플리케이션이 테이블을 사용할 수 있습니다.  
   
 ## <a name="configuration-of-the-sql-server-destination"></a>SQL Server 대상 구성  
  다음과 같은 방법으로 SQL Server 대상을 구성할 수 있습니다.  

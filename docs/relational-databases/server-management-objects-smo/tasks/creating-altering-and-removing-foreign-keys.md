@@ -31,7 +31,7 @@ ms.locfileid: "47616241"
  외래 키를 나타내는 열에 나열 됩니다는 **열** 개체의 속성을 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 외래 키에서 참조 되는 기본 키가 나타내는 합니다 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에서 지정한 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성입니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic에서 외래 키 생성, 변경 및 제거  
  이 코드 예제는 한 테이블의 하나 이상의 열 사이에서 다른 테이블의 기본 키 열에 대한 외래 키 관계를 만드는 방법을 보여 줍니다.  

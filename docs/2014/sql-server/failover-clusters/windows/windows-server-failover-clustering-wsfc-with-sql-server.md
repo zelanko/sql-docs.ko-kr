@@ -18,22 +18,22 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696c9d5a560e4b7fd4614a0a6575ebbeb308fdd4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48070813"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
-  WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
+  WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 애플리케이션 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
   
  
   
 ##  <a name="TermsAndDefs"></a> 용어 및 정의  
  WSFC 클러스터  
- WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다.  
+ WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터는 애플리케이션 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다.  
   
  장애 조치(Failover) 클러스터 인스턴스  
- 하나 이상의 응용 프로그램 또는 서비스를 실행하는 데 필요한 IP 주소 리소스, 네트워크 이름 리소스 및 추가 리소스를 관리하는 Windows 서비스 인스턴스입니다. 클라이언트는 네트워크 이름을 사용하여 그룹의 리소스에 액세스할 수 있습니다. 이는 컴퓨터 이름을 사용하여 실제 서버의 서비스에 액세스하는 것과 비슷합니다. 그러나 장애 조치(Failover) 클러스터 인스턴스는 그룹이기 때문에 기본 이름 또는 주소에 영향을 주지 않고 다른 노드에 장애 조치될 수 있습니다.  
+ 하나 이상의 애플리케이션 또는 서비스를 실행하는 데 필요한 IP 주소 리소스, 네트워크 이름 리소스 및 추가 리소스를 관리하는 Windows 서비스 인스턴스입니다. 클라이언트는 네트워크 이름을 사용하여 그룹의 리소스에 액세스할 수 있습니다. 이는 컴퓨터 이름을 사용하여 실제 서버의 서비스에 액세스하는 것과 비슷합니다. 그러나 장애 조치(Failover) 클러스터 인스턴스는 그룹이기 때문에 기본 이름 또는 주소에 영향을 주지 않고 다른 노드에 장애 조치될 수 있습니다.  
   
  노드  
  서버 클러스터의 활성 또는 비활성 멤버인 Microsoft Windows Server 시스템입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48070813"
  노드에서 소유하고, 온라인 또는 오프라인으로 전환하고, 노드 간에 이동하고, 클러스터 개체로 관리할 수 있는 물리적 엔터티 또는 논리적 엔터티입니다. 클러스터 리소스는 항상 하나의 노드에서만 소유할 수 있습니다.  
   
  리소스 그룹  
- 단일 클러스터 개체로 관리되는 클러스터 리소스 모음입니다. 일반적으로 리소스 그룹은 특정 응용 프로그램이나 서비스를 실행하는 데 필요한 모든 클러스터 리소스를 포함합니다. 장애 조치(Failover) 및 장애 복구(failback)는 리소스 그룹에만 적용됩니다.  
+ 단일 클러스터 개체로 관리되는 클러스터 리소스 모음입니다. 일반적으로 리소스 그룹은 특정 애플리케이션이나 서비스를 실행하는 데 필요한 모든 클러스터 리소스를 포함합니다. 장애 조치(Failover) 및 장애 복구(failback)는 리소스 그룹에만 적용됩니다.  
   
  리소스 종속성  
  다른 리소스에 종속되는 리소스입니다. 리소스 A가 리소스 B에 종속하는 경우 B는 A의 종속성입니다.  
@@ -65,22 +65,22 @@ ms.locfileid: "48070813"
  참조 항목: [장애 조치(Failover) 클러스터 용어 설명](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server 장애 조치(Failover) 클러스터링 개요  
- Windows Server 장애 조치(Failover) 클러스터링은 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Microsoft Exchange 등의 호스팅된 서버 응용 프로그램의 고가용성 및 재해 복구 시나리오를 지원하는 인프라 기능을 제공합니다. 클러스터 노드 또는 서비스가 실패하면 해당 노드에 호스팅된 서비스는 *장애 조치(Failover)* 라는 프로세스를 통해 사용 가능한 다른 노드에 자동으로 전송되거나 수동으로 전송할 수 있습니다.  
+ Windows Server 장애 조치(Failover) 클러스터링은 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Microsoft Exchange 등의 호스팅된 서버 애플리케이션의 고가용성 및 재해 복구 시나리오를 지원하는 인프라 기능을 제공합니다. 클러스터 노드 또는 서비스가 실패하면 해당 노드에 호스팅된 서비스는 *장애 조치(Failover)* 라는 프로세스를 통해 사용 가능한 다른 노드에 자동으로 전송되거나 수동으로 전송할 수 있습니다.  
   
  WSFC 클러스터의 노드가 함께 작동하여 다음과 같은 기능을 제공합니다.  
   
--   **분산된 메타데이터 및 알림.** WSFC 서비스와 호스팅된 응용 프로그램 메타데이터가 클러스터의 각 노드에서 유지 관리됩니다. 이 메타데이터에는 WSFC 구성 및 상태와 호스팅된 응용 프로그램 설정이 포함됩니다. 노드의 메타데이터 또는 상태에 대한 변경 내용은 클러스터의 다른 노드에 자동으로 전파됩니다.  
+-   **분산된 메타데이터 및 알림.** WSFC 서비스와 호스팅된 애플리케이션 메타데이터가 클러스터의 각 노드에서 유지 관리됩니다. 이 메타데이터에는 WSFC 구성 및 상태와 호스팅된 애플리케이션 설정이 포함됩니다. 노드의 메타데이터 또는 상태에 대한 변경 내용은 클러스터의 다른 노드에 자동으로 전파됩니다.  
   
--   **리소스 관리.** 클러스터의 개별 노드는 직접 연결된 저장소, 네트워크 인터페이스, 공유 디스크 저장소에 대한 액세스 등의 실제 리소스를 제공합니다. 호스팅된 응용 프로그램은 클러스터 리소스로 등록되며 다른 리소스에 대한 시작 및 상태 종속성을 구성할 수 있습니다.  
+-   **리소스 관리.** 클러스터의 개별 노드는 직접 연결된 저장소, 네트워크 인터페이스, 공유 디스크 저장소에 대한 액세스 등의 실제 리소스를 제공합니다. 호스팅된 애플리케이션은 클러스터 리소스로 등록되며 다른 리소스에 대한 시작 및 상태 종속성을 구성할 수 있습니다.  
   
 -   **상태 모니터링.** 노드 간 상태 검색 및 주 노드 상태 검색은 하트비트 스타일 네트워크 통신과 리소스 모니터링의 조합을 통해 수행됩니다. 클러스터의 전반적인 상태는 클러스터에서 노드의 쿼럼 투표에 의해 결정됩니다.  
   
--   **장애 조치(Failover) 조정.** 각 리소스는 주 노드에 호스팅되도록 구성되며, 하나 이상의 보조 노드에 자동 또는 수동으로 전송될 수 있습니다. 상태 기반 장애 조치(Failover) 정책은 노드 간의 리소스 소유권 자동 전송을 제어합니다. 장애 조치(Failover)가 발생할 경우 적절히 대응할 수 있도록 노드 및 호스팅된 응용 프로그램에 알림을 제공합니다.  
+-   **장애 조치(Failover) 조정.** 각 리소스는 주 노드에 호스팅되도록 구성되며, 하나 이상의 보조 노드에 자동 또는 수동으로 전송될 수 있습니다. 상태 기반 장애 조치(Failover) 정책은 노드 간의 리소스 소유권 자동 전송을 제어합니다. 장애 조치(Failover)가 발생할 경우 적절히 대응할 수 있도록 노드 및 호스팅된 애플리케이션에 알림을 제공합니다.  
   
  참조 항목: [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 기술 및 WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* 새 높은 가용성 및 재해 복구 솔루션을 WSFC를 활용 하는 합니다. AlwaysOn은 응용 프로그램 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* 새 높은 가용성 및 재해 복구 솔루션을 WSFC를 활용 하는 합니다. AlwaysOn은 애플리케이션 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 WSFC를 플랫폼 기술로 사용하고 구성 요소를 WSFC 클러스터 리소스로 등록합니다.  관련 리소스는 *리소스 그룹*에 결합되므로 다른 WSFC 클러스터 리소스에 종속될 수 있습니다. WSFC 클러스터 서비스에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 하는지 감지하여 신호를 보내거나 WSFC 클러스터의 다른 서버 노드에 자동으로 장애 조치합니다.  
   

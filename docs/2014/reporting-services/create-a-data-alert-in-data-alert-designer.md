@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
 ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "49071847"
@@ -41,7 +41,7 @@ ms.locfileid: "49071847"
      데이터 경고 디자이너가 열리고 보고서가 생성하는 첫 번째 데이터 피드의 처음 100개 행이 테이블에 표시됩니다.  
   
     > [!NOTE]  
-    >  **새 데이터 경고** 옵션이 표시되지 않을 경우 경고 서비스가 SharePoint 사이트에 구성되어 있지 않거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에 데이터 경고가 없는 것입니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
+    >  **새 데이터 경고** 옵션이 표시되지 않을 경우 경고 서비스가 SharePoint 사이트에 구성되어 있지 않거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에 데이터 경고가 없는 것입니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
     >   
     >  **새 데이터 경고** 옵션이 회색으로 표시될 경우에는 보고서 데이터 원본이 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성되어 있는 것입니다. **새 데이터 경고** 옵션을 사용하려면 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 데이터 원본을 업데이트해야 합니다.  
   

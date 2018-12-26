@@ -218,7 +218,7 @@ SSMS는 PATH 환경 변수에 추가되지 않습니다.
 SMO:
 
 - 다시 시작 가능한 인덱스 생성을 위한 SMO 지원을 확장합니다.
-- SMO 개체에서 새 이벤트(“PropertyMissing”)를 추가하여 응용 프로그램 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.
+- SMO 개체에서 새 이벤트(“PropertyMissing”)를 추가하여 애플리케이션 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.
 - "백업 체크섬 기본값" 서버 구성에 매핑되는 Configuration 개체에 대한 새 *DefaultBackupChecksum* 속성이 공개되었습니다.
 
 SSMS:
@@ -303,7 +303,7 @@ SSMS 편집기:
 - SSMS가 OE(잘못 구성된 DataCollector)에서 “관리” 노드를 확장하려고 할 때 “DBNull에서 다른 형식으로 개체를 캐스트할 수 없음” 예외를 throw하는 문제를 해결했습니다.
 - 노드 이름을 바꿀 때 DEL 키가 작동하지 않는 문제를 해결했습니다(https://feedback.azure.com/forums/908035/suggestions/32910247 및 기타 중복 항목).
 - “상위 N 편집...”을 호출하기 전에는 OE가 따옴표를 이스케이프 처리하지 않아 디자이너가 혼동하게 되는 문제를 해결했습니다.
-- “데이터 계층 응용 프로그램 가져오기” 마법사가 Azure Storage 트리에서 시작되지 않던 문제를 해결했습니다.
+- “데이터 계층 애플리케이션 가져오기” 마법사가 Azure Storage 트리에서 시작되지 않던 문제를 해결했습니다.
 - SSL 확인란의 상태가 지속되지 않은 “데이터베이스 메일 구성”의 문제를 해결했습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541).
 - is_auto_update_stats_async_on을 사용하여 데이터베이스를 복원하려고 할 때 SSMS에서 기존 연결을 닫는 ograyedto를 회색으로 표시하는 문제가 해결되었습니다.
 - OE에서 노드(예: "테이블")를 마우스 오른쪽 단추로 클릭하고 **필터 > 필터 설정**으로 차례로 이동하여 테이블 필터링과 같은 작업을 수행하려고 하면 SSMS가 현재 활성화된 위치 이외의 다른 화면에 필터 설정 양식이 나타날 수 있는 문제가 해결되었습니다(https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106).
@@ -499,7 +499,7 @@ Azure SQL:
 - “플랫 파일 마법사” 대화 상자의 도움말 페이지에 대한 링크를 수정함 
 - 테이블이 이미 있는 경우 마법사에서 대상 테이블 변경을 허용하지 않는 문제를 해결했습니다. 사용자는 마법사를 종료하지 않고 다시 시도하고 실패한 테이블을 삭제하고 마법사에 정보를 다시 입력할 수 있습니다(사용자 의견 항목: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186).
 
-데이터 계층 응용 프로그램 가져오기/내보내기:
+데이터 계층 애플리케이션 가져오기/내보내기:
 
 - 파티션이 정의된 테이블과 인덱스가 없는 테이블을 처리할 때 “오류 SQL72014: .Net SqlClient 데이터 공급자: Msg 9108, 수준 16, 상태 10, 줄 1 이러한 유형의 통계는 증분 통계가 될 수 없습니다.” 같은 메시지와 함께 .bacpac 가져오기를 실패하게 만드는 문제(DacFx에서)를 해결했습니다.
 
@@ -914,7 +914,7 @@ SQL DW에 대해 SQL 데이터베이스를 스크립팅하면 잘못된 T-SQL �
 - 프로파일러: Azure AS에 대해 Window 인증을 사용하여 연결할 때 발생하는 문제를 수정했습니다.
 - 1400 모델에 대한 연결 세부 정보를 취소할 때 크래시를 일으킬 수 있는 문제를 수정했습니다.
 - 자격 증명을 새로 고치는 동안 연결 속성 대화 상자에서 Azure BLOB 키를 설정할 때 이제는 키가 시각적으로 마스킹됩니다.
-- 검색할 때 개체 ID 대신 응용 프로그램 ID를 표시하도록 Azure Analysis Services 사용자 선택 대화 상자의 문제를 수정했습니다.
+- 검색할 때 개체 ID 대신 애플리케이션 ID를 표시하도록 Azure Analysis Services 사용자 선택 대화 상자의 문제를 수정했습니다.
 - 아이콘이 일부 단추에 올바르지 않게 매핑되는 문제를 일으키는 데이터베이스 찾아보기\MDX 쿼리 디자이너 도구 모음 문제를 수정했습니다.
 - msmdpump IIS http/https 주소를 사용하여 SSAS에 연결할 수 없는 문제를 수정했습니다.
 - 이제 Azure Analysis Services 사용자 선택 대화 상자의 여러 문자열이 추가 언어로 번역되었습니다.
@@ -1100,7 +1100,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 
 - 텍스트 형식의 쿼리 결과를 인쇄할 때의 문제 해결.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - SQL Azure 데이터베이스에서 개체 삭제를 스크립팅할 때 SSMS가 테이블 및 그러한 개체를 잘못 끌어오는 문제 해결.
-- “하나 이상의 구성 요소를 찾을 수 없습니다. 응용 프로그램을 다시 설치하세요.”와 같은 오류로 SSMS가 가끔 시작을 거부하는 문제 해결.
+- “하나 이상의 구성 요소를 찾을 수 없습니다. 애플리케이션을 다시 설치하세요.”와 같은 오류로 SSMS가 가끔 시작을 거부하는 문제 해결.
 - SSMS UI의 SPID가 부실하고 동기화되지 않는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - SSMS(자동) 설치 프로그램에서 /passive 인수가 /quiet으로 처리되는 문제 해결.
 - SSMS를 시작할 때 가끔 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다.” 오류가 발생하는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3134698
@@ -1118,7 +1118,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - “상위 n개 행 선택”에 “TOP” 절이 포함되지 않았던 문제 해결. Azure SQLDW의 경우. https://connect.microsoft.com/SQLServer/feedback/details/3133551 및 https://connect.microsoft.com/SQLServer/feedback/details/3135874
 - QueryStoreUI: 사용자 지정이 아닌 시간 간격이 올바로 작동하지 않는 보고서가 있었던 문제 해결.
 - Always Encrypted: 새 CMK 대화 상자에서 AKV 권한 상태에 대한 메시징 기능 개선. 긴 이름을 가진 CEK를 보다 쉽게 구분할 수 있도록 CEK 드롭다운에 도구 설명 추가. 일부 CNG 키 저장소 공급자가 Always Encrypted를 위한 [새 열 마스터 키] 대화 상자에 표시되지 않는 문제 해결.
-- SSMS 연결에 대해 일관성 없는 “응용 프로그램 이름” 해결. https://connect.microsoft.com/SQLServer/feedback/details/3135115
+- SSMS 연결에 대해 일관성 없는 “애플리케이션 이름” 해결. https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - SSMS가 SQL Azure에 대한 정확한 스크립트(DATA_COMPRESSIONS 옵션을 포함한 테이블 및 인덱스)를 생성하지 않았던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - 사용자가 빠른 실행을 위해 CTRL+Q 바로 가기를 사용할 수 없었던 문제 해결(참고: 이제 쿼리 편집기에서 "IntelliSense 사용" 옵션을 설정/해제하기 위한 새 키 바인딩은 CTRL+B, CTRL+I). https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - "데이터베이스 복원"에서 사용자 지정 도메인이 정의된 계정을 가진 구독에서 저장소 계정을 선택하려고 할 때 SSMS가 예외를 throw했던 문제 해결
@@ -1153,7 +1153,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Profiler: 도움말 > 정보에 이제 릴리스 버전 번호(예: 17.1)가 표시됨
 - Analysis Services 사용자가 데이터 원본의 상황에 맞는 메뉴에서 1200 TM 모델 이상에 대해 데이터 원본의 자격 증명을 새로 고칠 수 있음
 - 기본 제공 SSIS 보고서에 CTP 2.1에서 SSIS Scale Out 실행의 로그가 표시됨
-- SSIS Scale Out 관리 응용 프로그램
+- SSIS Scale Out 관리 애플리케이션
   - 스케일 아웃 마스터에 대한 기본 정보 보기
   - 스케일 아웃 배포에 작업자를 쉽게 추가
   - 모든 확장 작업자 및 해당 작업자에 대한 기본 정보를 보고 간단히 작업자를 사용하거나 사용하지 않도록 설정할 수도 있음
@@ -1354,7 +1354,7 @@ SSMS 설치에 문제가 있고, 표준 제거 및 다시 설치로 해결되지
 
     ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
 
-3.  응용 프로그램을 제거하는 것과 동일한 방식으로 Microsoft Visual C++ 2015 재배포 가능 패키지를 제거합니다. x86 및 x64 버전이 컴퓨터에 설치되어 있으면 모두 제거합니다.
+3.  애플리케이션을 제거하는 것과 동일한 방식으로 Microsoft Visual C++ 2015 재배포 가능 패키지를 제거합니다. x86 및 x64 버전이 컴퓨터에 설치되어 있으면 모두 제거합니다.
 
 4.  **관리자 권한 cmd 프롬프트에서** Visual Studio 2015 IsoShell을 다시 설치합니다.  
 

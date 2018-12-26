@@ -76,7 +76,7 @@ ms.locfileid: "47789071"
   
 -   32개보다 많은 CPU를 허용하려면 처음 32개 CPU에 대해 4바이트 affinity mask를 구성하고 나머지 CPU에 대해 최대 4바이트 affinity64 mask를 구성합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세서 선호도 설정은 특수 작업이므로 필요한 경우에만 사용하는 것이 좋습니다. 대부분의 경우 Microsoft Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다. 선호도 마스크를 설정할 때 다른 응용 프로그램의 CPU 요구 사항도 고려해야 합니다. 자세한 내용은 Windows 운영 체제 설명서를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세서 선호도 설정은 특수 작업이므로 필요한 경우에만 사용하는 것이 좋습니다. 대부분의 경우 Microsoft Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다. 선호도 마스크를 설정할 때 다른 애플리케이션의 CPU 요구 사항도 고려해야 합니다. 자세한 내용은 Windows 운영 체제 설명서를 참조하십시오.  
   
 > [!NOTE]  
 >  Windows 시스템 모니터를 사용하여 각 프로세서 사용량을 확인 및 분석할 수 있습니다.  

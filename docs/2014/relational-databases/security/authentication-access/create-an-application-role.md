@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 역할 만들기 | Microsoft 문서
+title: 애플리케이션 역할 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48076263"
 ---
-# <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
+# <a name="create-an-application-role"></a>애플리케이션 역할 만들기
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 애플리케이션 역할을 만드는 방법에 대해 설명합니다. 애플리케이션 역할은 특정 애플리케이션을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 애플리케이션 역할에 사용자가 없으므로 **애플리케이션 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
   
 > [!IMPORTANT]  
->  응용 프로그램 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 응용 프로그램 역할을 호출하는 응용 프로그램은 해당 암호를 저장해야 합니다. 응용 프로그램 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
+>  애플리케이션 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 애플리케이션 역할을 호출하는 애플리케이션은 해당 암호를 저장해야 합니다. 애플리케이션 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
   
  **항목 내용**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "48076263"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-##### <a name="to-create-an-application-role"></a>응용 프로그램 역할을 만들려면  
+##### <a name="to-create-an-application-role"></a>애플리케이션 역할을 만들려면  
   
-1.  개체 탐색기에서 응용 프로그램 역할을 만들 데이터베이스를 확장합니다.  
+1.  개체 탐색기에서 애플리케이션 역할을 만들 데이터베이스를 확장합니다.  
   
 2.  **보안** 폴더를 확장합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48076263"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-create-an-application-role"></a>응용 프로그램 역할을 만들려면  
+#### <a name="to-create-an-application-role"></a>애플리케이션 역할을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

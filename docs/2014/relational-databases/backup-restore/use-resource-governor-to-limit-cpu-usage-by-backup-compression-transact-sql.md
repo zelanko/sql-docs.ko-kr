@@ -27,7 +27,7 @@ ms.locfileid: "48108163"
   기본적으로 압축을 사용하여 백업하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 경합이 발생하면 CPU 사용량이[Resource Governor](../resource-governor/resource-governor.md) 로 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 이 항목에서는 이와 같은 경우에 CPU 사용량을 제한하는 리소스 관리자 작업 그룹에 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 세션을 매핑하는 방법으로 이러한 세션을 분류하는 시나리오를 제공합니다.  
   
 > [!IMPORTANT]  
->  주어진 리소스 관리자 시나리오에서 사용자 이름, 응용 프로그램 이름을 비롯해 연결을 차별화하는 어떠한 요소라도 세션 분류의 기준이 될 수 있습니다. 자세한 내용은 [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) 및 [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md)를 참조하세요.  
+>  주어진 리소스 관리자 시나리오에서 사용자 이름, 애플리케이션 이름을 비롯해 연결을 차별화하는 어떠한 요소라도 세션 분류의 기준이 될 수 있습니다. 자세한 내용은 [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) 및 [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md)를 참조하세요.  
   
 ##  <a name="Top"></a> 이 항목에서는 다음과 같은 시나리오를 순서대로 다룹니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기 | Microsoft 문서
+title: FILESTREAM 데이터용 클라이언트 애플리케이션 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a9b4b5b41908c726f8baca6acb38a8bcacdf93a6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48151053"
 ---
-# <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기
+# <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 애플리케이션 만들기
   Win32를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓸 수 있습니다. 다음 단계가 필요합니다.  
   
 -   FILESTREAM 파일 경로를 읽습니다.  
@@ -32,15 +32,15 @@ ms.locfileid: "48151053"
 >  이 항목의 예에서는 [FILESTREAM 사용 데이터베이스 만들기](create-a-filestream-enabled-database.md) 및 [FILESTREAM 데이터 저장용 테이블 만들기](create-a-table-for-storing-filestream-data.md)에서 만든 FILESTREAM 사용 데이터베이스 및 테이블이 필요합니다.  
   
 ##  <a name="func"></a> FILESTREAM 데이터 작업을 위한 함수  
- FILESTREAM을 사용하여 BLOB(Binary Large Object) 데이터를 저장하면 Win32 API를 사용하여 파일을 작업할 수 있습니다. Win32 응용 프로그램에서의 FILESTREAM BLOB 데이터 작업을 지원하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음 기능과 API를 제공합니다.  
+ FILESTREAM을 사용하여 BLOB(Binary Large Object) 데이터를 저장하면 Win32 API를 사용하여 파일을 작업할 수 있습니다. Win32 애플리케이션에서의 FILESTREAM BLOB 데이터 작업을 지원하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음 기능과 API를 제공합니다.  
   
--   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) 은 BLOB에 대한 토큰으로 경로를 반환합니다. 응용 프로그램은 이 토큰을 사용하여 Win32 핸들을 얻고 BLOB 데이터에 대한 작업을 수행합니다.  
+-   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) 은 BLOB에 대한 토큰으로 경로를 반환합니다. 애플리케이션은 이 토큰을 사용하여 Win32 핸들을 얻고 BLOB 데이터에 대한 작업을 수행합니다.  
   
      FILESTREAM 데이터가 포함된 데이터베이스가 AlwaysOn 가용성 그룹에 속하는 경우 PathName 함수가 컴퓨터 이름 대신 VNN(가상 네트워크 이름)을 반환합니다.  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)는 세션의 현재 트랜잭션을 나타내는 토큰을 반환합니다. 응용 프로그램은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다.  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)는 세션의 현재 트랜잭션을 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다.  
   
--   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 응용 프로그램에서는 이 핸들을 사용하여 FILESTREAM 데이터를 스트리밍한 후 [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)같은 Win32 API 함수에 핸들을 전달합니다. 응용 프로그램이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 응용 프로그램에서는 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 애플리케이션에서는 이 핸들을 사용하여 FILESTREAM 데이터를 스트리밍한 후 [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)같은 Win32 API 함수에 핸들을 전달합니다. 애플리케이션이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 애플리케이션에서는 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 SQL 데이터 및 FILESTREAM 데이터 간에 일관성을 유지할 수 있습니다.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48151053"
   
 ##  <a name="best"></a> 응용 프로그램 디자인 및 구현을 위한 최상의 방법  
   
--   FILESTREAM이 사용된 응용 프로그램을 디자인하고 구현할 때는 다음 지침을 고려하십시오.  
+-   FILESTREAM이 사용된 애플리케이션을 디자인하고 구현할 때는 다음 지침을 고려하십시오.  
   
 -   초기화되지 않은 FILESTREAM 열을 나타내는 데 0x 대신 NULL을 사용합니다. 0x 값을 사용하면 파일이 생성되고, NULL을 사용했을 때는 그렇지 않습니다.  
   
--   null이 아닌 FILESTREAM 열이 포함된 테이블에 삽입 및 삭제 작업을 사용하지 마십시오. 삽입 및 삭제 작업은 가비지 수집에 사용되는 FILESTREAM 테이블을 수정할 수 있습니다. 그러면 시간이 지남에 따라 응용 프로그램 성능이 저하됩니다.  
+-   null이 아닌 FILESTREAM 열이 포함된 테이블에 삽입 및 삭제 작업을 사용하지 마십시오. 삽입 및 삭제 작업은 가비지 수집에 사용되는 FILESTREAM 테이블을 수정할 수 있습니다. 그러면 시간이 지남에 따라 애플리케이션 성능이 저하됩니다.  
   
--   복제가 사용되는 응용 프로그램에 NEWID() 대신 NEWSEQUENTIALID()를 사용합니다. NEWSEQUENTIALID()는 이런 응용 프로그램에서 GUID를 생성하는 성능이 NEWID()보다 우수합니다.  
+-   복제가 사용되는 애플리케이션에 NEWID() 대신 NEWSEQUENTIALID()를 사용합니다. NEWSEQUENTIALID()는 이런 애플리케이션에서 GUID를 생성하는 성능이 NEWID()보다 우수합니다.  
   
 -   FILESTREAM API는 데이터에 대한 Win32 스트리밍 액세스를 위해 디자인되었습니다. 2MB가 넘는 FILESTREAM BLOB(Binary Large Object)을 읽거나 쓰는 데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하지 마세요. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 BLOB 데이터를 읽거나 써야 하는 경우에는 Win32에서 FILESTREAM BLOB을 열기 전에 먼저 모든 BLOB 데이터가 사용되었는지 확인합니다. 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터가 사용되지 않은 경우 후속 FILESTREAM 열기 또는 닫기 작업이 실패할 수 있습니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48151053"
   
 -   소규모 BLOB 업데이트를 FILESTREAM BLOB에 추가하지 마십시오. 추가할 때마다 기본 FILESTREAM 파일이 복사됩니다. 응용 프로그램에 작은 Blob을 추가할 경우에 Blob를 작성 한 `varbinary(max)` 열을 한 후 Blob 개수가 미리 지정 된 한도 도달 하면 FILESTREAM BLOB에 단일 쓰기 작업을 수행 합니다.  
   
--   응용 프로그램에서 다수의 BLOB 파일의 데이터 길이를 검색하지 마십시오. 데이터 크기는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되지 않으므로 이 작업에는 시간이 많이 소요됩니다. BLOB 파일의 길이를 확인해야 한다면 BLOB이 닫혀 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 함수를 사용하여 그 크기를 검토하세요. DATALENGTH()는 BLOB 파일 크기를 확인하기 위해 파일을 열지 않습니다.  
+-   애플리케이션에서 다수의 BLOB 파일의 데이터 길이를 검색하지 마십시오. 데이터 크기는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되지 않으므로 이 작업에는 시간이 많이 소요됩니다. BLOB 파일의 길이를 확인해야 한다면 BLOB이 닫혀 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 함수를 사용하여 그 크기를 검토하세요. DATALENGTH()는 BLOB 파일 크기를 확인하기 위해 파일을 열지 않습니다.  
   
--   응용 프로그램이 SMB1(메시지 블록 1) 프로토콜을 사용하는 경우 성능 최대화를 위해 FILESTREAM BLOB 데이터를 60KB의 배수로 읽어야 합니다.  
+-   애플리케이션이 SMB1(메시지 블록 1) 프로토콜을 사용하는 경우 성능 최대화를 위해 FILESTREAM BLOB 데이터를 60KB의 배수로 읽어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지](avoid-conflicts-with-database-operations-in-filestream-applications.md)   

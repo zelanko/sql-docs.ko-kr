@@ -22,7 +22,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61f62b56e2eb825f933dc11a30039e9b18ca9228
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48125893"
@@ -30,7 +30,7 @@ ms.locfileid: "48125893"
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
   데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
   
--   응용 프로그램에서 필요한 성능을 확보합니다.  
+-   애플리케이션에서 필요한 성능을 확보합니다.  
   
 -   데이터 및 인덱스를 저장하는 데 필요한 물리적 디스크 공간을 충분히 확보합니다.  
   

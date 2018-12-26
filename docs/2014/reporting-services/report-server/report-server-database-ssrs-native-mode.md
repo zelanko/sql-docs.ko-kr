@@ -28,7 +28,7 @@ ms.locfileid: "48073883"
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
   보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
   
- SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치도 데이터 경고 기능에 대한 데이터베이스를 만듭니다. SharePoint 모드에 있는 3개의 데이터베이스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램과 연결되어 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
+ SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치도 데이터 경고 기능에 대한 데이터베이스를 만듭니다. SharePoint 모드에 있는 3개의 데이터베이스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션과 연결되어 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
   
  데이터베이스는 로컬 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 실행될 수 있습니다. 시스템 리소스가 충분하거나 소프트웨어 라이선스를 절약하려는 경우 로컬 인스턴스를 선택하면 유용하지만 원격 컴퓨터에서 데이터베이스를 실행하면 성능이 개선될 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48073883"
   
 -   보고서 데이터 원본에 대한 대칭 키와 암호화된 연결 및 자격 증명  
   
- 보고서 서버 데이터베이스에서는 응용 프로그램 상태 및 지속적 데이터를 저장하므로 데이터 손실을 방지하려면 이 데이터베이스에 대한 백업 일정을 만들어야 합니다. 데이터베이스를 백업하는 방법에 대한 권장 사항 및 지침은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)을 참조하세요.  
+ 보고서 서버 데이터베이스에서는 애플리케이션 상태 및 지속적 데이터를 저장하므로 데이터 손실을 방지하려면 이 데이터베이스에 대한 백업 일정을 만들어야 합니다. 데이터베이스를 백업하는 방법에 대한 권장 사항 및 지침은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)을 참조하세요.  
   
 ## <a name="report-server-temporary-database"></a>보고서 서버 임시 데이터베이스  
  각 보고서 서버 데이터베이스는 관련된 임시 데이터베이스를 사용하여 보고서 서버에서 생성한 세션 및 실행 데이터, 캐시된 보고서 및 작업 테이블을 저장합니다. 백그라운드 서버 프로세스에서는 임시 데이터베이스의 테이블에서 사용되지 않는 오래된 항목을 정기적으로 제거합니다.  

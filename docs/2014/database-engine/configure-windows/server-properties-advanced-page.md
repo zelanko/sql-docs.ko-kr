@@ -15,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bd580c03657a35ac7244daca778d0585563c9d0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48225443"
@@ -103,10 +103,10 @@ ms.locfileid: "48225443"
   
 ## <a name="network"></a>네트워크  
  **네트워크 패킷 크기**  
- 전체 네트워크에서 사용되는 패킷 크기(바이트)를 설정합니다. 기본 패킷 크기는 4096바이트입니다. 응용 프로그램에서 대량 복사 작업을 수행하거나 많은 양의 `text` 또는 `image` 데이터를 주고 받을 때 패킷 크기를 기본값보다 크게 설정하면 네트워크에서 읽거나 쓰는 양이 줄어들므로 효율성이 향상될 수 있습니다. 응용 프로그램이 적은 정보를 주거나 받을 때는 대부분의 데이터를 전송할 수 있도록 패킷 크기를 512바이트로 설정합니다. 자세한 내용은 [network packet size 서버 구성 옵션 구성](configure-the-network-packet-size-server-configuration-option.md)을 참조하세요.  
+ 전체 네트워크에서 사용되는 패킷 크기(바이트)를 설정합니다. 기본 패킷 크기는 4096바이트입니다. 애플리케이션에서 대량 복사 작업을 수행하거나 많은 양의 `text` 또는 `image` 데이터를 주고 받을 때 패킷 크기를 기본값보다 크게 설정하면 네트워크에서 읽거나 쓰는 양이 줄어들므로 효율성이 향상될 수 있습니다. 애플리케이션이 적은 정보를 주거나 받을 때는 대부분의 데이터를 전송할 수 있도록 패킷 크기를 512바이트로 설정합니다. 자세한 내용은 [network packet size 서버 구성 옵션 구성](configure-the-network-packet-size-server-configuration-option.md)을 참조하세요.  
   
 > [!NOTE]  
->  성능이 향상될 것이라는 확신이 없으면 패킷 크기를 변경하지 마세요. 대부분의 응용 프로그램에는 기본 패킷 크기가 제일 좋습니다.  
+>  성능이 향상될 것이라는 확신이 없으면 패킷 크기를 변경하지 마세요. 대부분의 애플리케이션에는 기본 패킷 크기가 제일 좋습니다.  
   
  **원격 로그인 제한 시간**  
  실패한 원격 로그인 시도에서 원래 상태로 되돌아오기까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기다리는 시간(초)을 지정합니다. 이 설정은 유형이 다른 쿼리를 위한 OLE DB Provider로의 연결에 영향을 줍니다. 기본값은 20초입니다. 값을 0으로 설정하면 무한정 기다릴 수 있습니다. 자세한 내용은 [remote login timeout 서버 구성 옵션 구성](configure-the-remote-login-timeout-server-configuration-option.md)을 참조하세요.  

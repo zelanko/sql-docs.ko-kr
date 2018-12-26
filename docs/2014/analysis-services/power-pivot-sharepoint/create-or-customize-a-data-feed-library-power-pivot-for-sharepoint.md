@@ -16,13 +16,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48126693"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 PowerPivot)
-  *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 응용 프로그램에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  
+  *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 애플리케이션에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  
   
 -   특정 피드에 대한 HTTP 연결을 지정하는 데 사용되는 *데이터 서비스 문서*만들기 또는 편집  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48126693"
   
 -   동일한 라이브러리에 저장 된 다른 문서에서 서비스 문서를 쉽게 구분할 수 있도록 아이콘을 사용 하 여 데이터 서비스 문서를 시각적으로 식별 합니다. ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
- 데이터 피드 라이브러리에는 항상 데이터 서비스 문서(.atomsvc) 파일이 포함되어 있고 데이터 피드 자체는 포함되어 있지 않습니다. 정적 XML 데이터로 구성되는 데이터 피드와 달리 데이터 서비스 문서는 반복 가능한 가져오기 작업에 재사용 가능한 연결 정보를 제공하여 요청에 따라 피드를 생성하는 서비스 또는 응용 프로그램에 대한 URL을 지정합니다.  
+ 데이터 피드 라이브러리에는 항상 데이터 서비스 문서(.atomsvc) 파일이 포함되어 있고 데이터 피드 자체는 포함되어 있지 않습니다. 정적 XML 데이터로 구성되는 데이터 피드와 달리 데이터 서비스 문서는 반복 가능한 가져오기 작업에 재사용 가능한 연결 정보를 제공하여 요청에 따라 피드를 생성하는 서비스 또는 애플리케이션에 대한 URL을 지정합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48126693"
  라이브러리를 만들려면 사이트 소유자여야 합니다.  
   
 ##  <a name="createlib"></a> 새 데이터 피드 라이브러리 만들기  
- 데이터 피드 라이브러리 만들기는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대해 데이터 피드를 사용하도록 설정하는 첫 번째 단계입니다. 데이터 피드 라이브러리는 데이터 서비스 문서에 대한 응용 프로그램 및 관리 페이지를 제공하므로, 새 문서를 만들려면 이 라이브러리가 있어야 합니다.  
+ 데이터 피드 라이브러리 만들기는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대해 데이터 피드를 사용하도록 설정하는 첫 번째 단계입니다. 데이터 피드 라이브러리는 데이터 서비스 문서에 대한 애플리케이션 및 관리 페이지를 제공하므로, 새 문서를 만들려면 이 라이브러리가 있어야 합니다.  
   
  데이터 피드 라이브러리는 데이터 서비스 문서의 속성과 동작을 정의하는 미리 구성된 *데이터 서비스 문서 콘텐츠 형식* 과 기본 제공 템플릿을 기반으로 합니다.  
   

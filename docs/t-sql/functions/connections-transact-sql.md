@@ -46,7 +46,7 @@ ms.locfileid: "47844711"
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-연결은 사용자와 다릅니다. 예를 들어 응용 프로그램은 해당 연결을 관찰하는 사용자 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 여러 연결을 열 수 있습니다.
+연결은 사용자와 다릅니다. 예를 들어 애플리케이션은 해당 연결을 관찰하는 사용자 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 여러 연결을 열 수 있습니다.
   
 연결 시도 횟수를 포함한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서의 경우 **sp_monitor**를 실행합니다.
   

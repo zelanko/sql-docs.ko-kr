@@ -15,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cce5bf6a05cf84a66004066545a76cf8c7f00271
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48214970"
@@ -23,10 +23,10 @@ ms.locfileid: "48214970"
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
   Microsoft **의** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 사용하면 사용자 지정 카운터 인스턴스를 만들 수 있습니다. 사용자 지정 카운터 인스턴스를 사용하여 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 고유한 구성 요소 같이 기존 카운터로 모니터링할 수 없는 서버 측면(예: 로그된 고객의 주문 수나 제품 정보)를 모니터링할 수 있습니다.  
   
- **User Settable** 개체는 **사용자 카운터 1** 에서 **사용자 카운터 10**까지 10개의 쿼리 카운터 인스턴스를 가집니다. 이러한 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 **sp_user_counter1** 에서 **sp_user_counter10**까지 매핑됩니다. 사용자 응용 프로그램에서 이러한 저장 프로시저를 실행할 때 저장 프로시저로 설정된 값이 시스템 모니터에 표시됩니다. 카운터는 특정 제품에 대한 주문이 하루에 발생하는 횟수를 계산하는 저장 프로시저와 같은 모든 단일 정수 값을 모니터링할 수 있습니다.  
+ **User Settable** 개체는 **사용자 카운터 1** 에서 **사용자 카운터 10**까지 10개의 쿼리 카운터 인스턴스를 가집니다. 이러한 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 **sp_user_counter1** 에서 **sp_user_counter10**까지 매핑됩니다. 사용자 애플리케이션에서 이러한 저장 프로시저를 실행할 때 저장 프로시저로 설정된 값이 시스템 모니터에 표시됩니다. 카운터는 특정 제품에 대한 주문이 하루에 발생하는 횟수를 계산하는 저장 프로시저와 같은 모든 단일 정수 값을 모니터링할 수 있습니다.  
   
 > [!NOTE]  
->  사용자 카운터 저장 프로시저는 시스템 모니터에서 자동으로 폴링되지 않습니다. 사용자 응용 프로그램에서 업데이트할 카운터 값에 대해 명시적으로 실행해야 합니다. 트리거를 사용하여 카운터 값을 자동으로 업데이트할 수 있습니다. 예를 들어 테이블에 있는 행 수를 모니터링하는 카운터를 만들려면 테이블에 `SELECT COUNT(*) FROM table`문을 실행하는 INSERT 및 DELETE 트리거를 만드십시오. INSERT나 DELETE 작업이 테이블에서 수행되어 트리거가 시작될 때마다 시스템 모니터 카운터가 자동으로 업데이트됩니다.  
+>  사용자 카운터 저장 프로시저는 시스템 모니터에서 자동으로 폴링되지 않습니다. 사용자 애플리케이션에서 업데이트할 카운터 값에 대해 명시적으로 실행해야 합니다. 트리거를 사용하여 카운터 값을 자동으로 업데이트할 수 있습니다. 예를 들어 테이블에 있는 행 수를 모니터링하는 카운터를 만들려면 테이블에 `SELECT COUNT(*) FROM table`문을 실행하는 INSERT 및 DELETE 트리거를 만드십시오. INSERT나 DELETE 작업이 테이블에서 수행되어 트리거가 시작될 때마다 시스템 모니터 카운터가 자동으로 업데이트됩니다.  
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 개체에 대해 설명합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48214970"
 |…||  
 |**사용자 카운터 10**|**sp_user_counter10**을 사용하여 정의합니다.|  
   
- 사용자 카운터 저장 프로시저를 이용하려면 새 카운터 값을 나타내는 하나의 정수로 된 매개 변수로 응용 프로그램을 실행하십시오. 예를 들어 **사용자 카운터 1** 에 10이라는 값을 설정하려면 다음 Transact-SQL 문을 실행하세요.  
+ 사용자 카운터 저장 프로시저를 이용하려면 새 카운터 값을 나타내는 하나의 정수로 된 매개 변수로 애플리케이션을 실행하십시오. 예를 들어 **사용자 카운터 1** 에 10이라는 값을 설정하려면 다음 Transact-SQL 문을 실행하세요.  
   
 ```  
 EXECUTE sp_user_counter1 10  

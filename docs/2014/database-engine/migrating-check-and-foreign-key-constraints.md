@@ -18,9 +18,9 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48049103"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
-  CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 응용 프로그램의 기능 수정을 유지할 때 중요할 수 있습니다.  
+  CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 애플리케이션의 기능 수정을 유지할 때 중요할 수 있습니다.  
   
- CHECK 및 FOREIGN KEY 제약 조건과 같은 테이블의 논리 무결성 검사를 수행하려면 트랜잭션에서 추가 처리가 필요하고 일반적으로 성능에 민감한 응용 프로그램을 피해야 합니다. 그러나 이러한 검사가 응용 프로그램에 필수적인 경우 두 가지 해결 방법이 있습니다.  
+ CHECK 및 FOREIGN KEY 제약 조건과 같은 테이블의 논리 무결성 검사를 수행하려면 트랜잭션에서 추가 처리가 필요하고 일반적으로 성능에 민감한 애플리케이션을 피해야 합니다. 그러나 이러한 검사가 애플리케이션에 필수적인 경우 두 가지 해결 방법이 있습니다.  
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Insert, Update 또는 Delete 작업 후 제약 조건 검사  
  이 해결 방법은 대부분의 변경 사항이 제약 조건을 위반하지 않는다는 가정 하에서 낙관적입니다. 이 해결 방법에서 제약 조건을 평가하기 전에 데이터를 먼저 수정합니다. 제약 조건을 위반하는 경우 감지되지만 변경 내용이 롤백되지 않습니다.  

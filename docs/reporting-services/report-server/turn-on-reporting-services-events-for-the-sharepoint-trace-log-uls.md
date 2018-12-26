@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 SQL Server Reporting Services 추가 기능의 하나인 파워 뷰 등의 클라이언트 응용 프로그램에서 얻습니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역**의 **범주**에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
+|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 SQL Server Reporting Services 추가 기능의 하나인 파워 뷰 등의 클라이언트 애플리케이션에서 얻습니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역**의 **범주**에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  
 |보고서 서버 버퍼링 응답||  
@@ -134,7 +134,7 @@ Get-SPDiagnosticConfig
 |보고서 서버 구독||  
 |보고서 서버 WCF 런타임||  
 |보고서 서버 웹 서버||  
-|서비스 응용 프로그램 프록시||  
+|서비스 애플리케이션 프록시||  
 |공유 서비스|샘플 항목:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> 콘텐츠 데이터베이스에 대한 MediumGranting 액세스입니다.<br /><br /> ReportingWebServiceApplication의 MediumProvisioning 인스턴스<br /><br /> ReportingWebServiceApplication에 대한 MediumProcessing 서비스 계정 변경 내용<br /><br /> MediumSetting 데이터베이스 사용 권한입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  

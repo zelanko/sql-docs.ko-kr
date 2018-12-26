@@ -25,7 +25,7 @@ ms.locfileid: "47856071"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성한 클라이언트 응용 프로그램과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성한 클라이언트 애플리케이션과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
  이 항목에서는 클라이언트에서 수행되는 변환에 대해 설명합니다. 클라이언트가 매개 변수에 지정한 소수 자릿수 초의 전체 자릿수가 서버에 정의된 것과 다르면 서버에서 작업을 허용하는 경우에 클라이언트 변환이 실패할 수 있습니다. 특히 클라이언트는 소수 자릿수 초 잘림을 모두 오류로 취급하는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시간 값을 가장 근사한 정수 초로 반올림합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "47856071"
 |8|시간이 UTC로 변환됩니다. 이 변환이 수행되는 동안 오류가 발생하면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |9|문자열이 ISO 리터럴로 구문 분석되고 대상 형식으로 변환됩니다. 실패하면 문자열이 OLE 날짜 리터럴(여기에도 시간 구성 요소가 포함되어 있음)로 구문 분석되고 OLE 날짜(DBTYPE_DATE)에서 대상 형식으로 변환됩니다.<br /><br /> 대상 유형이 DBTIMESTAMP, **smalldatetime**, **datetime**또는 **datetime2**인 경우 문자열은 날짜, 시간 또는 **datetime2** 리터럴 구문 또는 OLE에서 인식할 수 있는 구문을 준수해야 합니다. 문자열이 날짜 리터럴인 경우 모든 시간 구성 요소는 0으로 설정됩니다. 문자열이 시간 리터럴인 경우 날짜는 현재 날짜로 설정됩니다.<br /><br /> 다른 모든 대상 유형의 경우 문자열은 대상 유형의 리터럴 구문을 준수해야 합니다.|  
 |10|데이터 손실을 유발하는 소수 자릿수 초 잘림이 발생하면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다. 문자열 변환의 경우 문자열이 ISO 구문을 준수하는 경우에만 오버플로 검사가 가능합니다. 문자열이 OLE 날짜 리터럴인 경우에는 소수 자릿수 초가 반올림됩니다.<br /><br /> DBTIMESTAMP (datetime)에서 smalldatetime로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 DBSTATUS_E_DATAOVERFLOW 오류를 발생 시키는 대신 초 값을 자동으로 자릅니다.|  
-|11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 응용 프로그램과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
+|11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
 |12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
 |13|DBTYPE_FILETIME에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. Windows FileTimeToSystemTime API를 사용하는 경우 소수 자릿수 초의 전체 자릿수는 1밀리초로 제한됩니다.|  
 |14|**smalldatetime**에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  

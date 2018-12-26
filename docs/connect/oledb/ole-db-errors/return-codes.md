@@ -45,7 +45,7 @@ ms.locfileid: "51600673"
   
  FAILED 또는 IS_ERROR가 TRUE를 반환하면 SQL Server용 OLE DB 드라이버 소비자는 멤버 함수 실행이 실패했음을 확인할 수 있습니다. FAILED 또는 IS_ERROR가 반환 하는 경우 FALSE이 고 HRESULT와 같지 않은 S_OK는 OLE DB Driver for SQL Server 소비자가 어떤 의미에서 성공 하는 함수를 보장 합니다. 소비자는 SQL Server용 OLE DB 드라이버 오류 인터페이스에서 이러한 “정보를 포함한 성공 메시지” 반환에 대한 자세한 정보를 검색할 수 있습니다. 또한 함수가 확실히 실패한 경우(FAILED 매크로가 TRUE를 반환한 경우)에도 SQL Server용 OLE DB 드라이버 오류 인터페이스에서 확장 오류 정보를 얻을 수 있습니다.  
   
- OLE DB Driver for SQL Server 소비자가 정보를 사용 하 여 DB_S_ERRORSOCCURRED "성공" HRESULT 반환을 일반적으로 발생 합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. status-value 매개 변수에 반환되는 정보 외에 다른 오류 정보가 제공되지 않을 수 있으므로 소비자는 제공되는 경우에 상태 값을 검색하도록 응용 프로그램 논리를 구현해야 합니다.  
+ OLE DB Driver for SQL Server 소비자가 정보를 사용 하 여 DB_S_ERRORSOCCURRED "성공" HRESULT 반환을 일반적으로 발생 합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. status-value 매개 변수에 반환되는 정보 외에 다른 오류 정보가 제공되지 않을 수 있으므로 소비자는 제공되는 경우에 상태 값을 검색하도록 애플리케이션 논리를 구현해야 합니다.  
   
  OLE DB Driver for SQL Server 멤버 함수는 성공 코드 S_FALSE를 반환 하지 않습니다. 모든 OLE DB Driver for SQL Server 멤버 함수는 항상 성공을 표시 하기 위해 S_OK를 반환 합니다.  
   

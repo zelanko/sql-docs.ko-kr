@@ -19,7 +19,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48086578"
@@ -51,7 +51,7 @@ ms.locfileid: "48086578"
   
  UNIQUE  인덱스를 온라인 상태로 만들거나 다시 작성하면 인덱스 작성기 및 동시 사용자 트랜잭션이 동일한 키를 삽입하므로 고유성을 위반하게 됩니다. 원본 테이블의 원래 행이 대상인 새 인덱스로 옮겨지기 전에 사용자가 입력한 행이 새 인덱스로 삽입되면 온라인 인덱스 작업이 실패합니다.  
   
- 자주 발생하지 않지만 온라인 인덱스 작업이 데이터베이스 업데이트와 상호 작용 시 사용자 또는 응용 프로그램 작업으로 인해 교착 상태가 될 수 있습니다. 이러한 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 해당 사용자 또는 응용 프로그램 작업을 교착 상태로 선택합니다.  
+ 자주 발생하지 않지만 온라인 인덱스 작업이 데이터베이스 업데이트와 상호 작용 시 사용자 또는 애플리케이션 작업으로 인해 교착 상태가 될 수 있습니다. 이러한 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 해당 사용자 또는 애플리케이션 작업을 교착 상태로 선택합니다.  
   
  여러 개의 새 비클러스터형 인덱스를 만들거나 비클러스터형 인덱스를 다시 구성할 때만 동일한 테이블 또는 뷰에서 동시 온라인 인덱스 DDL  작업을 수행할 수 있습니다. 동시에 수행된 다른 온라인 인덱스 작업이 모두 실패합니다. 예를 들어 동일한 테이블에서 기존 인덱스를 온라인 상태로 다시 작성하는 동안 새 인덱스를 온라인 상태로 만들 수 없습니다.  
   

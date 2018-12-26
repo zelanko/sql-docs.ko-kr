@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78780e497ba67589dc3e227430f59ed1c536c36b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48172603"
@@ -63,7 +63,7 @@ ms.locfileid: "48172603"
  **(\*)** 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- SharePoint Server 2013 Excel Services에서 대화형 또는 수동 데이터 새로 고침은 원래 데이터 원본의 데이터로 데이터 모델을 새로 고칠 수 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 등록하여 Excel Services 응용 프로그램을 구성한 후에 대화형 데이터 새로 고침을 사용할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx)를 참조하십시오.  
+ SharePoint Server 2013 Excel Services에서 대화형 또는 수동 데이터 새로 고침은 원래 데이터 원본의 데이터로 데이터 모델을 새로 고칠 수 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 등록하여 Excel Services 애플리케이션을 구성한 후에 대화형 데이터 새로 고침을 사용할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx)를 참조하십시오.  
   
 > [!NOTE]  
 >  대화형 데이터 새로 고침은 Excel 2013에서 만든 통합 문서에만 사용할 수 있습니다. Excel 2010 통합 문서를 새로 고치려고 하면 'PowerPivot 작업 실패: 이전 버전의 Excel에서 만든 통합 문서와 PowerPivot은 파일을 업그레이드해야 새로 고칠 수 있습니다.'와 비슷한 오류 메시지가 표시됩니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
@@ -177,21 +177,21 @@ ms.locfileid: "48172603"
 ||Description||  
 |-|-----------------|-|  
 |**(1)**|Analysis Services 엔진|SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 데이터 모델 처리를 트리거합니다. 서버는 SharePoint 팜 외부에서 실행됩니다.|  
-|**(2)**|사용자 인터페이스|사용자 인터페이스는 두 페이지로 구성됩니다. 하나는 일정을 정의하는 페이지이고, 다른 하나는 새로 고침 기록을 보는 페이지입니다. 페이지에서 PowerPivot 서비스 응용 프로그램 데이터베이스에 직접 액세스하지 않지만 PowerPivot 시스템 서비스를 사용하여 데이터베이스에 액세스합니다.|  
-|**(3)**|PowerPivot 시스템 서비스|SharePoint용 PowerPivot 추가 기능을 배포할 때 서비스가 설치됩니다. 서비스는 다음과 같은 용도로 사용됩니다.<br /><br /> 이 서비스는 Excel 2013 통합 문서의 데이터 새로 고침을 위해 Excel Services API를 호출하는 새로 고침 예약 엔진을 호스팅합니다. Excel 2010 통합 문서의 경우 서비스가 직접 데이터 모델 처리를 수행하지만 데이터 모델 로그와 통합 문서 업데이트에는 Excel Services를 계속 사용합니다.<br /><br /> 이 서비스를 통해 사용자 인터페이스 페이지 등의 구성 요소가 시스템 서비스와 통신할 수 있습니다.<br /><br /> PowerPivot 웹 서비스를 통해 받은 데이터 원본으로 통합 문서에 대한 외부 액세스 요청을 관리합니다.<br /><br /> 타이머 작업 및 구성 페이지에 대한 예약된 데이터 새로 고침 요청 관리. 서비스가 서비스 응용 프로그램 데이터베이스 내부와 외부에서 데이터 읽기 요청을 관리하고 Excel Services로 데이터 새로 고침을 트리거합니다.<br /><br /> 사용 현황 처리 및 관련된 타이머 작업.|  
+|**(2)**|사용자 인터페이스|사용자 인터페이스는 두 페이지로 구성됩니다. 하나는 일정을 정의하는 페이지이고, 다른 하나는 새로 고침 기록을 보는 페이지입니다. 페이지에서 PowerPivot 서비스 애플리케이션 데이터베이스에 직접 액세스하지 않지만 PowerPivot 시스템 서비스를 사용하여 데이터베이스에 액세스합니다.|  
+|**(3)**|PowerPivot 시스템 서비스|SharePoint용 PowerPivot 추가 기능을 배포할 때 서비스가 설치됩니다. 서비스는 다음과 같은 용도로 사용됩니다.<br /><br /> 이 서비스는 Excel 2013 통합 문서의 데이터 새로 고침을 위해 Excel Services API를 호출하는 새로 고침 예약 엔진을 호스팅합니다. Excel 2010 통합 문서의 경우 서비스가 직접 데이터 모델 처리를 수행하지만 데이터 모델 로그와 통합 문서 업데이트에는 Excel Services를 계속 사용합니다.<br /><br /> 이 서비스를 통해 사용자 인터페이스 페이지 등의 구성 요소가 시스템 서비스와 통신할 수 있습니다.<br /><br /> PowerPivot 웹 서비스를 통해 받은 데이터 원본으로 통합 문서에 대한 외부 액세스 요청을 관리합니다.<br /><br /> 타이머 작업 및 구성 페이지에 대한 예약된 데이터 새로 고침 요청 관리. 서비스가 서비스 애플리케이션 데이터베이스 내부와 외부에서 데이터 읽기 요청을 관리하고 Excel Services로 데이터 새로 고침을 트리거합니다.<br /><br /> 사용 현황 처리 및 관련된 타이머 작업.|  
 |**(4)**|Excel 계산 서비스|데이터 모델 로드를 담당합니다.|  
-|**(5)**|보안 저장소 서비스|통합 문서의 인증 설정이 **인증된 사용자 계정 사용** 또는 **없음**으로 구성된 경우 Secure Store 대상 응용 프로그램 ID에 저장된 자격 증명이 데이터 새로 고침에 사용됩니다. 자세한 내용은 이 항목의 [인증에 대한 추가 고려 사항](#datarefresh_additional_authentication) 섹션을 참조하세요.|  
+|**(5)**|보안 저장소 서비스|통합 문서의 인증 설정이 **인증된 사용자 계정 사용** 또는 **없음**으로 구성된 경우 Secure Store 대상 애플리케이션 ID에 저장된 자격 증명이 데이터 새로 고침에 사용됩니다. 자세한 내용은 이 항목의 [인증에 대한 추가 고려 사항](#datarefresh_additional_authentication) 섹션을 참조하세요.|  
 |**(6)**|PowerPivot 데이터 새로 고침 타이머 작업|데이터 모델 새로 고침을 위해 Excel Services와 연결하도록 PowerPivot 시스템 서비스에 지시합니다.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 적절한 데이터 공급자와 클라이언트 라이브러리가 필요하므로 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버가 데이터 원본에 액세스할 수 있습니다.  
   
 > [!NOTE]  
->  PowerPivot 시스템 서비스는 이제 PowerPivot 모델을 로드하거나 저장하지 않기 때문에 응용 프로그램 서버에 모델을 캐시하는 대부분의 설정이 SharePoint 2013 팜에 적용되지 않습니다.  
+>  PowerPivot 시스템 서비스는 이제 PowerPivot 모델을 로드하거나 저장하지 않기 때문에 애플리케이션 서버에 모델을 캐시하는 대부분의 설정이 SharePoint 2013 팜에 적용되지 않습니다.  
   
 ## <a name="data-refresh-log-data"></a>데이터 새로 고침 로그 데이터  
  **사용 데이터:** PowerPivot 관리 대시보드에서 데이터 새로 고침 사용 현황 데이터를 볼 수 있습니다. 사용 현황 데이터를 보려면  
   
-1.  SharePoint 중앙 관리의 **일반 응용 프로그램 설정** 그룹에서 **PowerPivot 관리 대시보드** 를 클릭합니다.  
+1.  SharePoint 중앙 관리의 **일반 애플리케이션 설정** 그룹에서 **PowerPivot 관리 대시보드** 를 클릭합니다.  
   
 2.  대시보드 아래쪽에서 **데이터 새로 고침 - 최근 작업** 과 **데이터 새로 고침 - 최근 실패**를 봅니다.  
   

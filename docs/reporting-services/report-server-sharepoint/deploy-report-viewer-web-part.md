@@ -27,7 +27,7 @@ ms.locfileid: "52502825"
 ## <a name="requirements"></a>요구 사항
 
 > [!IMPORTANT]
-> 버전 “15.X.X.X”로 시작하면 ReportViewerWebPart를 기존 Reporting Services SharePoint 통합 모드 공유 서비스 응용 프로그램과 나란히 설치할 수 있습니다.
+> 버전 “15.X.X.X”로 시작하면 ReportViewerWebPart를 기존 Reporting Services SharePoint 통합 모드 공유 서비스 애플리케이션과 나란히 설치할 수 있습니다.
 > 이 .wsp 솔루션 업데이트를 통해 새 파일과 이전 솔루션은 취소하고 Uninstall-SPSolution 및 Install-SPSolution cmdlet을 각각 사용하여 새 .wsp를 다시 배포해야 합니다.
 >
 
@@ -79,7 +79,7 @@ ms.locfileid: "52502825"
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
 
 3. **사이트 컬렉션 관리**에서 **사이트 컬렉션 기능**을 선택합니다.
 
@@ -119,7 +119,7 @@ SharePoint 중앙 관리에서 솔루션 취소 기능을 제공하기는 하지
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, 루트 사이트 모음을 열기 위해 종종 *https://<computer name>* 를 입력하여 SharePoint 사이트에 액세스할 수 있습니다.
 
 2. **웹 디자이너 갤러리** 아래에서 **웹 파트**를 선택합니다.
 

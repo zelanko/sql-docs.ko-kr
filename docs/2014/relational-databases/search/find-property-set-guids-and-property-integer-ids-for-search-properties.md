@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48222643"
@@ -53,7 +53,7 @@ ms.locfileid: "48222643"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 정의한 범주별 속성  
   
--   소프트웨어 공급업체에서 정의한 응용 프로그램별 사용자 지정 속성  
+-   소프트웨어 공급업체에서 정의한 애플리케이션별 사용자 지정 속성  
   
 ##  <a name="filtdump"></a> FILTDUMP.EXE를 사용하여 사용 가능한 속성에 대한 정보 찾기  
  설치된 IFilter를 통해 검색되고 추출된 속성을 알아 보려면 **Windows SDK의 일부인** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] 유틸리티를 설치하고 실행할 수 있습니다.  

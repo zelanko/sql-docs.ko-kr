@@ -19,7 +19,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7954b4d7e624498a469a385406cfb23f486bf225
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123530"
@@ -33,7 +33,7 @@ ms.locfileid: "48123530"
   
      운영자가 추가 작업 동작을 실행해야 할 경우 이 작업 응답 중 하나를 사용. 예를 들어 백업 작업이 성공적으로 완료될 경우 운영자는 백업 테이프를 빼낸 다음 안전한 곳에 저장하도록 알림을 받아야 합니다.  
   
--   이벤트 메시지를 Windows 응용 프로그램 로그에 씀  
+-   이벤트 메시지를 Windows 애플리케이션 로그에 씀  
   
      이 응답은 실패한 작업에만 사용할 수 있습니다.  
   

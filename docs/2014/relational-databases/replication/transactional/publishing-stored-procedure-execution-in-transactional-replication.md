@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48195659"
@@ -47,7 +47,7 @@ EXEC give_raise
 ```  
   
 > [!IMPORTANT]  
->  저장 프로시저 복제가 모든 응용 프로그램에 적절한 것은 아닙니다. 아티클이 수평 분할되어 구독자와는 다른 행 집합이 게시자에 있게 되면 게시자와 구독자 모두에서 같은 저장 프로시저를 실행해도 다른 결과가 나타납니다. 마찬가지로 업데이트가 복제되지 않은 다른 테이블의 하위 쿼리를 기반으로 하면 게시자와 구독자 모두에서 같은 저장 프로시저를 실행해도 다른 결과가 반환됩니다.  
+>  저장 프로시저 복제가 모든 애플리케이션에 적절한 것은 아닙니다. 아티클이 수평 분할되어 구독자와는 다른 행 집합이 게시자에 있게 되면 게시자와 구독자 모두에서 같은 저장 프로시저를 실행해도 다른 결과가 나타납니다. 마찬가지로 업데이트가 복제되지 않은 다른 테이블의 하위 쿼리를 기반으로 하면 게시자와 구독자 모두에서 같은 저장 프로시저를 실행해도 다른 결과가 반환됩니다.  
   
  **저장 프로시저의 실행을 게시하려면**  
   

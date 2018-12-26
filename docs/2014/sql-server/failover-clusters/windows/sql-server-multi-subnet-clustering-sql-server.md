@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f71635386de926bcf74b108f6bbebaacd3b10282
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48133363"
@@ -67,9 +67,9 @@ ms.locfileid: "48133363"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI가 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]의 독립 실행형 인스턴스와 함께 설치되는 경우 IP 주소의 TCP 포트 번호가 충돌하지 않도록 주의합니다. 일반적으로 충돌은 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 의 두 인스턴스가 모두 기본 TCP 포트(1433)를 사용하도록 구성되는 경우 발생합니다. 충돌을 방지하려면 한 인스턴스가 기본이 아닌 고정 포트를 사용하도록 구성합니다. 고정 포트는 일반적으로 독립 실행형 인스턴스에서 더 쉽게 구성할 수 있습니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 이 다른 포트를 사용하도록 구성하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI가 실패하여 대기 노드가 될 때 인스턴스 시작을 차단하는 예기치 않은 IP 주소/TCP 포트 충돌이 방지됩니다.  
   
 ##  <a name="DNS"></a> 장애 조치(Failover) 중의 클라이언트 복구 대기 시간  
- 기본적으로 다중 서브넷 FCI는 해당 네트워크 이름에 대해 RegisterAllProvidersIP 클러스터 리소스를 사용하도록 설정합니다. 다중 서브넷 환경에서는 네트워크 이름의 온라인 및 오프라인 IP 주소가 모두 DNS 서버에 등록됩니다. 그런 다음 클라이언트 응용 프로그램은 DNS 서버에서 등록된 모든 IP 주소를 검색하여 순서대로 또는 병렬로 주소에 연결하려고 시도합니다. 즉, 다중 서브넷 장애 조치(failover) 시 클라이언트 복구 시간은 더 이상 DNS 업데이트 대기 시간에 의존하지 않습니다. 기본적으로 클라이언트는 순서대로 IP 주소를 시도합니다. 클라이언트가 연결 문자열에 새로운 선택적인 `MultiSubnetFailover=True` 매개 변수를 사용할 경우 대신 IP 주소를 동시에 시도하고 처음 응답한 서버에 연결합니다. 그러면 장애 조치(failover)가 발생할 때 클라이언트 복구 대기 시간을 최소화할 수 있습니다. 자세한 내용은 [AlwaysOn 클라이언트 연결 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 하 고 [는 가용성 그룹 수신기 만들기 또는 구성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ 기본적으로 다중 서브넷 FCI는 해당 네트워크 이름에 대해 RegisterAllProvidersIP 클러스터 리소스를 사용하도록 설정합니다. 다중 서브넷 환경에서는 네트워크 이름의 온라인 및 오프라인 IP 주소가 모두 DNS 서버에 등록됩니다. 그런 다음 클라이언트 애플리케이션은 DNS 서버에서 등록된 모든 IP 주소를 검색하여 순서대로 또는 병렬로 주소에 연결하려고 시도합니다. 즉, 다중 서브넷 장애 조치(failover) 시 클라이언트 복구 시간은 더 이상 DNS 업데이트 대기 시간에 의존하지 않습니다. 기본적으로 클라이언트는 순서대로 IP 주소를 시도합니다. 클라이언트가 연결 문자열에 새로운 선택적인 `MultiSubnetFailover=True` 매개 변수를 사용할 경우 대신 IP 주소를 동시에 시도하고 처음 응답한 서버에 연결합니다. 그러면 장애 조치(failover)가 발생할 때 클라이언트 복구 대기 시간을 최소화할 수 있습니다. 자세한 내용은 [AlwaysOn 클라이언트 연결 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 하 고 [는 가용성 그룹 수신기 만들기 또는 구성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- 레거시 클라이언트 라이브러리 또는 타사 데이터 공급자를 사용할 수 없습니다는 `MultiSubnetFailover` 연결 문자열에 매개 변수입니다. 클라이언트 응용 프로그램이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 다중 서브넷 FCI와 최적으로 작동하도록 하기 위해서는 클라이언트 연결 문자열에서 각각의 추가 IP 주소에 대해 연결 제한 시간을 21초로 조정하십시오. 그러면 다중 서브넷 FCI에서 모든 IP 주소를 시도해보기 전에 클라이언트의 재연결 시도가 시간 초과되지 않습니다.  
+ 레거시 클라이언트 라이브러리 또는 타사 데이터 공급자를 사용할 수 없습니다는 `MultiSubnetFailover` 연결 문자열에 매개 변수입니다. 클라이언트 애플리케이션이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 다중 서브넷 FCI와 최적으로 작동하도록 하기 위해서는 클라이언트 연결 문자열에서 각각의 추가 IP 주소에 대해 연결 제한 시간을 21초로 조정하십시오. 그러면 다중 서브넷 FCI에서 모든 IP 주소를 시도해보기 전에 클라이언트의 재연결 시도가 시간 초과되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 및 **sqlcmd** 에 대한 기본 클라이언트 연결 제한 시간은 15초입니다.  
   

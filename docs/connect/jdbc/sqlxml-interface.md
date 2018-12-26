@@ -44,7 +44,7 @@ XML 값에 액세스 하기 위한 메서드를 제공 하는 SQLXML 인터페�
   
 응용 프로그램은 SQLXML 개체에 XML 값을 한 번만 읽고 쓸 수 있습니다.  
   
-free() 메서드가 호출되면 SQLXML 개체가 더 이상 유효하지 않고 읽거나 쓸 수 없게 됩니다. 응용 프로그램이 해당 SQLXML 개체에 대해 free() 메서드 이외의 메서드를 호출하려고 시도하면 예외가 throw됩니다.  
+free() 메서드가 호출되면 SQLXML 개체가 더 이상 유효하지 않고 읽거나 쓸 수 없게 됩니다. 애플리케이션이 해당 SQLXML 개체에 대해 free() 메서드 이외의 메서드를 호출하려고 시도하면 예외가 throw됩니다.  
   
 응용 프로그램이 다음 getter 메서드 중 하나를 호출 하면 SQLXML 개체를 읽거나 쓸 수 됩니다: getSource, getCharacterStream, getBinaryStream, 및 getString 합니다.  
   

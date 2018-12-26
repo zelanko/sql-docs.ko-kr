@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48207581"
@@ -134,7 +134,7 @@ ms.locfileid: "48207581"
   
 4.  계속해서 연결 관리자의 왼쪽 탐색 창에서 **모두** 를 클릭하여 데이터 공급자의 속성 표를 확인합니다.  
   
-     보조 복제본에 대한 읽기 전용 연결을 구성하는 경우 **응용 프로그램 의도** 를 **READONLY** 로 설정합니다. 그렇지 않으면 연결을 주 복제본으로 리디렉션하는 **READWRITE** 기본값을 유지합니다.  
+     보조 복제본에 대한 읽기 전용 연결을 구성하는 경우 **애플리케이션 의도** 를 **READONLY** 로 설정합니다. 그렇지 않으면 연결을 주 복제본으로 리디렉션하는 **READWRITE** 기본값을 유지합니다.  
   
 5.  가장 정보에서 **특정 Windows 사용자 이름 및 암호 사용**을 선택한 다음 데이터베이스에 대해 최소 **db_datareader** 이상의 권한이 있는 Windows 도메인 사용자 계정을 입력합니다.  
   
@@ -161,11 +161,11 @@ ms.locfileid: "48207581"
   
      이 단계는 중요합니다. 서버 인스턴스 이름을 지정할 경우 보조 복제본으로의 라우팅이 발생하지 않습니다.  
   
-3.  SQL Server Profiler와 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 를 나란히 볼 수 있도록 응용 프로그램 창을 배열합니다.  
+3.  SQL Server Profiler와 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 를 나란히 볼 수 있도록 애플리케이션 창을 배열합니다.  
   
 4.  솔루션을 배포하고 배포가 완료되면 추적을 중지합니다.  
   
-     추적 창에 **Microsoft SQL Server Analysis Services**응용 프로그램의 이벤트가 표시됩니다. 표시 `SELECT` 보조 복제본에 수신기를 통해 연결 하는 데는 보조 복제본을 호스팅하는 서버 인스턴스에서 데이터베이스에서 데이터를 검색 하는 문입니다.  
+     추적 창에 **Microsoft SQL Server Analysis Services**애플리케이션의 이벤트가 표시됩니다. 표시 `SELECT` 보조 복제본에 수신기를 통해 연결 하는 데는 보조 복제본을 호스팅하는 서버 인스턴스에서 데이터베이스에서 데이터를 검색 하는 문입니다.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치(failover)를 수행하여 구성 테스트  
   
@@ -208,13 +208,13 @@ ms.locfileid: "48207581"
  오류가 지속되면 구성 문제일 가능성이 큽니다. 보조 복제본에 대한 라우팅 목록, 읽기 전용 URL, 읽기 전용 문제를 해결하기 위해 T-SQL 스크립트를 다시 실행해 볼 수 있습니다. 또한 주 복제본에서 모든 연결을 허용하는지 확인해야 합니다.  
   
 ##  <a name="bkmk_writeback"></a> AlwaysOn 가용성 데이터베이스를 사용할 때의 쓰기 저장  
- 쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 응용 프로그램에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
+ 쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
  쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 “외부 데이터 원본에서 데이터를 검색할 수 없습니다.” 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   
- 이렇게 하려면 Analysis Services 모델에 읽기/쓰기 연결을 지원하는 데이터 원본을 추가로 만들어야 합니다. 추가 데이터 원본을 만들 때는 읽기 전용 연결에 지정한 동일한 수신기 이름 및 데이터베이스를 사용합니다. 단, **응용 프로그램 의도**는 수정하지 않고 READWRITE 연결을 지원하는 기본값을 그대로 둡니다. 이제 읽기/쓰기 데이터 원본을 기반으로 하는 새 팩트 또는 차원 테이블을 데이터 원본 뷰에 추가하고, 새 테이블에 쓰기 저장을 설정할 수 있습니다.  
+ 이렇게 하려면 Analysis Services 모델에 읽기/쓰기 연결을 지원하는 데이터 원본을 추가로 만들어야 합니다. 추가 데이터 원본을 만들 때는 읽기 전용 연결에 지정한 동일한 수신기 이름 및 데이터베이스를 사용합니다. 단, **애플리케이션 의도**는 수정하지 않고 READWRITE 연결을 지원하는 기본값을 그대로 둡니다. 이제 읽기/쓰기 데이터 원본을 기반으로 하는 새 팩트 또는 차원 테이블을 데이터 원본 뷰에 추가하고, 새 테이블에 쓰기 저장을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   

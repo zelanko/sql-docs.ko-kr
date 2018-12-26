@@ -21,7 +21,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48111693"
@@ -60,7 +60,7 @@ ms.locfileid: "48111693"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 서버에서 실행되고 클라이언트 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 찾는 데 도움이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 구성할 필요는 없지만 일부 연결 시나리오에서 실행 중이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에 대한 자세한 내용은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.  
   
 ## <a name="hiding-sql-server"></a>SQL Server 숨기기  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 실행 중에 설치된 각 인스턴스의 이름, 버전 및 연결 정보를 사용하여 쿼리에 응답합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **인스턴스 숨기기** 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 이 서버 인스턴스에 대한 정보를 사용하여 응답할 수 없음을 나타냅니다. 클라이언트 응용 프로그램은 계속 연결될 수 있지만 필요한 연결 정보를 알아야 합니다. 자세한 내용은 [SQL Server 데이터베이스 엔진의 인스턴스 숨기기](../sql-server-database-engine-overview.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 실행 중에 설치된 각 인스턴스의 이름, 버전 및 연결 정보를 사용하여 쿼리에 응답합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **인스턴스 숨기기** 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 이 서버 인스턴스에 대한 정보를 사용하여 응답할 수 없음을 나타냅니다. 클라이언트 애플리케이션은 계속 연결될 수 있지만 필요한 연결 정보를 알아야 합니다. 자세한 내용은 [SQL Server 데이터베이스 엔진의 인스턴스 숨기기](../sql-server-database-engine-overview.md)를 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
  [클라이언트 네트워크 구성](client-network-configuration.md)  

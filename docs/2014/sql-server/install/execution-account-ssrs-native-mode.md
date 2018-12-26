@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48150549"
@@ -23,7 +23,7 @@ ms.locfileid: "48150549"
 # <a name="execution-account-ssrs-native-mode"></a>실행 계정(SSRS 기본 모드)
   이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  
   
--   보고서 서버가 자격 증명이 필요 없는 데이터 원본에 연결하는 경우 자격 증명이 필요 없는 데이터 원본의 예로는 XML 문서와 일부 클라이언트 쪽 응용 프로그램이 있습니다.  
+-   보고서 서버가 자격 증명이 필요 없는 데이터 원본에 연결하는 경우 자격 증명이 필요 없는 데이터 원본의 예로는 XML 문서와 일부 클라이언트 쪽 애플리케이션이 있습니다.  
   
 -   보고서 서버가 보고서에서 참조하는 외부 이미지 파일 또는 기타 리소스를 검색하기 위해 다른 서버에 연결하는 경우  
   

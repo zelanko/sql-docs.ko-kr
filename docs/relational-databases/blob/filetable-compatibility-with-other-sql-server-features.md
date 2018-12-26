@@ -43,10 +43,10 @@ ms.locfileid: "52522372"
   
 ##  <a name="OtherIsolation"></a> 트랜잭션 의미 체계와 FileTable  
  **Windows 응용 프로그램**  
- Windows 응용 프로그램은 데이터베이스 트랜잭션을 인식하지 못하므로 Windows 쓰기 작업에서는 데이터베이스 트랜잭션의 ACID 속성을 제공하지 않습니다. 따라서 Windows 업데이트 작업에는 트랜잭션 롤백 및 복구를 수행할 수 없습니다.  
+ Windows 애플리케이션은 데이터베이스 트랜잭션을 인식하지 못하므로 Windows 쓰기 작업에서는 데이터베이스 트랜잭션의 ACID 속성을 제공하지 않습니다. 따라서 Windows 업데이트 작업에는 트랜잭션 롤백 및 복구를 수행할 수 없습니다.  
   
  **Transact-SQL 응용 프로그램**  
- FileTable의 FILESTREAM(file_stream) 열에서 작동하는 TSQL 응용 프로그램의 경우 격리 의미 체계는 일반적인 사용자 테이블의 FILESTREAM 데이터 형식을 사용할 때와 동일합니다.  
+ FileTable의 FILESTREAM(file_stream) 열에서 작동하는 TSQL 애플리케이션의 경우 격리 의미 체계는 일반적인 사용자 테이블의 FILESTREAM 데이터 형식을 사용할 때와 동일합니다.  
   
 ##  <a name="OtherQueryNot"></a> 쿼리 알림과 FileTable  
  쿼리의 WHERE 절이나 다른 부분에 FileTable의 FILESTREAM 열에 대한 참조를 포함할 수 없습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "52522372"
   
     -   일부 경우에는 파일 시스템 액세스에 공유 모드가 허용되어 있어서 다른 비트랜잭션 업데이트 작업에서 동시에 쓰기 작업을 수행할 수 있으므로 FILESTREAM의 AFTER 이미지는 안정적이지 않을 수 있습니다.  
   
--   관리 작업이나 데이터베이스 충돌로 인해 Win32 핸들이 명시적으로 중지된 경우와 같이 Win32 핸들이 비정상적으로 종료된 경우에는 이 비정상적으로 종료된 Win32 응용 프로그램에서 FILESTREAM 내용을 변경했더라도 복구 작업 중 사용자 트리거가 실행되지 않습니다.  
+-   관리 작업이나 데이터베이스 충돌로 인해 Win32 핸들이 명시적으로 중지된 경우와 같이 Win32 핸들이 비정상적으로 종료된 경우에는 이 비정상적으로 종료된 Win32 애플리케이션에서 FILESTREAM 내용을 변경했더라도 복구 작업 중 사용자 트리거가 실행되지 않습니다.  
   
 ##  <a name="OtherViews"></a> 뷰와 FileTable  
  **뷰**  

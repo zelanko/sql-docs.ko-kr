@@ -92,7 +92,7 @@ ms.locfileid: "47821941"
 3.  원하는 사용자 지정 해결 프로그램이 아직 등록되지 않은 경우 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)를 실행합니다. **@article_resolver**에 해결 프로그램 이름을 지정합니다. 비즈니스 논리 처리기의 경우 어셈블리 이름입니다. COM 기반 해결 프로그램의 경우 **@resolver_clsid**에 DLL의 CLSID를 지정하고, 비즈니스 논리 처리기의 경우 **@is_dotnet_assembly** @is_dotnet_assembly **@is_dotnet_assembly**값, **@dotnet_assembly_name**에 어셈블리의 이름, <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> @is_dotnet_assembly **@dotnet_class_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
-    >  비즈니스 논리 처리기 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
+    >  비즈니스 논리 처리기 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
   
 4.  COM 기반 해결 프로그램인 경우:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47821941"
         regsvr32 ssradd.dll  
         ```  
   
-5.  해결 프로그램이 비즈니스 논리 처리기인 경우 병합 에이전트 실행 파일(replmerg.exe)과 같은 디렉터리, 병합 에이전트를 호출하는 응용 프로그램과 같은 폴더, 또는 3단계에서 **@dotnet_assembly_name** 매개 변수에 지정한 폴더에 어셈블리를 배포합니다.  
+5.  해결 프로그램이 비즈니스 논리 처리기인 경우 병합 에이전트 실행 파일(replmerg.exe)과 같은 디렉터리, 병합 에이전트를 호출하는 애플리케이션과 같은 폴더, 또는 3단계에서 **@dotnet_assembly_name** 매개 변수에 지정한 폴더에 어셈블리를 배포합니다.  
   
     > [!NOTE]  
     >  병합 에이전트 실행 파일의 기본 설치 위치는 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM입니다.  

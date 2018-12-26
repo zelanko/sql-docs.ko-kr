@@ -16,5 +16,5 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48195833"
 ---
-# <a name="validation-rules-for-data-tier-application-wizards"></a>데이터 계층 응용 프로그램 마법사에 대한 유효성 검사 규칙
+# <a name="validation-rules-for-data-tier-application-wizards"></a>데이터 계층 애플리케이션 마법사에 대한 유효성 검사 규칙
 참조 [데이터 계층 응용 프로그램 마법사에 대 한 유효성 검사 규칙](../../database-engine/validation-rules-for-data-tier-application-wizards.md)합니다.

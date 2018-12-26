@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102c116e24cc194590ff9ac91abf4c234700acc6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48102133"
@@ -47,7 +47,7 @@ ms.locfileid: "48102133"
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 가용성 그룹 수신기를 삭제하기 전에 해당 가용성 그룹 수신기를 사용 중인 응용 프로그램이 없는지 확인하는 것이 좋습니다.  
+ 가용성 그룹 수신기를 삭제하기 전에 해당 가용성 그룹 수신기를 사용 중인 애플리케이션이 없는지 확인하는 것이 좋습니다.  
   
 ###  <a name="Security"></a> 보안  
   

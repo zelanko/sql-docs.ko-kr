@@ -92,7 +92,7 @@ ms.locfileid: "48183361"
 ## <a name="corrective-action"></a>수정 동작  
   
 ### <a name="documented-system-stored-procedures"></a>문서화된 시스템 저장 프로시저  
- 다음 표에 따라 응용 프로그램을 수정합니다.  
+ 다음 표에 따라 애플리케이션을 수정합니다.  
   
 |이전|단계|  
 |----------------|-------------|  

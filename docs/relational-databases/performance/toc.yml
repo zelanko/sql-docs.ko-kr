@@ -123,7 +123,7 @@ items:
       href: start-system-monitor-windows.md
     - name: SQL Server 데이터베이스 경고 설정(Windows)
       href: set-up-a-sql-server-database-alert-windows.md
-    - name: Windows 응용 프로그램 로그 보기(Windows)
+    - name: Windows 애플리케이션 로그 보기(Windows)
       href: view-the-windows-application-log-windows-10.md
     - name: SQL Server 오류 로그 보기(SQL Server Management Studio)
       href: view-the-sql-server-error-log-sql-server-management-studio.md

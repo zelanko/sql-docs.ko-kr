@@ -41,7 +41,7 @@ items:
     href: create-database-mail-profile-and-account-dialog-box.md
   - name: 웹 구성 페이지
     href: web-configuration-page-master-data-services-configuration-manager.md
-  - name: 웹 응용 프로그램 만들기 대화 상자
+  - name: 웹 애플리케이션 만들기 대화 상자
     href: create-web-application-dialog-box-master-data-services-configuration-manager.md
   - name: 웹 사이트 만들기 대화 상자
     href: create-website-dialog-box-master-data-services-configuration-manager.md
@@ -394,7 +394,7 @@ items:
       href: database-object-security-master-data-services.md
     - name: 데이터베이스 로그인, 사용자 및 역할
       href: database-logins-users-and-roles-master-data-services.md
-  - name: 마스터 데이터 관리자 웹 응용 프로그램
+  - name: 마스터 데이터 관리자 웹 애플리케이션
     href: master-data-manager-web-application.md
     items:
     - name: 탐색기 기능 영역

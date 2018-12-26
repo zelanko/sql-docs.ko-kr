@@ -52,7 +52,7 @@ ms.locfileid: "52410860"
  `CREATE ROLE` 권한이 있는 사용자는 일반적인 권한이 있는 사용자 그룹을 나타내는 새 사용자 정의 데이터베이스 역할을 만들 수 있습니다. 권한 관리 및 모니터링을 간소화하기 위해 일반적으로 권한은 전체 역할에 부여되거나 거부됩니다. `ALTER ROLE ... ADD MEMBER` 문을 사용하여 데이터베이스 역할에 데이터베이스 사용자를 추가할 수 있습니다. 자세한 내용은 [ALTER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)을 참조하세요.  
   
  다른 보안 주체  
- 여기에 설명되지 않은 추가 보안 주체에는 응용 프로그램 역할과 인증서 또는 비대칭 키를 기반으로 하는 로그인 및 사용자가 포함됩니다.  
+ 여기에 설명되지 않은 추가 보안 주체에는 애플리케이션 역할과 인증서 또는 비대칭 키를 기반으로 하는 로그인 및 사용자가 포함됩니다.  
   
  Windows 사용자, Windows 그룹, 로그인 및 데이터베이스 사용자 간의 관계를 보여 주는 그래픽은 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)를 참조하세요.  
   

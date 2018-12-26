@@ -42,7 +42,7 @@ ms.locfileid: "48118783"
 -   [공유 일정 (기본 모드) 만들기 및 관리](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> 공유 일정 관리 개요  
- 기본 모드에 대 한 공유 일정을 관리 하려면 보고서 관리자에서 일정 페이지 또는 공유 일정 폴더를 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 위한 관리 페이지를 사용합니다.  
+ 기본 모드에 대 한 공유 일정을 관리 하려면 보고서 관리자에서 일정 페이지 또는 공유 일정 폴더를 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 위한 관리 페이지를 사용합니다.  
   
  보고서 서버에 대해 정의된 모든 공유 일정을 보고, 일정을 일시 중지 및 재개하고(보고서 관리자에만 해당), 수정 또는 삭제할 일정을 선택할 수 있습니다. 공유 일정 페이지에는 각 일정에 대한 정보, 즉 빈도, 소유자, 만료 날짜 및 상태 정보가 요약되어 있습니다.  
   

@@ -18,7 +18,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
 ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "48905247"
@@ -45,7 +45,7 @@ ms.locfileid: "48905247"
   
  Excel 드라이버에 포함된 Jet 공급자의 다음 동작은 데이터를 Excel 대상에 저장할 때 예기치 않은 결과를 초래할 수 있습니다.  
   
--   **텍스트 데이터 저장**. Excel 드라이버가 텍스트 데이터 값을 Excel 대상에 저장하면 드라이버는 각 셀에서 작은따옴표(')가 있는 텍스트 앞에 오므로 저장된 값이 텍스트 값으로 해석됩니다. 저장된 데이터를 읽거나 처리하는 다른 응용 프로그램을 갖고 있거나 개발한 경우 각 텍스트 값을 처리하는 작은따옴표에 대한 특별한 처리 방식을 포함해야 합니다.  
+-   **텍스트 데이터 저장**. Excel 드라이버가 텍스트 데이터 값을 Excel 대상에 저장하면 드라이버는 각 셀에서 작은따옴표(')가 있는 텍스트 앞에 오므로 저장된 값이 텍스트 값으로 해석됩니다. 저장된 데이터를 읽거나 처리하는 다른 애플리케이션을 갖고 있거나 개발한 경우 각 텍스트 값을 처리하는 작은따옴표에 대한 특별한 처리 방식을 포함해야 합니다.  
   
      작은따옴표가 포함되지 않도록 하는 방법에 대한 내용은 msdn.com의 블로그 게시물 중 [SSIS 패키지에서 Excel 대상 데이터 흐름 구성 요소를 사용하여 Excel로 데이터를 변환할 때 모든 문자열에 추가되는 작은따옴표](http://go.microsoft.com/fwlink/?LinkId=400876)(영문)를 참조하세요.  
   

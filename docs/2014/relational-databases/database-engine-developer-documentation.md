@@ -17,7 +17,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d913ffa95ec8be20bc6857de9a46bf4cedf9320
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48121813"
@@ -51,7 +51,7 @@ ms.locfileid: "48121813"
  데이터 수집기 개체 모델에 대해 설명합니다.  
   
  [예외 메시지 상자 프로그래밍](../database-engine/dev-guide/exception-message-box-programming.md)  
- 응용 프로그램에서 예외 메시지 상자 프로그래밍 인터페이스를 사용하여 메시징 환경에 대한 추가적인 제어를 제공하고, 사용자에게 나중에 참조할 수 있도록 오류 메시지 내용을 저장하는 옵션을 제공하고, 메시지를 통해 도움을 받을 수 있는 기회를 제공합니다.  
+ 애플리케이션에서 예외 메시지 상자 프로그래밍 인터페이스를 사용하여 메시징 환경에 대한 추가적인 제어를 제공하고, 사용자에게 나중에 참조할 수 있도록 오류 메시지 내용을 저장하는 옵션을 제공하고, 메시지를 통해 도움을 받을 수 있는 기회를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 프로그래밍](../analysis-services/dev-guide/data-mining-programming.md)   

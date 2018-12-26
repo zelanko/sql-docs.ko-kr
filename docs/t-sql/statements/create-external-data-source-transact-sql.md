@@ -445,7 +445,7 @@ WITH (
 ## <a name="examples-azure-sql-data-warehouse"></a>예제: Azure SQL Data Warehouse
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>7. Azure Data Lake Store를 참조하는 외부 데이터 원본 만들기
-Azure Data Lake Store 연결은 ADLS URI 및 Azure Acitve directory 응용 프로그램의 서비스 원칙을 기반으로 합니다. 이 응용 프로그램을 만들기 위한 문서는 [Active Directory를 사용하여 Data Lake 저장소 인증](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)에서 찾을 수 있습니다.
+Azure Data Lake Store 연결은 ADLS URI 및 Azure Acitve directory 애플리케이션의 서비스 원칙을 기반으로 합니다. 이 애플리케이션을 만들기 위한 문서는 [Active Directory를 사용하여 Data Lake 저장소 인증](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)에서 찾을 수 있습니다.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.

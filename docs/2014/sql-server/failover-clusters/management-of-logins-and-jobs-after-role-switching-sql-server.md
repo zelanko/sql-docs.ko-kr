@@ -14,7 +14,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0def160bcbff26bb41d6041a244e7be6b25461b8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48071083"
@@ -28,9 +28,9 @@ ms.locfileid: "48071083"
  사용자가 분리된 경우 새 주 서버 인스턴스에서 로그인을 만들고 [sp_change_users_login](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)을 실행합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)을 실행합니다.  
   
 ###  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 응용 프로그램의 로그인  
- 응용 프로그램에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 응용 프로그램의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 응용 프로그램이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
+ 애플리케이션에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 애플리케이션의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 애플리케이션이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
   
- 이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 응용 프로그램을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법은 KB 문서 918992[SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992/)을 참조하세요.  
+ 이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 애플리케이션을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법은 KB 문서 918992[SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](http://support.microsoft.com/kb/918992/)을 참조하세요.  
   
 > [!NOTE]  
 >  이 문제는 다른 컴퓨터의 Windows 로컬 계정에 영향을 줍니다. 하지만 도메인 계정에서는 SID가 각 컴퓨터에서 동일하기 때문에 이러한 문제가 발생하지 않습니다.  

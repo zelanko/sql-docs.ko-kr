@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209003"
@@ -27,11 +27,11 @@ ms.locfileid: "48209003"
 > [!NOTE]  
 >  `char` 및 `wchar` 형식 데이터를 이미지 열에 삽입할 경우 이진 형식으로 변환된 후의 데이터 크기가 아니라 전달되는 데이터의 크기가 사용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 매개 변수 배열의 배열 요소 하나에 오류가 발생하면 드라이버는 나머지 배열 요소에 대해 문을 계속해서 실행합니다. 응용 프로그램에서 문에 대해 매개 변수 상태 요소의 배열을 바인딩한 경우에는 오류가 발생한 매개 변수의 행을 배열에서 확인할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 매개 변수 배열의 배열 요소 하나에 오류가 발생하면 드라이버는 나머지 배열 요소에 대해 문을 계속해서 실행합니다. 애플리케이션에서 문에 대해 매개 변수 상태 요소의 배열을 바인딩한 경우에는 오류가 발생한 매개 변수의 행을 배열에서 확인할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용할 경우 입력 매개 변수를 바인딩할 때 SQL_PARAM_INPUT을 지정합니다. OUTPUT 키워드를 사용하여 정의된 저장 프로시저 매개 변수를 바인딩할 경우에는 SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT만 지정합니다.  
   
- [SQLRowCount](sqlrowcount.md) 사용 하 여 안정적이 지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 바인딩된 매개 변수 배열의 배열 요소 문 실행에서 오류가 발생 하는 경우. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 응용 프로그램에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
+ [SQLRowCount](sqlrowcount.md) 사용 하 여 안정적이 지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 바인딩된 매개 변수 배열의 배열 요소 문 실행에서 오류가 발생 하는 경우. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 애플리케이션에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 문자 형식에 대한 매개 변수 바인딩  
  전달된 SQL 데이터 형식이 문자 형식인 경우 *ColumnSize* 는 문자 수입니다(바이트 아님). 바이트의 데이터 문자열 길이가 8000 보다 큰 경우 *ColumnSize* 로 설정 해야 `SQL_SS_LENGTH_UNLIMITED`, SQL 형식 크기에 제한이 없다는 사실을 표시 합니다.  

@@ -42,7 +42,7 @@ ms.locfileid: "52506879"
  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술입니다. 보고 및 분석 쿼리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술은 [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 물론 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 응용 프로그램을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 응용 프로그램을 보다 쉽게 관리할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 새로운 기능에 대한 자세한 내용은 [Columnstore 인덱스 - 새로운 기능](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)을 참조하세요.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 물론 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 애플리케이션을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 애플리케이션을 보다 쉽게 관리할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 새로운 기능에 대한 자세한 내용은 [Columnstore 인덱스 - 새로운 기능](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **사용해 보기**  

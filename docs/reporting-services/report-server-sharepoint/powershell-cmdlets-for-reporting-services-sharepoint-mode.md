@@ -25,7 +25,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
   
 -   Reporting Services SharePoint 공유 서비스 및 프록시 설치  
   
--   Reporting Services 서비스 응용 프로그램과 연결된 프록시의 프로비전 및 관리  
+-   Reporting Services 서비스 애플리케이션과 연결된 프록시의 프로비전 및 관리  
   
 -   Reporting Services 기능(예: 확장 및 암호화 키) 관리  
 
@@ -71,44 +71,44 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
   
 |Cmdlet|설명|  
 |------------|-----------------|  
-|Install-SPRSService|Reporting Services 공유 서비스를 설치 및 등록하거나 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server Reporting Services가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -팜에 Reporting Services 서비스가 설치됩니다.<br /><br /> -현재 시스템에 Reporting Services 서비스 인스턴스가 설치됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -현재 시스템에서 Reporting Services 서비스가 제거됩니다.<br /><br /> -팜에서 Reporting Services 서비스가 제거됩니다.<br /><br /> <br /><br /> 팜 내 다른 시스템에 Reporting Services 서비스가 설치되어 있거나 팜에서 Reporting Services 서비스 응용 프로그램이 실행되고 있는 경우 경고 메시지가 표시됩니다.|  
+|Install-SPRSService|Reporting Services 공유 서비스를 설치 및 등록하거나 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server Reporting Services가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -팜에 Reporting Services 서비스가 설치됩니다.<br /><br /> -현재 시스템에 Reporting Services 서비스 인스턴스가 설치됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -현재 시스템에서 Reporting Services 서비스가 제거됩니다.<br /><br /> -팜에서 Reporting Services 서비스가 제거됩니다.<br /><br /> <br /><br /> 팜 내 다른 시스템에 Reporting Services 서비스가 설치되어 있거나 팜에서 Reporting Services 서비스 애플리케이션이 실행되고 있는 경우 경고 메시지가 표시됩니다.|  
 |Install-SPRSServiceProxy|SharePoint 팜에 Reporting Services 서비스 프록시를 설치 및 등록 또는 제거합니다.|  
 |Get-SPRSProxyUrl|Reporting Services 서비스에 액세스하기 위한 URL을 가져옵니다.|  
 |Get-SPRSServiceApplicationServers|로컬 SharePoint 팜 내 Reporting Services 공유 서비스가 설치된 모든 서버를 가져옵니다. 이 cmdlet은 Reporting Services 업그레이드 시 공유 서비스를 실행하여 업그레이드할 서버를 확인하는 데 유용합니다.|  
   
-## <a name="service-application-and-proxy-cmdlets"></a>서비스 응용 프로그램 및 프록시 Cmdlet
+## <a name="service-application-and-proxy-cmdlets"></a>서비스 애플리케이션 및 프록시 Cmdlet
 
- 다음 표에는 Reporting Services 서비스 응용 프로그램과 관련 프록시에 대한 PowerShell cmdlet이 포함됩니다.  
+ 다음 표에는 Reporting Services 서비스 애플리케이션과 관련 프록시에 대한 PowerShell cmdlet이 포함됩니다.  
   
 |cmdlet|설명|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|하나 이상의 Reporting Services 서비스 응용 프로그램 개체를 가져옵니다.|  
-|New-SPRSServiceApplication|새 Reporting Services 서비스 응용 프로그램 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 응용 프로그램 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 유효한 값은<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 응용 프로그램 풀 계정(기본값)|  
-|Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 응용 프로그램을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
-|Set-SPRSServiceApplication|기존 Reporting Services 서비스 응용 프로그램의 속성을 편집합니다.|  
-|New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 응용 프로그램 프록시를 만듭니다.|  
+|Get-SPRSServiceApplication|하나 이상의 Reporting Services 서비스 애플리케이션 개체를 가져옵니다.|  
+|New-SPRSServiceApplication|새 Reporting Services 서비스 애플리케이션 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 애플리케이션 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 유효한 값은<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 애플리케이션 풀 계정(기본값)|  
+|Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 애플리케이션을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
+|Set-SPRSServiceApplication|기존 Reporting Services 서비스 애플리케이션의 속성을 편집합니다.|  
+|New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 애플리케이션 프록시를 만듭니다.|  
 |Get-SPRSServiceApplicationProxy|하나 이상의 Reporting Services 서비스 응용 프로그램 프록시를 가져옵니다.|  
-|Dismount-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 분리합니다.|  
-|Remove-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 제거합니다.|  
-|Set-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 연결된 데이터베이스의 속성을 설정합니다.|  
-|Mount-SPRSDatabase|Reporting Services 서비스 응용 프로그램에 데이터베이스를 탑재합니다.|  
-|New-SPRSDatabase|지정된 Reporting Services 서비스 응용 프로그램에 대해 새 서비스 응용 프로그램 데이터베이스를 만듭니다.|  
-|Get-SPRSDatabaseCreationScript|Reporting Services 서비스 응용 프로그램의 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabase|하나 이상의 Reporting Services 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 응용 프로그램 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. [보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정](#bkmk_example_db_properties)항목의 예제를 참조하세요.|  
-|Get-SPRSDatabaseRightsScript|Reporting Services 서비스 응용 프로그램의 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 Reporting Services 서비스 응용 프로그램 데이터베이스를 현재 설치하는 Reporting Services의 데이터베이스 버전으로 업그레이드합니다.|  
+|Dismount-SPRSDatabase|Reporting Services 서비스 애플리케이션에 대한 서비스 애플리케이션 데이터베이스를 분리합니다.|  
+|Remove-SPRSDatabase|Reporting Services 서비스 애플리케이션에 대한 서비스 애플리케이션 데이터베이스를 제거합니다.|  
+|Set-SPRSDatabase|Reporting Services 서비스 애플리케이션에 연결된 데이터베이스의 속성을 설정합니다.|  
+|Mount-SPRSDatabase|Reporting Services 서비스 애플리케이션에 데이터베이스를 탑재합니다.|  
+|New-SPRSDatabase|지정된 Reporting Services 서비스 애플리케이션에 대해 새 서비스 애플리케이션 데이터베이스를 만듭니다.|  
+|Get-SPRSDatabaseCreationScript|Reporting Services 서비스 애플리케이션의 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
+|Get-SPRSDatabase|하나 이상의 Reporting Services 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 애플리케이션 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. [보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정](#bkmk_example_db_properties)항목의 예제를 참조하세요.|  
+|Get-SPRSDatabaseRightsScript|Reporting Services 서비스 애플리케이션의 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
+|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 Reporting Services 서비스 애플리케이션 데이터베이스를 현재 설치하는 Reporting Services의 데이터베이스 버전으로 업그레이드합니다.|  
   
 ## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services 사용자 지정 기능 Cmdlet
   
 |Cmdlet|설명|  
 |------------|-----------------|  
-|Update-SPRSEncryptionKey|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화 키를 업데이트하고 데이터를 다시 암호화합니다.|  
-|Restore-SPRSEncryptionKey|Reporting Services 서비스 응용 프로그램에 대해 이전에 백업된 암호화 키를 복원합니다.|  
-|Remove-SPRSEncryptedData|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화된 데이터를 삭제합니다.|  
-|Backup-SPRSEncryptionKey|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화 키를 백업합니다.|  
-|New-SPRSExtension|Reporting Services 서비스 응용 프로그램의 새 확장 프로그램을 등록합니다.|  
+|Update-SPRSEncryptionKey|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화 키를 업데이트하고 데이터를 다시 암호화합니다.|  
+|Restore-SPRSEncryptionKey|Reporting Services 서비스 애플리케이션에 대해 이전에 백업된 암호화 키를 복원합니다.|  
+|Remove-SPRSEncryptedData|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화된 데이터를 삭제합니다.|  
+|Backup-SPRSEncryptionKey|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화 키를 백업합니다.|  
+|New-SPRSExtension|Reporting Services 서비스 애플리케이션의 새 확장 프로그램을 등록합니다.|  
 |Set-SPRSExtension|기존 Reporting Services 확장 프로그램의 속성을 설정합니다.|  
-|Remove-SPRSExtension|Reporting Services 서비스 응용 프로그램에서 확장 프로그램을 삭제합니다.|  
+|Remove-SPRSExtension|Reporting Services 서비스 애플리케이션에서 확장 프로그램을 삭제합니다.|  
 |Get-SPRSExtension|Reporting Services 서비스 응용 프로그램에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
@@ -152,11 +152,11 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 
  다음 샘플 외에도, [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)항목의 "Windows PowerShell 스크립트" 섹션을 참조하세요.  
   
-### <a name="create-a-reporting-services-service-application-and-proxy"></a>Reporting Services 서비스 응용 프로그램 및 프록시 만들기
+### <a name="create-a-reporting-services-service-application-and-proxy"></a>Reporting Services 서비스 애플리케이션 및 프록시 만들기
 
  이 예제 스크립트는 다음 태스크를 완료합니다.  
   
-1.  Reporting Services 서비스 응용 프로그램 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 애플리케이션 풀이 이미 있는 것으로 가정합니다.  
+1.  Reporting Services 서비스 애플리케이션 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 애플리케이션 풀이 이미 있는 것으로 가정합니다.  
   
 2.  기본 프록시 그룹에 프록시 추가  
   
@@ -180,7 +180,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
   
 ### <a name="review-and-update-a-reporting-services-delivery-extension"></a>Reporting Services 배달 확장 프로그램 검토 및 업데이트
 
- 다음 PowerShell 스크립트 예제에서 `My RS Service App`서비스 응용 프로그램에 대해 보고서 서버 메일 배달 확장 프로그램의 구성을 업데이트합니다. SMTP 서버(`<email server name>`) 및 FROM 메일 별칭(`<your FROM email address>`) 값을 업데이트합니다.  
+ 다음 PowerShell 스크립트 예제에서 `My RS Service App`서비스 애플리케이션에 대해 보고서 서버 메일 배달 확장 프로그램의 구성을 업데이트합니다. SMTP 서버(`<email server name>`) 및 FROM 메일 별칭(`<your FROM email address>`) 값을 업데이트합니다.  
   
 ```  
 $app=get-sprsserviceapplication -Name "My RS Service App"  
@@ -193,13 +193,13 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 위의 예에서 서비스 응용 프로그램의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 응용 프로그램을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 위의 예에서 서비스 애플리케이션의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 애플리케이션을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- 다음 스크립트는 "Reporting Services 애플리케이션" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 응용 프로그램의 개체로 설정합니다.  
+ 다음 스크립트는 "Reporting Services 애플리케이션" 서비스 애플리케이션에 대해 보고서 서버 이메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 애플리케이션의 개체로 설정합니다.  
   
  두 번째 명령문은 $app 변수에서 서비스 애플리케이션 개체에 대한 'Report Server Email' 배달 확장 프로그램을 가져오고 configurationXML을 선택합니다.  
   
@@ -214,7 +214,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정
+### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정
 
  다음 예제에서는 데이터베이스 및 속성의 목록을 먼저 반환하므로 set 명령에 제공하는 데이터베이스 GUID(ID)를 결정할 수 없습니다. 속성의 전체 목록은 `Get-SPRSDatabase | format-list`를 참조하세요.  
   
@@ -248,7 +248,7 @@ Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, que
   
 ### <a name="list-reporting-services-data-extensions"></a>Reporting Services 데이터 확장 프로그램 나열
 
- 다음 예제는 각 Reporting Services 서비스 응용 프로그램을 반복하고 각각에 대한 현재 데이터 확장을 나열합니다.  
+ 다음 예제는 각 Reporting Services 서비스 애플리케이션을 반복하고 각각에 대한 현재 데이터 확장을 나열합니다.  
   
 ```  
 $apps = Get-SPRSServiceApplication  

@@ -13,13 +13,13 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8a4c52340cde2aefb73785ee52794cf138c38627
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48145613"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 응용 프로그램에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 응용 프로그램의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 애플리케이션에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 응용 프로그램의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 구성 요소를 효과적으로 모니터링하려면  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48145613"
   
 -   최적화할 구성 요소나 프로세스를 식별합니다.  
   
--   여러 클라이언트 응용 프로그램의 성능에 대한 영향을 비교해 봅니다.  
+-   여러 클라이언트 애플리케이션의 성능에 대한 영향을 비교해 봅니다.  
   
 -   사용자 작업을 감사합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48145613"
 ## <a name="select-the-appropriate-tool"></a>적절한 도구 선택  
  모니터링 이유를 결정했으면 해당 모니터링 유형에 적절한 도구를 선택해야 합니다. Windows 운영 체제와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 트랜잭션이 많은 환경에서 서버를 모니터링할 수 있는 완전한 도구 집합을 제공합니다. 이러한 도구를 통해 SQL Server 데이터베이스 엔진의 인스턴스나 SQL Server Analysis Services 인스턴스의 상태를 분명하게 알 수 있습니다.  
   
- Windows에서는 서버에서 실행되는 응용 프로그램을 모니터링할 수 있는 다음과 같은 도구를 제공합니다.  
+ Windows에서는 서버에서 실행되는 애플리케이션을 모니터링할 수 있는 다음과 같은 도구를 제공합니다.  
   
 -   시스템 모니터. 이 도구를 사용하면 메모리, 디스크 및 프로세서 사용 등 작업에 대한 실시간 데이터를 수집하고 확인할 수 있습니다.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48145613"
   
 1.  필터를 적용하여 수집한 이벤트 데이터를 제한합니다.  
   
-     이벤트 데이터를 제한하면 모니터링 시나리오에 맞는 특정 이벤트에 시스템의 포커스를 맞출 수 있습니다. 예를 들어 처리 속도가 느린 쿼리를 모니터링할 때는 응용 프로그램에서 실행한 쿼리가 특정 데이터베이스에 대해 실행되는 데 30초 이상 걸리는 경우만 모니터링하는 필터를 사용할 수 있습니다. 자세한 내용은 [추적 필터 설정&#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md) 및 [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)을 참조하세요.  
+     이벤트 데이터를 제한하면 모니터링 시나리오에 맞는 특정 이벤트에 시스템의 포커스를 맞출 수 있습니다. 예를 들어 처리 속도가 느린 쿼리를 모니터링할 때는 애플리케이션에서 실행한 쿼리가 특정 데이터베이스에 대해 실행되는 데 30초 이상 걸리는 경우만 모니터링하는 필터를 사용할 수 있습니다. 자세한 내용은 [추적 필터 설정&#40;Transact-SQL&#41;](../../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md) 및 [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)을 참조하세요.  
   
 2.  이벤트를 모니터링(캡처)합니다.  
   
-     모니터링을 설정하면 활성 모니터링은 지정한 응용 프로그램, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 또는 운영 체제에서 데이터를 즉시 캡처합니다. 예를 들어 시스템 모니터를 사용하여 디스크 작업을 모니터링하면 디스크 읽기 및 쓰기 같은 이벤트 데이터가 캡처되고 해당 데이터가 화면에 표시됩니다. 자세한 내용은 [리소스 사용 모니터링&#40;시스템 모니터&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)을 참조하세요.  
+     모니터링을 설정하면 활성 모니터링은 지정한 애플리케이션, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 또는 운영 체제에서 데이터를 즉시 캡처합니다. 예를 들어 시스템 모니터를 사용하여 디스크 작업을 모니터링하면 디스크 읽기 및 쓰기 같은 이벤트 데이터가 캡처되고 해당 데이터가 화면에 표시됩니다. 자세한 내용은 [리소스 사용 모니터링&#40;시스템 모니터&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)을 참조하세요.  
   
 3.  캡처한 이벤트 데이터를 저장합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48145613"
   
 5.  캡처한 이벤트 데이터를 분석합니다.  
   
-     데이터 분석을 위해 캡처한 이벤트 데이터가 해당 데이터를 캡처한 응용 프로그램으로 로드됩니다. 예를 들어 확인 및 분석을 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 캡처한 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로 다시 로드할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
+     데이터 분석을 위해 캡처한 이벤트 데이터가 해당 데이터를 캡처한 애플리케이션으로 로드됩니다. 예를 들어 확인 및 분석을 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 캡처한 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로 다시 로드할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   
      이벤트 데이터를 분석하면 발생한 이벤트와 발생 원인을 알 수 있습니다. 이 정보를 사용하면 수행된 분석 유형에 따라 메모리를 추가하거나 인덱스를 변경하거나 Transact-SQL 문 또는 저장 프로시저의 코딩 문제를 수정하는 등 성능 향상에 필요한 사항을 변경할 수 있습니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 캡처한 추적을 분석하고 결과에 따라 인덱스 권장 구성을 만들 수 있습니다.  
   

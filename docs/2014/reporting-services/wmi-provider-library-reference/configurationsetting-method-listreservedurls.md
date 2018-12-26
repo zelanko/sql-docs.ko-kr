@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48197513"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs 메서드(WMI MSReportServer_ConfigurationSetting)
-  보고서 서버의 모든 응용 프로그램용으로 예약된 URL을 나열합니다.  
+  보고서 서버의 모든 애플리케이션용으로 예약된 URL을 나열합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
   
 ## <a name="parameters"></a>매개 변수  
  *Application[]*  
- [out] URL 예약이 있는 응용 프로그램입니다.  
+ [out] URL 예약이 있는 애플리케이션입니다.  
   
  *UrlString[]*  
  [out] 예약된 URL입니다.  

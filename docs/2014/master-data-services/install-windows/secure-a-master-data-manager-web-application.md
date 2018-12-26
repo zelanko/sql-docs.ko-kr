@@ -1,5 +1,5 @@
 ---
-title: 마스터 데이터 관리자 웹 응용 프로그램의 보안 설정 | Microsoft Docs
+title: 마스터 데이터 관리자 웹 애플리케이션의 보안 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9773b22065199e2b3271a8f20d0228dddd43b785
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48228302"
 ---
-# <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램의 보안 설정
-  HTTPS를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 보안을 설정할 수 있습니다.  
+# <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션의 보안 설정
+  HTTPS를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 보안을 설정할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 HTTP 또는 HTTPS 중 하나를 사용할 수 있지만 둘 다 사용할 수는 없습니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48228302"
   
 -   사용자가 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 설치된 웹 서버의 관리자여야 합니다.  
   
--   MDS가 웹 서버에 설치되어 있으며 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 [Master Data Services 설치](install-master-data-services.md) 하 고 [마스터 데이터 관리자 웹 응용 프로그램 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
+-   MDS가 웹 서버에 설치되어 있으며 웹 애플리케이션이 있어야 합니다. 자세한 내용은 [Master Data Services 설치](install-master-data-services.md) 하 고 [마스터 데이터 관리자 웹 응용 프로그램 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
-### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS를 사용하여 마스터 데이터 관리자 웹 응용 프로그램의 보안을 설정하려면  
+### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS를 사용하여 마스터 데이터 관리자 웹 애플리케이션의 보안을 설정하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 HTTP로 올바르게 구성되어 있는지 확인한 후 IIS에서 인증서를 만듭니다. 자세한 내용은 [IIS 7에서 서버 인증서 구성](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx)을 참조하십시오.  
   

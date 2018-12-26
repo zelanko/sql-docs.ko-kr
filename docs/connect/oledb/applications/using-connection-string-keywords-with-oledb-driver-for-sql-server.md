@@ -33,7 +33,7 @@ ms.locfileid: "47838309"
   일부 OLE DB Driver for SQL Server Api는 연결 특성을 지정 하려면 연결 문자열을 사용 합니다. 연결 문자열은 키워드와 연관된 값의 목록이며 각 키워드는 특정 연결 특성을 식별합니다.  
   
 > [!NOTE]
-> SQL Server용 OLE DB 드라이버는 이전 버전과의 호환성을 유지하기 위해 연결 문자열에서 모호성을 허용합니다. 예를 들어 일부 키워드를 여러 번 지정할 수 있으며 위치나 우선 순위에 따라 충돌하는 키워드를 해결할 수 있습니다. OLE DB Driver for SQL Server의 향후 릴리스에 연결 문자열에서 모호성을 허용 하지 않을 수 있습니다. SQL Server용 OLE DB 드라이버를 사용하도록 응용 프로그램을 수정하는 경우 연결 문자열 모호성에 대한 종속성을 제거하는 것이 좋습니다.  
+> SQL Server용 OLE DB 드라이버는 이전 버전과의 호환성을 유지하기 위해 연결 문자열에서 모호성을 허용합니다. 예를 들어 일부 키워드를 여러 번 지정할 수 있으며 위치나 우선 순위에 따라 충돌하는 키워드를 해결할 수 있습니다. OLE DB Driver for SQL Server의 향후 릴리스에 연결 문자열에서 모호성을 허용 하지 않을 수 있습니다. SQL Server용 OLE DB 드라이버를 사용하도록 애플리케이션을 수정하는 경우 연결 문자열 모호성에 대한 종속성을 제거하는 것이 좋습니다.  
   
  다음 섹션에서는 사용할 수 있는 OLE DB 드라이버를 사용 하 여 SQL Server 및 데이터 개체 (ADO (ActiveX)에 대 한 데이터 공급자와 SQL Server 용 OLE DB 드라이버를 사용 하는 경우 키워드에 설명 합니다.  
 
@@ -51,7 +51,7 @@ ms.locfileid: "47838309"
   
  공급자 문자열에서 DBPROP_INIT_PROVIDERSTRING 값을 통해 설정되는 부울 속성은 "yes" 및 "no" 값을 사용하여 설정됩니다. 초기화 문자열에서 **IDataInitialize::GetDataSource**를 사용하여 설정되는 부울 속성은 “true” 및 “false” 값을 사용하여 설정됩니다.  
   
- **IDataInitialize::GetDataSource**를 사용하는 응용 프로그램에서는 **IDBInitialize::Initialize**에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에서만 사용할 수 있습니다. 응용 프로그램이 초기화 문자열에서 **IDataInitialize::GetDataSource** 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 **IDataInitialize::GetDataSource** 키워드 설정이 사용됩니다. **IDataInitialize:GetDataSource** 연결 문자열에서 **IDBInitialize::Initialize** 키워드를 사용할 수 있는 동작은 이후 버전에서 유지되지 않을 수 있으므로 응용 프로그램에서 이와 같이 사용하지 않는 것이 좋습니다.  
+ **IDataInitialize::GetDataSource**를 사용하는 응용 프로그램에서는 **IDBInitialize::Initialize**에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에서만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에서 **IDataInitialize::GetDataSource** 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 **IDataInitialize::GetDataSource** 키워드 설정이 사용됩니다. **IDataInitialize:GetDataSource** 연결 문자열에서 **IDBInitialize::Initialize** 키워드를 사용할 수 있는 동작은 이후 버전에서 유지되지 않을 수 있으므로 응용 프로그램에서 이와 같이 사용하지 않는 것이 좋습니다.  
   
 > [!NOTE]  
 >  **IDataInitialize::GetDataSource**를 통해 전달된 연결 문자열은 속성으로 변환된 후 **IDBProperties::SetProperties**를 통해 적용됩니다. 구성 요소 서비스가 **IDBProperties::GetPropertyInfo**에서 속성 설명을 찾으면 이 속성이 독립 실행형 속성으로 적용됩니다. 그렇지 않으면 DBPROP_PROVIDERSTRING 속성을 통해 속성이 적용됩니다. 예를 들어, 연결 문자열을 지정 하는 경우 **데이터 원본 = server1; 서버 = server2**, **데이터 원본** 속성으로 설정 됩니다 있지만 **Server** 는 공급자 문자열로 전달 됩니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "47838309"
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address"에 대한 동의어입니다.|  
 |**주소**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. **Address**는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> 값 **주소** 에 전달 된 값 보다 우선 **Server** SQL Server 용 OLE DB 드라이버를 사용 하는 경우 연결 문자열에서입니다. 또한 `Address=;`이면 **Server** 키워드에 지정된 서버에 연결하지만 `Address= ;, Address=.;`, `Address=localhost;` 및 `Address=(local);`이면 항상 로컬 서버에 연결합니다.<br /><br /> **Address** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [_프로토콜_**:**]_주소_[**하십시오**_포트 &#124;\pipe\pipename_]<br /><br /> _protocol_ 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다. 프로토콜에 대 한 자세한 내용은 참조 하세요. [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)합니다.<br /><br /> 모두 _프로토콜_ 또는 **Network** 키워드를 지정한 경우 OLE DB Driver for SQL Server에 지정 된 프로토콜 순서를 사용할지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager입니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|   
 |**APP**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
-|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 Database 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "yes" 및 "no"입니다.|  
@@ -123,7 +123,7 @@ ms.locfileid: "47838309"
   
  `quote ::= " | '`  
   
- 속성 사용은 해당 범위에 허용되는 구문을 따라야 합니다.  예를 들어 **WSID**는 따옴표 대신 중괄호(**{}**)를 사용하고 **응용 프로그램 이름**은 작은따옴표(**'**) 또는 큰따옴표(**"**)를 사용합니다. 문자열 속성만 따옴표로 묶을 수 있습니다. 정수나 열거 속성을 따옴표로 묶으면 "연결 문자열이 OLE DB 사양을 따르지 않습니다." 오류가 발생합니다.  
+ 속성 사용은 해당 범위에 허용되는 구문을 따라야 합니다.  예를 들어 **WSID**는 따옴표 대신 중괄호(**{}**)를 사용하고 **애플리케이션 이름**은 작은따옴표(**'**) 또는 큰따옴표(**"**)를 사용합니다. 문자열 속성만 따옴표로 묶을 수 있습니다. 정수나 열거 속성을 따옴표로 묶으면 "연결 문자열이 OLE DB 사양을 따르지 않습니다." 오류가 발생합니다.  
   
  특성 값을 작은따옴표나 큰따옴표로 묶을 수 있으며 그렇게 하는 것이 좋습니다. 그러면 값에 영숫자가 아닌 문자가 있을 경우 발생할 수 있는 문제를 막을 수 있습니다. 큰따옴표를 사용할 경우 값에 큰따옴표를 포함해도 됩니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47838309"
 |키워드|초기화 속성|설명|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|데이터 원본 초기화가 완료될 때까지 기다릴 시간(초)입니다.|  
@@ -166,9 +166,9 @@ ms.locfileid: "47838309"
  **참고** 연결 문자열에서 “이전 암호” 속성은 공급자 문자열 속성을 통해 사용할 수 없는 현재(만료된) 암호인 SSPROP_AUTH_OLD_PASSWORD를 설정합니다.  
   
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ADO(ActiveX Data Objects) 연결 문자열 키워드  
- ADO 응용 프로그램에서는 **ADODBConnection** 개체의 **ConnectionString** 속성을 설정하거나 **ADODBConnection** 개체의 **Open** 메서드에 대한 매개 변수로 연결 문자열을 제공합니다.  
+ ADO 애플리케이션에서는 **ADODBConnection** 개체의 **ConnectionString** 속성을 설정하거나 **ADODBConnection** 개체의 **Open** 메서드에 대한 매개 변수로 연결 문자열을 제공합니다.  
   
- ADO 응용 프로그램에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 응용 프로그램이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 응용 프로그램에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
+ ADO 애플리케이션에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 응용 프로그램에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
   
  ADO에서 사용하는 연결 문자열의 구문은 다음과 같습니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "47838309"
   
 |키워드|초기화 속성|설명|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  

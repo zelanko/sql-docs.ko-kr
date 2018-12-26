@@ -19,7 +19,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48084663"
@@ -63,7 +63,7 @@ ms.locfileid: "48084663"
   
 -   웹 보관 파일(MHTML), PDF 또는 Excel을 사용하도록 구독을 구성합니다.  
   
--   PDF 또는 Excel을 사용할 경우 파일 공유 배달을 사용하도록 구독을 구성합니다. 배달된 보고서는 데스크톱 응용 프로그램을 통해 사용할 수 있습니다. 파일 공유에 대한 사용 권한을 설정하여 보고서를 볼 수 있는 사용자를 결정해야 합니다.  
+-   PDF 또는 Excel을 사용할 경우 파일 공유 배달을 사용하도록 구독을 구성합니다. 배달된 보고서는 데스크톱 애플리케이션을 통해 사용할 수 있습니다. 파일 공유에 대한 사용 권한을 설정하여 보고서를 볼 수 있는 사용자를 결정해야 합니다.  
   
      보고서가 파일 공유에 저장되면 해당 보고서는 더 이상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 의해 제어되거나 보안되지 않습니다. 보고서가 업데이트될 때 알림을 받으려면 전자 메일 배달을 사용하여 알림만 보내는 두 번째 구독을 만듭니다.  
   

@@ -19,7 +19,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48052273"
@@ -143,7 +143,7 @@ ms.locfileid: "48052273"
 |-----------------|-----------------|  
 |`General Date`|날짜 및/또는 시간을 표시합니다. 실수인 경우 4/3/93 05:34 PM과 같이 날짜 및 시간을 표시합니다. 소수 부분이 없으면 4/3/93과 같이 날짜만 표시합니다. 정수 부분이 없으면 05:34 PM과 같이 시간만 표시합니다. 날짜 표시 형식은 시스템 설정에 따라 결정됩니다.|  
 |`Long Date`|시스템의 자세한 날짜 형식에 따라 날짜를 표시합니다.|  
-|`Medium Date`|호스트 응용 프로그램 언어 버전에 적합한 보통 날짜 형식을 사용하여 날짜를 표시합니다.|  
+|`Medium Date`|호스트 애플리케이션 언어 버전에 적합한 보통 날짜 형식을 사용하여 날짜를 표시합니다.|  
 |`Short Date`|시스템의 짧은 날짜 형식을 사용하여 날짜를 표시합니다.|  
 |`Long Time`|시스템의 자세한 시간 형식을 사용하여 시간을 표시하며 시, 분 및 초가 포함됩니다.|  
 |`Medium Time`|시, 분 및 AM/PM 지정자를 사용하여 12시간 형식으로 시간을 표시합니다.|  

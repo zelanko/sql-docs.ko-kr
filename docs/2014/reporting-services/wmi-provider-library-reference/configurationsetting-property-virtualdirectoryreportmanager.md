@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48063793"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 속성(WMI MSReportServer_ConfigurationSetting)
-  보고서 관리자 응용 프로그램의 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
+  보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
   

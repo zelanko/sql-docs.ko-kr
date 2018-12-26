@@ -21,7 +21,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48224663"
@@ -41,7 +41,7 @@ ms.locfileid: "48224663"
   
 4.  비즈니스 논리 처리기를 사용하는 아티클을 만들거나 기존 아티클을 수정하여 비즈니스 논리 처리기를 사용하도록 합니다.  
   
- 사용자가 지정하는 비즈니스 논리 처리기는 동기화되는 모든 행에 대해 실행됩니다. 네트워크 서비스 또는 다른 응용 프로그램에 대한 호출과 복잡한 논리가 성능에 영향을 줄 수 있습니다. 비즈니스 논리 처리기에 대한 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
+ 사용자가 지정하는 비즈니스 논리 처리기는 동기화되는 모든 행에 대해 실행됩니다. 네트워크 서비스 또는 다른 애플리케이션에 대한 호출과 복잡한 논리가 성능에 영향을 줄 수 있습니다. 비즈니스 논리 처리기에 대한 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48224663"
   
 6.  프로젝트를 빌드하여 비즈니스 논리 처리기 어셈블리를 만듭니다.  
   
-7.  어셈블리를 병합 에이전트 실행 파일(replmerg.exe)이 있는 디렉터리(기본 설치의 경우 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM)에 배포하거나 .NET GAC(전역 어셈블리 캐시)에 설치합니다. 병합 에이전트 이외의 다른 응용 프로그램에서 어셈블리에 액세스해야 하는 경우 어셈블리를 GAC에만 설치해야 합니다. .NET Framework SDK에 제공되는 전역 어셈블리 캐시 도구(**Gacutil.exe** )를 사용하여 GAC에 어셈블리를 설치할 수 있습니다.  
+7.  어셈블리를 병합 에이전트 실행 파일(replmerg.exe)이 있는 디렉터리(기본 설치의 경우 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM)에 배포하거나 .NET GAC(전역 어셈블리 캐시)에 설치합니다. 병합 에이전트 이외의 다른 애플리케이션에서 어셈블리에 액세스해야 하는 경우 어셈블리를 GAC에만 설치해야 합니다. .NET Framework SDK에 제공되는 전역 어셈블리 캐시 도구(**Gacutil.exe** )를 사용하여 GAC에 어셈블리를 설치할 수 있습니다.  
   
     > [!NOTE]  
     >  비즈니스 논리 처리기는 병합 에이전트가 실행되는 모든 서버에 배포해야 합니다. 여기에는 웹 동기화를 사용할 때 replisapi.dll을 호스팅하는 IIS 서버도 포함됩니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "48224663"
 2.  배포자에서 실행 [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), 비즈니스 논리 처리기의 이름을 지정 하 **@article_resolver**에 값이 `true`에 대 한 **@is_dotnet_assembly**, 어셈블리의 이름을 **@dotnet_assembly_name**, 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한  **@dotnet_class_name**.  
   
     > [!NOTE]  
-    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
+    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
@@ -177,7 +177,7 @@ ms.locfileid: "48224663"
   
 4.  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 클래스의 인스턴스를 만듭니다. 다음 속성을 지정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> -.NET 어셈블리의 이름. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC에 배포되지 않은 경우 어셈블리 이름에 전체 경로를 포함해야 합니다. 웹 동기화에서 비즈니스 논리 처리기를 사용하는 경우 어셈블리 이름에 전체 경로를 포함해야 합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> -.NET 어셈블리의 이름. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC에 배포되지 않은 경우 어셈블리 이름에 전체 경로를 포함해야 합니다. 웹 동기화에서 비즈니스 논리 처리기를 사용하는 경우 어셈블리 이름에 전체 경로를 포함해야 합니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetClassName%2A> - <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 을 덮어쓰고 비즈니스 논리 처리기를 구현하는 클래스의 정규화된 이름  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48224663"
   
 #### <a name="to-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 배포하려면  
   
-1.  병합 에이전트가 실행되는 서버에서 비즈니스 논리 처리기가 배포자에 등록될 때 지정된 파일 위치에 어셈블리를 배포합니다. 끌어오기 구독의 경우 에이전트가 구독자에서 실행되고 밀어넣기 구독의 경우에는 배포자에서 실행됩니다. 웹 동기화를 사용할 경우 에이전트는 웹 서버에서 실행됩니다. 비즈니스 논리 처리기가 등록될 때 어셈블리 이름에 전체 경로를 포함하지 않은 경우 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리에 어셈블리를 배포합니다. 동일한 어셈블리를 사용하는 응용 프로그램이 여러 개인 경우 GAC에 어셈블리를 설치할 수 있습니다.  
+1.  병합 에이전트가 실행되는 서버에서 비즈니스 논리 처리기가 배포자에 등록될 때 지정된 파일 위치에 어셈블리를 배포합니다. 끌어오기 구독의 경우 에이전트가 구독자에서 실행되고 밀어넣기 구독의 경우에는 배포자에서 실행됩니다. 웹 동기화를 사용할 경우 에이전트는 웹 서버에서 실행됩니다. 비즈니스 논리 처리기가 등록될 때 어셈블리 이름에 전체 경로를 포함하지 않은 경우 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리에 어셈블리를 배포합니다. 동일한 어셈블리를 사용하는 애플리케이션이 여러 개인 경우 GAC에 어셈블리를 설치할 수 있습니다.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   

@@ -32,7 +32,7 @@ ms.locfileid: "47730181"
 |ExposeCharColumnsAsUnicode|Boolean|이 속성은 구성 요소가 CHAR 열을 표시하는 방법을 결정합니다. 기본값은 CHAR 열이 멀티바이트 문자열(DT_STR)로 표시됨을 나타내는 False입니다. True이면 CHAR 열이 와이드 문자열(DT_WSTR)로 표시됩니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |FetchMethod|Integer(열거형)|데이터를 가져오는 데 사용되는 메서드입니다. 가능한 옵션은 행 단위(0) 및 일괄 처리(1)입니다. 기본값은 일괄 처리(1)입니다.<br /><br /> 이러한 옵션에 대한 자세한 내용은 [ODBC Source](../../integration-services/data-flow/odbc-source.md)를 참조하세요.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SqlCommand|String|AccessMode가 SQL 명령으로 설정될 때 실행할 SQL 명령입니다.|  
-|StatementTimeout|정수|오류가 발생하여 응용 프로그램으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 0입니다. 값 0은 시스템에 제한 시간이 없음을 나타냅니다.|  
+|StatementTimeout|정수|오류가 발생하여 애플리케이션으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 0입니다. 값 0은 시스템에 제한 시간이 없음을 나타냅니다.|  
 |TableName|String|AccessMode가 테이블 이름으로 설정될 때 사용되는 데이터가 포함된 테이블의 이름입니다.|  
 |LobChunckSize|정수|LOB 열에 대한 청크 크기 할당입니다.|  
 ||||  

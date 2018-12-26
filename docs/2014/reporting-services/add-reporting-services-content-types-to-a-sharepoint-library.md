@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48155453"
@@ -153,7 +153,7 @@ ms.locfileid: "48155453"
   
 1.  SQL Server Reporting Services 2008 및 2008 R2 보고서 서버의 경우 여러 비즈니스 인텔리전스 센터 사이트에 대한 콘텐츠 형식 및 콘텐츠 관리를 설정할 수 있습니다.  
   
-2.  SharePoint 중앙 관리에서 **일반 응용 프로그램 설정**을 클릭합니다. **SQL Server Reporting Services(2008 및 2008 R2)** 섹션에서 **Reporting Services 통합**을 클릭합니다.  
+2.  SharePoint 중앙 관리에서 **일반 애플리케이션 설정**을 클릭합니다. **SQL Server Reporting Services(2008 및 2008 R2)** 섹션에서 **Reporting Services 통합**을 클릭합니다.  
   
      ![rs_general_app_settings](media/rs-general-app-settings.gif "rs_general_app_settings")  
   

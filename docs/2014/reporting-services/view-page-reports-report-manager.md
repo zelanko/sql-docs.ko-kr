@@ -30,7 +30,7 @@ ms.locfileid: "48102803"
  일부 보고서 기능은 일부 내보내기 형식에서 사용할 수 없습니다. HTML 보고서를 다른 형식으로 내보내는 경우 보고서 표시 방법이 서로 다를 수 있습니다. 또한 보고서에 하이퍼링크, 책갈피 또는 문서 구조 등의 대화형 기능이 있는 경우 새 형식에서는 이러한 기능을 사용할 수 없거나 동작 방식이 다를 수도 있습니다.  
   
 ## <a name="generating-data-feeds-from-report-data"></a>보고서 데이터에서 데이터 피드 생성  
- 보고서에서 데이터 피드를 생성할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램에서는 보고서가 제공하는 데이터 피드를 나열하는 Atom 서비스 문서와 보고서 데이터를 포함하는 데이터 피드의 두 가지 Atom 호환 문서를 생성합니다. 데이터 피드는 Atom 호환 데이터 피드를 사용하는 응용 프로그램에서 읽고 교환할 수 있는 표준화된 Atom 1.0 호환 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 생성됩니다. 예를 들어 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 클라이언트는 보고서에서 생성된 데이터 피드를 사용할 수 있습니다.  
+ 보고서에서 데이터 피드를 생성할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램에서는 보고서가 제공하는 데이터 피드를 나열하는 Atom 서비스 문서와 보고서 데이터를 포함하는 데이터 피드의 두 가지 Atom 호환 문서를 생성합니다. 데이터 피드는 Atom 호환 데이터 피드를 사용하는 애플리케이션에서 읽고 교환할 수 있는 표준화된 Atom 1.0 호환 형식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 생성됩니다. 예를 들어 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 클라이언트는 보고서에서 생성된 데이터 피드를 사용할 수 있습니다.  
   
 ## <a name="running-parameterized-reports"></a>매개 변수 있는 보고서 실행  
  입력 필드 및 **보고서 보기** 단추를 포함하는 보고서를 매개 변수가 있는 보고서라고 합니다. 매개 변수가 있는 보고서를 보려면 보고서 실행에 사용되는 값을 제공해야 할 수도 있습니다.  

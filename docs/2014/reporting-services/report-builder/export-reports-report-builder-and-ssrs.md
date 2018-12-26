@@ -25,13 +25,13 @@ ms.locfileid: "48167973"
   
  보고서를 내보내면 다음을 수행할 수 있습니다.  
   
--   다른 응용 프로그램에서 보고서 데이터로 작업. 예를 들어 보고서를 Excel로 내보낸 다음 Excel에서 해당 데이터를 사용하여 계속 작업할 수 있습니다.  
+-   다른 애플리케이션에서 보고서 데이터로 작업. 예를 들어 보고서를 Excel로 내보낸 다음 Excel에서 해당 데이터를 사용하여 계속 작업할 수 있습니다.  
   
 -   다른 형식으로 보고서 인쇄. 예를 들어 보고서를 PDF 파일 형식으로 내보낸 다음 인쇄할 수 있습니다.  
   
 -   다른 파일 유형으로 보고서 복사본 저장. 예를 들어 보고서의 복사본을 만들어 Word로 내보낸 다음 저장할 수 있습니다.  
   
--   응용 프로그램에서 보고서 데이터를 데이터 피드로 사용. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 Atom 규격 데이터 피드를 생성한 다음 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 이 데이터로 작업할 수 있습니다.  
+-   애플리케이션에서 보고서 데이터를 데이터 피드로 사용. 예를 들어 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 Atom 규격 데이터 피드를 생성한 다음 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 이 데이터로 작업할 수 있습니다.  
   
  내보내기 옵션은 보고서 관리자의 보고서 뷰어 도구 모음에서 사용할 수 있습니다. 이 도구 모음은 보고서 서버에서 보고서를 볼 때 모든 보고서의 맨 위에 나타나며 보고서를 미리 볼 때 보고서 작성기의 리본 메뉴에 표시됩니다. 데이터 피드 옵션은 보고서 관리자에서만 사용할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48167973"
 ##  <a name="RendererTypes"></a> 렌더링 확장 프로그램 유형  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더링 확장 프로그램에는 다음 세 가지 유형이 있습니다.  
   
--   **데이터 렌더링 확장 프로그램** 데이터 렌더링 확장 프로그램은 보고서에서 서식 및 레이아웃 정보를 모두 제거하고 데이터만 표시합니다. 이렇게 내보낸 파일은 Excel 같은 다른 파일 형식, 다른 데이터베이스, XML 데이터 메시지 또는 사용자 지정 응용 프로그램으로 원시 보고서 데이터를 가져오는 데 사용할 수 있습니다. 데이터 렌더링 확장 프로그램은 페이지 나누기를 지원하지 않습니다.  
+-   **데이터 렌더링 확장 프로그램** 데이터 렌더링 확장 프로그램은 보고서에서 서식 및 레이아웃 정보를 모두 제거하고 데이터만 표시합니다. 이렇게 내보낸 파일은 Excel 같은 다른 파일 형식, 다른 데이터베이스, XML 데이터 메시지 또는 사용자 지정 애플리케이션으로 원시 보고서 데이터를 가져오는 데 사용할 수 있습니다. 데이터 렌더링 확장 프로그램은 페이지 나누기를 지원하지 않습니다.  
   
      지원되는 데이터 렌더링 확장 프로그램은 CSV, XML 및 Atom입니다.  
   
@@ -64,17 +64,17 @@ ms.locfileid: "48167973"
   
 |형식|렌더링 확장 프로그램 유형|Description|  
 |------------|------------------------------|-----------------|  
-|CSV|data|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|CSV|data|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 애플리케이션과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
 |내보내기|소프트 페이지 나누기|Excel 렌더링 확장 프로그램은 호환 되는 Excel 문서로 보고서를 렌더링 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010 뿐만 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] Word, Excel 및 PowerPoint에 대 한 Microsoft Office 호환 기능 팩을 사용 하 여 2003. 보고서를 Excel 워크시트로 내보내면 일부 레이아웃과 원래 디자인 요소가 유지되지 않을 수 있습니다. 보고서를 Excel로 내보낼 때 워크시트 탭 이름을 지정할 수 있도록 하는 속성을 보고서 및 보고서 내의 그룹에 설정할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 xlsx입니다.<br /><br /> 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: Excel 2003 렌더링 확장 프로그램의 네이티브 형식으로 렌더링 하는 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003은 일부 보고 시나리오에서 사용할 수 있습니다.|  
 |Word|소프트 페이지 나누기|Word 렌더링 확장 프로그램은 호환 되는 Word 문서로 보고서를 렌더링 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 뿐만 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Excel 및 PowerPoint 용 Office 호환 기능 팩입니다. 보고서를 Word 문서로 내보낸 후에는 보고서의 내용을 변경하고 우편물 레이블, 구매 주문서 또는 편지 양식과 같은 문서 스타일의 보고서를 디자인할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 docx입니다.<br /><br /> 자세한 내용은 [Microsoft Word로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: Word 2003 렌더링 확장 프로그램의 네이티브 형식으로 렌더링 하는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003은 일부 보고 시나리오에서 사용할 수 있습니다.|  
 |웹 보관 파일|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 보고서 관리자에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 여는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)을 참조하세요.|  
 |Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 [PDF 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)를 참조하세요.|  
 |TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
-|XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.<br /><br /> 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
+|XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.<br /><br /> 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
 |Atom|data|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  
   
 ##  <a name="ExportingReport"></a> 보고서 내보내기  
- 보고서를 내보내려면 보고서 관리자나 보고서 작성기에서 보고서를 실행한 다음 내보내기 드롭다운 목록에서 형식을 선택합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 선택한 렌더링 형식에 연결된 응용 프로그램에 보고서가 열립니다. 예를 들어 **Excel** 을 선택하면 보고서가 Excel에 열리고, **저장**을 선택하면 보고서가 저장됩니다. 예를 들어 Excel로 내보내는 경우 보고서가 .xls 파일로 저장됩니다. 로컬 컴퓨터에 정의된 파일 연결에 따라 특정 렌더링 형식에 사용되는 응용 프로그램이 결정됩니다. 자세한 내용은 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)합니다.  
+ 보고서를 내보내려면 보고서 관리자나 보고서 작성기에서 보고서를 실행한 다음 내보내기 드롭다운 목록에서 형식을 선택합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 선택한 렌더링 형식에 연결된 응용 프로그램에 보고서가 열립니다. 예를 들어 **Excel** 을 선택하면 보고서가 Excel에 열리고, **저장**을 선택하면 보고서가 저장됩니다. 예를 들어 Excel로 내보내는 경우 보고서가 .xls 파일로 저장됩니다. 로컬 컴퓨터에 정의된 파일 연결에 따라 특정 렌더링 형식에 사용되는 애플리케이션이 결정됩니다. 자세한 내용은 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)합니다.  
   
  보고서 서버에서는 현재 사용자 세션의 상태 그대로 보고서를 내보냅니다. 보고서를 연 상태에서 다른 사용자가 보고서의 업데이트된 버전을 게시하거나 보고서에 표시되는 데이터가 변경되더라도 내보낸 보고서는 업데이트되지 않습니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48167973"
 ##  <a name="OtherWaysExportingReports"></a> 보고서를 내보내는 다른 방법  
  보고서 내보내기는 보고서가 보고서 관리자나 보고서 작성기에 열려 있을 때 사용자가 수행하는 요청 시 태스크입니다. 되풀이 일정에서 특정 파일 형식으로 공유 폴더에 보고서를 내보내려는 경우와 같이 내보내기 작업을 자동화하려면 보고서를 공유 폴더로 배달하는 구독을 만듭니다. 자세한 내용은 [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
   
- 보고서 작성 도구에서 미리 보거나 보고서 관리자와 같은 브라우저 응용 프로그램에서 여는 보고서는 항상 HTML로 먼저 렌더링됩니다. 다른 렌더링 확장 프로그램을 보고서를 표시하는 기본 프로그램으로 지정할 수 없습니다. 그러나 이후에 받은 편지함이나 공유 폴더로 배달할 때 사용할 렌더링 형식으로 보고서를 생성하는 구독을 만들 수 있습니다. 자세한 내용은 참조 하세요. [Create, Modify, and 표준 구독 삭제 &#40;기본 모드의 Reporting Services&#41; ](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 및 [만들기, 수정 및 데이터 기반 구독 삭제](../subscriptions/data-driven-subscriptions.md).  
+ 보고서 작성 도구에서 미리 보거나 보고서 관리자와 같은 브라우저 애플리케이션에서 여는 보고서는 항상 HTML로 먼저 렌더링됩니다. 다른 렌더링 확장 프로그램을 보고서를 표시하는 기본 프로그램으로 지정할 수 없습니다. 그러나 이후에 받은 편지함이나 공유 폴더로 배달할 때 사용할 렌더링 형식으로 보고서를 생성하는 구독을 만들 수 있습니다. 자세한 내용은 참조 하세요. [Create, Modify, and 표준 구독 삭제 &#40;기본 모드의 Reporting Services&#41; ](../subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 및 [만들기, 수정 및 데이터 기반 구독 삭제](../subscriptions/data-driven-subscriptions.md).  
   
  렌더링 확장 프로그램을 URL 매개 변수로 지정하는 URL을 통해 보고서에 액세스한 후 보고서를 HTML로 먼저 렌더링하지 않고 지정된 형식으로 직접 렌더링할 수도 있습니다. 다음 예에서는 보고서를 Excel 형식으로 렌더링합니다.  
   

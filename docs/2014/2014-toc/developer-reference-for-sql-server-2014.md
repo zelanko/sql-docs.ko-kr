@@ -14,13 +14,13 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48196813"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 개발자 참조
-  다음 기능과 기술을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 응용 프로그램을 개발할 수 있습니다.  
+  다음 기능과 기술을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 애플리케이션을 개발할 수 있습니다.  
   
 ## <a name="programming-reference-sections"></a>프로그래밍 참조 섹션  
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [공용 언어 런타임 &#40;CLR&#41; 통합 프로그래밍 개요](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
@@ -60,7 +60,7 @@ ms.locfileid: "48196813"
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Reporting Services 개발자 가이드](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>관련 프로그래밍 자료  
- 데이터 액세스 응용 프로그램을 개발하기 위해서는 다음 기술을 하나 이상 사용해야 합니다.  
+ 데이터 액세스 애플리케이션을 개발하기 위해서는 다음 기술을 하나 이상 사용해야 합니다.  
   
  [Visual Studio에서 데이터 액세스](http://go.microsoft.com/fwlink/?LinkId=129902)  
   

@@ -22,7 +22,7 @@ ms.locfileid: "47610831"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 OUT 매개 변수를 하나 이상 반환하는 저장 프로시저입니다. 여기서 매개 변수는 저장 프로시저에서 데이터를 호출 응용 프로그램으로 다시 반환하는 데 사용됩니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다.
+호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 OUT 매개 변수를 하나 이상 반환하는 저장 프로시저입니다. 여기서 매개 변수는 저장 프로시저에서 데이터를 호출 애플리케이션으로 다시 반환하는 데 사용됩니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다.
 
 JDBC 드라이버를 사용하여 이러한 종류의 저장 프로시저를 호출하는 경우에는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드와 함께 `call` SQL 이스케이프 시퀀스를 사용해야 합니다. OUT 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
 

@@ -35,13 +35,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48106963"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
-  XML 인덱스를 만들 수 있습니다 `xml` 데이터 형식 열입니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 응용 프로그램에서 XML 인덱스를 활용할 수 있습니다.  
+  XML 인덱스를 만들 수 있습니다 `xml` 데이터 형식 열입니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
   
 -   XML 열의 쿼리가 작업에서 일반적입니다. 데이터를 수정하는 동안 XML 인덱스 유지 관리 비용이 고려되어야 합니다.  
   

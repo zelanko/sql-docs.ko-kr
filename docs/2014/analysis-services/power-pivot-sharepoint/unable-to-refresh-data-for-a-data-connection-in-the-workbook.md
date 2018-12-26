@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4deeeaae2bb08d9f1e2b4c434ec262d0fb7bd679
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077493"
@@ -51,7 +51,7 @@ ms.locfileid: "48077493"
   
  **시나리오 2b: 클라이언트 라이브러리 버전이 잘못된 응용 프로그램 서버에서 Excel Services를 실행 중인 경우**  
   
- 기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 응용 프로그램 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. PowerPivot 데이터 액세스를 지원하는 팜에서 Excel 서비스 및 SharePoint용 PowerPivot과 같이 PowerPivot 데이터를 요청하는 응용 프로그램을 실행하는 물리적인 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
+ 기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 애플리케이션 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. PowerPivot 데이터 액세스를 지원하는 팜에서 Excel 서비스 및 SharePoint용 PowerPivot과 같이 PowerPivot 데이터를 요청하는 애플리케이션을 실행하는 물리적인 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
   
  SharePoint용 PowerPivot을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 PowerPivot 없이 독립 실행형 인스턴스인 Excel 서비스를 실행하는 서버와 같은 다른 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하세요.  
   

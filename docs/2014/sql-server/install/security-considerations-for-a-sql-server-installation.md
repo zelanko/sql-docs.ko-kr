@@ -29,7 +29,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48093593"
@@ -74,7 +74,7 @@ ms.locfileid: "48093593"
   
 -   Windows 도메인 내에 서버를 설치할 경우 Windows 인증을 허용하도록 내부 방화벽을 구성합니다.  
   
--   응용 프로그램에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 또한 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 리소스 관리자 간에도 트래픽이 전달되도록 방화벽을 구성해야 합니다.  
+-   애플리케이션에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 또한 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 리소스 관리자 간에도 트래픽이 전달되도록 방화벽을 구성해야 합니다.  
   
  기본 Windows 방화벽 설정 방법과 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 영향을 주는 TCP 포트에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   

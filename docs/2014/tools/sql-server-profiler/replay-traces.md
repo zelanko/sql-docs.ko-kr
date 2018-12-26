@@ -22,7 +22,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9f20ef7be89e70de2ba50444691f17aff4128fa
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48135325"
@@ -32,7 +32,7 @@ ms.locfileid: "48135325"
   
  이 섹션에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 재생 기능을 사용하는 방법에 대해 설명합니다. Distributed Replay Utility에 대한 자세한 내용은 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)을 참조하십시오.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정한 다음에는 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제가 발견된 추적을 실행하고 원래 추적을 재생한 다음 결과를 비교합니다.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 애플리케이션이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정한 다음에는 수정된 애플리케이션이나 프로세스에 대해 잠재적인 문제가 발견된 추적을 실행하고 원래 추적을 재생한 다음 결과를 비교합니다.  
   
  추적 재생을 사용 하 여 디버깅 지원는 **중단 점 토글** 및 **커서까지 실행** 옵션에 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **재생** 메뉴. 이 옵션을 사용하면 추적 재생을 짧은 조각으로 분리하고 점차 큰 부분으로 분석 범위를 늘릴 수 있어 긴 스크립트를 분석할 때 유용합니다.  
   

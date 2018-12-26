@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48083653"
@@ -27,7 +27,7 @@ ms.locfileid: "48083653"
   
 ## <a name="alter-database"></a>ALTER DATABASE  
   
-### <a name="application-level"></a>응용 프로그램 수준  
+### <a name="application-level"></a>애플리케이션 수준  
  포함된 데이터베이스 내부에서 ALTER DATABASE 문을 사용하는 경우 구문은 포함되지 않은 데이터베이스에 사용되는 구문과 다릅니다. 이러한 차이에는 데이터베이스를 넘어 인스턴스로 확장되는 문 요소의 제한 사항이 포함됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
 ### <a name="instance-level"></a>인스턴스 수준  

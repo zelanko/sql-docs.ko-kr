@@ -17,13 +17,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fea03f3328d2cf19a0f17d4e4339a670b2af9b9
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48132923"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
-  데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에서 전자 메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 응용 프로그램에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  
+  데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에서 전자 메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 애플리케이션에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  
   
  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48132923"
   
 -   통합 구성: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]내에서 메일 계정에 대한 정보를 유지 관리합니다.  
   
--   로깅. 데이터베이스 메일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft Windows 응용 프로그램 이벤트 로그 및 **msdb** 데이터베이스의 테이블에 메일 작업을 기록합니다.  
+-   로깅. 데이터베이스 메일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft Windows 애플리케이션 이벤트 로그 및 **msdb** 데이터베이스의 테이블에 메일 작업을 기록합니다.  
   
 -   감사: 데이터베이스 메일은 보낸 메시지와 첨부 파일의 복사본을 **msdb** 데이터베이스에 보관합니다. 데이터베이스 메일 사용을 쉽게 감사하고 보존된 메시지를 검토할 수 있습니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48132923"
   
 -   로깅 및 감사 구성 요소  
   
-     데이터베이스 메일은 **msdb** 데이터베이스와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 이벤트 로그에 로깅 정보를 기록합니다.  
+     데이터베이스 메일은 **msdb** 데이터베이스와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 이벤트 로그에 로깅 정보를 기록합니다.  
   
  **데이터베이스 메일을 사용하도록 에이전트 구성:**  
   

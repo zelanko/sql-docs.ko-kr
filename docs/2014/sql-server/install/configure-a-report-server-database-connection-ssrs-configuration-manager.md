@@ -120,7 +120,7 @@ ms.locfileid: "48202655"
  연결 정보를 변경하여 보고서 서버 인스턴스에서 다른 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 프로덕션 보고서 서버를 배포할 때 주로 데이터베이스를 전환합니다. 테스트 보고서 서버 데이터베이스에서 프로덕션 보고서 서버 데이터베이스로 전환하는 작업은 일반적으로 프로덕션 서버를 전달하는 방법입니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) Reporting Services 업그레이드 및 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성  
- 여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 스케일 아웃 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 응용 프로그램을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
+ 여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 스케일 아웃 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 애플리케이션을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   

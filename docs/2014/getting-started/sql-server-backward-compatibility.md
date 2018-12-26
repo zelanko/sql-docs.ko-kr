@@ -27,7 +27,7 @@ ms.locfileid: "48113263"
 |-----------|-----------------|  
 |[SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
 |[SQL Server 2014에서 지원되지 않는 SQL Server 기능](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
-|[SQL Server 2014에서 SQL Server 기능의 주요 변경 내용](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|응용 프로그램을 변경해야 할 수도 있는 변경 내용입니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
+|[SQL Server 2014에서 SQL Server 기능의 주요 변경 내용](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|애플리케이션을 변경해야 할 수도 있는 변경 내용입니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
 |[SQL Server 2014에서 SQL Server 기능의 동작 변경 내용](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능의 동작 변경 내용. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

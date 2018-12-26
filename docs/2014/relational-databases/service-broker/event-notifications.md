@@ -32,11 +32,11 @@ ms.locfileid: "48049586"
  이벤트 알림은 DDL 트리거 및 SQL 추적에 대한 대체 프로그래밍 기능을 제공합니다.  
   
 ## <a name="event-notifications-benefits"></a>이벤트 알림의 이점  
- 이벤트 알림은 트랜잭션 범위 밖에서 비동기적으로 실행됩니다. 따라서 DDL 트리거와 달리 이벤트 알림은 데이터베이스 응용 프로그램 내에서 사용되어 최근 트랜잭션에서 정의한 리소스를 사용하지 않고 이벤트에 응답할 수 있습니다.  
+ 이벤트 알림은 트랜잭션 범위 밖에서 비동기적으로 실행됩니다. 따라서 DDL 트리거와 달리 이벤트 알림은 데이터베이스 애플리케이션 내에서 사용되어 최근 트랜잭션에서 정의한 리소스를 사용하지 않고 이벤트에 응답할 수 있습니다.  
   
  SQL 추적과 달리 이벤트 알림을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 SQL 추적 이벤트에 응답하는 동작을 수행할 수 있습니다.  
   
- 이벤트 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 실행되어 진행률을 추적하고 의사 결정을 내리는 응용 프로그램에 의해 사용될 수 있습니다. 예를 들어 다음 이벤트 알림은 `ALTER TABLE` 예제 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 문이 실행될 때마다 특정 서비스에 알림을 보냅니다.  
+ 이벤트 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 실행되어 진행률을 추적하고 의사 결정을 내리는 애플리케이션에 의해 사용될 수 있습니다. 예를 들어 다음 이벤트 알림은 `ALTER TABLE` 예제 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 문이 실행될 때마다 특정 서비스에 알림을 보냅니다.  
   
 ```  
 USE AdventureWorks2012;  

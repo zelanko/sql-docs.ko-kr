@@ -25,11 +25,11 @@ ms.locfileid: "48175783"
   
 -   디버깅하지 않고 시작  
   
-### <a name="to-build-and-run-the-samplerdlschema-application"></a>SampleRDLSchema 응용 프로그램을 작성하고 실행하려면  
+### <a name="to-build-and-run-the-samplerdlschema-application"></a>SampleRDLSchema 애플리케이션을 작성하고 실행하려면  
   
 1.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다. 이렇게 하면 프로그램이 실행을 마친 후에도 콘솔 창이 열린 채로 있게 됩니다.  
   
-     응용 프로그램은 다음 결과를 콘솔로 출력합니다.  
+     애플리케이션은 다음 결과를 콘솔로 출력합니다.  
   
     ```  
     Loading Report Definition  
@@ -44,7 +44,7 @@ ms.locfileid: "48175783"
     > [!NOTE]  
     >  발생하는 모든 오류는 콘솔에 기록됩니다.  
   
-3.  예제 응용 프로그램이 실행을 마치면 보고서의 업데이트된 복사본이 보고서 서버에 저장됩니다.  
+3.  예제 애플리케이션이 실행을 마치면 보고서의 업데이트된 복사본이 보고서 서버에 저장됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

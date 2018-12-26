@@ -20,7 +20,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6a4a88b101af2e65250032122267812ffabde739
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48164253"
@@ -85,7 +85,7 @@ public static int Main(String[] args)
 }  
 ```  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  이 항목에 나오는 C# 코드(DocSample.cs)를 폴더에 저장합니다.  
   

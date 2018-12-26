@@ -42,7 +42,7 @@ Windows 시작 메뉴의 Microsoft SQL Server 2016 그룹에서 마법사를 시
 > [!NOTE]
 > 이 예에서는 32비트 버전의 Microsoft Office가 설치되어 있으므로 32비트 마법사를 선택합니다. 결과적으로 32비트 데이터 공급자를 사용하여 Excel에 연결해야 합니다. 다른 많은 데이터 원본에서는 일반적으로 64비트 마법사를 선택할 수 있습니다.
 >
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 

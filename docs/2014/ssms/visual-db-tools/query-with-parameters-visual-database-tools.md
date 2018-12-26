@@ -16,13 +16,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c677215024dbb5a0a862fba3e9fd3232190dd453
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48213993"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
-  매번 서로 다른 입력으로 응용 프로그램에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
+  매번 서로 다른 입력으로 애플리케이션에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [매개 변수 쿼리&#40;Visual Database Tools&#41;](visual-database-tools.md)  

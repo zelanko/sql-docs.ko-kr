@@ -14,7 +14,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48144193"
@@ -33,7 +33,7 @@ ms.locfileid: "48144193"
  [항목 내용](#top)  
   
 ###  <a name="queries"></a> 전체 텍스트 검색 쿼리  
- 전체 텍스트 인덱스에 열을 추가한 후에는 사용자와 응용 프로그램이 해당 열의 텍스트에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 이러한 쿼리는 다음 중 하나를 검색할 수 있습니다.  
+ 전체 텍스트 인덱스에 열을 추가한 후에는 사용자와 애플리케이션이 해당 열의 텍스트에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 이러한 쿼리는 다음 중 하나를 검색할 수 있습니다.  
   
 -   하나 이상의 특정 단어 또는 구(*단순 단어*)  
   

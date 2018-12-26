@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47811341"
 ---
-# <a name="standards-compliant-applications-and-drivers"></a>표준 준수 응용 프로그램 및 드라이버
+# <a name="standards-compliant-applications-and-drivers"></a>표준 준수 애플리케이션 및 드라이버
 표준 호환 응용 프로그램 또는 드라이버 하나인 Open 그룹 CAE 사양 "데이터 관리:: SQL 호출 수준 인터페이스 (CLI)," 및 ISO/IEC 9075 따르는-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  
   
  ODBC 3 *.x* 다음과 같은 기능을 보장 합니다.  

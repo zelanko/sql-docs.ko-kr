@@ -15,13 +15,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67bef8e8cc3a696a137b9f1ce5da61a80f32fe0d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159013"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
-  데이터베이스 다이어그램의 이미지를 만들고 이 이미지를 다른 응용 프로그램으로 복사할 수 있습니다.  
+  데이터베이스 다이어그램의 이미지를 만들고 이 이미지를 다른 애플리케이션으로 복사할 수 있습니다.  
   
 ### <a name="to-copy-a-diagram-image-to-the-clipboard"></a>다이어그램 이미지를 클립보드로 복사하려면  
   

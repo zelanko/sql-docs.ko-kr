@@ -21,7 +21,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60cf56b2d230435c42f1ef1402d55938e89af2b5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48206623"
@@ -33,7 +33,7 @@ ms.locfileid: "48206623"
  이전 버전과의 호환성을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에는 유지되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 복제 기능  
   
  [SQL Server 복제의 주요 변경 내용](breaking-changes-in-sql-server-replication.md)  
- 응용 프로그램을 변경해야 할 수도 있는 복제 기능 변경 내용  
+ 애플리케이션을 변경해야 할 수도 있는 복제 기능 변경 내용  
   
 ## <a name="see-also"></a>관련 항목  
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)  

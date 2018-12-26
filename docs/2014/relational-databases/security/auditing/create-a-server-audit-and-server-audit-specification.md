@@ -19,7 +19,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48219620"
@@ -89,7 +89,7 @@ ms.locfileid: "48219620"
     >  감사가 실패한 상태여도 관리자 전용 연결에서는 감사된 이벤트를 계속 수행할 수 있습니다.  
   
      **감사 대상** 목록  
-     데이터를 감사할 대상을 지정합니다. 이진 파일, Windows 응용 프로그램 로그, Windows 보안 로그 등이 감사 대상이 될 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
+     데이터를 감사할 대상을 지정합니다. 이진 파일, Windows 애플리케이션 로그, Windows 보안 로그 등이 감사 대상이 될 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
   
      **파일 경로**  
      **감사 대상** 이 파일인 경우 감사 데이터를 쓸 폴더의 위치를 지정합니다.  

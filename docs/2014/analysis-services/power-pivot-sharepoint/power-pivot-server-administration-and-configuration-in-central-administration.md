@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48168563"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 PowerPivot 서버 관리 및 구성
-  PowerPivot 서버 관리 및 구성은 SharePoint 서비스 응용 프로그램 관리자에 의해 SharePoint Server 관리를 통해 수행됩니다.  
+  PowerPivot 서버 관리 및 구성은 SharePoint 서비스 애플리케이션 관리자에 의해 SharePoint Server 관리를 통해 수행됩니다.  
   
  SharePoint용 PowerPivot을 사용하려면 먼저 구성해야 합니다. SQL Server 설치 프로그램을 사용하여 SharePoint용 PowerPivot을 설치한 후  
   
@@ -37,9 +37,9 @@ ms.locfileid: "48168563"
 >  SharePoint 2010의 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜이나 SharePoint용 PowerPivot을 구성하려면 먼저 SharePoint 2010 SP1(서비스 팩 1)을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 지금 설치합니다.  
   
 ## <a name="benefits-of-configuring-powerpivot-for-sharepoint-using-central-administration"></a>중앙 관리를 사용하여 SharePoint용 PowerPivot을 구성할 때의 이점  
- SharePoint 중앙 관리는 SharePoint 팜 관리 응용 프로그램입니다. 팜 관리자라면 SharePoint용 PowerPivot 인스턴스를 팜에 추가할 때 익숙한 도구를 사용하려고 할 것입니다.  
+ SharePoint 중앙 관리는 SharePoint 팜 관리 애플리케이션입니다. 팜 관리자라면 SharePoint용 PowerPivot 인스턴스를 팜에 추가할 때 익숙한 도구를 사용하려고 할 것입니다.  
   
- PowerPivot 구성 도구 또는 PowerShell cmdlet과 달리 중앙 관리에서는 응용 프로그램 또는 서버를 구성할 때 설정할 수 있는 모든 옵션을 완전히 지정하는 페이지를 제공합니다. 다른 방법에서는 구성 워크플로를 몇 개의 단계로 압축하거나 PowerShell을 사용하여 SharePoint 서버를 구성하는 방법을 미리 알고 있어야 합니다.  
+ PowerPivot 구성 도구 또는 PowerShell cmdlet과 달리 중앙 관리에서는 애플리케이션 또는 서버를 구성할 때 설정할 수 있는 모든 옵션을 완전히 지정하는 페이지를 제공합니다. 다른 방법에서는 구성 워크플로를 몇 개의 단계로 압축하거나 PowerShell을 사용하여 SharePoint 서버를 구성하는 방법을 미리 알고 있어야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [Windows PowerShell을 사용하여 PowerPivot 구성](power-pivot-configuration-using-windows-powershell.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "48168563"
   
 |링크|형식|태스크 설명|  
 |----------|----------|----------------------|  
-|[SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
+|[SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 애플리케이션 페이지를 추가하는 솔루션 파일을 설치합니다.|  
 |[만들기 및 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](create-and-configure-power-pivot-service-application-in-ca.md)|필수|이 단계에서는 PowerPivot 시스템 서비스를 프로비전합니다.|  
 |[중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 PowerPivot 기능을 설정합니다.|  
 |[Excel 서비스에서 MSOLAP.5를 신뢰할 수 있는 데이터 공급자로 추가](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  

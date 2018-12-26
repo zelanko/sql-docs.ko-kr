@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 코드에서 FOR XML 결과 사용 | Microsoft 문서
+title: 애플리케이션 코드에서 FOR XML 결과 사용 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,13 +20,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48206073"
 ---
-# <a name="use-for-xml-results-in-application-code"></a>응용 프로그램 코드에서 FOR XML 결과 사용
-  SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 응용 프로그램 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
+# <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
+  SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
   
 -   SQL 테이블에서 [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md) 값 인스턴스를 쿼리합니다.  
   
@@ -290,7 +290,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 데이터 형식으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 즐길 수 있습니다 `xml` 데이터 형식 대신 문자열이 나 이미지 형식의 데이터를 지정 하 여 합니다 [TYPE 지시어](type-directive-in-for-xml-queries.md)합니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [응용 프로그램에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
+>  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 데이터 형식으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 즐길 수 있습니다 `xml` 데이터 형식 대신 문자열이 나 이미지 형식의 데이터를 지정 하 여 합니다 [TYPE 지시어](type-directive-in-for-xml-queries.md)합니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [애플리케이션에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)  

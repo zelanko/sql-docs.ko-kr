@@ -12,7 +12,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 31c3d4cdac735aea203a88aa51154ae7c14c95a2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48210493"
@@ -26,7 +26,7 @@ ms.locfileid: "48210493"
   
 -   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)사용  
   
--   만드는 응용 프로그램에서 연결  
+-   만드는 애플리케이션에서 연결  
   
  코드 문을 전송하는 방법에 상관없이 코드는 동일한 방법과 동일한 사용 권한으로 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 실행됩니다.  
   

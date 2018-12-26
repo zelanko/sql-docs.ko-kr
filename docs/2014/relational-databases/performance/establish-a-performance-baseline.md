@@ -23,7 +23,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c4578842729160854a81be6ea730650f2440dbb9
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48148803"
@@ -39,9 +39,9 @@ ms.locfileid: "48148803"
   
 -   운영 체제  
   
--   데이터베이스 응용 프로그램  
+-   데이터베이스 애플리케이션  
   
--   클라이언트 응용 프로그램  
+-   클라이언트 애플리케이션  
   
  다음은 기준선 측정을 사용해 확인할 수 있는 기본 사항입니다.  
   

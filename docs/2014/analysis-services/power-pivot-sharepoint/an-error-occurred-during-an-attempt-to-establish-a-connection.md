@@ -38,7 +38,7 @@ ms.locfileid: "48198603"
 ## <a name="user-action"></a>사용자 동작  
  SharePoint용 PowerPivot을 설치하거나 SharePoint용 PowerPivot이 설치된 SharePoint 환경으로 PowerPivot 통합 문서를 이동합니다. 자세한 내용은 [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)을 참조하세요.  
   
- 소프트웨어가 설치되어 있는 경우 SQL Server Analysis Services(PowerPivot) 인스턴스가 실행되고 있는지 확인합니다. 중앙 관리에서 **서버의 서비스 관리** 를 확인합니다. 또한 관리 도구에서 서비스 콘솔 응용 프로그램을 확인합니다.  
+ 소프트웨어가 설치되어 있는 경우 SQL Server Analysis Services(PowerPivot) 인스턴스가 실행되고 있는지 확인합니다. 중앙 관리에서 **서버의 서비스 관리** 를 확인합니다. 또한 관리 도구에서 서비스 콘솔 애플리케이션을 확인합니다.  
   
  SQL Server 2008 R2 버전의 PowerPivot for Excel에서 만든 PowerPivot 통합 문서의 경우 SQL Server 2008 R2 버전의 Analysis Services OLE DB 공급자를 설치해야 합니다. 이 오류는 공급자를 설치했지만 Microsoft.AnalysisServices.ChannelTransport.dll 파일을 등록하지 않은 경우 발생합니다. 파일 등록에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하세요.  
   

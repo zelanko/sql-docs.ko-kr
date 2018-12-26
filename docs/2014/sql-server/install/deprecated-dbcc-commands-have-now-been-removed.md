@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48147743"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>사용되지 않는 DBCC 명령이 제거되었습니다.
-  다음 표에는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 더 이상 사용되지 않는다고 발표된 DBCC 명령이 나와 있습니다. 이러한 명령은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제거되었습니다. 더 이상 사용되지 않는 이러한 명령에 대한 참조를 제거하려면 응용 프로그램과 스크립트를 업데이트해야 합니다.  
+  다음 표에는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 더 이상 사용되지 않는다고 발표된 DBCC 명령이 나와 있습니다. 이러한 명령은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제거되었습니다. 더 이상 사용되지 않는 이러한 명령에 대한 참조를 제거하려면 애플리케이션과 스크립트를 업데이트해야 합니다.  
   
 ||  
 |-|  

@@ -26,7 +26,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48112753"
@@ -50,7 +50,7 @@ ms.locfileid: "48112753"
  이후의 절차에서는 간결한 설명을 위해 로컬 계정을 사용하는 간단한 보안 구성에 대해 설명합니다. 프로덕션 설치의 경우 사용자가 다중 서버 토폴로지를 사용할 가능성이 매우 높으며 또한 이렇게 하는 것이 권장되지만 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 및 배포자가 모두 동일한 컴퓨터에서 실행되는 설치에는 이러한 간단한 구성이 적합합니다. 다음 절차에서 로컬 계정 대신 도메인 계정을 사용할 수 있습니다.  
   
 ## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>새 계정 만들기 및 SQL Server 로그인 매핑  
- 복제 웹 사이트와 연결된 응용 프로그램 풀에 대해 지정된 계정을 가장하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll)가 게시자에 연결됩니다.  
+ 복제 웹 사이트와 연결된 애플리케이션 풀에 대해 지정된 계정을 가장하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll)가 게시자에 연결됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기에 사용되는 계정에는 [병합 에이전트 보안](merge-agent-security.md)의 "게시자 또는 배포자에 연결" 섹션에 설명된 대로 사용 권한이 있어야 합니다. 요약하면, 계정은 다음 조건을 만족해야 합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48112753"
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [웹 동기화를 위한 IIS 7 구성](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>웹 가든 만들기  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기에서는 스레드당 두 개의 동기화 작업이 동시에 수행되도록 지원합니다. 이 제한을 초과하면 복제 수신기에서 응답을 중지할 수 있습니다. replisapi.dll에 할당된 스레드 수는 응용 프로그램 풀 최대 작업자 프로세스 수 속성에 의해 결정됩니다. 기본적으로 이 속성은 1로 설정됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기에서는 스레드당 두 개의 동기화 작업이 동시에 수행되도록 지원합니다. 이 제한을 초과하면 복제 수신기에서 응답을 중지할 수 있습니다. replisapi.dll에 할당된 스레드 수는 애플리케이션 풀 최대 작업자 프로세스 수 속성에 의해 결정됩니다. 기본적으로 이 속성은 1로 설정됩니다.  
   
  최대 작업자 프로세스 수 속성 값을 늘려 CPU당 동시에 실행할 수 있는 동기화 작업 수를 더 늘릴 수 있습니다. CPU당 작업자 프로세스의 수를 늘려 확장하는 것을 "웹 가든"을 만드는 것이라고 합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48112753"
   
 1.  **인터넷 정보 서비스(IIS) 관리자**에서 로컬 서버 노드를 확장한 다음 **응용 프로그램 풀** 노드를 클릭합니다.  
   
-2.  웹 동기화 사이트와 연결된 응용 프로그램 풀을 선택한 다음 **동작** 창에서 **고급 설정** 을 클릭합니다.  
+2.  웹 동기화 사이트와 연결된 애플리케이션 풀을 선택한 다음 **동작** 창에서 **고급 설정** 을 클릭합니다.  
   
 3.  고급 설정 대화 상자의 **프로세스 모델** 머리글 아래에서 **최대 작업자 프로세스 수**라는 레이블이 지정된 행을 클릭합니다. 속성 값을 변경한 다음 **확인**을 클릭합니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48112753"
   
  병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에서 생성의 수를 사용 하 여 지정 된-`DownloadGenerationsPerBatch` 및 –`UploadGenerationsPerBatch` 병합 에이전트의 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](agents/replication-merge-agent.md)을(를) 참조하세요.  
   
- 데이터의 양이 많은 경우 각 일괄 처리 매개 변수에 작은 수를 지정하십시오. 10부터 시작한 다음 응용 프로그램 요구 사항과 성능에 따라 조정하는 것이 좋습니다. 일반적으로 이러한 매개 변수는 에이전트 프로필에 지정됩니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하십시오.  
+ 데이터의 양이 많은 경우 각 일괄 처리 매개 변수에 작은 수를 지정하십시오. 10부터 시작한 다음 애플리케이션 요구 사항과 성능에 따라 조정하는 것이 좋습니다. 일반적으로 이러한 매개 변수는 에이전트 프로필에 지정됩니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하십시오.  
   
 ## <a name="security-best-practices-for-web-synchronization"></a>웹 동기화에 대한 최상의 보안 방법  
  웹 동기화의 보안 관련 설정은 다양하게 지정할 수 있습니다. 다음 방법을 사용하는 것이 좋습니다.  

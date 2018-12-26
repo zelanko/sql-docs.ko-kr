@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6bf76bca14e7ae1dbf96cfd9c0123bad42e31a94
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220523"
@@ -48,11 +48,11 @@ ms.locfileid: "48220523"
 |**설치 및 초기 구성**||  
 |모든 WFE(웹 프런트 엔드) 컴퓨터에 SharePoint 추가 기능을 설치합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |SQL Server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 및 데이터베이스 엔진을 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|하나 이상의 SSRS 서비스 응용 프로그램을 만들고 서비스 응용 프로그램 연결을 구성합니다.|' 서비스 응용 프로그램 ' 섹션을 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|하나 이상의 SSRS 서비스 애플리케이션을 만들고 서비스 애플리케이션 연결을 구성합니다.|' 서비스 응용 프로그램 ' 섹션을 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |**추가 구성**||  
 |SSRS 콘텐츠 형식을 문서 라이브러리에 추가합니다.|[보고서 서버 콘텐츠 형식을 라이브러리에 추가 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)|  
 |SQL Server 에이전트 프로비전|[SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)|  
-|서비스 응용 프로그램에 대한 전자 메일 설정을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대 한 전자 메일을 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|서비스 애플리케이션에 대한 전자 메일 설정을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대 한 전자 메일을 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |c2WTS(Windows 토큰 서비스에 대한 클레임) 구성|[Windows 클레임 토큰 서비스 &#40;C2WTS&#41; 및 Reporting Services](../../../2014/sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)|  
   
 ## <a name="migration-checklist"></a>마이그레이션 목록  
@@ -61,12 +61,12 @@ ms.locfileid: "48220523"
 |단계|링크|  
 |----------|----------|  
 |새 서버를 설치 및 구성합니다. 여기에는 다음이 포함됩니다.<br /><br /> SharePoint 제품 준비 도구<br /><br /> SharePoint 2010 제품<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의<br /><br /> SharePoint 2010 제품을 위한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
-|최소 하나의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 생성||  
+|최소 하나의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 생성||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스 백업||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 백업||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스 및 암호화 키 복구||  
 |모든 웹 응용 프로그램을 새로운 매핑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]서비스 응용 프로그램|새 설치 **가 이제 작동**|  
-|이전 서버의 통합 URL을 제거합니다.|SharePoint 중앙 관리의 **일반 응용 프로그램 설정** 페이지에서 **Reporting Services 통합**을 클릭합니다.|  
+|이전 서버의 통합 URL을 제거합니다.|SharePoint 중앙 관리의 **일반 애플리케이션 설정** 페이지에서 **Reporting Services 통합**을 클릭합니다.|  
 |원하는 경우 기존 설정에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]을 제거합니다.||  
   
 ## <a name="next-steps"></a>다음 단계  

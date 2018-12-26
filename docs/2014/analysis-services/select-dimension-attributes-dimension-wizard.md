@@ -15,7 +15,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48218953"
@@ -58,7 +58,7 @@ ms.locfileid: "48218953"
 |null이 허용되는 외래 키 열을 통해 도달하는 눈송이 테이블이 차원에 포함된 경우<br /><br /> —및—<br /><br /> 눈송이 테이블의 키를 기반으로 한 특성에 대해 찾아보기 사용이 선택되지 않은 경우|마법사가 있는 새 특성을 만듭니다는 `AttributeHiearchyEnabled` 속성으로 설정 `True`, 및 `AttributeHieararchyVisible` 속성이 설정 `False`합니다.|  
   
  **특성 유형**  
- (옵션) 특성의 유형을 설정합니다. 기본값은 **Regular**입니다. 특성 유형은 특성에 포함할 정보에 대한 지침을 클라이언트 응용 프로그램에 제공합니다.  
+ (옵션) 특성의 유형을 설정합니다. 기본값은 **Regular**입니다. 특성 유형은 특성에 포함할 정보에 대한 지침을 클라이언트 애플리케이션에 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 마법사 F1 도움말](dimension-wizard-f1-help.md)   

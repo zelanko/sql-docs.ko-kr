@@ -22,7 +22,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7da5ae2c327410f7904f712ecd83516b983b894c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48170363"
@@ -33,7 +33,7 @@ ms.locfileid: "48170363"
 > [!NOTE]  
 >  구독자와 게시자가 동기화되는 경우에도 충돌은 대체로 구독자 및 게시자에서 수행되는 업데이트가 아닌 여러 구독자에서 수행되는 업데이트 사이에서 발생합니다.  
   
- 병합 복제는 충돌을 감지하고 해결하는 다양한 방법을 제공합니다. 대부분의 응용 프로그램에는 기본 방법이 적합합니다.  
+ 병합 복제는 충돌을 감지하고 해결하는 다양한 방법을 제공합니다. 대부분의 애플리케이션에는 기본 방법이 적합합니다.  
   
 -   게시자와 구독자 사이에 충돌이 발생하면 게시자 변경 내용이 유지되고 구독자 변경 내용은 삭제됩니다.  
   

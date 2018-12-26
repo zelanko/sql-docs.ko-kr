@@ -16,13 +16,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1de5d311b24d8a4a73ea7ed61127310249a70ae3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48137423"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014에서 Analysis Services 기능의 주요 변경 내용
-  이 항목에서는 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 SQL Server을 기반으로 한 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다.  
+  이 항목에서는 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 SQL Server을 기반으로 한 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다.  
   
  항목 내용  
   
@@ -38,10 +38,10 @@ ms.locfileid: "48137423"
  가지 새로운 테이블 형식, 다차원, 데이터 마이닝에 대 한 발표 변경이 없습니다 또는 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 이 릴리스에서 기능입니다.  그러나 때문에 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 유사 하므로 합니다 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 버전에서는 주요 변경 내용 모두 이전 릴리스에서 제공 됩니다에서 업그레이드 하는 경우의 편의 위해 여기 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]합니다.  
   
 ##  <a name="bkmk_2012Sp1"></a> SQL Server 2012 SP1의 주요 변경 내용  
- 세계화 관련 코드 변경 내용에 따라 일부 응용 프로그램을 사용할 수 없습니다. 알려진 문제는 다음과 같습니다.  
+ 세계화 관련 코드 변경 내용에 따라 일부 애플리케이션을 사용할 수 없습니다. 알려진 문제는 다음과 같습니다.  
   
  **개체 식별자의 대/소문자 구분**  
- 코드 변경은 모든 개체 식별자의 대/소문자가 일부 언어에서 반대의 결과를 나타내도록 하기 위한 것입니다. 데이터 정렬에 관계없이 의도적으로 모든 개체 식별자의 대/소문자를 구분합니다. 이 변경은 Analysis Services를 동일한 솔루션 스택에서 일반적으로 사용되는 다른 응용 프로그램에 맞게 조정합니다.  
+ 코드 변경은 모든 개체 식별자의 대/소문자가 일부 언어에서 반대의 결과를 나타내도록 하기 위한 것입니다. 데이터 정렬에 관계없이 의도적으로 모든 개체 식별자의 대/소문자를 구분합니다. 이 변경은 Analysis Services를 동일한 솔루션 스택에서 일반적으로 사용되는 다른 애플리케이션에 맞게 조정합니다.  
   
  기본 라틴어 알파벳 26자를 기반으로 하는 언어의 경우 이제 개체 식별자에서 대/소문자를 구분하며 이는 의도된 동작입니다.  
   

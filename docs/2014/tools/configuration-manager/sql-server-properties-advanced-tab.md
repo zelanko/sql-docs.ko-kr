@@ -13,7 +13,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 196347ff0d0a5fb7cbf19ebd679c7a9583ea3a8d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48206383"
@@ -50,7 +50,7 @@ ms.locfileid: "48206383"
  서버 메시지에 대한 기본 언어를 표시합니다.  
   
  **레지스트리 루트**  
- 이 응용 프로그램에 사용되는 레지스트리 키의 위치를 표시합니다.  
+ 이 애플리케이션에 사용되는 레지스트리 키의 위치를 표시합니다.  
   
  **서비스 팩 수준**  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 서비스 팩 수준을 표시합니다.  

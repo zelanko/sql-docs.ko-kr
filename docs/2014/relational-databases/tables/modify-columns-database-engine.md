@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d98b8de8e4ced15291684ba304bfd04c6c62b7c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48161163"
@@ -26,7 +26,7 @@ ms.locfileid: "48161163"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 열의 데이터 형식을 수정할 수 있습니다.  
   
 > [!WARNING]  
->  이미 데이터가 포함되어 있는 열의 데이터 형식을 수정하면 기존 데이터를 새 형식으로 변환하는 과정에서 데이터를 완전히 잃을 수도 있습니다. 또한 수정된 열에 의존하고 있는 코드나 응용 프로그램에 문제가 발생할 수 있습니다. 여기에는 쿼리, 뷰, 저장 프로시저, 사용자 정의 함수, 클라이언트 응용 프로그램 등이 포함됩니다. 이러한 문제는 연쇄적인 파급 효과를 가져올 수 있습니다. 예를 들어 수정된 열에 의존하는 사용자 정의 함수를 호출하는 저장 프로시저가 실패할 수도 있습니다. 따라서 열을 변경할 때는 이러한 결과를 미리 신중하게 고려해야 합니다.  
+>  이미 데이터가 포함되어 있는 열의 데이터 형식을 수정하면 기존 데이터를 새 형식으로 변환하는 과정에서 데이터를 완전히 잃을 수도 있습니다. 또한 수정된 열에 의존하고 있는 코드나 애플리케이션에 문제가 발생할 수 있습니다. 여기에는 쿼리, 뷰, 저장 프로시저, 사용자 정의 함수, 클라이언트 애플리케이션 등이 포함됩니다. 이러한 문제는 연쇄적인 파급 효과를 가져올 수 있습니다. 예를 들어 수정된 열에 의존하는 사용자 정의 함수를 호출하는 저장 프로시저가 실패할 수도 있습니다. 따라서 열을 변경할 때는 이러한 결과를 미리 신중하게 고려해야 합니다.  
   
  **항목 내용**  
   

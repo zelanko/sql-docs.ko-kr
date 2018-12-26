@@ -48,7 +48,7 @@ ms.locfileid: "47856957"
 -   **64비트 및 32비트 공급자.** 64비트 마법사를 실행 중인 경우 32비트 공급자만 설치된 대상은 표시되지 않으며 반대의 경우도 마찬가지입니다.
 
 > [!NOTE]
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 ## <a name="after-you-choose-a-destination"></a>대상을 선택한 후
 대상을 선택한 후 **대상 선택** 페이지의 나머지에 대해 표시되는 옵션 수는 선택한 데이터 공급자에 따라 달라집니다.

@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48176383"
@@ -27,7 +27,7 @@ ms.locfileid: "48176383"
   
 -   SQL Server DQS(Data Quality Services). DQS를 사용하면 비즈니스 인텔리전스, 데이터 웨어하우스 및 트랜잭션 처리 작업을 위해 신뢰할 수 있는 정보를 제공할 수 있도록 데이터를 정리, 일치, 표준화 및 강화할 수 있습니다.  
   
--   SQL Server MDS(Master Data Services). MDS는 정보 무결성 및 데이터 일관성이 여러 응용 프로그램 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다.  
+-   SQL Server MDS(Master Data Services). MDS는 정보 무결성 및 데이터 일관성이 여러 애플리케이션 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다.  
   
  [SSIS, MDS 및 DQS를 함께 사용 하 여 엔터프라이즈 정보 관리 &#91;자습서&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  이 자습서에서는 SSIS, MDS 및 DQS 기술을 함께 활용해서 예제 EIM(엔터프라이즈 정보 관리) 솔루션을 구현하는 방법에 대해 알아봅니다. 먼저, DQS를 사용해서 공급자 데이터(메타데이터)에 대한 지식이 포함된 기술 자료를 만들고, 기술 자료를 기반으로 Excel 파일에서 데이터를 정리하고, 데이터 일치를 통해 데이터에 있는 중복 항목을 식별 및 제거합니다. 그런 다음 Excel용 MDS 추가 기능을 사용해서 정리되고 일치된 데이터를 MDS에 업로드합니다. 마지막으로 SSIS 솔루션을 사용해서 전체 프로세스를 자동화합니다.  

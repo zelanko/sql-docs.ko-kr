@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램에 Reporting Services 통합 | Microsoft Docs
+title: 애플리케이션에 Reporting Services 통합 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,13 +25,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48153573"
 ---
-# <a name="integrating-reporting-services-into-applications"></a>응용 프로그램에 Reporting Services 통합
+# <a name="integrating-reporting-services-into-applications"></a>애플리케이션에 Reporting Services 통합
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 개발자에게 솔루션 개발을 위한 포괄적인 API 집합을 제공하도록 디자인된 개방형의 확장 가능한 보고 플랫폼입니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 데는 보고서 서버 웹 서비스([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API라고도 함), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]용 ReportViewer 컨트롤, URL 액세스의 세 가지 옵션이 있습니다. 각 옵션에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하기 위한 서로 다른 방법을 제공합니다.  
   
 ## <a name="report-server-web-service"></a>보고서 서버 웹 서비스  
- 보고서 서버 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 개발하기 위한 기본 인터페이스입니다. 보고서 카탈로그를 관리할 코드를 개발하든 아니면 보고서를 지원되는 형식으로 렌더링하는 코드를 개발하는 경우이든 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하는 데 필요한 모든 방법을 제공합니다. 이러한 응용 프로그램의 예는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함되어 있는 보고서 관리자로서 여기서는 웹 서비스를 사용하여 보고서 서버 데이터베이스를 관리합니다.  
+ 보고서 서버 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 개발하기 위한 기본 인터페이스입니다. 보고서 카탈로그를 관리할 코드를 개발하든 아니면 보고서를 지원되는 형식으로 렌더링하는 코드를 개발하는 경우이든 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하는 데 필요한 모든 방법을 제공합니다. 이러한 애플리케이션의 예는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함되어 있는 보고서 관리자로서 여기서는 웹 서비스를 사용하여 보고서 서버 데이터베이스를 관리합니다.  
   
 ## <a name="reportviewer-controls-for-visual-studio"></a>Visual Studio용 ReportViewer 컨트롤  
  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]에 포함된 ReportViewer 컨트롤은 보고서 보기를 응용 프로그램에 통합하는 데 사용합니다. 컨트롤에는 Windows Forms 기반 응용 프로그램용과 Web Forms 응용 프로그램용 두 가지가 있습니다. 각 컨트롤은 보고서 서버에 배포된 보고서를 보기 위한 기능뿐만 아니라 보고서 서버가 설치되지 않은 환경에 있는 보고서를 렌더링하는 기능도 제공합니다.  

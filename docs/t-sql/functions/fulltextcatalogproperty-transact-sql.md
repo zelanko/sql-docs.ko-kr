@@ -77,7 +77,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
   
  `Error: 30059, Severity: 16, State: 1. A fatal error occurred during a full-text population and caused the population to be cancelled. Population type is: FULL; database name is FTS_Test (id: 13); catalog name is t1_cat (id: 5); table name t1 (id: 2105058535). Fix the errors that are logged in the full-text crawl log. Then, resume the population. The basic Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON table_name RESUME POPULATION.`  
   
- 응용 프로그램이 빽빽한 루프에서 대기하지 않도록 하고 **PopulateStatus** 속성을 유휴로 설정(채우기가 완료된 것으로 표시)하는 것이 중요합니다. 이렇게 함으로써 CPU 사이클을 데이터베이스와 전체 텍스트 검색 프로세스로부터 격리하고 시간 제한이 발생하도록 할 수 있기 때문입니다. 또한 일반적으로 OBJECTPROPERTYEX 시스템 함수의 테이블 수준 **TableFullTextPopulateStatus**에서 해당 **PopulateStatus** 속성을 확인하는 것이 더 좋습니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
+ 애플리케이션이 빽빽한 루프에서 대기하지 않도록 하고 **PopulateStatus** 속성을 유휴로 설정(채우기가 완료된 것으로 표시)하는 것이 중요합니다. 이렇게 함으로써 CPU 사이클을 데이터베이스와 전체 텍스트 검색 프로세스로부터 격리하고 시간 제한이 발생하도록 할 수 있기 때문입니다. 또한 일반적으로 OBJECTPROPERTYEX 시스템 함수의 테이블 수준 **TableFullTextPopulateStatus**에서 해당 **PopulateStatus** 속성을 확인하는 것이 더 좋습니다. OBJECTPROPERTYEX에서 이 전체 텍스트 속성과 기타 새 전체 텍스트 속성은 전체 텍스트 인덱싱 테이블에 대한 보다 자세한 정보를 제공합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Cat_Desc`라는 전체 텍스트 카탈로그에서 전체 텍스트 인덱싱된 항목의 수를 반환합니다.  

@@ -89,7 +89,7 @@ JSON
   
 ## <a name="for-browse"></a>FOR BROWSE  
  BROWSE  
- DB-Library 찾아보기 모드 커서에서 데이터를 표시하는 동안 업데이트를 허용하도록 지정합니다. 테이블에 **timestamp** 열이 있고 고유한 인덱스가 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 전송된 SELECT 문의 끝에 FOR BROWSE 옵션이 있으면 응용 프로그램에서 테이블을 찾아볼 수 있습니다.  
+ DB-Library 찾아보기 모드 커서에서 데이터를 표시하는 동안 업데이트를 허용하도록 지정합니다. 테이블에 **timestamp** 열이 있고 고유한 인덱스가 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 전송된 SELECT 문의 끝에 FOR BROWSE 옵션이 있으면 애플리케이션에서 테이블을 찾아볼 수 있습니다.  
   
 > [!NOTE]  
 >  FOR BROWSE 옵션을 포함하는 SELECT 문에서는 \<lock_hint> HOLDLOCK을 사용할 수 없습니다.
@@ -99,7 +99,7 @@ JSON
 > [!NOTE]  
 >  테이블의 고유 인덱스 키 열이 Null을 허용하고 테이블이 외부 조인의 내부 측면에 있으면 해당 인덱스는 찾아보기 모드에서 지원되지 않습니다.  
   
- 찾아보기 모드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 행을 검색하고 테이블의 데이터를 한 번에 한 행씩 업데이트할 수 있습니다. 응용 프로그램에서 찾아보기 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 액세스하려면 다음 두 가지 옵션 중 하나를 사용해야 합니다.  
+ 찾아보기 모드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 행을 검색하고 테이블의 데이터를 한 번에 한 행씩 업데이트할 수 있습니다. 애플리케이션에서 찾아보기 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 액세스하려면 다음 두 가지 옵션 중 하나를 사용해야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터에 액세스하는 데 사용하는 SELECT 문은 **FOR BROWSE** 키워드로 끝나야 합니다. **FOR BROWSE** 옵션을 설정하여 찾아보기 모드를 사용하는 경우 임시 테이블이 생성됩니다.  
   
@@ -109,7 +109,7 @@ JSON
     SET NO_BROWSETABLE ON  
     ```  
   
-     **NO_BROWSETABLE** 옵션을 설정할 경우 모든 SELECT 문은 **FOR BROWSE** 옵션이 해당 문에 추가된 것처럼 동작합니다. 하지만 **NO_BROWSETABLE** 옵션은 **FOR BROWSE** 옵션이 일반적으로 응용 프로그램에 결과를 보내기 위해 사용하는 임시 테이블을 만들지 않습니다.  
+     **NO_BROWSETABLE** 옵션을 설정할 경우 모든 SELECT 문은 **FOR BROWSE** 옵션이 해당 문에 추가된 것처럼 동작합니다. 하지만 **NO_BROWSETABLE** 옵션은 **FOR BROWSE** 옵션이 일반적으로 애플리케이션에 결과를 보내기 위해 사용하는 임시 테이블을 만들지 않습니다.  
   
  찾아보기 모드에서 외부 조인 문을 포함하는 SELECT 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터에 액세스하려고 하는 경우 및 외부 조인 문의 내부에 존재하는 테이블에 고유 인덱스가 정의되어 있는 경우에는 찾아보기 모드가 고유 인덱스를 지원하지 않습니다. 찾아보기 모드에서는 모든 고유 인덱스 키 열에 Null 값을 사용할 수 있는 경우에만 고유 인덱스를 지원합니다. 찾아보기 모드에서는 다음과 같은 조건을 만족하는 경우 고유 인덱스를 지원하지 않습니다.  
   

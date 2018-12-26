@@ -27,7 +27,7 @@ ms.locfileid: "48163103"
 >  SERVERPROPERTY('LCID')에 대한 참조를 포함하고 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 실행되는 배치 및 추적 파일의 경우 업그레이드 관리자는 다른 인스턴스에 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 동일한 데이터 정렬이 있는 경우에만 이 동작 변경을 감지합니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- SERVERPROPERTY('LCID')가 서버의 데이터 정렬에 해당하는 Windows LCID를 반환하도록 응용 프로그램을 수정합니다.  
+ SERVERPROPERTY('LCID')가 서버의 데이터 정렬에 해당하는 Windows LCID를 반환하도록 애플리케이션을 수정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

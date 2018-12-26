@@ -17,7 +17,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48178463"
@@ -57,7 +57,7 @@ ms.locfileid: "48178463"
 ##  <a name="intro"></a> 데이터 새로 고침 개요  
  Excel 통합 문서의 PowerPivot 데이터는 원격 서버나 네트워크 파일 공유에서 액세스하는 외부 데이터베이스 또는 데이터 파일을 비롯한 여러 외부 데이터 원본에서 제공될 수 있습니다. 연결된 데이터 원본이나 외부 데이터 원본에서 가져온 데이터가 포함된 PowerPivot 통합 문서의 경우 데이터 새로 고침을 구성하여 해당 원본에서 업데이트된 데이터를 자동으로 가져오도록 예약할 수 있습니다.  
   
- 외부 데이터 원본은 PowerPivot 클라이언트 응용 프로그램을 사용하여 원래 데이터를 통합 문서로 가져올 때 지정한 포함된 연결 문자열, URL 또는 UNC 경로를 통해 액세스됩니다. PowerPivot 통합 문서에 저장되는 원래 연결 정보가 다음 데이터 새로 고침 작업에 다시 사용됩니다. 데이터 원본에 연결하는 데 사용되는 자격 증명은 덮어쓸 수 있지만 데이터 새로 고침용으로 사용되는 연결 문자열은 덮어쓸 수 없으며 기존 연결 정보만 사용됩니다.  
+ 외부 데이터 원본은 PowerPivot 클라이언트 애플리케이션을 사용하여 원래 데이터를 통합 문서로 가져올 때 지정한 포함된 연결 문자열, URL 또는 UNC 경로를 통해 액세스됩니다. PowerPivot 통합 문서에 저장되는 원래 연결 정보가 다음 데이터 새로 고침 작업에 다시 사용됩니다. 데이터 원본에 연결하는 데 사용되는 자격 증명은 덮어쓸 수 있지만 데이터 새로 고침용으로 사용되는 연결 문자열은 덮어쓸 수 없으며 기존 연결 정보만 사용됩니다.  
   
  각 통합 문서에 대해 하나의 데이터 새로 고침 일정 페이지가 있으며 모든 일정 정보는 이 페이지에 지정됩니다. 일반적으로 통합 문서를 작성한 사람이 일정을 정의합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48178463"
   
     2.  사용자 이름과 암호를 입력하려면 **다음 Windows 사용자 자격 증명을 사용하여 연결** 을 선택합니다. domain\user 형식으로 계정 정보를 입력합니다.  
   
-    3.  사용하려는 이전에 저장된 자격 증명이 포함된 대상 응용 프로그램의 ID를 알고 있는 경우 **보안 저장소 서비스에 저장된 자격 증명을 사용하여 연결** 을 선택합니다.  
+    3.  사용하려는 이전에 저장된 자격 증명이 포함된 대상 애플리케이션의 ID를 알고 있는 경우 **보안 저장소 서비스에 저장된 자격 증명을 사용하여 연결** 을 선택합니다.  
   
      이러한 옵션에 대 한 자세한 내용은 참조 하세요. [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint 용 PowerPivot&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) 하 고 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)합니다.  
   

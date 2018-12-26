@@ -26,8 +26,8 @@ ms.locfileid: "47727491"
 ## <a name="table-of-connection-options"></a>연결 옵션 표
 |Key|값|설명|Default|  
 |-------|---------|---------------|-----------|  
-|APP|String|추적에서 사용되는 응용 프로그램 이름을 지정합니다.|설정된 값이 없습니다.|  
-|응용 프로그램 의도|String|서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 ReadOnly 및 ReadWrite입니다.<br /><br />에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 대 한 지원 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]를 참조 하십시오 [High Availability, Disaster Recovery에 대 한 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|ReadWrite|  
+|APP|String|추적에서 사용되는 애플리케이션 이름을 지정합니다.|설정된 값이 없습니다.|  
+|애플리케이션 의도|String|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 ReadOnly 및 ReadWrite입니다.<br /><br />에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 대 한 지원 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]를 참조 하십시오 [High Availability, Disaster Recovery에 대 한 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|ReadWrite|  
 |AttachDBFileName|String|서버를 연결해야 하는 데이터베이스 파일을 지정합니다.|설정된 값이 없습니다.|  
 |인증|Key, Input, Predict, PredictOnly, None<br /><br />'SqlPassword'<br /><br />' ActiveDirectoryPassword'|인증 모드를 지정합니다.|설정 안 됨.|  
 |CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  

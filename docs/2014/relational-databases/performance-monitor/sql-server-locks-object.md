@@ -15,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a9999ff5f82fd0a37bc583af36dd1609ba07ce1a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48126293"
@@ -41,7 +41,7 @@ ms.locfileid: "48126293"
 |----------|-----------------|  
 |**_Total**|모든 잠금 정보입니다.|  
 |**AllocUnit**|할당 단위에 대한 잠금입니다.|  
-|**응용 프로그램**|응용 프로그램이 지정한 리소스에 대한 잠금입니다.|  
+|**응용 프로그램**|애플리케이션이 지정한 리소스에 대한 잠금입니다.|  
 |**데이터베이스 백업**|데이터베이스의 모든 개체를 포함한 데이터베이스에 대한 잠금입니다.|  
 |**Extent**|연결된 8페이지 그룹에 대한 잠금입니다.|  
 |**최근에 사용한 파일**|데이터베이스 파일에 대한 잠금입니다.|  

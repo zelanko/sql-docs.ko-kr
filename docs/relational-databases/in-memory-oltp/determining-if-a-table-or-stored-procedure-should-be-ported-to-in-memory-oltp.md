@@ -25,7 +25,7 @@ ms.locfileid: "52531619"
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP를 통해 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 응용 프로그램에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP를 통해 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 애플리케이션에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
  트랜잭션 성능 분석 보고서는 프로덕션 데이터베이스 또는 프로덕션 작업과 유사한 활성 작업이 있는 테스트 데이터베이스에 대하여 직접 실행됩니다.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "52531619"
   
 -   작업을 분석하여 메모리 내 OLTP를 통해 성능 향상이 가능한 핫 스폿을 결정합니다. 트랜잭션 성능 분석 보고서는 메모리 내 OLTP로 변환할 경우 가장 이익이 되는 테이블과 저장 프로시저를 추천합니다.  
   
--   메모리 내 OLTP로 마이그레이션하는 작업을 계획하고 실행하는 데 도움이 됩니다. 디스크 기반 테이블에서 메모리 최적화 테이블로의 마이그레이션 경로는 시간이 많이 걸릴 수 있습니다. 메모리 최적화 관리자를 사용하여 테이블을 메모리 내 OLTP로 이동하기 전에 테이블에서 제거해야 하는 비호환성을 식별할 수 있습니다. 메모리 최적화 관리자는 메모리 액세스에 최적화된 테이블로의 테이블 마이그레이션이 응용 프로그램에 미치는 영향을 이해하는 데도 도움이 됩니다.  
+-   메모리 내 OLTP로 마이그레이션하는 작업을 계획하고 실행하는 데 도움이 됩니다. 디스크 기반 테이블에서 메모리 최적화 테이블로의 마이그레이션 경로는 시간이 많이 걸릴 수 있습니다. 메모리 최적화 관리자를 사용하여 테이블을 메모리 내 OLTP로 이동하기 전에 테이블에서 제거해야 하는 비호환성을 식별할 수 있습니다. 메모리 최적화 관리자는 메모리 액세스에 최적화된 테이블로의 테이블 마이그레이션이 애플리케이션에 미치는 영향을 이해하는 데도 도움이 됩니다.  
   
-     메모리 내 OLTP로 마이그레이션을 계획할 때와 일부 테이블과 저장 프로시저를 메모리 내 OLTP로 마이그레이션하려고 작업할 때마다 메모리 내 OLTP가 응용 프로그램에 도움이 되는지를 확인할 수 있습니다.  
+     메모리 내 OLTP로 마이그레이션을 계획할 때와 일부 테이블과 저장 프로시저를 메모리 내 OLTP로 마이그레이션하려고 작업할 때마다 메모리 내 OLTP가 애플리케이션에 도움이 되는지를 확인할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  

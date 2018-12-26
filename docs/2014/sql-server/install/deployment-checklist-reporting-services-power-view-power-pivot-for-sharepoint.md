@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dc294086c960306e5a9ee62d677ecfaeafc3bcba
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48120374"
@@ -55,7 +55,7 @@ ms.locfileid: "48120374"
   
  PowerPivot 인스턴스 이름을 사용할 수 있어야 합니다. SharePoint용 PowerPivot을 설치하는 컴퓨터에 기존의 명명된 PowerPivot 인스턴스가 있어서는 안 됩니다.  
   
- 기존 팜에 SharePoint용 PowerPivot를 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 응용 프로그램이 하나 이상 필요합니다. PowerPivot 데이터 액세스는 웹 응용 프로그램에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대 한 자세한 내용은 참조 하세요. [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)합니다.  
+ 기존 팜에 SharePoint용 PowerPivot를 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 애플리케이션이 하나 이상 필요합니다. PowerPivot 데이터 액세스는 웹 애플리케이션에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대 한 자세한 내용은 참조 하세요. [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)합니다.  
   
  시스템 및 버전 요구 사항을 이해하려면 다음 항목을 검토하십시오.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48120374"
 |SharePoint 2010 제품 준비 도구 실행|SharePoint 2010 설치 미디어가 있어야 합니다. 준비 도구는 설치 미디어의 PreRequisiteInstaller.exe입니다.|  
 |SharePoint Server 2010 Enterprise 또는 Enterprise Evaluation Edition 설치|SharePoint를 설치할 때 설치 프로그램을 마친 후 SharePoint 2010 제품 구성 마법사를 실행하지 않음으로써 팜을 나중에 구성하도록 선택할 수 있습니다. 팜을 나중에 구성하도록 선택하면 이후 단계에서 설치되는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 엔진 인스턴스를 팜의 데이터베이스 서버로 사용할 수 있습니다. 팜을 구성하려면 PowerPivot 구성 도구를 사용합니다. 여기에는 팜이 아직 구성되지 않은 경우 팜을 프로비전하는 동작이 포함되어 있습니다.|  
 |SharePoint Server 2010 SP1 설치|SP1을 다운로드할 [ http://support.microsoft.com/kb/2460045 ](http://go.microsoft.com/fwlink/p/?linkID=219697)합니다.|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 프로그램을 실행하여 데이터베이스 엔진과 SharePoint용 PowerPivot 설치|[SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 1단계에서는 SharePoint용 PowerPivot 설치 방법에 대해 설명합니다. 이 단계에서는 설치 역할 페이지에서 데이터베이스 엔진을 역할에 추가하는 확인란을 클릭해야 합니다. 이렇게 하면 데이터베이스 엔진이 설치에 추가되므로 다음 단계에서 팜을 구성할 때 이 데이터베이스 엔진을 팜의 데이터베이스 서버로 사용할 수 있습니다. 그러나 팜이 이미 구성되어 있는 경우 이 단계를 건너뛸 수 있습니다.<br /><br /> 2단계에서는 서버를 구성합니다. 이 단계에서 PowerPivot 구성 도구를 선택하십시오. 여러 접근 방법을 사용할 수 있지만 독립 실행형 설치의 경우 구성 도구를 사용하는 것이 가장 효율적입니다.<br /><br /> SharePoint 2010이 설치되었지만 구성되지 않은 경우 이 도구에서는 팜, 기본 웹 응용 프로그램 및 루트 사이트 모음을 만드는 동작이 미리 선택됩니다. 팜이 만들어지도록 이 옵션들을 선택된 상태로 두십시오. 팜을 이미 구성한 경우 이 도구는 이러한 동작을 생략하고 SharePoint용 PowerPivot 구성에 필요한 동작만 제공합니다.<br /><br /> 3단계에서는 SQL Server 2008 R2 버전의 Analysis Services OLE DB 공급자를 설치하는 방법에 대해 설명합니다. 이 단계는 2008 R2 버전의 PowerPivot for Excel에서 만든 통합 문서 버전을 지원하기 위해 필요합니다.|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 프로그램을 실행하여 데이터베이스 엔진과 SharePoint용 PowerPivot 설치|[SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 1단계에서는 SharePoint용 PowerPivot 설치 방법에 대해 설명합니다. 이 단계에서는 설치 역할 페이지에서 데이터베이스 엔진을 역할에 추가하는 확인란을 클릭해야 합니다. 이렇게 하면 데이터베이스 엔진이 설치에 추가되므로 다음 단계에서 팜을 구성할 때 이 데이터베이스 엔진을 팜의 데이터베이스 서버로 사용할 수 있습니다. 그러나 팜이 이미 구성되어 있는 경우 이 단계를 건너뛸 수 있습니다.<br /><br /> 2단계에서는 서버를 구성합니다. 이 단계에서 PowerPivot 구성 도구를 선택하십시오. 여러 접근 방법을 사용할 수 있지만 독립 실행형 설치의 경우 구성 도구를 사용하는 것이 가장 효율적입니다.<br /><br /> SharePoint 2010이 설치되었지만 구성되지 않은 경우 이 도구에서는 팜, 기본 웹 애플리케이션 및 루트 사이트 모음을 만드는 동작이 미리 선택됩니다. 팜이 만들어지도록 이 옵션들을 선택된 상태로 두십시오. 팜을 이미 구성한 경우 이 도구는 이러한 동작을 생략하고 SharePoint용 PowerPivot 구성에 필요한 동작만 제공합니다.<br /><br /> 3단계에서는 SQL Server 2008 R2 버전의 Analysis Services OLE DB 공급자를 설치하는 방법에 대해 설명합니다. 이 단계는 2008 R2 버전의 PowerPivot for Excel에서 만든 통합 문서 버전을 지원하기 위해 필요합니다.|  
 |팜이 작동하는지 확인|먼저 중앙 관리를 시작하여 팜이 사용 가능한지 확인합니다. 다음을 입력 하 여 팀 사이트를 열어 http://localhost합니다.  SharePoint 팀 사이트가 표시되어야 합니다.|  
 |SharePoint용 PowerPivot이 작동하는지 확인|[SharePoint용 PowerPivot 설치 확인](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)<br /><br /> 이 태스크에서는 업로드한 예제 통합 문서를 사용하여 PowerPivot 데이터 액세스를 확인합니다.|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 프로그램을 실행하여 Reporting Services 및 Reporting Services 추가 기능 설치 및 구성|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> 표 형식 데이터를 호스팅하기 위해 보조 리소스가 필요한 경우 Reporting Services를 설치하는 동안 선택적으로 설치 기능 트리에 Analysis Services 인스턴스를 더 추가할 수 있습니다. 추가 Analysis Services 인스턴스는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 표 형식 model 데이터베이스를 호스팅하는 데 사용할 수 있습니다. 표 형식 데이터베이스는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 사용할 수 있는 데이터 원본입니다.<br /><br /> [테이블 형식 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services.md)|  

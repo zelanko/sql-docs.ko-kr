@@ -22,7 +22,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48087243"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
-  FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
+  FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 애플리케이션에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 애플리케이션은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
   
  FILESTREAM은 `varbinary(max)` BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48087243"
   
 -   신속한 읽기 액세스가 중요할 경우  
   
--   중간 계층 응용 프로그램 논리를 사용하는 응용 프로그램을 개발할 경우  
+-   중간 계층 애플리케이션 논리를 사용하는 애플리케이션을 개발할 경우  
   
  크기가 작은 개체의 경우 데이터베이스에 `varbinary(max)` BLOB를 저장하면 스트리밍 성능이 더 좋아집니다.  
   
@@ -101,11 +101,11 @@ ms.locfileid: "48087243"
   
  **저장소 네임스페이스**  
   
- FILESTREAM에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 BLOB 물리적 파일 시스템 네임스페이스를 제어합니다. 새 내장 함수인 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)에서는 테이블의 각 FILESTREAM 셀에 해당하는 BLOB의 논리 UNC 경로를 제공합니다. 응용 프로그램에서는 이 논리 경로를 사용하여 Win32 핸들을 얻고 일반적인 Win32 파일 시스템 인터페이스를 사용하여 BLOB 데이터에 대한 작업을 수행합니다. FILESTREAM 열의 값이 NULL인 경우 함수는 NULL을 반환합니다.  
+ FILESTREAM에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 BLOB 물리적 파일 시스템 네임스페이스를 제어합니다. 새 내장 함수인 [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)에서는 테이블의 각 FILESTREAM 셀에 해당하는 BLOB의 논리 UNC 경로를 제공합니다. 애플리케이션에서는 이 논리 경로를 사용하여 Win32 핸들을 얻고 일반적인 Win32 파일 시스템 인터페이스를 사용하여 BLOB 데이터에 대한 작업을 수행합니다. FILESTREAM 열의 값이 NULL인 경우 함수는 NULL을 반환합니다.  
   
  **트랜잭션된 파일 시스템 액세스**  
   
- 새 내장 함수인 [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)에서는 세션에 연결된 현재 트랜잭션을 나타내는 토큰을 제공합니다. 트랜잭션이 시작되었지만 아직 중단되거나 커밋되지 않았습니다. 토큰을 가져와서 응용 프로그램은 FILESTREAM 파일 시스템 스트리밍 작업을 시작된 트랜잭션과 바인딩합니다. 명시적으로 시작된 트랜잭션이 없을 경우에는 함수는 NULL을 반환합니다.  
+ 새 내장 함수인 [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)에서는 세션에 연결된 현재 트랜잭션을 나타내는 토큰을 제공합니다. 트랜잭션이 시작되었지만 아직 중단되거나 커밋되지 않았습니다. 토큰을 가져와서 애플리케이션은 FILESTREAM 파일 시스템 스트리밍 작업을 시작된 트랜잭션과 바인딩합니다. 명시적으로 시작된 트랜잭션이 없을 경우에는 함수는 NULL을 반환합니다.  
   
  트랜잭션이 커밋되거나 중단되기 전에는 모든 파일 핸들이 닫혀 있어야 합니다. 핸들이 트랜잭션 범위 이상으로 열려 있으면 핸들에 대한 추가 읽기가 실패하고 이 핸들에 대한 추가 쓰기는 성공하지만 실제 데이터가 디스크에 작성되지 않습니다. 비슷하게 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 데이터베이스나 인스턴스가 종료되면 열려 있는 모든 핸들이 무효화됩니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48087243"
   
  파일 시스템 액세스 열기 작업은 잠금을 기다리지 않습니다. 대신 트랜잭션 격리로 인해 데이터에 액세스할 수 없을 경우 즉시 열기 작업에 실패합니다. 격리 위반으로 인해 열기 작업을 계속 진행할 수 없을 경우 ERROR_SHARING_VIOLATION이 발생하며 스트리밍 API 호출에 실패합니다.  
   
- 부분 업데이트가 수행되도록 허용하려면 응용 프로그램이 디바이스 FS 컨트롤(FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT)을 실행하여 이전 내용을 열려 있는 핸들이 참조하는 파일로 인출할 수 있습니다. 이 작업으로 인해 서버 쪽의 오래된 내용 복사가 트리거됩니다. 응용 프로그램 성능을 더 향상시키고 큰 파일로 작업 시 제한 시간이 초과되는 것을 방지하려면 비동기 I/O를 사용하는 것이 좋습니다.  
+ 부분 업데이트가 수행되도록 허용하려면 응용 프로그램이 디바이스 FS 컨트롤(FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT)을 실행하여 이전 내용을 열려 있는 핸들이 참조하는 파일로 인출할 수 있습니다. 이 작업으로 인해 서버 쪽의 오래된 내용 복사가 트리거됩니다. 애플리케이션 성능을 더 향상시키고 큰 파일로 작업 시 제한 시간이 초과되는 것을 방지하려면 비동기 I/O를 사용하는 것이 좋습니다.  
   
  핸들이 작성된 후 FSCTL이 실행되면 마지막 쓰기 작업이 유지되고 핸들에 기록된 이전의 쓰기 작업은 손실됩니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "48087243"
   
  **원격 클라이언트를 통한 쓰기**  
   
- FILESTREAM 데이터에 대한 원격 파일 시스템 액세스는 SMB(서버 메시지 블록) 프로토콜을 통해 사용할 수 있습니다. 클라이언트가 원격일 경우 클라이언트 쪽에서 캐시하는 쓰기 작업이 없습니다. 쓰기 작업은 항상 서버로 전송되고, 데이터는 서버 쪽에서 캐시합니다. 원격 클라이언트에서 실행 중인 응용 프로그램은 작은 쓰기 작업을 통합하여 더 큰 크기의 데이터를 사용하는 쓰기 작업이 적어집니다.  
+ FILESTREAM 데이터에 대한 원격 파일 시스템 액세스는 SMB(서버 메시지 블록) 프로토콜을 통해 사용할 수 있습니다. 클라이언트가 원격일 경우 클라이언트 쪽에서 캐시하는 쓰기 작업이 없습니다. 쓰기 작업은 항상 서버로 전송되고, 데이터는 서버 쪽에서 캐시합니다. 원격 클라이언트에서 실행 중인 애플리케이션은 작은 쓰기 작업을 통합하여 더 큰 크기의 데이터를 사용하는 쓰기 작업이 적어집니다.  
   
  FILESTREAM 핸들을 사용하여 메모리 매핑된 뷰(메모리 매핑된 I/O)를 만들 수는 없습니다. 메모리 매핑을 FILESTREAM 데이터에 사용할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 데이터의 일관성과 지속성 또는 데이터베이스의 무결성을 보장할 수 없습니다.  
   

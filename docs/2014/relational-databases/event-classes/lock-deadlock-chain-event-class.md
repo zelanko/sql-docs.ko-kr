@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e3431bcfb8a7060376dd4cd621116605a1111fb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48176003"
@@ -25,7 +25,7 @@ ms.locfileid: "48176003"
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
   Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  
   
- Lock:Deadlock Chain 이벤트 클래스를 사용하여 교착 상태 조건이 발생하는 시점을 모니터링할 수 있습니다. 이 정보는 교착 상태가 응용 프로그램의 성능에 큰 영향을 미치는지 여부와 어떤 개체가 관련되어 있는지 확인하는 데 유용합니다. 이러한 개체를 수정하는 응용 프로그램 코드를 검사하여 교착 상태를 최소화하도록 변경될 수 있는지 확인할 수 있습니다.  
+ Lock:Deadlock Chain 이벤트 클래스를 사용하여 교착 상태 조건이 발생하는 시점을 모니터링할 수 있습니다. 이 정보는 교착 상태가 애플리케이션의 성능에 큰 영향을 미치는지 여부와 어떤 개체가 관련되어 있는지 확인하는 데 유용합니다. 이러한 개체를 수정하는 애플리케이션 코드를 검사하여 교착 상태를 최소화하도록 변경될 수 있는지 확인할 수 있습니다.  
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Lock:Deadlock Chain 이벤트 클래스 데이터 열  
   

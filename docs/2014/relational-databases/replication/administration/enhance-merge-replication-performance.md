@@ -22,7 +22,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48175663"
@@ -64,7 +64,7 @@ ms.locfileid: "48175663"
   
 -   매개 변수가 있는 필터와 함께 사전 계산 파티션을 사용합니다. 이 기능은 기본적으로 사용됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
-     사전 계산 파티션은 여러 가지 필터링 동작을 제한합니다. 응용 프로그램이 이러한 제한 사항을 따를 수 없는 경우 **keep_partition_changes** 옵션을 **True**로 설정하면 성능상 이점이 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+     사전 계산 파티션은 여러 가지 필터링 동작을 제한합니다. 애플리케이션이 이러한 제한 사항을 따를 수 없는 경우 **keep_partition_changes** 옵션을 **True**로 설정하면 성능상 이점이 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 -   데이터가 필터링되었지만 사용자 간에 공유되지 않으면 겹치지 않는 파티션을 사용합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48175663"
   
     -   조인에 테이블이 많은 경우 데이터베이스 디자인을 비정규화하거나 매핑 테이블을 사용할 것을 고려합니다. 예를 들어 영업 사원은 자신의 고객에 대한 데이터만 필요한 경우 고객을 영업 사원과 연결하기 위해 6개의 조인이 필요하다면 영업 사원을 식별하는 customer 테이블에 열을 추가할 것을 고려합니다. 영업 사원 데이터는 중복되지만 복제를 분할하는 것이 해당 테이블을 비정규화하는 것보다 성능상 이점이 있습니다.  
   
-    -   일괄 처리에 많은 데이터 변경 사항이 있을 때 사전 계산 파티션의 성능을 향상시키기 위해 신중하게 응용 프로그램을 디자인합니다. 조인 필터에서 부모 테이블의 데이터 변경은 자식 테이블의 해당 데이터 변경보다 먼저 수행되어야 합니다.  
+    -   일괄 처리에 많은 데이터 변경 사항이 있을 때 사전 계산 파티션의 성능을 향상시키기 위해 신중하게 애플리케이션을 디자인합니다. 조인 필터에서 부모 테이블의 데이터 변경은 자식 테이블의 해당 데이터 변경보다 먼저 수행되어야 합니다.  
   
 -   논리에 맞는 경우 **join_unique_key** 옵션을 **1** 로 설정합니다.  
   

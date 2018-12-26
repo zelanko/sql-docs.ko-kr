@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48211953"
@@ -26,7 +26,7 @@ ms.locfileid: "48211953"
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
 ##  <a name="Connection"></a> 연결 문자열  
- 연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 응용 프로그램 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 집합 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
+ 연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 애플리케이션 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 집합 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
   
  다음 예에서는 웹 서비스 및 XML 문서에 대한 각각의 연결 문자열 구문을 보여 줍니다. `file://` 프로토콜은 지원되지 않습니다.  
   

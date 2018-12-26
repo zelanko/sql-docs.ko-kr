@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48136053"
@@ -38,7 +38,7 @@ ms.locfileid: "48136053"
   
 -   업데이트한 보고서 정의를 다시 보고서 서버에 저장합니다.  
   
--   RDL Schema 응용 프로그램을 실행합니다(VB/C#).  
+-   RDL Schema 애플리케이션을 실행합니다(VB/C#).  
   
 > [!NOTE]  
 >  이 자습서에 제공되는 코드 예제는 설명이 없는 보고서의 경우 실패할 수 있습니다. 설명이 지정되지 않은 보고서의 경우 설명 속성이 존재하지 않기 때문입니다.  

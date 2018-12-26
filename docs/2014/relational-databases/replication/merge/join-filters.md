@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18a01befd18bfd5a150eea3a7dedf1d71f3e495a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48113683"
@@ -36,7 +36,7 @@ ms.locfileid: "48113683"
   
 -   **Sales.SalesOrderDetail**  
   
- 이러한 테이블을 이동이 잦은 영업 직원을 지원하는 응용 프로그램에 사용할 수 있지만 **HumanResources.Employee** 테이블의 각 영업 직원이 고객 주문과 관련된 데이터만 받도록 필터링해야 합니다.  
+ 이러한 테이블을 이동이 잦은 영업 직원을 지원하는 애플리케이션에 사용할 수 있지만 **HumanResources.Employee** 테이블의 각 영업 직원이 고객 주문과 관련된 데이터만 받도록 필터링해야 합니다.  
   
  이를 위해서는 먼저 부모 테이블에 매개 변수가 있는 필터를 정의해야 합니다. 이 예에서는 **HumanResources.Employee** 테이블이 부모 테이블입니다. 이 테이블의 **LoginID**열에는 각 직원에 대한 로그인이 *domain\login*형식으로 포함되어 있습니다. 각 직원이 자신에게 관련된 데이터만 받을 수 있도록 이 테이블을 필터링하려면 다음과 같은 매개 변수가 있는 필터 절을 지정합니다.  
   
@@ -85,7 +85,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
     WHERE Customer.SalesPersonID IN (SELECT EmployeeID FROM Employee WHERE LoginID = SUSER_SNAME())   
     ```  
   
-     하지만 이러한 모든 논리를 하위 쿼리가 아닌 조인 필터로 표시하는 것이 좋습니다. 응용 프로그램에서 행 필터에 하위 쿼리를 사용해야 할 경우에는 하위 쿼리가 변경하지 않는 조회 데이터만 참조하도록 해야 합니다.  
+     하지만 이러한 모든 논리를 하위 쿼리가 아닌 조인 필터로 표시하는 것이 좋습니다. 애플리케이션에서 행 필터에 하위 쿼리를 사용해야 할 경우에는 하위 쿼리가 변경하지 않는 조회 데이터만 참조하도록 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [병합 복제의 게시된 데이터 필터링](filter-published-data-for-merge-replication.md)   

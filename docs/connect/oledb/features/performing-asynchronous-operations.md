@@ -35,7 +35,7 @@ ms.locfileid: "47773321"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하면 응용 프로그램에서 비동기 데이터베이스 작업을 수행할 수 있습니다. 비동기 처리는 호출 스레드를 차단하지 않고 메서드를 즉시 반환할 수 있도록 합니다. 이를 통해 개발자는 명시적으로 스레드를 만들거나 동기화를 처리하지 않고도 보다 강력하고 유연한 다중 스레딩을 구현할 수 있습니다. 데이터베이스 연결을 초기화하거나 명령의 실행 결과를 초기화할 때 응용 프로그램에서는 비동기 처리를 요청합니다.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>데이터베이스 연결 열기 및 닫기  
- SQL Server용 OLE DB 드라이버를 사용할 때 데이터 원본 개체를 초기화하도록 설계된 응용 프로그램은 **IDBInitialize::Initialize**를 호출하기 전에 DBPROP_INIT_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 비동기식으로 설정할 수 있습니다. 이 속성이 설정된 경우 공급자는 **Initialize** 호출 시 S_OK 또는 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. S_OK는 초기화 작업이 즉시 완료된 경우 반환되고 DB_S_ASYNCHRONOUS는 초기화 작업이 비동기식으로 계속되는 경우 반환됩니다. 응용 프로그램에서는 데이터 원본 개체의 **IDBAsynchStatus** 또는 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스를 쿼리한 다음, **IDBAsynchStatus::GetStatus** 또는 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)을 호출하여 초기화 상태를 가져올 수 있습니다.  
+ SQL Server용 OLE DB 드라이버를 사용할 때 데이터 원본 개체를 초기화하도록 설계된 애플리케이션은 **IDBInitialize::Initialize**를 호출하기 전에 DBPROP_INIT_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 비동기식으로 설정할 수 있습니다. 이 속성이 설정된 경우 공급자는 **Initialize** 호출 시 S_OK 또는 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. S_OK는 초기화 작업이 즉시 완료된 경우 반환되고 DB_S_ASYNCHRONOUS는 초기화 작업이 비동기식으로 계속되는 경우 반환됩니다. 애플리케이션에서는 데이터 원본 개체의 **IDBAsynchStatus** 또는 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스를 쿼리한 다음, **IDBAsynchStatus::GetStatus** 또는 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)을 호출하여 초기화 상태를 가져올 수 있습니다.  
   
  또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. **ISSAsynchStatus** 인터페이스를 지원하는 공급자는 VARIANT_TRUE 값을 사용하여 이 속성을 구현해야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47773321"
 > [!NOTE]  
 >  연결 풀링에 사용되는 데이터 원본 개체는 SQL Server용 OLE DB 드라이버의 **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. **ISSAsynchStatus** 인터페이스는 풀에 있는 데이터 원본 개체에 대해 표시되지 않습니다.  
 >   
->  응용 프로그램에서 명시적으로 커서 엔진을 사용하도록 설정한 경우 **IOpenRowset::OpenRowset** 및 **IMultipleResults::GetResult**는 비동기 처리를 지원하지 않습니다.  
+>  애플리케이션에서 명시적으로 커서 엔진을 사용하도록 설정한 경우 **IOpenRowset::OpenRowset** 및 **IMultipleResults::GetResult**는 비동기 처리를 지원하지 않습니다.  
 >   
 >  또한 원격 프록시/스텁 dll(MDAC 2.8)도 SQL Server용 OLE DB 드라이버의 **ISSAsynchStatus** 인터페이스를 호출할 수 없습니다. **ISSAsynchStatus** 인터페이스는 원격을 통해 표시되지 않습니다.  
 >   

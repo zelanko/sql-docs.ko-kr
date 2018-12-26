@@ -37,7 +37,7 @@ ms.locfileid: "52522318"
   
      미러 데이터베이스를 만들려면 WITH NORECOVERY를 사용하여 미러 서버 인스턴스에서 주 데이터베이스의 최근 백업을 복원해야 합니다. 또한 전체 백업 후에 로그 백업을 하나 이상 만들고 WITH NORECOVERY를 사용하여 순서대로 미러 데이터베이스에 복원해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)에서만 사용할 수 있습니다.  
   
--   서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 계정의 로그인이 다른 계정의 **master** 데이터베이스에 있어야 합니다. 로그인이 없으면 미러링을 구성하기 전에 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
+-   서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 계정의 로그인이 다른 계정의 **master** 데이터베이스에 있어야 합니다. 로그인이 없으면 미러링을 구성하기 전에 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용 &#40;SQL Server &#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
   
 ### <a name="to-configure-database-mirroring"></a>데이터베이스 미러링을 구성하려면  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52522318"
 5.  데이터베이스 미러링 보안 구성 마법사를 사용하면 자동으로 각 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 생성되고(없는 경우) 서버 인스턴스의 역할(**주 서버**, **미러 서버**또는 **미러링 모니터 서버**)에 해당하는 필드에 서버 네트워크 주소가 입력됩니다.  
   
     > [!IMPORTANT]  
-    >  엔드포인트를 만드는 경우 데이터베이스 미러링 보안 구성 마법사에서 항상 Windows 인증을 사용합니다. 마법사에서 인증서 기반 인증을 사용하려면 각 서버 인스턴스의 인증서를 사용하도록 미러링 엔드포인트가 구성되어 있어야 합니다. 또한 마법사의 **서비스 계정** 대화 상자에 있는 모든 필드가 비어 있어야 합니다. 인증서를 사용할 데이터베이스 미러링 엔드포인트를 만드는 방법은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+    >  엔드포인트를 만드는 경우 데이터베이스 미러링 보안 구성 마법사에서 항상 Windows 인증을 사용합니다. 마법사에서 인증서 기반 인증을 사용하려면 각 서버 인스턴스의 인증서를 사용하도록 미러링 엔드포인트가 구성되어 있어야 합니다. 또한 마법사의 **서비스 계정** 대화 상자에 있는 모든 필드가 비어 있어야 합니다. 인증서를 사용할 데이터베이스 미러링 엔드포인트를 만드는 방법은 [CREATE ENDPOINT &#40;Transact-SQL &#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
   
 6.  선택적으로 운영 모드를 변경합니다. 특정 운영 모드의 가용성은 미러링 모니터에 TCP 주소를 지정했는지 여부에 따라 다릅니다. 다음과 같은 옵션이 있습니다.  
   

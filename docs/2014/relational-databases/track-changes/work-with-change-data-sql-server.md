@@ -18,7 +18,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48215673"
@@ -75,7 +75,7 @@ ms.locfileid: "48215673"
   
      **netchanges** 함수는 수정된 원본 테이블 행당 하나의 변경 내용을 반환합니다. 지정된 간격 동안 해당 행에 대해 둘 이상의 변경 내용이 기록되는 경우 열 값에는 행의 마지막 내용이 반영됩니다. 대상 환경을 업데이트하는 데 필요한 작업을 올바르게 식별하려면 TVF에서 해당 간격 동안 행에 수행한 초기 작업과 행에 수행한 마지막 작업을 모두 고려해야 합니다. 행 필터 옵션 'all'을 지정한 경우 `net changes` 쿼리에서 반환하는 작업은 삽입, 삭제 또는 업데이트(새 값) 중 하나입니다. 집계 마스크를 계산하는 데 비용이 들기 때문에 이 옵션은 항상 업데이트 마스크를 Null로 반환합니다. 행에 대한 모든 변경 내용을 반영하는 집계 마스크가 필요한 경우 'all with mask' 옵션을 사용합니다. 다운스트림 처리에서 삽입과 업데이트를 구분할 필요가 없는 경우 'all with merge' 옵션을 사용합니다. 이 경우 작업 값에는 두 개의 값만 사용됩니다. 즉, 삭제에 대해 1을 사용하고 삽입이나 업데이트가 될 수 있는 작업에 대해서는 5를 사용합니다. 이 옵션을 사용하면 파생된 작업이 삽입인지 업데이트인지를 결정하는 데 필요한 추가 처리를 수행하지 않아도 되므로 이러한 구분이 필요하지 않은 경우 쿼리 성능을 향상시킬 수 있습니다.  
   
- 쿼리 함수에서 반환되는 업데이트 마스크는 변경 데이터의 행에서 변경된 모든 열을 식별하는 간단한 표현입니다. 일반적으로 이 정보는 캡처된 열로 구성된 일부 하위 집합에만 필요합니다. 함수를 사용하여 응용 프로그램에서 보다 직접 사용할 수 있는 형식으로 마스크에서 정보를 추출할 수 있습니다. [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 함수는 지정한 캡처 인스턴스에 대해 명명된 열의 서수 위치를 반환하는 반면 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 함수는 제공된 마스크에 있는 비트의 패리티를 함수 호출에서 전달된 서수를 기반으로 반환합니다. 이러한 두 함수를 함께 사용하면 업데이트 마스크의 정보를 효율적으로 추출하고 변경 데이터에 대한 요청과 함께 반환할 수 있습니다. 이러한 함수를 사용하는 방법을 보려면 Enumerate Net Changes Using All With Mask 템플릿을 참조하십시오.  
+ 쿼리 함수에서 반환되는 업데이트 마스크는 변경 데이터의 행에서 변경된 모든 열을 식별하는 간단한 표현입니다. 일반적으로 이 정보는 캡처된 열로 구성된 일부 하위 집합에만 필요합니다. 함수를 사용하여 애플리케이션에서 보다 직접 사용할 수 있는 형식으로 마스크에서 정보를 추출할 수 있습니다. [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 함수는 지정한 캡처 인스턴스에 대해 명명된 열의 서수 위치를 반환하는 반면 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 함수는 제공된 마스크에 있는 비트의 패리티를 함수 호출에서 전달된 서수를 기반으로 반환합니다. 이러한 두 함수를 함께 사용하면 업데이트 마스크의 정보를 효율적으로 추출하고 변경 데이터에 대한 요청과 함께 반환할 수 있습니다. 이러한 함수를 사용하는 방법을 보려면 Enumerate Net Changes Using All With Mask 템플릿을 참조하십시오.  
   
 ##  <a name="Scenarios"></a> 쿼리 함수 시나리오  
  다음 섹션에서는 cdc.fn_cdc_get_all_changes_<capture_instance> 및 cdc.fn_cdc_get_net_changes_<capture_instance> 함수를 사용하여 변경 데이터 캡처 데이터를 쿼리하는 일반적인 시나리오에 대해 설명합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48215673"
  변경 데이터에 대한 가장 간단한 요청은 캡처 인스턴스의 유효성 간격 내에 있는 모든 현재 변경 데이터를 반환하는 요청입니다. 이 요청을 만들려면 먼저 유효성 간격의 하한 및 상한 LSN 경계를 확인합니다. 그런 다음 이러한 값을 사용하여 cdc.fn_cdc_get_all_changes_<capture_instance> 또는 cdc.fn_cdc_get_net_changes_<capture_instance> 쿼리 함수에 전달된 @from_lsn 및 @to_lsn 매개 변수를 식별합니다. 하한을 가져오려면 [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 함수를 사용하고 상한을 가져오려면 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 함수를 사용합니다. cdc.fn_cdc_get_all_changes_<capture_instance> 쿼리 함수를 사용하여 유효한 모든 현재 변경 내용을 쿼리하는 예제 코드를 보려면 Enumerate All Changes for the Valid Range 템플릿을 참조하십시오. cdc.fn_cdc_get_net_changes_<capture_instance> 함수를 사용하는 유사한 예를 보려면 Enumerate Net Changes for the Valid Range 템플릿을 참조하십시오.  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>마지막 변경 내용 집합 이후의 모든 새 변경 내용 쿼리  
- 일반적인 응용 프로그램의 경우 변경 데이터 쿼리는 마지막 요청 이후에 발생한 모든 변경 내용을 정기적으로 요청하는 진행 중인 프로세스가 됩니다. 이러한 쿼리의 경우 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 함수를 사용하여 이전 쿼리의 상한에서 현재 쿼리의 하한을 파생할 수 있습니다. 이 방법을 사용하면 쿼리 간격이 항상 두 끝점이 모두 간격에 포함되는 닫힌 간격으로 처리되기 때문에 행이 반복되지 않습니다. 그런 다음 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 함수를 사용하여 새 요청 간격의 상위 끝점을 가져옵니다. 마지막 요청 이후의 모든 변경 내용을 가져오기 위해 쿼리 창을 체계적으로 이동하는 예제 코드를 보려면 Enumerate All Changes Since Previous Request 템플릿을 참조하십시오.  
+ 일반적인 애플리케이션의 경우 변경 데이터 쿼리는 마지막 요청 이후에 발생한 모든 변경 내용을 정기적으로 요청하는 진행 중인 프로세스가 됩니다. 이러한 쿼리의 경우 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 함수를 사용하여 이전 쿼리의 상한에서 현재 쿼리의 하한을 파생할 수 있습니다. 이 방법을 사용하면 쿼리 간격이 항상 두 끝점이 모두 간격에 포함되는 닫힌 간격으로 처리되기 때문에 행이 반복되지 않습니다. 그런 다음 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 함수를 사용하여 새 요청 간격의 상위 끝점을 가져옵니다. 마지막 요청 이후의 모든 변경 내용을 가져오기 위해 쿼리 창을 체계적으로 이동하는 예제 코드를 보려면 Enumerate All Changes Since Previous Request 템플릿을 참조하십시오.  
   
 ### <a name="querying-for-all-new-changes-up-until-now"></a>현재까지의 모든 새 변경 내용 쿼리  
  쿼리 함수에서 반환하는 변경 내용에 적용되는 일반적인 제약 조건은 이전 요청과 현재 날짜 및 시간 사이에 발생한 변경 내용만 포함하는 것입니다. 이러한 쿼리의 경우 이전 요청에서 하한을 확인하기 위해 사용된 @from_lsn 값에 sys.fn_cdc_increment_lsn 함수를 적용합니다. 시간 간격의 상한은 특정 시점으로 표시되기 때문에 LSN 값으로 변환해야 쿼리 함수에서 사용할 수 있습니다. datetime 값을 해당 LSN 값으로 변환할 수 있기 때문에 캡처 프로세스가 지정된 상한까지 커밋된 모든 변경 내용을 처리했는지 확인해야 합니다. 이 작업은 조건에 맞는 모든 변경 내용이 변경 테이블에 전파되었는지 확인하는 데 필요합니다. 이렇게 하는 한 가지 방법은 데이터베이스 변경 테이블에 대해 기록된 현재 최대 커밋 lsn이 원하는 요청 간격 종료 시간을 초과하는지 정기적으로 검사하는 대기 루프를 만드는 것입니다.  
@@ -103,11 +103,11 @@ ms.locfileid: "48215673"
  경우에 따라 변경 데이터가 원본에서 커밋될 경우 변경 데이터를 트랜잭션에 대해 수집된 다른 정보와 조인하는 것이 유용할 수 있습니다. cdc.lsn_time_mapping 테이블의 tran_begin_lsn 열은 이러한 조인을 수행하는 데 필요한 정보를 제공합니다. 원본의 업데이트가 발생할 경우 시스템 동적 뷰 [sys.dm_tran_database_transactions](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql) 의 database_transaction_begin_lsn 값을 변경 데이터와 조인할 다른 정보와 함께 저장해야 합니다. fn_convertnumericlsntobinary 함수를 사용하면 database_transaction_begin_lsn 값과 tran_begin_lsn 값을 비교할 수 있습니다. 이 함수를 만드는 코드는 Create Function 템플릿 fn_convertnumericlsntobinary에서 사용할 수 있습니다. Return All Changes with a Given tran_begin_lsn 템플릿에서는 이러한 조인을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="querying-using-datetime-wrapper-functions"></a>datetime 래퍼 함수를 사용하여 쿼리  
- 변경 데이터를 쿼리하는 일반적인 응용 프로그램 시나리오는 datetime 값을 통해 경계가 지정된 슬라이딩 윈도우를 사용하여 변경 데이터를 정기적으로 요청하는 것입니다. 이러한 클래스의 소비자에 대해 변경 데이터 캡처는 변경 데이터 캡처 쿼리 함수에 대한 사용자 지정 래퍼 함수를 만드는 스크립트를 생성하는 [sys.sp_cdc_generate_wrapper_function](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql) 저장 프로시저를 제공합니다. 이러한 사용자 지정 래퍼를 사용하면 쿼리 간격을 datetime 쌍으로 표시할 수 있습니다.  
+ 변경 데이터를 쿼리하는 일반적인 애플리케이션 시나리오는 datetime 값을 통해 경계가 지정된 슬라이딩 윈도우를 사용하여 변경 데이터를 정기적으로 요청하는 것입니다. 이러한 클래스의 소비자에 대해 변경 데이터 캡처는 변경 데이터 캡처 쿼리 함수에 대한 사용자 지정 래퍼 함수를 만드는 스크립트를 생성하는 [sys.sp_cdc_generate_wrapper_function](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql) 저장 프로시저를 제공합니다. 이러한 사용자 지정 래퍼를 사용하면 쿼리 간격을 datetime 쌍으로 표시할 수 있습니다.  
   
  이 저장 프로시저에 대한 호출 옵션을 사용하면 호출자가 액세스할 수 있는 모든 캡처 인스턴스에 대해 래퍼를 생성하거나 지정된 캡처 인스턴스에 대해서만 래퍼를 생성할 수 있습니다. 지원되는 옵션에는 캡처 간격의 상위 끝점을 열거나 닫을지 여부, 결과 집합에 포함해야 하는 사용 가능한 캡처된 열 및 연결된 업데이트 플래그가 있어야 하는 포함된 열을 지정하는 기능도 있습니다. 이 프로시저는 캡처 인스턴스 이름에서 파생 가능한 생성된 함수 이름 열과 래퍼 저장 프로시저에 대한 CREATE 문 열이 있는 결과 집합을 반환합니다. 모든 변경 내용 쿼리를 래핑하는 함수는 항상 생성됩니다. 캡처 인스턴스를 만들 때 @supports_net_changes 매개 변수를 설정한 경우 순 변경 내용 함수를 래핑하는 함수도 생성됩니다.  
   
- 래퍼 저장 프로시저에 대한 CREATE 문을 생성하는 스크립트 생성 저장 프로시저를 호출하고 결과 CREATE 스크립트를 실행하여 함수를 만드는 작업은 응용 프로그램 디자이너가 수행해야 합니다. 이 작업은 캡처 인스턴스가 만들어질 때 자동으로 수행되지 않습니다.  
+ 래퍼 저장 프로시저에 대한 CREATE 문을 생성하는 스크립트 생성 저장 프로시저를 호출하고 결과 CREATE 스크립트를 실행하여 함수를 만드는 작업은 애플리케이션 디자이너가 수행해야 합니다. 이 작업은 캡처 인스턴스가 만들어질 때 자동으로 수행되지 않습니다.  
   
  datetime 래퍼는 사용자가 소유하며 호출자의 기본 스키마에서 만들어지 않습니다. 대부분의 사용자는 생성된 함수를 수정하지 않고 그대로 사용할 수 있습니다. 그러나 함수를 만들기 전에는 생성된 스크립트에 대한 추가 사용자 지정이 항상 가능합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48215673"
  datetime 래퍼를 사용하여 변경 데이터를 쿼리하는 예를 보려면 Get Net Changes Using Wrapper With Update Flags 템플릿을 참조하십시오. 이 템플릿에서는 래퍼가 업데이트 플래그를 반환하도록 구성된 경우 래퍼 함수를 사용하여 순 변경 내용을 쿼리하는 방법을 보여 줍니다. 행 필터 옵션 'all with mask'는 업데이트 시 Null이 아닌 업데이트 마스크를 반환하는 기본 쿼리 함수에 필요합니다. NULL 값은 기본 LSN 기반 쿼리를 수행할 때 캡처 인스턴스에 대한 유효성 간격의 하위 끝점 및 상위 끝점을 사용하도록 함수에 알리기 위해 하한 및 상한 datetime 간격 경계 둘 다에 전달됩니다. 이 함수는 캡처 인스턴스의 유효한 간격 내에서 원본 행이 수정될 때마다 행을 하나씩 반환합니다.  
   
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>datetime 래퍼 함수를 사용하여 캡처 인스턴스 간 전환  
- 변경 데이터 캡처는 하나의 추적된 원본 테이블당 최대 두 개의 캡처 인스턴스를 지원합니다. 이 기능은 주로 원본 테이블의 DDL(데이터 정의 언어)을 변경할 경우 추적에 사용할 수 있는 열 집합이 확장될 때 여러 인스턴스 간에 전환하는 데 사용됩니다. 새 캡처 인스턴스로 전환할 때 기본 쿼리 함수 이름의 변경으로부터 더 높은 응용 프로그램 수준을 보호하는 한 가지 방법은 래퍼 함수를 사용하여 기본 호출을 래핑하는 것입니다. 그런 다음 래퍼 함수의 이름이 그대로 유지되는지 확인합니다. 전환 작업을 수행할 예정인 경우 이전 래퍼 함수를 삭제하고 이전 래퍼 함수와 동일한 이름을 사용하는 새 래퍼 함수를 만들어 새 쿼리 함수를 참조할 수 있습니다. 먼저 생성된 스크립트를 수정하여 동일한 이름의 래퍼 함수를 만들면 더 높은 응용 프로그램 계층에 영향을 주지 않고 새 캡처 인스턴스로 전환할 수 있습니다.  
+ 변경 데이터 캡처는 하나의 추적된 원본 테이블당 최대 두 개의 캡처 인스턴스를 지원합니다. 이 기능은 주로 원본 테이블의 DDL(데이터 정의 언어)을 변경할 경우 추적에 사용할 수 있는 열 집합이 확장될 때 여러 인스턴스 간에 전환하는 데 사용됩니다. 새 캡처 인스턴스로 전환할 때 기본 쿼리 함수 이름의 변경으로부터 더 높은 애플리케이션 수준을 보호하는 한 가지 방법은 래퍼 함수를 사용하여 기본 호출을 래핑하는 것입니다. 그런 다음 래퍼 함수의 이름이 그대로 유지되는지 확인합니다. 전환 작업을 수행할 예정인 경우 이전 래퍼 함수를 삭제하고 이전 래퍼 함수와 동일한 이름을 사용하는 새 래퍼 함수를 만들어 새 쿼리 함수를 참조할 수 있습니다. 먼저 생성된 스크립트를 수정하여 동일한 이름의 래퍼 함수를 만들면 더 높은 애플리케이션 계층에 영향을 주지 않고 새 캡처 인스턴스로 전환할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   

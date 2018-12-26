@@ -15,7 +15,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48091879"
@@ -137,7 +137,7 @@ ms.locfileid: "48091879"
 3.  Analysis Services 다차원 인스턴스에 프로젝트를 배포합니다. 다음 단계에서는 Excel에서 큐브를 탐색하여 동작을 확인합니다.  
   
 ## <a name="testing-many-to-many"></a>다 대 다 테스트  
- 큐브에서 다 대 다 관계를 정의하는 경우 쿼리가 예상되는 결과를 반환하는지 확인하기 위해 반드시 테스트를 거쳐야 합니다. 최종 사용자가 사용할 클라이언트 응용 프로그램을 사용하여 큐브를 테스트해야 합니다. 다음 절차에서는 Excel을 사용하여 큐브에 연결하고 쿼리 결과를 확인합니다.  
+ 큐브에서 다 대 다 관계를 정의하는 경우 쿼리가 예상되는 결과를 반환하는지 확인하기 위해 반드시 테스트를 거쳐야 합니다. 최종 사용자가 사용할 클라이언트 애플리케이션을 사용하여 큐브를 테스트해야 합니다. 다음 절차에서는 Excel을 사용하여 큐브에 연결하고 쿼리 결과를 확인합니다.  
   
 #### <a name="browse-the-cube-in-excel"></a>Excel에서 큐브 탐색  
   

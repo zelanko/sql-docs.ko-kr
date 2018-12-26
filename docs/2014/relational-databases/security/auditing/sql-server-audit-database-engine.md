@@ -17,7 +17,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48175353"
@@ -56,10 +56,10 @@ ms.locfileid: "48175353"
  데이터베이스 수준 감사 동작 그룹 및 감사 동작은 [SQL Server 감사 동작 그룹 및 동작](sql-server-audit-action-groups-and-actions.md)항목에 설명되어 있습니다.  
   
 ### <a name="target"></a>대상  
- 감사의 결과는 파일, Windows 보안 이벤트 로그 또는 Windows 응용 프로그램 이벤트 로그 형태로 대상에 전달됩니다. 로그를 정기적으로 검토 및 보관하여 대상에 추가 레코드를 작성할 공간이 충분한지를 확인해야 합니다.  
+ 감사의 결과는 파일, Windows 보안 이벤트 로그 또는 Windows 애플리케이션 이벤트 로그 형태로 대상에 전달됩니다. 로그를 정기적으로 검토 및 보관하여 대상에 추가 레코드를 작성할 공간이 충분한지를 확인해야 합니다.  
   
 > [!IMPORTANT]  
->  허가 받은 사용자는 Windows 응용 프로그램 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 응용 프로그램 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
+>  허가 받은 사용자는 Windows 애플리케이션 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 애플리케이션 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
  Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008을 설정할 수 있습니다 보다 세부적인 **생성 된 응용 프로그램** 감사 정책 프로그램을 사용 하 여 명령줄에서 정책 (`AuditPol.exe)`합니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](http://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](http://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48175353"
   
 -   이진 파일 대상의 경우 미러 서버 서비스 계정에 감사 내역이 작성될 위치에 대한 적절한 권한이 있어야 합니다.  
   
--   Windows 이벤트 로그 대상의 경우 미러 서버가 위치한 컴퓨터의 보안 정책이 보안 또는 응용 프로그램 이벤트 로그에 대한 서비스 계정 액세스를 허용해야 합니다.  
+-   Windows 이벤트 로그 대상의 경우 미러 서버가 위치한 컴퓨터의 보안 정책이 보안 또는 애플리케이션 이벤트 로그에 대한 서비스 계정 액세스를 허용해야 합니다.  
   
 ### <a name="auditing-administrators"></a>감사 관리자  
  멤버는 `sysadmin` 고정된 서버 역할으로 식별 됩니다 합니다 **dbo** 각 데이터베이스의 사용자입니다. 관리자 작업을 감사하기 위해서는 **dbo** 사용자의 작업을 감사합니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "48175353"
   
 ## <a name="topics-closely-related-to-auditing"></a>감사 관련 항목  
  [서버 속성&#40;보안 페이지&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 감사를 설정하는 방법에 대해 설명합니다. 감사 레코드는 Windows 응용 프로그램 로그에 저장됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 감사를 설정하는 방법에 대해 설명합니다. 감사 레코드는 Windows 애플리케이션 로그에 저장됩니다.  
   
  [c2 audit mode 서버 구성 옵션](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 C2 보안 정책 준수 감사 모드에 대해 설명합니다.  

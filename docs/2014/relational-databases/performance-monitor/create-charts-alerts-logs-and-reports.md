@@ -21,7 +21,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3921f2db7ef3e80dd13ad9df0787ab1f6afc0611
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48136863"
@@ -36,7 +36,7 @@ ms.locfileid: "48136863"
   
  차트 사용은 다음 태스크에 유용합니다.  
   
--   컴퓨터 혹은 응용 프로그램의 속도가 느려지는 원인 조사  
+-   컴퓨터 혹은 애플리케이션의 속도가 느려지는 원인 조사  
   
 -   작동이 중단되는 성능 문제를 찾아내기 위해 시스템을 지속적으로 모니터링  
   

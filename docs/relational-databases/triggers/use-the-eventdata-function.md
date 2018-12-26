@@ -60,7 +60,7 @@ AS
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  응용 프로그램에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 <schema_element> 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 응용 프로그램에 구축합니다.  
+>  애플리케이션에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 <schema_element> 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 응용 프로그램에 구축합니다.  
   
 ## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE 및 ALTER DATABASE 이벤트  
  ALTER_TABLE 및 ALTER_DATABASE 이벤트에 대한 이벤트 데이터에는 DDL 문의 영향을 받는 다른 개체의 이름 및 유형과 이러한 개체에서 수행되는 동작도 포함됩니다. ALTER_TABLE 이벤트 데이터에는 ALTER TABLE 문의 영향을 받는 열, 제약 조건 또는 트리거의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 삭제, 설정 또는 해제)이 포함됩니다. ALTER DATABASE 이벤트 데이터에는 ALTER DATABASE 문의 영향을 받는 파일 또는 파일 그룹의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 또는 삭제)이 포함됩니다.  

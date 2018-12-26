@@ -21,7 +21,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86350dae3a41ffd994110491ab558367866f9bc3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48115013"
@@ -41,7 +41,7 @@ ms.locfileid: "48115013"
   
  다음과 같은 문제가 있을 수 있습니다.  
   
--   잘못 작성된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 비롯한 응용 프로그램 개발 오류  
+-   잘못 작성된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 비롯한 애플리케이션 개발 오류  
   
 -   디스크나 네트워크 관련 오류와 같은 하드웨어 오류  
   

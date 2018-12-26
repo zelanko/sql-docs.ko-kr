@@ -53,7 +53,7 @@ ms.locfileid: "48099053"
  **혼합 모드(Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증)**  
  사용자가 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 수 있도록 허용합니다. Windows 사용자 계정을 통해 연결하는 사용자는 Windows에서 유효성을 검사하는 트러스트된 연결을 사용할 수 있습니다.  
   
- 혼합 모드 인증을 선택해야 하며 레거시 응용 프로그램을 수용하기 위해 SQL 로그인을 사용해야 할 경우 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정에 대해 강력한 암호를 설정해야 합니다.  
+ 혼합 모드 인증을 선택해야 하며 레거시 애플리케이션을 수용하기 위해 SQL 로그인을 사용해야 할 경우 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정에 대해 강력한 암호를 설정해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 오로지 이전 버전과의 호환성을 위해서만 제공됩니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

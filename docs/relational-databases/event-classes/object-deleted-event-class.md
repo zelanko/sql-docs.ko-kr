@@ -22,7 +22,7 @@ ms.locfileid: "47857341"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  
+  Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 애플리케이션 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  
   
  Objects 이벤트 클래스와 함께 LoginName 및 NTUserName 기본 데이터 열을 모니터링하여 개체를 작성, 삭제, 액세스하는 사용자 이름을 파악할 수 있습니다.  
   
@@ -30,8 +30,8 @@ ms.locfileid: "47857341"
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
-|ClientProcessID|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
+|ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
+|ClientProcessID|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |DatabaseName|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |EventClass|**int**|이벤트 유형 = 47|27|아니오|  

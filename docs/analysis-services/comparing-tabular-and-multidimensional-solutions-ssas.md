@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e6a5941b33d2d73ee8bd86e33a710e065a21ae1
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34018900"
@@ -153,7 +153,7 @@ ms.locfileid: "34018900"
   
 |모델링 도구|사용 방법|  
 |-------------------|--------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|데이터 마이닝 솔루션 및 테이블 형식, 다차원, 만들 하려면 사용 합니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 응용 프로그램을 생성할 때 대부분 이 도구를 선호합니다.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|데이터 마이닝 솔루션 및 테이블 형식, 다차원, 만들 하려면 사용 합니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 애플리케이션을 생성할 때 대부분 이 도구를 선호합니다.|  
 |[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for Excel|나중에 SharePoint용 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 이 설치된 SharePoint 팜에 배포할 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서를 만드는 데 사용됩니다. Excel용[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 에는 Excel에서 열리는 별도의 응용 프로그램 작업 영역이 있습니다. 사용되는 시각적 요소(탭 페이지,  모눈 레이아웃 및 수식 표시줄)는 Excel과 동일합니다. Excel에 능숙한 사용자는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이 도구를 사용하는 것을 선호할 것입니다.|  
   
 ##  <a name="bkmk_client"></a> 클라이언트 응용 프로그램 지원  

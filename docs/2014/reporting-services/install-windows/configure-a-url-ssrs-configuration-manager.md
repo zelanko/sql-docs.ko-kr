@@ -15,15 +15,15 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48162773"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
-  보고서 관리자 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다. 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 보고서 서버 웹 서비스 URL을 업데이트하는 경우 SharePoint 중앙 관리에서도 URL을 업데이트해야 합니다.  
+  보고서 관리자 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다. 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 보고서 서버 웹 서비스 URL을 업데이트하는 경우 SharePoint 중앙 관리에서도 URL을 업데이트해야 합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 URL을 구성할 수 있습니다. URL의 모든 부분이 이 도구에 정의되어 있습니다. 이전 릴리스와는 달리 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서는 IIS(인터넷 정보 서비스) 웹 사이트에서 더 이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 응용 프로그램에 액세스할 수 없습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 URL을 구성할 수 있습니다. URL의 모든 부분이 이 도구에 정의되어 있습니다. 이전 릴리스와는 달리 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서는 IIS(인터넷 정보 서비스) 웹 사이트에서 더 이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 애플리케이션에 액세스할 수 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 기본값을 제공합니다. 기본 URL은 인스턴스 이름을 통합함으로써 같은 컴퓨터에서 보고서 서버 인스턴스를 여러 개 실행하는 경우 URL이 충돌할 위험을 최소화합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48162773"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 URL을 구성해야 합니다. 시스템 유틸리티를 사용하지 마십시오. URL 예약을 수정 하지 마십시오는 `URLReservations` 직접 RSReportServer.config 파일의 섹션입니다. 내부에 저장된 기본 URL 예약을 업데이트하고 RSReportServer.config 파일에 저장된 URL 설정을 동기화하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용해야 합니다.  
   
--   보고서 작업이 적은 시간을 선택합니다. URL 예약이 변경될 때마다 보고서 서버 웹 서비스 및 보고서 관리자에 대한 응용 프로그램 도메인이 재활용될 수 있습니다.  
+-   보고서 작업이 적은 시간을 선택합니다. URL 예약이 변경될 때마다 보고서 서버 웹 서비스 및 보고서 관리자에 대한 애플리케이션 도메인이 재활용될 수 있습니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL 생성 및 사용에 대한 개요는 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요.  
   
@@ -56,25 +56,25 @@ ms.locfileid: "48162773"
   
 2.  **웹 서비스 URL**을 클릭합니다.  
   
-3.  가상 디렉터리를 지정합니다. 가상 디렉터리 이름으로 요청을 수신할 응용 프로그램을 식별할 수 있습니다. IP 주소와 포트는 여러 응용 프로그램에서 공유할 수 있으므로 가상 디렉터리 이름이 요청을 수신할 응용 프로그램을 지정합니다.  
+3.  가상 디렉터리를 지정합니다. 가상 디렉터리 이름으로 요청을 수신할 애플리케이션을 식별할 수 있습니다. IP 주소와 포트는 여러 애플리케이션에서 공유할 수 있으므로 가상 디렉터리 이름이 요청을 수신할 애플리케이션을 지정합니다.  
   
-     요청이 원하는 대상에 도달하게 하려면 이 값이 고유해야 합니다. 이 값은 필수 사항입니다. 대/소문자를 구분하지 않습니다. 가상 디렉터리 이름과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램의 인스턴스는 일 대 일 대응됩니다. 같은 응용 프로그램 인스턴스에 대한 URL을 여러 개 만든 경우 이 응용 프로그램 인스턴스에 대해 정의한 모든 URL에 같은 가상 디렉터리 이름을 사용해야 합니다.  
+     요청이 원하는 대상에 도달하게 하려면 이 값이 고유해야 합니다. 이 값은 필수 사항입니다. 대/소문자를 구분하지 않습니다. 가상 디렉터리 이름과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션의 인스턴스는 일 대 일 대응됩니다. 같은 애플리케이션 인스턴스에 대한 URL을 여러 개 만든 경우 이 애플리케이션 인스턴스에 대해 정의한 모든 URL에 같은 가상 디렉터리 이름을 사용해야 합니다.  
   
      보고서 서버 웹 서비스의 기본 가상 디렉터리 이름은 **ReportServer**입니다.  
   
-4.  네트워크에서 보고서 서버 컴퓨터를 고유하게 식별하는 IP 주소를 지정합니다. 호스트 헤더를 지정하거나 같은 응용 프로그램 인스턴스에 대한 URL을 추가로 정의하려는 경우 **고급**을 클릭해야 합니다. 고급 URL 속성을 설정하는 방법은 이 항목의 뒷부분에 나오는 지침을 참조하십시오. 또는 **웹 서비스 URL** 페이지에서 다음 값 중 하나를 선택합니다.  
+4.  네트워크에서 보고서 서버 컴퓨터를 고유하게 식별하는 IP 주소를 지정합니다. 호스트 헤더를 지정하거나 같은 애플리케이션 인스턴스에 대한 URL을 추가로 정의하려는 경우 **고급**을 클릭해야 합니다. 고급 URL 속성을 설정하는 방법은 이 항목의 뒷부분에 나오는 지침을 참조하십시오. 또는 **웹 서비스 URL** 페이지에서 다음 값 중 하나를 선택합니다.  
   
     -   **모두 할당됨** - 컴퓨터에 할당된 모든 IP 주소를 보고서 서버 응용 프로그램을 가리키는 URL에 사용할 수 있도록 지정합니다. 또한 이 값은 도메인 이름 서버에서 확인할 수 있는 호스트 이름(예: 컴퓨터 이름)부터 컴퓨터에 할당된 IP 주소까지 포함합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 기본값입니다.  
   
-    -   **모두 할당되지 않음** - 다른 응용 프로그램에서 처리하지 않은 모든 요청을 보고서 서버에서 수신하도록 지정합니다. 이 옵션은 사용하지 않는 것이 좋습니다. 이 옵션을 선택하면 보다 강력한 URL 예약을 사용하는 다른 응용 프로그램이 보고서 서버에서 처리해야 할 요청을 가로챌 수 있습니다.  
+    -   **모두 할당되지 않음** - 다른 응용 프로그램에서 처리하지 않은 모든 요청을 보고서 서버에서 수신하도록 지정합니다. 이 옵션은 사용하지 않는 것이 좋습니다. 이 옵션을 선택하면 보다 강력한 URL 예약을 사용하는 다른 애플리케이션이 보고서 서버에서 처리해야 할 요청을 가로챌 수 있습니다.  
   
-    -   **127.0.0.1** - localhost 액세스에 사용되는 IPv4 주소로서 보고서 서버 컴퓨터에 대한 로컬 관리를 지원합니다. 이 값만 선택할 경우 보고서 서버 컴퓨터에 로컬로 로그온한 사용자만 응용 프로그램에 액세스할 수 있습니다.  
+    -   **127.0.0.1** - localhost 액세스에 사용되는 IPv4 주소로서 보고서 서버 컴퓨터에 대한 로컬 관리를 지원합니다. 이 값만 선택할 경우 보고서 서버 컴퓨터에 로컬로 로그온한 사용자만 애플리케이션에 액세스할 수 있습니다.  
   
     -   **::1** - IPv6 형식의 루프백 주소입니다.  
   
     -   특정 IP 주소가 이 목록에 표시될 수도 있습니다. IP 주소는 IPv4 및 IPv6 형식일 수 있습니다. *Nnn.nnn.nnn.nnn* 는 컴퓨터에 설치된 네트워크 어댑터 카드의 32비트 IPv4 주소입니다. IPv6 주소는 128비트이며 8개의 4바이트 필드가 콜론으로 구분되어 있습니다. \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
-         카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 응용 프로그램에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
+         카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 애플리케이션에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
   
 5.  포트를 지정합니다. 포트 80에 대 한 기본값인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 Windows Server 2008 다른 응용 프로그램과 공유할 수 있기 때문입니다. 사용자 지정 포트 번호를 사용하려는 경우에는 보고서 서버에 액세스할 때 사용되는 URL에 항상 포트 번호를 지정해야 합니다. 사용 가능한 포트를 찾을 때 사용할 수 있는 기술은 다음과 같습니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48162773"
   
 -   http://www.adventure-works.com/reportserver  
   
- 같은 응용 프로그램 인스턴스에 대해서는 가상 디렉터리 이름을 여러 개 설정할 수 없습니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램 인스턴스는 한 개의 가상 디렉터리 이름에 매핑됩니다. 같은 컴퓨터에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스가 여러 개 있는 경우 각 요청이 원하는 대상에 도달하게 하려면 응용 프로그램에 대한 가상 디렉터리 이름에 인스턴스 이름이 포함되어 있어야 합니다.  
+ 같은 애플리케이션 인스턴스에 대해서는 가상 디렉터리 이름을 여러 개 설정할 수 없습니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션 인스턴스는 한 개의 가상 디렉터리 이름에 매핑됩니다. 같은 컴퓨터에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스가 여러 개 있는 경우 각 요청이 원하는 대상에 도달하게 하려면 애플리케이션에 대한 가상 디렉터리 이름에 인스턴스 이름이 포함되어 있어야 합니다.  
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>고급 URL 속성을 설정하려면  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48162773"
   
 3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 http://www를 포함한 전체 URL을 포함시킵니다.  
   
-4.  포트를 지정합니다. 사용자 지정 포트를 지정한 경우 응용 프로그램 URL에 항상 포트 번호가 포함되어야 합니다.  
+4.  포트를 지정합니다. 사용자 지정 포트를 지정한 경우 애플리케이션 URL에 항상 포트 번호가 포함되어야 합니다.  
   
 5.  **확인**을 클릭합니다.  
   

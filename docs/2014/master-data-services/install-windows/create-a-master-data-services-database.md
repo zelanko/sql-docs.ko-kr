@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11fb8139c674a165607f08551d6333eff534ebac
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48158293"
@@ -37,9 +37,9 @@ ms.locfileid: "48158293"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   데이터베이스 및 웹 응용 프로그램에 대한 시스템 설정을 구성합니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../system-settings-master-data-services.md)을 참조하세요.  
+-   데이터베이스 및 웹 애플리케이션에 대한 시스템 설정을 구성합니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../system-settings-master-data-services.md)을 참조하세요.  
   
--   이 데이터베이스와 연결할 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
+-   이 데이터베이스와 연결할 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
 -   데이터베이스 및 트랜잭션 로그를 백업하도록 유지 관리 계획을 구성합니다. 자세한 내용은 [데이터베이스 요구 사항&#40;Master Data Services&#41;](database-requirements-master-data-services.md)을 참조하세요.  
   

@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48214764"
@@ -81,7 +81,7 @@ ms.locfileid: "48214764"
 |20816|캐시될 준비된 쿼리|  
 |20819|Service Broker 서비스 큐|  
 |20821|UNIQUE 제약 조건|  
-|21057|응용 프로그램 역할|  
+|21057|애플리케이션 역할|  
 |21059|인증서|  
 |21075|서버|  
 |21076|Transact-SQL 트리거|  

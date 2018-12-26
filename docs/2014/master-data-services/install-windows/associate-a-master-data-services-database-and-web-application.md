@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 데이터베이스와 웹 응용 프로그램 연결 | Microsoft Docs
+title: Master Data Services 데이터베이스와 웹 애플리케이션 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: bc66fdf7eff698cf89a02fd194d1b5affe8ed397
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220123"
 ---
-# <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 응용 프로그램 연결
+# <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 애플리케이션 연결
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결하여 웹 작업에 사용할 데이터베이스를 지정할 수 있습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](install-master-data-services.md)를 참조하세요.  
   
--   로컬 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
+-   로컬 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 있어야 합니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
 -   로컬 또는 원격 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스가 있어야 합니다. 자세한 내용은 [Master Data Services 데이터베이스 만들기](create-a-master-data-services-database.md)를 참조하세요.  
   
-### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 응용 프로그램을 연결하려면  
+### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 애플리케이션을 연결하려면  
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   

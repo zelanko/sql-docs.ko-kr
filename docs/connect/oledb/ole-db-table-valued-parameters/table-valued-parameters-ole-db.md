@@ -31,7 +31,7 @@ ms.locfileid: "47628011"
 ## <a name="remarks"></a>Remarks  
  현재 매개 변수 집합(**ICommand::Execute**의 DBPARAMS 매개 변수)을 사용하여 다중 행 데이터를 프로시저에 대한 매개 변수로 서버에 보낼 수 있습니다. 매개 변수 집합을 사용할 경우 해당 집합의 모든 요소가 서버에 개별 RPC(원격 프로시저 호출) 요청으로 서버에 전송되어야 합니다. 테이블 반환 매개 변수는 유사한 기능을 제공하지만 서버와 더 밀접하게 통합됩니다. 따라서 RPC 요청 수가 감소하며 서버에서 집합 기반 작업을 사용할 수 있습니다.  
   
- 테이블 반환 매개 변수는 OLE DB로 SQL Server 용 OLE DB 드라이버에서 지원 됩니다 **행 집합** 개체입니다. 소비자(즉, SQL Server용 OLE DB 드라이버를 사용하는 클라이언트 응용 프로그램)는 모든 **Rowset** 개체를 테이블 반환 매개 변수의 자리 표시자로 제공할 수 있습니다. 테이블 반환 매개 변수는 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수 유형과 마찬가지로 처리됩니다. OLE DB Driver for SQL Server 만들기, 검색, 사양, 바인딩 및 스키마 인터페이스를 제공합니다.  
+ 테이블 반환 매개 변수는 OLE DB로 SQL Server 용 OLE DB 드라이버에서 지원 됩니다 **행 집합** 개체입니다. 소비자(즉, SQL Server용 OLE DB 드라이버를 사용하는 클라이언트 애플리케이션)는 모든 **Rowset** 개체를 테이블 반환 매개 변수의 자리 표시자로 제공할 수 있습니다. 테이블 반환 매개 변수는 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수 유형과 마찬가지로 처리됩니다. OLE DB Driver for SQL Server 만들기, 검색, 사양, 바인딩 및 스키마 인터페이스를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

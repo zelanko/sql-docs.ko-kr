@@ -13,13 +13,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2163528b17805e15d2ec3a368a77335d7854a9b5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187779"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;service name&gt; 속성(서비스 탭)
-  이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
+  이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 애플리케이션을 사용하여 변경할 수 없습니다.  
   
 ## <a name="options"></a>변수  
  **이진 경로**  

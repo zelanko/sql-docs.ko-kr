@@ -20,7 +20,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48208993"
@@ -54,7 +54,7 @@ ms.locfileid: "48208993"
   
 |역할|Description|  
 |----------|-----------------|  
-|`mds_exec`|이 역할은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 응용 프로그램 풀의 계정을 지정하는 경우 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에 지정하는 계정을 포함합니다. mds_exec 역할은 다음을 가집니다.<br /><br /> **EXECUTE** 모든 스키마에 대 한 권한이 있습니다.<br /><br /> **ALTER**하십시오 **삽입**, 및 **선택** 이러한 테이블에 대 한 권한:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **선택** 이러한 테이블에 대 한 권한:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **선택** 이러한 보기에 대 한 권한:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
+|`mds_exec`|이 역할은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 웹 애플리케이션을 만들고 애플리케이션 풀의 계정을 지정하는 경우 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에 지정하는 계정을 포함합니다. mds_exec 역할은 다음을 가집니다.<br /><br /> **EXECUTE** 모든 스키마에 대 한 권한이 있습니다.<br /><br /> **ALTER**하십시오 **삽입**, 및 **선택** 이러한 테이블에 대 한 권한:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **선택** 이러한 테이블에 대 한 권한:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **선택** 이러한 보기에 대 한 권한:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>스키마  
   

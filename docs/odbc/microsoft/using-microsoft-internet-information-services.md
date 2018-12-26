@@ -24,7 +24,7 @@ ms.locfileid: "47813941"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Microsoft IIS(인터넷 정보 서비스) 사용
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  IIS 스크립트 (특히 오류가 표시 되 면는 ORA-12641) 내에서 연결 하는 데 문제가 있다면 Sqlnet.ora 파일에 다음 줄을 추가 합니다.  
   

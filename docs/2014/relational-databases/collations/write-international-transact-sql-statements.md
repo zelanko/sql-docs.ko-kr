@@ -21,13 +21,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2fdd35b7af73cbbfce49f8a8b399f7cf64e97b51
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48208913"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
-  다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 응용 프로그램을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
+  다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
   
 -   `char`, `varchar` 및 `text` 데이터 형식을 사용하는 경우 모두 `nchar`, `nvarchar` 및 `nvarchar(max)`로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을(를) 참조하세요.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48208913"
   
 -   INSERT 또는 UPDATE 문을 위한 입력이나 비교를 위해 날짜를 지정할 때 모든 언어 설정에서 동일하게 해석되는 상수를 사용하십시오.  
   
-    -   ADO, OLE DB 및 ODBC 응용 프로그램은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
+    -   ADO, OLE DB 및 ODBC 애플리케이션은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
   
          **{ ts'** yyyy**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** 예: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48208913"
   
          **{ t'** *hh* **:** *mm* **:** *ss* **'}** 예: **{ t'** 10:02:20 **'}**  
   
-    -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저, 트리거를 사용하는 응용 프로그램에서는 분리되지 않은 숫자 문자열을 사용해야 합니다. 예를 들어 19980924와 같은 *yyyymmdd* 를 사용합니다.  
+    -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저, 트리거를 사용하는 애플리케이션에서는 분리되지 않은 숫자 문자열을 사용해야 합니다. 예를 들어 19980924와 같은 *yyyymmdd* 를 사용합니다.  
   
     -   다른 Api를 사용 하는 응용 프로그램 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장된 프로시저 및 트리거 사용할지 CONVERT 문을 명시적 스타일 매개 변수가 있는 간의 모든 변환에는 `time`를 `date`를 `smalldate`, `datetime`, **datetime2**, 및 `datetimeoffset` 데이터 형식과 문자열 데이터 형식입니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
   

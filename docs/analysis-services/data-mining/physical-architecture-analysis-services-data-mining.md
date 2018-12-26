@@ -29,7 +29,7 @@ ms.locfileid: "34015750"
 ## <a name="architectural-diagram"></a>아키텍처 다이어그램  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 독립 실행형 서비스로 실행되며 서비스와의 통신은 HTTP 또는 TCP를 사용하는 XMLA(XML for Analysis)를 통해 이루어집니다.  
   
- AMO는 사용자 응용 프로그램과 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 개체에 대한 액세스를 제공하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 사이의 계층입니다. AMO는 클라이언트 응용 프로그램에서 명령을 가져와서 이 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 XMLA 메시지로 변환하는 클래스 라이브러리이며, 명령을 실행하는 메서드 멤버 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 데이터를 포함하는 속성 멤버와 함께 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 개체를 최종 사용자에게 클래스로 표시합니다.  
+ AMO는 사용자 애플리케이션과 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 개체에 대한 액세스를 제공하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 사이의 계층입니다. AMO는 클라이언트 애플리케이션에서 명령을 가져와서 이 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 XMLA 메시지로 변환하는 클래스 라이브러리이며, 명령을 실행하는 메서드 멤버 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 데이터를 포함하는 속성 멤버와 함께 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 개체를 최종 사용자에게 클래스로 표시합니다.  
   
  다음 그림은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 내의 서비스 및 이 인스턴스와 상호 작용하는 사용자 구성 요소를 비롯한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 요소 아키텍처를 보여 줍니다.  
   

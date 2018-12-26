@@ -48,7 +48,7 @@ items:
       href: securing-connection-strings.md
     - name: 사용자 입력 유효성 검사
       href: validating-user-input.md
-    - name: 응용 프로그램 보안
+    - name: 애플리케이션 보안
       href: application-security.md
     - name: SSL 암호화 사용
       href: using-ssl-encryption.md
@@ -89,7 +89,7 @@ items:
       href: troubleshooting-connectivity.md
     - name: 확장 이벤트 로그의 진단 정보 액세스
       href: accessing-diagnostic-information-in-the-extended-events-log.md
-  - name: 샘플 JDBC 드라이버 응용 프로그램
+  - name: 샘플 JDBC 드라이버 애플리케이션
     href: sample-jdbc-driver-applications.md
     items:
     - name: 데이터 연결 및 검색

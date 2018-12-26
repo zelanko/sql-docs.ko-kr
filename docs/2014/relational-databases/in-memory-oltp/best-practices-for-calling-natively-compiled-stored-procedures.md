@@ -20,7 +20,7 @@ ms.locfileid: "48048533"
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
   고유하게 컴파일된 저장 프로시저의 특징  
   
--   응용 프로그램에서 성능이 중요한 부분에 주로 사용됩니다.  
+-   애플리케이션에서 성능이 중요한 부분에 주로 사용됩니다.  
   
 -   자주 실행됩니다.  
   

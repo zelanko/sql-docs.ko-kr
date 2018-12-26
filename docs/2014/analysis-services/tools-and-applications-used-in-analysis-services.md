@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48213800"
 ---
-# <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 응용 프로그램
-  Analysis Services 모델을 개발하고 Analysis Services 인스턴스에서 연결된 데이터베이스를 관리하기 위해 필요한 도구 및 응용 프로그램을 찾으세요.  
+# <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
+  Analysis Services 모델을 개발하고 Analysis Services 인스턴스에서 연결된 데이터베이스를 관리하기 위해 필요한 도구 및 애플리케이션을 찾으세요.  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services 모델 디자이너  
  테이블 형식 및 다차원 모델은 Visual Studio 셸에서 작성된 솔루션의 프로젝트 템플릿에서 생성됩니다. 프로젝트 템플릿은 Analysis Services 솔루션을 구성하는 모델, 큐브, 차원 및 역할을 만들기 위해 디자이너를 제공합니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "48213800"
 ## <a name="administrative-tools"></a>관리 도구  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Management Studio는 Analysis Services를 비롯하여 모든 SQL Server 기능의 기본 관리 도구입니다. SQL Server Management Studio는 선택적 구성 요소입니다. Windows Server 2012의 앱 페이지에서 다른 SQL Server 응용 프로그램에 표시되지 않는 경우 SQL Server 설치 프로그램을 실행하여 설치에 추가합니다.  
+ Management Studio는 Analysis Services를 비롯하여 모든 SQL Server 기능의 기본 관리 도구입니다. SQL Server Management Studio는 선택적 구성 요소입니다. Windows Server 2012의 앱 페이지에서 다른 SQL Server 애플리케이션에 표시되지 않는 경우 SQL Server 설치 프로그램을 실행하여 설치에 추가합니다.  
   
 ### <a name="sql-server-profiler"></a>SQL Server 프로파일러  
- 공식적으로는 더 이상 사용되지 않는 SQL Server Profiler를 통해 연결, MDX 쿼리 실행 및 기타 서버 작동을 간편하게 모니터링할 수 있습니다. SQL Server Profiler는 기본적으로 설치됩니다. Windows Server 2012의 앱에서 SQL Server 응용 프로그램과 함께 찾을 수 있습니다.  
+ 공식적으로는 더 이상 사용되지 않는 SQL Server Profiler를 통해 연결, MDX 쿼리 실행 및 기타 서버 작동을 간편하게 모니터링할 수 있습니다. SQL Server Profiler는 기본적으로 설치됩니다. Windows Server 2012의 앱에서 SQL Server 애플리케이션과 함께 찾을 수 있습니다.  
   
 ### <a name="powershell"></a>PowerShell  
  PowerShell 명령을 사용하여 많은 관리 작업을 수행할 수 있습니다. 자세한 내용은 [Analysis Services PowerShell](analysis-services-powershell.md) 을 참조하세요.  

@@ -23,7 +23,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48222633"
@@ -35,7 +35,7 @@ ms.locfileid: "48222633"
   
 -   구독자에 필요한 저장소 공간을 줄입니다.  
   
--   개별 구독자 요구 사항에 기초하여 게시 및 응용 프로그램을 사용자 지정합니다.  
+-   개별 구독자 요구 사항에 기초하여 게시 및 애플리케이션을 사용자 지정합니다.  
   
 -   서로 다른 구독자에 서로 다른 데이터 파티션을 보낼 수 있으므로 구독자가 데이터를 업데이트할 때 충돌을 방지하거나 충돌 횟수를 줄일 수 있습니다. 즉, 두 개의 구독자가 같은 데이터 값을 업데이트하지 않게 됩니다.  
   

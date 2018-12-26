@@ -30,7 +30,7 @@ ms.locfileid: "48081733"
 -   [관련 작업](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> 이점  
- 모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 응용 프로그램인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. Excel에서 분석 기능을 사용하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 실행하는 컴퓨터에 Microsoft Office 2003 이상이 설치되어 있어야 합니다.  
+ 모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 애플리케이션인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. Excel에서 분석 기능을 사용하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 실행하는 컴퓨터에 Microsoft Office 2003 이상이 설치되어 있어야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 동일한 컴퓨터에 Office가 설치되어 있지 않으면 다른 컴퓨터의 Excel을 사용하여 데이터 원본으로 작업 영역 데이터베이스에 연결할 수 있습니다. 그런 다음 워크시트에 피벗 테이블을 수동으로 추가할 수 있습니다.  

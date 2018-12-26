@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48049213"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
-  SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 PowerPivot용 응용 프로그램 수준 솔루션이 제대로 배포되지 않은 경우 이 오류가 발생합니다.  
+  SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 PowerPivot용 애플리케이션 수준 솔루션이 제대로 배포되지 않은 경우 이 오류가 발생합니다.  
   
 ## <a name="details"></a>설명  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48049213"
 |메시지 텍스트|'Microsoft.AnalysisServices.SharePoint.Integration' 파일 또는 어셈블리를 로드할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
- SharePoint용 PowerPivot에서는 솔루션 패키지를 사용하여 SharePoint 서버에서 해당 기능을 배포하는데, 이러한 솔루션 중 하나가 올바르게 배포되지 않았습니다. 그 결과 SharePoint 사이트에서 PowerPivot에 갤러리 또는 기타 PowerPivot 응용 프로그램 페이지를 열려고 할 때마다 이 오류가 나타납니다.  
+ SharePoint용 PowerPivot에서는 솔루션 패키지를 사용하여 SharePoint 서버에서 해당 기능을 배포하는데, 이러한 솔루션 중 하나가 올바르게 배포되지 않았습니다. 그 결과 SharePoint 사이트에서 PowerPivot에 갤러리 또는 기타 PowerPivot 애플리케이션 페이지를 열려고 할 때마다 이 오류가 나타납니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  솔루션 패키지를 배포합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48049213"
   
 3.  **솔루션 배포**를 클릭합니다.  
   
-4.  이 오류가 발생하는 웹 응용 프로그램을 선택합니다. 웹 응용 프로그램이 여러 개인 경우에는 모든 웹 응용 프로그램에 대해 솔루션을 다시 배포합니다.  
+4.  이 오류가 발생하는 웹 애플리케이션을 선택합니다. 웹 애플리케이션이 여러 개인 경우에는 모든 웹 애플리케이션에 대해 솔루션을 다시 배포합니다.  
   
 5.  **확인**을 클릭합니다.  
   

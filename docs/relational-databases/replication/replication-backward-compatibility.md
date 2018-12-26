@@ -49,7 +49,7 @@ ms.locfileid: "51677662"
  이전 버전과의 호환성을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 유지되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 복제 기능입니다.  
   
  [SQL Server 복제의 주요 변경 내용](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
- 응용 프로그램을 변경해야 할 수도 있는 복제 기능 변경 내용 
+ 애플리케이션을 변경해야 할 수도 있는 복제 기능 변경 내용 
 
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)  
  복제 토폴로지에 참여하는 SQL Server를 업그레이드할 때 고려해야 할 단계 및 고려 사항입니다. 

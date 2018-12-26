@@ -62,7 +62,7 @@ ms.locfileid: "47754901"
   
  위 표에서 보듯이 setter SQLXML 메서드는 읽기 가능한 SQLXML 개체에 사용할 수 없고 마찬가지로 getter 메서드는 쓰기 가능한 SQLXML 개체에 사용할 수 없습니다.  
   
- 응용 프로그램이 SQLXML 개체와 함께 소수 자릿수 또는 길이 매개 변수를 지정하여 setObject 메서드를 호출하면 해당 소수 자릿수 또는 길이 매개 변수는 무시됩니다.  
+ 애플리케이션이 SQLXML 개체와 함께 소수 자릿수 또는 길이 매개 변수를 지정하여 setObject 메서드를 호출하면 해당 소수 자릿수 또는 길이 매개 변수는 무시됩니다.  
   
 ## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>SQLXML 개체 사용과 관련된 지침 및 제한 사항  
  응용 프로그램은 SQLXML 개체를 사용하여 데이터베이스에 대한 XML 데이터 읽기 및 쓰기 작업을 수행할 수 있습니다. 다음 목록에서는 SQLXML 개체 사용과 관련된 구체적인 제한 사항 및 지침을 보여 줍니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "47754901"
   
 -   응용 프로그램은 읽기 가능한 SQLXML 개체에서 하나의 getter 메서드만 호출하여 데이터를 읽을 수 있습니다. getter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 getter 또는 setter 메서드는 실패합니다.  
   
--   응용 프로그램은 SQLXML 개체를 읽거나 쓴 후 해당 개체에서 free 메서드만 호출할 수 있습니다. 그러나 기본 열 또는 매개 변수가 활성 상태인 동안에는 반환된 스트림 또는 원본을 처리할 수 있습니다. 기본 열 또는 매개 변수가 비활성 상태가 되면 해당 SQLXML 개체와 연결된 스트림 또는 원본이 닫힙니다. 기본 열 또는 매개 변수가 더 이상 유효하지 않은 경우 해당 기본 데이터를 Stream, SAX(Simple API for XML) 및 StAX(Streaming API for XML) getter에 사용할 수 없습니다.  
+-   애플리케이션은 SQLXML 개체를 읽거나 쓴 후 해당 개체에서 free 메서드만 호출할 수 있습니다. 그러나 기본 열 또는 매개 변수가 활성 상태인 동안에는 반환된 스트림 또는 원본을 처리할 수 있습니다. 기본 열 또는 매개 변수가 비활성 상태가 되면 해당 SQLXML 개체와 연결된 스트림 또는 원본이 닫힙니다. 기본 열 또는 매개 변수가 더 이상 유효하지 않은 경우 해당 기본 데이터를 Stream, SAX(Simple API for XML) 및 StAX(Streaming API for XML) getter에 사용할 수 없습니다.  
   
 -   응용 프로그램은 쓰기 가능한 SQLXML 개체에 대해 하나의 setter 메서드만 호출할 수 있습니다. setter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 setter 또는 getter 메서드는 실패합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47754901"
   
 -   setter 개체는 해당 개체가 생성된 연결이 유지되는 동안 유효합니다.  
   
--   응용 프로그램은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 **null** 값을 설정할 수 없습니다. 응용 프로그램은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 빈 문자열("")을 설정할 수 있습니다. **null** 값을 설정하려면 응용 프로그램은 다음 중 하나를 호출해야 합니다.  
+-   애플리케이션은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 **null** 값을 설정할 수 없습니다. 응용 프로그램은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 빈 문자열("")을 설정할 수 있습니다. **null** 값을 설정하려면 응용 프로그램은 다음 중 하나를 호출해야 합니다.  
   
     -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스 및 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 setNull 메서드  
   

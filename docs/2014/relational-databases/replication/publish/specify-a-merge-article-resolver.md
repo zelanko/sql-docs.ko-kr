@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1c2d2934312fb0fa61acf0933190e79cf5f9f51
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48181383"
@@ -91,7 +91,7 @@ ms.locfileid: "48181383"
 3.  원하는 사용자 지정 해결 프로그램이 아직 등록되지 않은 경우 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. **@article_resolver**에 해결 프로그램 이름을 지정합니다. 비즈니스 논리 처리기의 경우 어셈블리 이름입니다. COM 기반 해결 프로그램 지정에 대 한 DLL의 CLSID **@resolver_clsid**, 비즈니스 논리 처리기의 경우에 대 한 값을 지정 하 고 `true` 에 대 한 **@is_dotnet_assembly**, 어셈블리의 이름 **@dotnet_assembly_name**, 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한 **@dotnet_class_name**합니다.  
   
     > [!NOTE]  
-    >  비즈니스 논리 처리기 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
+    >  비즈니스 논리 처리기 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
   
 4.  COM 기반 해결 프로그램인 경우:  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48181383"
         regsvr32 ssradd.dll  
         ```  
   
-5.  해결 프로그램이 비즈니스 논리 처리기인 경우 병합 에이전트 실행 파일(replmerg.exe)과 같은 디렉터리, 병합 에이전트를 호출하는 응용 프로그램과 같은 폴더, 또는 3단계에서 **@dotnet_assembly_name** 매개 변수에 지정한 폴더에 어셈블리를 배포합니다.  
+5.  해결 프로그램이 비즈니스 논리 처리기인 경우 병합 에이전트 실행 파일(replmerg.exe)과 같은 디렉터리, 병합 에이전트를 호출하는 애플리케이션과 같은 폴더, 또는 3단계에서 **@dotnet_assembly_name** 매개 변수에 지정한 폴더에 어셈블리를 배포합니다.  
   
     > [!NOTE]  
     >  병합 에이전트 실행 파일의 기본 설치 위치는 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM입니다.  

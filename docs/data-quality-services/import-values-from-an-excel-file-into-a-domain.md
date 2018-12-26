@@ -26,7 +26,7 @@ ms.locfileid: "52616893"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (기술 자료로 도메인 가져오기에 대한 자세한 내용은 [기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (기술 자료로 도메인 가져오기에 대한 자세한 내용은 [기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  
   
  다음 두 가지 방법으로 데이터 값을 가져올 수 있습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "52616893"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
- Excel 파일에서 도메인을 가져오려면 도메인 값이나 전체 도메인을 가져오기 위해 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램이 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 만들어 놓은 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
+ Excel 파일에서 도메인을 가져오려면 도메인 값이나 전체 도메인을 가져오기 위해 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션이 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 만들어 놓은 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52616893"
   
 -   동의어가 이미 다른 선행 값에 연결된 경우 동의어를 수동으로 설정해야 합니다.  
   
--   어떤 이유로든 응용 프로그램에서 수동으로 값을 연결할 수 없으면 값이 가져오기 작업에 적용되지 않습니다.  
+-   어떤 이유로든 애플리케이션에서 수동으로 값을 연결할 수 없으면 값이 가져오기 작업에 적용되지 않습니다.  
   
 ##  <a name="How"></a> How the import works  
  이 작업에서 다음 값을 가져옵니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "52616893"
   
  가져오기에 사용되는 Excel 파일에 다음 규칙이 적용됩니다.  
   
--   Excel 파일의 확장명은 .xlsx, .xls 또는 .csv입니다. 도메인 값 또는 전체 도메인을 가져오려면 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램이 설치된 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. Excel 2003 이상 버전이 지원됩니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일만 지원됩니다. Excel 2007 또는 2010 파일은 지원되지 않습니다.  
+-   Excel 파일의 확장명은 .xlsx, .xls 또는 .csv입니다. 도메인 값 또는 전체 도메인을 가져오려면 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션이 설치된 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. Excel 2003 이상 버전이 지원됩니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일만 지원됩니다. Excel 2007 또는 2010 파일은 지원되지 않습니다.  
   
 -   Excel 파일 형식 .xlsx는 Excel 64비트 설치에서 지원되지 않습니다. 64비트 Excel을 사용하는 경우 스프레드시트 파일을 .xls 파일 또는 .csv 파일로 저장하거나 Excel 32비트 설치를 대신 설치하세요.  
   

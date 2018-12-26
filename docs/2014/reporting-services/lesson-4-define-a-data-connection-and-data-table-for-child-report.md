@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48184313"
@@ -45,7 +45,7 @@ ms.locfileid: "48184313"
   
     4.  **확인**, **다음**을 차례로 클릭합니다.  
   
-6.  5단계(b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
+6.  5단계(b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 애플리케이션 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
 7.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본 **AdventureWorks2008ConnectionString**을 적용합니다. **다음**을 클릭합니다.  
   

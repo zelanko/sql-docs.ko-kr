@@ -15,7 +15,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
 ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "48906303"
@@ -127,7 +127,7 @@ ms.locfileid: "48906303"
  문서 개요 창을 사용하여 입력란 및 기타 보고서 항목을 이름으로 식별할 수 있습니다. 문서 개요 창에서 항목을 선택하면 해당 항목은 디자인 화면에서도 선택됩니다.  
   
 ###  <a name="bkmk_TaskList"></a> 작업 목록  
- 태스크 목록 창은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access와 같은 다른 응용 프로그램에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
+ 태스크 목록 창은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access와 같은 다른 애플리케이션에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
   

@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48102653"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>7단원: 부모 보고서에 드릴스루 동작 추가
-  웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가한 후에는 부모 보고서에 드릴스루 동작을 추가합니다.  
+  웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가한 후에는 부모 보고서에 드릴스루 동작을 추가합니다.  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>부모 보고서에 드릴스루 동작을 추가하려면  
   

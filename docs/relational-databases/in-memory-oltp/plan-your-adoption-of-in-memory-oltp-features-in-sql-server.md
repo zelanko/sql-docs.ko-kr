@@ -75,7 +75,7 @@ Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 
 디스크 기반 테이블을 메모리 최적화 테이블로 변환하는 한 가지 방법은 필요한 TRANSACT-SQL 단계를 직접 코딩하는 것입니다.
 
 
-1. 응용 프로그램 작업을 일시 중단합니다.
+1. 애플리케이션 작업을 일시 중단합니다.
 
 2. 전체 백업을 수행합니다.
 
@@ -89,7 +89,7 @@ Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 
 
 7. 또 다른 전체 백업을 수행합니다.
 
-8. 응용 프로그램 작업을 다시 시작합니다.
+8. 애플리케이션 작업을 다시 시작합니다.
 
 
 #### <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
@@ -110,9 +110,9 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 
 
-### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 메모리 내 OLTP 기능이 응용 프로그램에 적합한지에 대한 지침
+### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 메모리 내 OLTP 기능이 애플리케이션에 적합한지에 대한 지침
 
-메모리 내 OLTP 기능이 특정 응용 프로그램의 성능을 향상할 수 있는지에 대한 지침은 다음을 참조하세요.
+메모리 내 OLTP 기능이 특정 애플리케이션의 성능을 향상할 수 있는지에 대한 지침은 다음을 참조하세요.
 
 - [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -203,7 +203,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 메모리 최적화 테이블의 모든 인덱스는 테이블 관련 문 CREATE TABLE 및 ALTER TABLE로 만들고 관리합니다. CREATE INDEX 문을 사용해서는 메모리 최적화 테이블을 대상으로 할 수 없습니다.
 
-처음으로 메모리 최적화 테이블을 구현하는 경우 기존 B-트리 비클러스터형 인덱스는 합리적이고 간단한 선택일 수 있습니다. 나중에 응용 프로그램의 성능을 확인한 후 다른 인덱스 유형으로 바꾸는 것을 고려할 수 있습니다.
+처음으로 메모리 최적화 테이블을 구현하는 경우 기존 B-트리 비클러스터형 인덱스는 합리적이고 간단한 선택일 수 있습니다. 나중에 애플리케이션의 성능을 확인한 후 다른 인덱스 유형으로 바꾸는 것을 고려할 수 있습니다.
 
 메모리 최적화 테이블의 컨텍스트에서는 특수한 유형의 두 가지 인덱스인 해시 인덱스와 Columnstore 인덱스에 대한 논의가 필요합니다.
 
@@ -284,7 +284,7 @@ Transact-SQL의 특정 요소에 대한 제한 사항 외에도 고유하게 컴
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>6. 응용 프로그램 디자인: 트랜잭션 및 재시도 논리
+## <a name="f-application-design-transactions-and-retry-logic"></a>6. 애플리케이션 디자인: 트랜잭션 및 재시도 논리
 
 메모리 최적화 테이블과 관련된 트랜잭션은 같은 테이블과 관련된 다른 트랜잭션에 종속될 수 있습니다. 종속 트랜잭션 수가 허용된 최대값을 초과하면 모든 종속 트랜잭션이 실패합니다.
 

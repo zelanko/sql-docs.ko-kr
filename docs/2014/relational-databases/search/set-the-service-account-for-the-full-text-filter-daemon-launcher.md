@@ -60,7 +60,7 @@ ms.locfileid: "48214203"
   
 -   동일한 명명된 파이프의 다른 인스턴스가 이미 실행 중입니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 클라이언트에 대한 명명된 파이프 서버 역할을 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작되기 전에 다른 프로세스에서 이미 명명된 파이프를 만든 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 Windows 이벤트 로그에 오류가 기록되고 전체 텍스트 검색을 사용할 수 없게 됩니다.  동일한 명명된 파이프를 사용하고 응용 프로그램을 중지하려고 시도하는 프로세스 또는 응용 프로그램이 무엇인지 확인하십시오.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스 클라이언트에 대한 명명된 파이프 서버 역할을 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작되기 전에 다른 프로세스에서 이미 명명된 파이프를 만든 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 Windows 이벤트 로그에 오류가 기록되고 전체 텍스트 검색을 사용할 수 없게 됩니다.  동일한 명명된 파이프를 사용하고 애플리케이션을 중지하려고 시도하는 프로세스 또는 애플리케이션이 무엇인지 확인하십시오.  
   
 -   SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 올바르게 구성되지 않았습니다.  
   

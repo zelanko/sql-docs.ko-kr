@@ -14,7 +14,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48152759"
@@ -65,7 +65,7 @@ ms.locfileid: "48152759"
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|무시됨|무시됨|무시됨|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
- 응용 프로그램에서 **ISSCommandWithParameters**를 사용하여 매개 변수 속성 섹션에서 정의된 매개 변수 속성을 가져오고 설정합니다.  
+ 애플리케이션에서 **ISSCommandWithParameters**를 사용하여 매개 변수 속성 섹션에서 정의된 매개 변수 속성을 가져오고 설정합니다.  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  반환되는 열은 다음과 같습니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "48152759"
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
 |4|**CreateAccessor** 또는 **GetNextRows**를 사용할 때 유효성 검사가 수행될 수 있습니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  
 |5|BY_REF가 사용될 수 있습니다.|  
-|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 바인딩할 경우 응용 프로그램이 ISequentialStream 인터페이스를 사용하여 데이터를 스트림으로 처리하려는 것을 나타냅니다. 소비자를 지정 하는 경우 *wType* 을 DBTYPE_IUNKNOWN 유형으로 바인딩 및 해당 열 또는 출력 매개 변수가 저장된 프로시저의 UDT 이면 SQL Server Native Client는 ISequentialStream을 반환 합니다. SQL Server Native Client에 대 한 쿼리는 입력 매개 변수는 ISequentialStream 인터페이스에 대 한 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br /><br /> -   *ulParamParamSize* 는 ~ 0입니다.<br />-DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정 됩니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 열 행 집합에서 icolumnsinfo:: Getcolumninfo 메서드를 사용 하 여 큰 UDT 유형이 있는지 확인 하거나 개체의 IColumnsInfo 인터페이스 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br /><br /> -에 DBCOLUMNFLAGS_ISLONG 플래그가 설정 되어 *dwFlags* DBCOLUMNINFO 구조의 멤버<br />-   *ulColumnSize* DBCOLUMNINFO의 멤버는 ~ 0입니다.|  
+|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 바인딩할 경우 애플리케이션이 ISequentialStream 인터페이스를 사용하여 데이터를 스트림으로 처리하려는 것을 나타냅니다. 소비자를 지정 하는 경우 *wType* 을 DBTYPE_IUNKNOWN 유형으로 바인딩 및 해당 열 또는 출력 매개 변수가 저장된 프로시저의 UDT 이면 SQL Server Native Client는 ISequentialStream을 반환 합니다. SQL Server Native Client에 대 한 쿼리는 입력 매개 변수는 ISequentialStream 인터페이스에 대 한 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br /><br /> -   *ulParamParamSize* 는 ~ 0입니다.<br />-DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정 됩니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 열 행 집합에서 icolumnsinfo:: Getcolumninfo 메서드를 사용 하 여 큰 UDT 유형이 있는지 확인 하거나 개체의 IColumnsInfo 인터페이스 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br /><br /> -에 DBCOLUMNFLAGS_ISLONG 플래그가 설정 되어 *dwFlags* DBCOLUMNINFO 구조의 멤버<br />-   *ulColumnSize* DBCOLUMNINFO의 멤버는 ~ 0입니다.|  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 DBTYPE_NULL을 나타내는 DBSTATUS_S_ISNULL 또는 DBTYPE_EMPTY를 나타내는 DBSTATUS_S_DEFAULT로 상태를 설정해야 합니다. DBTYPE_BYREF는 DBTYPE_NULL 또는 DBTYPE_EMPTY에 사용할 수 없습니다.  
   

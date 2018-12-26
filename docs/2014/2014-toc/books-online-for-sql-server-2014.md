@@ -21,7 +21,7 @@ ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48161763"
@@ -37,7 +37,7 @@ ms.locfileid: "48161763"
   
 |||  
 |-|-|  
-|![데이터베이스 엔진 아이콘](media/database-engine.gif "데이터베이스 엔진 아이콘")|[데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)<br /><br /> 데이터베이스 엔진은 데이터를 저장, 처리 및 보안 유지하는 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|  
+|![데이터베이스 엔진 아이콘](media/database-engine.gif "데이터베이스 엔진 아이콘")|[데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)<br /><br /> 데이터베이스 엔진은 데이터를 저장, 처리 및 보안 유지하는 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 애플리케이션의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|  
 |![BOL 홈 항목에 대 한 DQS 로고](media/dqs-logo.jpg "BOL 홈 항목에 대 한 DQS 로고")|[Data Quality Services](../data-quality-services/data-quality-services.md)<br /><br /> SQL Server DQS(Data Quality Services)는 기술 자료 기반 데이터 정리 솔루션을 제공합니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 컴퓨터 기반 및 대화형 방법을 통해 데이터에 대한 데이터 수정 및 중복 제거를 수행할 수 있습니다. 클라우드 기반 참조 데이터 서비스를 사용할 수 있으며, SQL Server Integration Services 및 Master Data Services와 DQS를 통합하는 데이터 관리 솔루션을 작성할 수 있습니다.|  
 |![Analysis Services 아이콘](media/analysisserver.gif "Analysis Services 아이콘")|[Analysis Services](../analysis-services/analysis-services.md)<br /><br /> [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 개인, 팀 및 기업의 비즈니스 인텔리전스를 위한 분석 데이터 플랫폼 및 도구 집합입니다. 서버 및 클라이언트 디자이너는 기존의 OLAP 솔루션, 새 테이블 형식 모델링 솔루션뿐만 아니라 PowerPivot, Excel 및 SharePoint Server 환경을 사용한 셀프 서비스 분석과 공동 작업을 지원합니다. 또한[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 많은 양의 데이터 내에 숨겨진 패턴과 관계를 확인할 수 있도록 데이터 마이닝 기능이 포함되어 있습니다.|  
 |![Integration Services 아이콘](media/dts.gif "Integration Services 아이콘")|[Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 웨어하우징을 위해 추출, 변환 및 로드하는 ETL 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.|  

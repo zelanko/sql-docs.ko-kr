@@ -21,7 +21,7 @@ ms.locfileid: "48126853"
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  
   
- Kerberos  인증을 통해 Analysis  Services에 연결하는 클라이언트 응용 프로그램의 경우 Analysis  Services  클라이언트 라이브러리는 지정된 Analysis  Services  릴리스에서 고정된 잘 알려진 변수(예:  서비스 클래스)  및 연결 문자열의 호스트 이름을 사용하여 SPN을 생성합니다.  
+ Kerberos 인증을 통해 Analysis Services에 연결하는 클라이언트 애플리케이션의 경우 Analysis Services 클라이언트 라이브러리는 지정된 Analysis Services 릴리스에서 고정된 잘 알려진 변수(예: 서비스 클래스) 및 연결 문자열의 호스트 이름을 사용하여 SPN을 생성합니다.  
   
  상호 인증이 발생하려면 클라이언트에서 생성된 SPN이 Active  Directory  DC(도메인 컨트롤러)의 해당 SPN  개체와 일치해야 합니다. 즉,  사용자가 연결 문자열에 호스트 이름을 지정할 수 있는 모든 방법을 처리하려면 단일 Analysis  Services  인스턴스에 여러 SPN을 등록해야 할 수 있습니다. 예를 들어 서버의 FQDN(정규화된 도메인 이름)과 짧은 컴퓨터 이름을 둘 다 처리하려면 SPN이 두 개 필요할 수 있습니다. Analysis Services SPN을 올바르게 등록하는 것이 성공적인 연결에 필수적입니다. SPN이 존재하지 않거나 잘못된 형식으로 되어 있거나 중복된 경우에는 연결이 실패합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48126853"
   
  SPN  등록은 다음 상황에서 필요합니다. 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)를 참조하십시오.  
   
--   클라이언트 응용 프로그램 또는 중간 계층 서비스에서 Analysis  Services로 사용자 ID를 이동하려면 ID  위임이 필요합니다. ID  위임은 사용자별 사용 권한 또는 필터가 특정 개체에 대해 정의된 경우에 일반적으로 사용됩니다.  
+-   클라이언트 애플리케이션 또는 중간 계층 서비스에서 Analysis Services로 사용자 ID를 이동하려면 ID 위임이 필요합니다. ID  위임은 사용자별 사용 권한 또는 필터가 특정 개체에 대해 정의된 경우에 일반적으로 사용됩니다.  
   
      ID 위임과 관련된 일반적인 시나리오는 Analysis Services에서 데이터를 검색할 때 사용자 ID를 가장하기 위해 제한된 위임에 대해 Excel 서비스 또는 Reporting Services와 같은 중간 계층 서비스를 구성하는 것입니다. 이 동작을 지원하려면 제한된 위임에 대해 Excel 서비스 또는 Reporting Services를 구성할 때 Analysis Services SPN을 대상 서비스로 제공해야 합니다.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 > [!NOTE]  
->  두 개의 SPN  등록인 NetBIOS  호스트 이름에 대한 SPN  등록과 호스트의 정규화된 도메인 이름에 대한 SPN  등록을 만들어야 합니다. 다양한 클라이언트 응용 프로그램에서는 Analysis Services에 연결할 때 서로 다른 호스트 이름 규칙을 사용합니다. SPN 등록이 두 개면 호스트 이름의 두 버전이 모두 처리됩니다.  
+>  두 개의 SPN  등록인 NetBIOS  호스트 이름에 대한 SPN  등록과 호스트의 정규화된 도메인 이름에 대한 SPN  등록을 만들어야 합니다. 다양한 클라이언트 애플리케이션에서는 Analysis Services에 연결할 때 서로 다른 호스트 이름 규칙을 사용합니다. SPN 등록이 두 개면 호스트 이름의 두 버전이 모두 처리됩니다.  
   
  **NT Service\MSOLAP $로 실행 되는 명명 된 인스턴스에 대 한 구문 예\<인스턴스 이름 >**  
   

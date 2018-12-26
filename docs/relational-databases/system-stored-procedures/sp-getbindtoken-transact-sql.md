@@ -103,7 +103,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
  바인드 토큰을 가져와서 전달하려면 sp_bindsession을 실행하기 전에 sp_getbindtoken을 실행하여 동일한 잠금 공간을 공유하도록 해야 합니다. 바인드 토큰을 가져온 경우에는 sp_bindsession이 올바르게 실행됩니다.  
   
 > [!NOTE]  
->  외부 저장 프로시저에서 사용할 바인드 토큰을 얻는 데는 srv_getbindtoken 개방형 Data Services API(응용 프로그래밍 인터페이스)를 사용하는 것이 좋습니다.  
+>  외부 저장 프로시저에서 사용할 바인드 토큰을 얻는 데는 srv_getbindtoken 개방형 Data Services API(애플리케이션 프로그래밍 인터페이스)를 사용하는 것이 좋습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  

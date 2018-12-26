@@ -165,7 +165,7 @@ ms.locfileid: "48067683"
   
 -   내용 쿼리를 만들어 모델에서 통계, 규칙 또는 수식 검색. 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
   
--   데이터 마이닝 기능을 직접 응용 프로그램에 포함할 수 있습니다. 마이닝 구조 및 마이닝 모델의 생성, 변경, 처리 및 삭제를 위해 응용 프로그램에서 사용할 수 있는 개체 집합이 들어 있는 AMO(Analysis Management Objects)를 포함할 수 있습니다. 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 XMLA(XML for Analysis) 메시지를 직접 보낼 수도 있습니다.  
+-   데이터 마이닝 기능을 직접 애플리케이션에 포함할 수 있습니다. 마이닝 구조 및 마이닝 모델의 생성, 변경, 처리 및 삭제를 위해 애플리케이션에서 사용할 수 있는 개체 집합이 들어 있는 AMO(Analysis Management Objects)를 포함할 수 있습니다. 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 XMLA(XML for Analysis) 메시지를 직접 보낼 수도 있습니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 마이닝 모델을 통해 들어오는 데이터를 여러 테이블에 논리적으로 분리하는 패키지 만들기. 예를 들어 잠재적인 고객으로 데이터베이스를 계속 업데이트하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 함께 마이닝 모델을 사용하여 들어오는 데이터를 제품을 구매할 가능성이 높은 고객과 제품을 구매하지 않을 가능성이 높은 고객으로 분할할 수 있습니다.  
   

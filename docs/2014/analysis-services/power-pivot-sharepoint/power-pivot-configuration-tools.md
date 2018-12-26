@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48102113"
@@ -43,7 +43,7 @@ ms.locfileid: "48102113"
   
 -   팜 구성 데이터베이스에서 db_owner여야 합니다.  
   
--   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 응용 프로그램이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+-   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 애플리케이션이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_twoversions"></a> 구성 도구의 두 가지 버전  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사가 SharePoint 2013 용 PowerPivot 구성 도구 뿐만 아니라 SharePoint 2010 용 PowerPivot 구성 도구를 설치 합니다.  
@@ -110,15 +110,15 @@ ms.locfileid: "48102113"
   
     1.  클릭 **구성 또는 SharePoint 용 PowerPivot을 복구** 설치 후 태스크를 완료 하거나 설치를 복구 합니다.  
   
-    2.  팜에서 기능과 솔루션을 제거하려면 **기능, 서비스, 응용 프로그램 및 솔루션 제거** 를 클릭합니다.  
+    2.  팜에서 기능과 솔루션을 제거하려면 **기능, 서비스, 애플리케이션 및 솔루션 제거** 를 클릭합니다.  
   
-    3.  이전 버전의 **을 사용하여 설치된 기능과 솔루션을 업그레이드하려면** 기능, 서비스, 응용 프로그램 및 솔루션 업그레이드 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 클릭합니다.  
+    3.  이전 버전의 **을 사용하여 설치된 기능과 솔루션을 업그레이드하려면** 기능, 서비스, 애플리케이션 및 솔루션 업그레이드 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 클릭합니다.  
   
      예를 들어 다음 이미지는 SharePoint 2013 도구에 대한 PowerPivot 구성의 시작 페이지를 보여줍니다.  
   
      ![SharePoint 용 PowerPivot 2013 구성 도구](../media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "SharePoint 용 PowerPivot 2013 구성 도구")  
   
- 각 태스크는 서버 구성의 일부 측면을 처리하는 개별 작업으로 구성됩니다. 예를 들어 구성 태스크에는 솔루션 배포, PowerPivot 서비스 응용 프로그램 만들기, 기능 활성화, 데이터 새로 고침 구성 등의 동작이 포함됩니다. 동작 목록은 설치의 현재 상태에 따라 다릅니다. 동작이 필요하지 않은 경우 이 도구는 해당 동작을 태스크 목록에서 제외합니다.  
+ 각 태스크는 서버 구성의 일부 측면을 처리하는 개별 작업으로 구성됩니다. 예를 들어 구성 태스크에는 솔루션 배포, PowerPivot 서비스 애플리케이션 만들기, 기능 활성화, 데이터 새로 고침 구성 등의 동작이 포함됩니다. 동작 목록은 설치의 현재 상태에 따라 다릅니다. 동작이 필요하지 않은 경우 이 도구는 해당 동작을 태스크 목록에서 제외합니다.  
   
  실행을 클릭하면 이 도구는 모든 동작을 일괄 처리 모드로 처리합니다. 각 동작은 태스크 목록에 별도의 항목으로 표시되지만 태스크에 포함된 모든 동작이 함께 처리됩니다. 유효성 검사를 통과하는 동작만 처리됩니다. 유효성 검사를 통과하려면 일부 입력 값을 추가하거나 변경해야 할 수 있습니다.  
   

@@ -12,7 +12,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48137616"
@@ -25,7 +25,7 @@ ms.locfileid: "48137616"
  가용성 그룹 수신기에 연결하지 않았고 여러 IP 주소가 호스트 이름과 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DNS 항목과 연결된 모든 IP 주소를 순차적으로 반복합니다. DNS 서버가 반환한 첫 번째 IP 주소가 NIC(네트워크 인터페이스 카드)에 바인딩되지 않은 경우 시간이 오래 걸릴 수 있습니다. 가용성 그룹 수신기에 연결할 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 모든 IP 주소에 대한 연결을 병렬로 시도하고, 그 중 한 연결 시도가 성공하면 드라이버가 보류 중인 모든 연결 시도를 삭제합니다.  
   
 > [!NOTE]  
->  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 응용 프로그램이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 가용성 그룹 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
+>  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 애플리케이션이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 가용성 그룹 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
  SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 `MultiSubnetFailover=Yes`를 지정하십시오. `MultiSubnetFailover`를 사용하면 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48137616"
   
  가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 `MultiSubnetFailover=Yes`가 사용될 경우 드라이버에서 오류를 반환합니다.  
   
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
+## <a name="specifying-application-intent"></a>애플리케이션 의도 지정  
  `ApplicationIntent=ReadOnly`인 경우 클라이언트는 AlwaysOn이 설정된 데이터베이스에 연결할 때 읽기 작업을 요청합니다. 서버는 연결 시 그리고 USE 데이터베이스 문 중에 AlwaysOn이 설정된 데이터베이스에 한하여 의도를 강제 적용합니다.  
   
  `ApplicationIntent` 키워드는 레거시 읽기 전용 데이터베이스를 사용 하 여 작동 하지 않습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "48137616"
 ## <a name="ole-db"></a>OLE DB  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB는 `MultiSubnetFailover` 키워드를 지원하지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client의 OLE DB는 응용 프로그램 의도를 지원합니다. 응용 프로그램 의도는 OLE DB 응용 프로그램에 대해 ODBC 응용 프로그램과 동일하게 동작합니다(위의 내용 참조).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client의 OLE DB는 응용 프로그램 의도를 지원합니다. 애플리케이션 의도는 OLE DB 애플리케이션에 대해 ODBC 애플리케이션과 동일하게 동작합니다(위의 내용 참조).  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 지원하기 위해 다음과 같은 하나의 OLE DB 연결 문자열 키워드가 추가되었습니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48137616"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 응용 프로그램에서는 다음 메서드 중 하나를 사용하여 응용 프로그램 의도를 지정할 수 있습니다.  
   
  `IDBInitialize::Initialize`  
- `IDBInitialize::Initialize`는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
+ `IDBInitialize::Initialize`는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 애플리케이션 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
  `IDataInitialize::GetDataSource`  
  `IDataInitialize::GetDataSource`는 `Application Intent` 키워드를 포함할 수 있는 입력 연결 문자열을 받아들입니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "48137616"
   
  **데이터 연결 속성** 대화 상자의 모두 탭에 있는 응용 프로그램 의도 속성 필드에서 응용 프로그램 의도를 지정할 수 있습니다.  
   
- 암시적 연결을 설정하면 암시적 연결이 부모 연결의 응용 프로그램 의도 설정을 사용합니다. 마찬가지로 동일한 데이터 원본에서 만들어진 여러 개의 세션은 데이터 원본의 응용 프로그램 의도 설정을 상속합니다.  
+ 암시적 연결을 설정하면 암시적 연결이 부모 연결의 애플리케이션 의도 설정을 사용합니다. 마찬가지로 동일한 데이터 원본에서 만들어진 여러 개의 세션은 데이터 원본의 애플리케이션 의도 설정을 상속합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)   

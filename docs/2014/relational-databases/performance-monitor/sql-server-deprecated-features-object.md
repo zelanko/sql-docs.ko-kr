@@ -17,7 +17,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48211853"
@@ -36,8 +36,8 @@ ms.locfileid: "48211853"
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|서버 인스턴스가 시작된 이후로 ALTER DATABASE에서 사용되지 않는 기능인 TORN_PAGE_DETECTION 옵션이 사용된 총 횟수입니다. 대신 PAGE_VERIFY 구문을 사용해야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |ALTER LOGIN WITH SET CREDENTIAL|사용되지 않는 기능 구문인 ALTER LOGIN WITH SET CREDENTIAL 또는 ALTER LOGIN WITH NO CREDENTIAL이 발견되었습니다. 대신 ADD 또는 DROP CREDENTIAL 구문을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|Azeri_Cyrilllic_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다.|  
-|Azeri_Latin_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다.|  
+|Azeri_Cyrilllic_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
+|Azeri_Latin_90|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
 |BACKUP DATABASE 또는 LOG TO TAPE|사용되지 않는 기능인 BACKUP { DATABASE &#124; LOG } TO TAPE 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*가 발견되었습니다.<br /><br /> 대신 BACKUP { DATABASE &#124; LOG } TO DISK 또는 BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|사용되지 않는 기능인 BACKUP DATABASE WITH MEDIAPASSWORD 또는 BACKUP LOG WITH MEDIAPASSWORD가 발견되었습니다. WITH MEDIAPASSWORD는 사용할 수 없습니다.|  
 |BACKUP DATABASE 또는 LOG WITH PASSWORD|사용되지 않는 기능인 BACKUP DATABASE WITH PASSWORD 또는 BACKUP LOG WITH PASSWORD가 발견되었습니다. WITH PASSWORD는 사용할 수 없습니다.|  
@@ -47,8 +47,8 @@ ms.locfileid: "48211853"
 |CREATE_DROP_DEFAULT|CREATE DEFAULT 또는 DROP DEFAULT 구문이 발견되었습니다. CREATE TABLE 또는 ALTER TABLE에 DEFAULT 옵션을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |CREATE_DROP_RULE|CREATE RULE 구문이 발견되었습니다. 제약 조건을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |데이터 형식: text, ntext 또는 image|`text`, `ntext` 또는 `image` 데이터 형식이 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성 해야 합니다 `varchar(max)` 데이터 형식으로 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문. 쿼리마다 한 번씩 발생합니다.|  
-|데이터베이스 호환성 수준 80|데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
-|데이터베이스 호환성 수준 90|데이터베이스가 호환성 수준 90으로 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 호환성 수준이 90인 데이터베이스가 시작될 때도 발생합니다.|  
+|데이터베이스 호환성 수준 80|데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
+|데이터베이스 호환성 수준 90|데이터베이스가 호환성 수준 90으로 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 호환성 수준이 90인 데이터베이스가 시작될 때도 발생합니다.|  
 |DATABASE_MIRRORING|데이터베이스 미러링 기능에 대한 참조가 발견되었습니다. AlwaysOn 가용성 그룹으로 업그레이드하도록 계획하거나 AlwaysOn 가용성 그룹을 지원하지 않는 SQL Server 버전을 실행 중인 경우 로그 전달로 마이그레이션하도록 계획하십시오.|  
 |database_principal_aliases|사용되지 않는 sys.database_principal_aliases에 대한 참조가 발견되었습니다. 별칭 대신 역할을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |DATABASEPROPERTY|특정 문이 DATABASEPROPERTY를 참조했습니다. DATABASEPROPERTY 문을 DATABASEPROPERTYEX로 업데이트해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48211853"
 |DBCC INDEXDEFRAG|DBCC INDEXDEFRAG 문이 발견되었습니다. ALTER INDEX에 REORGANIZE 옵션을 사용하도록 문을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |DBCC SHOWCONTIG|DBCC SHOWCONTIG 문이 발견되었습니다. 이 정보를 보려면 sys.dm_db_index_physical_stats를 쿼리해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |기본값으로서 DEFAULT 키워드|DEFAULT 키워드를 기본값으로 사용하는 구문이 발견되었습니다. 사용하지 마십시오. 컴파일마다 한 번씩 발생합니다.|  
-|사용되지 않는 암호화 알고리즘|사용되지 않는 암호화 알고리즘 rc4는 다음 버전의 SQL Server에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정합니다. RC4는 약한 알고리즘이며 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.|  
+|사용되지 않는 암호화 알고리즘|사용되지 않는 암호화 알고리즘 rc4는 다음 버전의 SQL Server에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정합니다. RC4는 약한 알고리즘이며 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.|  
 |DESX 알고리즘|DESX 암호화 알고리즘을 사용하는 문이 발견되었습니다. 암호화에 다른 알고리즘을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |dm_fts_active_catalogs|sys.dm_fts_active_catalogs 뷰의 일부 열이 사용되지 않으므로 dm_fts_active_catalogs 카운터는 항상 0이 됩니다. 사용되지 않는 열을 모니터링하려면 열 관련 카운터(예: dm_fts_active_catalogs.is_paused)를 사용해야 합니다.|  
 |dm_fts_active_catalogs.is_paused|[sys.dm_fts_active_catalogs](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql) 동적 관리 뷰의 is_paused 열이 발견되었습니다. 이 열은 사용할 수 없습니다. 서버 인스턴스에서 이 열에 대한 참조를 발견할 때마다 한 번씩 발생합니다.|  
@@ -91,7 +91,7 @@ ms.locfileid: "48211853"
 |FULLTEXTSERVICEPROPERTY('DataTimeout')|FULLTEXTSERVICEPROPERTY 함수의 DataTimeout 속성이 발견되었습니다. 이 속성은 사용할 수 없습니다.|  
 |FULLTEXTSERVICEPROPERTY('ResourceUsage')|FULLTEXTSERVICEPROPERTY 함수의 ResourceUsage 속성이 발견되었습니다. 이 속성은 사용할 수 없습니다.|  
 |GROUP BY ALL|GROUP BY ALL 구문이 발견된 총 횟수입니다. 특정 테이블을 그룹화하도록 구문을 수정해야 합니다.|  
-|힌디어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다. 대신 Indic_General_90을 사용해야 합니다.|  
+|힌디어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다. 대신 Indic_General_90을 사용해야 합니다.|  
 |괄호가 없는 HOLDLOCK 테이블 힌트||  
 |IDENTITYCOL|INDENTITYCOL 구문이 발견되었습니다. $identity 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |COUNT_BIG(\*)이 없는 인덱스 뷰 SELECT 목록|인덱싱된 집계 뷰의 SELECT 목록은 COUNT_BIG(\*)을 포함해야 합니다.|  
@@ -100,9 +100,9 @@ ms.locfileid: "48211853"
 |간접 TVF 힌트|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다.|  
 |TIMESTAMP 열에 대한 INSERT NULL|TIMESTAMP 열에 NULL 값이 삽입되었습니다. 대신 기본값을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |INSERT_HINTS||  
-|Korean_Wansung_Unicode|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다.|  
-|Lithuanian_Classic|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다.|  
-|마케도니아어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다. 대신 Macedonian_FYROM_90을 사용해야 합니다.|  
+|Korean_Wansung_Unicode|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
+|Lithuanian_Classic|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
+|마케도니아어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다. 대신 Macedonian_FYROM_90을 사용해야 합니다.|  
 |MODIFY FILEGROUP READONLY|MODIFY FILEGROUP READONLY 구문이 발견되었습니다. READ_ONLY 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READWRITE 구문이 발견되었습니다. READ_WRITE 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |세 부분 이상으로 구성된 열 이름|쿼리에 열 목록에서 세 부분 또는 네 부분으로 구성된 이름이 사용되었습니다. 표준 호환되는 두 부분으로 구성된 이름을 사용하도록 쿼리를 변경해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -212,7 +212,7 @@ ms.locfileid: "48211853"
 |sp_srvrolepermission|사용되지 않는 sp_srvrolepermission 프로시저가 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_unbindefault|sp_unbindefault 프로시저가 발견되었습니다. 대신 CREATE TABLE 또는 ALTER TABLE 문의 DEFAULT 키워드를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_unbindrule|sp_unbindrule 프로시저가 발견되었습니다. 규칙 대신 CHECK 제약 조건을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|SQL_AltDiction_CP1253_CS_AS|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 응용 프로그램은 수정해야 합니다.|  
+|SQL_AltDiction_CP1253_CS_AS|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다.|  
 |열 별칭으로 사용되는 문자열 리터럴|SELECT 문에서 열 별칭으로 사용되는 문자열이 포함된 구문(예: `'string' = expression`)이 발견되었습니다. 사용하지 마십시오. 컴파일마다 한 번씩 발생합니다.|  
 |sys.sql_dependencies|sys.sql_dependencies에 대한 참조가 발견되었습니다. 대신 sys.sql_expression_dependencies를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sysaltfiles|sysaltfiles에 대한 참조가 발견되었습니다. 대신 sys.master_files를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  

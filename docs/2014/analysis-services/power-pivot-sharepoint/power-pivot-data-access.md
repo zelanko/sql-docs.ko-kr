@@ -30,7 +30,7 @@ ms.locfileid: "48164093"
  SharePoint 팜에서는 Excel 서비스에서 로컬 MSOLAP OLE DB Provider를 사용하여 PowerPivot 데이터에 연결합니다. 공급자는 팜의 SharePoint용 PowerPivot 서버에 연결 요청을 보냅니다. 서버는 데이터를 로드하고 쿼리를 실행한 다음 결과 집합을 반환합니다.  
   
 ##  <a name="queryproc"></a> SharePoint에서 PowerPivot 데이터 쿼리  
- SharePoint 라이브러리에서 PowerPivot 통합 문서를 볼 때 통합 문서 내에 있는 PowerPivot 데이터는 팜 내의 Analysis Services 서버 인스턴스에서 별도로 검색, 추출 및 처리됩니다. 반면 Excel 서비스는 표시 계층을 렌더링합니다. 브라우저 창이나 PowerPivot 추가 기능이 있는 Excel 2010 데스크톱 응용 프로그램에서 완전히 처리된 통합 문서를 볼 수 있습니다.  
+ SharePoint 라이브러리에서 PowerPivot 통합 문서를 볼 때 통합 문서 내에 있는 PowerPivot 데이터는 팜 내의 Analysis Services 서버 인스턴스에서 별도로 검색, 추출 및 처리됩니다. 반면 Excel 서비스는 표시 계층을 렌더링합니다. 브라우저 창이나 PowerPivot 추가 기능이 있는 Excel 2010 데스크톱 애플리케이션에서 완전히 처리된 통합 문서를 볼 수 있습니다.  
   
  다음 다이어그램에서는 쿼리 처리에 대한 요청이 팜을 통해 이동하는 방법을 보여 줍니다. PowerPivot 데이터는 Excel 2010 통합 문서의 일부이므로 사용자가 SharePoint 라이브러리에서 Excel 통합 문서를 열고 PowerPivot 데이터가 포함된 피벗 테이블이나 피벗 차트와 상호 작용하면 쿼리 처리 요청이 발생합니다.  
   

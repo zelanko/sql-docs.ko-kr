@@ -17,13 +17,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 02f00d9846176edabb2da486906b5d1946c94124
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48205623"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
-  프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 응용 프로그램을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 응용 프로그램이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 응용 프로그램을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
+  프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 애플리케이션을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 애플리케이션이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 애플리케이션을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지 실행과 같은 워크플로 태스크를 수행하는 기타 태스크가 있습니다. 자세한 내용은 [Execute Package Task](execute-package-task.md)를 참조하세요.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48205623"
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
 ### <a name="property-settings"></a>속성 설정  
- 프로세스 실행 태스크는 사용자 지정 응용 프로그램을 실행할 때 다음 방법 중 하나 또는 모두를 통해 응용 프로그램에 입력을 제공합니다.  
+ 프로세스 실행 태스크는 사용자 지정 애플리케이션을 실행할 때 다음 방법 중 하나 또는 모두를 통해 애플리케이션에 입력을 제공합니다.  
   
 -   **StandardInputVariable** 속성 설정에서 지정하는 변수. 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 -   **Arguments** 속성 설정에서 지정하는 인수. 예를 들어 태스크가 Word 문서를 여는 경우 인수에서 .doc 파일의 이름을 지정할 수 있습니다.  
   
- 하나의 프로세스 실행 태스크에 있는 사용자 지정 응용 프로그램에 여러 인수를 전달하려면 공백으로 인수를 구분합니다. 인수는 공백을 포함할 수 없습니다. 공백을 포함하는 경우 태스크가 실행되지 않습니다. 변수 값을 인수로 전달하는 식을 사용할 수 있습니다. 다음 예에서는 식이 두 변수 값을 인수로 전달하고 공백을 사용하여 인수를 구분합니다.  
+ 하나의 프로세스 실행 태스크에 있는 사용자 지정 애플리케이션에 여러 인수를 전달하려면 공백으로 인수를 구분합니다. 인수는 공백을 포함할 수 없습니다. 공백을 포함하는 경우 태스크가 실행되지 않습니다. 변수 값을 인수로 전달하는 식을 사용할 수 있습니다. 다음 예에서는 식이 두 변수 값을 인수로 전달하고 공백을 사용하여 인수를 구분합니다.  
   
  `@variable1 + " " + @variable2`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48205623"
   
      자세한 내용은 C# 프로그래밍 가이드의 [명령줄 인수(C# 프로그래밍 가이드)](http://go.microsoft.com/fwlink/?LinkId=129406)항목을 참조하세요.  
   
- 프로세스 실행 태스크에는 각각 응용 프로그램의 표준 출력과 응용 프로그램 표준 오류 출력을 사용하는 변수를 지정하는 **StandardOutputVariable** 및 **StandardErrorVariable** 속성도 있습니다.  
+ 프로세스 실행 태스크에는 각각 애플리케이션의 표준 출력과 애플리케이션 표준 오류 출력을 사용하는 변수를 지정하는 **StandardOutputVariable** 및 **StandardErrorVariable** 속성도 있습니다.  
   
  또한 프로세스 실행 태스크를 구성하여 작업 디렉터리, 제한 시간 경과 또는 실행 파일이 성공적으로 실행되었음을 나타내는 값을 지정할 수 있습니다. 실행 파일의 반환 코드가 성공을 나타내는 값과 일치하지 않거나 지정한 위치에 실행 파일이 없을 경우 태스크가 실패하도록 구성할 수도 있습니다.  
   

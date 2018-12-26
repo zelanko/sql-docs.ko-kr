@@ -26,7 +26,7 @@ ms.locfileid: "47594575"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  웹 응용 프로그램에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
+  웹 애플리케이션에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  

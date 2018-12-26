@@ -20,13 +20,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 22df70966fe1bac4f9a825a97c7998d6900af02a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48168103"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 응용 프로그램 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 응용 프로그램에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 애플리케이션 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 애플리케이션에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
   
  Analysis Services 프로젝트는 단일 Analysis Services 데이터베이스에 사용되는 개체를 포함합니다. 프로젝트의 배포 속성은 프로젝트 메타데이터가 인스턴스화된 개체로 배포될 서버 및 데이터베이스 이름을 지정합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48168103"
 7.  솔루션 탐색기 창을 열어 프로젝트 내용을 봅니다.  
   
 ##  <a name="bkmk_AddtoExistingSolution"></a> 기존 솔루션에 Analysis Services 프로젝트 추가  
- 비즈니스 응용 프로그램의 모든 원본 파일을 포함하는 솔루션이 이미 있는 경우 해당 솔루션에 새 Analysis Services 프로젝트를 추가할 수 있습니다.  
+ 비즈니스 애플리케이션의 모든 원본 파일을 포함하는 솔루션이 이미 있는 경우 해당 솔루션에 새 Analysis Services 프로젝트를 추가할 수 있습니다.  
   
  솔루션에 기존 프로젝트를 추가하면 프로젝트가 솔루션에 연결되지만 복사되지는 않습니다. Analysis Services 프로젝트를 다른 솔루션에서 만들었을 경우 프로젝트 파일이 프로젝트를 만든 원본 솔루션과 함께 유지됩니다. 따라서 어느 솔루션을 통해 프로젝트를 변경하더라도 변경 사항이 동일한 원본 파일 집합에 적용됩니다. 이 동작을 원하지 않는 경우 프로젝트 파일을 새 솔루션 폴더로 복사 또는 이동한 다음 솔루션에 프로젝트를 추가해야 합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: Data Quality Client 응용 프로그램 실행 | Microsoft Docs
+title: Data Quality Client 애플리케이션 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51032951"
 ---
-# <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 응용 프로그램 실행
+# <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]를 실행하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에 로그온하면 DQS([!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)])를 사용할 수 있습니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  

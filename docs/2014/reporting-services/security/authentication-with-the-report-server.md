@@ -19,7 +19,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48192933"
@@ -30,10 +30,10 @@ ms.locfileid: "48192933"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 IIS를 통해 모든 인증 지원을 제공했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 릴리스부터는 IIS가 더 이상 사용되지 않고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모든 인증 요청을 내부적으로 처리합니다.  
   
- 보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 응용 프로그램은 인증을 받아야 액세스 권한을 받을 수 있습니다.  
+ 보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 애플리케이션은 인증을 받아야 액세스 권한을 받을 수 있습니다.  
   
 ## <a name="authentication-types"></a>인증 유형  
- 보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 응용 프로그램은 보고서 서버에 구성된 인증 유형을 사용하여 인증을 받아야 액세스 권한을 받을 수 있습니다. 다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 인증 유형에 대해 설명합니다.  
+ 보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 애플리케이션은 보고서 서버에 구성된 인증 유형을 사용하여 인증을 받아야 액세스 권한을 받을 수 있습니다. 다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 인증 유형에 대해 설명합니다.  
   
 |인증 유형 이름|HTTP 인증 계층 값|기본적으로 사용|Description|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  

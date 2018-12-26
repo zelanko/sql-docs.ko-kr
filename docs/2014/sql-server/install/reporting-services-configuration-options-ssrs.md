@@ -19,7 +19,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48185343"
@@ -54,7 +54,7 @@ ms.locfileid: "48185343"
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드  
   
 #### <a name="install-only"></a>설치만  
- 보고서 서버 프로그램 파일과 PowerShell cmdlet을 설치합니다. 설치가 완료된 후에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 시작하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들어야 합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 보고서 서버 프로그램 파일과 PowerShell cmdlet을 설치합니다. 설치가 완료된 후에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 시작하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만들어야 합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [Reporting Services SharePoint 모드 보고서 서버 설치 Power View 및 데이터 경고에 대 한](http://go.microsoft.com/fwlink/?LinkId=207543) (http://go.microsoft.com/fwlink/?LinkId=207543)합니다.  
   

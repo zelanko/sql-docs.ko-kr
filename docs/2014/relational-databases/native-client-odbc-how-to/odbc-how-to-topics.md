@@ -18,7 +18,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48193354"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
-  사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 수 있어야 ODBC 데이터 원본을 만들고 서버 카탈로그 저장 프로시저의 올바른 버전이 있는지 확인 합니다. SQL Server를 사용하는 ODBC 응용 프로그램의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  
+  사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 수 있어야 ODBC 데이터 원본을 만들고 서버 카탈로그 저장 프로시저의 올바른 버전이 있는지 확인 합니다. SQL Server를 사용하는 ODBC 애플리케이션의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

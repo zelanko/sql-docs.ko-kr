@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48107213"
@@ -35,7 +35,7 @@ ms.locfileid: "48107213"
   
      스파스 열은 Null 값 행을 많이 포함하므로 필터링된 인덱스에 특히 적합합니다. 스파스 열에 대한 필터링된 인덱스는 채워진 값을 포함하는 행만 인덱싱할 수 있습니다. 따라서 보다 작고 효율적인 인덱스가 만들어집니다. 자세한 내용은 [Create Filtered Indexes](../indexes/indexes.md)을(를) 참조하세요.  
   
- 스파스 열 및 필터링된 인덱스를 통해 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]와 같은 응용 프로그램에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 많은 수의 사용자 정의 속성을 효율적으로 저장하고 액세스할 수 있습니다.  
+ 스파스 열 및 필터링된 인덱스를 통해 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]와 같은 애플리케이션에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 많은 수의 사용자 정의 속성을 효율적으로 저장하고 액세스할 수 있습니다.  
   
 ## <a name="properties-of-sparse-columns"></a>스파스 열 속성  
  스파스 열에는 다음과 같은 특징이 있습니다.  

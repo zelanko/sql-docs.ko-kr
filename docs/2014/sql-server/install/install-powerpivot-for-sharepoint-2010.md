@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4f06623eabd8fe22581b7864d74d2d1623b2bd68
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209905"
@@ -97,7 +97,7 @@ ms.locfileid: "48209905"
   
      SQL Server 데이터베이스 엔진 및 SQL Server 에이전트를 추가한 경우 도메인 사용자 계정으로 실행하거나 기본 가상 계정으로 실행하도록 서비스를 구성할 수 있습니다.  
   
-     서비스를 제공하기 위해 사용자의 도메인 사용자 계정을 사용하지 마십시오. 그렇게 하면 네트워크에서 리소스에 대해 갖는 권한과 동일한 권한이 서버에 부여됩니다. 악의적인 사용자가 서버를 침해한 경우 해당 사용자가 사용자의 도메인 자격 증명으로 로그인한 후 사용자와 동일한 데이터 및 응용 프로그램을 다운로드하거나 사용할 수 있습니다.  
+     서비스를 제공하기 위해 사용자의 도메인 사용자 계정을 사용하지 마십시오. 그렇게 하면 네트워크에서 리소스에 대해 갖는 권한과 동일한 권한이 서버에 부여됩니다. 악의적인 사용자가 서버를 침해한 경우 해당 사용자가 사용자의 도메인 자격 증명으로 로그인한 후 사용자와 동일한 데이터 및 애플리케이션을 다운로드하거나 사용할 수 있습니다.  
   
 15. **다음**을 클릭합니다.  
   
@@ -132,14 +132,14 @@ ms.locfileid: "48209905"
  **데이터베이스 엔진 인스턴스에 연결 합니다.** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 SQL Server 설치 프로그램에서 설치에 데이터베이스 엔진 인스턴스를 추가할 수 있는 옵션을 제공했습니다. 팜의 구성 및 콘텐츠 데이터베이스를 실행하기 위해 새로운 팜을 설정하고 데이터베이스 서버가 필요한 경우 설치에 데이터베이스 엔진 인스턴스를 추가했을 수 있습니다. 데이터베이스 엔진을 추가한 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]이라고 명명된 인스턴스로 설치되었습니다. (예를 들어 팜 구성 마법사에서 팜을 구성 하려면 해당 마법사를 사용 하는 경우),이 인스턴스에 대 한 연결 형식이으로 데이터베이스 이름을 입력 해야를 지정 해야 할 때마다: <`servername`> \PowerPivot 합니다.  
   
 ##  <a name="bkmk_redist"></a> Excel Services 응용 프로그램 서버에서 3 단계: 설치 Analysis Services OLE DB 공급자  
- 별도의 응용 프로그램 서버에서 Excel 계산 서비스 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 실행하는 경우 추가 설치 단계가 필요합니다. Excel Calculation Services를 실행하는 응용 프로그램 서버에서 적절한 Analysis Services OLE DB(MSOLAP) 공급자 버전을 설치합니다.  
+ 별도의 응용 프로그램 서버에서 Excel 계산 서비스 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 실행하는 경우 추가 설치 단계가 필요합니다. Excel Calculation Services를 실행하는 애플리케이션 서버에서 적절한 Analysis Services OLE DB(MSOLAP) 공급자 버전을 설치합니다.  
   
--   MSOLAP의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전은 SQL Server 설치 프로그램에 포함되어 있으므로 응용 프로그램 서버가 PowerPivot 응용 프로그램 서버가 아닌 경우에만 MSOLAP의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 명시적으로 설치할 필요가 있습니다.  
+-   MSOLAP의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전은 SQL Server 설치 프로그램에 포함되어 있으므로 애플리케이션 서버가 PowerPivot 애플리케이션 서버가 아닌 경우에만 MSOLAP의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 명시적으로 설치할 필요가 있습니다.  
   
     > [!NOTE]  
-    >  Excel Calculation Services 응용 프로그램 서버에도 전역 어셈블리의 **Microsoft.AnalysisServices.Xmla.dll** 파일 인스턴스가 필요합니다. 응용 프로그램 서버에 .dll을 설치하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 설치해야 합니다. SQL Server 설치 마법사의 **기능 선택** 페이지에서 “관리 도구 – 전체”를 선택합니다.  
+    >  Excel Calculation Services 애플리케이션 서버에도 전역 어셈블리의 **Microsoft.AnalysisServices.Xmla.dll** 파일 인스턴스가 필요합니다. 애플리케이션 서버에 .dll을 설치하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 설치해야 합니다. SQL Server 설치 마법사의 **기능 선택** 페이지에서 “관리 도구 – 전체”를 선택합니다.  
   
--   응용 프로그램 서버에서 이전 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지원하도록 하려면 MSOLAP의 SQL Server 2008 R2 버전을 설치해야 합니다.  
+-   애플리케이션 서버에서 이전 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지원하도록 하려면 MSOLAP의 SQL Server 2008 R2 버전을 설치해야 합니다.  
   
  확인 단계를 포함 하 여 공급자를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   

@@ -26,7 +26,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123709"
@@ -35,7 +35,7 @@ ms.locfileid: "48123709"
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 버전에서는 이 기능이 제거됩니다. 향후 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정하십시오. 대신 **sqlcmd** 을 사용합니다. 자세한 내용은 [sqlcmd Utility](sqlcmd-utility.md)을(를) 참조하십시오.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 버전에서는 이 기능이 제거됩니다. 향후 개발 작업에서는 이 기능을 사용하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정하십시오. 대신 **sqlcmd** 을 사용합니다. 자세한 내용은 [sqlcmd Utility](sqlcmd-utility.md)을(를) 참조하십시오.  
   
 ## <a name="syntax"></a>구문  
   

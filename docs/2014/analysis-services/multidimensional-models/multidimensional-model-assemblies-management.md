@@ -37,9 +37,9 @@ ms.locfileid: "48172113"
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  
   
- 어셈블리를 사용하면 MDX와 DMX의 비즈니스 기능을 확장할 수 있습니다. 원하는 기능을 작성하여 DLL(동적 링크 라이브러리)과 같은 라이브러리에 추가한 후 이 라이브러리를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 어셈블리로 추가하면 됩니다. 그런 다음 MDX 및 DMX 식, 프로시저, 계산, 동작 및 클라이언트 응용 프로그램에서 라이브러리의 공용 메서드를 사용자 정의 함수로 사용할 수 있습니다.  
+ 어셈블리를 사용하면 MDX와 DMX의 비즈니스 기능을 확장할 수 있습니다. 원하는 기능을 작성하여 DLL(동적 링크 라이브러리)과 같은 라이브러리에 추가한 후 이 라이브러리를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 어셈블리로 추가하면 됩니다. 그런 다음 MDX 및 DMX 식, 프로시저, 계산, 동작 및 클라이언트 애플리케이션에서 라이브러리의 공용 메서드를 사용자 정의 함수로 사용할 수 있습니다.  
   
- 새 프로시저와 함수가 포함된 어셈블리는 서버에 추가할 수 있습니다. 어셈블리를 사용하여 서버에서 제공하지 않는 사용자 지정 기능을 향상시키거나 추가할 수 있으며, MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 저장 프로시저에 새 함수를 추가할 수도 있습니다. 어셈블리는 사용자 지정 응용 프로그램이 실행되는 위치에서 로드되며 어셈블리 이진 파일의 복사본은 서버에 데이터베이스 데이터와 함께 저장됩니다. 어셈블리가 제거되면 복사된 어셈블리도 서버에서 제거됩니다.  
+ 새 프로시저와 함수가 포함된 어셈블리는 서버에 추가할 수 있습니다. 어셈블리를 사용하여 서버에서 제공하지 않는 사용자 지정 기능을 향상시키거나 추가할 수 있으며, MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 저장 프로시저에 새 함수를 추가할 수도 있습니다. 어셈블리는 사용자 지정 애플리케이션이 실행되는 위치에서 로드되며 어셈블리 이진 파일의 복사본은 서버에 데이터베이스 데이터와 함께 저장됩니다. 어셈블리가 제거되면 복사된 어셈블리도 서버에서 제거됩니다.  
   
  어셈블리는 COM 또는 CLR 유형일 수 있습니다. CLR 어셈블리는 C#, Visual Basic .NET, Managed C++ 등의 .NET Framework 프로그래밍 언어로 개발됩니다. COM 어셈블리는 서버에 등록해야 하는 COM 라이브러리입니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48172113"
   
  단순 <xref:Microsoft.AnalysisServices.Assembly> 개체는 기본 정보(이름 및 ID), 파일 컬렉션 및 보안 사양으로 구성되어 있습니다.  
   
- 파일 컬렉션은 디버깅 파일이 어셈블리 파일을 통해 로드된 경우 로드된 어셈블리 파일과 해당 디버깅 파일(.pdb)을 참조합니다. 어셈블리 파일은 응용 프로그램이 해당 파일을 정의한 위치에서 로드되면 복사본은 서버에 데이터와 함께 저장됩니다. 어셈블리 파일의 복사본은 서버가 시작될 때마다 어셈블리를 로드하는 데 사용됩니다.  
+ 파일 컬렉션은 디버깅 파일이 어셈블리 파일을 통해 로드된 경우 로드된 어셈블리 파일과 해당 디버깅 파일(.pdb)을 참조합니다. 어셈블리 파일은 애플리케이션이 해당 파일을 정의한 위치에서 로드되면 복사본은 서버에 데이터와 함께 저장됩니다. 어셈블리 파일의 복사본은 서버가 시작될 때마다 어셈블리를 로드하는 데 사용됩니다.  
   
  보안 사양에는 어셈블리를 실행하는 데 사용되는 권한 집합과 가장이 포함되어 있습니다.  
   
@@ -64,7 +64,7 @@ Select MyAssembly.MyClass.MyStoredProcedure(a, b, c) on 0 from Sales
 Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)  
 ```  
   
- 어셈블리를 사용하면 공통 코드를 개발한 후 이를 단일 위치에 저장하여 재사용할 수 있으므로 데이터베이스 개발이 간편해집니다. 클라이언트 소프트웨어 개발자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 함수 라이브러리를 만들어 해당 응용 프로그램과 함께 배포할 수 있습니다.  
+ 어셈블리를 사용하면 공통 코드를 개발한 후 이를 단일 위치에 저장하여 재사용할 수 있으므로 데이터베이스 개발이 간편해집니다. 클라이언트 소프트웨어 개발자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 함수 라이브러리를 만들어 해당 애플리케이션과 함께 배포할 수 있습니다.  
   
  어셈블리와 사용자 정의 함수 이름은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 함수 라이브러리의 함수 이름 또는 다른 어셈블리의 함수 이름과 중복되게 지정할 수 있습니다. 해당 정규화된 이름을 사용하여 사용자 정의 함수를 호출하기만 하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 올바른 프로시저를 사용할 수 있습니다. 보안을 유지하고 다른 클래스 라이브러리에 있는 중복 이름을 호출하는 것을 방지하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 저장 프로시저에 정규화된 이름만 사용해야 합니다.  
   
@@ -85,7 +85,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  어셈블리의 경우 `PermissionSet` 개체에 `Assembly` 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 호스팅하지 않는 환경에는 엔터프라이즈, 컴퓨터 및 사용자라는 3가지 수준의 보안 정책이 이미 적용되어 있습니다. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 CLR을 호스트하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 응용 프로그램 도메인에 대해 설정됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 CLR을 호스트하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 애플리케이션 도메인에 대해 설정됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 수준 정책은 시스템 어셈블리에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 고정 정책과 사용자 어셈블리에 대한 사용자 지정 정책을 조합한 것입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 정책에서 사용자 지정 부분은 어셈블리 소유자가 각 어셈블리에 대한 3가지 권한 집합 중 어떤 것을 지정하는지에 따라 달라집니다.  
   
@@ -108,10 +108,10 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  합니다 `ImpersonationMode` 속성 설정할 수 있습니다 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`합니다. 기본 설정 `ImpersonateCurrentUser`, 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행 합니다. 경우는 `ImpersonateAnonymous` 설정을 사용 하면 실행 컨텍스트가 Windows 로그인 사용자 계정인 IUSER_ 해당*servername* 서버의 합니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
   
-### <a name="application-domains"></a>응용 프로그램 도메인  
+### <a name="application-domains"></a>애플리케이션 도메인  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 응용 프로그램 도메인을 직접 노출시키지 않습니다. 동일한 응용 프로그램 도메인에서 실행되는 어셈블리 집합으로 인해 응용 프로그램 도메인은 .NET Framework의 `System.Reflection` 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 응용 프로그램을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  
   
- 응용 프로그램 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 응용 프로그램 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
+ 애플리케이션 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 애플리케이션 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [저장된 프로시저의 보안 설정](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   

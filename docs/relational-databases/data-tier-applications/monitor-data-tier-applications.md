@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 모니터링 | Microsoft 문서
+title: 데이터 계층 애플리케이션 모니터링 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,9 +20,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51672842"
 ---
-# <a name="monitor-data-tier-applications"></a>데이터 계층 응용 프로그램 모니터링
+# <a name="monitor-data-tier-applications"></a>데이터 계층 애플리케이션 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SSMS( **)의** 유틸리티 탐색기 **및** 개체 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 응용 프로그램)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  
+  SSMS( **)의** 유틸리티 탐색기 **및** 개체 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 애플리케이션)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  DAC를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 관리되는 인스턴스로 배포하는 경우 배포된 DAC에 대한 정보는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. 그런 다음 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**를 사용하여 DAC에 대한 기본 상태 정보를 볼 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "51672842"
   
  **배포된 데이터 계층 응용 프로그램** 세부 정보 페이지를 사용하여 사용률이 낮거나 하드웨어 리소스를 과도하게 사용하는 DAC를 신속하게 식별한 후 문제를 해결하기 위한 계획을 수립할 수 있습니다. 현재 하드웨어 리소스를 충분히 활용하지 않는 여러 DAC를 단일 서버로 통합하여 일부 서버를 다른 곳에 사용하도록 해제할 수 있습니다. DAC가 현재 서버의 리소스를 과도하게 사용하는 경우 DAC를 더 큰 서버로 이동하거나 현재 서버에 리소스를 추가할 수 있습니다.  
   
- 리소스 사용의 최소 및 최대 한도는 **유틸리티 관리** 세부 정보 페이지에 정의된 응용 프로그램 모니터링 정책에 의해 정의됩니다. 데이터베이스 관리자는 조직에서 설정한 한도와 일치하도록 이러한 정책을 조정할 수 있습니다. 예를 들어 한 회사는 DAC의 최대 CPU 사용률을 75%로 설정하고 다른 회사는 80%로 설정할 수 있습니다. 응용 프로그램 모니터링 정책을 설정하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)를 참조하세요.  
+ 리소스 사용의 최소 및 최대 한도는 **유틸리티 관리** 세부 정보 페이지에 정의된 애플리케이션 모니터링 정책에 의해 정의됩니다. 데이터베이스 관리자는 조직에서 설정한 한도와 일치하도록 이러한 정책을 조정할 수 있습니다. 예를 들어 한 회사는 DAC의 최대 CPU 사용률을 75%로 설정하고 다른 회사는 80%로 설정할 수 있습니다. 응용 프로그램 모니터링 정책을 설정하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)를 참조하세요.  
   
  **배포된 데이터 계층 응용 프로그램** 세부 정보 페이지를 보려면  
   

@@ -54,7 +54,7 @@ DML(데이터 조작 언어)는 데이터베이스에 저장된 정보에 영향
 사용 권한 문은 사용자와 로그인이 데이터에 액세스하고 작업을 수행할 수 있는지를 결정합니다. 인증 및 액세스에 대한 자세한 내용은 [보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)를 참조합니다.
 
 ## <a name="service-broker-statements"></a>Service Broker 문
-Service Broker는 메시징 및 큐 응용 프로그램에 대한 기본 지원을 제공합니다. 자세한 내용은 [Service Broker](../../relational-databases/service-broker/event-notifications.md)를 참조하세요.
+Service Broker는 메시징 및 큐 애플리케이션에 대한 기본 지원을 제공합니다. 자세한 내용은 [Service Broker](../../relational-databases/service-broker/event-notifications.md)를 참조하세요.
 
 ## <a name="session-settings"></a>세션 설정
 SET 문은 현재 세션이 시간 설정을 어떻게 취급하는지를 결정합니다. 개요에 대해서는 [SET 문](set-statements-transact-sql.md)을 참조합니다.

@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48201343"
@@ -154,7 +154,7 @@ ms.locfileid: "48201343"
   
  데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
- SSISDB 카탈로그는 ddl_cleanup_object_permissions DDL 트리거를 사용하여 SSIS 보안 개체에 대한 사용 권한 정보의 무결성을 보장합니다. 데이터베이스 사용자, 데이터베이스 역할 또는 데이터베이스 응용 프로그램 역할과 같은 데이터베이스 보안 주체가 SSISDB 데이터베이스에서 제거되면 트리거가 실행됩니다.  
+ SSISDB 카탈로그는 ddl_cleanup_object_permissions DDL 트리거를 사용하여 SSIS 보안 개체에 대한 사용 권한 정보의 무결성을 보장합니다. 데이터베이스 사용자, 데이터베이스 역할 또는 데이터베이스 애플리케이션 역할과 같은 데이터베이스 보안 주체가 SSISDB 데이터베이스에서 제거되면 트리거가 실행됩니다.  
   
  보안 주체가 다른 보안 주체에 대해 사용 권한을 부여하거나 거부한 경우 해당 보안 주체를 제거하려면 먼저 부여자가 제공한 사용 권한을 취소해야 합니다. 그러지 않으면 시스템에서 보안 주체를 제거하려고 할 때 오류 메시지가 반환됩니다. 트리거는 데이터베이스 보안 주체가 피부여자인 모든 사용 권한 레코드를 제거합니다.  
   

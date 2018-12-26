@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48202313"
@@ -46,7 +46,7 @@ ms.locfileid: "48202313"
   
 -   동일한 컴퓨터에 여러 인스턴스를 설치할 경우에는 명명된 인스턴스를 사용합니다. 한 서버에서 기본 인스턴스 한 개만 호스팅할 수 있습니다.  
   
--   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하는 응용 프로그램은 이를 명명된 인스턴스로 설치해야 합니다. 이렇게 하면 여러 응용 프로그램을 동일한 컴퓨터에 설치한 경우 충돌을 최소화할 수 있습니다.  
+-   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하는 응용 프로그램은 이를 명명된 인스턴스로 설치해야 합니다. 이렇게 하면 여러 애플리케이션을 동일한 컴퓨터에 설치한 경우 충돌을 최소화할 수 있습니다.  
   
  **기본 인스턴스**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 설치하려면 이 옵션을 선택합니다. 한 컴퓨터에서는 기본 인스턴스를 하나만 호스팅할 수 있으며 나머지 인스턴스는 모두 명명된 인스턴스여야 합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스가 설치되어 있으면 동일한 컴퓨터에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 인스턴스를 추가할 수 있습니다.  

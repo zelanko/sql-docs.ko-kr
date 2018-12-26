@@ -89,7 +89,7 @@ ms.locfileid: "51672782"
         -   **HEADERONLY**  
         -   **VERIFYONLY**  
   
-    -   Windows 이벤트 로그의 응용 프로그램에서 이름이 `SQLBackupToUrl`인 로그를 검토하여 정보를 찾을 수도 있습니다.  
+    -   Windows 이벤트 로그의 애플리케이션에서 이름이 `SQLBackupToUrl`인 로그를 검토하여 정보를 찾을 수도 있습니다.  
 
     -   큰 데이터베이스를 백업하는 경우 COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE 및 여러 URL 인수를 고려합니다.  [Azure Blob Storage로 VLDB 백업](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)을 참조하세요.
   

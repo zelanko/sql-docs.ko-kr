@@ -17,7 +17,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f20619f4f1bbd1632539f3675c8e955e1073130
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187553"
@@ -27,7 +27,7 @@ ms.locfileid: "48187553"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>방법: 보고서의 RDL 스키마 버전 확인  
   
-1.  xml을 볼 수 있는 메모장이나 XML 메모장 2007과 같은 응용 프로그램에서 보고서 .rdl 파일을 엽니다.  
+1.  xml을 볼 수 있는 메모장이나 XML 메모장 2007과 같은 애플리케이션에서 보고서 .rdl 파일을 엽니다.  
   
      XML 보고서 요소는 스키마 네임스페이스를 지정합니다. 예를 들어 다음 보고서 요소는 보고서 디자이너에 대한 네임스페이스와 보고서 정의에 대한 네임스페이스를 지정합니다.  
   

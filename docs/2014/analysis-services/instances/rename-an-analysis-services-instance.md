@@ -18,7 +18,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d76840f084f40b77b6b6539d41d2c9f8a1e1ff5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077573"
@@ -48,7 +48,7 @@ ms.locfileid: "48077573"
   
 ### <a name="post-rename-checklist"></a>이름을 바꾼 후 검사할 목록  
   
-1.  이름을 바꾼 인스턴스에서 실행되는 데이터베이스에 대한 액세스를 다시 시작하려면 Excel 또는 다른 클라이언트 응용 프로그램에서 데이터 연결을 수동으로 업데이트해야 합니다. 이름을 바꾼 인스턴스를 참조할 수 있는 Reporting Services 공유 데이터 원본, Excel ODC 파일 또는 BI 의미 체계 모델 연결 파일 등 미리 정의된 연결도 확인합니다. 자세한 내용은 [Analysis Services에 연결](connect-to-analysis-services.md)을 참조하세요.  
+1.  이름을 바꾼 인스턴스에서 실행되는 데이터베이스에 대한 액세스를 다시 시작하려면 Excel 또는 다른 클라이언트 애플리케이션에서 데이터 연결을 수동으로 업데이트해야 합니다. 이름을 바꾼 인스턴스를 참조할 수 있는 Reporting Services 공유 데이터 원본, Excel ODC 파일 또는 BI 의미 체계 모델 연결 파일 등 미리 정의된 연결도 확인합니다. 자세한 내용은 [Analysis Services에 연결](connect-to-analysis-services.md)을 참조하세요.  
   
 2.  데이터베이스를 백업, 동기화 또는 처리하는 데 일상적으로 사용하는 PowerShell 스크립트 또는 AMO 스크립트를 업데이트합니다.  
   

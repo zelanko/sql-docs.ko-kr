@@ -24,7 +24,7 @@ ms.locfileid: "48195251"
   이 섹션의 정보를 참조하여 연결 문자열 속성, 연결에 사용되는 클라이언트 라이브러리, Analysis Services에서 지원하는 인증 방법, 서버가 오프라인 상태가 되기 전에 연결을 설정 또는 해제하는 방법 등을 알아봅니다.  
   
 ## <a name="analysis-services-connections"></a>Analysis Services 연결  
- Analysis Services는 TCP를 네트워크 프로토콜로 사용하고 XMLA(XML for Analysis)를 통신 프로토콜로 사용합니다. 가장 낮은 수준에서 Analysis Services와 함께 제공되는 모든 클라이언트 라이브러리는 XMLA-over-TCP를 구현합니다. 원시 XMLA를 기반으로 응용 프로그램을 작성할 수 있지만 대부분의 응용 프로그램과 응용 프로그램 개발자는 클라이언트 라이브러리를 사용하여 개체 모델을 활용하고 개체 모델이 제공하는 코딩 효율성을 이용합니다. 클라이언트를 Analysis Services에 연결하려는 경우 스택 간에 TCP를 사용할 수 없으면 IIS를 중간 연결로 사용할 수 있습니다. IIS를 통해 HTTP 액세스를 사용할 때의 한 가지 이점은 연결 문자열에서 자격 증명을 전달하는 응용 프로그램에서 연결할 수 있다는 것입니다.  
+ Analysis Services는 TCP를 네트워크 프로토콜로 사용하고 XMLA(XML for Analysis)를 통신 프로토콜로 사용합니다. 가장 낮은 수준에서 Analysis Services와 함께 제공되는 모든 클라이언트 라이브러리는 XMLA-over-TCP를 구현합니다. 원시 XMLA를 기반으로 애플리케이션을 작성할 수 있지만 대부분의 애플리케이션과 애플리케이션 개발자는 클라이언트 라이브러리를 사용하여 개체 모델을 활용하고 개체 모델이 제공하는 코딩 효율성을 이용합니다. 클라이언트를 Analysis Services에 연결하려는 경우 스택 간에 TCP를 사용할 수 없으면 IIS를 중간 연결로 사용할 수 있습니다. IIS를 통해 HTTP 액세스를 사용할 때의 한 가지 이점은 연결 문자열에서 자격 증명을 전달하는 애플리케이션에서 연결할 수 있다는 것입니다.  
   
  연결과 관련된 모든 논의에는 대개 인증이 포함됩니다. 다른 SQL Server 기능과 달리 Analysis Services는 Windows 자격 증명을 독점적으로 사용합니다. Analysis Services에 대한 백 엔드 연결에는 SQL Server 데이터베이스 인증, 클레임 인증, 양식 기반 인증 또는 다이제스트를 사용할 수 없습니다. 인증에 대한 자세한 내용이 이 섹션에서 제공됩니다.  
   
@@ -32,8 +32,8 @@ ms.locfileid: "48195251"
   
 |링크|태스크 설명|  
 |----------|----------------------|  
-|[클라이언트 응용 프로그램에서 연결 &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Analysis Services를 처음 접하는 경우 Analysis Services에서 가장 흔히 사용되는 도구와 응용 프로그램에 대해 알아보려면 이 항목을 읽으세요.|  
-|[연결 문자열 속성 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.|  
+|[클라이언트 응용 프로그램에서 연결 &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Analysis Services를 처음 접하는 경우 Analysis Services에서 가장 흔히 사용되는 도구와 애플리케이션에 대해 알아보려면 이 항목을 읽으세요.|  
+|[연결 문자열 속성 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 애플리케이션에 대한 연결을 사용자 지정할 수 있습니다.|  
 |[Analysis Services에서 지 원하는 인증 방법](authentication-methodologies-supported-by-analysis-services.md)|이 항목에서는 Analysis Services에서 사용하는 인증 방법을 간단하게 소개합니다.|  
 |[Kerberos 제한 위임을 위해 Analysis Services 구성](configure-analysis-services-for-kerberos-constrained-delegation.md)|많은 비즈니스 인텔리전스 솔루션은 인증된 데이터만 각 사용자에게 반환되도록 하기 위해 가장을 필요로 합니다. 이 항목에서는 가장을 사용하기 위한 요구 사항을 알아봅니다. 또한 Kerberos 제한 위임에 대해 Analysis Services를 구성하기 위한 단계에 대해서도 설명합니다.|  
 |[Analysis Services 인스턴스에 대 한 SPN 등록](spn-registration-for-an-analysis-services-instance.md)|Kerberos 인증에는 다중 서버 솔루션에서 사용자 ID를 가장하거나 위임하는 서비스에 대한 유효한 SPN(서비스 사용자 이름)이 필요합니다. Analysis Services에 대한 SPN 등록의 생성 및 단계를 알아보려면 이 항목의 정보를 사용하세요.|  

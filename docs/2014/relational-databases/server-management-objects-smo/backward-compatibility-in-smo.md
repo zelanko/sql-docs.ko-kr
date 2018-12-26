@@ -14,7 +14,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de831b5eadcfcd8d44c46189e5d2b0735e5ab3e4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48229593"
@@ -22,7 +22,7 @@ ms.locfileid: "48229593"
 # <a name="backward-compatibility-in-smo"></a>SMO의 이전 버전과의 호환성
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 작성된 SMO 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO를 사용하여 다시 컴파일할 수 있습니다.  
   
-## <a name="migrating-smo-applications"></a>SMO 응용 프로그램 마이그레이션  
+## <a name="migrating-smo-applications"></a>SMO 애플리케이션 마이그레이션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 SMO dll 참조를 제거하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 제공되는 새 SMO dll에 대한 참조를 포함해야 합니다.  
   
  다음은 반드시 참조해야 할 항목입니다.  

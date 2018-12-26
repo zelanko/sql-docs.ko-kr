@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48100093"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
-  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
+  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 애플리케이션에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
@@ -51,9 +51,9 @@ ms.locfileid: "48100093"
   
 1.  중앙 관리에서 서비스 계정 구성 페이지를 엽니다.  
   
-2.  Excel 서비스에서 사용하는 서비스 응용 프로그램 풀을 선택합니다. **서비스 응용 프로그램 풀 – SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀이 여기에 해당합니다. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
+2.  Excel 서비스에서 사용하는 서비스 애플리케이션 풀을 선택합니다. **서비스 응용 프로그램 풀 – SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀이 여기에 해당합니다. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
   
-     SharePoint 모드의 Reporting Services가 포함된 SharePoint 팜의 경우 Reporting Services 서비스 응용 프로그램에 대한 계정 정보도 가져옵니다.  
+     SharePoint 모드의 Reporting Services가 포함된 SharePoint 팜의 경우 Reporting Services 서비스 애플리케이션에 대한 계정 정보도 가져옵니다.  
   
      다음 단계에서는 Analysis Services 인스턴스의 서버 역할에 이 계정을 추가합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48100093"
   
  **이 작업을 수행하는 동안 오류가 발생했습니다. 통합 문서를 로드 하 고이 작업을 다시 수행 하려고 합니다.**  
   
- SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 모델 데이터가 배포된 Analysis Services 인스턴스가 Excel 서비스를 신뢰하지 않기 때문에 발생합니다. 이 오류를 해결하려면 Analysis Services 인스턴스에 대한 Excel 서비스 관리 권한을 부여해야 합니다. 이 항목의 앞부분에 있는 관리자 권한 부여 지침을 참조하십시오. 오류가 계속되면 Excel 서비스 응용 프로그램 풀을 재활용하십시오.  
+ SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 모델 데이터가 배포된 Analysis Services 인스턴스가 Excel 서비스를 신뢰하지 않기 때문에 발생합니다. 이 오류를 해결하려면 Analysis Services 인스턴스에 대한 Excel 서비스 관리 권한을 부여해야 합니다. 이 항목의 앞부분에 있는 관리자 권한 부여 지침을 참조하십시오. 오류가 계속되면 Excel 서비스 애플리케이션 풀을 재활용하십시오.  
   
  **통합 문서에 사용되는 외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다.**  
   

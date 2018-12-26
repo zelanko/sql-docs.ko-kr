@@ -37,7 +37,7 @@ ms.locfileid: "47642281"
 > [!TIP]
 > 드라이버가 설치되어 있고 64비트 애플릿에 해당 드라이버가 표시되지 않는 경우 32비트 애플릿을 대신 찾습니다. 또한 64비트 또는 32비트 SQL Server 가져오기 및 내보내기 마법사를 실행해야 하는지 여부도 알려줍니다.
 >
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
     
 ## <a name="step-1---select-the-data-source"></a>1단계 - 데이터 원본 선택
 컴퓨터에 설치된 ODBC 드라이버는 데이터 원본의 드롭다운 목록에 표시되지 않습니다. ODBC 드라이버로 연결하려면 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **.NET Framework Data Provider for ODBC**를 데이터 원본으로 선택하여 시작합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.

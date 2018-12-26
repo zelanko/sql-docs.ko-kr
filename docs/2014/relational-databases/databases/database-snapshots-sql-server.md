@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475a631c3155d116ef0530992503d3f7fd7cbfc2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48213923"
@@ -92,7 +92,7 @@ ms.locfileid: "48213923"
   
 -   테스트 데이터베이스 관리  
   
-     테스트 환경에서 테스트 프로토콜을 반복 실행하는 경우 각 테스트 시작 시 데이터베이스에 동일한 데이터가 있는 것이 유용할 수 있습니다. 첫 번째 테스트를 실행하기 전에 응용 프로그램 개발자나 테스터는 테스트 데이터베이스에서 데이터베이스 스냅숏을 만들 수 있습니다. 각 테스트를 실행한 후 데이터베이스 스냅숏을 되돌리면 신속하게 데이터베이스를 이전 상태로 되돌릴 수 있습니다.  
+     테스트 환경에서 테스트 프로토콜을 반복 실행하는 경우 각 테스트 시작 시 데이터베이스에 동일한 데이터가 있는 것이 유용할 수 있습니다. 첫 번째 테스트를 실행하기 전에 애플리케이션 개발자나 테스터는 테스트 데이터베이스에서 데이터베이스 스냅숏을 만들 수 있습니다. 각 테스트를 실행한 후 데이터베이스 스냅숏을 되돌리면 신속하게 데이터베이스를 이전 상태로 되돌릴 수 있습니다.  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  database snapshot  

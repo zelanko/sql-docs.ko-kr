@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187333"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>1단원: RDL Schema Visual Studio 프로젝트 만들기
-  이 자습서에서는 간단한 콘솔 응용 프로그램을 만듭니다. 이 자습서에서는 개발 하는 가정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]합니다.  
+  이 자습서에서는 간단한 콘솔 애플리케이션을 만듭니다. 이 자습서에서는 개발 하는 가정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되는 보고서 서버 웹 서비스에 액세스하는 경우 "ReportServer" 경로에 "_SQLExpress"를 추가해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "48187333"
     wsdl /language:VB /n:"ReportService2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
-     .cs 또는 .vb 파일이 생성됩니다. 이 파일을 응용 프로그램에 추가합니다.  
+     .cs 또는 .vb 파일이 생성됩니다. 이 파일을 애플리케이션에 추가합니다.  
   
-### <a name="to-create-a-console-application"></a>콘솔 응용 프로그램을 만들려면  
+### <a name="to-create-a-console-application"></a>콘솔 애플리케이션을 만들려면  
   
 1.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트** 를 클릭하여 **새 프로젝트** 대화 상자를 엽니다.  
   

@@ -55,7 +55,7 @@ ms.locfileid: "34016630"
   
 -   DMX만 PMML 생성 또는 PMML에서 모델 정의 가져오기를 지원합니다.  
   
--   DMX만 응용 프로그램 데이터를 사용한 모델 학습을 지원합니다. 또한 DMX INSERT INTO 문은 키 열의 값을 제공하지 않는 모델 학습을 지원합니다.  
+-   DMX만 애플리케이션 데이터를 사용한 모델 학습을 지원합니다. 또한 DMX INSERT INTO 문은 키 열의 값을 제공하지 않는 모델 학습을 지원합니다.  
   
  자세한 내용은 [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)을 참조하세요.  
   

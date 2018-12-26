@@ -22,7 +22,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bfce6c45fcfefd214511c994b3d87fd34bf8282
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48150613"
@@ -99,7 +99,7 @@ ms.locfileid: "48150613"
   
  확장 이벤트 세션에 사용할 수 있는 대상은 다음과 같습니다.  
   
--   **etw_classic_sync_target**. SQL Server 이벤트와 Windows 운영 체제 또는 응용 프로그램 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다.  
+-   **etw_classic_sync_target**. SQL Server 이벤트와 Windows 운영 체제 또는 애플리케이션 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다.  
   
 -   **event_counter**. 확장 이벤트 세션이 시작된 후 발생하는 지정된 모든 이벤트의 수를 셉니다. 전체 이벤트 컬렉션의 오버헤드를 증가시키지 않으면서 작업 특성에 대한 정보를 얻는 데 사용합니다.  
   

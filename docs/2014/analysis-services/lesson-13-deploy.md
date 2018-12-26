@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48196233"
 ---
 # <a name="lesson-14-deploy"></a>14단원: 배포
-  이 단원에서는 테이블 형식 모드로 실행되는 Analysis Services의 배포 서버 인스턴스를 지정하고 배포할 모델의 이름을 지정하여 배포 속성을 구성합니다. 그 다음에는 모델을 해당 인스턴스에 배포합니다. 모델을 배포한 후 사용자는 보고 클라이언트 응용 프로그램을 사용하여 모델에 연결할 수 있습니다. 자세한 내용은 [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)를 참조하세요.  
+  이 단원에서는 테이블 형식 모드로 실행되는 Analysis Services의 배포 서버 인스턴스를 지정하고 배포할 모델의 이름을 지정하여 배포 속성을 구성합니다. 그 다음에는 모델을 해당 인스턴스에 배포합니다. 모델을 배포한 후 사용자는 보고 클라이언트 애플리케이션을 사용하여 모델에 연결할 수 있습니다. 자세한 내용은 [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)를 참조하세요.  
   
  이 단원에 소요되는 예상 시간: **5분**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48196233"
      배포 대화 상자가 나타나고 메타데이터 및 모델에 포함된 각 테이블의 배포 상태가 표시됩니다.  
   
 ## <a name="conclusion"></a>결론  
- 축하합니다. 첫 번째 Analysis Services 테이블 형식 모델을 제작하고 배포했습니다. 이 자습서에서는 테이블 형식 모델을 만들기 위해 수행해야 하는 대부분의 일반적인 태스크를 완료하는 과정을 안내했습니다. 이제 Adventure Works Internet Sales Model이 배포되었으므로 SQL Server Management Studio를 사용하여 모델을 관리하고 처리 스크립트와 백업 계획을 만들 수 있습니다. 사용자는 Microsoft Excel이나 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 같은 보고 클라이언트 응용 프로그램을 사용하여 모델에 연결할 수 있습니다.  
+ 축하합니다. 첫 번째 Analysis Services 테이블 형식 모델을 제작하고 배포했습니다. 이 자습서에서는 테이블 형식 모델을 만들기 위해 수행해야 하는 대부분의 일반적인 태스크를 완료하는 과정을 안내했습니다. 이제 Adventure Works Internet Sales Model이 배포되었으므로 SQL Server Management Studio를 사용하여 모델을 관리하고 처리 스크립트와 백업 계획을 만들 수 있습니다. 사용자는 Microsoft Excel이나 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 같은 보고 클라이언트 애플리케이션을 사용하여 모델에 연결할 수 있습니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 지원하는 테이블 형식 모델 속성에 대한 자세한 내용은 [파워 뷰 보고 속성&#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)을 참조하세요.  

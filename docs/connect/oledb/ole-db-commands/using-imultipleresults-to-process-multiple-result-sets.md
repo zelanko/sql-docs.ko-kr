@@ -30,7 +30,7 @@ ms.locfileid: "47643661"
 
   소비자는 **IMultipleResults** 인터페이스를 사용하여 SQL Server용 OLE DB 드라이버 명령 실행으로 반환된 결과를 처리할 수 있습니다. SQL Server용 OLE DB 드라이버가 실행 명령을 보내면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 해당 문을 실행하고 결과를 반환합니다.  
   
- 클라이언트는 명령 실행을 통해 반환된 모든 결과를 처리해야 합니다. SQL Server용 OLE DB 드라이버 명령 실행의 결과로 여러 행 집합 개체가 생성될 수 있으므로 응용 프로그램 데이터 검색 작업에서 클라이언트가 시작한 왕복을 완료할 수 있도록 하려면 **IMultipleResults** 인터페이스를 사용해야 합니다.  
+ 클라이언트는 명령 실행을 통해 반환된 모든 결과를 처리해야 합니다. SQL Server용 OLE DB 드라이버 명령 실행의 결과로 여러 행 집합 개체가 생성될 수 있으므로 애플리케이션 데이터 검색 작업에서 클라이언트가 시작한 왕복을 완료할 수 있도록 하려면 **IMultipleResults** 인터페이스를 사용해야 합니다.  
   
  다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 여러 행 집합을 생성합니다. 이 중에는 **OrderDetails** 테이블의 행 데이터 집합도 있고, COMPUTE BY 절의 결과 집합도 있습니다.  
   
@@ -46,7 +46,7 @@ COMPUTE
   
  소비자가 이 텍스트를 포함하는 명령을 실행하고 반환되는 결과 인터페이스로 행 집합을 요청하면 첫 번째 행 집합만 반환됩니다. 이 경우 소비자는 반환되는 행 집합에 있는 모든 행을 처리할 수 있습니다. 그러나 DBPROP_MULTIPLECONNECTIONS 데이터 원본 속성이 VARIANT_FALSE로 설정되어 있고 연결에 MARS가 설정되어 있지 않은 경우 명령이 취소되기 전까지 해당 세션 개체에 대해 다른 명령을 실행할 수 없으며 SQL Server용 OLE DB 드라이버는 다른 연결을 만들지 않습니다. 연결에 MARS가 설정되어 있지 않은 경우 SQL Server용 OLE DB 드라이버는 DBPROP_MULTIPLECONNECTIONS가 VARIANT_FALSE이면 DB_E_OBJECTOPEN 오류를 반환하고, 활성 트랜잭션이 있으면 E_FAIL을 반환합니다.  
   
- 또한 SQL Server용 OLE DB 드라이버는 스트림된 출력 매개 변수를 사용할 때 다음 결과 집합을 얻기 위해 **IMultipleResults::GetResults**를 호출하기 전에 응용 프로그램에서 반환된 출력 매개 변수 값을 모두 사용하지 않은 경우에도 DB_E_OBJECTOPEN을 반환합니다. MARS가 설정되어 있지 않은 상태에서 연결이 행 집합을 생성하지 않는 명령 또는 서버 커서가 아닌 행 집합을 생성하는 명령을 실행 중이고 DBPROP_MULTIPLECONNECTIONS 데이터 원본 속성이 VARIANT_TRUE로 설정되어 있는 경우, 트랜잭션이 오류를 반환하는 활성 상태가 아니면 SQL Server용 OLE DB 드라이버가 동시 명령 개체를 지원하기 위해 추가 연결을 만듭니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 개별 연결의 명령이 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금이 유지되도록 주의해야 합니다. MARS가 설정되어 있는 경우 연결에 여러 명령을 활성화할 수 있으며 명시적 트랜잭션이 사용 중인 경우 모든 명령이 공통 트랜잭션을 공유합니다.  
+ 또한 SQL Server용 OLE DB 드라이버는 스트림된 출력 매개 변수를 사용할 때 다음 결과 집합을 얻기 위해 **IMultipleResults::GetResults**를 호출하기 전에 애플리케이션에서 반환된 출력 매개 변수 값을 모두 사용하지 않은 경우에도 DB_E_OBJECTOPEN을 반환합니다. MARS가 설정되어 있지 않은 상태에서 연결이 행 집합을 생성하지 않는 명령 또는 서버 커서가 아닌 행 집합을 생성하는 명령을 실행 중이고 DBPROP_MULTIPLECONNECTIONS 데이터 원본 속성이 VARIANT_TRUE로 설정되어 있는 경우, 트랜잭션이 오류를 반환하는 활성 상태가 아니면 SQL Server용 OLE DB 드라이버가 동시 명령 개체를 지원하기 위해 추가 연결을 만듭니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 개별 연결의 명령이 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금이 유지되도록 주의해야 합니다. MARS가 설정되어 있는 경우 연결에 여러 명령을 활성화할 수 있으며 명시적 트랜잭션이 사용 중인 경우 모든 명령이 공통 트랜잭션을 공유합니다.  
   
  소비자는 [ISSAbort::Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md)를 사용하거나 명령 개체 및 파생 행 집합에서 유지하는 모든 참조를 해제하는 방식으로 명령을 취소합니다.  
   

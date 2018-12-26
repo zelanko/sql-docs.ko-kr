@@ -67,7 +67,7 @@ ms.locfileid: "48164603"
   
      *ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
- OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유일한 값은 ARITHABORT 설정입니다. 모든 DB-Library 값은 **sp_configure** 를 사용하여 서버 수준에서 또는 SET 명령을 사용하여 응용 프로그램에서 올바르게 설정해야 합니다.  
+ OLE DB 또는 ODBC 서버 연결을 사용하는 경우 수정해야 하는 유일한 값은 ARITHABORT 설정입니다. 모든 DB-Library 값은 **sp_configure** 를 사용하여 서버 수준에서 또는 SET 명령을 사용하여 애플리케이션에서 올바르게 설정해야 합니다.  
   
 > [!IMPORTANT]  
 >  서버의 데이터베이스에서 계산 열에 첫 번째로 인덱싱된 뷰 또는 인덱스가 만들어지면 바로 서버 차원에서 ARITHABORT 사용자 옵션을 ON으로 설정하는 것이 좋습니다.  

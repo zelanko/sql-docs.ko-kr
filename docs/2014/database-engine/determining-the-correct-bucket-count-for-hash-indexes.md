@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48147423"
@@ -163,7 +163,7 @@ GO
   
  해시 인덱스의 경우 중복 인덱스 키 값에 의해 발생하는 작업을 줄이는 방법에는 두 가지가 있습니다.  
   
--   대신 비클러스터형 인덱스를 사용합니다. 응용 프로그램을 변경하지 않고도 인덱스 키에 열을 추가하여 중복을 줄일 수 있습니다.  
+-   대신 비클러스터형 인덱스를 사용합니다. 애플리케이션을 변경하지 않고도 인덱스 키에 열을 추가하여 중복을 줄일 수 있습니다.  
   
 -   인덱스에 대해 매우 높은 버킷 수를 지정합니다. 예를 들어, 고유 인덱스 키 수의 20-100배로 지정합니다. 이렇게 하면 해시 충돌이 줄어듭니다.  
   

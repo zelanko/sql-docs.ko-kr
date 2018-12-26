@@ -37,7 +37,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48198503"
@@ -55,9 +55,9 @@ ms.locfileid: "48198503"
   
 -   다른 서버 인스턴스에서 데이터베이스 복사본을 연결하는 경우  
   
- 일부 응용 프로그램은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 응용 프로그램은 **master** 및 **msdb** 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 응용 프로그램에 대한 로그인은 **master** 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스에 저장되어 있는** 에이전트 작업에 따라 응용 프로그램이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 **master**에 저장되어 있습니다.  
+ 일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 **master** 및 **msdb** 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 **master** 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스에 저장되어 있는** 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 **master**에 저장되어 있습니다.  
   
- 응용 프로그램에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb** 에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 응용 프로그램이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
+ 애플리케이션에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb** 에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
   
 ##  <a name="information_entities_and_objects"></a> 사용자 데이터베이스의 외부에 저장된 정보, 엔터티 및 개체  
  이 항목의 나머지에서는 다른 서버 인스턴스에서 사용되는 데이터베이스에 영향을 줄 수 있는 발생 가능한 문제에 대해 요약합니다. 다음 목록에 나열된 하나 또는 그 이상의 정보, 엔터티 또는 개체 유형을 다시 만들어야 할 수 있습니다. 요약을 보려면 항목의 링크를 클릭합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48198503"
  데이터베이스를 다른 컴퓨터에서 복원하는 경우 복원 작업을 시작한 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 자동으로 새 데이터베이스 소유자가 됩니다. 데이터베이스를 복원할 때 시스템 관리자나 새 데이터베이스 소유자는 데이터베이스 소유권을 변경할 수 있습니다.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> 분산 쿼리 및 연결된 서버  
- 분산 쿼리와 연결된 서버는 OLE DB 응용 프로그램에 대해 지원됩니다. 분산 쿼리는 같은 컴퓨터나 다른 컴퓨터에 있는 유형이 다른 여러 데이터 원본의 데이터에 액세스합니다. 연결된 서버를 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 서버에 있는 OLE DB 데이터 원본에 대해 명령을 실행할 수 있습니다. 이러한 기능에 대한 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../linked-servers/linked-servers-database-engine.md)를 참조하세요.  
+ 분산 쿼리와 연결된 서버는 OLE DB 애플리케이션에 대해 지원됩니다. 분산 쿼리는 같은 컴퓨터나 다른 컴퓨터에 있는 유형이 다른 여러 데이터 원본의 데이터에 액세스합니다. 연결된 서버를 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 서버에 있는 OLE DB 데이터 원본에 대해 명령을 실행할 수 있습니다. 이러한 기능에 대한 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../linked-servers/linked-servers-database-engine.md)를 참조하세요.  
   
  [&#91;맨 위로 이동&#93;](#information_entities_and_objects)  
   
@@ -150,19 +150,19 @@ ms.locfileid: "48198503"
  [&#91;맨 위로 이동&#93;](#information_entities_and_objects)  
   
 ##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
- 사용자 정의 오류 메시지는 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) 카탈로그 뷰에 있습니다. 이 카탈로그 뷰는 **master**에 저장됩니다. 데이터베이스 응용 프로그램이 사용자 정의 오류 메시지를 사용하며 다른 서버 인스턴스에서 데이터베이스를 사용할 수 있는 경우 [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) 를 사용하여 대상 서버 인스턴스에서 이러한 사용자 정의 메시지를 추가합니다.  
+ 사용자 정의 오류 메시지는 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) 카탈로그 뷰에 있습니다. 이 카탈로그 뷰는 **master**에 저장됩니다. 데이터베이스 애플리케이션이 사용자 정의 오류 메시지를 사용하며 다른 서버 인스턴스에서 데이터베이스를 사용할 수 있는 경우 [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) 를 사용하여 대상 서버 인스턴스에서 이러한 사용자 정의 메시지를 추가합니다.  
   
  [&#91;맨 위로 이동&#93;](#information_entities_and_objects)  
   
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>서버 수준 이벤트 알림  
- 서버 수준 이벤트 알림은 **msdb**에 저장됩니다. 그러므로 데이터베이스 응용 프로그램이 서버 수준 이벤트 알림을 사용하는 경우 대상 서버 인스턴스에서 해당 이벤트 알림을 다시 만들어야 합니다. 서버 인스턴스의 이벤트 알림을 보려면 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Event Notifications](../service-broker/event-notifications.md)을 참조하세요.  
+ 서버 수준 이벤트 알림은 **msdb**에 저장됩니다. 그러므로 데이터베이스 애플리케이션이 서버 수준 이벤트 알림을 사용하는 경우 대상 서버 인스턴스에서 해당 이벤트 알림을 다시 만들어야 합니다. 서버 인스턴스의 이벤트 알림을 보려면 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Event Notifications](../service-broker/event-notifications.md)을 참조하세요.  
   
  또한 이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 배달됩니다. 들어오는 메시지에 대한 경로는 서비스가 포함된 데이터베이스에 포함되지 않습니다. 대신 명시적인 경로는 **msdb**에 저장됩니다. 서비스가 **msdb** 데이터베이스에서 명시적인 경로를 사용하여 들어오는 메시지를 서비스에 라우팅하는 경우 다른 인스턴스에서 데이터베이스를 연결할 때 이 경로를 다시 만들어야 합니다.  
   
 ### <a name="windows-management-instrumentation-wmi-events"></a>WMI(Windows Management Instrumentation) 이벤트  
- 서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 데이터베이스가 사용하는 WMI 공급자를 통해 표시된 서버 수준 이벤트를 사용하는 응용 프로그램은 대상 서버 인스턴스의 컴퓨터에서 정의해야 합니다. WMI 이벤트 공급자는 **msdb**에서 정의한 대상 서비스로 이벤트 알림을 만듭니다.  
+ 서버 이벤트용 WMI 공급자는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링할 수 있도록 합니다. 데이터베이스가 사용하는 WMI 공급자를 통해 표시된 서버 수준 이벤트를 사용하는 애플리케이션은 대상 서버 인스턴스의 컴퓨터에서 정의해야 합니다. WMI 이벤트 공급자는 **msdb**에서 정의한 대상 서비스로 이벤트 알림을 만듭니다.  
   
 > [!NOTE]  
 >  자세한 내용은 [서버 이벤트용 WMI 공급자 개념](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)을 참조하세요.  
@@ -337,7 +337,7 @@ ms.locfileid: "48198503"
  [&#91;맨 위로 이동&#93;](#information_entities_and_objects)  
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 많은 부분이 데이터베이스와 함께 이동됩니다. 그러나 응용 프로그램의 일부분은 새 위치에서 다시 만들거나 다시 구성해야 합니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 많은 부분이 데이터베이스와 함께 이동됩니다. 그러나 애플리케이션의 일부분은 새 위치에서 다시 만들거나 다시 구성해야 합니다.  
   
  [&#91;맨 위로 이동&#93;](#information_entities_and_objects)  
   

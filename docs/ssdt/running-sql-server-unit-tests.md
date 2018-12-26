@@ -36,7 +36,7 @@ ms.locfileid: "51670682"
   
 -   **테스트 목록 편집기** 창에서 테스트 목록을 실행하거나 개별 테스트를 실행합니다(Visual Studio 2010). 자세한 내용은 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) 또는 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
   
--   Team Foundation Build에서 프로젝트를 빌드할 때 테스트를 실행합니다. 자세한 내용은 [방법: 응용 프로그램을 빌드한 후 예약된 테스트 구성 및 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) 또는 [방법: 응용 프로그램을 빌드한 후 예약된 테스트 구성 및 실행(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)을 참조하세요.  
+-   Team Foundation Build에서 프로젝트를 빌드할 때 테스트를 실행합니다. 자세한 내용은 [방법: 애플리케이션을 빌드한 후 예약된 테스트 구성 및 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) 또는 [방법: 애플리케이션을 빌드한 후 예약된 테스트 구성 및 실행(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)을 참조하세요.  
   
 순서가 지정된 테스트를 사용하여 SQL Server 단위 테스트를 특정 순서로 실행할 수 있습니다. 자세한 내용은 [방법: 순서가 지정된 테스트 만들기(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) 또는 [방법: 순서가 지정된 테스트 만들기(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)를 참조하세요.  
   

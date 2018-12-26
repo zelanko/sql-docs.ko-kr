@@ -18,7 +18,7 @@ ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 677da53a1bc27c4e64a91f04d242635fe2df4471
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48192163"
@@ -79,7 +79,7 @@ ms.locfileid: "48192163"
   
     -   다른 **서비스 주체** 필요로 하 게 됩니다 합니다 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 사용 되는 래핑 해제 키에 대 한 자격 증명 모음 액세스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 합니다.  
   
-     응용 프로그램을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작** (영문)의 [Register an Application with Azure Active Directory(Azure Active Directory로 응용 프로그램 등록)](http://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **응용 프로그램 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. 에 사용 되는 경우는 `CREATE CREDENTIAL` 문을에서 하이픈 제거 해야 합니다 **클라이언트 ID**. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.  
+     애플리케이션을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작** (영문)의 [Register an Application with Azure Active Directory(Azure Active Directory로 애플리케이션 등록)](http://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **애플리케이션 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. 에 사용 되는 경우는 `CREATE CREDENTIAL` 문을에서 하이픈 제거 해야 합니다 **클라이언트 ID**. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.  
   
     -   **sysadmin** 로그인용 **서비스 사용자** : **CLIENTID_sysadmin_login** 및 **SECRET_sysadmin_login**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48192163"
     > [!IMPORTANT]  
     >  사용자가 키 자격 증명 모음에 적어도 **wrapKey** 및 **unwrapKey** 작업을 사용할 수 있어야 합니다.  
   
-     자격 증명 모음에 사용 권한을 부여하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작**[(영문)의 Authorize the application to use the key or secret(키 또는 암호를 사용할 수 있도록 응용 프로그램에 권한 부여)](http://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요.  
+     자격 증명 모음에 사용 권한을 부여하는 방법에 대한 자세한 내용은 **Azure 키 자격 증명 모음 시작**[(영문)의 Authorize the application to use the key or secret(키 또는 암호를 사용할 수 있도록 애플리케이션에 권한 부여)](http://go.microsoft.com/fwlink/?LinkId=521402)섹션을 참조하세요.  
   
      Azure 키 자격 증명 모음 설명서 링크  
   

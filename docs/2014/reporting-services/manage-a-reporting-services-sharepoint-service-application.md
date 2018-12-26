@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint 서비스 응용 프로그램 관리 | Microsoft Docs
+title: Reporting Services SharePoint 서비스 애플리케이션 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,8 +18,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48135156"
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리 됩니다. 관리 및 속성 페이지에서 서비스 응용 프로그램의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리 됩니다. 관리 및 속성 페이지에서 서비스 애플리케이션의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
   
@@ -37,26 +37,26 @@ ms.locfileid: "48135156"
   
 -   [구독 및 경고 프로비전](#bkmk_provisionsubscriptions)  
   
-## <a name="to-open-service-application-properties-page"></a>서비스 응용 프로그램 속성 페이지를 열려면  
+## <a name="to-open-service-application-properties-page"></a>서비스 애플리케이션 속성 페이지를 열려면  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 속성 페이지를 열려면 다음을 완료합니다.  
   
-1.  중앙 관리의 응용 프로그램 관리 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  서비스 응용 프로그램 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
+2.  서비스 애플리케이션 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
   
- 서비스 응용 프로그램 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)을 참조하세요.  
+ 서비스 애플리케이션 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)을 참조하세요.  
   
 ##  <a name="bkmk_openpages"></a> 서비스 응용 프로그램 관리 페이지를 열려면  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 관리 페이지를 열려면 다음을 완료합니다.  
   
-1.  중앙 관리의 응용 프로그램 관리 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  서비스 응용 프로그램 이름을 클릭하면 **Reporting Services 응용 프로그램 관리** 페이지가 열립니다.  
+2.  서비스 애플리케이션 이름을 클릭하면 **Reporting Services 애플리케이션 관리** 페이지가 열립니다.  
   
-3.  또는 서비스 응용 프로그램의 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택한 다음 SharePoint 리본에서 **관리** 를 클릭할 수 있습니다.  
+3.  또는 서비스 애플리케이션의 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택한 다음 SharePoint 리본에서 **관리** 를 클릭할 수 있습니다.  
   
 ##  <a name="bkmk_systemsettings"></a> 시스템 설정 페이지  
- 시스템 설정 페이지에서 다양한 제한 시간을 포함하여 서비스 응용 프로그램의 동작과 사용자 환경을 구성할 수 있습니다.  
+ 시스템 설정 페이지에서 다양한 제한 시간을 포함하여 서비스 애플리케이션의 동작과 사용자 환경을 구성할 수 있습니다.  
   
 -   [보고서 설정](#bkmk_report_settings_section)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48135156"
   
 |설정|주석|  
 |-------------|--------------|  
-|보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 응용 프로그램을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
+|보고서 작성기 다운로드 사용|기본값은 TRUE입니다.<br /><br /> 클라이언트가 보고서 작성기 애플리케이션을 다운로드하기 위한 단추를 볼 수 있는지 여부를 지정합니다.|  
 |보고서 작성기 시작 URL|보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 시작됩니다. 보고서 작성기 3.0을 Click-Once 응용 프로그램으로 시작하려면 http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application 값을 입력합니다.|  
 |클라이언트 인쇄 기능 사용|기본값은 TRUE입니다.<br /><br /> 사용자가 인쇄 옵션을 제공 하는 클라이언트 쪽 컨트롤을 다운로드할 수 있는지 여부를 지정합니다.|  
 |세션 제한 시간 편집|기본값은 7200초입니다.|  
@@ -128,7 +128,7 @@ ms.locfileid: "48135156"
   
 |호출|Description|  
 |----------|-----------------|  
-|암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. 실행 하는 별도 컴퓨터에서 키 파일을 저장 하는 것이 좋습니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. 기본 파일 이름은 서비스 응용 프로그램의 이름과 동일합니다.|  
+|암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. 실행 하는 별도 컴퓨터에서 키 파일을 저장 하는 것이 좋습니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. 기본 파일 이름은 서비스 애플리케이션의 이름과 동일합니다.|  
 |암호화 키 복원|1) **파일 위치** 상자에서 키 파일을 입력하거나 해당 위치를 찾습니다.<br /><br /> 2) **암호** 상자에 암호화 파일을 백업하는 데 사용된 암호를 입력합니다.<br /><br /> 3) **확인**을 클릭합니다.|  
 |암호화 키 변경|이 작업에서는 새 키를 만들고 암호화된 내용을 다시 암호화합니다. 내용이 많은 경우 이 작업을 수행하는 데 몇 시간이 걸릴 수 있습니다.<br /><br /> 암호화 키 변경 작업이 완료되면 새 키를 백업하는 것이 좋습니다.|  
 |삭제된 암호화된 내용|삭제된 내용을 복구할 수 없습니다.<br /><br /> **\*\* 중요 \*\*** 대칭 키 삭제 및 다시 만들기 동작은 되돌리거나 실행 취소할 수 없습니다. 키를 삭제 또는 다시 만들기는 현재 설치에 중요한 결과를 가져올 수 있습니다. 키를 삭제하면 대칭 키로 암호화된 모든 기존 데이터도 삭제됩니다. 삭제된 데이터에는 외부 보고서 데이터 원본에 대한 연결 문자열, 저장된 연결 문자열 및 일부 구독 정보가 포함되어 있습니다.|  
@@ -136,7 +136,7 @@ ms.locfileid: "48135156"
 ##  <a name="bkmk_executionaccount"></a> 실행 계정  
  이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  
   
--   보고서 서버가 자격 증명이 필요 없는 데이터 원본에 연결하는 경우 자격 증명이 필요 없는 데이터 원본의 예로는 XML 문서와 일부 클라이언트 쪽 응용 프로그램이 있습니다.  
+-   보고서 서버가 자격 증명이 필요 없는 데이터 원본에 연결하는 경우 자격 증명이 필요 없는 데이터 원본의 예로는 XML 문서와 일부 클라이언트 쪽 애플리케이션이 있습니다.  
   
 -   보고서 서버가 보고서에서 참조하는 외부 이미지 파일 또는 기타 리소스를 검색하기 위해 다른 서버에 연결하는 경우  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48135156"
   
  ![PowerShell 관련 콘텐츠](media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
- 다음은 UEAccount 속성과 함께 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 목록을 반환하는 예제 PowerShell 명령입니다.  
+ 다음은 UEAccount 속성과 함께 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 목록을 반환하는 예제 PowerShell 명령입니다.  
   
 ```  
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
@@ -186,13 +186,13 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  이 페이지를 사용하여 SQL Server 에이전트가 실행 중인지 확인하고 SQL Server 에이전트를 사용하도록 보고 서비스에 대한 액세스를 프로비전합니다. SQL Server 에이전트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독, 일정 및 데이터 경고에 필요합니다. [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ## <a name="proxy-association"></a>프록시 연결  
- Reporting Services 서비스 응용 프로그램을 만들 때 Reporting Services 서비스 응용 프로그램을 통해 액세스하기 위해 권한을 연결 및 프로비전할 웹 응용 프로그램을 선택했습니다. 연결하지 않거나 연결을 변경하려면 다음 단계를 수행할 수 있습니다.  
+ Reporting Services 서비스 애플리케이션을 만들 때 Reporting Services 서비스 애플리케이션을 통해 액세스하기 위해 권한을 연결 및 프로비전할 웹 애플리케이션을 선택했습니다. 연결하지 않거나 연결을 변경하려면 다음 단계를 수행할 수 있습니다.  
   
-1.  SharePoint 중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 연결 구성**을 클릭합니다.  
+1.  SharePoint 중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 연결 구성**을 클릭합니다.  
   
-2.  서비스 응용 프로그램 연결 페이지에서 보기를 **서비스 응용 프로그램**으로 변경합니다.  
+2.  서비스 애플리케이션 연결 페이지에서 보기를 **서비스 애플리케이션**으로 변경합니다.  
   
-3.  찾기 및 새 이름을 클릭 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 또한 응용 프로그램 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
+3.  찾기 및 새 이름을 클릭 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 또한 애플리케이션 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
   
 4.  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정**을 선택합니다.  
   

@@ -15,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e9d0a6b6322c0a8a02c02ba53748e769bf9f656
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48069843"
@@ -28,7 +28,7 @@ ms.locfileid: "48069843"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 할당된 최소 메모리 양으로 시작되고 이 값 아래로 메모리를 해제하지 않도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 크기와 작업에 기반하여 이 값을 설정합니다. 항상 이 옵션을 적당한 값으로 설정하여 운영 체제가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 너무 많은 메모리를 요구하여 Windows 성능을 저하시키지 않도록 해야 합니다.  
   
  **최대 서버 메모리(MB)**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때와 실행되는 동안 할당할 수 있는 최대 메모리 크기를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 동시에 실행되는 응용 프로그램이 여러 개 있는 것을 아는 경우, 이러한 응용 프로그램이 충분한 메모리를 사용하여 실행되도록 하려면 이 구성 옵션을 특정 값으로 설정할 수 있습니다. 웹 또는 전자 메일 서버 등의 다른 응용 프로그램이 필요할 때만 메모리를 요청하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 필요할 때마다 메모리를 해제하므로 이 옵션을 설정하지 않는 편이 좋습니다. 그러나 응용 프로그램에서는 시작할 때 사용할 수 있는 모든 메모리를 사용하고, 필요할 때 더 요청하지 않는 경우가 많습니다. 이런 방식으로 동작하는 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동시에 같은 컴퓨터에서 실행되는 경우에는 응용 프로그램에 필요한 메모리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 할당하지 않도록 이 옵션의 값을 설정합니다. 최소에 지정할 수 있는 메모리 양은 **최대 서버 메모리** 64 비트 시스템에 대 한 32 비트 시스템에서 128MB에 64 (mb) 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때와 실행되는 동안 할당할 수 있는 최대 메모리 크기를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 동시에 실행되는 응용 프로그램이 여러 개 있는 것을 아는 경우, 이러한 응용 프로그램이 충분한 메모리를 사용하여 실행되도록 하려면 이 구성 옵션을 특정 값으로 설정할 수 있습니다. 웹 또는 전자 메일 서버 등의 다른 애플리케이션이 필요할 때만 메모리를 요청하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 필요할 때마다 메모리를 해제하므로 이 옵션을 설정하지 않는 편이 좋습니다. 그러나 애플리케이션에서는 시작할 때 사용할 수 있는 모든 메모리를 사용하고, 필요할 때 더 요청하지 않는 경우가 많습니다. 이런 방식으로 동작하는 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동시에 같은 컴퓨터에서 실행되는 경우에는 애플리케이션에 필요한 메모리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 할당하지 않도록 이 옵션의 값을 설정합니다. 최소에 지정할 수 있는 메모리 양은 **최대 서버 메모리** 64 비트 시스템에 대 한 32 비트 시스템에서 128MB에 64 (mb) 됩니다.  
   
  **인덱스 생성 메모리(KB, 0 = 동적 메모리)**  
  인덱스 생성 정렬에 사용되는 메모리의 크기(KB)를 지정합니다. 기본값 0을 그대로 사용하면 동적 할당 기능이 설정되고 대부분의 경우 추가 조정 없이 제대로 작동하지만 사용자가 704 ~ 2147483647 사이의 다른 값을 입력할 수도 있습니다.  

@@ -15,13 +15,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209393"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
-  DAC(데이터 계층 응용 프로그램)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
+  DAC(데이터 계층 애플리케이션)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
   
  **항목 내용**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48209393"
 -   [배포 작업에 대한 추가 고려 사항](#Considerations)  
   
 ##  <a name="SupportedObjects"></a> 지원되는 SQL Server 개체  
- 작성 또는 편집 중인 데이터 계층 응용 프로그램에서는 지원되는 개체만 지정할 수 있습니다. DAC를 지원하지 않는 개체가 포함된 기존 데이터베이스에서 DAC를 추출하거나 등록하거나 가져올 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 DAC에서 다음 개체를 지원합니다.  
+ 작성 또는 편집 중인 데이터 계층 애플리케이션에서는 지원되는 개체만 지정할 수 있습니다. DAC를 지원하지 않는 개체가 포함된 기존 데이터베이스에서 DAC를 추출하거나 등록하거나 가져올 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 DAC에서 다음 개체를 지원합니다.  
   
 |||  
 |-|-|  

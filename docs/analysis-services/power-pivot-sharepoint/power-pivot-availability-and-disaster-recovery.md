@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38979585"
@@ -43,13 +43,13 @@ ms.locfileid: "38979585"
   
 -   **(1)** 웹 프런트 엔드 서버입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 추가 기능을 사용하여 각 서버에 데이터 공급자를 설치합니다. 설치에 대한 자세한 내용은 [SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
--   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 따라서 단일 응용 프로그램 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램을 여전히 사용할 수 있습니다.  
+-   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 따라서 단일 애플리케이션 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 애플리케이션을 여전히 사용할 수 있습니다.  
   
--   **(3)** Excel 계산 서비스는 응용 프로그램 서버를 각각 하나씩 실행하고 서비스 응용 프로그램을 응용 프로그램 서버 간에 실행할 수 있도록 합니다. 따라서 단일 응용 프로그램 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.  
+-   **(3)** Excel 계산 서비스는 응용 프로그램 서버를 각각 하나씩 실행하고 서비스 응용 프로그램을 응용 프로그램 서버 간에 실행할 수 있도록 합니다. 따라서 단일 애플리케이션 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.  
   
 -   **(4)** 및 **(6)** SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 SharePoint 팜 외부의 서버에서 실행되고 이는 Windows 서비스 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 를 포함합니다. 이러한 각각의 인스턴스는 Excel Services **(3)** 에 등록되어 있습니다. Excel Services는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버 요청의 부하 분산을 관리합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 아키텍처를 사용하면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 여러 서버를 가질 수 있으므로 필요한 만큼 더 많은 인스턴스를 쉽게 추가할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)를 참조하세요.  
   
--   **(5)** 콘텐츠, 구성 및 응용 프로그램 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다. 이 디자인에서 데이터베이스는 **(4)** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 중 하나와 동일한 서버에서 실행됩니다. **(4)** 및 **(5)** 는 다른 서버에 있을 수도 있습니다.  
+-   **(5)** 콘텐츠, 구성 및 응용 프로그램 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다. 이 디자인에서 데이터베이스는 **(4)** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 중 하나와 동일한 서버에서 실행됩니다. **(4)** 및 **(5)** 는 다른 서버에 있을 수도 있습니다.  
   
 -   **(7)** SQL Server 데이터베이스 백업 또는 중복성의 일부 형식입니다.  
   
@@ -64,18 +64,18 @@ ms.locfileid: "38979585"
   
 -   **(2)** 두 개의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 및 **(4)** Windows Service **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 는 SharePoint 응용 프로그램 서버에 설치되어 있습니다.  
   
-     [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 단일 응용 프로그램 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램을 여전히 사용할 수 있습니다.  
+     [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 단일 애플리케이션 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 애플리케이션을 여전히 사용할 수 있습니다.  
   
-     SharePoint 2010에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 용량을 늘리려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 실행하는 SharePoint 응용 프로그램 서버를 추가로 배포하세요.  
+     SharePoint 2010에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 용량을 늘리려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 실행하는 SharePoint 애플리케이션 서버를 추가로 배포하세요.  
   
--   **(3)** Excel 계산 서비스는 각각의 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 간에 실행할 수 있도록 합니다. 따라서 단일 응용 프로그램 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.  
+-   **(3)** Excel 계산 서비스는 각각의 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 간에 실행할 수 있도록 합니다. 따라서 단일 애플리케이션 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.  
   
--   **(5)** 콘텐츠, 구성 및 응용 프로그램 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다.  
+-   **(5)** 콘텐츠, 구성 및 응용 프로그램 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다.  
   
 -   **(6)** SQL Server 데이터베이스 백업 또는 중복성의 일부 형식입니다.  
   
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot 서비스 응용 프로그램 데이터베이스 및 SQL Server 가용성 및 복구 기술  
- SharePoint 고가용성 계획에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램 데이터베이스를 포함합니다. 이 데이터베이스 기본 이름은 `DefaultPowerPivotServiceApplicationDB-<GUID>`입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 기술과, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 데이터베이스에 사용할 때의 권장 사항에 대한 요약입니다. 자세한 내용은 [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)을 참조하세요.  
+ SharePoint 고가용성 계획에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 애플리케이션 데이터베이스를 포함합니다. 이 데이터베이스 기본 이름은 `DefaultPowerPivotServiceApplicationDB-<GUID>`입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 기술과, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 데이터베이스에 사용할 때의 권장 사항에 대한 요약입니다. 자세한 내용은 [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)을 참조하세요.  
   
 ||주석|  
 |-|--------------|  

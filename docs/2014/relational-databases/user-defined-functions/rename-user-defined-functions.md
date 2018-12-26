@@ -12,7 +12,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48219953"
@@ -72,7 +72,7 @@ ms.locfileid: "48219953"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **사용자 정의 함수의 이름을 바꾸려면**  
   
- 이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다. Transact-SQL을 사용하여 사용자 정의 함수의 이름을 바꾸려면 먼저 기존 함수를 삭제하고 새로운 이름을 사용하여 다시 만들어야 합니다. 함수의 이전 이름을 사용하는 모든 코드 및 응용 프로그램이 이제 새 이름을 사용하는지 확인합니다.  
+ 이 작업은 Transact-SQL 문을 사용하여 수행할 수 없습니다. Transact-SQL을 사용하여 사용자 정의 함수의 이름을 바꾸려면 먼저 기존 함수를 삭제하고 새로운 이름을 사용하여 다시 만들어야 합니다. 함수의 이전 이름을 사용하는 모든 코드 및 애플리케이션이 이제 새 이름을 사용하는지 확인합니다.  
   
  자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql) 및 [DROP FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)을 참조하세요.  
   

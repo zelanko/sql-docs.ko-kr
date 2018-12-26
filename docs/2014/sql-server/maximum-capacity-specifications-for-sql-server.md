@@ -24,7 +24,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077583"
@@ -110,7 +110,7 @@ ms.locfileid: "48077583"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 컴퓨터(물리적 컴퓨터 또는 가상 컴퓨터) 수|100|100|  
 |컴퓨터당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스 수|5|5|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수|200*|200*|  
-|데이터 계층 응용 프로그램을 포함하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스당 사용자 데이터베이스 수|50|50|  
+|데이터 계층 애플리케이션을 포함하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스당 사용자 데이터베이스 수|50|50|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 사용자 데이터베이스 수|1,000|1,000|  
 |데이터베이스당 파일 그룹 수|1|1|  
 |파일 그룹당 데이터 파일 수|1|1|  

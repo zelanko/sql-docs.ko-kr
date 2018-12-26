@@ -28,11 +28,11 @@ ms.locfileid: "51668872"
 
   **SQLGetData** 는 열 값을 바인딩하지 않고 결과 집합 데이터를 검색하는 데 사용됩니다. 동일한 열에서**SQLGetData** 를 연속해서 호출하여 **text**, **ntext**또는 **image** 데이터 형식 열에서 많은 양의 데이터를 검색할 수 있습니다.  
   
- 응용 프로그램이 결과 집합 데이터를 인출하기 위해 변수를 바인딩해야 하는 요구 사항은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetData **를 사용하여**Native Client ODBC 드라이버에서 모든 열의 데이터를 검색할 수 있습니다.  
+ 애플리케이션이 결과 집합 데이터를 인출하기 위해 변수를 바인딩해야 하는 요구 사항은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLGetData **를 사용하여**Native Client ODBC 드라이버에서 모든 열의 데이터를 검색할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 임의의 열 순서로 데이터를 검색하기 위한 **SQLGetData** 사용을 지원하지 않습니다. **SQLGetData** 를 사용하여 처리된, 바인딩되지 않은 모든 열은 결과 집합의 바인딩된 열보다 높은 열 서수를 가져야 합니다. 응용 프로그램은 바인딩되지 않은 가장 낮은 서수 열 값에서 가장 높은 서수 열 값으로 데이터를 처리해야 합니다. 서수 번호가 더 낮은 열의 데이터를 검색하려고 하면 오류가 발생합니다. 응용 프로그램에서 서버 커서를 사용하여 결과 집합 행을 보고하는 경우 현재 행을 다시 인출한 다음 열 값을 인출할 수 있습니다. 읽기 전용, 정방향 전용 기본 커서에서 문이 실행된 경우 해당 문을 다시 실행하여 **SQLGetData**를 백업해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 임의의 열 순서로 데이터를 검색하기 위한 **SQLGetData** 사용을 지원하지 않습니다. **SQLGetData** 를 사용하여 처리된, 바인딩되지 않은 모든 열은 결과 집합의 바인딩된 열보다 높은 열 서수를 가져야 합니다. 애플리케이션은 바인딩되지 않은 가장 낮은 서수 열 값에서 가장 높은 서수 열 값으로 데이터를 처리해야 합니다. 서수 번호가 더 낮은 열의 데이터를 검색하려고 하면 오류가 발생합니다. 애플리케이션에서 서버 커서를 사용하여 결과 집합 행을 보고하는 경우 현재 행을 다시 인출한 다음 열 값을 인출할 수 있습니다. 읽기 전용, 정방향 전용 기본 커서에서 문이 실행된 경우 해당 문을 다시 실행하여 **SQLGetData**를 백업해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 **SQLGetData**를 사용하여 검색된 **text**, **ntext** 및 **image**데이터의 길이를 정확하게 보고합니다. 응용 프로그램은 *StrLen_or_IndPtr* 매개 변수 반환 값을 이용하여 긴 데이터를 신속하게 검색할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 **SQLGetData**를 사용하여 검색된 **text**, **ntext** 및 **image**데이터의 길이를 정확하게 보고합니다. 애플리케이션은 *StrLen_or_IndPtr* 매개 변수 반환 값을 이용하여 긴 데이터를 신속하게 검색할 수 있습니다.  
   
 > [!NOTE]  
 >  큰 값 형식에 대해 *StrLen_or_IndPtr* 은 데이터 잘림이 발생할 경우 SQL_NO_TOTAL을 반환합니다.  

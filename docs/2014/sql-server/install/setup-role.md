@@ -13,7 +13,7 @@ ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48130563"
@@ -34,7 +34,7 @@ ms.locfileid: "48130563"
   
  다음 방법 중 하나를 사용 하 여 소프트웨어를 구성 해야 설치가 완료 된 후: PowerPivot 구성 도구, PowerShell cmdlet 또는 SharePoint 2010 중앙 관리 합니다. 이전 릴리스와 달리 설치 프로그램에서는 더 이상 PowerPivot 설치에 대한 구성 작업을 수행하지 않습니다.  
   
- 역할 기반 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 클라이언트 응용 프로그램이 포함되어 있지 않습니다. 클라이언트 응용 프로그램은 별도로 설치됩니다.  
+ 역할 기반 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 클라이언트 응용 프로그램이 포함되어 있지 않습니다. 클라이언트 애플리케이션은 별도로 설치됩니다.  
   
  **모든 기능을 기본값으로 설치**  
  이 설치 역할을 선택하여 이번 릴리스에 사용할 수 있는 모든 기능을 설치할 수 있습니다. SharePoint용 PowerPivot은 이 역할에서 제외됩니다. 이 기능을 설치하려면 SharePoint용 PowerPivot 설치 역할을 사용해야 합니다.  

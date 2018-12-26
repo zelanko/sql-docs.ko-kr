@@ -39,7 +39,7 @@ ms.locfileid: "48110683"
 > [!NOTE]  
 >  연결 풀링이 사용 되는 데이터 원본 개체를 호출할 수 없습니다는 **ISSAsynchStatus** 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. **ISSAsynchStatus** 인터페이스는 풀에 있는 데이터 원본 개체에 대해 표시되지 않습니다.  
 >   
->  응용 프로그램에서 명시적으로 커서 엔진을 사용하도록 설정한 경우 **IOpenRowset::OpenRowset** 및 **IMultipleResults::GetResult**는 비동기 처리를 지원하지 않습니다.  
+>  애플리케이션에서 명시적으로 커서 엔진을 사용하도록 설정한 경우 **IOpenRowset::OpenRowset** 및 **IMultipleResults::GetResult**는 비동기 처리를 지원하지 않습니다.  
 >   
 >  또한 원격 프록시/스텁 dll (MDAC 2.8)에서 호출할 수 없습니다는 **ISSAsynchStatus** 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client입니다. **ISSAsynchStatus** 인터페이스는 원격을 통해 표시되지 않습니다.  
 >   

@@ -22,7 +22,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 834fdb8af069a43f8c0ba1c3960d4516f8400767
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48152863"
@@ -150,7 +150,7 @@ End Function
  코드에 액세스하는 방법은 [Accessing Custom Assemblies Through Expressions](../custom-assemblies/accessing-custom-assemblies-through-expressions.md)를 참조하세요.  
   
 ##  <a name="collections"></a> 사용자 지정 어셈블리에 기본 제공 컬렉션 전달  
- 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 응용 프로그램에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 아래를 참조하세요.  
+ 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 애플리케이션에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 아래를 참조하세요.  
   
 -   **네임스페이스:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   

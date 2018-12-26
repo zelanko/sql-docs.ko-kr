@@ -25,7 +25,7 @@ ms.locfileid: "47794371"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ODBC 응용 프로그램에서 SQL 문을 실행하려면 문 핸들 할당, 문 특성 설정, SQL 문 준비 및 실행 작업을 수행해야 합니다.  
+  ODBC 애플리케이션에서 SQL 문을 실행하려면 문 핸들 할당, 문 특성 설정, SQL 문 준비 및 실행 작업을 수행해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -19,7 +19,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48085644"
@@ -31,7 +31,7 @@ ms.locfileid: "48085644"
   
 -   삭제 충돌. 삭제 충돌은 한 위치에서 행을 삭제하고 다른 위치에서 같은 행을 변경할 때 발생합니다.  
   
- 충돌 감지와 해결에는 많은 시간과 리소스가 필요하기 때문에 각 구독자가 서로 다른 데이터 하위 집합을 수정하도록 데이터 파티션을 만들어 응용 프로그램에서 충돌을 최소화하는 것이 좋습니다.  
+ 충돌 감지와 해결에는 많은 시간과 리소스가 필요하기 때문에 각 구독자가 서로 다른 데이터 하위 집합을 수정하도록 데이터 파티션을 만들어 애플리케이션에서 충돌을 최소화하는 것이 좋습니다.  
   
 ## <a name="detecting-conflicts"></a>충돌 감지  
  게시를 만들고 지연 업데이트를 설정하면 복제는 기본 테이블에 기본값이 **newid()** 인**uniqueidentifier**열( **msrepl_tran_version** )을 추가합니다. 게시자 또는 구독자에서 게시된 데이터가 변경되면 행은 새로운 GUID(Globally Unique Identifier)를 받아 새로운 행 버전이 있음을 표시합니다. 큐 판독기 에이전트는 충돌이 있는지 확인하기 위해 동기화 중 이 열을 사용합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48085644"
  큐 판독기 에이전트가 충돌을 감지하면 큐에 남은 모든 트랜잭션(충돌한 트랜잭션을 포함)은 거부되고 구독자는 다시 초기화하도록 표시됩니다. 배포 에이전트는 게시에 대해 생성된 다음 스냅숏을 구독자에 적용합니다.  
   
 ### <a name="subscriber-wins"></a>구독자 내용 적용  
- 구독자 변경 내용 적용 정책에서 충돌 감지는 게시자 변경 내용 적용 항목을 업데이트하는 마지막 구독자 트랜잭션을 의미합니다. 이 경우 충돌이 감지되면 구독자가 보낸 트랜잭션이 계속 사용되고 게시자가 업데이트됩니다. 이 정책은 이러한 변경 내용이 데이터 무결성을 손상하지 않은 응용 프로그램에 적합합니다.  
+ 구독자 변경 내용 적용 정책에서 충돌 감지는 게시자 변경 내용 적용 항목을 업데이트하는 마지막 구독자 트랜잭션을 의미합니다. 이 경우 충돌이 감지되면 구독자가 보낸 트랜잭션이 계속 사용되고 게시자가 업데이트됩니다. 이 정책은 이러한 변경 내용이 데이터 무결성을 손상하지 않은 애플리케이션에 적합합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  

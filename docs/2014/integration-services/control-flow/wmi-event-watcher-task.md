@@ -18,7 +18,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48203113"
@@ -30,7 +30,7 @@ ms.locfileid: "48203113"
   
 -   서버에서 사용 가능한 메모리가 지정된 백분율 아래로 떨어지면 파일을 삭제하는 패키지를 실행합니다.  
   
--   응용 프로그램 설치를 감시한 후 응용 프로그램을 사용하는 패키지를 실행합니다.  
+-   애플리케이션 설치를 감시한 후 애플리케이션을 사용하는 패키지를 실행합니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 WMI 정보를 읽는 태스크가 포함됩니다.  
   

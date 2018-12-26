@@ -48,7 +48,7 @@ ms.locfileid: "47817001"
 |**멤버**|참가|멤버는 새 항목을 만들고 디자인 도구에서 SharePoint 라이브러리로 항목 보고서와 모델을 게시할 수 있습니다.|라이브러리에 보고서 및 기타 항목을 추가합니다. 보고서 및 기타 문서에 대한 항목 속성을 편집합니다. 보고서 및 기타 항목을 삭제합니다. 데이터 탐색을 위해 보고서 모델을 사용하는 보고서 등 보고서를 봅니다. 보고서 기록 스냅숏을 비롯한 문서의 이전 버전을 봅니다. 이 경우 보고서 기록이 생성된 보고서를 열 권한이 사용자에게 있어야 합니다. 보고서의 매개 변수를 설정합니다. 보고서의 처리 옵션을 설정합니다. 보고서 모델을 생성합니다. 보고서 작성기에서 보고서를 만듭니다. 공유 데이터 원본을 만들고 관리합니다. 해당 사용자가 소유하는 구독을 만들고 변경 및 삭제합니다. 구독에 공유 일정을 사용합니다. 보고서 기록을 포함하여 문서 버전을 만들고 관리합니다. 보고서 정의나 보고서 모델의 원본 파일을 다운로드합니다. 보고서 정의, 보고서 모델, 공유 데이터 원본 또는 리소스를 바꿉니다(항목 속성 및 사용 권한 유지).|  
 |**방문자** 및 **뷰어**|읽기|방문자는 보고서를 볼 수 있습니다.|데이터 탐색을 위해 보고서 모델을 사용하는 보고서 등 보고서를 봅니다.|  
   
- 기본 제공 그룹과 사용 권한 수준을 사용하지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능에 액세스하려면 특정 사용 권한을 포함해야 합니다. 자세한 내용은 [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)을 참조하세요.  
+ 기본 제공 그룹과 사용 권한 수준을 사용하지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능에 액세스하려면 특정 사용 권한을 포함해야 합니다. 자세한 내용은 [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

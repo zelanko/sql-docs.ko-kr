@@ -17,16 +17,16 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48219573"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
-  중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 응용 프로그램을 디버깅할 때 사용됩니다.  
+  중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 애플리케이션을 디버깅할 때 사용됩니다.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 필터 고려 사항  
- 중단점 필터는 일반적으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 사용되지 않는데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저는 병렬 응용 프로그램이 아니기 때문입니다.  
+ 중단점 필터는 일반적으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 사용되지 않는데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저는 병렬 애플리케이션이 아니기 때문입니다.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>중단점 필터를 지정하려면  
   

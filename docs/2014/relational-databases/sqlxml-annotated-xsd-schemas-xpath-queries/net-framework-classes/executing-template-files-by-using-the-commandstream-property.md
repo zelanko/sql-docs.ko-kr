@@ -19,7 +19,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 442d6a8d355a11d53f5eb6728b7a0f207e37de6d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48199049"
@@ -80,7 +80,7 @@ class Test
    }  
 ```  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  이 예에서 제공하는 XML 템플릿(TemplateFile.xml)을 폴더에 저장합니다.  
   

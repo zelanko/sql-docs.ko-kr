@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5da82ba90913af85f448f30c3e0663fb130f795b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48186769"
@@ -29,7 +29,7 @@ ms.locfileid: "48186769"
   
 -   속성 변경과 같이 다시 초기화가 필요한 동작을 수행합니다. 다시 초기화가 필요한 작업에 대한 자세한 내용은 [게시 및 아티클 속성 변경](publish/change-publication-and-article-properties.md)을 참조하세요.  
   
- 두 경우 모두 다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 최신 스냅숏이 구독자에 적용됩니다. 스냅숏 및 트랜잭션 복제의 경우 다시 초기화가 발생할 때 구독자에서는 수행되었지만 아직 게시자와 동기화되지 않은 변경 내용은 새 스냅숏의 응용 프로그램에서 덮어씁니다.  
+ 두 경우 모두 다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 최신 스냅숏이 구독자에 적용됩니다. 스냅숏 및 트랜잭션 복제의 경우 다시 초기화가 발생할 때 구독자에서는 수행되었지만 아직 게시자와 동기화되지 않은 변경 내용은 새 스냅숏의 애플리케이션에서 덮어씁니다.  
   
  병합 복제의 경우 스냅숏이 적용되기 전에 모든 데이터 변경 내용을 구독자에서 업로드하도록 선택할 수 있습니다. 게시자에서 보류 중인 스키마 변경이 구독자에 적용된 다음 스냅숏이 다시 적용되기 전에 마지막 동기화 이후 구독자에서 수행된 모든 업데이트가 게시자로 전파됩니다. 이러한 동작은 **upload_first** 및 **automatic_reinitialization_policy** 속성을 통해 제어할 수 있습니다. 자세한 내용은 [Reinitialize a Subscription](reinitialize-a-subscription.md)을 참조하십시오. SQL Server Management Studio 또는 복제 모니터를 사용하여 구독을 다시 초기화로 표시하면 변경을 먼저 업로드하는 옵션이 **구독 다시 초기화** 대화 상자에 표시됩니다.  
   

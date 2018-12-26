@@ -18,7 +18,7 @@ ms.locfileid: "51813946"
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 사용자 지정 맵
 SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 파일*이라는 형식으로 정의됩니다.  
   
-이 형식은 원래 비공개 기업에서 설계된 것이지만 현재는 대다수의 GIS 응용 프로그램에서 널리 사용되는 반개방식 형식입니다. 이 형식에 따라 모바일 보고서 게시자에서는 지도를 정의할 때 두 개의 파일을 제공해야 합니다.  
+이 형식은 원래 비공개 기업에서 설계된 것이지만 현재는 대다수의 GIS 애플리케이션에서 널리 사용되는 반개방식 형식입니다. 이 형식에 따라 모바일 보고서 게시자에서는 지도를 정의할 때 두 개의 파일을 제공해야 합니다.  
   
 - 셰이프 기하 도형용 .SHP 파일  
 - 메타데이터용 .DBF 파일  
@@ -36,7 +36,7 @@ SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 
   
 ## <a name="creating--editing-map-geometry"></a>지도 기하 도형 만들기 및 편집  
   
-셰이프 파일을 만들고 편집하는 작업은 복잡한 프로세스이므로 이 문서에서는 설명하지 않습니다. 아래에는 이 프로세스를 시작하는 데 도움이 되는 몇 가지 리소스와 응용 프로그램이 나와 있습니다.  
+셰이프 파일을 만들고 편집하는 작업은 복잡한 프로세스이므로 이 문서에서는 설명하지 않습니다. 아래에는 이 프로세스를 시작하는 데 도움이 되는 몇 가지 리소스와 애플리케이션이 나와 있습니다.  
   
 - ArcGIS: [https://www.arcgis.com/](https://www.arcgis.com/)  
 - Adobe Illustrator용 MAPublisher 플러그 인: [https://www.avenza.com/mapublisher](https://www.avenza.com/mapublisher)  

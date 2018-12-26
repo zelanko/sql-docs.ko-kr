@@ -25,7 +25,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b4ac9c592ae353b61388fa37ff3fe18cb26e35ac
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48131175"
@@ -55,7 +55,7 @@ ms.locfileid: "48131175"
 -   복제 프로그래밍: [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>에이전트 프로필  
- 복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 복제는 각 에이전트에 대한 기본 프로필과 로그 판독기 에이전트, 배포 에이전트 및 병합 에이전트에 대한 미리 정의된 추가 프로필을 제공합니다. 제공된 프로필뿐 아니라 응용 프로그램 요구 사항에 찾는 프로필을 만들 수 있습니다. 자세한 내용은 [Replication Agent Profiles](replication-agent-profiles.md)을(를) 참조하세요.  
+ 복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 복제는 각 에이전트에 대한 기본 프로필과 로그 판독기 에이전트, 배포 에이전트 및 병합 에이전트에 대한 미리 정의된 추가 프로필을 제공합니다. 제공된 프로필뿐 아니라 애플리케이션 요구 사항에 찾는 프로필을 만들 수 있습니다. 자세한 내용은 [Replication Agent Profiles](replication-agent-profiles.md)을(를) 참조하세요.  
   
  명령줄 매개 변수를 직접 지정하는 방법은 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   

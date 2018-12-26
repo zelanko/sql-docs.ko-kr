@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b38679e02b53266bf7bed5488befdc53bb45a1de
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48204213"
@@ -29,7 +29,7 @@ ms.locfileid: "48204213"
 |BindNumericAs|Integer(열거형)|이 속성은 ODBC 대상이 데이터 형식이 SQL_TYPE_NUMERIC 및 SQL_TYPE_DECIMAL인 숫자 데이터가 포함된 열을 바인딩하는 방법을 결정합니다.<br /><br /> 가능한 값은 열을 SQL_C_CHAR로 바인딩하는 Char(0)과 열을 SQL_C_NUMERIC으로 바인딩하는 숫자(1)입니다. 기본값은 Char(0)입니다.<br /><br /> **참고**: 이 속성은 **ODBC 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |DefaultCodePage|정수|문자열 열에 사용할 코드 페이지입니다.<br /><br /> **참고**: 이 속성은 **ODBC 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |InsertMethod|Integer(열거형)|데이터 삽입에 사용되는 메서드입니다. 가능한 값은 행 단위(0) 및 일괄 처리(1)입니다. 기본값은 일괄 처리(1)입니다.<br /><br /> 이러한 옵션에 대한 자세한 내용은 [ODBC Destination](odbc-destination.md)의 "로드 옵션"을 참조하십시오.|  
-|StatementTimeout|정수|오류가 발생하여 응용 프로그램으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 120입니다.|  
+|StatementTimeout|정수|오류가 발생하여 애플리케이션으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 120입니다.|  
 |TableName|String|데이터가 삽입되는 대상 테이블의 이름입니다.|  
 |TransactionSize|정수|단일 트랜잭션의 삽입 수입니다. 기본값은 ODBC 대상이 자동 커밋 모드에서 작동함을 의미하는 0입니다.<br /><br /> ODBC 연결 관리자는 분산 트랜잭션을 지원하지 않으므로 이 속성을 0 이외의 값으로 설정할 수 있습니다. 그러나 연결 관리자 **RetainSameConnection** 속성이 **true** 로 설정된 경우에는 이 속성을 0으로 설정해야 합니다.<br /><br /> **참고**: 이 속성은 **ODBC 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |LobChunkSize|정수|LOB 열에 대한 청크 크기 할당입니다.|  

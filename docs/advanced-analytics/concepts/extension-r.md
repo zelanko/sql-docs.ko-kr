@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
 ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43892917"
@@ -53,7 +53,7 @@ Microsoft에서 병렬 및 분산 워크 로드에 대 한 추가 R 패키지는
 
 ### <a name="r-scripts-executed-from-sql-server-in-database"></a>SQL Server 데이터베이스에서 실행 되는 R 스크립트
 
-SQL Server 저장된 프로시저를 호출 하 여 실행은 "inside"에서 실행 되는 R 코드입니다. 따라서 저장 프로시저 호출을 만들 수 있는 모든 응용 프로그램은 R 코드의 실행을 시작할 수 있습니다.  이후에 SQL Server는 다음 다이어그램에 요약 된 것 처럼 R 코드의 실행을 관리 합니다.
+SQL Server 저장된 프로시저를 호출 하 여 실행은 "inside"에서 실행 되는 R 코드입니다. 따라서 저장 프로시저 호출을 만들 수 있는 모든 애플리케이션은 R 코드의 실행을 시작할 수 있습니다.  이후에 SQL Server는 다음 다이어그램에 요약 된 것 처럼 R 코드의 실행을 관리 합니다.
 
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 

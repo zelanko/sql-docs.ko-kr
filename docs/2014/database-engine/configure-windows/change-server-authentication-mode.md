@@ -18,7 +18,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dec6d868a1eb568b20794d35774712eb98f6677
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48175659"
@@ -43,7 +43,7 @@ ms.locfileid: "48175659"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 응용 프로그램에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.  
+ sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 애플리케이션에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

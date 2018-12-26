@@ -28,7 +28,7 @@ ms.locfileid: "51600542"
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션*을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 응용 프로그램 연결이 주 복제본으로 전송되도록 합니다. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션*을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 
 
 예를 들어 연결 문자열은 보조 복제본을 대상으로 지정할 수 있습니다. AG(가용성 그룹) 복제본 구성 및 연결 문자열의 설정에 따라 연결이 주 복제본으로 자동으로 리디렉션될 수 있습니다. 
 
@@ -141,20 +141,20 @@ GO
 
 ### <a name="connection-behaviors"></a>연결 동작
 
-다음 다이어그램에서 클라이언트 응용 프로그램은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER02에 연결됩니다. 연결은 주 복제본으로 리디렉션됩니다. 
+다음 다이어그램에서 클라이언트 애플리케이션은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER02에 연결됩니다. 연결은 주 복제본으로 리디렉션됩니다. 
 
 ![원래 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 보조 복제본은 읽기/쓰기 호출을 주 복제본으로 리디렉션합니다. 각 복제본에 대한 읽기/쓰기 연결이 주 복제본으로 리디렉션됩니다. 
 
-다음 다이어그램에서는 주 복제본이 COMPUTER02로 수동 장애 조치(Failover)되었습니다. 클라이언트 응용 프로그램은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER01에 연결합니다. 연결은 주 복제본으로 리디렉션됩니다. 
+다음 다이어그램에서는 주 복제본이 COMPUTER02로 수동 장애 조치(Failover)되었습니다. 클라이언트 애플리케이션은 `ApplicationIntent=ReadWrite`를 사용하여 COMPUTER01에 연결합니다. 연결은 주 복제본으로 리디렉션됩니다. 
 
 ![원래 가용성 그룹](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 
 ## <a name="sql-server-instance-offline"></a>SQL Server 인스턴스 오프라인
 
-연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 응용 프로그램이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 응용 프로그램은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)를 참조하세요.
+연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 애플리케이션이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 애플리케이션은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -13,16 +13,16 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90c1387a609ee59dec93b67e0a48bd2af7baf77
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48129773"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능
-  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 계속 제공되지만 더 이상 사용되지 않는 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 계속 제공되지만 더 이상 사용되지 않는 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않는 기능  
- 아래의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오. 기능 이름 열은 추적 이벤트에 ObjectName으로 표시되고 성능 카운터 및 sys.dm_os_performance_counters에 instance_name으로 표시됩니다. 기능 ID는 추적 이벤트에 ObjectId로 표시됩니다.  
+ 아래의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 기능은 다음 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오. 기능 이름 열은 추적 이벤트에 ObjectName으로 표시되고 성능 카운터 및 sys.dm_os_performance_counters에 instance_name으로 표시됩니다. 기능 ID는 추적 이벤트에 ObjectId로 표시됩니다.  
   
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  

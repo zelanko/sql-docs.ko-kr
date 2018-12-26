@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48133293"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
-  다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 응용 프로그램의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
+  다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 애플리케이션의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

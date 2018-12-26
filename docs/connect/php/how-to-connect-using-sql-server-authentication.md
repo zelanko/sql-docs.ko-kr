@@ -45,13 +45,13 @@ SQL Server 인증을 사용하여 SQL Server에 연결할 때 다음 예방 조�
   
 -   PHP 스크립트에서 일반 텍스트로 연결 특성 *UID* 및 *PWD* 에 대한 값을 포함하지 마세요. 이러한 값은 적절하게 제한된 권한을 사용하여 응용 프로그램과 관련된 디렉터리에 저장되어야 합니다.  
   
--   *sa* 계정을 사용하지 마세요. 응용 프로그램을 원하는 권한을 가진 데이터베이스 사용자에게 매핑하고 강력한 암호를 사용합니다.  
+-   *sa* 계정을 사용하지 마세요. 애플리케이션을 원하는 권한을 가진 데이터베이스 사용자에게 매핑하고 강력한 암호를 사용합니다.  
   
 > [!NOTE]  
 > 연결을 설정할 때 사용자 ID 및 암호 외에 연결 특성을 설정할 수 있습니다. 지원되는 연결 특성의 전체 목록은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 SQL Server 인증이 포함된 SQLSRV 드라이버를 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 필수 *UID* 및 *PWD* 연결 특성 값을 *C:\AppData* 디렉터리의 응용 프로그램 관련 텍스트 파일인 *uid.txt* 및 *pwd.txt*에서 가져옵니다. 연결이 설정된 후 사용자 로그인을 확인하기 위해 서버가 쿼리됩니다.  
+다음 예제에서는 SQL Server 인증이 포함된 SQLSRV 드라이버를 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 필수 *UID* 및 *PWD* 연결 특성 값을 *C:\AppData* 디렉터리의 애플리케이션 관련 텍스트 파일인 *uid.txt* 및 *pwd.txt*에서 가져옵니다. 연결이 설정된 후 사용자 로그인을 확인하기 위해 서버가 쿼리됩니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   

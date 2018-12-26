@@ -13,13 +13,13 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89d2d5d8cee989d6541cdb256b0a7aaf48d00162
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48142215"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 MDS(Master Data Services) 기능
-  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
 ## <a name="staging-process"></a>준비 프로세스  
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 에서 사용된 준비 프로세스는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 더 이상 사용되지 않습니다. 하지만 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서는 계속 사용할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48142215"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에는 향상된 성능의 새로운 준비 프로세스가 구현되었습니다. 자세한 내용은 [데이터 가져오기&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 메타데이터 모델은 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 계속 표시되지만 더 이상 사용되지 않습니다. 후속 릴리스에서 제거될 예정입니다. 사용자는 **탐색기** 기능 영역에서 더 이상 메타데이터를 볼 수 없으며 더 이상 메타데이터 모델 버전을 만들 수 없습니다.  
+ 메타데이터 모델은 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 계속 표시되지만 더 이상 사용되지 않습니다. 후속 릴리스에서 제거될 예정입니다. 사용자는 **탐색기** 기능 영역에서 더 이상 메타데이터를 볼 수 없으며 더 이상 메타데이터 모델 버전을 만들 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014에서 지원되지 않는 MDS(Master Data Services) 기능](discontinued-master-data-services-features.md)  

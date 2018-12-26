@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 | Microsoft 문서
+title: 데이터 계층 애플리케이션 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48214733"
 ---
 # <a name="data-tier-applications"></a>의
-  DAC(데이터 계층 응용 프로그램)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
+  DAC(데이터 계층 애플리케이션)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
   
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 관련 아티팩트입니다.  
   
-## <a name="benefits-of-data-tier-applications"></a>데이터 계층 응용 프로그램의 이점  
- 대부분의 데이터베이스 응용 프로그램 수명 주기에는 응용 프로그램 업데이트 및 유지 관리 활동을 위해 개발자 및 DBA의 스크립트 공유 및 교환과 임시 통합 정보가 포함됩니다. 이러한 방식은 데이터베이스 수가 많지 않은 경우에 허용 가능하지만 데이터베이스 수와 크기 및 복잡도가 증가할수록 확장성이 크게 떨어집니다.  
+## <a name="benefits-of-data-tier-applications"></a>데이터 계층 애플리케이션의 이점  
+ 대부분의 데이터베이스 애플리케이션 수명 주기에는 애플리케이션 업데이트 및 유지 관리 활동을 위해 개발자 및 DBA의 스크립트 공유 및 교환과 임시 통합 정보가 포함됩니다. 이러한 방식은 데이터베이스 수가 많지 않은 경우에 허용 가능하지만 데이터베이스 수와 크기 및 복잡도가 증가할수록 확장성이 크게 떨어집니다.  
   
- DAC는 선언적인 데이터베이스 개발을 통해 배포 및 관리를 간소화할 수 있게 해주는 데이터베이스 수명 주기 관리 및 생산성 도구입니다. 개발자는 SQL Server Data Tools 데이터베이스 프로젝트에서 데이터베이스를 작성한 후 DBA에게 전달하기 위해 데이터베이스를 DACPAC로 작성할 수 있습니다. DBA는 SQL Server Management Studio를 사용하여 DAC를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테스트 또는 프로덕션 인스턴스나 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 배포할 수 있습니다. 또는 DBA가 이전에 SQL Server Management Studio를 사용하여 배포된 데이터베이스를 DACPAC를 통해 업그레이드할 수 있습니다. DBA는 테스트 또는 프로덕션 조정을 반영하거나 응용 프로그램 내 변경 사항에 따라 데이터베이스 설계를 추가로 변경할 수 있도록 데이터베이스를 DACPAC로 추출하고 이를 개발자에게 전달함으로써 수명 주기를 완료합니다.  
+ DAC는 선언적인 데이터베이스 개발을 통해 배포 및 관리를 간소화할 수 있게 해주는 데이터베이스 수명 주기 관리 및 생산성 도구입니다. 개발자는 SQL Server Data Tools 데이터베이스 프로젝트에서 데이터베이스를 작성한 후 DBA에게 전달하기 위해 데이터베이스를 DACPAC로 작성할 수 있습니다. DBA는 SQL Server Management Studio를 사용하여 DAC를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테스트 또는 프로덕션 인스턴스나 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 배포할 수 있습니다. 또는 DBA가 이전에 SQL Server Management Studio를 사용하여 배포된 데이터베이스를 DACPAC를 통해 업그레이드할 수 있습니다. DBA는 테스트 또는 프로덕션 조정을 반영하거나 애플리케이션 내 변경 사항에 따라 데이터베이스 설계를 추가로 변경할 수 있도록 데이터베이스를 DACPAC로 추출하고 이를 개발자에게 전달함으로써 수명 주기를 완료합니다.  
   
  스크립트 기반 배포 대신 DAC 기반 배포를 사용할 경우의 이점은 DBA가 이 도구를 통해 다양한 원본 및 대상 데이터베이스의 동작을 식별하고 유효성을 검사할 수 있다는 점입니다. 업그레이드 중에 데이터 손실이 발생할 수 있는 경우 이 도구를 통해 DBA에게 경고가 표시되고 업그레이드 계획도 제공됩니다. DBA는 계획을 평가하고 도구를 활용하여 업그레이드를 계속 진행할 수 있습니다.  
   
  DAC는 또한 개발자와 DBA가 해당 수명 주기 전체에 걸쳐 데이터베이스 계보를 유지 관리할 수 있도록 버전 관리 기능을 지원합니다.  
   
 ## <a name="dac-concepts"></a>DAC 개념  
- DAC를 사용하면 응용 프로그램을 지원하는 데이터 계층 요소를 간편하게 개발, 배포 및 관리할 수 있습니다.  
+ DAC를 사용하면 애플리케이션을 지원하는 데이터 계층 요소를 간편하게 개발, 배포 및 관리할 수 있습니다.  
   
--   DAC(데이터 계층 응용 프로그램)는 테이블, 뷰 및 인스턴스 개체와 같은 사용자의 데이터베이스와 연결된 모든 SQL Server 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 DBA가 SQL Server 개체를 DAC 패키지(또는 .dacpac 파일)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 SQL Server 데이터베이스의 자체 포함 배포 단위입니다.  
+-   DAC(데이터 계층 애플리케이션)는 테이블, 뷰 및 인스턴스 개체와 같은 사용자의 데이터베이스와 연결된 모든 SQL Server 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 DBA가 SQL Server 개체를 DAC 패키지(또는 .dacpac 파일)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 SQL Server 데이터베이스의 자체 포함 배포 단위입니다.  
   
 -   SQL Server 데이터베이스가 DAC로 처리되도록 하려면 사용자 작업을 통해 명시적으로 또는 DAC 작업 중 하나를 통해 암시적으로 등록되어 있어야 합니다. 데이터베이스가 등록되면 DAC 버전 및 기타 속성이 데이터베이스의 메타데이터로 기록됩니다. 반대로, 데이터베이스의 등록을 취소하면 DAC 속성을 제거할 수 있습니다.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48214733"
 ## <a name="dac-tools"></a>DAC 도구  
  DACPAC는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 제공되는 여러 도구 간에 쉽게 사용할 수 있습니다. 이러한 도구는 상호 운용성 단위로 DACPAC를 사용하는 여러 사용자의 요구 사항을 해결해 줍니다.  
   
--   응용 프로그램 개발자  
+-   애플리케이션 개발자  
   
     -   데이터베이스 개발자는 SQL Server Data Tools 데이터베이스 프로젝트를 사용하여 데이터베이스를 디자인할 수 있습니다. 이 프로젝트를 성공적으로 작성할 경우 .dacpac 파일에 포함된 DACPAC가 생성됩니다.  
   
     -   또한 개발자는 DACPAC를 데이터베이스 프로젝트에 포함하고 계속해서 데이터베이스를 디자인할 수 있습니다.  
   
-    -   SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이터베이스 응용 프로그램 개발을 위한 로컬 DB를 지원합니다. 개발자는 이 로컬 데이터베이스의 스냅숏을 만들어서 .dacpac 파일에 포함된 DACPAC를 만들 수 있습니다.  
+    -   SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이터베이스 애플리케이션 개발을 위한 로컬 DB를 지원합니다. 개발자는 이 로컬 데이터베이스의 스냅숏을 만들어서 .dacpac 파일에 포함된 DACPAC를 만들 수 있습니다.  
   
     -   개발자는 DACPAC를 생성하지 않고도 독립적으로 데이터베이스 프로젝트를 데이터베이스에 직접 게시할 수 있습니다. 게시 작업은 다른 도구를 사용한 배포 작업과 비슷한 동작을 따릅니다.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "48214733"
   
 -   **추출** – 사용자가 데이터베이스를 DACPAC로 추출할 수 있습니다.  
   
--   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 SQL Azure용 관리 포털과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 응용 프로그램으로 등록됩니다.  
+-   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 SQL Azure용 관리 포털과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 애플리케이션으로 등록됩니다.  
   
 -   **등록** - 사용자가 데이터베이스를 데이터 계층 응용 프로그램으로 등록할 수 있습니다.  
   
 -   **등록 취소** - 이전에 DAC로 등록된 데이터베이스를 등록 취소할 수 있습니다.  
   
--   **업그레이드** - DACPAC를 사용하여 데이터베이스를 업그레이드할 수 있습니다. 이전에 데이터 계층 응용 프로그램으로 등록되지 않은 데이터베이스에서도 업그레이드가 지원되지만 업그레이드할 경우 데이터베이스가 암시적으로 등록됩니다.  
+-   **업그레이드** - DACPAC를 사용하여 데이터베이스를 업그레이드할 수 있습니다. 이전에 데이터 계층 애플리케이션으로 등록되지 않은 데이터베이스에서도 업그레이드가 지원되지만 업그레이드할 경우 데이터베이스가 암시적으로 등록됩니다.  
   
 ## <a name="backup-package-bacpac"></a>백업 패키지(.bacpac)  
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 아티팩트입니다. BACPAC는 확장명이 .bacpac인 Windows 파일입니다. DACPAC와 비슷하게 BACPAC 파일 형식도 개방형 형식이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. 데이터는 JSON 형식으로 저장됩니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "48214733"
 ## <a name="permissions"></a>사용 권한  
  멤버 여야 합니다는 `dbmanager` 역할 할당 또는 `CREATE DATABASE` DAC 패키지를 배포 하 여 데이터베이스 만들기를 포함 하 여 데이터베이스를 만들 수 있는 권한이 있습니다. 멤버 여야 합니다는 `dbmanager` 역할에 할당 된 또는 `DROP DATABASE` 데이터베이스를 삭제 하는 권한을 합니다.  
   
-## <a name="data-tier-application-tasks"></a>데이터 계층 응용 프로그램 태스크  
+## <a name="data-tier-application-tasks"></a>데이터 계층 애플리케이션 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

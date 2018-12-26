@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 284a99d74e8b0aa2e3c3b47cc1f277df537b7e9d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48168783"
@@ -149,9 +149,9 @@ ms.locfileid: "48168783"
  사용 권한 만들기 및 역할을 사용 하는 방법에 대 한 일반 정보에 대 한 참조를 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Onl 온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com에서.  
   
 ### <a name="configuration-of-report-server"></a>보고서 서버 구성  
- 보고서 작성기에서 보고서를 작성하고 Windows Vista, Windows Server 2008 또는 Windows 7에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하는 경우 보고서를 열거나 저장하기 위해 보고서 서버에 액세스할 때 액세스 거부 오류가 발생할 수 있습니다. 이러한 오류는 Windows Vista, Windows Server 2008 및 Windows 7의 보안 기능인 UAC(사용자 계정 컨트롤)가 응용 프로그램에 액세스할 때 관리자 권한을 제거하여 승격된 권한이 남용되지 않도록 제한하기 때문입니다.  
+ 보고서 작성기에서 보고서를 작성하고 Windows Vista, Windows Server 2008 또는 Windows 7에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하는 경우 보고서를 열거나 저장하기 위해 보고서 서버에 액세스할 때 액세스 거부 오류가 발생할 수 있습니다. 이러한 오류는 Windows Vista, Windows Server 2008 및 Windows 7의 보안 기능인 UAC(사용자 계정 컨트롤)가 애플리케이션에 액세스할 때 관리자 권한을 제거하여 승격된 권한이 남용되지 않도록 제한하기 때문입니다.  
   
- 하지만 추가 구성을 통해 보고서 작성기 사용자가 보고서 서버를 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가할 수 있습니다. 기본적으로 Windows Vista, Windows Server 2008 및 Windows 7에서 Internet Explorer 7.0 이상은 보호 모드로 실행됩니다. 보호 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 응용 프로그램에 대한 보호 모드를 해제할 수 있습니다. 이 변경을 수행하려면 관리자 권한이 있어야 합니다.  
+ 하지만 추가 구성을 통해 보고서 작성기 사용자가 보고서 서버를 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가할 수 있습니다. 기본적으로 Windows Vista, Windows Server 2008 및 Windows 7에서 Internet Explorer 7.0 이상은 보호 모드로 실행됩니다. 보호 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 애플리케이션에 대한 보호 모드를 해제할 수 있습니다. 이 변경을 수행하려면 관리자 권한이 있어야 합니다.  
   
  구성에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 참조 하세요 [Reporting Services 구성 관리자 &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) 에 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) msdn.microsoft.com에서.  
   

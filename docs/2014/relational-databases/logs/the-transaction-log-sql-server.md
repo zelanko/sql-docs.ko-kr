@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48072893"
@@ -121,7 +121,7 @@ ms.locfileid: "48072893"
 -   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) 하 고 [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) 문을 삽입 또는 새 데이터를 추가할 때를 `text`, `ntext`, 및 `image` 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!NOTE]  
-    >  WRITETEXT 및 UPDATETEXT 문은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 마십시오.  
+    >  WRITETEXT 및 UPDATETEXT 문은 더 이상 사용되지 않으므로 새 애플리케이션에서 사용하지 마십시오.  
   
 -   데이터베이스가 단순 또는 대량 로그 복구 모델로 설정되면 작업이 오프라인으로 실행되든 온라인으로 실행되든 관계없이 일부 인덱스 DDL 작업이 최소 로깅됩니다. 최소한으로 로깅되는 인덱스 작업은 다음과 같습니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48072893"
     -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 또는 DBCC DBREINDEX 작업  
   
         > [!NOTE]  
-        >  DBCC DBREINDEX 문은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 마십시오.  
+        >  DBCC DBREINDEX 문은 더 이상 사용되지 않으므로 새 애플리케이션에서 사용하지 마십시오.  
   
     -   DROP INDEX 새 힙 다시 작성(해당 사항이 있을 경우)  
   

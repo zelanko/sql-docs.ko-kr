@@ -57,7 +57,7 @@ ms.locfileid: "48054143"
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 **빌드** 메뉴에서 클릭 **배포 \<프로젝트 이름 >** 합니다.  
   
-     처리 옵션 속성이 처리 안 함으로 설정되지 않았으면 **배포** 대화 상자에 메타데이터 배포 및 모델에 포함된 각 테이블의 처리 상태가 표시됩니다. 배포 프로세스가 완료된 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 Analysis Services 인스턴스에 연결하고 새 model 데이터베이스 개체가 만들어졌는지 확인하거나, 클라이언트 보고 응용 프로그램을 사용하여 배포 모델에 연결합니다.  
+     처리 옵션 속성이 처리 안 함으로 설정되지 않았으면 **배포** 대화 상자에 메타데이터 배포 및 모델에 포함된 각 테이블의 처리 상태가 표시됩니다. 배포 프로세스가 완료된 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 Analysis Services 인스턴스에 연결하고 새 model 데이터베이스 개체가 만들어졌는지 확인하거나, 클라이언트 보고 애플리케이션을 사용하여 배포 모델에 연결합니다.  
   
 ##  <a name="bkmk_deploy_status"></a> 배포 상태  
  **배포** 대화 상자에서는 배포 작업의 진행 상황을 모니터링할 수 있습니다. 배포 작업을 중지할 수도 있습니다.  

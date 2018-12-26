@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48138483"
@@ -57,7 +57,7 @@ ms.locfileid: "48138483"
 > [!NOTE]  
 >  Excel 데이터 모델 및 테이블 형식 모델은 구조적 측면에서 비슷합니다. 더 많은 양의 데이터를 지원하거나 Excel에서 사용할 수 없는 다른 모델 기능을 사용해야 하는 경우 Excel 데이터 모델을 테이블 형식 모델로 가져올 수 있습니다.  
   
- 테이블 형식 및 다차원 솔루션을 사용 하 여 빌드됩니다 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 독립 실행형에서 실행 되는 기업 BI 프로젝트에 사용 됩니다 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스. 두 솔루션 모두 Excel, Reporting Services 보고서 및 기타 Microsoft 및 타사 응용 프로그램의 BI 응용 프로그램과 쉽게 통합되는 고성능 분석 데이터베이스를 제공합니다. 두 솔루션 모두 Analysis Services를 지원하는 모든 클라이언트 응용 프로그램에서 사용할 수 있는 독립 실행형 데이터베이스를 구현합니다.  
+ 테이블 형식 및 다차원 솔루션을 사용 하 여 빌드됩니다 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 독립 실행형에서 실행 되는 기업 BI 프로젝트에 사용 됩니다 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스. 두 솔루션 모두 Excel, Reporting Services 보고서 및 기타 Microsoft 및 타사 애플리케이션의 BI 애플리케이션과 쉽게 통합되는 고성능 분석 데이터베이스를 제공합니다. 두 솔루션 모두 Analysis Services를 지원하는 모든 클라이언트 애플리케이션에서 사용할 수 있는 독립 실행형 데이터베이스를 구현합니다.  
   
  테이블 형식 및 다차원 모델 간의 차이점을 다음과 같이 좀 더 자세히 설명할 수 있습니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48138483"
   
 -   테이블 형식 솔루션의 경우 데이터 모델링을 위해 테이블 및 관계와 같은 관계형 모델링 구문을 사용하고, 데이터 저장 및 계산을 위해서는 메모리 내 분석 엔진을 사용합니다. 모든 그런 것은 아니지만 대부분의 모델은 RAM에 저장되며 다차원 방식의 모델보다 훨씬 더 빠릅니다.  
   
- 새 프로젝트의 경우에는 먼저 테이블 형식 접근 방식을 고려해보세요. 테이블 형식은 설계, 테스트 및 배포 속도가 빠르고, Microsoft에서 제공되는 최신의 셀프 서비스 BI 응용 프로그램과의 효율성도 뛰어납니다.  
+ 새 프로젝트의 경우에는 먼저 테이블 형식 접근 방식을 고려해보세요. 테이블 형식은 설계, 테스트 및 배포 속도가 빠르고, Microsoft에서 제공되는 최신의 셀프 서비스 BI 애플리케이션과의 효율성도 뛰어납니다.  
   
 ##  <a name="bkmk_ds"></a> 솔루션 유형별 데이터 원본 지원  
  다차원 및 테이블 형식 모델은 외부 원본에서 가져온 데이터를 사용합니다. 대부분의 개발자는 보고 데이터 구조를 지원하도록 설계된 데이터 웨어하우스를 모델의 기본 데이터 원본으로 사용합니다. 데이터 웨어하우스는 별모양 또는 눈송이 스키마에 주로 기반 및 SSIS는 OLTP 솔루션에서 데이터 웨어하우스로 데이터를 로드하는 데 사용됩니다. 모델링은 데이터 웨어하우스를 백엔드 데이터 원본으로 사용하는 경우에 더 간단합니다.  
@@ -156,11 +156,11 @@ ms.locfileid: "48138483"
   
 |**모델링 도구**|**사용 방법**|  
 |-----------------------|------------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|테이블 형식, 다차원 및 데이터 마이닝 솔루션을 만드는 데 사용됩니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 응용 프로그램을 생성할 때 대부분 이 도구를 선호합니다. 참조 [Analysis Services에 사용 되는 응용 프로그램과 도구](tools-and-applications-used-in-analysis-services.md) 세부 정보에 대 한 합니다.|  
-|Excel 2013 이상, Excel용 파워 피벗 추가 기능 포함|Excel용 파워 피벗은 Excel 데이터 모델을 편집하고 개선하는 데 사용하는 도구입니다. Excel에서 별도의 응용 프로그램 작업 영역이 열리지만 Excel과 동일한 시각적 요소(탭된 페이지, 모눈 레이아웃 및 수식 입력줄)를 사용합니다. 능숙 한 사용자는 Excel에서 일반적으로이 도구를 통해 선호 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. [파워 피벗: Excel의 강력한 데이터 분석 및 데이터 모델링](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)을 참조하십시오.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|테이블 형식, 다차원 및 데이터 마이닝 솔루션을 만드는 데 사용됩니다. 이 제작 환경에서는 Visual Studio 셸을 사용하여 작업 영역, 속성 창 및 개체 탐색을 제공합니다. Visual Studio를 이미 사용 중인 기술 사용자는 비즈니스 인텔리전스 애플리케이션을 생성할 때 대부분 이 도구를 선호합니다. 참조 [Analysis Services에 사용 되는 응용 프로그램과 도구](tools-and-applications-used-in-analysis-services.md) 세부 정보에 대 한 합니다.|  
+|Excel 2013 이상, Excel용 파워 피벗 추가 기능 포함|Excel용 파워 피벗은 Excel 데이터 모델을 편집하고 개선하는 데 사용하는 도구입니다. Excel에서 별도의 애플리케이션 작업 영역이 열리지만 Excel과 동일한 시각적 요소(탭된 페이지, 모눈 레이아웃 및 수식 입력줄)를 사용합니다. 능숙 한 사용자는 Excel에서 일반적으로이 도구를 통해 선호 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. [파워 피벗: Excel의 강력한 데이터 분석 및 데이터 모델링](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)을 참조하십시오.|  
   
 ##  <a name="bkmk_client"></a> 클라이언트 및 보고 응용 프로그램  
- 이전 릴리스에서는 사용자가 선택한 모델 유형이 사용할 수 있는 클라이언트 응용 프로그램에 영향을 미치지만 시간이 지나면서 이러한 구분이 모호해졌습니다. 테이블 형식 및 다차원 형식은 Analysis Services 데이터에 연결하는 클라이언트 응용 프로그램 관련하여 거의 동일한 지원을 제공합니다. 다음 표는 Analysis Services 데이터 모델과 함께 사용할 수 있는 Microsoft 클라이언트 응용 프로그램의 목록입니다.  
+ 이전 릴리스에서는 사용자가 선택한 모델 유형이 사용할 수 있는 클라이언트 애플리케이션에 영향을 미치지만 시간이 지나면서 이러한 구분이 모호해졌습니다. 테이블 형식 및 다차원 형식은 Analysis Services 데이터에 연결하는 클라이언트 애플리케이션 관련하여 거의 동일한 지원을 제공합니다. 다음 표는 Analysis Services 데이터 모델과 함께 사용할 수 있는 Microsoft 클라이언트 애플리케이션의 목록입니다.  
   
 |**응용 프로그램**|**설명**|  
 |---------------------|---------------------|  
@@ -182,14 +182,14 @@ ms.locfileid: "48138483"
  서버 모델은 서로 교환할 수 없습니다. 설치 시 서버 작업에 대한 모드를 선택합니다. 모든 작업을 지원하기 위해 각 서버 모드에 대해 하나씩 여러 인스턴스를 설치해야 합니다.  
   
 ##  <a name="bkmk_sharePoint"></a> 호스팅 플랫폼  
- Microsoft는 데이터, 응용 프로그램, 보고서 및 공동 작업을 호스팅하기 위한 여러 방법을 제공합니다. 이 섹션에서는 각 호스팅 플랫폼과 관련된 Analysis Services 상호 운용성을 다룹니다.  
+ Microsoft는 데이터, 애플리케이션, 보고서 및 공동 작업을 호스팅하기 위한 여러 방법을 제공합니다. 이 섹션에서는 각 호스팅 플랫폼과 관련된 Analysis Services 상호 운용성을 다룹니다.  
   
 |**플랫폼**|**설명**|  
 |------------------|---------------------|  
 |Microsoft Azure|Azure 가상 머신에서 지원되는 모든 Analysis Services 버전 및 에디션을 실행할 수 있습니다. 온-프레미스 관계형 데이터베이스 엔진과 동일한 기능을 많이 제공하는 Azure의 서비스인 Azure SQL 데이터베이스와 달리, Azure에는 동급의 Analysis Services가 없습니다. Azure VM에서의 Analysis Services 설치, 구성 및 실행이 유일한 Azure 옵션입니다.|  
 |Office 365|Office 365의 Excel Online은 온-프레미스에서 실행되는 테이블 형식 및 다차원 모델에 대한 원격 연결을 지원합니다.|  
 |Office 365의 Power BI 사이트|Power BI 사이트에서 파워 뷰 보고서는 온-프레미스에서 실행되는 표 형식 데이터 모델에 연결할 수 있습니다.|  
-|온-프레미스 서버(SharePoint 및 SQL Server 인스턴스)|온-프레미스 데이터베이스 서버(즉, Analysis Services가 설치된 SQL Server 인스턴스)는 여전히 보고서 및 클라이언트 응용 프로그램에 Analysis Services 데이터를 사용할 수 있도록 하는 기본 수단입니다. 테이블 형식, 다차원 및 데이터 마이닝 솔루션은 SharePoint에 대한 종속성 없이 네트워크의 Analysis Services 인스턴스에서 실행됩니다.<br /><br /> SQL Server는 PowerPivot 데이터 액세스 및 테이블 형식 데이터 액세스를 위한 지원을 추가하여 SharePoint와 통합됩니다. 각 제품에 사용된 기능 수를 극대화하면 SharePoint 및 SQL Server 통합에 대한 투자가 늘어납니다. SharePoint가 있으면 SharePoint용 SQL Server PowerPivot을 설치하여 PowerPivot 데이터 액세스를 지원하고 네트워크 서버의 외부 Analysis Services 인스턴스에서 실행되는 테이블 형식 데이터베이스에 액세스하는 데 사용되는 PowerPivot .bism 연결 파일을 가져올 수 있습니다.<br /><br /> SharePoint 및 SQL Server가 둘 다 있으면 다음과 같은 서비스 및 응용 프로그램 조합을 지원할 수 있습니다.<br /><br /> Analysis Services 모델(테이블 형식 또는 다차원 형식)<br /><br /> 중간 계층 SharePoint Services(Excel Services, SharePoint의 Reporting Services 또는 PerformancePoint Services)<br /><br /> 심층 데이터 분석 및 탐색을 위한 브라우저 클라이언트 또는 리치 클라이언트(Excel)|  
+|온-프레미스 서버(SharePoint 및 SQL Server 인스턴스)|온-프레미스 데이터베이스 서버(즉, Analysis Services가 설치된 SQL Server 인스턴스)는 여전히 보고서 및 클라이언트 애플리케이션에 Analysis Services 데이터를 사용할 수 있도록 하는 기본 수단입니다. 테이블 형식, 다차원 및 데이터 마이닝 솔루션은 SharePoint에 대한 종속성 없이 네트워크의 Analysis Services 인스턴스에서 실행됩니다.<br /><br /> SQL Server는 PowerPivot 데이터 액세스 및 테이블 형식 데이터 액세스를 위한 지원을 추가하여 SharePoint와 통합됩니다. 각 제품에 사용된 기능 수를 극대화하면 SharePoint 및 SQL Server 통합에 대한 투자가 늘어납니다. SharePoint가 있으면 SharePoint용 SQL Server PowerPivot을 설치하여 PowerPivot 데이터 액세스를 지원하고 네트워크 서버의 외부 Analysis Services 인스턴스에서 실행되는 테이블 형식 데이터베이스에 액세스하는 데 사용되는 PowerPivot .bism 연결 파일을 가져올 수 있습니다.<br /><br /> SharePoint 및 SQL Server가 둘 다 있으면 다음과 같은 서비스 및 애플리케이션 조합을 지원할 수 있습니다.<br /><br /> Analysis Services 모델(테이블 형식 또는 다차원 형식)<br /><br /> 중간 계층 SharePoint Services(Excel Services, SharePoint의 Reporting Services 또는 PerformancePoint Services)<br /><br /> 심층 데이터 분석 및 탐색을 위한 브라우저 클라이언트 또는 리치 클라이언트(Excel)|  
   
 ##  <a name="bkmk_Next"></a> 다음 단계: 솔루션 빌드  
  각 솔루션의 비교 방법에 대한 기본적인 이해를 마쳤으므로, 다음 자습서를 통해 각 솔루션을 작성하는 단계를 배워 보시기 바랍니다. 다음 링크는 각 단계를 설명하는 자습서로 이어집니다.  

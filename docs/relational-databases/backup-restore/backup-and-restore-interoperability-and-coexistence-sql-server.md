@@ -66,7 +66,7 @@ ms.locfileid: "47723791"
  이 섹션에서는 여러 개의 파일 그룹이 있는 전체 모델 데이터베이스와 관련된 내용을 다룹니다.  
   
 > [!NOTE]  
->  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 를 사용해야 합니다.  
+>  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 를 사용해야 합니다.  
   
  데이터베이스 미러링은 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 미러링은 데이터베이스 단위로 구현되며 전체 복구 모델을 사용하는 데이터베이스에서만 작동합니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   

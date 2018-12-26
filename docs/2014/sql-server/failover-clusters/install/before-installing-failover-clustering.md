@@ -245,7 +245,7 @@ ms.locfileid: "48116455"
 ##  <a name="MSDTC"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator) 설치  
  장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하기 전에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] MSDTC(Distributed Transaction Coordinator) 클러스터 리소스를 만들어야 하는지 여부를 결정해야 합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]만 설치하는 경우 MSDTC 클러스터 리소스는 필요하지 않습니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 과 SSIS 또는 워크스테이션 구성 요소를 설치하는 경우 또는 분산 트랜잭션을 사용하려는 경우에는 MSDTC를 설치해야 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]전용 인스턴스에는 MSDTC가 필요하지 않습니다.  
   
- [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서는 하나의 장애 조치(Failover) 클러스터에 여러 MSDTC 인스턴스를 설치할 수 있습니다. 설치된 MSDTC의 첫 번째 인스턴스는 MSDTC의 클러스터 기본 인스턴스가 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC 인스턴스를 자동으로 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로컬 클러스터 리소스 그룹에 설치된 MSDTC 인스턴스를 활용합니다. 그러나 개별 응용 프로그램이 클러스터에 있는 임의의 MSDTC 인스턴스에 매핑될 수 있습니다.  
+ [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서는 하나의 장애 조치(Failover) 클러스터에 여러 MSDTC 인스턴스를 설치할 수 있습니다. 설치된 MSDTC의 첫 번째 인스턴스는 MSDTC의 클러스터 기본 인스턴스가 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC 인스턴스를 자동으로 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로컬 클러스터 리소스 그룹에 설치된 MSDTC 인스턴스를 활용합니다. 그러나 개별 애플리케이션이 클러스터에 있는 임의의 MSDTC 인스턴스에 매핑될 수 있습니다.  
   
  다음 규칙은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 선택할 MSDTC 인스턴스에 적용됩니다.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "48116455"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 설치된 MSDTC 인스턴스가 실패한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 MSDTC의 기본 클러스터 인스턴스 또는 로컬 컴퓨터 인스턴스를 사용하려고 자동으로 시도하지 않습니다. 다른 MSDTC 인스턴스를 사용하려면 실패한 MSDTC 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에서 완전히 제거해야 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 대한 매핑을 만든 경우 매핑된 MSDTC 인스턴스가 실패하면 분산 트랜잭션도 실패합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 다른 MSDTC 인스턴스를 사용하도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 클러스터 그룹에 MSDTC 인스턴스를 추가하거나 매핑을 삭제해야 합니다.  
   
 ### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator 구성  
- 운영 체제를 설치하고 클러스터를 구성한 다음에는 클러스터 관리자를 사용하여 MSDTC가 클러스터에서 작동하도록 구성해야 합니다. MSDTC 클러스터링에 실패해도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에는 문제가 없지만 MSDTC가 올바로 구성되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 응용 프로그램의 기능에 영향을 줄 수 있습니다.  
+ 운영 체제를 설치하고 클러스터를 구성한 다음에는 클러스터 관리자를 사용하여 MSDTC가 클러스터에서 작동하도록 구성해야 합니다. MSDTC 클러스터링에 실패해도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에는 문제가 없지만 MSDTC가 올바로 구성되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션의 기능에 영향을 줄 수 있습니다.  
   
   
   

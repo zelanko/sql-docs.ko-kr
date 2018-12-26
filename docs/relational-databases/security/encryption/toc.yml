@@ -82,7 +82,7 @@ items:
   - name: 상시 암호화(클라이언트 개발)
     href: always-encrypted-client-development.md
     items:
-    - name: .NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발
+    - name: .NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발
       href: develop-using-always-encrypted-with-net-framework-data-provider.md
   - name: 상시 암호화되는 암호화
     href: always-encrypted-cryptography.md

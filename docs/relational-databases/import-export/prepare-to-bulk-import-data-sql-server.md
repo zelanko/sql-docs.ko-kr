@@ -32,7 +32,7 @@ ms.locfileid: "47622551"
   **bcp** 명령, BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하여 데이터 파일의 데이터만 대량으로 가져올 수 있습니다.  
   
 > [!NOTE]  
->  텍스트 파일이 아닌 개체의 데이터를 대량으로 가져오는 사용자 지정 응용 프로그램을 작성할 수 있습니다. 메모리 버퍼에서 데이터를 대량으로 가져오려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(ODBC) API(응용 프로그래밍 인터페이스) 또는 OLE DB **IRowsetFastLoad** 인터페이스에 bcp 확장을 사용합니다.  C# 데이터 테이블에서 데이터를 대량으로 가져오려면 ADO.NET 대량 복사 API인 **SqlBulkCopy**를 사용합니다.  
+>  텍스트 파일이 아닌 개체의 데이터를 대량으로 가져오는 사용자 지정 애플리케이션을 작성할 수 있습니다. 메모리 버퍼에서 데이터를 대량으로 가져오려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(ODBC) API(애플리케이션 프로그래밍 인터페이스) 또는 OLE DB **IRowsetFastLoad** 인터페이스에 bcp 확장을 사용합니다.  C# 데이터 테이블에서 데이터를 대량으로 가져오려면 ADO.NET 대량 복사 API인 **SqlBulkCopy**를 사용합니다.  
   
 > [!NOTE]  
 >  원격 테이블로 데이터를 대량으로 가져올 수 없습니다.  

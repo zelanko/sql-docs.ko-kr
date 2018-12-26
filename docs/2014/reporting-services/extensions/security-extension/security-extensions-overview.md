@@ -59,7 +59,7 @@ ms.locfileid: "48201966"
 ## <a name="when-to-implement-a-security-extension"></a>보안 확장 프로그램 구현 시기  
  가능하면 Windows 인증을 사용하는 것이 좋습니다. 그러나 다음 두 가지 경우에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 사용자 지정 인증 및 권한 부여가 적합할 수 있습니다.  
   
--   인터넷 또는 엑스트라넷 응용 프로그램에서 Windows 계정을 사용할 수 없는 경우  
+-   인터넷 또는 엑스트라넷 애플리케이션에서 Windows 계정을 사용할 수 없는 경우  
   
 -   사용자가 정의한 사용자 및 역할이 있고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 대응하는 권한 부여 체계를 제공해야 하는 경우  
   

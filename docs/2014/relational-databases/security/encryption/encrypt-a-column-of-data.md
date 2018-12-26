@@ -40,7 +40,7 @@ ms.locfileid: "48066517"
   
 -   데이터베이스에 대한 CONTROL 권한.  
   
--   데이터베이스에 대한 CREATE CERTIFICATE 권한. Windows 로그인, SQL Server 로그인 및 응용 프로그램 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
+-   데이터베이스에 대한 CREATE CERTIFICATE 권한. Windows 로그인, SQL Server 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
   
 -   테이블에 대한 ALTER 권한.  
   

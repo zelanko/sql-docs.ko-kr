@@ -81,7 +81,7 @@ ms.locfileid: "52617413"
   
 7.  DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스에서 2~6단계를 반복하여 해당 데이터베이스를 연결합니다.  
   
-8.  또한 DQS_MAIN 데이터베이스를 복원한 후 다음 단계에서 Transact-SQL 문을 실행해야 합니다. 그렇지 않으면 Data Quality 클라이언트 응용 프로그램을 사용하여 Data Quality Server에 연결할 때 오류 메시지가 표시되고 연결할 수 없습니다. 하지만 DQS_PROJECTS 또는 DQS_STAGING_DATA 데이터베이스만 연결하고 DQS_MAIN은 연결하지 않은 경우에는 9단계와 10단계를 수행할 필요가 없습니다.  
+8.  또한 DQS_MAIN 데이터베이스를 복원한 후 다음 단계에서 Transact-SQL 문을 실행해야 합니다. 그렇지 않으면 Data Quality 클라이언트 애플리케이션을 사용하여 Data Quality Server에 연결할 때 오류 메시지가 표시되고 연결할 수 없습니다. 하지만 DQS_PROJECTS 또는 DQS_STAGING_DATA 데이터베이스만 연결하고 DQS_MAIN은 연결하지 않은 경우에는 9단계와 10단계를 수행할 필요가 없습니다.  
   
      Transact-SQL 문을 실행하려면 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다.  
   

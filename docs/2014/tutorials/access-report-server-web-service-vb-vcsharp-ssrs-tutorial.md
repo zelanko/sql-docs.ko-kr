@@ -19,7 +19,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48167633"
@@ -36,7 +36,7 @@ ms.locfileid: "48167633"
   
 -   웹 서비스에 액세스하는 코드를 작성합니다.  
   
--   디버그 모드로 콘솔 응용 프로그램을 실행합니다.  
+-   디버그 모드로 콘솔 애플리케이션을 실행합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  이 자습서를 수행하려면 다음 항목이 필요합니다.  

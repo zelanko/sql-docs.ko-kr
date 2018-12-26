@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48141713"
@@ -76,7 +76,7 @@ ms.locfileid: "48141713"
 |`Requests Not Authorized`|실패한 요청 수입니다(HTTP 401 상태 코드).|  
 |`Requests Rejected`|서버 리소스 부족으로 인해 처리되지 않은 총 요청 수입니다. 이 카운터는 서버가 사용 중임을 나타내는 HTTP 503 상태 코드를 반환하는 요청 수를 나타냅니다.|  
 |`Requests Total`|시작 후 보고서 서버 서비스에서 받은 총 요청 수입니다. 이 카운터는 보고서 관리자에 보낸 요청 수와 보고서 관리자가 보고서 서버로 보낸 요청 수를 계산합니다.|  
-|`Requests/sec`|초당 처리된 요청 수입니다. 이 값은 응용 프로그램 현재 처리량을 나타냅니다.|  
+|`Requests/sec`|초당 처리된 요청 수입니다. 이 값은 애플리케이션 현재 처리량을 나타냅니다.|  
 |`Tasks Queued`|스레드를 사용할 수 있을 때까지 기다리는 태스크 수입니다. 보고서 서버에 대한 각 요청은 하나 이상의 태스크에 해당합니다. 이 카운터는 처리할 준비가 된 태스크의 수만 나타내며 현재 실행 중인 태스크 수는 포함하지 않습니다.|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)  

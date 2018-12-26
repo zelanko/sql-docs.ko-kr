@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34027220"
@@ -67,7 +67,7 @@ ms.locfileid: "34027220"
 9. **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> SharePoint 로그 파일을 보는 방법  
- 로그 파일은 텍스트 파일이므로 텍스트 편집기에서 열 수 있습니다. 타사 로그 뷰어 응용 프로그램을 사용할 수도 있습니다.  
+ 로그 파일은 텍스트 파일이므로 텍스트 편집기에서 열 수 있습니다. 타사 로그 뷰어 애플리케이션을 사용할 수도 있습니다.  
   
 #### <a name="use-a-text-editor"></a>텍스트 편집기 사용  
  텍스트 편집기를 사용하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 오류를 해결하려면 다음 팁을 참조하여 파일에서 관련 정보를 찾을 수 있습니다.  
@@ -80,8 +80,8 @@ ms.locfileid: "34027220"
   
 -   오류가 발생한 시간을 알고 있는 경우 날짜 및 시간 정보를 사용하여 스크롤해야 하는 항목 범위를 좁힙니다.  
   
-#### <a name="use-a-log-viewer-application"></a>로그 뷰어 응용 프로그램 사용  
- 텍스트 편집기를 사용하여 추적 로그를 개별적으로 볼 수도 있지만, 여러 로그 파일을 동시에 볼 수 있는 로그 뷰어 응용 프로그램을 사용하면 더욱 유용합니다. 단일 작업 영역에서 여러 추적 로그를 볼 수 있는 다양한 타사 로그 뷰어 응용 프로그램을 Codeplex 사이트에서 다운로드할 수 있습니다.  
+#### <a name="use-a-log-viewer-application"></a>로그 뷰어 애플리케이션 사용  
+ 텍스트 편집기를 사용하여 추적 로그를 개별적으로 볼 수도 있지만, 여러 로그 파일을 동시에 볼 수 있는 로그 뷰어 애플리케이션을 사용하면 더욱 유용합니다. 단일 작업 영역에서 여러 추적 로그를 볼 수 있는 다양한 타사 로그 뷰어 애플리케이션을 Codeplex 사이트에서 다운로드할 수 있습니다.  
   
  다음 지침에는 Codeplex에서 다운로드할 수 있는 많이 사용되는 SharePoint ULS Log Viewer에 대한 링크가 포함되어 있습니다.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "34027220"
   
 7.  대상 폴더를 지정한 다음 **추출**을 클릭합니다.  
   
-8.  추출된 프로그램 파일이 들어 있는 폴더에서 **ULSViewer** 를 두 번 클릭하여 응용 프로그램을 실행합니다.  
+8.  추출된 프로그램 파일이 들어 있는 폴더에서 **ULSViewer** 를 두 번 클릭하여 애플리케이션을 실행합니다.  
   
-9. 응용 프로그램 창의 왼쪽 위 모퉁이에서 폴더 아이콘을 클릭합니다.  
+9. 애플리케이션 창의 왼쪽 위 모퉁이에서 폴더 아이콘을 클릭합니다.  
   
 10. \Program files\Common Files\Microsoft Shared\Web Server Extensions\14\Logs로 이동합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34027220"
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|사용법|Verbose|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작 =\<*경로*>|연결 요청이 수신되면 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|응용 프로그램 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 할당되었습니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|애플리케이션 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 할당되었습니다.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|에 대 한 요청을에 리디렉션합니다는 \< *PowerPivotdata 원본*>에 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]합니다.|요청이 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|요청 처리|Verbose|사용자 이름에 대 한 요청을에 리디렉션합니다\<*SharePoint 사용자*> 데이터베이스에|SharePoint 사용자를 대신하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본에 대한 가장 연결을 만들었습니다.|  
   

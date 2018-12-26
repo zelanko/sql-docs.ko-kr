@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48169233"
@@ -54,7 +54,7 @@ ms.locfileid: "48169233"
 -   **열 기준 정렬 설정** 속성 – **열 기준 정렬** 속성은 열의 값을 다른 필드의 값을 기준으로 정렬해야 하는지 여부를 지정합니다. 예를 들어 월 이름이 포함된 Month Calendar 열에서 Month Number 열을 기준으로 정렬합니다.  
   
 ## <a name="hide-tables-from-client-tools"></a>클라이언트 도구에서 테이블 숨기기  
- Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 열이 이미 있으므로 Product Category 및 Product Subcategory 테이블을 클라이언트 응용 프로그램에 표시하지 않아도 됩니다.  
+ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 열이 이미 있으므로 Product Category 및 Product Subcategory 테이블을 클라이언트 애플리케이션에 표시하지 않아도 됩니다.  
   
 #### <a name="to-hide-the-product-category-and-product-subcategory-tables"></a>Product Category 및 Product Subcategory 테이블을 숨기려면  
   

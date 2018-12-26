@@ -16,7 +16,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47698501"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결
-보고서 디자인 문제는 보고서 제작 응용 프로그램의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
+보고서 디자인 문제는 보고서 제작 애플리케이션의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   
   
 ## <a name="why-does-my-text-box-show-only-a-single-value-and-not-repeat-for-every-row"></a>입력란에 단일 값만 표시되고 모든 행에 대해 반복되지 않는 이유  
 데이터 집합 필드 참조를 포함하는 입력란이 한 번만 렌더링되고 데이터 집합에 첫 번째 값이 표시됩니다.   

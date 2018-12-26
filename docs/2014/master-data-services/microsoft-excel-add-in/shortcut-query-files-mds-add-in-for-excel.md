@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: e49af33f5e7c02536757cf408e9b774852a9002b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48215663"
@@ -33,10 +33,10 @@ ms.locfileid: "48215663"
   
  이러한 파일을 목록에 저장하여 추가 기능을 열 때 선택할 수 있습니다. 이를 컴퓨터 또는 공유 위치에 내보내거나 다른 사용자에게 전송할 수 있습니다.  
   
-## <a name="queryopener-application"></a>QueryOpener 응용 프로그램  
- [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치한 모든 사용자에게는 QueryOpener라는 응용 프로그램이 설치되어 있습니다. 이 응용 프로그램은 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 바로 가기 쿼리 파일을 여는 데 사용됩니다. 바로 가기 쿼리 파일을 두 번 클릭하면 이 응용 프로그램이 추가 기능에서 파일을 여는 데 자동으로 사용됩니다.  
+## <a name="queryopener-application"></a>QueryOpener 애플리케이션  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치한 모든 사용자에게는 QueryOpener라는 응용 프로그램이 설치되어 있습니다. 이 애플리케이션은 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 바로 가기 쿼리 파일을 여는 데 사용됩니다. 바로 가기 쿼리 파일을 두 번 클릭하면 이 애플리케이션이 추가 기능에서 파일을 여는 데 자동으로 사용됩니다.  
   
- 이 응용 프로그램에서 바로 가기 쿼리 파일을 열면 해당 연결을 "안전한" 연결 즉, 이 위치의 콘텐츠를 신뢰할 수 있는 연결로 지정하라는 메시지가 표시됩니다. 연결을 안전한 연결로 표시할 때마다 연결이 목록에 추가됩니다. 이 목록을 지우려면 **설정** 대화 상자를 열고 **수신 허용 목록에 추가된 서버** 섹션에서 **모두 지우기**를 클릭합니다.  
+ 이 애플리케이션에서 바로 가기 쿼리 파일을 열면 해당 연결을 "안전한" 연결 즉, 이 위치의 콘텐츠를 신뢰할 수 있는 연결로 지정하라는 메시지가 표시됩니다. 연결을 안전한 연결로 표시할 때마다 연결이 목록에 추가됩니다. 이 목록을 지우려면 **설정** 대화 상자를 열고 **수신 허용 목록에 추가된 서버** 섹션에서 **모두 지우기**를 클릭합니다.  
   
  응용 프로그램에 대 한 기본 위치가 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe입니다.  
   

@@ -125,14 +125,14 @@ ms.locfileid: "48146983"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>불필요한 열을 삭제하려면  
   
-1.  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 응용 프로그램에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
+1.  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 애플리케이션에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  **EmployeeID** 열도 중복됩니다. **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 응용 프로그램에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
+2.  **EmployeeID** 열도 중복됩니다. **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 애플리케이션에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  

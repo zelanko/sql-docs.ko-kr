@@ -17,13 +17,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
 ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/08/2018
 ms.locfileid: "48851868"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령줄에서 설치할 수 있습니다. 설치 마법사에서 1) 파일을 설치하고 기본 설정을 사용하여 서버를 구성하거나 2) 파일을 설치하고 설치 마법사에서 서버가 구성되지 않도록 선택할 수 있습니다. 이 항목에서는 설치 프로그램이 보고서 서버 인스턴스를 설치하고 구성하는 *기본 모드용 기본 구성* 을 검토합니다. 설치가 완료되면 보고서 서버가 실행되어 사용할 수 있는 상태가 됩니다. 기본 모드 보고서 서버는 독립 실행형 응용 프로그램 서버로 실행됩니다. 기본 모드가 기본 서버 모드입니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령줄에서 설치할 수 있습니다. 설치 마법사에서 1) 파일을 설치하고 기본 설정을 사용하여 서버를 구성하거나 2) 파일을 설치하고 설치 마법사에서 서버가 구성되지 않도록 선택할 수 있습니다. 이 항목에서는 설치 프로그램이 보고서 서버 인스턴스를 설치하고 구성하는 *기본 모드용 기본 구성* 을 검토합니다. 설치가 완료되면 보고서 서버가 실행되어 사용할 수 있는 상태가 됩니다. 기본 모드 보고서 서버는 독립 실행형 애플리케이션 서버로 실행됩니다. 기본 모드가 기본 서버 모드입니다.  
   
 ||  
 |-|  
@@ -46,7 +46,7 @@ ms.locfileid: "48851868"
 ##  <a name="bkmk_whatisdefaultconfiguration"></a> 기본 구성 이란?  
  기본 모드 옵션에 대해 기본 구성을 선택하면 다음과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능이 설치됩니다.  
   
--   보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 응용 프로그램 및 보고서 관리자 포함)  
+-   보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 애플리케이션 및 보고서 관리자 포함)  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48851868"
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버에서 http://를 포함 하 여 컴퓨터로 확인 되는 모든 호스트 이름에 대해 지정된 된 포트에서 HTTP 요청을 받아들이도록 지정\<컴퓨터 이름 > / reportserver를 http://localhost/reportserver, 또는 http://\<ip 주소 > / reportserver입니다.|  
-|포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 응용 프로그램을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
+|포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 애플리케이션을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
 |가상 디렉터리|기본적으로 가상 디렉터리의 형식으로 만들어집니다\<*instance_name*>는 보고서 서버 웹 서비스 및 이때 다음과\<*instance_name*> 보고서 관리자입니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 보고서 관리자의 기본 가상 디렉터리는 **reports**입니다.|  
   
  전체 URL 문자열의 예는 다음과 같습니다.  

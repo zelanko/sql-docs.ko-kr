@@ -21,13 +21,13 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10e6590da7d5efdb704a3f4005c278e2add41a5d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48134073"
 ---
 # <a name="cursors"></a>커서
-  관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. 예를 들어 SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 응용 프로그램, 특히 대화형 온라인 응용 프로그램에서는 전체 결과 집합을 한 단위로 사용하므로 항상 효과적으로 작업할 수는 없습니다. 이러한 응용 프로그램에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  
+  관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. 예를 들어 SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 애플리케이션, 특히 대화형 온라인 애플리케이션에서는 전체 결과 집합을 한 단위로 사용하므로 항상 효과적으로 작업할 수는 없습니다. 이러한 애플리케이션에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  
   
  커서는 다음과 같이 결과 처리를 확장합니다.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "48134073"
  Transact-SQL 커서  
  DECLARE CURSOR 구문을 기반으로 하며 주로 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트, 저장 프로시저 및 트리거에 사용됩니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 커서는 서버에 구현되며 클라이언트가 서버로 보내는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문으로 관리됩니다. 또한 일괄 처리, 저장 프로시저 또는 트리거에 포함될 수 있습니다.  
   
- API(응용 프로그래밍 인터페이스) 서버 커서  
- OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버 커서는 서버에 구현됩니다. 클라이언트 응용 프로그램에서 API 커서 함수를 호출할 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자나 ODBC 드라이버가 API 서버 커서에 대한 동작 요청을 서버에 전송합니다.  
+ API(애플리케이션 프로그래밍 인터페이스) 서버 커서  
+ OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버 커서는 서버에 구현됩니다. 클라이언트 애플리케이션에서 API 커서 함수를 호출할 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자나 ODBC 드라이버가 API 서버 커서에 대한 동작 요청을 서버에 전송합니다.  
   
  클라이언트 커서  
- ADO API를 구현하는 DLL과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 내부적으로 구현됩니다. 클라이언트 커서는 모든 결과 집합 행을 클라이언트에 캐시하여 구현됩니다. 클라이언트 응용 프로그램에서 API 커서 함수를 호출할 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버나 ADO DLL이 클라이언트에 캐시된 결과 집합 행에 대해 커서 작업을 수행합니다.  
+ ADO API를 구현하는 DLL과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 내부적으로 구현됩니다. 클라이언트 커서는 모든 결과 집합 행을 클라이언트에 캐시하여 구현됩니다. 클라이언트 애플리케이션에서 API 커서 함수를 호출할 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버나 ADO DLL이 클라이언트에 캐시된 결과 집합 행에 대해 커서 작업을 수행합니다.  
   
  커서 유형  
  정방향 전용  
@@ -86,7 +86,7 @@ ms.locfileid: "48134073"
   
      [!INCLUDE[tsql](../includes/tsql-md.md)] 언어는 ISO 커서 구문을 본뜬 커서 사용 구문을 지원합니다.  
   
--   데이터베이스 API(응용 프로그래밍 인터페이스) 커서 함수  
+-   데이터베이스 API(애플리케이션 프로그래밍 인터페이스) 커서 함수  
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 다음과 같은 데이터베이스 API의 커서 기능을 지원합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48134073"
   
     -   ODBC(Open Database Connectivity)  
   
- 응용 프로그램에서 이러한 두 가지 커서 요청 방법을 혼합하여 사용할 수 없습니다. API를 사용하여 커서 동작을 지정한 응용 프로그램은 또한 [!INCLUDE[tsql](../includes/tsql-md.md)] DECLARE CURSOR 문을 실행하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 커서를 요청할 수 없습니다. 모든 API 커서 특성을 기본값으로 설정한 경우에만 DECLARE CURSOR를 실행해야 합니다.  
+ 애플리케이션에서 이러한 두 가지 커서 요청 방법을 혼합하여 사용할 수 없습니다. API를 사용하여 커서 동작을 지정한 애플리케이션은 또한 [!INCLUDE[tsql](../includes/tsql-md.md)] DECLARE CURSOR 문을 실행하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 커서를 요청할 수 없습니다. 모든 API 커서 특성을 기본값으로 설정한 경우에만 DECLARE CURSOR를 실행해야 합니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 및 API 커서 모두 요청되지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 기본적으로 기본 결과 집합이라고 하는 전체 결과 집합을 응용 프로그램에 반환합니다.  
   

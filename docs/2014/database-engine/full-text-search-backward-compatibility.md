@@ -16,7 +16,7 @@ ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 99a9efee9d104c2f45eea728dc7b0ae30913e3ce
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48066223"
@@ -28,7 +28,7 @@ ms.locfileid: "48066223"
 |----------|-----------------------|  
 |[SQL Server 2014에서 사용되지 않는 전체 텍스트 검색 기능](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|이 릴리스에서 사용되지 않는 기능|  
 |[SQL Server 2014에서 지원되지 않는 전체 텍스트 검색 기능](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|이 릴리스에서 지원되지 않는 기능|  
-|[전체 텍스트 검색의 호환성이 손상되는 변경](breaking-changes-to-full-text-search.md)|응용 프로그램 변경이 필요할 수 있는 전체 텍스트 검색 변경 내용|  
+|[전체 텍스트 검색의 호환성이 손상되는 변경](breaking-changes-to-full-text-search.md)|애플리케이션 변경이 필요할 수 있는 전체 텍스트 검색 변경 내용|  
 |[전체 텍스트 검색의 동작 변경](../../2014/database-engine/behavior-changes-to-full-text-search.md)|전체 텍스트 검색 동작의 기타 변경 내용|  
   
 ## <a name="see-also"></a>관련 항목  

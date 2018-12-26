@@ -18,7 +18,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48229784"
@@ -30,7 +30,7 @@ ms.locfileid: "48229784"
   
 -   하드웨어 구성 요소의 설치 여부, 상태 또는 속성에 대한 정보를 가져온 후 이 정보를 사용하여 제어 흐름에서 다른 태스크를 실행할지 여부를 결정합니다.  
   
--   응용 프로그램 목록을 가져오고 설치된 각 응용 프로그램의 버전을 확인합니다.  
+-   애플리케이션 목록을 가져오고 설치된 각 애플리케이션의 버전을 확인합니다.  
   
  다음과 같은 방법으로 WMI 데이터 판독기 태스크를 구성할 수 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48229784"
 > [!NOTE]  
 >  WMI 클래스는 Windows 버전마다 다릅니다.  
   
- 다음 WQL 쿼리는 응용 프로그램 로그 이벤트의 항목을 반환합니다.  
+ 다음 WQL 쿼리는 애플리케이션 로그 이벤트의 항목을 반환합니다.  
   
 ```  
 SELECT * FROM Win32_NTLogEvent WHERE LogFile = 'Application' AND (SourceName='SQLISService' OR SourceName='SQLISPackage') AND TimeGenerated > '20050117'  

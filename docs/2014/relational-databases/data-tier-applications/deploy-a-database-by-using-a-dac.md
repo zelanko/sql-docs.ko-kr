@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48050483"
@@ -29,7 +29,7 @@ ms.locfileid: "48050483"
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
   
 ##  <a name="BeforeBegin"></a> 시작하기 전에  
- 마법사는 DAC(데이터 계층 응용 프로그램) BACPAC 아카이브 파일을 사용하여 데이터 및 데이터베이스 개체의 데이터 및 정의를 배포합니다. 원본 데이터베이스에서 DAC 내보내기 작업과 대상으로 DAC 가져오기 작업을 수행합니다.  
+ 마법사는 DAC(데이터 계층 애플리케이션) BACPAC 아카이브 파일을 사용하여 데이터 및 데이터베이스 개체의 데이터 및 정의를 배포합니다. 원본 데이터베이스에서 DAC 내보내기 작업과 대상으로 DAC 가져오기 작업을 수행합니다.  
   
 ###  <a name="DBOptSettings"></a> 데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 CREATE DATABASE 문의 기본 설정이 적용됩니다. 예외는 데이터베이스 데이터 정렬 및 호환성 수준이 원본 데이터베이스의 값으로 설정된다는 점입니다.  
@@ -119,10 +119,10 @@ ms.locfileid: "48050483"
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-## <a name="using-a-net-framework-application"></a>.Net Framework 응용 프로그램 사용  
+## <a name="using-a-net-framework-application"></a>.Net Framework 애플리케이션 사용  
  **.Net Framework 응용 프로그램에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
   
- 코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 응용 프로그램을 다운로드합니다.  
+ 코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
 1.  SMO Server 개체를 만든 후 이 개체를 배포할 데이터베이스를 포함하는 인스턴스 또는 서버로 설정합니다.  
   

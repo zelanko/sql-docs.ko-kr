@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48193673"
@@ -30,7 +30,7 @@ ms.locfileid: "48193673"
  데이터베이스 소유자 및 `ALTER ANY USER` 사용 권한이 있는 데이터베이스 사용자는 포함된 데이터베이스 사용자를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 포함된 데이터베이스에 연결한 후 포함된 데이터베이스 사용자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **계정을 사용하도록 설정한** 의 다른 데이터베이스에 액세스할 수 있습니다.  
   
 ### <a name="creating-a-duplicate-user-in-another-database"></a>다른 데이터베이스에 복제 사용자 만들기  
- 일부 응용 프로그램에서는 사용자에게 여러 데이터베이스에 대한 액세스 권한이 필요할 수 있습니다. 각 데이터베이스에 동일한 포함된 데이터베이스 사용자를 만들면 됩니다. 암호를 사용하는 두 번째 사용자를 만들 때 SID 옵션을 사용합니다. 다음 예에서는 두 개의 데이터베이스에 두 명의 동일한 사용자를 만듭니다.  
+ 일부 애플리케이션에서는 사용자에게 여러 데이터베이스에 대한 액세스 권한이 필요할 수 있습니다. 각 데이터베이스에 동일한 포함된 데이터베이스 사용자를 만들면 됩니다. 암호를 사용하는 두 번째 사용자를 만들 때 SID 옵션을 사용합니다. 다음 예에서는 두 개의 데이터베이스에 두 명의 동일한 사용자를 만듭니다.  
   
 ```  
 USE DB1;  

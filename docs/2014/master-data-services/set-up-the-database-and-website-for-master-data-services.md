@@ -29,7 +29,7 @@ ms.locfileid: "48205033"
   
      정보를 참조 하세요 [데이터베이스 구성 페이지 &#40;Master Data Services 구성 관리자&#41; ](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md) 하 고 [데이터베이스 만들기 마법사 &#40;Master Data Services 구성 관리자&#41; ](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-2.  새 웹 사이트 만들기, 기본 웹 사이트를 선택 하거나 다른 기존 웹 사이트를 선택 합니다.를 사용 하는 **웹 구성** 페이지에서 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]합니다. 그런 다음 선택했거나 만든 웹 응용 프로그램과 MDS 데이터베이스를 연결합니다.  
+2.  새 웹 사이트 만들기, 기본 웹 사이트를 선택 하거나 다른 기존 웹 사이트를 선택 합니다.를 사용 하는 **웹 구성** 페이지에서 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]합니다. 그런 다음 선택했거나 만든 웹 애플리케이션과 MDS 데이터베이스를 연결합니다.  
   
      정보를 참조 하세요 [웹 구성 페이지 &#40;Master Data Services 구성 관리자&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) 하 고 [웹 사이트 만들기 대화 상자 &#40;Master Data Services 구성 관리자&#41; ](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md).  
   

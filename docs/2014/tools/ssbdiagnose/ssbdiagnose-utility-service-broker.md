@@ -28,7 +28,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48111173"
@@ -101,7 +101,7 @@ ms.locfileid: "48111173"
   
 ## <a name="command-line-options"></a>명령줄 옵션  
  **-XML**  
- **ssbdiagnose** 출력이 서식이 설정된 XML로 생성되도록 지정합니다. 이 출력은 파일이나 다른 응용 프로그램으로 리디렉션될 수 있습니다. **-XML** 을 지정하지 않을 경우 **ssbdiagnose** 출력 형식은 사람이 읽을 수 있는 텍스트로 지정됩니다.  
+ **ssbdiagnose** 출력이 서식이 설정된 XML로 생성되도록 지정합니다. 이 출력은 파일이나 다른 애플리케이션으로 리디렉션될 수 있습니다. **-XML** 을 지정하지 않을 경우 **ssbdiagnose** 출력 형식은 사람이 읽을 수 있는 텍스트로 지정됩니다.  
   
  **-LEVEL** { **ERROR** | **WARNING** | **INFO**}  
  보고할 메시지 수준을 지정합니다.  
@@ -182,7 +182,7 @@ WHERE database_id = DB_ID();
  대화 핸들을 지정할 경우 연결된 대화 엔드포인트와 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 엔드포인트에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 엔드포인트에 대한 이벤트가 모두 보고됩니다.  
   
  *conversation_handle*  
- 응용 프로그램에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
+ 애플리케이션에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
   
  대화 핸들은 응용 프로그램에 반환 됩니다는 *@dialog_handle* 의 매개 변수를 **BEGIN DIALOG** 문, 및 `conversation_handle` 결과의 열 집합을 **수신**  문입니다.  
   
@@ -258,9 +258,9 @@ WHERE database_id = DB_ID();
 ## <a name="remarks"></a>Remarks  
  **ssbdiagnose** 를 사용하여 다음을 수행할 수 있습니다.  
   
--   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램에 구성 오류가 없음을 확인합니다.  
+-   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션에 구성 오류가 없음을 확인합니다.  
   
--   기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 구성을 변경한 후에 구성 오류가 없음을 확인합니다.  
+-   기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션의 구성을 변경한 후에 구성 오류가 없음을 확인합니다.  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 데이터베이스가 분리된 다음 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 다시 연결된 후에 구성 오류가 없음을 확인합니다.  
   
@@ -430,7 +430,7 @@ ON CONTRACT TextContract
 ```  
   
 ### <a name="l-redirecting-ssbdiagnose-xml-output"></a>12. ssbdiagnose XML 출력 리디렉션  
- 다음 예에서는 **ssbdiagnose** 가 해당 출력을 파일로 리디렉션되는 XML 파일로 생성하도록 요청하는 방법을 보여 줍니다. 이 예에서 생성하는 TestDiag.xml 파일은 나중에 **ssbdiagnose** XML 파일을 분석하거나 보고하는 응용 프로그램을 사용하여 열거나 XML 메모장과 같은 일반적인 XML 편집기를 사용하여 볼 수 있습니다.  
+ 다음 예에서는 **ssbdiagnose** 가 해당 출력을 파일로 리디렉션되는 XML 파일로 생성하도록 요청하는 방법을 보여 줍니다. 이 예에서 생성하는 TestDiag.xml 파일은 나중에 **ssbdiagnose** XML 파일을 분석하거나 보고하는 애플리케이션을 사용하여 열거나 XML 메모장과 같은 일반적인 XML 편집기를 사용하여 볼 수 있습니다.  
   
 ```  
 ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE   

@@ -24,7 +24,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48119883"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
-  이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
  항목 내용  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48119883"
 ##  <a name="bkmk_2014"></a> SQL Server 2014 Reporting Services에서 사용 되지 않는 기능  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>다음 버전의 SQL Server에서 지원되지 않는 기능  
- 다음 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에서 지원 되지 것입니다 합니다 **다음** 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 응용 프로그램은 가능한 한 빨리 수정하세요.  
+ 다음 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에서 지원 되지 것입니다 합니다 **다음** 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 렌더링 확장 프로그램 디바이스 정보 설정  
  HTML 렌더링 확장 프로그램에 대한 다음 디바이스 정보 설정은 지원되지 않습니다.  

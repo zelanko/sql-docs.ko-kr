@@ -19,7 +19,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f778380427f0c542346442a6f694b87a04d4dd80
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159553"
@@ -123,7 +123,7 @@ ms.locfileid: "48159553"
   
 1.  시작 메뉴에서 **관리 도구**를 가리키고 **컴퓨터 관리**를 클릭합니다.  
   
-2.  서비스 및 응용 프로그램 폴더를 엽니다.  
+2.  서비스 및 애플리케이션 폴더를 엽니다.  
   
 3.  **WMI 컨트롤**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   

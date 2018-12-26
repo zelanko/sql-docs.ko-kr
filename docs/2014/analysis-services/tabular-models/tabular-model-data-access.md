@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50148408"
@@ -24,12 +24,12 @@ ms.locfileid: "50148408"
  이 항목에서는 테이블 형식 모델에서 사용할 수 있는 클라이언트, 쿼리 언어 및 프로그래밍 인터페이스에 대해 설명합니다.  
   
 ## <a name="clients"></a>클라이언트  
- 다음 Microsoft 클라이언트 응용 프로그램은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스에 대한 네이티브 연결을 지원합니다.  
+ 다음 Microsoft 클라이언트 애플리케이션은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스에 대한 네이티브 연결을 지원합니다.  
   
 ### <a name="excel"></a>내보내기  
  Excel의 데이터 시각화 및 분석 기능을 사용하여 Excel에서 테이블 형식 model 데이터베이스에 연결하여 데이터를 사용할 수 있습니다. 데이터에 액세스하려면 Analysis Services 데이터 연결을 정의하고, 테이블 형식 서버 모드로 실행되는 서버를 지정한 다음, 사용할 데이터베이스를 선택합니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
- Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 응용 프로그램입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
+ Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 애플리케이션입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   
 ### <a name="power-view"></a>파워 뷰  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 SharePoint 2010 환경에서 실행되는 Reporting Services 보고 클라이언트 응용 프로그램입니다. 이 프로그램은 데이터 탐색, 쿼리 디자인 및 프레젠테이션 레이아웃을 통합된 임시 보고 환경으로 통합합니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 모델이 테이블 형식 모드로 실행되는 Analysis Services의 인스턴스에서 호스팅되는지 또는 DirectQuery 모드를 사용하여 관계형 데이터 저장소에서 검색되는지 여부에 관계없이 테이블 형식 모델을 데이터 원본으로 사용할 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 테이블 형식 모델에 연결하려면 서버 위치 및 데이터베이스 이름이 포함된 연결 파일을 만들어야 합니다. SharePoint에서 Reporting Services 공유 데이터 원본 또는 BI 의미 체계 모델 연결 파일을 만들 수 있습니다. BI 의미 체계 모델 연결에 대 한 자세한 내용은 참조 하세요. [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)합니다.  
@@ -80,13 +80,13 @@ ms.locfileid: "50148408"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델과 상호 작용하는 데 사용되는 주요 인터페이스는 스키마 행 집합, XMLA 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 제공하는 쿼리 클라이언트 및 쿼리 도구입니다.  
   
 ### <a name="data-and-metadata"></a>데이터 및 메타데이터  
- ADOMD.NET을 사용하여 관리 응용 프로그램의 테이블 형식 모델에서 데이터 및 메타데이터를 검색할 수 있습니다. 테이블 형식 모델에서 개체를 만들고 수정하는 응용 프로그램의 예는 다음 리소스를 참조하십시오.  
+ ADOMD.NET을 사용하여 관리 애플리케이션의 테이블 형식 모델에서 데이터 및 메타데이터를 검색할 수 있습니다. 테이블 형식 모델에서 개체를 만들고 수정하는 애플리케이션의 예는 다음 리소스를 참조하십시오.  
   
 -   Codeplex에서 테이블 형식 모델 AMO 예제  
   
 -   [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- 관리되지 않는 클라이언트 응용 프로그램에서 Analysis Services 9.0 OLE DB 공급자를 사용하여 테이블 형식 모델에 대한 OLE DB 액세스를 지원할 수 있습니다. 테이블 형식 모델 액세스를 사용하도록 설정하려면 업데이트된 버전의 Analysis Services OLE DB 공급자가 필요합니다. 테이블 형식 모델과 함께 사용되는 공급자에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조하세요.  
+ 관리되지 않는 클라이언트 애플리케이션에서 Analysis Services 9.0 OLE DB 공급자를 사용하여 테이블 형식 모델에 대한 OLE DB 액세스를 지원할 수 있습니다. 테이블 형식 모델 액세스를 사용하도록 설정하려면 업데이트된 버전의 Analysis Services OLE DB 공급자가 필요합니다. 테이블 형식 모델과 함께 사용되는 공급자에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조하세요.  
   
  XML 기반 형식으로 Analysis Services 인스턴스에서 직접 데이터를 검색할 수도 있습니다. DISCOVER_CSDL_METADATA 행 집합을 사용하여 테이블 형식 모델의 스키마를 검색하거나 기본 ASSL 요소, 개체 또는 속성에 EXECUTE 또는 DISCOVER 명령을 사용할 수 있습니다. 자세한 내용은 다음 리소스를 참조하십시오.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "50148408"
  PowerShell을 사용하여 Analysis Services 인스턴스를 관리 및 모니터링하고 테이블 모델 액세스에 사용되는 보안을 만들고 모니터링할 수 있습니다. 자세한 내용은 [Analysis Services PowerShell](../analysis-services-powershell.md)합니다.  
   
 ### <a name="schema-rowsets"></a>스키마 행 집합  
- 클라이언트 응용 프로그램에서는 스키마 행 집합을 사용하여 테이블 형식 모델의 메타데이터를 검사하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 지원 및 모니터링 정보를 검색할 수 있습니다. 이 릴리스의 SQL Server에는 새로운 스키마 행 집합이 추가되었으며 테이블 형식 모델과 관련된 기능을 지원하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서의 모니터링 및 성능 분석을 향상시키도록 기존 스키마 행 집합이 확장되었습니다.  
+ 클라이언트 애플리케이션에서는 스키마 행 집합을 사용하여 테이블 형식 모델의 메타데이터를 검사하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 지원 및 모니터링 정보를 검색할 수 있습니다. 이 릴리스의 SQL Server에는 새로운 스키마 행 집합이 추가되었으며 테이블 형식 모델과 관련된 기능을 지원하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서의 모니터링 및 성능 분석을 향상시키도록 기존 스키마 행 집합이 확장되었습니다.  
   
 -   [DISCOVER_CALC_DEPENDENCY 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   

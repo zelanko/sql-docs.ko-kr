@@ -43,7 +43,7 @@ ms.locfileid: "34024300"
   
  BI 의미 체계 모델 연결을 설정할 서버 및 데이터베이스 이름을 알아야 합니다. Analysis Services를 테이블 형식 모드에 대해 구성해야 합니다. 서버에서 실행 중인 데이터베이스는 테이블 형식 model 데이터베이스여야 합니다. 서버 모드를 확인하는 방법에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
- 특정 시나리오에서 SharePoint 환경의 공유 서비스는 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다. 이러한 서비스에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램, Reporting Services 서비스 응용 프로그램 및 PerformancePoint 서비스 응용 프로그램이 포함됩니다. 관리 권한을 부여하기 전에 이러한 서비스 응용 프로그램의 ID를 알고 있어야 합니다. 중앙 관리를 사용하여 ID를 확인할 수 있습니다.  
+ 특정 시나리오에서 SharePoint 환경의 공유 서비스는 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다. 이러한 서비스에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션, Reporting Services 서비스 애플리케이션 및 PerformancePoint 서비스 애플리케이션이 포함됩니다. 관리 권한을 부여하기 전에 이러한 서비스 애플리케이션의 ID를 알고 있어야 합니다. 중앙 관리를 사용하여 ID를 확인할 수 있습니다.  
   
  중앙 관리에서 보안 정보를 보려면 SharePoint 서비스 관리자여야 합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34024300"
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
 ##  <a name="bkmk_ssas"></a> 공유 서비스 응용 프로그램에 Analysis Services 관리 권한 부여  
- 공유 서비스에서는 데이터를 요청하는 사용자를 대신하여 SharePoint에서 Analysis Services 서버의 테이블 형식 model 데이터베이스로 연결하기도 합니다. 요청하는 서비스는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램, Reporting Services 서비스 응용 프로그램 또는 PerformancePoint 서비스 응용 프로그램일 수 있습니다. 연결이 성공하려면 서비스에 Analysis Services 서버에 대한 관리 권한이 있어야 합니다. Analysis Services에서는 관리자만 다른 사용자를 대신하여 가장 연결을 만들 수 있습니다.  
+ 공유 서비스에서는 데이터를 요청하는 사용자를 대신하여 SharePoint에서 Analysis Services 서버의 테이블 형식 model 데이터베이스로 연결하기도 합니다. 요청하는 서비스는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션, Reporting Services 서비스 애플리케이션 또는 PerformancePoint 서비스 애플리케이션일 수 있습니다. 연결이 성공하려면 서비스에 Analysis Services 서버에 대한 관리 권한이 있어야 합니다. Analysis Services에서는 관리자만 다른 사용자를 대신하여 가장 연결을 만들 수 있습니다.  
   
  다음과 같은 상황에서 연결을 사용할 경우 관리 권한이 필요합니다.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34024300"
   
 2.  서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  **보안**을 클릭한 다음 **추가**를 클릭합니다. 서비스 응용 프로그램을 실행하는 데 사용되는 Windows 사용자 계정을 입력합니다.  
+3.  **보안**을 클릭한 다음 **추가**를 클릭합니다. 서비스 애플리케이션을 실행하는 데 사용되는 Windows 사용자 계정을 입력합니다.  
   
-     중앙 관리를 사용하여 ID를 확인할 수 있습니다. 보안 섹션에서 **서비스 계정 구성** 을 열고 각 응용 프로그램에서 사용되는 서비스 응용 프로그램 풀과 연결된 Windows 계정을 확인한 후 이 항목에 제공된 지침에 따라 계정 관리 권한을 부여합니다.  
+     중앙 관리를 사용하여 ID를 확인할 수 있습니다. 보안 섹션에서 **서비스 계정 구성** 을 열고 각 애플리케이션에서 사용되는 서비스 애플리케이션 풀과 연결된 Windows 계정을 확인한 후 이 항목에 제공된 지침에 따라 계정 관리 권한을 부여합니다.  
   
 ##  <a name="bkmk_BISM"></a> 테이블 형식 model 데이터베이스에 대한 읽기 권한 부여  
  데이터베이스가 팜 외부에 있는 서버에서 실행 중이므로 연결을 설정하려면 백 엔드 Analysis Services 서버에 대한 데이터베이스 사용자 권한을 부여해야 합니다. Analysis Services에서는 역할 기반 권한 모델을 사용합니다. model 데이터베이스에 연결하는 사용자는 해당 멤버에게 읽기 권한을 부여하는 역할을 통해 읽기 권한 이상을 사용하여 연결해야 합니다.  
@@ -102,16 +102,16 @@ ms.locfileid: "34024300"
   
      **데이터베이스** 는 서버에서 현재 사용할 수 있는 테이블 형식 데이터베이스여야 합니다. 다른 BI 의미 체계 모델 연결 파일, Office 데이터 연결(.odc) 파일, Analysis Services OLAP 데이터베이스 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지정하지 마세요. 데이터베이스 이름을 가져오려면 Management Studio를 사용하여 서버에 연결하고 사용 가능한 데이터베이스 목록을 볼 수 있습니다. 데이터베이스의 속성 페이지를 사용하여 이름이 올바른지 확인합니다.  
   
-4.  **확인** 을 클릭하여 페이지를 저장합니다. 이 시점에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 연결을 확인합니다.  
+4.  **확인** 을 클릭하여 페이지를 저장합니다. 이 시점에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션은 연결을 확인합니다.  
   
-     연결 정보가 정확하고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 관리 권한을 부여하여 Analysis Services에 현재 사용자로 연결할 수 있으면 확인이 성공합니다.  
+     연결 정보가 정확하고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 관리 권한을 부여하여 Analysis Services에 현재 사용자로 연결할 수 있으면 확인이 성공합니다.  
   
-     연결 정보가 잘못되었거나 서비스 응용 프로그램에 권한이 부족하면 확인이 실패합니다. 유효성 검사 메시지는 파일 저장 여부를 묻는 페이지에 표시됩니다. 연결이 유효함을 알고 있을 경우 연결 정보가 잘못되어서가 아니라 권한이 없어서 오류가 발생한 것이므로 파일을 저장해야 합니다.  
+     연결 정보가 잘못되었거나 서비스 애플리케이션에 권한이 부족하면 확인이 실패합니다. 유효성 검사 메시지는 파일 저장 여부를 묻는 페이지에 표시됩니다. 연결이 유효함을 알고 있을 경우 연결 정보가 잘못되어서가 아니라 권한이 없어서 오류가 발생한 것이므로 파일을 저장해야 합니다.  
   
      Excel 또는 파워 뷰에서 연결을 사용하여 테이블 형식 model 데이터베이스에 연결함으로써 연결을 확인할 수 있습니다. 데이터 원본 연결에 성공하면 확인 경고가 나타나더라도 연결이 유효한 것입니다.  
   
 ##  <a name="bkmk_permissions"></a> BI 의미 체계 모델 연결에 대한 SharePoint 사용 권한 구성  
- BI 의미 체계 모델 연결을 Excel 통합 문서 또는 Reporting Services 보고서의 데이터 원본으로 사용하려면 SharePoint 라이브러리의 BI 의미 체계 모델 연결 항목에 대해 **읽기** 권한이 있어야 합니다. 읽기 권한 수준에는 BI 의미 체계 모델 연결 정보를 Excel 데스크톱 응용 프로그램에 다운로드할 수 있는 **항목 열기** 권한이 포함되어 있습니다.  
+ BI 의미 체계 모델 연결을 Excel 통합 문서 또는 Reporting Services 보고서의 데이터 원본으로 사용하려면 SharePoint 라이브러리의 BI 의미 체계 모델 연결 항목에 대해 **읽기** 권한이 있어야 합니다. 읽기 권한 수준에는 BI 의미 체계 모델 연결 정보를 Excel 데스크톱 애플리케이션에 다운로드할 수 있는 **항목 열기** 권한이 포함되어 있습니다.  
   
  여러 가지 방법으로 SharePoint에서 사용 권한을 부여할 수 있습니다. 다음은 **읽기** 수준의 권한이 있는 **BISM Users** 라는 새 그룹을 만드는 방법을 설명하는 지침입니다.  
   

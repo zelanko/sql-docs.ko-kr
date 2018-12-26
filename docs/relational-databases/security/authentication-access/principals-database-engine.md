@@ -55,7 +55,7 @@ ms.locfileid: "47632704"
   
 - 데이터베이스 사용자(사용자 유형은 11가지입니다. 자세한 내용은 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.)
 - 데이터베이스 역할
-- 응용 프로그램 역할
+- 애플리케이션 역할
   
 ## <a name="sa-login"></a>sa 로그인  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 로그인은 서버 수준의 보안 주체로서, 인스턴스를 설치하면 기본적으로 생성됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 sa의 기본 데이터베이스가 master입니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경되었습니다. `sa` 로그인은 `sysadmin` 고정 데이터베이스 역할의 멤버입니다. `sa` 로그인에는 서버에 대한 모든 권한이 부여되며 제한할 수 없습니다. `sa` 로그인은 삭제할 수 없지만 아무도 사용할 수 없도록 해제할 수는 있습니다.

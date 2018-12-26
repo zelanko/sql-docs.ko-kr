@@ -1,6 +1,6 @@
 ---
-title: SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드
+title: SQL Server용 OLE DB 드라이버로 애플리케이션 빌드 | Microsoft Docs
+description: SQL Server용 OLE DB 드라이버로 애플리케이션 빌드
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47691793"
 ---
-# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드
+# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버로 애플리케이션 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

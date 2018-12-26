@@ -16,13 +16,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116352"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
-  기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 응용 프로그램 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
+  기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
   
  Windows 통합 보안을 사용하려면 보고서 서버에 액세스해야 하는 각 사용자가 유효한 Windows 로컬 또는 도메인 사용자 계정을 보유하고 있거나 Windows 로컬 또는 도메인 그룹 계정의 멤버여야 합니다. 트러스트된 도메인에 한하여 다른 도메인의 계정을 포함할 수 있습니다. 이 계정은 보고서 서버 컴퓨터에 액세스할 수 있어야 하며 이후에 특정 보고서 서버 작업에 액세스할 수 있도록 역할에 할당되어야 합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48116352"
   
 -   보고서 서버 웹 서비스에 대 한 Web.config 파일 및 보고서 관리자 있어야 \<impersonate = "true" / >입니다.  
   
--   클라이언트 응용 프로그램 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
+-   클라이언트 애플리케이션 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
   
  보고서 서버 인증 설정을 변경하려면 RSReportServer.config 파일에서 XML 요소 및 값을 편집합니다. 이 항목의 예를 복사하고 붙여 넣어 특정 조합을 구현할 수 있습니다.  
   

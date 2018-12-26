@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48212113"
@@ -41,7 +41,7 @@ ms.locfileid: "48212113"
   
 ##  <a name="prereq"></a> 필수 구성 요소  
   
--   팜의 기능과 솔루션을 제거하려면 SharePoint 팜 관리자 또는 서비스 응용 프로그램 관리자여야 합니다.  
+-   팜의 기능과 솔루션을 제거하려면 SharePoint 팜 관리자 또는 서비스 애플리케이션 관리자여야 합니다.  
   
 -   데이터베이스 엔진도 제거할 경우 SQL Server 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48212113"
 5.  필요한 경우 서비스를 중지하고 소프트웨어를 제거하기 전에 며칠 정도 기다립니다. 이 단계는 제거에 반드시 필요한 것은 아니지만 데이터 마이그레이션 또는 기술 대체 문제가 발생한 경우 서비스를 일시적으로 재개할 수 있는 기회를 제공합니다.  
   
 ##  <a name="bkmk_remove"></a> 2단계: SharePoint에서 기능 및 솔루션 제거  
- PowerPivot 구성 도구를 사용하여 SharePoint에서 PowerPivot 서비스 및 응용 프로그램을 제거합니다.  
+ PowerPivot 구성 도구를 사용하여 SharePoint에서 PowerPivot 서비스 및 애플리케이션을 제거합니다.  
   
 -   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner** 여야 합니다.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "48212113"
   
 4.  태스크 목록의 각 동작을 검토하여 각 동작이 수행하는 작업을 이해합니다.  
   
-     **PowerPivot 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 응용 프로그램 데이터는 SharePoint용 PowerPivot에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 응용 프로그램에서 만드는 SQL Server 데이터베이스입니다. PowerPivot 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 응용 프로그램 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 응용 프로그램 데이터베이스를 삭제할 수 있습니다.  
+     **PowerPivot 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 애플리케이션 데이터는 SharePoint용 PowerPivot에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 애플리케이션에서 만드는 SQL Server 데이터베이스입니다. PowerPivot 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 애플리케이션 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 애플리케이션 데이터베이스를 삭제할 수 있습니다.  
   
-     데이터베이스를 삭제하려면 **PowerPivot 서비스 응용 프로그램 제거** 를 선택한 다음 **이 서비스 응용 프로그램에 연결된 응용 프로그램 데이터를 삭제합니다.** 를 선택합니다.  
+     데이터베이스를 삭제하려면 **PowerPivot 서비스 애플리케이션 제거** 를 선택한 다음 **이 서비스 애플리케이션에 연결된 애플리케이션 데이터를 삭제합니다.** 를 선택합니다.  
   
 5.  필요한 경우 **출력** 탭 또는 **스크립트** 탭에서 자세한 정보를 검토합니다.  
   
@@ -159,13 +159,13 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  팜에서 마지막 SharePoint용 PowerPivot 서버를 제거한 후 다음을 수행합니다.  
   
-    1.  응용 프로그램 관리의 **서비스 응용 프로그램 관리**에서 PowerPivot 서비스 응용 프로그램이 목록에 더 이상 표시되지 않는지 확인합니다.  
+    1.  애플리케이션 관리의 **서비스 애플리케이션 관리**에서 PowerPivot 서비스 애플리케이션이 목록에 더 이상 표시되지 않는지 확인합니다.  
   
     2.  시스템 설정의 **팜 기능 관리**에서 PowerPivot 통합 기능이 페이지에 더 이상 없는지 확인합니다. **팜 솔루션 관리**에서 PowerPivot 솔루션이 페이지에 더 이상 표시되지 않는지 확인합니다.  
   
     3.  모니터링의 **진단 로깅 구성** 및 **사용 현황 및 상태 데이터 수집 구성**에서 PowerPivot 이벤트 및 이벤트 범주가 더 이상 표시되지 않는지 확인합니다.  
   
-    4.  일반 응용 프로그램 설정에서 **PowerPivot 관리 대시보드** 가 페이지에 더 이상 없는지 확인합니다.  
+    4.  일반 애플리케이션 설정에서 **PowerPivot 관리 대시보드** 가 페이지에 더 이상 없는지 확인합니다.  
   
 ##  <a name="bkmk_post"></a> 6단계: 제거 후 검사 목록  
  다음 목록을 사용하여 제거 중에 삭제되지 않은 소프트웨어 및 파일을 제거할 수 있습니다.  
@@ -178,7 +178,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     -   [PowerPivot 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
-3.  보안 저장소 서비스에서 SharePoint용 PowerPivot에 사용되는 저장된 자격 증명이 있는 모든 대상 응용 프로그램을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 PowerPivot을 제거할 때 삭제됩니다. PowerPivot 무인 데이터 새로 고침 계정에 대해 만든 대상 응용 프로그램 및 데이터 새로 고침을 위해 만든 모든 대상 응용 프로그램은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
+3.  보안 저장소 서비스에서 SharePoint용 PowerPivot에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 PowerPivot을 제거할 때 삭제됩니다. PowerPivot 무인 데이터 새로 고침 계정에 대해 만든 대상 애플리케이션 및 데이터 새로 고침을 위해 만든 모든 대상 애플리케이션은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
      반면, PowerPivot 시스템 서비스에 의해 자동 생성된 개별 대상 응용 프로그램은 PowerPivot을 제거할 때 자동으로 삭제됩니다.  
   

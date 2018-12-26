@@ -203,7 +203,7 @@ Information on :con_name parameter
 설정 `PDO::ATTR_EMULATE_PREPARES` 를 true로 SQL Server에서 몇 가지 제한 사항이 무시할 수 있습니다. 예를 들어, SQL Server는 몇 가지 TRANSACT-SQL 절에 명명 된 또는 위치 매개 변수를 지원 하지 않습니다. 또한 SQL Server의 한 제한은 바인딩 2100 매개 변수입니다.
 
 > [!NOTE]
-> True로 설정 준비 emulate 매개 변수가 있는 쿼리의 보안이 적용 되지 않습니다. 따라서 응용 프로그램에서는 매개 변수에 바인딩되는 데이터에 악성 Transact-SQL 코드가 들어 있지 않은지 확인해야 합니다.
+> True로 설정 준비 emulate 매개 변수가 있는 쿼리의 보안이 적용 되지 않습니다. 따라서 애플리케이션에서는 매개 변수에 바인딩되는 데이터에 악성 Transact-SQL 코드가 들어 있지 않은지 확인해야 합니다.
 
 ### <a name="encoding"></a>인코딩
 

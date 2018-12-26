@@ -51,7 +51,7 @@ SET SHOWPLAN_XML { ON | OFF }
   
  SET SHOWPLAN_XML이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 문을 실행하지 않고 실행 계획 정보를 반환하며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실행되지 않습니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 실행 계획 정보가 반환됩니다. 예를 들어 SET SHOWPLAN_XML 옵션을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 지정한 테이블이 없기 때문에 같은 테이블을 사용하는 이후 SELECT 문에서 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_XML 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보고서를 생성하지 않고 문을 실행합니다.  
   
- SET SHOWPLAN_XML은 **sqlcmd** 유틸리티 같은 응용 프로그램에 대한 출력을 **nvarchar(max)** 형식으로 반환합니다. 여기서 XML 출력은 이후에 다른 도구가 쿼리 계획 정보를 표시하고 처리하는 데 사용합니다.  
+ SET SHOWPLAN_XML은 **sqlcmd** 유틸리티 같은 애플리케이션에 대한 출력을 **nvarchar(max)** 형식으로 반환합니다. 여기서 XML 출력은 이후에 다른 도구가 쿼리 계획 정보를 표시하고 처리하는 데 사용합니다.  
   
 > [!NOTE]  
 >  **sys.dm_exec_query_plan** 동적 관리 뷰는 SET SHOWPLAN XML과 같은 정보를 **xml** 데이터 형식으로 반환합니다. 이 정보는 **sys.dm_exec_query_plan**의 **query_plan** 열에서 반환됩니다. 자세한 내용은 [sys.dm_exec_query_plan&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)을 참조하세요.  

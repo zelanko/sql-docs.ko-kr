@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108853"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>태스크 3: 마스터 데이터 관리자에서 데이터 확인
-  이 작업에서는 **마스터 데이터 관리자 웹 응용 프로그램** 을 사용해서 **Supplier** 엔터티가 **MDS**에 생성되었는지 확인합니다.  
+  이 작업에서는 **마스터 데이터 관리자 웹 애플리케이션** 을 사용해서 **Supplier** 엔터티가 **MDS**에 생성되었는지 확인합니다.  
   
 1.  **마스터 데이터 관리자** 가 이미 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 홈 페이지로 이동합니다. 그렇지 않으면 이동할 [ http://localhost/mds ](http://localhost/mds) 시작 하려면 **마스터 데이터 관리자**합니다.  
   

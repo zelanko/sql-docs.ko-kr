@@ -16,13 +16,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48142803"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
-  누구 든 지 정보를 찾을-디자이너, 개발자, 분석가 또는 관리자-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 응용 프로그램 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
+  누구 든 지 정보를 찾을-디자이너, 개발자, 분석가 또는 관리자-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services &#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)  

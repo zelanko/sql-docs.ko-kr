@@ -23,7 +23,7 @@ ms.locfileid: "51606003"
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 응용 프로그램을 개발할 때 유용할 수 있는 리소스를 나열합니다.  
+이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션을 개발할 때 유용할 수 있는 리소스를 나열합니다.  
   
 ## <a name="includessdriverphpincludesssdriverphpmdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원 리소스  
 [에 대한 최신 설명서는](../../connect/php/microsoft-php-driver-for-sql-server.md) Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 참조하세요.  

@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48204813"
@@ -48,11 +48,11 @@ ms.locfileid: "48204813"
  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]이전에는 컴퓨터 한 대에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 하나만 설치할 수 있었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공식 IANA(Internet Assigned Numbers Authority)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당한 포트 1433을 통해 들어오는 요청을 수신했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나만 포트를 사용할 수 있으므로 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에서 처음으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 지원하게 되자 UDP 포트 1434로 수신하기 위해 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)가 개발되었습니다. 이 수신기 서비스는 설치된 인스턴스 이름과 인스턴스에 사용되는 포트나 명명된 파이프를 사용하여 클라이언트 요청에 응답합니다. SSRP 시스템의 제한을 해결하기 위해 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Browser 서비스가 SSRP를 대신하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 도입되었습니다.  
   
 ## <a name="how-sql-server-browser-works"></a>SQL Server Browser 작동 방법  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 TCP/IP 프로토콜이 설정되면 서버에 TCP/IP 포트가 할당됩니다. 명명된 파이프 프로토콜을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 특정 명명된 파이프에서 수신합니다. 이 포트 또는 "파이프"는 클라이언트 응용 프로그램과 데이터를 교환하기 위해 특정 인스턴스에 사용됩니다. 설치하는 동안 TCP 포트 1433과 파이프 `\sql\query` 가 기본 인스턴스에 할당되지만 나중에 서버 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나에서만 포트나 파이프를 사용할 수 있으므로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 비롯한 명명된 인스턴스에는 다른 포트 번호와 파이프 이름이 할당됩니다. 기본적으로 설정되어 있는 명명된 인스턴스와 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 둘 다 동적 포트를 사용하도록 구성되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 사용 가능한 포트가 할당됩니다. 필요할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 특정 포트를 할당할 수 있습니다. 연결할 때 클라이언트가 특정 포트를 지정할 수 있지만 포트가 동적으로 할당될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 언제든지 포트 변호가 달라질 수 있어 클라이언트는 정확한 포트 번호를 알지 못합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 TCP/IP 프로토콜이 설정되면 서버에 TCP/IP 포트가 할당됩니다. 명명된 파이프 프로토콜을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 특정 명명된 파이프에서 수신합니다. 이 포트 또는 "파이프"는 클라이언트 애플리케이션과 데이터를 교환하기 위해 특정 인스턴스에 사용됩니다. 설치하는 동안 TCP 포트 1433과 파이프 `\sql\query` 가 기본 인스턴스에 할당되지만 나중에 서버 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나에서만 포트나 파이프를 사용할 수 있으므로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 비롯한 명명된 인스턴스에는 다른 포트 번호와 파이프 이름이 할당됩니다. 기본적으로 설정되어 있는 명명된 인스턴스와 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 둘 다 동적 포트를 사용하도록 구성되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 사용 가능한 포트가 할당됩니다. 필요할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 특정 포트를 할당할 수 있습니다. 연결할 때 클라이언트가 특정 포트를 지정할 수 있지만 포트가 동적으로 할당될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 언제든지 포트 변호가 달라질 수 있어 클라이언트는 정확한 포트 번호를 알지 못합니다.  
   
  시작하자마자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 시작되어 UDP 포트 1434를 요청합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 레지스트리를 읽어 컴퓨터에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 식별하여 사용되는 포트와 명명된 파이프를 기록합니다. 서버에 네트워크 카드가 두 개 이상 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 포트 중 처음 발견된 포트를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 ipv6과 ipv4를 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 요청하면 클라이언트 네트워크 라이브러리에서 포트 1434를 사용하여 서버로 UDP 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서는 요청된 인스턴스의 TCP/IP 포트나 명명된 파이프를 사용하여 응답합니다. 그러면 클라이언트 응용 프로그램 네트워크 라이브러리가 원하는 인스턴스의 포트나 명명된 파이프를 사용하여 서버로 요청을 보내 연결을 완료합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 요청하면 클라이언트 네트워크 라이브러리에서 포트 1434를 사용하여 서버로 UDP 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서는 요청된 인스턴스의 TCP/IP 포트나 명명된 파이프를 사용하여 응답합니다. 그러면 클라이언트 애플리케이션 네트워크 라이브러리가 원하는 인스턴스의 포트나 명명된 파이프를 사용하여 서버로 요청을 보내 연결을 완료합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 시작 및 중지하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "48204813"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 엔터프라이즈 관리자 또는 쿼리 분석기에 서버 열거  
   
- 응용 프로그램이 네트워크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 경우처럼 클라이언트-서버 시나리오에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 중지하거나 해제하면 각 인스턴스에 특정 포트 번호를 할당하고 해당 포트 번호를 항상 사용하도록 클라이언트 응용 프로그램 코드를 작성해야 합니다. 이 방법에는 다음과 같은 문제점이 있습니다.  
+ 애플리케이션이 네트워크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 경우처럼 클라이언트-서버 시나리오에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 중지하거나 해제하면 각 인스턴스에 특정 포트 번호를 할당하고 해당 포트 번호를 항상 사용하도록 클라이언트 애플리케이션 코드를 작성해야 합니다. 이 방법에는 다음과 같은 문제점이 있습니다.  
   
--   응용 프로그램 코드를 업데이트하고 유지 관리하여 올바른 포트에 연결하도록 해야 합니다.  
+-   애플리케이션 코드를 업데이트하고 유지 관리하여 올바른 포트에 연결하도록 해야 합니다.  
   
--   각 인스턴스에 대해 선택한 포트를 서버의 다른 서비스나 응용 프로그램에서 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용할 수 없게 됩니다.  
+-   각 인스턴스에 대해 선택한 포트를 서버의 다른 서비스나 애플리케이션에서 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용할 수 없게 됩니다.  
   
 ## <a name="clustering"></a>Clustering  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 클러스터형 리소스가 아니며 클러스터 노드 간 장애 조치(Failover)를 지원하지 않으므로 클러스터의 경우 클러스터의 노드마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 설치하고 튜닝해야 합니다. 클러스터에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 IP_ANY에서 수신합니다.  

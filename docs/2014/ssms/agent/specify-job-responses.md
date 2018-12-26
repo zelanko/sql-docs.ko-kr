@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bc3b747e1dcb1c2d027eb2c1df39c3715c011a1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48122883"
@@ -29,7 +29,7 @@ ms.locfileid: "48122883"
   
      운영자가 추가 작업 동작을 실행해야 할 경우 이 작업 응답 중 하나를 사용. 예를 들어 백업 작업이 성공적으로 완료될 경우 운영자는 백업 테이프를 빼낸 다음 안전한 곳에 저장하도록 알림을 받아야 합니다.  
   
--   이벤트 메시지를 Windows 응용 프로그램 로그에 씀  
+-   이벤트 메시지를 Windows 애플리케이션 로그에 씀  
   
      이 응답은 실패한 작업에만 사용할 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48122883"
 |-|-|  
 |**설명**|**항목**|  
 |운영자에게 작업 상태를 알리는 방법에 대해 설명합니다.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Windows 응용 프로그램 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 응용 프로그램 로그에 작업 상태 쓰기](../../reporting-services/report-server/windows-application-log.md)|  
+|Windows 애플리케이션 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 응용 프로그램 로그에 작업 상태 쓰기](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [이벤트 모니터링 및 응답](monitor-and-respond-to-events.md)  

@@ -51,7 +51,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 ### <a name="rest-api-support"></a>REST API 지원
 
-최신 응용 프로그램 및 사용자 지정 개발을 사용하기 위해 SQL Server Reporting Services는 이제 완벽하게 OpenAPI 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
+최신 애플리케이션 및 사용자 지정 개발을 사용하기 위해 SQL Server Reporting Services는 이제 완벽하게 OpenAPI 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>보고서 작성기 및 SQL Server Data Tools에서 DAX에 대한 쿼리 디자이너 지원
 
@@ -140,7 +140,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
   
  자세한 내용은 [Power BI 보고서 서버 통합&#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
  
- **PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 응용 프로그램(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
+ **PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 애플리케이션(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  자세한 내용은 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)를 참조하세요.  
  
- **원격 인쇄용 ActiveX를 대체하는 PDF:** 보고서 뷰어 도구 모음 ActiveX 인쇄 환경이 Microsoft Edge를 포함하여 지원되는 브라우저 매트릭스에서 작동하는 최신 PDF 기반 환경으로 바뀌었습니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 응용 프로그램 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 보고서의 .PDF 파일을 다운로드하라는 메시지를 표시합니다.  관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 여전히 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.
+ **원격 인쇄용 ActiveX를 대체하는 PDF:** 보고서 뷰어 도구 모음 ActiveX 인쇄 환경이 Microsoft Edge를 포함하여 지원되는 브라우저 매트릭스에서 작동하는 최신 PDF 기반 환경으로 바뀌었습니다. 다운로드할 ActiveX 컨트롤이 없습니다! 사용하는 브라우저와 설치한 PDF 보기 애플리케이션 및 서비스에 따라 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 보고서를 인쇄할 인쇄 대화 상자를 열거나 보고서의 .PDF 파일을 다운로드하라는 메시지를 표시합니다.  관리자는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 여전히 클라이언트 쪽 인쇄를 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 

@@ -13,7 +13,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 140bd1e82540ab7f8869ae64173d7d5431ea9233
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47774741"
@@ -41,7 +41,7 @@ ms.locfileid: "47774741"
  ADO 응용 프로그램에 대 한 SQL Server, OLE DB 드라이버를 사용할 수 있지만 그렇게 하는 경우 지정 해야 합니다 `DataTypeCompatibility=80` 연결 문자열에 있습니다. 연결 문자열에 `DataTypeCompatibility=80`이 있으면 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 기능만 사용할 수 있습니다.  
 
 ## <a name="ole-db-support-policies"></a>OLE DB 지원 정책  
-응용 프로그램은 Windows 운영 체제에 포함된 OLE DB 공급자(SQLOLEDB)를 사용할 수 있습니다. 그러나 유지 관리 모드에 하 고 더 이상 업데이트 합니다. 대신 사용 해야 OLE DB 드라이버 SQL Server (MSOLEDBSQL)에 대 한 합니다.
+애플리케이션은 Windows 운영 체제에 포함된 OLE DB 공급자(SQLOLEDB)를 사용할 수 있습니다. 그러나 유지 관리 모드에 하 고 더 이상 업데이트 합니다. 대신 사용 해야 OLE DB 드라이버 SQL Server (MSOLEDBSQL)에 대 한 합니다.
 
 ## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

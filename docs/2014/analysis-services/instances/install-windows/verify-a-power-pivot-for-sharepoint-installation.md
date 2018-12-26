@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48214783"
@@ -51,18 +51,18 @@ ms.locfileid: "48214783"
   
 6.  **SQL Server Analysis Services** 및 **SQL Server PowerPivot 시스템 서비스** 가 시작되었는지 확인합니다.  
   
-7.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+7.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 8.  클릭 **기본 PowerPivot 서비스 응용 프로그램** 이 응용 프로그램에 대 한 PowerPivot 관리 대시보드를 엽니다. 처음 사용하는 경우 대시보드는 로드하는 데 몇 분 정도 걸립니다.  
   
-     또는 옆에 있는 빈 공간을 클릭 **기본 PowerPivot 서비스 응용 프로그램** 행을 선택 하 여 클릭 **속성** 이 서비스 응용 프로그램에 대 한 구성 설정을 볼 수 있습니다. 구성 설정과 응용 프로그램 속성을 모두 수정하여 서버 구성을 변경할 수 있습니다. 이러한 설정에 대 한 자세한 내용은 참조 하세요. [만들고 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)합니다.  
+     또는 옆에 있는 빈 공간을 클릭 **기본 PowerPivot 서비스 응용 프로그램** 행을 선택 하 여 클릭 **속성** 이 서비스 응용 프로그램에 대 한 구성 설정을 볼 수 있습니다. 구성 설정과 애플리케이션 속성을 모두 수정하여 서버 구성을 변경할 수 있습니다. 이러한 설정에 대 한 자세한 내용은 참조 하세요. [만들고 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)합니다.  
   
 ## <a name="verify-integration-at-the-site-level"></a>사이트 수준에서 통합 확인  
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 응용 프로그램을 브라우저에서 엽니다. 기본값을 사용 하는 경우 http://를 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에서입니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 http://를 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에서입니다.  
   
-2.  PowerPivot 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
+2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
     1.  사이트 작업에서 **기타 옵션...** 을 클릭합니다.  
   

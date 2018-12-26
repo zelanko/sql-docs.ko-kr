@@ -23,7 +23,7 @@ ms.locfileid: "47731821"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 응용 프로그램이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
+  INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 애플리케이션이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  

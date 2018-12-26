@@ -12,13 +12,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48103283"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 환경에서 메모리 내 OLTP 사용
-  서버 가상화 기술을 사용하면 IT 자본 및 운영 비용을 줄이고 향상된 응용 프로그램 프로비전, 유지 관리, 가용성 및 백업/복구 프로세스를 통해 IT 효율성을 높일 수 있습니다. 최근의 기술적 진보에 따라 가상화를 사용하면 복잡한 데이터베이스 작업도 보다 쉽고 간단하게 통합할 수 있습니다. 이 항목에서는 가상화된 환경에서 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 를 사용하기 위한 모범 사례에 대해 설명합니다.  
+  서버 가상화 기술을 사용하면 IT 자본 및 운영 비용을 줄이고 향상된 애플리케이션 프로비전, 유지 관리, 가용성 및 백업/복구 프로세스를 통해 IT 효율성을 높일 수 있습니다. 최근의 기술적 진보에 따라 가상화를 사용하면 복잡한 데이터베이스 작업도 보다 쉽고 간단하게 통합할 수 있습니다. 이 항목에서는 가상화된 환경에서 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 를 사용하기 위한 모범 사례에 대해 설명합니다.  
   
 ##  <a name="bkmk_memoryPreAllocation"></a> 메모리 사전 할당  
  가상화된 환경의 메모리에 대해 필수적으로 고려해야 할 사항은 더 나은 성능과 향상된 지원 방식입니다. 요구 사항(최대 및 최소 부하)에 따라 가상 컴퓨터에 메모리를 신속하게 할당하면서도 메모리가 낭비되지 않도록 방지하는 두 마리 토끼를 모두 잡아야 합니다. Hyper-V 동적 메모리 기능을 사용하면 호스트에서 실행되는 가상 컴퓨터 간에 메모리를 할당하고 관리하는 작업을 신속하게 수행할 수 있습니다.  

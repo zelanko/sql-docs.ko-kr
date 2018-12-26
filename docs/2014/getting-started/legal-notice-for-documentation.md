@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48228503"
@@ -37,8 +37,8 @@ ms.locfileid: "48228503"
   
  이 설명서에 포함된 예제는 주로 특정 문이나 절의 개념을 설명하거나 적당한 사용법을 보여 주기 위한 것입니다. 특정 개념이나 문에 대한 예제를 중점적으로 제공하기 위해 일반적인 데이터 유효성 검사 및 오류 처리의 일부가 제거되었으므로 대부분의 예제에 전체 프로덕션 시스템에서 일반적으로 찾을 수 있는 모든 코드가 포함되어 있지는 않습니다. 이러한 예제나 포함된 원본 코드에 대한 기술 지원은 받을 수 없습니다.  
   
- 경우에 따라 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 충분한 테스트 또는 개발 단계를 거치지 않은 특정 기능이 포함될 수 있으며 이러한 기능은 사용자를 대상으로 하는 기능이 아닙니다. 이러한 기능은 대부분 자리 표시자로 제공됩니다. 따라서 소프트웨어에 포함된 일부 기능에 대한 설명이 없을 수도 있습니다. 설명서에 포함되지 않은 기능 또는 Microsoft 내부 사용을 위해 표시된 기능은 사용자를 대상으로 제공된 기능이 아니며 Microsoft 고객 지원 서비스를 통해 지원되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명서에서 별도로 언급하지 않는 한 타사 콘텐츠( [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]과 타사 콘텐츠를 함께 사용하여 발생하는 문제 포함)는 Microsoft 고객 지원 서비스에서 지원하지 않으며 이로 인해 데이터가 유실될 수도 있습니다. Microsoft 고객 지원 서비스는 저장 프로시저, 확장 저장 프로시저, 함수, 뷰, 테이블, 열, 속성 또는 메타데이터를 비롯한(이에 국한되지 않음) 설명서에서 다루지 않는 API와 같이 문서화되지 않은 진입점을 사용하는 데이터베이스 또는 응용 프로그램은 지원하지 않습니다.  
+ 경우에 따라 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 충분한 테스트 또는 개발 단계를 거치지 않은 특정 기능이 포함될 수 있으며 이러한 기능은 사용자를 대상으로 하는 기능이 아닙니다. 이러한 기능은 대부분 자리 표시자로 제공됩니다. 따라서 소프트웨어에 포함된 일부 기능에 대한 설명이 없을 수도 있습니다. 설명서에 포함되지 않은 기능 또는 Microsoft 내부 사용을 위해 표시된 기능은 사용자를 대상으로 제공된 기능이 아니며 Microsoft 고객 지원 서비스를 통해 지원되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명서에서 별도로 언급하지 않는 한 타사 콘텐츠( [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]과 타사 콘텐츠를 함께 사용하여 발생하는 문제 포함)는 Microsoft 고객 지원 서비스에서 지원하지 않으며 이로 인해 데이터가 유실될 수도 있습니다. Microsoft 고객 지원 서비스는 저장 프로시저, 확장 저장 프로시저, 함수, 뷰, 테이블, 열, 속성 또는 메타데이터를 비롯한(이에 국한되지 않음) 설명서에서 다루지 않는 API와 같이 문서화되지 않은 진입점을 사용하는 데이터베이스 또는 애플리케이션은 지원하지 않습니다.  
   
- 또한 설명서에 나와 있지 않은 진입점을 사용하는 응용 프로그램 및 데이터베이스의 경우 서버 및 데이터베이스를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 나중 버전으로 업그레이드하지 못할 수도 있으며 이러한 업그레이드는 지원되지도 않습니다. Microsoft SQL Server에 포함된 SQL Server 기능 중 사용자용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명서에 포함되지 않은 기능은 사용자를 대상으로 제공된 기능이 아니며 이를 사용할 경우 데이터가 유실될 수 있습니다.  
+ 또한 설명서에 나와 있지 않은 진입점을 사용하는 애플리케이션 및 데이터베이스의 경우 서버 및 데이터베이스를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 나중 버전으로 업그레이드하지 못할 수도 있으며 이러한 업그레이드는 지원되지도 않습니다. Microsoft SQL Server에 포함된 SQL Server 기능 중 사용자용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명서에 포함되지 않은 기능은 사용자를 대상으로 제공된 기능이 아니며 이를 사용할 경우 데이터가 유실될 수 있습니다.  
   
   

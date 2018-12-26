@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8b780558fc41394d0da8949d33896e5409fbec5b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48112243"
@@ -31,9 +31,9 @@ ms.locfileid: "48112243"
   
 -   연결에 대한 클라이언트, 사용자 이름, 암호 및 언어를 제공합니다.  
   
--   단일 응용 프로그램 서버에 연결할지 아니면 부하 분산 서버의 그룹에 연결할지를 선택합니다.  
+-   단일 애플리케이션 서버에 연결할지 아니면 부하 분산 서버의 그룹에 연결할지를 선택합니다.  
   
--   단일 응용 프로그램 서버의 호스트 및 시스템 번호를 제공하거나 부하 분산 서버 그룹의 메시지 서버, 그룹 및 SID를 제공합니다.  
+-   단일 애플리케이션 서버의 호스트 및 시스템 번호를 제공하거나 부하 분산 서버 그룹의 메시지 서버, 그룹 및 SID를 제공합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 구성 요소에 대한 RFC 함수 호출의 사용자 지정 로깅을 사용하도록 설정합니다. 이 로깅은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용하도록 설정할 수 있는 선택적 로깅과 별개입니다. RFC 함수 호출의 로깅을 사용하도록 설정하려면 각 RFC 함수 호출 전후에 생성되는 로그 파일을 저장할 디렉터리를 지정합니다. 이 로깅 기능을 사용하면 XML 형식의 로그 파일이 많이 만들어집니다. 로그 파일에는 전송되는 모든 데이터 행도 포함되므로 많은 디스크 공간이 소비될 수 있습니다. 로그 디렉터리를 선택하지 않으면 로깅이 사용되지 않습니다.  
   

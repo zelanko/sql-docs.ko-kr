@@ -44,7 +44,7 @@ ms.locfileid: "47836995"
  SMO에서 인증서는 표시 된 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체의 공개 키, 주체 이름, 발급자에 대 한 정보와, 유효 기간을 지정 하는 속성입니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C#에서 인증서 추가  
  코드 예제는 암호화된 암호를 사용하여 간단한 인증서를 만듭니다. 다른 개체와 달리는 <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 메서드에 몇 가지 오버 로드가 있습니다. 이 예에 사용된 오버로드는 암호화된 암호를 사용하여 새 인증서를 만듭니다.  

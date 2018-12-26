@@ -313,4 +313,4 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 - [TPM 증명 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [HGS 인스턴스에 대해 HTTPS 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- 암호화된 열에 대해 리치 쿼리를 실행하는 응용 프로그램 개발
+- 암호화된 열에 대해 리치 쿼리를 실행하는 애플리케이션 개발

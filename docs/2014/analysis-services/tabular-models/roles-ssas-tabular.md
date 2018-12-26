@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48181373"
@@ -22,7 +22,7 @@ ms.locfileid: "48181373"
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
   
 > [!IMPORTANT]  
->  사용자가 보고 응용 프로그램이나 데이터 분석 클라이언트 응용 프로그램을 사용하여 배포된 모델에 연결하려면 해당 사용자가 멤버이고 읽기 이상의 권한을 가진 역할을 하나 이상 만들어야 합니다.  
+>  사용자가 보고 애플리케이션이나 데이터 분석 클라이언트 애플리케이션을 사용하여 배포된 모델에 연결하려면 해당 사용자가 멤버이고 읽기 이상의 권한을 가진 역할을 하나 이상 만들어야 합니다.  
   
  이 항목의 정보는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 역할을 정의하는 테이블 형식 모델 작성자를 위한 것입니다. 모델을 작성하는 중에 정의된 역할은 모델 작업 영역 데이터베이스에 적용됩니다. model 데이터베이스를 배포한 후 model 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할 멤버를 관리(추가, 편집, 삭제)할 수 있습니다. 배포된 데이터베이스에서 역할의 멤버를 관리하는 방법은 [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](tabular-model-roles-ssas-tabular.md)을 참조하세요.  
   

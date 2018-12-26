@@ -18,16 +18,16 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48161933"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대 한 세부 정보가 포함 된 ASCII 텍스트 파일, 서비스, 보고서 관리자 및 백그라운드 처리에 보고서 서버 웹에서 수행 하는 포함 하 여 작업 합니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대 한 세부 정보가 포함 된 ASCII 텍스트 파일, 서비스, 보고서 관리자 및 백그라운드 처리에 보고서 서버 웹에서 수행 하는 포함 하 여 작업 합니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  
   
 > [!NOTE]  
->  이전 버전에서는 응용 프로그램마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. 다음 파일이 사용 되지 않는 되어에서 더 이상 만들어지지 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전: ReportServerWebApp_*\<타임 스탬프 >*.log, ReportServer_*\<타임 스탬프 >*.log 및 ReportServerService_main_*\<타임 스탬프 >*. 로그 합니다.  
+>  이전 버전에서는 애플리케이션마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. 다음 파일이 사용 되지 않는 되어에서 더 이상 만들어지지 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전: ReportServerWebApp_*\<타임 스탬프 >*.log, ReportServer_*\<타임 스탬프 >*.log 및 ReportServerService_main_*\<타임 스탬프 >*. 로그 합니다.  
   
  **항목 내용**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48161933"
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 요소 및 버전 정보  
   
--   응용 프로그램 로그에 기록된 이벤트  
+-   애플리케이션 로그에 기록된 이벤트  
   
 -   보고서 서버에서 생성한 예외  
   

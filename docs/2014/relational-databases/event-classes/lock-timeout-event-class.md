@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a4f516999a9c876421c89eb82b163c08e975fe2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48215623"
@@ -25,7 +25,7 @@ ms.locfileid: "48215623"
 # <a name="locktimeout-event-class"></a>Lock:Timeout 이벤트 클래스
   Lock:Timeout 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @@LOCK_TIMEOUT 시스템 함수에 의해 결정되며 SET LOCK_TIMEOUT 문을 사용하여 설정할 수 있습니다.  
   
- Lock:Timeout 이벤트 클래스를 사용하여 제한 시간 조건이 발생하는 경우를 모니터링할 수 있습니다. 이 정보는 제한 시간이 응용 프로그램 성능에 큰 영향을 주는지 여부와 관련 개체를 확인하는 데 유용하게 사용됩니다. 이러한 개체를 수정하는 응용 프로그램 코드를 검사하여 제한 시간을 최소화하도록 변경할 수 있는지 확인할 수 있습니다.  
+ Lock:Timeout 이벤트 클래스를 사용하여 제한 시간 조건이 발생하는 경우를 모니터링할 수 있습니다. 이 정보는 제한 시간이 애플리케이션 성능에 큰 영향을 주는지 여부와 관련 개체를 확인하는 데 유용하게 사용됩니다. 이러한 개체를 수정하는 애플리케이션 코드를 검사하여 제한 시간을 최소화하도록 변경할 수 있는지 확인할 수 있습니다.  
   
  지속 기간이 0인 Lock:Timeout 이벤트는 보통 내부 잠금 검색의 결과이며, 이는 반드시 문제를 나타내는 것은 아닙니다. Lock:Timeout (timeout > 0) 이벤트를 사용하면 지속 기간이 0인 제한 시간을 무시할 수 있습니다.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "48215623"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
+|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
 |BinaryData|`image`|잠금 리소스 식별자입니다.|2|사용자 계정 컨트롤|  
-|ClientProcessID|`int`|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
+|ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
 |DatabaseID|`int`|잠금 제한 시간을 초과한 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |DatabaseName|`nvarchar`|시간 초과가 발생한 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |Duration|`bigint`|잠금 요청이 전달된 시간과 잠금 제한 시간이 초과된 시간 사이의 시간(밀리초)입니다.|13|사용자 계정 컨트롤|  

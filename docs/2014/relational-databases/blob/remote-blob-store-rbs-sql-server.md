@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48181477"
@@ -43,7 +43,7 @@ ms.locfileid: "48181477"
 -   가비지 수집, 일관성 검사 및 기타 유지 관리 기능이 포함됩니다.  
   
 ### <a name="standardized-api"></a>표준화된 API  
- RBS는 응용 프로그램의 BLOB 저장소 액세스 및 수정을 위한 표준화된 프로그래밍 모델을 제공하는 API 집합을 정의합니다. 각 BLOB 저장소에서는 자체 공급자 라이브러리를 지정할 수 있는데, 이 라이브러리는 RBS 클라이언트 라이브러리에 연결되어 BLOB을 저장하고 액세스하는 방법을 지정합니다.  
+ RBS는 애플리케이션의 BLOB 저장소 액세스 및 수정을 위한 표준화된 프로그래밍 모델을 제공하는 API 집합을 정의합니다. 각 BLOB 저장소에서는 자체 공급자 라이브러리를 지정할 수 있는데, 이 라이브러리는 RBS 클라이언트 라이브러리에 연결되어 BLOB을 저장하고 액세스하는 방법을 지정합니다.  
   
  많은 타사 저장소 솔루션 공급업체가 이러한 표준 API를 준수하고 다양한 저장소 플랫폼에서 BLOB 저장소를 지원하는 RBS 공급자를 개발했습니다.  
   
