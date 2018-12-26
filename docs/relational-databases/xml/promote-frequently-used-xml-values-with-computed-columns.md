@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. **xml** 데이터 형식은 ADO.NET의 관리 클래스 SqlXml로 제공되며 XmlReader를 반환하는 **CreateReader()** 메서드를 지원합니다.  
   
 > [!NOTE]  
->  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 응용 프로그램에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)를 참조하세요.  
+>  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 애플리케이션에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)를 참조하세요.  
   
 ```  
 public class c_streaming_xml_tvf {  

@@ -71,7 +71,7 @@ items:
   href: global-settings-logging-accesstosql.md
 - name: 서버 연결 파일 만들기
   href: creating-the-server-connection-files-accesstosql.md
-- name: Access 응용 프로그램을 Azure SQL DB에 연결
+- name: Access 애플리케이션을 Azure SQL DB에 연결
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: 변수 값 파일 만들기
   href: creating-variable-value-files-accesstosql.md

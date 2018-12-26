@@ -22,7 +22,7 @@ ms.locfileid: "51558330"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>비즈니스 개체를 스크립팅하기에 안전하다고 표시
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  을 보안 인터넷 환경을 보장 하기 위해 인스턴스화된 모든 비즈니스 개체를 표시 해야 합니다 [rds. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드 "스크립팅에 안전한." DCOM에서 사용할 수는 시스템 레지스트리의 라이선스 영역에서 같이 표시 된 확인 해야 합니다.  
   

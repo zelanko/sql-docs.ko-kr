@@ -450,7 +450,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
   
  완료되면 각 정책 평가 일정에 대해 한 개씩 새 SQL Server 에이전트 작업 두 개가 만들어집니다. 이러한 작업은 **syspolicy_check_schedule**로 시작하는 이름을 가져야 합니다.  
   
- 작업 기록을 보고 평가 결과를 검사할 수 있습니다. 또한 평가 오류는 이벤트 ID 34052로 Windows 응용 프로그램(이벤트 뷰어)에 기록됩니다. 또한 정책이 실패할 경우 SQL Server 에이전트가 경고를 보내도록 구성할 수 있습니다. 자세한 내용은 [정책 관리자에게 정책 실패를 알리도록 경고 구성](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)을 참조하세요.  
+ 작업 기록을 보고 평가 결과를 검사할 수 있습니다. 또한 평가 오류는 이벤트 ID 34052로 Windows 애플리케이션(이벤트 뷰어)에 기록됩니다. 또한 정책이 실패할 경우 SQL Server 에이전트가 경고를 보내도록 구성할 수 있습니다. 자세한 내용은 [정책 관리자에게 정책 실패를 알리도록 경고 구성](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)을 참조하세요.  
   
 ##  <a name="BKMK_SCENARIOS"></a> 성능 문제 해결 시나리오  
  다음 표는 일반적인 성능 관련 문제 해결 시나리오를 나열합니다.  
@@ -459,7 +459,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 |--------------|-----------------|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
-|[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|클라이언트 응용 프로그램에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
+|[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
   
 ##  <a name="BKMK_XEVENTS"></a> 유용한 확장 이벤트  
  다음 확장 이벤트는 **동기화** 상태에 있는 복제본을 문제 해결할 때 유용합니다.  

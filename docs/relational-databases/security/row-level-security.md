@@ -32,9 +32,9 @@ ms.locfileid: "52409900"
   
  RLS(행 수준 보안)를 사용하면 고객이 쿼리를 실행하는 사용자의 특성(예: 그룹 멤버 자격 또는 실행 컨텍스트)에 따라 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다.  
   
- 행 수준 보안(RLS)은 응용 프로그램의 보안 설계 및 코딩을 간소화합니다. RLS는 데이터 행 액세스에 대한 제한을 구현하는 데 유용합니다. 예를 들어 작업자가 자신의 부서와 관련된 데이터 행에만 액세스하거나 고객의 데이터 액세스를 회사와 관련된 데이터로만 제한할 수 있습니다.  
+ 행 수준 보안(RLS)은 애플리케이션의 보안 설계 및 코딩을 간소화합니다. RLS는 데이터 행 액세스에 대한 제한을 구현하는 데 유용합니다. 예를 들어 작업자가 자신의 부서와 관련된 데이터 행에만 액세스하거나 고객의 데이터 액세스를 회사와 관련된 데이터로만 제한할 수 있습니다.  
   
- 액세스 제한 논리는 다른 응용 프로그램 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이로 인해 보안 시스템의 노출 영역이 감소되어 보안 시스템이 더 안정적이고 강력해집니다.  
+ 액세스 제한 논리는 다른 애플리케이션 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이로 인해 보안 시스템의 노출 영역이 감소되어 보안 시스템이 더 안정적이고 강력해집니다.  
   
  RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 [인라인 테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)로 만들어진 조건자를 사용하여 구현합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52409900"
   
 -   은행에서 직원의 업무 부서에 따라, 또는 회사 내에서 직원의 역할에 따라 금융 데이터 행에 대한 액세스를 제한하는 정책을 만들 수 있습니다.  
   
--   다중 테넌트 응용 프로그램은 모든 다른 테넌트 행으로부터 각 테넌트의 데이터 행의 논리적 분리를 적용하는 정책을 만들 수 있습니다. 여러 테넌트의 데이터를 하나의 테이블에 저장하여 효율성을 높일 수 있습니다. 각 테넌트는 자체의 데이터 행만 볼 수 있습니다.  
+-   다중 테넌트 애플리케이션은 모든 다른 테넌트 행으로부터 각 테넌트의 데이터 행의 논리적 분리를 적용하는 정책을 만들 수 있습니다. 여러 테넌트의 데이터를 하나의 테이블에 저장하여 효율성을 높일 수 있습니다. 각 테넌트는 자체의 데이터 행만 볼 수 있습니다.  
   
  RLS 필터 조건자는 **WHERE** 절을 추가한 것과 기능적으로 동일합니다. 조건자는 업무 관례 명령처럼 복잡해질 수 있으며, 또는 절은 `WHERE TenantId = 42`처럼 간단해질 수 있습니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409900"
   
 -   성능을 최대화하기 위해 조건자 함수에서 과도한 테이블 조인을 사용하지 마십시오.  
   
- 세션별 [SET 옵션](../../t-sql/statements/set-statements-transact-sql.md)에 종속되는 조건자 논리 방지: 실제 응용 프로그램에서는 사용되지 않지만 해당 논리가 특정 세션별 **SET** 옵션에 종속되는 조건자 함수는 사용자가 임의 쿼리를 실행할 수 있는 경우 정보를 누출할 수 있습니다. 예를 들어 문자열을 암시적으로 **datetime** 으로 변환하는 조건자 함수는 현재 세션에 대해 **SET DATEFORMAT** 옵션을 기반으로 여러 행을 필터링할 수 있습니다. 일반적으로 조건자 함수는 다음과 같은 규칙을 준수해야 합니다.  
+ 세션별 [SET 옵션](../../t-sql/statements/set-statements-transact-sql.md)에 종속되는 조건자 논리 방지: 실제 애플리케이션에서는 사용되지 않지만 해당 논리가 특정 세션별 **SET** 옵션에 종속되는 조건자 함수는 사용자가 임의 쿼리를 실행할 수 있는 경우 정보를 누출할 수 있습니다. 예를 들어 문자열을 암시적으로 **datetime** 으로 변환하는 조건자 함수는 현재 세션에 대해 **SET DATEFORMAT** 옵션을 기반으로 여러 행을 필터링할 수 있습니다. 일반적으로 조건자 함수는 다음과 같은 규칙을 준수해야 합니다.  
   
 -   조건자 함수는 문자열을 암시적으로 **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset**으로 변환하거나 그 반대로 변환하지 않아야 합니다. 이러한 변환은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) 및 [SET LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 옵션의 영향을 받기 때문입니다. 대신 **CONVERT** 함수를 사용하여 스타일 매개 변수를 명시적으로 지정합니다.  
   
@@ -280,11 +280,11 @@ WITH (STATE = OFF);
  이제 Sales1 및 Sales2 사용자가 6개의 행을 모두를 볼 수 있습니다.  
   
   
-###  <a name="MidTier"></a> 2. 중간 계층 응용 프로그램을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오  
+###  <a name="MidTier"></a> 2. 중간 계층 애플리케이션을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오  
 > [!NOTE]
 > 현재 SESSION_CONTEXT와 차단 조건자가 모두 지원되지 않으므로 Azure SQL Data Warehouse에는 이 예제가 적용되지 않습니다.
 
-이 예는 중간 계층 응용 프로그램이 응용 프로그램 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(응용 프로그램)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 응용 프로그램이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 응용 프로그램 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
+이 예는 중간 계층 애플리케이션이 애플리케이션 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(애플리케이션)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 응용 프로그램이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 응용 프로그램 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
   
  데이터를 보유하는 간단한 테이블을 만듭니다.  
   
@@ -309,7 +309,7 @@ INSERT Sales VALUES
     (6, 2, 'Seat', 5);  
 ```  
   
- 응용 프로그램에서 연결하는 데 사용할 낮은 권한의 사용자를 만듭니다.  
+ 애플리케이션에서 연결하는 데 사용할 낮은 권한의 사용자를 만듭니다.  
   
 ```  
 -- Without login only for demo  
@@ -320,7 +320,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- 행을 필터링하는 **SESSION_CONTEXT** 에 저장된 응용 프로그램 사용자 ID를 사용할 새로운 스키마 및 조건자 함수를 만듭니다.
+ 행을 필터링하는 **SESSION_CONTEXT** 에 저장된 애플리케이션 사용자 ID를 사용할 새로운 스키마 및 조건자 함수를 만듭니다.
 
 ```  
 CREATE SCHEMA Security;  
@@ -348,7 +348,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- 이제 `Sales` SESSION_CONTEXT **에서 다른 응용 프로그램 사용자 ID를 설정한 후**테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 응용 프로그램은 연결을 연 후 **SESSION_CONTEXT** 에서 현재 사용자 ID를 설정합니다.  
+ 이제 `Sales` SESSION_CONTEXT **에서 다른 응용 프로그램 사용자 ID를 설정한 후**테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 애플리케이션은 연결을 연 후 **SESSION_CONTEXT** 에서 현재 사용자 ID를 설정합니다.  
   
 ```  
 EXECUTE AS USER = 'AppUser';  

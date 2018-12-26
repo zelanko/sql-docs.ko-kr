@@ -74,7 +74,7 @@ HANDLE OpenSqlFilestream (
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|비동기 I/O를 위해 파일을 열거나 만듭니다.|  
 |SQL_FILESTREAM_OPEN_FLAG_NO_BUFFERING|0x00000002L|시스템에서 시스템 캐싱을 사용하지 않고 파일을 엽니다.|  
 |SQL_FILESTREAM_OPEN_FLAG_NO_WRITE_THROUGH|0x00000004L|시스템에서 중간 캐시를 통해 쓰지 않습니다. 쓰기는 디스크에 바로 적용됩니다.|  
-|SQL_FILESTREAM_OPEN_FLAG_SEQUENTIAL_SCAN|0x00000008L|처음부터 끝까지 순차적으로 파일에 액세스합니다. 시스템에서는 이 필드를 힌트로 사용하여 파일 캐싱을 최적화할 수 있습니다. 응용 프로그램에서 임의 액세스를 위해 파일 포인터를 이동하는 경우 최적 캐싱이 수행되지 않을 수도 있습니다.|  
+|SQL_FILESTREAM_OPEN_FLAG_SEQUENTIAL_SCAN|0x00000008L|처음부터 끝까지 순차적으로 파일에 액세스합니다. 시스템에서는 이 필드를 힌트로 사용하여 파일 캐싱을 최적화할 수 있습니다. 애플리케이션에서 임의 액세스를 위해 파일 포인터를 이동하는 경우 최적 캐싱이 수행되지 않을 수도 있습니다.|  
 |SQL_FILESTREAM_OPEN_FLAG_RANDOM_ACCESS|0x00000010L|파일에 임의로 액세스합니다. 시스템에서는 이 필드를 힌트로 사용하여 파일 캐싱을 최적화할 수 있습니다.|  
   
  *FilestreamTransactionContext*  

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9823e6493e59440407ac847c9c8233983e0ca236
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34042137"
@@ -23,7 +23,7 @@ ms.locfileid: "34042137"
  이 문서에서는 Microsoft Excel, 피벗 테이블, 피벗 차트와 이미 익숙한 가정 합니다. Excel 사용법에 대한 자세한 내용은 Excel 도움말을 참조하십시오.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
- 모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 응용 프로그램인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. 분석에서에서 Excel 기능을 사용 하려면 Microsoft Office 2003 있어야 하거나 이상이 SSDT와 같은 컴퓨터에 설치 합니다.  
+ 모델 작성자는 Excel에서 분석 기능을 사용하여 일반적인 데이터 분석 애플리케이션인 Microsoft Excel으로 모델 프로젝트의 효율성을 테스트할 수 있습니다. 분석에서에서 Excel 기능을 사용 하려면 Microsoft Office 2003 있어야 하거나 이상이 SSDT와 같은 컴퓨터에 설치 합니다.  
   
  Excel에서 분석 기능은 Excel을 실행하여 새 Excel 통합 문서(.xls)를 만듭니다. 통합 문서에 모델 작업 영역 데이터베이스에 대한 데이터 연결이 생성됩니다. 워크시트에 빈 피벗 테이블이 추가되고 피벗 테이블 필드 목록에 모델 개체 메타데이터가 채워집니다. 그런 다음 피벗 테이블에 보기 가능한 데이터 및 슬라이서를 추가할 수 있습니다.  
   

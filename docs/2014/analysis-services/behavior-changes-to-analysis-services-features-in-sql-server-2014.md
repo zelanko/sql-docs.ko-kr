@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8855fceb717ba210b8fc5c36960d660143be79
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50145851"
@@ -22,7 +22,7 @@ ms.locfileid: "50145851"
   이 항목에서는 다차원, 테이블 형식, 데이터 마이닝 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 배포에 대한 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 의 동작 변경 내용을 설명합니다. 동작 변경 내용은 이전 버전의 SQL Server와 비교해서 현재 버전에서 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
   
 > [!NOTE]  
->  반면에 새로운 변경은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 과 통합된 데이터 모델 또는 응용 프로그램이 실행되지 않게 하는 변경 내용입니다. 자세한 내용은 [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)를 참조하십시오.  
+>  반면에 새로운 변경은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 과 통합된 데이터 모델 또는 애플리케이션이 실행되지 않게 하는 변경 내용입니다. 자세한 내용은 [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)를 참조하십시오.  
   
  항목 내용  
   
@@ -59,7 +59,7 @@ ms.locfileid: "50145851"
 #### <a name="higher-permission-requirements-for-using-a-powerpivot-workbook-as-an-external-data-source"></a>PowerPivot 통합 문서를 외부 데이터 원본으로 사용하기 위해서는 더 높은 권한이 필요함  
  Excel 통합 문서에서는 동일한 통합 문서 내에 포함되거나 외부 통합 문서에 있는 PowerPivot 데이터를 렌더링할 수 있습니다. 이전 릴리스에서는 PowerPivot 데이터가 포함되어 있는지 외부에 있는지에 관계없이 사용 권한 요구 사항이 동일했습니다. 따라서 PowerPivot 통합 문서에 대한 **보기만** 권한이 있으면 포함된 연결과 외부 연결 모두에 대해 통합 문서의 모든 PowerPivot 데이터에 액세스할 수 있었습니다.  
   
- 이번 릴리스에서는 외부 파일의 PowerPivot 데이터를 렌더링하는 Excel 통합 문서에 대한 사용 권한 요구 사항이 변경되었습니다. 이번 릴리스에서는 클라이언트 응용 프로그램에서 외부 PowerPivot 통합 문서에 연결하려면 **읽기** 권한(보다 구체적으로는 **항목 열기** 권한)이 있어야 합니다. 추가 권한은 통합 문서에 포함된 원본 데이터를 보기 위한 다운로드 권한을 사용자에게 부여하도록 지정합니다. 추가 권한은 모델 데이터에 연결하는 클라이언트 응용 프로그램이나 통합 문서에서 모델 데이터를 전체적으로 사용할 수 있다는 사실을 반영하므로 사용 권한 요구 사항과 실제 데이터 연결 동작을 보다 잘 조정할 수 있습니다.  
+ 이번 릴리스에서는 외부 파일의 PowerPivot 데이터를 렌더링하는 Excel 통합 문서에 대한 사용 권한 요구 사항이 변경되었습니다. 이번 릴리스에서는 클라이언트 애플리케이션에서 외부 PowerPivot 통합 문서에 연결하려면 **읽기** 권한(보다 구체적으로는 **항목 열기** 권한)이 있어야 합니다. 추가 권한은 통합 문서에 포함된 원본 데이터를 보기 위한 다운로드 권한을 사용자에게 부여하도록 지정합니다. 추가 권한은 모델 데이터에 연결하는 클라이언트 애플리케이션이나 통합 문서에서 모델 데이터를 전체적으로 사용할 수 있다는 사실을 반영하므로 사용 권한 요구 사항과 실제 데이터 연결 동작을 보다 잘 조정할 수 있습니다.  
   
  PowerPivot 통합 문서를 외부 데이터 원본으로 계속 사용하려면 외부 PowerPivot 데이터에 연결할 사용자의 SharePoint 권한을 높여야 합니다. 권한을 변경하기 전까지는 사용자가 데이터 원본 연결에서 PowerPivot 통합 문서에 액세스하려고 할 때 다음과 같은 오류가 표시됩니다. “PowerPivot 웹 서비스에서 오류를 반했습니다. (액세스가 거부되었습니다. 요청한 문서가 존재하지 않거나 해당 파일을 열 수 있는 권한이 없습니다.)"  
   
@@ -101,9 +101,9 @@ ms.locfileid: "50145851"
  ![GMNI_PowerPivotGalleryIcon_Locked](media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")  
   
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>부하 분산 요청에 대한 새 기본 설정이 라운드 로빈에서 상태 기반으로 변경됨  
- PowerPivot 서비스 응용 프로그램에는 PowerPivot 데이터에 대한 요청이 팜의 여러 SharePoint용 PowerPivot 서비스에서 분산되는 방식을 결정하는 기본 설정이 포함됩니다. 이전 릴리스에서 기본 설정은 요청이 사용 가능한 서버 간에 순차적으로 분산되는 **라운드 로빈**이었습니다. 이 릴리스에서는 기본값이 **상태 기반**입니다. PowerPivot 서비스 응용 프로그램에서는 사용 가능한 메모리 또는 CPU와 같은 서버 상태 통계를 사용하여 xt 요청을 가져올 서버 인스턴스를 결정합니다.  
+ PowerPivot 서비스 애플리케이션에는 PowerPivot 데이터에 대한 요청이 팜의 여러 SharePoint용 PowerPivot 서비스에서 분산되는 방식을 결정하는 기본 설정이 포함됩니다. 이전 릴리스에서 기본 설정은 요청이 사용 가능한 서버 간에 순차적으로 분산되는 **라운드 로빈**이었습니다. 이 릴리스에서는 기본값이 **상태 기반**입니다. PowerPivot 서비스 애플리케이션에서는 사용 가능한 메모리 또는 CPU와 같은 서버 상태 통계를 사용하여 xt 요청을 가져올 서버 인스턴스를 결정합니다.  
   
- 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 응용 프로그램에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [만들고 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)합니다.  
+ 서버를 이전 릴리스로부터 업그레이드한 경우 PowerPivot 서비스 애플리케이션에는 이전의 기본 설정(**라운드 로빈**)이 보존됩니다. **상태 기반** 할당 방법을 사용하려면 구성 설정을 수정해야 합니다. 자세한 내용은 [만들고 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)   

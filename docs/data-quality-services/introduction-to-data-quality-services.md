@@ -76,14 +76,14 @@ ms.locfileid: "52617343"
   
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 는 SQL Server Management Studio에서 관리 및 모니터링할 수 있는 세 가지 SQL Server 카탈로그(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA)로 구현됩니다. DQS_MAIN에는 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료가 포함됩니다. DQS_PROJECTS에는 지식 기반 관리와 DQS 프로젝트 작업에 필요한 데이터가 포함됩니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 중간 준비 데이터베이스를 제공합니다.  
   
- [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 는 지식 관리, 데이터 품질 프로젝트 및 관리를 하나의 사용자 인터페이스로 수행할 수 있게 해주는 독립형 실행형 응용 프로그램입니다. 이 응용 프로그램은 데이터 관리자 및 DQS 관리자 모두를 위해 디자인되었습니다. 이 응용 프로그램은 기술 자료 검색, 도메인 관리, 일치 정책 만들기, 데이터 정리, 일치, 프로파일링, 모니터링 및 서버 관리를 수행하는 독립 실행형 실행 파일입니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 와 동일한 컴퓨터에 설치하여 실행하거나 별도의 컴퓨터에 원격으로 설치하여 실행할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 여러 작업은 쉽게 사용할 수 있도록 마법사 기반으로 제공됩니다.  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 는 지식 관리, 데이터 품질 프로젝트 및 관리를 하나의 사용자 인터페이스로 수행할 수 있게 해주는 독립형 실행형 응용 프로그램입니다. 이 애플리케이션은 데이터 관리자 및 DQS 관리자 모두를 위해 디자인되었습니다. 이 응용 프로그램은 기술 자료 검색, 도메인 관리, 일치 정책 만들기, 데이터 정리, 일치, 프로파일링, 모니터링 및 서버 관리를 수행하는 독립 실행형 실행 파일입니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 와 동일한 컴퓨터에 설치하여 실행하거나 별도의 컴퓨터에 원격으로 설치하여 실행할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 여러 작업은 쉽게 사용할 수 있도록 마법사 기반으로 제공됩니다.  
   
 ##  <a name="Processes"></a> Integration Services 및 MDS(Master Data Services)의 데이터 품질 기능  
  Data Quality Services에서 제공되는 데이터 품질 기능은 SSIS(SQL Server Integration Services)의 구성 요소 및 MDS(Master Data Services)의 기능에 포함되어 해당 서비스 내에서 데이터 품질 프로세스를 수행할 수 있게 해줍니다.  
   
  **[!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]**  
   
- [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 에서는 Integration Services 패키지의 일부로 데이터 정리를 수행할 수 있습니다. 패키지를 실행하면 데이터 정리가 일괄 처리 파일로 실행됩니다. 이러한 방식은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 정리 프로젝트를 실행하는 작업의 대안입니다. 데이터 품질을 자동으로 보장할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 내에서 데이터 정리 프로젝트의 대화형 단계를 수행할 필요가 없습니다. 다른 Integration Services 구성 요소가 포함된 데이터 흐름 내에 데이터 정리 프로세스를 포함할 수 있습니다. 자세한 내용은 [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)을 참조하세요.  
+ [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 에서는 Integration Services 패키지의 일부로 데이터 정리를 수행할 수 있습니다. 패키지를 실행하면 데이터 정리가 일괄 처리 파일로 실행됩니다. 이러한 방식은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 정리 프로젝트를 실행하는 작업의 대안입니다. 데이터 품질을 자동으로 보장할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 내에서 데이터 정리 프로젝트의 대화형 단계를 수행할 필요가 없습니다. 다른 Integration Services 구성 요소가 포함된 데이터 흐름 내에 데이터 정리 프로세스를 포함할 수 있습니다. 자세한 내용은 [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)을 참조하세요.  
   
  **MDS(Master Data Services)의 데이터 품질 프로세스**  
   

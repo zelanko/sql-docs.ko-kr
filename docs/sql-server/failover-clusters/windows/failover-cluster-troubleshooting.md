@@ -161,7 +161,7 @@ ms.locfileid: "52302816"
   
 6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
   
-### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>문제: 응용 프로그램이 SQL Server 리소스를 분산 트랜잭션에 등록하지 못했습니다.  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>문제: 애플리케이션이 SQL Server 리소스를 분산 트랜잭션에 등록하지 못했습니다.  
  **문제점:** Windows에서 MS DTC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 완전하게 구성되지 않아서 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 분산 트랜잭션에 등록하지 못할 수 있습니다. 이 문제는 연결된 서버, 분산 쿼리 및 분산 트랜잭션을 사용하는 원격 저장 프로시저에 영향을 미칠 수 있습니다. MS DTC를 구성하는 방법은 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하십시오.  
   
  **해결 방법:** 이러한 문제를 방지하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 설치된 서버에서 MS DTC 서비스를 완전히 활성화하고 MS DTC를 구성해야 합니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "52302816"
   
 1.  제어판에서 **관리 도구**를 열고 **컴퓨터 관리**를 엽니다.  
   
-2.  컴퓨터 관리 왼쪽 창에서 **서비스 및 응용 프로그램**을 확장한 다음 **서비스**를 클릭합니다.  
+2.  컴퓨터 관리 왼쪽 창에서 **서비스 및 애플리케이션**을 확장한 다음 **서비스**를 클릭합니다.  
   
 3.  컴퓨터 관리 오른쪽 창에서 **Distributed Transaction Coordinator**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   

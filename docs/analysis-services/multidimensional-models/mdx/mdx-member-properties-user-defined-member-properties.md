@@ -25,7 +25,7 @@ ms.locfileid: "34025360"
   
 -   사용자 인터페이스를 통해 사용자 정의 멤버 속성을 추가하려면 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너를 사용하세요. 자세한 내용은 [특성 관계 정의](../../../analysis-services/multidimensional-models/attribute-relationships-define.md)를 참조하세요.  
   
--   프로그래밍 방식으로 사용자 정의 멤버 속성을 추가하려면 응용 프로그램에서 AMO(Analysis Management Objects)를 사용하거나 XMLA(XML for Analysis) 및 ASSL(Analysis Services Scripting Language)을 조합하여 사용하십시오. 자세한 내용은 [특성 관계](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
+-   프로그래밍 방식으로 사용자 정의 멤버 속성을 추가하려면 애플리케이션에서 AMO(Analysis Management Objects)를 사용하거나 XMLA(XML for Analysis) 및 ASSL(Analysis Services Scripting Language)을 조합하여 사용하십시오. 자세한 내용은 [특성 관계](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
   
 ## <a name="retrieving-user-defined-member-properties"></a>사용자 정의 멤버 속성 검색  
  사용자 정의 멤버 속성을 검색하는 데는 **PROPERTIES** 키워드 또는 [Properties](../../../mdx/properties-mdx.md) 함수를 사용할 수 있습니다.  

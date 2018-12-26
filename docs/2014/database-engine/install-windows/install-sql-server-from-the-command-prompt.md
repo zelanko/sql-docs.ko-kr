@@ -86,7 +86,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 317ce9bb35ec208e3e558f647a31f64ae86a6732
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51019008"
@@ -220,8 +220,8 @@ ms.locfileid: "51019008"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **선택 사항**|MSOLAP 공급자를 in-process로 실행할 수 있는지 여부를 지정합니다. 기본값:<br /><br /> 1 = 사용|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **SPI_AS_NewFarm의 경우 필수**|팜에서 SharePoint 중앙 관리 서비스 및 기타 필수 서비스를 실행하는 데 사용할 도메인 사용자 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] /ROLE [역할 매개 변수](#Role)인스턴스에만 사용됩니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **SPI_AS_NewFarm의 경우 필수**|팜 계정의 암호를 지정합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 팜에 응용 프로그램 서버 또는 웹 프런트 엔드 서버를 더 추가하는 데 사용되는 전달 구를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] /ROLE [역할 매개 변수](#Role) 인스턴스에만 사용됩니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 중앙 관리 웹 응용 프로그램에 연결하는 데 사용되는 포트를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] /ROLE [역할 매개 변수](#Role) 인스턴스에만 사용됩니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 팜에 애플리케이션 서버 또는 웹 프런트 엔드 서버를 더 추가하는 데 사용되는 전달 구를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] /ROLE [역할 매개 변수](#Role) 인스턴스에만 사용됩니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **SPI_AS_NewFarm의 경우 필수**|SharePoint 중앙 관리 웹 애플리케이션에 연결하는 데 사용되는 포트를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] /ROLE [역할 매개 변수](#Role) 인스턴스에만 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|/BROWSERSVCSTARTUPTYPE<br /><br /> **선택 사항**|[Browser 서비스의](#Accounts) 시작 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모드를 지정합니다. 지원되는 값:<br /><br /> 자동<br /><br /> 사용 안 함<br /><br /> 수동|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **선택 사항**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치에 대해 '다음 계정으로 실행' 자격 증명을 사용하도록 설정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다. 기본값:<br /><br /> WOW 모드의 64-bit: % Program files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 기타 모든 설치의 경우: % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  

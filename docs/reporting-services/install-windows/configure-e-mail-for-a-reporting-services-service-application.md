@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성 | Microsoft Docs
+title: Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성 | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
@@ -15,18 +15,18 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52410370"
 ---
-# <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성
+# <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고는 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용할 계획인 경우에도 전자 메일 설정이 필요합니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고는 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용할 계획인 경우에도 전자 메일 설정이 필요합니다.  
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>공유 서비스에 대한 전자 메일 구성 방법  
   
-1.  SharePoint 중앙 관리에서 **응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
 2.  **서비스 응용 프로그램** 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52410370"
   
 ### <a name="ntlm-authentication"></a>NTLM 인증  
   
-1.  해당 전자 메일 환경에서 NTLM 인증이 필요하고 익명 액세스가 허용되지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 전자 메일 배달 확장 프로그램 구성을 수정해야 합니다. 예를 들어 **구독 관리** 페이지: 구독의 **마지막 결과** 에 다음과 같은 메시지가 표시되는 경우입니다.  
+1.  해당 전자 메일 환경에서 NTLM 인증이 필요하고 익명 액세스가 허용되지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 전자 메일 배달 확장 프로그램 구성을 수정해야 합니다. 예를 들어 **구독 관리** 페이지: 구독의 **마지막 결과** 에 다음과 같은 메시지가 표시되는 경우입니다.  
   
     -   메일 전송 실패: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 클라이언트가 인증되지 않았습니다. 메일이 다시 전송되지 않습니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52410370"
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
-2.  서비스 응용 프로그램 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet**을 실행합니다.  
+2.  서비스 애플리케이션 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet**을 실행합니다.  
   
     ```  
     get-sprsserviceapplication  

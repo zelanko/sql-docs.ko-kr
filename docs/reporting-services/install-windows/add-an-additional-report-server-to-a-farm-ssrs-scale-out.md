@@ -17,7 +17,7 @@ ms.locfileid: "52711896"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
-  SharePoint 팜에 두 번째 이상의 SharePoint 모드 보고서 서버를 추가하면 보고서 서버 처리 성능 및 응답 시간을 향상시킬 수 있습니다. 보고서 서버에 더 많은 사용자, 보고서 및 기타 응용 프로그램을 추가할수록 성능이 저하되는 경우에는 보고서 서버를 추가하면 성능을 향상시킬 수 있습니다. 또한 하드웨어에 문제가 있거나 사용자 환경의 개별 서버에 대한 전반적인 관리를 수행하는 경우 보고서 서버의 가용성을 늘리기 위해 두 번째 보고서 서버를 추가하는 것이 좋습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 확장하는 단계는 표준 SharePoint 팜 배포를 따르며 SharePoint 부하 분산 기능을 이용합니다.  
+  SharePoint 팜에 두 번째 이상의 SharePoint 모드 보고서 서버를 추가하면 보고서 서버 처리 성능 및 응답 시간을 향상시킬 수 있습니다. 보고서 서버에 더 많은 사용자, 보고서 및 기타 애플리케이션을 추가할수록 성능이 저하되는 경우에는 보고서 서버를 추가하면 성능을 향상시킬 수 있습니다. 또한 하드웨어에 문제가 있거나 사용자 환경의 개별 서버에 대한 전반적인 관리를 수행하는 경우 보고서 서버의 가용성을 늘리기 위해 두 번째 보고서 서버를 추가하는 것이 좋습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 확장하는 단계는 표준 SharePoint 팜 배포를 따르며 SharePoint 부하 분산 기능을 이용합니다.  
   
 > [!IMPORTANT]  
 >  일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장이 지원되지 않습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 섹션을 참조하세요.  
@@ -28,7 +28,7 @@ ms.locfileid: "52711896"
  기본 모드 보고서 서버를 확장하는 방법은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
 ##  <a name="bkmk_loadbalancing"></a> 부하 분산  
- 사용자 환경에 사용자 지정 또는 타사 부하 분산 솔루션이 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 부하 분산은 SharePoint에서 자동으로 관리됩니다. 기본 SharePoint 부하 분산 동작은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 시작한 모든 응용 프로그램 서버에서 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 부하를 분산하는 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 설치되고 시작되었는지 확인하려면 SharePoint 중앙 관리에서 **서버의 서비스 관리** 를 클릭합니다.  
+ 사용자 환경에 사용자 지정 또는 타사 부하 분산 솔루션이 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 부하 분산은 SharePoint에서 자동으로 관리됩니다. 기본 SharePoint 부하 분산 동작은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 시작한 모든 애플리케이션 서버에서 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 부하를 분산하는 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 설치되고 시작되었는지 확인하려면 SharePoint 중앙 관리에서 **서버의 서비스 관리** 를 클릭합니다.  
   
 ##  <a name="bkmk_prerequisites"></a> 사전 요구 사항  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52711896"
   
 -   (1) 여러 WFE(웹 프런트 엔드) 서버. WFE 서버에는 SharePoint 2016용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 필요합니다.  
   
--   (2) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 실행하는 단일 응용 프로그램 서버 및 중앙 관리 같은 웹 사이트. 다음 단계에서는 두 번째 응용 프로그램 서버를 이 계층에 추가합니다.  
+-   (2) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 실행하는 단일 애플리케이션 서버 및 중앙 관리 같은 웹 사이트. 다음 단계에서는 두 번째 애플리케이션 서버를 이 계층에 추가합니다.  
   
 -   (3) 두 SQL Server 데이터베이스 서버.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "52711896"
   
  ![Reporting Services 응용 프로그램 서버 추가](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Reporting Services 응용 프로그램 서버 추가")  
   
- 다음 단계에서는 관리자가 서버를 설치하고 구성한다고 가정합니다. 서버는 팜에 새 응용 프로그램 서버로 설치되고 WFE(웹 프런트 엔드)로 사용되지 않습니다.  
+ 다음 단계에서는 관리자가 서버를 설치하고 구성한다고 가정합니다. 서버는 팜에 새 애플리케이션 서버로 설치되고 WFE(웹 프런트 엔드)로 사용되지 않습니다.  
   
 |단계|설명 및 링크|  
 |----------|--------------------------|  
-|SharePoint 서버를 팜에 추가합니다.|다른 Reporting Services 응용 프로그램을 배포하려면 SharePoint를 설치해야 합니다.<br/><br/>SharePoint 2013의 경우 [SharePoint Server 2013에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)를 참조하세요.<br/><br/>SharePoint 2016의 경우 [SharePoint Server 2016에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)를 참조하세요.|  
-|Reporting Services SharePoint 모드 설치 및 구성|SQL Server 설치를 실행합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.<br /><br /> 서버가 응용 프로그램 서버로만 사용되고 WFE로 사용되지 않을 경우 **SharePoint 제품용 Reporting Services 추가 기능**을 선택할 필요가 없습니다.<br /><br /> 1) **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.<br /><br /> 2) **기능 선택** 페이지에서 **Reporting Services - SharePoint**를 선택합니다.<br /><br /> 3) **Reporting Services 구성**  페이지에서 **Reporting Services SharePoint 모드** 에 대해 **설치만**옵션이 선택되었는지 확인합니다.|  
+|SharePoint 서버를 팜에 추가합니다.|다른 Reporting Services 애플리케이션을 배포하려면 SharePoint를 설치해야 합니다.<br/><br/>SharePoint 2013의 경우 [SharePoint Server 2013에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)를 참조하세요.<br/><br/>SharePoint 2016의 경우 [SharePoint Server 2016에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)를 참조하세요.|  
+|Reporting Services SharePoint 모드 설치 및 구성|SQL Server 설치를 실행합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.<br /><br /> 서버가 애플리케이션 서버로만 사용되고 WFE로 사용되지 않을 경우 **SharePoint 제품용 Reporting Services 추가 기능**을 선택할 필요가 없습니다.<br /><br /> 1) **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.<br /><br /> 2) **기능 선택** 페이지에서 **Reporting Services - SharePoint**를 선택합니다.<br /><br /> 3) **Reporting Services 구성**  페이지에서 **Reporting Services SharePoint 모드** 에 대해 **설치만**옵션이 선택되었는지 확인합니다.|  
 |Reporting Services가 작동하는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) **SQL Server Reporting Services 서비스**를 확인합니다.<br /><br />자세한 내용은 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)를 참조하세요.|  
   
 ##  <a name="bkmk_additional"></a> 기타 고려 사항  

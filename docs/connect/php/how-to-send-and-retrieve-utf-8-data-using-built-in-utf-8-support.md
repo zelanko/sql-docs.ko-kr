@@ -40,7 +40,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 PDO::SQLSRV_ATTR_ENCODING 특성�
 **CharacterSet**에 UTF-8 또는 SQLSRV_ENC_CHAR을 전달할 수 있습니다(그러나 SQLSRV_ENC_BINARY는 전달할 수 없음). 기본 인코딩은 SQLSRV_ENC_CHAR입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 **nvarchar(3850)** 형식입니다. 또한 서버에 데이터를 보내기 전에 PHP **utf8_encode** 함수를 사용하여 UTF-8 인코딩으로 변환됩니다. 이는 예시용으로만 수행됩니다. 실제 응용 프로그램 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
+다음 예제에서는 연결 시 UTF-8 문자 집합을 지정하여 UTF-8로 인코드된 데이터를 보내고 검색하는 방법을 보여 줍니다. 이 예제는 지정된 검토 ID에 대한 Production.ProductReview 테이블의 주석 열을 업데이트합니다. 또한 새로 업데이트된 데이터를 검색하고 표시합니다. 주석 열은 **nvarchar(3850)** 형식입니다. 또한 서버에 데이터를 보내기 전에 PHP **utf8_encode** 함수를 사용하여 UTF-8 인코딩으로 변환됩니다. 이는 예시용으로만 수행됩니다. 실제 애플리케이션 시나리오에서는 UTF-8 인코드된 데이터로 시작합니다.  
   
 이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치되어 있다고 가정합니다. 모든 출력은 브라우저에서 예제를 실행할 때 브라우저에 기록됩니다.  
   

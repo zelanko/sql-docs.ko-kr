@@ -20,7 +20,7 @@ ms.locfileid: "43071816"
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-이 단원에서는 계층 구조를 만듭니다. 계층은 수준별로 정렬 된 열 그룹입니다. 예를 들어 Geography 계층 구조는 국가, 상태, County 및 City에 대 한 하위 수준이 있을 수 있습니다. 계층은 보고 클라이언트 응용 프로그램 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은를 참조 하세요. [계층](../tabular-models/hierarchies-ssas-tabular.md)
+이 단원에서는 계층 구조를 만듭니다. 계층은 수준별로 정렬 된 열 그룹입니다. 예를 들어 Geography 계층 구조는 국가, 상태, County 및 City에 대 한 하위 수준이 있을 수 있습니다. 계층은 보고 클라이언트 애플리케이션 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은를 참조 하세요. [계층](../tabular-models/hierarchies-ssas-tabular.md)
   
 모델 디자이너를 사용 하 여 계층을 만들려면 *다이어그램 보기*합니다. 계층 만들기 및 관리 데이터 뷰에서 지원 되지 않습니다.  
   

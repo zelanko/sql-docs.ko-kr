@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 12b771c40e6c17f1da41f1636b785b7dfc719941
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34019390"
@@ -41,7 +41,7 @@ ms.locfileid: "34019390"
   
  이 목록은 다른 옵션을 제외하는 분명한 권장 사항이 아니라 추가 조사의 시작점으로 고려해야 합니다. 특별히 권장되지 않는 데이터 정렬이 데이터에 가장 적합한 데이터 정렬임을 알 수 있습니다. 철저한 테스트는 데이터 값이 적절히 정렬 및 비교되는지 확인하는 유일한 방법입니다. 항상 데이터 정렬을 테스트할 때 처리 및 쿼리 작업을 둘 다 실행해야 합니다.  
   
--   Latin1_General_100_AS는 [ISO 기본 라틴어 알파벳](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)의 26자를 사용하는 응용 프로그램에 종종 사용됩니다.  
+-   Latin1_General_100_AS는 [ISO 기본 라틴어 알파벳](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)의 26자를 사용하는 애플리케이션에 종종 사용됩니다.  
   
 -   스칸디나비아어 문자(예: ø)를 포함하는 북부 유럽 언어에는 Finnish_Swedish_100을 사용할 수 있습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34019390"
  개체 이름이 아니라 개체 식별자만 표에 설명된 대/소문자 구분 동작이 적용됩니다. 솔루션 작동 방식에 변화가 있는 경우(전후 비교 -- SQL Server 2012 SP2 이상 설치 후), 처리 문제가 발생할 수 있습니다. 쿼리는 개체 식별자에 의해 영향을 받지 않습니다. 두 쿼리 언어(DAX 및 MDX)에서 수식 엔진에 개체 이름(식별자 아님)이 사용됩니다.  
   
 > [!NOTE]  
->  대/소문자 구분과 관련된 코드 변경 내용은 일부 응용 프로그램에 대한 주요 변경 내용이었습니다. 자세한 내용은 [SQL Server 2016에서 Analysis Services 기능의 주요 변경](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) 을 참조하세요.  
+>  대/소문자 구분과 관련된 코드 변경 내용은 일부 애플리케이션에 대한 주요 변경 내용이었습니다. 자세한 내용은 [SQL Server 2016에서 Analysis Services 기능의 주요 변경](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) 을 참조하세요.  
   
 ##  <a name="bkmk_test"></a> Excel, SQL Server Profiler 및 SQL Server Management Studio를 사용한 로캘 테스트  
  번역을 테스트할 때 연결에서 번역의 LCID를 지정해야 합니다. [다른 언어를 SSAS에서 Excel로 가져오기](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)(영문)에 설명된 대로 Excel을 사용하여 번역을 테스트할 수 있습니다.  

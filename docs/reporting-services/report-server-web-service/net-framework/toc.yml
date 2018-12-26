@@ -1,5 +1,5 @@
 items:
-- name: 웹 서비스 및 .NET Framework를 사용하여 응용 프로그램 작성
+- name: 웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
   href: building-applications-using-the-web-service-and-the-net-framework.md
 - name: Reporting Services의 예외 처리 소개 +
   href: ../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json

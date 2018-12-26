@@ -23,9 +23,9 @@ ms.locfileid: "51571502"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
+  시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 애플리케이션에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
   
- 행을 삽입할 때 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)를 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
+ 행을 삽입할 때 생성되는 ID 열 값과는 달리 애플리케이션에서는 [NEXT VALUE FOR 함수](../../t-sql/functions/next-value-for-transact-sql.md)를 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
  **CREATE SEQUENCE** 및 **NEXT VALUE FOR** 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51571502"
 >  시작 값이 아니라 최소값/최대값에서 순환이 다시 시작됩니다.  
   
  **캐시 옵션**  
- 시퀀스 값 캐시를 만들면 시퀀스 번호를 만드는 데 필요한 디스크 I/O 수를 최소화하여 시퀀스 개체를 사용하는 응용 프로그램의 성능을 향상시킬 수 있습니다.  
+ 시퀀스 값 캐시를 만들면 시퀀스 번호를 만드는 데 필요한 디스크 I/O 수를 최소화하여 시퀀스 개체를 사용하는 애플리케이션의 성능을 향상시킬 수 있습니다.  
   
 -   기본 캐시 크기 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 크기를 선택하지만 선택의 일관성이 보장되지 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 캐시 크기 계산 방법을 예고 없이 변경할 수 있습니다.  
   

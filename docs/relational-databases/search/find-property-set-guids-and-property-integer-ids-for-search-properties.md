@@ -56,7 +56,7 @@ ms.locfileid: "52532136"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 정의한 범주별 속성  
   
--   소프트웨어 공급업체에서 정의한 응용 프로그램별 사용자 지정 속성  
+-   소프트웨어 공급업체에서 정의한 애플리케이션별 사용자 지정 속성  
   
 ##  <a name="filtdump"></a> FILTDUMP.EXE를 사용하여 사용 가능한 속성에 대한 정보 찾기  
  설치된 IFilter를 통해 검색되고 추출된 속성을 알아 보려면 **Windows SDK의 일부인** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] 유틸리티를 설치하고 실행할 수 있습니다.  

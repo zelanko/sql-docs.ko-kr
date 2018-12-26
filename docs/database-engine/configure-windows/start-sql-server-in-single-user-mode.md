@@ -43,10 +43,10 @@ ms.locfileid: "52508700"
 > [!NOTE]
 > Linux에서 **SQLCMD**는 표시된 대로 대문자로 표시되어야 합니다.
 
-예를 들어 **-m"SQLCMD"** 는 연결 수를 단일 연결로 제한하며 해당 연결은 자신을 **SQLCMD** 클라이언트 프로그램으로 식별해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
+예를 들어 **-m"SQLCMD"** 는 연결 수를 단일 연결로 제한하며 해당 연결은 자신을 **SQLCMD** 클라이언트 프로그램으로 식별해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
   
 > [!IMPORTANT]  
->  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 응용 프로그램에서 클라이언트 응용 프로그램 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
+>  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
   
 ## <a name="note-for-clustered-installations"></a>클러스터형 설치에 대한 참고 사항  
  클러스터 환경에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 단일 사용자 모드로 시작되면 클러스터 리소스 dll이 사용 가능한 모든 연결을 사용하므로 서버에 대한 다른 연결은 차단됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이 상태이고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 리소스가 그룹에 영향을 주도록 구성되어 있는 경우 온라인으로 이 리소스를 가져오려고 하면 SQL 리소스가 다른 노드로 장애 조치(failover)될 수 있습니다.  

@@ -23,7 +23,7 @@ ms.locfileid: "47780497"
   
  Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 만들어지거나 xdbcdcsvc.exe 프로그램에 기본 제공되는 명령줄 인터페이스를 통해 정의됩니다. 두 경우 모두 만들어진 각 Oracle CDC Service는 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스( **Always On** 설정 시 클러스터링하거나 미러할 수 있음)와 연결되며 연결 정보(연결 문자열 및 액세스 자격 증명)는 서비스 구성의 일부입니다.  
   
- Oracle CDC Service가 시작되면 관련된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결을 시도하고, 처리해야 할 Oracle CDC 인스턴스 목록을 가져온 다음, 초기 환경 유효성 검사를 수행합니다. 서비스 시작 중 오류와 모든 시작/중지 정보가 항상 Windows 응용 프로그램 이벤트 로그에 기록됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 설정되면 모든 오류와 정보 메시지가 **인스턴스의 MSXDBCDC 데이터베이스에 있는** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 기록됩니다. 시작 중에 수행되는 확인 중 하나는 같은 이름의 다른 Oracle CDC Service가 현재 작업 중이 아닌지 확인하는 것입니다. 같은 이름의 서비스가 다른 컴퓨터에서 현재 연결되어 있는 경우 Oracle CDC Service는 대기 루프를 시작하여 다른 서비스의 연결이 끊어질 때까지 기다린 후 Oracle CDC 작업 처리를 진행합니다.  
+ Oracle CDC Service가 시작되면 관련된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결을 시도하고, 처리해야 할 Oracle CDC 인스턴스 목록을 가져온 다음, 초기 환경 유효성 검사를 수행합니다. 서비스 시작 중 오류와 모든 시작/중지 정보가 항상 Windows 애플리케이션 이벤트 로그에 기록됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 설정되면 모든 오류와 정보 메시지가 **인스턴스의 MSXDBCDC 데이터베이스에 있는** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 기록됩니다. 시작 중에 수행되는 확인 중 하나는 같은 이름의 다른 Oracle CDC Service가 현재 작업 중이 아닌지 확인하는 것입니다. 같은 이름의 서비스가 다른 컴퓨터에서 현재 연결되어 있는 경우 Oracle CDC Service는 대기 루프를 시작하여 다른 서비스의 연결이 끊어질 때까지 기다린 후 Oracle CDC 작업 처리를 진행합니다.  
   
  Oracle CDC Service가 모든 시작 확인을 통과하면 MSXDBCDC 데이터베이스의 **dbo.xdbcdc_databases** 테이블에서 사용되는 Oracle CDC 인스턴스가 있는지 확인합니다. 활성화된 모든 Oracle CDC 인스턴스에 대해 서비스는 해당 Oracle CDC 인스턴스를 처리하는 하위 프로세스를 시작합니다.  
   

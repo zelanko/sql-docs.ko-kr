@@ -33,9 +33,9 @@ ms.locfileid: "47629043"
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
+  시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 애플리케이션에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
   
- 행을 삽입할 때 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md)을 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
+ 행을 삽입할 때 생성되는 ID 열 값과는 달리 애플리케이션에서는 [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md)을 호출하여 행을 삽입하지 않고도 다음 시퀀스 번호를 가져올 수 있습니다. 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
  **CREATE SEQUENCE** 및 **NEXT VALUE FOR** 함수를 함께 사용하는 시나리오에 대한 자세한 내용은 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
@@ -115,7 +115,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  SQL Server를 다시 시작한 후 시퀀스 번호가 필요하면 시스템 테이블에서 시작 번호(23)를 읽습니다. 15개 번호(23-38)의 캐시 양이 메모리에 할당되고 캐시되지 않은 다음 번호(39)가 시스템 테이블에 기록됩니다.  
   
- 전원 오류와 같은 상황에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 비정상적으로 중지된 경우에는 시스템 테이블에서 읽은 번호(39)로 시퀀스가 다시 시작됩니다. 메모리에 할당되었지만 사용자 또는 응용 프로그램에서 요청한 적이 없는 시퀀스 번호는 모두 손실됩니다. 이 기능은 간격이 생길 수는 있지만 단일 시퀀스 개체가 **CYCLE**로 정의되거나 수동으로 다시 시작되지 않은 경우 해당 개체에 대해 같은 값이 두 번 발생하지 않도록 합니다.  
+ 전원 오류와 같은 상황에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 비정상적으로 중지된 경우에는 시스템 테이블에서 읽은 번호(39)로 시퀀스가 다시 시작됩니다. 메모리에 할당되었지만 사용자 또는 애플리케이션에서 요청한 적이 없는 시퀀스 번호는 모두 손실됩니다. 이 기능은 간격이 생길 수는 있지만 단일 시퀀스 개체가 **CYCLE**로 정의되거나 수동으로 다시 시작되지 않은 경우 해당 개체에 대해 같은 값이 두 번 발생하지 않도록 합니다.  
   
  캐시는 현재 값(마지막으로 발생한 값) 및 캐시에 남아 있는 값의 개수에 대한 추적을 통해 메모리에서 유지 관리됩니다. 따라서 캐시에서 사용하는 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
   

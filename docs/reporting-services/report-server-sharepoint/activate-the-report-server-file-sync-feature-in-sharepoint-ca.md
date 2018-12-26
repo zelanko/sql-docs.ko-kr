@@ -32,7 +32,7 @@ ms.locfileid: "50021477"
 
  SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치해야 합니다. 추가 기능이 설치되어 있지 않으면 파일 동기화 기능이 사이트 기능 목록에 표시되지 않습니다.  
   
- 설치를 확인하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **제어판**에서 설치된 응용 프로그램 목록을 확인합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 설치되어 있으면 이 항목의 지침에 따라 보고서 서버 파일 동기화 기능을 활성화합니다.  
+ 설치를 확인하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **제어판**에서 설치된 애플리케이션 목록을 확인합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 설치되어 있으면 이 항목의 지침에 따라 보고서 서버 파일 동기화 기능을 활성화합니다.  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>사이트에서 Reporting Services 파일 동기화 기능을 활성화 또는 비활성화하려면
   

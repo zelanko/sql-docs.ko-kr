@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 보안 | Microsoft Docs
+title: 애플리케이션 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47775761"
 ---
-# <a name="application-security"></a>응용 프로그램 보안
+# <a name="application-security"></a>애플리케이션 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용할 때는 응용 프로그램의 보안을 확보하기 위해 미리 주의를 기울여야 합니다. 다음 섹션에서는 응용 프로그램의 보안을 확보하기 위해 수행할 수 있는 단계에 관한 정보를 제공합니다.  

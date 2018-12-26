@@ -19,13 +19,13 @@ ms.lasthandoff: 11/29/2018
 ms.locfileid: "52617803"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
-  기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 응용 프로그램 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
+  기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
   
  Windows 통합 보안을 사용하려면 보고서 서버에 액세스해야 하는 각 사용자가 유효한 Windows 로컬 또는 도메인 사용자 계정을 보유하고 있거나 Windows 로컬 또는 도메인 그룹 계정의 멤버여야 합니다. 트러스트된 도메인에 한하여 다른 도메인의 계정을 포함할 수 있습니다. 이 계정은 보고서 서버 컴퓨터에 액세스할 수 있어야 하며 이후에 특정 보고서 서버 작업에 액세스할 수 있도록 역할에 할당되어야 합니다.  
   
  다음의 추가 요구 사항도 만족해야 합니다.  
   
--   RSReportServer.config 파일에서 **AuthenticationType**을 **RSWindowsNegotiate**, **RSWindowsKerberos** 또는 **RSWindowsNTLM**으로 설정해야 합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 **RSWindowsNegotiate** 설정이 들어 있습니다. 그렇지 않으면 **RSWindowsNTLM** 설정이 사용됩니다. Kerberos 인증만 사용하는 응용 프로그램이 있는 경우 **RSWindowsKerberos** 를 추가할 수 있습니다.  
+-   RSReportServer.config 파일에서 **AuthenticationType**을 **RSWindowsNegotiate**, **RSWindowsKerberos** 또는 **RSWindowsNTLM**으로 설정해야 합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 **RSWindowsNegotiate** 설정이 들어 있습니다. 그렇지 않으면 **RSWindowsNTLM** 설정이 사용됩니다. Kerberos 인증만 사용하는 애플리케이션이 있는 경우 **RSWindowsKerberos** 를 추가할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  **RSWindowsNegotiate** 를 사용할 경우 보고서 서버 서비스가 도메인 사용자 계정으로 실행되도록 구성하고 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않으면 Kerberos 인증 오류가 발생합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
@@ -34,7 +34,7 @@ ms.locfileid: "52617803"
   
 -   보고서 서버 웹 서비스에 대한 Web.config 파일에는 \<identity impersonate= "true" />가 들어 있어야 합니다.  
   
--   클라이언트 응용 프로그램 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
+-   클라이언트 애플리케이션 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
 
 - [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서는 추가 구성이 필요하지 않습니다.
   

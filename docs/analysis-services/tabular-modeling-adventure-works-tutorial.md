@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054690"
@@ -54,7 +54,7 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 경우 모델에
   
 이 단원의 목적은 SSDT에 포함 된 기능을 많이 사용 하 여 메모리 내 모드에서 실행 중인 기본 테이블 형식 모델을 작성 하는 과정을 안내 하는 경우 각 단원은 이전 단원에 기반을 두고 있으므로 단원을 순서대로 완료해야 합니다. 모든 단원을 완료 했으면, 작성 하 고 Analysis Services 서버에서 Adventure Works Internet Sales 샘플 테이블 형식 모델을 배포 했습니다.  
   
-이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 응용 프로그램을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
+이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 애플리케이션을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서를 완료 하려면 다음 필수 조건이 필요 합니다.  

@@ -110,17 +110,17 @@ items:
     href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
   - name: MDS(Master Data Services) 설치
     href: ../../master-data-services/install-windows/install-master-data-services.md
-  - name: 웹 응용 프로그램 요구 사항(MDS(Master Data Services))
+  - name: 웹 애플리케이션 요구 사항(MDS(Master Data Services))
     href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
   - name: 데이터베이스 요구 사항(MDS(Master Data Services))
     href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
   - name: Master Data Services 데이터베이스 만들기
     href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
-  - name: 마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
+  - name: 마스터 데이터 관리자 웹 애플리케이션 만들기(Master Data Services)
     href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
-  - name: 마스터 데이터 관리자 웹 응용 프로그램의 보안 설정
+  - name: 마스터 데이터 관리자 웹 애플리케이션의 보안 설정
     href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
-  - name: Master Data Services 데이터베이스와 웹 응용 프로그램 연결
+  - name: Master Data Services 데이터베이스와 웹 애플리케이션 연결
     href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
   - name: MDS(Master Data Services)와 Data Quality Services의 통합 설정
     href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
@@ -250,9 +250,9 @@ items:
       href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
     - name: 팜에 추가 Reporting Services 웹 프런트 엔드 추가
       href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
-    - name: Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성
+    - name: Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
       href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
-    - name: SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전
+    - name: SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전
       href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
     - name: C2WTS(Windows 토큰 서비스에 대한 클레임) 및 SSRS
       href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md

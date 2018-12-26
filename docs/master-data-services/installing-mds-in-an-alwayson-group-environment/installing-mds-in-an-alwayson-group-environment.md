@@ -92,7 +92,7 @@ ms.locfileid: "52395685"
 
 이전 섹션의 그림 1에 나와 있는 것처럼 이 문서에서 설명하는 솔루션에는 WSFC(Windows Server 장애 조치(Failover) 클러스터)가 포함되어 있습니다. SQL AlwaysOn은 오류 검색 및 장애 조치를 위해 WFSC에 의존하므로 WSFC를 설정해야 합니다.
 
-WSFC는 응용 프로그램 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
+WSFC는 애플리케이션 및 서비스의 고가용성을 향상시키는 기능입니다. 해당 인스턴스에서 실행 중인 Microsoft 장애 조치(Failover) 클러스터 서비스와 독립적인 Windows Server 인스턴스의 그룹으로 구성됩니다. Windows Server 인스턴스(때때로 노드라고도 함)가 연결되어 있어 서로 통신할 수 있으며 실패 감지를 수행할 수 있습니다. WSFC는 오류 감지 및 장애 조치 기능을 제공합니다. 클러스터의 노드 또는 서비스가 실패하고 오류가 감지되면 다른 노드가 자동 또는 수동으로 시작되어 실패한 노드에서 호스트된 서비스를 제공합니다. 따라서 사용자는 중단이 최소화된 서비스를 경험하게 되며, 서비스 가용성이 향상됩니다.  
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
@@ -364,7 +364,7 @@ AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysO
 
 ## <a name="configure-mds-to-run-on-an-wsfc-node"></a>WSFC 노드에서 실행하는 MDS 구성
 
-이 문서에 제공된 이 솔루션에는 WSFC에서 실행되는 MDS 백 엔드 데이터베이스만 필요합니다. 웹 응용 프로그램 및 MDS 구성 관리자와 같은 MDS의 다른 부분으로 MDS가 AG에 연결할 수 있는 한, WSFC 또는 WSFC 외부의 노드에서 실행될 수 있습니다.
+이 문서에 제공된 이 솔루션에는 WSFC에서 실행되는 MDS 백 엔드 데이터베이스만 필요합니다. 웹 애플리케이션 및 MDS 구성 관리자와 같은 MDS의 다른 부분으로 MDS가 AG에 연결할 수 있는 한, WSFC 또는 WSFC 외부의 노드에서 실행될 수 있습니다.
 
 1.  한 노드에서 **Master Data Service 구성 관리자**를 열고 **데이터베이스 구성**을 클릭하고 **데이터베이스 만들기**를 클릭하여 **데이터베이스 만들기 마법사**를 시작합니다.
 
@@ -384,7 +384,7 @@ AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysO
 
 5.  **Master Data Service 구성 관리자**에서 **웹 응용 프로그램**을 클릭하여 웹 응용 프로그램을 구성한 다음 **적용**을 클릭하여 MDS에 설정을 적용합니다. 그림 23을 참조하세요. 자세한 내용은 [Master Data Services 설치 및 구성](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)을 참조하세요.
 
-    ![웹 응용 프로그램 구성](media/Fig23_MDSWebApplication.png)
+    ![웹 애플리케이션 구성](media/Fig23_MDSWebApplication.png)
 
     그림 23
 

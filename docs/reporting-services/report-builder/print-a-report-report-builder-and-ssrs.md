@@ -16,7 +16,7 @@ ms.lasthandoff: 10/25/2018
 ms.locfileid: "50031402"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
-  보고서 서버에 보고서를 저장한 후에는 브라우저, Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용되는 응용 프로그램에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
+  보고서 서버에 보고서를 저장한 후에는 브라우저, Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용되는 애플리케이션에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
   
  보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 PDF, 이미지 및 인쇄 하드 페이지 나누기 렌더러로 렌더링되는 보고서에만 적용됩니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50031402"
   
 6.  **인쇄** 대화 상자에서 프린터를 선택하고 다른 인쇄 옵션을 지정합니다.  
   
-### <a name="to-print-a-report-from-a-web-browser-application"></a>웹 브라우저 응용 프로그램에서 보고서를 인쇄하려면  
+### <a name="to-print-a-report-from-a-web-browser-application"></a>웹 브라우저 애플리케이션에서 보고서를 인쇄하려면  
   
 1.  Reporting Services 웹 포털에서 인쇄하려는 보고서로 이동합니다. 보고서를 엽니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "50031402"
   
 4.  **인쇄** 대화 상자에서 프린터를 선택한 후 **인쇄**를 클릭합니다.  
   
-### <a name="to-print-a-report-from-other-applications"></a>다른 응용 프로그램에서 보고서를 인쇄하려면  
+### <a name="to-print-a-report-from-other-applications"></a>다른 애플리케이션에서 보고서를 인쇄하려면  
   
 1.  Reporting Services 웹 포털에서 인쇄하려는 보고서로 이동합니다. 보고서를 엽니다.  
   
-2.  보고서 맨 위의 도구 모음에서 렌더링 형식을 선택하고 **내보내기**를 클릭합니다. 렌더링 형식에 맞는 뷰어 응용 프로그램에서 보고서가 열립니다.  
+2.  보고서 맨 위의 도구 모음에서 렌더링 형식을 선택하고 **내보내기**를 클릭합니다. 렌더링 형식에 맞는 뷰어 애플리케이션에서 보고서가 열립니다.  
   
      예를 들어 PDF를 선택한 경우 Adobe Acrobat Reader에서 보고서가 열립니다.  
   

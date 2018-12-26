@@ -20,7 +20,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
 ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49119329"
@@ -38,7 +38,7 @@ ms.locfileid: "49119329"
  `maxRequestLength` 요소에 대해 설정하는 값은 적용하려는 실제 크기 제한보다 커야 합니다. 모든 매개 변수가 SOAP Envelope에 캡슐화되고 Base64 인코딩이 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 및 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 메서드의 Definition 매개 변수와 같은 특정 매개 변수에 적용된 후 발생하는 HTTP 요청 크기의 불가피한 증가를 수용하기 위해 더 큰 값을 설정해야 합니다. Base64 인코딩은 원래 데이터의 크기를 33% 정도 증가시킵니다. 따라서 `maxRequestLength` 요소에 대해 지정하는 값은 실제로 사용 가능한 항목 크기보다 33% 정도 커야 합니다. 예를 들어 `maxRequestLength`의 값으로 64MB를 지정하는 경우, 실제로 보고서 서버에 게시되는 보고서 파일의 최대 크기를 48MB 정도로 예상할 수 있습니다.  
   
 ## <a name="report-size-in-memory"></a>메모리의 보고서 크기  
- 보고서를 실행하면 보고서 크기는 출력 스트림 크기와 보고서에 반환된 데이터 양을 더한 크기가 됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 렌더링되는 보고서의 크기에 대한 최대 제한을 적용하지 않습니다. 최대 크기 제한은 시스템 메모리에 따라 결정됩니다. 기본적으로 보고서 서버에서는 보고서를 렌더링할 때 사용 가능한 구성 메모리를 모두 사용하지만 구성 설정을 지정하여 메모리 임계값과 메모리 관리 정책을 지정할 수 있습니다. 자세한 내용은 [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
+ 보고서를 실행하면 보고서 크기는 출력 스트림 크기와 보고서에 반환된 데이터 양을 더한 크기가 됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 렌더링되는 보고서의 크기에 대한 최대 제한을 적용하지 않습니다. 최대 크기 제한은 시스템 메모리에 따라 결정됩니다. 기본적으로 보고서 서버에서는 보고서를 렌더링할 때 사용 가능한 구성 메모리를 모두 사용하지만 구성 설정을 지정하여 메모리 임계값과 메모리 관리 정책을 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
   
  모든 보고서의 크기는 반환되는 데이터 양과 보고서에 사용된 렌더링 형식에 따라 크게 달라질 수 있습니다. 매개 변수가 있는 보고서의 크기는 매개 변수 값이 쿼리 결과에 미치는 영향에 따라 커지거나 작아질 수 있습니다. 선택한 보고서 출력 형식은 다음과 같은 방식으로 보고서 크기에 영향을 줍니다.  
   

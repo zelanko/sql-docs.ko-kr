@@ -76,7 +76,7 @@ ms.locfileid: "50145529"
  또한 다음과 같은 사용자 지정 개체를 추가하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스에서 사용 가능한 서비스 및 기능을 확장할 수 있습니다.  
   
  **사용자 지정 어셈블리**  
- CLR 또는 COM 규격 언어를 사용하여 .NET 어셈블리를 정의한 다음 SQL Server 인스턴스에 등록할 수 있습니다. 어셈블리 파일은 응용 프로그램에 의해 정의된 위치에서 로드되며 복사본이 데이터와 함께 서버에 저장됩니다. 어셈블리 파일의 복사본은 서버가 시작될 때마다 어셈블리를 로드하는 데 사용됩니다.  
+ CLR 또는 COM 규격 언어를 사용하여 .NET 어셈블리를 정의한 다음 SQL Server 인스턴스에 등록할 수 있습니다. 어셈블리 파일은 애플리케이션에 의해 정의된 위치에서 로드되며 복사본이 데이터와 함께 서버에 저장됩니다. 어셈블리 파일의 복사본은 서버가 시작될 때마다 어셈블리를 로드하는 데 사용됩니다.  
   
  자세한 내용은 [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)를 참조하세요.  
   

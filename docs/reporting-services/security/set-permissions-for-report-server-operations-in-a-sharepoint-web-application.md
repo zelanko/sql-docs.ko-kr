@@ -1,5 +1,5 @@
 ---
-title: SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정 | Microsoft Docs
+title: SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52394006"
 ---
-# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정
   SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트에 정의된 보안 설정에 따라 보고서, 보고서 모델 및 공유 데이터 원본을 보고 관리하는 방법이 결정됩니다. 기본 SharePoint 그룹, 사용 권한 수준 및 사용 권한 할당을 사용하는 경우 현재 보안 설정을 사용하여 보고서 및 기타 문서에 대해 작업을 수행할 수 있습니다.  
   
  기본 보안 설정으로 원하는 액세스 수준을 얻을 수 없는 경우 다음 섹션에 제공된 정보를 사용하여 특정 작업에 필요한 사용 권한을 확인할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "52394006"
   
 -   파일  
   
--   응용 프로그램 페이지 보기  
+-   애플리케이션 페이지 보기  
   
  미리 정의된 사용 권한 수준을 사용하고 있다면 위의 사용 권한이 모든 권한, 디자인, 참가, 읽기 및 제한된 액세스에 이미 포함되어 있으므로 아무런 동작도 수행할 필요가 없습니다. 그러나 사용자 지정 권한 수준을 사용하거나 특정 사용자 또는 그룹에 할당된 권한을 편집하는 경우 사용 권한을 직접 추가해야 합니다.  
   

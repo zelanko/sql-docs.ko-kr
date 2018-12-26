@@ -42,7 +42,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[연결 풀링 사용](../../connect/jdbc/using-connection-pooling.md)|JDBC 드라이버에서 연결 풀링의 사용을 지원하는 방법을 설명합니다.|  
 |[데이터베이스 미러링 사용 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC 드라이버에서 데이터베이스 미러링 사용을 지원하는 방법을 설명합니다.|  
 |[고가용성, 재해 복구를 위한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 가용성 그룹에 연결할 응용 프로그램을 개발하는 방법을 설명합니다.|  
-|[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 응용 프로그램을 위한 Java 구현을 설명합니다.|  
+|[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 애플리케이션을 위한 Java 구현을 설명합니다.|  
 |[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure에서 데이터베이스의 연결 문제를 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

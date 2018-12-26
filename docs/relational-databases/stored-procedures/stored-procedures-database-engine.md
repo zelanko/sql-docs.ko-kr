@@ -49,10 +49,10 @@ ms.locfileid: "51671582"
  프로시저를 암호화하여 원본 코드를 난독 처리할 수 있습니다. 자세한 내용은 [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)를 참조하세요.  
   
  코드 재사용  
- 반복적인 모든 데이터베이스 작업의 코드는 프로시저에서 캡슐화하기에 가장 완벽한 대상입니다. 이러한 코드를 캡슐화하면 같은 코드를 다시 작성할 필요가 없으며, 코드 불일치가 감소되고, 필요한 권한을 가진 사용자 또는 응용 프로그램에서 코드에 액세스하여 코드를 실행할 수 있습니다.  
+ 반복적인 모든 데이터베이스 작업의 코드는 프로시저에서 캡슐화하기에 가장 완벽한 대상입니다. 이러한 코드를 캡슐화하면 같은 코드를 다시 작성할 필요가 없으며, 코드 불일치가 감소되고, 필요한 권한을 가진 사용자 또는 애플리케이션에서 코드에 액세스하여 코드를 실행할 수 있습니다.  
   
  보다 간편한 유지 관리  
- 클라이언트 응용 프로그램에서 프로시저를 호출하고 데이터베이스 작업을 데이터 계층에 유지하면 기본 데이터베이스의 모든 변경 내용에 대해 프로시저만 업데이트하면 됩니다. 응용 프로그램 계층은 별도의 계층으로 유지되므로 데이터베이스 레이아웃, 관계 또는 프로세스에 대한 변경 내용을 알 필요가 없습니다.  
+ 클라이언트 애플리케이션에서 프로시저를 호출하고 데이터베이스 작업을 데이터 계층에 유지하면 기본 데이터베이스의 모든 변경 내용에 대해 프로시저만 업데이트하면 됩니다. 애플리케이션 계층은 별도의 계층으로 유지되므로 데이터베이스 레이아웃, 관계 또는 프로세스에 대한 변경 내용을 알 필요가 없습니다.  
   
  성능 향상  
  기본적으로 프로시저는 처음 실행될 때 컴파일되며 이후 실행에 다시 사용되는 실행 계획을 만듭니다. 쿼리 프로세서는 새 계획을 만들 필요가 없으므로 일반적으로 프로시저 처리 시간이 줄어듭니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "51671582"
  확장 프로시저를 사용하면 C와 같은 프로그래밍 언어로 외부 루틴을 작성할 수 있습니다. 이러한 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동적으로 로드 및 실행할 수 있는 DLL입니다.  
   
 > [!NOTE]  
->  확장 저장 프로시저는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 가능한 한 빨리 수정하세요. 대신 CLR 프로시저를 만들어야 합니다. 이 메서드를 사용하면 확장 프로시저를 보다 강력하고 안전한 방법으로 작성할 수 있습니다.  
+>  확장 저장 프로시저는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요. 대신 CLR 프로시저를 만들어야 합니다. 이 메서드를 사용하면 확장 프로시저를 보다 강력하고 안전한 방법으로 작성할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51671582"
 |저장 프로시저를 삭제하는 방법에 대해 설명합니다.|[저장 프로시저 삭제](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  
 |저장 프로시저를 실행하는 방법에 대해 설명합니다.|[저장 프로시저 실행](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)|  
 |저장 프로시저에 대한 사용 권한을 부여하는 방법에 대해 설명합니다.|[저장 프로시저에 대한 사용 권한 부여](../../relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md)|  
-|저장 프로시저에서 응용 프로그램에 데이터를 반환하는 방법에 대해 설명합니다.|[저장 프로시저에서 데이터 반환](../../relational-databases/stored-procedures/return-data-from-a-stored-procedure.md)|  
+|저장 프로시저에서 애플리케이션에 데이터를 반환하는 방법에 대해 설명합니다.|[저장 프로시저에서 데이터 반환](../../relational-databases/stored-procedures/return-data-from-a-stored-procedure.md)|  
 |저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다.|[저장 프로시저 다시 컴파일](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)|  
 |저장 프로시저의 이름을 바꾸는 방법에 대해 설명합니다.|[저장 프로시저 이름 바꾸기](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)|  
 |저장 프로시저의 정의를 보는 방법에 대해 설명합니다.|[저장 프로시저의 정의 보기](../../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md)|  

@@ -28,7 +28,7 @@ ms.locfileid: "47780091"
  변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)를 참조하세요.  
   
 ## <a name="static-vs-dynamic-ports"></a>정적 포트 대 동적 포트  
- SQL Server의 기본 인스턴스는 들어오는 연결을 1443번 포트에서 수신합니다. 보안상의 이유 또는 클라이언트 응용 프로그램 요구 사항으로 인해 포트를 변경할 수 있습니다. 기본적으로 SQL Server Express를 비롯한 명명된 인스턴스는 동적 포트에서 수신하도록 구성됩니다. 정적 포트를 구성하려면 **TCP 동적 포트** 상자를 비워 놓고 **TCP 포트** 상자에 사용 가능한 포트 번호를 제공합니다. 방화벽에서 포트를 여는 방법은 온라인 설명서에서 SQL Server 액세스를 허용하도록 Windows 방화벽 구성을 참조하십시오.  
+ SQL Server의 기본 인스턴스는 들어오는 연결을 1443번 포트에서 수신합니다. 보안상의 이유 또는 클라이언트 애플리케이션 요구 사항으로 인해 포트를 변경할 수 있습니다. 기본적으로 SQL Server Express를 비롯한 명명된 인스턴스는 동적 포트에서 수신하도록 구성됩니다. 정적 포트를 구성하려면 **TCP 동적 포트** 상자를 비워 놓고 **TCP 포트** 상자에 사용 가능한 포트 번호를 제공합니다. 방화벽에서 포트를 여는 방법은 온라인 설명서에서 SQL Server 액세스를 허용하도록 Windows 방화벽 구성을 참조하십시오.  
   
 ## <a name="dynamic-ports"></a>동적 포트  
  시작 시 동적 포트에서 수신하도록 구성된 SQL Server 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 엔드포인트를 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. SQL Server를 시작할 때마다 포트 번호가 변경될 수 있으므로 SQL Server에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 SQL Server Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 SQL Server를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 SQL Server에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 SQL Server를 구성하세요.  

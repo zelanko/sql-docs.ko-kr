@@ -1,3 +1,4 @@
+items:
 - name: SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: SQL Server 보안 설정
@@ -5,36 +6,36 @@
 - name: 보안 주체
   href: authentication-access/principals-database-engine.md
   items:
-    - name: '로그인, 사용자 및 스키마 관리 방법 도움말 항목'
-      href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
-      items:
-        - name: 로그인 만들기
-          href: authentication-access/create-a-login.md
-        - name: 데이터베이스 사용자 만들기
-          href: authentication-access/create-a-database-user.md
-        - name: 데이터베이스 스키마 만들기
-          href: authentication-access/create-a-database-schema.md
-        - name: 역할 조인
-          href: authentication-access/join-a-role.md
-        - name: 보안 주체에게 사용 권한 부여
-          href: authentication-access/grant-a-permission-to-a-principal.md
-    - name: 서버 수준 역할
-      href: authentication-access/server-level-roles.md
-      items:
-        - name: 서버 역할 만들기
-          href: authentication-access/create-a-server-role.md
-    - name: 데이터베이스 수준 역할
-      href: authentication-access/database-level-roles.md
-    - name: 응용 프로그램 역할
-      href: authentication-access/application-roles.md
-      items:
-        - name: 응용 프로그램 역할 만들기
-          href: authentication-access/create-an-application-role.md
+  - name: 로그인, 사용자 및 스키마 관리 방법 도움말 항목
+    href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+    items:
+    - name: 로그인 만들기
+      href: authentication-access/create-a-login.md
+    - name: 데이터베이스 사용자 만들기
+      href: authentication-access/create-a-database-user.md
+    - name: 데이터베이스 스키마 만들기
+      href: authentication-access/create-a-database-schema.md
+    - name: 역할 조인
+      href: authentication-access/join-a-role.md
+    - name: 보안 주체에게 사용 권한 부여
+      href: authentication-access/grant-a-permission-to-a-principal.md
+  - name: 서버 수준 역할
+    href: authentication-access/server-level-roles.md
+    items:
+    - name: 서버 역할 만들기
+      href: authentication-access/create-a-server-role.md
+  - name: 데이터베이스 수준 역할
+    href: authentication-access/database-level-roles.md
+  - name: 애플리케이션 역할
+    href: authentication-access/application-roles.md
+    items:
+    - name: 애플리케이션 역할 만들기
+      href: authentication-access/create-an-application-role.md
 - name: 자격 증명
   href: authentication-access/credentials-database-engine.md
   items:
-    - name: Create a Credential
-      href: authentication-access/create-a-credential.md
+  - name: Create a Credential
+    href: authentication-access/create-a-credential.md
 - name: 보안 개체
   href: securables.md
 - name: 포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
@@ -60,42 +61,42 @@
 - name: SQL Server 암호화
   href: encryption/sql-server-encryption.md
   items:
-    - name: 암호화 계층
-      href: encryption/encryption-hierarchy.md
-    - name: 암호화 알고리즘 선택
-      href: encryption/choose-an-encryption-algorithm.md
-    - name: 투명한 데이터 암호화
-      href: encryption/transparent-data-encryption.md
-      items:
-        - name: Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
-          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
-        - name: 다른 SQL Server로 TDE 보호 데이터베이스 이동
-          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-        - name: EKM을 사용하여 TDE 설정
-          href: encryption/enable-tde-on-sql-server-using-ekm.md
-    - name: SQL Server 및 데이터베이스 암호화 키
-      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
-      items:
-        - name: 인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
-          href: encryption/service-master-key.md
-        - name: EKM(확장 가능 키 관리)
-          href: encryption/extensible-key-management-ekm.md
-        - name: Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리
-          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-        - name: 서비스 마스터 키 백업
-          href: encryption/back-up-the-service-master-key.md
-        - name: 서비스 마스터 키 복원
-          href: encryption/restore-the-service-master-key.md
-        - name: 데이터베이스 마스터 키 만들기
-          href: encryption/create-a-database-master-key.md
-        - name: 데이터베이스 마스터 키 백업
-          href: encryption/back-up-a-database-master-key.md
-        - name: 데이터베이스 마스터 키 복원
-          href: encryption/restore-a-database-master-key.md
-        - name: 두 서버에서 동일한 대칭 키 만들기
-          href: encryption/create-identical-symmetric-keys-on-two-servers.md
-        - name: 데이터 열 암호화
-          href: encryption/encrypt-a-column-of-data.md
+  - name: 암호화 계층
+    href: encryption/encryption-hierarchy.md
+  - name: 암호화 알고리즘 선택
+    href: encryption/choose-an-encryption-algorithm.md
+  - name: 투명한 데이터 암호화
+    href: encryption/transparent-data-encryption.md
+    items:
+    - name: Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
+      href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+    - name: 다른 SQL Server로 TDE 보호 데이터베이스 이동
+      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+    - name: EKM을 사용하여 TDE 설정
+      href: encryption/enable-tde-on-sql-server-using-ekm.md
+  - name: SQL Server 및 데이터베이스 암호화 키
+    href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+    items:
+    - name: 인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
+      href: encryption/service-master-key.md
+    - name: EKM(확장 가능 키 관리)
+      href: encryption/extensible-key-management-ekm.md
+    - name: Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리
+      href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+    - name: 서비스 마스터 키 백업
+      href: encryption/back-up-the-service-master-key.md
+    - name: 서비스 마스터 키 복원
+      href: encryption/restore-the-service-master-key.md
+    - name: 데이터베이스 마스터 키 만들기
+      href: encryption/create-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 백업
+      href: encryption/back-up-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 복원
+      href: encryption/restore-a-database-master-key.md
+    - name: 두 서버에서 동일한 대칭 키 만들기
+      href: encryption/create-identical-symmetric-keys-on-two-servers.md
+    - name: 데이터 열 암호화
+      href: encryption/encrypt-a-column-of-data.md
 - name: 행 수준 보안
   href: row-level-security.md
 - name: SQL Server 인증서 및 비대칭 키
@@ -103,15 +104,21 @@
 - name: SQL Server Audit(데이터베이스 엔진)
   href: auditing/sql-server-audit-database-engine.md
   items:
-    - name: SQL Server 감사 동작 그룹 및 동작
-      href: auditing/sql-server-audit-action-groups-and-actions.md
-    - name: SQL Server Audit 레코드
-      href: auditing/sql-server-audit-records.md
-    - name: 서버 감사 및 서버 감사 사양 만들기
-      href: auditing/create-a-server-audit-and-server-audit-specification.md
-    - name: 서버 감사 및 데이터베이스 감사 사양 만들기
-      href: auditing/create-a-server-audit-and-database-audit-specification.md
-    - name: SQL Server 감사 로그 보기
-      href: auditing/view-a-sql-server-audit-log.md
-    - name: 보안 로그에 SQL Server Audit 이벤트 쓰기
-      href: auditing/write-sql-server-audit-events-to-the-security-log.md
+  - name: SQL Server 감사 동작 그룹 및 동작
+    href: auditing/sql-server-audit-action-groups-and-actions.md
+  - name: SQL Server Audit 레코드
+    href: auditing/sql-server-audit-records.md
+  - name: 서버 감사 및 서버 감사 사양 만들기
+    href: auditing/create-a-server-audit-and-server-audit-specification.md
+  - name: 서버 감사 및 데이터베이스 감사 사양 만들기
+    href: auditing/create-a-server-audit-and-database-audit-specification.md
+  - name: SQL Server 감사 로그 보기
+    href: auditing/view-a-sql-server-audit-log.md
+  - name: 보안 로그에 SQL Server Audit 이벤트 쓰기
+    href: auditing/write-sql-server-audit-events-to-the-security-log.md
+ms.openlocfilehash: c78ac5e2c6258805fba726ff9ce2690c5e535750
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315680"

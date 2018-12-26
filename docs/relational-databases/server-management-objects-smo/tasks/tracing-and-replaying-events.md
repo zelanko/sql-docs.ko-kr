@@ -29,7 +29,7 @@ ms.locfileid: "47753835"
 
   Smo에서 **추적** 및 **재생** 개체를 <xref:Microsoft.SqlServer.Management.Trace> 네임 스페이스에 대 한 프로그래밍 방식의 액세스를 제공 합니다 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 인스턴스를모니터링에사용되는기능을[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  
   
- 합니다 **추적** 하 고 **재생** 인스턴스에서 추적을 만드는 데 사용할 수 있는 개체의 집합을 제공 하는 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이러한 개체는 사용자의 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 추적을 수동으로 만드는 데 사용할 수 있습니다. 또한 SMO **추적** 개체를 모니터링 하 여 생성 된 테이블과 SQL 추적 파일을 읽는 데 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 또는 DTS 로깅을 합니다.  
+ 합니다 **추적** 하 고 **재생** 인스턴스에서 추적을 만드는 데 사용할 수 있는 개체의 집합을 제공 하는 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이러한 개체는 사용자의 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 추적을 수동으로 만드는 데 사용할 수 있습니다. 또한 SMO **추적** 개체를 모니터링 하 여 생성 된 테이블과 SQL 추적 파일을 읽는 데 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 또는 DTS 로깅을 합니다.  
   
  SMO **Trace** 개체를 사용하면 다음 작업을 수행할 수 있습니다.  
   

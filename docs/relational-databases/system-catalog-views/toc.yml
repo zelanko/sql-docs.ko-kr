@@ -21,7 +21,7 @@ items:
     href: database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
 - name: 의
   items:
-  - name: 데이터 계층 응용 프로그램 보기 - dbo.sysdac_instance
+  - name: 데이터 계층 애플리케이션 보기 - dbo.sysdac_instance
     href: data-tier-application-views-dbo-sysdac-instances.md
 - name: 가용성 그룹
   href: always-on-availability-groups-catalog-views-transact-sql.md

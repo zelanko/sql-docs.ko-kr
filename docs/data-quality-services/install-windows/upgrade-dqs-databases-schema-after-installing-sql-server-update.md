@@ -62,7 +62,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 6.  DQS 데이터베이스 스키마 업그레이드에 성공하면 완료 메시지가 표시됩니다.  
   
 ## <a name="next-steps"></a>Next Steps  
- Data Quality 클라이언트 응용 프로그램에서 업그레이드된 Data Quality Server에 로그온합니다.  
+ Data Quality 클라이언트 애플리케이션에서 업그레이드된 Data Quality Server에 로그온합니다.  
   
  SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드 및 관련 문제 해결 단계에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)를 참조하세요.  
   

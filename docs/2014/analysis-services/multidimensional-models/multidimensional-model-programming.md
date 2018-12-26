@@ -20,7 +20,7 @@ ms.lasthandoff: 10/26/2018
 ms.locfileid: "50147768"
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 응용 프로그램을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 애플리케이션을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Microsoft OLAP 아키텍처 이해](olap-physical/understanding-microsoft-olap-architecture.md)  

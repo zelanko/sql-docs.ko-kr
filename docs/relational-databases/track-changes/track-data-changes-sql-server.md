@@ -29,12 +29,12 @@ ms.locfileid: "51666414"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 응용 프로그램에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 변경 데이터 캡처 및 변경 내용 추적을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서는 변경 내용 추적 기능이 지원됩니다.
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 애플리케이션에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 변경 데이터 캡처 및 변경 내용 추적을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서는 변경 내용 추적 기능이 지원됩니다.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>변경 데이터 캡처 또는 변경 추적 사용의 이점  
- 데이터베이스에서 변경된 데이터를 쿼리하는 기능은 일부 응용 프로그램의 효율성을 위한 중요한 요구 사항입니다. 일반적으로 응용 프로그램 개발자는 데이터 변경을 확인하기 위해 응용 프로그램에서 트리거, 타임스탬프, 열 및 추가 테이블의 조합으로 사용자 지정 추적 방법을 구현해야 합니다. 이러한 응용 프로그램을 만들기 위해서는 많은 구현 작업과 스키마 업데이트가 필요하며 높은 성능 오버헤드가 수반되는 경우도 많습니다.  
+ 데이터베이스에서 변경된 데이터를 쿼리하는 기능은 일부 애플리케이션의 효율성을 위한 중요한 요구 사항입니다. 일반적으로 애플리케이션 개발자는 데이터 변경을 확인하기 위해 애플리케이션에서 트리거, 타임스탬프, 열 및 추가 테이블의 조합으로 사용자 지정 추적 방법을 구현해야 합니다. 이러한 애플리케이션을 만들기 위해서는 많은 구현 작업과 스키마 업데이트가 필요하며 높은 성능 오버헤드가 수반되는 경우도 많습니다.  
   
- 응용 프로그램에서 데이터베이스의 변경 내용을 추적하기 위해 사용자 지정 솔루션을 개발하는 대신 변경 데이터 캡처 또는 변경 추적을 사용할 경우 다음과 같은 이점을 얻을 수 있습니다.  
+ 애플리케이션에서 데이터베이스의 변경 내용을 추적하기 위해 사용자 지정 솔루션을 개발하는 대신 변경 데이터 캡처 또는 변경 추적을 사용할 경우 다음과 같은 이점을 얻을 수 있습니다.  
   
 -   개발 시간이 단축됩니다. 해당 기능이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되므로 사용자 지정 솔루션을 개발할 필요가 없습니다.  
   
@@ -138,9 +138,9 @@ ms.locfileid: "51666414"
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 를 사용하여 복원 또는 연결된 데이터베이스에서 변경 데이터 캡처를 제거할 수 있습니다.  
   
 ##  <a name="Tracking"></a> Change Tracking  
- 변경 내용 추적은 테이블 행을 변경했다는 사실을 캡처하지만 변경된 데이터를 캡처하지는 않습니다. 따라서 사용자 테이블에서 직접 가져온 최신 행 데이터를 사용하여 변경한 행을 응용 프로그램이 확인할 수 있습니다. 그러므로 변경 내용 추적은 시간에 따른 변경 기록을 표시하는 데 있어서는 변경 데이터 캡처와 비교해 볼 때 보다 제한적입니다. 그러나 기록 정보가 필요 없는 응용 프로그램의 경우 변경된 데이터를 캡처하지 않아 저장소 오버헤드가 훨씬 적습니다. 동기 추적 메커니즘을 사용하여 변경 내용을 추적합니다. 이 메커니즘은 DML 작업에 대한 오버헤드를 최소 수준으로 유지하도록 디자인되었습니다.  
+ 변경 내용 추적은 테이블 행을 변경했다는 사실을 캡처하지만 변경된 데이터를 캡처하지는 않습니다. 따라서 사용자 테이블에서 직접 가져온 최신 행 데이터를 사용하여 변경한 행을 애플리케이션이 확인할 수 있습니다. 그러므로 변경 내용 추적은 시간에 따른 변경 기록을 표시하는 데 있어서는 변경 데이터 캡처와 비교해 볼 때 보다 제한적입니다. 그러나 기록 정보가 필요 없는 애플리케이션의 경우 변경된 데이터를 캡처하지 않아 저장소 오버헤드가 훨씬 적습니다. 동기 추적 메커니즘을 사용하여 변경 내용을 추적합니다. 이 메커니즘은 DML 작업에 대한 오버헤드를 최소 수준으로 유지하도록 디자인되었습니다.  
   
- 다음 그림에서는 변경 내용 추적을 사용하는 것이 좋은 동기화 시나리오를 보여 줍니다. 이 시나리오에서는 응용 프로그램에 마지막으로 테이블이 동기화된 이후 변경된 테이블의 모든 행 및 현재 행 데이터만 포함하는 정보가 필요합니다. 동기화 메커니즘을 사용하여 변경 내용을 추적하기 때문에 응용 프로그램에서는 양방향 동기화를 수행하고 발생할 수 있는 모든 충돌을 안정적으로 검색할 수 있습니다.  
+ 다음 그림에서는 변경 내용 추적을 사용하는 것이 좋은 동기화 시나리오를 보여 줍니다. 이 시나리오에서는 애플리케이션에 마지막으로 테이블이 동기화된 이후 변경된 테이블의 모든 행 및 현재 행 데이터만 포함하는 정보가 필요합니다. 동기화 메커니즘을 사용하여 변경 내용을 추적하기 때문에 애플리케이션에서는 양방향 동기화를 수행하고 발생할 수 있는 모든 충돌을 안정적으로 검색할 수 있습니다.  
   
  ![변경 내용 추적에 대한 개념 설명](../../relational-databases/track-changes/media/cdcart2.gif "Conceptual illustration of change tracking")  
   
@@ -169,7 +169,7 @@ ms.locfileid: "51666414"
 |변경 캡처의 개요를 제공합니다.|[변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)|  
 |데이터베이스 또는 테이블에서 변경 내용 추적을 사용하도록 설정하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)|  
 |변경 추적을 관리하고, 보안을 구성하고 변경 추적이 사용된 경우 저장소 및 성능에 미치는 영향을 확인하는 방법을 설명합니다.|[변경 내용 추적 관리&#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
-|변경 추적을 사용하는 응용 프로그램이 추적된 변경 내용을 가져와서 이러한 변경 내용을 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트하는 방법을 설명합니다. 이 항목에서는 장애 조치(failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.|[변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
+|변경 추적을 사용하는 애플리케이션이 추적된 변경 내용을 가져와서 이러한 변경 내용을 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트하는 방법을 설명합니다. 이 항목에서는 장애 조치(failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.|[변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [변경 데이터 캡처 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   

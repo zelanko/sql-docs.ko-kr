@@ -141,7 +141,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 <sup>5</sup> 회교식 달력 시스템에는 여러 가지 형태가 있는데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿠웨이트 알고리즘을 사용합니다.
 
 > [!IMPORTANT]
->  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 구분 연도 2049년을 기준으로 두 자리 연도를 해석합니다. SQL Server는 두 자릿수 연도 49를 2049로, 50을 1950으로 해석합니다. Automation 개체를 기반으로 하는 응용 프로그램 등 많은 클라이언트 응용 프로그램에서는 2030년을 구분 연도로 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구분 연도를 변경하기 위한 두 자리 연도 구분 구성 옵션을 제공합니다. 이를 통해 날짜를 일관성 있게 처리할 수 있습니다. 네 자리 연도를 지정하는 것이 더 편리합니다.
+>  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 구분 연도 2049년을 기준으로 두 자리 연도를 해석합니다. SQL Server는 두 자릿수 연도 49를 2049로, 50을 1950으로 해석합니다. Automation 개체를 기반으로 하는 애플리케이션 등 많은 클라이언트 애플리케이션에서는 2030년을 구분 연도로 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구분 연도를 변경하기 위한 두 자리 연도 구분 구성 옵션을 제공합니다. 이를 통해 날짜를 일관성 있게 처리할 수 있습니다. 네 자리 연도를 지정하는 것이 더 편리합니다.
 
 <sup>6</sup> 문자 데이터를 **datetime** 또는 **smalldatetime**으로 캐스팅하는 경우에만 지원됩니다. 날짜 또는 시간 구성 요소만 나타내는 문자 데이터를 **datetime** 또는 **smalldatetime** 데이터 형식으로 캐스팅하면 지정되지 않은 시간 구성 요소는 00:00:00.000으로 설정되고 지정되지 않은 날짜 구성 요소는 1900-01-01로 설정됩니다.
   

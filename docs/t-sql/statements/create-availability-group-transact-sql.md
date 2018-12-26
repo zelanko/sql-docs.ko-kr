@@ -231,7 +231,7 @@ CREATE AVAILABILITY GROUP group_name
  ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
  현재 REPLICA ON 절에서 정의 중인 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)에 대한 URL 경로를 지정합니다.  
   
- ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **'** TCP **://**_system-address_**:**_port_**'**  
  엔드포인트 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
@@ -309,7 +309,7 @@ CREATE AVAILABILITY GROUP group_name
  이 복제본의 보조 데이터베이스에 대한 사용자 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 이것이 기본 동작입니다.  
   
  READ_ONLY  
- 응용 프로그램 의도 속성이 **ReadOnly**로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+ 애플리케이션 의도 속성이 **ReadOnly**로 설정된 경우에만 보조 복제본의 데이터베이스에 연결할 수 있습니다. 이 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
  ALL  
  보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
@@ -335,7 +335,7 @@ CREATE AVAILABILITY GROUP group_name
  주 역할, 즉 주 복제본의 역할을 수행하는 지정된 가용성 복제본의 데이터베이스에서 허용할 수 있는 클라이언트 연결 유형을 다음 중 하나로 지정합니다.  
   
  READ_WRITE  
- 응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 응용 프로그램 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+ 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  애플리케이션 의도 속성이 **ReadWrite** 로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이것이 기본 동작입니다.  
@@ -422,7 +422,7 @@ CREATE AVAILABILITY GROUP group_name
 >  지정된 가용성 그룹에 대한 수신기를 만든 후에는 다음을 수행하는 것이 좋습니다.  
 >   
 >  -   네트워크 관리자에게 요청하여 수신기의 IP 주소를 배타적으로 사용할 수 있도록 예약합니다.  
-> -   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 응용 프로그램 개발자에게 제공합니다.  
+> -   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
   
  *dns_name*  
  가용성 그룹 수신기의 DNS 호스트 이름을 지정합니다. 수신기의 DNS 이름은 도메인 및 NetBIOS에서 고유해야 합니다.  
@@ -440,7 +440,7 @@ CREATE AVAILABILITY GROUP group_name
  가용성 그룹 수신기가 DHCP(동적 호스트 구성 프로토콜)를 사용할지 여부를 지정합니다.  필요할 경우 ON 절을 사용하여 이 수신기를 만들 네트워크를 식별합니다. DHCP는 가용성 그룹의 복제본을 호스팅하는 모든 서버 인스턴스에 사용되는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
->  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 응용 프로그램과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
+>  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   

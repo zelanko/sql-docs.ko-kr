@@ -29,7 +29,7 @@ ms.locfileid: "51702958"
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-**hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. **hierarchyid**는 계층에서의 위치를 나타내는 데 사용됩니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 응용 프로그램에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
+**hierarchyid** 데이터 형식은 가변 길이의 시스템 데이터 형식입니다. **hierarchyid**는 계층에서의 위치를 나타내는 데 사용됩니다. **hierarchyid** 형식의 열은 자동으로 트리를 나타내지 않습니다. 애플리케이션에 따라 원하는 행 간 관계가 값에 반영되도록 **hierarchyid** 값이 생성되어 할당됩니다.
   
 **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.
   

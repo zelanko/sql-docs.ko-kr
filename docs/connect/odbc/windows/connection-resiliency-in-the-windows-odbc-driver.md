@@ -21,7 +21,7 @@ ms.locfileid: "52545295"
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  응용 프로그램이 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다.  
+  애플리케이션이 [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다.  
   
 > [!IMPORTANT]  
 >  연결 복원력 기능은 Microsoft Azure SQL Database 및 SQL Server 2014 이상 서버 버전에서 지원됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "52545295"
   
     -   **ConnectRetryCount** 연결 문자열 키워드를 사용합니다.  
   
-     연결 다시 시도 횟수를 검색하려면 **SQL_COPT_SS_CONNECT_RETRY_COUNT**(읽기 전용) 연결 특성을 사용합니다. 응용 프로그램이 연결 복원력을 지원하지 않는 서버에 연결된 경우 **SQL_COPT_SS_CONNECT_RETRY_COUNT**에서 0을 반환합니다.  
+     연결 다시 시도 횟수를 검색하려면 **SQL_COPT_SS_CONNECT_RETRY_COUNT**(읽기 전용) 연결 특성을 사용합니다. 애플리케이션이 연결 복원력을 지원하지 않는 서버에 연결된 경우 **SQL_COPT_SS_CONNECT_RETRY_COUNT**에서 0을 반환합니다.  
   
 -   연결 다시 시도 간격  
   

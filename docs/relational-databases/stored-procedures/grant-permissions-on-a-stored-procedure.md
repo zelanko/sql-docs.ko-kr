@@ -22,7 +22,7 @@ ms.locfileid: "47617771"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한 부여
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저에 대한 사용 권한을 부여하는 방법에 대해 설명합니다. 데이터베이스의 기존 사용자, 데이터베이스 역할 또는 응용 프로그램 역할에 사용 권한을 부여할 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저에 대한 사용 권한을 부여하는 방법에 대해 설명합니다. 데이터베이스의 기존 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 사용 권한을 부여할 수 있습니다.  
   
  **항목 내용**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47617771"
   
 4.  **저장 프로시저 속성**에서 **사용 권한** 페이지를 선택합니다.  
   
-5.  사용자, 데이터베이스 역할 또는 응용 프로그램 역할에 사용 권한을 부여하려면 **검색**을 클릭합니다.  
+5.  사용자, 데이터베이스 역할 또는 애플리케이션 역할에 사용 권한을 부여하려면 **검색**을 클릭합니다.  
   
 6.  **사용자 또는 역할 선택**에서 **개체 유형** 을 클릭하여 원하는 사용자 및 역할을 추가하거나 지웁니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47617771"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `EXECUTE` 이라는 응용 프로그램 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo` 에 대한 `Recruiting11`권한을 부여합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `EXECUTE` 이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo` 에 대한 `Recruiting11`권한을 부여합니다.  
   
 ```sql  
 USE AdventureWorks2012;   

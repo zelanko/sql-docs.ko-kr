@@ -35,7 +35,7 @@ ms.locfileid: "51019048"
  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 변경 사항을 활성화하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다. 그러면 서비스가 오프라인 상태일 때 응용 프로그램의 작동이 중단됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 변경 사항을 활성화하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다. 그러면 서비스가 오프라인 상태일 때 애플리케이션의 작동이 중단됩니다.  
   
 ## <a name="procedure"></a>프로시저  
   

@@ -19,7 +19,7 @@ ms.locfileid: "52415410"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 
-웹 포털은 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 응용 프로그램입니다. 웹 포털은 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 웹 포털을 사후 설치 작업으로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 웹 포털 구성 시나리오에 대한 정보를 제공합니다.
+웹 포털은 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 애플리케이션입니다. 웹 포털은 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 웹 포털을 사후 설치 작업으로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 웹 포털 구성 시나리오에 대한 정보를 제공합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -33,7 +33,7 @@ ms.locfileid: "52415410"
 
 ## <a name="configure-the-web-portal-to-use-the-default-url"></a>기본 URL을 사용하도록 웹 포털 구성
 
-웹 포털은 웹 브라우저에서 사용자가 액세스하는 웹 응용 프로그램입니다. 적어도 브라우저 창에서 이 응용 프로그램을 여는 데 사용되는 URL은 정의해야 합니다. URL은 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다. 이 URL에 대한 기본값에는 보고서 서버 웹 서비스 URL에 대해 정의된 호스트 이름 및 포트 값과 **reports** 가상 디렉터리 이름이 포함됩니다. 명명된 인스턴스가 있을 경우 가상 디렉터리는 **reports_instance**입니다. 여기서 **instance** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름입니다.
+웹 포털은 웹 브라우저에서 사용자가 액세스하는 웹 애플리케이션입니다. 적어도 브라우저 창에서 이 애플리케이션을 여는 데 사용되는 URL은 정의해야 합니다. URL은 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다. 이 URL에 대한 기본값에는 보고서 서버 웹 서비스 URL에 대해 정의된 호스트 이름 및 포트 값과 **reports** 가상 디렉터리 이름이 포함됩니다. 명명된 인스턴스가 있을 경우 가상 디렉터리는 **reports_instance**입니다. 여기서 **instance** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름입니다.
 
 기본적으로 웹 포털 URL은 고유한 가상 디렉터리 이름과 동일 인스턴스에서 실행되는 보고서 서버 웹 서비스에 대해 정의된 포트 및 호스트 이름으로 구성됩니다. 대부분의 경우 호스트 이름은 보고서 서버 컴퓨터의 네트워크 이름이지만 이 컴퓨터를 식별하는 IP 주소나 호스트 헤더가 될 수도 있습니다. 웹 포털이 기본 URL을 사용하도록 구성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구의 **웹 포털 URL** 페이지를 사용합니다.
 
@@ -70,11 +70,11 @@ ms.locfileid: "52415410"
 
 구성 파일에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 및 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.
 
-## <a name="customize-styles-or-application-title"></a>스타일 또는 응용 프로그램 제목 사용자 지정
+## <a name="customize-styles-or-application-title"></a>스타일 또는 애플리케이션 제목 사용자 지정
 
 사용자 지정 브랜드 패키지를 만들어서 웹 포털에 사용되는 색상을 변경할 수 있습니다. 자세한 내용은 [웹 포털 브랜딩](../branding-the-web-portal.md)을 참조하세요.
 
-#### <a name="to-modify-application-title"></a>응용 프로그램 제목을 수정하려면
+#### <a name="to-modify-application-title"></a>애플리케이션 제목을 수정하려면
 
 1. 보고서 서버에 대한 **시스템 관리자** 권한이 할당된 계정을 사용하여 로그온합니다.
 

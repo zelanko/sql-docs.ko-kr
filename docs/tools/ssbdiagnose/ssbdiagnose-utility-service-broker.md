@@ -28,7 +28,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52541322"
@@ -102,7 +102,7 @@ ssbdiagnose
   
 ## <a name="command-line-options"></a>명령줄 옵션  
  **-XML**  
- **ssbdiagnose** 출력이 서식이 설정된 XML로 생성되도록 지정합니다. 이 출력은 파일이나 다른 응용 프로그램으로 리디렉션될 수 있습니다. **-XML** 을 지정하지 않을 경우 **ssbdiagnose** 출력 형식은 사람이 읽을 수 있는 텍스트로 지정됩니다.  
+ **ssbdiagnose** 출력이 서식이 설정된 XML로 생성되도록 지정합니다. 이 출력은 파일이나 다른 애플리케이션으로 리디렉션될 수 있습니다. **-XML** 을 지정하지 않을 경우 **ssbdiagnose** 출력 형식은 사람이 읽을 수 있는 텍스트로 지정됩니다.  
   
  **-LEVEL** { **ERROR** | **WARNING** | **INFO**}  
  보고할 메시지 수준을 지정합니다.  
@@ -183,16 +183,16 @@ WHERE database_id = DB_ID();
  대화 핸들을 지정할 경우 연결된 대화 엔드포인트와 연결된 이벤트만 보고됩니다. 대화 ID를 지정할 경우 해당 대화와 그 시작자 및 대상 엔드포인트에 대한 이벤트가 모두 보고됩니다. 대화 그룹 ID를 지정할 경우 대화 그룹에 있는 모든 대화와 엔드포인트에 대한 이벤트가 모두 보고됩니다.  
   
  *conversation_handle*  
- 응용 프로그램에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
+ 애플리케이션에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
   
- 대화 핸들은 *@dialog_handle* 문의 **@dialog_handle** 매개 변수와 **conversation_handle** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 응용 프로그램에 반환됩니다.  
+ 대화 핸들은 *@dialog_handle* 문의 **@dialog_handle** 매개 변수와 **conversation_handle** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 애플리케이션에 반환됩니다.  
   
  대화 핸들은 **sys.transmission_queue** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_handle** 열에서 보고됩니다.  
   
  *conversation_group_id*  
  대화 그룹을 식별하는 고유 식별자입니다.  
   
- 대화 그룹 ID는 *@conversation_group_id* 문의 **@conversation_group_id** 매개 변수와 **conversation_group_id** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 응용 프로그램에 반환됩니다.  
+ 대화 그룹 ID는 *@conversation_group_id* 문의 **@conversation_group_id** 매개 변수와 **conversation_group_id** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 애플리케이션에 반환됩니다.  
   
  대화 그룹 ID는 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_group_id** 열에서 보고됩니다.  
   
@@ -259,9 +259,9 @@ WHERE database_id = DB_ID();
 ## <a name="remarks"></a>Remarks  
  **ssbdiagnose** 를 사용하여 다음을 수행할 수 있습니다.  
   
--   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램에 구성 오류가 없음을 확인합니다.  
+-   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션에 구성 오류가 없음을 확인합니다.  
   
--   기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 구성을 변경한 후에 구성 오류가 없음을 확인합니다.  
+-   기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션의 구성을 변경한 후에 구성 오류가 없음을 확인합니다.  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 데이터베이스가 분리된 다음 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 다시 연결된 후에 구성 오류가 없음을 확인합니다.  
   
@@ -431,7 +431,7 @@ ON CONTRACT TextContract
 ```  
   
 ### <a name="l-redirecting-ssbdiagnose-xml-output"></a>12. ssbdiagnose XML 출력 리디렉션  
- 다음 예에서는 **ssbdiagnose** 가 해당 출력을 파일로 리디렉션되는 XML 파일로 생성하도록 요청하는 방법을 보여 줍니다. 이 예에서 생성하는 TestDiag.xml 파일은 나중에 **ssbdiagnose** XML 파일을 분석하거나 보고하는 응용 프로그램을 사용하여 열거나 XML 메모장과 같은 일반적인 XML 편집기를 사용하여 볼 수 있습니다.  
+ 다음 예에서는 **ssbdiagnose** 가 해당 출력을 파일로 리디렉션되는 XML 파일로 생성하도록 요청하는 방법을 보여 줍니다. 이 예에서 생성하는 TestDiag.xml 파일은 나중에 **ssbdiagnose** XML 파일을 분석하거나 보고하는 애플리케이션을 사용하여 열거나 XML 메모장과 같은 일반적인 XML 편집기를 사용하여 볼 수 있습니다.  
   
 ```  
 ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE   

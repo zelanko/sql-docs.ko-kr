@@ -25,7 +25,7 @@ ms.locfileid: "51601914"
 주소록 응용 프로그램이 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 응용 프로그램의 HTML 클라이언트 페이지에서 데이터를 SQL Server 데이터베이스에서 시각적 개체 (이 경우 DHTML 테이블)에 바인딩되는 개체입니다. 이벤트 구동 VBScript 프로그램 논리를 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 -   데이터베이스를 쿼리하고 업데이트를 데이터베이스로 보내는 데이터 그리드를 새로 고칩니다.  
   

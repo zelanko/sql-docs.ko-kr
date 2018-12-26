@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47624681"
 ---
-# <a name="hellodata-a-simple-ado-application"></a>HelloData: 간단한 ADO 응용 프로그램
+# <a name="hellodata-a-simple-ado-application"></a>HelloData: 간단한 ADO 애플리케이션
 각각 4 개의 주요 ADO 작업을 통해이 간단한 응용 프로그램 단계: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 이러한 작업은 Microsoft® SQL Server에 포함 된 Northwind 샘플 데이터베이스에 대해 수행 됩니다. ADO의 기본 사항에 집중 하 고 코드 혼란을 방지 하기 위해이 예제에서 오류 처리는 최소화 됩니다.  
   
 ### <a name="to-run-hellodata"></a>HelloData를 실행 하려면  

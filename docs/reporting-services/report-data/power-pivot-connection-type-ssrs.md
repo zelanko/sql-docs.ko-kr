@@ -23,7 +23,7 @@ ms.locfileid: "51812666"
 ## <a name="prerequisites"></a>사전 요구 사항  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본을 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시해야 합니다.  
   
- 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 응용 프로그램이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
+ 보고서 작성기에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
   
 ## <a name="data-source-type"></a>데이터 원본 유형  
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  

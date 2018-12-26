@@ -46,7 +46,7 @@ ms.locfileid: "52617953"
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="StartingaMatchingProject"></a> 1단계: 일치 프로젝트 시작  
- DQS 클라이언트 응용 프로그램에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
+ DQS 클라이언트 애플리케이션에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   

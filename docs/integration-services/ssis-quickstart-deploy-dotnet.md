@@ -121,7 +121,7 @@ namespace deploy_ssis_project
 
 ## <a name="run-the-code"></a>코드 실행
 
-1. 응용 프로그램을 실행하려면 **F5** 키를 누릅니다.
+1. 애플리케이션을 실행하려면 **F5** 키를 누릅니다.
 2. SSMS에서 프로젝트가 배포되었는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계

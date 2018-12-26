@@ -31,7 +31,7 @@ ms.locfileid: "47638357"
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이 기능은 특정 응용 프로그램 리소스에 대해 잠금 소유자가 보유한 잠금 모드를 반환합니다. 응용 프로그램 잠금 함수로 APPLOCK_MODE는 현재 데이터베이스에서 작동합니다. 데이터베이스는 응용 프로그램 잠금의 범위입니다.
+이 기능은 특정 애플리케이션 리소스에 대해 잠금 소유자가 보유한 잠금 모드를 반환합니다. 애플리케이션 잠금 함수로 APPLOCK_MODE는 현재 데이터베이스에서 작동합니다. 데이터베이스는 애플리케이션 잠금의 범위입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,10 +43,10 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>인수  
 '*database_principal*'  
-데이터베이스의 개체에 대한 사용 권한이 부여될 수 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수를 성공적으로 호출하려면 함수 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
+데이터베이스의 개체에 대한 사용 권한이 부여될 수 있는 사용자, 역할 또는 애플리케이션 역할입니다. 함수를 성공적으로 호출하려면 함수 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 '*resource_name*'  
-클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name*은 **nvarchar(255)** 이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
+클라이언트 애플리케이션이 지정한 잠금 리소스의 이름입니다. 애플리케이션은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name*은 **nvarchar(255)** 이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
   
 '*lock_owner*'  
 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*는 **nvarchar (32)** 이고 값은 **Transaction**(기본값) 또는 **Session**이 될 수 있습니다.

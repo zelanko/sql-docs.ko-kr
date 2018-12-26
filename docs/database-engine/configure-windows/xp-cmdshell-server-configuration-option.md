@@ -25,7 +25,7 @@ ms.locfileid: "47634251"
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **xp_cmdshell** 옵션은 시스템 관리자가 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xp_cmdshell **확장 저장 프로시저를 실행할 수 있는지 여부를 제어할 수 있도록 하는** 서버 구성 옵션입니다. 기본적으로 **xp_cmdshell** 옵션은 새로운 설치에서 사용할 수 없습니다. 이 옵션을 설정하기 전에 이 옵션의 사용과 관련된 잠재적 보안 문제를 고려해야 합니다. 새로 개발된 코드는 일반적으로 사용 안 함 상태이어야 하기 때문에 이 옵션을 사용하지 않아야 합니다. 일부 레거시 응용 프로그램을 사용하도록 설정해야 합니다. 또한 이 옵션을 사용하지 않도록 수정할 수 없는 경우 다음 코드 예제에 표시된 대로 정책 기반 관리를 사용하거나 **sp_configure** 시스템 저장 프로시저를 실행하여 사용하도록 설정할 수 있습니다.  
+  **xp_cmdshell** 옵션은 시스템 관리자가 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xp_cmdshell **확장 저장 프로시저를 실행할 수 있는지 여부를 제어할 수 있도록 하는** 서버 구성 옵션입니다. 기본적으로 **xp_cmdshell** 옵션은 새로운 설치에서 사용할 수 없습니다. 이 옵션을 설정하기 전에 이 옵션의 사용과 관련된 잠재적 보안 문제를 고려해야 합니다. 새로 개발된 코드는 일반적으로 사용 안 함 상태이어야 하기 때문에 이 옵션을 사용하지 않아야 합니다. 일부 레거시 애플리케이션을 사용하도록 설정해야 합니다. 또한 이 옵션을 사용하지 않도록 수정할 수 없는 경우 다음 코드 예제에 표시된 대로 정책 기반 관리를 사용하거나 **sp_configure** 시스템 저장 프로시저를 실행하여 사용하도록 설정할 수 있습니다.  
   
 ```  
 -- To allow advanced options to be changed.  

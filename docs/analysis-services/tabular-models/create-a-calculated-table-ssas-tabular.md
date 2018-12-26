@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34041997"
@@ -20,7 +20,7 @@ ms.locfileid: "34041997"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   *계산 테이블* 은 DAX 쿼리 또는 식을 기반으로 계산된 개체이며 같은 모델에 포함된 다른 테이블의 전체 또는 일부에서 파생됩니다.  
   
- 계산 테이블이 해결할 수 있는 일반적인 디자인 문제는 클라이언트 응용 프로그램의 쿼리 구조로 노출할 수 있도록 특정 컨텍스트에서 롤플레잉 차원을 겉으로 드러내는 것입니다.  롤플레잉 차원은 여러 컨텍스트에 표면화되는 테이블입니다. 전형적인 예에는 외래 키 관계에 따라서 OrderDate, ShipDate, 또는 DueDate으로 표시되는 날짜 테이블이 있습니다. ShipDate의 계산 테이블을 명시적으로 만들면, 쿼리에 사용할 수 있는 다른 테이블처럼 완벽하게 작동되는 독립 실행형 테이블을 갖게 됩니다.  
+ 계산 테이블이 해결할 수 있는 일반적인 디자인 문제는 클라이언트 애플리케이션의 쿼리 구조로 노출할 수 있도록 특정 컨텍스트에서 롤플레잉 차원을 겉으로 드러내는 것입니다.  롤플레잉 차원은 여러 컨텍스트에 표면화되는 테이블입니다. 전형적인 예에는 외래 키 관계에 따라서 OrderDate, ShipDate, 또는 DueDate으로 표시되는 날짜 테이블이 있습니다. ShipDate의 계산 테이블을 명시적으로 만들면, 쿼리에 사용할 수 있는 다른 테이블처럼 완벽하게 작동되는 독립 실행형 테이블을 갖게 됩니다.  
   
  계산 테이블의 두 번째 용도에는 기존의 다른 테이블에서 필터링된 행 집합이나 열의 하위 집합 또는 상위 집합을 구성하는 작업이 포함됩니다. 이렇게 하면 특정 시나리오를 지원하기 위해 테이블의 변형을 생성하더라도 원래 테이블을 그대로 유지할 수 있습니다.  
   

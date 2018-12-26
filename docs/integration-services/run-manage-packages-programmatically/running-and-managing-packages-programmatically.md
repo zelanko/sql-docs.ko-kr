@@ -27,14 +27,14 @@ ms.locfileid: "51638310"
   
 -   새 패키지를 만들고 구성 요소를 개체별 및 속성별로 구성한 다음 새 패키지를 저장 후 실행합니다.  
   
- 단 몇 줄의 코드를 작성하여 클라이언트 응용 프로그램에서 기존 패키지를 로드하고 실행할 수 있습니다.  
+ 단 몇 줄의 코드를 작성하여 클라이언트 애플리케이션에서 기존 패키지를 로드하고 실행할 수 있습니다.  
   
- 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 응용 프로그램에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 항목의 설명에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
+ 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 애플리케이션에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 항목의 설명에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
   
  이 섹션에서는 저장된 패키지, 실행 중인 패키지 및 패키지 역할을 관리하기 위해 프로그래밍 방식으로 수행할 수 있는 기타 관리 태스크도 설명합니다.  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Integration Services 서버의 패키지 실행  
- 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 경우 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하여 프로그래밍 방식으로 패키지를 실행할 수 있습니다. Microsoft.SqlServer.Management.IntegrationServices 어셈블리는 .NET Framework 3.5로 컴파일됩니다. .NET Framework 4.0 응용 프로그램을 빌드하는 경우 프로젝트 파일에 어셈블리 참조를 직접 추가해야 할 수 있습니다.  
+ 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 경우 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하여 프로그래밍 방식으로 패키지를 실행할 수 있습니다. Microsoft.SqlServer.Management.IntegrationServices 어셈블리는 .NET Framework 3.5로 컴파일됩니다. .NET Framework 4.0 애플리케이션을 빌드하는 경우 프로젝트 파일에 어셈블리 참조를 직접 추가해야 할 수 있습니다.  
   
  또한 네임스페이스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포 및 관리할 수 있습니다. 네임스페이스 및 코드 조각에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=253122)블로그 항목을 참조하십시오.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "51638310"
  패키지를 로컬로 실행할 때와 서버에서 실행할 때의 중요한 차이점에 대해 설명합니다.  
   
  [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
- 로컬 컴퓨터의 클라이언트 응용 프로그램에서 기존 패키지를 실행하는 방법에 대해 설명합니다.  
+ 로컬 컴퓨터의 클라이언트 애플리케이션에서 기존 패키지를 실행하는 방법에 대해 설명합니다.  
   
  [프로그래밍 방식으로 원격 패키지 로드 및 실행](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
- 클라이언트 응용 프로그램에서 기존 패키지를 실행하고 해당 패키지가 서버에서 실행되도록 하는 방법에 대해 설명합니다.  
+ 클라이언트 애플리케이션에서 기존 패키지를 실행하고 해당 패키지가 서버에서 실행되도록 하는 방법에 대해 설명합니다.  
   
  [로컬 패키지의 출력 로드](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
- 로컬 컴퓨터에서 패키지를 실행하는 방법과 DataReader 대상 및 DtsClient 네임스페이스를 사용하여 데이터 흐름의 출력을 클라이언트 응용 프로그램으로 로드하는 방법에 대해 설명합니다.  
+ 로컬 컴퓨터에서 패키지를 실행하는 방법과 DataReader 대상 및 DtsClient 네임스페이스를 사용하여 데이터 흐름의 출력을 클라이언트 애플리케이션으로 로드하는 방법에 대해 설명합니다.  
   
  [프로그래밍 방식으로 사용 가능 패키지 열거](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 의해 관리되는 사용 가능한 패키지를 검색하는 방법에 대해 설명합니다.  

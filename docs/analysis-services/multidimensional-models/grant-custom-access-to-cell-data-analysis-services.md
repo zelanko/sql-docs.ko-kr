@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34025247"
@@ -22,7 +22,7 @@ ms.locfileid: "34025247"
   
  ![허용 및 거부 된 셀을 보여 주는 피벗 테이블](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "허용 및 거부 된 셀을 보여 주는 피벗 테이블")  
   
- 셀 사용 권한은 셀 내부의 데이터에 적용되며, 메타데이터에는 적용되지 않습니다. 셀이 쿼리 결과에 여전히 나타나며 실제 셀 값 대신 **#N/A** 값을 표시하는 방식을 살펴보세요. 클라이언트 응용 프로그램에서 값을 변환하거나 연결 문자열에 Secured Cell Value 속성을 설정하여 다른 값을 지정하는 경우를 제외하고 셀에는 **#N/A** 값이 나타납니다.  
+ 셀 사용 권한은 셀 내부의 데이터에 적용되며, 메타데이터에는 적용되지 않습니다. 셀이 쿼리 결과에 여전히 나타나며 실제 셀 값 대신 **#N/A** 값을 표시하는 방식을 살펴보세요. 클라이언트 애플리케이션에서 값을 변환하거나 연결 문자열에 Secured Cell Value 속성을 설정하여 다른 값을 지정하는 경우를 제외하고 셀에는 **#N/A** 값이 나타납니다.  
   
  셀을 완전히 숨기려면 볼 수 있는 구성원(차원, 차원 특성 및 차원 특성 구성원)을 제한해야 합니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)를 참조하세요.  
   

@@ -41,7 +41,7 @@ ms.locfileid: "52519448"
   
 ## <a name="benefits-of-in-memory-features"></a>메모리 내 기능의 이점  
   
-SQL Server는 많은 응용 프로그램 시스템의 성능을 크게 향상시킬 수 있는 메모리 내 기능을 제공합니다. 이 섹션에서는 가장 명확한 고려 사항에 대해 설명합니다.  
+SQL Server는 많은 애플리케이션 시스템의 성능을 크게 향상시킬 수 있는 메모리 내 기능을 제공합니다. 이 섹션에서는 가장 명확한 고려 사항에 대해 설명합니다.  
   
   
 ### <a name="features-for-oltp-online-transactional-processing"></a>OLTP(온라인 트랜잭션 처리) 기능  

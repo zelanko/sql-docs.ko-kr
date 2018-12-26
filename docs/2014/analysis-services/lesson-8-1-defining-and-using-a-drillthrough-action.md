@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48090683"
@@ -57,7 +57,7 @@ ms.locfileid: "48090683"
   
 9. 에 **캡션** 상자에 입력 `Drillthrough to Order Details…`합니다.  
   
-     이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 응용 프로그램 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
+     이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 애플리케이션 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
      ![추가 속성 상자](../../2014/tutorials/media/l8-action5.gif "추가 속성 상자")  
   

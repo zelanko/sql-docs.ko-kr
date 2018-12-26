@@ -18,7 +18,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47649551"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 속성 - VirtualDirectoryReportServer
-  보고서 서버 응용 프로그램에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
+  보고서 서버 애플리케이션에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
   

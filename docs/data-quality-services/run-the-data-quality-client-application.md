@@ -1,5 +1,5 @@
 ---
-title: Data Quality Client 응용 프로그램 실행 | Microsoft Docs
+title: Data Quality Client 애플리케이션 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/29/2018
 ms.locfileid: "52616273"
 ---
-# <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 응용 프로그램 실행
+# <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

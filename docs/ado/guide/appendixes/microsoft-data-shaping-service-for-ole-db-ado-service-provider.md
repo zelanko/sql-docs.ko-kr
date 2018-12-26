@@ -23,7 +23,7 @@ ms.locfileid: "51350067"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 데이터 셰이핑 서비스에 대 한 OLE DB 개요
 > [!IMPORTANT]
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, 응용 프로그램 XML을 사용 해야 합니다.
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, 응용 프로그램 XML을 사용 해야 합니다.
 
  OLE DB 서비스 공급자에 대 한 Microsoft Data Shaping Service 계층의 생성을 지원 (모양) [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 데이터 공급자 개체입니다.
 

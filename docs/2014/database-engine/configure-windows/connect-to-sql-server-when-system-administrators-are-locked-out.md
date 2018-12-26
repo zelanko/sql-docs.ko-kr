@@ -17,7 +17,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
 ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49119790"
@@ -41,10 +41,10 @@ ms.locfileid: "49119790"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 먼저 중지하십시오. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되므로 두 번째 사용자로 연결하지 못합니다.  
   
- **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
+ **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
   
 > [!IMPORTANT]  
->  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 응용 프로그램에서 클라이언트 응용 프로그램 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
+>  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 단일 사용자 모드로 시작하는 방법에 대한 단계별 지침은 [서버 시작 옵션 구성&#40;SQL Server 구성 관리자&#41;](scm-services-configure-server-startup-options.md)을 참조하세요.  
   

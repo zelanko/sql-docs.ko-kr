@@ -67,7 +67,7 @@ ms.locfileid: "34024370"
   
 #### <a name="step-4-test"></a>4단계: 테스트  
   
-1.  Excel을 사용하여 큐브 액세스 권한을 테스트합니다. 또한 아래에서 설명한 것과 동일한 기법(관리자가 아닌 사용자로 응용 프로그램 실행)에 따라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 수 있습니다.  
+1.  Excel을 사용하여 큐브 액세스 권한을 테스트합니다. 또한 아래에서 설명한 것과 동일한 기법(관리자가 아닌 사용자로 애플리케이션 실행)에 따라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 수 있습니다.  
   
     > [!NOTE]  
     >  Analysis Services 관리자인 경우 사용 권한이 더 적은 역할과 관리자 권한이 결합되므로 격리된 상태에서 역할 권한을 테스트하는 것이 어려워집니다. 테스트를 단순화하려면 테스트 중인 역할에 할당된 계정을 사용하는 SSMS의 두 번째 인스턴스를 여는 것이 좋습니다.  

@@ -43,7 +43,7 @@ ms.locfileid: "47802281"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 호스트 정책 수준 권한 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 권한 집합이: **안전한**, **EXTERNAL_ACCESS** 및 **UNSAFE** (사용 하 여 지정 합니다 **PERMISSION_SET** 옵션[ 어셈블리를 만들 &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR을 호스팅하는 동안 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 두 가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 만든 모든 응용 프로그램 도메인에 대해 설정됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR을 호스팅하는 동안 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 두 가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 만든 모든 애플리케이션 도메인에 대해 설정됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 수준 정책은 시스템 어셈블리에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고정 정책과 사용자 어셈블리에 대한 사용자 지정 정책을 조합한 것입니다.  
   

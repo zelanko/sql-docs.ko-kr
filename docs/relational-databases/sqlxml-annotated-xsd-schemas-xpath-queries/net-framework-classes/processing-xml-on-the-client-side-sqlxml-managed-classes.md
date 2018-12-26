@@ -82,7 +82,7 @@ public static int Main(String[] args)
   
  이 예를 테스트하려면 컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있어야 합니다.  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  저장 프로시저를 만듭니다.  
   

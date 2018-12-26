@@ -48,7 +48,7 @@ ms.locfileid: "52514993"
  **SharePoint 모드:** SharePoint 중앙 관리 페이지 또는 PowerShell  
   
 ##  <a name="bkmk_backup_sharepoint"></a> SharePoint 모드 보고서 서버 백업  
- SharePoint 모드 보고서 서버의 경우 PowerShell 명령을 사용하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램용 관리 페이지를 사용할 수 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 “키 관리” 섹션을 참조하세요.  
+ SharePoint 모드 보고서 서버의 경우 PowerShell 명령을 사용하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션용 관리 페이지를 사용할 수 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 “키 관리” 섹션을 참조하세요.  
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 암호화 키 백업 - Reporting Services 구성 관리자(기본 모드)  
   

@@ -16,7 +16,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51031510"
@@ -42,7 +42,7 @@ ms.locfileid: "51031510"
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="StartingaMatchingProject"></a> 1단계: 일치 프로젝트 시작  
- DQS 클라이언트 응용 프로그램에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
+ DQS 클라이언트 애플리케이션에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   

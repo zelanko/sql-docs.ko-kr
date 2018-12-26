@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51019068"
 ---
-## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정
+## <a name="specifying-application-intent"></a>애플리케이션 의도 지정
 
 키워드 **ApplicationIntent** 연결 문자열에 지정할 수 있습니다. 할당 가능한 값은 **ReadWrite** 하거나 **ReadOnly**합니다. 기본값은 **ReadWrite**합니다.
 

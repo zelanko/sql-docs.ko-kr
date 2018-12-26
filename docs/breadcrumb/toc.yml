@@ -95,7 +95,7 @@ items:
           - name: 부록
             href: /sql/odbc/reference/appendixes/
             homepage: /sql/odbc/reference/appendixes/odbc-appendixes
-          - name: 응용 프로그램 개발
+          - name: 애플리케이션 개발
             href: /sql/odbc/reference/develop-app/
             homepage: /sql/odbc/reference/develop-app/checking-feature-support-and-variability
           - name: 드라이버 개발
@@ -114,7 +114,7 @@ items:
         - name: 기능
           href: /sql/connect/oledb/features/
           homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
-        - name: 응용 프로그램
+        - name: 애플리케이션
           href: /sql/connect/oledb/applications/
           homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
         - name: OLE DB 프로그래밍
@@ -565,7 +565,7 @@ items:
         - name: WMI 공급자 라이브러리
           href: /sql/reporting-services/wmi-provider-library-reference/
           homepage: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
-        - name: 응용 프로그램 통합
+        - name: 애플리케이션 통합
           href: /sql/reporting-services/application-integration/
           homepage: /sql/reporting-services/application-integration/integrating-reporting-services-into-applications
         - name: 보고서 서버 웹 서비스
@@ -636,7 +636,7 @@ items:
       - name: 데이터 압축
         href: /sql/relational-databases/data-compression/
         homepage: /sql/relational-databases/data-compression/data-compression
-      - name: 데이터 계층 응용 프로그램
+      - name: 데이터 계층 애플리케이션
         href: /sql/relational-databases/data-tier-applications/
         homepage: /sql/relational-databases/data-tier-applications/data-tier-applications
       - name: 데이터베이스 메일
@@ -931,7 +931,7 @@ items:
         - name: 기능
           href: /sql/relational-databases/native-client/features/
           homepage: /sql/relational-databases/native-client/features/sql-server-native-client-features
-        - name: 응용 프로그램
+        - name: 애플리케이션
           href: /sql/relational-databases/native-client/applications/
           homepage: /sql/relational-databases/native-client/applications/building-applications-with-sql-server-native-client
         - name: OLE DB

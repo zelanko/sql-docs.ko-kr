@@ -44,7 +44,7 @@ ms.locfileid: "51032800"
  이러한 활동은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 사용하여 수행됩니다.  
   
 ### <a name="activity-monitoring"></a>작업 모니터링  
- **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 응용 프로그램이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
+ **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 애플리케이션이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
   
 ### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  

@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50148126"
@@ -85,7 +85,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 ##  <a name="bkmk_tools"></a> 도구 및 사용 권한  
  DMV를 쿼리하려면 Analysis Services 인스턴스에 대한 시스템 관리자 권한이 있어야 합니다.  
   
- SQL Server Management Studio, Reporting Services 보고서, PerformancePoint 대시보드 등 MDX 또는 DMX 쿼리를 지원하는 클라이언트 응용 프로그램은 모두 사용할 수 있습니다.  
+ SQL Server Management Studio, Reporting Services 보고서, PerformancePoint 대시보드 등 MDX 또는 DMX 쿼리를 지원하는 클라이언트 애플리케이션은 모두 사용할 수 있습니다.  
   
  Management Studio에서 DMV 쿼리를 실행하려면 쿼리할 인스턴스에 연결한 다음 **새 쿼리**를 클릭합니다. MDX 또는 DMX 쿼리 창에서 쿼리를 실행할 수 있습니다.  
   
@@ -151,7 +151,7 @@ ORDER BY TABLE_NAME ASC
 |[DMSCHEMA_MINING_STRUCTURES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|현재 연결에서 사용할 수 있는 마이닝 구조를 나열합니다.|  
 |[MDSCHEMA_CUBES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|현재 데이터베이스에 정의된 큐브에 대한 정보를 반환합니다.|  
 |[MDSCHEMA_DIMENSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|현재 데이터베이스에 정의된 차원에 대한 정보를 반환합니다.|  
-|[MDSCHEMA_FUNCTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|데이터베이스에 연결된 클라이언트 응용 프로그램에 사용할 수 있는 함수 목록을 반환합니다.|  
+|[MDSCHEMA_FUNCTIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|데이터베이스에 연결된 클라이언트 애플리케이션에 사용할 수 있는 함수 목록을 반환합니다.|  
 |[MDSCHEMA_HIERARCHIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|현재 데이터베이스에 정의된 계층에 대한 정보를 반환합니다.|  
 |[MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|현재 데이터베이스에 정의된 데이터 원본 개체에 대한 정보를 반환합니다.|  
 |[MDSCHEMA_KPIS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|현재 데이터베이스에 정의된 KPI에 대한 정보를 반환합니다.|  

@@ -22,13 +22,13 @@ ms.locfileid: "38979455"
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 구성한 경우 이 도구에는 이 요구 사항을 만족시키는 동작이 포함되어 있으므로 MSOLAP.5는 이미 신뢰할 수 있는 공급자일 수 있습니다. 그러나 PowerShell 또는 중앙 관리를 사용하거나 구성 도구에서 신뢰할 수 있는 공급자 동작을 제외한 경우에는 공급자가 누락될 수 있으며 이 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스용 팜을 구성하는 작업의 일부로 지금 이 공급자를 추가해야 합니다.  
   
- 각 Excel Services 서비스 응용 프로그램에 대해 한 번씩 이 단계를 수행해야 합니다.  
+ 각 Excel Services 서비스 애플리케이션에 대해 한 번씩 이 단계를 수행해야 합니다.  
   
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버나 Excel Services 서버처럼 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 요청을 처리하는 각 실제 서버의 컴퓨터에는 OLE DB 공급자가 설치되어 있어야 합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에는 항상 OLE DB 공급자가 포함되지만 Excel Services가 실행되는 컴퓨터에 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 없으면 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Excel 서비스에 신뢰할 수 있는 공급자 추가  
   
-1.  중앙 관리에서 **서비스 응용 프로그램 관리**를 클릭한 다음 Excel 서비스 응용 프로그램을 클릭합니다.  
+1.  중앙 관리에서 **서비스 애플리케이션 관리**를 클릭한 다음 Excel 서비스 애플리케이션을 클릭합니다.  
   
 2.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다.  
   

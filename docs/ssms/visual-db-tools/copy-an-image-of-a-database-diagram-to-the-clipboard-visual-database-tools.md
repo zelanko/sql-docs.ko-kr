@@ -23,7 +23,7 @@ ms.locfileid: "47660481"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-데이터베이스 다이어그램의 이미지를 만들고 이 이미지를 다른 응용 프로그램으로 복사할 수 있습니다.  
+데이터베이스 다이어그램의 이미지를 만들고 이 이미지를 다른 애플리케이션으로 복사할 수 있습니다.  
   
 ### <a name="to-copy-a-diagram-image-to-the-clipboard"></a>다이어그램 이미지를 클립보드로 복사하려면  
   

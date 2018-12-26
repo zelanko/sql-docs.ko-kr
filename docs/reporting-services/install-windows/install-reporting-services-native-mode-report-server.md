@@ -32,7 +32,7 @@ ms.locfileid: "52712384"
 ##  <a name="bkmk_whatisdefaultconfiguration"></a> 기본 구성이란?  
  기본 모드 옵션에 대해 기본 구성을 선택하면 다음과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능이 설치됩니다.  
   
--   보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 응용 프로그램, 보고서 및 권한을 보고 관리하는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 포함)  
+-   보고서 서버 서비스(보고서 서버 웹 서비스, 백그라운드 처리 애플리케이션, 보고서 및 권한을 보고 관리하는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 포함)  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52712384"
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는 `https://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|  
-|포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 응용 프로그램을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
+|포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 애플리케이션을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
 |가상 디렉터리|기본적으로 가상 디렉터리는 보고서 서버 웹 서비스의 경우 ReportServer_\<*instance_name*> 형식으로, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 경우 Reports_\<*instance_name*> 형식으로 만들어집니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]의 기본 가상 디렉터리는 **reports**입니다.|  
   
  전체 URL 문자열의 예는 다음과 같습니다.  

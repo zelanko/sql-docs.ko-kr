@@ -7,7 +7,7 @@ items:
     href: what-s-new-in-analysis-services.md
   - name: SQL Server Analysis Services 2017의 새로운 기능
     href: what-s-new-in-sql-server-analysis-services-2017.md
-  - name: 도구 및 응용 프로그램
+  - name: 도구 및 애플리케이션
     href: tools-and-applications-used-in-analysis-services.md
   - name: 클라이언트 라이브러리(데이터 공급자)
     href: ./instances/data-providers-used-for-analysis-services-connections.md
@@ -1219,9 +1219,9 @@ items:
       items:
       - name: SharePoint에 PowerPivot 솔루션 배포
         href: ./power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
-      - name: PowerPivot 서비스 응용 프로그램 만들기 및 구성
+      - name: PowerPivot 서비스 애플리케이션 만들기 및 구성
         href: ./power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
-      - name: SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결
+      - name: SharePoint 웹 애플리케이션에 파워 피벗 서비스 애플리케이션 연결
         href: ./power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
       - name: 사이트 모음에 대해 파워 피벗 기능 통합 활성화
         href: ./power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
@@ -1386,7 +1386,7 @@ items:
     items:
     - name: 서버에 연결 개요
       href: ./instances/connect-to-analysis-services.md
-    - name: 클라이언트 응용 프로그램에서 연결
+    - name: 클라이언트 애플리케이션에서 연결
       href: ./instances/connect-from-client-applications-analysis-services.md
     - name: '연결 문자열 속성 '
       href: ./instances/connection-string-properties-analysis-services.md

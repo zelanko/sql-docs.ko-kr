@@ -35,7 +35,7 @@ ms.locfileid: "50145958"
  번역은 LCID(로캘 식별자) 및 개체에 대한 번역된 캡션(예: 차원 또는 특성 이름)과 (원할 경우) 데이터 값을 대상 언어로 제공하는 열에 대한 바인딩으로 구성됩니다. 여러 번역이 있을 수 있지만 지정된 연결에 대해 하나씩만 사용할 수 있습니다. 모델에 포함할 수 있는 번역의 수에 이론적인 제한은 없지만 각 번역은 테스트를 더 복잡하게 하고 모든 번역은 동일한 데이터 정렬을 공유해야 하므로 솔루션을 디자인할 때에는 이러한 기본적인 제약 조건을 염두에 두어야 합니다.  
   
 > [!TIP]  
->  Excel, Management Studio 등과 같은 클라이언트 응용 프로그램과 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 사용하여 번역된 문자열을 반환할 수 있습니다. 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
+>  Excel, Management Studio 등과 같은 클라이언트 애플리케이션과 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 사용하여 번역된 문자열을 반환할 수 있습니다. 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>번역된 멤버를 지원하도록 모델 설정  
  다국어 솔루션에 사용되는 데이터 모델에서는 번역된 레이블(필드 이름 및 설명) 이상의 것들이 필요합니다. 또한 다양한 언어 스크립트에 명시되는 데이터 값도 제공해야 합니다. 다국어 솔루션을 만들려면 개별 특성이 데이터를 반환하는 외부 데이터베이스의 열에 바인딩되어야 합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "50145958"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>차원 및 특성에 번역 추가  
  데이터베이스 차원, 특성, 계층 구조 및 계층 구조 내 수준에 번역을 추가할 수 있습니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "50145958"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
   
 ### <a name="add-a-translation-of-the-database-name"></a>데이터베이스 이름의 번역 추가  
  데이터베이스 수준에서 데이터베이스 이름 및 설명에 대한 번역을 추가할 수 있습니다. 번역된 데이터베이스 이름은 언어의 LCID를 지정하는 클라이언트 연결에 표시될 수도 있지만 이것은 도구에 따라 다릅니다. 예를 들어, 연결에서 로캘 식별자를 지정하더라도 Management Studio에서는 데이터베이스를 볼 때 번역된 이름이 표시되지 않습니다. Analysis Services에 연결하기 위해 Management Studio에서 사용하는 API는 `Language` 속성을 읽지 않습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "50145958"
 4.  데이터베이스를 빌드하고 배포합니다.  
   
 ## <a name="resolving-translations"></a>번역 확인  
- 클라이언트 응용 프로그램에서 로캘 ID를 요청하는 경우, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 및 메타데이터를 가장 일치하는 LCID로 확인하고자 시도합니다. 클라이언트 응용 프로그램이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
+ 클라이언트 애플리케이션에서 로캘 ID를 요청하는 경우, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 및 메타데이터를 가장 일치하는 LCID로 확인하고자 시도합니다. 클라이언트 애플리케이션이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 다차원에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   

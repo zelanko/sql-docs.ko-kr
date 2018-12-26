@@ -249,7 +249,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>JDBC Driver 6.4, 6.0, 4.2 및 4.1 애플리케이션에서 Itanium이 지원되지 않음
 
-SQL Server 응용 프로그램용 Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1은 Itanium 컴퓨터에서 실행할 수 없습니다.
+SQL Server 애플리케이션용 Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1은 Itanium 컴퓨터에서 실행할 수 없습니다.
 
 ## <a name="see-also"></a>관련 항목:
 

@@ -93,20 +93,20 @@ ms.locfileid: "52403149"
 |**Reports Executed/Sec**|초당 성공적으로 생성된 보고서 수입니다.|  
 |**Requests/Sec**|보고서 서버 서비스가 초당 성공적으로 처리한 총 요청 수입니다.|  
 |**Snapshot Updates/Sec**|초당 총 보고서 실행 스냅숏 업데이트 수입니다.|  
-|**Total App Domain Recycles**|보고서 서버 Windows 서비스 시작 이후 응용 프로그램 도메인의 총 재활용 횟수입니다.|  
-|**Total Cache Flushes**|서비스 시작 이후 보고서 서버 캐시의 총 업데이트 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Flushes/Sec**를 참조하세요.|  
-|**Total Cache Hits**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 보고서에 대한 총 요청 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
-|**Total Cache Hits (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 모델에 대한 총 요청 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
-|**Total Cache Misses**|보고서 서버 Windows 서비스 시작 이후 캐시에서 보고서를 반환하지 못한 총 횟수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Misses/Sec**를 참조하세요.|  
-|**Total Cache Misses (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 모델을 반환하지 못한 총 횟수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Deliveries**|모든 배달 확장 프로그램의 일정 예약 및 배달 프로세서를 통해 배달한 총 보고서 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Events**|보고서 서버 Windows 서비스 시작 이후 이벤트의 총 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Memory Cache Hits**|보고서 서버 Windows 서비스 시작 이후 메모리 내 캐시에서 반환된 캐시된 보고서의 총 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Memory Cache Misses**|서비스 시작 이후 메모리 내 캐시에 대한 총 캐시 누락 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total App Domain Recycles**|보고서 서버 Windows 서비스 시작 이후 애플리케이션 도메인의 총 재활용 횟수입니다.|  
+|**Total Cache Flushes**|서비스 시작 이후 보고서 서버 캐시의 총 업데이트 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Flushes/Sec**를 참조하세요.|  
+|**Total Cache Hits**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 보고서에 대한 총 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
+|**Total Cache Hits (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 모델에 대한 총 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
+|**Total Cache Misses**|보고서 서버 Windows 서비스 시작 이후 캐시에서 보고서를 반환하지 못한 총 횟수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Misses/Sec**를 참조하세요.|  
+|**Total Cache Misses (Semantic Models)**|보고서 서버 Windows 서비스 시작 이후 캐시에서 모델을 반환하지 못한 총 횟수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total Deliveries**|모든 배달 확장 프로그램의 일정 예약 및 배달 프로세서를 통해 배달한 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total Events**|보고서 서버 Windows 서비스 시작 이후 이벤트의 총 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total Memory Cache Hits**|보고서 서버 Windows 서비스 시작 이후 메모리 내 캐시에서 반환된 캐시된 보고서의 총 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total Memory Cache Misses**|서비스 시작 이후 메모리 내 캐시에 대한 총 캐시 누락 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Processing Failures**|보고서 서버 Windows 서비스의 요청 처리 오류 수입니다.|  
 |**Total Rejected Threads**|비동기 처리에 대해 거부되고 나중에 동일한 스레드에서 동기 프로세스로 처리된 총 스레드 수입니다. 보통 또는 과도한 로드 상태에서 이 카운터는 계속 증가합니다.|  
 |**Total Reports Executed**|실행된 총 보고서 수입니다.|  
-|**Total Requests**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 응용 프로그램 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
+|**Total Requests**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
 |**Total Snapshot Updates**|보고서 실행 스냅숏에 대한 총 업데이트 수입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  

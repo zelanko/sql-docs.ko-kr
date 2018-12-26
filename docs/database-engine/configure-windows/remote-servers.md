@@ -26,7 +26,7 @@ ms.locfileid: "52537921"
 ---
 # <a name="remote-servers"></a>원격 서버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 응용 프로그램은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 애플리케이션은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
   
  원격 서버를 구성하면 별도의 연결을 설정하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결된 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 인스턴스에서 저장 프로시저를 실행할 수 있습니다. 대신 클라이언트가 연결된 서버는 클라이언트 요청을 수락하고 해당 클라이언트를 대신해서 원격 서버에 요청을 전송합니다. 원격 서버는 요청을 처리하고 원래 서버에 결과를 보냅니다. 원래 서버는 클라이언트에 다시 결과를 전송합니다. 원격 서버 구성을 설정할 때는 보안을 설정하는 방법도 고려해야 합니다.  
   

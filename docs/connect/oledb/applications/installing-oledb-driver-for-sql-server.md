@@ -48,7 +48,7 @@ Msoledbsql.msi 통해 SQL Server 용 OLE DB 드라이버를 배포할 수 있습
   
 X64 msoledbsql.msi도 SQL Server 용 OLE DB 드라이버의 32 비트 버전을 설치 합니다. 응용 프로그램에 개발 된 것 이외의 플랫폼을 대상으로 하는 경우에 x64 및 x86 msoledbsql.msi의 버전을 다운로드할 수 있습니다.
 
-msoledbsql.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 SQL Server용 OLE DB 드라이버를 사용하여 개발된 응용 프로그램을 실행하는 데 필요한 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+msoledbsql.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 SQL Server용 OLE DB 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
@@ -60,7 +60,7 @@ msoledbsql.msi를 호출하면 클라이언트 구성 요소만 기본적으로 
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
 
-APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsoft 설치 관리자를 사용하여 응용 프로그램 설치 프로그램 번들을 작성할 때 만들어야 합니다.
+APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsoft 설치 관리자를 사용하여 애플리케이션 설치 프로그램 번들을 작성할 때 만들어야 합니다.
 APPGUID 옵션을 관리자 권한 명령 프롬프트에서 설치 관리자를 실행 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목  

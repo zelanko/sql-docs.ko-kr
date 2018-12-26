@@ -25,7 +25,7 @@ ms.locfileid: "51558530"
 합니다 **sql** 섹션 클라이언트 명령 문자열을 대체 하는 새 SQL 문자열을 포함할 수 있습니다. 섹션에서 SQL 문자열이 없을 경우 섹션 무시 됩니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  새 SQL 문자열을 사용할 수 있습니다 *매개 변수가 있는*합니다. 매개 변수 즉,는 **sql** SQL 문자열 섹션 (지정 된는 '?' 문자) 해당 인수에 대체 될 수 있습니다는 *식별자* 클라이언트 명령 문자열에 (지정 된을 쉼표로 구분 된 목록을 괄호 안에 있음)입니다. 식별자와 인수 목록은 함수 호출 처럼 동작합니다.  
   

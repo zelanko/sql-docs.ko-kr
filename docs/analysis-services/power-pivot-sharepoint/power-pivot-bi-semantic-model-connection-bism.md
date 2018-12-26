@@ -36,13 +36,13 @@ ms.locfileid: "34024430"
  데이터 원본을 비교한 내용은 커뮤니티 콘텐츠 [SQL Server 2012 BISM(BI 의미 체계 모델) 이해](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)를 참조하세요.  
   
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI 의미 체계 연결에 대한 연결 시퀀스 이해  
- 이 섹션에서는 Excel 데스크톱 응용 프로그램이나 SharePoint의 파워 뷰 보고 클라이언트와 같은 다양한 클라이언트 응용 프로그램과, SharePoint 팜 내부 또는 외부의 테이블 형식 모델 데이터베이스 간의 연결 동작을 설명합니다.  
+ 이 섹션에서는 Excel 데스크톱 애플리케이션이나 SharePoint의 파워 뷰 보고 클라이언트와 같은 다양한 클라이언트 애플리케이션과, SharePoint 팜 내부 또는 외부의 테이블 형식 모델 데이터베이스 간의 연결 동작을 설명합니다.  
   
  테이블 형식 모델 데이터베이스로의 모든 연결은 데이터를 요청하는 사용자의 자격 증명을 사용하여 이루어집니다. 하지만 해당 연결의 메커니즘은 연결이 팜 내 연결인지 단일 홉 또는 이중 홉 연결인지 그리고 Kerberos를 사용할 수 있는지 여부에 따라 다릅니다. SharePoint와 백 엔드 데이터 원본 간의 인증된 연결에 대한 자세한 내용은 [이중 홉 인증: NTLM은 실패하고 Kerberos는 작동하는 이유](http://go.microsoft.com/fwlink/?LinkId=237137)를 참조하세요.  
   
  **Excel에서 네트워크의 테이블 형식 데이터에 연결**  
   
- Excel 사용자가 BI 의미 체계 모델 연결을 데이터 원본으로 지정하면, .bism 파일 내부의 연결 정보가 클라이언트 응용 프로그램에 다운로드된 다음 Analysis Services의 테이블 형식 모델 데이터베이스로 직접 요청이 보내집니다. .bism 연결에 액세스하려면 Excel 사용자가 .bism 연결 파일에 대해 읽기 권한이 있는 SharePoint 사용자여야 합니다. 연결 정보가 다운로드되면 모든 후속 연결은 SharePoint를 무시하고 Excel에서 백 엔드 테이블 형식 모델 데이터베이스로 직접 이루어집니다.  
+ Excel 사용자가 BI 의미 체계 모델 연결을 데이터 원본으로 지정하면, .bism 파일 내부의 연결 정보가 클라이언트 애플리케이션에 다운로드된 다음 Analysis Services의 테이블 형식 모델 데이터베이스로 직접 요청이 보내집니다. .bism 연결에 액세스하려면 Excel 사용자가 .bism 연결 파일에 대해 읽기 권한이 있는 SharePoint 사용자여야 합니다. 연결 정보가 다운로드되면 모든 후속 연결은 SharePoint를 무시하고 Excel에서 백 엔드 테이블 형식 모델 데이터베이스로 직접 이루어집니다.  
   
  다음 그림은 이 연결 시퀀스를 보여 줍니다. 연결 시퀀스는 .bism 연결에 대한 요청으로 시작 한 후 클라이언트에 연결 정보가 다운로드되고 마지막으로 데이터베이스에 단일 홉으로 연결됩니다. 이 연결은 Analysis Services 데이터베이스에 대해 읽기 권한이 있는 Excel 사용자의 Windows 자격 증명을 사용하여 이루어집니다. 이 연결은 단일 홉 연결이므로 Kerberos를 사용하더라도 이 시나리오에서는 필요하지 않습니다.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34024430"
   
  Analysis Services 인스턴스의 시스템 관리자 역할 중 한 멤버만이 **effectiveusername** 매개 변수를 사용하여 연결할 권한을 가지며 서버 인스턴스의 또 다른 사용자를 가장합니다. 따라서 Reporting Services 공유 서비스의 실행 계정은 Analysis Services 인스턴스에 대한 관리 권한을 가져야 합니다.  서비스 계정에 관리 권한을 부여하는 방법에 대한 자세한 내용은 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목을 참조하세요.  
   
- 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services에 대한 마지막 연결에서 연결은 Reporting Services 서비스 응용 프로그램 ID를 통해 이루어지며 **effectiveusername**를 사용하여 Windows 사용자 ID가 전달됩니다.  
+ 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services에 대한 마지막 연결에서 연결은 Reporting Services 서비스 애플리케이션 ID를 통해 이루어지며 **effectiveusername**를 사용하여 Windows 사용자 ID가 전달됩니다.  
   
  ![테이블 형식 데이터베이스에 대 한 가장 된 연결](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "테이블 형식 데이터베이스에 대 한 가장 된 연결")  
   
  **파워 뷰에서 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 연결**  
   
- SharePoint 사용자가 동일한 팜에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 확인되는 BI 의미 체계 연결을 클릭하면 연결이 SharePoint 환경의 컨텍스트 내에서 이루어집니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 연결 요청을 처리하여 동일한 컴퓨터의 Analysis Services 인스턴스로 전달합니다. Analysis Services 인스턴스는 통합 문서에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 추출하여 로드합니다. 모든 후속 연결은 팜에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 의해 관리됩니다.  
+ SharePoint 사용자가 동일한 팜에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 확인되는 BI 의미 체계 연결을 클릭하면 연결이 SharePoint 환경의 컨텍스트 내에서 이루어집니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 연결 요청을 처리하여 동일한 컴퓨터의 Analysis Services 인스턴스로 전달합니다. Analysis Services 인스턴스는 통합 문서에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 추출하여 로드합니다. 모든 후속 연결은 팜에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 의해 관리됩니다.  
   
  이 시나리오에서는 모든 연결이 동일한 팜 내에서 이루어지므로 Kerberos나 제한 위임에 대한 요구 사항이 없습니다.  
   

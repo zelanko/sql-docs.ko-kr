@@ -18,7 +18,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 16808a0bfa3956c19a0e472e778d37308b993462
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48092321"
@@ -120,7 +120,7 @@ ms.locfileid: "48092321"
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
 ## <a name="overview-of-migration-scenarios"></a>마이그레이션 시나리오 개요  
- 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 경우 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 보고서 서버 프로그램 파일, 데이터베이스 및 모든 응용 프로그램 데이터를 업그레이드할 수 있습니다.  
+ 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 경우 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 보고서 서버 프로그램 파일, 데이터베이스 및 모든 애플리케이션 데이터를 업그레이드할 수 있습니다.  
   
  그러나 다음과 같은 조건에 해당하는 경우 보고서 서버 설치를 수동으로 **마이그레이션** 해야 합니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48092321"
   
 -   **SharePoint 2013:** SharePoint 2013은 SharePoint 2010에서의 전체 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다. 동작은 전체 업그레이드 및 데이터베이스 연결 업그레이드의 두 가지 기본 업그레이드 방법 중 고객이 선택할 수 있는 SharePoint 2010으로 업그레이드와 다릅니다.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 받는 사람 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **시작 환경:** SQL Server 2008 R2, SharePoint 2010  
@@ -268,7 +268,7 @@ ms.locfileid: "48092321"
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
 ##  <a name="bkmk_migration_considerations"></a> 마이그레이션 고려 사항  
- 응용 프로그램 데이터를 이동할 때는 다음과 같은 고려 사항 및 제한 사항에 대해 알고 있어야 합니다.  
+ 애플리케이션 데이터를 이동할 때는 다음과 같은 고려 사항 및 제한 사항에 대해 알고 있어야 합니다.  
   
 -   암호화 키 보호에는 컴퓨터 ID를 통합하는 해시가 포함됩니다.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "48092321"
 ### <a name="fixed-database-name"></a>고정 데이터베이스 이름  
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버 주 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
   
- 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 원하는 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 응용 프로그램 데이터를 로드해야 합니다.  
+ 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 원하는 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 애플리케이션 데이터를 로드해야 합니다.  
   
 -   보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 작성합니다. RS.exe 유틸리티를 사용하여 이 스크립트를 실행할 수 있습니다. 이 접근 방법은 [Reporting Services를 사용한 스크립팅 및 PowerShell](../tools/scripting-and-powershell-with-reporting-services.md)을 참조하세요.  
   

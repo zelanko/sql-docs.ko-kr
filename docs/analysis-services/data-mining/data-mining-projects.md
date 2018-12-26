@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e7a4ea87642ba31693eeea6ea17bedb14c20a24
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34018960"
@@ -66,7 +66,7 @@ ms.locfileid: "34018960"
   
 6.  모델을 탐색하고 테스트하고 다시 작성합니다.  
   
- 프로젝트가 완료되면 사용자가 찾아보거나 쿼리하도록 프로젝트를 배포하거나 응용 프로그램의 마이닝 모델에 대한 프로그래밍 방식의 액세스를 제공하여 예측 및 분석을 지원할 수 있습니다.  
+ 프로젝트가 완료되면 사용자가 찾아보거나 쿼리하도록 프로젝트를 배포하거나 애플리케이션의 마이닝 모델에 대한 프로그래밍 방식의 액세스를 제공하여 예측 및 분석을 지원할 수 있습니다.  
   
   
 ##  <a name="bkmk_Objects"></a> 데이터 마이닝 프로젝트의 개체  
@@ -173,7 +173,7 @@ ms.locfileid: "34018960"
 ###  <a name="bkmk_ViewExplore"></a> View and Explore Models  
  모델을 만든 후에는 시각적 도구와 쿼리를 사용하여 모델에서 패턴을 탐색하고 기본 패턴 및 통계에 대한 자세한 정보를 확인할 수 있습니다. **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 뷰어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 탭에서는 각 마이닝 모델 유형에 대해 마이닝 모델을 탐색하는 데 사용할 수 있는 뷰어를 제공합니다.  
   
- 이러한 시각화 요소는 일시적이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 세션을 종료할 때 저장하지 않고 닫힙니다. 따라서 이러한 시각화 요소를 프레젠테이션이나 이후의 분석에 사용하기 위해 다른 응용 프로그램으로 내보내야 하는 경우 뷰어 인터페이스의 각 탭이나 창에 제공된 **복사** 명령을 사용합니다.  
+ 이러한 시각화 요소는 일시적이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 세션을 종료할 때 저장하지 않고 닫힙니다. 따라서 이러한 시각화 요소를 프레젠테이션이나 이후의 분석에 사용하기 위해 다른 애플리케이션으로 내보내야 하는 경우 뷰어 인터페이스의 각 탭이나 창에 제공된 **복사** 명령을 사용합니다.  
   
  Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](http://go.microsoft.com/fwlink/?LinkID=123146)을 참조하세요.  
   

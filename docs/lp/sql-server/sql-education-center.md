@@ -2,7 +2,7 @@
 layout: HubPage
 hide_bc: true
 title: Microsoft Azure 설명서
-description: Microsoft Azure cloud service를 사용하여 강력한 응용 프로그램을 빌드하고 관리하는 방법을 알아봅니다. 설명서, 예제 코드, 자습서 등을 가져옵니다.
+description: Microsoft Azure cloud service를 사용하여 강력한 애플리케이션을 빌드하고 관리하는 방법을 알아봅니다. 설명서, 예제 코드, 자습서 등을 가져옵니다.
 ms.topic: hub-page
 featureFlags:
 - clicktale
@@ -533,7 +533,7 @@ ms.locfileid: "51697951"
                                         </div>
                                         <div class="cardText">
                                             <h3>스레드 및 작업 아키텍처</h3>
-                                            <p>SQL에서 응용 프로그램 논리 및 실행 경로를 지정하는 데 도움이 되는 스레드 및 작업을 조작하는 방법을 설명합니다. </p>
+                                            <p>SQL에서 애플리케이션 논리 및 실행 경로를 지정하는 데 도움이 되는 스레드 및 작업을 조작하는 방법을 설명합니다. </p>
                                         </div>
                                     </div>
                                 </div>

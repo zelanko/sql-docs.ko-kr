@@ -223,7 +223,7 @@ ms.locfileid: "52392343"
   
  **Excel용 MDS 추가 기능에서 쿼리 파일 저장 또는 열기**  
   
- 엔터티 탐색기 페이지에서 **Excel** 을 클릭하여 바로 가기 쿼리 파일을 저장할 수 있습니다. 또는 Excel용 MDS 추가 기능에서 컴퓨터에 저장된 쿼리 파일을 열 수 있습니다. QueryOpener 응용 프로그램을 사용하여 저장된 파일을 열 수 있습니다. 자세한 내용은 [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)을 참조하세요.  
+ 엔터티 탐색기 페이지에서 **Excel** 을 클릭하여 바로 가기 쿼리 파일을 저장할 수 있습니다. 또는 Excel용 MDS 추가 기능에서 컴퓨터에 저장된 쿼리 파일을 열 수 있습니다. QueryOpener 애플리케이션을 사용하여 저장된 파일을 열 수 있습니다. 자세한 내용은 [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)을 참조하세요.  
   
  쿼리 파일에는 탐색기 페이지의 필터 및 계층 정보가 포함됩니다.  
    

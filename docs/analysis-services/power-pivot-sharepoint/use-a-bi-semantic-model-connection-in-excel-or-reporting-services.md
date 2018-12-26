@@ -21,7 +21,7 @@ ms.locfileid: "34035464"
   이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 만들지 않은 경우 [파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 및 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)를 참조하세요.  
   
 ##  <a name="bkmk_connect"></a> Excel에서 연결  
- Analysis Services 테이블 형식 모델 데이터를 사용하는 다른 비즈니스 응용 프로그램이나 Excel에서 BI 의미 체계 모델 연결을 데이터 원본으로 지정할 수 있습니다. 이 섹션에서는 Excel을 사용하여 BI 의미 체계 모델에 연결하는 두 가지 방법에 대해 설명합니다.  
+ Analysis Services 테이블 형식 모델 데이터를 사용하는 다른 비즈니스 애플리케이션이나 Excel에서 BI 의미 체계 모델 연결을 데이터 원본으로 지정할 수 있습니다. 이 섹션에서는 Excel을 사용하여 BI 의미 체계 모델에 연결하는 두 가지 방법에 대해 설명합니다.  
   
  Excel에서 BI 의미 체계 모델에 연결하려면 워크스테이션에 Excel 2010 및 MSOLAP.5 OLE DB Provider가 설치되어 있어야 합니다. 연결 요구 사항에 대한 추가 정보는 이 섹션에서 자세하게 제공합니다.  
   

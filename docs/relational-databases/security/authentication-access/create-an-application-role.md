@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 역할 만들기 | Microsoft 문서
+title: 애플리케이션 역할 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52539728"
 ---
-# <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
+# <a name="create-an-application-role"></a>애플리케이션 역할 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 애플리케이션 역할을 만드는 방법에 대해 설명합니다. 애플리케이션 역할은 특정 애플리케이션을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 애플리케이션 역할에 사용자가 없으므로 **애플리케이션 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
   
 > [!IMPORTANT]  
->  응용 프로그램 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 응용 프로그램 역할을 호출하는 응용 프로그램은 해당 암호를 저장해야 합니다. 응용 프로그램 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
+>  애플리케이션 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 애플리케이션 역할을 호출하는 애플리케이션은 해당 암호를 저장해야 합니다. 애플리케이션 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
   
  **항목 내용**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "52539728"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-##### <a name="to-create-an-application-role"></a>응용 프로그램 역할을 만들려면  
+##### <a name="to-create-an-application-role"></a>애플리케이션 역할을 만들려면  
   
-1.  개체 탐색기에서 응용 프로그램 역할을 만들 데이터베이스를 확장합니다.  
+1.  개체 탐색기에서 애플리케이션 역할을 만들 데이터베이스를 확장합니다.  
   
 2.  **보안** 폴더를 확장합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52539728"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-create-an-application-role"></a>응용 프로그램 역할을 만들려면  
+#### <a name="to-create-an-application-role"></a>애플리케이션 역할을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

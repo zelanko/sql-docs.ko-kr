@@ -21,7 +21,7 @@ ms.locfileid: "52537275"
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 항목에서는 SQL Server에 JSON 파일을 가져오는 방법을 설명합니다. 현재 많은 JSON 문서가 파일로 저장됩니다. JSON 파일의 응용 프로그램 로그 정보, JSON 파일에 저장된 센서 생성 정보 등을 예로 들 수 있습니다. 파일에 저장된 JSON 데이터를 읽고, 데이터를 SQL Server에 로드하여 분석할 수 있어야 합니다.
+이 항목에서는 SQL Server에 JSON 파일을 가져오는 방법을 설명합니다. 현재 많은 JSON 문서가 파일로 저장됩니다. JSON 파일의 애플리케이션 로그 정보, JSON 파일에 저장된 센서 생성 정보 등을 예로 들 수 있습니다. 파일에 저장된 JSON 데이터를 읽고, 데이터를 SQL Server에 로드하여 분석할 수 있어야 합니다.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>단일 열에 JSON 문서 가져오기
 **OPENROWSET(BULK)** 는 SQL Server에 해당 위치에 대한 읽기 권한이 있는 경우 로컬 드라이브 또는 네트워크에 있는 모든 파일에서 데이터를 읽을 수 있는 테이블 반환 함수입니다. 파일의 콘텐츠를 포함하는 단일 열로 된 테이블을 반환합니다. 구분 기호 등 OPENROWSET(BULK) 함수에서 사용할 수 있는 다양한 옵션이 있습니다. 하지만 가장 간단하게 파일의 전체 콘텐츠를 텍스트 값으로 로드할 수 있습니다. (이 단일 큰 값을 단일 문자 LOB(Large Object) 또는 SINGLE_CLOB이라고 합니다.) 

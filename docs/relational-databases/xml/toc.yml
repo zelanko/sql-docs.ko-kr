@@ -1,208 +1,215 @@
+items:
 - name: 개요
   href: xml-data-sql-server.md
 - name: XML 데이터 형식 및 열
   href: xml-data-type-and-columns-sql-server.md
   items:
-    - name: 형식화된 XML과 형식화되지 않은 XML 비교
-      href: compare-typed-xml-to-untyped-xml.md
-    - name: XML 데이터 인스턴스 만들기
-      href: create-instances-of-xml-data.md
-    - name: XML 데이터 형식 변수 및 열 만들기
-      href: create-xml-data-type-variables-and-columns.md
-    - name: 기존 열을 XML 열로 변경
-      href: change-existing-columns-to-xml-columns.md
-    - name: XML 데이터 로드
-      href: load-xml-data.md
-    - name: XML 열에서 뷰 만들기
-      href: create-views-over-xml-columns.md
-    - name: 계산 열에 XML 사용
-      href: use-xml-in-computed-columns.md
-    - name: XML 데이터 검색 및 쿼리
-      href: retrieve-and-query-xml-data.md
-    - name: WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
-      href: add-namespaces-to-queries-with-with-xmlnamespaces.md
-    - name: 계산 열을 사용하여 자주 사용되는 XML 값 승격
-      href: promote-frequently-used-xml-values-with-computed-columns.md
-    - name: XML 데이터 직렬화 정의
-      href: define-the-serialization-of-xml-data.md
-    - name: XML 열에 전체 텍스트 검색 사용
-      href: use-full-text-search-with-xml-columns.md
-    - name: XML 데이터에 비즈니스 논리 추가
-      href: add-business-logic-to-xml-data.md
-    - name: 응용 프로그램에서 XML 데이터 사용
-      href: use-xml-data-in-applications.md
+  - name: 형식화된 XML과 형식화되지 않은 XML 비교
+    href: compare-typed-xml-to-untyped-xml.md
+  - name: XML 데이터 인스턴스 만들기
+    href: create-instances-of-xml-data.md
+  - name: XML 데이터 형식 변수 및 열 만들기
+    href: create-xml-data-type-variables-and-columns.md
+  - name: 기존 열을 XML 열로 변경
+    href: change-existing-columns-to-xml-columns.md
+  - name: XML 데이터 로드
+    href: load-xml-data.md
+  - name: XML 열에서 뷰 만들기
+    href: create-views-over-xml-columns.md
+  - name: 계산 열에 XML 사용
+    href: use-xml-in-computed-columns.md
+  - name: XML 데이터 검색 및 쿼리
+    href: retrieve-and-query-xml-data.md
+  - name: WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
+    href: add-namespaces-to-queries-with-with-xmlnamespaces.md
+  - name: 계산 열을 사용하여 자주 사용되는 XML 값 승격
+    href: promote-frequently-used-xml-values-with-computed-columns.md
+  - name: XML 데이터 직렬화 정의
+    href: define-the-serialization-of-xml-data.md
+  - name: XML 열에 전체 텍스트 검색 사용
+    href: use-full-text-search-with-xml-columns.md
+  - name: XML 데이터에 비즈니스 논리 추가
+    href: add-business-logic-to-xml-data.md
+  - name: 애플리케이션에서 XML 데이터 사용
+    href: use-xml-data-in-applications.md
 - name: XML 인덱스
   href: xml-indexes-sql-server.md
   items:
-    - name: XML 인덱스 만들기
-      href: create-xml-indexes.md
-    - name: XML 인덱스 수정
-      href: modify-xml-indexes.md
-    - name: XML 인덱스 삭제
-      href: drop-xml-indexes.md
-    - name: SXI(선택적 XML 인덱스)
-      href: selective-xml-indexes-sxi.md
-    - name: 선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
-      href: specify-paths-and-optimization-hints-for-selective-xml-indexes.md
-    - name: '선택적 XML 인덱스 만들기, 변경 및 삭제'
-      href: create-alter-and-drop-selective-xml-indexes.md
-    - name: '보조 선택적 XML 인덱스 만들기, 변경 및 삭제'
-      href: create-alter-and-drop-secondary-selective-xml-indexes.md
+  - name: XML 인덱스 만들기
+    href: create-xml-indexes.md
+  - name: XML 인덱스 수정
+    href: modify-xml-indexes.md
+  - name: XML 인덱스 삭제
+    href: drop-xml-indexes.md
+  - name: SXI(선택적 XML 인덱스)
+    href: selective-xml-indexes-sxi.md
+  - name: 선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
+    href: specify-paths-and-optimization-hints-for-selective-xml-indexes.md
+  - name: 선택적 XML 인덱스 만들기, 변경 및 삭제
+    href: create-alter-and-drop-selective-xml-indexes.md
+  - name: 보조 선택적 XML 인덱스 만들기, 변경 및 삭제
+    href: create-alter-and-drop-secondary-selective-xml-indexes.md
 - name: XML 스키마 컬렉션
   href: xml-schema-collections-sql-server.md
   items:
-    - name: 기본 제공 XML 스키마 컬렉션 참조(sys)
-      href: reference-the-built-in-xml-schema-collection-sys.md
-    - name: 저장된 XML 스키마 컬렉션 보기
-      href: view-a-stored-xml-schema-collection.md
-    - name: XML 스키마 컬렉션에 대한 사용 권한 부여
-      href: grant-permissions-on-an-xml-schema-collection.md
-    - name: XML 스키마 컬렉션에 대한 사용 권한 취소
-      href: revoke-permissions-on-an-xml-schema-collection.md
-    - name: XML 스키마 컬렉션에 대한 사용 권한 거부
-      href: deny-permissions-on-an-xml-schema-collection.md
-    - name: 포함된 스키마를 병합하기 위해 스키마 전처리
-      href: preprocess-a-schema-to-merge-included-schemas.md
-    - name: 서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
-      href: requirements-and-limitations-for-xml-schema-collections-on-the-server.md
-      items:
-        - name: 정규 형식 및 패턴 제한 사항
-          href: canonical-forms-and-pattern-restrictions.md
-        - name: 와일드카드 구성 요소 및 콘텐츠 유효성 검사
-          href: wildcard-components-and-content-validation.md
-        - name: '<xsd:redefine> 요소'
-          href: the-xsd-redefine-element.md
-        - name: 'The xs:QName Type'
-          href: the-xs-qname-type.md
-        - name: '<xsd:simpleType> 선언의 값'
-          href: values-for-xsd-simpletype-declarations.md
-        - name: 열거 패싯
-          href: enumeration-facets.md
-        - name: 혼합 형식 및 단순 내용
-          href: mixed-type-and-simple-content.md
-        - name: 대형 XML 스키마 컬렉션 및 메모리 부족 상태
-          href: large-xml-schema-collections-and-out-of-memory-conditions.md
-        - name: 비결정적 콘텐츠 모델
-          href: non-deterministic-content-models.md
-        - name: UNIQUE PARTICLE ATTRIBUTION 제약 조건
-          href: unique-particle-attribution-constraint.md
+  - name: 기본 제공 XML 스키마 컬렉션 참조(sys)
+    href: reference-the-built-in-xml-schema-collection-sys.md
+  - name: 저장된 XML 스키마 컬렉션 보기
+    href: view-a-stored-xml-schema-collection.md
+  - name: XML 스키마 컬렉션에 대한 사용 권한 부여
+    href: grant-permissions-on-an-xml-schema-collection.md
+  - name: XML 스키마 컬렉션에 대한 사용 권한 취소
+    href: revoke-permissions-on-an-xml-schema-collection.md
+  - name: XML 스키마 컬렉션에 대한 사용 권한 거부
+    href: deny-permissions-on-an-xml-schema-collection.md
+  - name: 포함된 스키마를 병합하기 위해 스키마 전처리
+    href: preprocess-a-schema-to-merge-included-schemas.md
+  - name: 서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
+    href: requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+    items:
+    - name: 정규 형식 및 패턴 제한 사항
+      href: canonical-forms-and-pattern-restrictions.md
+    - name: 와일드카드 구성 요소 및 콘텐츠 유효성 검사
+      href: wildcard-components-and-content-validation.md
+    - name: <xsd:redefine> 요소
+      href: the-xsd-redefine-element.md
+    - name: The xs:QName Type
+      href: the-xs-qname-type.md
+    - name: <xsd:simpleType> 선언의 값
+      href: values-for-xsd-simpletype-declarations.md
+    - name: 열거 패싯
+      href: enumeration-facets.md
+    - name: 혼합 형식 및 단순 내용
+      href: mixed-type-and-simple-content.md
+    - name: 대형 XML 스키마 컬렉션 및 메모리 부족 상태
+      href: large-xml-schema-collections-and-out-of-memory-conditions.md
+    - name: 비결정적 콘텐츠 모델
+      href: non-deterministic-content-models.md
+    - name: UNIQUE PARTICLE ATTRIBUTION 제약 조건
+      href: unique-particle-attribution-constraint.md
 - name: FOR XML
   href: for-xml-sql-server.md
   items:
-    - name: FOR XML 절의 기본 구문
-      href: basic-syntax-of-the-for-xml-clause.md
-    - name: 잘못된 문자 및 이스케이프 규칙
-      href: invalid-characters-and-escape-rules.md
-    - name: FOR XML에서 RAW 모드 사용
-      href: use-raw-mode-with-for-xml.md
-      items:
-        - name: '예제: 제품 모델 정보를 XML로 검색'
-          href: example-retrieving-product-model-information-as-xml.md
-        - name: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정'
-          href: example-specifying-xsinil-with-the-elements-directive.md
-        - name: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
-          href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-        - name: '예제: 이진 데이터 검색'
-          href: example-retrieving-binary-data.md
-        - name: '예제: <row> 요소 이름 바꾸기'
-          href: example-renaming-the-row-element.md
-        - name: '예제: FOR XML로 생성된 XML에 대한 루트 요소 지정'
-          href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-        - name: '예: XMLType 열 쿼리'
-          href: example-querying-xmltype-columns.md
-    - name: FOR XML에서 AUTO 모드 사용
-      href: use-auto-mode-with-for-xml.md
-      items:
-        - name: BINARY BASE64 옵션 사용
-          href: use-the-binary-base64-option.md
-        - name: 반환된 XML 모양 지정에서 AUTO 모드 추론
-          href: auto-mode-heuristics-in-shaping-returned-xml.md
-        - name: '예제: AUTO 모드 사용'
-          href: examples-using-auto-mode.md
-    - name: FOR XML에서 EXPLICIT 모드 사용
-      href: use-explicit-mode-with-for-xml.md
-      items:
-        - name: '예제: 직원 정보 검색'
-          href: example-retrieving-employee-information.md
-        - name: '예제: ELEMENT 지시어 지정'
-          href: example-specifying-the-element-directive.md
-        - name: '예제: ELEMENTXSINIL 지시어 지정'
-          href: example-specifying-the-elementxsinil-directive.md
-        - name: '예: EXPLICIT 모드를 사용하여 형제 생성'
-          href: example-constructing-siblings-with-explicit-mode.md
-        - name: '예제: ID 및 IDREF 지시어 지정'
-          href: example-specifying-the-id-and-idref-directives.md
-        - name: '예제: ID 및 IDREFS 지시어 지정'
-          href: example-specifying-the-id-and-idrefs-directives.md
-        - name: '예제: HIDE 지시어 지정'
-          href: example-specifying-the-hide-directive.md
-        - name: '예제: ELEMENT 지시어 및 엔터티 인코딩 지정'
-          href: example-specifying-the-element-directive-and-entity-encoding.md
-        - name: '예제: CDATA 지시어 지정'
-          href: example-specifying-the-cdata-directive.md
-        - name: '예: XMLTEXT 지시어 지정'
-          href: example-specifying-the-xmltext-directive.md
-    - name: FOR XML에서 PATH 모드 사용
-      href: use-path-mode-with-for-xml.md
-      items:
-        - name: 이름이 없는 열
-          href: columns-without-a-name.md
-        - name: 이름이 있는 열
-          href: columns-with-a-name.md
-        - name: 이름이 와일드카드 문자로 지정된 열
-          href: columns-with-a-name-specified-as-a-wildcard-character.md
-        - name: 이름이 XPath 노드 테스트인 열
-          href: columns-with-the-name-of-an-xpath-node-test.md
-        - name: 경로가 data()로 지정된 열 이름
-          href: column-names-with-the-path-specified-as-data.md
-        - name: 기본적으로 Null 값을 포함하는 열
-          href: columns-that-contain-a-null-value-by-default.md
-        - name: PATH 모드에서의 네임스페이스 지원
-          href: namespace-support-in-path-mode.md
-        - name: '예제: PATH 모드 사용'
-          href: examples-using-path-mode.md
-    - name: FOR XML 쿼리의 TYPE 지시어
-      href: type-directive-in-for-xml-queries.md
-    - name: 행 집합으로부터 XML을 생성하기 위해 FOR XML 사용
-      href: generate-xml-from-rowsets-with-for-xml.md
-    - name: 응용 프로그램 코드에서 FOR XML 결과 사용
-      href: use-for-xml-results-in-application-code.md
-    - name: 중첩 FOR XML 쿼리 사용
-      href: use-nested-for-xml-queries.md
-      items:
-        - name: FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
-          href: for-xml-query-compared-to-nested-for-xml-query.md
-        - name: 중첩 AUTO 모드 쿼리를 사용하여 형제 생성
-          href: generate-siblings-with-a-nested-auto-mode-query.md
-        - name: ASP.NET에서 중첩 FOR XML 쿼리 사용
-          href: use-nested-for-xml-queries-in-asp-net.md
-        - name: 중첩 FOR XML 쿼리로 XML 구체화
-          href: shape-xml-with-nested-for-xml-queries.md
-    - name: XSINIL 매개 변수를 사용하여 NULL 값 요소 생성
-      href: generate-elements-for-null-values-with-the-xsinil-parameter.md
-    - name: 다양한 SQL Server 데이터 형식에 대한 FOR XML 지원
-      href: for-xml-support-for-various-sql-server-data-types.md
-      items:
-        - name: xml 데이터 형식에 대한 FOR XML 지원
-          href: for-xml-support-for-the-xml-data-type.md
-        - name: 사용자 정의 데이터 형식(UDT)에 대한 FOR XML 지원
-          href: for-xml-support-for-the-user-defined-data-types-udt.md
-        - name: 문자열 데이터 형식에 대한 FOR XML 지원
-          href: for-xml-support-for-string-data-types.md
-        - name: timestamp 데이터 형식에 대한 FOR XML 지원
-          href: for-xml-support-for-the-timestamp-data-type.md
-    - name: 인라인 XSD 스키마 생성
-      href: generate-an-inline-xsd-schema.md
-    - name: 인라인 XDR 스키마 생성
-      href: generate-an-inline-xdr-schema.md
+  - name: FOR XML 절의 기본 구문
+    href: basic-syntax-of-the-for-xml-clause.md
+  - name: 잘못된 문자 및 이스케이프 규칙
+    href: invalid-characters-and-escape-rules.md
+  - name: FOR XML에서 RAW 모드 사용
+    href: use-raw-mode-with-for-xml.md
+    items:
+    - name: '예제: 제품 모델 정보를 XML로 검색'
+      href: example-retrieving-product-model-information-as-xml.md
+    - name: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정'
+      href: example-specifying-xsinil-with-the-elements-directive.md
+    - name: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
+      href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
+    - name: '예제: 이진 데이터 검색'
+      href: example-retrieving-binary-data.md
+    - name: '예제: <row> 요소 이름 바꾸기'
+      href: example-renaming-the-row-element.md
+    - name: '예제: FOR XML로 생성된 XML에 대한 루트 요소 지정'
+      href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
+    - name: '예: XMLType 열 쿼리'
+      href: example-querying-xmltype-columns.md
+  - name: FOR XML에서 AUTO 모드 사용
+    href: use-auto-mode-with-for-xml.md
+    items:
+    - name: BINARY BASE64 옵션 사용
+      href: use-the-binary-base64-option.md
+    - name: 반환된 XML 모양 지정에서 AUTO 모드 추론
+      href: auto-mode-heuristics-in-shaping-returned-xml.md
+    - name: '예제: AUTO 모드 사용'
+      href: examples-using-auto-mode.md
+  - name: FOR XML에서 EXPLICIT 모드 사용
+    href: use-explicit-mode-with-for-xml.md
+    items:
+    - name: '예제: 직원 정보 검색'
+      href: example-retrieving-employee-information.md
+    - name: '예제: ELEMENT 지시어 지정'
+      href: example-specifying-the-element-directive.md
+    - name: '예제: ELEMENTXSINIL 지시어 지정'
+      href: example-specifying-the-elementxsinil-directive.md
+    - name: '예: EXPLICIT 모드를 사용하여 형제 생성'
+      href: example-constructing-siblings-with-explicit-mode.md
+    - name: '예제: ID 및 IDREF 지시어 지정'
+      href: example-specifying-the-id-and-idref-directives.md
+    - name: '예제: ID 및 IDREFS 지시어 지정'
+      href: example-specifying-the-id-and-idrefs-directives.md
+    - name: '예제: HIDE 지시어 지정'
+      href: example-specifying-the-hide-directive.md
+    - name: '예제: ELEMENT 지시어 및 엔터티 인코딩 지정'
+      href: example-specifying-the-element-directive-and-entity-encoding.md
+    - name: '예제: CDATA 지시어 지정'
+      href: example-specifying-the-cdata-directive.md
+    - name: '예: XMLTEXT 지시어 지정'
+      href: example-specifying-the-xmltext-directive.md
+  - name: FOR XML에서 PATH 모드 사용
+    href: use-path-mode-with-for-xml.md
+    items:
+    - name: 이름이 없는 열
+      href: columns-without-a-name.md
+    - name: 이름이 있는 열
+      href: columns-with-a-name.md
+    - name: 이름이 와일드카드 문자로 지정된 열
+      href: columns-with-a-name-specified-as-a-wildcard-character.md
+    - name: 이름이 XPath 노드 테스트인 열
+      href: columns-with-the-name-of-an-xpath-node-test.md
+    - name: 경로가 data()로 지정된 열 이름
+      href: column-names-with-the-path-specified-as-data.md
+    - name: 기본적으로 Null 값을 포함하는 열
+      href: columns-that-contain-a-null-value-by-default.md
+    - name: PATH 모드에서의 네임스페이스 지원
+      href: namespace-support-in-path-mode.md
+    - name: '예제: PATH 모드 사용'
+      href: examples-using-path-mode.md
+  - name: FOR XML 쿼리의 TYPE 지시어
+    href: type-directive-in-for-xml-queries.md
+  - name: 행 집합으로부터 XML을 생성하기 위해 FOR XML 사용
+    href: generate-xml-from-rowsets-with-for-xml.md
+  - name: 애플리케이션 코드에서 FOR XML 결과 사용
+    href: use-for-xml-results-in-application-code.md
+  - name: 중첩 FOR XML 쿼리 사용
+    href: use-nested-for-xml-queries.md
+    items:
+    - name: FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
+      href: for-xml-query-compared-to-nested-for-xml-query.md
+    - name: 중첩 AUTO 모드 쿼리를 사용하여 형제 생성
+      href: generate-siblings-with-a-nested-auto-mode-query.md
+    - name: ASP.NET에서 중첩 FOR XML 쿼리 사용
+      href: use-nested-for-xml-queries-in-asp-net.md
+    - name: 중첩 FOR XML 쿼리로 XML 구체화
+      href: shape-xml-with-nested-for-xml-queries.md
+  - name: XSINIL 매개 변수를 사용하여 NULL 값 요소 생성
+    href: generate-elements-for-null-values-with-the-xsinil-parameter.md
+  - name: 다양한 SQL Server 데이터 형식에 대한 FOR XML 지원
+    href: for-xml-support-for-various-sql-server-data-types.md
+    items:
+    - name: xml 데이터 형식에 대한 FOR XML 지원
+      href: for-xml-support-for-the-xml-data-type.md
+    - name: 사용자 정의 데이터 형식(UDT)에 대한 FOR XML 지원
+      href: for-xml-support-for-the-user-defined-data-types-udt.md
+    - name: 문자열 데이터 형식에 대한 FOR XML 지원
+      href: for-xml-support-for-string-data-types.md
+    - name: timestamp 데이터 형식에 대한 FOR XML 지원
+      href: for-xml-support-for-the-timestamp-data-type.md
+  - name: 인라인 XSD 스키마 생성
+    href: generate-an-inline-xsd-schema.md
+  - name: 인라인 XDR 스키마 생성
+    href: generate-an-inline-xdr-schema.md
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: '예제: OPENXML 사용'
-      href: examples-using-openxml.md
-    - name: OPENXML에 메타 속성 지정
-      href: specify-metaproperties-in-openxml.md
-    - name: XML 시스템 저장 프로시저
-      href: xml-system-stored-procedures.md
-    - name: OPENXML에서 value() 및 nodes() 사용
-      href: use-the-value-and-nodes-methods-with-openxml.md
+  - name: '예제: OPENXML 사용'
+    href: examples-using-openxml.md
+  - name: OPENXML에 메타 속성 지정
+    href: specify-metaproperties-in-openxml.md
+  - name: XML 시스템 저장 프로시저
+    href: xml-system-stored-procedures.md
+  - name: OPENXML에서 value() 및 nodes() 사용
+    href: use-the-value-and-nodes-methods-with-openxml.md
+ms.openlocfilehash: c9321282bf87a333fb1f3ef465b055ffbea62653
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39314648"

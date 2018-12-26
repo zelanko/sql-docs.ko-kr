@@ -21,13 +21,13 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4e8026d5611b2f48ff622dd0b45e21a5f2c9c13
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51018908"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 응용 프로그램 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 애플리케이션 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  
   
  다음 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름 변경 작업에 사용할 수 없습니다. 이 단계는 인스턴스 이름에서 컴퓨터 이름에 해당하는 부분을 변경하는 경우에만 사용할 수 있습니다. 예를 들어 Instance1이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 MB1이라는 컴퓨터의 이름을 다른 이름(예: MB2)으로 변경할 수 있습니다. 그러나 이름에서 인스턴스에 해당하는 Instance1은 변경되지 않고 유지됩니다. 이 예제의 경우 \\\\*ComputerName*\\*InstanceName* 은 \\\MB1\Instance1에서 \\\MB2\Instance1로 변경됩니다.  
   

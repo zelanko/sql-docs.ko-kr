@@ -46,7 +46,7 @@ ms.locfileid: "50029052"
 -   보고서 실행이 기록되어 성능 및 감사 정보를 제공할 수 있습니다.  
   
 ##  <a name="ExportingAndSavingReports"></a> 보고서 내보내기 및 저장  
- 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 응용 프로그램으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서를 내보내는 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [파일 또는 보고서 업로드](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
+ 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 애플리케이션으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서를 내보내는 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [파일 또는 보고서 업로드](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
   
 ##  <a name="UsingFileShareDelivery"></a> 파일 공유 배달 사용  
  보관할 보고서가 많으면 보고서를 파일 시스템으로 직접 배달하는 구독을 만듭니다. 이 방식을 사용하려면 각 보고서에 대한 구독을 만들고 보고서를 저장할 공유 폴더를 선택하고 파일 작성 시간을 결정하는 일정을 정의해야 합니다. 구독을 정의하면 보고서 서버는 무인 모드에서 보고서를 실행하고 제공한 일정에 따라 보고서 파일을 보관 위치에 추가할 수 있습니다. 또한 일회 일정을 만들어 필요한 경우에만 보고서를 보관할 수 있습니다. 구독 및 파일 공유 배달에 대한 자세한 내용은 [Reporting Services의 파일 공유 배달](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  

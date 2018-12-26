@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6d2b264ca7f6910e3d652d560b276e4056fdc66
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34018720"
@@ -113,7 +113,7 @@ ms.locfileid: "34018720"
   
  **데이터 새로 고침 중에 자동 업그레이드를 구성하는 방법**  
   
- 자동 업그레이드를 사용하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구에서 **서버에서 데이터 새로 고침을 사용하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 자동 업그레이드** 확인란을 선택해야 합니다. 도구 내에서 확인란은 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 시스템 서비스 업그레이드** 페이지와 새 설치를 구성하는 경우 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기** 페이지에 있습니다.  
+ 자동 업그레이드를 사용하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구에서 **서버에서 데이터 새로 고침을 사용하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 자동 업그레이드** 확인란을 선택해야 합니다. 도구 내에서 확인란은 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 시스템 서비스 업그레이드** 페이지와 새 설치를 구성하는 경우 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 애플리케이션 만들기** 페이지에 있습니다.  
   
  다음 cmdlet을 실행하여 자동 업그레이드가 설정되어 있는지 확인할 수 있습니다.  
   

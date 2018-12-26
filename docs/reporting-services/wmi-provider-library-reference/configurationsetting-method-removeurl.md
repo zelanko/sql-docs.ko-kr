@@ -35,7 +35,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
 ## <a name="parameters"></a>매개 변수  
  *응용 프로그램*  
- 예약을 제거할 응용 프로그램의 이름입니다.  
+ 예약을 제거할 애플리케이션의 이름입니다.  
   
  *URLString*  
  예약에 대한 URL입니다.  

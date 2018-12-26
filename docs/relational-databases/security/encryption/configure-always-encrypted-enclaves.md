@@ -65,7 +65,7 @@ Windows HGS(호스트 보호 서비스)는 SQL Server와 동일한 컴퓨터가 
 
 ### <a name="determine-your-attestation-service-url"></a>증명 서비스 URL 확인
 
-증명 서비스 URL을 확인하려면 다음과 같이 도구 및 응용 프로그램을 구성해야 합니다.
+증명 서비스 URL을 확인하려면 다음과 같이 도구 및 애플리케이션을 구성해야 합니다.
 
 1. 관리자 권한으로 SQL Server 컴퓨터에 로그온합니다.
 2. 관리자 권한으로 PowerShell을 실행합니다.
@@ -85,7 +85,7 @@ Windows HGS(호스트 보호 서비스)는 SQL Server와 동일한 컴퓨터가 
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 패키지](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), 버전 2.2.0 이상
 7. [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet 패키지](https://www.nuget.org/packages?q=Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders)
 
-NuGet 패키지는 보안 Enclave에서 Always Encrypted를 사용하여 응용 프로그램을 개발하기 위해 Visual Studio 프로젝트에서 사용하도록 고안되었습니다. 첫 번째 패키지는 Azure Key Vault에 열 마스터 키를 저장하는 경우에만 필요합니다. 자세한 내용은 [응용 프로그램 개발](#develop-applications-issuing-rich-queries-in-visual-studio)을 참조하세요.
+NuGet 패키지는 보안 Enclave에서 Always Encrypted를 사용하여 애플리케이션을 개발하기 위해 Visual Studio 프로젝트에서 사용하도록 고안되었습니다. 첫 번째 패키지는 Azure Key Vault에 열 마스터 키를 저장하는 경우에만 필요합니다. 자세한 내용은 [애플리케이션 개발](#develop-applications-issuing-rich-queries-in-visual-studio)을 참조하세요.
 
 ### <a name="configure-a-secure-enclave"></a>보안 Enclave 구성
 
@@ -529,7 +529,7 @@ Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설
 - 장점 - 이 방법에는 다음이 적용됩니다.
   - 하나의 열 또는 소규모 열 하위 집합에 대해 Enclave 기능을 선택적으로 사용하도록 설정할 수 있습니다.
   - 명확하게 암호화된 열의 리치 계산을 한 단계로 사용하도록 설정할 수 있습니다.
-  - 새 열 마스터 키를 만들 필요가 없으므로 응용 프로그램에 미치는 영향이 좀 더 미미합니다.
+  - 새 열 마스터 키를 만들 필요가 없으므로 애플리케이션에 미치는 영향이 좀 더 미미합니다.
   
 - 단점:
   - 다시 암호화하기 위해 열을 포함하는 테이블의 전체 내용을 데이터베이스 외부로 이동해야 하므로 소규모 테이블에만 권장됩니다. 
@@ -810,11 +810,11 @@ GO;
 ```
 
 
-## <a name="develop-applications-issuing-rich-queries-in-visual-studio"></a>Visual Studio에서 리치 쿼리를 실행하는 응용 프로그램 개발
+## <a name="develop-applications-issuing-rich-queries-in-visual-studio"></a>Visual Studio에서 리치 쿼리를 실행하는 애플리케이션 개발
 
 ### <a name="set-up-your-you-visual-studio-project"></a>Visual Studio 프로젝트 설정
 
-.NET Framework 응용 프로그램에서 보안 Enclave를 사용한 Always Encrypted를 사용하려면 .NET Framework 4.7.2에서 응용 프로그램을 빌드하고 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet에 통합해야 합니다. 또한 열 마스터 키를 Azure Key Vault에 저장하는 경우에도 응용 프로그램을 Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 버전 2.2.0 이상에 통합해야 합니다. 
+.NET Framework 애플리케이션에서 보안 Enclave를 사용한 Always Encrypted를 사용하려면 .NET Framework 4.7.2에서 애플리케이션을 빌드하고 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet에 통합해야 합니다. 또한 열 마스터 키를 Azure Key Vault에 저장하는 경우에도 애플리케이션을 Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 버전 2.2.0 이상에 통합해야 합니다. 
 
 1. Visual Studio를 엽니다.
 2. 새 Visual C\# 프로젝트를 만들거나 기존 프로젝트를 엽니다.
@@ -853,11 +853,11 @@ GO;
 
 ### <a name="develop-and-test-your-app"></a>앱 개발 및 테스트 
 
-Always Encrypted 및 Enclave 계산을 사용하려면 응용 프로그램이 연결 문자열`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation`(여기서 xxxx는 ip, 도메인 등일 수 있음)에 다음 2가지 키워드를 사용하여 데이터베이스에 연결해야 합니다.
+Always Encrypted 및 Enclave 계산을 사용하려면 애플리케이션이 연결 문자열`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation`(여기서 xxxx는 ip, 도메인 등일 수 있음)에 다음 2가지 키워드를 사용하여 데이터베이스에 연결해야 합니다.
 
-또한 응용 프로그램은 Always Encrypted를 사용하여 응용 프로그램에 적용되는 일반 지침을 준수해야 합니다. 예를 들어, 응용 프로그램은 응용 프로그램 쿼리에서 참조되는 데이터베이스 열과 관련된 열 마스터 키에 액세스할 수 있어야 합니다.
+또한 애플리케이션은 Always Encrypted를 사용하여 애플리케이션에 적용되는 일반 지침을 준수해야 합니다. 예를 들어, 애플리케이션은 애플리케이션 쿼리에서 참조되는 데이터베이스 열과 관련된 열 마스터 키에 액세스할 수 있어야 합니다.
 
-Always Encrypted를 사용하여 .NET Framework 응용 프로그램을 개발하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Always Encrypted를 사용하여 .NET Framework 애플리케이션을 개발하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발](develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted: SQL Database의 중요한 데이터 보호 및 Azure Key Vault에 암호화 키 저장](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)

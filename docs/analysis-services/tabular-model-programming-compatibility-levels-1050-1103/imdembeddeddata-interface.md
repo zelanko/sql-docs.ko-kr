@@ -24,9 +24,9 @@ ms.locfileid: "34044387"
   
 -   포함하는 문서의 URL을 설정합니다.  
   
--   포함하는 응용 프로그램이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
+-   포함하는 애플리케이션이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
   
--   포함하는 응용 프로그램에 사용되는 임시 파일에 대한 경로를 설정합니다.  
+-   포함하는 애플리케이션에 사용되는 임시 파일에 대한 경로를 설정합니다.  
   
 -   현재 포함된 작업을 취소합니다.  
   
@@ -82,7 +82,7 @@ HRESULT GetStreamIdentifier (
 ```  
   
 #### <a name="description"></a>설명  
- 호스트 응용 프로그램에 사용되는 식별자를 컨테이너 문서의 포함된 스트림에 가져옵니다.  
+ 호스트 애플리케이션에 사용되는 식별자를 컨테이너 문서의 포함된 스트림에 가져옵니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *out_pbstrStreamId*  
@@ -106,8 +106,8 @@ HRESULT GetStreamIdentifier (
 |이름|값|정의|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|포함된 데이터베이스를 사용할 수 없습니다.|  
-|DBPROPVAL_EMBED_EMBEDDED|0x01|현재 응용 프로그램에 포함된 데이터베이스가 포함되어 있습니다.|  
-|DBPROPVAL_EMBED_LINKED|0x02|포함된 데이터베이스가 원격 응용 프로그램(예: SharePoint Server)에서 호스팅됩니다.|  
+|DBPROPVAL_EMBED_EMBEDDED|0x01|현재 애플리케이션에 포함된 데이터베이스가 포함되어 있습니다.|  
+|DBPROPVAL_EMBED_LINKED|0x02|포함된 데이터베이스가 원격 애플리케이션(예: SharePoint Server)에서 호스팅됩니다.|  
   
 #### <a name="source"></a>원본  
   
@@ -156,11 +156,11 @@ HRESULT SetHosted (
 ```  
   
 #### <a name="description"></a>설명  
- 포함하는 응용 프로그램이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
+ 포함하는 애플리케이션이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *in_ftHosted*  
- 호출자가 서비스 응용 프로그램(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
+ 호출자가 서비스 애플리케이션(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
   
 #### <a name="return-value"></a>반환 값  
  **S_OK**  
@@ -186,11 +186,11 @@ HRESULT SetTempDirPath (
 ```  
   
 #### <a name="description"></a>설명  
- 포함하는 응용 프로그램에 사용되는 임시 파일에 대한 경로를 설정합니다.  
+ 포함하는 애플리케이션에 사용되는 임시 파일에 대한 경로를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *in_bstrPath*  
- 임시 파일에 대한 호스트 응용 프로그램에서 사용하는 경로입니다.  
+ 임시 파일에 대한 호스트 애플리케이션에서 사용하는 경로입니다.  
   
 #### <a name="return-value"></a>반환 값  
  **S_OK**  

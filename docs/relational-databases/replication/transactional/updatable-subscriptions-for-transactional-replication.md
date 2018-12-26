@@ -47,7 +47,7 @@ ms.locfileid: "47756941"
  트랜잭션 게시에 대해 업데이트할 수 있는 구독을 만들려면 [트랜잭션 게시에 업데이트할 수 있는 구독 만들기(Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요. 
   
 ## <a name="switching-between-update-modes"></a>업데이트 모드 전환  
- 업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 응용 프로그램의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
+ 업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 애플리케이션의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
   
 > [!NOTE]  
 >  복제에서는 업데이트 모드가 자동으로 전환되지 않습니다. 모드를 전환하려면 SQL Server Management Studio를 통해 업데이트 모드를 설정하거나 응용 프로그램에서 [sp_setreplfailovermode&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 호출해야 합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "47756941"
   
 ### <a name="user-defined-triggers"></a>사용자 정의 트리거  
   
--   응용 프로그램이 구독자에 대한 트리거를 요구하는 경우에는 게시자와 구독자에서 `NOT FOR REPLICATION` 옵션을 사용하여 트리거를 정의해야 합니다. 이렇게 하면 원래 데이터가 변경될 때만 트리거가 발생되고 변경 내용이 복제될 때는 트리거가 발생되지 않습니다.  
+-   애플리케이션이 구독자에 대한 트리거를 요구하는 경우에는 게시자와 구독자에서 `NOT FOR REPLICATION` 옵션을 사용하여 트리거를 정의해야 합니다. 이렇게 하면 원래 데이터가 변경될 때만 트리거가 발생되고 변경 내용이 복제될 때는 트리거가 발생되지 않습니다.  
   
      복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 발생되지 않도록 합니다. 이는 사용자 정의 트리거 본문에서 **sp_check_for_sync_trigger** 프로시저를 호출하여 수행할 수 있습니다. 자세한 내용은 [sp_check_for_sync_trigger&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql.md)를 참조하세요.  
   

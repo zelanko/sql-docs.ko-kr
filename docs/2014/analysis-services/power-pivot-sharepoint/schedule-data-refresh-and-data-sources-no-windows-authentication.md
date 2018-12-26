@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48068940"
@@ -25,7 +25,7 @@ ms.locfileid: "48068940"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013|  
   
- **개요:** 보안 저장소 대상 응용 프로그램을 두 개 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 응용 프로그램(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 응용 프로그램을 구성합니다. 두 번째 대상 응용 프로그램도 무인 데이터 새로 고침 계정에는 첫 번째 대상 응용 프로그램을 사용합니다.  
+ **개요:** 보안 저장소 대상 응용 프로그램을 두 개 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 애플리케이션(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 애플리케이션을 구성합니다. 두 번째 대상 애플리케이션도 무인 데이터 새로 고침 계정에는 첫 번째 대상 애플리케이션을 사용합니다.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
@@ -35,21 +35,21 @@ ms.locfileid: "48068940"
   
 -   **(3)** PowerPivot 서비스 응용 프로그램은 **무인 데이터 새로 고침 계정**에 대해 대상 응용 프로그램 “PowerPivotDataRefresh”를 사용하도록 구성됩니다.  
   
--   **(4)** PowerePivot 통합 문서는 Oracle 데이터를 사용합니다. 통합 문서 새로 고침 설정은 데이터 원본 연결 자격 증명에 대상 응용 프로그램 **(2)** 를 사용하도록 지정합니다.  
+-   **(4)** PowerePivot 통합 문서는 Oracle 데이터를 사용합니다. 통합 문서 새로 고침 설정은 데이터 원본 연결 자격 증명에 대상 애플리케이션 **(2)** 를 사용하도록 지정합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   
--   PowerPivot 서비스 응용 프로그램이 있습니다.  
+-   PowerPivot 서비스 애플리케이션이 있습니다.  
   
--   Secure Store Service 응용 프로그램이 있습니다.  
+-   Secure Store Service 애플리케이션이 있습니다.  
   
 -   PowerPivot 데이터 모델이 포함된 Excel 통합 문서가 있습니다.  
   
-## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>Windows 인증을 사용하는 대상 응용 프로그램 ID를 만들려면  
+## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>Windows 인증을 사용하는 대상 애플리케이션 ID를 만들려면  
   
-1.  SharePoint 중앙 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  Secure Store Service 응용 프로그램의 이름을 클릭합니다.  
+2.  Secure Store Service 애플리케이션의 이름을 클릭합니다.  
   
 3.  **관리** 페이지에서 **새로 만들기**를 클릭합니다. ![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48068940"
   
 9. **확인**을 클릭합니다.  
   
-10. 새 대상 응용 프로그램 ID가 목록에 추가됩니다. 대상 응용 프로그램 ID를 선택 하 고 클릭 **자격 증명 설정**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")합니다.  
+10. 새 대상 애플리케이션 ID가 목록에 추가됩니다. 대상 응용 프로그램 ID를 선택 하 고 클릭 **자격 증명 설정**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")합니다.  
   
 11. Windows 사용자 이름 및 Windows 암호를 입력한 다음 **확인**을 클릭합니다.  
   
-## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>Oracle 자격 증명을 사용하는 대상 응용 프로그램 ID를 만들려면  
+## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>Oracle 자격 증명을 사용하는 대상 애플리케이션 ID를 만들려면  
   
-1.  SharePoint 중앙 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  Secure Store Service 응용 프로그램의 이름을 클릭합니다.  
+2.  Secure Store Service 애플리케이션의 이름을 클릭합니다.  
   
 3.  에 **관리** 페이지에서 클릭 **새로 만들기**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
@@ -111,19 +111,19 @@ ms.locfileid: "48068940"
   
 9. **확인**을 클릭합니다.  
   
-10. 새 대상 응용 프로그램 ID가 목록에 추가됩니다. 대상 응용 프로그램 ID를 선택 하 고 클릭 **자격 증명 설정**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")합니다.  
+10. 새 대상 애플리케이션 ID가 목록에 추가됩니다. 대상 응용 프로그램 ID를 선택 하 고 클릭 **자격 증명 설정**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")합니다.  
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
  자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
   
-## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot 서비스 응용 프로그램을 구성하려면  
+## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot 서비스 애플리케이션을 구성하려면  
   
-1.  SharePoint 중앙 관리에서 서비스 응용 프로그램 관리를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 서비스 애플리케이션 관리를 클릭합니다.  
   
-2.  PowerPivot 서비스 응용 프로그램 이름을 클릭합니다(예: 기본 PowerPivot 서비스 응용 프로그램).  
+2.  PowerPivot 서비스 애플리케이션 이름을 클릭합니다(예: 기본 PowerPivot 서비스 애플리케이션).  
   
-3.  동작 섹션에서 **서비스 응용 프로그램 설정 구성** 을 클릭합니다.  
+3.  동작 섹션에서 **서비스 애플리케이션 설정 구성** 을 클릭합니다.  
   
 4.  에 **데이터 새로 고침** 으로 설정 합니다 **PowerPivot 무인 데이터 새로 고침 계정**를`PowerPivotDataRefresh` 클릭 하 고 **확인**합니다.  
   
@@ -157,9 +157,9 @@ ms.locfileid: "48068940"
   
      일반적인 해결 방법으로는 다음 두 가지가 있습니다.  
   
-    -   대상 응용 프로그램 ID가 올바른지 확인하십시오.  
+    -   대상 애플리케이션 ID가 올바른지 확인하십시오.  
   
-    -   대상 응용 프로그램에 대한 자격 증명 설정을 확인하십시오.  
+    -   대상 애플리케이션에 대한 자격 증명 설정을 확인하십시오.  
   
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>새 인증으로 데이터 새로 고침을 확인하려면  
  **확인**을 클릭하면 **새로 고침 기록** 페이지가 표시됩니다. 이전 단계에서 **가능한 빨리 새로 고치십시오.** 를 선택했으므로 몇 분 이내에 새로 고침 기록에 새 항목이 표시됩니다. 타이머 작업 **PowerPivot 데이터 새로 고침 타이머 작업** 의 기본값은 1분입니다. 새로 고침 기록에 새 항목이 표시되지 않으면 몇 분 기다렸다가 브라우저를 새로 고치십시오. 여전히 새 항목이 표시되지 않으면 타이머 작업의 현재 값을 확인하십시오.  

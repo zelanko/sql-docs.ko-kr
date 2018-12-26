@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50145598"
@@ -44,7 +44,7 @@ ms.locfileid: "50145598"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 자격 증명은 테이블 가져오기 마법사의 **가장 정보** 페이지를 사용하거나 **기존 연결** 대화 상자의 기존 데이터 원본 연결을 편집하여 각 데이터 원본에 대해 지정됩니다.  
   
- 데이터를 가져오거나 처리할 때 **가장 정보** 페이지에 지정된 자격 증명은 데이터 원본에 연결하고 데이터를 인출하는 데 사용됩니다. 이는 작업 영역 데이터베이스를 호스팅하는 Analysis Services 서버에서 데이터 원본에 연결하고 데이터를 인출하기 때문에 클라이언트 응용 프로그램의 컨텍스트에서 실행되는 *서버 쪽* 작업입니다.  
+ 데이터를 가져오거나 처리할 때 **가장 정보** 페이지에 지정된 자격 증명은 데이터 원본에 연결하고 데이터를 인출하는 데 사용됩니다. 이는 작업 영역 데이터베이스를 호스팅하는 Analysis Services 서버에서 데이터 원본에 연결하고 데이터를 인출하기 때문에 클라이언트 애플리케이션의 컨텍스트에서 실행되는 *서버 쪽* 작업입니다.  
   
  Analysis Services 서버에 모델을 배포하는 경우 모델을 배포할 때 작업 영역 데이터베이스가 메모리에 있으면 모델을 배포할 Analysis Services 서버에 자격 증명이 전달됩니다. 사용자 자격 증명이 디스크에 저장되는 경우는 없습니다.  
   

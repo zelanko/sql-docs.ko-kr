@@ -42,7 +42,7 @@ ms.locfileid: "51215038"
  WMI 공급자를 사용하여 SQL Server 에이전트 경고를 만드는 데 사용할 추적 이벤트 정보를 반환하는 예를 제공합니다.  
   
  [샘플:.NET Framework에서 WMI 이벤트 공급자 사용](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
- C# 응용 프로그램에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
+ C# 애플리케이션에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
   
  [서버 이벤트용 WMI 공급자 클래스 및 속성](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  
  공급자의 프로그래밍 모드를 구성하는 이벤트 클래스 및 속성을 소개합니다.  

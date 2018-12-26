@@ -20,7 +20,7 @@ ms.locfileid: "50100064"
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   기존 팜 설치 옵션을 사용하여 SQL Server SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치하는 경우 특정 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  
   
- 예약된 데이터 새로 고침용 구성 페이지, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 피드 라이브러리용 응용 프로그램 페이지 등의 응용 프로그램 페이지와 템플릿을 사이트에서 사용하려면 사이트 모음 수준에서 기능을 활성화해야 합니다.  
+ 예약된 데이터 새로 고침용 구성 페이지, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 피드 라이브러리용 애플리케이션 페이지 등의 애플리케이션 페이지와 템플릿을 사이트에서 사용하려면 사이트 모음 수준에서 기능을 활성화해야 합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 쿼리 처리를 지원하는 각 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합을 활성화해야 합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "50100064"
   
 1.  SharePoint  사이트에서 **사이트 작업**을 클릭합니다.  
   
-     기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, http://를 입력 하 여 SharePoint 사이트를 자주 액세스할 수는\<컴퓨터 이름 >를 루트 사이트 모음을 엽니다.  
+     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://를 입력 하 여 SharePoint 사이트를 자주 액세스할 수는\<컴퓨터 이름 >를 루트 사이트 모음을 엽니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   

@@ -35,7 +35,7 @@ ms.locfileid: "51605303"
  기본 Windows 방화벽 설정 방법과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!TIP]  
->  포트 번호를 선택할 때 특정 응용 프로그램에 할당된 포트 번호 목록을 보려면 [https://www.iana.org/assignments/port-numbers](https://www.iana.org/assignments/port-numbers)를 참조하세요. 할당되지 않은 포트 번호를 선택합니다. 자세한 내용은 [TCP/IP에 대한 기본 동적 포트 범위는 Windows Vista 및 Windows Server 2008에서 변경](https://support.microsoft.com/kb/929851)을 참조하세요.  
+>  포트 번호를 선택할 때 특정 애플리케이션에 할당된 포트 번호 목록을 보려면 [https://www.iana.org/assignments/port-numbers](https://www.iana.org/assignments/port-numbers)를 참조하세요. 할당되지 않은 포트 번호를 선택합니다. 자세한 내용은 [TCP/IP에 대한 기본 동적 포트 범위는 Windows Vista 및 Windows Server 2008에서 변경](https://support.microsoft.com/kb/929851)을 참조하세요.  
   
 > [!WARNING]  
 >  다시 시작할 때 데이터베이스 엔진은 새 포트에서 수신을 시작합니다. 그러나 데이터베이스 엔진이 사용하지 않을 수 있는 경우에도 구성을 변경하는 즉시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저 서비스가 레지스트리를 모니터링하고 새 포트 번호를 보고합니다. 데이터베이스 엔진을 다시 시작하여 일관성을 확인하고 연결 실패를 방지합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "51605303"
 6.  세부 정보 창에서 **SQL Server(**\<인스턴스 이름>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
   
 ## <a name="connecting"></a>Connecting  
-특정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 후에 특정 포트를 통해 클라이언트 응용 프로그램과 연결하는 세 가지 방법은 다음과 같습니다.  
+특정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 후에 특정 포트를 통해 클라이언트 애플리케이션과 연결하는 세 가지 방법은 다음과 같습니다.  
   
 -   서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 실행하여 이름을 기준으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
 -   클라이언트에서 별칭을 만들어 포트 번호를 지정합니다.  

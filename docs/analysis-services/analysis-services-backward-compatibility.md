@@ -65,7 +65,7 @@ A *기능을 지원 되지 않는* 이전 릴리스에서 사용 되지 않았�
 *새로운 변경* 이 적용되면 모델이나 서버를 업그레이드한 후에 데이터 모델, 응용 프로그램 코드 또는 스크립트가 더 이상 작동하지 않습니다.
   
 ### <a name="net-40-version-upgrade"></a>.NET 4.0 버전 업그레이드  
- Analysis Services Management Objects (AMO), ADOMD.NET 및 TOM 테이블 형식 개체 모델 () 클라이언트 라이브러리는 이제.NET 4.0 런타임을 대상입니다. .NET 3.5를 대상으로 하는 응용 프로그램의 경우 새로운 변경 사항이 될 수 있습니다. 이러한 어셈블리의 최신 버전을 사용하는 응용 프로그램은 이제 .NET 4.0 이상을 대상으로 해야 합니다.  
+ Analysis Services Management Objects (AMO), ADOMD.NET 및 TOM 테이블 형식 개체 모델 () 클라이언트 라이브러리는 이제.NET 4.0 런타임을 대상입니다. .NET 3.5를 대상으로 하는 애플리케이션의 경우 새로운 변경 사항이 될 수 있습니다. 이러한 어셈블리의 최신 버전을 사용하는 애플리케이션은 이제 .NET 4.0 이상을 대상으로 해야 합니다.  
   
 ### <a name="amo-version-upgrade"></a>AMO 버전 업그레이드  
  이 릴리스는 버전 업그레이드 [Analysis Services Management Objects &#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx) 이며 특정 상황에서 크게 변경 되었습니다.  AMO로 호출되는 기존 코드와 스크립트는 이전 버전에서 업그레이드하기 전과 동일하게 실행됩니다. 그러나 해야 할 경우 *recompile* 응용 프로그램 하며 SQL Server 2016 Analysis Services 인스턴스를 대상에 코드나 스크립트가 작동 하도록 다음 네임 스페이스를 추가 해야 합니다.  

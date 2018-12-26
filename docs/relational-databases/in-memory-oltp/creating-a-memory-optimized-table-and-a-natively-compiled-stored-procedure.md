@@ -22,7 +22,7 @@ ms.locfileid: "47688801"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에는 메모리 내 OLTP의 구문을 소개하는 예제가 포함되어 있습니다.  
   
- 응용 프로그램에서 메모리 내 OLTP를 사용하려면 다음 태스크를 완료해야 합니다.  
+ 애플리케이션에서 메모리 내 OLTP를 사용하려면 다음 태스크를 완료해야 합니다.  
   
 -   메모리 최적화 데이터 파일 그룹을 만들고 컨테이너를 파일 그룹에 추가합니다.  
   

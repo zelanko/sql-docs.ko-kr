@@ -54,7 +54,7 @@ ms.locfileid: "50147078"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>차원 및 특성에 번역 추가  
  데이터베이스 차원, 특성, 계층 구조 및 계층 구조 내 수준에 번역을 추가할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "50147078"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 응용 프로그램을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
   
 ### <a name="add-a-translation-of-the-database-name"></a>데이터베이스 이름의 번역 추가  
  데이터베이스 수준에서 데이터베이스 이름 및 설명에 대한 번역을 추가할 수 있습니다. 번역된 데이터베이스 이름은 언어의 LCID를 지정하는 클라이언트 연결에 표시될 수도 있지만 이것은 도구에 따라 다릅니다. 예를 들어, 연결에서 로캘 식별자를 지정하더라도 Management Studio에서는 데이터베이스를 볼 때 번역된 이름이 표시되지 않습니다. Analysis Services에 연결하기 위해 Management Studio에서 사용하는 API는 **Language** 속성을 읽지 않습니다.  
@@ -100,9 +100,9 @@ ms.locfileid: "50147078"
  차원 디자이너 또는 큐브 디자이너에서 번역 개체를 마우스 오른쪽 단추로 클릭하여 영구적으로 제거할 수 있습니다. 삭제된 개체를 복원하거나 재활용할 수는 없으므로 계속하기 전에 영향을 받는 개체의 목록을 검토해야 합니다.  
   
 ## <a name="resolving-translations"></a>번역 확인  
- 클라이언트 응용 프로그램이 지정한 언어 식별자로 정보를 요청하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 가장 근사한 언어 식별자로 확인합니다. 클라이언트 응용 프로그램이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
+ 클라이언트 애플리케이션이 지정한 언어 식별자로 정보를 요청하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 가장 근사한 언어 식별자로 확인합니다. 클라이언트 애플리케이션이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
   
- 클라이언트 응용 프로그램이 기본 언어 식별자가 아닌 언어 식별자를 지정하면 인스턴스는 모든 사용 가능한 개체에 대해 모든 사용 가능한 번역을 반복합니다. 지정한 언어 식별자가 특정 번역의 언어 식별자와 일치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 해당 번역을 반환합니다. 일치하는 항목이 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 다음 방법 중 하나를 사용하여 지정한 언어 식별자와 가장 근사한 언어 식별자를 가진 번역을 반환합니다.  
+ 클라이언트 애플리케이션이 기본 언어 식별자가 아닌 언어 식별자를 지정하면 인스턴스는 모든 사용 가능한 개체에 대해 모든 사용 가능한 번역을 반복합니다. 지정한 언어 식별자가 특정 번역의 언어 식별자와 일치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 해당 번역을 반환합니다. 일치하는 항목이 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 다음 방법 중 하나를 사용하여 지정한 언어 식별자와 가장 근사한 언어 식별자를 가진 번역을 반환합니다.  
   
 -   다음 언어 식별자의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 지정한 언어 식별자의 번역이 정의되지 않은 경우에 대해 대체 언어 식별자를 사용합니다.  
   

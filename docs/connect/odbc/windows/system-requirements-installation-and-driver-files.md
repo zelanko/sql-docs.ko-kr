@@ -33,7 +33,7 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
   
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 
-다음 Windows 운영 체제에서 드라이버를 사용하여 응용 프로그램을 실행할 수 있습니다.  
+다음 Windows 운영 체제에서 드라이버를 사용하여 애플리케이션을 실행할 수 있습니다.  
 
 -   Windows Server 2008 R2 
 -   Windows Server 2012
@@ -58,7 +58,7 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 설치된 상태에서 설치될 수 있습니다.  
 
-`msodbcsql.msi`를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 드라이버를 사용하여 개발된 응용 프로그램을 실행하는 데 필요한 파일입니다. SDK 구성 요소를 설치하려면 명령줄에 `ADDLOCAL=ALL`을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+`msodbcsql.msi`를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소를 설치하려면 명령줄에 `ADDLOCAL=ALL`을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
@@ -76,7 +76,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-응용 프로그램에서 드라이버를 사용하는 경우 응용 프로그램은 설치 옵션 `APPGUID`를 통해 드라이버에 종속된 응용 프로그램을 나타내야 합니다. 이렇게 하면 설치를 제거하기 전 드라이버 설치 프로그램에서 종속 응용 프로그램을 보고할 수 있습니다. 드라이버에 대한 종속성을 지정하려면 드라이버를 자동으로 설치할 때 `APPGUID` 명령줄 매개 변수를 제품 코드로 설정합니다. (제품 코드는 Microsoft 설치 관리자를 사용하여 응용 프로그램 설치 프로그램 번들을 작성할 때 만들어야 합니다.) 예를 들어 다음과 같이 사용할 수 있습니다.  
+애플리케이션에서 드라이버를 사용하는 경우 애플리케이션은 설치 옵션 `APPGUID`를 통해 드라이버에 종속된 애플리케이션을 나타내야 합니다. 이렇게 하면 설치를 제거하기 전 드라이버 설치 프로그램에서 종속 애플리케이션을 보고할 수 있습니다. 드라이버에 대한 종속성을 지정하려면 드라이버를 자동으로 설치할 때 `APPGUID` 명령줄 매개 변수를 제품 코드로 설정합니다. (제품 코드는 Microsoft 설치 관리자를 사용하여 응용 프로그램 설치 프로그램 번들을 작성할 때 만들어야 합니다.) 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  
@@ -88,7 +88,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
   
 `bcp.exe` 및 `sqlcmd.exe` 에 설치 됩니다 합니다 `110\Tools` 의 하위 폴더 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` 버전 11 및 `130\Tools` 13 및 13.1에 대 한 합니다.
 
-BCP 함수를 사용하는 응용 프로그램은 응용 프로그램을 컴파일하는 데 사용되는 헤더 파일 및 라이브러리가 함께 제공되는 동일한 버전의 드라이버를 지정해야 합니다.  
+BCP 함수를 사용하는 애플리케이션은 애플리케이션을 컴파일하는 데 사용되는 헤더 파일 및 라이브러리가 함께 제공되는 동일한 버전의 드라이버를 지정해야 합니다.  
 
 예를 들어 ODBC 응용 프로그램을 컴파일할 때 `msodbcsql11.lib` 및 `msodbcsql.h`, 사용 하 여 "DRIVER = {ODBC Driver 11 for SQL Server}" 연결 문자열에.
 

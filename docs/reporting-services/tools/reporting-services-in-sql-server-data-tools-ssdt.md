@@ -117,7 +117,7 @@ ms.locfileid: "52403008"
  문서 개요 창을 사용하여 입력란 및 기타 보고서 항목을 이름으로 식별할 수 있습니다. 문서 개요 창에서 항목을 선택하면 해당 항목은 디자인 화면에서도 선택됩니다.  
   
 ###  <a name="bkmk_TaskList"></a> 작업 목록  
- 태스크 목록 창은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access와 같은 다른 응용 프로그램에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
+ 태스크 목록 창은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access와 같은 다른 애플리케이션에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
   
   
 ##  <a name="bkmk_ReportDesignerDesignView"></a> 보고서 디자이너 디자인 뷰  

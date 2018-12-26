@@ -47,7 +47,7 @@ items:
       href: ../relational-databases/import-export/overview-import-export.md
   - name: 개발
     items:
-    - name: 데이터 계층 응용 프로그램 +
+    - name: 데이터 계층 애플리케이션 +
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
     - name: Service Broker +
       href: ../relational-databases/service-broker/event-notifications.md

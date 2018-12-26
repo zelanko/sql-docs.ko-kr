@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: eae53b4edbcc542154d627a748321810c2059d59
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34039723"
@@ -32,7 +32,7 @@ ms.locfileid: "34039723"
  - **전체 데이터 뷰** - 이 옵션을 사용하면 Excel의 모든 쿼리가 Analysis Services, 관계형 데이터베이스로 차례로 전달됩니다. 이 옵션은 실제로 완벽하게 작동하는 DirecQuery 모드입니다.
  
  ### <a name="other-clients"></a>다른 클라이언트
- Excel에서 분석을 사용하는 경우 .odc 연결 파일이 생성됩니다. 이 파일의 연결 문자열 정보를 사용하여 다른 클라이언트 응용 프로그램에서 모델에 연결할 수 있습니다. 클라이언트가 샘플 데이터 파티션에 연결하도록 지정하기 위해 DataView=Sample 매개 변수가 추가됩니다.  
+ Excel에서 분석을 사용하는 경우 .odc 연결 파일이 생성됩니다. 이 파일의 연결 문자열 정보를 사용하여 다른 클라이언트 애플리케이션에서 모델에 연결할 수 있습니다. 클라이언트가 샘플 데이터 파티션에 연결하도록 지정하기 위해 DataView=Sample 매개 변수가 추가됩니다.  
   
 ## <a name="monitor-query-execution-on-backend-systems-using-xevents-or-sql-profiler"></a>xEvents 또는 SQL 프로파일러를 사용하여 백 엔드 시스템에서 쿼리 실행을 모니터링 
  SQL Server 관계형 데이터베이스에 연결된 세션 추적을 시작하여 테이블 형식 모델에서 수신되는 연결을 모니터링합니다.  

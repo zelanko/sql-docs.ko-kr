@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38981715"
@@ -48,7 +48,7 @@ ms.locfileid: "38981715"
   
  **시나리오 2b: 클라이언트 라이브러리 버전이 잘못된 응용 프로그램 서버에서 Excel Services를 실행 중인 경우**  
   
- 기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 응용 프로그램 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하는 팜에서 Excel Services 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 같이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 요청하는 응용 프로그램을 실행 중인 실제 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
+ 기본적으로 SharePoint Server 2010은 Excel 서비스가 실행되는 애플리케이션 서버에 SQL Server 2008 버전의 Analysis Services OLE DB 공급자를 설치합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하는 팜에서 Excel Services 및 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 같이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 요청하는 응용 프로그램을 실행 중인 실제 서버는 모두 최신 버전의 데이터 공급자를 사용해야 합니다.  
   
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 실행하는 서버는 업데이트된 OLE DB 데이터 공급자를 자동으로 가져옵니다. 동일한 컴퓨터에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 없이 독립 실행형 인스턴스인 Excel Services를 실행하는 서버와 같은 기타 서버는 최신 클라이언트 라이브러리를 사용하도록 패치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
   

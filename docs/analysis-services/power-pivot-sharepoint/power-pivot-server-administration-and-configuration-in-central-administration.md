@@ -36,7 +36,7 @@ ms.locfileid: "38983495"
 >  SharePoint 2010의 경우 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜이나 SharePoint용 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 구성하려면 먼저 SharePoint 2010 SP1(서비스 팩 1)을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 지금 설치합니다.  
   
 ## <a name="benefits-of-configuring-power-pivot-for-sharepoint-using-central-administration"></a>중앙 관리를 사용하여 SharePoint용 PowerPivot을 구성할 때의 이점  
- SharePoint 중앙 관리는 SharePoint 팜 관리 응용 프로그램입니다. 팜 관리자라면 SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 인스턴스를 팜에 추가할 때 익숙한 도구를 사용하려고 할 것입니다.  
+ SharePoint 중앙 관리는 SharePoint 팜 관리 애플리케이션입니다. 팜 관리자라면 SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 인스턴스를 팜에 추가할 때 익숙한 도구를 사용하려고 할 것입니다.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 구성 도구 또는 PowerShell cmdlet과 달리 중앙 관리에서는 응용 프로그램 또는 서버를 구성할 때 설정할 수 있는 모든 옵션을 완전히 지정하는 페이지를 제공합니다. 다른 방법에서는 구성 워크플로를 몇 개의 단계로 압축하거나 PowerShell을 사용하여 SharePoint 서버를 구성하는 방법을 미리 알고 있어야 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "38983495"
   
 |링크|형식|태스크 설명|  
 |----------|----------|----------------------|  
-|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
+|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 애플리케이션 페이지를 추가하는 솔루션 파일을 설치합니다.|  
 |[중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|필수|이 단계에서는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스를 프로비전합니다.|  
 |[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 기능을 설정합니다.|  
 |[MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  

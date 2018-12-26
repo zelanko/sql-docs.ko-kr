@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38057971"
@@ -68,7 +68,7 @@ Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 
 > [!NOTE]  
 > 학습 목적으로 기본 서비스 계정 가장 옵션을 사용하고 SQL Server의 서비스 계정에 데이터 판독기 사용 권한을 부여하는 것이 좋습니다. 다른 가장 옵션을 사용할 수 있는 경우에도 모든 옵션이 작업 처리에 적합하지는 않습니다. 특히 현재 사용자의 자격 증명 사용을 위한 옵션은 처리에 지원되지 않습니다.  
   
-1.  서비스 계정을 확인합니다. SQL Server 구성 관리자 또는 서비스 콘솔 응용 프로그램을 사용하여 계정 정보를 볼 수 있습니다. 기본 계정을 사용하여 Analysis Services를 기본 인스턴스로 설치한 경우 서비스가 **NT Service\MSSQLServerOLAPService**로 실행됩니다.  
+1.  서비스 계정을 확인합니다. SQL Server 구성 관리자 또는 서비스 콘솔 애플리케이션을 사용하여 계정 정보를 볼 수 있습니다. 기본 계정을 사용하여 Analysis Services를 기본 인스턴스로 설치한 경우 서비스가 **NT Service\MSSQLServerOLAPService**로 실행됩니다.  
   
 2.  Management Studio에서 데이터베이스 엔진 인스턴스에 연결합니다.  
   

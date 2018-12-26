@@ -22,7 +22,7 @@ ms.locfileid: "47628081"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션에서는 XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.
 
 이 섹션의 코드 예제에서는 SAX(Simple API for XML) 파서를 사용합니다. SAX는 XML 문서의 이벤트 기반 구문 분석을 위해 공개적으로 개발된 표준입니다. SAX는 XML 데이터 작업을 위한 응용 프로그래밍 인터페이스도 제공합니다. 응용 프로그램에서는 DOM(문서 개체 모델) 또는 StAX(Streaming API for XML) 등 다른 XML 파서도 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ DOM(문서 개체 모델)은 XML 문서, 조각, 노드 또는 노드 집합의 
 
 이 샘플 응용 프로그램을 실행하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar에 대한 항목이 없으면 샘플 응용 프로그램에서 "클래스를 찾을 수 없습니다." 예외가 발생합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-the-jdbc-driver.md)입니다.
 
-또한 이 샘플 응용 프로그램을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다.
+또한 이 샘플 애플리케이션을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다.
 
 ## <a name="example"></a>예제
 

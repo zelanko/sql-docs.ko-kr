@@ -13,7 +13,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab2ef4879ae4c29c43bfa07c0ccf314eae51ff39
 ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50100214"
@@ -45,7 +45,7 @@ ms.locfileid: "50100214"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치  
   
--   서비스 및 응용 프로그램 다시 시작  
+-   서비스 및 애플리케이션 다시 시작  
   
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치 준비  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하기 전에 다음을 수행해야 합니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "50100214"
   
 3.  추가한 노드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치 프로그램을 실행합니다.  
   
-## <a name="restart-services-and-applications"></a>서비스 및 응용 프로그램 다시 시작  
+## <a name="restart-services-and-applications"></a>서비스 및 애플리케이션 다시 시작  
  설치 프로그램이 완료되면 컴퓨터를 다시 시작하라는 메시지가 표시될 수 있습니다. 시스템을 다시 시작한 후 또는 컴퓨터를 다시 시작하라는 메시지 없이 설치 프로그램이 완료된 후 제어판에서 **서비스** 노드를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 적용하기 전에 중지했던 서비스를 다시 시작합니다. 이러한 서비스에는 Distributed Transaction Coordinator 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 서비스 또는 인스턴스별 서비스 등이 있습니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치 프로그램을 실행하기 전에 닫은 응용 프로그램을 다시 시작합니다. 설치가 완료된 다음 업그레이드된 `master`, `msdb` 및 `model` 데이터베이스를 즉시 다시 백업할 수도 있습니다.  

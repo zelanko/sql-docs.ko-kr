@@ -46,7 +46,7 @@ ms.locfileid: "52711594"
 -   고가용성 및 재해 복구 솔루션 지원: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], 데이터베이스 미러링 및 로그 전달
 
 ### <a name="individual-transaction-recovery"></a>개별 트랜잭션 복구
-응용 프로그램이 `ROLLBACK` 문을 실행하거나 데이터베이스 엔진이 클라이언트와의 통신이 끊어진 때와 같은 오류를 검색할 경우 불완전한 트랜잭션에 의해 수정된 내용을 롤백하는 데 이 로그 레코드가 사용됩니다. 
+애플리케이션이 `ROLLBACK` 문을 실행하거나 데이터베이스 엔진이 클라이언트와의 통신이 끊어진 때와 같은 오류를 검색할 경우 불완전한 트랜잭션에 의해 수정된 내용을 롤백하는 데 이 로그 레코드가 사용됩니다. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 불완전한 모든 트랜잭션 복구
 서버에 장애가 발생하면 데이터베이스에서 일부 수정 내용이 버퍼 캐시에서 데이터 파일로 옮겨지지 않을 수 있으며 데이터 파일에 불완전한 트랜잭션으로 인한 일부 수정 내용이 그대로 남아 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 시작되면 이 인스턴스는 각 데이터베이스의 복구를 실행합니다. 데이터 파일에 쓰여지지 않은 로그에 기록된 모든 수정 내용은 롤포워드됩니다. 그런 다음 트랜잭션 로그에서 발견된 모든 불완전한 트랜잭션이 롤백되어 데이터베이스의 무결성이 보존됩니다. 

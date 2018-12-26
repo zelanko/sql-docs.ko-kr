@@ -22,9 +22,9 @@ ms.locfileid: "47697421"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-응용 프로그램에서 암호화를 요청하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 SSL 암호화를 지원하도록 구성되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 SSL 핸드셰이크를 시작합니다. 핸드셰이크를 통해 서버와 클라이언트에서는 데이터 보호에 사용될 암호화 및 암호화 알고리즘을 협상할 수 있습니다. SSL 핸드셰이크가 완료되면 클라이언트와 서버는 암호화된 데이터를 안전하게 전송할 수 있게 됩니다. SSL 핸드셰이크 중 서버는 공개 키 인증서를 클라이언트로 보냅니다. 공개 키 인증서의 발급자를 CA(인증 기관)라고 합니다. 클라이언트는 인증 기관이 신뢰할 수 있는 기관인지 확인해야 합니다.  
+애플리케이션에서 암호화를 요청하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 SSL 암호화를 지원하도록 구성되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 SSL 핸드셰이크를 시작합니다. 핸드셰이크를 통해 서버와 클라이언트에서는 데이터 보호에 사용될 암호화 및 암호화 알고리즘을 협상할 수 있습니다. SSL 핸드셰이크가 완료되면 클라이언트와 서버는 암호화된 데이터를 안전하게 전송할 수 있게 됩니다. SSL 핸드셰이크 중 서버는 공개 키 인증서를 클라이언트로 보냅니다. 공개 키 인증서의 발급자를 CA(인증 기관)라고 합니다. 클라이언트는 인증 기관이 신뢰할 수 있는 기관인지 확인해야 합니다.  
   
-응용 프로그램에서 암호화를 요청하지 않는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SSL 암호화를 지원하도록 적용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 SSL 암호화를 사용하도록 구성되어 있지 않으면 암호화 없이 연결이 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 SSL 암호화를 사용하도록 구성되어 있으면 올바르게 구성된 JVM(Java Virtual Machine)에서 실행될 때 드라이버는 자동으로 SSL 암호화를 사용하고, 그렇지 않으면 연결이 종료되며 드라이버에서 오류가 발생합니다.  
+애플리케이션에서 암호화를 요청하지 않는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 SSL 암호화를 지원하도록 적용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 SSL 암호화를 사용하도록 구성되어 있지 않으면 암호화 없이 연결이 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 SSL 암호화를 사용하도록 구성되어 있으면 올바르게 구성된 JVM(Java Virtual Machine)에서 실행될 때 드라이버는 자동으로 SSL 암호화를 사용하고, 그렇지 않으면 연결이 종료되며 드라이버에서 오류가 발생합니다.  
   
 > [!NOTE]  
 > SSL 연결이 성공하려면 **serverName**에 전달된 값이 서버 인증서의 SAN(주체 대체 이름)에 있는 CN(일반 이름) 또는 DNS 이름과 정확히 일치하는지 확인합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47697421"
   
 ## <a name="remarks"></a>Remarks
 
-응용 프로그램에서 SSL 암호화를 사용할 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 버전 1.2 릴리스부터 **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, **hostNameInCertificate** 등의 연결 속성이 제공됩니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
+애플리케이션에서 SSL 암호화를 사용할 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 버전 1.2 릴리스부터 **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, **hostNameInCertificate** 등의 연결 속성이 제공됩니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   
  다음 표에는 가능한 SSL 연결 시나리오에 대해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 버전이 어떻게 동작하는지 요약되어 있습니다. 각 시나리오는 서로 다른 SSL 연결 속성 집합을 사용합니다. 표에는 다음과 같은 값이 포함되어 있습니다.  
   

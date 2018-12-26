@@ -30,7 +30,7 @@ ms.locfileid: "34019990"
   
 [중급 데이터 마이닝 자습서(SQL Server 2014)](https://msdn.microsoft.com/library/cc879271(v=sql.120).aspx) - 이 자습서에는 예측, 시장 바구니 분석, 신경망 및 로지스틱 회귀, 시퀀스 클러스터링 등의 고급 데이터 마이닝 개념 및 기술을 소개하는 일련의 단원이 포함되어 있습니다.  
   
-[DMX 자습서(SQL Server 2014)](https://msdn.microsoft.com/library/bb895168(v=sql.120).aspx) - DMX(Data Mining Extensions) 쿼리 언어의 구문은 SQL 구문과 유사하지만, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 저장되는 예측 모델을 만들고 쿼리 및 관리하는 데 사용할 수 있습니다. 이 자습서에서는 DMX 언어를 사용하여 새 마이닝 구조 및 마이닝 모델을 만드는 방법과 응용 프로그램에서 사용할 DMX 예측 쿼리를 만드는 방법을 보여 줍니다.  
+[DMX 자습서(SQL Server 2014)](https://msdn.microsoft.com/library/bb895168(v=sql.120).aspx) - DMX(Data Mining Extensions) 쿼리 언어의 구문은 SQL 구문과 유사하지만, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 저장되는 예측 모델을 만들고 쿼리 및 관리하는 데 사용할 수 있습니다. 이 자습서에서는 DMX 언어를 사용하여 새 마이닝 구조 및 마이닝 모델을 만드는 방법과 애플리케이션에서 사용할 DMX 예측 쿼리를 만드는 방법을 보여 줍니다.  
   
 ## <a name="see-also"></a>관련 항목:  
 [데이터 마이닝 솔루션](../analysis-services/data-mining/data-mining-solutions.md)  

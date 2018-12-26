@@ -18,7 +18,7 @@ ms.lasthandoff: 11/01/2018
 ms.locfileid: "50753500"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
-  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 응용 프로그램은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
+  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 애플리케이션은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
   
  이 예제는 ODBC 데이터 원본을 필요로 하지는 않지만 기본적으로 SQL Server의 로컬 인스턴스에서 실행됩니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "50753500"
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 이 예제를 64비트 운영 체제에서 32비트 응용 프로그램으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   

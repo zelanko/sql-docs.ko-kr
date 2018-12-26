@@ -34,7 +34,7 @@ ms.locfileid: "51018268"
 > [!IMPORTANT]  
 >  다음 항목은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep에서 지원되지 않습니다.  
 >   
->  WOW 64 설치: 32비트 응용 프로그램을 기본적으로 32비트 모드에서 실행할 수 있도록 하는 Windows 64비트 버전의 기능입니다.  
+>  WOW 64 설치: 32비트 애플리케이션을 기본적으로 32비트 모드에서 실행할 수 있도록 하는 Windows 64비트 버전의 기능입니다.  
   
  이 섹션에는 다음과 같은 절차가 포함되어 있습니다.  
   

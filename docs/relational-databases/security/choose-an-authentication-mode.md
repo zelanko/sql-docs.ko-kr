@@ -40,7 +40,7 @@ ms.locfileid: "47781911"
 ## <a name="configuring-the-authentication-mode"></a>인증 모드 구성  
  설치 중에 혼합 모드 인증을 선택하면 sa라는 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 대해 강력한 암호를 입력하고 확인해야 합니다. sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결합니다.  
   
- 설치 중에 Windows 인증을 선택하면 설치 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 sa 계정을 만들지만 이는 비활성화됩니다. 나중에 혼합 모드 인증으로 변경하고 sa 계정을 사용하려면 이 계정을 활성화해야 합니다. 모든 Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 시스템 관리자로 구성할 수 있습니다. sa 계정은 잘 알려져 있고 악의적인 사용자의 공격 대상이 될 가능성이 높으므로 응용 프로그램에서 필요한 경우가 아니면 sa 계정을 활성화하면 안 됩니다. sa 계정에 암호를 설정하지 않거나 강력하지 않은 암호를 설정하면 안 됩니다. Windows 인증 모드에서 혼합 모드 인증으로 바꾸고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.  
+ 설치 중에 Windows 인증을 선택하면 설치 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위해 sa 계정을 만들지만 이는 비활성화됩니다. 나중에 혼합 모드 인증으로 변경하고 sa 계정을 사용하려면 이 계정을 활성화해야 합니다. 모든 Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 시스템 관리자로 구성할 수 있습니다. sa 계정은 잘 알려져 있고 악의적인 사용자의 공격 대상이 될 가능성이 높으므로 애플리케이션에서 필요한 경우가 아니면 sa 계정을 활성화하면 안 됩니다. sa 계정에 암호를 설정하지 않거나 강력하지 않은 암호를 설정하면 안 됩니다. Windows 인증 모드에서 혼합 모드 인증으로 바꾸고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.  
   
 ## <a name="connecting-through-windows-authentication"></a>Windows 인증을 통한 연결  
  사용자가 Microsoft Windows 사용자 계정을 통해 연결되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 운영 체제의 Windows 보안 주체 토큰을 사용하여 계정 이름과 암호가 유효한지 확인합니다. 즉, Windows에서 사용자 ID를 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호를 요청하지 않으며 ID의 유효성 검사를 수행하지 않습니다. Windows 인증은 기본 인증 모드이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증보다 훨씬 더 안전합니다. Windows 인증은 Kerberos 보안 프로토콜을 사용하고, 암호 정책을 적용하여 강력한 암호에 대해 적합한 복잡성 수준을 유지하도록 하며, 계정 잠금 및 암호 만료를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows에서 제공하는 자격 증명을 신뢰하므로 Windows 인증을 사용한 연결을 트러스트된 연결이라고도 합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "47781911"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에서는 Windows에서 제공하는 추가 암호 정책을 사용할 수 없습니다.  
   
--   암호화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 암호는 연결 시 네트워크를 통해 전달되어야 합니다. 자동으로 연결되는 일부 응용 프로그램은 클라이언트에서 암호를 저장합니다. 이들은 추가 공격 지점입니다.  
+-   암호화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 암호는 연결 시 네트워크를 통해 전달되어야 합니다. 자동으로 연결되는 일부 애플리케이션은 클라이언트에서 암호를 저장합니다. 이들은 추가 공격 지점입니다.  
   
 ### <a name="advantages-of-sql-server-authentication"></a>SQL Server 인증의 장점  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47781911"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 사용자가 Windows 도메인으로 인증되는 혼합 운영 체제 환경을 지원할 수 있습니다.  
   
--   사용자가 알려지지 않았거나 신뢰할 수 없는 도메인에서 연결할 수 있게 해 줍니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 응용 프로그램이 이에 해당합니다.  
+-   사용자가 알려지지 않았거나 신뢰할 수 없는 도메인에서 연결할 수 있게 해 줍니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 애플리케이션이 이에 해당합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 고유한 ID를 만들 수 있는 웹 기반 응용 프로그램을 지원할 수 있습니다.  
   
--   소프트웨어 개발자가 사전 설정된 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 복잡한 권한 계층 구조를 사용하여 자신의 응용 프로그램을 배포할 수 있게 해 줍니다.  
+-   소프트웨어 개발자가 사전 설정된 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 복잡한 권한 계층 구조를 사용하여 자신의 애플리케이션을 배포할 수 있게 해 줍니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에 대한 로컬 관리자 권한에 제한이 없습니다.  

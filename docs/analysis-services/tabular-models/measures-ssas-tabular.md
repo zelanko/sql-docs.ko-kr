@@ -11,14 +11,14 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38045331"
 ---
 # <a name="measures"></a>측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
+  테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 애플리케이션에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
   
 ##  <a name="bkmk_understanding"></a> 이점  
  AVERAGE, COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 각 측정값에는 수식 외에 이름, 테이블 세부 정보, 형식, 소수 자릿수와 같은 측정값 데이터 형식으로 정의된 속성이 있습니다.  

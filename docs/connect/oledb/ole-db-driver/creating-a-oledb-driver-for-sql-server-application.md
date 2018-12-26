@@ -1,6 +1,6 @@
 ---
-title: SQL Server 응용 프로그램용 OLE DB 드라이버 만들기 | Microsoft Docs
-description: SQL Server 응용 프로그램용 OLE DB 드라이버 만들기
+title: SQL Server 애플리케이션용 OLE DB 드라이버 만들기 | Microsoft Docs
+description: SQL Server 애플리케이션용 OLE DB 드라이버 만들기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51605773"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 응용 프로그램용 OLE DB 드라이버 만들기
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 애플리케이션용 OLE DB 드라이버 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34025850"
@@ -26,7 +26,7 @@ ms.locfileid: "34025850"
   
 -   기본 데이터 원본에는 표시되지 않으며 기본 데이터 원본과 별도로 존재하는 관계, 기본 키, 개체 이름, 계산 열 및 쿼리를 포함할 수 있습니다.  
   
--   클라이언트 응용 프로그램에서 표시 또는 쿼리할 수 없습니다.  
+-   클라이언트 애플리케이션에서 표시 또는 쿼리할 수 없습니다.  
   
  DSV는 다차원 모델의 필수 구성 요소입니다. 대부분의 Analysis Services 개발자는 초기 모델 디자인 단계 중에 DSV를 만들며, 기본 데이터를 제공하는 외부 관계형 데이터베이스에 따라 최소한 한 개 이상의 DSV를 생성합니다. 하지만 이후 단계에서도 차원 및 큐브가 생성된 후 스키마 및 기본 데이터베이스 구조를 생성하여 DSV를 만들 수 있습니다. 이러한 두 번째 방법은 하향식 디자인이라고도 하며 프로토타입 및 분석 모델링에 자주 사용됩니다. 이 방법을 사용할 경우 스키마 생성 마법사를 사용하여 Analysis Services 프로젝트나 데이터베이스에서 정의한 OLAP 개체를 기반으로 기본 데이터 원본과 데이터 원본 개체를 만듭니다. DSV를 만드는 방법 및 시간에 관계없이, 모델을 처리할 수 있으려면 모든 모델에 DSV가 하나 포함되어야 합니다.  
   

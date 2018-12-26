@@ -21,7 +21,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47689221"
@@ -192,7 +192,7 @@ GO
 ```  
   
 ### <a name="g-adding-an-extended-property-to-a-role"></a>7. 역할에 확장 속성 추가  
- 다음 예에서는 응용 프로그램 역할을 만들고 해당 역할에 확장 속성을 추가합니다.  
+ 다음 예에서는 애플리케이션 역할을 만들고 해당 역할에 확장 속성을 추가합니다.  
   
 ```  
 USE AdventureWorks2012;   

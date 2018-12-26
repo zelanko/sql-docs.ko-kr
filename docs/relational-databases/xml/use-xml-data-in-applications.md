@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램에서 XML 데이터 사용 | Microsoft 문서
+title: 애플리케이션에서 XML 데이터 사용 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,9 +33,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51666062"
 ---
-# <a name="use-xml-data-in-applications"></a>응용 프로그램에서 XML 데이터 사용
+# <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 응용 프로그램에서 **xml** 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
+  이 항목에서는 애플리케이션에서 **xml** 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
   
 -   ADO 및 **Native Client를 사용하여** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 열에서 XML 처리  
   

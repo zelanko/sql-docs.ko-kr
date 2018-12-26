@@ -23,7 +23,7 @@ ms.locfileid: "50028062"
   
 이 연습에서는 Transaction-SQL 쿼리와 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 및 [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 개체를 잘 알고 있다고 가정합니다.  
   
-Visual Studio 2015 및 ASP.NET 웹 응용 프로그램을 사용하여 ReportViewer 컨트롤이 있는 ASP.NET 웹 페이지를 만듭니다. 컨트롤은 사용자가 만드는 보고서를 보도록 구성됩니다. 이 연습에서는 Microsoft Visual C#에서 응용 프로그램을 만듭니다.  
+Visual Studio 2015 및 ASP.NET 웹 애플리케이션을 사용하여 ReportViewer 컨트롤이 있는 ASP.NET 웹 페이지를 만듭니다. 컨트롤은 사용자가 만드는 보고서를 보도록 구성됩니다. 이 연습에서는 Microsoft Visual C#에서 애플리케이션을 만듭니다.  
   
 ## <a name="tasks"></a>태스크  
 [1단원: 새 웹 사이트 만들기](../reporting-services/lesson-1-create-a-new-web-site.md)  

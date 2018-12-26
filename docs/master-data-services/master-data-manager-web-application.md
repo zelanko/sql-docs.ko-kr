@@ -1,5 +1,5 @@
 ---
-title: 마스터 데이터 관리자 웹 응용 프로그램 | Microsoft Docs
+title: 마스터 데이터 관리자 웹 애플리케이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47682461"
 ---
-# <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램
+# <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "47682461"
 >>이 Microsoft 지원 문서에서 이 문제를 해결하는 방법에 대한 지침을 확인하세요.
 [SQL Server 2016에서 낮은 권한 계정을 통해 MDS 웹 사이트를 만들 수 없는 경우](https://aka.ms/mdssupport) 
   
- 웹 응용 프로그램의 탐색기 기능 영역은 관리자가 사용하지 않는 유일한 영역입니다. 탐색기는 마스터 데이터를 자주 업데이트하는 사용자용입니다. 이런 사용자에게는 자신의 작업을 수행하는 데 필요한 데이터에 대한 사용 권한이 있습니다.  
+ 웹 애플리케이션의 탐색기 기능 영역은 관리자가 사용하지 않는 유일한 영역입니다. 탐색기는 마스터 데이터를 자주 업데이트하는 사용자용입니다. 이런 사용자에게는 자신의 작업을 수행하는 데 필요한 데이터에 대한 사용 권한이 있습니다.  
   
  [탐색기 기능 영역&#40;마스터 데이터 관리자&#41;](../master-data-services/explorer-functional-area-master-data-manager.md)  
   

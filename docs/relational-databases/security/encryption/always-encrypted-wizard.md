@@ -27,9 +27,9 @@ ms.locfileid: "51673582"
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**상시 암호화 마법사** 를 사용하여 SQL Server 데이터베이스에 저장된 중요 데이터를 보호할 수 있습니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 응용 프로그램의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다.  기능에 대한 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.  
+**상시 암호화 마법사** 를 사용하여 SQL Server 데이터베이스에 저장된 중요 데이터를 보호할 수 있습니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다.  기능에 대한 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.  
  
- - 마법사를 사용하여 상시 암호화를 구성하고 클라이언트 응용 프로그램에서 사용하는 방법을 보여 주는 종합 연습은 [SQL 데이터베이스 자습서: 상시 암호화로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.  
+ - 마법사를 사용하여 상시 암호화를 구성하고 클라이언트 애플리케이션에서 사용하는 방법을 보여 주는 종합 연습은 [SQL 데이터베이스 자습서: 상시 암호화로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.  
  
  - 마법사 사용이 포함된 비디오는 [상시 암호화를 사용하여 중요 데이터 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요. 그리고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 팀 블로그 [SSMS 암호화 마법사 - 간단한 몇 단계로 상시 암호화 설정](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)을 참조하세요.  
  

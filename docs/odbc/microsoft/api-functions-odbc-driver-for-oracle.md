@@ -24,7 +24,7 @@ ms.locfileid: "47770321"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 함수(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  Microsoft ODBC Driver for Oracle에는 핵심 수준, 수준 1 및 수준 2 API 함수를 지원합니다. 이러한 함수에 나와 [ODBC 적합성 수준](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)합니다.  
   

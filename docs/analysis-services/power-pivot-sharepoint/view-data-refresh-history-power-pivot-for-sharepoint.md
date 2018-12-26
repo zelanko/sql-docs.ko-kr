@@ -50,7 +50,7 @@ ms.locfileid: "50099684"
  현재 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 모든 새로 고침 작업의 전체 레코드를 보여 주는 기록 페이지가 표시됩니다.  
   
 ##  <a name="viewITOps"></a> 모든 통합 문서에 대한 데이터 새로 고침 기록 보기  
- 팜 관리자와 서비스 응용 프로그램 관리자는 중앙 관리의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
+ 팜 관리자와 서비스 애플리케이션 관리자는 중앙 관리의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
   
 ##  <a name="pageelements"></a> 기록 정보 사용  
  데이터 새로 고침 기록 페이지에는 각 새로 고침 작업에 대한 자세한 정보가 제공됩니다. 이 페이지의 정보를 사용하여 새로 고침이 발생했는지 여부와 새로 고침이 실패한 이유를 확인할 수 있습니다.  

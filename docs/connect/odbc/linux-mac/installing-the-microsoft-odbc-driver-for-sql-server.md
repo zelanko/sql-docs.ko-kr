@@ -15,7 +15,7 @@ ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
 ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51600803"
@@ -453,7 +453,7 @@ Linux 기반 Microsoft ODBC 드라이버가 제대로 등록되었는지 확인�
 ## <a name="troubleshooting-connection-problems"></a>연결 문제 해결  
 ODBC 드라이버를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 수 없는 경우 다음 정보를 사용하여 문제를 확인합니다.  
   
-가장 일반적인 연결 문제는 UnixODBC 드라이버 관리자의 복사본이 두 개 설치되는 것입니다. libodbc\*.so\*에 대해 /usr을 검색합니다. 둘 이상의 파일 버전이 표시되면 둘 이상의 드라이버 관리자가 설치된 것일 수 있습니다. 응용 프로그램이 잘못된 버전을 사용할 수 있습니다.
+가장 일반적인 연결 문제는 UnixODBC 드라이버 관리자의 복사본이 두 개 설치되는 것입니다. libodbc\*.so\*에 대해 /usr을 검색합니다. 둘 이상의 파일 버전이 표시되면 둘 이상의 드라이버 관리자가 설치된 것일 수 있습니다. 애플리케이션이 잘못된 버전을 사용할 수 있습니다.
   
 편집 하 여 연결 로그를 사용 하도록 설정 하면 `/etc/odbcinst.ini` 이러한 항목을 사용 하 여 다음 섹션을 포함 하는 파일:
 

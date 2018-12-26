@@ -42,7 +42,7 @@ ms.locfileid: "52529737"
   
 -   SharePoint 배포 토폴로지를 사용하여 인터넷 연결을 통해 보고서를 방화벽 외부에 배포할 수 있습니다. 보고서 서버는 인터넷 액세스가 가능하도록 구성된 대규모 SharePoint 배포 컨텍스트에서 보고서 및 데이터 처리 서비스를 제공합니다.  
   
--   SharePoint 사이트의 사용자 지정 응용 프로그램 페이지에서 보고서, 모델, 데이터 원본, 일정 및 보고서 기록을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 도구와 같은 방식으로 SharePoint 사이트에서 속성을 설정하고 일정 및 구독을 정의하며 보고서 기록을 생성 및 관리할 수 있습니다.  
+-   SharePoint 사이트의 사용자 지정 애플리케이션 페이지에서 보고서, 모델, 데이터 원본, 일정 및 보고서 기록을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 도구와 같은 방식으로 SharePoint 사이트에서 속성을 설정하고 일정 및 구독을 정의하며 보고서 기록을 생성 및 관리할 수 있습니다.  
   
 -   보고서, 보고서 모델, 리소스 및 공유 데이터 원본 파일을 Office SharePoint Server의 보고서 센터를 비롯한 SharePoint 라이브러리에 게시하거나 업로드할 수 있습니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "52529737"
   
 -   새 SharePoint 배달 확장 프로그램을 사용하여 보고서를 구독하고 SharePoint 라이브러리에 배달할 수 있습니다. 전자 메일을 통해 보고서를 배달하거나 공유 폴더로 보고서를 배달할 수도 있습니다. 보고서 배달에는 보고서 서버 배달 확장 프로그램이 사용됩니다. 런타임에 쿼리된 구독자 데이터를 사용하여 대규모 보고서 배포용 데이터 기반 구독을 만들 수 있습니다.  
   
--   SharePoint 페이지에 추가할 수 있는 보고서 뷰어 웹 파트를 통해 SharePoint 웹 응용 프로그램 내에서 보고서를 볼 수 있습니다. 웹 파트에는 페이지 탐색, 검색, 인쇄 및 내보내기 기능이 포함되어 있습니다.  
+-   SharePoint 페이지에 추가할 수 있는 보고서 뷰어 웹 파트를 통해 SharePoint 웹 애플리케이션 내에서 보고서를 볼 수 있습니다. 웹 파트에는 페이지 탐색, 검색, 인쇄 및 내보내기 기능이 포함되어 있습니다.  
   
--   새 SOAP 엔드포인트에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 응용 프로그램을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
+-   새 SOAP 엔드포인트에 대해 프로그래밍하여 SharePoint 사이트와 통합되는 사용자 지정 애플리케이션을 만들 수 있습니다. 업데이트된 WMI(Windows Management Instrumentation) 공급자를 사용하여 SharePoint 통합 모드에서 실행되는 보고서 서버 인스턴스를 프로그래밍 방식으로 구성할 수도 있습니다.  
   
 -   연결된 모드의 Microsoft Access 서비스 보고  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52529737"
   
 -   SharePoint Business Data 카탈로그.  
   
--   SharePoint 개인 설정도 Reporting Services 페이지에서 지원되지 않습니다. SharePoint 웹 응용 프로그램에서 익명 액세스를 사용할 수 있는 경우에는 보고서 서버 통합이 지원되지 않습니다.  
+-   SharePoint 개인 설정도 Reporting Services 페이지에서 지원되지 않습니다. SharePoint 웹 애플리케이션에서 익명 액세스를 사용할 수 있는 경우에는 보고서 서버 통합이 지원되지 않습니다.  
   
 -   SQL Server Reporting Services는 SharePoint 문서 라이브러리 버전 제어를 지원하지 **않습니다** . “문서 버전 기록”을 사용하도록 구성된 문서 라이브러리에 보고서 항목을 저장한 경우 Reporting Services 기능은 제대로 작동하지 않으며 ULS 로그에 오류가 생성됩니다. 다음은 ULS 로그에 있는 오류의 예입니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52529737"
 > [!TIP]  
 >  보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
   
--   SharePoint에서 Reporting Services 추가 기능은 SharePoint 사이트 또는 팜에서 보고서 서버 내용을 확인, 저장 및 관리할 수 있도록 ReportServer 프록시 엔드포인트, 보고서 뷰어 웹 파트 및 응용 프로그램 페이지를 제공합니다.  
+-   SharePoint에서 Reporting Services 추가 기능은 SharePoint 사이트 또는 팜에서 보고서 서버 내용을 확인, 저장 및 관리할 수 있도록 ReportServer 프록시 엔드포인트, 보고서 뷰어 웹 파트 및 애플리케이션 페이지를 제공합니다.  
   
 -   Reporting Services에서는 업데이트된 프로그램 파일, SOAP 엔드포인트, 사용자 지정 보안 및 배달 확장 프로그램을 제공합니다. 보고서 서버는 SharePoint 사이트를 통해 보고서 액세스와 배달만 전적으로 지원하는 SharePoint 통합 모드에서 실행되도록 구성해야 합니다.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "52529737"
   
  보고서 서버를 SharePoint 제품 배포 내에서 실행되도록 구성하는 경우 여러 언어가 혼합되어 나타날 수 있습니다. 사용자 인터페이스, 설명서 및 메시지는 다음 언어로 표시됩니다.  
   
--   Reporting Services의 모든 응용 프로그램 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 중 Reporting Services 인스턴스에 사용되는 언어로 표시됩니다.  
+-   Reporting Services의 모든 애플리케이션 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 중 Reporting Services 인스턴스에 사용되는 언어로 표시됩니다.  
   
--   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 응용 프로그램 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](https://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
+-   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 애플리케이션 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](https://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
   
 -   SharePoint 사이트, SharePoint 중앙 관리, 온라인 도움말 및 메시지는 Office Server 제품에서 지원되는 언어로 제공됩니다.  
   

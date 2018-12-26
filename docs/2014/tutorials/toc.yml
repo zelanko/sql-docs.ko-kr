@@ -1,3 +1,4 @@
+items:
 - name: SQL Server 2014 자습서
   href: tutorials-for-sql-server-2014.md
 - name: '자습서: Transact-SQL 문 작성 +'
@@ -5,395 +6,401 @@
 - name: 데이터 마이닝 자습서
   href: ../analysis-services/data-mining-tutorials-analysis-services.md
   items:
-    - name: 기본 데이터 마이닝 자습서
-      href: basic-data-mining-tutorial.md
+  - name: 기본 데이터 마이닝 자습서
+    href: basic-data-mining-tutorial.md
+    items:
+    - name: '1단원: Analysis Services 데이터베이스 준비'
+      href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
       items:
-        - name: '1단원: Analysis Services 데이터베이스 준비'
-          href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
-          items:
-            - name: Analysis Services 프로젝트 만들기
-              href: creating-an-analysis-services-project-basic-data-mining-tutorial.md
-            - name: 데이터 원본 만들기
-              href: creating-a-data-source-basic-data-mining-tutorial.md
-            - name: 데이터 원본 뷰 만들기
-              href: creating-a-data-source-view-basic-data-mining-tutorial.md
-        - name: '2단원: 대상 메일 구조 구축'
-          href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
-          items:
-            - name: 타겟 메일링 마이닝 모델 구조 만들기
-              href: creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md
-            - name: 데이터 형식 및 내용 유형 지정
-              href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
-            - name: 구조에 대한 테스트 데이터 집합 지정
-              href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
-        - name: '3단원: 모델 추가 및 처리'
-          href: lesson-3-adding-and-processing-models.md
-          items:
-            - name: 대상 메일 구조에 새 모델 추가
-              href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
-            - name: 대상 메일 구조에서 모델 처리
-              href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
-        - name: '4단원: 타겟 메일링 모델 탐색'
-          href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
-          items:
-            - name: 의사 결정 트리 모델 탐색
-              href: exploring-the-decision-tree-model-basic-data-mining-tutorial.md
-            - name: 클러스터링 모델 탐색
-              href: exploring-the-clustering-model-basic-data-mining-tutorial.md
-            - name: Naive Bayes 모델 탐색
-              href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
-        - name: '5단원: 모델 테스트'
-          href: lesson-5-testing-models-basic-data-mining-tutorial.md
-          items:
-            - name: 리프트 차트를 사용하여 정확도 테스트
-              href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
-            - name: 터링된 모델 테스트
-              href: testing-a-filtered-model-basic-data-mining-tutorial.md
-        - name: '6단원: 예측 만들기 및 작업'
-          href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
-          items:
-            - name: 예측 만들기
-              href: creating-predictions-basic-data-mining-tutorial.md
-            - name: 구조 데이터에 드릴스루 사용
-              href: using-drillthrough-on-structure-data-basic-data-mining-tutorial.md
-    - name: 중급 데이터 마이닝 자습서
-      href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
+      - name: Analysis Services 프로젝트 만들기
+        href: creating-an-analysis-services-project-basic-data-mining-tutorial.md
+      - name: 데이터 원본 만들기
+        href: creating-a-data-source-basic-data-mining-tutorial.md
+      - name: 데이터 원본 뷰 만들기
+        href: creating-a-data-source-view-basic-data-mining-tutorial.md
+    - name: '2단원: 대상 메일 구조 구축'
+      href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
       items:
-        - name: '1단원: 중간 데이터 마이닝 솔루션 만들기'
-          href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
-          items:
-            - name: 솔루션 및 데이터 원본 만들기
-              href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: '2단원: 예측 시나리오 구축'
-          href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
-          items:
-            - name: 예측할 데이터 원본 뷰 추가
-              href: adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md
-            - name: 시계열 모델에 대한 요구 사항 이해
-              href: time-series-model-requirements-intermediate-data-mining-tutorial.md
-            - name: 예측 구조 및 모델 만들기
-              href: creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md
-            - name: 예측 구조 수정
-              href: modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md
-            - name: 예측 모델 사용자 지정 및 처리
-              href: customize-process-forecasting-model-intermediate-data-mining-tutorial.md
-            - name: 예측 모델 탐색
-              href: exploring-the-forecasting-model-intermediate-data-mining-tutorial.md
-            - name: 시계열 예측 만들기
-              href: creating-time-series-predictions-intermediate-data-mining-tutorial.md
-            - name: 고급 시계열 예측
-              href: advanced-time-series-predictions-intermediate-data-mining-tutorial.md
-              items:
-                - name: 업데이트된 데이터를 사용한 시계열 예측
-                  href: time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md
-                - name: 대체 데이터를 사용한 시계열 예측
-                  href: time-series-predictions-replacement-data-intermediate-data-mining.md
-            - name: 예측 모델에 대한 예측 비교
-              href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
-        - name: '3단원: 시장 바구니 시나리오 구축'
-          href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
-          items:
-            - name: 중첩 테이블이 있는 데이터 원본 뷰 추가
-              href: adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md
-            - name: 시장 바구니 구조 및 모델 만들기
-              href: creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md
-            - name: 시장 바구니 모델 수정 및 처리
-              href: modify-process-market-basket-model-intermediate-data-mining-tutorial.md
-            - name: 시장 바구니 모델 탐색
-              href: exploring-the-market-basket-models-intermediate-data-mining-tutorial.md
-            - name: 마이닝 모델의 중첩 테이블 필터링
-              href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
-            - name: 연결 예측
-              href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: '4단원: 시퀀스 클러스터링 시나리오 구축'
-          href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
-          items:
-            - name: 시퀀스 클러스터링 마이닝 모델 구조 만들기
-              href: create-sequence-clustering-mining-model-intermediate-data-mining.md
-            - name: 시퀀스 클러스터링 모델 처리
-              href: processing-the-sequence-clustering-model.md
-            - name: 시퀀스 클러스터링 모델 탐색
-              href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
-            - name: 관련된 시퀀스 클러스터링 모델 만들기
-              href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
-            - name: 시퀀스 클러스터링 모델에서 예측 만들기
-              href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: '5단원: 신경망 및 로지스틱 회귀 모델 작성'
-          href: lesson-5-build-models-intermediate-data-mining-tutorial.md
-          items:
-            - name: 콜 센터 데이터의 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
-              href: add-data-source-view-call-center-data-intermediate-data-mining.md
-            - name: 신경망 구조 및 모델 만들기
-              href: creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md
-            - name: 콜 센터 모델 탐색
-              href: exploring-the-call-center-model-intermediate-data-mining-tutorial.md
-            - name: 콜 센터 구조에 로지스틱 회귀 모델 추가
-              href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
-            - name: 콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
-              href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서'
-      href: create-query-data-mining-models-dmx-tutorials.md
+      - name: 타겟 메일링 마이닝 모델 구조 만들기
+        href: creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md
+      - name: 데이터 형식 및 내용 유형 지정
+        href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
+      - name: 구조에 대한 테스트 데이터 집합 지정
+        href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
+    - name: '3단원: 모델 추가 및 처리'
+      href: lesson-3-adding-and-processing-models.md
       items:
-        - name: Bike Buyer DMX 자습서
-          href: bike-buyer-dmx-tutorial.md
-          items:
-            - name: '1단원: Bike Buyer 마이닝 구조 만들기'
-              href: lesson-1-creating-the-bike-buyer-mining-structure.md
-            - name: '2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가'
-              href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
-            - name: '3단원: Bike Buyer 마이닝 구조 처리'
-              href: lesson-3-processing-the-bike-buyer-mining-structure.md
-            - name: '4단원: Bike Buyer 마이닝 모델 찾아보기'
-              href: lesson-4-browsing-the-bike-buyer-mining-models.md
-            - name: '5단원: 예측 쿼리 실행'
-              href: lesson-5-executing-prediction-queries.md
-        - name: Market Basket DMX 자습서
-          href: market-basket-dmx-tutorial.md
-          items:
-            - name: '1단원: Market Basket 마이닝 구조 만들기'
-              href: lesson-1-creating-the-market-basket-mining-structure.md
-            - name: '2단원: Market Basket 마이닝 구조에 마이닝 모델 추가'
-              href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
-            - name: '3단원: Market Basket 마이닝 구조 처리'
-              href: lesson-3-processing-the-market-basket-mining-structure.md
-            - name: '4단원: Market Basket 예측 실행'
-              href: lesson-4-executing-market-basket-predictions.md
-        - name: 시계열 예측 DMX 자습서
-          href: time-series-prediction-dmx-tutorial.md
-          items:
-            - name: '1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기'
-              href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
-            - name: '2단원: 시계열 마이닝 구조에 마이닝 모델 추가'
-              href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
-            - name: '3단원: 시계열 구조 및 모델 처리'
-              href: lesson-3-processing-the-time-series-structure-and-models.md
-            - name: '4단원: DMX를 사용하여 시계열 예측 만들기'
-              href: lesson-4-creating-time-series-predictions-using-dmx.md
-            - name: '5단원: 시계열 모델 확장'
-              href: lesson-5-extending-the-time-series-model.md
+      - name: 대상 메일 구조에 새 모델 추가
+        href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+      - name: 대상 메일 구조에서 모델 처리
+        href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+    - name: '4단원: 타겟 메일링 모델 탐색'
+      href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
+      items:
+      - name: 의사 결정 트리 모델 탐색
+        href: exploring-the-decision-tree-model-basic-data-mining-tutorial.md
+      - name: 클러스터링 모델 탐색
+        href: exploring-the-clustering-model-basic-data-mining-tutorial.md
+      - name: Naive Bayes 모델 탐색
+        href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
+    - name: '5단원: 모델 테스트'
+      href: lesson-5-testing-models-basic-data-mining-tutorial.md
+      items:
+      - name: 리프트 차트를 사용하여 정확도 테스트
+        href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
+      - name: 터링된 모델 테스트
+        href: testing-a-filtered-model-basic-data-mining-tutorial.md
+    - name: '6단원: 예측 만들기 및 작업'
+      href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
+      items:
+      - name: 예측 만들기
+        href: creating-predictions-basic-data-mining-tutorial.md
+      - name: 구조 데이터에 드릴스루 사용
+        href: using-drillthrough-on-structure-data-basic-data-mining-tutorial.md
+  - name: 중급 데이터 마이닝 자습서
+    href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
+    items:
+    - name: '1단원: 중간 데이터 마이닝 솔루션 만들기'
+      href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
+      items:
+      - name: 솔루션 및 데이터 원본 만들기
+        href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
+    - name: '2단원: 예측 시나리오 구축'
+      href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
+      items:
+      - name: 예측할 데이터 원본 뷰 추가
+        href: adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md
+      - name: 시계열 모델에 대한 요구 사항 이해
+        href: time-series-model-requirements-intermediate-data-mining-tutorial.md
+      - name: 예측 구조 및 모델 만들기
+        href: creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: 예측 구조 수정
+        href: modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md
+      - name: 예측 모델 사용자 지정 및 처리
+        href: customize-process-forecasting-model-intermediate-data-mining-tutorial.md
+      - name: 예측 모델 탐색
+        href: exploring-the-forecasting-model-intermediate-data-mining-tutorial.md
+      - name: 시계열 예측 만들기
+        href: creating-time-series-predictions-intermediate-data-mining-tutorial.md
+      - name: 고급 시계열 예측
+        href: advanced-time-series-predictions-intermediate-data-mining-tutorial.md
+        items:
+        - name: 업데이트된 데이터를 사용한 시계열 예측
+          href: time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md
+        - name: 대체 데이터를 사용한 시계열 예측
+          href: time-series-predictions-replacement-data-intermediate-data-mining.md
+      - name: 예측 모델에 대한 예측 비교
+        href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
+    - name: '3단원: 시장 바구니 시나리오 구축'
+      href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
+      items:
+      - name: 중첩 테이블이 있는 데이터 원본 뷰 추가
+        href: adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md
+      - name: 시장 바구니 구조 및 모델 만들기
+        href: creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: 시장 바구니 모델 수정 및 처리
+        href: modify-process-market-basket-model-intermediate-data-mining-tutorial.md
+      - name: 시장 바구니 모델 탐색
+        href: exploring-the-market-basket-models-intermediate-data-mining-tutorial.md
+      - name: 마이닝 모델의 중첩 테이블 필터링
+        href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
+      - name: 연결 예측
+        href: predicting-associations-intermediate-data-mining-tutorial.md
+    - name: '4단원: 시퀀스 클러스터링 시나리오 구축'
+      href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
+      items:
+      - name: 시퀀스 클러스터링 마이닝 모델 구조 만들기
+        href: create-sequence-clustering-mining-model-intermediate-data-mining.md
+      - name: 시퀀스 클러스터링 모델 처리
+        href: processing-the-sequence-clustering-model.md
+      - name: 시퀀스 클러스터링 모델 탐색
+        href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
+      - name: 관련된 시퀀스 클러스터링 모델 만들기
+        href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
+      - name: 시퀀스 클러스터링 모델에서 예측 만들기
+        href: create-predictions-on-model-intermediate-data-mining-tutorial.md
+    - name: '5단원: 신경망 및 로지스틱 회귀 모델 작성'
+      href: lesson-5-build-models-intermediate-data-mining-tutorial.md
+      items:
+      - name: 콜 센터 데이터의 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
+        href: add-data-source-view-call-center-data-intermediate-data-mining.md
+      - name: 신경망 구조 및 모델 만들기
+        href: creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md
+      - name: 콜 센터 모델 탐색
+        href: exploring-the-call-center-model-intermediate-data-mining-tutorial.md
+      - name: 콜 센터 구조에 로지스틱 회귀 모델 추가
+        href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
+      - name: 콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
+        href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
+  - name: 'DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서'
+    href: create-query-data-mining-models-dmx-tutorials.md
+    items:
+    - name: Bike Buyer DMX 자습서
+      href: bike-buyer-dmx-tutorial.md
+      items:
+      - name: '1단원: Bike Buyer 마이닝 구조 만들기'
+        href: lesson-1-creating-the-bike-buyer-mining-structure.md
+      - name: '2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가'
+        href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
+      - name: '3단원: Bike Buyer 마이닝 구조 처리'
+        href: lesson-3-processing-the-bike-buyer-mining-structure.md
+      - name: '4단원: Bike Buyer 마이닝 모델 찾아보기'
+        href: lesson-4-browsing-the-bike-buyer-mining-models.md
+      - name: '5단원: 예측 쿼리 실행'
+        href: lesson-5-executing-prediction-queries.md
+    - name: Market Basket DMX 자습서
+      href: market-basket-dmx-tutorial.md
+      items:
+      - name: '1단원: Market Basket 마이닝 구조 만들기'
+        href: lesson-1-creating-the-market-basket-mining-structure.md
+      - name: '2단원: Market Basket 마이닝 구조에 마이닝 모델 추가'
+        href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
+      - name: '3단원: Market Basket 마이닝 구조 처리'
+        href: lesson-3-processing-the-market-basket-mining-structure.md
+      - name: '4단원: Market Basket 예측 실행'
+        href: lesson-4-executing-market-basket-predictions.md
+    - name: 시계열 예측 DMX 자습서
+      href: time-series-prediction-dmx-tutorial.md
+      items:
+      - name: '1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기'
+        href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
+      - name: '2단원: 시계열 마이닝 구조에 마이닝 모델 추가'
+        href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
+      - name: '3단원: 시계열 구조 및 모델 처리'
+        href: lesson-3-processing-the-time-series-structure-and-models.md
+      - name: '4단원: DMX를 사용하여 시계열 예측 만들기'
+        href: lesson-4-creating-time-series-predictions-using-dmx.md
+      - name: '5단원: 시계열 모델 확장'
+        href: lesson-5-extending-the-time-series-model.md
 - name: Reporting Services 자습서
   href: ../reporting-services/reporting-services-tutorials-ssrs.md
   items:
-    - name: 기본 테이블 보고서 만들기(SSRS 자습서)
-      href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
-      items:
-        - name: '1단원: 보고서 서버 프로젝트 만들기'
-          href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-        - name: '2단원: 연결 정보 지정'
-          href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-        - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
-          href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: '4단원: 보고서에 테이블 추가'
-          href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lesson 5: Formatting a Report'
-          href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lesson 6: Adding Grouping and Totals'
-          href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
-    - name: 데이터 기반 구독 만들기(SSRS 자습서)
-      href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
-      items:
-        - name: '1단원: 샘플 구독자 데이터베이스 만들기'
-          href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 'Lesson 2: Modifying the Report Data Source Properties'
-          href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lesson 3: Defining a Data-Driven Subscription'
-          href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
-    - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
-      href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
-      items:
-        - name: '1단원: 새 웹 사이트 만들기'
-          href: ../reporting-services/lesson-1-create-a-new-web-site.md
-        - name: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-          href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-        - name: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인'
-          href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: '4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-          href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-        - name: '5단원: 보고서 마법사를 사용하여 자식 보고서 디자인'
-          href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: '6단원: 응용 프로그램에 ReportViewer 컨트롤 추가'
-          href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-        - name: '7단원: 부모 보고서에 드릴스루 동작 추가'
-          href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-        - name: '8단원: 데이터 필터 만들기'
-          href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 'Lesson 9: Build and Run the Application'
-          href: ../reporting-services/lesson-9-build-and-run-the-application.md
-    - name: 'Visual Basic 또는 Visual C#을 사용하여 보고서 서버 웹 서비스에 액세스(SSRS 자습서)'
-      href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
-      items:
-        - name: '1단원: 웹 서비스 클라이언트 프로젝트 만들기'
-          href: lesson-1-creating-the-web-service-client-project.md
-        - name: '2단원: 웹 참조 추가'
-          href: lesson-2-adding-a-web-reference.md
-        - name: '3단원: 웹 서비스에 액세스'
-          href: lesson-3-accessing-the-web-service.md
-        - name: '4단원: 응용 프로그램 실행(VB/VC#)'
-          href: lesson-4-running-the-application-vb-vcsharp.md
-    - name: RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
-      href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
-      items:
-        - name: '1단원: RDL Schema Visual Studio 프로젝트 만들기'
-          href: lesson-1-create-the-rdl-schema-visual-studio-project.md
-        - name: '2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성'
-          href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
-        - name: '3단원: 보고서 서버에서 보고서 정의 로드'
-          href: lesson-3-load-a-report-definition-from-the-report-server.md
-        - name: '4단원: 프로그래밍 방식으로 보고서 정의 업데이트'
-          href: lesson-4-update-the-report-definition-programmatically.md
-        - name: '5단원: 보고서 정의를 보고서 서버에 게시'
-          href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: '6단원: RDL Schema 응용 프로그램 실행(VB/C#)'
-          href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
-    - name: 자습서(보고서 작성기)
-      href: ../reporting-services/report-builder-tutorials.md
-      items:
-        - name: 자습서의 사전 요구 사항
-          href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
-        - name: 데이터에 연결하는 다른 방법(보고서 작성기)
-          href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: '자습서: 기본 테이블 보고서 만들기'
-          href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: '자습서: 행렬 보고서 만들기'
-          href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: '자습서: 자유 형식 보고서 만들기'
-          href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: '자습서: 텍스트 서식 지정(보고서 작성기)'
-          href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)'
-          href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
-          href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
-          href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
-          href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 KPI 추가'
-          href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: '자습서: 지도 보고서'
-          href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
-          href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: '자습서: 드릴스루 보고서 및 주 보고서 만들기'
-          href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: '자습서: 식 소개'
-          href: ../reporting-services/tutorial-introducing-expressions.md
+  - name: 기본 테이블 보고서 만들기(SSRS 자습서)
+    href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
+    items:
+    - name: '1단원: 보고서 서버 프로젝트 만들기'
+      href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+    - name: '2단원: 연결 정보 지정'
+      href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+    - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
+      href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+    - name: '4단원: 보고서에 테이블 추가'
+      href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: 'Lesson 5: Formatting a Report'
+      href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+    - name: 'Lesson 6: Adding Grouping and Totals'
+      href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
+  - name: 데이터 기반 구독 만들기(SSRS 자습서)
+    href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
+    items:
+    - name: '1단원: 샘플 구독자 데이터베이스 만들기'
+      href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+    - name: 'Lesson 2: Modifying the Report Data Source Properties'
+      href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+    - name: 'Lesson 3: Defining a Data-Driven Subscription'
+      href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
+  - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
+    href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    items:
+    - name: '1단원: 새 웹 사이트 만들기'
+      href: ../reporting-services/lesson-1-create-a-new-web-site.md
+    - name: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
+      href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+    - name: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인'
+      href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+    - name: '4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
+      href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+    - name: '5단원: 보고서 마법사를 사용하여 자식 보고서 디자인'
+      href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+    - name: '6단원: 애플리케이션에 ReportViewer 컨트롤 추가'
+      href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
+    - name: '7단원: 부모 보고서에 드릴스루 동작 추가'
+      href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+    - name: '8단원: 데이터 필터 만들기'
+      href: ../reporting-services/lesson-8-create-a-data-filter.md
+    - name: 'Lesson 9: Build and Run the Application'
+      href: ../reporting-services/lesson-9-build-and-run-the-application.md
+  - name: Visual Basic 또는 Visual C#을 사용하여 보고서 서버 웹 서비스에 액세스(SSRS 자습서)
+    href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
+    items:
+    - name: '1단원: 웹 서비스 클라이언트 프로젝트 만들기'
+      href: lesson-1-creating-the-web-service-client-project.md
+    - name: '2단원: 웹 참조 추가'
+      href: lesson-2-adding-a-web-reference.md
+    - name: '3단원: 웹 서비스에 액세스'
+      href: lesson-3-accessing-the-web-service.md
+    - name: '4단원: 애플리케이션 실행(VB/VC#)'
+      href: lesson-4-running-the-application-vb-vcsharp.md
+  - name: RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
+    href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
+    items:
+    - name: '1단원: RDL Schema Visual Studio 프로젝트 만들기'
+      href: lesson-1-create-the-rdl-schema-visual-studio-project.md
+    - name: '2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성'
+      href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
+    - name: '3단원: 보고서 서버에서 보고서 정의 로드'
+      href: lesson-3-load-a-report-definition-from-the-report-server.md
+    - name: '4단원: 프로그래밍 방식으로 보고서 정의 업데이트'
+      href: lesson-4-update-the-report-definition-programmatically.md
+    - name: '5단원: 보고서 정의를 보고서 서버에 게시'
+      href: lesson-5-publish-the-report-definition-to-the-report-server.md
+    - name: '6단원: RDL Schema 애플리케이션 실행(VB/C#)'
+      href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
+  - name: 자습서(보고서 작성기)
+    href: ../reporting-services/report-builder-tutorials.md
+    items:
+    - name: 자습서의 사전 요구 사항
+      href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
+    - name: 데이터에 연결하는 다른 방법(보고서 작성기)
+      href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
+    - name: '자습서: 기본 테이블 보고서 만들기'
+      href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
+    - name: '자습서: 행렬 보고서 만들기'
+      href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
+    - name: '자습서: 자유 형식 보고서 만들기'
+      href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
+    - name: '자습서: 텍스트 서식 지정(보고서 작성기)'
+      href: ../reporting-services/tutorial-format-text-report-builder.md
+    - name: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 KPI 추가'
+      href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
+    - name: '자습서: 지도 보고서'
+      href: ../reporting-services/tutorial-map-report-report-builder.md
+    - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
+    - name: '자습서: 드릴스루 보고서 및 주 보고서 만들기'
+      href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
+    - name: '자습서: 식 소개'
+      href: ../reporting-services/tutorial-introducing-expressions.md
 - name: 엔터프라이즈 정보 관리 자습서
   href: enterprise-information-management-tutorials.md
   items:
-    - name: 'SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]'
-      href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
+  - name: SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
+    href: enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md
+    items:
+    - name: '1단원: 공급자 DQS 기술 자료 만들기'
+      href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
       items:
-        - name: '1단원: 공급자 DQS 기술 자료 만들기'
-          href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
-          items:
-            - name: '태스크 1: 기술 자료 및 도메인 만들기'
-              href: task-1-creating-a-knowledge-base-and-domains.md
-            - name: '태스크 2: 도메인 값을 수동으로 추가'
-              href: task-2-adding-domain-values-manually.md
-            - name: '태스크 3: Excel 파일에서 도메인 값 가져오기'
-              href: task-3-importing-domain-values-from-an-excel-file.md
-            - name: '작업 4: 도메인 규칙 설정'
-              href: task-4-setting-domain-rules.md
-            - name: '태스크 5: 용어 기반 관계 설정'
-              href: task-5-setting-term-based-relationships.md
-            - name: '태스크 6: 동의어 설정'
-              href: task-6-setting-synonyms.md
-            - name: '태스크 7: 복합 도메인 만들기'
-              href: task-7-creating-a-composite-domain.md
-            - name: '태스크 8: 복합 도메인 규칙 만들기'
-              href: task-8-creating-a-composite-domain-rule.md
-            - name: '태스크 9: 참조 데이터 서비스 구성'
-              href: task-9-configuring-a-reference-data-service.md
-            - name: '태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성'
-              href: task-10-configuring-composite-domain-to-use-reference-data-service.md
-            - name: '태스크 11: 기술 자료 게시'
-              href: task-11-publishing-the-knowledge-base.md
-            - name: '태스크 12: 지식 검색(기술 자료 검색)'
-              href: task-12-discovering-knowledge-knowledge-discovery.md
-        - name: '2단원: 공급자 기술 자료를 사용하여 공급자 데이터 정리'
-          href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
-          items:
-            - name: '태스크 1: 데이터 품질 프로젝트 만들기'
-              href: task-1-creating-a-data-quality-project.md
-            - name: '태스크 2: Excel 열을 DQS 도메인에 매핑'
-              href: task-2-mapping-excel-columns-to-dqs-domains.md
-            - name: '태스크 3: 공급자 기술 자료에 대한 데이터 정리'
-              href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
-            - name: '태스크 4: 결과 관리 및 보기'
-              href: task-4-manaing-and-viewing-results.md
-            - name: '태스크 5: 정리 결과를 Excel 파일로 내보내기'
-              href: task-5-exporting-cleansing-results-to-an-excel-file.md
-            - name: '태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기'
-              href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
-        - name: '3단원: 데이터 일치로 공급자 목록에서 중복 항목 제거'
-          href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
-          items:
-            - name: '태스크 1: 일치 정책 정의'
-              href: task-1-defining-a-matching-policy.md
-            - name: '태스크 2: 일치 정책 테스트 및 게시'
-              href: task-2-testing-and-publishing-the-matching-policy.md
-            - name: '태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행'
-              href: task-3-creating-and-running-a-data-quality-project-for-matching.md
-            - name: '작업 4: 일치 작업의 결과를 Excel 파일로 내보내기'
-              href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
-        - name: '4단원: MDS에 공급자 데이터 저장'
-          href: lesson-4-storing-supplier-data-in-mds.md
-          items:
-            - name: '태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기'
-              href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: '태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드'
-              href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
-            - name: '태스크 3: 마스터 데이터 관리자에서 데이터 확인'
-              href: task-3-verifying-the-data-in-master-data-manager.md
-            - name: '태스크 4(선택 사항): 새 데이터 집합 결합, 일치 및 게시'
-              href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
-            - name: '태스크 5: Excel에서 도메인 기반 특성 만들기'
-              href: task-5-creating-a-domain-based-attribute-from-excel.md
-            - name: '태스크 6: 마스터 데이터 관리자를 사용하여 도메인 기반 특성이 생성되었는지 확인'
-              href: task-6-verify-domain-based-attribute-master-data-manager.md
-            - name: '태스크 7: Excel에서 마스터 데이터 관리자를 사용하여 수행된 업데이트 보기'
-              href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
-            - name: '태스크 8: Excel에서 State 엔터티에 새 값 추가'
-              href: task-8-adding-a-new-value-for-state-entity-in-excel.md
-            - name: '태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기'
-              href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
-        - name: '5단원: SSIS를 사용하여 정리 및 일치 자동화'
-          href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
-          items:
-            - name: '태스크 1(필수): MDS에서 공급자 데이터 제거'
-              href: task-1-prerequisite-removing-supplier-data-in-mds.md
-            - name: '태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기'
-              href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
-            - name: '태스크 3(선택 사항): 구독 뷰 검토'
-              href: task-3-optional-reviewing-the-subscription-views.md
-            - name: '작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기'
-              href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
-            - name: '태스크 5: 데이터 흐름 태스크 추가'
-              href: task-5-adding-data-flow-task.md
-            - name: '태스크 6: 데이터 흐름에 Excel 원본 추가'
-              href: task-6-adding-excel-source-to-the-data-flow.md
-            - name: '태스크 7: 데이터 흐름에 DQS 정리 변환 추가'
-              href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: '태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할'
-              href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
-            - name: '태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합'
-              href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
-            - name: '태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별'
-              href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
-            - name: '태스크 11: 조건부 분할 변환을 추가하여 중복 항목 필터링'
-              href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
-            - name: '태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가'
-              href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
-            - name: '태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기'
-              href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: '태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행'
-              href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
-            - name: '태스크 15: SSIS 프로젝트 작성 및 실행'
-              href: task-15-building-and-running-the-ssis-project.md
-            - name: '태스크 16: 마스터 데이터 관리자에서 확인'
-              href: task-16-verifying-with-master-data-manager.md
-            - name: '태스크 17: SSIS 패키지로 생성된 DQS 정리 프로젝트 검토'
-              href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
-        - name: 결론
-          href: conclusion.md
+      - name: '태스크 1: 기술 자료 및 도메인 만들기'
+        href: task-1-creating-a-knowledge-base-and-domains.md
+      - name: '태스크 2: 도메인 값을 수동으로 추가'
+        href: task-2-adding-domain-values-manually.md
+      - name: '태스크 3: Excel 파일에서 도메인 값 가져오기'
+        href: task-3-importing-domain-values-from-an-excel-file.md
+      - name: '작업 4: 도메인 규칙 설정'
+        href: task-4-setting-domain-rules.md
+      - name: '태스크 5: 용어 기반 관계 설정'
+        href: task-5-setting-term-based-relationships.md
+      - name: '태스크 6: 동의어 설정'
+        href: task-6-setting-synonyms.md
+      - name: '태스크 7: 복합 도메인 만들기'
+        href: task-7-creating-a-composite-domain.md
+      - name: '태스크 8: 복합 도메인 규칙 만들기'
+        href: task-8-creating-a-composite-domain-rule.md
+      - name: '태스크 9: 참조 데이터 서비스 구성'
+        href: task-9-configuring-a-reference-data-service.md
+      - name: '태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성'
+        href: task-10-configuring-composite-domain-to-use-reference-data-service.md
+      - name: '태스크 11: 기술 자료 게시'
+        href: task-11-publishing-the-knowledge-base.md
+      - name: '태스크 12: 지식 검색(기술 자료 검색)'
+        href: task-12-discovering-knowledge-knowledge-discovery.md
+    - name: '2단원: 공급자 기술 자료를 사용하여 공급자 데이터 정리'
+      href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
+      items:
+      - name: '태스크 1: 데이터 품질 프로젝트 만들기'
+        href: task-1-creating-a-data-quality-project.md
+      - name: '태스크 2: Excel 열을 DQS 도메인에 매핑'
+        href: task-2-mapping-excel-columns-to-dqs-domains.md
+      - name: '태스크 3: 공급자 기술 자료에 대한 데이터 정리'
+        href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
+      - name: '태스크 4: 결과 관리 및 보기'
+        href: task-4-manaing-and-viewing-results.md
+      - name: '태스크 5: 정리 결과를 Excel 파일로 내보내기'
+        href: task-5-exporting-cleansing-results-to-an-excel-file.md
+      - name: '태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기'
+        href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
+    - name: '3단원: 데이터 일치로 공급자 목록에서 중복 항목 제거'
+      href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
+      items:
+      - name: '태스크 1: 일치 정책 정의'
+        href: task-1-defining-a-matching-policy.md
+      - name: '태스크 2: 일치 정책 테스트 및 게시'
+        href: task-2-testing-and-publishing-the-matching-policy.md
+      - name: '태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행'
+        href: task-3-creating-and-running-a-data-quality-project-for-matching.md
+      - name: '작업 4: 일치 작업의 결과를 Excel 파일로 내보내기'
+        href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
+    - name: '4단원: MDS에 공급자 데이터 저장'
+      href: lesson-4-storing-supplier-data-in-mds.md
+      items:
+      - name: '태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기'
+        href: task-1-creating-suppliers-model-using-master-data-manager.md
+      - name: '태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드'
+        href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
+      - name: '태스크 3: 마스터 데이터 관리자에서 데이터 확인'
+        href: task-3-verifying-the-data-in-master-data-manager.md
+      - name: '태스크 4(선택 사항): 새 데이터 집합 결합, 일치 및 게시'
+        href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
+      - name: '태스크 5: Excel에서 도메인 기반 특성 만들기'
+        href: task-5-creating-a-domain-based-attribute-from-excel.md
+      - name: '태스크 6: 마스터 데이터 관리자를 사용하여 도메인 기반 특성이 생성되었는지 확인'
+        href: task-6-verify-domain-based-attribute-master-data-manager.md
+      - name: '태스크 7: Excel에서 마스터 데이터 관리자를 사용하여 수행된 업데이트 보기'
+        href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
+      - name: '태스크 8: Excel에서 State 엔터티에 새 값 추가'
+        href: task-8-adding-a-new-value-for-state-entity-in-excel.md
+      - name: '태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기'
+        href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
+    - name: '5단원: SSIS를 사용하여 정리 및 일치 자동화'
+      href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
+      items:
+      - name: '태스크 1(필수): MDS에서 공급자 데이터 제거'
+        href: task-1-prerequisite-removing-supplier-data-in-mds.md
+      - name: '태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기'
+        href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
+      - name: '태스크 3(선택 사항): 구독 뷰 검토'
+        href: task-3-optional-reviewing-the-subscription-views.md
+      - name: '작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기'
+        href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
+      - name: '태스크 5: 데이터 흐름 태스크 추가'
+        href: task-5-adding-data-flow-task.md
+      - name: '태스크 6: 데이터 흐름에 Excel 원본 추가'
+        href: task-6-adding-excel-source-to-the-data-flow.md
+      - name: '태스크 7: 데이터 흐름에 DQS 정리 변환 추가'
+        href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
+      - name: '태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할'
+        href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
+      - name: '태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합'
+        href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
+      - name: '태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별'
+        href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
+      - name: '태스크 11: 조건부 분할 변환을 추가하여 중복 항목 필터링'
+        href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
+      - name: '태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가'
+        href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
+      - name: '태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기'
+        href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
+      - name: '태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행'
+        href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
+      - name: '태스크 15: SSIS 프로젝트 작성 및 실행'
+        href: task-15-building-and-running-the-ssis-project.md
+      - name: '태스크 16: 마스터 데이터 관리자에서 확인'
+        href: task-16-verifying-with-master-data-manager.md
+      - name: '태스크 17: SSIS 패키지로 생성된 DQS 정리 프로젝트 검토'
+        href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
+    - name: 결론
+      href: conclusion.md
+ms.openlocfilehash: 124334095a2e2d7e097f52ac1923684e2e6d505a
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39317129"

@@ -28,7 +28,7 @@ ms.locfileid: "51696821"
   
 -   [sqlcmd 유틸리티](../tools/sqlcmd-utility.md)사용  
   
--   만드는 응용 프로그램에서 연결  
+-   만드는 애플리케이션에서 연결  
   
 코드 문을 전송하는 방법에 상관없이 코드는 동일한 방법과 동일한 사용 권한으로 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 실행됩니다.  
   

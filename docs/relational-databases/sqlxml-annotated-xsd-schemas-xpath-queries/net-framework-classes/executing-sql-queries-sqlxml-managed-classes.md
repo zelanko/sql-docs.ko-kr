@@ -86,7 +86,7 @@ public static int Main(String[] args)
 }  
 ```  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  이 항목에 나오는 C# 코드(DocSample.cs)를 폴더에 저장합니다.  
   

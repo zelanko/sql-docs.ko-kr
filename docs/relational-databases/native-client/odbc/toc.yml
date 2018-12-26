@@ -1,38 +1,39 @@
+items:
 - name: SQL Server Native Client(ODBC)
   href: sql-server-native-client-odbc.md
 - name: 특정 영역
   items:
-    - name: Native client ODBC API +
-      href: ../../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
-    - name: ODBC 확장 대량 복사 함수 +
-      href: ../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
-    - name: 대량 복사 작업 +
-      href: ../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
-    - name: 통신 +
-      href: ../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
-    - name: 쿼리 +
-      href: ../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
-    - name: 결과 +
-      href: ../../../relational-databases/native-client-odbc-results/processing-results-odbc.md
-    - name: 커서 +
-      href: ../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
-    - name: 오류 메시지 +
-      href: ../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
-    - name: 저장 프로시저 +
-      href: ../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
-    - name: 텍스트 및 이미지 열 +
-      href: ../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
-    - name: 테이블 반환 매개 변수 +
-      href: ../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
-    - name: 날짜 시간 +
-      href: ../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
-    - name: 방법 +
-      href: ../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
-- name: 드라이버 응용 프로그램 만들기 - 비동기 모드 및 SQLCancel
+  - name: Native client ODBC API +
+    href: ../../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
+  - name: ODBC 확장 대량 복사 함수 +
+    href: ../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
+  - name: 대량 복사 작업 +
+    href: ../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
+  - name: 통신 +
+    href: ../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
+  - name: 쿼리 +
+    href: ../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
+  - name: 결과 +
+    href: ../../../relational-databases/native-client-odbc-results/processing-results-odbc.md
+  - name: 커서 +
+    href: ../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
+  - name: 오류 메시지 +
+    href: ../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
+  - name: 저장 프로시저 +
+    href: ../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
+  - name: 텍스트 및 이미지 열 +
+    href: ../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
+  - name: 테이블 반환 매개 변수 +
+    href: ../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
+  - name: 날짜 시간 +
+    href: ../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
+  - name: 방법 +
+    href: ../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
+- name: 드라이버 애플리케이션 만들기 - 비동기 모드 및 SQLCancel
   href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
-- name: 드라이버 응용 프로그램 만들기 - 다중 스레드 응용 프로그램
+- name: 드라이버 애플리케이션 만들기 - 다중 스레드 애플리케이션
   href: creating-a-driver-application-multithreaded-applications.md
-- name: 드라이버 응용 프로그램 만들기
+- name: 드라이버 애플리케이션 만들기
   href: creating-a-driver-application.md
 - name: 데이터 원본 이름 및 64비트 운영 체제
   href: data-source-names-and-64-bit-operating-systems.md
@@ -52,3 +53,9 @@
   href: sparse-columns-support-odbc.md
 - name: 카탈로그 함수 사용
   href: using-catalog-functions.md
+ms.openlocfilehash: 29ab671d101bdd747aac5a6a58010b4f77d3cc2c
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39314464"

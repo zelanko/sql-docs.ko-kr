@@ -16,7 +16,7 @@ ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
 ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
 ms.locfileid: "49461018"
@@ -64,7 +64,7 @@ ms.locfileid: "49461018"
 |022|022<br /><br /> nn022|022<br /><br /> nn22|  
 |10:49AM<br /><br /> *(여기서 용어는 한 번)*|10:49AM<br /><br /> tt1049|10:49AM<br /><br /> tt24104900|  
   
- 경우에 따라 새 구성 요소는 *더 적은* 결과 또는 응용 프로그램에서 예상되지 않을 수 있는 결과를 반환합니다.  
+ 경우에 따라 새 구성 요소는 *더 적은* 결과 또는 애플리케이션에서 예상되지 않을 수 있는 결과를 반환합니다.  
   
 |**용어**|**이전 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|**새 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  

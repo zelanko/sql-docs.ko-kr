@@ -28,7 +28,7 @@ ms.locfileid: "51699711"
   
 -   SELECT 등의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문  
   
--   함수를 호출하는 응용 프로그램  
+-   함수를 호출하는 애플리케이션  
   
 -   다른 사용자 정의 함수의 정의  
   

@@ -96,7 +96,7 @@ FOR JSON AUTO
     -   작은 결과 집합은 단일 행을 포함할 수 있습니다.
     -   결과 집합이 크면 긴 JSON 문자열이 여러 행으로 분할됩니다.
         -   기본적으로 SSMS(SQL Server Management Studio)는 출력 설정이 **표 형태로 결과 표시**인 경우 결과를 단일 행으로 연결합니다. SSMS 상태 표시줄에 실제 행 수가 표시됩니다.
-        -   다른 클라이언트 응용 프로그램에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 응용 프로그램에서 이 코드의 예는 [C# 클라이언트 앱에서 FOR JSON 출력 사용](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)을 참조하세요.
+        -   다른 클라이언트 애플리케이션에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 애플리케이션에서 이 코드의 예는 [C# 클라이언트 앱에서 FOR JSON 출력 사용](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app)을 참조하세요.
   
      ![FOR JSON 출력의 예](../../relational-databases/json/media/forjson-example2.png)  
   

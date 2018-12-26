@@ -28,7 +28,7 @@ ms.locfileid: "34021280"
   
      WITH 키워드를 사용하여 명명된 집합을 만드는 방법에 대한 자세한 내용은 [쿼리 범위 명명된 집합 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)를 참조하세요.  
   
--   **세션 범위** 범위가 쿼리 컨텍스트보다 넓은 즉, 범위가 MDX 세션의 수명인 명명된 집합을 만들려면 CREATE SET 문을 사용합니다. CREATE SET 문을 사용하여 정의된 명명된 집합은 해당 세션의 모든 MDX 쿼리에서 사용할 수 있습니다. 예를 들어 CREATE SET 문은 여러 쿼리에서 하나의 집합을 계속적으로 다시 사용하는 클라이언트 응용 프로그램에 적합합니다.  
+-   **세션 범위** 범위가 쿼리 컨텍스트보다 넓은 즉, 범위가 MDX 세션의 수명인 명명된 집합을 만들려면 CREATE SET 문을 사용합니다. CREATE SET 문을 사용하여 정의된 명명된 집합은 해당 세션의 모든 MDX 쿼리에서 사용할 수 있습니다. 예를 들어 CREATE SET 문은 여러 쿼리에서 하나의 집합을 계속적으로 다시 사용하는 클라이언트 애플리케이션에 적합합니다.  
   
      CREATE SET 문을 사용하여 세션에서 명명된 집합을 만드는 방법에 대한 자세한 내용은 [세션 범위 명명된 집합 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)를 참조하세요.  
   

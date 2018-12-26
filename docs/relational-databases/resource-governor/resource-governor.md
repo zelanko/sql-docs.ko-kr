@@ -22,7 +22,7 @@ ms.locfileid: "47784651"
 ---
 # <a name="resource-governor"></a>관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
   
 ## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  
  리소스 관리자를 사용하여 리소스 소비량에 대한 제한을 들어오는 요청별로 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업과 리소스를 관리할 수 있습니다. 리소스 관리자 컨텍스트에서 작업이란 단일 엔터티로 취급해야 하거나 취급할 수 있는 비슷한 크기의 쿼리 또는 요청 집합입니다. 반드시 그래야 하는 것은 아니지만 작업의 리소스 사용 패턴이 균일할수록 리소스 관리자를 통해 얻을 수 있는 이점이 많아집니다. 리소스 제한은 실행 중인 작업에 미치는 영향을 최소화하면서 실시간으로 다시 구성할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "47784651"
   
 -   작업 그룹이 관련 리소스 풀(예: 풀 2)을 사용합니다.  
   
--   리소스 풀이 응용 프로그램(예: 응용 프로그램 3)에 필요한 리소스를 제공하고 제한합니다.  
+-   리소스 풀이 애플리케이션(예: 애플리케이션 3)에 필요한 리소스를 제공하고 제한합니다.  
   
  ![리소스 관리자 기능 구성 요소](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Resource Governor Functional Components")  
   

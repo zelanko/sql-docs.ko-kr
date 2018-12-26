@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38983468"
@@ -33,28 +33,28 @@ ms.locfileid: "38983468"
  [Excel 서비스 보안 고려 사항: Power Pivot 통합 문서](#excel)  
   
 ##  <a name="bkmk_auth"></a> 클래식 모드 로그인 요구 사항을 사용한 Windows 인증  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 SharePoint에 제공되는 인증 옵션 중 일부만 지원합니다. 즉, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 사용 가능한 인증 옵션 중 Windows 인증만 지원합니다. 또한 로그인을 실행하는 웹 응용 프로그램은 클래식 모드로 구성되어야 합니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 SharePoint에 제공되는 인증 옵션 중 일부만 지원합니다. 즉, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 사용 가능한 인증 옵션 중 Windows 인증만 지원합니다. 또한 로그인을 실행하는 웹 애플리케이션은 클래식 모드로 구성되어야 합니다.  
   
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포의 Analysis Services 데이터 엔진이 Windows 인증만 지원하므로 Windows 인증은 필수입니다. Excel 서비스는 MSOLAP OLE DB 공급자를 통해 Analysis Services에 대한 연결을 설정할 때 NTLM 또는 Kerberos 프로토콜을 통해 인증되는 Windows 사용자 ID를 사용합니다.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스가 작동하려면 두 번째 요구 사항으로 웹 응용 프로그램의 클래식 모드 인증이 필요합니다. 웹 서비스는 웹 프런트 엔드에서 실행되어 팜의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 HTTP 리디렉션을 제공하는 구성 요소입니다. 이 웹 서비스는 서비스 간 통신에 대한 클레임은 인식하지만 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스로 라우팅하는 데이터 연결 요청에 대한 클레임은 인식하지 못합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하는 요청은 IIS에서 시작되어 Windows ID를 사용하여 인증된 연결에서만 지원됩니다. 웹 응용 프로그램에서 클래식 모드로 로그인하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스와 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 간 연결이 설정됩니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스가 작동하려면 두 번째 요구 사항으로 웹 응용 프로그램의 클래식 모드 인증이 필요합니다. 웹 서비스는 웹 프런트 엔드에서 실행되어 팜의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 HTTP 리디렉션을 제공하는 구성 요소입니다. 이 웹 서비스는 서비스 간 통신에 대한 클레임은 인식하지만 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스로 라우팅하는 데이터 연결 요청에 대한 클레임은 인식하지 못합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하는 요청은 IIS에서 시작되어 Windows ID를 사용하여 인증된 연결에서만 지원됩니다. 웹 애플리케이션에서 클래식 모드로 로그인하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스와 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 간 연결이 설정됩니다.  
   
- 더 일반적인 데이터 액세스 시나리오( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 데이터를 렌더링하는 동일한 Excel 통합 문서에서 추출되는 경우)에는 클래식 모드 로그인이 필요하지 않지만, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 다른 인증 공급자를 사용하도록 구성된 SharePoint 웹 응용 프로그램과 함께 사용하지 마세요. 그렇게 하면 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 외부 데이터 원본으로 연결하려고 할 때마다 연결이 실패합니다.  
+ 더 일반적인 데이터 액세스 시나리오( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 데이터를 렌더링하는 동일한 Excel 통합 문서에서 추출되는 경우)에는 클래식 모드 로그인이 필요하지 않지만, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 다른 인증 공급자를 사용하도록 구성된 SharePoint 웹 애플리케이션과 함께 사용하지 마세요. 그렇게 하면 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 외부 데이터 원본으로 연결하려고 할 때마다 연결이 실패합니다.  
   
  클래식 모드 로그인을 사용하지 않는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스에서 처리되는 다음과 같은 유형의 요청은 실패합니다.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대해 팜의 외부에서 시작된 모든 요청(예: 보고서 디자이너 또는 보고서 작성기에서 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 SharePoint URL을 참조하는 보고서 작성)  
   
--   외부 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 사용하는 보고서 또는 클라이언트 응용 프로그램의 팜 내부 요청(예: 두 번째 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 포함 Excel 통합 문서로 데이터 원본을 사용하여 Excel 데스크톱 응용 프로그램에서 통합 문서 작성)  
+-   외부 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 사용하는 보고서 또는 클라이언트 애플리케이션의 팜 내부 요청(예: 두 번째 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 포함 Excel 통합 문서로 데이터 원본을 사용하여 Excel 데스크톱 애플리케이션에서 통합 문서 작성)  
   
-### <a name="how-to-check-the-authentication-provider-for-your-application"></a>응용 프로그램의 인증 공급자를 확인하는 방법  
- 새 웹 응용 프로그램을 만들 경우에는 새 웹 응용 프로그램 만들기 페이지에서 **클래식 모드 인증** 옵션을 선택해야 합니다.  
+### <a name="how-to-check-the-authentication-provider-for-your-application"></a>애플리케이션의 인증 공급자를 확인하는 방법  
+ 새 웹 애플리케이션을 만들 경우에는 새 웹 애플리케이션 만들기 페이지에서 **클래식 모드 인증** 옵션을 선택해야 합니다.  
   
- 기존 웹 응용 프로그램의 경우 다음 지침에 따라 웹 응용 프로그램이 Windows 인증을 사용하도록 구성되어 있는지 확인합니다.  
+ 기존 웹 애플리케이션의 경우 다음 지침에 따라 웹 애플리케이션이 Windows 인증을 사용하도록 구성되어 있는지 확인합니다.  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **웹 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **웹 애플리케이션 관리**를 클릭합니다.  
   
-2.  웹 응용 프로그램을 선택합니다.  
+2.  웹 애플리케이션을 선택합니다.  
   
 3.  **인증 공급자**를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38983468"
   
 -   사용 가능한 데이터가 없을 때 캐시 또는 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하는 경우. 시스템에 아직 로드되지 않은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 데이터 연결 요청이 이루어지면 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에서 SharePoint 사용자 ID를 사용하여 콘텐츠 라이브러리에서 데이터 원본을 검색한 후 메모리로 로드합니다.  
   
--   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 응용 프로그램에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 및 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
+-   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 애플리케이션에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 및 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
   
 ##  <a name="Permissions"></a> Power Pivot 데이터 액세스에 대한 SharePoint 사용 권한  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 게시, 관리 및 보안은 SharePoint 통합을 통해서만 지원됩니다. SharePoint 서버에서는 데이터에 대한 합법적인 액세스를 보장하는 인증 및 권한 부여 하위 시스템을 제공합니다. SharePoint 팜 외부에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 안전하게 배포할 수 있는 시나리오는 지원되지 않습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "38983468"
   
 |사용 권한 수준|허용되는 태스크|  
 |----------------------|------------------------|  
-|팜 또는 서비스 관리자|서비스 및 응용 프로그램 설치, 설정 및 구성<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 사용 및 관리 보고서 보기|  
+|팜 또는 서비스 관리자|서비스 및 애플리케이션 설치, 설정 및 구성<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 사용 및 관리 보고서 보기|  
 |모든 권한|사이트 모음 수준에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합 활성화<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리 만들기<br /><br /> 데이터 피드 라이브러리 만들기|  
 |참가|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
 |읽기|외부 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 액세스(통합 문서 URL은 Excel의 데이터 연결 마법사와 같은 연결 대화 상자에서 명시적으로 입력)|  
@@ -102,7 +102,7 @@ ms.locfileid: "38983468"
   
 |영역|설정|Description|  
 |----------|-------------|-----------------|  
-|웹 응용 프로그램|Windows 인증 공급자|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 Excel 서비스에서 가져오는 클레임 토큰을 Windows 사용자 ID로 변환합니다. Excel 서비스를 리소스로 사용하는 웹 응용 프로그램은 Windows 인증 공급자를 사용하도록 구성해야 합니다.|  
+|웹 애플리케이션|Windows 인증 공급자|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 Excel 서비스에서 가져오는 클레임 토큰을 Windows 사용자 ID로 변환합니다. Excel 서비스를 리소스로 사용하는 웹 애플리케이션은 Windows 인증 공급자를 사용하도록 구성해야 합니다.|  
 |신뢰할 수 있는 위치|위치 유형|이 값은 **Microsoft SharePoint Foundation**으로 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버는 .xlsx 파일의 복사본을 검색하여 팜의 Analysis Services 서버에 로드합니다. 서버는 콘텐츠 라이브러리에서 .xlsx 파일만 검색할 수 있습니다.|  
 ||외부 데이터 허용|이 값은 **신뢰할 수 있는 데이터 연결 라이브러리 및 포함 라이브러리**로 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결은 통합 문서에 포함됩니다. 포함된 연결을 허용하지 않을 경우 사용자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 캐시를 볼 수 있지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터와 상호 작용할 수는 없습니다.|  
 ||새로 고칠 때 경고|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 사용하여 통합 문서 및 보고서를 저장하는 경우 이 값을 사용하지 않도록 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 열 때마다 새로 고침 및 새로 고칠 때 경고가 모두 해제되어 있을 경우 가장 잘 작동하는 문서 미리 보기 기능이 있습니다.|  

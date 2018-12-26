@@ -24,7 +24,7 @@ ms.locfileid: "52410910"
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 문제 해결 기술의 전체 목록입니다. 이러한 단계는 이미 시도한 가장 가능성이 높은 문제 순서가 아닙니다. 가장 기본적인 문제에서 좀 더 복잡한 문제 순서로 표시됩니다. 이러한 단계에서는 TCP/IP 프로토콜을 사용하여 다른 컴퓨터에서 SQL Server에 연결한다고 가정하며, 이것이 가장 일반적인 상황입니다. Windows 10을 실행하는 클라이언트 응용 프로그램과 SQL Server 둘 다를 포함하는 SQL Server 2016용으로 작성되었지만 약간만 수정하면 다른 버전의 SQL Server와 다른 운영 체제에도 일반적으로 적용됩니다.
+SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 문제 해결 기술의 전체 목록입니다. 이러한 단계는 이미 시도한 가장 가능성이 높은 문제 순서가 아닙니다. 가장 기본적인 문제에서 좀 더 복잡한 문제 순서로 표시됩니다. 이러한 단계에서는 TCP/IP 프로토콜을 사용하여 다른 컴퓨터에서 SQL Server에 연결한다고 가정하며, 이것이 가장 일반적인 상황입니다. Windows 10을 실행하는 클라이언트 애플리케이션과 SQL Server 둘 다를 포함하는 SQL Server 2016용으로 작성되었지만 약간만 수정하면 다른 버전의 SQL Server와 다른 운영 체제에도 일반적으로 적용됩니다.
 
 이러한 지침은 오류: 11001(또는 53), 심각도: 20, 상태: 0 및 다음과 같은 오류 메시지일 수 있는 "**서버에 연결**" 오류 문제를 해결할 때 특히 유용합니다.
 
@@ -88,7 +88,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
   
 ## <a name="testing-a-local-connection"></a>로컬 연결 테스트
 
-다른 컴퓨터에서 연결 문제를 해결하기 전에 먼저 SQL Server를 실행하는 컴퓨터에 설치된 클라이언트 응용 프로그램에서 연결할 수 있는지 테스트합니다. 이렇게 하면 방화벽 문제가 개입되지 않습니다. 이 절차에서는 SQL Server Management Studio를 사용합니다. Management Studio가 설치되어 있지 않으면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요. Management Studio를 설치할 수 없는 경우 데이터베이스 엔진과 함께 설치된 `sqlcmd.exe` 유틸리티를 사용하여 연결을 테스트할 수 있습니다. `sqlcmd.exe`에 대한 자세한 내용은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.
+다른 컴퓨터에서 연결 문제를 해결하기 전에 먼저 SQL Server를 실행하는 컴퓨터에 설치된 클라이언트 애플리케이션에서 연결할 수 있는지 테스트합니다. 이렇게 하면 방화벽 문제가 개입되지 않습니다. 이 절차에서는 SQL Server Management Studio를 사용합니다. Management Studio가 설치되어 있지 않으면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요. Management Studio를 설치할 수 없는 경우 데이터베이스 엔진과 함께 설치된 `sqlcmd.exe` 유틸리티를 사용하여 연결을 테스트할 수 있습니다. `sqlcmd.exe`에 대한 자세한 내용은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.
 1.  SQL Server에 액세스할 수 있는 권한을 가진 로그인을 사용하여 SQL Server가 설치된 컴퓨터에 로그온합니다. 설치 중 SQL Server에 대해 하나 이상의 로그인을 SQL Server 관리자로 지정해야 합니다. 관리자를 모르는 경우 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요.
 2.   시작 페이지에서 **SQL Server Management Studio**를 입력하거나, 이전 버전의 Windows 시작 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.
 3.  **서버에 연결** 대화 상자의 **서버** 유형 상자에서 **데이터베이스 엔진**을 선택합니다. **인증** 상자에서 **Windows 인증**을 선택합니다. **서버 이름** 상자에 다음 중 하나를 입력합니다.
@@ -99,7 +99,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 |명명된 인스턴스|컴퓨터 이름\인스턴스 이름|ACCNT27\PAYROLL|
 
 >  [!NOTE] 
->  동일한 컴퓨터의 클라이언트 응용 프로그램에서 SQL Server에 연결하는 경우 공유 메모리 프로토콜이 사용됩니다. 공유 메모리는 명명된 로컬 파이프의 한 유형이므로 때때로 파이프와 관련된 오류가 발생합니다.
+>  동일한 컴퓨터의 클라이언트 애플리케이션에서 SQL Server에 연결하는 경우 공유 메모리 프로토콜이 사용됩니다. 공유 메모리는 명명된 로컬 파이프의 한 유형이므로 때때로 파이프와 관련된 오류가 발생합니다.
 
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
@@ -115,7 +115,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
   
 공유 메모리를 사용하여 연결할 수 있지만 TCP로는 연결할 수 없는 경우 TCP 문제를 해결해야 합니다. 가장 가능성이 큰 문제는 TCP를 사용할 수 없기 때문입니다. TCP를 사용하도록 설정하려면 위의 **프로토콜 사용** 단계를 참조하세요.
 
-5.   관리자 계정이 아닌 계정으로 연결하는 것이 목표인 경우 관리자 권한으로 연결할 수 있으면 Windows 인증 로그인 또는 클라이언트 응용 프로그램에서 사용하는 SQL Server 인증 로그인으로 다시 연결해 보세요.
+5.   관리자 계정이 아닌 계정으로 연결하는 것이 목표인 경우 관리자 권한으로 연결할 수 있으면 Windows 인증 로그인 또는 클라이언트 애플리케이션에서 사용하는 SQL Server 인증 로그인으로 다시 연결해 보세요.
 
 ## <a name="opening-a-port-in-the-firewall"></a>방화벽에서 포트 열기
 
@@ -124,7 +124,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 
 ## <a name="testing-the-connection"></a>연결 테스트
 
-동일한 컴퓨터에서 TCP를 사용하여 연결할 수 있으면 클라이언트 컴퓨터에서 연결을 시도해야 합니다. 이론적으로는 모든 클라이언트 응용 프로그램을 사용할 수 있지만 추가 복잡성을 방지하기 위해 클라이언트에 SQL Server 관리 도구를 설치하고 SQL Server Management Studio를 사용하여 연결을 시도합니다.
+동일한 컴퓨터에서 TCP를 사용하여 연결할 수 있으면 클라이언트 컴퓨터에서 연결을 시도해야 합니다. 이론적으로는 모든 클라이언트 애플리케이션을 사용할 수 있지만 추가 복잡성을 방지하기 위해 클라이언트에 SQL Server 관리 도구를 설치하고 SQL Server Management Studio를 사용하여 연결을 시도합니다.
 
 1. 클라이언트 컴퓨터에서 SQL Server Management Studio를 사용하여 IP 주소 쉼표 포트 번호 형식의 IP 주소와 TCP 포트 번호로 연결을 시도합니다. 예를 들면 **192.168.1.101,1433** 과 같습니다. 작동하지 않을 경우 다음 문제 중 하나가 있는 것입니다.
 

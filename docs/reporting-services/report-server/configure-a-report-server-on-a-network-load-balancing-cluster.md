@@ -102,7 +102,7 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
   
  또한 Excel 또는 PDF 형식과 같은 정적 보고서로 내보낸 보고서나 메일 구독과 같은 구독을 통해 생성되는 보고서에서 보고서 링크가 작동하도록 **UrlRoot** 속성을 구성합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 또는 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007과 통합하거나 사용자 지정 웹 응용 프로그램에서 보고서를 호스팅하는 경우 **UrlRoot** 속성만 구성해야 할 수 있습니다. 이 경우 **UrlRoot** 속성을 SharePoint 사이트 또는 웹 응용 프로그램의 URL로 구성합니다. 이렇게 하면 보고 환경의 네트워크 트래픽이 보고서 서버나 NLB 클러스터가 아닌 보고서를 처리하는 응용 프로그램으로 전송됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 또는 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007과 통합하거나 사용자 지정 웹 응용 프로그램에서 보고서를 호스팅하는 경우 **UrlRoot** 속성만 구성해야 할 수 있습니다. 이 경우 **UrlRoot** 속성을 SharePoint 사이트 또는 웹 애플리케이션의 URL로 구성합니다. 이렇게 하면 보고 환경의 네트워크 트래픽이 보고서 서버나 NLB 클러스터가 아닌 보고서를 처리하는 애플리케이션으로 전송됩니다.  
   
  **ReportServerUrl**은 수정하지 마십시오. 이 URL을 수정하면 내부 요청이 처리될 때마다 가상 서버를 통해 별도의 왕복이 발생하게 됩니다. 자세한 내용은 [구성 파일의 URL&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)를 참조하세요. 구성 파일을 편집하는 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)를 참조하세요.  
   

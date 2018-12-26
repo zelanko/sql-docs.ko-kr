@@ -34,15 +34,15 @@ ms.locfileid: "51814056"
   
      목록에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 표시되지 않으면 해당 서비스가 설치되어 있는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
-### <a name="to-verify-the-service-application"></a>서비스 응용 프로그램을 확인하려면  
+### <a name="to-verify-the-service-application"></a>서비스 애플리케이션을 확인하려면  
   
-1.  중앙 관리에서 적어도 하나의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램이 있는지 확인하려면 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리** 를 클릭합니다.  
+1.  중앙 관리에서 적어도 하나의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있는지 확인하려면 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
 2.  **SQL Server Reporting Services 서비스 응용 프로그램** 유형의 서비스 응용 프로그램과 해당 응용 프로그램 프록시가 있는지 확인합니다.  
   
-3.  서비스 응용 프로그램 이름 **근처** 를 클릭한 다음 SharePoint 도구 모음에서 **속성** 을 클릭합니다.  서비스 응용 프로그램 이름을 클릭하면 서비스 응용 프로그램의 속성 페이지가 아닌 관리 페이지가 열립니다.  
+3.  서비스 애플리케이션 이름 **근처** 를 클릭한 다음 SharePoint 도구 모음에서 **속성** 을 클릭합니다.  서비스 애플리케이션 이름을 클릭하면 서비스 애플리케이션의 속성 페이지가 아닌 관리 페이지가 열립니다.  
   
-4.  원하는 웹 응용 프로그램을 가리키기 위해 **웹 응용 프로그램 연결** 이 구성되어 있는지 확인합니다.  
+4.  원하는 웹 애플리케이션을 가리키기 위해 **웹 애플리케이션 연결** 이 구성되어 있는지 확인합니다.  
   
 ### <a name="to-verify-the-site-collection-feature"></a>사이트 모음 기능을 확인하려면  
   
@@ -79,7 +79,7 @@ ms.locfileid: "51814056"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하고 방금 설치한 보고서 서버 인스턴스에 연결합니다. 웹 서비스 URL 페이지에는 보고서 서버 웹 서비스에 대한 링크가 포함되어 있습니다. 이 링크를 클릭하면 서버에 액세스할 수 있는지 확인할 수 있습니다. 보고서 서버 데이터베이스가 구성되어 있지 않으면 링크를 클릭하기 전에 먼저 보고서 서버 데이터베이스를 구성합니다.  
   
-2.  서비스 콘솔 응용 프로그램을 열고 보고서 서버 서비스가 실행 중인지 확인합니다. 보고서 서버 서비스의 상태를 확인하려면 **시작**을 클릭하고 **제어판**을 가리킨 후 **관리 도구**를 두 번 클릭하고 **서비스**를 두 번 클릭합니다. 서비스 목록이 나타나면 **보고서 서버(MSSQLSERVER)** 로 스크롤합니다. 상태가 **시작됨**으로 바뀝니다.  
+2.  서비스 콘솔 애플리케이션을 열고 보고서 서버 서비스가 실행 중인지 확인합니다. 보고서 서버 서비스의 상태를 확인하려면 **시작**을 클릭하고 **제어판**을 가리킨 후 **관리 도구**를 두 번 클릭하고 **서비스**를 두 번 클릭합니다. 서비스 목록이 나타나면 **보고서 서버(MSSQLSERVER)** 로 스크롤합니다. 상태가 **시작됨**으로 바뀝니다.  
   
 3.  브라우저를 열고 주소 표시줄에 보고서 서버 URL을 입력합니다. 주소는 설치 중에 보고서 서버에 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 보고서 서버 가상 디렉터리 이름은 **ReportServer**입니다. https://*\<computer name>*/ReportServer*\<_instance name>* URL을 사용하여 보고서 서버 설치를 확인할 수 있습니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 URL이 달라질 수 있습니다. URL 형식에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요. Windows Vista 또는 Windows Server 2008의 로컬 관리자인 경우 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   

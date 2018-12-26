@@ -158,7 +158,7 @@ DENY
   
 |||  
 |-|-|  
-|응용 프로그램 역할|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|애플리케이션 역할|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |어셈블리|[DENY 어셈블리 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |비대칭 키|[DENY 비대칭 키 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
 |가용성 그룹|[DENY 가용성 그룹 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  

@@ -34,7 +34,7 @@ ms.locfileid: "47612971"
 
 대용량의 유니코드 및 비유니코드 문자와 이진 데이터를 저장하기 위한 고정 및 가변 길이 데이터 형식입니다. 유니코드 데이터는 UNICODE UCS-2 문자 집합을 사용합니다.
   
->**중요!**  **ntext**, **text** 및 **image** 데이터 형식은 이후 버전의 SQL Server에서 제거될 예정입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
+>**중요!**  **ntext**, **text** 및 **image** 데이터 형식은 이후 버전의 SQL Server에서 제거될 예정입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
   
 ## <a name="arguments"></a>인수  

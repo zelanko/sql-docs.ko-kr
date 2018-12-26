@@ -59,11 +59,11 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  응용 프로그램 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 응용 프로그램 역할을 호출하는 응용 프로그램은 해당 암호를 저장해야 합니다. 응용 프로그램 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
+>  애플리케이션 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 애플리케이션 역할을 호출하는 애플리케이션은 해당 암호를 저장해야 합니다. 애플리케이션 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
   
- 응용 프로그램 역할은 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
+ 애플리케이션 역할은 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
- 응용 프로그램 역할을 사용하는 방법은 [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)을 참조하십시오.  
+ 애플리케이션 역할을 사용하는 방법은 [애플리케이션 역할](../../relational-databases/security/authentication-access/application-roles.md)을 참조하십시오.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

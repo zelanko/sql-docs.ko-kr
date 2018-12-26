@@ -63,7 +63,7 @@ ms.locfileid: "52545449"
 데이터베이스 미러링, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 및 호환성 수준은 `SET` 옵션이지만 길이 때문에 별도의 항목에서 설명합니다. 자세한 내용은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 및 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
 > [!NOTE]  
-> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 응용 프로그램에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
+> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -779,7 +779,7 @@ OFF
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 완료되지 않은 페이지를 검색할 수 없습니다.  
   
 > [!IMPORTANT]  
-> TORN_PAGE_DETECTION ON | OFF 구문 구조는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 예정입니다. 새 개발 작업에서는 이 구문 구조를 사용하지 않도록 하고 현재 이 구문 구조를 사용하는 응용 프로그램은 수정하십시오. 대신 PAGE_VERIFY 옵션을 사용하십시오.  
+> TORN_PAGE_DETECTION ON | OFF 구문 구조는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 예정입니다. 새 개발 작업에서는 이 구문 구조를 사용하지 않도록 하고 현재 이 구문 구조를 사용하는 애플리케이션은 수정하십시오. 대신 PAGE_VERIFY 옵션을 사용하십시오.  
   
 <a name="page_verify"></a> PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
 디스크 I/O 경로 오류로 인해 손상된 데이터베이스 페이지를 찾습니다. 디스크 I/O 경로 오류는 일반적으로 페이지를 디스크에 쓸 때 전원 오류나 디스크 하드웨어 오류로 인해 발생하며 데이터베이스 손상 문제를 일으킬 수 있습니다.  
@@ -866,7 +866,7 @@ NEW_BROKER
 데이터베이스가 새 Broker 식별자를 받도록 지정합니다. 데이터베이스는 새 Service Broker가 될 것으로 간주되기 때문에 데이터베이스 내의 모든 기존 대화는 종료 대화 메시지 없이 즉시 제거됩니다. 이전 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
   
 ERROR_BROKER_CONVERSATIONS  
-[!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 사용하도록 지정합니다. 이렇게 하면 데이터베이스에 대한 기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자가 유지됩니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 오류가 있는 데이터베이스의 모든 대화를 종료합니다. 또한 응용 프로그램에서 기존 대화에 대해 일반적인 정리 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 사용하도록 지정합니다. 이렇게 하면 데이터베이스에 대한 기존 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자가 유지됩니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 오류가 있는 데이터베이스의 모든 대화를 종료합니다. 또한 애플리케이션에서 기존 대화에 대해 일반적인 정리 작업을 수행할 수 있습니다.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
@@ -962,7 +962,7 @@ OFF
 Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_NULLS에 대한 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 ANSI_NULLS를 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.  
   
@@ -982,7 +982,7 @@ OFF
 OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
   
 ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(*n*)** 및 **binary(*n*)** 열이 열 길이만큼 채워지지만 ANSI_PADDING을 OFF로 설정하면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(*n*)** 및 **binary(*n*)** 열은 항상 열 길이만큼 채워집니다.  
   
@@ -1027,7 +1027,7 @@ Null 값은 빈 문자열로 취급됩니다.
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET CONCAT_NULL_YIELDS_NULL은 반드시 ON으로 설정되어야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 CONCAT_NULL_YIELDS_NULL의 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 CONCAT_NULL_YIELDS_NULL을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)을 참조하세요.  
   
@@ -1288,7 +1288,7 @@ SET QUERY_STORE = ON
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
 > [!NOTE]  
-> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 응용 프로그램에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
+> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -1795,7 +1795,7 @@ OFF
 Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_NULLS에 대한 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 ANSI_NULLS를 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.  
   
@@ -1815,7 +1815,7 @@ OFF
 OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
   
 ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(*n*)** 및 **binary(*n*)** 열이 열 길이만큼 채워지지만 ANSI_PADDING을 OFF로 설정하면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(*n*)** 및 **binary(*n*)** 열은 항상 열 길이만큼 채워집니다.  
   
@@ -1860,7 +1860,7 @@ Null 값은 빈 문자열로 취급됩니다.
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET CONCAT_NULL_YIELDS_NULL은 반드시 ON으로 설정되어야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 CONCAT_NULL_YIELDS_NULL의 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 CONCAT_NULL_YIELDS_NULL을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)을 참조하세요.  
   
@@ -2077,7 +2077,7 @@ SET QUERY_STORE = ON
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
 > [!NOTE]  
-> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 응용 프로그램에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
+> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.  
   
 ## <a name="syntax"></a>구문
   
@@ -2523,7 +2523,7 @@ OFF
 Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_NULLS에 대한 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 ANSI_NULLS를 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.  
   
@@ -2543,7 +2543,7 @@ OFF
 OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
   
 ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(*n*)** 및 **binary(*n*)** 열이 열 길이만큼 채워지지만 ANSI_PADDING을 OFF로 설정하면 후행 공백과 0이 잘립니다. Null을 허용하지 않는 **char(*n*)** 및 **binary(*n*)** 열은 항상 열 길이만큼 채워집니다.  
   
@@ -2588,7 +2588,7 @@ Null 값은 빈 문자열로 취급됩니다.
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET CONCAT_NULL_YIELDS_NULL은 반드시 ON으로 설정되어야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 CONCAT_NULL_YIELDS_NULL이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 SET 문을 사용하여 설정한 연결 수준의 설정은 CONCAT_NULL_YIELDS_NULL의 기본 데이터베이스 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 CONCAT_NULL_YIELDS_NULL을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)을 참조하세요.  
   

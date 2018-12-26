@@ -136,7 +136,7 @@ FROM PREDICT(MODEL = @logit_model,
 
 ### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 
-예측에 대한 일반적인 사용 사례 중 하나는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 응용 프로그램이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
+예측에 대한 일반적인 사용 사례 중 하나는 입력 데이터에 대한 점수를 생성한 다음, 예측된 값을 테이블에 삽입하는 것입니다. 다음 예제에서는 호출 애플리케이션이 저장 프로시저를 사용하여 예측 값이 포함된 행을 테이블에 삽입하는 것으로 가정합니다.
 
 ```sql
 CREATE PROCEDURE InsertLoanApplication

@@ -32,7 +32,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51661322"
 ---
-# <a name="creating-a-driver-application"></a>드라이버 응용 프로그램 만들기
+# <a name="creating-a-driver-application"></a>드라이버 애플리케이션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "51661322"
   
 |구성 요소|기능|  
 |---------------|--------------|  
-|응용 프로그램|ODBC 데이터 원본과 통신하는 ODBC 함수를 호출하고, SQL 문을 전송하고, 결과 집합을 처리합니다.|  
+|애플리케이션|ODBC 데이터 원본과 통신하는 ODBC 함수를 호출하고, SQL 문을 전송하고, 결과 집합을 처리합니다.|  
 |드라이버 관리자|응용 프로그램과 응용 프로그램에서 사용하는 모든 ODBC 드라이버 사이의 통신을 관리합니다.|  
 |드라이버|응용 프로그램으로부터의 모든 ODBC 호출을 처리하고, 데이터 원본에 연결하고, 응용 프로그램에서 데이터 원본으로 SQL 문을 전달하고, 응용 프로그램에 결과를 반환합니다. 필요한 경우 드라이버는 응용 프로그램에서 전달된 ODBC SQL을 데이터 원본에서 사용하는 기본 SQL로 변환합니다.|  
 |데이터 원본|드라이버가 DBMS의 특정 데이터 인스턴스에 액세스하는 데 필요한 모든 정보를 포함합니다.|  

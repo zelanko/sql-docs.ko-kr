@@ -11,14 +11,14 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34040548"
 ---
 # <a name="perspectives"></a>큐브 뷰
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 응용 프로그램의 관점에서 파악할 수 있습니다.  
+  테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 애플리케이션의 관점에서 파악할 수 있습니다.  
   
 ##  <a name="bkmk_understanding"></a> 이점  
  테이블 형식 모델은 너무 복잡해서 사용자가 탐색하기 어려울 수 있습니다. 단일 모델이 여러 개의 테이블, 측정값 및 차원을 포함하는 전체 데이터 웨어하우스의 내용을 나타낼 수 있습니다. 이러한 복잡성은 주로 비즈니스 인텔리전스 및 보고 요구 사항을 충족하기 위해 모델의 일부만 사용하는 사용자에게는 부담이 될 수 있습니다.  

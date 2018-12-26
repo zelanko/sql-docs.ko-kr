@@ -35,9 +35,9 @@ ms.locfileid: "34027350"
   
 ##  <a name="create"></a> 파워 피벗 데이터 액세스를 위한 신뢰할 수 있는 위치 만들기  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  Excel Services 응용 프로그램을 클릭합니다.  
+2.  Excel Services 애플리케이션을 클릭합니다.  
   
 3.  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34027350"
   
 7.  세션 관리, 통합 문서 속성 및 계산 동작 속성의 모든 기본 설정을 그대로 사용합니다.  
   
-8.  통합 문서 속성에서 **최대 통합 문서 크기** 를 **50**으로 설정합니다. 그러면 통합 문서 파일 크기의 상한이 부모 웹 응용 프로그램에 대한 파일 업로드 상한에 맞게 조정됩니다. 통합 문서가 50MB보다 크면 파일 크기 제한을 더 높여야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)을 참조하세요.  
+8.  통합 문서 속성에서 **최대 통합 문서 크기** 를 **50**으로 설정합니다. 그러면 통합 문서 파일 크기의 상한이 부모 웹 애플리케이션에 대한 파일 업로드 상한에 맞게 조정됩니다. 통합 문서가 50MB보다 크면 파일 크기 제한을 더 높여야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)을 참조하세요.  
   
 9. 외부 데이터에서 외부 데이터 허용이 **신뢰할 수 있는 데이터 연결 라이브러리 및 포함 라이브러리**로 설정되어 있는지 확인합니다. 통합 문서에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 액세스하려면 이 설정을 사용해야 합니다.  
   

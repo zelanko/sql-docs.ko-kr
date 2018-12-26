@@ -17,7 +17,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50147878"
@@ -60,7 +60,7 @@ ms.locfileid: "50147878"
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>AMO를 사용하여 데이터베이스의 읽기/쓰기 모드를 프로그래밍 방식으로 전환하려면  
   
-1.  C# 응용 프로그램에 다음 예제 코드를 적용하고 표시되는 태스크를 완료합니다.  
+1.  C# 애플리케이션에 다음 예제 코드를 적용하고 표시되는 태스크를 완료합니다.  
   
  `private void SwitchReadWrite(Server server, string dbName,`  
   
@@ -120,7 +120,7 @@ ms.locfileid: "50147878"
   
  `}`  
   
-1.  C# 응용 프로그램에서 필요한 매개 변수를 사용하여 `SwitchReadWrite()` 를 호출합니다.  
+1.  C# 애플리케이션에서 필요한 매개 변수를 사용하여 `SwitchReadWrite()` 를 호출합니다.  
   
 2.  코드를 컴파일하고 실행하여 데이터베이스를 이동합니다.  
   

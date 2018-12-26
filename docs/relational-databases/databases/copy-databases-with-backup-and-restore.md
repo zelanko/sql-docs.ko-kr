@@ -96,7 +96,7 @@ ms.locfileid: "51558560"
  데이터베이스를 다른 컴퓨터에서 복원할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 복원 작업을 시작하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자가 자동으로 새 데이터베이스 소유자가 됩니다. 데이터베이스를 복원할 때 시스템 관리자나 새 데이터베이스 소유자는 데이터베이스 소유권을 변경할 수 있습니다. 데이터베이스가 무단으로 복원되는 것을 방지하려면 미디어 또는 백업 세트에 암호를 사용하십시오.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>다른 서버 인스턴스로 복원 시 메타데이터 관리  
- 데이터베이스를 다른 서버 인스턴스로 복원하는 경우 사용자와 응용 프로그램에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
+ 데이터베이스를 다른 서버 인스턴스로 복원하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
  **백업 세트의 데이터와 로그 파일 보기**  
   

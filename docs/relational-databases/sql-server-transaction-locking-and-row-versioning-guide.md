@@ -103,13 +103,13 @@ ms.locfileid: "52511776"
   
  둘 이상의 데이터베이스에 분산된 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 단일 인스턴스 내에 있는 트랜잭션은 실제로 분산 트랜잭션입니다. 인스턴스는 분산 트랜잭션을 내부적으로 관리하므로 사용자에게는 로컬 트랜잭션처럼 작동합니다.  
   
- 응용 프로그램에서의 분산 트랜잭션 관리 방법은 로컬 트랜잭션과 많은 부분이 동일합니다. 트랜잭션이 끝나면 응용 프로그램이 트랜잭션을 커밋 또는 롤백하도록 요청합니다. 트랜잭션 관리자는 분산 커밋을 다른 방법으로 관리하여 일부 리소스 관리자는 성공적으로 커밋하고 일부는 트랜잭션을 롤백하는 네트워크 오류의 발생 가능성을 최소화해야 합니다. 이렇게 하려면 커밋 프로세스를 준비 단계와 커밋 단계로 관리해야 하는데 이러한 방법을 2단계 커밋(2PC)이라고 합니다.  
+ 애플리케이션에서의 분산 트랜잭션 관리 방법은 로컬 트랜잭션과 많은 부분이 동일합니다. 트랜잭션이 끝나면 애플리케이션이 트랜잭션을 커밋 또는 롤백하도록 요청합니다. 트랜잭션 관리자는 분산 커밋을 다른 방법으로 관리하여 일부 리소스 관리자는 성공적으로 커밋하고 일부는 트랜잭션을 롤백하는 네트워크 오류의 발생 가능성을 최소화해야 합니다. 이렇게 하려면 커밋 프로세스를 준비 단계와 커밋 단계로 관리해야 하는데 이러한 방법을 2단계 커밋(2PC)이라고 합니다.  
   
  **준비 단계**  
  트랜잭션 관리자가 커밋 요청을 수신하면 트랜잭션과 관련된 모든 리소스 관리자에게 준비 명령을 보냅니다. 그런 다음 각 리소스 관리자는 트랜잭션을 지속적으로 만들고 트랜잭션에 대한 로그 이미지를 갖고 있는 버퍼를 디스크로 플러시하는 데 필요한 모든 작업을 수행합니다. 각 리소스 관리자가 준비 단계를 완료하면 준비 성공 또는 실패 여부를 트랜잭션 관리자에게 반환합니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지연된 트랜잭션 내구성이 도입되었습니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 이미지가 디스크에 플러시되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
   
  **커밋 단계**  
- 트랜잭션 관리자가 모든 리소스 관리자로부터 준비 성공 알림을 받으면 각 리소스 관리자에게 커밋 명령을 보냅니다. 그런 다음에는 리소스 관리자가 커밋을 완료할 수 있습니다. 모든 리소스 관리자가 성공적인 커밋을 보고하면 트랜잭션 관리자가 응용 프로그램에 성공을 알립니다. 준비 실패를 보고한 리소스 관리자가 있으면 트랜잭션 관리자가 각 리소스 관리자에게 롤백 명령을 보내서 응용 프로그램에게 커밋 실패를 알립니다.  
+ 트랜잭션 관리자가 모든 리소스 관리자로부터 준비 성공 알림을 받으면 각 리소스 관리자에게 커밋 명령을 보냅니다. 그런 다음에는 리소스 관리자가 커밋을 완료할 수 있습니다. 모든 리소스 관리자가 성공적인 커밋을 보고하면 트랜잭션 관리자가 애플리케이션에 성공을 알립니다. 준비 실패를 보고한 리소스 관리자가 있으면 트랜잭션 관리자가 각 리소스 관리자에게 롤백 명령을 보내서 애플리케이션에게 커밋 실패를 알립니다.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 응용 프로그램은 [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 데이터베이스 API를 통해 분산 트랜잭션을 관리할 수 있습니다. 자세한 내용은 [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)를 참조하세요.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "52511776"
   
  일괄 처리에서 제약 조건 위반 등 런타임 문 오류가 발생하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기본적으로 오류를 발생시킨 문만 롤백합니다. 이 동작은 `SET XACT_ABORT` 문을 사용하여 변경할 수 있습니다. `SET XACT_ABORT` ON이 실행된 후에는 모든 런타임 문 오류 발생 시 자동으로 현재 트랜잭션이 롤백됩니다. 구문 오류와 같은 컴파일 오류는 `SET XACT_ABORT` 옵션 설정으로 영향을 받지 않습니다. 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md)를 참조하세요.  
   
- 오류가 발생하면 수정 동작(`COMMIT` 또는 `ROLLBACK`)을 응용 프로그램 코드에 포함해야 합니다. 트랜잭션 오류를 포함하여 오류를 효과적으로 처리할 수 있는 도구로는 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 구문이 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `THROW` 문을 사용하여 예외를 발생시키고 실행 영역을 `TRY...CATCH` 구문의 `CATCH` 블록으로 넘길 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)을 참조하세요.  
+ 오류가 발생하면 수정 동작(`COMMIT` 또는 `ROLLBACK`)을 애플리케이션 코드에 포함해야 합니다. 트랜잭션 오류를 포함하여 오류를 효과적으로 처리할 수 있는 도구로는 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 구문이 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 `THROW` 문을 사용하여 예외를 발생시키고 실행 영역을 `TRY...CATCH` 구문의 `CATCH` 블록으로 넘길 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)을 참조하세요.  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>자동 커밋 모드에서 컴파일 오류 및 런타임 오류  
  자동 커밋 모드에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 한 SQL 문이 아니라 전체 일괄 처리를 롤백하는 것처럼 보일 때가 있습니다. 이러한 상황은 런타임 오류가 아니라 컴파일 오류가 발생했을 때 나타납니다. 컴파일 오류가 발생하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 실행 계획을 작성할 수 없으므로 일괄 처리가 실행되지 않습니다. 오류를 생성한 문 이전의 모든 문이 롤백되는 것처럼 보이지만 오류가 발생하면 일괄 처리의 모든 문이 실행되지 않습니다. 다음 예에서는 컴파일 오류가 발생하여 세 번째 일괄 처리의 `INSERT` 문이 하나도 실행되지 않습니다. 처음 두 `INSERT` 문이 롤백되는 것처럼 보이지만 전혀 실행되지 않은 것입니다.  
@@ -310,20 +310,20 @@ GO
  [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트는 SET TRANSACTION ISOLATION LEVEL 문을 사용합니다.  
   
  **ADO**  
- ADO 응용 프로그램은 **Connection** 개체의 `IsolationLevel` 속성을 adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead 또는 adXactReadSerializable로 설정합니다.  
+ ADO 애플리케이션은 **Connection** 개체의 `IsolationLevel` 속성을 adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead 또는 adXactReadSerializable로 설정합니다.  
   
  **ADO.NET**  
  `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 응용 프로그램은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
   
  **OLE DB**  
- OLE DB를 사용하는 응용 프로그램은 트랜잭션을 시작할 때 *isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
+ OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 *isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
   
  OLE DB 응용 프로그램은 자동 커밋 모드로 트랜잭션 격리 수준을 지정할 때 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 DBPROPVAL_TI_CHAOS, DBPROPVAL_TI_READUNCOMMITTED, DBPROPVAL_TI_BROWSE, DBPROPVAL_TI_CURSORSTABILITY, DBPROPVAL_TI_READCOMMITTED, DBPROPVAL_TI_REPEATABLEREAD, DBPROPVAL_TI_SERIALIZABLE, DBPROPVAL_TI_ISOLATED 또는 DBPROPVAL_TI_SNAPSHOT으로 설정할 수 있습니다.  
   
  **ODBC**  
- ODBC 응용 프로그램은 *Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
+ ODBC 애플리케이션은 *Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
   
- 스냅숏 트랜잭션의 경우 응용 프로그램은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅숏 트랜잭션을 검색할 수 있습니다.  
+ 스냅숏 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅숏 트랜잭션을 검색할 수 있습니다.  
   
 ##  <a name="Lock_Engine"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 잠금  
  잠금은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 메커니즘으로 동시에 여러 사용자가 동일한 데이터에 액세스하는 것을 동기화합니다.  
@@ -1606,10 +1606,10 @@ GO
  READ COMMITTED는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 격리 수준입니다. 응용 프로그램을 다른 격리 수준에서 실행해야 하는 경우 다음과 같은 방법으로 격리 수준을 설정할 수 있습니다.  
   
 -   [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) 문을 실행합니다.  
--   System.Data.SqlClient 관리 네임스페이스를 사용하는 ADO.NET 응용 프로그램에서는 SqlConnection.BeginTransaction 메서드를 사용하여 *IsolationLevel* 옵션을 지정할 수 있습니다.  
+-   System.Data.SqlClient 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션에서는 SqlConnection.BeginTransaction 메서드를 사용하여 *IsolationLevel* 옵션을 지정할 수 있습니다.  
 -   ADO를 사용하는 응용 프로그램에서는 `Autocommit Isolation Levels` 속성을 설정할 수 있습니다.  
--   OLE DB를 사용하는 응용 프로그램에서는 트랜잭션을 시작할 때 *isoLevel*을 원하는 트랜잭션 격리 수준으로 설정하고 ITransactionLocal::StartTransaction을 호출할 수 있습니다. 자동 커밋 모드에서 격리 수준을 지정할 때 OLE DB를 사용하는 응용 프로그램에서는 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 원하는 트랜잭션 격리 수준으로 설정할 수 있습니다.  
--   ODBC를 사용하는 응용 프로그램에서는 SQLSetConnectAttr를 사용하여 SQL_COPT_SS_TXN_ISOLATION 특성을 설정할 수 있습니다.  
+-   OLE DB를 사용하는 애플리케이션에서는 트랜잭션을 시작할 때 *isoLevel*을 원하는 트랜잭션 격리 수준으로 설정하고 ITransactionLocal::StartTransaction을 호출할 수 있습니다. 자동 커밋 모드에서 격리 수준을 지정할 때 OLE DB를 사용하는 응용 프로그램에서는 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 원하는 트랜잭션 격리 수준으로 설정할 수 있습니다.  
+-   ODBC를 사용하는 애플리케이션에서는 SQLSetConnectAttr를 사용하여 SQL_COPT_SS_TXN_ISOLATION 특성을 설정할 수 있습니다.  
   
 격리 수준을 지정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 세션에서 모든 쿼리와 DML(데이터 조작 언어) 문의 잠금 동작이 해당 격리 수준에서 작동합니다. 세션이 종료되거나 격리 수준을 다른 수준으로 설정할 때까지 해당 격리 수준이 적용됩니다.  
   

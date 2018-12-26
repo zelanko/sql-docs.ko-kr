@@ -24,7 +24,7 @@ ms.locfileid: "52414680"
   
 -   관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 에서 스크립트를 작성하여 보고서 서버 설치를 배포 및 관리하는 방법을 자동화하며 보고서 서버 데이터베이스를 생성, 구성 및 업데이트하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하고 실행할 수 있습니다. 또한 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 기록 및 재생 스크립트 기능을 사용하여 일상적인 유지 관리 태스크를 자동화할 수 있습니다.  
   
--   개발자는 스크립트를 포함하는 사용자 지정 응용 프로그램을 만들 수 있습니다. 보고서 서버 웹 서비스를 호출하는 스크립트를 실행할 수 있습니다. 관리 코드로 작성할 수 있는 거의 모든 작업을 스크립트로도 작성할 수 있습니다.  
+-   개발자는 스크립트를 포함하는 사용자 지정 애플리케이션을 만들 수 있습니다. 보고서 서버 웹 서비스를 호출하는 스크립트를 실행할 수 있습니다. 관리 코드로 작성할 수 있는 거의 모든 작업을 스크립트로도 작성할 수 있습니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트를 보고서 서버에서 실행되는 스크립트 호스트인 RS.exe 유틸리티에서 처리할 수 있는 스크립트 언어로 지원합니다.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "52414680"
   
 -   [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 에서는 다음 예를 제공합니다.  
   
-    -   서비스 응용 프로그램 및 프록시 만들기  
+    -   서비스 애플리케이션 및 프록시 만들기  
   
     -   배달 확장 검토 및 업데이트  
   
-    -   보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정(예: 데이터베이스 시간 제한)  
+    -   보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정(예: 데이터베이스 시간 제한)  
   
     -   데이터 확장 나열  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52414680"
   
 -   [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
+-   추가 스크립트, 애플리케이션 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

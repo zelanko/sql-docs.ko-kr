@@ -22,7 +22,7 @@ ms.locfileid: "50020527"
 
 SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
   
- Reporting Services의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하도록 허용하며 다른 응용 프로그램과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 `www.s2.com`과 같습니다.  
+ Reporting Services의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 `www.s2.com`과 같습니다.  
   
  Reporting Services의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
@@ -46,7 +46,7 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
     ```  
   
-4.  보고서 서버 웹 서비스 응용 프로그램의 URL 섹션을 복사합니다.  
+4.  보고서 서버 웹 서비스 애플리케이션의 URL 섹션을 복사합니다.  
   
      예를 들어 다음은 원래 URL 섹션입니다.  
   

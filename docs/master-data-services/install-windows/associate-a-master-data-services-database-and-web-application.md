@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 데이터베이스와 웹 응용 프로그램 연결 | Microsoft Docs
+title: Master Data Services 데이터베이스와 웹 애플리케이션 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47622141"
 ---
-# <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 응용 프로그램 연결
+# <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 애플리케이션 연결
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -28,11 +28,11 @@ ms.locfileid: "47622141"
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
--   로컬 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
+-   로컬 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 있어야 합니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
 -   로컬 또는 원격 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스가 있어야 합니다. 자세한 내용은 [Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)를 참조하세요.  
   
-### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 응용 프로그램을 연결하려면  
+### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 애플리케이션을 연결하려면  
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   

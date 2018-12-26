@@ -75,7 +75,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |속성|값|설명|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
-|**/p:**|DacApplicationDescription=(STRING)|DACPAC 메타데이터에 저장할 응용 프로그램 설명을 정의합니다.|
+|**/p:**|DacApplicationDescription=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|
 |**/p:**|DacApplicationName=(STRING)|DACPAC 메타데이터에 저장할 응용 프로그램 이름을 정의했습니다. 기본값은 데이터베이스 이름입니다.|
 |**/p:**|DacMajorVersion = (INT32 '1')|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|
 |**/p:**|DacMinorVersion = (INT32 '0')|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|

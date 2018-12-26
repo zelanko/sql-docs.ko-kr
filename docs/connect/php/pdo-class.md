@@ -21,7 +21,7 @@ ms.locfileid: "51600493"
 # <a name="pdo-class"></a>PDO 클래스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO 클래스는 PHP 응용 프로그램을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는 메서드를 포함합니다.  
+PDO 클래스는 PHP 애플리케이션을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있는 메서드를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   

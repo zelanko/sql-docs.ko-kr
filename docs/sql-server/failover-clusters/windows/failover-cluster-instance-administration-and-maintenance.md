@@ -58,7 +58,7 @@ ms.locfileid: "47738811"
 |태스크 설명|항목 링크|  
 |----------------------|----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 종속성을 추가하는 방법에 대해 설명합니다.|[SQL Server 리소스에 종속성 추가](../../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos는 클라이언트/서버 응용 프로그램을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 Always On FCI에서 Kerberos 인증을 사용할 수 있습니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos는 클라이언트/서버 애플리케이션을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 Always On FCI에서 Kerberos 인증을 사용할 수 있습니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Kerberos 인증을 사용하는 방법을 설명하는 콘텐츠에 대한 링크를 제공합니다.||  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 오류를 복구하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스 오류 복구](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 IP 주소 리소스를 변경하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  

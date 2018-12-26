@@ -394,7 +394,7 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 -   .xls 파일에서 열 255 이후의 모든 열에 있는 데이터를 제거하고 파일을 저장한 다음 .xls 파일의 값을 도메인으로 가져옵니다.  
   
 ### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 dqs_administrator가 아닌 역할은 작업 모니터링 기능을 사용할 수 없음  
-작업 모니터링 기능은 dqs_administrator 역할이 있는 사용자에게만 제공됩니다. 사용자 계정에 dqs_kb_editor 또는 dqs_kb_operator 역할이 있으면 Data Quality 클라이언트 응용 프로그램에서 작업 모니터링 기능이 제공되지 않습니다.  
+작업 모니터링 기능은 dqs_administrator 역할이 있는 사용자에게만 제공됩니다. 사용자 계정에 dqs_kb_editor 또는 dqs_kb_operator 역할이 있으면 Data Quality 클라이언트 애플리케이션에서 작업 모니터링 기능이 제공되지 않습니다.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 최근 기술 자료에서 도메인 관리에 대한 기술 자료를 여는 경우 오류 발생  
 Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의 도메인 관리 작업에 대한 기술 자료를 여는 경우 다음과 같은 오류 메시지가 나타날 수 있습니다.  
@@ -499,7 +499,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 다음 표에서는 AlwaysOn 가용성 그룹의 드라이버 지원에 대해 간략하게 설명합니다.  
   
-|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
+|드라이버|다중 서브넷 장애 조치(Failover)|애플리케이션 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
@@ -610,7 +610,7 @@ Oracle용 CDC 서비스는 Oracle 트랜잭션 로그를 검색하고 관련 Ora
 문제에 대한 자세한 내용 및 위 단계를 수행하는 방법은 [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467)을 참조하세요.  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 필요  
-마스터 데이터 관리자 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
+마스터 데이터 관리자 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

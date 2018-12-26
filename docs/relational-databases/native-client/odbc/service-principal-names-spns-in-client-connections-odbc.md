@@ -23,10 +23,10 @@ ms.locfileid: "47597861"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결에 대 한 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 및 [상호 Kerberos 인증 가져오기](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  이 항목에서는 클라이언트 애플리케이션의 SPN(서비스 사용자 이름)을 지원하는 ODBC 특성 및 함수에 대해 설명합니다. 클라이언트 응용 프로그램의 Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결에 대 한 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) 및 [상호 Kerberos 인증 가져오기](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>연결 문자열 키워드  
- 클라이언트 응용 프로그램은 다음 연결 문자열 키워드를 사용하여 SPN을 지정할 수 있습니다.  
+ 클라이언트 애플리케이션은 다음 연결 문자열 키워드를 사용하여 SPN을 지정할 수 있습니다.  
   
 |키워드|값|  
 |-------------|-----------|  
@@ -34,7 +34,7 @@ ms.locfileid: "47597861"
 |**FailoverPartnerSPN**|장애 조치(failover) 파트너의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
   
 ## <a name="connection-attributes"></a>연결 특성  
- 클라이언트 응용 프로그램은 다음 연결 특성을 사용하여 SPN을 지정하고 인증 방법을 쿼리할 수 있습니다.  
+ 클라이언트 애플리케이션은 다음 연결 특성을 사용하여 SPN을 지정하고 인증 방법을 쿼리할 수 있습니다.  
   
 |이름|형식|사용법|  
 |----------|----------|-----------|  
@@ -43,7 +43,7 @@ ms.locfileid: "47597861"
 |SQL_COPT_SS_MUTUALLY_AUTHENTICATED|SQLSMALLINT, 읽기 전용|연결의 서버가 상호 인증되면 SQL_TRUE를 반환하고, 그렇지 않으면 SQL_FALSE를 반환합니다.<br /><br /> 이 특성은 열린 연결에 대해서만 읽을 수 있습니다. 연결이 열리기 전에 이 특성을 읽으려고 하면 SQL_ERROR가 반환되고 SQLState 08003 및 "연결을 열 수 없습니다"라는 메시지가 표시되며 오류가 기록됩니다.<br /><br /> Windows 인증을 사용하지 않은 연결에 대해 이 특성을 쿼리하면 SQL_FALSE가 반환됩니다.|  
   
 ## <a name="odbc-function-support-for-specifying-spns"></a>SPN 지정에 대한 ODBC 함수 지원  
- 다음 ODBC 함수는 클라이언트 응용 프로그램 및 SPN을 지원합니다.  
+ 다음 ODBC 함수는 클라이언트 애플리케이션 및 SPN을 지원합니다.  
   
 -   [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   

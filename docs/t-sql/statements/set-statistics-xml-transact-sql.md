@@ -48,7 +48,7 @@ SET STATISTICS XML { ON | OFF }
   
  SET STATISTICS XML을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 실행된 각 문에 대한 실행 정보를 반환합니다. 이 옵션을 ON으로 설정하면 다시 OFF로 설정할 때까지 이후의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 정보가 반환됩니다. SET STATISTICS XML이 일괄 처리에서 유일한 문일 필요는 없습니다.  
   
- SET STATISTICS XML은 **sqlcmd** 유틸리티 같은 응용 프로그램에 대한 출력을 **nvarchar(max)** 형식으로 반환합니다. 여기서 XML 출력은 이후에 다른 도구가 쿼리 계획 정보를 표시하고 처리하는 데 사용합니다.  
+ SET STATISTICS XML은 **sqlcmd** 유틸리티 같은 애플리케이션에 대한 출력을 **nvarchar(max)** 형식으로 반환합니다. 여기서 XML 출력은 이후에 다른 도구가 쿼리 계획 정보를 표시하고 처리하는 데 사용합니다.  
   
  SET STATISTICS XML은 XML 문서 집합으로 정보를 반환합니다. SET STATISTICS XML ON 문 뒤에 오는 각 문은 단일 문서로 출력에 반영됩니다. 각 문서에는 문의 텍스트가 먼저 오고 그 뒤에 실행 단계에 대한 세부 정보가 옵니다. 출력에서는 비용, 액세스한 인덱스, 수행한 연산 유형 같은 런타임 정보, 조인 순서, 물리적 연산이 수행된 횟수, 각 물리 연산자가 생성한 행 수 등을 보여 줍니다.  
   

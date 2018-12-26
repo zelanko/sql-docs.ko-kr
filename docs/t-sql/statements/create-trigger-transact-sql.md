@@ -263,7 +263,7 @@ SELECT * FROM deleted;
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 대한 INSTEAD OF 트리거를 통해 **text**, **ntext** 또는 **image** 열을 업데이트할 수 있습니다.  
   
 > [!IMPORTANT]  
->  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(MAX)**, **nvarchar(MAX)** 및 **varbinary(MAX)** 데이터를 지원합니다.  
+>  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(MAX)**, **nvarchar(MAX)** 및 **varbinary(MAX)** 데이터를 지원합니다.  
   
  메모리 최적화 테이블의 트리거의 경우, 최상위 수준에서 허용되는 *sql_statement*는 ATOMIC 블록뿐입니다. ATOMIC 블록 내에서 허용되는 T-SQL은 네이티브 프로시저 내에서 허용되는 T-SQL로 제한됩니다.  
   
@@ -370,7 +370,7 @@ RETURN;
 ## <a name="general-trigger-considerations"></a>일반적인 트리거 고려 사항  
   
 ### <a name="returning-results"></a>결과 반환  
- 이후 버전의 SQL Server에서는 트리거에서 결과를 반환하는 기능이 제거됩니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 응용 프로그램에 예기치 않은 동작을 유발할 수도 있습니다. 향후 개발 작업에서는 트리거에서 결과 집합을 반환하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 트리거가 결과 집합을 반환하지 않도록 하려면 [disallow results from triggers 옵션](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md)을 1로 설정합니다.  
+ 이후 버전의 SQL Server에서는 트리거에서 결과를 반환하는 기능이 제거됩니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 애플리케이션에 예기치 않은 동작을 유발할 수도 있습니다. 향후 개발 작업에서는 트리거에서 결과 집합을 반환하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 트리거가 결과 집합을 반환하지 않도록 하려면 [disallow results from triggers 옵션](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md)을 1로 설정합니다.  
   
  LOGON 트리거는 결과 집합 반환을 항상 허용하지 않으며 이 동작은 구성할 수 없습니다. LOGON 트리거가 결과 집합을 생성할 경우 트리거가 실행되지 않고 트리거를 실행한 로그인 시도가 거부됩니다.  
   
@@ -404,7 +404,7 @@ RETURN;
   
  중첩 트리거를 비활성화하려면 sp_configure의 nested triggers 옵션을 0(off)으로 설정하십시오. 기본 구성은 중첩 트리거를 허용합니다. 중첩된 트리거가 해제된 경우 ALTER DATABASE를 사용하여 설정된 RECURSIVE_TRIGGERS 설정에 관계없이 재귀 트리거도 비활성화됩니다.  
   
- INSTEAD OF 트리거 내부에 중첩된 첫 번째 AFTER 트리거는 **중첩된 트리거** 서버 구성 옵션이 0으로 설정되어 있는 경우에도 실행됩니다. 그러나 이 설정에서는 이후의 AFTER 트리거는 발생하지 않습니다. 중첩 트리거에 대한 응용 프로그램을 검토하여 **중첩된 트리거** 서버 구성 옵션이 0으로 설정된 경우 이 새 동작과 관련된 비즈니스 규칙을 응용 프로그램이 여전히 준수하는지 확인한 다음, 적절하게 수정하는 것이 좋습니다.  
+ INSTEAD OF 트리거 내부에 중첩된 첫 번째 AFTER 트리거는 **중첩된 트리거** 서버 구성 옵션이 0으로 설정되어 있는 경우에도 실행됩니다. 그러나 이 설정에서는 이후의 AFTER 트리거는 발생하지 않습니다. 중첩 트리거에 대한 애플리케이션을 검토하여 **중첩된 트리거** 서버 구성 옵션이 0으로 설정된 경우 이 새 동작과 관련된 비즈니스 규칙을 애플리케이션이 여전히 준수하는지 확인한 다음, 적절하게 수정하는 것이 좋습니다.  
   
 ### <a name="deferred-name-resolution"></a>지연된 이름 확인  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 트리거 및 일괄 처리에서는 컴파일 시간에 존재하지 않는 테이블을 참조할 수 있습니다. 이 기능을 지연된 이름 확인이라고 합니다.  

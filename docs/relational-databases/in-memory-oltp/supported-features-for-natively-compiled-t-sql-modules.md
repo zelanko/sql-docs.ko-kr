@@ -164,7 +164,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [RETURN&#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)  
 
--   [DECLARE @local_variable&amp;#40;Transact-SQL&amp;#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 최적화 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
+-   [DECLARE @local_variable &#40;Transact-SQL &#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 최적화 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
 
 -   [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 

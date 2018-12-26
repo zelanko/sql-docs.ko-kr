@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 2e861bf2d8daf2460fbffcf2d92fcd33f859cd78
 ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51699127"
@@ -164,7 +164,7 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-이유가 무엇일까요? 이 경우 두 인수는 동일한 길이의 벡터로 처리될 수 있으므로 R이 내적(inner product)을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 응용 프로그램에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
+이유가 무엇일까요? 이 경우 두 인수는 동일한 길이의 벡터로 처리될 수 있으므로 R이 내적(inner product)을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 애플리케이션에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
 
 > [!TIP]
 > 
@@ -213,7 +213,7 @@ R 과 SQL Server는 같은 데이터 형식을 사용하지 않으므로, SQL Se
 - SQL Server는 쿼리의 데이터를 Launchpad 서비스가 관리하는 R 프로세스에 넣고 효율성을 높이기 위한 내부 표현으로 변환합니다.
 - R 런타임이 데이터를 data.frame 변수에 로드하고 데이터에서 고유한 작업을 수행합니다.
 - 데이터베이스 엔진은 보안 설정된 내부 연결을 통해 데이터를 SQL Server로 반환하고 SQL Server 데이터 형식을 기준으로 데이터를 제공합니다.
-- SQL 쿼리를 실행하고 테이블 형식 데이터 집합을 처리할 수 있는 클라이언트 또는 네트워크 라이브러리를 사용하여 SQL Server에 연결하는 방식으로 데이터를 가져옵니다. 이 클라이언트 응용 프로그램은 다른 방식으로 데이터에 영향을 미칠 수 있습니다.
+- SQL 쿼리를 실행하고 테이블 형식 데이터 집합을 처리할 수 있는 클라이언트 또는 네트워크 라이브러리를 사용하여 SQL Server에 연결하는 방식으로 데이터를 가져옵니다. 이 클라이언트 애플리케이션은 다른 방식으로 데이터에 영향을 미칠 수 있습니다.
 
 이 과정을 보려면에서이 이와 같은 쿼리를 실행 합니다 [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 데이터 웨어하우스. 이 뷰는 예측 생성에 사용된 매출 데이터를 반환합니다.
 

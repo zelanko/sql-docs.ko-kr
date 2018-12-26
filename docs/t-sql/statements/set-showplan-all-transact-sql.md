@@ -53,7 +53,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  SET SHOWPLAN_ALL 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 문을 실행하지 않고 문에 대한 실행 정보를 반환하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실행되지 않습니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 정보가 반환됩니다. 예를 들어, SET SHOWPLAN_ALL을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 같은 테이블이 사용되는 이후 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_ALL 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보고서를 생성하지 않고 문을 실행합니다.  
   
- SET SHOWPLAN_ALL은 그 출력을 처리하도록 작성된 응용 프로그램에서 사용하기 위한 옵션입니다. SET SHOWPLAN_TEXT 옵션을 사용하여 **osql** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 응용 프로그램에 읽을 수 있는 출력을 반환할 수 있습니다.  
+ SET SHOWPLAN_ALL은 그 출력을 처리하도록 작성된 응용 프로그램에서 사용하기 위한 옵션입니다. SET SHOWPLAN_TEXT 옵션을 사용하여 **osql** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 애플리케이션에 읽을 수 있는 출력을 반환할 수 있습니다.  
   
  SET SHOWPLAN_TEXT와 SET SHOWPLAN_ALL 옵션을 저장 프로시저 내에 지정할 수 없으며 일괄 처리에서 유일한 문이어야 합니다.  
   

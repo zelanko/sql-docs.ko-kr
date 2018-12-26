@@ -17,14 +17,14 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
 ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51350237"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle OLE DB 공급자를 대신 사용 합니다.
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. Oracle OLE DB 공급자를 대신 사용 합니다.
 
  Microsoft OLE DB Provider for Oracle에는 ADO를 Oracle 데이터베이스에 액세스할 수 있습니다.
 

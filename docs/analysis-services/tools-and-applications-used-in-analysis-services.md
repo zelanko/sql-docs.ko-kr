@@ -11,12 +11,12 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2ff1808739eff4aed9ad34bef5d512f7539b7a6
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34041797"
 ---
-# <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 응용 프로그램
+# <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   도구 및 Analysis Services 모델 개발에 필요한 응용 프로그램을 찾아 배포 된 데이터베이스를 관리 합니다.  

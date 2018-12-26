@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버 응용 프로그램 보안 | Microsoft Docs
+title: JDBC 드라이버 애플리케이션 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

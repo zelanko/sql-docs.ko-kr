@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51018678"
@@ -36,7 +36,7 @@ ms.locfileid: "51018678"
  ![재귀 공간 분할의 4가지 수준](../../database-engine/media/spndx-recursive-levels-telescoped.gif "Four-levels of recursive tessellation")  
   
 > [!NOTE]  
->  공간 인덱스에 대한 공간 분해는 응용 프로그램 데이터에서 사용하는 측정 단위의 영향을 받지 않습니다.  
+>  공간 인덱스에 대한 공간 분해는 애플리케이션 데이터에서 사용하는 측정 단위의 영향을 받지 않습니다.  
   
  표 계층 구조 셀은 힐베르트 공간 채움 곡선의 변형을 사용하여 선형으로 번호가 매겨집니다. 그러나 이해하기 쉽도록 이 설명에서는 힐베르트 곡선에 따라 실제로 생성되는 번호 매기기 대신 간단한 행 단위 번호 매기기를 사용합니다. 다음 그림에서는 건물을 나타내는 여러 다각형과 도로를 나타내는 선이 이미 4x4, 수준-1 표에 배치되어 있습니다. 수준-1 셀은 상단 왼쪽 셀에서부터 1에서 16까지 번호가 매겨져 있습니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "51018678"
   
  ![좌표 및 셀 0을 보여 주는 경계 상자](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
   
- 경계 상자는 응용 프로그램 공간 데이터의 일부분에 해당합니다. 인덱스의 경계 상자가 공간 열에 저장된 데이터를 완전히 포함하거나 일부만 포함하는지는 응용 프로그램에 따라 좌우됩니다. 전체적으로 경계 상자의 내부에 있는 개체에서 처리되는 작업만 공간 인덱스의 이점을 활용합니다. 따라서 `geometry` 열의 공간 인덱스의 이점을 최대한 활용하려면 개체의 전체 또는 대부분을 포함하는 경계 상자를 지정해야 합니다.  
+ 경계 상자는 애플리케이션 공간 데이터의 일부분에 해당합니다. 인덱스의 경계 상자가 공간 열에 저장된 데이터를 완전히 포함하거나 일부만 포함하는지는 애플리케이션에 따라 좌우됩니다. 전체적으로 경계 상자의 내부에 있는 개체에서 처리되는 작업만 공간 인덱스의 이점을 활용합니다. 따라서 `geometry` 열의 공간 인덱스의 이점을 최대한 활용하려면 개체의 전체 또는 대부분을 포함하는 경계 상자를 지정해야 합니다.  
   
 > [!NOTE]  
 >  공간 인덱스의 표 밀도는 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 카탈로그 뷰의 bounding_box_xmin, bounding_box_ymin, bounding_box_xmax 및 bounding_box_ymax 열에서 볼 수 있습니다.  

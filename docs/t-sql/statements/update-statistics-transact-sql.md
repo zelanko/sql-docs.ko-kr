@@ -34,7 +34,7 @@ ms.locfileid: "52586296"
 
 테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트합니다. 기본적으로 쿼리 최적화 프로그램은 이미 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 `UPDATE STATISTICS` 또는 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 저장 프로시저를 사용하여 기본 업데이트 주기보다 더 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
   
-통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 응용 프로그램에 따라 달라집니다. `UPDATE STATISTICS`은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
+통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 애플리케이션에 따라 달라집니다. `UPDATE STATISTICS`은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

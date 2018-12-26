@@ -1,1 +1,1 @@
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 “방법: Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기” 또는 “방법: Visual Studio .NET에서 Visual C\# SMO 프로젝트 만들기”를 참조하세요.
+제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 “방법: Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기” 또는 “방법: Visual Studio .NET에서 Visual C\# SMO 프로젝트 만들기”를 참조하세요.

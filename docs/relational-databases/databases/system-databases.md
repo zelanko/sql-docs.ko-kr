@@ -44,11 +44,11 @@ ms.locfileid: "51558766"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]등의 관리 유틸리티  
   
--   SQL-SMO API. 이 도구를 통해 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리할 수 있는 완전한 기능을 응용 프로그램에 포함할 수 있습니다.  
+-   SQL-SMO API. 이 도구를 통해 프로그래머는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 관리할 수 있는 완전한 기능을 애플리케이션에 포함할 수 있습니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저. 시스템 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용할 수 있습니다.  
   
- 이러한 관리 도구는 시스템 개체의 변경 내용으로부터 응용 프로그램을 보호합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 새로 추가되는 기능을 지원하기 위해 시스템 테이블을 변경해야 하는 경우가 있습니다. 시스템 테이블을 직접 참조하는 SELECT 문을 실행하는 응용 프로그램은 대개 시스템 테이블의 이전 형식을 기준으로 합니다. 사이트는 시스템 테이블에서 선택되는 응용 프로그램을 다시 작성해야만 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템 저장 프로시저, DDL 및 SQL-SMO 게시 인터페이스를 고려하며 이러한 인터페이스와 이전 버전과의 호환성을 유지합니다.  
+ 이러한 관리 도구는 시스템 개체의 변경 내용으로부터 애플리케이션을 보호합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 새로 추가되는 기능을 지원하기 위해 시스템 테이블을 변경해야 하는 경우가 있습니다. 시스템 테이블을 직접 참조하는 SELECT 문을 실행하는 애플리케이션은 대개 시스템 테이블의 이전 형식을 기준으로 합니다. 사이트는 시스템 테이블에서 선택되는 애플리케이션을 다시 작성해야만 새 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템 저장 프로시저, DDL 및 SQL-SMO 게시 인터페이스를 고려하며 이러한 인터페이스와 이전 버전과의 호환성을 유지합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 시스템의 작업을 수정할 수 있기 때문에 시스템 테이블에 정의된 트리거는 지원하지 않습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558766"
 >  시스템 데이터베이스는 UNC 공유 디렉터리에 있을 수 없습니다.  
   
 ## <a name="viewing-system-database-data"></a>시스템 데이터베이스 데이터 보기  
- 응용 프로그램에 필요한 정보를 얻기 위해 불가피한 경우가 아니면 시스템 테이블을 직접 쿼리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성하지 마십시오. 대신 다음 항목을 사용하여 응용 프로그램에서 카탈로그나 시스템 정보를 얻어야 합니다.  
+ 애플리케이션에 필요한 정보를 얻기 위해 불가피한 경우가 아니면 시스템 테이블을 직접 쿼리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 작성하지 마십시오. 대신 다음 항목을 사용하여 애플리케이션에서 카탈로그나 시스템 정보를 얻어야 합니다.  
   
 -   시스템 카탈로그 뷰  
   
@@ -64,7 +64,7 @@ ms.locfileid: "51558766"
   
 -   WMI(Windows Management Instrumentation) 인터페이스  
   
--   ADO, OLE DB, ODBC 등의 응용 프로그램에 사용되는 데이터 API의 카탈로그 함수, 메서드, 특성 또는 속성  
+-   ADO, OLE DB, ODBC 등의 애플리케이션에 사용되는 데이터 API의 카탈로그 함수, 메서드, 특성 또는 속성  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저 및 기본 제공 함수  
   

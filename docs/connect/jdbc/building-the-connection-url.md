@@ -51,7 +51,7 @@ ms.locfileid: "52159111"
 > [!NOTE]  
 >  이전 예제에서는 연결 문자열에 사용자 이름과 암호를 사용했지만 보다 안전한 통합 보안을 사용해야 합니다. 자세한 내용은 이 항목 후반에 있는 [통합 인증으로 연결](#Connectingintegrated) 섹션을 참조하십시오.  
   
- 다음 연결 문자열에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제에서 실행 중인 응용 프로그램에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
+ 다음 연결 문자열에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제에서 실행 중인 애플리케이션에서 통합 인증 및 Kerberos를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법의 예를 보여 줍니다.  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  

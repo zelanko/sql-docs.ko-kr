@@ -17,7 +17,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
 ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49120410"
@@ -110,7 +110,7 @@ ms.locfileid: "49120410"
  수신기는 DHCP(동적 호스트 구성 프로토콜)를 실행하는 서버에서 할당되는 동적 IP 주소를 사용합니다. DHCP는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
->  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 응용 프로그램과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
+>  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
  **고정 IP**  
  수신기는 하나 이상의 고정 IP 주소를 사용합니다. 추가 IP 주소는 선택적입니다. 여러 서브넷 간에 가용성 그룹 수신기를 만들려면 각 서브넷에 대해 수신기 구성에서 고정 IP 주소를 지정해야 합니다. 이러한 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하세요.  
@@ -284,7 +284,7 @@ Start-ClusterResource yourAGResource
   
 -   네트워크 관리자에게 요청하여 수신기의 IP 주소를 배타적으로 사용할 수 있도록 예약합니다.  
   
--   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 응용 프로그램 개발자에게 제공합니다.  
+-   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
   
 -   가능한 경우 개발자가 클라이언트 연결 문자열을 업데이트하여 `MultiSubnetFailover = True`를 지정하도록 권장합니다. 다중 서브넷 장애 조치(failover)의 드라이버 지원에 대한 자세한 내용은 [AlwaysOn 클라이언트 연결&#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)을 참조하세요.  
   

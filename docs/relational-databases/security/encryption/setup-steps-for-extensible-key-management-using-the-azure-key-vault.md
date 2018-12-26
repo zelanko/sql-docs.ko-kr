@@ -50,7 +50,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 1.  [Azure Portal](https://ms.portal.azure.com/)로 이동하고 로그인합니다.  
   
-2.  Azure Active Directory에 응용 프로그램을 등록합니다. 응용 프로그램 등록에 대한 자세한 단계별 지침은 **Azure 주요 자격 증명 모음 블로그 게시물** 의 [응용 프로그램의 ID 가져오기](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)섹션을 참조하세요.  
+2.  Azure Active Directory에 애플리케이션을 등록합니다. 애플리케이션 등록에 대한 자세한 단계별 지침은 **Azure 주요 자격 증명 모음 블로그 게시물** 의 [애플리케이션의 ID 가져오기](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)섹션을 참조하세요.  
   
 3.  **클라이언트 ID** 및 **클라이언트 암호** 를 복사하여 이후 단계에서 주요 자격 증명 모음에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 액세스 권한을 부여하는 데 사용합니다.  
   
@@ -146,7 +146,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 4.  **Azure Active Directory 서비스 사용자가 주요 자격 증명 모음에 액세스할 수 있는 권한 부여**  
   
-     다른 사용자 및 응용 프로그램이 사용자의 주요 자격 증명 모음을 사용하도록 권한을 부여할 수 있습니다.   
+     다른 사용자 및 애플리케이션이 사용자의 주요 자격 증명 모음을 사용하도록 권한을 부여할 수 있습니다.   
     이 경우 1부에서 만든 Azure Active Directory 서비스 사용자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 권한을 부여해 봅시다.  
   
     > [!IMPORTANT]  

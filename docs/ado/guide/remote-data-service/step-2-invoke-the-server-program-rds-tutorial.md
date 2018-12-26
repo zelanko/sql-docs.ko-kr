@@ -24,7 +24,7 @@ ms.locfileid: "51559950"
 클라이언트에서 메서드를 호출 하는 경우 *프록시*를 서버의 실제 프로그램 메서드를 실행 합니다. 이 단계에서는 서버에서 쿼리를 실행 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  **Part A** 사용 하지 않는 경우 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 이 자습서에서는이 단계를 수행 하는 가장 편리한 방법은 사용할 것을 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다. **rds. DataControl** 쿼리 실행이 단계를 사용 하 여 프록시를 만드는 이전 단계를 결합 합니다.  
   

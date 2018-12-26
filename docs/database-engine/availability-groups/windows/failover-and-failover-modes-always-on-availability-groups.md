@@ -39,7 +39,7 @@ ms.locfileid: "52523404"
 -   **비동기-커밋 복제본** 은 수동 장애 조치(Failover) 모드만 지원합니다. 또한, 절대 동기화되지 않기 때문에 강제 장애 조치(Failover)만 지원합니다.  
   
 > [!NOTE]  
->  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 응용 프로그램은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 응용 프로그램이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
+>  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 애플리케이션은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 애플리케이션이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
  **이 항목의 섹션:**  
   

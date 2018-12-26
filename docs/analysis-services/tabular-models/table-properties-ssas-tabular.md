@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: c479fd46f5303d95e5c0390eb97246f8eeb08890
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34040447"
@@ -36,7 +36,7 @@ ms.locfileid: "34040447"
 |**파티션**||**속성** 창에 표시될 수 없는 테이블의 파티션입니다. 파티션을 보거나 만들거나 편집하려면 단추를 클릭하여 파티션 관리자를 엽니다.|  
 |**원본 데이터**||**속성** 창에 표시될 수 없는 테이블의 원본 데이터입니다. 원본 데이터를 보거나 편집하려면 단추를 클릭하여 테이블 속성 편집 대화 상자를 엽니다.|  
 |**테이블 속성 설명**||테이블에 대한 텍스트 설명입니다.<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 최종 사용자가 필드 목록의 이 테이블 위에 커서를 두면 설명이 도구 설명으로 나타납니다.|  
-|**테이블 이름**|\<식별 이름 >|테이블의 이름을 지정합니다. 테이블 이름은 테이블 가져오기 마법사를 사용하여 테이블을 가져올 때 지정하거나 테이블을 가져온 후 언제든지 지정할 수 있습니다. 모델의 테이블 이름을 관련된 원본 테이블 이름과 다르게 지정할 수 있습니다. 테이블 이름은 보고 클라이언트 응용 프로그램 필드 목록과 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 모델 데이터베이스에 나타납니다.|  
+|**테이블 이름**|\<식별 이름 >|테이블의 이름을 지정합니다. 테이블 이름은 테이블 가져오기 마법사를 사용하여 테이블을 가져올 때 지정하거나 테이블을 가져온 후 언제든지 지정할 수 있습니다. 모델의 테이블 이름을 관련된 원본 테이블 이름과 다르게 지정할 수 있습니다. 테이블 이름은 보고 클라이언트 애플리케이션 필드 목록과 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 모델 데이터베이스에 나타납니다.|  
   
  **보고 속성**  
   

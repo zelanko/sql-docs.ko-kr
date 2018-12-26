@@ -86,7 +86,7 @@ ms.locfileid: "51018568"
   
 -   복제가 현재 상태인지 확인한 다음 복제를 중지합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종속성을 갖는 모든 서비스를 포함한 모든 응용 프로그램을 끝냅니다. 로컬 응용 프로그램이 업그레이드 중인 인스턴스에 연결되어 있으면 업그레이드가 실패할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종속성을 갖는 모든 서비스를 포함한 모든 응용 프로그램을 끝냅니다. 로컬 애플리케이션이 업그레이드 중인 인스턴스에 연결되어 있으면 업그레이드가 실패할 수 있습니다.  
   
 -   데이터베이스 미러링을 사용하는 경우 [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화](../database-mirroring/upgrading-mirrored-instances.md)를 참조하세요.  
   

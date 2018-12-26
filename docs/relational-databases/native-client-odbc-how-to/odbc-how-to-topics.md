@@ -23,7 +23,7 @@ ms.locfileid: "51661232"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버를 사용하려면 ODBC 데이터 원본을 만들고 서버에 올바른 버전의 카탈로그 저장 프로시저가 있는지 확인할 수 있어야 합니다. SQL Server를 사용하는 ODBC 응용 프로그램의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버를 사용하려면 ODBC 데이터 원본을 만들고 서버에 올바른 버전의 카탈로그 저장 프로시저가 있는지 확인할 수 있어야 합니다. SQL Server를 사용하는 ODBC 애플리케이션의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

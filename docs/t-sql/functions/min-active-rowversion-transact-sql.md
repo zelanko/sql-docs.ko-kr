@@ -48,7 +48,7 @@ MIN_ACTIVE_ROWVERSION
 ## <a name="remarks"></a>Remarks  
  MIN_ACTIVE_ROWVERSION은 현재 데이터베이스의 가장 낮은 활성 **rowversion** 값을 반환하는 비결정적 함수입니다. 새로운 **rowversion** 값은 일반적으로 **rowversion**형식의 열이 포함된 테이블에 삽입 또는 업데이트가 수행될 때 생성됩니다. 데이터베이스에 활성 값이 없는 경우 MIN_ACTIVE_ROWVERSION은 @@DBTS + 1과 같은 값을 반환합니다.  
   
- MIN_ACTIVE_ROWVERSION은 **rowversion** 값을 사용하여 변경 내용 집합을 그룹화하는 데이터 동기화와 같은 시나리오에 유용합니다. 응용 프로그램이 MIN_ACTIVE_ROWVERSION이 아닌 @@DBTS를 사용하면 동기화가 일어날 때 활성 상태인 변경 내용을 놓칠 수 있습니다.  
+ MIN_ACTIVE_ROWVERSION은 **rowversion** 값을 사용하여 변경 내용 집합을 그룹화하는 데이터 동기화와 같은 시나리오에 유용합니다. 애플리케이션이 MIN_ACTIVE_ROWVERSION이 아닌 @@DBTS를 사용하면 동기화가 일어날 때 활성 상태인 변경 내용을 놓칠 수 있습니다.  
   
  MIN_ACTIVE_ROWVERSION 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.  
   

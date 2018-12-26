@@ -18,7 +18,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 61dc56c503e580d90b17b1b04c5e80ea6fb10d70
 ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51571082"
@@ -100,7 +100,7 @@ HRESULT LocalDBStartInstance(
  인스턴스 구성이 손상되었습니다.  
   
  [LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-auto-instance-create-failed.md)  
- 자동 인스턴스를 만들 수 없습니다. 자세한 오류 정보는 Windows 응용 프로그램 이벤트 로그를 참조하십시오.  
+ 자동 인스턴스를 만들 수 없습니다. 자세한 오류 정보는 Windows 애플리케이션 이벤트 로그를 참조하십시오.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  

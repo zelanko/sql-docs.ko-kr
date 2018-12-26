@@ -141,7 +141,7 @@ ms.locfileid: "52523924"
     ```  
   
     > [!NOTE]  
-    > 또는 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 또는 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 저장 프로시저를 사용할 수 있습니다. 그러나 이 프로시저는 이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신 `CREATE DATABASE ... FOR ATTACH` 을 사용하는 것이 좋습니다.  
+    > 또는 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 또는 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 저장 프로시저를 사용할 수 있습니다. 그러나 이 프로시저는 이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 `CREATE DATABASE ... FOR ATTACH` 을 사용하는 것이 좋습니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: SQL Server 데이터베이스를 업그레이드한 후  
 연결 방법을 사용하여 데이터베이스를 업그레이드하면 데이터베이스를 바로 사용할 수 있으며 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다.  

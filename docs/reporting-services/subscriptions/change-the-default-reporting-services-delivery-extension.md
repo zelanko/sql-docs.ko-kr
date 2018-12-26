@@ -96,7 +96,7 @@ ms.locfileid: "52402267"
   
 1.  **SharePoint 관리 셸**을 엽니다.  
   
-2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 알고 있는 경우에 이 단계를 건너뛸 수 있습니다. SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 나열하려면 다음 PowerShell을 사용합니다.  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 알고 있는 경우에 이 단계를 건너뛸 수 있습니다. SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 나열하려면 다음 PowerShell을 사용합니다.  
   
     ```  
     get-sprsserviceapplication | format-list *  

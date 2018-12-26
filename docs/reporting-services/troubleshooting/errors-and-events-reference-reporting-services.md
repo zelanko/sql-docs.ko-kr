@@ -28,7 +28,7 @@ ms.locfileid: "50021787"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 가장 자주 검색되는 오류에 대한 원인과 해결 방법 정보를 확인할 수 있습니다. 자세한 내용은 [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)을 참조하세요.  
   
 ## <a name="report-server-events"></a>보고서 서버 이벤트  
- 다음과 같은 보고서 서버 이벤트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 기록됩니다.  
+ 다음과 같은 보고서 서버 이벤트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록됩니다.  
   
 |이벤트 ID|형식|범주|원본|설명|  
 |--------------|----------|--------------|------------|-----------------|  

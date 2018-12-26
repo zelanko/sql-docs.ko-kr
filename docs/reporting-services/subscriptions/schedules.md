@@ -49,7 +49,7 @@ ms.locfileid: "52711474"
   
  여러 보고서 또는 구독에 대해 동일한 일정 정보를 사용하려는 경우 공유 일정을 만들 수 있습니다. 공유 일정은 별도로 정의한 다음 일정 정보를 필요로 하는 보고서, 공유 데이터 집합 및 구독에서 정의된 공유 일정을 참조합니다.  
   
- 일정을 만들면 보고서는 보고서 서버 데이터베이스 또는 서비스 응용 프로그램 데이터베이스(SharePoint 모드의 경우)에 일정 정보를 저장합니다. 또한 보고서 서버는 해당 일정을 트리거하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만듭니다. 일정 처리는 일정을 포함하는 보고서 서버의 현지 시간을 기준으로 합니다. 시간 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 표준을 따릅니다.  
+ 일정을 만들면 보고서는 보고서 서버 데이터베이스 또는 서비스 애플리케이션 데이터베이스(SharePoint 모드의 경우)에 일정 정보를 저장합니다. 또한 보고서 서버는 해당 일정을 트리거하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만듭니다. 일정 처리는 일정을 포함하는 보고서 서버의 현지 시간을 기준으로 합니다. 시간 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 표준을 따릅니다.  
   
  예약을 만들고 관리하는 방법은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)를 참조하세요.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52711474"
   
      이벤트가 처리되기 전에 일정 예약 및 배달 프로세서는 인증 단계를 수행하여 보고서를 볼 수 있는 권한이 구독 소유자에게 있는지 확인합니다.  
   
- Reporting Services는 모든 예약된 작업에 대해 이벤트 큐를 관리합니다. 또한 새 이벤트를 확인하기 위해 정기적으로 큐를 폴링합니다. 기본적으로 큐는 10초 간격으로 검색됩니다. RSReportServer.config 파일에서 **PollingInterval**, **IsNotificationService**및 **IsEventService** 구성 설정을 수정하여 간격을 변경할 수 있습니다. SharePoint 모드에서도 이러한 설정에 대해 Rsreporserver.config를 사용하며 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 값이 적용됩니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
+ Reporting Services는 모든 예약된 작업에 대해 이벤트 큐를 관리합니다. 또한 새 이벤트를 확인하기 위해 정기적으로 큐를 폴링합니다. 기본적으로 큐는 10초 간격으로 검색됩니다. RSReportServer.config 파일에서 **PollingInterval**, **IsNotificationService**및 **IsEventService** 구성 설정을 수정하여 간격을 변경할 수 있습니다. SharePoint 모드에서도 이러한 설정에 대해 Rsreporserver.config를 사용하며 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 값이 적용됩니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
 ##  <a name="bkmk_serverdependencies"></a> 서버 종속성  
  일정 예약 및 배달 프로세서를 사용하려면 보고서 서버 서비스와 SQL Server 에이전트를 시작해야 합니다. 일정 예약 및 배달 처리 기능은 정책 기반 관리에 있는 **Reporting Services에 대한 노출 영역 구성** 패싯의 **ScheduleEventsAndReportDeliveryEnabled** 속성을 통해 설정해야 합니다. 예약된 작업이 수행되려면 SQL Server 에이전트와 보고서 서버 서비스가 모두 실행 중이어야 합니다.  

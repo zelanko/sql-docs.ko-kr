@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
 ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/11/2018
 ms.locfileid: "49085071"
@@ -62,7 +62,7 @@ ms.locfileid: "49085071"
  새 InfoSource에 연결할 원본 시스템을 선택합니다.  
   
  **응용 프로그램**  
- 새 InfoSource에 연결할 응용 프로그램의 이름을 입력 합니다.  
+ 새 InfoSource에 연결할 애플리케이션의 이름을 입력 합니다.  
   
  **특성**  
  마스터 데이터가 특성으로 구성되었음을 나타냅니다.  

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34019460"
@@ -149,7 +149,7 @@ ms.locfileid: "34019460"
  자세한 내용은 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하세요.  
   
 ##  <a name="bkmk_FTSetc"></a> 전체 텍스트 검색  
- SQL Server의 전체 텍스트 검색을 사용하면 응용 프로그램과 사용자가 SQL Server 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 전체 텍스트 검색을 사용하면 여러 가지 형태의 단어 또는 구에 대한 언어별 규칙에 의해 개선된 텍스트 데이터에 대해 검색을 수행할 수 있습니다. 여러 용어 간 거리 등과 같은 검색 조건을 구성하고 가능성 순서로 반환된 결과를 제한하는 함수를 사용할 수도 있습니다.  
+ SQL Server의 전체 텍스트 검색을 사용하면 애플리케이션과 사용자가 SQL Server 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 전체 텍스트 검색을 사용하면 여러 가지 형태의 단어 또는 구에 대한 언어별 규칙에 의해 개선된 텍스트 데이터에 대해 검색을 수행할 수 있습니다. 여러 용어 간 거리 등과 같은 검색 조건을 구성하고 가능성 순서로 반환된 결과를 제한하는 함수를 사용할 수도 있습니다.  
   
  전체 텍스트 쿼리는 SQL Server 엔진에서 제공하는 기능이기 때문에 매개 변수가 있는 쿼리를 만들고, 텍스트 데이터 원본에서 전체 텍스트 검색 기능을 사용하여 사용자 지정 데이터 집합 또는 용어 벡터를 생성하고, 데이터 마이닝에 이러한 원본을 사용할 수 있습니다.  
   

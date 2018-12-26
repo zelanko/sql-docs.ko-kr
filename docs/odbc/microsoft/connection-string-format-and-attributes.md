@@ -16,14 +16,14 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47652471"
 ---
 # <a name="connection-string-format-and-attributes"></a>연결 문자열 형식 및 특성
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  대화 상자를 사용 하는 대신 일부 응용 프로그램 데이터 원본 연결 정보를 지정 하는 연결 문자열을 필요할 수 있습니다. 연결 문자열 드라이버를 데이터 원본에 연결 하는 방법을 지정 하는 특성의 숫자로 구성 됩니다. 특정 드라이버를 알고 있어야 적절 한 데이터 원본 연결 수 있도록 하는 정보를 식별 하는 특성입니다. 각 드라이버 다른 특성 집합이 있을 수 있지만 연결 문자열 형식은 항상 동일 합니다. 연결 문자열에 다음과 같은 형식:  
   

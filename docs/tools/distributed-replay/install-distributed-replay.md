@@ -38,7 +38,7 @@ ms.locfileid: "52516015"
   
 -   Distributed Replay 컴퓨터에는 클라이언트 서비스 인스턴스를 하나만 설치할 수 있습니다. Distributed Replay 환경에 클라이언트가 여러 개 있는 경우에는 컨트롤러와 같은 컴퓨터에 클라이언트 서비스를 설치하지 않는 것이 좋습니다. 이렇게 하면 전체적인 분산 재생 속도가 느려질 수 있습니다.  
   
--   성능 테스트 시나리오의 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대상 인스턴스에 관리 도구, Distributed Replay 컨트롤러 서비스 또는 Client 서비스를 설치하지 않는 것이 좋습니다. 응용 프로그램 호환성을 위한 기능 테스트 시에만 이러한 모든 기능을 대상 서버에 설치해야 합니다.  
+-   성능 테스트 시나리오의 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대상 인스턴스에 관리 도구, Distributed Replay 컨트롤러 서비스 또는 Client 서비스를 설치하지 않는 것이 좋습니다. 애플리케이션 호환성을 위한 기능 테스트 시에만 이러한 모든 기능을 대상 서버에 설치해야 합니다.  
   
 -   설치 후에는 클라이언트에서 Distributed Replay  Client 서비스를 시작하기 전에 컨트롤러 서비스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller를 실행해야 합니다.  
   

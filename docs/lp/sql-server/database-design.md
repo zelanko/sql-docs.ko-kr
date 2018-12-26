@@ -130,7 +130,7 @@ ms.locfileid: "51702181"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Filestream</h3>
-                                                    <p>Filestream을 사용하면 SQL Server 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다.  </p>
+                                                    <p>Filestream을 사용하면 SQL Server 기반 애플리케이션에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다.  </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@ ms.locfileid: "51702181"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Filetable</h3>
-                                                    <p>FileTable을 통해 응용 프로그램이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 SQL Server 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.</p>
+                                                    <p>FileTable을 통해 애플리케이션이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 SQL Server 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.</p>
                                                 </div>
                                             </div>
                                         </div>

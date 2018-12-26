@@ -21,7 +21,7 @@ ms.locfileid: "48080803"
 # <a name="lesson-1-creating-the-web-service-client-project"></a>1단원: 웹 서비스 클라이언트 프로젝트 만들기
   이 연습에서는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경을 사용하여 보고서 서버 웹 서비스에 액세스하는 간단한 콘솔 응용 프로그램을 만듭니다.  
   
-### <a name="to-create-a-console-application"></a>콘솔 응용 프로그램을 만들려면  
+### <a name="to-create-a-console-application"></a>콘솔 애플리케이션을 만들려면  
   
 1.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트** 를 클릭하여 **새 프로젝트** 대화 상자를 엽니다.  
   

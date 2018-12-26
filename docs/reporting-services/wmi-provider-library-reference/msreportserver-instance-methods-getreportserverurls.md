@@ -34,7 +34,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>매개 변수  
  *ApplicationName[]*  
- 설치된 응용 프로그램이 들어 있는 배열입니다. 값은 **ReportServerWebService** 또는 **ReportServerWebApp**입니다.  
+ 설치된 애플리케이션이 들어 있는 배열입니다. 값은 **ReportServerWebService** 또는 **ReportServerWebApp**입니다.  
   
  *URLs[]*  
  성공적으로 등록된 URL이 들어 있는 배열입니다.  

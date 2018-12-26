@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50145998"
@@ -48,7 +48,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 - [SSDT(SQL Server Data Tools) 다운로드](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [SSMS(SQL Server Management Studio) 다운로드](http://msdn.microsoft.com/library/mt238290.aspx)   
 
-사용자 지정 AMO 종속 응용 프로그램이 있으면 업데이트된 AMO 버전을 설치해야 할 수 있습니다. 자세한 내용은 [Analysis Services 데이터 공급자&#40;AMO, ADOMD.NET, MSOLAP&#41; 설치](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)를 참조하세요.    
+사용자 지정 AMO 종속 애플리케이션이 있으면 업데이트된 AMO 버전을 설치해야 할 수 있습니다. 자세한 내용은 [Analysis Services 데이터 공급자&#40;AMO, ADOMD.NET, MSOLAP&#41; 설치](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)를 참조하세요.    
 
  #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>TechNet 가상 랩: SQL Server 2016 Analysis Services
 보다 효과적으로 배우려면 [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true)(SQL Server 2016 Analysis Services의 새로운 기능 가상 랩)을 단계별로 수행하세요.
@@ -60,7 +60,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 ### <a name="project-templates-added-for-tabular-1200-models-in-ssdt"></a>SSDT의 테이블 형식 1200 모델에 프로젝트 템플릿 추가    
 이번 릴리스부터는 관계형 및 BI 프로젝트를 빌드하는 데 두 가지 SSDT 버전이 더 이상 필요하지 않습니다. [Visual Studio 2015용 SQL Server Data Tools](http://msdn.microsoft.com/library/mt204009.aspx) 는 호환성 수준 1200에서 모델을 빌드하는 데 사용되는 **Analysis Services 테이블 형식 프로젝트** 를 비롯하여 Analysis Services 솔루션용 프로젝트 템플릿을 추가합니다. 다차원 및 데이터 마이닝 솔루션용 기타 Analysis Services 프로젝트 템플릿도 포함되지만 이전 릴리스와 같은 기능 수준(1100 또는 1103)입니다.    
 ### <a name="display-folders"></a>표시 폴더
-이제 테이블 형식 1200 모델에 표시 폴더를 사용할 수 있습니다. SQL Server Data Tools에서 정의되고 Excel 또는 Power BI Desktop 등의 클라이언트 응용 프로그램에서 렌더링된 표시 폴더를 사용하여 많은 측정값을 개별 폴더로 구성하여 필드 목록을 더 쉽게 탐색하기 위한 시각적 계층 구조를 추가할 수 있습니다.
+이제 테이블 형식 1200 모델에 표시 폴더를 사용할 수 있습니다. SQL Server Data Tools에서 정의되고 Excel 또는 Power BI Desktop 등의 클라이언트 애플리케이션에서 렌더링된 표시 폴더를 사용하여 많은 측정값을 개별 폴더로 구성하여 필드 목록을 더 쉽게 탐색하기 위한 시각적 계층 구조를 추가할 수 있습니다.
 ### <a name="bi-directional-cross-filtering"></a>양방향 교차 필터링
 이번 릴리스의 새로운 기능에는 테이블 형식 모델에서 양방향 교차 필터를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다. 필터는 높은 수준의 확신도를 기반으로 방향을 설정할 수 있을 경우에만 자동 생성됩니다. 테이블 관계에서 여러 쿼리 경로의 형식에 모호성이 있으면 필터가 자동으로 생성되지 않습니다. 자세한 내용은 [SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 를 참조하세요.
  ### <a name="translations"></a>Translations    
@@ -153,11 +153,11 @@ refresh|개체를 처리합니다. ASSL에서는 PROCESS에 해당합니다.
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>AMO의 테이블 형식 1200 프로그래밍 기능에 대한 Microsoft.AnalysisServices.Tabular 네임스페이스
  AMO(Analysis Services 관리 개체)가 업데이트되어 SQL Server 2016 Analysis Services의 테이블 형식 인스턴스를 관리하기 위한 새 테이블 형식 네임스페이스를 포함하고 프로그래밍 방식으로 테이블 형식 1200 모델을 만들거나 수정하는 데이터 정의 언어를 제공합니다. API에 대한 자세한 내용은 [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 를 참조하세요.    
  ### <a name="analysis-services-management-objects-amo-updates"></a>AMO(Analysis Services Management Objects) 업데이트
- [AMO&#40;Analysis Services Management Objects&#41;](http://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 Microsoft.AnalysisServices.Core.dll을 포함하도록 리팩터링되었습니다. 새 어셈블리는 서버, 데이터베이스 및 역할과 같이 서버 모드와 관계없이 Analysis Services에 광범위한 응용 프로그램이 있는 일반 클래스를 분리합니다.    
+ [AMO&#40;Analysis Services Management Objects&#41;](http://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 Microsoft.AnalysisServices.Core.dll을 포함하도록 리팩터링되었습니다. 새 어셈블리는 서버, 데이터베이스 및 역할과 같이 서버 모드와 관계없이 Analysis Services에 광범위한 애플리케이션이 있는 일반 클래스를 분리합니다.    
     
  이전에 이들 클래스는 원래 Microsoft.AnalysisServices 어셈블리의 부분이었습니다. 이들 클래스를 새 어셈블리로 이동하면 이후 AMO로 확장할 수 있는 환경이 조성되고 제네릭 API와 컨텍스트별 API를 분명히 구분됩니다.    
     
- 기존 응용 프로그램은 새 어셈블리의 영향을 받지 않습니다. 그러나 어떤 이유로 새 AMO 어셈블리를 사용하여 응용 프로그램을 다시 빌드해야 한다면 Microsoft.AnalysisServices.Core에 대한 참조를 추가해야 합니다.    
+ 기존 애플리케이션은 새 어셈블리의 영향을 받지 않습니다. 그러나 어떤 이유로 새 AMO 어셈블리를 사용하여 애플리케이션을 다시 빌드해야 한다면 Microsoft.AnalysisServices.Core에 대한 참조를 추가해야 합니다.    
     
  마찬가지로 이제 AMO를 로드하고 호출하는 PowerShell 스크립트는 Microsoft.AnalysisServices.Core.dll을 로드해야 합니다. 모든 스크립트를 업데이트 해야 합니다.  
 

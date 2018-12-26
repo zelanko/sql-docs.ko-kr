@@ -149,7 +149,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   유지 관리 비용 최소화  
   
- 기존 테이블을 변환하는 경우 새 열을 처리하도록 설계되지 않은 기존 응용 프로그램에 대한 영향을 피하기 위해 **HIDDEN** 절을 사용하여 새 **PERIOD** 열을 숨기는 것을 고려하세요.  
+ 기존 테이블을 변환하는 경우 새 열을 처리하도록 설계되지 않은 기존 애플리케이션에 대한 영향을 피하기 위해 **HIDDEN** 절을 사용하여 새 **PERIOD** 열을 숨기는 것을 고려하세요.  
   
 ### <a name="adding-versioning-to-non-temporal-tables"></a>비temporal 테이블에 버전 관리 추가  
  데이터를 포함하는 비temporal 테이블에 대해 변경 내용 추적을 시작하려면 **PERIOD** 정의를 추가하고 선택적으로 SQL Server가 만드는 빈 기록 테이블에 대한 이름을 입력해야 합니다.  

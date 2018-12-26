@@ -1,155 +1,162 @@
-- name: '보고서 찾기, 보기 및 관리'
+items:
+- name: 보고서 찾기, 보기 및 관리
   href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:
-    - name: 보고서 관리자에서 보고서 찾기 및 보기
-      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
-    - name: 브라우저를 사용하여 보고서 찾기 및 보기
-      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-    - name: 보고서 및 기타 항목 검색
-      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-    - name: 내 보고서 사용
-      href: using-my-reports-report-builder-and-ssrs.md
-    - name: 보고서 작성기에서 보고서 미리 보기
-      href: previewing-reports-in-report-builder.md
+  - name: 보고서 관리자에서 보고서 찾기 및 보기
+    href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: 브라우저를 사용하여 보고서 찾기 및 보기
+    href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: 보고서 및 기타 항목 검색
+    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+  - name: 내 보고서 사용
+    href: using-my-reports-report-builder-and-ssrs.md
+  - name: 보고서 작성기에서 보고서 미리 보기
+    href: previewing-reports-in-report-builder.md
 - name: 보고서 내보내기
   href: export-reports-report-builder-and-ssrs.md
   items:
-    - name: 여러 보고서 렌더링 확장 프로그램의 대화형 기능
-      href: interactive-functionality-different-report-rendering-extensions.md
-    - name: CSV 파일로 내보내기
-      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
-    - name: Microsoft Excel로 내보내기
-      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
-    - name: Microsoft Word로 내보내기
-      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
-    - name: HTML로 렌더링
-      href: rendering-to-html-report-builder-and-ssrs.md
-    - name: 이미지 파일로 내보내기
-      href: exporting-to-an-image-file-report-builder-and-ssrs.md
-    - name: PDF 파일로 내보내기
-      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
-    - name: XML로 내보내기
-      href: exporting-to-xml-report-builder-and-ssrs.md
-    - name: 다른 파일 형식으로 보고서 내보내기
-      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
-    - name: 보고서에서 데이터 피드 만들기
-      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
-    - name: 보고서에서 데이터 피드 생성
-      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
-    - name: Excel 행 제한 해결
-      href: work-around-the-excel-2003-row-limitation.md
+  - name: 여러 보고서 렌더링 확장 프로그램의 대화형 기능
+    href: interactive-functionality-different-report-rendering-extensions.md
+  - name: CSV 파일로 내보내기
+    href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Microsoft Excel로 내보내기
+    href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Microsoft Word로 내보내기
+    href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: HTML로 렌더링
+    href: rendering-to-html-report-builder-and-ssrs.md
+  - name: 이미지 파일로 내보내기
+    href: exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: PDF 파일로 내보내기
+    href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: XML로 내보내기
+    href: exporting-to-xml-report-builder-and-ssrs.md
+  - name: 다른 파일 형식으로 보고서 내보내기
+    href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+  - name: 보고서에서 데이터 피드 만들기
+    href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: 보고서에서 데이터 피드 생성
+    href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Excel 행 제한 해결
+    href: work-around-the-excel-2003-row-limitation.md
 - name: 보고서 인쇄
   href: print-reports-report-builder-and-ssrs.md
   items:
-    - name: 인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄
-      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
-    - name: 다른 응용 프로그램에서 보고서 인쇄
-      href: print-reports-from-other-applications-report-builder-and-ssrs.md
-    - name: 보고서 인쇄
-      href: print-a-report-report-builder-and-ssrs.md
-    - name: 보고서 인쇄(SharePoint 모드의 Reporting Services)
-      href: print-a-report-reporting-services-in-sharepoint-mode.md
+  - name: 인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄
+    href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: 다른 애플리케이션에서 보고서 인쇄
+    href: print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: 보고서 인쇄
+    href: print-a-report-report-builder-and-ssrs.md
+  - name: 보고서 인쇄(SharePoint 모드의 Reporting Services)
+    href: print-a-report-reporting-services-in-sharepoint-mode.md
 - name: 보고서 저장
   href: saving-reports-report-builder.md
   items:
-    - name: 보고서 서버에 보고서 저장
-      href: save-reports-to-a-report-server-report-builder.md
-    - name: SharePoint 라이브러리에 보고서 저장
-      href: save-a-report-to-a-sharepoint-library-report-builder.md
-    - name: 컴퓨터에 보고서 저장
-      href: ../save-reports-to-your-computer-report-builder.md
+  - name: 보고서 서버에 보고서 저장
+    href: save-reports-to-a-report-server-report-builder.md
+  - name: SharePoint 라이브러리에 보고서 저장
+    href: save-a-report-to-a-sharepoint-library-report-builder.md
+  - name: 컴퓨터에 보고서 저장
+    href: ../save-reports-to-your-computer-report-builder.md
 - name: 보고서 작성기 F1 도움말
   href: report-builder-f1-help.md
   items:
-    - name: '대화 상자, 창 및 마법사에 대한 도움말(F1)'
-      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
-    - name: 동작 속성 대화 상자
-      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
-    - name: 차트 대화 상자(보고서 작성기 및 SSRS)
-      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
-    - name: '축 속성 대화 상자, 축 옵션'
-      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
-    - name: '축 제목 속성 대화 상자, 일반'
-      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
-    - name: '계산된 계열 속성 대화 상자, 일반(보고서 작성기 및 SSRS)'
-      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
-    - name: '계산된 계열 속성 대화 상자, 표식'
-      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
-    - name: '필터 페이지, 차트 대화 상자'
-      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
-    - name: '범례 속성 대화 상자, 일반'
-      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
-    - name: 열 표시 유형 대화 상자
-      href: ../column-visibility-dialog-box-report-builder.md
-    - name: CRI 변환 대화 상자
-      href: convert-cri-dialog-box-report-builder.md
-    - name: 큐브 선택 대화 상자
-      href: ../cube-selection-dialog-box-report-builder.md
-    - name: '데이터 원본 속성 대화 상자, 자격 증명'
-      href: ../data-source-properties-dialog-box-credentials-report-builder.md
-    - name: '데이터 원본 속성 대화 상자, 일반'
-      href: ../data-source-properties-dialog-box-general-report-builder.md
-    - name: '데이터 집합 속성 대화 상자, 필드'
-      href: ../dataset-properties-dialog-box-fields-report-builder.md
-    - name: '데이터 집합 속성 대화 상자, 필터'
-      href: ../dataset-properties-dialog-box-filters-report-builder.md
-    - name: '데이터 집합 속성 대화 상자, 옵션'
-      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
-    - name: '데이터 집합 속성 대화 상자, 매개 변수'
-      href: ../dataset-properties-dialog-box-parameters-report-builder.md
-    - name: '데이터 집합 속성 대화 상자, 쿼리'
-      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
-    - name: 데이터 원본 자격 증명 입력 대화 상자
-      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
-    - name: 식 대화 상자
-      href: ../expression-dialog-box-report-builder.md
-    - name: 채우기 대화 상자
-      href: ../fill-dialog-box-report-builder-and-ssrs.md
-    - name: 그룹화 창
-      href: ../report-design/grouping-pane-report-builder.md
-    - name: '이미지 속성 대화 상자, 일반'
-      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
-    - name: '이미지 속성 대화 상자, 크기'
-      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
-    - name: '자리 표시자 속성 대화 상자, 일반'
-      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
-    - name: 쿼리 디자이너
-      href: ../query-designers-report-builder.md
+  - name: 대화 상자, 창 및 마법사에 대한 도움말(F1)
+    href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+  - name: 동작 속성 대화 상자
+    href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+  - name: 차트 대화 상자(보고서 작성기 및 SSRS)
+    href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+  - name: 축 속성 대화 상자, 축 옵션
+    href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+  - name: 축 제목 속성 대화 상자, 일반
+    href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: 계산된 계열 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
+    href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: 계산된 계열 속성 대화 상자, 표식
+    href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+  - name: 필터 페이지, 차트 대화 상자
+    href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+  - name: 범례 속성 대화 상자, 일반
+    href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: 열 표시 유형 대화 상자
+    href: ../column-visibility-dialog-box-report-builder.md
+  - name: CRI 변환 대화 상자
+    href: convert-cri-dialog-box-report-builder.md
+  - name: 큐브 선택 대화 상자
+    href: ../cube-selection-dialog-box-report-builder.md
+  - name: 데이터 원본 속성 대화 상자, 자격 증명
+    href: ../data-source-properties-dialog-box-credentials-report-builder.md
+  - name: 데이터 원본 속성 대화 상자, 일반
+    href: ../data-source-properties-dialog-box-general-report-builder.md
+  - name: 데이터 집합 속성 대화 상자, 필드
+    href: ../dataset-properties-dialog-box-fields-report-builder.md
+  - name: 데이터 집합 속성 대화 상자, 필터
+    href: ../dataset-properties-dialog-box-filters-report-builder.md
+  - name: 데이터 집합 속성 대화 상자, 옵션
+    href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+  - name: 데이터 집합 속성 대화 상자, 매개 변수
+    href: ../dataset-properties-dialog-box-parameters-report-builder.md
+  - name: 데이터 집합 속성 대화 상자, 쿼리
+    href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+  - name: 데이터 원본 자격 증명 입력 대화 상자
+    href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+  - name: 식 대화 상자
+    href: ../expression-dialog-box-report-builder.md
+  - name: 채우기 대화 상자
+    href: ../fill-dialog-box-report-builder-and-ssrs.md
+  - name: 그룹화 창
+    href: ../report-design/grouping-pane-report-builder.md
+  - name: 이미지 속성 대화 상자, 일반
+    href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: 이미지 속성 대화 상자, 크기
+    href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+  - name: 자리 표시자 속성 대화 상자, 일반
+    href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+  - name: 쿼리 디자이너
+    href: ../query-designers-report-builder.md
+    items:
+    - name: 관계형 쿼리 디자이너 사용자 인터페이스
+      href: ../report-data/relational-query-designer-user-interface-report-builder.md
+    - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
+      href: ../report-data/text-based-query-designer-user-interface-report-builder.md
       items:
-        - name: 관계형 쿼리 디자이너 사용자 인터페이스
-          href: ../report-data/relational-query-designer-user-interface-report-builder.md
-        - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
-          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
-          items:
-            - name: 쿼리 매개 변수 정의 대화 상자
-              href: ../define-query-parameters-dialog-box-report-builder.md
-        - name: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
-          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
-        - name: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
-          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
-        - name: SharePoint 목록 쿼리 디자이너
-          href: ../report-data/sharepoint-list-query-designer-report-builder.md
-        - name: SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
-          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
-    - name: '보고서 작성기 옵션 대화 상자, 설정'
-      href: set-default-options-for-report-builder.md
-    - name: 보고서 데이터 창
-      href: ../report-data-pane-report-builder.md
-    - name: 보고서 섹션 대화 상자
-      href: report-sections-dialog-box-report-builder.md
-    - name: Reporting Services 로그인 대화 상자
-      href: reporting-services-login-dialog-box-report-builder.md
-    - name: '보고서 속성 대화 상자, 코드'
-      href: ../report-properties-dialog-box-code-report-builder.md
-    - name: '보고서 속성 대화 상자, 페이지 설정'
-      href: ../report-properties-dialog-box-page-setup-report-builder.md
-    - name: '보고서 속성 대화 상자, 참조'
-      href: ../report-properties-dialog-box-references-report-builder.md
-    - name: 행 표시 유형 대화 상자
-      href: ../row-visibility-dialog-box-report-builder.md
-    - name: 색 선택 대화 상자
-      href: ../select-color-dialog-box-report-builder-and-ssrs.md
-    - name: '입력란 속성 대화 상자, 맞춤'
-      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
-    - name: 텍스트 및 자리 표시자의 맞춤 대화 상자
-      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md
+      - name: 쿼리 매개 변수 정의 대화 상자
+        href: ../define-query-parameters-dialog-box-report-builder.md
+    - name: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
+      href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+    - name: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
+      href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+    - name: SharePoint 목록 쿼리 디자이너
+      href: ../report-data/sharepoint-list-query-designer-report-builder.md
+    - name: SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
+      href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+  - name: 보고서 작성기 옵션 대화 상자, 설정
+    href: set-default-options-for-report-builder.md
+  - name: 보고서 데이터 창
+    href: ../report-data-pane-report-builder.md
+  - name: 보고서 섹션 대화 상자
+    href: report-sections-dialog-box-report-builder.md
+  - name: Reporting Services 로그인 대화 상자
+    href: reporting-services-login-dialog-box-report-builder.md
+  - name: 보고서 속성 대화 상자, 코드
+    href: ../report-properties-dialog-box-code-report-builder.md
+  - name: 보고서 속성 대화 상자, 페이지 설정
+    href: ../report-properties-dialog-box-page-setup-report-builder.md
+  - name: 보고서 속성 대화 상자, 참조
+    href: ../report-properties-dialog-box-references-report-builder.md
+  - name: 행 표시 유형 대화 상자
+    href: ../row-visibility-dialog-box-report-builder.md
+  - name: 색 선택 대화 상자
+    href: ../select-color-dialog-box-report-builder-and-ssrs.md
+  - name: 입력란 속성 대화 상자, 맞춤
+    href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+  - name: 텍스트 및 자리 표시자의 맞춤 대화 상자
+    href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md
+ms.openlocfilehash: ec47cc5e357b615bc3bf5aad32e8db62caa40431
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315712"

@@ -72,10 +72,10 @@ ms.locfileid: "51661722"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 데이터 정렬 집합은 다음과 같습니다.    
     
 #### <a name="windows-collations"></a>Windows 데이터 정렬    
-Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문자 데이터 저장 규칙을 정의합니다. Windows 데이터 정렬의 경우 유니코드 데이터를 비교할 때와 동일한 알고리즘을 사용하여 비유니코드 데이터도 비교합니다. 기본 Windows 데이터 정렬 규칙은 사전 정렬이 적용될 때 사용되는 알파벳이나 언어를 지정하고 유니코드가 아닌 문자 데이터를 저장하는 데 사용되는 코드 페이지를 지정합니다. 유니코드 정렬과 비유니코드 정렬은 모두 특정 버전의 Windows에서 수행되는 문자열 비교와 호환됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 데이터 형식에서 일관성이 유지되고 개발자는 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 것과 동일한 규칙을 사용하여 문자열을 정렬할 수 있습니다. 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요.    
+Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문자 데이터 저장 규칙을 정의합니다. Windows 데이터 정렬의 경우 유니코드 데이터를 비교할 때와 동일한 알고리즘을 사용하여 비유니코드 데이터도 비교합니다. 기본 Windows 데이터 정렬 규칙은 사전 정렬이 적용될 때 사용되는 알파벳이나 언어를 지정하고 유니코드가 아닌 문자 데이터를 저장하는 데 사용되는 코드 페이지를 지정합니다. 유니코드 정렬과 비유니코드 정렬은 모두 특정 버전의 Windows에서 수행되는 문자열 비교와 호환됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 데이터 형식에서 일관성이 유지되고 개발자는 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 것과 동일한 규칙을 사용하여 문자열을 정렬할 수 있습니다. 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요.    
     
 #### <a name="binary-collations"></a>이진 데이터 정렬    
-이진 데이터 정렬은 로캘 및 데이터 형식으로 정의된 코딩 값 시퀀스에 따라 데이터를 정렬합니다. 이때 대/소문자가 구분됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이진 데이터 정렬은 사용되는 로캘과 ANSI 코드 페이지를 정의하며 이진 정렬 순서를 적용합니다. 이진 데이터 정렬은 비교적 간단하므로 응용 프로그램의 성능을 향상시키는 데 도움이 됩니다. 비유니코드 데이터 형식의 경우 데이터 비교는 ANSI 코드 페이지에 정의된 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식의 경우 데이터 비교는 유니코드 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식에서의 이진 데이터 정렬의 경우 데이터 정렬 시 로캘은 고려되지 않습니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다.    
+이진 데이터 정렬은 로캘 및 데이터 형식으로 정의된 코딩 값 시퀀스에 따라 데이터를 정렬합니다. 이때 대/소문자가 구분됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이진 데이터 정렬은 사용되는 로캘과 ANSI 코드 페이지를 정의하며 이진 정렬 순서를 적용합니다. 이진 데이터 정렬은 비교적 간단하므로 애플리케이션의 성능을 향상시키는 데 도움이 됩니다. 비유니코드 데이터 형식의 경우 데이터 비교는 ANSI 코드 페이지에 정의된 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식의 경우 데이터 비교는 유니코드 코드 포인트를 기준으로 수행됩니다. 유니코드 데이터 형식에서의 이진 데이터 정렬의 경우 데이터 정렬 시 로캘은 고려되지 않습니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다.    
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 두 가지 유형의 이진 데이터 정렬, 즉 이전 **BIN** 데이터 정렬과 최신 **BIN2** 데이터 정렬이 있습니다. **BIN2** 데이터 정렬에서 모든 문자는 코드 포인트에 따라 정렬됩니다. **BIN** 데이터 정렬에서 첫 번째 문자만 코드 포인트에 따라 정렬되며 나머지 문자는 바이트 값에 따라 정렬됩니다. Intel 플랫폼은 little endian 아키텍처이므로, 유니코드 문자는 항상 바이트 스왑 상태로 저장됩니다.    
     
@@ -85,7 +85,7 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문�
 > [!NOTE]    
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 영어 인스턴스를 업그레이드할 때 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬(SQL_\*)을 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬은 설치 중에 정의되므로 다음 사항에 해당하는 경우 데이터 정렬 설정을 신중하게 지정해야 합니다.    
 >     
-> -   응용 프로그램 코드가 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 동작에 의존할 경우    
+> -   애플리케이션 코드가 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 동작에 의존할 경우    
 > -   여러 언어를 반영하는 문자 데이터를 저장해야 하는 경우    
     
  다음 수준의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 데이터 정렬을 설정할 수 있습니다.    
@@ -159,7 +159,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
 유니코드 데이터 형식 또는 비유니코드 데이터 형식 사용과 관련된 문제점을 평가하려면 작업 시나리오를 테스트하여 사용자 환경에서 나타나는 성능 차이를 측정하세요. 조직 전반의 시스템에 사용되는 데이터 정렬을 표준화하고 유니코드 서버 및 클라이언트를 배포하는 것이 좋습니다.    
     
-대부분의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다른 서버나 클라이언트와 상호 작용하며 조직에서는 응용 프로그램과 서버 인스턴스 간에 여러 데이터 액세스 표준을 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 다음의 두 가지 주요 유형 중 하나에 해당됩니다.    
+대부분의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다른 서버나 클라이언트와 상호 작용하며 조직에서는 애플리케이션과 서버 인스턴스 간에 여러 데이터 액세스 표준을 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 다음의 두 가지 주요 유형 중 하나에 해당됩니다.    
     
 -   OLE DB 및 ODBC(Open Database Connectivity) 버전 3.7 이상을 사용하는**유니코드 클라이언트**     
     

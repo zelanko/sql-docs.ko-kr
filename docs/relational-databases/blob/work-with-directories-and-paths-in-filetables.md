@@ -34,7 +34,7 @@ ms.locfileid: "52418454"
 |경로를 제공하여 FileTable의 지정된 파일 또는 디렉터리에 대한 경로 로케이터 ID 값을 가져옵니다.|[GetPathLocator&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 방법: 이식 가능한 코드에 상대 경로 사용  
- 코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
+ 코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```sql  
 USE database_name;  
@@ -58,7 +58,7 @@ GO
   
 ###  <a name="fqnlength"></a> 전체 경로 이름의 길이  
   
-> **중요!!** NTFS 파일 시스템은 Windows 셸 및 대부분의 Windows API의 260자 제한보다 긴 경로 이름을 지원합니다. 따라서 전체 경로 이름이 260자를 초과할 수 있기 때문에 Windows 탐색기 또는 다른 많은 Windows 응용 프로그램으로 보거나 열 수 없는 Transact-SQL을 사용하여 FileTable의 파일 계층에 파일을 만들 수 있습니다. 그러나 Transact-SQL을 사용해서도 이러한 파일에 계속 액세스할 수 있습니다.  
+> **중요!!** NTFS 파일 시스템은 Windows 셸 및 대부분의 Windows API의 260자 제한보다 긴 경로 이름을 지원합니다. 따라서 전체 경로 이름이 260자를 초과할 수 있기 때문에 Windows 탐색기 또는 다른 많은 Windows 애플리케이션으로 보거나 열 수 없는 Transact-SQL을 사용하여 FileTable의 파일 계층에 파일을 만들 수 있습니다. 그러나 Transact-SQL을 사용해서도 이러한 파일에 계속 액세스할 수 있습니다.  
   
 ##  <a name="fullpath"></a> FileTable에 저장된 항목의 전체 경로  
  FileTable에 저장된 파일 또는 디렉터리의 전체 경로는 다음 요소로 시작됩니다.  

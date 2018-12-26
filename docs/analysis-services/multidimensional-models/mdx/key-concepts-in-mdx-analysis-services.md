@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72033d700bb86f8ef2ce17b55880666a6903e67d
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34024590"
@@ -74,7 +74,7 @@ ms.locfileid: "34024590"
 -   모든 하위 특성의 집계된 값이 들어 있는 (전체) 구성원. 해당 데이터에 맞지 않는 경우 선택적으로 (전체) 수준을 숨기거나 해제할 수 있습니다. 예를 들어 Product Code는 숫자이지만 합산하거나 평균을 내거나 모든 Product Code를 집계하는 데 맞지 않습니다.  
   
 > [!NOTE]  
->  BI 개발자는 종종 특성 계층에 속성을 설정하여 클라이언트 응용 프로그램에서 특정 동작을 얻거나 특정 성능 혜택을 얻습니다. 예를 들어 (전체) 구성원과는 맞지 않는 특성에 AttributeHierarchyEnabled=False를 설정할 수 있습니다. 또는 단순히 (전체) 구성원을 숨기고자 하는 경우 AttributeHierarchyVisible=False를 설정할 수 있습니다. 속성에 대한 자세한 내용은 [Dimension Attribute Properties Reference](../../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md) (영문)를 참조하세요.  
+>  BI 개발자는 종종 특성 계층에 속성을 설정하여 클라이언트 애플리케이션에서 특정 동작을 얻거나 특정 성능 혜택을 얻습니다. 예를 들어 (전체) 구성원과는 맞지 않는 특성에 AttributeHierarchyEnabled=False를 설정할 수 있습니다. 또는 단순히 (전체) 구성원을 숨기고자 하는 경우 AttributeHierarchyVisible=False를 설정할 수 있습니다. 속성에 대한 자세한 내용은 [Dimension Attribute Properties Reference](../../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md) (영문)를 참조하세요.  
   
 ## <a name="navigation-hierarchies"></a>탐색 계층  
  이 예를 살펴보면 피벗 테이블 내에서 행 및 열 축을 확장하여 특성의 더 낮은 수준을 볼 수 있습니다. 모델에서 생성하는 탐색 계층을 통해 확장 가능한 트리를 얻습니다.  AdventureWorks 샘플 모델에서 Sales Territory 차원에는 Country Group으로 시작하여 Country, Region으로 이어지는 여러 수준의 계층이 있습니다.  
@@ -91,14 +91,14 @@ ms.locfileid: "34024590"
   
 |||  
 |-|-|  
-|![비정형된 계층이 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "비정형된 계층이 호출 된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 응용 프로그램이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층 구조** 를 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 자세한 내용은 [부모-자식 차원](../../../analysis-services/multidimensional-models/parent-child-dimension.md) 을 참조하세요.|  
+|![비정형된 계층이 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "비정형된 계층이 호출 된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 애플리케이션이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층 구조** 를 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 자세한 내용은 [부모-자식 차원](../../../analysis-services/multidimensional-models/parent-child-dimension.md) 을 참조하세요.|  
   
 ## <a name="key-attributes"></a>키 특성  
  모델은 키와 인덱스를 사용하여 연결을 만드는 관련 개체의 컬렉션입니다. Analysis Services 모델도 다르지 않습니다. 각 차원(관계형 모델의 테이블과 동일)에 대해 키 특성이 있습니다. **키 특성** 은 팩트 테이블(측정값 그룹)에 대한 외래 키 관계에서 사용됩니다. 차원에서 키가 아닌 모든 특성이 키 특성에 직접적으로 또는 간접적으로 연결됩니다.  
   
  항상은 아니지만, 종종 키 특성은 **세분성 특성**이기도 합니다. 세분성이란 데이터 내의 세부 정보 또는 정밀도 수준을 의미합니다. 다시, 가장 쉽게 이해할 수 있도록 일반적인 예를 들어 설명해 보겠습니다. 날짜 값을 생각해 봅시다. 일일 판매의 경우, 해당 일에 지정된 날짜 값이 필요합니다. 할당량의 경우 분기별로 설정해도 충분하겠지만, 데이터 분석이 스포츠 행사의 경기 결과로 구성되는 경우 세분성은 밀리초 단위로 설정되어야 할 것입니다. 데이터 값의 정확도 수준은 세분성입니다.  
   
- 또 다른 예로는 통화가 있습니다. 재무 응용 프로그램은 긴 소수 자릿수까지 통화 값을 추적합니다. 반면 지역 학교의 기금 모금자는 가장 근접한 달러의 값만 필요할 것입니다. 불필요한 데이터를 저장하지 않으려면 세분성에 대한 이해가 중요합니다. 타임스탬프에서 밀리초를 잘라내거나 판매액에서 페니를 잘라내면, 해당 수준의 세부 정보가 분석과 관련 있지 않을 때 저장소와 처리 시간을 절약할 수 있습니다.  
+ 또 다른 예로는 통화가 있습니다. 재무 애플리케이션은 긴 소수 자릿수까지 통화 값을 추적합니다. 반면 지역 학교의 기금 모금자는 가장 근접한 달러의 값만 필요할 것입니다. 불필요한 데이터를 저장하지 않으려면 세분성에 대한 이해가 중요합니다. 타임스탬프에서 밀리초를 잘라내거나 판매액에서 페니를 잘라내면, 해당 수준의 세부 정보가 분석과 관련 있지 않을 때 저장소와 처리 시간을 절약할 수 있습니다.  
   
  세분성 특성을 설정하려면 SQL Server Data Tools의 큐브 디자이너에서 차원 용도 탭을 사용합니다. AdventureWorks 샘플 모델에서 Date 차원의 키 특성은 Date 키입니다. Sales Orders의 경우 세분성 특성은 키 특성과 같습니다. Sales Targets의 경우 세분성 수준이 분기별이므로 세분성 특성은 Calendar Quarter로 설정됩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: Windows 응용 프로그램 로그에 작업 상태 쓰기 | Microsoft 문서
+title: Windows 애플리케이션 로그에 작업 상태 쓰기 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -37,7 +37,7 @@ ms.locfileid: "47816921"
   
 -   전자 메일, 전자 호출 또는 **net send** 메시지 등으로 운영자에게 알림 운영자가 추가 작업 동작을 실행해야 할 경우 이 작업 응답 중 하나를 사용. 예를 들어 백업 작업이 성공적으로 완료될 경우 운영자는 백업 테이프를 빼낸 다음 안전한 곳에 저장하도록 알림을 받아야 합니다.  
   
--   이벤트 메시지를 Windows 응용 프로그램 로그에 씀 이 응답은 실패한 작업에만 사용할 수 있습니다.  
+-   이벤트 메시지를 Windows 애플리케이션 로그에 씀 이 응답은 실패한 작업에만 사용할 수 있습니다.  
   
 -   작업을 자동 삭제함 이 작업을 반환할 필요가 없을 경우에는 이 작업 응답을 사용합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47816921"
   
 ## <a name="SSMS"></a>SQL Server Management Studio 사용  
   
-#### <a name="to-write-job-status-to-the-windows-application-log"></a>Windows 응용 프로그램 로그에 작업 상태를 쓰려면  
+#### <a name="to-write-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태를 쓰려면  
   
 1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   

@@ -86,7 +86,7 @@ ms.locfileid: "52617613"
   
  데이터 정리 프로세스가 완료되면 처리된 데이터를 SQL Server 데이터베이스의 새 테이블, .csv 파일 또는 Excel 파일로 내보내도록 선택할 수 있습니다. 정리를 수행한 원본 데이터는 원래 상태로 유지됩니다. 데이터 관리자는 별도의 정리된 데이터를 사용하여 실제 원본 데이터를 수정할 수 있습니다.  
   
- 다음 그림은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 사용하여 데이터 정리를 수행하는 방법을 보여 줍니다.  
+ 다음 그림은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하여 데이터 정리를 수행하는 방법을 보여 줍니다.  
   
  ![Data Quality Client에서 데이터 정리](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Quality Client에서 데이터 정리")  
   

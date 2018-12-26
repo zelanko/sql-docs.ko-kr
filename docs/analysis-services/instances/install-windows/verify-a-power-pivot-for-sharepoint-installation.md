@@ -53,16 +53,16 @@ ms.locfileid: "34017510"
   
      서버가 여러 대 포함된 SharePoint 팜에서는 표시된 서버를 변경하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 배포한 모든 서버가 실행 중인지를 확인해야 할 수 있습니다.  
   
-7.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+7.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 8.  **기본 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램**을 클릭하여 이 응용 프로그램에 대한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 엽니다. 처음 사용하는 경우 대시보드는 로드하는 데 몇 분 정도 걸립니다.  
   
-     또는 **기본 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램** 옆의 빈 공간을 클릭하여 행을 선택하고 **속성**을 클릭하여 이 서비스 응용 프로그램의 구성 설정을 확인합니다. 구성 설정과 응용 프로그램 속성을 모두 수정하여 서버 구성을 변경할 수 있습니다. 이러한 설정에 대한 자세한 내용은 [중앙 관리에서 파워 피벗 서비스 응용 프로그램 만들기 및 구성](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
+     또는 **기본 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 애플리케이션** 옆의 빈 공간을 클릭하여 행을 선택하고 **속성**을 클릭하여 이 서비스 애플리케이션의 구성 설정을 확인합니다. 구성 설정과 애플리케이션 속성을 모두 수정하여 서버 구성을 변경할 수 있습니다. 이러한 설정에 대한 자세한 내용은 [중앙 관리에서 파워 피벗 서비스 애플리케이션 만들기 및 구성](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
   
 ## <a name="verify-integration-at-the-site-level"></a>사이트 수준에서 통합 확인  
  SharePoint 사이트와 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 통합을 확인하려면 다음 단계를 수행합니다.  
   
-1.  앞서 만든 웹 응용 프로그램을 브라우저에서 엽니다. 기본값을 사용한 경우에 http://을 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용한 경우에 http://을 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에 있습니다.  
   
 2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   

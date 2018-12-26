@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
 ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51558620"
@@ -25,7 +25,7 @@ ms.locfileid: "51558620"
  ADO 응용을 프로그램을 직접 액세스 하 고 (2 계층 시스템) 데이터 원본을 수정할 수 있습니다. 예를 들어 데이터가 포함 된 데이터 원본에 대 한 연결 인 경우는 직접 연결 2 계층 시스템에서.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
  그러나 다음 하지 데이터 원본에 직접 액세스할 수와 같은 Microsoft® 인터넷 정보 서비스 (IIS) 매개 자를 통해는 것이 좋습니다. 이 배열에는 3 계층 시스템을 라고 합니다. IIS는 인터넷 또는 인트라넷에서 원격 또는 서버에서 프로그램을 호출 하는 로컬 또는 클라이언트 응용 프로그램에 대 한 효율적인 방법을 제공 하는 클라이언트/서버 시스템입니다. 서버 프로그램 데이터 원본에 대 한 액세스를 얻게 하 고 필요에 따라 받은 데이터를 처리 합니다.  
   

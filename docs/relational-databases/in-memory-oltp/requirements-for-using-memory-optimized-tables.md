@@ -32,13 +32,13 @@ ms.locfileid: "51672642"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 메모리 최적화 테이블 및 인덱스에 데이터를 저장하기에 충분한 메모리와 온라인 워크로드를 지원하기 위한 추가 메모리가 필요합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 을 참조하세요.  
 
--   VM(가상 머신)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](을)를 실행하는 경우 메모리 최적화 테이블 및 인덱스에 필요한 메모리를 지원하기에 충분한 메모리가 VM에 할당되었는지 확인합니다. VM 호스트 응용 프로그램에 따라 VM에 대한 메모리 할당을 보장하는 구성 옵션을 메모리 예약 또는 동적 메모리를 사용하는 경우 최소 RAM이라고 할 수 있습니다. 이러한 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 요구에 충분한지 확인합니다.
+-   VM(가상 머신)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](을)를 실행하는 경우 메모리 최적화 테이블 및 인덱스에 필요한 메모리를 지원하기에 충분한 메모리가 VM에 할당되었는지 확인합니다. VM 호스트 애플리케이션에 따라 VM에 대한 메모리 할당을 보장하는 구성 옵션을 메모리 예약 또는 동적 메모리를 사용하는 경우 최소 RAM이라고 할 수 있습니다. 이러한 설정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 요구에 충분한지 확인합니다.
   
 -   지속형 메모리 최적화 테이블 크기의 2배에 해당하는 여유 디스크 공간  
   
 -   메모리 내 OLTP를 사용하려면 프로세서에서 **cmpxchg16b** 명령을 지원해야 합니다. 최신 64비트 프로세서는 **cmpxchg16b**를 지원합니다.  
   
-     가상 머신을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이전 프로세서로 인한 오류가 표시되면 **cmpxchg16b**를 허용하도록 VM 호스트 응용 프로그램의 구성 옵션이 설정되어 있는지 확인합니다. 설정되어 있지 않은 경우 구성 옵션을 설정할 필요 없이 **cmpxchg16b** 를 지원하는 Hyper-V를 사용할 수 있습니다.  
+     가상 머신을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이전 프로세서로 인한 오류가 표시되면 **cmpxchg16b**를 허용하도록 VM 호스트 애플리케이션의 구성 옵션이 설정되어 있는지 확인합니다. 설정되어 있지 않은 경우 구성 옵션을 설정할 필요 없이 **cmpxchg16b** 를 지원하는 Hyper-V를 사용할 수 있습니다.  
   
 -   메모리 내 OLTP는 **데이터베이스 엔진 서비스**의 일부로 설치됩니다.  
   

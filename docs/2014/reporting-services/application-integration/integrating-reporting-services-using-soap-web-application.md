@@ -1,5 +1,5 @@
 ---
-title: 웹 응용 프로그램에서 SOAP API 사용 | Microsoft Docs
+title: 웹 애플리케이션에서 SOAP API 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014

@@ -116,7 +116,7 @@ ms.locfileid: "51703771"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 응용 프로그램의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
+- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 애플리케이션의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
 
    또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 *컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.* 라는 메시지가 표시됩니다.
 
@@ -124,9 +124,9 @@ ms.locfileid: "51703771"
 
    1. **프로그램 추가/제거**로 이동합니다.
    2. *Microsoft SQL Server 2019 T-SQL 언어 서비스 CTP2.1*을 찾아 마우스 오른쪽 단추로 클릭한 다음, **제거**를 선택합니다.
-   3. 구성 요소를 제거한 후 중단된 응용 프로그램을 복구하거나 적절한 버전의 *TSqlLanguageService.MSI*를 다시 설치합니다.
+   3. 구성 요소를 제거한 후 중단된 애플리케이션을 복구하거나 적절한 버전의 *TSqlLanguageService.MSI*를 다시 설치합니다.
 
-   이 해결 방법에서는 이러한 어셈블리의 v14 버전을 제거하므로 v14 버전에 종속된 응용 프로그램이 더 이상 작동하지 않습니다. 이러한 어셈블리가 필요한 경우에는 2016 병렬 설치 없이 별도로 설치해야 합니다.
+   이 해결 방법에서는 이러한 어셈블리의 v14 버전을 제거하므로 v14 버전에 종속된 애플리케이션이 더 이상 작동하지 않습니다. 이러한 어셈블리가 필요한 경우에는 2016 병렬 설치 없이 별도로 설치해야 합니다.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0(2017년 4월)

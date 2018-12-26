@@ -87,7 +87,7 @@ ms.locfileid: "52518506"
   
   
 ## <a name="overview-of-migration-scenarios"></a>마이그레이션 시나리오 개요  
- 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 경우 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 보고서 서버 프로그램 파일, 데이터베이스 및 모든 응용 프로그램 데이터를 업그레이드할 수 있습니다.  
+ 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 경우 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하여 보고서 서버 프로그램 파일, 데이터베이스 및 모든 애플리케이션 데이터를 업그레이드할 수 있습니다.  
   
  그러나 다음과 같은 조건에 해당하는 경우 보고서 서버 설치를 수동으로 **마이그레이션** 해야 합니다.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52518506"
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 SQL Server Reporting Services  
  **시작 환경:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010  
@@ -176,7 +176,7 @@ ms.locfileid: "52518506"
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SQL Server Reporting Services  
  **시작 환경:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010  
@@ -189,11 +189,11 @@ ms.locfileid: "52518506"
   
 -   팜의 각 웹 프런트 엔드에서 SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능의 SQL Server Reporting Services 버전을 설치합니다. SQL Server Reporting Services 설치 마법사를 사용하거나 추가 기능을 다운로드하여 추가 기능을 설치할 수 있습니다.  
   
--   각 '보고서 서버'에 대해 SharePoint 모드를 업그레이드하려면 SQL Server Reporting Services 설치를 실행합니다. SQL Server 설치 마법사는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하고 새 서비스 응용 프로그램을 만듭니다. 
+-   각 '보고서 서버'에 대해 SharePoint 모드를 업그레이드하려면 SQL Server Reporting Services 설치를 실행합니다. SQL Server 설치 마법사는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하고 새 서비스 애플리케이션을 만듭니다. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> 마이그레이션 고려 사항  
- 응용 프로그램 데이터를 이동할 때는 다음과 같은 고려 사항 및 제한 사항에 대해 알고 있어야 합니다.  
+ 애플리케이션 데이터를 이동할 때는 다음과 같은 고려 사항 및 제한 사항에 대해 알고 있어야 합니다.  
   
 -   암호화 키 보호에는 컴퓨터 ID를 통합하는 해시가 포함됩니다.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "52518506"
 ### <a name="fixed-database-name"></a>고정 데이터베이스 이름  
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버 주 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
   
- 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 원하는 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 응용 프로그램 데이터를 로드해야 합니다.  
+ 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 원하는 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 애플리케이션 데이터를 로드해야 합니다.  
   
 -   보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 작성합니다. RS.exe 유틸리티를 사용하여 이 스크립트를 실행할 수 있습니다. 이 접근 방법은 [Reporting Services를 사용한 스크립팅 및 PowerShell](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)을 참조하세요.  
   

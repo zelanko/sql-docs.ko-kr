@@ -35,7 +35,7 @@ ms.locfileid: "51665742"
  웹 동기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터를 사용하여 끌어오기 구독을 병합 게시에 동기화합니다. IIS 버전 5.0, IIS 버전 6.0 및 IIS 버전 7.0이 지원됩니다. 웹 동기화 구성 마법사는 IIS 버전 7.0에서 지원되지 않습니다.  
   
 > [!IMPORTANT]  
->  응용 프로그램에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
+>  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
 > [!CAUTION]  
 >  WebSync 및 대체 스냅숏 폴더 위치를 동시에 사용하지 마십시오.  
@@ -49,7 +49,7 @@ ms.locfileid: "51665742"
 3.  IIS를 실행하는 컴퓨터를 웹 동기화용으로 구성합니다. 컴퓨터를 수동으로 구성할 수 있지만 웹 동기화 구성 마법사를 사용하는 것이 좋습니다.  
   
     > [!NOTE]  
-    >  IIS를 실행하는 컴퓨터에서 64비트 버전의 Windows를 실행 중인 경우 다음 명령을 실행하여 서버가 ISAPI(Internet Server API) 응용 프로그램을 실행하도록 적절하게 구성되었는지 확인해야 합니다. 자세한 내용은 IIS 설명서를 참조하십시오.  
+    >  IIS를 실행하는 컴퓨터에서 64비트 버전의 Windows를 실행 중인 경우 다음 명령을 실행하여 서버가 ISAPI(Internet Server API) 애플리케이션을 실행하도록 적절하게 구성되었는지 확인해야 합니다. 자세한 내용은 IIS 설명서를 참조하십시오.  
   
     ```  
     cscript %SystemDrive%\inetpub\AdminScripts\adsutil.vbs set w3svc/AppPools/Enable32bitAppOnWin64 1  
@@ -97,7 +97,7 @@ ms.locfileid: "51665742"
   
 3.  SelfSSL을 실행합니다.  
   
-    -   모든 매개 변수에 대해 기본값으로 SelfSSL을 실행하려면 이 응용 프로그램의 설치 디렉터리를 찾은 다음 SelfSSL.exe를 두 번 클릭합니다.  
+    -   모든 매개 변수에 대해 기본값으로 SelfSSL을 실행하려면 이 애플리케이션의 설치 디렉터리를 찾은 다음 SelfSSL.exe를 두 번 클릭합니다.  
   
         > [!NOTE]  
         >  기본적으로 SelfSSL에서 설치한 인증서는 7일 동안 유효합니다.  
@@ -286,11 +286,11 @@ ms.locfileid: "51665742"
   
     5.  **응용 프로그램 풀 ID** 필드에 풀 이름을 입력한 다음 **확인**을 클릭합니다.  
   
-5.  계정과 응용 프로그램 풀을 연결합니다.  
+5.  계정과 애플리케이션 풀을 연결합니다.  
   
     1.  **인터넷 정보 서비스(IIS) 관리자**에서 **로컬 컴퓨터** 노드를 확장한 다음 **응용 프로그램 풀**을 확장합니다.  
   
-    2.  만든 응용 프로그램 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+    2.  만든 애플리케이션 풀을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
     3.  **\<ApplicationPoolName> 속성** 대화 상자의 **ID** 탭에서 **구성**을 클릭합니다.  
   
@@ -298,7 +298,7 @@ ms.locfileid: "51665742"
   
     5.  **확인**을 클릭합니다.  
   
-6.  웹 동기화에 사용되는 가상 디렉터리와 응용 프로그램 풀을 연결합니다.  
+6.  웹 동기화에 사용되는 가상 디렉터리와 애플리케이션 풀을 연결합니다.  
   
     1.  **인터넷 정보 서비스(IIS) 관리자**에서 **로컬 컴퓨터** 노드를 확장한 다음 **웹 사이트**를 확장합니다.  
   

@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 이 기법에서는 드라이버 목록에 있는 사용 가능한 드라이버 중 주어진 URL로 연결할 수 있는 첫 번째 드라이버를 사용하여 데이터베이스에 연결합니다.
 
 > [!NOTE]  
-> sqljdbc4.jar 클래스 라이브러리를 사용할 때 응용 프로그램은 Class.forName 메서드를 사용하여 드라이버를 명시적으로 등록 또는 로드할 필요가 없습니다. DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. 자세한 내용은 JDBC 드라이버 사용을 참조하십시오.
+> sqljdbc4.jar 클래스 라이브러리를 사용할 때 애플리케이션은 Class.forName 메서드를 사용하여 드라이버를 명시적으로 등록 또는 로드할 필요가 없습니다. DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. 자세한 내용은 JDBC 드라이버 사용을 참조하십시오.
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver 클래스를 사용한 연결 만들기
 

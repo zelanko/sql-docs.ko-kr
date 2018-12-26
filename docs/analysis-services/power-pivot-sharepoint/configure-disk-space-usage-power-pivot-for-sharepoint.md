@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34024750"
@@ -40,7 +40,7 @@ ms.locfileid: "34024750"
   
  캐시에 사용되는 총 디스크 공간의 크기를 확인하려면 백업 폴더의 크기를 확인해야 합니다. 중앙 관리에는 현재 캐시 크기에 대해 보고하는 속성이 없습니다.  
   
- 백업 폴더는 로컬 컴퓨터의 메모리에 로드되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스에 대한 공통 캐시 저장소를 제공합니다. 팜에 여러 개의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 정의되어 있는 경우 그 중 한 응용 프로그램이 로컬 서버를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하고 이후에 해당 데이터를 캐시할 수 있습니다. 데이터 로드 및 캐시 모두 Analysis Services 서버 작업입니다. 따라서 총 디스크 공간 사용량은 Analysis Services 인스턴스 수준에서 백업 폴더에 대해 관리됩니다. 따라서 디스크 공간 사용량을 제한하는 구성 설정은 SharePoint 응용 프로그램 서버에서 실행되는 SQL Server Analysis Services 인스턴스에 대해 설정됩니다.  
+ 백업 폴더는 로컬 컴퓨터의 메모리에 로드되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스에 대한 공통 캐시 저장소를 제공합니다. 팜에 여러 개의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션이 정의되어 있는 경우 그 중 한 애플리케이션이 로컬 서버를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하고 이후에 해당 데이터를 캐시할 수 있습니다. 데이터 로드 및 캐시 모두 Analysis Services 서버 작업입니다. 따라서 총 디스크 공간 사용량은 Analysis Services 인스턴스 수준에서 백업 폴더에 대해 관리됩니다. 따라서 디스크 공간 사용량을 제한하는 구성 설정은 SharePoint 애플리케이션 서버에서 실행되는 SQL Server Analysis Services 인스턴스에 대해 설정됩니다.  
   
  캐시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스만 포함됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. 아래의 GUID 폴더  **\<serviceApplicationName >** 의 부모 폴더는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "34024750"
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>캐시된 파일의 저장에 사용되는 디스크 공간 크기를 제한하는 방법  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서버의 서비스 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서버의 서비스 관리**를 클릭합니다.  
   
 2.  **SQL Server Analysis Services**를 클릭합니다.  
   
-     제한은 서비스 응용 프로그램 수준에서 설정되는 것이 아니라 물리적 서버에서 실행되는 Analysis Services 인스턴스에 대해 설정됩니다. 로컬 Analysis Services 인스턴스를 사용하는 모든 서비스 응용 프로그램은 해당 인스턴스에 대해 설정된 단일 최대 디스크 공간 제한을 따릅니다.  
+     제한은 서비스 애플리케이션 수준에서 설정되는 것이 아니라 물리적 서버에서 실행되는 Analysis Services 인스턴스에 대해 설정됩니다. 로컬 Analysis Services 인스턴스를 사용하는 모든 서비스 애플리케이션은 해당 인스턴스에 대해 설정된 단일 최대 디스크 공간 제한을 따릅니다.  
   
 3.  디스크 사용에서 **총 디스크 공간** 의 값(GB)을 설정하여 캐싱 목적으로 사용되는 공간 크기의 상한값을 설정합니다. 기본값은 0이며 이 값을 사용하면 Analysis Services에서 사용 가능한 모든 디스크 공간을 사용할 수 있습니다.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "34024750"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>데이터베이스가 캐시에 유지되는 기간을 제한하는 방법  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 2.  **기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**을 클릭하여 관리 대시보드를 엽니다.  
   
-3.  동작에서 **서비스 응용 프로그램 설정 구성**을 클릭합니다.  
+3.  동작에서 **서비스 애플리케이션 설정 구성**을 클릭합니다.  
   
 4.  디스크 캐시 섹션에서 비활성 데이터베이스가 새 요청을 처리하기 위해 메모리에 유지되는 기간(기본적으로 48시간)과 캐시에 유지되는 기간(기본적으로 120시간)을 지정할 수 있습니다.  
   

@@ -27,7 +27,7 @@ ms.locfileid: "51669332"
 이 자습서에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에 연결하는 방법에 대해 설명합니다.  
   
 [자습서: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
-이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라 관리를 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 및 데이터 웨어하우스 등 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
+이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라 관리를 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 및 데이터 웨어하우스 등 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
 이 자습서에는 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스의 개체를 만들고 관리하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 문을 작성하는 기본적인 방법에 대해 설명합니다.  

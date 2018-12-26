@@ -26,7 +26,7 @@ ms.locfileid: "47622061"
  JDBC 드라이버에서는 SQLXML 인터페이스를 소개하는 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. 합니다 **SQLXML** JDBC 4.0 데이터 형식이 며 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 데이터 형식입니다. 따라서 응용 프로그램에서 SQLXML 데이터 형식을 사용하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 응용 프로그램에서 SQLXML 개체 및 해당 메서드에 액세스할 때 sqljdbc3.jar를 사용하려고 시도하면 예외가 발생합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 데이터를 데이터베이스 열에 저장하기 전에 항상 해당 데이터의 유효성을 검사합니다. 응용 프로그램은 **SQLXML** 데이터 형식을 사용할 수 있는데 그 이유는 JDBC 드라이버에서 이 데이터 형식을 자동으로 **xml** 데이터 형식에 매핑하기 때문입니다. **SQLXML**은 sqljdbc4.jar에서 지원됩니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 데이터를 데이터베이스 열에 저장하기 전에 항상 해당 데이터의 유효성을 검사합니다. 애플리케이션은 **SQLXML** 데이터 형식을 사용할 수 있는데 그 이유는 JDBC 드라이버에서 이 데이터 형식을 자동으로 **xml** 데이터 형식에 매핑하기 때문입니다. **SQLXML**은 sqljdbc4.jar에서 지원됩니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  
   
  이 섹션의 항목에서는 SQLXML 인터페이스에 대해 설명하고, JDBC API 메서드를 사용하여 **SQLXML** 데이터 형식에 대한 프로그램을 작성하는 방법에 대해 설명합니다.  
   

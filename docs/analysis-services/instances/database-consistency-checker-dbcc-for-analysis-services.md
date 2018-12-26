@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
 ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51697017"
@@ -93,7 +93,7 @@ ms.locfileid: "51697017"
 -   **PartitionID** 는 파티션 ID로 매핑합니다.  
   
 ## <a name="usage"></a>사용법  
- SQL Server Management Studio에서는 MDX 또는 XMLA 쿼리 창을 사용하여 DBCC를 호출할 수 있습니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Profiler 또는 Analysis Services xEvents를 사용하여 DBCC 출력을 확인할 수 있습니다. SSAS DBCC 메시지는 Windows 응용 프로그램 이벤트 로그나 msmdsrv.log 파일에 보고되지 않습니다.  
+ SQL Server Management Studio에서는 MDX 또는 XMLA 쿼리 창을 사용하여 DBCC를 호출할 수 있습니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Profiler 또는 Analysis Services xEvents를 사용하여 DBCC 출력을 확인할 수 있습니다. SSAS DBCC 메시지는 Windows 애플리케이션 이벤트 로그나 msmdsrv.log 파일에 보고되지 않습니다.  
   
  DBCC는 세그먼트에 고아 멤버가 있을 경우에 발생하는 논리 데이터 손상과 물리 데이터 손상을 검사합니다. DBCC를 실행하려면 먼저 데이터베이스를 처리해야 합니다. 원격이거나, 비어 있거나, 처리되지 않은 파티션은 건너뜁니다.  
   

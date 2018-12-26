@@ -85,7 +85,7 @@ CREATE COLUMN MASTER KEY key_name
 
   
  key_path  
- 열 마스터 키 저장소에서의 키 경로입니다. 키 경로는 참조된 열 마스터 키에 의해 (직접) 보호되는 열에 저장된 데이터를 암호화하거나 해독할 것으로 예상되는 각 클라이언트 응용 프로그램의 컨텍스트에서 유효해야 합니다. 해당 클라이언트 응용 프로그램은 허용돼야 키에 액세스할 수 있습니다. 키 경로의 형식은 키 저장소 공급자에 따라 다릅니다. 다음 목록은 특정 Microsoft 시스템 키 저장소 공급자에 대한 키 경로 형식을 설명합니다.  
+ 열 마스터 키 저장소에서의 키 경로입니다. 키 경로는 참조된 열 마스터 키에 의해 (직접) 보호되는 열에 저장된 데이터를 암호화하거나 해독할 것으로 예상되는 각 클라이언트 애플리케이션의 컨텍스트에서 유효해야 합니다. 해당 클라이언트 애플리케이션은 허용돼야 키에 액세스할 수 있습니다. 키 경로의 형식은 키 저장소 공급자에 따라 다릅니다. 다음 목록은 특정 Microsoft 시스템 키 저장소 공급자에 대한 키 경로 형식을 설명합니다.  
   
 -   **공급자 이름:** MSSQL_CERTIFICATE_STORE  
   
@@ -159,12 +159,12 @@ ENCLAVE_COMPUTATIONS
 열 마스터 키를 Eclave 사용 키로 지정합니다. 즉, 이 열 마스터 키로 암호화된 모든 열 암호화 키를 서버 쪽 보안 Enclave와 공유하고 Enclave 내의 계산에 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
  *signature*  
-이진 리터럴은 *키 경로* 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다(이 서명은 ENCLAVE_COMPUTATIONS이 지정되었는지 여부를 반영함). 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 지원 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 응용 프로그램에 오류를 반환할 수 있습니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+이진 리터럴은 *키 경로* 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다(이 서명은 ENCLAVE_COMPUTATIONS이 지정되었는지 여부를 반영함). 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 지원 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환할 수 있습니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
   
   
 ## <a name="remarks"></a>Remarks  
 
-열 암호화 키 메타데이터 항목을 데이터베이스에서 만들 수 있기 전에 그리고 상시 암호화를 사용하여 데이터베이스의 모든 열을 암호화할 수 있기 전에 열 마스터 키 메타데이터 항목 만들기를 요청합니다. 메타데이터에서 열 마스터 키 항목은 외부 열 키 저장소(SQL Server 외부)에 저장되어야 하는 실제 열 마스터 키를 포함하지 않는다는 점에 유의하십시오. 메타데이터에서 키 저장소 공급자 이름 및 열 마스터 키 경로는 클라이언트 응용 프로그램이 열 마스터 키를 사용해 암호화된 열 암호화 키를 해독하고 암호화된 열을 쿼리하기 위해 열 마스터 키를 사용할 수 있도록 유효해야 합니다.
+열 암호화 키 메타데이터 항목을 데이터베이스에서 만들 수 있기 전에 그리고 상시 암호화를 사용하여 데이터베이스의 모든 열을 암호화할 수 있기 전에 열 마스터 키 메타데이터 항목 만들기를 요청합니다. 메타데이터에서 열 마스터 키 항목은 외부 열 키 저장소(SQL Server 외부)에 저장되어야 하는 실제 열 마스터 키를 포함하지 않는다는 점에 유의하십시오. 메타데이터에서 키 저장소 공급자 이름 및 열 마스터 키 경로는 클라이언트 애플리케이션이 열 마스터 키를 사용해 암호화된 열 암호화 키를 해독하고 암호화된 열을 쿼리하기 위해 열 마스터 키를 사용할 수 있도록 유효해야 합니다.
 
 
   
@@ -174,7 +174,7 @@ ENCLAVE_COMPUTATIONS
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-column-master-key"></a>1. 열 마스터 키 만들기  
- MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스 하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+ MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스 하려면 인증서 저장소에 저장되는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -184,7 +184,7 @@ WITH (
    );  
 ```  
   
- MSSQL_CNG_STORE 공급자를 사용하는 클라이언트 응용 프로그램에서 액세스하는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+ MSSQL_CNG_STORE 공급자를 사용하는 클라이언트 애플리케이션에서 액세스하는 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -194,7 +194,7 @@ WITH (
 );  
 ```  
   
- 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 응용 프로그램에 대한 Azure Key Vault에 저장된 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
+ 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 애플리케이션에 대한 Azure Key Vault에 저장된 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -214,7 +214,7 @@ WITH (
 );  
 ```  
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>2. Enclave 사용 열 마스터 키 만들기  
- MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 응용 프로그램이 열 마스터 키에 액세스하려면 인증서 저장소에 저장되는 Enclave 사용 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
+ MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스하려면 인증서 저장소에 저장되는 Enclave 사용 열 마스터 키에 대한 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -225,7 +225,7 @@ WITH (
   );  
 ```  
   
- 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 응용 프로그램에 대한 Azure Key Vault에 저장된 Enclave 사용 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
+ 열 마스터 키에 액세스하기 위해 AZURE_KEY_VAULT 공급자를 사용하는 클라이언트 애플리케이션에 대한 Azure Key Vault에 저장된 Enclave 사용 열 마스터 키에 대해 열 마스터 키 메타데이터 항목 만들기.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  

@@ -22,7 +22,7 @@ ms.locfileid: "52507206"
 # <a name="migrating-to-in-memory-oltp"></a>메모리 내 OLTP로 마이그레이션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  목차의 이 섹션에 있는 문서는 메모리 내 OLTP(온라인 트랜잭션 처리)를 사용하기 위해 데이터베이스 개체를 마이그레이션하여 기존 응용 프로그램에서 메모리 내 OLTP를 채택하는 방법을 설명합니다.  
+  목차의 이 섹션에 있는 문서는 메모리 내 OLTP(온라인 트랜잭션 처리)를 사용하기 위해 데이터베이스 개체를 마이그레이션하여 기존 애플리케이션에서 메모리 내 OLTP를 채택하는 방법을 설명합니다.  
   
 -   [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 
   

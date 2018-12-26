@@ -39,7 +39,7 @@ ms.locfileid: "52503786"
  데이터에 대한 온-프레미스 유지 관리 및 저장소를 줄일 수 있습니다. 온-프레미스 데이터 백업은 보다 빠르게 실행되며 유지 관리 기간 내에 완료됩니다. 데이터의 클라우드 부분에 대한 백업이 자동으로 실행됩니다. 온-프레미스 저장소 요구 사항이 크게 감소합니다. Azure Storage는 온-프레미스 SSD에 추가하는 것보다 80% 더 저렴할 수 있습니다.  
   
  **마이그레이션 중 데이터 보안 유지**  
- 가장 중요한 응용 프로그램을 클라우드로 안전하게 확장할 수 있습니다. SQL Server의 Always Encrypted는 이동 중인 데이터에 대한 암호화를 제공합니다. RLS(행 수준 보안) 및 기타 고급 SQL Server 보안 기능도 Stretch Database와 함께 작동하여 데이터를 보호합니다.  
+ 가장 중요한 애플리케이션을 클라우드로 안전하게 확장할 수 있습니다. SQL Server의 Always Encrypted는 이동 중인 데이터에 대한 암호화를 제공합니다. RLS(행 수준 보안) 및 기타 고급 SQL Server 보안 기능도 Stretch Database와 함께 작동하여 데이터를 보호합니다.  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database의 기능  
  SQL Server 인스턴스 및 데이터베이스에 Stretch Database를 사용하도록 설정하였고 하나 이상의 테이블을 선택했다면 Stretch Database는 콜드 데이터를 Azure로 자동으로 마이그레이션하기 시작합니다.  

@@ -104,7 +104,7 @@ GO
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 OUTPUT 매개 변수에만 **cursor** 데이터 형식을 사용할 수 있습니다. 매개 변수에 **cursor** 데이터 형식을 지정한 경우에는 프로시저 정의에서 해당 매개 변수에 대해 VARYING 및 OUTPUT 키워드 모두 지정되어야 합니다. 매개 변수는 OUTPUT으로만 지정될 수 있지만 매개 변수 선언 시 VARYING 키워드가 지정된 경우에는 데이터 형식은 **cursor** 여야 하고 OUTPUT 키워드도 지정되어야 합니다.  
   
 > [!NOTE]  
->  **cursor** 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 응용 프로그램 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 응용 프로그램이 프로시저를 실행하기 전에 바인딩되어야 하므로 **cursor** OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로컬 **cursor** 변수에 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **OUTPUT 변수가 할당된 경우에만** 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
+>  **cursor** 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 응용 프로그램 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 **cursor** OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로컬 **cursor** 변수에 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **OUTPUT 변수가 할당된 경우에만** 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor Output 매개 변수 규칙  
  프로시저 실행 시 **cursor** Output 매개 변수에는 다음 규칙이 적용됩니다.  
@@ -182,7 +182,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  TSQL에서 TRY/CATCH/THROW 오류 처리를 사용하기 전에 저장 프로시저의 성공 여부를 확인하기 위해 종종 반환 코드가 필요합니다.  저장 프로시저는 항상 오류(필요한 경우 THROW/RAISERROR를 사용하여 생성됨)와 함께 실패를 표시하고 오류를 표시하는 반환 코드를 사용하지 않습니다.  또한 응용 프로그램 데이터를 반환하기 위해 반환 코드를 사용하지 않도록 방지해야 합니다.
+ 반환 코드는 대개 프로시저의 흐름 제어 블록에서 발생 가능한 각 오류 상태의 반환 코드 값을 설정하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 다음에 @@ERROR 함수를 사용하면 문이 실행될 때 오류가 발생했는지 여부를 알 수 있습니다.  TSQL에서 TRY/CATCH/THROW 오류 처리를 사용하기 전에 저장 프로시저의 성공 여부를 확인하기 위해 종종 반환 코드가 필요합니다.  저장 프로시저는 항상 오류(필요한 경우 THROW/RAISERROR를 사용하여 생성됨)와 함께 실패를 표시하고 오류를 표시하는 반환 코드를 사용하지 않습니다.  또한 애플리케이션 데이터를 반환하기 위해 반환 코드를 사용하지 않도록 방지해야 합니다.
   
 ### <a name="examples-of-return-codes"></a>반환 코드의 예  
  다음 예에서는 여러 오류에 대한 특정 반환 코드 값을 설정하는 오류 처리가 포함된 `usp_GetSalesYTD` 프로시저를 보여 줍니다. 다음 표에서는 발생 가능한 각 오류에 프로시저에서 할당한 정수 값 및 각 값에 해당하는 의미를 보여 줍니다.  

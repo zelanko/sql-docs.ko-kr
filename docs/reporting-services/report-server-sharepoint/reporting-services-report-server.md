@@ -31,7 +31,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 
 ## <a name="overview-of-report-server-modes"></a>보고서 서버 모드의 개요
 
- 처리 엔진(프로세서)는 보고서 서버의 핵심입니다. 프로세서는 보고 시스템의 무결성을 지원하며 수정 또는 확장될 수 없습니다. 확장 프로그램 또한 프로세서에 해당하지만 특정 기능을 수행합니다. Reporting Services에는 지원되는 모든 형식의 확장을 위한 한 개 이상의 기본 확장 프로그램이 포함되어 있습니다. 사용자 지정 확장 프로그램을 보고서 서버에 추가할 수 있는데 그럴 경우 기본적으로 지원되지 않는 지원 기능을 사용할 수 있도록 보고서 서버를 확장할 수 있습니다. Single Sign-on 기술 지원, 기본 렌더링 프로그램에서 지원하지 않는 응용 프로그램 형식의 보고서 출력, 프린터 또는 응용 프로그램으로의 보고서 배달 등이 사용자 지정 기능의 예입니다.  
+ 처리 엔진(프로세서)는 보고서 서버의 핵심입니다. 프로세서는 보고 시스템의 무결성을 지원하며 수정 또는 확장될 수 없습니다. 확장 프로그램 또한 프로세서에 해당하지만 특정 기능을 수행합니다. Reporting Services에는 지원되는 모든 형식의 확장을 위한 한 개 이상의 기본 확장 프로그램이 포함되어 있습니다. 사용자 지정 확장 프로그램을 보고서 서버에 추가할 수 있는데 그럴 경우 기본적으로 지원되지 않는 지원 기능을 사용할 수 있도록 보고서 서버를 확장할 수 있습니다. Single Sign-on 기술 지원, 기본 렌더링 프로그램에서 지원하지 않는 애플리케이션 형식의 보고서 출력, 프린터 또는 애플리케이션으로의 보고서 배달 등이 사용자 지정 기능의 예입니다.  
   
  단일 보고서 서버 인스턴스는 초기 요청 처리부터 완성된 보고서 표시를 아우르는 종단 간 처리를 제공하는 프로세서 및 확장 프로그램의 전체 모음에 의해 정의됩니다. 보고서 서버는 하위 구성 요소를 통해 보고서 요청을 처리하고 요청 시 액세스 또는 예약된 배포에 보고서를 사용할 수 있도록 합니다.  
   
@@ -49,10 +49,10 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |기능 또는 구성 요소|기본 모드|SharePoint 모드|  
 |--------------------------|-----------------|---------------------|  
-|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 응용 프로그램이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
+|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
 |**사용자 지정 보안 확장 프로그램**|예|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
 |**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**보고서 관리자**|예|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 응용 프로그램 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**보고서 관리자**|예|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
 |**링크된 보고서**|예|아니요.|  
 |**내 보고서**|예|아니오|  
 |**내 구독** 및 일괄 처리 방법|예|아니오|  
@@ -67,15 +67,15 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ## <a name="native-mode"></a>기본 모드
 
- 기본 모드에서 보고서 서버는 보고서 및 보고서 모델에 대한 모든 확인, 관리, 처리 및 배달 기능을 제공하는 독립 실행형 응용 프로그램 서버입니다. 이 모드는 보고서 서버 인스턴스의 기본 모드입니다. 설치 중 구성된 기본 모드 보고서 서버를 설치하거나 설치가 완료된 후 보고서 서버를 기본 모드 작업용으로 구성할 수 있습니다.  
+ 기본 모드에서 보고서 서버는 보고서 및 보고서 모델에 대한 모든 확인, 관리, 처리 및 배달 기능을 제공하는 독립 실행형 애플리케이션 서버입니다. 이 모드는 보고서 서버 인스턴스의 기본 모드입니다. 설치 중 구성된 기본 모드 보고서 서버를 설치하거나 설치가 완료된 후 보고서 서버를 기본 모드 작업용으로 구성할 수 있습니다.  
   
- 다음 다이어그램에서는 Reporting Services 기본 모드 배포의 3계층 아키텍처를 보여줍니다. 이 아키텍처에서는 데이터 계층의 보고서 서버 데이터베이스 및 데이터 원본, 중간 계층의 보고서 서버 구성 요소, 프레젠테이션 계층의 클라이언트 응용 프로그램 및 기본 제공 또는 사용자 지정 도구를 보여 주며, 서버 구성 요소 간 데이터 및 요청 흐름과 데이터 저장소에서 내용을 보내고 검색하는 구성 요소도 보여 줍니다.  
+ 다음 다이어그램에서는 Reporting Services 기본 모드 배포의 3계층 아키텍처를 보여줍니다. 이 아키텍처에서는 데이터 계층의 보고서 서버 데이터베이스 및 데이터 원본, 중간 계층의 보고서 서버 구성 요소, 프레젠테이션 계층의 클라이언트 애플리케이션 및 기본 제공 또는 사용자 지정 도구를 보여 주며, 서버 구성 요소 간 데이터 및 요청 흐름과 데이터 저장소에서 내용을 보내고 검색하는 구성 요소도 보여 줍니다.  
   
  ![Reporting Services 아키텍처](../../reporting-services/report-server-sharepoint/media/reporting-serv-arch.gif "Reporting Services 아키텍처")  
   
- 보고서 서버는 웹 서비스, 백그라운드 처리 및 기타 작업을 호스팅하는 "보고서 서버 서비스"라고 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스로 구현됩니다. 서비스 콘솔 응용 프로그램에서 이 서비스는 SQL Server Reporting Services(MSSQLSERVER)로 나열됩니다.  
+ 보고서 서버는 웹 서비스, 백그라운드 처리 및 기타 작업을 호스팅하는 "보고서 서버 서비스"라고 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스로 구현됩니다. 서비스 콘솔 애플리케이션에서 이 서비스는 SQL Server Reporting Services(MSSQLSERVER)로 나열됩니다.  
   
- 타사 개발자들은 보고서 서버의 처리 기능을 대체 또는 확장하기 위한 확장 프로그램을 추가로 만들 수 있습니다. 응용 프로그램 개발자가 사용할 수 있는 프로그래밍 인터페이스에 대한 자세한 내용은 [기술 참조](../../reporting-services/technical-reference-ssrs.md)를 참조하세요.  
+ 타사 개발자들은 보고서 서버의 처리 기능을 대체 또는 확장하기 위한 확장 프로그램을 추가로 만들 수 있습니다. 애플리케이션 개발자가 사용할 수 있는 프로그래밍 인터페이스에 대한 자세한 내용은 [기술 참조](../../reporting-services/technical-reference-ssrs.md)를 참조하세요.  
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>기본 모드와 SharePoint 웹 파트
 
@@ -83,7 +83,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ## <a name="sharepoint-mode"></a>SharePoint 모드
 
- SharePoint 모드에서는 보고서 서버가 SharePoint 서버 팜 내에서 실행되어야 합니다. 보고서 서버 처리, 렌더링 및 관리 기능은 Reporting Services SharePoint 공유 서비스 및 하나 이상의 Reporting Services 서비스 응용 프로그램을 실행하는 SharePoint 응용 프로그램 서버로 표현됩니다. SharePoint 사이트는 보고서 서버 내용 및 작업에 대한 프런트 엔드 액세스를 제공합니다.  
+ SharePoint 모드에서는 보고서 서버가 SharePoint 서버 팜 내에서 실행되어야 합니다. 보고서 서버 처리, 렌더링 및 관리 기능은 Reporting Services SharePoint 공유 서비스 및 하나 이상의 Reporting Services 서비스 애플리케이션을 실행하는 SharePoint 애플리케이션 서버로 표현됩니다. SharePoint 사이트는 보고서 서버 내용 및 작업에 대한 프런트 엔드 액세스를 제공합니다.  
   
  SharePoint 모드에 필요한 사항은 다음과 같습니다.  
   
@@ -91,7 +91,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 -   SharePoint 2010 제품을 위한 적절한 Reporting Services 추가 기능 버전  
   
--   Reporting Services 공유 서비스 및 하나 이상의 Reporting Services 서비스 응용 프로그램이 설치된 SharePoint 응용 프로그램 서버  
+-   Reporting Services 공유 서비스 및 하나 이상의 Reporting Services 서비스 애플리케이션이 설치된 SharePoint 애플리케이션 서버  
   
  다음 그림에서는 SharePoint 모드 Reporting Services 환경을 보여줍니다.  
   
@@ -99,12 +99,12 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ||설명|  
 |-|-----------------|  
-|**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). Reporting Services 추가 기능은 데이터 원본 또는 구독 관리와 같은 작업을 위해 보고서 또는 Reporting Services 관리 페이지 보기와 같은 웹 응용 프로그램 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
-|**(2)**|추가 기능은 Reporting Services 서비스 프록시를 통해 클라이언트가 응용 프로그램 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
-|**(3)**|Reporting Services 공유 서비스를 실행하는 응용 프로그램 서버입니다. 보고서 처리의 스케일 아웃은 SharePoint 팜의 일부로 추가 응용 프로그램 서버에 Reporting Services 서비스를 추가하여 관리됩니다.|  
-|**(4)**|권한, 전자 메일, 프록시 및 구독을 포함하여 서로 다른 구성을 사용하는 두 개 이상의 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다.|  
+|**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). Reporting Services 추가 기능은 데이터 원본 또는 구독 관리와 같은 작업을 위해 보고서 또는 Reporting Services 관리 페이지 보기와 같은 웹 애플리케이션 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
+|**(2)**|추가 기능은 Reporting Services 서비스 프록시를 통해 클라이언트가 애플리케이션 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
+|**(3)**|Reporting Services 공유 서비스를 실행하는 애플리케이션 서버입니다. 보고서 처리의 스케일 아웃은 SharePoint 팜의 일부로 추가 애플리케이션 서버에 Reporting Services 서비스를 추가하여 관리됩니다.|  
+|**(4)**|권한, 전자 메일, 프록시 및 구독을 포함하여 서로 다른 구성을 사용하는 두 개 이상의 Reporting Services 서비스 애플리케이션을 만들 수 있습니다.|  
 |**(5)**|보고서, 데이터 원본 및 기타 항목은 SharePoint 콘텐츠 데이터베이스에 저장됩니다.|  
-|**(6)**|Reporting Services 서비스 응용 프로그램은 보고서 서버, 임시 및 데이터 경고 기능을 위한 세 가지 데이터베이스를 만듭니다. 모든 SSRS 서비스 응용 프로그램에 적용되는 구성 설정은 **RSReportserver.config** 파일에 저장됩니다.|  
+|**(6)**|Reporting Services 서비스 애플리케이션은 보고서 서버, 임시 및 데이터 경고 기능을 위한 세 가지 데이터베이스를 만듭니다. 모든 SSRS 서비스 애플리케이션에 적용되는 구성 설정은 **RSReportserver.config** 파일에 저장됩니다.|  
   
 ## <a name="report-process-and-schedule-and-delivery-process"></a>보고 프로세스 및 일정 예약 및 배달 프로세스
 
@@ -128,7 +128,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 |배달|기본 보고서 서버 인스턴스에는 전자 메일 배달 확장 프로그램과 파일 공유 배달 확장 프로그램이 있습니다. 보고서 서버가 SharePoint 통합용으로 구성된 경우 보고서를 SharePoint 라이브러리에 저장하는 배달 확장 프로그램을 사용할 수 있습니다.|  
   
 > [!NOTE]  
->  Reporting Services는 서버를 관리하고 콘텐츠를 작성하며 이 콘텐츠를 조직의 사용자가 사용할 수 있도록 설정하는 데 사용할 수 있는 모든 도구와 응용 프로그램을 포함합니다.  
+>  Reporting Services는 서버를 관리하고 콘텐츠를 작성하며 이 콘텐츠를 조직의 사용자가 사용할 수 있도록 설정하는 데 사용할 수 있는 모든 도구와 애플리케이션을 포함합니다.  
   
 ## <a name="related-tasks"></a>관련 작업
 

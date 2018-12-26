@@ -46,7 +46,7 @@ ms.locfileid: "49383613"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체(object)||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|추가 정보|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
-|일괄 처리 크기||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 응용 프로그램과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
+|일괄 처리 크기||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 애플리케이션과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
 |짧은 문자열 열당 바이트 수||8,000||  
 |GROUP BY, ORDER BY당 바이트 수||8,060||  
 |인덱스 키당 바이트 수||클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 인덱스 키의 최대 바이트 수는 900을 초과할 수 없습니다. 비클러스터형 인덱스 키에 대한 최대값은 1700바이트입니다.<br /><br /> 최대 크기가 제한을 초과하는 가변 길이 열을 사용하여 키를 정의할 수 있습니다. 그러나 이러한 열에 있는 데이터의 총 크기는 제한을 초과할 수 없습니다.<br /><br /> 비클러스터형 인덱스에 키가 아닌 열을 추가로 포함할 수 있으며 해당 열은 키의 크기 제한에 포함되지 않습니다. 키가 아닌 열은 일부 쿼리의 성능 향상에 도움이 될 수 있습니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "49383613"
 |식별자 길이(문자 수)||128||  
 |컴퓨터당 인스턴스 수||독립 실행형 서버당 50개의 인스턴스<br /><br /> 클러스터 설치를 위한 저장 옵션으로 공유 클러스터 디스크를 사용하는 경우 장애 조치(failover) 클러스터에 25개의 인스턴스. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 클러스터 설치를 위한 스토리지 옵션으로 SMB 파일 공유 위치를 선택하는 경우 장애 조치(failover) 클러스터에 50개의 인스턴스를 지원합니다.||  
 |메모리 최적화 테이블당 인덱스 수||999([!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)]부터 및 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)])<br/>8([!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 및 [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)])||  
-|SQL 문이 포함된 문자열의 길이(일괄 처리 크기)||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 응용 프로그램과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
+|SQL 문이 포함된 문자열의 길이(일괄 처리 크기)||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 애플리케이션과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)]간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
 |연결당 잠금 수||서버당 최대 잠금 수||  
 |다음 인스턴스당 잠금 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||메모리로만 제한|이 값은 정적 잠금 할당용입니다. 동적 잠금은 메모리로만 제한됩니다.|  
 |중첩 저장 프로시저 수준 수||32|하나의 저장 프로시저가 65개 이상의 데이터베이스에 액세스하거나 인터리빙 시 3개 이상의 데이터베이스에 액세스할 경우 오류가 발생합니다.|  
@@ -112,7 +112,7 @@ ms.locfileid: "49383613"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 컴퓨터(물리적 컴퓨터 또는 가상 컴퓨터) 수||100|  
 |컴퓨터당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스 수||5|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수||200*|  
-|데이터 계층 응용 프로그램을 포함하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스당 사용자 데이터베이스 수||50|  
+|데이터 계층 애플리케이션을 포함하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스당 사용자 데이터베이스 수||50|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 총 사용자 데이터베이스 수||1,000|  
 |데이터베이스당 파일 그룹 수||1|  
 |파일 그룹당 데이터 파일 수||1|  
@@ -122,7 +122,7 @@ ms.locfileid: "49383613"
  * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
- 다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
+ 다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 애플리케이션)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|  
 |------------------------------------------|-|------------------------------------------------------------------|  

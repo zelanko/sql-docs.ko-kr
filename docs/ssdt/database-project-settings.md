@@ -132,9 +132,9 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
 -   SQL Azure 메타데이터 데이터 정렬(컴파일러 서비스는 SQL Server 2012 부분적으로 포함된 데이터베이스 메타데이터 데이터 정렬 - Latin1_General_100_CI_AS_KS_WS_SC를 사용함)  
   
 ### <a name="enablingdisabling-extended-verification"></a>확장 확인 설정/해제  
-확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 SQL Azure 데이터베이스 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 응용 프로그램 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 응용 프로그램 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
+확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 SQL Azure 데이터베이스 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 응용 프로그램 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 애플리케이션 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
   
-확장 확인은 Microsoft SQL Server 2012 및 SQL Azure와의 호환성을 얻을 수 있도록 SQL Server 2008/R2용 응용 프로그램 범위의 데이터베이스를 개발할 때에도 사용할 수 있습니다.  
+확장 확인은 Microsoft SQL Server 2012 및 SQL Azure와의 호환성을 얻을 수 있도록 SQL Server 2008/R2용 애플리케이션 범위의 데이터베이스를 개발할 때에도 사용할 수 있습니다.  
   
 ##### <a name="to-enable-or-disable-extended-verification-at-the-project-level"></a>프로젝트 수준에서 확장 확인을 설정하거나 해제하려면  
   

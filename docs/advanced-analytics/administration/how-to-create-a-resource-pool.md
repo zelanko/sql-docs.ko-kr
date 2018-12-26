@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
 ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/11/2018
 ms.locfileid: "49100565"
@@ -121,7 +121,7 @@ ms.locfileid: "49100565"
   
 2.  각 리소스 풀에 대 한 분류자 함수에서 문 또는 리소스 풀에 할당 되어야 하는 들어오는 요청의 유형을 정의 합니다.
   
-     예를 들어 다음 함수는 요청을 보낸 응용 프로그램이 'Microsoft R Host' 또는 'RStudio'인 경우 사용자 정의 외부 리소스 풀에 할당된 스키마의 이름을 반환하고, 그렇지 않으면 기본 리소스 풀을 반환합니다.
+     예를 들어 다음 함수는 요청을 보낸 애플리케이션이 'Microsoft R Host' 또는 'RStudio'인 경우 사용자 정의 외부 리소스 풀에 할당된 스키마의 이름을 반환하고, 그렇지 않으면 기본 리소스 풀을 반환합니다.
   
     ```sql
     USE master

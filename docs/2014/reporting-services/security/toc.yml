@@ -1,3 +1,4 @@
+items:
 - name: 보안 및 보호
   href: reporting-services-security-and-protection.md
 - name: Reporting Services 인증에 대한 확장된 보호
@@ -5,69 +6,75 @@
 - name: 보고서 서버 인증
   href: authentication-with-the-report-server.md
   items:
-    - name: 보고서 서버의 Windows 인증 구성
-      href: configure-windows-authentication-on-the-report-server.md
-    - name: 보고서 서버에서 기본 인증 구성
-      href: configure-basic-authentication-on-the-report-server.md
-    - name: 보고서 서버에서 사용자 지정 또는 폼 인증 구성
-      href: configure-custom-or-forms-authentication-on-the-report-server.md
-    - name: 보고서 관리자에서 사용자 지정 인증 쿠키를 전달하도록 구성
-      href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+  - name: 보고서 서버의 Windows 인증 구성
+    href: configure-windows-authentication-on-the-report-server.md
+  - name: 보고서 서버에서 기본 인증 구성
+    href: configure-basic-authentication-on-the-report-server.md
+  - name: 보고서 서버에서 사용자 지정 또는 폼 인증 구성
+    href: configure-custom-or-forms-authentication-on-the-report-server.md
+  - name: 보고서 관리자에서 사용자 지정 인증 쿠키를 전달하도록 구성
+    href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
 - name: 역할 및 권한
   href: roles-and-permissions-reporting-services.md
   items:
-    - name: 보고서 서버에 데이터베이스 액세스 권한 부여
-      href: grant-user-access-to-a-report-server.md
-    - name: 기본 모드 보고서 서버에 대한 사용 권한 부여
-      href: granting-permissions-on-a-native-mode-report-server.md
+  - name: 보고서 서버에 데이터베이스 액세스 권한 부여
+    href: grant-user-access-to-a-report-server.md
+  - name: 기본 모드 보고서 서버에 대한 사용 권한 부여
+    href: granting-permissions-on-a-native-mode-report-server.md
+    items:
+    - name: 보안 개체 항목
+      href: securable-items.md
+    - name: 태스크 및 권한
+      href: tasks-and-permissions.md
       items:
-        - name: 보안 개체 항목
-          href: securable-items.md
-        - name: 태스크 및 권한
-          href: tasks-and-permissions.md
-          items:
-            - name: 항목 수준의 태스크
-              href: tasks-and-permissions-item-level-tasks.md
-            - name: 시스템 수준 태스크
-              href: tasks-and-permissions-system-level-tasks.md
-        - name: 역할 할당 생성 및 관리
-          href: create-and-manage-role-assignments.md
-        - name: 보안 폴더
-          href: secure-folders.md
-        - name: 보고서 및 리소스 보안
-          href: secure-reports-and-resources.md
-        - name: 공유 데이터 원본 항목 보안 설정
-          href: secure-shared-data-source-items.md
-        - name: 공유 데이터 집합 항목 보안 설정
-          href: secure-shared-dataset-items.md
-        - name: 내 보고서 보안 설정
-          href: secure-my-reports.md
-        - name: RSExecRole 만들기
-          href: create-the-rsexecrole.md
-        - name: 역할 정의
-          href: role-definitions.md
-          items:
-            - name: '역할 만들기, 삭제 또는 수정'
-              href: role-definitions-create-delete-or-modify.md
-            - name: 미리 정의된 역할
-              href: role-definitions-predefined-roles.md
-        - name: 역할 할당
-          href: role-assignments.md
-          items:
-            - name: 역할 할당 수정 또는 삭제
-              href: role-assignments-modify-or-delete.md
-    - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
-      href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+      - name: 항목 수준의 태스크
+        href: tasks-and-permissions-item-level-tasks.md
+      - name: 시스템 수준 태스크
+        href: tasks-and-permissions-system-level-tasks.md
+    - name: 역할 할당 생성 및 관리
+      href: create-and-manage-role-assignments.md
+    - name: 보안 폴더
+      href: secure-folders.md
+    - name: 보고서 및 리소스 보안
+      href: secure-reports-and-resources.md
+    - name: 공유 데이터 원본 항목 보안 설정
+      href: secure-shared-data-source-items.md
+    - name: 공유 데이터 집합 항목 보안 설정
+      href: secure-shared-dataset-items.md
+    - name: 내 보고서 보안 설정
+      href: secure-my-reports.md
+    - name: RSExecRole 만들기
+      href: create-the-rsexecrole.md
+    - name: 역할 정의
+      href: role-definitions.md
       items:
-        - name: 보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용
-          href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
-        - name: Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
-          href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
-        - name: 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
-          href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
-        - name: SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정
-          href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
-        - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정
-          href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+      - name: 역할 만들기, 삭제 또는 수정
+        href: role-definitions-create-delete-or-modify.md
+      - name: 미리 정의된 역할
+        href: role-definitions-predefined-roles.md
+    - name: 역할 할당
+      href: role-assignments.md
+      items:
+      - name: 역할 할당 수정 또는 삭제
+        href: role-assignments-modify-or-delete.md
+  - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
+    href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+    items:
+    - name: 보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용
+      href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+    - name: Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
+      href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+    - name: 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
+      href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+    - name: SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정
+      href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+    - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정
+      href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
 - name: 기본 모드 보고서 서버에서 SSL 연결 구성
   href: configure-ssl-connections-on-a-native-mode-report-server.md
+ms.openlocfilehash: bcff3b53a169a18f8245d427aaa300787431a074
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39317777"

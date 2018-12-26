@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50147918"
@@ -47,7 +47,7 @@ ms.locfileid: "50147918"
 7.  암호를 입력하고 **확인** 을 클릭하여 연결 명령을 실행합니다.  
   
 ## <a name="switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>AMO를 사용하여 데이터베이스의 읽기/쓰기 모드를 프로그래밍 방식으로 전환  
- C# 응용 프로그램에서 필요한 매개 변수를 사용하여 `SwitchReadWrite()` 를 호출합니다. 코드를 컴파일하고 실행하여 데이터베이스를 이동합니다.  
+ C# 애플리케이션에서 필요한 매개 변수를 사용하여 `SwitchReadWrite()` 를 호출합니다. 코드를 컴파일하고 실행하여 데이터베이스를 이동합니다.  
   
 ```  
 private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadWriteMode)  

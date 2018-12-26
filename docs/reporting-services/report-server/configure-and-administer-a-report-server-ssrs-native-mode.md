@@ -32,7 +32,7 @@ ms.locfileid: "50031322"
   
 -   보고서 관리자를 사용하여 보고서 서버에 액세스하는 사용 권한을 부여할 수 있습니다. 사용 권한은 각 사용자 또는 그룹 계정에 대해 정의하는 역할 할당을 통해 제공됩니다. 자세한 내용은 [역할 및 사용 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)을 참조하세요.  
   
--   필요에 따라 구성 파일을 수정하여 응용 프로그램 설정을 변경할 수 있습니다. 각 파일에 대한 자세한 내용과 해당 파일의 수정 지침은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하십시오.  
+-   필요에 따라 구성 파일을 수정하여 애플리케이션 설정을 변경할 수 있습니다. 각 파일에 대한 자세한 내용과 해당 파일의 수정 지침은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  

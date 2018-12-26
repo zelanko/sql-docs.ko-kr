@@ -34,7 +34,7 @@ ms.locfileid: "34044177"
   
 -   모델 빌드, 처리 또는 배포  
   
--   연결 문자열에서 LCID를 허용하는 클라이언트 응용 프로그램을 사용하는 모델 연결  
+-   연결 문자열에서 LCID를 허용하는 클라이언트 애플리케이션을 사용하는 모델 연결  
   
 ## <a name="create-an-empty-translation-file"></a>빈 번역 파일 만들기  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 을(를) 사용하여 번역을 추가합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "34044177"
   
 |||  
 |-|-|  
-|translatedCaption|테이블 형식 모델의 모든 클라이언트 응용 프로그램 지원 시각화에 표시되는 테이블 또는 열 제목입니다.|  
+|translatedCaption|테이블 형식 모델의 모든 클라이언트 애플리케이션 지원 시각화에 표시되는 테이블 또는 열 제목입니다.|  
 |translatedDescription|캡션 보다는 덜 일반적인 설명은 SSDT 등의 모델링 도구의 모델 정보에 표시됩니다.|  
   
  파일에서 지정되지 않은 모든 메타데이터를 삭제하지 마십시오.  기반이 되는 파일와 일치해야 합니다. 원하는 문자열을 추가한 후 파일을 저장합니다.  

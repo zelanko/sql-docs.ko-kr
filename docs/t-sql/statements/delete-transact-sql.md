@@ -170,7 +170,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="best-practices"></a>최선의 구현 방법  
  테이블의 모든 행을 삭제하려면 TRUNCATE TABLE을 사용합니다. TRUNCATE TABLE은 DELETE보다 더 빠르고 시스템 및 트랜잭션 로그 리소스를 더 적게 사용합니다. TRUNCATE TABLE은 테이블이 복제에 참여할 수 없는 등의 제한 사항이 있습니다. 자세한 내용은 [TRUNCATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)을 참조하세요.  
   
- @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삭제된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
+ @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삭제된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ## <a name="error-handling"></a>오류 처리  
  TRY…CATCH 구문에 명령문을 지정하여 DELETE 문에 대한 오류 처리를 구현할 수 있습니다.  

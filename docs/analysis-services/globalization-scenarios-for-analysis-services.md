@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38031905"
@@ -29,7 +29,7 @@ ms.locfileid: "38031905"
   
 -   개체 이름 등의 메타데이터는 번역할 수 있습니다. 모델 유형별로 지원되는 기능도 다르지만 다차원 모델과 테이블 형식 모델에서는 모두 번역된 문자열을 모델에 추가할 수 있습니다. 여러 번역을 정의한 다음 로컬 식별자를 사용하여 클라이언트로 반환되는 번역을 결정할 수 있습니다. 자세한 내용은 아래의 [기능](#bkmk_features) 을 참조하세요.  
   
--   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 엔진(msmdsrv)에서 반환되는 오류, 경고 및 정보 메시지는 Office와 Office 365에서 지원하는 43개의 언어로 지역화되어 있습니다. 메시지를 특정 언어로 가져오는 데에는 구성이 필요하지 않습니다. 클라이언트 응용 프로그램의 로캘은 반환되는 문자열을 결정합니다.  
+-   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 엔진(msmdsrv)에서 반환되는 오류, 경고 및 정보 메시지는 Office와 Office 365에서 지원하는 43개의 언어로 지역화되어 있습니다. 메시지를 특정 언어로 가져오는 데에는 구성이 필요하지 않습니다. 클라이언트 애플리케이션의 로캘은 반환되는 문자열을 결정합니다.  
   
 -   구성 파일(msmdsrv.ini) 및 AMO PowerShell은 영어로만 되어 있습니다.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "38031905"
   
  Analysis Services 세계화 기능을 통해 사용 가능한 시나리오는 다음과 같습니다.  
   
--   필드 이름과 값이 사용자가 선택한 언어로 표시되도록 하나의 데이터 모델에서 여러 가지의 번역된 캡션을 제공합니다. 캐나다 벨기에, 스위스와 같은 이중 언어 국가에서 운영되는 회사의 경우에는 클라이언트 및 서버 응용 프로그램에서 여러 언어를 지원하는 것이 표준 코딩 요구 사항입니다. 이 시나리오는 번역 및 통화 환산을 통해 사용됩니다. 자세한 내용 및 링크는 아래의 [기능](#bkmk_features) 을 참조하세요.  
+-   필드 이름과 값이 사용자가 선택한 언어로 표시되도록 하나의 데이터 모델에서 여러 가지의 번역된 캡션을 제공합니다. 캐나다 벨기에, 스위스와 같은 이중 언어 국가에서 운영되는 회사의 경우에는 클라이언트 및 서버 애플리케이션에서 여러 언어를 지원하는 것이 표준 코딩 요구 사항입니다. 이 시나리오는 번역 및 통화 환산을 통해 사용됩니다. 자세한 내용 및 링크는 아래의 [기능](#bkmk_features) 을 참조하세요.  
   
 -   개발 및 프로덕션 환경은 다양한 국가에 위치해 있습니다. 한 국가에서 솔루션을 개발한 다음 다른 국가에서 배포하는 것은 점점 일반화되고 있습니다. 특정 언어로 개발된 솔루션을 다른 언어 팩을 사용하는 서버에 배포할 준비 작업을 맡은 경우 언어 및 데이터 정렬 속성을 설정하는 방법을 알아 두어야 합니다. 이러한 속성들을 설정하면 원래의 호스트 시스템에서 얻을 수 있는 상속된 기본값을 재정의할 수 있습니다. 자세한 내용은 아래의 [언어 및 데이터 정렬&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md) 을 참조하세요.  
   
 ##  <a name="bkmk_features"></a> 세계화된 다국어 솔루션을 구축하기 위한 기능  
- 클라이언트 수준에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터를 사용하거나 조작하는 세계화된 응용 프로그램에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다국어 및 다문화 기능을 사용할 수 있습니다.  
+ 클라이언트 수준에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터를 사용하거나 조작하는 세계화된 애플리케이션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다국어 및 다문화 기능을 사용할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 로캘 ID를 제공하여 번역을 자동으로 정의한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에서 데이터 및 메타데이터를 검색할 수 있습니다.  
   

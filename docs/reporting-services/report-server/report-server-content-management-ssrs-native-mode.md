@@ -130,10 +130,10 @@ ms.locfileid: "52399286"
   
 |연산|파일 유형|  
 |---------------|---------------|  
-|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 응용 프로그램 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)를 참조하세요.|  
+|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 애플리케이션 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)를 참조하세요.|  
 |게시|보고서, 보고서 파트, 데이터 원본 또는 데이터 집합이 아닌 프로젝트의 모든 파일이 리소스로 업로드됩니다. 리소스를 게시하려면 보고서 디자이너에서 프로젝트에 기존 항목을 추가한 다음 보고서 서버에 해당 프로젝트를 게시합니다.|  
   
- 모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 응용 프로그램 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  
+ 모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 애플리케이션 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  
   
  보고서 사용자가 리소스를 볼 수 있는지 여부는 브라우저의 보기 기능에 따라 다릅니다. 리소스는 보고서 서버에서 처리되지 않기 때문에 특정 MIME 형식을 렌더링하기 위한 보기 기능을 브라우저에서 제공해야 합니다. 브라우저에서 콘텐츠를 렌더링할 수 없으면 리소스를 보는 사용자에게 리소스의 일반 속성만 표시됩니다.  
   

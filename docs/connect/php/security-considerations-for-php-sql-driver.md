@@ -23,7 +23,7 @@ ms.locfileid: "47622361"
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>보안 고려 사항 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 응용 프로그램 개발, 배포 및 실행과 관련된 보안 고려 사항을 설명합니다. 자세한 내용을 보려면 SQL Server 보안에 대 한 정보를 참조 하세요 [SQL Server 보안 개요](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)합니다.  
+이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션 개발, 배포 및 실행과 관련된 보안 고려 사항을 설명합니다. 자세한 내용을 보려면 SQL Server 보안에 대 한 정보를 참조 하세요 [SQL Server 보안 개요](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)합니다.  
   
 ## <a name="connect-using-windows-authentication"></a>Windows 인증을 사용하여 연결  
 다음과 같은 이유로 가능하면 SQL Server에 연결하는 데 Windows 인증을 사용해야 합니다.  
@@ -45,13 +45,13 @@ Windows 인증을 사용하여 연결할 때 SQL Server가 Kerberos 인증 프�
 SQL 삽입 공격 및 관련된 보안 고려 사항에 대한 자세한 내용은 [SQL 삽입](https://msdn.microsoft.com/library/ms161953.aspx)을 참조하세요.  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>최종 사용자에게서 서버 또는 연결 문자열 정보 허용하지 않음  
-최종 사용자가 서버 또는 연결 문자열 정보를 응용 프로그램에 제출할 수 없도록 응용 프로그램을 작성합니다. 서버 및 연결 문자열 정보에 대해 엄격한 제어를 유지하면 악성 활동에 대한 노출 영역이 줄어듭니다.  
+최종 사용자가 서버 또는 연결 문자열 정보를 애플리케이션에 제출할 수 없도록 애플리케이션을 작성합니다. 서버 및 연결 문자열 정보에 대해 엄격한 제어를 유지하면 악성 활동에 대한 노출 영역이 줄어듭니다.  
   
-## <a name="turn-warningsaserrors-on-during-application-development"></a>응용 프로그램을 개발하는 동안 WarningsAsErrors 설정  
-드라이버에서 표시하는 경고가 오류로 간주되도록 **WarningsAsErrors** 설정이 **true** 로 설정된 응용 프로그램을 개발합니다. 그러면 응용 프로그램을 배포하기 전에 경고를 전달할 수 있습니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.  
+## <a name="turn-warningsaserrors-on-during-application-development"></a>애플리케이션을 개발하는 동안 WarningsAsErrors 설정  
+드라이버에서 표시하는 경고가 오류로 간주되도록 **WarningsAsErrors** 설정이 **true** 로 설정된 애플리케이션을 개발합니다. 그러면 애플리케이션을 배포하기 전에 경고를 전달할 수 있습니다. 자세한 내용은 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)을 참조하세요.  
   
-## <a name="secure-logs-for-deployed-application"></a>배포된 응용 프로그램에 대한 보안 로그  
-배포된 응용 프로그램에 대해 로그가 보안 위치에 기록되거나 해당 로깅이 해제되었는지 확인합니다. 그러면 로그 파일에 기록된 정보에 최종 사용자가 액세스할 가능성이 차단됩니다. 자세한 내용은 [Logging Activity](../../connect/php/logging-activity.md)을 참조하세요.  
+## <a name="secure-logs-for-deployed-application"></a>배포된 애플리케이션에 대한 보안 로그  
+배포된 애플리케이션에 대해 로그가 보안 위치에 기록되거나 해당 로깅이 해제되었는지 확인합니다. 그러면 로그 파일에 기록된 정보에 최종 사용자가 액세스할 가능성이 차단됩니다. 자세한 내용은 [Logging Activity](../../connect/php/logging-activity.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

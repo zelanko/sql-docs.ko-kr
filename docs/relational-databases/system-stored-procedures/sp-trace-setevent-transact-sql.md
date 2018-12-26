@@ -255,7 +255,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |7|**NTDomainName**|사용자가 속한 Windows 도메인입니다.|  
 |8|**HostName**|요청을 처음에 시작한 클라이언트 컴퓨터의 이름입니다.|  
 |9|**ClientProcessID**|클라이언트 응용 프로그램이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
-|10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
+|10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
 |13|**Duration**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  

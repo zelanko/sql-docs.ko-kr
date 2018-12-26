@@ -58,7 +58,7 @@ items:
   items:
   - name: 인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄
     href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
-  - name: 다른 응용 프로그램에서 보고서 인쇄
+  - name: 다른 애플리케이션에서 보고서 인쇄
     href: print-reports-from-other-applications-report-builder-and-ssrs.md
   - name: 보고서 인쇄
     href: print-a-report-report-builder-and-ssrs.md

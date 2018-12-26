@@ -12,7 +12,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51019028"
@@ -281,11 +281,11 @@ Get-PowerPivotSystemService
  **12.0.2000.8** 2014.0120.200 C:\Program Files\Microsoft SQL Server\MSAS12 합니다. POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
   
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>SharePoint에서 MSOLAP 데이터 공급자 버전 확인  
- 다음 지침에 따라 Analysis Services OLE DB 공급자 버전 중 Excel 서비스에서 신뢰할 수 있는 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 응용 프로그램의 관리자여야 합니다.  
+ 다음 지침에 따라 Analysis Services OLE DB 공급자 버전 중 Excel 서비스에서 신뢰할 수 있는 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 애플리케이션의 관리자여야 합니다.  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  Excel Services 서비스 응용 프로그램의 이름(예: **ExcelServiceApp1**)을 클릭합니다.  
+2.  Excel Services 서비스 애플리케이션의 이름(예: **ExcelServiceApp1**)을 클릭합니다.  
   
 3.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다. MSOLAP.5(OLAP Services 11.0용 Microsoft OLE DB 공급자)가 나타납니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치를 업그레이드한 경우에는 이전 버전의 MSOLAP.4도 나타납니다.  
   
@@ -294,9 +294,9 @@ Get-PowerPivotSystemService
  MSOLAP.4는 OLAP Services 10.0의 Microsoft OLE DB 공급자로 설명되어 있습니다. 이 버전은 Excel 서비스로 설치된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 기본 버전이어야 하며, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전일 수도 있습니다. SharePoint 설치의 기본 버전은 PowerPivot 데이터 액세스를 지원하지 않습니다. SharePoint에서 PowerPivot 통합 문서에 연결하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전 이상이 있어야 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전이 있는지 확인하려면 파일 속성을 보고 버전을 확인하는 방법이 설명된 이전 섹션의 지침을 따르십시오.  
   
 ### <a name="verify-the-adomdnet-data-provider-version"></a>ADOMD.NET 데이터 공급자 버전 확인  
- 다음 지침을 사용하여, 설치된 ADOMD.NET의 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 응용 프로그램의 관리자여야 합니다.  
+ 다음 지침을 사용하여, 설치된 ADOMD.NET의 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 애플리케이션의 관리자여야 합니다.  
   
-1.  SharePoint 응용 프로그램 서버에서 `c:\Windows\Assembly`를 찾습니다.  
+1.  SharePoint 애플리케이션 서버에서 `c:\Windows\Assembly`를 찾습니다.  
   
 2.  어셈블리 이름을 기준으로 정렬하고 **Microsoft.Analysis Services.Adomd.Client**를 찾습니다.  
   

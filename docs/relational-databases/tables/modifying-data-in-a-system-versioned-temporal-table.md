@@ -57,7 +57,7 @@ ms.locfileid: "52403448"
     ```  
   
 ### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>HIDDEN 기간 열로 테이블에 데이터 삽입  
- **PERIOD** 열이 HIDDEN으로 지정되면 열 목록을 지정하지 않고 INSERT를 사용하는 경우에, 표시되는 열의 값만 지정하면 됩니다. **INSERT** 문에 새로운 **PERIOD** 열을 설명할 필요가 없습니다. 이러한 동작은 버전 관리를 활용하는 테이블에서 시스템 버전 관리를 활성화하는 경우 레거시 응용 프로그램이 계속 작동하도록 보장합니다.  
+ **PERIOD** 열이 HIDDEN으로 지정되면 열 목록을 지정하지 않고 INSERT를 사용하는 경우에, 표시되는 열의 값만 지정하면 됩니다. **INSERT** 문에 새로운 **PERIOD** 열을 설명할 필요가 없습니다. 이러한 동작은 버전 관리를 활용하는 테이블에서 시스템 버전 관리를 활성화하는 경우 레거시 애플리케이션이 계속 작동하도록 보장합니다.  
   
 ```  
 CREATE TABLE [dbo].[CompanyLocation]  

@@ -19,13 +19,13 @@ ms.locfileid: "50020667"
 
 [!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 2016은 새로운 Odata API를 호스트하고 모바일 보고서 및 KPI와 같은 새 보고서 작업 부하를 호스트하기 위해 새 웹 포털을 도입하였습니다. 이 새로운 포털은 최신 기술을 사용하며, 별도의 프로세스로 실행하여 친숙한 ReportingServicesService로부터 격리됩니다. 이 프로세스는 ASP.NET 호스팅 응용 프로그램이 아니므로 기존 사용자 지정 보안 확장 프로그램에서의 가정을 중단합니다. 또한 사용자 지정 보안 확장 프로그램에 대한 현재 인터페이스는 외부 컨텍스트가 전달되는 것을 허용하지 않아 구현자는 잘 알려진 전역 ASP.NET 개체를 검사해야만 하며, 이를 위해 인터페이스를 일부 변경해야 합니다.
+Reporting Services 2016은 새로운 Odata API를 호스트하고 모바일 보고서 및 KPI와 같은 새 보고서 작업 부하를 호스트하기 위해 새 웹 포털을 도입하였습니다. 이 새로운 포털은 최신 기술을 사용하며, 별도의 프로세스로 실행하여 친숙한 ReportingServicesService로부터 격리됩니다. 이 프로세스는 ASP.NET 호스팅 애플리케이션이 아니므로 기존 사용자 지정 보안 확장 프로그램에서의 가정을 중단합니다. 또한 사용자 지정 보안 확장 프로그램에 대한 현재 인터페이스는 외부 컨텍스트가 전달되는 것을 허용하지 않아 구현자는 잘 알려진 전역 ASP.NET 개체를 검사해야만 하며, 이를 위해 인터페이스를 일부 변경해야 합니다.
 
 ## <a name="what-changed"></a>변경된 것은?
 
 인증과 관련된 의사 결정을 위해 확장 프로그램에서 사용되는 더 많은 공용 속성을 포함한 IRSRequestContext를 제공하는 구현 가능한 새 인터페이스가 도입되었습니다.
 
-이전 버전에서 보고서 관리자는 프런트 엔드이며 자체 사용자 지정 로그인 페이지로 구성될 수 있습니다. Reporting Services 2016에서는 reportserver에서 호스트되는 한 페이지만 지원되며 두 응용 프로그램을 모두 인증해야 합니다.
+이전 버전에서 보고서 관리자는 프런트 엔드이며 자체 사용자 지정 로그인 페이지로 구성될 수 있습니다. Reporting Services 2016에서는 reportserver에서 호스트되는 한 페이지만 지원되며 두 애플리케이션을 모두 인증해야 합니다.
 
 ## <a name="implementation"></a>구현
 

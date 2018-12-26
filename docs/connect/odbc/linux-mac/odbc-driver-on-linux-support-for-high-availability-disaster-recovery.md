@@ -31,7 +31,7 @@ Linux 및 macOS 지원에 대 한 ODBC 드라이버 [!INCLUDE[ssHADR](../../../i
   
 -   [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
-연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. Linux 또는 macOS의 ODBC 응용 프로그램이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 응용 프로그램이 계속 작동하려면 새 연결을 열어야 합니다.
+연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. Linux 또는 macOS의 ODBC 애플리케이션이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 애플리케이션이 계속 작동하려면 새 연결을 열어야 합니다.
 
 Linux 및 macOS에서 ODBC 드라이버를 순차적으로 반복 하지 가용성 그룹 수신기에 연결 하 고 여러 IP 주소는 호스트 이름으로 연결 하는 경우 DNS 호스트 이름에 연결 하는 모든 IP 주소입니다.
 
@@ -46,7 +46,7 @@ DNS 서버의 첫 번째 반환 된 IP 주소 연결 가능 하지 않은, 경�
 
 **MultiSubnetFailover** 연결 속성은 응용 프로그램이 가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스에서 배포되는 중이라는 것을 나타냅니다. 드라이버는 모든 IP 주소에 연결하려고 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결하려고 합니다. **MultiSubnetFailover=Yes**를 사용하여 연결하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. **MultiSubnetFailover=Yes** 는 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(failover) 클러스터 인스턴스의 장애 조치(failover) 후 더 빠르게 다시 연결할 수 있도록 합니다. **MultiSubnetFailover=Yes**는 단일 및 다중 서브넷 가용성 그룹과 장애 조치(failover) 클러스터 인스턴스에 모두 적용됩니다.  
 
-가용성 그룹 수신기 또는 장애 조치(failover) 클러스터 인스턴스에 연결할 때 **MultiSubnetFailover=Yes** 를 사용합니다. 그렇지 않으면 응용 프로그램의 성능에 부정적인 영향을 미칠 수 있습니다.
+가용성 그룹 수신기 또는 장애 조치(failover) 클러스터 인스턴스에 연결할 때 **MultiSubnetFailover=Yes** 를 사용합니다. 그렇지 않으면 애플리케이션의 성능에 부정적인 영향을 미칠 수 있습니다.
 
 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결할 때 다음 내용을 참고하십시오.
   
@@ -58,7 +58,7 @@ DNS 서버의 첫 번째 반환 된 IP 주소 연결 가능 하지 않은, 경�
 
 -   둘 다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 하 여 인증 또는 Kerberos 인증을 사용할 수 있습니다 **MultiSubnetFailover = Yes** 응용 프로그램의 동작에 영향을 주지 않고 합니다.
 
--   장애 조치(failover) 시간을 수용하고 응용 프로그램의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.
+-   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.
 
 -   분산 트랜잭션은 지원되지 않습니다.  
   
@@ -66,7 +66,7 @@ DNS 서버의 첫 번째 반환 된 IP 주소 연결 가능 하지 않은, 경�
   
 1.  보조 복제본 위치가 연결을 허용하도록 구성되어 있지 않은 경우  
   
-2.  응용 프로그램에서 **ApplicationIntent=ReadWrite** 를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
+2.  애플리케이션에서 **ApplicationIntent=ReadWrite** 를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly**가 포함되어 있으면 연결이 실패합니다.  
 

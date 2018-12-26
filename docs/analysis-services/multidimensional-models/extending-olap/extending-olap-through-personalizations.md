@@ -23,7 +23,7 @@ ms.locfileid: "34026720"
  따라서 표준 기능이 충분하지 않을 때마다 업무 요구 사항을 완전히 충족시키기 위해 Analysis Services에서는 서비스 인스턴스에 어셈블리 및 개인 설정 확장 프로그램을 추가하는 기능을 제공합니다.  
   
 ## <a name="assemblies"></a>어셈블리  
- 어셈블리를 사용하면 MDX와 DMX의 비즈니스 기능을 확장할 수 있습니다. 원하는 기능을 작성하여 DLL(동적 연결 라이브러리)과 같은 라이브러리에 추가한 후 이 라이브러리를 Analysis Services 인스턴스 또는 Analysis Services 데이터베이스에 어셈블리로 추가하면 됩니다. 그런 다음 MDX 및 DMX 식, 프로시저, 계산, 동작 및 클라이언트 응용 프로그램에서 라이브러리의 공용 메서드를 사용자 정의 함수로 사용할 수 있습니다.  
+ 어셈블리를 사용하면 MDX와 DMX의 비즈니스 기능을 확장할 수 있습니다. 원하는 기능을 작성하여 DLL(동적 연결 라이브러리)과 같은 라이브러리에 추가한 후 이 라이브러리를 Analysis Services 인스턴스 또는 Analysis Services 데이터베이스에 어셈블리로 추가하면 됩니다. 그런 다음 MDX 및 DMX 식, 프로시저, 계산, 동작 및 클라이언트 애플리케이션에서 라이브러리의 공용 메서드를 사용자 정의 함수로 사용할 수 있습니다.  
   
 ## <a name="personalized-extensions"></a>개인 설정 확장 프로그램  
  SQL Server Analysis Services 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. Analysis Services 개인 설정 확장 프로그램은 기존 관리 어셈블리 아키텍처를 간단하고 유용하게 수정하는 한 방법이며, Analysis Services <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델, MDX(Multidimensional Expression) 구문 및 스키마 행 집합을 통해 노출됩니다.  

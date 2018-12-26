@@ -26,7 +26,7 @@ ms.locfileid: "52509283"
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
+ 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   
  *가용성 그룹*은 *가용성 데이터베이스*라고 하는 개별 사용자 데이터베이스의 불연속 집합에 대해 복제된 환경을 지원합니다. HA(고가용성) 또는 읽기-배율에 대한 가용성 그룹을 만들 수 있습니다. HA 가용성 그룹은 함께 장애 조치를 수행하는 데이터베이스 그룹입니다. 읽기-배율 가용성 그룹은 읽기 전용 작업을 위해 다른 SQL Server 인스턴스에 복사되는 데이터베이스 그룹입니다. 가용성 그룹은 하나의 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 보조 데이터베이스는 백업이 *아닙니다* . 계속하여 정기적으로 데이터베이스 및 해당 트랜잭션 로그를 백업하세요.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509283"
  자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)개념을 소개합니다.  
   
 ##  <a name="FormsOfFailover"></a> 장애 조치(Failover) 유형  
- 주 복제본과 보조 복제본 간의 섹션 컨텍스트 내에서 주 역할과 보조 역할은 *장애 조치(Failover)* 라는 프로세스에서 서로 교환할 수 있습니다. 장애 조치(Failover) 중에 대상 보조 복제본은 주 역할로 전환되어 새로운 주 복제본이 됩니다. 새로운 주 복제본은 해당 데이터베이스를 주 데이터베이스로 온라인으로 전환하며 클라이언트 응용 프로그램은 이 데이터베이스에 연결할 수 있습니다. 이전의 주 복제본이 사용 가능한 경우 이 복제본은 보조 역할로 전환되어 보조 복제본이 됩니다. 이전의 주 복제본은 보조 데이터베이스가 되고 데이터 동기화가 다시 시작됩니다.  
+ 주 복제본과 보조 복제본 간의 섹션 컨텍스트 내에서 주 역할과 보조 역할은 *장애 조치(Failover)* 라는 프로세스에서 서로 교환할 수 있습니다. 장애 조치(Failover) 중에 대상 보조 복제본은 주 역할로 전환되어 새로운 주 복제본이 됩니다. 새로운 주 복제본은 해당 데이터베이스를 주 데이터베이스로 온라인으로 전환하며 클라이언트 애플리케이션은 이 데이터베이스에 연결할 수 있습니다. 이전의 주 복제본이 사용 가능한 경우 이 복제본은 보조 역할로 전환되어 보조 복제본이 됩니다. 이전의 주 복제본은 보조 데이터베이스가 되고 데이터 동기화가 다시 시작됩니다.  
   
  자동, 수동 및 강제(데이터가 손실될 수 있음)라는 세 가지 형태의 장애 조치(Failover)가 있습니다. 지정된 보조 복제본에서 지원되는 장애 조치(Failover)의 형태는 가용성 모드에 따라 다르며 동기-커밋 모드의 경우 다음과 같이 주 복제본 및 대상 보조 복제본의 장애 조치(Failover) 모드에 따라 다릅니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "52509283"
  가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 > [!TIP]  
->  가용성 그룹에 두 개의 가용성 복제본만 있고 보조 복제본에 대한 읽기 액세스를 허용하도록 구성되지 않은 경우, 클라이언트는 [데이터베이스 미러링 연결 문자열](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 사용하여 주 복제본에 연결할 수 있습니다. 이 방법은 데이터베이스 미러링에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 데이터베이스를 마이그레이션한 후 일시적으로 유용할 수 있습니다. 보조 복제본을 더 추가하기 전에 가용성 그룹의 가용성 그룹 수신기를 만들고 수신기의 네트워크 이름을 사용하도록 응용 프로그램을 업데이트해야 합니다.  
+>  가용성 그룹에 두 개의 가용성 복제본만 있고 보조 복제본에 대한 읽기 액세스를 허용하도록 구성되지 않은 경우, 클라이언트는 [데이터베이스 미러링 연결 문자열](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 사용하여 주 복제본에 연결할 수 있습니다. 이 방법은 데이터베이스 미러링에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 데이터베이스를 마이그레이션한 후 일시적으로 유용할 수 있습니다. 보조 복제본을 더 추가하기 전에 가용성 그룹의 가용성 그룹 수신기를 만들고 수신기의 네트워크 이름을 사용하도록 애플리케이션을 업데이트해야 합니다.  
   
 ##  <a name="ActiveSecondaries"></a> 활성 보조 복제본  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 활성 보조 복제본을 지원합니다. 활성 보조 기능에는 다음에 대한 지원이 포함됩니다.  

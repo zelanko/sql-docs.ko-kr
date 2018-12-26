@@ -116,7 +116,7 @@ ms.locfileid: "52402086"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>SSAS(SQL Server Analysis Services) 설치</h3>
-                                                    <p>Power BI, Excel, Reporting Services 및 기타 데이터 시각화와 같은 비즈니스 보고서 및 클라이언트 응용 프로그램에 대해 엔터프라이즈급 의미 체계 데이터 모델을 제공하는 분석 데이터 엔진입니다. </p>
+                                                    <p>Power BI, Excel, Reporting Services 및 기타 데이터 시각화와 같은 비즈니스 보고서 및 클라이언트 애플리케이션에 대해 엔터프라이즈급 의미 체계 데이터 모델을 제공하는 분석 데이터 엔진입니다. </p>
                                                 </div>
                                             </div>
                                         </div>

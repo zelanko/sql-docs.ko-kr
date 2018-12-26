@@ -32,7 +32,7 @@ ms.locfileid: "47674311"
  SMO에서 설치된 OLE-DB 공급자는 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 개체 모음으로 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>Visual C#에서 OLE-DB 공급자 서버에 대한 링크 만들기  
  코드 예제에 대 한 링크를 만드는 방법을 보여 줍니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB를 사용 하 여 다른 유형의 데이터 소스를 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체입니다. 지정 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 제품 이름으로 데이터는 연결된 된 서버에서 사용 하 여 액세스 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자를 공식 OLE DB 공급자 인에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  

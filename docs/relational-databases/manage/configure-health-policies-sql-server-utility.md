@@ -24,21 +24,21 @@ ms.locfileid: "51666322"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 상태 정책 결과를 보려면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 유틸리티 제어 지점에 연결합니다. 자세한 내용은 [유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 상태 정책은 데이터 계층 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 구성할 수 있습니다. 상태 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 모든 데이터 계층 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 전역으로 정의하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 각 데이터 계층 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 개별적으로 정의할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 상태 정책은 데이터 계층 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 구성할 수 있습니다. 상태 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 모든 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 전역으로 정의하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 각 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 개별적으로 정의할 수 있습니다.  
   
-## <a name="monitoring-policies-for-data-tier-applications"></a>데이터 계층 응용 프로그램의 정책 모니터링  
+## <a name="monitoring-policies-for-data-tier-applications"></a>데이터 계층 애플리케이션의 정책 모니터링  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램의 초과 사용 및 미달 사용 정책은 다음과 같습니다.  
   
--   데이터 계층 응용 프로그램 프로세서 사용률  
+-   데이터 계층 애플리케이션 프로세서 사용률  
   
--   데이터베이스 파일을 위한 데이터 계층 응용 프로그램 파일 공간  
+-   데이터베이스 파일을 위한 데이터 계층 애플리케이션 파일 공간  
   
--   저장소 볼륨을 위한 데이터 계층 응용 프로그램 파일 공간  
+-   저장소 볼륨을 위한 데이터 계층 애플리케이션 파일 공간  
   
 -   컴퓨터 프로세서 사용률  
   
 > [!NOTE]  
->  저장소 볼륨 및 프로세서 사용률은 데이터 계층 응용 프로그램의 읽기 전용 정책입니다.  
+>  저장소 볼륨 및 프로세서 사용률은 데이터 계층 애플리케이션의 읽기 전용 정책입니다.  
   
  데이터 계층 응용 프로그램의 전역 모니터링 정책을 보거나 변경하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)를 참조하세요.  
   

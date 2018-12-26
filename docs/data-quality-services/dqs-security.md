@@ -25,9 +25,9 @@ ms.locfileid: "52616473"
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 보안 인프라는 SQL Server 보안 인프라를 기반으로 합니다. 데이터베이스 관리자는 사용자와 DQS 역할을 연결하여 사용자에게 사용 권한 집합을 부여합니다. 이러한 방식으로 사용자가 액세스할 수 있는 DQS 리소스와 사용자가 수행할 수 있는 기능 작업이 결정됩니다.  
   
 ## <a name="dqs-roles"></a>DQS 역할  
- DQS 역할은 4가지입니다. 하나는 주로 제품 설치, 데이터베이스 유지 관리 및 사용자 관리를 다루는 DBA(데이터베이스 관리자)입니다. 이 역할은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램보다는 주로 SQL Server Management Studio를 사용합니다. 서버 역할은 sysadmin입니다.  
+ DQS 역할은 4가지입니다. 하나는 주로 제품 설치, 데이터베이스 유지 관리 및 사용자 관리를 다루는 DBA(데이터베이스 관리자)입니다. 이 역할은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션보다는 주로 SQL Server Management Studio를 사용합니다. 서버 역할은 sysadmin입니다.  
   
- 나머지 3개 역할은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 작업하는 방식으로 제품을 직접 사용하는 정보 근로자, 데이터 관리자입니다. 이러한 역할은 다음과 같습니다.  
+ 나머지 3개 역할은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 작업하는 방식으로 제품을 직접 사용하는 정보 근로자, 데이터 관리자입니다. 이러한 역할은 다음과 같습니다.  
   
 -   **DQS 관리자** (dqs_administrator 역할)는 제품 범위 내에서 모든 작업을 수행할 수 있습니다. DQS 관리자는 프로젝트 편집 및 실행, 기술 자료 생성 및 편집, 작업 종료, 작업 내 프로세스 중지를 수행할 수 있고 구성 및 참조 Data Services 설정을 변경할 수 있습니다. 그러나 서버를 설치하거나 새 사용자를 추가할 수는 없습니다. 이러한 작업은 데이터베이스 관리자가 수행해야 합니다.  
   

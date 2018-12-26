@@ -49,7 +49,7 @@ ms.locfileid: "51602253"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0 **sendTimeAsDatetime** 은 기본적으로 true입니다. 후속 릴리스에서는 **sendTimeAsDatetime** 연결 속성이 기본적으로 false로 설정될 수 있습니다.  
   
- 응용 프로그램이 **sendTimeAsDatetime** 연결 속성의 기본값에 관계없이 계속해서 예상대로 작동하도록 하려면 다음과 같이 하면 됩니다.  
+ 애플리케이션이 **sendTimeAsDatetime** 연결 속성의 기본값에 관계없이 계속해서 예상대로 작동하도록 하려면 다음과 같이 하면 됩니다.  
   
 -   **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용하여 작업할 경우 java.sql.Time을 사용합니다.  
   

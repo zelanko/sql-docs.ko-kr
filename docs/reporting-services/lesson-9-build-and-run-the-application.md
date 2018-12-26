@@ -1,5 +1,5 @@
 ---
-title: '9단원: 응용 프로그램 빌드 및 실행 | Microsoft Docs'
+title: '9단원: 애플리케이션 빌드 및 실행 | Microsoft Docs'
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,9 +16,9 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47810349"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
-데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 응용 프로그램을 빌드하고 실행합니다.  
+데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 애플리케이션을 빌드하고 실행합니다.  
   
-### <a name="to-build-and-run-the-application"></a>응용 프로그램을 빌드하고 실행하려면  
+### <a name="to-build-and-run-the-application"></a>애플리케이션을 빌드하고 실행하려면  
   
 1.  **Ctrl+F5** 를 눌러 Default.aspx 페이지를 디버그하지 않고 실행하거나 F5 키를 눌러 해당 페이지를 디버그하고 실행합니다.  
   
