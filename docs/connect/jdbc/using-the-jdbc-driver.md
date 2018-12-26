@@ -64,11 +64,11 @@ JDBC 드라이버 7.0을 사용 하 여 포함 하도록 클래스 경로 설정
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
-다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.0 for SQL Server\sqljdbc_7.0\enu\mssql-jdbc-7.0.0.jre10.jar`  
   
-다음 코드 조각은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
@@ -86,11 +86,11 @@ CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../.
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
-다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
   
-다음 코드 조각은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
@@ -106,11 +106,11 @@ CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersio
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
-다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
-다음 코드 조각은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
@@ -130,11 +130,11 @@ sqljdbc.jar 파일, sqljdbc4.jar 파일, sqljdbc41.jar 또는 sqljdbc42.jar 파�
 \<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
-다음 코드 조각은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.0 for SQL Server\sqljdbc_4.2\enu\sqljdbc42.jar`  
   
-다음 코드 조각은 Unix/Linux 응용 프로그램에 사용되는 CLASSPATH 문의 예제입니다.  
+다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.  
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_4.2/enu/sqljdbc42.jar`  
   
@@ -145,7 +145,7 @@ CLASSPATH 문에는 sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.ja
   
 ### <a name="applications-that-are-run-directly-at-the-command-prompt"></a>명령 프롬프트에서 바로 실행되는 응용 프로그램
 
-클래스 경로는 운영 체제에 구성되어 있습니다. sqljdbc.jar, sqljdbc4.jar 또는 sqljdbc41.jar을 시스템의 클래스 경로에 추가합니다. 응용 프로그램을 실행하는 Java 명령줄에서 `java -classpath` 옵션을 사용하여 클래스 경로를 지정할 수도 있습니다.  
+클래스 경로는 운영 체제에 구성되어 있습니다. sqljdbc.jar, sqljdbc4.jar 또는 sqljdbc41.jar을 시스템의 클래스 경로에 추가합니다. 애플리케이션을 실행하는 Java 명령줄에서 `java -classpath` 옵션을 사용하여 클래스 경로를 지정할 수도 있습니다.  
   
 ### <a name="applications-that-run-in-an-ide"></a>IDE에서 실행되는 응용 프로그램  
 
@@ -173,9 +173,9 @@ String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
 Connection con = DriverManager.getConnection(connectionUrl);  
 ```
 
-JDBC API 4.0부터는 JDBC Driver를 자동으로 로드할 수 있도록 `DriverManager.getConnection()` 메서드가 개선되었습니다. 따라서 응용 프로그램은 드라이버 jar 클래스 라이브러리를 사용할 때 드라이버를 등록하거나 로드하기 위해 `Class.forName` 메서드를 호출할 필요가 없습니다.  
+JDBC API 4.0부터는 JDBC Driver를 자동으로 로드할 수 있도록 `DriverManager.getConnection()` 메서드가 개선되었습니다. 따라서 애플리케이션은 드라이버 jar 클래스 라이브러리를 사용할 때 드라이버를 등록하거나 로드하기 위해 `Class.forName` 메서드를 호출할 필요가 없습니다.  
   
-DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 포함 된 "META-INF/services/java.sql.Driver" 파일을 포함 합니다 **com.microsoft.sqlserver.jdbc.SQLServerDriver** 등록 된 드라이버로 합니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 응용 프로그램은 수정하지 않아도 계속 작동합니다.  
+DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 포함 된 "META-INF/services/java.sql.Driver" 파일을 포함 합니다 **com.microsoft.sqlserver.jdbc.SQLServerDriver** 등록 된 드라이버로 합니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 애플리케이션은 수정하지 않아도 계속 작동합니다.  
   
 > [!NOTE]  
 > sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  

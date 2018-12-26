@@ -1,5 +1,5 @@
 ---
-title: '6단원: 응용 프로그램에 ReportViewer 컨트롤 추가 | Microsoft Docs'
+title: '6단원: 애플리케이션에 ReportViewer 컨트롤 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48104003"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 응용 프로그램에 ReportViewer 컨트롤 추가
-  보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가합니다.  
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 애플리케이션에 ReportViewer 컨트롤 추가
+  보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가합니다.  
   
-### <a name="to-add-a-reportviewer-control-to-the-application"></a>응용 프로그램에 ReportViewer 컨트롤을 추가하려면  
+### <a name="to-add-a-reportviewer-control-to-the-application"></a>애플리케이션에 ReportViewer 컨트롤을 추가하려면  
   
 1.  **솔루션 탐색기**에서 **Default.aspx**를 마우스 오른쪽 단추로 클릭한 다음 **뷰 디자이너**를 클릭합니다.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "48104003"
      보고서가 컴파일되고 보고서 식의 구문 오류와 같은 오류가 모두 **오류 목록** 영역에 표시됩니다. Visual Studio 창의 아래쪽에 있는 **오류 목록** 을 클릭하여 **오류 목록** 영역을 표시합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 성공적으로 추가했습니다. 이제 부모 보고서에 드릴스루 동작을 추가합니다.  
+ 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 성공적으로 추가했습니다. 이제 부모 보고서에 드릴스루 동작을 추가합니다.  
   
   

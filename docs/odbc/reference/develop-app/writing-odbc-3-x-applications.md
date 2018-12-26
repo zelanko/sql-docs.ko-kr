@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47769151"
 ---
-# <a name="writing-odbc-3x-applications"></a>ODBC 3.x 응용 프로그램 작성
+# <a name="writing-odbc-3x-applications"></a>ODBC 3.x 애플리케이션 작성
 경우는 ODBC 2. *x* 응용 프로그램은 ODBC 3으로 업그레이드 됩니다. *x*, 두 ODBC 2를 사용 하 여 작동 되도록 작성 해야 합니다. *x* 3. *x* 드라이버입니다. 응용 프로그램이 ODBC 3을 최대한 활용 하는 조건부 코드를 통합 해야 합니다. *x* 기능입니다.  
   
  SQL_ATTR_ODBC_VERSION 환경 특성 SQL_OV_ODBC2로 설정 해야 합니다. 드라이버는 ODBC 2 처럼 이렇게 *.x* 섹션에 설명 된 변경 내용에 대해 드라이버 [동작 변경 내용](../../../odbc/reference/develop-app/behavioral-changes.md)합니다.  

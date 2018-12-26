@@ -44,8 +44,8 @@ ms.locfileid: "52526954"
 [SQL Server 2016에서 낮은 권한 계정을 통해 MDS 웹 사이트를 만들 수 없는 경우](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 및 Silverlight
-- Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 응용 프로그램 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
-- 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
+- Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 애플리케이션 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
+- 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]이 설치된 Azure 가상 머신을 설치하면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치됩니다. 
@@ -120,7 +120,7 @@ ms.locfileid: "52526954"
 
  
 > [!WARNING]  
-    >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager를 실행하기 전에 [IIS를 설치](#InstallIIS)해야 합니다. 그렇지 않으면 Configuration Manager에 인터넷 정보 서비스 오류가 표시되고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 응용 프로그램을 만들 수 없게 됩니다.  
+    >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager를 실행하기 전에 [IIS를 설치](#InstallIIS)해야 합니다. 그렇지 않으면 Configuration Manager에 인터넷 정보 서비스 오류가 표시되고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 애플리케이션을 만들 수 없게 됩니다.  
     
 > **브라우저 요구 사항**
 >>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 응용 프로그램은 IE(Internet Explorer) 9 이상에서만 작동합니다. IE 8 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.    
@@ -167,7 +167,7 @@ ms.locfileid: "52526954"
 10. **웹 사이트** 목록 상자에서 **기본 웹 사이트**를 클릭한 다음 **만들기** 를 클릭하여 웹 응용 프로그램을 만듭니다.  
   
     > [!NOTE]  
-    >  **기본 웹 사이트**를 선택할 경우 웹 응용 프로그램을 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택하면 응용 프로그램이 자동으로 만들어집니다.  
+    >  **기본 웹 사이트**를 선택할 경우 웹 응용 프로그램을 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택하면 애플리케이션이 자동으로 만들어집니다.  
 
      ![mds_2016ConfigManager_WebConfig](../master-data-services/media/mds-2016configmanager-webconfig.png)  
   
@@ -179,7 +179,7 @@ ms.locfileid: "52526954"
   
     -   다른 사용자 이름을 입력하고 암호를 입력한 다음 확인을 클릭합니다.  
   
-         데이터베이스와 웹 응용 프로그램을 만들 때 동일한 계정을 사용해야 하는 것은 아닙니다.  
+         데이터베이스와 웹 애플리케이션을 만들 때 동일한 계정을 사용해야 하는 것은 아닙니다.  
 
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
@@ -189,12 +189,12 @@ ms.locfileid: "52526954"
   
 13. **연결**을 클릭하고 웹 응용 프로그램에 연결할 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
   
-     웹 사이트 설정을 마쳤습니다. 이제 **웹 구성** 페이지에 선택한 웹 사이트, 만든 웹 응용 프로그램, 응용 프로그램과 연결된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스가 표시됩니다.  
+     웹 사이트 설정을 마쳤습니다. 이제 **웹 구성** 페이지에 선택한 웹 사이트, 만든 웹 애플리케이션, 애플리케이션과 연결된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스가 표시됩니다.  
 
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 응용 프로그램을 시작합니다. 웹 사이트 주소는 https://*서버 이름*/*웹 애플리케이션*/입니다. 
+15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소는 https://*서버 이름*/*웹 애플리케이션*/입니다. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48191843"
@@ -43,7 +43,7 @@ ms.locfileid: "48191843"
  SAP Netweaver BW 시스템에 정의된 RFC 대상의 이름을 표시합니다.  
   
  **게이트웨이 호스트**  
- 게이트웨이 호스트의 서버 이름 또는 IP 주소를 표시합니다. 일반적으로 이름 또는 IP 주소는 SAP 응용 프로그램 서버와 동일합니다.  
+ 게이트웨이 호스트의 서버 이름 또는 IP 주소를 표시합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
  게이트웨이 서비스 이름을 형식으로 봅니다 `sapgwNN`여기서 `NN` 은 시스템 번호입니다.  

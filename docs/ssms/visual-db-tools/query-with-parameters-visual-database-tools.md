@@ -24,7 +24,7 @@ ms.locfileid: "47680901"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>매개 변수를 사용하여 쿼리(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-매번 서로 다른 입력으로 응용 프로그램에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
+매번 서로 다른 입력으로 애플리케이션에서 여러 차례 다시 사용할 수 있는 쿼리를 만드는 것이 유용한 경우가 많습니다. 이 섹션에서는 이와 같은 일반적인 목적을 위해 매개 변수 쿼리를 만드는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [매개 변수 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/parameter-queries-visual-database-tools.md)  

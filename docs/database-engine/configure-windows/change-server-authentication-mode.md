@@ -44,7 +44,7 @@ ms.locfileid: "47733241"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 응용 프로그램에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.  
+ sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정으로 잘 알려져 있으며 종종 악의적인 사용자의 대상이 됩니다. 애플리케이션에서 요청하지 않는 한 sa 계정을 사용하지 마십시오. sa 로그인에 대해 강력한 암호를 사용하는 것이 중요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

@@ -26,7 +26,7 @@ ms.locfileid: "52527151"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 읽기 전용 라우팅을 지원하도록 Always On 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 이나 PowerShell을 사용합니다. *읽기 전용 라우팅* 이란 특정 읽기 전용 연결 요청을 Always On의 사용 가능하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기 가능한 보조 복제본 [(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
+  [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 읽기 전용 라우팅을 지원하도록 Always On 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 이나 PowerShell을 사용합니다. *읽기 전용 라우팅* 이란 특정 읽기 전용 연결 요청을 Always On의 사용 가능하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기 가능한 보조 복제본 [(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 애플리케이션 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
 
 읽기 전용 라우팅은 [!INCLUDE[sssql15](../../../includes/sssql15-md.md)] 이상에서 사용할 수 있습니다.
 
@@ -228,11 +228,11 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
 >  [bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용하는 경우 **-K ReadOnly** 스위치를 지정하여 읽기 전용 액세스를 사용하도록 설정된 보조 복제본에 대한 읽기 전용 액세스를 지정할 수 있습니다.  
   
 ###  <a name="ConnStringReqsRecs"></a> 클라이언트 연결 문자열에 대한 요구 사항 및 권장 사항  
- 클라이언트 응용 프로그램에서 읽기 전용 라우팅을 사용하려면 해당 연결 문자열이 다음 요구 사항을 충족해야 합니다.  
+ 클라이언트 애플리케이션에서 읽기 전용 라우팅을 사용하려면 해당 연결 문자열이 다음 요구 사항을 충족해야 합니다.  
   
 -   TCP 프로토콜을 사용합니다.  
   
--   응용 프로그램 의도 특성/속성을 읽기 전용으로 설정합니다.  
+-   애플리케이션 의도 특성/속성을 읽기 전용으로 설정합니다.  
   
 -   읽기 전용 라우팅을 지원하도록 구성된 가용성 그룹의 수신기를 참조합니다.  
   
@@ -240,7 +240,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
   
  또한 연결 문자열에서 각 서브넷의 각 복제본에 대해 병렬 클라이언트 스레드를 지원하는 다중 서브넷 장애 조치(Failover)를 설정하는 것이 좋습니다. 이렇게 하면 장애 조치 후 클라이언트 재연결 시간이 최소화됩니다.  
   
- 연결 문자열 구문은 응용 프로그램에서 사용하는 SQL Server 공급자에 따라 달라집니다. 다음 예에 나온 .NET Framework Data Provider 4.0.2 for SQL Server용 연결 문자열은 읽기 전용 라우팅에 사용해야 하며 권장되는 연결 문자열을 보여 줍니다.  
+ 연결 문자열 구문은 애플리케이션에서 사용하는 SQL Server 공급자에 따라 달라집니다. 다음 예에 나온 .NET Framework Data Provider 4.0.2 for SQL Server용 연결 문자열은 읽기 전용 라우팅에 사용해야 하며 권장되는 연결 문자열을 보여 줍니다.  
   
 ```  
 Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly;MultiSubnetFailover=True  

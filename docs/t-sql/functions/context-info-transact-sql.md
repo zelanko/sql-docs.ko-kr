@@ -50,7 +50,7 @@ CONTEXT_INFO()
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 고유한 세션별 GUID를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
-MARS(Multiple Active Result Sets) 기능을 사용하면 응용 프로그램이 같은 시간에 같은 연결에서 여러 일괄 처리 또는 요청을 실행할 수 있습니다. MARS 연결 일괄 처리 중 하나가 SET CONTEXT_INFO를 실행하는 경우 `CONTEXT_INFO` 함수가 SET 문과 동일한 일괄 처리에서 실행하면 `CONTEXT_INFO` 함수는 새 컨텍스트 값을 반환합니다. `CONTEXT_INFO` 함수가 다른 연결 일괄 처리 중 하나 이상을 실행하는 경우 `CONTEXT_FUNCTION`은 SET 문을 실행한 일괄 처리를 완료한 후에 해당 일괄 처리가 시작되지 않으면 새 값을 반환하지 않습니다.
+MARS(Multiple Active Result Sets) 기능을 사용하면 애플리케이션이 같은 시간에 같은 연결에서 여러 일괄 처리 또는 요청을 실행할 수 있습니다. MARS 연결 일괄 처리 중 하나가 SET CONTEXT_INFO를 실행하는 경우 `CONTEXT_INFO` 함수가 SET 문과 동일한 일괄 처리에서 실행하면 `CONTEXT_INFO` 함수는 새 컨텍스트 값을 반환합니다. `CONTEXT_INFO` 함수가 다른 연결 일괄 처리 중 하나 이상을 실행하는 경우 `CONTEXT_FUNCTION`은 SET 문을 실행한 일괄 처리를 완료한 후에 해당 일괄 처리가 시작되지 않으면 새 값을 반환하지 않습니다.
   
 ## <a name="permissions"></a>Permissions  
 특별한 권한이 필요하지 않습니다. 다음 시스템 보기는 컨텍스트 정보를 저장하지만 이러한 보기를 직접 쿼리하려면 SELECT 및 VIEW SERVER STATE 권한이 필요합니다.

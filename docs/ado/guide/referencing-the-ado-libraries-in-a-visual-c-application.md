@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/09/2018
 ms.locfileid: "51290789"
 ---
-# <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ 응용 프로그램에서 ADO 라이브러리 참조
+# <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ 애플리케이션에서 ADO 라이브러리 참조
 Visual c + + 응용 프로그램에서 ADO의 최신 버전을 사용 하려면 다음을 사용 하 여 `#import` 지시문:  
   
 ```cpp

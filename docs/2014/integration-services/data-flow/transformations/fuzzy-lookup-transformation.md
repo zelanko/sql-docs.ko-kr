@@ -33,7 +33,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48106402"
@@ -120,7 +120,7 @@ ms.locfileid: "48106402"
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 조회 변환은 런타임에 변환이 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 테이블 및 인덱스 등의 임시 개체를 만듭니다. 이러한 임시 테이블 및 인덱스의 크기는 참조 테이블에 있는 행 및 토큰 개수와 유사 항목 조회 변환이 만드는 토큰 개수에 비례하므로 많은 양의 디스크 공간을 소모할 수 있습니다. 변환은 또한 이 임시 테이블을 쿼리합니다. 그러므로 특히 프로덕션 서버가 사용 가능한 디스크 공간을 제한한 경우 유사 항목 조회 변환을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 비-프로덕션 인스턴스에 연결하는 방법을 고려해야 합니다.  
   
- 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 이외에 유사 항목 조회 변환이 일치 인덱스를 유지 관리하는 경우, 즉 MatchIndexOptions가 **GenerateAndMaintainNewIndex**로 설정된 경우에 변환은 데이터 정리 작업을 수행하는 동안 참조 테이블을 잠그고 다른 사용자와 응용 프로그램이 이 테이블에 액세스하지 못하게 할 수 있습니다.  
+ 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 이외에 유사 항목 조회 변환이 일치 인덱스를 유지 관리하는 경우, 즉 MatchIndexOptions가 **GenerateAndMaintainNewIndex**로 설정된 경우에 변환은 데이터 정리 작업을 수행하는 동안 참조 테이블을 잠그고 다른 사용자와 애플리케이션이 이 테이블에 액세스하지 못하게 할 수 있습니다.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>유사 항목 조회 변환의 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  

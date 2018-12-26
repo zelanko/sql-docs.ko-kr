@@ -69,7 +69,7 @@ WITH IDENTITY = 'identity_name'
  데이터베이스 범위 자격 증명에 대한 내용은 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 카탈로그 뷰를 참조하세요.  
   
  
- 다음은 몇 가지 데이터베이스 범위 자격 증명 응용 프로그램입니다.  
+ 다음은 몇 가지 데이터베이스 범위 자격 증명 애플리케이션입니다.  
   
 - [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 PolyBase로 비공개 Azure BLOB 저장소 또는 Kerberos 보안 Hadoop 클러스터에 액세스합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.  
 
@@ -87,7 +87,7 @@ WITH IDENTITY = 'identity_name'
  데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1. 응용 프로그램에 대한 데이터베이스 범위 자격 증명을 만듭니다.
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1. 애플리케이션에 대한 데이터베이스 범위 자격 증명을 만듭니다.
  다음 예에서는 `AppCred`라는 데이터베이스 범위 자격 증명을 만듭니다. 이 데이터베이스 범위 자격 증명에는 Windows 사용자 `Mary5` 및 암호가 들어 있습니다.  
   
 ```sql  
@@ -111,8 +111,8 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>3. Azure Data Lake Store에 PolyBase 연결을 위한 데이터베이스 범위 자격 증명을 만듭니다.  
 다음 예에서는 Azure SQL Data Warehouse에서 PolyBase에 사용될 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
 
-Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 응용 프로그램을 사용합니다.
-데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 응용 프로그램을 만들고](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
+Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 애플리케이션을 사용합니다.
+데이터베이스 범위 자격 증명을 만들려면 그 전에 [AAD 애플리케이션을 만들고](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) client_id, OAuth_2.0_Token_EndPoint 및 Key를 문서화하십시오.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User

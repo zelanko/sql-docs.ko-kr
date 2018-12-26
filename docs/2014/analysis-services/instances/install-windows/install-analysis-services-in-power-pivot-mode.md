@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 561a62b81e36ea5de39eda52a2ea70e04ea5a50c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48162943"
@@ -118,7 +118,7 @@ ms.locfileid: "48162943"
   
     -   SQL Server 데이터베이스 엔진 및 SQL Server 에이전트를 추가한 경우 도메인 사용자 계정으로 실행하거나 기본 가상 계정으로 실행하도록 서비스를 구성할 수 있습니다.  
   
-    -   사용자의 도메인 사용자 계정으로 서비스 계정을 프로비전하지 마세요. 그렇게 하면 네트워크에서 리소스에 대해 갖는 권한과 동일한 권한이 서버에 부여됩니다. 악의적인 사용자가 서버를 침해할 경우 해당 사용자가 사용자의 도메인 자격 증명으로 로그인한 후 사용자와 동일한 데이터 및 응용 프로그램을 다운로드하거나 사용할 수 있습니다.  
+    -   사용자의 도메인 사용자 계정으로 서비스 계정을 프로비전하지 마세요. 그렇게 하면 네트워크에서 리소스에 대해 갖는 권한과 동일한 권한이 서버에 부여됩니다. 악의적인 사용자가 서버를 침해할 경우 해당 사용자가 사용자의 도메인 자격 증명으로 로그인한 후 사용자와 동일한 데이터 및 애플리케이션을 다운로드하거나 사용할 수 있습니다.  
   
      **다음**을 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48162943"
     -   같은 페이지에서 관리 권한이 필요한 모든 사용자의 Windows 사용자 계정을 추가합니다. 예를 들어 SQL [!INCLUDE[ssGeminiSrv](../../../includes/ssgeminisrv-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하여 데이터베이스 연결 문제를 해결하려는 모든 사용자에게는 시스템 관리자 권한이 있어야 합니다. 현재 서버 문제를 해결하거나 서버를 관리해야 하는 사용자의 계정을 추가합니다.  
   
     -   > [!NOTE]  
-        >  Analysis Services 서버 인스턴스에 액세스해야 하는 모든 서비스 응용 프로그램에는 Analysis Services 관리 권한이 필요합니다. 예를 들어 Excel Services, Power View 및 Performance Point Services에 서비스 계정을 추가합니다. 또한 SharePoint 팜 계정을 추가합니다. 이 계정은 중앙 관리를 호스팅하는 웹 응용 프로그램의 ID로 사용됩니다.  
+        >  Analysis Services 서버 인스턴스에 액세스해야 하는 모든 서비스 애플리케이션에는 Analysis Services 관리 권한이 필요합니다. 예를 들어 Excel Services, Power View 및 Performance Point Services에 서비스 계정을 추가합니다. 또한 SharePoint 팜 계정을 추가합니다. 이 계정은 중앙 관리를 호스팅하는 웹 애플리케이션의 ID로 사용됩니다.  
   
      **다음**을 클릭합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48162943"
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint Server 2013 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Analysis Services에 Excel Services 서버 관리 권한 부여  
- Analysis Services를 설치하는 동안 Excel Services 응용 프로그램 서비스 계정을 Analysis Services 관리자로 추가했다면 이 섹션을 완료하지 않아도 됩니다.  
+ Analysis Services를 설치하는 동안 Excel Services 애플리케이션 서비스 계정을 Analysis Services 관리자로 추가했다면 이 섹션을 완료하지 않아도 됩니다.  
   
 1.  Analysis Services 서버에서 SQL Server Management Studio를 시작하고 Analysis Services 인스턴스에 연결합니다(예: `[MyServer]\POWERPIVOT`).  
   
@@ -170,15 +170,15 @@ ms.locfileid: "48162943"
   
      ![SSAS 서버 속성 보기](../../../sql-server/install/media/as-ssms-proeprties.gif "SSAS 서버 속성 보기")  
   
-3.  왼쪽 창에서 **보안**을 클릭합니다. 1단계에서 Excel Services 응용 프로그램에 대해 구성한 도메인 로그인을 추가합니다.  
+3.  왼쪽 창에서 **보안**을 클릭합니다. 1단계에서 Excel Services 애플리케이션에 대해 구성한 도메인 로그인을 추가합니다.  
   
      ![SSAS 서버의 보안 설정을](../../../sql-server/install/media/as-ssms-security.gif "SSAS 서버의 보안 설정")  
   
 ### <a name="configure-excel-services-for-analysis-services-integration"></a>Analysis Services 통합을 위한 Excel Services 구성  
   
-1.  SharePoint 중앙 관리의 응용 프로그램 관리 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  서비스 응용 프로그램 이름을 클릭합니다. 기본값은 **Excel Services 응용 프로그램**입니다.  
+2.  서비스 애플리케이션 이름을 클릭합니다. 기본값은 **Excel Services 애플리케이션**입니다.  
   
 3.  **Excel Services 응용 프로그램 관리 페이지**에서 **데이터 모델 설정**을 클릭합니다.  
   

@@ -45,7 +45,7 @@ ms.locfileid: "47816041"
   
  SQL Server용 OLE DB 드라이버 헤더 파일은 Microsoft Data Access Components(MDAC)에서 사용되는 sqloledb.h 헤더 파일과 호환되지만 SQLOLEDB(MDAC에 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 OLE DB 공급자)에 사용되는 CLSID 또는 XML 기능(SQL Server용 OLE DB Driver에서 지원되지 않음)에 사용되는 기호는 포함하지 않습니다.    
   
- SQL Server 용 OLE DB 드라이버를 사용 하는 OLE DB 응용 프로그램 msoledbsql.h 참조 해야 합니다. MDAC(SQLOLEDB)와 SQL Server용 OLE DB 드라이버를 모두 사용하는 응용 프로그램은 sqloledb.h 및 msoledbsql.h를 모두 참조할 수 있지만 sqloledb.h를 먼저 참조해야 합니다.  
+ SQL Server 용 OLE DB 드라이버를 사용 하는 OLE DB 응용 프로그램 msoledbsql.h 참조 해야 합니다. MDAC(SQLOLEDB)와 SQL Server용 OLE DB 드라이버를 모두 사용하는 애플리케이션은 sqloledb.h 및 msoledbsql.h를 모두 참조할 수 있지만 sqloledb.h를 먼저 참조해야 합니다.  
   
 ## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>SQL Server 헤더 파일에 대 한 OLE DB 드라이버를 사용 하 여  
  SQL Server 헤더 파일에 대 한 OLE DB 드라이버를 사용 하려면 사용 해야 합니다는 **포함** C/c + + 프로그래밍 코드 내에 있는 문의 합니다. 다음 섹션에서는이 OLE DB 응용 프로그램을 수행 하는 방법에 설명 합니다.  

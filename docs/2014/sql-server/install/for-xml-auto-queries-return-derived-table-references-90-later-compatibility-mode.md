@@ -58,7 +58,7 @@ FOR XML AUTO;
 ```  
   
 ## <a name="corrective-action"></a>수정 동작  
- 필요에 따라 파생 테이블을 포함하고 있고 호환성 수준 90 이상에서 실행되는 FOR XML AUTO 쿼리 결과의 변경 내용을 반영하도록 응용 프로그램을 수정합니다.  
+ 필요에 따라 파생 테이블을 포함하고 있고 호환성 수준 90 이상에서 실행되는 FOR XML AUTO 쿼리 결과의 변경 내용을 반영하도록 애플리케이션을 수정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

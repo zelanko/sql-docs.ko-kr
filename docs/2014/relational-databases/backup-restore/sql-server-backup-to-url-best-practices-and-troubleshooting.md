@@ -12,7 +12,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9347a38b1289afa3150cb5354aa85e16516947b4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48049024"
@@ -89,7 +89,7 @@ ms.locfileid: "48049024"
   
         -   `VERIFYONLY`  
   
-    -   Windows 이벤트 로그의 응용 프로그램에서 이름이 ‘SQLBackupToUrl’인 로그를 검토하여 정보를 찾을 수도 있습니다.  
+    -   Windows 이벤트 로그의 애플리케이션에서 이름이 ‘SQLBackupToUrl’인 로그를 검토하여 정보를 찾을 수도 있습니다.  
   
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   

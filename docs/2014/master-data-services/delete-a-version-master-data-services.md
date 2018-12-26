@@ -16,7 +16,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 63f0f2f1b55bbb56b17357d58404815af496ac49
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48205443"
@@ -51,7 +51,7 @@ ms.locfileid: "48205443"
 6.  쿼리를 실행합니다.  
   
     > [!NOTE]  
-    >  웹 응용 프로그램에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
+    >  웹 애플리케이션에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   

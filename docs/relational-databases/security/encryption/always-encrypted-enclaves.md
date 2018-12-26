@@ -37,7 +37,7 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 
 
 
-응용 프로그램의 쿼리를 구문 분석할 때 SQL Server 엔진은 쿼리가 보안 Enclave를 사용해야 하는 암호화된 데이터에 대한 작업을 포함하는지 확인합니다. 보안 Enclave를 액세스해야 하는 쿼리:
+애플리케이션의 쿼리를 구문 분석할 때 SQL Server 엔진은 쿼리가 보안 Enclave를 사용해야 하는 암호화된 데이터에 대한 작업을 포함하는지 확인합니다. 보안 Enclave를 액세스해야 하는 쿼리:
 
 - 클라이언트 드라이버는 작업에 필요한 열 암호화 키를 보안 채널을 통해 보안 Enclave로 보냅니다. 
 - 그러면 클라이언트 드라이버는 암호화된 쿼리 매개 변수와 함께 실행할 쿼리를 제출합니다.
@@ -59,15 +59,15 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 
 ## <a name="secure-enclave-attestation"></a>보안 Enclave 증명
 
-SQL Server 엔진 내의 보안 Enclave는 암호화된 데이터베이스 열에 저장된 중요한 데이터와 일반 텍스트로 나타낸 해당 열 암호화 키에 액세스할 수 있습니다. Enclave 계산을 포함하는 쿼리를 SQL Server로 제출하기 전에, 응용 프로그램 내의 클라이언트 드라이버는 지정된 기술(예: VBS)에 따라 보안 Enclave가 정품 Enclave인지 확인하고, Enclave 내에서 실행되는 코드가 Enclave 내에서 실행될 수 있게 서명되었는지 확인해야 합니다. 
+SQL Server 엔진 내의 보안 Enclave는 암호화된 데이터베이스 열에 저장된 중요한 데이터와 일반 텍스트로 나타낸 해당 열 암호화 키에 액세스할 수 있습니다. Enclave 계산을 포함하는 쿼리를 SQL Server로 제출하기 전에, 애플리케이션 내의 클라이언트 드라이버는 지정된 기술(예: VBS)에 따라 보안 Enclave가 정품 Enclave인지 확인하고, Enclave 내에서 실행되는 코드가 Enclave 내에서 실행될 수 있게 서명되었는지 확인해야 합니다. 
 
-Enclave를 확인하는 프로세스를 **Enclave 증명**이라고 하며, 일반적으로 응용 프로그램(및 경우에 따라 SQL Server) 내의 클라이언트 드라이버가 외부 증명 서비스에 연결하게 됩니다. 증명 프로세스의 사양은 Enclave 기술과 증명 서비스에 따라 좌우됩니다.
+Enclave를 확인하는 프로세스를 **Enclave 증명**이라고 하며, 일반적으로 애플리케이션(및 경우에 따라 SQL Server) 내의 클라이언트 드라이버가 외부 증명 서비스에 연결하게 됩니다. 증명 프로세스의 사양은 Enclave 기술과 증명 서비스에 따라 좌우됩니다.
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 SQL Server가 VBS 보안 Enclave를 지원하는 증명 프로세스를 Windows Defender System Guard 런타임 증명이라고 하며 이 프로세스는 HGS(호스트 보호 서비스)를 증명 서비스로 사용합니다. 사용자 환경에서 HGS를 구성하고 HGS에서 SQL Server 인스턴스를 호스트하는 컴퓨터를 등록해야 합니다. 또한 HGS 증명을 사용하여 클라이언트 응용 프로그램 또는 도구(예: SQL Server Management Studio)를 구성해야 합니다.
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 SQL Server가 VBS 보안 Enclave를 지원하는 증명 프로세스를 Windows Defender System Guard 런타임 증명이라고 하며 이 프로세스는 HGS(호스트 보호 서비스)를 증명 서비스로 사용합니다. 사용자 환경에서 HGS를 구성하고 HGS에서 SQL Server 인스턴스를 호스트하는 컴퓨터를 등록해야 합니다. 또한 HGS 증명을 사용하여 클라이언트 애플리케이션 또는 도구(예: SQL Server Management Studio)를 구성해야 합니다.
 
 ## <a name="secure-enclave-providers"></a>보안 Enclave 공급자
 
-보안 Enclave를 사용한 Always Encrypted를 사용하려면 응용 프로그램은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 애플리케이션은 .NET Framework 4.7.2 및 .NET Framework Data Provider for SQL Server SQL Server를 사용해야 합니다. 또한 .NET 응용 프로그램은 사용 중인 Enclave 유형(예: VBS) 및 증명 서비스(예: HGS)에 국한되는 **보안 Enclave 공급자**로 구성해야 합니다. 지원되는 Enclave 공급자는 NuGet 패키지에 별도로 제공되므로 응용 프로그램에 통합해야 합니다. Enclave 공급자는 지정된 유형의 보안 Enclave와의 보안 채널을 설정하는 데 필요한 방식으로 증명 프로토콜에 적합하게 클라이언트 쪽 논리를 구현합니다.
+보안 Enclave를 사용한 Always Encrypted를 사용하려면 애플리케이션은 해당 기능을 지원하는 클라이언트 드라이버를 사용해야 합니다. [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 애플리케이션은 .NET Framework 4.7.2 및 .NET Framework Data Provider for SQL Server SQL Server를 사용해야 합니다. 또한 .NET 애플리케이션은 사용 중인 Enclave 유형(예: VBS) 및 증명 서비스(예: HGS)에 국한되는 **보안 Enclave 공급자**로 구성해야 합니다. 지원되는 Enclave 공급자는 NuGet 패키지에 별도로 제공되므로 애플리케이션에 통합해야 합니다. Enclave 공급자는 지정된 유형의 보안 Enclave와의 보안 채널을 설정하는 데 필요한 방식으로 증명 프로토콜에 적합하게 클라이언트 쪽 논리를 구현합니다.
 
 ## <a name="enclave-enabled-keys"></a>Enclave 사용 키
 

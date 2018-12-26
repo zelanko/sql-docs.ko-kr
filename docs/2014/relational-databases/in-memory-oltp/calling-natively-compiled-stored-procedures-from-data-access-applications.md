@@ -1,5 +1,5 @@
 ---
-title: 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서
+title: 데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48143795"
 ---
-# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
-  이 항목에서는 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
+  이 항목에서는 데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
   
  커서는 고유하게 컴파일된 저장 프로시저를 반복할 수 없습니다.  
   
@@ -81,7 +81,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 ```  
   
 ## <a name="using-odbc-to-execute-a-natively-complied-stored-procedure"></a>ODBC를 사용하여 네이티브 컴파일 저장 프로시저 실행  
- 이 예제에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용하여 매개 변수를 바인딩하고 저장 프로시저를 실행하는 방법을 보여 줍니다.  이 예제에서는 직접 실행을 사용하여 단일 주문을 삽입하고 준비된 실행을 사용하여 주문 세부 정보를 삽입하는 콘솔 응용 프로그램으로 컴파일합니다.  
+ 이 예제에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용하여 매개 변수를 바인딩하고 저장 프로시저를 실행하는 방법을 보여 줍니다.  이 예제에서는 직접 실행을 사용하여 단일 주문을 삽입하고 준비된 실행을 사용하여 주문 세부 정보를 삽입하는 콘솔 애플리케이션으로 컴파일합니다.  
   
  이 예제를 실행하려면:  
   

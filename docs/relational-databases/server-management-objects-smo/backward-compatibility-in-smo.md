@@ -24,7 +24,7 @@ ms.locfileid: "47713321"
 
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 작성된 SMO 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO를 사용하여 다시 컴파일할 수 있습니다.  
   
-## <a name="migrating-smo-applications"></a>SMO 응용 프로그램 마이그레이션  
+## <a name="migrating-smo-applications"></a>SMO 애플리케이션 마이그레이션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 SMO dll 참조를 제거하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 제공되는 새 SMO dll에 대한 참조를 포함해야 합니다.  
   
  다음은 반드시 참조해야 할 항목입니다.  

@@ -19,7 +19,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c60f391f1429b8693feaee5c2d8e9716a3d74bfe
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47823281"
@@ -41,10 +41,10 @@ ms.locfileid: "47823281"
   
  ![올 수준을 보여 주는 다이어그램 예외 수준을](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "올 수준을 보여 주는 다이어그램 예외 수준을")  
   
- 다음 다이어그램은 응용 프로그램 계층을 통한 예외 흐름을 보여 줍니다.  
+ 다음 다이어그램은 애플리케이션 계층을 통한 예외 흐름을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic에서 예외 catch  
  이 코드 예제에서는 사용 하 여 **시도 하는 중... Catch 하는 중... 마지막** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 참조는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서.  

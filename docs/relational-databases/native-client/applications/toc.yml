@@ -1,4 +1,5 @@
-- name: SQL Server Native Client를 사용하여 응용 프로그램 빌드
+items:
+- name: SQL Server Native Client를 사용하여 애플리케이션 빌드
   href: building-applications-with-sql-server-native-client.md
 - name: SQL Server Native Client의 구성 요소
   href: components-of-sql-server-native-client.md
@@ -10,9 +11,9 @@
   href: installing-sql-server-native-client.md
 - name: SQL Server Native Client에 대한 지원 정책
   href: support-policies-for-sql-server-native-client.md
-- name: SQL Server 2005 Native Client에서 응용 프로그램 업데이트
+- name: SQL Server 2005 Native Client에서 애플리케이션 업데이트
   href: updating-an-application-from-sql-server-2005-native-client.md
-- name: MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트
+- name: MDAC에서 SQL Server Native Client로 애플리케이션 업데이트
   href: updating-an-application-to-sql-server-native-client-from-mdac.md
 - name: SQL Server Native Client와 함께 ADO 사용
   href: using-ado-with-sql-server-native-client.md
@@ -20,3 +21,9 @@
   href: using-connection-string-keywords-with-sql-server-native-client.md
 - name: SQL Server Native Client 헤더 및 라이브러리 파일 사용
   href: using-the-sql-server-native-client-header-and-library-files.md
+ms.openlocfilehash: 24f655a45e0211995147842655d4f0a387bba084
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39316280"

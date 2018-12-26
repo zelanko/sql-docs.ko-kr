@@ -44,7 +44,7 @@ ms.locfileid: "52519521"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리를 동적으로 사용할 수 있지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 메모리 양을 설정하기 전에 OS, max_server_memory setting에 의해 제어되지 않는 메모리 할당, 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 할당할 수 있는 최대 메모리 양입니다.  
  
 ## <a name="setting-the-memory-options-manually"></a>메모리 옵션 수동 설정  
-서버 옵션 **min server memory** 및 **max server memory**를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 다른 응용 프로그램의 메모리 요구 사항 또는 동일한 호스트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 구성하는 데 유용합니다.
+서버 옵션 **min server memory** 및 **max server memory**를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 다른 애플리케이션의 메모리 요구 사항 또는 동일한 호스트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 구성하는 데 유용합니다.
 
 > [!NOTE]
 > **min server memory** 및 **max server memory** 는 고급 옵션입니다. **sp_configure** 시스템 저장 프로시저를 사용하여 이러한 설정을 변경할 경우 **고급 옵션 표시** 를 1로 설정해야만 변경할 수 있습니다. 이러한 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "52519521"
   
 -   **min server memory**를 사용하여 [위에서 설명한 대로](#min_server_memory) 메모리 사용을 제어합니다. 최소값의 합계가 컴퓨터의 실제 메모리 합계보다 1-2GB 작도록 각 인스턴스의 최소값을 설정합니다. 또한 해당 인스턴스의 예상 부하에 비례하여 이러한 최소값을 설정할 수 있습니다. 이 방법은 모든 인스턴스를 동시에 실행하지 않는 경우 실행 중인 인스턴스에서 남은 여유 메모리를 사용할 수 있다는 장점이 있습니다. 또한 이 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 적절한 양의 메모리가 최소한 할당되도록 하기 때문에 컴퓨터에 메모리를 많이 사용하는 다른 프로세스가 있을 때 유용합니다. 단점은 새 인스턴스나 다른 프로세스 시작 시, 특히 메모리를 해제하기 위해 수정된 페이지를 다시 데이터베이스에 써야 하는 경우 실행 중인 인스턴스가 메모리를 해제하는 데 오랜 시간이 걸린다는 것입니다.  
   
--   아무 작업도 하지 않습니다(권장되지 않음). 작업이 제공되는 첫 번째 인스턴스에서 모든 메모리를 할당합니다. 유휴 인스턴스나 나중에 시작된 인스턴스는 최소의 사용 가능한 메모리만 사용하여 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인스턴스의 메모리 사용을 조절하지 않습니다. 그러나 모든 인스턴스는 Windows 메모리 알림 신호에 응답하여 해당 메모리 사용 공간의 크기를 조절합니다. Windows는 메모리 알림 API가 있는 응용 프로그램에서 메모리 균형을 유지하지 않고 단순히 시스템의 메모리 사용 가능 여부에 대한 전역 피드백만 제공합니다.  
+-   아무 작업도 하지 않습니다(권장되지 않음). 작업이 제공되는 첫 번째 인스턴스에서 모든 메모리를 할당합니다. 유휴 인스턴스나 나중에 시작된 인스턴스는 최소의 사용 가능한 메모리만 사용하여 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인스턴스의 메모리 사용을 조절하지 않습니다. 그러나 모든 인스턴스는 Windows 메모리 알림 신호에 응답하여 해당 메모리 사용 공간의 크기를 조절합니다. Windows는 메모리 알림 API가 있는 애플리케이션에서 메모리 균형을 유지하지 않고 단순히 시스템의 메모리 사용 가능 여부에 대한 전역 피드백만 제공합니다.  
   
  인스턴스를 다시 시작하지 않고 이러한 설정을 변경할 수 있으므로 사용 패턴에 가장 맞는 설정을 쉽게 찾을 수 있습니다.  
   

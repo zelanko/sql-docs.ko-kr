@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용 | Microsoft Docs
+title: 사용자 지정 애플리케이션에서 RSClientPrint 컨트롤 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014

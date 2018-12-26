@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47758901"
 ---
-# <a name="developing-applications"></a>응용 프로그램 개발
+# <a name="developing-applications"></a>애플리케이션 개발
 이 섹션에서는 ODBC 인터페이스와 구현 하는 드라이버를 사용 하는 응용 프로그램을 개발 하는 방법에 대 한 정보를 포함 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  

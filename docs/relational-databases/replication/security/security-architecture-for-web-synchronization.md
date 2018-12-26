@@ -31,13 +31,13 @@ ms.locfileid: "47719011"
  다음 표에서는 그림에 표시된 구성 요소와 연결에 대해 설명합니다.  
   
 ## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>1. 병합 에이전트를 실행하는 Windows 사용자  
- 동기화를 수행하는 동안 구독자에서 병합 에이전트(A)가 시작됩니다. 병합 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하거나 독립 실행형 사용자 지정 응용 프로그램에서 시작할 수 있습니다. 병합 에이전트를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하면 사용자가 지정하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다. Windows 사용자를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정 컨텍스트에서 병합 에이전트가 실행됩니다.  
+ 동기화를 수행하는 동안 구독자에서 병합 에이전트(A)가 시작됩니다. 병합 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하거나 독립 실행형 사용자 지정 애플리케이션에서 시작할 수 있습니다. 병합 에이전트를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하면 사용자가 지정하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다. Windows 사용자를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정 컨텍스트에서 병합 에이전트가 실행됩니다.  
   
 |계정 유형|계정 지정 위치|  
 |---------------------|------------------------------------|  
 |Windows 사용자|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@job_login** 의 **@job_password** 및 [@job_password](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)매개 변수<br /><br /> RMO(복제 관리 개체): <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 에 대한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>의 속성|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자|  
-|독립 실행형 응용 프로그램|응용 프로그램을 실행하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다.|  
+|독립 실행형 애플리케이션|애플리케이션을 실행하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>2. 구독자 연결  
  병합 에이전트는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 구독자에 연결합니다. 지정하는 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 구독 데이터베이스에서 **dbowner** 고정 데이터베이스 역할의 멤버인 데이터베이스 사용자와 연결되어야 합니다.  
@@ -118,8 +118,8 @@ ms.locfileid: "47719011"
 |----------------------------|-------------------------------------------|  
 |Windows 인증|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 스냅숏 공유에 액세스합니다. 스냅숏 공유와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
   
-## <a name="i-application-pool-account-for-iis"></a>9. IIS의 응용 프로그램 풀 계정  
- 이 계정은 IIS를 실행하는 컴퓨터에서 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] 에 대해 W3wp.exe 프로세스를 시작하거나 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]에서 Dllhost.exe 프로세스를 시작하는 데 사용됩니다. 이러한 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자와 같이 IIS를 실행하는 컴퓨터에 응용 프로그램을 호스팅합니다. 이 계정에는 IIS를 실행하는 컴퓨터에서 다음 복제 DLL에 대한 읽기 및 실행 권한이 있어야 합니다.  
+## <a name="i-application-pool-account-for-iis"></a>9. IIS의 애플리케이션 풀 계정  
+ 이 계정은 IIS를 실행하는 컴퓨터에서 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] 에 대해 W3wp.exe 프로세스를 시작하거나 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]에서 Dllhost.exe 프로세스를 시작하는 데 사용됩니다. 이러한 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자와 같이 IIS를 실행하는 컴퓨터에 애플리케이션을 호스팅합니다. 이 계정에는 IIS를 실행하는 컴퓨터에서 다음 복제 DLL에 대한 읽기 및 실행 권한이 있어야 합니다.  
   
 -   Replisapi  
   

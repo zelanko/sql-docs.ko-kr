@@ -31,7 +31,7 @@ ms.locfileid: "47786661"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|SQLErrorNum14265|  
-|메시지 텍스트|MSSQLServer 서비스가 갑자기 종료되었습니다. SQL Server 오류 로그 및 Windows 시스템 및 응용 프로그램 이벤트 로그에서 원인을 파악하십시오.|  
+|메시지 텍스트|MSSQLServer 서비스가 갑자기 종료되었습니다. SQL Server 오류 로그 및 Windows 시스템 및 애플리케이션 이벤트 로그에서 원인을 파악하십시오.|  
   
 ## <a name="explanation"></a>설명  
 SQL Server 서비스가 갑자기 종료되었습니다.  

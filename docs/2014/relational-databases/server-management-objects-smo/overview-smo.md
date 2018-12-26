@@ -14,15 +14,15 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48164503"
 ---
 # <a name="overview-smo"></a>개요(SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
   
- 예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 응용 프로그램을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 응용 프로그램을 만들어야 하는 경우 SMO 응용 프로그램을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 응용 프로그램에 원활하게 통합하기 위해 SMO 응용 프로그램을 사용할 수도 있습니다.  
+ 예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 애플리케이션을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 애플리케이션을 만들어야 하는 경우 SMO 애플리케이션을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 애플리케이션에 원활하게 통합하기 위해 SMO 애플리케이션을 사용할 수도 있습니다.  
   
  SMO 개체 모델은 SQL-DMO(Distributed Management Objects) 개체 모델을 확장하고 대체합니다. SQL-DMO와 비교하면 SMO의 성능이 훨씬 뛰어나며 제어 및 사용도 간편합니다. SMO에는 대부분의 SQL-DMO 기능이 포함되어 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능을 지원하는 새로운 클래스가 다양하게 제공됩니다. 이 개체 모델은 직관적이며 사용자들이 가진 기술을 활용할 수 있도록 가능하면 SQL-DMO 용어를 사용합니다.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48164503"
   
  SQL-DMO에서는 개체를 열거하려면 컬렉션 내의 각 개체를 완전히 인스턴스화해야 합니다. 이것은 네트워크와 메모리 용량 측면에서 비효율적인 방식입니다. 많은 경우 개체의 속성 대부분을 명시적으로 참조하지 않은 상태로 개체를 인스턴스화해야 합니다.  
   
- SMO 아키텍처는 개체의 일부만 인스턴스화한 다음 서버에서 최소한의 속성 정보만 요청하므로 메모리 측면에서 훨씬 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 응용 프로그램에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
+ SMO 아키텍처는 개체의 일부만 인스턴스화한 다음 서버에서 최소한의 속성 정보만 요청하므로 메모리 측면에서 훨씬 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 애플리케이션에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
   
- 시스템 환경에 맞게 인스턴스화를 제어할 수 있습니다. 지연 인스턴스화를 사용하면 속성이 참조될 때 많은 서버 요청이 트리거될 수 있지만 응용 프로그램에서 필요로 하는 메모리의 양은 최소화됩니다.  
+ 시스템 환경에 맞게 인스턴스화를 제어할 수 있습니다. 지연 인스턴스화를 사용하면 속성이 참조될 때 많은 서버 요청이 트리거될 수 있지만 애플리케이션에서 필요로 하는 메모리의 양은 최소화됩니다.  
   
  실제 데이터베이스 개체를 나타내는 개체인 인스턴스 클래스는 세 가지 인스턴스화 수준에서 존재할 수 있습니다. 즉, 최소 인스턴스화(한 블록에서 최소한의 필수 속성만 읽음), 부분 인스턴스화(한 블록에서 상대적으로 많은 메모리 양을 사용하는 모든 속성을 읽음) 및 전체 인스턴스화 수준에서 존재할 수 있습니다. 인스턴스화되지 않은 상태와 전체 인스턴스화 상태가 일반적인 인스턴스화 상태입니다. 부분적으로 인스턴스화된 개체는 개체 속성 값 중 일부만 포함하므로 부분 인스턴스화 상태는 효율성을 높여 줍니다. 부분 인스턴스화는 직접 참조되지 않는 개체의 기본 상태입니다. 이러한 속성 중 하나가 참조되는 경우 개체의 전체 인스턴스화에 대한 오류 메시지가 생성됩니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48164503"
 ## <a name="smo-and-sql-dmo"></a>SMO 및 SQL-DMO  
  SMO 개체 모델은 SQL-DMO를 대체합니다. SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 지원합니다. 또한 SMO는 더 많은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 지원하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 많은 새로운 기능을 포함합니다. SMO는 보다 효율적으로 디자인되었으며 더 많은 제어 기능을 제공합니다.  
   
- DMO 라이브러리는 COM 개체 모델이지만 SMO는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. COM 구성 요소는 응용 프로그램에 재사용 가능한 기능을 제공하는 라이브러리로서 관리되지 않는 응용 프로그래밍에서 사용됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 관리 코드 응용 프로그램을 만들 수 있는 재사용 가능한 기능을 제공합니다.  
+ DMO 라이브러리는 COM 개체 모델이지만 SMO는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. COM 구성 요소는 애플리케이션에 재사용 가능한 기능을 제공하는 라이브러리로서 관리되지 않는 애플리케이션 프로그래밍에서 사용됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 관리 코드 응용 프로그램을 만들 수 있는 재사용 가능한 기능을 제공합니다.  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 기술로 전환되는 동안 응용 프로그램 일부는 관리 코드로 작성하고 다른 일부는 비관리 코드로 작성할 수 있습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하면 주 Interop 어셈블리를 필요로 하는 COM 구성 요소와 상호 연결할 수 있습니다. SQL-DMO의 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 기반 응용 프로그램에서 호출될 수 있도록 런타임 래퍼가 필요합니다.  
   

@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48118541"
@@ -29,7 +29,7 @@ ms.locfileid: "48118541"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **참고:** 상태 규칙 설정은 SQL Server Analysis Services 인스턴스와 PowerPivot 서비스 응용 프로그램에 대해 별도로 구성됩니다. 이 항목의 지침을 사용하여 각 서비스에 대한 상태 규칙을 구성할 수 있습니다. SharePoint 2013 배포의 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 서비스 응용 프로그램만 사용합니다. 따라서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서는 다른 버전의 다른 SharePoint 상태 규칙 집합을 설치합니다. 항목의 "버전" 열을 참조 하세요 [상태 규칙 참조 &#40;SharePoint 용 PowerPivot&#41;](health-rules-reference-power-pivot-for-sharepoint.md), 또는 설치 된 규칙을 확인 하려면 다음 Windows PowerShell 명령을 실행할 수 있습니다.  
+ **참고:** 상태 규칙 설정은 SQL Server Analysis Services 인스턴스와 PowerPivot 서비스 응용 프로그램에 대해 별도로 구성됩니다. 이 항목의 지침을 사용하여 각 서비스에 대한 상태 규칙을 구성할 수 있습니다. SharePoint 2013 배포의 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 서비스 애플리케이션만 사용합니다. 따라서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서는 다른 버전의 다른 SharePoint 상태 규칙 집합을 설치합니다. 항목의 "버전" 열을 참조 하세요 [상태 규칙 참조 &#40;SharePoint 용 PowerPivot&#41;](health-rules-reference-power-pivot-for-sharepoint.md), 또는 설치 된 규칙을 확인 하려면 다음 Windows PowerShell 명령을 실행할 수 있습니다.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -44,7 +44,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
  [응용 프로그램 안정성 (PowerPivot 서비스 응용 프로그램)을 평가 하는 데 사용 되는 상태 규칙 구성](#bkmk_evaluate_application_stability)  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- Analysis Services 인스턴스 및 PowerPivot 서비스 응용 프로그램의 구성 속성을 변경하려면 서비스 응용 프로그램 관리자여야 합니다.  
+ Analysis Services 인스턴스 및 PowerPivot 서비스 애플리케이션의 구성 속성을 변경하려면 서비스 애플리케이션 관리자여야 합니다.  
   
 ##  <a name="bkmk_view"></a> PowerPivot 상태 규칙 보기  
   
@@ -82,7 +82,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: 전체 CPU 사용량이 너무 많습니다.** 규칙 정의에 해당합니다.  
   
      메모리 임계값 부족(기본값: 5%)  
-     SharePoint  응용 프로그램 서버에서 SQL  Server  Analysis  Services  인스턴스는 항상 소량의 사용되지 않는 메모리를 가지고 있어야 합니다. 서버 작업은 대부분 메모리 집중형이기 때문에 서버는 최대 한도까지 실행되지 않을 때 최상의 성능을 발휘합니다. 5%의 사용되지 않는 메모리는 Analysis  Services에 할당된 메모리의 백분율로 계산됩니다. 예를 들어 총 메모리가 200GB이고 Analysis  Services에 80%(160GB)가 할당된 경우 5%의 사용되지 않는 메모리는 160GB의 5%인 8GB입니다.  
+     SharePoint 애플리케이션 서버에서 SQL Server Analysis Services 인스턴스는 항상 소량의 사용되지 않는 메모리를 가지고 있어야 합니다. 서버 작업은 대부분 메모리 집중형이기 때문에 서버는 최대 한도까지 실행되지 않을 때 최상의 성능을 발휘합니다. 5%의 사용되지 않는 메모리는 Analysis  Services에 할당된 메모리의 백분율로 계산됩니다. 예를 들어 총 메모리가 200GB이고 Analysis  Services에 80%(160GB)가 할당된 경우 5%의 사용되지 않는 메모리는 160GB의 5%인 8GB입니다.  
   
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: Analysis Services에는 요청한 작업을 수행할 수 있는 충분한 메모리가 없습니다.** 규칙 정의에 해당합니다.  
   
@@ -101,9 +101,9 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_evaluate_application_stability"></a> 응용 프로그램 안정성 (PowerPivot 서비스 응용 프로그램)을 평가 하는 데 사용 되는 상태 규칙 구성  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  서비스 응용 프로그램 페이지에서 **기본 PowerPivot 서비스 응용 프로그램**을 클릭합니다.  
+2.  서비스 애플리케이션 페이지에서 **기본 PowerPivot 서비스 애플리케이션**을 클릭합니다.  
   
      ![ManageService 스크린 샷 응용 프로그램 페이지](../media/ssas-centraladmin-app.gif "ManageService 스크린 샷 응용 프로그램 페이지")  
   

@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fe75f73a8e332682ee9511f338813946f5e2a31
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48055923"
@@ -105,7 +105,7 @@ ms.locfileid: "48055923"
   
  오류 상태가 1일 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 문의합니다.  
   
- 관리자 자격 증명을 사용하여 연결하려면 **관리자 권한으로 실행** 옵션을 사용하여 응용 프로그램을 시작합니다. 연결되면 Windows 사용자를 개별 로그인으로 추가합니다.  
+ 관리자 자격 증명을 사용하여 연결하려면 **관리자 권한으로 실행** 옵션을 사용하여 애플리케이션을 시작합니다. 연결되면 Windows 사용자를 개별 로그인으로 추가합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
   

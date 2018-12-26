@@ -15,7 +15,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: db96a90e9621949c528ea707be08beb5002177fe
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067863"
@@ -31,7 +31,7 @@ ms.locfileid: "48067863"
 |**Connection resets/sec**|연결 풀에서 시작된 로그인의 총 수입니다.|  
 |**Event Notifications Delayed Drop**|시스템 스레드에서 삭제 대기 중인 이벤트 알림 수입니다.|  
 |**HTTP Authenticated Requests**|초당 시작된 인증된 HTTP 요청 수입니다.|  
-|**Logical Connections**|시스템에 대한 논리적 연결 수입니다.<br /><br /> 논리적 연결의 주 목적은 MARS(Multiple Active Result Sets) 요청을 처리하는 것입니다. MARS 요청의 경우 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 하나의 실제 연결에 해당하는 논리적 연결이 두 개 이상 있을 수 있습니다.<br /><br /> MARS가 사용되지 않는 경우 실제 연결과 논리적 연결의 비율은 1:1입니다. 따라서 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 논리적 연결은 1씩 증가합니다.|  
+|**Logical Connections**|시스템에 대한 논리적 연결 수입니다.<br /><br /> 논리적 연결의 주 목적은 MARS(Multiple Active Result Sets) 요청을 처리하는 것입니다. MARS 요청의 경우 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 하나의 실제 연결에 해당하는 논리적 연결이 두 개 이상 있을 수 있습니다.<br /><br /> MARS가 사용되지 않는 경우 실제 연결과 논리적 연결의 비율은 1:1입니다. 따라서 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 논리적 연결은 1씩 증가합니다.|  
 |**Logins/sec**|초당 시작된 총 로그인 수입니다. 풀링된 연결은 포함되지 않습니다.|  
 |**Logouts/sec**|초당 시작된 총 로그아웃 작업 수입니다.|  
 |**Mars Deadlocks**|발견된 MARS 교착 상태 수입니다.|  

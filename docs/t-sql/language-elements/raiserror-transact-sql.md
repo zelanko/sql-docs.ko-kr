@@ -40,7 +40,7 @@ ms.locfileid: "52502857"
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 응용 프로그램에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
+  오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 애플리케이션에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

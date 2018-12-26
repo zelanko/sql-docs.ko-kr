@@ -11,10 +11,10 @@ items:
     href: data-quality-services-features-and-tasks.md
 - name: Install
   href: ../data-quality-services/install-windows/install-data-quality-services.md
-- name: Data Quality 클라이언트 응용 프로그램
+- name: Data Quality 클라이언트 애플리케이션
   href: data-quality-client-application.md
   items:
-  - name: 데이터 품질 클라이언트 응용 프로그램 실행
+  - name: 데이터 품질 클라이언트 애플리케이션 실행
     href: run-the-data-quality-client-application.md
   - name: 데이터 품질 클라이언트 홈 화면
     href: data-quality-client-home-screen.md

@@ -30,7 +30,7 @@ ms.locfileid: "47791119"
   
 |항목|설명|  
 |-----------|-----------------|  
-|[CursorClose 이벤트 클래스](../../relational-databases/event-classes/cursorclose-event-class.md)|API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트에 대해 설명합니다.|  
+|[CursorClose 이벤트 클래스](../../relational-databases/event-classes/cursorclose-event-class.md)|API(애플리케이션 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트에 대해 설명합니다.|  
 |[CursorExecute 이벤트 클래스](../../relational-databases/event-classes/cursorexecute-event-class.md)|API 커서에서 발생하는 커서 실행 이벤트에 대해 설명합니다.|  
 |[CursorImplicitConversion 이벤트 클래스](../../relational-databases/event-classes/cursorimplicitconversion-event-class.md)|API 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트에 대해 설명합니다.|  
 |[CursorOpen 이벤트 클래스](../../relational-databases/event-classes/cursoropen-event-class.md)|API 커서에서 발생하는 커서 열기 이벤트에 대해 설명합니다.|  

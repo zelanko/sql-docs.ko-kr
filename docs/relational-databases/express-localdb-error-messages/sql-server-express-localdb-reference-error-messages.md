@@ -25,7 +25,7 @@ ms.locfileid: "47768041"
  이 작업을 실행하려면 관리자 권한이 필요합니다.  
   
  [LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-auto-instance-create-failed.md)  
- 자동 인스턴스를 만들 수 없습니다. 자세한 오류 정보는 Windows 응용 프로그램 이벤트 로그를 참조하십시오.  
+ 자동 인스턴스를 만들 수 없습니다. 자세한 오류 정보는 Windows 애플리케이션 이벤트 로그를 참조하십시오.  
   
  [LOCALDB_ERROR_CALLER_IS_NOT_OWNER](../../relational-databases/express-localdb-error-messages/localdb-error-caller-is-not-owner.md)  
  API 호출자는 LocalDB 인스턴스 소유자가 아닙니다.  

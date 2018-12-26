@@ -63,7 +63,7 @@ sp_updateextendedproperty
  사용자 또는 사용자 정의 형식입니다. *level0_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력 어셈블리, 계약, EVENT NOTIFICATION, 파일 그룹, 메시지 유형, 파티션 함수, 파티션 구성표, 계획 지침, REMOTE SERVICE BINDING, 경로, 스키마, 서비스, 사용자, 트리거, 형식 및 NULL이 됩니다.  
   
 > [!IMPORTANT]  
->  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
+>  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
  [ @level0name=] {'*level0_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level0_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다.  

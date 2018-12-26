@@ -26,7 +26,7 @@ ms.locfileid: "51602983"
 ## <a name="frequently-asked-questions"></a>질문과 대답
 
 **Linux 또는 macOS 기반 기존 ODBC 응용 프로그램이 어떻게 드라이버에서 작동하나요?**  
-다른 드라이버를 사용 중인 Linux 또는 macOS에서 컴파일하고 실행한 ODBC 응용 프로그램을 컴파일하고 실행할 수 있어야 합니다. 
+다른 드라이버를 사용 중인 Linux 또는 macOS에서 컴파일하고 실행한 ODBC 애플리케이션을 컴파일하고 실행할 수 있어야 합니다. 
   
 **[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 어떤 기능이 이 버전의 드라이버를 지원하나요?**
 

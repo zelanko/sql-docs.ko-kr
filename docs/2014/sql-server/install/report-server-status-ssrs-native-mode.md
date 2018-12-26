@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: de8c0b06607ef2a9716229fff7e972c96c916fca
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48128624"
@@ -30,7 +30,7 @@ ms.locfileid: "48128624"
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 (RSConfigTool.exe)는 "highestAvailable"의 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  
   
- 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **보고서 서비스 상태:** 는 "시작"이어야 합니다. 관리자 도구의 서비스 콘솔 응용 프로그램을 사용하여 서비스 상태를 확인할 수도 있습니다.  
+ 보고서 서버에 연결하면 모든 페이지 링크가 회색으로 표시될 경우 보고서 서버 서비스가 시작되었는지 확인합니다. **보고서 서비스 상태:** 는 "시작"이어야 합니다. 관리자 도구의 서비스 콘솔 애플리케이션을 사용하여 서비스 상태를 확인할 수도 있습니다.  
   
 ## <a name="options"></a>변수  
  **SQL Server 인스턴스**  
@@ -57,7 +57,7 @@ ms.locfileid: "48128624"
  버전을 표시 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치한 합니다.  
   
  **보고서 서버 데이터베이스**  
- 현재 보고서 서버 인스턴스에 대한 응용 프로그램 데이터를 저장하는 보고서 서버 데이터베이스의 이름을 표시합니다.  
+ 현재 보고서 서버 인스턴스에 대한 애플리케이션 데이터를 저장하는 보고서 서버 데이터베이스의 이름을 표시합니다.  
   
  **보고서 서버 모드**  
  항상 **기본**을 값으로 표시해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 기본 모드 보고서 서버만 지원 합니다. 값이 **SharePoint 통합 모드**로 표시된 경우 기본 모드 배포가 올바르게 구성되지 않아서 기본 모드 보고서 카탈로그에 연결해야 함을 나타낼 수 있습니다. 구성 관리자의 **데이터베이스** 페이지를 사용하여 데이터베이스를 변경하고 새 데이터베이스를 만들거나 기존 기본 모드 보고서 서버의 데이터베이스 카탈로그에 연결합니다.  

@@ -29,7 +29,7 @@ ms.locfileid: "48057493"
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
- 두 가지 방법으로 저장 프로시저를 실행할 수 있습니다. 가장 일반적인 첫 번째 방법은 응용 프로그램 또는 사용자가 프로시저를 호출하는 것입니다. 두 번째 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 자동 실행되도록 프로시저를 설정하는 것입니다. 응용 프로그램이나 사용자가 프로시저를 호출할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 또는 EXEC 키워드가 호출에서 명시적으로 지정됩니다. 또는 프로시저가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 문이면 키워드를 사용하지 않고 프로시저를 호출하고 실행할 수 있습니다.  
+ 두 가지 방법으로 저장 프로시저를 실행할 수 있습니다. 가장 일반적인 첫 번째 방법은 애플리케이션 또는 사용자가 프로시저를 호출하는 것입니다. 두 번째 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 자동 실행되도록 프로시저를 설정하는 것입니다. 애플리케이션이나 사용자가 프로시저를 호출할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 또는 EXEC 키워드가 호출에서 명시적으로 지정됩니다. 또는 프로시저가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 문이면 키워드를 사용하지 않고 프로시저를 호출하고 실행할 수 있습니다.  
   
  **항목 내용**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48057493"
      시작 프로시저의 개수에는 제한이 없지만 각 시작 프로시저는 실행하는 동안 하나의 작업자 스레드를 소비합니다. 따라서 시작할 때 여러 프로시저를 실행해야 하지만 동시에 실행할 필요가 없다면 한 프로시저만 시작 프로시저로 지정하고 그 프로시저에서 다른 프로시저를 호출하도록 만듭니다. 이렇게 하면 하나의 작업자 스레드만 사용됩니다.  
   
     > [!TIP]  
-    >  자동 실행되는 프로시저의 결과 집합은 반환하지 마세요. 프로시저는 응용 프로그램이나 사용자가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 실행되므로 결과 집합을 반환할 대상이 없습니다.  
+    >  자동 실행되는 프로시저의 결과 집합은 반환하지 마세요. 프로시저는 애플리케이션이나 사용자가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 실행되므로 결과 집합을 반환할 대상이 없습니다.  
   
 -   자동 실행 설정, 해제 및 제어  
   

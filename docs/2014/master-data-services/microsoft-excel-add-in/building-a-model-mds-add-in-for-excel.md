@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48190573"
@@ -27,10 +27,10 @@ ms.locfileid: "48190573"
   
 -   도메인 기반 특성을 포함한 모든 유형의 특성 만들기. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../attributes-master-data-services.md) 및 [도메인 기반 특성&#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)을 참조하세요.  
   
- 관리자로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이나 웹 서비스를 사용하여 모델을 만들어야 합니다. 그런 다음 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 를 사용하여 모델 내에 엔터티와 특성을 만들 수 있습니다. 모델 개체에 대한 자세한 내용은 [모델&#40;Master Data Services&#41;](../models-master-data-services.md)을 참조하세요.  
+ 관리자로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이나 웹 서비스를 사용하여 모델을 만들어야 합니다. 그런 다음 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 를 사용하여 모델 내에 엔터티와 특성을 만들 수 있습니다. 모델 개체에 대한 자세한 내용은 [모델&#40;Master Data Services&#41;](../models-master-data-services.md)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- 대부분의 관리 태스크는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 수행하거나 웹 서비스를 사용하여 수행해야 합니다. 다음 표에서는 관리자가 MDS에서 태스크를 완료하는 데 사용할 수 있는 도구를 보여 줍니다.  
+ 대부분의 관리 태스크는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 수행하거나 웹 서비스를 사용하여 수행해야 합니다. 다음 표에서는 관리자가 MDS에서 태스크를 완료하는 데 사용할 수 있는 도구를 보여 줍니다.  
   
 |태스크 설명|도구|항목|  
 |----------------------|----------|-----------|  

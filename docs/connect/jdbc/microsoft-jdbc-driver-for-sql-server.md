@@ -22,9 +22,9 @@ ms.locfileid: "47611041"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-상호 운용성을 지원하기 위한 지속적인 노력의 일환으로 Microsoft는 SQL Server, Azure SQL Database에서 사용할 수 있는 JDBC(Java Database Connectivity) 드라이버를 제공합니다. 이 드라이버는 추가 비용 없이 사용할 수 있으며 모든 Java 응용 프로그램, 응용 프로그램 서버 또는 Java 사용 애플릿에서의 Java 데이터베이스 연결을 제공합니다. 이 드라이버는 표준 JDBC API(응용 프로그램 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
+상호 운용성을 지원하기 위한 지속적인 노력의 일환으로 Microsoft는 SQL Server, Azure SQL Database에서 사용할 수 있는 JDBC(Java Database Connectivity) 드라이버를 제공합니다. 이 드라이버는 추가 비용 없이 사용할 수 있으며 모든 Java 애플리케이션, 애플리케이션 서버 또는 Java 사용 애플릿에서의 Java 데이터베이스 연결을 제공합니다. 이 드라이버는 표준 JDBC API(애플리케이션 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
 
-Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 주요 응용 프로그램 서버에 대해 테스트되었습니다.
+Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 주요 애플리케이션 서버에 대해 테스트되었습니다.
   
 ## <a name="getting-started"></a>시작  
 * [1단계: Java 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-java-development.md)  

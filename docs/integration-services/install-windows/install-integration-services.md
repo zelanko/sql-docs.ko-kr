@@ -74,7 +74,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 ### <a name="configuring-ssis-event-logging"></a>SSIS 이벤트 로깅 구성
     
-기본적으로 새로 설치하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 응용 프로그램 이벤트 로그에 기록하지 않도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정은 이벤트 로그 항목이 너무 많이 생성되지 않도록 방지합니다. 기록되지 않는 이벤트는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"입니다. 이러한 이벤트를 응용 프로그램 이벤트 로그에 기록하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 0에서 1로 변경합니다.    
+기본적으로 새로 설치하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 애플리케이션 이벤트 로그에 기록하지 않도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정은 이벤트 로그 항목이 너무 많이 생성되지 않도록 방지합니다. 기록되지 않는 이벤트는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"입니다. 이러한 이벤트를 애플리케이션 이벤트 로그에 기록하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 0에서 1로 변경합니다.    
     
 ## <a name="install-additional-components-for-integration-services"></a>Integration Services의 추가 구성 요소 설치
 

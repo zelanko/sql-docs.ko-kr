@@ -115,7 +115,7 @@ GO
  설치 시 로컬 서버 이름을 기본 서버 이름에서 다른 이름으로 변경한 경우 [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)은 새 이름을 반환합니다.  
   
 ### <a name="version-properties"></a>Version 속성  
- `SERVERPROPERTY` 함수는 버전 정보에 관련된 개별 속성을 반환하지만 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 함수는 출력을 하나의 문자열로 결합합니다. 응용 프로그램이 개별 속성 문자열이 필요한 경우 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 결과를 구문 분석하는 대신 `SERVERPROPERTY` 함수를 사용하여 이러한 속성 문자열을 반환할 수 있습니다.  
+ `SERVERPROPERTY` 함수는 버전 정보에 관련된 개별 속성을 반환하지만 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 함수는 출력을 하나의 문자열로 결합합니다. 애플리케이션이 개별 속성 문자열이 필요한 경우 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 결과를 구문 분석하는 대신 `SERVERPROPERTY` 함수를 사용하여 이러한 속성 문자열을 반환할 수 있습니다.  
 
 > [!NOTE]  
 > SERVERPROPERTY에서 보고한 버전 속성이 Azure SQL Database에 올바르지 않은 문제를 알고 있습니다. Azure SQL Database에서 실행하는 SQL Server 데이터베이스 엔진의 버전은 SQL Server의 온-프레미스 이상 버전으로 최신 보안 수정이 포함되어 있습니다. 즉, 패치 수준이 항상 SQL Server의 온-프레미스 버전 이상으로 SQL Server에서 사용할 수 있는 최신 기능이 Azure SQL Database에서 제공됩니다.

@@ -33,7 +33,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e60060cd9a57bc5edc5ee89e040c2f26a3e1ae55
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47835411"
@@ -69,7 +69,7 @@ ms.locfileid: "47835411"
   
  **ISequentialStream** 큰 XML 문서의 검색에 사용 해야 합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [큰 값 형식을 사용 하 여](../../../relational-databases/native-client/features/using-large-value-types.md)입니다.  
   
- 행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 응용 프로그램에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 마찬가지로 검색의 경우, 응용 프로그램을 전달할 수 텍스트 문자열 또는 **ISequentialStream** 에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
+ 행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 애플리케이션에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 마찬가지로 검색의 경우, 응용 프로그램을 전달할 수 텍스트 문자열 또는 **ISequentialStream** 에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
   
 > [!NOTE]  
 >  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 *pObject* 인수를 null로 설정하여 **ISequentialStream**을 가져와야 합니다.  

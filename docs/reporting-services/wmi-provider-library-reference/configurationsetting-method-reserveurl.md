@@ -18,7 +18,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47856786"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 메서드 - ReserveURL
-  지정된 응용 프로그램에 대한 URL 예약을 추가합니다.  
+  지정된 애플리케이션에 대한 URL 예약을 추가합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +35,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
   
 ## <a name="parameters"></a>매개 변수  
  *응용 프로그램*  
- URL을 예약할 응용 프로그램의 이름입니다.  
+ URL을 예약할 애플리케이션의 이름입니다.  
   
  *URLString*  
  예약에 대한 URL입니다.  
@@ -57,7 +57,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
   
  현재 Windows 서비스 계정에 대한 URL 예약이 만들어집니다. Windows 서비스 계정을 변경하려면 모든 URL 예약을 수동으로 업데이트해야 합니다.  
   
- 이 메서드를 사용하면 모든 응용 프로그램 도메인이 하드 재활용됩니다. 이 작업이 완료된 후 응용 프로그램 도메인을 다시 시작해야 합니다.  
+ 이 메서드를 사용하면 모든 애플리케이션 도메인이 하드 재활용됩니다. 이 작업이 완료된 후 애플리케이션 도메인을 다시 시작해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

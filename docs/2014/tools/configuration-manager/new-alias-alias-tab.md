@@ -13,7 +13,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8bf73a049dbff9980da4a87c6226f946e3caf13
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48076473"
@@ -44,7 +44,7 @@ ms.locfileid: "48076473"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기본 명명된 파이프에서 수신하지 않고 다른 파이프 이름을 사용하여 연결 문자열을 제공하려고 합니다.  
   
--   응용 프로그램이 서버의 `ACCT`라는 데이터베이스에 연결하려고 하는데 이 데이터베이스가 `ACCT` 이라는 서버의 `CENTRAL`라는 인스턴스로 통합되었습니다. 응용 프로그램은 쉽게 변경할 수 없으므로 `ACCT`를 가리키는 문자열을 사용하여 `CENTRAL\ACCT`라는 별칭을 만듭니다.  
+-   애플리케이션이 서버의 `ACCT`라는 데이터베이스에 연결하려고 하는데 이 데이터베이스가 `ACCT` 이라는 서버의 `CENTRAL`라는 인스턴스로 통합되었습니다. 애플리케이션은 쉽게 변경할 수 없으므로 `ACCT`를 가리키는 문자열을 사용하여 `CENTRAL\ACCT`라는 별칭을 만듭니다.  
   
 ## <a name="creating-a-valid-connection-string"></a>유효한 연결 문자열 만들기  
  유효한 별칭 속성 조합에 대한 설명과 예는 다음 항목을 참조하십시오.  

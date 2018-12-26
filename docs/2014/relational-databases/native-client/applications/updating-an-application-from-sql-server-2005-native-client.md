@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2005 Native Client에서 응용 프로그램 업데이트 | Microsoft Docs
+title: SQL Server 2005 Native Client에서 애플리케이션 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48155847"
 ---
-# <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 응용 프로그램 업데이트
+# <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 애플리케이션 업데이트
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 이후에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client에 대해 이루어진 주요 변경 사항을 설명합니다.  
   
  MDAC(Microsoft Data Access Components)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client으로 업그레이드하는 경우에도 몇 가지 동작 차이점이 표시될 수 있습니다. 자세한 내용은 [MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트](updating-an-application-to-sql-server-native-client-from-mdac.md)합니다.  

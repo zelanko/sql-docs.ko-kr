@@ -1,8 +1,9 @@
+items:
 - name: SQL Server용 Microsoft OLE DB 드라이버
   href: oledb-driver-for-sql-server.md
 - name: 기능 +
   href: ../oledb/features/oledb-driver-for-sql-server-features.md
-- name: 응용 프로그램 +
+- name: 애플리케이션 +
   href: ../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
 - name: OLE DB 프로그래밍 +
   href: ../oledb/ole-db/oledb-driver-for-sql-server-programming.md
@@ -16,3 +17,9 @@
   href: system-requirements-for-oledb-driver-for-sql-server.md
 - name: SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
   href: when-to-use-oledb-driver-for-sql-server.md
+ms.openlocfilehash: ab33af8e52339fca33459531218ee13bbb039b04
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315201"

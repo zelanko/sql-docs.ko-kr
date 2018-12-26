@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48196583"
@@ -60,7 +60,7 @@ ms.locfileid: "48196583"
 9. 테이블을 가져온 후 **닫기**를 클릭합니다.  
   
 ## <a name="give-the-columns-friendly-names"></a>열에 이름 지정  
- 이 태스크에서는 Sales Territory 테이블의 열에 이름을 지정합니다. 테이블 및/또는 열에 항상 이름을 지정할 필요가 있는 것은 아니지만, 이렇게 하면 모델 디자이너에서 모델 프로젝트를 보다 쉽게 탐색할 수 있을 뿐만 아니라 사용자가 클라이언트 응용 프로그램 필드 목록에서 모델 개체 및 데이터를 쉽게 찾아볼 수 있습니다.  
+ 이 태스크에서는 Sales Territory 테이블의 열에 이름을 지정합니다. 테이블 및/또는 열에 항상 이름을 지정할 필요가 있는 것은 아니지만, 이렇게 하면 모델 디자이너에서 모델 프로젝트를 보다 쉽게 탐색할 수 있을 뿐만 아니라 사용자가 클라이언트 애플리케이션 필드 목록에서 모델 개체 및 데이터를 쉽게 찾아볼 수 있습니다.  
   
 #### <a name="to-rename-columns-in-the-sales-territory-table"></a>Sales Territory 테이블에서 열의 이름을 바꾸려면  
   
@@ -120,10 +120,10 @@ ms.locfileid: "48196583"
   
      이 관계의 활성 속성은 False이므로 비활성입니다. Internet Sales 테이블에는 측정값에서 사용되는 다른 활성 관계가 이미 있기 때문입니다.  
   
-## <a name="hide-the-employee-security-table-from-client-applications"></a>클라이언트 응용 프로그램에서 Employee Security 테이블 숨기기  
- 이 태스크에서는 클라이언트 응용 프로그램의 필드 목록에 나타나지 않도록 Employee Security 테이블을 숨깁니다. 테이블 숨기더라도 테이블이 안전하게 보호되는 것은 아닙니다. 방법을 아는 경우 사용자는 여전히 Employee Security 테이블 데이터를 쿼리할 수 있습니다. 사용자가 데이터를 쿼리할 수 없도록 Employee Security 테이블 데이터를 안전하게 보호하려면 이후 태스크에서 필터를 적용합니다.  
+## <a name="hide-the-employee-security-table-from-client-applications"></a>클라이언트 애플리케이션에서 Employee Security 테이블 숨기기  
+ 이 태스크에서는 클라이언트 애플리케이션의 필드 목록에 나타나지 않도록 Employee Security 테이블을 숨깁니다. 테이블 숨기더라도 테이블이 안전하게 보호되는 것은 아닙니다. 방법을 아는 경우 사용자는 여전히 Employee Security 테이블 데이터를 쿼리할 수 있습니다. 사용자가 데이터를 쿼리할 수 없도록 Employee Security 테이블 데이터를 안전하게 보호하려면 이후 태스크에서 필터를 적용합니다.  
   
-#### <a name="to-hide-the-employee-table-from-client-applications"></a>클라이언트 응용 프로그램에서 Employee 테이블을 숨기려면  
+#### <a name="to-hide-the-employee-table-from-client-applications"></a>클라이언트 애플리케이션에서 Employee 테이블을 숨기려면  
   
 -   모델 디자이너의 다이어그램 뷰에서 **Employee** 테이블 머리글을 마우스 오른쪽 단추로 클릭한 다음 **클라이언트 도구에서 숨기기**를 클릭합니다.  
   

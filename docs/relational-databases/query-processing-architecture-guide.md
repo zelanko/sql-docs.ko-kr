@@ -432,7 +432,7 @@ GO
 
 ### <a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
 
-ADO, OLE DB 및 ODBC 응용 프로그램의 매개 변수 표식을 포함하여 매개 변수를 사용하면 실행 계획을 좀 더 많이 재사용할 수 있습니다. 
+ADO, OLE DB 및 ODBC 애플리케이션의 매개 변수 표식을 포함하여 매개 변수를 사용하면 실행 계획을 좀 더 많이 재사용할 수 있습니다. 
 
 > [!WARNING] 
 > 또한 최종 사용자가 입력한 값을 갖는 매개 변수 또는 매개 변수 표식을 사용하는 것이 데이터 액세스 API 메서드, `EXECUTE` 문 또는 `sp_executesql` 저장 프로시저 중 하나를 사용하여 실행하는 문자열에 값을 연결하는 것보다 안전합니다.
@@ -470,7 +470,7 @@ WHERE ProductSubcategoryID = 4;
 
    SQL 문을 동적으로 생성하는 Transact-SQL 스크립트, 저장 프로시저 또는 트리거에 대해서는 이 방법을 사용하는 것이 좋습니다. 
 
-* ADO, OLE DB 및 ODBC는 매개 변수 표식을 사용합니다. 매개 변수 표식은 SQL 문의 상수를 대신하는 물음표(?)로 프로그램 변수에 바인딩됩니다. 예를 들어 ODBC 응용 프로그램에서는 다음을 수행합니다. 
+* ADO, OLE DB 및 ODBC는 매개 변수 표식을 사용합니다. 매개 변수 표식은 SQL 문의 상수를 대신하는 물음표(?)로 프로그램 변수에 바인딩됩니다. 예를 들어 ODBC 애플리케이션에서는 다음을 수행합니다. 
 
    * `SQLBindParameter` 를 사용하여 SQL 문에서 정수 변수를 첫째 매개 변수 표식에 바인딩합니다.
    * 변수에 정수 값을 배치합니다.
@@ -484,11 +484,11 @@ WHERE ProductSubcategoryID = 4;
      SQL_NTS);
    ```
 
-   응용 프로그램에서 매개 변수 표식이 사용된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 포함된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 `sp_executesql`을 사용하여 문을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 보냅니다. 
+   애플리케이션에서 매개 변수 표식이 사용된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 포함된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 `sp_executesql`을 사용하여 문을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 보냅니다. 
 
 * 기본적으로 매개 변수를 사용하는 저장 프로시저를 디자인합니다.
 
-응용 프로그램 디자인 내에 매개 변수를 명시적으로 구축하지 않은 경우에는 단순 매개 변수화의 기본 동작을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 특정 쿼리를 자동으로 매개 변수화할 수 있습니다. 또는 `ALTER DATABASE` 문의 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 강제 매개 변수화하도록 쿼리 최적화 프로그램을 설정할 수 있습니다.
+애플리케이션 디자인 내에 매개 변수를 명시적으로 구축하지 않은 경우에는 단순 매개 변수화의 기본 동작을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 특정 쿼리를 자동으로 매개 변수화할 수 있습니다. 또는 `ALTER DATABASE` 문의 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 강제 매개 변수화하도록 쿼리 최적화 프로그램을 설정할 수 있습니다.
 
 강제 매개 변수화를 설정한 경우에도 단순 매개 변수화가 계속해서 수행될 수 있습니다. 예를 들어 다음 쿼리는 강제 매개 변수화 규칙에 따라 매개 변수화할 수 없습니다.
 
@@ -537,13 +537,13 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="ForcedParam"></a> 강제 매개 변수화
 
-데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 단순 매개 변수화 동작을 재정의할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 응용 프로그램과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
+데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 단순 매개 변수화 동작을 재정의할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 애플리케이션과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
 
 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 임의의 형식으로 전송된 `SELECT`, `INSERT`, `UPDATE`또는 `DELETE` 문에 표시되는 리터럴 값이 쿼리 컴파일 중에 매개 변수로 변환됩니다. 그러나 다음 쿼리 구문에 나타나는 리터럴은 예외입니다. 
 
 * `INSERT...EXECUTE` 문.
 * 저장 프로시저, 트리거 또는 사용자 정의 함수의 본문 안에 있는 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이미 이러한 루틴에 대한 쿼리 계획을 재사용하고 있습니다.
-* 클라이언트 쪽 응용 프로그램에서 이미 매개 변수화된 준비된 문
+* 클라이언트 쪽 애플리케이션에서 이미 매개 변수화된 준비된 문
 * XQuery 메서드 호출이 포함된 문. 이러한 문에서는 `WHERE` 절과 같이 해당 인수가 일반적으로 매개 변수화되는 컨텍스트에서 메서드가 나타납니다. 해당 인수가 매개 변수화되지 않는 컨텍스트에서 메서드가 나타날 경우에는 문의 나머지 부분이 매개 변수화됩니다.
 * Transact-SQL 커서(Transact-SQL cursor) 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
 * 사용되지 않는 쿼리 구문
@@ -572,7 +572,7 @@ WHERE ProductSubcategoryID = 4;
 매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 
 > [!NOTE]
-> 매개 변수 이름은 임의로 지정하므로 사용자나 응용 프로그램에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다.
+> 매개 변수 이름은 임의로 지정하므로 사용자나 애플리케이션에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다.
 
 #### <a name="data-types-of-parameters"></a>매개 변수의 데이터 형식
 
@@ -603,7 +603,7 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="preparing-sql-statements"></a>SQL 문 준비
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 엔진에서는 SQL 문을 실행하기 전에 문을 준비할 수 있는 기능을 제공합니다. 응용 프로그램에서 SQL 문을 여러 번 실행해야 하는 경우에는 데이터베이스 API를 사용하여 다음을 수행할 수 있습니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 엔진에서는 SQL 문을 실행하기 전에 문을 준비할 수 있는 기능을 제공합니다. 애플리케이션에서 SQL 문을 여러 번 실행해야 하는 경우에는 데이터베이스 API를 사용하여 다음을 수행할 수 있습니다. 
 
 * 문을 한 번 준비합니다. 이렇게 하면 SQL 문이 실행 계획으로 컴파일됩니다.
 * 문을 실행해야 할 때마다 미리 컴파일한 실행 계획을 실행합니다. 이렇게 하면 첫 번째 실행 이후 실행할 때마다 SQL 문을 다시 컴파일할 필요가 없습니다.   
@@ -613,16 +613,16 @@ WHERE ProductSubcategoryID = 4;
 
 준비/실행 모델을 과도하게 사용하면 성능이 저하될 수 있습니다. 문이 한 번만 실행되는 경우 직접 실행은 서버로의 네트워크 왕복을 1회만 필요로 합니다. 한 번만 실행되는 SQL 문을 준비하고 실행하면 네트워크 왕복이 추가로 필요합니다. 즉 문을 준비하는 데 한 번, 문을 실행하는 데 한 번이 필요합니다.
 
-매개 변수 표식이 사용되는 경우 문을 준비하는 것이 좀 더 효과적입니다. 예를 들어 응용 프로그램이 종종 `AdventureWorks` 샘플 데이터베이스의 제품 정보 검색 요청을 받는 경우를 생각해 봅시다. 응용 프로그램에서는 두 가지 방법으로 이를 처리할 수 있습니다. 
+매개 변수 표식이 사용되는 경우 문을 준비하는 것이 좀 더 효과적입니다. 예를 들어 애플리케이션이 종종 `AdventureWorks` 샘플 데이터베이스의 제품 정보 검색 요청을 받는 경우를 생각해 봅시다. 애플리케이션에서는 두 가지 방법으로 이를 처리할 수 있습니다. 
 
-첫째, 응용 프로그램이 요청된 각 제품에 대해 별도의 쿼리를 실행할 수 있습니다.
+첫째, 애플리케이션이 요청된 각 제품에 대해 별도의 쿼리를 실행할 수 있습니다.
 
 ```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
 
-둘째, 응용 프로그램에서 다음을 수행합니다. 
+둘째, 애플리케이션에서 다음을 수행합니다. 
 
 1. 매개 변수 표식(?)을 포함하는 문을 준비합니다.  
    ```sql
@@ -634,10 +634,10 @@ WHERE ProductID = 63;
 
 두 번째 방법은 문이 네 번 이상 실행될 때 좀 더 효율적입니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 준비/실행 모델이 직접 실행에 비해 성능상의 큰 이점이 없는데 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 실행 계획을 재사용하기 때문입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 알고리즘은 현재 SQL 문을 이전에 이 SQL 문을 실행하기 위해 생성한 실행 계획과 비교할 때 효율적입니다. 응용 프로그램이 매개 변수 표식을 사용하여 여러 번 SQL 문을 실행하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 해당 계획이 계획 캐시에서 에이징되지 않는 이상 두 번째 실행부터는 첫 번째 실행의 실행 계획을 재사용합니다. 준비/실행 모델은 여전히 다음과 같은 이점을 제공합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 준비/실행 모델이 직접 실행에 비해 성능상의 큰 이점이 없는데 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 실행 계획을 재사용하기 때문입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 알고리즘은 현재 SQL 문을 이전에 이 SQL 문을 실행하기 위해 생성한 실행 계획과 비교할 때 효율적입니다. 애플리케이션이 매개 변수 표식을 사용하여 여러 번 SQL 문을 실행하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 해당 계획이 계획 캐시에서 에이징되지 않는 이상 두 번째 실행부터는 첫 번째 실행의 실행 계획을 재사용합니다. 준비/실행 모델은 여전히 다음과 같은 이점을 제공합니다. 
 
 * 식별 핸들로 실행 계획을 찾는 것은 SQL 문을 기존 실행 계획과 비교하는 알고리즘보다 더 효율적입니다.
-* 응용 프로그램이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
+* 애플리케이션이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
 ### <a name="ParamSniffing"></a> 매개 변수 검색
@@ -695,7 +695,7 @@ WHERE ProductID = 63;
   각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
 3. 실행한 쿼리 또는 인덱스 작업의 유형  
-  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
+  병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 애플리케이션에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 적절한 테스트를 통해 다른 값이 워크로드 실행에 더 적합하다고 확인되는 경우 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
 
 4. 처리할 행 수가 충분한지 여부  
   쿼리 최적화 프로그램에서 행 수가 부족하다고 판단하는 경우 행을 배포하기 위해 교환 연산자를 사용하지 않습니다. 결과적으로 연산자는 직렬로 실행됩니다. 시작, 배포 및 조정 비용이 병렬 연산자 실행으로 얻은 이익보다 큰 경우 연산자를 직렬 계획으로 실행하면 이 시나리오를 피할 수 있습니다.
@@ -857,7 +857,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 저장소 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
-관계형 엔진은 OLE DB API(응용 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
+관계형 엔진은 OLE DB API(애플리케이션 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 
 연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 Transact-SQL 연산 집합은 OLE DB 공급자의 기능에 따라 다릅니다.
 

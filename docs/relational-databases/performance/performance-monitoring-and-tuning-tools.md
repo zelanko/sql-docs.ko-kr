@@ -38,7 +38,7 @@ ms.locfileid: "52528487"
 |[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC(데이터베이스 콘솔 명령) 문을 사용하면 성능 통계 및 데이터베이스의 논리적, 물리적 일관성을 검사할 수 있습니다.|  
 |[DTA(데이터베이스 엔진 튜닝 관리자)](../../relational-databases/performance/database-engine-tuning-advisor.md)|데이터베이스 엔진 튜닝 관리자는 튜닝할 데이터베이스에 대해 실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 성능 영향을 분석합니다. 데이터베이스 엔진 튜닝 관리자는 인덱스, 인덱싱된 뷰 및 분할의 추가, 제거 또는 수정에 대한 권장 구성을 제공합니다.|  
 |[DEA(데이터베이스 실험 도우미)](https://www.microsoft.com/download/details.aspx?id=54090)|DEA(데이터베이스 실험 도우미)는 SQL Server용 새 A/B 테스트 솔루션입니다. 지정된 워크로드에 대한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 대상 버전의 평가를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 시작)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 최신 버전으로 업그레이드할 때 DEA는 비교 분석 메트릭을 제공할 수 있습니다.|
-|오류 로그|Windows 응용 프로그램 이벤트 로그는 Windows Server 및 Windows 운영 체제 전체에서 발생하는 이벤트뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 이벤트와 전체 텍스트 검색을 전반적으로 보여 줍니다. 이 이벤트 로그에는 다른 곳에서 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이벤트 정보가 포함됩니다. 오류 로그에 있는 정보를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련 있는 문제를 해결할 수 있습니다.|  
+|오류 로그|Windows 애플리케이션 이벤트 로그는 Windows Server 및 Windows 운영 체제 전체에서 발생하는 이벤트뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 이벤트와 전체 텍스트 검색을 전반적으로 보여 줍니다. 이 이벤트 로그에는 다른 곳에서 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이벤트 정보가 포함됩니다. 오류 로그에 있는 정보를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련 있는 문제를 해결할 수 있습니다.|  
 |[확장 이벤트](../../relational-databases/extended-events/extended-events.md)|확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트는 세 가지 그래픽 사용자 인터페이스(새 세션 마법사, 새 세션 및 XE 프로파일러)를 제공하여 세션 데이터를 작성, 수정, 표시 및 분석할 수 있습니다.|  
 |[실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|실행 관련 DMV를 사용하면 실행 관련 정보를 검색할 수 있습니다.|
 |[LQS(활성 쿼리 통계)](../../relational-databases/performance/live-query-statistics.md)|쿼리 실행 단계에 대한 실시간 통계를 표시합니다. 이 데이터는 쿼리를 실행하는 동안 사용할 수 있으므로 이 실행 통계는 쿼리 성능 문제를 디버깅할 때 매우 유용합니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "52528487"
 |임시 모니터링|예<sup>1</sup>|예|||예|예|예|  
 |경고 생성||||예||||  
 |그래픽 인터페이스|예|예||예|예||예|  
-|사용자 지정 응용 프로그램에서 사용|예|예<sup>2</sup>||||예||  
+|사용자 지정 애플리케이션에서 사용|예|예<sup>2</sup>||||예||  
   
  <sup>1</sup> [SQL Server Management Studio XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)   사용  
  <sup>2</sup> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저 사용.  
@@ -72,7 +72,7 @@ ms.locfileid: "52528487"
   
 |도구|설명|  
 |----------|-----------------|  
-|작업 관리자|시스템에서 실행 중인 프로세스 및 응용 프로그램의 개요를 보여 줍니다.|  
+|작업 관리자|시스템에서 실행 중인 프로세스 및 애플리케이션의 개요를 보여 줍니다.|  
 |네트워크 모니터 에이전트|네트워크 트래픽을 모니터링합니다.|  
   
  Windows 운영 체제나 Windows Server 도구에 대한 자세한 내용은 Windows 설명서를 참조하십시오.  

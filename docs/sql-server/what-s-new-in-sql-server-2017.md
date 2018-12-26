@@ -73,7 +73,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 
 ## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 MDS(Master Data Services)
 - SQL Server 2012, SQL Server 2014 및 SQL Server 2016에서 SQL Server 2017 Master Data Services로 업그레이드할 때의 환경 및 성능이 개선되었습니다. 
-- 이제 웹 응용 프로그램의 **탐색기** 페이지에서 엔터티, 컬렉션 및 계층 구조의 정렬된 목록을 볼 수 있습니다.
+- 이제 웹 애플리케이션의 **탐색기** 페이지에서 엔터티, 컬렉션 및 계층 구조의 정렬된 목록을 볼 수 있습니다.
 - 스테이징 저장 프로시저를 사용하여 수백만 개의 레코드를 스테이징하기 위한 성능이 향상되었습니다.
 - 모델 사용 권한을 할당하기 위해 **그룹 관리** 페이지에서 **엔터티** 폴더를 확장할 때의 성능이 향상되었습니다. **그룹 관리** 페이지는 웹 응용 프로그램의 **보안** 섹션에 있습니다. 성능 향상에 대한 자세한 내용은 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)를 참조하세요. 사용 권한 할당에 대한 자세한 내용은 [모델 개체 사용 권한 할당(Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)를 참조하세요.
 
@@ -97,7 +97,7 @@ SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여
 SQL Server 설치 프로그램을 통해 SQL Server Reporting Services를 더 이상 설치할 수 없습니다. [Microsoft SQL Server 2017 Reporting Services를 다운로드](https://www.microsoft.com/download/details.aspx?id=55252)하려면 Microsoft 다운로드 센터로 이동하세요. 
 - 이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다.
 - 최신 버전의 보고서 작성기와 SQL Server Data Tools에서 필요한 필드를 쿼리 디자이너로 끌어다 놓아 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)(Reporting Services 블로그)를 참조하세요.
-- 최신 응용 프로그램 및 사용자 지정 개발을 사용하기 위해 SSRS는 이제 완벽 하게 development 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
+- 최신 애플리케이션 및 사용자 지정 개발을 사용하기 위해 SSRS는 이제 완벽 하게 development 규격 RESTful API를 지원합니다. 전체 API 사양 및 설명서는 이제 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)에서 확인할 수 있습니다.
 
 자세한 내용은 [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)(SSRS(SQL Server Reporting Services)의 새로운 기능)를 참조하세요.
 

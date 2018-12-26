@@ -47,7 +47,7 @@ SSDT를 사용하여 서버 인스턴스에 연결하지 않고도 오프라인 
 |[방법: 프로젝트의 스냅숏 만들기](../ssdt/how-to-create-a-snapshot-of-a-project.md)|데이터베이스 스키마의 읽기 전용 프록시를 만들고, 원하지 않는 변경 내용이 프로젝트에 적용된 경우 원본 프로젝트로 되돌립니다.|  
 |[방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|프로젝트에 새 시퀀스 개체를 추가합니다.|  
 |[방법: CLR 데이터베이스 개체 작업](../ssdt/how-to-work-with-clr-database-objects.md)|SQL Server Data Tools 데이터베이스 프로젝트에 CLR 개체를 만들고 게시합니다.|  
-|[방법: Visual Studio 2010 데이터베이스 프로젝트를 SQL Server 데이터베이스 프로젝트로 변환 및 다른 플랫폼으로 대상 변경](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Visual Studio 2010에서 만든 기존의 SQL Server 데이터베이스, CLR 개체 및 데이터 계층 응용 프로그램 프로젝트를 SQL Server Data Tools 데이터베이스 프로젝트로 변환할 수 있습니다.|  
+|[방법: Visual Studio 2010 데이터베이스 프로젝트를 SQL Server 데이터베이스 프로젝트로 변환 및 다른 플랫폼으로 대상 변경](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Visual Studio 2010에서 만든 기존의 SQL Server 데이터베이스, CLR 개체 및 데이터 계층 애플리케이션 프로젝트를 SQL Server Data Tools 데이터베이스 프로젝트로 변환할 수 있습니다.|  
 |[방법: 배포 전 또는 배포 후 스크립트 지정](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|데이터베이스를 배포하기 전이나 후에 실행하려는 스크립트를 사용하는 방법에 대해 설명합니다.|  
   
 ## <a name="related-sections"></a>관련 섹션  

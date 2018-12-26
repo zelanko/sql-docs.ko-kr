@@ -25,7 +25,7 @@ ms.locfileid: "52525945"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 항목에서는 SQL Server에서 계속 제공되지만 더 이상 사용되지 않는 전체 텍스트 검색 기능에 대해 설명합니다. 이러한 기능은 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에서 사용되지 않는 기능은 사용하지 마세요.  
+  이 항목에서는 SQL Server에서 계속 제공되지만 더 이상 사용되지 않는 전체 텍스트 검색 기능에 대해 설명합니다. 이러한 기능은 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에서 사용되지 않는 기능은 사용하지 마세요.  
   
 **SQL Server:Deprecated Features** 개체 성능 카운터 및 추적 이벤트를 통해 더 이상 사용되지 않는 기능의 사용을 모니터합니다. 자세한 내용은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   

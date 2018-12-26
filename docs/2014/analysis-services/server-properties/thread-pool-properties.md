@@ -20,7 +20,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116927"
@@ -54,7 +54,7 @@ ms.locfileid: "48116927"
   
  기본적으로 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 상위 버전의 Windows  및 SQL  Server를 실행하는 시스템에서 최대 640개까지 사용 가능한 모든 논리적 프로세서를 사용합니다. msmdsrv.exe 프로세스는 시작 시 특정 프로세스 그룹에 할당되지만 시간이 지남에 따라 임의 프로세서 그룹의 임의 논리적 프로세스에서 스레드를 예약할 수 있습니다.  
   
- 많은 수의 프로세서 사용으로 인해 발생하는 한 가지 부작용은 많은 수의 프로세서에서 쿼리 및 처리 부하가 분산되고 공유 데이터 구조에 대한 경합이 증가함에 따라 성능 저하 문제가 발생할 수 있다는 것입니다. 이 문제는 특히 NUMA 아키텍처를 사용하는 고성능 시스템에서 발생할 수 있지만, 동일한 하드웨어에서 데이터 사용량이 많은 응용 프로그램을 여러 개 실행하는 비NUMA 시스템에서도 이 문제가 발생할 수 있습니다.  
+ 많은 수의 프로세서 사용으로 인해 발생하는 한 가지 부작용은 많은 수의 프로세서에서 쿼리 및 처리 부하가 분산되고 공유 데이터 구조에 대한 경합이 증가함에 따라 성능 저하 문제가 발생할 수 있다는 것입니다. 이 문제는 특히 NUMA 아키텍처를 사용하는 고성능 시스템에서 발생할 수 있지만, 동일한 하드웨어에서 데이터 사용량이 많은 애플리케이션을 여러 개 실행하는 비NUMA 시스템에서도 이 문제가 발생할 수 있습니다.  
   
  이 문제를 줄이기 위해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업 유형 간의 선호도를 설정하고 그에 따라 특정 논리적 프로세서 집합을 설정할 수 있습니다. `GroupAffinity` 속성을 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 관리되는 각 스레드 풀 유형에 사용할 시스템 리소스를 지정하는 사용자 지정 선호도 마스크를 만들 수 있습니다.  
   

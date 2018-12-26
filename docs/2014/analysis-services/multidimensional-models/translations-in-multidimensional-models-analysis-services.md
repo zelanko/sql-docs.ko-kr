@@ -57,9 +57,9 @@ ms.locfileid: "48218945"
  사용할 수 있습니다는 **특성 데이터 번역** 대화 상자 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 차원의 특성에 대 한 번역을 정의할 수 있습니다. 에 대 한 자세한 내용은 합니다 **특성 데이터 번역** 대화 상자, 참조 [특성 데이터 번역 대화 상자 &#40;Analysis Services-Multidimensional Data&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="resolving-translations"></a>번역 확인  
- 클라이언트 응용 프로그램이 지정한 언어 식별자로 정보를 요청하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 가장 근사한 언어 식별자로 확인합니다. 클라이언트 응용 프로그램이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
+ 클라이언트 애플리케이션이 지정한 언어 식별자로 정보를 요청하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 가장 근사한 언어 식별자로 확인합니다. 클라이언트 애플리케이션이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
   
- 클라이언트 응용 프로그램이 기본 언어 식별자가 아닌 언어 식별자를 지정하면 인스턴스는 모든 사용 가능한 개체에 대해 모든 사용 가능한 번역을 반복합니다. 지정한 언어 식별자가 특정 번역의 언어 식별자와 일치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 해당 번역을 반환합니다. 일치하는 항목이 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 다음 방법 중 하나를 사용하여 지정한 언어 식별자와 가장 근사한 언어 식별자를 가진 번역을 반환합니다.  
+ 클라이언트 애플리케이션이 기본 언어 식별자가 아닌 언어 식별자를 지정하면 인스턴스는 모든 사용 가능한 개체에 대해 모든 사용 가능한 번역을 반복합니다. 지정한 언어 식별자가 특정 번역의 언어 식별자와 일치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 해당 번역을 반환합니다. 일치하는 항목이 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 다음 방법 중 하나를 사용하여 지정한 언어 식별자와 가장 근사한 언어 식별자를 가진 번역을 반환합니다.  
   
 -   다음 언어 식별자의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 지정한 언어 식별자의 번역이 정의되지 않은 경우에 대해 대체 언어 식별자를 사용합니다.  
   

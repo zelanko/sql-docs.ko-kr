@@ -271,7 +271,7 @@ OUTPUT Clause
  BULK  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 이진 데이터 스트림을 업로드하기 위해 외부 도구에서 사용됩니다. 이 옵션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL과 같은 도구나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 데이터 액세스 응용 프로그래밍 인터페이스에 사용할 수 없습니다.  
+ 이진 데이터 스트림을 업로드하기 위해 외부 도구에서 사용됩니다. 이 옵션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL과 같은 도구나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 데이터 액세스 애플리케이션 프로그래밍 인터페이스에 사용할 수 없습니다.  
   
  FIRE_TRIGGERS  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -303,7 +303,7 @@ OUTPUT Clause
 SQL 그래프 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)를 참조하세요. 
 
 ## <a name="best-practices"></a>최선의 구현 방법  
- @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
+ @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>데이터 대량 가져오기에 대한 최선의 구현 방법  
   

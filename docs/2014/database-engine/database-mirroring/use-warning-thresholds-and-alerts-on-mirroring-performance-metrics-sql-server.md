@@ -19,7 +19,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46f8591a7fe3e8a69ceb3df60011248db38da722
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48132703"
@@ -101,7 +101,7 @@ ms.locfileid: "48132703"
     > [!NOTE]  
     >  자세한 내용은 [서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)을 참조하세요.  
   
- 시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 작업 관리자와 같은 다른 응용 프로그램을 사용하여 이러한 이벤트에 대해 경고를 구성할 수 있습니다.  
+ 시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 작업 관리자와 같은 다른 애플리케이션을 사용하여 이러한 이벤트에 대해 경고를 구성할 수 있습니다.  
   
  데이터베이스 미러링 이벤트에 대해 경고를 정의하는 경우 두 파트너 서버 인스턴스에서 모두 경고 임계값과 경고를 정의하는 것이 좋습니다. 개별 이벤트는 주 서버나 미러 서버 중 하나에서 생성되지만 각 파트너가 언제든지 두 역할 중 하나를 수행할 수 있습니다. 장애 조치 후에도 경고가 계속 작동하려면 두 파트너에서 모두 경고를 정의해야 합니다.  
   

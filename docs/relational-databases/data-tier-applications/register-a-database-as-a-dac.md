@@ -38,7 +38,7 @@ ms.locfileid: "52513231"
  등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 등록을 수행할 수 있습니다. DAC가 데이터베이스에 이미 등록된 경우에는 DAC 등록을 수행할 수 없습니다. 예를 들어 데이터베이스가 DAC를 배포하는 방식으로 만들어진 경우 **데이터 계층 응용 프로그램 등록 마법사**를 실행할 수 없습니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 등록을 수행할 수 있습니다. DAC가 데이터베이스에 이미 등록된 경우에는 DAC 등록을 수행할 수 없습니다. 예를 들어 데이터베이스가 DAC를 배포하는 방식으로 만들어진 경우 **데이터 계층 애플리케이션 등록 마법사**를 실행할 수 없습니다.  
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 등록할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52513231"
     4.  [DAC 등록 페이지](#Register)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램을 등록하는 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션을 등록하는 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 이 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "52513231"
  [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ##  <a name="Set_properties"></a> 속성 설정 페이지  
- 이 페이지를 사용하여 응용 프로그램 이름 및 버전과 같은 DAC 수준 속성을 지정할 수 있습니다.  
+ 이 페이지를 사용하여 애플리케이션 이름 및 버전과 같은 DAC 수준 속성을 지정할 수 있습니다.  
   
  **응용 프로그램 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
   
- **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포하는 경우 이 버전은 **msdb** 데이터베이스에 저장되고 나중에 **의** 데이터 계층 응용 프로그램 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에서 볼 수 있습니다.  
+ **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포하는 경우 이 버전은 **msdb** 데이터베이스에 저장되고 나중에 **의** 데이터 계층 애플리케이션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에서 볼 수 있습니다.  
   
- **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포하는 경우 이 설명은 **msdb** 데이터베이스에 저장되고 나중에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다.  
+ **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포하는 경우 이 설명은 **msdb** 데이터베이스에 저장되고 나중에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **데이터 계층 애플리케이션** 노드에서 볼 수 있습니다.  
   
  **< 이전** - **소개** 페이지로 돌아갑니다.  
   

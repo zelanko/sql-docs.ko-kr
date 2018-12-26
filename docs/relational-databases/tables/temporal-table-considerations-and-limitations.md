@@ -54,7 +54,7 @@ ms.locfileid: "52410090"
   
 -   기록 테이블의 데이터를 직접 수정하는 것은 허용되지 않습니다.  
   
--   **ON DELETE CASCADE** 및 **ON UPDATE CASCADE** 은 현재 테이블에서 허용되지 않습니다. 즉, temporal 테이블이 외래 키 관계(sys.foreign_keys의 *parent_object_id* 에 해당)인 경우 CASCADE 옵션은 허용되지 않습니다. 이러한 제약 조건으로 작업하려면 응용 프로그램 논리를 사용하거나 트리거 후에 기본 키 테이블(sys.foreign_keys의  *referenced_object_id* 에 해당)에서 삭제 시 일관성을 유지하세요. 기본 키 테이블이 임시이고 참조 테이블이 비임시인 경우 그러한 제한 사항이 없습니다. 
+-   **ON DELETE CASCADE** 및 **ON UPDATE CASCADE** 은 현재 테이블에서 허용되지 않습니다. 즉, temporal 테이블이 외래 키 관계(sys.foreign_keys의 *parent_object_id* 에 해당)인 경우 CASCADE 옵션은 허용되지 않습니다. 이러한 제약 조건으로 작업하려면 애플리케이션 논리를 사용하거나 트리거 후에 기본 키 테이블(sys.foreign_keys의  *referenced_object_id* 에 해당)에서 삭제 시 일관성을 유지하세요. 기본 키 테이블이 임시이고 참조 테이블이 비임시인 경우 그러한 제한 사항이 없습니다. 
 
     **참고:** 이 제한 사항은 SQL Server 2016에만 적용됩니다. CASCADE 옵션은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 2.0 이상에서 지원됩니다.  
   

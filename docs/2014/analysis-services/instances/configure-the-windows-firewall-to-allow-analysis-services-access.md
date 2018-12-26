@@ -17,7 +17,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48068944"
@@ -31,7 +31,7 @@ ms.locfileid: "48068944"
   
 -   명명된 인스턴스를 설치할 때 TCP 포트 2382를 엽니다. 명명된 인스턴스는 동적 포트 할당을 사용합니다. Analysis Services용 검색 서비스인 SQL Server Browser 서비스는 TCP 포트 2382에서 수신 대기하고 연결 요청을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 현재 사용되는 포트로 리디렉션합니다.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2013을 지원하도록 SharePoint 모드에서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 설치할 때 TCP 포트 2382를 엽니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 SharePoint 외부에 있습니다. 명명된 'PowerPivot' 인스턴스에 대한 인바운드 요청은 네트워크 연결을 통해 SharePoint 웹 응용 프로그램에서 이루어지며 열린 포트가 필요합니다. 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명명된 인스턴스와 마찬가지로 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]에 대한 액세스를 허용하도록 TCP 2382의 SQL Server Browser 서비스에 대한 인바운드 규칙을 만드십시오.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2013을 지원하도록 SharePoint 모드에서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 설치할 때 TCP 포트 2382를 엽니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 SharePoint 외부에 있습니다. 명명된 'PowerPivot' 인스턴스에 대한 인바운드 요청은 네트워크 연결을 통해 SharePoint 웹 애플리케이션에서 이루어지며 열린 포트가 필요합니다. 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명명된 인스턴스와 마찬가지로 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]에 대한 액세스를 허용하도록 TCP 2382의 SQL Server Browser 서비스에 대한 인바운드 규칙을 만드십시오.  
   
 -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010의 경우에는 Windows 방화벽에서 포트를 열지 마십시오. SharePoint의 추가 기능인 이 서비스는 SharePoint에 대해 구성된 포트를 사용하며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델을 로드 및 쿼리하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 로컬로만 연결합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48068944"
   
 -   SQL Server Management Studio를 사용 하 여 포트를 확인 하 고이 형식으로 Analysis Services 서버에 연결 합니다. \<ip 주소 >:\<portnumber >.  
   
- 응용 프로그램이 특정 포트에서 수신 대기하고 있더라도 방화벽에서 액세스를 차단하면 연결에 성공할 수 없습니다. 명명된 Analysis Services 인스턴스에 연결하려면 msmdsrv.exe 또는 msmdsrv.exe가 방화벽에서 수신 대기하고 있는 고정 포트에 대한 액세스 차단을 해제해야 합니다. 이 항목의 남은 섹션에서는 액세스 차단을 해제하는 방법에 대한 지침을 제공합니다.  
+ 애플리케이션이 특정 포트에서 수신 대기하고 있더라도 방화벽에서 액세스를 차단하면 연결에 성공할 수 없습니다. 명명된 Analysis Services 인스턴스에 연결하려면 msmdsrv.exe 또는 msmdsrv.exe가 방화벽에서 수신 대기하고 있는 고정 포트에 대한 액세스 차단을 해제해야 합니다. 이 항목의 남은 섹션에서는 액세스 차단을 해제하는 방법에 대한 지침을 제공합니다.  
   
  Analysis Services에 대해 방화벽 설정이 이미 정의되어 있는지 확인하려면 제어판에서 고급 보안이 포함된 Windows 방화벽을 사용합니다. 모니터링 폴더의 방화벽 페이지에는 로컬 서버에 대해 정의된 전체 규칙 목록이 표시됩니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48068944"
   
 #### <a name="windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽  
   
-1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 응용 프로그램 페이지를 열고 **Windows 방화벽**을 입력합니다.  
+1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 애플리케이션 페이지를 열고 **Windows 방화벽**을 입력합니다.  
   
 2.  **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭하고 **새 규칙**을 선택합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48068944"
   
 #### <a name="windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽  
   
-1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 응용 프로그램 페이지를 열고 **Windows 방화벽**을 입력합니다.  
+1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 애플리케이션 페이지를 열고 **Windows 방화벽**을 입력합니다.  
   
 2.  SQL Server Browser 서비스에 대한 액세스 차단을 해제하려면 **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 후 **새 규칙**을 클릭합니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48068944"
   
 #### <a name="windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽  
   
-1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 응용 프로그램 페이지를 열고 **Windows 방화벽**을 입력합니다.  
+1.  Windows 7 또는 Windows Vista에서는 제어판의 **시스템 및 보안**을 클릭하고 **Windows 방화벽**을 선택한 다음 **고급 설정**을 클릭합니다. Windows Server 2008 또는 2008 R2에서는 관리 도구를 열고 **고급 보안이 포함된 Windows 방화벽**을 클릭합니다. Windows Server 2012에서는 애플리케이션 페이지를 열고 **Windows 방화벽**을 입력합니다.  
   
 2.  Analysis Services에 대한 액세스 차단을 해제하려면 **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 후 **새 규칙**을 클릭합니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48068944"
   
 4.  지정한 TCP 포트의 차단을 해제하도록 Windows 방화벽을 구성합니다. 명명된 인스턴스에 고정 포트를 사용하는 경우에는 해당 인스턴스에 대해 지정한 TCP 포트 및 SQL Server Browser 서비스에 대한 TCP 포트 2382의 차단을 해제합니다.  
   
-5.  Management Studio에서 로컬로 연결하여 확인한 다음 다른 컴퓨터의 클라이언트 응용 프로그램에서 원격으로 연결하여 확인합니다. Management Studio를 사용 하려면 Analysis Services 기본 인스턴스에 연결 형식으로 서버 이름을 지정 하 여: \<서버 이름 >:\<portnumber >. 명명 된 인스턴스의 경우 서버 이름 지정 \<서버 이름 >\\< n a m e\>합니다.  
+5.  Management Studio에서 로컬로 연결하여 확인한 다음 다른 컴퓨터의 클라이언트 애플리케이션에서 원격으로 연결하여 확인합니다. Management Studio를 사용 하려면 Analysis Services 기본 인스턴스에 연결 형식으로 서버 이름을 지정 하 여: \<서버 이름 >:\<portnumber >. 명명 된 인스턴스의 경우 서버 이름 지정 \<서버 이름 >\\< n a m e\>합니다.  
   
 ##  <a name="bkmk_cluster"></a> Analysis Services 클러스터에 대한 포트 구성  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 장애 조치(failover) 클러스터는 기본 인스턴스 또는 명명된 인스턴스로 설치했는지 여부에 관계없이 항상 TCP 포트 2383에서 수신합니다. 동적 포트 할당은 Windows 장애 조치(failover) 클러스터에 설치되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용되지 않습니다. 클러스터에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터에.를 실행하는 모든 노드에서 TCP 2383을 열어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]클러스터링에 대한 자세한 내용은 [SQL Server Analysis Services를 클러스터링하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068944"
   
  **SharePoint 2010**  
   
- SharePoint 2010을 설치하려는 경우에는 Windows 방화벽에서 포트를 열 필요가 없습니다. SharePoint는 필요한 포트 및 SharePoint 환경 내에서 작동하는 SharePoint용 PowerPivot과 같은 추가 기능을 엽니다. SharePoint 2010용 PowerPivot 설치에서는 PowerPivot 시스템 서비스가 같은 컴퓨터에 함께 설치된 로컬 SQL Server Analysis Services(PowerPivot) 서비스 인스턴스에 대한 독점적인 사용권을 가집니다. PowerPivot 시스템 서비스는 네트워크 연결이 아닌 로컬 연결을 사용하여 SharePoint 서버의 PowerPivot 데이터를 로드, 쿼리 및 처리하는 로컬 Analysis Services 엔진 서비스에 액세스합니다. 클라이언트 응용 프로그램에 PowerPivot 데이터를 요청하면 요청은 SharePoint 설치 프로그램이 연 포트를 통해 라우팅됩니다(즉, SharePoint – 80, SharePoint 중앙 관리 v4, SharePoint 웹 서비스 및 SPUserCodeV4에 대한 액세스를 허용하도록 인바운드 규칙이 정의됨). PowerPivot 웹 서비스는 SharePoint 팜 내부에서 실행되므로 SharePoint 팜의 PowerPivot 데이터에 원격 액세스하기 위해서는 SharePoint 방화벽 규칙만으로도 충분합니다.  
+ SharePoint 2010을 설치하려는 경우에는 Windows 방화벽에서 포트를 열 필요가 없습니다. SharePoint는 필요한 포트 및 SharePoint 환경 내에서 작동하는 SharePoint용 PowerPivot과 같은 추가 기능을 엽니다. SharePoint 2010용 PowerPivot 설치에서는 PowerPivot 시스템 서비스가 같은 컴퓨터에 함께 설치된 로컬 SQL Server Analysis Services(PowerPivot) 서비스 인스턴스에 대한 독점적인 사용권을 가집니다. PowerPivot 시스템 서비스는 네트워크 연결이 아닌 로컬 연결을 사용하여 SharePoint 서버의 PowerPivot 데이터를 로드, 쿼리 및 처리하는 로컬 Analysis Services 엔진 서비스에 액세스합니다. 클라이언트 애플리케이션에 PowerPivot 데이터를 요청하면 요청은 SharePoint 설치 프로그램이 연 포트를 통해 라우팅됩니다(즉, SharePoint – 80, SharePoint 중앙 관리 v4, SharePoint 웹 서비스 및 SPUserCodeV4에 대한 액세스를 허용하도록 인바운드 규칙이 정의됨). PowerPivot 웹 서비스는 SharePoint 팜 내부에서 실행되므로 SharePoint 팜의 PowerPivot 데이터에 원격 액세스하기 위해서는 SharePoint 방화벽 규칙만으로도 충분합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

@@ -30,7 +30,7 @@ items:
     href: methods/subscription-and-delivery-methods.md
   - name: 링크된 보고서 메서드
     href: methods/linked-reports-methods.md
-  - name: 웹 서비스 및 .NET Framework를 사용하여 응용 프로그램 작성
+  - name: 웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
     href: net-framework/building-applications-using-the-web-service-and-the-net-framework.md
   - name: 웹 서비스 프록시 만들기
     href: net-framework/creating-the-web-service-proxy.md

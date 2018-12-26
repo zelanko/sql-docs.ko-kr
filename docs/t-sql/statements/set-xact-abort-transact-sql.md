@@ -39,7 +39,7 @@ ms.locfileid: "47748201"
 
     
 > [!NOTE]  
->  **THROW** 문은 **SET XACT_ABORT**를 인식합니다. **RAISERROR**는 그렇지 않습니다. 새 응용 프로그램에서는 **RAISERROR** 대신 **THROW**를 사용해야 합니다.  
+>  **THROW** 문은 **SET XACT_ABORT**를 인식합니다. **RAISERROR**는 그렇지 않습니다. 새 애플리케이션에서는 **RAISERROR** 대신 **THROW**를 사용해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 런타임 오류가 발생할 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 현재 트랜잭션을 자동으로 롤백할 것인지 여부를 지정합니다.  
   

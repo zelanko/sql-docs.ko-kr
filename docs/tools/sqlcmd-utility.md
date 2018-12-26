@@ -245,7 +245,7 @@ sqlcmd
 **-j** 화면에 원시 오류 메시지를 출력합니다.
   
  **-K** *application_intent*  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
 **-M** *multisubnet_failover*  
  SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
@@ -437,7 +437,7 @@ sqlcmd
  출력할 화면 너비를 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDCOLWIDTH를 설정합니다. 열 너비는 8보다 크고 65536보다 작은 숫자여야 합니다. 지정한 열 너비가 이 범위에 속하지 않을 경우 **sqlcmd**는 오류 메시지를 생성합니다. 기본 너비는 80자입니다. 출력 줄이 지정한 열 너비를 초과하면 다음 줄로 넘어갑니다.  
   
  **-W**  
- 이 옵션은 열에서 후행 공백을 제거합니다. 다른 응용 프로그램으로 내보낼 데이터를 준비하는 경우 **-s** 옵션과 함께 이 옵션을 사용합니다. **-y** 또는 **-Y** 옵션과 함께 사용할 수 없습니다.  
+ 이 옵션은 열에서 후행 공백을 제거합니다. 다른 애플리케이션으로 내보낼 데이터를 준비하는 경우 **-s** 옵션과 함께 이 옵션을 사용합니다. **-y** 또는 **-Y** 옵션과 함께 사용할 수 없습니다.  
   
  **-y** *variable_length_type_display_width*  
  **sqlcmd** 스크립팅 변수 `SQLCMDMAXVARTYPEWIDTH`를 설정합니다. 기본값은 256입니다. 다음과 같은 큰 가변 길이 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  

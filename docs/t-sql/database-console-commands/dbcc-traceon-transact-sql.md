@@ -57,7 +57,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 예기치 않은 상황이 발생하지 않도록 다음 방법 중 하나를 사용하여 프로덕션 서버에서 서버 차원의 추적 플래그만 설정하는 것이 좋습니다.
 -   Sqlservr.exe의 **-T** 명령줄 시작 옵션을 사용합니다. 모든 문이 추적 플래그가 설정된 상태에서 실행되므로 이 방법이 최선의 구현 방법입니다. 여기에는 시작 스크립트의 명령이 포함됩니다. 자세한 내용은 [sqlservr Application](../../tools/sqlservr-application.md)을 참조하세요.  
--   사용자 또는 응용 프로그램이 시스템에서 동시에 문을 실행하지 않는 동안에만 DBCC TRACEON**(***trace#* [**,** ...*.n*]**,-1)** 을 사용합니다.  
+-   사용자 또는 애플리케이션이 시스템에서 동시에 문을 실행하지 않는 동안에만 DBCC TRACEON**(***trace#* [**,** ...*.n*]**,-1)** 을 사용합니다.  
 
 추적 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 작동하는 방법을 제어하여 특정한 특징을 사용자 지정하는 데 사용됩니다. 설정된 추적 플래그는 DBCC TRACEOFF 문을 실행하여 해제할 때까지 서버에서 설정된 상태로 유지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 추적 플래그의 상태를 확인하려면 DBCC TRACESTATUS를 사용하십시오. 추적 플래그를 해제하려면 DBCC TRACEOFF를 사용하십시오.
   

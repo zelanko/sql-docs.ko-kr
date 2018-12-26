@@ -47,7 +47,7 @@ pdo_sqlsrv.log_severity = <number>
   
 로깅 정보가 phperrors.log 파일에 추가됩니다.  
   
-PHP가 초기화에서 구성 파일을 읽고 데이터를 캐시에 저장합니다. 이러한 설정을 업데이트, 즉시 사용, 구성 파일에 기록하기 위한 API도 제공합니다. 이 API를 통해 PHP 초기화 후에도 응용 프로그램 스크립트에서 설정을 변경할 수 있습니다.  
+PHP가 초기화에서 구성 파일을 읽고 데이터를 캐시에 저장합니다. 이러한 설정을 업데이트, 즉시 사용, 구성 파일에 기록하기 위한 API도 제공합니다. 이 API를 통해 PHP 초기화 후에도 애플리케이션 스크립트에서 설정을 변경할 수 있습니다.  
   
 ## <a name="logging-activity-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 작업 로깅  
 로깅을 설정하려면 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 함수를 사용하거나 php.ini 파일을 변경하면 됩니다. 초기화, 연결, 문 또는 오류 함수에서 작업을 기록할 수 있습니다. 또한 오류, 경고, 알림 또는 세 가지 모두를 기록할지 여부를 지정할 수도 있습니다.  

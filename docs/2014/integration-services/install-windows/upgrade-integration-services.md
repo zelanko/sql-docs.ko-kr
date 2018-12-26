@@ -18,7 +18,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
 ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "49072027"
@@ -123,7 +123,7 @@ ms.locfileid: "49072027"
   
 -   사용할 수 없습니다는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 도구를 디자인, 실행 또는 관리할 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 도구에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사, 그리고 패키지 실행 유틸리티(dtexecui.exe)가 포함되어 있습니다. 업그레이드 프로세스를 제거 하지 않습니다 합니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]도구입니다. 그러나 업그레이드된 서버에서 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지에 대한 작업을 수행하는 데 이러한 도구를 계속 사용할 수는 없습니다.  
   
--   기본적으로 업그레이드 설치의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 응용 프로그램 이벤트 로그에 로깅하도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정으로 인해 이벤트 로그 항목이 너무 많이 생성될 수 있습니다. 로깅되는 이벤트에는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"가 포함됩니다. 이러한 이벤트가 응용 프로그램 이벤트 로그에 로깅되지 않도록 하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 1에서 0으로 변경합니다.  
+-   기본적으로 업그레이드 설치의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 애플리케이션 이벤트 로그에 로깅하도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정으로 인해 이벤트 로그 항목이 너무 많이 생성될 수 있습니다. 로깅되는 이벤트에는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"가 포함됩니다. 이러한 이벤트가 애플리케이션 이벤트 로그에 로깅되지 않도록 하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 1에서 0으로 변경합니다.  
   
 ## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>데이터베이스 엔진만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  이 섹션에서는 다음 조건에 해당하는 업그레이드를 수행할 때 나타나는 결과에 대해 설명합니다.  
@@ -145,6 +145,6 @@ ms.locfileid: "49072027"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 컴퓨터의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에이전트 작업을 사용하여 업그레이드된 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 인스턴스에 저장된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 패키지를 실행할 수 없습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
+ blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
   
   

@@ -23,9 +23,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47714451"
 ---
-# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 16비트 및 32비트 응용 프로그램 사용
+# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 16비트 및 32비트 애플리케이션 사용
 > [!IMPORTANT]  
->  16 비트 응용 프로그램 지원 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신 32 비트 또는 64 비트 응용 프로그램을 개발 합니다.  
+>  16 비트 응용 프로그램 지원 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 32 비트 또는 64 비트 응용 프로그램을 개발 합니다.  
   
  ODBC 데이터 액세스 구성 요소를 사용 하 여 32 비트 드라이버와 16 비트 및 32 비트 응용 프로그램을 사용할 수 있습니다. Microsoft® Windows® 95/98 및 Microsoft Windows/Windows 2000 운영 체제는 응용 프로그램 및 드라이버의 다음과 같은 조합을 지원합니다.  
   

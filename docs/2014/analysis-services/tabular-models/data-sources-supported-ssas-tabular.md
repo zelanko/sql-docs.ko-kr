@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48054373"
@@ -30,7 +30,7 @@ ms.locfileid: "48054373"
 -   [데이터 원본 선택 시 유용한 정보](#bkmk_tips)  
   
 ##  <a name="bkmk_supported_ds"></a> 지원되는 데이터 원본  
- 다음 표에 나와 있는 데이터 원본에서 데이터를 가져올 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 응용 프로그램과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
+ 다음 표에 나와 있는 데이터 원본에서 데이터를 가져올 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 애플리케이션과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
   
 |||||  
 |-|-|-|-|  

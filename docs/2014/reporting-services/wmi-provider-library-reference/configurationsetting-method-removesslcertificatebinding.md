@@ -40,13 +40,13 @@ public void RemoveSSLCertificateBindings(string Application,
   
 ## <a name="parameters"></a>매개 변수  
  *응용 프로그램*  
- 인증서 바인딩을 제거해야 하는 응용 프로그램의 이름입니다.  
+ 인증서 바인딩을 제거해야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  
  인증서에 대한 해시입니다.  
   
  *IPAddress*  
- 응용 프로그램의 IP 주소입니다.  
+ 애플리케이션의 IP 주소입니다.  
   
  *포트*  
  바인딩과 연결된 SSL 포트입니다.  

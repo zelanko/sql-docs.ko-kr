@@ -107,13 +107,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interval 데이터 형식을 직접 지원 하지 않습니다. 그러나 응용 프로그램에서 문자열로 interval 이스케이프 시퀀스를 저장할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 열입니다. 나중에 응용 프로그램에서 이러한 문자열을 읽을 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 해당 문자열을 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interval 데이터 형식을 직접 지원 하지 않습니다. 그러나 응용 프로그램에서 문자열로 interval 이스케이프 시퀀스를 저장할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 열입니다. 나중에 애플리케이션에서 이러한 문자열을 읽을 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 해당 문자열을 사용할 수 없습니다.  
   
  대량 복사 함수를 사용 하 여 신속 하 게 데이터를 로드할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 데이터 원본에서 읽은 합니다. 사용 하 여 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 열의 결과 집합을 프로그램 변수에 바인딩할 사용 **bcp_bind** 대량 복사 작업에 동일한 프로그램 변수를 바인딩할 합니다. 호출 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 하거나 **SQLFetch** 프로그램 변수 및 호출에 ODBC 데이터 원본에서 데이터 행을 페치합니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 데이터를 대량 복사 프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  응용 프로그램이 사용할 수는 [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 변수에 원래 지정 된 데이터 변수의 주소를 변경 해야 할 때마다 함수는 **bcp_bind** *pData* 매개 변수입니다. 응용 프로그램이 사용할 수는 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 변수에 원래 지정 된 데이터 길이 변경 해야 할 때마다 함수는 **bcp_bind * * * cbData* 매개 변수입니다.  
   
- 데이터를 읽을 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사를 사용 하 여 프로그램 변수로 "bcp_readrow" 함수입니다. 응용 프로그램에서 서버로 데이터를 보낼 수만 있습니다.  
+ 데이터를 읽을 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사를 사용 하 여 프로그램 변수로 "bcp_readrow" 함수입니다. 애플리케이션에서 서버로 데이터를 보낼 수만 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 작업 수행 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

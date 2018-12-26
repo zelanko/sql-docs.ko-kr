@@ -23,7 +23,7 @@ ms.locfileid: "47792231"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>저장 프로시저를 사용할 때 권한 취소 및 권한 부여
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  Microsoft ODBC Driver for Oracle 사용자 권한을 부여 하 고 다음 저장된 프로시저에서 액세스 하는 테이블에 취소할 때 다음 오류 메시지를 반환 합니다.  
   

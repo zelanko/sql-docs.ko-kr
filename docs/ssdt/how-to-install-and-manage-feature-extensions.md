@@ -38,7 +38,7 @@ ms.locfileid: "47613231"
 |------------------|------------------------|------------------|  
 |SQL Server 단위 테스트의 사용자 지정 테스트 조건|MSBuild/MSTest를 사용하여 Visual Studio 2013용 개발자 명령 프롬프트 및 유사한 명령줄 도구에서 단위 테스트를 실행할 수 있습니다.|Visual Studio 내에서 실행되는 경우와 동일합니다.|  
 |빌드 참가자<br /><br />배포 참가자|[SqlPackage.exe](../tools/sqlpackage.md) 또는 데이터베이스 프로젝트를 빌드할 때 MSBuild 배포 또는 게시 대상 사용|MSBuild: Visual Studio 내에서 실행되는 경우와 동일합니다.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): Visual Studio 디렉터리 내에 있는 경우 이전과 동일합니다.<br /><br />SqlPackage.exe 및 기타 DacFx DLL이 해당 디렉터리 외부에 있는 경우 확장은 동일한 디렉터리나 C:\Program Files (x86)\\\MicrosoftSQL Server\120\DAC\bin\Extensions에 배치되어야 합니다.|  
-|정적 코드 분석 규칙|MSBuild를 사용하여 프로젝트를 빌드하고 정적 코드 분석을 실행할 수 있습니다.<br /><br />또한 사용자 고유의 응용 프로그램에서 CodeAnalysisService API를 사용하여 코드 분석을 실행할 수 있습니다. 이 경우에 확장 조회 규칙은 SqlPackage.exe가 사용되는 경우와 동일하게 작동합니다.|빌드 및 배포 참가자의 경우와 동일|  
+|정적 코드 분석 규칙|MSBuild를 사용하여 프로젝트를 빌드하고 정적 코드 분석을 실행할 수 있습니다.<br /><br />또한 사용자 고유의 애플리케이션에서 CodeAnalysisService API를 사용하여 코드 분석을 실행할 수 있습니다. 이 경우에 확장 조회 규칙은 SqlPackage.exe가 사용되는 경우와 동일하게 작동합니다.|빌드 및 배포 참가자의 경우와 동일|  
   
 > [!NOTE]  
 > Program Files 폴더 아래의 설치 디렉터리에 액세스하려면 사용 중인 컴퓨터에 대한 관리자 권한이 있어야 합니다. 적절한 권한이 없으면 네트워크 관리자에게 문의하세요.  

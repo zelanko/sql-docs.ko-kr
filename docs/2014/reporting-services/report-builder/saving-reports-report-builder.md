@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 37620b099bf07d8c38472dc211040d9efb252992
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48182043"
@@ -53,7 +53,7 @@ ms.locfileid: "48182043"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 보고서 내보내기 및 저장  
- 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 응용 프로그램으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서를 내보내는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 하 고 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 애플리케이션으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서를 내보내는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 하 고 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   

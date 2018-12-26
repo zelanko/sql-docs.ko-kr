@@ -77,7 +77,7 @@ ms.locfileid: "52711014"
  ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
 보고서 도구 모음  
   
- 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)를 참조하세요.  
+ 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 애플리케이션의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)를 참조하세요.  
   
  보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52711014"
   
  SharePoint 사이트에는 데이터 원본 속성, 보고서 기록, 보고서 처리 옵션, 일정, 구독 및 보고서 매개 변수를 설정하고 공유 일정을 만들 수 있는 페이지가 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 도구에서와 같은 방식으로 SharePoint 사이트에서 보고서 서버 항목을 관리할 수 있습니다.  
   
- 응용 프로그램 페이지에 액세스하려면 보고서의 드롭다운 메뉴에서 항목과 관련된 동작을 선택하거나 이전에 SharePoint 라이브러리에 추가했던 기타 보고서 서버 항목을 선택합니다. 항목 및 사용자 권한에 따라 보고서 작성기에서 보고서를 만들고 모델을 생성하며 모델 항목 보안을 설정할 수도 있습니다.  
+ 애플리케이션 페이지에 액세스하려면 보고서의 드롭다운 메뉴에서 항목과 관련된 동작을 선택하거나 이전에 SharePoint 라이브러리에 추가했던 기타 보고서 서버 항목을 선택합니다. 항목 및 사용자 권한에 따라 보고서 작성기에서 보고서를 만들고 모델을 생성하며 모델 항목 보안을 설정할 수도 있습니다.  
   
  Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52711014"
   
   
 ##  <a name="DeskTop"></a> 데스크톱 응용 프로그램에서 보고서 보기  
- 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel과 같은 데스크톱 응용 프로그램을 보고서 뷰어로 사용할 수 있습니다. 이렇게 하려면 데스크톱 응용 프로그램 형식과 공유 폴더 대상을 지정하는 구독을 정의합니다. 그러면 보고서 서버에서 보고서를 응용 프로그램 파일로 생성하고 파일 이름 확장명을 추가한 후 하드 디스크에 파일로 저장합니다. 그런 다음 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 다른 응용 프로그램을 사용하여 보고서를 볼 수 있습니다.  
+ 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel과 같은 데스크톱 애플리케이션을 보고서 뷰어로 사용할 수 있습니다. 이렇게 하려면 데스크톱 애플리케이션 형식과 공유 폴더 대상을 지정하는 구독을 정의합니다. 그러면 보고서 서버에서 보고서를 애플리케이션 파일로 생성하고 파일 이름 확장명을 추가한 후 하드 디스크에 파일로 저장합니다. 그런 다음 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 다른 애플리케이션을 사용하여 보고서를 볼 수 있습니다.  
   
   
 ##  <a name="AboutUserSessions"></a> 사용자 세션 정보  

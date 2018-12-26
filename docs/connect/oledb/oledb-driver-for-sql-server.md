@@ -31,12 +31,12 @@ ms.locfileid: "47687871"
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 독립 실행형 데이터 액세스 응용 프로그래밍 인터페이스 (API) OLE DB에 도입 된 데는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. OLE DB Driver for SQL Server는 하나의 동적 연결 라이브러리 (DLL)에 SQL OLE DB 드라이버를 제공합니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. SQL Server용 OLE DB 드라이버를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 새 응용 프로그램을 작성하거나 기존 응용 프로그램을 개선할 수 있습니다.  
+  OLE DB Driver for SQL Server는 독립 실행형 데이터 액세스 응용 프로그래밍 인터페이스 (API) OLE DB에 도입 된 데는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. OLE DB Driver for SQL Server는 하나의 동적 연결 라이브러리 (DLL)에 SQL OLE DB 드라이버를 제공합니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. SQL Server용 OLE DB 드라이버를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 새 애플리케이션을 작성하거나 기존 애플리케이션을 개선할 수 있습니다.  
   
 > [!NOTE]  
 >  OLE DB Driver for SQL Server 용 OLE DB 드라이버 Windows DAC 응용 프로그램을 업데이트 하기 전에 고려해 야 할 문제에 대 한 정보 및 SQL Server 및 Windows DAC 간의 차이점 목록은 참조 하세요. [SQL에 대 한 OLE DB 드라이버로 응용 프로그램을 업데이트 하는 중입니다. MDAC에서 서버](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)합니다.  
   
- SQL Server용 OLE DB 드라이버는 Windows DAC와 함께 공급된 OLE DB 핵심 서비스와 연동하여 사용할 수 있지만 반드시 그래야 하는 것은 아니며 개별 응용 프로그램 요구 사항(예를 들어 연결 풀링이 필요한지 여부)에 따라 핵심 서비스를 사용할지 여부를 선택할 수 있습니다.  
+ SQL Server용 OLE DB 드라이버는 Windows DAC와 함께 공급된 OLE DB 핵심 서비스와 연동하여 사용할 수 있지만 반드시 그래야 하는 것은 아니며 개별 애플리케이션 요구 사항(예를 들어 연결 풀링이 필요한지 여부)에 따라 핵심 서비스를 사용할지 여부를 선택할 수 있습니다.  
   
  데이터 개체 (ADO (ActiveX) 응용 프로그램이 SQL Server 용 OLE DB 드라이버를 사용할 수 있지만와 함께에서 ADO를 사용 하는 것이 좋습니다.는 **DataTypeCompatibility** 연결 문자열 키워드 (또는 해당  **DataSource** 속성). ADO 응용 프로그램에 도입 된 새로운 기능을 이용할 수 있습니다 SQL Server 용 OLE DB 드라이버를 사용할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 는 OLE DB Driver for SQL Server를 통해 연결 문자열 키워드 또는 OLE DB 속성을 통해 사용할 수 있는 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. ADO 사용 하 여 이러한 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 [OLE DB Driver for SQL Server를 사용 하 여 ADO를 사용 하 여](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)입니다.  
   

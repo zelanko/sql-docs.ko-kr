@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c277319377fda81e0c1f6901b2d20a22b500415c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48128570"
@@ -80,7 +80,7 @@ ms.locfileid: "48128570"
   
 #### <a name="verify-msolap5-is-a-trusted-provider"></a>MSOLAP.5가 신뢰할 수 있는 공급자인지 확인  
   
-1.  중앙 관리에서 **서비스 응용 프로그램 관리**를 클릭한 다음 Excel 서비스 응용 프로그램을 클릭합니다.  
+1.  중앙 관리에서 **서비스 애플리케이션 관리**를 클릭한 다음 Excel 서비스 애플리케이션을 클릭합니다.  
   
 2.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다.  
   

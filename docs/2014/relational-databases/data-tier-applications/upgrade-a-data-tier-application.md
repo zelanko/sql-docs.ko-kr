@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 업그레이드 | Microsoft 문서
+title: 데이터 계층 애플리케이션 업그레이드 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,20 +26,20 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48152703"
 ---
-# <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
-  데이터 계층 응용 프로그램 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 응용 프로그램)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
+# <a name="upgrade-a-data-tier-application"></a>데이터 계층 애플리케이션 업그레이드
+  데이터 계층 애플리케이션 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 애플리케이션)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
 -   **DAC를 업그레이드하려면:**  [데이터 계층 응용 프로그램 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 응용 프로그램](data-tier-applications.md)을 참조하세요.  
+ DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 애플리케이션](data-tier-applications.md)을 참조하세요.  
   
 ###  <a name="ChoseDACUpgOptions"></a> DAC 업그레이드 옵션 선택  
  전체 업그레이드에는 4가지 업그레이드 옵션이 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48152703"
   
 -   업그레이드가 수행할 스키마 변경 목록을 생성하고 목록에서 문제가 있는지 검토하는 것이 좋습니다.  
   
- DAC 패키지의 응용 프로그램 이름이 현재 배포된 DAC의 응용 프로그램 이름과 일치해야 합니다. 예를 들어 현재 DAC의 응용 프로그램 이름이 **GeneralLedger**이면 마찬가지로 응용 프로그램 이름이 **GeneralLedger**인 DAC 패키지를 사용해야 업그레이드할 수 있습니다.  
+ DAC 패키지의 애플리케이션 이름이 현재 배포된 DAC의 애플리케이션 이름과 일치해야 합니다. 예를 들어 현재 DAC의 애플리케이션 이름이 **GeneralLedger**이면 마찬가지로 애플리케이션 이름이 **GeneralLedger**인 DAC 패키지를 사용해야 업그레이드할 수 있습니다.  
   
  모든 수정 사항을 기록할 수 있는 충분한 트랜잭션 로그 공간이 있는지 확인합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48152703"
   
 2.  **관리** 노드, **데이터 계층 응용 프로그램** 노드를 차례로 확장합니다.  
   
-3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 업그레이드…** 를 선택합니다.  
+3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 애플리케이션 업그레이드…** 를 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48152703"
     7.  [DAC 업그레이드 페이지](#Upgrade)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램을 업그레이드하는 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션을 업그레이드하는 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 이 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -111,10 +111,10 @@ ms.locfileid: "48152703"
  **취소** - DAC를 업그레이드하지 않고 마법사를 종료합니다.  
   
 ##  <a name="Select_dac_package"></a> 패키지 선택 페이지  
- 이 페이지를 사용하여 데이터 계층 응용 프로그램의 새 버전을 포함하는 DAC 패키지를 지정할 수 있습니다. 이 페이지는 두 가지 상태로 전환됩니다.  
+ 이 페이지를 사용하여 데이터 계층 애플리케이션의 새 버전을 포함하는 DAC 패키지를 지정할 수 있습니다. 이 페이지는 두 가지 상태로 전환됩니다.  
   
 ### <a name="select-the-dac-package"></a>DAC 패키지 선택  
- 이 페이지의 초기 상태를 사용하여 배포할 DAC 패키지를 선택할 수 있습니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다. DAC 패키지의 DAC 응용 프로그램 이름이 현재 DAC의 응용 프로그램 이름과 같아야 합니다.  
+ 이 페이지의 초기 상태를 사용하여 배포할 DAC 패키지를 선택할 수 있습니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다. DAC 패키지의 DAC 애플리케이션 이름이 현재 DAC의 애플리케이션 이름과 같아야 합니다.  
   
  **DAC 패키지** - 새 버전의 데이터 계층 응용 프로그램이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
   

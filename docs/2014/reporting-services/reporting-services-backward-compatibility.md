@@ -24,7 +24,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48051003"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services의 이전 버전과의 호환성
-  이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전 간의 변경된 동작에 대해 설명합니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 포함하는 사용자 지정 응용 프로그램의 작동을 중단시키는 것으로 알려진 근본적인 제품 변경 사항에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전 간의 변경된 동작에 대해 설명합니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 포함하는 사용자 지정 애플리케이션의 작동을 중단시키는 것으로 알려진 근본적인 제품 변경 사항에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

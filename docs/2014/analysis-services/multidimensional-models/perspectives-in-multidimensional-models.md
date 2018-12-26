@@ -29,7 +29,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48104823"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>다차원 모델의 큐브 뷰
-  큐브 뷰는 특정 응용 프로그램이나 사용자 그룹을 위해 생성된 큐브 하위 집합입니다. 큐브 자체가 기본 큐브 뷰입니다. 큐브 뷰는 큐브로 클라이언트에게 노출됩니다. 큐브 뷰는 사용자에게 다른 큐브와 같게 보입니다. 큐브 뷰에서 쓰기 저장을 통해 큐브 데이터를 변경하면 원본 큐브에 변경 내용이 반영됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 뷰에 대한 자세한 내용은 [큐브 뷰](../multidimensional-models-olap-logical-cube-objects/perspectives.md)를 참조하세요.  
+  큐브 뷰는 특정 애플리케이션이나 사용자 그룹을 위해 생성된 큐브 하위 집합입니다. 큐브 자체가 기본 큐브 뷰입니다. 큐브 뷰는 큐브로 클라이언트에게 노출됩니다. 큐브 뷰는 사용자에게 다른 큐브와 같게 보입니다. 큐브 뷰에서 쓰기 저장을 통해 큐브 데이터를 변경하면 원본 큐브에 변경 내용이 반영됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 뷰에 대한 자세한 내용은 [큐브 뷰](../multidimensional-models-olap-logical-cube-objects/perspectives.md)를 참조하세요.  
   
  큐브 디자이너의 **큐브 뷰** 탭을 사용하여 큐브에 큐브 뷰를 만들거나 수정할 수 있습니다. **큐브 뷰** 탭의 첫 번째 열은 큐브의 모든 개체가 나열된 **큐브 개체** 열입니다. 이 열은 큐브의 기본 큐브 뷰에 해당되며, 큐브 자체를 나타냅니다.  
   

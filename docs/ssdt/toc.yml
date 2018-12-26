@@ -5,7 +5,7 @@ items:
   href: download-sql-server-data-tools-ssdt.md
 - name: SSDT에 대한 Changelog
   href: changelog-for-sql-server-data-tools-ssdt.md
-- name: 데이터 계층 응용 프로그램 프레임워크 - 사용 조건
+- name: 데이터 계층 애플리케이션 프레임워크 - 사용 조건
   href: data-tier-application-framework-license-terms.md
 - name: SSDT 및 SSDT-BI의 이전 릴리스
   href: previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md

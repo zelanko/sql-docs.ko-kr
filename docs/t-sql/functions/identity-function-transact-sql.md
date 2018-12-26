@@ -35,7 +35,7 @@ ms.locfileid: "47618561"
   ID 열을 새 테이블에 삽입하기 위해 INTO *테이블* 절과 함께 SELECT 문에서만 사용됩니다. IDENTITY 함수는 CREATE TABLE 및 ALTER TABLE과 함께 사용되는 IDENTITY 속성과 비슷하지만 동일하지는 않습니다.  
   
 > [!NOTE]  
->  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
+>  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

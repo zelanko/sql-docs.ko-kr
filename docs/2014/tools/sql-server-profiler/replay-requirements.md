@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 447792a89be970078fdfca3f1e79eadbcc25bbfe
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48173673"
@@ -27,7 +27,7 @@ ms.locfileid: "48173673"
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 나 Distributed Replay Utility를 사용하여 추적 데이터를 재생하려면 특정 이벤트 클래스 및 열 집합이 추적에 캡처되어야 합니다. **TSQL_Replay** 추적 템플릿을 사용하여 나중에 재생에 사용되도록 추적을 구성한 경우 이러한 설정이 기본적으로 사용됩니다. 이 항목에서는 이러한 설정 및 기타 재생 요구 사항에 대해 설명합니다.  
   
 > [!NOTE]  
->  리소스를 많이 사용하는 OLTP 응용 프로그램(활성 동시 연결 수가 많거나 처리량이 많음)을 재생하는 데는 Distributed Replay Utility를 사용하는 것이 좋습니다. Distributed Replay Utility는 여러 컴퓨터의 추적 데이터를 재생할 수 있으므로 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)을 참조하세요.  
+>  리소스를 많이 사용하는 OLTP 애플리케이션(활성 동시 연결 수가 많거나 처리량이 많음)을 재생하는 데는 Distributed Replay Utility를 사용하는 것이 좋습니다. Distributed Replay Utility는 여러 컴퓨터의 추적 데이터를 재생할 수 있으므로 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)을 참조하세요.  
   
 ## <a name="event-classes-required-for-replay"></a>재생에 필요한 이벤트 클래스  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 데이터를 재생하려면 다음 이벤트 클래스 집합 및 모니터링하려는 기타 다른 이벤트 클래스가 추적에 캡처되어야 합니다.  

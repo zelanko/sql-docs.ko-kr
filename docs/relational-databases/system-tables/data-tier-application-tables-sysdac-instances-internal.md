@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47827381"
 ---
-# <a name="data-tier-application-tables---sysdacinstancesinternal"></a>데이터 계층 응용 프로그램 테이블 - sysdac_instances_internal
+# <a name="data-tier-application-tables---sysdacinstancesinternal"></a>데이터 계층 애플리케이션 테이블 - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 응용 프로그램) 인스턴스마다 하나의 행을 표시합니다. 이 테이블은 msdb 데이터베이스의 dbo 스키마에 저장 됩니다.  

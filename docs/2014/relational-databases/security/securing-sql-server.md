@@ -43,7 +43,7 @@ ms.locfileid: "48192523"
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 네트워크 액세스|[!INCLUDE[ssEW](../../includes/ssew-md.md)] 온라인 설명서의 "서버 환경 구성 및 보안 설정"|  
   
 ### <a name="operating-system-security"></a>운영 체제 보안  
- 운영 체제 서비스 팩 및 업그레이드에는 중요한 보안 향상 기능이 포함되어 있습니다. 모든 업데이트와 업그레이드를 데이터베이스 응용 프로그램을 사용하여 테스트한 후 운영 체제에 적용합니다.  
+ 운영 체제 서비스 팩 및 업그레이드에는 중요한 보안 향상 기능이 포함되어 있습니다. 모든 업데이트와 업그레이드를 데이터베이스 애플리케이션을 사용하여 테스트한 후 운영 체제에 적용합니다.  
   
  방화벽을 사용하는 것도 효과적인 보안 구현 방법입니다. 논리적으로 방화벽은 네트워크 트래픽을 분리 또는 제한하므로 방화벽을 구성하여 조직의 데이터 보안 정책을 강화할 수 있습니다. 방화벽을 사용하면 보안 조치를 중점적으로 취할 수 있는 검사점이 제공되어 운영 체제 수준의 보안이 향상됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 방화벽 사용 방법에 대한 자세한 정보를 제공합니다.  
   
@@ -110,10 +110,10 @@ GO
 |다음에서 사용할 인증서 만들기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |데이터베이스 미러링에 인증서 사용|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-## <a name="application-security"></a>응용 프로그램 보안  
+## <a name="application-security"></a>애플리케이션 보안  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 방법에는 보안 클라이언트 응용 프로그램 작성이 포함됩니다.  
   
- 네트워킹 계층에서 클라이언트 응용 프로그램의 보안을 설정하는 방법은 [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)을 참조하십시오.  
+ 네트워킹 계층에서 클라이언트 애플리케이션의 보안을 설정하는 방법은 [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)을 참조하십시오.  
   
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>SQL Server 보안 도구, 유틸리티, 뷰 및 함수  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보안을 구성하고 관리하는 데 사용할 수 있는 도구, 유틸리티, 뷰 및 함수를 제공합니다.  

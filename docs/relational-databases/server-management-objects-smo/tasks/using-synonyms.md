@@ -29,10 +29,10 @@ ms.locfileid: "47662001"
  대체 이름이 주어지는 개체를 기준 개체라고 합니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체의 이름 속성이 기준 개체에 부여되는 대체 이름입니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-synonym-in-visual-c"></a>Visual C#에서 동의어 만들기  
- 코드 예제는 스키마 범위 개체에 대한 동의어 또는 대체 이름을 만드는 방법을 보여 줍니다. 클라이언트 응용 프로그램에서 기준 개체를 참조하기 위해 여러 부분으로 된 이름을 사용하는 대신 동의어를 통해 기준 개체의 단일 참조를 사용할 수 있습니다.  
+ 코드 예제는 스키마 범위 개체에 대한 동의어 또는 대체 이름을 만드는 방법을 보여 줍니다. 클라이언트 애플리케이션에서 기준 개체를 참조하기 위해 여러 부분으로 된 이름을 사용하는 대신 동의어를 통해 기준 개체의 단일 참조를 사용할 수 있습니다.  
   
 ```csharp  
 {  
@@ -60,7 +60,7 @@ ms.locfileid: "47662001"
 ```  
   
 ## <a name="creating-a-synonym-in-powershell"></a>PowerShell에서 동의어 만들기  
- 코드 예제는 스키마 범위 개체에 대한 동의어 또는 대체 이름을 만드는 방법을 보여 줍니다. 클라이언트 응용 프로그램에서 기준 개체를 참조하기 위해 여러 부분으로 된 이름을 사용하는 대신 동의어를 통해 기준 개체의 단일 참조를 사용할 수 있습니다.  
+ 코드 예제는 스키마 범위 개체에 대한 동의어 또는 대체 이름을 만드는 방법을 보여 줍니다. 클라이언트 애플리케이션에서 기준 개체를 참조하기 위해 여러 부분으로 된 이름을 사용하는 대신 동의어를 통해 기준 개체의 단일 참조를 사용할 수 있습니다.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

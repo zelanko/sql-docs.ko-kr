@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
 ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "49072207"
@@ -67,7 +67,7 @@ ms.locfileid: "49072207"
 |[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 에서 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 또는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]프로젝트 파일을 열고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 프로젝트의 여러 패키지를 업그레이드합니다.<br /><br /> 자세한 내용은 [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) 및 [SSIS 패키지 업그레이드 마법사 F1 도움말](../ssis-package-upgrade-wizard-f1-help.md)을 참조하세요.|패키지 업그레이드는 영구적입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지의 경우 스크립트 마이그레이션은 영구적입니다.|  
 |최신 <xref:Microsoft.SqlServer.Dts.Runtime.Application.Upgrade%2A> 메서드를 사용하여 하나 이상의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 업그레이드하는 방법에는 여러 가지가 있습니다.|패키지 업그레이드는 영구적입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지의 경우 스크립트 마이그레이션은 영구적입니다.|  
   
-## <a name="custom-applications-and-custom-components"></a>사용자 지정 응용 프로그램 및 사용자 지정 구성 요소  
+## <a name="custom-applications-and-custom-components"></a>사용자 지정 애플리케이션 및 사용자 지정 구성 요소  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 사용자 지정 구성 요소는 현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 작동하지 않습니다.  
   
  현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 도구를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 실행 및 관리할 수 있습니다. 버전 10.0.0.0([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])에서 버전 11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 런타임 어셈블리를 리디렉션할 수 있도록 4개의 바인딩 리디렉션 규칙을 다음 파일에 추가했습니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "49072207"
   
 -   msdn.microsoft.com의 기술 문서, [SQL Server 2012로 SSIS를 업그레이드하기 위한 5가지 팁](http://go.microsoft.com/fwlink/?LinkId=235321)  
   
--   blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
+-   blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
   
 -   channel9.msdn.com의 웹 캐스트 - [SSIS 패키지를 SQL Server 2012로 업그레이드](http://go.microsoft.com/fwlink/?LinkId=258674)  
   

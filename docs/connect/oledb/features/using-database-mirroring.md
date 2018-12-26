@@ -64,7 +64,7 @@ ms.locfileid: "47614481"
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버  
  SQL Server용 OLE DB 드라이버는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원합니다. DBPROPSET_SQLSERVERDBINIT 속성 집합에 SSPROP_INIT_FAILOVERPARTNER 속성이 추가되었으며 DBPROP_INIT_PROVIDERSTRING의 새로운 연결 문자열 특성으로 **FailoverPartner** 키워드가 추가되었습니다. 자세한 내용은 [OLE DB Driver for SQL Server를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)입니다.  
   
- 장애 조치(Failover) 캐시는 공급자가 로드되어 있는 동안, 즉 **CoUninitialize**가 호출되기 전까지 또는 응용 프로그램이 SQL Server용 OLE DB 드라이버가 관리하는 일부 개체(예: 데이터 원본 개체)에 대한 참조를 가지고 있는 동안 유지됩니다.  
+ 장애 조치(Failover) 캐시는 공급자가 로드되어 있는 동안, 즉 **CoUninitialize**가 호출되기 전까지 또는 애플리케이션이 SQL Server용 OLE DB 드라이버가 관리하는 일부 개체(예: 데이터 원본 개체)에 대한 참조를 가지고 있는 동안 유지됩니다.  
   
  SQL Server 데이터베이스 미러링 지원에 대 한 OLE DB 드라이버에 대 한 세부 정보를 참조 하세요 [초기화 및 권한 부여 속성](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)합니다.  
  

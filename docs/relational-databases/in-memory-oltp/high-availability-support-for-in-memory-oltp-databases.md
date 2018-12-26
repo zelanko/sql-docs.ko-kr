@@ -43,7 +43,7 @@ ms.locfileid: "47665111"
     메모리 최적화 테이블을 메모리에 로드해야 데이터베이스를 사용할 수 있으므로 장애 조치(failover) 시간이 더 길어질 수 있습니다.  
   
 -   **SCHEMA_ONLY 테이블**   
-    장애 조치(failover) 후 SCHEMA_ONLY 테이블은 행 없이 비어 있게 됩니다. 이것이 응용 프로그램에서 설계 및 정의한 방식입니다. 하나 이상의 SCHEMA_ONLY 테이블이 있는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 다시 시작할 때도 똑같이 작동합니다.  
+    장애 조치(failover) 후 SCHEMA_ONLY 테이블은 행 없이 비어 있게 됩니다. 이것이 애플리케이션에서 설계 및 정의한 방식입니다. 하나 이상의 SCHEMA_ONLY 테이블이 있는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 다시 시작할 때도 똑같이 작동합니다.  
   
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>메모리 내 OLTP에서 트랜잭션 복제 지원  
  피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.  

@@ -19,7 +19,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
 ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43809819"
@@ -35,7 +35,7 @@ ms.locfileid: "43809819"
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   
 ##  <a name="ViewDACContents"></a> DAC 내용 보기  
- 데이터 계층 응용 프로그램(DAC) 패키지의 내용을 볼 수 있는 두 가지 메커니즘이 있습니다. SQL Server Developer Tools의 DAC 프로젝트로 DAC 패키지를 가져올 수 있습니다. 두 번째는 패키지 내용을 폴더에 압축을 푸는 것입니다.  
+ 데이터 계층 애플리케이션(DAC) 패키지의 내용을 볼 수 있는 두 가지 메커니즘이 있습니다. SQL Server Developer Tools의 DAC 프로젝트로 DAC 패키지를 가져올 수 있습니다. 두 번째는 패키지 내용을 폴더에 압축을 푸는 것입니다.  
   
  **SQL Server Developer Tools에서 DAC 보기**  
   
@@ -66,13 +66,13 @@ ms.locfileid: "43809819"
   
  **마법사를 사용하여 데이터베이스 변경 내용 보기**  
   
-1.  새 버전의 DAC를 포함하는 DAC 패키지와 현재 배포된 DAC를 지정하여 **데이터 계층 응용 프로그램 업그레이드** 마법사를 실행합니다.  
+1.  새 버전의 DAC를 포함하는 DAC 패키지와 현재 배포된 DAC를 지정하여 **데이터 계층 애플리케이션 업그레이드** 마법사를 실행합니다.  
   
 2.  **변경 내용 검색** 페이지에서 데이터베이스에 대한 변경 내용 보고서를 검토합니다.  
   
 3.  업그레이드를 중단하려면 **취소** 를 선택합니다.  
   
-4.  마법사 사용에 대한 자세한 내용은 [데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)를 참조하세요.  
+4.  마법사 사용에 대한 자세한 내용은 [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)를 참조하세요.  
   
  **PowerShell을 사용하여 데이터베이스 변경 내용 보기**  
   
@@ -111,13 +111,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **마법사를 사용하여 업그레이드 동작 보고**  
   
-1.  새 버전의 DAC를 포함하는 DAC 패키지와 현재 배포된 DAC를 지정하여 **데이터 계층 응용 프로그램 업그레이드** 마법사를 실행합니다.  
+1.  새 버전의 DAC를 포함하는 DAC 패키지와 현재 배포된 DAC를 지정하여 **데이터 계층 애플리케이션 업그레이드** 마법사를 실행합니다.  
   
 2.  **요약** 페이지에서 업그레이드 동작 보고서를 검토합니다.  
   
 3.  업그레이드를 중단하려면 **취소** 를 선택합니다.  
   
-4.  마법사 사용에 대한 자세한 내용은 [데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)를 참조하세요.  
+4.  마법사 사용에 대한 자세한 내용은 [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)를 참조하세요.  
   
  **PowerShell을 사용하여 업그레이드 동작 보고**  
   

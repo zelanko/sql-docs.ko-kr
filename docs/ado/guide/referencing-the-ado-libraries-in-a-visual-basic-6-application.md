@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47696972"
 ---
-# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 응용 프로그램에서 ADO 라이브러리 참조
+# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 애플리케이션에서 ADO 라이브러리 참조
 ADO 라이브러리는 Microsoft Visual Basic 6 응용 프로그램을 가져오려면 Visual Basic 프로젝트에 대 한 참조를 설정 해야 합니다.  
   
 ### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Visual Basic 프로젝트에서 ADO 라이브러리에 대 한 참조를 설정 하려면  

@@ -1,33 +1,34 @@
+items:
 - name: SQL Server 프로그래밍용 OLE DB 드라이버
   href: oledb-driver-for-sql-server-programming.md
 - name: 특정 영역
   items:
-    - name: SQL Server 응용 프로그램용 OLE DB 드라이버 만들기 +
-      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
-    - name: OLE DB 데이터 원본 개체 +
-      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
-    - name: 명령 +
-      href: ../../oledb/ole-db-commands/commands.md
-    - name: 행 집합 +
-      href: ../../oledb/ole-db-rowsets/rowsets.md
-    - name: Blob +
-      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
-    - name: 테이블 인덱스 +
-      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
-    - name: 데이터 형식 +
-      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
-    - name: 테이블 반환 매개 변수 +
-      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
-    - name: 날짜 시간 +
-      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
-    - name: 트랜잭션 +
-      href: ../../oledb/ole-db-transactions/transactions.md
-    - name: 오류 +
-      href: ../../oledb/ole-db-errors/errors.md
-    - name: 인터페이스 +
-      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
-    - name: 방법 +
-      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+  - name: SQL Server 애플리케이션용 OLE DB 드라이버 만들기 +
+    href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+  - name: OLE DB 데이터 원본 개체 +
+    href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+  - name: 명령 +
+    href: ../../oledb/ole-db-commands/commands.md
+  - name: 행 집합 +
+    href: ../../oledb/ole-db-rowsets/rowsets.md
+  - name: Blob +
+    href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+  - name: 테이블 인덱스 +
+    href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+  - name: 데이터 형식 +
+    href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+  - name: 테이블 반환 매개 변수 +
+    href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+  - name: 날짜 시간 +
+    href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+  - name: 트랜잭션 +
+    href: ../../oledb/ole-db-transactions/transactions.md
+  - name: 오류 +
+    href: ../../oledb/ole-db-errors/errors.md
+  - name: 인터페이스 +
+    href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+  - name: 방법 +
+    href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
 - name: 큰 CLR 사용자 정의 형식
   href: large-clr-user-defined-types-ole-db.md
 - name: 스키마 행 집합 지원
@@ -46,3 +47,9 @@
   href: stored-procedures-running.md
 - name: 저장 프로시저
   href: stored-procedures.md
+ms.openlocfilehash: 144c5fee440a51d88843b11b98fac4df8b445ee2
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39316401"

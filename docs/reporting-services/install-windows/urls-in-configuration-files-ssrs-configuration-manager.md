@@ -22,8 +22,8 @@ ms.locfileid: "51813746"
 ## <a name="url-settings-in-rsreportserverconfig-file"></a>RSReportServer.config 파일의 URL 설정  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 응용 프로그램 및 보고서에 액세스하고 웹 프런트 엔드 구성 요소를 백 엔드 보고서 서버에 연결하는 데 사용되는 URL을 저장합니다.  
   
-#### <a name="urls-for-application-access"></a>응용 프로그램 액세스용 URL  
- URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. URL을 구성하려면 Reporting Services 구성 도구를 사용해야 합니다. 이 도구를 통해 HTTP.SYS에 각 응용 프로그램에 대한 URL 예약을 만들고 RSReportServer.config의 **URLReservations** 섹션에 URL에 대한 항목을 추가합니다.  
+#### <a name="urls-for-application-access"></a>애플리케이션 액세스용 URL  
+ URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. URL을 구성하려면 Reporting Services 구성 도구를 사용해야 합니다. 이 도구를 통해 HTTP.SYS에 각 애플리케이션에 대한 URL 예약을 만들고 RSReportServer.config의 **URLReservations** 섹션에 URL에 대한 항목을 추가합니다.  
   
 -   **URLReservations** 섹션의 각 요소에 대한 설명은 [온라인 설명서에서](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) RsReportServer.config 구성 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   

@@ -45,7 +45,7 @@ ID 값이 들어 있는 데이터 파일을 Microsoft SQL Server 인스턴스로
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 및 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
 
 > [!NOTE]
->  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.
+>  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.
  
 ## 예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블, 데이터 파일 및 서식 파일을 기반으로 합니다.

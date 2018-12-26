@@ -244,7 +244,7 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 문을 처리하는 방식을 사용자 지정하기 위한 최적화 프로그램 힌트를 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- @@ROWCOUNT 함수를 사용하여 클라이언트 응용 프로그램에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
+ @@ROWCOUNT 함수를 사용하여 클라이언트 애플리케이션에 삽입된 행의 수를 반환할 수 있습니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.  
   
  UPDATE 문에서 변수 이름을 사용하면 영향을 받는 이전 값과 새로운 값을 표시할 수 있지만 이는 UPDATE 문이 단일 레코드에 영향을 줄 경우에만 사용할 수 있는 방법입니다. UPDATE 문이 여러 개의 레코드에 영향을 주는 경우 각각의 레코드에 대한 이전 값 및 새로운 값을 반환하려면 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용합니다.  
   
@@ -328,7 +328,7 @@ GO
  UPDATE 문이 클러스터링 키와 한 개 이상의 **text**, **ntext** 또는 **image** 열을 함께 업데이트하는 경우, 이러한 열의 부분 업데이트는 값을 모두 대체하게 됩니다.  
   
 > [!IMPORTANT]  
->  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
+>  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
  **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.** WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  

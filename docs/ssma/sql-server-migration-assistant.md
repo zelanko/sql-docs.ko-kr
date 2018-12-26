@@ -12,7 +12,7 @@ ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51668408"
@@ -73,7 +73,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 -   컨설팅 서비스 – 파트너에 대 한 마이그레이션, go를 지원 합니다 [파트너 포털](https://www.platformmodernization.org/Pages/default.aspx)합니다.  
   
 ## <a name="legal-notice-ssma"></a>법적 고지 사항(SSMA)  
-포함된 예제 응용 프로그램을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  
+포함된 예제 애플리케이션을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  
   
 이 설명서에 포함된 예제는 주로 특정 문이나 절의 개념을 설명하거나 적당한 사용법을 보여 주기 위한 것입니다. 특정 개념이나 문에 대한 예제를 중점적으로 제공하기 위해 일반적인 데이터 유효성 검사 및 오류 처리의 일부가 제거되었으므로 대부분의 예제에 전체 프로덕션 시스템에서 일반적으로 찾을 수 있는 모든 코드가 포함되어 있지는 않습니다. 이러한 예제나 포함된 원본 코드에 대한 기술 지원은 받을 수 없습니다.  
   
@@ -96,4 +96,4 @@ SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게
   
 고객은 저장 프로시저, 확장 저장 프로시저, 기능, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에는 데이터베이스 또는 문서화 되지 않은 진입점을 사용 하는 응용 프로그램 지원 하지 않습니다.  
   
-문서화되지 않은 진입점을 사용하는 응용 프로그램 및 데이터베이스의 경우 SQL Server의 나중 버전으로 서버 및 데이터베이스를 업그레이드하지 못할 수 있습니다. SQL Server 기능의 사용은 Microsoft SQL Server 설명서에 포함된 기능으로 제한되어야 합니다. 기능이 Microsoft SQL Server 설명서에 문서화되어 있지 않은 경우는 SQL Server의 지원되는 부분이 아닙니다.  
+문서화되지 않은 진입점을 사용하는 애플리케이션 및 데이터베이스의 경우 SQL Server의 나중 버전으로 서버 및 데이터베이스를 업그레이드하지 못할 수 있습니다. SQL Server 기능의 사용은 Microsoft SQL Server 설명서에 포함된 기능으로 제한되어야 합니다. 기능이 Microsoft SQL Server 설명서에 문서화되어 있지 않은 경우는 SQL Server의 지원되는 부분이 아닙니다.  

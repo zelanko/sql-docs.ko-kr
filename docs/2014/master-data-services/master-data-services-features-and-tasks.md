@@ -13,13 +13,13 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a49218498e173d1f6b009f24dd580d37e923afb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48158063"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 기능 및 태스크
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 사용하여 조직의 마스터 데이터를 관리하는 방법에 대해 알아봅니다. 데이터를 위한 컨테이너인 모델 개체를 만들고 조작하는 방법에 대해 알아봅니다. 마스터 데이터를 구성하고 유지 관리하는 방법에 대해 알아봅니다. 마스터 데이터를 가져오고 내보내는 방법, 그리고 테스트 환경과 프로덕션 환경 간에 모델을 공유하는 방법에 대해 알아봅니다. 마지막으로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스에 액세스하는 사용자 지정 응용 프로그램을 개발하는 방법에 대해 알아봅니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 사용하여 조직의 마스터 데이터를 관리하는 방법에 대해 알아봅니다. 데이터를 위한 컨테이너인 모델 개체를 만들고 조작하는 방법에 대해 알아봅니다. 마스터 데이터를 구성하고 유지 관리하는 방법에 대해 알아봅니다. 마스터 데이터를 가져오고 내보내는 방법, 그리고 테스트 환경과 프로덕션 환경 간에 모델을 공유하는 방법에 대해 알아봅니다. 마지막으로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스에 액세스하는 사용자 지정 애플리케이션을 개발하는 방법에 대해 알아봅니다.  
   
 ## <a name="create-structures-to-contain-data"></a>데이터를 포함할 구조 만들기  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48158063"
   
 -   [모델 배포 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
-## <a name="develop-a-custom-application"></a>사용자 지정 응용 프로그램 개발  
+## <a name="develop-a-custom-application"></a>사용자 지정 애플리케이션 개발  
   
 -   [개발자 가이드 &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   

@@ -133,7 +133,7 @@ INSERT INTO T values(1,'<Product />')
   
  다음 조건 중 하나에 해당하면 같은 테이블에 **xml** 데이터 형식의 열을 만듭니다.  
   
--   응용 프로그램이 XML 열에서 데이터 검색을 수행하고 XML 열에 XML 인덱스가 필요하지 않습니다.  
+-   애플리케이션이 XML 열에서 데이터 검색을 수행하고 XML 열에 XML 인덱스가 필요하지 않습니다.  
   
 -   **xml** 데이터 형식의 열에 XML 인덱스를 작성하려고 하며 기본 테이블의 기본 키는 해당 클러스터링 키와 같습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   

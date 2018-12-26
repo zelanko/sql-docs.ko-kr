@@ -31,7 +31,7 @@ ms.locfileid: "47789841"
 
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **iindexdefinition:: Createindex** 함수에서 새 인덱스를 정의 하는 소비자를 허용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 테이블 인덱스를 인덱스나 제약 조건으로 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 테이블 소유자, 데이터베이스 소유자 및 특정 관리 역할이 멤버에게 제약 조건 생성 권한을 부여합니다. 기본적으로 테이블 소유자만 테이블에 인덱스를 만들 수 있습니다. 따라서 **CreateIndex**의 성공 또는 실패 여부는 응용 프로그램 사용자의 액세스 권한뿐만 아니라 생성되는 인덱스의 유형에 따라서도 영향을 받습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 테이블 인덱스를 인덱스나 제약 조건으로 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 테이블 소유자, 데이터베이스 소유자 및 특정 관리 역할이 멤버에게 제약 조건 생성 권한을 부여합니다. 기본적으로 테이블 소유자만 테이블에 인덱스를 만들 수 있습니다. 따라서 **CreateIndex**의 성공 또는 실패 여부는 애플리케이션 사용자의 액세스 권한뿐만 아니라 생성되는 인덱스의 유형에 따라서도 영향을 받습니다.  
   
  소비자는 *pTableID* 매개 변수에서 *uName* 공용 구조체의 *pwszName* 멤버에 테이블 이름을 유니코드 문자열로 지정합니다. *pTableID*의 *eKind* 멤버는 DBKIND_NAME이어야 합니다.  
   

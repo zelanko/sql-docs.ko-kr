@@ -52,7 +52,7 @@ ms.locfileid: "52535730"
   
 -   동일한 컴퓨터에 여러 인스턴스를 설치할 경우에는 명명된 인스턴스를 사용합니다. 한 서버에서 기본 인스턴스 한 개만 호스팅할 수 있습니다.  
   
--   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하는 응용 프로그램은 이를 명명된 인스턴스로 설치해야 합니다. 이렇게 하면 여러 응용 프로그램을 동일한 컴퓨터에 설치한 경우 충돌을 최소화할 수 있습니다.  
+-   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하는 응용 프로그램은 이를 명명된 인스턴스로 설치해야 합니다. 이렇게 하면 여러 애플리케이션을 동일한 컴퓨터에 설치한 경우 충돌을 최소화할 수 있습니다.  
   
  **기본 인스턴스**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 설치하려면 이 옵션을 선택합니다. 한 컴퓨터에서는 기본 인스턴스를 하나만 호스팅할 수 있으며 나머지 인스턴스는 모두 명명된 인스턴스여야 합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스가 설치되어 있으면 동일한 컴퓨터에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 인스턴스를 추가할 수 있습니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "52535730"
  **관리자 지정** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 서버 관리자를 한 명 이상 지정해야 합니다. 지정한 사용자 또는 그룹은 설치할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 관리자 역할 멤버가 됩니다. 이러한 사용자 또는 그룹은 소프트웨어를 설치할 컴퓨터와 동일한 도메인의 Windows 도메인 사용자 계정이어야 합니다.  
   
 > [!NOTE]  
->  UAC(사용자 계정 컨트롤)는 관리 동작이나 응용 프로그램을 실행하려면 관리자가 승인을 해야 하는 Windows 보안 기능입니다. UAC는 기본적으로 설정되므로, 높은 권한을 필요로 하는 특정 작업을 허용하라는 메시지가 표시됩니다. UAC를 구성하여 기본 동작을 변경하거나 특정 프로그램에 대해 UAC를 사용자 지정할 수 있습니다. UAC 및 UAC 구성에 대한 자세한 내용은 [사용자 계정 컨트롤 단계별 가이드](https://go.microsoft.com/fwlink/?linkid=196350) 및 [사용자 계정 컨트롤(Wikipedia)0](https://go.microsoft.com/fwlink/?linkid=196351)을 참조하세요.  
+>  UAC(사용자 계정 컨트롤)는 관리 동작이나 애플리케이션을 실행하려면 관리자가 승인을 해야 하는 Windows 보안 기능입니다. UAC는 기본적으로 설정되므로, 높은 권한을 필요로 하는 특정 작업을 허용하라는 메시지가 표시됩니다. UAC를 구성하여 기본 동작을 변경하거나 특정 프로그램에 대해 UAC를 사용자 지정할 수 있습니다. UAC 및 UAC 구성에 대한 자세한 내용은 [사용자 계정 컨트롤 단계별 가이드](https://go.microsoft.com/fwlink/?linkid=196350) 및 [사용자 계정 컨트롤(Wikipedia)0](https://go.microsoft.com/fwlink/?linkid=196351)을 참조하세요.  
   
 ### <a name="see-also"></a>참고 항목  
  [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -144,7 +144,7 @@ ms.locfileid: "52535730"
   
 -   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경하거나 새 기능의 위치를 지정할 수 없습니다.  
 
--   SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 응용 프로그램과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 [SQL Server를 실행하는 컴퓨터에서 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422) 지원 문서를 검토하세요.
+-   SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 애플리케이션과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 [SQL Server를 실행하는 컴퓨터에서 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422) 지원 문서를 검토하세요.
   
 -   기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소도 별도의 디렉터리에 설치해야 합니다.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "52535730"
   
 -   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경하거나 새 기능의 위치를 지정할 수 없습니다.  
 
--   SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 응용 프로그램과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 [SQL Server를 실행하는 컴퓨터에서 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422) 지원 문서를 검토하세요.
+-   SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 애플리케이션과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 [SQL Server를 실행하는 컴퓨터에서 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422) 지원 문서를 검토하세요.
   
 -   기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소도 별도의 디렉터리에 설치해야 합니다.  
   
@@ -308,7 +308,7 @@ ms.locfileid: "52535730"
  **혼합 모드(Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증)**  
  사용자가 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 수 있도록 허용합니다. Windows 사용자 계정을 통해 연결하는 사용자는 Windows에서 유효성을 검사하는 트러스트된 연결을 사용할 수 있습니다.  
   
- 혼합 모드 인증을 선택해야 하며 레거시 응용 프로그램을 수용하기 위해 SQL 로그인을 사용해야 할 경우 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정에 대해 강력한 암호를 설정해야 합니다.  
+ 혼합 모드 인증을 선택해야 하며 레거시 애플리케이션을 수용하기 위해 SQL 로그인을 사용해야 할 경우 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정에 대해 강력한 암호를 설정해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 오로지 이전 버전과의 호환성을 위해서만 제공됩니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

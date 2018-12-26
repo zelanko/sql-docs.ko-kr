@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209813"
@@ -96,7 +96,7 @@ ms.locfileid: "48209813"
   
 -   연결 모델의 경우 예측을 생성하는 데 사용되는 규칙 검색  
   
--   사용자 지정 응용 프로그램에서 규칙을 사용할 수 있도록 특정 규칙에 대한 설명 검색  
+-   사용자 지정 애플리케이션에서 규칙을 사용할 수 있도록 특정 규칙에 대한 설명 검색  
   
 -   시계열 모델에 의해 검색되는 이동 평균 보기  
   

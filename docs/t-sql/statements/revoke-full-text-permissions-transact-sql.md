@@ -70,7 +70,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   데이터베이스 역할  
   
--   응용 프로그램 역할  
+-   애플리케이션 역할  
   
 -   Windows 로그인에 매핑된 데이터베이스 사용자  
   
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   데이터베이스 역할  
   
--   응용 프로그램 역할  
+-   애플리케이션 역할  
   
 -   Windows 로그인에 매핑된 데이터베이스 사용자  
   

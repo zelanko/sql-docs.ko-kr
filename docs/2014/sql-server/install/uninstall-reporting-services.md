@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8e45532fc19a4fa3cc45857213b75474fc34cd82
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48138703"
@@ -28,9 +28,9 @@ ms.locfileid: "48138703"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용된 파일  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 제거되지 않습니다. 더 이상 사용하지 않으려는 서비스 응용 프로그램은 Windows PowerShell 또는 SharePoint 중앙 관리를 사용하여 삭제합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 제거되지 않습니다. 더 이상 사용하지 않으려는 서비스 애플리케이션은 Windows PowerShell 또는 SharePoint 중앙 관리를 사용하여 삭제합니다.  
   
- 보고서 항목 및 관련 메타데이터는 제거되지 않습니다. 이 정보는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램과 관련된 콘텐츠 및 구성 데이터베이스에 포함되어 있습니다. 데이터베이스는 제거되지 않으며 SharePoint 모드의 다른 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 데이터베이스를 수동으로 마이그레이션할 수 있습니다. 해당 정보가 더 이상 필요하지 않으면 데이터베이스를 삭제합니다. 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
+ 보고서 항목 및 관련 메타데이터는 제거되지 않습니다. 이 정보는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션과 관련된 콘텐츠 및 구성 데이터베이스에 포함되어 있습니다. 데이터베이스는 제거되지 않으며 SharePoint 모드의 다른 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 데이터베이스를 수동으로 마이그레이션할 수 있습니다. 해당 정보가 더 이상 필요하지 않으면 데이터베이스를 삭제합니다. 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
  다음은 제거되지 않는 세 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스의 이름 예입니다.  
   

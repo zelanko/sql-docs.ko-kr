@@ -27,7 +27,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48050183"
@@ -55,7 +55,7 @@ ms.locfileid: "48050183"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 로그 항목을 기록 합니다 `sysssislog` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스.  
   
--   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 응용 프로그램 로그에 항목을 기록합니다.  
+-   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 애플리케이션 로그에 항목을 기록합니다.  
   
 -   XML 파일 로그 공급자는 로그 파일을 XML 파일로 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .xml입니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48050183"
 |텍스트 파일|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|텍스트 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server 프로파일러|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|로그 항목이 포함된 sysssislog 테이블이 들어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 로그 공급자가 사용하는 OLE DB 연결 관리자가 지정합니다.|  
-|Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 응용 프로그램 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 응용 프로그램 정보가 들어 있습니다.|  
+|Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 애플리케이션 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 애플리케이션 정보가 들어 있습니다.|  
 |XML 파일|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|XML 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
   
  사용자 지정 로그 공급자를 만들 수도 있습니다. 자세한 내용은 [Creating a Custom Log Provider](../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)를 참조하세요.  

@@ -32,13 +32,13 @@ ms.locfileid: "48068393"
  SQL Server 에이전트용 ActiveX 하위 시스템은 이 릴리스에서 제거되었습니다. 대체 기능은 없습니다.  
   
 ### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask, sp_deletetask, sp_updatetask  
- Sp_addtask, sp_deletetask 및 sp_updatetask는 이 릴리스에서 제거되었습니다. 새 응용 프로그램이나 업데이트된 응용 프로그램에서는 이 기능을 사용하지 마십시오.  
+ Sp_addtask, sp_deletetask 및 sp_updatetask는 이 릴리스에서 제거되었습니다. 새 애플리케이션이나 업데이트된 애플리케이션에서는 이 기능을 사용하지 마십시오.  
   
 ### <a name="net-send-and-pager-notification"></a>Net Send 및 호출기 알림  
- Net Send 및 호출기 알림은 이 릴리스에서 제거되었습니다. 새 응용 프로그램이나 업데이트된 응용 프로그램에서는 이 기능을 사용하지 마십시오.  
+ Net Send 및 호출기 알림은 이 릴리스에서 제거되었습니다. 새 애플리케이션이나 업데이트된 애플리케이션에서는 이 기능을 사용하지 마십시오.  
   
 ### <a name="data-tier-applications"></a>의  
- [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 에 있는 일부 DAC(데이터 계층 응용 프로그램) 기능은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 제거되었습니다. 그러나 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]와 함께 출시된 데이터 계층 응용 프로그램 프레임워크(DACfx version 3.0)는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]를 통해 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]와 호환됩니다. DAC 버전 3.0은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 를 포함하여 이전 버전의 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]에서 지원되지 않습니다. Visual Studio 2010 데이터베이스 프로젝트는 DACfx 버전 3.0 이상을 사용하여 생성된 DAC 3.0 DACPAC 패키지 또는 DAC 내보내기(BACPAC) 패키지를 지원하지 않습니다.  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 에 있는 일부 DAC(데이터 계층 응용 프로그램) 기능은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 제거되었습니다. 그러나 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]와 함께 출시된 데이터 계층 애플리케이션 프레임워크(DACfx version 3.0)는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]를 통해 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]와 호환됩니다. DAC 버전 3.0은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 를 포함하여 이전 버전의 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]에서 지원되지 않습니다. Visual Studio 2010 데이터베이스 프로젝트는 DACfx 버전 3.0 이상을 사용하여 생성된 DAC 3.0 DACPAC 패키지 또는 DAC 내보내기(BACPAC) 패키지를 지원하지 않습니다.  
   
  사용 가능한 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 데이터베이스 프로젝트를 사용하는 것이 좋습니다.  
   

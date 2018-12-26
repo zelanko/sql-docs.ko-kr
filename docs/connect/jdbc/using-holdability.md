@@ -32,7 +32,7 @@ ms.locfileid: "47780243"
 
 서버 커서의 경우 SQL Server 2005 이상과 연결되어 있을 때 유지 기능을 설정하면 해당 연결에서 만들어질 새 결과 집합의 유지 기능만 영향을 받게 됩니다. 즉 유지 기능을 설정해도 이미 만들어졌거나 해당 연결에서 이미 열려 있는 결과 집합은 영향을 받지 않습니다.
 
-다음 예제에서는 `try` 블록에서 두 개의 별도 명령문으로 구성된 로컬 트랜잭션을 수행하면서 결과 집합 유지 기능을 설정합니다. 이들 명령문은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Production.ScrapReason 테이블에 대해 실행됩니다. 먼저 이 예에서는 자동 커밋을 `false`로 설정하여 수동 트랜잭션 모드로 전환합니다. 자동 커밋 모드가 해제되면 응용 프로그램이 명시적으로 [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 메서드를 호출할 때까지 SQL 문이 커밋되지 않습니다. 예외가 발생하면 catch 블록의 코드에서 트랜잭션을 롤백합니다.
+다음 예제에서는 `try` 블록에서 두 개의 별도 명령문으로 구성된 로컬 트랜잭션을 수행하면서 결과 집합 유지 기능을 설정합니다. 이들 명령문은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Production.ScrapReason 테이블에 대해 실행됩니다. 먼저 이 예에서는 자동 커밋을 `false`로 설정하여 수동 트랜잭션 모드로 전환합니다. 자동 커밋 모드가 해제되면 애플리케이션이 명시적으로 [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 메서드를 호출할 때까지 SQL 문이 커밋되지 않습니다. 예외가 발생하면 catch 블록의 코드에서 트랜잭션을 롤백합니다.
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 

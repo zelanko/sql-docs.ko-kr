@@ -39,7 +39,7 @@ public static final int SSTRANSTIGHTLYCPLD
  **int** 값 32768입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 각 트랜잭션은 XID(XA 분기 트랜잭션 ID)와 GTRID(전역 트랜잭션 ID)로 식별됩니다. 응용 프로그램에서 XID가 다르지만 GTRID는 동일한 밀접하게 결합된 XA 트랜잭션을 사용할 수 있도록 하려면 XAResource.start 메서드의 flags 매개 변수에서 [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)를 설정해야 합니다. 이 플래그를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [XA 트랜잭션 이해](../../../connect/jdbc/understanding-xa-transactions.md)합니다.  
+ 각 트랜잭션은 XID(XA 분기 트랜잭션 ID)와 GTRID(전역 트랜잭션 ID)로 식별됩니다. 애플리케이션에서 XID가 다르지만 GTRID는 동일한 밀접하게 결합된 XA 트랜잭션을 사용할 수 있도록 하려면 XAResource.start 메서드의 flags 매개 변수에서 [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)를 설정해야 합니다. 이 플래그를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [XA 트랜잭션 이해](../../../connect/jdbc/understanding-xa-transactions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXAResource 필드](../../../connect/jdbc/reference/sqlserverxaresource-fields.md)   

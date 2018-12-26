@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48202783"
@@ -154,7 +154,7 @@ ms.locfileid: "48202783"
   
 5.  SharePoint 2013 중앙 관리에서 3단계에서 만든 SharePoint 모드로 실행하는 Analysis Services 서버를 사용하도록 Excel Services를 구성합니다.  
   
-     새로 고침 일정을 마이그레이션하려면 PowerPivot 서비스 응용 프로그램을 구성합니다.  
+     새로 고침 일정을 마이그레이션하려면 PowerPivot 서비스 애플리케이션을 구성합니다.  
   
 > [!NOTE]  
 >  PowerPivot 및 SharePoint 데이터베이스 연결 업그레이드에 대한 자세한 내용은 다음을 참조하십시오.  

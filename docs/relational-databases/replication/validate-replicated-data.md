@@ -49,7 +49,7 @@ ms.locfileid: "47711807"
   
 -   **복제: 구독자가 데이터 유효성 검사에 실패했습니다** 라는 복제 경고를 구성하여 검사 실패에 대한 알림을 받도록 합니다. 자세한 내용은 [미리 정의된 복제 경고 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)을 참조하세요.  
   
--   유효성 검사 실패가 응용 프로그램에 문제가 됩니까? 유효성 검사 실패가 문제가 되는 경우 수동으로 데이터를 업데이트하여 동기화하거나 구독을 다시 초기화합니다.  
+-   유효성 검사 실패가 애플리케이션에 문제가 됩니까? 유효성 검사 실패가 문제가 되는 경우 수동으로 데이터를 업데이트하여 동기화하거나 구독을 다시 초기화합니다.  
   
     -   [tablediff 유틸리티](../../tools/tablediff-utility.md)를 사용하여 데이터를 업데이트할 수 있습니다. 이 유틸리티를 사용하는 방법은 [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)를 참조하세요.  
   

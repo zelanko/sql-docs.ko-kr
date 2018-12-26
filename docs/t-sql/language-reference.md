@@ -29,7 +29,7 @@ ms.locfileid: "51697342"
 > [!div class="nextstepaction"]
 > [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-이 토픽에서는 Microsoft Transact-SQL(T-SQL) 참조 토픽을 찾고 사용하는 방법에 대한 기본 사항을 제공합니다. T-SQL은 Microsoft SQL 제품 및 서비스를 사용하는데 있어 핵심입니다. SQL 데이터베이스와 통신하는 모든 도구와 응용 프로그램은 T-SQL 명령을 보내서 수행합니다.  
+이 토픽에서는 Microsoft Transact-SQL(T-SQL) 참조 토픽을 찾고 사용하는 방법에 대한 기본 사항을 제공합니다. T-SQL은 Microsoft SQL 제품 및 서비스를 사용하는데 있어 핵심입니다. SQL 데이터베이스와 통신하는 모든 도구와 애플리케이션은 T-SQL 명령을 보내서 수행합니다.  
 
 ## <a name="tools-that-use-t-sql"></a>T-SQL을 사용하는 도구
 

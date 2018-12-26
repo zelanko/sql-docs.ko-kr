@@ -26,7 +26,7 @@ ms.locfileid: "47837561"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 테이블은 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic에서 테이블 생성, 변경 및 제거  
  이 코드 예제는 서로 다른 유형과 용도의 여러 열이 있는 테이블을 만듭니다. 또한 ID 필드를 만드는 방법, 기본 키를 만드는 방법, 테이블 속성을 변경하는 방법에 대한 예를 제공합니다.  

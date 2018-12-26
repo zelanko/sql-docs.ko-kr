@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 |RSPreviewPolicy.config|보고서 미리 보기 중에 사용되는 서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
 ##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> 구성 파일의 요약(SharePoint 모드)  
- 다음 표에서는 SharePoint 모드 보고서 서버에 사용되는 구성 파일에 대한 설명을 제공합니다. 대부분의 구성 설정은 SharePoint 서비스 응용 프로그램 데이터베이스에 저장됩니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
+ 다음 표에서는 SharePoint 모드 보고서 서버에 사용되는 구성 파일에 대한 설명을 제공합니다. 대부분의 구성 설정은 SharePoint 서비스 애플리케이션 데이터베이스에 저장됩니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
   
  기본적으로 SharePoint 모드의 설치 디렉터리는 다음과 같습니다.  
   
@@ -70,7 +70,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대 한 자세한 내용은 참조 하세요. [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)합니다.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |보고서 서버 웹 서비스용 Web.config|ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportServer|  
-|레지스트리 설정|Reporting Services 제거에 사용되는 구성 상태 및 기타 설정을 저장합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 정보도 저장합니다.<br /><br /> 설치가 무효화될 수 있으므로 이러한 설정을 직접 수정하지 마세요.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 예제 인스턴스 ID: MSSQL12.MSSQLSERVER<br /><br /> **-및-**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
+|레지스트리 설정|Reporting Services 제거에 사용되는 구성 상태 및 기타 설정을 저장합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 정보도 저장합니다.<br /><br /> 설치가 무효화될 수 있으므로 이러한 설정을 직접 수정하지 마세요.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 예제 인스턴스 ID: MSSQL12.MSSQLSERVER<br /><br /> **-및-**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
 |RSReportDesigner.config|보고서 디자이너에 대한 구성 설정을 저장합니다. 자세한 내용은 [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md)을 참조하세요.|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
   
 ## <a name="see-also"></a>관련 항목  

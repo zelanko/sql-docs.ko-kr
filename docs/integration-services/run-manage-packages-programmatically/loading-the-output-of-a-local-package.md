@@ -46,7 +46,7 @@ ms.locfileid: "47697521"
   
 4.  이전에 만든 **DtsConnection**을 사용하는 **DtsClient.DtsCommand** 형식의 개체를 만들고 이 개체의 **CommandText** 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 **ExecuteReader** 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.  
   
-5.  필요할 경우 **DtsCommand** 개체에서 **DtsDataParameter** 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 응용 프로그램에서 **DtsDataParameter** 개체와 함께 이러한 변수를 사용하려면 먼저 **DtsClient** 네임스페이스에서 패키지에 해당 변수를 정의해야 합니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 **DtsCommand**의 **Parameters** 컬렉션에 **DtsDataParameter**를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+5.  필요할 경우 **DtsCommand** 개체에서 **DtsDataParameter** 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 애플리케이션에서 **DtsDataParameter** 개체와 함께 이러한 변수를 사용하려면 먼저 **DtsClient** 네임스페이스에서 패키지에 해당 변수를 정의해야 합니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 **DtsCommand**의 **Parameters** 컬렉션에 **DtsDataParameter**를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

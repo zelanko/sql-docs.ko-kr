@@ -18,7 +18,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123083"
@@ -45,7 +45,7 @@ ms.locfileid: "48123083"
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>c2WTS를 구성하기 위해 필요한 기본 단계  
   
-1.  c2WTS 서비스 계정을 구성합니다. c2WTS를 실행하는 각 응용 프로그램 서버의 로컬 관리자 그룹에 서비스 계정을 추가합니다. 또한 계정에 다음과 같은 로컬 보안 정책 권한이 있는지 확인합니다.  
+1.  c2WTS 서비스 계정을 구성합니다. c2WTS를 실행하는 각 애플리케이션 서버의 로컬 관리자 그룹에 서비스 계정을 추가합니다. 또한 계정에 다음과 같은 로컬 보안 정책 권한이 있는지 확인합니다.  
   
     -   운영 체제의 일부로 작동  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48123083"
   
     2.  시작 유형을 "**자동**"으로 변경하고 서비스를 시작합니다.  
   
-4.  SharePoint 'Windows 토큰 서비스에 대한 클레임'을 시작합니다. **서버의 서비스 관리** 페이지에서 SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대한 클레임을 시작합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 실행되는 응용 프로그램 서버인 다른 서버가 있는 경우 응용 프로그램 서버에서만 c2WTS를 시작하면 됩니다. WFE에는 c2WTS가 필요하지 않습니다.  
+4.  SharePoint 'Windows 토큰 서비스에 대한 클레임'을 시작합니다. **서버의 서비스 관리** 페이지에서 SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대한 클레임을 시작합니다. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 WFE인 서버와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 실행되는 애플리케이션 서버인 다른 서버가 있는 경우 애플리케이션 서버에서만 c2WTS를 시작하면 됩니다. WFE에는 c2WTS가 필요하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개요 (Windows 토큰 서비스 (c2WTS) 클레임 http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   

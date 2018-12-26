@@ -15,13 +15,13 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1d4595ee3b5bb01e32fbd733c97ea65488b9dc3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48083753"
 ---
 # <a name="article-issues"></a>아티클 문제
-  **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
+  **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 애플리케이션이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  
   
 |아티클 문제|설명|필요한 동작|  
 |-------------------|-------------|---------------------|  

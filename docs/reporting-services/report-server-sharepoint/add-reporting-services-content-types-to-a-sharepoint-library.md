@@ -159,7 +159,7 @@ ms.locfileid: "52617813"
   
 1.  SQL Server Reporting Services 2008 및 2008 R2 보고서 서버의 경우 여러 비즈니스 인텔리전스 센터 사이트에 대한 콘텐츠 형식 및 콘텐츠 관리를 설정할 수 있습니다.  
   
-2.  SharePoint 중앙 관리에서 **일반 응용 프로그램 설정**을 클릭합니다. **SQL Server Reporting Services(2008 및 2008 R2)** 섹션에서 **Reporting Services 통합**을 클릭합니다.  
+2.  SharePoint 중앙 관리에서 **일반 애플리케이션 설정**을 클릭합니다. **SQL Server Reporting Services(2008 및 2008 R2)** 섹션에서 **Reporting Services 통합**을 클릭합니다.  
   
      ![rs_general_app_settings](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif "rs_general_app_settings")  
   

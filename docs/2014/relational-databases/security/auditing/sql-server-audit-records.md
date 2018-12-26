@@ -14,7 +14,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbca94db76fb0b3df636f3681dc01b0ef51571cd
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48183673"
@@ -22,7 +22,7 @@ ms.locfileid: "48183673"
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
- 감사는 0개 이상의 감사 동작 항목으로 구성되어 있으며 이들은 감사 *대상*에 기록됩니다. 이진 파일, Windows 응용 프로그램 이벤트 로그 또는 Windows 보안 이벤트 로그가 감사 대상이 될 수 있습니다. 대상에 전달된 레코드에는 다음 표에 설명된 요소가 포함될 수 있습니다.  
+ 감사는 0개 이상의 감사 동작 항목으로 구성되어 있으며 이들은 감사 *대상*에 기록됩니다. 이진 파일, Windows 애플리케이션 이벤트 로그 또는 Windows 보안 이벤트 로그가 감사 대상이 될 수 있습니다. 대상에 전달된 레코드에는 다음 표에 설명된 요소가 포함될 수 있습니다.  
   
 |열 이름|Description|형식|항상 사용 가능 여부|  
 |-----------------|-----------------|----------|----------------------|  

@@ -71,7 +71,7 @@ ms.locfileid: "47759411"
   
 (의 값에 프로그래밍 방식으로 액세스할 수 2) **datetimeoffset** 사용 하 여 [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)합니다.  
   
-다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 응용 프로그램에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)을 참조하세요.  
+다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 애플리케이션에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)을 참조하세요.  
   
 ## <a name="retrieving-data-as-a-string"></a>데이터를 문자열로 검색
 

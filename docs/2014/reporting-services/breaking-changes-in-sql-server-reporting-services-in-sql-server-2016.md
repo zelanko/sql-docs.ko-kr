@@ -17,13 +17,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48076123"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 응용 프로그램, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때나 사용자 지정 스크립트 또는 보고서에서 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때나 사용자 지정 스크립트 또는 보고서에서 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48076123"
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  
   
 ### <a name="expanded-csv-data-renderer"></a>확장된 CSV 데이터 렌더러  
- [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], CSV 파일에는 차트 및 계기 데이터가 포함 됩니다. 차트 및 계기 열의 추가로 인해 이전의 CSV 파일 구조에 기반한 응용 프로그램은 더 이상 작동하지 않습니다.  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], CSV 파일에는 차트 및 계기 데이터가 포함 됩니다. 차트 및 계기 열의 추가로 인해 이전의 CSV 파일 구조에 기반한 애플리케이션은 더 이상 작동하지 않습니다.  
   
  자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.  
   

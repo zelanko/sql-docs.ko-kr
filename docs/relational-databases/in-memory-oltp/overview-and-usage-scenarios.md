@@ -22,7 +22,7 @@ ms.locfileid: "52533403"
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 트랜잭션 처리, 데이터 수집, 데이터 로드 및 일시적인 데이터 시나리오의 성능을 최적화하기 위해 사용할 수 있는 뛰어난 기술입니다. 이 문서에서는 메모리 내 OLTP의 기술 및 사용 시나리오를 알아봅니다. 이 정보를 사용하여 메모리 내 OLTP가 응용 프로그램에 적합 한지 확인할 수 있습니다. 이 문서에는 메모리 내 OLTP 개체를 보여 주는 예제, 성능 데모에 대한 참조 및 다음 단계에 사용할 수 있는 리소스에 대한 참조가 포함되어 있습니다.
+메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 트랜잭션 처리, 데이터 수집, 데이터 로드 및 일시적인 데이터 시나리오의 성능을 최적화하기 위해 사용할 수 있는 뛰어난 기술입니다. 이 문서에서는 메모리 내 OLTP의 기술 및 사용 시나리오를 알아봅니다. 이 정보를 사용하여 메모리 내 OLTP가 애플리케이션에 적합 한지 확인할 수 있습니다. 이 문서에는 메모리 내 OLTP 개체를 보여 주는 예제, 성능 데모에 대한 참조 및 다음 단계에 사용할 수 있는 리소스에 대한 참조가 포함되어 있습니다.
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 메모리 내 OLTP 기술에 대해 설명합니다. 다음 블로그 게시물에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 성능 및 리소스 사용률 이점에 대해 자세히 설명합니다. 
 - [Azure SQL Database의 메모리 내 OLTP](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
@@ -42,13 +42,13 @@ ms.locfileid: "52533403"
 - *메모리 액세스에 최적화된 테이블 형식* 은 TVP(테이블 반환 매개 변수) 및 저장 프로시저의 중간 결과 집합에 사용됩니다. 기존 테이블 형식 대신 사용할 수 있습니다. 메모리 최적화 테이블 형식을 사용하여 선언된 테이블 변수 및 TVP는 비영구 메모리 최적화 테이블의 이점(효율적인 데이터 액세스 및 IO 없음)을 상속합니다.
 - *고유하게 컴파일된 T-SQL 모듈* 은 작업을 처리하는 데 필요한 CPU 주기를 줄여 개별 트랜잭션에 소요되는 시간을 더 단축하는 데 사용됩니다. 고유하게 컴파일할 TRANSACT-SQL 모듈은 만들 때 선언합니다. 이 시점에서 고유하게 컴파일할 수 있는 T-SQL 모듈은 저장 프로시저, 트리거 및 사용자 정의 스칼라 함수입니다.
 
-메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 내장됩니다. 또한 이러한 개체는 기존 개체와 유사하게 동작하기 때문에 데이터베이스 및 응용 프로그램에 대한 최소한의 변경으로 성능 이점을 얻을 수 있습니다. 뿐만 아니라 메모리 최적화 테이블과 기존 디스크 기반 테이블을 동일한 데이터베이스에서 함께 사용하고 둘 간에 쿼리를 실행할 수 있습니다. 이러한 유형의 각 개체에 대한 예제를 보여 주는 TRANSACT-SQL 스크립트는 이 문서의 아래쪽에서 확인할 수 있습니다.
+메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 내장됩니다. 또한 이러한 개체는 기존 개체와 유사하게 동작하기 때문에 데이터베이스 및 애플리케이션에 대한 최소한의 변경으로 성능 이점을 얻을 수 있습니다. 뿐만 아니라 메모리 최적화 테이블과 기존 디스크 기반 테이블을 동일한 데이터베이스에서 함께 사용하고 둘 간에 쿼리를 실행할 수 있습니다. 이러한 유형의 각 개체에 대한 예제를 보여 주는 TRANSACT-SQL 스크립트는 이 문서의 아래쪽에서 확인할 수 있습니다.
 
 ## <a name="usage-scenarios-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 사용 시나리오
 
 메모리 내 OLTP는 마법의 단추가 아니고 모든 워크로드에 적합한 것도 아닙니다. 예를 들어 메모리 최적화 테이블은 대부분의 쿼리가 큰 데이터 범위에서 집계를 수행하는 경우 CPU 사용률을 낮추지 않습니다. 해당 시나리오에는 Columnstore 인덱스가 도움이 됩니다.
 
-다음은 메모리 내 OLTP를 성공적으로 사용한 고객의 시나리오 및 응용 프로그램 패턴 목록입니다.
+다음은 메모리 내 OLTP를 성공적으로 사용한 고객의 시나리오 및 애플리케이션 패턴 목록입니다.
 
 ### <a name="high-throughput-and-low-latency-transaction-processing"></a>높은 처리량 및 낮은 대기 시간의 트랜잭션 처리
 
@@ -60,7 +60,7 @@ ms.locfileid: "52533403"
 
 핵심 트랜잭션 테이블, 즉 성능이 가장 중요한 트랜잭션이 있는 테이블에 메모리 최적화 테이블을 사용합니다. 비즈니스 트랜잭션과 관련된 논리 실행을 최적화하려면 고유하게 컴파일된 저장 프로시저를 사용합니다. 데이터베이스에 저장 프로시저로 푸시할 수 있는 논리가 많을수록 메모리 내 OLTP에서 더 많은 이점을 얻을 수 있습니다.
 
-기존 응용 프로그램에서 시작하려면 다음을 수행합니다.
+기존 애플리케이션에서 시작하려면 다음을 수행합니다.
 1. [트랜잭션 성능 분석 보고서](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 를 사용하여 마이그레이션할 개체를 식별합니다. 
 2. [메모리 최적화](memory-optimization-advisor.md) 및 [네이티브 컴파일](native-compilation-advisor.md) Advisor를 사용하여 마이그레이션에 대한 도움을 얻습니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "52533403"
 
 메모리 내 OLTP는 다양한 원본에서 동시에 많은 양의 데이터를 수집하는 데 유용합니다. 또한 다른 대상보다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스로 데이터를 수집하는 데 유용한 경우가 많습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 데이터에 대한 쿼리를 매우 빠르게 실행하고 실시간 통찰력을 제공하기 때문입니다.
 
-다음은 일반적인 응용 프로그램 패턴입니다. 
+다음은 일반적인 애플리케이션 패턴입니다. 
 -  센서 판독값 및 이벤트를 수집하여 알림 및 기록 분석을 지원합니다. 
 -  동시 읽기 워크로드에 대한 영향을 최소화하면서 여러 원본에서 일괄 처리 업데이트를 관리합니다.
 
@@ -98,9 +98,9 @@ ms.locfileid: "52533403"
 
 ### <a name="caching-and-session-state"></a>캐싱 및 세션 상태
 
-메모리 내 OLTP 기술은 SQL의 세션 상태 유지 관리(예: ASP.NET 응용 프로그램) 및 캐싱 기능을 크게 향상시킵니다.
+메모리 내 OLTP 기술은 SQL의 세션 상태 유지 관리(예: ASP.NET 애플리케이션) 및 캐싱 기능을 크게 향상시킵니다.
 
-ASP.NET 세션 상태는 메모리 내 OLTP의 매우 성공적인 사용 사례입니다. 한 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 초당 120만 요청을 달성하려고 했습니다. 그 동안 엔터프라이즈의 모든 중간 계층 응용 프로그램의 캐싱 요구 사항을 위해 메모리 내 OLTP를 사용하기 시작했습니다. 세부 정보: [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP을 사용하여 전례 없는 성능 및 확장성을 달성하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+ASP.NET 세션 상태는 메모리 내 OLTP의 매우 성공적인 사용 사례입니다. 한 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 초당 120만 요청을 달성하려고 했습니다. 그 동안 엔터프라이즈의 모든 중간 계층 애플리케이션의 캐싱 요구 사항을 위해 메모리 내 OLTP를 사용하기 시작했습니다. 세부 정보: [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP을 사용하여 전례 없는 성능 및 확장성을 달성하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>구현 고려 사항
 

@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48211933"
@@ -107,7 +107,7 @@ ms.locfileid: "48211933"
 >  **net send**를 사용하여 알림을 보내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 상주하는 컴퓨터에서 Windows Messenger 서비스를 시작해야 합니다.  
   
 > [!IMPORTANT]  
->  **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
  전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 데이터베이스 메일을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)을 참조하세요.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48211933"
   
 |하위 시스템 이름|Description|  
 |--------------------|-----------------|  
-|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br /> **\*\* 중요 \* \***  ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
+|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br /> **\*\* 중요 \* \***  ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |운영 체제(**CmdExec**)|실행 프로그램을 실행합니다.|  
 |PowerShell|PowerShell 스크립팅 작업 단계를 실행합니다.|  
 |복제 배포자|복제 배포 에이전트를 활성화하는 작업 단계를 실행합니다.|  

@@ -22,9 +22,9 @@ ms.locfileid: "47763211"
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 응용 프로그램을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
   
- 예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 응용 프로그램을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 응용 프로그램을 만들어야 하는 경우 SMO 응용 프로그램을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 응용 프로그램에 원활하게 통합하기 위해 SMO 응용 프로그램을 사용할 수도 있습니다.  
+ 예를 들어 새로운 사용자의 요구 사항을 충족하고 교육 비용을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 태스크를 제어하는 사용자 애플리케이션을 단순하게 만들어야 하는 경우, 또는 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들어야 하거나 인덱스를 효율적으로 생성하고 모니터링하는 애플리케이션을 만들어야 하는 경우 SMO 애플리케이션을 사용할 수 있습니다. 또한 타사 하드웨어나 소프트웨어를 데이터베이스 관리 애플리케이션에 원활하게 통합하기 위해 SMO 애플리케이션을 사용할 수도 있습니다.  
   
  SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전과 호환되므로 다중 버전 환경을 쉽게 관리할 수 있습니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47763211"
 ## <a name="smo-features"></a>SMO 기능  
  **최적화 된 성능**  
   
- SMO 아키텍처는 처음에 개체의 일부만 인스턴스화한 및 서버에서 최소한의 속성 정보만 요청 하므로 메모리 측면에서 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 응용 프로그램에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
+ SMO 아키텍처는 처음에 개체의 일부만 인스턴스화한 및 서버에서 최소한의 속성 정보만 요청 하므로 메모리 측면에서 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 애플리케이션에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
   
- 시스템 환경에 맞게 인스턴스화를 제어할 수 있습니다. 지연 인스턴스화를 사용하면 속성이 참조될 때 많은 서버 요청이 트리거될 수 있지만 응용 프로그램에서 필요로 하는 메모리의 양은 최소화됩니다.  
+ 시스템 환경에 맞게 인스턴스화를 제어할 수 있습니다. 지연 인스턴스화를 사용하면 속성이 참조될 때 많은 서버 요청이 트리거될 수 있지만 애플리케이션에서 필요로 하는 메모리의 양은 최소화됩니다.  
   
  실제 데이터베이스 개체를 나타내는 개체인 인스턴스 클래스는 세 가지 인스턴스화 수준에서 존재할 수 있습니다. 즉, 최소 인스턴스화(한 블록에서 최소한의 필수 속성만 읽음), 부분 인스턴스화(한 블록에서 상대적으로 많은 메모리 양을 사용하는 모든 속성을 읽음) 및 전체 인스턴스화 수준에서 존재할 수 있습니다. 인스턴스화되지 않은 상태와 전체 인스턴스화 상태가 일반적인 인스턴스화 상태입니다. 부분적으로 인스턴스화된 개체는 개체 속성 값 중 일부만 포함하므로 부분 인스턴스화 상태는 효율성을 높여 줍니다. 부분 인스턴스화는 직접 참조되지 않는 개체의 기본 상태입니다. 이러한 속성 중 하나가 참조되는 경우 개체의 전체 인스턴스화에 대한 오류 메시지가 생성됩니다.  
   

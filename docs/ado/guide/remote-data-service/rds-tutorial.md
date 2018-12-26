@@ -30,7 +30,7 @@ ms.locfileid: "51558630"
 -   특정 RDS 기능에 대 한 확실 하지 않은 경우와 약간 알고 다른 언어를 수 있습니다 다른 언어로 표현 된 동일한 기능에 대 한 확인 하 여 질문을 해결 하려면.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="how-the-tutorial-is-presented"></a>자습서 표시 하는 방법  
  이 자습서는 RDS 프로그래밍 모델을 기반으로 합니다. 개별적으로 프로그래밍 모델의 각 단계를 설명합니다. 또한 Visual Basic 코드 조각 사용 하 여 각 단계를 설명합니다.  

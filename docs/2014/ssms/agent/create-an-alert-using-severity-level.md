@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4cf2107124cea187ffb04941a7730f371f5a80c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48106543"
@@ -47,7 +47,7 @@ ms.locfileid: "48106543"
   
 -   master 데이터베이스에서 **xp_logevent** 로 생성된 이벤트가 발생합니다. 따라서 경고에 대한 **xp_logevent** 이 **@database_name** 또는 NULL이 아닌 경우 **xp_logevent** 는 경고를 트리거하지 않습니다.  
   
--   19부터 25까지의 심각도를 가진 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 보내고 경고를 트리거합니다. 19보다 낮은 심각도를 가진 이벤트는 **sp_altermessage**, RAISERROR WITH LOG 또는 **xp_logevent** 를 사용하여 강제로 Windows 응용 프로그램 로그에 경고를 기록하도록 한 경우에만 경고를 트리거합니다.  
+-   19부터 25까지의 심각도를 가진 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 보내고 경고를 트리거합니다. 19보다 낮은 심각도를 가진 이벤트는 **sp_altermessage**, RAISERROR WITH LOG 또는 **xp_logevent** 를 사용하여 강제로 Windows 애플리케이션 로그에 경고를 기록하도록 한 경우에만 경고를 트리거합니다.  
   
 ###  <a name="Security"></a> 보안  
   

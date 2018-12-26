@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0bebe156765726cee5f76d11c830dad56ebf92cf
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48217764"
 ---
-# <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services 서비스 응용 프로그램(SharePoint 2010 및 SharePoint 2013)에 대한 전자 메일 구성
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고는 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용할 계획인 경우에도 전자 메일 설정이 필요합니다.  
+# <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services 서비스 애플리케이션(SharePoint 2010 및 SharePoint 2013)에 대한 전자 메일 구성
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고는 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용할 계획인 경우에도 전자 메일 설정이 필요합니다.  
   
 ||  
 |-|  
@@ -27,7 +27,7 @@ ms.locfileid: "48217764"
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>공유 서비스에 대한 전자 메일 구성 방법  
   
-1.  SharePoint 중앙 관리에서 **응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
 2.  **서비스 응용 프로그램** 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48217764"
   
 ### <a name="ntlm-authentication"></a>NTLM 인증  
   
-1.  해당 전자 메일 환경에서 NTLM 인증이 필요하고 익명 액세스가 허용되지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 전자 메일 배달 확장 프로그램 구성을 수정해야 합니다. "2" 값을 사용하도록 **SMTP 인증** 을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 응용 프로그램에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
+1.  해당 전자 메일 환경에서 NTLM 인증이 필요하고 익명 액세스가 허용되지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 전자 메일 배달 확장 프로그램 구성을 수정해야 합니다. "2" 값을 사용하도록 **SMTP 인증** 을 변경합니다. 이 값은 사용자 인터페이스에서 변경할 수 없습니다. 다음 PowerShell 스크립트 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 전체 구성을 업데이트합니다. 또한 예를 들어 "보낸 사람" 주소와 같이 스크립트에 나열된 일부 노드는 사용자 인터페이스에서 설정할 수 있습니다.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
@@ -62,20 +62,20 @@ ms.locfileid: "48217764"
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
-2.  서비스 응용 프로그램 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet**을 실행합니다.  
+2.  서비스 애플리케이션 이름을 확인해야 하는 경우 **Get-SPRSServiceApplication cmdlet**을 실행합니다.  
   
     ```  
     get-sprsserviceapplication  
     ```  
   
-3.  다음 예에서 "SSRS_TESTAPPLICATION" 서비스 응용 프로그램에 대해 전자 메일 확장 프로그램의 현재 값으로 되돌립니다.  
+3.  다음 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 전자 메일 확장 프로그램의 현재 값으로 되돌립니다.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  다음 예에서 "SSRS_TESTAPPLICATION" 서비스 응용 프로그램에 대해 전자 메일 확장 프로그램의 현재 값을 가진 "emailconfig.txt"라는 새 파일을 생성합니다.  
+4.  다음 예에서 "SSRS_TESTAPPLICATION" 서비스 애플리케이션에 대해 전자 메일 확장 프로그램의 현재 값을 가진 "emailconfig.txt"라는 새 파일을 생성합니다.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

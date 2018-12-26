@@ -24,7 +24,7 @@ ms.locfileid: "47775811"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>매핑 데이터 형식(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  Oracle 서버에는 데이터 형식의 집합을 지원합니다. Oracle 용 ODBC 드라이버는 적절 한 ODBC SQL 데이터 형식으로 이러한 데이터 형식을 매핑합니다. 다음 표에 Oracle 7.3 Server 데이터 형식 및 해당 ODBC SQL 데이터 형식이 있습니다.  
   

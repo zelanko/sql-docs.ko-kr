@@ -102,7 +102,7 @@ ms.locfileid: "47780951"
   
 -   **IColumnsInfo**  
   
- 응용 프로그램은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. **IColumnsInfo** 와 **IAccessor** 는 이 행 집합의 데이터에 액세스하기 위해 필요합니다.  
+ 애플리케이션은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. **IColumnsInfo** 와 **IAccessor** 는 이 행 집합의 데이터에 액세스하기 위해 필요합니다.  
   
 ### <a name="error-object-interfaces"></a>Error 개체 인터페이스  
  다음 인터페이스를 사용하여 오류를 관리합니다.  

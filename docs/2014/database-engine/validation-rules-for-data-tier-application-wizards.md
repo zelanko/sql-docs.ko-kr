@@ -19,10 +19,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48061373"
 ---
-# <a name="validation-rules-for-data-tier-application-wizards"></a>데이터 계층 응용 프로그램 마법사에 대한 유효성 검사 규칙
-  이 항목은 데이터 계층 응용 프로그램 마법사에서 유효성 검사 규칙에 대한 수정 동작으로 업데이트됩니다.  
+# <a name="validation-rules-for-data-tier-application-wizards"></a>데이터 계층 애플리케이션 마법사에 대한 유효성 검사 규칙
+  이 항목은 데이터 계층 애플리케이션 마법사에서 유효성 검사 규칙에 대한 수정 동작으로 업데이트됩니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 이 릴리스의 정정 작업에 대한 자세한 내용은 [데이터 계층 응용 프로그램](../relational-databases/data-tier-applications/data-tier-applications.md)을 참조하세요.  
+ 이 릴리스의 정정 작업에 대한 자세한 내용은 [데이터 계층 애플리케이션](../relational-databases/data-tier-applications/data-tier-applications.md)을 참조하세요.  
   
   

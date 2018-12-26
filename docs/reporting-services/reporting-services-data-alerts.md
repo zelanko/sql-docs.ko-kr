@@ -56,7 +56,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]로 만든 보고서에서는 데이터 경고를 만들 수 없습니다.  
   
- 기본 모드 또는 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하거나 보고서 작성기의 독립 실행형 버전을 사용하는 경우 보고서를 보고서 서버, 자신의 컴퓨터 또는 SharePoint 라이브러리에 저장할 수 있습니다. 보고서에 대해 데이터 경고를 만들려면 보고서를 SharePoint 라이브러리에 업로드하거나 저장해야 합니다. 즉, 기본 모드로 보고서 서버에 저장되거나 자신의 컴퓨터에 저장된 보고서에 대해서는 경고를 만들 수 없습니다. 또한 사용자 지정 응용 프로그램에 포함된 경고는 만들 수 없습니다.  
+ 기본 모드 또는 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하거나 보고서 작성기의 독립 실행형 버전을 사용하는 경우 보고서를 보고서 서버, 자신의 컴퓨터 또는 SharePoint 라이브러리에 저장할 수 있습니다. 보고서에 대해 데이터 경고를 만들려면 보고서를 SharePoint 라이브러리에 업로드하거나 저장해야 합니다. 즉, 기본 모드로 보고서 서버에 저장되거나 자신의 컴퓨터에 저장된 보고서에 대해서는 경고를 만들 수 없습니다. 또한 사용자 지정 애플리케이션에 포함된 경고는 만들 수 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서의 다양한 자격 증명 유형을 지원합니다. 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 구성된 데이터 원본이 포함된 보고서에 대해 데이터 경고를 만들 수 있습니다. 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성된 보고서에 대해서는 경고를 만들 수 없습니다. 보고서는 경고 정의를 처리하는 중에 실행되며 자격 증명이 없으면 처리가 실패합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -120,7 +120,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
  이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 및 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
- SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+ SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ##  <a name="ConfigAlert"></a> 데이터 경고 구성  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 데이터 경고를 비롯한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 설정이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치할 때마다 보고서 서버 구성 파일(rsreportserver.config)과 SharePoint 구성 데이터베이스 간에 배포됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]설치 및 구성 단계의 일환으로 서비스 응용 프로그램을 만들면 SharePoint 구성 데이터베이스가 자동으로 생성됩니다. 자세한 내용은 [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [Reporting Services 구성 파일](../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.  
@@ -252,7 +252,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
  보고서는 데이터 경고 정의를 작성하는 데 사용된 데이터 피드를 생성하기 위해 실행됩니다. 보고서 서버 데이터베이스의 보고서 서버 실행 로그는 보고서가 실행될 때마다 정보를 캡처합니다. 자세한 정보가 필요한 경우 데이터베이스에서 ExecutionLog2 뷰를 쿼리할 수 있습니다. 자세한 내용은 [보고서 서버 ExecutionLog 및 ExecutionLog3 뷰](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)를 참조하세요.  
   
 #### <a name="report-server-trace-log"></a>보고서 서버 추적 로그  
- 보고서 서버 추적 로그에는 보고서 서버 웹 서비스 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다. 자세한 내용은 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
+ 보고서 서버 추적 로그에는 보고서 서버 웹 서비스 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다. 자세한 내용은 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
 ##  <a name="PerformanceCounters"></a> 성능 카운터  
  데이터 경고는 자체 성능 카운터를 제공합니다. 하나를 제외한 모든 성능 카운터가 경고 런타임 서비스에 포함된 이벤트와 관련되어 있습니다. 이벤트 큐와 관련된 성능 카운터를 보면 모든 활성 이벤트 큐의 길이를 알 수 있습니다.  
@@ -288,7 +288,7 @@ SQL Server Reporting Services 데이터 경고는 사용자가 관심을 가지�
   
      사이트의 모든 데이터 경고 관리에 대한 자세한 내용은 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)를 참조하세요.  
   
--   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+-   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ##  <a name="Globalization"></a> 데이터 경고의 세계화  
  아랍어 및 히브리어와 같은 특정 스크립트는 오른쪽에서 왼쪽으로 씁니다. 데이터 경고는 오른쪽에서 왼쪽으로 쓰는 스크립트뿐만 아니라 왼쪽에서 오른쪽으로 쓰는 스크립트도 지원합니다. 데이터 경고는 culture를 감지하고, 이에 따라 데이터 경고 메시지의 레이아웃과 사용자 인터페이스 모양 및 동작을 변경합니다. culture는 사용자 컴퓨터에 있는 운영 체제의 국가별 설정에서 파생됩니다. culture는 사용자가 데이터 경고 정의를 업데이트한 다음 다시 저장할 때마다 저장됩니다.  

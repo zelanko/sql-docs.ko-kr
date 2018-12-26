@@ -21,7 +21,7 @@ ms.lasthandoff: 11/16/2018
 ms.locfileid: "51813796"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  
  
 ##  <a name="bkmk_view_log"></a> 보고서 서버 로그 파일은 어디에 있나요?  
  추적 로그 파일은 `ReportServerService_<timestamp>.log` 및 `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`이며 다음 폴더에 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "51813796"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소 및 버전 정보  
   
--   응용 프로그램 로그에 기록된 이벤트  
+-   애플리케이션 로그에 기록된 이벤트  
   
 -   보고서 서버에서 생성한 예외  
   
@@ -102,7 +102,7 @@ ms.locfileid: "51813796"
  추적 로그 정보를 검토하여 보고서가 배달되었는지 여부, 보고서를 받은 사용자 및 배달 시도 횟수를 확인할 수 있습니다. 또한 추적 로그는 보고서 실행 작업 및 보고서 처리 중에 적용되는 환경 변수를 기록합니다. 오류와 예외도 추적 로그에 입력됩니다. 예를 들어 **ThreadAbortExceptions** 항목으로 표시되는 보고서 시간 초과 오류를 발견할 수 있습니다.  
 
 ## <a name="previous-versions"></a>이전 버전
-이전 릴리스의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서는 응용 프로그램마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서
+이전 릴리스의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서는 애플리케이션마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서
 + ReportServerWebApp_*\<timestamp>*.log
 + ReportServer_*\<timestamp>*.log
 + ReportServerService_main_*\<timestamp>*.log

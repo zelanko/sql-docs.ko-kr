@@ -214,7 +214,7 @@ tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를
 - 이전 단계의 공간 사용 값을 사용하여 전체 작업 사용량을 예측하고 예상 동시 작업에 대해 이 값을 조정한 다음 tempdb의 크기를 알맞게 설정합니다.
 
 ## <a name="how-to-monitor-tempdb-use"></a>tempdb 사용 모니터링 방법
-  tempdb에 디스크 공간이 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로덕션 환경에 심각한 장애가 발생할 수 있으며 실행 중인 응용 프로그램이 작업을 완료하지 못할 수 있습니다. [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) 동적 관리 뷰를 사용하여 tempdb 파일에서 사용되는 디스크 공간을 모니터링할 수 있습니다.
+  tempdb에 디스크 공간이 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로덕션 환경에 심각한 장애가 발생할 수 있으며 실행 중인 애플리케이션이 작업을 완료하지 못할 수 있습니다. [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) 동적 관리 뷰를 사용하여 tempdb 파일에서 사용되는 디스크 공간을 모니터링할 수 있습니다.
   
  ```sql
  -- Determining the Amount of Free Space in tempdb

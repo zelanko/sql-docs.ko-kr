@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47761331"
 ---
-# <a name="basic-odbc-application-steps"></a>기본 ODBC 응용 프로그램 단계
+# <a name="basic-odbc-application-steps"></a>기본 ODBC 애플리케이션 단계
 이 섹션에서는 ODBC 응용 프로그램의 일반적인 흐름을 설명 합니다. 그럴 가능성은 모든 응용 프로그램이 순서 대로 이러한 모든 함수 호출을 합니다. 그러나 대부분의 응용 프로그램에는 다음이 단계 중 일부 변형을 사용합니다. 기본 응용 프로그램 단계는 다음 그림에 표시 됩니다.  
   
  ![ODBC 응용 프로그램에 대 한 기본 단계](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  

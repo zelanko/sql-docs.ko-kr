@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47626951"
 ---
-# <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>응용 프로그램의 이전 버전과의 호환성을 위한 대체 함수 매핑
+# <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
 ODBC 3 *.x* ODBC 3을 통해 작업 응용 프로그램 *.x* 드라이버 관리자는 ODBC 2에 대해 작동 합니다. *x* 드라이버 없는 새 기능을 사용 하기만 합니다. 그러나 모두 중복 기능 및 변경 된 동작 방식에 영향 그렇게 하는 ODBC 3. *x* 응용 프로그램 작동에 ODBC 2. *x* 드라이버입니다. ODBC 2 작업할 때. *x* 드라이버를 드라이버 관리자 매핑됩니다 다음 ODBC 3. *x* 함수를 하나 이상의 ODBC 2를 대체 했습니다. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  
   
 |ODBC 3입니다. *x* 함수|ODBC 2입니다. *x* 함수|  

@@ -21,7 +21,7 @@ ms.locfileid: "52414780"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지에서 관리할 수 있는 몇 가지 사이트 수준 사용자 지정 기능과 사이트 기능이 있습니다. 설정은 사이트 전체에 해당하며 모든 Reporting Services 서비스 응용 프로그램에 영향을 줍니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
+Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지에서 관리할 수 있는 몇 가지 사이트 수준 사용자 지정 기능과 사이트 기능이 있습니다. 설정은 사이트 전체에 해당하며 모든 Reporting Services 서비스 애플리케이션에 영향을 줍니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.

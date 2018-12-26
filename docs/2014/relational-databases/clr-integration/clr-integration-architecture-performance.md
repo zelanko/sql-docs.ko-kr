@@ -16,7 +16,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f0963c1f703d471827f60514181e976051abb8d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48125805"
@@ -55,7 +55,7 @@ ms.locfileid: "48125805"
  `varchar`과 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문자 데이터는 관리되는 함수에서 SqlString 또는 SqlChars 형식으로 지정할 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 또한 `SqlXml.CreateReader()`에서 반환하는 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 있습니다.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 및 확장 저장 프로시저  
- 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(응용 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 System.Data.SqlServer API는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 `xml`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`와 같은 데이터 형식을 지원하지만 ODS API는 새로운 데이터 형식을 지원하도록 확장되지 않았습니다.  
+ 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(애플리케이션 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 System.Data.SqlServer API는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 `xml`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`와 같은 데이터 형식을 지원하지만 ODS API는 새로운 데이터 형식을 지원하도록 확장되지 않았습니다.  
   
  관리 코드를 사용하면 메모리, 스레드 및 동기화와 같은 리소스 사용을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 관리합니다. 이러한 리소스를 노출하는 관리되는 API가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 관리자를 기반으로 구현되기 때문입니다. 이와 달리 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 확장 저장 프로시저의 리소스 사용량을 보거나 제어할 수 없습니다. 예를 들어 확장 저장 프로시저가 CPU나 메모리 리소스를 너무 많이 소비하더라도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 이를 감지하거나 제어할 수 없습니다. 반면에 관리 코드를 사용하면 지정된 스레드가 오랫동안 양보하지 않을 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 이를 감지하여 다른 작업을 예약할 수 있도록 해당 태스크에 양보를 강요합니다. 따라서 관리 코드를 사용하면 확장성과 시스템 리소스 사용 효율이 개선됩니다.  
   

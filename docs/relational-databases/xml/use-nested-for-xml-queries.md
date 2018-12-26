@@ -125,7 +125,7 @@ FOR XML AUTO, TYPE;
  중첩 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다.  
   
  [ASP.NET에서 중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  
- ASPX 응용 프로그램이 FOR XML을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 XML을 반환할 수 있는 방법을 보여 줍니다.  
+ ASPX 애플리케이션이 FOR XML을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 XML을 반환할 수 있는 방법을 보여 줍니다.  
   
  [중첩 FOR XML 쿼리로 XML 구체화](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
  중첩 FOR XML 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만들어진 XML 문서의 구조를 제어하는 방법을 보여 줍니다.  

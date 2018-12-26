@@ -147,7 +147,7 @@ FROM Cities;
  *column_alias*는 ORDER BY 절에는 사용할 수 있지만, WHERE, GROUP BY 또는 HAVING 절에서는 사용할 수 없습니다. 쿼리 식이 DECLARE CURSOR 문의 일부인 경우 *column_alias*는 FOR UPDATE 절에서 사용할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
- SELECT 목록에 포함된 **text** 또는 **ntext** 열에 대해 반환되는 데이터의 길이는 **text** 열의 실제 크기, 기본 TEXTSIZE 세션 설정 또는 하드 코딩된 응용 프로그램 제한 중에서 가장 작은 값으로 설정됩니다. 세션에 대해 반환되는 텍스트의 길이를 변경하려면 SET 문을 사용하세요. 기본적으로 하나의 SELECT 문이 반환하는 텍스트 데이터의 길이 제한은 4,000바이트입니다.  
+ SELECT 목록에 포함된 **text** 또는 **ntext** 열에 대해 반환되는 데이터의 길이는 **text** 열의 실제 크기, 기본 TEXTSIZE 세션 설정 또는 하드 코딩된 애플리케이션 제한 중에서 가장 작은 값으로 설정됩니다. 세션에 대해 반환되는 텍스트의 길이를 변경하려면 SET 문을 사용하세요. 기본적으로 하나의 SELECT 문이 반환하는 텍스트 데이터의 길이 제한은 4,000바이트입니다.  
   
  다음 동작 중 하나를 시도하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 예외 511을 발생시키고 현재 실행 중인 문을 롤백합니다.  
   

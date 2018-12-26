@@ -38,7 +38,7 @@ ms.locfileid: "47835501"
  Reporting Services REST API는 Reporting Services 보고서 서버 카탈로그에 있는 개체에 대한 프로그래밍 방식 액세스를 제공합니다. REST API를 사용하면 폴더 계층 구조를 탐색하거나, 폴더의 내용을 검색하거나, 보고서 정의를 다운로드할 수 있습니다. 또한 개체를 만들고, 업데이트하고 삭제할 수 있습니다.
 
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 보고서 탐색 및 보기를 위한 빠르고 쉬운 액세스 지점으로 사용할 수 있는 전체 URL 기반 요청 집합을 지원합니다. 보고서 서버 웹 서비스와 함께 이 기술을 사용하여 전체 보고 솔루션을 사용자 지정 비즈니스 응용 프로그램에 통합할 수 있습니다. URL 액세스는 보고서를 웹 포털의 일부로 통합하거나 웹 브라우저에서 보고서를 볼 때 특히 유용합니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 보고서 탐색 및 보기를 위한 빠르고 쉬운 액세스 지점으로 사용할 수 있는 전체 URL 기반 요청 집합을 지원합니다. 보고서 서버 웹 서비스와 함께 이 기술을 사용하여 전체 보고 솔루션을 사용자 지정 비즈니스 애플리케이션에 통합할 수 있습니다. URL 액세스는 보고서를 웹 포털의 일부로 통합하거나 웹 브라우저에서 보고서를 볼 때 특히 유용합니다.  
   
  [Reporting Services 확장 프로그램](../reporting-services/extensions/reporting-services-extensions.md)  
  확장성을 위해 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 모듈식 아키텍처를 디자인했습니다. 다양한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소에서 사용되는 확장 프로그램을 쉽게 개발, 설치 및 관리할 수 있도록 관리 코드 API를 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 사용하여 어셈블리를 만들 수 있으며 끊임없이 변하는 업무상의 요구에 맞게 새로운 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 렌더링, 보안, 배달 및 데이터 처리 기능을 추가할 수도 있습니다.  

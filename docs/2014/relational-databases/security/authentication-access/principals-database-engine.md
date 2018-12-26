@@ -30,7 +30,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48084553"
@@ -56,7 +56,7 @@ ms.locfileid: "48084553"
   
 -   데이터베이스 역할  
   
--   응용 프로그램 역할  
+-   애플리케이션 역할  
   
 ## <a name="the-sql-server-sa-login"></a>SQL Server sa 로그인  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sa 로그인은 서버 수준 보안 주체로서 인스턴스를 설치하면 기본적으로 생성됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 sa의 기본 데이터베이스가 master입니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경되었습니다.  

@@ -28,13 +28,13 @@ ms.locfileid: "51676392"
   
 1.  유틸리티 탐색기 탐색 창을 보려면 SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 **보기**를 클릭하고 **유틸리티 탐색기** 를 선택합니다. 내용 창을 보려면 **보기**를 클릭하고 **유틸리티 탐색기 내용**을 클릭합니다.  
   
-2.  탐색 창에서 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결**을 클릭합니다. UCP(유틸리티 제어 지점)를 만들지 않았거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 데이터 계층 응용 프로그램을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하지 않은 경우 [SQL Server 유틸리티 기능 및 작업](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)을 참조하세요.  
+2.  탐색 창에서 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결**을 클릭합니다. UCP(유틸리티 제어 지점)를 만들지 않았거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 데이터 계층 애플리케이션을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하지 않은 경우 [SQL Server 유틸리티 기능 및 작업](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)을 참조하세요.  
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 및 데이터 계층 응용 프로그램의 요약 데이터를 보려면 UCP 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 대시보드 데이터가 내용 창에 표시됩니다.  
   
 4.  **의 관리되는 인스턴스의 목록 뷰 데이터를 보려면** 관리되는 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 목록 뷰 데이터가 내용 창에 표시됩니다.  
   
-5.  데이터 계층 응용 프로그램의 목록 뷰를 보려면 **배포된 데이터 계층 응용 프로그램** 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 목록 뷰 데이터가 내용 창에 표시됩니다.  
+5.  데이터 계층 애플리케이션의 목록 뷰를 보려면 **배포된 데이터 계층 애플리케이션** 노드를 클릭합니다(새로 고치려면 마우스 오른쪽 단추 클릭). 목록 뷰 데이터가 내용 창에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

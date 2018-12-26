@@ -34,7 +34,7 @@ ms.locfileid: "47683201"
 > [!NOTE]  
 >  응용 프로그램에서 이러한 메서드를 사용하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다.  
   
- 문자열 매개 변수를 유니코드 형식으로 서버에 보내기 위해 응용 프로그램은 새 JDBC 4.0 국가별 문자 메서드를 사용하거나 국가별 문자 메서드 이외의 메서드를 사용하는 경우 **sendStringParametersAsUnicode** 연결 속성을 "**true**"로 설정해야 합니다. 가능한 한 새 JDBC 4.0 국가별 문자 메서드를 사용하는 것이 좋습니다. 에 대 한 자세한 내용은 합니다 **sendStringParametersAsUnicode** 연결 속성을 참조 하세요 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ 문자열 매개 변수를 유니코드 형식으로 서버에 보내기 위해 애플리케이션은 새 JDBC 4.0 국가별 문자 메서드를 사용하거나 국가별 문자 메서드 이외의 메서드를 사용하는 경우 **sendStringParametersAsUnicode** 연결 속성을 "**true**"로 설정해야 합니다. 가능한 한 새 JDBC 4.0 국가별 문자 메서드를 사용하는 것이 좋습니다. 에 대 한 자세한 내용은 합니다 **sendStringParametersAsUnicode** 연결 속성을 참조 하세요 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ceffa7d590ad7861b07700ac13ab795a309bff39
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48080993"
@@ -54,7 +54,7 @@ ms.locfileid: "48080993"
   
 3.  많은 메모리를 사용하는 속성. 사용할 수 없는 나머지 속성은 많은 메모리를 사용 하며를 <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> 속성 값이 true (같은 <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). 이러한 속성은 구체적으로 참조될 때만 로드됩니다.  
   
- 응용 프로그램이 부분적으로 로드됨 상태에서 제공되는 속성 이외의 추가 속성을 인출하는 경우 쿼리를 제출하여 이러한 추가 속성을 검색하고 전체 로드됨 상태로 확장됩니다. 이로 인해 클라이언트와 서버 간에 불필요한 트래픽이 발생할 수 있습니다. 호출 하 여 더 많은 최적화를 수행할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 사용하면 개체를 초기화할 때 로드되는 속성을 지정할 수 있습니다.  
+ 애플리케이션이 부분적으로 로드됨 상태에서 제공되는 속성 이외의 추가 속성을 인출하는 경우 쿼리를 제출하여 이러한 추가 속성을 검색하고 전체 로드됨 상태로 확장됩니다. 이로 인해 클라이언트와 서버 간에 불필요한 트래픽이 발생할 수 있습니다. 호출 하 여 더 많은 최적화를 수행할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 사용하면 개체를 초기화할 때 로드되는 속성을 지정할 수 있습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 응용 프로그램에 대해 속성 로드 동작을 설정합니다. 사용 하 여 원래 동작을 저장할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드 및 필요에 따라 복원 합니다.  
   

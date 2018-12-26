@@ -24,7 +24,7 @@ ms.locfileid: "52529688"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>데이터베이스 미러링 - 인바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+  이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 인바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계에 대해 설명합니다. 인바운드 연결을 설정하려면 먼저 각 서버 인스턴스에서 아웃바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
  인바운드 연결 구성은 대개 다음과 같은 단계로 진행됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52529688"
   
 3.  다른 서버 인스턴스의 미러링 엔드포인트에 대한 인증서를 얻습니다.  
   
-     아웃바운드 연결을 구성할 때 아직 인증서를 가져오지 못했으면 원격 서버 인스턴스의 미러링 엔드포인트에 대한 인증서 사본을 얻습니다. 이렇게 하려면 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)에 설명된 대로 해당 서버 인스턴스의 인증서를 백업합니다. 인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
+     아웃바운드 연결을 구성할 때 아직 인증서를 가져오지 못했으면 원격 서버 인스턴스의 미러링 엔드포인트에 대한 인증서 사본을 얻습니다. 이렇게 하려면 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)에 설명된 대로 해당 서버 인스턴스의 인증서를 백업합니다. 인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
      자세한 내용은 [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)를 참조하세요.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52529688"
     GO  
     ```  
   
-     자세한 내용은 [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+     자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
  이로써 HOST_B에서 HOST_A에 로그인하기 위한 인증서 인증 설정이 끝났습니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52529688"
  다음 예에서는 인바운드 연결을 위한 HOST_B 구성을 보여 줍니다.  
   
 > [!NOTE]  
->  이 예제에서는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)의 코드 조각으로 만든 HOST_A 인증서가 포함된 인증서 파일을 사용합니다.  
+>  이 예제에서는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)의 코드 조각으로 만든 HOST_A 인증서가 포함된 인증서 파일을 사용합니다.  
   
 ```  
 USE master;  

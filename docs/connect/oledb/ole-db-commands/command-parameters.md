@@ -49,7 +49,7 @@ ms.locfileid: "47794111"
   
 -   접근자를 하드 코딩할 경우 매개 변수에 바인딩되는 DBTYPE 값이 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 같은 형식인지 확인합니다.  
   
--   공급자가 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 동적으로 얻을 수 있도록 **ICommandWithParameters::GetParameterInfo**를 호출하는 응용 프로그램을 코딩합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
+-   공급자가 매개 변수의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 동적으로 얻을 수 있도록 **ICommandWithParameters::GetParameterInfo**를 호출하는 애플리케이션을 코딩합니다. 이로 인해 서버로의 네트워크 왕복이 추가로 발생합니다.  
   
 > [!NOTE]  
 >  공급자에서는 FROM 절이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 또는 DELETE 문, 매개 변수를 포함하는 하위 쿼리에 종속된 SQL 문, 비교, like 또는 한정된 조건자의 두 식이나 매개 변수 중 하나가 함수의 매개 변수인 쿼리에 매개 변수 표식이 포함된 SQL 문에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 또한 SQL 문을 일괄 처리할 경우 공급자에서는 일괄 처리의 첫 번째 문 다음에 나오는 문의 매개 변수 표식에 대해 **ICommandWithParameters::GetParameterInfo**를 호출할 수 없습니다. 주석(/* \*/)이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 명령에 허용되지 않습니다.  

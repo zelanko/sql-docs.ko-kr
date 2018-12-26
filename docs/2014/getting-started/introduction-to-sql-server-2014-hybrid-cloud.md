@@ -19,14 +19,14 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077733"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
- 대부분의 응용 프로그램에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 사설 클라우드, 공용 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 
+ 대부분의 애플리케이션에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 사설 클라우드, 공용 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 
  
  비즈니스 필요에 따라 확장할 수 있는 유연한 IT 인프라에 필요한 경우에 데이터 센터에서 사설 클라우드 또는 Azure 글로벌 데이터 센터에서 공용 클라우드를 빌드할 수 있습니다. 공용 클라우드와 합쳐지도록 데이터 센터를 확장하면 하이브리드 클라우드 모델을 구축하게 됩니다. 
  
  이 항목에서는 하이브리드 클라우드 시나리오를 지원하는 SQL Server 2014 기능을 소개합니다. Microsoft 하이브리드 클라우드 전략 및 SQL Server에 대한 자세한 내용은 [SQL Server 하이브리드 IT](http://www.microsoft.com/sqlserver/solutions-technologies/hybrid-It.aspx) 웹 사이트를 참조하십시오. 
  
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure 및 하이브리드 클라우드 
- Microsoft 기술을 사용하여 온-프레미스와 클라우드 양쪽에서 코드를 실행하거나, 온-프레미스 데이터를 사용하여 클라우드에서 실행하거나, 두 개 이상의 데이터 센터를 이용하여 완전히 클라우드에서 실행할 수 있습니다. 따라서 기존 레거시 IT 투자를 보존하면서 원하는 속도로 응용 프로그램을 클라우드로 이동할 수 있습니다. 
+ Microsoft 기술을 사용하여 온-프레미스와 클라우드 양쪽에서 코드를 실행하거나, 온-프레미스 데이터를 사용하여 클라우드에서 실행하거나, 두 개 이상의 데이터 센터를 이용하여 완전히 클라우드에서 실행할 수 있습니다. 따라서 기존 레거시 IT 투자를 보존하면서 원하는 속도로 애플리케이션을 클라우드로 이동할 수 있습니다. 
  
  이 문서에서는 집중 온-프레미스 SQL Server에서 Azure 공용 클라우드 제품인 포괄 하는 하이브리드 클라우드 시나리오: [Azure Virtual Machines에서 SQL Server](http://msdn.microsoft.com/library/azure/jj823132.aspx) 하 고 [Azure Storage](http://www.azure.com/documentation/services/storage/)합니다. 특히 다음과 같은 시나리오에 대해 설명합니다. 
  
@@ -72,7 +72,7 @@ ms.locfileid: "48077733"
  
 -  저비용 재해 복구 솔루션 
  
--  투명한 응용 프로그램 장애 조치(failover) 
+-  투명한 애플리케이션 장애 조치(failover) 
  
 -  읽기 작업과 백업을 오프로드하기 위한 가용 복제본 
  
@@ -80,7 +80,7 @@ ms.locfileid: "48077733"
  
 -  합니다 [Azure 복제본 추가 마법사](http://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) 하나 이상의 복제본 데이터베이스의 재해 복구를 위해 Azure에서 가상 컴퓨터에 배포할 수 있습니다. 
  
--  AlwaysOn 가용성 그룹, 데이터베이스 미러링 및 로그 전달은 응용 프로그램의 고가용성 및 재해 복구 요구 사항을 해결하는 데 사용할 수 있는 가장 일반적인 기술입니다. 정보를 참조 하세요 [고가용성 및 재해 복구 Azure Virtual Machines에서 SQL Server에 대 한](http://msdn.microsoft.com/library/azure/jj870962.aspx)합니다. 
+-  AlwaysOn 가용성 그룹, 데이터베이스 미러링 및 로그 전달은 애플리케이션의 고가용성 및 재해 복구 요구 사항을 해결하는 데 사용할 수 있는 가장 일반적인 기술입니다. 정보를 참조 하세요 [고가용성 및 재해 복구 Azure Virtual Machines에서 SQL Server에 대 한](http://msdn.microsoft.com/library/azure/jj870962.aspx)합니다. 
  
 #### <a name="store"></a> Azure Storage에서 SQL Server 데이터 파일을 저장 합니다. 
  Azure Storage에 온-프레미스 SQL Server 데이터 파일을 저장할 데이터베이스에 대 한 유연 하 고 안정적인 무제한 오프 사이트 저장소를 제공 합니다. SQL Server 2014부터 사용할 수 있습니다 [Miceosoft Azure의 SQL Server 데이터 파일](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) Azure Storage에서 SQL Server 데이터베이스 파일을 저장 합니다. 이 기능을 사용 하 여 데이터를 이동할 수 있으며 로그 파일 온-프레미스 데이터베이스에서 Azure Storage로 온-프레미스를 실행 중인 SQL Server의 계산 노드를 유지 하는 동안 키를 누릅니다. 이 기능을 사용 하면 더 Azure Storage에는 무제한 저장소 용량입니다. 
@@ -89,7 +89,7 @@ ms.locfileid: "48077733"
  
 -  Azure Storage의 무제한 저비용 저장소 
  
--  온-프레미스 보고 응용 프로그램을 지원하기 위해 기록 읽기 작업을 클라우드로 오프로드하는 데 가장 적합함 
+-  온-프레미스 보고 애플리케이션을 지원하기 위해 기록 읽기 작업을 클라우드로 오프로드하는 데 가장 적합함 
  
 -  계산 인스턴스(SQL Server 인스턴스)와 데이터(SQL Server 데이터 파일)를 분리하여 재해 복구 촉진. 이렇게 하면 재해 발생 시 Azure 가상 컴퓨터 또는 온-프레미스 환경에서 SQL Server의 다른 인스턴스로 데이터베이스를 쉽게 연결할 수 있습니다. 
  
@@ -106,7 +106,7 @@ ms.locfileid: "48077733"
  
 -  **전체 가상 컴퓨터 이동:** 사용자 고유의 SQL Server 가상 컴퓨터를 Azure로 가져올 또는 플랫폼 이미지를 사용 하 여 만들 수 있습니다. 그런 다음 데이터가 이미 포함되어 있는 데이터 디스크를 업로드하여 가상 머신에 연결하거나 빈 디스크를 머신에 연결할 수 있습니다. 연결 된 데이터 디스크를 사용 하 여 Azure Virtual Machines에서 SQL Server 데이터 인스턴스가 있으면 데이터 파일 및 응용 프로그램 데이터에 대 한 다른 영구 저장소를 제공 합니다. 포괄적인 정보 및 방법에 대 한 참조 [Azure Virtual Machines에서 SQL Server 배포](http://msdn.microsoft.com/library/dn133141.aspx)합니다. 
  
- Azure Virtual Machines에 응용 프로그램 계층 (프레젠테이션 계층, 비즈니스 계층, 데이터베이스 계층 등)을 이동 하려는 경우에 지정 된 권장 사항을 검토 하는 것이 좋습니다는 [응용 프로그램 패턴 및 개발 Azure Virtual Machines에서 SQL Server에 대 한 전략](http://msdn.microsoft.com/library/dn574746.aspx) 문서. 이 문서의 목적은 좋은 응용 프로그램 아키텍처 및 기존 응용 프로그램을 Azure에서 새 응용 프로그램을 개발할 뿐만 아니라 Azure로 마이그레이션할 때 따를 수 있는 디자인에 대 한 솔루션 설계자와 개발자가 기반을 제공 하는 것입니다. 이 문서에서는 각 응용 프로그램 패턴에 대한 온-프레미스 시나리오, 해당 클라우드 사용 솔루션 및 관련된 기술 권장 사항을 설명합니다. 또한 문서 응용 프로그램을 올바르게 디자인할 수 있도록 Azure 특정 개발 전략을 설명 합니다. 
+ Azure Virtual Machines에 응용 프로그램 계층 (프레젠테이션 계층, 비즈니스 계층, 데이터베이스 계층 등)을 이동 하려는 경우에 지정 된 권장 사항을 검토 하는 것이 좋습니다는 [응용 프로그램 패턴 및 개발 Azure Virtual Machines에서 SQL Server에 대 한 전략](http://msdn.microsoft.com/library/dn574746.aspx) 문서. 이 문서의 목적은 좋은 응용 프로그램 아키텍처 및 기존 응용 프로그램을 Azure에서 새 응용 프로그램을 개발할 뿐만 아니라 Azure로 마이그레이션할 때 따를 수 있는 디자인에 대 한 솔루션 설계자와 개발자가 기반을 제공 하는 것입니다. 이 문서에서는 각 애플리케이션 패턴에 대한 온-프레미스 시나리오, 해당 클라우드 사용 솔루션 및 관련된 기술 권장 사항을 설명합니다. 또한 문서 응용 프로그램을 올바르게 디자인할 수 있도록 Azure 특정 개발 전략을 설명 합니다. 
  
 ## <a name="see-also"></a>참고자료 
  [SQL Server 2014 CTP2 제품 가이드](http://www.microsoft.com/download/details.aspx?id=39269)  

@@ -27,7 +27,7 @@ ms.locfileid: "47776741"
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용자 연결 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 설정하는 방법에 대해 설명합니다. **사용자 연결** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 허용되는 최대 동시 사용자 연결 수를 지정합니다. 허용되는 실제 사용자 연결 수는 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 응용 프로그램 및 하드웨어 제한에 따라서도 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자 연결을 최대 32,767개까지 허용합니다. **사용자 연결 수** 는 동적(자체 구성) 옵션이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 허용 가능한 최대값까지 필요한 만큼 자동으로 최대 사용자 연결 수를 조정합니다. 예를 들어, 10명의 사용자만 로그인했으면 10개의 사용자 연결 개체가 할당됩니다. 대부분의 경우 이 옵션의 값을 변경하지 않아도 됩니다. 기본값은 0이며 최대(32,767) 사용자 연결을 허용합니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용자 연결 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 설정하는 방법에 대해 설명합니다. **사용자 연결** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 허용되는 최대 동시 사용자 연결 수를 지정합니다. 허용되는 실제 사용자 연결 수는 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 애플리케이션 및 하드웨어 제한에 따라서도 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자 연결을 최대 32,767개까지 허용합니다. **사용자 연결 수** 는 동적(자체 구성) 옵션이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 허용 가능한 최대값까지 필요한 만큼 자동으로 최대 사용자 연결 수를 조정합니다. 예를 들어, 10명의 사용자만 로그인했으면 10개의 사용자 연결 개체가 할당됩니다. 대부분의 경우 이 옵션의 값을 변경하지 않아도 됩니다. 기본값은 0이며 최대(32,767) 사용자 연결을 허용합니다.  
   
  시스템에 허용되는 최대 사용자 연결 수를 확인하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 실행하거나 [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 카탈로그 뷰를 쿼리합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47776741"
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전문가만이 변경해야 합니다.  
   
--   **사용자 연결** 옵션을 사용하면 동시 연결이 너무 많아 서버가 과부하되는 것을 방지할 수 있습니다. 시스템과 사용자 요구 사항에 따라 연결 수를 계산할 수 있습니다. 예를 들어, 사용자가 많은 시스템에서는 각 사용자가 고유하게 연결할 필요는 없습니다. 여러 사용자 간에 연결을 공유할 수 있습니다. OLE DB 응용 프로그램을 실행 중인 사용자는 각 열린 연결 개체당 하나의 연결이 필요하며 ODBC 응용 프로그램을 실행 중인 사용자는 응용 프로그램에 있는 각 활성 연결 핸들당 하나의 연결이 필요합니다. 또한 DB-Library 응용 프로그램을 실행 중인 사용자는 DB-Library **dbopen** 함수를 호출하는 시작된 각 프로세스당 하나의 연결이 필요합니다.  
+-   **사용자 연결** 옵션을 사용하면 동시 연결이 너무 많아 서버가 과부하되는 것을 방지할 수 있습니다. 시스템과 사용자 요구 사항에 따라 연결 수를 계산할 수 있습니다. 예를 들어, 사용자가 많은 시스템에서는 각 사용자가 고유하게 연결할 필요는 없습니다. 여러 사용자 간에 연결을 공유할 수 있습니다. OLE DB 애플리케이션을 실행 중인 사용자는 각 열린 연결 개체당 하나의 연결이 필요하며 ODBC 애플리케이션을 실행 중인 사용자는 애플리케이션에 있는 각 활성 연결 핸들당 하나의 연결이 필요합니다. 또한 DB-Library 애플리케이션을 실행 중인 사용자는 DB-Library **dbopen** 함수를 호출하는 시작된 각 프로세스당 하나의 연결이 필요합니다.  
   
     > [!IMPORTANT]  
     >  이 옵션을 사용해야 하는 경우 연결의 사용 여부에 관계없이 각 연결에 오버헤드가 필요하므로 값을 너무 높게 설정하지 마십시오. 최대 사용자 연결 수를 초과하면 오류 메시지가 나타나고 다른 연결을 사용할 수 있게 될 때까지 연결할 수 없습니다.  

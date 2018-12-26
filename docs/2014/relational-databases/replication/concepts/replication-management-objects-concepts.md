@@ -24,7 +24,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ae095ec489018b7f5cfde69a5cbd65470f261ce
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48082276"
@@ -55,8 +55,8 @@ ms.locfileid: "48082276"
 ## <a name="introduction-to-rmo-programming"></a>RMO 프로그래밍 소개  
  RMO는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제의 모든 측면을 프로그래밍하기 위해 디자인되었습니다. RMO 네임스페이스는 <xref:Microsoft.SqlServer.Replication>이며 이 네임스페이스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리인 Microsoft.SqlServer.Rmo.dll을 통해 구현됩니다. <xref:Microsoft.SqlServer.Replication> 네임스페이스에 속하는 Microsoft.SqlServer.Replication.dll 어셈블리는 다양한 복제 에이전트(스냅숏 에이전트, 배포 에이전트 및 병합 에이전트)를 프로그래밍하는 데 필요한 관리되는 코드 인터페이스를 구현합니다. 이 어셈블리의 클래스는 RMO에서 액세스하여 구독을 동기화하는 데 사용될 수 있습니다. Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 어셈블리를 통해 구현되는 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스의 클래스는 병합 복제에 대한 사용자 지정 비즈니스 논리를 만드는 데 사용됩니다. 이 어셈블리는 RMO에 종속되지 않습니다.  
   
-## <a name="deploying-applications-based-on-rmo"></a>RMO를 기초로 응용 프로그램 배포  
- RMO는 SQL Server Compact를 제외한 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 복제 구성 요소와 클라이언트 연결 구성 요소를 필요로 하기 때문에 RMO를 기초로 응용 프로그램을 배포하려면 복제 구성 요소와 클라이언트 연결 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 응용 프로그램을 실행할 컴퓨터에 설치해야 합니다.  
+## <a name="deploying-applications-based-on-rmo"></a>RMO를 기초로 애플리케이션 배포  
+ RMO는 SQL Server Compact를 제외한 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 복제 구성 요소와 클라이언트 연결 구성 요소를 필요로 하기 때문에 RMO를 기초로 애플리케이션을 배포하려면 복제 구성 요소와 클라이언트 연결 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 애플리케이션을 실행할 컴퓨터에 설치해야 합니다.  
   
 ## <a name="getting-started-with-rmo"></a>RMO 시작  
  이 섹션에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio를 사용하여 간단한 RMO 프로젝트를 시작하는 방법에 대해 설명합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48082276"
   
 3.  **프로젝트 형식** 대화 상자에서 **Visual C# 프로젝트**를 선택합니다. **템플릿** 창에서 **Windows 응용 프로그램**을 선택합니다.  
   
-4.  (옵션) **이름**에 새 응용 프로그램의 이름을 입력합니다.  
+4.  (옵션) **이름**에 새 애플리케이션의 이름을 입력합니다.  
   
 5.  **확인**을 클릭하여 Visual C# Windows 템플릿을 로드합니다.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "48082276"
   
 2.  **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  프로젝트 형식 창에서 **Visual Basic**을 선택합니다. 템플릿 창에서 **Windows 응용 프로그램**을 선택합니다.  
+3.  프로젝트 형식 창에서 **Visual Basic**을 선택합니다. 템플릿 창에서 **Windows 애플리케이션**을 선택합니다.  
   
-4.  (옵션) **이름** 상자에 새 응용 프로그램의 이름을 입력합니다.  
+4.  (옵션) **이름** 상자에 새 애플리케이션의 이름을 입력합니다.  
   
 5.  **확인**을 클릭하여 Visual Basic Windows 템플릿을 로드합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48082276"
   
 -   Windows 인증이 기본값입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A>를 `false`로 설정하고 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>에 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 및 암호를 설정해야 합니다. 보안 자격 증명은 항상 안전하게 저장 및 처리되어야 하고 가능하면 런타임에 제공해야 합니다.  
   
--   다중 스레드 응용 프로그램의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
+-   다중 스레드 애플리케이션의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
   
  RMO 개체에서 사용하는 활성 서버 연결을 닫으려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 개체에 대해 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 메서드를 호출합니다.  
   

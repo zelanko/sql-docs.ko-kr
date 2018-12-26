@@ -24,7 +24,7 @@ ms.locfileid: "48089833"
 |---------------|---------------------|  
 |[SQL Server 2014에서 사용되지 않는 관리 도구 기능](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|이 릴리스에서 사용되지 않는 관리 도구 기능|  
 |[SQL Server 2014에서 지원되지 않는 관리 도구 기능](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|이 릴리스에서 지원되지 않는 관리 도구 기능|  
-|[SQL Server 2014에서 관리 도구 기능의 주요 변경 내용](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|응용 프로그램을 변경해야 할 수도 있는 관리 도구 기능 변경 내용|  
+|[SQL Server 2014에서 관리 도구 기능의 주요 변경 내용](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|애플리케이션을 변경해야 할 수도 있는 관리 도구 기능 변경 내용|  
 |[SQL Server 2014에서 관리 도구 기능의 동작 변경 내용](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|이 릴리스에서 변경된 기타 관리 도구 기능|  
   
 ## <a name="see-also"></a>관련 항목  

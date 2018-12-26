@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108363"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
-  쿼리 및 뷰 디자이너를 사용하면 응용 프로그램의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  
+  쿼리 및 뷰 디자이너를 사용하면 애플리케이션의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [쿼리 및 뷰 디자이너 열기&#40;Visual Database Tools&#41;](visual-database-tools.md)  

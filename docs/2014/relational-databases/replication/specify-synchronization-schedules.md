@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48087533"
@@ -192,7 +192,7 @@ ms.locfileid: "48087533"
  복제에서는 SQL Server 에이전트를 사용하여 스냅숏 생성이나 구독 동기화와 같이 정기적으로 수행하는 작업의 일정을 지정합니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 에이전트 작업의 일정을 지정할 수 있습니다.  
   
 > [!NOTE]  
->  구독을 만들고 `false`에 `CreateSyncAgentByDefault` 값을 지정하면(끌어오기 구독에 대한 기본 동작) 에이전트 작업은 생성되지 않으며 일정 속성은 무시됩니다. 이 경우에는 응용 프로그램에서 동기화 일정을 결정해야 합니다. 자세한 내용은 [Create a Pull Subscription](create-a-pull-subscription.md) 및 [Create a Push Subscription](create-a-push-subscription.md)를 참조하세요.  
+>  구독을 만들고 `false`에 `CreateSyncAgentByDefault` 값을 지정하면(끌어오기 구독에 대한 기본 동작) 에이전트 작업은 생성되지 않으며 일정 속성은 무시됩니다. 이 경우에는 애플리케이션에서 동기화 일정을 결정해야 합니다. 자세한 내용은 [Create a Pull Subscription](create-a-pull-subscription.md) 및 [Create a Push Subscription](create-a-push-subscription.md)를 참조하세요.  
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   

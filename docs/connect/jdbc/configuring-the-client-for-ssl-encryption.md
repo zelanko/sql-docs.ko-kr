@@ -49,7 +49,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 이 경우 이 JVM에서 실행 중인 모든 응용 프로그램이 이러한 설정을 기본값으로 사용합니다. 응용 프로그램에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
+ 이 경우 이 JVM에서 실행 중인 모든 응용 프로그램이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
   
  또한 “\<java-home>/lib/security/jssecacerts” 및 “\<java-home>/lib/security/cacerts”와 같은 기본 트러스트 저장소 파일을 구성하고 관리할 수도 있습니다. 이를 위해서는 JRE(Java Runtime Environment)와 함께 설치되는 JAVA "keytool" 유틸리티를 사용하십시오. "keytool" 유틸리티에 대한 자세한 내용은 Sun Microsystems 웹 사이트에서 keytool 설명서를 참조하십시오.  
   

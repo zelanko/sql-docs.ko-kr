@@ -32,10 +32,10 @@ ms.locfileid: "47735401"
  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체와 설정 된 연결과 독립적으로 작동 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Windows 자격 증명을 사용 하 여 WMI 서비스에 연결 하 고 합니다.  
   
 ## <a name="example"></a>예제  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
 
   
- 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 **가져오기** WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 응용 프로그램의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
+ 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 **가져오기** WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 애플리케이션의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

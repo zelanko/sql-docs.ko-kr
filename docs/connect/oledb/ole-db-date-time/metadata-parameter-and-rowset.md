@@ -69,7 +69,7 @@ ms.locfileid: "47834601"
   
  합니다 *bPrecision* 매개 변수가 무시 됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 응용 프로그램은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "**datetime**"또는"**smalldatetime**"는 데 사용 됩니다. 응용 프로그램 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. 응용 프로그램에서 SQL Server 용 MDAC 및 OLE DB 드라이버에서 업그레이드 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 못합니다 *bScale* 올바르게 합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "**datetime**"또는"**smalldatetime**"는 데 사용 됩니다. 응용 프로그램 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. 응용 프로그램에서 SQL Server 용 MDAC 및 OLE DB 드라이버에서 업그레이드 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 못합니다 *bScale* 올바르게 합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
  Icommandwithparameters:: Setparameterinfo를 호출 하지 않으면 공급자 iaccessor:: Createaccessor에 지정 된 바인딩 유형에 서 서버 유형을 다음과 같이 의미 합니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47834601"
   
  나머지 플래그(DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE 및 DBCOLUMNFLAGS_WRITEUNKNOWN)가 설정될 수 있습니다.  
   
- 새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 응용 프로그램에서 *wType*이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 *dwFlags*에 제공됩니다. 서버 유형을 확인하려면 *bScale*도 사용해야 합니다.  
+ 새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE은 애플리케이션에서 *wType*이 DBTYPE_DBTIMESTAMP인 열의 서버 유형을 확인할 수 있도록 *dwFlags*에 제공됩니다. 서버 유형을 확인하려면 *bScale*도 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  

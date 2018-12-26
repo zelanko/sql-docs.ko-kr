@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47850929"
 ---
-# <a name="step-2-initialize-the-application"></a>2단계: 응용 프로그램 초기화
+# <a name="step-2-initialize-the-application"></a>2단계: 애플리케이션 초기화
 다음 그림에 나와 있는 것 처럼 응용 프로그램을 초기화 하는 두 번째 단계가입니다. 정확 하 게 수행 되는 다음 응용 프로그램을 사용 하 여 달라 집니다.  
   
  ![ODBC 응용 프로그램 초기화를 보여 줍니다](../../../odbc/reference/develop-app/media/pr12.gif "pr12")  

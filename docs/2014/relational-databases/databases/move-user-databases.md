@@ -27,7 +27,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12d32e68113cc6880a69662dd9a1607ba5afc1b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108463"
@@ -36,7 +36,7 @@ ms.locfileid: "48108463"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 FILENAME 절에 새 파일 위치를 지정하여 사용자 데이터베이스의 데이터, 로그 및 전체 텍스트 카탈로그 파일을 새 위치로 이동할 수 있습니다. 이 방법은 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내에서 데이터베이스 파일을 이동하는 경우에 적용됩니다. 데이터베이스를 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 다른 서버로 이동하려면 [백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md) 작업이나 [분리/연결](move-a-database-using-detach-and-attach-transact-sql.md)작업을 사용합니다.  
   
 ## <a name="considerations"></a>고려 사항  
- 데이터베이스를 다른 서버 인스턴스로 이동하는 경우 사용자와 응용 프로그램에 일관된 환경을 제공하려면 데이터베이스의 일부 또는 모든 메타데이터를 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
+ 데이터베이스를 다른 서버 인스턴스로 이동하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 데이터베이스의 일부 또는 모든 메타데이터를 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일부 기능 중 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 파일의 정보를 저장하는 방법이 변경되었습니다. 이러한 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전으로 제한됩니다. 이러한 기능을 포함하는 데이터베이스는 이러한 기능이 지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동할 수 없습니다. 현재 데이터베이스에 설정된 모든 버전별 기능 목록을 보려면 sys.dm_db_persisted_sku_features 동적 관리 뷰를 사용합니다.  
   

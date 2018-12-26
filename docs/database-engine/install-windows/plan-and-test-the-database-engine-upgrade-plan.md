@@ -92,7 +92,7 @@ ms.locfileid: "47748633"
   
 -   **승인 기준 결정:** 사용자를 업그레이드된 환경으로 전환하기 전에 업그레이드가 성공했는지를 확인합니다.  
   
--   **업그레이드 계획 테스트:** 실제 작업을 사용하여 성능을 테스트하려면 Microsoft SQL Server Distributed Replay Utility를 사용합니다. 이 유틸리티를 사용하면 여러 컴퓨터를 사용해 추적 데이터를 재생하여 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. SQL Server 업그레이드 이전 및 이후에 테스트 서버에서 재생을 수행하면 성능 차이를 측정하고 업그레이드와의 응용 프로그램 비호환성을 확인할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) 및 [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)을 참조하세요.  
+-   **업그레이드 계획 테스트:** 실제 작업을 사용하여 성능을 테스트하려면 Microsoft SQL Server Distributed Replay Utility를 사용합니다. 이 유틸리티를 사용하면 여러 컴퓨터를 사용해 추적 데이터를 재생하여 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. SQL Server 업그레이드 이전 및 이후에 테스트 서버에서 재생을 수행하면 성능 차이를 측정하고 업그레이드와의 애플리케이션 비호환성을 확인할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) 및 [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
 [데이터베이스 엔진 업그레이드](../../database-engine/install-windows/upgrade-database-engine.md) 

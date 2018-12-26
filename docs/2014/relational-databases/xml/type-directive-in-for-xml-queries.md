@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 10c6d8cf2b5c68aba12d92530f345a56b2882474
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48082021"
@@ -24,7 +24,7 @@ ms.locfileid: "48082021"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 지원 합니다 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) 선택적으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 있습니다 `xml` TYPE 지시어를 지정 하 여 데이터 형식입니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 에 대해 XQuery를 지정 결과를 할당을 예는 `xml` 변수를 입력 하거나 작성 [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE 지시어를 사용 하는 FOR XML 쿼리와 같은 또는 XML 데이터 형식 인스턴스 데이터를 다른 서버 생성 결과로 클라이언트에 반환 된 `xml` SQL 테이블 열 및 출력의 XML 인스턴스 데이터 값을 반환 데이터 형식이 사용 됩니다 매개 변수입니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자가 이 XML 데이터 형식 정보를 서버에서 이진 인코딩으로 보내도록 요청합니다. 그러나 TYPE 지시어 없이 FOR XML을 사용하면 XML 데이터가 문자열 유형으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다. TYPE 지시어가 없는 최상위 FOR XML은 커서와 함께 사용할 수 없습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE 지시어를 사용 하는 FOR XML 쿼리와 같은 또는 XML 데이터 형식 인스턴스 데이터를 다른 서버 생성 결과로 클라이언트에 반환 된 `xml` SQL 테이블 열 및 출력의 XML 인스턴스 데이터 값을 반환 데이터 형식이 사용 됩니다 매개 변수입니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자가 이 XML 데이터 형식 정보를 서버에서 이진 인코딩으로 보내도록 요청합니다. 그러나 TYPE 지시어 없이 FOR XML을 사용하면 XML 데이터가 문자열 유형으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다. TYPE 지시어가 없는 최상위 FOR XML은 커서와 함께 사용할 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 TYPE 지시어를 FOR XML 쿼리와 함께 사용하는 방법을 보여 줍니다.  

@@ -28,9 +28,9 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48085721"
 ---
 # <a name="plan-guides"></a>계획 지침
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다. 계획 지침은 쿼리 힌트 또는 고정 쿼리 계획을 연결하여 쿼리 최적화에 영향을 줍니다. 계획 안내는 타사 공급업체에서 제공된 데이터베이스 응용 프로그램의 일부 쿼리 하위 집합이 올바른 성능을 내지 못하는 경우에 유용합니다. 계획 지침에서 최적화하려는 Transact-SQL 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Transact-SQL 문을 계획 지침과 대응시키고 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다. 계획 지침은 쿼리 힌트 또는 고정 쿼리 계획을 연결하여 쿼리 최적화에 영향을 줍니다. 계획 안내는 타사 공급업체에서 제공된 데이터베이스 애플리케이션의 일부 쿼리 하위 집합이 올바른 성능을 내지 못하는 경우에 유용합니다. 계획 지침에서 최적화하려는 Transact-SQL 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Transact-SQL 문을 계획 지침과 대응시키고 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
   
- 만들 수 있는 총 계획 지침 수는 사용 가능한 시스템 리소스에 의해서만 제한됩니다. 그러나 계획 지침은 성능 향상이나 안정화를 목적으로 하는 중요 업무용 쿼리로 제한되어야 합니다. 배포된 응용 프로그램의 쿼리 로드 대부분에 영향을 주기 위해 계획 지침을 사용하면 안 됩니다.  
+ 만들 수 있는 총 계획 지침 수는 사용 가능한 시스템 리소스에 의해서만 제한됩니다. 그러나 계획 지침은 성능 향상이나 안정화를 목적으로 하는 중요 업무용 쿼리로 제한되어야 합니다. 배포된 애플리케이션의 쿼리 로드 대부분에 영향을 주기 위해 계획 지침을 사용하면 안 됩니다.  
   
 > [!NOTE]  
 >  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다.  
@@ -58,7 +58,7 @@ END;
   
  이 저장 프로시저가 `@Country`_`region = N'AU'` (오스트레일리아)에 맞게 컴파일되고 최적화되었다고 가정합니다. 그러나 오스트레일리아에서 발주되는 판매 주문이 비교적 적기 때문에 판매 주문이 더 많은 국가의 매개 변수 값을 사용하여 쿼리를 실행할 경우 성능이 저하됩니다. 미국이 판매 주문을 가장 많이 내므로 `@Country`\_`region = N'US'` 매개 변수의 가능한 모든 값에 대해 `@Country`\_`region` 에 대해 생성된 쿼리 계획이 더 잘 수행될 가능성이 높습니다.  
   
- 저장 프로시저를 수정하여 `OPTIMIZE FOR` 쿼리 힌트를 쿼리에 추가하면 이 문제를 해결할 수 있습니다. 그러나 저장 프로시저가 배포된 응용 프로그램 안에 있기 때문에 응용 프로그램 코드를 직접 수정할 수 없습니다. 대신 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 계획 지침을 만들 수 있습니다.  
+ 저장 프로시저를 수정하여 `OPTIMIZE FOR` 쿼리 힌트를 쿼리에 추가하면 이 문제를 해결할 수 있습니다. 그러나 저장 프로시저가 배포된 애플리케이션 안에 있기 때문에 애플리케이션 코드를 직접 수정할 수 없습니다. 대신 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 계획 지침을 만들 수 있습니다.  
   
 ```  
 sp_create_plan_guide   
@@ -78,7 +78,7 @@ sp_create_plan_guide
  `sp_create_plan_guide` 문에 지정되어 있는 쿼리가 실행되면 `OPTIMIZE FOR (@Country = N''US'')` 절을 포함하도록 최적화 이전에 쿼리가 수정됩니다.  
   
  SQL 계획 지침  
- SQL 계획 지침은 데이터베이스 개체의 일부가 아닌 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 일괄 처리의 컨텍스트에서 실행되는 쿼리와 일치합니다. SQL 기반 계획 지침은 지정된 형식으로 매개 변수화되는 쿼리와 일치되도록 하는 데도 사용될 수 있습니다. SQL 계획 지침은 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일괄 처리에 적용됩니다. 이러한 문은 종종 응용 프로그램에서 [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) 시스템 저장 프로시저를 사용하여 제출됩니다. 예를 들어 다음 독립 실행형 일괄 처리를 생각해 보십시오.  
+ SQL 계획 지침은 데이터베이스 개체의 일부가 아닌 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 일괄 처리의 컨텍스트에서 실행되는 쿼리와 일치합니다. SQL 기반 계획 지침은 지정된 형식으로 매개 변수화되는 쿼리와 일치되도록 하는 데도 사용될 수 있습니다. SQL 계획 지침은 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일괄 처리에 적용됩니다. 이러한 문은 종종 애플리케이션에서 [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) 시스템 저장 프로시저를 사용하여 제출됩니다. 예를 들어 다음 독립 실행형 일괄 처리를 생각해 보십시오.  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  

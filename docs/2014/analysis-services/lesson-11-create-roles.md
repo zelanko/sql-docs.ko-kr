@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3ca1e013ede0e8bd40c1ce5af36d44ea45122d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48164083"
@@ -22,7 +22,7 @@ ms.locfileid: "48164083"
   이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 Windows 사용자로만 액세스를 제한함으로써 모델 데이터베이스 개체 및 데이터에 보안을 제공합니다. 각 역할은 없음, 읽기, 읽기 및 처리, 처리 또는 관리자라는 단일 사용 권한으로 정의됩니다. 모델을 제작하는 중에 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다. 모델을 배포한 후 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](tabular-models/roles-ssas-tabular.md)을 참조하세요.  
   
 > [!NOTE]  
->  이 자습서를 완료하기 위해 역할을 만들 필요는 없습니다. 기본적으로 현재 로그인하는 데 사용한 계정에는 모델에 대한 관리자 권한이 있습니다. 그러나 조직의 다른 사용자가 보고 클라이언트 응용 프로그램을 통해 모델을 검색할 수 있도록 하려면 읽기 권한을 가진 역할을 하나 이상 만들어 해당 사용자를 멤버로 추가해야 합니다.  
+>  이 자습서를 완료하기 위해 역할을 만들 필요는 없습니다. 기본적으로 현재 로그인하는 데 사용한 계정에는 모델에 대한 관리자 권한이 있습니다. 그러나 조직의 다른 사용자가 보고 클라이언트 애플리케이션을 통해 모델을 검색할 수 있도록 하려면 읽기 권한을 가진 역할을 하나 이상 만들어 해당 사용자를 멤버로 추가해야 합니다.  
   
  다음과 같은 세 개의 역할을 만듭니다.  
   

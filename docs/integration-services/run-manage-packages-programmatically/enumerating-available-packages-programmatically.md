@@ -50,7 +50,7 @@ ms.locfileid: "47700311"
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|    
     
- 다음 예제는 이러한 메서드의 사용 방법을 보여 주는 콘솔 응용 프로그램입니다.    
+ 다음 예제는 이러한 메서드의 사용 방법을 보여 주는 콘솔 애플리케이션입니다.    
     
 ###  <a name="listing_store"></a> 예(SSIS 패키지 저장소)    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 메서드를 사용하면 SSIS 패키지 저장소에 저장된 패키지를 나열할 수 있습니다. SSIS 패키지 저장소에서 관리하는 기본 저장소 위치는 파일 시스템과 MSDB입니다. 이러한 위치에 논리적 폴더를 추가로 만들 수 있습니다.    

@@ -16,7 +16,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067033"
@@ -113,7 +113,7 @@ ms.locfileid: "48067033"
   
   
 ###  <a name="RG"></a> 물리적 IO 제어를 위한 향상 된 리소스 관리자  
- 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양에 대한 제한을 지정할 수 있습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 새로운 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정을 사용하여 지정된 리소스 풀의 사용자 스레드에 대해 발생하는 물리적 IO를 제어할 수 있습니다. 자세한 내용은 참조 하세요. [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md) 하 고 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
+ 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양에 대한 제한을 지정할 수 있습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 새로운 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정을 사용하여 지정된 리소스 풀의 사용자 스레드에 대해 발생하는 물리적 IO를 제어할 수 있습니다. 자세한 내용은 참조 하세요. [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md) 하 고 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  ALTER RESOURCE GOVENOR의 MAX_OUTSTANDING_IO_PER_VOLUME 설정은 디스크 볼륨당 최대 미해결 I/O 작업을 설정합니다. 이 설정을 사용하여 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝할 수 있으며 SQL Server 인스턴스 경계에서 발생하는 IO 수를 제한할 수 있습니다. 자세한 내용은 [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)를 참조하세요.  
   

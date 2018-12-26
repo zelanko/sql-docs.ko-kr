@@ -1,3 +1,4 @@
+items:
 - name: 기능 지원 및 가변성 확인
   href: checking-feature-support-and-variability.md
 - name: 드라이버 관리자의 함수 매핑
@@ -14,7 +15,7 @@
   href: handles.md
 - name: 런타임 시 생성된 SQL 문
   href: sql-statements-constructed-at-run-time.md
-- name: 응용 프로그램의 이전 버전과의 호환성을 위한 대체 함수 매핑
+- name: 애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
   href: mapping-replacement-functions-for-backward-compatibility-of-applications.md
 - name: 카탈로그 함수의 인수
   href: arguments-in-catalog-functions.md
@@ -26,7 +27,7 @@
   href: asynchronous-execution.md
 - name: SQLSTATE
   href: sqlstates.md
-- name: 사용자 지정 응용 프로그램
+- name: 사용자 지정 애플리케이션
   href: custom-applications.md
 - name: 데이터 버퍼 주소
   href: data-buffer-address.md
@@ -86,7 +87,7 @@
   href: hard-coded-sql-statements.md
 - name: Long 데이터 및 SQLSetPos 및 SQLBulkOperations
   href: long-data-and-sqlsetpos-and-sqlbulkoperations.md
-- name: '책갈피로 업데이트, 삭제 또는 페치'
+- name: 책갈피로 업데이트, 삭제 또는 페치
   href: updating-deleting-or-fetching-by-bookmark.md
 - name: 이름으로 매개 변수 바인딩(명명된 매개 변수)
   href: binding-parameters-by-name-named-parameters.md
@@ -98,7 +99,7 @@
   href: consistency-check.md
 - name: ODBC 동적 커서
   href: odbc-dynamic-cursors.md
-- name: 일반 응용 프로그램
+- name: 일반 애플리케이션
   href: generic-applications.md
 - name: 기본 데이터 원본
   href: default-data-source.md
@@ -116,11 +117,11 @@
   href: uses-of-catalog-data.md
 - name: 트랜잭션 지원
   href: transaction-support.md
-- name: 수직 응용 프로그램
+- name: 수직 애플리케이션
   href: vertical-applications.md
 - name: SQLGetTypeInfo를 사용하여 데이터 형식 정보 검색
   href: retrieving-data-type-information-with-sqlgettypeinfo.md
-- name: 응용 프로그램 형식
+- name: 애플리케이션 형식
   href: types-of-applications.md
 - name: 데이터 형식 변환
   href: data-type-conversions.md
@@ -188,13 +189,13 @@
   href: connecting-with-sqlconnect.md
 - name: 드라이버 관리자 진단 예제
   href: driver-manager-diagnostic-example.md
-- name: '드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 형식 및 특성'
+- name: 드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 형식 및 특성
   href: driver-specific-data-types-descriptor-information-diagnostic.md
 - name: 유니코드 데이터
   href: unicode-data.md
 - name: 핵심 인터페이스 적합성
   href: core-interface-conformance.md
-- name: 기본 ODBC 응용 프로그램 단계
+- name: 기본 ODBC 애플리케이션 단계
   href: basic-odbc-application-steps.md
 - name: 새로운 기능
   href: new-features.md
@@ -220,7 +221,7 @@
   href: ordinary-arguments.md
 - name: 동작 변경
   href: behavioral-changes.md
-- name: 표준 준수 응용 프로그램 및 드라이버
+- name: 표준 준수 애플리케이션 및 드라이버
   href: standards-compliant-applications-and-drivers.md
 - name: 페치된 행 수 및 상태
   href: number-of-rows-fetched-and-status.md
@@ -228,7 +229,7 @@
   href: implicitly-allocated-descriptors.md
 - name: 커서 특성 1 정보 형식 매핑
   href: mapping-the-cursor-attributes1-information-types.md
-- name: '환경, 연결 및 명령문 특성'
+- name: 환경, 연결 및 명령문 특성
   href: environment-connection-and-statement-attributes.md
 - name: 낙관적 동시성
   href: optimistic-concurrency.md
@@ -264,7 +265,7 @@
   href: asynchronous-execution-polling-method.md
 - name: ODBC 드라이버 관리자에 의해 생성된 이벤트
   href: events-generated-by-the-odbc-driver-manager.md
-- name: 상호 운용 가능한 응용 프로그램 작성
+- name: 상호 운용 가능한 애플리케이션 작성
   href: writing-an-interoperable-application.md
 - name: 버퍼 할당 및 해제
   href: allocating-and-freeing-buffers.md
@@ -284,7 +285,7 @@
   href: step-1-connect-to-the-data-source.md
 - name: 데이터 원본 또는 드라이버 연결 끊기
   href: disconnecting-from-a-data-source-or-driver.md
-- name: 'ODBC 3.x 응용 프로그램의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성'
+- name: ODBC 3.x 애플리케이션의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성
   href: block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md
 - name: 카탈로그 함수
   href: catalog-functions.md
@@ -296,7 +297,7 @@
   href: role-of-the-driver-manager.md
 - name: SQLGetData를 사용하여 출력 매개 변수 검색
   href: retrieving-output-parameters-using-sqlgetdata.md
-- name: 유니코드 응용 프로그램
+- name: 유니코드 애플리케이션
   href: unicode-applications.md
 - name: SQL 문
   href: sql-statements.md
@@ -394,7 +395,7 @@
   href: driver-aware-connection-pooling.md
 - name: 커서 및 준비된 명령문에 트랜잭션이 미치는 영향
   href: effect-of-transactions-on-cursors-and-prepared-statements.md
-- name: 'UPDATE, DELETE 및 INSERT 문'
+- name: UPDATE, DELETE 및 INSERT 문
   href: update-delete-and-insert-statements.md
 - name: 행 단위 바인딩
   href: row-wise-binding.md
@@ -422,7 +423,7 @@
   href: was-a-result-set-created.md
 - name: 추적 사용
   href: enabling-tracing.md
-- name: 상호 운용 가능한 응용 프로그램 테스트
+- name: 상호 운용 가능한 애플리케이션 테스트
   href: testing-interoperable-applications.md
 - name: 책갈피로 스크롤
   href: scrolling-by-bookmark.md
@@ -500,7 +501,7 @@
   href: scrollable-cursors.md
 - name: 인터페이스 적합성 수준
   href: interface-conformance-levels.md
-- name: '날짜, 시간, 타임스탬프 리터럴'
+- name: 날짜, 시간, 타임스탬프 리터럴
   href: date-time-and-timestamp-literals.md
 - name: 커밋 및 롤백 동작
   href: commit-and-rollback-behavior.md
@@ -510,13 +511,13 @@
   href: literal-prefixes-and-suffixes.md
 - name: ODBC 정적 커서
   href: odbc-static-cursors.md
-- name: '데이터 길이, 버퍼 길이 및 잘라내기'
+- name: 데이터 길이, 버퍼 길이 및 잘라내기
   href: data-length-buffer-length-and-truncation.md
-- name: 응용 프로그램 및 드라이버 호환성
+- name: 애플리케이션 및 드라이버 호환성
   href: application-and-driver-compatibility.md
 - name: 대상 DBMS 및 드라이버 확인
   href: determining-the-target-dbmss-and-drivers.md
-- name: '2단계: 응용 프로그램 초기화'
+- name: '2단계: 애플리케이션 초기화'
   href: step-2-initialize-the-application.md
 - name: 블록 커서와 함께 사용하기 위해 열 바인딩
   href: binding-columns-for-use-with-block-cursors.md
@@ -536,7 +537,7 @@
   href: pattern-value-arguments.md
 - name: 블록 커서
   href: block-cursors.md
-- name: ODBC 3.x 응용 프로그램 작성
+- name: ODBC 3.x 애플리케이션 작성
   href: writing-odbc-3-x-applications.md
 - name: CString 클래스
   href: cstring-class.md
@@ -582,7 +583,7 @@
   href: positioned-update-and-delete-statements.md
 - name: 상태 레코드의 시퀀스
   href: sequence-of-status-records.md
-- name: 응용 프로그램 개발
+- name: 애플리케이션 개발
   href: developing-applications.md
 - name: 트랜잭션 격리 수준
   href: transaction-isolation-levels.md
@@ -592,7 +593,7 @@
   href: cursors.md
 - name: 명령문 ODBC 실행
   href: executing-statements-odbc.md
-- name: 응용 프로그램의 ODBC 버전 선언
+- name: 애플리케이션의 ODBC 버전 선언
   href: declaring-the-application-s-odbc-version.md
 - name: SQL_NO_DATA
   href: sql-no-data.md
@@ -620,3 +621,9 @@
   href: deferred-buffers.md
 - name: 키 집합 커서
   href: keyset-driven-cursors.md
+ms.openlocfilehash: d25c1b7590991fef5919bc520dad3198138230a5
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39316649"

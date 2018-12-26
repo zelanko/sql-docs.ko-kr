@@ -1485,7 +1485,7 @@ GO
 - 열 암호화 키는 Enclave가 가능해야 합니다. 이는 Enclave 컴퓨팅이 가능한 열 마스터 키로 암호화해야 한다는 의미입니다.
 - 대상 SQL Server 인스턴스는 보안 Enclave를 사용한 Always Encrypted를 지원해야 합니다.
 - 이 문은 보안 Enclave를 사용한 Always Encrypted에 대한 연결 설정에 대해 발행되어야 하며 지원되는 클라이언트 드라이버를 사용해야 합니다.
-- 호출 응용 프로그램은 CEK1을 보호하는 열 마스터 키에 액세스할 수 있어야 합니다.
+- 호출 애플리케이션은 CEK1을 보호하는 열 마스터 키에 액세스할 수 있어야 합니다.
 
 ```sql  
 ALTER TABLE T3  
@@ -1714,7 +1714,7 @@ GO
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>1. 기존 테이블에 시스템 버전 관리 추가  
- 다음 예는 기존 테이블에 시스템 버전 관리를 추가하고 나중에 기록 테이블을 만드는 방법을 보여줍니다. 이 예에서는 `InsurancePolicy`라는 기본 키가 정의된 기존 테이블이 있는 경우를 가정합니다. 시작 및 끝 시간 값은 null이 될 수 없으므로 이 예는 시작 및 끝 시간의 기본값을 사용하여 시스템 버전 관리에 대해 새로 생성된 기간 열을 채웁니다. 이 예는 현재 테이블과 상호 작용하는 기존 응용 프로그램에 영향을 미치지 않도록 HIDDEN 절을 사용합니다.  또한 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서만 사용할 수 있는 HISTORY_RETENTION_PERIOD를 사용합니다. 
+ 다음 예는 기존 테이블에 시스템 버전 관리를 추가하고 나중에 기록 테이블을 만드는 방법을 보여줍니다. 이 예에서는 `InsurancePolicy`라는 기본 키가 정의된 기존 테이블이 있는 경우를 가정합니다. 시작 및 끝 시간 값은 null이 될 수 없으므로 이 예는 시작 및 끝 시간의 기본값을 사용하여 시스템 버전 관리에 대해 새로 생성된 기간 열을 채웁니다. 이 예는 현재 테이블과 상호 작용하는 기존 애플리케이션에 영향을 미치지 않도록 HIDDEN 절을 사용합니다.  또한 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서만 사용할 수 있는 HISTORY_RETENTION_PERIOD를 사용합니다. 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  

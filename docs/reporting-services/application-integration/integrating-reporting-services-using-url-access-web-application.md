@@ -1,5 +1,5 @@
 ---
-title: 웹 응용 프로그램에서 URL 액세스 사용 | Microsoft Docs
+title: 웹 애플리케이션에서 URL 액세스 사용 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/16/2018
 ms.locfileid: "51813986"
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 애플리케이션
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL 액세스는 네트워크를 통해 개별 보고서에 액세스할 수 있도록 특별히 디자인되었습니다. 이런 유형의 액세스는 보고서 보기와 탐색을 사용자 지정 웹 응용 프로그램으로 통합하는 데 알맞습니다. 웹 응용 프로그램에서 URL 액세스를 사용하려면 다음 작업을 수행할 수 있습니다.  
   
 -   URL을 웹 사이트 또는 포털의 특정 보고서 서버로 지정합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "51813986"
 -   폼 POST 메서드를 사용하고 양식 필드를 사용하여 쿼리 문자열 매개 변수를 보고서 서버 URL에 전달합니다.  
   
 ## <a name="url-access-through-direct-addressing"></a>직접 주소 지정을 통한 URL 액세스  
- URL을 사용하여 보고서 서버 또는 보고서 서버 데이터베이스 항목에 액세스하려면 웹 브라우저나 응용 프로그램 내에서 URL 주소를 제공하기만 하면 됩니다. 또한 액세스할 보고서 또는 리소스의 모양에 영향을 줄 수 있는 매개 변수를 URL에 제공할 수도 있습니다. URL은 웹 브라우저의 주소 표시줄을 통해 보고서 서버를 대상으로 지정할 수 있으며 또는 더 큰 규모의 웹 응용 프로그램이나 포털의 일부인 **IFrame**의 원본이 될 수도 있습니다. 포털의 다양한 웹 페이지에 보고서 하이퍼링크를 포함시키거나 보고서에 대해 특정 프레임을 대상으로 지정하거나 프로세스 도중에 새 브라우저 창을 열 수 있습니다.  
+ URL을 사용하여 보고서 서버 또는 보고서 서버 데이터베이스 항목에 액세스하려면 웹 브라우저나 응용 프로그램 내에서 URL 주소를 제공하기만 하면 됩니다. 또한 액세스할 보고서 또는 리소스의 모양에 영향을 줄 수 있는 매개 변수를 URL에 제공할 수도 있습니다. URL은 웹 브라우저의 주소 표시줄을 통해 보고서 서버를 대상으로 지정할 수 있으며 또는 더 큰 규모의 웹 애플리케이션이나 포털의 일부인 **IFrame**의 원본이 될 수도 있습니다. 포털의 다양한 웹 페이지에 보고서 하이퍼링크를 포함시키거나 보고서에 대해 특정 프레임을 대상으로 지정하거나 프로세스 도중에 새 브라우저 창을 열 수 있습니다.  
   
  다음 예에서 하이퍼링크는 "main"이라는 프레임을 대상으로 지정하며 이 프레임은 하이퍼링크를 포함하는 프레임과 다를 수 있습니다. 하이퍼링크는 웹 포털의 일부일 수 있습니다.  
   

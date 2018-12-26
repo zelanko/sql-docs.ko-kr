@@ -31,7 +31,7 @@ ms.locfileid: "47617551"
 
 ## <a name="requirements"></a>요구 사항  
 
-이 샘플 응용 프로그램을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../jdbc/using-the-jdbc-driver.md)입니다.
+이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../jdbc/using-the-jdbc-driver.md)입니다.
 
 ```java
 import java.sql.Connection;

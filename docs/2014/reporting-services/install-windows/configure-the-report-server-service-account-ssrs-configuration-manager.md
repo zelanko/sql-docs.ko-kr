@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 546cf8172cbfc2e13b0953207078f3b2cc9dc146
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48082524"
@@ -25,7 +25,7 @@ ms.locfileid: "48082524"
  설치하는 동안 보고서 서버 서비스 계정이 정의됩니다. 와 같은 도메인 사용자 계정 또는 기본 제공 서비스를 실행할 수 있습니다 `NetworkService` 계정. 기본 계정이 없으며; 지정 하는 모든 계정 합니다 [서버 구성-서비스 계정](../../sql-server/install/server-configuration-service-accounts.md) 설치 마법사의 페이지에 보고서 서버 서비스의 초기 계정이 됩니다.  
   
 > [!IMPORTANT]  
->  보고서 서버 웹 서비스와 보고서 관리자는 있지만 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램을 실행 하지 않아서 아래는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정. 단일 서비스 아키텍처는 동일한 보고서 서버 프로세스 ID 내에서 두 ASP.NET 응용 프로그램을 모두 실행합니다. 이것은 이전 버전에서의 중요한 변경 사항으로 보고서 서버 웹 서비스 및 보고서 관리자는 IIS에서 지정된 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 작업자 프로세스 ID에서 실행됩니다.  
+>  보고서 서버 웹 서비스와 보고서 관리자는 있지만 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램을 실행 하지 않아서 아래는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정. 단일 서비스 아키텍처는 동일한 보고서 서버 프로세스 ID 내에서 두 ASP.NET 애플리케이션을 모두 실행합니다. 이것은 이전 버전에서의 중요한 변경 사항으로 보고서 서버 웹 서비스 및 보고서 관리자는 IIS에서 지정된 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 작업자 프로세스 ID에서 실행됩니다.  
   
 ## <a name="changing-the-service-account"></a>서비스 계정 변경  
  서비스 계정 정보를 보고 다시 구성하려면 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용합니다. 서비스 ID 정보는 내부적으로 여러 위치에 저장됩니다. 이 도구를 사용하면 계정 또는 암호를 변경할 때마다 모든 참조가 적절히 업데이트됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구는 보고서 서버를 사용 가능한 상태로 유지하기 위한 다음과 같은 추가 단계를 수행합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48082524"
   
 -   수정 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 계정 (예: NetworkService에서 도메인 사용자 계정으로 전환).  
   
--   SharePoint 팜이 추가 SharePoint 웹 응용 프로그램을 포함하도록 확장된 경우. 서버 팜이 보고서 서버 통합을 위해 구성되고 새로 추가된 응용 프로그램이 팜에 있는 다른 응용 프로그램과 다른 사용자 계정에서 실행되도록 구성된 경우 데이터베이스 액세스 정보를 업데이트해야 합니다.  
+-   SharePoint 팜이 추가 SharePoint 웹 애플리케이션을 포함하도록 확장된 경우. 서버 팜이 보고서 서버 통합을 위해 구성되고 새로 추가된 애플리케이션이 팜에 있는 다른 애플리케이션과 다른 사용자 계정에서 실행되도록 구성된 경우 데이터베이스 액세스 정보를 업데이트해야 합니다.  
   
  데이터베이스 액세스 정보를 다시 설정한 다음에는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 서비스를 다시 시작하여 기존 연결이 더 이상 사용되지 않도록 해야 합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48082524"
   
 7.  토폴로지 및 서비스에서 **서버 제공 서비스**를 클릭합니다.  
   
-8.  Windows SharePoint Services 웹 응용 프로그램의 경우 **중지**를 클릭합니다.  
+8.  Windows SharePoint Services 웹 애플리케이션의 경우 **중지**를 클릭합니다.  
   
 9. 서비스가 중지될 때까지 기다립니다.  
   

@@ -25,9 +25,9 @@ ms.locfileid: "47598291"
 ---
 # <a name="filetables-sql-server"></a>FileTable(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  FileTable 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일 데이터에 대해 Windows 파일 네임스페이스 및 Windows 응용 프로그램과의 호환성을 지원합니다. FileTable을 통해 응용 프로그램이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.  
+  FileTable 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일 데이터에 대해 Windows 파일 네임스페이스 및 Windows 애플리케이션과의 호환성을 지원합니다. FileTable을 통해 애플리케이션이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.  
   
- 즉, 파일 및 문서를 FileTable이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특수 테이블에 저장할 수 있지만, Windows 응용 프로그램에서 해당 파일 및 문서에 액세스할 때는 파일 시스템에 저장된 파일 및 문서에 액세스할 때와 같은 방식으로 처리됩니다. 클라이언트 응용 프로그램을 변경할 필요는 없습니다.  
+ 즉, 파일 및 문서를 FileTable이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특수 테이블에 저장할 수 있지만, Windows 애플리케이션에서 해당 파일 및 문서에 액세스할 때는 파일 시스템에 저장된 파일 및 문서에 액세스할 때와 같은 방식으로 처리됩니다. 클라이언트 애플리케이션을 변경할 필요는 없습니다.  
   
  FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FILESTREAM 기술을 기반으로 구축된 기능입니다. FILESTREAM에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47598291"
   
 -   FILESTREAM 및 파일 특성 데이터를 통해 관리 도구, 서비스 및 관계형 쿼리 기능을 비롯한 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능과의 호환성이 제공됩니다.  
   
- 파일 서버에 현재 파일로 존재하는 구조화되지 않은 데이터를 저장하고 관리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하려면 여러 가지 문제를 해결해야 했지만 FileTable을 사용하면 이러한 문제가 상당히 해결됩니다. 기업에서는 파일 서버의 데이터를 FileTable로 이동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 통합된 관리 기능 및 서비스를 이용할 수 있습니다. 동시에 해당 데이터를 파일 시스템의 파일로 표시하는 기존의 Windows 응용 프로그램을 위해 Windows 응용 프로그램 호환성을 유지할 수 있습니다.  
+ 파일 서버에 현재 파일로 존재하는 구조화되지 않은 데이터를 저장하고 관리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하려면 여러 가지 문제를 해결해야 했지만 FileTable을 사용하면 이러한 문제가 상당히 해결됩니다. 기업에서는 파일 서버의 데이터를 FileTable로 이동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 통합된 관리 기능 및 서비스를 이용할 수 있습니다. 동시에 해당 데이터를 파일 시스템의 파일로 표시하는 기존의 Windows 애플리케이션을 위해 Windows 애플리케이션 호환성을 유지할 수 있습니다.  
  
   
 ##  <a name="Description"></a> FileTable 정의  
@@ -70,11 +70,11 @@ ms.locfileid: "47598291"
   
 -   FileTable은 특정 시스템 정의 제약 조건 및 트리거를 적용하여 파일 네임스페이스의 의미 체계를 유지 관리합니다.  
   
--   데이터베이스가 비트랜잭션 액세스용으로 구성된 경우 FileTable에 표시되는 파일 및 디렉터리 계층 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스용으로 구성된 FILESTREAM 공유를 통해 노출됩니다. Windows 응용 프로그램에서는 이를 통해 파일 시스템에 액세스할 수 있습니다.  
+-   데이터베이스가 비트랜잭션 액세스용으로 구성된 경우 FileTable에 표시되는 파일 및 디렉터리 계층 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스용으로 구성된 FILESTREAM 공유를 통해 노출됩니다. Windows 애플리케이션에서는 이를 통해 파일 시스템에 액세스할 수 있습니다.  
   
  FileTable에는 다음과 같은 특징도 있습니다.  
   
--   FileTable에 저장된 파일 및 디렉터리 데이터는 Windows API 기반 응용 프로그램의 비트랜잭션 파일 액세스를 위한 Windows 공유를 통해 노출됩니다. Windows 응용 프로그램에서는 이러한 공유를 해당 응용 프로그램의 파일 및 디렉터리를 포함하는 일반적인 공유와 동일하게 인식합니다. 응용 프로그램에서는 풍부한 Windows API를 사용하여 이 공유에 있는 파일 및 디렉터리를 관리할 수 있습니다.  
+-   FileTable에 저장된 파일 및 디렉터리 데이터는 Windows API 기반 애플리케이션의 비트랜잭션 파일 액세스를 위한 Windows 공유를 통해 노출됩니다. Windows 애플리케이션에서는 이러한 공유를 해당 애플리케이션의 파일 및 디렉터리를 포함하는 일반적인 공유와 동일하게 인식합니다. 애플리케이션에서는 풍부한 Windows API를 사용하여 이 공유에 있는 파일 및 디렉터리를 관리할 수 있습니다.  
   
 -   공유를 통해 표시되는 디렉터리 계층 구조는 FileTable 내에서 유지 관리되는 완전히 논리적인 디렉터리 구조입니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47598291"
   
 -   FileTable은 FILESTREAM과는 별도로 구성합니다. 따라서 비트랜잭션 액세스를 사용하도록 설정하거나 FileTable을 만들지 않고도 FILESTREAM 기능을 계속 사용할 수 있습니다.  
   
--   FileTable을 통하지 않고 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스할 수 있는 방법은 없습니다. 따라서 비트랜잭션 액세스를 사용하도록 설정해도 기존 FILESTREAM 열 및 응용 프로그램의 동작에는 영향이 없습니다.  
+-   FileTable을 통하지 않고 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스할 수 있는 방법은 없습니다. 따라서 비트랜잭션 액세스를 사용하도록 설정해도 기존 FILESTREAM 열 및 애플리케이션의 동작에는 영향이 없습니다.  
   
  **FileTable 및 비트랜잭션 액세스 정보**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47598291"
 -   데이터베이스 수준에서 비트랜잭션 액세스를 해제하거나 읽기 전용 또는 모든 읽기/쓰기 액세스를 허용하도록 설정하는 방법으로 비트랜잭션 액세스를 구성하거나 세부적으로 조정할 수 있습니다.  
    
 ###  <a name="memory"></a> FileTable은 메모리 매핑된 파일을 지원하지 않음  
- FileTable은 메모리 매핑된 파일을 지원하지 않습니다. 메모장과 그림판이 메모리 매핑된 파일을 사용하는 응용 프로그램 중 가장 일반적인 두 가지 예입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 컴퓨터에서 이러한 응용 프로그램을 사용하여 FileTable에 저장된 파일을 열 수 없습니다. 하지만 원격 컴퓨터 환경에서는 메모리 매핑된 기능을 사용하지 않으므로 원격 컴퓨터에서 이러한 응용 프로그램을 사용하여 FileTable에 저장된 파일을 열 수 있습니다.  
+ FileTable은 메모리 매핑된 파일을 지원하지 않습니다. 메모장과 그림판이 메모리 매핑된 파일을 사용하는 애플리케이션 중 가장 일반적인 두 가지 예입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 컴퓨터에서 이러한 응용 프로그램을 사용하여 FileTable에 저장된 파일을 열 수 없습니다. 하지만 원격 컴퓨터 환경에서는 메모리 매핑된 기능을 사용하지 않으므로 원격 컴퓨터에서 이러한 애플리케이션을 사용하여 FileTable에 저장된 파일을 열 수 있습니다.  
    
 ##  <a name="reltasks"></a> 관련 작업  
  [FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  

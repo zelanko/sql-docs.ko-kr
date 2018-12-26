@@ -33,7 +33,7 @@ Windows에서 읽기 배율 작업에 대한 SQL Server Always On 가용성 그�
 
 ## <a name="create-an-availability-group"></a>가용성 그룹 만들기
 
-가용성 그룹을 만듭니다. `CLUSTER_TYPE = NONE`을 설정합니다. 또한 각 복제본을 `FAILOVER_MODE = NONE`으로 설정합니다. 분석 또는 보고 워크로드를 실행하는 클라이언트 응용 프로그램에서 보조 데이터베이스에 직접 연결할 수 있습니다. 읽기 전용 라우팅 목록을 만들 수도 있습니다. 주 복제본에 대한 연결은 읽기 연결 요청을 라운드 로빈 방식으로 라우팅 목록에서 각 보조 복제본으로 전달합니다.
+가용성 그룹을 만듭니다. `CLUSTER_TYPE = NONE`을 설정합니다. 또한 각 복제본을 `FAILOVER_MODE = NONE`으로 설정합니다. 분석 또는 보고 워크로드를 실행하는 클라이언트 애플리케이션에서 보조 데이터베이스에 직접 연결할 수 있습니다. 읽기 전용 라우팅 목록을 만들 수도 있습니다. 주 복제본에 대한 연결은 읽기 연결 요청을 라운드 로빈 방식으로 라우팅 목록에서 각 보조 복제본으로 전달합니다.
 
 다음 Transact-SQL 스크립트는 `ag1`이라는 가용성 그룹을 만듭니다. 스크립트는 `SEEDING_MODE = AUTOMATIC`으로 가용성 그룹 복제본을 구성합니다. 이렇게 설정하면 SQL Server에서 가용성 그룹에 추가된 후 각 보조 서버에 데이터베이스를 자동으로 만듭니다. 
 
@@ -78,8 +78,8 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ## <a name="connect-to-read-only-secondary-replicas"></a>읽기 전용 보조 복제본에 연결
 
 두 방법 중 하나를 사용하여 읽기 전용 보조 복제본에 연결할 수 있습니다.
-* 응용 프로그램은 보조 복제본을 호스팅하는 SQL Server 인스턴스에 직접 연결하고 데이터베이스를 쿼리할 수 있습니다. 자세한 내용은 [읽기 가능한 보조 복제본](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조합니다.
-* 응용 프로그램은 수신기가 필요한 읽기 전용 라우팅을 사용할 수도 있습니다. 자세한 내용은 [읽기 전용 라우팅](listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조합니다.
+* 애플리케이션은 보조 복제본을 호스팅하는 SQL Server 인스턴스에 직접 연결하고 데이터베이스를 쿼리할 수 있습니다. 자세한 내용은 [읽기 가능한 보조 복제본](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조합니다.
+* 애플리케이션은 수신기가 필요한 읽기 전용 라우팅을 사용할 수도 있습니다. 자세한 내용은 [읽기 전용 라우팅](listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조합니다.
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>읽기 확장 가용성 그룹에서 주 복제본 장애 조치
 

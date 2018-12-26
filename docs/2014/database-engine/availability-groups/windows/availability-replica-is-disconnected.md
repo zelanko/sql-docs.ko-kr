@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9ab17646913b217b877c09070affe65be49bf880
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48088953"
@@ -41,7 +41,7 @@ ms.locfileid: "48088953"
 ## <a name="possible-causes"></a>가능한 원인  
  보조 복제본이 주 복제본에 연결되어 있지 않습니다. 연결 상태가 DISCONNECTED입니다. 이 문제는 다음에 의해 발생할 수 있습니다.  
   
--   연결 포트가 다른 응용 프로그램과 충돌했을 수 있습니다.  
+-   연결 포트가 다른 애플리케이션과 충돌했을 수 있습니다.  
   
 -   암호화 유형 또는 알고리즘이 일치하지 않습니다.  
   

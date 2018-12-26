@@ -16,12 +16,12 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a23b56c0ed3bdb5d2c91117b26c39c4caab9123f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48107549"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank 서버 구성 옵션
-  이 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구현되지 않습니다. 이는 주요 변경 내용입니다. 현재 이 기능을 사용하는 응용 프로그램을 가능한 한 빨리 수정하십시오.  
+  이 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구현되지 않습니다. 이는 주요 변경 내용입니다. 현재 이 기능을 사용하는 애플리케이션을 가능한 한 빨리 수정하십시오.  
   
   

@@ -23,7 +23,7 @@ ms.locfileid: "47645821"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   고유하게 컴파일된 저장 프로시저의 특징  
   
--   응용 프로그램에서 성능이 중요한 부분에 주로 사용됩니다.  
+-   애플리케이션에서 성능이 중요한 부분에 주로 사용됩니다.  
   
 -   자주 실행됩니다.  
   

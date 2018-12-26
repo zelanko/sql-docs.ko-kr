@@ -23,15 +23,15 @@ ms.locfileid: "47760452"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  응용 프로그램의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
+  애플리케이션의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
   
 -   행 필터, 조인 필터 및 열 필터를 사용합니다. 테이블 아티클을 필터링하여 게시할 데이터 파티션을 만들 수 있습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
--   구독자의 변경 내용을 게시자로 업로드할지 여부를 지정합니다. 데이터의 일부 또는 전체가 구독자에서 읽기 전용이어야 하는 응용 프로그램의 경우 다운로드 전용 아티클을 사용하면 성능상의 이점이 있습니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
+-   구독자의 변경 내용을 게시자로 업로드할지 여부를 지정합니다. 데이터의 일부 또는 전체가 구독자에서 읽기 전용이어야 하는 애플리케이션의 경우 다운로드 전용 아티클을 사용하면 성능상의 이점이 있습니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   
--   복제 트리거 및 시스템 테이블에서 하나 이상의 아티클에 대한 삭제를 추적하지 않도록 지정합니다. 이 옵션은 많은 응용 프로그램 시나리오에서 유용하게 사용됩니다. 복제할 필요가 없는 일괄 처리 삭제를 사용하는 시나리오도 여기에 포함됩니다. 자세한 내용은 [조건부 삭제 추적으로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)를 참조하세요.  
+-   복제 트리거 및 시스템 테이블에서 하나 이상의 아티클에 대한 삭제를 추적하지 않도록 지정합니다. 이 옵션은 많은 애플리케이션 시나리오에서 유용하게 사용됩니다. 복제할 필요가 없는 일괄 처리 삭제를 사용하는 시나리오도 여기에 포함됩니다. 자세한 내용은 [조건부 삭제 추적으로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)를 참조하세요.  
   
--   응용 프로그램에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+-   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
   
 -   관련된 레코드 집합이 하나의 단위로 처리되도록 지정합니다. 기본적으로 병합 복제는 행 단위로 테이블 변경 내용을 처리합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   

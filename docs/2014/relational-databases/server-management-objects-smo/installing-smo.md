@@ -18,13 +18,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31d0a0731c046f58d1a1d0689ad4c987989a0874
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48165723"
 ---
 # <a name="installing-smo"></a>SMO 설치
-  SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects)를 사용하는 응용 프로그램을 개발하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 클라이언트 도구 SDK를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하지 않고 클라이언트 도구 SDK를 설치하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 팩에서 공유 관리 개체를 설치합니다. 응용 프로그램을 실행할 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects가 설치되어 있는지 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 팩의 공유 관리 개체 .msi를 사용하면 됩니다.  
+  SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects)를 사용하는 애플리케이션을 개발하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 클라이언트 도구 SDK를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하지 않고 클라이언트 도구 SDK를 설치하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 팩에서 공유 관리 개체를 설치합니다. 애플리케이션을 실행할 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects가 설치되어 있는지 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 팩의 공유 관리 개체 .msi를 사용하면 됩니다.  
   
  SMO 어셈블리는 기본적으로 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 디렉터리에 설치됩니다.  
   

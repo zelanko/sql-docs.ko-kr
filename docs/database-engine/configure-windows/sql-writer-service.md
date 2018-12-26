@@ -33,7 +33,7 @@ ms.locfileid: "47623882"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL 기록기 서비스는 볼륨 섀도 복사본 서비스 프레임워크를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 백업 및 복원을 위한 추가 기능을 제공합니다.  
   
- SQL 기록기 서비스는 자동으로 설치되며 VSS(볼륨 섀도 복사본 서비스) 응용 프로그램이 백업 또는 복원을 요청할 때 실행되어야 합니다. 서비스를 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 애플릿을 사용합니다. SQL 기록기 서비스는 모든 운영 체제에 설치됩니다.  
+ SQL 기록기 서비스는 자동으로 설치되며 VSS(볼륨 섀도 복사본 서비스) 애플리케이션이 백업 또는 복원을 요청할 때 실행되어야 합니다. 서비스를 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 애플릿을 사용합니다. SQL 기록기 서비스는 모든 운영 체제에 설치됩니다.  
   
 ## <a name="purpose"></a>용도  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 실행 중에 데이터 파일을 잠그고 이 파일에 독점적으로 액세스합니다. SQL 기록기 서비스가 실행 중이 아니면 Windows에서 실행 중인 백업 프로그램이 데이터 파일에 액세스할 수 없으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 사용하여 백업을 수행해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47623882"
  SQL 기록기 서비스를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 동안에도 Windows 백업 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일을 복사할 수 있습니다.  
   
 ## <a name="volume-shadow-copy-service"></a>볼륨 섀도 복사본 서비스  
- VSS는 시스템의 응용 프로그램이 볼륨에 계속 쓰는 동안 볼륨 백업을 수행할 수 있도록 프레임워크를 구현하는 COM API 집합입니다. VSS는 디스크의 데이터를 업데이트하는 사용자 응용 프로그램(기록자)과 응용 프로그램을 백업하는 사용자 응용 프로그램(요청자) 간 조정을 허용하는 일관된 인터페이스를 제공합니다.  
+ VSS는 시스템의 애플리케이션이 볼륨에 계속 쓰는 동안 볼륨 백업을 수행할 수 있도록 프레임워크를 구현하는 COM API 집합입니다. VSS는 디스크의 데이터를 업데이트하는 사용자 애플리케이션(기록자)과 애플리케이션을 백업하는 사용자 애플리케이션(요청자) 간 조정을 허용하는 일관된 인터페이스를 제공합니다.  
   
  VSS는 제공하는 서비스의 성능과 안정성을 저하시키지 않고도 실행 중인 시스템, 특히 서버에서 안정적인 백업용 이미지를 캡처하고 복사합니다. VSS에 대한 자세한 내용은 Windows 설명서를 참조하십시오.  
 

@@ -138,7 +138,7 @@ ms.locfileid: "48164113"
     4.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 메서드를 호출합니다. 지정된 레지스트리 키가 확인되고, 레지스트리 키에 저장된 데이터가 0인 경우에만 예외 메시지 상자가 표시됩니다. 대화 상자가 표시되고 사용자가 단추를 클릭하기 전에 확인란을 선택하면 레지스트리 키의 데이터가 1로 설정됩니다.  
   
 ## <a name="example"></a>예제  
- 이 예에서는 **확인** 단추만 있는 예외 메시지 상자를 사용하여 처리된 예외 및 추가적인 응용 프로그램 관련 정보가 포함된 응용 프로그램 예외 정보를 표시합니다.  
+ 이 예에서는 **확인** 단추만 있는 예외 메시지 상자를 사용하여 처리된 예외 및 추가적인 애플리케이션 관련 정보가 포함된 애플리케이션 예외 정보를 표시합니다.  
   
  [!code-csharp[HowTo#emb_showOKbutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showokbutton)]  
   

@@ -20,7 +20,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 655c12a8b3f055adb6dc61164046e3059216ed19
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48082473"
@@ -75,7 +75,7 @@ class Test
    }  
 ```  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있는지 확인합니다.  
   

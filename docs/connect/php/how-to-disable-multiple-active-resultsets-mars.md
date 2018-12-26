@@ -36,7 +36,7 @@ MARS(Multiple Active Result Sets)를 사용하지 않도록 설정된 SQL Server
     'MultipleActiveResultSets'=>false  
     ```  
   
-    응용 프로그램이 열려 있는 활성 결과 집합이 있는 연결에서 쿼리를 실행하려는 경우 두 번째 쿼리 시도는 다음과 같은 오류 정보를 반환합니다.  
+    애플리케이션이 열려 있는 활성 결과 집합이 있는 연결에서 쿼리를 실행하려는 경우 두 번째 쿼리 시도는 다음과 같은 오류 정보를 반환합니다.  
   
     결과가 보류 중인 문이 있기 때문에 이 연결에서 이 작업을 처리할 수 없습니다.  다른 쿼리에 대해 연결을 사용할 수 있도록 모든 결과를 페치하거나 문을 취소 또는 해제합니다. MultipleActiveResultSets 연결 옵션에 대한 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
   

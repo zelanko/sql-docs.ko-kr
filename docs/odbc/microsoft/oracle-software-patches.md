@@ -16,14 +16,14 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47845921"
 ---
 # <a name="oracle-software-patches"></a>Oracle 소프트웨어 패치
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  여러 Microsoft 제품 및 기술, Microsoft ODBC Driver for Oracle과 Microsoft OLE DB Provider for Oracle, 인터넷 정보를 포함 하 여 적절 하 게 작동에 필요한 Oracle 서버 제품 및 해당 클라이언트 구성 요소에 대 한 패치를 서비스 (IIS) 구성 요소 서비스 (또는 Microsoft Transaction Server, Windows NT를 사용 하는 경우) 등입니다.  
   

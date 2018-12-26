@@ -17,14 +17,14 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47806731"
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle용 ODBC 드라이버
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  Oracle 용 Microsoft® ODBC 드라이버를 사용 하면 Oracle 데이터베이스를 ODBC 호환 응용 프로그램에 연결할 수 있습니다. Oracle 용 ODBC 드라이버에 설명 된 ODBC Open Database Connectivity () 사양을 준수 합니다 *ODBC 프로그래머 참조*합니다. PL/SQL 패키지, XA/DTC 통합 및 인터넷 정보 서비스 (IIS) 내에서 Oracle 액세스에 액세스할 수 있습니다.  
   

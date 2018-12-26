@@ -44,7 +44,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="remarks"></a>Remarks  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) 메서드는 JDBC 4.0 사양에서 도입된 java.sql.Wrapper 인터페이스에 의해 정의됩니다.  
   
- 응용 프로그램에서는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스해야 할 수 있습니다. unwrap 메서드는 이 개체가 확장하는 공용 클래스에서 공급업체 확장을 노출하는 경우 이 클래스에 대한 래핑 해제를 지원합니다.  
+ 애플리케이션에서는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스해야 할 수 있습니다. unwrap 메서드는 이 개체가 확장하는 공용 클래스에서 공급업체 확장을 노출하는 경우 이 클래스에 대한 래핑 해제를 지원합니다.  
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)는 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 확장된 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)를 구현합니다. 이 메서드가 호출되면 개체가 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스로 래핑 해제됩니다.  
   

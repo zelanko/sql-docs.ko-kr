@@ -64,7 +64,7 @@ ms.locfileid: "52533974"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 MSX/TSX 관계에 나열되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 업그레이드할 때는 마스터 서버를 업그레이드하기 전에 대상 서버를 업그레이드합니다. 대상 서버 전에 마스터 서버를 업그레이드하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 마스터 인스턴스에 연결할 수 없습니다.  
   
--   SQL Server를 사용하는 모든 서비스를 포함한 모든 응용 프로그램을 끝냅니다. 로컬 응용 프로그램이 업그레이드 중인 인스턴스에 연결되어 있으면 업그레이드가 실패할 수 있습니다.  
+-   SQL Server를 사용하는 모든 서비스를 포함한 모든 애플리케이션을 끝냅니다. 로컬 애플리케이션이 업그레이드 중인 인스턴스에 연결되어 있으면 업그레이드가 실패할 수 있습니다.  
   
 -   복제가 현재 상태인지 확인한 다음 복제를 중지합니다.   
     복제된 환경에서 롤링 업그레이드를 수행하기 위한 자세한 단계는 [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)를 참조하세요.

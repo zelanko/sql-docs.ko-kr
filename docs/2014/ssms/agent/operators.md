@@ -25,7 +25,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8bbc084acec25b6a410aae1ffdb98940f53d90c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48098773"
@@ -47,7 +47,7 @@ ms.locfileid: "48098773"
  운영자의 연락 정보는 운영자가 알림을 받는 방법을 정의합니다. 운영자는 전자 메일, 호출기 또는 **net send** 명령으로 알림을 받을 수 있습니다.  
   
 > [!IMPORTANT]  
->  **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
+>  **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 -   **전자 메일 알림**  
   

@@ -20,7 +20,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47732931"
@@ -67,7 +67,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- 코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 전체 경로 파일에 대 한 런타임 시 사용 하 여 가져올는 **FileTableRootPath** 하 고 **GetFileNamespacePath** 함수를 다음 예제에서와 같이 함께 합니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
+ 코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 전체 경로 파일에 대 한 런타임 시 사용 하 여 가져올는 **FileTableRootPath** 하 고 **GetFileNamespacePath** 함수를 다음 예제에서와 같이 함께 합니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```sql  
 USE MyDocumentDatabase;  

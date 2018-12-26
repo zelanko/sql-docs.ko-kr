@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47798047"
@@ -31,7 +31,7 @@ WideWorldImporters, 데이터를 저장 하 고, 사용자 데이터에 액세�
 
 |스키마|Description|
 |-----------------------------|---------------------|
-|응용 프로그램|응용 프로그램 수준의 사용자, 연락처 및 매개 변수입니다. 여러 스키마에 의해 사용 되는 데이터를 사용 하 여 참조 테이블도 포함|
+|애플리케이션|응용 프로그램 수준의 사용자, 연락처 및 매개 변수입니다. 여러 스키마에 의해 사용 되는 데이터를 사용 하 여 참조 테이블도 포함|
 |Purchasing|주식 항목에 공급 업체 및 공급자에 대 한 세부 정보에서 구입합니다.|  
 |Sales|재고 항목 소매 고객 및 고객 및 판매 사람에 대 한 세부 정보를 판매 합니다. |  
 |Warehouse|재고 항목 인벤토리 및 트랜잭션입니다.|  

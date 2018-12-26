@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48188053"
@@ -26,11 +26,11 @@ ms.locfileid: "48188053"
   
 -   로컬 서버나 원격 서버에 있을 수 있는 기본 개체로 참조되는 다른 데이터베이스 개체의 대체 이름을 제공합니다.  
   
--   기본 개체의 이름이나 위치의 변경으로부터 클라이언트 응용 프로그램을 보호하는 추상적 계층을 제공합니다.  
+-   기본 개체의 이름이나 위치의 변경으로부터 클라이언트 애플리케이션을 보호하는 추상적 계층을 제공합니다.  
   
- 예를 들어 **Server1** 이라는 서버에 있는 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **Employee**테이블을 검토해 보십시오. 다른 서버 **Server2**에서 이 테이블을 참조하려면 클라이언트 응용 프로그램이 네 부분으로 된 이름 **Server1.AdventureWorks.Person.Employee**를 사용해야 합니다. 또한 테이블 위치를 다른 서버 등으로 변경하는 경우 이 변경 내용을 반영하기 위해 클라이언트 응용 프로그램을 수정해야 합니다.  
+ 예를 들어 **Server1** 이라는 서버에 있는 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **Employee**테이블을 검토해 보십시오. 다른 서버 **Server2**에서 이 테이블을 참조하려면 클라이언트 애플리케이션이 네 부분으로 된 이름 **Server1.AdventureWorks.Person.Employee**를 사용해야 합니다. 또한 테이블 위치를 다른 서버 등으로 변경하는 경우 이 변경 내용을 반영하기 위해 클라이언트 애플리케이션을 수정해야 합니다.  
   
- **Server1**의 **Employee** 테이블에 대한 동의어, **EmpTable** 을 **Server2**에 만들어 이러한 문제를 해결할 수 있습니다. 이제 클라이언트 응용 프로그램은 단일 부분으로 된 이름인 **EmpTable**만 사용하여 **Employee** 테이블을 참조해야 합니다. 또한 **Employee** 테이블 위치가 변경되면 동의어 **EmpTable**를 수정하여 **Employee** 테이블의 새 위치를 가리키게 해야 합니다. ALTER SYNONYM 문이 없으므로 먼저 동의어 **EmpTable**을 삭제한 다음 같은 이름으로 동의어를 다시 만들지만 **Employee**의 새 위치를 가리키게 해야 합니다.  
+ **Server1**의 **Employee** 테이블에 대한 동의어, **EmpTable** 을 **Server2**에 만들어 이러한 문제를 해결할 수 있습니다. 이제 클라이언트 애플리케이션은 단일 부분으로 된 이름인 **EmpTable**만 사용하여 **Employee** 테이블을 참조해야 합니다. 또한 **Employee** 테이블 위치가 변경되면 동의어 **EmpTable**를 수정하여 **Employee** 테이블의 새 위치를 가리키게 해야 합니다. ALTER SYNONYM 문이 없으므로 먼저 동의어 **EmpTable**을 삭제한 다음 같은 이름으로 동의어를 다시 만들지만 **Employee**의 새 위치를 가리키게 해야 합니다.  
   
  동의어는 스키마에 속하고 스키마의 다른 개체처럼 동의어 이름은 고유해야 합니다. 다음 데이터베이스 개체의 동의어를 만들 수 있습니다.  
   
@@ -114,7 +114,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ## <a name="getting-information-about-synonyms"></a>동의어에 대한 정보 가져오기  
  sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. 에 대 한 자세한 내용은 합니다 `sys.synonyms` 카탈로그 뷰를 참조 하십시오 [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)합니다.  
   
- 확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 응용 프로그램은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)를 참조하세요.  
+ 확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 애플리케이션은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)를 참조하세요.  
   
  동의어 기본 개체의 기본 유형을 찾으려면 OBJECTPROPERTYEX 함수를 사용합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)를 참조하세요.  
   

@@ -37,7 +37,7 @@ ms.locfileid: "47842061"
   지정된 SQL 핸들에 대한 SQL 문의 텍스트를 반환합니다.  
   
 > [!IMPORTANT]  
->  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
+>  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
   
  
   

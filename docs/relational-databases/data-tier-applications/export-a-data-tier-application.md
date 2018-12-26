@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 내보내기 | Microsoft 문서
+title: 데이터 계층 애플리케이션 내보내기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,9 +31,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52513825"
 ---
-# <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
+# <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 보관 파일을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+  DAC(데이터 계층 애플리케이션) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 보관 파일을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  내보내기 프로세스에서는 DAC 내보내기 파일을 두 단계로 작성합니다.  
@@ -82,7 +82,7 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
     -   [결과 페이지](#Results)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램 내보내기 마법사의 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
   
@@ -120,7 +120,7 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
 ##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
  **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
- 코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 응용 프로그램을 다운로드합니다.  
+ 코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
 1.  SMO Server 개체를 만든 다음 내보낼 DAC를 포함하는 인스턴스로 설정합니다.  
   

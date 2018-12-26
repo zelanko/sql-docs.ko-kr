@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 76a4c29d0fba58eb941bf26781b052966a0bd5b9
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48186743"
@@ -189,7 +189,7 @@ GO
 ```  
   
 ###  <a name="HowToIdentifyLocks"></a> 방법: FileTable이 보유한 잠금 식별  
- FileTable이 보유한 대부분의 잠금은 응용 프로그램에서 연 파일에 해당합니다.  
+ FileTable이 보유한 대부분의 잠금은 애플리케이션에서 연 파일에 해당합니다.  
   
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
  동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  

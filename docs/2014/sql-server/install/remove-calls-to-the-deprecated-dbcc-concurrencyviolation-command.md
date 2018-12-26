@@ -28,7 +28,7 @@ ms.locfileid: "48203553"
  최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 작업 관리자가 없기 때문에 이 명령이 제거되었습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 더 이상 사용되지 않는 이 명령에 대한 참조를 제거하도록 응용 프로그램과 스크립트를 업데이트합니다.  
+ 더 이상 사용되지 않는 이 명령에 대한 참조를 제거하도록 애플리케이션과 스크립트를 업데이트합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
   

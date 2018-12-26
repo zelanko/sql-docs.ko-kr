@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 200a9b6de6ac5d07bd9c58f991fb6c7febc16c72
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48154963"
@@ -39,7 +39,7 @@ ms.locfileid: "48154963"
 |[Change Data Capture Service for Oracle](http://go.microsoft.com/fwlink/?LinkId=299180)|Change Data Capture Service for Oracle은 Oracle 트랜잭션 로그를 검색하고 관련 Oracle 테이블의 변경 내용을 SQL Server 변경 테이블에 캡처하는 Windows 서비스입니다.|  
 |[Microsoft Connector 1.1 for SAP BW](http://go.microsoft.com/fwlink/?LinkId=299181)|SAP BW용 Microsoft Connector 1.1은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드할 수 있도록 지원하는 3가지 구성 요소 집합으로 구성됩니다.|  
 |[업그레이드 도우미 용 playback Capture](http://go.microsoft.com/fwlink/?LinkId=299182)|업그레이드 도우미의 Capture Playback 워크플로는 나중에 재생하는 데 사용할 작업 추적 캡처 프로세스를 자동화합니다.|  
-|[Microsoft ODBC Driver 11 for SQL Server Windows](http://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 for Windows는 Microsoft Windows에 대한 표준 ODBC 인터페이스를 구현하는 API(응용 프로그래밍 인터페이스)를 제공하는 독립 실행형 드라이버입니다.|  
+|[Microsoft ODBC Driver 11 for SQL Server Windows](http://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 for Windows는 Microsoft Windows에 대한 표준 ODBC 인터페이스를 구현하는 API(애플리케이션 프로그래밍 인터페이스)를 제공하는 독립 실행형 드라이버입니다.|  
 |[SharePoint용 PowerPivot](http://go.microsoft.com/fwlink/?LinkId=299184)|SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 Analysis Services 서버입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

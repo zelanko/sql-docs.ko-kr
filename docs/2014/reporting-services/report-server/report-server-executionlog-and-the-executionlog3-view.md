@@ -16,7 +16,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48095885"
@@ -29,7 +29,7 @@ ms.locfileid: "48095885"
 ##  <a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
   
- 보고서 실행 로그는 기본적으로 이름이 **ReportServer**로 지정되는 보고서 서버 데이터베이스에 저장됩니다. SQL 뷰는 실행 로그 정보를 제공합니다. 최신 릴리스에는 "2"번과 "3"번 뷰가 추가되었으며, 이러한 뷰에는 새로운 필드 또는 이전 릴리스보다 친숙한 이름의 필드가 포함됩니다. 이전 뷰도 제품에 그대로 유지되므로 이러한 뷰를 사용하는 사용자 지정 응용 프로그램에는 영향을 주지 않습니다. 이전 뷰에 대한 종속성이 없는 경우(예: ExecutionLog) 최신 뷰인 ExecutionLog**3**를 사용하는 것이 좋습니다.  
+ 보고서 실행 로그는 기본적으로 이름이 **ReportServer**로 지정되는 보고서 서버 데이터베이스에 저장됩니다. SQL 뷰는 실행 로그 정보를 제공합니다. 최신 릴리스에는 "2"번과 "3"번 뷰가 추가되었으며, 이러한 뷰에는 새로운 필드 또는 이전 릴리스보다 친숙한 이름의 필드가 포함됩니다. 이전 뷰도 제품에 그대로 유지되므로 이러한 뷰를 사용하는 사용자 지정 애플리케이션에는 영향을 주지 않습니다. 이전 뷰에 대한 종속성이 없는 경우(예: ExecutionLog) 최신 뷰인 ExecutionLog**3**를 사용하는 것이 좋습니다.  
   
  항목 내용  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48095885"
 -   [로그 필드(ExecutionLog)](#bkmk_executionlog)  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint 모드 보고서 서버에 대한 구성 설정  
- 보고서 실행 로깅은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 시스템 설정에서 설정 또는 해제할 수 있습니다.  
+ 보고서 실행 로깅은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 시스템 설정에서 설정 또는 해제할 수 있습니다.  
   
  기본적으로 로그 항목은 60일 동안 보관됩니다. 이 날짜를 초과한 항목은 매일 오전 2시에 제거됩니다. 제대로 된 설치에서는 항상 60일 동안의 정보만 사용할 수 있게 됩니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "48095885"
   
  **실행 로깅을 설정하려면**  
   
-1.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리** 를 클릭합니다.  
+1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
-2.  구성하려는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 클릭합니다.  
+2.  구성하려는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 클릭합니다.  
   
 3.  **시스템 설정**을 클릭합니다.  
   

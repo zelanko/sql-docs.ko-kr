@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 773d3a4338530bdfa183c91312236df1a2963bf4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48115043"
@@ -42,7 +42,7 @@ ms.locfileid: "48115043"
   
      에이전트가 여러 개인 것으로 표시되는 경우 해당 에이전트 중 하나는 분리된 프로세스의 결과일 수 있습니다.  
   
--   게시된 데이터베이스에 대해 로그 판독기 에이전트가 시작되었는데 사용자가 같은 데이터베이스에 대해 **sp_repldone**, **sp_replcmds**또는 **sp_replshowcmds** 를 실행할 경우 저장 프로시저가 실행된 응용 프로그램(예: **sqlcmd**)에서 오류가 발생합니다.  
+-   게시된 데이터베이스에 대해 로그 판독기 에이전트가 시작되었는데 사용자가 같은 데이터베이스에 대해 **sp_repldone**, **sp_replcmds**또는 **sp_replshowcmds** 를 실행할 경우 저장 프로시저가 실행된 애플리케이션(예: **sqlcmd**)에서 오류가 발생합니다.  
   
 -   게시된 데이터베이스에 대해 실행 중인 로그 판독기 에이전트가 없는 상태에서 사용자가 **sp_repldone**, **sp_replcmds**또는 **sp_replshowcmds** 를 실행한 다음 프로시저가 실행된 연결을 닫지 않을 경우 로그 판독기 에이전트가 데이터베이스에 연결을 시도하면 오류가 발생합니다.  
   

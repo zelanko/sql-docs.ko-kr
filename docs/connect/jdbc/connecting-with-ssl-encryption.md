@@ -21,7 +21,7 @@ ms.locfileid: "47812191"
 # <a name="connecting-with-ssl-encryption"></a>SSL 암호화를 사용한 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  이 문서의 예제에서는 응용 프로그램이 Java 응용 프로그램에서 SSL(Secure Sockets Layer) 암호화를 사용할 수 있도록 하는 연결 문자열 속성을 사용하는 방법에 대해 설명합니다. **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** 및 **hostNameInCertificate** 등의 새 연결 문자열 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
+  이 문서의 예제에서는 애플리케이션이 Java 애플리케이션에서 SSL(Secure Sockets Layer) 암호화를 사용할 수 있도록 하는 연결 문자열 속성을 사용하는 방법에 대해 설명합니다. **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** 및 **hostNameInCertificate** 등의 새 연결 문자열 속성에 대한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   
  **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **true**로 설정되어 있는 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 유효성을 검사하지 않습니다. 이 설정은 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 자체 서명된 인증서만 있는 경우와 같이 테스트 환경에서 연결을 허용하는 데 필요합니다.  
   

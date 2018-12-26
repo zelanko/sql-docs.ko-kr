@@ -55,7 +55,7 @@ ms.locfileid: "47599581"
 6.  쿼리를 실행합니다.  
   
     > [!NOTE]  
-    >  웹 응용 프로그램에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
+    >  웹 애플리케이션에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

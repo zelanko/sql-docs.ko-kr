@@ -74,7 +74,7 @@ ms.locfileid: "51605803"
   
  <sup>2</sup>Azure SQL Database에 대한 지원은 3.0 드라이버에서 핫픽스로 도입되었습니다. Azure SQL 데이터베이스 고객은 사용 가능한 최신 드라이버 버전을 사용하는 것이 좋습니다.  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver 버전 2.0 및 Microsoft SQL Server 2005 JDBC Driver 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결될 수 있습니다. 하위 수준 변환이 허용되는 경우 응용 프로그램은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](https://go.microsoft.com/fwlink/?LinkId=145198) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](https://go.microsoft.com/fwlink/?LinkId=145199)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkId=145211)및  [FILESTREAM 지원](https://go.microsoft.com/fwlink/?LinkId=145212) 항목을 참조하세요.  
+ <sup>3</sup>Microsoft SQL Server JDBC Driver 버전 2.0 및 Microsoft SQL Server 2005 JDBC Driver 버전 1.2는 하위 수준 클라이언트로 SQL Server 2008에 연결될 수 있습니다. 하위 수준 변환이 허용되는 경우 애플리케이션은 쿼리를 실행하고 시간, 날짜, datetime2, datetimeoffset 및 FILESTREAM 등 새로운 SQL Server 2008 데이터 형식을 업데이트할 수 있습니다. JDBC Driver와 함께 이러한 새로운 데이터 형식을 사용하는 방법에 대한 자세한 내용은  [JDBC Driver를 사용하여 SQL Server 2008 날짜/시간 데이터 형식 작업](https://go.microsoft.com/fwlink/?LinkId=145198) 및  [JDBC Driver를 사용하 여 SQL Server 2008 FileStream 작업](https://go.microsoft.com/fwlink/?LinkId=145199)을 참조하세요. 이러한 새 데이터 형식의 하위 수준 호환성에 대한 자세한 내용은 SQL Server 온라인 설명서의  [날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkId=145211)및  [FILESTREAM 지원](https://go.microsoft.com/fwlink/?LinkId=145212) 항목을 참조하세요.  
   
  <sup>4</sup>Microsoft JDBC Driver와 병렬 데이터 웨어하우스 간의 연결 지원은 SQL Server용 Microsoft JDBC Driver 4.0 및 Microsoft SQL Server 2008 R2 병렬 데이터 웨어하우스 어플라이언스 업데이트 3에 최초로 도입되었습니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51605803"
   
  JDBC 제품 팀은 Windows, Sun Solaris, SUSE Linux 및 RedHat Linux에서 Microsoft 드라이버를 테스트합니다.  고객 지원 센터는 모든 플랫폼의 고객이 사용할 수 있지만 Windows와 같은 플랫폼에서 문제를 재현하도록 요청될 수 있습니다.  
   
-## <a name="application-server-support"></a>응용 프로그램 서버 지원  
- Microsoft JDBC Driver for SQL Server는 다양한 응용 프로그램 서버에서 테스트됩니다.  사용 중인 제품과 호환되는 드라이버 버전에 대한 추가 세부 정보를 얻으려면 응용 프로그램 서버 공급업체에 문의하세요.  
+## <a name="application-server-support"></a>애플리케이션 서버 지원  
+ Microsoft JDBC Driver for SQL Server는 다양한 애플리케이션 서버에서 테스트됩니다.  사용 중인 제품과 호환되는 드라이버 버전에 대한 추가 세부 정보를 얻으려면 애플리케이션 서버 공급업체에 문의하세요.  
   
   

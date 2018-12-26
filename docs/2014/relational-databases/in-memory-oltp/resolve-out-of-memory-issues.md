@@ -12,7 +12,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067413"
@@ -33,8 +33,8 @@ ms.locfileid: "48067413"
   
  OOM으로 인한 복구 오류를 해결하려면 다음 방법으로 복구 작업에 사용 가능한 메모리를 임시로 늘리십시오.  
   
--   실행 중인 응용 프로그램을 일시적으로 닫습니다.   
-    Visual Studio, Internet Explorer, OneNote 등과 같이 실행 중인 응용 프로그램을 하나 이상 닫으면 해당 응용 프로그램에서 사용 중인 메모리를 복원 작업에 사용할 수 있습니다. 성공적으로 복원한 후 해당 응용 프로그램을 다시 시작할 수 있습니다.  
+-   실행 중인 애플리케이션을 일시적으로 닫습니다.   
+    Visual Studio, Internet Explorer, OneNote 등과 같이 실행 중인 애플리케이션을 하나 이상 닫으면 해당 애플리케이션에서 사용 중인 메모리를 복원 작업에 사용할 수 있습니다. 성공적으로 복원한 후 해당 응용 프로그램을 다시 시작할 수 있습니다.  
   
 -   MAX_MEMORY_PERCENT의 값을 늘립니다.   
     이 코드 조각은 PoolHk 리소스 풀에 대한 MAX_MEMORY_PERCENT를 설치된 메모리의 70%로 변경합니다.  

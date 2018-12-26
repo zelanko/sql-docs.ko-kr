@@ -16,9 +16,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34019590"
 ---
-# <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>클라이언트 애플리케이션에서 연결(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
+  Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 애플리케이션을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
   
 -   [SQL Server Management Studio를 사용하여 연결(SSMS)](#bkmk_SSMS)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34019590"
 -   [개체 및 작업 & #40;에 대 한 권한 부여 액세스 Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio를 사용하여 연결(SSMS)  
- SSMS에서 Analysis Services에 연결하여 서버 인스턴스와 데이터베이스를 대화형으로 관리할 수 있습니다. 또한 XMLA 또는 MDX 쿼리를 실행하여 관리 작업을 수행하거나 데이터를 검색할 수도 있습니다. 쿼리가 전송될 때 데이터베이스만 로드하는 다른 도구 및 응용 프로그램과 달리 SSMS는 데이터베이스를 볼 수 있는 권한이 있다는 가정하에 서버에 연결할 때 모든 데이터베이스를 로드합니다. 즉, 서버에 수많은 테이블 형식 데이터베이스가 있는 경우 SSMS를 사용하여 연결할 때 모든 테이블 형식 데이터베이스가 시스템 메모리에 로드됩니다.  
+ SSMS에서 Analysis Services에 연결하여 서버 인스턴스와 데이터베이스를 대화형으로 관리할 수 있습니다. 또한 XMLA 또는 MDX 쿼리를 실행하여 관리 작업을 수행하거나 데이터를 검색할 수도 있습니다. 쿼리가 전송될 때 데이터베이스만 로드하는 다른 도구 및 애플리케이션과 달리 SSMS는 데이터베이스를 볼 수 있는 권한이 있다는 가정하에 서버에 연결할 때 모든 데이터베이스를 로드합니다. 즉, 서버에 수많은 테이블 형식 데이터베이스가 있는 경우 SSMS를 사용하여 연결할 때 모든 테이블 형식 데이터베이스가 시스템 메모리에 로드됩니다.  
   
  특정 사용자 ID로 SSMS를 실행하여 사용 권한을 테스트한 다음 해당 사용자로 Analysis Services에 연결할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34019590"
   
 2.  Excel에서 연결을 설정할 때 데이터 연결 마법사의 마지막 페이지에서 Excel 서비스에 대한 인증 설정을 지정할 수 있습니다. 이러한 설정은 Excel 서비스가 있는 SharePoint 서버에 업로드해야 하는 통합 문서의 속성을 설정하는 데 사용됩니다. 설정은 데이터 새로 고침 작업에 사용됩니다. 옵션에는 **Windows 인증**, **SSS(보안 저장소 서비스)** 및 **없음**이 있습니다.  
   
-     **없음**은 사용하지 않는 것이 좋습니다. Analysis Services에서는 HTTP 액세스용으로 구성된 서버에 연결하지 않는 한 연결 문자열에서 사용자 이름 및 암호를 지정할 수 없습니다. 마찬가지로 SSS 대상 응용 프로그램 ID가 Analysis Services 데이터베이스에 대한 사용자 액세스 권한이 있는 Windows 사용자 자격 증명 집합에 매핑되어 있음을 이미 알고 있지 않는 경우에는 SSS를 사용하지 마십시오. 대부분의 시나리오에서는 Excel에서 Analysis Services에 연결할 때 기본 옵션인 Windows 인증을 사용하는 것이 가장 좋습니다.  
+     **없음**은 사용하지 않는 것이 좋습니다. Analysis Services에서는 HTTP 액세스용으로 구성된 서버에 연결하지 않는 한 연결 문자열에서 사용자 이름 및 암호를 지정할 수 없습니다. 마찬가지로 SSS 대상 애플리케이션 ID가 Analysis Services 데이터베이스에 대한 사용자 액세스 권한이 있는 Windows 사용자 자격 증명 집합에 매핑되어 있음을 이미 알고 있지 않는 경우에는 SSS를 사용하지 마십시오. 대부분의 시나리오에서는 Excel에서 Analysis Services에 연결할 때 기본 옵션인 Windows 인증을 사용하는 것이 가장 좋습니다.  
   
  자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34019590"
   
 2.  이벤트 선택에서 **Audit Login** 및 **Audit Logout** 이 보안 감사 섹션에서 선택되었는지 확인합니다.  
   
-3.  원격 클라이언트 컴퓨터에서 응용 프로그램 서비스(예:  SharePoint  또는 Reporting  Services)를 통해 Analysis  Services에 연결합니다. Audit Login 이벤트는 Analysis Services에 연결하는 사용자의 ID를 보여 줍니다.  
+3.  원격 클라이언트 컴퓨터에서 애플리케이션 서비스(예: SharePoint 또는 Reporting Services)를 통해 Analysis Services에 연결합니다. Audit Login 이벤트는 Analysis Services에 연결하는 사용자의 ID를 보여 줍니다.  
   
  연결 오류는 흔히 불완전하거나 잘못된 서버 구성으로 추적됩니다. 항상 다음과 같이 서버 구성을 먼저 확인하십시오.  
   

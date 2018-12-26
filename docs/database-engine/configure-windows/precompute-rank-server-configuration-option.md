@@ -24,6 +24,6 @@ ms.locfileid: "47767332"
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구현되지 않습니다. 이는 주요 변경 내용입니다. 현재 이 기능을 사용하는 응용 프로그램을 가능한 한 빨리 수정하십시오.  
+  이 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 구현되지 않습니다. 이는 주요 변경 내용입니다. 현재 이 기능을 사용하는 애플리케이션을 가능한 한 빨리 수정하십시오.  
   
   

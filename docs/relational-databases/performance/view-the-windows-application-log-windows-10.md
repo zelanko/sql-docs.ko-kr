@@ -1,5 +1,5 @@
 ---
-title: Windows 응용 프로그램 로그 보기(Windows) | Microsoft Docs
+title: Windows 애플리케이션 로그 보기(Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709781"
 ---
-# <a name="view-the-windows-application-log-windows-10"></a>Windows 응용 프로그램 로그 보기(Windows 10)
+# <a name="view-the-windows-application-log-windows-10"></a>Windows 애플리케이션 로그 보기(Windows 10)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Windows 응용 프로그램 로그를 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션에서는 해당 로그에 새 이벤트를 씁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 때마다 새 응용 프로그램 로그가 생성되지는 않습니다.  
+  Windows 애플리케이션 로그를 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션에서는 해당 로그에 새 이벤트를 씁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 때마다 새 응용 프로그램 로그가 생성되지는 않습니다.  
   
-## <a name="view-the-windows-application-log"></a>Windows 응용 프로그램 로그 보기  
+## <a name="view-the-windows-application-log"></a>Windows 애플리케이션 로그 보기  
   
 1. **검색 표시줄**에 **이벤트 뷰어**를 입력한 다음 **이벤트 뷰어** 데스크톱 앱을 선택합니다.
   

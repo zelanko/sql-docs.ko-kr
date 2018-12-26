@@ -81,7 +81,7 @@ class Test
    }  
 ```  
   
-### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  이 예에서 제공하는 XML 템플릿(TemplateFile.xml)을 폴더에 저장합니다.  
   

@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9df35b685d9814636acaa194d5cb30741e9b994
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48122763"
@@ -25,7 +25,7 @@ ms.locfileid: "48122763"
   
 -   모델 개체 및 데이터  
   
- 모델 개체만 포함하는 패키지를 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 모델 배포 마법사를 대신 사용할 수 있습니다. 자세한 내용은 [마법사를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)를 참조하세요.  
+ 모델 개체만 포함하는 패키지를 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 모델 배포 마법사를 대신 사용할 수 있습니다. 자세한 내용은 [마법사를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)를 참조하세요.  
 > [!NOTE]  
 > MDSModelDeploy 도구의이 버전 (기가바이트) 메모리 보다 더 사용할 수 없습니다. 만들거나 사용 하 여 큰 모델을 배포할 **개체와 데이터 모델** 옵션을 "Out of Memory" 또는 "Stream을 너무 오래 되었습니다." 오류가 발생할 수 있습니다. MDS 데이터를 배포할 준비를 사용 하 여이 문제를 해결 하려면 또는 MDS 2016 또는 MDSModelDeploy 도구의 업데이트 된 버전을 포함 하는 이후 버전으로 업그레이드 합니다.
 ## <a name="prerequisites"></a>사전 요구 사항  
@@ -77,7 +77,7 @@ ms.locfileid: "48122763"
   
     -   옵션에 대한 도움말을 표시하려면 *과 같이 입력합니다. 여기서* OptionName `MDSModelDeploy help OptionName`은 옵션의 이름입니다.  
   
-4.  (선택 사항) 여러 웹 응용 프로그램이 있는 경우 이 명령을 입력하고 Enter 키를 눌러 배포할 서비스의 이름을 결정합니다.  
+4.  (선택 사항) 여러 웹 애플리케이션이 있는 경우 이 명령을 입력하고 Enter 키를 눌러 배포할 서비스의 이름을 결정합니다.  
   
     ```  
     MDSModelDeploy listservices  

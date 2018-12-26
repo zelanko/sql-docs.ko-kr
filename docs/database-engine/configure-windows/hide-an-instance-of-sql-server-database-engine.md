@@ -23,7 +23,7 @@ ms.locfileid: "52406190"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 숨기는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스를 열거합니다. 이렇게 하면 클라이언트 응용 프로그램에서 서버를 검색하고 클라이언트가 같은 컴퓨터에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 구분할 수 있습니다. 다음 절차를 통해 SQL Server Browser 서비스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 찾아보기 **단추를 사용하여 인스턴스를 찾으려고 하는 클라이언트 컴퓨터에** 인스턴스를 노출하지 않도록 할 수 있습니다.  
+  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 숨기는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스를 열거합니다. 이렇게 하면 클라이언트 애플리케이션에서 서버를 검색하고 클라이언트가 같은 컴퓨터에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 구분할 수 있습니다. 다음 절차를 통해 SQL Server Browser 서비스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 찾아보기 **단추를 사용하여 인스턴스를 찾으려고 하는 클라이언트 컴퓨터에** 인스턴스를 노출하지 않도록 할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   

@@ -23,7 +23,7 @@ ms.locfileid: "52641274"
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 응용 프로그램을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
+ALTER TABLE 문을 사용하여 메모리 최적화 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 애플리케이션을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
 
 > [!IMPORTANT]
 > Azure SQL Database Managed Instance는 범용 서비스 계층에서 메모리 최적화 테이블을 지원하지 않습니다.

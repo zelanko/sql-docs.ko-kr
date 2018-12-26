@@ -15,7 +15,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077823"
@@ -133,7 +133,7 @@ ms.locfileid: "48077823"
   
 -   **인쇄.**  보고서 구독자는 보고서가 표시된 방식에 따라 보고서 또는 보고서 페이지를 인쇄할 수 있습니다. 자세한 내용은 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 응용 프로그램 또는 Windows Form 응용 프로그램을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](http://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
+-   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 애플리케이션 또는 Windows Form 애플리케이션을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](http://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
   
 ## <a name="manage-reports"></a>보고서 관리  
  게시된 보고서를 관리하는 방법은 다음과 같습니다.  

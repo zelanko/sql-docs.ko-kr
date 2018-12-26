@@ -20,14 +20,14 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47767761"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>설정을 사용하여 데이터 원본 추가 및 수정
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  네트워크 라이브러리, 서버, 데이터베이스 및 기타 특성을 포함할 수 있는 데이터에 대 한 경로 식별 하는 데이터 원본-이 경우 데이터 원본이 Oracle 데이터베이스에 대 한 경로입니다. 데이터 원본에 연결 하려면 드라이버 관리자는 특정 연결 정보에 대 한 Windows 레지스트리를 확인 합니다.  
   

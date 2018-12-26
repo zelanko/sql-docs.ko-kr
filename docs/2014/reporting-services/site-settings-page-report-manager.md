@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48065301"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
-  사이트 설정 페이지를 사용하여 응용 프로그램 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
+  사이트 설정 페이지를 사용하여 애플리케이션 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
   
 > [!NOTE]  
 >  일부 SQL Server 버전에서 보고서 기록, 보고서 실행 및 공유 일정 기능은 지원되지 않습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48065301"
  보고서 처리 시간은 보고서를 선택한 후 보고서가 열리는 데 걸리는 시간입니다. 이 값을 설정할 때는 데이터 처리와 보고서 처리가 모두 완료될 수 있는 시간으로 지정하십시오.  
   
  **사용자 지정 보고서 작성기 시작 URL**  
- 보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 ClickOnce 응용 프로그램으로 시작됩니다. 기본 URL은 다음 중 하나입니다.  
+ 보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 ClickOnce 애플리케이션으로 시작됩니다. 기본 URL은 다음 중 하나입니다.  
   
  **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL 인 http:// 형식을 따릅니다\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
   

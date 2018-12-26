@@ -32,7 +32,7 @@ items:
     href: osql-utility.md
   - name: 프로파일러 유틸리티
     href: profiler-utility.md
-  - name: sqlagent90 응용 프로그램
+  - name: sqlagent90 애플리케이션
     href: sqlagent90-application.md
   - name: sqlcmd Utility
     href: sqlcmd-utility.md
@@ -40,11 +40,11 @@ items:
     href: sqldiag-utility.md
   - name: sqlmaint 유틸리티
     href: sqlmaint-utility.md
-  - name: sqllogship 응용 프로그램
+  - name: sqllogship 애플리케이션
     href: sqllogship-application.md
   - name: sqlps 유틸리티
     href: sqlps-utility.md
-  - name: sqlservr 응용 프로그램
+  - name: sqlservr 애플리케이션
     href: sqlservr-application.md
   - name: tablediff 유틸리티
     href: tablediff-utility.md

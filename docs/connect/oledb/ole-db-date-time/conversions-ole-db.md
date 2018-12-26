@@ -68,7 +68,7 @@ ms.locfileid: "47724961"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [클라이언트에서 서버로 수행되는 변환](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- SQL Server 용 OLE DB 드라이버를 사용하여 작성된 클라이언트 응용 프로그램과 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
+ SQL Server 용 OLE DB 드라이버를 사용하여 작성된 클라이언트 애플리케이션과 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
  [서버에서 클라이언트로 수행되는 변환](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상과 SQL Server 용 OLE DB 드라이버를 사용하여 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  

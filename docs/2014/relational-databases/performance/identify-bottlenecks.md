@@ -24,7 +24,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57f1485ea7c427dd24a6231c8a7fb940135d7ceb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108213"
@@ -59,7 +59,7 @@ ms.locfileid: "48108213"
 |CPU 사용량|CPU 사용량이 장기간 높은 상태로 유지되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 튜닝이나 CPU 업그레이드가 필요할 수 있습니다.|  
 |디스크 I/O(입/출력)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인덱스를 사용하는 등의 방법으로 쿼리를 튜닝하여 불필요한 I/O를 줄일 수 있습니다.|  
 |사용자 연결|너무 많은 사용자가 동시에 서버에 액세스하는 경우 성능이 저하될 수 있습니다.|  
-|차단 잠금|잘못 설계된 응용 프로그램은 잠금을 일으키고 동시성을 제한하여 결과적으로 응답 시간을 길어지고 트랜잭션 처리율이 낮아질 수 있습니다.|  
+|차단 잠금|잘못 설계된 애플리케이션은 잠금을 일으키고 동시성을 제한하여 결과적으로 응답 시간을 길어지고 트랜잭션 처리율이 낮아질 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [CPU 사용량 모니터링](../performance-monitor/monitor-cpu-usage.md)   

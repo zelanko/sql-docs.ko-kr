@@ -24,7 +24,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48199409"
@@ -46,7 +46,7 @@ ms.locfileid: "48199409"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 메모리를 동적으로 사용할 수 있게 하는 것이 좋지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메모리 양을 설정하기 전에 OS 및 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 할당할 수 있는 최대 메모리 양입니다.  
   
 ## <a name="setting-the-memory-options-manually"></a>메모리 옵션 수동 설정  
- **min server memory** 및 **max server memory** 를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 같은 컴퓨터에서 실행 중인 다른 응용 프로그램의 메모리 요구 사항과 관련하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 구성하는 경우 유용합니다.  
+ **min server memory** 및 **max server memory** 를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 같은 컴퓨터에서 실행 중인 다른 애플리케이션의 메모리 요구 사항과 관련하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 구성하는 경우 유용합니다.  
   
  **min server memory** 옵션을 사용하여 SQL Server Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48199409"
   
      기본 설정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다. **최소 서버 메모리** 의 기본 설정은 0이고 **최대 서버 메모리** 의 기본 설정은 2147483647(MB)입니다.  
   
-## <a name="maximize-data-throughput-for-network-applications"></a>네트워크 응용 프로그램을 위해 데이터 처리량 최대화  
+## <a name="maximize-data-throughput-for-network-applications"></a>네트워크 애플리케이션을 위해 데이터 처리량 최대화  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 시스템 메모리 사용을 최대화하려면 시스템에서 파일 캐싱용으로 사용되는 메모리 용량을 제한해야 합니다. 파일 시스템 캐시를 제한하려면 **파일 공유를 위해 데이터 처리량 최대화** 의 선택을 취소합니다. **사용 메모리 최소화** 또는 **균형**을 선택하여 최소 파일 시스템 캐시를 지정할 수 있습니다.  
   
 #### <a name="to-check-the-current-setting-on-your-operating-system"></a>운영 체제의 현재 설정을 확인하려면  
@@ -125,7 +125,7 @@ ms.locfileid: "48199409"
   
 -   **min server memory** 를 사용하여 메모리 사용을 제어합니다. 최소값의 합계가 컴퓨터의 실제 메모리 합계보다 1-2GB 작도록 각 인스턴스의 최소값을 설정합니다. 또한 해당 인스턴스의 예상 부하에 비례하여 이러한 최소값을 설정할 수 있습니다. 이 방법은 모든 인스턴스를 동시에 실행하지 않는 경우 실행 중인 인스턴스에서 남은 여유 메모리를 사용할 수 있다는 장점이 있습니다. 또한 이 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 적절한 양의 메모리가 최소한 할당되도록 하기 때문에 컴퓨터에 메모리를 많이 사용하는 다른 프로세스가 있을 때 유용합니다. 단점은 새 인스턴스나 다른 프로세스 시작 시, 특히 메모리를 해제하기 위해 수정된 페이지를 다시 데이터베이스에 써야 하는 경우 실행 중인 인스턴스가 메모리를 해제하는 데 오랜 시간이 걸린다는 것입니다.  
   
--   아무 작업도 하지 않습니다(권장되지 않음). 작업이 제공되는 첫 번째 인스턴스에서 모든 메모리를 할당합니다. 유휴 인스턴스나 나중에 시작된 인스턴스는 최소의 사용 가능한 메모리만 사용하여 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인스턴스의 메모리 사용을 조절하지 않습니다. 그러나 모든 인스턴스는 Windows 메모리 알림 신호에 응답하여 해당 메모리 사용 공간의 크기를 조절합니다. Windows는 메모리 알림 API가 있는 응용 프로그램에서 메모리 균형을 유지하지 않고 단순히 시스템의 메모리 사용 가능 여부에 대한 전역 피드백만 제공합니다.  
+-   아무 작업도 하지 않습니다(권장되지 않음). 작업이 제공되는 첫 번째 인스턴스에서 모든 메모리를 할당합니다. 유휴 인스턴스나 나중에 시작된 인스턴스는 최소의 사용 가능한 메모리만 사용하여 실행될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인스턴스의 메모리 사용을 조절하지 않습니다. 그러나 모든 인스턴스는 Windows 메모리 알림 신호에 응답하여 해당 메모리 사용 공간의 크기를 조절합니다. Windows는 메모리 알림 API가 있는 애플리케이션에서 메모리 균형을 유지하지 않고 단순히 시스템의 메모리 사용 가능 여부에 대한 전역 피드백만 제공합니다.  
   
  인스턴스를 다시 시작하지 않고 이러한 설정을 변경할 수 있으므로 사용 패턴에 가장 맞는 설정을 쉽게 찾을 수 있습니다.  
   

@@ -43,7 +43,7 @@ public class SQLServerXADataSource
   
  SQLServerXAConnection 개체는 분산 트랜잭션에 참여할 수 있는 풀링된 연결입니다. SQLServerXAConnection 메서드를 추가 하 여 SQLServerPooledConnection 인터페이스를 확장 하는 보다 정확 하 게 [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)합니다. 이 메서드는 트랜잭션 관리자가 이 연결에서 수행되는 작업을 분산 트랜잭션의 다른 참가자와 함께 조정하는 데 사용할 수 있는 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체를 생성합니다. SQLServerPooledConnection 인터페이스를 확장 하므로 해당 SQLServerXAConnection 개체 SQLServerPooledConnection 개체의 모든 메서드를 지원 합니다. 이러한 개체는 기본 데이터 원본에 대한 재사용 가능한 실제 연결이며, JDBC 응용 프로그램에 다시 전달할 수 있는 논리적 연결 핸들을 생성합니다.  
   
- SQLServerXAConnection 개체 SQLServerXADataSource 개체에 의해 생성 됩니다. SQLServerConnectionPoolDataSource 개체 및 SQLServerXADataSource 개체는는 둘 다 JDBC 응용 프로그램에 표시 되는 데이터 원본 계층 아래 구현 되므로 서로 비슷합니다. 이 아키텍처를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 응용 프로그램에 투명한 방식으로 분산 트랜잭션을 지원합니다. SQLServerXADataSource는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] DTC(Distributed Transaction Coordinator)와 통합되어 진정한 분산 트랜잭션 처리를 제공하도록 구성할 수 있습니다.  
+ SQLServerXAConnection 개체 SQLServerXADataSource 개체에 의해 생성 됩니다. SQLServerConnectionPoolDataSource 개체 및 SQLServerXADataSource 개체는는 둘 다 JDBC 응용 프로그램에 표시 되는 데이터 원본 계층 아래 구현 되므로 서로 비슷합니다. 이 아키텍처를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 애플리케이션에 투명한 방식으로 분산 트랜잭션을 지원합니다. SQLServerXADataSource는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] DTC(Distributed Transaction Coordinator)와 통합되어 진정한 분산 트랜잭션 처리를 제공하도록 구성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXADataSource 멤버](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   

@@ -67,7 +67,7 @@ Access 파일의 경로와 파일 이름을 지정합니다. 예를 들어 로�
 데이터 원본 목록에 Access가 표시되지 않는 경우 64비트 마법사를 실행하고 있나요? Excel 및 Access 공급자는 일반적으로 32비트이므로 64비트 마법사에는 표시되지 않습니다. 이 경우 32비트 마법사를 대신 실행합니다.
 
 > [!NOTE]
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 ## <a name="officeDownloads"></a> Access에 연결하는 데 필요한 파일 가져오기  
 Excel 및 Access를 포함하여 Microsoft Office 데이터 원본용 연결 구성 요소가 아직 설치되지 않은 경우 해당 구성 요소를 다운로드해야 할 수 있습니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 구성 요소](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Access 및 Excel 파일용 연결 구성 요소를 다운로드합니다.

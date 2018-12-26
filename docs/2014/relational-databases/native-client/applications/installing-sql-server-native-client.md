@@ -23,7 +23,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d2d63945b2dd2268f6c8f9447a4e1c2a641f451
 ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/10/2018
 ms.locfileid: "49071783"
@@ -60,7 +60,7 @@ ms.locfileid: "49071783"
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
- APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsoft 설치 관리자를 사용하여 응용 프로그램 설치 프로그램 번들을 작성할 때 만들어야 합니다.  
+ APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsoft 설치 관리자를 사용하여 애플리케이션 설치 프로그램 번들을 작성할 때 만들어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 사용 하 여 응용 프로그램 빌드](installing-sql-server-native-client.md)   

@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48181269"
@@ -181,18 +181,18 @@ ms.locfileid: "48181269"
 5.  이전 단계를 반복하여 두 번째 웹 프런트 엔드 서버의 URL을 추가합니다.  
   
 ##  <a name="activatePP"></a> 사이트 모음에 대해 PowerPivot 기능 통합 활성화  
- 사이트 컬렉션 수준에서 기능을 활성화하면 사이트에서 응용 프로그램 페이지 및 템플릿을 사용할 수 있습니다. 여기에는 예약된 데이터 새로 고침에 대한 구성 페이지와 PowerPivot 갤러리 및 데이터 피드 라이브러리에 대한 응용 프로그램 페이지가 포함됩니다.  
+ 사이트 컬렉션 수준에서 기능을 활성화하면 사이트에서 애플리케이션 페이지 및 템플릿을 사용할 수 있습니다. 여기에는 예약된 데이터 새로 고침에 대한 구성 페이지와 PowerPivot 갤러리 및 데이터 피드 라이브러리에 대한 애플리케이션 페이지가 포함됩니다.  
   
  PowerPivot 구성 도구가 지정한 사이트 컬렉션에 대한 기능 통합을 활성화합니다. 도구를 여러 번 실행하여 추가 사이트 컬렉션을 선택할 수 있습니다. 또한 사이트 관리자가 SharePoint 내에서 기능 활성화를 구성할 수 있습니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
   
 ##  <a name="verify"></a> 통합 및 서버 가용성 확인  
- 사용자 또는 응용 프로그램이 PowerPivot 데이터를 포함하는 Excel 통합 문서를 열면 팜에서 PowerPivot 쿼리 처리가 수행됩니다. 최소한 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
+ 사용자 또는 애플리케이션이 PowerPivot 데이터를 포함하는 Excel 통합 문서를 열면 팜에서 PowerPivot 쿼리 처리가 수행됩니다. 최소한 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
   
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 응용 프로그램을 브라우저에서 엽니다. 기본값을 사용 하는 경우 http://를 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에서입니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 http://를 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에서입니다.  
   
-2.  PowerPivot 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
+2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
     1.  사이트 작업에서 **기타 옵션...** 을 클릭합니다.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "48181269"
  디스크로 캐시되는 PowerPivot 데이터 파일에 사용할 디스크 공간의 상한을 설정할 수 있습니다. 기본적으로 사용 가능한 모든 디스크 공간을 사용하도록 설정되어 있습니다. 디스크 공간 사용을 제한 하는 방법에 지침은 [디스크 공간 사용 구성 &#40;SharePoint 용 PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)합니다.  
   
 ####  <a name="Upload"></a> SharePoint 웹 응용 프로그램의 최대 파일 업로드 크기 높이기  
- PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 업로드 크기를 늘려야 할 수 있습니다. 웹 응용 프로그램에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 응용 프로그램에서 같은 값으로 설정해야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성 &#40;SharePoint 용 PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.  
+ PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 업로드 크기를 늘려야 할 수 있습니다. 웹 애플리케이션에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성 &#40;SharePoint 용 PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>통합 문서 사용자에게 SharePoint 사용 권한 부여  
  통합 문서를 게시하거나 보려는 사용자에게는 SharePoint 사용 권한이 필요합니다. 부여 해야 **뷰** 게시 된 통합 문서를 보고 해야 하는 사용자에 게 사용 권한 및 **참가** 게시 또는 통합 문서를 관리 하는 사용자에 게 사용 권한. 사용 권한을 부여하려면 사이트 컬렉션 관리자여야 합니다.  
@@ -248,7 +248,7 @@ ms.locfileid: "48181269"
   
 8.  리본 메뉴에서 클릭 **권한 부여**합니다.  
   
-9. 문서 보기 권한이 있어야 하는 Windows 도메인 사용자 또는 그룹 계정을 입력합니다. 앞서 수행한 단계와 마찬가지로 응용 프로그램이 기본 인증용으로 구성된 경우에는 전자 메일 주소 또는 메일 그룹을 사용하지 마십시오.  
+9. 문서 보기 권한이 있어야 하는 Windows 도메인 사용자 또는 그룹 계정을 입력합니다. 앞서 수행한 단계와 마찬가지로 애플리케이션이 기본 인증용으로 구성된 경우에는 전자 메일 주소 또는 메일 그룹을 사용하지 마십시오.  
   
 10. **확인**을 클릭합니다.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "48181269"
  PowerPivot 갤러리는 SharePoint 사이트에서 PowerPivot 통합 문서를 보는 데 사용되는 미리 보기 및 프레젠테이션 옵션을 포함하는 라이브러리입니다. 해당 미리 보기 기능을 사용하려면 PowerPivot 갤러리를 사용하여 PowerPivot 통합 문서를 게시하고 보는 것이 좋습니다. 또한 같은 SharePoint 서버에 Reporting Services도 배포하는 경우 PowerPivot 갤러리를 사용하여 보고서를 쉽게 만들 수 있습니다. PowerPivot 갤러리에서 보고서 작성기를 시작하여 게시된 PowerPivot 통합 문서를 기반으로 새 보고서를 만들 수 있습니다. 만들기 및 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [만들기 및 사용자 지정 PowerPivot 갤러리](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) 하 고 [사용 하 여 PowerPivot 갤러리](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)합니다.  
   
 #### <a name="tune-configuration-settings"></a>구성 설정 조정  
- PowerPivot 서비스 응용 프로그램은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 응용 프로그램에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요 [중앙 관리에서 PowerPivot 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
+ PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요 [중앙 관리에서 PowerPivot 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)   

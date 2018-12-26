@@ -19,7 +19,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48138123"
@@ -29,7 +29,7 @@ ms.locfileid: "48138123"
   
  반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터는 추적하는 동안 발생하는 오버헤드를 최소화합니다. 필터는 포커스가 있는 데이터를 반환하므로 성능 분석과 감사를 편리하게 해 줍니다.  
   
- 추적 내에 캡처된 이벤트 데이터를 필터링하려면 관련된 데이터만 추적에서 반환하는 추적 이벤트 조건을 선택합니다. 예를 들어 추적에서 특정 응용 프로그램 작업에 대한 모니터링을 포함하거나 제외하도록 할 수 있습니다.  
+ 추적 내에 캡처된 이벤트 데이터를 필터링하려면 관련된 데이터만 추적에서 반환하는 추적 이벤트 조건을 선택합니다. 예를 들어 추적에서 특정 애플리케이션 작업에 대한 모니터링을 포함하거나 제외하도록 할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 추적을 생성할 때 기본적으로 자체 작업을 필터링합니다.  

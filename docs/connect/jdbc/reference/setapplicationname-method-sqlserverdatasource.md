@@ -18,7 +18,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54fadc7402489ce4811347d252c061bb2d42e713
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47721487"
@@ -38,10 +38,10 @@ public void setApplicationName(java.lang.String applicationName)
 #### <a name="parameters"></a>매개 변수  
  *applicationName*  
   
- 응용 프로그램 이름이 포함된 **문자열**입니다.  
+ 애플리케이션 이름이 포함된 **문자열**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 응용 프로그램 이름은 다양한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로파일링 및 로깅 도구에서 특정 응용 프로그램을 식별하는 데 사용됩니다. 응용 프로그램 이름이 설정되어 있지 않으면 getApplicationName 메서드는 지역화되지 않은 문자열인 “[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]”를 반환합니다.  
+ 애플리케이션 이름은 다양한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로파일링 및 로깅 도구에서 특정 애플리케이션을 식별하는 데 사용됩니다. 애플리케이션 이름이 설정되어 있지 않으면 getApplicationName 메서드는 지역화되지 않은 문자열인 “[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]”를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

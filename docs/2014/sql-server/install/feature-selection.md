@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cedec01a7e8c7da94f75c00e377a2c965bd58c7d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48087413"
@@ -57,7 +57,7 @@ ms.locfileid: "48087413"
 |-------------|-----------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 서버 기반 응용 프로그램을 만들기, 관리 및 전자 메일, 여러 파일 형식 및 대화형 웹 기반 구성에 보고서를 제공 합니다. SharePoint 모드에서는 보고서 보기 및 보고서 관리 환경을 SharePoint 제품과 통합합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)를 참조하세요.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에서 SharePoint 제품을 사용 하 여 통합을 관리 및 사용자 인터페이스 구성 요소를 포함 하는 SharePoint 제품을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 보고서 서버. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.|  
-|Data Quality 클라이언트|Data Quality 클라이언트는 DQS 서버에 연결하는 독립 실행형 응용 프로그램으로, 데이터 정리 및 데이터 일치 작업을 수행하고 DQS에서 관리 태스크를 수행하기 위한 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
+|Data Quality 클라이언트|Data Quality 클라이언트는 DQS 서버에 연결하는 독립 실행형 애플리케이션으로, 데이터 정리 및 데이터 일치 작업을 수행하고 DQS에서 관리 태스크를 수행하기 위한 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
 |클라이언트 도구 연결|클라이언트 도구에는 DB-Library, OLAP용 OLEDB, ODBC, ADODB 및 ADOMD+용 네트워크 라이브러리를 비롯한 클라이언트와 서버 간 통신용 구성 요소가 포함됩니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 이동, 복사 및 변환을 위한 그래픽 도구 및 프로그래밍 가능 개체 집합입니다.|  
 |클라이언트 도구 이전 버전과의 호환성|클라이언트 도구 이전 버전과의 호환성에는 다음과 같은 구성 요소가 포함됩니다.<br /><br /> SQL-DMO(SQL Distributed Management Objects). 자세한 내용은 [SQL Server 2014에서 지원되지 않는 SQL Server 기능](../../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)을 참조하세요.<br /><br /> DSO(의사 결정 지원 개체). 자세한 내용은 [SQL Server 2014에서 Analysis Services 기능의 주요 변경](../../../2014/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2014.md)을 참조하세요.|  
@@ -66,7 +66,7 @@ ms.locfileid: "48087413"
 |관리 도구 -  기본|**관리 도구 - 기본:** 다음 항목이 포함됩니다.<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 대 한 지원 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 **sqlcmd** 유틸리티인 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자<br /><br /> **관리 도구 - 전체:** 여기에는 기본 버전의 구성 요소 이외에 다음 구성 요소가 추가로 포함됩니다.<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 지원<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> Database Engine Tuning Advisor<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 관리|  
 |Distributed Replay Controller|Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하세요.|  
 |Distributed Replay Client|여러 Distributed Replay Client가 함께 작동하여 SQL Server 인스턴스에 대해 작업을 시뮬레이션합니다. 각 Distributed Replay 환경에 하나 이상의 클라이언트가 있을 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하세요.|  
-|SQL  클라이언트 연결 SDK|데이터베이스 응용 프로그램 개발을 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(ODBC/OLE DB) SDK를 포함합니다.|  
+|SQL  클라이언트 연결 SDK|데이터베이스 애플리케이션 개발을 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(ODBC/OLE DB) SDK를 포함합니다.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 정확도 향상과 감사를 위해 조직 전체에 분산된 개별 시스템의 데이터를 하나의 마스터 데이터 원본으로 통합하는 플랫폼입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 옵션은 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], 어셈블리, Windows PowerShell 스냅인, 웹 응용 프로그램과 서비스의 폴더 및 파일을 설치합니다.|  
   
  기본적으로 공유 구성 요소는 %Program Files%Microsoft SQL Server\\에 설치됩니다. 설치 경로를 변경하려면 **찾아보기** 단추를 클릭하십시오. 한 공유 구성 요소의 설치 경로를 변경하면 다른 공유 구성 요소의 설치 경로도 변경됩니다. 후속 설치의 경우 원본 설치와 동일한 위치에 공유 구성 요소가 설치됩니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "48087413"
   
 -   설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 변경합니다.  
   
--   다른 파일 또는 응용 프로그램을 이동하여 지정된 드라이브의 빈 공간을 늘립니다.  
+-   다른 파일 또는 애플리케이션을 이동하여 지정된 드라이브의 빈 공간을 늘립니다.  
   
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스 설치  
  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스 및 예제 코드 설치에 대 한 자세한 내용은 참조는 [Microsoft SQL Server 커뮤니티 프로젝트 및 샘플](http://go.microsoft.com/fwlink/?LinkId=87843) (http://go.microsoft.com/fwlink/?LinkId=87843)합니다.  

@@ -22,7 +22,7 @@ ms.locfileid: "47691001"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
  ODBC Driver for Oracle 사용자 가이드를 통해 액세스할 수 있는 설치 도움말을 보완 하기 위해 것은 [ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  
   

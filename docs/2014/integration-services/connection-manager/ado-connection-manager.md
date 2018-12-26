@@ -17,13 +17,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3d5f03c184e8df929b29f1e79970024af59ac096
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48054561"
 ---
 # <a name="ado-connection-manager"></a>ADO 연결 관리자
-  ADO 연결 관리자를 사용하면 패키지에서 레코드 집합과 같은 ADO(ActiveX Data Objects) 개체에 연결할 수 있습니다. 이 연결 관리자는 일반적으로 Microsoft Visual Basic 6.0과 같은 초기 버전의 언어로 작성된 사용자 지정 태스크나 데이터 원본에 연결하기 위해 ADO를 사용하는 기존 응용 프로그램의 일부인 사용자 지정 태스크에서 사용됩니다.  
+  ADO 연결 관리자를 사용하면 패키지에서 레코드 집합과 같은 ADO(ActiveX Data Objects) 개체에 연결할 수 있습니다. 이 연결 관리자는 일반적으로 Microsoft Visual Basic 6.0과 같은 초기 버전의 언어로 작성된 사용자 지정 태스크나 데이터 원본에 연결하기 위해 ADO를 사용하는 기존 애플리케이션의 일부인 사용자 지정 태스크에서 사용됩니다.  
   
  패키지에 ADO 연결 관리자를 추가 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 런타임 시 ADO 연결으로 확인 되, 연결 관리자 속성을 설정 합니다 연결관리자를추가하는관리자를만들고`Connections` 패키지의 컬렉션입니다. 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `ADO`합니다.  
   

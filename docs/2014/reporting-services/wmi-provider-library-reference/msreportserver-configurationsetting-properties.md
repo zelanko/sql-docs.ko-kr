@@ -55,8 +55,8 @@ ms.locfileid: "48080823"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|RSReportServer.config 파일에서 SMTP 서버 속성을 가져옵니다. 읽기 전용입니다.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 로그인 사용자 계정을 지정합니다. 읽기 전용입니다.|  
 |[버전](configurationsetting-property-version.md)|보고서 서버의 버전을 반환합니다.|  
-|[VirtualDirectoryReportManager 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|보고서 관리자 응용 프로그램의 가상 디렉터리를 반환합니다.|  
-|[VirtualDirectoryReportServer 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|보고서 서버 웹 서비스 응용 프로그램의 가상 디렉터리를 반환합니다.|  
+|[VirtualDirectoryReportManager 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다.|  
+|[VirtualDirectoryReportServer 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|보고서 서버 웹 서비스 애플리케이션의 가상 디렉터리를 반환합니다.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|보고서 서버 Windows 서비스가 실제로 실행되고 있는 ID를 반환합니다. 읽기 전용입니다.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|보고서 서버 Windows 서비스를 실행하도록 마지막으로 구성된 ID를 반환합니다. 읽기 전용입니다.|  
   

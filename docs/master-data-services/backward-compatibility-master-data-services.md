@@ -23,7 +23,7 @@ ms.locfileid: "47739657"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 섹션에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 Integration Services 기능을 비롯한 기존 응용 프로그램의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  
+  이 섹션에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 Integration Services 기능을 비롯한 기존 애플리케이션의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

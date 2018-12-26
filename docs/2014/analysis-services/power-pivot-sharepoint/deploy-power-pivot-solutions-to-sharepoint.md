@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48145103"
@@ -70,7 +70,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     ```  
   
 ##  <a name="deployCA"></a> 2 단계: 중앙 관리에 PowerPivot 웹 응용 프로그램 솔루션 배포  
- 팜 솔루션을 배포한 후 중앙 관리에 웹 응용 프로그램 솔루션을 배포해야 합니다. 이 단계에서는 중앙 관리에 PowerPivot 관리 대시보드를 추가합니다.  
+ 팜 솔루션을 배포한 후 중앙 관리에 웹 애플리케이션 솔루션을 배포해야 합니다. 이 단계에서는 중앙 관리에 PowerPivot 관리 대시보드를 추가합니다.  
   
 1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint  2010  관리 셸을 엽니다.  
   
@@ -88,16 +88,16 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
      이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
   
-4.  다음 cmdlet을 실행하여 중앙 관리에 웹 응용 프로그램 솔루션을 설치합니다.  
+4.  다음 cmdlet을 실행하여 중앙 관리에 웹 애플리케이션 솔루션을 설치합니다.  
   
     ```  
     Install-SPSolution -Identity PowerPivotWebApp.wsp -GACDeployment -Force -WebApplication $centralAdmin  
     ```  
   
- 이제 중앙 관리에 웹 응용 프로그램 솔루션이 배포되었으므로 중앙 관리를 사용하여 모든 나머지 구성 단계를 완료할 수 있습니다.  
+ 이제 중앙 관리에 웹 애플리케이션 솔루션이 배포되었으므로 중앙 관리를 사용하여 모든 나머지 구성 단계를 완료할 수 있습니다.  
   
 ##  <a name="deployUI"></a> 3 단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포  
- 앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 PowerPivot 데이터 액세스를 지원하는 각각의 기존 웹 응용 프로그램에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 응용 프로그램을 더 많이 추가하는 경우 추가 웹 응용 프로그램에 대해 이 단계를 반복해야 합니다.  
+ 앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 PowerPivot 데이터 액세스를 지원하는 각각의 기존 웹 응용 프로그램에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 애플리케이션을 더 많이 추가하는 경우 추가 웹 애플리케이션에 대해 이 단계를 반복해야 합니다.  
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
   
@@ -109,7 +109,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 5.  **확인**을 클릭합니다.  
   
-6.  PowerPivot 데이터 액세스를 지원할 다른 SharePoint 웹 응용 프로그램에 대해서도 반복합니다.  
+6.  PowerPivot 데이터 액세스를 지원할 다른 SharePoint 웹 애플리케이션에 대해서도 반복합니다.  
   
 ##  <a name="retract"></a> 솔루션 다시 배포 또는 취소  
  SharePoint 중앙 관리에서 솔루션 취소 기능을 제공하기는 하지만 설치 또는 패치 배포 문제를 체계적으로 해결하는 경우가 아니면 powerpivotwebapp.wsp 파일을 취소할 필요가 없습니다.  
@@ -137,11 +137,11 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 -   팜 솔루션은 전역적으로 사용됩니다. 이 솔루션은 한 번 배포되고 나면 나중에 팜에 추가하는 모든 새 SharePoint용 PowerPivot 서버에서 자동으로 사용할 수 있습니다.  
   
--   웹 응용 프로그램 솔루션은 응용 프로그램별로 적용되므로 중앙 관리 웹 응용 프로그램을 비롯한 팜의 각 웹 응용 프로그램에 배포되어야 합니다.  
+-   웹 애플리케이션 솔루션은 애플리케이션별로 적용되므로 중앙 관리 웹 애플리케이션을 비롯한 팜의 각 웹 애플리케이션에 배포되어야 합니다.  
   
  각 솔루션은 다른 방식으로 배포됩니다.  팜 솔루션은 첫 번째 SharePoint용 PowerPivot 인스턴스가 설치된 후 한 번 배포됩니다. 팜 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용합니다.  
   
- 웹 응용 프로그램 솔루션은 처음 중앙 관리에 배포된 다음 PowerPivot 데이터에 대한 요청을 지원하는 모든 추가 웹 응용 프로그램에 배포됩니다. 중앙 관리에 웹 응용 프로그램 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용해야 합니다. 다른 모든 웹 응용 프로그램의 경우 중앙 관리 또는 PowerShell을 사용하여 수동으로 웹 응용 프로그램 솔루션을 배포할 수 있습니다.  
+ 웹 응용 프로그램 솔루션은 처음 중앙 관리에 배포된 다음 PowerPivot 데이터에 대한 요청을 지원하는 모든 추가 웹 응용 프로그램에 배포됩니다. 중앙 관리에 웹 응용 프로그램 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용해야 합니다. 다른 모든 웹 애플리케이션의 경우 중앙 관리 또는 PowerShell을 사용하여 수동으로 웹 애플리케이션 솔루션을 배포할 수 있습니다.  
   
 |해결 방법|Description|  
 |--------------|-----------------|  

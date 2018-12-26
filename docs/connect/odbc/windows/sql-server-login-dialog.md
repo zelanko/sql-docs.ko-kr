@@ -89,7 +89,7 @@ SQL Server 시스템 메시지에 사용할 국가별 언어를 지정합니다.
 
 ### <a name="application-name"></a>Application Name
 
-(선택 사항) **sys.sysprocesses**에서 이 연결에 대한 행의 **program_name** 열에 저장할 응용 프로그램 이름을 지정합니다.
+(선택 사항) **sys.sysprocesses**에서 이 연결에 대한 행의 **program_name** 열에 저장할 애플리케이션 이름을 지정합니다.
 
 ### <a name="workstation-id"></a>워크스테이션 ID
 

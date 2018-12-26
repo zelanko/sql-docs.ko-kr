@@ -27,21 +27,21 @@ ms.locfileid: "47757607"
 
   **웹 구성** 페이지를 사용하여 웹 사이트 및 웹 응용 프로그램을 구성합니다. 또한 Data Quality Services도 사용할 수 있습니다.  
   
-## <a name="configure-the-web-application"></a>웹 응용 프로그램 구성  
+## <a name="configure-the-web-application"></a>웹 애플리케이션 구성  
   
 |컨트롤 이름|설명|  
 |------------------|-----------------|  
-|**웹 사이트**|새 웹 사이트를 만들거나, 기본 웹 사이트를 선택하거나, 다른 사용 가능한 사이트(목록에 있는 경우)를 선택합니다. 이 목록에는 로컬 컴퓨터의 인터넷 정보 서비스(IIS)에 정의된 웹 사이트가 표시됩니다. 새 웹 사이트를 만들면 새 웹 응용 프로그램이 자동으로 만들어집니다. 기본 또는 다른 기존 사이트를 선택하면 응용 프로그램을 수동으로 만들어야 합니다.|  
-|**웹 응용 프로그램**|구성할 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 선택합니다. 이 상자에는 선택한 웹 사이트의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램만 표시됩니다.<br /><br /> 아무 항목도 표시되지 않으면 **만들기** 를 클릭하여 웹 사이트를 만듭니다.|  
-|**만들기**|**웹 응용 프로그램 만들기** 대화 상자를 열어 선택한 사이트에서 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만듭니다. 이 단추는 선택한 사이트에 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램으로 구성된 루트 웹 응용 프로그램이 없는 경우에만 활성화됩니다.|  
+|**웹 사이트**|새 웹 사이트를 만들거나, 기본 웹 사이트를 선택하거나, 다른 사용 가능한 사이트(목록에 있는 경우)를 선택합니다. 이 목록에는 로컬 컴퓨터의 인터넷 정보 서비스(IIS)에 정의된 웹 사이트가 표시됩니다. 새 웹 사이트를 만들면 새 웹 애플리케이션이 자동으로 만들어집니다. 기본 또는 다른 기존 사이트를 선택하면 애플리케이션을 수동으로 만들어야 합니다.|  
+|**웹 응용 프로그램**|구성할 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 선택합니다. 이 상자에는 선택한 웹 사이트의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션만 표시됩니다.<br /><br /> 아무 항목도 표시되지 않으면 **만들기** 를 클릭하여 웹 사이트를 만듭니다.|  
+|**만들기**|**웹 응용 프로그램 만들기** 대화 상자를 열어 선택한 사이트에서 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만듭니다. 이 단추는 선택한 사이트에 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션으로 구성된 루트 웹 애플리케이션이 없는 경우에만 활성화됩니다.|  
   
-## <a name="associate-application-with-database"></a>응용 프로그램을 데이터베이스에 연결  
+## <a name="associate-application-with-database"></a>애플리케이션을 데이터베이스에 연결  
   
 |컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**Select**|**서버에 연결** 대화 상자를 열어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하고 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램과 연결할 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 데이터베이스를 선택합니다.|  
 |**SQL Server 인스턴스**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 호스팅하는 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스의 이름을 표시합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하고 데이터베이스를 선택할 때까지 비어 있습니다.|  
-|**데이터베이스 백업**|선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램과 연결된 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 데이터베이스의 이름을 표시합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하고 데이터베이스를 선택할 때까지 비어 있습니다.|  
+|**데이터베이스 백업**|선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 애플리케이션과 연결된 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 데이터베이스의 이름을 표시합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하고 데이터베이스를 선택할 때까지 비어 있습니다.|  
   
 ## <a name="enable-dqs-integration"></a>DQS 통합 사용  
   

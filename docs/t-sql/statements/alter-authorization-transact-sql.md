@@ -208,7 +208,7 @@ ALTER AUTHORIZATION ON
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
 -   SQL Server 인증 로그인입니다.  
 -   Azure AD에 있는 페더레이션 사용자(그룹이 아닌)입니다.  
--   Azure AD에 있는 응용 프로그램 또는 관리 사용자(그룹이 아닌)입니다.    
+-   Azure AD에 있는 애플리케이션 또는 관리 사용자(그룹이 아닌)입니다.    
 
 > [!NOTE]  
 > 새 소유자는 Azure Active Directory 사용자인 경우 새 소유자가 새 DBO가 될 데이터베이스에서 사용자로 존재할 수 없습니다. 이러한 Azure AD 사용자는 새 사용자에게 데이터베이스 소유권을 변경하는 ALTER AUTHORIZATION 문을 실행하기 전에 먼저 데이터베이스에서 제거되어야 합니다. SQL Database를 사용하여 Azure Active Directory 사용자 구성에 대한 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 또는 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요.   

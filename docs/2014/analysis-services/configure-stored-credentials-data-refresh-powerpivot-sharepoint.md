@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48149423"
@@ -57,7 +57,7 @@ ms.locfileid: "48149423"
   
 ### <a name="step-1-create-a-target-application"></a>1 단계: 대상 응용 프로그램 만들기  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 2.  클릭 **Secure Store Service**합니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48149423"
   
  이 단계는 연결 문자열에 사용자 이름과 암호가 이미 포함되어 있는 경우에만 수행됩니다. 연결 문자열에 자격 증명을 포함하는 것은 비교적 흔하지 않으므로 이 옵션의 활용 권한은 어느 정도 제한적입니다. 데이터베이스 인증을 사용하여 데이터 원본에 연결하는 경우 연결 문자열에 사용자 ID와 암호만 있는 경우가 대부분입니다. 사용자 ID 및 암호를 포함 하는 경우 확인 하기 위해 연결 문자열을 확인 하는 방법에 대 한 자세한 내용은 "일정을 만들고 외부 데이터에 액세스 하는 권한 부여" 섹션을 참조 하세요. [SharePoint2010을사용하여PowerPivot데이터새로고침](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 2.  클릭 **Secure Store Service**합니다.  
   

@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26f75c135fdc0dcbcc5534a019ff6658d7c9e88e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48089313"
@@ -116,7 +116,7 @@ ms.locfileid: "48089313"
   
 -   관리 데이터 웨어하우스의 데이터를 직접 수정하지 않습니다. 수집한 데이터를 변경하면 수집된 데이터의 타당성이 무효화됩니다.  
   
--   테이블을 직접 사용하는 대신 데이터 수집기와 함께 제공되는 문서화된 저장 프로시저 및 함수를 사용하여 인스턴스 및 응용 프로그램 데이터에 액세스합니다. 테이블 이름과 정의는 변경될 수 있습니다. 이러한 정보는 응용 프로그램을 업데이트할 때 변경되며 후속 릴리스에서 변경될 수 있습니다.  
+-   테이블을 직접 사용하는 대신 데이터 수집기와 함께 제공되는 문서화된 저장 프로시저 및 함수를 사용하여 인스턴스 및 애플리케이션 데이터에 액세스합니다. 테이블 이름과 정의는 변경될 수 있습니다. 이러한 정보는 애플리케이션을 업데이트할 때 변경되며 후속 릴리스에서 변경될 수 있습니다.  
   
 ## <a name="change-history"></a>변경 내역  
   

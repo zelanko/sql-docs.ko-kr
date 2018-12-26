@@ -27,7 +27,7 @@ ms.locfileid: "52515999"
 > [!div class="nextstepaction"]
 > [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-**SQL Server Data Tools**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 응용 프로그램을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
+**SQL Server Data Tools**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 애플리케이션을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
 
 *대부분의 사용자의 경우 SSDT(SQL Server Data Tools)는 Visual Studio를 설치하는 동안 설치됩니다. Visual Studio 설치 관리자를 사용하여 SSDT를 설치하면 기본 SSDT 기능을 추가하므로 AS, IS 및 RS 도구를 가져오기 위해 [SSDT 독립 실행형 설치 관리자](#ssdt-for-vs-2017-standalone-installer)를 여전히 실행해야 합니다.*
 

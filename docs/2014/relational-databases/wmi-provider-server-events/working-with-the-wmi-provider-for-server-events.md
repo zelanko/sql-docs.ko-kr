@@ -24,7 +24,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bd4def614340115bafc6046b4d0ea9d90f647e9e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48060183"
@@ -51,10 +51,10 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  응용 프로그램에서는 공급자가 정의한 WMI 네임스페이스에 연결하여 서버 이벤트용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 전달합니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL인 Sqlwep.dll에 매핑하여 메모리에 로드합니다. 인스턴스마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고유한 WMI 네임 스페이스가 있으며 기본값은: \\ \\.\\ *루트*\Microsoft\SqlServer\ServerEvents\\*instance_name*합니다. *instance_name* 의 기본 설치의 기본값은 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="permissions-and-server-authentication"></a>권한과 서버 인증  
- 서버 이벤트용 WMI 공급자에 액세스하려면 WMI 관리 응용 프로그램이 시작된 클라이언트는 응용 프로그램의 연결 문자열에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 Windows 인증 로그인 또는 그룹과 일치해야 합니다.  
+ 서버 이벤트용 WMI 공급자에 액세스하려면 WMI 관리 애플리케이션이 시작된 클라이언트는 애플리케이션의 연결 문자열에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 Windows 인증 로그인 또는 그룹과 일치해야 합니다.  
   
 ## <a name="permissions-and-event-notification-scope"></a>권한과 이벤트 알림 범위  
- 서버 이벤트용 WMI 공급자는 WQL 쿼리를 대상 데이터베이스의 이벤트 알림으로 변환합니다. 따라서 호출 응용 프로그램은 공급자에 액세스하는 데 필요한 최소 권한뿐만 아니라 데이터베이스에 대한 올바른 권한을 가지고 있어야 필요한 이벤트 알림을 생성할 수 있습니다. 권한은 다음과 같습니다.  
+ 서버 이벤트용 WMI 공급자는 WQL 쿼리를 대상 데이터베이스의 이벤트 알림으로 변환합니다. 따라서 호출 애플리케이션은 공급자에 액세스하는 데 필요한 최소 권한뿐만 아니라 데이터베이스에 대한 올바른 권한을 가지고 있어야 필요한 이벤트 알림을 생성할 수 있습니다. 권한은 다음과 같습니다.  
   
 -   범위가 데이터베이스에 한정되는 이벤트 알림을 생성하려면 최소한 현재 데이터베이스에 대해 CREATE DATABASE DDL EVENT NOTIFICATION 권한이 필요합니다.  
   
@@ -66,7 +66,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  WQL 쿼리의 범위에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)을 참조하십시오.  
   
- 예를 들어 다음과 같은 WQL 쿼리가 포함된 WMI 공급자 응용 프로그램을 생각해 볼 수 있습니다.  
+ 예를 들어 다음과 같은 WQL 쿼리가 포함된 WMI 공급자 애플리케이션을 생각해 볼 수 있습니다.  
   
 ```  
 SELECT * FROM ALTER_TABLE  
@@ -78,7 +78,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  WMI 공급자는 이 쿼리를 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 생성되는 이벤트 알림으로 변환합니다. 이는 호출자가 이러한 이벤트 알림을 생성하는 데 필요한 권한, 즉 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 CREATE DATABASE DDL EVENT NOTIFICATION 권한을 가지고 있어야 함을 의미합니다.  
   
- 범위가 서버 수준에 한정되는 이벤트 알림을 WQL 쿼리에서 지정할 경우(예: SELECT * FROM ALTER_TABLE 쿼리 실행), 호출 응용 프로그램은 서버 수준의 REATE DDL EVENT NOTIFICATION 권한을 가지고 있어야 합니다. 범위가 서버에 한정되는 이벤트 알림은 master 데이터베이스에 저장됩니다. 사용할 수는 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 카탈로그 뷰를 해당 메타 데이터를 참조 하세요.  
+ 범위가 서버 수준에 한정되는 이벤트 알림을 WQL 쿼리에서 지정할 경우(예: SELECT * FROM ALTER_TABLE 쿼리 실행), 호출 애플리케이션은 서버 수준의 REATE DDL EVENT NOTIFICATION 권한을 가지고 있어야 합니다. 범위가 서버에 한정되는 이벤트 알림은 master 데이터베이스에 저장됩니다. 사용할 수는 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 카탈로그 뷰를 해당 메타 데이터를 참조 하세요.  
   
 > [!NOTE]  
 >  WMI 공급자가 생성하는 이벤트 알림의 범위(서버, 데이터베이스 또는 개체)는 궁극적으로 WMI 공급자에서 사용하는 권한 확인 프로세스의 결과에 따라 달라집니다. 이는 공급자를 호출하는 사용자의 권한 집합 및 쿼리 대상 데이터베이스에 대한 확인 결과의 영향을 받습니다.  

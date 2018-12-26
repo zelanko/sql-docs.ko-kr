@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48098853"
@@ -239,7 +239,7 @@ ms.locfileid: "48098853"
  지도에 뉴욕 주에 있는 상점의 위치가 표시됩니다. 각 상점의 표식 유형은 전시 구역에 따라 다릅니다. 이 자습서에는 다섯 개의 전시 구역 범위가 자동으로 계산되어 있습니다.  
   
 ##  <a name="LineLayer"></a> 3. 지도 선 계층을 추가하여 경로 표시  
- 지도 계층 마법사를 사용하여 두 상점 간의 경로를 표시하는 지도 계층을 추가할 수 있습니다. 이 자습서에서는 세 개의 상점 위치를 연결하는 경로를 만듭니다. 비즈니스 응용 프로그램에서 이 경로는 상점 간 최적 경로일 수 있습니다.  
+ 지도 계층 마법사를 사용하여 두 상점 간의 경로를 표시하는 지도 계층을 추가할 수 있습니다. 이 자습서에서는 세 개의 상점 위치를 연결하는 경로를 만듭니다. 비즈니스 애플리케이션에서 이 경로는 상점 간 최적 경로일 수 있습니다.  
   
 #### <a name="to-add-a-line-layer-to-map"></a>선 계층을 지도에 추가하려면  
   

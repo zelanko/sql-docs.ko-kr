@@ -47,7 +47,7 @@ ms.locfileid: "47778311"
  일반적으로 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 개체의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 메서드는 호출할 필요가 없습니다. SMO는 필요한 경우 자동으로 연결을 설정하고 작업을 완료한 후에는 연결을 연결 풀로 해제합니다. <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 메서드를 호출하면 연결이 풀로 해제되지 않습니다. 이 경우 연결을 풀로 해제하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 메서드를 명시적으로 호출해야 합니다. 또는 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 개체의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정하여 풀링되지 않은 연결을 요청할 수 있습니다.  
   
 ## <a name="multithreaded-applications"></a>다중 스레드 응용 프로그램  
- 다중 스레드 응용 프로그램의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
+ 다중 스레드 애플리케이션의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>RMO의 SQL Server 인스턴스 연결  
  RMO(복제 관리 개체)는 SMO와는 약간 다른 방법으로 복제 서버에 연결합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "47778311"
 -   연결을 RMO 프로그래밍 개체에 전달하기 전에 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 메서드를 호출해야 합니다.  
   
 ## <a name="examples"></a>예  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic에서 Windows 인증을 사용하여 SQL Server 로컬 인스턴스에 연결  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로컬 인스턴스에 연결하는 데는 많은 코드가 필요하지 않습니다. 대신 인증 방법 및 서버에 대한 기본 설정이 사용됩니다. 데이터 검색이 필요한 첫 번째 작업에서 연결이 만들어집니다.  

@@ -24,7 +24,7 @@ ms.locfileid: "47718861"
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>새 병합 테이블 아티클을 다운로드 전용으로 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 테이블 아티클을 다운로드 전용으로 지정하는 방법에 대해 설명합니다. 다운로드 전용 아티클은 데이터가 구독자에서 업데이트되지 않는 응용 프로그램용으로 디자인되었습니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 테이블 아티클을 다운로드 전용으로 지정하는 방법에 대해 설명합니다. 다운로드 전용 아티클은 데이터가 구독자에서 업데이트되지 않는 애플리케이션용으로 디자인되었습니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   
  **항목 내용**  
   

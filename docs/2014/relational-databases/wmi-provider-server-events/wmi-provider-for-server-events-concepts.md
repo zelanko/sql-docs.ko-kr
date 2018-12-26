@@ -20,7 +20,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3860d809d6146e4b3e0ed2c491f11ac4ee66c53f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220833"
@@ -42,7 +42,7 @@ ms.locfileid: "48220833"
  WMI 공급자를 사용하여 SQL Server 에이전트 경고를 만드는 데 사용할 추적 이벤트 정보를 반환하는 예를 제공합니다.  
   
  [샘플:.NET Framework에서 WMI 이벤트 공급자 사용](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
- C# 응용 프로그램에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
+ C# 애플리케이션에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
   
  [서버 이벤트용 WMI 공급자 클래스 및 속성](wmi-provider-for-server-events-classes-and-properties.md)  
  공급자의 프로그래밍 모드를 구성하는 이벤트 클래스 및 속성을 소개합니다.  

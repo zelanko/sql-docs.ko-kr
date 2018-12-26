@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48107923"
@@ -21,7 +21,7 @@ ms.locfileid: "48107923"
 # <a name="loading-data-mds-add-in-for-excel"></a>데이터 로드(Excel용 MDS 추가 기능)
   에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 로드 해야 데이터 MDS 저장소에서 활성 Excel 워크시트로 함께 사용할 수 있도록 합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 저장소에 게시합니다.  
   
- 로드할 수 있는 데이터는 액세스할 수 있는 권한이 있는 데이터로 제한됩니다. 데이터 액세스 권한은 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 설정되거나 프로그래밍 방식으로 설정됩니다.  
+ 로드할 수 있는 데이터는 액세스할 수 있는 권한이 있는 데이터로 제한됩니다. 데이터 액세스 권한은 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 설정되거나 프로그래밍 방식으로 설정됩니다.  
   
  많은 데이터를 로드할 때는 로드 시간이 오래 걸릴 수 있는 데이터를 로드할 때 표시되는 경고를 설정할 수 있습니다. 이렇게 하려면 **옵션** 그룹에서 **설정**을 클릭합니다. **데이터** 탭에서 **큰 데이터 집합에 대해 필터 경고 표시**를 선택합니다.  
   

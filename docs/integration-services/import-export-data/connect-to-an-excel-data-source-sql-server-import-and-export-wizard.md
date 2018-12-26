@@ -62,7 +62,7 @@ Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야
 데이터 원본 목록에 Excel이 표시되지 않는 경우 64비트 마법사를 실행하고 있는지 확인합니다. Excel 및 Access 공급자는 일반적으로 32비트이므로 64비트 마법사에는 표시되지 않습니다. 이 경우 32비트 마법사를 대신 실행합니다.
 
 > [!NOTE]
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 ## <a name="see-also"></a>관련 항목:
 [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  

@@ -24,7 +24,7 @@ ms.locfileid: "51558340"
 RDS 1.5 또는 이전 구성 요소를 사용 하 여 클라이언트 컴퓨터에서 RDS 2.0 이상을 구성 요소를 사용 하 여 서버와 호환 되지 않습니다. DCOM을 사용 하 여 기본 프로토콜로 때 이상 RDS 2.0에 대 한 지원이 더욱 효율적으로 전송 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 클라이언트 구성 요소에서 RDS 1.5 또는 이전 버전을 실행 중인 경우에 이전 RDS 지원 (RDS 1.0 이라고 함) 또는 최신 RDS 지원 호출된 RDS (2.0 이상)를 사용 하 여 서버를 설정할 수 있습니다. 다음 레지스트리 항목을 중 하나를 설정 합니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ```console
 [HKEY_CLASSES_ROOT]  

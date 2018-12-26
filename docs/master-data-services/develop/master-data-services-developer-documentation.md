@@ -26,7 +26,7 @@ ms.locfileid: "47812241"
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스에 액세스하는 프로그램 작성. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스는 코드를 통해 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능을 제어하기 위해 개발자가 사용하는 WCF(Windows Communication Foundation) 서비스입니다.  
   
--   기존 응용 프로그램에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능 통합  
+-   기존 애플리케이션에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능 통합  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] UI를 사용하여 수행하기 힘들거나 수행이 불가능한 반복 동작 또는 복잡한 동작을 수행하기 위한 코드 작성  
   
@@ -56,8 +56,8 @@ ms.locfileid: "47812241"
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|모델에서 배포 패키지를 만들고 패키지를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 배포하는 데 사용할 수 있는 클래스를 포함합니다.|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 통해 웹 서버 컴퓨터에 대해 실행되는 웹 서비스 작업을 수신하고 처리하는 클래스를 포함합니다.|  
-|<xref:Microsoft.MasterDataServices.Services.DataContracts>|데이터가 클라이언트 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 통해 웹 서버 컴퓨터로 전달되는 방법을 정의하는 클래스를 포함합니다.|  
-|<xref:Microsoft.MasterDataServices.Services.MessageContracts>|요청 및 응답이 클라이언트 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 통해 웹 서버 컴퓨터로 전달되는 방법을 정의하는 클래스를 포함합니다.|  
+|<xref:Microsoft.MasterDataServices.Services.DataContracts>|데이터가 클라이언트 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 통해 웹 서버 컴퓨터로 전달되는 방법을 정의하는 클래스를 포함합니다.|  
+|<xref:Microsoft.MasterDataServices.Services.MessageContracts>|요청 및 응답이 클라이언트 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 통해 웹 서버 컴퓨터로 전달되는 방법을 정의하는 클래스를 포함합니다.|  
 |<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 통해 호출할 수 있는 작업을 정의하는 인터페이스를 포함합니다.|  
   
   

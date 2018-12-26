@@ -46,7 +46,7 @@ ms.locfileid: "51813516"
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.`https://servername/reportserver/reportdefinition.xsd`  
   
 ##  <a name="bkmk_Creating_RDL"></a> RDL 만들기  
- 개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 응용 프로그램을 작성할 수 있습니다.  
+ 개방형이고 확장 가능한 RDL의 특성 덕분에 XML 스키마를 기반으로 RDL을 생성하는 다양한 도구와 애플리케이션을 작성할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RDL 파일을 빌드하는 여러 도구를 제공합니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   

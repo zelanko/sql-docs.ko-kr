@@ -46,7 +46,7 @@ ms.locfileid: "52617120"
  DQS의 기술 자료 관리에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하세요.  
   
 ##  <a name="Projects"></a> 데이터 품질 프로젝트 개념  
- 데이터 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 데이터 품질 프로젝트를 사용하여 데이터 품질 작업(정리 및 일치)을 수행합니다.  
+ 데이터 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 데이터 품질 프로젝트를 사용하여 데이터 품질 작업(정리 및 일치)을 수행합니다.  
   
  **데이터 정리**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52617120"
  DQS의 데이터 품질 프로젝트에 대한 자세한 내용은 [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)를 참조하세요.  
   
 ##  <a name="Admin"></a> 데이터 품질 관리 개념  
- DQS 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 사용하여 다양한 관리 태스크를 수행할 수 있습니다.  
+ DQS 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하여 다양한 관리 태스크를 수행할 수 있습니다.  
   
  **작업 모니터링**  
   

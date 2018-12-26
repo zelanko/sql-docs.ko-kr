@@ -162,7 +162,7 @@ ms.locfileid: "52520688"
  주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure Key Vault 서비스 내에서 수행되며, 서비스 보안에 의해 보호됩니다.  
   
  **키 URI는 무엇인가요?**  
- Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
+ Azure 주요 자격 증명 모음의 모든 키에는 애플리케이션에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

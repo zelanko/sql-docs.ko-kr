@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73bebade29a91f250f4c49e64d6817e876e1deca
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48108013"
@@ -101,7 +101,7 @@ ms.locfileid: "48108013"
   
 -   **IColumnsInfo**  
   
- 응용 프로그램은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. **IColumnsInfo** 와 **IAccessor** 는 이 행 집합의 데이터에 액세스하기 위해 필요합니다.  
+ 애플리케이션은 구독 데이터베이스에서 생성된 복제된 테이블의 행 집합을 열어야 합니다. **IColumnsInfo** 와 **IAccessor** 는 이 행 집합의 데이터에 액세스하기 위해 필요합니다.  
   
 ### <a name="error-object-interfaces"></a>Error 개체 인터페이스  
  다음 인터페이스를 사용하여 오류를 관리합니다.  

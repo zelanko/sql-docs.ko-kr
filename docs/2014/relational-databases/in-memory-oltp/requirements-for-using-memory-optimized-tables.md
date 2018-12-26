@@ -12,7 +12,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 314f90a482091823efae4430dbdc2d62ad7b34f4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48073913"
@@ -26,7 +26,7 @@ ms.locfileid: "48073913"
   
      데이터베이스에 디스크 기반 테이블이 있는 경우 버퍼 풀 및 해당 테이블에 대한 쿼리 처리에 충분한 메모리를 제공해야 합니다.  
   
-     메모리 내 OLTP 응용 프로그램에 필요한 메모리 양을 알고 있어야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](memory-optimized-tables.md) 을 참조하세요.  
+     메모리 내 OLTP 애플리케이션에 필요한 메모리 양을 알고 있어야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](memory-optimized-tables.md) 을 참조하세요.  
   
 -   지속형 메모리 최적화 테이블 크기의 2배에 해당하는 여유 디스크 공간  
   

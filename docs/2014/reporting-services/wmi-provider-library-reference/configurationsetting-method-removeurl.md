@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48053035"
@@ -38,7 +38,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
 ## <a name="parameters"></a>매개 변수  
  *응용 프로그램*  
- 예약을 제거할 응용 프로그램의 이름입니다.  
+ 예약을 제거할 애플리케이션의 이름입니다.  
   
  *URLString*  
  예약에 대한 URL입니다.  

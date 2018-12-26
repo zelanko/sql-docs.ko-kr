@@ -16,7 +16,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48219383"
@@ -32,7 +32,7 @@ ms.locfileid: "48219383"
  이 설정의 변경 내용을 적용하려면 WOW64 서버를 다시 시작해야 합니다. 다른 서버 유형의 경우에는 서버를 다시 시작하지 않아도 됩니다.  
   
 > [!NOTE]  
->  RECONFIGURE를 실행하고 clr enabled 옵션을 1에서 0으로 변경하면 사용자 어셈블리가 포함된 모든 응용 프로그램 도메인이 즉시 언로드됩니다.  
+>  RECONFIGURE를 실행하고 clr enabled 옵션을 1에서 0으로 변경하면 사용자 어셈블리가 포함된 모든 애플리케이션 도메인이 즉시 언로드됩니다.  
   
 > [!NOTE]  
 >  경량 풀링에서는 CLR(공용 언어 런타임) 실행이 지원되지 않습니다. 두 옵션, 즉 "clr enabled" 또는 "lightweight pooling" 중 하나를 해제합니다. CLR에 의존 하며 파이버 모드에서 제대로 작동 하지 않는 기능에는 `hierarchy` 데이터 형식, 복제 및 정책 기반 관리 합니다.  

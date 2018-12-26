@@ -41,13 +41,13 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  반환되는 오류 메시지에 사용할 로캘입니다.  
   
  *Application[]*  
- [out] 인증서 바인딩이 있는 응용 프로그램입니다.  
+ [out] 인증서 바인딩이 있는 애플리케이션입니다.  
   
  *CertificateHash[]*  
  [out] 인증서에 대한 해시입니다.  
   
  *IPAddress[]*  
- [out] 응용 프로그램의 IP 주소입니다.  
+ [out] 애플리케이션의 IP 주소입니다.  
   
  *Port[]*  
  [out] rsreportserver.config의 바인딩에 저장되는 포트 번호입니다.  

@@ -32,7 +32,7 @@ ms.locfileid: "47730441"
  경우는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> .NET 어셈블리를 참조 하는 개체를 만들어 어셈블리를 등록 해야 합니다는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에 추가 하는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 에 속한 개체를 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic에서 스칼라 사용자 정의 함수 만들기  
  이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다 <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식에서 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]합니다. 사용자 정의 함수가 생성 된 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스. 이 예에서는 날짜 인수를 사용하여 ISO 주 번호를 계산하는 ISOweek라는 사용자 정의 함수를 만듭니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 DATEFIRST 옵션을 1로 설정해야 합니다.  

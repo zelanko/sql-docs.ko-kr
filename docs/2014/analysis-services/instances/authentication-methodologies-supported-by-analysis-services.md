@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077833"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services에서 지원하는 인증 방법
-  클라이언트 응용 프로그램에서 Analysis Services 인스턴스에 연결하려면 Windows 인증(통합)이 필요합니다. 다음 방법 중 하나를 사용하여 Windows 사용자 ID를 제공할 수 있습니다.  
+  클라이언트 애플리케이션에서 Analysis Services 인스턴스에 연결하려면 Windows 인증(통합)이 필요합니다. 다음 방법 중 하나를 사용하여 Windows 사용자 ID를 제공할 수 있습니다.  
   
 -   NTLM  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48077833"
   
  **NTLM**  
   
- `SSPI=Negotiate`를 지정하는 연결의 경우, NTLM은 Kerberos 도메인 컨트롤러를 사용할 수 없을 때 사용되는 백업 인증 하위 시스템입니다. NTLM을 사용하는 경우 요청이 클라이언트에서 서버로의 직접 연결 요청이고, 연결을 요청하는 사람은 해당 리소스에 대한 권한을 갖고 있으며, 클라이언트와 서버 컴퓨터가 같은 도메인에 있는 한 모든 사용자 또는 클라이언트 응용 프로그램은 서버 리소스에 액세스할 수 있습니다.  
+ `SSPI=Negotiate`를 지정하는 연결의 경우, NTLM은 Kerberos 도메인 컨트롤러를 사용할 수 없을 때 사용되는 백업 인증 하위 시스템입니다. NTLM을 사용하는 경우 요청이 클라이언트에서 서버로의 직접 연결 요청이고, 연결을 요청하는 사람은 해당 리소스에 대한 권한을 갖고 있으며, 클라이언트와 서버 컴퓨터가 같은 도메인에 있는 한 모든 사용자 또는 클라이언트 애플리케이션은 서버 리소스에 액세스할 수 있습니다.  
   
  다중 계층 솔루션에서는 NTLM의 단일 홉 제한이 주요 제약 조건일 수 있습니다. 요청을 만드는 사용자 ID는 정확히 하나의 원격 서버에서 가장될 수 있지만 더 이상 이동하지는 않습니다. 현재 작업에 여러 컴퓨터에서 실행 중인 서비스가 필요한 경우, 백 엔드 서버에서 보안 토큰을 다시 사용하여 Kerberos 제한된 위임을 구성해야 합니다. 또는 저장된 자격 증명이나 기본 인증을 사용하여 단일홉 접속에 대한 새 ID 정보에 전달할 수 있습니다.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "48077833"
   
  Kerberos 인증은 Active Directory 도메인에서 Windows 통합 보안의 기준입니다. NTLM과 마찬가지로, 위임을 사용하도록 설정하지 않는 한 Kerberos를 통한 가장은 단일 홉으로 제한됩니다.  
   
- 다중 홉 연결을 지원하는 Kerberos에서는 제한된 위임과 비제한된 위임 모두 가능하지만, 대개의 경우 제한된 위임이 가장 좋은 보안 방식으로 간주됩니다. 제한된 위임을 통해 서비스에서 원격 컴퓨터의 지정된 하위 서비스로 사용자 ID의 보안 토큰을 전달할 수 있습니다. 다중 계층 응용 프로그램의 경우, 중간 계층 응용 프로그램 서버에서 Analysis Services와 같은 백 엔드 데이터베이스로 사용자 ID를 위임하는 것이 일반적인 요구 사항입니다. 예를 들어, 사용자 ID에 따라 서로 다른 데이터를 반환하는 표 형식 또는 다차원 모델에서는 사용자가 자격 증명을 다시 입력하지 않아도 되도록 중간 계층 서비스에서의 ID 위임이 필요합니다. 또는 보안 자격 증명을 기타 다른 방법으로 받습니다.  
+ 다중 홉 연결을 지원하는 Kerberos에서는 제한된 위임과 비제한된 위임 모두 가능하지만, 대개의 경우 제한된 위임이 가장 좋은 보안 방식으로 간주됩니다. 제한된 위임을 통해 서비스에서 원격 컴퓨터의 지정된 하위 서비스로 사용자 ID의 보안 토큰을 전달할 수 있습니다. 다중 계층 애플리케이션의 경우, 중간 계층 애플리케이션 서버에서 Analysis Services와 같은 백 엔드 데이터베이스로 사용자 ID를 위임하는 것이 일반적인 요구 사항입니다. 예를 들어, 사용자 ID에 따라 서로 다른 데이터를 반환하는 표 형식 또는 다차원 모델에서는 사용자가 자격 증명을 다시 입력하지 않아도 되도록 중간 계층 서비스에서의 ID 위임이 필요합니다. 또는 보안 자격 증명을 기타 다른 방법으로 받습니다.  
   
- 요청의 전송 끝점 및 수신 끝점 모두에서 서비스가 위임에 대해 명시적으로 권한이 부여된 Active Directory에서는 제한된 위임에 추가 구성이 필요합니다. 사전에 구성 비용이 들겠지만, 일단 서비스가 구성되면 Active Directory에서 독립적으로 암호 업데이트를 관리합니다. 앞서 설명한 저장된 자격 증명 옵션을 사용하는 경우 응용 프로그램에 저장된 계정 정보를 업데이트할 필요가 없습니다.  
+ 요청의 전송 끝점 및 수신 끝점 모두에서 서비스가 위임에 대해 명시적으로 권한이 부여된 Active Directory에서는 제한된 위임에 추가 구성이 필요합니다. 사전에 구성 비용이 들겠지만, 일단 서비스가 구성되면 Active Directory에서 독립적으로 암호 업데이트를 관리합니다. 앞서 설명한 저장된 자격 증명 옵션을 사용하는 경우 애플리케이션에 저장된 계정 정보를 업데이트할 필요가 없습니다.  
   
  제한된 위임에 대해 Analysis Services를 구성하는 방법에 대한 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)을 참조하십시오.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48077833"
   
  **EffectiveUserName**  
   
- EffectiveUserName은 ID 정보를 Analysis Services에 전달하는 데 사용되는 연결 문자열 속성입니다. SharePoint용 PowerPivot은 이 속성을 사용하여 사용자 작업을 사용 현황 로그에 기록합니다. Excel Services 및 PerformancePoint Services에서는 이 속성을 사용하여 SharePoint의 통합 문서 또는 대시보드에 사용된 데이터를 검색할 수 있습니다. 또한 Analysis Services 인스턴스에서 작업을 수행하는 사용자 지정 응용 프로그램 또는 스크립트에서도 이 속성을 사용할 수 있습니다.  
+ EffectiveUserName은 ID 정보를 Analysis Services에 전달하는 데 사용되는 연결 문자열 속성입니다. SharePoint용 PowerPivot은 이 속성을 사용하여 사용자 작업을 사용 현황 로그에 기록합니다. Excel Services 및 PerformancePoint Services에서는 이 속성을 사용하여 SharePoint의 통합 문서 또는 대시보드에 사용된 데이터를 검색할 수 있습니다. 또한 Analysis Services 인스턴스에서 작업을 수행하는 사용자 지정 애플리케이션 또는 스크립트에서도 이 속성을 사용할 수 있습니다.  
   
  SharePoint에서 EffectiveUserName을 사용하는 방법에 대한 자세한 내용은 [SharePoint Server 2010에서 Analysis Services EffectiveUserName 사용](http://go.microsoft.com/fwlink/?LinkId=311905)을 참조하십시오.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "48077833"
   
  기본 인증은 특정 사용자로 백 엔드 서버에 연결하는 네 번째 방법을 제공합니다. 기본 인증을 사용하여 Windows 사용자 이름 및 암호를 연결 문자열에 전달하고, 전송 중 중요한 정보가 보호되도록 연결 암호화 요구 사항을 추가로 적용합니다. 기본 인증의 중요한 장점 중 하나는 이 인증 요청이 도메인 경계를 넘을 수 있다는 점입니다.  
   
- 익명 인증의 경우 익명 사용자 ID를 특정 Windows 사용자 계정(기본적으로 IUSR_GUEST) 또는 응용 프로그램 풀 ID로 설정할 수 있습니다. 익명 사용자 계정은 Analysis Services 연결에서 사용되며 Analysis Services 인스턴스에서 데이터 액세스 권한을 갖고 있어야 합니다. 이 방법을 사용할 경우 익명 계정에 연결된 사용자 ID만으로 연결하게 됩니다. 응용 프로그램에서 추가 ID 관리를 요구하는 경우, 다른 인증 방법 중 하나를 선택하거나 사용자의 ID 관리 솔루션으로 보완해야 할 수 있습니다.  
+ 익명 인증의 경우 익명 사용자 ID를 특정 Windows 사용자 계정(기본적으로 IUSR_GUEST) 또는 애플리케이션 풀 ID로 설정할 수 있습니다. 익명 사용자 계정은 Analysis Services 연결에서 사용되며 Analysis Services 인스턴스에서 데이터 액세스 권한을 갖고 있어야 합니다. 이 방법을 사용할 경우 익명 계정에 연결된 사용자 ID만으로 연결하게 됩니다. 애플리케이션에서 추가 ID 관리를 요구하는 경우, 다른 인증 방법 중 하나를 선택하거나 사용자의 ID 관리 솔루션으로 보완해야 할 수 있습니다.  
   
  기본 및 익명 인증은 HTTP 액세스에 대해 Analysis Services를 구성해야 사용할 수 있으며, 이때 IIS 및 msmdpump.dll을 사용하여 연결을 설정합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
  **Stored Credentials**  
   
- 대부분의 중간 계층 응용 프로그램 서비스에는 나중에 Analysis Services 또는 SQL Server 관계형 엔진 등 하위 데이터 저장소에서 데이터를 검색하는 데 사용되는 사용자 이름과 암호를 저장하는 기능이 있습니다. 즉, 저장된 자격 증명은 데이터를 가져오는 다섯 번째 방법입니다. 이 방법의 단점은 사용자 이름 및 암호를 최신으로 유지하는 데 필요한 유지 관리 비용, 그리고 연결 시 단일 ID를 사용한다는 점 등입니다. 사용자 솔루션에서 원래 호출자의 ID를 요구하는 경우에는 저장된 자격 증명을 대안으로 이용할 수 없습니다.  
+ 대부분의 중간 계층 애플리케이션 서비스에는 나중에 Analysis Services 또는 SQL Server 관계형 엔진 등 하위 데이터 저장소에서 데이터를 검색하는 데 사용되는 사용자 이름과 암호를 저장하는 기능이 있습니다. 즉, 저장된 자격 증명은 데이터를 가져오는 다섯 번째 방법입니다. 이 방법의 단점은 사용자 이름 및 암호를 최신으로 유지하는 데 필요한 유지 관리 비용, 그리고 연결 시 단일 ID를 사용한다는 점 등입니다. 사용자 솔루션에서 원래 호출자의 ID를 요구하는 경우에는 저장된 자격 증명을 대안으로 이용할 수 없습니다.  
   
  저장된 자격 증명에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [SharePoint Server 2013에서 보안 저장소 서비스와 함께 Excel Services 사용](http://go.microsoft.com/fwlink/?LinkID=309869)을 참조하세요.  
   

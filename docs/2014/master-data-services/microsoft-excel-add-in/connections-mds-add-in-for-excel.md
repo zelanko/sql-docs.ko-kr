@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e03e9a63017db0dc719c8b82a8755c25150ded7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48204833"
@@ -21,7 +21,7 @@ ms.locfileid: "48204833"
 # <a name="connections-mds-add-in-for-excel"></a>연결(Excel용 MDS 추가 기능)
   데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에 다운로드하려면 먼저 연결을 만들어야 합니다. 연결은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스가 연결할 MDS 데이터베이스를 확인하는 방법입니다.  
   
- 연결 문자열은 일반적으로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL입니다(예: http://contoso/mds).  
+ 연결 문자열은 일반적으로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL입니다(예: http://contoso/mds).  
   
  Excel을 시작할 때마다 MDS 저장소에 연결해야 합니다. 이에 대한 유일한 예외는 활성 스프레드시트에 이미 MDS 관리 데이터가 포함된 경우입니다. 이 경우 사용자가 새로 고치거나 시트의 데이터를 게시할 때마다 연결이 자동으로 수행됩니다.  
   

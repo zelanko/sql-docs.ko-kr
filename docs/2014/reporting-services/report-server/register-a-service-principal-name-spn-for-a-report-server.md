@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8778beb7a62fed255d0e3ce754679b2a03b6f163
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48179313"
@@ -41,7 +41,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **SetSPN** 은 Windows Server에서 사용할 수 있습니다. `-s` 인수는 중복이 없는지 확인한 후 SPN을 추가합니다. **참고: -s** 는 Windows Server(Windows Server 2008부터)에서 사용할 수 있습니다.  
   
- `HTTP` 서비스 클래스가입니다. 보고서 서버 웹 서비스는 HTTP.SYS에서 실행됩니다. HTTP용 SPN을 만들면 HTTP.SYS에서 실행되는 같은 컴퓨터에 있는 모든 웹 응용 프로그램(IIS에서 호스팅되는 응용 프로그램 포함)에 도메인 사용자 계정을 기반으로 하는 티켓이 부여됩니다. 이러한 서비스가 다른 계정에서 실행되면 인증 요청이 실패합니다. 이 문제를 방지하려면 같은 계정에서 실행되도록 모든 HTTP 응용 프로그램을 구성하거나 응용 프로그램마다 호스트 헤더를 만든 다음 호스트 헤더별로 SPN을 만드십시오. 호스트 헤더를 구성할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성과 관계없이 DNS를 변경해야 합니다.  
+ `HTTP` 서비스 클래스가입니다. 보고서 서버 웹 서비스는 HTTP.SYS에서 실행됩니다. HTTP용 SPN을 만들면 HTTP.SYS에서 실행되는 같은 컴퓨터에 있는 모든 웹 애플리케이션(IIS에서 호스팅되는 애플리케이션 포함)에 도메인 사용자 계정을 기반으로 하는 티켓이 부여됩니다. 이러한 서비스가 다른 계정에서 실행되면 인증 요청이 실패합니다. 이 문제를 방지하려면 같은 계정에서 실행되도록 모든 HTTP 애플리케이션을 구성하거나 애플리케이션마다 호스트 헤더를 만든 다음 호스트 헤더별로 SPN을 만드십시오. 호스트 헤더를 구성할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성과 관계없이 DNS를 변경해야 합니다.  
   
  \<*computername*>, \<*domainname*> 및 \<*port*>에 지정하는 값은 보고서 서버를 호스트하는 컴퓨터의 고유 네트워크 주소를 식별합니다. 이는 로컬 호스트 이름이거나 FQDN(정규화된 도메인 이름)일 수 있습니다. 도메인이 하나뿐이고 포트 80을 사용하는 경우 명령줄에서 \<*domainname*> 및 \<*port*>를 생략할 수 있습니다. \<*domain-user-account*>는 보고서 서버 서비스를 실행하는 데 사용되며 SPN을 등록해야 하는 사용자 계정입니다.  
   

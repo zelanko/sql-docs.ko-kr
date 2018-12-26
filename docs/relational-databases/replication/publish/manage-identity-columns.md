@@ -46,7 +46,7 @@ ms.locfileid: "47673511"
   
 -   둘 이상의 게시에 테이블을 게시하는 경우 두 게시에 대해 동일한 ID 범위 관리 옵션을 지정해야 합니다. 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)에서 "둘 이상의 게시에 테이블 게시"를 참조하세요.  
   
--   여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
+-   여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **아티클 속성 -\<Article>** 대화 상자에 있는 **속성** 탭에서 ID 열 관리 옵션을 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요. 새 게시 마법사에서의 속성 설정은 다음과 같습니다.  

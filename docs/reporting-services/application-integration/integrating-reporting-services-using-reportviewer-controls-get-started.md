@@ -136,7 +136,7 @@ ms.locfileid: "51812247"
 
 ## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>새 Windows Forms 프로젝트에 보고서 뷰어 컨트롤 추가
 
-1. 새 **Windows Forms 응용 프로그램**을 만들거나 기존 프로젝트를 엽니다.
+1. 새 **Windows Forms 애플리케이션**을 만들거나 기존 프로젝트를 엽니다.
 
     ![ssRS-새-winforms-프로젝트-만들기](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 

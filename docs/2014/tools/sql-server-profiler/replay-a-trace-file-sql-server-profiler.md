@@ -16,13 +16,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b0fb207a837407752a6356c452e215980bea24
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48171013"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
-  재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
+  재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 애플리케이션이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 애플리케이션이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
   
  모니터링하려는 다른 이벤트 클래스 외에도 재생 기능을 사용하려면 특정 이벤트 클래스를 캡처해야 합니다. **TSQL_Replay** 추적 템플릿을 사용할 경우 이러한 이벤트는 기본적으로 캡처됩니다. 자세한 내용은 [Replay Requirements](replay-requirements.md)을 참조하세요.  
   

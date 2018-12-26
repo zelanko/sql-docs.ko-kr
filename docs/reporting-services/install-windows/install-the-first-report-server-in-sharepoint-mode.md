@@ -18,7 +18,7 @@ ms.locfileid: "52712314"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  이 항목의 절차에서는 SharePoint 모드로 Reporting Services의 단일 서버를 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다. Reporting Services 서비스 응용 프로그램을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.  
+  이 항목의 절차에서는 SharePoint 모드로 Reporting Services의 단일 서버를 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다. Reporting Services 서비스 애플리케이션을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.  
   
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
@@ -42,9 +42,9 @@ ms.locfileid: "52712314"
   
 |||  
 |-|-|  
-|**(1)**|SQL Server와 함께 설치되는 SharePoint 서비스입니다. 하나 이상의 Reporting Services 서비스 응용 프로그램을 만들 수 있습니다.|  
+|**(1)**|SQL Server와 함께 설치되는 SharePoint 서비스입니다. 하나 이상의 Reporting Services 서비스 애플리케이션을 만들 수 있습니다.|  
 |**(2)**|Reporting Services 추가 기능(SharePoint 제품용)은 SharePoint Server에 사용자 인터페이스 구성 요소를 제공합니다.|  
-|**(3)**|Excel Service 응용 프로그램은 Power View 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 사용됩니다. SharePoint 2016용 단일 서버 배포에서 사용할 수 없습니다. [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) 가 필요합니다.|  
+|**(3)**|Excel Service 애플리케이션은 Power View 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 사용됩니다. SharePoint 2016용 단일 서버 배포에서 사용할 수 없습니다. [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) 가 필요합니다.|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.|  
   
  ![SSRS SharePoint 모드 단일 서버 배포](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 모드 단일 서버 배포")  
@@ -62,7 +62,7 @@ ms.locfileid: "52712314"
   
  **Reporting Services 서비스 응용 프로그램 만들기**  
   
--   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 응용 프로그램을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (https://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
+-   Reporting Services 서비스를 설치하고 등록하여 하나 이상의 Reporting Services 서비스 애플리케이션을 만드세요. "SharePoint 팜 서비스 계정"이 일시적으로 로컬 관리자 그룹의 멤버여야 Reporting Services 서비스 애플리케이션을 만들 수 있습니다. SharePoint 2013 계정 권한에 대한 자세한 내용은 [SharePoint 2013에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863.aspx)을 참조하세요. (https://technet.microsoft.com/library/cc678863.aspx) 또는 SharePoint 2016의 경우 [SharePoint 2016에서의 계정 권한 및 보안 설정](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx)을 참조하세요.)  
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52712314"
  이 단계는 SharePoint 모드의 Reporting Services 보고서 서버 및 SharePoint 제품용 Reporting Services 추가 기능을 설치합니다. 컴퓨터에 이미 설치된 기능에 따라 다음 단계에 설명된 설치 페이지 중 일부가 표시되지 않을 수 있습니다.  
  
  > [!IMPORTANT]
- > SharePoint 2016의 경우 Reporting Services가 설치되는 SharePoint 서버에 **사용자 지정** 서버 역할이 있어야 합니다. Reporting Services는 **사용자 지정** 역할이 없는 SharePoint 서버에 성공적으로 배포되지만, SharePoint 통합 모드에서 Reporting Services는 다른 SharePoint 서버 역할을 지원하지 않으므로 다음번 SharePoint 유지 관리 기간 동안 MinRole이 Reporting Services 서비스를 중지합니다. Reporting Services 서비스 응용 프로그램은 **사용자 지정** 역할만 지원합니다.
+ > SharePoint 2016의 경우 Reporting Services가 설치되는 SharePoint 서버에 **사용자 지정** 서버 역할이 있어야 합니다. Reporting Services는 **사용자 지정** 역할이 없는 SharePoint 서버에 성공적으로 배포되지만, SharePoint 통합 모드에서 Reporting Services는 다른 SharePoint 서버 역할을 지원하지 않으므로 다음번 SharePoint 유지 관리 기간 동안 MinRole이 Reporting Services 서비스를 중지합니다. Reporting Services 서비스 애플리케이션은 **사용자 지정** 역할만 지원합니다.
  
  > [!NOTE]
  > 마찬가지로 SharePoint 2016에서 파워 피벗 서비스를 설치하려는 경우 Reporting Services 설치 전에 먼저 설치합니다. 파워 피벗 서비스는 **사용자 지정** 역할의 SharePoint 서버에만 설치할 수 있습니다.
@@ -153,7 +153,7 @@ ms.locfileid: "52712314"
 12. **Reporting Services 구성** 페이지에서 **설치만** 옵션이 선택된 상태로 표시되어야 합니다. 이 옵션은 보고서 서버 파일을 설치하고 Reporting Services용 SharePoint 환경을 구성하지 않습니다.  
   
     > [!NOTE]
-    > SQL Server 설치가 완료되면 이 항목의 다른 섹션을 따라 SharePoint 환경을 구성합니다. 이 절차에는 Reporting Services 공유 서비스 설치 및 Reporting Services 서비스 응용 프로그램 생성이 포함됩니다.  
+    > SQL Server 설치가 완료되면 이 항목의 다른 섹션을 따라 SharePoint 환경을 구성합니다. 이 절차에는 Reporting Services 공유 서비스 설치 및 Reporting Services 서비스 애플리케이션 생성이 포함됩니다.  
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
@@ -225,40 +225,40 @@ ms.locfileid: "52712314"
     >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨**으로 변경되지 않을 경우 'SharePoint 2013 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 3단계: Reporting Services 서비스 응용 프로그램 만들기  
- 이 섹션에서는 서비스 응용 프로그램을 만드는 단계와 속성에 대한 설명(기존 서비스 응용 프로그램을 검토하려는 경우)을 제공합니다.  
+ 이 섹션에서는 서비스 애플리케이션을 만드는 단계와 속성에 대한 설명(기존 서비스 애플리케이션을 검토하려는 경우)을 제공합니다.  
   
-1.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리**를 선택합니다.  
+1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
   
 2.  SharePoint 리본에서 **새로 만들기** 단추를 선택합니다.  
   
-3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 응용 프로그램**을 선택합니다.  
+3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션**을 선택합니다.  
   
     > [!IMPORTANT]  
     >  Reporting Services 옵션이 목록에 나타나지 않으면 **Reporting Services 공유 서비스가 설치되어 있지 않음을 나타냅니다**. PowerShell cmdlt을 사용하여 Reporting Services 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
-4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 응용 프로그램을 만들 경우 설명이 포함된 이름이나 명명 규칙을 사용하면 관리 및 운영 작업을 구성하는 데 도움이 됩니다.  
+4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 설명이 포함된 이름이나 명명 규칙을 사용하면 관리 및 운영 작업을 구성하는 데 도움이 됩니다.  
   
-5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 응용 프로그램 풀과 서비스 응용 프로그램에 동일한 이름을 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다. 이는 만들려는 서비스 응용 프로그램 수와 단일 응용 프로그램 풀에 여러 서비스 응용 프로그램을 사용해야 하는지 여부의 영향을 받을 수도 있습니다. 응용 프로그램 풀 관리에 대한 권장 사항 및 모범 사례에 대해서는 SharePoint Server 설명서를 참조하세요.  
+5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 애플리케이션 풀과 서비스 애플리케이션에 동일한 이름을 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다. 이는 만들려는 서비스 애플리케이션 수와 단일 애플리케이션 풀에 여러 서비스 애플리케이션을 사용해야 하는지 여부의 영향을 받을 수도 있습니다. 애플리케이션 풀 관리에 대한 권장 사항 및 모범 사례에 대해서는 SharePoint Server 설명서를 참조하세요.  
   
-     응용 프로그램 풀에 대한 보안 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
+     애플리케이션 풀에 대한 보안 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 현재 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
   
-7.  **데이터베이스 이름** 에서 기본값은 `ReportingService_<guid>`이고 고유한 데이터베이스 이름입니다. 새 값을 입력하는 경우 고유한 값을 입력합니다. 이 데이터베이스는 서비스 응용 프로그램용으로 새로 만든 것입니다.  
+7.  **데이터베이스 이름** 에서 기본값은 `ReportingService_<guid>`이고 고유한 데이터베이스 이름입니다. 새 값을 입력하는 경우 고유한 값을 입력합니다. 이 데이터베이스는 서비스 애플리케이션용으로 새로 만든 것입니다.  
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법은 SharePoint 설명서를 참조하세요.  
   
-9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 응용 프로그램을 하나의 웹 응용 프로그램에 연결할 수 있습니다. 모든 현재 웹 응용 프로그램이 이미 Reporting Services 서비스 응용 프로그램에 연결된 경우 경고 메시지가 표시됩니다.  
+9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
   
 10. **확인**을 선택합니다.  
   
-11. 서비스 응용 프로그램 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. Reporting Services 구독 기능 및 데이터 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. Reporting Services 구독 기능 및 데이터 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
  ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") Reporting Services 서비스 응용 프로그램을 만드는 데 PowerShell을 사용하는 방법은 다음을 참조하세요.  
   
 -   다음 섹션인 [1-4단계를 위한 Windows PowerShell 스크립트](#bkmk_full_script)를 참조하세요.  
   
--   항목 [PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만들려면](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
+-   항목 [PowerShell을 사용하여 Reporting Services 서비스 애플리케이션을 만들려면](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 ##  <a name="bkmk_powerview"></a> 4단계: 파워 뷰 사이트 모음 기능 활성화
 
@@ -395,19 +395,19 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  - [다층 계층 SharePoint 2016 팜에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
  
- SharePoint 2016의 경우 Excel Services 응용 프로그램을 만들고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
+ SharePoint 2016의 경우 Excel Services 애플리케이션을 만들고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션.  
   
 -   [Excel Services 데이터 모델 설정(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
-또한, Reporting Services 서비스 응용 프로그램에서 사용하는 응용 프로그램 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다.
+또한, Reporting Services 서비스 애플리케이션에서 사용하는 애플리케이션 풀 보안 계정은 Analysis Services 서버에서 관리자여야 합니다.
   
 ###  <a name="bkmk_provision_agent"></a> 구독 및 경고 프로비전  
- Reporting Services 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 응용 프로그램 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 컴퓨터에 있는 경우와 같이 여러 컴퓨터 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+ Reporting Services 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 애플리케이션 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 컴퓨터에 있는 경우와 같이 여러 컴퓨터 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
-### <a name="configure-e-mail-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 전자 메일 구성  
- Reporting Services 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 Reporting Services 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. Reporting Services 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2013 및 SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)을 참조하세요. 
+### <a name="configure-e-mail-for-ssrs-service-applications"></a>SSRS 서비스 애플리케이션에 대한 전자 메일 구성  
+ Reporting Services 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 Reporting Services 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. Reporting Services 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2013 및 SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)을 참조하세요. 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>콘텐츠 라이브러리에 Reporting Services 콘텐츠 형식 추가  
  Reporting Services는 공유 데이터 원본 파일(.rsds), 보고서 모델 파일(.smdl) 및 보고서 작성기 보고서 정의 파일(.rdl)을 관리하는 데 사용하는 미리 정의된 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  

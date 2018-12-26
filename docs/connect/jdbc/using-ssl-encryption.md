@@ -22,7 +22,7 @@ ms.locfileid: "47771531"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-SSL(Secure Sockets Layer) 암호화는 네트워크를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 클라이언트 응용 프로그램 간에 암호화된 데이터를 전송할 수 있도록 해 줍니다.  
+SSL(Secure Sockets Layer) 암호화는 네트워크를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 클라이언트 애플리케이션 간에 암호화된 데이터를 전송할 수 있도록 해 줍니다.  
   
 SSL(Secure Sockets Layer)은 네트워크를 통한 중요한 정보 가로채기와 다른 인터넷 통신을 방지하기 위한 보안 통신 채널을 설정하는 프로토콜입니다. SSL을 통해 클라이언트와 서버가 서로의 ID를 인증할 수 있습니다. 참가자가 인증된 후 SSL은 안전한 메시지 전송을 위해 참가자 간에 암호화된 연결을 제공합니다.  
   

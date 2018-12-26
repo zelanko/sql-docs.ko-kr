@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47664201"
 ---
-# <a name="unicode-applications"></a>유니코드 응용 프로그램
+# <a name="unicode-applications"></a>유니코드 애플리케이션
 두 가지 방법 중 하나에서 유니코드 응용 프로그램으로 응용 프로그램을 다시 컴파일할 수 있습니다.  
   
 -   유니코드를 포함 **#define** 에 응용 프로그램에는 Sqlucode.h 헤더 파일이 포함 되어 있습니다.  

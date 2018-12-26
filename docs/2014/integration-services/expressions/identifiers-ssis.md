@@ -23,7 +23,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48154833"
@@ -100,7 +100,7 @@ ms.locfileid: "48154833"
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
   
 ## <a name="unique-variable-names"></a>고유 변수 이름  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 사용자 지정 변수를 지원하며 시스템 변수 집합을 제공합니다. 기본적으로 사용자 지정 변수는 **User** 네임스페이스에 속하고 시스템 변수는 **System** 네임스페이스에 속합니다. 사용자 지정 변수용 네임스페이스를 추가로 만들고 응용 프로그램의 요구에 맞게 기존 네임스페이스 이름을 업데이트할 수 있습니다. 식 작성기는 모든 네임스페이스의 범위 내 변수 목록을 표시합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 사용자 지정 변수를 지원하며 시스템 변수 집합을 제공합니다. 기본적으로 사용자 지정 변수는 **User** 네임스페이스에 속하고 시스템 변수는 **System** 네임스페이스에 속합니다. 사용자 지정 변수용 네임스페이스를 추가로 만들고 애플리케이션의 요구에 맞게 기존 네임스페이스 이름을 업데이트할 수 있습니다. 식 작성기는 모든 네임스페이스의 범위 내 변수 목록을 표시합니다.  
   
  모든 변수는 범위를 가지고 있고 하나의 네임스페이스에 속합니다. 변수 범위는 패키지 범위이거나 패키지의 컨테이너 또는 태스크 범위입니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 식 작성기는 범위 내 변수 목록만 표시합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   

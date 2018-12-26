@@ -30,7 +30,7 @@ ms.locfileid: "47808041"
  이 항목에서는 **재생 구성** 대화 상자에서 지정할 수 있는 옵션에 대해 설명합니다.  
   
 > [!NOTE]  
->  리소스를 많이 사용하는 OLTP 응용 프로그램(활성 동시 연결 수가 많거나 처리량이 많음)을 재생하는 데는 Distributed Replay Utility를 사용하는 것이 좋습니다. Distributed Replay Utility는 여러 컴퓨터의 추적 데이터를 재생할 수 있으므로 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하세요.  
+>  리소스를 많이 사용하는 OLTP 애플리케이션(활성 동시 연결 수가 많거나 처리량이 많음)을 재생하는 데는 Distributed Replay Utility를 사용하는 것이 좋습니다. Distributed Replay Utility는 여러 컴퓨터의 추적 데이터를 재생할 수 있으므로 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다. 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하세요.  
   
 ## <a name="basic-replay-options"></a>기본 재생 옵션  
  **서버 재생**  
@@ -77,7 +77,7 @@ ms.locfileid: "47808041"
  차단된 프로세스 모니터에서 차단되었거나 차단 중인 프로세스를 검색하는 빈도를 설정합니다.  
   
 ## <a name="about-the-health-monitor"></a>상태 모니터 정보  
- 상태 모니터는 추적 재생의 시뮬레이션된 프로세스를 모니터링하고 재생 내에서 차단된 프로세스를 종료하는 응용 프로그램 스레드입니다. **재생 구성** 대화 상자의 **고급 재생 옵션** 탭에서 차단된 프로세스를 끝내기 전에 상태 모니터가 대기해야 하는 시간(**상태 모니터 대기 간격**)을 초 단위로 지정할 수 있습니다. 이 간격을 0으로 설정하면 상태 모니터가 재생 추적에서 시뮬레이션된 차단 프로세스를 종료하지 않습니다.  
+ 상태 모니터는 추적 재생의 시뮬레이션된 프로세스를 모니터링하고 재생 내에서 차단된 프로세스를 종료하는 애플리케이션 스레드입니다. **재생 구성** 대화 상자의 **고급 재생 옵션** 탭에서 차단된 프로세스를 끝내기 전에 상태 모니터가 대기해야 하는 시간(**상태 모니터 대기 간격**)을 초 단위로 지정할 수 있습니다. 이 간격을 0으로 설정하면 상태 모니터가 재생 추적에서 시뮬레이션된 차단 프로세스를 종료하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   

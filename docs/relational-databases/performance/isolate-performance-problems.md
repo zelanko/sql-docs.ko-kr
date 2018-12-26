@@ -43,7 +43,7 @@ ms.locfileid: "47707127"
   
  다음과 같은 문제가 있을 수 있습니다.  
   
--   잘못 작성된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 비롯한 응용 프로그램 개발 오류  
+-   잘못 작성된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 비롯한 애플리케이션 개발 오류  
   
 -   디스크나 네트워크 관련 오류와 같은 하드웨어 오류  
   

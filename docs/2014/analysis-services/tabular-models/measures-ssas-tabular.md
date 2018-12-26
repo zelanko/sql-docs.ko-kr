@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48121573"
 ---
 # <a name="measures-ssas-tabular"></a>측정값(SSAS 테이블 형식)
-  테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
+  테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 애플리케이션에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
   
  이 항목의 섹션:  
   

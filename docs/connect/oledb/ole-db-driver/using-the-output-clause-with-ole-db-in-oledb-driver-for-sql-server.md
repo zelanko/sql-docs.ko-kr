@@ -23,7 +23,7 @@ ms.locfileid: "47825801"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 응용 프로그램이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
+  INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 애플리케이션이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 응용 프로그램용 OLE DB 드라이버 만들기](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 

@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48083283"
@@ -32,7 +32,7 @@ ms.locfileid: "48083283"
   
 -   사용자가 모델 데이터를 분석하는 데 도움을 주는 계산, 측정값 및 핵심 성과 지표를 만들고 관리하는 방법  
   
--   비즈니스 및 응용 프로그램별 뷰포인트를 통해 사용자가 모델 데이터를 쉽게 탐색할 수 있도록 도움을 주는 큐브 뷰와 계층을 만들고 관리하는 방법  
+-   비즈니스 및 애플리케이션별 뷰포인트를 통해 사용자가 모델 데이터를 쉽게 탐색할 수 있도록 도움을 주는 큐브 뷰와 계층을 만들고 관리하는 방법  
   
 -   다른 파티션과 독립적으로 처리할 수 있도록 테이블 데이터를 더 작은 논리적 부분으로 나누는 파티션을 만드는 방법  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48083283"
  단원의 목적은 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에 포함된 여러 가지 기능을 사용하여 메모리 내 모드로 실행되는 기본 테이블 형식 모델을 제작하는 과정을 안내하는 데 있습니다. 각 단원은 이전 단원에 기반을 두고 있으므로 단원을 순서대로 완료해야 합니다. 단원을 모두 완료하면 Adventure Works Internet Sales 예제 테이블 형식 모델이 만들어져 Analysis Services 서버에 배포되어 있을 것입니다.  
   
 > [!NOTE]  
->  이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 응용 프로그램을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
+>  이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 애플리케이션을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 자습서를 완료하려면 다음 필수 구성 요소가 설치되어 있어야 합니다.  

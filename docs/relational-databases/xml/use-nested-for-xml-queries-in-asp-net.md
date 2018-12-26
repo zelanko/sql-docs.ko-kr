@@ -25,7 +25,7 @@ ms.locfileid: "51668512"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET에서 중첩 FOR XML 쿼리 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  이 예에서ASP.NET 응용 프로그램은 SQL Server에서 저장 프로시저를 실행하여 브라우저에  XML을 반환합니다. 저장 프로시저는 중첩 쿼리를 사용하여 XML을 생성합니다. 유사한 SELECT 문은 [중첩 AUTO 모드 쿼리를 사용하여 형제 생성](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)항목에 설명되어 있습니다. 다음 예에서는 중첩 FOR XML 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 요소 중심 XML을 생성하는 한 가지 방법을 보여 줍니다.  
+  이 예에서ASP.NET 애플리케이션은 SQL Server에서 저장 프로시저를 실행하여 브라우저에 XML을 반환합니다. 저장 프로시저는 중첩 쿼리를 사용하여 XML을 생성합니다. 유사한 SELECT 문은 [중첩 AUTO 모드 쿼리를 사용하여 형제 생성](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)항목에 설명되어 있습니다. 다음 예에서는 중첩 FOR XML 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 요소 중심 XML을 생성하는 한 가지 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -55,7 +55,7 @@ FOR XML AUTO, TYPE
 GO  
 ```  
   
- 이 코드는 .aspx 응용 프로그램입니다. 이 코드는 저장 프로시저를 실행하고 브라우저에 XML을 반환합니다.  
+ 이 코드는 .aspx 애플리케이션입니다. 이 코드는 저장 프로시저를 실행하고 브라우저에 XML을 반환합니다.  
   
 ```  
 <%@LANGUAGE=C# Debug=true %>  
@@ -86,13 +86,13 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
 %>  
 ```  
   
-##### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+##### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
 1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 저장 프로시저를 만듭니다.  
   
-2.  .aspx 응용 프로그램을 c:\inetpub\wwwroot 디렉터리에 GetSalesOrderInfo.aspx로 저장합니다.  
+2.  .aspx 애플리케이션을 c:\inetpub\wwwroot 디렉터리에 GetSalesOrderInfo.aspx로 저장합니다.  
   
-3.  응용 프로그램(`https://server/GetSalesOrderInfo.aspx`)을 실행합니다.  
+3.  애플리케이션(`https://server/GetSalesOrderInfo.aspx`)을 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries.md)  

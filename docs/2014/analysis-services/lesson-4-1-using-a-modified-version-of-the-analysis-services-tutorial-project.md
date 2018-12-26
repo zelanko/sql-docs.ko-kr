@@ -13,13 +13,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48194713"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services Tutorial 프로젝트의 수정된 버전 사용
-  이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 응용 프로그램에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
+  이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 애플리케이션에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
   
  자습서를 계속 진행하려면 먼저 향상된 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 다운로드하고 압축을 풀고 로드하고 처리해야 합니다.  이 단원의 지침을 사용하여 모든 단계를 수행했는지 확인합니다.  
   

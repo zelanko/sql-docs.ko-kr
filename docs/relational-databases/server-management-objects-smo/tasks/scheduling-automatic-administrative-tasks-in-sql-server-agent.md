@@ -39,7 +39,7 @@ ms.locfileid: "47782861"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 사용 하는 프로그램에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 에이전트에는 **사용 하 여** 에이전트 네임 스페이스를 정규화 하는 문입니다. 다른 문을 삽입 **를 사용 하 여** 응용 프로그램의 모든 선언 앞의 문을 같은:
   

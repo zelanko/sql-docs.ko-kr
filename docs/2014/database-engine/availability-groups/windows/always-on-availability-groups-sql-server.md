@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48177013"
@@ -53,9 +53,9 @@ ms.locfileid: "48177013"
   
     -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 [활성 보조: 보조 복제본에 백업](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-     활성 보조 기능을 사용하면 IT 효율성을 향상시키고 보다 효율적인 보조 하드웨어 리소스 활용을 통해 비용을 절감할 수 있습니다. 또한 읽기 전용 응용 프로그램 및 백업 작업을 보조 복제본으로 오프로드하면 주 복제본의 성능이 향상될 수 있습니다.  
+     활성 보조 기능을 사용하면 IT 효율성을 향상시키고 보다 효율적인 보조 하드웨어 리소스 활용을 통해 비용을 절감할 수 있습니다. 또한 읽기 전용 애플리케이션 및 백업 작업을 보조 복제본으로 오프로드하면 주 복제본의 성능이 향상될 수 있습니다.  
   
--   각 가용성 그룹에 대해 가용성 그룹 수신기를 지원합니다. *가용성 그룹 수신기* 는 AlwaysOn 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 서버 이름입니다. 가용성 그룹 수신기는 들어오는 연결을 주 복제본이나 읽기 전용 보조 복제본에 전달합니다. 수신기는 가용성 그룹이 장애 조치(Failover)된 후 빠른 응용 프로그램 장애 조치(Failover)를 제공합니다. 자세한 내용은 참조 하세요. [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 합니다. SQL Server; ](../../listeners-client-connectivity-application-failover.md).  
+-   각 가용성 그룹에 대해 가용성 그룹 수신기를 지원합니다. *가용성 그룹 수신기* 는 AlwaysOn 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 서버 이름입니다. 가용성 그룹 수신기는 들어오는 연결을 주 복제본이나 읽기 전용 보조 복제본에 전달합니다. 수신기는 가용성 그룹이 장애 조치(Failover)된 후 빠른 애플리케이션 장애 조치(Failover)를 제공합니다. 자세한 내용은 참조 하세요. [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 합니다. SQL Server; ](../../listeners-client-connectivity-application-failover.md).  
   
 -   가용성 그룹 장애 조치(Failover)를 효율적으로 제어할 수 있도록 유연한 장애 조치(Failover) 정책을 지원합니다. 자세한 내용은 참조 하세요. [장애 조치 및 장애 조치 모드가 있습니다. Always On 가용성 그룹입니다. ](failover-and-failover-modes-always-on-availability-groups.md).  
   

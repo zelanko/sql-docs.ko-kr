@@ -36,7 +36,7 @@ ms.locfileid: "47640341"
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 쿼리 텍스트 캡처  
  쿼리를 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 전송된 대로 정확히 텍스트를 캡처하려는 경우 쿼리 텍스트와 정확히 일치하는 SQL 또는 TEMPLATE 유형의 계획 지침을 만들 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램에서 이 계획 지침이 사용되도록 보장할 수 있습니다.  
   
- 응용 프로그램에 의해 독립 실행형 일괄 처리로 전송되는 다음 쿼리를 고려하십시오.  
+ 애플리케이션에 의해 독립 실행형 일괄 처리로 전송되는 다음 쿼리를 고려하십시오.  
   
 ```  
 SELECT COUNT(*) AS c  
@@ -46,13 +46,13 @@ INNER JOIN Sales.SalesOrderDetail AS d
 WHERE h.OrderDate BETWEEN '20000101' and '20050101';  
 ```  
   
- 병합 조인 연산을 사용하여 이 쿼리를 실행하려고 하지만 SHOWPLAN에 이 쿼리가 병합 조인을 사용하지 않는 것으로 표시된다고 가정해 보십시오. 응용 프로그램에서는 쿼리를 직접 변경할 수 없기 때문에 그 대신 컴파일 시 쿼리에 MERGE JOIN 쿼리 힌트를 첨부하도록 지정하는 계획 지침을 만듭니다.  
+ 병합 조인 연산을 사용하여 이 쿼리를 실행하려고 하지만 SHOWPLAN에 이 쿼리가 병합 조인을 사용하지 않는 것으로 표시된다고 가정해 보십시오. 애플리케이션에서는 쿼리를 직접 변경할 수 없기 때문에 그 대신 컴파일 시 쿼리에 MERGE JOIN 쿼리 힌트를 첨부하도록 지정하는 계획 지침을 만듭니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 수신하는 것과 정확히 같은 쿼리 텍스트를 캡처하려면 다음 단계를 수행하십시오.  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적을 시작하고 **SQL:BatchStarting** 이벤트 유형을 선택합니다.  
   
-2.  응용 프로그램이 쿼리를 실행하도록 합니다.  
+2.  애플리케이션이 쿼리를 실행하도록 합니다.  
   
 3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적을 일시 중지합니다.  
   
@@ -86,7 +86,7 @@ EXEC sp_create_plan_guide
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적을 시작하고 **성능** 노드 아래에 있는 **Showplan XML** 이벤트 유형을 선택합니다.  
   
-2.  응용 프로그램이 쿼리를 실행하도록 합니다.  
+2.  애플리케이션이 쿼리를 실행하도록 합니다.  
   
 3.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적을 일시 중지합니다.  
   

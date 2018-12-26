@@ -20,7 +20,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48170183"
@@ -44,7 +44,7 @@ ms.locfileid: "48170183"
 ## <a name="securable-scope-database"></a>보안 개체 범위: 데이터베이스  
  **데이터베이스** 보안 개체 범위는 다음 보안 개체를 포함합니다.  
   
--   응용 프로그램 역할  
+-   애플리케이션 역할  
   
 -   어셈블리  
   

@@ -26,7 +26,7 @@ ms.locfileid: "51605783"
 > [!NOTE]  
 >  JDBC 드라이버에 포함된 네이티브 구성 요소(sqljdbc_xa.dll)의 경우 BID(Built-In Diagnostics) 프레임워크를 사용하여 추적 기능을 활성화합니다. BID에 대한 자세한 내용은 [SQL Server에서 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=70042)을 참조하세요.  
   
- 응용 프로그램을 개발할 때 Logger 개체를 호출한 다음, LogRecord 개체를 만들고 Handler 개체에 전달하여 처리할 수 있습니다. 로 거 및 처리기 개체 수준 로깅 사용 및 로깅 필터는 LogRecords 규제를 선택적으로 처리 됩니다. 로깅 작업이 완료되면 Handler 개체는 필요에 따라 Formatter 개체를 사용하여 로그 정보를 게시합니다.  
+ 애플리케이션을 개발할 때 Logger 개체를 호출한 다음, LogRecord 개체를 만들고 Handler 개체에 전달하여 처리할 수 있습니다. 로 거 및 처리기 개체 수준 로깅 사용 및 로깅 필터는 LogRecords 규제를 선택적으로 처리 됩니다. 로깅 작업이 완료되면 Handler 개체는 필요에 따라 Formatter 개체를 사용하여 로그 정보를 게시합니다.  
   
  기본적으로 java.util.logging 프레임워크는 출력을 파일에 작성합니다. 이 출력 로그 파일은 JDBC 드라이버가 실행 중인 컨텍스트에 대한 쓰기 권한이 있어야 합니다.  
   

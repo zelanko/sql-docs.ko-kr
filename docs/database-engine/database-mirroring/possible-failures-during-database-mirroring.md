@@ -67,7 +67,7 @@ ms.locfileid: "47751891"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에 특정 포트를 차단하는 방화벽이 있는 경우  
   
--   포트를 모니터링하는 응용 프로그램에서 오류가 발생한 경우  
+-   포트를 모니터링하는 애플리케이션에서 오류가 발생한 경우  
   
 -   Windows 기반 서버 이름이 바뀐 경우  
   

@@ -45,7 +45,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
 ##  <a name="Role"></a> 인증에서 SPN의 역할  
- 응용 프로그램에서 연결을 열고 Windows 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 이름, 인스턴스 이름 및 필요에 따라 SPN을 전달합니다. 연결이 SPN을 전달하면 변경 사항 없이 사용됩니다.  
+ 애플리케이션에서 연결을 열고 Windows 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 이름, 인스턴스 이름 및 필요에 따라 SPN을 전달합니다. 연결이 SPN을 전달하면 변경 사항 없이 사용됩니다.  
   
  연결이 SPN을 전달하지 않으면 기본 SPN이 사용된 프로토콜, 서버 이름 및 인스턴스 이름에 따라 구성됩니다.  
   

@@ -30,7 +30,7 @@ ms.locfileid: "47690103"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전의 유효성을 검사하여 모델 버전의 모든 멤버에 비즈니스 규칙을 적용할 수 있습니다.  
   
- 이 절차는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 사용하여 데이터의 유효성을 검사하는 방법을 설명합니다. MDS 데이터베이스에 대한 권한이 있는 경우 대신 저장 프로시저를 사용할 수 있습니다. 자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
+ 이 절차는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 사용하여 데이터의 유효성을 검사하는 방법을 설명합니다. MDS 데이터베이스에 대한 권한이 있는 경우 대신 저장 프로시저를 사용할 수 있습니다. 자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
   
 > [!NOTE]  
 >  모든 멤버가 유효성 검사를 통과해야 버전을 커밋할 수 있습니다.  

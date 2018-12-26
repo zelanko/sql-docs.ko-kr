@@ -1,5 +1,5 @@
 ---
-title: Windows 응용 프로그램 로그 | Microsoft Docs
+title: Windows 애플리케이션 로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,11 +22,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48180873"
 ---
-# <a name="windows-application-log"></a>Windows 응용 프로그램 로그
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 응용 프로그램 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 응용 프로그램에서 생성된 이벤트를 확인할 수 있습니다.  
+# <a name="windows-application-log"></a>Windows 애플리케이션 로그
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 애플리케이션 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 애플리케이션에서 생성된 이벤트를 확인할 수 있습니다.  
   
 ## <a name="viewing-report-server-events"></a>보고서 서버 이벤트 보기  
- 이벤트 뷰어를 사용하여 로그 파일을 보고 로그 파일에 들어 있는 메시지를 필터링할 수 있습니다. 이벤트 메시지에 대 한 자세한 내용은 참조 하세요. [오류 및 이벤트 참조 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)합니다. Windows 응용 프로그램 로그나 이벤트 뷰어에 대한 자세한 내용은 Windows 제품 설명서를 참고하십시오.  
+ 이벤트 뷰어를 사용하여 로그 파일을 보고 로그 파일에 들어 있는 메시지를 필터링할 수 있습니다. 이벤트 메시지에 대 한 자세한 내용은 참조 하세요. [오류 및 이벤트 참조 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)합니다. Windows 애플리케이션 로그나 이벤트 뷰어에 대한 자세한 내용은 Windows 제품 설명서를 참고하십시오.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다음과 같은 세 가지 이벤트 원본을 제공합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48180873"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버의 응용 프로그램 이벤트 로깅을 해제하거나 기록 대상 이벤트를 변경할 수 없습니다. 보고서 서버 이벤트 로깅을 설명하는 스키마는 고정되어 있습니다. 사용자 지정 이벤트를 지원하도록 스키마를 확장할 수 없습니다.  
   
- 다음 표에서는 보고서 서버에서 응용 프로그램 이벤트 로그에 기록하는 이벤트 유형을 설명합니다.  
+ 다음 표에서는 보고서 서버에서 애플리케이션 이벤트 로그에 기록하는 이벤트 유형을 설명합니다.  
   
 |이벤트 유형|Description|  
 |----------------|-----------------|  

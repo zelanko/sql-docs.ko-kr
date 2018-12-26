@@ -540,7 +540,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - 테이블 형식: 부분 선택 모드에서 항목을 클릭하는 경우(예를 들어, DAX 식을 입력하지만 측정값을 클릭함) 작동이 중단될 수 있는 문제를 해결함.
 - 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - 테이블 형식: [다이어그램 뷰]를 선택하지 않았는데도 TME에서 계층을 선택할 때 속성이 표시되는 문제를 해결함.
-- 테이블 형식: 특정 응용 프로그램에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결함.
+- 테이블 형식: 특정 애플리케이션에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결함.
 - 테이블 형식: 특정 정의가 포함된 측정값이 있어서 1103의 일부 이전 모델을 열 수 없는 문제를 해결함.
 - 테이블 형식: XEvent 세션을 삭제할 수 없는 문제를 해결함.
 - Devenv.com이 포함된 AS "smproj" 파일을 빌드하지 못하는 문제를 해결함
@@ -691,7 +691,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 **새로운 기능**
 
-이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 응용 프로그램 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 응용 프로그램 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
+이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 애플리케이션 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 애플리케이션 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
 
 **Analysis Services – SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
 

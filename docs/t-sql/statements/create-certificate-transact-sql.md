@@ -184,7 +184,7 @@ CREATE CERTIFICATE certificate_name
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &#40;Transact-SQL&#41](../../t-sql/functions/certencoded-transact-sql.md) 문서의 예제 B를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
- 데이터베이스에 대한 CREATE CERTIFICATE 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 응용 프로그램 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
+ 데이터베이스에 대한 CREATE CERTIFICATE 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   

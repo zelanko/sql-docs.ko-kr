@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48078653"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>SetVirtualDirectory 메서드(WMI MSReportServer_ConfigurationSetting)
-  지정한 응용 프로그램에 가상 디렉터리 이름을 설정합니다.  
+  지정한 애플리케이션에 가상 디렉터리 이름을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
   
 ## <a name="parameters"></a>매개 변수  
  *응용 프로그램*  
- 가상 디렉터리를 설정할 응용 프로그램의 이름입니다.  
+ 가상 디렉터리를 설정할 애플리케이션의 이름입니다.  
   
  *VirtualDirectory*  
  가상 디렉터리의 이름입니다.  
@@ -56,7 +56,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- 각 응용 프로그램의 모든 URL 예약에 대해 하나의 가상 디렉터리 이름만 지정할 수 있습니다.  
+ 각 애플리케이션의 모든 URL 예약에 대해 하나의 가상 디렉터리 이름만 지정할 수 있습니다.  
   
  VirtualDirectory는 가상 디렉터리의 명명 규칙을 준수해야 합니다. VirtualDirectory는 빈 문자열이나 공백이 될 수 없습니다.  
   

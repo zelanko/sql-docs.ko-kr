@@ -14,7 +14,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f62e0fe8bc1e0f2ed7fbb4cd48c6725cfb098d9
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48086533"
@@ -30,7 +30,7 @@ ms.locfileid: "48086533"
 -   [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  
   
 > [!IMPORTANT]  
->  나중 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 트리거에서 결과 집합을 반환하는 기능이 제거됩니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 응용 프로그램에 예기치 않은 동작을 유발할 수도 있습니다. 향후 개발 작업에서는 트리거에서 결과 집합을 반환하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 트리거가 결과 집합을 반환하지 않도록 하려면 [disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) 옵션을 1로 설정합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 옵션이 기본적으로 1로 설정됩니다.  
+>  나중 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 트리거에서 결과 집합을 반환하는 기능이 제거됩니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 애플리케이션에 예기치 않은 동작을 유발할 수도 있습니다. 향후 개발 작업에서는 트리거에서 결과 집합을 반환하지 않도록 하고 현재 이 기능을 사용하는 애플리케이션은 수정하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 트리거가 결과 집합을 반환하지 않도록 하려면 [disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) 옵션을 1로 설정합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 옵션이 기본적으로 1로 설정됩니다.  
   
 ## <a name="modifying-ddl-triggers"></a>DDL 트리거 수정  
  트리거를 삭제하고 다시 만들거나 기존 트리거를 한 단계로 다시 정의하여 DDL 트리거 정의를 수정할 수 있습니다.  

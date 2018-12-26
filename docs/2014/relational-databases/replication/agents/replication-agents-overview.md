@@ -27,13 +27,13 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 441bae8df8e15f5dd8df4ebf636bf5f879ab497c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48081343"
 ---
 # <a name="replication-agents-overview"></a>복제 에이전트 개요
-  복제는 에이전트라는 여러 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업으로 실행되므로 해당 작업을 실행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중이어야 합니다. 복제 에이전트는 명령줄이나 RMO(복제 관리 개체)를 사용하는 응용 프로그램에서 실행할 수도 있습니다. 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 관리할 수 있습니다.  
+  복제는 에이전트라는 여러 독립 실행형 프로그램을 사용하여 변경 내용 추적 및 데이터 배포와 연관된 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업으로 실행되므로 해당 작업을 실행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트가 실행 중이어야 합니다. 복제 에이전트는 명령줄이나 RMO(복제 관리 개체)를 사용하는 애플리케이션에서 실행할 수도 있습니다. 복제 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터 및 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 관리할 수 있습니다.  
   
 ## <a name="sql-server-agent"></a>SQL Server 에이전트  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제에 사용되는 에이전트를 호스팅 및 예약하고 복제 에이전트를 쉽게 실행하는 방법을 제공합니다. 또한[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 복제 이외의 작업을 제어하고 모니터링합니다. 자세한 내용은 [Configure SQL Server Agent](../../../ssms/agent/sql-server-agent.md)을 참조하세요.  

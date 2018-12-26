@@ -93,7 +93,7 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 Reporting Services
 
-SharePoint 통합 모드의 Reporting Services에 보고서를 게시합니다. 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 게시된 보고서를 구독하고, 보고서를 Microsoft Excel과 같은 다른 응용 프로그램으로 내보낼 수 있습니다. 또한 SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들고 보고서 데이터가 변경되면 전자 메일 메시지를 수신할 수 있습니다.  
+SharePoint 통합 모드의 Reporting Services에 보고서를 게시합니다. 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 게시된 보고서를 구독하고, 보고서를 Microsoft Excel과 같은 다른 애플리케이션으로 내보낼 수 있습니다. 또한 SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들고 보고서 데이터가 변경되면 전자 메일 메시지를 수신할 수 있습니다.  
 
 [SharePoint 통합 모드의 Reporting Services 보고서 서버](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)에 대해 자세히 알아보세요.
 

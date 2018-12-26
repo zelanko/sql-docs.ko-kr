@@ -27,7 +27,7 @@ ms.locfileid: "52537397"
 > [!div class="nextstepaction"]
 > [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 엔드포인트가 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
+JSON은 최신 웹 및 모바일 애플리케이션에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 엔드포인트가 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
 
 SQL Server의 JSON 함수를 사용하면 NoSQL과 관계형 개념을 동일한 데이터베이스에서 결합할 수 있습니다. 이제 기본 관계형 열을 동일한 테이블에서 JSON 텍스트로 형식이 지정된 문서를 포함하는 열과 결합하여 관계형 구조로 JSON 문서를 구문 분석하고 가져오거나 관계형 데이터를 JSON 텍스트로 형식을 지정할 수 있습니다. 다음 비디오에서 JSON 함수가 SQL Server 및 Azure SQL 데이터베이스에서 관계형 및 NoSQL 개념을 연결하는 방법을 볼 수 있습니다.
 
@@ -87,7 +87,7 @@ WHERE ISJSON(jsonCol)>0
 ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 ```  
   
-응용 프로그램 및 도구는 스칼라 테이블 열에서 가져온 값과 JSON 열에서 가져온 값 간의 차이점을 표시하지 않습니다. Transact-SQL 쿼리의 모든 부분(WHERE, ORDER BY, GROUP BY 절, 창 집계 등 포함)에서 JSON 텍스트 값을 사용할 수 있습니다. JSON 함수는 JavaScript 형식의 구문을 사용하여 JSON 텍스트 내의 값을 참조합니다.
+애플리케이션 및 도구는 스칼라 테이블 열에서 가져온 값과 JSON 열에서 가져온 값 간의 차이점을 표시하지 않습니다. Transact-SQL 쿼리의 모든 부분(WHERE, ORDER BY, GROUP BY 절, 창 집계 등 포함)에서 JSON 텍스트 값을 사용할 수 있습니다. JSON 함수는 JavaScript 형식의 구문을 사용하여 JSON 텍스트 내의 값을 참조합니다.
 
 자세한 내용은 [기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md), [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 및 [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요.  
   
@@ -263,7 +263,7 @@ SQL Server에서 JSON 데이터를 저장, 인덱싱 및 최적화하는 옵션�
 -   행으로 구분된 JSON 파일이 Azure Blob Storage 또는 Hadoop 파일 시스템에 저장된 경우 PolyBase를 사용하여 JSON 텍스트를 로드하고 Transact-SQL 코드에서 구문 분석한 후 테이블에 로드할 수 있습니다.  
 
 ### <a name="import-json-data-into-sql-server-tables"></a>SQL Server 테이블로 JSON 데이터 가져오기  
-외부 서비스에서 SQL Server로 JSON 데이터를 로드해야 하는 경우 응용 프로그램 계층에서 데이터를 구문 분석하는 대신 **OPENJSON**을 사용하여 데이터를 SQL Server로 가져올 수 있습니다.  
+외부 서비스에서 SQL Server로 JSON 데이터를 로드해야 하는 경우 애플리케이션 계층에서 데이터를 구문 분석하는 대신 **OPENJSON**을 사용하여 데이터를 SQL Server로 가져올 수 있습니다.  
   
 ```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)

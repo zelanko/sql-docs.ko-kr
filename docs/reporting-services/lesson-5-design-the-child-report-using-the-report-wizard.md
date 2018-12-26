@@ -57,7 +57,7 @@ ms.locfileid: "52404227"
 9. .rdlc 파일을 저장합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
-보고서 마법사를 사용하여 성공적으로 자식 보고서를 디자인했습니다. 이제 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가합니다. [6단원: 응용 프로그램에 ReportViewer 컨트롤 추가](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)를 참조하세요.  
+보고서 마법사를 사용하여 성공적으로 자식 보고서를 디자인했습니다. 이제 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가합니다. [6단원: 응용 프로그램에 ReportViewer 컨트롤 추가](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)를 참조하세요.  
   
   
   

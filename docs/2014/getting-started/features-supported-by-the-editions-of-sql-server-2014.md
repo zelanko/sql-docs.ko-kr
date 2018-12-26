@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48095899"
@@ -193,7 +193,7 @@ ms.locfileid: "48095899"
 |관리자 전용 연결|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|지원(추적 플래그 사용)|지원(추적 플래그 사용)|지원(추적 플래그 사용)|  
 |PowerShell 스크립팅 지원|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |SysPrep 지원<sup>1</sup>|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
-|데이터 계층 응용 프로그램 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
+|데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |정책 자동화(일정 및 변경 내용 검사)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |성능 데이터 수집기|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
@@ -439,7 +439,7 @@ ms.locfileid: "48095899"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Business Intelligence 클라이언트  
- 다음 소프트웨어 클라이언트 응용 프로그램은 Microsoft 다운로드 센터에서 사용 가능한 및 지원에서 실행 되는 비즈니스 인텔리전스 문서를 작성 하기 위해 제공 되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 서버 환경에서 이러한 문서를 호스트할 때 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 문서 유형을 지 원하는 합니다. 다음 표에서는 이러한 클라이언트 응용 프로그램에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
+ 다음 소프트웨어 클라이언트 응용 프로그램은 Microsoft 다운로드 센터에서 사용 가능한 및 지원에서 실행 되는 비즈니스 인텔리전스 문서를 작성 하기 위해 제공 되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 서버 환경에서 이러한 문서를 호스트할 때 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 문서 유형을 지 원하는 합니다. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  

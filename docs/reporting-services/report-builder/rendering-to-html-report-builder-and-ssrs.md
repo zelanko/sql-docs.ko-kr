@@ -18,7 +18,7 @@ ms.locfileid: "47644281"
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
 
- HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 웹 포털에서 실행될 때를 포함하여 브라우저에 표시되는 보고서의 기본 렌더링 확장 프로그램입니다. HTML 렌더링 확장 프로그램은 HTML을 조각 또는 전체 HTML 문서로 렌더링할 수 있습니다. HTML이 조각인 경우 HTML 문서의 **HEAD**, **HTML**및 **BODY** 태그는 제거되고 **BODY** 태그의 내용만 렌더링됩니다. 이 기능은 다른 응용 프로그램에서 만든 HTML에 HTML을 포함하는 경우에 유용합니다.  
+ HTML 렌더링 확장 프로그램은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 웹 포털에서 실행될 때를 포함하여 브라우저에 표시되는 보고서의 기본 렌더링 확장 프로그램입니다. HTML 렌더링 확장 프로그램은 HTML을 조각 또는 전체 HTML 문서로 렌더링할 수 있습니다. HTML이 조각인 경우 HTML 문서의 **HEAD**, **HTML**및 **BODY** 태그는 제거되고 **BODY** 태그의 내용만 렌더링됩니다. 이 기능은 다른 애플리케이션에서 만든 HTML에 HTML을 포함하는 경우에 유용합니다.  
   
  일부 시나리오에서는 보고서를 HTML로 렌더링할 때 보고서 매개 변수를 사용하여 스크립트 삽입 공격을 시작할 수 있습니다. 보고서를 안전하게 보호하는 방법에 대한 자세한 내용은 [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)을 참조하세요.  
   
