@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47697883"
 ---
-# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Visual Basic 응용 프로그램과 함께 VFP FoxPro ODBC 드라이버 사용
+# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Visual Basic 애플리케이션과 함께 VFP FoxPro ODBC 드라이버 사용
 Microsoft® Visual Basic® 응용 프로그램은 Visual FoxPro 데이터 원본에 연결 하는 데이터 컨트롤을 만들어 Visual FoxPro 데이터를 사용 하 여 통신할 수 있습니다.  
   
 #### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Visual basic에서 데이터 컨트롤을 사용 하 여 Visual FoxPro 데이터에 연결 하려면  
