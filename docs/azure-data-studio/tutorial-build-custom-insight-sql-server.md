@@ -1,4 +1,4 @@
----
+﻿---
 title: '자습서: Azure Data Studio 사용자 지정 정보 위젯을 빌드 | Microsoft Docs'
 description: 이 자습서에는 사용자 지정 정보 위젯 빌드하고 Azure Data Studio의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
