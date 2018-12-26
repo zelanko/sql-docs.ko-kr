@@ -18,7 +18,7 @@ ms.locfileid: "48878096"
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Server 2016에서 소개된 [SQL Server R Services](../r/sql-server-r-services.md) 의 후속 제품인 SQL Server Machine Learning 서비스에서 제공됩니다. 함수 라이브러리는 R 및 Python으로 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
+SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Server 2016에서 소개된 [SQL Server R Services](../r/sql-server-r-services.md) 의 후속 제품인 SQL Server Machine Learning 서비스에서 제공됩니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다.
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하고 화면의 지시에 따라 머신 러닝 구성 요소를 설치하는 방법을 설명합니다.
 
@@ -40,7 +40,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
   + 리소스 경합을 SQL Server에서 외부 라이브러리에서 실행 되는 R 및 Python 스크립트를 관리할 수 없습니다.
   
 > [!IMPORTANT]
-> 설치가 완료되면 이 문서에서 설명하는 구성 후 단계를 완료해야합니다. 이러한 단계에는 SQL Server에서 외부 스크립트를 사용하고 SQL Server에 필요한 계정을 추가하여 사용자 대신 R 및 Python 작업을 실행할 수 있습니다. 구성을 변경하려면 일반적으로 인스턴스를 다시 시작하거나 Launchpad 서비스를 다시 시작해야합니다.
+> 설치가 완료되면 이 문서에서 설명하는 구성 후 단계를 완료해야 합니다. 이러한 단계에는 SQL Server에서 외부 스크립트를 사용하고 사용자 대신 R 및 Python 작업을 실행하기 위해 SQL Server에 필요한 계정을 추가하는 것이 포함됩니다. 구성을 변경하려면 일반적으로 인스턴스를 다시 시작하거나 Launchpad 서비스를 다시 시작해야 합니다.
 
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
 
