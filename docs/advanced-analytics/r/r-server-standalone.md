@@ -18,12 +18,12 @@ ms.locfileid: "51657502"
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (독립 실행형) 및 SQL server에서 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 독립 실행형 R Server 또는 SQL Server와 독립적으로 실행 하는 Machine Learning Server 설치 지원을 제공 합니다. SQL Server 버전에 따라 독립 실행형 서버 기반 오픈 소스 R 및 Python, 대규모로 통계 및 예측 분석을 추가 하는 Microsoft의 고성능 라이브러리를 사용 하 여 오버레이 있습니다. 라이브러리 또한 machine learning 작업 R 또는 Python 스크립트를 사용 합니다. 
+SQL Server는 독립 실행형 R Server 또는 SQL Server와 독립적으로 실행하는 Machine Learning Server 설치 지원을 제공합니다. SQL Server 버전에 따라 독립 실행형 서버는 대규모 통계 및 예측 분석 기능을 추가하는 Microsoft 제공 고성능 라이브러리와 함께 오픈 소스 R 및 경우에 따라 Python을 기반으로합니다. 라이브러리는 또한 R 또는 Python으로 스크립팅된 머신 러닝 작업을 가능하게 합니다.
 
-이 기능은 SQL Server 2016에서 이라고 **R Server (독립 실행형)** 이며 R 전용입니다. SQL Server 2017에서 라고 **Machine Learning Server (독립 실행형)** R 및 Python 모두 포함 합니다.  
+이 기능은 SQL Server 2016에서 R Server(독립 실행형)**라고 하고 R 전용입니다. SQL Server 2017에서는 Machine Learning Server(독립 실행형) 라고 하며 R 및 Python 모두를 포함합니다.  
 
 > [!Note]
-> 독립 실행형 서버는 기능적으로 비 SQL 브랜드 버전의 SQL Server 설치 프로그램에서 설치 하는 대로 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 원격 실행을 포함 하 여 동일한 사용자 시나리오를 지원 합니다. 운영 화 및 웹 서비스 및 R 및 Python 라이브러리의 전체 모음입니다.
+> SQL Server 설치 프로그램에 의해 설치되는 독립 실행형 서버는 Microsoft SQL Server 브랜드 버전이 아닌 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일하며 원격 실행, 조작화 및 웹 서비스, R 및 Python 라이브러리 전체 컬렉션을 포함하여 동일한 사용자 시나리오를 지원합니다.
 
 ## <a name="components"></a>구성 요소
 
@@ -41,15 +41,15 @@ SQL Server 2016은 R만 있습니다. SQL Server 2017은 R과 Python을 지원�
 | Python 샘플 및 스크립트 | R에서와 마찬가지로 Python 기본 제공 데이터 집합 및 스크립트를 포함 합니다. Revoscalepy 데이터 \Program files\Microsoft SQL 영문 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 데이터입니다. |
 | R 및 Python에서 미리 학습 된 모델 | 미리 학습 된 모델은 특정 사용 사례에 대 한 생성 되 고 microsoft 데이터 과학 엔지니어링 팀에서 유지 관리 합니다. 으로 미리 학습 된 모델을 사용할 수 있습니다-텍스트에서 양수 음수가 감정 점수 매기기 또는 기능에서 제공 하는 새 데이터 입력을 사용 하 여 이미지를 검색 하는 것입니다. 미리 학습 된 모델 지원 되며 독립 실행형 서버에서 사용할 수 있지만 SQL Server 설치 프로그램을 통해 설치할 수 없습니다. 자세한 내용은 [SQL Server에서 기계 학습 모델을 미리 학습 된 설치](../install/sql-pretrained-models-install.md)합니다. |
 
-## <a name="using-a-standalone-server"></a>독립 실행형 서버를 사용 하 여
+## <a name="using-a-standalone-server"></a>독립 실행형 서버 사용
 
-R 및 Python 개발자는 일반적으로 오픈 소스 R 및 Python의 메모리 및 처리 제약 조건 초과 이동 하려면 독립 실행형 서버를 선택 합니다. 독립 실행형 서버에서 실행 하는 R 및 Python 라이브러리 로드 및 다중 코어에서 많은 양의 데이터 처리 고 통합 된 단일 출력으로 결과 집계할 수 있습니다. 확장성과 유틸리티에 대 한 고성능 함수는 엔지니어링: 엔지니어링 예측 분석, 통계 모델링, 데이터 시각화 및 첨단 기계 학습 알고리즘 상용 서버 제품에서 제공 하 고 지 Microsoft입니다.
+R 및 Python 개발자는 일반적으로 독립형 서버를 선택하여 오픈 소스 R 및 Python의 메모리 및 처리 제한을 뛰어넘습니다. 독립 실행형 서버에서 실행되는 R 및 Python 라이브러리는 여러 코어에서 많은 양의 데이터를 로드하고 처리할 수 있으며 결과를 단일 통합 출력으로 집계할 수 있습니다. Microsoft에서 엔지니어링 및 지원하는 상용 서버 제품의 예측 분석, 통계 모델링, 데이터 시각화 및 최첨단 기계 학습 알고리즘을 제공하는 고성능 기능은 확장 및 유틸리티 모두를 위해 설계되었습니다.
 
-SQL Server에서 분리 하는 독립 서버와 R 및 Python 환경이 구성, 보안 및 기본 운영 체제 및 SQL Server가 아닌 독립 실행형 서버에서 제공 하는 표준 도구를 사용 하 여 액세스 합니다. SQL Server 관계형 데이터에 대 한 기본 제공 지원은 없습니다. SQL Server 데이터를 사용 하려는 경우 모든 클라이언트에서와 마찬가지로 데이터 원본 개체 및 연결을 만들 수 있습니다.
+SQL Server와 분리된 독립 서버로서, R 및 Python 환경은 SQL Server가 아닌 독립 실행형 서버에서 제공되는 기본 운영 체제 및 표준 도구를 사용하여 구성, 보안 및 액세스됩니다. SQL Server 관계형 데이터에 대한 기본 제공 지원은 없습니다. SQL Server 데이터를 사용하려는 경우 다른 클라이언트에서와 마찬가지로 데이터 원본 개체와 연결을 만들 수 있습니다.
 
-SQL Server의 보충 모델, 독립 실행형 서버도 유용 강력한 개발 환경으로 로컬 및 원격 컴퓨팅을 필요 합니다. 독립 실행형 서버에서 R 및 Python 패키지는 코드 이식성에 대 한 허용 하는 데이터베이스 엔진 설치와 함께 제공 되는 것과 동일 하 고 [계산 컨텍스트 전환](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)합니다.
+SQL Server의 보조 도구로서 독립 실행형 서버는 로컬 및 원격 컴퓨팅이 모두 필요한 경우 강력한 개발 환경으로 유용합니다. 독립 실행형 서버의 R 및 Python 패키지는 데이터베이스 엔진 설치 시 제공되는 패키지와 동일하므로 코드 이식성 및 [계산 컨텍스트 전환](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)을 제공합니다.
 
-## <a name="how-to-get-started"></a>시작 하는 방법
+## <a name="how-to-get-started"></a>시작하는 방법
 
 설치 프로그램을 시작한 하 여 즐겨 찾는 개발 도구, 바이너리 연결할 첫 번째 스크립트를 작성 합니다.
 
