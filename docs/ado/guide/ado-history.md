@@ -38,7 +38,7 @@ ADO 2.8은 Microsoft Data Access Components (MDAC) 2.8의 일부로, Windows XP�
 *중첩된* **Shape** *명령으로 반환되는* **Recordsets** *의 수는 일정한 최대값 이상이 될 수 없습니다.* 현재 중첩된 shape 명령은 최대 512개의 **Recordsets**를 반환합니다. 이것은 **Shape** 명령을 더 이상 중첩할 수 없다는 뜻입니다. 대신 각 명령에서 단일 (하위) **Recordset**가 발생하면 최대 깊이 수준은 512입니다. 모든 수준에서 **Shape** 명령이 여러 개의 **Recordsets**를 반환하면 최대 깊이 수준은 512 미만이 됩니다.
 
 ## <a name="ado-27"></a>ADO 2.7
-*64비트 플랫폼 지원* ADO 2.7부터 64비트 프로세서를 지원하기 시작했습니다.
+ *64비트 플랫폼 지원* ADO 2.7부터 64비트 프로세서를 지원하기 시작했습니다.
 
 ## <a name="ado-26"></a>ADO 2.6
 **CubDef.GetSchemaObject** *메서드* ADO 2.6부터 ADO MD 개체는 [UniqueName 속성(ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)으로 지정된 고유한 이름을 사용하여 검색할 수 있습니다. 부모 개체의 이름을 알 필요가 없고, 스키마 오브젝트를 검색하기 위해 상위 컬렉션을 채울 필요가 없습니다. [GetSchemaObject 메서드(ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)를 참조하십시오.
