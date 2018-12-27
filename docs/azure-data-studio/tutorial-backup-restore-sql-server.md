@@ -1,4 +1,4 @@
-﻿---
+---
 title: Azure Data Studio를 사용 하 여 데이터베이스를 백업 및 복원 | Microsoft Docs
 description: Azure Data Studio를 사용 하 여 데이터베이스를 백업 및 복원 하는 방법을 알아봅니다
 ms.custom: tools|sos
@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/16/2018
 ms.locfileid: "49355914"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 백업 및 복원
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 백업 및 복원
 
 이 자습서에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용법을 알아봅니다.
 > [!div class="checklist"]

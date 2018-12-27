@@ -132,7 +132,7 @@ EF 및 관련된 기술 강력 되며 전체 영역을 마스터 하려는 개�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java 로고][image-ref-330-java] Java 및 JDBC
 
-Microsoft은 SQL Server를 사용 하 여 (또는 물론 Azure SQL Database를 사용 하 여) 사용에 대 한 Java JDBC (Database Connectivity) 드라이버를 제공합니다. 표준 JDBC API(응용 프로그램 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
+Microsoft은 SQL Server를 사용 하 여 (또는 물론 Azure SQL Database를 사용 하 여) 사용에 대 한 Java JDBC (Database Connectivity) 드라이버를 제공합니다. 표준 JDBC API(애플리케이션 인터페이스)를 통해 데이터베이스 연결을 제공하는 Type 4 JDBC 드라이버입니다.
 
 #### <a name="code-examples"></a>코드 예제
 

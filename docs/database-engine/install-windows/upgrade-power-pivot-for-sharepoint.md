@@ -104,7 +104,7 @@ ms.locfileid: "52518300"
   
          **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**및 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구**를 차례로 클릭합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
-    2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 응용 프로그램 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "**최신 버전[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]의 솔루션 파일이 검색되었습니다. 팜을 업그레이드하려면 업그레이드 옵션을 선택하세요**"라는 메시지가 표시됩니다. **확인** 을 클릭하여 시스템 유효성 검사 메시지를 닫습니다.  
+    2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 애플리케이션 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "**최신 버전[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]의 솔루션 파일이 검색되었습니다. 팜을 업그레이드하려면 업그레이드 옵션을 선택하세요**"라는 메시지가 표시됩니다. **확인** 을 클릭하여 시스템 유효성 검사 메시지를 닫습니다.  
   
     3.  **기능, 서비스, 응용 프로그램 및 솔루션 업그레이드**를 클릭한 다음 **확인**을 클릭합니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "52518300"
   
     1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구**를 차례로 클릭합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
-    2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 응용 프로그램 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "최신 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일이 검색되었습니다. 팜을 업그레이드 하려면 업그레이드 옵션을 선택하세요."라는 메시지가 표시됩니다. **확인** 을 클릭하여 메시지를 닫습니다.  
+    2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 애플리케이션 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "최신 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일이 검색되었습니다. 팜을 업그레이드 하려면 업그레이드 옵션을 선택하세요."라는 메시지가 표시됩니다. **확인** 을 클릭하여 메시지를 닫습니다.  
   
     3.  **기능, 서비스, 응용 프로그램 및 솔루션 업그레이드**를 클릭한 다음 **확인** 을 클릭하여 계속합니다.  
   
@@ -291,11 +291,11 @@ Get-PowerPivotSystemService
  **13.0.2000.8** 2016.0130.200    C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
   
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>SharePoint에서 MSOLAP 데이터 공급자 버전 확인  
- 다음 지침에 따라 Analysis Services OLE DB 공급자 버전 중 Excel 서비스에서 신뢰할 수 있는 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 응용 프로그램의 관리자여야 합니다.  
+ 다음 지침에 따라 Analysis Services OLE DB 공급자 버전 중 Excel 서비스에서 신뢰할 수 있는 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 애플리케이션의 관리자여야 합니다.  
   
-1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  Excel Services 서비스 응용 프로그램의 이름(예: **ExcelServiceApp1**)을 클릭합니다.  
+2.  Excel Services 서비스 애플리케이션의 이름(예: **ExcelServiceApp1**)을 클릭합니다.  
   
 3.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다. MSOLAP.5(OLAP Services 11.0용 Microsoft OLE DB 공급자)가 나타납니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치를 업그레이드한 경우에는 이전 버전의 MSOLAP.4도 나타납니다.  
   
@@ -304,9 +304,9 @@ Get-PowerPivotSystemService
  MSOLAP.4는 OLAP Services 10.0의 Microsoft OLE DB 공급자로 설명되어 있습니다. 이 버전은 Excel 서비스로 설치된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 기본 버전이어야 하며, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전일 수도 있습니다. SharePoint 설치의 기본 버전은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하지 않습니다. SharePoint에서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통합 문서에 연결하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 버전 이상이 있어야 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전이 있는지 확인하려면 파일 속성을 보고 버전을 확인하는 방법이 설명된 이전 섹션의 지침을 따르십시오.  
   
 ### <a name="verify-the-adomdnet-data-provider-version"></a>ADOMD.NET 데이터 공급자 버전 확인  
- 다음 지침을 사용하여, 설치된 ADOMD.NET의 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 응용 프로그램의 관리자여야 합니다.  
+ 다음 지침을 사용하여, 설치된 ADOMD.NET의 버전을 확인합니다. Excel 서비스에 대한 신뢰할 수 있는 데이터 공급자 설정을 확인하려면 팜 또는 서비스 애플리케이션의 관리자여야 합니다.  
   
-1.  SharePoint 응용 프로그램 서버에서 `c:\Windows\Assembly`를 찾습니다.  
+1.  SharePoint 애플리케이션 서버에서 `c:\Windows\Assembly`를 찾습니다.  
   
 2.  어셈블리 이름을 기준으로 정렬하고 **Microsoft.Analysis Services.Adomd.Client**를 찾습니다.  
   
