@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft Visual Basic 및 Visual Basic for Applications로 ADO 사용하기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -31,15 +31,15 @@ Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO �
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>Microsoft Visual Basic에서 ADO 참조하기
 
-1.  Visual basic의 경우에서 **프로젝트** 메뉴에서 **참조 하는 중...** .
+1. Visual Basic에서 **프로젝트** 메뉴에서 **참조**를 클릭합니다...
 
 2.  목록에서 **Microsoft ActiveX Data Objects x.x Library**를 선택합니다. 다음 라이브러리도 함께 선택되어 있는지 확인합니다.
 
     -   Visual Basic for Applications
 
-    -   Visual Basic 런타임 개체 및 절차
+    -   Visual Basic runtime objects and procedures
 
-    -   Visual Basic 개체 및 절차
+    -   Visual Basic objects and procedures
 
     -   OLE Automation
 
@@ -51,7 +51,7 @@ Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO �
 
 1.  Microsoft Access에서, **데이터베이스** 창의 **모듈** 탭에서 모듈을 선택하거나 만듭니다.
 
-2.  에 **도구** 메뉴에서 **참조 하는 중...** .
+2.  **도구** 메뉴에서 **참조**를 클릭합니다..
 
 3.  목록에서 **Microsoft ActiveX Data Objects x.x Library**를 선택합니다. 다음 라이브러리도 함께 선택되어 있는지 확인합니다.
 
@@ -68,7 +68,7 @@ Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO �
 
 ### <a name="dim"></a>Dim 문
  한 번에 ADO 개체의 인스턴스를 만들려면 **Dim** 문과 함께 **New** 키워드를 사용합니다.
-
+ 
 ```
 Dim conn As New ADODB.Connection
 ```
@@ -99,13 +99,13 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- 사용 하 여 개체를 인스턴스화할 **CreateObject** 런타임에 바인딩되며, 즉 강력한 형식이 아니며 및 명령줄 완성 기능이 비활성화 됩니다. 그러나 프로젝트에서 ADO 라이브러리 참조를 건너뛸 수 있습니다 하 고 특정 버전의 개체를 인스턴스화할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+**CreateObject** 메서드를 이용하여 인스턴스화된 개체는 후기 바인딩 처리됩니다. 이것은 데이터 타입을 확정할 수 없으며, 그로 인해 명령줄 완성 기능이 비활성화된다는 뜻입니다. 그러나, 이렇게 처리하면 자신의 프로젝트에서 ADO 라이브러리를 참조하지 않아도 되고, (런타임 시에) 특정 버전의 개체로 인스턴스화할 수도 있습니다. 다음 예를 참고하십시오.
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ```
 
- 특히 ADO 버전 2.0 형식 라이브러리에 대 한 참조를 만들고 개체를 만들기도 수행할 수 있습니다.
+특히 ADO 버전 2.0 형식 라이브러리에 대 한 참조를 만들고 개체를 만들기도 수행할 수 있습니다.
 
  **CreateObject** 메서드를 사용하여 개체를 인스턴스화하는 작업은 **Dim** 문을 사용하는 것보다 일반적으로 느립니다.
 
