@@ -29,10 +29,10 @@ ms.locfileid: "47761201"
 
 -   [ADO(ActiveX Data Objects)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [Remote Data Services (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [Remote Data Services(RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
--   [ADO (다차원) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
+-   [ADO(다차원)(ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 
--   [ADO Extensions for Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
 -   [부록](../../ado/guide/appendixes/ado-appendixes.md)
