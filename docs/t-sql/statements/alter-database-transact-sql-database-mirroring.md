@@ -78,7 +78,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  데이터베이스 미러링 세션의 장애 조치 파트너 및 이들의 동작을 정의하는 데이터베이스 속성을 제어합니다. SET PARTNER 옵션에는 주 서버 또는 미러 서버로 제한되는 옵션과 어느 파트너에든 설정할 수 있는 옵션이 있습니다. 자세한 내용은 다음의 개별 PARTNER 옵션을 참조하십시오. SET PARTNER 절은 지정된 파트너에 관계없이 데이터베이스 복사본 양쪽 모두에 영향을 줍니다.  
   
- SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 각 파트너 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 ROLE이 PARTNER 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정 방법에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요. 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하세요.  
+ SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다. 또한 각 파트너 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 ROLE이 PARTNER 또는 ALL로 설정되어 있어야 합니다. 엔드포인트 지정 방법에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요. 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트의 역할 및 상태를 확인하려면 해당 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하세요.  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  

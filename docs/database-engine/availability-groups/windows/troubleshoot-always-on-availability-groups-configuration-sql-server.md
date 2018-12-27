@@ -56,12 +56,12 @@ ms.locfileid: "52535293"
   
     2.  두 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 원격 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들고 이 로그인에 해당 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 수 있는 CONNECT 권한을 부여해야 합니다. 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정&#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)을 참조하세요.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 합니다. 서비스 계정에서 동일한 도메인의 도메인 계정을 사용 중인 경우 모든 복제본 위치의 각 서비스 계정에 연결 권한을 부여하거나, 인증서를 사용할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 합니다. 서비스 계정에서 동일한 도메인의 도메인 계정을 사용 중인 경우 모든 복제본 위치의 각 서비스 계정에 연결 권한을 부여하거나, 인증서를 사용할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
 ##  <a name="Endpoints"></a> 엔드포인트  
  엔드포인트를 올바르게 구성해야 합니다.  
   
-1.  가용성 복제본을 호스트할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스(각 *복제본 위치*)에 데이터베이스 미러링 엔드포인트가 있는지 확인합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+1.  가용성 복제본을 호스트할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스(각 *복제본 위치*)에 데이터베이스 미러링 엔드포인트가 있는지 확인합니다. 지정된 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있는지 여부를 확인하려면 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 카탈로그 뷰를 사용합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
 2.  포트 번호가 정확한지 확인합니다.  
   

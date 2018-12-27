@@ -166,9 +166,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
