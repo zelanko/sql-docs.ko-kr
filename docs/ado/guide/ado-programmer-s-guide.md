@@ -1,5 +1,5 @@
----
-title: ADO 프로그래머&#39;가이드 | Microsoft Docs
+﻿---
+title: ADO 프로그래머 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47761201"
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 프로그래머&#39;ADO 개체를 사용 하 여에 대 한 s 가이드
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 개체 사용을 위한 ADO 프로그래머 가이드
 이 설명서는 ADO 개체를 사용하여 다양한 데이터 원본의 데이터로 작업하는 방법에 대한 개요를 제공합니다. 우선, 소개에서는 ADO 구성 요소의 설치, 사용 및 재배포에 대한 새로운 기능과 요구 사항을 요약합니다. 다음 섹션에서는 다양한 유형의 ADO 개체 활용법에 대해 설명합니다. 마지막으로 부록에서는 Microsoft에서 제공하는 다양한 데이터 및 서비스 공급자, 오류 메시지 및 여러 프로그래밍 언어로 ADO를 사용하는 방법에 대한 팁과 샘플 및 용어집에 대해 설명합니다.
 
  이 섹션에서는 다음 항목을 다룹니다.
