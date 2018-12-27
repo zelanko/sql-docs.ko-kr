@@ -23,7 +23,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48135670"
@@ -40,7 +40,7 @@ ms.locfileid: "48135670"
   
 -   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 에이전트 시작: 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
   
--   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 응용 프로그램에서 에이전트 시작: RMO 또는 ActiveX 컨트롤을 호출하는 응용 프로그램의 컨텍스트에서 에이전트가 실행됩니다.  
+-   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 애플리케이션에서 에이전트 시작: RMO 또는 ActiveX 컨트롤을 호출하는 애플리케이션의 컨텍스트에서 에이전트가 실행됩니다.  
   
     > [!NOTE]  
     >  ActiveX 컨트롤은 더 이상 사용되지 않습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48135670"
   
  복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시*의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) 문을 사용하여 계정이 자격 증명에 먼저 매핑됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다.  
+-    [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) 문을 사용하여 계정이 자격 증명에 먼저 매핑됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다.  
   
 -   [sp_add_proxy](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql) 저장 프로시저가 호출되고 자격 증명을 사용하여 프록시가 생성됩니다.  
   

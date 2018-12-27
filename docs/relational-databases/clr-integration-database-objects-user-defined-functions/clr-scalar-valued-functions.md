@@ -85,9 +85,9 @@ End Class
   
  그런 다음 이 함수는 **SqlFunction** 네임스페이스에 있는 **Microsoft.SqlServer.Server** 사용자 지정 특성을 받습니다. 사용자 지정 특성은 UDF(사용자 정의 함수)에서 in-process 공급자를 사용하여 서버의 데이터를 읽는지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDF로 데이터를 업데이트, 삽입 또는 삭제할 수는 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 in-process 공급자를 사용하지 않는 UDF의 실행을 최적화할 수 있습니다. 이렇게 하려면 **DataAccessKind** 를 **DataAccessKind.None**으로 설정합니다. 다음 줄에서 대상 메서드는 public static(Visual Basic .NET의 경우 공유) 메서드입니다.  
   
- **SqlContext** 네임스페이스에 있는 **Microsoft.SqlServer.Server** 클래스는 이미 설정된 **SqlCommand** 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 액세스할 수 있습니다. 여기서는 사용되지 않지만 **System.Transactions** API(응용 프로그래밍 인터페이스)를 통해 현재 트랜잭션 컨텍스트를 사용할 수도 있습니다.  
+  **SqlContext** 네임스페이스에 있는 **Microsoft.SqlServer.Server** 클래스는 이미 설정된 **SqlCommand** 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 액세스할 수 있습니다. 여기서는 사용되지 않지만 **System.Transactions** API(애플리케이션 프로그래밍 인터페이스)를 통해 현재 트랜잭션 컨텍스트를 사용할 수도 있습니다.  
   
- 함수 본문에 있는 대부분의 줄은 **System.Data.SqlClient** 네임스페이스에 있는 형식을 사용하는 클라이언트 응용 프로그램을 작성해 본 개발자에게 익숙한 코드여야 합니다.  
+ 함수 본문에 있는 대부분의 줄은 **System.Data.SqlClient** 네임스페이스에 있는 형식을 사용하는 클라이언트 애플리케이션을 작성해 본 개발자에게 익숙한 코드여야 합니다.  
   
  [C#]  
   

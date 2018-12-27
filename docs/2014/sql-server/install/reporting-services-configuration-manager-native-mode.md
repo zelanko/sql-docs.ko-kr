@@ -76,7 +76,7 @@ ms.locfileid: "48209793"
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
   
--   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
+-   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 애플리케이션에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
   
 -   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 저장소로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48209793"
   
 4.  원격 컴퓨터를 지정하는 경우 **찾기** 를 클릭하여 연결을 설정합니다.  
   
-5.  **Report Server stance**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. 목록에 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스만 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
+5.   **Report Server stance**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. 목록에 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스만 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
   
 6.  **연결**을 클릭합니다.  
   

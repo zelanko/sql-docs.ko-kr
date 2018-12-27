@@ -188,7 +188,7 @@ ms.locfileid: "51601963"
 3.  작업을 수행할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   
 ##  <a name="CommandPrompt"></a> 명령 프롬프트 창에서 net 명령 사용  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명령을 사용하여 **,** 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명령을 사용하여 **,** 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
   
 ###  <a name="dbDefault"></a> 다음 기본 인스턴스 시작하기: [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -243,7 +243,7 @@ ms.locfileid: "51601963"
   
      **net start SQLAgent$** *instancename*  
   
- 문제 해결을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 세부 정보 표시 모드로 실행하는 방법은 [sqlagent90 응용 프로그램](../../tools/sqlagent90-application.md)을 참조하세요.  
+ 문제 해결을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 세부 정보 표시 모드로 실행하는 방법은 [sqlagent90 애플리케이션](../../tools/sqlagent90-application.md)을 참조하세요.  
   
 ###  <a name="Browser"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 시작하려면  
   

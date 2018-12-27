@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
 ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/05/2018
 ms.locfileid: "51018438"
@@ -136,7 +136,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 3.  컴퓨터 선택 대화 상자에서 관리할 Server Core 컴퓨터의 이름을 입력하거나 찾아보기를 클릭하여 찾은 다음 확인을 클릭합니다.  
   
-4.  콘솔 트리에 있는 Server Core 컴퓨터의 컴퓨터 관리에서 서비스 및 응용 프로그램을 클릭합니다.  
+4.  콘솔 트리에 있는 Server Core 컴퓨터의 컴퓨터 관리에서 서비스 및 애플리케이션을 클릭합니다.  
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 두 번 클릭합니다.  
   
@@ -182,7 +182,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Server Core에서 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 원격 액세스 구성  
  아래 설명된 작업을 수행하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1에서 실행하는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 인스턴스의 원격 액세스를 구성합니다.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  

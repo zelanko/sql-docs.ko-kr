@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34026880"
@@ -48,7 +48,7 @@ ms.locfileid: "34026880"
   
 1.  중앙 관리에서 **모니터링**을 클릭합니다.  
   
-2.  **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
+2.   **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
   
 3.  **사용 현황 데이터 수집 사용**을 선택합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "34026880"
 ##  <a name="jobs"></a> 사용 현황 데이터 수집에 사용되는 타이머 작업 구성  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 상태 및 사용 현황 데이터는 사용 현황 데이터 컬렉션 시스템에서 두 개의 타이머 작업을 통해 다른 위치로 이동됩니다.  
   
--   "Microsoft SharePoint Foundation 사용 현황 데이터 가져오기" 타이머 작업이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 데이터를 이동합니다.  
+-   "Microsoft SharePoint Foundation 사용 현황 데이터 가져오기" 타이머 작업이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 데이터를 이동합니다.  
   
 -   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 처리 타이머 작업"이 기본 제공 관리 보고서의 데이터 원본인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 데이터를 이동합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34026880"
   
 1.  중앙 관리에서 **모니터링**을 클릭합니다.  
   
-2.  **작업 정의 검토**를 클릭합니다. 를 클릭합니다. **타이머 작업** 섹션에서  
+2.   **작업 정의 검토**를 클릭합니다. 를 클릭합니다. **타이머 작업** 섹션에서  
   
 3.  **Microsoft SharePoint Foundation 사용 현황 데이터 가져오기**를 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34026880"
 7.  보고서에서 새로 고침 데이터를 봅니다. 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)을(를) 참조하세요.  
   
 ##  <a name="confighist"></a> 사용 데이터 기록 저장 기간 제한  
- 사용 데이터 기록은 이벤트(연결, 로드, 언로드 및 요청 시 쿼리 처리) 및 데이터 새로 고침(예약된 데이터 처리)에 대해 저장됩니다. SharePoint 사용 데이터 컬렉션 시스템을 통해 사용 데이터가 수집되지만 보고 데이터는 장기적 저장을 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 응용 프로그램 데이터베이스 및 보고 데이터베이스로 이동됩니다. 사용 데이터 기록 설정은 사용 데이터가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 응용 프로그램 데이터베이스에 보존되는 기간을 제어합니다. 같은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스에 저장된 모든 형식의 사용 데이터에 같은 한계가 동일하게 적용됩니다.  
+ 사용 데이터 기록은 이벤트(연결, 로드, 언로드 및 요청 시 쿼리 처리) 및 데이터 새로 고침(예약된 데이터 처리)에 대해 저장됩니다. SharePoint 사용 데이터 컬렉션 시스템을 통해 사용 데이터가 수집되지만 보고 데이터는 장기적 저장을 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 애플리케이션 데이터베이스 및 보고 데이터베이스로 이동됩니다. 사용 데이터 기록 설정은 사용 데이터가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 애플리케이션 데이터베이스에 보존되는 기간을 제어합니다. 같은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스에 저장된 모든 형식의 사용 데이터에 같은 한계가 동일하게 적용됩니다.  
   
 1.  [Power Pivot 서비스 응용 프로그램 페이지를 엽니다](#openconfig).  
   
@@ -157,18 +157,18 @@ ms.locfileid: "34026880"
   
     -   범위는 1부터 임의의 양의 정수입니다.  
   
-    -   기본값은 300초(또는 5분)입니다. 다양한 응용 프로그램과 서비스를 실행하는 동적 팜 환경에서는 이 값을 사용하는 것이 좋습니다.  
+    -   기본값은 300초(또는 5분)입니다. 다양한 애플리케이션과 서비스를 실행하는 동적 팜 환경에서는 이 값을 사용하는 것이 좋습니다.  
   
      이 값을 아주 큰 수로 늘리면 보고하기 전에 통계 데이터가 손실될 수 있습니다. 예를 들면 서비스 다시 시작으로 인해 통계 데이터가 손실될 수 있습니다. 반대로 기본 제공 작업 보고서에 충분한 데이터가 표시되지 않는 경우 보고 시간 이벤트가 자주 발생하도록 이 간격을 줄여봅니다.  
   
 3.  **확인**을 클릭합니다.  
   
 ##  <a name="openconfig"></a> Power Pivot 서비스 응용 프로그램 페이지를 열어 구성 설정 액세스  
- 서비스 응용 프로그램 설정을 수정하려면 팜 또는 서비스 관리자여야 합니다. 팜에서 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 정의한 경우 각 응용 프로그램을 개별적으로 수정해야 합니다.  
+ 서비스 애플리케이션 설정을 수정하려면 팜 또는 서비스 관리자여야 합니다. 팜에서 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션을 정의한 경우 각 애플리케이션을 개별적으로 수정해야 합니다.  
   
-1.  SharePoint 중앙 관리의 **응용 프로그램 관리**에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리의 **애플리케이션 관리**에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 찾습니다. 유형을 기준으로 서비스 응용 프로그램을 식별할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 유형은 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**입니다.  
+2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 찾습니다. 유형을 기준으로 서비스 애플리케이션을 식별할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 유형은 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**입니다.  
   
 3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 이름을 클릭합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드가 열립니다.  
   

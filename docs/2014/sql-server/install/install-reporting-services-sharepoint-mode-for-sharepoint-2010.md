@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159453"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010용 Reporting Services SharePoint 모드 설치
-  이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 여 기존 팜에 서버를 볼 [팜에 추가 보고서 서버를 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
+  이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 여 기존 팜에 서버를 볼 [팜에 추가 보고서 서버를 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
   
 ||  
 |-|  
@@ -53,11 +53,11 @@ ms.locfileid: "48159453"
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>단일 서버 구성을 위한 데이터베이스 고려 사항  
   
--   Reporting Services와 SharePoint 제품 및 기술은 모두 SQL Server 관계형 데이터베이스를 사용하여 응용 프로그램 데이터를 저장합니다.  
+-   Reporting Services와 SharePoint 제품 및 기술은 모두 SQL Server 관계형 데이터베이스를 사용하여 애플리케이션 데이터를 저장합니다.  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에는 SQL Engine의 호환되는 SQL Server 평가 버전 인스턴스가 필요합니다.  
   
--   SharePoint 제품에서는 기존 데이터베이스 인스턴스를 사용할 수 있습니다. 데이터베이스 엔진의 인스턴스가 설치되지 않은 경우 SharePoint 제품 설치 프로그램은 SharePoint 응용 프로그램 데이터베이스에 대해 SQL Server Express Edition을 설치합니다.  
+-   SharePoint 제품에서는 기존 데이터베이스 인스턴스를 사용할 수 있습니다. 데이터베이스 엔진의 인스턴스가 설치되지 않은 경우 SharePoint 제품 설치 프로그램은 SharePoint 애플리케이션 데이터베이스에 대해 SQL Server Express Edition을 설치합니다.  
   
 -   보고서 서버 인스턴스는 SQL Server Express Edition을 데이터베이스로 사용할 수 없습니다. 그러나 SharePoint 제품에 의해 설치된 SQL Server Express Edition 인스턴스는 다른 데이터베이스 엔진 버전과 함께 있을 수 있습니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48159453"
   
 8.  **설치 역할** 페이지에서 **SQL Server 기능 설치** 를 클릭합니다.  
   
-     **다음**을 클릭합니다.  
+      **다음**을 클릭합니다.  
   
      ![설치 역할을 위한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할을 위한 SQL Server 기능 설치")  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48159453"
   
 14. 데이터베이스 엔진 서비스를 선택한 경우 **데이터베이스 엔진 구성** 페이지가 표시되면 해당 계정을 SQL 관리자 목록에 추가하고 **다음**을 클릭합니다.  
   
-15. **Reporting Services 구성** 페이지에서 **설치만** 옵션이 선택된 상태로 표시되어야 합니다. 이 옵션은 보고서 서버 파일을 설치하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 SharePoint 환경을 구성하지 않습니다. SQL Server 설치가 완료되면 이 항목의 다른 섹션에 따라 SharePoint 환경을 구성합니다. 이 절차에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 설치 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 생성이 포함됩니다.  
+15. **Reporting Services 구성** 페이지에서 **설치만** 옵션이 선택된 상태로 표시되어야 합니다. 이 옵션은 보고서 서버 파일을 설치하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 SharePoint 환경을 구성하지 않습니다. SQL Server 설치가 완료되면 이 항목의 다른 섹션에 따라 SharePoint 환경을 구성합니다. 이 절차에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 설치 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 생성이 포함됩니다.  
   
      ![rs_SQL11_SETUP_SSRS_configpage_withcircles](../../../2014/sql-server/install/media/rs-kj-setup-ssrs-configpage-withcircles.gif "rs_SQL11_SETUP_SSRS_configpage_withcircles")  
   
@@ -173,22 +173,22 @@ ms.locfileid: "48159453"
 
   
 ##  <a name="bkmk_create_serrviceapplication"></a> Reporting Services 서비스 응용 프로그램 만들기  
- 이 섹션에서는 서비스 응용 프로그램을 만드는 단계와 속성에 대한 설명(기존 서비스 응용 프로그램을 검토하려는 경우)을 제공합니다.  
+ 이 섹션에서는 서비스 애플리케이션을 만드는 단계와 속성에 대한 설명(기존 서비스 애플리케이션을 검토하려는 경우)을 제공합니다.  
   
-1.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
 2.  SharePoint 리본에서 **새로 만들기** 단추를 클릭합니다.  
   
-3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 응용 프로그램**을 클릭합니다.  
+3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 애플리케이션**을 클릭합니다.  
   
     > [!WARNING]  
     >  경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션이 표시 되지 않습니다 목록의 것을 **표시는를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지**. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
-4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 응용 프로그램을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
+4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 애플리케이션을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
   
-5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 새 응용 프로그램 풀의 이름을 서비스 응용 프로그램의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
+5.  **응용 프로그램 풀** 섹션에서 응용 프로그램에 대한 새 응용 프로그램 풀을 만듭니다(권장). 새 애플리케이션 풀의 이름을 서비스 애플리케이션의 이름과 동일하게 사용할 경우 진행 중인 관리를 쉽게 수행할 수 있습니다.  
   
-     응용 프로그램 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
+     애플리케이션 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장하려는 경우에도 도메인 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 현재 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
   
@@ -196,11 +196,11 @@ ms.locfileid: "48159453"
   
 8.  **데이터베이스 인증**에서 기본값은 Windows 인증입니다. **SQL 인증**을 선택하는 경우 SharePoint 배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint 관리자 설명서에서 참조하십시오.  
   
-9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 응용 프로그램을 하나의 웹 응용 프로그램에 연결할 수 있습니다. 모든 현재 웹 응용 프로그램이 이미 Reporting Services 서비스 응용 프로그램에 연결된 경우 경고 메시지가 표시됩니다.  
+9. **웹 응용 프로그램 연결** 섹션에서 현재 Reporting Services 서비스 응용 프로그램에 의해 액세스하기 위해 프로비전 대상 웹 응용 프로그램을 선택합니다. 하나의 Reporting Services 서비스 애플리케이션을 하나의 웹 애플리케이션에 연결할 수 있습니다. 모든 현재 웹 애플리케이션이 이미 Reporting Services 서비스 애플리케이션에 연결된 경우 경고 메시지가 표시됩니다.  
   
 10. **확인**을 클릭합니다.  
   
-11. 서비스 응용 프로그램 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
  ![PowerShell 관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 만들려면 PowerShell을 사용 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램, 참조 [Reporting Services 서비스 응용 프로그램을 만들려면 PowerShell을 사용 하 여](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)입니다.  
   
@@ -231,12 +231,12 @@ ms.locfileid: "48159453"
  이 섹션에서는 대부분의 SharePoint 배포에서 중요한 추가 구성 단계에 대해 설명합니다.  
   
 ###  <a name="bkmk_provision_agent"></a> 구독 및 경고 프로비전  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 응용 프로그램 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 시스템에 있는 경우와 같이 여러 시스템 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고 기능을 사용하려면 SQL Server 에이전트 권한 구성이 필요할 수 있습니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트합니다. 서비스 애플리케이션 만들기 성공 페이지에서 **구독 및 경고 프로비전** 링크를 클릭하여 SQL Server 에이전트를 프로비전할 다른 페이지로 이동할 수 있습니다. 예를 들어 SQL Server 데이터베이스 인스턴스가 다른 시스템에 있는 경우와 같이 여러 시스템 경계를 이동하며 배포하는 경우 프로비전 단계가 필요합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 
   
-### <a name="configure-e-mail-for-a-service-application"></a>서비스 응용 프로그램에 대한 전자 메일 구성  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 구성하고 서비스 응용 프로그램을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
+### <a name="configure-e-mail-for-a-service-application"></a>서비스 애플리케이션에 대한 전자 메일 구성  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 전자 메일 메시지로 경고를 보냅니다. 전자 메일을 보내기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 구성하고 서비스 애플리케이션을 위한 전자 메일 배달 확장 프로그램을 수정해야 할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가입 기능을 위해 전자 메일 배달 확장 프로그램을 사용하려면 전자 메일 설정이 필요합니다. 자세한 내용은 [Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)을 참조하세요.  
   
 
   

@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47752931"
 ---
-# <a name="using-16-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 16비트 응용 프로그램 사용
+# <a name="using-16-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 16비트 애플리케이션 사용
 > [!IMPORTANT]  
 >  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 32 비트 또는 64 비트 드라이버 관리자를 대신 사용 합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47752931"
 ## <a name="components"></a>구성 요소  
  MDAC 2.8 SP1 SDK의 ODBC 구성 요소에는 32 비트 드라이버와 16 비트 응용 프로그램을 실행 하기 위한 다음 파일이 포함 됩니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  
   
-|파일 이름 |Description|  
+| 파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 비트 ODBC 제네릭 썽킹 DLL|  
 |Odbc32gt.dll|32 비트 ODBC 제네릭 썽킹 DLL|  
@@ -59,7 +59,7 @@ ms.locfileid: "47752931"
   
  또한의 일부분이 아닌 ODBC 3.51에 16 비트 ODBC 2.10 드라이버 관리자와 함께 다음 파일에 필요한 및 16 비트 응용 프로그램을 사용 하 여 설치 해야 합니다.  
   
-|파일 이름 |Description|  
+| 파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 비트 드라이버 관리자입니다.|  
 |경우|16 비트 설치 관리자 DLL|  

@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48223523"
@@ -25,7 +25,7 @@ ms.locfileid: "48223523"
   이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle 클라이언트 및 네트워킹 소프트웨어와 관련된 오류가 발생했습니다.  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
   
  "[Microsoft OLE DB Provider for Oracle]로 서버에 연결하지 못했습니다. Oracle 클라이언트 및 네트워킹 구성 요소를 찾을 수 없습니다. 이러한 구성 요소는 Oracle 버전 7.3.3 이상의 클라이언트 소프트웨어 설치의 일부로 Oracle사에서 제공합니다. 이러한 구성 요소를 설치해야 공급자를 사용할 수 있습니다."  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48223523"
  연결된 서버 연결을 통해 Oracle 게시자에 연결하려면 다른 TNS 서비스 이름을 만든 다음 이 이름을 사용하여 [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 호출합니다. TNS 서비스 이름을 만드는 방법은 Oracle 설명서를 참조하십시오.  
   
 ## <a name="sql-server-error-21617-is-raised"></a>SQL Server 오류 21617이 발생했습니다.  
- Oracle 게시는 Oracle 응용 프로그램 SQL*PLUS를 사용하여 게시자 지원 코드 패키지를 Oracle 데이터베이스로 다운로드합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 Oracle 게시자를 구성하기 전에 배포자에서 시스템 경로로 SQL\*PLUS에 액세스할 수 있는지 확인합니다. SQL\*PLUS를 로드할 수 없으면 다음 오류 메시지가 표시됩니다.  
+ Oracle 게시는 Oracle 애플리케이션 SQL*PLUS를 사용하여 게시자 지원 코드 패키지를 Oracle 데이터베이스로 다운로드합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 Oracle 게시자를 구성하기 전에 배포자에서 시스템 경로로 SQL\*PLUS에 액세스할 수 있는지 확인합니다. SQL\*PLUS를 로드할 수 없으면 다음 오류 메시지가 표시됩니다.  
   
  "SQL*PLUS를 실행할 수 없습니다. 배포자에 최신 버전의 Oracle 클라이언트 코드가 설치되었는지 확인하십시오."  
   

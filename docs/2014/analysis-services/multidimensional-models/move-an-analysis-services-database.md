@@ -17,7 +17,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50145328"
@@ -52,7 +52,7 @@ ms.locfileid: "50145328"
   
 5.  SSMS의 왼쪽 또는 오른쪽 창에서 **데이터베이스** 폴더를 찾습니다.  
   
-6.  **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
+6.   **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
   
 7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "50145328"
   
 #### <a name="moving-a-database-programmatically-using-amo"></a>AMO를 사용하여 프로그래밍 방식으로 데이터베이스 이동  
   
-1.  C# 응용 프로그램에 다음 예제 코드를 적용하고 표시되는 태스크를 완료합니다.  
+1.  C# 애플리케이션에 다음 예제 코드를 적용하고 표시되는 태스크를 완료합니다.  
   
  `private void MoveDb(Server server, string dbName,`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50145328"
   
  `}`  
   
-1.  C# 응용 프로그램에서 필요한 매개 변수를 사용하여 `MoveDb()` 를 호출합니다.  
+1.  C# 애플리케이션에서 필요한 매개 변수를 사용하여 `MoveDb()` 를 호출합니다.  
   
 2.  코드를 컴파일하고 실행하여 데이터베이스를 이동합니다.  
   

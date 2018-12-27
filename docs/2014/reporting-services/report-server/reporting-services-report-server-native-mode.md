@@ -23,9 +23,9 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48086913"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
-  기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다.  
+  기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 관리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 기본 모드에서 보고서 서버를 관리할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 관리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 기본 모드에서 보고서 서버를 관리할 수 있습니다.  
   
  보고서 서버가 SharePoint 모드용으로 구성된 경우 SharePoint 사이트의 내용 관리 페이지를 사용하여 보고서, 공유 데이터 원본 및 다른 보고서 서버 항목을 관리해야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48086913"
   
 -   보고서 서버 서비스 내에서 실행되는 보고서 서버 웹 서비스  
   
--   예약된 작업 및 보고서 배달을 처리하는 백그라운드 처리 응용 프로그램  
+-   예약된 작업 및 보고서 배달을 처리하는 백그라운드 처리 애플리케이션  
   
 -   보고서 서버 데이터베이스  
   
@@ -89,10 +89,10 @@ ms.locfileid: "48086913"
   
 |연산|파일 유형|  
 |---------------|---------------|  
-|업로드|보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)을 제외한 모든 파일이 리소스로 업로드됩니다.<br /><br /> 리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 응용 프로그램 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)를 참조하세요.|  
+|업로드|보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)을 제외한 모든 파일이 리소스로 업로드됩니다.<br /><br /> 리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 애플리케이션 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)를 참조하세요.|  
 |게시|.rdl, .smdl 및 .rds 데이터 원본 파일을 제외한 프로젝트의 모든 파일이 리소스로 업로드됩니다. 리소스를 게시하려면 보고서 디자이너에서 프로젝트에 기존 항목을 추가한 다음 보고서 서버에 해당 프로젝트를 게시합니다.|  
   
- 모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 응용 프로그램 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  
+ 모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 애플리케이션 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  
   
  보고서 사용자가 리소스를 볼 수 있는지 여부는 브라우저의 보기 기능에 따라 다릅니다. 리소스는 보고서 서버에서 처리되지 않기 때문에 특정 MIME 형식을 렌더링하기 위한 보기 기능을 브라우저에서 제공해야 합니다. 브라우저에서 콘텐츠를 렌더링할 수 없으면 리소스를 보는 사용자에게 리소스의 일반 속성만 표시됩니다.  
   

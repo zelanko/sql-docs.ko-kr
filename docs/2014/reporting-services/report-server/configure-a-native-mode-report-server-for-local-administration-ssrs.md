@@ -20,7 +20,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48189073"
@@ -46,7 +46,7 @@ ms.locfileid: "48189073"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]  
   
- 위에 나와 있는 운영 체제는 권한을 제한하므로 로컬 Administrators 그룹의 멤버는 대부분의 응용 프로그램을 표준 사용자 계정을 사용할 때처럼 실행하게 됩니다.  
+ 위에 나와 있는 운영 체제는 권한을 제한하므로 로컬 Administrators 그룹의 멤버는 대부분의 애플리케이션을 표준 사용자 계정을 사용할 때처럼 실행하게 됩니다.  
   
  이를 통해 전반적인 시스템 보안이 개선되지만 Reporting Services에서 로컬 관리자용으로 만드는 미리 정의된 기본 제공 역할 할당은 사용할 수 없습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48189073"
 ##  <a name="bkmk_configuraiton_overview"></a> 구성 변경 개요  
  다음 구성 변경은 표준 사용자 권한을 사용하여 보고서 서버 내용 및 작업을 관리할 수 있도록 서버를 구성합니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가합니다. 기본적으로 위에 나와 있는 운영 체제에서 실행되는 Internet Explorer는 **보호 모드**로 실행됩니다. 이 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 응용 프로그램에 대한 보호 모드를 해제할 수 있습니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가합니다. 기본적으로 위에 나와 있는 운영 체제에서 실행되는 Internet Explorer는 **보호 모드**로 실행됩니다. 이 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 애플리케이션에 대한 보호 모드를 해제할 수 있습니다.  
   
 -   Internet Explorer에서 **관리자 권한으로 실행** 기능을 사용하지 않고도 보고서 서버 관리자에게 내용 및 작업을 관리하는 권한을 부여하는 역할 할당을 만듭니다. Windows 사용자 계정에 대한 역할 할당을 만들면 Reporting Services에서 만드는 미리 정의된 기본 제공 역할 할당을 대체하는 명시적인 역할 할당을 통해 내용 관리자 및 시스템 관리자 권한으로 보고서 서버에 액세스할 수 있습니다.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "48189073"
   
  **SSDT를 열 때마다 승격된 권한으로 실행하려면**  
   
-1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 **Visual Studio 용 SQL Server Data Tools**합니다. **관리자 권한으로 실행**을 클릭합니다.  
+1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 **Visual Studio 용 SQL Server Data Tools**합니다.  **관리자 권한으로 실행**을 클릭합니다.  
   
      **또는**이전 운영 체제에서 다음을 수행합니다.  
   

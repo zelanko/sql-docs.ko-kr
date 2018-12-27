@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2427b5d40c0e088b50965ac30d891f493bdde99f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48227993"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
+   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
   
 -   설치는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스 및 프록시입니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227993"
     -   [구독 소유자 변경 및 나열](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 요약  
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx)합니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx)합니다. 다음 cmdlet 요약에서 서비스 애플리케이션에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -98,15 +98,15 @@ ms.locfileid: "48227993"
 |Get-SPRSServiceApplicationServers|로컬 SharePoint 팜 내 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스가 설치된 모든 서버를 가져옵니다. 이 cmdlet은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 업그레이드 시 공유 서비스를 실행하므로 업그레이드되어야 하는 서버를 확인하는 데 유용합니다.|  
   
 ###  <a name="bkmk_serviceapp_cmdlets"></a> 서비스 응용 프로그램 및 프록시 Cmdlet  
- 다음 표에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램과 관련 프록시에 대한 PowerShell cmdlet이 나와 있습니다.  
+ 다음 표에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션과 관련 프록시에 대한 PowerShell cmdlet이 나와 있습니다.  
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 개체를 가져옵니다.|  
-|New-SPRSServiceApplication|새 Reporting Services 서비스 응용 프로그램 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 응용 프로그램 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 응용 프로그램 풀 계정(기본값)|  
-|Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 응용 프로그램을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
-|Set-SPRSServiceApplication|기존 Reporting Services 서비스 응용 프로그램의 속성을 편집합니다.|  
-|New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 응용 프로그램 프록시를 만듭니다.|  
+|Get-SPRSServiceApplication|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 개체를 가져옵니다.|  
+|New-SPRSServiceApplication|새 Reporting Services 서비스 애플리케이션 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 애플리케이션 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 애플리케이션 풀 계정(기본값)|  
+|Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 애플리케이션을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
+|Set-SPRSServiceApplication|기존 Reporting Services 서비스 애플리케이션의 속성을 편집합니다.|  
+|New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 애플리케이션 프록시를 만듭니다.|  
 |Get-SPRSServiceApplicationProxy|하나 이상 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램 프록시 서비스입니다.|  
 |Dismount-SPRSDatabase|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 분리합니다.|  
 |Remove-SPRSDatabase|에 대 한 서비스 응용 프로그램 데이터베이스를 제거는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
@@ -114,21 +114,21 @@ ms.locfileid: "48227993"
 |Mount-SPRSDatabase|데이터베이스를 탑재 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |New-SPRSDatabase|지정 된 새 서비스 응용 프로그램 데이터베이스를 만들 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |Get-SPRSDatabaseCreationScript|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabase|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 응용 프로그램 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. 이 항목의 예제를 참조 하세요 [가져오기 및 Servicea 보고 응용 프로그램 데이터베이스의 속성을 설정, 예를 들어 제한 시간을 데이터베이스](#bkmk_example_db_properties)합니다.|  
+|Get-SPRSDatabase|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 애플리케이션 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. 이 항목의 예제를 참조 하세요 [가져오기 및 Servicea 보고 응용 프로그램 데이터베이스의 속성을 설정, 예를 들어 제한 시간을 데이터베이스](#bkmk_example_db_properties)합니다.|  
 |Get-SPRSDatabaseRightsScript|화면에 데이터베이스 권한 스크립트 출력을 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스를 현재 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 데이터베이스 버전으로 업그레이드합니다.|  
+|Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스를 현재 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 데이터베이스 버전으로 업그레이드합니다.|  
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services 사용자 지정 기능 Cmdlet  
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Update-SPRSEncryptionKey|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화 키를 업데이트하고 데이터를 다시 암호화합니다.|  
-|Restore-SPRSEncryptionKey|Reporting Services 서비스 응용 프로그램에 대해 이전에 백업된 암호화 키를 복원합니다.|  
-|Remove-SPRSEncryptedData|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화된 데이터를 삭제합니다.|  
-|Backup-SPRSEncryptionKey|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화 키를 백업합니다.|  
-|New-SPRSExtension|Reporting Services 서비스 응용 프로그램의 새 확장 프로그램을 등록합니다.|  
+|Update-SPRSEncryptionKey|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화 키를 업데이트하고 데이터를 다시 암호화합니다.|  
+|Restore-SPRSEncryptionKey|Reporting Services 서비스 애플리케이션에 대해 이전에 백업된 암호화 키를 복원합니다.|  
+|Remove-SPRSEncryptedData|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화된 데이터를 삭제합니다.|  
+|Backup-SPRSEncryptionKey|지정된 Reporting Services 서비스 애플리케이션에 대한 암호화 키를 백업합니다.|  
+|New-SPRSExtension|Reporting Services 서비스 애플리케이션의 새 확장 프로그램을 등록합니다.|  
 |Set-SPRSExtension|기존 Reporting Services 확장 프로그램의 속성을 설정합니다.|  
-|Remove-SPRSExtension|Reporting Services 서비스 응용 프로그램에서 확장 프로그램을 삭제합니다.|  
+|Remove-SPRSExtension|Reporting Services 서비스 애플리케이션에서 확장 프로그램을 삭제합니다.|  
 |Get-SPRSExtension|하나 이상 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 대 한 확장을 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.<br /><br /> 유효한 값은<br /><br /> **배달**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **보안**<br /><br /> **인증**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **Reportdefinitioncustomization**|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
@@ -173,7 +173,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 ###  <a name="bkmk_example_create_service_application"></a> Reporting Services 서비스 응용 프로그램 및 프록시 만들기  
  이 예제 스크립트는 다음 태스크를 완료합니다.  
   
-1.  Reporting Services 서비스 응용 프로그램 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 응용 프로그램 풀이 이미 있는 것으로 가정합니다.  
+1.  Reporting Services 서비스 애플리케이션 및 프록시를 만듭니다. 이 스크립트는 "My App Pool" 애플리케이션 풀이 이미 있는 것으로 가정합니다.  
   
 2.  기본 프록시 그룹에 프록시 추가  
   
@@ -196,7 +196,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a> 검토 하 고 Reporting Services 배달 확장 프로그램을 업데이트 합니다.  
- 다음 PowerShell 스크립트 예제에서 `My RS Service App`서비스 응용 프로그램에 대해 보고서 서버 메일 배달 확장 프로그램의 구성을 업데이트합니다. SMTP 서버(`<email server name>`) 및 FROM 메일 별칭(`<your FROM email address>`) 값을 업데이트합니다.  
+ 다음 PowerShell 스크립트 예제에서 `My RS Service App`서비스 애플리케이션에 대해 보고서 서버 메일 배달 확장 프로그램의 구성을 업데이트합니다. SMTP 서버(`<email server name>`) 및 FROM 메일 별칭(`<your FROM email address>`) 값을 업데이트합니다.  
   
 ```  
 $app=get-sprsserviceapplication -Name "My RS Service App"  
@@ -209,15 +209,15 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 위의 예에서 서비스 응용 프로그램의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 응용 프로그램을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어  
+ 위의 예에서 서비스 애플리케이션의 정확한 이름을 모를 경우 부분 이름 검색을 기반으로 서비스 애플리케이션을 가져오도록 첫 번째 문을 다시 작성할 수 있습니다. 예를 들어  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- 다음 스크립트는 "Reporting Services 응용 프로그램" 서비스 응용 프로그램에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 응용 프로그램의 개체로 설정합니다.  
+ 다음 스크립트는 "Reporting Services 애플리케이션" 서비스 애플리케이션에 대해 보고서 서버 전자 메일 배달 확장 프로그램의 현재 구성 값을 반환합니다. 첫 번째 단계에서는 $app 변수 값을 "My RS Service App" 이름을 가진 서비스 애플리케이션의 개체로 설정합니다.  
   
- 두 번째 문은 $app 변수에서 서비스 응용 프로그램 개체에 대한 'Report Server Email' 배달 확장 프로그램을 가져오고 configurationXML을 선택합니다.  
+ 두 번째 문은 $app 변수에서 서비스 애플리케이션 개체에 대한 'Report Server Email' 배달 확장 프로그램을 가져오고 configurationXML을 선택합니다.  
   
 ```  
 $app=get-sprsserviceapplication –Name "Reporting Services Application"  
@@ -262,7 +262,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
 ```  
   
 ###  <a name="bkmk_example_list_data_extensions"></a> 목록에서 reporting services 데이터 확장 프로그램 – SharePoint 모드  
- 다음 예제는 각 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 반복하고 각각에 대한 현재 데이터 확장을 나열합니다.  
+ 다음 예제는 각 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 반복하고 각각에 대한 현재 데이터 확장을 나열합니다.  
   
 ```  
 $apps = Get-SPRSServiceApplication  

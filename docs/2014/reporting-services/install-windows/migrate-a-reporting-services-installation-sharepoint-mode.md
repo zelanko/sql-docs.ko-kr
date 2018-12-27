@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ac58f8565201b500a39862270756df2222439a5e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48083803"
@@ -40,7 +40,7 @@ ms.locfileid: "48083803"
  
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 이전의 Reporting Services SharePoint 모드 버전에서 마이그레이션  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다.  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
  새 SharePoint 환경이 실행 중이면 콘텐츠 데이터베이스가 포함된 데이터베이스 수준에서 콘텐츠 전용 마이그레이션 또는 전체 마이그레이션을 선택할 수 있습니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48083803"
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키|**Rskeymgmt.exe** 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자. [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.|표에 나와 있는 도구는 백업 작업에는 사용할 수 있지만 복원 작업 작업에는 사용할 수 없습니다. 복원 작업에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 관리 페이지 또는 PowerShell을 사용합니다.|  
 |**2**|SharePoint 콘텐츠 데이터베이스||데이터베이스를 백업하고 분리합니다.<br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
 |**3**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]카탈로그 데이터베이스인 SQL Server 데이터베이스|SQL Server 데이터베이스 백업 및 복원<br /><br /> 로 구분하거나 여러<br /><br /> SQL Server 데이터베이스 분리 및 연결||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일|단순한 파일 복사|파일을 사용자 지정한 경우에만 rsreportserver.config를 복사해야 합니다. 파일의 기본 위치에 대한 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> 보고서 서버 ASP.NET 응용 프로그램용 Web.config<br /><br /> ASP.NET용 Machine.config|  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일|단순한 파일 복사|파일을 사용자 지정한 경우에만 rsreportserver.config를 복사해야 합니다. 파일의 기본 위치에 대한 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> 보고서 서버 ASP.NET 애플리케이션용 Web.config<br /><br /> ASP.NET용 Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a> 복원 작업  
  이 섹션에서는 마이그레이션해야 하는 정보 유형과 복원을 완료하는 데 사용하는 도구나 프로세스에 대해 설명합니다. 복원하는 데 사용하는 도구는 백업하는 데 사용한 도구와 다를 수 있습니다.  
@@ -84,9 +84,9 @@ ms.locfileid: "48083803"
   
 ||개체|메서드|참고|  
 |-|-------------|------------|-----------|  
-|**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 응용 프로그램에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 응용 프로그램과 URL을 나열합니다.<br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 및 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
+|**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 애플리케이션에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 애플리케이션과 URL을 나열합니다.<br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 및 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
 |**2**|SQL 데이터베이스에 복원 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스 (ReportServer).|SQL 데이터베이스 백업 및 복원<br /><br /> **또는**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 처음 사용하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 환경에서 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트합니다.|  
-|**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|SharePoint 중앙 관리|새 서비스 응용 프로그램을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리를 사용 하 여에 대 한 자세한 내용은에서 "단계 3:: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2013 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)합니다.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만드는 방법" 섹션을 참조하세요.|  
+|**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 만들기|SharePoint 중앙 관리|새 서비스 애플리케이션을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리를 사용 하 여에 대 한 자세한 내용은에서 "단계 3:: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2013 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)합니다.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 애플리케이션을 만드는 방법" 섹션을 참조하세요.|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 복원|단순한 파일 복사|파일 기본 위치의 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |**5**|복원 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키입니다.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 "SystemSettings" 페이지<br /><br /> **또는**<br /><br /> PowerShell을 사용하여 키 백업 파일 복원|[Reporting Services SharePoint 서비스 응용 프로그램 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md) 항목의 "키 관리" 섹션을 참조하세요.|  
   
@@ -102,23 +102,23 @@ ms.locfileid: "48083803"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업합니다.  
   
-2.  SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 백업합니다. 그러면 SharePoint의 서비스 응용 프로그램 데이터베이스도 백업됩니다. 항목을 참조 [백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+2.  SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 백업합니다. 그러면 SharePoint의 서비스 애플리케이션 데이터베이스도 백업됩니다. 항목을 참조 [백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 3.  UEA(무인 실행 계정) 및 Windows 인증이 있는 경우 복원 프로세스에 사용할 수 있도록 자격 증명을 기록해 두십시오.  
   
-4.  자세한 내용은 [SharePoint 2013에서 서비스 응용 프로그램 백업](http://technet.microsoft.com/library/ee428318.aspx)을 참조하십시오.  
+4.  자세한 내용은 [SharePoint 2013에서 서비스 애플리케이션 백업](http://technet.microsoft.com/library/ee428318.aspx)을 참조하십시오.  
   
 ### <a name="restore-operations"></a>복원 작업  
   
-1.  SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 복원합니다. 이때 PowerShell을 사용할 수도 있습니다.  
+1.  SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 복원합니다. 이때 PowerShell을 사용할 수도 있습니다.  
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 복원합니다.  
   
      항목의 "키 관리" 섹션을 참조 [Reporting Services SharePoint 서비스 응용 프로그램을 관리 합니다.](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
-3.  서비스 응용 프로그램에 대한 UEA 및 Windows 자격 증명을 구성합니다.  
+3.  서비스 애플리케이션에 대한 UEA 및 Windows 자격 증명을 구성합니다.  
   
-4.  자세한 내용은 [SharePoint 2013에서 서비스 응용 프로그램 복원](http://technet.microsoft.com/library/ee428305.aspx)을 참조하십시오.  
+4.  자세한 내용은 [SharePoint 2013에서 서비스 애플리케이션 복원](http://technet.microsoft.com/library/ee428305.aspx)을 참조하십시오.  
   
 ##  <a name="bkmk_additional_resources"></a> 추가 리소스  
   

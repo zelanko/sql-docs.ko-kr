@@ -16,13 +16,13 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1010a7a3b910b6dd7f658a67627ec1c1cfa89ce
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48140683"
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -30,7 +30,7 @@ ms.locfileid: "48140683"
 |`AttributeHierarchyEnabled`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성에 대한 특성 계층을 생성할지 여부를 결정합니다. 특성 계층이 설정되지 않으면 사용자 정의 계층에서 해당 특성을 사용할 수 없고 MDX(Multidimensional Expressions) 문에서 특성 계층을 참조할 수 없습니다.|  
 |`AttributeHierarchyOptimizedState`|특성 계층에 적용되는 최적화 수준을 결정합니다. 기본적으로 특성 계층은 `FullyOptimized`입니다. 즉, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 계층에 대한 인덱스를 작성하여 쿼리 성능을 향상시킵니다.  다른 옵션인 `NotOptimized`는 특성 계층에 대해 작성된 인덱스가 없다는 의미입니다. 특성에 대해 추가 인덱스가 작성되지 않으므로 `NotOptimized` 사용은 특성 계층이 쿼리 이외의 용도로 사용될 경우에 유용합니다. 특성 계층은 다른 특성을 정렬하는 데 사용할 수도 있습니다.|  
 |`AttributeHierarchyOrdered`|연관된 특성 계층의 정렬 여부를 결정합니다. 기본값은 `True`입니다. 그러나 쿼리 하는 것에 대 한 특성 계층을 사용 하지는 저장할 수 있습니다 처리 시간에이 속성의 값을 변경 하 여 `False`입니다.|  
-|`AttributeHierarchyVisible`|클라이언트 응용 프로그램에서 특성 계층을 볼 수 있는지 여부를 결정합니다. 기본값은 `True`입니다. 그러나 쿼리 하는 것에 대 한 특성 계층을 사용 하지는 저장할 수 있습니다 처리 시간에이 속성의 값을 변경 하 여 `False`입니다.|  
+|`AttributeHierarchyVisible`|클라이언트 애플리케이션에서 특성 계층을 볼 수 있는지 여부를 결정합니다. 기본값은 `True`입니다. 그러나 쿼리 하는 것에 대 한 특성 계층을 사용 하지는 저장할 수 있습니다 처리 시간에이 속성의 값을 변경 하 여 `False`입니다.|  
 |`CustomRollupColumn`|사용자 지정 롤업 수식을 정의하는 열을 지정합니다.|  
 |`CustomRollupPropertiesColumn`|사용자 지정 롤업 수식의 속성을 포함하는 열을 지정합니다.|  
 |`DefaultMember`|특성의 기본 측정값을 정의하는 MDX(Multidimensional Expressions) 식을 지정합니다.|  
@@ -38,9 +38,9 @@ ms.locfileid: "48140683"
 |`DiscretizationBucketCount`|불연속화할 버킷의 수를 포함합니다.|  
 |`DiscretizationMethod`|불연속화에 사용할 방법을 정의합니다.|  
 |`EstimatedCount`|특성의 예상 멤버 수를 지정합니다. 집계 디자인 마법사를 실행할 때까지 기본값은 0입니다. 마법사에서 레코드 수를 계산하도록 하거나 예상 값을 직접 입력할 수 있습니다. 멤버 수를 알고 있으며 데이터베이스에 멤버 수를 쿼리하는 시간을 단축하고 싶은 경우 값을 직접 입력합니다. 프로덕션 데이터의 테스트 하위 집합으로 작업하는 경우에는 집계 디자인이 테스트 데이터 대신 프로덕션 데이터에 맞게 최적화될 수 있도록 프로덕션 데이터의 멤버 수를 사용합니다.|  
-|`GroupingBehavior`|특성을 그룹화하는 방법에 대한 힌트를 클라이언트 응용 프로그램에 제공하는 사용자 정의 값입니다.|  
+|`GroupingBehavior`|특성을 그룹화하는 방법에 대한 힌트를 클라이언트 애플리케이션에 제공하는 사용자 정의 값입니다.|  
 |`ID`|차원의 고유 ID를 포함합니다.|  
-|`InstanceSelection`|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 응용 프로그램에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이것은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
+|`InstanceSelection`|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 애플리케이션에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이것은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
 |`IsAggregatable`|특성 멤버 값을 집계할 수 있는지 여부를 지정합니다. 기본값은 `True`, 즉, 특성 계층에 (All) 수준이 포함 됩니다. 이 속성 값이 `False`이면 특성 계층에 (All) 수준이 포함되지 않습니다.|  
 |`KeyColumns`|특성의 키를 나타내는 열을 포함합니다. 이러한 열은 특성이 바인딩된 데이터 원본 뷰의 기본 관계형 테이블에 있는 열을 나타냅니다.  `NameColumn` 속성 값을 지정하지 않는 한 각 멤버의 이 열 값이 사용자에게 표시됩니다.|  
 |`MemberNamesUnique`|특성 계층의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  

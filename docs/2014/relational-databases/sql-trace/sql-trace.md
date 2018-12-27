@@ -13,22 +13,22 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48193193"
 ---
 # <a name="sql-trace"></a>SQL 추적
-  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
+  SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 애플리케이션의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
   
 ## <a name="benefits-of-sql-trace"></a>SQL 추적의 이점  
- Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
+ Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 애플리케이션에서 사용하면 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 애플리케이션을 쓸 수 있습니다.  
   
 ## <a name="sql-trace-architecture"></a>SQL 추적 아키텍처  
- 이벤트 원본은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리 같은 추적 이벤트나 교착 상태 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이벤트를 생성하는 원본일 수 있습니다. 이벤트에 대한 자세한 내용은 [SQL Server Event Class Reference](../event-classes/sql-server-event-class-reference.md)를 참조하십시오. 이벤트가 발생한 후 해당 이벤트 클래스가 추적 정의에 포함되면 이벤트 정보가 추적에 의해 수집됩니다. 추적 정의의 이벤트 클래스에 필터가 정의되어 있으면 해당 필터가 적용되고 추적 이벤트 정보가 큐에 전달됩니다. 이 큐로부터 추적 정보가 파일에 기록되거나 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]같은 응용 프로그램에서 SMO에 의해 사용될 수 있습니다. 다음 다이어그램에서는 추적 중 SQL 추적에서 이벤트를 수집하는 방법을 보여 줍니다.  
+ 이벤트 원본은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리 같은 추적 이벤트나 교착 상태 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이벤트를 생성하는 원본일 수 있습니다. 이벤트에 대한 자세한 내용은 [SQL Server Event Class Reference](../event-classes/sql-server-event-class-reference.md)를 참조하십시오. 이벤트가 발생한 후 해당 이벤트 클래스가 추적 정의에 포함되면 이벤트 정보가 추적에 의해 수집됩니다. 추적 정의의 이벤트 클래스에 필터가 정의되어 있으면 해당 필터가 적용되고 추적 이벤트 정보가 큐에 전달됩니다. 이 큐로부터 추적 정보가 파일에 기록되거나 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]같은 애플리케이션에서 SMO에 의해 사용될 수 있습니다. 다음 다이어그램에서는 추적 중 SQL 추적에서 이벤트를 수집하는 방법을 보여 줍니다.  
   
  ![데이터베이스 엔진 이벤트 추적 프로세스](../../database-engine/media/tracarch.gif "Database Engine event tracing process")  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48193193"
  다음은 SQL 추적의 주요 개념을 설명하는 용어입니다.  
   
  **이벤트**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작이 발생했음을 의미합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작이 발생했음을 의미합니다.  
   
  **데이터 열**  
  이벤트의 특성입니다.  
@@ -73,11 +73,11 @@ ms.locfileid: "48193193"
   
 |데이터 열|열 번호|Description|  
 |-----------------|-------------------|-----------------|  
-|**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
+|**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |**BigintData1**|52|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
 |**BigintData2**|53|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
 |**Binary Data**|2|추적에서 캡처된 이벤트 클래스에 따라 달라지는 이진 값입니다.|  
-|**ClientProcessID** <sup>1</sup>|9|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|  
+|**ClientProcessID** <sup>1</sup>|9|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|  
 |**ColumnPermissions**|44|열 사용 권한이 설정되어 있는지 나타냅니다. 문 텍스트를 구문 분석하여 어떤 권한이 어떤 열에 적용되었는지 알 수 있습니다.|  
 |**CPU**|18|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
 |**데이터베이스 ID** <sup>1</sup>|3|USE *database_name* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database_name*문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|  
@@ -118,7 +118,7 @@ ms.locfileid: "48193193"
 |**ProviderName**|46|OLE DB 공급자 이름입니다.|  
 |**Reads**|16|이벤트에 대해 서버에서 수행한 논리적 디스크 읽기 작업의 수입니다. 이 읽기 작업에는 해당 문 실행 중의 모든 테이블 및 버퍼 읽기가 포함됩니다.|  
 |**RequestID**|49|문을 포함하는 요청의 ID입니다.|  
-|**RoleName**|38|활성화된 응용 프로그램 역할의 이름입니다.|  
+|**RoleName**|38|활성화된 애플리케이션 역할의 이름입니다.|  
 |**RowCounts**|48|일괄 처리에 있는 행 수입니다.|  
 |**ServerName** <sup>1</sup>|26|추적되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
 |**SessionLoginName**|64|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Login1 **을 사용하여** 에 연결하고 **Login2**로 문을 실행하는 경우 **SessionLoginName** 은 **Login1**을 표시하고 **LoginName** 은 **Login2**를 표시합니다. 이 데이터 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|  

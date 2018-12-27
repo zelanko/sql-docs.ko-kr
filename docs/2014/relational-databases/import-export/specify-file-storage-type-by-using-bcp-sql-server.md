@@ -33,7 +33,7 @@ ms.locfileid: "48048443"
   
  이 프롬프트에 대한 사용자 응답은 수행하는 태스크에 따라 다음과 같이 달라집니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 파일 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 저장 유형"을 참조하십시오.  
+-    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 파일 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 저장 유형"을 참조하십시오.  
   
 -   데이터를 대량 내보내기의 인스턴스로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 형식에서 데이터 파일에 지정 `char` 테이블의 모든 열에 대 한 파일 저장 유형으로 합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048443"
   
      <sup>1</sup> 로 내보낸 비문자 데이터에 대 한 데이터 파일에 할당 되는 저장소 공간의 크기를 결정 하는 필드 길이, 접두사 길이 및 종결자의 상호 작용을 `char` 파일 저장 유형입니다.  
   
-     <sup>2</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하십시오. 사용 하 여 `nvarchar(max)`하십시오 `varchar(max)`, 및 `varbinary(max)` 대신 합니다.  
+     <sup>2</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 사용 하 여 `nvarchar(max)`하십시오 `varchar(max)`, 및 `varbinary(max)` 대신 합니다.  
   
 ## <a name="native-file-storage-types"></a>네이티브 파일 저장 유형  
  각 네이티브 파일 저장 유형은 해당 호스트 파일 데이터 형식으로 서식 파일에 기록됩니다.  

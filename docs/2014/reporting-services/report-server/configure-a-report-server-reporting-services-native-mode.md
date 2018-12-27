@@ -28,7 +28,7 @@ ms.locfileid: "48104510"
   
 -   보고서 서버에 대한 액세스를 제공하는 웹 서비스 URL  
   
--   응용 프로그램 데이터, 보고서 및 기타 항목을 저장하는 보고서 서버 데이터베이스  
+-   애플리케이션 데이터, 보고서 및 기타 항목을 저장하는 보고서 서버 데이터베이스  
   
  기본 모드 기본 구성 또는 SharePoint 통합 모드 기본 구성 설치 옵션 중 하나를 선택한 경우 설치 프로그램은 최소 설정을 구성합니다. 파일만 모드로 보고서 서버를 설치한 경우(설치 마법사의 **구성 없이 설치** 옵션) 서비스 계정만 구성됩니다. 설치가 완료된 후 웹 서비스 URL과 보고서 서버 데이터베이스를 구성해야 합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48104510"
   
 ### <a name="to-minimally-configure-a-report-server-installation"></a>보고서 서버 설치를 최소한으로 구성하려면  
   
-1.  Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.  자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
+1.   Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.  자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
   
 2.  **웹 서비스 URL** 을 클릭하여 보고서 서버에 대한 URL을 구성하는 페이지를 엽니다. URL을 정의하는 방법은 [URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   

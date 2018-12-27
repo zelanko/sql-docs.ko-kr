@@ -31,11 +31,11 @@ ms.locfileid: "52539193"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서 설명하는 지침을 따르면 응용 프로그램 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
+  이 항목에서 설명하는 지침을 따르면 애플리케이션 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
   
 ## <a name="server-and-network"></a>서버 및 네트워크  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
   
      기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52539193"
   
      자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
--   트리거의 응용 프로그램 논리에 유의합니다.  
+-   트리거의 애플리케이션 논리에 유의합니다.  
   
      구독자의 사용자 정의 트리거에 있는 비즈니스 논리로 인해 구독자에 대한 변경 내용 복제의 속도가 느려질 수 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52539193"
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
+     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 애플리케이션에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
   
      트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "52539193"
   
      복제는 설정하기가 쉽기 때문에 실제로 필요한 것보다 많은 데이터를 게시하는 경향이 있습니다. 이로 인해 배포 데이터베이스 및 스냅숏 파일에서 리소스가 추가로 소모될 뿐만 아니라 필요한 데이터에 대한 처리량이 낮아질 수 있습니다. 불필요한 테이블 게시를 피하고 게시 업데이트 빈도를 줄일 것을 고려합니다.  
   
--   게시 디자인 및 응용 프로그램 동작을 통해 충돌을 최소화합니다.  
+-   게시 디자인 및 애플리케이션 동작을 통해 충돌을 최소화합니다.  
   
      병합 복제, 업데이트할 수 있는 구독이 있는 트랜잭션 복제 또는 피어 투 피어 트랜잭션 복제를 사용하여 구독자에서 데이터를 변경할 수 있습니다. 병합 복제 및 업데이트할 수 있는 구독이 있는 트랜잭션 복제에서는 동기화 중 두 개 이상의 노드에서 지정된 행이 업데이트되는 경우 데이터 충돌이 지원됩니다. 피어 투 피어 복제에서는 데이터 충돌이 지원되지 않으므로 데이터 변경 내용을 분할해야 합니다. 사용된 복제 유형에 관계없이 가능하면 변경 내용을 분할하는 것이 좋습니다. 이렇게 하면 충돌 감지 및 해결 과정이 간단해집니다.  
   
-     데이터 하위 집합을 각 구독자에 게시하거나 응용 프로그램이 지정된 행의 변경 내용을 지정된 노드로 직접 게시하도록 하여 변경 내용을 분할할 수 있습니다.  
+     데이터 하위 집합을 각 구독자에 게시하거나 애플리케이션이 지정된 행의 변경 내용을 지정된 노드로 직접 게시하도록 하여 변경 내용을 분할할 수 있습니다.  
   
     -   병합 복제에서는 단일 게시에서 매개 변수가 있는 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
   

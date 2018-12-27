@@ -38,7 +38,7 @@ ms.locfileid: "52418864"
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 성능 카운터(기본 모드 보고서 서버)  
  **ReportServer:Service** 성능 개체에는 보고서 서버 인스턴스에 대한 HTTP 관련 이벤트 및 메모리 관련 이벤트를 추적하는 카운터 모음이 들어 있습니다. 이 성능 개체는 컴퓨터의 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스마다 한 번씩 나타나며 사용자는 각 인스턴스에 대한 성능 카운터에서 카운터를 추가하거나 제거할 수 있습니다. 기본 인스턴스의 카운터는 **ReportServer:Service**형식으로 나타납니다. 명명된 인스턴스의 카운터는 **ReportServer$\<***instance_name***>:Service** 형식으로 나타납니다.  
   
- **ReportServer:Service** 성능 개체는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 새로 도입되었으며 이전 버전의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 IIS(인터넷 정보 서비스) 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]과 함께 제공된 카운터의 하위 집합을 제공합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
+  **ReportServer:Service** 성능 개체는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 새로 도입되었으며 이전 버전의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 IIS(인터넷 정보 서비스) 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]과 함께 제공된 카운터의 하위 집합을 제공합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
   
  다음 표에서는 **ReportServer:Service** 성능 개체에 포함된 카운터를 나열합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52418864"
 |**Requests Not Authorized**|실패한 요청 수입니다(HTTP 401 상태 코드).|  
 |**Requests Rejected**|서버 리소스 부족으로 인해 처리되지 않은 총 요청 수입니다. 이 카운터는 서버가 사용 중임을 나타내는 HTTP 503 상태 코드를 반환하는 요청 수를 나타냅니다.|  
 |**Requests Total**|시작 후 보고서 서버 서비스에서 받은 총 요청 수입니다. 이 카운터는 보고서 관리자에 보낸 요청 수와 보고서 관리자가 보고서 서버로 보낸 요청 수를 계산합니다.|  
-|**Requests/sec**|초당 처리된 요청 수입니다. 이 값은 응용 프로그램 현재 처리량을 나타냅니다.|  
+|**Requests/sec**|초당 처리된 요청 수입니다. 이 값은 애플리케이션 현재 처리량을 나타냅니다.|  
 |**Tasks Queued**|스레드를 사용할 수 있을 때까지 기다리는 태스크 수입니다. 보고서 서버에 대한 각 요청은 하나 이상의 태스크에 해당합니다. 이 카운터는 처리할 준비가 된 태스크의 수만 나타내며 현재 실행 중인 태스크 수는 포함하지 않습니다.|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)  

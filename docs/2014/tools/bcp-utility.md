@@ -30,7 +30,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48205863"
@@ -219,7 +219,7 @@ ms.locfileid: "48205863"
  작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
  **-K** *application_intent*  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ 활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ 활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  **-L** *last_row*  
  테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수가 0 보다 크고 (>) 값이 필요 하지만 미만 (\<) 또는 등호 (=) 마지막 행의 수입니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  
@@ -431,7 +431,7 @@ ms.locfileid: "48205863"
   
 -   8. XML 서식 파일 만들기  
   
--   9. **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행  
+-   9.  **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행  
   
 ### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>1. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
  다음 예에서는 **테이블의** out `AdventureWorks2012.Sales.Currency` 옵션에 대해 설명합니다. 이 예에서는 `Currency.dat` 라는 데이터 파일을 만들고 문자 형식을 사용하여 테이블 데이터를 파일에 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  

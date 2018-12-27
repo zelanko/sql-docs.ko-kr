@@ -115,7 +115,7 @@ End Function
  기본 제공 개체 컬렉션 및 초기화에 대한 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) 및 [사용자 지정 어셈블리 개체 초기화](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 코드에서 매개 변수에 대한 참조 포함  
- 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구조를 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
+ 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다.  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구조를 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters` 를 참조하는 예가 들어 있습니다.  
   
@@ -178,7 +178,7 @@ End Function
  코드에 액세스하는 방법은 [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)를 참조하세요.  
   
 ##  <a name="collections"></a> 사용자 지정 어셈블리에 기본 제공 컬렉션 전달  
- 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 응용 프로그램에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 아래를 참조하세요.  
+ 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 애플리케이션에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 아래를 참조하세요.  
   
 -   **네임스페이스:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   

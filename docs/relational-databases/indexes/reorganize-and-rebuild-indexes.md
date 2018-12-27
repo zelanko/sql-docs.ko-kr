@@ -42,7 +42,7 @@ ms.locfileid: "52395176"
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 수정합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 응용 프로그램이 응답을 늦출 수 있습니다(특히 검사 작업).  
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 수정합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 애플리케이션이 응답을 늦출 수 있습니다(특히 검사 작업).  
   
 인덱스를 다시 구성하거나 다시 작성하여 인덱스 조각화 문제를 해결할 수 있습니다. 파티션 구성표에 작성한 분할된 인덱스의 경우 전체 인덱스나 인덱스의 단일 파티션에 이러한 방법 중 하나를 사용할 수 있습니다.    
 인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. `ALL`을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다.   
@@ -211,7 +211,7 @@ ms.locfileid: "52395176"
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.  **확인.**  
+8.   **확인.**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>테이블의 모든 인덱스를 다시 구성하려면  
   
@@ -227,7 +227,7 @@ ms.locfileid: "52395176"
   
 6.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-7.  **확인.**  
+7.   **확인.**  
   
 #### <a name="to-rebuild-an-index"></a>인덱스를 다시 작성하려면  
   
@@ -245,7 +245,7 @@ ms.locfileid: "52395176"
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.  **확인.**  
+8.   **확인.**  
   
 ## <a name="TsqlProcedureReorg"></a> [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 조각화 제거 
   

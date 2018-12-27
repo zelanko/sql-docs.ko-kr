@@ -22,7 +22,7 @@ ms.locfileid: "51813246"
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
   
- SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 응용 프로그램 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자에서 만든 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
+ SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 애플리케이션 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자에서 만든 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  배달 확장 프로그램은 보고서 서버가 기본 모드로 실행되고 있는 경우 SharePoint 사이트로의 보고서 배달을 지원하지 않습니다. 기본 모드 보고서 서버에 대해 프로그래밍 방식으로 배달 확장 프로그램을 호출하려고 하면 서버에서 **rsDeliveryExtensionNotFound** 오류를 반환하고 보고서 서버 로그 파일에 **rsOperationNotSupportedSharePointMode** 오류를 기록합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "51813246"
  SharePoint 라이브러리에 보고서를 배달하는 구독에 대해 다음 배달 옵션을 설정할 수 있습니다.  
   
  출력 형식 렌더링  
- 보고서를 배달할 응용 프로그램 형식을 지정합니다. 보고서는 배달되기 전에 이 형식으로 렌더링됩니다. 선택한 출력 형식에 따라 기본 파일 확장명이 결정됩니다.  
+ 보고서를 배달할 애플리케이션 형식을 지정합니다. 보고서는 배달되기 전에 이 형식으로 렌더링됩니다. 선택한 출력 형식에 따라 기본 파일 확장명이 결정됩니다.  
   
  선택할 수 있는 출력 형식은 보고서 서버에 설치된 렌더링 확장 프로그램 집합입니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51813246"
  대상 라이브러리에 있는 보고서의 선택적 **Title** 속성을 지정합니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  
- SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어 `https://mySharePointWeb/MySite/MyDocLib`에서 `https://mySharePointWeb`은 웹 응용 프로그램을 나타내고 "MySite"는 SharePoint 사이트를 나타내며 "MyDocLib"는 보고서가 배달될 SharePoint 라이브러리를 나타냅니다.  
+ SharePoint 웹 애플리케이션 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어 `https://mySharePointWeb/MySite/MyDocLib`에서 `https://mySharePointWeb`은 웹 애플리케이션을 나타내고 "MySite"는 SharePoint 사이트를 나타내며 "MyDocLib"는 보고서가 배달될 SharePoint 라이브러리를 나타냅니다.  
   
  페이지, 사이트 또는 목록은 지정할 수 없습니다. 대상 컨테이너는 동일한 사이트나 팜에 있는 라이브러리여야 합니다.  
   

@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4124430c89ac7ccb45067fbb655442c0f0a5f2e1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48224033"
@@ -39,7 +39,7 @@ ms.locfileid: "48224033"
  고유 번호를 생성하는 데 사용되는 데이터베이스 개체입니다. 복제는 시퀀스를 사용하여 게시된 테이블에 대한 변경 내용의 적용 순서를 지정합니다.  
   
  SQL\*Plus  
- Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 응용 프로그램으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
+ Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 애플리케이션으로  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
   
  동의어  
  개체에 대한 별칭입니다. **MSSQLSERVERDISTRIBUTOR** 특수 공용 동의어는 Oracle 게시자를 구성할 때 자동으로 생성됩니다. 동의어는 **HREPL_Distributor** 테이블을 참조하고 게시자에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에게 논리 포인터를 제공합니다.  

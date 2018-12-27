@@ -42,7 +42,7 @@ ms.locfileid: "50031462"
   
     4.  **확인**선택하고 **다음**을 선택합니다.  
   
-6.  5단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
+6.  5단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 애플리케이션 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
 7.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "50031462"
 10. **생성할 메서드 선택** 페이지에서 **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소한 다음 **마침**을 선택합니다.  
   
     > [!WARNING]  
-    > **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소해야 합니다.  
+    >  **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소해야 합니다.  
   
     이제 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 **DataTable** 이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
   

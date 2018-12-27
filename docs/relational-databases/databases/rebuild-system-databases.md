@@ -89,7 +89,7 @@ ms.locfileid: "51559200"
 7.  master, model, msdb 데이터와 로그 템플릿 파일의 복사본이 로컬 서버에 있는지 확인합니다. 템플릿 파일의 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates입니다. 이러한 파일은 다시 작성 프로세스 중에 사용되므로 성공적으로 설치를 수행하려면 반드시 있어야 합니다. 이러한 파일이 없으면 설치 시 복구 기능을 실행하거나 설치 미디어에서 해당 파일을 직접 복사하세요. 설치 미디어에서 이러한 파일을 찾으려면 해당 플랫폼 디렉터리(x86 또는 x64)로 이동한 후 setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates로 이동합니다.  
   
 ##  <a name="RebuildProcedure"></a> 시스템 데이터베이스 다시 작성  
- 다음은 master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하는 절차입니다. 다시 작성할 시스템 데이터베이스를 지정할 수 없습니다. 클러스터형 인스턴스의 경우 액티브 노드에서 이 절차를 수행해야 하고, 이 절차를 수행하기 전에 해당 클러스터 응용 프로그램 그룹의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 오프라인으로 설정해야 합니다.  
+ 다음은 master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하는 절차입니다. 다시 작성할 시스템 데이터베이스를 지정할 수 없습니다. 클러스터형 인스턴스의 경우 액티브 노드에서 이 절차를 수행해야 하고, 이 절차를 수행하기 전에 해당 클러스터 애플리케이션 그룹의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 오프라인으로 설정해야 합니다.  
   
  리소스 데이터베이스는 이 절차를 통해 다시 작성할 수 없습니다. 이 항목 뒷부분에 나오는 "리소스 데이터베이스 다시 작성 절차" 섹션을 참조하세요.  
   

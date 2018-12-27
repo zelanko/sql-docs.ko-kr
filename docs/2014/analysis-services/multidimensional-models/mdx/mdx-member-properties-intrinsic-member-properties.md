@@ -15,7 +15,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50148378"
@@ -25,7 +25,7 @@ ms.locfileid: "50148378"
   
  기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 `ID`, `KEY`, `KEYx` 및 `NAME`이 있습니다. 특히 `LEVEL_NUMBER` 또는 `PARENT_UNIQUE_NAME`과 같은 위치 정보를 반환할 수도 있습니다.  
   
- 쿼리 작성 방법 및 쿼리 실행에 사용하는 클라이언트 응용 프로그램에 따라 결과 집합에 멤버 속성이 표시될 수도 있고 그렇지 않을 수도 있습니다. 쿼리 테스트 또는 실행에 SQL Server Management Studio를 사용하는 경우 결과 집합에서 멤버를 두 번 클릭하여 각 멤버의 기본 속성 값이 표시된 멤버 속성 대화 상자를 열 수 있습니다.  
+ 쿼리 작성 방법 및 쿼리 실행에 사용하는 클라이언트 애플리케이션에 따라 결과 집합에 멤버 속성이 표시될 수도 있고 그렇지 않을 수도 있습니다. 쿼리 테스트 또는 실행에 SQL Server Management Studio를 사용하는 경우 결과 집합에서 멤버를 두 번 클릭하여 각 멤버의 기본 속성 값이 표시된 멤버 속성 대화 상자를 열 수 있습니다.  
   
  차원 멤버 속성을 사용하고 보는 방법에 대한 개요를 보려면 [SSMS에서 MDX 쿼리 창에서 SSAS 멤버 속성 보기](http://go.microsoft.com/fwlink/?LinkId=317362)를 참조하십시오.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "50148378"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이외의 공급자가 기본 멤버 속성을 추가로 지원할 수도 있습니다. 다른 공급자가 지원하는 기본 멤버 속성에 대한 자세한 내용은 해당 공급자가 제공하는 설명서를 참조하십시오.  
   
 ## <a name="types-of-member-properties"></a>멤버 속성의 유형  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 지원하는 기본 멤버 속성은 다음 두 가지 유형입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 지원하는 기본 멤버 속성은 다음 두 가지 유형입니다.  
   
  상황에 맞는 멤버 속성  
  이 유형의 멤버 속성은 특정 계층 또는 수준의 컨텍스트에서 사용해야 하고 지정한 차원 또는 수준의 각 멤버에 대한 값을 제공합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "50148378"
  `DIMENSION PROPERTIES [Sales].Name`  
   
 ## <a name="non-context-sensitive-member-properties"></a>상황에 맞지 않는 멤버 속성  
- 모든 멤버가 컨텍스트에 상관없이 동일한 기본 멤버 속성 목록을 지원합니다. 이러한 속성들은 사용자에게 보다 나은 경험을 주기 위해 응용 프로그램에서 사용할 수 있는 정보를 추가로 제공합니다.  
+ 모든 멤버가 컨텍스트에 상관없이 동일한 기본 멤버 속성 목록을 지원합니다. 이러한 속성들은 사용자에게 보다 나은 경험을 주기 위해 애플리케이션에서 사용할 수 있는 정보를 추가로 제공합니다.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하는 상황에 맞지 않는 기본 속성에 대해 설명합니다.  
   

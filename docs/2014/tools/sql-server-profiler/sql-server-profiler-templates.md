@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48084653"
@@ -42,7 +42,7 @@ ms.locfileid: "48084653"
 |-------------------|----------------------|-------------------|  
 |SP_Counts|시간별로 저장 프로시저 실행 동작을 캡처합니다.|**SP:Starting**|  
 |표준|추적을 만들기 위한 일반적인 시작 지점입니다. 실행되는 모든 저장 프로시저와 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 캡처합니다. 일반적인 데이터베이스 서버 활동을 모니터링하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
-|TSQL|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 전송된 시간을 캡처합니다. 클라이언트 응용 프로그램을 디버깅하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
+|TSQL|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 전송된 시간을 캡처합니다. 클라이언트 애플리케이션을 디버깅하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 실행 시간(밀리초)을 캡처하고 이 문들을 기간별로 그룹화합니다. 느린 쿼리를 식별하는 데 사용합니다.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|[!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 전송 시간을 캡처합니다. 문을 전송한 사용자 또는 클라이언트를 기준으로 정보를 그룹화합니다. 특정 클라이언트 또는 사용자가 전송한 쿼리를 조사하는 데 사용합니다.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Locks|클라이언트가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로 전송하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 예외 잠금 이벤트와 함께 캡처합니다. 교착 상태, 잠금 제한 시간 및 잠금 에스컬레이션 이벤트를 해결하는 데 사용합니다.|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Lock:Timeout (timeout>0)**|  
@@ -55,7 +55,7 @@ ms.locfileid: "48084653"
 ## <a name="default-template"></a>기본 템플릿  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 **Standard** 템플릿을 새 추적에 적용되는 기본 템플릿으로 자동 지정합니다. 하지만 미리 정의된 템플릿 또는 사용자 정의 템플릿으로 기본 템플릿을 변경할 수 있습니다. 기본 템플릿을 변경하려면 템플릿을 만들거나 편집할 때 **추적 템플릿 속성** 대화 상자의 **일반** 탭에서 **선택한 서버 유형에 대한 기본 템플릿으로 사용** 확인란을 선택합니다.  
   
- **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
+  **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
   
 > [!NOTE]  
 >  기본 템플릿은 지정된 서버 유형에만 사용할 수 있습니다. 한 가지 서버 유형의 기본값을 변경해도 다른 서버 유형의 기본 템플릿에는 영향을 미치지 않습니다. 특정 서버용 기본 템플릿을 설정하는 방법은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)을 참조하세요.  

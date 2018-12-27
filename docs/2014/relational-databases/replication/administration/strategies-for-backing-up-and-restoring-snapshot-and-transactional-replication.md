@@ -23,7 +23,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48229993"
@@ -61,7 +61,7 @@ ms.locfileid: "48229993"
   
      배포 데이터베이스에 이 옵션을 설정해도 복제 지연 시간에는 영향을 주지 않습니다. 그러나 배포 데이터베이스의 해당 트랜잭션이 백업될 때까지 게시 데이터베이스의 로그 잘라내기가 지연됩니다. 이로 인해 게시 데이터베이스에 더 큰 트랜잭션 로그가 만들어질 수 있습니다.  
   
--   응용 프로그램에서 추가 대기 시간을 허용할 수 있는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다.  
+-   애플리케이션에서 추가 대기 시간을 허용할 수 있는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다.  
   
      게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 게시자에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48229993"
   
     1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터를 사용하거나 배포 데이터베이스에서 [MSdistribution_status](/sql/relational-databases/system-views/msdistribution-status-transact-sql) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. b 단계로 이동합니다.  
   
-    2.  [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
+    2.   [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
   
          **tablediff** 유틸리티에 대한 자세한 내용은 [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](compare-replicated-tables-for-differences-replication-programming.md)를 참조하세요.  
   

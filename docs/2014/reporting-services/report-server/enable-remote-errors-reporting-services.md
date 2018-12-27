@@ -37,11 +37,11 @@ ms.locfileid: "48111733"
 ##  <a name="bkmk_sharepoint"></a> SharePoint 모드에 대한 원격 오류 사용  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 대한 원격 오류 사용에는 두 가지 다른 프로시저가 있습니다. 서로 다른 두 보고서 서버 아키텍처에 따라 프로시저가 달라집니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 도입된 새 SharePoint 서비스 기반 아키텍처는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 구성될 수 있는 설정을 활용합니다. 이전 아키텍처는 단일 사이트 수준 설정을 활용합니다.  
   
-#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램에 대한 원격 오류 사용  
+#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 원격 오류 사용  
   
-1.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 새 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 SharePoint 모드 보고서 서버의 경우 서비스 응용 프로그램 설정 **원격 오류 사용**을 설정합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 이 설정을 구성할 수 있습니다.  
+1.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 새 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 SharePoint 모드 보고서 서버의 경우 서비스 응용 프로그램 설정 **원격 오류 사용**을 설정합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 이 설정을 구성할 수 있습니다.  
   
-2.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리** 를 클릭합니다.  
+2.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 찾아 해당 서비스 응용 프로그램의 이름을 클릭합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48111733"
   
 4.  **로컬 모드에서 원격 오류 사용**을 클릭합니다.  
   
-5.  **확인**을 클릭합니다.  
+5.   **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
   

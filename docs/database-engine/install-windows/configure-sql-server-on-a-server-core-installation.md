@@ -106,7 +106,7 @@ Net 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 3. **컴퓨터 선택** 대화 상자에서 관리할 Server Core 컴퓨터의 이름을 입력하거나 **찾아보기**를 클릭하여 찾은 다음 **확인**을 클릭합니다.  
   
-4. 콘솔 트리에 있는 Server Core 컴퓨터의 **컴퓨터 관리** 아래에서 **서비스 및 응용 프로그램**을 클릭합니다.  
+4. 콘솔 트리에 있는 Server Core 컴퓨터의 **컴퓨터 관리** 아래에서 **서비스 및 애플리케이션**을 클릭합니다.  
   
 5. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**를 두 번 클릭합니다.  
   

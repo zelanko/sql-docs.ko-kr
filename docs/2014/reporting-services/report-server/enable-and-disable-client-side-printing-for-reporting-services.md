@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067445"
@@ -62,7 +62,7 @@ ms.locfileid: "48067445"
   
 -   **SharePoint 모드 보고서 서버**:  
   
-    1.  SharePoint 중앙 관리에서 **응용 프로그램 관리**를 클릭합니다.  
+    1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
     2.  **서비스 응용 프로그램 관리**를 클릭합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48067445"
   
 -   스크립트 또는 보고서 서버 시스템 속성을 설정 하는 코드를 작성할 **EnableClientPrinting** 를 `false.`  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   

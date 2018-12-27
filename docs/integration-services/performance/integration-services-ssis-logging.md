@@ -60,7 +60,7 @@ ms.locfileid: "52542889"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 **데이터베이스의** sysssislog [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 로그 항목을 기록합니다.  
   
--   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 응용 프로그램 로그에 항목을 기록합니다.  
+-   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 애플리케이션 로그에 항목을 기록합니다.  
   
 -   XML 파일 로그 공급자는 로그 파일을 XML 파일로 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .xml입니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52542889"
 |텍스트 파일|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|텍스트 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server 프로파일러|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|로그 항목이 포함된 sysssislog 테이블이 들어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 로그 공급자가 사용하는 OLE DB 연결 관리자가 지정합니다.|  
-|Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 응용 프로그램 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 응용 프로그램 정보가 들어 있습니다.|  
+|Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 애플리케이션 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 애플리케이션 정보가 들어 있습니다.|  
 |XML 파일|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|XML 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
   
  사용자 지정 로그 공급자를 만들 수도 있습니다. 자세한 내용은 [Creating a Custom Log Provider](../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)를 참조하세요.  
@@ -253,7 +253,7 @@ ms.locfileid: "52542889"
     > [!NOTE]  
     >  기본적으로 모든 정보가 로깅됩니다.  
   
-9. **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
+9.  **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 10. **확인**을 클릭합니다.  
   

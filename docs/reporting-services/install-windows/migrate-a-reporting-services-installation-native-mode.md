@@ -42,7 +42,7 @@ ms.locfileid: "52712424"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 배포 마이그레이션에 대한 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)을 참조하세요.  
   
- 마이그레이션은 응용 프로그램 데이터 파일을 새 SQL Server 인스턴스로 이동하는 것을 말합니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
+ 마이그레이션은 애플리케이션 데이터 파일을 새 SQL Server 인스턴스로 이동하는 것을 말합니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
   
 * 광범위한 배포 또는 작동 시간이 필요합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52712424"
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 마이그레이션 프로세스에는 수동 단계와 자동 단계가 포함됩니다. 다음은 보고서 서버 마이그레이션의 일부 태스크입니다.  
   
-* 데이터베이스, 응용 프로그램 및 구성 파일을 백업합니다.  
+* 데이터베이스, 애플리케이션 및 구성 파일을 백업합니다.  
   
 * 암호화 키를 백업합니다.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "52712424"
     > [!TIP]  
     >  함께 설치하려면 SQL Server를 명명된 인스턴스로 설치해야 합니다.
   
-* 보고서 서버 데이터베이스 및 기타 응용 프로그램 파일을 기존 설치에서 새 SQL Server 설치로 이동합니다.  
+* 보고서 서버 데이터베이스 및 기타 애플리케이션 파일을 기존 설치에서 새 SQL Server 설치로 이동합니다.  
   
-* 모든 사용자 지정 응용 프로그램 파일을 새 설치로 이동합니다.  
+* 모든 사용자 지정 애플리케이션 파일을 새 설치로 이동합니다.  
   
 * 보고서 서버를 구성합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52712424"
   
 * 선택적으로 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹에 대한 사용자 지정 ACL(액세스 제어 목록)을 구성합니다.  
   
-* 새 인스턴스가 완벽하게 작동하는지 확인한 후 사용하지 않는 응용 프로그램과 도구를 제거합니다.  
+* 새 인스턴스가 완벽하게 작동하는지 확인한 후 사용하지 않는 애플리케이션과 도구를 제거합니다.  
   
  보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 제한되어 있습니다. 이전 설치에서 만든 보고서 서버 데이터베이스를 다시 사용하는 경우에는 다음 항목을 검토하십시오.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52712424"
 
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버의 기본 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
   
- 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 응용 프로그램 데이터를 로드해야 합니다.  
+ 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 애플리케이션 데이터를 로드해야 합니다.  
   
 * 보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 작성합니다. RS.exe 유틸리티를 사용하여 이 스크립트를 실행할 수 있습니다. 이 접근 방법은 [Reporting Services를 사용한 스크립팅 및 PowerShell](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)을 참조하세요.  
   
@@ -137,7 +137,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
     5. Reportingservicesservice.exe.config  
   
-    6. 보고서 서버 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.cofig  
+    6. 보고서 서버 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션용 Web.cofig  
   
     7. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 용 Machine.config(보고서 서버 작업을 위해 이 파일을 수정한 경우)  
 
@@ -283,7 +283,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
     * 보고서 서버 서비스 계정  
   
-    * 보고서 서버 웹 서비스에 대한 응용 프로그램 풀  
+    * 보고서 서버 웹 서비스에 대한 애플리케이션 풀  
   
     * 보고서 관리자 및 보고서 서버에 대한 가상 디렉터리  
   

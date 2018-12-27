@@ -19,7 +19,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef812c3473ce2089f1fd5f7dc8e6204e787e570
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123503"
@@ -36,7 +36,7 @@ ms.locfileid: "48123503"
 |[Audit Add Member to DB Role 이벤트 클래스](audit-add-member-to-db-role-event-class.md)|역할에서 로그인이 추가되거나 제거되었음을 나타냅니다.|  
 |[Audit Add Role 이벤트 클래스](audit-add-role-event-class.md)|데이터베이스에서 데이터베이스 역할이 추가되거나 제거되었음을 나타냅니다.|  
 |[Audit Addlogin 이벤트 클래스](audit-addlogin-event-class.md)|로그인이 추가되거나 제거되었음을 나타냅니다.|  
-|[Audit App Role Change Password 이벤트 클래스](audit-app-role-change-password-event-class.md)|응용 프로그램 역할의 암호가 변경되었음을 나타냅니다.|  
+|[Audit App Role Change Password 이벤트 클래스](audit-app-role-change-password-event-class.md)|애플리케이션 역할의 암호가 변경되었음을 나타냅니다.|  
 |[감사 백업 및 이벤트 클래스 복원](audit-backup-and-restore-event-class.md)|백업 문 또는 복원 문이 실행되었음을 나타냅니다.|  
 |[Audit Broker Conversation 이벤트 클래스](broker-conversation-event-class.md)|Service Broker 대화 보안과 연관된 감사 메시지를 보고합니다.|  
 |[Audit Broker Login 이벤트 클래스](audit-broker-login-event-class.md)|Service Broker 전송 보안과 연관된 감사 메시지를 보고합니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48123503"
 |[Audit Database Operation 이벤트 클래스](audit-database-operation-event-class.md)|검사점 또는 구독 쿼리 알림과 같은 여러 작업이 발생했음을 나타냅니다.|  
 |[Audit Database Principal Impersonation 이벤트 클래스](audit-database-principal-impersonation-event-class.md)|데이터베이스 범위에서 가장이 발생했음을 나타냅니다.|  
 |[Audit Database Principal Management 이벤트 클래스](audit-database-principal-management-event-class.md)|데이터베이스에서 보안 주체가 생성, 변경 또는 삭제되었음을 나타냅니다.|  
-|[Audit Database Scope GDR 이벤트 클래스](audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자에 의해 문 사용 권한에 대한 GRANT, REVOKE 또는 DENY 명령이 실행되었음을 나타냅니다.|  
+|[Audit Database Scope GDR 이벤트 클래스](audit-database-scope-gdr-event-class.md)| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자에 의해 문 사용 권한에 대한 GRANT, REVOKE 또는 DENY 명령이 실행되었음을 나타냅니다.|  
 |[Audit DBCC 이벤트 클래스](audit-dbcc-event-class.md)|DBCC 명령이 실행되었음을 나타냅니다.|  
 |[Audit Fulltext 이벤트 클래스](audit-fulltext-event-class.md)|전체 텍스트 이벤트가 발생했음을 나타냅니다.|  
 |[Audit Login Change Password 이벤트 클래스](audit-login-change-password-event-class.md)|사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경했음을 나타냅니다.|  

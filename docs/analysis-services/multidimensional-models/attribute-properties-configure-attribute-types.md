@@ -18,7 +18,7 @@ ms.locfileid: "34025571"
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>속성을 특성-특성 유형 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 유형은 업무 기능에 따라 특성을 분류하는 데 유용합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 응용 프로그램에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 유형은 업무 기능에 따라 특성을 분류하는 데 유용합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 애플리케이션에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
   
 ##  <a name="setting_attibute_types"></a> 특성 유형 설정  
  특성에 대한 **Type** 속성의 값이 해당 특성에 대한 특성 유형을 결정합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 마법사는 차원이나 특성을 정의할 때 특성 유형을 설정합니다. 이러한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 차원에 기능을 추가할 때도 특성 유형을 설정합니다. 예를 들어 비즈니스 인텔리전스 마법사는 차원에 있는 계정의 이름, 코드, 번호 및 구조가 포함된 특성을 식별하기 위해 계정 인텔리전스를 추가할 때 차원의 특성에 여러 특성 유형을 적용합니다. 비즈니스 인텔리전스 마법사에서도 통화 변환 등에 특성 유형을 사용합니다. 자세한 내용은 [통화 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.  
@@ -27,7 +27,7 @@ ms.locfileid: "34025571"
   
 |용어|정의|  
 |----------|----------------|  
-|[일반 특성 유형](#general_attribute_types)|이러한 값은 모든 특성에 사용할 수 있으며 클라이언트 응용 프로그램의 특성 분류를 허용하는 용도로만 존재합니다.|  
+|[일반 특성 유형](#general_attribute_types)|이러한 값은 모든 특성에 사용할 수 있으며 클라이언트 애플리케이션의 특성 분류를 허용하는 용도로만 존재합니다.|  
 |[계정 차원 특성 유형](#account_dimension_attribute_types)|이러한 값은 계정 차원에 속한 특성을 식별합니다. 계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.|  
 |[통화 차원 특성 유형](#currency_dimension_attribute_types)|이러한 값은 통화 차원에 속한 특성을 식별합니다. 통화 차원에 대한 자세한 내용은 [통화 유형 차원 만들기](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.|  
 |[느린 변경 차원 특성](#slowly_changing_dimension_attribute_types)|이러한 값은 느린 변경 차원에 속한 특성을 식별합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34025571"
 |**DateEnded**|종료 날짜를 나타냅니다.|  
 |**DateModified**|수정한 날짜를 나타냅니다.|  
 |**DateStart**|시작 날짜를 나타냅니다.|  
-|**DeletedFlag**|(업무 기능에 따라) 멤버가 삭제되었는지 또는 삭제되어야 할지 여부를 나타냅니다.<br /><br /> 참고: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이 특성 유형을 사용하여 멤버가 삭제되어야 할지 여부를 결정하지 않습니다. 대신에 이 특성 유형은 클라이언트 응용 프로그램에서 표시하는 용도로만 사용됩니다.|  
+|**DeletedFlag**|(업무 기능에 따라) 멤버가 삭제되었는지 또는 삭제되어야 할지 여부를 나타냅니다.<br /><br /> 참고: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이 특성 유형을 사용하여 멤버가 삭제되어야 할지 여부를 결정하지 않습니다. 대신에 이 특성 유형은 클라이언트 애플리케이션에서 표시하는 용도로만 사용됩니다.|  
 |**FormattingColor**|서식 지정에 사용된 색을 나타냅니다.|  
 |**FormattingFont**|서식 지정에 사용된 글꼴을 나타냅니다.|  
 |**FormattingFontEffects**|서식 지정에 사용된 글꼴 효과를 나타냅니다.|  

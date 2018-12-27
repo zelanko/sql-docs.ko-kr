@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50145898"
@@ -24,7 +24,7 @@ ms.locfileid: "50145898"
  이 항목에서는 데이터 마이닝 모델을 생성, 처리, 배포 또는 쿼리하기 위해 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 필요한 정보를 제공합니다.  
   
 ## <a name="data-mining-services"></a>데이터 마이닝 서비스  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 애플리케이션은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -49,9 +49,9 @@ ms.locfileid: "50145898"
   
 |포트|Description|  
 |----------|-----------------|  
-|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
-|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
-|서버 시작 시 동적으로 할당됩니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
+|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
+|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
+|서버 시작 시 동적으로 할당됩니다.| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
   
  이 서비스에서 사용된 포트를 제어하는 방법은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50145898"
   
  **ADO.NET** 다른 공급자보다 SQL Server 공급자와 더 원활하게 상호 작용합니다. 데이터 어댑터를 사용하여 동적 행 집합을 저장합니다. 업데이트하거나 XML로 저장할 수 있는 데이터 테이블로 저장된 서버 데이터의 캐시인 데이터 집합 개체를 사용합니다.  
   
- **ADOMD.NET** 데이터 마이닝 및 OLAP과의 작업에 최적화된 관리 데이터 공급자입니다. ADOMD.NET은 ADO.NET보다 더 빠르고 메모리 효율적입니다. ADOMD.NET을 사용하면 서버 개체에 대한 메타데이터를 검색할 수도 있습니다. .NET을 사용할 수 없는 경우를 제외하고 클라이언트 응용 프로그램에 권장되는 개체 모델입니다.  
+ **ADOMD.NET** 데이터 마이닝 및 OLAP과의 작업에 최적화된 관리 데이터 공급자입니다. ADOMD.NET은 ADO.NET보다 더 빠르고 메모리 효율적입니다. ADOMD.NET을 사용하면 서버 개체에 대한 메타데이터를 검색할 수도 있습니다. .NET을 사용할 수 없는 경우를 제외하고 클라이언트 애플리케이션에 권장되는 개체 모델입니다.  
   
  **서버 ADOMD** 서버에서 직접 Analysis Services 개체에 액세스하기 위한 개체 모델입니다. Analysis Services 저장 프로시저에서 사용되며 클라이언트용이 아닙니다.  
   

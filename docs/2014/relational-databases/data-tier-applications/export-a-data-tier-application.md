@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 내보내기 | Microsoft 문서
+title: 데이터 계층 애플리케이션 내보내기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,13 +26,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae726d90d71259715f9eb80619e74c7bfbf990dd
 ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43810889"
 ---
-# <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
-  DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+# <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
+  DAC(데이터 계층 애플리케이션) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  내보내기 프로세스에서는 DAC 내보내기 파일을 두 단계로 작성합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "43810889"
   
 3.  데이터베이스 이름을 마우스 오른쪽 단추로 클릭합니다.  
   
-4.  **태스크** 를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...** 를 선택합니다.  
+4.   **태스크** 를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...** 를 선택합니다.  
   
 5.  마법사 대화 상자를 완료합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "43810889"
     -   [결과 페이지](#Results)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램 내보내기 마법사의 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43810889"
 ##  <a name="Export_settings"></a> 내보내기 설정 페이지  
  이 페이지에서는 BACPAC 파일을 만들려는 위치를 지정할 수 있습니다.  
   
--   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
+-   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다.  **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
 -   **Microsoft Azure에 저장** - - Microsoft Azure 컨테이너에 BACPAC 파일을 만듭니다. 이 옵션의 유효성을 검사하려면 Windows Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "43810889"
 ##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
  **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
- 코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 응용 프로그램을 다운로드합니다.  
+ 코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
 1.  SMO Server 개체를 만든 다음 내보낼 DAC를 포함하는 인스턴스로 설정합니다.  
   

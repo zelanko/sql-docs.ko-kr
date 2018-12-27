@@ -31,11 +31,11 @@ ms.locfileid: "52398866"
 |--------------|-------------------|-----------------|  
 |[Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|가용성 그룹에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. 가용성 그룹을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.|  
 |[실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|파일 추가 작업으로 인해 보조 데이터베이스가 일시 중단되고 NOT SYNCHRONIZING 상태가 되었습니다.|  
-|[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](https://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 응용 프로그램에서 연결할 수 없습니다.|  
-|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)|장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
+|[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](https://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 애플리케이션에서 연결할 수 없습니다.|  
+|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)| 장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|성능|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
-|[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 응용 프로그램에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
+|[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
 |[문제 해결: Always On 가용성 그룹을 사용하여 높은 HADR_SYNC_COMMIT 대기 유형](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|성능|HADR_SYNC_COMMIT가 비정상적으로 긴 경우 데이터 이동 흐름 또는 보조 복제본 로그 강화에 성능 문제가 있습니다.|  
 
 ##  <a name="BKMK_TOOLS"></a> 문제 해결에 유용한 도구  
@@ -69,7 +69,7 @@ ms.locfileid: "52398866"
 |[Always On 상태 모델, 파트 2: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 응용 프로그램](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|응용 프로그램을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 응용 프로그램](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
 
 ## <a name="next-steps"></a>다음 단계  

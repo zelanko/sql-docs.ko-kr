@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
 ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50100414"
@@ -33,7 +33,7 @@ ms.locfileid: "50100414"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--   [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-    [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
   
@@ -455,7 +455,7 @@ END
   
 ```  
   
- 이 스크립트를 사용하면 생성된 각 예제 주문이 WHILE 루프에서 실행되는 20개의 저장 프로시저를 통해 20회 삽입됩니다. 루프는 데이터베이스가 예제 주문을 생성하는 데 사용된다는 사실을 보완하는 데 사용됩니다. 일반적인 프로덕션 환경에서는 중간 계층 응용 프로그램이 삽입될 판매 주문을 생성합니다.  
+ 이 스크립트를 사용하면 생성된 각 예제 주문이 WHILE 루프에서 실행되는 20개의 저장 프로시저를 통해 20회 삽입됩니다. 루프는 데이터베이스가 예제 주문을 생성하는 데 사용된다는 사실을 보완하는 데 사용됩니다. 일반적인 프로덕션 환경에서는 중간 계층 애플리케이션이 삽입될 판매 주문을 생성합니다.  
   
  위의 스크립트는 판매 주문을 메모리 최적화 테이블에 삽입합니다. 판매 주문을 디스크 기반 테이블에 삽입하는 스크립트는 두 ‘_inmem’을 ‘_ondisk’로 바꿔서 파생됩니다.  
   

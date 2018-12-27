@@ -12,13 +12,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48181333"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48181333"
 |LoginName|`nvarchar`|사용자 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] domain_name *user_name*\\*형식의 Microsoft Windows 로그인 자격 증명 또는*보안 로그인일 수 있습니다.|14|  
 |CaptureHostName|`nvarchar`|캡처하는 동안 클라이언트 서비스를 실행 중인 컴퓨터의 이름입니다.|15|  
 |ReplayHostName|`nvarchar`|재생하는 동안 클라이언트를 실행 중인 컴퓨터의 이름입니다.|16|  
-|ApplicationName|`nvarchar`|캡처하는 동안 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 만든 클라이언트 응용 프로그램의 이름입니다.|17|  
+|ApplicationName|`nvarchar`|캡처하는 동안 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 만든 클라이언트 애플리케이션의 이름입니다.|17|  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   

@@ -16,7 +16,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48106910"
@@ -46,7 +46,7 @@ ms.locfileid: "48106910"
 -   재해 복구 계획이 원격 파티션의 백업 및 복원에 적합한지 확인해야 합니다. 원격 파티션을 사용하면 백업 및 복원 작업이 복잡해질 수 있습니다. 필요한 데이터를 복원할 수 있도록 계획을 철저히 테스트해야 합니다.  
   
 ## <a name="configure-remote-partitions"></a>원격 파티션 구성  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 실행하는 별도의 두 컴퓨터는 각각 한 컴퓨터는 마스터 서버로 지정하고 다른 컴퓨터는 하위 서버로 지정하는 원격 파티션 배열을 만드는 데 필요합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 실행하는 별도의 두 컴퓨터는 각각 한 컴퓨터는 마스터 서버로 지정하고 다른 컴퓨터는 하위 서버로 지정하는 원격 파티션 배열을 만드는 데 필요합니다.  
   
  다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 저장소 데이터베이스는 db 저장소라고 합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48106910"
  원격 파티션을 포함하는 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 단일 인스턴스에 있는 해당 파티션과 함께 관리할 수 있습니다. 하지만 원격 파티션에 대한 메타데이터는 파티션과 부모 큐브가 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스에서만 보고 업데이트할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 원격 인스턴스에서 원격 파티션을 보거나 업데이트할 수 없습니다.  
   
 > [!NOTE]  
->  원격 파티션 저장에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 응용 프로그램은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
+>  원격 파티션 저장에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 애플리케이션은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  

@@ -262,7 +262,7 @@ ms.locfileid: "52515120"
                   *PersistStreams* 매개 변수를 사용하여 액세스하는 지속형 스트림의 다음 데이터 청크를 가져옵니다. 자세한 내용은 *PersistStreams*에 대한 설명을 참조하십시오. 기본 값은 **false**입니다.  
   
 -   *SessionID*:  
-                  클라이언트 응용 프로그램과 보고서 서버 간에 설정된 활성 보고서 세션을 지정합니다. 이 매개 변수의 값은 세션 식별자로 설정됩니다.  
+                  클라이언트 애플리케이션과 보고서 서버 간에 설정된 활성 보고서 세션을 지정합니다. 이 매개 변수의 값은 세션 식별자로 설정됩니다.  
   
      세션 ID를 쿠키로 지정하거나 URL의 일부로 지정할 수 있습니다. 보고서 서버가 세션 쿠키를 사용하지 않도록 구성된 경우 지정된 세션 ID가 없는 첫 번째 요청은 세션 ID가 있는 항목으로 리디렉션됩니다. 보고서 서버 세션에 대한 자세한 내용은 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하십시오.  
   

@@ -19,13 +19,13 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
 ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/24/2018
 ms.locfileid: "49991166"
 ---
 # <a name="remote-servers"></a>원격 서버
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 응용 프로그램은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 애플리케이션은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
   
  원격 서버를 구성하면 별도의 연결을 설정하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결된 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 인스턴스에서 저장 프로시저를 실행할 수 있습니다. 대신 클라이언트가 연결된 서버는 클라이언트 요청을 수락하고 해당 클라이언트를 대신해서 원격 서버에 요청을 전송합니다. 원격 서버는 요청을 처리하고 원래 서버에 결과를 보냅니다. 원래 서버는 클라이언트에 다시 결과를 전송합니다. 원격 서버 구성을 설정할 때는 보안을 설정하는 방법도 고려해야 합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "49991166"
   
  대개 원격 서버에 대한 구성 옵션은 설정할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Set은 로컬 및 원격 컴퓨터 모두에 기본값을 설정하여 원격 서버 연결을 허용합니다.  
   
- 원격 서버에 액세스하려면 **remote access** 구성 옵션을 로컬 컴퓨터와 원격 컴퓨터에서 1로 설정해야 합니다. 이것은 기본 설정입니다.  **원격 액세스** 는 원격 서버로부터의 로그인을 제어합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 저장 프로시저 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이 구성 옵션을 다시 설정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하려면 **서버 속성 연결** 페이지에서 **이 서버에 대한 원격 연결 허용**을 사용합니다. **서버 속성 연결** 페이지에 접근하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **서버 속성** 페이지에서 **연결** 페이지를 클릭합니다.  
+ 원격 서버에 액세스하려면 **remote access** 구성 옵션을 로컬 컴퓨터와 원격 컴퓨터에서 1로 설정해야 합니다. 이것은 기본 설정입니다.  **원격 액세스** 는 원격 서버로부터의 로그인을 제어합니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 저장 프로시저 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이 구성 옵션을 다시 설정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하려면 **서버 속성 연결** 페이지에서 **이 서버에 대한 원격 연결 허용**을 사용합니다. **서버 속성 연결** 페이지에 접근하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **서버 속성** 페이지에서 **연결** 페이지를 클릭합니다.  
   
  로컬 서버에서 원격 서버 구성을 해제하여 쌍을 이루는 원격 서버의 사용자가 해당 로컬 서버에 액세스하는 것을 차단할 수 있습니다.  
   

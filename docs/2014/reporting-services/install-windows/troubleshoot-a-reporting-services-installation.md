@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 757ca354179094554beac92486209553e5440866
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48224743"
@@ -23,7 +23,7 @@ ms.locfileid: "48224743"
   
  문제에 관한 최신 정보에 대 한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하세요 [Reporting Services SQL Server 2012 팁 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkId=221297)  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
  릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](http://go.microsoft.com/fwlink/?linkid=236893) 를 검토하십시오.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224743"
 ###  <a name="bkmk_configmanager_notstart"></a> Reporting Services 구성 관리자 시작 안 함  
  **설명:** 이 문제는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 이제 SharePoint 서비스 아키텍처에 맞게 구축됐습니다. 구성 관리자는 더 이상 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 구성 및 관리하지 않아도 됩니다.  
   
- **해결 방법:** SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
+ **해결 방법:** SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
   
 ###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드의 SQL Server 2012 SSRS를 설치한 후 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다  
  **설명:** 성공적으로 설치한 후 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에서 SharePoint 2010에 대 한 표시 되지 않습니다 "SQL Server Reporting Services"는 다음 두 메뉴에 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록 되지 않았습니다.  
@@ -139,9 +139,9 @@ ms.locfileid: "48224743"
 ###  <a name="bkmk_URL_not_configured"></a> URL이 구성되지 않았음을 나타내는 오류 메시지가 표시됩니다.  
  **설명:** 다음과 유사한 오류 메시지가 표시됩니다.  
   
- 이 SQL Server Reporting Services(SSRS) 기능은 지원되지 않습니다. 중앙 관리를 사용하여 하나 이상의 다음 문제를 확인하고 해결합니다.•보고서 서버 URL이 구성되지 않았습니다. SSRS 통합 페이지를 사용하여 설정합니다.•SSRS 서비스 응용 프로그램 프록시가 구성되지 않았습니다. SSRS 서비스 응용 프로그램 페이지를 사용하여 프록시를 구성합니다.•SSRS 서비스 응용 프로그램이 이 웹 응용 프로그램에 매핑되지 않았습니다. SSRS 서비스 응용 프로그램 페이지를 사용하여 SSRS 서비스 응용 프로그램 프록시를 이 웹 응용 프로그램의 응용 프로그램 프록시 그룹에 연결합니다.  
+ 이 SQL Server Reporting Services(SSRS) 기능은 지원되지 않습니다. 중앙 관리를 사용하여 하나 이상의 다음 문제를 확인하고 해결합니다.•보고서 서버 URL이 구성되지 않았습니다. SSRS 통합 페이지를 사용하여 설정합니다.•SSRS 서비스 애플리케이션 프록시가 구성되지 않았습니다. SSRS 서비스 애플리케이션 페이지를 사용하여 프록시를 구성합니다.•SSRS 서비스 애플리케이션이 이 웹 애플리케이션에 매핑되지 않았습니다. SSRS 서비스 애플리케이션 페이지를 사용하여 SSRS 서비스 애플리케이션 프록시를 이 웹 애플리케이션의 애플리케이션 프록시 그룹에 연결합니다.  
   
- **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. 메시지의 첫 번째 제안 ‘보고서 서버 URL이 구성되지 않았습니다.’가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 응용 프로그램 설정**페이지에서 완료됩니다.  
+ **해결 방법:** 오류 메시지에는 이 문제를 해결하기 위한 세 가지 제안 단계가 포함되어 있습니다. 메시지의 첫 번째 제안 ‘보고서 서버 URL이 구성되지 않았습니다.’가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전의 보고서 서버 버전과 통합하는 경우 관련됩니다. 이전 보고서 서버 버전의 SharePoint 구성은 **SQL Server Reporting Services(2008 및 2008 R2)** 를 사용하여 **일반 애플리케이션 설정**페이지에서 완료됩니다.  
   
  **추가 정보:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스에 연결해야 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 하면 이 오류 메시지가 표시됩니다. 다음을 포함합니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48224743"
   
 -   구독 관리  
   
--   서비스 응용 프로그램 관리  
+-   서비스 애플리케이션 관리  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> 컴퓨터에 SharePoint가 설치됐지만 구성되지 않은 경우 설치 프로그램이 실패합니다.  
  **설명:** SharePoint가 설치됐지만 구성되지 않은 컴퓨터에 Reporting Services SharePoint 모드를 설치하려고 선택한 경우 다음과 비슷한 오류 메시지가 표시되고 설치가 중지됩니다.  
@@ -174,7 +174,7 @@ ms.locfileid: "48224743"
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 새 보고서 작성기 보고서를 만들려고 할 때 오류 메시지가 표시됩니다.  
  **설명:** 문서 라이브러리 내부에 보고서 작성기 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
- 이 기능은 SQL Server Reporting Services 서비스 응용 프로그램이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
+ 이 기능은 SQL Server Reporting Services 서비스 애플리케이션이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
   
  **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 섹션 '만들기'는 Reporting Services 서비스 응용 프로그램에서 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   

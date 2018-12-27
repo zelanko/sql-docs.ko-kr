@@ -39,7 +39,7 @@ ms.locfileid: "52531540"
         분석 워크로드와 OLTP 워크로드가 동일한 기본 테이블에서 실행되는 경우에는 시간 지연이 없습니다.   실시간 분석을 사용할 수 있는 시나리오에서는 ETL이 필요 없고 별도의 데이터 웨어하우스를 구매하고 유지 관리할 필요가 없으므로 비용 및 복잡성이 크게 줄어듭니다.  
   
 > [!NOTE]  
->  실시간 운영 분석은 운영 워크로드와 분석 워크로드를 둘 다 실행할 수 있는 ERP(전사적 자원 관리) 응용 프로그램과 같은 단일 데이터 원본 시나리오를 대상으로 합니다. 이는 분석 워크로드를 실행하기 전에 여러 원본의 데이터를 통합해야 하거나 큐브와 같은 사전 집계된 데이터의 사용으로 극단적인 분석 성능이 필요한 경우에는 별도 데이터 웨어하우스에 대한 필요성을 대체하지 못합니다.  
+>  실시간 운영 분석은 운영 워크로드와 분석 워크로드를 둘 다 실행할 수 있는 ERP(전사적 자원 관리) 애플리케이션과 같은 단일 데이터 원본 시나리오를 대상으로 합니다. 이는 분석 워크로드를 실행하기 전에 여러 원본의 데이터를 통합해야 하거나 큐브와 같은 사전 집계된 데이터의 사용으로 극단적인 분석 성능이 필요한 경우에는 별도 데이터 웨어하우스에 대한 필요성을 대체하지 못합니다.  
   
  실시간 분석에서는 rowstore 테이블에서 업데이트 가능한 columnstore 인덱스를 사용합니다.  Columnstore 인덱스는 데이터의 복사본을 유지하므로 OLTP 워크로드와 분석 워크로드가 데이터의 개별 복사본에 대해 실행됩니다. 이는 동시에 실행되는 두 워크로드의 성능 영향을 최소화합니다.  SQL Server는 인덱스 변경 내용을 자동으로 유지 관리하므로 OLTP 변경 내용이 분석을 위해 항상 최신 상태로 유지됩니다. 이 디자인에서는 최신 데이터에서 실시간으로 분석을 실행하는 것이 가능하고 유용합니다. 이는 디스크 기반 테이블과 메모리 최적화 테이블 모두에 적용됩니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52531540"
   
 3.  이 작업만 수행하면 됩니다!  
   
- 이제 응용 프로그램을 변경하지 않고도 실시간 운영 분석을 실행할 준비가 완료되었습니다.  분석 쿼리는 columnstore 인덱스에 대해 실행되고 OLTP 작업은 OLTP btree 인덱스에 대해 계속 실행됩니다. OLTP 워크로드는 계속 수행되지만 columnstore 인덱스를 유지하기 위해 약간의 추가 오버헤드가 발생합니다. 다음 섹션에서 성능 최적화를 참조하세요.  
+ 이제 애플리케이션을 변경하지 않고도 실시간 운영 분석을 실행할 준비가 완료되었습니다.  분석 쿼리는 columnstore 인덱스에 대해 실행되고 OLTP 작업은 OLTP btree 인덱스에 대해 계속 실행됩니다. OLTP 워크로드는 계속 수행되지만 columnstore 인덱스를 유지하기 위해 약간의 추가 오버헤드가 발생합니다. 다음 섹션에서 성능 최적화를 참조하세요.  
   
 ## <a name="blog-posts"></a>블로그 게시물  
  실시간 운영 분석에 대해 자세히 알아보려면 Sunil Agarwal의 블로그 게시물을 읽어 보세요.  이 블로그 게시물을 먼저 살펴보면 성능 팁 섹션을 보다 쉽게 이해할 수 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "52531540"
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>성능 팁 1: 필터링된 인덱스를 사용하여 쿼리 성능 향상  
  실시간 운영 분석을 실행하면 OLTP 워크로드의 성능이 영향을 받을 수 있습니다.  이 영향을 최소화해야 합니다. 아래 예제에서는 실시간 분석을 제공하면서 필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스가 트랜잭션 워크로드에 미치는 영향을 최소화하는 방법을 보여 줍니다.  
   
- 운영 워크로드에서 비클러스터형 columnstore 인덱스 유지 관리 오버헤드를 최소화하려면 필터링된 조건을 사용하여 *웜* 또는 느린 변경 데이터에만 비클러스터형 columnstore 인덱스를 만들면 됩니다. 예를 들어 주문 관리 응용 프로그램에서 이미 배송된 주문에 대한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. 주문이 배송된 후에는 변경 내용이 거의 없으므로 웜 데이터로 간주할 수 있습니다. 필터링된 인덱스를 사용하는 경우 비클러스터형 columnstore 인덱스의 데이터에 필요한 업데이트가 적으므로 트랜잭션 워크로드에 대한 영향을 감소합니다.  
+ 운영 워크로드에서 비클러스터형 columnstore 인덱스 유지 관리 오버헤드를 최소화하려면 필터링된 조건을 사용하여 *웜* 또는 느린 변경 데이터에만 비클러스터형 columnstore 인덱스를 만들면 됩니다. 예를 들어 주문 관리 애플리케이션에서 이미 배송된 주문에 대한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. 주문이 배송된 후에는 변경 내용이 거의 없으므로 웜 데이터로 간주할 수 있습니다. 필터링된 인덱스를 사용하는 경우 비클러스터형 columnstore 인덱스의 데이터에 필요한 업데이트가 적으므로 트랜잭션 워크로드에 대한 영향을 감소합니다.  
   
  분석 쿼리는 실시간 분석을 제공하는 데 필요한 경우 웜 데이터와 핫 데이터 모두에 투명하게 액세스합니다. 운영 워크로드의 중요한 부분이 '핫' 데이터에 연결되어 있는 경우 이러한 작업에는 columnstore 인덱스의 추가 유지 관리가 필요하지 않습니다. 필터링된 인덱스 정의에 사용된 열에서 rowstore 클러스터형 인덱스를 유지하는 것이 가장 좋습니다.   SQL Server는 클러스터형 인덱스를 사용하여 필터링된 조건을 충족하지 않는 행을 신속하게 검색합니다. 이 클러스터형 인덱스가 없으면 분석 쿼리의 성능을 크게 저하시킬 수 있는 이러한 행을 찾기 위해 rowstore 테이블의 전체 검색을 수행해야 합니다. 클러스터형 인덱스가 없는 경우 필터링된 비클러스터형 btree 보조 인덱스를 만들어 이러한 행을 식별할 수 있지만 비클러스터형 btree 인덱스를 통해 큰 범위의 행에 액세스하는 것은 비용이 많이 들기 때문에 이는 권장되지 않습니다.  
   
@@ -168,7 +168,7 @@ Group By customername
   
  ![쿼리 계획](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   
- [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+  [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>성능 팁 2: 분석을 Always On 읽기 가능한 보조로 오프로드  
  필터링된 columnstore 인덱스를 사용하여 columnstore 인덱스 유지 관리를 최소화할 수 있지만 분석 쿼리에는 여전히 운영 워크로드 성능에 영향을 주는 많은 컴퓨팅 리소스(CPU, IO, 메모리)가 필요할 수 있습니다. 업무에 중요한 워크로드에는 대부분 Always On 구성을 사용하는 것이 좋습니다. 이 구성에서는 분석 실행을 읽기 가능한 보조로 오프로드하여 그 영향을 제거할 수 있습니다.  
@@ -196,12 +196,12 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- [압축 지연](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+  [압축 지연](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
   
  권장 모범 사례는 다음과 같습니다.  
   
 -   **삽입/쿼리 워크로드:** 워크로드가 주로 데이터를 삽입하고 쿼리하는 경우 기본 COMPRESSION_DELAY(0)가 권장되는 옵션입니다. 100만 개의 행이 단일 델타 행 그룹에 삽입되면 새로 삽입된 행이 압축됩니다.  
-    이러한 워크로드의 예로는 (a) 기존 DW 워크로드 (b) 웹 응용 프로그램에서 클릭 패턴을 분석해야 하는 경우의 클릭 스트림 분석 등이 있습니다.  
+    이러한 워크로드의 예로는 (a) 기존 DW 워크로드 (b) 웹 애플리케이션에서 클릭 패턴을 분석해야 하는 경우의 클릭 스트림 분석 등이 있습니다.  
   
 -   **OLTP 워크로드:** 워크로드가 DMV에 집중된 경우(즉, 주로 업데이트, 삭제 및 삽입 수행) DMV sys를 검사하면 columnstore 인덱스 조각화를 볼 수 있습니다. dm_db_column_store_row_group_physical_stats. 최근에 압축된 행 그룹에서 삭제된 것으로 표시된 행 수가 10%를 초과하는 경우 COMPRESSION_DELAY 옵션을 사용하여 행이 압축에 적합하게 될 때 시간 지연을 추가할 수 있습니다. 예를 들어 워크로드에 대해 새로 삽입된 행이 60분 동안 '핫' 상태로 유지되는 경우(즉, 여러 번 업데이트되는 경우) COMPRESSION_DELAY가 60이 되도록 선택해야 합니다.  
   

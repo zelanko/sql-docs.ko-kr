@@ -13,15 +13,15 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48178133"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
-  데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 데이터 스트림입니다. PowerPivot for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 PowerPivot 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
+  데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 데이터 스트림입니다. PowerPivot for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 PowerPivot 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
   
- 데이터 피드의 사용 방법은 Atom 데이터 피드를 지원하는 응용 프로그램의 기본 내보내기 기능을 사용하는지 또는 사용자 지정 데이터 서비스를 만들어 사용하는지에 따라 달라집니다. Atom XML 데이터를 게시하고 읽을 수 있는 응용 프로그램은 데이터 피드 및 데이터 서비스의 메커니즘을 사용자에게 숨기는 원활한 데이터 전송 기능을 제공합니다. 사용자는 단순히 한 응용 프로그램에서 다른 응용 프로그램으로 데이터를 이동하기만 하면 됩니다.  
+ 데이터 피드의 사용 방법은 Atom 데이터 피드를 지원하는 애플리케이션의 기본 내보내기 기능을 사용하는지 또는 사용자 지정 데이터 서비스를 만들어 사용하는지에 따라 달라집니다. Atom XML 데이터를 게시하고 읽을 수 있는 애플리케이션은 데이터 피드 및 데이터 서비스의 메커니즘을 사용자에게 숨기는 원활한 데이터 전송 기능을 제공합니다. 사용자는 단순히 한 애플리케이션에서 다른 애플리케이션으로 데이터를 이동하기만 하면 됩니다.  
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Microsoft SharePoint 2010은 PowerPivot 통합 문서에서 사용할 수 있는 피드 데이터를 제공 합니다. 이 항목의 정보를 사용하여 기존의 보고서 및 목록에서 데이터 피드에 액세스하는 방법을 배울 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48178133"
 ##  <a name="prereq"></a> 필수 구성 요소  
  데이터 피드를 Excel 2010으로 가져오려면 PowerPivot for Excel이 있어야 합니다.  
   
- Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010 모두 이러한 형식으로 데이터를 제공할 수 있습니다.  
+ Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다.  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010 모두 이러한 형식으로 데이터를 제공할 수 있습니다.  
   
  SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48178133"
 >  SharePoint 라이브러리에 게시되는 PowerPivot 통합 문서에 보고서 데이터를 다시 가져오는 데이터 새로 고침 되풀이 일정을 설정하려면 보고서 서버를 SharePoint 통합용으로 구성해야 합니다. PowerPivot for SharePoint 및 Reporting Services 함께 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 보고서 서버 관리 &#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)합니다.  
   
 ##  <a name="dsdoc"></a> 데이터 서비스 문서에서 데이터 피드 만들기  
- Atom 피드를 생성하는 사용자 지정 데이터 서비스가 있는 경우 사용자와 응용 프로그램에서 데이터를 사용할 수 있게 하는 방법으로 데이터 서비스 문서를 설정할 수 있습니다. *데이터 서비스 문서* 파일(.atomsvc)에서는 Atom 연결 형식으로 데이터를 게시하는 온라인 원본에 대해 하나 이상의 연결을 지정합니다. 데이터 서비스 문서는 SharePoint 서버에 게시된 데이터 서비스 문서를 찾아보기 위한 공용 액세스 지점을 제공하는 특수한 용도의 라이브러리인 *데이터 피드 라이브러리*에서 만들 수 있습니다. 데이터 피드 라이브러리에 있는 데이터 서비스 문서에 액세스할 수 있는 정보 작업자는 문서의 SharePoint URL을 참조하여 데이터 피드를 해당 통합 문서 및 응용 프로그램으로 가져올 수 있습니다.  
+ Atom 피드를 생성하는 사용자 지정 데이터 서비스가 있는 경우 사용자와 애플리케이션에서 데이터를 사용할 수 있게 하는 방법으로 데이터 서비스 문서를 설정할 수 있습니다. *데이터 서비스 문서* 파일(.atomsvc)에서는 Atom 연결 형식으로 데이터를 게시하는 온라인 원본에 대해 하나 이상의 연결을 지정합니다. 데이터 서비스 문서는 SharePoint 서버에 게시된 데이터 서비스 문서를 찾아보기 위한 공용 액세스 지점을 제공하는 특수한 용도의 라이브러리인 *데이터 피드 라이브러리*에서 만들 수 있습니다. 데이터 피드 라이브러리에 있는 데이터 서비스 문서에 액세스할 수 있는 정보 작업자는 문서의 SharePoint URL을 참조하여 데이터 피드를 해당 통합 문서 및 애플리케이션으로 가져올 수 있습니다.  
   
 1.  사이트 관리자가 만든 데이터 피드 라이브러리를 엽니다. 자세한 내용은 [만들거나 데이터 피드 라이브러리를 사용자 지정 &#40;SharePoint 용 PowerPivot&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)합니다.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "48178133"
   
     2.  **웹 서비스 URL** 은 필수입니다. 기준 URL이 없을 경우 이 값은 http:// 또는 https://를 주소에 포함해야 합니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL은 http://adventure-works/inventory/today.aspx, 기본 url http://adventure-works/inventory, 및 웹 서비스 URL은 /today.aspx입니다.  
   
-         웹 서비스 URL은 데이터 하위 집합을 필터링하거나 선택하는 매개 변수를 포함할 수 있습니다. 피드를 제공하는 응용 프로그램이나 서비스는 URL에 지정된 매개 변수를 지원해야 합니다.  
+         웹 서비스 URL은 데이터 하위 집합을 필터링하거나 선택하는 매개 변수를 포함할 수 있습니다. 피드를 제공하는 애플리케이션이나 서비스는 URL에 지정된 매개 변수를 지원해야 합니다.  
   
-6.  피드와 테이블의 개수가 일대일이 되도록 **테이블 이름**을 입력합니다. 이 값은 필수 사항입니다. 테이블 이름은 데이터 피드를 사용하는 클라이언트 응용 프로그램에서 사용됩니다. PowerPivot for Excel에서 테이블 이름은 PowerPivot 창에서 가져온 데이터를 포함하는 테이블을 지정하는 데 사용됩니다.  
+6.  피드와 테이블의 개수가 일대일이 되도록 **테이블 이름**을 입력합니다. 이 값은 필수 사항입니다. 테이블 이름은 데이터 피드를 사용하는 클라이언트 애플리케이션에서 사용됩니다. PowerPivot for Excel에서 테이블 이름은 PowerPivot 창에서 가져온 데이터를 포함하는 테이블을 지정하는 데 사용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)   

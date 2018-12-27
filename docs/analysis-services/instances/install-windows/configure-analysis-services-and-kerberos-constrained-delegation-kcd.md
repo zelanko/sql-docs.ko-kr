@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34019250"
@@ -21,7 +21,7 @@ ms.locfileid: "34019250"
   KCD(Kerberos 제한 위임)는 Windows 인증 시 사용자 환경 전체에서 서비스 간에 클라이언트 자격 증명을 위임하도록 구성할 수 있는 인증 프로토콜입니다. KCD에는 추가 인프라(예: 도메인 컨트롤러) 및 사용자 환경의 추가 구성이 필요합니다. KCD는 SharePoint 2016에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터와 관련된 일부 시나리오의 요구 사항입니다. SharePoint 2016에서는 Excel Services가 SharePoint 팜에서 별도의 새로운 서버인 **Office Online Server**로 이동되었습니다. Office Online Server는 별도의 서버이므로 두 가지 홉 시나리오에서 클라이언트 자격 증명을 위임할 방법이 필요합니다.  
   
 ## <a name="overview"></a>개요  
- KCD를 사용하면 리소스에 대한 액세스를 제공하기 위한 목적으로 하나의 계정이 다른 계정을 가장할 수 있습니다. 가장하는 계정은 웹 응용 프로그램에 할당된 서비스 계정 또는 웹 서버의 컴퓨터 계정이고, 가장된 계정은 리소스에 대한 액세스가 필요한 사용자 계정입니다. KCD는 서비스 수준에서 작동하므로 서버의 선택된 서비스에는 가장하는 계정에 의해 액세스 권한이 부여될 수 있지만 동일한 서버의 다른 서비스 또는 다른 서버의 서비스는 액세스가 거부됩니다.  
+ KCD를 사용하면 리소스에 대한 액세스를 제공하기 위한 목적으로 하나의 계정이 다른 계정을 가장할 수 있습니다. 가장하는 계정은 웹 애플리케이션에 할당된 서비스 계정 또는 웹 서버의 컴퓨터 계정이고, 가장된 계정은 리소스에 대한 액세스가 필요한 사용자 계정입니다. KCD는 서비스 수준에서 작동하므로 서버의 선택된 서비스에는 가장하는 계정에 의해 액세스 권한이 부여될 수 있지만 동일한 서버의 다른 서비스 또는 다른 서버의 서비스는 액세스가 거부됩니다.  
   
  이 항목의 섹션에서는 KCD가 필요한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 과 관련된 일반적인 시나리오와 예제 서버 배포를 검토하며, 설치 및 구성하는 데 필요한 항목에 대한 개략적인 요약을 제공합니다. 도메인 컨트롤러 및 KCD와 관련된 기술에 대한 자세한 정보를 제공하는 링크는 [추가 정보 및 커뮤니티 콘텐츠](#bkmk_moreinfo) 섹션을 참조하세요.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34019250"
  ![데이터 원본으로 통합 문서](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "데이터 원본으로 통합 문서")  
   
 ## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>시나리오 2: Excel 통합 문서에 Analysis Services 테이블 형식 모델 연결  
- Analysis Services 테이블 형식 모델 ![1 참조](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 참조") 파워 피벗 모델을 포함 하는 Excel 통합 문서에 연결 합니다. 이 시나리오에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 테이블 형식 모델을 로드할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 통합 문서에 대한 링크를 검색합니다. 모델을 처리할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 SharePoint에 통합 문서를 로드하는 쿼리 요청을 보냅니다. 이 시나리오에서는 Analysis Services에서 SharePoint로 클라이언트 자격 증명을 위임할 필요가 **없지만** 클라이언트 응용 프로그램이 확장 바인딩에서 데이터 소스 정보를 덮어쓸 수 있습니다. 확장 바인딩 요청이 현재 사용자를 가장하도록 지정하는 경우에는 사용자 자격 증명을 위임해야 하며, 이를 위해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 와 SharePoint 간에 KCD를 구성해야 합니다.  
+ Analysis Services 테이블 형식 모델 ![1 참조](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 참조") 파워 피벗 모델을 포함 하는 Excel 통합 문서에 연결 합니다. 이 시나리오에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 테이블 형식 모델을 로드할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 통합 문서에 대한 링크를 검색합니다. 모델을 처리할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 SharePoint에 통합 문서를 로드하는 쿼리 요청을 보냅니다. 이 시나리오에서는 Analysis Services에서 SharePoint로 클라이언트 자격 증명을 위임할 필요가 **없지만** 클라이언트 애플리케이션이 확장 바인딩에서 데이터 소스 정보를 덮어쓸 수 있습니다. 확장 바인딩 요청이 현재 사용자를 가장하도록 지정하는 경우에는 사용자 자격 증명을 위임해야 하며, 이를 위해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 와 SharePoint 간에 KCD를 구성해야 합니다.  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -65,23 +65,23 @@ ms.locfileid: "34019250"
   
 -   IPv4 및 IPv6 주소를 둘 다 구성하는 것이 좋습니다. Windows 제어판에서 이 작업을 수행할 수 있습니다.  
   
-    1.  **네트워크 및 공유 센터**를 클릭합니다.  
+    1.   **네트워크 및 공유 센터**를 클릭합니다.  
   
     2.  이더넷 연결을 클릭합니다.  
   
-    3.  **속성**을 클릭합니다.  
+    3.   **속성**을 클릭합니다.  
   
-    4.  **인터넷 프로토콜 버전 6(TCP/IPv6)** 을 클릭합니다.  
+    4.   **인터넷 프로토콜 버전 6(TCP/IPv6)** 을 클릭합니다.  
   
-    5.  **속성**을 클릭합니다.  
+    5.   **속성**을 클릭합니다.  
   
-    6.  **다음 DNS 서버 주소 사용**을 클릭합니다.  
+    6.   **다음 DNS 서버 주소 사용**을 클릭합니다.  
   
     7.  Ipconfig 명령에서 IP 주소를 입력합니다.  
   
     8.  **고급** 단추를 클릭한 다음 **DNS** 탭을 클릭하고 DNS 접미사가 올바른지 확인합니다.  
   
-    9. **다음 DNS 접미사 추가**를 클릭합니다.  
+    9.  **다음 DNS 접미사 추가**를 클릭합니다.  
   
     10. IPv4에 대해 단계를 반복합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34019250"
   
     3.  예제: `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  Office Online Server 컴퓨터 계정이 사용자를 SharePoint 서비스 계정으로 가장하는 것을 허용하도록**Active Directory를 구성** 합니다. 따라서 Office Online Server에서 SharePoint Web Services용 응용 프로그램 풀을 실행하는 보안 주체에 대한 위임 속성을 설정합니다. 이 섹션의 PowerShell 명령에는 AD(Active Directory) PowerShell 개체가 필요합니다.  
+3.  Office Online Server 컴퓨터 계정이 사용자를 SharePoint 서비스 계정으로 가장하는 것을 허용하도록**Active Directory를 구성** 합니다. 따라서 Office Online Server에서 SharePoint Web Services용 애플리케이션 풀을 실행하는 보안 주체에 대한 위임 속성을 설정합니다. 이 섹션의 PowerShell 명령에는 AD(Active Directory) PowerShell 개체가 필요합니다.  
   
     1.  Office Online Server의 Active Directory ID 가져오기  
   

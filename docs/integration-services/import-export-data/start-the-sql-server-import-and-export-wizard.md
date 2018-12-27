@@ -40,7 +40,7 @@ ms.locfileid: "49383578"
 마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
 
 > [!NOTE]
-> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 응용 프로그램이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
+> 64비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용하려면 SQL Server를 설치해야 합니다. SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)는 32비트 애플리케이션이며, 32비트 버전의 마법사를 포함하여 32비트 파일만 설치합니다.
 
 ## <a name="startStart"></a> 시작 메뉴  
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>시작 메뉴에서 SQL Server 가져오기 및 내보내기 마법사 시작
@@ -69,7 +69,7 @@ ms.locfileid: "49383578"
   
 ## <a name="startSSMS"></a> SSMS(SQL Server Management Studio)
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 SQL Server 가져오기 및 내보내기 마법사 시작    
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
     
 2.  **데이터베이스**를 확장합니다.
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭합니다.

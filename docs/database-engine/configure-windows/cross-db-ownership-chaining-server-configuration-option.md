@@ -25,7 +25,7 @@ ms.locfileid: "47621782"
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  **cross db ownership chaining** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 데이터베이스 간 소유권 체인을 구성할 수 있습니다.  
+   **cross db ownership chaining** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 데이터베이스 간 소유권 체인을 구성할 수 있습니다.  
   
  이 서버 옵션을 사용하면 데이터베이스 수준에서 데이터베이스 간 소유권 체인을 제어하거나 모든 데이터베이스의 데이터베이스 간 소유권 체인을 제어할 수 있습니다.  
   
@@ -48,7 +48,7 @@ SELECT is_db_chaining_on, name FROM sys.databases;
   
 -   데이터베이스 간 소유권 체인을 설정하거나 해제하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
--   프로덕션 서버에서 데이터베이스 간 소유권 체인 설정을 해제하기 전에 타사 응용 프로그램을 포함한 모든 응용 프로그램을 테스트하여 설정 변경으로 인해 응용 프로그램 기능이 영향받지 않도록 하십시오.  
+-   프로덕션 서버에서 데이터베이스 간 소유권 체인 설정을 해제하기 전에 타사 애플리케이션을 포함한 모든 애플리케이션을 테스트하여 설정 변경으로 인해 애플리케이션 기능이 영향받지 않도록 하십시오.  
   
 -   **sp_configure** 를 사용하여 RECONFIGURE를 지정하는 경우에는 서버를 실행하는 동안 **cross db ownership chaining**옵션을 변경할 수 있습니다.  
   

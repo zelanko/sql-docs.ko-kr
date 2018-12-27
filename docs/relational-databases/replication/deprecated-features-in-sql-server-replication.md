@@ -22,9 +22,9 @@ ms.locfileid: "47758341"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 복제에서 사용되지 않는 기능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 복제 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 복제 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 |기능|설명|  
 |-------------|-----------------|  

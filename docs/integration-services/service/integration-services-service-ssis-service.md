@@ -88,7 +88,7 @@ ms.locfileid: "52392428"
   
 ## <a name="set-the-properties-of-the-service"></a>서비스 속성 설정
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 패키지를 관리하고 모니터링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 처음 설치하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 시작되고 서비스의 시작 유형이 자동으로 설정됩니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 패키지를 관리하고 모니터링합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 처음 설치하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 시작되고 서비스의 시작 유형이 자동으로 설정됩니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치된 후에는 SQL Server 구성 관리자나 서비스 MMC 스냅인을 사용하여 서비스의 속성을 설정할 수 있습니다.  
   
@@ -363,7 +363,7 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
   
  사용할 수 있는 방화벽 시스템은 여러 가지가 있습니다. Windows 방화벽 이외의 다른 방화벽을 사용하는 경우 사용 중인 시스템별 정보를 보려면 해당 방화벽 설명서를 참조하십시오.  
   
- 방화벽에서 응용 프로그램 수준의 필터링이 지원되는 경우 Windows에서 제공하는 사용자 인터페이스를 사용하여 프로그램 및 서비스와 같이 방화벽을 통해 허용되는 예외를 지정할 수 있습니다. 그렇지 않으면 제한된 TCP 포트 집합을 사용하도록 DCOM을 구성해야 합니다. 이전에 제공된 Microsoft 웹 사이트 링크에는 사용할 TCP 포트 지정 방법에 대한 정보가 포함됩니다.  
+ 방화벽에서 애플리케이션 수준의 필터링이 지원되는 경우 Windows에서 제공하는 사용자 인터페이스를 사용하여 프로그램 및 서비스와 같이 방화벽을 통해 허용되는 예외를 지정할 수 있습니다. 그렇지 않으면 제한된 TCP 포트 집합을 사용하도록 DCOM을 구성해야 합니다. 이전에 제공된 Microsoft 웹 사이트 링크에는 사용할 TCP 포트 지정 방법에 대한 정보가 포함됩니다.  
   
  Integration Services 서비스에는 포트 135가 사용되며 이 포트는 변경할 수 없습니다. SCM(서비스 제어 관리자)에 액세스하려면 TCP 포트 135를 열어야 합니다. SCM은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지와 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다.  
   
@@ -397,11 +397,11 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
   
 1.  제어판에서 **Windows 방화벽**을 두 번 클릭합니다.  
   
-2.  **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
+2.   **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
   
 3.  **프로그램 추가** 대화 상자에서 **찾아보기**를 클릭하고 Program Files\Microsoft SQL Server\100\DTS\Binn 폴더로 이동한 다음 MsDtsSrvr.exe를 클릭하고 **열기**를 클릭합니다. **확인** 을 클릭하여 **프로그램 추가** 대화 상자를 닫습니다.  
   
-4.  **예외** 탭에서 **포트 추가**를 클릭합니다.  
+4.   **예외** 탭에서 **포트 추가**를 클릭합니다.  
   
 5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP**를 선택합니다.  
   

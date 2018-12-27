@@ -33,7 +33,7 @@ ms.locfileid: "48147873"
 |**파일 이름**|기본적으로, 로그 파일 이름은<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> ReportingServicesService.exe.config 파일에서 HttpTraceFileName 특성을 수정하여 파일 이름의 접두사를 사용자 지정할 수 있습니다. 타임스탬프는 UTC(Coordinated Universal Time)를 기반으로 합니다.|  
 |**파일 위치**|파일은 다음 위치에 기록됩니다.<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**파일 형식**|파일은 EN-US 형식이며 ASCII 텍스트 파일입니다.|  
-|**파일 생성 및 보존**|HTTP 로그는 구성 파일에서 사용하도록 설정하고, 서비스를 다시 시작하고, 보고서 서버가 HTTP 요청을 처리한 후에 만들어집니다. 설정을 구성했지만 로그 파일이 표시되지 않을 경우 보고서를 열거나 보고서 관리자와 같은 보고서 서버 응용 프로그램을 시작하여 해당 파일을 만들기 위한 HTTP 요청을 생성합니다.<br /><br /> 로그 파일의 새 인스턴스는 각 서비스 다시 시작 작업 및 보고서 서버에 대한 이후 HTTP 요청 후에 만들어집니다.<br /><br /> 기본적으로 추적 로그는 32MB로 제한되며 14일 후 삭제됩니다.|  
+|**파일 생성 및 보존**|HTTP 로그는 구성 파일에서 사용하도록 설정하고, 서비스를 다시 시작하고, 보고서 서버가 HTTP 요청을 처리한 후에 만들어집니다. 설정을 구성했지만 로그 파일이 표시되지 않을 경우 보고서를 열거나 보고서 관리자와 같은 보고서 서버 애플리케이션을 시작하여 해당 파일을 만들기 위한 HTTP 요청을 생성합니다.<br /><br /> 로그 파일의 새 인스턴스는 각 서비스 다시 시작 작업 및 보고서 서버에 대한 이후 HTTP 요청 후에 만들어집니다.<br /><br /> 기본적으로 추적 로그는 32MB로 제한되며 14일 후 삭제됩니다.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>보고서 서버 HTTP 로그에 대한 구성 설정  
  보고서 서버 HTTP 로그를 구성하려면 메모장을 사용하여 **ReportingServicesService.exe.config** 파일을 수정합니다. 구성 파일은 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 폴더에 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48147873"
 ```  
   
 ## <a name="log-file-fields"></a>로그 파일 필드  
- 다음 표에서는 로그에서 사용 가능한 필드를 설명합니다.  필드 목록은 구성할 수 없습니다. 통해 포함할 필드를 지정할 수 있습니다는 `HTTPTraceSwitches` 구성 설정입니다. 합니다 **기본** 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 열 지정 `HTTPTraceSwitches`합니다.  
+  다음 표에서는 로그에서 사용 가능한 필드를 설명합니다.  필드 목록은 구성할 수 없습니다. 통해 포함할 필드를 지정할 수 있습니다는 `HTTPTraceSwitches` 구성 설정입니다. 합니다 **기본** 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 열 지정 `HTTPTraceSwitches`합니다.  
   
 |필드|Description|Default|  
 |-----------|-----------------|-------------|  

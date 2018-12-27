@@ -22,7 +22,7 @@ ms.locfileid: "49072147"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 서비스 - 다른 컴퓨터에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 응용 프로그램 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 애플리케이션 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
   
 > [!NOTE]  
 >  일부 작업은 원격으로 연결할 때 구성 관리를 통해 수행할 수 없습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "49072147"
   
 #### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>Windows 컴퓨터 관리에서 다른 컴퓨터에 연결하려면  
   
-1.  **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
+1.   **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
   
 2.  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "49072147"
   
      원격 컴퓨터에서 실행 중인 서비스가 컴퓨터 관리에 표시됩니다. 최상위 노드가 **컴퓨터 관리** \<*remotecomputer*>로 변경됩니다.  
   
-4.  콘솔 트리에서 **서비스 및 응용 프로그램**을 확장한 다음 **SQL Server 구성 관리자** 를 확장하여 원격 컴퓨터의 서비스를 관리합니다.  
+4.  콘솔 트리에서 **서비스 및 애플리케이션**을 확장한 다음 **SQL Server 구성 관리자** 를 확장하여 원격 컴퓨터의 서비스를 관리합니다.  
   
 #### <a name="to-save-a-link-to-sql-server-configuration-manager-for-another-computer"></a>다른 컴퓨터의 SQL Server 구성 관리자에 대한 링크를 저장하려면  
   

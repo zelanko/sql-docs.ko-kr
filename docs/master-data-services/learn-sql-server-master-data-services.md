@@ -28,7 +28,7 @@ ms.locfileid: "51695811"
   
   
 ## <a name="training"></a>학습  
-* [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 도입된 새로운 기능을 살펴보려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) 을 확인해 보세요(Microsoft 계정을 사용하여 로그인해야 함).  
+*  [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 도입된 새로운 기능을 살펴보려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) 을 확인해 보세요(Microsoft 계정을 사용하여 로그인해야 함).  
 * Excel용 추가 기능 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 사용하여 지리 데이터의 마스터 목록을 저장하고 관리하는 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]솔루션을 개발하려면 이 [**TechNet 가상 랩**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)을 확인해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
   
 ## <a name="videos"></a>비디오  
@@ -39,9 +39,9 @@ ms.locfileid: "51695811"
   
     샘플 모델의 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 업데이트에 대한 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
-* 개발자 및 해당 사용자의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]조작 방식을 사용자 지정하는 방법의 데모를 보려면 SQL Server 샘플에 포함된 MDS C# 콘솔 응용 프로그램 샘플을 확인해 보세요. SQL Server 샘플은 이 [GitHub 리포지토리](https://github.com/Microsoft/sql-server-samples)에서 .zip 파일로 다운로드할 수 있습니다.  
+* 개발자 및 해당 사용자의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]조작 방식을 사용자 지정하는 방법의 데모를 보려면 SQL Server 샘플에 포함된 MDS C# 콘솔 애플리케이션 샘플을 확인해 보세요. SQL Server 샘플은 이 [GitHub 리포지토리](https://github.com/Microsoft/sql-server-samples)에서 .zip 파일로 다운로드할 수 있습니다.  
   
-    MDS 응용 프로그램 샘플은 다음과 같습니다. SQL Server 샘플 다운로드에는 응용 프로그램 샘플 사용을 시작하는 데 도움이 되는 추가 정보도 포함되어 있습니다.  
+    MDS 애플리케이션 샘플은 다음과 같습니다. SQL Server 샘플 다운로드에는 애플리케이션 샘플 사용을 시작하는 데 도움이 되는 추가 정보도 포함되어 있습니다.  
     * Master Data Services 비즈니스 규칙 API 샘플  
     * Master Data Services 엔터티 기반 준비 API 샘플  
     * Master Data Services 마스터 데이터 API 샘플  

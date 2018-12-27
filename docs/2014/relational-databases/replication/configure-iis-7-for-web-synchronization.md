@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48131753"
@@ -29,7 +29,7 @@ ms.locfileid: "48131753"
  전체 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  응용 프로그램에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 다음과 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
+>  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 다음과 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
  웹 동기화를 사용하려면 다음 단계를 완료하여 IIS 7을 구성해야 합니다. 이 항목에서는 각 단계를 자세히 설명합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48131753"
   
 ###### <a name="to-test-the-certificate"></a>인증서를 테스트하려면  
   
-1.  **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
+1.   **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
   
 2.  **동작** 창에서 **\**:443(https) 찾아보기**를 클릭합니다.  
   
@@ -233,16 +233,16 @@ ms.locfileid: "48131753"
   
     2.  **응용 프로그램 풀**을 마우스 오른쪽 단추로 클릭하고 **응용 프로그램 풀 추가**를 클릭합니다.  
   
-    3.  응용 프로그램 풀의 이름을 입력하고 남아 있는 필드에 대한 기본값을 그대로 둔 다음 **확인**을 클릭합니다.  
+    3.  애플리케이션 풀의 이름을 입력하고 남아 있는 필드에 대한 기본값을 그대로 둔 다음 **확인**을 클릭합니다.  
   
     > [!NOTE]  
     >  동기화 클라이언트가 세 개 이상 동시에 실행되도록 하려면 웹 가든을 만들어야 합니다. 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)에서 "웹 가든 만들기"를 참조하세요.  
   
-5.  계정과 응용 프로그램 풀을 연결합니다.  
+5.  계정과 애플리케이션 풀을 연결합니다.  
   
     1.  **IIS(인터넷 정보 서비스) 관리자**에서 로컬 서버 노드를 확장한 다음 **응용 프로그램 풀**을 클릭합니다.  
   
-    2.  만든 응용 프로그램 풀을 마우스 오른쪽 단추로 클릭한 다음 **응용 프로그램 풀 기본값 설정**을 클릭합니다.  
+    2.  만든 애플리케이션 풀을 마우스 오른쪽 단추로 클릭한 다음 **애플리케이션 풀 기본값 설정**을 클릭합니다.  
   
     3.  **응용 프로그램 풀 기본값** 대화 상자에서 **프로세스 모델** 섹션으로 스크롤한 다음 **ID** 필드를 클릭합니다.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "48131753"
   
     7.  **확인** 을 클릭하여 **응용 프로그램 풀 ID** 대화 상자를 닫은 다음 다시 **확인** 을 클릭하여 **응용 프로그램 풀 기본값**대화 상자를 닫습니다.  
   
-6.  응용 프로그램 풀을 복제 웹 사이트와 연결합니다.  
+6.  애플리케이션 풀을 복제 웹 사이트와 연결합니다.  
   
     1.  **IIS(인터넷 정보 서비스) 관리자**에서 로컬 서버 노드를 확장한 다음 **기본 웹 사이트** 또는 사용자의 웹 동기화 사이트(기본 웹 사이트와 다른 경우)를 클릭합니다.  
   

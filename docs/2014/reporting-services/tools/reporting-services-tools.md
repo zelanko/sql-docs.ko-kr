@@ -44,7 +44,7 @@ ms.locfileid: "48200549"
 |보고서 작성기|이 도구를 사용하면 보고서를 설계하고 기본 모드 또는 SharePoint 모드 보고서 서버에 배포할 수 있습니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경<br /><br /> 보고서 항목을 보고서 파트로 저장하는 기능<br /><br /> 지도를 만들 수 있는 마법사<br /><br /> 집계의 집계<br /><br /> 향상된 식 지원<br /><br /> 선택한 기본 제공 데이터 원본 유형에서 검색할 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> <br /><br /> 자세한 내용은 [보고서 작성기 &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)합니다.|MSI를 다운로드하거나 보고서 관리자/SharePoint에서 엽니다.|  
   
 ## <a name="tools-for-report-server-administration"></a>보고서 서버 관리를 위한 도구  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버 관리에 사용할 수 있는 그래픽 및 스크립팅 도구 집합입니다. 사용하는 도구는 사용하는 보고서 서버의 배포 모드에 따라 다릅니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버 관리에 사용할 수 있는 그래픽 및 스크립팅 도구 집합입니다. 사용하는 도구는 사용하는 보고서 서버의 배포 모드에 따라 다릅니다.  
   
 ### <a name="native-mode"></a>기본 모드  
  다음 표에서는 기본 모드에서 배포된 보고서 서버를 관리하는 데 사용할 수 있는 도구를 보여 줍니다.  
@@ -59,15 +59,15 @@ ms.locfileid: "48200549"
 |WMI(Windows Management Instrumentation) 클래스|이 클래스를 사용하면 그래픽 사용자 인터페이스를 사용하지 않고도 Reporting Services 구성 관리자의 구성 태스크를 자동화할 수 있습니다.<br /><br /> 자세한 내용은 [the WMI Provider Programmatically 액세스](../accessing-the-wmi-provider-programmatically.md)합니다.|Visual Basic 스크립트|  
   
 ### <a name="sharepoint-integrated-mode"></a>SharePoint 통합 모드  
- SharePoint 모드의 Reporting Services는 SharePoint 아키텍처의 서비스 응용 프로그램이며 SharePoint를 통해 직접 관리됩니다.  
+ SharePoint 모드의 Reporting Services는 SharePoint 아키텍처의 서비스 애플리케이션이며 SharePoint를 통해 직접 관리됩니다.  
   
 |도구|Description|액세스 방법|  
 |----------|-----------------|-------------------|  
-|SharePoint 중앙 관리|SharePoint 중앙 관리를 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 공유 서비스 응용 프로그램을 만들고 쿼리하며 관리할 수 있습니다.<br /><br /> 자세한 내용은 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)를 참조하세요.|중앙 관리를 위한 SharePoint 사이트 URL 브라우저|  
-|PowerShell Cmdlet|PowerShell cmdlet을 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 공유 서비스 응용 프로그램을 만들고 쿼리하며 관리할 수 있습니다.<br /><br /> 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)합니다.|SharePoint 2010 관리 셸|  
+|SharePoint 중앙 관리|SharePoint 중앙 관리를 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 공유 서비스 애플리케이션을 만들고 쿼리하며 관리할 수 있습니다.<br /><br /> 자세한 내용은 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)를 참조하세요.|중앙 관리를 위한 SharePoint 사이트 URL 브라우저|  
+|PowerShell Cmdlet|PowerShell cmdlet을 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 공유 서비스 애플리케이션을 만들고 쿼리하며 관리할 수 있습니다.<br /><br /> 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)합니다.|SharePoint 2010 관리 셸|  
   
 ## <a name="tools-for-report-content-management"></a>보고서 내용 관리를 위한 도구  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 내용 관리에 사용할 수 있는 그래픽 및 스크립팅 도구 집합입니다. 사용하는 도구는 사용하는 보고서 서버의 배포 모드에 따라 다릅니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 내용 관리에 사용할 수 있는 그래픽 및 스크립팅 도구 집합입니다. 사용하는 도구는 사용하는 보고서 서버의 배포 모드에 따라 다릅니다.  
   
 |도구|Description|액세스 방법|  
 |----------|-----------------|-------------------|  

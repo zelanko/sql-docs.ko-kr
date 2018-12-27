@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38984475"
@@ -44,7 +44,7 @@ ms.locfileid: "38984475"
   
 -   팜 구성 데이터베이스에서 db_owner여야 합니다.  
   
--   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 응용 프로그램이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+-   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 애플리케이션이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_twoversions"></a> 구성 도구의 두 가지 버전  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "38984475"
   
 ##  <a name="bmkm_start_tool"></a> 파워 피벗 구성 도구 중 하나 시작  
   
-1.  **시작** 화면에서 **powerpivot**입력  
+1.   **시작** 화면에서 **powerpivot**입력  
   
      **시작** 화면에서 **powerpivot** 을 입력하거나 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**및 다음 중 하나를 차례로 클릭합니다.  
   
@@ -111,15 +111,15 @@ ms.locfileid: "38984475"
   
     1.  설치 후 태스크를 완료하거나 설치를 복구하려면 **SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 또는 복구**를 클릭합니다.  
   
-    2.  팜에서 기능과 솔루션을 제거하려면 **기능, 서비스, 응용 프로그램 및 솔루션 제거** 를 클릭합니다.  
+    2.  팜에서 기능과 솔루션을 제거하려면 **기능, 서비스, 애플리케이션 및 솔루션 제거** 를 클릭합니다.  
   
-    3.  이전 버전의 **을 사용하여 설치된 기능과 솔루션을 업그레이드하려면** 기능, 서비스, 응용 프로그램 및 솔루션 업그레이드 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 클릭합니다.  
+    3.  이전 버전의 **을 사용하여 설치된 기능과 솔루션을 업그레이드하려면** 기능, 서비스, 애플리케이션 및 솔루션 업그레이드 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 클릭합니다.  
   
      예를 들어 다음 이미지에는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구의 시작 페이지가 나와 있습니다.  
   
      ![SharePoint 용 PowerPivot 2013 구성 도구](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "SharePoint 용 PowerPivot 2013 구성 도구")  
   
- 각 태스크는 서버 구성의 일부 측면을 처리하는 개별 작업으로 구성됩니다. 예를 들어 구성 태스크에는 솔루션 배포, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기, 기능 활성화, 데이터 새로 고침 구성 등의 동작이 포함됩니다. 동작 목록은 설치의 현재 상태에 따라 다릅니다. 동작이 필요하지 않은 경우 이 도구는 해당 동작을 태스크 목록에서 제외합니다.  
+ 각 태스크는 서버 구성의 일부 측면을 처리하는 개별 작업으로 구성됩니다. 예를 들어 구성 태스크에는 솔루션 배포, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 만들기, 기능 활성화, 데이터 새로 고침 구성 등의 동작이 포함됩니다. 동작 목록은 설치의 현재 상태에 따라 다릅니다. 동작이 필요하지 않은 경우 이 도구는 해당 동작을 태스크 목록에서 제외합니다.  
   
  실행을 클릭하면 이 도구는 모든 동작을 일괄 처리 모드로 처리합니다. 각 동작은 태스크 목록에 별도의 항목으로 표시되지만 태스크에 포함된 모든 동작이 함께 처리됩니다. 유효성 검사를 통과하는 동작만 처리됩니다. 유효성 검사를 통과하려면 일부 입력 값을 추가하거나 변경해야 할 수 있습니다.  
   

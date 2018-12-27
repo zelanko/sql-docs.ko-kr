@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47696341"
 ---
-# <a name="using-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 32비트 응용 프로그램 사용
+# <a name="using-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 32비트 애플리케이션 사용
 32 비트 드라이버를 사용 하 여 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  
   
 ## <a name="architecture"></a>Architecture  
@@ -38,7 +38,7 @@ ms.locfileid: "47696341"
 ## <a name="components"></a>구성 요소  
  ODBC 구성 요소에는 32 비트 드라이버를 사용 하 여 32 비트 응용 프로그램을 실행 하기 위한 다음 파일이 포함 됩니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  
   
-|파일 이름 |Description|  
+| 파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc32.dll|32 비트 드라이버 관리자입니다.|  
 |Odbccp32.dll|32 비트 설치 관리자 DLL|  

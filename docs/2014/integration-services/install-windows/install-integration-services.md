@@ -21,7 +21,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48204803"
@@ -34,7 +34,7 @@ ms.locfileid: "48204803"
  이 항목에서는 설치 프로그램 시작, 설치 마법사 사용 또는 명령줄에서 설치 프로그램 실행에 대한 지침을 다루지 않습니다. 설치 및 구성 요소 선택 설치를 시작 하는 방법에 대 한 단계별 지침을 참조 하세요 [SQL Server 2014 빠른 시작 설치](../../getting-started/quick-start-installation-of-sql-server-2014.md)합니다. 설치용 명령줄 옵션에 대 한 자세한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 참조 하세요 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ## <a name="preparing-to-install-integration-services"></a>Integration Services 설치 준비  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하기 전에 다음 요구 사항을 검토하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하기 전에 다음 요구 사항을 검토하십시오.  
   
 -   [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48204803"
   
      Windows 7 또는 Windows Server 2008 R2가 설치 되어는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 NT Services\MsDtsServer120 가상 계정으로 실행 되도록 등록 하며 **시작 유형** 은 **자동**합니다.  가상 계정에 대한 암호는 입력할 필요가 없습니다. Microsoft Vista 또는 Windows Server 2008이 설치되어 있으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 기본 제공 네트워크 서비스 계정에서 실행되도록 등록되며 **시작 유형** 은 **자동**입니다. 기본 제공 네트워크 서비스 계정에 대한 암호는 입력할 필요가 없습니다.  
   
- 기본적으로 새로 설치하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 응용 프로그램 이벤트 로그에 기록하지 않도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정은 이벤트 로그 항목이 너무 많이 생성되지 않도록 방지합니다. 기록되지 않는 이벤트는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"입니다. 이러한 이벤트를 응용 프로그램 이벤트 로그에 기록하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 0에서 1로 변경합니다.  
+ 기본적으로 새로 설치하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 실행과 관련된 이벤트를 애플리케이션 이벤트 로그에 기록하지 않도록 구성됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 수집기 기능을 사용하는 경우 이 설정은 이벤트 로그 항목이 너무 많이 생성되지 않도록 방지합니다. 기록되지 않는 이벤트는 EventID 12288, "패키지가 시작되었습니다" 및 EventID 12289, "패키지가 성공적으로 완료되었습니다"입니다. 이러한 이벤트를 애플리케이션 이벤트 로그에 기록하려면 편집을 위해 레지스트리를 엽니다. 그런 다음 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 노드를 찾고 LogPackageExecutionToEventLog 설정의 DWORD 값을 0에서 1로 변경합니다.  
   
 ## <a name="understanding-the-integration-services-service"></a>Integration Services 서비스 이해  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 설치합니다.  

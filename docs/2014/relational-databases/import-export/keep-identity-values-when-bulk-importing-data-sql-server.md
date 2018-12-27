@@ -22,7 +22,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159633"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 ID 값이 들어 있는 데이터 파일을 대량으로 가져옵니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 ID 값이 들어 있는 데이터 파일을 대량으로 가져옵니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
   
  데이터 파일에 테이블의 ID 열에 대한 값이 없으면 서식 파일을 사용하여 데이터를 가져올 때 테이블의 ID 열을 건너뛰어야 함을 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 열에 고유 값을 할당합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48159633"
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql), [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql) 및 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요.  
   
 > [!NOTE]  
->  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../sequence-numbers/sequence-numbers.md)를 참조하세요.  
+>  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  이 항목의 예에서는 INSERT ... SELECT * FROM OPENROWSET(BULK...)을 사용하고 기본값을 유지하여 데이터를 대량으로 가져옵니다.  

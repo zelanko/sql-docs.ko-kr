@@ -34,7 +34,7 @@ ms.locfileid: "51604064"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 배포 마이그레이션에 대한 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)을 참조하세요.  
   
- 마이그레이션은 응용 프로그램 데이터 파일을 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스로 이동하는 것을 말합니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
+ 마이그레이션은 애플리케이션 데이터 파일을 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스로 이동하는 것을 말합니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
   
 -   광범위한 배포 또는 작동 시간이 필요합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "51604064"
 ##  <a name="bkmk_nativemode_migration_overview"></a> 기본 모드 마이그레이션 개요  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 마이그레이션 프로세스에는 수동 단계와 자동 단계가 포함됩니다. 다음은 보고서 서버 마이그레이션의 일부 태스크입니다.  
   
--   데이터베이스, 응용 프로그램 및 구성 파일을 백업합니다.  
+-   데이터베이스, 애플리케이션 및 구성 파일을 백업합니다.  
   
 -   암호화 키를 백업합니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "51604064"
     > [!TIP]  
     >  함께 설치하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 명명된 인스턴스로 설치해야 합니다.  
   
--   보고서 서버 데이터베이스 및 기타 응용 프로그램 파일을 기존 설치에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치로 이동합니다.  
+-   보고서 서버 데이터베이스 및 기타 애플리케이션 파일을 기존 설치에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치로 이동합니다.  
   
--   모든 사용자 지정 응용 프로그램 파일을 새 설치로 이동합니다.  
+-   모든 사용자 지정 애플리케이션 파일을 새 설치로 이동합니다.  
   
 -   보고서 서버를 구성합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "51604064"
   
 -   선택적으로 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹에 대한 사용자 지정 ACL(액세스 제어 목록)을 구성합니다.  
   
--   새 인스턴스가 완벽하게 작동하는지 확인한 후 사용하지 않는 응용 프로그램과 도구를 제거합니다.  
+-   새 인스턴스가 완벽하게 작동하는지 확인한 후 사용하지 않는 애플리케이션과 도구를 제거합니다.  
   
  보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 제한되어 있습니다. 이전 설치에서 만든 보고서 서버 데이터베이스를 다시 사용하는 경우에는 다음 항목을 검토하십시오.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51604064"
 ##  <a name="bkmk_fixed_database_name"></a> 고정 데이터베이스 이름  
  보고서 서버 데이터베이스의 이름은 바꿀 수 없습니다. 데이터베이스 ID는 데이터베이스를 만들 때 보고서 서버 저장 프로시저에 기록됩니다. 보고서 서버의 기본 또는 임시 데이터베이스의 이름을 바꾸면 프로시저를 실행할 때 오류가 발생하고 보고서 서버 설치가 무효화됩니다.  
   
- 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 응용 프로그램 데이터를 로드해야 합니다.  
+ 기존 설치의 데이터베이스 이름이 새 설치에 적합하지 않은 경우 이름이 지정된 새 데이터베이스를 만든 다음 아래에 나열된 기술을 사용하여 기존 애플리케이션 데이터를 로드해야 합니다.  
   
 -   보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 작성합니다. RS.exe 유틸리티를 사용하여 이 스크립트를 실행할 수 있습니다. 이 접근 방법은 [Reporting Services를 사용한 스크립팅 및 PowerShell](../tools/scripting-and-powershell-with-reporting-services.md)을 참조하세요.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51604064"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상에서는 IIS가 더 이상 필수 구성 요소가 아닙니다. 보고서 서버 설치를 새 컴퓨터로 마이그레이션하는 경우 웹 서버 역할을 추가할 필요가 없습니다. 또한 URL과 인증을 구성하는 단계는 물론, 문제를 진단하고 해결하는 기법과 도구도 이전 릴리스와 다릅니다.  
   
--   보고서 서버 웹 서비스, 보고서 관리자 및 보고서 서버 Windows 서비스가 단일 보고서 서버 서비스 내에 통합되었습니다. 세 응용 프로그램은 모두 같은 계정으로 실행되고 모두 RSReportServer.config 파일에서 구성 설정을 읽으므로 RSWebApplication.config가 더 이상 사용되지 않습니다.  
+-   보고서 서버 웹 서비스, 보고서 관리자 및 보고서 서버 Windows 서비스가 단일 보고서 서버 서비스 내에 통합되었습니다. 세 애플리케이션은 모두 같은 계정으로 실행되고 모두 RSReportServer.config 파일에서 구성 설정을 읽으므로 RSWebApplication.config가 더 이상 사용되지 않습니다.  
   
 -   보고서 관리자와 SQL Server Management Studio가 기능이 중복되지 않도록 다시 디자인되었습니다. 두 도구는 각각 별개의 태스크 집합을 지원하며 더 이상 동일하게 사용할 수 없습니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "51604064"
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  보고서 서버 및 보고서 관리자 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.config  
+    6.  보고서 서버 및 보고서 관리자 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션용 Web.config  
   
     7.  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 용 Machine.config(보고서 서버 작업을 위해 이 파일을 수정한 경우)  
   
@@ -250,7 +250,7 @@ ms.locfileid: "51604064"
   
     -   보고서 서버 서비스 계정  
   
-    -   보고서 서버 웹 서비스에 대한 응용 프로그램 풀  
+    -   보고서 서버 웹 서비스에 대한 애플리케이션 풀  
   
     -   보고서 관리자 및 보고서 서버에 대한 가상 디렉터리  
   

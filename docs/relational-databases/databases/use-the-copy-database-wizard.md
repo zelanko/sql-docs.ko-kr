@@ -94,7 +94,7 @@ ms.locfileid: "52403248"
   
 -   업그레이드한 데이터베이스가 최적의 성능을 낼 수 있도록 업그레이드한 데이터베이스에 대해 [sp_updatestats(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (통계 업데이트)를 실행하세요.  
   
--   데이터베이스를 다른 서버 인스턴스로 이동 또는 복사하는 경우 사용자와 응용 프로그램에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
+-   데이터베이스를 다른 서버 인스턴스로 이동 또는 복사하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
 
   

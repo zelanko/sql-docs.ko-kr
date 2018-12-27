@@ -53,7 +53,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bd420632e4cac09a6549f504d4037582c766d5b1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48110743"
@@ -205,11 +205,11 @@ ms.locfileid: "48110743"
   
 > [!IMPORTANT]  
 >  -   항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 사용되는 계정을 변경하거나 계정의 암호를 변경할 수 있습니다. 계정 이름을 변경하는 것 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스 마스터 키를 보호하는 Windows 로컬 보안 저장소 업데이트와 같은 추가 구성을 수행합니다. Windows 서비스 제어 관리자와 같은 다른 도구를 사용하면 계정 이름을 변경할 수 있지만 모든 필수 설정을 변경할 수 없습니다.  
-> -   SharePoint 팜에 배포한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우 항상 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 응용 프로그램 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 대한 서버 계정을 변경합니다. 관련 설정 및 사용 권한은 중앙 관리를 사용할 때 새로운 계정 정보를 사용할 수 있도록 업데이트됩니다.  
+> -   SharePoint 팜에 배포한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우 항상 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 애플리케이션 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 대한 서버 계정을 변경합니다. 관련 설정 및 사용 권한은 중앙 관리를 사용할 때 새로운 계정 정보를 사용할 수 있도록 업데이트됩니다.  
 > -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션을 변경하려면 Reporting Services 구성 도구를 사용합니다.  
   
 ###  <a name="New_Accounts"></a> Windows 7 및 Windows Server 2008 R2를 사용 하 여 사용할 수 있는 새 계정 유형  
- Windows 7 and Windows Server 2008 R2에는 MSA(관리 서비스 계정)라는 서비스 계정과 가상 계정 등, 두 가지 새로운 서비스 종류가 있습니다. 관리 서비스 계정과 가상 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 중요한 응용 프로그램에 고유 계정에 대한 격리성을 제공하도록 설계되었습니다. 따라서 관리자는 이러한 계정에 대한 SPN(서비스 사용자 이름)과 자격 증명을 수동으로 관리할 필요가 없습니다. 결국 서비스 계정 사용자, 암호 및 SPN을 보다 쉽게 장기적으로 관리할 수 있습니다.  
+ Windows 7 and Windows Server 2008 R2에는 MSA(관리 서비스 계정)라는 서비스 계정과 가상 계정 등, 두 가지 새로운 서비스 종류가 있습니다. 관리 서비스 계정과 가상 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 중요한 애플리케이션에 고유 계정에 대한 격리성을 제공하도록 설계되었습니다. 따라서 관리자는 이러한 계정에 대한 SPN(서비스 사용자 이름)과 자격 증명을 수동으로 관리할 필요가 없습니다. 결국 서비스 계정 사용자, 암호 및 SPN을 보다 쉽게 장기적으로 관리할 수 있습니다.  
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
   
@@ -241,7 +241,7 @@ ms.locfileid: "48110743"
     |서비스|가상 계정 이름|  
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 기본 인스턴스|**NT SERVICE\MSSQLSERVER**|  
-    |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 이름이 지정된 **로 이름이 지정된**서비스의 명명된 인스턴스|**NT SERVICE\MSSQL$PAYROLL**|  
+    | [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 이름이 지정된 **로 이름이 지정된**서비스의 명명된 인스턴스|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스(기본 인스턴스: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 이름이 지정된 **로 이름이 지정된**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
@@ -326,7 +326,7 @@ ms.locfileid: "48110743"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
-|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 응용 프로그램 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
+|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser***$ComputerName*. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|SQLWriter 기록기 서비스는 모든 필수 사용 권한이 있는 LOCAL SYSTEM 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이 서비스에 대한 사용 권한을 검사하거나 부여하지 않습니다.|  
@@ -434,8 +434,8 @@ ms.locfileid: "48110743"
 ||관리자, 시스템|\tools\binn\schemas\sqlserver\2004\07\showplan|모든 권한|  
 ||사용자|\tools\binn\schemas\sqlserver\2004\07\showplan|읽기, 실행|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||보고서 관리자 응용 프로그램 풀 ID, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정, 모든 사람|*\<설치>* \Reporting Services\ReportManager, *\<설치>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<설치>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<설치>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|읽기|  
-||보고서 관리자 응용 프로그램 풀 ID|*\<설치>* \Reporting Services\ReportManager\Pages\\*.\*|읽기|  
+||보고서 관리자 애플리케이션 풀 ID, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정, 모든 사람|*\<설치>* \Reporting Services\ReportManager, *\<설치>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<설치>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<설치>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|읽기|  
+||보고서 관리자 애플리케이션 풀 ID|*\<설치>* \Reporting Services\ReportManager\Pages\\*.\*|읽기|  
 ||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer|읽기|  
 ||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|  
 ||모든 사람|*\<설치>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
@@ -470,7 +470,7 @@ ms.locfileid: "48110743"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|xp_sendmail을 사용하여 메일 슬롯에 씁니다.|네트워크 쓰기 권한|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 이외의 사용자를 위해 xp_cmdshell을 실행합니다.|운영 체제의 일부로 작동하며 프로세스 수준의 토큰을 교체합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(MSSQLSERVER)|자동 재시작 기능을 사용합니다.|Administrators 로컬 그룹의 멤버여야 합니다.|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자|최적의 쿼리 성능을 위해 데이터베이스를 튜닝합니다.|처음 사용하는 경우 시스템 관리 자격 증명이 있는 사용자가 응용 프로그램을 초기화해야 합니다. 초기화한 다음에는 dbo 사용자가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 자신이 소유한 테이블만 튜닝할 수 있습니다. 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 온라인 설명서의 "처음 사용할 때의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝 관리자 초기화"를 참조하십시오.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자|최적의 쿼리 성능을 위해 데이터베이스를 튜닝합니다.|처음 사용하는 경우 시스템 관리 자격 증명이 있는 사용자가 애플리케이션을 초기화해야 합니다. 초기화한 다음에는 dbo 사용자가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 자신이 소유한 테이블만 튜닝할 수 있습니다. 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 온라인 설명서의 "처음 사용할 때의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝 관리자 초기화"를 참조하십시오.|  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대해 Windows 인증을 활성화하고 필요한 기본 구성, 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin 그룹의 구성원인지 확인합니다.  
@@ -613,7 +613,7 @@ ms.locfileid: "48110743"
  서비스가 네트워크 서비스, 파일 공유와 같은 액세스 도메인 리소스와 상호 작용해야 하는 경우 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 다른 컴퓨터에 대한 연결된 서버 연결을 사용하는 경우 최소 권한이 부여된 도메인 계정을 사용하는 것이 좋습니다. 서버 간 작업은 많은 경우 도메인 사용자 계정으로만 수행할 수 있습니다. 이 계정은 해당 환경에서 도메인 관리자가 미리 만들어 놓아야 합니다.  
   
 > [!NOTE]  
->  도메인 계정을 사용하도록 응용 프로그램을 구성한 경우 응용 프로그램에 대한 사용 권한을 격리시킬 수 있지만 암호를 수동으로 관리하거나 이러한 암호 관리를 위한 사용자 지정 솔루션을 만들어야 합니다. 여러 서버 응용 프로그램들에서 보안 향상을 위해 이러한 전략이 사용되고 있지만 이 전략은 추가 관리 수준과 복잡성이 필요합니다. 이러한 배포에서 서비스 관리자는 Kerberos 인증에 필요한 서비스 암호 및 SPN(서비스 사용자 이름) 관리와 같은 유지 관리 태스크에 상당 시간을 소비해야 합니다. 또한 이러한 유지 관리 태스크로 인해 서비스가 중단될 수 있습니다.  
+>  도메인 계정을 사용하도록 애플리케이션을 구성한 경우 애플리케이션에 대한 사용 권한을 격리시킬 수 있지만 암호를 수동으로 관리하거나 이러한 암호 관리를 위한 사용자 지정 솔루션을 만들어야 합니다. 여러 서버 애플리케이션들에서 보안 향상을 위해 이러한 전략이 사용되고 있지만 이 전략은 추가 관리 수준과 복잡성이 필요합니다. 이러한 배포에서 서비스 관리자는 Kerberos 인증에 필요한 서비스 암호 및 SPN(서비스 사용자 이름) 관리와 같은 유지 관리 태스크에 상당 시간을 소비해야 합니다. 또한 이러한 유지 관리 태스크로 인해 서비스가 중단될 수 있습니다.  
   
  <a name="Local_User"></a> **Local User Accounts**  
   

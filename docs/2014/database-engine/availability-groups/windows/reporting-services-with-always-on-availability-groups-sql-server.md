@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
 ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49120220"
@@ -30,7 +30,7 @@ ms.locfileid: "49120220"
    
   
 ##  <a name="bkmk_requirements"></a> Reporting Services 및 AlwaysOn 가용성 그룹 사용에 대 한 요구 사항  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
@@ -108,7 +108,7 @@ ms.locfileid: "49120220"
 ###  <a name="bkmk_differences_in_server_mode"></a> SharePoint 기본 모드 간 차이점  
  이 단원에서는 SharePoint 모드와 기본 모드의 보고서 서버가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 상호 작용하는 방법상의 차이점에 대해 요약해서 보여 줍니다.  
   
- SharePoint 보고서 서버는 사용자가 만드는 각 **서비스 응용 프로그램에 대해** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개의 데이터베이스를 만듭니다. SharePoint 모드에서 보고서 서버 데이터베이스에 대한 연결은 서비스 응용 프로그램을 만들 때 SharePoint 중앙 관리에 구성됩니다. 데이터베이스의 기본 이름에는 서비스 응용 프로그램과 연결된 GUID가 포함됩니다. 다음은 SharePoint 모드 보고서 서버에 대한 데이터베이스의 이름 예입니다.  
+ SharePoint 보고서 서버는 사용자가 만드는 각 **서비스 애플리케이션에 대해** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개의 데이터베이스를 만듭니다. SharePoint 모드에서 보고서 서버 데이터베이스에 대한 연결은 서비스 애플리케이션을 만들 때 SharePoint 중앙 관리에 구성됩니다. 데이터베이스의 기본 이름에는 서비스 애플리케이션과 연결된 GUID가 포함됩니다. 다음은 SharePoint 모드 보고서 서버에 대한 데이터베이스의 이름 예입니다.  
   
 -   ReportingService_85c08ac3c8e64d3cb400ad06ed5da5d6  
   
@@ -122,10 +122,10 @@ ms.locfileid: "49120220"
   
 -   ReportServerTempDB  
   
- 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 응용 프로그램 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(http://go.microsoft.com/fwlink/?LinkId=245165))](http://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
+ 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 애플리케이션 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(http://go.microsoft.com/fwlink/?LinkId=245165))](http://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
   
 > [!NOTE]  
->  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
+>  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
 >   
 >  -   복원 또는 동일한 최근 받지 않은 콘텐츠 데이터베이스의 복사본으로 장애 조치를 업데이트 하는 보고서 서버 데이터베이스를 받았습니다.  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 동기화 프로세스에서 콘텐츠 데이터베이스 및 보고서 서버 데이터베이스에 있는 항목 목록 간에 불일치가 발견된 경우  
@@ -142,7 +142,7 @@ ms.locfileid: "49120220"
   
 -   **보고서 서버 자격 증명:** 보조 복제본에서 주 복제본에 만든 적합한 보고서 서버 자격 증명을 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
--   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 응용 프로그램에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
+-   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 애플리케이션에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> 보고서 서버 데이터베이스의 재해 복구 완료 단계  
  보조 복제본으로 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 장애 조치(Failover)한 후에는 다음과 같은 단계를 완료해야 합니다.  

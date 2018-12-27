@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48193943"
@@ -41,19 +41,19 @@ ms.locfileid: "48193943"
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>PowerPivot 서비스(SPsvc)에 대한 서비스 계정  
  PowerPivot 구성 도구를 실행하기 전에 새 SharePoint 팜이 구성되지 않은 경우에는 기본적으로 PowerPivot 구성 도구에 의해 다음 응용 프로그램이 만들어집니다.  
   
--   PowerPivot 서비스 응용 프로그램  
+-   PowerPivot 서비스 애플리케이션  
   
--   Excel Services 응용 프로그램  
+-   Excel Services 애플리케이션  
   
--   보안 저장소 응용 프로그램  
+-   보안 저장소 애플리케이션  
   
- PowerPivot 구성 도구는 기본 응용 프로그램 풀에서 모두 세 개의 서비스 응용 프로그램을 구성합니다. 해당 응용 프로그램 풀은 일반적으로 SPFarm 계정으로 실행되도록 구성됩니다. 이 계정은 서비스 계정에 필요 없는 많은 리소스에 액세스할 수 있습니다. 최소 권한이 지정된 환경을 만들려면 해당 응용 프로그램 풀 및 웹 응용 프로그램에서 사용할 새 도메인 계정을 구성합니다.  
+ PowerPivot 구성 도구는 기본 애플리케이션 풀에서 모두 세 개의 서비스 애플리케이션을 구성합니다. 해당 애플리케이션 풀은 일반적으로 SPFarm 계정으로 실행되도록 구성됩니다. 이 계정은 서비스 계정에 필요 없는 많은 리소스에 액세스할 수 있습니다. 최소 권한이 지정된 환경을 만들려면 해당 애플리케이션 풀 및 웹 애플리케이션에서 사용할 새 도메인 계정을 구성합니다.  
   
  **SharePoint 서비스 계정으로 사용할 새 도메인 계정을 만들려면**  
   
 1.  SharePoint 중앙 관리에서 **보안**을 클릭합니다.  
   
-2.  **서비스 계정 구성**을 클릭합니다.  
+2.   **서비스 계정 구성**을 클릭합니다.  
   
 3.  **새 관리되는 계정을 등록하십시오.** 를 클릭합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193943"
   
 2.  **서비스 계정 구성**을 클릭합니다.  
   
-3.  PowerPivot 서비스 응용 프로그램에서 사용한 서비스 응용 프로그램 풀을 선택합니다. SPSvc 계정을 선택합니다.  
+3.  PowerPivot 서비스 애플리케이션에서 사용한 서비스 애플리케이션 풀을 선택합니다. SPSvc 계정을 선택합니다.  
   
  **PowerShell로 웹 응용 프로그램에 대한 액세스 권한을 부여하려면**  
   

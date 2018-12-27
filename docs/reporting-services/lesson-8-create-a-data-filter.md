@@ -121,7 +121,7 @@ ms.locfileid: "47700377"
   
     1.  *DrillthroughEventArgs* 매개 변수에서 자식 보고서 개체 참조를 인출합니다.  
   
-    2.  **GetPurchaseOrderDetail**함수를 호출합니다.  
+    2.   **GetPurchaseOrderDetail**함수를 호출합니다.  
   
     3.  **PurchaseOrderDetail** DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "47700377"
 6.  파일을 저장합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
-자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 성공적으로 만들었습니다. 이제 웹 사이트 응용 프로그램을 빌드하고 실행합니다. [9단원: 응용 프로그램 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)을 참조하세요.  
+자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 성공적으로 만들었습니다. 이제 웹 사이트 애플리케이션을 빌드하고 실행합니다. [9단원: 응용 프로그램 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)을 참조하세요.  
   
   
   

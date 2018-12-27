@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 배포 | Microsoft 문서
+title: 데이터 계층 애플리케이션 배포 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,13 +24,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48104933"
 ---
-# <a name="deploy-a-data-tier-application"></a>데이터 계층 응용 프로그램 배포
-  마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 응용 프로그램)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
+# <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
+  마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
   
 -   **시작하기 전 주의 사항:**  [SQL Server 유틸리티](#SQLUtility), [데이터베이스 옵션 및 설정](#DBOptSettings), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48104933"
   
 1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
   
-2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 배포…** 를 선택합니다.  
+2.   **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 배포…** 를 선택합니다.  
   
 3.  마법사 대화 상자를 완료합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48104933"
     -   [배포 페이지](#Deploy)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램을 배포하는 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션을 배포하는 단계에 대해 설명합니다.  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 이 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48104933"
  **취소** - DAC를 배포하지 않고 마법사를 종료합니다.  
   
 ##  <a name="Select_dac_package"></a> DAC 패키지 선택 페이지  
- 이 페이지를 사용하여 배포할 데이터 계층 응용 프로그램을 포함하는 DAC 패키지를 지정할 수 있습니다. 이 페이지는 세 가지 상태로 전환됩니다.  
+ 이 페이지를 사용하여 배포할 데이터 계층 애플리케이션을 포함하는 DAC 패키지를 지정할 수 있습니다. 이 페이지는 세 가지 상태로 전환됩니다.  
   
 ### <a name="select-the-dac-package"></a>DAC 패키지 선택  
  이 페이지의 초기 상태를 사용하여 배포할 DAC 패키지를 선택할 수 있습니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "48104933"
   
  데이터베이스 이름을 변경하면 새 값에 맞게 데이터 파일과 로그 파일의 이름이 변경됩니다.  
   
- 데이터베이스 이름은 DAC 인스턴스 이름에도 사용됩니다. 인스턴스 이름은 **개체 탐색기** 의 **데이터 계층 응용 프로그램**노드 아래에 있는 DAC에 대한 노드나 **유틸리티 탐색기** 의 **배포된 데이터 계층 응용 프로그램**노드에 표시됩니다.  
+ 데이터베이스 이름은 DAC 인스턴스 이름에도 사용됩니다. 인스턴스 이름은 **개체 탐색기** 의 **데이터 계층 애플리케이션**노드 아래에 있는 DAC에 대한 노드나 **유틸리티 탐색기** 의 **배포된 데이터 계층 애플리케이션**노드에 표시됩니다.  
   
  다음 옵션은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 적용되지 않으며 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포할 때는 표시되지 않습니다.  
   

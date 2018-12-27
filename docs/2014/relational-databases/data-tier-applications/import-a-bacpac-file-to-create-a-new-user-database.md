@@ -28,13 +28,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
 ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "43810279"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
-  DAC(데이터 계층 응용 프로그램) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+  DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  가져오기 프로세스에서는 새로운 DAC를 두 단계로 작성합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "43810279"
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
-## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 응용 프로그램 가져오기 마법사 사용  
+## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 애플리케이션 가져오기 마법사 사용  
  **마법사를 시작하려면 다음 단계를 따르십시오.**  
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "43810279"
     -   [결과 페이지](#Results)  
   
 ###  <a name="Introduction"></a> 소개 페이지  
- 이 페이지에서는 데이터 계층 응용 프로그램 가져오기 마법사의 단계에 대해 설명합니다.  
+ 이 페이지에서는 데이터 계층 애플리케이션 가져오기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
   
@@ -115,9 +115,9 @@ ms.locfileid: "43810279"
   
 -   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
   
--   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다.  **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
   
--   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다.  **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   

@@ -39,13 +39,13 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  변경 내용 추적을 설정할 때 CHANGE_RETENTION 및 AUTO_CLEANUP 옵션을 지정할 수 있으며, 변경 내용 추적을 설정한 후 언제든지 이 값을 변경할 수 있습니다.  
   
- 변경 내용 보존 기간 값은 변경 내용 추적 정보가 유지되는 기간을 지정합니다. 이 기간보다 오래된 변경 내용 추적 정보는 정기적으로 제거됩니다. 이 값을 설정할 때 응용 프로그램이 이 데이터베이스에 있는 테이블을 동기화하는 빈도를 고려해야 합니다. 지정한 보존 기간은 최대 동기화 간격 이상이어야 합니다. 응용 프로그램이 좀 더 긴 간격으로 변경 내용을 가져오면 일부 변경 내용 정보가 제거되지 않았을 수도 있으므로 반환되는 결과가 정확하지 않을 수 있습니다. 잘못된 결과가 생성되는 것을 방지하기 위해 응용 프로그램에서는 CHANGE_TRACKING_MIN_VALID_VERSION 시스템 함수를 사용하여 동기화 간의 간격이 너무 긴지 여부를 확인할 수 있습니다.  
+ 변경 내용 보존 기간 값은 변경 내용 추적 정보가 유지되는 기간을 지정합니다. 이 기간보다 오래된 변경 내용 추적 정보는 정기적으로 제거됩니다. 이 값을 설정할 때 애플리케이션이 이 데이터베이스에 있는 테이블을 동기화하는 빈도를 고려해야 합니다. 지정한 보존 기간은 최대 동기화 간격 이상이어야 합니다. 애플리케이션이 좀 더 긴 간격으로 변경 내용을 가져오면 일부 변경 내용 정보가 제거되지 않았을 수도 있으므로 반환되는 결과가 정확하지 않을 수 있습니다. 잘못된 결과가 생성되는 것을 방지하기 위해 애플리케이션에서는 CHANGE_TRACKING_MIN_VALID_VERSION 시스템 함수를 사용하여 동기화 간의 간격이 너무 긴지 여부를 확인할 수 있습니다.  
   
- AUTO_CLEANUP 옵션을 사용하여 오래된 변경 내용 추적 정보를 제거하는 정리 태스크를 설정하거나 해제할 수 있습니다. 이 설정은 응용 프로그램이 동기화되지 않는 일시적인 문제가 발생하여 이 문제가 해결될 때까지 보존 기간보다 오래된 변경 내용 추적 정보를 제거하는 프로세스를 일시 중지해야 하는 경우에 유용합니다.  
+ AUTO_CLEANUP 옵션을 사용하여 오래된 변경 내용 추적 정보를 제거하는 정리 태스크를 설정하거나 해제할 수 있습니다. 이 설정은 애플리케이션이 동기화되지 않는 일시적인 문제가 발생하여 이 문제가 해결될 때까지 보존 기간보다 오래된 변경 내용 추적 정보를 제거하는 프로세스를 일시 중지해야 하는 경우에 유용합니다.  
   
  변경 내용 추적을 사용하는 데이터베이스의 경우 다음 사항에 주의하십시오.  
   
@@ -64,9 +64,9 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
- TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 응용 프로그램이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 저장소 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
+ TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 애플리케이션이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 저장소 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
   
 ## <a name="disable-change-tracking-for-a-database-or-table"></a>데이터베이스 또는 테이블에 변경 내용 추적을 사용하지 않도록 설정  
  우선 변경 내용 추적이 설정된 모든 테이블에 대해 변경 내용 추적을 해제해야 해당 데이터베이스에 대한 변경 내용 추적을 OFF로 설정할 수 있습니다. 데이터베이스에서 변경 내용 추적이 설정된 테이블을 확인하려면 [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) 카탈로그 뷰를 사용합니다.  

@@ -28,7 +28,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47679791"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
-  이 항목에서는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 공유 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  기본 모드에 대한 공유 일정을 관리하려면 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 위한 관리 페이지를 사용합니다.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 공유 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  기본 모드에 대한 공유 일정을 관리하려면 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 위한 관리 페이지를 사용합니다.  
   
  다음 방법 중 하나를 사용하여 공유 일정이 현재 사용되고 있는지 확인합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47679791"
 1.  개체 탐색기에서 보고서 서버 노드를 확장합니다.  
 2.  공유 일정이 보고서에서 현재 사용되지 않는 것을 확인하려면 공유 일정 폴더를 확장하고 일정을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 3. **보고서** 탭을 클릭하여 현재 일정을 사용 중인 보고서 목록을 확인합니다.
-**취소**를 클릭합니다.
+ **취소**를 클릭합니다.
 4.  공유 일정 폴더를 확장하고 삭제할 일정을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. **카탈로그 항목 삭제** 대화 상자가 나타납니다.  
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
