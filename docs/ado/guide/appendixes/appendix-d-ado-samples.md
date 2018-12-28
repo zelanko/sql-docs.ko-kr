@@ -1,4 +1,4 @@
-﻿---
+---
 title: '부록 D: Windows SDK의 ADO 예제 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity

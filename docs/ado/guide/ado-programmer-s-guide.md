@@ -1,4 +1,4 @@
-﻿---
+---
 title: ADO 프로그래머 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
