@@ -132,7 +132,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 테이블에 클러스터형 columnstore 인덱스가 이미 있다면 같은 이름을 기존 인덱스로 지정하거나 DROP EXISTING 옵션을 사용하여 새 이름을 지정할 수 있습니다.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다.  
   
 #### <a name="with-options"></a>WITH 옵션  

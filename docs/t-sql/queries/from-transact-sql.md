@@ -217,7 +217,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table*은 외부 쿼리에 대한 입력으로 사용됩니다.  
   
- *derived**_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
+ *derived* *_table* 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
   
  *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  

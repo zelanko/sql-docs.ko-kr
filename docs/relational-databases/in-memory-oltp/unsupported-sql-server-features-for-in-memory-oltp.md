@@ -64,7 +64,7 @@ ms.locfileid: "52391546"
   
 - 메모리 최적화 테이블에 액세스하는 쿼리의 키 집합 및 동적 커서. 이러한 커서는 정적 및 읽기 전용으로 성능이 저하됩니다.  
   
-- **MERGE INTO***target*(여기서 *target*은 메모리 최적화 테이블)은 사용할 수 없습니다.
+- **MERGE INTO** *target* (여기서 *target* 은 메모리 최적화 테이블)은 사용할 수 없습니다.
     - **MERGE USING** *source*는 메모리 최적화 테이블에 대해 지원됩니다.  
   
 - ROWVERSION(TIMESTAMP) 데이터 형식은 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.

@@ -104,7 +104,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 -   형식의 정적 멤버  
   
--    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 메서드  
   
 -   보고서 정의의 **\<Classes>** 요소  
   
