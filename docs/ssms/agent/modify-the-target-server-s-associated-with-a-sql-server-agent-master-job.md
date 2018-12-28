@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52507859"
 ---
-# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
