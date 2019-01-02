@@ -23,7 +23,7 @@ SQL Server는 독립 실행형 R Server 또는 SQL Server와 독립적으로 실
 이 기능은 SQL Server 2016에서 **R Server(독립 실행형)** 라고 하고 R 전용입니다. SQL Server 2017에서는 **Machine Learning Server(독립 실행형)** 라고 하며 R 및 Python 모두를 포함합니다.  
 
 > [!Note]
-> 독립 실행형 서버는 기능적으로 비 SQL 브랜드 버전의 SQL Server 설치 프로그램에서 설치 하는 대로 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 원격 실행을 포함 하 여 동일한 사용자 시나리오를 지원 합니다. 운영 화 및 웹 서비스 및 R 및 Python 라이브러리의 전체 모음입니다.
+> SQL Server 설치 프로그램에 의해 설치되는 독립 실행형 서버는 Microsoft SQL Server 브랜드 버전이 아닌 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일하며 원격 실행, 조작화 및 웹 서비스, R 및 Python 라이브러리 전체 컬렉션을 포함하여 동일한 사용자 시나리오를 지원합니다.
 
 ## <a name="components"></a>구성 요소
 
