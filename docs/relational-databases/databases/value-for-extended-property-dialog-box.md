@@ -26,7 +26,7 @@ ms.locfileid: "51559851"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  *\<속성 이름***에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
+  *\<속성 이름* **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **확장 속성 이름**  
