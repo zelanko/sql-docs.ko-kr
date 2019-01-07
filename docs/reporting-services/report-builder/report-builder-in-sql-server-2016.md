@@ -29,9 +29,9 @@ ms.locfileid: "52711421"
   
 ##  <a name="JumpStartReptCreation"></a> 빠른 보고서 만들기  
   
--   **공유 데이터 집합을 사용하여 보고서를 작성**합니다. 공유 데이터 집합은 공유 데이터 원본을 기반으로 하는 쿼리이며 기본 모드 또는 SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 저장됩니다.  
+-   **공유 데이터 집합을 사용하여 보고서를 작성**합니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 하는 쿼리이며 기본 모드 또는 SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 저장됩니다.  
   
--   **테이블, 행렬 또는 차트 마법사를 사용하여 보고서를 작성**합니다. 데이터 원본 연결을 선택하고, 필드를 끌어다 놓는 방법으로 데이터 집합 쿼리를 만들고, 레이아웃과 스타일을 선택하고, 보고서를 사용자 지정합니다.  
+-   **테이블, 행렬 또는 차트 마법사를 사용하여 보고서를 작성**합니다. 데이터 원본 연결을 선택하고, 필드를 끌어다 놓는 방법으로 데이터 세트 쿼리를 만들고, 레이아웃과 스타일을 선택하고, 보고서를 사용자 지정합니다.  
   
 -   **지도 마법사를 사용** 하여 지리적 또는 기하학적 배경을 바탕으로 집계된 데이터를 표시하는 보고서를 작성합니다. 지도 데이터는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 공간 데이터 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일일 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 타일 배경을 추가할 수도 있습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52711421"
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
- 공유 데이터 집합 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
+ 공유 데이터 세트 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서를 탐색 및 디자인하는 데 사용할 수 있는 단축 키에 대해 간단히 설명합니다.  

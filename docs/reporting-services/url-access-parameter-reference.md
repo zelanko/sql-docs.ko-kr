@@ -159,7 +159,7 @@ ms.locfileid: "52515120"
         https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
-    -   **GetSharedDatasetDefinition** 공유 데이터 집합과 연결되는 XML 정의를 표시합니다. 쿼리, 데이터 집합 매개 변수, 기본값, 데이터 집합 필터, 데이터 정렬 및 대/소문자 구분 등의 데이터 옵션을 포함하여 공유 데이터 집합 속성이 정의에 저장됩니다. 이 값을 사용하려면 공유 데이터 집합에 대한 **보고서 정의 읽기** 권한이 있어야 합니다.  
+    -   **GetSharedDatasetDefinition** 공유 데이터 집합과 연결되는 XML 정의를 표시합니다. 쿼리, 데이터 세트 매개 변수, 기본값, 데이터 세트 필터, 데이터 정렬 및 대/소문자 구분 등의 데이터 옵션을 포함하여 공유 데이터 세트 속성이 정의에 저장됩니다. 이 값을 사용하려면 공유 데이터 세트에 대한 **보고서 정의 읽기** 권한이 있어야 합니다.  
   
          **Native** 모드의 예제.  
   

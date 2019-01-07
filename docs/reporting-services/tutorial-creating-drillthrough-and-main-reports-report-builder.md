@@ -25,7 +25,7 @@ ms.locfileid: "52526178"
 이 자습서에 소요되는 예상 시간: 30분  
   
 ## <a name="requirements"></a>요구 사항  
-이 자습서를 실행하려면 드릴스루 보고서 및 주 보고서 둘 다에서 Contoso Sales 큐브에 액세스할 수 있어야 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
+이 자습서를 실행하려면 드릴스루 보고서 및 주 보고서 둘 다에서 Contoso Sales 큐브에 액세스할 수 있어야 합니다. 이 데이터 세트는 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
   
 다른 파일인 ContosoBIdemoBAK.exe는 ContosoDW 데이터 웨어하우스를 위한 것으로, 이 자습서에서는 사용되지 않습니다.  
   
@@ -36,7 +36,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 일반적인 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="DMatrixAndDataset"></a>1. 테이블 또는 행렬 마법사에서 드릴스루 보고서 만들기  
-시작 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다. 마법사에서는 두 가지 모드인 보고서 디자인 모드와 공유 데이터 집합 디자인 모드를 사용할 수 있습니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
+시작 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다. 마법사에서는 두 가지 모드인 보고서 디자인 모드와 공유 데이터 세트 디자인 모드를 사용할 수 있습니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
@@ -97,7 +97,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 14. **다음**을 클릭합니다.  
   
 ## <a name="DMDXQuery"></a>1b. MDX 쿼리 만들기  
-보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 집합을 사용하거나 해당 보고서에만 사용할 포함된 데이터 집합을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 집합을 만듭니다.  
+보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
@@ -106,7 +106,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    > MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은 다음, [데이터 집합을 만들려면](#DSkip)의 6단계를 진행합니다.  
+    > MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#DSkip)의 6단계를 진행합니다.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -388,7 +388,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 14. **다음**을 클릭합니다.  
   
 ## <a name="MMDXQuery"></a>1b. MDX 쿼리 만들기  
-다음으로, 포함된 데이터 집합을 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 집합 자체를 만듭니다.  
+다음으로, 포함된 데이터 세트를 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 세트 자체를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
@@ -397,7 +397,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    > MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은 다음, [데이터 집합을 만들려면](#MSkip)의 5단계를 진행합니다.  
+    > MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -541,7 +541,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  **동작** 탭을 클릭합니다.  
   
-4.  **보고서로 이동**을 선택합니다.  
+4.   **보고서로 이동**을 선택합니다.  
   
 5.  **보고서 지정**에서 **찾아보기**를 클릭한 다음 이름이 ResellerVSOnlineDrillthrough인 드릴스루 보고서를 찾습니다.  
   
@@ -551,7 +551,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 8.  **값**에 `[Product_Category_Name.UniqueName]`를 입력합니다.  
   
-    Product_Category_Name은 데이터 집합의 필드입니다.  
+    Product_Category_Name은 데이터 세트의 필드입니다.  
   
     > [!IMPORTANT]  
     > 드릴스루 동작의 경우 고유한 값이 필요하므로 **UniqueName** 속성을 포함해야 합니다.  

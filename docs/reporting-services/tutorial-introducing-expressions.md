@@ -18,7 +18,7 @@ ms.locfileid: "52410710"
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
 
-이름 값을 연결하고, 별도의 데이터 집합에서 값을 조회하고, 필드 값에 따라 서로 다른 색을 표시하는 등의 작업을 수행하는 식을 작성합니다.  
+이름 값을 연결하고, 별도의 데이터 세트에서 값을 조회하고, 필드 값에 따라 서로 다른 색을 표시하는 등의 작업을 수행하는 식을 작성합니다.  
   
 보고서에는 줄무늬가 있으며 흰색 행과 컬러 행이 번갈아 표시됩니다. 보고서에는 흰색이 아닌 행의 색을 선택하기 위한 매개 변수가 포함됩니다.  
   
@@ -31,8 +31,8 @@ ms.locfileid: "52410710"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 집합 만들기  
-이 섹션에서는 테이블 보고서, 데이터 원본 및 데이터 집합을 만듭니다. 테이블의 레이아웃을 지정할 때는 몇몇 필드만 포함하고, 마법사를 완료한 후 열을 수동으로 추가합니다. 마법사를 사용하면 손쉽게 테이블의 레이아웃을 지정할 수 있습니다.  
+## <a name="Setup"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
+이 섹션에서는 테이블 보고서, 데이터 원본 및 데이터 세트를 만듭니다. 테이블의 레이아웃을 지정할 때는 몇몇 필드만 포함하고, 마법사를 완료한 후 열을 수동으로 추가합니다. 마법사를 사용하면 손쉽게 테이블의 레이아웃을 지정할 수 있습니다.  
   
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "52410710"
   
 17. **마침**을 클릭합니다.  
   
-## <a name="UpdateNames"></a>2. 데이터 원본 및 데이터 집합의 기본 이름 업데이트  
+## <a name="UpdateNames"></a>2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>데이터 원본의 기본 이름을 업데이트하려면  
   
@@ -134,9 +134,9 @@ ms.locfileid: "52410710"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### <a name="to-update-the-default-name-of-the-dataset"></a>데이터 집합의 기본 이름을 업데이트하려면  
+### <a name="to-update-the-default-name-of-the-dataset"></a>데이터 세트의 기본 이름을 업데이트하려면  
   
-1.  보고서 데이터 창에서 **데이터 집합** 폴더를 확장합니다.  
+1.  보고서 데이터 창에서 **데이터 세트** 폴더를 확장합니다.  
   
 2.  **DataSet1** 을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
 
@@ -310,15 +310,15 @@ ms.locfileid: "52410710"
     ![보고서-작성기-식-자습서-서식 지정-m-f-열-미리 보기](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="Lookup"></a>5. CountryRegion 이름 조회  
-이 섹션에서는 CountryRegion 데이터 집합을 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
+이 섹션에서는 CountryRegion 데이터 세트를 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
   
-### <a name="to-create-the-countryregion-dataset"></a>CountryRegion 데이터 집합을 만들려면  
+### <a name="to-create-the-countryregion-dataset"></a>CountryRegion 데이터 세트를 만들려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  보고서 데이터 창에서 **새로 만들기** 를 클릭하고 **데이터 집합**을 클릭합니다.  
+2.  보고서 데이터 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트**를 클릭합니다.  
   
-3.  **데이터 집합 속성에서 **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
+3.  **데이터 세트 속성에서 **내 보고서에 포함된 데이터 세트 사용**을 클릭합니다.  
   
 4.  **데이터 원본** 목록에서 ExpressionsDataSource를 선택합니다.  
   
@@ -353,9 +353,9 @@ ms.locfileid: "52410710"
   
 11. **확인** 을 다시 클릭하여 **데이터 집합 속성** 대화 상자를 닫습니다.  
 
-     이제 **보고서 데이터** 열에 두 번째 데이터 집합이 있습니다.
+     이제 **보고서 데이터** 열에 두 번째 데이터 세트가 있습니다.
   
-### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 집합에서 값을 조회하려면  
+### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 세트에서 값을 조회하려면  
   
 1.  **Country Region ID** 열 머리글을 클릭하고 **Country Region**을 읽도록 텍스트 **ID**를 삭제합니다.  
   
