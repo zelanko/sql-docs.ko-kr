@@ -20,13 +20,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159513"
 ---
 # <a name="data-flow"></a>데이터 흐름
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
 >  사용자 지정 공급자를 사용할 경우 ProviderDescriptors.xml 파일을 메타데이터 열 값으로 업데이트해야 합니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "48159513"
  자세한 내용은 [Integration Services Transformations](transformations/integration-services-transformations.md)을 참조하세요.  
   
 ## <a name="destinations"></a>대상  
- 대상은 데이터 흐름의 데이터를 특정 데이터 저장소로 기록하거나 메모리 내 데이터 집합을 만드는 데이터 흐름 구성 요소입니다. 데이터를 플랫 파일, 프로세스 분석 개체로 로드하고 다른 프로세스에 데이터를 제공할 수 있습니다. 또한 데이터베이스에서 테이블 및 뷰에 액세스하고 쿼리를 실행하여 데이터를 로드할 수 있습니다.  
+ 대상은 데이터 흐름의 데이터를 특정 데이터 저장소로 기록하거나 메모리 내 데이터 세트를 만드는 데이터 흐름 구성 요소입니다. 데이터를 플랫 파일, 프로세스 분석 개체로 로드하고 다른 프로세스에 데이터를 제공할 수 있습니다. 또한 데이터베이스에서 테이블 및 뷰에 액세스하고 쿼리를 실행하여 데이터를 로드할 수 있습니다.  
   
  데이터 흐름에는 데이터를 여러 데이터 저장소로 로드하는 여러 대상이 포함될 수 있습니다.  
   

@@ -31,7 +31,7 @@ ms.locfileid: "47774401"
     1 May 2008 2:57:32.8 PM    
     Fri, 15 May 2009 20:10:57 GMT    
   
-대부분의 경우 날짜 및 시간 기반 데이터 집합이 하나 이상의 날짜/시간 간격(예: 시간별, 일별, 월별, 분기별 및 연간)으로 설명됩니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서는 다양한 세분성의 여러 테이블을 조합하고 이를 단일 모바일 보고서에 표시할 수 있습니다. 그러나 최종 모바일 보고서에 사용자에게 표시할 날짜/시간 필터 옵션을 결정할 때 도움이 될 수 있도록 원래 데이터 집합에서 관련 간격을 염두에 두어야 합니다.  
+대부분의 경우 날짜 및 시간 기반 데이터 세트가 하나 이상의 날짜/시간 간격(예: 시간별, 일별, 월별, 분기별 및 연간)으로 설명됩니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서는 다양한 세분성의 여러 테이블을 조합하고 이를 단일 모바일 보고서에 표시할 수 있습니다. 그러나 최종 모바일 보고서에 사용자에게 표시할 날짜/시간 필터 옵션을 결정할 때 도움이 될 수 있도록 원래 데이터 세트에서 관련 간격을 염두에 두어야 합니다.  
 
 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 다차원 및 테이블 형식 모델의 날짜 필드는 공유 데이터 집합에서 날짜 서식이 손실될 수 있습니다. 서식을 유지하는 솔루션은 [모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 를 참조하세요.
   

@@ -43,7 +43,7 @@ ms.locfileid: "50030672"
   
  다음 목록에서는 데이터를 다른 데이터 형식으로 변환해야 하는 경우를 설명합니다.  
   
--   한 데이터 형식의 보고서 매개 변수 값을 다른 데이터 형식의 데이터 집합 필드와 비교할 경우  
+-   한 데이터 형식의 보고서 매개 변수 값을 다른 데이터 형식의 데이터 세트 필드와 비교할 경우.  
   
 -   서로 다른 데이터 형식의 값을 비교하는 필터 식을 작성할 경우  
   
@@ -56,23 +56,23 @@ ms.locfileid: "50030672"
 ## <a name="determining-the-data-type-of-report-data"></a>보고서 데이터의 데이터 형식 확인  
  보고서 항목의 데이터 형식을 확인하려면 해당 항목의 데이터 형식을 반환하는 식을 작성합니다. 예를 들어 `MyField`필드의 데이터 형식을 표시하려면 테이블 셀에 `=Fields!MyField.Value.GetType().ToString()`식을 추가합니다. 그러면 `MyField`를 나타내는 데 사용되는 **System.String** 또는 **System.DateTime**등의 CLR 데이터 형식이 표시됩니다.  
   
-## <a name="converting-dataset-fields-to-a-different-data-type"></a>데이터 집합 필드를 다른 데이터 형식으로 변환  
- 데이터 집합 필드를 보고서에 사용하기 전에 변환할 수도 있습니다. 다음 목록에서는 기존 데이터 집합 필드를 변환하는 방법을 설명합니다.  
+## <a name="converting-dataset-fields-to-a-different-data-type"></a>데이터 세트 필드를 다른 데이터 형식으로 변환  
+ 데이터 세트 필드를 보고서에 사용하기 전에 변환할 수도 있습니다. 다음 목록에서는 기존 데이터 세트 필드를 변환하는 방법을 설명합니다.  
   
--   데이터 집합 쿼리를 수정하여 변환된 데이터가 있는 새 쿼리 필드를 추가합니다. 관계형 또는 다차원 데이터 원본의 경우 데이터 원본 리소스를 사용하여 변환이 수행됩니다.  
+-   데이터 세트 쿼리를 수정하여 변환된 데이터가 있는 새 쿼리 필드를 추가합니다. 관계형 또는 다차원 데이터 원본의 경우 데이터 원본 리소스를 사용하여 변환이 수행됩니다.  
   
--   하나의 결과 집합 열에 있는 모든 데이터를 다른 데이터 형식의 새 열로 변환하는 식을 작성하여 기존 보고서 데이터 집합 필드를 기반으로 하는 계산 필드를 만듭니다. 예를 들어 `=CStr(Fields!Year.Value)`식은 Year 필드를 정수 값에서 문자열 값으로 변환합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
+-   하나의 결과 집합 열에 있는 모든 데이터를 다른 데이터 형식의 새 열로 변환하는 식을 작성하여 기존 보고서 데이터 세트 필드를 기반으로 하는 계산 필드를 만듭니다. 예를 들어 `=CStr(Fields!Year.Value)`식은 Year 필드를 정수 값에서 문자열 값으로 변환합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   사용 중인 데이터 처리 확장 프로그램에 미리 형식이 지정된 데이터를 검색하기 위한 메타데이터가 포함되어 있는지 확인합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리에는 큐브를 처리할 때 이미 형식이 지정된 큐브 값에 대한 FORMATTED_VALUE 확장 속성이 포함되어 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
 ## <a name="understanding-parameter-data-types"></a>매개 변수 데이터 형식 이해  
- 보고서 매개 변수는 Boolean, DateTime, Integer, Float 또는 Text(String이라고도 함) 데이터 형식 중 하나여야 합니다. 데이터 집합 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
+ 보고서 매개 변수는 Boolean, DateTime, Integer, Float 또는 Text(String이라고도 함) 데이터 형식 중 하나여야 합니다. 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
   
 > [!NOTE]  
 >  DateTime 데이터 형식인 보고서 매개 변수는 밀리초를 지원하지 않습니다. 밀리초가 포함된 값을 기반으로 하는 매개 변수를 만들 수 있지만 사용 가능한 값 드롭다운 목록에서 밀리초가 포함된 날짜 또는 시간 값이 들어 있는 값을 선택할 수는 없습니다.  
   
 ## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>데이터 형식을 변환하거나 데이터의 일부를 추출하는 식 작성  
- 연결 연산자(&)를 사용하여 텍스트와 데이터 집합 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 집합 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
+ 연결 연산자(&)를 사용하여 텍스트와 데이터 집합 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 세트 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
   
  다음 표에서는 데이터 형식의 변환 예를 보여 줍니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "50030672"
  데이터 원본의 모든 데이터 형식에 대한 변환을 지원하지 않는 데이터 공급자를 사용하여 데이터 원본에 연결하는 경우 지원되지 않는 데이터 원본 형식의 기본 데이터 형식은 String이 됩니다. 다음 예제에서는 문자열로 반환되는 특정 데이터 형식에 대한 솔루션을 제공합니다.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>String 및 CLR DateTimeOffset 데이터 형식 연결  
- 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 <xref:System.DateTime> System.DateTime `="The date and time are: " & Fields!StartDate.Value`을 참조하세요.  
+ 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 `="The date and time are: " & Fields!StartDate.Value` 식은 "The date and time are: "라는 텍스트와 <xref:System.DateTime> 값인 데이터 세트 필드 StartDate를 연결합니다.  
   
  일부 데이터 형식의 경우에는 ToString 함수를 포함해야 할 수 있습니다. 예를 들어 <xref:System.DateTimeOffset>System.DateTimeOffset `="The time is: " & Fields!StartDate.Value.ToString()`을 참조하세요.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "50030672"
   
  문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
   
--   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 집합에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
+-   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 세트에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수로 날짜 및 시간 값을 독립적으로 추출하여 별도의 열을 만들도록 보고서 데이터 집합 쿼리를 변경합니다. 다음 예제에서는 **DatePart** 함수를 사용하여 연도에 대한 열과 분으로 변환된 UTC 표준 시간대에 대한 열을 추가하는 방법을 보여 줍니다.  
   

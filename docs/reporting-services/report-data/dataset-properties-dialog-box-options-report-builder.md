@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 속성 대화 상자, 옵션(보고서 작성기) | Microsoft Docs
+title: 데이터 세트 속성 대화 상자, 옵션(보고서 작성기) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -19,12 +19,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47623211"
 ---
-# <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 집합 속성 대화 상자, 옵션(보고서 작성기)
+# <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 세트 속성 대화 상자, 옵션(보고서 작성기)
   **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
- 보고서 서버에 있는 공유 데이터 집합 정의의 일부인 데이터 옵션은 공유 데이터 집합을 사용하는 모든 보고서에 영향을 미칩니다. 공유 데이터 집합이 보고서에 추가된 후 해당 데이터 집합에 대한 옵션을 재정의할 수 있습니다. 이러한 변경 내용은 해당 옵션이 정의된 보고서에만 영향을 미칩니다.  
+ 보고서 서버에 있는 공유 데이터 세트 정의의 일부인 데이터 옵션은 공유 데이터 세트를 사용하는 모든 보고서에 영향을 미칩니다. 공유 데이터 세트가 보고서에 추가된 후 해당 데이터 세트에 대한 옵션을 재정의할 수 있습니다. 이러한 변경 내용은 해당 옵션이 정의된 보고서에만 영향을 미칩니다.  
   
- 포함된 데이터 집합에 대한 데이터 옵션은 해당 옵션이 정의된 보고서에만 영향을 미칩니다.  
+ 포함된 데이터 세트에 대한 데이터 옵션은 해당 옵션이 정의된 보고서에만 영향을 미칩니다.  
   
  자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   

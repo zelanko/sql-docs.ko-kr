@@ -257,7 +257,7 @@ WHERE NODE_TYPE = 25
 |[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
 |[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
 |[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
 |[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
 |[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  

@@ -9,7 +9,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 2fe521908e34afc1ae3ec23d56cb9d5cea801f1b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31202325"
@@ -49,7 +49,7 @@ XDF 형식이 고 차원 데이터에 대 한 개발 하는 XML 표준 및에서
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. 메모리 내 데이터에서 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 를 호출하여 데이터 집합 요약을 확인합니다.
+3. 메모리 내 데이터에서 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)를 호출하여 데이터 세트 요약을 확인합니다.
   
     ```R
     rxGetVarInfo(xdfAirDemo)

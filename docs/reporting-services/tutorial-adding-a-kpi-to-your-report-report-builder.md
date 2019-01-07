@@ -25,17 +25,17 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 집합을 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 15분  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="Table"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 집합 만들기  
-이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 집합을 만들고, 테이블에 데이터를 표시합니다.  
+## <a name="Table"></a>1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
+이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 세트를 만들고, 테이블에 데이터를 표시합니다.  
  
-### <a name="to-create-a-table-with-an-embedded-dataset"></a>포함된 데이터 집합으로 테이블을 만들려면  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>포함된 데이터 세트로 테이블을 만들려면  
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
@@ -136,7 +136,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 11. **마침**을 클릭합니다.  
   
-      디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 SalesDate, Subcategory 및 Details라는 3개의 행 그룹이 표시됩니다. 세부 데이터는 모두 데이터 집합 쿼리로 검색된 데이터입니다. 열 그룹 창은 비어 있습니다.  
+      디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 SalesDate, Subcategory 및 Details라는 3개의 행 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다. 열 그룹 창은 비어 있습니다.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -199,7 +199,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="Gauge"></a>4. 계기를 사용하여 KPI 표시  
-계기는 데이터 집합의 단일 값을 표시합니다. 이 자습서에서는 가로 선형 계기를 사용하는데, 이 계기가 작고 테이블 셀 내에서 사용되는 경우에도 모양이 읽기 쉽고 단순하기 때문입니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
+계기는 데이터 세트의 단일 값을 표시합니다. 이 자습서에서는 가로 선형 계기를 사용하는데, 이 계기가 작고 테이블 셀 내에서 사용되는 경우에도 모양이 읽기 쉽고 단순하기 때문입니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>계기를 사용하여 KPI의 현재 상태를 표시하려면  
   
@@ -219,7 +219,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
     디자인 화면에 계기가 추가됩니다.  
   
-7.  보고서 데이터 창의 데이터 집합에서 `Sales` 필드를 계기로 끕니다. **계기 데이터** 창이 열립니다.  
+7.  보고서 데이터 창의 데이터 세트에서 `Sales` 필드를 계기로 끕니다. **계기 데이터** 창이 열립니다.  
   
     `Sales` 필드를 계기에 놓으면 **값** 목록으로 이동하고 기본 제공 Sum 함수를 사용하여 집계됩니다.  
    

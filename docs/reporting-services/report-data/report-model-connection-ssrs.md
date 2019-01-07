@@ -16,7 +16,7 @@ ms.lasthandoff: 10/25/2018
 ms.locfileid: "50029272"
 ---
 # <a name="report-model-connection-ssrs"></a>보고서 모델 연결(SSRS)
-  보고서 모델의 데이터를 포함하려면 데이터 원본으로 보고서 모델을 기반으로 하는 데이터 집합이 있어야 합니다. 다른 보고서 데이터 원본과는 달리 보고서 모델용 데이터 확장 프로그램은 없습니다. 보고서 작성기에서는 보고서 서버에서 모델을 찾아 직접 선택하면 됩니다. 보고서 디자이너에서는 보고서 모델 URL을 지정합니다.  
+  보고서 모델의 데이터를 포함하려면 데이터 원본으로 보고서 모델을 기반으로 하는 데이터 세트가 있어야 합니다. 다른 보고서 데이터 원본과는 달리 보고서 모델용 데이터 확장 프로그램은 없습니다. 보고서 작성기에서는 보고서 서버에서 모델을 찾아 직접 선택하면 됩니다. 보고서 디자이너에서는 보고서 모델 URL을 지정합니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "50029272"
   
   
 ##  <a name="Query"></a> 쿼리  
- 보고서 모델 쿼리 디자이너를 사용하여 대화형으로 엔터티와 필드 및 쿼리에 대한 필터를 지정할 수 있습니다. 모델의 엔터티와 필드는 보고서 데이터 창에 표시되는 데이터 집합 필드 컬렉션이 됩니다.  
+ 보고서 모델 쿼리 디자이너를 사용하여 대화형으로 엔터티와 필드 및 쿼리에 대한 필터를 지정할 수 있습니다. 모델의 엔터티와 필드는 보고서 데이터 창에 표시되는 데이터 세트 필드 컬렉션이 됩니다.  
   
   
 ##  <a name="Parameters"></a> 매개 변수  
@@ -51,7 +51,7 @@ ms.locfileid: "50029272"
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 집합을 사용하는 방법을 단계별로 설명합니다.  
+ 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -70,10 +70,10 @@ ms.locfileid: "50029272"
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
+ 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
+ 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  

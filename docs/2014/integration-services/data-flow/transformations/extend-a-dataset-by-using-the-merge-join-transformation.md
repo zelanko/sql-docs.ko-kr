@@ -1,5 +1,5 @@
 ---
-title: 병합 조인 변환을 사용하여 데이터 집합 확장 | Microsoft Docs
+title: 병합 조인 변환을 사용하여 데이터 세트 확장 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,17 +18,17 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
 ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
 ms.locfileid: "49460198"
 ---
-# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 집합 확장
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 세트 확장
   병합 조인 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 병합 조인 변환에 입력을 제공하는 두 개의 데이터 흐름 구성 요소가 이미 들어 있어야 합니다.  
   
  병합 조인 변환에는 두 개의 정렬된 입력이 필요합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
   
-### <a name="to-extend-a-dataset"></a>데이터 집합을 확장하려면  
+### <a name="to-extend-a-dataset"></a>데이터 세트를 확장하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   

@@ -50,7 +50,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92ff53ae795fa4d0565ca9b1537a7d12bc8f0b5b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48147613"
@@ -108,7 +108,7 @@ ms.locfileid: "48147613"
 |MODELLING_CARDINALITY|Microsoft Clustering Algorithm|클러스터링 프로세스 중 생성되는 샘플 모델 수를 지정합니다.<br /><br /> 기본값은 10입니다.|  
 |PERIODICITY_HINT|Microsoft 시계열 알고리즘|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다. 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다.<br /><br /> 기본값은 {1}입니다.|  
 |PREDICTION_SMOOTHING|Microsoft 시계열 알고리즘|ARTXP 및 ARIMA 시계열 알고리즘의 혼합을 제어합니다. FORECAST_METHOD 매개 변수가 MIXED로 설정된 경우에만 지정된 값이 유효합니다. 값은 0에서 1 사이여야 합니다. 값이 0이면 모델에서 ARTXP만 사용합니다. 값이 1이면 모델에서 ARIMA만 사용합니다. 값이 0에 가까울수록 ARTXP에 더 가중되고 값이 1에 가까울수록 ARIMA에 더 가중됩니다.|  
-|SAMPLE_SIZE|Microsoft Clustering Algorithm|CLUSTERING_METHOD  매개 변수가 확장 가능한 클러스터링 메서드 중 하나로 설정될 경우 각 패스에서 알고리즘이 사용하는 사례 수를 지정합니다. SAMPLE_SIZE  매개 변수를 0으로 설정하면 전체 데이터 집합이 단일 패스로 클러스터링되어 메모리 및 성능 문제가 발생할 수 있습니다.<br /><br /> 기본값은 50000입니다.|  
+|SAMPLE_SIZE|Microsoft Clustering Algorithm|CLUSTERING_METHOD  매개 변수가 확장 가능한 클러스터링 메서드 중 하나로 설정될 경우 각 패스에서 알고리즘이 사용하는 사례 수를 지정합니다. SAMPLE_SIZE 매개 변수를 0으로 설정하면 전체 데이터 세트가 단일 패스로 클러스터됩니다. 메모리 및 성능 문제가 발생할 수 있습니다.<br /><br /> 기본값은 50000입니다.|  
 |SAMPLE_SIZE|Microsoft 로지스틱 회귀 알고리즘<br /><br /> Microsoft Neural Network Algorithm|모델의 학습에 사용되는 사례 수를 지정합니다. 알고리즘 공급자는 지정한 수와 HOLDOUT_PERCENTAGE 매개 변수로 지정된 홀드아웃 비율에 포함되지 않은 총 사례 수의 비율 중 더 작은 값을 사용합니다.<br /><br /> 즉, HOLDOUT_PERCENTAGE를 30으로 설정하면 알고리즘은 이 매개 변수 값이나 총 사례 수의 70%에 해당하는 값 중 더 작은 값을 사용합니다.<br /><br /> 기본값은 10000입니다.|  
 |SCORE_METHOD|Microsoft 의사 결정 트리 알고리즘|분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다. (1) Entropy, (2) Bayesian with K2 Prior 또는 (3) Bayesian Dirichlet 해당 (BDE) Prior입니다.<br /><br /> 기본값은 3입니다.|  
 |SPLIT_METHOD|Microsoft 의사 결정 트리 알고리즘|노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다: Binary (1), Complete (2) 또는 Both (3).<br /><br /> 기본값은 3입니다.|  

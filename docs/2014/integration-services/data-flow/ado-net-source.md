@@ -21,7 +21,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48072163"
@@ -62,7 +62,7 @@ ms.locfileid: "48072163"
  ADO.NET 원본이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하면 ADO.NET 원본이 외부 데이터 원본에서 데이터를 로드할 때 발생하는 문제를 해결할 수 있습니다. ADO.NET 원본이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 사용하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
 ## <a name="ado-net-source-configuration"></a>ADO.NET 원본 구성  
- 결과 집합을 정의하는 SQL 문을 제공하여 ADO.NET 원본을 구성합니다. 예를 들어 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스에 연결되고 SQL 문 `SELECT * FROM Production.Product` 를 사용하는 ADO.NET 원본은 **Production.Product** 테이블에서 모든 행을 추출하고 다운스트림 구성 요소에 해당 데이터 집합을 제공합니다.  
+ 결과 집합을 정의하는 SQL 문을 제공하여 ADO.NET 원본을 구성합니다. 예를 들어 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스에 연결되고 SQL 문 `SELECT * FROM Production.Product`를 사용하는 ADO.NET 원본은 **Production.Product** 테이블에서 모든 행을 추출하고 다운스트림 구성 요소에 해당 데이터 세트를 제공합니다.  
   
 > [!NOTE]  
 >  SQL 문을 사용하여 임시 테이블의 결과를 반환하는 저장 프로시저를 호출하는 경우 WITH RESULT SETS 옵션을 사용하여 결과 집합의 메타데이터를 정의합니다.  

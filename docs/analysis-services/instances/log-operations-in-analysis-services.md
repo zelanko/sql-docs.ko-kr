@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
 ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51701641"
@@ -95,7 +95,7 @@ ms.locfileid: "51701641"
 6.  서비스를 다시 시작합니다.  
   
 ##  <a name="bkmk_querylog"></a> 쿼리 로그  
- 쿼리 로그는 사용자의 MDX 또는 DAX 쿼리 활동을 기록하지 않는다는 점에서 다소 잘못된 명칭입니다. 그 대신 쿼리 로그는 Analysis Services에서 생성된 쿼리에 대한 데이터를 수집하며, 이 데이터는 이후에 사용 빈도 기반 최적화 마법사에서 데이터 입력으로 사용됩니다. 쿼리 로그에서 수집된 데이터는 분석에 직접 사용되지 않습니다. 특히, 데이터 집합은 데이터 집합의 일부가 쿼리에 포함되어 있음을 나타내는 0 또는 1로 구성된 비트 배열로 설명됩니다. 즉, 이 데이터는 마법사에 사용하기 위한 것입니다.  
+ 쿼리 로그는 사용자의 MDX 또는 DAX 쿼리 활동을 기록하지 않는다는 점에서 다소 잘못된 명칭입니다. 그 대신 쿼리 로그는 Analysis Services에서 생성된 쿼리에 대한 데이터를 수집하며, 이 데이터는 이후에 사용 빈도 기반 최적화 마법사에서 데이터 입력으로 사용됩니다. 쿼리 로그에서 수집된 데이터는 분석에 직접 사용되지 않습니다. 특히, 데이터 세트는 데이터 세트의 일부가 쿼리에 포함되어 있음을 나타내는 0 또는 1로 구성된 비트 배열로 설명됩니다. 즉, 이 데이터는 마법사에 사용하기 위한 것입니다.  
   
  쿼리 모니터링 및 문제 해결을 위해 대부분의 개발자와 관리자는 **ASTrace**커뮤니티 도구를 사용하여 쿼리를 모니터링합니다. SQL Server Profiler, xEvents 또는 Analysis Services 추적을 사용할 수도 있습니다.
   

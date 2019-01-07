@@ -23,9 +23,9 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47824681"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
-  조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 집합은 캐시 파일에 저장됩니다.  
+  조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 세트는 캐시 파일에 저장됩니다.  
   
- 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다.  
+ 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다.  
   
  캐시 연결 관리자와 캐시 변환을 사용하여 캐시 파일을 만듭니다. 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 및 [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)를 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47824681"
      비인덱스 열의 경우 인덱스 위치는 0입니다. 인덱스 열의 경우 인덱스 위치는 일련의 양수입니다.  
   
     > [!NOTE]  
-    >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 집합의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
+    >  조회 변환은 캐시 연결 관리자를 사용하도록 구성된 경우 참조 데이터 세트의 인덱스 열만 입력 열에 매핑할 수 있습니다. 또한 모든 인덱스 열을 매핑해야 합니다.  
   
      자세한 내용은 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)을 참조하세요.  
   

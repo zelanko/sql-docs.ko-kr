@@ -39,7 +39,7 @@ items:
       href: secure-reports-and-resources.md
     - name: 공유 데이터 원본 항목 보안 설정
       href: secure-shared-data-source-items.md
-    - name: 공유 데이터 집합 항목 보안 설정
+    - name: 공유 데이터 세트 항목 보안
       href: secure-shared-dataset-items.md
     - name: 내 보고서 보안 설정
       href: secure-my-reports.md

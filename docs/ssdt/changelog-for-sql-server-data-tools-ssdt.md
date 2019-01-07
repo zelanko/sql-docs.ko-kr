@@ -566,7 +566,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
  
 
 **RS 프로젝트:**
-- SSDT에서 보고서를 디자인할 때 대부분의 변경 작업 중 매개 변수, 데이터 원본 및 데이터 집합의 트리 뷰가 축소되는 문제를 해결함 
+- SSDT에서 보고서를 디자인할 때 대부분의 변경 작업 중 매개 변수, 데이터 원본 및 데이터 세트의 트리 뷰가 축소되는 문제를 해결함 
 - [저장]을 누를 때 최신 버전이 아니라 RDL 버전이 저장되는 문제를 해결함.
 - 백업이 꺼져 있을 때 SSDT RS가 파일을 백업하는 문제와 여러 다른 문제를 해결함.
 - "셀 분할"을 클릭할 때 오류가 표시되는 보고서 작성기의 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)

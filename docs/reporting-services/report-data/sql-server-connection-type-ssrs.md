@@ -52,7 +52,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
   
 ##  <a name="Query"></a> 쿼리  
- 쿼리는 보고서 데이터 집합에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 집합의 필드 컬렉션을 채웁니다. 보고서는 쿼리가 검색하는 첫 번째 결과 집합만 처리합니다.  
+ 쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 보고서는 쿼리가 검색하는 첫 번째 결과 집합만 처리합니다.  
   
  기본적으로 그래픽 쿼리 디자이너에 나타낼 수 있는 새 쿼리를 만들거나 기존 쿼리를 열 경우 관계형 쿼리 디자이너를 사용할 수 있습니다. 다음과 같은 방법으로 쿼리를 지정할 수 있습니다.  
   
@@ -71,7 +71,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
 -   [Stored Procedure](#QueryStoredProcedure) 저장 프로시저 목록에서 선택합니다.  
   
 ###  <a name="QueryText"></a> Text 쿼리 유형 사용  
- 텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 데이터 집합의 데이터를 정의할 수 있습니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
+ 텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의할 수 있습니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
   
 ```  
 SELECT  
@@ -96,7 +96,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
   
 ###  <a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용  
- 다음 중 한 가지 방법으로 데이터 집합 쿼리에 대해 저장 프로시저를 지정할 수 있습니다.  
+ 다음 중 한 가지 방법으로 데이터 세트 쿼리에 대해 저장 프로시저를 지정할 수 있습니다.  
   
 -   **데이터 집합 속성** 대화 상자에서 **저장 프로시저** 옵션을 설정합니다. 저장 프로시저 및 테이블 반환 함수 드롭다운 목록에서 원하는 항목을 선택합니다.  
   
@@ -114,7 +114,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
   
 ##  <a name="Parameters"></a> 매개 변수  
- 쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 집합에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.  
+ 쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.  
   
  예를 들어 다음 SQL 쿼리는 **EmpID**라는 보고서 매개 변수를 만듭니다.  
   
@@ -141,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 집합을 사용하는 방법을 단계별로 설명합니다.  
+ 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -160,10 +160,10 @@ WHERE EmployeeID = (@EmpID)
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
+ 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
+ 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  

@@ -41,7 +41,7 @@ ms.locfileid: "48090213"
  **연결 테스트**  
  현재 설정을 사용하여 데이터 원본에 대한 연결을 설정해 봅니다. 연결이 성공적인지 여부를 나타내는 메시지가 표시됩니다.  
   
-## <a name="from-an-azure-datamarket-dataset"></a>Azure DataMarket 데이터 집합에서  
+## <a name="from-an-azure-datamarket-dataset"></a>Azure DataMarket 데이터 세트에서  
  **연결 이름**  
  데이터 피드 연결의 이름을 입력합니다.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "48090213"
  **찾아보기**  
  보고서를 사용할 수 있는 위치로 이동합니다.  
   
- 사용 가능한 데이터 집합을 표시하려면 **사용 가능한 Azure DataMarket 데이터 집합 보기** 를 클릭합니다.  
+ 사용 가능한 데이터 세트를 표시하려면 **사용 가능한 Azure DataMarket 데이터 세트 보기**를 클릭합니다.  
   
  **계정 키**  
- Windows Azure Marketplace 데이터 집합 구독에 액세스하는 데 사용되는 계정 키를 지정합니다.  
+ Windows Azure Marketplace 데이터 세트 구독에 액세스하는 데 사용되는 계정 키를 지정합니다.  
   
  **찾기**  
  Windows Live 계정과 연결된 계정 키를 찾습니다.  

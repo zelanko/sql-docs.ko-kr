@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220663"
@@ -105,7 +105,7 @@ ms.locfileid: "48220663"
   
  허용 목록은 다음 진입점을 제어하지 않습니다.  
   
--   보고서 데이터 집합. 쿼리에서 반환된 보고서 데이터 집합 필드에는 유효한 RDL 형식이 포함되었을 수 있습니다.  
+-   보고서 데이터 세트. 쿼리에서 반환된 보고서 데이터 세트 필드에는 유효한 RDL 형식이 포함되었을 수 있습니다.  
   
 -   보고서 매개 변수 사용자가 제공한 매개 변수 값에는 유효한 RDL 형식이 포함되었을 수 있습니다.  
   

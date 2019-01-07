@@ -21,14 +21,14 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48168783"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>설치, 제거 및 보고서 작성기 지원
-  보고서 작성기는 보고서, 보고서 파트 및 공유 데이터 집합을 만들고 업데이트하고 공유하는 데 사용하는 보고서 작성 도구입니다. 보고서 작성기는 두 가지 버전에서 사용할 수 있습니다: 독립 실행형 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]합니다. 독립 실행형 버전은 사용자나 관리자가 컴퓨터에 설치합니다. 합니다 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전으로 자동으로 설치 됩니다 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 와 통합 된 SharePoint 사이트나 보고서 관리자에서 컴퓨터로 다운로드 하 고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]입니다.  
+  보고서 작성기는 보고서, 보고서 파트 및 공유 데이터 세트를 만들고 업데이트하고 공유하는 데 사용하는 보고서 작성 도구입니다. 보고서 작성기는 두 가지 버전에서 사용할 수 있습니다: 독립 실행형 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]합니다. 독립 실행형 버전은 사용자나 관리자가 컴퓨터에 설치합니다. 합니다 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전으로 자동으로 설치 됩니다 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 와 통합 된 SharePoint 사이트나 보고서 관리자에서 컴퓨터로 다운로드 하 고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]입니다.  
   
  보고서 작성기의 독립 실행형 버전이 사용 하 여 설치 되어 있지 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. [Microsoft® SQL Server® 2012 보고서 작성기](http://go.microsoft.com/fwlink/?LinkId=401502)에서 별도로 다운로드하고 설치해야 합니다.  
   
 > [!NOTE]  
 >  보고서 작성기는 Itanium 기반 컴퓨터에 설치할 수 없습니다. 이 적용 됩니다는 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 및 보고서 작성기의 독립 실행형 버전입니다.  
   
- 일반적으로 관리자는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치 및 구성하고 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전의 보고서 작성기를 사용할 수 있는 권한을 부여하며 보고서 서버에 저장된 보고서, 보고서 파트 및 공유 데이터 집합에 대한 폴더와 사용 권한을 관리합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리 참조 [Reporting Services 보고서 서버 &#40;기본 모드&#41; ](report-server/reporting-services-report-server-native-mode.md) 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
+ 일반적으로 관리자는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치 및 구성하고 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전의 보고서 작성기를 사용할 수 있는 권한을 부여하며 보고서 서버에 저장된 보고서, 보고서 파트 및 공유 데이터 세트에 대한 폴더와 사용 권한을 관리합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리 참조 [Reporting Services 보고서 서버 &#40;기본 모드&#41; ](report-server/reporting-services-report-server-native-mode.md) 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   
 ##  <a name="Installing"></a> 보고서 작성기 설치  
  보고서 작성기는 독립 실행형으로 사용할 수 있습니다 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전입니다. 사용자 또는 관리자를 다운로드 하 고 컴퓨터에 독립 실행형 버전을 설치 하지만 합니다 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전이 설치 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]합니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=186083)에서 보고서 작성기를 다운로드할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "48168783"
   
 -   보고서 외부에 저장된 데이터 원본을 보고서 작성자가 사용할 수 있게 하는 공유 데이터 원본  
   
--   여러 사용자의 여러 보고서에 대한 즉시 사용 가능한 쿼리된 데이터를 제공할 수 있는 공유 데이터 집합  
+-   여러 사용자의 여러 보고서에 대한 즉시 사용 가능한 쿼리된 데이터를 제공할 수 있는 공유 데이터 세트.  
   
 -   공동 작업 환경에서 다른 사용자가 만든 보고서의 일부를 사용자가 향상시키거나 다시 사용할 수 있게 하는 테이블 및 차트와 같은 보고서 파트  
   

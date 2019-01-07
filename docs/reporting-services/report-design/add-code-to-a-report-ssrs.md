@@ -47,13 +47,13 @@ ms.locfileid: "50030362"
     End Function  
     ```  
   
-4.  다음 예에서는 하나의 식을 사용하여 Category라는 데이터 집합 필드를 이 함수에 전달하는 방법을 보여 줍니다.  
+4.  다음 예에서는 하나의 식을 사용하여 Category라는 데이터 세트 필드를 이 함수에 전달하는 방법을 보여 줍니다.  
   
     ```  
     =Code.ChangeWord(Fields!Category.Value)  
     ```  
   
-     범주 값을 표시하는 테이블 셀에 이 식을 추가하면 해당 행의 데이터 집합 필드에 "Bike"라는 단어가 있을 때마다 해당 테이블 셀 값이 "Bicycle"이라는 단어를 대신 표시합니다.  
+     범주 값을 표시하는 테이블 셀에 이 식을 추가하면 해당 행의 데이터 세트 필드에 "Bike"라는 단어가 있을 때마다 해당 테이블 셀 값이 "Bicycle"이라는 단어를 대신 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 속성 대화 상자, 코드](https://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   

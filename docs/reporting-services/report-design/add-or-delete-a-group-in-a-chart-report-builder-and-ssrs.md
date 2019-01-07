@@ -16,7 +16,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47816011"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
-페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에서 차트 데이터 영역을 클릭하여 **차트 데이터** 창을 표시합니다. 데이터 집합 필드를 **범주 그룹** 및 **계열 그룹** 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 영역에 여러 필드를 추가합니다.  
+페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에서 차트 데이터 영역을 클릭하여 **차트 데이터** 창을 표시합니다. 데이터 세트 필드를 **범주 그룹** 및 **계열 그룹** 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 영역에 여러 필드를 추가합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

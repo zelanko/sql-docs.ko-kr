@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 49cdcd60c01bdbad2258d5098ac4db7483ba665e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48149923"
@@ -48,13 +48,13 @@ ms.locfileid: "48149923"
   
 ### <a name="to-format-text-and-placeholders-differently-in-the-same-text-box"></a>같은 입력란에서 텍스트 및 자리 표시자의 서식을 다르게 지정하려면  
   
-1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다. **데이터 집합 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 집합이나 공유 데이터 집합을 사용할 수 있습니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 집합 속성 대화 상자, 쿼리](../dataset-properties-dialog-box-query.md)를 참조하세요.  
+1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다. **데이터 집합 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 세트나 공유 데이터 세트를 사용할 수 있습니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 집합 속성 대화 상자, 쿼리](../dataset-properties-dialog-box-query.md)를 참조하세요.  
   
 2.  **삽입** 탭에서 **입력란**을 클릭합니다. 목록을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   
 3.  입력란에 **My Field**와 같은 레이블을 입력합니다.  
   
-4.  데이터 집합의 필드를 입력란으로 끕니다. 해당 필드에 대한 자리 표시자가 만들어집니다.  
+4.  데이터 세트의 필드를 입력란으로 끕니다. 해당 필드에 대한 자리 표시자가 만들어집니다.  
   
 5.  기본 서식의 경우 자리 표시자 텍스트를 선택한 후 **홈** 탭의 **글꼴** 그룹에서 서식 옵션 중 하나를 클릭합니다. 예를 들어 **굵게** 단추를 클릭합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48149923"
   
 7.  **실행**을 클릭합니다.  
   
- 목록은 필드의 각 값에 대해 한 번씩 반복되고 매번 *FieldName* 은 데이터 집합에 있는 해당 필드의 값으로 바뀝니다.  
+ 목록은 필드의 각 값에 대해 한 번씩 반복되고 매번 *FieldName* 은 데이터 세트에 있는 해당 필드의 값으로 바뀝니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [텍스트 상자 &#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   

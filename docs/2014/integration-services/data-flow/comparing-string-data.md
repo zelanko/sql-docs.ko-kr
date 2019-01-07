@@ -19,13 +19,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48100953"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
-  문자열 비교는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 수행되는 여러 변환에서 중요한 부분이며, 변수의 식 및 속성 식 평가에도 사용됩니다. 예를 들어 정렬 변환에서는 데이터 집합의 값을 비교하여 데이터를 오름차순 또는 내림차순으로 정렬합니다.  
+  문자열 비교는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 수행되는 여러 변환에서 중요한 부분이며, 변수의 식 및 속성 식 평가에도 사용됩니다. 예를 들어 정렬 변환에서는 데이터 세트의 값을 비교하여 데이터를 오름차순 또는 내림차순으로 정렬합니다.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>문자열 비교를 위한 변환 구성  
  정렬, 집계, 유사 항목 그룹화, 유사 항목 조회 변환을 사용자 지정하여 열 수준에서 문자열이 비교되는 방식을 변경할 수 있습니다. 예를 들어 비교 시 대/소문자를 무시하여 대문자와 소문자가 모두 동일한 문자로 취급되도록 지정할 수 있습니다.  

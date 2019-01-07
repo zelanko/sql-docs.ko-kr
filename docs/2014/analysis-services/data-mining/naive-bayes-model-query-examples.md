@@ -248,7 +248,7 @@ AS t
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[예측 &#40;DMX&#41;](/sql/dmx/predict-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  

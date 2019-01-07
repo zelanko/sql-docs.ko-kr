@@ -50,8 +50,8 @@ ms.locfileid: "34041997"
 =DimDate  
 ```  
   
-### <a name="summarized-or-filtered-dataset"></a>요약 또는 필터링된 데이터 집합  
- 수식 입력 줄에 원하는 행을 포함하도록 데이터 집합을 조작하거나, 필터링하거나 요약하는 DAX 식을 입력합니다. 이 예는 판매, 색상, 화폐별 그룹이 형성됩니다.  
+### <a name="summarized-or-filtered-dataset"></a>요약 또는 필터링된 데이터 세트  
+ 수식 입력 줄에 원하는 행을 포함하도록 데이터 세트를 조작하거나, 필터링하거나 요약하는 DAX 식을 입력합니다. 이 예는 판매, 색상, 화폐별 그룹이 형성됩니다.  
   
 ```  
 =SUMMARIZECOLUMNS(DimProduct[Color]  

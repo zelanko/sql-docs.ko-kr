@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48220903"
@@ -45,10 +45,10 @@ ms.locfileid: "48220903"
  보고서 매개 변수 목록을 제공합니다.  
   
  **필드 (**  *\<데이터 집합 선택 >* **)**  
- 데이터 집합 범주에 선택된 데이터 집합에 대한 필드 목록을 표시합니다. 필드를 두 번 클릭하여 필드를 **식** 상자에 복사할 수 있습니다.  
+ 데이터 세트 범주에 선택된 데이터 세트에 대한 필드 목록을 표시합니다. 필드를 두 번 클릭하여 필드를 **식** 상자에 복사할 수 있습니다.  
   
  **데이터 집합**  
- 사용 가능한 데이터 집합의 목록을 제공하고 데이터 집합의 멤버 필드를 표시합니다.  
+ 사용 가능한 데이터 세트의 목록을 제공하고 데이터 세트의 멤버 필드를 표시합니다.  
   
  **변수**  
  보고서 변수의 목록을 표시합니다. 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)를 참조하세요.  

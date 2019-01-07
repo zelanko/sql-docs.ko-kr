@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38982485"
@@ -27,7 +27,7 @@ ms.locfileid: "38982485"
   
 -   데이터가 최신 데이터이며, 메모리 내 캐시에서 별도의 데이터 복사본을 유지 관리해야 하는 추가적인 관리 오버헤드가 없습니다. 기본 원본 데이터를 변경하면 데이터 모델에 대한 쿼리에 바로 반영될 수 있습니다.  
   
--   데이터 집합이 Analysis Services 서버의 메모리 용량보다 클 수 있습니다.  
+-   데이터 세트가 Analysis Services 서버의 메모리 용량보다 클 수 있습니다.  
   
 -   DirectQuery의 메모리 액세스에 최적화 열 인덱스에서 제공 되는 것과 같은 공급자 측 쿼리 가속을 사용할 수 있습니다.  
   

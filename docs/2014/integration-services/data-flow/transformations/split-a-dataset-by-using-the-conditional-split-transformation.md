@@ -1,5 +1,5 @@
 ---
-title: 조건부 분할 변환을 사용하여 데이터 집합 분할 | Microsoft Docs
+title: 조건부 분할 변환을 사용하여 데이터 세트 분할 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
 ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/19/2018
 ms.locfileid: "49460339"
 ---
-# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>조건부 분할 변환을 사용하여 데이터 집합 분할
+# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>조건부 분할 변환을 사용하여 데이터 세트 분할
   조건부 분할 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
-### <a name="to-conditionally-split-a-dataset"></a>데이터 집합을 조건적으로 분할하려면  
+### <a name="to-conditionally-split-a-dataset"></a>데이터 세트를 조건적으로 분할하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   

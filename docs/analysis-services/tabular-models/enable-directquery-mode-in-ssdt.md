@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1d2a1ced9638a48dc02729c0f224b883974a7dde
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34040737"
@@ -42,7 +42,7 @@ DirectQuery 모드를 사용하도록 설정하기 전에 모델이 부분적으
 모델을 작성할 때 모델 동작을 확인할 수 있도록 각 테이블에 대한 샘플 파티션을 만들고 샘플 데이터를 추가할 수 있습니다. 추가하는 샘플 데이터는 **Excel에서 분석** 또는 작업 영역 데이터베이스에 연결할 수 있는 기타 클라이언트 도구에서 사용됩니다. 자세한 내용은 [디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 를 참조하세요.  
   
 > [!TIP]  
-    >  빈 모델의 DirectQuery 모드에서도 항상 각 테이블에 대해 작은 기본 제공 행 집합이 표시됩니다. 50행 데이터 집합을 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** > **테이블 속성** 을 클릭합니다.  
+    >  빈 모델의 DirectQuery 모드에서도 항상 각 테이블에 대해 작은 기본 제공 행 집합이 표시됩니다. 50행 데이터 세트를 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** > **테이블 속성** 을 클릭합니다.  
   
   
 ## <a name="see-also"></a>참고 항목  

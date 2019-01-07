@@ -21,7 +21,7 @@ ms.locfileid: "52393646"
 
 2. 모바일 보고서 게시자에서 보고서를 열고 데이터 탭을 선택합니다. 
 
-2. 테이블의 맨 아래에 있는 탭에서 데이터 집합의 이름과 원하는 필드 이름을 찾습니다. 
+2. 테이블의 맨 아래에 있는 탭에서 데이터 세트의 이름과 원하는 필드 이름을 찾습니다. 
     
     ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     

@@ -364,7 +364,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 ```  
   
 ## <a name="anomaly-detection"></a>변칙 검색  
- 변칙 검색(또는 이상 값 검색)은 예상되는 패턴을 준수하지 않는 항목 또는 데이터 집합의 다른 항목 ID입니다.   
+ 변칙 검색(또는 이상 값 검색)은 예상되는 패턴을 준수하지 않는 항목 또는 데이터 세트의 다른 항목 ID입니다.   
 임시 쿼리를 활용하면 특정 패턴을 쉽게 찾을 수 있으므로 시스템 버전 관리된 temporal 테이블을 사용하여 주기적으로 또는 불규칙적으로 발생하는 변칙을 검색할 수 있습니다.  
 변칙은 수집하는 데이터 형식과 비즈니스 논리에 따라 달라집니다.  
   

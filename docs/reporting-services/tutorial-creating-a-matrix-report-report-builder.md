@@ -27,8 +27,8 @@ ms.locfileid: "52712374"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요. 
   
-## <a name="CreateMatrix"></a>1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 집합 만들기  
-이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 집합을 만들고, 행렬에 데이터를 표시합니다.  
+## <a name="CreateMatrix"></a>1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
+이 섹션에서는 공유 데이터 원본을 선택하고, 포함된 데이터 세트를 만들고, 행렬에 데이터를 표시합니다.  
   
 > [!NOTE]  
 > 이 자습서의 쿼리에는 이미 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "52712374"
   
 13. **마침**을 클릭합니다.  
   
-    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 집합 쿼리로 검색된 데이터입니다.  
+    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -209,7 +209,7 @@ ms.locfileid: "52712374"
   
 11. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-보고서에 Monday 및 Tuesday라는 열이 포함됩니다. 데이터 집합에는 이러한 두 요일에 대한 데이터만 포함됩니다.  
+보고서에 Monday 및 Tuesday라는 열이 포함됩니다. 데이터 세트에는 이러한 두 요일에 대한 데이터만 포함됩니다.  
 
 ![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
   

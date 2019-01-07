@@ -28,7 +28,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e32c6ed01887fb47cb8051ba78fb92b6558a5abe
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48099452"
@@ -69,7 +69,7 @@ ms.locfileid: "48099452"
   
  식 편집기에서는 기본 제공 함수를 계층적으로 볼 수 있습니다. 함수를 선택하면 값 창에 코드 예가 표시됩니다. 자세한 내용은 참조는 [식 대화 상자](../expression-dialog-box.md) 또는 [식 대화 상자 &#40;보고서 작성기&#41;](../expression-dialog-box-report-builder.md).  
   
- 보고서 모델 쿼리 디자이너를 사용하여 보고서 모델을 데이터 원본으로 사용하는 데이터 집합 쿼리를 디자인할 경우 식 대신 수식을 사용합니다. 이러한 수식을 사용하면 보고서 모델 데이터 원본에서 반환할 데이터를 지정하는 쿼리에 사용자 지정 계산을 통합하여 보고서 데이터를 쉽게 지정할 수 있습니다. 자세한 내용은 [보고서 모델 쿼리의 수식&#40;보고서 작성기 및 SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서 모델 쿼리 디자이너를 사용하여 보고서 모델을 데이터 원본으로 사용하는 데이터 세트 쿼리를 디자인할 경우 식 대신 수식을 사용합니다. 이러한 수식을 사용하면 보고서 모델 데이터 원본에서 반환할 데이터를 지정하는 쿼리에 사용자 지정 계산을 통합하여 보고서 데이터를 쉽게 지정할 수 있습니다. 자세한 내용은 [보고서 모델 쿼리의 수식&#40;보고서 작성기 및 SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -124,7 +124,7 @@ ms.locfileid: "48099452"
     Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString  
     ```  
   
-     이 식을 데이터 집합에서 계산 필드로 사용할 경우 차트에서 이 식을 사용하면 각 달의 주를 기준으로 값을 집계할 수 있습니다.  
+     이 식을 데이터 세트에서 계산 필드로 사용할 경우 차트에서 이 식을 사용하면 각 달의 주를 기준으로 값을 집계할 수 있습니다.  
   
 -   다음 식은 SellStartDate 값을 MMM-YY 형식으로 지정합니다. SellStartDate 필드는 datetime 데이터 형식입니다.  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48099452"
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [첫 번째 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
+-   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 세트 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [첫 번째 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   `DatePart` 지정된 된 날짜 값의 지정된 된 구성 요소를 포함 하는 정수 값을 반환 합니다. 다음 식은 DataSet1에 있는 SellStartDate의 첫 번째 값의 연도 반환합니다. 보고서에 여러 개의 데이터 집합이 있으므로 데이터 집합 범위가 지정됩니다.  
+-   `DatePart` 지정된 된 날짜 값의 지정된 된 구성 요소를 포함 하는 정수 값을 반환 합니다. 다음 식은 DataSet1에 있는 SellStartDate의 첫 번째 값의 연도 반환합니다. 보고서에 여러 개의 데이터 세트가 있으므로 데이터 세트 범위가 지정됩니다.  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
@@ -234,7 +234,7 @@ ms.locfileid: "48099452"
   
 #### <a name="lookup"></a>조회  
   
--   키 필드를 지정하면 `Lookup` 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 집합에서 제품 이름(“Product”)을 표시합니다.  
+-   키 필드를 지정하면 `Lookup` 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 세트에서 제품 이름(“Product”)을 표시합니다.  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -242,7 +242,7 @@ ms.locfileid: "48099452"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   키 필드를 지정 하 여 사용할 수는 `LookupSet` 에 일 대 다 관계에 대 한 데이터 집합에서 값의 집합을 검색 하는 함수입니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 집합의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. `LookupSet` 값의 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
+-   키 필드를 지정 하 여 사용할 수는 `LookupSet` 에 일 대 다 관계에 대 한 데이터 집합에서 값의 집합을 검색 하는 함수입니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 세트의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. `LookupSet` 값의 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -329,7 +329,7 @@ ms.locfileid: "48099452"
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   사용할 수도 있습니다는 `Sum` 조건부 집계 계산에 대 한 함수입니다. 예를 들어 가능한 값이 Not Started, Started, Finished인 State라는 필드가 데이터 집합에 있는 경우 다음 식을 그룹 머리글에 배치하면 Finished 값에 대해서만 집계 합을 계산합니다.  
+-   사용할 수도 있습니다는 `Sum` 조건부 집계 계산에 대 한 함수입니다. 예를 들어 가능한 값이 Not Started, Started, Finished인 State라는 필드가 데이터 세트에 있는 경우 다음 식을 그룹 머리글에 배치하면 Finished 값에 대해서만 집계 합을 계산합니다.  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -426,7 +426,7 @@ ms.locfileid: "48099452"
     =Iif(RowNumber(Nothing) Mod 2, "PaleGreen", "White")  
     ```  
   
-     특정 범위에 식을 사용할 경우 집계 함수의 데이터 집합을 나타내야 할 수도 있습니다.  
+     특정 범위에 식을 사용할 경우 집계 함수의 데이터 세트를 나타내야 할 수도 있습니다.  
   
     ```  
     =Iif(RowNumber("Employees") Mod 2, "PaleGreen", "White")  
@@ -462,7 +462,7 @@ ms.locfileid: "48099452"
 ###  <a name="Hyperlinks"></a> URL  
  보고서 데이터를 사용하여 URL을 사용자 지정할 수 있으며 입력란에 대한 동작으로 URL을 추가할지 여부를 조건부로 제어할 수도 있습니다.  
   
--   다음 식을 입력란에서 동작으로 사용하면 데이터 집합 필드 `EmployeeID` 를 URL 매개 변수로 지정하는 사용자 지정 URL이 생성됩니다.  
+-   다음 식을 입력란에서 동작으로 사용하면 데이터 세트 필드 `EmployeeID`를 URL 매개 변수로 지정하는 사용자 지정 URL이 생성됩니다.  
   
     ```  
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  

@@ -182,7 +182,7 @@ items:
       href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
     - name: '2단원: 연결 정보 지정'
       href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-    - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
+    - name: '3단원: 테이블 보고서에 대한 데이터 세트 정의'
       href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
     - name: '4단원: 보고서에 테이블 추가'
       href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md

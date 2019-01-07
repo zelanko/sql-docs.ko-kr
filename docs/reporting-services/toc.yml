@@ -39,7 +39,7 @@ items:
   items:
   - name: 웹 포털 브랜딩
     href: branding-the-web-portal.md
-  - name: 공유 데이터 집합 작업
+  - name: 공유 데이터 세트 작업
     href: work-with-shared-datasets-web-portal.md
   - name: 페이지를 매긴 보고서 작업
     href: working-with-paginated-reports-web-portal.md
@@ -180,7 +180,7 @@ items:
       href: lesson-1-creating-a-report-server-project-reporting-services.md
     - name: '2단원: 연결 정보 지정'
       href: lesson-2-specifying-connection-information-reporting-services.md
-    - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
+    - name: '3단원: 테이블 보고서에 대한 데이터 세트 정의'
       href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
     - name: '4단원: 보고서에 테이블 추가'
       href: lesson-4-adding-a-table-to-the-report-reporting-services.md

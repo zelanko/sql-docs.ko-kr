@@ -1,5 +1,5 @@
 ---
-title: Reporting Services에서 외부 데이터 집합 사용 | Microsoft Docs
+title: Reporting Services에서 외부 데이터 세트 사용 | Microsoft Docs
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -158,7 +158,7 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- 데이터 집합을 만들거나 검색하면 **DataReader** 클래스의 **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** 및 **FieldCount** 멤버 구현에서 **DataSet** 개체를 사용할 수 있습니다.  
+ 데이터 세트를 만들거나 검색하면 **DataReader** 클래스의 **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** 및 **FieldCount** 멤버 구현에서 **DataSet** 개체를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   

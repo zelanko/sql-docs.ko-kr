@@ -29,7 +29,7 @@ ms.locfileid: "51814146"
 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)에서 샘플 데이터를 사용하여 하이퍼링크를 추가해 보세요.  
   
 > [!NOTE]  
->  데이터 집합 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md)를 참조하세요.  
+>  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md)를 참조하세요.  
   
 ## <a name="to-add-a-hyperlink-and"></a>하이퍼링크를 추가하려면...   
   

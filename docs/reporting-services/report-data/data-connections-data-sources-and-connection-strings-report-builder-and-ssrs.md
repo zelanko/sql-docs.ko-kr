@@ -59,7 +59,7 @@ ms.locfileid: "52394035"
 |데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")||  
 |보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
 |보고서 서버에서 관리됩니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
-|공유 데이터 집합에 필요합니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
+|공유 데이터 세트에 필요합니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
 |구성 요소에 필요합니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.gif "사용 가능")|  
   
 ##  <a name="bkmk_DataConnections"></a> 기본 제공 데이터 확장  

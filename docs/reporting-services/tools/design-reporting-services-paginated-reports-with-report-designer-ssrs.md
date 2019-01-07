@@ -19,7 +19,7 @@ ms.locfileid: "50031912"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
-보고서 디자이너를 사용하여 완전한 기능을 갖추고 페이지 매김 처리한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 집합 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 집합을 정의할 수 있습니다.  
+보고서 디자이너를 사용하여 완전한 기능을 갖추고 페이지 매김 처리한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 세트 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 세트를 정의할 수 있습니다.  
 
 보고서 디자이너는  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능으로, 비즈니스 인텔리전스 솔루션을 만들기 위한 Microsoft Visual Studio 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 SQL Server에 포함되어 있지 않습니다. [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
@@ -49,9 +49,9 @@ ms.locfileid: "50031912"
 ##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 집합  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 보고 솔루션용 공유 데이터 집합을 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 집합을 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
   
- 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 집합을 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 집합을 열 수 없습니다. 해당 기능의 경우 공유 데이터 집합 모드에서 [보고서 작성기 제작 환경&#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
+ 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 집합을 열 수 없습니다. 해당 기능의 경우 공유 데이터 집합 모드에서 [보고서 작성기 제작 환경&#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 집합을 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
   
 ##  <a name="bkmk_Reports"></a> 페이지를 매긴 보고서  
 페이지 매김 처리한 보고서는 보고서 프로젝트에 저장된 파일입니다. 보고서는 독립 실행형 보고서, 하위 보고서 또는 주 보고서의 드릴스루 동작 대상으로 사용할 수 없습니다. **TargetReportFolder** 및 기타 속성을 사용하면 보고서를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
@@ -93,7 +93,7 @@ ms.locfileid: "50031912"
  보고서와 관련되지만 보고서 서버에서 처리되지 않는 파일을 프로젝트에 추가할 수 있습니다. 예를 들어 사진의 경우 이미지를, 공간 데이터의 경우 ESRI 셰이프 파일을 추가할 수 있습니다. 자세한 내용은 [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)를 참조하세요.  
  
 ##  <a name="bkmk_ReportLayout"></a> 페이지 매긴 보고서 레이아웃  
- 보고서 레이아웃을 만들려면 보고서 항목 및 데이터 영역을 도구 상자에서 디자인 화면으로 끈 다음 해당 항목을 정렬합니다. 데이터 집합 필드를 디자인 화면의 항목으로 끌어 보고서에 데이터를 추가합니다. 테이블릭스 데이터 영역에서 데이터를 그룹으로 구성하려면 데이터 집합 필드를 그룹화 창으로 끕니다. 보고서 제작 도구는 기본적으로 보고서 정의를 만드는 방법이므로 보고서 디자인에 대한 접근 방식이 보고서 작성기와 보고서 디자이너 간에 유사합니다.  
+ 보고서 레이아웃을 만들려면 보고서 항목 및 데이터 영역을 도구 상자에서 디자인 화면으로 끈 다음 해당 항목을 정렬합니다. 데이터 세트 필드를 디자인 화면의 항목으로 끌어 보고서에 데이터를 추가합니다. 테이블릭스 데이터 영역에서 데이터를 그룹으로 구성하려면 데이터 세트 필드를 그룹화 창으로 끕니다. 보고서 제작 도구는 기본적으로 보고서 정의를 만드는 방법이므로 보고서 디자인에 대한 접근 방식이 보고서 작성기와 보고서 디자이너 간에 유사합니다.  
    
 ##  <a name="bkmk_Preview"></a> 페이지를 매긴 보고서 미리 보기  
  **미리 보기** 를 사용하여 보고서 데이터 및 레이아웃 디자인을 확인할 수 있습니다. 보고서를 미리 보는 경우 보고서 처리기에서 보고서 정의 스키마와 식 구문의 유효성을 검사하고 문제를 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 창에 나열합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "50031912"
     -   인쇄 형식에서 더 읽기 쉽도록 보고서 레이아웃을 수정해야 합니다.  
    
 ##  <a name="bkmk_SaveandDeploy"></a> 페이지를 매긴 보고서 저장 및 배포  
- 보고서 디자이너에서 보고서 및 기타 프로젝트 파일을 로컬로 저장하거나 보고서 서버나 SharePoint 사이트에 배포할 수 있습니다. 구성한 프로젝트 배포 속성에 따라 공유 데이터 원본, 공유 데이터 집합, 보고서, 보고서 리소스 및 보고서 파트를 독립적으로 배포하거나 함께 배포할 수 있습니다. 자세한 내용은 [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)을 참조하세요.  
+ 보고서 디자이너에서 보고서 및 기타 프로젝트 파일을 로컬로 저장하거나 보고서 서버나 SharePoint 사이트에 배포할 수 있습니다. 구성한 프로젝트 배포 속성에 따라 공유 데이터 원본, 공유 데이터 세트, 보고서, 보고서 리소스 및 보고서 파트를 독립적으로 배포하거나 함께 배포할 수 있습니다. 자세한 내용은 [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)을 참조하세요.  
   
  보고서 디자이너를 사용할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 현재 버전의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 지원되는 보고서 정의 스키마를 사용하여 보고서를 디자인한다는 것을 이해해야 합니다. 특정 보고서 서버 또는 SharePoint 사이트에 대한 프로젝트 배포 속성을 설정한 후 보고서를 저장하는 경우 보고서 디자이너는 대상 보고서 서버의 버전과 일치하는 스키마로 디렉터리를 구축하는 보고서 정의를 저장합니다. 낮은 수준의 보고서 서버에 게시할 수 있는 보고서를 만들기 위해 보고서 디자이너는 대상 스키마에 존재하지 않는 보고서 항목을 삭제합니다. 이 동작은 메시지를 표시하지 않고 자동으로 수행됩니다. 이 동작이 수행되면 원본 보고서 정의가 프로젝트 폴더에 유지됩니다. 배포되는 수정된 보고서 정의는 작성기 폴더에 있습니다.  
   

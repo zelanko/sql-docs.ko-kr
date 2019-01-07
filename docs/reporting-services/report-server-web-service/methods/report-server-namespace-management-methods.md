@@ -27,7 +27,7 @@ ms.locfileid: "47848131"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|작업 실행을 취소합니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 폴더를 추가합니다.|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 새 항목을 추가합니다. 이 메서드는 **보고서**, **모델**, **데이터 집합**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 새 항목을 추가합니다. 이 메서드는 **보고서**, **모델**, **데이터 세트**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|새 보고서 편집 세션을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 항목을 제거합니다.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 지정된 검색 조건과 일치하는 항목을 반환합니다.|  
@@ -35,7 +35,7 @@ ms.locfileid: "47848131"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|지정된 확장 프로그램에 대한 설정 목록을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|항목이 존재하는 경우 보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 항목의 유형을 검색합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리의 항목에 대한 하나 이상의 속성 값을 반환합니다.|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|항목의 정의 또는 콘텐츠를 검색합니다. 이 메서드는 **보고서**, **모델**, **데이터 집합**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|항목의 정의 또는 콘텐츠를 검색합니다. 이 메서드는 **보고서**, **모델**, **데이터 세트**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|항목과 연결된 카탈로그 항목 참조 목록을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|스케일 아웃 배포에 있는 모든 보고서 서버 인스턴스 또는 연결된 보고서 서버 인스턴스에 대한 정보를 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|시스템 속성을 하나 이상 반환합니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "47848131"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|항목과 연결된 카탈로그 항목을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|항목을 이동하거나 항목 이름을 바꿉니다.|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|항목 속성을 하나 이상 설정합니다.|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|지정된 항목의 정의 또는 콘텐츠를 설정합니다. 이 메서드는 **보고서**, **모델**, **데이터 집합**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|지정된 항목의 정의 또는 콘텐츠를 설정합니다. 이 메서드는 **보고서**, **모델**, **데이터 세트**, **구성 요소**, **리소스** 및 **DataSource** 항목 종류에 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|보고서 서버 또는 SharePoint 팜에서 시스템 속성을 하나 이상 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 프로그램 설정의 유효성을 검사합니다.|  
   

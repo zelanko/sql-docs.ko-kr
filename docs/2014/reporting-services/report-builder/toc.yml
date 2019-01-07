@@ -90,15 +90,15 @@ items:
     href: ../data-source-properties-dialog-box-credentials-report-builder.md
   - name: 데이터 원본 속성 대화 상자, 일반
     href: ../data-source-properties-dialog-box-general-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 필드
+  - name: 데이터 세트 속성 대화 상자, 필드
     href: ../dataset-properties-dialog-box-fields-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 필터
+  - name: 데이터 세트 속성 대화 상자, 필터
     href: ../dataset-properties-dialog-box-filters-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 옵션
+  - name: 데이터 세트 속성 대화 상자, 옵션
     href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 매개 변수
+  - name: 데이터 세트 속성 대화 상자, 매개 변수
     href: ../dataset-properties-dialog-box-parameters-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 쿼리
+  - name: 데이터 세트 속성 대화 상자, 쿼리
     href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
   - name: 데이터 원본 자격 증명 입력 대화 상자
     href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md

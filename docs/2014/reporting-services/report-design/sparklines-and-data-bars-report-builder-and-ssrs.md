@@ -16,7 +16,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48074813"
@@ -74,7 +74,7 @@ ms.locfileid: "48074813"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="UnderstandScope"></a> 스파크라인 또는 데이터 막대로 제공되는 데이터 이해  
- 테이블이나 행렬에 스파크라인 또는 데이터 막대를 추가하는 것을 특정 데이터 영역에 다른 데이터 영역을 *중첩* 한다고 합니다. 중첩이란 스파크라인 또는 데이터 막대에 제공되는 데이터가 테이블이나 행렬의 기준이 되는 데이터 집합과, 테이블이나 행렬에서 스파크라인 또는 데이터 막대를 배치하는 위치에 의해 제어됨을 의미합니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)을 참조하세요.  
+ 테이블이나 행렬에 스파크라인 또는 데이터 막대를 추가하는 것을 특정 데이터 영역에 다른 데이터 영역을 *중첩* 한다고 합니다. 중첩이란 스파크라인 또는 데이터 막대에 제공되는 데이터가 테이블이나 행렬의 기준이 되는 데이터 세트와, 테이블이나 행렬에서 스파크라인 또는 데이터 막대를 배치하는 위치에 의해 제어됨을 의미합니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="ConvertSparklinetoChart"></a> 스파크라인 또는 데이터 막대를 전체 차트로 변환  
  스파크라인 및 데이터 막대도 일종의 차트이므로, 이들 항목보다는 전체 차트 기능을 사용하려는 경우 차트를 마우스 오른쪽 단추로 클릭하고 **전체 차트로 변환**을 클릭하여 전체 차트로 변환할 수 있습니다. 이렇게 하면 축 선, 레이블, 눈금 표시 및 범례가 자동으로 추가됩니다.  

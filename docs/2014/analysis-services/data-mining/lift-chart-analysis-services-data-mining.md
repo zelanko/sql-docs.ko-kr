@@ -20,7 +20,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48119403"
@@ -56,7 +56,7 @@ ms.locfileid: "48119403"
   
  ![리프트 차트 보여 주는 두 가지 모델](../media/newliftchart-tm30-30.gif "리프트 차트로 보여 주는 두 가지 모델")  
   
- 차트의 X축은 예측을 비교하는 데 사용되는 테스트 데이터 집합의 비율을 나타냅니다. 차트의 Y축은 예측되는 값의 비율을 나타냅니다.  
+ 차트의 X축은 예측을 비교하는 데 사용되는 테스트 데이터 세트의 비율을 나타냅니다. 차트의 Y축은 예측되는 값의 비율을 나타냅니다.  
   
  여기에 파란색으로 표시된 대각선은 모든 차트에 나타납니다. 이 선은 임의 추측의 결과를 나타내며 리프트를 평가할 기준선입니다. 리프트 차트에 추가하는 각 모델에 대해 두 개의 선이 있습니다. 첫 번째 선은 항상 완벽하게 예측되는 모델을 만들 수 있는 경우의 학습 데이터 집합에 대한 이상적인 결과를 보여 주며, 두 번째 선은 모델에 대한 결과의 실제 리프트 또는 향상률을 보여 줍니다.  
   

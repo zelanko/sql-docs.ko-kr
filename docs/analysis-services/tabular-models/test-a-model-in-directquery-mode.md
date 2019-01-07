@@ -22,7 +22,7 @@ ms.locfileid: "34039723"
   
 ## <a name="test-in-excel"></a>Excel에서 테스트 
   
- SSDT에서 모델을 디자인하는 경우 **Excel에서 분석** 기능을 사용하여 메모리의 샘플 데이터 집합이나 관계형 데이터베이스에 대해 모델링 결정을 테스트할 수 있습니다.  Excel에서 분석을 클릭하면 옵션을 지정할 수 있는 대화 상자가 열립니다.
+ SSDT에서 모델을 디자인하는 경우 **Excel에서 분석** 기능을 사용하여 메모리의 샘플 데이터 세트나 관계형 데이터베이스에 대해 모델링 결정을 테스트할 수 있습니다.  Excel에서 분석을 클릭하면 옵션을 지정할 수 있는 대화 상자가 열립니다.
  
  ![Excel DirectQuery 옵션에서 분석](../../analysis-services/tabular-models/media/analyze-in-excel-directquery-options.png)
  

@@ -30,7 +30,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48137633"
@@ -99,9 +99,9 @@ ms.locfileid: "48137633"
   
     3.  **추가**를 클릭합니다.  
   
-    4.  공간 데이터 집합에 있는 일치 필드의 이름을 입력합니다.  
+    4.  공간 데이터 세트에 있는 일치 필드의 이름을 입력합니다.  
   
-    5.  분석 데이터 집합에 있는 일치 필드의 이름을 입력합니다.  
+    5.  분석 데이터 세트에 있는 일치 필드의 이름을 입력합니다.  
   
      공간 및 분석 데이터를 연결하는 방법에 대한 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   

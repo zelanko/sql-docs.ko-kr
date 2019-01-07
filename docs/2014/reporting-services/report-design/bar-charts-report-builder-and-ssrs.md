@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48106103"
@@ -56,7 +56,7 @@ ms.locfileid: "48106103"
   
 -   가로 막대형 차트에서 데이터 요소 레이블이 표시될 때 레이블은 각 막대의 바깥쪽에 배치됩니다. 이로 인해 차트 영역에 할당된 공간이 모두 차면 레이블이 겹칠 수 있습니다. 속성 창에서 **BarLabelStyle** 속성을 설정하여 각 막대에 대해 표시되는 데이터 요소 레이블의 위치를 변경할 수 있습니다.  
   
--   차트의 크기에 비해 데이터 집합에 데이터 요소가 많은 경우 열 또는 막대의 크기와 항목 사이의 공백이 감소됩니다. 차트에서 열 너비를 수동으로 설정하려면 **PointWidth** 속성을 수정하여 너비(픽셀)를 수정합니다. 기본적으로 이 속성 값은 0.8입니다. 차트에서 열 또는 막대의 너비를 늘리면 각 열 또는 막대 사이의 공백이 줄어듭니다.  
+-   차트의 크기에 비해 데이터 세트에 데이터 요소가 많은 경우 열 또는 막대의 크기와 항목 사이의 공백이 감소됩니다. 차트에서 열 너비를 수동으로 설정하려면 **PointWidth** 속성을 수정하여 너비(픽셀)를 수정합니다. 기본적으로 이 속성 값은 0.8입니다. 차트에서 열 또는 막대의 너비를 늘리면 각 열 또는 막대 사이의 공백이 줄어듭니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   

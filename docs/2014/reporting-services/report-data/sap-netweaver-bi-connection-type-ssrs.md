@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48084763"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
-  보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
+  보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
   
  이 데이터 확장 프로그램을 사용하면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 외부 데이터 원본에 정의된 InfoCube, MultiProvider(가상 InfoCube) 및 웹 사용이 가능한 쿼리에서 다차원 데이터를 검색할 수 있습니다.  
   
@@ -59,11 +59,11 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Query"></a> 쿼리  
- 디자인 모드나 쿼리 모드의 그래픽 쿼리 디자이너에서 데이터 원본의 기본 데이터 구조를 찾아서 MDX(Multidimensional Expression) 쿼리를 작성할 수 있습니다. 또한 디자인 타임에 쿼리 디자이너에서 대화형으로 쿼리를 실행하여 결과를 볼 수 있습니다. 작성한 쿼리는 데이터 집합의 필드를 정의합니다. 실제 데이터는 런타임에 데이터 원본에서 반환됩니다. 그래픽 쿼리 디자이너를 사용하여 수행할 수 있는 동작은 다음과 같습니다.  
+ 디자인 모드나 쿼리 모드의 그래픽 쿼리 디자이너에서 데이터 원본의 기본 데이터 구조를 찾아서 MDX(Multidimensional Expression) 쿼리를 작성할 수 있습니다. 또한 디자인 타임에 쿼리 디자이너에서 대화형으로 쿼리를 실행하여 결과를 볼 수 있습니다. 작성한 쿼리는 데이터 세트의 필드를 정의합니다. 실제 데이터는 런타임에 데이터 원본에서 반환됩니다. 그래픽 쿼리 디자이너를 사용하여 수행할 수 있는 동작은 다음과 같습니다.  
   
--   디자인 모드에서 데이터 원본의 차원, 멤버, 멤버 속성 및 주요 숫자 값을 데이터 창으로 끌어 MDX(Multidimensional Expression) 쿼리를 작성합니다. 추가 데이터 집합 필드를 정의하려면 계산 멤버 창의 계산 멤버를 데이터 창으로 끌어 옵니다.  
+-   디자인 모드에서 데이터 원본의 차원, 멤버, 멤버 속성 및 주요 숫자 값을 데이터 창으로 끌어 MDX(Multidimensional Expression) 쿼리를 작성합니다. 추가 데이터 세트 필드를 정의하려면 계산 멤버 창의 계산 멤버를 데이터 창으로 끌어 옵니다.  
   
--   쿼리 모드에서 차원, 멤버, 멤버 속성 및 주요 숫자 값을 쿼리 창으로 끌거나 MDX 텍스트를 쿼리 창에 직접 입력합니다. 추가 데이터 집합 필드를 정의하려면 계산 멤버 창의 계산 멤버를 데이터 창으로 끌어 옵니다.  
+-   쿼리 모드에서 차원, 멤버, 멤버 속성 및 주요 숫자 값을 쿼리 창으로 끌거나 MDX 텍스트를 쿼리 창에 직접 입력합니다. 추가 데이터 세트 필드를 정의하려면 계산 멤버 창의 계산 멤버를 데이터 창으로 끌어 옵니다.  
   
  쿼리를 작성하면 쿼리 디자이너가 기본 속성을 MDX 쿼리에 자동으로 추가합니다. 기본 속성 이외의 속성을 포함하려면 MDX 쿼리를 직접 수정해야 합니다.  
   
@@ -82,7 +82,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  메타데이터 창에서 필드를 가리키면 확장 필드 속성 이름이 도구 설명에 표시됩니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 [SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스](sap-netweaver-bi-query-designer-user-interface.md)합니다.  
   
 > [!NOTE]  
->  보고서가 실행되어 해당 데이터 집합에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성에 대한 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 참조할 수 있습니다 `Field` 아래에 설명 된 구문을 사용 하 여 모든 식에서 속성 값입니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
+>  보고서가 실행되어 해당 데이터 세트에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성에 대한 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 참조할 수 있습니다 `Field` 아래에 설명 된 구문을 사용 하 여 모든 식에서 속성 값입니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
   
  식에서 미리 정의된 확장 속성을 참조하려면 다음 구문 중 하나를 사용합니다.  
   
@@ -123,7 +123,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 집합을 사용하는 방법을 단계별로 설명합니다.  
+ 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -143,10 +143,10 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
+ 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
+ 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
  [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  

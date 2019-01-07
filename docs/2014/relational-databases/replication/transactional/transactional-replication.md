@@ -62,7 +62,7 @@ ms.locfileid: "48112983"
  ![트랜잭션 복제 구성 요소 및 데이터 흐름](../media/trnsact.gif "Transactional replication components and data flow")  
   
 ##  <a name="Dataset"></a> 초기 데이터 집합  
- 새 트랜잭션 복제 구독자가 게시자에서 증분 변경 내용을 받으려면 구독자의 테이블에 게시자의 테이블과 같은 스키마 및 데이터가 포함되어야 합니다. 초기 데이터 집합은 일반적으로 스냅숏 에이전트에서 만들고 배포 에이전트에서 배포 및 적용한 스냅숏입니다. 초기 데이터 집합은 백업이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services와 같은 다른 방법으로 지정할 수도 있습니다.  
+ 새 트랜잭션 복제 구독자가 게시자에서 증분 변경 내용을 받으려면 구독자의 테이블에 게시자의 테이블과 같은 스키마 및 데이터가 포함되어야 합니다. 초기 데이터 세트는 일반적으로 스냅숏 에이전트에서 만들고 배포 에이전트에서 배포 및 적용한 스냅숏입니다. 초기 데이터 세트는 백업이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services와 같은 다른 방법으로 지정할 수도 있습니다.  
   
  스냅숏을 구독자에게 배포 및 적용한 경우 초기 스냅숏을 기다리는 구독자만 영향을 받습니다. 해당 게시에 대한 다른 구독자(이미 초기화된 구독자)는 영향을 받지 않습니다.  
   

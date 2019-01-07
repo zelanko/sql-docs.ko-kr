@@ -22,7 +22,7 @@ ms.locfileid: "52514397"
 
 Microsoft SQL Server 2017 Reporting Services는 REST(Representational State Transfer) API를 지원합니다. REST API는 HTTP 작업(메서드)의 집합을 지원하는 서비스 엔드포인트로, 보고서 서버 내에서 리소스에 대한 액세스의 생성, 검색, 업데이트 또는 삭제를 제공합니다.
 
-REST API는 SQL Server 2017 Reporting Services 보고서 서버 카탈로그에 있는 개체에 대한 프로그래밍 방식 액세스를 제공합니다. 개체의 예로는 폴더, 보고서, KPI, 데이터 원본, 데이터 집합, 새로 고침 계획, 구독 등이 있습니다. REST API를 사용하면 폴더 계층 탐색, 폴더의 내용 검색 또는 보고서 정의 다운로드와 같은 작업을 수행할 수 있습니다. 또한 개체를 만들고, 업데이트하고 삭제할 수 있습니다. 개체를 사용한 작업의 예에는 보고서 업로드, 새로 고침 계획 실행, 폴더 삭제 등이 있습니다.
+REST API는 SQL Server 2017 Reporting Services 보고서 서버 카탈로그에 있는 개체에 대한 프로그래밍 방식 액세스를 제공합니다. 개체의 예로는 폴더, 보고서, KPI, 데이터 원본, 데이터 세트, 새로 고침 계획, 구독 등이 있습니다. REST API를 사용하면 폴더 계층 탐색, 폴더의 내용 검색 또는 보고서 정의 다운로드와 같은 작업을 수행할 수 있습니다. 또한 개체를 만들고, 업데이트하고 삭제할 수 있습니다. 개체를 사용한 작업의 예에는 보고서 업로드, 새로 고침 계획 실행, 폴더 삭제 등이 있습니다.
 
 [!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 

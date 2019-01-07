@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6bc556d6da6461fbd159cd09102d5b9c82bc2dc7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48210258"
@@ -30,7 +30,7 @@ ms.locfileid: "48210258"
 -   **드릴스루 보고서 링크** 동일한 보고서 서버의 다른 보고서로 이동합니다. 자세한 내용은 [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
->  데이터 집합 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
+>  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
   
  정렬, 필터 및 표시 유형에 대한 매개 변수 참조를 포함하는 식을 디자인하면 사용자가 보고서 표시 및 콘텐츠를 제어하는 것이 가능합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md), [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
   

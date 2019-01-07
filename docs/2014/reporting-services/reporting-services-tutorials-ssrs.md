@@ -15,7 +15,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48104593"
@@ -27,7 +27,7 @@ ms.locfileid: "48104593"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 데이터 기반 구독을 제공하므로 보고서를 수신하는 구독자의 동적 목록을 기반으로 보고서 배포를 사용자 지정할 수 있습니다. 데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만들려면 쿼리 작성에 대한 전문 지식, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
  [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
- 이 자습서의 단계를 따라 첫 번째 보고서를 만드는 방법을 배울 수 있습니다. 이 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 로 작업하여 데이터 연결(데이터 원본)을 만들고 단순 쿼리(데이터 집합)를 정의하며 데이터를 포함할 데이터 영역을 구성하는 방법을 보여 줍니다.  
+ 이 자습서의 단계를 따라 첫 번째 보고서를 만드는 방법을 배울 수 있습니다. 이 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]로 작업하여 데이터 연결(데이터 원본)을 만들고 단순 쿼리(데이터 세트)를 정의하며 데이터를 포함할 데이터 영역을 구성하는 방법을 보여 줍니다.  
   
  [Visual Basic 또는 Visual C를 사용 하 여 보고서 서버 웹 서비스에 액세스&#35; &#40;SSRS 자습서&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
  에 액세스 하는 방법을 알아보려면이 자습서의 단계를 수행 합니다 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 웹 서비스를 사용 하 여 만든 응용 프로그램에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]합니다.  

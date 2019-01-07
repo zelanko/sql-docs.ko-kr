@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48123493"
@@ -23,7 +23,7 @@ ms.locfileid: "48123493"
   
  보고서에 차트 데이터 영역을 추가하는 가장 간단한 방법은 새 차트 마법사를 실행하는 것입니다. 이 마법사는 세로 막대형 차트, 선형 차트, 원형 차트, 가로 막대형 차트 및 영역형 차트를 제공합니다. 또한 차트를 직접 추가할 수도 있습니다.  
   
- 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 집합 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 차트를 클릭하여 차트 데이터 창을 표시합니다. 이 창에는 계열 그룹, 범주 그룹 및 값의 세 영역이 있습니다.  
+ 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 세트 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 차트를 클릭하여 차트 데이터 창을 표시합니다. 이 창에는 계열 그룹, 범주 그룹 및 값의 세 영역이 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,7 +43,7 @@ ms.locfileid: "48123493"
   
 ### <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 집합을 정의합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
+1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   

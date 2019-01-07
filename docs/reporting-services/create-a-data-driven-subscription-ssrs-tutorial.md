@@ -33,7 +33,7 @@ ms.locfileid: "52712524"
  단원 | 주석
  ------- | --------------
  [1단원: 샘플 구독자 데이터베이스 만들기](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 이 단원에서는 필터링 및 출력 파일 형식에 사용할 주문 번호 정보 등의 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블을 만듭니다.
-[2단원: 보고서 데이터 원본 속성 구성](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |이 단원에서는 보고서가 일정에 따라 무인 모드로 실행되도록 보고서 데이터 원본을 구성합니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 집합을 수정합니다. 이 매개 변수는 주문 번호에 따라 보고서 데이터를 필터링하는 데 사용됩니다.
+[2단원: 보고서 데이터 원본 속성 구성](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |이 단원에서는 보고서가 일정에 따라 무인 모드로 실행되도록 보고서 데이터 원본을 구성합니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 세트를 수정합니다. 이 매개 변수는 주문 번호에 따라 보고서 데이터를 필터링하는 데 사용됩니다.
  [3단원: 데이터 기반 구독 정의](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 이 단원에서는 데이터 기반 구독을 만듭니다. 데이터 기반 구독 마법사의 각 페이지를 안내합니다.
 
  다음 다이어그램은 자습서의 기본 워크플로를 보여 줍니다.

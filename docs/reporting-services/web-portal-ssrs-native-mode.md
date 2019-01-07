@@ -88,7 +88,7 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 - 페이지를 매긴 보고서
 - Power BI Desktop 보고서
 - Excel 통합 문서
-- 데이터 집합
+- 데이터 세트
 - 솔루션 탐색기
 - 리소스
 
@@ -108,7 +108,7 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 
 ## <a name="search-for-items"></a>항목 검색
 
-검색어를 입력하면 액세스할 수 있는 모든 항목이 표시됩니다. 결과는 KPI, 보고서, 데이터 집합, 기타 항목으로 분류됩니다. 그런 다음 결과와 상호 작용하여 즐겨찾기에 추가할 수 있습니다.
+검색어를 입력하면 액세스할 수 있는 모든 항목이 표시됩니다. 결과는 KPI, 보고서, 데이터 세트 및 기타 항목으로 분류됩니다. 그런 다음 결과와 상호 작용하여 즐겨찾기에 추가할 수 있습니다.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

@@ -1,5 +1,5 @@
 ---
-title: 집계 변환을 사용하여 데이터 집합의 값 집계 | Microsoft Docs
+title: 집계 변환을 사용하여 데이터 세트의 값 집계 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47598973"
 ---
-# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 집합의 값 집계
+# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 세트의 값 집계
   집계 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
-### <a name="to-aggregate-values-in-a-dataset"></a>데이터 집합의 값을 집계하려면  
+### <a name="to-aggregate-values-in-a-dataset"></a>데이터 세트의 값을 집계하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   

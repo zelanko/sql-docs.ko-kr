@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48180863"
@@ -45,7 +45,7 @@ RunningValue(expression, function, scope)
  반환 형식은 *function* 매개 변수에 지정된 집계 함수에 의해 결정됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 값 `RunningValue` 범위의 각 새로운 인스턴스에 대해 0으로 다시 설정 합니다. 그룹이 지정되어 있는 경우 그룹 식이 변경되면 실행 값이 다시 설정됩니다. 데이터 영역이 지정되어 있는 경우 데이터 영역의 새 인스턴스 각각에 대해 실행 값이 다시 설정됩니다. 데이터 집합이 지정되어 있으면 전체 데이터 집합에서 실행 값이 다시 설정되지 않습니다.  
+ 에 대 한 값 `RunningValue` 범위의 각 새로운 인스턴스에 대해 0으로 다시 설정 합니다. 그룹이 지정되어 있는 경우 그룹 식이 변경되면 실행 값이 다시 설정됩니다. 데이터 영역이 지정되어 있는 경우 데이터 영역의 새 인스턴스 각각에 대해 실행 값이 다시 설정됩니다. 데이터 세트가 지정되어 있으면 전체 데이터 세트에서 실행 값이 다시 설정되지 않습니다.  
   
  `RunningValue`는 필터 또는 정렬 식에 사용할 수 없습니다.  
   
@@ -57,7 +57,7 @@ RunningValue(expression, function, scope)
   
 -   중첩 집계의 범위는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의 범위는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 범위는 데이터 세트의 이름일 수 없습니다.  
   
 -   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
@@ -70,13 +70,13 @@ RunningValue(expression, function, scope)
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 코드 예에서는 가장 바깥쪽 범위인 데이터 집합에서 `Cost` 라는 필드의 실행 합계를 제공합니다.  
+ 다음 코드 예에서는 가장 바깥쪽 범위인 데이터 세트에서 `Cost`라는 필드의 실행 합계를 제공합니다.  
   
 ```  
 =RunningValue(Fields!Cost.Value, Sum, Nothing)  
 ```  
   
- 다음 코드 예에서는 `Score` 데이터 집합에서 `DataSet1`라는 필드의 실행 합계를 제공합니다.  
+ 다음 코드 예에서는 `Score` 데이터 세트에서 `DataSet1`라는 필드의 실행 합계를 제공합니다.  
   
 ```  
 =RunningValue(Fields!Score.Value,sum,"DataSet1")  

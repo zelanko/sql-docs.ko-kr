@@ -13,7 +13,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e5a00f42527f081c2240e4f427bd9e690c67bf5a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48073453"
@@ -48,7 +48,7 @@ ms.locfileid: "48073453"
 |보고서|사용자 계정 컨트롤|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
 |데이터 원본|사용자 계정 컨트롤|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
 |모델|사용자 계정 컨트롤||  
-|데이터 집합|사용자 계정 컨트롤||  
+|데이터 세트|사용자 계정 컨트롤||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
 |일정|사용자 계정 컨트롤|ListSchedules 메서드 참조 [구독 및 배달 메서드](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |구독|예|List Subscriptions 메서드를 참조 하세요 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) 와 ChangeSubscriptionOwner 메서드 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  

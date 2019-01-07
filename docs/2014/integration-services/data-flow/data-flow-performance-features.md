@@ -26,7 +26,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48049513"
@@ -95,7 +95,7 @@ ms.locfileid: "48049513"
  데이터 흐름 구성 요소와 상관없이 성능 향상을 위해서는 쿼리를 최적화하고 불필요한 정렬을 사용하지 않는다는 두 가지 일반적인 지침을 따라야 합니다.  
   
 #### <a name="optimize-queries"></a>쿼리 최적화  
- 많은 데이터 흐름 구성 요소가 원본에서 데이터를 추출할 때나 참조 테이블을 만들기 위해 조회 작업에서 쿼리를 사용합니다. 기본 쿼리는 SELECT * FROM \<tableName> 구문을 사용합니다. 이 유형의 쿼리는 원본 테이블의 모든 열을 반환합니다. 디자인 타임에 모든 열을 사용할 수 있도록 만들면 모든 열을 조회, 통과 또는 원본 열로 선택할 수 있습니다. 그러나 사용할 열을 선택한 후에는 선택한 열만 포함되도록 쿼리를 수정해야 합니다. 열 수가 적을수록 더 작은 행이 만들어지므로 여분의 열을 제거하면 패키지의 데이터 흐름이 보다 효율적으로 개선됩니다. 행이 작을수록 하나의 버퍼에 더 많은 행을 넣을 수 있으며 데이터 집합의 모든 행을 보다 적은 작업으로 처리할 수 있습니다.  
+ 많은 데이터 흐름 구성 요소가 원본에서 데이터를 추출할 때나 참조 테이블을 만들기 위해 조회 작업에서 쿼리를 사용합니다. 기본 쿼리는 SELECT * FROM \<tableName> 구문을 사용합니다. 이 유형의 쿼리는 원본 테이블의 모든 열을 반환합니다. 디자인 타임에 모든 열을 사용할 수 있도록 만들면 모든 열을 조회, 통과 또는 원본 열로 선택할 수 있습니다. 그러나 사용할 열을 선택한 후에는 선택한 열만 포함되도록 쿼리를 수정해야 합니다. 열 수가 적을수록 더 작은 행이 만들어지므로 여분의 열을 제거하면 패키지의 데이터 흐름이 보다 효율적으로 개선됩니다. 행이 작을수록 하나의 버퍼에 더 많은 행을 넣을 수 있으며 데이터 세트의 모든 행을 보다 적은 작업으로 처리할 수 있습니다.  
   
  쿼리를 생성하려면 쿼리를 직접 입력하거나 쿼리 작성기를 사용합니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48049513"
   
  자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
   
- 데이터 흐름에서 데이터를 정렬해야 하는 경우 정렬 연산을 가능한 한 적게 사용하도록 데이터 흐름을 디자인하여 성능을 향상시킬 수 있습니다. 예를 들어 데이터 흐름에서 멀티캐스트 변환을 사용하여 데이터 집합을 복사합니다. 변환 후 여러 출력을 정렬하는 대신 멀티캐스트 변환을 실행하기 전에 데이터 집합을 한 번 정렬합니다.  
+ 데이터 흐름에서 데이터를 정렬해야 하는 경우 정렬 연산을 가능한 한 적게 사용하도록 데이터 흐름을 디자인하여 성능을 향상시킬 수 있습니다. 예를 들어 데이터 흐름에서 멀티캐스트 변환을 사용하여 데이터 세트를 복사합니다. 변환 후 여러 출력을 정렬하는 대신 멀티캐스트 변환을 실행하기 전에 데이터 세트를 한 번 정렬합니다.  
   
  자세한 내용은 [Sort Transformation](transformations/sort-transformation.md), [Merge Transformation](transformations/merge-transformation.md), [Merge Join Transformation](transformations/merge-join-transformation.md)및 [Multicast Transformation](transformations/multicast-transformation.md)를 참조하세요.  
   

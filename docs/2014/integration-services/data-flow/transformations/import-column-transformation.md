@@ -20,7 +20,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 81cb335d5054bac76f9bfa43b54a522dc5c593c4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48217603"
@@ -37,7 +37,7 @@ ms.locfileid: "48217603"
     > [!NOTE]  
     >  BOM은 데이터가 DT_NTEXT 데이터 형식인 경우에만 필요합니다.  
   
- 변환 입력의 열에는 데이터가 저장된 파일 이름이 포함됩니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 열 가져오기 변환은 행을 처리할 때 파일 이름을 읽고 파일 시스템에서 해당 파일을 연 다음 파일 내용을 출력 열에 로드합니다. 출력 열의 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
+ 변환 입력의 열에는 데이터가 저장된 파일 이름이 포함됩니다. 데이터 세트의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 열 가져오기 변환은 행을 처리할 때 파일 이름을 읽고 파일 시스템에서 해당 파일을 연 다음 파일 내용을 출력 열에 로드합니다. 출력 열의 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
   
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   

@@ -31,9 +31,9 @@ ms.locfileid: "51813106"
   
     SharePoint 통합 모드의 보고서 서버에서 **문서** 탭의 **새 문서**를 선택하고 드롭다운 목록에서 **보고서 작성기 보고서**를 선택합니다. `https://<servername>/sites/mySite/reports`)을 입력합니다. SharePoint 관리자는 각 문서 라이브러리에서 보고서 작성기 보고서를 사용할 수 있도록 설정해야 합니다.  
   
--   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트 또는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버의 URL. 보고서, 공유 데이터 원본, 공유 데이터 집합, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버의 URL은 `https://<servername>/reportserver`이고, SharePoint 사이트의 URL은 `https://<sitename>` 또는 `https://<server>/site`입니다.  
+-   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버와 통합된 SharePoint 사이트 또는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 서버의 URL. 보고서, 공유 데이터 원본, 공유 데이터 세트, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버의 URL은 `https://<servername>/reportserver`이고, SharePoint 사이트의 URL은 `https://<sitename>` 또는 `https://<server>/site`입니다.  
   
--   SQL Server 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 집합에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 SQL Server 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
+-   SQL Server 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 SQL Server 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   
 -   [자습서: 지도 보고서(보고서 작성기)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요.   
 

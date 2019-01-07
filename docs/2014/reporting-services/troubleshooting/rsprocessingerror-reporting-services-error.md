@@ -15,7 +15,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48207323"
@@ -110,11 +110,11 @@ ms.locfileid: "48207323"
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>집계 함수 호출에 잘못된 또는 충돌하는 범위 사양이 있음  
  테이블릭스 셀에 식에 대한 집계 함수 호출을 포함하면 보고서 프로세서는 셀이 속한 가장 안쪽 그룹의 범위에서 식을 계산합니다.  
   
- 집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 집합의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
+ 집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 세트의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
 -   *\<report item type>* '*\<report item name>*'에 잘못된 범위 "*\<scope name>*"이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
--   *\<report item type>* '*\<report item name>*'에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 집합의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
+-   *\<report item type>* '*\<report item name>*'에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(`Previous`, `RunningValue` 또는 `RowNumber`) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "48207323"
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
-### <a name="default-dataset-scope-for-a-top-level-text-box"></a>최상위 입력란에 대한 기본 데이터 집합 범위  
- 보고서에 데이터 집합이 두 개 이상인 경우 보고서 디자인 화면에 추가된 입력란에 기본 범위를 사용하지 마세요. 범위로 데이터 집합의 이름을 포함하는 식과 집계 함수를 사용하세요. `=First(Fields!FieldName.Value, "DataSet2")`)을 입력합니다.  
+### <a name="default-dataset-scope-for-a-top-level-text-box"></a>최상위 입력란에 대한 기본 데이터 세트 범위  
+ 보고서에 데이터 세트가 두 개 이상인 경우 보고서 디자인 화면에 추가된 입력란에 기본 범위를 사용하지 마세요. 범위로 데이터 세트의 이름을 포함하는 식과 집계 함수를 사용하세요. `=First(Fields!FieldName.Value, "DataSet2")`)을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   

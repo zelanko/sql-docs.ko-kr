@@ -13,13 +13,13 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48116353"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
-  Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합을 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  
+  Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트를 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48116353"
  자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)를 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md), 및 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
   
 ##  <a name="Query"></a> 쿼리  
- 쿼리를 디자인하려면 데이터 원본을 기준으로 새 데이터 집합을 만든 다음 연결된 쿼리 디자이너를 엽니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 쿼리를 디자인하려면 데이터 원본을 기준으로 새 데이터 세트를 만든 다음, 연결된 쿼리 디자이너를 엽니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
  SharePoint 목록 그래픽 쿼리 디자이너에는 4개의 창이 표시됩니다.  
   
@@ -90,21 +90,21 @@ ms.locfileid: "48116353"
   
 -   **숨김** 필드가 SharePoint 목록 보기에 표시되는지 여부입니다.  
   
- 여러 목록에서 필드를 선택할 수는 없습니다. 각 목록에 대해 데이터 집합을 만들고 각 데이터 집합에서 필드를 선택할 수 있습니다. 목록에 공용 필드가 있는 경우, 한 데이터 집합에 바인딩된 테이블릭스 데이터 영역에서 Lookup 함수를 사용하여 데이터 영역에 바인딩되지 않는 다른 데이터 집합의 값을 검색할 수 있습니다. 자세한 내용은 [조회 함수&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-builder-functions-lookup-function.md)를 참조하세요.  
+ 여러 목록에서 필드를 선택할 수는 없습니다. 각 목록에 대해 데이터 세트를 만들고 각 데이터 세트에서 필드를 선택할 수 있습니다. 목록에 공용 필드가 있는 경우, 한 데이터 세트에 바인딩된 테이블릭스 데이터 영역에서 Lookup 함수를 사용하여 데이터 영역에 바인딩되지 않는 다른 데이터 세트의 값을 검색할 수 있습니다. 자세한 내용은 [조회 함수&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-builder-functions-lookup-function.md)를 참조하세요.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../dataset-properties-dialog-box-fields-report-builder.md) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../dataset-properties-dialog-box-fields-report-builder.md) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
-     그래픽 쿼리 디자이너에서는 정렬 순서를 변경하거나 그룹을 지정할 수 없습니다. 이렇게 하려면 보고서 데이터 집합에 대해 정렬 식을 설정하고 보고서의 데이터 영역에서 식을 그룹화합니다. 쿼리 매개 변수는 지원되지 않습니다. 보고서의 데이터를 필터링하려면 보고서 필터 또는 보고서 매개 변수를 만들어서 사용하십시오. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
+     그래픽 쿼리 디자이너에서는 정렬 순서를 변경하거나 그룹을 지정할 수 없습니다. 이렇게 하려면 보고서 데이터 세트에 대해 정렬 식을 설정하고 보고서의 데이터 영역에서 식을 그룹화합니다. 쿼리 매개 변수는 지원되지 않습니다. 보고서의 데이터를 필터링하려면 보고서 필터 또는 보고서 매개 변수를 만들어서 사용하십시오. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
 -   **쿼리 결과**  쿼리 실행 시 반환되는 예제 행을 표시합니다. SharePoint 사이트에서 SharePoint 목록 값이 자주 변경되는 경우 쿼리 결과 창에 표시되는 값과 보고서에 표시되는 값이 다를 수 있습니다.  
   
--   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 집합 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../dataset-properties-dialog-box-fields-report-builder.md) 페이지에 나와 있습니다.  
+-   **선택한 필드**  선택한 필드를 표시합니다. 이 창의 필드 이름은 SharePoint 사용자가 지정한 이름입니다. 쿼리 디자이너를 닫으면 이 이름이 보고서 데이터 창의 데이터 세트 필드 모음에 표시됩니다. 고유 이름과 이름 간의 관계는 [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../dataset-properties-dialog-box-fields-report-builder.md) 페이지에 나와 있습니다.  
   
 -   **적용된 필터**  SharePoint 목록에서 반환되는 데이터를 보고서로 반환하기 전에 제한합니다. 사용할 필드 이름, 연산자 및 값을 선택하여 목록에서 검색되는 데이터를 제한합니다. 연산자는 선택한 값의 데이터 형식에 따라 달라집니다.  
   
-     그래픽 쿼리 디자이너에서는 정렬 순서를 변경하거나 그룹을 지정할 수 없습니다. 이렇게 하려면 보고서 데이터 집합에 대해 정렬 식을 설정하고 보고서의 데이터 영역에서 식을 그룹화합니다. 쿼리 매개 변수는 지원되지 않습니다. 보고서의 데이터를 필터링하려면 보고서 필터 또는 보고서 매개 변수를 만들어서 사용하십시오. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
+     그래픽 쿼리 디자이너에서는 정렬 순서를 변경하거나 그룹을 지정할 수 없습니다. 이렇게 하려면 보고서 데이터 세트에 대해 정렬 식을 설정하고 보고서의 데이터 영역에서 식을 그룹화합니다. 쿼리 매개 변수는 지원되지 않습니다. 보고서의 데이터를 필터링하려면 보고서 필터 또는 보고서 매개 변수를 만들어서 사용하십시오. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
 -   **쿼리 결과**  쿼리 실행 시 반환되는 예제 행을 표시합니다. SharePoint 사이트에서 SharePoint 목록 값이 자주 변경되는 경우 쿼리 결과 창에 표시되는 값과 보고서에 표시되는 값이 다를 수 있습니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48116353"
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 집합을 사용하는 방법을 단계별로 설명합니다.  
+ 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -177,10 +177,10 @@ ms.locfileid: "48116353"
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
+ 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
+ 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  

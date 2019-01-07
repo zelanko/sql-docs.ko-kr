@@ -1,121 +1,122 @@
+items:
 - name: 보고서에 데이터 추가
   href: report-datasets-ssrs.md
   items:
-    - name: 보고서 작성기의 보고서 파트 및 데이터 집합
-      href: report-parts-and-datasets-in-report-builder.md
-    - name: '보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열'
-      href: ../data-connections-data-sources-and-connection-strings-in-report-builder.md
-      items:
-        - name: 보고서 작성기에 자격 증명 지정
-          href: ../specify-credentials-in-report-builder.md
-    - name: 보고서 포함된 데이터 집합 및 공유 데이터 집합
-      href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
-      items:
-        - name: 데이터 집합 필드 컬렉션
-          href: dataset-fields-collection-report-builder-and-ssrs.md
-        - name: 공유 데이터 집합 또는 포함된 데이터 집합 만들기
-          href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
-        - name: '보고서 데이터 창에서 필드 추가, 편집, 새로 고침'
-          href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
-        - name: 관계형 쿼리 디자이너에서 쿼리 작성
-          href: build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
-        - name: 보고서 매개 변수와 쿼리 매개 변수 연결
-          href: associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
-        - name: Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
-          href: define-parameters-in-the-mdx-query-designer-for-analysis-services.md
-        - name: 데이터 집합에 필터 추가
-          href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
-        - name: 데이터 영역에 대한 데이터 없음 메시지 설정
-          href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
-        - name: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시
-          href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
-    - name: 공유 데이터 집합 관리
-      href: manage-shared-datasets.md
-    - name: 데이터 연결이나 데이터 원본 추가 및 확인
-      href: add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: 포함된 데이터 원본에서 공유 데이터 원본으로 변환
-      href: convert-data-sources-report-builder-and-ssrs.md
+  - name: 보고서 작성기의 보고서 파트 및 데이터 세트
+    href: report-parts-and-datasets-in-report-builder.md
+  - name: 보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열
+    href: ../data-connections-data-sources-and-connection-strings-in-report-builder.md
+    items:
+    - name: 보고서 작성기에 자격 증명 지정
+      href: ../specify-credentials-in-report-builder.md
+  - name: 보고서 포함된 데이터 세트 및 공유 데이터 세트
+    href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+    items:
+    - name: 데이터 세트 필드 컬렉션
+      href: dataset-fields-collection-report-builder-and-ssrs.md
+    - name: 공유 데이터 세트 또는 포함된 데이터 세트 만들기
+      href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+    - name: 보고서 데이터 창에서 필드 추가, 편집, 새로 고침
+      href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+    - name: 관계형 쿼리 디자이너에서 쿼리 작성
+      href: build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+    - name: 보고서 매개 변수와 쿼리 매개 변수 연결
+      href: associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+    - name: Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
+      href: define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+    - name: 데이터 세트에 필터 추가
+      href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+    - name: 데이터 영역에 대한 데이터 없음 메시지 설정
+      href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+    - name: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시
+      href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
+  - name: 공유 데이터 세트 관리
+    href: manage-shared-datasets.md
+  - name: 데이터 연결이나 데이터 원본 추가 및 확인
+    href: add-and-verify-a-data-connection-report-builder-and-ssrs.md
+  - name: 포함된 데이터 원본에서 공유 데이터 원본으로 변환
+    href: convert-data-sources-report-builder-and-ssrs.md
 - name: 보고서 데이터
   href: report-data-ssrs.md
-- name: 'Data Connections, Data Sources, and Connection Strings in Reporting Services'
+- name: Data Connections, Data Sources, and Connection Strings in Reporting Services
   href: ../data-connections-data-sources-and-connection-strings-in-reporting-services.md
   items:
-    - name: Reporting Services에서 지원하는 데이터 원본
-      href: data-sources-supported-by-reporting-services-ssrs.md
-    - name: Reporting Services 데이터 원본에 자격 증명 저장
-      href: store-credentials-in-a-reporting-services-data-source.md
-    - name: '공유 데이터 원본 만들기, 수정 및 삭제'
-      href: create-modify-and-delete-shared-data-sources-ssrs.md
-    - name: 외부 데이터 원본의 데이터 추가
-      href: add-data-from-external-data-sources-ssrs.md
+  - name: Reporting Services에서 지원하는 데이터 원본
+    href: data-sources-supported-by-reporting-services-ssrs.md
+  - name: Reporting Services 데이터 원본에 자격 증명 저장
+    href: store-credentials-in-a-reporting-services-data-source.md
+  - name: 공유 데이터 원본 만들기, 수정 및 삭제
+    href: create-modify-and-delete-shared-data-sources-ssrs.md
+  - name: 외부 데이터 원본의 데이터 추가
+    href: add-data-from-external-data-sources-ssrs.md
+    items:
+    - name: SQL Server 연결 형식
+      href: sql-server-connection-type-ssrs.md
+    - name: MDX용 Analysis Services 연결 형식
+      href: analysis-services-connection-type-for-mdx-ssrs.md
       items:
-        - name: SQL Server 연결 형식
-          href: sql-server-connection-type-ssrs.md
-        - name: MDX용 Analysis Services 연결 형식
-          href: analysis-services-connection-type-for-mdx-ssrs.md
-          items:
-            - name: Analysis Services 데이터베이스에 대한 확장 필드 속성
-              href: extended-field-properties-for-an-analysis-services-database-ssrs.md
-        - name: PowerPivot 연결 유형
-          href: power-pivot-connection-type-ssrs.md
-        - name: SharePoint 목록 연결 형식
-          href: sharepoint-list-connection-type-ssrs.md
-        - name: SQL Azure 연결 형식
-          href: sql-azure-connection-type-ssrs.md
-        - name: OLE DB 연결 형식
-          href: ole-db-connection-type-ssrs.md
-        - name: SQL Server 병렬 데이터 웨어하우스 연결 형식
-          href: sql-server-parallel-data-warehouse-connection-type-ssrs.md
-        - name: Teradata 연결 형식
-          href: teradata-connection-type-ssrs.md
-        - name: Oracle 연결 형식
-          href: oracle-connection-type-ssrs.md
-        - name: SAP NetWeaver BI 연결 형식
-          href: sap-netweaver-bi-connection-type-ssrs.md
-        - name: Hyperion Essbase 연결 형식
-          href: hyperion-essbase-connection-type-ssrs.md
-        - name: ODBC 연결 형식
-          href: odbc-connection-type-ssrs.md
-        - name: XML 연결 형식
-          href: xml-connection-type-ssrs.md
-          items:
-            - name: XML 보고서 데이터를 위한 XML 쿼리 구문
-              href: xml-query-syntax-for-xml-report-data-ssrs.md
-            - name: XML 보고서 데이터를 위한 요소 경로 구문
-              href: element-path-syntax-for-xml-report-data-ssrs.md
-        - name: 보고서 모델 연결
-          href: report-model-connection-ssrs.md
-        - name: DMX용 Analysis Services 연결 형식
-          href: analysis-services-connection-type-for-dmx-ssrs.md
-          items:
-            - name: 데이터 마이닝 모델에서 데이터 검색(DMX)
-              href: retrieve-data-from-a-data-mining-model-dmx-ssrs.md
-        - name: 데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자
-          href: data-processing-extensions-and-net-framework-data-providers-ssrs.md
-          items:
-            - name: 표준 .NET Framework 데이터 공급자 등록
-              href: register-a-standard-net-framework-data-provider-ssrs.md
+      - name: Analysis Services 데이터베이스에 대한 확장 필드 속성
+        href: extended-field-properties-for-an-analysis-services-database-ssrs.md
+    - name: PowerPivot 연결 유형
+      href: power-pivot-connection-type-ssrs.md
+    - name: SharePoint 목록 연결 형식
+      href: sharepoint-list-connection-type-ssrs.md
+    - name: SQL Azure 연결 형식
+      href: sql-azure-connection-type-ssrs.md
+    - name: OLE DB 연결 형식
+      href: ole-db-connection-type-ssrs.md
+    - name: SQL Server 병렬 데이터 웨어하우스 연결 형식
+      href: sql-server-parallel-data-warehouse-connection-type-ssrs.md
+    - name: Teradata 연결 형식
+      href: teradata-connection-type-ssrs.md
+    - name: Oracle 연결 형식
+      href: oracle-connection-type-ssrs.md
+    - name: SAP NetWeaver BI 연결 형식
+      href: sap-netweaver-bi-connection-type-ssrs.md
+    - name: Hyperion Essbase 연결 형식
+      href: hyperion-essbase-connection-type-ssrs.md
+    - name: ODBC 연결 형식
+      href: odbc-connection-type-ssrs.md
+    - name: XML 연결 형식
+      href: xml-connection-type-ssrs.md
+      items:
+      - name: XML 보고서 데이터를 위한 XML 쿼리 구문
+        href: xml-query-syntax-for-xml-report-data-ssrs.md
+      - name: XML 보고서 데이터를 위한 요소 경로 구문
+        href: element-path-syntax-for-xml-report-data-ssrs.md
+    - name: 보고서 모델 연결
+      href: report-model-connection-ssrs.md
+    - name: DMX용 Analysis Services 연결 형식
+      href: analysis-services-connection-type-for-dmx-ssrs.md
+      items:
+      - name: 데이터 마이닝 모델에서 데이터 검색(DMX)
+        href: retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+    - name: 데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자
+      href: data-processing-extensions-and-net-framework-data-providers-ssrs.md
+      items:
+      - name: 표준 .NET Framework 데이터 공급자 등록
+        href: register-a-standard-net-framework-data-provider-ssrs.md
 - name: Reporting Services 쿼리 디자이너
   href: ../reporting-services-query-designers.md
   items:
-    - name: Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
-      href: analysis-services-dmx-query-designer-user-interface.md
-    - name: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
-      href: analysis-services-mdx-query-designer-user-interface.md
-    - name: 그래픽 쿼리 디자이너 사용자 인터페이스
-      href: graphical-query-designer-user-interface.md
-    - name: 관계형 쿼리 디자이너 사용자 인터페이스
-      href: ../relational-query-designer-user-interface.md
-    - name: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
-      href: hyperion-essbase-query-designer-user-interface.md
-    - name: 보고서 모델 쿼리 디자이너 사용자 인터페이스
-      href: report-model-query-designer-user-interface.md
-    - name: SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
-      href: sap-netweaver-bi-query-designer-user-interface.md
-    - name: SharePoint 목록 쿼리 디자이너
-      href: ../sharepoint-list-query-designer.md
-    - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
-      href: ../text-based-query-designer-user-interface.md
+  - name: Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
+    href: analysis-services-dmx-query-designer-user-interface.md
+  - name: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
+    href: analysis-services-mdx-query-designer-user-interface.md
+  - name: 그래픽 쿼리 디자이너 사용자 인터페이스
+    href: graphical-query-designer-user-interface.md
+  - name: 관계형 쿼리 디자이너 사용자 인터페이스
+    href: ../relational-query-designer-user-interface.md
+  - name: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
+    href: hyperion-essbase-query-designer-user-interface.md
+  - name: 보고서 모델 쿼리 디자이너 사용자 인터페이스
+    href: report-model-query-designer-user-interface.md
+  - name: SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
+    href: sap-netweaver-bi-query-designer-user-interface.md
+  - name: SharePoint 목록 쿼리 디자이너
+    href: ../sharepoint-list-query-designer.md
+  - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
+    href: ../text-based-query-designer-user-interface.md
 - name: 보고서 데이터 원본 관리
   href: manage-report-data-sources.md
 - name: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
@@ -130,7 +131,7 @@
   href: ../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md
 - name: 보고서의 데이터 원본 속성 구성
   href: configure-data-source-properties-for-a-report-report-manager.md
-- name: '공유 데이터 원본 만들기, 삭제 및 수정'
+- name: 공유 데이터 원본 만들기, 삭제 및 수정
   href: ../create-delete-or-modify-a-shared-data-source-report-manager.md
 - name: SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   href: update-credentials-in-report-data-sources-from-a-sharepoint-site.md
@@ -139,29 +140,35 @@
 - name: 보고서 데이터 F1 도움말
   href: ../report-data-f1-help.md
   items:
-    - name: 큐브 선택 대화 상자
-      href: ../cube-selection-dialog-box.md
-    - name: '데이터 원본 속성 대화 상자, 자격 증명'
-      href: ../data-source-properties-dialog-box-credentials.md
-    - name: '데이터 원본 속성 대화 상자, 일반'
-      href: ../data-source-properties-dialog-box-general.md
-    - name: '데이터 집합 속성 대화 상자, 필드'
-      href: ../dataset-properties-dialog-box-fields.md
-    - name: '데이터 집합 속성 대화 상자, 필터'
-      href: ../report-data/dataset-properties-dialog-box-filters.md
-    - name: '데이터 집합 속성 대화 상자, 옵션'
-      href: ../dataset-properties-dialog-box-options.md
-    - name: '데이터 집합 속성 대화 상자, 매개 변수'
-      href: ../report-data/dataset-properties-dialog-box-parameters.md
-    - name: '데이터 집합 속성 대화 상자, 쿼리'
-      href: ../dataset-properties-dialog-box-query.md
-    - name: 쿼리 매개 변수 정의 대화 상자
-      href: define-query-parameters-dialog-box.md
-    - name: 데이터 원본 자격 증명 입력 대화 상자
-      href: ../enter-data-source-credentials-dialog-box.md
-    - name: '공유 데이터 원본 속성 대화 상자, 자격 증명'
-      href: ../shared-data-source-properties-dialog-box-credentials.md
-    - name: '공유 데이터 원본 속성 대화 상자, 일반'
-      href: ../shared-data-source-properties-dialog-box-general.md
-    - name: 보고서 데이터 창
-      href: report-data-pane.md
+  - name: 큐브 선택 대화 상자
+    href: ../cube-selection-dialog-box.md
+  - name: 데이터 원본 속성 대화 상자, 자격 증명
+    href: ../data-source-properties-dialog-box-credentials.md
+  - name: 데이터 원본 속성 대화 상자, 일반
+    href: ../data-source-properties-dialog-box-general.md
+  - name: 데이터 세트 속성 대화 상자, 필드
+    href: ../dataset-properties-dialog-box-fields.md
+  - name: 데이터 세트 속성 대화 상자, 필터
+    href: ../report-data/dataset-properties-dialog-box-filters.md
+  - name: 데이터 세트 속성 대화 상자, 옵션
+    href: ../dataset-properties-dialog-box-options.md
+  - name: 데이터 세트 속성 대화 상자, 매개 변수
+    href: ../report-data/dataset-properties-dialog-box-parameters.md
+  - name: 데이터 세트 속성 대화 상자, 쿼리
+    href: ../dataset-properties-dialog-box-query.md
+  - name: 쿼리 매개 변수 정의 대화 상자
+    href: define-query-parameters-dialog-box.md
+  - name: 데이터 원본 자격 증명 입력 대화 상자
+    href: ../enter-data-source-credentials-dialog-box.md
+  - name: 공유 데이터 원본 속성 대화 상자, 자격 증명
+    href: ../shared-data-source-properties-dialog-box-credentials.md
+  - name: 공유 데이터 원본 속성 대화 상자, 일반
+    href: ../shared-data-source-properties-dialog-box-general.md
+  - name: 보고서 데이터 창
+    href: report-data-pane.md
+ms.openlocfilehash: 06973d5de64e7df66c6d5adeccbf7fc927cee0a6
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315897"

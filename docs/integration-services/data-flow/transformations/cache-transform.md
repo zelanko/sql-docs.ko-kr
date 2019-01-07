@@ -25,13 +25,13 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47857281"
 ---
 # <a name="cache-transform"></a>캐시 변환
-  캐시 변환은 데이터 흐름에 있는 연결된 데이터 원본의 데이터를 캐시 연결 관리자에 기록하여 조회 변환에 대한 참조 데이터 집합을 생성합니다. 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터베이스의 열과 조인하여 조회합니다.  
+  캐시 변환은 데이터 흐름에 있는 연결된 데이터 원본의 데이터를 캐시 연결 관리자에 기록하여 조회 변환에 대한 참조 데이터 세트를 생성합니다. 조회 변환은 연결된 데이터 원본의 입력 열에 있는 데이터를 참조 데이터베이스의 열과 조인하여 조회합니다.  
   
- 캐시 연결 관리자를 사용하여 조회 변환을 전체 캐시 모드로 실행하도록 구성할 수 있습니다. 이 모드에서 조회 변환이 실행되기 전에 참조 데이터 집합이 캐시에 로드됩니다.  
+ 캐시 연결 관리자를 사용하여 조회 변환을 전체 캐시 모드로 실행하도록 구성할 수 있습니다. 이 모드에서 조회 변환이 실행되기 전에 참조 데이터 세트가 캐시에 로드됩니다.  
   
  캐시 연결 관리자 및 캐시 변환을 사용하여 전체 캐시 모드에서 조회 변환을 구성하는 방법에 대한 지침은 [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)을 참조하세요.  
   
- 참조 데이터 집합을 캐시하는 방법은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
+ 참조 데이터 세트를 캐싱하는 방법은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하세요.  
   
 > [!NOTE]  
 >  캐시 변환은 고유한 행만 캐시 연결 관리자에 기록합니다.  

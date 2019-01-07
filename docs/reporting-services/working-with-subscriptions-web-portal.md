@@ -63,8 +63,8 @@ ms.locfileid: "52542009"
   
 -   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 파일 공유 이름은 UNC(Uniform Naming Convention) 형식(예: \mycomputer\public\myreportfiles)으로 지정해야 합니다. 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 Excel을 선택할 경우 보고서는 .xlsx 파일로 배달됩니다.  
   
-### <a name="data-driven-subscription-dataset"></a>데이터 기반 구독 데이터 집합  
-데이터 기반 구독의 경우 구독에 사용되는 데이터 집합을 정의해야 합니다. **데이터 집합 편집** 을 선택하여 해당 정보를 제공합니다.  
+### <a name="data-driven-subscription-dataset"></a>데이터 기반 구독 데이터 세트  
+데이터 기반 구독의 경우 구독에 사용되는 데이터 세트를 정의해야 합니다. **데이터 집합 편집** 을 선택하여 해당 정보를 제공합니다.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52542009"
   
 쿼리의 유효성을 검사할 수 있습니다. **쿼리 제한 시간**을 정의할 수도 있습니다.  
   
-쿼리가 생성된 후 필수 필드에 값을 할당할 수 있습니다. 수동 데이터를 입력하거나 만든 데이터 집합에서 필드를 선택할 수 있습니다.
+쿼리가 생성된 후 필수 필드에 값을 할당할 수 있습니다. 수동 데이터를 입력하거나 만든 데이터 세트에서 필드를 선택할 수 있습니다.
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [페이지를 매긴 보고서 사용](working-with-paginated-reports-web-portal.md)  

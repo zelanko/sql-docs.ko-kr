@@ -10,7 +10,7 @@ ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
 ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "49419221"
@@ -112,7 +112,7 @@ SQL Satellite는 확장 이벤트 (xEvents) 창을 사용 하 여 모니터링�
 
 + **RODBC (R에만 해당)** 
 
-  **RODBC**를 사용하여 스크립트 내에서 추가 ODBC 호출을 수행할 수 있습니다. RODBC는 관계형 데이터베이스에서 데이터에 액세스 하는 데 사용 하는 인기 있는 R 패키지 그러나 성능이 더 일반적으로 SQL Server에서 사용 하는 비슷한 공급자 보다 느립니다. 많은 R 스크립트는 RODBC에 대해 포함된 호출을 사용하여 분석에 사용할 "보조" 데이터 집합을 검색합니다. 예를 들어 모델을 학습시키는 저장 프로시저는 SQL 쿼리를 정의하여 모델 교육을 위한 데이터를 얻지만, 포함된 RODBC 호출을 사용하여 추가 요소를 얻거나 조회를 수행하거나 텍스트 파일 또는 Excel과 같은 외부 소스에서 새 데이터를 가져올 수 있습니다.
+  **RODBC**를 사용하여 스크립트 내에서 추가 ODBC 호출을 수행할 수 있습니다. RODBC는 관계형 데이터베이스에서 데이터에 액세스 하는 데 사용 하는 인기 있는 R 패키지 그러나 성능이 더 일반적으로 SQL Server에서 사용 하는 비슷한 공급자 보다 느립니다. 많은 R 스크립트는 RODBC에 대해 포함된 호출을 사용하여 분석에 사용할 "보조" 데이터 세트를 검색합니다. 예를 들어 모델을 학습시키는 저장 프로시저는 SQL 쿼리를 정의하여 모델 교육을 위한 데이터를 얻지만, 포함된 RODBC 호출을 사용하여 추가 요소를 얻거나 조회를 수행하거나 텍스트 파일 또는 Excel과 같은 외부 소스에서 새 데이터를 가져올 수 있습니다.
 
   다음 코드는 R 스크립트에 포함된 RODBC 호출을 보여 줍니다.
 

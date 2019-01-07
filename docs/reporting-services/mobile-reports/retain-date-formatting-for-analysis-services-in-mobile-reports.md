@@ -16,13 +16,13 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47853401"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
-보고서 작성기의 공유 데이터 집합에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
+보고서 작성기의 공유 데이터 세트에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
 
 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 쿼리에 대한 기본 반환 형식은 문자열입니다.  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 작성기에 대한 데이터 집합을 만들 때 문자열 형식이 적용되고 서버에 저장됩니다. 
 
-그러나 JSON 테이블 렌더러가 데이터 집합을 처리할 때 열의 값을 문자열로 읽고 문자열을 렌더링합니다.  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 에서 테이블을 가져올 때도 문자열만 보입니다.
+그러나 JSON 테이블 렌더러가 데이터 세트를 처리할 때 열의 값을 문자열로 읽고 문자열을 렌더링합니다.  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 에서 테이블을 가져올 때도 문자열만 보입니다.
 
-이에 대한 해결 방법은 보고서 작성기에서 공유 데이터 집합을 만들 때 계산 멤버를 추가하는 것입니다. [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 다차원 모델 및 테이블 형식 모델 모두에 대해 작동합니다.
+이에 대한 해결 방법은 보고서 작성기에서 공유 데이터 세트를 만들 때 계산 멤버를 추가하는 것입니다. [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 다차원 모델 및 테이블 형식 모델 모두에 대해 작동합니다.
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>측정값을 만들어 날짜 필드 데이터 형식 유지
 

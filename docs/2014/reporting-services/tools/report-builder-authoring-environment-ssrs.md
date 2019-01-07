@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48117493"
@@ -34,7 +34,7 @@ ms.locfileid: "48117493"
   
 -   보고서 서버에서 직접 보고서를 엽니다.  
   
--   로컬 또는 게시된 공유 데이터 원본 및 공유 데이터 집합을 사용하는 보고서를 미리 봅니다.  
+-   로컬 또는 게시된 공유 데이터 원본 및 공유 데이터 세트를 사용하는 보고서를 미리 봅니다.  
   
 -   HTML 또는 인쇄 형식으로 보고서를 미리 봅니다.  
   

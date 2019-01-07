@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: fabc7fef47a3d80427e9a4c0ef4587f4dc13f405
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48140553"
@@ -44,7 +44,7 @@ ms.locfileid: "48140553"
 |attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
 |연산자|선택한 특성 유형에 해당하는 연산자를 표시합니다. 자세한 내용은 [필터 연산자&#40;Master Data Services&#41;](../filter-operators-master-data-services.md)를 참조하세요.|  
 |조건|필터링할 조건입니다.|  
-|업데이트 요약|큰 데이터 집합을 사용 중일 때 로드된 데이터 양 세부 정보와 함께 **요약** 섹션을 업데이트하려면 클릭합니다.|  
+|업데이트 요약|큰 데이터 세트를 사용 중일 때 로드된 데이터 양 세부 정보와 함께 **요약** 섹션을 업데이트하려면 클릭합니다.|  
 |추가|**열** 섹션에서 특성을 클릭하고 **추가**를 클릭하면 특성이 필터 목록에 추가됩니다.|  
 |모두 제거|목록에서 모든 필터를 제거합니다.|  
 |제거|목록에서 선택한 필터를 제거합니다.|  

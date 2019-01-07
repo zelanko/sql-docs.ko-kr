@@ -44,11 +44,11 @@ Aggregate(expression, scope)
 ## <a name="remarks"></a>Remarks  
  `Aggregate` 함수를 통해 외부 데이터 원본에서 계산되는 집계를 사용할 수 있습니다. 이 기능에 대한 지원은 데이터 확장 프로그램에 의해 결정됩니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 MDX 쿼리에서 일반 행 집합을 검색합니다. 결과 집합의 일부 행에는 데이터 원본 서버에서 계산된 집계 값이 포함될 수 있습니다. 이를 *서버 집계*라고 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]용 그래픽 쿼리 디자이너에서 서버 집계를 보려면 도구 모음에서 **집계 표시** 단추를 사용합니다. 자세한 내용은 [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
- 테이블릭스 데이터 영역의 정보 행에 집계 및 정보 데이터 집합 값의 조합을 표시할 때 서버 집계는 정보 데이터가 아니므로 일반적으로 포함되지 않습니다. 하지만 데이터 집합에 대해 검색된 모든 값을 표시하고 집계 데이터가 계산 및 표시되는 방식을 사용자 지정할 수 있습니다.  
+ 테이블릭스 데이터 영역의 정보 행에 집계 및 정보 데이터 세트 값의 조합을 표시할 때 서버 집계는 정보 데이터가 아니므로 일반적으로 포함되지 않습니다. 하지만 데이터 세트에 대해 검색된 모든 값을 표시하고 집계 데이터가 계산 및 표시되는 방식을 사용자 지정할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용을 감지 합니다 `Aggregate` 정보 행에 서버 집계를 표시할지 여부를 결정 하기 위해 보고서에서 식의 함수입니다. 포함 하는 경우 `Aggregate` 데이터 영역의 식에 서버 집계만 나타날 수 있습니다 그룹 합계 또는 총합계 행에 정보 행에 없습니다. 서버 집계를 정보 행에 표시하려면 `Aggregate` 함수를 사용하지 마십시오.  
   
- 이러한 기본 동작은 **데이터 집합 속성** 대화 상자에서 **부분합을 정보 행으로 해석** 옵션의 값을 수정하여 변경할 수 있습니다. 이 옵션이 `True`로 설정된 경우 서버 집계를 포함한 모든 데이터가 정보 데이터로 표시됩니다. `False`로 설정된 경우 서버 집계가 합계로 표시됩니다. 이 속성에 대한 설정은 이 데이터 집합에 연결되어 있는 모든 데이터 영역에 적용됩니다.  
+ 이러한 기본 동작은 **데이터 세트 속성** 대화 상자에서 **부분합을 정보 행으로 해석** 옵션의 값을 수정하여 변경할 수 있습니다. 이 옵션이 `True`로 설정된 경우 서버 집계를 포함한 모든 데이터가 정보 데이터로 표시됩니다. `False`로 설정된 경우 서버 집계가 합계로 표시됩니다. 이 속성에 대한 설정은 이 데이터 세트에 연결되어 있는 모든 데이터 영역에 적용됩니다.  
   
 > [!NOTE]  
 >  `Aggregate`를 참조하는 보고서 항목에 대한 모든 포함 그룹에는 해당 그룹 식에 대한 단순 필드 참조가 있어야 합니다(예: `[FieldName]`). 사용할 수 없습니다 `Aggregate` 복잡 한 그룹 식을 사용 하는 데이터 영역에 있습니다. 에 대 한 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램, 쿼리 형식의 MDX 필드가 포함 해야 합니다 `LevelProperty` (되지 `MemberProperty`) 사용 하 여 집계를 지원 하기 위해는 `Aggregate`함수입니다.  

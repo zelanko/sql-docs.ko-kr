@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48228043"
 ---
-# <a name="dataset-properties-dialog-box-options"></a>데이터 집합 속성 대화 상자, 옵션
+# <a name="dataset-properties-dialog-box-options"></a>데이터 세트 속성 대화 상자, 옵션
   선택 **옵션** 에 **집합 속성** 데이터 정렬 옵션 및 쿼리에 대 한 부분합 같은 데이터 옵션을 변경 하려면 대화 상자. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을(를) 참조하세요.  
   
 ## <a name="options"></a>변수  

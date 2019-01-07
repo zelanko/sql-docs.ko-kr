@@ -40,7 +40,7 @@ ms.locfileid: "48099843"
  SharePoint 사이트나 보고서 서버에 게시한 Reporting Services 보고서를 모델에서 데이터 원본으로 사용할 수 있습니다. Reporting Services 보고서에서 데이터를 가져올 경우 보고서 정의(.rdl) 파일을 데이터 원본으로 지정해야 합니다.  
   
  **하늘색 DataMarket 데이터 집합**  
- Azure DataMarket은 단일 마켓플레이스와 정보 배달 채널을 클라우드 서비스로 제공하는 서비스입니다. Azure DataMarket 데이터 집합에는 Windows 사용자 계정 대신 계정 키가 필요합니다.  
+ Azure DataMarket은 단일 마켓플레이스와 정보 배달 채널을 클라우드 서비스로 제공하는 서비스입니다. Azure DataMarket 데이터 세트에는 Windows 사용자 계정 대신 계정 키가 필요합니다.  
   
  **Atom 피드**  
  피드는 ATOM 피드여야 합니다. RSS 피드는 지원되지 않습니다. 누구나 사용할 수 있도록 피드가 공개되어 있거나 피드 연결에 필요한 권한이 현재 로그인에 사용한 Windows 계정에 있어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48099843"
 ##  <a name="azure"></a> Azure DataMarket 데이터 집합에서 데이터 가져오기  
  Azure DataMarket의 데이터를 모델에 테이블로 가져올 수 있습니다.  
   
-#### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Azure DataMarket의 데이터를 모델에 테이블로 가져올 수 있습니다.  
+#### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Azure DataMarket 데이터 세트에서 데이터를 가져오려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭한 다음 **데이터 원본에서 가져오기**를 클릭합니다. 테이블 가져오기 마법사가 열립니다.  
   

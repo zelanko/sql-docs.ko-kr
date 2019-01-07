@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1e610d089206237fb6e9a1f525e124cb72bbfaa0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48179123"
@@ -36,7 +36,7 @@ Avg(expression, scope, recursive)
  (`Float`) 집계를 수행 하는 식입니다.  
   
  *범위*  
- (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 집합, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
+ (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
  *재귀*  
  (**열거 형식**) 선택 사항입니다. `Simple` (기본값) 또는 `RdlRecursive`합니다. 집계를 재귀적으로 수행할지 여부를 지정합니다.  
@@ -64,7 +64,7 @@ Avg(expression, scope, recursive)
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 두 코드 예에서는 `Cost` 라는 데이터 집합에 포함된 `Inventory`필드의 모든 값에 대한 평균을 제공합니다.  
+ 다음 두 코드 예에서는 `Cost`라는 데이터 세트에 포함된 `Inventory`필드의 모든 값에 대한 평균을 제공합니다.  
   
 ```  
 =Avg(Fields!Cost.Value, "Inventory")   

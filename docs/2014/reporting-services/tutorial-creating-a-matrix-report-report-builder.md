@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48159503"
@@ -53,7 +53,7 @@ ms.locfileid: "48159503"
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
-##  <a name="CreateMatrix"></a> 1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 집합 만들기  
+##  <a name="CreateMatrix"></a> 1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 세트 만들기  
  **Getting Started** 대화 상자에서 보고서 작성기 공유 데이터 원본을 선택, 포함된 된 데이터 집합 만들기 및 행렬의 데이터를 표시 합니다.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ ms.locfileid: "48159503"
   
 13. **마침**을 클릭합니다.  
   
-     디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 집합 쿼리로 검색된 데이터입니다.  
+     디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
 14. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "48159503"
   
 11. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
- 보고서에 Monday 및 Tuesday라는 열이 포함됩니다. 데이터 집합에는 이러한 두 요일에 대한 데이터만 포함됩니다.  
+ 보고서에 Monday 및 Tuesday라는 열이 포함됩니다. 데이터 세트에는 이러한 두 요일에 대한 데이터만 포함됩니다.  
   
 > [!NOTE]  
 >  데이터에 다른 요일이 포함된 경우 보고서에도 해당 요일에 대한 열이 포함됩니다. 각 열에 열 머리글을 `Sales`, 지역별 판매 합계가 됩니다.  

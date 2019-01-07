@@ -18,7 +18,7 @@ ms.locfileid: "50030102"
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
   
- 보고서 작성기에서는 보고서, 공유 데이터 집합 및 다시 사용 가능한 보고서 파트를 작성할 수 있습니다. 보고서 서버 또는 SharePoint 사이트에서 보고서를 편집하고 공유 데이터 원본, 공유 데이터 집합 및 공유 보고서 파트를 추가할 수 있습니다.  
+ 보고서 작성기에서는 보고서, 공유 데이터 세트 및 다시 사용 가능한 보고서 파트를 작성할 수 있습니다. 보고서 서버 또는 SharePoint 사이트에서 보고서를 편집하고 공유 데이터 원본, 공유 데이터 세트 및 공유 보고서 파트를 추가할 수 있습니다.  
   
  보고서 및 보고서 관련 항목을 작성, 게시 및 사용하려면 보안 기능이 다음 영역과 관련되는 방식을 이해해야 합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "50030102"
   
   
 ##  <a name="Reports"></a> 게시된 보고서 및 보고서 관련 항목에 대한 보안 이해  
- 보고서 및 보고서 관련 항목에 대한 보안은 보고서 서버 관리자가 관리합니다. 보고서 관련 항목에는 자격 증명, 공유 데이터 집합, 매개 변수, 보고서 파트 및 모델을 비롯한 포함된 데이터 원본 및 공유 데이터 원본이 포함됩니다.  
+ 보고서 및 보고서 관련 항목에 대한 보안은 보고서 서버 관리자가 관리합니다. 보고서 관련 항목에는 자격 증명, 공유 데이터 세트, 매개 변수, 보고서 파트 및 모델을 비롯한 포함된 데이터 원본 및 공유 데이터 원본이 포함됩니다.  
   
  보고서 서버 또는 SharePoint 사이트에서 보고서 및 보고서 관련 항목과 작업은 독립적인 보안 개체입니다. 항목 및 작업에 대한 액세스 권한은 항목에 따라 사용자 또는 그룹 계정을 사용 권한 수준에 매핑하는 SharePoint 보안 정책을 통해 부여됩니다. 많은 정책을 유지 관리할 때 발생할 수 있는 복잡성과 오버헤드를 줄이기 위해 폴더와 같은 컨테이너에 대한 사용 권한이 컨테이너의 항목별로 상속됩니다. 예를 들어 사용자가 폴더에 대한 특정 보고서 보기 권한을 가지고 있는 경우 해당 폴더의 항목에 대한 보고서 보기 권한도 가집니다.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "50030102"
   
   
 ##  <a name="Data"></a> 보고서 데이터 및 외부 데이터 원본에 대한 보안 이해  
- 보고서의 각 외부 데이터 원본 데이터에 액세스하려면 보고서에 포함된 데이터 원본을 만들거나 공유 데이터 원본 또는 공유 데이터 집합에 대한 참조를 추가해야 합니다.  
+ 보고서의 각 외부 데이터 원본 데이터에 액세스하려면 보고서에 포함된 데이터 원본을 만들거나 공유 데이터 원본 또는 공유 데이터 세트에 대한 참조를 추가해야 합니다.  
   
  각 외부 데이터 원본에 대해 원본 및 기본 데이터에 액세스할 수 있는 자격 증명을 제공해야 합니다. 데이터 원본의 소유자는 이 액세스를 제공하는 자격 증명의 유형을 지정합니다.  
   
  자격 증명은 보고서 정의에 저장되지 않으며 보고서 서버 또는 SharePoint 사이트 및 보고서 제작 클라이언트의 보고서와는 별도로 관리됩니다.  
   
- 보고서 디자인 타임에 자격 증명은 데이터 집합 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 집합 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
+ 보고서 디자인 타임에 자격 증명은 데이터 세트 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 세트 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
  데이터에 보안을 설정하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50030102"
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+-   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 세트의 식에 사용하면 데이터 세트를 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   

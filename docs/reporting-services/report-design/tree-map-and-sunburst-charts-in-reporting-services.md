@@ -30,7 +30,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
 ### <a name="to-insert-a-treemap-chart-and-set-up-the-sample-adventureworks-data"></a>트리 맵 차트를 삽입하고 샘플 AdventureWorks 데이터를 설정하려면  
    
 > [!NOTE]
-> 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 집합을 만듭니다.  샘플 데이터 및 샘플 쿼리는 [샘플 AdventureWorks 데이터](#bkmk_sample_data)를 참조하세요.  
+> 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 세트를 만듭니다.  샘플 데이터 및 샘플 쿼리는 [샘플 AdventureWorks 데이터](#bkmk_sample_data)를 참조하세요.  
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭한 다음 **삽입** > **차트**를 선택합니다. **트리 맵** 아이콘을 선택합니다.
 
@@ -75,7 +75,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 ### <a name="to-insert-a-sunburst-chart-and-set-up-the-sample-adventureworks-data"></a>선버스트 차트를 삽입하고 샘플 AdventureWorks 데이터를 설정하려면  
 > [!NOTE] 
-> 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 집합을 만듭니다. 샘플 데이터 및 샘플 쿼리는 [샘플 AdventureWorks 데이터](#bkmk_sample_data)를 참조하세요.  
+> 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 세트를 만듭니다. 샘플 데이터 및 샘플 쿼리는 [샘플 AdventureWorks 데이터](#bkmk_sample_data)를 참조하세요.  
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭한 다음 **삽입** > **차트**를 선택합니다. **선버스트** 아이콘을 선택합니다.
      
@@ -108,7 +108,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
   
 ##  <a name="bkmk_sample_data"></a> 샘플 AdventureWorks 데이터  
- 이 섹션은 데이터 원본 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 데이터 집합을 만들기 위한 샘플 쿼리 및 기본 단계를 포함하고 있습니다. 보고서가 이미 데이터 원본 및 데이터 집합을 포함하고 있는 경우 이 섹션을 건너뛸 수 있습니다.  
+ 이 섹션은 데이터 원본 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 데이터 세트를 만들기 위한 샘플 쿼리 및 기본 단계를 포함하고 있습니다. 보고서가 이미 데이터 원본 및 데이터 세트를 포함하고 있는 경우 이 섹션을 건너뛸 수 있습니다.  
   
  쿼리는 AdventureWorks 판매 주문 세부 정보 데이터를 판매 지역, 제품 범주, 제품 하위 범주 및 판매 이유 데이터와 함께 반환합니다.  
   

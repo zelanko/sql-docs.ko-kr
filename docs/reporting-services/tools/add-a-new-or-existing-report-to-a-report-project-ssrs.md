@@ -23,13 +23,13 @@ ms.locfileid: "50031142"
 > [!NOTE]  
 >  기존 데이터 원본의 보고서를 미리 보려면 보고서 제작 클라이언트의 데이터 원본에 대한 사용 권한이 있어야 합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
- 보고서를 추가한 후 데이터 원본 및 데이터 집합을 정의하고 보고서 레이아웃을 디자인할 수 있습니다. 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 또는 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서를 추가한 후 데이터 원본 및 데이터 세트를 정의하고 보고서 레이아웃을 디자인할 수 있습니다. 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 또는 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>보고서 마법사를 사용하여 새 보고서를 추가하려면  
   
 1.  솔루션 탐색기에서 보고서 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 보고서 추가**를 클릭합니다. **보고서 마법사** 대화 상자가 열립니다.  
   
-     마법사는 데이터 원본을 만들고, 쿼리를 사용하여 데이터 집합을 만들고, 그룹을 정의하고, 레이아웃을 지정하고, 보고서를 만드는 단계를 안내합니다. 이 단계는 다음과 같습니다.  
+     마법사는 데이터 원본을 만들고, 쿼리를 사용하여 데이터 세트를 만들고, 그룹을 정의하고, 레이아웃을 지정하고, 보고서를 만드는 단계를 안내합니다. 이 단계는 다음과 같습니다.  
   
     -   **데이터 원본 선택.** 보고서를 만드는 첫 번째 단계로 데이터 원본을 정의합니다. 보고서 마법사는 보고서 프로젝트의 전체 공유 데이터 원본 목록뿐만 아니라 새 데이터 원본을 만드는 옵션도 제공합니다.  
   

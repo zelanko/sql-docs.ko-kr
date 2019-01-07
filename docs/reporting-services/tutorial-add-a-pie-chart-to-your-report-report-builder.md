@@ -35,7 +35,7 @@ ms.locfileid: "52710734"
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="Chart"></a>1. 차트 마법사에서 원형 차트 만들기  
-이 섹션에서는 차트 마법사를 사용하여 포함된 데이터 집합을 만들고, 공유 데이터 원본을 선택하고, 원형 차트를 만듭니다.  
+이 섹션에서는 차트 마법사를 사용하여 포함된 데이터 세트를 만들고, 공유 데이터 원본을 선택하고, 원형 차트를 만듭니다.  
 
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "52710734"
  
 ## <a name="DrawingEffect"></a>5. 원형 차트 값을 위쪽에서 시작하기 
 
-기본적으로 원형 차트에서는 데이터 집합의 첫 번째 값이 원형의 위쪽으로부터 90도가 되는 지점에서 시작됩니다. 이전 섹션의 원형 차트에서 이를 확인할 수 있습니다.
+기본적으로 원형 차트에서는 데이터 세트의 첫 번째 값이 원형의 위쪽으로부터 90도가 되는 지점에서 시작됩니다. 이전 섹션의 원형 차트에서 이를 확인할 수 있습니다.
 
 이 섹션에서는 첫 번째 값이 위쪽에서 시작하도록 설정합니다.
 

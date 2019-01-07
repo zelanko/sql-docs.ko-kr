@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34026810"
@@ -20,7 +20,7 @@ ms.locfileid: "34026810"
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   쿼리 축은 MDX SELECT 문에 의해 반환되는 열 집합의 가장자리를 지정합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  
   
- 쿼리 축을 지정하려면 `<SELECT query axis clause>` 를 사용하여 집합을 특정 쿼리 축에 할당합니다. 각 `<SELECT query axis clause>` 값은 하나의 쿼리 축을 정의합니다. 데이터 집합의 축 수는 SELECT 문의 `<SELECT query axis clause>` 값의 개수와 동일합니다.  
+ 쿼리 축을 지정하려면 `<SELECT query axis clause>` 를 사용하여 집합을 특정 쿼리 축에 할당합니다. 각 `<SELECT query axis clause>` 값은 하나의 쿼리 축을 정의합니다. 데이터 세트의 축 수는 SELECT 문의 `<SELECT query axis clause>` 값의 개수와 동일합니다.  
   
 ## <a name="query-axis-syntax"></a>쿼리 축 구문  
  다음 구문은 `<SELECT query axis clause>`의 구문을 보여 줍니다.  

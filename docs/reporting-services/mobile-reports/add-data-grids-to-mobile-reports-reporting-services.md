@@ -63,7 +63,7 @@ ms.locfileid: "47661901"
 
 2. **열** 창의 **데이터** 탭에서 **차트 열 추가**를 선택합니다. 
 
-3. 기본 데이터 테이블과 필드를 공유하는 두 번째 데이터 테이블을 추가하려면 아직 수행하지 않은 경우 [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) 를 가져옵니다.
+3. 기본 데이터 테이블과 필드를 공유하는 두 번째 데이터 테이블을 추가하려면 아직 수행하지 않은 경우 [Excel 또는 공유 데이터 세트의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
 
 4. **데이터 속성**아래 **그리드 뷰에 대한 데이터**에서 기본 데이터 테이블을 선택한 다음 **차트 시각화에 대한 참조 데이터**에서 두 번째 테이블을 선택합니다.
 

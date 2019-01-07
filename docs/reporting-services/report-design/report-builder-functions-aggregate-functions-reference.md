@@ -95,7 +95,7 @@ ms.locfileid: "47790321"
   
 -   **참고 5.** 멤버 정렬에서만. 데이터 영역 정렬 식에서는 사용할 수 없습니다.  
   
--   **고 6.** 멤버 필터에서만. 데이터 영역 또는 데이터 집합 필터 식에서는 사용할 수 없습니다.  
+-   **고 6.** 멤버 필터에서만. 데이터 영역 또는 데이터 세트 필터 식에서는 사용할 수 없습니다.  
   
 -   **참고 7.** 매개 변수 컬렉션은 코드 블록이 처리된 후까지 초기화되지 않으므로 메서드를 사용하여 초기화 시 매개 변수를 제어할 수 없습니다.  
   
@@ -140,13 +140,13 @@ ms.locfileid: "47790321"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   
 ##  <a name="LookupFunctions"></a> 다른 데이터 집합에서 값 조회  
- 다음 조회 함수는 지정된 데이터 집합에서 값을 검색합니다.  
+ 다음 조회 함수는 지정된 데이터 세트에서 값을 검색합니다.  
   
 |**함수**|**설명**|  
 |------------------|---------------------|  
-|[Lookup 함수](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|데이터 집합에서 지정된 식에 대한 값을 반환합니다.|  
-|[LookupSet 함수](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|데이터 집합에서 지정된 식에 대한 값 집합을 반환합니다.|  
-|[Multilookup 함수](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 집합에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
+|[Lookup 함수](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|데이터 세트에서 지정된 식에 대한 값을 반환합니다.|  
+|[LookupSet 함수](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|데이터 세트에서 지정된 식에 대한 값 세트를 반환합니다.|  
+|[Multilookup 함수](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 세트에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘")맨 위로 이동  
   

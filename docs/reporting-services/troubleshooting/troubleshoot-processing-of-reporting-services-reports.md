@@ -25,12 +25,12 @@ ms.locfileid: "47813601"
   
 또한 런타임에 계산되는 보고서 식은 보고서 데이터 및 레이아웃이 올바르게 조합될 수 있도록 보장하는 일련의 규칙을 따라야 합니다. 보고서 처리기가 문제를 발견하면 ' `<report name>` 보고서의 정의가 잘못되었습니다'라는 메시지가 표시될 수 있습니다.  
   
-### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>보고서 항목 식은 현재 데이터 집합 범위 내의 필드만 참조하거나, 집계 함수 내에 있는 경우 지정한 데이터 집합 범위만 참조할 수 있음  
+### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>보고서 항목 식은 현재 데이터 세트 범위 내의 필드만 참조하거나, 집계 함수 내에 있는 경우 지정한 데이터 세트 범위만 참조할 수 있습니다.  
   
 다음 목록을 사용하여 오류 원인을 확인할 수 있습니다.  
-* 보고서에 두 개 이상의 데이터 집합이 포함된 경우 보고서 본문의 입력란에 있는 집계 식이 범위 매개 변수를 지정해야 합니다. `=First(Fields!FieldName.Value, "DataSet1")`)을 입력합니다.  
+* 보고서에 두 개 이상의 데이터 세트가 포함된 경우 보고서 본문의 입력란에 있는 집계 식이 범위 매개 변수를 지정해야 합니다. `=First(Fields!FieldName.Value, "DataSet1")`)을 입력합니다.  
   
-범위 매개 변수를 지정하려면 보고서 항목에 대한 범위에 포함되는 데이터 집합, 데이터 영역 또는 그룹의 이름을 제공합니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션에 대한 식 범위 이해(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [식 참조(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)를 참조하세요.  
+범위 매개 변수를 지정하려면 보고서 항목에 대한 범위에 포함되는 데이터 세트, 데이터 영역 또는 그룹의 이름을 제공합니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션에 대한 식 범위 이해(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [식 참조(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="names-of-objects-must-be-greater-than-0-and-less-than-or-equal-to-256-characters"></a>개체 이름은 0보다 크고 256자 이하여야 함  
 보고서 정의의 개체 식별자 길이는 256자로 제한됩니다. 식별자는 대/소문자를 구분하고 CLS 규격이어야 합니다. 이름은 문자로 시작해야 하고 문자, 숫자 또는 밑줄(_)로 구성되어야 하며 공백은 포함할 수 없습니다. 예를 들어 입력란 이름 또는 데이터 영역 이름은 이러한 지침을 따라야 합니다.   

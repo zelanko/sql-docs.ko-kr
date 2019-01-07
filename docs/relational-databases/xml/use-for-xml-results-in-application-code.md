@@ -207,9 +207,9 @@ ms.locfileid: "51670471"
   
 2.  그런 다음**SqlDataAdapter** 를 데이터 어댑터로 사용하고 SQL 연결 및 지정된 SQL 쿼리 문자열을 사용하여 FOR XML 쿼리를 실행합니다.  
   
-3.  쿼리가 실행된 다음 **SqlDataAdapter.Fill** 메서드를 호출하고 데이터 집합인 **DataSet,** MyDataSet의 해당 항목을 전달하여 데이터 집합에 FOR XML 쿼리 출력을 채웁니다.  
+3.  쿼리가 실행된 후 **SqlDataAdapter.Fill** 메서드를 호출하고 데이터 세트 인 **DataSet,** MyDataSet의 해당 항목을 전달하여 데이터 세트 에 FOR XML 쿼리 출력을 채웁니다.  
   
-4.  그런 다음 **DataSet.GetXml** 메서드를 호출하여 서버에서 생성된 HTML 페이지에 표시될 수 있는 문자열로 쿼리 결과를 반환합니다.  
+4.  그런 다음, **DataSet.GetXml** 메서드를 호출하여 서버에서 생성된 HTML 페이지에 표시될 수 있는 문자열로 쿼리 결과를 반환합니다.  
   
     ```  
     <%@ Page Language="VB" %>  

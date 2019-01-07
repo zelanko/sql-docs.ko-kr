@@ -16,14 +16,14 @@ ms.lasthandoff: 11/16/2018
 ms.locfileid: "51813156"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
-  보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
+  보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
   
  이 데이터 확장 프로그램은 연결 문자열과 별개로 관리되는 자격 증명 및 매개 변수를 지원합니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Connection"></a> 연결 문자열  
- 연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 애플리케이션 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 집합 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
+ 연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 애플리케이션 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 세트 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
   
  다음 예에서는 웹 서비스 및 XML 문서에 대한 각각의 연결 문자열 구문을 보여 줍니다. `file://` 프로토콜은 지원되지 않습니다.  
   
@@ -51,17 +51,17 @@ ms.locfileid: "51813156"
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
 ##  <a name="Query"></a> 쿼리  
- 쿼리는 보고서 데이터 집합에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 집합의 필드 컬렉션을 채웁니다. 보고서는 쿼리에서 검색된 첫 번째 결과 집합만 처리합니다.  
+ 쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 보고서는 쿼리에서 검색된 첫 번째 결과 집합만 처리합니다.  
   
  쿼리를 만들려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다. 쿼리는 XML 데이터를 반환해야 합니다.  
   
  텍스트 기반 쿼리 디자이너에 대한 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
- XML 형식의 데이터 원본에 대한 데이터 집합 쿼리에서 사용할 수 있는 값이 아래에 나와 있습니다.  
+ XML 형식의 데이터 원본에 대한 데이터 세트 쿼리에서 사용할 수 있는 값이 아래에 나와 있습니다.  
   
 -   *비어 있음*  
   
-     기본 결과 집합을 만들려면 빈 쿼리를 사용합니다. 기본 쿼리는 데이터 원본을 읽고 XML 노드 계층에서 첫 번째 리프 컬렉션까지 탐색하도록 만들어집니다. 결과 집합에는 텍스트 값이 있는 모든 노드와 해당 경로의 모든 노드 특성이 포함됩니다. 결과 집합의 열은 데이터 집합의 필드에 매핑됩니다.  
+     기본 결과 집합을 만들려면 빈 쿼리를 사용합니다. 기본 쿼리는 데이터 원본을 읽고 XML 노드 계층에서 첫 번째 리프 컬렉션까지 탐색하도록 만들어집니다. 결과 집합에는 텍스트 값이 있는 모든 노드와 해당 경로의 모든 노드 특성이 포함됩니다. 결과 집합의 열은 데이터 세트의 필드에 매핑됩니다.  
   
 -   *요소 경로*  
   
@@ -120,7 +120,7 @@ ms.locfileid: "51813156"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML 웹 서비스 데이터 검색을 위한 요구 사항  
  XML 데이터 처리 확장 프로그램은 스키마를 검색하지 않습니다. 따라서 다른 방법으로 원하는 데이터를 검색할 SOAP 메서드를 찾아야 합니다. 또한 웹 서비스에서 해당 데이터에 사용하는 주소 지정 스키마나 네임스페이스에 대해 이해하고 있어야 합니다.  
   
- 웹 서비스의 경우 호출할 메서드나 SOAP 동작을 지정하는 \<**Query**> 요소를 지정할 수 있습니다. XML 데이터 원본에 보고서에 사용할 데이터를 생성하는 계층 구조가 있는 경우 쿼리를 비워 두고 기본 쿼리를 사용할 수 있습니다. 쿼리가 실행될 때 검색되는 XML 요소 노드 값 및 특성은 보고서에서 사용하는 데이터 집합 필드에 매핑됩니다.  
+ 웹 서비스의 경우 호출할 메서드나 SOAP 동작을 지정하는 \<**Query**> 요소를 지정할 수 있습니다. XML 데이터 원본에 보고서에 사용할 데이터를 생성하는 계층 구조가 있는 경우 쿼리를 비워 두고 기본 쿼리를 사용할 수 있습니다. 쿼리가 실행될 때 검색되는 XML 요소 노드 값 및 특성은 보고서에서 사용하는 데이터 세트 필드에 매핑됩니다.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>XML 문서 데이터 검색을 위한 요구 사항  
  http 프로토콜을 사용할 경우 서버에서 XML 데이터를 반환하거나 XML 데이터가 XML **Query** 요소에 포함되어 있어야 합니다. http 프로토콜을 사용하여 XML 문서를 직접 참조하려면 해당 문서의 확장명이 .xml이어야 합니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "51813156"
 ##  <a name="Parameters"></a> 매개 변수  
  쿼리는 매개 변수 식별을 위해 분석되지 않습니다.  
   
- 매개 변수를 추가하려면 **데이터 집합 속성** 대화 상자의 [매개 변수](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지를 통해 직접 만들어야 합니다.  
+ 매개 변수를 추가하려면 **데이터 세트 속성** 대화 상자의 [매개 변수](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지를 통해 직접 만들어야 합니다.  
   
 ##  <a name="Remarks"></a> 주의  
  XML 데이터 확장 프로그램은 계층 구조가 아닌 테이블 형식 XML 데이터의 보고를 지원합니다. 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)를 참조하세요.  
@@ -142,7 +142,7 @@ ms.locfileid: "51813156"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 XML 문서를 검색하는 작업은 기본적으로 지원되지 않습니다.  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 집합을 사용하는 방법을 단계별로 설명합니다.  
+ 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -160,10 +160,10 @@ ms.locfileid: "51813156"
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 집합 및 공유 데이터 집합에 대한 정보를 제공합니다.  
+ 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
+ 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  

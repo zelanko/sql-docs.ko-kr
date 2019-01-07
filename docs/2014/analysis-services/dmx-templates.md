@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48048259"
@@ -37,7 +37,7 @@ ms.locfileid: "48048259"
   
 6.  계속해서 템플릿에서 링크를 클릭하고 대화 상자가 표시되면 적합한 출력, 모델 또는 매개 변수를 선택합니다.  
   
-     예측 쿼리의 경우 입력 데이터 집합을 먼저 선택한 후 열을 매핑합니다.  
+     예측 쿼리의 경우 입력 데이터 세트를 먼저 선택한 다음, 열을 매핑합니다.  
   
 7.  **쿼리 편집** 을 클릭해서 텍스트 편집기 보기로 전환하고 쿼리를 수동으로 변경합니다.  
   

@@ -18,7 +18,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48079423"
@@ -28,7 +28,7 @@ ms.locfileid: "48079423"
   
  **쿼리** 마법사를 사용하여 기존 마이닝 모델과의 상호 작용을 통해 Excel 테이블, Excel 범위 또는 다른 데이터 원본에 있는 데이터를 기반으로 예측을 만들 수 있습니다. 추세 예측을 위해 새 데이터를 기존 모델에 적용하는 프로세스를 *예측 쿼리*라고 합니다.  
   
- 또한 **쿼리** 마법사는 데이터 마이닝 모델 만들기 또는 수정, 사용자 지정 쿼리 생성, 다른 도구에서 지원되지 않는 구조(예: 중첩된 데이터 집합) 사용을 위한 고급 편집기를 제공합니다.  
+ 또한 **쿼리** 마법사는 데이터 마이닝 모델 만들기 또는 수정, 사용자 지정 쿼리 생성, 다른 도구에서 지원되지 않는 구조(예: 중첩된 데이터 세트) 사용을 위한 고급 편집기를 제공합니다.  
   
 -   텍스트 편집기를 사용하여 다른 곳에서 만든 DMX(Data Mining Extensions) 문에 입력하거나 붙여 넣습니다.  
   

@@ -27,7 +27,7 @@ ms.locfileid: "34041637"
 그러나 디자인 타임에 사용하기 위해 모델의 작업 데이터베이스에 소량의 샘플 데이터를 추가할 수 있습니다. 샘플 데이터는 디자인 중에만 사용되는 샘플 파티션에 대한 쿼리를 통해 지정됩니다. 해당 데이터는 모델과 함께 메모리에 캐시됩니다. 이렇게 하면 작업을 진행하면서 데이터 원본에 영향을 주지 않고 모델링 결정의 유효성을 검사하는 데 도움이 됩니다. SSDT(SQL Server Data Tools)의 **Excel에서 분석** 을 사용할 때 또는 작업 영역 데이터베이스에 연결하는 다른 클라이언트 애플리케이션에서 샘플 데이터 집합으로 모델링 결정을 테스트할 수 있습니다.  
   
 > [!TIP]  
->  빈 모델의 DirectQuery 모드에서도 항상 각 테이블에 대해 작은 기본 제공 행 집합이 표시됩니다. 50행 데이터 집합을 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** > **테이블 속성** 을 클릭합니다.  
+>  빈 모델의 DirectQuery 모드에서도 항상 각 테이블에 대해 작은 기본 제공 행 집합이 표시됩니다. 50행 데이터 세트를 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** > **테이블 속성** 을 클릭합니다.  
   
 ## <a name="create-a-sample-partition"></a>샘플 파티션 만들기
  이러한 지침은 테이블 형식 모델에서 만들거나 호환성 수준 1200 이상으로 업그레이드 됩니다. 더 낮은 호환성 수준의 모델은 다른 속성을 사용하여 캐시된 데이터를 가져옵니다. 속성 설명은 [SSMS에서 DirectQuery 모드 사용](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 을 참조하세요.  

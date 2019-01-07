@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 데이터 세트에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -15,19 +15,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47660971"
 ---
-# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 집합에 필터 추가(보고서 작성기 및 SSRS)
-  데이터 집합에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 집합에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 세트에 필터 추가(보고서 작성기 및 SSRS)
+  데이터 세트에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 세트에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  
   
- 공유 데이터 집합의 경우 모든 종속 항목에 적용되는 필터는 보고서 서버에 있는 공유 데이터 집합 정의의 일부여야 합니다. 공유 데이터 집합 인스턴스를 포함하는 보고서 또는 보고서 파트는 해당 인스턴스에만 적용되는 필터를 추가로 만들 수 있습니다.  
+ 공유 데이터 세트의 경우 모든 종속 항목에 적용되는 필터는 보고서 서버에 있는 공유 데이터 세트 정의의 일부여야 합니다. 공유 데이터 세트 인스턴스를 포함하는 보고서 또는 보고서 파트는 해당 인스턴스에만 적용되는 필터를 추가로 만들 수 있습니다.  
   
- 필터를 추가하려면 하나 이상의 조건(필터 수식)을 지정해야 합니다. 필터 수식은 필터링할 데이터를 식별하는 식, 연산자 및 비교할 값으로 구성됩니다. 필터링된 데이터와 값의 데이터 형식은 일치해야 합니다. 데이터 집합에는 집계 값에 대한 필터링이 지원되지 않습니다.  
+ 필터를 추가하려면 하나 이상의 조건(필터 수식)을 지정해야 합니다. 필터 수식은 필터링할 데이터를 식별하는 식, 연산자 및 비교할 값으로 구성됩니다. 필터링된 데이터와 값의 데이터 형식은 일치해야 합니다. 데이터 세트에는 집계 값에 대한 필터링이 지원되지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### <a name="to-add-a-filter-to-a-shared-dataset"></a>공유 데이터 집합에 필터를 추가하려면  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>공유 데이터 세트에 필터를 추가하려면  
   
-1.  공유 데이터 집합 모드에서 공유 데이터 집합을 엽니다.  
+1.  공유 데이터 세트 모드에서 공유 데이터 세트를 엽니다.  
   
 2.  **홈** 탭의 **공유 데이터 집합** 그룹에서 데이터 집합을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47660971"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>포함된 데이터 집합 또는 공유 데이터 집합 인스턴스에 필터를 추가하려면  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>포함된 데이터 세트 또는 공유 데이터 세트 인스턴스에 필터를 추가하려면  
   
 1.  보고서 디자인 모드에서 보고서를 엽니다.  
   

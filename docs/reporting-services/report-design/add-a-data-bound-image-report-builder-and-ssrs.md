@@ -25,7 +25,7 @@ ms.locfileid: "52524487"
   
 ### <a name="to-add-a-data-bound-image"></a>데이터 바인딩된 이미지를 추가하려면  
   
-1.  보고서 디자인 뷰에서 데이터 원본 연결이 있는 테이블과 이진 이미지 데이터가 포함된 필드가 있는 데이터 집합을 만듭니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
+1.  보고서 디자인 뷰에서 데이터 원본 연결이 있는 테이블과 이진 이미지 데이터가 포함된 필드가 있는 데이터 세트를 만듭니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
   
 2.  테이블에 열을 삽입합니다. 자세한 내용은 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   

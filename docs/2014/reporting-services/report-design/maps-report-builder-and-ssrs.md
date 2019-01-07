@@ -20,7 +20,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187963"
@@ -115,7 +115,7 @@ ms.locfileid: "48187963"
 ### <a name="analytical-data"></a>분석 데이터  
  분석 데이터는 도시의 인구나 상점의 판매량 합계 등, 지도에서 시각화할 데이터입니다. 분석 데이터가 제공되는 원본은 다음 중 하나일 수 있습니다.  
   
--   **데이터 집합 필드.** 보고서 데이터 창에 있는 데이터 집합의 필드입니다.  
+-   **데이터 집합 필드.** 보고서 데이터 창에 있는 데이터 세트의 필드입니다.  
   
 -   **공간 데이터 원본 필드.** 공간 데이터에 포함된 공간 데이터 원본의 필드입니다. 예를 들어 ESRI 셰이프 파일에는 공간 데이터와 분석 데이터가 모두 포함되어 있는 경우가 많습니다. 공간 데이터 원본의 필드 이름은 #으로 시작하고 계층에 대한 규칙의 데이터 필드를 지정하는 경우 필드의 드롭다운 목록에 나타납니다.  
   

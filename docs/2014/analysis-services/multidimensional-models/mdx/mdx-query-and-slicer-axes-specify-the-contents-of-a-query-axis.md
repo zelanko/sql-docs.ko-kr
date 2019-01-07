@@ -16,7 +16,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209773"
@@ -24,7 +24,7 @@ ms.locfileid: "48209773"
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>쿼리 축의 내용 지정(MDX)
   쿼리 축은 MDX SELECT 문에 의해 반환되는 열 집합의 가장자리를 지정합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  
   
- 쿼리 축을 지정하려면 `<SELECT query axis clause>` 를 사용하여 집합을 특정 쿼리 축에 할당합니다. 각 `<SELECT query axis clause>` 값은 하나의 쿼리 축을 정의합니다. 데이터 집합의 축 수는 SELECT 문의 `<SELECT query axis clause>` 값의 개수와 동일합니다.  
+ 쿼리 축을 지정하려면 `<SELECT query axis clause>` 를 사용하여 집합을 특정 쿼리 축에 할당합니다. 각 `<SELECT query axis clause>` 값은 하나의 쿼리 축을 정의합니다. 데이터 세트의 축 수는 SELECT 문의 `<SELECT query axis clause>` 값의 개수와 동일합니다.  
   
 ## <a name="query-axis-syntax"></a>쿼리 축 구문  
  다음 구문은 `<SELECT query axis clause>`의 구문을 보여 줍니다.  

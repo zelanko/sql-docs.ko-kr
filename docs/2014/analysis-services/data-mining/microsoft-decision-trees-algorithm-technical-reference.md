@@ -23,7 +23,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48190583"
@@ -145,7 +145,7 @@ ms.locfileid: "48190583"
   
  기본값은 10입니다.  
   
- 데이터 집합이 매우 큰 경우 과잉 맞춤을 방지하기 위해 이 값을 늘려야 할 수 있습니다.  
+ 데이터 세트가 매우 큰 경우 과잉 맞춤을 방지하기 위해 이 값을 늘려야 할 수 있습니다.  
   
  *SCORE_METHOD*  
  분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
@@ -182,7 +182,7 @@ ms.locfileid: "48190583"
 ### <a name="regressors-in-decision-tree-models"></a>의사 결정 트리 모델의 회귀 변수  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않는 경우라도 연속 숫자 입력 및 출력을 포함하는 의사 결정 트리 모델에는 연속 특성에 대한 회귀를 나타내는 노드가 포함될 수 있습니다.  
   
- 연속 숫자 데이터 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않았더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 자동으로 열을 잠재적 회귀 변수로 사용하고 데이터 집합을 의미 있는 패턴이 있는 영역으로 분할합니다.  
+ 연속 숫자 데이터 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않았더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 자동으로 열을 잠재적 회귀 변수로 사용하고 데이터 세트를 의미 있는 패턴이 있는 영역으로 분할합니다.  
   
  그러나 FORCE_REGRESSOR 매개 변수를 사용하면 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘에서만 사용할 수 있습니다. 모델링 플래그를 설정 하면 알고리즘 형식의 회귀 수식을 찾으려고 시도 * C1 + b\*C2 +... 트리의 노드에 패턴을 맞추기 위해. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
   

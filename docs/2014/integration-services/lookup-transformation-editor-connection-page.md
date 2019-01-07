@@ -17,13 +17,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48063713"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
-  **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 집합을 생성할 수도 있습니다.  
+  **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 세트를 생성할 수도 있습니다.  
   
  조회 변환에 대한 자세한 내용은 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   

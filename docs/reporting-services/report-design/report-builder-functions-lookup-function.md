@@ -16,7 +16,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47679132"
 ---
 # <a name="report-builder-functions---lookup-function"></a>보고서 작성기 함수 - Lookup 함수
-  이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  
+  이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,27 +33,27 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ProdID.Value`)을 입력합니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`).  
+ (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`).  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 집합의 행에 대해 계산되고 검색할 값을 지정하는 식입니다. `=Fields!ProductName.Value`).  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!ProductName.Value`).  
   
  *데이터 집합(dataset)*  
- 보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  
+ 보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  
   
 ## <a name="return"></a>반환 값  
  **Variant**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **Lookup** 을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 **Lookup** 을 사용하여 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당하는 이름 필드를 검색할 수 있습니다.  
+ **Lookup** 을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 **Lookup**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
   
  **Lookup** 은 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
--   지정된 데이터 집합의 데이터 정렬을 기반으로 필터가 적용된 후 지정된 데이터 집합의 각 행에 대해 대상 식을 평가합니다.  
+-   지정된 데이터 세트의 데이터 정렬을 기반으로 필터가 적용된 후 지정된 데이터 세트의 각 행에 대해 대상 식을 평가합니다.  
   
--   원본 식과 대상 식의 첫 번째 일치 항목이 발견되면 데이터 집합의 해당 행에 대해 결과 식을 평가합니다.  
+-   원본 식과 대상 식의 첫 번째 일치 항목이 발견되면 데이터 세트의 해당 행에 대해 결과 식을 평가합니다.  
   
 -   결과 식 값을 반환합니다.  
   
@@ -73,11 +73,11 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
-    -   데이터 집합의 계산된 필드  
+    -   데이터 세트의 계산된 필드.  
   
-    -   데이터 집합의 쿼리 매개 변수  
+    -   데이터 세트의 쿼리 매개 변수.  
   
-    -   데이터 집합의 필터  
+    -   데이터 세트의 필터.  
   
     -   보고서 매개 변수  
   
@@ -86,9 +86,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 제품 식별자 ProductID에 대한 필드를 포함하는 데이터 집합에 테이블이 바인딩되어 있다고 가정합니다. "Product"라는 별도의 데이터 집합에는 해당하는 제품 식별자 ID와 제품 이름 Name이 포함되어 있습니다.  
+ 다음 예에서는 제품 식별자 ProductID에 대한 필드를 포함하는 데이터 세트에 테이블이 바인딩되어 있다고 가정합니다. "Product"라는 별도의 데이터 세트에는 해당하는 제품 식별자 ID와 제품 이름 Name이 포함되어 있습니다.  
   
- 다음 식에서 **Lookup** 은 ProductID 값을 "Product" 데이터 집합의 각 행에 있는 ID와 비교한 다음, 일치하는 항목이 있으면 해당 행의 Name 필드 값을 반환합니다.  
+ 다음 식에서 **Lookup**은 ProductID 값을 "Product" 데이터 세트의 각 행에 있는 ID와 비교한 다음, 일치하는 항목이 있으면 해당 행의 Name 필드 값을 반환합니다.  
   
 ```  
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  

@@ -24,7 +24,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48067923"
@@ -95,7 +95,7 @@ ms.locfileid: "48067923"
  이 점수 매기기 메서드는 불연속 특성과 불연속화된 특성에 사용할 수 있습니다.  
   
 #### <a name="bayesian-dirichlet-equivalent-with-uniform-prior"></a>Bayesian Dirichlet Equivalent with Uniform Prior  
- 데이터 집합이 제공된 경우 BDE(Bayesian Dirichlet Equivalent) 점수도 Bayesian 분석을 사용하여 네트워크를 평가합니다. BDE 점수 매기기 메서드는 Heckerman이 개발했으며 Cooper와 Herskovits가 개발한 BD 메트릭을 기반으로 합니다. Dirichlet 분포는 네트워크에 있는 각 변수에 대한 조건부 확률을 설명하는 다차원 분포로 학습에 유용한 속성을 많이 포함합니다.  
+ 데이터 세트가 제공된 경우 BDE(Bayesian Dirichlet Equivalent) 점수도 Bayesian 분석을 사용하여 네트워크를 평가합니다. BDE 점수 매기기 메서드는 Heckerman이 개발했으며 Cooper와 Herskovits가 개발한 BD 메트릭을 기반으로 합니다. Dirichlet 분포는 네트워크에 있는 각 변수에 대한 조건부 확률을 설명하는 다차원 분포로 학습에 유용한 속성을 많이 포함합니다.  
   
  BDEU(Bayesian Dirichlet Equivalent with Uniform Prior) 메서드는 이전 상태에 대한 고정 분포 및 균일 분포를 만드는 데 수학 상수가 사용되는 Dirichlet 분포의 특수한 사례를 가정합니다. BDE 점수도 데이터가 등가 구조를 판별할 수 없음을 의미하는 가능성 등가를 가정합니다. 다시 말해서 If A Then B에 대한 점수가 If B Then A에 대한 점수와 동일한 경우 데이터를 기반으로 구조를 구별할 수 없으며 인과 관계를 추론할 수 없습니다.  
   

@@ -16,7 +16,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48167913"
@@ -24,7 +24,7 @@ ms.locfileid: "48167913"
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
   데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)를 참조하세요.  
   
- 계열은 하나 이상의 데이터 요소로 구성됩니다. 기본적으로 모든 서식 옵션은 계열의 모든 데이터 요소에 적용됩니다. 개별 데이터 요소에 대한 속성을 지정하려면 런타임에 데이터 집합을 기반으로 개별 데이터 요소의 서식을 지정하는 계열의 필드나 식을 지정합니다.  
+ 계열은 하나 이상의 데이터 요소로 구성됩니다. 기본적으로 모든 서식 옵션은 계열의 모든 데이터 요소에 적용됩니다. 개별 데이터 요소에 대한 속성을 지정하려면 런타임에 데이터 세트를 기반으로 개별 데이터 요소의 서식을 지정하는 계열의 필드나 식을 지정합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

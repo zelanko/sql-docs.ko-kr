@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48078353"
@@ -24,15 +24,15 @@ ms.locfileid: "48078353"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 연계 매개 변수를 만들려면 먼저 데이터 집합 쿼리를 정의하고 필요한 각 연계 매개 변수에 대한 쿼리 매개 변수를 추가합니다. 또한 각 연계 매개 변수마다 별도의 데이터 집합을 만들어 사용 가능한 값을 제공해야 합니다. 자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
+ 연계 매개 변수를 만들려면 먼저 데이터 세트 쿼리를 정의하고 필요한 각 연계 매개 변수에 대한 쿼리 매개 변수를 추가합니다. 또한 각 연계 매개 변수마다 별도의 데이터 세트를 만들어 사용 가능한 값을 제공해야 합니다. 자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
   
- 목록 뒷부분의 매개 변수에 대한 데이터 집합 쿼리에는 목록 앞부분의 각 매개 변수에 대한 참조가 포함되므로 연계 매개 변수에서는 순서가 중요합니다. 보고서 데이터 창의 매개 변수 순서에 따라 런타임에 보고서에 매개 변수 쿼리가 나타나는 순서가 결정되며 따라서 사용자가 각각의 연속된 매개 변수 값을 선택하는 순서가 결정됩니다.  
+ 목록 뒷부분의 매개 변수에 대한 데이터 세트 쿼리에는 목록 앞부분의 각 매개 변수에 대한 참조가 포함되므로 연계 매개 변수에서는 순서가 중요합니다. 보고서 데이터 창의 매개 변수 순서에 따라 런타임에 보고서에 매개 변수 쿼리가 나타나는 순서가 결정되며 따라서 사용자가 각각의 연속된 매개 변수 값을 선택하는 순서가 결정됩니다.  
   
  여러 값을 갖는 연계 매개 변수를 만들고 모두 선택 기능을 포함하는 방법은 [모두 선택 다중값 연계 매개 변수를 만드는 방법](http://go.microsoft.com/fwlink/?LinkId=184757)을 참조하십시오.  
   
-### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>관련된 여러 매개 변수가 포함된 쿼리가 있는 기본 데이터 집합을 만들려면  
+### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>관련된 여러 매개 변수가 포함된 쿼리가 있는 기본 데이터 세트를 만들려면  
   
-1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
+1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
 2.  **이름**에 데이터 집합의 이름을 입력합니다.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "48078353"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 다음으로는 독립 매개 변수에 대한 값을 제공하는 데이터 집합을 만듭니다.  
+ 다음으로는 독립 매개 변수에 대한 값을 제공하는 데이터 세트를 만듭니다.  
   
-### <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>독립 매개 변수에 대한 값을 제공하는 데이터 집합을 만들려면  
+### <a name="to-create-a-dataset-to-provide-values-for-an-independent-parameter"></a>독립 매개 변수에 대한 값을 제공하는 데이터 세트를 만들려면  
   
-1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
+1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
 2.  **이름**에 데이터 집합의 이름을 입력합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48078353"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 다음으로는 이 데이터 집합을 사용하여 런타임에 사용 가능한 값을 채우는 첫 번째 매개 변수의 속성을 설정합니다.  
+ 다음으로는 이 데이터 세트를 사용하여 런타임에 사용 가능한 값을 채우는 첫 번째 매개 변수의 속성을 설정합니다.  
   
 ### <a name="to-set-available-values-for-a-report-parameter"></a>보고서 매개 변수에 사용 가능한 값을 설정하려면  
   
@@ -97,11 +97,11 @@ ms.locfileid: "48078353"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 다음으로는 종속 매개 변수의 값을 제공하는 데이터 집합을 만듭니다.  
+ 다음으로, 종속 매개 변수의 값을 제공하는 데이터 세트를 만듭니다.  
   
-### <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>종속 매개 변수의 값을 제공하는 데이터 집합을 만들려면  
+### <a name="to-create-a-dataset-to-provide-values-for-a-dependent-parameter"></a>종속 매개 변수의 값을 제공하는 데이터 세트를 만들려면  
   
-1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
+1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
 2.  **이름**에 데이터 집합의 이름을 입력합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48078353"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 다음으로는 이 데이터 집합을 사용하여 런타임에 사용 가능한 값을 채우는 두 번째 매개 변수의 속성을 설정합니다.  
+ 그런 다음, 이 데이터 세트를 사용하여 런타임에 사용 가능한 값을 채우는 두 번째 매개 변수의 속성을 설정합니다.  
   
 ### <a name="to-set-available-values-for-a-report-parameter"></a>보고서 매개 변수에 사용 가능한 값을 설정하려면  
   
@@ -146,7 +146,7 @@ ms.locfileid: "48078353"
   
 2.  첫 번째 매개 변수인 독립 매개 변수의 드롭다운 목록에서 값을 선택합니다.  
   
-     보고서 처리기가 다음 매개 변수에 대한 데이터 집합 쿼리를 실행하고 첫 번째 매개 변수에 선택한 값을 전달합니다. 두 번째 매개 변수의 드롭다운 목록이 첫 번째 매개 변수 값에 따라 선택된 사용 가능한 값으로 채워집니다.  
+     보고서 처리기가 다음 매개 변수에 대한 데이터 세트 쿼리를 실행하고 첫 번째 매개 변수에 선택한 값을 전달합니다. 두 번째 매개 변수의 드롭다운 목록이 첫 번째 매개 변수 값에 따라 선택된 사용 가능한 값으로 채워집니다.  
   
 3.  두 번째 매개 변수인 종속 매개 변수의 드롭다운 목록에서 값을 선택합니다.  
   

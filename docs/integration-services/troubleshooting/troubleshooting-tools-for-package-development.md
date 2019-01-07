@@ -64,7 +64,7 @@ ms.locfileid: "47824708"
 ## <a name="troubleshooting-data-flow"></a>데이터 흐름 문제 해결  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 개발 과정에서 패키지의 데이터 흐름 문제를 해결하는 데 사용할 수 있는 다음 기능 및 도구를 제공합니다.  
   
--   **데이터의 하위 집합만 테스트할 수 있습니다**. 데이터 집합 예제만 사용하여 패키지에 있는 데이터 흐름의 문제를 해결하려면 비율 샘플링 또는 행 샘플링 변환을 포함시켜 실행 시 인라인 데이터 예제를 만들도록 할 수 있습니다. 자세한 내용은 [Percentage Sampling Transformation](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md) 및 [Row Sampling Transformation](../../integration-services/data-flow/transformations/row-sampling-transformation.md)를 참조하세요.  
+-   **데이터의 하위 집합만 테스트할 수 있습니다**. 데이터 세트 예제만 사용하여 패키지에 있는 데이터 흐름의 문제를 해결하려면 비율 샘플링 또는 행 샘플링 변환을 포함시켜 실행 시 인라인 데이터 예제를 만들도록 할 수 있습니다. 자세한 내용은 [Percentage Sampling Transformation](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md) 및 [Row Sampling Transformation](../../integration-services/data-flow/transformations/row-sampling-transformation.md)를 참조하세요.  
   
 -   **데이터 뷰어를 사용하여 데이터가 데이터 흐름을 통해 이동할 때 데이터를 모니터링할 수 있습니다**. 데이터 뷰어는 데이터가 원본, 변환 및 대상 사이를 이동할 때의 데이터 값을 표시합니다. 데이터 뷰어는 표에 데이터를 표시할 수 있습니다. 데이터를 데이터 뷰어에서 클립보드로 복사한 다음 데이터를 파일 또는 엑셀 스프레드시트로 붙여넣을 수 있습니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md) 에서 패키지를 개발하면서 패키지의 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
   

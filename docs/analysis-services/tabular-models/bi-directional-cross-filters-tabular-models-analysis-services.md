@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38033311"
@@ -57,7 +57,7 @@ ms.locfileid: "38033311"
 2.  **기본 필터 방향** 을 **단일 방향** 또는 **양방향**으로 설정합니다.  
   
 ## <a name="walkthrough-an-example"></a>예제 연습  
- 양방향 교차 필터링의 가치를 이해하려면 예제를 사용하는 것이 가장 좋습니다. 기본적으로 만들어진 교차 필터와 카디널리티를 반영하는 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)의 다음 데이터 집합을 고려해 보겠습니다.  
+ 양방향 교차 필터링의 가치를 이해하려면 예제를 사용하는 것이 가장 좋습니다. 기본적으로 만들어진 교차 필터와 카디널리티를 반영하는 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)의 다음 데이터 세트를 고려해 보겠습니다.  
   
  ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   

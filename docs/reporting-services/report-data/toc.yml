@@ -80,7 +80,7 @@ items:
   href: use-an-office-data-connection-odc-with-reports.md
 - name: 보고서 데이터 창
   href: report-data-pane.md
-- name: 보고서 데이터 집합
+- name: 보고서 데이터 세트
   href: report-datasets-ssrs.md
   items:
   - name: 쿼리 디자인 도구
@@ -112,31 +112,31 @@ items:
       href: sharepoint-list-query-designer-report-builder.md
     - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
       href: text-based-query-designer-user-interface-report-builder.md
-  - name: 포함된 데이터 집합 및 공유 데이터 집합
+  - name: 포함된 데이터 세트 및 공유 데이터 세트
     href: embedded-and-shared-datasets-report-builder-and-ssrs.md
-  - name: 공유 데이터 집합 또는 포함된 데이터 집합 만들기
+  - name: 공유 데이터 세트 또는 포함된 데이터 세트 만들기
     href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
-  - name: 보고서 작성기의 보고서 파트 및 데이터 집합
+  - name: 보고서 작성기의 보고서 파트 및 데이터 세트
     href: report-parts-and-datasets-in-report-builder.md
-  - name: 공유 데이터 집합 관리
+  - name: 공유 데이터 세트 관리
     href: manage-shared-datasets.md
   - name: 보고서 데이터 창에서 필드 추가, 편집, 새로 고침
     href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
-  - name: 데이터 집합에 필터 추가
+  - name: 데이터 세트에 필터 추가
     href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
-  - name: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시
+  - name: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시
     href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
   - name: 데이터 영역에 대한 데이터 없음 메시지 설정
     href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
-  - name: 데이터 집합 필드 컬렉션
+  - name: 데이터 세트 필드 컬렉션
     href: dataset-fields-collection-report-builder-and-ssrs.md
-  - name: 데이터 집합 속성 대화 상자, 옵션
+  - name: 데이터 세트 속성 대화 상자, 옵션
     href: dataset-properties-dialog-box-options-report-builder.md
-  - name: 데이터 집합 속성 대화 상자, 매개 변수
+  - name: 데이터 세트 속성 대화 상자, 매개 변수
     href: dataset-properties-dialog-box-parameters.md
-  - name: 데이터 집합 속성 대화 상자, 쿼리
+  - name: 데이터 세트 속성 대화 상자, 쿼리
     href: dataset-properties-dialog-box-query-report-builder.md
-  - name: 보고서 포함된 데이터 집합 및 공유 데이터 집합
+  - name: 보고서 포함된 데이터 세트 및 공유 데이터 세트
     href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
 ms.openlocfilehash: c39c31507d2f09585fac426cf6f864516853359b
 ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1

@@ -17,7 +17,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48091373"
@@ -42,7 +42,7 @@ ms.locfileid: "48091373"
  [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>이 자습서에서 데이터가 포함된 Transact-SQL 쿼리 사용  
- 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. 인스턴스의 이름이 필요 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 처리해야 보고서 데이터 집합에 필요한 메타데이터가 반환됩니다.  
+ 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. 인스턴스의 이름이 필요 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 인스턴스에서 처리해야 보고서 데이터 세트에 필요한 메타데이터가 반환됩니다.  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하는 경우 좋은 점은, 다른 모든 보고서 작성기 자습서에서도 같은 방법을 사용하므로 다른 자습서를 사용할 때 수행할 작업을 미리 알게 된다는 것입니다.  
   

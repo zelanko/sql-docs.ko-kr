@@ -89,7 +89,7 @@ items:
       href: report-design/report-design-tips-report-builder-and-ssrs.md
   - name: 보고서 디자인 뷰
     href: report-builder/report-design-view-report-builder.md
-  - name: 공유 데이터 집합 디자인 뷰
+  - name: 공유 데이터 세트 디자인 뷰
     href: report-builder/shared-dataset-design-view-report-builder.md
   - name: 바로 가기 키
     href: report-builder/keyboard-shortcuts-report-builder.md
@@ -100,7 +100,7 @@ items:
       href: report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
     - name: 포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본
       href: embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md
-    - name: 포함된 데이터 집합 및 공유 데이터 집합
+    - name: 포함된 데이터 세트 및 공유 데이터 세트
       href: report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
     - name: 데이터 영역 및 지도
       href: report-design/data-regions-and-maps-report-builder-and-ssrs.md

@@ -17,7 +17,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48209733"
@@ -35,13 +35,13 @@ ms.locfileid: "48209733"
  64비트 컴퓨터의 캐시 크기(MB)를 조정합니다. 기본값은 5MB입니다.  
   
  **일치하는 항목이 없는 행에 캐시 사용**  
- 참조 데이터 집합에서 일치하는 항목이 없는 행을 캐시합니다.  
+ 참조 데이터 세트에서 일치하는 항목이 없는 행을 캐시합니다.  
   
  **캐시에서 할당**  
- 참조 데이터 집합에서 일치하는 항목이 없는 행에 할당할 캐시 비율을 지정합니다.  
+ 참조 데이터 세트에서 일치하는 항목이 없는 행에 할당할 캐시 비율을 지정합니다.  
   
  **SQL 문 수정**  
- 참조 데이터 집합을 생성하는 데 사용되는 SQL 문을 수정합니다.  
+ 참조 데이터 세트를 생성하는 데 사용되는 SQL 문을 수정합니다.  
   
 > [!NOTE]  
 >  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)합니다.  

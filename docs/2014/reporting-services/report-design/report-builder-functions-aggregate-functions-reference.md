@@ -96,7 +96,7 @@ ms.locfileid: "48194123"
   
 -   **참고 5.** 멤버 정렬에서만. 데이터 영역 정렬 식에서는 사용할 수 없습니다.  
   
--   **고 6.** 멤버 필터에서만. 데이터 영역 또는 데이터 집합 필터 식에서는 사용할 수 없습니다.  
+-   **고 6.** 멤버 필터에서만. 데이터 영역 또는 데이터 세트 필터 식에서는 사용할 수 없습니다.  
   
 -   **참고 7.** 매개 변수 컬렉션은 코드 블록이 처리된 후까지 초기화되지 않으므로 메서드를 사용하여 초기화 시 매개 변수를 제어할 수 없습니다.  
   
@@ -133,13 +133,13 @@ ms.locfileid: "48194123"
 |[CountRows](report-builder-functions-countrows-function.md)|Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.|  
   
 ##  <a name="LookupFunctions"></a> 다른 데이터 집합에서 값 조회  
- 다음 조회 함수는 지정된 데이터 집합에서 값을 검색합니다.  
+ 다음 조회 함수는 지정된 데이터 세트에서 값을 검색합니다.  
   
 |**함수**|**설명**|  
 |------------------|---------------------|  
-|[Lookup 함수](report-builder-functions-lookup-function.md)|데이터 집합에서 지정된 식에 대한 값을 반환합니다.|  
-|[LookupSet 함수](report-builder-functions-lookupset-function.md)|데이터 집합에서 지정된 식에 대한 값 집합을 반환합니다.|  
-|[Multilookup 함수](report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 집합에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
+|[Lookup 함수](report-builder-functions-lookup-function.md)|데이터 세트에서 지정된 식에 대한 값을 반환합니다.|  
+|[LookupSet 함수](report-builder-functions-lookupset-function.md)|데이터 세트에서 지정된 식에 대한 값 세트를 반환합니다.|  
+|[Multilookup 함수](report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 세트에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
   
 ##  <a name="RetrievingPostsortValues"></a> 정렬 종속 값 검색  
  다음 기본 제공 함수는 지정된 범위 내의 첫 번째, 마지막 또는 이전 값을 반환합니다. 이러한 함수는 데이터 값의 정렬 순서에 따라 달라집니다. 예를 들어 이러한 함수를 사용하여 페이지의 첫 번째와 마지막 값을 찾아 사전 스타일의 페이지 머리글을 만들 수 있습니다. 사용 하 여 `Previous` 예를 들어 특정 범위 내에서 이전 행의 값으로 하나의 행에 있는 값을 비교에 테이블에서 연도 값에 대해 백분율을 찾을 수 있습니다.  

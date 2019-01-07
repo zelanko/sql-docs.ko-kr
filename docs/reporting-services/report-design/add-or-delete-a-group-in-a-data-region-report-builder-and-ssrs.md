@@ -16,11 +16,11 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47819581"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
-페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 표시 및 계산을 위해 데이터를 특정 값 또는 식 집합에 따라 구성하려는 경우 데이터 영역에 그룹을 추가할 수 있습니다. 그룹에는 그룹에 속한 데이터 집합의 데이터를 구분하는 식과 이름이 있습니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
+페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 표시 및 계산을 위해 데이터를 특정 값 또는 식 집합에 따라 구성하려는 경우 데이터 영역에 그룹을 추가할 수 있습니다. 그룹에는 그룹에 속한 데이터 세트의 데이터를 구분하는 식과 이름이 있습니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
- 테이블릭스 데이터 영역에서 테이블, 행렬 또는 목록을 클릭하여 그룹화 창을 표시하고, 데이터 집합 필드를 행 그룹 및 열 그룹 창으로 끌어 부모 또는 자식 그룹을 만듭니다. 기존 그룹을 마우스 오른쪽 단추로 클릭하여 인접 그룹을 추가합니다. 정의에 따르면 세부 정보 그룹은 가장 안쪽 그룹이며 하위 그룹으로만 추가할 수 있습니다. 기존 그룹을 삭제하려면 마우스 오른쪽 단추로 클릭합니다. 그룹 값을 표시할 행과 열은 자동으로 추가됩니다. 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
+ 테이블릭스 데이터 영역에서 테이블, 행렬 또는 목록을 클릭하여 그룹화 창을 표시하고, 데이터 세트 필드를 행 그룹 및 열 그룹 창으로 끌어 부모 또는 자식 그룹을 만듭니다. 기존 그룹을 마우스 오른쪽 단추로 클릭하여 인접 그룹을 추가합니다. 정의에 따르면 세부 정보 그룹은 가장 안쪽 그룹이며 하위 그룹으로만 추가할 수 있습니다. 기존 그룹을 삭제하려면 마우스 오른쪽 단추로 클릭합니다. 그룹 값을 표시할 행과 열은 자동으로 추가됩니다. 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
- 차트 데이터 영역에서 차트를 클릭하여 끌어 놓기 영역을 표시합니다. 데이터 집합 필드를 범주 및 계열 끌어 놓기 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 끌어 놓기 영역에 여러 필드를 추가합니다.  
+ 차트 데이터 영역에서 차트를 클릭하여 끌어 놓기 영역을 표시합니다. 데이터 세트 필드를 범주 및 계열 끌어 놓기 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 끌어 놓기 영역에 여러 필드를 추가합니다.  
   
  기본적으로 계기에서는 그룹이 정의되지 않습니다. 계기의 기본 동작은 지정한 필드의 모든 값을 계기에 표시되는 하나의 값으로 집계하는 것이기 때문입니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   

@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b29f10762f421c76dd7adbbd341038771f135a04
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48086623"
@@ -31,7 +31,7 @@ ms.locfileid: "48086623"
  빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
->  데이터 집합 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
+>  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
   
 ### <a name="to-add-a-hyperlink"></a>하이퍼링크를 추가하려면  
   

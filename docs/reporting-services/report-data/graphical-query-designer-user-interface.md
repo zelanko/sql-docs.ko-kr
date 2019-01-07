@@ -30,7 +30,7 @@ ms.locfileid: "50020287"
  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 집합에 대한 쿼리를 만들기 전에 [데이터 집합 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   

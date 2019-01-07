@@ -68,7 +68,7 @@ ms.locfileid: "50148159"
  예를 들어 문자열 "011"은 세 개의 특성이 있는 차원을 사용하는 쿼리를 참조하며 여기서 두 번째 및 세 번째 특성이 쿼리에 포함됩니다.  
   
 > [!NOTE]  
->  일부 특성은 데이터 집합에서 고려되지 않습니다. 제외 되는 특성에 대 한 자세한 내용은 참조 하세요. [Query 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)합니다.  
+>  일부 특성은 데이터 세트에서 고려되지 않습니다. 제외 되는 특성에 대 한 자세한 내용은 참조 하세요. [Query 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)합니다.  
   
  집계 디자인을 포함 하는 측정값 그룹의 각 차원은으로 표시 됩니다는 *데이터 집합* 값을 `Query` 요소입니다. *Dataset* 값의 순서는 측정값 그룹에 포함된 차원의 순서와 일치해야 합니다.  
   

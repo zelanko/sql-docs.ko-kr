@@ -13,16 +13,16 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48206785"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>6단계: 조회 변환 추가 및 구성
-  원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 집합의 열로 조인하여 조회를 수행합니다. 참조 데이터 집합은 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 집합의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
+  원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 세트의 열로 조인하여 조회를 수행합니다. 참조 데이터 세트는 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 세트의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
   
 > [!NOTE]  
->  또한 참조 데이터 집합이 포함된 캐시에 연결되도록 조회 변환을 구성할 수도 있습니다. 자세한 내용은 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.  
+>  또한 참조 데이터 세트가 포함된 캐시에 연결되도록 조회 변환을 구성할 수도 있습니다. 자세한 내용은 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.  
   
  이 자습서에서는 다음과 같은 두 가지 조회 변환 구성 요소를 패키지에 추가하고 구성하는 과정을 다룹니다.  
   

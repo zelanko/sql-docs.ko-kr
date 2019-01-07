@@ -83,7 +83,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]의 KPI(핵심 성과 지표) 
 
-현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 에서 직접 KPI를 만들 수 있습니다. KPI를 만들 때 데이터 집합 필드를 선택하고 이러한 값을 요약할 수 있습니다. 관련 콘텐츠를 선택하여 더 세부적으로 드릴스루할 수 있습니다.
+현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 에서 직접 KPI를 만들 수 있습니다. KPI를 만들 때 데이터 세트 필드를 선택하고 이러한 값을 요약할 수 있습니다. 관련 콘텐츠를 선택하여 더 세부적으로 드릴스루할 수 있습니다.
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  

@@ -19,7 +19,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0eb14757ba0b327d478f287e425ad5124a239043
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48187113"
@@ -41,7 +41,7 @@ ms.locfileid: "48187113"
   
  ![Naive bayes 상태 분포](../media/naive-bayes.gif "Naive bayes 상태 분포")  
   
- 여기에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 데이터 집합의 각 입력 열을 나열하고 예측 가능한 열의 각 상태가 지정되면 각 열의 상태 분포를 보여 줍니다.  
+ 여기에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 데이터 세트의 각 입력 열을 나열하고 예측 가능한 열의 각 상태가 지정되면 각 열의 상태 분포를 보여 줍니다.  
   
  모델의 이 뷰를 사용하여 예측 가능한 열의 상태를 차별화하는 데 중요한 입력 열을 식별할 수 있습니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "48187113"
   
      그 이유는 이미 밀접하게 관련된 두 열의 데이터를 사용하는 경우 두 열의 영향이 확대되므로 결과에 영향을 미치는 다른 요인이 불명확해질 수 있기 때문입니다.  
   
-     반대로 이 알고리즘에서 변수 간의 상관 관계를 식별하는 기능은 입력 간의 관계를 식별하기 위해 모델이나 데이터 집합을 탐색하는 경우에 유용합니다.  
+     반대로 이 알고리즘에서 변수 간의 상관 관계를 식별하는 기능은 입력 간의 관계를 식별하기 위해 모델이나 데이터 세트를 탐색하는 경우에 유용합니다.  
   
 -   **하나 이상의 예측 가능한 열** 예측 가능한 특성에는 불연속 값 또는 불연속화된 값이 포함되어야 합니다.  
   
-     예측 가능한 열의 값은 입력으로 처리할 수 있습니다. 이 방법은 열 간의 관계를 찾기 위해 새 데이터 집합을 탐색하는 경우에 유용할 수 있습니다.  
+     예측 가능한 열의 값은 입력으로 처리할 수 있습니다. 이 방법은 열 간의 관계를 찾기 위해 새 데이터 세트를 탐색하는 경우에 유용할 수 있습니다.  
   
 ## <a name="viewing-the-model"></a>모델 보기  
  **Microsoft Naive Bayes 뷰어**를 사용하여 모델을 탐색할 수 있습니다. 이 뷰어에서는 입력 특성과 예측 가능한 특성의 관계를 보여 줍니다. 또한 뷰어에서는 각 클러스터에 대한 자세한 프로필, 각 클러스터를 다른 클러스터와 구별하게 해 주는 특성 목록 및 전체 학습 데이터 집합의 특성도 제공합니다. 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.  

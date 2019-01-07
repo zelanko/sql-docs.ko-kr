@@ -18,7 +18,7 @@ ms.locfileid: "47690971"
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>모바일 보고서에 매개 변수 추가 | Reporting Services
 작성자와 보고서를 읽는 사람이 보고서를 필터링할 수 있도록 매개 변수가 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 작성할 수 있습니다. 매개 변수가 있는 보고서는 [원본 보고서에서 드릴스루](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)의 대상이 될 수도 있습니다. 
 
-매개 변수가 있는 모바일 보고서를 만들려면 적어도 하나의 매개 변수가 있는 공유 데이터 집합으로 시작합니다. [공유 데이터 집합에 매개 변수 만들기](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요. 모바일 보고서는 기본 매개 변수에 대해 null 값을 지원하지 않으므로, 매개 변수에 null이 아닌 기본값이 있는지 확인하세요.
+매개 변수가 있는 모바일 보고서를 만들려면 적어도 하나의 매개 변수가 있는 공유 데이터 세트로 시작합니다. [공유 데이터 집합에 매개 변수 만들기](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요. 모바일 보고서는 기본 매개 변수에 대해 null 값을 지원하지 않으므로, 매개 변수에 null이 아닌 기본값이 있는지 확인하세요.
 
 모바일 보고서에 매개 변수를 추가한 후 URL을 만들어 [쿼리 문자열 매개 변수가 있는 보고서를 열 수 있습니다.](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md) 
 
@@ -32,9 +32,9 @@ ms.locfileid: "47690971"
   
 4. **보고서 서버**를 선택한 다음 서버를 선택합니다.  
   
-5. 서버의 공유 데이터 집합으로 이동한 다음 매개 변수가 있는 데이터 집합을 선택합니다.  
+5. 서버의 공유 데이터 세트로 이동하고 다음 매개 변수가 있는 데이터 세트를 선택합니다.  
   
-   표에 데이터 집합의 데이터가 표시됩니다. 괄호 **{ }** 안에 녹색 원은 매개 변수가 있는 데이터 집합을 표시합니다.  
+   표에 데이터 세트의 데이터가 표시됩니다. 괄호 **{ }** 안에 녹색 원은 매개 변수가 있는 데이터 세트를 표시합니다.  
      
    ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
   

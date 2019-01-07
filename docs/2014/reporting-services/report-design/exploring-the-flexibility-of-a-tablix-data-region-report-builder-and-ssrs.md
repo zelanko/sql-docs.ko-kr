@@ -29,7 +29,7 @@ ms.locfileid: "48114343"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="changing-a-table-to-a-matrix"></a>테이블을 행렬로 변경  
- 기본적으로 테이블에는 보고서 데이터 집합의 값을 표시하는 정보 행이 있습니다. 일반적으로 테이블에는 세부 데이터를 그룹별로 구성하는 행 그룹이 포함된 다음 각 그룹에 기반한 집계된 값이 포함됩니다. 테이블을 행렬로 변경하려면 열 그룹을 추가해야 합니다. 일반적으로 데이터 영역에 행 그룹과 열 그룹이 모두 있는 경우 세부 정보 그룹을 제거하여 그룹에 대한 요약 값만 표시할 수 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
+ 기본적으로 테이블에는 보고서 데이터 세트의 값을 표시하는 정보 행이 있습니다. 일반적으로 테이블에는 세부 데이터를 그룹별로 구성하는 행 그룹이 포함된 다음 각 그룹에 기반한 집계된 값이 포함됩니다. 테이블을 행렬로 변경하려면 열 그룹을 추가해야 합니다. 일반적으로 데이터 영역에 행 그룹과 열 그룹이 모두 있는 경우 세부 정보 그룹을 제거하여 그룹에 대한 요약 값만 표시할 수 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
  정의에 따르면 행렬을 만들 때는 테이블릭스 모퉁이 셀을 추가해야 합니다. 이 영역의 셀을 병합하고 레이블을 추가할 수 있습니다. 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48114343"
  기본적으로 테이블릭스 데이터 영역에 그룹을 추가하면 행 그룹 머리글 영역의 셀에서 그룹 값이 열로 표시됩니다. 중첩된 그룹이 있으면 각 그룹은 별도의 열에 표시됩니다. 단계별 레이아웃을 만들려면 하나를 제외한 모든 그룹 열을 제거하고 나머지 열에 서식을 지정하여 그룹 계층 구조를 들여쓰기 형식의 텍스트로 표시합니다. 자세한 내용은 [단계별 보고서 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-an-adjacent-details-group"></a>인접 세부 정보 그룹 추가  
- 기본적으로 세부 정보 그룹은 그룹 계층 구조의 가장 안쪽 자식 그룹입니다. 그룹을 세부 정보 그룹 아래에 중첩할 수 없습니다. 예를 들어 인접 세부 정보 그룹을 추가로 만들어 판매 상위 5개 제품과 하위 5개 제품을 표시할 수 있습니다. 각 그룹에 필터 및 정렬 식을 추가할 수 있기 때문에 동일한 데이터 집합을 기반으로 하는 두 개의 세부 데이터 보기를 하나의 테이블릭스 데이터 영역에 표시할 수 있습니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md), [데이터 영역에서 그룹 추가 및 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+ 기본적으로 세부 정보 그룹은 그룹 계층 구조의 가장 안쪽 자식 그룹입니다. 그룹을 세부 정보 그룹 아래에 중첩할 수 없습니다. 예를 들어 인접 세부 정보 그룹을 추가로 만들어 판매 상위 5개 제품과 하위 5개 제품을 표시할 수 있습니다. 각 그룹에 필터 및 정렬 식을 추가할 수 있기 때문에 동일한 데이터 세트를 기반으로 하는 두 개의 세부 데이터 보기를 하나의 테이블릭스 데이터 영역에 표시할 수 있습니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md), [데이터 영역에서 그룹 추가 및 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

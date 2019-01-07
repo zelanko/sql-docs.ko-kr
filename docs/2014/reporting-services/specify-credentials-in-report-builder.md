@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48154103"
@@ -30,7 +30,7 @@ ms.locfileid: "48154103"
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
 ## <a name="understanding-when-credentials-are-used"></a>자격 증명이 사용되는 경우 이해  
- 보고서 작성기에서 자격 증명은 주로 보고서 서버에 연결할 때 또는 포함된 데이터 원본 작성, 데이터베이스 쿼리 실행 또는 보고서 미리 보기와 같은 데이터 관련 태스크를 위해 사용됩니다. 자격 증명은 보고서에 저장되지 않습니다. 자격 증명은 보고서 서버나 로컬 클라이언트에서 별도로 관리됩니다. 다음 목록에서는 제공해야 하는 자격 증명 유형, 자격 증명이 저장되는 위치 및 사용 방법을 설명합니다.  
+ 보고서 작성기에서 자격 증명은 주로 보고서 서버에 연결할 때 또는 포함된 데이터 원본 작성, 데이터 세트 쿼리 실행 또는 보고서 미리 보기와 같은 데이터 관련 태스크를 위해 사용됩니다. 자격 증명은 보고서에 저장되지 않습니다. 자격 증명은 보고서 서버나 로컬 클라이언트에서 별도로 관리됩니다. 다음 목록에서는 제공해야 하는 자격 증명 유형, 자격 증명이 저장되는 위치 및 사용 방법을 설명합니다.  
   
 -   [Reporting Services 로그인 대화 상자&#40;보고서 작성기&#41;](report-builder/reporting-services-login-dialog-box-report-builder.md)에 입력하는 보고서 서버 자격 증명  
   

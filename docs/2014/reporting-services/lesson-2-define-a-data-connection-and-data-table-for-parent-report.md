@@ -27,7 +27,7 @@ ms.locfileid: "48162653"
   
 2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 선택한 다음 **추가**를 클릭합니다. 메시지가 표시되면 **예** 를 클릭하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
-     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd** 가 추가되고 데이터 집합 디자이너가 열립니다.  
+     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd**가 추가되고 데이터 세트 디자이너가 열립니다.  
   
 3.  도구 상자 창에서 **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48162653"
     > [!WARNING]  
     >  만들기 선택을 취소해야 함  
   
-     이제 ADO.NET DataTable 개체를 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 DataTable 개체가 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet1에는 Product 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
+     이제 ADO.NET DataTable 개체를 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 세트 디자이너 페이지에서 추가한 DataTable 개체가 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet1에는 Product 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
   
 12. 파일을 저장합니다.  
   

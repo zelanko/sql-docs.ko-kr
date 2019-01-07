@@ -29,7 +29,7 @@ InScope(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (**문자열**) 범위를 지정하는 데이터 집합, 데이터 영역 또는 그룹의 이름입니다.  
+ (**문자열**) 범위를 지정하는 데이터 세트, 데이터 영역 또는 그룹의 이름입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **Boolean**을 반환합니다.  
@@ -56,7 +56,7 @@ InScope(scope)
  자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예에서는 항목의 현재 인스턴스가 `Product` 데이터 집합, 데이터 영역 또는 그룹 범위 내에 있는지 여부를 나타냅니다.  
+ 다음 코드 예에서는 항목의 현재 인스턴스가 `Product` 데이터 세트, 데이터 영역 또는 그룹 범위 내에 있는지 여부를 나타냅니다.  
   
 ```  
 =InScope("Product")  

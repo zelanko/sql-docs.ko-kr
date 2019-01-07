@@ -21,7 +21,7 @@ ms.lasthandoff: 11/16/2018
 ms.locfileid: "51812676"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 집합에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터의 형식에 따라 XML **Query** 나 요소 경로를 포함하여 데이터 집합 쿼리를 만듭니다. XML **쿼리**는 **\<Query>** 태그로 시작하며 데이터 원본에 따라 달라지는 네임스페이스와 XML 요소를 포함합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 세트에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터의 형식에 따라 XML **Query** 나 요소 경로를 포함하여 데이터 세트 쿼리를 만듭니다. XML **쿼리**는 **\<Query>** 태그로 시작하며 데이터 원본에 따라 달라지는 네임스페이스와 XML 요소를 포함합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
   
  다음과 같은 형식의 XML 데이터에 대한 XML 데이터 원본을 만들 수 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51812676"
   
 -   URL 요청의 경우 쿼리 매개 변수는 표준 URL 매개 변수로 포함됩니다.  
   
--   웹 서비스 요청의 경우 쿼리 매개 변수는 웹 서비스 메서드에 전달됩니다. 쿼리 매개 변수를 정의하려면 **데이터 집합 속성** 대화 상자의 **매개 변수** 페이지를 사용합니다. 
+-   웹 서비스 요청의 경우 쿼리 매개 변수는 웹 서비스 메서드에 전달됩니다. 쿼리 매개 변수를 정의하려면 **데이터 세트 속성** 대화 상자의 **매개 변수** 페이지를 사용합니다. 
   
 ### <a name="example"></a>예제  
  다음 표의 예에서는 보고서 서버 웹 서비스, XML 문서 및 포함 XML 데이터에서 데이터를 검색하는 방법을 보여 줍니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "51812676"
 ### <a name="example"></a>예제  
  다음 예에서는 XML 문서 DPNamespace.xml을 사용하며 이 문서는 표 아래에 제공되어 있습니다. 이 표에서는 네임스페이스 접두사가 포함된 XML ElementPath 구문의 두 가지 예를 보여 줍니다.  
   
-|XML 쿼리 요소|데이터 집합의 결과 필드|  
+|XML 쿼리 요소|데이터 세트의 결과 필드|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Value A: `https://schemas.microsoft.com/...`<br /><br /> Value B: `https://schemas.microsoft.com/...`<br /><br /> Value C: `https://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  

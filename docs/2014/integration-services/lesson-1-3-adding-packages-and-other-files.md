@@ -13,7 +13,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9e7b1be922673978ee512fac105a89670a6764f2
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48140583"
@@ -25,7 +25,7 @@ ms.locfileid: "48140583"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제를 설치하면 패키지 및 패키지가 사용하는 예제 데이터가 설치됩니다. 다음 패키지를 Deployment Tutorial 프로젝트에 추가합니다.  
   
--   **DataTransfer.** 플랫 파일에서 데이터를 추출하고 데이터 집합의 행을 조건부로 유지하기 위해 열 값을 평가하며 AdventureWorks 데이터베이스의 테이블에 데이터를 로드하는 기본 패키지입니다.  
+-   **DataTransfer.** 플랫 파일에서 데이터를 추출하고 데이터 세트의 행을 조건부로 유지하기 위해 열 값을 평가하며 AdventureWorks 데이터베이스의 테이블에 데이터를 로드하는 기본 패키지입니다.  
   
 -   **LoadXMLData.** XML 데이터 파일에서 데이터를 추출하고 열 값을 평가 및 집계하며 AdventureWorks 데이터베이스의 테이블에 데이터를 로드하는 데이터 전송 패키지입니다.  
   

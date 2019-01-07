@@ -74,7 +74,7 @@ ms.locfileid: "48171553"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
--   데이터 집합이 새 고객으로 업데이트될 때마다 모델을 자동으로 업데이트하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
+-   데이터 세트가 새 고객으로 업데이트될 때마다 모델을 자동으로 업데이트하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
 -   사례 레코드의 사용자 지정 구분 또는 사용자 지정 샘플링을 수행합니다.  
   

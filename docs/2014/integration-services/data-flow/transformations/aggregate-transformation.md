@@ -20,7 +20,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48205533"
@@ -33,7 +33,7 @@ ms.locfileid: "48205533"
   
 |연산|Description|  
 |---------------|-----------------|  
-|Group By|데이터 집합을 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql)를 참조하세요.|  
+|Group By|데이터 세트를 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql)를 참조하세요.|  
 |합계|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 [SUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql)을 참조하세요.|  
 |평균|열에 있는 열 값의 평균을 반환합니다. 숫자 데이터 형식의 열만 평균을 계산할 수 있습니다. 자세한 내용은 [AVG&#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql)를 참조하세요.|  
 |개수|그룹의 항목 개수를 반환합니다. 자세한 내용은 [COUNT&#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql)를 참조하세요.|  

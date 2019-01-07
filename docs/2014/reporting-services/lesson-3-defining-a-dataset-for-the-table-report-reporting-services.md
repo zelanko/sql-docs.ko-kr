@@ -1,5 +1,5 @@
 ---
-title: '3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services) | Microsoft Docs'
+title: '3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48086543"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
-  데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services)
+  데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
   
  보고서 디자이너에서 쿼리 디자이너를 사용하여 쿼리를 디자인할 수 있습니다. 이 자습서에서 판매 주문 정보를 검색 하는 쿼리 만듭니다는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
   

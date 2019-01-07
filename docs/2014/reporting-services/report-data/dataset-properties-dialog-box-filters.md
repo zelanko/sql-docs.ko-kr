@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 속성 대화 상자, 필터 | Microsoft Docs
+title: 데이터 세트 속성 대화 상자, 필터 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48095043"
 ---
-# <a name="dataset-properties-dialog-box-filters"></a>데이터 집합 속성 대화 상자, 필터
+# <a name="dataset-properties-dialog-box-filters"></a>데이터 세트 속성 대화 상자, 필터
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  
   
 ## <a name="options"></a>변수  

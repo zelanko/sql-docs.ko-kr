@@ -27,7 +27,7 @@ ms.locfileid: "48184313"
   
 2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 클릭한 다음 **추가**를 클릭합니다. 메시지가 표시되면 **예** 를 클릭하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
-     그러면 프로젝트에 새 XSD 파일 **DataSet2.xsd** 가 추가되고 데이터 집합 디자이너가 열립니다.  
+     그러면 프로젝트에 새 XSD 파일 **DataSet2.xsd**가 추가되고 데이터 세트 디자이너가 열립니다.  
   
 3.  도구 상자 창에서 **TableAdapter** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48184313"
   
 10. **생성할 메서드 선택** 페이지에서 **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소한 다음 **마침**을 클릭합니다.  
   
-     이제 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 **DataTable** 이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
+     이제 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 세트 디자이너 페이지에서 추가한 **DataTable**이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
   
 11. 파일을 저장합니다.  
   

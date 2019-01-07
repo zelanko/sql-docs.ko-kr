@@ -42,7 +42,7 @@ ms.locfileid: "52711362"
  [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>이 자습서의 데이터가 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 사용  
- 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명이 있어야 합니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 SQL Server의 인스턴스에서 처리해야 보고서 데이터 집합에 필요한 메타데이터가 반환됩니다.  
+ 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명이 있어야 합니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 SQL Server의 인스턴스에서 처리해야 보고서 데이터 세트에 필요한 메타데이터가 반환됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하는 경우 이점은 나머지 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 자습서에서도 동일한 방법을 사용하기 때문에 다른 자습서를 이용하는 방식을 미리 알 수 있다는 점입니다.  
   

@@ -21,7 +21,7 @@ ms.locfileid: "51813836"
   
 ## <a name="do"></a>해야 할 일  
   
-- 데이터 집합당 통합 문서 한 개를 지정합니다.  
+- 데이터 세트당 통합 문서 한 개를 지정합니다.  
 - 첫 번째 행에 열 머리글을 지정합니다.  
 - 각 열 내에서 데이터 형식을 일관성 있게 유지합니다.  
 - Excel에서 셀을 적절한 형식으로 지정합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "51813836"
           
 ## <a name="dont"></a>하지 않아야 할 일  
   
-- 이미지, 그래프, 피벗 테이블 또는 기타 포함된 개체를 데이터 집합 워크시트에 포함합니다.  
+- 이미지, 그래프, 피벗 테이블 또는 기타 포함된 개체를 데이터 세트 워크시트에 포함합니다.  
 - 총 또는 계산된 행을 포함합니다.  
 - 가져올 때 파일을 Excel에서 열린 상태로 유지합니다.  
 - 통화 또는 다른 기호를 추가하여 숫자를 수동으로 서식 지정합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "51813836"
   
 ## <a name="worksheets"></a>워크시트  
           
-Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 때에는 데이터 집합이 워크시트당 한 개만 있도록 합니다. 각 개별 워크시트를 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에 별도 테이블로 가져옵니다. 여러 Excel 원본에서 나온 동일한 이름의 워크시트는 가져올 때 증가하는 번호를 추가하여 이름이 변경됩니다. 예를 들어 통합 문서에 "MyWorksheet"라는 워크시트 3개가 있는 경우 두 번째 및 세 번째 워크시트는 "MyWorksheet0" 및 "MyWorksheet1"로 이름 변경됩니다. 다음 스크린샷은 가져오도록 준비된 최적의 Excel 워크시트의 처음 몇 행을 보여 줍니다.  
+Excel 파일을 모바일 보고서에 대한 데이터 세트로 준비할 때에는 데이터 세트가 워크시트당 한 개만 있도록 합니다. 각 개별 워크시트를 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에 별도 테이블로 가져옵니다. 여러 Excel 원본에서 나온 동일한 이름의 워크시트는 가져올 때 증가하는 번호를 추가하여 이름이 변경됩니다. 예를 들어 통합 문서에 "MyWorksheet"라는 워크시트 3개가 있는 경우 두 번째 및 세 번째 워크시트는 "MyWorksheet0" 및 "MyWorksheet1"로 이름 변경됩니다. 다음 스크린샷은 가져오도록 준비된 최적의 Excel 워크시트의 처음 몇 행을 보여 줍니다.  
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
@@ -52,7 +52,7 @@ Excel 파일을 모바일 보고서에 대한 데이터 집합으로 준비할 �
   
 ## <a name="cells"></a>셀  
   
-워크시트 데이터 집합의 각 열에 있는 셀 데이터는 일관성이 있어야 합니다. 각 열에는 가져올 때 데이터 형식이 할당됩니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 은 자동으로 데이터 형식을 문자열, double(숫자), 부울(true/false) 또는 날짜/시간으로 검색합니다. 같은 열에 데이터 형식이 섞여 있으면 이 검색이 부정확하거나 완전히 실패할 수 있습니다. 이 검색에서는 문자열 형식인 예상 열 머리글을 고려합니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 이 원하는 형식을 검색하도록 Excel에서 셀을 정확한 형식으로 서식 지정해야 합니다. 위의 예제에서 열 6개는 다음 형식으로 지정될 수 있습니다.  
+워크시트 데이터 세트의 각 열에 있는 셀 데이터는 일관성이 있어야 합니다. 각 열에는 가져올 때 데이터 형식이 할당됩니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 은 자동으로 데이터 형식을 문자열, double(숫자), 부울(true/false) 또는 날짜/시간으로 검색합니다. 같은 열에 데이터 형식이 섞여 있으면 이 검색이 부정확하거나 완전히 실패할 수 있습니다. 이 검색에서는 문자열 형식인 예상 열 머리글을 고려합니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 이 원하는 형식을 검색하도록 Excel에서 셀을 정확한 형식으로 서식 지정해야 합니다. 위의 예제에서 열 6개는 다음 형식으로 지정될 수 있습니다.  
 *  datetime 열  
 *  문자열 열  
 *  double 열  

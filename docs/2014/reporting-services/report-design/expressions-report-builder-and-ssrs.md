@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48110859"
@@ -23,7 +23,7 @@ ms.locfileid: "48110859"
   
  등의 응용 프로그램과 달리 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel 워크시트에서 직접 데이터를 사용 하 여 작업할 보고서에서 데이터에 대 한 자리 표시자 인 식을 사용 하 여 작동 합니다. 계산된 식을 사용하여 실제 데이터를 보려면 보고서 미리 보기를 수행해야 합니다. 보고서를 실행하면 보고서 처리기가 보고서 데이터와 보고서 레이아웃 요소(예: 테이블 및 차트)가 결합될 때 각 식을 계산합니다.  
   
- 보고서를 디자인할 때 보고서 항목에 대한 여러 식이 설정됩니다. 예를 들어 데이터 창의 필드를 보고서 디자인 화면의 테이블 셀로 끌어서 놓으면 입력란 값이 필드의 간단한 식으로 설정됩니다. 다음 그림에서는 보고서 데이터 창에 데이터 집합 필드 ID, Name, SalesTerritory, Code 및 Sales가 표시됩니다. [Name], [Code] 및 [Sales]라는 세 개의 필드가 테이블에 추가되었습니다. 디자인 화면에서 표기법 [Name]은 기본 식 `=Fields!Name.Value`를 나타냅니다.  
+ 보고서를 디자인할 때 보고서 항목에 대한 여러 식이 설정됩니다. 예를 들어 데이터 창의 필드를 보고서 디자인 화면의 테이블 셀로 끌어서 놓으면 입력란 값이 필드의 간단한 식으로 설정됩니다. 다음 그림에서는 보고서 데이터 창에 데이터 세트 필드 ID, Name, SalesTerritory, Code 및 Sales가 표시됩니다. [Name], [Code] 및 [Sales]라는 세 개의 필드가 테이블에 추가되었습니다. 디자인 화면에서 표기법 [Name]은 기본 식 `=Fields!Name.Value`를 나타냅니다.  
   
  ![rs_DataDesignandPreview](../media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110859"
 
   
 ### <a name="report-model-formulas"></a>보고서 모델 수식  
- 보고서 모델을 데이터 원본으로 사용하는 데이터 집합에 대한 쿼리를 디자인할 때 *수식*을 만들 수 있습니다. 수식은 보고서 모델의 데이터를 기반으로 하는 보고서의 값에 대해 수행되는 계산입니다.  
+ 보고서 모델을 데이터 원본으로 사용하는 데이터 세트에 대한 쿼리를 디자인할 때 *수식*을 만들 수 있습니다. 수식은 보고서 모델의 데이터를 기반으로 하는 보고서의 값에 대해 수행되는 계산입니다.  
   
  자세한 내용은 [보고서 모델 쿼리의 수식&#40;보고서 작성기 및 SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48110859"
   
 |항목|표시 텍스트 예|식 텍스트 예|  
 |----------|--------------------------|-----------------------------|  
-|데이터 집합 필드|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
+|데이터 세트 필드|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |보고서 매개 변수|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
 |기본 제공 필드|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |표시 텍스트에 사용되는 리터럴 문자|`\[Sales\]`|`[Sales]`|  

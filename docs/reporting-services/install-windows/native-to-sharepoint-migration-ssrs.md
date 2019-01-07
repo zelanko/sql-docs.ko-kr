@@ -45,7 +45,7 @@ ms.locfileid: "51814036"
 |보고서|예|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
 |데이터 원본|예|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
 |모델|예||  
-|데이터 집합|예||  
+|데이터 세트|예||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
 |일정|예|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
 |구독|예|List Subscriptions 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드를 참조하세요.|  

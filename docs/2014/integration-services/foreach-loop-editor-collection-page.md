@@ -15,7 +15,7 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9226df03f6d1ef018991d4d958430a315ac81cd5
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48140753"
@@ -113,7 +113,7 @@ ms.locfileid: "48140753"
  **관련 항목:** [For Each Item 열 대화 상자 UI 참조](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach ADO 열거자  
- 변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 집합을 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 집합의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 집합을 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
+ 변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 세트를 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 세트의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 세트를 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
   
  **ADO 개체 원본 변수**  
  목록에서 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "48140753"
  첫 번째 테이블의 행만 열거하려면 선택합니다.  
   
  **모든 테이블의 행(ADO.NET 데이터 집합에만 해당)**  
- 모든 테이블의 행을 열거하려면 선택합니다. 이 옵션은 열거할 모든 개체가 같은 ADO.NET 데이터 집합의 멤버인 경우에만 사용할 수 있습니다.  
+ 모든 테이블의 행을 열거하려면 선택합니다. 이 옵션은 열거할 모든 개체가 같은 ADO.NET 데이터 세트의 멤버인 경우에만 사용할 수 있습니다.  
   
  **모든 테이블(ADO.NET 데이터 집합에만 해당)**  
  테이블만 열거하려면 선택합니다.  

@@ -66,21 +66,21 @@ ms.locfileid: "48180355"
   
  ![의미 체계 모델 쿼리 디자이너 UI](../media/rsqd-dsawmodel-smql.gif "의미 체계 모델 쿼리 디자이너 UI")  
   
- 보고서 모델 쿼리 디자이너를 사용하려면 게시된 모델을 가리키는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 집합을 정의할 때 보고서 모델 쿼리 디자이너에서 데이터 집합 쿼리를 열 수 있습니다. 그래픽 모드 또는 텍스트 기반 모드로 보고서 모델 쿼리 디자이너를 사용할 수 있습니다. 도구 모음의 **텍스트로 편집** 단추를 토글하여 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 전환할 수 있습니다. 자세한 내용은 [Report Model Query Designer User Interface](report-model-query-designer-user-interface.md)을 참조하세요.  
+ 보고서 모델 쿼리 디자이너를 사용하려면 게시된 모델을 가리키는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 세트를 정의할 때 보고서 모델 쿼리 디자이너에서 데이터 세트 쿼리를 열 수 있습니다. 그래픽 모드 또는 텍스트 기반 모드로 보고서 모델 쿼리 디자이너를 사용할 수 있습니다. 도구 모음의 **텍스트로 편집** 단추를 토글하여 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 전환할 수 있습니다. 자세한 내용은 [Report Model Query Designer User Interface](report-model-query-designer-user-interface.md)을 참조하세요.  
   
 ##  <a name="MDX"></a> MDX 쿼리 디자이너  
  MDX(Multidimensional Expression) 쿼리 디자이너는 다차원 큐브가 있는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대해 실행되는 쿼리를 만들거나 수정하는 데 사용됩니다. 다음 이미지는 쿼리와 필터가 정의된 후의 MDX 쿼리 디자이너를 보여 줍니다.  
   
  ![Analysis Services MDX 쿼리 디자이너, 디자인 뷰](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 쿼리 디자이너, 디자인 뷰")  
   
- MDX 쿼리 디자이너를 사용하려면 이미 처리된 유효한 Analysis Services 큐브가 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 집합을 정의할 때 MDX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 자세한 내용은 [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)을 참조하세요.  
+ MDX 쿼리 디자이너를 사용하려면 이미 처리된 유효한 Analysis Services 큐브가 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 세트를 정의할 때 MDX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 자세한 내용은 [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)을 참조하세요.  
   
 ##  <a name="DMX"></a> DMX 쿼리 디자이너  
  DMX(Data Mining Prediction Expression) 쿼리 디자이너는 마이닝 모델이 있는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대해 실행되는 쿼리를 만들거나 수정하는 데 사용됩니다. 다음 이미지는 모델과 입력 테이블을 선택한 후의 DMX 쿼리 디자이너를 보여 줍니다.  
   
  ![Analysis Services DMX 쿼리 디자이너, 디자인 뷰](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 쿼리 디자이너, 디자인 뷰")  
   
- DMX 쿼리 디자이너를 사용하려면 유효한 데이터 마이닝 모델이 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 집합을 정의할 때 DMX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 모델을 선택하고 나면 보고서에 데이터를 제공하는 데이터 마이닝 예측 쿼리를 만들 수 있습니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+ DMX 쿼리 디자이너를 사용하려면 유효한 데이터 마이닝 모델이 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 세트를 정의할 때 DMX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 모델을 선택하고 나면 보고서에 데이터를 제공하는 데이터 마이닝 예측 쿼리를 만들 수 있습니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI 쿼리 디자이너  
  [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 쿼리 디자이너는 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 데이터베이스에서 데이터를 검색하는 데 사용됩니다. 이 쿼리 디자이너를 사용 하려면 해야는 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 하나 이상의 InfoCube, MultiProvider 또는 웹 가능 쿼리가 정의 된 데이터 원본입니다. 다음 이미지는 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 쿼리 디자이너를 보여줍니다.  

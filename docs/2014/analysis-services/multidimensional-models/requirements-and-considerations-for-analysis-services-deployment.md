@@ -24,7 +24,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175f3922a5c8d78f94db78cdbaf01534c5c7bc9d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48172353"
@@ -65,7 +65,7 @@ ms.locfileid: "48172353"
  집계에는 추가된 집계에 비례하여 추가 공간이 필요합니다. 즉, 집계가 많을수록 공간도 더 필요합니다. 필요 없는 집계를 만들지 않으려면 집계에 필요한 추가 디스크 공간이 대체로 기본 관계형 데이터베이스에 저장되는 데이터 크기의 약 10% 이하여야 합니다.  
   
  데이터 마이닝  
- 기본적으로 마이닝 구조는 학습에 사용된 데이터 집합을 디스크에 캐시합니다. 마이닝 구조 개체에서 **구조 지우기 처리** 처리 옵션을 사용하여 디스크에서 이 캐시된 데이터를 제거할 수 있습니다. 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
+ 기본적으로 마이닝 구조는 학습에 사용된 데이터 세트를 디스크에 캐시합니다. 마이닝 구조 개체에서 **구조 지우기 처리** 처리 옵션을 사용하여 디스크에서 이 캐시된 데이터를 제거할 수 있습니다. 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
  개체 처리  
  처리 과정에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 처리가 완료될 때까지 처리 트랜잭션에서 처리 중인 개체의 복사본을 디스크에 저장합니다. 처리가 완료되면 원래 개체가 개체의 처리된 복사본으로 바뀝니다. 따라서 각 개체의 복사본을 처리하기 위해서는 충분한 추가 디스크 공간이 있어야 합니다. 예를 들어 단일 트랜잭션에서 전체 큐브를 처리하려면 전체 큐브의 복사본을 저장하기에 충분한 하드 디스크 공간이 있어야 합니다.  
