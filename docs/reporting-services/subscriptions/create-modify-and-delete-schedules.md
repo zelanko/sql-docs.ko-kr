@@ -34,7 +34,7 @@ ms.locfileid: "47679791"
   
 -   **웹 포털:** 사이트 설정 페이지의 공유 일정 페이지에서 마지막 실행 날짜, 다음 실행 날짜 및 상태 필드의 값을 검토합니다. 일정이 만료되어 더 이상 실행되지 않으면 상태 필드에 만료 날짜가 나타납니다. 자세한 내용은 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** 지정한 공유 일정의 보고서 페이지를 봅니다. 이 페이지에는 공유 일정을 사용하는 모든 보고서 및 공유 데이터 집합의 목록이 나열됩니다. 자세한 내용은 [SQL Server Management Studio의 Reporting Services ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)를 참조하세요.
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** 지정한 공유 일정의 보고서 페이지를 봅니다. 이 페이지에는 공유 일정을 사용하는 모든 보고서 및 공유 데이터 세트의 목록이 나열됩니다. 자세한 내용은 [SQL Server Management Studio의 Reporting Services ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)를 참조하세요.
   
 -  **:** 보고서 실행 로그 파일 또는 추적 로그에서 보고서가 일정에 지정된 시간에 실행되었는지 확인합니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47679791"
 1.  개체 탐색기에서 보고서 서버 노드를 확장합니다.  
 2.  공유 일정이 보고서에서 현재 사용되지 않는 것을 확인하려면 공유 일정 폴더를 확장하고 일정을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 3. **보고서** 탭을 클릭하여 현재 일정을 사용 중인 보고서 목록을 확인합니다.
- **취소**를 클릭합니다.
+**취소**를 클릭합니다.
 4.  공유 일정 폴더를 확장하고 삭제할 일정을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다. **카탈로그 항목 삭제** 대화 상자가 나타납니다.  
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

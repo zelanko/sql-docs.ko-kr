@@ -22,15 +22,15 @@ ms.locfileid: "51813766"
   
 이 문서에서는 다음 작업을 안내합니다.   
   
-- AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 집합 만들기  
--  [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 세트 만들기.  
+- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에서 Reporting Services 모바일 보고서 만들기  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 모바일 보고서 게시  
 - Power BI 모바일 앱에서 모바일 보고서 보기  
   
 ## <a name="before-we-start"></a>시작하기 전에  
 이러한 단계를 따르려면 다음 제품이 필요합니다.  
   
-* 데이터 원본 및 KPI를 만들고 데이터 집합 및 모바일 보고서를 게시하려면 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
+* 데이터 원본 및 KPI를 만들고 데이터 세트 및 모바일 보고서를 게시하려면 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
 * [공유 데이터 집합을 만들려면](../install-windows/install-report-builder.md)  
 * 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
 * [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)  
@@ -63,7 +63,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
 ## <a name="shared-dataset">공유 데이터 집합 만들기</a>  
   
-기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 집합을 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](../install-windows/install-report-builder.md)하거나 웹 포털에서 시작합니다. 세 개의 데이터 집합, 즉 KPI 값에 대한 데이터 집합, KPI 추세에 데이터 집합 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 집합을 만듭니다.     
+기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 세트를 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](../install-windows/install-report-builder.md)하거나 웹 포털에서 시작합니다. 세 개의 데이터 세트, 즉 KPI 값에 대한 데이터 세트, KPI 추세에 데이터 세트 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 세트를 만듭니다.     
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **페이지가 매겨진 보고서** 를 클릭하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 시작합니다.  
   
@@ -87,9 +87,9 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
   
    ![PBI_SSMRP_RB_QueryDesignr600](../../reporting-services/mobile-reports/media/pbi-ssmrp-rb-querydesignr600.png)  
    
-8. 완료되면 데이터 집합을 [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)] 보고서 서버에 저장합니다.    
+8. 완료되면 데이터 세트를 [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)] 보고서 서버에 저장합니다.    
    
-이제 이 데이터 집합을 KPI 및 모바일 보고서의 기초로 사용할 수 있습니다.  동일한 데이터 원본에 대해 여러 데이터 집합을 만들 수 있습니다. 또한 이러한 공유 데이터 집합에 대해 여러 KPI 및 모바일 보고서를 만들 수 있습니다.   
+이제 이 데이터 세트를 KPI 및 모바일 보고서의 기초로 사용할 수 있습니다.  동일한 데이터 원본에 대해 여러 데이터 세트를 만들 수 있습니다. 또한 이러한 공유 데이터 세트에 대해 여러 KPI 및 모바일 보고서를 만들 수 있습니다.   
   
 ## <a name="create-KPI">KPI 만들기</a>  
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 바로 KPI를 만듭니다.    
@@ -98,7 +98,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
-   KPI 만들기 화면에서 수동으로 값을 입력하거나 공유 데이터 집합을 사용할 수 있습니다.    
+   KPI 만들기 화면에서 수동으로 값을 입력하거나 공유 데이터 세트를 사용할 수 있습니다.    
 2. **값** 을 **수동 설정** 에서 **데이터 집합 필드**로 변경합니다.  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
@@ -107,7 +107,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
-4. 데이터 집합에서 필드를 선택합니다.    
+4. 데이터 세트에서 필드를 선택합니다.    
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickfield.png)  
      
@@ -177,9 +177,9 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
    
 2. 사용자 고유의 데이터를 추가하려면 오른쪽 위에서 **데이터 추가** 를 클릭하고 데이터로 이동합니다.    
   
-3. 로컬 Excel 통합 문서의 데이터를 사용할 수 있지만 이 예에서는 데이터가 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털의 공유 데이터 집합에 있습니다. "서버 추가" 메시지가 표시됩니다.  
+3. 로컬 Excel 통합 문서의 데이터를 사용할 수 있지만 이 예에서는 데이터가 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털의 공유 데이터 세트에 있습니다. "서버 추가" 메시지가 표시됩니다.  
   
-4. 서버를 선택한 다음 사용자가 만든 데이터 집합을 선택합니다.  
+4. 서버를 선택한 다음, 사용자가 만든 데이터 세트를 선택합니다.  
    
 3. 다시 **데이터** 탭의 **데이터 속성** 창에서 **크기 표현**, **색 표현**및 기타 속성을 사용자 고유의 데이터에 있는 필드로 변경합니다. 
    
@@ -192,7 +192,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 
 ## <a name="add-a-gauge-to-your-mobile-report"></a>모바일 보고서에 계기 추가
 
-게이지를 추가하여 동일한 데이터 집합으로 연간 누계 판매액을 지난 해 판매액과 비교해 보겠습니다.
+게이지를 추가하여 동일한 데이터 세트로 연간 누계 판매액을 지난 해 판매액과 비교해 보겠습니다.
 
 1. 레이아웃 탭에서 반도넛형을 캔버스로 끌어 트리 맵에 놓고 왼쪽 아래 모서리를 끌어 3x2(가로x세로) 사각형으로 만듭니다. 
 

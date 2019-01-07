@@ -27,7 +27,7 @@ ms.locfileid: "50021927"
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="BlankReport"></a>1. 빈 보고서, 데이터 원본 및 데이터 집합 만들기  
+## <a name="BlankReport"></a>1. 빈 보고서, 데이터 원본 및 데이터 세트 만들기  
   
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "50021927"
   
 6.  **확인**을 클릭합니다.  
   
-### <a name="to-create-a-new-dataset"></a>새 데이터 집합을 만들려면  
+### <a name="to-create-a-new-dataset"></a>새 데이터 세트를 만들려면  
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 집합**을 클릭합니다.  
   

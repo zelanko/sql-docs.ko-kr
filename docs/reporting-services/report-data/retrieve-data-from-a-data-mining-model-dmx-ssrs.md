@@ -25,9 +25,9 @@ ms.locfileid: "50031432"
   
  단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 세트에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
- 데이터 집합을 만들면 데이터 집합의 이름이 보고서 데이터 창의 해당 데이터 원본 아래에 노드로 나타납니다.  
+ 데이터 세트를 만들면 데이터 세트의 이름이 보고서 데이터 창의 해당 데이터 원본 아래에 노드로 나타납니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "50031432"
   
      데이터 원본이 보고서 데이터 창에 나타납니다.  
   
-### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Microsoft SQL Server Analysis Services에 대한 데이터 집합을 만들려면  
+### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Microsoft SQL Server Analysis Services에 대한 데이터 세트를 만들려면  
   
 1.  **보고서 데이터** 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "50031432"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     데이터 집합 및 해당 필드 컬렉션이 데이터 원본 노드 아래의 보고서 데이터 창에 표시됩니다.  
+     데이터 세트 및 해당 필드 컬렉션이 데이터 원본 노드 아래의 보고서 데이터 창에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   

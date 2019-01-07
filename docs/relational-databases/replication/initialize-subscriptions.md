@@ -22,7 +22,7 @@ ms.locfileid: "47744950"
 ---
 # <a name="initialize-subscriptions"></a>구독 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  구독자는 초기화되어야만 복제된 데이터를 받을 수 있습니다. 초기 데이터 집합은 필요 없지만 구독자에는 적어도 복제된 각 개체에 대한 스키마와 복제에 필요한 메타데이터 테이블 및 프로시저가 있어야 합니다.  
+  구독자는 초기화되어야만 복제된 데이터를 받을 수 있습니다. 초기 데이터 세트는 필요 없지만 구독자에는 적어도 복제된 각 개체에 대한 스키마와 복제에 필요한 메타데이터 테이블 및 프로시저가 있어야 합니다.  
   
 ## <a name="options"></a>Options  
  **구독 속성**  
