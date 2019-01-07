@@ -18,7 +18,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b79e568f6dd8a3f0aac8e6f226f2b1719a41ff5
 ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/26/2018
 ms.locfileid: "50148252"
@@ -52,7 +52,7 @@ SELECT [<axis_specification>
 |--------------|-----------------|  
 |`ACTION_TYPE`|셀에 존재하는 동작 유형을 나타내는 비트 마스크입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 참고: where 절 내에 집합을 포함하는 쿼리는 드릴스루 동작을 포함하지 않습니다.|  
 |**BACK_COLOR**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 배경색입니다. 자세한 내용은 [FORE_COLOR 및 BACK_COLOR 내용&#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)을 참조하세요.|  
-|`CELL_ORDINAL`|데이터 집합 내의 셀 서수 번호입니다.|  
+|`CELL_ORDINAL`|데이터 세트 내의 셀 서수 번호입니다.|  
 |**FONT_FLAGS**|글꼴 효과를 자세하게 지정하는 비트 마스크입니다. 예를 들어 5는 굵게(`MDFF_BOLD`) 및 밑줄 (`MDFF_UNDERLINE`) 글꼴 효과의 조합을 나타냅니다. 값은 다음과 같은 하나 이상의 상수에 대한 비트 OR 연산의 결과입니다.<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 데 사용할 글꼴입니다.|  
 |**FONT_SIZE**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 데 사용할 글꼴 크기입니다.|  
@@ -81,7 +81,7 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR
  일반 행 집합을 반환하는 MDX 쿼리는 셀 속성을 반환하지 않습니다. 이 경우에 각 셀은 `FORMATTED_VALUE` 셀 속성만 반환되는 것처럼 표시됩니다.  
   
 ## <a name="setting-cell-properties"></a>셀 속성 설정  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다양한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다양한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
   
 ```  
 WITH MEMBER MEASURES.CELLPROPERTYDEMO AS [Measures].[Internet Sales Amount]  

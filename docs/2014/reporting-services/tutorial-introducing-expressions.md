@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48075853"
@@ -59,8 +59,8 @@ ms.locfileid: "48075853"
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
-##  <a name="Setup"></a> 1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 집합 만들기  
- 테이블 보고서, 데이터 원본 및 데이터 집합을 만듭니다. 테이블의 레이아웃을 지정할 때는 몇몇 필드만 포함하고, 마법사를 완료한 후 열을 수동으로 추가합니다. 마법사에서는 손쉽게 테이블의 레이아웃을 지정하고 스타일을 적용할 수 있습니다.  
+##  <a name="Setup"></a> 1. 테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 세트 만들기  
+ 테이블 보고서, 데이터 원본 및 데이터 세트를 만듭니다. 테이블의 레이아웃을 지정할 때는 몇몇 필드만 포함하고, 마법사를 완료한 후 열을 수동으로 추가합니다. 마법사에서는 손쉽게 테이블의 레이아웃을 지정하고 스타일을 적용할 수 있습니다.  
   
 > [!NOTE]  
 >  이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "48075853"
   
 17. 에 **스타일을 선택 합니다** 페이지에서 **슬레이트**를 클릭 하 고 **마침**합니다.  
   
-##  <a name="UpdateNames"></a> 2. 데이터 원본 및 데이터 집합의 기본 이름 업데이트  
+##  <a name="UpdateNames"></a> 2. 데이터 원본 및 데이터 세트의 기본 이름 업데이트  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>데이터 원본의 기본 이름을 업데이트하려면  
   
@@ -165,17 +165,17 @@ ms.locfileid: "48075853"
   
 2.  **DataSource1**을 마우스 오른쪽 단추로 클릭하고 **데이터 원본 속성**을 클릭합니다.  
   
-3.  **이름** 상자에 **ExpressionsDataSource**를 입력합니다.  
+3.   **이름** 상자에 **ExpressionsDataSource**를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-#### <a name="to-update-the-default-name-of-the-dataset"></a>데이터 집합의 기본 이름을 업데이트하려면  
+#### <a name="to-update-the-default-name-of-the-dataset"></a>데이터 세트의 기본 이름을 업데이트하려면  
   
-1.  보고서 데이터 창에서 **데이터 집합**을 확장합니다.  
+1.  보고서 데이터 창에서 **데이터 세트**를 확장합니다.  
   
 2.  **DataSet1**을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
   
-3.  **이름** 상자에 **Expressions**를 입력합니다.  
+3.   **이름** 상자에 **Expressions**를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ ms.locfileid: "48075853"
   
 7.  **값** 목록에서 **FirstName**을 두 번 클릭합니다.  
   
-8.  **, 1)** 을 입력합니다.  
+8.   **, 1)** 을 입력합니다.  
   
      이 식은 **FirstName** 값에서 가장 왼쪽의 한 자를 추출합니다.  
   
@@ -298,19 +298,19 @@ ms.locfileid: "48075853"
 14. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
 ##  <a name="Lookup"></a> 5. CountryRegion 이름 조회  
- CountryRegion 데이터 집합을 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
+ CountryRegion 데이터 세트를 만들고 **Lookup** 함수를 사용하여 국가/지역의 식별자 대신 국가/지역의 이름을 표시합니다.  
   
-#### <a name="to-create-the-countryregion-dataset"></a>CountryRegion 데이터 집합을 만들려면  
+#### <a name="to-create-the-countryregion-dataset"></a>CountryRegion 데이터 세트를 만들려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  보고서 데이터 창에서 **새로 만들기** 를 클릭하고 **데이터 집합**을 클릭합니다.  
+2.  보고서 데이터 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트**를 클릭합니다.  
   
 3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
   
 4.  **데이터 원본** 목록에서 ExpressionsDataSource를 선택합니다.  
   
-5.  **이름** 상자에 **CountryRegion**을 입력합니다.  
+5.   **이름** 상자에 **CountryRegion**을 입력합니다.  
   
 6.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   
@@ -341,7 +341,7 @@ ms.locfileid: "48075853"
   
 11. **확인**을 다시 클릭하여 **데이터 집합 속성** 대화 상자를 닫습니다.  
   
-#### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 집합에서 값을 조회하려면  
+#### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 세트에서 값을 조회하려면  
   
 1.  **Country Region ID** 열 제목을 클릭하고 텍스트 ID를 삭제합니다.  
   
@@ -506,7 +506,7 @@ ms.locfileid: "48075853"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. **끝** 값의 입력란에 **0**을 입력합니다.  
+31.  **끝** 값의 입력란에 **0**을 입력합니다.  
   
 32. 옆쪽 화살표가 있는 행을 클릭하고 **삭제**를 클릭합니다.  
   
@@ -533,7 +533,7 @@ ms.locfileid: "48075853"
   
      **보고서 매개 변수 속성** 대화 상자가 열립니다.  
   
-3.  **프롬프트**에 **Choose color**를 입력합니다.  
+3.   **프롬프트**에 **Choose color**를 입력합니다.  
   
 4.  **이름**에 **RowColor**를 입력합니다.  
   
@@ -545,25 +545,25 @@ ms.locfileid: "48075853"
   
 8.  **레이블** 상자에 **Yellow**를 입력합니다.  
   
-9. **값** 상자에 **Yellow**를 입력합니다.  
+9.  **값** 상자에 **Yellow**를 입력합니다.  
   
 10. **추가**를 클릭합니다.  
   
-11. **레이블** 상자에 **Green**을 입력합니다.  
+11.  **레이블** 상자에 **Green**을 입력합니다.  
   
-12. **값** 상자에 **PaleGreen**을 입력합니다.  
+12.  **값** 상자에 **PaleGreen**을 입력합니다.  
   
 13. **추가**를 클릭합니다.  
   
-14. **레이블** 상자에 **Blue**를 입력합니다.  
+14.  **레이블** 상자에 **Blue**를 입력합니다.  
   
-15. **값** 상자에 **LightBlue**를 입력합니다.  
+15.  **값** 상자에 **LightBlue**를 입력합니다.  
   
 16. **추가**를 클릭합니다.  
   
-17. **레이블** 상자에 **Pink**를 입력합니다.  
+17.  **레이블** 상자에 **Pink**를 입력합니다.  
   
-18. **값** 상자에 **Pink**를 입력합니다.  
+18.  **값** 상자에 **Pink**를 입력합니다.  
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,7 +604,7 @@ ms.locfileid: "48075853"
 16. 왼쪽 괄호를 삭제한 다음 **,“Expressions”)** 를 입력합니다.  
   
     > [!NOTE]  
-    >  식은 데이터 행 수를 셀 데이터 집합의 이름입니다.  
+    >  식은 데이터 행 수를 셀 데이터 세트의 이름입니다.  
   
 17. **연산자**를 확장하고 **산술**을 클릭합니다.  
   

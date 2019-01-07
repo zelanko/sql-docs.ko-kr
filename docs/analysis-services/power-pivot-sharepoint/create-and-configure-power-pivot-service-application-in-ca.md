@@ -75,7 +75,7 @@ ms.locfileid: "38982605"
   
      서비스 연결에 대한 자세한 내용은 [중앙 관리에서 SharePoint 웹 애플리케이션에 파워 피벗 서비스 애플리케이션 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)을 참조하세요.  
   
-10.  **확인.** 을 클릭합니다. 서비스가 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
+10. **확인.** 을 클릭합니다. 서비스가 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
   
 ##  <a name="ConfigApp"></a> PowerPivot 서비스 응용 프로그램 구성  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 기본 구성을 사용하여 만들어집니다. 대부분의 시나리오에서는 기본 설정을 사용하는 것이 좋습니다. 응답 시간이 느리거나 연결이 끊어진 경우 또는 특정 SharePoint 웹 애플리케이션에 대한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 구성을 변경하는 경우에만 기본 설정을 변경합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "38982605"
   
 3.  대시보드 오른쪽 위 모퉁이에 있는 **동작** 목록에서 **서비스 애플리케이션 설정 구성**을 클릭합니다.  
   
-4.  **데이터베이스 로드 제한 시간**에서 값을 늘리거나 줄여서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스가 데이터 로드 요청을 전달한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 인스턴스에서 응답을 기다리는 시간을 변경합니다. 데이터 집합이 크면 네트워크를 통해 이동하는 데 시간이 걸리므로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 인스턴스가 Excel 통합 문서를 검색하고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 쿼리 처리를 위해 Analysis Services 인스턴스로 이동할 충분한 시간을 허용해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 매우 클 수 있으므로 기본값은 30분입니다.  
+4.  **데이터베이스 로드 제한 시간**에서 값을 늘리거나 줄여서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스가 데이터 로드 요청을 전달한 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 인스턴스에서 응답을 기다리는 시간을 변경합니다. 데이터 세트가 크면 네트워크를 통해 이동하는 데 시간이 걸리므로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 인스턴스가 Excel 통합 문서를 검색하고 쿼리 처리를 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 Analysis Services 인스턴스로 이동할 충분한 시간을 허용해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 매우 클 수 있으므로 기본값은 30분입니다.  
   
 5.  **연결 풀 제한 시간**에서 값을 늘리거나 줄여서 유휴 데이터 연결이 열려 있는 상태로 유지되는 시간(분)을 변경합니다. 기본값은 30분입니다. 이 기간 동안 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스는 같은 SharePoint 사용자가 같은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대해 보내는 읽기 전용 요청에 유휴 데이터 연결을 다시 사용합니다. 지정된 기간 동안 해당 데이터에 대해 추가 요청이 수신되지 않는 경우 풀에서 연결이 제거됩니다. 유효한 값은 1초에서 3600초까지입니다. 연결 풀에 대한 자세한 내용은 [구성 설정 참조&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)를 참조하세요.  
   

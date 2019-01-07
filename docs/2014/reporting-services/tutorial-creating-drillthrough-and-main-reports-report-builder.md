@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48093823"
@@ -86,7 +86,7 @@ ms.locfileid: "48093823"
  이 자습서를 실행하려면 Contoso Sales 큐브에 액세스해야 합니다. 이 요구 사항은 드릴스루 보고서와 주 보고서 모두에 적용됩니다. 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
 ##  <a name="DMatrixAndDataset"></a> 1. 테이블 또는 행렬 마법사에서 드릴스루 보고서 만들기  
- 시작 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다. 마법사에서는 두 가지 모드인 보고서 디자인 모드와 공유 데이터 집합 디자인 모드를 사용할 수 있습니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
+ 시작 대화 상자에서 **테이블 또는 행렬 마법사**를 사용하여 행렬 보고서를 만듭니다. 마법사에서는 두 가지 모드인 보고서 디자인 모드와 공유 데이터 세트 디자인 모드를 사용할 수 있습니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48093823"
 14. **다음**을 클릭합니다.  
   
 ##  <a name="DMDXQuery"></a> 1b 합니다. MDX 쿼리 만들기  
- 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 집합을 사용하거나 해당 보고서에만 사용할 포함된 데이터 집합을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 집합을 만듭니다.  
+ 보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48093823"
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은 다음, [데이터 집합을 만들려면](#DSkip)의 6단계를 진행합니다.  
+    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#DSkip)의 6단계를 진행합니다.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -439,7 +439,7 @@ ms.locfileid: "48093823"
 14. **다음**을 클릭합니다.  
   
 ##  <a name="MMDXQuery"></a> 1b 합니다. MDX 쿼리 만들기  
- 다음으로, 포함된 데이터 집합을 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 집합 자체를 만듭니다.  
+ 다음으로, 포함된 데이터 세트를 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 세트 자체를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
@@ -448,7 +448,7 @@ ms.locfileid: "48093823"
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은 다음, [데이터 집합을 만들려면](#MSkip)의 5단계를 진행합니다.  
+    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -599,7 +599,7 @@ ms.locfileid: "48093823"
   
 3.  **동작** 탭을 클릭합니다.  
   
-4.  **보고서로 이동**을 선택합니다.  
+4.   **보고서로 이동**을 선택합니다.  
   
 5.  **보고서 지정**에서 **찾아보기**를 클릭한 다음 이름이 ResellerVSOnlineDrillthrough인 드릴스루 보고서를 찾습니다.  
   
@@ -609,7 +609,7 @@ ms.locfileid: "48093823"
   
 8.  **값**에 `[Product_Category_Name.UniqueName]`를 입력합니다.  
   
-     Product_Category_Name은 데이터 집합의 필드입니다.  
+     Product_Category_Name은 데이터 세트의 필드입니다.  
   
     > [!IMPORTANT]  
     >  드릴스루 동작의 경우 고유한 값이 필요하므로 `UniqueName` 속성을 포함해야 합니다.  

@@ -95,7 +95,7 @@ ms.locfileid: "50145888"
   
  **ADO** OLE DB를 사용하여 Analysis Services 서버에 연결합니다. ADO를 사용하는 경우 클라이언트는 스키마 행 집합 쿼리와 DMX 문으로 제한됩니다.  
   
- **ADO.NET** 다른 공급자보다 SQL Server 공급자와 더 원활하게 상호 작용합니다. 데이터 어댑터를 사용하여 동적 행 집합을 저장합니다. 업데이트하거나 XML로 저장할 수 있는 데이터 테이블로 저장된 서버 데이터의 캐시인 데이터 집합 개체를 사용합니다.  
+ **ADO.NET** 다른 공급자보다 SQL Server 공급자와 더 원활하게 상호 작용합니다. 데이터 어댑터를 사용하여 동적 행 집합을 저장합니다. 업데이트하거나 XML로 저장할 수 있는 데이터 테이블로 저장된 서버 데이터의 캐시인 데이터 세트 개체를 사용합니다.  
   
  **ADOMD.NET** 데이터 마이닝 및 OLAP과의 작업에 최적화된 관리 데이터 공급자입니다. ADOMD.NET은 ADO.NET보다 더 빠르고 메모리 효율적입니다. ADOMD.NET을 사용하면 서버 개체에 대한 메타데이터를 검색할 수도 있습니다. .NET을 사용할 수 없는 경우를 제외하고 클라이언트 애플리케이션에 권장되는 개체 모델입니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "50145888"
 ### <a name="using-data-mining-stored-procedures"></a>데이터 마이닝 저장 프로시저 사용  
  일반적으로 저장 프로시저는 재사용을 위해 쿼리를 캡슐화하는 데 사용됩니다. 클라이언트는 CALL을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시스템 저장 프로시저를 비롯한 저장 프로시저를 실행할 수 있습니다.  
   
- 프로시저가 데이터 집합을 반환하면 클라이언트는 데이터 집합 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
+ 프로시저가 데이터 세트를 반환하면 클라이언트는 데이터 세트 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
   
  서버 저장 프로시저를 작성하려면 Microsoft.AnalysisServices.AdomdServer 네임스페이스를 참조해야 합니다. 저장 프로시저를 만들고 사용하는 방법은 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)를 참조하십시오.  
   

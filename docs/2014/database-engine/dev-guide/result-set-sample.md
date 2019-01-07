@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48212393"
@@ -25,14 +25,14 @@ ms.locfileid: "48212393"
 > [!CAUTION]  
 >  서버 쪽 커서를 사용하면 서버 리소스가 상당히 소모되며 간혹 Microsoft SQL Server의 쿼리 최적화 프로그램에 의한 쿼리 성능 향상을 방해하기도 합니다. 따라서 가능하면 항상 `JOINs`를 사용하여 코드를 재작성하는 방법도 고려할 만합니다.  
   
- 이 클래스에 대한 API는 결과 집합에서 앞으로 또는 뒤로 이동할 수 있다는 점과 결과 집합이 열려 있는 중에도 연결에서 다른 명령을 실행할 수 있다는 점을 제외하면 데이터 판독기와 유사합니다. 이 구현은 예제를 쉽게 이해할 수 있도록 하기 위해 상당 부분 간소화되었습니다. 보다 효율적인 구현 방법은 여러 행을 인출하여 인출된 행당 데이터베이스 반환이 발생하지 않게 하는 것입니다. 이 클래스를 사용하면 쿼리의 모든 결과로 데이터 집합을 채우는 것보다 메모리 사용량을 크게 줄일 수 있으며 이는 서버 쪽 프로그래밍에서 아주 중요합니다. 이 예제는 "부분적으로 신뢰하는 호출자 허용" 특성을 사용하여 결과 집합 어셈블리가 다른 어셈블리에서 안전하게 호출될 수 있는 라이브러리임을 나타내는 방법도 보여 줍니다. 이 방법은 안전하지 않은 권한을 사용하여 호출 어셈블리를 등록하는 것보다 좀 더 복잡하지만 훨씬 안전합니다. 호출 어셈블리를 안전한 어셈블리로 등록하면 호출 어셈블리가 서버의 리소스에 영향을 주지 않도록 제한하고 서버의 무결성에 손상을 주지 않도록 하므로 더 안전합니다.  
+ 이 클래스에 대한 API는 결과 집합에서 앞으로 또는 뒤로 이동할 수 있다는 점과 결과 집합이 열려 있는 중에도 연결에서 다른 명령을 실행할 수 있다는 점을 제외하면 데이터 판독기와 유사합니다. 이 구현은 예제를 쉽게 이해할 수 있도록 하기 위해 상당 부분 간소화되었습니다. 보다 효율적인 구현 방법은 여러 행을 인출하여 인출된 행당 데이터베이스 반환이 발생하지 않게 하는 것입니다. 이 클래스를 사용하면 쿼리의 모든 결과로 데이터 세트를 채우는 것보다 메모리 사용량을 크게 줄일 수 있으며 이는 서버 쪽 프로그래밍에서 아주 중요합니다. 이 예제는 "부분적으로 신뢰하는 호출자 허용" 특성을 사용하여 결과 집합 어셈블리가 다른 어셈블리에서 안전하게 호출될 수 있는 라이브러리임을 나타내는 방법도 보여 줍니다. 이 방법은 안전하지 않은 권한을 사용하여 호출 어셈블리를 등록하는 것보다 좀 더 복잡하지만 훨씬 안전합니다. 호출 어셈블리를 안전한 어셈블리로 등록하면 호출 어셈블리가 서버의 리소스에 영향을 주지 않도록 제한하고 서버의 무결성에 손상을 주지 않도록 하므로 더 안전합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   

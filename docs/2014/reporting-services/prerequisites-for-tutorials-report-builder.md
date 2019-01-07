@@ -13,7 +13,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48056213"
@@ -26,15 +26,15 @@ ms.locfileid: "48056213"
 ## <a name="requirements"></a>요구 사항  
  보고서 작성기 자습서를 완료하려면 다음이 필요합니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
+-    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
   
      보고서 관리자를 사용 하려면 보고서 관리자를 열고 클릭 **보고서 작성기**합니다. 기본적으로 보고서 관리자 URL은 http://\<*servername*> / reports.  
   
      SharePoint 사이트를 사용하려면 해당 사이트로 이동하고 문서 탭과 새 문서를 차례로 클릭한 다음 드롭다운 목록에서 보고서 작성기 보고서를 클릭합니다. 예를 들어, http://\<서버 이름 >/사이트/mySite/보고서입니다. SharePoint 관리자는 각 문서 라이브러리에서 보고서 작성기 보고서를 사용할 수 있도록 설정해야 합니다.  
   
--   URL을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버나 SharePoint 사이트와 통합 되어를 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버. 보고서, 공유 데이터 원본, 공유 데이터 집합, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버에 대 한 URL은 http://\<서버 이름 > / reportserver입니다. 기본적으로 SharePoint 사이트에 대 한 URL은 http://\<사이트 이름 > 또는 http://\<서버 > / 사이트입니다.  
+-   URL을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버나 SharePoint 사이트와 통합 되어를 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버. 보고서, 공유 데이터 원본, 공유 데이터 세트, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버에 대 한 URL은 http://\<서버 이름 > / reportserver입니다. 기본적으로 SharePoint 사이트에 대 한 URL은 http://\<사이트 이름 > 또는 http://\<서버 > / 사이트입니다.  
   
--   이름에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 집합에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
+-   이름에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   
 -   지도가 포함된 자습서의 경우 Bing Maps를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](plan-for-map-report-support.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   

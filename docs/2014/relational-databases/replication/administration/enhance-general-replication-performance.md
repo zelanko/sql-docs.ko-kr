@@ -147,7 +147,7 @@ ms.locfileid: "48138199"
   
 -   구독을 수동으로 초기화해 봅니다.  
   
-     큰 초기 데이터 집합과 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+     큰 초기 데이터 세트와 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 ## <a name="agent-parameters"></a>에이전트 매개 변수  
   

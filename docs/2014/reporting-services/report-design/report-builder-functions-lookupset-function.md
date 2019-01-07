@@ -19,7 +19,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48166403"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
-  이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
+  이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,16 +33,16 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
+ (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다.  `=Fields!ID.Value`) 을 입력합니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다.  `=Fields!CustomerID.Value`) 을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!PhoneNumber.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다.  `=Fields!PhoneNumber.Value`) 을 입력합니다.  
   
  *데이터 집합(dataset)*  
- 보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
+ 보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
   
 ## <a name="return"></a>반환 값  
  반환 된 `VariantArray`, 또는 `Nothing` 일치 항목이 없는 경우.  
@@ -54,9 +54,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
--   지정된 데이터 집합의 데이터 정렬을 기반으로 필터가 적용된 후 지정된 데이터 집합의 각 행에 대해 대상 식을 평가합니다.  
+-   지정된 데이터 세트의 데이터 정렬을 기반으로 필터가 적용된 후 지정된 데이터 세트의 각 행에 대해 대상 식을 평가합니다.  
   
--   원본 식과 대상 식의 일치 항목을 찾을 때마다 데이터 집합의 해당 행에 대해 결과 식을 평가합니다.  
+-   원본 식과 대상 식의 일치 항목을 찾을 때마다 데이터 세트의 해당 행에 대해 결과 식을 평가합니다.  
   
 -   결과 식 값의 집합을 반환합니다.  
   
@@ -76,11 +76,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
-    -   데이터 집합의 계산된 필드  
+    -   데이터 세트의 계산된 필드.  
   
-    -   데이터 집합의 쿼리 매개 변수  
+    -   데이터 세트의 쿼리 매개 변수.  
   
-    -   데이터 집합의 필터  
+    -   데이터 세트의 필터.  
   
     -   보고서 매개 변수  
   
@@ -89,7 +89,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 영업 지역 식별자 TerritoryGroupID를 포함하는 데이터 집합에 테이블이 바인딩되어 있다고 가정합니다. "Stores"라는 별도의 데이터 집합에는 지역의 모든 매장 목록과 지역 식별자 ID 및 매장 이름 StoreName이 포함되어 있습니다.  
+ 다음 예에서는 영업 지역 식별자 TerritoryGroupID를 포함하는 데이터 세트에 테이블이 바인딩되어 있다고 가정합니다. "Stores"라는 별도의 데이터 세트에는 지역의 모든 매장 목록과 지역 식별자 ID 및 매장 이름 StoreName이 포함되어 있습니다.  
   
  다음 식에서 `LookupSet`은 TerritoryGroupID 값을 "Stores" 데이터 집합에 있는 각 행의 ID와 비교합니다. 일치 항목을 찾을 때마다 해당 행에 대한 StoreName 필드의 값이 결과 집합에 추가됩니다.  
   

@@ -44,13 +44,13 @@ ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7d5e885e1429507b2ae86759a1a34cd68c61d622
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48206893"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
+   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
   
  이 항목에서는 다양한 데이터 흐름 변환의 사용자 지정 속성을 나열하고 설명합니다. 대부분의 데이터 흐름 개체에 공통되는 속성에 대한 자세한 내용은 [Common Properties](../../common-properties.md)을 참조하십시오.  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48206893"
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 기본 코드 페이지입니다.|  
 |MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **25**입니다.|  
 |MaxMemoryUsage64|정수|64비트 컴퓨터에서 조회 테이블의 최대 캐시 크기입니다.|  
-|NoMatchBehavior|Integer(열거형)|참조 데이터 집합에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이로 설정 된 경우 `Send rows with no matching entries to the no match output` (1), 행을 오류로 처리 되지 않습니다 오류로 합니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
+|NoMatchBehavior|Integer(열거형)|참조 데이터 세트에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이로 설정 된 경우 `Send rows with no matching entries to the no match output` (1), 행을 오류로 처리 되지 않습니다 오류로 합니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
 |ParameterMap|String|`SqlCommand` 문에 사용된 매개 변수에 매핑되는 계보 ID를 세미콜론으로 구분한 목록입니다.|  
 |ReferenceMetadataXML|String|변환에서 해당 출력에 복사하는 조회 테이블의 열에 대한 메타데이터입니다.|  
 |SqlCommand|String|조회 테이블을 채우는 SELECT 문입니다.|  
@@ -615,13 +615,13 @@ ms.locfileid: "48206893"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|정수|입력 열이 매핑되는 출력 열의 `LineageID`입니다. 값 -1은 입력 열이 출력 열에 매핑되지 않음을 나타냅니다.|  
-|PivotKeyValue|String|변환 출력 열에 복사되는 값입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value는 Ham, Coke, Milk, Beer 및 Chips와 같은 텍스트 값입니다. 이러한 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 Product 열에 텍스트 값으로 나타납니다.|  
+|PivotKeyValue|String|변환 출력 열에 복사되는 값입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br />  [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value는 Ham, Coke, Milk, Beer 및 Chips와 같은 텍스트 값입니다. 이러한 값은 **피벗 키 값 열 이름** 옵션으로 지정한 새 Product 열에 텍스트 값으로 나타납니다.|  
   
  다음 표에서는 피벗 해제 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Boolean|나타냅니다 여부를 값에는 `PivotKeyValue` 속성 입력 열이 출력 열에 기록 됩니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
+|PivotKey|Boolean|나타냅니다 여부를 값에는 `PivotKeyValue` 속성 입력 열이 출력 열에 기록 됩니다.<br /><br />  [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
   
  피벗 해제 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   

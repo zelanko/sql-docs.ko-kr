@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34025960"
@@ -119,7 +119,7 @@ FROM [Adventure Works]
   
  **SOLVE_ORDER** 키워드는 MDX 쿼리 또는 **CREATE MEMBER** 명령의 계산 멤버에 대한 계산 순서를 지정합니다. **SOLVE_ORDER** 키워드에 사용된 정수 값은 상대적이며 0부터 시작할 필요가 없으며 연속적일 필요도 없습니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산 멤버가 **SOLVE_ORDER** 키워드 없이 정의된 경우 해당 계산 멤버의 기본값은 0입니다.  
   
- 예를 들어 처음 두 쿼리 예에서 사용된 값을 조합할 경우 두 계산 멤버인 `Year Difference` 및 `Profit Margin`은 MDX 쿼리 예의 결과 데이터 집합에 있는 단일 셀에서 교차합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 이 셀을 계산하는 방법은 계산 순서에 의해서만 결정할 수 있습니다. 이 셀을 구성하는 데 사용된 수식은 두 계산 멤버의 계산 순서에 따라 서로 다른 결과를 생성합니다.  
+ 예를 들어 처음 두 쿼리 예에서 사용된 값을 조합할 경우 두 계산 멤버인 `Year Difference` 및 `Profit Margin`은 MDX 쿼리 예의 결과 데이터 세트에 있는 단일 셀에서 교차합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 이 셀을 계산하는 방법은 계산 순서에 의해서만 결정할 수 있습니다. 이 셀을 구성하는 데 사용된 수식은 두 계산 멤버의 계산 순서에 따라 서로 다른 결과를 생성합니다.  
   
  먼저 처음 두 쿼리에 사용된 계산을 다음 MDX 쿼리에서 조합해 보십시오.  
   
