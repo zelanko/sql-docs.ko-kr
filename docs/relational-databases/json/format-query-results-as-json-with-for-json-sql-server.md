@@ -15,17 +15,17 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ed47af3378636e58e7fccccca3e5bcf7375255d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd3a0035def816538104b405862fdd4ce5711411
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520895"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886778"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**SELECT** 문에 **FOR JSON** 절을 추가하여 쿼리 결과를 JSON으로 서식 지정하거나 데이터를 SQL Server에서 JSON으로 내보냅니다. **FOR JSON** 절을 사용하면 JSON 출력 형식 지정을 앱에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 위임하여 클라이언트 응용 프로그램을 간소화할 수 있습니다.
+**SELECT** 문에 **FOR JSON** 절을 추가하여 쿼리 결과를 JSON으로 서식 지정하거나 데이터를 SQL Server에서 JSON으로 내보냅니다. **FOR JSON** 절을 사용하면 JSON 출력 형식 지정을 앱에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 위임하여 클라이언트 애플리케이션을 간소화할 수 있습니다.
   
  **FOR JSON** 절을 사용하는 경우 JSON 출력의 구조를 명시적으로 지정하거나 SELECT 문의 구조에 따라 출력이 결정되도록 할 수 있습니다.  
   
@@ -153,10 +153,6 @@ FOR JSON AUTO
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
-  
-특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
-
 ### <a name="microsoft-videos"></a>Microsoft 비디오
 
 SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.

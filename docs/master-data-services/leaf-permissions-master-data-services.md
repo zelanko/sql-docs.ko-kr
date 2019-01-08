@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -18,12 +17,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78c12d0b6595378acf382d53af6dbc807c4c2b84
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416017"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817805"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "52416017"
 |**만들기**|사용자는 멤버를 만들 때 값을 할당할 수 있습니다.|  
 |**Update**|사용자는 특성을 업데이트할 수 있습니다.|  
 |**Delete**|아무런 영향이 없습니다.|  
-|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  

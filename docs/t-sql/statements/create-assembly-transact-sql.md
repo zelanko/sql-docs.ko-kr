@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207662"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   클래스 메타데이터와 관리 코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 개체로 포함하는 관리되는 응용 프로그램 모듈을 만듭니다. 이 모듈을 참조하여 데이터베이스에서 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 사용자 정의 집계 및 사용자 정의 형식을 만들 수 있습니다.  
   
->  [!WARNING]
+> [!WARNING]
 >  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  **varbinary** 형식의 식입니다.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  `PERMISSION_SET` 옵션은 시작 경고에서 설명된 `clr strict security` 옵션의 영향을 받습니다. `clr strict security`을 사용하면 모든 어셈블리가 `UNSAFE`로 처리됩니다.
+> [!IMPORTANT]
+>  `PERMISSION_SET` 옵션은 시작 경고에서 설명된 `clr strict security` 옵션의 영향을 받습니다. `clr strict security`을 사용하면 모든 어셈블리가 `UNSAFE`로 처리됩니다.
  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리에 액세스할 때 이 어셈블리에 부여된 코드 액세스 권한 집합을 지정합니다. 지정하지 않으면 기본적으로 SAFE가 적용됩니다.  
   
@@ -129,7 +129,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   어셈블리 이진 파일이 유효한 메타데이터와 코드 세그먼트로 된 올바른 형식인지 확인하고 코드 세그먼트에 유효한 MSIL(Microsoft Intermediate Language) 명령이 있는지 확인합니다.  
   
--   참조하는 시스템 어셈블리 집합은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll 및 System.Xml.Linq.dll 어셈블리 중의 하나입니다. 다른 시스템 어셈블리는 참조할 수 있지만 데이터베이스에 명시적으로 등록해야 합니다.  
+-   어셈블리 이진 파일에서 참조하는 시스템 어셈블리 집합이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 어셈블리인 Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll 및 System.Xml.Linq.dll 중 하나입니다. 다른 시스템 어셈블리는 참조할 수 있지만 데이터베이스에 명시적으로 등록해야 합니다.  
   
 -   SAFE 또는 EXTERNAL ACCESS 권한 집합을 사용하여 만든 어셈블리의 경우  
   
@@ -168,7 +168,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## <a name="examples"></a>예  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>예제 A: dll에서 어셈블리 만들기  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>예 1: dll에서 어셈블리 만들기  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 어셈블리 생성을 지원하지 않습니다.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>예제 B: 어셈블리 비트에서 어셈블리 만들기  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>예 2: 어셈블리 비트로부터 어셈블리 만들기  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
