@@ -1,5 +1,5 @@
 ---
-title: 다차원 모델 (Analysis Services) 처리 | Microsoft Docs
+title: Analysis Services 다차원 모델 처리 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a09e1c4118576535371e16aa5e1a39a169b406fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: a6116019898e61cc414a14a05273a3f2839267a0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024210"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072490"
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>다차원 모델 처리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34024210"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리할 때는 처리 옵션을 선택하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 적절한 처리 유형을 결정하도록 할 수 있습니다. 사용 가능한 처리 방법은 개체에 따라 달라지며 개체 유형을 기반으로 합니다. 또한 사용 가능한 방법은 개체를 마지막으로 처리한 후 적용된 개체 변경 내용을 기반으로 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다. 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

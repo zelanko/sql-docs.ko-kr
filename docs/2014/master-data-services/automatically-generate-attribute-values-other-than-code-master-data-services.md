@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 662bec342ded12494d0d8876b6e12274f34e16d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab5e88df4808a31218270938766660da27bc2c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787155"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>코드 외의 특성 값 자동 생성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙이 적용될 때마다 값으로 정수가 자동 할당되도록 하려면 엔터티의 특성 값에 대해 값을 자동으로 생성합니다.  
@@ -50,11 +49,11 @@ ms.locfileid: "48069473"
   
 9. **구성 요소** 창에서 **동작** 노드를 확장합니다.  
   
-10. 기본값 노드에서 **생성되는 값을 기본값으로 설정** 을 클릭하고 **THEN** 창의 **동작** 레이블로 끌어 놓습니다.  
+10. 기본값 노드에서 **생성되는 값을 기본값으로 설정**을 클릭하고 **THEN** 창의 **동작** 레이블로 끌어 놓습니다.  
   
 11. **특성** 창에서 생성할 값을 가진 특성을 클릭하고 이를 **동작 편집** 창의 **특성 선택** 레이블로 끌어 놓습니다.  
   
-12. **시작 값** 및 **증가값** 상자에 값을 입력합니다. 멤버가 이미 있는 경우 가장 높은 기존 값을 기반으로 값이 설정됩니다. 예를 들어 가장 높은 기존 값이 299이고 **증가값** 을 **1**로 설정하는 경우 다음 멤버의 값은 300으로 설정됩니다.  
+12. **시작 값** 및 **증가값** 상자에 값을 입력합니다. 멤버가 이미 있는 경우 가장 높은 기존 값을 기반으로 값이 설정됩니다. 예를 들어 가장 높은 기존 값이 299이고 **증가값**을 **1**로 설정하는 경우 다음 멤버의 값은 300으로 설정됩니다.  
   
 13. **동작 편집** 창에서 **항목 저장**을 클릭합니다.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "48069473"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [비즈니스 규칙에 대해 특정 멤버 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [비즈니스 규칙에 대해 버전 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [코드 자동 생성 &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
- [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+ [코드 자동 생성&#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DirectQuery 모드 | Microsoft Docs
+title: Analysis Services의 DirectQuery 모드 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982485"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072470"
 ---
 # <a name="directquery-mode"></a>DirectQuery 모드
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,11 +45,11 @@ DirectQuery 모드의 테이블 형식 모델에는 몇 가지 제한 사항이 
 |||  
 |-|-|  
 |**기능 영역**|**제한**|  
-|**데이터 원본**|DirectQuery 모델은 SQL Server, Azure SQL Database, Oracle 및 Teradata 유형의 단일 관계형 데이터베이스의 데이터만 사용할 수 있습니다.  버전 및 공급자 정보는 이 문서의 뒷부분에 있는 DirectQuery에 대해 지원되는 데이터 원본을 참조하세요.| 
+|**데이터 원본**|DirectQuery 모델에는 다음 유형의 단일 관계형 데이터베이스에서에서 데이터를 데이터만 사용할 수 있습니다. SQL Server, Azure SQL Database, Oracle 및 Teradata를 선택 합니다.  버전 및 공급자 정보는 이 문서의 뒷부분에 있는 DirectQuery에 대해 지원되는 데이터 원본을 참조하세요.| 
 |**SQL 저장 프로시저**|DirectQuery 모델의 경우 데이터 가져오기 마법사를 사용할 때 SQL 문에서 저장 프로시저를 지정하여 테이블을 정의할 수 없습니다. |   
 |**계산 테이블**|계산 테이블은 DirectQuery 모델에서 지원되지 않지만, 계산 열은 지원됩니다. 계산 테이블을 포함하는 테이블 형식 모델을 전환하려고 시도하면 붙여넣은 데이터를 모델에 포함할 수 없다고 말하는 오류가 발생합니다.|  
 |**쿼리 제한**|기본 행 제한은 백만개의 행이며, msmdsrv.ini 파일에서 **MaxIntermediateRowSize** 를 지정하여 늘릴 수 있습니다. 자세한 내용은 [DAX 속성](../../analysis-services/server-properties/dax-properties.md) 을 참조하세요.
-|**DAX 수식**|DirectQuery 모드에서 테이블 형식 모델을 쿼리하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 DAX 수식과 측정값 정의를 SQL 문으로 변환합니다. SQL 구문으로 변환할 수 없는 요소를 포함하는 DAX 수식은 모델에서 유효성 검사 오류를 반환합니다.<br /><br /> 이러한 제한 사항은 대개 특정 DAX 함수로 제한됩니다. 측정값에 대해, DAX 수식은 관계형 데이터 저장소에 대한 집합 기반 연산으로 변환됩니다. 즉, 암시적으로 생성되는 모든 측정값이 지원됩니다. <br /><br /> 유효성 검사 오류가 발생할 경우 다른 함수로 대체하여 수식을 다시 작성하거나 데이터 원본의 파생 열을 사용하여 문제를 해결해야 합니다.  테이블 형식 모델에 호환되지 않는 함수를 포함하는 수식이 있을 경우 디자이너에서 DirectQuery 모드로 전환하면 보고됩니다. <br /><br />**참고:**  모델을 DirectQuery 모드로 전환하는 경우 모델의 일부 수식이 유효성 검사를 수행할 수 있지만 캐시와 관계형 데이터 저장소에 대해 실행될 때는 다른 결과를 반환합니다. 캐시에 대한 계산은 Excel 동작을 에뮬레이트하는 기능이 포함된 메모리 내 분석 엔진의 의미 체계를 사용하는 반면 관계형 데이터 원본에 저장된 데이터에 대한 쿼리는 반드시 SQL Server의 의미 체계를 사용하기 때문에 이러한 결과가 발생합니다.<br /><br /> SQL 저장  <br /><br /> 자세한 내용은 참조 하세요 [DirectQuery 모드에서의 DAX 수식 호환성](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)합니다.|  
+|**DAX 수식**|DirectQuery 모드에서 테이블 형식 모델을 쿼리하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 DAX 수식과 측정값 정의를 SQL 문으로 변환합니다. SQL 구문으로 변환할 수 없는 요소를 포함하는 DAX 수식은 모델에서 유효성 검사 오류를 반환합니다.<br /><br /> 이러한 제한 사항은 대개 특정 DAX 함수로 제한됩니다. 측정값에 대해, DAX 수식은 관계형 데이터 저장소에 대한 집합 기반 연산으로 변환됩니다. 즉, 암시적으로 생성되는 모든 측정값이 지원됩니다. <br /><br /> 유효성 검사 오류가 발생할 경우 다른 함수로 대체하여 수식을 다시 작성하거나 데이터 원본의 파생 열을 사용하여 문제를 해결해야 합니다.  테이블 형식 모델에 호환되지 않는 함수를 포함하는 수식이 있을 경우 디자이너에서 DirectQuery 모드로 전환하면 보고됩니다. <br /><br />**참고:**  모델을 DirectQuery 모드로 전환하는 경우 모델의 일부 수식이 유효성 검사를 수행할 수 있지만 캐시와 관계형 데이터 저장소에 대해 실행될 때는 다른 결과를 반환합니다. 캐시에 대한 계산은 Excel 동작을 에뮬레이트하는 기능이 포함된 메모리 내 분석 엔진의 의미 체계를 사용하는 반면 관계형 데이터 원본에 저장된 데이터에 대한 쿼리는 반드시 SQL Server의 의미 체계를 사용하기 때문에 이러한 결과가 발생합니다.<br /><br />자세한 내용은 참조 하세요 [DirectQuery 모드에서의 DAX 수식 호환성](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)합니다.|  
 |**수식 일관성**|특정 경우에 동일한 수식에서 관계형 데이터 저장소만 사용하는 DirectQuery 모델과 비교했을 때 캐시된 모델의 경우 다른 결과를 반환할 수 있습니다. 메모리 내 분석 엔진과 SQL Server 간의 의미 체계 차이점 때문에 이러한 차이가 발생합니다.<br /><br /> 호환성 문제를 반환할 수 있는 다른 결과 모델을 배포할 때 실시간으로 함수를 비롯 한 전체 목록을 참조 하세요 [DirectQuery 모드 (SQL Server Analysis Services)에서 DAX 수식 호환성](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)합니다.|  
 |**MDX 제한 사항**|상대적인 개체 이름이 없습니다. 모든 개체 이름은 정규화된 이름이어야 합니다.<br /><br /> 세션 범위 MDX 문(명명된 집합, 계산 멤버, 계산 셀, 보이는 합계, 기본 멤버 등)이 없지만 'WITH' 절과 같은 쿼리 범위 구문을 사용할 수 있습니다.<br /><br /> MDX subselect 절에 있는 다양한 수준의 멤버가 포함된 튜플이 없습니다.<br /><br /> 사용자 정의 계층이 없습니다.<br /><br /> 네이티브 SQL 쿼리가 없습니다.(일반적으로 Analysis Services는 T-SQL 하위 집합을 지원하지만, DirectQuery 모델의 하위 집합은 지원하지 않습니다.)|  
 

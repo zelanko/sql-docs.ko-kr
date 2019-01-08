@@ -1,7 +1,8 @@
 ---
-title: 만들기 및 Azure Data Studio의 바로 가기 키 사용자 지정 | Microsoft Docs
-description: 만들기 및 Azure Data Studio의 바로 가기 키 사용자 지정 하는 방법에 알아봅니다.
-ms.custom: tools|sos
+title: 만들기 및 바로 가기 키 사용자 지정
+titleSuffix: Azure Data Studio
+description: 만들기 및 Azure Data Studio의 바로 가기 키 사용자 지정 하는 방법을 알아봅니다
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,27 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356474"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030257"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>바로 가기 키 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 이 문서에서는 신속 하 게 보기, 편집 및의 바로 가기 키를 만드는 단계 [!INCLUDE[name-sos](../includes/name-sos-short.md)]합니다.
 
-때문에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에 Visual Studio Code에서 고급 사용자 지정에 대 한 자세한 내용은 다양 한 자판 배열 등을 사용 하 여 해당 키 바인딩 기능을 상속 합니다 [Visual Studio Code에 대 한 키 바인딩을](https://code.visualstudio.com/docs/getstarted/keybindings) 문서입니다. 일부 키 바인딩을 기능은 지원 되지 않을 수 있습니다 (예를 들어 키맵 확장에서 지원 되지 않습니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
+때문에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에 Visual Studio Code에서 고급 사용자 지정에 대 한 자세한 내용은 다양 한 자판 배열 등을 사용 하 여 해당 키 바인딩 기능을 상속 합니다 [Visual Studio Code에 대 한 키 바인딩을](https://code.visualstudio.com/docs/getstarted/keybindings) 문서입니다. 일부 키 바인딩을 두 기능은 지원 되지 않을 수 있습니다 (예를 들어 키맵 확장에서 지원 되지 않습니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
 
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>바로 가기 키 편집기를 열려면
 
 모든 현재 정의 된 바로 가기 키를 보려면:
 
-엽니다는 **바로 가기 키** 편집기는 **파일** 메뉴: **파일** > **기본 설정**  >   **바로 가기 키** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **기본 설정** > **키보드 단축키** Mac에서).
+엽니다는 **바로 가기 키** 편집기는 **파일** 메뉴: **파일** > **기본 설정** > **키보드 단축키** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **기본 설정** > **바로 가기 키** Mac에서).
 
-현재 keybindings를 표시 하는 것 외에도 합니다 **바로 가기 키** 편집기 바로 가기 키를 정의 되지 않은 사용 가능한 명령을 나열 합니다. 합니다 **바로 가기 키** 편집기를 사용 하면 손쉽게 변경, 제거, 다시 설정 및 새 바인딩을 정의할 수 있습니다.  
+현재 키 바인딩, 표시 하는 것 외에도 합니다 **바로 가기 키** 편집기 바로 가기 키를 정의 되지 않은 사용 가능한 명령을 나열 합니다. 합니다 **바로 가기 키** 편집기를 사용 하면 손쉽게 변경, 제거, 다시 설정 및 새 키 바인딩을 정의할 수 있습니다.  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>기존 바로 가기 키를 편집 합니다.
@@ -53,7 +54,7 @@ ms.locfileid: "49356474"
 
 새 바로 가기 키를 만들려면:
 
-1. 하지 않습니다. 모든 keybinding을 가질을 선택 하는 명령을 마우스 오른쪽 단추로 클릭 **Keybinding 추가**합니다.
+1. 모든 키 바인딩 및 선택 되지 않은 명령을 마우스 오른쪽 단추로 클릭 **추가 키 바인딩**합니다.
 
    ![키보드 바로 가기 만들기](media/keyboard-shortcuts/add-keybinding.png)
 

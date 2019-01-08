@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072297"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788485"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Active Directory에서 게시 정보를 제거합니다.|  
 |**replicate_ddl**|**1**|게시자에서 실행되는 DDL(데이터 정의 언어) 문이 복제됩니다.|  
 ||**0**|DDL 문은 복제되지 않습니다.|  
-|**retention**||이 **int** 의 수를 나타내는 *retention_period_unit* 지정된 된 게시에 대 한 변경 내용을 저장 하는 단위입니다. 보존 기간 내에 구독이 동기화되지 않고 구독이 받은 보류 중인 변경 내용이 배포자에서 정리 작업에 의해 제거되었으면 구독은 만료되며 다시 초기화해야 합니다. 허용되는 최대 보존 기간은 현재 날짜부터 9999년 12월 31일까지의 일 수입니다.<br /><br /> 참고: 병합 게시에 대 한 보존 기간에 서로 다른 표준 시간대의 구독자를 수용 하기 위해 24 시간의 유예 기간을 있습니다.|  
+|**retention**||이 **int** 의 수를 나타내는 *retention_period_unit* 지정된 된 게시에 대 한 변경 내용을 저장 하는 단위입니다. 보존 기간 내에 구독이 동기화되지 않고 구독이 받은 보류 중인 변경 내용이 배포자에서 정리 작업에 의해 제거되었으면 구독은 만료되며 다시 초기화해야 합니다. 허용되는 최대 보존 기간은 현재 날짜부터 9999년 12월 31일까지의 일 수입니다.<br /><br /> 참고: 병합 게시의 보존 기간은 다양한 표준 시간대의 구독자를 수용하기 위해 24시간의 유예 기간을 갖습니다.|  
 |**retention_period_unit**|**day**|보존 기간(일)을 지정합니다.|  
 ||**week**|보존 기간(주)을 지정합니다.|  
 ||**month**|보존 기간(월)을 지정합니다.|  
@@ -119,7 +118,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**비활성**|게시가 비활성 상태입니다.|  
 |**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
 ||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
-|**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**, 되지 않을 수 있습니다 스냅숏을 생성 한 후에 올바르게 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
+|**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**를 올바르게 아닐 수 있습니다 스냅숏을 생성 한 후를 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
 |**validate_subscriber_info**||구독자 정보를 검색하는 데 사용할 함수를 나열하고 구독자가 정보가 일관성 있게 분할되는지 확인하기 위해 사용하는 동적 필터링 조건의 유효성을 검사합니다.|  
 |**web_synchronization_url**||웹 동기화에 사용되는 인터넷 URL의 기본값입니다.|  

@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523441"
 ---
 # <a name="asynchronous-execution-polling-method"></a>비동기 실행(폴링 메서드)
 ODBC 3.8 및 Windows 7 SDK 이전 비동기 작업이 된 문 함수에만 허용 됩니다. 자세한 내용은 참조는 **비동기적 문을 작업 실행**이 항목의 뒷부분에 나오는.  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- 응용 프로그램이 있는지 여부를 실행 하는 비동기적으로 확인 하는 함수를 호출 하는 경우 원래 문 핸들을 사용 해야 합니다. 즉, 비동기 실행 문 별 별로 추적 됩니다. 응용 프로그램에는 다른 인수에 대 한 유효한 값도 제공 해야-원래 인수 하면-오류 드라이버 관리자의 검사를 통과 하도록 합니다. 그러나 드라이버 문 핸들을 검사 하 고 문이 비동기적으로 실행 됨을 확인 한 후 다른 모든 인수는 무시 합니다.  
+ 응용 프로그램이 있는지 여부를 실행 하는 비동기적으로 확인 하는 함수를 호출 하는 경우 원래 문 핸들을 사용 해야 합니다. 즉, 비동기 실행 문 별 별로 추적 됩니다. 응용 프로그램에는 다른 인수에 대 한 유효한 값도 제공 해야-오류 드라이버 관리자의 검사를 통과 하도록 원래 인수 수행 됩니다. 그러나 드라이버 문 핸들을 검사 하 고 문이 비동기적으로 실행 됨을 확인 한 후 다른 모든 인수는 무시 합니다.  
   
- 함수를 비동기적으로 실행 되는 동안-즉, SQL_STILL_EXECUTING를 반환한 후 및 하기 전에 반환 코드를 다른-응용 프로그램 호출 하 여 취소할 수 있습니다 **SQLCancel** 또는 **SQLCancelHandle** 동일한 문 핸들을 포함 합니다. 함수 실행을 취소 하는 보장 되지 않습니다. 예를 들어 함수를 이미 완료 되었습니다 수 있습니다. 또한 코드를 반환한 **SQLCancel** 하거나 **SQLCancelHandle** 만 성공 여부를 나타냅니다 함수를 취소할 수에 함수를 실제로 취소 되기 여부가 아니라 합니다. 함수 취소 되었는지 여부를 결정할 응용 프로그램 함수를 다시 호출 합니다. SQL_ERROR 및 SQLSTATE HY008 반환 함수가 취소 된 경우 (작업이 취소 됨). 함수 취소 되지 않은 경우 SQL_SUCCESS, SQL_STILL_EXECUTING, 또는 다른 sqlstate SQL_ERROR와 같은 다른 코드를 반환 합니다.  
+ 함수-비동기적으로 실행 되는 동안, SQL_STILL_EXECUTING을 돌아온 후-다른 코드를 반환 하기 전에 응용 프로그램 수 취소를 호출 하 여 **SQLCancel** 또는 **SQLCancelHandle** 동일한 문 핸들을 포함 합니다. 함수 실행을 취소 하는 보장 되지 않습니다. 예를 들어 함수를 이미 완료 되었습니다 수 있습니다. 또한 코드를 반환한 **SQLCancel** 하거나 **SQLCancelHandle** 만 성공 여부를 나타냅니다 함수를 취소할 수에 함수를 실제로 취소 되기 여부가 아니라 합니다. 함수 취소 되었는지 여부를 결정할 응용 프로그램 함수를 다시 호출 합니다. SQL_ERROR 및 SQLSTATE HY008 반환 함수가 취소 된 경우 (작업이 취소 됨). 함수 취소 되지 않은 경우 SQL_SUCCESS, SQL_STILL_EXECUTING, 또는 다른 sqlstate SQL_ERROR와 같은 다른 코드를 반환 합니다.  
   
  드라이버에서 문 수준의 비동기 처리를 호출 하 여 응용 프로그램을 지 원하는 경우 특정 문에의 비동기 실행을 적용 하지 않으려면 **SQLSetStmtAttr** SQL_ 설정 하 여 SQL_ATTR_ASYNC_ENABLE 특성 ASYNC_ENABLE_OFF 합니다. 드라이버에서 연결 수준의 비동기 처리를 지 원하는 경우 응용 프로그램 호출 **SQLSetConnectAttr** SQL_ATTR_ASYNC_ENABLE에서 모든 문의 비동기 실행을 사용 하지 않도록 설정 하는 SQL_ASYNC_ENABLE_OFF을 설정 하는 연결입니다.  
   

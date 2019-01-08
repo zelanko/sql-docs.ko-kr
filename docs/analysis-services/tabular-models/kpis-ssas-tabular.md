@@ -1,5 +1,5 @@
 ---
-title: Kpi | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 Kpi | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906433"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072320"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "48906433"
 ##  <a name="bkmk_example"></a> 예제  
  Adventure Works의 영업 관리자는 영업 직원이 특정 기간(년) 동안 자신의 판매 할당량을 달성하고 있는지 여부를 빠르게 표시하는 데 사용할 수 있는 피벗 테이블을 만들려고 합니다. 각 영업 직원에 대해 실제 판매액(달러)과 판매 할당액(달러)이 표시되고 각 영업 직원이 현재 자신의 판매 할당액을 달성했는지 그 이하 또는 이상인지를 보여 주는 간단한 그래픽이 표시되는 피벗 테이블을 만들려고 합니다. 또한 데이터를 연도별로 분류할 수 있도록 하려고 합니다.  
   
- 이렇게 하기 위해 영업 관리자는 조직의 BI 솔루션 개발자의 도움을 받아 AdventureWorks 테이블 형식 모델에 Sales KPI를 추가합니다. 영업 관리자는 사용 하 여 Excel 데이터 소스로 Adventure Works 테이블 형식 모델에 연결 하 고 필드 (측정값 및 KPI)와 영업 자신의 할당액을 달성 여부를 분석 하는 슬라이서를 사용 하 여 피벗 테이블을 만듭니다.  
+ 이 위해 영업 관리자는 AdventureWorks 테이블 형식 모델에 Sales KPI를 추가 하려면 조직의 BI 솔루션 개발자의 도움을 받아 합니다. 영업 관리자는 사용 하 여 Excel 데이터 소스로 Adventure Works 테이블 형식 모델에 연결 하 고 필드 (측정값 및 KPI)와 영업 자신의 할당액을 달성 여부를 분석 하는 슬라이서를 사용 하 여 피벗 테이블을 만듭니다.  
   
  모델에서 FactResellerSales 테이블의 SalesAmount 열에는 각 영업 직원의 실제 판매액(달러)을 보여 주는 측정값이 만들어집니다. 이 측정값은 KPI의 기본 값을 정의합니다.  
   
@@ -60,7 +60,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  KPI의 기본 값과 대상 값으로 사용할 측정값을 만든 후에는 Sales 측정값을 새 Sales KPI로 확장합니다. Sales KPI에서 Target SalesAmountQuota 측정값은 대상 값으로 정의됩니다. 상태 임계값은 백분율 단위의 범위로 정의되며, 목표 백분율인 100%는 Sales 측정값으로 정의된 실제 판매액이 Target SalesAmoutnQuota 측정값에 정의된 할당액에 도달했음을 의미합니다. 낮은 백분율과 높은 백분율은 상태 표시줄에 정의되고 그래픽 종류가 선택됩니다.  
   
- 이제 영업 관리자는 값 필드에 KPI의 기본 값, 대상 값 및 상태를 추가하여 피벗 테이블을 만들 수 있습니다. Employees 열이 RowLabel 필드에 추가되고 CalendarYear 열이 슬라이서로 추가됩니다.  
+ 영업 관리자는 KPI의 기본 값, 대상 값 및 상태 값 필드를 추가 하는 피벗 테이블을 만들 수 있습니다. Employees 열이 RowLabel 필드에 추가되고 CalendarYear 열이 슬라이서로 추가됩니다.  
   
  이제 영업 관리자는 각 영업 직원의 실제 판매액, 판매 할당액 및 상태를 연도별로 분류할 수 있습니다. 또한 몇 년 동안의 판매 추세를 분석하여 영업 직원의 판매 할당액을 조정해야 하는지 여부를 결정할 수 있습니다.  
   
@@ -69,7 +69,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  핵심 성과 지표 대화 상자를 보려면 테이블에 대한 측정값 표에서 기준 값으로 사용되는 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. 측정값이 기준 값으로 KPI에 확장된 후에는 KPI와 관련된 측정값을 식별하는 아이콘이 측정값 표의 측정값 이름 옆에 나타납니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  

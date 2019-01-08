@@ -1,5 +1,5 @@
 ---
-title: 호환성 수준 1200의 테이블 형식 모델 프로그래밍 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 프로그래밍 호환성 수준 1200의 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f1ab3b825ad85d490493c1ffa05d7e066ec0cce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144762"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072110"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

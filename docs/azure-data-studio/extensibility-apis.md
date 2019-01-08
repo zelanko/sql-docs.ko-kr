@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio에 대 한 확장성 Api | Microsoft Docs
-description: Azure Data Studio에 대 한 확장성 Api
-ms.custom: tools|sos
+title: 확장성 API
+titleSuffix: Azure Data Studio
+description: Azure Data Studio에 대 한 확장성 Api에 알아봅니다
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dae5546b4725a31576d411bd604a4a3d3e27c4e
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356114"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029757"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 Api
 
@@ -41,19 +42,19 @@ ms.locfileid: "49356114"
 ```
 > let connection = sqlops.connection.getCurrentConnection();
 connection: {
-    providerName: ‘MSSQL’,
-    connectionId: ‘d97bb63a-466e-4ef0-ab6f-00cd44721dcc’,
+    providerName: 'MSSQL',
+    connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
     options: {
-        server: ‘mairvine-sql-server’,
-        user: ‘sa’,
-        authenticationType: ‘sqlLogin’,
-        …
+        server: 'mairvine-sql-server',
+        user: 'sa',
+        authenticationType: 'sqlLogin',
+        ...
     },
-    …
+    ...
 }
 > let credentials = sqlops.connection.getCredentials(connection.connectionId);
 credentials: {
-    password: ‘abc123’
+    password: 'abc123'
 }
 
 ```
@@ -64,7 +65,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>최상위 함수
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 지정 된 연결 및 경로 해당 하는 개체 탐색기 노드를 가져옵니다. 경로 지정 하는 경우 지정된 된 연결에 대 한 최상위 노드를 반환 합니다. 노드가 지정된 된 경로에서 없으면 반환 `undefined`합니다. 참고:는 `nodePath` 개체 SQL 도구 서비스 백 엔드에 의해 생성 되 고 손으로 생성 하기가 어렵습니다. 향후 API 개선 사항을 사용 하면 사용자가 제공한 노드의 이름, 형식 및 스키마와 같은 메타 데이터를 기반으로 노드를 가져올 수 있습니다.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 지정 된 연결 및 경로 해당 하는 개체 탐색기 노드를 가져옵니다. 경로 지정 하는 경우 지정된 된 연결에 대 한 최상위 노드를 반환 합니다. 노드가 지정된 된 경로에서 없으면 반환 `undefined`합니다. 참고: `nodePath` 개체 SQL 도구 서비스 백 엔드에 의해 생성 되 고 손으로 생성 하기가 어렵습니다. 향후 API 개선 사항을 사용 하면 사용자가 제공한 노드의 이름, 형식 및 스키마와 같은 메타 데이터를 기반으로 노드를 가져올 수 있습니다.
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 모든 활성 개체 탐색기 연결 노드를 가져옵니다.
 

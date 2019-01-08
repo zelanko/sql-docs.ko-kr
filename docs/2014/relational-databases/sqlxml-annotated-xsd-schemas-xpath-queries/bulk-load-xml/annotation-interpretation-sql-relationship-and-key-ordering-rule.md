@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787185"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 및 키 순서 지정 규칙(SQLXML 4.0)
   XML 대량 로드는 해당 노드의 범위가 시작될 때 레코드를 생성하고 해당 노드의 범위가 끝날 때 이러한 노드를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내기 때문에 레코드의 데이터는 노드 범위 내에 있어야 합니다.  
@@ -117,7 +115,7 @@ ms.locfileid: "48121823"
     set objBL=Nothing  
     ```  
   
-     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. XML 샘플 데이터를 수정 하는 경우 있도록를  **\<CustomerID >** 자식 요소 앞에 표시 된  **\<순서 >** 예상된 결과 가져오려면 자식 요소: XML 대량 로드 지정된 된 외래 키 값 열에 삽입합니다.  
+     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. XML 샘플 데이터를 수정 하는 경우 있도록를  **\<CustomerID >** 자식 요소 앞에 표시 된  **\<순서 >** 예상된 결과 가져오려면 자식 요소: XML 대량 로드가 지정된 외래 키 값을 열에 삽입합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   

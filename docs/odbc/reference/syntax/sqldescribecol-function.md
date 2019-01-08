@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523806"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
- **SQLDescribeCol** 결과 설명자를 반환 합니다.-열 이름, 형식, 열 크기, 소수 자릿수 및 null 허용 여부-결과의 열 하나에 대 한 설정입니다. 이 정보 또한이 제품은 IRD 필드에입니다.  
+ **SQLDescribeCol** 결과 집합에서 하나의 열에 대 한-열 이름, 형식, 열 크기, 소수 자릿수 및 null 허용 여부-결과 설명자를 반환 합니다. 이 정보 또한이 제품은 IRD 필드에입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,22 +75,22 @@ SQLRETURN SQLDescribeCol(
   
  때 *ColumnNumber* 같은지 SQL_BINARY 반환 됩니다 (책갈피 열)에 대해 0으로  *\*DataTypePtr* 가변 길이 책갈피에 대 한 합니다. (SQL_INTEGER는 책갈피가 ODBC 3에서 사용 되는 경우에 반환 됩니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 또는 ODBC 2. *x* 응용 프로그램을 사용 하는 ODBC 3. *x* 드라이버입니다.)  
   
- 이러한 데이터 유형에 대 한 자세한 내용은 참조 하세요. [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.  
+ 이러한 데이터 유형에 대 한 자세한 내용은 참조 하세요. [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.  
   
  *ColumnSizePtr*  
- [출력] 데이터 원본에서 열의 문자 단위로 크기를 반환 하는 버퍼에 대 한 포인터입니다. 열 크기를 확인할 수 없는 경우 드라이버는 0을 반환 합니다. 열 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.  
+ [출력] 데이터 원본에서 열의 문자 단위로 크기를 반환 하는 버퍼에 대 한 포인터입니다. 열 크기를 확인할 수 없는 경우 드라이버는 0을 반환 합니다. 열 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.  
   
  *DecimalDigitsPtr*  
- [출력] 데이터 원본에서 열의 소수 자릿수를 반환 하는 버퍼에 대 한 포인터입니다. 소수 자릿수를 확인할 수 없는 또는 적용 되지 경우 드라이버는 0을 반환 합니다. 소수 자릿수에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.  
+ [출력] 데이터 원본에서 열의 소수 자릿수를 반환 하는 버퍼에 대 한 포인터입니다. 소수 자릿수를 확인할 수 없는 또는 적용 되지 경우 드라이버는 0을 반환 합니다. 소수 자릿수에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.  
   
  *NullablePtr*  
  [출력] 열의 NULL 값을 허용 하는지 여부를 나타내는 값을 반환 하는 버퍼에 대 한 포인터입니다. IRD의 SQL_DESC_NULLABLE 필드에서이 값을 읽습니다. 값은 다음 중 하나입니다.  
   
- SQL_NO_NULLS: 열의 NULL 값을 허용 하지 않습니다.  
+ SQL_NO_NULLS: 이 열은 NULL 값을 허용하지 않습니다.  
   
- SQL_NULLABLE: 열의 NULL 값을 허용 합니다.  
+ SQL_NULLABLE: 열은 NULL 값을 허용 합니다.  
   
- SQL_NULLABLE_UNKNOWN: 드라이버 열에 NULL 값이 허용 하는 경우 확인할 수 없습니다.  
+ SQL_NULLABLE_UNKNOWN: 드라이버는 열에 NULL 값이 허용 하는 경우 확인할 수 없습니다.  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  

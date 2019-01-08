@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.history.f1
@@ -12,12 +12,12 @@ ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bead031a6d7966db8894fc4b612714ae9c76eda2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791335"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server 에이전트 속성(기록 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 기록 로그 관리에 대한 설정을 확인하고 수정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48207203"
  **다음보다 오래된 항목**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 항목을 보존하는 기간을 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 에이전트 오류 로그](sql-server-agent-error-log.md)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: "'빠른 시작: Azure Data Studio를 사용하여 SQL Server에 연결 및 쿼리 | Microsoft Docs'"
+title: '빠른 시작: 연결 및 SQL Server 쿼리'
+titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행하는 방법 설명
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356094"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030287"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 SQL Server에 연결하고 쿼리
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
@@ -44,10 +45,10 @@ SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 �
  
     - **서버 이름:** localhost
     - **인증 유형:** SQL 로그인  
-    - **사용자 이름:** SQL Server에 대한 사용자 이름  
-    - **암호:** SQL Server에 대한 암호  
+    - **사용자 이름:** SQL Server에 대 한 사용자 이름  
+    - **암호:** SQL Server에 대 한 암호  
     - **데이터베이스 이름:** 이 필드를 비워 둡니다. 
-    - **서버 그룹:** \<기본\>  
+    - **서버 그룹:** \<Default\>  
 
    ![새 연결 화면](media/quickstart-sql-server/new-connection-screen.png)
 

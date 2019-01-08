@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018148"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352307"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve`는 geometry 또는 geography 유형의 연속적인 `CircularString` 또는 `LineString` 인스턴스가 하나 이상 포함된 컬렉션입니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예가이 릴리스의 새로운 공간 기능에 대 한 포함 된 `CompoundCurve` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  자세한 설명 및 예가이 릴리스의 새로운 공간 기능에 대 한 포함 된 `CompoundCurve` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
   
  빈 `CompoundCurve` 인스턴스를 인스턴스화할 수 있지만 `CompoundCurve`가 유효한 인스턴스가 되려면 다음 조건을 충족해야 합니다.  
   
@@ -90,7 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- 두 번째 인스턴스가 유효한 LineString 인스턴스가 아니기 때문에 `@g1`은 잘못되었습니다. `LineString` 인스턴스가 잘못되었기 때문에 `@g2`은 잘못되었습니다. `CircularString` 인스턴스가 잘못되었기 때문에 `@g3`은 잘못되었습니다. 올바른 대 한 자세한 내용은 `CircularString` 하 고 `LineString` 인스턴스를 참조 하세요 [CircularString](circularstring.md) 하 고 [LineString](linestring.md)합니다.  
+ `@g1` 은 잘못되었습니다. `LineString` 인스턴스가 잘못되었기 때문에 `@g2`은 잘못되었습니다. `CircularString` 인스턴스가 잘못되었기 때문에 `@g3`은 잘못되었습니다. 올바른 대 한 자세한 내용은 `CircularString` 하 고 `LineString` 인스턴스를 참조 하세요 [CircularString](circularstring.md) 하 고 [LineString](linestring.md)합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- 이는 다음 출력을 생성합니다. 12.566370… 4∏와 동일합니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
+ 이 구문은 4∏에 해당하는 12.566370... 4의 해당 하는??? 합니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>6. CompoundCurve를 사용하여 반원 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 반원을 저장합니다.  
@@ -179,11 +179,11 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  다음과 같은 출력이 생성됩니다.  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- Circle Two의 둘레는 대략 4∏로 이 값은 둘레의 실제 값입니다. 하지만 Circle One의 둘레는 매우 부정확합니다. Circle One의 `CompoundCurve` 인스턴스는 하나의 원호 세그먼트(ABC)와 두 개의 선분(CD, DA)을 저장합니다. 원을 정의하려면 `CompoundCurve` 인스턴스는 두 개의 원호 세그먼트(ABC, CDA)를 저장해야 합니다. 1 `LineString` 인스턴스는 Circle One의 `CompoundCurve` 인스턴스에 두 번째 점 집합(4 2, 2 4, 0 2)을 정의합니다. `CircularString` 내부에서 `CompoundCurve`인스턴스를 명시적으로 선언해야 합니다.  
+ Circle Two의 둘레는 대략 4???, 경계에 대 한 실제 값입니다. 하지만 Circle One의 둘레는 매우 부정확합니다. Circle One의 `CompoundCurve` 인스턴스는 하나의 원호 세그먼트(ABC)와 두 개의 선분(CD, DA)을 저장합니다. 원을 정의하려면 `CompoundCurve` 인스턴스는 두 개의 원호 세그먼트(ABC, CDA)를 저장해야 합니다. 1 `LineString` 인스턴스는 Circle One의 `CompoundCurve` 인스턴스에 두 번째 점 집합(4 2, 2 4, 0 2)을 정의합니다. `CircularString` 내부에서 `CompoundCurve`인스턴스를 명시적으로 선언해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [STIsValid&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   

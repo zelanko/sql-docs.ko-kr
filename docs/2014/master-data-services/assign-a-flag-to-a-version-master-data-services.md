@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], assigning flags
@@ -14,12 +13,12 @@ ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2268e5f13f78cd4f1e8909fa2008f9ec9aeecd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4a6c9c8d24211476d6f0e520da991c239ba7d24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066393"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795505"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>버전에 플래그 할당(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자나 구독 시스템에서 사용해야 하는 버전을 지정하려면 버전에 플래그를 할당합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "48066393"
 4.  Enter 키를 눌러 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [버전 플래그 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
- [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [버전 플래그 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
+ [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

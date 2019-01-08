@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659224"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160531"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux의 SQL Server의 새로운 기능
 
@@ -34,7 +34,7 @@ SQL Server 2019 preview가 출시되었습니다. 이 문서에서는 SQL Server
 - 네이티브 Linux 경로 대 한 지원입니다.
 - IPV6 지원 합니다.
 - NFS의 데이터베이스 파일을 지원 합니다.
-- [전송 보안 계층](sql-server-linux-encrypted-connections.md)(TLS) 암호화를 사용할 수 있습니다.
+- 사용 하도록 설정 [Transport Layer Security](sql-server-linux-encrypted-connections.md) (TLS) 암호화 합니다.
 - [Active Directory 인증](sql-server-linux-active-directory-authentication.md)을 사용할 수 있습니다.
 - 고가용성을 위한 [가용성 그룹 기능](sql-server-linux-availability-group-overview.md)
 - [전체 텍스트 검색](sql-server-linux-setup-full-text-search.md)을 지원합니다.

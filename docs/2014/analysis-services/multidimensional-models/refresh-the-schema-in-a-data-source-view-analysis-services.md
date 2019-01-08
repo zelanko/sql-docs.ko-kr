@@ -15,12 +15,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ec2b3a48dc76e4dd1d56128933841cdb7699996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530505"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 스키마 새로 고침(Analysis Services)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "48048803"
   
  이 대화 상자에는 DSV에서 삭제 또는 추가될 테이블, 열, 제약 조건 및 관계를 나열되며 성공적으로 준비할 수 없는 명명된 쿼리 또는 계산도 나열합니다. 영향을 받는 개체는 트리 뷰로 나열되며 테이블에 열 및 관계가 중첩되고 변경 유형(삭제 또는 추가)이 각 개체에 대해 표시됩니다. 영향을 받는 개체 유형은 표준 데이터 원본 뷰 개체 아이콘으로 표시됩니다.  
   
- 새로 고침은 전적으로 원본 개체의 이름을 기반으로 하기 때문에 데이터 원본에서 원본 개체의 이름을 바꾸면 데이터 원본 뷰 디자이너가 이름이 변경된 이러한 개체를 두 개의 별도 작업, 즉 삭제와 추가로 처리합니다. 이러한 경우 이름을 바꾼 개체를 데이터 원본 뷰에 수동으로 다시 추가해야 할 수 있습니다. 관계 또는 논리적 기본 키를 다시 만들어야 할 수도 있습니다.  
+ 새로 고침은 전적으로 원본 개체의 이름을 기반으로 하기 때문에 따라서 데이터 원본에서 기본 개체의 이름을 바꾸면, 데이터 원본 뷰 디자이너 두 개의 별도 작업을 삭제 하 고 추가를 이름이 바뀐된 개체를 처리 합니다. 이러한 경우 이름을 바꾼 개체를 데이터 원본 뷰에 수동으로 다시 추가해야 할 수 있습니다. 관계 또는 논리적 기본 키를 다시 만들어야 할 수도 있습니다.  
   
 > [!IMPORTANT]  
 >  데이터 원본에서 테이블 이름이 바꼈다는 사실을 인지한 경우 데이터 원본 뷰를 새로 고치기 전에 **테이블 바꾸기** 명령을 사용하여 테이블을 이름이 변경된 테이블로 바꾸는 것이 좋습니다. 자세한 내용은 [데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   
  보고서를 확인한 후 변경 내용을 적용하거나 업데이트를 취소하여 변경 내용을 거부할 수 있습니다. 모든 변경 내용은 함께 수락하거나 거부해야 합니다. 목록에서 개별 항목을 선택할 수 없습니다. 변경 내용에 대한 보고서를 저장할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  
   
   

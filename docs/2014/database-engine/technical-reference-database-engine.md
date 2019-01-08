@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052513"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533300"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48052513"
   
  [SqlLocalDB 유틸리티](../tools/sqllocaldb-utility.md)  
   
- [기타...](../tools/command-prompt-utility-reference-database-engine.md)  
+ [자세히...](../tools/command-prompt-utility-reference-database-engine.md)  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **데이터베이스 엔진 PowerShell Cmdlet**  
  [Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  

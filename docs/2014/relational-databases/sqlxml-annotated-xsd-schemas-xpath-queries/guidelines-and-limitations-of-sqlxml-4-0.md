@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
@@ -14,12 +12,12 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9dbc7ebb66852d4fc97c36e9508870e6724160b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffe5c84f4ac76fe339735b50843185d122b1cb70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806145"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
   SQLXML 4.0에서 작업을 수행할 때는 다음 사항을 기억해야 합니다.  

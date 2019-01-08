@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio에서 코드 조각을 만드는 | Microsoft Docs
+title: 재사용 가능한 코드 조각 만들기
+titleSuffix: Azure Data Studio
 description: 만들기 및 Azure Data Studio에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384138"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030267"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용해서 TRANSACT-SQL (T-SQL) 스크립트를 빠르게 생성하기
 
@@ -51,7 +52,7 @@ ms.locfileid: "49384138"
 
 사용자 고유의 조각을 정의할 수 있습니다. 편집을 위해 SQL 조각 파일을 열려면:
 
-1. 열기는 *명령 팔레트* (**Shift + Ctrl + P**), 형식과 *캡처*를 선택 하 고 **기본 설정: 열기 사용자 코드 조각**:
+1. 엽니다는 *명령 팔레트* (**Shift + Ctrl + P**), 형식과 *캡처*를 선택한 **기본 설정: 사용자 코드 조각 엽니다**:
 
    ![템플릿 필드를 대체 합니다.](media/code-snippets/user-snippets.png)
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837941"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210852"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  간의 정의 된 데이터 형식 매핑에 대 한 정보 반환 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (데이터베이스 관리 시스템). 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
+  간의 정의 된 데이터 형식 매핑에 대 한 정보 반환 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (데이터베이스 관리 시스템). 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_helpdatatypemap** 에서 SQL Server 이외 게시자와의 데이터 형식 매핑을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ **sp_helpdatatypemap** 에서 SQL Server 이외 게시자와의 데이터 형식 매핑을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
  원본 및 대상 DBMS의 지정 된 조합을 지원 하지 않는 경우 **sp_helpdatatypemap** 빈 결과 집합을 반환 합니다.  
   

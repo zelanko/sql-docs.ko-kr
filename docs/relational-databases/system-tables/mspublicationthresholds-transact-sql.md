@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - mspublicationthresholds
@@ -19,12 +18,12 @@ ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 133bdbd53cf89b9ebf20260c867e22008b460aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec59e0b5cb933822790a1f2497ca1bd5a3cbb2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703091"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794166"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47703091"
 |**shouldalert**|**bit**|값이 **1** 메트릭이 정의 된 임계값을 초과할 때 경고를 생성할지를 나타냅니다.|  
 |**isenabled**|**bit**|값이 **1** 이 복제 성능 메트릭에 대 한 모니터링이 활성화 되었음을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

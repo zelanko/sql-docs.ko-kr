@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -17,12 +17,12 @@ ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 645953aa9864eb867617dc8aacd71735d978d4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786295"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 작업 범주에 할당하는 방법에 대해 설명합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48177203"
   
 4.  편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **작업 속성-***job_name* 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
+5.  **작업 속성 -**_job_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48177203"
 ##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업 범주에 작업을 할당하려면**  
   
- 사용 된 `JobCategory` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다.  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다.  
   
   
   

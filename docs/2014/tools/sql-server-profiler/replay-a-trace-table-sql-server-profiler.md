@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163332d281309ff2a3deef16ac8f96f0517346da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147314"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809555"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>추적 테이블 재생(SQL Server Profiler)
   재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 애플리케이션이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 애플리케이션이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "48147314"
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 재생 중 프로세스를 관리하는 방법을 제어하려면 **상태 모니터 옵션**을 구성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server Profiler를 실행 하는 데 필요한 사용 권한](sql-server-profiler.md)   
+ [SQL Server 프로파일러 실행에 필요한 권한](sql-server-profiler.md)   
  [추적 재생](replay-traces.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)  

@@ -20,17 +20,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e34dc41b4fbd0bf8b7a3a16db3edf21799926954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 534df29b5ad3422ed3290ce4037490f69f988832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535749"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  CHANGETABLE(CHANGES …) 함수에서 반환된 SYS_CHANGE_COLUMNS 값을 해석합니다. 이로 인해 응용 프로그램은 정의된 열이 SYS_CHANGE_COLUMNS에 대해 반환된 값에 포함되는지 여부를 확인할 수 있습니다.  
+  CHANGETABLE(CHANGES...) 함수에서 반환 된 SYS_CHANGE_COLUMNS 값을 해석 합니다. 이로 인해 응용 프로그램은 정의된 열이 SYS_CHANGE_COLUMNS에 대해 반환된 값에 포함되는지 여부를 확인할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - null values [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6780ed81142343e0e08ff624ee80e8ef2cc532c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133162f206819fa3dae00ff6e91072ffc8b7140c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805125"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL(SSIS 식)
   식이 Null인지 여부에 따라 부울 결과를 반환합니다.  
@@ -57,8 +56,8 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)   
+## <a name="see-also"></a>관련 항목:  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)   
  [COALESCE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/coalesce-transact-sql)  
   
   

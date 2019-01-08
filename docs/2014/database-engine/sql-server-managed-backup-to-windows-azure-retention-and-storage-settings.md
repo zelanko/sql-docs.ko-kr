@@ -10,37 +10,37 @@ ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b1087efba30ef65a3b4f7e00ed82031e7318b6d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100384"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534480"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Windows Azure에 대한 SQL Server 관리되는 백업 - 보존 및 저장소 설정
-  이 항목에서는 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하고 인스턴스에 대한 기본 설정을 구성하는 기본 단계에 대해 설명합니다. 이 항목에서는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스를 일시 중지하고 다시 시작하는 데 필요한 단계에 대해 설명합니다.  
+  이 항목에서는 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하고 인스턴스에 대한 기본 설정을 구성하는 기본 단계에 대해 설명합니다. 이 항목에서는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스를 일시 중지하고 다시 시작하는 데 필요한 단계에 대해 설명합니다.  
   
  설정의 전체 연습은 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 참조 [SQL Server Managed Backup to Windows Azure 설정](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 하 고 [가용성 그룹에 대 한 SQL Server Managed Backup to Windows Azure 설정](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
 -   현재 유지 관리 계획 또는 로그 전달을 사용하는 데이터베이스에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 설정하지 마세요. 상호 운용성 및 공존 성과 기타 SQL Server 기능에 대 한 자세한 내용은 참조 하세요. [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   SQL Server 에이전트가 실행 중이어야 합니다.  
   
     > [!WARNING]  
     >  SQL Server 에이전트가 일정 기간 동안 중지되었다가 다시 시작되면 SQL 에이전트가 중지된 후부터 시작될 때까지 경과된 시간에 따라 백업 작업이 증가할 수 있으며 실행 대기 중인 로그 백업의 백로그가 있을 수 있습니다. 시작 시 SQL Server 에이전트가 자동으로 시작되도록 구성해 보세요.  
   
--   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하기 전에 Windows Azure 저장소 계정과 인증 정보를 저장소 계정에 저장하는 SQL 자격 증명을 모두 만들어야 합니다. 자세한 내용은 [URL에 대한 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) 항목의 **Introduction to Key Components and Concepts** 섹션과 [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)을 참조하세요.  
+-   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하기 전에 Windows Azure 저장소 계정과 인증 정보를 저장소 계정에 저장하는 SQL 자격 증명을 모두 만들어야 합니다. 자세한 내용은 참조 하세요. [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) 섹션을 **SQL Server Backup to URL** 항목인 및 [단원 2: SQL Server 자격 증명 만들기](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업을 저장하는 데 필요한 컨테이너를 만듭니다. 'machine name-instance name' 형식을 사용하여 컨테이너 이름을 만듭니다. AlwaysOn 가용성 그룹의 경우 컨테이너의 이름은 가용성 그룹의 GUID를 사용하여 지정됩니다.  
+    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업을 저장하는 데 필요한 컨테이너를 만듭니다. 컨테이너 이름 'machine name-instance name' 형식을 사용 하 여 생성 됩니다. AlwaysOn 가용성 그룹의 경우 컨테이너의 이름은 가용성 그룹의 GUID를 사용하여 지정됩니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50100384"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>기본 설정을 사용하여 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 설정  
  인스턴스에 있는 대부분의 데이터베이스에 대한 백업 및 보존 정책 요구 사항이 동일한 경우 또는 새 데이터베이스 인스턴스를 생성 시 자동으로 백업할 경우 이 설정을 사용합니다. 정책에 예외인 몇 개의 데이터베이스를 개별적으로 구성할 수 있습니다. 다음은 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 설정할 때의 이점 및 고려 사항 목록입니다.  
   
--   인스턴스 수준의 자동화: 이후에 추가된 새 데이터베이스에 대해 자동으로 적용되는 공통 설정입니다.  
+-   인스턴스 수준의 Automation: 이후에 추가된 새 데이터베이스에 대해 자동으로 적용되는 공통 설정입니다.  
   
 -   새 데이터베이스는 인스턴스에서 생성되자마자 자동으로 백업됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50100384"
   
  데이터베이스 수준 구성에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 Transact-SQL을 통해서만 지원됩니다.  
   
- 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 설정되면 이 정보가 유지됩니다. 구성을 변경하는 경우 데이터베이스 이름과 변경하려는 설정만 필요합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 은 지정되지 않은 경우 다른 매개 변수의 기존 값을 유지합니다.  
+ 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 설정되면 이 정보가 유지됩니다. 구성을 변경하는 경우 데이터베이스 이름과 변경하려는 설정만 필요합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 은 지정되지 않은 경우 다른 매개 변수의 기존 값을 유지합니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하기 전에 기존 구성(있는 경우)을 사용하는 것이 유용할 수 있습니다. 데이터베이스에 대한 구성 설정을 검토하는 단계는 이 섹션의 뒷부분에서 설명합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "50100384"
   
     2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-    3.  복사 하 고 다음 예제에서는 쿼리 창에 붙여넣고 클릭 `Execute`합니다. 이 예에서는 'TestDB' 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 설정합니다. 보존 기간은 30일로 설정됩니다. 이 예제에서는 암호화 알고리즘 및 암호기 정보를 지정하여 암호화 옵션을 사용합니다.  
+    3.  복사 하 고 다음 예제에서는 쿼리 창에 붙여넣고 클릭 `Execute`합니다. 이 예에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 'TestDB' 데이터베이스에 대 한 합니다. 보존 기간은 30일로 설정됩니다. 이 예제에서는 암호화 알고리즘 및 암호기 정보를 지정하여 암호화 옵션을 사용합니다.  
   
     ```  
     Use msdb;  
@@ -133,7 +133,7 @@ ms.locfileid: "50100384"
     ```  
   
 ##  <a name="InstanceConfigure"></a> 설정 및 기본 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 인스턴스에 대 한 설정  
- 사용 하도록 설정 하 고 기본값을 구성할 수 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 두 가지 방법으로 인스턴스 수준에서 설정: 시스템을 사용 하 여 저장 프로시저 `smart_backup.set_instance_backup` 하거나 **SQL Server Management Studio**합니다. 두 가지 방법이 아래에 설명되어 있습니다.  
+ 인스턴스 수준에서 기본 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 설정을  시스템을 사용 하 여 저장 프로시저 `smart_backup.set_instance_backup` 나 **SQL Server Management Studio**합니다. 두 가지 방법이 아래에 설명되어 있습니다.  
   
  **smart_backup.set_instance_backup:** 값을 지정 하면 **1** 에 대 한 *@enable_backup* 매개 변수를 백업을 사용 하도록 설정 하 고 기본 구성을 설정할 수 있습니다. 이러한 기본 설정은 인스턴스 수준에서 적용되면 이 인스턴스에 추가된 모든 새 데이터베이스에 적용됩니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 처음으로 설정될 때 인스턴스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 설정하는 것 외에도 다음 정보를 제공해야 합니다.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "50100384"
  이러한 설정은 설정되면 유지됩니다. 구성을 변경하는 경우 데이터베이스 이름과 변경하려는 설정만 필요합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 지정되지 않은 경우 기존 값을 유지합니다.  
   
 > [!IMPORTANT]  
->  인스턴스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하기 전에 기존 구성(있는 경우)을 확인하는 것이 유용할 수 있습니다. 데이터베이스에 대한 구성 설정을 검토하는 단계는 이 섹션의 뒷부분에서 설명합니다.  
+>  인스턴스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하기 전에 기존 구성(있는 경우)을 확인하는 것이 유용할 수 있습니다. 데이터베이스에 대한 구성 설정을 검토하는 단계는 이 섹션의 뒷부분에서 설명합니다.  
   
- **SQL Server Management Studio:** SQL Server Management Studio에서 이 태스크를 수행하려면 개체 탐색기로 이동하여 **관리** 노드를 확장하고 **관리되는 백업**을 마우스 오른쪽 단추로 클릭합니다. **구성**을 선택합니다. **관리되는 백업** 대화 상자가 열립니다. 이 대화 상자를 사용하여 보존 기간, SQL 자격 증명, 저장소 URL 및 암호화 설정을 지정할 수 있습니다. 이 대화 상자를 사용 하 여 특정 도움말을 참조 하세요 [관리 되는 백업 구성 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)합니다.  
+ **SQL Server Management Studio:** SQL Server Management Studio에서이 태스크를 수행 하려면 개체 탐색기로 이동, 확장 합니다 **Management** 노드를 마우스 오른쪽 단추로 클릭 하 고 **Managed Backup**합니다. **구성**을 선택합니다. **관리되는 백업** 대화 상자가 열립니다. 이 대화 상자를 사용하여 보존 기간, SQL 자격 증명, 저장소 URL 및 암호화 설정을 지정할 수 있습니다. 이 대화 상자를 사용 하 여 특정 도움말을 참조 하세요 [관리 되는 백업 구성 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)합니다.  
   
 #### <a name="using-transact-sql"></a>Transact-SQL 사용  
   
@@ -195,7 +195,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
     $encryptionOption = New-SqlBackupEncryptionOption -EncryptionAlgorithm Aes128 -EncryptorType ServerCertificate -EncryptorName "MyBackupCert"  
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –BackupEnabled $True –BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -BackupEnabled $True -BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
     ```  
   
 > [!IMPORTANT]  
@@ -318,7 +318,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Set-SqlSmartAdmin –BackupEnabled $False  
+    Set-SqlSmartAdmin -BackupEnabled $False  
     ```  
   
 ##  <a name="InstancePause"></a> 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 일시 중지  
@@ -348,7 +348,7 @@ Go
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $False  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $False  
     ```  
   
 #### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Transact-SQL을 사용하여 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 다시 시작하려면  
@@ -375,7 +375,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $True  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $True  
     ```  
   
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabc7fef47a3d80427e9a4c0ef4587f4dc13f405
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140553"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784595"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
   
- 이 대화 상자에는 **열**, **행**및 **요약**의 세 가지 섹션이 포함됩니다.  
+ 이 대화 상자에는 **열**하십시오 **행**, 및 **요약**합니다.  
   
 ## <a name="columns"></a>열  
  **열** 섹션에서는 Excel에 표시할 특성(열)을 확인할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "48140553"
 |명시적 계층|**통합** 특성 유형을 선택한 경우 통합 멤버가 속하는 계층을 선택합니다. 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)을 참조하세요.|  
 |특성 그룹|특성 그룹은 특성 하위 집합을 그룹화하는 방법입니다. 사용 가능한 특성 하위 집합을 표시하려면 특성 그룹을 선택합니다. 특성 그룹에 대한 자세한 내용은 [특성 그룹&#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)을 참조하세요.|  
 |모두 선택|목록에 표시된 모든 특성을 선택하려면 클릭합니다.|  
-|모두 지우기|목록에 표시된 선택한 특성을 지우려면 클릭합니다.<br /><br /> 참고: 지울 수 없습니다. **이름을** 하 고 **코드**합니다.|  
+|모두 지우기|목록에 표시된 선택한 특성을 지우려면 클릭합니다.<br /><br /> 참고: **이름** 및 **코드**특성은 지울 수 없습니다.|  
 |위쪽 화살표|선택한 특성을 목록에서 위로 이동하려면 클릭합니다. 열이 워크시트에 왼쪽에서 오른쪽으로 표시된 순서에 따라 위에서 아래쪽의 순서로 표시됩니다.|  
 |아래쪽 화살표|선택한 특성을 목록에서 아래로 이동하려면 클릭합니다. 열이 워크시트에 왼쪽에서 오른쪽으로 표시된 순서에 따라 위에서 아래쪽의 순서로 표시됩니다.|  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48140553"
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
+|attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시 하지 않으려는 특성으로 필터링 할 수 있습니다.|  
 |연산자|선택한 특성 유형에 해당하는 연산자를 표시합니다. 자세한 내용은 [필터 연산자&#40;Master Data Services&#41;](../filter-operators-master-data-services.md)를 참조하세요.|  
 |조건|필터링할 조건입니다.|  
 |업데이트 요약|큰 데이터 세트를 사용 중일 때 로드된 데이터 양 세부 정보와 함께 **요약** 섹션을 업데이트하려면 클릭합니다.|  

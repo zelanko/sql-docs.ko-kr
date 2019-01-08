@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
@@ -14,12 +13,12 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800035"
 ---
 # <a name="month-ssis-expression"></a>MONTH(SSIS 식)
   날짜의 월 부분을 나타내는 정수를 반환합니다.  
@@ -67,12 +66,12 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [DATEADD &#40;SSIS 식&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 식&#41;](datediff-ssis-expression.md)   
+## <a name="see-also"></a>관련 항목:  
+ [DATEADD&#40;SSIS 식&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF&#40;SSIS 식&#41;](datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](datepart-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](day-ssis-expression.md)   
  [YEAR&#40;SSIS 식&#41;](year-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

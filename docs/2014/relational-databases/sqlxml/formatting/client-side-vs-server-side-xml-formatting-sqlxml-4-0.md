@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -20,12 +18,12 @@ ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c64b28dba868344ed30c02f4ea9869caf241168a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822437"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
@@ -214,7 +212,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   지정 하는 경우 **클라이언트 쪽 xml = "1"** (true) 템플릿에서 하면 클라이언트 쪽 XML 서식이 요청 됩니다. 이 경우 FOR XML NESTED를 지정할 수 있습니다. 하지만 FOR XML AUTO를 지정 하는 경우 서버 쪽에서 발생 XML 서식을 **클라이언트 쪽 xml = "1"** 템플릿에 지정 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 보안 고려 사항에 대 한 &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [서버 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

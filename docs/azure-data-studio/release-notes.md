@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 릴리스 정보 | Microsoft Docs
+title: 릴리스 정보 및 변경 로그
+titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289923"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030347"
 ---
-# <a name="azure-data-studio-release-notes"></a>Azure Data Studio 릴리스 정보
+# <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 최신 릴리스 정보 및 변경 로그
 
 **[11 월 릴리스를 다운로드 하십시오!](download.md)**
 
@@ -34,12 +35,12 @@ ms.locfileid: "51289923"
 - .NET Core에 SQL 도구 서비스 업그레이드 (지원용 최종 AAD) 2.2 미리 보기 3
 
 ### <a name="bug-fixes"></a>버그 수정
-- 수정 [#2933 발급](https://github.com/Microsoft/azuredatastudio/issues/2933): Azure SQL DB에 연결 손실
-- 수정 [#2914 발급](https://github.com/Microsoft/azuredatastudio/issues/2914): OE 데이터베이스 노드를 확장 하는 "잘못 된 인수" 예외
+- 수정 [#2933 발급](https://github.com/Microsoft/azuredatastudio/issues/2933): Azure SQL DB에 연결
+- 수정 [#2914 발급](https://github.com/Microsoft/azuredatastudio/issues/2914): "잘못 된 인수" 예외 확장 OE 데이터베이스 노드
 - 수정 [#2935 발급](https://github.com/Microsoft/azuredatastudio/pull/2935): 쿼리 결과에 여러 줄 메시지를 올바르게 표시
-- 수정 [#2906 발급](https://github.com/Microsoft/azuredatastudio/pull/2906): 데이터를 편집 수정 문서 이름 테이블 이름에 특수 문자가 포함 된 경우
-- 수정 [#2929 발급](https://github.com/Microsoft/azuredatastudio/issues/2929): 빌드된 changelog 라는 확장에서 변경 내용에 대 한 VSCode 릴리스를 확인 하려면
-- 수정 [#2719 발급](https://github.com/Microsoft/azuredatastudio/issues/2719): 고대비 테마 double/삼중 아이콘
+- 수정 [#2906 발급](https://github.com/Microsoft/azuredatastudio/pull/2906): 테이블 이름에 특수 문자가 포함 된 경우 데이터 편집 문서 이름 수정
+- 수정 [#2929 발급](https://github.com/Microsoft/azuredatastudio/issues/2929): 기본 제공 changelog 라는 확장에서 변경 내용에 대 한 VSCode 릴리스를 확인 하려면
+- 수정 [#2719 발급](https://github.com/Microsoft/azuredatastudio/issues/2719): 높은 대비 테마 double/삼중 아이콘
 - 수정 [#3047 발급](https://github.com/Microsoft/azuredatastudio/pull/3047): SQL Server에 연결 하기 위한 명령줄 인터페이스를 추가 합니다.
 - 수정 [#3031 발급](https://github.com/Microsoft/azuredatastudio/pull/3031): 쿼리 계획 테마 지원 추가
 - ...
@@ -57,11 +58,11 @@ ms.locfileid: "51289923"
 - 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>버그 수정
-- 수정 [#2717 발급](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 열으로 된 결과 형식을 클릭
+- 수정 [#2717 발급](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 열으로 된 결과 형식을 클릭합니다
 - 수정 [#2993 발급](https://github.com/Microsoft/azuredatastudio/issues/2993): 너비의 결과 windows 완전 하지 않습니다.
-- 수정 [#2999 발급](https://github.com/Microsoft/azuredatastudio/issues/2999): DB에 연결 하는 경우 Mac에서 System.Diagnostics.Tracing 파일을 로드할 수 없습니다
+- 수정 [#2999 발급](https://github.com/Microsoft/azuredatastudio/issues/2999): DB에 연결 하는 경우 Mac에서 System.Diagnostics.Tracing 파일을 로드할 수 없습니다.
 - 수정 [#2851 발급](https://github.com/Microsoft/azuredatastudio/issues/2851): 시계열 차트 제대로 렌더링 되지 않습니다.
-- 수정 [#2996 발급](https://github.com/Microsoft/azuredatastudio/issues/2996): 임시 갑자기 세션 변경으로 인해 테이블 손실
+- 수정 [#2996 발급](https://github.com/Microsoft/azuredatastudio/issues/2996): 갑자기 세션 변경으로 인해 손실 임시 테이블
 - ...
 
 자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
@@ -118,32 +119,32 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 ### <a name="bug-fixes"></a>버그 수정
 
 - 쿼리 편집기 창에서 SQL을 사용 하 여 구문 분석 된 `Parse Syntax` 명령입니다.
-- 수정 [#143 발급](https://github.com/Microsoft/azuredatastudio/issues/143): 변수 이름의 선택 하지 않으면 두 번 클릭 합니다.
+- 수정 [#143 발급](https://github.com/Microsoft/azuredatastudio/issues/143): 변수 이름에을 선택 하지 않으면 두 번 클릭 합니다.
 - 수정 [문제 #387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL 탭 DB 아이콘은 빨간색입니다.
-- 수정 [#825 발급](https://github.com/Microsoft/azuredatastudio/issues/825): 요청: 자동으로 스크립트 다음 현재 서버에 연결 하는 중... 
+- 수정 [#825 발급](https://github.com/Microsoft/azuredatastudio/issues/825): 요청: 스크립팅 한 후 현재 서버에 자동 연결 하는 중... 
 - 수정 [#1278 발급](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [데스크톱 항목]-이름 및 설명에 대 한 중복 값입니다.
 - 수정 [#1285 발급](https://github.com/Microsoft/azuredatastudio/issues/1285): 업데이트 하면 응용 프로그램 아이콘을 제거 하 고 대체 Windows에서.
 - 수정 [#1317 발급](https://github.com/Microsoft/azuredatastudio/issues/1317): 소수 구분 기호를 수정 합니다.
 - 수정 [#1474 발급](https://github.com/Microsoft/azuredatastudio/issues/1474): 연결 변경 취소는 현재 연결을 끊습니다.
-- 수정 [#1497 발급](https://github.com/Microsoft/azuredatastudio/issues/1497): 아래쪽 옵션 잘립니다 차트로 보기.
+- 수정 [#1497 발급](https://github.com/Microsoft/azuredatastudio/issues/1497): 맨 아래에서 옵션 잘립니다 차트로 보고 합니다.
 - 수정 [#1524 발급](https://github.com/Microsoft/azuredatastudio/issues/1524): 셸/대시보드: 주 viewlet 아이콘 draggable 되며 응용 프로그램 크래시가 발생할 수 있습니다.
-- 수정 [#1578 발급](https://github.com/Microsoft/azuredatastudio/issues/1578): 이름을 클릭 하 여 원격 파일 브라우저 폴더를 확장/축소 수 없습니다.
+- 수정 [#1578 발급](https://github.com/Microsoft/azuredatastudio/issues/1578): 이름을 클릭 하 여 원격 파일 브라우저 폴더를 확장/축소를 수 없습니다.
 - 수정 [#1620 발급](https://github.com/Microsoft/azuredatastudio/issues/1620): 기능 제안: 기존 연결에 대 한 연결 문자열을 가져옵니다.
-- 수정 [#1624 발급](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox 사용 하지 않도록 설정 하는 경우 색을 변경 하지 않습니다.
+- 수정 [#1624 발급](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox 사용 하지 않도록 설정 하는 경우 색을 변경 되지 않습니다.
 - 수정 [#1728 발급](https://github.com/Microsoft/azuredatastudio/issues/1728): JSON/EXCEL/CSV 작동 하지 않음로 저장 합니다.
-- 수정 [#1744 발급](https://github.com/Microsoft/azuredatastudio/issues/1744): 결과 창 탭 간에 전환 하는 경우 해당 스크롤 위치를 손실 됩니다.
+- 수정 [#1744 발급](https://github.com/Microsoft/azuredatastudio/issues/1744): 결과 창 탭 간에 전환 하는 경우 해당 스크롤 위치를 잃게 됩니다.
 - 수정 [#1748 발급](https://github.com/Microsoft/azuredatastudio/issues/1748): Excel 파일 두 번째 (및 후속) 시간을 절약 하는 경우 오류 메시지입니다.
-- 수정 [#1782 발급](https://github.com/Microsoft/azuredatastudio/issues/1782): 데이터를 편집: 셀 이스케이프 키를 눌러 원래 값으로 되돌리기 하지 않습니다.
+- 수정 [#1782 발급](https://github.com/Microsoft/azuredatastudio/issues/1782): 데이터를 편집 합니다: 셀 이스케이프 키를 눌러 원래 값으로 되돌리기 하지 않습니다.
 - 수정 [#1836 발급](https://github.com/Microsoft/azuredatastudio/issues/1836): SQL Operations Studio 사용 하 여 연결 되지 않은.sql 파일입니다.
 - 수정 [#1850 발급](https://github.com/Microsoft/azuredatastudio/issues/1850): 입력 N ' n 자동 완성 ' '입니다.
-- 수정 [#1985 발급](https://github.com/Microsoft/azuredatastudio/issues/1985): 쿼리 결과 표 형태에서 복사 1 열으로 해제 되어 있습니다.
-- 수정 [#1998 발급](htpts://github.com/Microsoft/azuredatastudio/pull/1998): VS Code 추가 버전을 대화에 대 한 합니다.
-- 수정 [#2042 발급](https://github.com/Microsoft/azuredatastudio/pull/2042): 에이전트: sql 파일에서 쿼리 가져오기 단추를 사용 하도록 설정된 합니다.
-- 수정 [#2091 발급](https://github.com/Microsoft/azuredatastudio/issues/2091): 바로 가기 Ctrl + C를 사용 하 여 결과 창에서 복사할 수 없습니다.
-- 수정 [#2099 발급](https://github.com/Microsoft/azuredatastudio/pull/2099): saveAsCsv 옵션이 더 추가 합니다.
-- 수정 [#2107 발급](https://github.com/Microsoft/azuredatastudio/issues/2107): 대시보드 및 Profiler 문서에 대 한 문서 아이콘 업데이트 합니다.
-- 수정 [#2129 발급](https://github.com/Microsoft/azuredatastudio/pull/2129): 탭을 전환 하는 경우 스크롤 위치를 편집 데이터를 저장 합니다.
-- 수정 [#2152 발급](https://github.com/Microsoft/azuredatastudio/issues/2152): 결과 그리드 행 표시기 0 기반 합니다.
+- 수정 [#1985 발급](https://github.com/Microsoft/azuredatastudio/issues/1985): 표 1 열으로 해제 되어 쿼리 결과에서 복사 합니다.
+- 수정 [#1998 발급](htpts://github.com/Microsoft/azuredatastudio/pull/1998): 대화에 대 한 VS Code 버전을 추가 합니다.
+- 수정 [#2042 발급](https://github.com/Microsoft/azuredatastudio/pull/2042): 에이전트: Sql 파일에서 쿼리 가져오기 단추를 사용할 수 있습니다.
+- 수정 [#2091 발급](https://github.com/Microsoft/azuredatastudio/issues/2091): 결과 창에서 복사할 바로 가기 Ctrl + C를 사용할 수 없습니다.
+- 수정 [#2099 발급](https://github.com/Microsoft/azuredatastudio/pull/2099): 더 많은 saveAsCsv 옵션을 추가 합니다.
+- 수정 [#2107 발급](https://github.com/Microsoft/azuredatastudio/issues/2107): 대시보드 및 Profiler 문서에 대 한 문서 아이콘을 업데이트 합니다.
+- 수정 [#2129 발급](https://github.com/Microsoft/azuredatastudio/pull/2129): 탭을 전환할 때 편집 데이터 스크롤 위치를 저장 합니다.
+- 수정 [#2152 발급](https://github.com/Microsoft/azuredatastudio/issues/2152): 결과 표 형태 창의 행 표시기 0부터 시작 합니다.
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -173,7 +174,7 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 - 릴리스의 결합 스크립트 확장
 - 확장 작성자가 추가 하는 마법사 및 대화 확장성 지점
 - GitHub 문제를 해결 합니다.
- - 수정 [728 발급](https://github.com/Microsoft/azuredatastudio/issues/728): macOS에서 추가 연결에 응답
+ - 수정 [728 발급](https://github.com/Microsoft/azuredatastudio/issues/728): MacOS에서 추가 연결에 응답
  - 수정 [1612 발급](https://github.com/Microsoft/azuredatastudio/issues/1612): 결과 표에서 텍스트 표시는 중 문제가 발생 한 국제 문자로
  - 수정 [1693 발급](https://github.com/Microsoft/azuredatastudio/issues/1693): 백업 대화 상자: 파일 브라우저 UI 손상 되었습니다.
  - 수정 [1713 발급](https://github.com/Microsoft/azuredatastudio/issues/1713): 영향을 받는 행 수
@@ -182,11 +183,11 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
  - 수정 [1724 발급](https://github.com/Microsoft/azuredatastudio/issues/1724): 작업 중지 확장 대화 상자
  - 수정 [1749 발급](https://github.com/Microsoft/azuredatastudio/issues/1749): 버그: 열에 HTML 데이터 해석
  - 수정 [1789 발급](https://github.com/Microsoft/azuredatastudio/issues/1789): 확장성: 연결 공급자를 추가 하는 경우 제거 되지에서 제거 됩니다 목록
- - 수정 [1791 발급](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops 확장: queryeditor.connect() 대상 데이터베이스에 연결 하지만 UI 편집기가 연결 되는 표시 되지 않습니다
- - 수정 [1799 발급](https://github.com/Microsoft/azuredatastudio/issues/1799): 상위 10 DB 크기 차트에서는 대/소문자 구분 인스턴스가 작동 하지 않습니다
+ - 수정 [1791 발급](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops 확장: queryeditor.connect() 대상 데이터베이스에 연결 하지만 UI 편집기가 연결 되는 표시 되지 않습니다.
+ - 수정 [1799 발급](https://github.com/Microsoft/azuredatastudio/issues/1799): 상위 10 개 DB 크기 차트 대/소문자 구분 인스턴스에서 작동 하지 않습니다.
  - 수정 [1814 발급](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts 오타로 인해 암시적인 'any' 형식 정의
  - 수정 [1817 발급](https://github.com/Microsoft/azuredatastudio/issues/1817): 오류 de Ortografia
- - 수정 [1830 발급](https://github.com/Microsoft/azuredatastudio/issues/1830): component() 호출 된 후 iconPath ButtonComponent에서 설정 아이콘 변경 되지 않습니다
+ - 수정 [1830 발급](https://github.com/Microsoft/azuredatastudio/issues/1830): Component() 호출 된 후 iconPath ButtonComponent에서 설정 아이콘 변경 되지 않습니다.
  - 수정 [1843 발급](https://github.com/Microsoft/azuredatastudio/issues/1843): 더 나은 테이블 구성
 
 
@@ -204,13 +205,13 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 - 개선 **마법사 및 대화 상자 UI 작성기 프레임 워크** 확장성 Api입니다.
 - VS 코드 플랫폼 소스 코드 통합 업데이트 [2018 년 3 월 (1.22)](https://code.visualstudio.com/updates/v1_22) 하 고 [2018 년 4 월 (1.23)](https://code.visualstudio.com/updates/v1_23) 해제 합니다.
 - GitHub 문제를 해결 합니다.
-  - 기능 요청 ([1204 발급](https://github.com/Microsoft/azuredatastudio/issues/1204)): 하세요 데이터를 결과 그리드 자동 맞춤 열 너비를 확인 및/또는 동일한 쿼리가 다시 실행 하는 경우 수동으로 변경 해야 합니다.
-  - 수정 [1398 발급](https://github.com/Microsoft/azuredatastudio/issues/1398): 연결 된 계정 비어 있을 때 메시지 추가한 계정을 계정 단추 표시 추가 해야 합니다.
-  - 수정 [1399 발급](https://github.com/Microsoft/azuredatastudio/issues/1399): 뷰를 축소할 때 연결 된 계정 탭은 중단 합니다.
-  - 수정 [1374 발급](https://github.com/Microsoft/azuredatastudio/issues/1374): 디스크에서.sql 파일을 열면 SQL 도구 서비스가 충돌 합니다.
-  - 수정 [1372 발급](https://github.com/Microsoft/azuredatastudio/issues/1372): 누락 된 SQL 키워드 "BETWEEN"입니다.
-  - 수정 [1395 발급](https://github.com/Microsoft/azuredatastudio/issues/1395): '일치' 키워드는 SQL 도구 서비스가 충돌 합니다.
-  - 수정 [1496 발급](https://github.com/Microsoft/azuredatastudio/issues/1496): 개체 탐색기에서 상황에 맞는 메뉴 옵션 "새 Profiler" 아무 작업도 수행 합니다.
+  - 기능 요청 ([1204 발급](https://github.com/Microsoft/azuredatastudio/issues/1204)): 하세요 데이터를 결과 그리드 자동 맞춤 열 너비를 확인 하거나 동일한 쿼리를 다시 실행 하는 경우 수동으로 변경 해야 합니다.
+  - 수정 [1398 발급](https://github.com/Microsoft/azuredatastudio/issues/1398): 표시는 메시지를 추가 하 고 연결 된 계정 비어 있는 경우 계정 계정 단추를 추가 해야 합니다.
+  - 수정 [1399 발급](https://github.com/Microsoft/azuredatastudio/issues/1399): 연결 된 계정 탭 뷰를 축소할 때 손상 되었습니다.
+  - 수정 [1374 발급](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL 도구 서비스에는 디스크에서.sql 파일을 열 때 작동이 중단 됩니다.
+  - 수정 [1372 발급](https://github.com/Microsoft/azuredatastudio/issues/1372): SQL 키워드가 "BETWEEN" 없습니다.
+  - 수정 [1395 발급](https://github.com/Microsoft/azuredatastudio/issues/1395): '일치' 키워드는 SQL 도구 서비스 작동이 중단 됩니다.
+  - 수정 [1496 발급](https://github.com/Microsoft/azuredatastudio/issues/1496): "새 Profiler" 개체 탐색기에서 상황에 맞는 메뉴 옵션 아무 작업도 수행 합니다.
   - 수정 [1495 발급](https://github.com/Microsoft/azuredatastudio/issues/1495): 쿼리 편집기 "설명" 쿼리 계획 손상 되었습니다.
 
 
@@ -222,19 +223,19 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 합니다 *공개 미리 보기로 제공 될 수 있습니다* 안정화 및 버그 수정에 포커스가 있습니다. 이 빌드에는 다음 주요 사항을 포함합니다.  
 
 - 확장 관리자에서 사용 하 여 사용할 수 있는 Redgate SQL 검색 확장을 발표합니다.
-- 10 개 언어에 사용할 수 있는 커뮤니티 지역화: 독일어, 스페인어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어, 러시아어, 중국어 간체 및 중국어 (번체).
+- 커뮤니티 지역화 10 언어에 사용할 수 있습니다. 독일어, 스페인어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어, 러시아어, 간소화 된 중국어 및 중국어 (번체).
 - 축소 된 원격 분석 수집, 개선 된 옵트아웃 및 개인정보취급방침 대 한 제품 내 링크입니다.
 - 확장 관리자 환경을 쉽게 커뮤니티 확장을 검색 하는 향상 된 Marketplace에 있습니다.
 - SQL 에이전트 확장 작업 및 작업 기록 보기 개선 합니다.
 - Whoisactive 및 서버 보고서에 대 한 확장을 업데이트합니다.
 - 관리 대시보드 속성 스크롤 개선 합니다.
 - GitHub 문제를 해결 합니다.
-   - 수정 [703 발급](https://github.com/Microsoft/azuredatastudio/issues/703): 편집 데이터에 html 텍스트를 입력 하면 값이 새로 고침까지 제대로 표시 되지 않음
+   - 수정 [703 발급](https://github.com/Microsoft/azuredatastudio/issues/703): 데이터 편집에에서 html 텍스트를 입력 하면 값이 새로 고침까지 제대로 표시 되지 않음
    - 수정 [821 발급](https://github.com/Microsoft/azuredatastudio/issues/821): azuredatastudio.deb 패키지 종속성
-   - 수정 [1260 발급](https://github.com/Microsoft/azuredatastudio/issues/1260): 'distinct' 강조 표시 되지 않은 키워드
-   - 수정 [1332 발급](https://github.com/Microsoft/azuredatastudio/issues/1332): 편집 데이터 되돌릴 행 작동 하지 않습니다
+   - 수정 [1260 발급](https://github.com/Microsoft/azuredatastudio/issues/1260): 키워드 'distinct' 강조 표시가 해제
+   - 수정 [1332 발급](https://github.com/Microsoft/azuredatastudio/issues/1332): 데이터 편집 되돌리기 행 작동 하지 않습니다
    - 수정 [1215를 발급](https://github.com/Microsoft/azuredatastudio/issues/1215): SQL Agent 확장 및 상태 표시줄
-   - 수정 [1316 발급](https://github.com/Microsoft/azuredatastudio/issues/1316): windows 크기 변경 후 크기를 조정 SQL 에이전트 하지 않음
+   - 수정 [1316 발급](https://github.com/Microsoft/azuredatastudio/issues/1316): Windows 크기 변경 후 크기 조정 SQL 에이전트 하지 않음
 
 
 
@@ -255,17 +256,17 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
    - 수정 [462 발급](https://github.com/Microsoft/azuredatastudio/issues/462): 기능 요청: 기본적으로 확장 하는 서버 그룹에 대 한 옵션입니다.
    - 수정 [606 발급](https://github.com/Microsoft/azuredatastudio/issues/606): intellisense-'update' 명령에 대 한 잘못 된 제안 합니다.
    - 수정 [967 발급](https://github.com/Microsoft/azuredatastudio/issues/967): 쿼리 계획을 예상 결과 그리드에서 XML 실행 계획을 선택 하는 경우.
-   - 수정 [1023 발급](https://github.com/Microsoft/azuredatastudio/issues/1023): flyfishingdba에서 ms_foreachdb 호출에 대 한 대괄호를 추가 합니다.
+   - 수정 [1023 발급](https://github.com/Microsoft/azuredatastudio/issues/1023): Flyfishingdba에서 ms_foreachdb 호출에 대 한 대괄호를 추가 합니다.
    - 수정 [1048 발급](https://github.com/Microsoft/azuredatastudio/issues/1048): 사전 로그인 SSL/TLS 핸드셰이크 오류입니다.
-   - 수정 [1050 발급](https://github.com/Microsoft/azuredatastudio/issues/1050): 지우기 insights 오류를 표시 하기 전에 확인 합니다.
-   - 수정 [1057 발급](https://github.com/Microsoft/azuredatastudio/issues/1057): 복원 작업과 새 쿼리 탐색기 위젯에서 끊어집니다.
+   - 수정 [1050 발급](https://github.com/Microsoft/azuredatastudio/issues/1050): 오류를 표시 하기 전에 지우기 insights 보기입니다.
+   - 수정 [1057 발급](https://github.com/Microsoft/azuredatastudio/issues/1057): 복원 및 새 쿼리 작업 탐색기 위젯에서 끊어집니다.
    - 수정 [1068 발급](https://github.com/Microsoft/azuredatastudio/issues/1068): 대시보드 출력 windows 팝업 Azure SQL Database에 대 한 오류 메시지와 함께 합니다.
-   - 수정 [1069 발급](https://github.com/Microsoft/azuredatastudio/issues/1069): 연결 대화 상자 처음 표시 될 때 필요한 서버 오류를 표시 합니다.
-   - 수정 [1070 발급](https://github.com/Microsoft/azuredatastudio/issues/1070): 서버 그룹을 두 번 클릭으로 확장 하 고 필요 합니다.
-   - 수정 [1072 발급](https://github.com/Microsoft/azuredatastudio/issues/1072): 선택 컨트롤 배경에 반투명 하 게 됩니다.
+   - 수정 [1069 발급](https://github.com/Microsoft/azuredatastudio/issues/1069): 연결 대화 상자 처음 표시 될 때 필요한 서버 오류를 보여 줍니다.
+   - 수정 [1070 발급](https://github.com/Microsoft/azuredatastudio/issues/1070): 서버 그룹에는 이제 두 번 클릭 하 여 확장 필요 합니다.
+   - 수정 [1072 발급](https://github.com/Microsoft/azuredatastudio/issues/1072): 선택 컨트롤 배경이 반투명입니다.
    - 수정 [1115 발급](https://github.com/Microsoft/azuredatastudio/issues/1115): SQL Operations Studio 모든 고대비 액세스 가능성 문제를 해결 합니다.
-   - 수정 [1101 발급](https://github.com/Microsoft/azuredatastudio/issues/1101): 업그레이드 "다운로드" 수동으로 링크 확장 되지 못하거나 잘못 된 위치로 이동 합니다.
-   - 수정 [1103 발급](https://github.com/Microsoft/azuredatastudio/issues/1103): V 스크롤 홈 탭에서 작동 하지 않음.
+   - 수정 [1101 발급](https://github.com/Microsoft/azuredatastudio/issues/1101): 확장 되지 못하거나 업그레이드 "다운로드" 수동으로 링크 잘못 된 위치로 이동 합니다.
+   - 수정 [1103 발급](https://github.com/Microsoft/azuredatastudio/issues/1103): 홈 탭에서 작동 하지 않는 V 스크롤입니다.
    - 수정 [1104 발급](https://github.com/Microsoft/azuredatastudio/issues/1104): SQL 확장 탭 작동을 중지 합니다.
 
 
@@ -291,7 +292,7 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 
 ## <a name="march-2018-march-public-preview"></a>2018 년 3 월 (공개 미리 보기 3 월)
 
-릴리스 날짜: 2018 년 3 월 28 일  
+릴리스 날짜: 2018년 3월 28일  
 버전: 0.27.3
 
 합니다 *공개 미리 보기 3 월* 은 계속 최상위 GitHub 문제를 해결 하 고 확장성 이야기를 주력 합니다. 특히 확장 관리자를 사용 하도록 설정 하 고 대시보드 관리 개선 및 SQL 에이전트 및 확장 정보를 제공 합니다. 이 릴리스에 다음과 같은 향상 기능이 포함 되어 있습니다.
@@ -314,12 +315,12 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 - 자동 업데이트 설치를 도입 하는 경우 알림을 제공 새 릴리스는 다운로드할 수 있습니다. 
 - 연결 대화 상자 '데이터베이스' 필드를 동적으로 채워진된 드롭다운 목록에서 지정된 된 서버에서 채워진 데이터베이스의 목록을 포함 하는 되었습니다.
 - 수정 [6 발급](https://github.com/Microsoft/azuredatastudio/issues/6): 새 쿼리 탭을 열 때 연결 및 선택한 데이터베이스를 유지 합니다.
-- 수정 [22 발급](https://github.com/Microsoft/azuredatastudio/issues/22): ' 서버 이름 ' 및 ' 데이터베이스 이름 '-수 이러한 드롭다운 텍스트 상자 대신 수 있습니까?
-- 수정 [549 발급](https://github.com/Microsoft/azuredatastudio/issues/549): 설치 후 여는 응용 프로그램에서 결과 자동/매우 자동 설치 합니다.
+- 수정 [22 발급](https://github.com/Microsoft/azuredatastudio/issues/22): '서버 이름' 및 ' 데이터베이스 이름 '-수 이러한 드롭다운 텍스트 상자 대신 수 있나요?
+- 수정 [549 발급](https://github.com/Microsoft/azuredatastudio/issues/549): 자동/매우 자동 설치는 설치 후 여는 응용 프로그램에서 발생 합니다.
 - 수정 [481 발급](https://github.com/Microsoft/azuredatastudio/issues/481): "업데이트 확인 옵션을 추가 합니다.
 - SQL 편집기 색 지정 및 자동 완성 수정 사항:
-   - 수정 [584 발급](https://github.com/Microsoft/azuredatastudio/issues/584): IntelliSense에서 키워드 "전체" 강조 표시 되지 않습니다.
-   - 수정 [345 발급](https://github.com/Microsoft/azuredatastudio/issues/345): 편집기에서 색을 지정 SQL 함수입니다.
+   - 수정 [584 발급](https://github.com/Microsoft/azuredatastudio/issues/584): IntelliSense에서 강조 표시 되지 않은 "전체" 키워드입니다.
+   - 수정 [345 발급](https://github.com/Microsoft/azuredatastudio/issues/345): 편집기 내에서 SQL 함수 색을 지정 합니다.
    - 수정 [300 발급](https://github.com/Microsoft/azuredatastudio/issues/300): [#tempData] 최신 "]" 녹색 표시 됩니다.
    - 수정 [225 발급](https://github.com/Microsoft/azuredatastudio/issues/225): 키워드 색 일치 하지 않습니다.
    - 수정 [60 발급](https://github.com/Microsoft/azuredatastudio/issues/60): 잘못 된 sql 구문 색 강조 from 절에서 임시 테이블을 사용 하는 경우.

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786145"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
   애플리케이션 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 응용 프로그램에서는 `GETDATE()` 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>시간 기반 행 필터 사용에 대한 권장 사항  
  시간을 기반으로 필터링하기 위한 강력하고 간단한 방법은 다음과 같습니다.  
   
--   데이터 형식의 테이블에 열 추가 `bit`합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
+-   `bit` 데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
   
 -   시간 기반 열 이외의 새 열을 참조하는 행 필터를 사용합니다.  
   
 -   병합 에이전트의 예약된 실행 시간 전에 열을 업데이트하는 SQL Server 에이전트 작업(또는 다른 메커니즘을 통해 예약된 작업)을 만듭니다.  
   
- 이 방법을 사용 하 여 해결할 `GETDATE()` 또는 다른 시간 기반 메서드 및 파티션에 대해 필터가 평가 되는 경우를 지정 하지 않아도의 문제를 방지 합니다. 예를 들어 다음과 같은 **Events** 테이블이 있다고 가정합니다.  
+ 이 방법을 사용하면 `GETDATE()`나 다른 시간 기반 메서드를 사용할 때의 문제를 해결할 수 있으며 파티션에 대해 필터가 평가되는 시기를 지정하지 않아도 됩니다. 예를 들어 다음과 같은 **Events** 테이블이 있다고 가정합니다.  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

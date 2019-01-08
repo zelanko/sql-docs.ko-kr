@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모델 파티션 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 파티션 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146288"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072650"
 ---
 # <a name="tabular-model-partitions"></a>테이블 형식 모델 파티션 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50146288"
 ##  <a name="bkmk_benefits"></a> 이점  
  효과적인 모델 디자인은 파티션을 이용하여 불필요한 처리 및 Analysis Services 서버에 대한 후속 프로세서 로드를 배제하는 동시에 데이터 원본의 최신 데이터를 반영하여 데이터를 자주 처리하고 새로 고칠 수 있습니다.  
   
- 예를 들어 테이블 형식 모델에 현재 2011 회계 연도와 이전 회계 연도의 판매 데이터를 포함하는 Sales 테이블이 있을 수 있습니다. 모델의 Sales 테이블에는 다음과 같은 세 개의 파티션이 있습니다.  
+ 예를 들어 테이블 형식 모델에 현재 2011 회계 연도와 이전 회계 연도의 판매 데이터를 포함하는 Sales 테이블이 있을 수 있습니다. 모델의 Sales 테이블에 다음과 같은 세 개의 파티션이 있습니다.  
   
 |Partition|데이터 출처|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "50146288"
   
  Sales2010-2001 파티션의 데이터는 야간에 처리하지 않아도 되지만 이전 10년의 회계 연도 판매 데이터가 제품 반품 및 기타 조정으로 인해 가끔 변경될 수 있어 정기적으로 처리해야 하므로 Sales2010-2001 파티션의 데이터는 매월 처리됩니다. SalesOld 파티션의 데이터는 변경되지 않으므로 1년에 한 번만 처리됩니다.  
   
- 2012 회계 연도가 되면 새로운 Sales2012 파티션이 해당 모드의 Sales 테이블에 추가됩니다. 그러면 Sales2011 파티션을 Sales2010-2001 파티션과 병합하여 Sales2011-2002로 이름을 변경할 수 있습니다. 2001 회계 연도의 데이터가 새 Sales2011-2002 파티션에서 제거되어 SalesOld 파티션으로 이동됩니다. 그런 다음 모든 파티션이 변경 내용을 반영하도록 처리됩니다.  
+ 2012 회계 연도 입력 하는 경우 새로운 Sales2012 파티션이 해당 모드의 Sales 테이블에 추가 됩니다. 그러면 Sales2011 파티션을 Sales2010-2001 파티션과 병합하여 Sales2011-2002로 이름을 변경할 수 있습니다. 2001 회계 연도의 데이터가 새 Sales2011-2002 파티션에서 제거되어 SalesOld 파티션으로 이동됩니다. 그런 다음 모든 파티션이 변경 내용을 반영하도록 처리됩니다.  
   
- 조직의 테이블 형식 모델에 대한 파티션 전략을 구현하는 방법은 특정 모델 데이터 처리 요구 사항과 사용 가능한 리소스에 따라 크게 다릅니다.  
+ 조직의 테이블 형식 모델에 대 한 파티션 전략을 구현 하는 방법을 주로 됩니다에 특정 모델 데이터 처리 요구 사항 및 사용 가능한 리소스에 따라 달라 집니다.  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 만들고 관리하고 처리하려면 보안 역할에 적절한 Analysis Services 사용 권한이 정의되어 있어야 합니다. 각 보안 역할의 사용 권한은 다음과 같습니다.  
@@ -82,7 +82,7 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 |지우기 처리|파티션에서 모든 데이터를 제거합니다.|  
 |증분 처리|새 데이터로 파티션을 증분 업데이트합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |태스크|Description|  
 |----------|-----------------|  

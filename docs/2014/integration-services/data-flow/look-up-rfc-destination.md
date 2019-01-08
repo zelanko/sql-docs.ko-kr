@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: efe8e9e468bca96605e3c9cfc771e78cb4b78cce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823707"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
   **RFC 대상 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 RFC 대상을 조회할 수 있습니다. 사용할 수 있는 RFC 대상 목록이 표시될 때 원하는 대상을 선택하면 관련 옵션이 필요한 값으로 채워집니다.  
@@ -46,14 +45,14 @@ ms.locfileid: "48191843"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 표시합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 형식으로 봅니다 `sapgwNN`여기서 `NN` 은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 `sapgwNN` 형식으로 봅니다. 여기서 `NN`은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 대상 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

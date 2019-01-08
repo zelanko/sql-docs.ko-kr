@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -24,12 +23,12 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140260"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794065"
 ---
 # <a name="start-a-trace"></a>추적 시작
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 새 추적을 정의하거나 템플릿을 만든 후 새 추적 정의 또는 템플릿을 사용하여 데이터 캡처를 시작, 일시 중지 또는 중지할 수 있습니다.  
@@ -44,8 +43,8 @@ ms.locfileid: "48140260"
 > [!NOTE]  
 >  기존의 추적으로 작업하면 속성을 볼 수는 있지만 수정할 수는 없습니다. 속성을 수정하려면 추적을 시작하거나 일시 중지하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [서버 연결 후 자동으로 추적 시작 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+## <a name="see-also"></a>관련 항목:  
+ [서버 연결 후 자동으로 추적 시작&#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [추적 일시 중지&#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [추적 중지&#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [추적 창 지우기&#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.deletetable
@@ -13,12 +13,12 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4276c0b49bf2bccad0e18b0fb31544dd2c49a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808195"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>테이블 삭제 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 레코드를 삭제할 테이블을 지정할 수 있습니다. 이 대화 상자는 다이어그램 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 DELETE 쿼리로 변경하는 경우에 나타납니다.  

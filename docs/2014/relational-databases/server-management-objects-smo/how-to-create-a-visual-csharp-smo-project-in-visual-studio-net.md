@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
@@ -14,12 +12,12 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8abffe99e34df0aa4387651775eb2a3159da8bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799511"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 빌드하는 방법을 설명합니다.  

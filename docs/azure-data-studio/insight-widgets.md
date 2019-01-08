@@ -1,7 +1,8 @@
 ---
-title: 정보 위젯을 사용 하 여 Azure Data Studio에서 데이터베이스 및 서버 모니터링 | Microsoft Docs
-description: Azure Data Studio에 대 한 정보 위젯에 알아봅니다.
-ms.custom: tools|sos
+title: 정보 위젯을 사용 하 여 서버 및 데이터베이스 모니터링
+titleSuffix: Azure Data Studio
+description: Azure Data Studio에 대 한 정보 위젯 알아보기
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356334"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030197"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>서버 및 데이터베이스에 대 한 정보 위젯 사용 하 여 관리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab0f2d944e5e0fa3dcf27700b7d543268ce8d299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811355"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 이벤트 클래스
   **Data File Auto Grow** 이벤트 클래스는 데이터 파일 크기가 자동으로 증가했음을 나타냅니다. 데이터 파일이 ALTER DATABASE 문을 통해 명시적으로 증가하는 경우에는 이 이벤트가 트리거되지 않습니다.  

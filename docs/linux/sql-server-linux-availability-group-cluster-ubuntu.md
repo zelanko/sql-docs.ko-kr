@@ -1,21 +1,22 @@
 ---
-title: SQL Server 가용성 그룹에 대 한 Ubuntu 클러스터 구성 | Microsoft Docs
-description: ''
+title: SQL Server 가용성 그룹에 대 한 Ubuntu 클러스터 구성
+titleSuffix: SQL Server
+description: Ubuntu에 대 한 가용성 그룹 클러스터를 만드는 방법을 알아보고합니다
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658389"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160621"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu 클러스터 및 가용성 그룹 리소스 구성
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. 모든 노드에서 모든 기존 클러스터 구성을 제거 합니다. 
 
-   동시에 pacemaker, corosync 및 pc를 설치 하 고 서비스의 모든 3이 실행을 시작 하는 실행 중인 'sudo apt-get install pc'.  Corosync를 시작 템플릿을 생성 합니다. ' / etc/cluster/corosync.conf' 파일입니다.  이 파일을 성공 하는 다음 단계에 있으면 안 됩니다-pacemaker를 중지 하려면이 문제를 해결 하므로 / corosync 삭제 하 고 ' / etc/cluster/corosync.conf', 한 다음 다음 단계를 성공적으로 완료 합니다. 동일한 작업을 수행 'pcs cluster 제거' 및로 사용 하 여 시간 초기 클러스터 설치 단계입니다.
+   동시에 pacemaker, corosync 및 pc를 설치 하 고 서비스의 모든 3이 실행을 시작 하는 실행 중인 'sudo apt-get install pc'.  Corosync를 시작 템플릿을 생성 합니다. ' / etc/cluster/corosync.conf' 파일입니다.  이 파일을 성공 하는 다음 단계에 존재 하지 않음-pacemaker를 중지 하려면이 문제를 해결 하므로 / corosync 삭제 하 고 ' / etc/cluster/corosync.conf', 한 다음 다음 단계를 성공적으로 완료 합니다. 동일한 작업을 수행 'pcs cluster 제거' 및로 사용 하 여 시간 초기 클러스터 설치 단계입니다.
    
    다음 명령은 기존 클러스터 구성 파일을 제거 하 고 모든 클러스터 서비스를 중지 합니다. 이 클러스터를 영구적으로 제거합니다. 사전 프로덕션 환경에서 첫 번째 단계로 실행 합니다. 참고 pacemaker 서비스 및 다시 사용 하도록 설정 하는 요구는 'pcs cluster 삭제' 사용할 수 없습니다. 모든 노드에서 다음 명령을 실행합니다.
    
@@ -123,7 +124,7 @@ sudo systemctl enable pacemaker
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

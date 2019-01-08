@@ -1,5 +1,5 @@
 ---
-title: 관계 만들기 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 관계 만들기 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d985f9985691005eaa84365dacd2a4072542c05b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041077"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072100"
 ---
 # <a name="create-a-relationship"></a>관계 만들기 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계를 사용 하는 방법에 대 한 정보를 참조 하십시오. [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)합니다.  
+  데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계가 사용 되는 방법에 대 한 자세한 내용은 [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)합니다.  
   
 ## <a name="create-a-relationship-between-two-tables"></a>두 테이블 간에 관계 만들기  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34041077"
   
 6.  **만들기**를 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [관계 삭제](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

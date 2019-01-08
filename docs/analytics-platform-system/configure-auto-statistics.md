@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400916"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617963"
 ---
 # <a name="configure-auto-statistics"></a>자동 통계 다시 계산 구성
 

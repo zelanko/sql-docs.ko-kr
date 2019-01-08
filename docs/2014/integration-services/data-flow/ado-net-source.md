@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,20 +18,20 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352111"
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
   
- ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 보안 지침 및 제한 사항(Microsoft Azure SQL Database)](http://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
+ ADO NET 원본을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 보안 지침 및 제한 사항(Microsoft Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
- 원본은 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑되지 않는 모든 데이터 형식을 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 데이터 형식이 있는 경우에 이러한 변환이 발생 `System.Object`합니다.  
+ 원본은 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑되지 않는 모든 데이터 형식을 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 데이터 형식이 `System.Object`인 경우에도 이러한 변환이 발생합니다.  
   
  DT_NTEXT 데이터 형식을 DT_WSTR 데이터 형식으로 변경하거나 DT_WSTR을 DT_NTEXT로 변경할 수 있습니다. 데이터 형식을 변경하려면 ADO.NET 원본의 **고급 편집기** 대화 상자에서 **DataType** 속성을 설정하면 됩니다. 자세한 내용은 [Common Properties](../common-properties.md)을(를) 참조하세요.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48072163"
 >  SQL 문을 사용하여 임시 테이블의 결과를 반환하는 저장 프로시저를 호출하는 경우 WITH RESULT SETS 옵션을 사용하여 결과 집합의 메타데이터를 정의합니다.  
   
 > [!NOTE]  
->  SQL 문을 사용 하 여 저장된 프로시저를 실행 하 고 다음 오류로 인해 작업이 실패할 경우에 추가 하 여 오류를 해결할 수 있습니다는 `SET FMTONLY OFF` exec 문 전에 문입니다.  
+>  SQL 문을 사용하여 저장 프로시저를 실행했는데 다음 오류 메시지와 함께 작업이 실패할 경우 Exec 문 전에 `SET FMTONLY OFF` 문을 추가하여 오류를 해결할 수 있습니다.  
 >   
 >  **열 <열_이름>을(를) 데이터 원본에서 찾을 수 없습니다.**  
   

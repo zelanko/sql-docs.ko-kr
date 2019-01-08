@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668652"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511453"
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템 - 시퀀스 형식 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668652"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>식에 의해 반환된 원자 값 유형 비교  
  식이 원자 값 시퀀스를 반환하는 경우 시퀀스에서 값의 유형을 찾아야 할 수도 있습니다. 다음 예에서는 시퀀스 유형 구문을 사용하여 식에 의해 반환된 원자 값 유형을 평가하는 방법을 보여 줍니다.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>예: 빈 시퀀스 인지 여부를 결정  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>예: 빈 시퀀스인지 여부 확인  
  합니다 **empty ()** 시퀀스 유형은 시퀀스 유형의 식에 지정 된 식이 반환 되는 시퀀스에 빈 시퀀스 인지 여부를 확인 합니다.  
   
  다음 예에서 XML 스키마는 <`root`> 요소를 nillable로 만듭니다.  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>예: 특성 값의 유형 결정  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>예: 특성 값의 유형 확인  
  일부 경우에는 처리 전에 식에 의해 반환된 시퀀스 유형을 평가해야 할 수 있습니다. 예를 들어 노드가 UNION 유형으로 정의된 XML 스키마가 있을 수 있습니다. 다음 예에서 컬렉션에 있는 XML 스키마는 값이 decimal이나 string 유형일 수 있는 특성 `a`를 UNION 유형으로 정의합니다.  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>시퀀스 식의 예: 카디널리티  
+### <a name="example-cardinality-in-sequence-expressions"></a>예: 시퀀스 식의 카디널리티  
  이 예에서는 시퀀스 식의 카디널리티 효과를 보여 줍니다. 다음 XML 스키마는 바이트 유형이고 nillable인 <`root`> 요소를 정의합니다.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  두 값이 모두 True인 경우 `instance of` 식은 True를 반환합니다.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>예: xml 유형 열에 대 한 쿼리  
+### <a name="example-querying-against-an-xml-type-column"></a>예: xml 유형 열에 대한 쿼리  
  다음 예에서 쿼리는 Instructions 열에 대해 지정 됩니다 **xml** 에 입력 된 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 이 열은 연결된 스키마가 포함되므로 형식화된 XML 열입니다. XML 스키마는 정수 유형의 `LocationID` 특성을 정의합니다. 따라서 시퀀스 식에에서는 `instance of xs:integer?` True를 반환 합니다.  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductModelID = 7
   
 -   **item()** -시퀀스의 모든 항목을 찾습니다.  
   
--   **node ()** – 시퀀스가 노드인지 여부를 확인 합니다.  
+-   **node ()** -시퀀스가 노드인지 여부를 확인 합니다.  
   
 -   **processing-instruction()** -식이 처리 명령을 반환 하는지 여부를 확인 합니다.  
   
@@ -433,7 +433,7 @@ RETURN
   
 -   명시적으로 쿼리할 **xsi: type** 하거나 **xsi: nil** 지원 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

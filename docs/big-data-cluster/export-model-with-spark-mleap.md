@@ -1,22 +1,24 @@
 ---
-title: MLeap 사용 하 여 Spark 기계 학습 모델을 내보낼 | SQL Server
-description: Spark 기계 학습 MLeap 사용 하 여 모델 내보내기
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: MLeap 사용 하 여 Spark ML 모델 내보내기
+titleSuffix: SQL Server 2019 big data clusters
+description: Spark 기계 학습 MLeap 사용 하 여 모델을 내보내는 방법에 알아봅니다.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211172"
 ---
-# <a name="export-models-using-mleap"></a>Mleap를 사용 하 여 모델 내보내기
+# <a name="export-spark-machine-learning-models-with-mleap"></a>Spark 기계 학습 MLeap 사용 하 여 모델 내보내기
+
 일반적인 기계 학습 시나리오에는 Spark에서 모델 학습 및 Spark 외부에서 점수 매기기 포함 됩니다. Spark 외부는 사용할 수 있는 이식 가능한 형식으로 모델을 내보냅니다. [MLeap](https://github.com/combust/mleap) 은 이러한 하나의 모델 교환 형식입니다. Spark 기계 학습 파이프라인 및 모델을 사용 하 여 모든 JVM 기반 시스템에서 사용 하 고 이식 가능한 형식으로 내보낼 수는 `Mleap` 런타임입니다.
 
 이 가이드에서는 Mleap를 사용 하 여 spark 모델 내보내는 방법을 보여 줍니다. 단계는 아래에 요약 하 고 다음 섹션의 코드를 사용 하 여 자세히 설명 됩니다.
@@ -27,8 +29,7 @@ ms.locfileid: "50411856"
 4. 유효성을 검사할 가져옵니다는 `Mleap` 백을 다시 번들를 사용 하는 Spark에서 점수를 매깁니다.
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>1 단계-Spark 모델을 만들어 시작
-실행 [Spark 사용 하 여 기계 학습 및 만들기 모델] (train-and-create-machinelearning-models-with-spark.md) 학습/테스트 집합 및 모델을 만들고 HDFS 저장소에 유지 합니다. 으로 모델을 내보내야 `AdultCensus.mml` 아래는 `spark_ml` 디렉터리입니다.
-
+실행할 [Spark를 사용 하 여 모델 학습 및 machine learning 만들기](train-and-create-machinelearning-models-with-spark.md) 학습/테스트 집합 및 모델을 만들고 HDFS 저장소에 유지 합니다. 으로 모델을 내보내야 `AdultCensus.mml` 아래는 `spark_ml` 디렉터리입니다.
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>2 단계-training\test 데이터 및 모델을 가져옵니다
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>3 단계-모델 내보내기 `Mleap` 번들
 

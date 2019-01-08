@@ -20,16 +20,16 @@ ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7994e88d5b3e5649683651f7514c39ad791fc3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201542"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLCloseCursor** 문에서 열린 및 보류 중인 결과가 삭제 하는 커서를 닫습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47746161"
 ```  
   
 SQLRETURN SQLCloseCursor(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>인수  

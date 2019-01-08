@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727121"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860096"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47727121"
 |first_row_time|**bigint**|첫 번째 행이 열린 타임스탬프입니다(밀리초).|  
 |last_row_time|**bigint**|마지막 행이 열린 타임스탬프입니다(밀리초).|  
 |close_time|**bigint**|닫을 때의 타임스탬프입니다(밀리초).|  
-|elapsed_time_ms|**bigint**|지금까지 대상 노드의 연산자에 사용된 총 경과 시간(밀리초)입니다.|  
-|cpu_time_ms|**bigint**|지금까지 대상 노드의 연산자에 사용된 총 CPU 시간(밀리초)입니다.|  
+|elapsed_time_ms|**bigint**|총 경과 시간 (밀리초) 지금까지 대상 노드의 작업으로 사용 합니다.|  
+|cpu_time_ms|**bigint**|지금까지 대상 노드의 연산자 CPU 시간 (밀리초) 사용 하 여를 총입니다.|  
 |database_id|**smallint**|읽기 및 쓰기를 수행하는 개체가 포함된 데이터베이스의 ID입니다.|  
 |object_id|**int**|읽기 및 쓰기를 수행하는 개체의 ID입니다. sys.objects.object_id를 참조합니다.|  
 |index_id|**int**|행 집합이 열린 인덱스입니다(있는 경우).|  
@@ -84,20 +84,30 @@ ms.locfileid: "47727121"
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
- 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계를 사용 하 여 side-by-side-존재 합니다. 새 쿼리 실행 통계 프로 파일링 인프라는 실제 행 수와 같은 연산자 당 쿼리 실행 통계를 수집 하는 성능 오버 헤드가 크게 줄어듭니다. 전역를 사용 하거나이 기능을 사용할 수 있습니다 시작 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 자동으로 켜 집니다 query_thread_profile 확장된 이벤트를 사용할 때 또는 합니다.
+부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계를 사용 하 여 side-by-side-존재 합니다. 새 쿼리 실행 통계 프로 파일링 인프라는 실제 행 수와 같은 연산자 당 쿼리 실행 통계를 수집 하는 성능 오버 헤드가 크게 줄어듭니다. 전역를 사용 하거나이 기능을 사용할 수 있습니다 시작 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 자동으로 켜 집니다 query_thread_profile 확장된 이벤트를 사용할 때 또는 합니다.
 
 >[!NOTE]
 > 경과 된 시간과 CPU 성능 영향을 줄이기 위해 간단한 쿼리 실행 통계 프로 파일링 인프라 아래에서 지원 되지 않습니다.
 
- STATISTICS XML ON 및 인프라를 프로 파일링 하는 레거시 쿼리 실행 통계를 사용 하는 항상 SET STATISTICS PROFILE ON을 설정 합니다.
-  
+STATISTICS XML ON 및 인프라를 프로 파일링 하는 레거시 쿼리 실행 통계를 사용 하는 항상 SET STATISTICS PROFILE ON을 설정 합니다.
+
+Sys.dm_exec_query_profiles에서 출력을 사용 하도록 설정 하려면 다음을 수행:
+
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 나중에 조사 중인 쿼리와 함께 SET STATISTICS PROFILE ON 또는 SET STATISTICS XML ON을 사용 합니다. 이 프로 파일링 인프라가 사용 하도록 설정 하 고 집합 명령이 실행 된 세션에 대 한 DMV에서 결과 생성 합니다. 응용 프로그램에서 실행 되는 쿼리를 조사 하는 고 된 SET 옵션을 사용할 수 없습니다, 경우에 프로 파일링 인프라를 켜 집니다 query_post_execution_showplan 이벤트를 사용 하 여 확장 이벤트를 만들 수 있습니다. 
+
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1을 켤 수 있습니다 하거나 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 하거나 query_thread_profile 확장된 이벤트를 사용 합니다.
+
+>[!NOTE]
+> 조사 중인 쿼리를 프로 파일링 인프라를 사용 하도록 설정 된 후 시작 해야 합니다. 쿼리가 이미 실행 중인 경우 확장 이벤트 세션을 시작 하면 결과가 나오지 않습니다 sys.dm_exec_query_profiles에서.
+
+
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
    
 ## <a name="examples"></a>예  
- Sys.dm_exec_query_profiles로 분석 쿼리를 실행 하려는 세션에 1 단계: 로그인 합니다. 구성 하려면 프로 파일링에 대 한 쿼리에서 SET STATISTICS PROFILE을 사용 합니다. 동일한 세션에서 쿼리를 실행합니다.  
+ 1단계: sys.dm_exec_query_profiles로 분석할 쿼리를 실행하려는 세션에 로그인합니다. 구성 하려면 프로 파일링에 대 한 쿼리에서 SET STATISTICS PROFILE을 사용 합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 쿼리가 실행 되는 세션에서 다른 두 번째 세션에 2 단계: 로그인 합니다.  
+ 2단계: 쿼리를 실행할 세션과 다른 두 번째 세션에 로그인합니다.  
   
  다음 문은 세션 54에서 현재 실행 중인 쿼리의 진행률을 요약합니다. 진행률을 요약하기 위해 이 문은 각 노드에 대한 모든 스레드의 총 출력 행 수를 계산하고 해당 노드의 추정된 출력 행 수와 비교합니다.  
   

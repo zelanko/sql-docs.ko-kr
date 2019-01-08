@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], model objects
@@ -14,12 +13,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90259662ab909bc6ea47e7be851a9550df9edb86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9e2838e2ba3cfcb713c0353b89054ca549e4e5c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799095"
 ---
 # <a name="model-object-permissions-master-data-services"></a>모델 개체 권한(Master Data Services)
   모델 개체 권한은 필수 항목입니다. 이 사용 권한은 사용자가 UI의 **탐색기** 기능 영역에서 액세스할 수 있는 특성을 결정합니다.  
@@ -37,11 +36,11 @@ ms.locfileid: "48206793"
 ## <a name="best-practice"></a>최선의 구현 방법  
  일반적으로 할당 해야 **업데이트** 모델 개체 권한을 그 다음 아래 개체에 사용 권한을 명시적으로 할당 합니다. 그 아래 개체에 대한 사용 권한을 할당하지 않는 경우 사용 권한이 상속되고 사용자는 관리자가 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [모델 권한&#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
  [기능 영역 권한&#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [계층 멤버 권한&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

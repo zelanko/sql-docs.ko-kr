@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], database diagrams
@@ -15,12 +15,12 @@ ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aab850a15d8d3eb21da6c2eb97845d22804a4815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791345"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
   개체 탐색기에서 데이터베이스 다이어그램의 이름을 바꿀 수 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  

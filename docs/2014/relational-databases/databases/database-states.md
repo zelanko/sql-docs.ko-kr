@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASESTATES.F1
@@ -27,12 +26,12 @@ ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b96d575384a7d2be546193c8ce829723f57a3dbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788795"
 ---
 # <a name="database-states"></a>데이터베이스 상태
   데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 **sys.databases** 카탈로그 뷰의 [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열이나 **DATABASEPROPERTYEX** 함수의 [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) 속성을 선택합니다.  

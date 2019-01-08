@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_agents_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc908623e3979943214132605a1ab92ceaad657b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785755"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47846631"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|배포 또는 병합 에이전트가 생성된 datetime입니다.|  
-|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열 값을 포함 **SQL**합니다.<br /><br /> 참고:를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 사용 되지 않으며 더 이상 지원 되지.|  
+|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열 값을 포함 **SQL**합니다.<br /><br /> 참고: MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)는 더 이상 사용되지 않으며 지원되지 않습니다.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|에이전트를 원격으로 활성화할 수 있는지 여부를 나타냅니다.<br /><br /> **0** 에이전트를 원격으로 활성화할 수 없습니다 지정 합니다.<br /><br /> **1** 에 지정 된 원격 컴퓨터를 원격으로 에이전트를 활성화할 수 있도록 지정 합니다 *offload_server* 속성입니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화에 사용할 서버의 네트워크 이름입니다.|  

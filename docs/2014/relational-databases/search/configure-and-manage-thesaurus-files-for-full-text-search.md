@@ -14,12 +14,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792265"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 쿼리는 동의어 사전을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *동의어 사전* 은 특정 언어에 대한 동의어 집합을 정의하는데, 시스템 관리자는 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 동의어 사전 검색은 모든 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 쿼리와 FORMSOF THESAURUS 절을 지정하는 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 쿼리에 대해 수행됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48220343"
   
 -   분음 부호 설정  
   
-     지정된 동의어 사전에 대해 모든 검색 패턴은 물결표(**~**), 양음 악센트 표시(**´**) 또는 움라우트(**¨**) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어 전체 텍스트 쿼리에서 "café" 패턴을 다른 패턴으로 바꾸도록 지정한다고 가정해 보겠습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 "café" 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 "café" 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
+     지정된 된 동의어 사전에 대 한 모든 검색 패턴은 중요 한 또는 물결표와 같은 분음 부호를 구분할지 (**~**)를 악센트 기호 (**??** ), 또는 움라우트 (**??** ) (즉, *악센트* 하거나 *악센트 구분 안 함*). 예를 들어, "카페??" 패턴을 지정 하면 전체 텍스트 쿼리를 다른 패턴을 패턴으로 교체 합니다. 전체 텍스트 검색 대체 패턴 "카페??" 동의어 사전이 악센트 구분 안 함 인 경우 및 "카페"을 추가 합니다. 동의어 사전이 악센트를 구분 이면 전체 텍스트 검색만의 패턴 "카페??"를 대체 합니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
   
 -   확장 집합  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48220343"
   
   
 ##  <a name="structure"></a> 동의어 사전 파일의 구조 이해  
- 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석( `<!--` … `-->`)을 정의합니다. 동의어 사전에 정의 된 \<동의어 사전 > 다음과 같이 분음 부호 설정, 확장 집합과 교체 집합을 정의 하는 자식 요소의 예제가 포함 된 요소:  
+ 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전에 정의 된 \<동의어 사전 > 다음과 같이 분음 부호 설정, 확장 집합과 교체 집합을 정의 하는 자식 요소의 예제가 포함 된 요소:  
   
 -   분음 부호 설정의 XML 구조  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48220343"
     </replacement>  
     ```  
   
-     및  
+     를 갖는  
   
     ```  
     <replacement>  

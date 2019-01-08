@@ -17,12 +17,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167945"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352316"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 도입된 고가용성 재해 복구 솔루션인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]을 사용하려면 WSFC(Windows Server 장애 조치(Failover) 클러스터링)가 필요합니다. 또한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링이 필요하지 않더라도 FCI(장애 조치(Failover) 클러스터링 인스턴스)를 사용하여 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다. 각 클러스터링 기술의 역할과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 디자인하는 데 고려해야 할 사항을 알고 있어야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48167945"
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션  
  [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]부터 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서는 새 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 배포하기 위해 가용성 그룹의 클러스터 간 마이그레이션을 지원합니다. 클러스터 간 마이그레이션은 작동 중단 시간을 최소화하면서 하나의 가용성 그룹이나 일련의 가용성 그룹을 새 대상 WSFC 클러스터로 이동합니다. 클러스터 간 마이그레이션 프로세스를 사용하면 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 클러스터로 업그레이드할 때 SLA(서비스 수준 계약)를 유지 관리할 수 있습니다. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상 버전은 대상 WSFC 클러스터에 설치하고 AlwaysOn에 대해 사용하도록 설정해야 합니다. 클러스터 간 마이그레이션의 성공 여부는 대상 WSFC 클러스터의 철저한 계획 및 준비에 의해 결정됩니다.  
   
- 자세한 내용은 [OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하십시오.  
+ 자세한 내용은 [OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션](https://msdn.microsoft.com/library/jj873730.aspx)을 참조하십시오.  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹  
  WSFC 클러스터와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링을 구현하여 서버 인스턴스 수준에서 장애 조치(Failover)의 두 번째 계층을 설정할 수 있습니다. 가용성 복제본은 독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 또는 FCI 인스턴스에서 호스팅할 수 있습니다. 지정된 가용성 그룹의 복제본은 하나의 FCI 파트너에서만 호스팅할 수 있습니다. 가용성 복제본이 FCI에서 실행 중인 경우 가용성 그룹에 대한 가능한 소유자 목록에는 활성 FCI 노드만 포함됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48167945"
  **가용성 그룹에 대한 장애 조치(Failover) 정책 설정은 독립 실행형 인스턴스에서 호스팅되는지 FCI 인스턴스에서 호스팅되는지에 관계없이 모든 복제본에 적용됩니다.  
   
 > [!NOTE]  
->  에 대 한 자세한 내용은 **노드 수가** 장애 조치 클러스터링 내의 및 **AlwaysOn 가용성 그룹** 다양 한 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [에서 지 원하는 기능을 SQL Server 2012의 에디션의](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+>  에 대 한 자세한 내용은 **노드 수가** 장애 조치 클러스터링 내의 및 **AlwaysOn 가용성 그룹** 다양 한 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [에서 지 원하는 기능을 SQL Server 2012의 에디션의](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI에서 가용성 복제본을 호스팅하는 경우의 고려 사항  
   
@@ -112,19 +112,19 @@ ms.locfileid: "48167945"
   
 -   **블로그:**  
   
-     [제한된 보안을 사용하여 SQL Server의 Windows 장애 조치(Failover) 클러스터링 구성(가용성 그룹 또는 FCI)](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [제한된 보안을 사용하여 SQL Server의 Windows 장애 조치(Failover) 클러스터링 구성(가용성 그룹 또는 FCI)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **백서:**  
   
-     [AlwaysOn 아키텍처 가이드: 장애 조치 클러스터 인스턴스 및 가용성 그룹을 사용 하 여 고가용성 및 재해 복구 솔루션 구축](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn 아키텍처 가이드: 장애 조치 클러스터 인스턴스 및 가용성 그룹을 사용 하 여 고가용성 및 재해 복구 솔루션 구축](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   

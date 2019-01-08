@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532354"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 보안 디자인 기능에서 ActiveX 데이터 개체 (ADO) 2.8 이상에 대해 설명 합니다. 이러한 변경 되었습니다 2.8 ado에서 보안을 개선 합니다. Windows Vista에서 Windows DAC 6.0에 포함 된 6.0, ADO ADO 2.8, Windows XP 및 Windows Server 2003에서 MDAC 2.8에 포함 된 기능적으로 동일 합니다. 이 항목에서는 가장 2.8 이상 ado에서 응용 프로그램을 보호 하는 방법에 대 한 정보를 제공 합니다.
@@ -66,7 +66,7 @@ Website, click OK, otherwise click Cancel.
 -   사이트는 신뢰할 수 있는 사이트 영역 목록에 나타나지 않으면, 코드 차단 되 고 로컬 파일 액세스가 거부 되었습니다.
 
     > [!NOTE]
-    >  Ado 2.8 이상에서 사용자가 없습니다 경고 하거나 사이트를 신뢰할 수 있는 사이트 영역 목록에 추가 하는 것이 좋습니다. 따라서 신뢰할 수 있는 사이트 목록 관리는 배포 또는 로컬 파일 시스템에 액세스 해야 하는 웹 사이트 기반 응용 프로그램을 지원 하는 사용자의 책임입니다.
+    >  Ado 2.8 이상에서 사용자가 없습니다 경고 하거나 사이트를 신뢰할 수 있는 사이트 영역 목록에 추가 하는 것이 좋습니다. 따라서 신뢰할 수 있는 사이트 목록 관리는 배포 또는 로컬 파일 시스템에 액세스 해야 하는 웹 사이트 기반 응용 프로그램을 지 원하는 사용자의 책임입니다.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>ActiveCommand 속성 레코드 집합 개체에 차단 액세스
  2.8 ADO에 대 한 액세스 차단, Internet Explorer에서 실행할 때는 합니다 [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) 속성을 활성 **레코드 집합** 개체 및 오류를 반환 합니다. 오류는 페이지 신뢰할 수 있는 사이트 목록에 등록 된 웹 사이트에서 제공 되는 여부에 관계 없이 발생 합니다.

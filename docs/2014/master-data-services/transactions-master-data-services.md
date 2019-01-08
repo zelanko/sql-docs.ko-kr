@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798125"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 트랜잭션은 멤버에 대해 동작이 수행될 때마다 기록됩니다. 트랜잭션은 모든 사용자가 보고 관리자가 되돌릴 수 있습니다. 트랜잭션은 동작이 수행된 날짜와 시간, 동작을 수행한 사용자를 그 외 다른 세부 정보와 함께 보여 줍니다. 사용자는 트랜잭션에 주석을 추가하여 트랜잭션이 시작된 이유를 나타낼 수 있습니다.  
@@ -57,12 +56,12 @@ ms.locfileid: "48129053"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|트랜잭션을 되돌려 동작을 실행 취소합니다(관리자에만 해당).|[트랜잭션 되돌리기 &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|트랜잭션을 되돌려 동작을 실행 취소합니다(관리자에만 해당).|[트랜잭션 되돌리기&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [관리자 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [관리자&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [주석 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [주석&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6125dbd164065afc0ee808bb77a4e2544606ef8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 322caa6b9be17e860afaa1e3526a3590df049820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790955"
 ---
 # <a name="merge-transformation"></a>병합 변환
   병합 변환은 두 개의 정렬된 데이터 세트를 단일 데이터 세트로 결합합니다. 각 데이터 세트의 행은 해당 키 열의 값을 기반으로 출력에 삽입됩니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "48226633"
   
 ## <a name="see-also"></a>관련 항목  
  [병합 조인 변환](merge-join-transformation.md)   
- [Union All 변환](union-all-transformation.md)   
+ [UNION ALL 변환](union-all-transformation.md)   
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

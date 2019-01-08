@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750591"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211542"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux의 Pacemaker 클러스터 배포
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 자습서 문서에 대 한 Linux Pacemaker 클러스터를 배포 하는 데 필요한 작업을 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 가용성 그룹 (AG) 또는 장애 조치 클러스터 인스턴스 (FCI). 긴밀 하 게 결합 된 Windows Server와 달리 /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전이나 설치 후 스택, Pacemaker 클러스터를 만들 뿐만 아니라 Linux의 가용성 그룹 (AG) 구성을 수행할 수 있습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 통합 및 Pacemaker는 AG 또는 FCI 배포 부분에 대 한 리소스 구성에서 클러스터를 구성한 후 수행 됩니다.
+이 자습서 문서에 대 한 Linux Pacemaker 클러스터를 배포 하는 데 필요한 작업을 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 가용성 그룹 (AG) 또는 장애 조치 클러스터 인스턴스 (FCI). 긴밀 하 게 결합 된 Windows Server와 달리 / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 전이나 설치 후 스택, Pacemaker 클러스터를 만들 뿐만 아니라 Linux의 가용성 그룹 (AG) 구성을 수행할 수 있습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 통합 및 Pacemaker는 AG 또는 FCI 배포 부분에 대 한 리소스 구성에서 클러스터를 구성한 후 수행 됩니다.
 > [!IMPORTANT]
 > 클러스터 유형이 없음인 AG 않습니다 *되지* Pacemaker 클러스터 필요 없으며 Pacemaker에서 관리할 수 있습니다. 
 
@@ -126,7 +126,7 @@ YaST에서 고가용성 패턴을 설치 하거나 서버의 기본 설치의 �
 1. 노드를 권한 부여
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    여기서 *NodeX* 노드의 이름입니다.

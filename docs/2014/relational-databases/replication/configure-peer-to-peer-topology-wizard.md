@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Configure Peer-to-Peer Topology Wizard
@@ -13,12 +12,12 @@ ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ee8c94b12cdfa2bd4fcd414a0e6466c9a627516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803105"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>피어 투 피어 토폴로지 구성 마법사
   이 섹션에서는 피어 투 피어 토폴로지 구성 마법사의 모든 페이지에 대한 정보를 제공합니다.  

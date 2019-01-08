@@ -1,7 +1,8 @@
 ---
-title: '빠른 시작: 연결 및 Azure Data Studio를 사용 하 여 Azure SQL Data Warehouse를 쿼리 합니다. | Microsoft Docs'
-description: 이 빠른 시작에서는 Azure 데이터 Studio를 사용 하 여 SQL database에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
-ms.custom: tools|sos
+title: '빠른 시작: 연결 및 Azure SQL Data Warehouse를 쿼리 합니다.'
+titleSuffix: Azure Data Studio
+description: 이 빠른 시작에서는 Azure 데이터 Studio를 사용 하 여 Azure SQL Data Warehouse에 연결 하 여 쿼리를 실행 하는 방법
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355734"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030757"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL Data Warehouse에서 데이터를 쿼리 합니다.
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL Data Warehouse에서 데이터를 쿼리 합니다.
 
 이 빠른 시작에 사용 하는 방법을 보여 줍니다. [!INCLUDE[name-sos](../includes/name-sos-short.md)] Azure SQL data warehouse에 연결한 다음 TRANSACT-SQL 문을 사용 하 여 삽입, 만들고, 데이터를 선택 합니다. 
 

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
@@ -13,24 +13,24 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807785"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식을 지원하는 OLE DB([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 유형에 대한 정보를 제공합니다.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑  
- OLE DB는 새 서버 유형을 지원 하기 위해 두 개의 새 데이터 형식을 제공 합니다: DBTYPE_DBTIME2와 DBTYPE_DBTIMESTAMPOFFSET 합니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
+ OLE DB에는 새로운 서버 유형을 지원하기 위해 DBTYPE_DBTIME2와 DBTYPE_DBTIMESTAMPOFFSET이라는 새로운 데이터 형식이 제공됩니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|값|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
-|날짜|DBTYPE_DBDATE|133(oledb.h)|  
+|date|DBTYPE_DBDATE|133(oledb.h)|  
 |Time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |Datetime2|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
@@ -41,7 +41,7 @@ ms.locfileid: "48157923"
 |-----------------------------------------|----------------------|------------------------------------------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
-|날짜|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |Time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48157923"
   
  빈 문자열은 유효한 날짜/시간 리터럴이 아니며 NULL 값을 나타내지 않습니다. 빈 문자열을 날짜/시간 값으로 변환하려고 하면 SQLState 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다."라는 메시지와 함께 오류가 발생합니다.  
   
-## <a name="data-formats-data-structures"></a>데이터 구조 데이터 형식:  
+## <a name="data-formats-data-structures"></a>데이터 형식: 데이터 구조  
  아래에 설명된 OLE DB별 구조에서 OLE DB에는 ODBC와 동일한 제약 조건이 적용됩니다. 이러한 제약 조건은 일반 달력을 기준으로 합니다.  
   
 -   월 범위는 1에서 12까지입니다.  
@@ -172,14 +172,14 @@ enum SQLVARENUM {
   
 |OLE DB 데이터 형식 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|날짜||  
+|DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|`datetime2`(p)|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
 |DBTYPE_DBTIME2|`time`(p)|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
 |DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBCOLUMDESC 검사 *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
   
  응용 프로그램에 DBTYPE_DBTIMESTAMP를 지정 하는 경우 *wType*에 대 한 매핑을 재정의할 수 있습니다 `datetime2` 에 형식 이름을 제공 하 여 *pwszTypeName*. 하는 경우 `datetime` 지정 된 *bScale* 3 이어야 합니다. 하는 경우 `smalldatetime` 지정 된 *bScale* 0 이어야 합니다. 하는 경우 *bScale* 와 일치 하지 않습니다 *wType* 하 고 *pwszTypeName*, DB_E_BADSCALE이 반환 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

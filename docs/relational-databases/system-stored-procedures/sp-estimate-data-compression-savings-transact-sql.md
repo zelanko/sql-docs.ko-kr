@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213699"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 전체 테이블 또는 테이블 일부에 대해 압축을 계산할 수 있습니다. 여기에 힙, 클러스터형된 인덱스, 비클러스터형된 인덱스, columnstore 인덱스, 인덱싱된 뷰, 테이블 및 인덱스 파티션이 있습니다. 행, 페이지, columnstore 또는 columnstore 보관 압축을 사용 하 여 개체를 압축할 수 있습니다. 테이블, 인덱스 또는 파티션이 이미 압축된 경우 이 절차에 따라 테이블, 인덱스 또는 파티션이 다시 압축되는 경우의 크기를 예상할 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  압축 하 고 **sp_estimate_data_compression_savings** 의 일부 버전 에서만에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  이 저장 프로시저는 요청된 압축 설정을 사용할 경우의 개체 크기를 예상하기 위해 원본 개체를 샘플링하고 이 데이터를 tempdb에 생성된 해당 테이블 및 인덱스에 로드합니다. 그런 다음 tempdb에 생성된 테이블 또는 인덱스가 요청된 설정으로 압축되고 예상된 압축 전후 크기 변경 사항이 계산됩니다.  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  파티션을 지정을 지정할 수도 있습니다는 [$partition](../../t-sql/functions/partition-transact-sql.md) 함수입니다. 소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
   
  [ @data_compression=] '*data_compression*'  
- 계산할 압축 유형입니다. *data_compression* 다음 값 중 하나일 수 있습니다: NONE, 행, 페이지, COLUMNSTORE 또는 COLUMNSTORE_ARCHIVE입니다.  
+ 계산할 압축 유형입니다. *data_compression* 다음 값 중 하나일 수 있습니다. NONE, 행, 페이지, COLUMNSTORE 또는 COLUMNSTORE_ARCHIVE입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

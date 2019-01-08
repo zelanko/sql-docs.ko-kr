@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533657"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ClusterDistance([<ClusterID expression>])
  이 함수는 기본 데이터 마이닝 모델이 클러스터링을 지원할 때만 사용할 수 있습니다. 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값  
+ 스칼라 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **ClusterDistance** 함수는 입력된 사례와 입력 사례에 대 한 확률이 가장 높은 클러스터 사이의 거리를 반환 합니다.  
@@ -41,11 +41,11 @@ ClusterDistance([<ClusterID expression>])
   
  기본 EM 클러스터링 모델의 경우 클러스터 내부에 있는 모든 점의 확률이 같은 것으로 간주되므로 클러스터에 중심이 없습니다. 변수의 **ClusterDistance** 특정 사례가 특정 클러스터 사이의 *N* 다음과 같이 계산 됩니다.  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
- 또는  
+ 또는:  
   
- ClusterDistance(N) = 1 – ClusterProbability (N))  
+ ClusterDistance(N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>관련 예측 함수  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   사용 된 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) 알고리즘을 통해 학습 된 모델을 고려할 때 존재 하는 입력된 사례가 나타날 가능성을 나타내는 1로 0에서 측정값은 반환 하는 함수입니다.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>예 1: 가장 가능성이 높은 클러스터에 클러스터 거리 가져오기  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>예 1: 가장 가능성 있는 클러스터에 대한 클러스터 거리 가져오기  
  다음 예에서는 지정된 사례와 해당 사례가 속할 가능성이 가장 높은 클러스터 사이의 거리를 반환합니다.  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |클러스터 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2: 지정된 된 클러스터 까지의 거리 가져오기  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>예 2: 지정된 클러스터까지의 거리 가져오기  
  다음 구문은 마이닝 모델 콘텐츠 스키마 행 집합을 사용하여 마이닝 모델의 클러스터에 대한 노드 ID 및 노드 캡션의 목록을 반환합니다. 노드 캡션의 클러스터 식별자 인수로 사용할 수는 **ClusterDistance** 함수입니다.  
   
 ```  
@@ -125,10 +125,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

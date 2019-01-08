@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524914"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성
 
@@ -93,7 +93,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 6.  ISCSI 연결 디스크 확인
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
    *    기존 SQL Server 데이터 디렉터리에서 파일을 삭제 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    파일이 삭제 되었는지 확인 합니다. 아래 그림에는 c h ~에서 전체 시퀀스의 예가 나와 있습니다.
@@ -298,7 +298,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     chown mssql <FolderName>
     ```
 
-    \<폴더 이름 > 만든 폴더의 이름입니다. 아래에 예가 나와 있습니다.
+    \<폴더 이름 > 만든 폴더의 이름입니다. 예제는 다음과 같습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -310,7 +310,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     chown mssql <FolderName>
     ```
 
-    \<폴더 이름 > 만든 폴더의 이름입니다. 아래에 예가 나와 있습니다.
+    \<폴더 이름 > 만든 폴더의 이름입니다. 예제는 다음과 같습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -337,7 +337,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 14. 유일한 Pacemaker 해당 볼륨 그룹을 활성화할 수 있도록 서버를 구성 합니다.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. 서버에서 볼륨 그룹의 목록을 생성 합니다. OS 디스크와 같은 시스템에 의해 사용 됩니다 나열 없는 모든 iSCSI 디스크.
@@ -352,7 +352,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker >는 FCI가 사용 되지 것입니다 하는 단계 20의 출력에서 볼륨 그룹의 목록입니다. 쉼표로 따옴표에 별도 각각을 배치 합니다. 아래에 예가 나와 있습니다.
+    \<ListOfVGsNotUsedByPacemaker >는 FCI가 사용 되지 것입니다 하는 단계 20의 출력에서 볼륨 그룹의 목록입니다. 쉼표로 따옴표에 별도 각각을 배치 합니다. 예제는 다음과 같습니다.
 
     ![55-ListOfVGs][11]
  
@@ -387,7 +387,7 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. FCI에 참여할 모든 다른 서버에서 1 ~ 6 단계를 반복 합니다.
+25. FCI에 참여할 모든 다른 서버에서 1-6 단계를 반복 합니다.
 
 이제 FCI를 구성할 준비가 되었습니다.
 

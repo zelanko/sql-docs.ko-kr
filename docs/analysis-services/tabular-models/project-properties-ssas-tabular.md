@@ -1,5 +1,5 @@
 ---
-title: 프로젝트 속성 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 프로젝트 속성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70e631e2594437dc29f8a9d58ed2fdb19e7743c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b695f847ec7f99366e71e76aefe5aecb99cf5933
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044287"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072660"
 ---
 # <a name="project-properties"></a>프로젝트 속성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "34044287"
 |--------------|---------------------|-----------------|  
 |**처리 옵션**|**Default**|기본적으로 Analysis Services에서 개체 변경 내용을 배포할 때 필요한 처리 유형을 결정합니다. 일반적으로 이 경우의 배포 시간이 가장 빠릅니다. 그러나 각 개체의 변경 내용 배포 시 전체 처리를 수행하거나 처리를 수행하지 않도록 선택할 수도 있습니다.|  
 |**트랜잭션 배포**|**False**|모델의 배포가 트랜잭션인지 여부를 지정합니다. 기본적으로 모든 개체 또는 변경된 개체의 배포는 배포되는 개체의 처리에 있어서 트랜잭션이 아닙니다. 처리가 실패해도 배포는 성공하고 유지될 수 있습니다. 이를 변경하여 배포와 처리를 단일 트랜잭션에 통합할 수 있습니다.|  
-|**쿼리 모드**|**메모리 내**|쿼리 결과가 반환될 원본을 지정합니다. 자세한 내용은 참조 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.|  
+|**쿼리 모드**|**메모리 내**|쿼리 결과가 반환될 원본을 지정합니다. 자세한 내용은 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.|  
   
  **배포 서버**  
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**Server**|**localhost**|Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다. 일반적으로 관리자 권한을 사용합니다.<br /><br /> 이 속성의 기본 설정은 도구\옵션 대화 상자에서 Analysis Server 설정의 배포 페이지에 있는 기본 배포 서버 속성을 사용하여 변경할 수 있습니다. 자세한 내용은 참조 [기본 데이터 모델링 및 배포 속성 구성](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)합니다.|  
-|**버전**|**개발자**|모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다.|  
-|**데이터베이스**|**Model**|배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 데이터 연결 또는 .rsds 데이터 연결 파일에서 지정됩니다. 이름은 모델을 사용하여 수행할 분석 유형을 나타내는 것이 좋습니다(예: AdventureWorksSalesModel).<br /><br /> 배포되는 모델의 이름이 중복되지 않도록 하려면 모델의 목적에 맞게 **데이터베이스** 속성의 이름 설정을 변경해야 합니다. 사용자가 데이터 원본으로 사용할 모델에 연결할 때 이 이름이 표시됩니다.|  
+|**Server**|**localhost**|Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다. 일반적으로 관리자 권한을 사용합니다.<br /><br /> 이 속성의 기본 설정은 도구\옵션 대화 상자에서 Analysis Server 설정의 배포 페이지에 있는 기본 배포 서버 속성을 사용하여 변경할 수 있습니다. 자세한 내용은 [기본 데이터 모델링 및 배포 속성 구성](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)합니다.|  
+|**버전(Edition)**|**개발자**|모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다.|  
+|**데이터베이스 백업**|**Model**|배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 데이터 연결 또는 .rsds 데이터 연결 파일에서 지정됩니다. 이름은 모델을 사용하여 수행할 분석 유형을 나타내는 것이 좋습니다(예: AdventureWorksSalesModel).<br /><br /> 배포되는 모델의 이름이 중복되지 않도록 하려면 모델의 목적에 맞게 **데이터베이스** 속성의 이름 설정을 변경해야 합니다. 사용자가 데이터 원본으로 사용할 모델에 연결할 때 이 이름이 표시됩니다.|  
 |**큐브 이름**|**Model**|보고 클라이언트 데이터 연결에 표시된 것과 같이 데이터베이스 큐브의 이름을 지정합니다.|  
 |**버전**|**13.0**|프로젝트를 배포할 Analysis Services 인스턴스의 버전입니다.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34044287"
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**가장 설정**|**Default**|DirectQuery 모드로 실행되는 모델의 데이터 원본에 연결하는 데 사용되는 자격 증명을 지정합니다. 이 자격 증명은 기본 메모리 내 모드에서 사용되는 가장 자격 증명과 다릅니다. 자세한 내용은 참조 [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)합니다.|  
+|**가장 설정**|**Default**|DirectQuery 모드로 실행되는 모델의 데이터 원본에 연결하는 데 사용되는 자격 증명을 지정합니다. 이 자격 증명은 기본 메모리 내 모드에서 사용되는 가장 자격 증명과 다릅니다. 자세한 내용은 [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)합니다.|  
   
 ##  <a name="bkmk_conf_proj_settings"></a> 배포 옵션 및 배포 서버 속성 설정 구성  
   

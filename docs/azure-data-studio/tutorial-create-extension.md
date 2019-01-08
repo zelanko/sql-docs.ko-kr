@@ -1,7 +1,8 @@
 ---
-title: '자습서: Azure Data Studio 용 확장을 만들기 | Microsoft Docs'
-description: 이 자습서에는 Azure Data Studio에 대 한 확장을 만드는 방법을 보여 줍니다.
-ms.custom: tools|sos
+title: '자습서: 확장 만들기'
+titleSuffix: Azure Data Studio
+description: 이 자습서에는 Azure Data Studio를 사용자 지정 기능을 추가 하려면 확장을 만드는 방법을 보여 줍니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,18 +11,18 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356554"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030607"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>자습서: Azure Data Studio 확장 만들기
 
-이 자습서에는 새 Azure Data Studio 확장 프로그램을 만드는 방법을 보여 줍니다. 확장을 Azure Data Studio에 친숙 한 SSMS keybindings를 만듭니다.
+이 자습서에는 새 Azure Data Studio 확장 프로그램을 만드는 방법을 보여 줍니다. 확장에서 Azure Data Studio SSMS의 친숙 한 키 바인딩을 만듭니다.
 
-이 자습서에 대해 알아봅니다 방법:
+이 자습서에서 다음과 같은 방법을 배웁니다.
 > [!div class="checklist"]
 > * 확장 프로젝트 만들기
 > * 확장 프로그램 생성기 설치
@@ -30,14 +31,14 @@ ms.locfileid: "49356554"
 > * 확장 패키지
 > * 확장 프로그램을 marketplace에 게시
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공 되므로 Azure Data Studio 확장 Visual Studio Code를 사용 하 여 빌드됩니다. 시작 하려면 다음 구성 요소가 필요 합니다.
 
 - [Node.js](https://nodejs.org) 설치 되 고 사용 가능한 프로그램 `$PATH`합니다. 포함 하는 Node.js [npm](https://www.npmjs.com/), 확장 생성기를 설치 하는 데 사용 되는 Node.js 패키지 관리자입니다.
 - [Visual Studio Code](https://code.visualstudio.com) 확장을 디버그 합니다.
 - Azure 데이터 스튜디오 [확장을 디버그](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)합니다.
-- Sqlops가 경로에 있는지 확인 합니다. Windows에 대 한 선택 했는지 확인 합니다 `Add to Path` setup.exe에 대 한 옵션입니다. Mac 또는 Linux를 실행 합니다 *설치 경로에 'sqlops' 명령을* 옵션입니다.
+- 확인 `sqlops` 가 경로에 있습니다. Windows에 대 한 선택 했는지 확인 합니다 `Add to Path` setup.exe에 대 한 옵션입니다. Mac 또는 Linux를 실행 합니다 *설치 경로에 'sqlops' 명령을* 옵션입니다.
 - SQL Operations Studio 디버그 확장 (선택 사항)입니다. 이 패키지 및 Azure Data Studio에 설치 하지 않고도 확장 프로그램을 테스트할 수 있습니다.
 
 
@@ -61,12 +62,12 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 
 3. 확장 이름을 입력 하는 단계에 따라 (이 자습서에서는 사용 하 여 **ssmskeymap**), 설명을 추가 하 고 있습니다.
 
-새 폴더를 만듭니다 이전 단계를 완료 합니다. Open Visual Studio Code에서 폴더를 만들 준비가 고유한 keybinding 확장!
+새 폴더를 만듭니다 이전 단계를 완료 합니다. Open Visual Studio Code에서 폴더를 만들 준비가 사용자 고유의 키 바인딩 확장!
 
 
 ### <a name="add-a-keyboard-shortcut"></a>바로 가기 키를 추가 합니다.
 
-**1 단계: 대체 하는 바로 가기를 찾기**
+**1 단계: 대체 하는 바로 가기를 찾을합니다**
 
 이제 사용할 준비가 되셨나요 확장 했으므로 일부 SSMS 키보드 바로 가기 (또는 키 바인딩) Azure Data Studio에 추가 합니다. 사용한 [Andy Mallon 치트 시트](https://am2.co/2018/02/updated-cheat-sheet/) 및 RedGate의 키보드 바로 가기 목록 아이디어를 얻으세요.
 
@@ -78,14 +79,14 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 - 전체 화면 설정/해제 (**SHIFT + ALT + ENTER**).
 - **F8** 표시할 **개체 탐색기** / **서버 보기**합니다.
 
-찾기 및 바꾸기 이러한 바인딩을 하는 것이 쉽습니다. 실행 *열린 바로 가기 키* 표시할 합니다 **바로 가기 키** 탭에서 Azure Data Studio, 검색할 *쿼리* 를 선택한 후 **변경 Keybinding**. 완료 되는 키 바인딩을 변경 볼 수 있습니다 keybindings.json 파일에서 업데이트 된 매핑 (실행 *열린 바로 가기 키* 하는지 확인 하려면).
+찾기 및 바꾸기 이러한 키 바인딩 하기 쉽습니다. 실행 *열린 바로 가기 키* 표시할 합니다 **바로 가기 키** 탭에서 Azure Data Studio, 검색할 *쿼리* 를 선택한 후 **변경 키 바인딩**. 완료 되 면는 키 바인딩을 변경, 업데이트 되는 매핑의 keybindings.json 파일에서 볼 수 있습니다 (실행할 *열린 바로 가기 키* 하는지 확인 하려면).
 
 ![바로 가기 키](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
 ![keybindings.json 확장](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**2 단계: 확장에 바로 가기 추가**
+**2단계: 확장에 바로 가기 추가**
 
 확장에 바로 가기를 추가 하려면 엽니다는 *package.json* 바꾸고 파일 (확장)를 `contributes` 섹션을 다음:
 
@@ -132,7 +133,7 @@ Visual Studio Code에서 Azure 데이터 Studio 디버그 확장이 설치 되�
 
 ![테스트 확장](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps 되므로 만들려면 빠른 확장명 중 하나에서 새 확장명 성공적으로 작동 하 고 공유할 준비가 됩니다.
+키 맵에 되므로 만들려면 빠른 확장명 중 하나에서 새 확장명 성공적으로 작동 하 고 공유할 준비가 됩니다.
 
 ## <a name="package-your-extension"></a>확장 패키지
 
@@ -164,7 +165,7 @@ Azure Data Studio 확장 marketplace 완전히 아직 구현 되지 않았습니
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 학습 하는 방법.
+이 자습서에서는 다음과 같은 방법을 학습했습니다.
 > [!div class="checklist"]
 > * 확장 프로젝트 만들기
 > * 확장 프로그램 생성기 설치
