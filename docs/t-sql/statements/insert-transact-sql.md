@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e717254256468a04ed4502a63c14dc742a1101a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522909"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206992"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -296,7 +296,7 @@ OUTPUT Clause
   
  이진 데이터 스트림의 데이터 행 수를 대략적으로 나타냅니다. 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
->  [!NOTE]
+> [!NOTE]
 >  열 목록이 제공되지 않으면 구문 오류가 발생합니다.  
 
 ## <a name="remarks"></a>Remarks  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 ###  <a name="ColumnValues"></a> 열 값 처리  
  이 섹션의 예에서는 IDENTITY 속성, DEFAULT 값으로 정의되거나 **uniqueidentifer** 또는 사용자 정의 형식 열과 같은 데이터 형식으로 정의된 열에 값을 삽입하는 방법을 보여줍니다.  
   
-#### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>4. 기본값을 갖는 열이 포함된 테이블에 데이터 삽입  
+#### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 기본값을 갖는 열이 포함된 테이블에 데이터 삽입  
  다음 예에서는 자동으로 값을 생성하거나 기본값을 갖는 열이 있는 테이블에 행을 삽입하는 방법을 보여 줍니다. `Column_1`은 `column_2`에 삽입된 값과 문자열을 연결하여 자동으로 값을 생성하는 계산 열입니다. `Column_2`는 기본 제약 조건으로 정의됩니다. 이 열에 값이 지정되지 않으면 기본값이 사용됩니다. `Column_3`은 고유한 증분 이진수를 생성하는 **rowversion** 데이터 형식으로 정의됩니다. `Column_4`는 값을 자동으로 생성하지 않습니다. 이 열의 값이 지정되지 않으면 NULL이 삽입됩니다. INSERT 문은 전체 열이 아니라 일부 열의 값을 포함하는 행을 삽입합니다. 마지막 INSERT 문에는 열이 지정되지 않고 DEFAULT VALUES 절을 사용하여 기본값만 삽입됩니다.  
   
 ```sql
@@ -486,7 +486,7 @@ FROM dbo.T1;
 GO  
 ```  
   
-#### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>5. ID 열이 있는 테이블에 데이터 삽입  
+#### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. ID 열이 있는 테이블에 데이터 삽입  
  다음 예에서는 ID 열에 데이터를 삽입하는 다양한 방법을 보여 줍니다. 처음 두 INSERT 문은 새 행에 대해 ID 값을 생성할 수 있도록 합니다. 세 번째 INSERT 문은 SET IDENTITY_INSERT 문으로 열의 IDENTITY 속성을 재정의하고 ID 열에 명시적 값을 삽입합니다.  
   
 ```sql
@@ -505,7 +505,7 @@ FROM T1;
 GO  
 ```  
   
-#### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>6. NEWID()를 사용하여 uniqueidentifier 열에 데이터 삽입  
+#### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. NEWID()를 사용하여 uniqueidentifier 열에 데이터 삽입  
  다음 예에서는 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 함수를 사용하여 `column_2`의 GUID를 가져옵니다. 두 번째 `INSERT` 문에서 볼 수 있듯이 ID 열과 달리 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 데이터 형식의 열에 대해서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 자동으로 생성하지 않습니다.  
   
 ```sql
@@ -524,7 +524,7 @@ FROM dbo.T1;
   
 ```  
   
-#### <a name="g-inserting-data-into-user-defined-type-columns"></a>7. 사용자 정의 형식 열에 데이터 삽입  
+#### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. 사용자 정의 형식 열에 데이터 삽입  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `PointValue` 테이블의 `Points` 열에 세 개의 행을 삽입합니다. 이 열은 [CLR UDT(사용자 정의 형식)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)를 사용합니다. `Point` 데이터 형식은 UDT 속성으로 노출되는 X 및 Y 정수 값으로 구성됩니다. CAST 또는 CONVERT 함수를 사용하여 쉼표로 구분된 X 및 Y 값을 `Point` 형식으로 캐스팅해야 합니다. 처음 두 명령문은 CONVERT 함수를 사용하여 문자열 값을`Point` 형식으로 변환하고 세 번째 명령문은 CAST 함수를 사용합니다. 자세한 내용은 [UDT 데이터 조작](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)을 참조하세요.  
   
 ```sql
@@ -536,7 +536,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 ###  <a name="OtherTables"></a> 다른 테이블의 데이터 삽입  
  이 섹션의 예에서는 한 테이블의 행을 다른 테이블에 삽입하는 방법을 보여 줍니다.  
   
-#### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>8. SELECT 및 EXECUTE 옵션을 사용하여 다른 테이블의 데이터 삽입  
+#### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT 및 EXECUTE 옵션을 사용하여 다른 테이블의 데이터 삽입  
  다음 예에서는 INSERT...SELECT 또는 INSERT...EXECUTE를 사용하여 한 테이블의 데이터를 다른 테이블에 삽입하는 방법을 보여 줍니다. 이 방법은 모두 열 목록에 리터럴 값과 식을 포함하는 다중 테이블 SELECT 문을 기반으로 합니다.  
   
  첫 번째 INSERT 문은 SELECT 문을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 원본 테이블(`Employee`, `SalesPerson` 및 `Person`)에서 데이터를 파생시키고 결과 집합을 `EmployeeSales` 테이블에 저장합니다. 두 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 포함하는 저장 프로시저를 호출하고 세 번째 INSERT 문은 EXECUTE 절을 사용하여 SELECT 문을 리터럴 문자열로 참조합니다.  
@@ -634,7 +634,7 @@ INSERT INTO HumanResources.NewEmployee
 GO  
 ```  
   
-#### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>10. TOP을 사용하여 원본 테이블에서 삽입되는 데이터 제한  
+#### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. TOP을 사용하여 원본 테이블에서 삽입되는 데이터 제한  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 테이블에서 가져온 임의의 직원 상위 5명에 대한 이름 및 연간 매출 데이터를 삽입합니다. INSERT 문은 `SELECT` 문에서 반환되는 행 중 5개를 선택합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. SELECT 문의 ORDER BY 절은 상위 5명의 직원을 결정하는 데 사용되지 않습니다.  
   
 ```sql

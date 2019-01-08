@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 35bfe5306daf36c5496287cd6e34849c32e7f6c7
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 4ca8da11fa8a1ab393e739e4cd917df7f00d91e2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858738"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046523"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +97,7 @@ ms.locfileid: "51858738"
                                               <ul class="noBullet">
                                               <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>온-프레미스</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>Azure VM에서 실행</strong></a></li>
-                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>새로운 기능</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>새로운 기능</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -312,9 +312,9 @@ ms.locfileid: "51858738"
                                                         <h3>디자인</h3>
                                                         <ul class="noBullet">
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">관계형 데이터베이스 개념</a></li>
-                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">온-프레미스의 클라이언트 응용 프로그램에 연결</a></li>
+                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">온-프레미스의 클라이언트 애플리케이션에 연결</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB 연결 라이브러리</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB 응용 프로그램</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB 애플리케이션</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
