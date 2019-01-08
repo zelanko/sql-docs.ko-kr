@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc5c128de983fc2bf2c4287b53f74495ff76ebb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6c7ed2edb5eb62b6182b53859877b7f5d9b5b453
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518254"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589667"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52518254"
 ##  <a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
  엔드포인트 URL의 구문은 다음 형식을 사용합니다.  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
   
  여기서  
   
@@ -48,15 +48,15 @@ ms.locfileid: "52518254"
   
     -   WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드는 같은 도메인에 있으므로 컴퓨터 시스템의 이름(예: `SYSTEM46`)을 사용할 수 있습니다.  
   
-    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다(예: **[***<IPv6_address>***]**).  
+    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다(예: **[**_<IPv6_address>_**]**).  
   
          시스템의 IP 주소를 확인하려면 Windows 명령 프롬프트에서 **ipconfig** 명령을 입력합니다.  
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         *computer_name* **)을 사용할 수 있습니다.** *domain_segment*[...**.***domain_segment*]  
+         _computer_name_ **)을 사용할 수 있습니다.** _domain_segment_[...**.**_domain_segment_]  
   
-         여기에서 *computer_name i*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[...**.***domain_segment*]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
+         여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[...**.**_domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52518254"
   
  `TCP://10.193.9.134:7023`  
   
-#### <a name="d-using-ipv6"></a>4. IPv6 사용  
+#### <a name="d-using-ipv6"></a>D. IPv6 사용  
  다음 엔드포인트 URL에는 IPv6 주소 `2001:4898:23:1002:20f:1fff:feff:b3a3` 및 포트 `7022`가 포함되어 있습니다.  
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
@@ -105,7 +105,7 @@ ms.locfileid: "52518254"
   
  정규화된 도메인 이름을 구성하려면 *<host_name>* 및 *<Primary_Dns_Suffix>* 의 값을 다음과 같이 연결해야 합니다.  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  예를 들어 다음 IP 구성은  
   
