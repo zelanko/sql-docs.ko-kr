@@ -21,19 +21,19 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b7b0072620a15bf0a05c2667553c1ea51a2cf54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41ca4147e9722edac021c746833ac0e010952c8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211452"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   기존 **text**, **ntext** 또는 **image** 필드를 업데이트합니다. UPDATETEXT를 사용하여 **text**, **ntext** 또는 **image** 열의 일부만 변경할 수 있습니다. WRITETEXT를 사용하여 **text**, **ntext** 또는 **image** 필드 전체를 업데이트하고 바꿀 수 있습니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

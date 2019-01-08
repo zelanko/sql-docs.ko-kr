@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845481"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589527"
 ---
 # <a name="duplicate-tables"></a>테이블 복제
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47845481"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47845481"
   
 6.  **편집** 메뉴에서 **붙여넣기**를 클릭합니다.  
   
-7.  **파일** 메뉴에서 **저장***테이블 이름*을 클릭합니다.  
+7.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 8.  **이름 선택** 대화 상자에서 새 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   
