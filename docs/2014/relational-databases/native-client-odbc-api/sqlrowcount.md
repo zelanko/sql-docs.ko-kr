@@ -14,12 +14,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354740"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   문 실행에 대 한 매개 변수 값의 배열을 바인딩한 경우 때 `SQLRowCount` 매개 변수 값의 모든 행 문 실행에서 오류 조건을 생성 하는 경우 SQL_ERROR를 반환 합니다. 이 함수의 *RowCountPtr* 인수를 통해서는 값이 반환되지 않습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48165033"
  경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, DELETE 또는 MERGE 문의 OUTPUT 절을 사용 하 여 실행 되 고, SQLRowCount OUTPUT 절에서 생성 한 결과 집합의 모든 행이 소비 될 때까지 영향을 받는 행의 수를 반환 하지 것입니다. 소비이 행 호출 SQLFetch 또는 SQLFetchScroll입니다. 모든 결과 행이 소비 될 때까지 SQLResultCols는-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll sql_no_data가 반환 된 후 응용 프로그램을 다음 결과로 이동할 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 하려면 SQLRowCount 호출 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLRowCount 함수](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 함수](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

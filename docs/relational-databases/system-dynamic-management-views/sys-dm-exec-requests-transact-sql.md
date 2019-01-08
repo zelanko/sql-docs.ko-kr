@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,27 +21,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309970ba762b5e616cce10a21d1ef23bfd9097e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740471"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590117"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.  
-  
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 요청과 관련된 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |request_id|**int**|요청의 ID입니다. 세션의 컨텍스트에서 고유합니다. Null을 허용하지 않습니다.|  
 |start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
-|상태|**nvarchar(30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />일시 중지됨<br /><br /> Null을 허용하지 않습니다.|  
+|상태|**nvarchar(30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
 |command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
 |sql_handle|**varbinary(64)**|요청에 대한 SQL 텍스트의 해시 맵입니다. Null을 허용합니다.|  
 |statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
@@ -60,7 +58,7 @@ ms.locfileid: "47740471"
 |transaction_id|**bigint**|이 요청이 실행되는 트랜잭션의 ID입니다. Null을 허용하지 않습니다.|  
 |context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. Null을 허용합니다.|  
 |percent_complete|**real**|다음 명령에 대한 작업 완료율입니다.<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE의 AUTO_SHRINK 옵션<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Null을 허용하지 않습니다.|  
-|estimated_completion_time|**bigint**|내부용입니다. Null을 허용하지 않습니다.|  
+|estimated_completion_time|**bigint**|내부 전용입니다. Null을 허용하지 않습니다.|  
 |cpu_time|**int**|요청에 사용된 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |total_elapsed_time|**int**|요청이 도착한 이후 경과한 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |scheduler_id|**int**|이 요청을 예약하고 있는 스케줄러의 ID입니다. Null을 허용하지 않습니다.|  
@@ -99,60 +97,97 @@ ms.locfileid: "47740471"
 |is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청을 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
 |page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 바이트 16 진수 표현 페이지 리소스의 경우는 `wait_resource` 열 페이지를 포함 합니다. |
 
-## <a name="permissions"></a>사용 권한  
- 사용자에 게 `VIEW SERVER STATE` 서버의 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여할 수 없습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있도록 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 됩니다. 
+## <a name="remarks"></a>Remarks 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
+
+병렬 요청을 실행할 때 [행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 조정 작업자 스레드를 할당 하는 작업을 완료 하는 일을 담당 하는 작업자 스레드를 할당 합니다. 이 DMV에서 코디네이터 스레드만 요청에 대해 표시 됩니다. 열 **읽습니다**, **씁니다**, **logical_reads**, 및 **row_count** 됩니다 **업데이트 되지** 에 대 한 합니다 코디네이터 스레드입니다. 열 **wait_type**, **wait_time**, **last_wait_type**하십시오 **wait_resource**, 및 **granted_query_memory** 됩니다 **만 업데이트** 코디네이터 스레드입니다. 자세한 내용은 참조는 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)합니다.
+
+## <a name="permissions"></a>사용 권한
+사용자에 게 `VIEW SERVER STATE` 서버의 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여할 수 없습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있도록 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 됩니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>1. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기  
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>1. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
+
  다음 예에서는 `sys.dm_exec_requests`를 쿼리하여 필요한 쿼리를 찾고 출력에서 `sql_handle`을 복사합니다.  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- 그런 다음 문 텍스트를 가져오기 위해 복사한 `sql_handle`을 `sys.dm_exec_sql_text(sql_handle)` 시스템 함수와 함께 사용합니다.  
-  
-```  
+
+그런 다음 문 텍스트를 가져오기 위해 복사한 `sql_handle`을 `sys.dm_exec_sql_text(sql_handle)` 시스템 함수와 함께 사용합니다.  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기  
- 다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.  
-  
-```  
+```
+
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
+
+다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+그런 다음 잠금 정보를 찾기 위해 사용 하 여 복사한 `transaction_id` 시스템 함수를 사용 하 여 **sys.dm_tran_locks**합니다.  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- 그런 다음 잠금 정보를 찾기 위해 사용 하 여 복사한 `transaction_id` 시스템 함수를 사용 하 여 **sys.dm_tran_locks**합니다.  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### <a name="c-finding-all-currently-blocked-requests"></a>3. 현재 차단된 모든 요청 찾기  
- 다음 예제에서는 쿼리 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
-  
-```  
+```
+
+### <a name="c-finding-all-currently-blocked-requests"></a>3. 현재 차단된 모든 요청 찾기
+
+다음 예제에서는 쿼리 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## <a name="see-also"></a>관련 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+
+### <a name="d-ordering-existing-requests-by-cpu"></a>4. CPU에서 기존 요청을 순서 지정
+
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
+
+## <a name="see-also"></a>관련 항목
+
+- [동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [실행 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text & amp;#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

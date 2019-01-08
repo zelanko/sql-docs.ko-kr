@@ -17,12 +17,12 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f778380427f0c542346442a6f694b87a04d4dd80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3f036bc08cf9510eac3befc8fefdfb189dfe6490
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373475"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>원격 관리를 위한 보고서 서버 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 보고서 서버 인스턴스를 로컬 또는 원격으로 구성할 수 있습니다. 원격 보고서 서버 인스턴스를 구성하려면 Reporting Services 구성 도구를 사용하거나, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하는 사용자 지정 코드를 작성할 수 있습니다. Reporting Services 구성 도구는 WMI 공급자에 대한 그래픽 인터페이스를 제공하므로 이 도구를 사용하면 코드를 작성하지 않고도 보고서 서버를 구성할 수 있습니다. 이 도구를 시작할 때 연결할 원격 서버를 지정할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48159553"
   
  일부 조직에는 특정 운영 체제나 사용자에 대해 원격 서버 관리를 사용할 수 없도록 하는 그룹 정책이 있습니다. 따라서 방화벽 설정을 수정하기 전에 네트워크 관리자에게 문의하여 원격 관리에 대한 제한이 있는지 여부를 확인하십시오.  
   
- 자세한 내용은 MSDN에 있는 Platform SDK 설명서에서 [Windows 방화벽을 통한 연결](http://go.microsoft.com/fwlink/?LinkId=63615) 을 참조하십시오.  
+ 자세한 내용은 MSDN에 있는 Platform SDK 설명서에서 [Windows 방화벽을 통한 연결](https://go.microsoft.com/fwlink/?LinkId=63615) 을 참조하십시오.  
   
 ## <a name="tasks"></a>태스크  
  원격 보고서 서버 구성을 활성화하는 태스크는 다음과 같습니다.  

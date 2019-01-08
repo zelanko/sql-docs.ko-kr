@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636901"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588470"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@sp_name =** ] **'***name***'**  
+ [  **@sp_name =** ] **'**_이름_**'**  
  카탈로그 정보를 반환하는 데 사용되는 프로시저의 이름입니다. *이름* 됩니다 **nvarchar(390)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [  **@sp_owner =** ] **'***스키마***'**  
+ [  **@sp_owner =** ] **'**_스키마_**'**  
  프로시저가 속한 스키마의 이름입니다. *스키마* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 프로시저 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 스키마에 지정된 이름을 가진 프로시저가 포함된 경우 해당 프로시저가 반환됩니다. 불완전한 저장 프로시저가 지정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   현재 데이터베이스의 **dbo** 스키마  
   
- [  **@qualifier =** ] **'***한정자***'**  
- 프로시저 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 형태로 테이블에 대 한 이름 (*한정자 ***.*** 스키마 ***.*** 이름*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ [  **@qualifier =** ] **'**_한정자_**'**  
+ 프로시저 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 형태로 테이블에 대 한 이름 (_한정자_**.** _스키마_**.** _이름을_입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  밑줄(_), 백분율(%), 대괄호([ ])가 와일드카드 문자로 인식되는지 여부를 결정합니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
  **0** = 패턴 일치가 해제 됩니다.  
@@ -113,7 +113,7 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [카탈로그 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

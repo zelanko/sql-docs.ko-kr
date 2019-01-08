@@ -20,18 +20,18 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129183"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376073"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 사용자 정의 집계 요구 사항
   공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약은 `SqlUserDefinedAggregate` 특성과 집계 계약 메서드로 구성됩니다. 집계 계약은 집계의 중간 상태를 저장하는 메커니즘과 새 값을 누적하는 메커니즘을 포함하며 `Init`, `Accumulate`, `Merge` 및 `Terminate`의 4가지 메서드로 구성됩니다. 이러한 요구를 충족 하는 경우 수의 사용자 정의 집계의 활용 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](clr-user-defined-aggregate-invoking-functions.md)합니다.  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- 자세한 내용은 [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
+ 자세한 내용은 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
   
 ## <a name="aggregation-methods"></a>집계 메서드  
  사용자 정의 집계로 등록된 클래스는 다음과 같은 인스턴스 메서드를 지원해야 합니다. 쿼리 프로세서는 이러한 메서드를 사용하여 집계를 계산합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48129183"
 |---------------------|  
 |`Accumulate` 메서드의 설명이 업데이트되어 이제 2개 이상의 매개 변수를 사용합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CLR 사용자 정의 형식](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR 사용자 정의 집계 함수 호출](clr-user-defined-aggregate-invoking-functions.md)  
   

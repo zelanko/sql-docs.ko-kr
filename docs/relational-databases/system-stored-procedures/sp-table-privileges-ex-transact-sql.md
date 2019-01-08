@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752757"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591337"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  정보가 반환될 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@table_name =** ] **'***table_name***'**]  
+ [  **@table_name =** ] **'**_table_name_**'**]  
  테이블 권한 정보를 제공할 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  테이블 스키마입니다. 일부 DBMS 환경에서는 테이블 소유자입니다. *table_schema* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  데이터베이스의 이름이 지정 된 *table_name* 상주 합니다. *table_catalog* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@fUsePattern =**] **'***fUsePattern***'**  
+ [  **@fUsePattern =**] **'**_fUsePattern_**'**  
  '_', '%', '[' 및 ']' 문자를 와일드카드 문자로 해석할지 여부를 결정합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -66,7 +66,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
+|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
 |**TABLE_SCHEM 순**|**sysname**|테이블 소유자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 테이블을 만든 데이터베이스 사용자의 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**GRANTOR**|**sysname**|이에 대 한 권한을 부여한 데이터베이스 사용자 **TABLE_NAME** 에 나열 된 **피부 여자에 게**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 열은 항상 동일 합니다 **TABLE_OWNER**합니다. 이 필드는 항상 값을 반환합니다. 또한 GRANTOR 열은 데이터베이스 소유자를 수 있습니다 (**TABLE_OWNER**) 또는 부여한 사용자가 데이터베이스 소유자 권한 GRANT 문의 WITH GRANT OPTION 절을 사용 합니다.|  
@@ -81,7 +81,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 지정한 연결된 서버 `Product`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `Seattle1`로 시작되는 이름을 가진 테이블에 대한 권한 정보를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결된 서버로 가정됩니다.  
+ 다음 예에서는 지정한 연결된 서버 `Product`의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `Seattle1`로 시작되는 이름을 가진 테이블에 대한 권한 정보를 반환합니다. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 된 서버로 가정).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

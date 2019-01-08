@@ -1,5 +1,5 @@
 ---
-title: '1단원: 트랜잭션 복제를 사용하여 데이터 게시 | Microsoft 문서'
+title: '1단원: 트랜잭션 복제를 사용 하 여 데이터 게시 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226593"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590567"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용하여 데이터 게시
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 트랜잭션 게시를 만들어 **샘플 데이터베이스에** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 시작하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48226593"
   
 10. 에이전트 보안 페이지에서 **스냅숏 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.  
   
-11. 스냅숏 에이전트에 대해 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<*Machine_Name>***\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다.  
+11. 스냅숏 에이전트에 대해 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_**\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다.  
   
 12. 이전 단계를 반복하여 repl_logreader를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정한 다음 **마침**을 클릭합니다.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226593"
   
 3.  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
   
-4.  **게시 액세스 추가** 대화 상자에서 *<Machine_Name>***\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
+4.  **게시 액세스 추가** 대화 상자에서 _<Machine_Name>_**\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 트랜잭션 게시에 구독 만들기](lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 참조하세요.  
+ 트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. 참조 [2 단원: 트랜잭션 게시에 구독을 만드는](lesson-2-creating-a-subscription-to-the-transactional-publication.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [게시된 데이터 필터링](publish/filter-published-data.md)   

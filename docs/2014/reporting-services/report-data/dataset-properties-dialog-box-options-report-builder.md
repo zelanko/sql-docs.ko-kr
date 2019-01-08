@@ -13,15 +13,15 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 25fd4b521ba46e2a4e47dea9e7c2fd962d3c8895
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167053"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364135"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 세트 속성 대화 상자, 옵션(보고서 작성기)
-  **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/collations/collation-and-unicode-support.md) 에서 [데이터 정렬 및 유니코드 지원](http://go.microsoft.com/fwlink/?linkid=98335)을 참조하세요.  
+  **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/collations/collation-and-unicode-support.md) 에서 [데이터 정렬 및 유니코드 지원](https://go.microsoft.com/fwlink/?linkid=98335)을 참조하세요.  
   
  보고서 서버에 있는 공유 데이터 세트 정의의 일부인 데이터 옵션은 공유 데이터 세트를 사용하는 모든 보고서에 영향을 미칩니다. 공유 데이터 세트가 보고서에 추가된 후 해당 데이터 세트에 대한 옵션을 재정의할 수 있습니다. 이러한 변경 내용은 해당 옵션이 정의된 보고서에만 영향을 미칩니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - worker threads [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9df3cfbf232ae8d1401b38f88fa517f7b5be4536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0552791f64e39ec3dc83b419d6db6884106780
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368766"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
   이 항목에서는 **또는**을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]max worker threads[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **max worker threads** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 사용할 수 있는 작업자 스레드 수를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 운영 체제의 네이티브 스레드 서비스를 사용하여 하나 이상의 스레드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 각 네트워크를 동시에 지원하고 또 다른 스레드가 데이터베이스 검사점을 처리하고 스레드 풀이 모든 사용자를 처리하도록 합니다. **max worker threads** 의 기본값은 0입니다. 이 값을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 작업자 스레드 수가 자동으로 구성됩니다. 기본 설정은 대부분의 시스템에 적합합니다. 그러나 시스템 구성에 따라 **max worker threads** 를 특정 값으로 설정하면 성능이 향상되기도 합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48188073"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [최대 작업자 스레드 수 옵션을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [Max worker threads 옵션을 구성한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48188073"
     |256개의 프로세서|8320|8576|  
   
     > [!NOTE]  
-    >  64개가 넘는 CPU 사용에 대한 권장 사항은 [64개를 초과하는 CPU가 있는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)을 참조하세요.  
+    >  64개가 넘는 CPU 사용에 대한 권장 사항은 [64개를 초과하는 CPU가 있는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법](https://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)을 참조하세요.  
   
     > [!WARNING]  
     >  32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1024로 설정하는 것이 좋습니다.  
@@ -144,7 +143,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 최대 작업자 스레드 수 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 최대 작업자 스레드 수 옵션을 구성한 후  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 시작할 필요 없이 변경 사항이 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

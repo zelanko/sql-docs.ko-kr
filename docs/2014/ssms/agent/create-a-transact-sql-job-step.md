@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
@@ -14,12 +14,12 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 698e2d52746cd641a962e51bdc613b093ac6f9fb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 383a85bbbad6675c629f7789a09dca4cb0666559
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821627"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계를 만드는 방법에 대해 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "49119510"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
  자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  

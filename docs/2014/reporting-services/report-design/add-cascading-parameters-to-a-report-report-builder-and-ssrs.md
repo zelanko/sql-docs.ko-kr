@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376445"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
   연계 매개 변수를 사용하면 대량의 보고서 데이터를 관리할 수 있습니다. 한 매개 변수의 값 목록이 다른 매개 변수에서 선택한 값에 따라 달라지는 관련 매개 변수 집합을 정의할 수 있습니다. 예를 들어 첫 번째 매개 변수가 제품 범주 목록을 나타내는 독립적인 매개 변수이고 사용자가 범주를 선택하면 두 번째 매개 변수가 첫 번째 매개 변수의 값에 종속됩니다. 즉, 두 번째 매개 변수의 값이 선택된 범위 내 하위 범주의 목록으로 업데이트됩니다. 사용자가 보고서를 볼 때 범주 및 하위 범주 매개 변수 모두에 대한 값으로 보고서 데이터가 필터링됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48078353"
   
  목록 뒷부분의 매개 변수에 대한 데이터 세트 쿼리에는 목록 앞부분의 각 매개 변수에 대한 참조가 포함되므로 연계 매개 변수에서는 순서가 중요합니다. 보고서 데이터 창의 매개 변수 순서에 따라 런타임에 보고서에 매개 변수 쿼리가 나타나는 순서가 결정되며 따라서 사용자가 각각의 연속된 매개 변수 값을 선택하는 순서가 결정됩니다.  
   
- 여러 값을 갖는 연계 매개 변수를 만들고 모두 선택 기능을 포함하는 방법은 [모두 선택 다중값 연계 매개 변수를 만드는 방법](http://go.microsoft.com/fwlink/?LinkId=184757)을 참조하십시오.  
+ 여러 값을 갖는 연계 매개 변수를 만들고 모두 선택 기능을 포함하는 방법은 [모두 선택 다중값 연계 매개 변수를 만드는 방법](https://go.microsoft.com/fwlink/?LinkId=184757)을 참조하십시오.  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>관련된 여러 매개 변수가 포함된 쿼리가 있는 기본 데이터 세트를 만들려면  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078353"
   
     1.  데이터 원본 필드의 목록. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 SELECT 문은 해당 테이블 또는 뷰의 데이터베이스 열 이름 목록을 지정합니다.  
   
-    2.  각 연계 매개 변수당 하나의 쿼리 매개 변수. 쿼리 매개 변수는 쿼리에서 포함하거나 제외할 값을 지정하여 데이터 원본에서 검색되는 데이터를 제한합니다. 일반적으로 쿼리 매개 변수는 쿼리의 제약 조건 절에 넣습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서는 WHERE 절에 쿼리 매개 변수를 넣습니다. 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](http://go.microsoft.com/fwlink/?linkid=120955)설명서에 있는 "WHERE 및 HAVING을 사용하여 행 필터링"을 참조하십시오.  
+    2.  각 연계 매개 변수당 하나의 쿼리 매개 변수. 쿼리 매개 변수는 쿼리에서 포함하거나 제외할 값을 지정하여 데이터 원본에서 검색되는 데이터를 제한합니다. 일반적으로 쿼리 매개 변수는 쿼리의 제약 조건 절에 넣습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서는 WHERE 절에 쿼리 매개 변수를 넣습니다. 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](https://go.microsoft.com/fwlink/?linkid=120955)설명서에 있는 "WHERE 및 HAVING을 사용하여 행 필터링"을 참조하십시오.  
   
 6.  **실행** (**!**)을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078353"
 4.  **보고서 보기**를 클릭합니다. 선택한 매개 변수에 따라 보고서가 업데이트됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추가, 변경 또는 Delete a Report Parameter &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)   
- [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)   
  [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

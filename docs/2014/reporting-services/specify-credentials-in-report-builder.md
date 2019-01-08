@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372125"
 ---
 # <a name="specify-credentials-in-report-builder"></a>보고서 작성기에 자격 증명 지정
   자격 증명은 데이터 원본에서 데이터를 검색하려는 사용자를 인증합니다. 데이터 원본의 소유자는 사용해야 하는 자격 증명의 유형을 결정합니다. 예를 들어, 데이터베이스 관리자는 사용자가 Windows 사용자 이름과 암호를 입력해야 하도록 지정할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48154103"
  자세한 내용은 [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) 및 [보고서 작성기에서 보고서 미리 보기](report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ## <a name="types-of-credentials"></a>자격 증명 유형  
- 데이터 원본에서 지원하는 자격 증명의 유형은 데이터 원본 소유자가 지정합니다. 액세스 하려면 예를 들어를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제공 해야 데이터베이스를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 사용자 이름 및 암호입니다. 다른 데이터 원본에 액세스하기 위해서는 Windows 로그인 사용자 이름과 암호를 입력해야 할 수 있습니다. 일부 데이터 원본에는 자격 증명이 필요하지 않습니다.  
+ 데이터 원본에서 지원하는 자격 증명의 유형은 데이터 원본 소유자가 지정합니다. 예를 들어, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 액세스하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 사용자 이름과 암호를 입력해야 하고, 다른 데이터 원본에 액세스하기 위해서는 Windows 로그인 사용자 이름과 암호를 입력해야 할 수 있습니다. 일부 데이터 원본에는 자격 증명이 필요하지 않습니다.  
   
 ### <a name="options-for-specifying-credentials"></a>자격 증명 지정 옵션  
  다음은 데이터 원본에 대한 자격 증명을 지정할 때 사용할 수 있는 옵션입니다.  
@@ -72,13 +72,13 @@ ms.locfileid: "48154103"
  입력 정보를 요청하는 자격 증명을 지정하면 보고서에 액세스하는 각 사용자가 데이터를 검색할 때 사용자 이름과 암호를 입력해야 합니다. 이 옵션은 기밀 데이터를 포함하는 보고서에 사용하는 것이 좋습니다. 입력 정보를 요청하는 자격 증명은 Windows 계정이거나 데이터베이스 로그인에 사용할 수 있습니다. 사용자가 입력한 자격 증명을 데이터베이스 서버에서 인식하지 못하거나, 지정한 사용자가 데이터를 검색할 수 있는 권한이 없는 경우 연결이 실패합니다.  
   
 ### <a name="no-credentials"></a>자격 증명 사용 안 함  
- 이 데이터 원본에 대해서는 자격 증명이 필요하지 않습니다. 보고 서버에서 이 보고서를 실행하려면 무인 실행 계정을 구성해야 합니다. 자세한 내용은 참조 하세요. [무인 실행 계정 구성 &#40;SSRS 구성 관리자&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?linkid=121312).  
+ 이 데이터 원본에 대해서는 자격 증명이 필요하지 않습니다. 보고 서버에서 이 보고서를 실행하려면 무인 실행 계정을 구성해야 합니다. 자세한 내용은 참조 하세요. [무인 실행 계정 구성 &#40;SSRS 구성 관리자&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>관련 항목  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [포함 된 데이터 원본과 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [보고서 작성기 옵션 대화 상자, 설정 &#40;보고서 작성기&#41;](report-builder/set-default-options-for-report-builder.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

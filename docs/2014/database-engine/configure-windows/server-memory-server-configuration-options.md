@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376685"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48199409"
  **min server memory** 의 기본 설정은 0이고, **max server memory** 의 기본 설정은 2147483647MB입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 > [!NOTE]  
->  **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 수 없으면 **–f** 시작 옵션을 사용하여 SQL Server를 시작하고 **max server memory** 를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
+>  **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 **–f** 시작 옵션을 사용하여 시작하고 **max server memory**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199409"
 ## <a name="lock-pages-in-memory"></a>메모리의 페이지 잠금  
  이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. SQL Server **Lock Pages in Memory** 옵션은 32 비트 및 64 비트 인스턴스를 ON으로 설정 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 및 더 높은 경우 sqlservr.exe 실행 권한이 있는 계정 권한이 Windows에서 "잠금 페이지 "LPIM (메모리) 사용자 권한이 있습니다. 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
   
- **에 대해** 메모리의 페이지 잠금 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션을 사용하지 않도록 설정하려면 SQL Server 시작 계정에 대해 "메모리의 페이지 잠금" 사용자 권한을 제거합니다.  
+ 사용 하지 않도록 설정 합니다 **메모리의 페이지 잠금** 에 대 한 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server 시작 계정에 대 한 오른쪽 "메모리의 페이지 잠금" 사용자를 제거 합니다.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하지 않도록 설정하려면  
  **Lock pages in memory 옵션을 사용 하지 않도록 설정 합니다.**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199409"
 |-|-------------|-------------|  
 |기본 메모리|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 2GB<br /><br /> 사용 하면 3GB **3gb** 부팅 매개 변수 *<br /><br /> Wow64에서는 4GB\*\*|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 8TB(x64 아키텍처 사용)|  
   
- ***/3gb** 는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
+ ***/3gb** 는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
- * * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
+ * * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   

@@ -15,12 +15,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220903"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590617"
 ---
 # <a name="expression-dialog-box-report-builder"></a>식 대화 상자(보고서 작성기)
   사용 된 **식** 쓸 대화 상자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 식이 보고서 항목 속성입니다. 식을 사용하여 색, 글꼴 및 테두리를 비롯한 여러 속성을 설정할 수 있습니다. 런타임에 보고서 처리기는 식을 계산하고 그 결과로 속성의 값을 대체합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "48220903"
 ## <a name="expression-constructs"></a>식 생성  
  식은 등호(=)로 시작하며 상수, 리터럴, 연산자, 기본 제공 필드에 대한 참조, 기본 제공 컬렉션, 기본 제공 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 공용 언어 런타임 클래스 및 사용자 지정 함수를 포함할 수 있습니다. 다음 목록에서는 식에 추가할 수 있는 범주와 값에 대해 설명합니다.  
   
- **에 대 한 식 설정:***\<PropertyName >*   
+ **에 대 한 식 설정:**  _\<PropertyName >_  
  식을 정의하는 속성의 이름입니다. 이 속성은 속성 창에서 이름으로 설정할 수도 있습니다.  
   
  **상수**  
- 상수에 기반을 두는 속성에 대한 이 속성에 유효한 미리 정의된 값 목록을 제공합니다. 예를 들어 색에 기반을 두는 속성은 유효한 색 이름을 보여 줍니다. 값은 부울 데이터 형식의 속성에 대 한 `True` 고 `False`입니다.  
+ 상수에 기반을 두는 속성에 대한 이 속성에 유효한 미리 정의된 값 목록을 제공합니다. 예를 들어 색에 기반을 두는 속성은 유효한 색 이름을 보여 줍니다. 부울 데이터 형식의 속성인 경우 값은 `True` 및 `False`입니다.  
   
  식을 지원하는 모든 항목을 상수로 설정할 수 있는 것은 아닙니다. 속성을 상수 값으로 설정할 수 없는 경우 설명 창에 이러한 정보가 표시됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48220903"
  **매개 변수**  
  보고서 매개 변수 목록을 제공합니다.  
   
- **필드 (**  *\<데이터 집합 선택 >* **)**  
+ **필드 (**  _\<데이터 집합 선택 >_ **)**  
  데이터 세트 범주에 선택된 데이터 세트에 대한 필드 목록을 표시합니다. 필드를 두 번 클릭하여 필드를 **식** 상자에 복사할 수 있습니다.  
   
  **데이터 집합**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220903"
 ## <a name="see-also"></a>관련 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [필터 수식 예 &#40;보고서 작성기 및 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [데이터 집합 필드 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [색 선택 대화 상자 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 951fc38d89718a2c202d436c857e7b06f19de2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0dea5d937c09d551faf0cc923ee3f36f258d708
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367565"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
   보고서에 대한 외부 데이터에 액세스하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에서 사용하는 저장된 자격 증명을 구성할 수 있습니다. 보고서가 무인 모드로 실행되는 경우 저장된 자격 증명이 사용됩니다(예: 보고서를 전자 메일로 게시하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독). 보고서 처리가 예약되거나 트리거되면 보고서 서버는 자격 증명을 검색하고 사용합니다. 이 항목에서는 기본 모드 및 SharePoint 모드 보고서 서버에 대해 저장된 자격 증명을 구성하는 방법에 대해 설명합니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "48167173"
 ##  <a name="bkmk_top"></a> 저장된 자격 증명에 대한 보안 정책 요구 사항  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 보고서 서버의 다음 보안 정책 중 하나의 경우, 저장된 자격 증명에 대해 사용하는 계정을 구성해야 합니다. 환경에서 필요한 최저 수준의 권한을 지닌 정책을 선택하는 것이 좋습니다.  
   
-1.  **로컬 로그온 허용**. 자세한 내용은 [로컬 로그온 허용](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)(영문)을 참조하세요.  
+1.  **로컬 로그온 허용**. 자세한 내용은 [로컬 로그온 허용](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)(영문)을 참조하세요.  
   
-2.  **일괄 작업으로 로그온**. 자세한 내용은 [일괄 작업으로 로그온](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)(영문)을 참조하세요.  
+2.  **일괄 작업으로 로그온**. 자세한 내용은 [일괄 작업으로 로그온](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)(영문)을 참조하세요.  
   
-3.  정책에 대한 일반적인 정보는 [그룹 정책 개체의 보안 설정 편집](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)(영문)을 참조하세요.  
+3.  정책에 대한 일반적인 정보는 [그룹 정책 개체의 보안 설정 편집](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)(영문)을 참조하세요.  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 보고서별 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48167173"
   
 4.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 선택합니다.  
   
-5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 다음 예제에 연결할 때 사용할 연결 문자열을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스:  
+5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 다음 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -87,7 +87,7 @@ ms.locfileid: "48167173"
   
 4.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 선택합니다.  
   
-5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 다음 예제에 연결할 때 사용할 연결 문자열을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스:  
+5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 다음 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -113,7 +113,7 @@ ms.locfileid: "48167173"
   
 3.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
-4.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 연결 문자열에 자격 증명을 지정 하지 않는 것이 좋습니다.  
+4.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 연결 문자열에서 자격 증명을 지정하지 않는 것을 권장합니다.  
   
      다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48167173"
   
 4.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
-5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 연결 문자열에 자격 증명을 지정 하지 않는 것이 좋습니다.  
+5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 연결 문자열에서 자격 증명을 지정하지 않는 것을 권장합니다.  
   
      다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48167173"
 ## <a name="see-also"></a>관련 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../integration-services/connection-manager/data-sources.md)   
  [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)   
  [새 데이터 원본 페이지&#40;보고서 관리자&#41;](../new-data-source-page-report-manager.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
@@ -17,12 +15,12 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5229fe609ed2f607478fc49fb12f01ac7359d73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 334e8f064d3db60b0c1540ab0f5a173ec8c659cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225454"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369135"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 동기 변환과 비동기 변환의 차이점을 가장 쉽게 이해하려면 먼저 동기 변환을 이해해야 합니다. 동기 변환이 개발자의 요구에 맞지 않으면 디자인에 비동기 변환을 사용해야 합니다.  
@@ -50,7 +48,7 @@ ms.locfileid: "48225454"
   
  각 입력 행을 출력에 명시적으로 복사하여 동기 변환을 에뮬레이트하는 비동기 변환을 만들 수도 있습니다. 이 방법을 사용하면 열 이름을 바꾸거나 데이터 형식을 변환할 수 있습니다. 그러나 성능은 저하됩니다. 열 복사 또는 데이터 변환과 같은 기본 제공 Integration Services 구성 요소를 사용하면 보다 나은 성능으로 동일한 결과를 얻을 수 있습니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](data-flow/transformations/script-component.md)   

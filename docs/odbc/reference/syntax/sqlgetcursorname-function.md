@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855081"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591817"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 함수(SQLGetCursorName Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetCursorName** 지정 된 문과 연결 된 커서 이름을 반환 합니다.  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
 ## <a name="comments"></a>주석  
- 커서 이름은 현재 위치 업데이트에만 사용 됩니다 및 delete 문 (예를 들어 **업데이트할** *테이블 이름* ... **WHERE CURRENT OF** *커서 이름을*). 자세한 내용은 [배치 업데이트 및 삭제 문을](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않습니다 **SQLSetCursorName** 커서 이름을 정의 드라이버 이름을 생성 합니다. 이 이름은 SQL_CUR 문자로 시작합니다.  
+ 커서 이름은 현재 위치 업데이트에만 사용 됩니다 및 delete 문 (예를 들어 **업데이트할** _테이블 이름_ ... **WHERE CURRENT OF** _커서 이름을_). 자세한 내용은 [배치 업데이트 및 삭제 문을](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않습니다 **SQLSetCursorName** 커서 이름을 정의 드라이버 이름을 생성 합니다. 이 이름은 SQL_CUR 문자로 시작합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2에서 *.x*했습니다. 열려 있는 커서 이름이 없는를 호출 하 여 설정 된 경우, **SQLSetCursorName**에 대 한 호출 **SQLGetCursorName** SQLSTATE HY015 반환 (커서 이름이 없습니다. 사용 가능). ODBC 3에서 *.x*,이 더 이상 true; 시기에 관계 없이 **SQLGetCursorName** 는 호출 드라이버 커서 이름을 반환 합니다.  
   
  **SQLGetCursorName** 이름을 명시적으로 또는 암시적으로 만든 여부 커서의 이름을 반환 합니다. 커서 이름을 경우 암시적으로 생성 됩니다 **SQLSetCursorName** 호출 되지 않습니다. **SQLSetCursorName** 커서가 할당 또는 준비 된 상태와 문에서 커서 이름을 바꾸려면 호출할 수 있습니다.  
@@ -99,6 +99,6 @@ SQLRETURN SQLGetCursorName(
 |실행할 문을 준비합니다.|[SQLPrepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |커서 이름을 설정합니다.|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

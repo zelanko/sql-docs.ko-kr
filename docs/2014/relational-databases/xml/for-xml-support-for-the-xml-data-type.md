@@ -13,15 +13,15 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a3a4cea6424f8bfb89207050719ec0db554fdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130283"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355341"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
-  FOR XML 쿼리 열을 지정 하는 경우 `xml` 형식 SELECT 절에서 열 값은 ELEMENTS 지시어를 지정 하는 여부에 관계 없이 반환된 된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
+  FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
  예를 들어 다음 쿼리는 검색 고객 연락처 정보 등을 `BusinessEntityID`, `FirstName`, 및 `LastName` 열 및 전화 번호를 `AdditionalContactInfo` 열의 `xml` 형식입니다.  
   
@@ -29,18 +29,18 @@ ms.locfileid: "48130283"
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
 ```  
   
- 열 값에서 검색 된 추가 연락 정보 값을 제외 하 고 특성으로 반환 된 쿼리는 ELEMENTS 지시어를 지정 하지 않으므로는 `xml` 유형 열입니다. 이러한 값은 요소로 반환됩니다.  
+ 쿼리는 ELEMENTS 지시어를 지정하지 않기 때문에 `xml` 유형의 열로부터 검색된 추가 연락 정보 값을 제외하면 열 값이 특성으로 반환됩니다. 이러한 값은 요소로 반환됩니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -48,9 +48,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -60,9 +60,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -75,12 +75,12 @@ FOR XML AUTO, TYPE;
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
@@ -92,9 +92,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -104,9 +104,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -117,7 +117,7 @@ FOR XML AUTO, TYPE;
   
  쿼리에서 ELEMENTS 지시어를 지정하면 BusinessEntityID, LastName 및 FirstName이 결과 XML에 요소로 반환됩니다.  
   
- 다음 예에서는 FOR XML 처리 논리가 XML 데이터에 있는 모든 XML 선언을 직렬화 하지 않음을 보여 줍니다는 `xml` 형식 열:  
+ 다음 예에서는 FOR XML 처리 논리가 `xml` 유형 열의 XML 데이터에 있는 모든 XML 선언을 직렬화하지 않음을 보여 줍니다.  
   
 ```  
 create table t(i int, x xml)  
@@ -146,9 +146,9 @@ for xml auto;
   
 -   단일 `xml` 유형 열이 포함된 테이블  
   
--   인스턴스는 `xml` 형식  
+-   `xml` 유형의 인스턴스  
   
- 다음 사용자 정의 함수를 단일 열 테이블을 반환 하는 예를 들어 `xm`유형의:  
+ 예를 들어 다음 사용자 정의 함수는 `xm` 유형의 단일 열이 포함된 테이블을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- 사용자 정의 함수를 실행하고 함수로 반환된 테이블을 쿼리할 수 있습니다. 이 예제에서는 테이블을 쿼리하여 반환 된 XML에 할당 되는 `xml` 형식 변수입니다.  
+ 사용자 정의 함수를 실행하고 함수로 반환된 테이블을 쿼리할 수 있습니다. 이 예에서 테이블 쿼리를 통해 반환된 XML은 `xml` 유형의 변수에 할당됩니다.  
   
 ```  
 declare @x xml;  
@@ -203,7 +203,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다양한 SQL Server 데이터 형식에 대한 FOR XML 지원](for-xml-support-for-various-sql-server-data-types.md)  
   
   

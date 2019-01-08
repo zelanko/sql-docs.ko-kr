@@ -20,12 +20,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4ae93c4d7b9827fd8d3a1a6c67d37f3a305fa51b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370195"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 오류를 복구하려면 데이터베이스 관리자는 논리적으로 올바르고 의미 있는 복원 시퀀스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 집합을 복원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 및 복구에서는 다음과 같이 전체 데이터베이스, 데이터 파일 또는 데이터 페이지 백업으로부터의 데이터 복원을 지원합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48216383"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원은 지원되는 모든 운영 체제(64비트 또는 32비트 시스템)에서 작동합니다. 지원 되는 운영 체제에 대 한 자세한 내용은 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다. 이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)의 "호환성 지원" 섹션을 참조하세요.  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [복원 시나리오 개요](#RestoreScenariosOv)  
   
@@ -143,15 +143,15 @@ ms.locfileid: "48216383"
 ##  <a name="DRA"></a> 데이터베이스 복구 관리자(SQL Server Management Studio)  
  데이터베이스 복구 관리자는 올바른 최적의 복원 시퀀스를 구현하는 복원 계획 생성을 용이하게 합니다. 알려진 데이터베이스 복원 문제와 고객이 요청한 개선 사항이 해결되었습니다. 데이터베이스 복구 관리자에 의해 도입되는 주요 개선 사항은 다음과 같습니다.  
   
--   **복원 계획 알고리즘:**  복원 계획 생성에 사용되는 알고리즘, 특히 복잡한 복원 시나리오가 크게 향상되었습니다. 지정 시간 복원의 분기 시나리오를 비롯한 여러 경계 사례가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서보다 효율적으로 처리됩니다.  
+-   **복원 계획 알고리즘:**  복원 계획 생성에 사용 된 알고리즘에 복잡 한 복원 시나리오에 특히 크게 향상 됩니다. 지정 시간 복원의 분기 시나리오를 비롯한 여러 경계 사례가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서보다 효율적으로 처리됩니다.  
   
--   **지정 시간 복원:**  데이터베이스 복구 관리자를 사용하면 지정된 시간 내의 데이터베이스 복원이 훨씬 쉬워집니다. 시각적 백업 시간대에서 지정 시간 복원에 대한 지원이 크게 향상됩니다. 이 시각적 시간대를 사용하면 데이터베이스 복원의 대상 복원 시점으로 적합한 시점을 확인할 수 있습니다. 시간대는 분기 복구 경로(복구 분기를 연결하는 경로) 순회를 용이하게 합니다. 특정 지정 시간 복원 계획은 대상 지정 시간(날짜 및 시간)으로의 복원과 관련된 백업을 자동으로 포함합니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
+-   **지정 시간 복원:**  데이터베이스 복구 관리자 지정된 시점으로 데이터베이스를 복원할 시간을 크게 간소화 합니다. 시각적 백업 시간대에서 지정 시간 복원에 대한 지원이 크게 향상됩니다. 이 시각적 시간대를 사용하면 데이터베이스 복원의 대상 복원 시점으로 적합한 시점을 확인할 수 있습니다. 시간대는 분기 복구 경로(복구 분기를 연결하는 경로) 순회를 용이하게 합니다. 특정 지정 시간 복원 계획은 대상 지정 시간(날짜 및 시간)으로의 복원과 관련된 백업을 자동으로 포함합니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   
  데이터베이스 복구 관리자에 대한 자세한 내용은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 효율성 블로그를 참조하십시오.  
   
--   [복구 관리자: 소개](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [복구 관리자: 소개](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [복구 관리자: SSMS를 사용 하 여 분할 백업 만들기/복원 하려면](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
  없음  

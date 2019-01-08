@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178463"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363845"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약(SharePoint용 PowerPivot)
   SharePoint 사이트에 게시한 Excel 통합 문서 내의 PowerPivot 데이터가 자동으로 업데이트되도록 데이터 새로 고침을 예약할 수 있습니다.  
@@ -154,10 +154,10 @@ ms.locfileid: "48178463"
   
  새로 고침 작업에 실패했다거나 새로 고침 작업이 취소되었다는 예기치 않은 상태 메시지가 표시되는 경우 사용 권한 및 서버 가용성을 확인하여 문제를 조사할 수 있습니다.  
   
- 데이터 새로 고침 문제 해결에 대한 도움말은 TechNet WIKI의 PowerPivot 데이터 새로 고침 문제 해결 페이지를 검토하십시오. 자세한 내용은 이 항목에서 [PowerPivot 데이터 새로 고침 문제 해결](http://go.microsoft.com/fwlink/?LinkId=251594)을 참조하십시오.  
+ 데이터 새로 고침 문제 해결에 대한 도움말은 TechNet WIKI의 PowerPivot 데이터 새로 고침 문제 해결 페이지를 검토하십시오. 자세한 내용은 이 항목에서 [PowerPivot 데이터 새로 고침 문제 해결](https://go.microsoft.com/fwlink/?LinkId=251594)을 참조하십시오.  
   
 > [!NOTE]  
->  SharePoint 관리자가 중앙 관리의 PowerPivot 관리 대시보드에서 통합 데이터 새로 고침 보고서를 검토하여 데이터 새로 고침 문제를 해결할 수 있도록 도와 줍니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)합니다.  
+>  SharePoint 관리자가 중앙 관리의 PowerPivot 관리 대시보드에서 통합 데이터 새로 고침 보고서를 검토하여 데이터 새로 고침 문제를 해결할 수 있도록 도와 줍니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 2010에서 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md)   

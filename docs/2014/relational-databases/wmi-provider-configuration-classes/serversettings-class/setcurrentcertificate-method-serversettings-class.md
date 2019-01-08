@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetCurrentCertificate Method (ServerSettings Class)
@@ -20,12 +18,12 @@ ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b1b6089a04bf4ca8d67134ecad97de2c4a62538
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370915"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 메서드(ServerSettings 클래스)
   현재 보안 인증서를 설정합니다.  
@@ -57,6 +55,6 @@ SHA
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

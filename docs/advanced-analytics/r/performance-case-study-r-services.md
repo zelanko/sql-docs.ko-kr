@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services-결과 및 리소스에 대 한 성능 | Microsoft Docs
+title: SQL Server R Services-결과 및 리소스-SQL Server Machine Learning Services에 대 한 성능
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697501"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645472"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대 한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ SQL Server R Services 개발 팀에서이 사례 연구는 다양 한 최적화�
 3. 다양 한 수정 페이지 압축, 압축 행 칼럼 형식 데이터 저장소, 인덱싱 등 SQL Server 기능을 테스트 하려면 테이블의 복사본에 적용 되었습니다.
 4. 각 최적화가 적용 전후에 성능 측정 되었습니다.
 
-| 테이블 이름| 설명|
+| 테이블 이름| Description|
 |------|------|
 | *airline* | `rxDataStep`을 사용하여 원래 xdf 파일에서 변환된 데이터|                          |
 | *airlineWithIntCol*   | 문자열이 아닌 정수에서 변환된 *DayOfWeek*. *rowNum* 열도 추가합니다.|
@@ -62,7 +62,7 @@ SQL Server R Services 개발 팀에서이 사례 연구는 다양 한 최적화�
 
 **샘플 시간**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ metric time pct
 
 첫 번째 테스트는 압축 및 데이터의 크기를 줄이려면 열 형식 테이블의 사용을 비교 합니다.
 
-| 테이블 이름            | 행     | 예약됨   | data       | index_size | 사용 안 함  | 단축 비율(%)(예약됨) |
+| 테이블 이름            | 행     | 예약됨   | data       | index_size | 사용 되지 않는  | 단축 비율(%)(예약됨) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816KB | 2972160KB | 6128KB    | 528KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784KB  | 623744KB  | 1352KB    | 688KB  | 79%                 |
@@ -273,7 +273,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 테이블에서 학습 된 모델을 로드 하는 예측을 수행 하는 빠른 방법을 명확 하 게 합니다. 모델을 만들고 동일한 스크립트에서 모든 점수 매기기를 수행 하지 않는 것이 좋습니다.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>사례 연구: resume 일치 작업에 대 한 최적화
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>사례 연구: Resume-일치 하는 작업에 대 한 최적화
 
 따라서 도움말 데이터 과학자가 뛰어나고 만들기를 수행 하 여 Microsoft 데이터 과학자가 SQL Server에서 R 코드의 성능을 테스트 하려면 Ke Huang에서 다시 시작-일치 하는 모델 개발 된 엔터프라이즈급 솔루션입니다.
 
@@ -283,7 +283,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 - 메모리 내 테이블
 - Soft-NUMA
-- 관리
+- 리소스 관리자
 
 R 스크립트 실행에 대 한 소프트 NUMA의 영향을 평가 하는 데이터 과학 팀 20 개의 실제 코어를 사용 하 여 Azure 가상 머신에서 솔루션을 테스트 했습니다. 이러한 실제 코어에서 4 개의 소프트 NUMA 노드가 각 노드가 5 개 코어를 포함 되도록 자동으로 생성 되었습니다.
 
@@ -351,7 +351,7 @@ Resume-일치 하는 모델에 대 한 외부 스크립트 사용 하 여 과도
 
 + Resume-일치 하는 솔루션을 설명 하는 문서: [최적화 팁과 요령 SQL Server R Services에 대 한](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Resume-일치 하는 솔루션에 대 한 SQL 최적화에 사용 되는 스크립트: [GitHub 리포지토리](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 스크립트를 다시 시작-일치 하는 솔루션에 대 한 SQL 최적화 사용: [GitHub 리포지토리](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>Windows server 관리에 대해 알아보기
 
@@ -365,7 +365,7 @@ Resume-일치 하는 모델에 대 한 외부 스크립트 사용 하 여 과도
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server 최적화에 알아봅니다
 
-+ [인덱스 다시 구성 및 다시 작성](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [메모리 액세스에 최적화 된 테이블 소개](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 

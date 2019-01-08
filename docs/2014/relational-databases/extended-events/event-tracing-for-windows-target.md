@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355992"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
   ETW(Windows용 이벤트 추적)를 대상으로 사용하려면 먼저 ETW에 대한 실무 지식을 갖추고 있는 것이 좋습니다. ETW 추적은 확장 이벤트와 함께 사용되거나 확장 이벤트의 이벤트 소비자로 사용됩니다. 다음 외부 링크를 클릭하면 ETW에 대한 배경 지식을 제공하는 항목으로 연결됩니다.  
   
--   [Windows 이벤트](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 이벤트](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [ETW를 사용한 디버깅 및 성능 조정 개선](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [ETW를 사용한 디버깅 및 성능 조정 개선](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  ETW 대상을 여러 세션에 추가할 수 있지만 이는 단일 대상입니다. 한 이벤트가 여러 세션에서 발생하는 경우 해당 이벤트는 발생 항목당 한 번만 ETW 대상으로 전파됩니다. 확장 이벤트 엔진은 프로세스당 하나의 인스턴스로 제한됩니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48175163"
  ETW 대상은 Logman.exe와 같은 외부 ETW 컨트롤러를 제어하지 않습니다. ETW 추적을 생성하려면 ETW 대상으로 이벤트 세션을 만들어야 합니다. 자세한 내용은 [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)을 참조하세요.  
   
 > [!NOTE]  
->  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 명령 프롬프트에서 다음 명령을 실행할 수는 예를 들어: `logman stop XE_DEFAULT_ETW_SESSION -ets`합니다.  
+>  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 예를 들어 명령 프롬프트에서 다음 명령을 실행할 수 있습니다. `logman stop XE_DEFAULT_ETW_SESSION -ets`  
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48175163"
 |------------|--------------------|-----------------|  
 |default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
 |default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  
-|default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다. |확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
+|default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
 |default_etw_session_buffer_size_kb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 메모리 내 버퍼 크기(KB)입니다. 기본값은 128KB입니다.|  
 |retries|부호 없는 정수|이벤트가 삭제되기 전에 ETW 하위 시스템에 이벤트 게시를 재시도한 횟수입니다. 기본값은 0입니다.|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175163"
     > [!IMPORTANT]  
     >  첫 번째 세션이 시작되면 파일 경로를 변경할 수 없습니다.  
   
--   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
+-   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
  확장 이벤트 세션에 ETW 대상을 추가하려면 이벤트 세션을 만들거나 변경할 때 다음 문을 포함해야 합니다.  

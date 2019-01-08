@@ -14,12 +14,12 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 917e6a4b5e354b95207e9293879bdb9fb1effb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372695"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>중첩 FOR XML 쿼리로 XML 구체화
   다음 예에서는 `Production.Product` 테이블을 쿼리하여 특정 제품의 `ListPrice` 및 `StandardCost` 값을 검색합니다. 쿼리를 효과적으로 만들기 위해 두 가격이 모두 <`Price`> 요소에 반환되고 각 <`Price`> 요소에는 `PriceType` 특성이 포함됩니다.  
@@ -28,8 +28,8 @@ ms.locfileid: "48155033"
  다음은 XML의 예상 셰이프입니다.  
   
 ```  
-<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.Product" type="xsd:anyType" />  
 </xsd:schema>  
 <Production.Product xmlns="urn:schemas-microsoft-com:sql:SqlRowSet2" ProductID="520">  
@@ -86,7 +86,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- 앞의 예제에서는 합니다 `query()` 메서드는 `xml` 데이터 내부 FOR XML 쿼리에 의해 반환 된 XML 쿼리를 입력 하 고 예상된 결과 생성 합니다.  
+ 이전 예에서는 `query()` 데이터 형식의 `xml` 메서드를 사용하여 내부 FOR XML 쿼리에 의해 반환된 XML을 쿼리하고 예상된 결과를 생성합니다.  
   
  다음은 결과입니다.  
   
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [중첩 FOR XML 쿼리 사용](use-nested-for-xml-queries.md)  
   
   

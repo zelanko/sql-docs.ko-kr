@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204653"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591437"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>채우기 대화 상자(보고서 작성기 및 SSRS)
   **채우기** 탭에서 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **채우기 색**  
- 사각형의 채우기 색을 선택하려면 색 단추를 클릭합니다. 클릭는 **Expression***(fx)* RGB 색 또는에서 제공 되는 미리 정의 된 색 이름 중 하나에 대 한 16 진수 값일 수 있는 식을 편집 하려면 단추를 **식** 대화 상자. 미리 정의된 색 목록을 보려면 **항목** 창에서 **웹**을 선택합니다. **제목** 창에 나열된 색 이름을 식 텍스트 창에 입력할 수 있습니다. 색 이름을 입력할 때 등호(=) 또는 큰따옴표("")를 사용하지 마십시오.  
+ 사각형의 채우기 색을 선택하려면 색 단추를 클릭합니다. 식을 편집하려면 **식**_(fx)_ 단추를 클릭합니다. 식은 RGB 색을 나타내는 16진수 값이거나 **식** 대화 상자에 제공되는 미리 정의된 색 이름 중 하나일 수 있습니다. 미리 정의된 색 목록을 보려면 **항목** 창에서 **웹**을 선택합니다. **제목** 창에 나열된 색 이름을 식 텍스트 창에 입력할 수 있습니다. 색 이름을 입력할 때 등호(=) 또는 큰따옴표("")를 사용하지 마십시오.  
   
  **이미지 원본 선택**  
  이미지를 저장할 위치를 나타내어 보고서를 렌더링할 때 보고서 처리기에서 이미지를 표시할 수 있도록 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48204653"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

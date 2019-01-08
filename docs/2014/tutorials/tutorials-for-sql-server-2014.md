@@ -18,12 +18,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368065"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 많은 새로운 기술과 기능이 도입되었습니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "48194473"
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 서버를 사용하는 경우 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스 공급자가 설치되어 있을 것입니다. 자습서가 작동하려면 이러한 공급자에서 작동하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 예제 데이터베이스 또는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 버전 예제 데이터베이스에서 작동하는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 데이터 공급자가 있어야 합니다.  
   
--   자습서에서 사용할 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 예제를 다운로드하려면 CodePlex의 [SQL Server용 예제](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) 로 이동합니다.  
+-   자습서에서 사용할 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 예제를 다운로드하려면 CodePlex의 [SQL Server용 예제](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) 로 이동합니다.  
   
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [PowerPivot 및 Power View의 HelloWorldPicnic 샘플 모델용 이미지 파일](http://www.microsoft.com/download/details.aspx?id=26719)(영문)로 이동합니다.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [PowerPivot 및 Power View의 HelloWorldPicnic 샘플 모델용 이미지 파일](https://www.microsoft.com/download/details.aspx?id=26719)(영문)로 이동합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 기능은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
@@ -43,7 +43,7 @@ ms.locfileid: "48194473"
   
 -   [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 데이터베이스의 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 버전을 다운로드하려면 CodePlex의 [SQL Server 2012용 Adventure Works](http://msftdbprodsamples.codeplex.com/releases/view/55330) (영문)로 이동합니다.  
   
--   [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 자습서 목록을 보려면 MSDN Library의 [자습서](http://msdn.microsoft.com/library/ms167593.aspx) 로 이동합니다.  
+-   [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 자습서 목록을 보려면 MSDN Library의 [자습서](https://msdn.microsoft.com/library/ms167593.aspx) 로 이동합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기술에 대한 자습서가 제공됩니다.  

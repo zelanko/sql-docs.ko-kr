@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216674"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375035"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP에 대 한 지원 되는 기능  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능  
  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 메모리 최적화 파일 그룹을 비롯해서 메모리 최적화 개체가 포함된 데이터베이스에서 지원됩니다.  
   
  지원되는 데이터 형식에 대한 자세한 내용은 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)을 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "48216674"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 참조하세요. 자세한 내용은 [메모리 내 OLTP에 대한 SQL Server Management Studio 지원](sql-server-management-studio-support-for-in-memory-oltp.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. 자세한 내용은 [SQL Server PowerShell 개요](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. 자세한 내용은 [SQL Server PowerShell 개요](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)를 참조하세요.  
   
 -   bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48216674"
   
 -   메모리 최적화 데이터 파일 그룹에서 메모리 내 OLTP 개체를 저장하고 RTO(복구 시간 목표)를 줄이기 위한 컨테이너 여러 개  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 블록 체크섬을 계산 하 고 확인 합니다.  
+-   체크섬을 계산하고 유효성을 검사하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 블록  
   
 -   새 SNAPSHOT 테이블 힌트. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "48216674"
   
 -   제한 사항이 있는 Service Broker. 고유하게 컴파일된 저장 프로시저에서 큐에 액세스할 수 없습니다. 메모리 최적화 테이블에 액세스하는 트랜잭션에서 원격 데이터베이스에 있는 큐에 액세스할 수 없습니다.  
   
--   장애 조치(failover) 클러스터링: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 기능을 사용하여 FCI(장애 조치(failover) 클러스터 인스턴스)라고 부르는 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+-   장애 조치(Failover) 클러스터링: 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치 클러스터 인스턴스는 서버 인스턴스 수준에 장애 조치 클러스터에서 중복성을 통해 로컬 고가용성을 제공 하는 Windows Server 장애 조치 클러스터링 (WSFC) 기능 활용 인스턴스 (FCI)입니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   AlwaysOn과 통합: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 AlwaysOn을 비롯하여 서버 또는 데이터베이스의 고가용성 유지를 위한 여러 가지 옵션을 제공합니다. 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.  
   
 -   로그 전달: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 주 서버 인스턴스의 주 데이터베이스에서 별도의 보조 서버 인스턴스에 있는 하나 이상의 보조 데이터베이스로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 자세한 내용은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
--   구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.  
+-   구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.  
   
 -   리소스 관리자: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 자세한 내용은 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 및 [Resource Governor](../resource-governor/resource-governor.md)를 참조하세요.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48216674"
 |메모리 최적화 테이블에 대한 데이터 압축|데이터 압축 기능을 사용하여 데이터베이스 내의 데이터를 압축하고 데이터베이스의 크기를 줄일 수 있습니다. 자세한 내용은 [Data Compression](../data-compression/data-compression.md)을 참조하세요.|  
 |메모리 최적화 테이블 및 HASH 인덱스의 분할|분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 자세한 내용은 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)을 참조하세요.|  
 |데이터베이스의 메모리 최적화 데이터 파일 그룹에 대한 TDE(투명한 데이터 암호화)|TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../security/encryption/transparent-data-encryption.md)를 참조하세요.<br /><br /> TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. TDE가 사용하도록 설정된 경우에는 메모리 내 OLTP 로그 레코드가 암호화됩니다. 영구 테이블에 대한 검사점 파일은 데이터베이스에서 TDE가 사용하도록 설정된 경우에도 암호화되지 않습니다.|  
-|복제|구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 탭 또는 뷰와 호환되지 않습니다. 메모리 최적화 파일 그룹이 있는 경우 sync_mode=’database snapshot’을 사용한 복제는 지원되지 않습니다. 자세한 내용은 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|  
+|복제|구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제 이외의 복제 구성은 메모리 최적화 테이블을 참조하는 탭 또는 뷰와 호환되지 않습니다. Sync_mode를 사용 하 여 복제 = 'database snapshot' 메모리 최적화 파일 그룹이 있는 경우 지원 되지 않습니다. 자세한 내용은 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|  
 |MARS(Multiple Active Result Sets)|MARS(Multiple Active Result Set)는 메모리 최적화 테이블에 지원되지 않습니다. 이 오류는 연결된 서버 사용을 나타낼 수도 있습니다. 연결된 서버는 MARS를 사용할 수 있습니다. 연결된 서버는 메모리 최적화 테이블에 지원되지 않습니다. 그 대신 메모리 최적화 테이블을 호스팅하는 서버와 데이터베이스에 직접 연결합니다.|  
 |미러링|데이터베이스 미러링은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
 |로그를 다시 작성|연결을 통해 로그를 다시 작성 하거나 ALTER DATABASE 데이터베이스는 MEMORY_OPTIMIZED_DATA 파일 그룹에 대해 지원 되지 않습니다.|  

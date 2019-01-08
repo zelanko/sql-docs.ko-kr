@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376785"
 ---
 # <a name="data-flow-taps"></a>데이터 흐름 탭
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 런타임에 패키지의 데이터 흐름 경로에 데이터 탭을 추가 하 고 외부 파일에 데이터 탭의 출력에 전달할 수 있는 새 기능이 도입 되었습니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]에는 런타임에 패키지의 데이터 흐름 경로에서 데이터 탭을 추가하고, 데이터 탭의 출력을 외부 파일에 전달할 수 있는 새로운 기능이 도입되었습니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
   
 1.  [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) 저장 프로시저를 사용하여 패키지의 실행 인스턴스를 만듭니다.  
   
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>모든 데이터 탭 나열  
- catalog.execution_data_taps 뷰를 사용하여 모든 데이터 탭을 나열할 수도 있습니다. 다음 예에서는 사양 실행 인스턴스(ID: 54)의 데이터 탭을 추출합니다.  
+ catalog.execution_data_taps 뷰를 사용하여 모든 데이터 탭을 나열할 수도 있습니다. 다음 예에서는 사양 실행 인스턴스(ID: 54)에 대한 데이터 탭을 추출합니다.  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
@@ -78,7 +78,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  자세한 로깅 수준을 사용하도록 설정하고 데이터 탭을 추가하면 데이터 통합 솔루션에서 수행되는 I/O 작업이 증가합니다. 따라서 문제 해결을 위해서만 데이터 탭을 추가하는 것이 좋습니다.  
   
 ## <a name="video"></a>비디오  
- 이 [TechNet 비디오](http://technet.microsoft.com/sqlserver/dn600163) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
+ 이 [TechNet 비디오](https://technet.microsoft.com/sqlserver/dn600163) 에서는 프로그래밍 방식으로 패키지를 디버깅하고 런타임에 일부 결과를 캡처하는 데 도움이 되도록 SQL Server 2012 SSISDB 카탈로그에 데이터 탭을 추가/사용하는 방법을 보여 줍니다. 이러한 데이터 탭을 나열/제거하는 방법과 함께 SSIS 패키지의 데이터 탭을 사용하기 위한 최선의 구현 방법에 대해서도 설명합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [데이터 흐름 디버깅](troubleshooting/debugging-data-flow.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Always On 가용성 그룹: 상호 운용성(SQL Server) | Microsoft Docs'
+title: 'Always On 가용성 그룹: 상호 운용성 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 602762df164e22ebf49285e89a3f64d24b5387a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368005"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 가용성 그룹: 상호 운용성(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 다른 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능과의 상호 운용성에 대해 설명합니다.  
@@ -58,19 +58,19 @@ ms.locfileid: "48209193"
   
 -   **블로그:**  
   
-     [마이그레이션 가이드: 이전 클러스터링 및 미러링 배포에서 SQL Server 2012 장애 조치(Failover) 클러스터링 및 가용성 그룹으로 마이그레이션](http://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [마이그레이션 가이드: 이전 클러스터링 및 미러링 배포에서 장애 조치 클러스터링 및 가용성 그룹 SQL Server 2012로 마이그레이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
-     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **백서:**  
   
-     [마이그레이션 가이드: AlwaysOn 가용성 그룹으로 마이그레이션 결합 하는 이전 배포에서 데이터베이스 미러링 및 로그 전달](http://msdn.microsoft.com/library/jj635217)  
+     [마이그레이션 가이드: 마이그레이션 AlwaysOn 가용성 그룹으로 결합 하는 이전 배포에서 데이터베이스 미러링 및 로그 전달](https://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   

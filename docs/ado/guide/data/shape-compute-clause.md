@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797881"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201792"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 셰이프 COMPUTE 절 생성 부모 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어진 **레코드 집합**; 내용이 새 장에서 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **Recordset** 이전 가공 **레코드 집합**; 및 자식에서 모든 열 **레코드 집합** 에 나열 된 절에서 선택 사항입니다.  
@@ -65,7 +65,7 @@ SHAPE child-command [AS] child-alias
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  방식에 관계 없이 부모 **Recordset** 형식이 장 열을 자식으로 연결 하는 데 사용 되는 계산을 사용 하 여, 추가 사용 하 여 포함 됩니다 **레코드 집합**합니다. 원한다 면 부모 **레코드 집합** 자식 행에 대해 집계 (SUM, MIN, MAX 및 등)를 포함 하는 열이 포함 될 수 있습니다. 부모와 자식 **레코드 집합** 행이 행에서 식을 포함 하는 열이 포함 될 합니다 **레코드 집합**뿐 아니라 새로운과 처음에 있는 열에서 빈 합니다.  

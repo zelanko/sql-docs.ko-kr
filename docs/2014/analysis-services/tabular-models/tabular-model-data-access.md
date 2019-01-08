@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364105"
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
   Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -27,7 +27,7 @@ ms.locfileid: "50148408"
  다음 Microsoft 클라이언트 애플리케이션은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스에 대한 네이티브 연결을 지원합니다.  
   
 ### <a name="excel"></a>내보내기  
- Excel의 데이터 시각화 및 분석 기능을 사용하여 Excel에서 테이블 형식 model 데이터베이스에 연결하여 데이터를 사용할 수 있습니다. 데이터에 액세스하려면 Analysis Services 데이터 연결을 정의하고, 테이블 형식 서버 모드로 실행되는 서버를 지정한 다음, 사용할 데이터베이스를 선택합니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
+ Excel의 데이터 시각화 및 분석 기능을 사용하여 Excel에서 테이블 형식 model 데이터베이스에 연결하여 데이터를 사용할 수 있습니다. 데이터에 액세스하려면 Analysis Services 데이터 연결을 정의하고, 테이블 형식 서버 모드로 실행되는 서버를 지정한 다음, 사용할 데이터베이스를 선택합니다. 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](https://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
  Excel은 또한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 테이블 형식 모델을 찾아보는 데 권장되는 애플리케이션입니다. 이 도구에는 Excel의 새 인스턴스를 시작하고, Excel 통합 문서를 만들고, 통합 문서에서 모델 작업 영역 데이터베이스로의 데이터 연결을 여는 **Excel에서 분석** 옵션이 포함되어 있습니다. Excel에서 테이블 형식 모델 데이터를 찾아보는 경우 Excel은 Excel 피벗 테이블 클라이언트를 사용하여 모델에 대한 쿼리를 실행한다는 사실을 기억하십시오. 따라서 Excel 통합 문서 내에서 작업할 경우 DAX 쿼리가 아니라 MDX 쿼리가 작업 영역 데이터베이스로 전송됩니다. SQL 프로파일러 또는 기타 모니터링 도구를 사용하여 쿼리를 모니터링하는 경우 프로파일러 추적에 DAX가 아니라 MDX가 표시됩니다. Excel에서 분석 기능에 대한 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   

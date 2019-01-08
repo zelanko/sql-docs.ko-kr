@@ -1,5 +1,5 @@
 ---
-title: 예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법 | Microsoft Docs
+title: 예측 및 기계 학습 모델-SQL Server Machine Learning Services를 사용 하 여 예측을 생성 합니다.
 description: 기본 예측 점수 매기기 및 R 및 SQL Server Machine Learning에서 Pythin 예측에 대 한 실시간 점수 매기기 또는 예측 T-SQL rxPredict, 또는 sp_rxPredict를 사용 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712475"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432506"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "46712475"
 | 방법           | 인터페이스         | 라이브러리 요구 사항 | 처리 속도 |
 |-----------------------|-------------------|----------------------|----------------------|
 | 확장성 프레임워크 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
-| [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
+| [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR의 경우 MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
 | [네이티브 점수 매기기 c + + 확장](../sql-native-scoring.md) | [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
 
 처리 속도 출력의 물질 하지 차별화 기능입니다. 동일한 기능 및 입력을 가정 하지 점수가 매겨진된 출력 해야 사용 하는 방법에 따라 다릅니다.
@@ -36,7 +36,7 @@ ms.locfileid: "46712475"
 
 CLR 및 c + + 확장의 중요 한 이유는 자체 데이터베이스 엔진에 근접 합니다. 데이터베이스 엔진의 기본 언어는 c + +, 더 적은 종속성을 사용 하 여 실행 하는 c + +로 작성 된 확장을 의미 합니다. 반면 CLR 확장.NET Core에 따라 달라 집니다. 
 
-예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux의 Azure. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
+예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux의 Azure입니다. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
 
 ## <a name="scoring-overview"></a>점수 매기기 개요
 
@@ -99,7 +99,7 @@ R 코드에서 호출 된 [rxWriteObject](https://docs.microsoft.com/machine-lea
 사용 중인 경우는 [독립 실행형 서버](r-server-standalone.md) 또는 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), 저장된 프로시저 및 예측을 신속 하 게 생성 하기 위한 T-SQL 함수 외에 다른 옵션이 있습니다. 독립 실행형 서버 및 Machine Learning Server 지원의 개념을 *웹 서비스* 코드 배포에 대 한 합니다. 번들로 R 또는 Python 미리 학습 된 모델을 웹 서비스로 새 데이터 입력을 평가 하려면 런타임에 호출 합니다. 자세한 내용은 다음 문서를 참조하세요.
 
 + [Machine Learning Server에 웹 서비스는 무엇입니까?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [운영 화 란?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [운영 화 란?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Python 모델 azureml 모델-관리 sdk를 사용 하 여 웹 서비스로 배포](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [R 코드 블록 또는 실시간 모델을 새 웹 서비스로 게시](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R에 대 한 mrsdeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

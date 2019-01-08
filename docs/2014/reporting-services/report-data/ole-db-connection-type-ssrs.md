@@ -11,12 +11,12 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c06203ef29acacdc254e6518313e1a93b2aefcf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1cb3c7e8f9be785a93b29e453b5dfc727d747569
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369575"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 연결 형식(SSRS)
   OLE DB 데이터 공급자의 데이터를 포함하려면 OLE DB 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 데이터 처리 확장 프로그램을 기반으로 합니다.  
@@ -63,13 +63,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  원하는 데이터를 성공적으로 검색하려면 데이터 공급자가 지원하는 쿼리 구문을 제공해야 합니다. 매개 변수 지원은 데이터 공급자에 따라 다릅니다. 자세한 내용은 선택한 데이터 공급자와 관련된 항목을 참조하십시오. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
--   [Analysis Services OLE DB Provider &#40;Analysis Services-다차원 데이터&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
--   [.NET Framework Data Provider for Oracle 사용(Using the .NET Framework Data Provider for Oracle)](http://go.microsoft.com/fwlink/?LinkId=112314)  
+-   [.NET Framework Data Provider for Oracle 사용(Using the .NET Framework Data Provider for Oracle)](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
- 특정 OLE DB 데이터 공급자에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ 특정 OLE DB 데이터 공급자에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
   
   
@@ -99,7 +99,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
  

@@ -1,5 +1,5 @@
 ---
-title: SQL server에서 machine learning 위한 리소스 거 버 넌 스 | Microsoft Docs
+title: R 및 Python 스크립트 실행-SQL Server Machine Learning을 위한 리소스 거 버 넌 스
 description: SQL Server 데이터베이스 엔진 인스턴스에서 R 및 Python 워크 로드에 대 한 RAM 메모리, CPU 및 IO를 할당 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76b6af9ccf6fc3c5a54f4cb8be3fe7068eb578b5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 72883c8e5bc42ca7f149d17cff530bcf639bdf25
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100564"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431386"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL server에서 machine learning 위한 리소스 거 버 넌 스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b38aaceb3f40051138e124286e51922f3e8f218a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8d78614f8ba47f011c26cc8589c87e6704f8ea33
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374735"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 세트를 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 세트 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -42,15 +42,15 @@ ms.locfileid: "48182193"
   
  자세한 내용 및 예제는 다음 항목을 참조하십시오.  
   
--   [그룹 식 예 &#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [필터 수식 예 &#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)  
   
 -   [Reporting Services&#40;SSRS&#41; 자습서](../reporting-services-tutorials-ssrs.md)  
   
--   [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,7 +60,7 @@ ms.locfileid: "48182193"
   
  가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 세트 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
- 외부 데이터 원본에서 데이터를 검색한 후 데이터 세트, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
+ 외부 데이터 원본에서 데이터를 검색한 후 데이터 세트, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
  각 필터에 *필터 수식*을 지정합니다. 필터 수식은 필터링할 데이터를 지정하는 데이터 세트 필드나 식, 연산자 및 비교할 값을 포함합니다. 필터 조건과 일치하는 데이터 값만 항목을 처리할 때 포함됩니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48182193"
   
  그룹 이름은 식 범위를 나타냅니다. 집계를 계산하고, 데이터를 계층적으로 구성하고 드릴다운 보고서에서 자식 노드 보기와 부모 노드 보기 간에 전환하고, 여러 데이터 영역에 있는 동일한 데이터에 대한 다양한 보기를 표시하고, 테이블, 행렬, 차트, 계기 또는 지도에 요약 데이터를 시각화하기 위해 그룹의 이름을 범위로 지정할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
- 여러 데이터 세트 필드를 그룹화하려면 각 필드를 그룹 식 세트에 추가합니다. 그룹 식을 직접 작성할 수도 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]합니다. 예를 들어 값의 범위로 그룹화하거나 보고서 매개 변수를 사용하여 그룹화함으로써 데이터 영역의 데이터를 그룹화하는 방법을 사용자가 직접 선택하도록 할 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
+ 여러 데이터 세트 필드를 그룹화하려면 각 필드를 그룹 식 세트에 추가합니다. 또한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 그룹 식을 직접 작성할 수도 있습니다. 예를 들어 값의 범위로 그룹화하거나 보고서 매개 변수를 사용하여 그룹화함으로써 데이터 영역의 데이터를 그룹화하는 방법을 사용자가 직접 선택하도록 할 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
  보고서 프레젠테이션을 위해 각 그룹의 전과 후 또는 그룹에 있는 각 인스턴스의 전과 후에 페이지 나누기를 추가하여 각 페이지에서 데이터의 양을 줄이고 보고서 렌더링 성능을 보다 원활하게 관리할 수 있습니다. 자세한 내용은 [페이지 나누기 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "48182193"
 ### <a name="defining-group-variables"></a>그룹 변수 정의  
  그룹을 정의할 때 그룹으로 범위가 한정되고 중첩 그룹에서 액세스할 수 있는 식에서 사용하기 위한 그룹 변수를 만들 수 있습니다. 그룹 변수는 그룹 인스턴스당 한 번씩 계산되며 자식 그룹의 식에서 액세스할 수 있습니다. 예를 들어 영역과 부분 영역으로 그룹화된 데이터의 경우 각 영역에 대한 세금을 계산하고 해당 세금을 부분 영역 그룹의 계산에 사용할 수 있습니다.  
   
- 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) 하 고 [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)합니다.  
+ 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ### <a name="groups-and-scope-in-data-regions"></a>데이터 영역의 그룹 및 범위  
- 동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
+ 동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
  테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
@@ -112,12 +112,12 @@ ms.locfileid: "48182193"
   
  동일한 보고서에서 세 가지 정렬 유형을 모두 사용할 수 있습니다. 기본적으로 정렬 순서는 데이터 세트 쿼리에서 반환되는 데이터의 순서에 따라 결정됩니다. 정렬 식은 데이터 영역과 데이터 영역 그룹에 적용됩니다. 대화형 정렬은 정렬 식 다음에 적용됩니다.  
   
- 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 집계 함수 First, Last 및 Previous에 대한 반환 값은 정렬 순서의 영향을 받습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
+ 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 집계 함수 첫 번째, 마지막으로, 및 이전 합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 세트 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 세트 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  
   
- 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 다음 예를 들어 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 내림차순 SalesOrders 테이블에서 Sales 및 Region 매출액으로 열을 정렬 하는 쿼리: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`합니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "ORDER BY로 행 정렬"을 참조하십시오.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우에는 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리인 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`는 SalesOrders 테이블에서 Sales 및 Region 열을 Sales 기준의 내림차순으로 정렬합니다. 자세한 내용은 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335)의 "ORDER BY로 행 정렬"을 참조하십시오.  
   
 > [!NOTE]  
 >  쿼리에서 정렬 순서를 지정할 수 없는 데이터 원본도 있습니다.  
@@ -172,43 +172,43 @@ FROM Production.Product
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- [보고서를 스크롤할 때 머리글 계속 표시 &#40;보고서 작성기 및 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [보고서를 스크롤할 때 머리글 계속 표시&#40;보고서 작성기 및 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [테이블 또는 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [데이터 영역에 대 한 데이터 없음 메시지 설정 &#40;보고서 작성기 및 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [추가 또는 데이터 영역의 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [추가 하거나 차트에서 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [차트에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [그룹 또는 테이블 릭 스 데이터 영역에 합계 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> 섹션 내용  
- [그룹 식 예 &#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [필터 수식 예 &#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> 관련 단원  
- [그룹 이해 &#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [보고서 및 그룹 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [차트에 데이터 범위가 여러 개 있는 계열 표시 &#40;보고서 작성기 및 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [차트에 데이터 범위가 여러 개 있는 계열 표시&#40;보고서 작성기 및 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -216,7 +216,7 @@ FROM Production.Product
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [계기 &#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [표시기&#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

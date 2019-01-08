@@ -17,12 +17,12 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7c0672fedcf39a2787f7229a8e359d6042d99088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276e99716b310afd2fbcd9b5bf2033e4b4738165
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371115"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   웹 서버 웹 서비스에서는 SOAP(Simple Object Access Protocol) 메시징을 사용하여 네트워크를 통해 텍스트 기반 명령을 보냅니다. 이러한 명령은 HTTP를 사용하여 World Wide Web을 통해 전송되는 XML 텍스트 형식입니다. SOAP을 통신 프로토콜로 사용하면 보고서 서버 웹 서비스에서는 폭넓게 활용되는 개방형 인프라를 사용하여 응용 프로그램 및 구성 요소와 보고서 서버 간에 데이터 교환이 가능합니다. SOAP 표준은 www.w3.org/TR/SOAP에 정의되어 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48166743"
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -54,7 +54,7 @@ public void DeleteItem(string item);
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  
@@ -63,7 +63,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>관련 항목  
  [SOAP API 액세스](accessing-the-soap-api.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services 보고서 서버](../reporting-services-report-server.md)   
  [보고서 서버 웹 서비스](report-server-web-service.md)  
   

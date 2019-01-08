@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662131"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588977"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLSetCursorName** 활성 문을 사용 하 여 커서 이름을 연결 합니다. 응용 프로그램을 호출 하지 않습니다 **SQLSetCursorName**, 드라이버는 SQL 문 처리에 대 한 필요에 따라 커서 이름을 생성 합니다.  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
 ## <a name="comments"></a>주석  
- 커서 이름은 현재 위치 업데이트에만 사용 됩니다 및 delete 문 (예를 들어 **업데이트할** *테이블 이름* ... **WHERE CURRENT OF** *커서 이름을*). 자세한 내용은 [배치 업데이트 및 삭제 문을](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않습니다 **SQLSetCursorName** 드라이버 SQL_CUR 문자로 시작 하 고 길이가 18 자를 초과 하지 않는지 여부를 지정 하는 이름을 생성 쿼리 문 실행 커서 이름을 정의 합니다.  
+ 커서 이름은 현재 위치 업데이트에만 사용 됩니다 및 delete 문 (예를 들어 **업데이트할** _테이블 이름_ ... **WHERE CURRENT OF** _커서 이름을_). 자세한 내용은 [배치 업데이트 및 삭제 문을](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않습니다 **SQLSetCursorName** 드라이버 SQL_CUR 문자로 시작 하 고 길이가 18 자를 초과 하지 않는지 여부를 지정 하는 이름을 생성 쿼리 문 실행 커서 이름을 정의 합니다.  
   
  연결 내에서 모든 커서 이름은 고유 해야 합니다. 커서 이름의 최대 길이 드라이버에 의해 정의 됩니다. 최대 상호 운용성을 위해 응용 프로그램 커서 이름은 개 이하의 18 자로 제한 하는 좋습니다. ODBC 3에서 *.x*, 커서 이름을 따옴표 붙은 식별자는 대/소문자 구분 방식으로 처리 됩니다 및 문자는 SQL의 구문과 허용 하지는 공백 같은 특수, 취급 하는 또는 예약 된 키워드를 포함할 수 있습니다. 커서 이름을 대/소문자 구분 방식으로 취급 되어야, 따옴표 붙은 식별자로 전달 되어야 합니다.  
   

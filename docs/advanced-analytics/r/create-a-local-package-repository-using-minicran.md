@@ -1,5 +1,6 @@
 ---
-title: MiniCRAN (SQL Server Machine Learning)를 사용 하 여 로컬 R 패키지 리포지토리 만들기 | Microsoft Docs
+title: MiniCRAN-SQL Server Machine Learning Services를 사용 하 여 로컬 R 패키지 리포지토리 만들기
+description: MiniCran을 사용 하 여 감지, 어셈블 및 R 패키지 종속성을 하나의 통합 패키지로 설치 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699401"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431756"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN을 사용 하 여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ ms.locfileid: "51699401"
 
 패키지 리포지토리는 이러한 시나리오에서 유용 합니다.
 
-- **보안**: 다운로드 및 CRAN 또는 미러 사이트 중 하나에서 부과 하는 새로운 R 패키지를 설치 하는 데 많은 R 사용자가 익숙한 합니다. 그러나 보안상의 이유로, 실행 하는 프로덕션 서버 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 일반적으로 인터넷에 연결 되어 있지 않습니다.
+- **보안**: 많은 R 사용자가 다운로드 및 CRAN 또는 미러 사이트 중 하나에서 부과 하는 새로운 R 패키지를 설치 하는 데 익숙한 합니다. 그러나 보안상의 이유로, 실행 하는 프로덕션 서버 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 일반적으로 인터넷에 연결 되어 있지 않습니다.
 
-- **오프 라인 설치 쉽게**: 오프 라인 서버에 패키지를 설치 하려면 모든 패키지 종속성에도 다운로드에 miniCRAN을 사용 하 여 쉽게 올바른 형식으로 모든 종속성을 가져옵니다.
+- **오프 라인 설치 쉽게**: 오프 라인 서버에 패키지를 설치 하는 모든 패키지 종속 파일을 다운로드할 수도, miniCRAN을 사용 하 여 더 쉽게 종속성을 가져오려면 모든 올바른 형식이 필요 합니다.
 
     MiniCRAN을 사용 하 여 방지할 수 패키지를 사용 하 여 설치를 준비 하는 경우 패키지 종속성 오류를 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 문입니다.
 
-- **향상 된 버전 관리**: 다중 사용자 환경에서는 제한 되지 않은 서버에서 여러 패키지 버전 설치를 방지 하는 좋은 이유입니다. 로컬 리포지토리를 사용 하 여 프로그램 분석가가 사용에 대 한 일관 된 패키지 집합을 제공 합니다. 
+- **향상 된 버전 관리**: 다중 사용자 환경에서 제한 되지 않은 서버에서 여러 패키지 버전 설치를 방지 하려면 적절 한 이유가 있습니다. 로컬 리포지토리를 사용 하 여 프로그램 분석가가 사용에 대 한 일관 된 패키지 집합을 제공 합니다. 
 
 > [!TIP]
-> 또한 Azure Machine Learning에서 사용할 패키지를 준비 하려면 miniCRAN를 사용할 수 있습니다. 자세한 내용은이 블로그를 참조 하세요. [miniCRAN Michele Usuelli 하 여 Azure 기계 학습에서 사용 하 여](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> 또한 Azure Machine Learning에서 사용할 패키지를 준비 하려면 miniCRAN를 사용할 수 있습니다. 자세한 내용은이 블로그를 참조 하세요. [MiniCRAN을 사용 하 여 Michele Usuelli 하 여 Azure 기계 학습에서](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>MiniCRAN 설치
 
@@ -99,9 +100,9 @@ local_repo <- "C:/mylocalrepo"
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   이 정보를 통해 miniCRAN 패키지는 패키지를 복사 해야 하는 폴더 구조를 만듭니다는 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 나중입니다.
+   이 정보를 miniCRAN 패키지는 패키지를 복사 해야 하는 폴더 구조를 만들기는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 나중입니다.
 
-이 시점에 필요한 패키지가 포함 된 폴더가 있어야 하 고 필요 했습니다 추가 패키지 합니다. 경로이 예제와 유사 해야 합니다.: C:\mylocalrepo\bin\windows\contrib\3.3 하며 압축 된 패키지의 컬렉션을 포함 해야 합니다. 모든 파일을 바꾸거나 패키지의 압축을 풉니다 수행 합니다.
+이 시점에 필요한 패키지가 포함 된 폴더가 있어야 하 고 필요 했습니다 추가 패키지 합니다. 경로이 예와 비슷해야 합니다. C:\mylocalrepo\bin\windows\contrib\3.3 하며 압축 된 패키지의 컬렉션을 포함 해야 합니다. 모든 파일을 바꾸거나 패키지의 압축을 풉니다 수행 합니다.
 
 필요에 따라 로컬 miniCRAN 리포지토리에 포함 된 패키지를 나열 하려면 다음 코드를 실행 합니다.
 

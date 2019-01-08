@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354009"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
   이 항목에서는 Analysis Services의 다 대 다 차원에 대해 설명하고 이러한 차원을 사용하는 경우와 만드는 방법도 살펴봅니다.  
@@ -175,21 +175,21 @@ ms.locfileid: "48091879"
   
 3.  모델을 변경한 후 배포하고 다시 연결하는 작업을 항상 잊지 말고 수행합니다. Excel에서 피벗 테이블 분석 리본의 새로 고침 단추를 사용합니다.  
   
-4.  연결된 측정값 그룹을 여러 다 대 다 관계에서 사용하지 마십시오. 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용하지 마십시오. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
+4.  연결된 측정값 그룹을 여러 다 대 다 관계에서 사용하지 마십시오. 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용하지 마십시오. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  개념을 완전히 이해하는 데 유용한 추가 정보를 얻으려면 다음 링크를 사용하십시오.  
   
- [Analysis Services의 다 대 다 차원 정의](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services의 다 대 다 차원 정의](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [다 대 다 혁명 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [다 대 다 혁명 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [자습서: SQL Server Analysis Services의 다 대 다 차원 예제](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [자습서: SQL Server Analysis Services 다 대 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 다차원 모델링 자습서에 대 한 샘플 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
+ [Analysis Services 프로젝트 & #40; 배포 SSDT & #41;](deploy-analysis-services-projects-ssdt.md)   
  [다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)  
   
   

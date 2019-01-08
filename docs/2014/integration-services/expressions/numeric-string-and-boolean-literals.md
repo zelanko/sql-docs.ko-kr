@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -18,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198843"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363905"
 ---
 # <a name="literals-ssis"></a>리터럴(SSIS)
   식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식 계산기는 정수, 10진수 및 부동 소수점 상수와 같은 다양한 숫자 리터럴을 지원합니다. 또한 식 계산기의 값 처리 방법을 지정하는 long 및 float 접미사와 숫자 리터럴의 과학적 표기법을 지원합니다.  
@@ -55,14 +54,14 @@ ms.locfileid: "48198843"
   
 |정규식|Description|  
 |------------------------|-----------------|  
-|{D}+{IS}|한 자릿수 이상의 정수 숫자 리터럴(D) 및 선택적인 Long 및/또는 부호 없는 접미사(IS).  예: 457, 785u, 986L, 7945ul|  
-|{D}+{E}{FS}|한 자릿수 이상의 비정수 숫자 리터럴(D), 과학적 표기법 및 Long 또는 float 접미사.  예: 4E8l, 13e-2f, 5E+L|  
-|{D}*"."{D}+{E}?{FS}|소수 자릿수가 있는 비정수 숫자 리터럴, 한 자릿수 이상의 소수 부분, 선택적 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 6.45E3f, .89E-2l, 1.05E+7F|  
-|{D}+"."{D}*{E}?{FS}|한 자릿수 이상의 유효 자릿수가 있는 비정수 숫자 리터럴(D), 소수 자릿수, 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 1.E-4f, 4.6E6L, 8.365E+2f|  
+|{D}+{IS}|한 자릿수 이상의 정수 숫자 리터럴(D) 및 선택적인 Long 및/또는 부호 없는 접미사(IS).  예: 457, 785u, 986L, 7945ul입니다.|  
+|{D}+{E}{FS}|한 자릿수 이상의 비정수 숫자 리터럴(D), 과학적 표기법 및 Long 또는 float 접미사.  예: 4E8l, 13e-2f, 5E+L입니다.|  
+|{D}*"."{D}+{E}?{FS}|소수 자릿수가 있는 비정수 숫자 리터럴, 한 자릿수 이상의 소수 부분, 선택적 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 6.45E3f, .89E-2l, 1.05E+7F입니다.|  
+|{D}+"."{D}*{E}?{FS}|한 자릿수 이상의 유효 자릿수가 있는 비정수 숫자 리터럴(D), 소수 자릿수, 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 1.E-4f, 4.6E6L, 8.365E+2f입니다.|  
 |{D}*.{D}+|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 소수 자릿수와 한 자릿수 이상의 소수 부분(D)이 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: .9, 5.8, 0.346|  
-|{D}+.{D}*|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 한 자릿수 이상의 유효 자릿수(D)와 소수 자릿수가 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: 6., 0.2, 8.0|  
+|{D}+.{D}*|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 한 자릿수 이상의 유효 자릿수(D)와 소수 자릿수가 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: 6., 0.2, 8.0입니다.|  
 |#{D}+|계보 식별자. 파운드(#) 문자와 한 자릿수(D) 이상으로 구성됩니다. 예: #123|  
-|0[xX]{H}+{uU}|16진수 형식의 숫자 리터럴. 0, 대문자 또는 소문자 x, 하나 이상의 대문자 H, 선택적으로 부호 없는 접미사가 포함됩니다. 예: 0xFF0A, 0X000010000U|  
+|0[xX]{H}+{uU}|16진수 형식의 숫자 리터럴. 0, 대문자 또는 소문자 x, 하나 이상의 대문자 H, 선택적으로 부호 없는 접미사가 포함됩니다. 예: 0xFF0A, 0X000010000U입니다.|  
   
  식 계산기에 사용되는 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
@@ -118,6 +117,6 @@ ms.locfileid: "48198843"
 >  식에서 부울 리터럴은 공백으로 구분해야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=217683)  
   
   

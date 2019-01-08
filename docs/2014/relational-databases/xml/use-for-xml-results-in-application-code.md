@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368675"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "48206073"
  이 항목에서는 이러한 접근 방식을 보여 주는 예를 제공합니다.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>ADO 및 XML 데이터 아일랜드로 FOR XML 데이터 검색  
- ADO `Stream` 개체나 COM을 지 원하는 다른 개체 `IStream` 인터페이스를 같은 ASP Active Server Pages () `Request` 및 `Response` 개체에서 FOR XML 쿼리를 사용 하 여 작업할 때 결과 포함 하는 데 사용 수 있습니다.  
+ ADO `Stream` 개체나 ASP(Active Server Pages) `IStream` 및 `Request` 개체와 같이 COM `Response` 인터페이스를 지원하는 다른 개체를 사용하여 FOR XML 쿼리를 사용할 때 결과를 포함시킬 수 있습니다.  
   
- 예를 들어 다음 ASP 코드는 쿼리 결과 보여 줍니다는 `xml` 데이터 형식의 열인 Demographics AdventureWorks 샘플 데이터베이스의 Sales.Store 테이블에서. 특히 이 쿼리는 이 열의 항목 값에서 CustomerID가 3인 행을 검색합니다.  
+ 예를 들어 다음 ASP 코드에서는 AdventureWorks 예제 데이터베이스의 Sales.Store 테이블에서 `xml` 데이터 형식의 열인 Demographics를 쿼리한 결과를 보여 줍니다. 특히 이 쿼리는 이 열의 항목 값에서 CustomerID가 3인 행을 검색합니다.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -163,13 +163,13 @@ ms.locfileid: "48206073"
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **미미 합니다.** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **브랜드:** 3  
   
--   **Internet:** DSL  
+-   **인터넷:** DSL  
   
 -   **NumberEmployees:** 40  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206073"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206073"
   
  이 예에서는 다음 Microsoft .NET Framework 관리 API를 사용하여 FOR XML 쿼리 결과를 반환 및 렌더링합니다.  
   
-1.  `SqlConnection` 에 지정 된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 연결 하는 데 사용 됩니다.  
+1.  `SqlConnection`을 사용하여 지정된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 대한 연결을 엽니다.  
   
 2.  그런 다음 `SqlDataAdapter`를 데이터 어댑터로 사용하고 SQL 연결 및 지정된 SQL 쿼리 문자열을 사용하여 FOR XML 쿼리를 실행합니다.  
   
-3.  쿼리가 실행 된 후는 `SqlDataAdapter.Fill` 메서드를 호출 하 고 인스턴스에 전달 되는 `DataSet,` FOR XML 쿼리의 출력을 사용 하 여 데이터 집합을 채우기 위해 MyDataSet 합니다.  
+3.  쿼리가 실행된 다음 `SqlDataAdapter.Fill` 메서드를 호출하고 데이터 집합인 `DataSet,` MyDataSet의 해당 항목을 전달하여 데이터 집합에 FOR XML 쿼리 출력을 채웁니다.  
   
-4.  `DataSet.GetXml` 다음 메서드는 서버에서 생성 된 HTML 페이지에 표시 될 수 있는 문자열로 쿼리 결과 반환 합니다.  
+4.  그런 다음 `DataSet.GetXml` 메서드를 호출하여 서버에서 생성된 HTML 페이지에 표시될 수 있는 문자열로 쿼리 결과를 반환합니다.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

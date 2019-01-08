@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670471"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589952"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** = ] *account_id*  
  업데이트할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 하나 이상의 *account_id* 하거나 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
- [ **@account_name** =] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_**'**  
  업데이트할 계정 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *account_id* 하거나 *account_name* 지정 해야 합니다. 둘 다 지정할 경우 프로시저가 계정 이름을 변경합니다.  
   
- [ **@email_address** =] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_**'**  
  메시지를 보낼 새 전자 메일 주소입니다. 이 주소는 인터넷 전자 메일 주소여야 합니다. 주소의 서버 이름은 데이터베이스 메일이 이 계정에서 메일을 보낼 때 사용하는 서버입니다. *email_address* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
   
- [ **@display_name** = ] **'***display_name***'**  
+ [ **@display_name** =] **'**_display_name_**'**  
  이 계정에서 보내는 전자 메일 메시지에 사용할 새 표시 이름입니다. *display_name* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'**_replyto_address_**'**  
  이 계정에서 보내는 전자 메일 메시지의 회신 머리글에 사용할 새 주소입니다. *replyto_address* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
- [ **@description** =] **'***설명***'**  
+ [ **@description** =] **'**_설명을_**'**  
  계정에 대한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** =] **'**_server_name_**'**  
  이 계정에 사용할 SMTP 메일 서버의 새 이름입니다. 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확인할 수 있어야 합니다 *server_name* IP 주소를 합니다. *server_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_**'**  
  전자 메일 서버의 새 유형입니다. *server_type* 됩니다 **sysname**, 기본값은 없습니다. 값만 **'SMTP'** 지원 됩니다.  
   
  [ **@port** = ] *port_number*  
  전자 메일 서버의 새 포트 번호입니다. *port_number* 됩니다 **int**, 기본값은 없습니다.  
   
- [ **@timeout** =] **'***timeout***'**  
+ [ **@timeout** =] **'**_timeout_**'**  
  단일 전자 메일 메시지의 SmtpClient.Send에 대한 시간 제한 매개 변수입니다. *시간 제한* 됩니다 **int** (초), 기본값은 없습니다.  
   
- [ **@username** =] **'***username***'**  
+ [ **@username** =] **'**_username_**'**  
  전자 메일 서버에 로그온하는 데 사용할 새 사용자 이름입니다. *사용자 이름* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@password** =] **'***암호***'**  
+ [ **@password** =] **'**_암호_**'**  
  전자 메일 서버에 로그온하는 데 사용할 새 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@use_default_credentials** =] use_default_credentials  
@@ -149,7 +149,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

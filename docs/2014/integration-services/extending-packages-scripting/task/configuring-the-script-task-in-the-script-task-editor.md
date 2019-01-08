@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bdb8d4cecc2058b35db2cfaa328bbf1978899f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57a82017982310634fc734634e7167a5a08ca8e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070020"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376865"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>스크립트 태스크 편집기에서 스크립트 태스크 구성
   스크립트 태스크에서 사용자 지정 코드를 작성하려면 먼저 **스크립트 태스크 편집기**의 세 페이지에서 주 속성을 구성해야 합니다. 속성 창에서는 스크립트 태스크에 고유하지 않은 추가 태스크 속성을 구성할 수 있습니다.  
@@ -53,15 +51,15 @@ ms.locfileid: "48070020"
 > [!NOTE]  
 >  변수 이름은 대소문자를 구분합니다.  
   
- 변수를 선택하려면 속성 필드 옆의 줄임표(**…**) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../control-flow/select-variables-page.md)를 참조하세요.  
+ 변수를 선택하려면 속성 필드 옆의 줄임표(**...**) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../control-flow/select-variables-page.md)를 참조하세요.  
   
 ### <a name="edit-script-button"></a>스크립트 편집 단추  
  **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 VSTA 개발 환경이 시작됩니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)을 참조하십시오.  
   
 ## <a name="expressions-page-of-the-script-task-editor"></a>스크립트 태스크 편집기의 식 페이지  
- **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)  

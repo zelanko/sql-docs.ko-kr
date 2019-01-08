@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677582"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590937"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 응용 프로그램을 다시 사용할 때마다 설정할 필요가 없는 연결 풀에서 연결을 사용 합니다. 연결 생성 되었으며 풀에 배치 되 면 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -30,12 +30,13 @@ ms.locfileid: "51677582"
   
  성능 향상 외에도 연결 풀링 아키텍처 environment 및 해당 관련된 연결이 단일 프로세스에서 여러 구성 요소에서 사용할 수 있습니다. 이 서로 인식 하지 않고 동일한 프로세스에서 독립 실행형 구성 요소가 서로 상호 작용할 수 있음을 의미 합니다. 여러 구성 요소에서 연결 풀에서 연결을 반복적으로 사용할 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2를 표시 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작을 응용 프로그램에서 호출할 수 만큼 *SQLSetEnvAttr*합니다. 응용 프로그램 연결 풀링을 사용 하는 경우 데이터베이스 또는 데이터베이스를 변경 하는 등의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 합니다 \< *데이터베이스 * * 이름*>, 카탈로그에서 사용 하는 변경 내용을 데이터 원본입니다.  
-  
+
+
  ODBC 드라이버는 완벽 하 게 스레드로부터 안전 해야 하며 연결에는 연결 풀링을 지원 하기 위해 스레드 선호도 없어야 합니다. 즉, 드라이버는 언제 든 지 모든 스레드에서 호출을 처리 하 고 스레드와 다른 스레드에서 연결을 사용 하 고 세 번째 스레드에서 연결 끊기에 연결할 수 있습니다.  
   
- 연결 풀에는 드라이버 관리자에 의해 유지 관리 됩니다. 응용 프로그램을 호출할 때 연결 풀에서 가져온 **SQLConnect** 하거나 **SQLDriverConnect** 응용 프로그램을 호출 하는 경우 풀에 반환 되 고 **SQLDisconnect**. 풀의 크기는 요청 된 리소스 할당에 따라 동적으로 증가 합니다. 비활성 시간에 따라 축소: (이 사용 되지 않은 연결에서) 기간에 대 한 연결이 활성화 되지 풀에서 제거 됩니다. 풀의 크기는 메모리 제약 조건 및 서버에 대 한 제한에 의해서만 제한 됩니다.  
+ 연결 풀에는 드라이버 관리자에 의해 유지 관리 됩니다. 응용 프로그램을 호출할 때 연결 풀에서 가져온 **SQLConnect** 하거나 **SQLDriverConnect** 응용 프로그램을 호출 하는 경우 풀에 반환 되 고 **SQLDisconnect**. 풀의 크기는 요청 된 리소스 할당에 따라 동적으로 증가 합니다. 비활성 시간에 따라 축소: (이 사용 되지 않은 연결에서) 기간에 대 한 연결을 활성 없으면 풀에서 제거 됩니다. 풀의 크기는 메모리 제약 조건 및 서버에 대 한 제한에 의해서만 제한 됩니다.  
   
  드라이버 관리자에 전달 된 인수에 따라 풀의 특정 연결을 사용할 것인지 여부를 결정 **SQLConnect** 하거나 **SQLDriverConnect**, 및 연결 특성에 따라 연결 할당 된 후 설정 합니다.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "51677582"
 ## <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
  Windows 8부터 ODBC 드라이버에서에서 사용할 수 연결 풀을 보다 효율적으로. 자세한 내용은 [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [연결에 대 한 데이터 원본 또는 드라이버](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft Data Access Components의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)

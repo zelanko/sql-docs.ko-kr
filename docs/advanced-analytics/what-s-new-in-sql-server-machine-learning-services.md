@@ -1,20 +1,20 @@
 ---
-title: 새로운&#39;SQL Server Machine Learning Services의 새로운 | Microsoft Docs
+title: 새로운&#39;새로 만들기-s SQL Server Machine Learning 서비스
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269657"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432496"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,10 @@ ms.locfileid: "51269657"
 
 | 릴리스 | 기능 업데이트 |
 |---------|----------------|
-| CTP 2.0 | R 및 Python 기계 학습 및 새 Java 확장에 대 한 Linux 플랫폼 지원 합니다. 시작 하기 도움말을 참조 하세요 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다. |
-| CTP 2.0 | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 포함 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
-| CTP 2.0 | 장애 조치 클러스터 지원 Windows 및 Linux, SQL Server 실행 패드 서비스가 모든 노드에서 시작 하는 것으로 가정에서 이제 지원 됩니다. 자세한 내용은 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)합니다. |
+| CTP 2.0 | R 및 Python machine learning 위해 Linux 플랫폼 지원 합니다. 시작 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다. |
+|   | [Java 언어 확장](java/extension-java.md) Windows와 Linux 모두에서 새로운 SQL Server 2019 미리 보기로 제공에서 됩니다. 사용 권한을 할당 하 고 경로 설정 하 여 컴파일된 Java 코드 SQL Server에 사용할 수 있습니다. SQL Server 액세스를 사용 하 여 클라이언트 앱 수 데이터를 사용 하 고 호출 하 여 코드를 실행할 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), SQL Server에서 R 및 Python 통합에 사용 되는 동일한 절차입니다. | 
+|  | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 소개 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
+|   | 장애 조치 클러스터 지원 Windows 및 Linux, SQL Server 실행 패드 서비스가 모든 노드에서 시작 하는 것으로 가정에서 이제 지원 됩니다. 자세한 내용은 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)합니다. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -54,7 +55,7 @@ R에 대 한 새 기능에 포함 됩니다 [ **패키지 관리**](r/install-ad
 
 | 패키지 | Description |
 |---------|-------------|
-| [**MicrosoftML**](using-the-microsoftml-package.md) | 이 릴리스에서 MicrosoftML 이전 SQL Server 2016 R Services에 필요한 업그레이드 단계를 제거는 기본 R 설치에 포함 됩니다. MicrosoftML의 최첨단 기계 학습 알고리즘 및 크기를 조정 하거나 원격 계산 컨텍스트에서 실행할 수 있는 데이터 변환을 제공 합니다. 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀 및 로지스틱 회귀 알고리즘에 포함 됩니다.  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | 이 릴리스에서 MicrosoftML 이전 SQL Server 2016 R Services에 필요한 업그레이드 단계를 제거는 기본 R 설치에 포함 됩니다. MicrosoftML의 최첨단 기계 학습 알고리즘 및 크기를 조정 하거나 원격 계산 컨텍스트에서 실행할 수 있는 데이터 변환을 제공 합니다. 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀 및 로지스틱 회귀 알고리즘에 포함 됩니다.  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>데이터베이스 내 분석에 대 한 Python 통합
 
@@ -70,8 +71,8 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 | 패키지 | Description |
 |---------|-------------|
-[**revoscalepy**](python/what-is-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
-|[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |MicrosoftML R 패키지의 Python에 해당 합니다. |
+[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
+|[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 패키지의 Python에 해당 합니다. |
 
 ### <a name="pre-trained-models"></a>미리 학습된 모델
 
@@ -99,13 +100,13 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 SQL Server 2019 CTP 2.0 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R, Python 및 Java에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
 
-Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) Linux에서 해당 기능을 T-SQL을 통해 사용할 수 있으므로 [PREDICT](), Linux에서 실행 되는 합니다. 네이티브 점수 매기기를 호출 하거나 심지어는 R 런타임 요구 하지 않고 미리 학습 된 모델에서 점수 매기기 고성능 수 있습니다.
+Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) Linux에서 해당 기능을 T-SQL을 통해 사용할 수 있으므로 [PREDICT](../t-sql/queries/predict-transact-sql.md), Linux에서 실행 되는 합니다. 네이티브 점수 매기기를 호출 하거나 심지어는 R 런타임 요구 하지 않고 미리 학습 된 모델에서 점수 매기기 고성능 수 있습니다.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning에서 Azure SQL Database 서비스
 
-Machine Learning 서비스 (R)을 사용한 Azure SQL Database의 공개 미리 보기로 제공 됩니다. 자세한 내용은 [빠른 시작: Azure SQL Database (미리 보기)에서 사용 하 여 Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)합니다.
+Machine Learning 서비스 (R)을 사용한 Azure SQL Database의 공개 미리 보기로 제공 됩니다. 자세한 내용은 참조 하세요. [빠른 시작: (R)을 사용 하는 Machine Learning 서비스를 사용 하 여 Azure SQL Database (미리 보기)에서](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

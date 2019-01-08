@@ -18,12 +18,12 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594832"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588557"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@parameter_name** = ] **'***parameter_name***'**  
+ [**@parameter_name** =] **'**_parameter_name_**'**  
  변경할 매개 변수의 이름입니다.  
   
- [**@parameter_value** =] **'***parameter_value***'**  
+ [**@parameter_value** =] **'**_parameter_value_**'**  
  매개 변수의 새 값입니다.  
   
- [**@description** =] **'***설명***'**  
+ [**@description** =] **'**_설명을_**'**  
  매개 변수에 대한 설명입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -95,7 +95,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152' ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

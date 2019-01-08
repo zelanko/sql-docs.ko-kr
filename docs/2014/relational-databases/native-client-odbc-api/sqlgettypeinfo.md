@@ -14,12 +14,12 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2287678e7fd3e481c3eaf1d33af64e9ea7dad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373675"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 보고서 결과에 추가 열 USERTYPE 집합이 `SQLGetTypeInfo`합니다. USERTYPE은 DB-Library 데이터 형식 정의를 보고하며 기존 DB-Library 응용 프로그램을 ODBC에 이식할 때 개발자가 이 기능을 이용할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48186083"
  에 대 한 합니다 **xml** 데이터 형식으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 column_size 무제한 크기를 표시 하는 SQL_SS_LENGTH_UNLIMITED를 보고 합니다.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 및 테이블 반환 매개 변수  
- 테이블 반환 매개 변수의 테이블 형식은 실제적으로 메타 형식 즉, 다른 형식을 정의하는 데 사용되는 형식입니다. 따라서 SQLGetTypeInfo를 통해 노출 될 필요가 없습니다. 응용 프로그램 테이블 반환 매개 변수를 사용 하는 테이블 형식에 대 한 메타 데이터를 검색할 SQLGetTypeInfo, 대신 SQLTables를 사용 해야 합니다.  
+ 테이블 반환 매개 변수에 대 한 테이블 형식은를 메타-유형-형식임을 다른 형식을 정의 하는 데 효과적으로입니다. 따라서 SQLGetTypeInfo를 통해 노출 될 필요가 없습니다. 응용 프로그램 테이블 반환 매개 변수를 사용 하는 테이블 형식에 대 한 메타 데이터를 검색할 SQLGetTypeInfo, 대신 SQLTables를 사용 해야 합니다.  
   
  테이블 반환 매개 변수의 메타 데이터를 검색 하는 방법에 대 한 자세한 내용은 참조 [문 특성 Affect Table-Valued 매개 변수는](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48186083"
  `SQLGetTypeInfo`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetTypeInfo 함수](http://go.microsoft.com/fwlink/?LinkId=59356)   
+ [SQLGetTypeInfo 함수](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

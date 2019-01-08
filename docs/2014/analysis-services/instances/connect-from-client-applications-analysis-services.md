@@ -11,12 +11,12 @@ ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f12f91e51383607d9bbcb8dc8ce2807c71ee289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149833"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370166"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 애플리케이션에서 연결(Analysis Services)
   Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 애플리케이션을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149833"
   
 -   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [개체 및 작업 & #40;에 대 한 권한 부여 액세스 Analysis Services & #41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio를 사용하여 연결(SSMS)  
  SSMS에서 Analysis Services에 연결하여 서버 인스턴스와 데이터베이스를 대화형으로 관리할 수 있습니다. 또한 XMLA 또는 MDX 쿼리를 실행하여 관리 작업을 수행하거나 데이터를 검색할 수도 있습니다. 쿼리가 전송될 때 데이터베이스만 로드하는 다른 도구 및 애플리케이션과 달리 SSMS는 데이터베이스를 볼 수 있는 권한이 있다는 가정하에 서버에 연결할 때 모든 데이터베이스를 로드합니다. 즉, 서버에 수많은 테이블 형식 데이터베이스가 있는 경우 SSMS를 사용하여 연결할 때 모든 테이블 형식 데이터베이스가 시스템 메모리에 로드됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48149833"
   
      명명된 된 인스턴스의 경우 서버 이름을 servername\instance 이름 형식으로 지정해야 합니다. 예를 들어 네트워크 이름이 ADV-SRV062이고 Analysis Services가 Finance라는 명명된 인스턴스로 설치된 서버의 경우 이 명명 규칙은 ADV-SRV062\Finance일 수 있습니다.  
   
-     장애 조치(failover) 클러스터에 배포된 서버의 경우 SSAS 클러스터의 네트워크 이름을 사용하여 연결합니다. 이 이름은 SQL Server를 설치하는 동안 **SQL Server 네트워크 이름**으로 지정됩니다. SSAS를 WSFC(Windows Server 장애 조치(Failover) 클러스터)에서 명명된 인스턴스로 설치한 경우 연결에서 인스턴스 이름을 추가할 수 없습니다. 이 방법은 SSAS에 고유한 반면, 클러스터형 관계형 데이터베이스 엔진의 명명된 인스턴스에는 인스턴스 이름이 포함되지 않습니다. 예를 들어, SQL-CLU의 SQL Server 네트워크 이름을 사용하여 SSAS 및 데이터베이스 엔진을 명명된 인스턴스(Contoso-Accounting)로 설치하는 경우 "SQL-CLU"를 사용하여 SSAS에 연결하고 "SQL-CLU\Contoso-Accounting"으로 데이터베이스 엔진에 연결합니다. 자세한 내용 및 예제는 [SQL Server Analysis Services를 클러스터링하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548) 을 참조하십시오.  
+     장애 조치(failover) 클러스터에 배포된 서버의 경우 SSAS 클러스터의 네트워크 이름을 사용하여 연결합니다. 이 이름은 SQL Server를 설치하는 동안 **SQL Server 네트워크 이름**으로 지정됩니다. SSAS를 WSFC(Windows Server 장애 조치(Failover) 클러스터)에서 명명된 인스턴스로 설치한 경우 연결에서 인스턴스 이름을 추가할 수 없습니다. 이 방법은 SSAS에 고유한 반면, 클러스터형 관계형 데이터베이스 엔진의 명명된 인스턴스에는 인스턴스 이름이 포함되지 않습니다. 예를 들어, SQL-CLU의 SQL Server 네트워크 이름을 사용하여 SSAS 및 데이터베이스 엔진을 명명된 인스턴스(Contoso-Accounting)로 설치하는 경우 "SQL-CLU"를 사용하여 SSAS에 연결하고 "SQL-CLU\Contoso-Accounting"으로 데이터베이스 엔진에 연결합니다. 자세한 내용 및 예제는 [SQL Server Analysis Services를 클러스터링하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=396548) 을 참조하십시오.  
   
      네트워크 부하 부산 클러스터에서 배포된 서버의 경우 NLB의 가상 서버 이름을 사용하여 연결합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48149833"
   
      **없음**은 사용하지 않는 것이 좋습니다. Analysis Services에서는 HTTP 액세스용으로 구성된 서버에 연결하지 않는 한 연결 문자열에서 사용자 이름 및 암호를 지정할 수 없습니다. 마찬가지로 SSS 대상 애플리케이션 ID가 Analysis Services 데이터베이스에 대한 사용자 액세스 권한이 있는 Windows 사용자 자격 증명 집합에 매핑되어 있음을 이미 알고 있지 않는 경우에는 SSS를 사용하지 마십시오. 대부분의 시나리오에서는 Excel에서 Analysis Services에 연결할 때 기본 옵션인 Windows 인증을 사용하는 것이 가장 좋습니다.  
   
- 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](http://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
+ 자세한 내용은 [SQL Server Analysis Services에 연결 또는 데이터 가져오기](https://go.microsoft.com/fwlink/?linkID=215150)를 참조하십시오.  
   
 ##  <a name="bkmk_SSDT"></a> SQL Server Data Tools를 사용하여 연결  
  SQL Server Data Tools는 Analysis Services 모델, Reporting Services 보고서 및 SSIS 패키지를 비롯한 BI 솔루션을 구축하는 데 사용됩니다. 보고서나 패키지를 작성할 때 Analysis Services에 대한 연결을 지정해야 할 수 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "48149833"
   
 1.  Analysis Services 인스턴스에서 **SQL Server Profiler** 를 시작한 다음 새 추적을 시작합니다.  
   
-2.  이벤트 선택 되어 있는지 확인 `Audit Login` 고 `Audit Logout` 보안 감사 섹션에서 확인 됩니다.  
+2.  이벤트 선택에서 `Audit Login` 및 `Audit Logout`이 보안 감사 섹션에서 선택되었는지 확인합니다.  
   
 3.  원격 클라이언트 컴퓨터에서 응용 프로그램 서비스(예: SharePoint 또는 Reporting Services)를 통해 Analysis Services에 연결합니다. Audit Login 이벤트는 Analysis Services에 연결하는 사용자의 ID를 보여 줍니다.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48149833"
   
  연결 실패를 해결하는 데 도움이 될 수 있는 리소스는 다음과 같습니다.  
   
- [SQL Server 2005 Analysis Services 연결 시나리오의 일반적인 연결 문제 해결](http://technet.microsoft.com/library/cc917670.aspx). 이 문서는 몇 년 전에 작성되었지만 정보와 방법은 여전히 유효합니다.  
+ [SQL Server 2005 Analysis Services 연결 시나리오의 일반적인 연결 문제 해결](https://technet.microsoft.com/library/cc917670.aspx). 이 문서는 몇 년 전에 작성되었지만 정보와 방법은 여전히 유효합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에 연결](connect-to-analysis-services.md)   
- [Analysis Services에서 지 원하는 인증 방법](authentication-methodologies-supported-by-analysis-services.md)   
- [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [데이터 원본 만들기 &#40;SSAS 다차원&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Analysis Services에서 지원하는 인증 방법](authentication-methodologies-supported-by-analysis-services.md)   
+ [가장&#40;SSAS 테이블 형식&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [데이터 원본 & #40; 만들기 SSAS 다차원 & #41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

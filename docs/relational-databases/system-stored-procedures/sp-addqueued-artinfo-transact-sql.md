@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770161"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590898"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@artid=** ] **'***artid***'**  
+ [  **@artid=** ] **'**_artid_**'**  
  아티클 ID의 이름입니다. *artid* 됩니다 **int**, 기본값은 없습니다  
   
- [  **@article=**] **'***문서***'**  
+ [  **@article=**] **'**_문서_**'**  
  스크립팅할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  게시자 서버의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  스크립팅할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@dest_table=** ] *' dest_table * '**  
+ [  **@dest_table=** ] _' dest_table_**'**  
  대상 테이블의 이름입니다. *dest_table* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@owner =** ] **'***소유자***'**  
+ [ **@owner =** ] **'**_소유자_**'**  
  구독의 소유자입니다. *소유자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@cft_table=** ] **'***cft_table***'**  
+ [  **@cft_table=** ] **'**_cft_table_**'**  
  이 아티클에 대한 지연 업데이트 충돌 테이블의 이름입니다. *cft_table*됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

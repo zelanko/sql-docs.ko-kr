@@ -11,12 +11,12 @@ ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d5fad3b875e781f7682f7e381dbcd4b2db1b3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202889"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369085"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length 및 substring의 동작에 대한 변경 사항
   합니다 [string-length 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) 하 고 [substring 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) 함수를 포함 하는 XML 데이터베이스와 함께 사용할 때 다른 결과 반환할 수 있습니다 서로게이트 문자입니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "48202889"
 ## <a name="description"></a>Description  
  와 호환 되도록 데이터베이스가 설정 된 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 동작을 [string-length 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) 하 고 [substring 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) 유니코드 보충 문자를 처리할 때 함수 변경 됩니다. U+FFFF보다 큰 코드 포인트를 포함하도록 정의된 각 유니코드 보조 문자는 이전 버전에서와 마찬가지로 이러한 함수를 사용하여 두 문자가 아닌 한 문자로 계산됩니다.  
   
- 서로게이트 문자에 대한 자세한 내용은 [서로게이트 및 보조 문자(Surrogates and Supplementary Characters)](http://go.microsoft.com/fwlink/?LinkId=178317)를 참조하십시오.  
+ 서로게이트 문자에 대한 자세한 내용은 [서로게이트 및 보조 문자(Surrogates and Supplementary Characters)](https://go.microsoft.com/fwlink/?LinkId=178317)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   

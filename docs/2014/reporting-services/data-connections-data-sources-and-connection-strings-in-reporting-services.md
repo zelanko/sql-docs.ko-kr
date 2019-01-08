@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 656fb3e4a0eca7ec791050d7be7fcef5e774fbae
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.openlocfilehash: 78d118a8d0e5edabe48715c2b5c8b0b547bee7c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072317"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354612"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 및 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
@@ -77,7 +77,7 @@ ms.locfileid: "49072317"
   
 -   ODBC  
   
--   Power View용 Microsoft BI 의미 체계 모델: PowerPivot 갤러리 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
+-   Power View용 Microsoft BI 의미 체계 모델: PowerPivot 갤러리 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]용으로 구성된 SharePoint 사이트에서는 이 데이터 원본 유형을 사용할 수 있습니다. 이 데이터 원본 유형은 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 프레젠테이션에 대해서만 사용됩니다. 자세한 내용은 [파워 뷰용의 완벽한 표 형식 BI 의미 체계 모델 구성](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)(영문)을 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 지원하는 데이터 원본 및 버전의 전체 목록은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "49072317"
 |클라우드의 [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형을 `Windows Azure SQL Database`로 설정합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 병렬 데이터 웨어하우스|`HOST=<IP address>;database= AdventureWorks; port=<port>`|데이터 원본 유형을 `Microsoft SQL Server Parallel Data Warehouse`로 설정합니다. 자세한 내용은 [SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)을 참조하세요.|  
 |로컬 서버의 Analysis Services 데이터베이스|`data source=localhost;initial catalog=Adventure Works DW`|데이터 원본 유형을 `Microsoft SQL Server Analysis Services`로 설정합니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 또는 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.|  
-|Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|데이터 원본 유형을 `Microsoft SQL Server Analysis Services`로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.|  
+|Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|데이터 원본 유형을 `Microsoft SQL Server Analysis Services`로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.|  
 |기본 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다. 자세한 내용은 [보고서 모델 연결&#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)을 참조하세요.|  
 |SharePoint 통합 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|데이터 원본 유형을 `OLE DB Provider for OLAP Services 8.0`로 설정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 속성을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]으로 설정하면 `ConnectTo` 2000 `8.0` 데이터 원본에 보다 빠르게 연결할 수 있습니다. 이 속성을 설정하려면 **연결 속성** 대화 상자의 **고급 속성** 탭을 사용합니다.|  

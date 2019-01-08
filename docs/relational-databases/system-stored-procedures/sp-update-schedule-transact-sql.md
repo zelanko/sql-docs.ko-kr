@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661231"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591807"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  수정할 일정의 식별자입니다. *schedule_id* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정 해야 합니다.  
   
- [ **@name =** ]  **'***schedule_name***'**  
+ [  **@name =** ] **'**_schedule_name_**'**  
  수정할 일정의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정 해야 합니다.  
   
  [ **@new_name**= ] *new_name*  
@@ -113,7 +113,7 @@ sp_update_schedule
 |값|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -135,11 +135,11 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업의 실행을 종료 합니다. *active_end_time*됩니다 **int**, 기본값은 **235959**를 오후 11시 59분: 59를 나타내는 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
  일정을 소유하는 서버 보안 주체의 이름입니다. *owner_login_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 일정은 작성자에 의해 소유를 나타냅니다.  
   
  [ **@automatic_post =**] *automatic_post*  
- 예약되어 있습니다.  
+ 예약됨.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

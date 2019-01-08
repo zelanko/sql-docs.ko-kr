@@ -12,29 +12,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354724"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
-  ODBC 메시지를 검색 하려면 두 개의 ODBC 함수 호출 수: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 하 고 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  
+  두 개의 ODBC 함수 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 하 고 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  
   
- [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 는 개별 드라이버가 아니라 ODBC 드라이버 관리자에 의해 처리됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. 성공적으로 연결되기 전에는 드라이버별 진단 필드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출할 수 없습니다. 여기에는 ODBC 연결 명령이 포함되며, 이러한 명령에서 SQL_SUCCESS_WITH_INFO를 반환하는 경우에도 마찬가지입니다. 다음에 ODBC 함수를 호출할 때까지 드라이버별 진단 필드를 사용할 수 없습니다.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 는 개별 드라이버가 아니라 ODBC 드라이버 관리자에 의해 처리됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. 성공적으로 연결되기 전에는 드라이버별 진단 필드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출할 수 없습니다. 여기에는 ODBC 연결 명령이 포함되며, 이러한 명령에서 SQL_SUCCESS_WITH_INFO를 반환하는 경우에도 마찬가지입니다. 다음에 ODBC 함수를 호출할 때까지 드라이버별 진단 필드를 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>Description  
- 이 예제에서는 표준 ODBC 정보용 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 을 호출하는 간단한 오류 처리기를 보여 줍니다. 그런 다음 유효한 연결이 있는지 테스트하고, 있을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버별 진단 필드에 대해 `SQLGetDiagField`를 호출합니다. 이 예제는 IA64에서 지원되지 않습니다.  
+ 이 예제에서는 표준 ODBC 정보용 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 을 호출하는 간단한 오류 처리기를 보여 줍니다. 그런 다음 유효한 연결이 있는지 테스트하고, 있을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버별 진단 필드에 대해 `SQLGetDiagField`를 호출합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   

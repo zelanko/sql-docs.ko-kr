@@ -1,27 +1,25 @@
 ---
-title: 실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제 | Microsoft Docs
+title: 실행 패드 서비스와 외부 스크립트 실행-SQL Server Machine Learning Services를 사용 하 여 일반적인 문제
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701451"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644923"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- SQL Server 신뢰할 수 있는 실행 패드 서비스는 R 및 Python에 대 한 외부 스크립트 실행을 지원합니다. SP1에서 SQL Server 2016 R Services는 서비스를 제공합니다. SQL Server 2017 나타나며 설치의 일부로 실행 패드 서비스를 포함합니다.
+ SQL Server 신뢰할 수 있는 실행 패드 서비스는 R 및 Python에 대 한 외부 스크립트 실행을 지원합니다. SP1에서 SQL Server 2016 R Services는 서비스를 제공합니다. SQL Server 2017은 초기 설치의 일부로 실행 패드 서비스를 포함합니다.
 
 여러 문제는 시작, 구성 문제 또는 변경 내용을 포함 하 여 또는 네트워크 프로토콜을 누락 하에서 실행 패드를 방지할 수 있습니다. 이 문서에서는 다양 한 문제에 대 한 문제 해결 지침을 제공합니다. 모든 하지 못한 것에 대 한 질문을 게시할 수는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)합니다.
-
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
 ## <a name="determine-whether-launchpad-is-running"></a>실행 패드 실행 중인지 여부를 결정 합니다.
 
@@ -69,7 +67,7 @@ SQL Server Machine Learning 서비스를 설치 하는 동안 Windows 사용자 
 
 SQL Server Management studio에서 문제를 해결 하려면 보안 관리자가 SQL 로그인 또는 Windows 사용자 계정이 다음 스크립트를 실행 하 여 수정할 수 있습니다.
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -129,11 +127,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 기계 학습 스크립트를 실행할 수 있도록 문제를 해결을 일반적으로 서비스를 다시 시작 합니다. 다시 시작에는 문제가 해결 되지 않으면, 경로 및 인수를 확인 합니다 **이진 경로** 속성과 다음을 수행:
 
-    1. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
+    a. 실행 프로그램의.config 파일을 검토 하 고 작업 디렉터리가 올바른지 확인 하십시오.
 
-    2. 에 설명 된 대로 실행 패드에서 사용 되는 Windows 그룹에 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다 [이전 섹션](#bkmk_LaunchpadTS)합니다.
+    b. 실행 패드에서 사용 되는 Windows 그룹에 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다.
 
-    c. 서비스 속성을 변경 하면 실행 패드 서비스를 다시 시작 합니다.
+    다. 서비스 속성을 변경 하면 실행 패드 서비스를 다시 시작 합니다.
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>"심각한 오류 tmpFile 만들지가 못했습니다."
 
@@ -171,7 +169,7 @@ SQL Server에서 R 코드를 실행 하 고이 메시지가 있지만 SQL Server
 
 인스턴스에서 사용 되는 R 패키지 라이브러리의 위치를 확인 하려면 SQL Server Management Studio를 엽니다 (또는 다른 데이터베이스 쿼리 도구)를 인스턴스에 연결 하 고 다음 저장된 프로시저를 실행 하십시오.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helptracertokenhistory_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c56ad691f960e083a4fa4f7c655808638215c46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725131"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215409"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +50,8 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  [  **@publisher=** ] **'***게시자***'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> [!NOTE]  
->  에 대 한에이 매개 변수를 지정 해야 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
+> [!NOTE]
+>  에 대 한에이 매개 변수를 지정 해야 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 게시자에서 저장 프로시저가 실행될 경우 무시됩니다.  

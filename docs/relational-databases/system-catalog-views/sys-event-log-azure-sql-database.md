@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a21f9ccbf1dd8bcb7918c67b98aa51a0956d41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673532"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590957"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51673532"
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -50,7 +50,7 @@ ms.locfileid: "51673532"
 |**severity**|**int**|오류의 심각도입니다. 가능한 값은<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
 |**event_count**|**int**|횟수가이 이벤트가 발생 한 지정된 된 데이터베이스에 대 한 지정 된 시간 간격 내에서 (**start_time** 하 고 **end_time**).|  
 |**description**|**nvarchar(max)**|이벤트에 대한 상세한 설명입니다.<br /><br /> 참조 [이벤트 유형을](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 가능한 값 목록은 합니다.|  
-|**additional_data**|**XML**|*참고:이 값은 항상 Azure SQL Database V12에 대 한 NULL입니다. 참조 [예제](#Deadlock) V12에 대 한 교착 상태 이벤트를 검색 하는 방법에 대 한 섹션입니다.*<br /><br /> 에 대 한 **교착 상태** 이벤트를이 열에는 교착 상태 그래프를 포함 합니다. 이 열은 다른 이벤트 유형에 대해서는 NULL을 반환합니다. |  
+|**additional_data**|**XML**|*참고: 이 값은 항상 Azure SQL Database V12에 대 한 NULL입니다. 참조 [예제](#Deadlock) V12에 대 한 교착 상태 이벤트를 검색 하는 방법에 대 한 섹션입니다.*<br /><br /> 에 대 한 **교착 상태** 이벤트를이 열에는 교착 상태 그래프를 포함 합니다. 이 열은 다른 이벤트 유형에 대해서는 NULL을 반환합니다. |  
   
 ##  <a name="EventTypes"></a> 이벤트 유형  
  이 뷰의 각 행으로 기록 되는 이벤트 범주별으로 식별 됩니다 (**event_category**), 이벤트 유형 (**event_type**), 및 하위 형식 (**event_subtype**). 다음 테이블에서는 이 뷰에 수집된 이벤트 유형을 나열합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "51673532"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>간격 start_time 및 end_time  
- 이벤트가 발생할 때를 이벤트가 집계 간격에 포함 되는지 *대* 또는 *후 * * * start_time** 및 *하기 전에 * * * end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트가 발생할 때를 이벤트가 집계 간격에 포함 되는지 *대* 또는 _후_**start_time** 및 _앞_  **end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```  
 start_time                    end_time  

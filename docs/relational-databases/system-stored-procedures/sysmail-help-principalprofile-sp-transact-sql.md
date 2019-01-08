@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04746f7694e4f3bef2a946398f0bc9d1e1808a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739331"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591627"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  [ **@principal_id=** ] *principal_id*  
  데이터베이스 사용자 또는 역할의 id를 **msdb** 나열할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
   
- [ **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **'**_principal_name_**'**  
  데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 나열할 연결에 대 한 데이터베이스. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
   
  [ **@profile_id=** ] *profile_id*  
  나열할 연결에 대한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
   
- [ **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  나열할 연결에 대한 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -14,15 +14,15 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089423"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375645"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성에 사용할 수 있으며 `SQLGetConnectAttr`, 함수는 현재 해당 설정을 보고 하는 데 사용 됩니다. 이러한 특성 아닐 때까지 연결 된 또는 사용 하 여 특성을 설정한 후에 대해 보고 하는 값 [SQLSetConnectAttr](sqlsetconnectattr.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성에 사용할 수 있으며 `SQLGetConnectAttr`, 함수는 현재 해당 설정을 보고 하는 데 사용 됩니다. 이러한 특성에 대해 보고되는 값은 연결을 설정하거나 [SQLSetConnectAttr](sqlsetconnectattr.md)을 사용하여 특성을 설정할 때까지 보장되지 않습니다.  
   
  이 항목에서는 읽기 전용 특성을 나열합니다. 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성을 참조 하세요 [SQLSetConnectAttr](sqlsetconnectattr.md)합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48089423"
  Spn에 대 한 자세한 내용은 참조 하세요. [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

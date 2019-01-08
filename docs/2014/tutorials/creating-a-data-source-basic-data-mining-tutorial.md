@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376455"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>데이터 원본 만들기(기본 데이터 마이닝 자습서)
   A *데이터 원본* 데이터 연결이 저장 하 고 프로젝트에서 관리 하 고 배포에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다. 데이터 원본에는 원본 데이터가 있는 서버 및 데이터베이스의 이름뿐만 아니라 필요한 기타 연결 속성이 포함됩니다.  
   
 > [!IMPORTANT]  
->  데이터베이스의 이름은 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]입니다. 이 데이터베이스를 아직 설치 하지 않은 경우 참조를 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) 페이지입니다.  
+>  데이터베이스의 이름은 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]입니다. 이 데이터베이스를 아직 설치 하지 않은 경우 참조를 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지입니다.  
   
 ### <a name="to-create-a-data-source"></a>데이터 원본을 만들려면  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48128173"
 ## <a name="previous-task-in-lesson"></a>단원의 이전 태스크  
  [만들기는 Analysis Services 프로젝트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [데이터 원본 정의](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [가장 옵션 설정 &#40;&AMP;#40;SSAS-다차원&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [가장 옵션 설정&#40;SSAS - 다차원&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

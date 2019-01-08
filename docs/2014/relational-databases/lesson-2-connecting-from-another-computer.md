@@ -1,22 +1,21 @@
 ---
-title: '2단원: 다른 컴퓨터에서 연결 | Microsoft 문서'
+title: '2단원: 다른 컴퓨터에서 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183213"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367197"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
   보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "48183213"
  보안을 강화하기 위해 Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]및 Windows 7에서는 모두 Windows 방화벽을 설정합니다. 다른 컴퓨터에서 이 인스턴스에 연결하려면 방화벽에서 통신 포트를 열어야 합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스는 포트 1433에서 수신하므로 고정 포트를 구성하지 않아도 됩니다. 그러나 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 을 포함한 명명된 인스턴스는 동적 포트에서 수신합니다. 방화벽에서 포트를 열려면 먼저 고정 포트 또는 정적 포트로 지정된 특정 포트에서 수신하도록 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 구성해야 합니다. 이렇게 하지 않으면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 시작할 때마다 다른 포트에서 수신할 수 있습니다. 방화벽 및 기본 Windows 방화벽 설정에 대한 자세한 내용과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!NOTE]  
->  포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다. 포트 번호는 49152에서 65535 사이의 숫자에서 할당해야 합니다.  
+>  포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다. 포트 번호는 49152에서 65535 사이의 숫자에서 할당해야 합니다.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server가 특정 포트에서 수신하도록 구성  
   

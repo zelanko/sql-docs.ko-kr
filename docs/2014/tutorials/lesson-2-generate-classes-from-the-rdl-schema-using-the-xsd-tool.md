@@ -1,5 +1,5 @@
 ---
-title: '2 단원: xsd 도구를 사용 하 여 RDL 스키마에서 클래스를 생성 합니다. | Microsoft Docs'
+title: '2단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스를 생성 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374495"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 만든 후 다음 단계는 보고서 정의 스키마의 로컬 복사본을 검색하고 XML 스키마 정의 도구(Xsd.exe)를 실행하는 것입니다.  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL 클래스를 생성하려면  
   
-1.  인스턴스를 열려면 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer (또는 해당 웹 브라우저)는 다음 URL로 이동 합니다.  
+1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 또는 이에 상당하는 웹 브라우저 인스턴스를 열고 다음 URL로 이동합니다.  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  RDL 스키마가 브라우저에서 열렸으면 **파일** 메뉴에서 **다른 이름으로 저장**을 선택합니다.  
   
 3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 만든 위치를 찾아 스키마를 ReportDefinition.xsd라는 이름으로 저장합니다.  
   
-4.  파일을 저장 한 후의 인스턴스를 열려면는 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 명령 프롬프트입니다. 명령 프롬프트의 인스턴스를 열려면 시작 메뉴를 클릭하고 **모든 프로그램**, **Microsoft Visual Studio 2010**, **Visual Studio Tools** 를 차례로 가리킨 다음 **Visual Studio 명령 프롬프트(2010)** 를 클릭합니다.  
+4.  파일이 저장되었으면 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 명령 프롬프트의 인스턴스를 엽니다. 명령 프롬프트의 인스턴스를 열려면 시작 메뉴를 클릭하고 **모든 프로그램**, **Microsoft Visual Studio 2010**, **Visual Studio Tools** 를 차례로 가리킨 다음 **Visual Studio 명령 프롬프트(2010)** 를 클릭합니다.  
   
 5.  현재 경로를 ReportDefinition.xsd 파일을 저장한 위치로 변경합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48065983"
 ## <a name="next-lesson"></a>다음 단원  
  다음 단원에서는 RDL 스키마에서 생성한 클래스를 사용하여 보고서 서버에서 보고서 정의를 로드하는 코드를 작성합니다. 참조 [3 단원: 보고서 서버에서 보고서 정의 로드](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

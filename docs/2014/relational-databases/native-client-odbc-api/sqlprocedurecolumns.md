@@ -14,12 +14,12 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddbc2d437ab41238b1c9426659522fb4d0ab3ada
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130093"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366255"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` 모든 반환 값 특성을 보고 하는 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저입니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48130093"
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
 |REMARKS|NULL|  
-|COLUMN_DEF|NULL 테이블 유형에 기본값이 없을 수도 있습니다.|  
+|COLUMN_DEF|NULL입니다. 테이블 유형에 기본값이 없을 수도 있습니다.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  
 |CHAR_OCTET_LENGTH|NULL|  
@@ -74,8 +74,8 @@ ms.locfileid: "48130093"
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLProcedureColumns 지원  
  `SQLProcedureColumns`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQLProcedureColumns 함수](http://go.microsoft.com/fwlink/?LinkId=59363)   
+## <a name="see-also"></a>관련 항목:  
+ [SQLProcedureColumns 함수](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

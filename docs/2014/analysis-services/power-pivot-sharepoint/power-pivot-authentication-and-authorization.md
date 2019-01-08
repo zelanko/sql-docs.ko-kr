@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377863"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 인증 및 권한 부여
   SharePoint 2010 팜에서 실행되는 SharePoint용 PowerPivot 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 PowerPivot 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 PowerPivot 관련 작업은 팜의 PowerPivot 공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 PowerPivot 콘텐츠 및 작업까지 포함합니다. PowerPivot 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "48165753"
 |팜 또는 서비스 관리자|서비스 및 애플리케이션 설치, 설정 및 구성<br /><br /> PowerPivot 관리 대시보드 사용 및 관리 보고서 보기|  
 |모든 권한|사이트 모음 수준에서 PowerPivot 기능 통합 활성화<br /><br /> PowerPivot 갤러리 라이브러리 만들기<br /><br /> 데이터 피드 라이브러리 만들기|  
 |참가|PowerPivot 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 PowerPivot 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
-|읽기|외부 데이터 원본으로 PowerPivot 통합 문서에 액세스(통합 문서 URL은 Excel의 데이터 연결 마법사와 같은 연결 대화 상자에서 명시적으로 입력)|  
+|읽기|통합 문서의 URL을 명시적으로 (예: Excel의 데이터 연결 마법사)에 연결 대화 상자에서 입력, 외부 데이터 원본으로 PowerPivot 통합 문서에 액세스 합니다.|  
 |보기만|PowerPivot 통합 문서 보기<br /><br /> 데이터 새로 고침 기록 보기<br /><br /> 로컬 통합 문서를 SharePoint 사이트의 PowerPivot 통합 문서에 연결하여 해당 데이터를 다른 방식으로 용도 변경<br /><br /> 통합 문서의 스냅숏 다운로드. 스냅숏은 데이터의 정적 복사본이며 슬라이서, 필터, 수식 또는 데이터 연결을 포함하지 않습니다. 스냅숏의 콘텐츠는 브라우저 창에서 셀 값을 복사할 때와 비슷합니다.|  
   
 ##  <a name="excel"></a> PowerPivot 통합 문서에 대 한 Excel 서비스 보안 고려 사항  
@@ -115,6 +115,6 @@ ms.locfileid: "48165753"
  [PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md)   
  [구성 PowerPivot 무인된 데이터 새로 고침 계정 &#40;SharePoint 용 PowerPivot&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot 보안 아키텍처](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

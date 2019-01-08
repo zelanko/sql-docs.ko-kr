@@ -17,12 +17,12 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6a7a72e385dd6cfb4d0d83d3afab346dab8c85ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145853"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367345"
 ---
 # <a name="merging-partitions-xmla"></a>파티션 병합(XMLA)
   파티션이 같은 집계 디자인 및 구조에 있는 경우 사용 하 여 파티션을 병합할 수 있습니다 합니다 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XMLA (XML for Analysis) 명령을 합니다. 파티션 병합은 파티션을 관리할 때 수행하는 중요한 동작으로, 특히 날짜별로 파티션된 기록 데이터가 들어 있는 파티션을 관리하는 데 유용합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "50145853"
 ### <a name="code"></a>코드  
   
 ```  
-<MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<MergePartitions xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Sources>  
     <Source>  
       <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  

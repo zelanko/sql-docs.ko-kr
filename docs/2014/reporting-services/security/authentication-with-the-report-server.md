@@ -17,18 +17,18 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192933"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357111"
 ---
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 IIS를 통해 모든 인증 지원을 제공했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 릴리스부터는 IIS가 더 이상 사용되지 않고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모든 인증 요청을 내부적으로 처리합니다.  
+>  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 IIS를 통해 모든 인증 지원을 제공했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 릴리스부터는 IIS가 더 이상 사용되지 않고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 모든 인증 요청을 내부적으로 처리합니다.  
   
  보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 애플리케이션은 인증을 받아야 액세스 권한을 받을 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48192933"
 |RSWindowsNegotiate|Negotiate|사용자 계정 컨트롤|Windows 통합 Kerberos 인증을 먼저 시도하지만 Active Directory가 보고서 서버에 클라이언트 요청에 대한 티켓을 부여하지 못할 경우 NTLM으로 대체됩니다. Negotiate는 티켓을 사용할 수 없는 경우에만 NTLM으로 대체됩니다. 첫 번째 시도 결과가 티켓 누락이 아닌 오류인 경우 보고서 서버는 두 번째 시도를 하지 않습니다.|  
 |RSWindowsNTLM|NTLM|사용자 계정 컨트롤|Windows 통합 인증에 NTLM이 사용됩니다.<br /><br /> 자격 증명은 다른 요청에 대해 위임되거나 가장되지 않습니다. 이후 요청은 새 시도-응답 시퀀스를 따릅니다. 네트워크 보안 설정에 따라 사용자에게 자격 증명을 요구하는 메시지가 표시되거나 인증 요청이 투명하게 처리됩니다.|  
 |RSWindowsKerberos|Kerberos|아니요|Windows 통합 인증에 Kerberos를 사용합니다. 서비스 계정에 대해 SPN(서비스 사용자 이름)을 설정하여 Kerberos를 구성해서는 안 됩니다. 여기에는 도메인 관리자 권한이 요구됩니다. Kerberos에 ID 위임을 설정하는 경우 보고서에 데이터를 제공하는 외부 데이터 원본에 대한 추가 연결에 보고서를 요청하는 사용자의 토큰을 사용할 수도 있습니다.<br /><br /> RSWindowsKerberos를 지정하기 전에 사용 중인 브라우저 종류가 이를 실제로 지원하는지 확인해야 합니다. Internet Explorer를 사용하는 경우 Kerberos 인증은 Negotiate를 통해서만 지원됩니다. Internet Explorer는 Kerberos를 직접 지정하는 인증 요청은 작성하지 않습니다.|  
-|RSWindowsBasic|Basic|아니요|기본 인증은 HTTP 프로토콜에 정의되며 보고서 서버에 대한 HTTP 요청을 인증하는 데만 사용됩니다.<br /><br /> 자격 증명이 Base-64 인코딩으로 HTTP 요청에 전달됩니다. 기본 인증을 사용하는 경우 사용자 계정 정보를 네트워크를 통해 보내기 전에 SSL(Secure Sockets Layer)을 사용하여 암호화합니다. SSL은 HTTP TCP/IP 연결을 통해 클라이언트에서 보고서 서버로 연결 요청을 보내는 데 암호화된 채널을 제공합니다. 자세한 내용은 [TechNet 웹 사이트의](http://go.microsoft.com/fwlink/?LinkId=71123) SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.|  
+|RSWindowsBasic|Basic|아니요|기본 인증은 HTTP 프로토콜에 정의되며 보고서 서버에 대한 HTTP 요청을 인증하는 데만 사용됩니다.<br /><br /> 자격 증명이 Base-64 인코딩으로 HTTP 요청에 전달됩니다. 기본 인증을 사용하는 경우 사용자 계정 정보를 네트워크를 통해 보내기 전에 SSL(Secure Sockets Layer)을 사용하여 암호화합니다. SSL은 HTTP TCP/IP 연결을 통해 클라이언트에서 보고서 서버로 연결 요청을 보내는 데 암호화된 채널을 제공합니다. 자세한 내용은 [TechNet 웹 사이트의](https://go.microsoft.com/fwlink/?LinkId=71123) SSL을 사용하여 기밀 데이터 암호화(Using SSL to Encrypt Confidential Data) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.|  
 |사용자 지정|(Anonymous)|아니요|익명 인증은 HTTP 요청의 인증 헤더를 무시하도록 보고서 서버에 지시합니다. 보고서 서버는 사용자 인증을 위해 제공한 사용자 지정 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms 인증에 대한 호출을 제외한 모든 요청을 수락합니다.<br /><br /> 보고서 서버의 모든 인증 요청을 처리하는 사용자 지정 인증 모듈을 배포하는 경우에만 `Custom`을 지정하십시오. 사용자 지정 인증 유형은 기본 Windows 인증 확장 프로그램에서 사용할 수 없습니다.|  
   
 ## <a name="unsupported-authentication-methods"></a>지원되지 않는 인증 방법  

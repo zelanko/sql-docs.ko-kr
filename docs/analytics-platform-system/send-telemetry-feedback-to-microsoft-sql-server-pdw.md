@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701731"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591144"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System에 대 한 Microsoft 원격 분석 피드백 보내기
 Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 선택적 원격 분석 기능이 있습니다. 
@@ -26,14 +26,14 @@ Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 
 최대 개인 정보 보호를 제공 하려면 AP는 원격 분석을 사용 하지 않고 제공 됩니다. 이 기능을 사용 하기 전에 먼저 검토 합니다 [Microsoft Analytics Platform System 개인정보취급방침](https://go.microsoft.com/fwlink/?LinkId=400902)합니다. 옵트인 하려면 아래 설명 된 PowerShell 스크립트를 실행 합니다.  
   
 ## <a name="enable"></a>원격 분석을 사용 하도록 설정  
-**DNS 전달:** Microsoft를 원격 분석 데이터를 보내는 DNS 전달자를 통해 인터넷에 연결할 Analytics Platform System이 필요 합니다. 이 기능을 사용 하려면 모든 호스트 및 Vm 워크 로드에 전달 하는 DNS를 설정 해야 합니다. 호출을 `Enable-RemoteMonitoring` 명령과 `SetupDnsForwarder` 제대로 DNS 전달을 구성 하 고 원격 분석을 사용 하도록 설정 하는 옵션입니다. 호출을 `Enable-RemoteMonitoring` 없이 명령을 합니다 `SetupDnsForwarder` DNS 전달을 이미 구성 되어 있고 하트 비트 모니터링 사용 하려는 경우 옵션입니다.  
+**DNS 전달 합니다.** Microsoft로 원격 분석 데이터를 보내는 DNS 전달자를 통해 인터넷에 연결할 Analytics Platform System 필요 합니다. 이 기능을 사용 하려면 모든 호스트 및 Vm 워크 로드에 전달 하는 DNS를 설정 해야 합니다. 호출을 `Enable-RemoteMonitoring` 명령과 `SetupDnsForwarder` 제대로 DNS 전달을 구성 하 고 원격 분석을 사용 하도록 설정 하는 옵션입니다. 호출을 `Enable-RemoteMonitoring` 없이 명령을 합니다 `SetupDnsForwarder` DNS 전달을 이미 구성 되어 있고 하트 비트 모니터링 사용 하려는 경우 옵션입니다.  
   
 > [!IMPORTANT]  
 > DNS 전달을 사용 하도록 설정 하면 모든 호스트 및 워크 로드 Vm에 대 한 인터넷 연결이 열립니다.  
   
 #### <a name="to-enable-feedback"></a>피드백을 사용 하도록 설정 하려면  
   
-1.  어플라이언스 도메인 관리자 계정으로 사용 하 여 제어 노드에 연결 (***appliance_domain *-CTL01**) Windows 관리자 자격 증명을 사용 하 여 명령 프롬프트를 엽니다.  
+1.  어플라이언스 도메인 관리자 계정으로 사용 하 여 제어 노드에 연결 (<strong>*appliance_domain*-CTL01</strong>) Windows 관리자 자격 증명을 사용 하 여 명령 프롬프트를 엽니다.  
   
 2.  다음 디렉터리로 이동 합니다. `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`합니다.  
   
@@ -83,7 +83,7 @@ Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 
   
 #### <a name="to-disable-telemetry"></a>원격 분석을 사용 하지 않도록 설정  
   
-1.  어플라이언스 도메인 관리자 계정으로 사용 하 여 제어 노드에 연결 (***appliance_domain *-CTL01**) 하 고 관리자 권한으로 PowerShell 창을 엽니다.  
+1.  어플라이언스 도메인 관리자 계정으로 사용 하 여 제어 노드에 연결 (<strong>*appliance_domain*-CTL01</strong>) 하 고 관리자 권한으로 PowerShell 창을 엽니다.  
   
 2.  다음 디렉터리로 이동 합니다. `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`합니다.  
   

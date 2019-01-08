@@ -20,16 +20,16 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ed580bd89dc7bf4c1f0af520f43f6ca8d616a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733731"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590707"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLExecDirect** 문에 매개 변수가 있으면 매개 변수 표식 변수의 현재 값을 사용 하 여 preparable 문을 실행 합니다. **SQLExecDirect** 일회 실행에 대 한 SQL 문을 제출 하는 가장 빠른 방법은 합니다.  
@@ -86,7 +86,7 @@ SQLRETURN SQLExecDirect(
 |22015|간격 필드 오버플로|*\*StatementText* 정확한 숫자 또는 간격 매개 변수를 포함 하는, 했기 때문에 유효 자릿수의 손실 간격 SQL 데이터 형식으로 변환 하는 경우.<br /><br /> *\*StatementText* 둘 이상의 필드를 사용 하 여 간격 매개 변수는 포함 된 열에서 숫자 데이터 형식으로 변환 하는 경우 숫자 데이터 형식에서으로 표시 되지 했습니다는 합니다.<br /><br /> *\*StatementText* 간격 SQL 형식에 할당 된 매개 변수 데이터를 포함 했는데 간격 SQL 형식 표현 방식이 없기 C 형식의 값입니다.<br /><br /> 정확한 수치 또는 간격 했기 때문에 유효 자릿수의 손실 C 간격 유형 SQL 형식은 입/출력 또는 출력 매개 변수를 할당 합니다.<br /><br /> 입/출력 또는 출력 매개 변수를 C 간격 구조에 할당 된 경우 간격 데이터 구조의 데이터를에서 표현 방식이 없기 있었습니다.|  
 |22018|캐스트 사양의 문자 값|*\*StatementText* C 형식을 포함 하는 정확 하거나 대략적인 숫자, datetime, 또는 간격 데이터 형식 된; 열의 SQL 형식을 문자 데이터 형식으로 되어 열의 값이 바인딩된 C 형식의 유효한 리터럴이 됩니다.<br /><br /> 입/출력 또는 출력 매개 변수를 반환 하는 경우 SQL 형식 되었거나는 정확 하거나 대략적인 숫자, 날짜/시간을를 간격 데이터 형식 C 형식을 SQL_C_CHAR; 및 값 열에 바인딩된 SQL 형식의 올바른 리터럴 없습니다.|  
 |22019|잘못 된 이스케이프 문자|\**StatementText* 포함 된 SQL 문을 포함할를 **와 같은** 조건자와 함께 **이스케이프** 에 **여기서** 절과 이스케이프의 길이 다음 문자 **이스케이프** 1 없습니다.|  
-|22025|잘못 된 이스케이프 시퀀스|\**StatementText* 포함 된 SQL 문을 포함 된 "**와 같은** *패턴 값* **이스케이프** *이스케이프 문자* "에 **여기서** 절 및 패턴 값의 이스케이프 문자 뒤의 문자 중 하나가 아니었습니다"%"또는"_"합니다.|  
+|22025|잘못 된 이스케이프 시퀀스|\**StatementText* 포함 된 SQL 문을 포함 된 "**와 같은** _패턴 값_ **이스케이프** _이스케이프 문자_ "에 **여기서** 절 및 패턴 값의 이스케이프 문자 뒤의 문자 중 하나가 아니었습니다"%"또는"_"합니다.|  
 |23000|무결성 제약 조건 위반|**StatementText* 리터럴 또는 매개 변수를 포함 하는 SQL 문을 포함 합니다. 매개 변수 값을 NULL 연결 된 테이블 열에 NOT NULL로 정의 된 열에 대 한, 중복 된 값을 고유한 값만 포함 하도록 제한 열에 대해 제공한 되었거나 일부 다른 무결성 제약 조건을 위반 했습니다.|  
 |24000|잘못된 커서 상태|에 커서가 있었기 합니다 *StatementHandle* 하 여 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 이 오류는 경우 드라이버 관리자에 의해 반환 됩니다 **SQLFetch** 하거나 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 하지 않은 한 경우 드라이버에서 반환 됩니다 **SQLFetch** 또는**SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.<br /><br /> 커서를 배치 하지 않습니다 하지만 열려 있었던 합니다 *StatementHandle*합니다.<br /><br /> **StatementText* 시작 결과 집합 또는 결과 집합의 끝 뒤에 커서가 있었기를 위치 지정 update 또는 delete 문, 및에 포함 합니다.|  
 |34000|잘못된 커서 이름|**StatementText* 실행 중인 문에 의해 참조 되는 커서가 열리지 않았습니다.는 현재 위치 update 또는 delete 문, 및에 포함 합니다.|  
@@ -108,7 +108,7 @@ SQLRETURN SQLExecDirect(
 |HY009|Null 포인터를 잘못 사용 했습니다.|(DM) **StatementText* 가 null 포인터입니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM)를 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한 합니다 *StatementHandle*합니다. 이 비동기 함수가 여전히 실행 시기를 **SQLExecDirect** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대해 호출 된 합니다 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM)를 비동기적으로 실행 중인 함수 (없습니다이 하나)에 대해 호출 된 합니다 *StatementHandle* 이 함수가 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**를 **SQLExecDirect**를 **SQLBulkOperations**, 또는 **SQLSetPos** 에 대해 호출 된는  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 전송 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) 인수 *TextLength* 보다 작거나 0에 있지만 같지 않음 SQL_NTS 되었습니다.<br /><br /> 매개 변수 값을 사용 하 여 설정 **SQLBindParameter**가 null 포인터, 및 매개 변수 길이 값이 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC SQL_DEFAULT_PARAM으로 SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 매개 변수 값을 사용 하 여 설정할 **SQLBindParameter**, null 포인터 없습니다; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 및 매개 변수 길이 값이 0 보다 작은 하지만 SQL_NTS, SQL_NULL_DATA, SQL_DATA_AT_EXEC SQL_DEFAULT_ 없습니다 PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 매개 변수 길이 값을 읽었으며 **SQLBindParameter** ; SQL_DATA_AT_EXEC로 설정 했습니다. SQL 형식 된 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 long 데이터 소스 관련 데이터 형식 및 SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) 인수 *TextLength* 보다 작거나 0에 있지만 같지 않음 SQL_NTS 되었습니다.<br /><br /> 매개 변수 값을 사용 하 여 설정 **SQLBindParameter**가 null 포인터, 및 매개 변수 길이 값이 0, SQL_NULL_DATA, SQL_DATA_AT_EXEC SQL_DEFAULT_PARAM으로 SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 매개 변수 값을 사용 하 여 설정할 **SQLBindParameter**, null 포인터 없습니다; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 및 매개 변수 길이 값이 0 보다 작은 하지만 SQL_NTS, SQL_NULL_DATA, SQL_DATA_AT_EXEC SQL_DEFAULT_ 없습니다 PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 매개 변수 길이 값을 읽었으며 **SQLBindParameter** ; SQL_DATA_AT_EXEC로 설정 했습니다. SQL 형식 된 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 long 데이터 소스 특정 데이터 형식 및 SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.|  
 |HY105|잘못 된 매개 변수 형식|인수에 지정 된 값 *InputOutputType* 에 **SQLBindParameter** SQL_PARAM_OUTPUT, 개이고 매개 변수는 입력된 매개 변수 였습니다.|  
 |HY109|잘못 된 커서 위치|\**StatementText* 에 커서가 있었기를 위치 지정 update 또는 delete 문, 및 포함 된 (하 여 **SQLSetPos** 또는 **SQLFetchScroll**)에 한 행을 삭제 하거나 가져올 수 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
@@ -139,7 +139,7 @@ SQLRETURN SQLExecDirect(
  책갈피 설정 및 쿼리를 실행 하는 경우를 책갈피를 지원할 수 없습니다, 드라이버를 특성 값을 변경 하 고 SQLSTATE 01S02 반환 하 여 책갈피를 지원 하도록 환경의 강제 변환 하려고 시도 합니다 (옵션 값이 변경 됨). 드라이버 SQLSTATE HY024 반환할 특성을 변경할 수 없는 경우 (잘못 된 특성 값).  
   
 > [!NOTE]  
->  응용 프로그램 연결 풀링을 사용 하는 경우와 같은 데이터베이스 또는 데이터베이스의 컨텍스트를 변경 하는 SQL 문을 실행 하지 해야 합니다 **사용 하 여** *데이터베이스* 변경 하는 SQL Server에서 문 데이터 원본에서 사용 하는 카탈로그입니다.  
+>  응용 프로그램 연결 풀링을 사용 하는 경우와 같은 데이터베이스 또는 데이터베이스의 컨텍스트를 변경 하는 SQL 문을 실행 하지 해야 합니다 **사용 하 여** _데이터베이스_ 변경 하는 SQL Server에서 문 데이터 원본에서 사용 하는 카탈로그입니다.  
   
 ## <a name="code-example"></a>코드 예  
  참조 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)하십시오 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), 및 [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)합니다.  

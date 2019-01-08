@@ -14,12 +14,12 @@ ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc3a6bd0929cf8f635247c532acead41a84b36a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2423a011e75d346d196ebe5ebac2597ac30914a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374705"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>일부 동기 복제본이 동기화되지 않음
     
@@ -36,7 +36,7 @@ ms.locfileid: "48133923"
  이 정책은 모든 가용성 복제본의 데이터 동기화 상태를 롤업하여 예상되는 동기화 상태가 아닌 가용성 복제본이 있는지 확인합니다. SYNCHRONIZING 상태가 아닌 비동기 복제본이 있거나 SYNCHRONIZED 상태가 아닌 동기 복제본이 있으면 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [일부 동기 복제본이 동기화되지 않음](http://go.microsoft.com/fwlink/p/?LinkId=220853) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [일부 동기 복제본이 동기화되지 않음](https://go.microsoft.com/fwlink/p/?LinkId=220853) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 가용성 그룹에서 하나 이상의 동기 복제본이 현재 동기화되지 않았습니다. 복제본 동기화 상태는 SYNCHONIZING 또는 NOT SYNCHRONIZING일 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48133923"
 ## <a name="possible-solution"></a>가능한 해결 방법  
  가용성 복제본 정책 상태를 사용하여 잘못된 동기화 상태의 가용성 복제본을 찾은 다음 가용성 복제본에서 문제를 해결합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

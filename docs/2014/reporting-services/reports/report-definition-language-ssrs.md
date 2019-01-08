@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e84a24256dfdfe493a96786ca08cb640a8975b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065603"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367019"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -39,12 +39,12 @@ ms.locfileid: "48065603"
 -   추가 네임스페이스 및 사용자 지정 요소를 지원하는 개방형의 확장 가능한 스키마  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL 사양  
- 특정 스키마 버전에 대한 사양을 다운로드하려면 [Report Definition Language 사양(Report Definition Language Specification)](http://go.microsoft.com/fwlink/?linkid=116865)을 참조하십시오.  
+ 특정 스키마 버전에 대한 사양을 다운로드하려면 [Report Definition Language 사양(Report Definition Language Specification)](https://go.microsoft.com/fwlink/?linkid=116865)을 참조하십시오.  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 검증됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
   
- 스키마는 RDL 요소를 포함 하는 예를 들어 `ReportParameters`, 복합 형식인 `ReportParametersType`합니다. 규칙에 따라 요소의 복합 형식을의 이름인 요소 다음의 단어로 `Type`합니다. A `ReportParameters` 요소에 포함 될 수는 `Report` 요소 (복합 형식)를 포함할 수 있습니다 `ReportParameter` 요소입니다. A `ReportParameterType` 는 다음 값 중 하나에 될 수 있는 단순 유형: `Boolean`, `DateTime`, `Integer`를 `Float`, 또는 `String`합니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
+ 예를 들어 스키마가 복합 유형 `ReportParameters`인 RDL 요소 `ReportParametersType`를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 `Type`이라는 단어를 붙여 만듭니다. `ReportParameters` 요소는 `Report` 요소(복합 유형)에 포함될 수 있고, `ReportParameter` 요소를 포함할 수 있습니다. `ReportParameterType`은 단순 유형으로 값은 `Boolean`, `DateTime`, `Integer`, `Float` 또는 `String` 중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대 한 자세한 내용은 참조 하세요. [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)합니다.  
   
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다. http://servername/reportserver/reportdefinition.xsd  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48065603"
 |형식|Description|  
 |----------|-----------------|  
 |`Binary`|Base-64로 인코딩된 이진 값을 갖는 속성입니다.|  
-|`Boolean`|개체 값으로 `true` 또는 `false`를 갖는 속성입니다. 생략된 된 선택적 Boolean 개체의 값은 지정 하지 않으면 `False`합니다.|  
+|`Boolean`|개체 값으로 `true` 또는 `false`를 갖는 속성입니다. 다르게 지정되지 않는 이상 생략된 선택적 Boolean 개체의 값은 `False`입니다.|  
 |`Date`|완전히 지정된 날짜 또는 ISO8601 날짜 형식(YYYY-MM-DD[THH:MM[:SS[.S]]])으로 지정된 날짜/시간 값을 갖는 속성입니다.|  
 |`Enum`|지정된 값 목록의 하나인 문자열 텍스트 값을 갖는 속성입니다.|  
 |`Float`|float 값을 갖는 속성입니다. 마침표(.)를 선택적 소수 구분 기호로 사용합니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "48065603"
 |`Language`|미국 영어의 경우 "en-us"와 같이 언어 및 culture 코드가 포함된 텍스트 값을 갖는 속성입니다. 값은 기본 언어가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 정의된 중립 언어 또는 특정 언어여야 합니다.|  
 |`Name`|문자열 텍스트 값을 갖는 속성입니다. 이름은 항목의 네임스페이스 내에서 고유해야 합니다. 지정하지 않을 경우 항목의 네임스페이스는 가장 안쪽에 위치하고 있으며 이름이 있는 포함하는 개체입니다.|  
 |`NormalizedString`|일반화된 문자열 텍스트 값을 갖는 속성입니다.|  
-|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](http://go.microsoft.com/fwlink/?LinkId=9257)를 참조하십시오.<br /><br /> RDL에 대 한 최대값에서 `Size` 은 160입니다. 최소 크기는 0인치입니다.|  
+|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](https://go.microsoft.com/fwlink/?LinkId=9257)를 참조하십시오.<br /><br /> RDL에서 `Size`의 최대값은 160인치이고 최소 크기는 0인치입니다.|  
 |`String`|문자열 텍스트 값을 갖는 속성입니다.|  
 |`UnsignedInt`|서명되지 않은 정수(int32) 값을 갖는 속성입니다.|  
 |`Variant`|단순 XML 유형을 갖는 속성입니다.|  
@@ -88,8 +88,8 @@ ms.locfileid: "48065603"
 |String, Char, GUID, Timespan|String|  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 정의 스키마 버전 찾기 &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
- [보고서를 사용 하 여 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
+ [보고서에서 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [사용자 지정 보고서 항목](../custom-report-items/custom-report-items.md)  
   
   

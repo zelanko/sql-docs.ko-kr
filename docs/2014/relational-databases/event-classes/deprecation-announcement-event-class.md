@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 362e5046207d28be934c382b5e5dd2054d5f2a97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799067"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 이벤트 클래스
   **Deprecation Announcement** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 제거되지만 다음 번 주요 릴리스에서는 제거되지 않을 기능을 사용할 때 발생합니다. 애플리케이션을 오랫동안 유지하려면 **Deprecation Announcement** 이벤트 클래스 또는 **Deprecation Final Support** 이벤트 클래스가 발생되는 기능을 사용하지 마십시오.  
@@ -32,7 +31,7 @@ ms.locfileid: "48204669"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|사용자 계정 컨트롤|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
-|DatabaseID|`int`|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터베이스의 이름이 표시는 `ServerName` 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있습니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
+|DatabaseID|`int`|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. `ServerName` 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |EventClass|`int`|이벤트 유형 = 125|27|아니요|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  

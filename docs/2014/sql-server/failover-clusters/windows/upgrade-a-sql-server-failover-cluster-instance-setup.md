@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363715"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 마법사를 사용하거나 명령 프롬프트에서 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터로 업그레이드할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48906493"
   
  명령 프롬프트에 사용할 예제 구문에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [장애 조치(Failover) 클러스터링을 설치하기 전에](../install/before-installing-failover-clustering.md)  
@@ -46,11 +45,11 @@ ms.locfileid: "48906493"
   
 -   Visual Studio 구성 요소가 올바르게 설치될 수 있도록 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 업데이트를 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 이 업데이트가 있는지 여부를 확인한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 계속하기 전에 업데이트를 다운로드하여 설치해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 중 작업이 중단되는 것을 방지하려면 아래에 설명된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치를 실행하기 전에 업데이트를 다운로드하여 설치할 수 있습니다(또는 Windows Update에서 사용 가능한 .NET 3.5 SP1의 모든 업데이트 설치).  
   
-     설치 하는 경우 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Windows Server 2008 SP2 운영 체제가 설치 된 컴퓨터에서 필요한 업데이트를 가져올 수 있습니다 [여기](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     설치 하는 경우 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Windows Server 2008 SP2 운영 체제가 설치 된 컴퓨터에서 필요한 업데이트를 가져올 수 있습니다 [여기](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP1 또는 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 운영 체제가 설치된 컴퓨터에 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 를 설치하는 경우 이 업데이트가 포함되어 있습니다.  
   
--   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][릴리스 정보](http://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
+-   .NET Framework 3.5 SP1은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램으로 더 이상 설치되지 않지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]를 설치할 경우 필요할 수 있습니다. 자세한 내용은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=296445)를 참조하십시오.  
   
 -   로컬로 설치하는 경우 관리자로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906493"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드  
  다음과 같은 두 가지 업그레이드 시나리오가 있을 수 있습니다.  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터가 현재 단일 서브넷에 구성 되어 있습니다.: 기존 클러스터를 먼저 업그레이드 해야 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 설치 프로그램을 시작 하 고 다음 업그레이드 프로세스에서 합니다. 기존 장애 조치(Failover) 클러스터의 업그레이드를 완료한 후에는 AddNode 기능을 사용해서 다른 서브넷에 있는 노드를 추가합니다. 클러스터 네트워크 구성 페이지에서 IP 주소 리소스 종속성을 OR로 변경하도록 확인하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터 구성이 완료됩니다.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터가 현재 단일 서브넷에 구성되어 있는 경우. 설치 프로그램을 실행하고 다음 업그레이드 프로세스를 수행하여 기존 클러스터를 먼저 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]로 업그레이드해야 합니다. 기존 장애 조치(Failover) 클러스터의 업그레이드를 완료한 후에는 AddNode 기능을 사용해서 다른 서브넷에 있는 노드를 추가합니다. 클러스터 네트워크 구성 페이지에서 IP 주소 리소스 종속성을 OR로 변경하도록 확인하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터 구성이 완료됩니다.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터가 현재 V-LAN 늘이기 기술을 사용 하는 여러 서브넷에 구성 된: 기존 클러스터를 먼저 업그레이드 해야 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]합니다. V-LAN 확장 기술은 단일 서브넷을 구성하기 때문에 네트워크 구성을 다중 서브넷으로 변경하고 Windows 장애 조치(Failover) 클러스터 관리 도구를 사용하여 IP 주소 리소스 종속성을 OR로 변경해야 합니다.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터가 현재 V-LAN 확장 기술을 사용하여 다중 서브넷에 구성되어 있는 경우. 먼저 기존 클러스터를 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]로 업그레이드해야 합니다. V-LAN 확장 기술은 단일 서브넷을 구성하기 때문에 네트워크 구성을 다중 서브넷으로 변경하고 Windows 장애 조치(Failover) 클러스터 관리 도구를 사용하여 IP 주소 리소스 종속성을 OR로 변경해야 합니다.  
   
 ###  <a name="BestPractices"></a> 업그레이드 수행 전 최선의 방법은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터  
  다시 시작으로 인한 예기치 않은 작동 중단 시간을 없애려면 클러스터 노드에서 업그레이드를 실행하기 전에 모든 장애 조치(Failover) 클러스터 노드에 .NET Framework 4.0용 다시 부팅 불필요 패키지를 사전 설치합니다. 다음 단계를 수행하여 필수 구성 요소를 사전 설치하는 것이 좋습니다.  
@@ -184,7 +183,7 @@ ms.locfileid: "48906493"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

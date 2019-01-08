@@ -19,12 +19,12 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8840eb9d3e47d2d5938fa23954cf820908428dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376385"
 ---
 # <a name="handling-errors-and-messages"></a>오류 및 메시지 처리
   응용 프로그램이 ODBC 함수를 호출하면 드라이버가 함수를 실행하고 반환 코드와 진단 레코드라는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드는 ODBC 함수의 전반적인 성공 또는 실패를 나타내고, 진단 레코드는 함수에 대한 자세한 정보를 제공합니다. 진단 레코드에는 헤더 레코드 및 상태 레코드가 포함됩니다. 함수가 성공하더라도 한 개 이상의 진단 레코드, 즉 헤더 레코드가 반환됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48137983"
   
  원래 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 API 인 C 언어용 Db-library 허용 콜백 오류 처리를 설치할 응용 프로그램 및 해당 반환 오류 또는 메시지가 메시지 처리 함수입니다. PRINT, RAISERROR, DBCC 및 SET과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과를 결과 집합이 아닌 DB-Library 메시지 처리기 함수로 반환합니다. 그러나 ODBC API에는 이러한 콜백 기능이 없습니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 다시 보낸 메시지를 검색 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ODBC 반환 코드를 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 설정 하 고 메시지를 하나 이상의 진단 레코드를 반환 합니다. 따라서 ODBC 응용 프로그램을 신중 하 게 테스트 해야 이러한 반환 코드 및 호출에 대 한 **SQLGetDiagRec** 메시지 데이터를 검색 합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 오류 추적에 추가 된 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하십시오 [확장 이벤트 로그의 진단 정보 액세스](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 오류 추적에 추가 된 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하십시오 [확장 이벤트 로그의 진단 정보 액세스](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

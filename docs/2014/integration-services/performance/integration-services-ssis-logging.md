@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,12 +24,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050183"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369774"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -213,7 +212,7 @@ ms.locfileid: "48050183"
 -   [이벤트 로그 창에서 로그 항목 보기](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>관련 내용  
- [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>관련 항목  
  [이벤트 로그 창에서 로그 항목 보기](../view-log-entries-in-the-log-events-window.md)  

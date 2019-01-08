@@ -13,12 +13,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229023"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371535"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
   데이터 파일은 테이블의 해당 열에서 서로 다른 순서로 정렬된 필드를 포함할 수 있습니다. 이 항목에서는 테이블 열과 서로 다른 순서로 필드가 정렬된 데이터 파일에 맞게 수정된 비 XML 및 XML 서식 파일에 대해 설명합니다. 수정된 서식 파일은 데이터 필드를 해당 테이블 열로 매핑합니다.  
@@ -100,7 +100,7 @@ GO
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  XML 스키마의 구문 및 추가 XML 서식 파일 예제에 대한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)를 참조하세요.  
   
 ### <a name="example"></a>예제  
- 다음 예에서는 `OPENROWSET` 대량 행 집합 공급자에서 XML 서식 파일인 `myTestOrder-c.txt` 을 사용하여 `myTestOrder` 데이터 파일에서 `myTestOrder.xml` 예제 테이블로 데이터를 대량으로 가져옵니다. `INSERT… SELECT` 문은 SELECT 목록에서 열 목록을 지정합니다.  
+ 다음 예에서는 `OPENROWSET` 대량 행 집합 공급자에서 XML 서식 파일인 `myTestOrder-c.txt` 을 사용하여 `myTestOrder` 데이터 파일에서 `myTestOrder.xml` 예제 테이블로 데이터를 대량으로 가져옵니다. `INSERT... SELECT` 문은 SELECT 목록에서 열 목록을 지정합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
@@ -138,7 +138,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

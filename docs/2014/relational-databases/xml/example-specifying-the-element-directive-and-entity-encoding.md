@@ -1,5 +1,5 @@
 ---
-title: '예제: ELEMENT 지시어 및 엔터티 인코딩 지정 | Microsoft 문서'
+title: '예: ELEMENT 지시어 및 엔터티 인코딩 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 375a8e520de2e50f9a9ab47ea4b597a33f6fb5bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089333"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360805"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>예제: ELEMENT 지시어 및 엔터티 인코딩 지정
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>예: ELEMENT 지시어 및 엔터티 인코딩 지정
   이 예에서는 **ELEMENT** 및 **XML** 지시어 간의 차이점을 보여 줍니다. **ELEMENT** 지시어는 데이터를 엔터티화하지만 **XML** 지시어는 그렇지 않습니다. \<Summary> 요소는 쿼리에서 할당된 XML인 `<Summary>This is summary description</Summary>`입니다.  
   
  다음 쿼리를 살펴보십시오.  
@@ -84,7 +84,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  

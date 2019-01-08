@@ -12,12 +12,12 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2706d2ec2c82828534c41851001dbac644ecbe1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 859a2b99a62b0ed33f3c6773fe2df3dcbdb91a87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366825"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -36,6 +36,6 @@ ms.locfileid: "48132493"
  자르기 작업이 실패했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 이 상태 코드에 대 한 자세한 내용은 참조는 [이벤트 및 오류 메시지 센터](http://go.microsoft.com/fwlink/?linkid=47660)합니다.  
+ 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 이 상태 코드에 대 한 자세한 내용은 참조는 [이벤트 및 오류 메시지 센터](https://go.microsoft.com/fwlink/?linkid=47660)합니다.  
   
   

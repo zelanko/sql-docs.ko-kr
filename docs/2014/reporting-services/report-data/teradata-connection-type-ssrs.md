@@ -11,12 +11,12 @@ ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 236f883056ccfd7c66701f5126b313ccbe2361b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b11e02c807abe8fa4231d15129f5ae3b96d5c05a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074563"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366565"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 연결 형식(SSRS)
   보고서에 Teradata 관계형 데이터베이스의 데이터를 포함하려면 Teradata 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 .NET Managed Provider for Teradata 데이터 처리 확장 프로그램을 기반으로 합니다.  
@@ -44,7 +44,7 @@ data source=<IP Address>
 ##  <a name="Remarks"></a> 주의  
  Teradata 데이터 원본을 연결하려면 시스템 관리자가 Teradata 데이터베이스에서 데이터를 검색할 수 있도록 하는 .NET Data Provider for Teradata 버전을 설치해야 합니다. 이 데이터 공급자는 보고서 작성기와 동일한 컴퓨터뿐 아니라 보고서 서버에도 설치되어야 합니다.  
   
- 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
+ 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -68,10 +68,10 @@ data source=<IP Address>
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  데이터 세트 쿼리에 의해 생성되는 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
- [.NET Framework Data Provider for Teradata에서 SQL Server 2008 Reporting Services 사용](http://go.microsoft.com/fwlink/?LinkID=130848)  
+ [.NET Framework Data Provider for Teradata에서 SQL Server 2008 Reporting Services 사용](https://go.microsoft.com/fwlink/?LinkID=130848)  
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  

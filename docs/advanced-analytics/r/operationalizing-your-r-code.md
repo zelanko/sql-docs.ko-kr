@@ -1,5 +1,6 @@
 ---
-title: SQL Server Machine Learning Services에서 R 코드 운영 화 | Microsoft Docs
+title: 저장된 프로시저-SQL Server Machine Learning Services를 사용 하 여 R 코드 운영 화
+description: SQL Server 데이터베이스에 액세스할 수 있는 클라이언트 응용 프로그램에 사용할 수 있도록 SQL Server 저장 프로시저에서 R 언어 코드를 포함 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952466"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432186"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R 코드 (Machine Learning 서비스)를 운영 화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "38952466"
 
 + [R Services에서 사용할 R 코드 변환](converting-r-code-for-use-in-sql-server.md)
 
-+ [Sqlrutils를 사용 하 여 저장 프로시저는 R를 생성 합니다.](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Sqlrutils 도우미 함수 사용](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>응용 프로그램을 사용 하 여 R 및 Python 통합
 
@@ -63,7 +64,7 @@ ms.locfileid: "38952466"
 이러한 솔루션 템플릿은 응용 프로그램에서 점수 매기기를 통합 하는 방법에 대 한 예제를 참조 하세요.
 
 + [소매 예측](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [사기 감지](https://github.com/Microsoft/r-server-fraud-detection)
++ [사기 검색](https://github.com/Microsoft/r-server-fraud-detection)
 + [클러스터링 하는 고객](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## <a name="boost-performance-and-scale"></a>성능 향상 및 크기 조정

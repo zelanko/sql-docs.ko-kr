@@ -1,5 +1,5 @@
 ---
-title: '예제: PATH 모드 사용 | Microsoft 문서'
+title: '예: PATH 모드 사용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec8edb82afec3c8437970c6d3b238b3f68172c46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365735"
 ---
-# <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
+# <a name="examples-using-path-mode"></a>예: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>간단한 PATH 모드 쿼리 지정  
@@ -186,12 +186,12 @@ GO
   
  `</Root>`  
   
- 다음 쿼리에서는 제품 모델 ID와 이름 외에 제품 모델의 제조 지침 위치를 검색합니다. Instructions 열 이므로 `xml` 형식에는 `query()` 메서드의 `xml` 위치를 검색할 데이터 형식을 지정 합니다.  
+ 다음 쿼리에서는 제품 모델 ID와 이름 외에 제품 모델의 제조 지침 위치를 검색합니다. Instructions 열은 `xml` 유형이므로 `query()` 데이터 형식의 `xml` 메서드를 지정하여 위치를 검색합니다.  
   
 ```  
 SELECT ProductModelID AS "@id",  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') AS ManuInstr  
 FROM Production.ProductModel  
@@ -210,7 +210,7 @@ GO
   
  `<ManuInstr>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `<MI:step>...</MI:step>...`  
   
@@ -232,7 +232,7 @@ GO
 WITH XMLNAMESPACES (  
    'uri1' AS ns1,    
    'uri2' AS ns2,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
 SELECT ProductModelID AS "ns1:ProductModelID",  
        Name           AS "ns1:Name",  
        Instructions.query('  
@@ -244,9 +244,9 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` 에는 `WITH XMLNAMESPACES`접두사도 정의됩니다. 결과적으로 `query()` 메서드는 `xml` 지정 된 형식 쿼리 프롤로그에 접두사를 정의 하지 않습니다. 다음은 결과입니다.  
+ `MI` 에는 `WITH XMLNAMESPACES`접두사도 정의됩니다. 그 결과로 지정된 `query()` 유형의 `xml` 메서드는 쿼리 프롤로그에 접두사를 정의하지 않습니다. 다음은 결과입니다.  
   
- `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
+ `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
  `<ns2:ProductInfo>`  
   
@@ -254,7 +254,7 @@ GO
   
  `<ns1:Name>HL Touring Frame</ns1:Name>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

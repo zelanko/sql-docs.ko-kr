@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169223"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590867"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 스키마 정보 파일을 사용 하 여 텍스트 파일의 형식이 결정 됩니다. 스키마 정보 파일을 항상 Schema.ini 라는 이며 항상 텍스트 데이터 원본 동일한 디렉터리에 유지 됩니다. 스키마 정보 파일을 파일, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성의 일반 형식에 대 한 정보를 사용 하 여 IISAM을 제공합니다. Schema.ini 파일은 항상 고정 길이 데이터에 액세스 하기 위한 필수입니다. 날짜/시간, 통화 또는 10 진수 데이터 또는 테이블의 데이터를 처리 하 여 더 많은 제어를 하려는 경우 텍스트 테이블에 포함 된 경우에 Schema.ini 파일을 사용 해야 합니다.  
@@ -95,17 +95,17 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 다음 표에서 각 부분을 설명 합니다 **Col * * * n* 항목입니다.  
+ 다음 표에서 각 부분을 설명 합니다 **Col**_n_ 항목입니다.  
   
 |매개 변수|Description|  
 |---------------|-----------------|  
 |*ColumnName*|텍스트 열의 이름입니다. 열 이름에 공백이 포함 된 경우 큰따옴표로 묶습니다 해야 있습니다.|  
-|*type*|데이터 형식 아래와 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> 단일<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트 모드<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short 동일)<br /><br /> LongChar (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
-|**Width**|리터럴 문자열 값 `Width`합니다. 다음 지정 된 열의 너비는 나타냅니다 (문자 구분 된 파일에 대 한 선택적; 고정 길이 파일에 필요).|  
+|*type*|데이터 형식 아래와 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> 비트<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트 모드<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short 동일)<br /><br /> LongChar (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
+|**너비**|리터럴 문자열 값 `Width`합니다. 다음 지정 된 열의 너비는 나타냅니다 (문자 구분 된 파일에 대 한 선택적; 고정 길이 파일에 필요).|  
 |*#*|열의 너비를 지정 하는 정수 값 (필요한 경우 **너비** 지정).|  
   
 ## <a name="selecting-a-character-set"></a>문자 집합의 선택  
- 두 개의 문자 집합에서 선택할 수 있습니다: ANSI 및 OEM입니다. 합니다 **CharacterSet** Schema.ini의 설정은 파일 별로 Windows 레지스트리에서 설정을 재정의 합니다. 다음 예제에서는 문자 집합을 ANSI 설정 하는 Schema.ini 항목을 보여 줍니다.  
+ 두 개의 문자 집합에서 선택할 수 있습니다. ANSI 및 OEM입니다. 합니다 **CharacterSet** Schema.ini의 설정은 파일 별로 Windows 레지스트리에서 설정을 재정의 합니다. 다음 예제에서는 문자 집합을 ANSI 설정 하는 Schema.ini 항목을 보여 줍니다.  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|날짜 및 시간을 나타내는 형식 문자열을 설정할 수 있습니다. 동일한 형식으로 가져오거나 내보낼 모든 날짜/시간 필드를 처리 하는 경우에이 항목을 지정 해야 합니다. 오전을 제외한 모든 Microsoft Jet 형식 오후 지원 됩니다. 형식 문자열이 없는 경우 Windows 제어판 간단한 날짜 및 시간 옵션이 사용 됩니다.|  
 |**DecimalSymbol**|숫자의 소수 부분과에서 정수를 구분 하는 데 사용 되는 모든 단일 문자를 설정할 수 있습니다.|  
 |**NumberDigits**|숫자의 소수 부분에 소수 자릿수를 나타냅니다.|  
-|**NumberLeadingZeros**|1 미만이 고-1 개 이상의 10 진수 값에 선행 0을 포함할지 여부를 지정합니다 이 값일 수 있습니다 하거나 False (선행 0 없음) 또는 True입니다.|  
+|**NumberLeadingZeros**|10 진수 값 보다 작거나 1과-1 보다 더; 앞에 오는 0을 포함할지 여부를 지정합니다 이 값일 수 있습니다 하거나 False (선행 0 없음) 또는 True입니다.|  
 |**CurrencySymbol**|텍스트 파일에서 통화 값에 사용할 수 있는 통화 기호를 나타냅니다. 달러 기호 ($) 및 Dm을 예로 들 수 있습니다.|  
 |**CurrencyPosFormat**|다음 값 중 하나로 설정할 수 있습니다.<br /><br /> -구분 기호가 없는 ($1) 통화 기호 접두사<br />-구분 기호가 없는 통화 기호 접미사 (1$)<br />한 문자 구분 ($ 1)를 사용 하 여 통화 기호 접두사<br />한 문자 구분을 사용 하 여 통화 기호 접미사 (1 $)|  
 |**CurrencyDigits**|통화 금액의 소수 부분에 사용 되는 자릿수를 지정 합니다.|  
-|**CurrencyNegFormat**|다음 값 중 하나를 사용할 수 있습니다.<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 이 예제에는 달러 기호를 보여 주지만 적절 한 바꿔야 **CurrencySymbol** 실제 프로그램에는 값입니다.|  
+|**CurrencyNegFormat**|다음 값 중 하나입니다.<br /><br /> -   ($1)<br />--$1<br />-$1<br />-$1-<br />-   (1$)<br />--1$<br />-$ 1<br />-$-1<br />--1 $<br />--$ 1<br />-$-1<br />-$ 1-<br />-$-1<br />-$ 1<br />-   ($ 1)<br />-   (1 $)<br /><br /> 이 예제에는 달러 기호를 보여 주지만 적절 한 바꿔야 **CurrencySymbol** 실제 프로그램에는 값입니다.|  
 |**CurrencyThousandSymbol**|텍스트 파일의 통화 값을 구분 하 여 사용할 수 있는 단일 문자 기호를 나타냅니다.|  
 |**CurrencyDecimalSymbol**|전체 통화 금액의 소수 부분에서 분리 하는 데 사용 되는 모든 단일 문자를 설정할 수 있습니다.|  
   

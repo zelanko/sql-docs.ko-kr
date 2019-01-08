@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148126"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376615"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV 쿼리는 XML/A Discover 명령을 실행하는 대신 사용할 수 있는 방법입니다. DMV는 쿼리 구문이 SQL에 기반을 두기 때문에 대부분의 관리자에게는 DMV 쿼리를 작성하는 것이 더 간편합니다. 또한 읽고 복사하기가 쉬운 테이블 형식으로 결과 집합이 반환됩니다.  
   
 ##  <a name="bkmk_ex"></a> 예 및 시나리오  
- DMV 쿼리를 사용하면 서비스 세션 및 연결에 대한 정보를 확인할 수 있으며 특정 시점에 CPU나 메모리를 가장 많이 사용하는 개체가 어떤 것인지 파악할 수 있습니다. 이 섹션에서는 DMV 쿼리가 가장 보편적으로 사용되는 시나리오의 예를 제공합니다. DMV 쿼리를 사용하여 서버 인스턴스를 모니터링하는 것에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 를 참조하십시오.  
+ DMV 쿼리를 사용하면 서비스 세션 및 연결에 대한 정보를 확인할 수 있으며 특정 시점에 CPU나 메모리를 가장 많이 사용하는 개체가 어떤 것인지 파악할 수 있습니다. 이 섹션에서는 DMV 쿼리가 가장 보편적으로 사용되는 시나리오의 예를 제공합니다. DMV 쿼리를 사용하여 서버 인스턴스를 모니터링하는 것에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 를 참조하십시오.  
   
- `Select * from $System.discover_object_activity` /** 이 쿼리는 서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다. 이 DMV를 기반으로 한 쿼리 예를 보려면 [새 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)를 참조하세요.  
+ `Select * from $System.discover_object_activity` /** 이 쿼리는 서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다. 이 DMV를 기반으로 한 쿼리 예를 보려면 [새 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)를 참조하세요.  
   
  `Select * from $System.discover_object_memory_usage` /** 이 쿼리는 개체별 메모리 사용량에 대해 보고합니다.  
   
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버는 다음 오류를 반환 하는: "는 \<schemarowset > 서버에서 요청 유형을 인식할 수 없습니다". 다른 모든 오류는 구문 문제를 가리킵니다.  
+>  주어진 행 집합에 대해 DMV를 사용할 수 없으면 다음 오류가 반환됩니다. "는 \<schemarowset > 서버에서 요청 유형을 인식할 수 없습니다". 다른 모든 오류는 구문 문제를 가리킵니다.  
   
 |행 집합|Description|  
 |------------|-----------------|  
@@ -164,8 +164,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|현재 연결에 정의된 집합 목록을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [새 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [제한된 행 집합 및 DMV에 대한 새 SYSTEMRESTRICTEDSCHEMA 함수](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [새 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [제한된 행 집합 및 DMV에 대한 새 SYSTEMRESTRICTEDSCHEMA 함수](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

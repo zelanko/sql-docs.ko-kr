@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354314"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Microsoft SQL Server 병렬 데이터 웨어하우스에 연결(SSAS)
   **테이블 가져오기 마법사**의 이 페이지에서는 Microsoft SQL Server PDW(병렬 데이터 웨어하우스)에 연결하기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
- SQL Server PDW는 방대한 병렬 처리를 통해 비용 효율적인 성능을 제공하며 확장성이 뛰어난 데이터 웨어하우스 어플라이언스입니다. SQL Server PDW에 대한 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스(SQL Server 2008 R2 Parallel Data Warehouse)](http://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오. SQL Server 인증을 사용하여 데이터 웨어하우스에 연결합니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
+ SQL Server PDW는 방대한 병렬 처리를 통해 비용 효율적인 성능을 제공하며 확장성이 뛰어난 데이터 웨어하우스 어플라이언스입니다. SQL Server PDW에 대한 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스(SQL Server 2008 R2 Parallel Data Warehouse)](https://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오. SQL Server 인증을 사용하여 데이터 웨어하우스에 연결합니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   
 > [!NOTE]  
 >  이 페이지에서 데이터베이스를 선택하는 경우 현재 사용자의 자격 증명이 사용됩니다. 하지만 가장 정보 페이지에 지정된 사용자에게 선택한 데이터베이스를 읽을 수 있는 권한이 없는 경우에는 가져오기 작업이 실패합니다.  

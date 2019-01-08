@@ -11,12 +11,12 @@ ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360255"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
   다음은 보고서 파트로 작업할 때 도움이 되는 정보입니다  
@@ -27,7 +27,7 @@ ms.locfileid: "48189323"
  사용자와 사용자의 동료가 갖고 있는 사용 권한을 보려면 보고서 서버 관리자에게 문의하십시오.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint 서버로 업로드한 보고서 파트가 검색되지 않는 이유는 무엇입니까?  
- 보고서 작성기를 사용하여 게시하는 대신 SharePoint 문서 라이브러리로 수동 업로드한 보고서 파트는 보고서 파트 갤러리에 표시되지 않을 수 있습니다. 갤러리 검색에 사용되는 보고서 서버를 SharePoint 문서 라이브러리의 내용과 동기화해야 할 수 있습니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
+ 보고서 작성기를 사용하여 게시하는 대신 SharePoint 문서 라이브러리로 수동 업로드한 보고서 파트는 보고서 파트 갤러리에 표시되지 않을 수 있습니다. 갤러리 검색에 사용되는 보고서 서버를 SharePoint 문서 라이브러리의 내용과 동기화해야 할 수 있습니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>다른 사용자가 자신의 보고서에서 이미지를 볼 수 없는 이유는 무엇입니까?  
  이미지 파일에 대한 링크인 보고서 파트를 게시하는 경우 해당 보고서 파트는 실제로 링크일 뿐입니다. 다른 사용자가 이미지 보고서 파트를 자신의 보고서에 추가할 때 이미지를 볼 수 없는 경우 연결되어 있는 이미지에 대한 사용 권한이 없을 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48189323"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>보고서 파트를 게시하려고 하면 “순환 참조” 오류 메시지가 표시되는 이유는 무엇입니까?  
  순환 참조가 포함된 보고서 항목은 보고서 파트로 게시할 수 없습니다. 예를 들어 보고서 항목이 가리키는 데이터 집합이 매개 변수를 가리키고 이 매개 변수가 데이터 집합을 다시 가리킬 수 있습니다. 이 경우에는 참조 중 하나를 삭제해야 보고서 파트를 게시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>관련 항목:  
+ [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

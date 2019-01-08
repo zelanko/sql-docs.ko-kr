@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartService Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 708d96bab30b9828f41b1e29fef80173a6f711aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357933"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
   서비스를 시작된 상태로 지정합니다.  
@@ -47,7 +45,7 @@ object
  다음 시작 상태 중 하나를 지정하는 uint32 값입니다.  
   
  0  
- 성공했습니다. 요청이 수락되었습니다.  
+ 명령 실행 성공 요청이 수락되었습니다.  
   
  1  
  지원되지 않음. 요청이 지원되지 않습니다.  
@@ -124,6 +122,6 @@ object
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

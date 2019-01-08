@@ -13,12 +13,12 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91aa24a11c7d4587500ab7154f582bb47b8f8c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193243"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360865"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 패키지 주요 사항
   패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 구현하여 데이터를 추출, 변환 및 로드하는 개체입니다. 패키지는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]디자이너를 사용하여 만들거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 연결 프로젝트 마법사를 사용하여 만들 수도 있습니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 만들기](create-packages-in-sql-server-data-tools.md) SSIS 디자이너에서 하 고 [프로젝트 가져오기 마법사](../../2014/integration-services/import-project-wizard.md)합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48193243"
   
  자세한 내용은 [Data Flow](data-flow/data-flow.md)을 참조하세요.  
   
- 기본 패키지를 만드는 방법의 예제를 참조 하세요 [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)합니다.  
+ 기본 패키지를 만드는 방법의 예제를 참조 하세요. [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -49,10 +49,10 @@ ms.locfileid: "48193243"
   
 ## <a name="related-content"></a>관련 내용  
   
-1.  MSDN.Microsoft.com의 비디오, [기본 패키지 만들기(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=131023)  
+1.  MSDN.Microsoft.com의 비디오, [기본 패키지 만들기(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=131023)  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [선행 제약 조건](control-flow/precedence-constraints.md)  
   
   

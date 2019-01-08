@@ -1,5 +1,5 @@
 ---
-title: '2단원: 트랜잭션 게시에 구독 만들기 | Microsoft 문서'
+title: '2단원: 트랜잭션 게시에 구독 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072253"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590858"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>2단원: 트랜잭션 게시에 구독 만들기
-  이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 이 단원을 수행하려면 이전 단원인 [1단원: 트랜잭션 복제를 사용하여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)를 완료해야 합니다.  
+  이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 이 단원에서는 이전 단원을 완료 해야 [1 단원: 트랜잭션 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)합니다.  
   
 ### <a name="to-create-the-subscription"></a>구독을 만들려면  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072253"
   
 7.  **새 데이터베이스** 대화 상자에서 **데이터베이스 이름** 상자에 **ProductReplica** 를 입력하고 **확인**을 클릭한 후 **다음**을 클릭합니다.  
   
-8.  **배포 에이전트 보안** 대화 상자에서 줄임표 단추(**…**)를 클릭하여 **프로세스 계정** 상자에 \<*Machine_Name>***\repl_distribution**을 입력하고 이 계정의 암호를 입력한 다음 **확인**을 클릭하고 **다음**을 클릭합니다.  
+8.  에 **배포 에이전트 보안** 대화 상자에서 줄임표 (**...** ) 단추를 입력 합니다 \< _Machine_Name >_**\repl_distribution** 에 **프로세스 계정** 상자에서이 대 한 암호를 입력 합니다. 계정, 클릭 **확인**를 클릭 하 고 **다음**합니다.  
   
 9. **마침** 을 클릭하여 나머지 페이지의 기본값을 적용하고 마법사를 완료합니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48072253"
   
 2.  **일반** 페이지에 있는 **사용자 유형** 목록에서 **Windows 사용자**를 선택합니다.  
   
-3.  **사용자 이름** 상자를 선택하고 줄임표 단추(...)를 클릭합니다. **선택할 개체 이름을 입력하십시오.** 상자에 <Machine_Name>**\repl_distribution**을 입력하고 **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
+3.  선택 합니다 **사용자 이름** 상자 하 고 줄임표 (...) 단추를 클릭 합니다 **선택할 개체 이름을 입력** < Machine_Name > 상자**\repl_distribution**, 를클릭 **이름 확인**를 클릭 하 고 **확인**합니다.  
   
-4.  **멤버 자격** 페이지의 **데이터베이스 역할 멤버 자격** 영역에서 **db_owner**를 선택한 다음 **확인**을 클릭하여 사용자를 만듭니다.  
+4.  **멤버 자격** 페이지의 **데이터베이스 역할 멤버 자격** 영역에서 **db_owner**를 선택한 다음 **확인** 을 클릭하여 사용자를 만듭니다.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>구독의 동기화 상태를 보려면  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48072253"
 3.  **AdvWorksProductTrans**에 해당 구독이 표시되지 않으면 F5 키를 눌러 목록을 새로 고칩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 트랜잭션 게시에 구독을 성공적으로 만들었습니다. 이 구독에 대한 배포 에이전트가 계속 실행되므로 구독은 생성될 때 초기화됩니다. 다음 단원에서는 추적 프로그램 토큰을 사용하여 변경 내용이 구독자에 복제되었는지 여부 및 대기 시간을 확인합니다. [Lesson 3: Validating the Subscription and Measuring Latency](lesson-3-validating-the-subscription-and-measuring-latency.md)을 참조하세요.  
+ 트랜잭션 게시에 구독을 성공적으로 만들었습니다. 이 구독에 대한 배포 에이전트가 계속 실행되므로 구독은 생성될 때 초기화됩니다. 다음 단원에서는 추적 프로그램 토큰을 사용하여 변경 내용이 구독자에 복제되었는지 여부 및 대기 시간을 확인합니다. 참조 [3 단원: 구독 유효성 검사 및 대기 시간 측정](lesson-3-validating-the-subscription-and-measuring-latency.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   

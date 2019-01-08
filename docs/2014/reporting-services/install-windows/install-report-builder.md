@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353927"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
-  보고서 작성기를 설치할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=168472) 또는 보고서 작성기는 Windows Installer 패키지인 ReportBuilder3_x86.msi를가지고 있는 공용 폴더와 같은 위치 다운로드 되었습니다.  
+  보고서 작성기를 설치할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=168472) 또는 보고서 작성기는 Windows Installer 패키지인 ReportBuilder3_x86.msi를가지고 있는 공용 폴더와 같은 위치 다운로드 되었습니다.  
   
- 보고서 작성기의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 보고서 작성기를 제공 하는 사용자 지정 매개 변수를 사용할 수 있습니다: 변수인 RBINSTALLDIR 및 REPORTSERVERURL입니다. RBINSTALLDIR은 보고서 작성기의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 보고서 작성기에서 보고서를 서버에 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
+ 보고서 작성기의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 보고서 작성기에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR과 REPORTSERVERURL입니다. RBINSTALLDIR은 보고서 작성기의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 보고서 작성기에서 보고서를 서버에 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
   
  사용자 인터페이스의 상호 작용이 필요 없는 완전 자동 설치를 수행하려면 **/quiet** 옵션을 지정합니다. 기본적으로 quiet 옵션 플래그를 사용하면 설치 오류가 표시되지 않습니다. 따라서 quite 옵션을 사용할 때는 로깅을 지정하는 **/l** 옵션을 함께 사용하는 것이 좋습니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148863"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>다운로드 사이트에서 보고서 작성기를 설치하려면  
   
-1.  로 이동 [Microsoft SQL Server 2012 보고서 작성기](http://go.microsoft.com/fwlink/?LinkID=219138) 웹 페이지의 보고서 작성기 섹션을 찾습니다.  
+1.  로 이동 [Microsoft SQL Server 2012 보고서 작성기](https://go.microsoft.com/fwlink/?LinkID=219138) 웹 페이지의 보고서 작성기 섹션을 찾습니다.  
   
 2.  클릭 **X86 패키지**합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148863"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>명령줄에서 보고서 작성기를 설치하려면  
   
-1.  로 이동 [Microsoft SQL Server 2012 보고서 작성기](http://go.microsoft.com/fwlink/?LinkID=219138) 보고서 작성기 섹션을 찾습니다.  
+1.  로 이동 [Microsoft SQL Server 2012 보고서 작성기](https://go.microsoft.com/fwlink/?LinkID=219138) 보고서 작성기 섹션을 찾습니다.  
   
 2.  클릭 **X86 패키지**합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148863"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     보고서 작성기를 설치할 때 특정 두 옵션은: 변수인 RBINSTALLDIR 및 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
+     보고서 작성기 설치에만 해당하는 두 가지 옵션은 RBINSTALLDIR과 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

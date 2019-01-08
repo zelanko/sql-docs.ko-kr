@@ -1,5 +1,5 @@
 ---
-title: 데이터 탐색 및 SQL Server Machine Learning에서 R 통한 예측 모델링 | Microsoft Docs
+title: 데이터 탐색 및 R-SQL Server Machine Learning Services를 사용 하 여 예측 모델링
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984715"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432346"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>데이터 탐색 및 SQL Server에서 R 통한 예측 모델링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "38984715"
 + 느린 비효율적 이거나 안전 하지 않은 데이터 이동을 수합니다 있습니다.
 + R 자체에 성능 및 확장성 제한 사항이 있습니다.
 
-이러한 단점은 대량의 데이터를 이동 및 분석하거나 데이터 세트가 컴퓨터에서 이용할 수 있는 메모리와 맞지 않는 경우 더 분명하게 나타납니다.
+이러한 단점은 이동 하 고 많은 양의 데이터를 분석 하거나 컴퓨터에서 사용 가능한 메모리에 맞지 않는 데이터 집합을 사용 해야 할 때 더 명확 합니다.
 
 새 뛰어나고 패키지 및 R 함수에 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 이러한 문제의 상당수를 극복 하는 데 도움이 됩니다. 
 
@@ -62,15 +62,15 @@ Microsoft Machine Learning에 포함 된 R 독점 라이브러리에서는 외�
   
      이러한 패키지 및 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [RevoScaleR 란](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) 하 고 [RevoPemaR 시작](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)합니다. 
 
-+ **MicrosoftML** 고도로 최적화 된 기계 학습 알고리즘 및 데이터 변환은 Microsoft 데이터 과학 팀에서 컬렉션을 포함 합니다. 다양 한 알고리즘은 Azure Machine Learning에도 사용 됩니다. 자세한 내용은 [MicrosoftML 패키지 사용](../../advanced-analytics/using-the-microsoftml-package.md)합니다.
++ **MicrosoftML** 고도로 최적화 된 기계 학습 알고리즘 및 데이터 변환은 Microsoft 데이터 과학 팀에서 컬렉션을 포함 합니다. 다양 한 알고리즘은 Azure Machine Learning에도 사용 됩니다. 자세한 내용은 [SQL Server에서 MicrosoftML](ref-r-microsoftml.md)합니다.
 
 ### <a name="r-development-tools"></a>R 개발 도구
 
 R 솔루션을 개발할 때에 Microsoft R Client를 다운로드 해야 합니다. 이 무료 다운로드에는 원격 계산 컨텍스트 및 확장 가능한 alorithms를 지 원하는 데 필요한 라이브러리가 포함:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** 표준 R 작업 성능을 향상하는 패키지 집합(Intel 수학 커널 라이브러리 등) 및 R 런타임 배포입니다.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** R 런타임 및 표준 R 작업의 성능을 향상 하는 패키지, Intel 수학 커널 라이브러리 등의 집합을 배포 합니다.  
   
-+ **RevoScaleR:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 계산을 푸시할 수 있게 해주는 R 패키지입니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]이(가) 포함된 R 기능을 사용하여 이러한 단점을 해결할 수 있습니다. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx**가 추가됩니다.
++ **RevoScaleR:** 수 있는 R 패키지의 인스턴스로 계산을 푸시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] 을 참조하세요. 또한 향상된 성능 및 확장성을 제공하도록 다시 설계된 공통 R 함수 세트가 포함되어 있습니다. 이러한 향상된 함수의 이름에는 **rx** 라는 접두사가 사용됩니다. 다양한 원본의 향상된 데이터 공급자도 포함됩니다. 이러한 함수 앞에는 **Rx**가 추가됩니다.
 
 와 같은 R을 지 원하는 모든 Windows 기반 코드 편집기를 사용할 수 있습니다 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 또는 RStudio 합니다. [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 다운로드에는 RGui.exe 등과 같은 R의 공통 명령줄 도구도 포함되어 있습니다.
 
@@ -103,4 +103,4 @@ RevoScaleR 패키지를 사용 하 여 연결할 때 [!INCLUDE[ssNoVersion](../.
 
 [기본 R 및 ScaleR 함수 비교](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[SQL Server를 사용하기 위한 ScaleR 함수](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[SQL Server의 RevoScaleR 라이브러리](ref-r-revoscaler.md)

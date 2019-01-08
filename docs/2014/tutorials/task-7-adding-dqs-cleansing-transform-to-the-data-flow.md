@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376875"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: 데이터 흐름에 DQS 정리 변환 추가
-  이 작업에서는 데이터 흐름에 DQS 정리 변환을 추가하여 DQS를 사용해서 입력 공급자 데이터를 정리합니다. 참조 **[DQS 정리 변환](http://msdn.microsoft.com/library/ee677619.aspx)** 변환에 대 한 자세한 내용은 합니다.  
+  이 작업에서는 데이터 흐름에 DQS 정리 변환을 추가하여 DQS를 사용해서 입력 공급자 데이터를 정리합니다. 참조 **[DQS 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 변환에 대 한 자세한 내용은 합니다.  
   
 1.  마우스 오른쪽 단추로 클릭 **DQS 정리** 에 **데이터 흐름** 탭을 클릭 **이름 바꾸기**합니다. 형식 **Cleanse Supplier Data**, 누릅니다 **ENTER**합니다.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138203"
 12. 클릭 **확인** 닫으려면 합니다 **DQS 정리 변환 편집기** 대화 상자.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [태스크 8: 조건부 분할 변환을 추가 하 여 정리 출력 분했습니다](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

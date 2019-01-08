@@ -14,18 +14,18 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2c5a6219ce20bdcb1cb55b1bc49f71c7d3ccb01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059313"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357010"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 결과 집합 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 SELECT 문의 결과 집합을 대량 복사하는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>SELECT 문의 결과 집합을 대량 복사하려면  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48059313"
   
 3.  SQL Server에 연결합니다.  
   
-4.  호출 [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 다음 정보를 설정 하려면:  
+4.  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
     -   NULL을 지정 합니다 *szTable* 매개 변수입니다.  
   
@@ -43,16 +43,16 @@ ms.locfileid: "48059313"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: DB_OUT입니다.  
+    -   복사 방향을 지정합니다. DB_OUT  
   
 5.  호출 [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), eOption을 BCPHINTS로 설정 하 고 SELECT 문이 포함 된 SQLTCHAR 배열에 대 한 포인터를 iValue에 배치 합니다.  
   
-6.  호출 [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
+6.  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
  이러한 단계를 사용하면 기본 형식으로 파일이 만들어집니다. 사용 하 여 다른 데이터 형식의 데이터 값을 변환할 수 있습니다 [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)합니다. 자세한 내용은 [대량 복사 서식 파일 만들기 &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   

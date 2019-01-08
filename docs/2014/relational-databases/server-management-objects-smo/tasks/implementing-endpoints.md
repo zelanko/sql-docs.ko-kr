@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,17 +14,17 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081642"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807715"
 ---
 # <a name="implementing-endpoints"></a>엔드포인트 구현
-  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO를 사용 하 여 다양 한 유형의 끝점을 지원 합니다 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
+  엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용 하 여 다음 페이로드 유형 중 하나를 지정할 수 있습니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 속성을 사용하여 다음 페이로드 유형 중 하나를 지정할 수 있습니다.  
   
 -   데이터베이스 미러링  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081642"
   
 -   TCP 프로토콜  
   
- 페이로드 유형을 지정한, 실제 페이로드 설정할 수 있습니다 사용 하 여는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> 개체 속성입니다. <xref:Microsoft.SqlServer.Management.Smo.Payload> 개체 속성은 지정된 유형의 페이로드 개체에 대한 참조를 제공하며 이에 대한 속성을 수정할 수 있습니다.  
+ 페이로드 유형을 지정한 경우 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> 개체 속성을 사용하여 실제 페이로드를 설정할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Payload> 개체 속성은 지정된 유형의 페이로드 개체에 대한 참조를 제공하며 이에 대한 속성을 수정할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 개체의 경우 미러링 역할과 암호화 설정 여부를 지정해야 합니다. <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> 개체에 메시지 전달, 허용 되는 연결의 최대 수 및 인증 모드에 대 한 정보가 필요 합니다. <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 개체에서는 클라이언트(저장 프로시저 및 사용자 정의 함수)에 사용할 수 있는 SOAP 페이로드 메서드를 지정하는 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 개체 속성을 비롯하여 다양한 속성을 설정해야 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> 개체의 경우 미러링 역할과 암호화 설정 여부를 지정해야 합니다. <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> 개체에는 메시지 전달, 허용되는 최대 연결 수 및 인증 모드에 대한 정보가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> 개체에서는 클라이언트(저장 프로시저 및 사용자 정의 함수)에 사용할 수 있는 SOAP 페이로드 메서드를 지정하는 <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> 개체 속성을 비롯하여 다양한 속성을 설정해야 합니다.  
   
- 마찬가지로 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 속성으로 지정된 유형의 프로토콜 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 개체 속성을 사용하여 실제 프로토콜을 설정할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 개체에는 제한된 IP 주소 목록과 포트, 웹 사이트 및 인증 정보가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> 개체에도 제한 된 IP 주소 목록과 포트 정보가 필요 합니다.  
+ 마찬가지로 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> 속성으로 지정된 유형의 프로토콜 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A> 개체 속성을 사용하여 실제 프로토콜을 설정할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> 개체에는 제한된 IP 주소 목록과 포트, 웹 사이트 및 인증 정보가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> 개체에도 제한된 IP 주소 목록과 포트 정보가 필요합니다.  
   
  엔드포인트가 만들어지고 완전히 정의되었으면 데이터베이스 사용자, 그룹, 역할 및 로그온에 대해 액세스를 부여, 취소 및 거부할 수 있습니다.  
   

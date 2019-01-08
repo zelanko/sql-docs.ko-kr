@@ -26,15 +26,15 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: HT
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810279"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376185"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
-  DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+  DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에서 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 데이터를 사용하여 원본 데이터베이스의 복제본을 만듭니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  가져오기 프로세스에서는 새로운 DAC를 두 단계로 작성합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "43810279"
   
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 랩에는 DAC 및 데이터베이스 가져오기와 내보내기를 테스트하는 데 사용할 수 있는 샘플 응용 프로그램이 있습니다. 샘플을 다운로드하여 사용하는 방법은 [Windows Azure SQL 데이터베이스에 대한 데이터베이스 가져오기 및 내보내기](http://go.microsoft.com/fwlink/?LinkId=219404)를 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 랩에는 DAC 및 데이터베이스 가져오기와 내보내기를 테스트하는 데 사용할 수 있는 샘플 응용 프로그램이 있습니다. 샘플을 다운로드하여 사용하는 방법은 [Windows Azure SQL 데이터베이스에 대한 데이터베이스 가져오기 및 내보내기](https://go.microsoft.com/fwlink/?LinkId=219404)를 참조하세요.  
   
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
  DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
@@ -93,16 +93,16 @@ ms.locfileid: "43810279"
   
 -   **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
--   **다음** - **가져오기 설정** 페이지로 진행합니다.  
+-   **다음** - **가져오기 설정** 페이지로 이동합니다.  
   
 -   **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
 ###  <a name="Import_settings"></a> 가져오기 설정 페이지  
  이 페이지에서 가져올 .bacpac 파일의 위치를 지정할 수 있습니다.  
   
--   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
+-   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Windows Azure에서 가져오기** - Windows Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Windows Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
+-   **Windows Azure에서 가져오기** -Windows Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Windows Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
      Windows Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
   
@@ -113,21 +113,21 @@ ms.locfileid: "43810279"
   
  **로컬 SQL Server 인스턴스의 경우**  
   
--   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
+-   **새 데이터베이스 이름** – 가져온 데이터베이스의 이름을 지정합니다.  
   
--   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다.  **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **데이터 파일 경로** - 데이터 파일을 저장할 로컬 디렉터리를 지정합니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다.  
   
--   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다.  **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
  **SQL database:**  
   
--   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
+-   **새 데이터베이스 이름** – 가져온 데이터베이스의 이름을 지정합니다.  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전** – [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web을 지정합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
+-   **에디션의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -지정할 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹입니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
   
--   **최대 데이터베이스 크기(GB)** - 드롭다운 메뉴를 사용하여 데이터베이스의 최대 크기를 지정합니다.  
+-   **최대 데이터베이스 크기 (GB)** -드롭 다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   

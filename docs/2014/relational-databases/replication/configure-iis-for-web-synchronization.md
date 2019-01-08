@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372755"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 구독에서 웹 동기화를 사용하도록 구성\(SQL Server Management Studio)\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 웹 동기화를 사용 하도록 구독을 구성할 \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [방법:구독에서 웹 동기화를 사용하도록 구성(복제 Transact-SQL 프로그래밍)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [방법: 웹 동기화 (복제 TRANSACT-SQL 프로그래밍)를 사용 하도록 구독을 구성](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [방법: 구독에서 웹 동기화를 사용하도록 구성(RMO 프로그래밍)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [방법: 웹 동기화 (RMO 프로그래밍)를 사용 하도록 구독을 구성](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  웹 동기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)를 실행하는 컴퓨터를 사용하여 끌어오기 구독을 병합 게시에 동기화합니다. IIS 버전 5.0, IIS 버전 6.0 및 IIS 버전 7.0이 지원됩니다. 웹 동기화 구성 마법사는 IIS 버전 7.0에서 지원되지 않습니다.  
   
 > [!IMPORTANT]  
->  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
+>  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
 > [!CAUTION]  
 >  WebSync 및 대체 스냅숏 폴더 위치를 동시에 사용하지 마십시오.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176074"
   
 4.  **확인**을 클릭합니다.  
   
- CA에서 서버 인증서를 얻을 수 없는 경우에는 테스트용 인증서를 지정할 수 있습니다. 테스트를 위해 IIS 6.0을 구성하려면 SelfSSL 유틸리티를 사용하여 인증서를 설치합니다. 이 유틸리티는 IIS 6.0 Resource Kit에서 사용할 수 있습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=30958)에서 도구를 다운로드할 수 있습니다. IIS 5.0의 경우 [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/?LinkId=46229)을 방문하십시오.  
+ CA에서 서버 인증서를 얻을 수 없는 경우에는 테스트용 인증서를 지정할 수 있습니다. 테스트를 위해 IIS 6.0을 구성하려면 SelfSSL 유틸리티를 사용하여 인증서를 설치합니다. 이 유틸리티는 IIS 6.0 Resource Kit에서 사용할 수 있습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=30958)에서 도구를 다운로드할 수 있습니다. IIS 5.0의 경우 [Microsoft 도움말 및 지원](https://go.microsoft.com/fwlink/?LinkId=46229)을 방문하십시오.  
   
 > [!NOTE]  
 >  웹 사이트에서 SSL을 사용하려면 먼저 인증서를 웹 사이트에 연결해야 합니다. SelfSSL에서는 인증서를 자동으로 기본 웹 사이트에 연결합니다. 이미 인증서가 있거나 CA에서 나중에 인증서를 설치할 경우 해당 인증서를 웹 동기화에서 사용하는 웹 사이트에 명시적으로 연결해야 합니다. 구독 동기화에 사용되는 웹 사이트에는 인증서를 하나만 연결해야 합니다. 인증서를 여러 개 연결하는 경우 구독자는 사용 가능한 첫 번째 웹 사이트를 사용합니다.  

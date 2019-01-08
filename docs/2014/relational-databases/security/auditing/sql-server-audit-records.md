@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbca94db76fb0b3df636f3681dc01b0ef51571cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183673"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364305"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 참조하세요.  
@@ -28,7 +28,7 @@ ms.locfileid: "48183673"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|`datetime2`|사용자 계정 컨트롤|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|`int`|사용자 계정 컨트롤|  
-|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|`varchar(4)`|사용자 계정 컨트롤|  
+|**action_id**|동작의 ID입니다.<br /><br /> 팁:  사용 하도록 **action_id** 숫자 값으로 문자열에서 변환 해야 하는 조건자로 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|`varchar(4)`|사용자 계정 컨트롤|  
 |**succeeded**|이벤트를 발생시킨 동작의 성공 여부를 나타냅니다.|`bit` -1 = 성공, 0 = 실패|사용자 계정 컨트롤|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|`bigint`|아니요|  
 |**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|`bit` -1 = true, 0 = False|아니요|  

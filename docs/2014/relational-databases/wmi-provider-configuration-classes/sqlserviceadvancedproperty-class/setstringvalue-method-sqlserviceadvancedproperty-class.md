@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStringValue Method (SqlServiceAdvancedProperty Class )
@@ -20,12 +18,12 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f02ab6929e21c2d4f0d73bfdf55f0cdf18cc67e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076833"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373755"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 메서드(SqlServiceAdvancedProperty 클래스)
   속성의 문자열 값을 설정합니다.  
@@ -58,6 +56,6 @@ StrValue
  속성을 문자열 값으로 설정하려면 속성 값 형식이 `string`이어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

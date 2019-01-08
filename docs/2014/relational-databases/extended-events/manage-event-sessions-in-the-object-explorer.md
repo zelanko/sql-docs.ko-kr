@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801295"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
   이 항목에서는 **개체 탐색기** 에서 수행할 수 있는 확장 이벤트에 영향을 주는 동작에 대해 설명합니다.  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>확장 이벤트 세션 템플릿 가져오기  
  **개체 탐색기**를 사용하여 확장 이벤트 세션 템플릿을 가져올 수 있습니다. 예를 들어 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 내보낸 템플릿을 사용하여 세션을 만들려는 경우 템플릿을 가져옵니다.  
   
- 확장 이벤트 세션을 가져오려면 필요한 있어야 `ALTER ANY EVENT SESSION` 권한.  
+ 확장 이벤트 세션을 가져오려면 `ALTER ANY EVENT SESSION` 권한이 있어야 합니다.  
   
  템플릿 파일을 가져오기 전에 파일 원본을 신뢰할 수 있는지 확인합니다. NTFS 파일 시스템을 사용하며 인증된 사용자만 해당 정보를 볼 수 있도록 액세스가 제한된 위치에 템플릿 파일을 저장해야 합니다.  
   

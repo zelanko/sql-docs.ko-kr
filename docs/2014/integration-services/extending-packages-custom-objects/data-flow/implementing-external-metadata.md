@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,12 +23,12 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 838cbe74489ba0a9388eb8f2848722b78cf999b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7eaa0deb17812bbf7d1da4717d24a1fdfb4dadf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052523"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362215"
 ---
 # <a name="implementing-external-metadata"></a>외부 메타데이터 구현
   구성 요소와 해당 데이터 원본의 연결이 끊어진 경우 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 인터페이스를 사용하여 외부 데이터 원본의 열을 기준으로 입력 및 출력 열 컬렉션의 열에 대한 유효성을 검사할 수 있습니다. 이 인터페이스를 사용하면 외부 데이터 원본에 있는 열의 스냅숏을 유지 관리하고 이러한 열을 구성 요소의 입력 및 출력 열 컬렉션에 있는 열에 매핑할 수 있습니다.  
@@ -110,7 +108,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../../data-flow/data-flow.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetProtocolsOrder Method (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f78bb32e4e6a4cf7cc6f84fd6737900ea07d03c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a939835d5129a12d5c3b9fce9d6fa5e0c07f80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356860"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 메서드(ClientNetworkProtocol 클래스)
   프로토콜 목록의 순서를 변경합니다.  
@@ -57,7 +55,7 @@ ProtocolOrderList
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)   
- [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+ [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)   
+ [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -23,12 +23,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4bf1f7abd985c7ef3544a722351a2d049f6ea83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370905"
 ---
 # <a name="processing-objects-xmla"></a>개체 처리(XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 처리가 단계 또는 일련의 단계를 전환 하는 데이터를 비즈니스 분석용 정보로 합니다. 처리 방법은 개체 유형에 따라 달라지지만 처리는 항상 데이터를 정보로 변환하는 과정의 일부입니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "50145668"
 ### <a name="code"></a>코드  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -135,7 +135,7 @@ ms.locfileid: "50145668"
 ### <a name="code"></a>코드  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
@@ -13,12 +13,12 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb1efc812503a34d0bace9739a3de93f85059cdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196482"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810655"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
   Microsoft **의** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 활성 트랜잭션 수와 **tempdb**의 스냅숏 격리 행 버전 저장소 등의 리소스에 대해 이러한 트랜잭션이 미치는 영향을 모니터링하기 위한 카운터를 제공합니다. 트랜잭션은 논리적 작업 단위이며 데이터의 논리적 무결성을 유지하기 위해 모두 성공하거나 데이터베이스에서 지워져야 하는 작업 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 데이터는 모두 트랜잭션에서 수정됩니다.  
@@ -34,8 +34,8 @@ ms.locfileid: "48196482"
 |**Free Space in tempdb (KB)**|**tempdb**의 사용 가능한 공간(KB)입니다. 스냅숏 격리 수준 버전 저장소와 이 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에서 생성된 모든 새 임시 개체를 저장할 수 있도록 충분한 여유 공간이 있어야 합니다.|  
 |**Longest Transaction Running Time**|다른 현재 트랜잭션보다 오래 활성화된 트랜잭션이 시작된 후 경과한 시간(초)입니다. 이 카운터는 데이터베이스가 읽기 커밋된 스냅숏 격리 수준 이하일 때만 작업을 보여 주고 다른 수준일 때는 작업을 기록하지 않습니다.|  
 |**NonSnapshot Version Transactions**|스냅숏 격리 수준을 사용하지 않고 데이터를 수정하여 **tempdb** 버전 저장소에 행 버전을 생성한 현재 활성 트랜잭션의 수입니다.|  
-|**Snapshot Transactions**|스냅숏 격리 수준을 사용하는 현재 활성 트랜잭션의 수입니다.<br /><br /> 참고: **Snapshot Transactions** 개체 카운터는 첫 번째 데이터 액세스가 발생할 때 응답하지만 `BEGIN TRANSACTION` 문이 실행될 때는 응답하지 않습니다.|  
-|**의**|모든 형식의 현재 활성 트랜잭션 수입니다.|  
+|**Snapshot Transactions**|스냅숏 격리 수준을 사용하는 현재 활성 트랜잭션의 수입니다.<br /><br /> 참고: **Snapshot Transactions** 개체 카운터 응답 하지 첫 번째 데이터 액세스가 발생할 때 때는 `BEGIN TRANSACTION` 문을 실행 합니다.|  
+|**트랜잭션**|모든 형식의 현재 활성 트랜잭션 수입니다.|  
 |**Update conflict ratio**|마지막 1초 동안 업데이트 충돌이 발생하였고 스냅숏 격리 수준을 사용하는 트랜잭션의 비율입니다. 스냅숏 격리 수준 트랜잭션이 시작될 때 커밋되지 않은 다른 트랜잭션이 마지막으로 수정한 행을 스냅숏 격리 수준 트랜잭션에서 수정하려고 하면 업데이트 충돌이 발생합니다.|  
 |**Update Snapshot Transactions**|스냅숏 격리 수준을 사용하고 수정된 데이터가 있는 현재 활성 트랜잭션의 수입니다.|  
 |**Version Cleanup rate (KB/s)**|**tempdb**의 스냅숏 격리 버전 저장소에서 행 버전이 제거되는 비율(KB/초)입니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "48196482"
 |**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에 만들어진 할당 단위 수입니다.|  
 |**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에서 제거된 할당 단위 수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   

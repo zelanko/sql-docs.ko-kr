@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning 서비스에 새 R 패키지 설치 | Microsoft Docs
-description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)를 새 R 패키지를 추가 합니다.
+title: R 패키지 관리자-SQL Server Machine Learning Services를 사용 합니다.
+description: Install.packages 같은 표준 R 명령을 사용 하 여 SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)에 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864351"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432886"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>R 패키지 관리자를 사용 하 여 SQL Server에서 R 패키지를 설치 하려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47864351"
 
 1. RGui.exe를 마우스 오른쪽 단추로 클릭 **관리자 권한으로 실행**합니다. 필요한 사용 권한이 없으면 데이터베이스 관리자에 게 문의 하 고 필요한 패키지의 목록을 제공 합니다.
 
-1. 명령줄에서 패키지 이름을 알고 있으면 입력할 수 있습니다: `install.packages("the_package-name")` 큰따옴표는 패키지 이름이 필요 합니다.
+1. 명령줄에서 패키지 이름을 알고 있으면 입력할 수 있습니다. `install.packages("the_package-name")` 큰따옴표는 패키지 이름이 필요 합니다.
 
 1. 미러 사이트에 대 한 요청을 하는 경우 해당 위치에는 모든 사이트를 선택 합니다.
 

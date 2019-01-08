@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101993"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589897"
 ---
 # <a name="set-source-control-options"></a>원본 제어 옵션 설정
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 내장된 원본 제어 기능을 활용하기 전에 작업을 수행하는 다양한 환경에 대한 원본 제어 옵션을 구성해야 합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101993"
      이 역할 중 하나를 선택하면 적절한 원본 제어 옵션이 자동으로 선택됩니다.  
   
      **항목을 체크 인할 때 체크 아웃 유지**  
-     소스 제어 저장소를 업데이트하기 위해 항목을 체크 인할 때 사용자에게는 해당 항목이 체크 아웃된 상태로 유지되도록 지정합니다. 특정 체크 인에 대 한이 옵션을 변경 하려면 클릭 합니다 **옵션** 에서 화살표를 **체크** 의 선택을 취소 하 고 대화 상자에서를 **유지 * * * 체크 아웃** 확인란.  
+     소스 제어 저장소를 업데이트하기 위해 항목을 체크 인할 때 사용자에게는 해당 항목이 체크 아웃된 상태로 유지되도록 지정합니다. 특정 체크 인에 대 한이 옵션을 변경 하려면 클릭 합니다 **옵션** 에서 화살표를 **체크** 의 선택을 취소 하 고 대화 상자에서를 **체크 아웃 유지** 확인란.  
   
      **체크 인 된 항목**  
      체크 아웃되지 않은 항목을 편집하려고 할 때의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 동작을 지정하는 옵션 목록을 표시합니다. 다음 표에서는 사용할 수 있는 옵션에 대해 설명합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359545"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
   문자열 비교는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 수행되는 여러 변환에서 중요한 부분이며, 변수의 식 및 속성 식 평가에도 사용됩니다. 예를 들어 정렬 변환에서는 데이터 세트의 값을 비교하여 데이터를 오름차순 또는 내림차순으로 정렬합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "48100953"
  또한 플랫 파일 연결 관리자와 다중 플랫 파일 연결 관리자에 대한 로캘을 지정할 수 있습니다.  
   
 ## <a name="setting-comparison-options"></a>비교 옵션 설정  
- 로캘은 문자열 데이터 비교를 위한 기본 규칙을 제공합니다. 예를 들어 로캘은 영문자의 각 문자에 대한 정렬 위치를 지정합니다. 하지만 이러한 규칙만으로는 일부 변환에서 수행되는 비교 시 충분하지 않을 수 있으며, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 로캘의 비교 규칙 이외에도 일련의 고급 비교 옵션이 지원됩니다. 이러한 비교 옵션은 열 수준에서 설정됩니다. 예를 들어 비교 옵션 중 하나를 사용하면 비공백 문자를 무시할 수 있습니다. 이 옵션을 설정하면 악센트와 같은 분음 부호를 무시하여 비교 시 "a"와 "á"가 동일하게 인식됩니다.  
+ 로캘은 문자열 데이터 비교를 위한 기본 규칙을 제공합니다. 예를 들어 로캘은 영문자의 각 문자에 대한 정렬 위치를 지정합니다. 하지만 이러한 규칙만으로는 일부 변환에서 수행되는 비교 시 충분하지 않을 수 있으며, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 로캘의 비교 규칙 이외에도 일련의 고급 비교 옵션이 지원됩니다. 이러한 비교 옵션은 열 수준에서 설정됩니다. 예를 들어 비교 옵션 중 하나를 사용하면 비공백 문자를 무시할 수 있습니다. "A"와 "å" 동일 하면 악센트와 같은 분음 부호를 무시 하려면이 옵션의 효과 비교를 위해.  
   
  다음 표에서는 비교 옵션과 정렬 스타일에 대해 설명합니다.  
   

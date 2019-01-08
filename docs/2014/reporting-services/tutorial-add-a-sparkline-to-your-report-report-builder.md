@@ -1,5 +1,5 @@
 ---
-title: '자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs'
+title: '자습서: 스파크 라인 보고서에 추가 (보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376675"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 하는 기본 테이블 보고서를 만든 다음 테이블의 셀에 스파크라인 차트를 추가합니다.  
   
- 이 자습서에서 만드는 향상된 버전의 보고서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 예제 보고서(Report Builder sample reports)](http://go.microsoft.com/fwlink/?LinkId=184851)를 참조하십시오. 다음 그림에서는 만들려는 보고서와 비슷한 예제 보고서를 보여 줍니다.  
+ 이 자습서에서 만드는 향상된 버전의 보고서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 예제 보고서(Report Builder sample reports)](https://go.microsoft.com/fwlink/?LinkId=184851)를 참조하십시오. 다음 그림에서는 만들려는 보고서와 비슷한 예제 보고서를 보여 줍니다.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- 비디오 [방법: 테이블에 스파크라인 만들기(보고서 작성기 비디오)](http://technet.microsoft.com/bi/ff871942.aspx) 는 스파크라인이 있는 비슷한 보고서를 만드는 방법을 보여줍니다.  
+ 비디오 [방법: 테이블 (보고서 작성기 비디오)의 스파크 라인 만들기](https://technet.microsoft.com/bi/ff871942.aspx) 스파크 라인을 사용 하 여 비슷한 보고서를 만드는 방법을 보여 줍니다.  
   
 ##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "48091483"
   
 14. 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 3개와 행 3개가 있습니다.  
   
-     그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 한 개의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 한 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+     그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **제품**합니다. 열 그룹 창에는 **SalesDate**합니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
 15. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091483"
   
      테이블의 각 행에 스파크라인 차트가 있지만 올바르지 않습니다. 차트의 각 막대가 서로 정렬되어 있지 않고, 데이터의 두 번째 행에는 네 개의 막대만 있으므로 여섯 개의 막대가 있는 첫 번째 행보다 막대의 너비가 넓습니다. 이로 인해 각 제품의 값을 일별로 비교할 수 없으므로 막대가 서로 정렬되어야 합니다.  
   
-     또한 각 행마다 해당 행의 가장 높은 막대는 행 높이와 같습니다. 각 행의 가장 큰 값은 같지 않으므로 이로 인해 혼동될 수 있습니다. 즉, Budget Movie-Maker의 가장 큰 값은 $10,400이지만 Slim Digital의 가장 큰 값은 이의 두 배 이상인 $26,576입니다. 그럼에도 불구하고 이 두 행의 가장 큰 막대는 서로 높이가 같습니다. 이러한 막대도 다른 스파크라인에 따라 크기를 조정할 수 있어야 합니다.  
+     또한 각 행마다 해당 행의 가장 높은 막대는 행 높이와 같습니다. 이 혼동을 각 행에 대 한 가장 큰 값을 같지 않으므로: 예산 Movie Maker에 대 한 값은 $10,400, 이지만 Slim Digital의 가장 큰 값을 $26,576-보다 두 배입니다. 그럼에도 불구하고 이 두 행의 가장 큰 막대는 서로 높이가 같습니다. 이러한 막대도 다른 스파크라인에 따라 크기를 조정할 수 있어야 합니다.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. 세로 및 가로로 스파크라인 맞추기  
- 스파크라인은 모두 동일한 측정값을 사용하지 않는 경우 읽기가 어렵습니다. 각 스파크라인의 가로 축과 세로 축이 나머지와 일치해야 합니다.  
+ 스파크 라인은 모두 사용 하지 않는 동일한 측정 하는 경우 읽기가 어렵습니다. 각 스파크라인의 가로 축과 세로 축이 나머지와 일치해야 합니다.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>테이블의 스파크라인 맞춤을 설정하려면  
   

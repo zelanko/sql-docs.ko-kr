@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357070"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트
   서버 인스턴스를 SQL Server 2012에서 서비스 팩 또는 최신 버전으로 업데이트하거나 업그레이드할 때 순차적 업데이트 또는 업그레이드를 수행하면 가용성 그룹의 작동 중단을 단 한 번의 수동 장애 조치(Failover)로 줄일 수 있습니다. SQL Server 버전을 업그레이드하는 경우 롤링 업그레이드라고 하고, 핫픽스 또는 서비스 팩이 포함된 현재 SQL Server 버전을 업데이트하는 것을 롤링 업데이트라고 합니다.  
   
- 이 항목은 SQL Server 업그레이드/업데이트에 대한 설명에 한해 제한됩니다. 운영 체제 관련 업그레이드/업데이트에서 항상 사용 가능한 SQL Server 인스턴스가 실행 되는 참조 [클러스터 간 마이그레이션 AlwaysOn 가용성 그룹의 운영 체제 업그레이드](http://msdn.microsoft.com/library/jj873730.aspx)  
+ 이 항목은 SQL Server 업그레이드/업데이트에 대한 설명에 한해 제한됩니다. 운영 체제 관련 업그레이드/업데이트에서 항상 사용 가능한 SQL Server 인스턴스가 실행 되는 참조 [클러스터 간 마이그레이션 AlwaysOn 가용성 그룹의 운영 체제 업그레이드](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 가용성 그룹의 롤링 업그레이드/업데이트를 위한 최상의 방법  
  서버 업그레이드/업데이트를 수행할 때 가용성 그룹에 대한 가동 중단 시간 및 데이터 손실을 최소화하기 위해 다음과 같은 최상의 방법을 구현해야 합니다.  

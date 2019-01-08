@@ -1,5 +1,6 @@
 ---
-title: OlapR을 사용 하 여 SQL Server Machine Learning의 R에서 쿼리를 MDX를 만드는 방법 | Microsoft Docs
+title: OlapR-SQL Server Machine Learning Services를 사용 하 여 R에서 MDX 쿼리를 만드는 방법
+description: R 언어 스크립트에서 MDX 쿼리를 작성 하려면 SQL Server에서 olapR 패키지 라이브러리를 사용 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 77804e6499519309e7ade41cc7260d2356a56731
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696932"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432386"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR을 사용 하 여 R에서 MDX 쿼리를 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,9 +74,9 @@ ms.locfileid: "51696932"
 
 다음 예제는 해당 프로젝트는 Analysis Services를 쉽게 복원할 수 있는 백업 파일을 비롯 하 여 여러 버전에서 광범위 하 게 사용할 수 있으므로 AdventureWorks 데이터 마트 및 큐브 프로젝트 기반 합니다. 기존 큐브를 설정 하지 않은 경우 이러한 옵션 중 하나를 사용 하 여 샘플 큐브를 가져옵니다.
 
-+ Analysis Services 자습서 단원 4까지 수행 하 여 이러한 예제에서 사용 되는 큐브를 만드는: [OLAP 큐브 만들기](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Analysis Services 자습서 단원 4까지 수행 하 여 이러한 예제에서 사용 되는 큐브를 만듭니다. [OLAP 큐브 만들기](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 백업으로 기존 큐브를 다운로드 하 고 Analysis Services 인스턴스에 복원 합니다. 이 사이트에서는 압축 된 형식에서 완전히 처리 된 큐브를 제공 하는 예를 들어: [Adventure Works 다차원 모델 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)합니다. 파일을 추출한 다음 SSAS 인스턴스에 복원 합니다. 자세한 내용은 [백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), 또는 [Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)합니다.
++ 백업으로 기존 큐브를 다운로드 하 고 Analysis Services 인스턴스에 복원 합니다. 예를 들어,이 사이트는 압축 된 형식에서 완전히 처리 된 큐브를 제공합니다. [Adventure Works 다차원 모델 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)합니다. 파일을 추출한 다음 SSAS 인스턴스에 복원 합니다. 자세한 내용은 [백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), 또는 [Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)합니다.
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. 슬라이서가 포함된 기본 MDX
 

@@ -16,12 +16,12 @@ ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de221897b89a7afb1989cf8a74ab3eafbf58238c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afa72384d94b4a3c7c351d59110bd4ae692b8be9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080733"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367595"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
   **Connection** 개체는 데이터 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48080733"
 > [!NOTE]  
 >  **Connection** 개체는 대개 확보하기 어려운 리소스이므로 이 문제를 완화하기 위해 풀링 연결이나 다른 기술을 사용할 수 있습니다.  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>은 <xref:Microsoft.ReportingServices.Interfaces.IExtension>에서 상속됩니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스는 연결 클래스 구현의 일부로 구현해야 합니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스를 통해 클래스에서 지역화된 확장 프로그램 이름을 구현하고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 저장된 확장 프로그램별 구성 정보를 처리할 수 있습니다.  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>는 <xref:Microsoft.ReportingServices.Interfaces.IExtension>에서 상속됩니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스는 연결 클래스 구현의 일부로 구현해야 합니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스를 통해 클래스에서 지역화된 확장 프로그램 이름을 구현하고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 저장된 확장 프로그램별 구성 정보를 처리할 수 있습니다.  
   
  **Connection** 개체에는 <xref:Microsoft.ReportingServices.Interfaces.IExtension>의 구현을 통해 <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> 속성이 포함됩니다. 확장 프로그램의 사용자 인터페이스에서 보고서 관리자와 같이 친숙하고 지역화된 이름이 사용자에게 표시되도록 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에서 <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> 속성을 지원하는 것이 좋습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48080733"
 > [!NOTE]  
 >  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>을 암시적으로 구현하려면 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 및 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 인터페이스의 멤버를 구현해야 합니다.  
 >   
->  예제 **Connection** 클래스 구현은 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+>  예제 **Connection** 클래스 구현은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   

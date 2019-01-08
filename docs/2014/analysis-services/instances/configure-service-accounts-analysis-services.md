@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e20d46bb3efbf64d5c8c176c451652e1c870a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362835"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
   제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 비롯한 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "48077343"
  추가 구성 단계는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 및 서비스 계정의 SPN(서비스 사용자 이름)을 등록하는 단계이며, 여기서는 설명하지 않습니다. 이 단계에서는 이중 홉 시나리오로 클라이언트 애플리케이션에서 백 엔드 데이터 원본으로 통과 인증을 사용합니다. 이 단계는 Kerberos 제한 위임에 대해 구성된 서비스에만 적용됩니다. 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 을 참조하세요.  
   
 ## <a name="logon-account-recommendations"></a>로그온 계정 권장 사항  
- 장애 조치(failover) 클러스터에서 Analysis Services의 모든 인스턴스는 Windows 도메인 사용자 계정을 사용하도록 구성되어야 합니다. 모든 인스턴스에 동일한 계정을 할당합니다. 자세한 내용은 [Analysis Services를 클러스터링하는 방법](http://msdn.microsoft.com/library/dn736073.aspx) 을 참조하세요.  
+ 장애 조치(failover) 클러스터에서 Analysis Services의 모든 인스턴스는 Windows 도메인 사용자 계정을 사용하도록 구성되어야 합니다. 모든 인스턴스에 동일한 계정을 할당합니다. 자세한 내용은 [Analysis Services를 클러스터링하는 방법](https://msdn.microsoft.com/library/dn736073.aspx) 을 참조하세요.  
   
  독립 실행형 인스턴스는 기본 가상 계정을 사용 해야 **NT Service\MSSQLServerOLAPService** 기본 인스턴스의 경우 또는 **NT Service\MSOLAP$ * * *-n* 명명 된 인스턴스에 대 한 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48077343"
   
  내부 작업의 경우 Analysis Services의 권한 소유자가 로그인 계정이 아니고 서비스별 SID를 포함하는 설치 프로그램에서 생성된 로컬 Windows 보안 그룹입니다. 보안 그룹에 권한을 할당하는 방법은 이전 버전의 Analysis Services와 일치합니다. 또한 로그온 계정은 시간에 따라 변경될 수 있지만 서비스별 SID와 로컬 보안 그룹은 서버 설치 수명 기간 동안 지속됩니다. Analysis Services에서는 권한 보유를 위해 로그온 계정 대신 보안 그룹을 선택하는 것이 좋습니다. 파일 시스템 권한 또는 Windows 권한에 상관없이 서비스 인스턴스에 수동으로 권한을 부여할 경우 항상 서버 인스턴스에 대해 만들어진 로컬 보안 그룹에 권한을 부여해야 합니다.  
   
- 보안 그룹의 이름은 패턴을 따릅니다. 접두사는 항상 `SQLServerMSASUser$`, 컴퓨터 이름, 인스턴스 이름으로 끝나는 합니다. 기본 인스턴스는 `MSSQLSERVER`합니다. 명명된 인스턴스는 설정 중에 지정된 이름입니다.  
+ 보안 그룹의 이름은 패턴을 따릅니다. 접두사는 항상 `SQLServerMSASUser$`이고 그 뒤에 컴퓨터 이름이 오고 마지막에 인스턴스 이름이 옵니다. 기본 인스턴스는 `MSSQLSERVER`입니다. 명명된 인스턴스는 설정 중에 지정된 이름입니다.  
   
  로컬 보안 설정에서 이 보안 그룹을 확인할 수 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077343"
  그룹의 유일한 구성원은 서비스별 SID입니다. 오른쪽에 로그온 계정이 있습니다. 로그온 계정 이름은 cosmetic이고, 서비스별 SID에 컨텍스트를 제공합니다. 이후에 로그온 계정을 변경한 다음 이 페이지로 돌아가면 보안 그룹과 서비스별 SID는 변경되지 않고 로그온 계정 레이블이 다른 것을 알 수 있습니다.  
   
 ##  <a name="bkmk_winpriv"></a> Analysis Services 서비스 계정에 할당된 Windows 권한  
- Analysis Services는 서비스를 시작하고 시스템 리소스를 요청하는 데 운영 체제의 사용 권한이 필요합니다. 서버 모드 및 인스턴스가 클러스터링되었는지 여부에 따라 요구 사항이 다릅니다. Windows 권한에 익숙하지 않은 경우 자세한 내용은 [권한](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 및 [권한 상수(Windows)](/windows/desktop/SecAuthZ/privilege-constants) 를 참조하세요.  
+ Analysis Services는 서비스를 시작하고 시스템 리소스를 요청하는 데 운영 체제의 사용 권한이 필요합니다. 서버 모드 및 인스턴스가 클러스터링되었는지 여부에 따라 요구 사항이 다릅니다. Windows 권한에 익숙하지 않은 경우 자세한 내용은 [권한](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 및 [권한 상수(Windows)](/windows/desktop/SecAuthZ/privilege-constants) 를 참조하세요.  
   
  Analysis Services의 모든 인스턴스에는 **서비스로 로그온** (SeServiceLogonRight) 권한이 필요합니다. SQL Server 설치 프로그램에서 설치 중 지정된 서비스 계정에 이 권한을 자동으로 할당합니다. 다차원 및 데이터 마이닝 모드에서 실행되는 서버의 경우 이 권한이 Analysis Services 서비스 계정에서 독립 실행형 서버 설치에 필요한 유일한 Windows 권한이며, 이 권한이 설치 프로그램에서 Analysis Services에 대해 구성하는 유일한 권한입니다. 클러스터형 및 테이블 형식 인스턴스의 경우 추가 Windows 권한을 수동으로 추가해야 합니다.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "48077343"
   
 |||  
 |-|-|  
-|**프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)|이 권한은 기본적으로 **사용자** 보안 그룹을 통해 모든 사용자가 사용할 수 있습니다. 이 그룹의 권한을 제거하여 서버를 잠근 경우 Analysis Services가 "클라이언트에 필수 권한이 없습니다." 오류를 로깅하며 시작하지 못할 수 있습니다. 이 오류가 발생하는 경우 해당 Analysis Services 보안 그룹에 권한을 부여하여 Analysis Services에 대한 권한을 복원합니다.|  
+|**프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)|이 권한은 기본적으로 **사용자** 보안 그룹을 통해 모든 사용자가 사용할 수 있습니다. 이 그룹의 권한을 제거하여 서버를 잠근 경우 Analysis Services가 다음 오류를 로깅하며 시작하지 못할 수 있습니다. 오류: "클라이언트에 필수 권한이 없습니다." 이 오류가 발생하는 경우 해당 Analysis Services 보안 그룹에 권한을 부여하여 Analysis Services에 대한 권한을 복원합니다.|  
 |**프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)|이 권한은 프로세스가 실행을 완료하기에 충분한 리소스를 보유하지 못한 경우 인스턴스용으로 설정된 메모리 임계값에 따라 추가 메모리를 요청하는 데 사용됩니다.|  
-|**메모리의 페이지 잠금** (SeLockMemoryPrivilege)|이 권한은 페이징이 완전히 해제된 경우에만 필요합니다. 테이블 형식 서버 인스턴스가 기본적으로 Windows 페이징 파일을 사용 하지만 Windows 페이징 사용 하 여 설정 하 여 방지할 수 있습니다 `VertiPaqPagingPolicy` 0입니다.<br /><br /> `VertiPaqPagingPolicy` 1 (기본값)로 된 테이블 형식 서버 인스턴스가 Windows 페이징 파일을 사용 하도록 지시 합니다. 할당은 잠기지 않으므로 필요에 따라 Windows에서 페이지 아웃할 수 있습니다. 페이징을 사용하기 때문에 메모리에서 페이지를 잠글 필요가 없습니다. 기본 구성에 따라서 (여기서 `VertiPaqPagingPolicy` = 1), 부여할 필요가 없습니다 합니다 **메모리의 페이지 잠금** 테이블 형식 인스턴스에 대 한 권한.<br /><br /> `VertiPaqPagingPolicy` 0. Analysis Services에 대한 페이징을 해제한 경우 할당이 잠기며, **메모리의 페이지 잠금** 권한이 테이블 형식 인스턴스에 부여된 것으로 가정합니다. 이 설정 및 **메모리의 페이지 잠금** 권한이 지정된 경우 시스템의 메모리가 부족할 때 Analysis Services에 할당된 메모리를 Windows에서 페이지 아웃할 수 없습니다. Analysis Services는 합니다 **메모리의 페이지 잠금** 권한을 적용 `VertiPaqPagingPolicy` = 0. Windows 페이징을 해제하지 않는 것이 좋습니다. 페이징을 해제하면 페이징이 허용된 경우에 제대로 수행될 수도 있는 작업의 메모리 부족 오류 비율이 증가합니다. 참조 [Memory Properties](../server-properties/memory-properties.md) 에 대 한 자세한 내용은 `VertiPaqPagingPolicy`합니다.|  
+|**메모리의 페이지 잠금** (SeLockMemoryPrivilege)|이 권한은 페이징이 완전히 해제된 경우에만 필요합니다. 기본적으로 테이블 형식 서버 인스턴스는 Windows 페이징 파일을 사용하지만 `VertiPaqPagingPolicy`를 0으로 설정하면 해당 인스턴스의 Windows 페이징 사용을 방지할 수 있습니다.<br /><br /> `VertiPaqPagingPolicy`를 1(기본값)로 설정하면 테이블 형식 서버 인스턴스가 Windows 페이징 파일을 사용합니다. 할당은 잠기지 않으므로 필요에 따라 Windows에서 페이지 아웃할 수 있습니다. 페이징을 사용하기 때문에 메모리에서 페이지를 잠글 필요가 없습니다. 기본 구성에 따라서 (여기서 `VertiPaqPagingPolicy` = 1), 부여할 필요가 없습니다 합니다 **메모리의 페이지 잠금** 테이블 형식 인스턴스에 대 한 권한.<br /><br /> `VertiPaqPagingPolicy` 0. Analysis Services에 대한 페이징을 해제한 경우 할당이 잠기며, **메모리의 페이지 잠금** 권한이 테이블 형식 인스턴스에 부여된 것으로 가정합니다. 이 설정 및 **메모리의 페이지 잠금** 권한이 지정된 경우 시스템의 메모리가 부족할 때 Analysis Services에 할당된 메모리를 Windows에서 페이지 아웃할 수 없습니다. Analysis Services는 합니다 **메모리의 페이지 잠금** 권한을 적용 `VertiPaqPagingPolicy` = 0. Windows 페이징을 해제하지 않는 것이 좋습니다. 페이징을 해제하면 페이징이 허용된 경우에 제대로 수행될 수도 있는 작업의 메모리 부족 오류 비율이 증가합니다. 참조 [Memory Properties](../server-properties/memory-properties.md) 에 대 한 자세한 내용은 `VertiPaqPagingPolicy`합니다.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>서비스 계정에서 Windows 권한을 보거나 추가하려면  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48077343"
 3.  **Windows 탐색기** | **Program Files** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** 을 사용하여 2단계의 보안 그룹에 보안 속성이 부여된 폴더를 확인합니다.  
   
 > [!NOTE]  
->  SID를 제거하거나 수정하지 마세요. 실수로 삭제 된 서비스별 SID를 복원 하려면 참조 [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)합니다.  
+>  SID를 제거하거나 수정하지 마세요. 실수로 삭제 된 서비스별 SID를 복원 하려면 참조 [ https://support.microsoft.com/kb/2620201 ](https://support.microsoft.com/kb/2620201)합니다.  
   
  **서비스별 SID에 대한 추가 정보**  
   
@@ -151,11 +151,11 @@ ms.locfileid: "48077343"
   
 ## <a name="see-also"></a>관련 항목  
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 서비스 계정 및 서비스별 SID (블로그)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 서비스 SID를 사용 하 여 서비스 격리 (KB 문서)를 제공 합니다.](http://support.microsoft.com/kb/2620201)   
- [액세스 토큰 (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
- [보안 식별자 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
- [액세스 토큰 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
- [액세스 제어 목록 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [SQL Server 서비스 계정 및 서비스별 SID(블로그)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server는 서비스 SID를 사용하여 서비스 격리(KB 문서)를 제공합니다.](https://support.microsoft.com/kb/2620201)   
+ [액세스 토큰(MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [보안 식별자(MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
+ [액세스 토큰(Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
+ [액세스 제어 목록(Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

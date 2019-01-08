@@ -14,12 +14,12 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2570a21987ed46ce7bda01302cf890ffab87bb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22d560c8a65d5b9a7cebc4062ddd2d1ce936d5a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086773"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372064"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열 키워드를 대체하거나 개선하는 연결 특성을 정의합니다. 몇 가지 연결 문자열 키워드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지정한 기본값이 있습니다.  
@@ -78,7 +78,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLDriverConnect 함수](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect 함수](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

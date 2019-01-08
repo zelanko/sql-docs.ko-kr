@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159987"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374755"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
   SAP BW 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 구성 요소입니다. 따라서 SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하고 이 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 사용할 수 있도록 합니다.  
@@ -107,7 +106,7 @@ ms.locfileid: "48159987"
   
     -   **E - 추출만** 옵션의 경우 요청 ID를 제공합니다.  
   
--   문자열 변환의 규칙을 지정합니다. (예를 들어 SAP Netweaver BW 시스템이 유니코드 인지 여부,에 따라 모든 문자열을 변환 하거나 모든 문자열을 변환할 `varchar` 또는 `nvarchar`).  
+-   문자열 변환의 규칙을 지정합니다. 예를 들어 SAP Netweaver BW 시스템이 유니코드인지 여부에 따라 모든 문자열을 변환하거나 모든 문자열을 `varchar` 또는 `nvarchar`로 변환합니다.  
   
 -   선택한 옵션을 사용하여 추출할 데이터를 미리 봅니다.  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159987"
   
  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
   
- SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server 2008 Integration Services 사용](http://go.microsoft.com/fwlink/?LinkID=137090)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
+ SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server 2008 Integration Services 사용](https://go.microsoft.com/fwlink/?LinkID=137090)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS 디자이너를 사용하여 원본 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 SAP BW 원본의 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 원본 편집기 &#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 원본 편집기&#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 원본 편집기 &#40;오류 출력 페이지&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 원본 편집기 &#40;고급 페이지&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 원본 편집기&#40;고급 페이지&#41;](sap-bw-source-editor-advanced-page.md)  
   
  SAP BW 원본을 구성하는 동안 다양한 대화 상자를 사용하여 SAP Netweaver BW 개체를 조회하거나 원본 데이터를 미리 볼 수도 있습니다. 이러한 대화 상자에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   

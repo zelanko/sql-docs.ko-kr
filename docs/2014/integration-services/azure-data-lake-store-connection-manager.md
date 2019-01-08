@@ -14,15 +14,15 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20dfcedbf0a8a69c1a129e85e4d5f76f0bc7768a
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
-ms.translationtype: HT
+ms.openlocfilehash: a462b44137c59f92a4bb9dc38a13318d71a32043
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460448"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531038"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
-  **Azure Data Lake Store 연결 관리자** 를 사용하면 두 가지 인증 유형 즉, Azure AD 사용자 ID와 Azure AD 서비스 ID를 통해 SSIS 패키지를 Azure Data Lake Store 서비스에 연결할 수 있습니다.  
+  합니다 **Azure Data Lake Store 연결 관리자** 두 가지 인증 유형을 통해 Azure Data Lake Store 서비스에 연결할 SSIS 패키지를 사용 하도록 설정 합니다. Azure AD 사용자 Id 및 Azure AD 서비스 Id입니다.  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자 구성 
   
@@ -38,8 +38,8 @@ ms.locfileid: "49460448"
     
         2. **연결 테스트** 단추를 클릭하여 연결을 테스트합니다. 이전에 사용자 본인과 테넌트 관리자가 Azure Data Lake Store 데이터에 SSIS가 액세스하는 것에 동의하지 않은 경우 팝아웃 대화 상자에서 **동의** 단추를 클릭하여 SSIS가 Azure Data Lake Store 데이터에 액세스하는 것에 동의해야 합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)을 참조하세요.
     
-        >   [!NOTE] 
-        >   Azure AD 사용자 ID 인증 옵션에서는 다단계 인증과 Microsoft 계정이 지원되지 않습니다.
+        > [!NOTE] 
+        > Azure AD 사용자 ID 인증 옵션에서는 다단계 인증과 Microsoft 계정이 지원되지 않습니다.
     
     2.  **Azure AD 서비스 ID** 인증 옵션을 선택한 경우 다음을 수행합니다.
         1. Azure Data Lake 리소스에 액세스할 수 있는 AAD 애플리케이션 및 서비스 사용자를 만듭니다.

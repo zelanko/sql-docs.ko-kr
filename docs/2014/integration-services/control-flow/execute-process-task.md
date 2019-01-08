@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
@@ -15,12 +14,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02f00d9846176edabb2da486906b5d1946c94124
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6b50470b6b12226cc14a837331b45ed0e16e4cfd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205623"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366835"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
   프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 애플리케이션을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 애플리케이션이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 애플리케이션을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
@@ -40,9 +39,9 @@ ms.locfileid: "48205623"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [프로세스 실행 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [프로세스 실행 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [프로세스 실행 태스크 편집기 &#40;페이지를 처리 합니다.&#41;](../execute-process-task-editor-process-page.md)  
+-   [프로세스 실행 태스크 편집기&#40;프로세스 페이지&#41;](../execute-process-task-editor-process-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
@@ -61,22 +60,22 @@ ms.locfileid: "48205623"
   
  여러 프로세스 실행 태스크 속성을 설정하는 식을 사용할 수 있습니다.  
   
- 사용 하는 경우는 **StandardInputVariable** 입력을 제공 하는 프로세스 실행 태스크를 구성 하는 속성 호출의 `Console.ReadLine` 입력을 읽어서 응용 프로그램에서 메서드. 자세한 내용은 [Console.ReadLine 메서드](http://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 항목을 참조하세요.  
+ 사용 하는 경우는 **StandardInputVariable** 입력을 제공 하는 프로세스 실행 태스크를 구성 하는 속성 호출의 `Console.ReadLine` 입력을 읽어서 응용 프로그램에서 메서드. 자세한 내용은 [Console.ReadLine 메서드](https://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 항목을 참조하세요.  
   
  **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
   
--   Microsoft Visual Basic을 사용 하 여 응용 프로그램을 작성 하는 경우 설정 된 `My.Application.CommandLineArgs` 속성입니다. 다음 예에서는 `My.Application.CommandLineArgs` 속성을 설정하여 두 인수를 검색합니다.  
+-   Microsoft Visual Basic을 사용하여 응용 프로그램을 작성하는 경우 `My.Application.CommandLineArgs` 속성을 설정합니다. 다음 예에서는 `My.Application.CommandLineArgs` 속성을 설정하여 두 인수를 검색합니다.  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     자세한 내용은 [참조에서](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 속성 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 항목을 참조하십시오.  
+     자세한 내용은 [참조에서](https://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 속성 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 항목을 참조하십시오.  
   
 -   Microsoft Visual C#을 사용하여 응용 프로그램을 작성하는 경우 `Main` 메서드를 사용합니다.  
   
-     자세한 내용은 C# 프로그래밍 가이드의 [명령줄 인수(C# 프로그래밍 가이드)](http://go.microsoft.com/fwlink/?LinkId=129406)항목을 참조하세요.  
+     자세한 내용은 C# 프로그래밍 가이드의 [명령줄 인수(C# 프로그래밍 가이드)](https://go.microsoft.com/fwlink/?LinkId=129406)항목을 참조하세요.  
   
  프로세스 실행 태스크에는 각각 애플리케이션의 표준 출력과 애플리케이션 표준 오류 출력을 사용하는 변수를 지정하는 **StandardOutputVariable** 및 **StandardErrorVariable** 속성도 있습니다.  
   

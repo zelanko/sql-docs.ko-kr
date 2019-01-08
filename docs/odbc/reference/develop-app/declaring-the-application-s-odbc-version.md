@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666831"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591547"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램을 선언&#39;s ODBC 버전
 응용 프로그램을 연결에서 할당 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 이 특성은 응용 프로그램의 ODBC 2 따르는지 상태입니다. *x* 또는 ODBC 3. *x* 사양에 다음 항목을 사용 하는 경우:  
@@ -43,7 +43,7 @@ ms.locfileid: "47666831"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***SQLTables 인수**합니다.   Odbc 2. *x*에서 와일드 카드 문자 ("%" 및 "_")는 *CatalogName* 인수 리터럴로 처리 됩니다. Odbc 3. *x*에 와일드 카드 문자로 처리 됩니다. 따라서 응용 프로그램입니다 ODBC 2를 따릅니다. *x* 사양 와일드 카드 문자 및 리터럴로 사용 하는 경우 이러한 이스케이프 하지 않으면 이러한 사용할 수 없습니다. ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양 와일드 카드 문자로 사용 하 여 또는 이스케이프할를 리터럴로 사용 합니다. 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  
+-   _CatalogName_**SQLTables 인수**합니다. Odbc 2. *x*에서 와일드 카드 문자 ("%" 및 "_")는 *CatalogName* 인수 리터럴로 처리 됩니다. Odbc 3. *x*에 와일드 카드 문자로 처리 됩니다. 따라서 응용 프로그램입니다 ODBC 2를 따릅니다. *x* 사양 와일드 카드 문자 및 리터럴로 사용 하는 경우 이러한 이스케이프 하지 않으면 이러한 사용할 수 없습니다. ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양 와일드 카드 문자로 사용 하 여 또는 이스케이프할를 리터럴로 사용 합니다. 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  
   
  ODBC 3 *.x* 드라이버 관리자와 ODBC 3 *.x* 드라이버 응용 프로그램 기록 하는 ODBC 사양의 버전을 확인 하 고 그에 따라 응답 합니다. 예를 들어 응용 프로그램이 ODBC 2를 따릅니다. *x* 사양과 호출 **SQLExecute** 호출 하기 전에 **SQLPrepare**, ODBC 3 *.x* 드라이버 관리자 (SQLSTATE S1010를 반환 합니다. 함수 시퀀스 오류)입니다. 응용 프로그램을 ODBC 3 뒤 *.x* 사양 드라이버 관리자 반환 SQLSTATE HY010 (함수 시퀀스 오류). 자세한 내용은 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  
   

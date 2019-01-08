@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Enabled Property (ServerNetworkProtocolIpAddress Class)
@@ -20,12 +18,12 @@ ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4ecbe4a1d5a7a3522fe0ed22ac9097416a4d5307
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72505d5c2f00118f3522ac25445822ba17573438
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374895"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 속성(ServerNetworkProtocolIpAddress 클래스)
   IP 주소가 설정되었는지 여부를 지정하는 부울 속성을 가져옵니다.  
@@ -46,6 +44,6 @@ object
  IP 주소가 설정되었는지 여부를 지정하는 부울 값입니다. `true`는 IP 주소가 설정되었음을 나타내고 `false`는 IP 주소가 해제되었음을 나타냅니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374475"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services에서 XMLA를 사용하여 개발
   XMLA(XML for Analysis)는 HTTP 연결을 통해 액세스할 수 있는 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 위해 특별히 설계된 SOAP 기반 XML 프로토콜입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 클라이언트 응용 프로그램과 통신할 때의 유일한 프로토콜로 XMLA를 사용합니다. 기본적으로 Analysis Services에서 지원하는 모든 클라이언트 라이브러리는 XMLA의 요청 및 응답을 작성합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "50145568"
 ## <a name="namespace-and-schema"></a>네임스페이스 및 스키마  
   
 ### <a name="namespace"></a>Namespace  
- XML 네임 스페이스를 사용 하는이 사양에 정의 된 스키마 http://schemas.microsoft.com/AnalysisServices/2003/Engine 과 표준 약어 "DDL"을 선택 합니다.  
+ XML 네임 스페이스를 사용 하는이 사양에 정의 된 스키마 https://schemas.microsoft.com/AnalysisServices/2003/Engine 과 표준 약어 "DDL"을 선택 합니다.  
   
 ### <a name="schema"></a>스키마  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의 언어에 대한 XSD(XML 스키마 정의 언어) 스키마의 정의는 이 섹션에 설명된 스키마 요소 및 계층 구조의 정의를 기반으로 합니다.  

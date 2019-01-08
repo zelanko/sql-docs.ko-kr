@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652944f4bd352aba025e9eb204bb7db54d71815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141673"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375535"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 Windows 계정과 해당 네트워크 권한을 정의합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 서비스 계정을 설정하는 방법에 대해 설명합니다.  
@@ -75,12 +75,12 @@ ms.locfileid: "48141673"
   
 7.  **SQL Server 에이전트***(server_name)* **속성** 대화 상자의 **로그온** 탭에 있는 **다음 계정으로 로그온**에서 다음 옵션 중 하나를 선택합니다.  
   
-    -   **기본 제공 계정**: 로컬 서버의 리소스만 작업에 필요한 경우 이 옵션을 선택합니다. Windows 기본 제공 계정 유형을 선택하는 방법은 [SQL Server 에이전트 서비스에 대한 계정 선택](http://msdn.microsoft.com/library/ms191543.aspx)을 참조하세요.  
+    -   **기본 제공 계정**: 로컬 서버의 리소스만 작업에 필요한 경우 이 옵션을 선택합니다. Windows 기본 제공 계정 유형을 선택하는 방법은 [SQL Server 에이전트 서비스에 대한 계정 선택](https://msdn.microsoft.com/library/ms191543.aspx)을 참조하세요.  
   
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 **에서** 로컬 서비스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]계정을 지원하지 않습니다.  
   
-    -   **이 계정**: 작업을 수행하는 데 응용 프로그램 리소스를 포함하여 네트워크의 리소스가 필요할 경우나, 다른 Windows 응용 프로그램 로그에 이벤트를 전달하거나, 전자 메일 또는 호출기로 운영자에게 알리려고 할 경우 이 옵션을 선택합니다.  
+    -   **이 계정**: 작업을 수행하는 데 애플리케이션 리소스를 포함하여 네트워크의 리소스가 필요할 경우나, 다른 Windows 애플리케이션 로그에 이벤트를 전달하거나, 전자 메일 또는 호출기로 운영자에게 알리려고 할 경우 이 옵션을 선택합니다.  
   
          이 옵션을 선택한 경우:  
   

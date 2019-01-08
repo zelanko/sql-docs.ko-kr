@@ -1,32 +1,32 @@
 ---
-title: SQL Server 2019에 Java 언어 확장 | Microsoft Docs
-description: Java 언어 확장을 사용 하 여 SQL Server 2019에서 Java 코드를 실행 합니다.
+title: SQL Server 2019-SQL Server Machine Learning Services에서에서 Java 언어 확장
+description: 설치, 구성 및 Linux와 Windows 시스템에 대 한 SQL Server 2019에 Java 언어 확장의 유효성을 검사 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/12/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696422"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431717"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019에 Java 언어 확장 
 
-SQL Server 2019 년부터 하면 사용자 지정 Java 코드를 실행할 수는 [확장성 프레임 워크](../concepts/extensibility-framework.md) 데이터베이스 엔진 인스턴스를 추가 합니다. 
+Windows와 Linux 모두에서 SQL Server 2019 preview부터 하면 사용자 지정 Java 코드를 실행할 수는 [확장성 프레임 워크](../concepts/extensibility-framework.md) 데이터베이스 엔진 인스턴스를 추가 합니다. 
 
 확장성 프레임 워크는 외부 코드를 실행 하는 것에 대 한 아키텍처: Java (SQL Server 2019에서 시작) [Python (SQL Server 2017부터)](../concepts/extension-python.md), 및 [(SQL Server 2016부터) R](../concepts/extension-r.md)합니다. 코드 실행 핵심 엔진 프로세스에서 분리 되었지만 SQL Server 쿼리 실행을 사용 하 여 완벽 하 게 통합 됩니다. 즉, 수를 외부 런타임에 모든 SQL Server 쿼리에서 데이터를 푸시 및 사용 하거나 SQL Server에 다시 결과 유지 합니다.
 
 모든 프로그래밍 언어 확장을 마찬가지로 시스템 저장 프로시저 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 미리 컴파일된 Java 코드를 실행 하기 위한 인터페이스입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
-SQL Server 2019가 필요 합니다. 이전 버전 Java 통합이 필요는 없습니다. 
+SQL Server 2019 미리 보기 인스턴스가 필요한 경우 이전 버전 Java 통합이 필요는 없습니다. 
 
 Windows 및 Linux에서 Java 버전 요구 사항이 달라 집니다. Java Runtime Environment (JRE)의 최소 요구 사항 이지만 Jdk는 Java 컴파일러 또는 개발 패키지를 해야 하는 경우에 유용 합니다. JDK 포괄적 이며 JDK를 설치 하는 경우 이므로 JRE 필요 하지 않습니다.
 
@@ -46,7 +46,7 @@ Windows, 좋습니다 기본/program 파일에서 JDK를 설치 / 폴더를 가�
 
 ## <a name="install-on-linux"></a>Linux에 설치
 
-설치할 수는 [함께 데이터베이스 엔진 및 Java 확장](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation), 또는 Java 지원 기존 인스턴스에 추가 합니다. 다음 예제에서는 기존 설치에 Java 확장을 추가합니다.  
+설치할 수는 [함께 데이터베이스 엔진 및 Java 확장](../../linux/sql-server-linux-setup-machine-learning.md#install-all), 또는 Java 지원 기존 인스턴스에 추가 합니다. 다음 예제에서는 기존 설치에 Java 확장을 추가합니다.  
 
 ```bash
 # RedHat install commands
@@ -65,6 +65,29 @@ sudo zypper install mssql-server-extensibility-java
 
 > [!Note]
 > 인터넷에 연결 된 장치에서 패키지 종속성 다운로드 되 고 주 패키지 설치의 일부로 설치 합니다. 오프 라인 설치를 비롯 한 자세한 정보를 참조 하세요 [Linux에서 SQL Server Machine Learning 설치](../../linux/sql-server-linux-setup-machine-learning.md)합니다.
+
+### <a name="grant-permissions-on-linux"></a>Linux에 대 한 권한 부여
+
+SQL Server는 Java 클래스를 실행할 수 있는 권한이 있는 있도록 권한을 설정 해야 합니다.
+
+읽기 권한을 부여 하 고 jar 파일 또는 클래스 파일에 대 한 액세스를 실행 하려면 다음을 실행 **chmod** 각 클래스나 jar 파일에서 명령을 합니다. SQL Server를 사용 하 여 작업할 때 jar의 클래스 파일을 배치 하는 것이 좋습니다. Jar 만들기 도움말을 참조 하세요 [jar 파일을 만드는 방법](#create-jar)합니다.
+
+```cmd
+chmod ug+rx <MyJarFile.jar>
+```
+디렉터리나 jar 파일을 읽기/실행 mssql_satellite 권한을 부여 해야 합니다.
+
+* SQL Server에서 클래스 파일을 호출 하는 경우 mssql_satellite는 필요한 읽기/실행할 수 있는 권한은 *모든* 폴더 계층 구조 아래로 직계 부모는 루트에서 디렉터리입니다.
+
+* SQL Server에서 jar 파일을 호출 하는 경우 자체 jar 파일에서 명령을 실행 하기에 충분 합니다.
+
+```cmd
+chown mssql_satellite:mssql_satellite <directory>
+```
+
+```cmd
+chown mssql_satellite:mssql_satellite <MyJarFile.jar>
+```
 
 <a name="install-on-windows"></a>
 
@@ -86,7 +109,7 @@ JAVA_HOME 환경 변수가 Java 인터프리터의 위치를 지정 하 합니�
 
   CTP 2.0에서 1.10 Java 용 에서만 기본 jdk 폴더로 JAVA_HOME을 설정 합니다. 
 
-  Java 1.8에 대 한 확장 (예: "C:\Program Files\Java\jdk1.8.0_181\bin\server" JDK의 Windows에서 jvm.dll 연결할 경로. 또는 JRE 기본 폴더를 가리킬 수 있습니다: "C:\Program Files\Java\jre1.8.0_181"입니다.
+  Java 1.8에 대 한 확장 (예: "C:\Program Files\Java\jdk1.8.0_181\bin\server" JDK의 Windows에서 jvm.dll 연결할 경로. 또는 JRE 기본 폴더를 가리킬 수 있습니다. "C:\Program Files\Java\jre1.8.0_181"입니다.
 
 2. 제어판에서 엽니다 **시스템 및 보안**오픈 **시스템**, 클릭 **고급 시스템 속성**합니다.
 
@@ -98,38 +121,32 @@ JAVA_HOME 환경 변수가 Java 인터프리터의 위치를 지정 하 합니�
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-permissions-to-java-executables"></a>Java 실행 파일에 권한 부여
+### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>기본이 아닌 JDK 폴더 (Windows만 해당)에 액세스 권한 부여
 
-기본적으로 외부 프로세스를 실행 하는 계정 JRE 또는 JDK 파일에 액세스를 하지 않습니다. 이 섹션에서는 액세스할 수 있도록 권한을 부여 하려면 다음 PowerShell 스크립트를 실행 합니다.
+기본 폴더에 JDK/JRE를 설치 하는 경우이 단계를 건너뛸 수 있습니다. 
 
-1. 찾아 JDK 또는 JRE 설치 위치를 복사 합니다. 예를 들어, C:\Program Files\Java\jdk-10.0.2 수 있습니다.
+기본이 아닌 폴더 설치를 실행 합니다 **icacls** 에서 명령을 *관리자 권한* 에 대 한 액세스 권한을 부여 하려면 줄을 **SQLRUsergroup** 및 SQL Server 서비스 계정을 (  **ALL_APPLICATION_PACKAGES**) JVM 및 Java classpath에 액세스 합니다. 명령에는 모든 파일 및 지정 된 디렉터리 경로 아래에 폴더를 재귀적으로 액세스를 하는 권한 부여 됩니다.
 
-2. 관리자 권한으로 PowerShell을 엽니다. 이 작업에 익숙하지 참조 [이 문서에서는](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) 팁에 대 한 합니다.
+#### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 권한
 
-3. 권한을 부여 하려면 다음 스크립트를 실행 **SQLRUserGroup** Java 실행 파일에 대 한 사용 권한. 
+명명 된 인스턴스의 경우 인스턴스 이름을 SQLRUsergroup에 추가 합니다 (예를 들어 `SQLRUsergroupINSTANCENAME`).
 
-  **SQLRUserGroup** 실행 하는 외부 프로세스에서 사용 권한을 지정 합니다. 기본적으로이 그룹의 구성원 권한이 R 및 Python 프로그램 파일에서 SQL Server, 없습니다 Java 설치 합니다. Java 실행 파일을 실행 하려면 기울여야 **SQLRUserGroup** 권한이 있습니다.
+```cmd
+icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-   $Acl.SetAccessRule($Ar)
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
-4. 권한을 부여 하려면 다음 스크립트를 실행 **ALL APPLICATION PACKAGES** 사용 권한도 있습니다. 
+#### <a name="appcontainer-permissions"></a>AppContainer 권한
 
-  SQL Server 2019 컨테이너 바꿉니다 작업자 계정을 격리 메커니즘으로 멤버는 실행 패드 서비스 계정의 id 아래에 있는 컨테이너 내에서 실행 되는 프로세스를 **SQLRUserGroup**합니다. 자세한 내용은 [SQL Server 2019에 차이가 설치](../install/sql-machine-learning-services-ver15.md)합니다.
+```cmd
+icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-   $Acl.SetAccessRule($Ar) 
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
+### <a name="add-the-jre-path-to-javahome"></a>JAVA_HOME JRE 경로 추가
+JRE JAVA_HOME 시스템 환경 변수에 추가 해야 합니다. 설치 된 JRE만 있는 경우에 JRE 폴더 경로 제공할 수 있습니다. 그러나는 JDK가 설치 되어 있다면 다음과 같이 아래의 JDK, JRE 폴더에는 JVM에 전체 경로 제공 하는 것이 해야 합니다. "C:\Program Files\Java\jdk1.8.0_191\jre\bin\server"입니다.
 
-5. SQL Server에서 실행 하려는.class 또는.jar 파일이 포함 된 모든 Java 클래스 경로 폴더에서 이전 두 단계를 반복 합니다. C:\JavaPrograms\my-app와 같은 경로에서 컴파일된 프로그램을 유지 하는 경우 부여 하는 예를 들어 **SQLRUserGroup** 하 고 **ALL APPLICATION PACKAGES** 폴더에 대 한 권한이 프로그램을 로드할 수 있도록 합니다.
+시스템 변수를 만들려면 제어판을 사용 하 여 > 시스템 및 보안 > 액세스 하기 위해 시스템 **시스템 속성 고급**합니다. 클릭 **환경 변수** 다음 JAVA_HOME에 대 한 새 시스템 변수를 만듭니다.
 
-  루트 폴더에서 시작 하는 전체 경로 대 한 권한을 부여 해야 합니다. 만 하 고 있는 폴더에 대 한 권한 코드를 로드 하기 위한 충분 한 수 없습니다.
+![Java 홈에 대 한 환경 변수](../media/java/env-variable-java-home.png "Java에 대 한 설정")
 
 <a name="configure-script-execution"></a>
 
@@ -162,6 +179,18 @@ Machine Learning Services에 익숙한 경우 확장에 대 한 권한 부여 �
 * Sp_execute_external_script 매개 변수를 사용 하 여 스트리밍 @r_rowsPerRead 이 CTP에서 지원 되지 않습니다.
 
 * Sp_execute_external_script 매개 변수를 사용 하 여 분할 @input_data_1_partition_by_columns 이 CTP에서 지원 되지 않습니다.
+
+<a name="create-jar"></a>
+
+## <a name="how-to-create-a-jar-file-from-class-files"></a>클래스 파일에서 jar 파일을 만드는 방법
+
+클래스 파일에 포함 된 폴더로 이동한 다음이 명령을 실행 합니다.
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+에 대 한 경로 확인 **jar.exe** 시스템 경로 변수에의 일부입니다. 또는 /bin JDK 폴더에서에서 찾을 수 있는 jar에 대 한 전체 경로 지정 합니다. `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## <a name="next-steps"></a>다음 단계
 

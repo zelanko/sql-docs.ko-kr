@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services 성능 조정 | Microsoft 문서
+title: SQL Server R Services 성능 튜닝-SQL Server Machine Learning 서비스
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217558"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432296"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server에서 R의 성능 튜닝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47217558"
 + 세 번째 기사에서는 R 코드 운영 화에 대 한 리소스에 대 한 최적화를 설명합니다.
 + 네 번째 기사에는 세부 정보 및 보고서 결과 결론 테스트 방법을 설명합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 서비스
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>성능 목표 및 대상된 시나리오
 
@@ -83,11 +83,11 @@ Machine learning 위한 성능 최적화는 명확 하 게는 모든 상황에 �
 
 ## <a name="articles-in-this-series"></a>이 시리즈의 기사
 
-+ [SQL Server-하드웨어에서에서 R의 성능 튜닝](..\r\sql-server-configuration-r-services.md)
++ [SQL Server-하드웨어에서에서 R의 성능 튜닝](../r/sql-server-configuration-r-services.md)
 
-    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 및 외부 스크립트를 더 잘 지원 하도록 SQL Server 인스턴스를 구성 하는 것에 대 한 설치 됩니다. 에 특히 유용 **데이터베이스 관리자가**합니다.
+    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 및 외부 스크립트를 더 잘 지원 하도록 SQL Server 인스턴스를 구성 하는 것에 대 한 설치 됩니다. 에 특히 유용 **데이터베이스 관리자가**합니다.
 
-+ [SQL Server-코드 및 데이터에에서 R의 성능 튜닝 최적화](..\r\r-and-data-optimization-r-services.md)
++ [SQL Server-코드 및 데이터에에서 R의 성능 튜닝 최적화](../r/r-and-data-optimization-r-services.md)
 
     알려진된 문제를 방지 하려면 외부 스크립트를 최적화 하는 방법에 대 한 특정 팁을 제공 합니다. 에 가장 유용 **과학자**합니다.
 
@@ -95,6 +95,6 @@ Machine learning 위한 성능 최적화는 명확 하 게는 모든 상황에 �
     > R 일반적 적용이 섹션의 정보를 많이 하는 동안 일부 정보는 RevoScaleR analytic 함수를 다릅니다. 자세한 성능 지침을 사용할 수 없는 **revoscalepy** 다른 Python 라이브러리를 지원 합니다.
     >
 
-+ [SQL Server-메서드 및 결과에 R의 성능 튜닝](..\r\performance-case-study-r-services.md)
++ [SQL Server-메서드 및 결과에 R의 성능 튜닝](../r/performance-case-study-r-services.md)
 
     요약 데이터 사용한 두 사례 연구, 성능 테스트 된 방법 및 최적화 결과 적용 하는 방법입니다.

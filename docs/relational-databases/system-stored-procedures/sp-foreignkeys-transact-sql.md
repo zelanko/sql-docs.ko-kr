@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605181"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589951"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  테이블 정보가 반환될 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@pktab_name =** ] **'***pktab_name***'**  
+ [  **@pktab_name =** ] **'**_pktab_name_**'**  
  기본 키가 있는 테이블의 이름입니다. *pktab_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@pktab_schema =** ] **'***pktab_schema***'**  
+ [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
  기본 키가 있는 스키마의 이름입니다. *pktab_schema*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
  기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
   
- [  **@fktab_name =** ] **'***fktab_name***'**  
+ [  **@fktab_name =** ] **'**_fktab_name_**'**  
  외래 키가 있는 테이블의 이름입니다. *fktab_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@fktab_schema =** ] **'***fktab_schema***'**  
+ [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
  외래 키가 있는 스키마의 이름입니다. *fktab_schema*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  외래 키가 있는 카탈로그의 이름입니다. *fktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*카탈로그 ***.*** 스키마 ***.*** 테이블*)에 결과 집합에 표시 됩니다.  
+ 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_카탈로그_**.** _스키마_**.** _테이블_)에 결과 집합에 표시 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

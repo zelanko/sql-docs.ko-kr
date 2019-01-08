@@ -1,5 +1,5 @@
 ---
-title: 관리 하 고 SQL server에서 machine learning 워크 로드를 통합할 | Microsoft Docs
+title: 관리 및 machine learning 워크 로드-SQL Server Machine Learning Services 통합
 description: SQL Server DBA, 데이터베이스 엔진 인스턴스에서 R 및 Python 하위 시스템을 학습 하는 컴퓨터를 배포 하는 것에 대 한 관리 작업을 검토 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743208"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431830"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>관리 하 고 SQL server machine learning 워크 로드를 통합 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

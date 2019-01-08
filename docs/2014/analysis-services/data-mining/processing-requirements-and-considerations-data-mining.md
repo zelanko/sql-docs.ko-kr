@@ -15,12 +15,12 @@ ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44b24dc04a66538e57db696ba7620e61e7114719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369725"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
   이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](processing-data-mining-objects.md)를 참조하세요.  
@@ -36,11 +36,11 @@ ms.locfileid: "48196343"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 원시 데이터를 제공하는 데이터베이스에 대해 쿼리를 실행합니다. 이 데이터베이스는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 인스턴스일 수도 있고 이전 버전의 SQL Server 데이터베이스 엔진일 수도 있습니다. 데이터 마이닝 구조를 처리할 때 원본의 데이터는 마이닝 구조로 전송되고 디스크에 압축된 새 형식으로 저장됩니다. 데이터 원본의 모든 열이 처리되는 것은 아니고, 마이닝 구조에 포함되어 있으며 바인딩에 의해 정의된 열만 처리됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 이 데이터를 사용하여 모든 데이터 및 분할된 열의 인덱스를 작성하고 연속 열에 대한 별도의 인덱스를 만듭니다. 중첩 테이블당 하나의 쿼리가 실행되어 인덱스를 만들고, 중첩 테이블당 또 하나의 추가 쿼리가 생성되어 각 중첩 테이블과 사례 테이블 쌍 간의 관계를 처리합니다. 여러 개의 쿼리를 만드는 이유는 특수 내부 다차원 데이터 저장소를 처리하기 위해서입니다. 쿼리의 수를 제한할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 속성을 설정 하 여 관계형 저장소에 보내는 `DatabaseConnectionPoolMax`합니다. 자세한 내용은 [OLAP Properties](../server-properties/olap-properties.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 이 데이터를 사용하여 모든 데이터 및 분할된 열의 인덱스를 작성하고 연속 열에 대한 별도의 인덱스를 만듭니다. 중첩 테이블당 하나의 쿼리가 실행되어 인덱스를 만들고, 중첩 테이블당 또 하나의 추가 쿼리가 생성되어 각 중첩 테이블과 사례 테이블 쌍 간의 관계를 처리합니다. 여러 개의 쿼리를 만드는 이유는 특수 내부 다차원 데이터 저장소를 처리하기 위해서입니다. `DatabaseConnectionPoolMax` 서버 속성을 설정하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 관계형 저장소에 보내는 쿼리의 수를 제한할 수 있습니다. 자세한 내용은 [OLAP Properties](../server-properties/olap-properties.md)을 참조하세요.  
   
  모델을 처리할 때 모델은 데이터 원본에서 데이터를 다시 읽지 않고 대신 마이닝 구조에서 데이터의 요약을 가져옵니다. 캐시된 인덱스와 함께 만든 큐브를 사용하여 사례 데이터가 캐시되면 서버는 모델 학습을 위한 독립 스레드를 만듭니다.  
   
- 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+ 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ##  <a name="bkmk_ProcessStructures"></a> 마이닝 구조 처리  
  모든 종속 모델과 함께 또는 따로 마이닝 구조를 처리할 수 있습니다. 일부 모델이 처리하는 데 오랜 시간이 소요될 것으로 예상되어 해당 작업을 지연시키려는 경우 마이닝 구조를 모델과 따로 처리하는 것이 유용할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48196343"
   
  이러한 시나리오에서는 마이닝 모델도 처리됩니다.  
   
- **프로젝트 배포**: 프로젝트 설정 및 프로젝트의 현재 상태에 따라 프로젝트를 배포할 때 프로젝트의 마이닝 모델은 대개 전체적으로 처리됩니다.  
+ **프로젝트의 배포**: 프로젝트 설정 및 프로젝트의 현재 상태에 따라 프로젝트를 배포할 때 프로젝트의 마이닝 모델은 대개 전체적으로 처리됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 이전에 처리한 버전이 있고 구조에 대한 이후 변경 내용이 없지 않으면 배포 시작 시 처리가 자동으로 시작됩니다. 드롭다운 목록에서 **솔루션 배포** 를 선택하거나 F5 키를 눌러 프로젝트를 배포할 수 있습니다. 다음을 수행할 수 있습니다.  
   
@@ -88,8 +88,8 @@ ms.locfileid: "48196343"
  자세한 내용은 [데이터 마이닝 개체 내보내기 및 가져오기](export-and-import-data-mining-objects.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
  [다차원 모델 개체 처리](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

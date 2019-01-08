@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3619426117b6c1bcb17860b9d179716f22ff5c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376695"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 구성 세부 정보는 Distributed Replay 컨트롤러, 클라이언트 및 관리 도구가 설치되는 위치의 XML 파일에서 지정됩니다. 이러한 파일은 다음과 같습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "48122521"
   
 |설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
+|시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본적으로 이 값은 `No`입니다.|  
 |최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|정수 > =-1<br /><br /> `-1` 은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
   
 ### <a name="example"></a>예제  
@@ -125,9 +125,9 @@ ms.locfileid: "48122521"
 |시퀀스 모드|`<SequencingMode>`|이벤트 예약에 사용되는 모드를 지정합니다.|`synchronization` &#124; `stress`|아니요. 기본값은 `stress`입니다.|  
 |스트레스 규모 세분성|`<StressScaleGranularity>`|스트레스 모드에서 SPID(Service Profile Identifier)에 대한 모든 연결의 배율을 함께 조정(SPID)해야 하는지 개별적으로 조정(연결)해야 하는지를 지정합니다.|SPID &#124; Connection|예 기본값은 `SPID`입니다.|  
 |연결 시간 조절|`<ConnectTimeScale>`|스트레스 모드에서 연결 시간을 조절하는 데 사용됩니다.|`1` 에서 `100`사이의 정수입니다.|아니요. 기본값은 `100`입니다.|  
-|대기 시간 조절|`<ThinkTimeScale>`|스트레스 모드에서 대기 시간을 조절하는 데 사용됩니다.|`0` 에서 `100`사이의 정수입니다.|아니요. 기본값은 `100`입니다.|  
+|대기 시간 조절|`<ThinkTimeScale>`|스트레스 모드에서 대기 시간을 조절하는 데 사용됩니다.|`0` 에서 `100`사이의 정수입니다.|아니요. 기본적으로 이 값은 `100`입니다.|  
 |연결 풀링 사용|`<UseConnectionPooling>`|각 Distributed Replay 클라이언트에서 연결 풀링을 사용할지 여부를 지정합니다.|Yes &#124; No|예 기본값은 `Yes`입니다.|  
-|상태 모니터 간격|`<HealthmonInterval>`|상태 모니터 실행 빈도(초)를 나타냅니다.<br /><br /> 이 값은 동기화 모드에서만 사용됩니다.|1보다 크거나 같은 정수입니다.<br /><br /> (비활성화하려면`-1` 로 설정)|아니요. 기본값은 `60`입니다.|  
+|상태 모니터 간격|`<HealthmonInterval>`|상태 모니터 실행 빈도(초)를 나타냅니다.<br /><br /> 이 값은 동기화 모드에서만 사용됩니다.|1보다 크거나 같은 정수입니다.<br /><br /> (비활성화하려면`-1` 로 설정)|아니요. 기본적으로 이 값은 `60`입니다.|  
 |쿼리 제한 시간|`<QueryTimeout>`|쿼리 제한 시간 값(초)을 지정합니다. 이 값은 첫 번째 행이 반환될 때까지만 효력이 있습니다.|1보다 크거나 같은 정수입니다.<br /><br /> (비활성화하려면`-1` 로 설정)|아니요. 기본값은 `3600`입니다.|  
 |클라이언트당 스레드 수|`<ThreadsPerClient>`|각 재생 클라이언트에 사용할 재생 스레드 수를 지정합니다.|`1` 에서 `512`사이의 정수입니다.|아니요. 지정하지 않으면 Distributed Replay가 값 `255`를 사용합니다.|  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48122521"
   
 |설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|행 개수 기록|`<RecordRowCount>`|각 결과 집합에 대해 행 개수를 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `Yes`입니다.|  
+|행 개수 기록|`<RecordRowCount>`|각 결과 집합에 대해 행 개수를 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본적으로 이 값은 `Yes`입니다.|  
 |결과 집합 기록|`<RecordResultSet>`|모든 결과 집합의 내용을 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
   
 ### <a name="example"></a>예제  
@@ -163,11 +163,11 @@ ms.locfileid: "48122521"
 </Options>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [관리 도구 명령줄 옵션 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>관련 항목:  
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [SQL Server Distributed Replay 포럼](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 2단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay 포럼](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 2단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

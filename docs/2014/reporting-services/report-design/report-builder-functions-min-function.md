@@ -11,12 +11,12 @@ ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ae1565a2690566f290d76b27ad0e8052072691ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9fbba90a3b4fef1e65560350d22e2f4af597ac97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368586"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 함수(보고서 작성기 및 SSRS)
   지정된 범위의 컨텍스트에서 식으로 지정되는 Null이 아닌 모든 숫자 값의 최소값을 반환합니다.  
@@ -33,19 +33,19 @@ Min(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Variant`) 집계를 수행 하는 식입니다.  
+ `Variant`) 집계를 수행할 식입니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
  *재귀*  
- (**열거 형식**) 선택 사항입니다. `Simple` (기본값) 또는 `RdlRecursive`합니다. 집계를 재귀적으로 수행할지 여부를 지정합니다.  
+ (**열거 형식**) 선택 사항입니다. `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  식 유형에 따라 결정됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 같은 변환 함수를 사용 하 여 동일한 데이터 형식으로 여러 숫자 데이터 형식이 포함 된 데이터를 변환할 `CInt`하십시오 `CDbl` 또는 `CDec`합니다. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
+ 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 여러 숫자 데이터 형식이 포함된 데이터를 동일한 데이터 형식으로 변환하려면 `CInt`, `CDbl` 또는 `CDec` 같은 변환 함수를 사용하세요. 자세한 내용은 [형식 변환 함수](https://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
   
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
@@ -71,9 +71,9 @@ Min(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

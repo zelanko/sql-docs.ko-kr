@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192503"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375325"
 ---
 # <a name="start-report-builder-report-builder"></a>보고서 작성기 시작(보고서 작성기)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 독립 실행형 포함 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  
   
 > [!NOTE]  
->  보고서 작성기는 Itanium 64 기반 컴퓨터에 설치할 수 없습니다. 이 적용 됩니다는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 및 보고서 작성기의 독립 실행형 버전입니다.  
+>  보고서 작성기는 Itanium 64 기반 컴퓨터에 설치할 수 없습니다. 이는 보고서 작성기의 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 및 독립 실행형 버전에 적용됩니다.  
   
  이때 열리는 보고서 작성기 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전이 이전 버전의 보고서 작성기이면 보고서 작성기 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 사용하도록 보고서 관리자와 SharePoint 사이트를 업데이트해 줄 것을 관리자에게 요청하십시오.  
   
- 보고서 작성기 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전을 사용하여 SharePoint에 게시된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 통합 문서에 대한 보고서를 만들 수도 있습니다. 사용 하 여 보고서 작성기를 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]를 참조 하세요 [PowerPivot 데이터로 Reporting Services 보고서 만들기](http://go.microsoft.com/fwlink/?LinkId=185238) technet.microsoft.com 합니다.  
+ 보고서 작성기 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전을 사용하여 SharePoint에 게시된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 통합 문서에 대한 보고서를 만들 수도 있습니다. 사용 하 여 보고서 작성기를 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]를 참조 하세요 [PowerPivot 데이터로 Reporting Services 보고서 만들기](https://go.microsoft.com/fwlink/?LinkId=185238) technet.microsoft.com 합니다.  
   
- 독립 실행형 보고서 작성기를 시작 합니다 **시작** 도구를 사용 하 여 수 전에 로컬 컴퓨터, 사용자 또는 관리자의 메뉴 컴퓨터에서 직접 보고서 작성기 설치 해야 합니다. 독립 실행형 버전은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치할 때 함께 설치되지 않습니다. 별도로 다운로드하여 설치해야 합니다. 보고서 작성기를 다운로드 하려면 [Microsoft® SQL Server® 2012 보고서 작성기](http://go.microsoft.com/fwlink/?LinkId=401502)합니다.  
+ 독립 실행형 보고서 작성기를 시작 합니다 **시작** 도구를 사용 하 여 수 전에 로컬 컴퓨터, 사용자 또는 관리자의 메뉴 컴퓨터에서 직접 보고서 작성기 설치 해야 합니다. 독립 실행형 버전은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치할 때 함께 설치되지 않습니다. 별도로 다운로드하여 설치해야 합니다. 보고서 작성기를 다운로드 하려면 [Microsoft® SQL Server® 2012 보고서 작성기](https://go.microsoft.com/fwlink/?LinkId=401502)합니다.  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>보고서 관리자에서 보고서 작성기 ClickOnce를 시작하려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192503"
   
      보고서 작성기가 열립니다. 이제 보고서를 작성하거나 보고서 서버의 보고서를 열 수 있습니다.  
   
-     **참고** 경우는 **새 문서** 메뉴에 나타나지 않으면 합니다 **보고서 작성기 보고서**, **보고서 작성기 모델**, 및 **보고서데이터원본** 옵션을 해당 내용 유형을 SharePoint 라이브러리에 추가 해야 합니다. 자세한 내용은 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;Reporting Services SharePoint 통합 모드의&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) 에서 msdn.microsoft.com의 합니다.  
+     **참고** 경우는 **새 문서** 메뉴에 나타나지 않으면 합니다 **보고서 작성기 보고서**, **보고서 작성기 모델**, 및 **보고서데이터원본** 옵션을 해당 내용 유형을 SharePoint 라이브러리에 추가 해야 합니다. 자세한 내용은 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;Reporting Services SharePoint 통합 모드의&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) 에서 msdn.microsoft.com의 합니다.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>시작 메뉴에서 보고서 작성기 독립 실행형 버전을 시작하려면  
   

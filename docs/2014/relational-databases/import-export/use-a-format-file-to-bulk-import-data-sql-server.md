@@ -13,12 +13,12 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f144e5e4f70fdef954dd91452df6bc9275409b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364085"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
   이 항목에서는 대량 가져오기 작업에서 서식 파일을 사용하는 방법에 대해 설명합니다. 서식 파일은 데이터 파일의 필드를 테이블 열에 매핑합니다.  **bcp** 명령이나 BULK INSERT 또는 INSERT ...를 사용할 때 비 XML 서식 파일 또는 XML 서식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다. SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하는 경우 비 XML 또는 XML 형식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48073513"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** … **in**|**-f** *format_file*|  
+|**bcp** ... **에서**|**-f** *format_file*|  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
@@ -100,7 +100,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -181,7 +181,7 @@ DROP TABLE myTestFormatFiles
 ```  
   
 > [!NOTE]  
->  OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
+>  OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 사용해 표시할 수 있습니다.  
   
 ## <a name="additional-examples"></a>추가 예  
  [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
