@@ -14,17 +14,17 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f60e644d5896fd25ce57df3326a980b9681ea714
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085105"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351113"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
   sqlncli.h에 정의되어 있는 `SSVARIANT` 구조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 공급자의 DBTYPE_SQLVARIANT 값에 해당합니다.  
   
- `SSVARIANT`는 판별 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 `SSVARIANT` 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
+ `SSVARIANT`는 판별 구조체입니다. vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 해당하므로 `SSVARIANT` 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 하세요. [유형 표시기](https://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  DataTypeCompat==80인 경우, 여러 `SSVARIANT` 하위 유형이 문자열이 됩니다. 예를 들면 다음 vt 값이 `SSVARIANT`에 VT_SS_WVARSTRING으로 나타납니다.  

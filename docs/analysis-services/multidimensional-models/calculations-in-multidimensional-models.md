@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023720"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983994"
 ---
 # <a name="calculations-in-multidimensional-models"></a>다차원 모델의 계산
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,6 @@ ms.locfileid: "34023720"
   
 -   계산 식 창 - 폼 보기와 스크립트 보기를 지원합니다.  
   
-> [!NOTE]  
->  MDX 스크립팅에 대한 자세한 내용은 [Microsoft SQL Server 2005의 MDX 스크립팅 소개(Introduction to MDX Scripting in Microsoft SQL Server 2005)](http://go.microsoft.com/fwlink/?LinkId=81892)를 참조하고, Microsoft TechNet 웹 사이트의 [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 페이지에 있는 추가 리소스 섹션을 참조하십시오. 큐브 디자인과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2005 Analysis Services 성능 가이드(SQL Server 2005 Analysis Services Performance Guide)](http://go.microsoft.com/fwlink/?LinkId=81621)를 참조하십시오.  
   
 ## <a name="creating-a-new-calculation"></a>새 계산 만들기  
  새 계산을 만들려면 큐브 디자이너의 **계산** 탭에서 **큐브** 메뉴를 선택하고 만들려는 계산 유형에 따라 **새 계산 멤버**, **새 명명된 집합**또는 **새 스크립트 명령**을 클릭합니다. 도구 모음에서 해당 단추를 클릭하거나 **스크립트 구성 도우미** 창에서 아무데나 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 명령 중 하나를 클릭할 수도 있습니다. 이렇게 하면 **스크립트 구성 도우미** 창에 새 계산이 추가되고 계산 식 창의 계산 폼에 계산에 대한 필드가 표시됩니다. 새 스크립트를 만드는 경우에는 계산 식 창에 스크립트 보기가 열립니다. 세 가지 유형의 계산을 작성하는 방법은 [계산 멤버 만들기](../../analysis-services/multidimensional-models/create-calculated-members.md), [명명된 집합 만들기](../../analysis-services/multidimensional-models/create-named-sets.md)및 [할당 및 기타 스크립트 명령 정의](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)를 참조하세요.  

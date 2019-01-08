@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208375"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 세트의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "50099522"
 > [!NOTE]  
 >  HTML 태그가 들어 있는 텍스트를 가져오면 입력란에서 항상 데이터 구문을 분석합니다. HTML 태그의 하위 집합만 지원되기 때문에 렌더링된 보고서에 표시되는 HTML이 원래 HTML과 다를 수 있습니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
+ 빠르게 시작 하려면 참조 [자습서: 텍스트 서식 지정 &#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "50099522"
 ## <a name="supported-html-tags"></a>지원되는 HTML 태그  
  다음은 자리 표시자 텍스트로 정의될 때 HTML로 렌더링될 전체 태그 목록입니다.  
   
--   머리글, 스타일 및 블록 요소: \<H {n} >, \<DIV >, \<s p a N >를\<P >, \<l I >  
+-   머리글, 스타일 및 블록 요소: \<H {n} >, \<d i V >, \<범위 >,\<P >, \<l I >  
   
  나머지 모든 HTML 태그는 보고서를 처리하는 동안 무시됩니다. 자리 표시자 텍스트에 있는 식이 나타내는 HTML의 형식이 잘못된 경우에는 자리 표시자가 일반 텍스트로 렌더링됩니다. 모든 HTML 태그는 대소문자를 구분하지 않습니다.  
   
@@ -60,8 +60,6 @@ ms.locfileid: "50099522"
     -   절대 CSS 길이 단위의 유효한 RDL 크기 값만 지원됩니다. 지원되는 단위는 in, cm, mm, pt, pc 입니다.  
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
-  
-     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
   
 -   color  
   

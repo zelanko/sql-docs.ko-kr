@@ -1,11 +1,10 @@
 ---
-title: '자습서: 계속 연결된 서버 간 데이터 복제 | Microsoft 문서'
+title: '자습서: 연결 된 서버 간에 데이터를 지속적으로 복제 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753925"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>자습서: 계속 연결된 서버 간 데이터 복제
   복제는 계속 연결된 서버 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 계속 연결된 서버에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  
@@ -49,19 +48,19 @@ ms.locfileid: "48094624"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다.  
   
- **이 자습서에 소요되는 예상 시간: 30분**  
+ **이 자습서에 소요되는 예상 시간: 30 분입니다.**  
   
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
   
--   [1단원: 트랜잭션 복제를 사용하여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [1 단원: 트랜잭션 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)  
   
 -   [2단원: 트랜잭션 게시에 구독 만들기](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [3단원: 구독 유효성 검사 및 대기 시간 측정](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [3 단원: 구독 유효성 검사 및 대기 시간 측정](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [자습서 시작](transactional/transactional-replication.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 프로그래밍 개념](concepts/replication-programming-concepts.md)  
   
   

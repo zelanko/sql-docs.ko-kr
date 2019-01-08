@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, templates
@@ -13,17 +12,17 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2eb72f7eabd9bb265adba697264942e9b4fdf400
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754015"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>템플릿을 사용하여 리소스 관리자 구성
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 제공된 템플릿을 사용하여 리소스 관리자를 구성할 수 있습니다.  
   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [Permissions](#Permissions)  
   
 -   **작업 그룹을 만들려면**  [템플릿을 사용합니다.](#ConfRGTemplate)  
   

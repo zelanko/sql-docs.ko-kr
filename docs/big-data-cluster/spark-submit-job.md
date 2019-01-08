@@ -1,27 +1,31 @@
 ---
-title: Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
-description: Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Azure Data Studio에서 Spark 작업 실행
+titleSuffix: SQL Server 2019 big data clusters
+description: Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업을 제출 합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221609"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246503"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
 
-주요 시나리오 중 하나에 SQL Server 2019 CTP 2.1에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
+빅 데이터 클러스터에 대 한 주요 시나리오 중 하나에 SQL Server 2019 미리 보기에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
-## <a name="prerequisite"></a>사전 요구 사항 
-SQL Server에 대 한 빅 데이터 도구를 설치 하 고 Spark 작업을 제출할 수 있습니다 빅 데이터 클러스터에 연결 합니다. 설치 세부 정보에 대 한 링크를 참조 [빅 데이터 도구 배포](deploy-big-data-tools.md)합니다.
+## <a name="prerequisites"></a>사전 요구 사항
+
+- [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 확장**
+   - **Kubectl**
+
+- [Azure Data Studio 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md)합니다.
 
 ## <a name="open-spark-job-submission-dialog"></a>Spark 작업 제출 대화 상자를 엽니다
 여러 가지 방법으로 Spark 작업 제출 대화 상자를 엽니다. 대시보드, 개체 탐색기 및 명령 Palate 상황에 맞는 메뉴를 포함 하는 방법입니다.

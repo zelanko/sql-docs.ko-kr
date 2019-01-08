@@ -20,16 +20,16 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815181"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212713"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLBulkOperations** 대량 책갈피 및 대량 삽입 수행 업데이트 등과 같은 작업을 삭제 및 책갈피에서 가져옵니다.  
@@ -89,7 +89,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|함수 시퀀스 오류입니다.|(DM)를 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한 합니다 *StatementHandle*합니다. 이 비동기 함수가 여전히 실행 시기를 **SQLBulkOperations** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대해 호출 된 합니다 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 실행 상태가 없습니다. 이 함수가 먼저 호출 하지 않고 호출 **SQLExecDirect**를 **SQLExecute**, 또는 카탈로그 함수입니다.<br /><br /> (DM)를 비동기적으로 실행 중인 함수 (없습니다이 하나)에 대해 호출 된 합니다 *StatementHandle* 이 함수가 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLSetPos** 에 대해 호출 된 합니다 *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 전송 하기 전에 호출 되었습니다.<br /><br /> (DM) 드라이버는 ODBC 2 되었습니다. *x* 드라이버와 **SQLBulkOperations** 에 대해 호출 된를 *StatementHandle* 전에 **SQLFetchScroll** 또는 **SQLFetch**  호출 되었습니다.<br /><br /> (DM) **SQLBulkOperations** 후 호출 되었습니다 **SQLExtendedFetch** 가 호출 된 *StatementHandle*합니다.|  
 |HY011|특성을 지금 설정할 수 없습니다.|(DM) 드라이버는 ODBC 2 되었습니다. *x* 드라이버 및 SQL_ATTR_ROW_STATUS_PTR 문 특성에 대 한 호출 사이 설정 된 **SQLFetch** 하거나 **SQLFetchScroll** 고 **SQLBulkOperations** .|  
 |HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|합니다 *작업* 인수 SQL_ADD 또는 SQL_UPDATE_BY_BOOKMARK; 데이터 값이 null 포인터; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 되어 열 길이 값이 0 보다 작거나 되었지만 SQL_DATA_AT_EXEC 다음과 같지 않은 경우 SQL_COLUMN_IGNORE, SQL_NTS, SQL_NULL_DATA, 또는 SQL_LEN_DATA_AT_EXEC_OFFSET 작거나 합니다.<br /><br /> 길이/표시기 버퍼의 값이 SQL_DATA_AT_EXEC; SQL 형식 된 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 long 데이터 소스 관련 데이터 형식이; SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.<br /><br /> 합니다 *작업* 인수가 SQL_ADD, SQL_ATTR_USE_BOOKMARK 문 특성이 SQL_UB_VARIABLE로 설정 된 및 0 열이 결과 집합에 대 한 책갈피에 대 한 최대 길이 같은 길이가 없습니다. 버퍼에 바인딩 되었습니다. (이 길이 IRD의 SQL_DESC_OCTET_LENGTH 필드 수 및 호출 하 여 가져올 수 있습니다 **SQLDescribeCol**하십시오 **SQLColAttribute**, 또는 **SQLGetDescField**.)|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|합니다 *작업* 인수 SQL_ADD 또는 SQL_UPDATE_BY_BOOKMARK; 데이터 값이 null 포인터; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 되어 열 길이 값이 0 보다 작거나 되었지만 SQL_DATA_AT_EXEC 다음과 같지 않은 경우 SQL_COLUMN_IGNORE, SQL_NTS, SQL_NULL_DATA, 또는 SQL_LEN_DATA_AT_EXEC_OFFSET 작거나 합니다.<br /><br /> 길이/표시기 버퍼의 값이 SQL_DATA_AT_EXEC; SQL 형식 되었거나 SQL_LONGVARCHAR, SQL_LONGVARBINARY에는 긴 데이터 소스 특정 데이터 형식 SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.<br /><br /> 합니다 *작업* 인수가 SQL_ADD, SQL_ATTR_USE_BOOKMARK 문 특성이 SQL_UB_VARIABLE로 설정 된 및 0 열이 결과 집합에 대 한 책갈피에 대 한 최대 길이 같은 길이가 없습니다. 버퍼에 바인딩 되었습니다. (이 길이 IRD의 SQL_DESC_OCTET_LENGTH 필드 수 및 호출 하 여 가져올 수 있습니다 **SQLDescribeCol**하십시오 **SQLColAttribute**, 또는 **SQLGetDescField**.)|  
 |HY092|잘못 된 특성 식별자|(DM)에 대 한 지정 된 값을 *작업* 인수가 잘못 되었습니다.<br /><br /> 합니다 *작업* 인수가 SQL_ADD, SQL_UPDATE_BY_BOOKMARK, 또는 SQL_DELETE_BY_BOOKMARK, 및 문 특성 SQL_ATTR_CONCURRENCY를 SQL_CONCUR_READ_ONLY로 설정 합니다.<br /><br /> 합니다 *작업* 인수가 SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK, 또는 SQL_UPDATE_BY_BOOKMARK, 및 책갈피 열이 바인딩되지 않았습니다 또는 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본에서 요청 된 작업을 지원 하지 않습니다 합니다 *작업* 인수입니다.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>주석  
   
 > [!CAUTION]  
->  문에 상태에 대 한 자세한 **SQLBulkOperations** 호출할 수 있습니다 ODBC 2를 사용 하 여 호환성을 위해 필요한 작업 및. *x* 응용 프로그램 참조를 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 대 한 섹션입니다.  
+>  문에 상태에 대 한 자세한 **SQLBulkOperations** 호출할 수 있습니다 ODBC 2를 사용 하 여 호환성을 위해 필요한 작업 및. *x* 응용 프로그램을 표시 합니다 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 섹션의 부록 g: 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
  응용 프로그램에서 사용 **SQLBulkOperations** 기본 테이블 또는 현재 쿼리에 해당 하는 보기에서 다음 작업을 수행 합니다.  
   
@@ -243,7 +243,7 @@ SQLRETURN SQLBulkOperations(
   
      실행 시 데이터 열이 있는 데이터를 보낼 사용 하 여 행 집합의 열 **SQLPutData** 행을 업데이트 하거나 삽입 하는 경우 **SQLBulkOperations**합니다. 사용 하 여 바인딩된 **SQLBindCol**합니다. 반환한 값 **SQLParamData** 행의 주소는 **TargetValuePtr* 처리 중인 버퍼입니다.  
   
-4.  응용 프로그램 호출 **SQLPutData** 한 번 이상 열에 대 한 데이터를 보내도록 합니다. 번 이상 호출 하는 경우 모든 데이터 값 반환 될 수 없습니다는  *\*TargetValuePtr* 에 지정 된 버퍼 **SQLPutData**;에 대 한 여러 호출은 **SQLPutData** 문자, 이진 또는 데이터 소스 관련 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 동일한 열 수 또는 데이터 소스 관련 데이터 형식에 대 한 합니다.  
+4.  응용 프로그램 호출 **SQLPutData** 한 번 이상 열에 대 한 데이터를 보내도록 합니다. 번 이상 호출 하는 경우 모든 데이터 값 반환 될 수 없습니다는  *\*TargetValuePtr* 에 지정 된 버퍼 **SQLPutData**;에 대 한 여러 호출은 **SQLPutData** 문자, 이진 또는 데이터 소스 특정 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 동일한 열 수 또는 데이터 소스 특정 데이터 형식에 대 한 합니다.  
   
 5.  응용 프로그램 호출 **SQLParamData** 열에 대 한 모든 데이터를 보냈는지는 신호를 다시 합니다.  
   
@@ -461,6 +461,6 @@ int main() {
 |커서를 놓고, 행 집합에서 데이터 새로 고침, 업데이트 또는 행 집합의 데이터 삭제|[SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

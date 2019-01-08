@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a93aa651324d54aa1cc476d2e2408224dd537a95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: ad884bb6e08c6d3878ca059cd93aa76ba838f3cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656712"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206982"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51656712"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: 테이블 또는 뷰에서 파일로 DB_OUT입니다.  
+    -   복사 방향을 지정합니다. DB_OUT이면 테이블 또는 뷰에서 파일로 복사합니다.  
   
 5.  호출 [bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 열 개수를 설정 합니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51656712"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용할 테이블을 만듭니다.  
+ 첫 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 샘플에서 사용할 테이블을 만듭니다.  
   
  odbc32.lib 및 odbcbcp.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다.  
   
- 세 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용한 테이블을 삭제합니다.  
+ 세 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 샘플을 사용 하는 테이블을 삭제 하는 목록입니다.  
   
 ```  
 use AdventureWorks  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriber_schedule
@@ -19,19 +18,19 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b04c358adcce0aa1cb02b702096d215298a11a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b11ff11d3d5ea8ea98bee18738a7c60450693ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856491"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202022"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSsubscriber_schedule** 기본 병합 및 트랜잭션 동기화 일정이 각 게시자/구독자 쌍에 대 한 테이블에 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 시스템 테이블에 사용 되지 않으며 이전 버전의 지원 하기 위해 유지 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 |열 이름|데이터 형식|Description|  
@@ -50,7 +49,7 @@ ms.locfileid: "47856491"
 |**active_start_date**|**int**|배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
 |**active_end_date**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

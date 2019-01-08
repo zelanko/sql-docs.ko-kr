@@ -1,5 +1,5 @@
 ---
-title: DAX 속성 | Microsoft Docs
+title: Analysis Services DAX 속성 | Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 20a6df833f8c525c24abdf3bb51278d0067db951
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264869"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071900"
 ---
 # <a name="dax-properties"></a>DAX 속성
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
    Msmdsrv.ini의 DAX 섹션에는 DAX 쿼리 결과 집합에서 반환 된 행 수의 상한값 같은 Analysis Services에서 특정 쿼리 동작을 제어 하는 데 사용 하는 설정을 포함 합니다.
 
-  DirectQuery 모델에서 반환된 행 집합과 같이 매우 큰 행 집합의 경우 기본값 백만 개의 행은 부족할 수 있습니다. "The result set of a query to external data source has exceeded the maximum allowed size of '1000000' rows.(외부 데이터 원본에 대한 쿼리의 결과 집합이 '1000000'개 행에 허용되는 최대 크기를 초과했습니다.)"라는 오류가 표시되면 한도를 조정해야 하는지 여부를 알 수 있습니다.
+  DirectQuery 모델에서 반환된 행 집합과 같이 매우 큰 행 집합의 경우 기본값 백만 개의 행은 부족할 수 있습니다. 도이 오류가 발생할 경우 조정 해야 하는지 여부를 알 수 있습니다. "외부 데이터 원본에 대 한 쿼리 결과 집합의 허용 된 최대 크기인 '1000000' 행을 초과 했습니다."
 
 상한값을 늘리려면 **MaxIntermediateRowSize** 구성 설정을 지정합니다. 구성 파일의 DAX 섹션에 전체 요소를 수동으로 추가해야 합니다. 이 설정은 추가한 다음에야 파일에 표시됩니다.
 

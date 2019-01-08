@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822577"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -148,7 +147,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
 |NULL(기본값)||  
@@ -196,7 +195,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  반환 된 값을 재정의 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 매개 변수가 있는 필터의 WHERE 절에이 함수는 사용 하는 경우. *호스트 이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
->  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 는 필터 절에 HOST_NAME 값을 재정의 사용 하 여 데이터 형식을 변환 해야 할 수 있습니다 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)로 확장합니다.  
+>  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 는 필터 절에 HOST_NAME 값을 재정의 사용 하 여 데이터 형식을 변환 해야 할 수 있습니다 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "HOST_NAME() 값 재정의" 섹션을 참조하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

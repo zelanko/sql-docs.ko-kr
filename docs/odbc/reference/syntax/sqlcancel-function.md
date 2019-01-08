@@ -20,16 +20,16 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1c0c178fd1a448a86c5b5ce61fd12530eb4263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d0c756db7f84e6bcec46a61ef805f885f39d28
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214654"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLCancel** 문에서 처리를 취소 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47646381"
 ```  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -82,7 +82,7 @@ SQLRETURN SQLCancel(
 ## <a name="canceling-asynchronous-processing"></a>비동기 처리를 취소합니다.  
  응용 프로그램이 함수를 비동기적으로 호출 하는 후 처리를 완료 되었는지 여부를 결정 하는 반복적으로 함수를 호출 합니다. 함수 처리 되 고 SQL_STILL_EXECUTING을 반환. 함수에서 처리를 완료 하는 경우에 다른 코드를 반환 합니다.  
   
- 응용 프로그램을 호출할 수 SQL_STILL_EXECUTING을 반환 하는 함수를 호출한 후 **SQLCancel** 함수를 취소 합니다. 취소 요청이 성공 하면 드라이버는 SQL_SUCCESS를 반환 합니다. 이 메시지는 실제로 취소 되었음을; 나타내지 않습니다. 취소 요청이 처리 된 것을 나타냅니다. 또는 함수는 실제로 취소 되며 드라이버에 따라 다릅니다 데이터 소스에 따라 다릅니다. 응용 프로그램 계속 반환 코드를 SQL_STILL_EXECUTING 없을 때까지 원래 함수를 호출 해야 합니다. 반환 코드는 SQL_ERROR 및 SQLSTATE HY008 함수를 성공적으로 취소 하는 경우 (작업이 취소 됨). 반환 코드는 SQL_SUCCESS 또는 함수에 성공 하면 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR 및 HY008 이외의 SQLSTATE는 일반적으로 처리를 완료 한 경우 (작업이 취소 됨)는 실패 한 경우.  
+ 응용 프로그램을 호출할 수 SQL_STILL_EXECUTING을 반환 하는 함수를 호출한 후 **SQLCancel** 함수를 취소 합니다. 취소 요청이 성공 하면 드라이버는 SQL_SUCCESS를 반환 합니다. 이 메시지는 실제로 취소 되었음을; 나타내지 않습니다. 취소 요청이 처리 된 것을 나타냅니다. 또는 함수는 실제로 취소 되어 드라이버에 따라 다릅니다 데이터 원본에 따라 결정 합니다. 응용 프로그램 계속 반환 코드를 SQL_STILL_EXECUTING 없을 때까지 원래 함수를 호출 해야 합니다. 반환 코드는 SQL_ERROR 및 SQLSTATE HY008 함수를 성공적으로 취소 하는 경우 (작업이 취소 됨). 반환 코드는 SQL_SUCCESS 또는 함수에 성공 하면 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR 및 HY008 이외의 SQLSTATE는 일반적으로 처리를 완료 한 경우 (작업이 취소 됨)는 실패 한 경우.  
   
 > [!NOTE]  
 >  ODBC 3.5에 대 한 호출 **SQLCancel** 문에서 프로세스가 완료 되 고 되 면 처리 되지 않습니다 **SQLFreeStmt** SQL_CLOSE 옵션을 사용 하지만 전혀 영향을 주지 않습니다. 커서 닫기, 응용 프로그램에서 호출 해야 **SQLCloseCursor**가 아닌 **SQLCancel**합니다.  

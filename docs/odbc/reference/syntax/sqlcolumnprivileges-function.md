@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120170"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207692"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 함수(SQLColumnPrivileges Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLColumnPrivileges** 열과 지정된 된 테이블에 대 한 연결된 권한을의 목록을 반환 합니다. 결과 집합으로 지정 된 정보를 반환 하는 드라이버 *StatementHandle*합니다.  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|열 이름입니다. 드라이버 이름 없는 열에 대 한 빈 문자열을 반환 합니다.|  
 |GRANTOR (ODBC 1.0)|5|Varchar|권한을 부여할 사용자의 이름 데이터 원본에 해당 하지 않는 경우 NULL입니다.<br /><br /> 피부 여자에 게 열의 값은 개체의 소유자는 모든 행에 대해 GRANTOR 열에 "(_s)" 됩니다.|  
 |피부 여 자가 (ODBC 1.0)|6|NULL이 아닌 Varchar|부여 된 권한을 부여한 사용자 이름입니다.|  
-|권한 (ODBC 1.0)|7|NULL이 아닌 Varchar|열 권한을 식별합니다. 다음 중 하나일 수 있습니다 (또는 경우 원본 데이터에서 지 원하는 다른 구현에서 정의 된):<br /><br /> 선택: 피부 여자에 게는 열에 대 한 데이터를 검색 하도록 허용 합니다.<br /><br /> INSERT의 경우: 피부 여자에 게는 연결된 된 테이블에 삽입 되는 새 행의 열에 대 한 데이터를 제공 하도록 허용 합니다.<br /><br /> 업데이트: 피부 여자에 게는 열의 데이터를 업데이트 하도록 허용 합니다.<br /><br /> 참조:는 grantee를 제약 조건 내에서 열을 참조할 (예를 들어, 고유, 참조, 또는 check 제약 조건 테이블).|  
+|권한 (ODBC 1.0)|7|NULL이 아닌 Varchar|열 권한을 식별합니다. 다음 중 하나일 수 있습니다 (또는 경우 원본 데이터에서 지 원하는 다른 구현에서 정의 된):<br /><br /> 선택 합니다. 피부 여자에 게는 열에 대 한 데이터를 검색 하도록 허용 됩니다.<br /><br /> INSERT의 경우: 피부 여자에 게는 연결된 된 테이블에 삽입 되는 새 행의 열에 대 한 데이터를 제공 하도록 허용 됩니다.<br /><br /> 업데이트: 피부 여자에 게는 열의 데이터를 업데이트 하도록 허용 됩니다.<br /><br /> 참조: 피부 여자에 게는 제약 조건 내에서 열을 참조할 허용 됩니다 (예를 들어, 고유, 참조, 또는 check 제약 조건 테이블).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|다른 사용자에 게 권한을 부여할 피부 여자에 게 허용 되는지 여부를 나타냅니다. "YES", "아니요" 또는 "NULL" 알 수 없는 경우 데이터 원본에 적용할 수 없습니다.<br /><br /> 권한 또는 중 하나인 부여할 수 있는 권한을 부여할 수 있는 없습니다 둘 다가 아닌 합니다. 반환한 결과 집합 **SQLColumnPrivileges** IS_GRANTABLE 열을 제외한 모든 열에는 동일한 값을 포함 하는 두 개의 행이 포함 되지 않는 합니다.|  
   
 ## <a name="code-example"></a>코드 예  

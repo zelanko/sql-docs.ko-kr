@@ -20,16 +20,16 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692303"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208648"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 함수(SQLNativeSql Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLNativeSql** 드라이버에 의해 수정 되는 SQL 문자열을 반환 합니다. **SQLNativeSql** SQL 문이 실행 되지 않습니다.  

@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126673"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328433"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
-  **옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  
+
+**옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  
   
 ## <a name="auto-insert"></a>자동 삽입  
  **닫기 태그**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126673"
 ## <a name="caching"></a>캐싱  
  **스키마**  
  스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치가  *\<Management Studio 설치 디렉터리 >* \Xml\Schemas입니다.  
-  
-  

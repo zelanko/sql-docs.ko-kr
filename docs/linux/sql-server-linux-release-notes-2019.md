@@ -4,18 +4,18 @@ description: 이 문서에서는 Linux에서 실행 되는 SQL Server 2019 미�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269836"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306200"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스 정보
 
@@ -48,6 +48,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 릴리스               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
+| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018 년 12 월 11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
@@ -62,6 +63,26 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [Linux에서 SQL Server 2019 미리 보기 Machine Learning Services R 및 Python 지원 설치](sql-server-linux-setup-machine-learning.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP22"></a> CTP 2.2 (2018 년 12 월)
+
+CTP 2.2의 알려진된 문제 릴리스 및 다음 섹션에서는 패키지 위치를 제공 합니다. 새 기능에 대 한 자세한 내용은 SQL Server 2019에 Linux에 대 한 자세한 참조를 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 Debian 및 RPM 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 15.0.1200.24-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| SLES RPM 패키지 | 15.0.1200.24-2 | [mssql server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Ubuntu 16.04 Debian 패키지 | 15.0.1200.24-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[높은 가용성의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[전체 텍스트 검색의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+
+### <a name="known-issues"></a>알려진 문제
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+현재, MSDTC 트랜잭션을 인증 되지 않은 것에 필요 합니다. 예를 들어, Linux의 SQL Server를 Windows에서 SQL Server에서 연결 된 서버를 사용 하거나 Windows 클라이언트 응용 프로그램을 Linux의 SQL Server에 대 한 분산된 트랜잭션을 시작 하는 데 Windows server/client MSDTC 경우 "No 옵션을 사용 하는 데 필요한 인증 필요 "입니다.
 
 ## <a id="CTP21"></a> CTP 2.1 (2018 년 11 월)
 
@@ -79,7 +100,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 ### <a name="known-issues"></a>알려진 문제
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 현재, MSDTC 트랜잭션을 인증 되지 않은 것에 필요 합니다. 예를 들어, Linux의 SQL Server를 Windows에서 SQL Server에서 연결 된 서버를 사용 하거나 Windows 클라이언트 응용 프로그램을 Linux의 SQL Server에 대 한 분산된 트랜잭션을 시작 하는 데 Windows server/client MSDTC 경우 "No 옵션을 사용 하는 데 필요한 인증 필요 "입니다.
 
@@ -99,7 +120,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 ### <a name="known-issues"></a>알려진 문제
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 현재, MSDTC 트랜잭션을 인증 되지 않은 것에 필요 합니다. 예를 들어, Linux의 SQL Server를 Windows에서 SQL Server에서 연결 된 서버를 사용 하거나 Windows 클라이언트 응용 프로그램을 Linux의 SQL Server에 대 한 분산된 트랜잭션을 시작 하는 데 Windows server/client MSDTC 경우 "No 옵션을 사용 하는 데 필요한 인증 필요 "입니다.
 
@@ -107,11 +128,11 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 시작 하려면 다음 빠른 시작을 참조 하세요.
 
-- [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [실행 및 연결 - 클라우드](quickstart-install-connect-clouds.md)
 
-자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](sql-server-linux-faq.md)합니다.
+자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.

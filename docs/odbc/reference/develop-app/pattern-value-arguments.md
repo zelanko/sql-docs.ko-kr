@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792401"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208333"
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 카탈로그에서 일부 인수 함수는 *TableName* 에서 인수 **SQLTables**, 검색 패턴을 허용 합니다. 이러한 인수는 검색 패턴 수락 SQL_ATTR_METADATA_ID 문 특성 SQL_FALSE;로 설정 된 경우 이들은이 특성이 SQL_TRUE로 설정 된 경우 검색 패턴을 허용 하지 않는 식별자 인수입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47792401"
   
  검색 패턴의에서 이스케이프 문자 검색 패턴을 허용 하는 인수에는 특별히 주의 해야 합니다. 식별자에서 일반적으로 사용 되는 밑줄 문자를 사용 하는 경우 특히 그렇습니다. 응용 프로그램에서 일반적인 실수는 카탈로그 함수 중 하나에서 값을 검색 하 고 다른 카탈로그 함수에는 검색 패턴 인수를 해당 값을 전달 하는 것입니다. 예를 들어, 응용 프로그램 검색 결과에서 MY_TABLE 설정에 대 한 테이블 이름을 **SQLTables** 에 전달 **SQLColumns** MY_TABLE의 열 목록을 검색 하려면. MY_TABLE에 대 한 열을 가져오지 대신 응용 프로그램 MY_TABLE, MY1TABLE, MY2TABLE, 등과 같은 MY_TABLE 검색 패턴과 일치 하는 모든 테이블에 대 한 열을 받습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2입니다. *x* 드라이버의 검색 패턴을 지원 하지 않는 합니다 *CatalogName* 에서 인수 **SQLTables**합니다. ODBC 3 *.x* SQL_OV_ODBC2로 설정 된 경우이 인수에서 검색 패턴을 받지 않는; 드라이버 SQL_ATTR_ ODBC_VERSION 환경 특성 SQL_OV_ODBC3로 설정 된 경우이 인수에서 검색 패턴을 허용 합니다.  
   
- 검색 패턴 인수에 null 포인터를 전달 인수;에 지정 된 검색을 제한 하지 않습니다. 즉, null 포인터, 검색 패턴 % (문자가)는 동일 합니다. 그러나 길이가 0 인 검색 패턴-길이가 0 인 문자열에 유효한 포인터,-빈 문자열만 일치 ("").
+ 검색 패턴 인수에 null 포인터를 전달 인수;에 지정 된 검색을 제한 하지 않습니다. 즉, null 포인터, 검색 패턴 % (문자가)는 동일 합니다. 그러나-즉, 유효한 포인터에 길이가 0 인 문자열-길이가 0 인 검색 패턴과 일치만 빈 문자열 ("").

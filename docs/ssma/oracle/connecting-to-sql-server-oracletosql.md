@@ -12,12 +12,12 @@ ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8344d307f32187f8efad484b56748368dbd569ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759581"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204292"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>SQL Server에 연결(OracleToSQL)
 Oracle 데이터베이스를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 템플릿 중 하나에 연결 해야 하는 2014 인스턴스의 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SSMA 가져옵니다 인스턴스의 모든 데이터베이스에 대 한 메타 데이터에 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다. SSMA의는 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 해도 암호를 저장 하지 않습니다.  
@@ -91,8 +91,8 @@ Oracle 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||사용자 계정 컨트롤||
 |Azure SQL DB||||||사용자 계정 컨트롤|
   
-> [!IMPORTANT]  
-> 버전에 따라 하지 않지만 프로젝트 형식에 따라 데이터베이스 개체의 변환 수행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 되어 있습니다. 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 프로젝트 변환이 수행 됩니다 당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005의 더 높은 버전에 연결 되어 있더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  
+> [!IMPORTANT]
+> 버전에 따라 하지 않지만 프로젝트 형식에 따라 데이터베이스 개체의 변환 수행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 되어 있습니다. 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 프로젝트 변환이 수행 됩니다 당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005의 더 높은 버전에 연결 되어 있더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 메타 데이터를 동기화합니다.  
 메타 데이터에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 자동 업데이트 되지 않습니다. 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 처음 연결할 때 메타 데이터 탐색기는 메타 데이터의 스냅숏으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 또는 수동으로 업데이트 메타 데이터는 마지막 시간입니다. 수동으로 모든 데이터베이스에 대해 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 업데이트할 수 있습니다.  

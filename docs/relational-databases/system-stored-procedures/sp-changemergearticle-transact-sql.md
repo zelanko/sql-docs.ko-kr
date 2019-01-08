@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752271"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823147"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|구독자에서 작성된 INSERT 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x20**|구독자에서 작성된 UPDATE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x40**|구독자에서 작성된 DELETE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
-|**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246 개가 넘는 열이 있는 테이블을 게시할 때는 열 수준 추적에 사용할 수 없습니다.|  
+|**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246개가 넘는 열이 포함된 테이블을 게시할 때는 열 수준 추적을 사용할 수 없습니다.|  
 ||**false**|열 수준 추적을 해제하고 행 수준에서 충돌 감지를 유지합니다. 테이블 아티클에만 적용됩니다.|  
 |**compensate_for_errors**|**true**|동기화 중 오류가 발생하면 보정 동작을 수행합니다. 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.|  
 ||**false**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.<br /><br /> **\*\* 중요 \* \***  영향을 받는 행의 데이터는 모든 오류를 해결 하는 즉시 일치 하지 않은 되도록 나타날 수 있습니다, 있지만 변경 내용을 적용할 수 있습니다 하 고 데이터 수렴 됩니다. 아티클의 원본 테이블은 이미 다른 게시의 값에 게시 된 경우 *compensate_for_errors* 두 아티클에 대해 동일 해야 합니다.|  
@@ -244,7 +243,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_changemergearticle**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [문서 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
@@ -13,12 +12,12 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b20ec9f33d9b2d117ad3c29d464af2392703a771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079179"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640034"
 ---
 # <a name="server-properties-connections-page"></a>서버 속성(연결 페이지)
   이 페이지를 사용하여 연결 옵션을 확인하거나 수정할 수 있습니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "48079179"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 제한 시간이 초과될 때까지 원격 작업을 수행할 수 있는 시간을 초 단위로 지정합니다. 기본값은 600이며 10분 대기할 수 있습니다.  
   
  **서버 간 통신에 분산 트랜잭션 필요**  
- MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호합니다. 자세한 내용은 [Configure the remote proc trans Server Configuration Option](configure-the-remote-proc-trans-server-configuration-option.md)을 참조하세요.  
+ MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호합니다. 자세한 내용은 [원격 프로시저 트랜잭션 서버 구성 옵션 구성](configure-the-remote-proc-trans-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="property-page-display-options"></a>속성 페이지 표시 옵션  
  **구성 값**  

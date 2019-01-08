@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
@@ -13,19 +13,19 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88b3bf7552d40fb914150b8cdc5cf6d53d22ab22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821807"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>테이블 별칭 만들기(Visual Database Tools)
   별칭을 사용하면 테이블 이름이 필요한 작업을 더 쉽게 수행할 수 있습니다. 별칭은 다음과 같은 경우에 유용하게 사용할 수 있습니다.  
   
 -   [SQL 창](visual-database-tools.md) 에서 문을 더 간결하고 읽기 쉽게 만들려는 경우  
   
--   열 이름을 한정하는 경우 등과 같이 쿼리에 테이블 이름을 자주 사용할 때 쿼리에 대해 지정된 특정 문자 길이 제한을 준수하려는 경우. 일부 데이터베이스에서는 쿼리의 최대 길이가 제한됩니다.  
+-   열 이름을 한정하는 경우 등과 같이 쿼리에서 테이블 이름을 자주 참조하고 쿼리에 대해 특정한 문자 길이 제한을 반드시 준수하려고 합니다. 일부 데이터베이스에서는 쿼리의 최대 길이가 제한됩니다.  
   
 -   자체 조인 등과 같이 동일한 테이블의 여러 인스턴스를 사용하여 작업할 때 특정 인스턴스를 지정해야 하는 경우  
   

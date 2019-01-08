@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214289"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Excel에서 MDS로 데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   변경 내용을 게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
 > -   MDS 관리 셀에서는 수식을 사용할 수 없습니다. MDS 관리 셀의 수식은 텍스트 값으로 처리됩니다.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48130856"
 >  워크시트에 새 멤버(행)를 추가하는 중이고 MDS 리포지토리에 성공적으로 게시할 수 없으면 사용자에게 워크시트에 있는 모든 특성에 대한 **업데이트** 권한이 없을 수 있습니다. **검토** 탭의 **변경 내용** 그룹에서 **시트 보호 해제** 를 클릭하여 다시 게시합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [비즈니스 규칙 적용 &#40;MDS 추가 기능에 Excel 용&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   

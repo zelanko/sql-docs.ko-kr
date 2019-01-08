@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StopService Method (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d2e051ea9dfb0915b888e551ce26ff6d9747aa60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349582"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 메서드(SqlService 클래스)
   서비스를 중지된 상태로 지정합니다.  
@@ -49,6 +47,6 @@ object
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 계산 된 열 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 열 계산 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982525"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072400"
 ---
 # <a name="calculated-columns"></a>계산 열
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서는 계산된 열을 사용 하면 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
+  테이블 형식 모델에서는 계산된 열을 사용 하면 모델에 새 데이터를 추가할 수 있습니다. 붙여넣기 또는 열에 값을 가져오는 대신 열 행 수준 값을 정의 하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
  
   
   
@@ -74,7 +74,7 @@ ms.locfileid: "38982525"
   
 ## <a name="see-also"></a>참고자료  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [계산](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
+ [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [새 명명된 집합](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   

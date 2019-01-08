@@ -1,5 +1,6 @@
 ---
-title: SUSE Linux Enterprise Server의 SQL Server 시작 | Microsoft Docs
+title: SUSE Linux Enterprise Server의 SQL Server 시작
+titleSuffix: SQL Server
 description: 이 빠른 시작에는 SUSE Linux Enterprise Server에서 SQL Server 2017 또는 SQL Server 2019 설치 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160561"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server를 설치 하는 빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51269626"
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 SLES v12 SP2 컴퓨터 있어야 **2GB 이상의** 메모리입니다. 파일 시스템에 있어야 **XFS** 하거나 **EXT4**합니다. 와 같은 다른 파일 시스템 **BTRFS**, 지원 되지 않습니다.
 
@@ -89,7 +90,7 @@ SLES의 SQL Server를 구성 하려면 설치 하려면 터미널에서 다음 �
    ```
 
    > [!TIP]
-   > 다음 SQL Server 2017 버전은 무료로 사용이 허가: Evaluation, Developer 및 Express입니다.
+   > 다음 SQL Server 2017 버전 자유롭게 사용이 허가 됩니다. Evaluation, Developer 및 Express입니다.
 
    > [!NOTE]
    > SA 계정에 대한 강력한 암호를 지정해야 합니다(최소 길이가 8자, 대문자와 소문자를 포함, 10 진수 및/또는 영숫자가 아닌 기호).

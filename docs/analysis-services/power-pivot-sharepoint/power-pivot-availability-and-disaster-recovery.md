@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979585"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984024"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 가용성 및 재해 복구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "38979585"
   
 ||주석|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (4) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 동기화 미러링.|지원되나 이 옵션은 사용하지 않는 것이 좋습니다. 동기-커밋 모드에서 Always On을 사용하는 것이 좋습니다.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (4) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 동기화 미러링.|지원되나 이 옵션은 사용하지 않는 것이 좋습니다. 동기-커밋 모드에서에서 Always On을 사용 하는 것이 좋습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 동기-커밋 모드의|지원 및 권장합니다.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 비동기 미러링 또는 재해 복구를 위해 다른 팜으로 로그 전달.|지원됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 재해 복구를 위한 비동기-커밋이 적용된|지원됨|  
@@ -91,15 +91,13 @@ ms.locfileid: "38979585"
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 사용하여 코드 대기 시나리오를 계획하는 방법에 대한 자세한 내용은 [PowerPivot 재해 복구](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)를 참조하세요.  
   
 ## <a name="verification"></a>확인  
- 재해 복구 주기 전후로 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 확인하기 위한 지침 및 스크립트는 [검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)을 참조하세요.  
+ 지침 및 확인할 수 있도록 하는 스크립트를 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 재해 복구 주기 전후로 배포 참조 [검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗을 확인 하려면](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)합니다.  
   
 ##  <a name="bkmk_more_resources"></a> 추가 정보 링크  
   
 -   [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [재해 복구 계획(SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [SQL Server 클라우드 백업 및 복구 백서](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
   

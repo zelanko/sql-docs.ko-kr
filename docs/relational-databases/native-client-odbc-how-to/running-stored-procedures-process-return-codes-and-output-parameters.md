@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1505166f684d473e5f210e42c55ba6fcac5f13cb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673270"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210498"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장 프로시저 실행 - 반환 코드 및 출력 매개 변수 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51673270"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 이 예제에서 사용하는 저장 프로시저를 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 샘플에서 사용 하는 저장된 프로시저를 만듭니다.  
   
  odbc32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. 그리고 나서 프로그램을 실행합니다.  
   
- 세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 이 예제에서 사용하는 저장 프로시저를 삭제합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 샘플에서 사용 하는 저장된 프로시저를 삭제 합니다.  
   
 ```  
 use AdventureWorks  

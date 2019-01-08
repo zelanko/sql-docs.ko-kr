@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee17325a02e6b146ef372b4655ae8c437b76cdff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781035"
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
   설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  

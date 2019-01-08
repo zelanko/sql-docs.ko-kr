@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86f3e229893373589521a739b9a3cbdaceb290d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815735"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "48176353"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치, 구성 및 유지 관리하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용합니다.  
   
-    -   우선 장애 조치(Failover) 클러스터 인스턴스를 만드는 데 필요한 정보(예: 클러스터 디스크 리소스, IP 주소 및 네트워크 이름) 및 장애 조치(Failover)에 사용할 수 있는 노드를 확인합니다. 자세한 내용은 다음을 참조하세요.  
+    -   우선 장애 조치(Failover) 클러스터 인스턴스를 만드는 데 필요한 정보(예: 클러스터 디스크 리소스, IP 주소 및 네트워크 이름) 및 장애 조치(Failover)에 사용할 수 있는 노드를 확인합니다. 추가 정보  
   
         -   [장애 조치(Failover) 클러스터링을 설치하기 전에](before-installing-failover-clustering.md)  
   

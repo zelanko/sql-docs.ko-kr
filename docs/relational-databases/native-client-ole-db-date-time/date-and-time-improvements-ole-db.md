@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b70e85bc792ba7e44e60fda530e3d36a4de1581
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6bec338184bdc88d04368d141ce15816af512566
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677472"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202062"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51677472"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- OLE DB에 대 한 정보를 제공 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 지 원하는 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식입니다.  
+ OLE DB에 대 한 정보를 제공 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 지 원하는 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식입니다.  
   
  [메타 데이터 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
  DBBINDING 구조에 대 한 정보를 포함 **icommandwithparameters:: Getparameterinfo**하십시오 **icommandwithparameters:: Setparameterinfo**, **IColumnsRowset:: GetColumnsRowset**, 및 I**ColumnsInfo::GetColumnInfo**합니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "51677472"
  [새 날짜 및 시간 기능 이전 버전의 SQL Server 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  향상된 날짜 및 시간 기능을 사용하는 클라이언트 응용 프로그램이 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신할 때, 그리고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 컴파일한 클라이언트가 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 전송할 때 예상되는 동작에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

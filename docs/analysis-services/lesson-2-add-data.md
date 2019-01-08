@@ -1,5 +1,5 @@
 ---
-title: '2 단원: 데이터 추가 | Microsoft Docs'
+title: '2단원: 데이터를 추가 합니다. | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401638"
 ---
 # <a name="lesson-2-add-data"></a>2단원: 데이터 추가
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "38034682"
   
 테이블 가져오기 마법사를 사용하여 Access, SQL, Oracle, Sybase, Informix, DB2, Teradata 등 다양한 관계형 원본에서 데이터를 가져올 수 있습니다. 이러한 각 관계형 원본에서 데이터를 가져오는 단계는 아래에 설명된 과정과 매우 비슷합니다. 데이터 저장된 프로시저를 사용 하 여 선택할 수 있습니다. 데이터 및 다양 한 유형의 데이터 원본에서 가져올 수 가져오기에 대 한 자세한 내용은 참조 하세요 [데이터 원본](../analysis-services/tabular-models/data-sources-ssas-tabular.md)합니다.  
   
-이 단원에 소요되는 예상 시간: **20분**  
+이 단원에 소요되는 예상 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)를 완료해야 합니다.  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="create-a-connection"></a>연결 만들기  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38034682"
   
 7.  **데이터를 가져오는 방법 선택** 페이지에서 **데이터를 가져올 테이블 및 뷰를 목록에서 선택** 이 선택되어 있는지 확인합니다. **다음** 을 클릭하여 원본 데이터베이스에 있는 모든 원본 테이블 목록을 표시할 수 있도록 테이블 및 뷰를 목록에서 선택하려고 합니다.  
   
-8.  **테이블 및 뷰 선택** 페이지에서 **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**및 **FactInternetSales**테이블의 확인란을 선택합니다.  
+8.  에 **테이블 및 뷰 선택** 페이지에서 다음 테이블에 대 한 확인란을 선택 합니다. **DimCustomer**, **DimDate**합니다 **DimGeography**를 **DimProduct**를 **DimProductCategory**,  **DimProductSubcategory**, 및 **FactInternetSales**합니다.  
   
     **마침** 을 클릭하지 **마십시오**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "38034682"
   
 1.  행을 선택 합니다 **DimCustomer** 테이블을 마우스 클릭 **미리 보기 및 필터**합니다. DimCustomer 원본 테이블의 모든 열이 표시된 상태로 **선택한 테이블 미리 보기** 창이 열립니다.  
   
-2.  다음 열의 맨 위에 있는 확인란의 선택을 취소합니다. **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**을 참조하세요. 
+2.  다음 열의 맨 위에 있는 확인란의 선택을 취소합니다. **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**하십시오 **FrenchOccupation**합니다. 
 
     ![으로-테이블 형식-단원 2 종단간-tiw-일반](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   

@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683031"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207512"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetDiagRec** 오류, 경고 및 상태 정보가 포함 된 진단 레코드의 여러 필드의 현재 값을 반환 합니다. 와 달리 **SQLGetDiagField**, 호출 당 하나의 진단 필드를 반환 하는 **SQLGetDiagRec** 일반적으로 사용 되는 여러 SQLSTATE, 원시 오류 코드를 포함 하 여 진단 레코드의 필드를 반환 하 고 진단 메시지 텍스트입니다.  
@@ -94,13 +94,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>진단  
  **SQLGetDiagRec** 자체에 대 한 진단 레코드를 게시 하지 않습니다. 자체 실행의 결과 보고 하는 다음 반환 값을 사용 합니다.  
   
--   SQL_SUCCESS: 함수가 진단 정보를 성공적으로 반환 했습니다.  
+-   관계 없이 SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
   
 -   SQL_SUCCESS_WITH_INFO: 합니다 \* *MessageText* 버퍼가 너무 작아서 요청 된 진단 메시지를 저장할 수 있습니다. 진단 레코드가 생성 되었습니다. 잘림이 발생을 응용 프로그램을 비교 해야 결정할 *BufferLength* 에 기록 되는 사용 가능한 바이트의 실제 수 **StringLengthPtr*합니다.  
   
 -   SQL_INVALID_HANDLE: 핸들에 나타난 *HandleType* 하 고 *처리* 는 유효한 핸들이 없습니다.  
   
--   SQL_ERROR 다음 중 하나가 발생 합니다.:  
+-   SQL_ERROR: 다음 중 하나에 다음이 발생 했습니다.  
   
     -   *RecNumber* 가 음수 이거나 0입니다.  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   비동기 알림을 사용 하는 경우 핸들에 대해 비동기 작업이 완료 되지 않았습니다.  
   
--   Sql_no_data가: *RecNumber* 에 지정 된 핸들에 대해 존재 하는 진단 레코드 개수 보다 *처리 합니다.* 또한 함수 모든 양수 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
+-   SQL_NO_DATA: *RecNumber* 에 지정 된 핸들에 대해 존재 하는 진단 레코드 개수 보다 *처리 합니다.* 또한 함수 모든 양수 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
   
 ## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLGetDiagRec** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO ODBC 함수에 대 한 이전 호출에 반환 하는 경우. 그러나 모든 ODBC 함수를 호출할 때마다 0 개 이상의 진단 레코드를 게시할 수, 때문에 응용 프로그램이 호출할 수 있습니다 **SQLGetDiagRec** ODBC 함수를 호출 합니다. 응용 프로그램에서 호출할 수 있습니다 **SQLGetDiagRec** 여러 번 진단 데이터 구조에서 일부 또는 모든 레코드를 반환 합니다. ODBC에서는 한 번에 저장할 수 있는 진단 레코드의 수를 제한 하지 않습니다.  

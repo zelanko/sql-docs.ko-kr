@@ -20,16 +20,16 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1f199d5f3318181aa03499c31d9597f2348fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210099"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 함수
 **규칙**  
- ODBC 도입 된 버전: 1.0  
+ 도입 된 버전: ODBC 1.0  
   
  **요약**  
  **ConfigDSN** 추가, 수정 또는 시스템 정보에서 데이터 원본을 삭제 합니다. 연결 정보에 대 한 사용자 라는 메시지가 나타납니다. 드라이버 DLL 또는 별도 설치 프로그램 DLL 수 있습니다.  

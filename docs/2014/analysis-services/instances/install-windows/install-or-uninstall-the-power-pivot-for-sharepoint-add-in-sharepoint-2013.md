@@ -11,12 +11,12 @@ ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 145f4c999fcf555aded2a32364f0199e843125d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d3a4ec824c5681cdb5d76310ec67cd1b37ba6898
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350399"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 PowerPivot 추가 기능 설치 또는 제거(SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 데이터 액세스를 제공하는 응용 프로그램 서버 구성 요소 및 백 엔드 서비스의 컬렉션입니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot.msi**)은 애플리케이션 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48083795"
   
  **참고:** 이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 솔루션 파일 및 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구 설치에 대해 설명합니다. 설치 후 구성 도구 및 추가 기능에 자세한 내용은 다음 항목을 참조 [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)합니다.  
   
- **spPowerPivot.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)를 참조하세요.  
+ **spPowerPivot.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](https://go.microsoft.com/fwlink/?LinkID=324854)를 참조하세요.  
   
  **항목 내용**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48083795"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Management Objects  
   
--   **백 엔드 서비스:** Excel용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 를 사용해서 분석 데이터가 포함된 통합 문서를 만들 경우, SharePoint 모드로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 실행하는 BI 서버에 Excel Services가 구성되어 서버 환경에서 데이터에 액세스할 수 있어야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
+-   **백 엔드 서비스:** Excel용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]를 사용해서 분석 데이터가 포함된 통합 문서를 만들 경우, SharePoint 모드로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 실행하는 BI 서버에 Excel Services가 구성되어 서버 환경에서 데이터에 액세스할 수 있어야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
   
      백 엔드 서비스 설치, 제거 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48083795"
   
 -   SharePoint 제품 및 기술 요구 사항에 따라**spPowerPivot.msi** 는 64비트 전용입니다.  
   
--   [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] PowerPivot 모드의 서버. Excel Services에서는 SQL Server Analysis Services 인스턴스를 PowerPivot 서버로 사용합니다. Analysis Services는 로컬 컴퓨터 또는 원격 컴퓨터에서 실행할 수 있습니다.  
+-   PowerPivot 모드의 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 서버. Excel Services에서는 SQL Server Analysis Services 인스턴스를 PowerPivot 서버로 사용합니다. Analysis Services는 로컬 컴퓨터 또는 원격 컴퓨터에서 실행할 수 있습니다.  
   
 -   **사용 권한:** [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]을 설치하려면 현재 사용자가 컴퓨터의 관리자이며 SharePoint 팜 관리자 그룹의 멤버여야 합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48083795"
   
  `Msiexec.exe /i SpPowerPivot.msi`항목을 참조하세요.  
   
- 설치 로그를 만들려면 표준 MsiExec 로깅 스위치를 사용합니다. 다음 예에서는 “v” 자세한 로깅 스위치를 사용하는 로그 파일 “Install_Log.txt”를 만듭니다.  
+ 설치 로그를 만들려면 표준 MsiExec 로깅 스위치를 사용합니다. 다음 예제에서는 "Install_Log.txt" "v" 자세한 로깅 스위치를 사용 하 여 로그 파일을 만듭니다.  
   
 ```  
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
@@ -138,7 +138,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
  spPowerPivot.msi를 설치하는 경우 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 구성 도구가 아닌 데이터 공급자 등의 특정 항목을 설치하는 명령줄 옵션을 사용할 수 있습니다. 다음 명령줄은 구성 도구를 제외하고 모든 구성 요소를 설치하는 예입니다.  
   
 ```  
-Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
 |옵션|Description|  
@@ -166,7 +166,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  **구성 도구를 시작하려면**  
   
- Windows 시작 화면에서 “power”를 입력한 다음 응용 프로그램 검색 결과에서 **SharePoint 2013용 PowerPivot 구성**을 클릭합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 SharePoint 2010 및 SharePoint 2013에 대해 별개의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하기 때문에 검색 결과에 두 개의 링크가 포함될 수 있습니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 시작하는지 확인하세요.  
+ Windows 시작 화면에서 "power"를 입력 앱 검색 결과에서 클릭 **SharePoint 용 PowerPivot 2013 구성**합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 SharePoint 2010 및 SharePoint 2013에 대해 별개의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하기 때문에 검색 결과에 두 개의 링크가 포함될 수 있습니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 시작하는지 확인하세요.  
   
  ![두 개의 powerpivot 구성 도구](../../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "두 개의 powerpivot 구성 도구")  
   
@@ -180,7 +180,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
 4.  **SharePoint 2013용 PowerPivot 구성**을 클릭합니다.  
   
- 구성 도구에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 도구](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
+ 구성 도구에 대한 자세한 내용은 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하세요.  
   
 ##  <a name="bkmk_remove_addin"></a> 추가 기능 제거 또는 복구  
   
@@ -189,11 +189,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  다음 방법 중 하나를 사용하여 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 을 제거하거나 복구할 수 있습니다.  
   
-1.  **Windows 제어판:** **Microsoft SQL Server 2012 SharePoint 2013용 PowerPivot**을 선택합니다. **제거** 또는 **복구**를 클릭합니다.  
+1.  **Windows 제어판:** 선택 **SharePoint 2013 용 Microsoft SQL Server 2012 PowerPivot**합니다. **제거** 또는 **복구**를 클릭합니다.  
   
 2.  spPowerPivot.msi를 실행하고 **제거** 옵션 또는 **복구** 옵션을 선택합니다.  
   
- **명령줄:** 명령줄을 사용하여 SharePoint 2013용 PowerPivot을 복구하거나 제거하려면 **관리자 권한으로** 명령 프롬프트를 열고 다음 명령 중 하나를 실행합니다.  
+ **명령줄:** 를 복구 하거나 명령줄을 사용 하 여 SharePoint 2013 용 PowerPivot을 제거 하려면 명령 프롬프트를 열고 **관리자 권한으로** 다음 명령 중 하나를 실행 합니다.  
   
 -   복구하려면 다음 명령을 실행합니다.  
   

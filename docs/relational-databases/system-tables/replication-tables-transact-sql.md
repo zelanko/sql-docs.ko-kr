@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c73c8b2e381609e8aa9af2e6218a906e87b71ef6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e18c78f55b48061597abb0daa07ca9862cef5738
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627568"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207712"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "47627568"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- 배포 데이터베이스에 있는 이러한 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자에서 데이터를 복제할 때 사용됩니다. 자세한 내용은 [아닌 SQL Server 이외 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)합니다.  
+ 배포 데이터베이스에서 이러한 테이블에서 데이터를 복제에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 자세한 내용은 [아닌 SQL Server 이외 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)합니다.  
   
 |||  
 |-|-|  

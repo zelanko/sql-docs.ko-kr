@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409802"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ LSN에 로그 체인이 끊어졌음을 의미하는 간격이 있으면 테이�
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|백업 파일의 URL입니다.|  
-|backup_type|NVARCHAR(6)|데이터베이스 백업의 경우 'DB', 로그 백업의 경우 'LOG'|  
+|backup_type|NVARCHAR(6)|데이터베이스에 대 한 ' DB' 백업 'LOG' 로그 백업|  
 |expiration_date|DATETIME|이 파일이 삭제될 날짜입니다. 지정된 보존 기간 내에 특정 시점으로 데이터베이스를 복구할 수 있는 기능을 기반으로 설정됩니다.|  
 |database_guid|UNIQUEIDENTIFIER|지정된 데이터베이스에 대한 GUID 값입니다.  데이터베이스를 고유하게 식별하는 GUID입니다.|  
 |first_lsn|NUMERIC(25, 0)|백업 세트에서 첫 번째 또는 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
@@ -75,7 +75,7 @@ LSN에 로그 체인이 끊어졌음을 의미하는 간격이 있으면 테이�
  필요 **선택** 이 함수에 대 한 권한.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 'MyDB' 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 통해 백업된 사용 가능한 모든 백업을 보여줍니다.  
+ 다음 예제를 통해 백업 사용 가능한 모든 백업을 나열 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 'MyDB' 데이터베이스에 대 한  
   
 ```  
 SELECT *   
@@ -83,7 +83,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Microsoft Azure에 저장된 백업에서 복원](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

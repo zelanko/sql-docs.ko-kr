@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849941"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205362"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLMoreResults** 더 많은 결과 포함 하는 문을 사용할 수 있는지 여부를 결정 **선택**, **UPDATE**를 **삽입**, 또는  **삭제** 문 및 해당 결과 대 한 초기화 처리 경우.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849941"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>주석  
  **선택** 문은 결과 집합을 반환 합니다. **업데이트**, **삽입**, 및 **삭제** 문의 영향을 받는 행의 수를 반환 합니다. 이러한 명령문은 일괄 처리 (일괄 처리에 나타나는 순서 대로 매개 변수 순서 높이기 위한 과정에서 번호가 매겨진) 매개 변수 또는 프로시저에서 배열을 사용 하 여 제출 하는 경우에 여러 결과 집합을 반환할 수 있습니다 또는 행 개수입니다. 문의 일괄 처리 및 매개 변수 배열에 대 한 내용은 [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md) 하 고 [매개 변수 값의 배열](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)합니다.  
   
- 일괄 처리를 실행 한 후 응용 프로그램은 첫 번째 결과 집합에 배치 됩니다. 응용 프로그램에서 호출할 수 있습니다 **SQLBindCol**, **SQLBulkOperations**합니다 **SQLFetch**를 **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, 및 단일 결과 집합 있다면 것 처럼 첫 번째 또는 모든 후속 결과 집합에서 모든 메타 데이터 함수를 합니다. 첫 번째 결과 집합을 사용 하 여 완료 되 면 응용 프로그램 호출 **SQLMoreResults** 다음 결과 집합으로 이동할 수 있습니다. 다른 결과 집합 또는 개수를 사용할 수 있으면 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 하 고 추가 처리를 위해 개수를 결과 집합을 초기화 합니다. 모든 행 개수 – 생성 문 사이 표시 하는 경우 결과 집합 – 생성 문, 호출을 통해 실행할 수 있습니다 **SQLMoreResults**합니다. 호출한 후 **SQLMoreResults** 에 대 한 **업데이트**에 **삽입**, 또는 **삭제** 문을 응용 프로그램에서 호출수**SQLRowCount**합니다.  
+ 일괄 처리를 실행 한 후 응용 프로그램은 첫 번째 결과 집합에 배치 됩니다. 응용 프로그램에서 호출할 수 있습니다 **SQLBindCol**, **SQLBulkOperations**합니다 **SQLFetch**를 **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, 및 단일 결과 집합 있다면 것 처럼 첫 번째 또는 모든 후속 결과 집합에서 모든 메타 데이터 함수를 합니다. 첫 번째 결과 집합을 사용 하 여 완료 되 면 응용 프로그램 호출 **SQLMoreResults** 다음 결과 집합으로 이동할 수 있습니다. 다른 결과 집합 또는 개수를 사용할 수 있으면 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 하 고 추가 처리를 위해 개수를 결과 집합을 초기화 합니다. 모든 행 수가 생성 문 사이 표시 하는 경우 결과 집합 생성 문, 호출을 통해 실행할 수 있습니다 **SQLMoreResults**합니다. 호출한 후 **SQLMoreResults** 에 대 한 **업데이트**에 **삽입**, 또는 **삭제** 문을 응용 프로그램에서 호출수**SQLRowCount**합니다.  
   
  현재 결과 집합 행 인출 되었으면 **SQLMoreResults** 해당 결과 집합을 삭제 하 고 다음 결과 집합 또는 사용 가능한 계산 합니다. 모든 결과가 처리 된 경우 **SQLMoreResults** SQL_NO_DATA를 반환 합니다. 일부 드라이버에 대 한 출력 매개 변수 및 반환 값 사용할 수 없는 모든 결과 집합 및 행 개수 처리 될 때까지 합니다. 이러한 드라이버에 대 한 출력 매개 변수 및 때 사용할 수 있게 하는 값을 반환할 **SQLMoreResults** SQL_NO_DATA를 반환 합니다.  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  일괄 문의 검색을 업데이트, 삽입 또는 삭제에 문의 하는 경우 데이터 소스의 모든 행 영향을 주지 않습니다 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 합니다. 검색 결과 업데이트의 경우 다릅니다, insert 또는 delete 문을 통해 실행 되는 **SQLExecDirect**하십시오 **SQLExecute**, 또는 **SQLParamData**는 데이터 소스의 모든 행에는 영향을 주지 않습니다 경우 SQL_NO_DATA를 반환 합니다. 응용 프로그램을 호출 하는 경우 **SQLRowCount** 를 호출한 후 행 개수를 검색할 **SQLMoreResults** 행에는 손상 되지 않았습니다 **SQLRowCount** SQL_NO_DATA를 반환 합니다.  
   
- 결과 처리 함수의 유효한 시퀀싱에 대 한 추가 정보 참조 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
+ 결과 처리 함수의 유효한 시퀀싱에 대 한 추가 정보를 참조 하세요. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  SQL_PARAM_DATA_AVAILABLE 및 스트리밍된 출력 매개 변수에 대 한 자세한 내용은 참조 하세요. [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
   
 ## <a name="availability-of-row-counts"></a>행 개수는 가용성  
- 여러 연속 행 개수 – 생성 문이 포함 되어 있으면 일괄 처리 가능 이러한 행 개수 하나만 행 개수에 롤업 됩니다. 예를 들어, 일괄 처리에 있는 경우 5 insert 문, 특정 데이터 소스는 5 개의 개별 행 개수를 반환할 수 있습니다. 5 개의 개별 행 수 합계를 나타내는 하나의 행 수를 반환 하는 특정 데이터 원본입니다.  
+ 일괄 처리에 여러 개의 연속 된 행 수가 생성 문을 있으면 있기 이러한 행 개수 하나만 행 개수에 롤업 됩니다. 예를 들어, 일괄 처리에 있는 경우 5 insert 문, 특정 데이터 소스는 5 개의 개별 행 개수를 반환할 수 있습니다. 5 개의 개별 행 수 합계를 나타내는 하나의 행 수를 반환 하는 특정 데이터 원본입니다.  
   
- 결과 집합 – 생성 및 행 개수 – 생성 문 조합을 포함 하는 일괄 처리, 행 개수 수도 못할 전혀 합니다. 행 개수의 가용성을 기준으로 드라이버의 동작에 대 한 호출을 통해 사용할 수 있는 SQL_BATCH_ROW_COUNT 정보 유형을에 열거 됩니다 **SQLGetInfo**합니다. 예를 들어, 일괄 처리에 포함 되어 있는지를 **선택**2 씩 차례로 **삽입**및 다른 **선택**합니다. 그런 다음 다음과 같은 경우 나타날 수 있습니다.  
+ 결과 집합 생성 및 행 개수 생성 문 조합을 포함 하는 일괄 처리, 행 개수 수도 못할 전혀 합니다. 행 개수의 가용성을 기준으로 드라이버의 동작에 대 한 호출을 통해 사용할 수 있는 SQL_BATCH_ROW_COUNT 정보 유형을에 열거 됩니다 **SQLGetInfo**합니다. 예를 들어, 일괄 처리에 포함 되어 있는지를 **선택**2 씩 차례로 **삽입**및 다른 **선택**합니다. 그런 다음 다음과 같은 경우 나타날 수 있습니다.  
   
 -   행 개수에 해당 하는 두 **삽입** 문을 전혀 사용할 수 없습니다. 첫 번째 호출은 **SQLMoreResults** 의 두 번째 결과 집합에 배치 **선택** 문입니다.  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLMoreResults(
 |단일 행 이나 앞 으로만 이동 가능한 방향에서 데이터 블록을 가져오는 중|[SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |일부 또는 전체 열의 데이터 페치|[SQLGetData 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [SQLGetData를 사용하여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

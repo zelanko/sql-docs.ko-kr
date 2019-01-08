@@ -20,16 +20,16 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2df20e27949b82a9f2e827984f0c2fb77a3814b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209064"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetStmtAttr** 문 특성의 현재 설정을 반환 합니다.  
@@ -53,7 +53,7 @@ SQLRETURN SQLGetStmtAttr(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 검색할 특성입니다.  
   
  *ValuePtr*  

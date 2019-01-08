@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
@@ -12,12 +12,12 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220953"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780475"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
   **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48220953"
  **원본**  
  사용할 용지를 지정합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 선택된 프린터에 대해 사용할 수 있는 원본을 나열합니다.  
   
-## <a name="orientation"></a>Orientation  
+## <a name="orientation"></a>방향  
  **세로**  
  페이지 위쪽에서 용지의 가장자리를 짧게 하여 문서를 인쇄합니다.  
   

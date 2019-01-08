@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768295"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
-  사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 컬렉션 변경, 데이터 컬렉션 활성화 또는 비활성화, 집합 구성 관리 데이터 웨어하우스에서 데이터 보기와 같은 저장 프로시저 및 데이터 컬렉션의 다른 측면을 관리 하는 함수 .  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 및 함수를 사용하여 데이터 컬렉션 활성화 또는 비활성화, 컬렉션 집합 구성 변경, 관리 데이터 웨어하우스에서 데이터 보기와 같은 데이터 컬렉션의 다양한 기능을 관리할 수 있습니다.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터 컬렉션 관리  
- 개체 탐색기를 사용 하 여 다음 데이터 수집기 관련 태스크를 수행할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 사용하여 다음과 같은 데이터 수집기 관련 태스크를 수행할 수 있습니다.  
   
 -   [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104863"
 > [!IMPORTANT]  
 >  일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저는 정확하게 입력된 매개 변수를 사용하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
- 사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 만들고 제공 된 코드 샘플을 실행 합니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. 사용 하 여 Windows 명령 프롬프트에서 쿼리를 실행할 수는 `sqlcmd` 유틸리티입니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 제공된 코드 예제를 만들고 실행할 수 있습니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. Windows 명령 프롬프트에서 `sqlcmd` 유틸리티를 사용하여 쿼리를 실행할 수 있습니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 ### <a name="stored-procedures-and-views"></a>저장 프로시저 및 뷰  
  **데이터 수집기 작업**  

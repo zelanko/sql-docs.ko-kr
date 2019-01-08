@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying primary keys
@@ -14,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2545253d94418727e2c8945c96f891c089918b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822957"
 ---
 # <a name="modify-primary-keys"></a>기본 키 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 수정할 수 있습니다. 열 순서, 인덱스 이름, 클러스터형 옵션 또는 채우기 비율을 변경하여 테이블의 기본 키를 수정할 수 있습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "48061583"
     |기본 키 이름 바꾸기|**이름** 상자에 새 이름을 입력합니다. 새 이름은 **선택한 기본/고유 키 또는 인덱스** 목록의 다른 이름과 중복되지 않아야 합니다.|  
     |클러스터형 옵션 설정|기본 키에 대한 클러스터형 인덱스를 만들려면 **CLUSTERED로 만들기**를 선택하고 드롭다운 목록 상자에서 옵션을 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 인덱스에 이 옵션을 사용할 수 없는 경우 기존의 클러스터형 인덱스에 대해 이 설정을 먼저 해제해야 합니다.<br /><br /> 이 옵션을 선택하지 않으면 고유 비클러스터형 인덱스가 만들어집니다.|  
     |채우기 비율 정의|**채우기 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다. 채우기 비율과 그 사용 방법은 [인덱스의 채우기 비율 지정](../indexes/specify-fill-factor-for-an-index.md)을 참조하세요.|  
-    |열 순서 변경|**열**을 선택한 다음 속성의 오른쪽에 있는 줄임표 **(…)** 를 클릭합니다. **인덱스 열** 대화 상자에서 기본 키의 열을 제거합니다. 그런 다음 이 열을 원하는 순서로 다시 추가합니다. 키에서 열을 제거하려면 **열** 이름 목록에서 열 이름을 제거하기만 하면 됩니다.|  
+    |열 순서 변경|**열**을 선택한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. **인덱스 열** 대화 상자에서 기본 키의 열을 제거합니다. 그런 다음 이 열을 원하는 순서로 다시 추가합니다. 키에서 열을 제거하려면 **열** 이름 목록에서 열 이름을 제거하기만 하면 됩니다.|  
   
 4.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
   

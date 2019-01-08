@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207522"
 ---
 # <a name="canceling-commands-xmla"></a>명령 취소(XMLA)
   명령을 실행 하는 사용자의 관리 권한에 따라 합니다 [취소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) Analysis (XMLA) 세션, 세션, 연결, 서버 프로세스 또는 연관된 된 세션이 명령을 취소할 수에 대 한 xml에서 명령 또는 연결입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145019"
 ## <a name="canceling-connections"></a>연결 취소  
  연결 식별자를 지정 하 여 합니다 [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) 의 속성을 **취소** 모두를 포함 하 여 지정된 된 연결에 연관 된 세션의 모든 서버 관리자를 취소할 수 있습니다 명령을 실행 하 고 연결을 취소 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  경우 인스턴스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 찾아 인스턴스 연결을 취소할 수 없습니다 데이터 펌프가 여러 세션 HTTP 연결이 제공 하는 동안 때와 같은 연결을 사용 하 여 연결 된 세션을 취소할 수 없습니다. 실행 하는 동안이 이런 경우가 발생 하는 경우는 **취소** 명령에 오류가 발생 합니다.  
   
  서버 관리자에 대 한 활성 연결을 검색할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA를 사용 하 여 DISCOVER_CONNECTIONS 스키마 행 집합을 검색 하 여 인스턴스 **Discover** 메서드.  

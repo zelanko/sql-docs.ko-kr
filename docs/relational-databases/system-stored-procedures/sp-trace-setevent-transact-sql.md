@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266104"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|쿼리에서 비트맵 필터를 사용하지 않도록 설정될 때 나타납니다.|  
 |213|Database Suspect Data Page|**msdb**의 **suspect_pages** 테이블에 페이지가 추가되었을 때 나타납니다.|  
 |214|CPU threshold exceeded|리소스 관리자가 CPU 임계값(REQUEST_MAX_CPU_TIME_SEC)을 초과하는 쿼리를 감지할 때 나타납니다.|  
-|215|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|  
+|215|PreConnect:Starting|LOGON 트리거나 리소스 관리자 분류자 함수가 실행을 시작할 때 나타납니다.|  
 |216|PreConnect:Completed|LOGON 트리거나 리소스 관리자 분류자 함수의 실행이 완료될 때 나타납니다.|  
 |217|Plan Guide Successful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 생성했음을 나타냅니다.|  
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  

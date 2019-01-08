@@ -20,16 +20,16 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1148ab38f7d389c3fe78a09a646a9cbdec0bb723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c8dbed5599952778ca7651acbdb55a21b8f876
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206582"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 함수
 **규칙**  
- ODBC 3.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.0  
   
  **요약**  
  **SQLGetConfigMode** DSN 값을 나열 하는 Odbc.ini 항목은 시스템 정보에서 위치를 지정 하는 구성 모드를 검색 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47755791"
 ```  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## <a name="arguments"></a>인수  

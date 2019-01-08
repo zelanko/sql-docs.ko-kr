@@ -12,12 +12,12 @@ ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c5624c0b0fc298c3e303ee3ed7572da44e8a44c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204712"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server에 연결(SybaseToSQL)
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 대상 인스턴스 중 하나에 연결 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SSMA 가져옵니다 인스턴스의 모든 데이터베이스에 대 한 메타 데이터에 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다. SSMA의는 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 해도 암호를 저장 하지 않습니다.  
@@ -93,8 +93,8 @@ ASE 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||사용자 계정 컨트롤||  
 |SQL Azure||||||사용자 계정 컨트롤|  
   
-> [!IMPORTANT]  
-> 버전에 따라 하지 않지만 프로젝트 형식에 따라 데이터베이스 개체의 변환 수행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 되어 있습니다. 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 프로젝트 변환이 수행 됩니다 당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005의 더 높은 버전에 연결 되어 있더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016)  
+> [!IMPORTANT]
+> 버전에 따라 하지 않지만 프로젝트 형식에 따라 데이터베이스 개체의 변환 수행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결 되어 있습니다. 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 프로젝트 변환이 수행 됩니다 당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005의 더 높은 버전에 연결 되어 있더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016)  
   
 ## <a name="reconnecting-to-sql-server"></a>SQL Server에 다시 연결  
 에 대 한 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트를 닫을 때까지 활성 상태로 유지 합니다. 에 다시 연결 해야 프로젝트를 열면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 활성 서버에 연결 하려는 경우. 메타 데이터를 로드 데이터베이스 개체를 업데이트할 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터를 마이그레이션합니다.  

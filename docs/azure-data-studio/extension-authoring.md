@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio에 대 한 확장 프로그램을 만들어 | Microsoft Docs
-description: Azure Data Studio에 확장 추가
-ms.custom: tools|sos
+title: 확장을 만들려면
+titleSuffix: Azure Data Studio
+description: 만들기 및 Azure Data Studio에 확장을 추가 하는 방법에 대 한 설명
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355885"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030524"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>기능을 확장 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능을 확장 합니다.
 
 확장 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자료에 기능을 추가 하는 쉬운 방법을 제공 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 합니다.
 

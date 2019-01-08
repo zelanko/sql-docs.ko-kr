@@ -1,5 +1,5 @@
 ---
-title: 동작을 테스트 | Microsoft Docs
+title: 다차원 Analysis Services의 동작을 테스트 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b51745b21cf2e982decec5a20ef65b169c2342e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bd7b24185969031c1988869736407fa75eda79f6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025800"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072330"
 ---
 # <a name="test-an-action"></a>동작 테스트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

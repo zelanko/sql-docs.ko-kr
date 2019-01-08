@@ -1,20 +1,22 @@
 ---
-title: SQL Server 빅 데이터 클러스터에 데이터베이스 복원 | Microsoft Docs
-description: 이 아티클에서 SQL Server 빅 데이터 클러스터의 마스터 인스턴스에 데이터베이스를 복원 하는 방법에 설명 합니다.
+title: 데이터베이스 복원
+titleSuffix: SQL Server 2019 big data clusters
+description: 이 아티클에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 마스터 인스턴스에 데이터베이스를 복원 하는 방법에 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: 854f31f6ac04e9767ff1fc12cfb04f5d28c2aa13
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700731"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030827"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스를 복원 합니다.
+# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>SQL Server 2019 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스를 복원 합니다.
 
 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 마스터 인스턴스를 기존 데이터베이스를 복원 하는 방법을 설명 합니다. 백업, 복사, 사용 및 접근 방식을 복원 하는 것이 좋습니다.
 

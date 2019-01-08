@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031905"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202252"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services의 세계화 시나리오
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38031905"
   
 -   로그 파일에는 Analysis Services가 실행되는 Windows 서버에 언어 팩을 설치한 것으로 가정하여 영어 메시지와 지역화된 메시지가 섞여 있습니다.  
   
--   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]와 같은 설명서와 도구는 한국어, 중국어 간체, 중국어 번체, 프랑스어, 독일어, 이탈리아어, 일본어, 포르투갈어(브라질), 러시아어 및 스페인어로 지역화되어 있습니다. 문화권은 설치 중에 지정됩니다.  
+-   설명서 및 도구와 같은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], 이러한 언어로 번역 됩니다. 한국어, 중국어 간체, 중국어 번체, 프랑스어, 독일어, 이탈리아어, 포르투갈어(브라질), 러시아어, 스페인어 및 일본어로 지역화되어 있습니다. 문화권은 설치 중에 지정됩니다.  
   
  다차원 모델의 경우 Analysis Services를 사용하면 언어, 데이터 정렬 및 번역을 개체 계층 전체에서 독립적으로 설정할 수 있습니다.  테이블 형식 모델의 경우에는 번역만 추가할 수 있으며 언어와 데이터 정렬은 호스트 운영 체제에서 상속됩니다.  
   
@@ -57,14 +57,14 @@ ms.locfileid: "38031905"
 |**기능**|**테이블 형식**|**다차원**|  
 |[언어 및 데이터 정렬&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|운영 체제에서 상속됩니다.|상속되지만 모델 개체의 주요 개체 언어와 데이터 정렬을 모두 재정의할 수 있습니다.|  
 |번역 지원 범위|캡션 및 설명|개체 이름, 캡션, 식별자 및 설명에 대해 모든 유니코드 언어와 스크립트로 번역을 생성할 수 있습니다. 도구와 환경이 다른 언어로 되어 있는 경우에도 마찬가지입니다. 예를 들어, 전체 스택에서 영어와 라틴어 데이터 정렬을 사용하는 개발 환경에서는 이름에 키릴자모 문자를 사용하는 개체를 모델에 포함할 수 있습니다.|  
-|번역 지원 구현|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 번역 파일을 생성한 다음 내용을 입력하고 모델로 다시 가져옵니다.<br /><br /> 자세한 내용은 [테이블 형식 모델 번역&#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)을 참조하세요.|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 큐브/측정값/치수/특성에 대한 캡션, 설명 및 계정 유형의 번역을 정의합니다.<br /><br /> 자세한 내용은 [다차원 모델의 번역&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)을 참조하세요. 이 기능을 사용하는 방법에 대한 단원은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서의 [9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)에 있습니다.|  
+|번역 지원 구현|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 번역 파일을 생성한 다음 내용을 입력하고 모델로 다시 가져옵니다.<br /><br /> 자세한 내용은 [테이블 형식 모델 번역&#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)을 참조하세요.|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 큐브/측정값/치수/특성에 대한 캡션, 설명 및 계정 유형의 번역을 정의합니다.<br /><br /> 자세한 내용은 [다차원 모델의 번역&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)을 참조하세요. 이 기능을 사용 하는 방법에 대 한 단원에서 찾을 수 있습니다 [단원 9: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md) 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다.|  
 |통화 변환|사용할 수 없습니다.|통화 변환은 통화 데이터를 포함하는 측정값을 변환하는 특수화된 MDX 스크립트를 통해 수행됩니다. [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 의 비즈니스 인텔리전스 마법사를 사용하면 통화 데이터를 포함하는 측정값을 변환하기 위해 차원, 특성 및 측정값 그룹의 데이터 및 메타데이터를 조합하여 사용하는 MDX 스크립트를 생성할 수 있습니다. [통화 환산&#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)   
- [Windows 응용 프로그램에 대 한 국제화](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Windows 애플리케이션에 대한 국제화](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global 개발자 센터](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Windows 스토어 앱 작성 로캘 기반 적응형 디자인을 사용 하 여](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [C# 및 XAML을 사용 하 여 유니버설 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [로캘 기반 적응형 디자인을 사용하여 Windows 스토어 앱 작성](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [C# 및 XAML을 사용하여 범용 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

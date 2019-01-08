@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089695"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812185"
 ---
 # <a name="model-database"></a>model 데이터베이스
   **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48089695"
  새로 만든 사용자 데이터베이스는 model 데이터베이스와 같은 [복구 모델](../backup-restore/recovery-models-sql-server.md) 을 사용합니다. 기본값은 사용자 구성입니다. 모델의 현재 복구 모델에 대한 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  사용자별 템플릿 정보를 사용하여 **model** 데이터베이스를 수정하는 경우 **model**을 백업하는 것이 좋습니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
+>  사용자별 템플릿 정보를 사용하여 **model** 데이터베이스를 수정하는 경우 **model**을 백업하는 것이 좋습니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
 ## <a name="model-usage"></a>model 사용  
  CREATE DATABASE 문을 실행하면 **model** 데이터베이스의 내용을 복사하여 데이터베이스의 첫 번째 부분이 생성됩니다. 그런 다음 새 데이터베이스의 나머지 부분이 빈 페이지로 채워집니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48089695"
  **model** 데이터베이스를 수정하면 해당 변경 내용이 나중에 생성되는 모든 데이터베이스에 상속됩니다. 예를 들어 사용 권한 또는 데이터베이스 옵션을 설정하거나 테이블, 함수 또는 저장 프로시저 같은 개체를 추가할 수 있습니다. **model** 데이터베이스의 파일 속성은 예외이며 데이터 파일의 처음 크기를 제외하고 무시됩니다.  
   
 ## <a name="physical-properties-of-model"></a>model의 물리적 속성  
- 다음 표에서는 **model** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기는 다양 한 버전의 약간 달라질 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 다음 표에서는 **model** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
   
 |파일|논리적 이름|물리적 이름|파일 증가|  
 |----------|------------------|-------------------|-----------------|  

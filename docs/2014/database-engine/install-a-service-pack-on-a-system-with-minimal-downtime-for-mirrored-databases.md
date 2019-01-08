@@ -17,12 +17,12 @@ ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520380"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>미러된 데이터베이스 작동 중단을 최소화하면서 시스템에 서비스 팩 설치
   이 항목에서는 서비스 팩과 핫픽스를 설치할 때 미러된 데이터베이스의 작동 중단을 최소화하는 방법에 대해 설명합니다. 이 프로세스에는 데이터베이스 미러링에 참여하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스를 순차적으로 업그레이드하는 과정이 포함됩니다. 이러한 형태의 업데이트 라고도 함를 *롤링 업데이트*만 단일 장애 조치를 가동 중지 시간을 줄입니다. Note는 미러 서버는 지리적으로 먼 거리에서에 있는 주 서버는 성능 우선 모드 세션에 대 한 업데이트가 적합 하지 않습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48053013"
 -   세션에 미러링 모니터가 포함되어 있는 경우 미러링 모니터를 제거하는 것이 좋습니다. 미러링 모니터를 제거하지 않으면 미러 서버 인스턴스를 업데이트할 때 주 서버 인스턴스에 연결된 채로 남아있는 미러링 모니터에 의해 데이터베이스의 가용성이 결정됩니다. 미러링 모니터를 제거하고 나면 데이터베이스 가동 중단의 위험 없이 롤링 업데이트 프로세스 도중 언제라도 업데이트할 수 있습니다.  
   
     > [!NOTE]  
-    >  자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+    >  자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
 -   세션이 성능 우선 모드에서 실행되는 경우 운영 모드를 보호 우선 모드로 변경하십시오.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "48053013"
   
 1.  미러링 세션이 성능 우선 모드에서 실행되고 있을 경우 롤링 업데이트를 수행하기 전에 자동 장애 조치(Failover)가 없는 보호 우선 모드로 운영 모드를 변경하십시오. 다음 방법 중 하나를 사용합니다.  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 [미러링 페이지](../relational-databases/databases/database-properties-mirroring-page.md)를 사용하여 **운영 모드** 옵션을 **자동 장애 조치(Failover) 없는 보호 우선(동기)** 으로 변경합니다. 이 페이지에 액세스하는 방법은 [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)을 참조하세요.  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: 변경 된 **운영 모드** 옵션을 **(동기) 자동 장애 조치 없는 보호 우선** 사용 하 여는 [미러링 페이지](../relational-databases/databases/database-properties-mirroring-page.md) 의 **데이터베이스 속성** 대화 상자. 이 페이지에 액세스하는 방법은 [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)을 참조하세요.  
   
-    -   [!INCLUDE[tsql](../includes/tsql-md.md)]의 경우: 트랜잭션 보안을 FULL로 설정합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 트랜잭션 보안을 FULL로 설정합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
   
 ### <a name="to-perform-the-rolling-update"></a>롤링 업데이트를 수행하려면  
   
-1.  가동 중지 시간을 최소화 하려면 다음 권장: 롤링 업데이트는 모든 미러링 세션에는 현재 미러 서버인 모든 미러링 파트너를 업데이트 하 여 시작 합니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
+1.  가동 중단을 최소화하려면 롤링 업데이트를 시작할 때 자체 미러링 세션 내의 미러 서버인 모든 미러링 파트너를 업데이트하는 것이 좋습니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
   
     > [!NOTE]  
     >  미러링 모니터는 롤링 업데이트 프로세스 도중 언제라도 업데이트할 수 있습니다. 예를 들어 서버 인스턴스가 Session 1의 미러 서버이고 미러링 모니터가 Session 2에 있을 경우 지금 서버 인스턴스를 업데이트할 수 있습니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "48053013"
 4.  파트너로 참여하는 모든 미러링 세션에서 이제 미러 서버가 된 각 서버 인스턴스에 서비스 팩이나 핫픽스를 설치합니다. 이때 여러 서버를 업데이트해야 할 수도 있습니다.  
   
     > [!IMPORTANT]  
-    >  미러링 구성이 복잡할 경우 일부 서버 인스턴스가 하나 이상의 미러링 세션에서 원래의 주 서버로 남아 있을 수 있습니다. 이러한 서버 인스턴스에 대해 2-4단계를 반복하여 관련된 모든 인스턴스를 업데이트하십시오.  
+    >  미러링 구성이 복잡할 경우 일부 서버 인스턴스가 하나 이상의 미러링 세션에서 원래의 주 서버로 남아 있을 수 있습니다. 관련 된 모든 인스턴스에 업데이트 될 때까지 이러한 서버 인스턴스에 대해 2-4 단계를 반복 합니다.  
   
 5.  미러링 세션을 재개합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48053013"
   
 1.  선택적으로, 다음 중 한 가지 방법을 사용하여 성능 우선 모드로 되돌릴 수 있습니다.  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 **미러링 페이지** 를 사용하여 [운영 모드](../relational-databases/databases/database-properties-mirroring-page.md) 옵션을 **성능 우선(동기)** 으로 변경합니다.  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: 변경 합니다 **운영 모드** 옵션을 **성능 우선 (동기)** 사용 하 여는 [미러링 페이지](../relational-databases/databases/database-properties-mirroring-page.md) 의 **데이터베이스 속성**대화 상자.  
   
     -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 사용 하 여 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) 트랜잭션 보안을 OFF로 설정 합니다.  
   

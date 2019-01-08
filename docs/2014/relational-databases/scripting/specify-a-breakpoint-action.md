@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328993"
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
   중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
@@ -70,5 +68,3 @@ ms.locfileid: "48189519"
 ## <a name="see-also"></a>관련 항목  
  [중단점 조건 지정](specify-a-breakpoint-condition.md)   
  [적중 횟수 지정](specify-a-hit-count.md)  
-  
-  

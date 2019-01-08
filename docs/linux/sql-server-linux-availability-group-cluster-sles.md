@@ -1,21 +1,22 @@
 ---
-title: SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성 | Microsoft Docs
-description: ''
+title: SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
+titleSuffix: SQL Server
+description: SUSE Linux Enterprise Server (SLES) SQL Server에 대 한 가용성 그룹 클러스터를 만드는 방법 알아보기
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160631"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -48,7 +49,7 @@ ms.locfileid: "51670622"
 
 5. [가용성 그룹에 클러스터 리소스로 추가](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 종단 간 시나리오를 완료 하려면 세 개의 머신을 세 개의 노드 클러스터를 배포 해야 합니다. 다음 단계에는 이러한 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -118,11 +119,11 @@ Linux 서버에서 가용성 그룹을 구성 하 고 그런 다음 클러스터
 
 3. 클러스터 통신 계층 (Corosync)를 구성 합니다. 
 
-   1. 에 바인딩할 네트워크 주소를 입력 합니다. 기본적으로 스크립트에서는 eth0의 네트워크 주소를 제안합니다. 또는 bond0 주소의 예를 들어 다른 네트워크 주소를 입력 합니다. 
+   a. 에 바인딩할 네트워크 주소를 입력 합니다. 기본적으로 스크립트에서는 eth0의 네트워크 주소를 제안합니다. 또는 bond0 주소의 예를 들어 다른 네트워크 주소를 입력 합니다. 
 
-   2. 멀티 캐스트 주소를 입력 합니다. 스크립트는 기본적으로 사용할 수 있는 임의 주소를 제안 합니다. 
+   b. 멀티 캐스트 주소를 입력 합니다. 스크립트는 기본적으로 사용할 수 있는 임의 주소를 제안 합니다. 
 
-   c. 멀티 캐스트 포트를 입력 합니다. 스크립트는 기본적으로 5405을 제안합니다. 
+   다. 멀티 캐스트 포트를 입력 합니다. 스크립트는 기본적으로 5405을 제안합니다. 
 
    d. 구성 하려면 `SBD ()`, SBD에 사용 하려는 차단 장치 파티션에 영구 경로 입력 합니다. 경로 클러스터의 모든 노드 간에 일치 해야 합니다. 
    마지막으로 스크립트 1 개 노드 클러스터를 온라인 상태로 전환 하 고 Hawk2 웹 관리 인터페이스를 사용 하도록 설정 하려면 Pacemaker 서비스를 시작 됩니다. Hawk2에 사용할 URL은 화면에 표시 됩니다. 
@@ -220,7 +221,7 @@ Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 �
 
 노드 수준 펜싱 노드 리소스 실행 되지 않도록 보장 합니다. 노드를 다시 설정 하 여 이렇게 하 고는 Pacemaker 구현의 STONITH (약자인 "헤드에 있는 다른 노드가 특이") 이라고 합니다. 키를 누릅니다. Pacemaker는 다양 한 서버는 무정전 전원 공급 장치 또는 관리 인터페이스 카드와 같은 장치 펜싱을 지원 합니다.
 
-자세한 내용은 [부터 Pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 하 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
+자세한 내용은 [부터 Pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)를 [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
 
 클러스터 초기화 시 STONITH 구성이 감지 되 면 비활성화 됩니다. 다음 명령을 실행 하 여 나중에 활성화할 수 있습니다.
 

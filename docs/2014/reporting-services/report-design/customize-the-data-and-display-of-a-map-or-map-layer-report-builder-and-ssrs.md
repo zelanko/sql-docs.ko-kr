@@ -24,12 +24,12 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: debc97cdbf7397779c5a2baec4d1dbb4bbbd8d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91aa2823238691953e7219b027368e642784fdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350370"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
@@ -126,11 +126,11 @@ ms.locfileid: "48214263"
  계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="DataGrouping"></a> 계층의 데이터 그룹화 변경  
- 사용자 고유의 셰이프에 맞게 공간 데이터의 집계 방식을 사용자 지정할 수 있습니다. 계층의 그룹 속성을 설정하려면 지도 창에서 계층을 선택하고 계층의 속성 창에서 **그룹**을 클릭한 다음 줄임표(…)를 클릭하여 그룹 속성을 엽니다. 이 대화 상자에서 그룹 식을 지정하고, 그룹 변수를 만들고, 그룹화에 사용되는 데이터를 필터링할 수 있습니다.  
+ 사용자 고유의 셰이프에 맞게 공간 데이터의 집계 방식을 사용자 지정할 수 있습니다. 계층의 그룹 속성을 설정하려면 지도 창에서 계층을 선택하고 계층의 속성 창에서 **그룹**을 클릭한 다음, 줄임표(…)를 클릭하여 그룹 속성을 엽니다. 이 대화 상자에서 그룹 식을 지정하고, 그룹 변수를 만들고, 그룹화에 사용되는 데이터를 필터링할 수 있습니다.  
   
  그룹 식은 공간 데이터와 관계가 있는 분석 데이터가 계층의 각 지도 요소에 대해 집계되는 방법을 지정합니다. 기본적으로 그룹 식은 공간 데이터와 분석 데이터 간의 관계에 대해 지정된 일치 필드의 집합입니다. 예를 들어 국가 또는 지역의 도시 위치와 인구 크기를 표시하는 거품형 지도의 경우 이름이 같은 도시가 여러 개일 수 있기 때문에 일치 필드에는 도시 이름 [City]와 지역 이름 [Region]이 포함됩니다. 해당 그룹 식에는 두 필드 [City] 및 [Region]이 포함됩니다.  
   
- 자세한 내용은 [지도 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](http://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
+ 자세한 내용은 참조 하세요. [지도 팁: SQL Server 및 공간 데이터를 집계 셰이프 파일을 가져오는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)합니다.  
   
  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting groups [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65cce6dcd35ffa762cac74cb9acb09270e229d25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61044c03428fc3713d78dc569248cc823e986286
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821883"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>사용자 또는 그룹 삭제(Master Data Services)
   사용자나 그룹이 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 없게 하려면 해당 사용자나 그룹을 삭제합니다.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683091"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210059"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   즉시 업데이트 구독의 동기화 트리거가 게시자에 연결할 때 사용하는 구성 및 보안 정보를 설정합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  상황에 따라 구독자에서 실행 중인 경우이 저장된 프로시저가 실패할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1 이상 및 게시자가 이전 버전을 실행 하는 합니다. 이 시나리오에서 저장 프로시저가 실패하면 게시자를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1 이상으로 업그레이드합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -65,8 +64,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저에 지정 된 로그인을 사용 하 여 인증 *로그인* 하 고 *암호*합니다.<br /><br /> 참고: 이전 버전의에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 옵션은 동적 원격 프로시저 호출 (RPC)를 지정 하는 데 사용 되었습니다.|  
-|**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고:이 계정은 충분 한 권한이 있는 게시자의 존재도 해야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
+|**0**|사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저에 지정 된 로그인을 사용 하 여 인증 *로그인* 하 고 *암호*합니다.<br /><br /> 참고: 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동적 RPC(원격 프로시저 호출)를 지정하는 데 이 옵션을 사용합니다.|  
+|**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고: 이 계정은 충분한 권한을 설정한 상태로 게시자에도 존재해야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
 |**2**|사용 하 여 만든 기존, 사용자 정의 연결 된 서버 로그인을 사용 **sp_link_publication**합니다.|  
   
  [ **@login**=] **'***로그인***'**  

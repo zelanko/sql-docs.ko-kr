@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio FAQ | Microsoft Docs
-description: 질문과 대답 (FAQ) Azure Data Studio에 대 한입니다.
-ms.custom: tools|sos
+title: FAQ
+titleSuffix: Azure Data Studio
+description: 질문과 대답 (FAQ) Azure Data Studio에 대 한 합니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356354"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030337"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 자주 묻는 질문(FAQ)
 
@@ -48,7 +49,7 @@ Azure Data Studio 및 해당 데이터 공급자에 대 한 소스 코드는 Git
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>오픈 소스 SSMS 예정?
 
-아니요. 그러나 차세대 살고 CLI 및 GUI 도구는 오픈 소스입니다. 예를 들어, VS Code, mssql-스크립터 및 msql CLI 용 mssql 확장은 GitHub의 모든 오픈 소스입니다. Azure 데이터 Studo에 대 한 소스 코드는 GitHub에서 사용할 수 있습니다.  
+아니요. 그러나 차세대 살고 CLI 및 GUI 도구는 오픈 소스입니다. 예를 들어, VS Code, mssql-스크립터 및 msql CLI 용 mssql 확장은 GitHub의 모든 오픈 소스입니다. Azure Data Studio에 대 한 소스 코드는 GitHub에서 사용할 수 있습니다.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Azure Data Studio 이상인 경우에 Microsoft 사용을 중단할 계획 SSMS 및 SSDT? 
 
@@ -132,7 +133,7 @@ Azure Data Studio 및 해당 데이터 공급자에 대 한 소스 코드는 Git
 |:---|:---|:---|
 |외부 데이터 마법사|미리 보기||
 |HDFS 통합|미리 보기||
-|Notebook|미리 보기||
+|전자 필기장|미리 보기||
 
 ### <a name="database-administration"></a>데이터베이스 관리
 

@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204562"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLEndTran** 연결과 관련 된 모든 문에 대 한 모든 활성 작업에 대 한 커밋 또는 롤백 작업을 요청 합니다. **SQLEndTran** 환경과 관련 된 모든 연결에 대 한 커밋 또는 롤백 작업을 수행할 수 있는지를 요청할 수도 있습니다.  
@@ -134,11 +134,11 @@ SQLRETURN SQLEndTran(
   
     -   25S03: 트랜잭션이 롤백  
   
-    -   40001: serialization 오류  
+    -   40001: Serialization 오류  
   
     -   40002: 무결성 제약 조건  
   
-    -   : HYC00 선택적 기능이 구현 되지 않았습니다  
+    -   HYC00: 선택적 기능이 구현 되지 않았습니다  
   
  하는 경우 **SQLEndTran** 호출한 환경에서 핸들 및 연결 중 위의 조건이 충족 됩니다., 동일한 드라이버에 연결 하는 모든 연결을 일시 중단 된 상태에 놓이게 됩니다.  
   

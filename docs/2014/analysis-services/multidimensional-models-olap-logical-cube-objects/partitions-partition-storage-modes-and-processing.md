@@ -23,12 +23,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc0c149ab222976d643eb65ebde540af514bd86c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507788"
 ---
 # <a name="partition-storage-modes-and-processing"></a>파티션 저장소 모드 및 처리
   파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
@@ -76,18 +76,18 @@ ms.locfileid: "48218915"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 인덱스 키의 전체 크기는 900바이트를 초과할 수 없습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 CREATE INDEX 문 처리 시 고정된 길이 키 열에 따라 이러한 조건을 적용 합니다. 그러나 인덱스 키에 가변 길이 열이 없으면, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 기본 테이블에 대 한 모든 업데이트에 대 한이 조건에도 적용 됩니다. 여러 집계에는 서로 다른 뷰 정의를 사용하므로, 인덱싱된 뷰를 사용하는 ROLAP 처리는 집계 디자인에 따라 성공할 수도 있고 실패할 수도 있습니다.  
   
--   인덱싱된 뷰를 만드는 세션 다음 옵션이 ON으로 설정 되어 있어야 합니다: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING 및 ANSI_WARNING 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
+-   인덱싱된 뷰를 만드는 세션에서는 ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, ANSI_WARNING 등의 옵션이 ON이어야 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
--   인덱싱된 뷰를 만드는 세션 OFF로 설정 하는 다음 옵션이 있어야 합니다.: NUMERIC_ROUNDABORT 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
+-   인덱싱된 뷰를 만드는 세션에서는 NUMERIC_ROUNDABORT 옵션이 OFF이어야 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 저장소 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 holap 집계가 파티션의 다차원 구조에 저장 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 집계 데이터가 없는 원자 큐브 셀로 드릴다운하려는 경우와 같이 원본 데이터에 액세스하는 쿼리의 경우에는 관계형 데이터베이스에서 데이터를 검색해야 하며 원본 데이터가 MOLAP 구조로 저장된 경우에서처럼 빠르지 않습니다. HOLAP 저장소 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
+ HOLAP 저장소 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 holap 집계가 파티션의 다차원 구조에 저장 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 원본 데이터에 액세스 하는 쿼리-원자성 큐브 셀으로 드릴 다운 하려는 경우에 없는 집계 데이터 반드시 관계형 데이터베이스에서 데이터를 검색 하 고 원본 데이터가 MOLAP structur 저장 된 경우 처럼 빠른 됩니다 예를 들어, e입니다. HOLAP 저장소 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
   
  HOLAP으로 저장된 파티션은 원본 데이터를 포함하지 않으므로 동일한 MOLAP 파티션보다 크기가 작으며 요약 데이터를 사용하는 쿼리에 대해 ROLAP 파티션보다 응답 속도가 빠릅니다. HOLAP 저장소 모드는 일반적으로 방대한 원본 데이터를 기반으로 하는 요약에 대해 신속한 쿼리 응답이 필요한 큐브의 파티션에 적합합니다. 그러나 중앙값 계산과 같이 리프 수준 데이터에 액세스해야 하는 쿼리를 생성하는 경우에는 대개 MOLAP을 사용하는 것이 더 낫습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [자동 관리 캐싱 &#40;파티션&#41;](partitions-proactive-caching.md)   
  [Analysis Services 데이터베이스 동기화](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](partitions-analysis-services-multidimensional-data.md)  
   
   

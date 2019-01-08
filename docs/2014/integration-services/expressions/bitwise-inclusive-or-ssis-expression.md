@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
@@ -14,12 +13,12 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e168433f7f7001037ac1d5360cf4115ff246f228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f13b39ef664eb054047e814bac98212b69859d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810845"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>|(포괄적 비트 OR)(SSIS 식)
   두 정수 값의 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 1이면 해당 결과 비트가 1로 설정되고, 그렇지 않으면 해당 결과 비트가 0으로 설정됩니다.  
@@ -94,9 +93,9 @@ ReorderPoint | SafetyStockLevel
  00000111  
   
 ## <a name="see-also"></a>관련 항목  
- [&#124;&#124;&#40;논리적 OR&#41; &#40;SSIS 식&#41;](logical-or-ssis-expression.md)   
+ [&#124;&#124;&#40;논리적 OR&#41;&#40;SSIS 식&#41;](logical-or-ssis-expression.md)   
  [^&#40;배타적 비트 OR&#41;&#40;SSIS 식&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

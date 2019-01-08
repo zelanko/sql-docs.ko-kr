@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544115"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -36,7 +36,7 @@ ms.locfileid: "49644001"
 
 다음 지침을 통해 Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 Data Migration Assistant를 사용 하 여 azure에 연결된 된 데이터베이스를 프로 비전 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이미 있는 경우이 도구를 닫고 설치를 닫은 다음 다시 및 도구를 업그레이드 하 라는 메시지가 나타납니다.
 
@@ -55,8 +55,8 @@ Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이�
 
 2. 다음 인수를 사용 하 여 PowerShell 스크립트를 실행 합니다.
     - **ComputerName**: 데이터베이스를 호스트 하는 컴퓨터의 이름입니다.
-    - **OutputFilePath**: 출력 파일을 저장할 경로를 카운터를 수집된 합니다.
-    - **CollectionTimeInSeconds**:는 성능 카운터 데이터를 수집 하려는 기간입니다.
+    - **OutputFilePath**: 수집 된 카운터를 저장 하려면 출력 파일 경로입니다.
+    - **CollectionTimeInSeconds**: 성능 카운터 데이터를 수집 하려는 동안 시간의 양입니다.
       의미 있는 권장 사항을 가져오려면 40 분 이상에 대 한 성능 카운터를 캡처하십시오. 캡처를 오래 동안 더 정확 하 게 권장이 됩니다.
     - **DbConnectionString**: 성능 카운터 데이터를 수집 하는 컴퓨터의 호스트 된 master 데이터베이스를 가리키는 연결 문자열입니다.
      
@@ -79,29 +79,29 @@ Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이�
 다음 인수를 사용 하 여는 dmacmd.exe를 실행 합니다.
 
 - **/Action = SkuRecommendation**: SKU 평가 실행 하려면이 인수를 입력 합니다.
-- **/ SkuRecommendationInputDataFilePath**: 이전 섹션에서 수집 된 카운터 파일의 경로입니다.
+- **/ SkuRecommendationInputDataFilePath**: 이전 섹션에서 수집 된 카운터 파일 경로입니다.
 - **/ SkuRecommendationTsvOutputResultsFilePath**: TSV 형식으로 결과 출력을 쓸 경로입니다.
 - **/ SkuRecommendationJsonOutputResultsFilePath**: JSON 형식으로 결과 출력을 쓸 경로입니다.
 - **/ SkuRecommendationHtmlResultsFilePath**: HTML 형식으로 결과 출력을 쓸 경로입니다.
 
 또한 다음 인수 중 하나를 선택 해야 합니다.
 - 가격 새로 고침을 방지
-    - **/ SkuRecommendationPreventPriceRefresh**: 가격 새로 고침이 발생 하는 것을 금지 합니다. 오프 라인 모드에서 실행 하는 경우 사용 합니다.
+    - **/ SkuRecommendationPreventPriceRefresh**: 발생 가격 새로 고침을 방지합니다. 오프 라인 모드에서 실행 하는 경우 사용 합니다.
 - 최신 가격 가져오기 
     - **/ SkuRecommendationCurrencyCode**: (예: 가격을 표시 하는 통화 "USD")입니다.
     - **/ SkuRecommendationOfferName**: 제품 이름 (예: "-0003 MS-AZR"). 자세한 내용은 참조는 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지입니다.
     - **/ SkuRecommendationRegionName**: 지역 이름 (예: "미국 서 부")입니다.
-    - **/ SkuRecommendationSubscriptionId**: 구독 id입니다.
-    - **/ AzureAuthenticationTenantId**: 테 넌 트 인증 합니다.
+    - **/ SkuRecommendationSubscriptionId**: 구독 ID입니다.
+    - **/ AzureAuthenticationTenantId**: Authentication 테 넌 트가 있습니다.
     - **/ AzureAuthenticationClientId**: 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다.
     - 다음 인증 옵션 중 하나입니다.
         - 대화형
-            - **AzureAuthenticationInteractiveAuthentication**: 인증 팝업 창이 true로 설정 합니다.
+            - **AzureAuthenticationInteractiveAuthentication**: 인증 팝업 창에 대 한 true로 설정 합니다.
         - 인증서 기반
-            - **AzureAuthenticationCertificateStoreLocation**: 인증서 저장소 위치 (예: 설정 "CurrentUser")입니다.
+            - **AzureAuthenticationCertificateStoreLocation**: (예: 인증서 저장소 위치를 설정 "CurrentUser")입니다.
             - **AzureAuthenticationCertificateThumbprint**: 인증서 지 문으로 설정 합니다.
         - 토큰 기반
-            - **AzureAuthenticationToken**: 인증서 토큰으로 설정 합니다.
+            - **AzureAuthenticationToken**: 인증서 토큰을 설정 합니다.
 
 일부 샘플 호출은 다음과 같습니다.
 
@@ -135,8 +135,8 @@ TSV 출력 파일에는 다음 그림에 표시 된 열 포함 됩니다.
 
 각 열에 대 한 설명을 따릅니다.
 
-- **DatabaseName** – 데이터베이스의 이름입니다.
-- **MetricName** – 메트릭을 실행 된 여부.
+- **DatabaseName** -데이터베이스의 이름입니다.
+- **MetricName** -메트릭을 실행 된 여부.
 - **MetricType** -Azure SQL Database 권장 계층입니다.
 - **MetricValue** -Azure SQL Database SKU를 권장 합니다.
 - **SQLMiEquivalentCores** -Azure SQL Database Managed Instance에 대 한 이동 하려는 경우 코어 수에 대 한이 값을 사용할 수 있습니다.
@@ -152,11 +152,11 @@ HTML 파일을 그래픽 형식으로이 정보를 포함 합니다. Azure 구�
 몇 번의 클릭으로 데이터베이스를 마이그레이션할 수 있는 Azure에서 프로 비전 대상 데이터베이스에 이전 단계에서 권장 사항을 사용할 수 있습니다. 작업도 가능 변경 권장 사항에 다음과 같은 HTML 파일을 업데이트 하 여 합니다.
 
 1. HTML 파일을 열고 다음 정보를 입력 합니다.
-    - **구독 ID** – 데이터베이스를 프로 비전 하려는 Azure 구독의 구독 ID입니다.
-    - **지역** – 데이터베이스를 프로 비전 하는 지역입니다. 구독 선택 영역을 지원 하는지 확인 합니다.
-    - **리소스 그룹** – 데이터베이스를 배포 하려는 리소스 그룹입니다. 존재 하는 리소스 그룹을 입력 합니다.
-    - **서버 이름** – Azure SQL Database 서버는 배포 데이터베이스입니다. 존재 하지 않는 서버 이름을 입력 하면 만들어집니다.
-    - **관리자 사용자 이름 \ 암호** – 서버 관리자 사용자 이름 및 암호입니다.
+    - **구독 ID** -데이터베이스를 프로 비전 하려는 Azure 구독의 구독 ID입니다.
+    - **지역** -데이터베이스를 프로 비전 하는 지역입니다. 구독 선택 영역을 지원 하는지 확인 합니다.
+    - **리소스 그룹** -데이터베이스를 배포 하려는 리소스 그룹입니다. 존재 하는 리소스 그룹을 입력 합니다.
+    - **서버 이름** -Azure SQL Database 서버는 배포 데이터베이스입니다. 존재 하지 않는 서버 이름을 입력 하면 만들어집니다.
+    - **관리자 사용자 이름 \ 암호** -서버 관리자 사용자 이름 및 암호입니다.
 
 2. 각 데이터베이스에 대 한 권장 사항을 검토 하 고 가격 책정 계층을 수정, 수준 및 필요에 따라 최대 데이터 크기를 계산 합니다. 현재 원하지 않는 프로 비전 된 모든 데이터베이스를 선택 취소 해야 합니다.
 

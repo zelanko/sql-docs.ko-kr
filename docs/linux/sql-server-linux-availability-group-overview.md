@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723191"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206622"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On 가용성 그룹이 linux
 
@@ -51,14 +51,14 @@ Pacemaker를 사용 하는 경우 올바르게 구성 해야를 실행 상태로
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>필요한\_동기화\_보조\_하려면\_커밋
 
-접하는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Ag 호출에서 사용 되는 설정은 `required_synchronized_secondaries_to_commit`합니다. 이렇게 하면 AG를 주 데이터베이스와 연장선 상에 해야 하는 보조 복제본의 수입니다. 자동 장애 조치 (경우에 클러스터 유형이 외부인 Pacemaker와 통합 됨) 등이 있으며 온라인 또는 오프 라인 적절 한 수의 보조 복제본 인 경우 주 가용성 등의 동작을 제어 합니다. 이 방식에 대해 자세히 알아보려면 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 합니다 `required_synchronized_secondaries_to_commit` 값이 기본적으로 설정 되 고 Pacemaker에서 유지 관리 /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 수동으로이 값을 재정의할 수 있습니다.
+접하는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Ag 호출에서 사용 되는 설정은 `required_synchronized_secondaries_to_commit`합니다. 이렇게 하면 AG를 주 데이터베이스와 연장선 상에 해야 하는 보조 복제본의 수입니다. 자동 장애 조치 (경우에 클러스터 유형이 외부인 Pacemaker와 통합 됨) 등이 있으며 온라인 또는 오프 라인 적절 한 수의 보조 복제본 인 경우 주 가용성 등의 동작을 제어 합니다. 이 방식에 대해 자세히 알아보려면 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 합니다 `required_synchronized_secondaries_to_commit` 값이 기본적으로 설정 되 고 Pacemaker에서 유지 관리 / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 수동으로이 값을 재정의할 수 있습니다.
 
 조합 `required_synchronized_secondaries_to_commit` 새 시퀀스 번호 (에 저장 되 `sys.availability_groups`) Pacemaker 알립니다 및 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] , 예를 들어, 자동 장애 조치가 발생할 수 있습니다. 이 경우 보조 복제본에 동일한 시퀀스 번호를 주, 즉 모든 최신 구성 정보를 사용 하 여 최신 상태로 해야 합니다.
 
-세 가지 값을 설정할 수 있는 `required_synchronized_secondaries_to_commit`: 0, 1 또는 2입니다. 이러한 복제본을 사용할 수 없게 하는 경우의 동작을 제어 합니다. 숫자는 주 데이터베이스와 동기화 해야 하는 보조 복제본의 수에 해당 합니다. Linux는 동작은 다음과 같습니다.
+세 가지 값을 설정할 수 있는 `required_synchronized_secondaries_to_commit`: 0, 1 또는 2를 선택 합니다. 이러한 복제본을 사용할 수 없게 하는 경우의 동작을 제어 합니다. 숫자는 주 데이터베이스와 동기화 해야 하는 보조 복제본의 수에 해당 합니다. Linux는 동작은 다음과 같습니다.
 
--   0 – 자동 장애 조치가 불가능 보조 복제본이 없는 동기화 할 필요 하기 때문입니다. 주 데이터베이스를 항상 사용할 수 있습니다.
--   1 – 하나의 보조 복제본 주를 사용 하 여 동기화 된 상태에 있어야 합니다. 자동 장애 조치가 불가능 합니다. 보조 동기 복제본을 찾을 때까지 주 데이터베이스를 사용할 수 없는 경우
+-   0-자동 장애 조치가 불가능 보조 복제본이 없는 동기화 할 필요 하기 때문입니다. 주 데이터베이스를 항상 사용할 수 있습니다.
+-   1-하나 이상의 보조 복제본 주를 사용 하 여 동기화 된 상태에 있어야 합니다. 자동 장애 조치가 불가능 합니다. 보조 동기 복제본을 찾을 때까지 주 데이터베이스를 사용할 수 없는 경우
 -   2-3 개 이상의 노드 AG 구성의 보조 복제본을 주와 동기화 되어야 합니다. 자동 장애 조치가 불가능 합니다.
 
 `required_synchronized_secondaries_to_commit` 뿐만 아니라 동기 복제본 같지만 데이터 손실 장애 조치의 동작을 제어 합니다. 값이 1 또는 2 인를 사용 하 여 보조 복제본 이므로 항상 동기화 되어야 하는 데 필요한 데이터 중복성은 항상 있습니다. 즉, 데이터가 손실 되지 않습니다.
@@ -87,7 +87,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 -   주 복제본과 보조 복제본은 동기 데이터 이동으로 설정 됩니다.
 -   보조 동기화 (0(not synchronizing) 동일한 데이터 지점에 두 가지 의미의 상태를 있습니다.
 -   클러스터 유형은 외부로 설정 됩니다. 자동 장애 조치 클러스터 유형이 없음인 불가능합니다.
--   합니다 `sequence_number` 되도록 보조 복제본의 주에 가장 높은 시퀀스 번호가 – 즉, 보조 복제본의 `sequence_number` 원래 주 복제본에서 값과 일치 합니다.
+-   합니다 `sequence_number` 되도록 보조 복제본의 주에 가장 높은 시퀀스 번호가-즉, 보조 복제본의 `sequence_number` 원래 주 복제본에서 값과 일치 합니다.
 
 이러한 조건이 충족 될 경우 주 복제본을 호스팅하는 서버 실패 AG를 동기 복제본 소유권을 변경 됩니다. 동기 복제본에 대 한 동작 (있습니다 수 있는 세 가지의 총: 하나의 주 복제본과 두 보조 복제본) 추가 하 여 제어할 수 있습니다 `required_synchronized_secondaries_to_commit`합니다. 이 Windows와 Linux 모두에서 Ag와 작동 하지만 완전히 다른 방식으로 구성 됩니다. Linux에서 값 자체 AG 리소스에서 클러스터에 의해 자동으로 구성 됩니다.
 
@@ -151,7 +151,7 @@ DNS 이름 및 IP 주소를 조합 것 인데, 여전히 부족 합니다. 보�
 
 ![하이브리드 배포 AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

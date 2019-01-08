@@ -20,16 +20,16 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794271"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206662"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 함수
 **규칙**  
- 버전 도입 되었습니다: ODBC 3.0: Windows XP 서비스 팩 2, Windows Server 2003 서비스 팩 1 이상 운영 체제에서 사용 되지 않습니다.  
+ 도입 된 버전: ODBC 3.0: Windows XP 서비스 팩 2, Windows Server 2003 서비스 팩 1 이상 운영 체제에서 사용 되지 않습니다.  
   
  **요약**  
  **SQLRemoveDriverManager** 변경 또는 시스템 정보 Odbcinst.ini 항목에서 ODBC 핵심 구성 요소에 대 한 정보를 제거 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47794271"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>인수  

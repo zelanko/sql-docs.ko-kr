@@ -20,21 +20,21 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dda856d0381b6e9ca8f5a8c9625151c148435edb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202892"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLSetStmtAttr** 문에 관련 된 특성을 설정 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 3 대 한 자세한 내용은 *.x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [뒤로 대 한 대체 함수 매핑 응용 프로그램의 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -52,7 +52,7 @@ SQLRETURN SQLSetStmtAttr(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 옵션을 설정 하려면 "주석입니다."에 나열 된  
   
  *ValuePtr*  
@@ -124,11 +124,11 @@ SQLRETURN SQLSetStmtAttr(
   
  정보의 형식을 집합과 *ValuePtr* 된 종속 *특성*합니다. **SQLSetStmtAttr** 두 가지 형식 중 하나에 대 한 특성 정보를 허용 합니다: 문자열 또는 정수 값입니다. 형식에 대해 특성의 설명에 표시 됩니다. 이 형식은 각 특성에 대해 반환 되는 정보에 적용 됩니다 **SQLGetStmtAttr**합니다. 가리키는 문자열을 *ValuePtr* 인수의 **SQLSetStmtAttr** 길이 *StringLength*합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지 *.x*합니다. ODBC 3 *.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3 *.x* 문 특성은 연결 특성 및 문 특성을 모두 수 있으며 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
-  
-> [!NOTE]  
->  ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 경우 드라이버에서이 기능은 지원 해야 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 "설정 문 옵션에는 연결 수준"를 참조 하세요 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.  
+> 
+> [!NOTE]
+>  ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 경우 드라이버에서이 기능은 지원 해야 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 "설정 문 옵션에는 연결 수준"를 참조 하세요 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>설명자 필드를 설정 하는 문 특성  
  여러 문 특성 설명자 헤더 필드에 해당합니다. 설명자 필드의 설정에서 이러한 특성 실제로 결과 설정 합니다. 호출 하 여 필드를 설정 **SQLSetStmtAttr** 아닌 **SQLSetDescField** 설명자 핸들을 함수 호출에서 얻은 없는 장점이 있습니다.  
@@ -184,7 +184,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 동적 매개 변수 바인딩을 변경에 대 한 포인터를 추가 하는 오프셋 지점입니다. 이 필드가 null이 아닌 경우 드라이버는 포인터를 역참조, 각 설명자 레코드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR)의 지연 된 필드에 역참조 된 값을 추가 및 새 포인터 값을 사용 하 여 바인딩하는 경우. 설정은 기본적으로 null로 합니다.<br /><br /> 바인딩 오프셋은 항상 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR 필드에 직접 추가 됩니다. 오프셋을 다른 값으로 변경 되 면 설명자 필드의 값에 직접 새 값 추가 계속 됩니다. 새 오프셋 된 필드 값과 모든 이전 오프셋에 추가 되지 않습니다.<br /><br /> 자세한 내용은 [매개 변수 바인딩 오프셋](../../../odbc/reference/develop-app/parameter-binding-offsets.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_BIND_OFFSET_PTR 필드 APD 헤더를 설정 합니다.|  
 |SQL_ATTR_PARAM_BIND_TYPE (ODBC 3.0)|동적 매개 변수에 대해 사용할 바인딩 방향을 나타내는 SQLULEN 값입니다.<br /><br /> 이 필드는 열 단위 바인딩을 선택 하려면 SQL_PARAM_BIND_BY_COLUMN (기본값)에 설정 됩니다.<br /><br /> 행 단위 바인딩은 선택 하려면이 필드는 동적 매개 변수 집합에 바인딩될 버퍼 인스턴스나 구조 길이 설정 됩니다. 이 길이 바인딩된 매개 변수 및 구조 또는 바인딩된 매개 변수의 주소를 지정된 된 길이 사용 하 여 증가 하는 경우 결과를 가리키는지 확인 시작 부분에에서 동일한 매개 변수 버퍼의 패딩에 대 한 공간이 있어야 합니다. 매개 변수 집합입니다. 사용 하는 경우는 *sizeof* ANSI c에서 연산자를이 동작이 유지 됩니다.<br /><br /> 자세한 내용은 [Binding Parameters 배열](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ BIND_TYPE 필드 APD 헤더를 설정 합니다.|  
 |SQL_ATTR_PARAM_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 값의 배열을 가리키는 값은 SQL 문 실행 하는 동안 매개 변수를 무시 하는 데 사용 합니다. 각 값 (실행할 매개 변수)에 대 한 SQL_PARAM_PROCEED 또는 SQL_PARAM_IGNORE (용를 무시할 매개 변수)으로 설정 됩니다.<br /><br /> SQL_PARAM_IGNORE APD의 SQL_DESC_ARRAY_STATUS_PTR 가리키는 배열에서 상태 값을 설정 하 여 매개 변수 집합을 처리 하는 동안 무시 됩니다. 해당 상태 값 SQL_PARAM_PROCEED로 설정 된 경우 또는 배열에 요소가 설정 된 경우 매개 변수 집합이 처리 됩니다.<br /><br /> 없는 경우 드라이버는 반환 하지 않는 매개 변수 상태 값을 null 포인터로이 문 특성을 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있습니다 되지만 새 값을 다음 시간까지 사용 되지 않습니다 **SQLExecDirect** 하거나 **SQLExecute** 라고 합니다.<br /><br /> 바인딩된 매개 변수가 없는 경우이 특성이 무시 됩니다.<br /><br /> 자세한 내용은 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)입니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드 APD 헤더를 설정 합니다.|  
-|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 배열을 가리키는 값 값을 호출한 후에 매개 변수 값의 각 행에 대 한 상태 정보를 포함 하 **SQLExecute** 하거나 **SQLExecDirect**합니다. 이 필드는 PARAMSET_SIZE 1 보다 큰 경우에 필요 합니다.<br /><br /> 상태 값은 다음 값을 포함할 수 있습니다.<br /><br /> SQL_PARAM_SUCCESS:이 매개 변수이 집합에 대 한 SQL 문을 실행 했습니다. 되었습니다.<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO: SQL 문이 성공적으로 실행이 매개 변수이 집합에 대 한 그러나 경고 정보는 진단 데이터 구조에서 사용할 수 있습니다.<br /><br /> SQL_PARAM_ERROR:이 매개 변수이 집합을 처리에서 오류가 발생 했습니다. 추가 오류 정보를 진단 데이터 구조에서 사용할 수 있습니다.<br /><br /> SQL_PARAM_UNUSED:이 매개 변수 집합 되지 않았거나 사용할 수 있는 때문에 일부 이전 매개 변수 집합 추가 처리를 중단 하는 오류가 발생 한 SQL_PARAM_IGNORE는 SQL_ATTR_PARAM_ 하 여 지정 된 배열에 매개 변수 집합에 대 한 설정 되었기 때문에 OPERATION_PTR 합니다.<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE: 드라이버 모놀리식 단위로 매개 변수 배열을 처리 하며 따라서이 수준의 오류 정보를 생성 하지 않습니다.<br /><br /> 없는 경우 드라이버는 반환 하지 않는 매개 변수 상태 값을 null 포인터로이 문 특성을 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있습니다 되지만 새 값을 다음 시간까지 사용 되지 않습니다 **SQLExecute** 하거나 **SQLExecDirect** 라고 합니다. 이 특성을 설정 합니다. 영향을 줄 수 드라이버에 의해 구현 된 출력 매개 변수 동작을 참고 합니다.<br /><br /> 자세한 내용은 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)입니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드 IPD 헤더를 설정 합니다.|  
+|SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 배열을 가리키는 값 값을 호출한 후에 매개 변수 값의 각 행에 대 한 상태 정보를 포함 하 **SQLExecute** 하거나 **SQLExecDirect**합니다. 이 필드는 PARAMSET_SIZE 1 보다 큰 경우에 필요 합니다.<br /><br /> 상태 값은 다음 값을 포함할 수 있습니다.<br /><br /> SQL_PARAM_SUCCESS: 이 매개 변수이 집합에 대 한 SQL 문이 성공적으로 실행 합니다.<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO: 이 매개 변수이 집합에 대 한 SQL 문이 성공적으로 실행 그러나 경고 정보는 진단 데이터 구조에서 사용할 수 있습니다.<br /><br /> SQL_PARAM_ERROR: 이 매개 변수이 집합을 처리에서 오류가 발생 했습니다. 추가 오류 정보를 진단 데이터 구조에서 사용할 수 있습니다.<br /><br /> SQL_PARAM_UNUSED: 이 매개 변수 집합 되지 않았거나 사용 가능한 경우 때문에 일부 이전 매개 변수 집합 추가 처리를 중단 하는 오류가 발생 한 SQL_PARAM_IGNORE는 SQL_ATTR_PARAM_OPERATION_PTR 하 여 지정 된 배열에 매개 변수 집합에 대 한 설정 되었기 때문에 합니다.<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE: 드라이버 모놀리식 단위로 배열 매개 변수를 처리 하며 따라서이 수준의 오류 정보를 생성 하지 않습니다.<br /><br /> 없는 경우 드라이버는 반환 하지 않는 매개 변수 상태 값을 null 포인터로이 문 특성을 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있습니다 되지만 새 값을 다음 시간까지 사용 되지 않습니다 **SQLExecute** 하거나 **SQLExecDirect** 라고 합니다. 이 특성을 설정 합니다. 영향을 줄 수 드라이버에 의해 구현 된 출력 매개 변수 동작을 참고 합니다.<br /><br /> 자세한 내용은 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)입니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드 IPD 헤더를 설정 합니다.|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN \* 처리 된 경우 오류 집합을 포함 하는 매개 변수 집합의 수를 반환 하는 버퍼를 가리키는 레코드 필드입니다. 이 null 포인터인 경우 번호가 없으면 반환 됩니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ROWS_PROCESSED_PTR 필드 IPD 헤더를 설정 합니다.<br /><br /> 경우에 대 한 호출 **SQLExecDirect** 하거나 **SQLExecute** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 입력 한 후가이 특성에서 가리키는 버퍼에 반환 하지 않습니다, 버퍼의 내용을 정의 되지 않습니다.<br /><br /> 자세한 내용은 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)입니다.|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|각 매개 변수에 대해 값의 수를 지정 하는 SQLULEN 값입니다. SQL_ATTR_PARAMSET_SIZE 1 보다 큰 경우 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 APD의 SQL_DESC_OCTET_LENGTH_PTR 배열을 가리킵니다. 각 배열의 카디널리티가이 필드의 값과 동일합니다.<br /><br /> 바인딩된 매개 변수가 없는 경우이 특성이 무시 됩니다.<br /><br /> 자세한 내용은 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)입니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_SIZE 필드 APD 헤더를 설정 합니다.|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|응용 프로그램에 반환 하기 전에 실행할 SQL 문에 대 한 대기 시간 (초) 수에 해당 하는 SQLULEN 값입니다. 하는 경우 *ValuePtr* 은 0 (기본값) 일 제한 시간은 없습니다.<br /><br /> 지정된 된 시간 제한 데이터 원본에 대 한 최대 제한 시간을 초과 하거나 최소 제한 시간 보다 작습니다 **SQLSetStmtAttr** 해당 값을 대체 하 고 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).<br /><br /> 응용 프로그램을 호출 하지 않아도 **SQLCloseCursor** 경우 명령문을 재사용 하는 **선택** 문을 시간이 초과 되었습니다.<br /><br /> 이 문 특성에 설정 하는 쿼리 제한 시간 동기 및 비동기 모드에서 유효 합니다.|  
@@ -213,6 +213,6 @@ SQLRETURN SQLSetStmtAttr(
 |연결 특성을 설정합니다.|[SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |설명자의 단일 필드를 설정합니다.|[SQLSetDescField 함수](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

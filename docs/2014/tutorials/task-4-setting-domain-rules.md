@@ -13,15 +13,15 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349577"
 ---
 # <a name="task-4-setting-domain-rules"></a>작업 4: 도메인 규칙 설정
-  이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com**합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](http://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
+  이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com**합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
   
 1.  **도메인 목록** 에서 **Contact Email**을 클릭합니다.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48138771"
 13. **닫기** 를 클릭하여 **도메인 규칙 테스트** 대화 상자를 닫습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 5: 용어 기반 관계 설정](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [작업 5: 용어 기반 관계 설정](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

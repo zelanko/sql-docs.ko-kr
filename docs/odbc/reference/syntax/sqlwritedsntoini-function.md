@@ -20,16 +20,16 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 197c22a160b30fc9c1958e90470c174e3888a053
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680821"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201982"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 함수
 **규칙**  
- ODBC 도입 된 버전: 1.0  
+ 도입 된 버전: ODBC 1.0  
   
  **요약**  
  **SQLWriteDSNToIni** 시스템 정보를 데이터 소스를 추가 합니다.  

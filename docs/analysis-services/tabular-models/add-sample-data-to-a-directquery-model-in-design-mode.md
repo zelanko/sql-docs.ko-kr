@@ -1,5 +1,5 @@
 ---
-title: 디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가 | Microsoft Docs
+title: 디자인 모드에서 Analysis Services의 DirectQuery 모델에 샘플 데이터 추가 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041637"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071540"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "34041637"
 >  빈 모델의 DirectQuery 모드에서도 항상 각 테이블에 대해 작은 기본 제공 행 집합이 표시됩니다. 50행 데이터 세트를 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** > **테이블 속성** 을 클릭합니다.  
   
 ## <a name="create-a-sample-partition"></a>샘플 파티션 만들기
- 이러한 지침은 테이블 형식 모델에서 만들거나 호환성 수준 1200 이상으로 업그레이드 됩니다. 더 낮은 호환성 수준의 모델은 다른 속성을 사용하여 캐시된 데이터를 가져옵니다. 속성 설명은 [SSMS에서 DirectQuery 모드 사용](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 을 참조하세요.  
+ 만들어졌거나 해당 레벨로 업그레이드 호환성 수준이 1200 이상인 테이블 형식 모델에 대 한 지침은 이러한입니다. 더 낮은 호환성 수준의 모델은 다른 속성을 사용하여 캐시된 데이터를 가져옵니다. 속성 설명은 [SSMS에서 DirectQuery 모드 사용](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 을 참조하세요.  
   
 1.  SQL Server Data Tools, 다이어그램 또는 데이터 뷰에서 팩트 테이블을 클릭하여 해당 속성 페이지를 엽니다. 팩트 테이블은 모델의 집계된 수치 데이터 및 측정값을 제공합니다. 두 개 이상을 가질 수 있습니다.  
   
 2.  **테이블** > **속성** 을 클릭하여 파티션 관리 대화 상자를 엽니다.  
   
-    기본 파티션에 **(Direct Query) \<테이블 이름 >** 합니다. 전체 데이터 뷰입니다. 이 파티션을 삭제하지 마세요. 이 파티션은 모델을 배포할 때 사용됩니다.  
+    기본 파티션은 알 **(Direct Query) \<테이블 이름 >** 합니다. 전체 데이터 뷰입니다. 이 파티션을 삭제하지 마세요. 이 파티션은 모델을 배포할 때 사용됩니다.  
   
 4.  파티션을 선택하고 **복사**를 클릭합니다.  
 

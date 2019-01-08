@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669461"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201842"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
 ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 또는 대 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 지원 합니다. 유니코드 함수 함수로 구현 됩니다 (의 접미사로 *W*) 아니라 매크로입니다. ANSI 함수 (접미사 없이 호출할 수 *는*)는 현재 ODBC API 함수를 사용 하 여 동일 합니다.  
@@ -65,12 +65,12 @@ ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 �
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
+> [!NOTE]
 >  사용 되지 않는 함수는 유니코드에서 ANSI로 매핑을 지원 하므로 ODBC 3 *.x* ODBC 2를 다시 컴파일하지 드라이버 관리자 지원. *x* 유니코드를 사용 하 여 응용 프로그램 **#define**합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [유니코드 응용 프로그램](../../../odbc/reference/develop-app/unicode-applications.md)  
+-   [유니코드 애플리케이션](../../../odbc/reference/develop-app/unicode-applications.md)  
   
 -   [유니코드 드라이버](../../../odbc/reference/develop-app/unicode-drivers.md)  
   

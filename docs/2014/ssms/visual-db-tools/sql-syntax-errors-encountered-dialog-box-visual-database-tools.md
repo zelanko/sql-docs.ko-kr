@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.sqlsyntaxerrorsencountered
@@ -13,12 +13,12 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73f72bea0e286c3de884c2c56a77aaf292d4699c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781805"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>SQL 구문 오류 발생 대화 상자(Visual Database Tools)
   디자이너의 SQL 창에서 SQL 문을 구문 분석할 수 없는 경우 이 대화 상자에 오류 메시지가 나타납니다.  

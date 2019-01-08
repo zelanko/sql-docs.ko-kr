@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f20575da48685a2f6c2b990169da1baba54ed667
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769775"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Uninstall PowerPivot for SharePoint
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 제거는 제거를 준비하고, 팜에서 기능과 솔루션을 제거하고, 프로그램 파일과 레지스트리 설정을 제거하는 작업으로 구성된 다단계 작업입니다.  
@@ -27,17 +26,17 @@ ms.locfileid: "48212113"
   
 -   [필수 구성 요소](#prereq)  
   
--   [1단계: 제거 전 검사 목록](#bkmk_before)  
+-   [1 단계: 제거 전 검사 목록](#bkmk_before)  
   
 -   [2단계: SharePoint에서 기능 및 솔루션 제거](#bkmk_remove)  
   
--   [3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거](#bkmk_uninstall)  
+-   [3 단계: 로컬 컴퓨터에서 프로그램을 제거 하려면 SQL Server 설치 프로그램 실행](#bkmk_uninstall)  
   
 -   [4 단계: PowerPivot for SharePoint 추가 기능 제거](#bkmk_addin)  
   
--   [5단계: 제거 확인](#verify)  
+-   [5 단계: 제거 확인](#verify)  
   
--   [6단계: 제거 후 검사 목록](#bkmk_post)  
+-   [6 단계: 제거 후 검사 목록](#bkmk_post)  
   
 ##  <a name="prereq"></a> 필수 구성 요소  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48212113"
   
 -   Analysis Services 및 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 제거하려면 Analysis Services 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
   
-##  <a name="bkmk_before"></a> 1단계: 제거 전 검사 목록  
+##  <a name="bkmk_before"></a> 1 단계: 제거 전 검사 목록  
  쿼리 및 데이터 처리를 지원하는 소프트웨어가 팜에서 제거된 경우에는 PowerPivot 데이터에 액세스할 수 없게 됩니다. 맨 먼저 더 이상 작동되지 않는 파일 및 라이브러리를 삭제해야 합니다. 이렇게 하면 소프트웨어를 제거하기 전에 '누락된 데이터'에 대한 질문이나 문제를 해결할 수 있습니다.  
   
 1.  SharePoint용 PowerPivot 설치와 연결된 모든 PowerPivot 통합 문서, 문서 및 라이브러리를 삭제합니다. 소프트웨어가 제거되면 라이브러리와 문서가 작동하지 않습니다.  
@@ -64,16 +63,16 @@ ms.locfileid: "48212113"
   
 5.  필요한 경우 서비스를 중지하고 소프트웨어를 제거하기 전에 며칠 정도 기다립니다. 이 단계는 제거에 반드시 필요한 것은 아니지만 데이터 마이그레이션 또는 기술 대체 문제가 발생한 경우 서비스를 일시적으로 재개할 수 있는 기회를 제공합니다.  
   
-##  <a name="bkmk_remove"></a> 2단계: SharePoint에서 기능 및 솔루션 제거  
+##  <a name="bkmk_remove"></a> 2 단계: SharePoint에서 기능 및 솔루션 제거  
  PowerPivot 구성 도구를 사용하여 SharePoint에서 PowerPivot 서비스 및 애플리케이션을 제거합니다.  
   
--   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner** 여야 합니다.  
+-   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner**여야 합니다.  
   
 -   SharePoint 버전에 대한 구성 도구의 해당 버전을 사용하세요. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 설치에는 이러한 도구를 사용하지 마세요.  
   
 -   SharePoint 관리 서비스가 실행되고 있는지 확인합니다.  
   
-1.  **구성 도구 실행:** 구성 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 가 로컬 서버에 설치되어 있을 때만 나열됩니다. **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭하고 **구성 도구**를 클릭한 후 다음 중 하나를 클릭합니다.  
+1.  **구성 도구를 실행 합니다.** 구성 도구는만 나열 된 경우에만 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 로컬 서버에 설치 됩니다. 에 **시작** 메뉴에서 **프로그램도**, 클릭 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 다음 중 하나를 클릭 하 고:  
   
     -   **SharePoint 용 PowerPivot 2013 구성**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48212113"
   
 6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다.  
   
-7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
+7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. 클릭 하면 **실행**, 동작이 일괄 처리 모드로 처리 됨을 알리는 다음 경고가 나타납니다. "모든 도구에서 유효한 것으로 플래그가 지정 되는 구성 설정이 적용 됩니다 SharePoint 팜에 합니다. 계속하시겠습니까?”  
   
 8.  계속하려면 **예** 를 클릭합니다.  
   
@@ -118,22 +117,22 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  SharePoint 관리 셸을 관리자 권한으로 시작하고 다음 명령을 실행하여 큐에 있는 작업을 봅니다.  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
-3.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+3.  기존 배포에서 **형식** 이 취소 또는 배포 **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp 인지 합니다.  
   
 4.  배포 또는 취소의 경우 PowerPivot 솔루션에 관련 된 GUID 값을 복사에 대 한 **JobId** 다음 명령에 붙여 넣습니다 (셸의 편집 메뉴에서 GUID를 복사 하려면 표시, 복사 및 붙여넣기 명령의 사용):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  **유효성 검사** 를 클릭한 다음 **실행**을 클릭하여 구성 도구에서 태스크를 다시 시도합니다.  
   
  PowerShell을 사용하여 팜에서 기능과 솔루션을 제거할 수도 있습니다. 자세한 내용은 [SharePoint 용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)합니다.  
   
-##  <a name="bkmk_uninstall"></a> 3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거  
+##  <a name="bkmk_uninstall"></a> 3 단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거  
  프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 SQL Server를 설치할 때 함께 설치됩니다.  
   
  이미 설치된 다른 SQL Server 인스턴스(또는 동일한 인스턴스의 기능)에 영향을 주지 않고 설치 일부를 제거할 수 있습니다. 예를 들어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 데이터베이스 엔진 등의 다른 인스턴스는 설치된 상태로 두고 SharePoint용 PowerPivot을 제거할 수 있습니다.  
@@ -146,16 +145,16 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      설치 프로그램에서 **PowerPivot** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
-##  <a name="bkmk_addin"></a> 4 단계: PowerPivot for SharePoint 추가 기능 제거  
+##  <a name="bkmk_addin"></a> 4 단계: SharePoint용 PowerPivot 추가 기능 제거  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [를 설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
   
-##  <a name="verify"></a> 5단계: 제거 확인  
+##  <a name="verify"></a> 5 단계: 제거 확인  
   
 1.  중앙 관리의 **서버의 서비스 관리**에서 SharePoint용 PowerPivot을 제거한 서버에 연결합니다.  
   
-2.  -   제거한 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 확인 **SQL Server PowerPivot 시스템 서비스** 이상 목록에 나타나지 않습니다.  
+2.  -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013을 제거한 경우 **SQL Server PowerPivot 시스템 서비스** 가 더 이상 목록에 표시되지 않는지 확인합니다.  
   
-    -   제거한 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 확인 **SQL Server Analysis Services** 하 고 **SQL Server PowerPivot 시스템 서비스** 이상 목록에 나타나지 않습니다.  
+    -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010을 제거한 경우, **SQL Server Analysis Services** 및 **SQL Server PowerPivot 시스템 서비스** 가 목록에 더 이상 표시되지 않는지 확인합니다.  
   
 3.  팜에서 마지막 SharePoint용 PowerPivot 서버를 제거한 후 다음을 수행합니다.  
   
@@ -167,7 +166,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  일반 애플리케이션 설정에서 **PowerPivot 관리 대시보드** 가 페이지에 더 이상 없는지 확인합니다.  
   
-##  <a name="bkmk_post"></a> 6단계: 제거 후 검사 목록  
+##  <a name="bkmk_post"></a> 6 단계: 제거 후 검사 목록  
  다음 목록을 사용하여 제거 중에 삭제되지 않은 소프트웨어 및 파일을 제거할 수 있습니다.  
   
 1.  `C:\Program Files\Microsoft SQL Server\MSAS12.PowerPivot`에서 모든 데이터 파일과 하위 폴더를 삭제한 다음 폴더를 삭제합니다. 이 단계는 DATA 디렉터리에서 이전에 캐시된 파일도 삭제합니다.  

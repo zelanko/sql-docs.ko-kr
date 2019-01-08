@@ -1,5 +1,5 @@
 ---
-title: 열의 데이터 형식을 설정 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델의 열 데이터 형식 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045807"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071960"
 ---
 # <a name="set-the-data-type-of-a-column"></a>열 데이터 형식 설정 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045807"
   
  모델비즈니스 인텔리전스 의미 체계 모델에서는 다음과 같은 데이터 형식을 사용할 수 있습니다.  
   
--   **텍스트**  
+-   **텍스트 모드**  
   
 -   **10진수**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34045807"
   
 -   **TRUE/FALSE**  
   
--   **날짜**  
+-   **Date**  
   
  데이터의 데이터 형식이 잘못되었거나 적어도 하나 이상의 데이터 형식이 원하는 형식과 다를 경우 다음과 같은 여러 가지 옵션 중에서 선택할 수 있습니다.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34045807"
   
  데이터 형식은 지원되지만 모델 디자이너에서 새 데이터 형식에 맞지 않는 값을 발견할 경우에는 다른 오류가 표시되며 계속하기 전에 데이터 값을 수정해야 합니다.  
   
- 비즈니스 인텔리전스 의미 체계 모델에서 사용 되는 데이터 형식에 대 한 자세한 정보에 대 한 수식에 사용 된 서로 암시적으로 변환 하 고 서로 어떻게 다른 지 데이터 형식, 참조 [지원 되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
+ 비즈니스 인텔리전스 의미 체계 모델에 사용 되는 데이터 형식에 대 한 자세한 내용은 수식에서 사용 되는 암시적으로 변환 하 고 다양 한 데이터 형식인 하는 방법을 참조 하세요 [데이터 형식 지원](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [지원되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

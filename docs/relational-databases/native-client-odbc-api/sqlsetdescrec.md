@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f13ba1492c3edaeaf179e9bcda0e4df3923f80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669292"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536837"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669292"
   
  다음 표에서는 매개 변수와 설명자 필드 간의 매핑에 대해 설명합니다.  
   
-|매개 변수|테이블 반환 매개 변수 열을 비롯한 테이블 반환 매개 변수가 아닌 유형에 대한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
+|매개 변수|테이블 반환 매개 변수 열이 포함 되지 않은 테이블 반환 매개 변수 형식에 대 한 관련된 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "51669292"
 |-|------------|---------------|--------------|-----------------|-------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|날짜|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |Time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |Datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
@@ -62,7 +62,7 @@ ms.locfileid: "51669292"
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLSetDescRec 지원  
  **SQLSetDescRec** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

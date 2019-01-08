@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096393"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211842"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
   프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
@@ -62,10 +62,10 @@ GO
   
  매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc**에서 **\@first**, **\@second** 및 **\@third**라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  **/@parameter =***value* 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =***value* 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =***value* 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
   
 ## <a name="specifying-parameter-data-types"></a>매개 변수 데이터 형식 지정  

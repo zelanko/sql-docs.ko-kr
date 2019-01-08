@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 961ff9fe552fa30eaad4667fdd1911a44f3a35f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793041"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208782"
 ---
 # <a name="installation-components"></a>설치 구성 요소
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47793041"
   
  ![설치 구성 요소 간의 관계](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  ODBC 2에 사용 된 Odbc.inf 파일입니다. *x* 각 ODBC에서 필요한 파일을 설명 하기 위해 구성 요소 ODBC 3에서 사용 되지 않습니다 *.x*합니다. ODBC 3 제공 되는 드라이버 *.x* 구성 요소를 Odbc.inf 파일을 만들 필요가 없습니다. 제거 **SQLInstallDriver** 및 **SQLInstallODBC**, 및의 사용 중단 **SQLInstallTranslator**, Odbc.inf 불필요 한 렌더링 해야 합니다. Odbc.inf Driver 키워드 섹션에서 사용 되는 드라이버 정보에서 제공 됩니다는 *lpszDriver* 에서 인수 **SQLInstallDriverEx**합니다. [ODBC 변환기]에 사용 하는 변환기 정보 및 Odbc.inf의 변환기 사양 섹션에서 제공 됩니다는 *lpszTranslator* 인수의 **SQLInstallTranslatorEx**합니다. 이러한 변경 내용은 플랫폼 간에 이식 가능 하도록 ODBC 설치 관리자를 허용 합니다.  
   
  이러한 구성 요소에 대 한 자세한 내용은이 섹션의 끝에 다음 항목을 참조 하세요.  

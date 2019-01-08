@@ -20,16 +20,16 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608251"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201772"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 함수
 **규칙**  
- ODBC 2.5 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 2.5  
   
  **요약**  
  **SQLConfigDriver** 적절 한 드라이버 설치 DLL 및 호출을 로드 합니다 **ConfigDriver** 함수입니다.  

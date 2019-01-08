@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662883"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858668"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 문 및 반복(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51662883"
   
 -   `order by` 절(옵션)  
   
--   `return` 식. `return` 절의 식은 FLWOR 문의 결과를 구성합니다.  
+-   `return` 식입니다. `return` 절의 식은 FLWOR 문의 결과를 구성합니다.  
   
  예를 들어 다음 쿼리는 첫 번째 제조 위치의 <`Step`> 요소를 통해 반복되는데 <`Step`>노드의 문자열 값을 반환합니다.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  다음 쿼리는 ProductModel 테이블의 형식화된 xml 열인 Instructions 열에 대해 지정된다는 점을 제외하고 이전 쿼리와 유사합니다. 쿼리는 특정 제품에 대한 첫 번째 작업 센터 위치의 모든 제조 단계인 <`step`> 요소를 통해 반복됩니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  다음은 허용되는 그 밖의 다른 입력 시퀀스의 예입니다.  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  AdventureWorks 샘플 데이터베이스에서에 저장 된 제조 지침 합니다 **지침** 열을 **Production.ProductModel** 테이블 같은 형식이:  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  다음 쿼리는 작업 센터 위치 특성이 자식 요소로 반환되고 <`Location`> 요소가 있는 새 XML을 생성합니다.  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  다음은 쿼리입니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 제조 지침에는 필요한 도구와 이러한 도구가 사용되는 위치에 대한 정보가 포함됩니다. 다음 쿼리에서는 `let` 절을 사용하여 제품 모델을 빌드하는 데 필요한 도구와 각 도구가 필요한 위치를 나열합니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Where 절 사용  
- `where` 절을 사용하여 반복 결과를 필터링할 수 있습니다. 다음 예에서 이를 확인할 수 있습니다.  
+ 사용할 수는 `where` 절 반복의 결과를 필터링 합니다. 다음 예에서 이를 확인할 수 있습니다.  
   
  자전거를 제조할 경우 제조 과정은 여러 위치의 작업 센터를 통해 진행됩니다. 각 작업 센터 위치는 제조 단계 시퀀스를 정의합니다. 다음 쿼리는 자전거 모델을 제조하고 제조 단계가 3개 미만인 작업 센터 위치만 검색합니다. 즉 이러한 작업 센터 위치에는 <`step`> 요소가 3개 미만입니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR의 복수 변수 바인딩  
  여러 개의 변수를 입력 시퀀스에 바인딩하는 FLWOR 식을 하나만 사용할 수 있습니다. 다음 예에서는 형식화되지 않은 xml 변수에 대해 쿼리가 지정됩니다. FLOWR 식은 각 <`Location`> 요소에 있는 첫 번째<`Step`> 요소 자식을 반환합니다.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  다음 쿼리는 형식화 된 Instructions 열에 대해 지정 된다는 점을 제외 하 고 마찬가지로 **xml** 열에서의 합니다 **ProductModel** 테이블입니다. [XML 생성 (XQuery)](../xquery/xml-construction-xquery.md) 원하는 XML을 생성 하는 데 사용 됩니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  다음은 결과의 일부입니다.  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  다음 쿼리는 AdditionalContactInfo 열에서 특정 고객에 대한 모든 전화 번호를 검색합니다. 결과는 전화 번호를 기준으로 정렬됩니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -382,7 +382,7 @@ order by data($a/act:number[1]) descending
   
  다음은 결과입니다.  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  쿼리 프롤로그에서 네임스페이스를 선언하는 대신 WITH XMLNAMESPACES를 사용하여 선언할 수 있습니다.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  특성 값을 기준으로 정렬할 수도 있습니다. 예를 들어 다음 쿼리는 새로 만든 <`Location`> 요소를 검색하는데 이 요소에는 LaborHours 특성을 기준으로 내림차순으로 LocationID 및 LaborHours 특성이 정렬되어 있습니다. 따라서 노동 시간이 가장 많은 작업 센터 위치가 가장 먼저 반환됩니다.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  다음 쿼리에서 결과는 요소 이름을 기준으로 정렬됩니다. 쿼리는 제품 카탈로그에서 특정 제품의 사양을 검색합니다. 사양은 <`Specifications`> 요소의 자식입니다.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -457,7 +457,7 @@ where ProductModelID=19;
   
  다음은 결과입니다.  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  순서 지정 식에서 빈 결과를 반환하는 노드는 다음 예에서 볼 수 있듯이 시퀀스의 시작 부분에 정렬됩니다.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -484,7 +484,7 @@ select @x.query('
   
  다음은 결과입니다.  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  다음 예에서 볼 수 있듯이 여러 정렬 기준을 지정할 수 있습니다. 이 예의 쿼리는 <`Employee`> 요소를 먼저 Title 특성 값을 기준으로 정렬한 다음 Administrator 특성 값을 기준으로 정렬합니다.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -513,7 +513,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
  다음은 결과입니다.  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  
@@ -533,7 +533,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   `order by`에서는 빈 최소값, 빈 최대값 및 데이터 정렬 키워드가 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

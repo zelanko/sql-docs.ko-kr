@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio의 기능을 확장 | Microsoft Docs
-description: Azure Data Studio 확장에 대해 알아보기
-ms.custom: tools|sos
+title: 확장성을 통해 추가 기능 추가
+titleSuffix: Azure Data Studio
+description: 확장성 모델 및 Azure Data Studio의 기능을 확장 하는 것에 대 한 핵심 확장 영역에 대해 알아봅니다
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460248"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030017"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>시작 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 확장성
 
@@ -68,7 +69,7 @@ Dashboard.tabs는 대시보드 페이지에 있는 탭 섹션을 만듭니다. �
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ Dashboard.tabs는 대시보드 페이지에 있는 탭 섹션을 만듭니다. �
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Dashboard.tabs는 대시보드 페이지에 있는 탭 섹션을 만듭니다. �
 
 `dashboard.insights`
 
-Insights dashboard.insights를 사용 하 여 등록할 수 있습니다. 이 비슷합니다 [자습서: 사용자 지정 정보 위젯 빌드](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Insights dashboard.insights를 사용 하 여 등록할 수 있습니다. 이 비슷합니다 [자습서: 빌드 사용자 지정 정보 위젯](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Insights dashboard.insights를 사용 하 여 등록할 수 있습니다. 이 �
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Insights dashboard.insights를 사용 하 여 등록할 수 있습니다. 이 �
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]

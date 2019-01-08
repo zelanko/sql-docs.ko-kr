@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108453"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792125"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48108453"
   
  데이터 뷰어는 표에 데이터를 표시할 수 있습니다. 표를 사용하면 표시할 열을 선택할 수 있습니다. 선택한 열의 값은 표 형식으로 표시됩니다.  
   
- 또한 경로에 여러 데이터 뷰어를 포함시킬 수 있습니다. 데이터에 대한 차트 뷰와 표 뷰를 만드는 것과 같이 동일 데이터를 여러 형식으로 표시하거나 데이터의 여러 열에 대해 서로 다른 데이터 뷰어를 만들 수 있습니다.  
+ 또한 경로에 여러 데이터 뷰어를 포함시킬 수 있습니다. 동일 데이터를 여러 형식으로 표시하거나(예: 데이터의 차트 뷰 및 표 뷰 만들기) 데이터의 여러 열에 대해 서로 다른 데이터 뷰어를 만들 수 있습니다.  
   
  데이터 뷰어를 경로에 추가하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 **데이터 흐름** 탭의 디자인 화면에서 경로 옆에 데이터 뷰어 아이콘을 추가합니다. 조건부 분할 변환과 같이 여러 출력을 포함할 수 있는 변환에는 각 경로에 데이터 뷰어가 포함될 수 있습니다.  
   

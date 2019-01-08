@@ -20,16 +20,16 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa5998d240b447b4204528af6c89e9c202e5963e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766541"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205602"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 함수(SQLProcedureColumns Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLProcedureColumns** 결과 지정 된 프로시저에 대 한 집합을 구성 하는 열 뿐만 아니라 입력 및 출력 매개 변수 목록을 반환 합니다. 드라이버는 결과 집합으로 지정 된 문에 대 한 정보를 반환 합니다.  
@@ -161,21 +161,21 @@ SQLRETURN SQLProcedureColumns(
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|프로시저 스키마 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다. 드라이버에서 지 원하는 경우 스키마 일부 프로시저의 아니라 다른 다양 한 Dbms에서 데이터를 검색 하는 드라이버, 빈 문자열을 반환 하는 등 ("") 스키마에 있지 않은 해당 프로시저에 대 한 합니다.|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL이 아닌 Varchar|프로시저 이름입니다. 프로시저의 경우 이름 없는 빈 문자열이 반환 됩니다.|  
 |COLUMN_NAME (ODBC 2.0)|4|NULL이 아닌 Varchar|프로시저 열 이름입니다. 드라이버 이름 없는 프로시저 열에 대해 빈 문자열을 반환 합니다.|  
-|COLUMN_TYPE (ODBC 2.0)|5|NULL이 아닌 Smallint|매개 변수로 프로시저 열 또는 결과 집합 열을 정의합니다.<br /><br /> SQL_PARAM_TYPE_UNKNOWN: 프로시저 열은 형식이 알려지지 않은 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT: 프로시저 열 입력된 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: 프로시저 열 입/출력 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT: 프로시저 열을 출력 매개 변수입니다. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: 프로시저 열이 프로시저의 반환 값입니다. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: 프로시저 열은 결과 집합 열. ODBC (1.0)|  
-|DATA_TYPE (ODBC 2.0)|6|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 날짜/시간 및 간격 데이터 형식에 대해이 열에는 간결한 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH) 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
-|TYPE_NAME (ODBC 2.0)|7|NULL이 아닌 Varchar|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
-|COLUMN_SIZE (ODBC 2.0)|8|정수|데이터 원본에 프로시저 열의 열 크기를 지정 합니다. NULL 열 크기 적용할 수 없는 데이터 형식에 대해 반환 됩니다. 전체 자릿수와 관련 된 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
-|BUFFER_LENGTH (ODBC 2.0)|9|정수|전송 되는 데이터의 바이트 길이 **SQLGetData** 하거나 **SQLFetch** SQL_C_DEFAULT를 지정 하는 경우 작업 합니다. 숫자 데이터에 대 한이 크기는 데이터 원본에 저장 된 데이터의 크기 보다 다 수 있습니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), 부록 d: 데이터 형식에서입니다.|  
-|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|프로시저 열 데이터 원본에서의 10 진수입니다. NULL이 반환 됩니다 데이터 형식의 소수 자릿수가 적용 되지 않습니다. 10 진수 숫자와 관련 된 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), 부록 d: 데이터 형식에서입니다.|  
+|COLUMN_TYPE (ODBC 2.0)|5|NULL이 아닌 Smallint|매개 변수로 프로시저 열 또는 결과 집합 열을 정의합니다.<br /><br /> SQL_PARAM_TYPE_UNKNOWN: 프로시저 열에 형식이 알려지지 않은 매개 변수가.입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT: 프로시저 열에 입력된 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: 프로시저 열에는 입/출력 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT: 프로시저 열 출력 매개 변수입니다. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: 프로시저 열에는 프로시저의 반환 값입니다. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: 프로시저 열에는 결과 집합 열이 있습니다. ODBC (1.0)|  
+|DATA_TYPE (ODBC 2.0)|6|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 날짜/시간 및 간격 데이터 형식에 대해이 열에는 간결한 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH) 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
+|TYPE_NAME (ODBC 2.0)|7|NULL이 아닌 Varchar|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
+|COLUMN_SIZE (ODBC 2.0)|8|정수|데이터 원본에 프로시저 열의 열 크기를 지정 합니다. NULL 열 크기 적용할 수 없는 데이터 형식에 대해 반환 됩니다. 전체 자릿수와 관련 된 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|BUFFER_LENGTH (ODBC 2.0)|9|정수|전송 되는 데이터의 바이트 길이 **SQLGetData** 하거나 **SQLFetch** SQL_C_DEFAULT를 지정 하는 경우 작업 합니다. 숫자 데이터에 대 한이 크기는 데이터 원본에 저장 된 데이터의 크기 보다 다 수 있습니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), 부록 d: 데이터 형식입니다.|  
+|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|프로시저 열 데이터 원본에서의 10 진수입니다. NULL이 반환 됩니다 데이터 형식의 소수 자릿수가 적용 되지 않습니다. 10 진수 숫자와 관련 된 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), 부록 d: 데이터 형식입니다.|  
 |NUM_PREC_RADIX (ODBC 2.0)|11|Smallint|숫자 데이터 형식에 대 한 10 또는 2입니다.<br /><br /> 10 일 경우 COLUMN_SIZE 및 DECIMAL_DIGITS 값 열에 대해 허용 된 10 진수 자릿수를 제공 합니다. 예를 들어 DECIMAL(12,5) 열 10, 12, COLUMN_SIZE 및 5; DECIMAL_DIGITS NUM_PREC_RADIX 반환 FLOAT 열에는 10, 15, COLUMN_SIZE 및 DECIMAL_DIGITS의 NULL의 NUM_PREC_RADIX 반환할 수 있습니다.<br /><br /> 2 인 경우에 있는 값 COLUMN_SIZE 및 DECIMAL_DIGITS 열의 허용 하는 비트 수를 제공 합니다. 예를 들어, FLOAT 열에는 2, 53, COLUMN_SIZE 및 DECIMAL_DIGITS의 NULL NUM_PREC_RADIX 반환할 수 있습니다.<br /><br /> NULL은 NUM_PREC_RADIX 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
-|NULL을 허용 (ODBC 2.0)|12|NULL이 아닌 Smallint|여부 프로시저 열에 NULL 값을 허용 합니다.<br /><br /> SQL_NO_NULLS: 프로시저 열 NULL 값을 허용 하지 않습니다.<br /><br /> SQL_NULLABLE: 프로시저 열에 NULL 값 허용합니다.<br /><br /> SQL_NULLABLE_UNKNOWN: 프로시저 열에 NULL 값을 사용할 경우 알려지지 않습니다.|  
+|NULL을 허용 (ODBC 2.0)|12|NULL이 아닌 Smallint|여부 프로시저 열에 NULL 값을 허용 합니다.<br /><br /> SQL_NO_NULLS: 프로시저 열에 NULL 값 허용 하지 않습니다.<br /><br /> SQL_NULLABLE: 프로시저 열에 NULL 값 허용합니다.<br /><br /> SQL_NULLABLE_UNKNOWN: 프로시저 열에 NULL 값을 사용할 경우 알 수 없습니다.|  
 |설명 (ODBC 2.0)|13|Varchar|프로시저 열에 대 한 설명|  
 |COLUMN_DEF (ODBC 3.0)|14|Varchar|열의 기본값입니다.<br /><br /> NULL 값을 기본값으로 지정 된 경우이 열은 NULL 이라는 단어를 따옴표로 묶여 있지. 기본값을 잘림 없이 표현할 수 없는 경우이 열 잘림, 없습니다 바깥쪽 작은따옴표를 사용 하 여 포함 합니다. 기본값이 지정 된 경우이 열은 NULL입니다.<br /><br /> COLUMN_DEF 값 잘림 값이 포함 된 경우 제외 하 고 새 열 정의 생성할 때 사용할 수 있습니다.|  
 |SQL_DATA_TYPE (ODBC 3.0)|15|NULL이 아닌 Smallint|설명자의 SQL_DESC_TYPE 필드에는 SQL 데이터 형식으로 값 표시 됩니다. 이 열은 datetime 및 interval 데이터 형식 제외 하 고는 DATA_TYPE 열과 동일 합니다.<br /><br /> 날짜/시간 및 간격 데이터 형식에 대 한 결과 집합의 SQL_DATA_TYPE 필드, SQL_DATETIME 또는 sql_interval 인 반환 하 고 SQL_DATETIME_SUB 필드는 특정 간격 또는 날짜/시간 데이터 형식에 대 한 하위 코드를 반환 합니다. (참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
 |SQL_DATETIME_SUB (ODBC 3.0)|16|Smallint|날짜/시간 및 간격 데이터 형식의 하위 형식 코드입니다. 다른 데이터 형식에 대해서는 이 열이 NULL을 반환합니다.|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|17|정수|문자 또는 이진 데이터의 최대 길이 (바이트)에서 열을 입력 합니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다.|  
 |ORDINAL_POSITION (ODBC 3.0)|18|NULL이 아닌 Integer|입력 및 출력 매개 변수의 순서로 증가 매개 변수를 1부터 프로시저 정의에서 매개 변수의 서 수 위치입니다. 반환 값 (있는 경우), 0이 반환 됩니다. 결과 집합 열에 대 한 결과에서 열의 서 수 위치 설정, 결과 집합 중 첫 번째 열을 사용 하 여 번호가 1입니다. 여러 결과 집합의 경우 열 서 수 위치는 드라이버별 방식으로 반환 됩니다.|  
-|IS_NULLABLE (ODBC 3.0)|19|Varchar|"아니요" 열에 Null이 포함 되어 있지 않으면입니다.<br /><br /> 면 "YES" 열이 Null을 포함할 수 있습니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO SQL-호환 DBMS는 빈 문자열을 반환할 수 없습니다.<br /><br /> 이 열에 반환되는 값은 NULLABLE 열에 반환되는 값과 다릅니다. (Null 허용 열에 대 한 설명을 참조).|  
+|IS_NULLABLE (ODBC 3.0)|19|Varchar|"아니요" 열에 Null이 포함 되어 있지 않으면입니다.<br /><br /> 면 "YES" 열이 Null을 포함할 수 있습니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO SQL-호환 DBMS에서는 빈 문자열을 반환할 수 없습니다.<br /><br /> 이 열에 반환되는 값은 NULLABLE 열에 반환되는 값과 다릅니다. (Null 허용 열에 대 한 설명을 참조).|  
   
 ## <a name="code-example"></a>코드 예  
  참조 [프로시저 호출](../../../odbc/reference/develop-app/procedure-calls.md)합니다.  

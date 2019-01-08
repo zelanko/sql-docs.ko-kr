@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208164"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|열 수준 데이터 정렬을 복제합니다.|  
 ||**0x2000**|게시된 아티클 원본 개체와 연관된 확장 속성을 복제합니다.|  
 ||**0x4000**|테이블 아티클에 정의된 경우 고유 키를 복제합니다.|  
-||**0x8000**|ALTER TABLE 문을 사용하여 테이블 아티클의 기본 키 및 고유 키를 제약 조건으로 복제합니다.<br /><br /> 참고:이 옵션에 사용 되지 않습니다. 사용 하 여 **0x80** 하 고 **0x4000** 대신 합니다.|  
+||**0x8000**|ALTER TABLE 문을 사용하여 테이블 아티클의 기본 키 및 고유 키를 제약 조건으로 복제합니다.<br /><br /> 참고: 이 옵션은 더 이상 사용되지 않습니다. 사용 하 여 **0x80** 하 고 **0x4000** 대신 합니다.|  
 ||**0x10000**|동기화하는 동안 CHECK 조건이 강제 적용되지 않도록 해당 제약 조건을 NOT FOR REPLICATION으로 복제합니다.|  
 ||**0x20000**|동기화하는 동안 FOREIGN KEY 제약 조건이 강제 적용되지 않도록 해당 제약 조건을 NOT FOR REPLICATION으로 복제합니다.|  
 ||**0x40000**|분할된 테이블이나 인덱스와 연결된 파일 그룹을 복제합니다.|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  변경 시 기존의 모든 구독을 다시 초기화해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
  [ **@publisher**=] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 아티클 속성을 변경 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**func 스키마만**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|  
 |**인덱싱된 뷰 스키마 전용**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|  
   
-> [!NOTE]  
->  지연 업데이트 게시 합니다 *schema_option* 의 값 **0x80** 활성화 해야 합니다. 지원 되는 *schema_option* 에 대 한 값 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시는: **0x01**를 **0x02**를 **0x10**,  **0x40**, **0x80**합니다 **0x1000** 하 고 **0x4000**합니다.  
+> [!NOTE]
+>  지연 업데이트 게시 합니다 *schema_option* 의 값 **0x80** 활성화 해야 합니다. 지원 되는 *schema_option* 값 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시 됩니다. **0x01**, **0x02**, **0x10**를 **0x40**, **0x80**, **0x1000** 고  **0x4000**합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640721"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210122"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  이 아티클을 포함하는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
+ [  **@article=**] **'**_문서_**'**  
  아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@column=**] **'***열***'**  
+ [  **@column=**] **'**_열_**'**  
  추가하거나 삭제할 열의 이름입니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 모든 열이 게시됩니다.  
   
- [  **@operation=**] **'***작업***'**  
+ [  **@operation=**] **'**_작업이_**'**  
  아티클에서 열의 추가 또는 삭제 여부를 지정합니다. *작업이* 됩니다 **nvarchar(5)**, 기본값은 add 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열 표시를 지웁니다.  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다. **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
- 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ [  **@publisher=** ] **'**_게시자_**'**  
+ 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 사용 하 여 사용할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@internal=** ] **'***내부***'**  
+ [  **@internal=** ] **'**_내부_**'**  
  내부적으로만 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

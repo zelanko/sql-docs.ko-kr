@@ -17,12 +17,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c80d2736082e99d2e08f4c30fe311d98beff137a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349742"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>데이터 원본 지원 되는 (SSAS 다차원)
   이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
@@ -47,16 +47,16 @@ ms.locfileid: "48169643"
   
  <sup>1</sup> ODBC 데이터 원본은 다차원 솔루션에 대 한 지원 되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
   
- <sup>2</sup> 자세한 내용은 참조 하십시오 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)합니다.  
+ <sup>2</sup> 자세한 내용은 참조 하십시오 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)합니다.  
   
- <sup>3</sup> 에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW를 참조 하십시오 [SQL Server 병렬 데이터 웨어하우스](http://go.microsoft.com/fwlink/?LinkId=150895)합니다.  
+ <sup>3</sup> 에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW를 참조 하십시오 [SQL Server 병렬 데이터 웨어하우스](https://go.microsoft.com/fwlink/?LinkId=150895)합니다.  
   
  <sup>4</sup> 일부 경우에 특히 최신 버전의 Oracle 사용 하 여 연결 오류가 발생할 수 있습니다 MSDAORA OLE DB 공급자를 사용 하 여 합니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   
  <sup>5</sup> 일부 기능 온-프레미스를 실행 하는 SQL Server 관계형 데이터베이스에 필요 합니다. 특히 쓰기 저장 및 ROLAP 저장소를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
+ [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [다차원 모델의 데이터 원본](data-sources-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  
   

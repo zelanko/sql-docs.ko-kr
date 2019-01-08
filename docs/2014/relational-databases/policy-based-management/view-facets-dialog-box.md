@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.viewfacet.f1
@@ -12,12 +12,12 @@ ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d71909b4f7fefd5c31e5b16991da7ebd6abb1401
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818271"
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7acffbda62069f25a6bdb37f399679fad4a16bdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115913"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822377"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 이벤트 클래스
   **CursorOpen** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 열기 이벤트를 설명합니다. 커서 열기 이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 SQL 문을 커서 및 커서 옵션과 연결되도록 정의할 때 발생하여 커서를 채웁니다.  

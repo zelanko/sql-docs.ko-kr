@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5571494e5dbf3410152d18445d4454d91ae8e0d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815765"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>통합 쿼리 만들기(Visual Database Tools)
   UNION 키워드를 사용하면 두 SELECT 문의 결과를 하나의 결과 테이블에 포함할 수 있습니다. 각 SELECT 문에서 반환된 모든 행이 UNION 식의 결과로 결합됩니다. 예제를 보려면 [SELECT 예 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48065819"
   
      쿼리 디자이너에서 통합 쿼리의 서식이 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

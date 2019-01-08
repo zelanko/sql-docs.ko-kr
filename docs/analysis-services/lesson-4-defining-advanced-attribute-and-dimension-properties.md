@@ -1,5 +1,5 @@
 ---
-title: '4 단원: 정의 고급 특성 및 차원 속성 | Microsoft Docs'
+title: '4단원: 고급 특성 및 차원 속성 정의 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015850"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951585"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,18 +41,18 @@ ms.locfileid: "34015850"
 [보조 특성을 기준으로 특성 멤버 정렬](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 이 태스크에서는 보조 특성에 따라 차원 멤버를 정렬하여 원하는 대로 정렬하는 방법에 대해 알아봅니다.  
   
-[사용자 정의 계층의 특성 간 특성 관계 지정](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[사용자 정의 계층의 특성 간 특성 관계 지정](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 이 태스크에서는 특성에 대한 멤버 속성을 정의하고 특성 간 집계 관계를 지정하는 방법에 대해 알아봅니다. 자세한 내용은 [특성 관계 정의](../analysis-services/multidimensional-models/attribute-relationships-define.md) 및 [사용자 계층 속성](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)을 참조하세요.  
   
 [알 수 없는 멤버 및 Null 처리 속성 정의](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
 이 태스크에서는 UnknownMember 및 UnknownMemberName 속성을 구성하여 Null 차원 멤버가 발생시킨 오류 조건을 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[5단원: 차원과 측정값 그룹의 관계 정의](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[5 단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

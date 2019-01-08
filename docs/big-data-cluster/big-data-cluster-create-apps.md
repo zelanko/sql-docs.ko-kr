@@ -1,26 +1,28 @@
 ---
-title: SQL Server 빅 데이터 클러스터에 앱을 배포 하는 방법 | Microsoft Docs
+title: 앱을 배포 하는 방법
+titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272561"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246419"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
 이 문서에서는 배포 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 내에서 응용 프로그램으로 R 및 Python 스크립트를 관리 하는 방법을 설명 합니다.
 
-R 및 Python 응용 프로그램 배포 및 관리 합니다 **mssqlctl-pre** CTP 2.1에 포함 된 명령줄 유틸리티입니다. 이 문서에서는 명령줄에서 앱으로 이러한 R 및 Python 스크립트를 배포 하는 방법의 예제를 제공 합니다.
+R 및 Python 응용 프로그램 배포 및 관리 합니다 **mssqlctl-pre** CTP 2.2에 포함 된 명령줄 유틸리티입니다. 이 문서에서는 명령줄에서 앱으로 이러한 R 및 Python 스크립트를 배포 하는 방법의 예제를 제공 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 구성 된 SQL Server 2019 빅 데이터 클러스터가 있어야 합니다. 자세한 내용은 [빅 데이터에서 kubernetes 클러스터는 SQL Server를 배포 하는 방법을](deployment-guidance.md)합니다. 
 
@@ -29,12 +31,12 @@ R 및 Python 응용 프로그램 배포 및 관리 합니다 **mssqlctl-pre** CT
 합니다 **mssqlctl-pre** 명령줄 유틸리티는 미리 보기에 Python 및 R 응용 프로그램 배포 기능 제공 됩니다. 유틸리티를 설치 하려면 다음 명령을 사용 합니다.
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Capabilities
 
-CTP 2.1에서 있습니다 수 만들기, 삭제, 나열 및 R 또는 Python 응용 프로그램을 실행 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl-pre**합니다.
+CTP 2.2의 있습니다 수 만들기, 삭제, 나열 및 R 또는 Python 응용 프로그램을 실행 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl-pre**합니다.
 
 | Command | Description |
 |---|---|
@@ -54,15 +56,16 @@ mssqlctl-pre app create --help
 
 ## <a name="log-in"></a>로그인
 
-R 및 Python 응용 프로그램을 구성 하기 전에 먼저 사용 하 여 빅 데이터 클러스터에 SQL Server에 로그인 합니다 `mssqlctl-pre login` 명령입니다. IP 주소 (외부)를 지정 합니다 `service-proxy-lb` (예: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
+R 및 Python 응용 프로그램을 구성 하기 전에 먼저 사용 하 여 빅 데이터 클러스터에 SQL Server에 로그인 합니다 `mssqlctl-pre login` 명령입니다. 외부 IP 주소를 지정 합니다 `service-proxy-lb` 또는 `service-proxy-nodeport` 서비스 (예를 들어: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
 
-Bash 또는 cmd 창에서이 명령을 실행 하 여 lb-프록시 서비스-서비스의 IP 주소를 가져올 수 있습니다.
+IP 주소를 가져올 수는 **서비스-프록시-lb** 하거나 **nodeport-프록시 서비스-** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>앱 만들기
@@ -168,7 +171,7 @@ mssqlctl-pre app run --name <app_name> --version <app_version> --inputs <inputs_
 mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-실행에 성공 하면 앱을 만들 때 지정 된 출력이 표시 됩니다. 다음은 이에 대한 예입니다.
+실행에 성공 하면 앱을 만들 때 지정 된 출력이 표시 됩니다. 다음은 예제입니다.
 
 ```
 {

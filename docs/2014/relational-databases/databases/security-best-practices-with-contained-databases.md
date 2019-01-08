@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816335"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
-  포함된 데이터베이스에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 관리자가 이해하고 완화해야 하는 고유한 위협 요소가 있습니다. 관련 된 대부분의 위협 요소를 `USER WITH PASSWORD` 인증 경계를 이동 하는 인증 프로세스에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 수준으로 수준.  
+  포함된 데이터베이스에는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 관리자가 이해하고 완화해야 하는 고유한 위협 요소가 있습니다. 대부분의 위협 요소는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 수준에서 데이터베이스 수준으로 인증 경계를 이동하는 `USER WITH PASSWORD` 인증 프로세스와 관련되어 있습니다.  
   
 ## <a name="threats-related-to-users"></a>사용자 관련 위협 요소  
- 포함된 된 데이터베이스에 있는 사용자를 `ALTER ANY USER` 의 멤버와 같이 권한이 합니다 **db_owner** 및 **db_securityadmin** 고정 데이터베이스 역할 없이 데이터베이스에 대 한 액세스 권한을 부여할 수 있습니다를 지식이 나 사용 권한 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자입니다. 사용자에게 포함된 데이터베이스에 대한 액세스 권한을 부여하면 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 잠재적인 공격 노출 영역이 늘어납니다. 관리자는이 액세스 제어이 위임을 인지 하 고 포함된 된 데이터베이스에서 사용자 권한을 부여 하는 방법에 대 한 매우 주의 `ALTER ANY USER` 권한. 모든 데이터베이스 소유자는 `ALTER ANY USER` 권한. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 포함된 데이터베이스 사용자를 정기적으로 감사해야 합니다.  
+ 포함된 된 데이터베이스에 있는 사용자를 `ALTER ANY USER` 의 멤버와 같이 권한이 합니다 **db_owner** 및 **db_securityadmin** 고정 데이터베이스 역할 없이 데이터베이스에 대 한 액세스 권한을 부여할 수 있습니다를 지식이 나 사용 권한 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자입니다. 사용자에게 포함된 데이터베이스에 대한 액세스 권한을 부여하면 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 잠재적인 공격 노출 영역이 늘어납니다. 관리자는 이러한 액세스 제어 위임을 인지하고 포함된 데이터베이스의 사용자에게 `ALTER ANY USER` 사용 권한을 부여할 때는 신중을 기해야 합니다. 모든 데이터베이스 소유자는 `ALTER ANY USER` 사용 권한을 가지고 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 포함된 데이터베이스 사용자를 정기적으로 감사해야 합니다.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>게스트 계정을 사용하여 다른 데이터베이스 액세스  
  데이터베이스 소유자 및 `ALTER ANY USER` 사용 권한이 있는 데이터베이스 사용자는 포함된 데이터베이스 사용자를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 포함된 데이터베이스에 연결한 후 포함된 데이터베이스 사용자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]guest **계정을 사용하도록 설정한** 의 다른 데이터베이스에 액세스할 수 있습니다.  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- 데이터베이스 간 쿼리를 실행 하려면 설정 해야 합니다 `TRUSTWORTHY` 호출 하는 데이터베이스에 대 한 옵션입니다. 예를 들어, 위에 정의된 사용자(Carlo)가 DB1에 있는 경우 `SELECT * FROM db2.dbo.Table1;`을 실행하려면 데이터베이스 DB1에 `TRUSTWORTHY` 옵션을 설정해야 합니다. 다음 코드를 실행 합니다 `TRUSTWORHTY` 에 설정 합니다.  
+ 데이터베이스 간 쿼리를 실행하려면 호출하는 데이터베이스에 `TRUSTWORTHY` 옵션을 설정해야 합니다. 예를 들어, 위에 정의된 사용자(Carlo)가 DB1에 있는 경우 `SELECT * FROM db2.dbo.Table1;`을 실행하려면 데이터베이스 DB1에 `TRUSTWORTHY` 옵션을 설정해야 합니다. 다음 코드를 실행하여 `TRUSTWORHTY` 옵션을 설정합니다.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

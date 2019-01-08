@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657987"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266064"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
@@ -46,11 +46,11 @@ SQL Server Linux 컨테이너 이미지에 대 한 설명서의 모든 Ubuntu �
 예를 들어 다음 명령은 RHEL를 사용 하는 최신 SQL Server 2019 미리 보기 컨테이너를 끌어옵니다.
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 또한이 기술을 공유 하 고 외부 Docker 호스트의 파일을 볼 수 있습니다.
 
 > [!IMPORTANT]
-> 이 이번에는 Linux 이미지에서 SQL Server를 사용 하 여 Mac에서 docker 호스트 볼륨 매핑이 지원 되지 않습니다. 데이터 볼륨 컨테이너를 대신 사용 합니다. 이 제한은 관련 된 `/var/opt/mssql` 디렉터리입니다. 탑재 디렉터리 작동을 읽기만 합니다. 예를 들어, – v를 사용 하 여 Mac의 호스트 디렉터리 탑재 하 고 호스트에 상주 하는.bak 파일에서 백업 복원 수 있습니다.
+> 이 이번에는 Linux 이미지에서 SQL Server를 사용 하 여 Mac에서 docker 호스트 볼륨 매핑이 지원 되지 않습니다. 데이터 볼륨 컨테이너를 대신 사용 합니다. 이 제한은 관련 된 `/var/opt/mssql` 디렉터리입니다. 탑재 디렉터리 작동을 읽기만 합니다. 예를 들어,-v를 사용 하 여 Mac의 호스트 디렉터리 탑재 하 고 호스트에 상주 하는.bak 파일에서 백업 복원 수 있습니다.
 
 ### <a name="use-data-volume-containers"></a>데이터 볼륨 컨테이너를 사용 합니다.
 

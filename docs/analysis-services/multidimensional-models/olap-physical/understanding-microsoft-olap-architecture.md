@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 96188955e60c11e4780ed4ffcf0be637b9e81871
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: d5f6c7eaff4ecced0d2244d9c12b13a0059344fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525052"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "50147639"
   
  [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [기타...](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [자세히...](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **물리적 아키텍처**  
  [OLAP 엔진 서버 구성 요소](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
  [로컬 큐브 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
   
- [기타...](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [자세히...](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
  ![작은 파일 폴더 아이콘](../../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **프로그래밍 아키텍처**  
  [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  

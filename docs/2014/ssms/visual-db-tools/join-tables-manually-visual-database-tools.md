@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - manual joins [SQL Server]
@@ -14,15 +14,15 @@ ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16d371fda3a18a748714db88aa345aa739cbed9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812765"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
-  쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md)는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
+  쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
   
  같은 정보를 포함하는 열뿐만 아니라 임의의 두 열을 서로 비교하여 조인을 만들 수 있습니다. 데이터베이스에 `titles` 와 `roysched`라는 두 개의 테이블이 있는 경우 `ytd_sales` 테이블에 있는 `titles` 열의 값을 `lorange` 테이블에 있는 `hirange` 및 `roysched` 열의 값과 비교할 수 있습니다. 이 조인을 만들면 연간 매출 누계가 사용료 지급액의 최고/최저 범위 사이에 있는 제목을 찾을 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48148333"
   
  쿼리 및 뷰 디자이너는 [SQL 창](sql-pane-visual-database-tools.md)의 SQL 문에 INNER JOIN 절을 추가합니다. 조인 형식을 외부 조인으로 변경할 수 있습니다. 자세한 내용은 [외부 조인 만들기&#40;Visual Database Tools&#41;](create-outer-joins-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

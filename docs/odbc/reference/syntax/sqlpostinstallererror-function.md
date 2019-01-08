@@ -20,16 +20,16 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc70580de4f759a5adb6a501ac5dc200b62cba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a189bd082bbf3d5f08080fccec48334165d5d15c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716661"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208322"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 함수
 **규칙**  
- ODBC 3.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.0  
   
  **요약**  
  **SQLPostInstallerError** 드라이버나 translator 설치 라이브러리에 대 한 오류 보고를 위한 메커니즘을 제공 합니다 **ConfigDriver**합니다 **ConfigDSN**, 및 **ConfigTranslator**  설치 관리자 오류 큐로 함수입니다. 이 API를 사용 하지 않는 응용 사용 하 여 **SQLInstallerError** 오류를 검색 하려면.  
@@ -39,8 +39,8 @@ ms.locfileid: "47716661"
 ```  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## <a name="arguments"></a>인수  

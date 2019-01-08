@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812985"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
   사용 된 `SqlLocalDB` 유틸리티의 인스턴스를 만들 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**합니다. 합니다 `SqlLocalDB` 유틸리티 (SqlLocalDB.exe)는 사용자와 개발자가 만들고의 인스턴스를 관리할 수 있도록 하는 간단한 명령줄 도구 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**합니다. 사용 하는 방법에 대 한 자세한 **LocalDB**를 참조 하십시오 [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)합니다.  
@@ -45,7 +44,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>인수  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. `SqlLocalDB` 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 으로 지정 된 바이너리  *\<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 버전의 버전 번호는 기본적으로 지정 하지 않으면는 `SqlLocalDB` 유틸리티입니다. **–s** 를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. `SqlLocalDB` 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 으로 지정 된 바이너리  *\<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 버전의 버전 번호는 기본적으로 지정 하지 않으면는 `SqlLocalDB` 유틸리티입니다. **–s**를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
   
  [ **share** | **h** ]  
  지정한 공유 이름을 사용하여 지정한 개인 **LocalDB** 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.  
@@ -60,7 +59,7 @@ SqlLocalDB.exe
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 시작합니다. 성공하면 문이 **LocalDB**의 명명된 파이프 주소를 반환합니다.  
   
  [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 중지합니다. 추가 **– i** 사용 하 여 인스턴스 종료를 요청 합니다 `NOWAIT` 옵션입니다. **–k** 를 추가하면 인스턴스 프로세스에 연결하지 않고 해당 프로세스를 중지합니다.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 중지합니다. 추가 **-i** 사용 하 여 인스턴스 종료를 요청 합니다 `NOWAIT` 옵션입니다. **–k**를 추가하면 인스턴스 프로세스에 연결하지 않고 해당 프로세스를 중지합니다.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  현재 사용자가 소유한 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 의 모든 인스턴스를 나열합니다.  
@@ -98,7 +97,7 @@ SqlLocalDB.exe share "DeptLocalDB" "DeptSharedLocalDB"
 SqlLocalDB.exe start "DeptLocalDB"  
 SqlLocalDB.exe info "DeptLocalDB"  
 REM The previous statement outputs the Instance pipe name for the next step  
-sqlcmd –S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
+sqlcmd -S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
 CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';   
 GO  
 CREATE USER NewLogin;  
@@ -109,7 +108,7 @@ EXIT
  다음 코드를 실행해서 **로그인을 사용하여** LocalDB `NewLogin` 의 공유 인스턴스에 연결합니다.  
   
 ```  
-sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
+sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

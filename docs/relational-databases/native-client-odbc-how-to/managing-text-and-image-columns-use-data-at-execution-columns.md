@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 184668ba8dc844be7c0f1eea23ab5f4dfe69843e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 8858ba41bf1ff3a6acf4161865c535fd5b10f412
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673102"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203302"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 열 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51673102"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용하는 테이블을 만듭니다.  
+ 첫 번째 실행 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 샘플에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. 그리고 나서 프로그램을 실행합니다.  
   
- 세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용하는 테이블을 삭제합니다.  
+ 세 번째 실행 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 샘플에서 사용 하는 테이블을 삭제 합니다.  
   
 ```  
 use AdventureWorks  

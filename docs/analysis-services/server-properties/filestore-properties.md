@@ -1,5 +1,5 @@
 ---
-title: Filestore 속성 | Microsoft Docs
+title: Analysis Services Filestore 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a5bf8e90352218b222bbd6a58ad876ca0e1364b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0319006e3ca6d69416746d802c20164da309b188
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975008"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071980"
 ---
 # <a name="filestore-properties"></a>FileStore 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

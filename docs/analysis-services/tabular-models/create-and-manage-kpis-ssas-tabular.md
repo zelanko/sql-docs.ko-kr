@@ -1,5 +1,5 @@
 ---
-title: Kpi 만들기 및 관리 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 Kpi를 만들고 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042117"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072090"
 ---
 # <a name="create-and-manage-kpis"></a>Kpi 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  이 문서에는 만들기, 편집 또는 테이블 형식 모델에 KPI (핵심 성과 지표)를 삭제 하는 방법을 설명 합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
+  이 문서에는 만들기, 편집 또는 테이블 형식 모델에서 KPI (핵심 성과 지표)를 삭제 하는 방법을 설명 합니다. KPI를 만들려면 KPI의 기본 값으로 계산 되는 측정값을 선택 합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
   
 ## <a name="tasks"></a>태스크  
   
 > [!IMPORTANT]  
->  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법 다른 항목에서 설명 [만들기 및 관리 측정값](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
+>  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법을 다른 항목에 설명 되어 있습니다 [만들기 및 관리 하는 측정값](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
   
 ###  <a name="bkmk_create_KPI"></a> KPI 만들기  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34042117"
 5.  **설명**을 클릭하고 KPI, 값, 상태 및 대상에 대한 설명을 입력합니다.  
   
 > [!TIP]  
->  Excel에서 분석 기능을 사용하여 KPI를 테스트할 수 있습니다. 자세한 내용은 참조 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
+>  Excel에서 분석 기능을 사용하여 KPI를 테스트할 수 있습니다. 자세한 내용은 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
   
 ###  <a name="bkmk_edit_KPI"></a> KPI 편집  
   
@@ -70,9 +70,9 @@ ms.locfileid: "34042117"
 |설명|Alt+D|  
 |추세|Alt+T|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [만들기 및 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

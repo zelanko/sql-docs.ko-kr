@@ -11,12 +11,12 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f768d03f52adcf6bd17b4a97c7e509f4fb6922d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c6920be084265c010b6666559e8c66cc82085f9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537768"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>배경 이미지 추가(보고서 작성기 및 SSRS)
   사각형, 입력란, 목록, 행렬, 테이블 및 차트의 일부분과 같은 보고서 항목이나 페이지 머리글, 페이지 바닥글 또는 보고서 본문과 같은 보고서 섹션에 배경 이미지를 추가할 수 있습니다. 속성 창에 **BackgroundImage** 가 표시되는 보고서 디자인 화면의 모든 선택 항목에 대해 배경 이미지를 정의할 수 있습니다. 배경 이미지는 다른 이미지와 마찬가지로 보고서 서버의 이미지, 데이터 세트 필드의 이미지 또는 보고서 정의에 포함된 이미지에 대한 URL일 수 있습니다. 보고서에 포함된 이미지를 사용하려면 먼저 보고서 정의에 이미지를 추가해야만 디자인 화면에 이미지를 추가할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48202743"
   
          **값** 을 보고서 데이터 집합에 있는 필드의 이름으로 설정합니다. 자세한 내용은 [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)를 참조하세요.  
   
-         **MIMEType**또는 파일 형식에 대해 이미지에 해당하는 MIME 형식(예: .bmp)을 선택합니다.  
+         **MIMEType** 또는 파일 형식의 경우 이미지에 해당하는 MIME 형식(예: .bmp)을 선택합니다.  
   
         > [!NOTE]  
         >  MIMEType은 **Source** 속성을 **Database**로 설정한 경우에만 적용됩니다. **원본** 속성을 **외부** 또는 **포함**으로 설정한 경우에는 **MIMEType** 값이 무시됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48202743"
          차트의 배경 이미지에 대해 **BackgroundRepeat** 를 **Default**, **Repeat**, **Fit**및 **Clip**으로 설정할 수 있지만 **RepeatX** 나 **RepeatY**로 설정할 수는 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [이미지 &#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [이미지&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   
