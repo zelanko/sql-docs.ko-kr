@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f29f5b662266a789f7aad6bdfb151df999e8ad67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e845e9d4e7d1ad34e902b0d37fe60cda33f5f0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206932"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  SECRET **='***secret***'**  
  나가는 인증에 필요한 암호를 지정합니다. *secret*은 Azure Blob 저장소에서 파일을 가져오는 데 필요합니다. *secret*은 다른 용도에 대해서는 선택 사항이 될 수 있습니다.   
->  [!WARNING]
+> [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.    
   
 ## <a name="remarks"></a>Remarks  

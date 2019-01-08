@@ -1,7 +1,7 @@
 ---
 title: 데이터 열 암호화 | Microsoft 문서
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -17,61 +17,52 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650371"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997545"
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 통해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 대칭 암호화를 사용하여 데이터 열을 암호화하는 방법에 대해 설명합니다. 열 수준 암호화 또는 셀 수준 암호화라고 합니다.  
+
+## <a name="security"></a>보안  
   
- **문서 내용**  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [보안](#Security)  
-  
--   [Transact-SQL을 사용하여 데이터 열을 암호화하려면](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="Security"></a> 보안  
-  
-####  <a name="Permissions"></a> Permissions  
+### <a name="permissions"></a>Permissions  
  다음 권한은 아래 단계를 수행하는 데 필요합니다.  
   
--   데이터베이스에 대한 CONTROL 권한.  
+- 데이터베이스에 대한 CONTROL 권한.  
   
--   데이터베이스에 대한 CREATE CERTIFICATE 권한. Windows 로그인, SQL Server 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
+- 데이터베이스에 대한 CREATE CERTIFICATE 권한. Windows 로그인, SQL Server 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
   
--   테이블에 대한 ALTER 권한.  
+- 테이블에 대한 ALTER 권한.  
   
--   키에 대한 일부 사용 권한이며 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다.  
+- 키에 대한 일부 사용 권한이며 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+## <a name="using-transact-sql"></a>Transact-SQL 사용  
 
-다음 예제를 사용하려면 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스에 데이터베이스 마스터 키가 아직 없는 경우 암호를 입력하고 다음 문을 실행하여 키를 만듭니다.   
-```  
+다음 예제를 사용하려면 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스에 데이터베이스 마스터 키가 아직 없는 경우 암호를 입력하고 다음 문을 실행하여 키를 만듭니다.
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 항상 데이터베이스 마스터 키를 백업하세요. 데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>인증자를 포함하는 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>인증자를 포함하는 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -120,15 +111,15 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +176,3 @@ PASSWORD = '<some strong password>';
 -   [ALTER TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  
